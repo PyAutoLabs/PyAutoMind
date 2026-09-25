@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1558 records across 8 buckets.
+1559 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -378,6 +378,7 @@ markers; everything below GENERATED is rebuilt.
 - [profiling-production-representative](2026/09/profiling-production-representative.md)
 - [provider-agnostic-metadata](2026/09/provider-agnostic-metadata.md)
 - [provider-neutral-bundle-prompts](2026/09/provider-neutral-bundle-prompts.md)
+- [pyautoeyes-birth-organ-row](2026/09/pyautoeyes-birth-organ-row.md)
 - [pyautoeyes-organ-decision](2026/09/pyautoeyes-organ-decision.md)
 - [quick-update-tolerates-invalid-instance](2026/09/quick-update-tolerates-invalid-instance.md)
 - [reconstruction-row-split](2026/09/reconstruction-row-split.md)

@@ -1,3 +1,46 @@
+Phase 0 of the `pyautoeyes-birth` epic: PyAutoEyes registered as an organ —
+organ row in `repos.yaml`, boundary prose in `ORGANISM.md` and the docs,
+`SIBLING_ORGANS` lists in Brain/Heart/Hands, session-start hook chains, and every
+generated `repos_sync` map block and organ table. Issue PyAutoMind#437 (closed).
+
+## PRs (merge order, 2026-09-25)
+
+1. PyAutoLabs/PyAutoMind#438 — `a1d5092e`
+2. PyAutoLabs/PyAutoCortex#44 — `3a780e9c`
+3. PyAutoLabs/PyAutoNerves#171 — `921a590f`
+4. PyAutoLabs/PyAutoGut#8 — `8cc3ff0e`
+5. PyAutoLabs/PyAutoBrain#415 — `7684c838`
+6. PyAutoLabs/PyAutoHeart#237 — `059059d9`
+7. PyAutoLabs/PyAutoHands#288 — `8f38ef4f`
+8. PyAutoLabs/pyautolabs.github.io#11 — `3948062d`
+9. PyAutoLabs/PyAutoScientist#34 — `c3314a6f`
+
+Every branch proven merged at close-out (`gh pr view` state=MERGED, and the
+worktree HEAD is an ancestor of `origin/main` with 0 commits ahead, per repo).
+
+## Gates
+
+- Heart RED for reasons unrelated to these repos; shipped under the human's
+  contemporaneous RED override: "can you do 2 and 3 i authorize RED overrule".
+- CI green on every other leg. Two legs were red by construction, and broken as follows:
+  - PyAutoMind#438 tenant-firewall leg: it reads the *installed* hook copies,
+    which on a hook PR are the previous generation. Mind merged first with that
+    leg red, which propagated the new generation.
+  - PyAutoBrain#415: red while it depended on the unmerged Mind row; re-run
+    green after the Mind merge.
+- No library release gate: organ PRs only, so nothing is pending release.
+
+## Deviations
+
+- The `.github` org-profile organ row was applied by the human (the public-surface
+  guard denies it to the agent).
+- Organ order: phase 0 appended Eyes after Gut everywhere. The human ruled on
+  2026-09-25 that the canonical order is Brain, Mind, Cortex, Memory, Eyes, Heart,
+  Hands, Nerves, Gut. The reorder is filed as a follow-up,
+  `draft/maintenance/pyautoeyes/eyes_organ_order.md`.
+
+## Original prompt
+
 # PyAutoEyes phase 0 — organ row, boundary prose, local move
 
 Type: feature

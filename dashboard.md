@@ -40,11 +40,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 6 |
+| [In flight](#in-flight) (`active/`) | 5 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 230 |
+| [Backlog](#backlog) (`draft/`) | 231 |
 
 > **No batch in flight.**
 
@@ -254,14 +254,6 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/add_an_abell_1201_central_point_mass.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/eyes_birth_organ_row.md">PyAutoEyes phase 0 — organ row, boundary prose, local move</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/437">issue #437</a> — issued 2026-09-25 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/438">PyAutoMind#438</a>, <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/44">PyAutoCortex#44</a>, <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/171">PyAutoNerves#171</a>, <a href="https://github.com/PyAutoLabs/PyAutoGut/pull/8">PyAutoGut#8</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/415">PyAutoBrain#415</a>, <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/237">PyAutoHeart#237</a>, <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/288">PyAutoHands#288</a>, <a href="https://github.com/PyAutoLabs/pyautolabs.github.io/pull/11">pyautolabs.github.io#11</a>, <a href="https://github.com/PyAutoLabs/PyAutoScientist/pull/34">PyAutoScientist#34</a></summary>
-
-```
-/start_dev active/eyes_birth_organ_row.md
 ```
 
 </details>
@@ -603,7 +595,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**230** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **48** of them belong to an epic and are listed only under [Epics](#epics) below.
+**231** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **49** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 68</summary>
@@ -2379,7 +2371,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | Date | Event | Task |
 |------|-------|------|
 | 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
-| 2026-09-25 | issued | <a href="active/eyes_birth_organ_row.md">PyAutoEyes phase 0 — organ row, boundary prose, local move</a> |
 | 2026-09-25 | filed | <a href="draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md">Keep caches off <code>$HOME</code> on HPC — phase 2 remainder: euclid pipeline…</a> |
 | 2026-09-25 | issued | <a href="active/interferometer_mge_breakdown_jax_cpu_gpu.md">Interferometer likelihood campaign 1/3: MGE breakdown on JAX CPU and…</a> |
 | 2026-09-24 | filed | <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> |
@@ -2388,12 +2379,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-22 | issued | <a href="active/vis_lp_inspection_bundle.md">Support vis_lp-only products in inspection bundles</a> |
 | 2026-09-22 | issued | <a href="active/add_an_abell_1201_central_point_mass.md">Abell 1201 guided SMBH demonstration and Gemini Colab follow-on</a> |
 | 2026-09-20 | planned | <a href="planned.md#vis-magnitude-catalogue-top1000">vis-magnitude-catalogue-top1000</a> |
+| 2026-09-20 | issued | <a href="active/vis_magnitude_catalogue_top1000.md">Export VIS magnitudes for the Euclid DR1 top-1000 fits</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-20 | issued | <a href="active/vis_magnitude_catalogue_top1000.md">Export VIS magnitudes for the Euclid DR1 top-1000 fits</a> |
 | 2026-09-19 | issued | <a href="parked.md#catalogue-inspection-before-vis-pix">catalogue-inspection-before-vis-pix</a> |
 | 2026-09-18 | parked | <a href="parked.md#fixed-light-numba-s7">fixed-light-numba-s7</a> |
 | 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
@@ -2403,12 +2394,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-18 | filed | <a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
+| 2026-09-17 | filed | <a href="draft/bug/pyautobrain/sizing_faculty_none_rule_keyword_false_judge_triage.md">Sizing faculty: a <code>none</code> rule, keyword hits on prose that only…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-17 | filed | <a href="draft/bug/pyautobrain/sizing_faculty_none_rule_keyword_false_judge_triage.md">Sizing faculty: a <code>none</code> rule, keyword hits on prose that only…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> |
 | 2026-09-17 | filed | <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> |
 | 2026-09-17 | filed | <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source A100 speed-up campaign: profile and optimize with the…</a> |
@@ -2418,12 +2409,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/bug/autoarray/mesh_geometry_areas_transformed_adapt_image_indexerror.md">MeshGeometryRectangular.areas_transformed raises IndexError for…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autofit/ep_analysis_level_compile_cache.md">EP: cache the compiled JAX likelihood on the Analysis across factor…</a> |
+| 2026-09-17 | filed | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-17 | filed | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> |
 | 2026-09-17 | filed | <a href="draft/feature/autolens_assistant/benchmark_positions_initialised_inference.md">Benchmark card: positions-initialised imaging inference of a…</a> |
 | 2026-09-17 | filed | <a href="draft/feature/autolens_assistant/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging…</a> |
 | 2026-09-16 | filed | <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of…</a> |
@@ -2433,12 +2424,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-16 | filed | <a href="draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md">Adaptive Delaunay mesh places two mesh pixels 0.001" apart — a…</a> |
 | 2026-09-15 | filed | <a href="draft/maintenance/howtofit/minimum_library_version_stale.md">The workspace staleness warning keys off a value documented never to…</a> |
 | 2026-09-15 | filed | <a href="draft/feature/pyautoheart/howto_real_settings_nightly.md">Nightly run of one HowTo tutorial per chapter at real settings</a> |
+| 2026-09-15 | filed | <a href="draft/docs/howtofit/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-15 | filed | <a href="draft/docs/howtofit/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autolens_workspace/start_here_multistart_compile_time.md">imaging/start_here: 26-minute XLA compile of the 48-start Prodigy…</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md"><code>curvature_reg_matrix</code> rebuilds <code>F + H</code> on every access — and the…</a> |
 | 2026-09-14 | filed | <a href="draft/docs/autofit/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the…</a> |
@@ -2448,6 +2439,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-13 | filed | <a href="draft/bug/howtofit/tutorial_5_ep_shared_centre_never_assigned.md">HowToFit tutorial 5 (EP) never shares the centre it says it shares</a> |
 | 2026-09-12 | filed | <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular…</a> |
 | 2026-09-11 | filed | <a href="draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md">xdist collection ids unstable in test_prior_properties</a> |
+| 2026-09-11 | filed | <a href="draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md">release-integrate: analyze-side foreign-path filter and a…</a> |
 
 </details>
 
@@ -2809,12 +2801,12 @@ Continue the 'The non-solver residue — optimise the HST GPU likelihood breakdo
 </details>
 
 <details>
-<summary><b>PyAutoEyes — the perception organ: every library's rendered figures, one harness, an instance registry, a Pages board</b> — 8 queued prompt(s), in order</summary>
+<summary><b>PyAutoEyes — the perception organ: every library's rendered figures, one harness, an instance registry, a Pages board</b> — 9 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>PyAutoEyes — the perception organ: every library's rendered figures, one harness, an instance registry, a Pages board</b> — ledger: `PyAutoEyes/dashboard.md` — phase 0 IN FLIGHT 2026-09-25 as PyAutoMind#437 (pivot from the retired <code>autolens-visualization</code> task, PyAutoMind#436) — organ row…</summary>
+<details><summary>📋 <b>PyAutoEyes — the perception organ: every library's rendered figures, one harness, an instance registry, a Pages board</b> — ledger: `PyAutoEyes/dashboard.md` — phase 0 COMPLETE 2026-09-25 (PyAutoMind#437 closed; record <code>complete/2026/09/pyautoeyes-birth-organ-row.md</code>; nine organ PRs…</summary>
 
 ```
-Continue the 'PyAutoEyes — the perception organ: every library's rendered figures, one harness, an instance registry, a Pages board' epic. Its canonical state lives in PyAutoEyes/dashboard.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: human decision 2026-09-25 — promote `autolens_visualization` (PyAutoMind#436, PR #1 merged) to the organ PyAutoEyes (GitHub rename, not re-create; plain git PNGs, re-render on library release only). Phases under `draft/feature/pyautoeyes/`: 0 organ row + boundary prose + local move (`eyes_birth_organ_row.md`), 1 restructure into `lens/` + organ skeleton / `eyes/` harness / `bin/pyauto-eyes` (`eyes_p1_repo_restructure_skeleton.md`), 2 organ board + conductor registry (`eyes_p2_board_and_conductor_registry.md`), 3 galaxy instance (`eyes_p3_galaxy_instance.md`), 4 fit + cti instances (`eyes_p4_fit_cti_instances.md`), 5 retire duplicate galleries + public surfaces (`eyes_p5_retire_duplicates_public_surfaces.md`). Lens-instance follow-ups carried from #436: multi-galaxy gallery (`multi_galaxy_gallery.md`, phase 6), group + cluster galleries (`group_cluster_gallery.md`, phase 7); Eyes survey recursive producer scan (`draft/bug/pyautobrain/eyes_survey_recursive_producers.md`). Plot critiques recorded on #436 carry over for a later `/eyes` pass. Ledger `PyAutoEyes/dashboard.md` lands in phase 2; until then the phase prompts are the state. Every phase ships under a contemporaneous human Heart RED override while Heart is RED; merge stays human.
+Continue the 'PyAutoEyes — the perception organ: every library's rendered figures, one harness, an instance registry, a Pages board' epic. Its canonical state lives in PyAutoEyes/dashboard.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: human decision 2026-09-25 — promote `autolens_visualization` (PyAutoMind#436, PR #1 merged) to the organ PyAutoEyes (GitHub rename, not re-create; plain git PNGs, re-render on library release only). Phases under `draft/feature/pyautoeyes/`: 0 organ row + boundary prose + local move (done: `complete/2026/09/pyautoeyes-birth-organ-row.md`), 1 restructure into `lens/` + organ skeleton / `eyes/` harness / `bin/pyauto-eyes` (`eyes_p1_repo_restructure_skeleton.md`), 2 organ board + conductor registry (`eyes_p2_board_and_conductor_registry.md`), 3 galaxy instance (`eyes_p3_galaxy_instance.md`), 4 fit + cti instances (`eyes_p4_fit_cti_instances.md`), 5 retire duplicate galleries + public surfaces (`eyes_p5_retire_duplicates_public_surfaces.md`). Lens-instance follow-ups carried from #436: multi-galaxy gallery (`multi_galaxy_gallery.md`, phase 6), group + cluster galleries (`group_cluster_gallery.md`, phase 7); Eyes survey recursive producer scan (`draft/bug/pyautobrain/eyes_survey_recursive_producers.md`). Plot critiques recorded on #436 carry over for a later `/eyes` pass. Ledger `PyAutoEyes/dashboard.md` lands in phase 2; until then the phase prompts are the state. Every phase ships under a contemporaneous human Heart RED override while Heart is RED; merge stays human.
 ```
 
 </details>
@@ -2879,6 +2871,14 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 ```
 /start_dev draft/bug/pyautobrain/eyes_survey_recursive_producers.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/pyautoeyes/eyes_organ_order.md">Canonical organ order — Eyes after Memory, before Heart</a> — pyautoeyes · small · supervised · high</summary>
+
+```
+/start_dev draft/maintenance/pyautoeyes/eyes_organ_order.md
 ```
 
 </details>
