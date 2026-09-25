@@ -1,19 +1,5 @@
 # Active Tasks
 
-## autolens-visualization-birth
-- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/436
-- issued: 2026-09-25
-- prompt: active/birth_autolens_visualization_repo.md
-- session: Claude Code CLI (Fable 5.1 architect, Opus execution), 2026-09-25
-- status: workspace-dev
-- autonomy: human-required (header); plan approved in-session 2026-09-25; `gh repo create` and the org-profile README row denied to the agent (public-surface guard) — human creates PyAutoLabs/autolens_visualization and pushes
-- worktree: /home/jammy/Code/PyAutoLabs-wt/autolens-visualization-birth
-- repos:
-  - autolens_visualization: feature/autolens-visualization-birth (new local repo at lens/autolens_visualization, no remote yet)
-  - PyAutoMind: feature/autolens-visualization-birth
-  - PyAutoBrain: feature/autolens-visualization-birth
-  - PyAutoHeart: feature/autolens-visualization-birth
-
 ## certified-solver-phase-c1-lane-rate
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/304
 - issued: 2026-09-24

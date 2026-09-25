@@ -101,3 +101,9 @@ epic, never picked standalone.
   Array 343376 remains historical evidence for retired `vmap(jit)`; array 344635 and
   provenance are in the merged profiling results. Record:
   `complete/2026/09/hst-gpu-residue-p2.md`.
+
+## pyautoeyes-birth
+- title: PyAutoEyes — the perception organ: every library's rendered figures, one harness, an instance registry, a Pages board
+- ledger: PyAutoEyes/dashboard.md
+- status: phase 0 drafted 2026-09-25 (pivot from the retired `autolens-visualization` task, PyAutoMind#436); repo rename + org-profile row are human acts
+- notes: human decision 2026-09-25 — promote `autolens_visualization` (PyAutoMind#436, PR #1 merged) to the organ PyAutoEyes (GitHub rename, not re-create; plain git PNGs, re-render on library release only). Phases under `draft/feature/pyautoeyes/`: 0 organ row + boundary prose + local move (`eyes_birth_organ_row.md`), 1 restructure into `lens/` + organ skeleton / `eyes/` harness / `bin/pyauto-eyes` (`eyes_p1_repo_restructure_skeleton.md`), 2 organ board + conductor registry (`eyes_p2_board_and_conductor_registry.md`), 3 galaxy instance (`eyes_p3_galaxy_instance.md`), 4 fit + cti instances (`eyes_p4_fit_cti_instances.md`), 5 retire duplicate galleries + public surfaces (`eyes_p5_retire_duplicates_public_surfaces.md`). Lens-instance follow-ups carried from #436: multi-galaxy gallery (`multi_galaxy_gallery.md`, phase 6), group + cluster galleries (`group_cluster_gallery.md`, phase 7); Eyes survey recursive producer scan (`draft/bug/pyautobrain/eyes_survey_recursive_producers.md`). Plot critiques recorded on #436 carry over for a later `/eyes` pass. Ledger `PyAutoEyes/dashboard.md` lands in phase 2; until then the phase prompts are the state. Every phase ships under a contemporaneous human Heart RED override while Heart is RED; merge stays human.

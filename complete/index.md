@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1554 records across 8 buckets.
+1555 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -138,6 +138,7 @@ markers; everything below GENERATED is rebuilt.
 - [autofit-from-instance-roundtrip](2026/09/autofit-from-instance-roundtrip.md)
 - [autofit-prodigy-49](2026/09/autofit-prodigy-49.md)
 - [autolens-inference-birth](2026/09/autolens-inference-birth.md) — `autolens_inference` is born as the from-scratch restart of the retired Cortex
+- [autolens-visualization-birth](2026/09/autolens-visualization-birth.md) — closed as pivoted 2026-09-25
 - [autolens-workspace-network-independent-small-datasets](2026/09/autolens-workspace-network-independent-small-datasets.md)
 - [autonerves-colab-sampler-deps](2026/09/autonerves-colab-sampler-deps.md)
 - [batch-collect](2026/09/batch-collect.md) — closed completed 2026-09-02
