@@ -258,7 +258,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/eyes_birth_organ_row.md">PyAutoEyes phase 0 — organ row, boundary prose, local move</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/437">issue #437</a> — issued 2026-09-25 — workspace-dev</summary>
+<details><summary>📋 <a href="active/eyes_birth_organ_row.md">PyAutoEyes phase 0 — organ row, boundary prose, local move</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/437">issue #437</a> — issued 2026-09-25 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/438">PyAutoMind#438</a>, <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/44">PyAutoCortex#44</a>, <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/171">PyAutoNerves#171</a>, <a href="https://github.com/PyAutoLabs/PyAutoGut/pull/8">PyAutoGut#8</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/415">PyAutoBrain#415</a>, <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/237">PyAutoHeart#237</a>, <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/288">PyAutoHands#288</a>, <a href="https://github.com/PyAutoLabs/pyautolabs.github.io/pull/11">pyautolabs.github.io#11</a>, <a href="https://github.com/PyAutoLabs/PyAutoScientist/pull/34">PyAutoScientist#34</a></summary>
 
 ```
 /start_dev active/eyes_birth_organ_row.md
