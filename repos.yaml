@@ -151,6 +151,13 @@ repos:
     organ: Gut
     role: "Owns the lifecycle of condemned self-material (stale branches, stashes, dead code/tests): holds it as durable, recoverable git refs through a transit window and voids it on a sweep. The storage mirror of Memory (retention vs release)."
     public_role: "Holds stale branches, dead code and other condemned material as recoverable Git references before it is permanently removed."
+  PyAutoEyes:
+    path: organs/PyAutoEyes
+    github: PyAutoLabs/PyAutoEyes
+    category: organ
+    organ: Eyes
+    role: "The Eyes — where the organism sees what its figures look like: one rendered gallery per library (lens, galaxy, fit, cti) of every visualizer output on realistic data, the harness that renders them, the instance registry and the board that is the single point of contact for the visual behaviour of the whole ecosystem. Renders and holds figures; never judges them (the Brain's Eyes conductor does) and never edits library plot code (critiques route through intake)."
+    public_role: "Holds the rendered gallery of every figure each PyAuto library draws, on realistic data, so what the software shows can be seen, judged and improved in one place."
   # --- scientific libraries ----------------------------------------------
   PyAutoFit:
     path: fit/PyAutoFit
