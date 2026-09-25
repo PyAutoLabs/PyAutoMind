@@ -1,3 +1,18 @@
+Model-guided multiple-image finder for euclid DR1 (phase 2/3 of the positions work), plus the tooling to roll it out: the production positions writer (SNR >= 3 peaks, 0.7" de-dup, the #103 gate, pair floor) lives in a shared pure-numpy module used by `segmentation.py`, `util.py` and the gate; `scripts/tools/rewrite_positions.py` and `segmentation.write_positions` overwrite `positions.json` with a `positions_segmentation_v1.json` backup. The SIE solver loop is kept as a diagnostic only; flux-ratio and NIR-colour rules failed on the sample and were not shipped.
+
+Merged 2026-09-25 (human `/prm`):
+- PyAutoLabs/euclid_strong_lens_modeling_pipeline#106 — merged as 94f9244 (stacked on #104, main merged in at 64a173c). pytest 139 PASS (not slow; 9 new rewrite_positions tests) at 53cc0d3; 150/150 regression identical to the human-approved old-vs-new comparison (100 easy + 50 penalty-locked lenses).
+
+Overrides (recorded on #106, #105 and in active.md):
+- Heart RED override — live user 2026-09-25 "Override, open the PR" (push + open PR; merge by human /prm). RED reasons: release validation FAILED (stage integrate); workspace validation not passing (4 failed, cloud#35579888156); manifest drift (7 mismatches vs repos.yaml).
+- Red-CI merge override — human answered "Override: merge, file bug" in /prm. The only red leg (unit / smoke 3.12 + 3.13) was `tests/test_compute_latent_variable.py::test_latent_euclid_variables_traces_under_jax_jit`, also red on main since a89a468 (#104 merge; stack drift, not this PR). Bug draft filed: `draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md`.
+
+**Rollout NOT done — in-progress data operation, not code.** The human-approved rollout overwrites `positions.json` for every DR1 lens (backup `positions_segmentation_v1.json`). At close-out RAL array 350731 is rewriting the first 250 dr1_sep1_rest tiles (priority pass). Still to come: the full dr1_sep1_rest + dr1_sep1_top1000 CPU array pass and the rsync of rest positions back to the local euclid_dr1 clone, driven from the main session. Do not treat DR1 positions as rewritten until that lands.
+
+Follow-ups: phase 3 `draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md` (run the gate over DR1 and submit the remodel set) is unblocked; it should run on the rewritten positions.
+
+## Original prompt
+
 # euclid_dr1: model-guided multiple-image finder (compute, fit, solve, reconcile loop)
 
 Type: feature

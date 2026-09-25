@@ -1,3 +1,14 @@
+Pre-submit positions gate for euclid DR1 (phase 1/3 of the positions work): a 0.15" central cut, a fixed-centre SIE+shear quick fit with a one-image leave-one-out drop, and a per-tile threshold T=min(max(2 s_min,0.3),0.5) written to a `positions_meta.json` sidecar that `load_vis_dataset` reads.
+
+Merged 2026-09-25 (human `/prm`):
+- PyAutoLabs/euclid_strong_lens_modeling_pipeline#104 — merged as a89a468 (4 commits 1fb1a42..485eb9a: gate module, util.py sidecar read, tests + fixtures, submitter + docs); pytest 296 PASS (37 gate tests) at 485eb9a.
+
+Shipped under the Heart RED development override recorded 2026-09-24 (live user "I authorise you to continue"; push + PR-open only, merge by human /prm). RED reasons at the time: release validation FAILED (stage integrate); workspace validation not passing (4 failed, cloud#35579888156); manifest drift (hub organism blurb, 7 mismatches vs repos.yaml). Recorded on issue #103, PR #104 and the autonomy_log red-override row.
+
+Follow-ups: phase 2 (model-guided finder) shipped as `euclid-dr1-positions-finder` (#105, PR #106, same day). Phase 3 `draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md` is unblocked by this merge. Since the #104 merge, `tests/test_compute_latent_variable.py::test_latent_euclid_variables_traces_under_jax_jit` is red on main (stack drift): bug draft `draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md`.
+
+## Original prompt
+
 # euclid_dr1: sanitise positions.json (drop central/spurious multiple images) before modelling
 
 Type: feature

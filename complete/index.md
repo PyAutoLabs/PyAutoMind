@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1551 records across 8 buckets.
+1553 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -226,6 +226,8 @@ markers; everything below GENERATED is rebuilt.
 - [ep-use-cpu-keeps-jax](2026/09/ep-use-cpu-keeps-jax.md)
 - [euclid-catalogue-rebuild-prep](2026/09/euclid-catalogue-rebuild-prep.md) — One issue, two phased PRs, preparing
 - [euclid-cpu-two-stage-route](2026/09/euclid-cpu-two-stage-route.md)
+- [euclid-dr1-positions-finder](2026/09/euclid-dr1-positions-finder.md)
+- [euclid-dr1-positions-gate](2026/09/euclid-dr1-positions-gate.md)
 - [euclid-fields-api](2026/09/euclid-fields-api.md)
 - [euclid-jax-contour-compat](2026/09/euclid-jax-contour-compat.md)
 - [euclid-single-rgb-vis-lp](2026/09/euclid-single-rgb-vis-lp.md)

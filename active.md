@@ -86,37 +86,6 @@
     benchmark_positions_initialised_inference / benchmark_forward_model_consistency
     stay in draft/, Blocked-by this task. Real headless runs need a laptop with
     the agents installed — the human's first step after merge.
-## euclid-dr1-positions-gate
-- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/103
-- issued: 2026-09-24
-- prompt: active/euclid_dr1_positions_gate.md
-- session: claude (Fable CLI, 2026-09-24, https://claude.ai/code/session_018LZi93FBcwjRdYx1Qe7Epy)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/euclid-dr1-positions-gate
-- repos:
-  - euclid_strong_lens_modeling_pipeline: feature/euclid-dr1-positions-gate
-- summary: Pre-submit positions gate: 0.15" central cut, quick SIE+shear fit with one-image leave-one-out drop, per-tile threshold T=min(max(2 s_min,0.3),0.5) in a positions_meta.json sidecar read by load_vis_dataset. Phase 1/3; runs in its own worktree alongside #102 (disjoint files).
-- pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/104
-- status: awaiting-merge
-- heart-red-override: 2026-09-24 live user "I authorise you to continue" for the named #103 development override (push + PR-open only; merge excluded). "Heart RED reasons at the time: release validation FAILED (stage integrate); workspace validation not passing (4 failed, cloud#35579888156: autolens notebooks/cluster/modeling.ipynb, autolens notebooks/weak/a2744.ipynb, autolens scripts/cluster/modeling.py, +1 more); manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml. Branch gates: pytest 296 PASS (37 gate tests), exemplar witness verdicts reproduced, in-session review of util.py wiring."
-- resume: PR #104 open (4 commits 1fb1a42..485eb9a on feature/euclid-dr1-positions-gate). Next: human /prm when CI is green (merge stays human); then runs with the gate to confirm it is OK BEFORE phase 2 (human sequencing 2026-09-24). Phase 2 started 2026-09-24 as #105 (euclid-dr1-positions-finder, stacked on this branch by human go); phase 3 (draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md) still waits on the merge.
-
-## euclid-dr1-positions-finder
-- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/105
-- issued: 2026-09-24
-- prompt: active/euclid_dr1_positions_finder.md
-- session: claude (Fable CLI, 2026-09-24)
-- status: workspace-dev
-- worktree: /home/jammy/Code/PyAutoLabs-wt/euclid-dr1-positions-finder
-- repos:
-  - euclid_strong_lens_modeling_pipeline: feature/euclid-dr1-positions-finder
-- summary: Phase 2/3 of the positions work: model-guided finder (compute peaks, fixed-centre SIE+shear quick fit, numpy forward solve, reconcile, iterate) in a shared pure-numpy module used by segmentation.py, util.py and the gate. Witness: human-approved 10-lens sample in euclid_dr1 inspect/positions_sample, then the census.
-- parallel-claim: "2026-09-24 human go: own worktree alongside #103 (branch stacked on feature/euclid-dr1-positions-gate, PR #104 open unmerged, deliberate dependency; retarget to main after merge) and #102 (disjoint files: catalogue/, inspection bundle). Brain sized too-large/4-phase; human approved one task, one PR."
-- pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/106 (base feature/euclid-dr1-positions-gate; retarget to main after #104 merges)
-- heart-red-override:
-  - authorization: live user 2026-09-25 answered "Override, open the PR" to the named #105 development override (push + open PR; merge stays human via /prm)
-  - red-reasons: `release validation FAILED (stage integrate)`; `workspace validation not passing (4 failed, cloud#35579888156: autolens notebooks/cluster/modeling.ipynb, autolens notebooks/weak/a2744.ipynb, autolens scripts/cluster/modeling.py, +1 more)`; `manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml`
-  - passed: pytest 139 (not slow) incl. 9 new rewrite_positions tests at 53cc0d3; 150/150 regression vs the human-approved old-vs-new comparison
-- resume: PR #106 open (3 new commits a195033/b8e8d79/53cc0d3 add rewrite_positions.py + segmentation.write_positions). Rollout plan approved 2026-09-25: human /prm #104 then #106 -> sync RAL pipeline -> rewrite_positions priority pass on the first 250 dr1_sep1_rest tiles (sorted) -> full dr1_sep1_rest + dr1_sep1_top1000 CPU array -> rsync rest positions back to local. RAL output for the 10 rest_01 lenses deleted for a fresh start (Tile102004820… left: job 350664_6 still running, human to scancel).
 
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
