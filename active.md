@@ -1,5 +1,16 @@
 # Active Tasks
 
+## mge-nnls-grad-nan
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/573
+- issued: 2026-09-25
+- prompt: active/mge_nnls_grad_nan.md
+- session: Claude Code CLI (Opus 5.5), 2026-09-25
+- status: library-dev
+- autonomy: human-required (header); plan approved in-session 2026-09-25 (choose polish vs effective-kappa on evidence; runtime vs autolens_profiling from a detached scratch worktree, no profiling claim)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/mge-nnls-grad-nan
+- repos:
+  - PyAutoArray: feature/mge-nnls-grad-nan
+
 ## hpc-cache-off-home
 - issue: https://github.com/PyAutoLabs/autolens_inference/issues/13
 - issued: 2026-09-25
