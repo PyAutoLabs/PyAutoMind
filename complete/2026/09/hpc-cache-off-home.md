@@ -1,3 +1,19 @@
+Kept Python/JAX caches off $HOME on HPC (RAL admin request 2026-09-25): tracked activate.sh HPC branches in autolens_inference and the three assistants now export every cache under ${PYAUTO_HPC_CACHE:-$(dirname "$PYAUTO_HPC_BASE")/.cache}; autolens_inference submit scripts no longer point numba/matplotlib at /tmp.
+
+Merged 2026-09-25 (human `/prm`, all checks green; shipped under the recorded Heart RED development override):
+- PyAutoLabs/autolens_inference#14 — `activate.sh` cache block; `/tmp` cache exports removed from 12 `hpc/` files; `hpc/README.md` + `AGENTS.md`
+- PyAutoLabs/autolens_assistant#135 — `activate.sh` cache block (HPC branch only)
+- PyAutoLabs/autogalaxy_assistant#30 — `activate.sh` cache block + cache docs (`ag_setup_environment.md`, `sandbox.md`, `hpc.md`, re-provenanced)
+- PyAutoLabs/autofit_assistant#51 — `activate.sh` cache block (HPC branch only)
+
+With `PYAUTO_HPC_BASE` set, every cache (XDG/pip/matplotlib/numba/CUDA/Triton/JAX/astropy) now lands under `${PYAUTO_HPC_CACHE:-$(dirname "$PYAUTO_HPC_BASE")/.cache}` (`/mnt/ral/jnightin/.cache` on RAL). The RAL venv hot-fix (`/mnt/ral/jnightin/PyAuto/PyAuto/bin/activate`, backup `.bak_20260925`) stays as the backstop for untracked project copies.
+
+Remaining: phase 2 (autolens_profiling, euclid_strong_lens_modeling_pipeline) is in PyAutoMind `planned.md` as `hpc-cache-off-home-phase2`, blocked on those repos' active claims.
+
+Heart RED development override recorded (issue #13, PR bodies, autonomy_log red-override row).
+
+## Original prompt
+
 # Keep Python/JAX caches off `$HOME` on HPC — tracked `activate.sh` + submit-script tidy
 
 Type: maintenance
