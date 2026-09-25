@@ -15,6 +15,9 @@
   - PyAutoHands: feature/pyautoeyes-birth-organ-row
   - pyautolabs.github.io: feature/pyautoeyes-birth-organ-row
   - PyAutoScientist: feature/pyautoeyes-birth-organ-row
+  - PyAutoCortex: feature/pyautoeyes-birth-organ-row
+  - PyAutoNerves: feature/pyautoeyes-birth-organ-row
+  - PyAutoGut: feature/pyautoeyes-birth-organ-row
 
 ## certified-solver-phase-c1-lane-rate
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/304
