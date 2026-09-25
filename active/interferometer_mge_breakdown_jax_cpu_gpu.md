@@ -20,6 +20,7 @@ Unattended: ready
 Lane: local-dev
 Epic: interferometer-likelihood-campaign
 Filed: 2026-09-25
+Issued: 2026-09-25
 
 Mirror of the CCD imaging MGE breakdown (`scripts/imaging/likelihood_breakdown/mge.py`,
 `results/breakdown/imaging/mge_*`) for the interferometer MGE likelihood, on JAX CPU
