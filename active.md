@@ -16,7 +16,13 @@
 - issued: 2026-09-25
 - prompt: active/hpc_cache_off_home.md
 - session: Claude Code CLI (Opus 5.5), 2026-09-25
-- status: workspace-dev
+- status: awaiting-merge
+- prs:
+  - autolens_inference: https://github.com/PyAutoLabs/autolens_inference/pull/14
+  - autolens_assistant: https://github.com/PyAutoLabs/autolens_assistant/pull/135
+  - autogalaxy_assistant: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/30
+  - autofit_assistant: https://github.com/PyAutoLabs/autofit_assistant/pull/51
+- heart-red-override: "2026-09-25 live user answered 'Authorise override' to the question naming hpc-cache-off-home (push + open pending-release PRs; merge via separate /prm; no release). RED reasons: release validation FAILED (stage integrate); workspace validation not passing (4 failed, cloud#35579888156: autolens notebooks/cluster/modeling.ipynb, autolens notebooks/weak/a2744.ipynb, autolens scripts/cluster/modeling.py, +1 more); manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml. Passed: activate.sh witness x4, check_submits 12/12, ruff, pytest 57, assistant provenance/idioms/citations."
 - autonomy: supervised (header); plan approved in-session 2026-09-25 (tracked activate.sh block + autolens_inference /tmp tidy; phase 2 in planned.md)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/hpc-cache-off-home
 - repos:

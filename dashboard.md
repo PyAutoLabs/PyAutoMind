@@ -282,7 +282,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/hpc_cache_off_home.md">Keep Python/JAX caches off <code>$HOME</code> on HPC — tracked <code>activate.sh</code> + submit-script…</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/13">issue #13</a> — issued 2026-09-25 — workspace-dev</summary>
+<details><summary>📋 <a href="active/hpc_cache_off_home.md">Keep Python/JAX caches off <code>$HOME</code> on HPC — tracked <code>activate.sh</code> + submit-script…</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/13">issue #13</a> — issued 2026-09-25 — awaiting-merge</summary>
 
 ```
 /start_dev active/hpc_cache_off_home.md
