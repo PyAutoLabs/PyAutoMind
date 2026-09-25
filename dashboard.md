@@ -266,7 +266,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/certified_solver_phase_c1_lane_rate.md">Certified solver phase C1 — uncertified-lane rate and batched timing on real…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/304">issue #304</a> — issued 2026-09-24 — awaiting-merge</summary>
+<details><summary>📋 <a href="active/certified_solver_phase_c1_lane_rate.md">Certified solver phase C1 — uncertified-lane rate and batched timing on real…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/304">issue #304</a> — issued 2026-09-24 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/309">autolens_profiling#309</a></summary>
 
 ```
 /start_dev active/certified_solver_phase_c1_lane_rate.md
