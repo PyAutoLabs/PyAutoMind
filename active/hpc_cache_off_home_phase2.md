@@ -10,6 +10,8 @@ Autonomy: supervised
 Priority: medium
 Status: formalised
 Filed: 2026-09-25
+Issued: 2026-09-25
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/310
 Consequence: glance
 Witness: same as phase 1 (`complete/2026/09/hpc-cache-off-home.md`, shipped as autolens_inference#14 / autolens_assistant#135 / autogalaxy_assistant#30 / autofit_assistant#51 — copy its block): each `activate.sh` HPC branch exports every cache under `${PYAUTO_HPC_CACHE:-$PYAUTO_HPC_BASE/../.cache}`; `git grep -E "(NUMBA_CACHE_DIR|MPLCONFIGDIR)=/tmp" -- hpc/` returns nothing in autolens_profiling (103 files on 2026-09-25) — keep any per-task `JAX_COMPILATION_CACHE_DIR` the profiling scripts set deliberately (fresh-cache autotune discipline).
 
