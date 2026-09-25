@@ -282,7 +282,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/mge_nnls_grad_nan.md">fix: NaN JAX gradient on MGE (mapper-less) positive-only solves after #572</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/573">issue #573</a> — issued 2026-09-25 — library-dev</summary>
+<details><summary>📋 <a href="active/mge_nnls_grad_nan.md">fix: NaN JAX gradient on MGE (mapper-less) positive-only solves after #572</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/573">issue #573</a> — issued 2026-09-25 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/574">PyAutoArray#574</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 /start_dev active/mge_nnls_grad_nan.md
@@ -324,6 +324,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#574](https://github.com/PyAutoLabs/PyAutoArray/pull/574) — `active/mge_nnls_grad_nan.md`
 - [PyAutoArray#547](https://github.com/PyAutoLabs/PyAutoArray/pull/547) — `complete/2026/09/arcsec-after-decimal.md`
 - [PyAutoArray#567](https://github.com/PyAutoLabs/PyAutoArray/pull/567) — `complete/2026/09/certified-positive-solver.md`
 - [PyAutoArray#534](https://github.com/PyAutoLabs/PyAutoArray/pull/534) — `complete/2026/09/ci-smoke-speedup.md`
