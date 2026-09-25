@@ -37,7 +37,7 @@ worktree HEAD is an ancestor of `origin/main` with 0 commits ahead, per repo).
 - Organ order: phase 0 appended Eyes after Gut everywhere. The human ruled on
   2026-09-25 that the canonical order is Brain, Mind, Cortex, Memory, Eyes, Heart,
   Hands, Nerves, Gut. The reorder is filed as a follow-up,
-  `draft/maintenance/pyautoeyes/eyes_organ_order.md`.
+  `active/eyes_organ_order.md` (PyAutoMind#439).
 
 ## Original prompt
 

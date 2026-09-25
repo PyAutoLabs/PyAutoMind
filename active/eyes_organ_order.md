@@ -17,6 +17,7 @@ Autonomy: supervised
 Priority: high
 Lane: local-dev
 Status: draft
+Issued: 2026-09-25
 Witness: `python3 PyAutoMind/scripts/repos_sync.py --check` organism-map/organ-table legs OK with Eyes between Memory and Heart in every generated block; grep of SIBLING_ORGANS lists in Brain/Heart/Hands shows the same order.
 Epic: pyautoeyes-birth
 Filed: 2026-09-25

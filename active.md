@@ -1,5 +1,25 @@
 # Active Tasks
 
+## eyes-organ-order
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/439
+- issued: 2026-09-25
+- prompt: active/eyes_organ_order.md
+- session: Claude Code CLI (Fable architect, Opus execution), 2026-09-25; session ID unavailable
+- status: workspace-dev
+- autonomy: supervised (header); plan on the issue; reorder is the next leg, merge is human
+- worktree: /home/jammy/Code/PyAutoLabs-wt/eyes-organ-order
+- repos:
+  - PyAutoMind: feature/eyes-organ-order
+  - PyAutoBrain: feature/eyes-organ-order
+  - PyAutoHeart: feature/eyes-organ-order
+  - PyAutoHands: feature/eyes-organ-order
+  - pyautolabs.github.io: feature/eyes-organ-order
+  - PyAutoScientist: feature/eyes-organ-order
+  - PyAutoCortex: feature/eyes-organ-order
+  - PyAutoNerves: feature/eyes-organ-order
+  - PyAutoGut: feature/eyes-organ-order
+- resume: bundle worktree created; implement the reorder per the issue plan (Eyes between Memory and Heart), then repos_sync --write, then ship
+
 ## abell-1201-point-mass
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/133
 - issued: 2026-09-22
