@@ -20,7 +20,7 @@
 - prompt: active/certified_solver_phase_c1_lane_rate.md
 - session: Claude Code CLI (Opus 5.5), 2026-09-24
 - status: awaiting-merge
-- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/309
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/309
 - autonomy: supervised (header); plan approved in-session 2026-09-24 (measurement only; release block overridden by the human, runs against library mains incl. unreleased PyAutoArray#567)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/certified-solver-phase-c1-lane-rate
 - repos:
