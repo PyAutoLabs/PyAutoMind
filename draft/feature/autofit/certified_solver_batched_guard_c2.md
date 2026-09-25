@@ -14,7 +14,7 @@ Themes:
 Difficulty: large
 Autonomy: supervised
 Priority: normal
-Status: draft — C1 verdict recorded 2026-09-25 (human: proceed; build rule passes in 3/4 cells, rectangular pix1 11% — see "C1 findings"); still blocked on the PyAutoArray#567 release
+Status: draft — C1 verdict recorded 2026-09-25 (human: proceed; build rule passes in 3/4 cells; 2026-09-25 human decisions: gate Δ = 100 / 0.1 nats adopted, rectangular pix1 stays on PDIP vmap — see "Human decisions (2026-09-25)"); still blocked on the PyAutoArray#567 release
 Epic: certified-positive-solver
 Phase: C2
 Consequence: judge
@@ -26,7 +26,7 @@ none under `jax.jit(jax.vmap(fn))`, uncertified lanes re-run through the scalar 
 program) runs within a few percent of the certified+none batch cost, gated by a gate
 PRE-REGISTERED before the run: (a) a near-peak nats pin — every finite lane with log L within
 Δ of the batch maximum agrees with scalar library PDIP to within a pinned tolerance in nats
-(PROPOSAL for the human, not yet decided: Δ = 100 nats, pin 0.1 nats); (b) a gated
+(ADOPTED by the human 2026-09-25: Δ = 100 nats of the batch maximum log likelihood, pin 0.1 nats); (b) a gated
 cross-composition check (vmap vs per-lane scalar jit of the same Settings) and a gated capture
 check (vs the capture's own Fitness value) on the same near-peak lanes, so a B=50-style
 composition fault (draft/bug/autoarray/batched_jit_vmap_b50_wrong_log_likelihood_a100.md) fails
@@ -114,13 +114,28 @@ Note: `autolens_profiling/results/notes/certified_solver_phase_c1_lane_rate_2026
   pix2 11.5 + 20.0% x 35.7 = 18.6 vs 17.0) and roughly ties on Delaunay pix2 (22.2 vs 22.8).
   The human chose to proceed with 3/4 cells passing.
 
+## Human decisions (2026-09-25)
+
+Recorded from the human's "do these:" reply to the agent's items on 2026-09-25.
+
+1. **Near-peak gate values ADOPTED.** C2's pre-registered near-peak nats pin checks every finite
+   lane within Δ = 100 nats of the batch maximum log likelihood against scalar library PDIP, pinned
+   at 0.1 nats. These values were adopted by the human on 2026-09-25 and are no longer a proposal.
+   The gated cross-composition and capture checks, the per-lane PDIP `converged` / `iterations`
+   records and the NaN handling in Witness (2) stay as written.
+2. **Per-mesh policy: rectangular pix1 STAYS on library PDIP `jit(vmap)` in C2.** The guard saves
+   only ~11% there, which is below the 15% build rule, and it is slower at prior-phase rates (32.9
+   vs 30.6). The guard targets Delaunay pix1, Delaunay pix2 and rectangular pix2. Rectangular pix2
+   is also slower than PDIP at prior-phase rates (18.6 vs 17.0). That is left as a C2 measurement
+   question and has not been decided.
+
 ## Open questions for C2
 
-- **Per-mesh policy:** rectangular pix1 misses the 15% rule (11%). Should rectangular pix1 (or
-  all rectangular stages during the prior phase) stay on library PDIP `jit(vmap)` while Delaunay
-  and rectangular pix2 move to the guarded batch?
-- Gate parameters Δ and the nats pin (proposal above: Δ = 100, pin 0.1 nats) — human decision at
-  pre-registration.
+- ~~**Per-mesh policy** (rectangular pix1)~~ — CLOSED 2026-09-25: rectangular pix1 stays on
+  library PDIP `jit(vmap)`; see "Human decisions (2026-09-25)".
+- ~~Gate parameters Δ and the nats pin~~ — CLOSED 2026-09-25: adopted Δ = 100 nats, pin 0.1 nats.
+- Rectangular pix2 at prior-phase rates: the guarded batch is slower than PDIP (18.6 vs 17.0).
+  Should the guard apply only after the prior phase? This is for C2 to measure and has not been decided.
 - Do the catastrophic-lane PDIP disagreements coincide with `converged=False` / `iterations =
   max_iter` (C1 open question 4)? Does one executable re-run on those lanes return identical bits?
 - NaN on catastrophic lanes in some compositions only (C1 open question 5): does production care,
