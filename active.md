@@ -98,23 +98,6 @@
 - resume: PHASE C DONE; PR https://github.com/PyAutoLabs/autolens_profiling/pull/312 open (pending-release), Heart YELLOW acknowledged by human 2026-09-26 (unrelated reasons). Next = /prm (merge + completion record). 5 follow-ups filed in draft/: interferometer_mge_w_tilde_route_mge_only, interferometer_chunked_transform_mapping_matrix, interferometer_transform_mapping_matrix_real_scatter, ral_venv_dependency_floor_drift, workspace_interferometer_mge_sparse_operator_memory_docs.
 - summary: Interferometer likelihood campaign 1/3: interferometer MGE breakdown cell on the shared harness (+ exploratory W~ func-list arm), JAX CPU + RAL A100 fp64 (mp on A100) across sma/alma/alma_high(/jvla), VRAM block re-test, ranked lever note + follow-up prompts.
 
-## multistart-cpu-memory-probe
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1646
-- issued: 2026-09-26
-- prompt: active/multistart_cpu_memory_probe_doubles_compile.md
-- session: Claude Code CLI (Opus 5.5 subagent), 2026-09-26
-- status: library-shipped, awaiting-merge
-- autonomy: supervised (header); plan approved in-session 2026-09-26
-- worktree: /home/jammy/Code/PyAutoLabs-wt/multistart-cpu-memory-probe
-- repos:
-  - PyAutoFit: feature/multistart-cpu-memory-probe
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1647
-- pending-release: PyAutoFit#1647
-- heart-ack:
-  - "2026-09-26 human acked YELLOW: workspace validation 4 failed cluster/weak notebooks; manifest drift x3; release validation stale"
-- resume: PR #1647 open (pending-release). Next = human /prm when CI green; then the next nightly Stage 3 should show imaging/start_here.py near ~700 s.
-- summary: Skip MultiStartGradient's unbatched-memory probe on the CPU JAX backend (two throwaway full-model compiles; caused the 2026-09-26 release-integrate start_here.py 3605 s TIMEOUT, run 36226772178).
-
 ## interferometer-mge-w-tilde-route
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/575
 - issued: 2026-09-26

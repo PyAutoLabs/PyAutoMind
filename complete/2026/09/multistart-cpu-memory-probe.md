@@ -1,3 +1,18 @@
+## multistart-cpu-memory-probe
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1646 (closed, completed 2026-09-26)
+- completed: 2026-09-26
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1647 (MERGED, head `3220566e`, merge `326f611b1b40afd89bb73956441faa7379328407`; CI green on all legs, no Heart freeze)
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1647
+- heart-ack: "2026-09-26 human acked YELLOW: workspace validation 4 failed cluster/weak notebooks; manifest drift x3; release validation stale"
+- Consequence: glance — no tier-`notify` shadow row
+- summary:
+  - `MultiStartGradient._warn_if_unbatched_exceeds_memory` now skips its batch-1/batch-2 memory probe (two throwaway full-model XLA compiles) on the CPU JAX backend, and checks the memory budget before probing.
+  - The probe caused the 2026-09-26 release-integrate `imaging/start_here.py` 3605 s TIMEOUT (run 36226772178).
+  - 3 new tests (red then green); 139 mle tests pass.
+  - Follow-up to watch: the next nightly Stage 3 `start_here.py` should return near ~700 s; the 3600 s `BUILD_SCRIPT_TIMEOUT` override in `autolens_workspace/config/build/profile_release.yaml` can be retired once runs are consistently fast.
+
+## Original prompt
+
 # MultiStartGradient's unbatched-memory guard pays two throwaway full-model XLA compiles on CPU
 
 Type: bug
