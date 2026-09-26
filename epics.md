@@ -32,8 +32,8 @@ epic, never picked standalone.
 ## point-source-cpu-speed
 - title: Point-source (single-source) PointSolver CPU speed-up
 - ledger: autolens_profiling/results/notes/point_source_cpu_campaign.md
-- status: phases 1-3 shipped (p2 + p3 released in 2026.9.26.1: PyAutoArray `7fa8d271`, PyAutoLens `86054bbc`); phase 4a (re-baseline + solver-config sweep, workspace-only) next
-- notes: human decision 2026-09-26 — SINGLE-SOURCE only, the `scripts/point_source/` use case; the cluster use case moved to epic `cluster-pointsolver-speed`. Member prompt `active/pointsolver_cpu_speed_phase_4.md` (phase 4a issued as autolens_profiling#314) (re-tagged from `cluster-strong-lensing`, which is the unrelated Source & Cluster arc). Records `complete/2026/09/point-source-cpu-p{1,2,3}.md`. Issue ONE bounded phase at a time; any library default change (PyAutoLens `shape_solver.py` / PyAutoArray `MAX_CONTAINING_SIZE`) is a human decision at the phase-4a checkpoint.
+- status: phases 1-3 shipped (p2 + p3 released in 2026.9.26.1: PyAutoArray `7fa8d271`, PyAutoLens `86054bbc`); phase 4a (re-baseline + solver-config sweep, workspace-only) next; folder split shipped 2026-09-26 (autolens_profiling#318, merge `a5e3cdd`: `scripts/point_source/` → `scripts/point_source_image/` + `scripts/point_source_source/`; record `complete/2026/09/point-source-folder-split.md`)
+- notes: human decision 2026-09-26 — SINGLE-SOURCE only, the `scripts/point_source_image/` + `scripts/point_source_source/` use case (formerly `scripts/point_source/`); the cluster use case moved to epic `cluster-pointsolver-speed`. Member prompt `active/pointsolver_cpu_speed_phase_4.md` (phase 4a issued as autolens_profiling#314) (re-tagged from `cluster-strong-lensing`, which is the unrelated Source & Cluster arc). Records `complete/2026/09/point-source-cpu-p{1,2,3}.md`. Issue ONE bounded phase at a time; any library default change (PyAutoLens `shape_solver.py` / PyAutoArray `MAX_CONTAINING_SIZE`) is a human decision at the phase-4a checkpoint.
 
 ## cluster-pointsolver-speed
 - title: Cluster PointSolver speed-up — data, likelihood_breakdown, then levers
