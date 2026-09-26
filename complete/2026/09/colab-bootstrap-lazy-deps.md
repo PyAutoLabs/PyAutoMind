@@ -12,7 +12,6 @@ Colab bootstrap now installs every lazily-imported dependency. Shipped 2026-09-1
 
 **Shipping.** Merging fixes nothing on its own — the autonerves PyPI release is what reaches every published notebook. Confirm the overnight release run has settled before cutting one. Heart's release-integrate stays RED until then (check F installs autonerves from the index).
 
-- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/169
 
 ## Original prompt
 

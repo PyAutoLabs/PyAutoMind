@@ -3,7 +3,6 @@
 - PR: https://github.com/PyAutoLabs/PyAutoFit/pull/1585 (MERGED, merge commit `1dc9250c`, head `7f344bf`)
 - Workspace PR: https://github.com/PyAutoLabs/autofit_workspace_test/pull/101 (MERGED, merge commit `48f56c33`, head `4781213`)
 - Workspace PR: https://github.com/PyAutoLabs/autolens_workspace_developer/pull/133 (MERGED, merge commit `d585e3d5`, head `e4874fe`)
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1585
 - heart-ack: 2026-09-08 YELLOW acknowledged in-session, two organism-scope reasons (multi_dataset workspace validation failures; no release rehearsal) — none of the failing scripts touched by this diff
 - parallel-claim: PyAutoFit and autofit_workspace_test were also claimed by traced-assertions-on-jax-path (#1581); file sets disjoint; own worktree
 

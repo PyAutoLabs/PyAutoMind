@@ -24,7 +24,6 @@ chaining pixelization prose, and the three matching notebooks.
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/238 (merged 6c9b19b1ea6d4c13a1c03a2e1fa7519f7c6ddb7c)
 - issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/237 (closed)
 - upstream: PyAutoArray#541 (merged 9bd76799d4d836efd99a9885978a93a6674cc176)
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/541
 - heart-ack: 2026-09-08 in-session, two reasons "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" and "release validation incomplete: no rehearsal for current source" — organism-scope; neither names autogalaxy_workspace, and this diff is prose only, changing no executable line
 
 **Release gate — PyAutoArray.** The library half of this change (PyAutoArray#541)

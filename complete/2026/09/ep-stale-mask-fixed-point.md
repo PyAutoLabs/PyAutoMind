@@ -3,7 +3,6 @@
 - Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1579
 - PR: https://github.com/PyAutoLabs/PyAutoFit/pull/1580 (merged 2026-09-08)
 - Repo: PyAutoFit, branch `feature/ep-stale-mask-fixed-point`
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1580
 
 ## What shipped
 

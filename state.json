@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-09-26T15:59:46Z",
+  "updated": "2026-09-26T16:00:58Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -33,98 +33,98 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#547 \u2014 arcsec-after-decimal",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/547",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#567 \u2014 certified-positive-solver",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/567",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#534 \u2014 What shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/534",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#563 \u2014 Shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/563",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#523 \u2014 delaunay-area-magnification-audit",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/523",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#525 \u2014 delaunay-dual-area-magnification",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/525",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#527 \u2014 delaunay-edge-ring-zeroed",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/527",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#537 \u2014 delaunay-nn-constant-split-assembly",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/537",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#533 \u2014 delaunay-nn-launch-latency",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/533",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#531 \u2014 delaunay-walk-early-exit",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/531",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#553 \u2014 What shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/553",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#554 \u2014 What shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/554",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#555 \u2014 What shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/555",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#557 \u2014 What shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/557",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#540 \u2014 What shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/540",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#576 \u2014 interferometer-mge-w-tilde-route",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/576",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoBrain PyAutoBrain#404 \u2014 codex-context-efficiency",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/404",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoBrain PyAutoBrain#387 \u2014 What shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/387",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoBrain PyAutoBrain#406 \u2014 Shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/406",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoBrain PyAutoBrain#409 \u2014 notify-slack-community-discussions",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/409",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoBrain PyAutoBrain#384 \u2014 provider-neutral-bundle-prompts",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/384",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#629 \u2014 interferometer-mge-w-tilde-route",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/629",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoLens PyAutoLens#750 \u2014 interferometer-mge-w-tilde-route",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/750",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoMind PyAutoMind#425 \u2014 codex-context-efficiency",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/pull/425",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoMind PyAutoMind#427 \u2014 Shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/pull/427",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoMind PyAutoMind#406 \u2014 provider-neutral-bundle-prompts",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/pull/406",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoReduce PyAutoReduce#77 \u2014 mass-field-reduce",
+      "url": "https://github.com/PyAutoLabs/PyAutoReduce/pull/77",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: autofit_workspace autofit_workspace#162 \u2014 Shipped",
+      "url": "https://github.com/PyAutoLabs/autofit_workspace/pull/162",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: autofit_workspace_test autofit_workspace_test#98 \u2014 ep-stale-tracking-per-variable",
+      "url": "https://github.com/PyAutoLabs/autofit_workspace_test/pull/98",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: autofit_workspace_test autofit_workspace_test#99 \u2014 samples-errors-at-sigma-instance",
+      "url": "https://github.com/PyAutoLabs/autofit_workspace_test/pull/99",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: autogalaxy_workspace autogalaxy_workspace#248 \u2014 Shipped",
+      "url": "https://github.com/PyAutoLabs/autogalaxy_workspace/pull/248",
       "prompt": null
     }
   ]

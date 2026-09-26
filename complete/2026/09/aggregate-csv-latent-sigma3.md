@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1597
 - completed: 2026-09-10
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1598 (merge 68d43b0f)
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1598
 - summary: |
     `AggregateCSV` wrote wrong numbers for two column kinds and hid a third failure. `Row.values_at_sigma_3_kwargs`
     read `latent_summary.values_at_sigma_1`, so every latent `*_3_sigma` column carried the 1-sigma values (shipped

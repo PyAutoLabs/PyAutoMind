@@ -8,8 +8,6 @@ web session (no task worktree); implemented by an Opus subagent under the delega
 - completed: 2026-09-07
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1566
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/729
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1566
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/729
 
 ## What shipped
 - PyAutoFit: `TransformedMessage._support` is a `functools.cached_property` of the same name

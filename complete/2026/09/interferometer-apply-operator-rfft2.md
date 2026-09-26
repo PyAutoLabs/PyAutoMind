@@ -4,7 +4,6 @@
 - Issue: https://github.com/PyAutoLabs/PyAutoArray/issues/538 (closed, completed)
 - PR: https://github.com/PyAutoLabs/PyAutoArray/pull/540 (MERGED, merge commit `7a4cb700`, head `a67828e3`)
 - Epic: numba-interferometer-revisit (phase 2), follow-up from `autolens_profiling#226`
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/540
 
 ## What shipped
 

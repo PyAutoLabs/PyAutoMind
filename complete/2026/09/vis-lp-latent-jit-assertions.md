@@ -3,8 +3,6 @@
 - completed: 2026-09-10
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/734 (merged)
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1600 (merged)
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/734
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1600
 - repos:
   - PyAutoLens
   - PyAutoFit

@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1636
 - completed: 2026-09-17
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1638
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1638
 - summary: |
     `Fitness._vmap` is now `jax.jit(jax.vmap(self.call))` instead of
     `jax.vmap(jax.jit(self.call))`: the conventional order, the one

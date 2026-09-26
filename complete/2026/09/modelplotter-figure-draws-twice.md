@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1622 (closed completed 2026-09-14)
 - completed: 2026-09-14
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1623 (merged `6fd754bc691b94f95a2d02db55173315f73d0f11`)
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1623
 - session: web-github (claude.ai/code), session clone at `/home/user/pyautofit`, no task worktree; branch `claude/howtofit-modelplotter-duplicate-eqr6gk`. Reported by the human from a HowToFit tutorial run in Google Colab, then intake → start_dev → ship_library → prm in the one session.
 - summary: |
     `af.ModelPlotter(model).figure()` drew every model **twice** in a notebook.

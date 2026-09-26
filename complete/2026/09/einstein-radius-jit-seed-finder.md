@@ -3,8 +3,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/615
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/735
 - merged: PyAutoGalaxy 6459e1d (PR #615), PyAutoLens ae64a65 (PR #735) — library-first order honoured (#615 then #735, both 2026-09-11)
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/615
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/735
 - closed-out: 2026-09-11 from a web session (`/prm` on the MCP surface; no task worktree — session clones only)
 
 **Summary.** `LensCalc.einstein_radius_jit_from` no longer needs a caller-supplied `init_guess`. A private helper (`_seed_via_coarse_grid_argmin`) evaluates the tangential eigen value on a coarse uniform grid (25×25, ±3 arcsec by default) straight from the raw Hessian tuple inside the JIT trace, masks non-finite cells and takes the cell of minimum `|eigen value|` as the single Newton seed. `seed_grid_shape` / `seed_grid_extent` are exposed so cluster fits can widen the search without leaving the traceable path; an explicit `init_guess` still works unchanged. PyAutoLens then dropped the hardcoded 4-seed fan at ±1 arcsec from `autolens/analysis/latent.py::effective_einstein_radius` (and its `jax.numpy` import) and calls the seedless form.

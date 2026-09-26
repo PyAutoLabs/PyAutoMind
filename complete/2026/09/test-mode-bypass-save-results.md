@@ -1,7 +1,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1624 (closed completed 2026-09-14)
 - completed: 2026-09-14
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1626 (merged `559699fb1531ffe2205ae3b824bd29aadb39c145`)
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1626
 - session: claude CLI, task worktree `~/Code/PyAutoLabs-wt/test-mode-bypass-save-results`, branch `feature/test-mode-bypass-save-results`; intake → start_dev → start_library → ship_library → prm in one session.
 - summary: |
     `AbstractSearch._fit_bypass_test_mode` — the sampler bypass behind

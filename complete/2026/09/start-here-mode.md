@@ -3,7 +3,6 @@
 - Issue: https://github.com/PyAutoLabs/autofit_assistant/issues/38 (closed)
 - PRs: PyAutoLabs/PyAutoFit#1603 (merged 008eaa472, docs only) → PyAutoLabs/autofit_assistant#39 (merged 057a13b9d)
 - Branch: feature/start-here-mode on both repos, worktree ~/Code/PyAutoLabs-wt/start-here-mode
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1603
 - Heart at ship: YELLOW, acknowledged in-session (organism-scope reasons: autolens workspace validation, MGE profiling drift, no release rehearsal); freeze clear at merge.
 
 ## What shipped

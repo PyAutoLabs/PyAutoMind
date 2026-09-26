@@ -3,8 +3,6 @@
 - completed: 2026-09-10
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/547
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/612
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/547
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/612
 - summary:
   - `arcsec_after_decimal` is now a per-call keyword on `plot_array`, `plot_grid`
     and `plot_inversion_reconstruction`, forwarded through `apply_extent` to

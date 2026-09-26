@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/524
 - completed: 2026-09-05
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/525
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/525
 - epic: euclid-dr1-prep (follow-up to phase 8; first of the audit's two defects)
 
 Fixed the Delaunay magnification denominator: `MeshGeometryDelaunay.areas_for_magnification`

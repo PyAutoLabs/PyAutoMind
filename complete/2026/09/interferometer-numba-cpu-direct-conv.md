@@ -2,7 +2,6 @@
 - Issue: https://github.com/PyAutoLabs/PyAutoArray/issues/543 (closed, completed)
 - PR: https://github.com/PyAutoLabs/PyAutoArray/pull/545 (MERGED, merge commit `35aa681f`, head `825b2453`)
 - Epic: numba-interferometer-revisit — **the last library follow-up of the retired epic.** The epic itself was already recorded COMPLETE at `complete/2026/09/interferometer-preload-cpu.md` and its ledger retired to `complete/archive/epics/numba_interferometer_likelihood_revisit.md`; this task is the final PyAutoArray-side item that fell out of the `autolens_profiling#226` verdict.
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/545
 - heart-ack: 2026-09-08 in-session, reasons "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772: autolens notebooks/multi_dataset/modeling.ipynb, autolens scripts/multi_dataset/modeling.py, autolens_test scripts/imaging/delaunay.py, +4 more)" and "release validation incomplete: no rehearsal for current source" — organism-scope; neither names the interferometer inversion path or PyAutoArray
 
 ## What shipped

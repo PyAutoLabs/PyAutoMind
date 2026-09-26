@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1608
 - completed: 2026-09-11
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1610
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1610
 - summary: |
     Human ruling 2026-09-09: expectation propagation never runs a factor search
     through a Python multiprocessing pool. RAL job 342351_0 (slope_hierarchy_scale

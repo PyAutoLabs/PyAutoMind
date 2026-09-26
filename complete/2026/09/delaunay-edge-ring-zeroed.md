@@ -4,7 +4,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/527
 - workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/52
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/535
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/527
 - epic: euclid-dr1-prep
 
 `Delaunay(pixels, zeroed_pixels)` inflated `self.pixels` by `zeroed_pixels` and

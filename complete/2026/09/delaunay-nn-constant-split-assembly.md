@@ -5,7 +5,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/537
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/309
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/231
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/537
 - scope: **whole prompt** — the investigation priced every candidate reformulation, the winner shipped, and the pin is unchanged, so nothing is left over. The follow-ups below are new levers the measurement exposed, not unshipped scope.
 
 ### What shipped

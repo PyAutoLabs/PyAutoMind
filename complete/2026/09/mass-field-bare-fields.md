@@ -2,7 +2,6 @@
 
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/743
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/744
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/744
 - merged: 2026-09-18
 - merge-commit: 478213e787781517113e96f80013270df482f665
 

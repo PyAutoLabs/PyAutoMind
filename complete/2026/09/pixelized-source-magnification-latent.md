@@ -4,8 +4,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/727
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/728
 - workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/51
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/727
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/728
 - epic: euclid-dr1-prep (follow-up to phase 8; second of the audit's two defects)
 
 Fixed the `magnification` latent for pixelized sources. `total_source_flux` /

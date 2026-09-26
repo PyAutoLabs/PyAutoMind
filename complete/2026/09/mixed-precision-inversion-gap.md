@@ -6,7 +6,6 @@ fixing its actual cause in PyAutoArray. Merged as PyAutoArray#556
 closed.
 
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/556
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/556
 
 **The premise was wrong: it was never mixed precision.** A {JAX, NumPy} x
 {mixed, fp64} x {positive-only on, off} matrix on freshly simulated in-memory

@@ -3,7 +3,6 @@
 - completed: 2026-09-24
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/572 (merge 3de624b5)
 - profiling-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/307 (merge 00211d36)
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/572
 - summary: |
     **Bug.** The jaxnnls PDIP positive-only solve (max_iter 50) diverged on signal-free,
     floor-only MGE source-Gaussian columns after Jacobi scaling, returning garbage logL on

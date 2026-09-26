@@ -3,7 +3,6 @@
 - completed: 2026-09-23
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/567 (merged `11b93476b`)
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/299 (merged `043518479`)
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/567
 - summary: |
     Phase A shipped the certified active-set positive solver into PyAutoArray:
     `autoarray/util/jax_active_set.py`; `solver`/`stats` kwargs on

@@ -4,7 +4,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/HowToFit/pull/66
 - workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/78
 - workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/86
-- release-gate: PyAutoNerves
 - summary: |
     Local-install leg of the "tutorials 6/7 blackjax never installed" prompt plus the
     revert of the 2026-09-15 workshop Colab stopgap. HowToFit/requirements.txt now

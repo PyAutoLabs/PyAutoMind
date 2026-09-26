@@ -18,7 +18,6 @@ Channel map: PyAutoFit#1487 closed the results-write channel; #1538 / PyAutoGala
 
 Heart was RED on two organism-scope reasons — "release validation FAILED (stage integrate)" and "workspace validation not passing (5 failed, 2 timeout, cloud#34099198772 …)". Neither is repaired by this branch, so the corrective-PR exception did not apply; the human acknowledged in-session ("I acknowledge you can continue and get this work done") and the ack was recorded as `heart-ack:` on the `active.md` row. Ship ended at PR-open; merge was the human-typed `/prm` after every CI leg on both heads (PyAutoFit: unittest 3.12/3.13/nojax + docs; pipeline: unit/smoke/slow × 3.12/3.13) reported success and `mergeStateStatus` was `CLEAN`.
 
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1568
 
 ## Follow-ups (not this task)
 

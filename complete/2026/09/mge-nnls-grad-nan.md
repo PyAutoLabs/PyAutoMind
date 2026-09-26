@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/573 (left open until Release Integrate confirms)
 - completed: 2026-09-25
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/574
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/574
 - corrective-red: "release validation FAILED (stage integrate)" — authorization https://github.com/PyAutoLabs/PyAutoArray/issues/573#issuecomment-5837171428; merge by human /prm ("and I authorize on red heart but I guess keep going to get it out of red.")
 
 - Cause: #572's raw-forward PDIP stops at data_scaled_solver_tol, leaving s·z ~1e-10..2.5e-9 ≫ nnls_target_kappa=1e-11; the backward solve_relaxed_nnls on Q_pc pushed toward the boundary at z/s~1e13-14 and NaN'd under jit (4/16 keys eager, script's own key under jit).

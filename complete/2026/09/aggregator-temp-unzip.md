@@ -1,7 +1,6 @@
 - Library: PyAutoFit
 - Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1584 (closed, completed)
 - PR: https://github.com/PyAutoLabs/PyAutoFit/pull/1592 (MERGED, merge commit `c03fa3f30`, head `57d838c38`)
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1592
 - heart-ack: 2026-09-09 RED acknowledged in-session, single organism-scope reason "release validation FAILED (stage integrate)" (Release Integrate run of 2026-09-09T07:23Z) — nothing in this branch is in the release chain; no freeze window open
 - Consequence: glance — no tier-`notify` shadow row
 

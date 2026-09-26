@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1605 (closed completed 2026-09-11)
 - completed: 2026-09-11
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1606 (merged)
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1606
 - epic: model-figures — phase 1 of 6 shipped; phase 2 (`draft/feature/autofit/model_figures_2_renderer.md`) is now unblocked
 - session: web-github (session clone of PyAutoFit, no task worktree; issue, PR and merge driven through the GitHub MCP surface; implementation delegated to two Opus subagents from a Fable session)
 - summary: |

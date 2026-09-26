@@ -2,7 +2,6 @@
 - Issue: https://github.com/PyAutoLabs/PyAutoArray/issues/539 (closed, completed)
 - PR: https://github.com/PyAutoLabs/PyAutoArray/pull/541 (MERGED, merge commit `9bd76799`, head `61f07fd8`)
 - Epic: numba-interferometer-revisit (phase 3), follow-up from `autolens_profiling#229`
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/541
 
 The branch was opened stacked on `interferometer-apply-operator-rfft2` (PyAutoArray#540,
 merged 2026-09-08 as `7a4cb700`, record `complete/2026/09/interferometer-apply-operator-rfft2.md`);

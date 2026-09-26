@@ -5,8 +5,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1586
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/611
 - workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/58
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1586
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/611
 - heart-ack: 2026-09-08 in-session, the two organism-scope reasons acknowledged earlier this session (autolens workspace validation failures; no release rehearsal)
 - Summary: human direction: the two-basis MGE ordering lives in the library. `mge_model_from` gains `order_bases` (default off; consecutive-pair `ell_comps_1 > ell_comps_1` assertions on the returned Basis model) and `ell_comps_limit`; the Euclid pipeline turns it on (`ell_comps_limit=0.5, order_bases=True`, source 0.7, reassignment loops removed), adds `fit(seed=None)` / `--seed`, factors `vis_lp_model_from()`, docs section 7. Key is `ell_comps_1`, not magnitude: phase-4 tiles show the antiparallel cross (equal magnitudes, Δe1 = 1.0 on 102005065); no continuous key is exact everywhere (Δe1 = 0.01 on 102007299).
 - Review: Codex gpt-6-astra on both branches. Real: assertions did not enter the PyAutoFit identifier (ordered fit would resume the unordered one) → PyAutoFit#1586 hashes assertions by class + operand paths, assertion-free models unchanged; new params inserted mid-signature broke positional callers → moved to the end + pinned; `Result.model` drops assertions (documented; ideas.md); wording: "forbids the solution" → mode separation vs posterior width; "rotation-invariant reduces to magnitude" was false (cross product is invariant too; both blind on the antiparallel cross).

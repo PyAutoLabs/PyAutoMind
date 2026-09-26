@@ -3,7 +3,6 @@
 - completed: 2026-09-17
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1633 (merge db087231)
 - workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/81 (merge 510ed1ce)
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1633
 - summary: |
     Per-lens `convergence.fits`, `potential.fits` and `deflections.fits` (DEFLECTIONS_Y, DEFLECTIONS_X)
     join the Euclid inspection bundle as stage 3 of 8 (`catalogue/scripts/lens_mass_maps.py`). They are a

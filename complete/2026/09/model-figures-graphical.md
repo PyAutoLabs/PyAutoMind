@@ -4,7 +4,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1617 (merged `650cb88339f6b93c0ab4c52356b866f26669e82b`)
 - workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/153 (merged `4f121f2a64a8a7b71f87bbe715fe0c9a7a80c526`)
 - workspace-pr: https://github.com/PyAutoLabs/HowToFit/pull/51 (merged `3cadd7d6303fd507ddf91c0fa03d7aaf02e3d8a6`)
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1617
 - epic: model-figures — phase 4 of 6 shipped; phase 5 (`draft/feature/autofit/model_figures_5_ep_view.md`, the EP diagnostic view) is now unblocked, and phase 6 (`draft/feature/workspaces/model_figures_6_rollout.md`) has its last blocker cleared
 - session: local-dev, Fable architect session; implementation, tests, docs, ship and close-out legs delegated to Opus subagents (worktree `~/Code/PyAutoLabs-wt/model-figures-graphical`, parallel-claim waiver vs `remove-parallel-ep-optimiser` #1612 — disjoint files)
 - summary: |

@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1635 (closed completed 2026-09-17)
 - completed: 2026-09-17
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1637 (merged 7c0e79a)
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1637
 - session: https://claude.ai/code/session_01TSJ72sveM7GrTcddMXzUkb (web-github; Fable planned, Opus executed; /start_dev → /prm in one session)
 - summary: |
     `AbstractPriorModel.parameterization` (the `(N=k)` block of every `model.info`)

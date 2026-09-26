@@ -5,7 +5,6 @@
 - Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/274 (closed 2026-09-17)
 - PR: https://github.com/PyAutoLabs/autolens_profiling/pull/275 — MERGED, merge commit `92f1fadd`
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/557 — MERGED, merge commit `192d4b70` (docstring-only)
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/557
 - Epic: `fixed-lens-light-numba-cpu`, phase 4 — **wave A only**; wave B (lever 4b, A′) re-filed as `draft/research/autolens_profiling/fixed_light_numba_s4b_permute_active_last.md`
 - Note: `results/notes/fixed_lens_light_s4_2026_09.md` (autolens_profiling)
 - RAL: job 343394 (`fl_numba_s4`, `gpu` CPUs-only, euclid-ral-gpu-1, COMPLETED 0:0, 00:02:42)

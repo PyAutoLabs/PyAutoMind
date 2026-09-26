@@ -3,7 +3,6 @@
 - completed: 2026-09-18
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/623
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/123
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/623
 
 Restored jax-zero-contour 2.0.0 compatibility with JAX 0.11.2 through a lazy cached local ZeroSolver subclass, used by both LensCalc construction sites. It wraps the custom_root callable in jax.tree_util.Partial before the upstream while-loop; no monkey patch or module-level JAX imports. No public API or numerical algorithm changed.
 

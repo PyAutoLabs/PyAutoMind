@@ -4,7 +4,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1621 (merged `c089d0fb3`, head `1ff4572c1`, 1 commit)
 - workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/154 (merged `8ef02275f`, head `ff8160f`, 2 commits)
 - workspace-pr: https://github.com/PyAutoLabs/HowToFit/pull/52 (merged `70bfcfa18`, head `9e1b165`, 1 commit)
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1621
 - epic: model-figures phase 6a (sub-task (a) of `draft/feature/workspaces/model_figures_6_rollout.md`; (b)-(e) remain on the map)
 - summary: |
     Sub-task (a) of the model-figures rollout: every script and tutorial in

@@ -3,7 +3,6 @@
 - completed: 2026-09-08
 - library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/162 (merge 0e7163bc)
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/230 (merge fb532c01)
-- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/162
 - summary: |
     `autonerves/jax_wrapper.py` keeps its default `--xla_gpu_autotune_level=0` (cold-compile time) and, in
     the same block, now also appends `--xla_gpu_enable_triton_gemm=false` unless the user pre-set the Triton

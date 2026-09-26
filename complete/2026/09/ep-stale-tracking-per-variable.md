@@ -2,7 +2,6 @@
 - completed: 2026-09-07
 - library-pr: PyAutoFit https://github.com/PyAutoLabs/PyAutoFit/pull/1576 (head `9b2429f9`, merge `2680b32d`)
 - workspace-pr: autofit_workspace_test https://github.com/PyAutoLabs/autofit_workspace_test/pull/98 (head `8184d046`, merge `7050ac3b`)
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1576
 - pending-release: autofit_workspace_test@https://github.com/PyAutoLabs/autofit_workspace_test/pull/98
 - classification: feature (PyAutoFit + autofit_workspace_test) — epic `graphical-ep`; second half of Codex phase-2 review finding 2 (after PyAutoFit#1574); human decided 2026-09-07 on the diagnostics lever.
 - ci: PyAutoFit `Tests [pull_request]` 3.12 / 3.13 / nojax + `Docs` green; autofit_workspace_test `Smoke Tests [pull_request]` changes / 3.12 / 3.13 green; both CLEAN; library merged first.

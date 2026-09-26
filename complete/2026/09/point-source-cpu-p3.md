@@ -7,8 +7,6 @@ Precomputed the static step-0 triangle lattice of the JAX `PointSolver` as a cac
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/570
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/749
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/305
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/570
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/749
 
 ## Shipped
 

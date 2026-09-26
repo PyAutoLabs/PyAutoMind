@@ -16,7 +16,6 @@ judged and merged by `/prm` on the same surface):
 - library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/369
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/308
 - workspace-pr: https://github.com/PyAutoLabs/autocti_workspace/pull/31
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/534
 
 Retires `draft/test/autocti_workspace/imaging_ci_start_here_61s.md` (filed
 2026-09-06, split out of the ci-timing-fast-tests epic's phase 8): its ask —

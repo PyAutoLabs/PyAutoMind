@@ -6,7 +6,6 @@ Removed the JAX-only throwaway `jnp.unique` vertex dedup on the PointSolver trac
 - completed: 2026-09-24
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/569
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/301
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/569
 
 ## Shipped
 

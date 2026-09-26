@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1618 (closed completed 2026-09-13)
 - completed: 2026-09-13
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1619 (merged `9ad5fdfa2`, head `ba756b82db472591cb9f3927ca07695b227e2290`, 6 commits on `54f464d97`)
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1619
 - epic: model-figures — phase 5 of 6 shipped; phase 6 (`draft/feature/workspaces/model_figures_6_rollout.md`, the workspace/HowToFit rollout) is the only phase left
 - session: local-dev, Fable architect session; implementation, tests, docs, ship and close-out legs delegated to Opus subagents (worktree `~/Code/PyAutoLabs-wt/model-figures-ep-view`)
 - summary: |

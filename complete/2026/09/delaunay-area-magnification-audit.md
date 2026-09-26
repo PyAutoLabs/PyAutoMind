@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/522
 - completed: 2026-09-04
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/523
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/523
 - epic: euclid-dr1-prep (Mind phase 8, was 6c)
 
 Source-code audit of every Delaunay pixel-area and magnification path in PyAutoArray,

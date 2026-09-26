@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1646 (closed, completed 2026-09-26)
 - completed: 2026-09-26
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1647 (MERGED, head `3220566e`, merge `326f611b1b40afd89bb73956441faa7379328407`; CI green on all legs, no Heart freeze)
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1647
 - heart-ack: "2026-09-26 human acked YELLOW: workspace validation 4 failed cluster/weak notebooks; manifest drift x3; release validation stale"
 - Consequence: glance — no tier-`notify` shadow row
 - summary:

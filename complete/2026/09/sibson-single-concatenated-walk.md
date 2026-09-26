@@ -3,7 +3,6 @@
 - issue: none — folded into https://github.com/PyAutoLabs/PyAutoArray/issues/532
 - completed: 2026-09-08
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/533
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/533
 - retired-at: close-out of `delaunay-nn-launch-latency` (`/prm`, 2026-09-08)
 
 ### Why this is a record and not a backlog prompt

@@ -302,33 +302,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
-- [PyAutoArray#547](https://github.com/PyAutoLabs/PyAutoArray/pull/547) — `complete/2026/09/arcsec-after-decimal.md`
-- [PyAutoArray#567](https://github.com/PyAutoLabs/PyAutoArray/pull/567) — `complete/2026/09/certified-positive-solver.md`
-- [PyAutoArray#534](https://github.com/PyAutoLabs/PyAutoArray/pull/534) — `complete/2026/09/ci-smoke-speedup.md`
-- [PyAutoArray#563](https://github.com/PyAutoLabs/PyAutoArray/pull/563) — `complete/2026/09/community-surface-pyautoarray.md`
-- [PyAutoArray#523](https://github.com/PyAutoLabs/PyAutoArray/pull/523) — `complete/2026/09/delaunay-area-magnification-audit.md`
-- [PyAutoArray#525](https://github.com/PyAutoLabs/PyAutoArray/pull/525) — `complete/2026/09/delaunay-dual-area-magnification.md`
-- [PyAutoArray#527](https://github.com/PyAutoLabs/PyAutoArray/pull/527) — `complete/2026/09/delaunay-edge-ring-zeroed.md`
-- [PyAutoArray#537](https://github.com/PyAutoLabs/PyAutoArray/pull/537) — `complete/2026/09/delaunay-nn-constant-split-assembly.md`
-- [PyAutoArray#533](https://github.com/PyAutoLabs/PyAutoArray/pull/533) — `complete/2026/09/delaunay-nn-launch-latency.md`
-- [PyAutoArray#531](https://github.com/PyAutoLabs/PyAutoArray/pull/531) — `complete/2026/09/delaunay-walk-early-exit.md`
-- [PyAutoArray#553](https://github.com/PyAutoLabs/PyAutoArray/pull/553) — `complete/2026/09/fixed-light-numba-levers.md`
-- [PyAutoArray#554](https://github.com/PyAutoLabs/PyAutoArray/pull/554) — `complete/2026/09/fixed-light-numba-levers.md`
-- [PyAutoArray#555](https://github.com/PyAutoLabs/PyAutoArray/pull/555) — `complete/2026/09/fixed-light-numba-levers.md`
-- [PyAutoArray#557](https://github.com/PyAutoLabs/PyAutoArray/pull/557) — `complete/2026/09/fixed-light-numba-s4.md`
-- [PyAutoArray#540](https://github.com/PyAutoLabs/PyAutoArray/pull/540) — `complete/2026/09/interferometer-apply-operator-rfft2.md`
 - [PyAutoArray#576](https://github.com/PyAutoLabs/PyAutoArray/pull/576) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
-- [PyAutoArray#545](https://github.com/PyAutoLabs/PyAutoArray/pull/545) — `complete/2026/09/interferometer-numba-cpu-direct-conv.md`
-- [PyAutoArray#541](https://github.com/PyAutoLabs/PyAutoArray/pull/541) — `complete/2026/09/interferometer-preload-nufft-type1.md`
-- [PyAutoArray#541](https://github.com/PyAutoLabs/PyAutoArray/pull/541) — `complete/2026/09/interferometer-preload-prose.md`
-- [PyAutoArray#544](https://github.com/PyAutoLabs/PyAutoArray/pull/544) — `complete/2026/09/interferometer-sparse-operator-numpy-cpu-path.md`
-- [PyAutoArray#574](https://github.com/PyAutoLabs/PyAutoArray/pull/574) — `complete/2026/09/mge-nnls-grad-nan.md`
-- [PyAutoArray#572](https://github.com/PyAutoLabs/PyAutoArray/pull/572) — `complete/2026/09/mge-pdip-nnls-convergence.md`
-- [PyAutoArray#556](https://github.com/PyAutoLabs/PyAutoArray/pull/556) — `complete/2026/09/mixed-precision-inversion-gap.md`
-- [PyAutoArray#550](https://github.com/PyAutoLabs/PyAutoArray/pull/550) — `complete/2026/09/model-figures-lens.md`
-- [PyAutoArray#569](https://github.com/PyAutoLabs/PyAutoArray/pull/569) — `complete/2026/09/point-source-cpu-p2.md`
-- [PyAutoArray#570](https://github.com/PyAutoLabs/PyAutoArray/pull/570) — `complete/2026/09/point-source-cpu-p3.md`
-- [PyAutoArray#533](https://github.com/PyAutoLabs/PyAutoArray/pull/533) — `complete/2026/09/sibson-single-concatenated-walk.md`
 
 **PyAutoBrain**
 
@@ -338,93 +312,19 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoBrain#409](https://github.com/PyAutoLabs/PyAutoBrain/pull/409) — `complete/2026/09/notify-slack-community-discussions.md`
 - [PyAutoBrain#384](https://github.com/PyAutoLabs/PyAutoBrain/pull/384) — `complete/2026/09/provider-neutral-bundle-prompts.md`
 
-**PyAutoFit**
-
-- [PyAutoFit#1598](https://github.com/PyAutoLabs/PyAutoFit/pull/1598) — `complete/2026/09/aggregate-csv-latent-sigma3.md`
-- [PyAutoFit#1585](https://github.com/PyAutoLabs/PyAutoFit/pull/1585) — `complete/2026/09/aggregator-search-json-sentinel.md`
-- [PyAutoFit#1602](https://github.com/PyAutoLabs/PyAutoFit/pull/1602) — `complete/2026/09/aggregator-sibling-dir-zip.md`
-- [PyAutoFit#1592](https://github.com/PyAutoLabs/PyAutoFit/pull/1592) — `complete/2026/09/aggregator-temp-unzip.md`
-- [PyAutoFit#1609](https://github.com/PyAutoLabs/PyAutoFit/pull/1609) — `complete/2026/09/autofit-from-instance-roundtrip.md`
-- [PyAutoFit#1604](https://github.com/PyAutoLabs/PyAutoFit/pull/1604) — `complete/2026/09/byol-mode.md`
-- [PyAutoFit#1633](https://github.com/PyAutoLabs/PyAutoFit/pull/1633) — `complete/2026/09/catalogue-mass-maps-fits.md`
-- [PyAutoFit#1640](https://github.com/PyAutoLabs/PyAutoFit/pull/1640) — `complete/2026/09/community-surface-pyautofit.md`
-- [PyAutoFit#1566](https://github.com/PyAutoLabs/PyAutoFit/pull/1566) — `complete/2026/09/defer-import-scipy-special-pyplot.md`
-- [PyAutoFit#1632](https://github.com/PyAutoLabs/PyAutoFit/pull/1632) — `complete/2026/09/dynesty-single-core-no-pool.md`
-- [PyAutoFit#1643](https://github.com/PyAutoLabs/PyAutoFit/pull/1643) — `complete/2026/09/ep-factor-search-overhead.md`
-- [PyAutoFit#1644](https://github.com/PyAutoLabs/PyAutoFit/pull/1644) — `complete/2026/09/ep-factor-search-overhead.md`
-- [PyAutoFit#1645](https://github.com/PyAutoLabs/PyAutoFit/pull/1645) — `complete/2026/09/ep-factor-search-overhead.md`
-- [PyAutoFit#1574](https://github.com/PyAutoLabs/PyAutoFit/pull/1574) — `complete/2026/09/ep-full-revert-not-updated.md`
-- [PyAutoFit#1573](https://github.com/PyAutoLabs/PyAutoFit/pull/1573) — `complete/2026/09/ep-laplace-deterministic-hessian.md`
-- [PyAutoFit#1610](https://github.com/PyAutoLabs/PyAutoFit/pull/1610) — `complete/2026/09/ep-no-multiprocessing-pool.md`
-- [PyAutoFit#1634](https://github.com/PyAutoLabs/PyAutoFit/pull/1634) — `complete/2026/09/ep-release-search-internals.md`
-- [PyAutoFit#1580](https://github.com/PyAutoLabs/PyAutoFit/pull/1580) — `complete/2026/09/ep-stale-mask-fixed-point.md`
-- [PyAutoFit#1576](https://github.com/PyAutoLabs/PyAutoFit/pull/1576) — `complete/2026/09/ep-stale-tracking-per-variable.md`
-- [PyAutoFit#1638](https://github.com/PyAutoLabs/PyAutoFit/pull/1638) — `complete/2026/09/fitness-vmap-outer-jit.md`
-- [PyAutoFit#1619](https://github.com/PyAutoLabs/PyAutoFit/pull/1619) — `complete/2026/09/model-figures-ep-view.md`
-- [PyAutoFit#1606](https://github.com/PyAutoLabs/PyAutoFit/pull/1606) — `complete/2026/09/model-figures-graph-spec.md`
-- [PyAutoFit#1617](https://github.com/PyAutoLabs/PyAutoFit/pull/1617) — `complete/2026/09/model-figures-graphical.md`
-- [PyAutoFit#1615](https://github.com/PyAutoLabs/PyAutoFit/pull/1615) — `complete/2026/09/model-figures-lens.md`
-- [PyAutoFit#1614](https://github.com/PyAutoLabs/PyAutoFit/pull/1614) — `complete/2026/09/model-figures-renderer.md`
-- [PyAutoFit#1621](https://github.com/PyAutoLabs/PyAutoFit/pull/1621) — `complete/2026/09/model-figures-rollout-autofit.md`
-- [PyAutoFit#1623](https://github.com/PyAutoLabs/PyAutoFit/pull/1623) — `complete/2026/09/modelplotter-figure-draws-twice.md`
-- [PyAutoFit#1647](https://github.com/PyAutoLabs/PyAutoFit/pull/1647) — `complete/2026/09/multistart-cpu-memory-probe.md`
-- [PyAutoFit#1588](https://github.com/PyAutoLabs/PyAutoFit/pull/1588) — `complete/2026/09/natural-language-first-docs.md`
-- [PyAutoFit#1589](https://github.com/PyAutoLabs/PyAutoFit/pull/1589) — `complete/2026/09/natural-language-first-docs.md`
-- [PyAutoFit#1590](https://github.com/PyAutoLabs/PyAutoFit/pull/1590) — `complete/2026/09/natural-language-first-docs.md`
-- [PyAutoFit#1591](https://github.com/PyAutoLabs/PyAutoFit/pull/1591) — `complete/2026/09/natural-language-first-docs.md`
-- [PyAutoFit#1586](https://github.com/PyAutoLabs/PyAutoFit/pull/1586) — `complete/2026/09/order-lens-mge-bases-and-seed.md`
-- [PyAutoFit#1637](https://github.com/PyAutoLabs/PyAutoFit/pull/1637) — `complete/2026/09/parameterization-prior-count.md`
-- [PyAutoFit#1568](https://github.com/PyAutoLabs/PyAutoFit/pull/1568) — `complete/2026/09/quick-update-tolerates-invalid-instance.md`
-- [PyAutoFit#1612](https://github.com/PyAutoLabs/PyAutoFit/pull/1612) — `complete/2026/09/remove-parallel-ep-optimiser.md`
-- [PyAutoFit#1578](https://github.com/PyAutoLabs/PyAutoFit/pull/1578) — `complete/2026/09/samples-errors-at-sigma-instance.md`
-- [PyAutoFit#1596](https://github.com/PyAutoLabs/PyAutoFit/pull/1596) — `complete/2026/09/scientific-workflow-language.md`
-- [PyAutoFit#1603](https://github.com/PyAutoLabs/PyAutoFit/pull/1603) — `complete/2026/09/start-here-mode.md`
-- [PyAutoFit#1626](https://github.com/PyAutoLabs/PyAutoFit/pull/1626) — `complete/2026/09/test-mode-bypass-save-results.md`
-- [PyAutoFit#1583](https://github.com/PyAutoLabs/PyAutoFit/pull/1583) — `complete/2026/09/traced-assertions-on-jax-path.md`
-- [PyAutoFit#1572](https://github.com/PyAutoLabs/PyAutoFit/pull/1572) — `complete/2026/09/transformed-from-mode-coupled-covariance.md`
-- [PyAutoFit#1600](https://github.com/PyAutoLabs/PyAutoFit/pull/1600) — `complete/2026/09/vis-lp-latent-jit-assertions.md`
-
 **PyAutoGalaxy**
 
-- [PyAutoGalaxy#612](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/612) — `complete/2026/09/arcsec-after-decimal.md`
-- [PyAutoGalaxy#627](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/627) — `complete/2026/09/community-surface-pyautogalaxy.md`
-- [PyAutoGalaxy#619](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/619) — `complete/2026/09/config-priors-drift.md`
-- [PyAutoGalaxy#609](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/609) — `complete/2026/09/dataset-fits-image-only.md`
-- [PyAutoGalaxy#615](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/615) — `complete/2026/09/einstein-radius-jit-seed-finder.md`
-- [PyAutoGalaxy#623](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/623) — `complete/2026/09/euclid-jax-contour-compat.md`
 - [PyAutoGalaxy#629](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/629) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
-- [PyAutoGalaxy#625](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/625) — `complete/2026/09/mass-field-chaining-helper.md`
-- [PyAutoGalaxy#621](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/621) — `complete/2026/09/mass-field-class.md`
-- [PyAutoGalaxy#616](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/616) — `complete/2026/09/model-figures-lens.md`
-- [PyAutoGalaxy#611](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/611) — `complete/2026/09/order-lens-mge-bases-and-seed.md`
 
 **PyAutoLens**
 
-- [PyAutoLens#747](https://github.com/PyAutoLabs/PyAutoLens/pull/747) — `complete/2026/09/community-surface-pyautolens.md`
-- [PyAutoLens#740](https://github.com/PyAutoLabs/PyAutoLens/pull/740) — `complete/2026/09/coolest-observation-grid.md`
-- [PyAutoLens#731](https://github.com/PyAutoLabs/PyAutoLens/pull/731) — `complete/2026/09/dataset-fits-image-only.md`
-- [PyAutoLens#729](https://github.com/PyAutoLabs/PyAutoLens/pull/729) — `complete/2026/09/defer-import-scipy-special-pyplot.md`
-- [PyAutoLens#735](https://github.com/PyAutoLabs/PyAutoLens/pull/735) — `complete/2026/09/einstein-radius-jit-seed-finder.md`
 - [PyAutoLens#750](https://github.com/PyAutoLabs/PyAutoLens/pull/750) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
-- [PyAutoLens#744](https://github.com/PyAutoLabs/PyAutoLens/pull/744) — `complete/2026/09/mass-field-bare-fields.md`
-- [PyAutoLens#745](https://github.com/PyAutoLabs/PyAutoLens/pull/745) — `complete/2026/09/mass-field-chaining-helper.md`
-- [PyAutoLens#742](https://github.com/PyAutoLabs/PyAutoLens/pull/742) — `complete/2026/09/mass-field-integration.md`
-- [PyAutoLens#737](https://github.com/PyAutoLabs/PyAutoLens/pull/737) — `complete/2026/09/model-figures-lens.md`
-- [PyAutoLens#727](https://github.com/PyAutoLabs/PyAutoLens/pull/727) — `complete/2026/09/pixelized-source-magnification-latent.md`
-- [PyAutoLens#728](https://github.com/PyAutoLabs/PyAutoLens/pull/728) — `complete/2026/09/pixelized-source-magnification-latent.md`
-- [PyAutoLens#749](https://github.com/PyAutoLabs/PyAutoLens/pull/749) — `complete/2026/09/point-source-cpu-p3.md`
-- [PyAutoLens#734](https://github.com/PyAutoLabs/PyAutoLens/pull/734) — `complete/2026/09/vis-lp-latent-jit-assertions.md`
 
 **PyAutoMind**
 
 - [PyAutoMind#425](https://github.com/PyAutoLabs/PyAutoMind/pull/425) — `complete/2026/09/codex-context-efficiency.md`
 - [PyAutoMind#427](https://github.com/PyAutoLabs/PyAutoMind/pull/427) — `complete/2026/09/community-surface-policy.md`
 - [PyAutoMind#406](https://github.com/PyAutoLabs/PyAutoMind/pull/406) — `complete/2026/09/provider-neutral-bundle-prompts.md`
-
-**PyAutoNerves**
-
-- [PyAutoNerves#169](https://github.com/PyAutoLabs/PyAutoNerves/pull/169) — `complete/2026/09/colab-bootstrap-lazy-deps.md`
-- [PyAutoNerves#162](https://github.com/PyAutoLabs/PyAutoNerves/pull/162) — `complete/2026/09/xla-triton-gemm-off.md`
 
 **PyAutoReduce**
 

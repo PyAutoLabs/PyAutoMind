@@ -5,7 +5,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/533
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/307
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/227
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/533
 - scope: **Phase A only** — Phase B and Phase C of the prompt are deliberately not filed (see below)
 - phase-b: **not re-filed, superseded by a better lever.** The A100 breakdown shipped with this task attributes the remaining per-call cost: the cavity early exit targets only the ~6.4 ms Sibson share and is worth ≈ 1.3 ms per call at `vmap` 16 (≈ 2.5 % of a production evaluation), while the ConstantSplit regularization assembly is ~10.0 ms per call (~19 %) and is untouched by anything Phase A or Phase B can do. The human agreed at close-out to point the next prompt at the assembly instead: `draft/feature/autoarray/delaunay_nn_constant_split_assembly.md`. Phase B stays unfiled until that lands.
 - phase-c: **unfiled.** The loop-free k-ring cavity (which changes fp summation order) is now the smallest of the three levers on the batched number and must be re-costed against the post-#533 figures in `results/notes/delaunay_nn_launch_latency.md` before it is planned.

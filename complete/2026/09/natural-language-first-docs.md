@@ -9,10 +9,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/autofit_assistant/pull/33
 - workspace-pr: https://github.com/PyAutoLabs/autofit_assistant/pull/34
 - workspace-pr: https://github.com/PyAutoLabs/autofit_assistant/pull/35
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1588
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1589
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1590
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1591
 
 PyAutoFit's docs now lead natural-language first. The Overview toctree reads
 Natural Language Inference → Scientific Workflow → Statistical Methods →

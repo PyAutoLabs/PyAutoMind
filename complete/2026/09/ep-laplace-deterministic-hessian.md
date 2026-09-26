@@ -1,7 +1,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1570 (closed completed 2026-09-07)
 - completed: 2026-09-07
 - library-pr: PyAutoFit https://github.com/PyAutoLabs/PyAutoFit/pull/1573 (head `d5acab35`, merge `470a89cf`)
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1573
 - classification: bug, P1 (PyAutoFit) — epic `graphical-ep`; bundle `ep-phase2-review` (Codex review of the phase-2 fixes, finding 1). No workspace PR.
 - ci: `Tests [pull_request]` unittest 3.12 / 3.13 / nojax green, `Docs [pull_request]` green; CLEAN.
 - heart-ack: YELLOW "workspace validation not passing" (organism-scope, cloud#34099198772); nothing in this diff is in the release chain.

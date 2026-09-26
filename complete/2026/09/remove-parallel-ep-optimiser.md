@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1611
 - completed: 2026-09-12
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1612 (merge 54f464d9)
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1612
 - summary: |
     Human decision 2026-09-11 after #1608/#1610: `ParallelEPOptimiser` deleted from
     `autofit/graphical/expectation_propagation/optimiser.py` together with its never-collected

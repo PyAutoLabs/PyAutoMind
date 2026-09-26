@@ -3,7 +3,6 @@
 - Issue: https://github.com/PyAutoLabs/autofit_assistant/issues/40 (closed)
 - PRs: PyAutoLabs/PyAutoFit#1604 (merged 1b7c1c992, docs only) → PyAutoLabs/autofit_assistant#41 (merged a29fdd289)
 - Branch: feature/byol-mode on both repos, worktree ~/Code/PyAutoLabs-wt/byol-mode
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1604
 - Heart at ship: YELLOW, acknowledged in-session (same five organism-scope reasons as start-here-mode); freeze clear at merge.
 - Parent: complete/2026/09/start-here-mode.md (the sibling mode; same shape)
 

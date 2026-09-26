@@ -14,7 +14,6 @@ Uses the human-approved five categories: Announcements, Help & Questions, Ideas 
 
 All workflows and jobs for the exact PR head were audited before merging; required jobs passed, with only conditional skips inside successful workflows. Independent review was CLEAN. Git ancestry confirms the feature head is contained in origin/main with zero unmerged commits. Human authorized merging all PRs on 2026-09-19.
 
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1640
 
 Only this repository member is complete. The shared community-surface worktree remains because Mind, Lens workspace, website, and organization-profile PRs are still open. The policy and migration umbrella tasks remain active.
 

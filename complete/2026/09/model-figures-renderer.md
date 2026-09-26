@@ -3,7 +3,6 @@
 - completed: 2026-09-11
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1614 (merged)
 - workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/152 (merged)
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1614
 - epic: model-figures — phase 2 of 6 shipped; phase 3 (`draft/feature/autolens/model_figures_3_lens_cookbook.md`) and phase 4 (`draft/feature/autofit/model_figures_4_graphical_plates.md`) are now unblocked
 - session: local-dev, Fable architect session; implementation, tests, docs, ship and workspace legs delegated to five Opus subagents (worktree `~/Code/PyAutoLabs-wt/model-figures-renderer`, parallel-claim waiver vs `remove-parallel-ep-optimiser` #1612, disjoint files)
 - summary: |

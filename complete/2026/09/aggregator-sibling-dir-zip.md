@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1601
 - completed: 2026-09-10
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1602 (merge e354dbb6)
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1602
 - summary: |
     Three fixes in `autofit/aggregator/aggregator.py` and `autofit/non_linear/paths/abstract.py`.
 

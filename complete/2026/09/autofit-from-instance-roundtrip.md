@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1607 (closed)
 - completed: 2026-09-11
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1609
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1609
 - session: claude --resume session_01CWGZiKQo2PhvsymabkUJJm (web-github; PyAutoFit attached mid-session, no task worktree)
 - summary: |
     `AbstractPriorModel.from_instance` copied every entry of `instance.__dict__`

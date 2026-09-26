@@ -7,9 +7,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/554 — MERGED, merge commit `7c230c4c` (lever 2)
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/555 — MERGED, merge commit `91240e43` (lever 3)
 - PR: https://github.com/PyAutoLabs/autolens_profiling/pull/272 — MERGED, merge commit `cea41bbc`; carries the whole stack (#269 lever 1 and #271 lever 2 show MERGED through it, never merged on their own)
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/553
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/554
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/555
 - Epic: `fixed-lens-light-numba-cpu`, phase 3
 - Note: `results/notes/fixed_lens_light_levers_2026_09.md` (autolens_profiling)
 - completed: 2026-09-16

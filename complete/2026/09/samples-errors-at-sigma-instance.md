@@ -2,7 +2,6 @@
 - completed: 2026-09-07
 - library-pr: PyAutoFit https://github.com/PyAutoLabs/PyAutoFit/pull/1578 (head `154c87dd`, merge `6331b80031b1dedae3ce277a8c2b116b52ddd261`)
 - workspace-pr: autofit_workspace_test https://github.com/PyAutoLabs/autofit_workspace_test/pull/99 (head `94b72b20`, merge `9321910765f77d4f7f092e455bce33127d154610`)
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1578
 - pending-release: autofit_workspace_test@https://github.com/PyAutoLabs/autofit_workspace_test/pull/99
 - classification: bug (PyAutoFit + autofit_workspace_test) — epic `graphical-ep`; finding D6 of the phase-1 analytic Gaussian benchmark (autofit_workspace_test#91), the last open phase-1 finding.
 - ci: PyAutoFit `Tests [pull_request]` 3.12 / 3.13 / nojax + `Docs` green; autofit_workspace_test `Smoke Tests [pull_request]` changes / 3.12 / 3.13 green; both CLEAN; library merged first.

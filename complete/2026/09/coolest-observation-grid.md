@@ -4,7 +4,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/740 (merge 223132c0)
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/551 (merge 2c7a184)
 - workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/82 (merge d83f05ca)
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/740
 - summary: |
     An external review of the COOLEST guide found `al.interop.coolest.to_coolest()` wrote every template
     with an empty `observation.pixels` block (field of view and pixel counts 0), which COOLEST's plotting

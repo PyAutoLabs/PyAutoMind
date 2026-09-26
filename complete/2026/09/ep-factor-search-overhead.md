@@ -6,9 +6,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1643
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1644
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1645
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1643
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1644
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1645
 - assets: `complete/2026/09/ep-factor-search-overhead-assets/` (the filing-time cProfile report + pstats dumps)
 
 ## Shipped

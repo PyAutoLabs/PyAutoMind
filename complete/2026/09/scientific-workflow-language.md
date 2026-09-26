@@ -5,7 +5,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/278
 - workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/151
 - workspace-pr: https://github.com/PyAutoLabs/HowToFit/pull/48
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1596
 - merge-proof: All four PRs confirmed MERGED and all four feature branches are ancestors of origin/main.
 - merge-commits: PyAutoFit 6ea1dda08748ce5f239008d17a2c3f14f750a18a; PyAutoHands 791aaf548d22d5430ad4d70ae633ee98b1552e18; autofit_workspace d66c485434a690a8756af2a23c1898b15417f0a8; HowToFit 91de7ff3edb8f6ef498367969269232d7db2c5a9.
 

@@ -4,7 +4,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/531 (merged 2026-09-07T23:07Z, `pending-release`)
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/306 (merged)
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/224 (merged)
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/531
 - scope: |
     Phase 1 of the prompt, complete. Phase 2 was deliberately NOT re-filed — see `phase-2` below.
 - shipped: |

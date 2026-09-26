@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1631
 - completed: 2026-09-17
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1634 (merge fa2d540ac)
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1634
 - summary: |
     slope_hierarchy_scale job 342410 (25 AnalysisFactors, JAX likelihood, Nautilus number_of_cores=1,
     64 GB) died after ~3 EP steps / 76 factor searches with `LLVM ERROR: Unable to allocate section
