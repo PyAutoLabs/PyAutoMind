@@ -1,5 +1,30 @@
 # Active Tasks
 
+## hands-state-feed
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/289
+- issued: 2026-09-26
+- prompt: active/organ_cockpit_hands_state_json.md
+- session: Claude Code CLI (Fable architect, Opus execution), 2026-09-26; session ID unavailable
+- status: library-dev
+- autonomy: safe (header); bundle organ-cockpit-feeds (with memory-state-feed); plan approved in session and on the issue; merge is human
+- worktree: /home/jammy/Code/PyAutoLabs-wt/organ-cockpit-feeds
+- repos:
+  - PyAutoHands: feature/hands-state-feed
+- parallel-claim: "PyAutoHands is also claimed by eyes-organ-order (autohands/_workspace.py only). This task touches autohands/board.py, .github/workflows/release_board.yml, tests/test_board.py. Disjoint; shared bundle worktree per the #177 precedent, recorded 2026-09-26."
+- summary: Organ cockpit — Hands release board emits the state.json v1 cockpit feed and validates it against the Brain contract in release_board.yml (mirror of PyAutoHeart#238).
+
+## memory-state-feed
+- issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/104
+- issued: 2026-09-26
+- prompt: active/organ_cockpit_memory_state_json.md
+- session: Claude Code CLI (Fable architect, Opus execution), 2026-09-26; session ID unavailable
+- status: library-dev
+- autonomy: safe (header); bundle organ-cockpit-feeds (with hands-state-feed); plan approved in session and on the issue; merge is human
+- worktree: /home/jammy/Code/PyAutoLabs-wt/organ-cockpit-feeds
+- repos:
+  - PyAutoMemory: feature/memory-state-feed
+- summary: Organ cockpit — Memory knowledge board emits the state.json v1 cockpit feed and validates it against the Brain contract in knowledge_board.yml (mirror of PyAutoHeart#238).
+
 ## eyes-organ-order
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/439
 - issued: 2026-09-25

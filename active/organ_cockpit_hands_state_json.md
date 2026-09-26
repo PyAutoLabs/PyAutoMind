@@ -12,6 +12,8 @@ Consequence: notify
 Witness: release_board.yml run on main is green including the new validate step logging 'state: ok', and curl https://pyautolabs.github.io/PyAutoHands/state.json passes python board/_state.py from a PyAutoBrain checkout.
 Review-minutes: 0
 Unattended: ready
+Issued: 2026-09-26
+Issue: https://github.com/PyAutoLabs/PyAutoHands/issues/289
 Epic: organ-cockpit
 
 Phase 1 (PyAutoBrain#416, shipped 2026-09-26) defined the per-organ state.json v1 cockpit feed (contract board/state_schema.json, validator + CLI board/_state.py in PyAutoBrain) and made the Brain and Heart boards emit it. This prompt makes the Hands release board emit it too, mirroring the Heart pattern exactly.

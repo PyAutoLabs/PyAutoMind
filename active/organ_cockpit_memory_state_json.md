@@ -12,6 +12,8 @@ Consequence: notify
 Witness: knowledge_board.yml run on main green with the validate step logging 'state: ok'; curl https://pyautolabs.github.io/PyAutoMemory/state.json passes the validator CLI.
 Review-minutes: 0
 Unattended: ready
+Issued: 2026-09-26
+Issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/104
 Epic: organ-cockpit
 
 Phase 1 (issue 416 in the Brain, shipped 2026-09-26) defined the per-organ state.json v1 cockpit feed (contract board/state_schema.json, validator + CLI board/_state.py in the Brain checkout the board job already has at ./PyAutoBrain). This prompt makes the Memory knowledge board emit it, mirroring the Heart pattern.
