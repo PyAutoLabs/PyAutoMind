@@ -246,6 +246,9 @@ jobs:
               || echo "::warning::dashboard not regenerated here — dashboard_refresh.yml heals it on main"
             git add -A -- complete/index.md dashboard.md dashboard.html \
               active.md planned.md parked.md condemned.md epics.md bundles.md queue.md
+            # the organ-cockpit feed (PyAutoBrain#418), when the renderer wrote it —
+            # a missing pathspec is fatal to `git add`, so guard it
+            if [ -f state.json ]; then git add -A -- state.json; fi
             git commit --quiet --no-verify \
               -m "mind: auto-merge ledger branch $BRANCH" \
               -m "Ledger-only diff (scripts/ledger_merge.py); conflicts settled by entry where the grammar allows; renders regenerated on the merged tree."

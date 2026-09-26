@@ -88,6 +88,7 @@ LEDGER_FILES = (
     "autonomy_log.md",
     "dashboard.md",
     "dashboard.html",
+    "state.json",
     "queue.md",
 )
 
@@ -246,7 +247,7 @@ def merge_entries(base: str, ours: str, theirs: str):
 
 # Renders of the ledger, never sources: on a conflict they take main's side and
 # are regenerated on the merged tree by the caller.
-GENERATED_FILES = ("dashboard.md", "dashboard.html", "complete/index.md")
+GENERATED_FILES = ("dashboard.md", "dashboard.html", "state.json", "complete/index.md")
 
 
 def _git(*args, cwd):

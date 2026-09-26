@@ -116,6 +116,11 @@ MIND_RULES = [
     # publisher — pages_dashboard.yml — is dropped by rule 9c, so a fresh org
     # has nothing that reads it until it regenerates the pair itself.
     ("dashboard.html", "DROP"),
+    # `state.json` is the organ-cockpit feed (PyAutoBrain board/_state.py v1),
+    # written by the same `--apply dashboard` run and published by the same
+    # dropped pages_dashboard.yml. DROP for the same reason as dashboard.html:
+    # nothing shipped reads it until a fresh org regenerates the dashboard.
+    ("state.json", "DROP"),
     ("skills/*", "KEEP"), ("policy/*", "KEEP"),
     # .github is decided PER FILE by the spec's fresh-repo invariant (rule 9):
     # a shipped workflow must succeed on a freshly-spawned repo with no secrets
