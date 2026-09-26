@@ -274,7 +274,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/organ_cockpit_mind_cortex_state_json.md">Organ cockpit: Mind and Cortex dashboards emit state.json via their Brain renderers</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/418">issue #418</a> — issued 2026-09-26 — library-dev</summary>
+<details><summary>📋 <a href="active/organ_cockpit_mind_cortex_state_json.md">Organ cockpit: Mind and Cortex dashboards emit state.json via their Brain renderers</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/418">issue #418</a> — issued 2026-09-26 — library-shipped, awaiting-merge (PR A Mind#440 → PR B Cortex#45 → PR C Brain#420) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/440">PyAutoMind#440</a>, <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/45">PyAutoCortex#45</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/420">PyAutoBrain#420</a></summary>
 
 ```
 /start_dev active/organ_cockpit_mind_cortex_state_json.md

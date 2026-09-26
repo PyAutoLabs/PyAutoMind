@@ -5,8 +5,10 @@
 - issued: 2026-09-26
 - prompt: active/organ_cockpit_mind_cortex_state_json.md
 - session: Claude Code CLI (Fable architect, Opus execution), 2026-09-26; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge (PR A Mind#440 → PR B Cortex#45 → PR C Brain#420)
 - autonomy: safe (header); epic organ-cockpit; plan approved in session and on the issue; merge is human
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/440, https://github.com/PyAutoLabs/PyAutoCortex/pull/45, https://github.com/PyAutoLabs/PyAutoBrain/pull/420
+- heart-red-override: "Heart RED (snapshot 2026-09-26T11:27:07+00:00): `release validation FAILED (stage integrate)`. Branch gates: Mind pytest 586, Cortex pytest 64, Brain 196 targeted / 1037 full (1 env-only failure with PYAUTO_MIND exported), worktree-rendered Mind + Cortex feeds validate, tenant firewall OK. Live human 2026-09-26: 'override and continue' — development shipping + merge on green checks in order Mind → Cortex → Brain; no release."
 - worktree: /home/jammy/Code/PyAutoLabs-wt/mind-cortex-state-feed
 - repos:
   - PyAutoMind: feature/mind-cortex-state-feed
