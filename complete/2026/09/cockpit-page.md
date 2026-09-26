@@ -1,3 +1,15 @@
+- issue: https://github.com/PyAutoLabs/pyautolabs.github.io/issues/12 (closed)
+- completed: 2026-09-26
+- workspace-pr: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/13 (MERGED)
+- epic: organ-cockpit (feeds: PyAutoBrain#416, Hands#289, Memory#104, Brain#418)
+- heart-ack: "Heart YELLOW (score 100): `manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml`; `manifest drift: organism-map blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml` — pre-existing; live human 'ack and merge' 2026-09-26"
+- witness: Pages deploy 36253613207 green; https://pyautolabs.github.io/cockpit/ , manifest.webmanifest (application/manifest+json, standalone, start_url /cockpit/) and sw.js all 200; hub index carries the Cockpit link. Human legs pending: cards populate, install prompt / Lighthouse installable, 🔔 + notification on a status change.
+- gotchas: feeds are absolute URLs so a localhost preview shows live data (Pages sends access-control-allow-origin: *); Pages CDN caches state.json 600 s so fetches carry a `?t=` buster besides cache:"no-store"; installed Android PWAs need notifications via the service worker's showNotification, not `new Notification`; the hub has no CI and no headless browser exists locally — the visual check is human; the hub's AGENTS "inline everything" rule has two platform-mandated exceptions (manifest + sw.js), now documented there.
+- follow-ups (not filed): Eyes/Gut/Nerves feeds (need a minimal board workflow each) so the grey cards fill; start_dev Heart-RED gate reading the Heart feed; tray-dot script; Claude Code status line; the 7-mismatch hub organism-blurb drift (regenerate the organism card from repos.yaml).
+- summary: Installable organ cockpit PWA at https://pyautolabs.github.io/cockpit/ — one self-contained page reading every organ's state.json feed (ORGANS list, Heart pinned, canonical order, grey cards for feed-less organs), 60 s polling with last-good fallback, app badge + title red count, local notifications on status transitions, manifest + shell-only service worker; hub nav link + README/AGENTS section.
+
+## Original prompt
+
 # Organ cockpit: installable cockpit page on the hub reading the organ feeds
 
 Type: feature
