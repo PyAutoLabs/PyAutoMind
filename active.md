@@ -72,7 +72,8 @@
 - issued: 2026-09-26
 - prompt: active/interferometer_mge_w_tilde_route_mge_only.md
 - session: Claude Code CLI (Opus 5.5), 2026-09-26
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge (library-first: PyAutoArray#576 → PyAutoGalaxy#629 → PyAutoLens#750 → autolens_profiling#313)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/313
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/576
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/629
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/750
@@ -84,4 +85,4 @@
   - PyAutoGalaxy: feature/interferometer-mge-w-tilde-route
   - PyAutoLens: feature/interferometer-mge-w-tilde-route
   - autolens_profiling: feature/interferometer-mge-w-tilde-route
-- workspace-scope: autolens_profiling library-path re-run of scripts/interferometer/likelihood_breakdown/mge.py (CPU + A100), VRAM rows in scripts/misc/vram/config.py, addendum to results/notes/interferometer_mge_breakdown_2026_09.md. Library PRs held by Heart freeze until 2026-09-26T14:45Z (release validation 2026.9.26.1.dev78601).
+- heart-at-workspace-ship: "2026-09-26 YELLOW (manifest drift hub blurb 7; organism-map blocks 1); human authorized shipping the workspace PR"
