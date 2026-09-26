@@ -274,7 +274,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/interferometer_mge_w_tilde_route_mge_only.md">Interferometer likelihood campaign: route MGE-only interferometer fits through the W~ sparse operator</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/575">issue #575</a> — issued 2026-09-26 — library-dev</summary>
+<details><summary>📋 <a href="active/interferometer_mge_w_tilde_route_mge_only.md">Interferometer likelihood campaign: route MGE-only interferometer fits through the W~ sparse operator</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/575">issue #575</a> — issued 2026-09-26 — library-shipped, workspace-pending</summary>
 
 ```
 /start_dev active/interferometer_mge_w_tilde_route_mge_only.md
