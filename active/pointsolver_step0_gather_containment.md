@@ -19,6 +19,8 @@ Review-minutes: 20
 Unattended: ready
 Epic: point-source-cpu-speed
 Filed: 2026-09-26
+Issued: 2026-09-26
+Issue: https://github.com/PyAutoLabs/PyAutoArray/issues/579
 Parent: active/pointsolver_cpu_speed_phase_4.md (issue autolens_profiling#314)
 
 ## Goal
