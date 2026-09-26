@@ -1,5 +1,18 @@
 # Active Tasks
 
+## cockpit-page
+- issue: https://github.com/PyAutoLabs/pyautolabs.github.io/issues/12
+- issued: 2026-09-26
+- prompt: active/organ_cockpit_page.md
+- session: Claude Code CLI (Fable architect, Opus execution), 2026-09-26; session ID unavailable
+- status: workspace-dev
+- autonomy: safe (header); epic organ-cockpit; plan approved in session and on the issue; merge is human
+- worktree: /home/jammy/Code/PyAutoLabs-wt/cockpit-page
+- repos:
+  - pyautolabs.github.io: feature/cockpit-page
+- parallel-claim: "pyautolabs.github.io is also claimed by eyes-organ-order (its worktree has no diff vs origin/main). This task adds cockpit/ (index.html, manifest.webmanifest, sw.js) and touches index.html nav, README.md, AGENTS.md. Disjoint; own worktree per the #177 precedent, recorded 2026-09-26."
+- summary: Organ cockpit — installable PWA cockpit page on the hub (cockpit/) reading every organ's state.json feed, Heart pinned first, app badge + local notifications on status change, one ORGANS list.
+
 ## eyes-organ-order
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/439
 - issued: 2026-09-25
