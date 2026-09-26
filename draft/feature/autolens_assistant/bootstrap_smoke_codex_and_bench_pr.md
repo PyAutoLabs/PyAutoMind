@@ -41,6 +41,9 @@ prompt: its usage limit resets 2026-09-26 20:36.
    and file a follow-up on prompt wording / Codex AGENTS discovery rather than retrying.
 3. Open one PR for the branch (both post-merge records), acknowledging Heart YELLOW if still
    yellow; human `/prm`.
-4. Separately: `wiki/core/operations/installation.md` still recommends Python 3.11; autolens
-   ≥ 2026.9.19.1 requires 3.12 — needs an `al_update_wiki` pass (file as its own docs prompt if
-   not folded in here).
+4. Already on the branch (2026-09-26 17:06, head ca19325): the `wiki/core/operations/installation.md`
+   Python 3.12 floor via `al_update_wiki` (provenance re-pinned to the 2026.9.26.1 SHAs, currency
+   checks clean) and the README/first_prompts Colab badge pinned to `blob/2026.9.26.1/`. The
+   website's Colab links are pinned to the same tag (Jammy2211.github.io 3e78dca, live). So the
+   PR in step 3 ships three things: the post-merge Claude record, the Codex record, the wiki +
+   badge follow-ups.
