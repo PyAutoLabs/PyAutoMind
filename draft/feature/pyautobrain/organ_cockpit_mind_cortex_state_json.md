@@ -14,6 +14,7 @@ Consequence: notify
 Witness: pyauto-brain intake dashboard --check reports current with state.json tracked in PyAutoMind; both pages_dashboard.yml runs green with 'state: ok'; curl https://pyautolabs.github.io/PyAutoMind/state.json and /PyAutoCortex/state.json pass the validator.
 Review-minutes: 0
 Unattended: ready
+Filed: 2026-09-26
 Epic: organ-cockpit
 
 Phase 1 (PyAutoBrain#416, shipped 2026-09-26) defined the per-organ state.json v1 cockpit feed (board/state_schema.json, board/_state.py). The Mind task dashboard and the Cortex science dashboard are not rendered in their own repos: PyAutoBrain's intake conductor writes PyAutoMind/dashboard.md + dashboard.html (pyauto-brain intake --apply dashboard) and the cortex conductor writes PyAutoCortex's dashboard, and each repo's pages_dashboard.yml only copies dashboard.html into _site. So the emit lives in the Brain renderers and the publish/validate lives in the two workflows.

@@ -5,7 +5,9 @@
 - issued: 2026-09-26
 - prompt: active/organ_cockpit_hands_state_json.md
 - session: Claude Code CLI (Fable architect, Opus execution), 2026-09-26; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/290
+- heart-red-override: "Heart RED (snapshot 2026-09-26T11:27:07+00:00): `release validation FAILED (stage integrate)`. Branch gates: Hands pytest 472 (9 new) + Brain validator state: ok + tenant firewall OK. Live human 2026-09-26: 'ok io authorize you to continue' — development shipping + merge on green checks; no release."
 - autonomy: safe (header); bundle organ-cockpit-feeds (with memory-state-feed); plan approved in session and on the issue; merge is human
 - worktree: /home/jammy/Code/PyAutoLabs-wt/organ-cockpit-feeds
 - repos:
@@ -18,7 +20,9 @@
 - issued: 2026-09-26
 - prompt: active/organ_cockpit_memory_state_json.md
 - session: Claude Code CLI (Fable architect, Opus execution), 2026-09-26; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoMemory/pull/105
+- heart-red-override: "Heart RED (snapshot 2026-09-26T11:27:07+00:00): `release validation FAILED (stage integrate)`. Branch gates: Memory pytest 219 (9 new; pre-existing PYAUTO_BRAIN env failure in the theme test) + Brain validator state: ok + tenant firewall OK. Live human 2026-09-26: 'ok io authorize you to continue' — development shipping + merge on green checks; no release."
 - autonomy: safe (header); bundle organ-cockpit-feeds (with hands-state-feed); plan approved in session and on the issue; merge is human
 - worktree: /home/jammy/Code/PyAutoLabs-wt/organ-cockpit-feeds
 - repos:
