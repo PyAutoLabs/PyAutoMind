@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1561 records across 8 buckets.
+1562 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -358,6 +358,7 @@ markers; everything below GENERATED is rebuilt.
 - [org-community-guidance-hub](2026/09/org-community-guidance-hub.md) — Organization contribution/conduct/support guidance centralized in .github; Scientist compatibility pointers an…
 - [org-community-guidance-scientist](2026/09/org-community-guidance-scientist.md) — Organization contribution/conduct/support guidance centralized in .github; Scientist compatibility pointers an…
 - [organ-board-github-link](2026/09/organ-board-github-link.md) — Every organ board header now carries a `GitHub Page` link beside its existing
+- [organ-cockpit-state-feed](2026/09/organ-cockpit-state-feed.md) — closed
 - [over-sample-snr-double-division](2026/09/over-sample-snr-double-division.md)
 - [parameterization-prior-count](2026/09/parameterization-prior-count.md)
 - [permanent-ci-timing-history](2026/09/permanent-ci-timing-history.md)
