@@ -284,7 +284,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/point_source_folder_split.md">Split scripts/point_source into point_source_image / point_source_source</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/316">issue #316</a> — issued 2026-09-26 — workspace-dev</summary>
+<details><summary>📋 <a href="active/point_source_folder_split.md">Split scripts/point_source into point_source_image / point_source_source</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/316">issue #316</a> — issued 2026-09-26 — awaiting-merge</summary>
 
 ```
 /start_dev active/point_source_folder_split.md

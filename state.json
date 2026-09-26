@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 9 in flight",
-  "updated": "2026-09-26T16:23:55Z",
+  "updated": "2026-09-26T16:25:52Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "One-shot benchmark harness and computed-score contract for the assistant benchmarks \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/380",
       "prompt": "/start_dev active/oneshot_benchmark_harness.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Split scripts/point_source into point_source_image / point_source_source \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autolens_profiling/issues/316",
+      "prompt": "/start_dev active/point_source_folder_split.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: autofit_workspace_test autofit_workspace_test#99 \u2014 samples-errors-at-sigma-instance",
       "url": "https://github.com/PyAutoLabs/autofit_workspace_test/pull/99",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: autogalaxy_workspace autogalaxy_workspace#248 \u2014 Shipped",
-      "url": "https://github.com/PyAutoLabs/autogalaxy_workspace/pull/248",
       "prompt": null
     }
   ]

@@ -119,7 +119,8 @@
 - prompt: active/point_source_folder_split.md
 - epic: point-source-cpu-speed
 - session: Claude Code CLI (Opus 5.5 subagent), 2026-09-26; session ID unavailable
-- status: workspace-dev
+- status: awaiting-merge
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/318
 - autonomy: supervised (header); plan approved in-session 2026-09-26 ("give me the prompt and then go ahead"); move-only refactor
 - worktree: /home/jammy/Code/PyAutoLabs-wt/point-source-folder-split
 - repos:
