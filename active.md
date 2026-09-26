@@ -1,5 +1,21 @@
 # Active Tasks
 
+## mind-cortex-state-feed
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/418
+- issued: 2026-09-26
+- prompt: active/organ_cockpit_mind_cortex_state_json.md
+- session: Claude Code CLI (Fable architect, Opus execution), 2026-09-26; session ID unavailable
+- status: library-dev
+- autonomy: safe (header); epic organ-cockpit; plan approved in session and on the issue; merge is human
+- worktree: /home/jammy/Code/PyAutoLabs-wt/mind-cortex-state-feed
+- repos:
+  - PyAutoMind: feature/mind-cortex-state-feed
+  - PyAutoCortex: feature/mind-cortex-state-feed
+  - PyAutoBrain: feature/mind-cortex-state-feed
+- parallel-claim: "All three repos are also claimed by eyes-organ-order (Brain: AGENTS/README/docs/root resolution; Mind: repos.yaml, hooks, scripts/repos_sync.py; Cortex: AGENTS.md) and Brain by cosmos-web-ring-greeting (clone conductor). This task touches Brain agents/conductors/{intake,cortex}/, tests/test_intake_dashboard.py, tests/test_cortex_conductor.py, tests/test_state_feed.py, tests/fixtures/state/; Mind scripts/spawn.py, scripts/ledger_merge.py, docs/pyautobrain/spawn_spec.md, tests/test_ledger_merge.py, .github/workflows/{pages_dashboard,dashboard_refresh,mind_ledger_merge}.yml; Cortex scripts/ledger_merge.py, tests/test_ledger_merge.py, .github/workflows/{pages_dashboard,dashboard_refresh,cortex_check}.yml. Disjoint; own worktree per the #177 precedent, recorded 2026-09-26. Canonical PyAutoCortex is on claude/checkin-2026-09-19 (dirty, unpushed science check-in) — untouched."
+- plan: three PRs, merge order Mind → Cortex → Brain (guards + workflows first, then the Brain renderers start emitting)
+- summary: Organ cockpit — Mind and Cortex dashboards emit the state.json v1 feed via their Brain renderers (intake + cortex conductors), with the Mind/Cortex guards and Pages workflows admitting, copying and validating the file.
+
 ## eyes-organ-order
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/439
 - issued: 2026-09-25

@@ -14,6 +14,8 @@ Consequence: notify
 Witness: pyauto-brain intake dashboard --check reports current with state.json tracked in PyAutoMind; both pages_dashboard.yml runs green with 'state: ok'; curl https://pyautolabs.github.io/PyAutoMind/state.json and /PyAutoCortex/state.json pass the validator.
 Review-minutes: 0
 Unattended: ready
+Issued: 2026-09-26
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/418
 Filed: 2026-09-26
 Epic: organ-cockpit
 
