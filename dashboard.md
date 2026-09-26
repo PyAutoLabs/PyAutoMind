@@ -282,7 +282,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/multistart_cpu_memory_probe_doubles_compile.md">MultiStartGradient's unbatched-memory guard pays two throwaway full-model XLA compiles on CPU</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1646">issue #1646</a> — issued 2026-09-26 — library-shipped — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1647">PyAutoFit#1647</a></summary>
+<details><summary>📋 <a href="active/multistart_cpu_memory_probe_doubles_compile.md">MultiStartGradient's unbatched-memory guard pays two throwaway full-model XLA compiles on CPU</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1646">issue #1646</a> — issued 2026-09-26 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1647">PyAutoFit#1647</a></summary>
 
 ```
 /start_dev active/multistart_cpu_memory_probe_doubles_compile.md
