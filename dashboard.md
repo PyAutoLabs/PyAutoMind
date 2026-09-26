@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 235 |
+| [Backlog](#backlog) (`draft/`) | 239 |
 
 > **No batch in flight.**
 
@@ -520,7 +520,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**235** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **50** of them belong to an epic and are listed only under [Epics](#epics) below.
+**239** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **54** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 68</summary>
@@ -2522,12 +2522,44 @@ Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonic
 </details>
 
 <details>
-<summary><b>Point-source (single-source) PointSolver CPU speed-up</b> — 1 queued prompt(s), in order</summary>
+<summary><b>Point-source (single-source) PointSolver CPU speed-up</b> — 5 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Point-source (single-source) PointSolver CPU speed-up</b> — ledger: `autolens_profiling/results/notes/point_source_cpu_campaign.md` — phases 1-3 shipped (p2 + p3 released in 2026.9.26.1: PyAutoArray <code>7fa8d271</code>, PyAutoLens <code>86054bbc</code>); phase 4a (re-baseline +…</summary>
 
 ```
 Continue the 'Point-source (single-source) PointSolver CPU speed-up' epic. Its canonical state lives in autolens_profiling/results/notes/point_source_cpu_campaign.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: human decision 2026-09-26 — SINGLE-SOURCE only, the `scripts/point_source_image/` + `scripts/point_source_source/` use case (formerly `scripts/point_source/`); the cluster use case moved to epic `cluster-pointsolver-speed`. Member prompt `active/pointsolver_cpu_speed_phase_4.md` (phase 4a issued as autolens_profiling#314); source-plane member prompt `draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md` (phases 2+, re-filed at close-out; ledger `results/notes/point_source_source_plane_campaign.md`) (re-tagged from `cluster-strong-lensing`, which is the unrelated Source & Cluster arc). Records `complete/2026/09/point-source-cpu-p{1,2,3}.md`. Issue ONE bounded phase at a time; any library default change (PyAutoLens `shape_solver.py` / PyAutoArray `MAX_CONTAINING_SIZE`) is a human decision at the phase-4a checkpoint.
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/pointsolver_max_containing_size_headroom.md">Point-source CPU speed-up phase 4c — raise <code>MAX_CONTAINING_SIZE</code> headroom…</a> — autoarray · small · supervised · normal</summary>
+
+```
+/start_dev draft/feature/autoarray/pointsolver_max_containing_size_headroom.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/pointsolver_step0_gather_containment.md">Point-source CPU speed-up phase 4b — cut the step-0 triangle gather /…</a> — autoarray · medium · supervised · high</summary>
+
+```
+/start_dev draft/feature/autoarray/pointsolver_step0_gather_containment.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/pointsolver_extent_sanity_check.md">PointSolver grid-extent sanity check — warn when the data approach the solver…</a> — autolens · medium · supervised · high</summary>
+
+```
+/start_dev draft/feature/autolens/pointsolver_extent_sanity_check.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens_workspace/pointsolver_grid_extent_per_package.md">Set galaxy-scale PointSolver grid extents per workspace package…</a> — autolens_workspace · medium · supervised · normal</summary>
+
+```
+/start_dev draft/feature/autolens_workspace/pointsolver_grid_extent_per_package.md
 ```
 
 </details>
@@ -2938,12 +2970,14 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 ## Hygiene
 
-57 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+61 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
 
 - `draft/feature/autoarray/adapt_linear_default_flip.md`
+- `draft/feature/autoarray/pointsolver_max_containing_size_headroom.md`
+- `draft/feature/autoarray/pointsolver_step0_gather_containment.md`
 - `draft/feature/autoarray/rectangular_multi_submesh.md`
 - `draft/feature/autofit/model_figures_epic.md`
 - `draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md`
@@ -2951,10 +2985,12 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 - `draft/feature/autogalaxy/piemass_potential.md`
 - `draft/feature/autolens/area_magnification_leggos.md`
 - `draft/feature/autolens/magnification_maps_visualization.md`
+- `draft/feature/autolens/pointsolver_extent_sanity_check.md`
 - `draft/feature/autolens/source_cluster_arc.md`
 - `draft/feature/autolens_assistant/bootstrap_smoke_codex_and_bench_pr.md`
 - `draft/feature/autolens_assistant/colab_refinement_throughout.md`
 - `draft/feature/autolens_jax_joss/autolens_jax_joss_benchmark_repo.md`
+- `draft/feature/autolens_workspace/pointsolver_grid_extent_per_package.md`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md`
 - `draft/feature/jax_substructure/5_prng_key_vmap_noise.md`
 - `draft/feature/jax_substructure/6_deflection_equivalence_test.md`
@@ -2979,11 +3015,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 - `draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md`
 - `draft/test/workspaces/mesh_magnification_correctness.md`
 - `draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md`
-- `draft/test/workspaces/restore_workspace_test_likelihood_baselines.md`
-- `draft/test/workspaces/smoke_workspace_fixes.md`
-- `draft/release/autocti/cti_release_train_wiring.md`
-- `draft/release/pyautoreduce/pyautoreduce_release_induction.md`
-- _… and 17 more_
+- _… and 21 more_
 
 </details>
 

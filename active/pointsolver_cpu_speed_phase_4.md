@@ -358,3 +358,29 @@ Full note + reproducible scratch scripts/JSONs: session scratchpad `pointsolver/
 **Ranked levers:** (1) drop the throwaway `jnp.unique` on the JAX trace path (PyAutoArray + PyAutoLens `_plane_triangles`; red-control bit-identical LL + cluster positions) — 4.9× simple / 2.4× cluster; (2) precompute the initial lattice's unique vertices + index map once at solver construction in NumPy (the step-0 tiling is static), cutting step-0 deflection count ~2.4–6× with no runtime sort — matters most at cluster scale where deflections dominate post-fix (not measured); (3) solver grid extent guidance / defaults (6.2×, zero code); (4) coarser initial `scale` + more steps (~4× on step 0, completeness risk, not measured); (5) `MAX_CONTAINING_SIZE` / 240-triangle fan-out (≲1.5 ms, correctness knob); (6) mass-profile deflection code at cluster scale. Recommend against warm-starting across sampler calls (breaks the pure-function contract `vmap`/`custom_jvp` rely on).
 
 **Not measured:** vmap batch 1/4/16 post-fix, `MAX_CONTAINING_SIZE` sweep, post-fix grid/n_steps sweep, `--xla_disable_hlo_passes=constant_folding` A/B, bare deflections at 276 507 points. Trap: jax caches jaxprs on function identity — a monkeypatch A/B needs a distinct function object and `jax.clear_caches()` before each compile.
+
+## Phase 4a findings + follow-ups (2026-09-26)
+
+Phase 4a (re-baseline RAL job 356365, solver-config sweep RAL job 356367) is recorded in
+`lens/autolens_profiling/results/notes/point_source_cpu_campaign.md`, section "Phase 4a" (branch
+`feature/point-source-cpu-p4`). Findings:
+
+- Measured wall time overturns the phase-3 FLOP ranking. Step 0 is **66 %** of the ≈ 2.1 ms
+  likelihood, and refinement is 15 %. Of step 0, the `vertices[indices]` gather is ≈ 0.9 ms.
+- The default solver config is complete on 200 prior + 200 stress draws.
+- The default's step-0 containing count reaches **17 > `MAX_CONTAINING_SIZE` 15** (prior draw 12).
+- Extent ±6″ to ±2.5″ gives 1.52–2.24×. Scale 0.4 is precision-equivalent at 1.43×.
+- MCS 8 / 10 and `neighbor_degree` 0 lose images, and the precision block gives no speed-up.
+
+The human agreed all three recommendations. **No library default change for the solver extent**:
+the extent is a per-workspace-package choice, backed by a library sanity-check warning. Filed
+follow-ups (epic `point-source-cpu-speed`):
+
+1. `draft/feature/autoarray/pointsolver_step0_gather_containment.md`: phase 4b, the step-0 gather /
+   containment code lever, bit-identical. Priority high, first.
+2. `draft/feature/autoarray/pointsolver_max_containing_size_headroom.md`: phase 4c, MCS 15 → ~20,
+   measured.
+3. `draft/feature/autolens/pointsolver_extent_sanity_check.md`: a construction-time extent warning and
+   perf hint (PyAutoLens).
+4. `draft/feature/autolens_workspace/pointsolver_grid_extent_per_package.md`: galaxy-scale extents per
+   workspace package. It depends on 3, and cluster scripts are left alone.
