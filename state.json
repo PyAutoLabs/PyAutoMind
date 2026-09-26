@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-09-26T15:54:34Z",
+  "updated": "2026-09-26T15:55:03Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "One-shot benchmark harness and computed-score contract for the assistant benchmarks \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/380",
       "prompt": "/start_dev active/oneshot_benchmark_harness.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Organ cockpit: installable cockpit page on the hub reading the organ feeds \u2014 workspace-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/pyautolabs.github.io/pull/13",
+      "prompt": "/start_dev active/organ_cockpit_page.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#540 \u2014 What shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/540",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#576 \u2014 interferometer-mge-w-tilde-route",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/576",
       "prompt": null
     }
   ]
