@@ -5,9 +5,11 @@
 - issued: 2026-09-26
 - prompt: active/organ_cockpit_phase_1_state_json_feed.md
 - session: Claude Code CLI (Fable architect, Opus execution), 2026-09-26; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge (PR 1 Brain open; PR 2 Heart committed locally, opens after PR 1 merges)
 - autonomy: safe (header); plan approved in session and on the issue; merge is human
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/417
 - worktree: /home/jammy/Code/PyAutoLabs-wt/organ-cockpit-state-feed
+- heart-red-override: "Heart RED (score 5, snapshot 2026-09-26T11:02:36+00:00): `PyAutoNerves: 1 commit(s) behind origin`; `PyAutoFit: 2 commit(s) behind origin`; `release validation FAILED (stage integrate)`. Branch gates: Brain pytest 71 (23 new) + live render validates + tenant firewall OK; Heart pytest 1063. Live human 2026-09-26 for PyAutoBrain#416: 'ok merge the pr and contonue' — development shipping + merge of PR 1 on green checks; no release."
 - repos:
   - PyAutoBrain: feature/organ-cockpit-state-feed
   - PyAutoHeart: feature/organ-cockpit-state-feed
