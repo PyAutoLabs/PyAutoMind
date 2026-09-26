@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 235 |
+| [Backlog](#backlog) (`draft/`) | 236 |
 
 > **No batch in flight.**
 
@@ -520,7 +520,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**235** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **50** of them belong to an epic and are listed only under [Epics](#epics) below.
+**236** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **51** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 68</summary>
@@ -2899,6 +2899,19 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 ```
 /start_dev draft/feature/autofit/certified_solver_batched_guard_c2.md
+```
+
+</details>
+
+</details>
+
+<details>
+<summary><b>organ-cockpit</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+
+<details><summary>📋 <a href="draft/feature/autonerves/organ_cockpit_nerves_board.md">Organ cockpit: Nerves board — browse every config file and option across…</a> — autonerves · medium · safe · high</summary>
+
+```
+/start_dev draft/feature/autonerves/organ_cockpit_nerves_board.md
 ```
 
 </details>
