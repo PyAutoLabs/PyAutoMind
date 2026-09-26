@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 235 |
+| [Backlog](#backlog) (`draft/`) | 236 |
 
 > **No batch in flight.**
 
@@ -610,7 +610,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**235** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **50** of them belong to an epic and are listed only under [Epics](#epics) below.
+**236** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **51** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 68</summary>
@@ -2495,7 +2495,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 Long-running multi-phase programmes. Each epic's 📋 prompt has Claude read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
 
 <details>
-<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 14 queued prompt(s), in order</summary>
+<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 15 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Cluster strong lensing — Source &amp; Cluster arc</b> — ledger: `draft/feature/autolens/source_cluster_arc.md`</summary>
 
@@ -2605,6 +2605,14 @@ Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonic
 
 ```
 /start_dev draft/feature/autolens/source_cluster_arc.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md">Point-source source-plane chi-squared speed-up campaign — phase 1: shared likelihood breakdown</a> — autolens_profiling · large · supervised · normal</summary>
+
+```
+/start_dev draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md
 ```
 
 </details>
@@ -3051,7 +3059,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 </details>
 
-62 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+63 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3115,6 +3123,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 - `draft/research/autolens_profiling/interferometer_mesh_breakdown_jax_a100.md — unknown theme keyword(s): likelihood-profiling, jax-gpu`
 - `draft/research/autolens_profiling/interferometer_mesh_breakdown_numba_cpu_decision_matrix.md — unknown theme keyword(s): likelihood-profiling`
 - `draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md — unknown theme keyword(s): jax-gpu`
+- `draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md — unknown theme keyword(s): jax`
 - `draft/research/autolens_profiling/pointsolver_cpu_speed_phase_4.md — unknown theme keyword(s): jax`
 - `draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md — unknown theme keyword(s): euclid, hpc`
 - `draft/triage/autolens/jit_fit_from_is_vacuous.md — unknown theme keyword(s): testing, jax`
