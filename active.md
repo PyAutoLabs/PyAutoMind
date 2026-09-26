@@ -93,4 +93,5 @@
 - worktree: /home/jammy/Code/PyAutoLabs-wt/multistart-cpu-memory-probe
 - repos:
   - PyAutoFit: feature/multistart-cpu-memory-probe
+- resume: Fix + tests committed locally as 3220566e3 on feature/multistart-cpu-memory-probe (NOT pushed; 139 mle tests pass, new tests red->green). Parked at ship gate: Heart YELLOW for unrelated reasons (workspace validation 4 failed cluster/weak notebooks; manifest drift x3; release validation stale). Next = human acks YELLOW, then push + PR (label pending-release; body drafted by session).
 - summary: Skip MultiStartGradient's unbatched-memory probe on the CPU JAX backend (two throwaway full-model compiles; caused the 2026-09-26 release-integrate start_here.py 3605 s TIMEOUT, run 36226772178).
