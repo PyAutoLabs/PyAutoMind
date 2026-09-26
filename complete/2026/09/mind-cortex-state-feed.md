@@ -1,3 +1,15 @@
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/418 (closed)
+- completed: 2026-09-26
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/440, https://github.com/PyAutoLabs/PyAutoCortex/pull/45, https://github.com/PyAutoLabs/PyAutoBrain/pull/420 (all MERGED, in that order)
+- epic: organ-cockpit (contract PyAutoBrain#416; siblings Hands#289, Memory#104)
+- heart-red-override: "Heart RED `release validation FAILED (stage integrate)`; live human 'override and continue' 2026-09-26 — development shipping + merge on green checks; recorded on the issue, all three PR bodies, active.md, autonomy_log.md"
+- witness: both dashboard_refresh.yml self-heals committed state.json to main and dispatched Pages; both pages_dashboard.yml runs green with `state: ok`; https://pyautolabs.github.io/PyAutoMind/state.json (yellow | 24 picks · 6 in flight | 20 items) and /PyAutoCortex/state.json (yellow | 7 active · 7 running | 8 items) validate.
+- gotchas: Mind/Cortex dashboards are rendered by Brain conductors, so the emit lives in the Brain and the two repos only admit/copy/validate the file — merge order Mind → Cortex → Brain with every workflow step guarded `[ -f state.json ]`; the intake `_mind_home` regex had been broken since the grouped-checkouts layout (repos.yaml `path:` precedes `github:`), leaving the live Mind dashboard without its Pages pointer / absolute links — fixed in #420, self-heal committed a large dashboard.html link diff; `--check` covers state.json with `updated` normalised out (`_state_body`/`page_body`); the Cortex feed carries a 3 h check-in staleness rule so its `--check` drifts once a check-in ages (nightly heal re-commits; PRs touching projects/** >3 h after a render need a re-render); canonical PyAutoCortex sat on claude/checkin-2026-09-19 (dirty, unpushed science check-in) and was left untouched; env-only test failures when activate.sh exports PYAUTO_MIND/PYAUTO_ROOT (Brain test_grouped_organ_consumers, Mind test_repos_sync_root_default).
+- follow-ups (not filed): Eyes/Gut/Nerves feeds (no board yet); PWA cockpit page; start_dev Heart-RED gate; tray dot; status line; consider making Cortex check-in staleness idempotent for --check.
+- summary: Mind and Cortex dashboards emit the organ-cockpit state.json v1 feed via the Brain intake + cortex conductors (`render_state`, check/apply/checkin), with the Mind/Cortex spawn + ledger-merge guards and Pages workflows admitting, staging, copying and validating the file. Brain 196 targeted / 1037 full, Mind 586, Cortex 64.
+
+## Original prompt
+
 # Organ cockpit: Mind and Cortex dashboards emit state.json via their Brain renderers
 
 Type: feature
