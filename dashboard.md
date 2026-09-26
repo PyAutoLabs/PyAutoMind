@@ -250,7 +250,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/cosmos_web_ring_greeting.md">COSMOS-Web Ring greeting: replace the Abell 1201 demonstration on the website, benchmark…</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/136">issue #136</a> — issued 2026-09-26 — workspace-dev</summary>
+<details><summary>📋 <a href="active/cosmos_web_ring_greeting.md">COSMOS-Web Ring greeting: replace the Abell 1201 demonstration on the website, benchmark…</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/136">issue #136</a> — issued 2026-09-26 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/137">autolens_assistant#137</a></summary>
 
 ```
 /start_dev active/cosmos_web_ring_greeting.md
