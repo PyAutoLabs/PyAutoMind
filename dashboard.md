@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/interferometer_mge_w_tilde_route_mge_only.md">Interferometer likelihood campaign: route MGE-only interferometer fits through the W~ sparse operator</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/575">issue #575</a> — issued 2026-09-26 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/576">PyAutoArray#576</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/629">PyAutoGalaxy#629</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/750">PyAutoLens#750</a></summary>
+<details><summary>📋 <a href="active/interferometer_mge_w_tilde_route_mge_only.md">Interferometer likelihood campaign: route MGE-only interferometer fits through the W~ sparse operator</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/575">issue #575</a> — issued 2026-09-26 — workspace-shipped, awaiting-merge (library-first: PyAutoArray#576 → PyAutoGalaxy#629 → PyAutoLens#750 → autolens_profiling#313) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/576">PyAutoArray#576</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/629">PyAutoGalaxy#629</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/750">PyAutoLens#750</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/313">autolens_profiling#313</a></summary>
 
 ```
 /start_dev active/interferometer_mge_w_tilde_route_mge_only.md
