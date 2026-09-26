@@ -1,5 +1,20 @@
 # Active Tasks
 
+## organ-cockpit-state-feed
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/416
+- issued: 2026-09-26
+- prompt: active/organ_cockpit_phase_1_state_json_feed.md
+- session: Claude Code CLI (Fable architect, Opus execution), 2026-09-26; session ID unavailable
+- status: library-dev
+- autonomy: safe (header); plan approved in session and on the issue; merge is human
+- worktree: /home/jammy/Code/PyAutoLabs-wt/organ-cockpit-state-feed
+- repos:
+  - PyAutoBrain: feature/organ-cockpit-state-feed
+  - PyAutoHeart: feature/organ-cockpit-state-feed
+- parallel-claim: "PyAutoBrain is also claimed by eyes-organ-order (AGENTS.md, ORGANISM.md, README.md, agents/_pyauto_root.py, bin/_pyauto_root.sh, docs/) and cosmos-web-ring-greeting (agents/conductors/clone/, tests/test_clone_conductor.py); PyAutoHeart by eyes-organ-order (config/repos.yaml, heart/_workspace.*). This task touches board/_board.py, board/_state.py, board/state_schema.json, board/AGENTS.md, tests/test_state_feed.py, tests/fixtures/state/ in Brain and heart/dashboard.py, heart/alert.py, .github/workflows/heart-health.yml, tests/test_alert.py, tests/test_dashboard.py in Heart. Disjoint file sets; own worktree per the #177 precedent, recorded 2026-09-26."
+- plan: two PRs, one issue — PR 1 PyAutoBrain (state.json v1 contract + validator + Brain emits), PR 2 PyAutoHeart after PR 1 merges (Heart emits + validates via checked-out Brain; transition-only ntfy alert; HEART_NTFY_URL secret is a human step)
+- summary: Organ cockpit phase 1 — shared per-organ state.json feed (contract in Brain, emitted by Brain + Heart boards) and a transition-only Heart push alert.
+
 ## eyes-organ-order
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/439
 - issued: 2026-09-25
