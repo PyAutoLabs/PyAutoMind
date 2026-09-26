@@ -1,5 +1,21 @@
 # Active Tasks
 
+## gut-board
+- issue: https://github.com/PyAutoLabs/PyAutoGut/issues/9
+- issued: 2026-09-26
+- prompt: active/gut_board.md
+- session: Claude Code CLI (Fable architect, Opus execution), 2026-09-26; session ID unavailable
+- status: library-dev
+- autonomy: safe (header); epic organ-cockpit; scope widened by the human 2026-09-26 (one-tap void buttons); plan approved in session and on the issue; merge is human
+- worktree: /home/jammy/Code/PyAutoLabs-wt/gut-board
+- repos:
+  - PyAutoBrain: feature/gut-board
+  - PyAutoGut: feature/gut-board
+  - pyautolabs.github.io: feature/gut-board
+- parallel-claim: "PyAutoBrain also claimed by eyes-organ-order + cosmos-web-ring-greeting (disjoint: this task touches board/_theme.py, config/policy.yaml boards list, agents/conductors/hygiene/_hygiene_condemned.py, tests); PyAutoGut by eyes-organ-order (AGENTS.md one-line organ-order edit; this task appends a new AGENTS.md section + scripts/board.py, .github/workflows/{gut_board,void}.yml, tests/, README.md); pyautolabs.github.io by eyes-organ-order (no diff; this task edits one cockpit ORGANS line). Own worktree per the #177 precedent, recorded 2026-09-26."
+- plan: three PRs, merge order Brain (theme + policy + parser helper) → Gut (board, feed, gut_board.yml Pages birth, void.yml issue-triggered void) → hub (cockpit ORGANS feed line)
+- summary: Gut board (Pages) + state.json feed + one-tap "Void permanently" via prefilled issues handled by void.yml; reconciles ls-remote refs against condemned.md (due / transit / held / orphans / dangling); Nerves decision: no board.
+
 ## eyes-organ-order
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/439
 - issued: 2026-09-25
