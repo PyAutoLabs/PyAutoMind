@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1575 records across 8 buckets.
+1576 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -354,6 +354,7 @@ markers; everything below GENERATED is rebuilt.
 - [multi-galaxy-j1011-real-data](2026/09/multi-galaxy-j1011-real-data.md)
 - [multistart-cpu-memory-probe](2026/09/multistart-cpu-memory-probe.md) — - `MultiStartGradient._warn_if_unbatched_exceeds_memory` now skips its batch-1/batch-2 memory probe (two throw…
 - [natural-language-first-docs](2026/09/natural-language-first-docs.md)
+- [nerves-board](2026/09/nerves-board.md) — closed
 - [notify-slack-community-discussions](2026/09/notify-slack-community-discussions.md)
 - [nufft-threshold-subhalo-pin-rebuild](2026/09/nufft-threshold-subhalo-pin-rebuild.md)
 - [numba-interferometer-kernel-levers](2026/09/numba-interferometer-kernel-levers.md)
