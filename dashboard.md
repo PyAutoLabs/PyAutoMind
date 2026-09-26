@@ -276,7 +276,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/organ_cockpit_gut_void_sibling_reach.md">Organ cockpit: Gut void button reaches refs held on sibling repos</a> — <a href="https://github.com/PyAutoLabs/PyAutoGut/issues/11">issue #11</a> — issued 2026-09-26 — library-dev</summary>
+<details><summary>📋 <a href="active/organ_cockpit_gut_void_sibling_reach.md">Organ cockpit: Gut void button reaches refs held on sibling repos</a> — <a href="https://github.com/PyAutoLabs/PyAutoGut/issues/11">issue #11</a> — issued 2026-09-26 — library-dev (BUILT, committed d956c380, unpushed — awaiting Heart YELLOW ack + /ship_library; checkpoint on the issue 2026-09-26)</summary>
 
 ```
 /start_dev active/organ_cockpit_gut_void_sibling_reach.md
@@ -284,7 +284,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/organ_cockpit_nerves_unused_keys.md">Organ cockpit: Nerves board flags config keys not in use anymore</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/174">issue #174</a> — issued 2026-09-26 — library-dev</summary>
+<details><summary>📋 <a href="active/organ_cockpit_nerves_unused_keys.md">Organ cockpit: Nerves board flags config keys not in use anymore</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/174">issue #174</a> — issued 2026-09-26 — library-dev (BUILT, committed 079b182, unpushed — awaiting Heart YELLOW ack + /ship_library; checkpoint on the issue 2026-09-26)</summary>
 
 ```
 /start_dev active/organ_cockpit_nerves_unused_keys.md
@@ -292,7 +292,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/organ_cockpit_start_dev_heart_gate.md">Organ cockpit: start_dev refuses or warns on the Heart feed before development…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/423">issue #423</a> — issued 2026-09-26 — library-dev</summary>
+<details><summary>📋 <a href="active/organ_cockpit_start_dev_heart_gate.md">Organ cockpit: start_dev refuses or warns on the Heart feed before development…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/423">issue #423</a> — issued 2026-09-26 — library-dev (BUILT, committed e31d92f, unpushed — awaiting Heart YELLOW ack + /ship_library; checkpoint on the issue 2026-09-26)</summary>
 
 ```
 /start_dev active/organ_cockpit_start_dev_heart_gate.md
