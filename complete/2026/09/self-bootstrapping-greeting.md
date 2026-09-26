@@ -1,3 +1,26 @@
+## self-bootstrapping-greeting
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/138 (closed)
+- completed: 2026-09-26
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/139 (merge ab6acde6)
+- follows: complete/2026/09/cosmos-web-ring-greeting.md (#136/#137)
+- summary: |
+    The public greeting prompt is now self-bootstrapping from any directory: an agent handed the prompt
+    and the repository URL clones autolens_assistant and follows its AGENTS.md. README, llms.txt and
+    AGENTS.md carry the bootstrap block; the prompt gains the "First clone that repository" sentence; the
+    greeting skill gains a Step 0 bootstrap check; the setup pages are aligned; a `bootstrap-smoke`
+    benchmark card records the check; the Python floor is 3.12; the Codex invocation flags are
+    documented. Verification: Claude Code v1 97, Codex v1 13x2, Claude Code v2 100. The website commit
+    (Jammy2211.github.io a07c38d, simplifying the line to "Open Claude Code, Codex or another AI coding
+    agent and paste this:") is pushed after the assistant merge.
+- heart-red-override: "2026-09-26 live human, in direct response to the question naming this task, authorised the development-only override: push feature/self-bootstrapping-greeting and open the PR (no merge, no release, no CI bypass; merge via /prm on green checks). RED reason when authorised: release validation FAILED (stage integrate). At ship time (readiness ts 2026-09-26T15:24:39Z) Heart was YELLOW, no red_reasons; YELLOW: manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: organism-map blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml. Gates passed: make test 130 passed 1 skipped + freeze-check OK; bootstrap-smoke Claude Code v2 100/100; no workspace smoke applies (no library change, script change formatting-only)."
+- merge-authority: human typed /prm (separate explicit merge command); every check green at head 7ee29f3 (assistant boundary + wiki-currency, pull_request runs; no push-event workflows).
+- follow-ups: |
+    - Codex v2 bootstrap-smoke run (Codex limit resets 20:36).
+    - Stage (b): re-run bootstrap-smoke from an empty directory with the real prompt and real URL on Claude Code and Codex, and record.
+    - Wiki installation.md Python floor (3.12) via al_update_wiki.
+
+## Original prompt
+
 # Make the assistant greeting prompt self-bootstrapping from any directory
 
 Type: feature

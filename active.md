@@ -33,22 +33,6 @@
   - PyAutoGut: feature/eyes-organ-order
 - resume: bundle worktree created; implement the reorder per the issue plan (Eyes between Memory and Heart), then repos_sync --write, then ship
 
-## self-bootstrapping-greeting
-- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/138
-- issued: 2026-09-26
-- prompt: active/self_bootstrapping_greeting_prompt.md
-- session: Claude Code (Fable 5.1 session; ID unavailable)
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/139
-- heart-red-override: "2026-09-26 live human, in direct response to the question naming this task, authorised the development-only override: push feature/self-bootstrapping-greeting and open the PR (no merge, no release, no CI bypass; merge via /prm on green checks). RED reason when authorised: release validation FAILED (stage integrate). At ship time (readiness ts 2026-09-26T15:24:39Z) Heart was YELLOW, no red_reasons; YELLOW: manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: organism-map blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml. Gates passed: make test 130 passed 1 skipped + freeze-check OK; bootstrap-smoke Claude Code v2 100/100; no workspace smoke applies (no library change, script change formatting-only)."
-- website-commit: Jammy2211.github.io a07c38d (local, push after assistant PR merges)
-- resume: human /prm merges; then push website a07c38d; then stage (b): re-run bootstrap-smoke from an empty dir with the real prompt on Claude Code and Codex (Codex limit resets 20:36) and record; wiki installation.md Python floor via al_update_wiki
-- worktree: ~/Code/PyAutoLabs-wt/self-bootstrapping-greeting
-- repos:
-  - autolens_assistant: feature/self-bootstrapping-greeting
-- follows: complete/2026/09/cosmos-web-ring-greeting.md (#136/#137)
-- website-followup: Jammy2211.github.io index.html + natural_language/draft.md line change after merge
-
 ## oneshot-benchmark-harness
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/126
 - issued: 2026-09-17
