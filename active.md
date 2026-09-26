@@ -113,7 +113,12 @@
 - issued: 2026-09-26
 - prompt: active/interferometer_mge_w_tilde_route_mge_only.md
 - session: Claude Code CLI (Opus 5.5), 2026-09-26
-- status: library-dev
+- status: library-shipped, workspace-pending
+- library-pr:
+  - https://github.com/PyAutoLabs/PyAutoArray/pull/576
+  - https://github.com/PyAutoLabs/PyAutoGalaxy/pull/629
+  - https://github.com/PyAutoLabs/PyAutoLens/pull/750
+- heart-red-override: "2026-09-26 live user chose 'Override, open PRs' for this task (commit/push/pending-release PR only; merge via /prm on green checks; no release). RED reasons: release validation FAILED (stage integrate); workspace validation not passing (4 failed, cloud#35579888156); manifest drift hub organism blurb 7; manifest drift organism-map blocks 1. Gates passed: unit 1706/1240/757+1xf, smoke 24/24."
 - worktree: /home/jammy/Code/PyAutoLabs-wt/interferometer-mge-w-tilde-route
 - autonomy: supervised (header); plan approved in-session 2026-09-26 (scope incl. interferometer profile-subtracted dirty-image seam fix in PyAutoGalaxy + PyAutoLens)
 - repos:
