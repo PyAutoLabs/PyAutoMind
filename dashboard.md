@@ -44,7 +44,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 237 |
+| [Backlog](#backlog) (`draft/`) | 240 |
 
 > **No batch in flight.**
 
@@ -612,7 +612,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**237** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **52** of them belong to an epic and are listed only under [Epics](#epics) below.
+**240** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **55** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 68</summary>
@@ -2986,6 +2986,35 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 ```
 /start_dev draft/feature/autofit/certified_solver_batched_guard_c2.md
+```
+
+</details>
+
+</details>
+
+<details>
+<summary><b>organ-cockpit</b> — 3 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/organ_cockpit_mind_cortex_state_json.md">Organ cockpit: Mind and Cortex dashboards emit state.json via their Brain renderers</a> — pyautobrain · medium · safe · high</summary>
+
+```
+/start_dev draft/feature/pyautobrain/organ_cockpit_mind_cortex_state_json.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautohands/organ_cockpit_hands_state_json.md">Organ cockpit: PyAutoHands release board emits state.json</a> — pyautohands · small · safe · high</summary>
+
+```
+/start_dev draft/feature/pyautohands/organ_cockpit_hands_state_json.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautomemory/organ_cockpit_memory_state_json.md">Organ cockpit: PyAutoMemory knowledge board emits state.json</a> — pyautomemory · small · safe · high</summary>
+
+```
+/start_dev draft/feature/pyautomemory/organ_cockpit_memory_state_json.md
 ```
 
 </details>
