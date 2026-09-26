@@ -20,6 +20,18 @@
   - PyAutoGut: feature/eyes-organ-order
 - resume: bundle worktree created; implement the reorder per the issue plan (Eyes between Memory and Heart), then repos_sync --write, then ship
 
+## self-bootstrapping-greeting
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/138
+- issued: 2026-09-26
+- prompt: active/self_bootstrapping_greeting_prompt.md
+- session: Claude Code (Fable 5.1 session; ID unavailable)
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/self-bootstrapping-greeting
+- repos:
+  - autolens_assistant: feature/self-bootstrapping-greeting
+- follows: complete/2026/09/cosmos-web-ring-greeting.md (#136/#137)
+- website-followup: Jammy2211.github.io index.html + natural_language/draft.md line change after merge
+
 ## oneshot-benchmark-harness
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/126
 - issued: 2026-09-17

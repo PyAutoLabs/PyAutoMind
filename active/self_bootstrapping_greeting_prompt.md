@@ -12,12 +12,14 @@ Difficulty: medium
 Autonomy: supervised
 Priority: high
 Memory: reading-queue.md; wiki/lensing/log.md; wiki/galaxies/sources/cosmos-survey.md
-Status: formalised
+Status: issued
 Consequence: judge
 Review-minutes: 20
 Unattended: needs-input
 Follows: complete/2026/09/cosmos-web-ring-greeting.md (autolens_assistant#136 / #137, merged 2026-09-26)
 Filed: 2026-09-26
+Issued: 2026-09-26
+Issue: https://github.com/PyAutoLabs/autolens_assistant/issues/138
 
 ## Request
 
