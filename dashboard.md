@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 237 |
+| [Backlog](#backlog) (`draft/`) | 238 |
 
 > **No batch in flight.**
 
@@ -502,7 +502,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**237** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **51** of them belong to an epic and are listed only under [Epics](#epics) below.
+**238** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **52** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 68</summary>
@@ -2395,7 +2395,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 Long-running multi-phase programmes. Each epic's 📋 prompt has Claude read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
 
 <details>
-<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 15 queued prompt(s), in order</summary>
+<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 14 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Cluster strong lensing — Source &amp; Cluster arc</b> — ledger: `draft/feature/autolens/source_cluster_arc.md`</summary>
 
@@ -2517,10 +2517,44 @@ Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonic
 
 </details>
 
-<details><summary>📋 <a href="draft/research/autolens_profiling/pointsolver_cpu_speed_phase_4.md">Point-source CPU speed-up campaign — phase 4: profile the residue and measured…</a> — autolens_profiling · large · supervised · normal</summary>
+</details>
+
+<details>
+<summary><b>Point-source (single-source) PointSolver CPU speed-up</b> — 1 queued prompt(s), in order</summary>
+
+<details><summary>📋 <b>Point-source (single-source) PointSolver CPU speed-up</b> — ledger: `autolens_profiling/results/notes/point_source_cpu_campaign.md` — phases 1-3 shipped (p2 + p3 released in 2026.9.26.1: PyAutoArray <code>7fa8d271</code>, PyAutoLens <code>86054bbc</code>); phase 4a (re-baseline +…</summary>
+
+```
+Continue the 'Point-source (single-source) PointSolver CPU speed-up' epic. Its canonical state lives in autolens_profiling/results/notes/point_source_cpu_campaign.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: human decision 2026-09-26 — SINGLE-SOURCE only, the `scripts/point_source/` use case; the cluster use case moved to epic `cluster-pointsolver-speed`. Member prompt `draft/research/autolens_profiling/pointsolver_cpu_speed_phase_4.md` (re-tagged from `cluster-strong-lensing`, which is the unrelated Source & Cluster arc). Records `complete/2026/09/point-source-cpu-p{1,2,3}.md`. Issue ONE bounded phase at a time; any library default change (PyAutoLens `shape_solver.py` / PyAutoArray `MAX_CONTAINING_SIZE`) is a human decision at the phase-4a checkpoint.
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/pointsolver_cpu_speed_phase_4.md">Point-source (single-source) CPU speed-up campaign — phase 4: profile the residue…</a> — autolens_profiling · large · supervised · normal</summary>
 
 ```
 /start_dev draft/research/autolens_profiling/pointsolver_cpu_speed_phase_4.md
+```
+
+</details>
+
+</details>
+
+<details>
+<summary><b>Cluster PointSolver speed-up — data, likelihood_breakdown, then levers</b> — 1 queued prompt(s), in order</summary>
+
+<details><summary>📋 <b>Cluster PointSolver speed-up — data, likelihood_breakdown, then levers</b> — ledger: `draft/research/autolens_profiling/cluster_pointsolver_speed.md` — filed 2026-09-26, not started</summary>
+
+```
+Continue the 'Cluster PointSolver speed-up — data, likelihood_breakdown, then levers' epic. Its canonical state lives in draft/research/autolens_profiling/cluster_pointsolver_speed.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: split out of `point-source-cpu-speed` on 2026-09-26. Phase 1 works out representative cluster data and builds/refreshes `autolens_profiling/scripts/cluster/likelihood_breakdown/` to a released-code baseline before any lever is ranked; carried evidence (two-source cluster rows from point-source p1-p3, dPIE/NFW deflection share, grid-extent guidance) lives in the prompt.
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/cluster_pointsolver_speed.md">Cluster PointSolver speed-up — work out the data and likelihood_breakdown, then rank…</a> — autolens_profiling · large · supervised · normal</summary>
+
+```
+/start_dev draft/research/autolens_profiling/cluster_pointsolver_speed.md
 ```
 
 </details>
@@ -2910,7 +2944,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 ## Hygiene
 
-56 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+57 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2955,11 +2989,11 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 - `draft/test/workspaces/smoke_workspace_fixes.md`
 - `draft/release/autocti/cti_release_train_wiring.md`
 - `draft/release/pyautoreduce/pyautoreduce_release_induction.md`
-- _… and 16 more_
+- _… and 17 more_
 
 </details>
 
-64 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+65 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3021,6 +3055,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 - `draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md — unknown theme keyword(s): euclid, docs`
 - `draft/maintenance/howtofit/minimum_library_version_stale.md — unknown theme keyword(s): version-handshake, tutorials`
 - `draft/research/autolens_assistant/free_agent_harness_evaluation.md — unknown theme keyword(s): assistant, support-policy`
+- `draft/research/autolens_profiling/cluster_pointsolver_speed.md — unknown theme keyword(s): jax`
 - `draft/research/autolens_profiling/interferometer_mesh_breakdown_jax_a100.md — unknown theme keyword(s): likelihood-profiling, jax-gpu`
 - `draft/research/autolens_profiling/interferometer_mesh_breakdown_numba_cpu_decision_matrix.md — unknown theme keyword(s): likelihood-profiling`
 - `draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md — unknown theme keyword(s): jax-gpu`

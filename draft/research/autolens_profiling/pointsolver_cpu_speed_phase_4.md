@@ -1,4 +1,4 @@
-# Point-source CPU speed-up campaign — phase 4: profile the residue and measured iteration
+# Point-source (single-source) CPU speed-up campaign — phase 4: profile the residue and measured iteration
 
 Type: research
 Target: autolens_profiling
@@ -9,7 +9,6 @@ Repos:
 Themes:
 - point-source
 - profiling
-- cluster
 - jax
 Difficulty: large
 Autonomy: supervised
@@ -18,10 +17,37 @@ Status: formalised
 Consequence: judge
 Review-minutes: 20
 Unattended: ready
-Epic: cluster-strong-lensing
+Epic: point-source-cpu-speed
 Filed: 2026-09-17
-Updated: 2026-09-24
+Updated: 2026-09-26
 Parent-record: complete/2026/09/point-source-cpu-p3.md
+
+## Scope decision (2026-09-26)
+
+**Human decision 2026-09-26: this campaign is SINGLE-SOURCE only** — the
+`lens/autolens_profiling/scripts/point_source/` use case. Re-tagged from `Epic: cluster-strong-lensing`
+(the unrelated Source & Cluster arc) to the new epic `point-source-cpu-speed`.
+
+- **Gate step 1 is cleared:** release **2026.9.26.1** carries phases 2 + 3 (PyAutoArray `7fa8d271`,
+  PyAutoLens `86054bbc`). Step 2 (`HPCPullPyAuto` on RAL) is the first action of phase 4a.
+- **Moved out** to `draft/research/autolens_profiling/cluster_pointsolver_speed.md` (epic
+  `cluster-pointsolver-speed`): cluster lever (d) dPIE/NFW deflections, the two-source cluster
+  rows, the cluster breakdown cells, and the cluster follow-ups (direct deflections on the
+  276 507-point cluster input, cluster grid-extent guidance). They are struck below, not deleted.
+- **Next bounded task = phase 4a** (workspace-only research, no library edits; all in
+  `scripts/point_source/`):
+  1. Re-baseline on released code on a pinned RAL Xeon 8490H node under a new
+     `--config-name hpc_ral_cpu_fp64_p4` (point_source `likelihood_breakdown/image_plane.py` only) —
+     the measured per-step wall-time split replaces the FLOP-estimate ranking.
+  2. New cell `likelihood_breakdown/solver_config_sweep.py` (shared helpers lifted into
+     `scripts/misc/likelihood_breakdown/`): each config its own row — (b) initial `scale` ×
+     `pixel_scale_precision`, (c) `MAX_CONTAINING_SIZE` + `neighbor_degree`, (a) grid extent — with a
+     completeness gate against a high-resolution reference on N≈200 prior draws, plus vmap 1/4/16.
+  3. Submit + run via `hpc/sync push-submit` (A100 row only for 4b candidates); pull JSON/PNG.
+  4. Ledger "Phase 4a" section + lever disposition; recommend exactly one next task (4b library
+     default change, guidance-only, or no-go) — **changing a default is a human decision**.
+  5. Ship via `ship_workspace` (one data-only autolens_profiling PR, branch
+     `feature/point-source-cpu-p4`).
 
 ## Phase 3 shipped — remainder re-filed (2026-09-24)
 
@@ -45,20 +71,23 @@ and 3 done); phase 4 gets its own issue at start-dev.
 
 **Next steps, in order:**
 
-1. Wait for the PyAutoArray + PyAutoLens release carrying #570 / #749 (`pending-release` in the record).
+1. ~~Wait for the PyAutoArray + PyAutoLens release carrying #570 / #749~~ — **done: released in 2026.9.26.1.**
 2. `HPCPullPyAuto` on RAL so the shared install carries phases 2 and 3.
 3. Re-run the phase-1 breakdown cells (`scripts/point_source/likelihood_breakdown/image_plane.py`
-   and the `cluster` cell) on RAL under a **new label** so the README dashboard rows move;
-   record the node's CPU model. Rank phase 4 by this per-step wall-time split, not by FLOPs alone.
+   ~~and the `cluster` cell~~ *(cluster cell moved to `cluster_pointsolver_speed.md`, 2026-09-26)*) on RAL
+   under a **new label** so the README dashboard rows move; record the node's CPU model. Rank phase 4 by
+   this per-step wall-time split, not by FLOPs alone.
 4. **Phase 4 (next bounded task) — profile the residue and iterate**, re-ranked by the
    campaign note's phase-3 handoff (FLOP estimates, none measured):
    1. **Simple: initial scale vs refinement steps** — the seven refinement steps now carry
       ≈ 60 % of the simple call (step 0 ≈ 22 %, rest ≈ 18 %). Correctness knob: show image
       completeness and position precision across a prior.
-   2. **Cluster: dPIE/NFW deflections** — deflections of the 13-component lens dominate every
-      cluster step (step 0 ≈ 51 %); a separately scoped PyAutoGalaxy phase.
+   2. ~~**Cluster: dPIE/NFW deflections** — deflections of the 13-component lens dominate every
+      cluster step (step 0 ≈ 51 %); a separately scoped PyAutoGalaxy phase.~~ *Moved to
+      `cluster_pointsolver_speed.md` (epic `cluster-pointsolver-speed`), 2026-09-26.*
    3. **Grid-extent guidance** — acts on the step-0 share plus containment; needs
-      image-completeness evidence; stronger at cluster scale.
+      image-completeness evidence; ~~stronger at cluster scale~~ (single-source extent only here;
+      the cluster extent lever moved to `cluster_pointsolver_speed.md`).
    4. **`MAX_CONTAINING_SIZE` / neighbourhood fan-out** — sets the 720-point refinement grids
       and the `f64[60]` sorts, so it scales the dominant simple share; correctness knob.
    GPU gains will not follow FLOP levers (the A100 call is launch/latency-bound) — any GPU work
@@ -83,7 +112,8 @@ and 3 done); phase 4 gets its own issue at start-dev.
 - Phase-1/2 leftovers: `check_submits.py` `python3 -u` regex gap, `activate.sh` worktree-leak
   guard, CI smoke coverage for the breakdown cells (now incl. `vertex_dedup_ab.py` and
   `static_lattice_ab.py`); still-unmeasured controls: vmap batches 1/16, post-fix
-  grid/`n_steps`/capacity sweeps, direct deflections on the 276 507-point cluster input.
+  grid/`n_steps`/capacity sweeps (→ phase 4a), ~~direct deflections on the 276 507-point cluster
+  input~~ (moved to `cluster_pointsolver_speed.md`, 2026-09-26).
 
 ## Phase 2 shipped — remainder re-filed (2026-09-24)
 
