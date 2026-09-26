@@ -18,6 +18,7 @@ Consequence: glance
 Witness: with `apply_sparse_operator()` applied, an MGE-only `FitInterferometer` on the alma dataset takes the func-list W~ path (inversion class is the sparse/W~ interferometer inversion, not `InversionInterferometerMapping`), its `log_likelihood` matches the dense path within 1e-6 nats, and `jax.jit(FitInterferometer)` no longer OOMs the A100 at alma/alma_high/jvla.
 Review-minutes: 10
 Epic: interferometer-likelihood-campaign
+Issued: 2026-09-26
 
 Source: `autolens_profiling/results/notes/interferometer_mge_breakdown_2026_09.md`, lever 1
 (autolens_profiling#308).

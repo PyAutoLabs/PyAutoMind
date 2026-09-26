@@ -95,3 +95,16 @@
   - PyAutoFit: feature/multistart-cpu-memory-probe
 - resume: Fix + tests committed locally as 3220566e3 on feature/multistart-cpu-memory-probe (NOT pushed; 139 mle tests pass, new tests red->green). Parked at ship gate: Heart YELLOW for unrelated reasons (workspace validation 4 failed cluster/weak notebooks; manifest drift x3; release validation stale). Next = human acks YELLOW, then push + PR (label pending-release; body drafted by session).
 - summary: Skip MultiStartGradient's unbatched-memory probe on the CPU JAX backend (two throwaway full-model compiles; caused the 2026-09-26 release-integrate start_here.py 3605 s TIMEOUT, run 36226772178).
+
+## interferometer-mge-w-tilde-route
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/575
+- issued: 2026-09-26
+- prompt: active/interferometer_mge_w_tilde_route_mge_only.md
+- session: Claude Code CLI (Opus 5.5), 2026-09-26
+- status: library-dev
+- autonomy: supervised (header); plan approved in-session 2026-09-26 (scope incl. interferometer profile-subtracted dirty-image seam fix in PyAutoGalaxy + PyAutoLens)
+- repos:
+  - PyAutoArray: feature/interferometer-mge-w-tilde-route
+  - PyAutoGalaxy: feature/interferometer-mge-w-tilde-route
+  - PyAutoLens: feature/interferometer-mge-w-tilde-route
+- workspace-followup: autolens_profiling (library-path re-run of the MGE breakdown cell + VRAM rows) once interferometer-mge-breakdown (#312) merges and releases the claim
