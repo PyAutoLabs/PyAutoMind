@@ -17,6 +17,7 @@ Consequence: glance
 Witness: on the RAL A100, step 3 ("Transformed mapping matrix (NUFFT)") of `results/breakdown/interferometer/sma/mge_hpc_a100_fp64.json` drops from 852.7 ms to under 50 ms, with the log_likelihood unchanged to 1e-9 nats.
 Review-minutes: 5
 Epic: interferometer-likelihood-campaign
+Issued: 2026-09-26
 
 Source: `autolens_profiling/results/notes/interferometer_mge_breakdown_2026_09.md`, lever 3
 (autolens_profiling#308); probe numbers in

@@ -66,3 +66,15 @@
   - euclid_strong_lens_modeling_pipeline: feature/vis-lp-inspection-bundle
 - summary: Add an explicit vis_lp-only inspection mode that combines the main normal-model output tree with the 100-lens SED/Sersic tree, without requiring vis_pix or selecting the other 200 main-tree lenses.
 - resume: Implemented + committed locally as c6b514d on feature/vis-lp-inspection-bundle (133 tests green, not pushed). Human reviews diff (scratchpad part1_diff.txt) before ship_workspace; then sync tooling to the euclid_dr1 science clone/RAL and submit the 4,922-tile vis_lp-only bundle (OUTPUT_DIR=dr1_full, INITIAL_SEARCH_NAME=vis_lp, DATASET_NAMES_PATH=all, TAR_TO set) as a Cortex run.
+
+## interferometer-transform-real-scatter
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/577
+- issued: 2026-09-26
+- prompt: active/interferometer_transform_mapping_matrix_real_scatter.md
+- session: Claude Code CLI (Opus 5.5), 2026-09-26
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/interferometer-transform-real-scatter
+- autonomy: supervised (header); plan approved in-session 2026-09-26
+- repos:
+  - PyAutoArray: feature/interferometer-transform-real-scatter
+  - autolens_profiling: feature/interferometer-transform-real-scatter
