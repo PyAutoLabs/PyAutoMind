@@ -107,6 +107,7 @@
   - PyAutoArray: feature/pointsolver-step0-gather
   - autolens_profiling: feature/point-source-cpu-p4b
 - parallel-claim: "autolens_profiling is also claimed by point-source-cpu-p4 (PR #321 open), interferometer-mesh-breakdown-a100 and point-source-source-plane-p2a. p4b is the human-approved sequential follow-on of p4: its branch feature/point-source-cpu-p4b is based on feature/point-source-cpu-p4 until #321 merges, then rebases onto main. It touches scripts/point_source_image/likelihood_breakdown/solver_config_sweep.py and later results/breakdown/point_source_image/ + point_source_cpu_campaign.md (Phase 4b section); disjoint from the interferometer and source-plane tasks. Human-approved 2026-09-26."
+- checkpoint: 2026-09-26 WIP commit 8755072f on PyAutoArray feature/pointsolver-step0-gather (LOCAL only, not pushed): 4 step-0 routes behind array._STEP0_CONTAINMENT, scratch bit-identity OK; resume = tests (fuzz, refinement, HLO guard red-on-main) -> PyAutoArray+PyAutoLens suites -> --step0-route laptop A/B in the p4b profiling worktree (no changes there yet) -> pick default (see issue #579 checkpoint comment)
 
 ## point-source-cpu-p4
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/314
