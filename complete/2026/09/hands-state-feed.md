@@ -1,3 +1,14 @@
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/289 (closed)
+- completed: 2026-09-26
+- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/290 (MERGED)
+- epic: organ-cockpit (bundle organ-cockpit-feeds with memory-state-feed; contract from PyAutoBrain#416)
+- heart-red-override: "Heart RED `release validation FAILED (stage integrate)`; live human 'ok io authorize you to continue' 2026-09-26 — development shipping + merge on green checks; recorded on the issue, PR body, active.md, autonomy_log.md"
+- witness: release_board.yml run 36240191148 green with `state: ok`; https://pyautolabs.github.io/PyAutoHands/state.json validates (green | 2026.9.19.1 · 7d ago | 0 items).
+- gotchas: Hands snapshot run dicts carry the link as `url` not `html_url`; status order red > grey > yellow > green so an observed failure is never hidden by a missing version; only the last completed train/nightly run can be a red item (old superseded failures are not); `pages_url` falls back to `./` for ownerless snapshots (hardcoding the org URL would trip the tenant firewall); `_bug_prompt` gained an optional `workflow` arg so nightly failures name PyAutoBrain nightly-release.yml.
+- summary: Hands release board emits the organ-cockpit state.json v1 feed (`to_state`, `--state`) and release_board.yml publishes + validates it against the Brain contract. Hands pytest 472 (9 new).
+
+## Original prompt
+
 # Organ cockpit: PyAutoHands release board emits state.json
 
 Type: feature

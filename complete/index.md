@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1563 records across 8 buckets.
+1565 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -258,6 +258,7 @@ markers; everything below GENERATED is rebuilt.
 - [generate-markdown-leaks-worktree-paths](2026/09/generate-markdown-leaks-worktree-paths.md)
 - [grid-offset-prior](2026/09/grid-offset-prior.md) — Widened both waveband DatasetModel grid-offset priors from ±0.2 to ±0.5 arcsec and added prior_edge_y/x to ast…
 - [hands-board-family-footer](2026/09/hands-board-family-footer.md)
+- [hands-state-feed](2026/09/hands-state-feed.md) — closed
 - [heart-board-family-footer](2026/09/heart-board-family-footer.md)
 - [heart-worktree-drift-hidden-dirs](2026/09/heart-worktree-drift-hidden-dirs.md) — closed, completed
 - [howto-md-rerender](2026/09/howto-md-rerender.md)
@@ -319,6 +320,7 @@ markers; everything below GENERATED is rebuilt.
 - [matrix-free-pixelized-likelihood](2026/09/matrix-free-pixelized-likelihood.md)
 - [memory-board-family-footer](2026/09/memory-board-family-footer.md)
 - [memory-queue-filing-gate](2026/09/memory-queue-filing-gate.md)
+- [memory-state-feed](2026/09/memory-state-feed.md) — closed
 - [mesh-shape-honours-small-datasets-cap](2026/09/mesh-shape-honours-small-datasets-cap.md)
 - [mge-group-source-basis-scale](2026/09/mge-group-source-basis-scale.md)
 - [mge-jit-regression-rebaseline](2026/09/mge-jit-regression-rebaseline.md)
