@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/gut_board.md">Birth a PyAutoGut board (Pages) so the footer family can carry…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGut/issues/9">issue #9</a> — issued 2026-09-26 — library-dev</summary>
+<details><summary>📋 <a href="active/gut_board.md">Birth a PyAutoGut board (Pages) so the footer family can carry…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGut/issues/9">issue #9</a> — issued 2026-09-26 — library-shipped, awaiting-merge (Brain#421 → Gut#10 → hub#14) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/421">PyAutoBrain#421</a>, <a href="https://github.com/PyAutoLabs/PyAutoGut/pull/10">PyAutoGut#10</a>, <a href="https://github.com/PyAutoLabs/pyautolabs.github.io/pull/14">pyautolabs.github.io#14</a></summary>
 
 ```
 /start_dev active/gut_board.md
@@ -268,7 +268,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/interferometer_transform_mapping_matrix_real_scatter.md">Interferometer likelihood campaign: scatter the real mapping matrix then cast in transform_mapping_matrix…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/577">issue #577</a> — issued 2026-09-26 — library-dev</summary>
+<details><summary>📋 <a href="active/interferometer_transform_mapping_matrix_real_scatter.md">Interferometer likelihood campaign: scatter the real mapping matrix then cast in transform_mapping_matrix…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/577">issue #577</a> — issued 2026-09-26 — workspace-shipped, awaiting-merge (library-first: PyAutoArray#578 → autolens_profiling#319) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/578">PyAutoArray#578</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/319">autolens_profiling#319</a></summary>
 
 ```
 /start_dev active/interferometer_transform_mapping_matrix_real_scatter.md

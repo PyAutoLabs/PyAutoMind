@@ -5,8 +5,11 @@
 - issued: 2026-09-26
 - prompt: active/gut_board.md
 - session: Claude Code CLI (Fable architect, Opus execution), 2026-09-26; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge (Brain#421 → Gut#10 → hub#14)
 - autonomy: safe (header); epic organ-cockpit; scope widened by the human 2026-09-26 (one-tap void buttons); plan approved in session and on the issue; merge is human
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/421, https://github.com/PyAutoLabs/PyAutoGut/pull/10
+- workspace-pr: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/14
+- heart-ack: "Heart YELLOW (score 85, snapshot 2026-09-26T16:19:27+00:00): `manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml`; `manifest drift: organism-map blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml`; `manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml` — pre-existing. Live human 2026-09-26, after the reasons were shown: 'continue'."
 - worktree: /home/jammy/Code/PyAutoLabs-wt/gut-board
 - repos:
   - PyAutoBrain: feature/gut-board

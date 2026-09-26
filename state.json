@@ -4,9 +4,21 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 9 in flight",
-  "updated": "2026-09-26T16:25:52Z",
+  "updated": "2026-09-26T17:14:23Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Birth a PyAutoGut board (Pages) so the footer family can carry\u2026 \u2014 library-shipped, awaiting-merge (Brain#421 \u2192 Gut#10 \u2192 hub#14)",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/421",
+      "prompt": "/start_dev active/gut_board.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Interferometer likelihood campaign: scatter the real mapping matrix then cast in transform_mapping_matrix\u2026 \u2014 workspace-shipped, awaiting-merge (library-first: PyAutoArray#578 \u2192 autolens_profiling#319)",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/578",
+      "prompt": "/start_dev active/interferometer_transform_mapping_matrix_real_scatter.md"
+    },
     {
       "severity": "yellow",
       "text": "One-shot benchmark harness and computed-score contract for the assistant benchmarks \u2014 awaiting-merge",
@@ -113,18 +125,6 @@
       "severity": "yellow",
       "text": "pending release: autofit_workspace autofit_workspace#162 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/autofit_workspace/pull/162",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: autofit_workspace_test autofit_workspace_test#98 \u2014 ep-stale-tracking-per-variable",
-      "url": "https://github.com/PyAutoLabs/autofit_workspace_test/pull/98",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: autofit_workspace_test autofit_workspace_test#99 \u2014 samples-errors-at-sigma-instance",
-      "url": "https://github.com/PyAutoLabs/autofit_workspace_test/pull/99",
       "prompt": null
     }
   ]
