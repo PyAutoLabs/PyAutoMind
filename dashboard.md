@@ -44,7 +44,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 230 |
+| [Backlog](#backlog) (`draft/`) | 235 |
 
 > **No batch in flight.**
 
@@ -603,7 +603,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**230** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **48** of them belong to an epic and are listed only under [Epics](#epics) below.
+**235** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **53** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 68</summary>
@@ -2886,6 +2886,67 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 </details>
 
 <details>
+<summary><b>interferometer-likelihood-campaign</b> — 7 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+
+<details><summary>📋 <a href="draft/bug/autoarray/interferometer_transform_mapping_matrix_real_scatter.md">Interferometer likelihood campaign: scatter the real mapping matrix then cast in transform_mapping_matrix…</a> — autoarray · easy · supervised · high</summary>
+
+```
+/start_dev draft/bug/autoarray/interferometer_transform_mapping_matrix_real_scatter.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautoheart/ral_venv_dependency_floor_drift.md">RAL PyAuto venv: third-party packages below the library floors…</a> — pyautoheart · easy · supervised · medium</summary>
+
+```
+/start_dev draft/bug/pyautoheart/ral_venv_dependency_floor_drift.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/workspace_interferometer_mge_sparse_operator_memory_docs.md">autolens_workspace: interferometer MGE modeling docs claim apply_sparse_operator() makes memory mask-only</a> — autolens_workspace · easy · supervised · low</summary>
+
+```
+/start_dev draft/docs/autolens_workspace/workspace_interferometer_mge_sparse_operator_memory_docs.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/interferometer_chunked_transform_mapping_matrix.md">Interferometer likelihood campaign: chunk TransformerNUFFT.transform_mapping_matrix over columns and visibilities</a> — autoarray · medium · supervised · medium</summary>
+
+```
+/start_dev draft/feature/autoarray/interferometer_chunked_transform_mapping_matrix.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/interferometer_mge_w_tilde_route_mge_only.md">Interferometer likelihood campaign: route MGE-only interferometer fits through the W~ sparse operator</a> — autoarray · medium · supervised · high</summary>
+
+```
+/start_dev draft/feature/autoarray/interferometer_mge_w_tilde_route_mge_only.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/interferometer_mesh_breakdown_jax_a100.md">Interferometer likelihood campaign 2/3: Delaunay-1500 and rectangular mesh breakdown on JAX A100…</a> — autolens_profiling · large · supervised · high</summary>
+
+```
+/start_dev draft/research/autolens_profiling/interferometer_mesh_breakdown_jax_a100.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/interferometer_mesh_breakdown_numba_cpu_decision_matrix.md">Interferometer likelihood campaign 3/3: mesh breakdown on numba sparse CPU…</a> — autolens_profiling · large · supervised · high</summary>
+
+```
+/start_dev draft/research/autolens_profiling/interferometer_mesh_breakdown_numba_cpu_decision_matrix.md
+```
+
+</details>
+
+</details>
+
+<details>
 <summary><b>certified-positive-solver</b> — 2 queued prompt(s) — ⚠️ not in `epics.md`</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/batched_jit_vmap_b50_wrong_log_likelihood_a100.md"><code>jax.jit(jax.vmap(fn))</code> at B=50 returns wrong HST-scale inversion log likelihoods on an A100</a> — autoarray · medium · supervised · high</summary>
@@ -2926,27 +2987,6 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 ```
 /start_dev draft/maintenance/autolens_profiling/mass_field_flat_adoption_science_repos.md
-```
-
-</details>
-
-</details>
-
-<details>
-<summary><b>interferometer-likelihood-campaign</b> — 2 queued prompt(s) — ⚠️ not in `epics.md`</summary>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/interferometer_mesh_breakdown_jax_a100.md">Interferometer likelihood campaign 2/3: Delaunay-1500 and rectangular mesh breakdown on JAX A100…</a> — autolens_profiling · large · supervised · high</summary>
-
-```
-/start_dev draft/research/autolens_profiling/interferometer_mesh_breakdown_jax_a100.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/interferometer_mesh_breakdown_numba_cpu_decision_matrix.md">Interferometer likelihood campaign 3/3: mesh breakdown on numba sparse CPU…</a> — autolens_profiling · large · supervised · high</summary>
-
-```
-/start_dev draft/research/autolens_profiling/interferometer_mesh_breakdown_numba_cpu_decision_matrix.md
 ```
 
 </details>
@@ -3004,12 +3044,14 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 </details>
 
-58 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+63 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
 
 - `draft/feature/autoarray/adapt_linear_default_flip.md — unknown theme keyword(s): inference`
+- `draft/feature/autoarray/interferometer_chunked_transform_mapping_matrix.md — unknown theme keyword(s): jax-gpu, vram`
+- `draft/feature/autoarray/interferometer_mge_w_tilde_route_mge_only.md — unknown theme keyword(s): sparse-operator, jax-gpu`
 - `draft/feature/autoarray/source_clumps_robust_scale.md — unknown theme keyword(s): source-reconstruction`
 - `draft/feature/autofit/certified_solver_batched_guard_c2.md — unknown theme keyword(s): inversion`
 - `draft/feature/autolens/coolest_pixel_grid_export.md — unknown theme keyword(s): coolest, interop, euclid`
@@ -3026,6 +3068,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 - `draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md — unknown theme keyword(s): source-reconstruction`
 - `draft/bug/autoarray/batched_jit_vmap_b50_wrong_log_likelihood_a100.md — unknown theme keyword(s): jax, inversion`
 - `draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md — unknown theme keyword(s): inversion, performance`
+- `draft/bug/autoarray/interferometer_transform_mapping_matrix_real_scatter.md — unknown theme keyword(s): jax-gpu`
 - `draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md — unknown theme keyword(s): jax`
 - `draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md — unknown theme keyword(s): simulation, robustness`
 - `draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md — unknown theme keyword(s): inversion, sparse-operator, correctness`
@@ -3047,6 +3090,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 - `draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md — unknown theme keyword(s): euclid, hpc, catalogue`
 - `draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md — unknown theme keyword(s): euclid`
 - `draft/bug/howtofit/tutorial_5_ep_shared_centre_never_assigned.md — unknown theme keyword(s): tutorials`
+- `draft/bug/pyautoheart/ral_venv_dependency_floor_drift.md — unknown theme keyword(s): hpc, dependencies, reproducibility`
 - `draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md — unknown theme keyword(s): ci`
 - `draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md — unknown theme keyword(s): ci, robustness`
 - `draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md — unknown theme keyword(s): ci, robustness`
@@ -3055,6 +3099,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 - `draft/refactor/autolens/witt_wynne_solver_library_home.md — unknown theme keyword(s): euclid`
 - `draft/refactor/autonerves/config_yaml_parse_cache.md — unknown theme keyword(s): performance, ci`
 - `draft/docs/autofit/howtofit_chapter_3_prose_references.md — unknown theme keyword(s): autofit`
+- `draft/docs/autolens_workspace/workspace_interferometer_mge_sparse_operator_memory_docs.md — unknown theme keyword(s): docs`
 - `draft/docs/howtofit/tutorial_4_runtime_claim.md — unknown theme keyword(s): tutorials`
 - `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
 - `draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md — unknown theme keyword(s): jax, compile`
