@@ -12,12 +12,14 @@ Themes:
 Difficulty: large
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: issued
 Consequence: judge
 Review-minutes: 30
 Unattended: needs-input
 Supersedes: active/add_an_abell_1201_central_point_mass.md (autolens_assistant#133)
 Filed: 2026-09-26
+Issued: 2026-09-26
+Issue: https://github.com/PyAutoLabs/autolens_assistant/issues/136
 
 ## Request (verbatim)
 

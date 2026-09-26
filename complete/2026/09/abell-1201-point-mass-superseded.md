@@ -1,3 +1,17 @@
+## abell-1201-point-mass-superseded
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/133 (closed as superseded)
+- completed: 2026-09-26
+- superseded-by: cosmos-web-ring-greeting (https://github.com/PyAutoLabs/autolens_assistant/issues/136)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/134 (preparation phase, merged 2026-09-22)
+- brain-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/414 (merged 2026-09-22)
+- summary: Superseded, not finished. The Abell 1201 SMBH demonstration is replaced as the public greeting by the COSMOS-Web Ring; its demo material is removed in cosmos-web-ring-greeting. No posterior run was ever executed.
+
+Human decision 2026-09-26 (Fable session): the COSMOS-Web Ring is more immediately recognisable as a lens, faster to fit, and links to the COWLS survey, so the Abell greeting was dropped. Only the preparation phase ever shipped (see `abell-1201-preparation`); the full posterior budget, inference run and full-fit benchmark calibration were never started. Literature wiki pages (`entities/abell-1201.md`, `smbh-from-lensing.md`, `smbh-vlbi.md`) and `config/priors/mass/point/smbh.yaml` predate the demo and are kept.
+
+Left in place for a later `/repo_cleanup`: the retained worktree `.worktrees/abell-1201-point-mass` (4.2 MB ignored plots/reports) and the untracked local `dataset/abell_1201/` raw data and `scripts/cluster_model_composition.py` in the canonical autolens_assistant checkout.
+
+## Original prompt
+
 # Abell 1201 guided SMBH demonstration and Gemini Colab follow-on
 
 Type: feature
