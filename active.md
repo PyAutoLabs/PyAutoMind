@@ -102,6 +102,7 @@
 - prompt: active/interferometer_mge_w_tilde_route_mge_only.md
 - session: Claude Code CLI (Opus 5.5), 2026-09-26
 - status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/interferometer-mge-w-tilde-route
 - autonomy: supervised (header); plan approved in-session 2026-09-26 (scope incl. interferometer profile-subtracted dirty-image seam fix in PyAutoGalaxy + PyAutoLens)
 - repos:
   - PyAutoArray: feature/interferometer-mge-w-tilde-route
