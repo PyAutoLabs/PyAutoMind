@@ -20,6 +20,7 @@ Unattended: ready
 Lane: local-dev
 Epic: interferometer-likelihood-campaign
 Filed: 2026-09-25
+Issued: 2026-09-26
 
 Mirror of the imaging A100 pixelized baseline (#241 / PR #242: Delaunay 67.5 ms,
 rectangular 60 ms) for the interferometer sparse-operator (W~) likelihood on the RAL A100.
