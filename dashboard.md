@@ -276,7 +276,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/self_bootstrapping_greeting_prompt.md">Make the assistant greeting prompt self-bootstrapping from any directory</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/138">issue #138</a> — issued 2026-09-26 — workspace-dev</summary>
+<details><summary>📋 <a href="active/self_bootstrapping_greeting_prompt.md">Make the assistant greeting prompt self-bootstrapping from any directory</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/138">issue #138</a> — issued 2026-09-26 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/139">autolens_assistant#139</a></summary>
 
 ```
 /start_dev active/self_bootstrapping_greeting_prompt.md
