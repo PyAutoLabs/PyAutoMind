@@ -90,7 +90,10 @@
 - issued: 2026-09-26
 - prompt: active/interferometer_transform_mapping_matrix_real_scatter.md
 - session: Claude Code CLI (Opus 5.5), 2026-09-26
-- status: library-dev
+- status: workspace-shipped, awaiting-merge (library-first: PyAutoArray#578 → autolens_profiling#319)
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/578
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/319
+- heart-ack: "2026-09-26 YELLOW acknowledged by human: manifest drift hub blurb 7; organism-map blocks 1; workspace checkouts 1; release validation stale (source moved since rehearsal)"
 - worktree: /home/jammy/Code/PyAutoLabs-wt/interferometer-transform-real-scatter
 - autonomy: supervised (header); plan approved in-session 2026-09-26
 - repos:
