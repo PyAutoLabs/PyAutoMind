@@ -1,5 +1,44 @@
 # Active Tasks
 
+## nerves-unused-keys
+- issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/174
+- issued: 2026-09-26
+- prompt: active/organ_cockpit_nerves_unused_keys.md
+- session: Claude Code CLI (Fable architect, Opus execution), 2026-09-26; session ID https://claude.ai/code/session_01SbKQQHRRgm2b69aT9t7771
+- status: library-dev
+- autonomy: safe (header); bundle cockpit-followups (with gut-void-sibling-reach, start-dev-heart-gate); epic organ-cockpit; plan approved in session and on the issue; merge is human
+- worktree: /home/jammy/Code/PyAutoLabs-wt/cockpit-followups
+- repos:
+  - PyAutoNerves: feature/nerves-unused-keys
+- parallel-claim: "PyAutoNerves is also claimed by eyes-organ-order (one-line organ-order edits). This member touches scripts/board.py, .github/workflows/nerves_board.yml, test_autonerves/test_board.py, README.md, AGENTS.md. Disjoint; shared bundle worktree per the #177 precedent, recorded 2026-09-26."
+- summary: Nerves board flags library config keys no library code reads (conf.instance lookup scan; used / section-read / unused; info items only).
+
+## gut-void-sibling-reach
+- issue: https://github.com/PyAutoLabs/PyAutoGut/issues/11
+- issued: 2026-09-26
+- prompt: active/organ_cockpit_gut_void_sibling_reach.md
+- session: Claude Code CLI (Fable architect, Opus execution), 2026-09-26; session ID https://claude.ai/code/session_01SbKQQHRRgm2b69aT9t7771
+- status: library-dev
+- autonomy: safe (header); bundle cockpit-followups (with nerves-unused-keys, start-dev-heart-gate); epic organ-cockpit; plan approved in session and on the issue; merge is human
+- worktree: /home/jammy/Code/PyAutoLabs-wt/cockpit-followups
+- repos:
+  - PyAutoGut: feature/gut-void-sibling-reach
+- parallel-claim: "PyAutoGut is also claimed by eyes-organ-order (one-line organ-order edits). This member touches scripts/board.py, .github/workflows/void.yml, tests/, README.md, AGENTS.md. Disjoint; shared bundle worktree per the #177 precedent, recorded 2026-09-26."
+- summary: Gut Void button reaches refs held on sibling repos via PAT_PYAUTOLABS in void.yml; elsewhere rows get the button; per-ref failure reporting.
+
+## start-dev-heart-gate
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/423
+- issued: 2026-09-26
+- prompt: active/organ_cockpit_start_dev_heart_gate.md
+- session: Claude Code CLI (Fable architect, Opus execution), 2026-09-26; session ID https://claude.ai/code/session_01SbKQQHRRgm2b69aT9t7771
+- status: library-dev
+- autonomy: safe (header); bundle cockpit-followups (with nerves-unused-keys, gut-void-sibling-reach); epic organ-cockpit; plan approved in session and on the issue; merge is human
+- worktree: /home/jammy/Code/PyAutoLabs-wt/cockpit-followups
+- repos:
+  - PyAutoBrain: feature/start-dev-heart-gate
+- parallel-claim: "PyAutoBrain is also claimed by eyes-organ-order (one-line organ-order edits and cosmos-web-ring-greeting (clone conductor)). This member touches bin/heart_feed.py, skills/start_dev/start_dev.md, skills/start_bundle/start_bundle.md, skills/route/route.md, skills/WORKFLOW.md, tests/. Disjoint; shared bundle worktree per the #177 precedent, recorded 2026-09-26."
+- summary: start_dev 'Heart at the door': bin/heart_feed.py reads the Heart state.json (fallback pyauto-heart readiness), RED stops before planning, YELLOW warns; mirrored in start_bundle and route.
+
 ## eyes-organ-order
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/439
 - issued: 2026-09-25

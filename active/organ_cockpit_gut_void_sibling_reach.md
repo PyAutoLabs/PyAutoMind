@@ -12,6 +12,8 @@ Consequence: glance
 Witness: the human presses Void permanently on one of the 8 overdue sibling refs → the ref disappears from that repo, the issue closes with the SHA, the board's 'due on other repos' count drops by one.
 Review-minutes: 3
 Unattended: ready
+Issued: 2026-09-26
+Issue: https://github.com/PyAutoLabs/PyAutoGut/issues/11
 Filed: 2026-09-26
 Epic: organ-cockpit
 

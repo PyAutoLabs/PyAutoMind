@@ -12,6 +12,8 @@ Consequence: glance
 Witness: the board's index lists at least one unused key with its library and file link, and a deliberately referenced key in the fixture is not listed; the scan's false-positive rate on PyAutoFit general.yaml is reviewed by the human on the PR.
 Review-minutes: 3
 Unattended: ready
+Issued: 2026-09-26
+Issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/174
 Filed: 2026-09-26
 Epic: organ-cockpit
 

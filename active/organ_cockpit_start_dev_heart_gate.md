@@ -12,6 +12,8 @@ Consequence: notify
 Witness: with a fixture RED feed the helper exits 2 and prints the reasons; start_dev.md, start_bundle.md and route.md each reference the step; a start_dev run in the session shows the Heart line before the plan.
 Review-minutes: 0
 Unattended: ready
+Issued: 2026-09-26
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/423
 Filed: 2026-09-26
 Epic: organ-cockpit
 
