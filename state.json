@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-09-26T17:19:15Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 7 in flight",
+  "updated": "2026-09-26T18:28:19Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Interferometer likelihood campaign: scatter the real mapping matrix then cast in transform_mapping_matrix\u2026 \u2014 workspace-shipped, awaiting-merge (library-first: PyAutoArray#578 \u2192 autolens_profiling#319)",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/578",
-      "prompt": "/start_dev active/interferometer_transform_mapping_matrix_real_scatter.md"
-    },
     {
       "severity": "yellow",
       "text": "One-shot benchmark harness and computed-score contract for the assistant benchmarks \u2014 awaiting-merge",
@@ -47,6 +41,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#576 \u2014 interferometer-mge-w-tilde-route",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/576",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#578 \u2014 interferometer-transform-real-scatter",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/578",
       "prompt": null
     },
     {

@@ -69,21 +69,6 @@
 - parallel-claim: |
     autolens_profiling also claimed by interferometer-transform-real-scatter (1 file: hpc/batch_gpu interferometer A100 submit); file sets disjoint; human-approved own worktree 2026-09-26
 
-## interferometer-transform-real-scatter
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/577
-- issued: 2026-09-26
-- prompt: active/interferometer_transform_mapping_matrix_real_scatter.md
-- session: Claude Code CLI (Opus 5.5), 2026-09-26
-- status: workspace-shipped, awaiting-merge (library-first: PyAutoArray#578 → autolens_profiling#319)
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/578
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/319
-- heart-ack: "2026-09-26 YELLOW acknowledged by human: manifest drift hub blurb 7; organism-map blocks 1; workspace checkouts 1; release validation stale (source moved since rehearsal)"
-- worktree: /home/jammy/Code/PyAutoLabs-wt/interferometer-transform-real-scatter
-- autonomy: supervised (header); plan approved in-session 2026-09-26
-- repos:
-  - PyAutoArray: feature/interferometer-transform-real-scatter
-  - autolens_profiling: feature/interferometer-transform-real-scatter
-
 ## point-source-source-plane-breakdown
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/315
 - issued: 2026-09-26

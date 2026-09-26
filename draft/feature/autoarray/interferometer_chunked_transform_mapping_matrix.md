@@ -48,7 +48,10 @@ alma_high, 23.17 s jvla.
 - Lever 1 (W~ route, shipped 2026-09-26: PyAutoArray#576 / PyAutoGalaxy#629 /
   PyAutoLens#750) is faster at every instrument for MGE-only fits; this lever is for the
   dense paths lever 1 does not cover.
-- Combine with the real-scatter fix (`interferometer_transform_mapping_matrix_real_scatter`);
-  chunking repeats the scatter per batch.
+- The real-scatter fix shipped 2026-09-26 (PyAutoArray#578, record
+  `complete/2026/09/interferometer-transform-real-scatter.md`): the transform now scatters
+  the real mapping matrix and casts to complex128 after the flip, so the complex128 scatter
+  is gone; chunking repeats that (cheap) real scatter per batch. The step-3 timings in Why
+  were measured with the cell's own transform, before that fix.
 
 <!-- filed from autolens_profiling#308 phase C (PR #312), 2026-09-26 -->
