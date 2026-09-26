@@ -88,12 +88,16 @@
 - issued: 2026-09-26
 - prompt: active/multistart_cpu_memory_probe_doubles_compile.md
 - session: Claude Code CLI (Opus 5.5 subagent), 2026-09-26
-- status: library-dev
+- status: library-shipped
 - autonomy: supervised (header); plan approved in-session 2026-09-26
 - worktree: /home/jammy/Code/PyAutoLabs-wt/multistart-cpu-memory-probe
 - repos:
   - PyAutoFit: feature/multistart-cpu-memory-probe
-- resume: Fix + tests committed locally as 3220566e3 on feature/multistart-cpu-memory-probe (NOT pushed; 139 mle tests pass, new tests red->green). Parked at ship gate: Heart YELLOW for unrelated reasons (workspace validation 4 failed cluster/weak notebooks; manifest drift x3; release validation stale). Next = human acks YELLOW, then push + PR (label pending-release; body drafted by session).
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1647
+- pending-release: PyAutoFit#1647
+- heart-ack:
+  - "2026-09-26 human acked YELLOW: workspace validation 4 failed cluster/weak notebooks; manifest drift x3; release validation stale"
+- resume: PR #1647 open (pending-release). Next = human /prm when CI green; then the next nightly Stage 3 should show imaging/start_here.py near ~700 s.
 - summary: Skip MultiStartGradient's unbatched-memory probe on the CPU JAX backend (two throwaway full-model compiles; caused the 2026-09-26 release-integrate start_here.py 3605 s TIMEOUT, run 36226772178).
 
 ## interferometer-mge-w-tilde-route
