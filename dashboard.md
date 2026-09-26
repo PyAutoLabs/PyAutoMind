@@ -2395,7 +2395,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 Long-running multi-phase programmes. Each epic's 📋 prompt has Claude read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
 
 <details>
-<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 14 queued prompt(s), in order</summary>
+<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 13 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Cluster strong lensing — Source &amp; Cluster arc</b> — ledger: `draft/feature/autolens/source_cluster_arc.md`</summary>
 
@@ -2509,23 +2509,23 @@ Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonic
 
 </details>
 
-<details><summary>📋 <a href="draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md">Point-source source-plane chi-squared speed-up campaign — phase 1: shared likelihood breakdown</a> — autolens_profiling · large · supervised · normal</summary>
-
-```
-/start_dev draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md
-```
-
-</details>
-
 </details>
 
 <details>
-<summary><b>Point-source (single-source) PointSolver CPU speed-up</b> — 1 queued prompt(s), in order</summary>
+<summary><b>Point-source (single-source) PointSolver CPU speed-up</b> — 2 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Point-source (single-source) PointSolver CPU speed-up</b> — ledger: `autolens_profiling/results/notes/point_source_cpu_campaign.md` — phases 1-3 shipped (p2 + p3 released in 2026.9.26.1: PyAutoArray <code>7fa8d271</code>, PyAutoLens <code>86054bbc</code>); phase 4a (re-baseline +…</summary>
 
 ```
 Continue the 'Point-source (single-source) PointSolver CPU speed-up' epic. Its canonical state lives in autolens_profiling/results/notes/point_source_cpu_campaign.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: human decision 2026-09-26 — SINGLE-SOURCE only, the `scripts/point_source/` use case; the cluster use case moved to epic `cluster-pointsolver-speed`. Member prompt `draft/research/autolens_profiling/pointsolver_cpu_speed_phase_4.md` (re-tagged from `cluster-strong-lensing`, which is the unrelated Source & Cluster arc). Records `complete/2026/09/point-source-cpu-p{1,2,3}.md`. Issue ONE bounded phase at a time; any library default change (PyAutoLens `shape_solver.py` / PyAutoArray `MAX_CONTAINING_SIZE`) is a human decision at the phase-4a checkpoint.
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md">Point-source source-plane chi-squared speed-up campaign — phase 1: shared likelihood breakdown</a> — autolens_profiling · large · supervised · normal</summary>
+
+```
+/start_dev draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md
 ```
 
 </details>

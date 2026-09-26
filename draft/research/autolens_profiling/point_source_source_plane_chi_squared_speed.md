@@ -5,27 +5,34 @@ Target: autolens_profiling
 Repos:
 - autolens_profiling
 - PyAutoLens
-- PyAutoGalaxy
 Themes:
 - point-source
 - profiling
-- cluster
 - jax
 Difficulty: large
 Autonomy: supervised
 Priority: normal
 Status: formalised
 Consequence: judge
-Witness: `python scripts/point_source/likelihood_breakdown/source_plane.py --config-name local_cpu_fp64` exits 0 for both cells with the eager ≡ JIT ≡ vmap parity and non-zero-gradient asserts passing, writes `results/breakdown/point_source/source_plane_local_cpu_fp64.json` + `.png`, and `python build_readme.py --check` passes.
+Witness: `python scripts/point_source/likelihood_breakdown/source_plane.py --config-name local_cpu_fp64` exits 0 with the eager ≡ JIT ≡ vmap parity and non-zero-gradient asserts passing, writes `results/breakdown/point_source/source_plane_local_cpu_fp64.json` + `.png`, and `python build_readme.py --check` passes.
 Review-minutes: 25
 Unattended: needs-slicing
-Epic: cluster-strong-lensing
+Epic: point-source-cpu-speed
 Lane: any
 Filed: 2026-09-26
 
 ## User request (verbatim, 2026-09-26)
 
 Continue on going work to speed up the JAX source plane chi squared point solver, which we have been working on recently. should be an epic laid out for it I think? We have work on the image plane one, but maybe not the source plane chi squarded, so have a look at what is available. first task will be to write a likelihood_breakdown and then speed up from there, autolens_profiling gives a clear overview of the whole process and task and steps and design which you can use from other examples like imaging and the image plane point source.
+
+## Scope steer (human, 2026-09-26): single-source only
+
+This campaign is **single-source only** — the `scripts/point_source/` use case. No two-source /
+cluster setups, rows, submits or levers; `scripts/cluster/` is never touched. The cluster use
+case is epic `cluster-pointsolver-speed` (its own data and `scripts/cluster/likelihood_breakdown/`
+baseline). Cluster-specific evidence found on the way is written into a short "carried to
+cluster epic" note in the hand-off, never acted on. Epic tag is `point-source-cpu-speed`
+(`cluster-strong-lensing` is the unrelated Source & Cluster arc).
 
 ## Survey (2026-09-26): what exists
 
@@ -73,15 +80,14 @@ governs verbatim: record commits / JAX versions / device / precision / threads /
 separate lowering, compile, first call and warmed runtime; block_until_ready; vary
 parameters through the production likelihood so constant folding cannot fake work; retain a
 fused end-to-end production-likelihood control; report interleaved A/B medians + dispersion
-on identical hardware; cover perturbed models, doubles/quads, near-caustic and cluster
-multi-source/multi-plane cases; preserve custom_jvp / eager-JIT-vmap parity / gradient
+on identical hardware; cover perturbed models, doubles/quads and near-caustic cases; preserve custom_jvp / eager-JIT-vmap parity / gradient
 correctness; each iteration = baseline → one hypothesis → bounded prototype → correctness
 gate → repeated A/B → accept/reject → reprofile; record negative results; stop when the
 residue is explained.
 
 ### Phase 1 (this bounded task) — shared CPU/GPU likelihood breakdown instrument
 
-Build `scripts/point_source/likelihood_breakdown/source_plane.py`, structurally mirroring
+Build `scripts/point_source/likelihood_breakdown/source_plane.py` (single-source `simple` instrument only), structurally mirroring
 `image_plane.py` (same result-JSON contract, `--config-name` hardware rows, provenance
 block, JIT-phase split, numerical controls, PNG, README dashboard regeneration via
 `build_readme.py`), for the production `AnalysisPoint.log_likelihood_function` with:
@@ -89,12 +95,8 @@ block, JIT-phase split, numerical controls, PNG, README dashboard regeneration v
 1. **Primary path** `al.ps.PointSolved` + `al.FitPositionsSourceSolved` (the adopted
    default); **separately labelled control** free-centre `al.ps.PointFlux`/`al.ps.Point` +
    `al.FitPositionsSource`. Never conflate the two variants.
-2. **Two cells / instruments:** the seeded four-image `simple` dataset (as `image_plane.py`)
-   and the 13-component two-source multi-plane cluster model (as
-   `cluster/likelihood_breakdown/source_plane.py` / `simulators/cluster.py`). At cluster
-   scale the deflection stack and the Hessian magnification are the expected hot spots; at
-   `simple` scale the call is ~0.3 ms so fusion/launch overhead dominates — report both
-   honestly.
+2. **One instrument:** the seeded four-image `simple` dataset (as `image_plane.py`). At this scale
+   the call is ~0.3 ms so fusion/launch overhead may dominate — report it honestly.
 3. **Cumulative prefix boundaries through the fused production likelihood** (not a fixed
    closure): (a) multi-plane ray trace of the observed positions to each source plane;
    (b) Hessian magnification at each observed position; (c) β* solve (solved path) / model
@@ -124,28 +126,28 @@ block, JIT-phase split, numerical controls, PNG, README dashboard regeneration v
 ### Phases 2+ (to be ranked by the phase-1 breakdown, issued one at a time)
 
 Candidate levers, unmeasured — the phase-1 residue ranks them:
-- **Deflection stack of the 13 dPIE/NFW profiles** (multi-plane recursion re-evaluates
-  every profile per plane) — likely PyAutoGalaxy-scoped; shared with image-plane phase 4(2).
-- **Hessian magnification** — `magnification_2d_via_hessian_from` re-evaluates the full
-  deflection stack several times per position; a `jax.jacfwd` of the single ray trace, or
+- **Hessian magnification / precision-tensor re-evaluation** — the plain path evaluates
+  `magnifications_at_positions` twice per likelihood and the solved path rebuilds the jacfwd
+  precision tensor three times (plus `_beta_hat` twice); whether XLA CSE merges them is hypothesis #1; a `jax.jacfwd` of the single ray trace, or
   reusing the ray-trace deflections, may remove those evaluations (bit-identical-or-tolerance
   gate against the finite-difference Hessian, near-critical positions included).
 - **Plain-path JIT block** (`Grid2DIrregular` `xp` propagation) if still present.
-- **Gradient cost** — if `value_and_grad` ≫ forward at cluster scale, profile the backward
-  pass (multi-plane recursion, magnification Hessian-of-Hessian).
+- **Gradient cost** — if `value_and_grad` ≫ forward, profile the backward pass
+  (jacfwd-of-deflections Hessian-of-Hessian).
 - **vmap batch throughput** on A100 (launch-bound at 0.3 ms/call).
-Each phase: library-first (PyAutoGalaxy/PyAutoLens) then refresh the profiling rows under a
+Each phase: library-first (PyAutoLens/PyAutoArray) then refresh the profiling rows under a
 new label; GPU regression check on every shared library change.
 
 ## Where the code lives
 
-- `autolens_profiling/scripts/point_source/` — cells; `scripts/cluster/likelihood_breakdown/source_plane.py` — the closure-based cluster decomposition to supersede/cross-check.
+- `autolens_profiling/scripts/point_source/` — cells (`scripts/cluster/` is out of scope: epic `cluster-pointsolver-speed`).
 - `PyAutoLens/autolens/point/fit/` — `FitPositionsSource`, `solved.py` (`SolvedCentre`), `autolens/lens/` — multi-plane tracer, `LensCalc.magnification_2d_via_hessian_from`.
-- `PyAutoGalaxy` — dPIE / NFW deflection code.
+- `PyAutoGalaxy/autogalaxy/operate/lens_calc.py` — `hessian_from` / `magnification_2d_via_hessian_from` (jacfwd path).
 
 ## Related
 
-- `draft/research/autolens_profiling/pointsolver_cpu_speed_phase_4.md` — image-plane sibling campaign (contract source).
-- `draft/research/autolens_profiling/point_solver_profiling_cells.md`, `point_source_image_plane_gpu_breakdown.md` — same epic.
+- `draft/research/autolens_profiling/pointsolver_cpu_speed_phase_4.md` — image-plane sibling campaign (contract source), same epic.
+- `draft/research/autolens_profiling/cluster_pointsolver_speed.md` — the cluster epic that receives any carried cluster evidence.
+- `draft/research/autolens_profiling/point_solver_profiling_cells.md`, `point_source_image_plane_gpu_breakdown.md` — related point-source prompts.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-09-26 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/424341bb-a169-4bd8-a180-8798be50d5aa/scratchpad/intake_input.md -->
