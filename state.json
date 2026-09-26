@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "organ": "mind",
+  "repo": "PyAutoMind",
+  "status": "yellow",
+  "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
+  "updated": "2026-09-26T12:35:26Z",
+  "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
+  "items": [
+    {
+      "severity": "yellow",
+      "text": "One-shot benchmark harness and computed-score contract for the assistant benchmarks \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/380",
+      "prompt": "/start_dev active/oneshot_benchmark_harness.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Organ cockpit: Mind and Cortex dashboards emit state.json via their Brain renderers \u2014 library-shipped, awaiting-merge (PR A Mind#440 \u2192 PR B Cortex#45 \u2192 PR C Brain#420)",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/pull/440",
+      "prompt": "/start_dev active/organ_cockpit_mind_cortex_state_json.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens/multi_plane_cross_validation_review.md",
+      "prompt": "Walk me through the completed work described in `draft/human_review/autolens/multi_plane_cross_validation_review.md` so I can sign it off.\n\n1. Read the prompt: what was asked, and what it claims shipped.\n2. Find the evidence \u2014 the merged PR(s), the commits, the `complete/` record \u2014\n   and read the actual diff, not the description of it.\n3. Report what changed, what it does NOT cover, and anything you would have\n   done differently. Call out behaviour changes and test gaps explicitly.\n\nChange nothing while reviewing. When I sign it off, retire the prompt from the\nPyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date\n<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and\nregenerate the dashboard. If I do not sign it off, file the follow-up with\n`/intake` instead.\n"
+    },
+    {
+      "severity": "yellow",
+      "text": "human review: the scaling_relation slam parks (imaging un-parked, multi_galaxy kept)",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md",
+      "prompt": "Walk me through the completed work described in `draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md` so I can sign it off.\n\n1. Read the prompt: what was asked, and what it claims shipped.\n2. Find the evidence \u2014 the merged PR(s), the commits, the `complete/` record \u2014\n   and read the actual diff, not the description of it.\n3. Report what changed, what it does NOT cover, and anything you would have\n   done differently. Call out behaviour changes and test gaps explicitly.\n\nChange nothing while reviewing. When I sign it off, retire the prompt from the\nPyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date\n<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and\nregenerate the dashboard. If I do not sign it off, file the follow-up with\n`/intake` instead.\n"
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: .github .github#16 \u2014 Shipped",
+      "url": "https://github.com/PyAutoLabs/.github/pull/16",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#547 \u2014 arcsec-after-decimal",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/547",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#567 \u2014 certified-positive-solver",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/567",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#534 \u2014 What shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/534",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#563 \u2014 Shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/563",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#523 \u2014 delaunay-area-magnification-audit",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/523",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#525 \u2014 delaunay-dual-area-magnification",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/525",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#527 \u2014 delaunay-edge-ring-zeroed",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/527",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#537 \u2014 delaunay-nn-constant-split-assembly",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/537",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#533 \u2014 delaunay-nn-launch-latency",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/533",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#531 \u2014 delaunay-walk-early-exit",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/531",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#553 \u2014 What shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/553",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#554 \u2014 What shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/554",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#555 \u2014 What shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/555",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#557 \u2014 What shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/557",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#540 \u2014 What shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/540",
+      "prompt": null
+    }
+  ]
+}
