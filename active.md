@@ -109,7 +109,9 @@
 - parallel-claim: autolens_profiling is also claimed by interferometer-transform-real-scatter (PyAutoArray#577); file sets are disjoint (theirs: one hpc/batch_gpu/ submit; ours: scripts/point_source/, results/breakdown/point_source/, results/notes/). Own worktree approved by the human 2026-09-26.
 - repos:
   - autolens_profiling: feature/point-source-source-plane-breakdown
-- summary: Build scripts/point_source/likelihood_breakdown/source_plane.py (simple instrument, solved primary + plain control, fused control, cumulative prefixes, grad-cost row), retire the stale plain-path JIT guard in the runtime cell, publish local_cpu_fp64 row + README + campaign note with ranked residue and a carried-to-cluster note.
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/317 (DRAFT)
+- resume: Phase 1 built + pushed (44c43d9, b480236, 1055c57; new cell at scripts/point_source_source/, results/breakdown/point_source_source/). BLOCKED on the scripts/point_source → point_source_image/point_source_source move-only split PR (merge order split → #315 → #314). Next: after the split merges, rebase, carry the guard-removal diff to the moved runtime cell, fix scripts/point_source/ refs in the note + cell docstring, regen README, undraft, /ship_workspace; re-run the local row on an idle host (phase-1 row taken at load ~16/8 cores) or take RAL rows before phase 2 is ranked.
+- summary: Build scripts/point_source_source/likelihood_breakdown/source_plane.py (simple instrument, solved primary + plain control, fused control, cumulative prefixes, grad-cost row), retire the stale plain-path JIT guard in the runtime cell, publish local_cpu_fp64 row + README + campaign note with ranked residue and a carried-to-cluster note.
 
 ## point-source-folder-split
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/316
