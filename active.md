@@ -1,24 +1,5 @@
 # Active Tasks
 
-## gut-board
-- issue: https://github.com/PyAutoLabs/PyAutoGut/issues/9
-- issued: 2026-09-26
-- prompt: active/gut_board.md
-- session: Claude Code CLI (Fable architect, Opus execution), 2026-09-26; session ID unavailable
-- status: library-shipped, awaiting-merge (Brain#421 → Gut#10 → hub#14)
-- autonomy: safe (header); epic organ-cockpit; scope widened by the human 2026-09-26 (one-tap void buttons); plan approved in session and on the issue; merge is human
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/421, https://github.com/PyAutoLabs/PyAutoGut/pull/10
-- workspace-pr: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/14
-- heart-ack: "Heart YELLOW (score 85, snapshot 2026-09-26T16:19:27+00:00): `manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml`; `manifest drift: organism-map blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml`; `manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml` — pre-existing. Live human 2026-09-26, after the reasons were shown: 'continue'."
-- worktree: /home/jammy/Code/PyAutoLabs-wt/gut-board
-- repos:
-  - PyAutoBrain: feature/gut-board
-  - PyAutoGut: feature/gut-board
-  - pyautolabs.github.io: feature/gut-board
-- parallel-claim: "PyAutoBrain also claimed by eyes-organ-order + cosmos-web-ring-greeting (disjoint: this task touches board/_theme.py, config/policy.yaml boards list, agents/conductors/hygiene/_hygiene_condemned.py, tests); PyAutoGut by eyes-organ-order (AGENTS.md one-line organ-order edit; this task appends a new AGENTS.md section + scripts/board.py, .github/workflows/{gut_board,void}.yml, tests/, README.md); pyautolabs.github.io by eyes-organ-order (no diff; this task edits one cockpit ORGANS line). Own worktree per the #177 precedent, recorded 2026-09-26."
-- plan: three PRs, merge order Brain (theme + policy + parser helper) → Gut (board, feed, gut_board.yml Pages birth, void.yml issue-triggered void) → hub (cockpit ORGANS feed line)
-- summary: Gut board (Pages) + state.json feed + one-tap "Void permanently" via prefilled issues handled by void.yml; reconciles ls-remote refs against condemned.md (due / transit / held / orphans / dangling); Nerves decision: no board.
-
 ## eyes-organ-order
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/439
 - issued: 2026-09-25
