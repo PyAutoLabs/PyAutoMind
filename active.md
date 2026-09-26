@@ -88,7 +88,7 @@
 - issued: 2026-09-26
 - prompt: active/multistart_cpu_memory_probe_doubles_compile.md
 - session: Claude Code CLI (Opus 5.5 subagent), 2026-09-26
-- status: library-shipped
+- status: library-shipped, awaiting-merge
 - autonomy: supervised (header); plan approved in-session 2026-09-26
 - worktree: /home/jammy/Code/PyAutoLabs-wt/multistart-cpu-memory-probe
 - repos:
