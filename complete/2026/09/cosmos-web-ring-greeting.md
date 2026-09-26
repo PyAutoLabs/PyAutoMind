@@ -1,3 +1,29 @@
+## cosmos-web-ring-greeting
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/136 (closed)
+- completed: 2026-09-26
+- brain-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/419 (merge 896c4fa3)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/137 (merge 9d96bae1)
+- merge-order: Brain first, assistant second (the assistant CI ran against `Brain-ref: feature/cosmos-web-ring-greeting`)
+- supersedes: abell-1201-point-mass (autolens_assistant#133)
+- summary: |
+    The Abell 1201 demonstration is removed from autolens_assistant and replaced by the COSMOS-Web Ring as
+    the assistant's greeting example: a new greeting skill plus general-reader audience routing, so a
+    non-specialist first contact is walked through modelling the ring. Reference fits recover
+    theta_E = 0.803" / 0.775" (effective), consistent with Mercier et al.'s 0.77-0.78". A
+    `cosmos-web-ring-fit` benchmark card records runs 0 / 0 / 100. A Colab notebook ships with the
+    walkthrough. PyAutoBrain's clone classifications retire the Abell 1201 domain path and add the
+    COSMOS-Web Ring greeting paths. The website commit (Jammy2211.github.io 3597326) is pushed after the
+    assistant merge.
+- heart-red-override: "2026-09-26 live human, in direct response to the question naming this task, authorised the development-only override: push both branches and open the two PRs (no merge, no release, no CI bypass; merge via /prm on green checks). RED reasons: release validation FAILED (stage integrate); YELLOW: workspace validation not passing (4 failed, cloud#35579888156); manifest drift hub organism blurb 7; manifest drift organism-map blocks 1. Gates passed: assistant make test 128 passed 1 skipped + freeze-check OK; Brain clone tests 64 passed; check_boundary.py autolens_assistant complete; GPU smoke fit script 285 s; benchmark cosmos-web-ring-fit run 3 = 100."
+- merge-authority: human "the fits look good so continue to proceed" (separate explicit merge grant this turn); every check green at the merged heads (Brain pytest 3.12/3.13; assistant boundary + wiki-currency).
+- follow-ups: |
+    - Run the Colab notebook in real Colab (not yet done) and tag-pin the Colab badge.
+    - draft/feature/autolens_assistant/colab_refinement_throughout.md
+    - draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md
+    - draft/refactor/workspaces/abell_1201_local_cleanup.md
+
+## Original prompt
+
 # COSMOS-Web Ring greeting: replace the Abell 1201 demonstration on the website, benchmark and Colab
 
 Type: feature

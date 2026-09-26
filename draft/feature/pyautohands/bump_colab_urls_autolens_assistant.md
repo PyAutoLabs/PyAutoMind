@@ -14,7 +14,7 @@ Status: draft
 Consequence: judge
 Review-minutes: 5
 Unattended: safe
-Blocked-by: PyAutoMind/active/cosmos_web_ring_greeting.md (autolens_assistant#136)
+Follows: (unblocked 2026-09-26) PyAutoMind/complete/2026/09/cosmos-web-ring-greeting.md (PyAutoBrain#419, autolens_assistant#137 merged 2026-09-26)
 Filed: 2026-09-26
 
 ## Why

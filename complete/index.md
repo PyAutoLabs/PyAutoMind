@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1565 records across 8 buckets.
+1566 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -197,6 +197,7 @@ markers; everything below GENERATED is rebuilt.
 - [cortex-schema-skeleton](2026/09/cortex-schema-skeleton.md) — the phase that decides what the Cortex *is* as files — a run-and-ruling registry
 - [cortex-scorer-where-paths](2026/09/cortex-scorer-where-paths.md)
 - [cortex-tasks-not-phases](2026/09/cortex-tasks-not-phases.md)
+- [cosmos-web-ring-greeting](2026/09/cosmos-web-ring-greeting.md)
 - [cron-delivery-headroom](2026/09/cron-delivery-headroom.md)
 - [dataset-fits-image-only](2026/09/dataset-fits-image-only.md) — `dataset.fits` was written twice per search since PyAutoGalaxy#479 / PyAutoLens#574 (`files/` from `save_attri…
 - [defer-import-scipy-special-pyplot](2026/09/defer-import-scipy-special-pyplot.md)

@@ -36,25 +36,6 @@
   - PyAutoGut: feature/eyes-organ-order
 - resume: bundle worktree created; implement the reorder per the issue plan (Eyes between Memory and Heart), then repos_sync --write, then ship
 
-## cosmos-web-ring-greeting
-- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/136
-- issued: 2026-09-26
-- prompt: active/cosmos_web_ring_greeting.md
-- session: Claude Code (Fable 5.1 session; ID unavailable)
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/137
-- brain-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/419
-- merge-order: Brain first, assistant second
-- heart-red-override: "2026-09-26 live human, in direct response to the question naming this task, authorised the development-only override: push both branches and open the two PRs (no merge, no release, no CI bypass; merge via /prm on green checks). RED reasons: release validation FAILED (stage integrate); YELLOW: workspace validation not passing (4 failed, cloud#35579888156); manifest drift hub organism blurb 7; manifest drift organism-map blocks 1. Gates passed: assistant make test 128 passed 1 skipped + freeze-check OK; Brain clone tests 64 passed; check_boundary.py autolens_assistant complete; GPU smoke fit script 285 s; benchmark cosmos-web-ring-fit run 3 = 100."
-- website-commit: Jammy2211.github.io 3597326 (local, push after assistant PR merges)
-- resume: human /prm merges Brain then assistant; then push the website commit; Colab run in real Colab still to be confirmed; follow-up drafts filed: colab_refinement_throughout, bump_colab_urls_autolens_assistant, abell_1201_local_cleanup
-- worktree: ~/Code/PyAutoLabs-wt/cosmos-web-ring-greeting
-- repos:
-  - autolens_assistant: feature/cosmos-web-ring-greeting
-  - PyAutoBrain: feature/cosmos-web-ring-greeting
-- phases: 1 assistant (Abell removal, ring modelling, fit benchmark, audience routing) → 2 assistant Colab notebook → 3 website
-- supersedes: abell-1201-point-mass (autolens_assistant#133)
-
 ## oneshot-benchmark-harness
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/126
 - issued: 2026-09-17
