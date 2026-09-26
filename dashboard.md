@@ -290,7 +290,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/organ_cockpit_phase_1_state_json_feed.md">Organ cockpit phase 1: state.json feed schema and Heart transition alert</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/416">issue #416</a> — issued 2026-09-26 — library-dev</summary>
+<details><summary>📋 <a href="active/organ_cockpit_phase_1_state_json_feed.md">Organ cockpit phase 1: state.json feed schema and Heart transition alert</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/416">issue #416</a> — issued 2026-09-26 — library-shipped, awaiting-merge (PR 1 Brain open; PR 2 Heart committed locally, opens after PR 1 merges) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/417">PyAutoBrain#417</a></summary>
 
 ```
 /start_dev active/organ_cockpit_phase_1_state_json_feed.md
