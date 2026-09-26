@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 240 |
+| [Backlog](#backlog) (`draft/`) | 242 |
 
 > **No batch in flight.**
 
@@ -512,7 +512,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**240** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **55** of them belong to an epic and are listed only under [Epics](#epics) below.
+**242** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **57** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 68</summary>
@@ -2935,12 +2935,28 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 </details>
 
 <details>
-<summary><b>organ-cockpit</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+<summary><b>organ-cockpit</b> — 3 queued prompt(s) — ⚠️ not in `epics.md`</summary>
 
 <details><summary>📋 <a href="draft/feature/autonerves/organ_cockpit_nerves_unused_keys.md">Organ cockpit: Nerves board flags config keys not in use anymore</a> — autonerves · medium · safe · normal</summary>
 
 ```
 /start_dev draft/feature/autonerves/organ_cockpit_nerves_unused_keys.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/organ_cockpit_start_dev_heart_gate.md">Organ cockpit: start_dev refuses or warns on the Heart feed before development…</a> — pyautobrain · small · safe · high</summary>
+
+```
+/start_dev draft/feature/pyautobrain/organ_cockpit_start_dev_heart_gate.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautogut/organ_cockpit_gut_void_sibling_reach.md">Organ cockpit: Gut void button reaches refs held on sibling repos</a> — pyautogut · small · safe · high</summary>
+
+```
+/start_dev draft/feature/pyautogut/organ_cockpit_gut_void_sibling_reach.md
 ```
 
 </details>
