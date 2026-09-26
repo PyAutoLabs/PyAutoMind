@@ -5,8 +5,11 @@
 - issued: 2026-09-26
 - prompt: active/organ_cockpit_nerves_board.md
 - session: Claude Code CLI (Fable architect, Opus execution), 2026-09-26; session ID https://claude.ai/code/session_01SbKQQHRRgm2b69aT9t7771
-- status: library-dev
+- status: library-shipped, awaiting-merge (Brain#422 → Nerves#173 → hub#15)
 - autonomy: safe (header); epic organ-cockpit; supersedes the 2026-09-26 "Nerves gets no board" decision at the human's request; plan approved in session and on the issue; merge is human
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/422, https://github.com/PyAutoLabs/PyAutoNerves/pull/173
+- workspace-pr: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/15
+- heart-ack: "Heart YELLOW (score 85, snapshot 2026-09-26T16:19:27+00:00): `manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml`; `manifest drift: organism-map blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml`; `manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml` — pre-existing. Live human 2026-09-26: 'ack and merge'."
 - worktree: /home/jammy/Code/PyAutoLabs-wt/nerves-board
 - repos:
   - PyAutoBrain: feature/nerves-board

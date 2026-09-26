@@ -276,7 +276,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/organ_cockpit_nerves_board.md">Organ cockpit: Nerves board — browse every config file and option across…</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/172">issue #172</a> — issued 2026-09-26 — library-dev</summary>
+<details><summary>📋 <a href="active/organ_cockpit_nerves_board.md">Organ cockpit: Nerves board — browse every config file and option across…</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/172">issue #172</a> — issued 2026-09-26 — library-shipped, awaiting-merge (Brain#422 → Nerves#173 → hub#15) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/422">PyAutoBrain#422</a>, <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/173">PyAutoNerves#173</a>, <a href="https://github.com/PyAutoLabs/pyautolabs.github.io/pull/15">pyautolabs.github.io#15</a></summary>
 
 ```
 /start_dev active/organ_cockpit_nerves_board.md
