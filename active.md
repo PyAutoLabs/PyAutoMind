@@ -77,7 +77,8 @@
 - prompt: active/pointsolver_cpu_speed_phase_4.md
 - epic: point-source-cpu-speed
 - session: Claude Code CLI (Opus 5.5), 2026-09-26; session ID unavailable
-- status: workspace-dev
+- status: awaiting-merge (phase 4a PR #321 open; human runs /prm)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/321
 - autonomy: supervised (header); plan approved in-session 2026-09-26 (phase 4a: re-baseline + solver-config sweep, single-source, workspace-only)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/point-source-cpu-p4
 - repos:

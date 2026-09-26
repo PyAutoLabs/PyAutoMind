@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-09-26T18:38:15Z",
+  "updated": "2026-09-26T18:47:16Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "One-shot benchmark harness and computed-score contract for the assistant benchmarks \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/380",
       "prompt": "/start_dev active/oneshot_benchmark_harness.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Point-source (single-source) CPU speed-up campaign \u2014 phase 4: profile the residue\u2026 \u2014 awaiting-merge (phase 4a PR #321 open; human runs /prm)",
+      "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/321",
+      "prompt": "/start_dev active/pointsolver_cpu_speed_phase_4.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: autofit_workspace_test autofit_workspace_test#98 \u2014 ep-stale-tracking-per-variable",
       "url": "https://github.com/PyAutoLabs/autofit_workspace_test/pull/98",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: autofit_workspace_test autofit_workspace_test#99 \u2014 samples-errors-at-sigma-instance",
-      "url": "https://github.com/PyAutoLabs/autofit_workspace_test/pull/99",
       "prompt": null
     }
   ]

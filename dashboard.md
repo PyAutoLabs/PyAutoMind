@@ -284,7 +284,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/pointsolver_cpu_speed_phase_4.md">Point-source (single-source) CPU speed-up campaign — phase 4: profile the residue…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/314">issue #314</a> — issued 2026-09-26 — workspace-dev</summary>
+<details><summary>📋 <a href="active/pointsolver_cpu_speed_phase_4.md">Point-source (single-source) CPU speed-up campaign — phase 4: profile the residue…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/314">issue #314</a> — issued 2026-09-26 — awaiting-merge (phase 4a PR #321 open; human runs /prm) — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/321">autolens_profiling#321</a></summary>
 
 ```
 /start_dev active/pointsolver_cpu_speed_phase_4.md
