@@ -40,6 +40,7 @@ def test_ledger_dirs_and_registry_files_are_ledger():
         "autonomy_log.md",
         "dashboard.md",
         "dashboard.html",
+        "state.json",
     ):
         assert ledger_merge.is_ledger_path(path), path
 
@@ -317,6 +318,28 @@ def test_resolve_settles_registries_by_entry_and_renders_by_main(tmp_path):
     log = (repo / "autonomy_log.md").read_text()
     assert "| d1 | branch |" in log and "| d1 | main |" in log
     assert _git(repo, "diff", "--name-only", "--diff-filter=U").stdout == ""
+
+
+def test_the_cockpit_feed_rides_the_ledger_and_resolves_to_main(tmp_path):
+    # state.json is the organ-cockpit feed the Brain intake renderer writes
+    # beside dashboard.html (PyAutoBrain#418): a claude/** branch carrying it
+    # is still ledger-only, and a conflict takes main's render.
+    assert ledger_merge.classify(["active.md", "state.json", "dashboard.html"])[1] == []
+    assert "state.json" in ledger_merge.GENERATED_FILES
+    repo = _ledger_repo(tmp_path)
+    _git(repo, "checkout", "-q", "claude/x")
+    (repo / "state.json").write_text('{"updated": "branch"}\n')
+    _git(repo, "add", "state.json")
+    _git(repo, "commit", "-qm", "branch renders the feed")
+    _git(repo, "checkout", "-q", "main")
+    (repo / "state.json").write_text('{"updated": "main"}\n')
+    _git(repo, "add", "state.json")
+    _git(repo, "commit", "-qm", "main renders the feed")
+    subprocess.run(["git", "merge", "--no-ff", "--no-commit", "claude/x"], cwd=repo, capture_output=True)
+    resolved, unresolved = ledger_merge.resolve_conflicts(repo)
+    assert unresolved == [], unresolved
+    assert any(line.startswith("state.json") for line in resolved)
+    assert (repo / "state.json").read_text() == '{"updated": "main"}\n'
 
 
 def test_resolve_leaves_a_real_entry_conflict_and_foreign_paths_for_a_human(tmp_path):
