@@ -1,3 +1,11 @@
+- issue: none (draft retired at the /prm close-out of `interferometer-mge-w-tilde-route`, never issued)
+- completed: 2026-09-26
+- retired-by: `complete/2026/09/interferometer-mge-w-tilde-route.md` (PyAutoArray#576, PyAutoGalaxy#629, PyAutoLens#750, autolens_profiling#313)
+- summary: Retired without an edit — proof, not resemblance. The prompt's whole premise was that the `autolens_workspace` interferometer MGE `__VRAM__` paragraph ("With `apply_sparse_operator()` applied … it depends on the real-space mask alone", `scripts/interferometer/features/multi_gaussian_expansion/modeling.py:322-324`, same sentence in `features/advanced/shapelets/modeling.py` and both notebooks) was wrong because the PyAutoArray inversion factory switched the sparse operator off for MGE-only fits. `interferometer-mge-w-tilde-route` removed that guard, so MGE-only fits now take the W~ sparse operator under `apply_sparse_operator()` and the paragraph is true as written. The prompt's own fallback ("if the W~ route ships first, update the text to match the new behaviour") has nothing to change; its Witness (text saying MGE-only takes the dense path) would now write a false statement.
+- caveat (not filed): the per-likelihood memory is mask-only, but the one-off `apply_sparse_operator` build still scales with the visibility count — CPU alma_high ran out of memory in that build (10.8 GB). If the docs should mention the build cost, that is a new intake item, not this prompt.
+
+## Original prompt
+
 # autolens_workspace: interferometer MGE modeling docs claim apply_sparse_operator() makes memory mask-only
 
 Type: docs

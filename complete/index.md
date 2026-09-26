@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1567 records across 8 buckets.
+1569 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -289,6 +289,7 @@ markers; everything below GENERATED is rebuilt.
 - [interferometer-apply-operator-rfft2](2026/09/interferometer-apply-operator-rfft2.md)
 - [interferometer-dirty-images-call-sites](2026/09/interferometer-dirty-images-call-sites.md)
 - [interferometer-mge-breakdown](2026/09/interferometer-mge-breakdown.md) — Interferometer likelihood campaign 1/3. Adds an interferometer MGE breakdown cell to the shared harness (libra…
+- [interferometer-mge-w-tilde-route](2026/09/interferometer-mge-w-tilde-route.md) — closed completed 2026-09-26
 - [interferometer-numba-cpu-direct-conv](2026/09/interferometer-numba-cpu-direct-conv.md)
 - [interferometer-preload-cpu](2026/09/interferometer-preload-cpu.md)
 - [interferometer-preload-nufft-type1](2026/09/interferometer-preload-nufft-type1.md)
@@ -440,6 +441,7 @@ markers; everything below GENERATED is rebuilt.
 - [workspace-array-regroup](2026/09/workspace-array-regroup.md)
 - [workspace-dead-weight-cleanup](2026/09/workspace-dead-weight-cleanup.md)
 - [workspace-family-regroup](2026/09/workspace-family-regroup.md)
+- [workspace-interferometer-mge-sparse-operator-memory-docs](2026/09/workspace-interferometer-mge-sparse-operator-memory-docs.md) — draft retired at the /prm close-out of `interferometer-mge-w-tilde-route`, never issued
 - [workspace-location-contracts](2026/09/workspace-location-contracts.md)
 - [workspace-lp-sub-size-1-retire](2026/09/workspace-lp-sub-size-1-retire.md)
 - [workspace-organs-regroup](2026/09/workspace-organs-regroup.md)

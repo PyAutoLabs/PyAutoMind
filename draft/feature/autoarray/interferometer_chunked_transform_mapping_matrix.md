@@ -38,13 +38,16 @@ alma_high, 23.17 s jvla.
   `transform_mapping_matrix`, via `lax.map`/`lax.scan` so the memory peak is
   O(column_batch * vis_chunk * kernel width).
 - Keep the one-call path where it fits (CPU, sma) — measure before changing the default.
-- Applies to every dense interferometer inversion (MGE-only until the W~ route lands,
-  mixed mapper + MGE, pixelized dense), not only MGE.
+- Applies to every dense interferometer inversion (MGE-only fits without
+  `apply_sparse_operator()` — the W~ route for MGE-only shipped 2026-09-26 in
+  `complete/2026/09/interferometer-mge-w-tilde-route.md` — mixed mapper + MGE, pixelized
+  dense), not only MGE.
 
 ## Watch
 
-- Lever 1 (W~ route) is faster at every instrument for MGE-only fits; this lever is for
-  the dense paths lever 1 does not cover.
+- Lever 1 (W~ route, shipped 2026-09-26: PyAutoArray#576 / PyAutoGalaxy#629 /
+  PyAutoLens#750) is faster at every instrument for MGE-only fits; this lever is for the
+  dense paths lever 1 does not cover.
 - Combine with the real-scatter fix (`interferometer_transform_mapping_matrix_real_scatter`);
   chunking repeats the scatter per batch.
 

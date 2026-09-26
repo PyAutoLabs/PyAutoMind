@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-09-26T15:25:39Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
+  "updated": "2026-09-26T15:38:07Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Interferometer likelihood campaign: route MGE-only interferometer fits through the W~ sparse operator \u2014 workspace-shipped, awaiting-merge (library-first: PyAutoArray#576 \u2192 PyAutoGalaxy#629 \u2192 PyAutoLens#750 \u2192 autolens_profiling#313)",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/576",
-      "prompt": "/start_dev active/interferometer_mge_w_tilde_route_mge_only.md"
-    },
     {
       "severity": "yellow",
       "text": "One-shot benchmark harness and computed-score contract for the assistant benchmarks \u2014 awaiting-merge",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#540 \u2014 What shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/540",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#576 \u2014 interferometer-mge-w-tilde-route",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/576",
       "prompt": null
     }
   ]
