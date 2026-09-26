@@ -97,3 +97,17 @@
 - parallel-claim: "autolens_profiling is also claimed by point-source-cpu-p4, point-source-source-plane-breakdown and point-source-folder-split. File sets are disjoint: this task touches scripts/interferometer/, hpc/batch_gpu/submit_breakdown_interferometer_*, results/breakdown/interferometer/ and results/notes/interferometer_mesh_*. The only shared surface is the generated README dashboards, regenerated at ship. Human-approved 2026-09-26, #177 precedent."
 - repos:
   - autolens_profiling: feature/interferometer-mesh-breakdown-a100
+
+## point-source-source-plane-p2a
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/322
+- issued: 2026-09-26
+- prompt: draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md (campaign prompt retained in draft/; this row is phase 2a)
+- epic: point-source-cpu-speed
+- session: Claude Code CLI (Fable 5.1), 2026-09-26
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/point-source-source-plane-p2a
+- autonomy: supervised (header); plan approved in-session 2026-09-26
+- parallel-claim: autolens_profiling also claimed by point-source-cpu-p4 (#314: hpc/batch_cpu/*point_source_image*, results/breakdown/point_source_image/, point_source_cpu_campaign.md) and interferometer-mesh-breakdown-a100; phase 2a touches only scripts/point_source_source/, results/breakdown/point_source_source/, point_source_source_plane_campaign.md, hpc/batch_*/submit_breakdown_point_source_source_*, README hand-bullets. Own worktree approved by the human 2026-09-26.
+- repos:
+  - autolens_profiling: feature/point-source-source-plane-p2a
+- summary: RAL CPU (hpc_ral_cpu_fp64) + A100 (hpc_a100_fp64) rows for the source-plane breakdown cell; new interleaved A/B cell pytree_input_ab.py (pytree vs flat_vector vs flat_leaves argument routes, forward + value_and_grad, floors); phase-2a note section with the phase-2b go/no-go (PyAutoFit flatten fast path).
