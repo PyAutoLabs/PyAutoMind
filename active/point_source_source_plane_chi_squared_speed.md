@@ -12,7 +12,7 @@ Themes:
 Difficulty: large
 Autonomy: supervised
 Priority: normal
-Status: formalised
+Status: active
 Consequence: judge
 Witness: `python scripts/point_source/likelihood_breakdown/source_plane.py --config-name local_cpu_fp64` exits 0 with the eager ≡ JIT ≡ vmap parity and non-zero-gradient asserts passing, writes `results/breakdown/point_source/source_plane_local_cpu_fp64.json` + `.png`, and `python build_readme.py --check` passes.
 Review-minutes: 25

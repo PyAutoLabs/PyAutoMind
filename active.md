@@ -80,3 +80,17 @@
 - repos:
   - PyAutoArray: feature/interferometer-transform-real-scatter
   - autolens_profiling: feature/interferometer-transform-real-scatter
+
+## point-source-source-plane-breakdown
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/315
+- issued: 2026-09-26
+- prompt: active/point_source_source_plane_chi_squared_speed.md
+- epic: point-source-cpu-speed (phase 1 of the source-plane chi-squared campaign; single-source only, human steer 2026-09-26)
+- session: Claude Code CLI (Fable 5.1), 2026-09-26
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/point-source-source-plane-breakdown
+- autonomy: supervised (header); plan approved in-session 2026-09-26
+- parallel-claim: autolens_profiling is also claimed by interferometer-transform-real-scatter (PyAutoArray#577); file sets are disjoint (theirs: one hpc/batch_gpu/ submit; ours: scripts/point_source/, results/breakdown/point_source/, results/notes/). Own worktree approved by the human 2026-09-26.
+- repos:
+  - autolens_profiling: feature/point-source-source-plane-breakdown
+- summary: Build scripts/point_source/likelihood_breakdown/source_plane.py (simple instrument, solved primary + plain control, fused control, cumulative prefixes, grad-cost row), retire the stale plain-path JIT guard in the runtime cell, publish local_cpu_fp64 row + README + campaign note with ranked residue and a carried-to-cluster note.
