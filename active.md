@@ -94,3 +94,17 @@
 - repos:
   - autolens_profiling: feature/point-source-source-plane-breakdown
 - summary: Build scripts/point_source/likelihood_breakdown/source_plane.py (simple instrument, solved primary + plain control, fused control, cumulative prefixes, grad-cost row), retire the stale plain-path JIT guard in the runtime cell, publish local_cpu_fp64 row + README + campaign note with ranked residue and a carried-to-cluster note.
+
+## point-source-folder-split
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/316
+- issued: 2026-09-26
+- prompt: active/point_source_folder_split.md
+- epic: point-source-cpu-speed
+- session: Claude Code CLI (Opus 5.5 subagent), 2026-09-26; session ID unavailable
+- status: workspace-dev
+- autonomy: supervised (header); plan approved in-session 2026-09-26 ("give me the prompt and then go ahead"); move-only refactor
+- worktree: /home/jammy/Code/PyAutoLabs-wt/point-source-folder-split
+- repos:
+  - autolens_profiling: feature/point-source-folder-split
+- parallel-claim: |
+    autolens_profiling also claimed by interferometer-transform-real-scatter, point-source-cpu-p4 (#314) and point-source-source-plane-breakdown (#315); this split merges FIRST and the others rebase onto it; human-approved 2026-09-26
