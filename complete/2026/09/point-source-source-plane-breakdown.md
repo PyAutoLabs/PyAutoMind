@@ -1,3 +1,27 @@
+Phase 1 of the source-plane point-source chi-squared campaign (epic `point-source-cpu-speed`, single-source only per the human steer of 2026-09-26): the shared CPU/GPU likelihood-breakdown instrument for `AnalysisPoint` with `FitPositionsSourceSolved` (primary) and `FitPositionsSource` (plain control), merged in autolens_profiling#317 (`f79ebf2`) after the folder split autolens_profiling#318 (`a5e3cdd`).
+
+**Shipped**
+- `scripts/point_source_source/likelihood_breakdown/source_plane.py` — mirrors the image-plane instrument: fused production-likelihood controls, cumulative JIT prefixes at the fit object's boundaries (solved: `_beta_hat` → precision tensor → β* → chi² → marginalisation → log L; plain: `model_data` → magnifications → chi² map → log L), eager ≡ JIT ≡ vmap(2) parity, regression literals, finite + non-zero `jax.grad`, `value_and_grad` cost row, dispatch-floor and CSE probes, host load recorded.
+- `results/breakdown/point_source_source/source_plane_local_cpu_fp64.{json,png}` + README row `point_source_source/source_plane`.
+- Stale `TracerArrayConversionError` guard retired in `scripts/point_source_source/likelihood_runtime/source_plane.py`: the plain end-to-end fit JITs on PyAutoArray `1bf641e4` / PyAutoLens `4487eb47` (`-33788.35531560625`, matches eager).
+- Campaign note `results/notes/point_source_source_plane_campaign.md` with the ranked residue and a "carried to cluster epic" section.
+
+**Measured (laptop CPU fp64, 8 threads, median of 500; host load ~16 on 8 cores — a lead, not a baseline)**
+fused solved 0.438 ms / plain 0.457 ms; `value_and_grad` 1.065 ms (2.43× forward); dispatch floor 0.07–0.09 ms with the pytree argument (0.019 ms scalar); XLA merges the repeated Hessian/precision evaluations (3× = 1.15×, 2× = 0.98×; HLO fusion counts agree).
+
+**Ranked residue → phase 2 (from the note)**
+1. fixed per-call cost (ModelInstance pytree flattening ≈ 0.1 ms, dispatch, launch) is essentially the whole call; 2. backward pass +0.63 ms and 4× compile; 3. Hessian/precision re-evaluation — merged by XLA, tidiness only; 4. ray trace not separable at this scale; 5. A100 launch bound unmeasured.
+
+**Not done / carried**
+- RAL `hpc_ral_cpu_fp64` / `hpc_a100_fp64` rows not run (commands in the note); the laptop row should be re-taken on an idle host before phase 2 is ranked.
+- The new cell is not in the CI lint smoke list (that list runs one script per section and has no point_source entry); both cells exit 0 under `AUTOLENS_PROFILING_SMOKE=1`.
+- Old `scripts/point_source/` mentions remain in files #318 owns (phase 1-3 ledger, shared-breakdown note, archived RAL logs).
+- Heart was YELLOW at ship (manifest drift ×3 vs repos.yaml; release validation stale), acknowledged by the human 2026-09-26; none touch this repo.
+
+Campaign prompt retained for phases 2+: the campaign intent lives in this record's original prompt; the next bounded phase is issued from the ranked residue, one at a time.
+
+## Original prompt
+
 # Point-source source-plane chi-squared speed-up campaign — phase 1: shared likelihood breakdown
 
 Type: research
