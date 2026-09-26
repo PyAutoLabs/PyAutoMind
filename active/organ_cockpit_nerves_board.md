@@ -14,6 +14,8 @@ Consequence: glance
 Witness: the Nerves board workflow on main is green with the validate step logging state: ok; https://pyautolabs.github.io/PyAutoNerves/ lists every config file of the six libraries and four workspaces with expandable source; a search for 'positions' finds the point-source config keys; the cockpit's Nerves card populates.
 Review-minutes: 3
 Unattended: ready
+Issued: 2026-09-26
+Issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/172
 Filed: 2026-09-26
 Epic: organ-cockpit
 

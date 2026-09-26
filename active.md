@@ -1,5 +1,21 @@
 # Active Tasks
 
+## nerves-board
+- issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/172
+- issued: 2026-09-26
+- prompt: active/organ_cockpit_nerves_board.md
+- session: Claude Code CLI (Fable architect, Opus execution), 2026-09-26; session ID https://claude.ai/code/session_01SbKQQHRRgm2b69aT9t7771
+- status: library-dev
+- autonomy: safe (header); epic organ-cockpit; supersedes the 2026-09-26 "Nerves gets no board" decision at the human's request; plan approved in session and on the issue; merge is human
+- worktree: /home/jammy/Code/PyAutoLabs-wt/nerves-board
+- repos:
+  - PyAutoBrain: feature/nerves-board
+  - PyAutoNerves: feature/nerves-board
+  - pyautolabs.github.io: feature/nerves-board
+- parallel-claim: "All three repos also claimed by eyes-organ-order (Brain: AGENTS/README/docs; Nerves: AGENTS.md one-line organ-order edit — this task appends a section + fixes a stale test path in AGENTS.md, merge-safe; hub: no diff) and Brain by cosmos-web-ring-greeting. This task touches Brain board/_theme.py + config/policy.yaml + tests/test_board_theme.py; Nerves scripts/board.py, .github/workflows/nerves_board.yml, test_autonerves/test_board.py, README.md, AGENTS.md; hub cockpit/index.html one line + README/AGENTS. Own worktree per the #177 precedent, recorded 2026-09-26."
+- plan: three PRs, merge order Brain (nerves palette/mark + boards policy) → Nerves (scripts/board.py config browser, nerves_board.yml with sparse-cloned config sources, Pages site created by the human token first) → hub (cockpit ORGANS Nerves feed line)
+- summary: Nerves board — read-only browser of every config file and option across the six libraries and four workspaces (index + one page per repo, key search, override map, prior tables, env-var panel) and a state.json feed; the cockpit's Nerves card fills.
+
 ## eyes-organ-order
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/439
 - issued: 2026-09-25
