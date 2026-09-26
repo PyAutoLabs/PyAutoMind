@@ -26,7 +26,7 @@ Parent-record: complete/2026/09/point-source-cpu-p3.md
 ## Status
 
 **Filed, not started.** Split out of the point-source CPU campaign (epic `point-source-cpu-speed`,
-prompt `draft/research/autolens_profiling/pointsolver_cpu_speed_phase_4.md`) by human decision on
+prompt `active/pointsolver_cpu_speed_phase_4.md`) by human decision on
 2026-09-26. That campaign is now single-source only; everything cluster-scale lives here. Issue one
 bounded phase at a time; this prompt stays the campaign intent until its phases are resolved.
 

@@ -55,6 +55,20 @@
 - summary: Add an explicit vis_lp-only inspection mode that combines the main normal-model output tree with the 100-lens SED/Sersic tree, without requiring vis_pix or selecting the other 200 main-tree lenses.
 - resume: Implemented + committed locally as c6b514d on feature/vis-lp-inspection-bundle (133 tests green, not pushed). Human reviews diff (scratchpad part1_diff.txt) before ship_workspace; then sync tooling to the euclid_dr1 science clone/RAL and submit the 4,922-tile vis_lp-only bundle (OUTPUT_DIR=dr1_full, INITIAL_SEARCH_NAME=vis_lp, DATASET_NAMES_PATH=all, TAR_TO set) as a Cortex run.
 
+## point-source-cpu-p4
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/314
+- issued: 2026-09-26
+- prompt: active/pointsolver_cpu_speed_phase_4.md
+- epic: point-source-cpu-speed
+- session: Claude Code CLI (Opus 5.5), 2026-09-26; session ID unavailable
+- status: workspace-dev
+- autonomy: supervised (header); plan approved in-session 2026-09-26 (phase 4a: re-baseline + solver-config sweep, single-source, workspace-only)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/point-source-cpu-p4
+- repos:
+  - autolens_profiling: feature/point-source-cpu-p4
+- parallel-claim: |
+    autolens_profiling also claimed by interferometer-transform-real-scatter (1 file: hpc/batch_gpu interferometer A100 submit); file sets disjoint; human-approved own worktree 2026-09-26
+
 ## interferometer-transform-real-scatter
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/577
 - issued: 2026-09-26
