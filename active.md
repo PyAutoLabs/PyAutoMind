@@ -88,10 +88,13 @@
 - prompt: draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md (campaign prompt retained in draft/; this row is phase 2a)
 - epic: point-source-cpu-speed
 - session: Claude Code CLI (Fable 5.1), 2026-09-26
-- status: workspace-dev
 - worktree: /home/jammy/Code/PyAutoLabs-wt/point-source-source-plane-p2a
 - autonomy: supervised (header); plan approved in-session 2026-09-26
 - parallel-claim: autolens_profiling also claimed by point-source-cpu-p4 (#314: hpc/batch_cpu/*point_source_image*, results/breakdown/point_source_image/, point_source_cpu_campaign.md) and interferometer-mesh-breakdown-a100; phase 2a touches only scripts/point_source_source/, results/breakdown/point_source_source/, point_source_source_plane_campaign.md, hpc/batch_*/submit_breakdown_point_source_source_*, README hand-bullets. Own worktree approved by the human 2026-09-26.
 - repos:
   - autolens_profiling: feature/point-source-source-plane-p2a
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/323
+- status: awaiting-merge
+- heart-ack: "manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: organism-map blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml; release validation stale: source moved since rehearsal (PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens)" (acknowledged 2026-09-26, none touch autolens_profiling)
+- resume: PR #323 open (ec29705, fc510b0). RAL CPU 8490H fused solved 0.1465 ms, grad 2.26×; pytree/flat_vector 1.361 (0.0385 ms saved) → human kept NO-GO on the PyAutoFit flatten fast path; phase 2b = backward-pass lever. Next: human /prm #323 → close-out; then file phase 2b (backward pass: jacfwd/jacrev ordering + analytic SIE Hessian study) from the campaign prompt.
 - summary: RAL CPU (hpc_ral_cpu_fp64) + A100 (hpc_a100_fp64) rows for the source-plane breakdown cell; new interleaved A/B cell pytree_input_ab.py (pytree vs flat_vector vs flat_leaves argument routes, forward + value_and_grad, floors); phase-2a note section with the phase-2b go/no-go (PyAutoFit flatten fast path).
