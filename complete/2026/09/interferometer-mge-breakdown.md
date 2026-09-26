@@ -1,3 +1,16 @@
+## interferometer-mge-breakdown
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/308
+- completed: 2026-09-26
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/312
+- summary: Interferometer likelihood campaign 1/3. Adds an interferometer MGE breakdown cell to the shared harness (library path + chunked-transform arm + W~ arm), with JAX CPU runs for sma/alma/alma_high (+ DFT) and RAL A100 fp64 runs for sma/alma/alma_high/jvla (+ mp for alma_high/jvla), all on nufftax 0.6.1. The note `results/notes/interferometer_mge_breakdown_2026_09.md` ranks the levers: (1) W~ route for MGE-only fits, 356-1746x on A100; (2) chunked transform, since the library path OOMs the A100 at alma and up (65.9 GB / 322 GB / 1.61 TB); (3) complex128 scatter costs a fixed ~0.85 s on GPU, and float64-then-cast is ~6000x faster; (4) the GPU is slower at sma (0.1x) and 44x/55x faster at alma/alma_high; (5) mixed precision gives no gain.
+- follow-ups: filed in Mind commit 28ff960e. Lever 1 is now in flight as `interferometer-mge-w-tilde-route` (PyAutoArray#575; PRs PyAutoArray#576, PyAutoGalaxy#629, PyAutoLens#750). The rest stay as drafts: interferometer_chunked_transform_mapping_matrix, interferometer_transform_mapping_matrix_real_scatter, ral_venv_dependency_floor_drift, workspace_interferometer_mge_sparse_operator_memory_docs.
+- heart: human acknowledged YELLOW at ship (2026-09-26, unrelated reasons).
+- trap: nufftax 0.4.0 in the shared RAL venv sent x64 GPU NUFFTs to fp32 Pallas (0.25 nats off). Those runs were thrown away and redone on nufftax 0.6.1 after the human upgraded the venv; final round r3 was jobs 351078-351083.
+- trap: a stale local autolens_workspace_test dataset/interferometer/simple turned up later. Regenerate it before local interferometer timing.
+- ral-worktree: /mnt/ral/jnightin/autolens_profiling_wt/interferometer-mge-breakdown still exists on RAL (remote, not cleaned by this close-out).
+
+## Original prompt
+
 # Interferometer likelihood campaign 1/3: MGE breakdown on JAX CPU and A100 GPU, optimisation task list
 
 Type: research

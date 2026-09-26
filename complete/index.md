@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1562 records across 8 buckets.
+1563 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -286,6 +286,7 @@ markers; everything below GENERATED is rebuilt.
 - [inspection-missing-assets](2026/09/inspection-missing-assets.md)
 - [interferometer-apply-operator-rfft2](2026/09/interferometer-apply-operator-rfft2.md)
 - [interferometer-dirty-images-call-sites](2026/09/interferometer-dirty-images-call-sites.md)
+- [interferometer-mge-breakdown](2026/09/interferometer-mge-breakdown.md) — Interferometer likelihood campaign 1/3. Adds an interferometer MGE breakdown cell to the shared harness (libra…
 - [interferometer-numba-cpu-direct-conv](2026/09/interferometer-numba-cpu-direct-conv.md)
 - [interferometer-preload-cpu](2026/09/interferometer-preload-cpu.md)
 - [interferometer-preload-nufft-type1](2026/09/interferometer-preload-nufft-type1.md)

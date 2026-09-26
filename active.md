@@ -93,31 +93,15 @@
 - summary: Add an explicit vis_lp-only inspection mode that combines the main normal-model output tree with the 100-lens SED/Sersic tree, without requiring vis_pix or selecting the other 200 main-tree lenses.
 - resume: Implemented + committed locally as c6b514d on feature/vis-lp-inspection-bundle (133 tests green, not pushed). Human reviews diff (scratchpad part1_diff.txt) before ship_workspace; then sync tooling to the euclid_dr1 science clone/RAL and submit the 4,922-tile vis_lp-only bundle (OUTPUT_DIR=dr1_full, INITIAL_SEARCH_NAME=vis_lp, DATASET_NAMES_PATH=all, TAR_TO set) as a Cortex run.
 
-## interferometer-mge-breakdown
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/308
-- issued: 2026-09-25
-- prompt: active/interferometer_mge_breakdown_jax_cpu_gpu.md
-- session: Claude Code CLI (Opus 5.5), 2026-09-25
-- status: workspace-dev
-- autonomy: supervised (header); plan approved in-session 2026-09-25 (research only, no library edits)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/interferometer-mge-breakdown
-- repos:
-  - autolens_profiling: feature/interferometer-mge-breakdown
-- parallel-claim: "autolens_profiling is also claimed by certified-solver-phase-c1-lane-rate (feature/certified-solver-phase-c1-lane-rate). Disjoint file sets: that task is imaging/nautilus capture + imaging submits + results/breakdown/imaging/nautilus_batches_*; this task adds scripts/interferometer/likelihood_breakdown/mge.py, hpc/batch_gpu/submit_breakdown_interferometer_mge_*, results/breakdown/interferometer/mge_*, results/notes/interferometer_mge_breakdown_2026_09.md and edits scripts/misc/vram/config.py. Only shared surface is the generated README dashboard (regenerate at ship). Recorded 2026-09-25 per the #177 precedent."
-- ral-jobs: final A100 round r3 on nufftax 0.6.1 (human upgraded shared RAL venv 2026-09-25): sma 351083, alma 351078, alma_high 351079/351080(mp), jvla 351081/351082(mp) — all COMPLETED and pulled. RAL worktree /mnt/ral/jnightin/autolens_profiling_wt/interferometer-mge-breakdown @6a9f2be.
-- resume: PHASE C DONE; PR https://github.com/PyAutoLabs/autolens_profiling/pull/312 open (pending-release), Heart YELLOW acknowledged by human 2026-09-26 (unrelated reasons). Next = /prm (merge + completion record). 5 follow-ups filed in draft/: interferometer_mge_w_tilde_route_mge_only, interferometer_chunked_transform_mapping_matrix, interferometer_transform_mapping_matrix_real_scatter, ral_venv_dependency_floor_drift, workspace_interferometer_mge_sparse_operator_memory_docs.
-- summary: Interferometer likelihood campaign 1/3: interferometer MGE breakdown cell on the shared harness (+ exploratory W~ func-list arm), JAX CPU + RAL A100 fp64 (mp on A100) across sma/alma/alma_high(/jvla), VRAM block re-test, ranked lever note + follow-up prompts.
-
 ## interferometer-mge-w-tilde-route
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/575
 - issued: 2026-09-26
 - prompt: active/interferometer_mge_w_tilde_route_mge_only.md
 - session: Claude Code CLI (Opus 5.5), 2026-09-26
 - status: library-shipped, workspace-pending
-- library-pr:
-  - https://github.com/PyAutoLabs/PyAutoArray/pull/576
-  - https://github.com/PyAutoLabs/PyAutoGalaxy/pull/629
-  - https://github.com/PyAutoLabs/PyAutoLens/pull/750
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/576
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/629
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/750
 - heart-red-override: "2026-09-26 live user chose 'Override, open PRs' for this task (commit/push/pending-release PR only; merge via /prm on green checks; no release). RED reasons: release validation FAILED (stage integrate); workspace validation not passing (4 failed, cloud#35579888156); manifest drift hub organism blurb 7; manifest drift organism-map blocks 1. Gates passed: unit 1706/1240/757+1xf, smoke 24/24."
 - worktree: /home/jammy/Code/PyAutoLabs-wt/interferometer-mge-w-tilde-route
 - autonomy: supervised (header); plan approved in-session 2026-09-26 (scope incl. interferometer profile-subtracted dirty-image seam fix in PyAutoGalaxy + PyAutoLens)
@@ -125,4 +109,4 @@
   - PyAutoArray: feature/interferometer-mge-w-tilde-route
   - PyAutoGalaxy: feature/interferometer-mge-w-tilde-route
   - PyAutoLens: feature/interferometer-mge-w-tilde-route
-- workspace-followup: autolens_profiling (library-path re-run of the MGE breakdown cell + VRAM rows) once interferometer-mge-breakdown (#312) merges and releases the claim
+- workspace-followup: autolens_profiling (library-path re-run of the MGE breakdown cell + VRAM rows); the interferometer-mge-breakdown claim is released (#312 merged 2026-09-26), so the follow-up is unblocked on that side
