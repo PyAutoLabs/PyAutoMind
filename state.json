@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-09-27T22:01:42Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
+  "updated": "2026-09-27T22:19:23Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Move committed job logs and JSON sidecars out of results/notes/ \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/342",
-      "prompt": "/start_dev active/notes_logs_and_sidecars_out_of_results_notes.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -126,6 +120,12 @@
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#634 \u2014 Summary",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/634",
       "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "waiting on PyAutoGalaxy's release: Workspace config cleanup: remove orphan config keys the Nerves board flags",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/issues/441",
+      "prompt": "/start_dev active/workspace_config_cleanup.md"
     }
   ]
 }

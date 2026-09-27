@@ -1,25 +1,5 @@
 # Active Tasks
 
-## profiling-notes-sidecars-out
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/341
-- issued: 2026-09-27
-- prompt: active/notes_logs_and_sidecars_out_of_results_notes.md
-- session: Claude Code remote (web), https://claude.ai/code/session_01MwuV47ESjoLFM8MuFZjw2s
-- location: remote-container clone of autolens_profiling (no task worktree); GitHub via the mcp__github__ tools
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/342
-- autonomy: human-required (header); plan on the issue; merge is human via /prm
-- epic: profiling-research-wiki (follow-on)
-- repos:
-  - autolens_profiling: claude/profiling-wiki-phase-2-b8vtjm
-- summary: |
-    PR #342 open (head ab1e4fd, 45 files): 16 .out logs -> results/logs/<campaign>/, 10 JSON
-    sidecars -> results/breakdown/imaging/ (git mv, links rewritten); artefact policy in
-    results/README.md; check_results_layout.py --check in lint.yml with a 530-file grandfather
-    manifest; provenance block attached by device_info_dict(). Local gates green (52 tests, ruff,
-    check_wiki, layout check, README dashboard); lint.yml smoke + lychee run in CI.
-- resume: /prm 342 when lint.yml is green
-
 ## eyes-organ-order
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/439
 - issued: 2026-09-25
