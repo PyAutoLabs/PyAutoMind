@@ -1,3 +1,54 @@
+# Point-source (single-source) CPU speed-up campaign — phase 4a: re-baseline + solver-config sweep
+
+Phase 4a re-measured the released 2026.9.26.1 PointSolver on RAL CPU fp64 (Xeon 8490H) and ran a completeness-gated solver-config sweep. It was workspace-only research: data plus one research cell, with no library code changed. Phase 4a shipped whole. The rest of phase 4 is filed as separate prompts (see Handoff), and the phase 1–3 carried leftovers are re-filed as `draft/research/autolens_profiling/pointsolver_cpu_speed_campaign_remainder.md`, which points back at this record.
+
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/314
+- completed: 2026-09-27
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/321
+
+## Shipped
+
+- Merged [autolens_profiling#321](https://github.com/PyAutoLabs/autolens_profiling/pull/321) at `3e4a068f7bc15423224b939b4c7d41b02f05b757` (branch head `d2bd1efe`) on the human's `/prm` of 2026-09-27. At close-out the branch head was proven an ancestor of `origin/main`, 0 commits ahead.
+- New files:
+  - the cell `scripts/point_source_image/likelihood_breakdown/solver_config_sweep.py`. It is completeness-gated and interleaved, with a `--quick` witness.
+  - the RAL submits `hpc/batch_cpu/submit_breakdown_point_source_image_{image_plane_p4,solver_config_sweep}_ral_cpu_fp64`.
+  - the results `results/breakdown/point_source_image/{image_plane_hpc_ral_cpu_fp64_p4,solver_config_sweep_hpc_ral_cpu_fp64,solver_config_sweep_laptop_cpu_fp64}.{json,png}`.
+  - the job logs 356365 and 356367.
+  - a "Phase 4a" section in `results/notes/point_source_cpu_campaign.md`.
+
+## Evidence
+
+- **Re-baseline (RAL job 356365, 1 + 4 replicates):**
+  - The fused solved likelihood has a median of 2.095 ms. The fiducial log L `7.743201200876812` is bit-identical to phases 1–3.
+  - **Step 0 is 66 %** of the call (1.384 ms), and refinement steps 1–7 are ≈ 15 %. This overturns the phase-3 FLOP ranking.
+  - The `vertices[indices]` gather alone is ≈ 0.9 ms (≈ 49 %), so the cost is memory-bound. The image_plane cell's step-0 split counts the gather as ray trace.
+- **Solver-config sweep (RAL job 356367):** 26 routes, gated against a fine reference (±12″ / 0.05 / 1e-4 / MCS 60), bootstrap 90 % CIs, `all_gates_pass: true`.
+  - The default is complete on 200/200 prior and 200/200 stress draws, with max position error 8.5e-4″.
+  - Extent-only speed-ups: ±6″ 1.52×, ±4″ 1.78×, ±3″ 2.05×, ±2.5″ 2.24×.
+  - Scale 0.4 gives 1.43× and is log-L-identical.
+  - The best combination, ±2.5″ / 0.4, gives 2.37× [2.28, 2.59] single and 5.55× at vmap-16.
+  - Inadmissible: scale 0.8 (prior 195/200), MCS 8 / 10 and nd 0. nd 2 is 0.65×. The precision knobs give no admissible gain.
+- **Latent `MAX_CONTAINING_SIZE` overflow:** the uncapped step-0 containing count reaches 17 > 15 on prior draw 12. The cap truncates silently. Completeness survived only because the dropped entries were spurious fold-line candidates.
+- **Checks at ship:** `build_readme.py --check`, `check_submits.py --check` (16 submits, 0 failing), ruff, the smoke of the new cell and the campaign-note link check all passed. Heart was YELLOW (no RED) for reasons unrelated to this PR.
+
+## Decisions (human, 2026-09-26)
+
+- No library extent default change. The grid extent is set per workspace package, and the library gains a construction-time sanity-check warning.
+- The next code lever is the step-0 gather.
+- Raise MCS headroom from 15 to about 20, and measure it.
+- The starting-scale finding stands.
+- The two-source cluster rows move to epic `cluster-pointsolver-speed`.
+
+## Handoff
+
+- Phase 4b is the step-0 gather / containment lever: prompt `active/pointsolver_step0_gather_containment.md`, task `pointsolver-step0-gather`, PyAutoArray#579 (in flight).
+- Phase 4c is the MCS headroom: `draft/feature/autoarray/pointsolver_max_containing_size_headroom.md`.
+- The extent sanity-check warning (PyAutoLens) is `draft/feature/autolens/pointsolver_extent_sanity_check.md`.
+- The per-package grid extents are `draft/feature/autolens_workspace/pointsolver_grid_extent_per_package.md`. They depend on the sanity check, and cluster scripts are left alone.
+- The phase 1–3 carried leftovers (RAL clone cleanup, test placement, the jax.grad warning candidate, CI smoke coverage, unmeasured controls, campaign completion evidence) are in `draft/research/autolens_profiling/pointsolver_cpu_speed_campaign_remainder.md`.
+
+## Original prompt
+
 # Point-source (single-source) CPU speed-up campaign — phase 4: profile the residue and measured iteration
 
 Type: research

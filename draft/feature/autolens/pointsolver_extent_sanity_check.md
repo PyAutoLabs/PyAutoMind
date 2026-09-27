@@ -17,7 +17,7 @@ Review-minutes: 20
 Unattended: ready
 Epic: point-source-cpu-speed
 Filed: 2026-09-26
-Parent: active/pointsolver_cpu_speed_phase_4.md (issue autolens_profiling#314)
+Parent: complete/2026/09/point-source-cpu-p4.md (issue autolens_profiling#314)
 
 ## Human decision (2026-09-26, live)
 

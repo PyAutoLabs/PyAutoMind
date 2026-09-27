@@ -42,11 +42,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 9 |
+| [In flight](#in-flight) (`active/`) | 8 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 247 |
+| [Backlog](#backlog) (`draft/`) | 248 |
 
 > **No batch in flight.**
 
@@ -272,14 +272,6 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/point_source_source_plane_phase_2c.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/pointsolver_cpu_speed_phase_4.md">Point-source (single-source) CPU speed-up campaign — phase 4: profile the residue…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/314">issue #314</a> — issued 2026-09-26 — awaiting-merge (phase 4a PR #321 open; human runs /prm) — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/321">autolens_profiling#321</a></summary>
-
-```
-/start_dev active/pointsolver_cpu_speed_phase_4.md
 ```
 
 </details>
@@ -550,7 +542,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**247** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **54** of them belong to an epic and are listed only under [Epics](#epics) below.
+**248** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **55** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 70</summary>
@@ -2434,7 +2426,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-26 | issued | <a href="active/pointsolver_cpu_speed_phase_4.md">Point-source (single-source) CPU speed-up campaign — phase 4: profile…</a> |
 | 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
 | 2026-09-25 | filed | <a href="draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md">Keep caches off <code>$HOME</code> on HPC — phase 2 remainder: euclid pipeline…</a> |
 | 2026-09-25 | issued | <a href="active/eyes_organ_order.md">Canonical organ order — Eyes after Memory, before Heart</a> |
@@ -2444,12 +2435,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-22 | issued | <a href="active/vis_lp_inspection_bundle.md">Support vis_lp-only products in inspection bundles</a> |
 | 2026-09-20 | planned | <a href="planned.md#vis-magnitude-catalogue-top1000">vis-magnitude-catalogue-top1000</a> |
 | 2026-09-20 | issued | <a href="active/vis_magnitude_catalogue_top1000.md">Export VIS magnitudes for the Euclid DR1 top-1000 fits</a> |
+| 2026-09-19 | issued | <a href="parked.md#catalogue-inspection-before-vis-pix">catalogue-inspection-before-vis-pix</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-19 | issued | <a href="parked.md#catalogue-inspection-before-vis-pix">catalogue-inspection-before-vis-pix</a> |
 | 2026-09-18 | parked | <a href="parked.md#fixed-light-numba-s7">fixed-light-numba-s7</a> |
 | 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
@@ -2459,12 +2450,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/pyautobrain/sizing_faculty_none_rule_keyword_false_judge_triage.md">Sizing faculty: a <code>none</code> rule, keyword hits on prose that only…</a> |
+| 2026-09-17 | filed | <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-17 | filed | <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> |
 | 2026-09-17 | filed | <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> |
 | 2026-09-17 | filed | <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source A100 speed-up campaign: profile and optimize with the…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads…</a> |
@@ -2474,12 +2465,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/refactor/autofit/ep_analysis_level_compile_cache.md">EP: cache the compiled JAX likelihood on the Analysis across factor…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> |
 | 2026-09-17 | filed | <a href="draft/feature/autolens_assistant/benchmark_positions_initialised_inference.md">Benchmark card: positions-initialised imaging inference of a…</a> |
+| 2026-09-17 | filed | <a href="draft/feature/autolens_assistant/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-17 | filed | <a href="draft/feature/autolens_assistant/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging…</a> |
 | 2026-09-16 | filed | <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of…</a> |
 | 2026-09-16 | filed | <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding…</a> |
 | 2026-09-16 | filed | <a href="draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> /…</a> |
@@ -2489,6 +2480,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-15 | filed | <a href="draft/feature/pyautoheart/howto_real_settings_nightly.md">Nightly run of one HowTo tutorial per chapter at real settings</a> |
 | 2026-09-15 | filed | <a href="draft/docs/howtofit/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autolens_workspace/start_here_multistart_compile_time.md">imaging/start_here: 26-minute XLA compile of the 48-start Prodigy…</a> |
+| 2026-09-14 | filed | <a href="draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md"><code>curvature_reg_matrix</code> rebuilds <code>F + H</code> on every access — and the…</a> |
 
 </details>
 
@@ -2622,12 +2614,12 @@ Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonic
 </details>
 
 <details>
-<summary><b>Point-source (single-source) PointSolver CPU speed-up</b> — 4 queued prompt(s), in order</summary>
+<summary><b>Point-source (single-source) PointSolver CPU speed-up</b> — 5 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Point-source (single-source) PointSolver CPU speed-up</b> — ledger: `autolens_profiling/results/notes/point_source_cpu_campaign.md` — phases 1-3 shipped (p2 + p3 released in 2026.9.26.1: PyAutoArray <code>7fa8d271</code>, PyAutoLens <code>86054bbc</code>); phase 4a (re-baseline +…</summary>
 
 ```
-Continue the 'Point-source (single-source) PointSolver CPU speed-up' epic. Its canonical state lives in autolens_profiling/results/notes/point_source_cpu_campaign.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: human decision 2026-09-26 — SINGLE-SOURCE only, the `scripts/point_source_image/` + `scripts/point_source_source/` use case (formerly `scripts/point_source/`); the cluster use case moved to epic `cluster-pointsolver-speed`. Member prompt `active/pointsolver_cpu_speed_phase_4.md` (phase 4a issued as autolens_profiling#314); source-plane member prompt `draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md` (phases 2+, re-filed at close-out; ledger `results/notes/point_source_source_plane_campaign.md`) (re-tagged from `cluster-strong-lensing`, which is the unrelated Source & Cluster arc). Records `complete/2026/09/point-source-cpu-p{1,2,3}.md`. Issue ONE bounded phase at a time; any library default change (PyAutoLens `shape_solver.py` / PyAutoArray `MAX_CONTAINING_SIZE`) is a human decision at the phase-4a checkpoint.
+Continue the 'Point-source (single-source) PointSolver CPU speed-up' epic. Its canonical state lives in autolens_profiling/results/notes/point_source_cpu_campaign.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: human decision 2026-09-26 — SINGLE-SOURCE only, the `scripts/point_source_image/` + `scripts/point_source_source/` use case (formerly `scripts/point_source/`); the cluster use case moved to epic `cluster-pointsolver-speed`. Phase-4 campaign prompt recorded at `complete/2026/09/point-source-cpu-p4.md` (phase 4a, autolens_profiling#321, merge `3e4a068`; its `## Original prompt` holds the campaign contract); open members: phase 4b `active/pointsolver_step0_gather_containment.md` (PyAutoArray#579), phase 4c `draft/feature/autoarray/pointsolver_max_containing_size_headroom.md`, `draft/feature/autolens/pointsolver_extent_sanity_check.md`, `draft/feature/autolens_workspace/pointsolver_grid_extent_per_package.md`, carried leftovers `draft/research/autolens_profiling/pointsolver_cpu_speed_campaign_remainder.md`; source-plane member prompt `draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md` (phases 2+, re-filed at close-out; ledger `results/notes/point_source_source_plane_campaign.md`) (re-tagged from `cluster-strong-lensing`, which is the unrelated Source & Cluster arc). Records `complete/2026/09/point-source-cpu-p{1,2,3,4}.md`. Issue ONE bounded phase at a time; any library default change (PyAutoLens `shape_solver.py` / PyAutoArray `MAX_CONTAINING_SIZE`) is a human decision at the phase-4a checkpoint.
 ```
 
 </details>
@@ -2660,6 +2652,14 @@ Continue the 'Point-source (single-source) PointSolver CPU speed-up' epic. Its c
 
 ```
 /start_dev draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/pointsolver_cpu_speed_campaign_remainder.md">Point-source (single-source) CPU campaign — carried leftovers and completion evidence</a> — autolens_profiling · small · supervised · low</summary>
+
+```
+/start_dev draft/research/autolens_profiling/pointsolver_cpu_speed_campaign_remainder.md
 ```
 
 </details>
@@ -3070,7 +3070,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 </details>
 
-66 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+67 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3115,7 +3115,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 - `draft/test/workspaces/mesh_magnification_correctness.md`
 - `draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md`
 - `draft/test/workspaces/restore_workspace_test_likelihood_baselines.md`
-- _… and 26 more_
+- _… and 27 more_
 
 </details>
 

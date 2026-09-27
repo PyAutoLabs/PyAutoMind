@@ -101,7 +101,7 @@ cluster epic" note in the hand-off, never acted on. Epic tag is `point-source-cp
   `results/notes/point_source_shared_likelihood_breakdown.md`), phases 1-3 shipped
   (`complete/2026/09/point-source-cpu-p{1,2,3}.md`, ledger
   `results/notes/point_source_cpu_campaign.md`), phase 4 drafted at
-  `active/pointsolver_cpu_speed_phase_4.md`.
+  `complete/2026/09/point-source-cpu-p4.md`.
 - The **source-plane** chi-squared (`al.FitPositionsSource` / `al.FitPositionsSourceSolved`,
   Lenstool's default likelihood, no lens-equation solve) has **no campaign, no epic entry and
   no breakdown instrument**. What exists:
@@ -134,7 +134,7 @@ This is a phased campaign, the source-plane sibling of the image-plane CPU campa
 start-dev issue ONLY the next bounded phase (one task / one PR per member), retaining this
 prompt as the campaign intent until every phase is resolved. The image-plane campaign's
 **measurement and acceptance contract** (in
-`active/pointsolver_cpu_speed_phase_4.md`, "Campaign contract")
+`complete/2026/09/point-source-cpu-p4.md`, "Campaign contract")
 governs verbatim: record commits / JAX versions / device / precision / threads / seeds;
 separate lowering, compile, first call and warmed runtime; block_until_ready; vary
 parameters through the production likelihood so constant folding cannot fake work; retain a
@@ -207,7 +207,7 @@ new label; GPU regression check on every shared library change.
 
 ## Related
 
-- `active/pointsolver_cpu_speed_phase_4.md` — image-plane sibling campaign (contract source), same epic.
+- `complete/2026/09/point-source-cpu-p4.md` — image-plane sibling campaign (contract source), same epic.
 - `draft/research/autolens_profiling/cluster_pointsolver_speed.md` — the cluster epic that receives any carried cluster evidence.
 - `draft/research/autolens_profiling/point_solver_profiling_cells.md`, `point_source_image_plane_gpu_breakdown.md` — related point-source prompts.
 
