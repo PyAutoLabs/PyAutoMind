@@ -6,14 +6,17 @@
 - prompt: active/wiki_backfill_ledger_and_mind_drift.md
 - session: Claude Code remote (web), https://claude.ai/code/session_01MwuV47ESjoLFM8MuFZjw2s
 - location: remote-container clone of autolens_profiling (no task worktree); GitHub via the mcp__github__ tools
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/344
 - autonomy: safe (header)
 - epic: profiling-research-wiki (follow-on)
 - repos:
   - autolens_profiling: claude/profiling-wiki-phase-2-b8vtjm
 - summary: |
-    Dated correction lines in nine results/notes ledgers; seven Mind pointer fixes; one draft
-    retired with a record; the certified-positive-solver epic archived from its records.
+    PR #344 open (nine dated correction lines in results/notes, policy date fix). The Mind half
+    (pointer fixes, curvature_reg_matrix draft retired with a record, certified-positive-solver
+    epic archived) is on the Mind branch as ledger-only commits and lands by the ledger merge.
+- resume: /prm 344 when lint.yml is green
 
 ## eyes-organ-order
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/439
