@@ -44,7 +44,7 @@ Parent-record: complete/2026/09/point-source-source-plane-p2c.md
   point-source and a non-point-source analysis, GPU regression check, then refresh the profiling rows.
 - **Carried:** intake PyAutoGalaxy bugs — `jax.grad` NaN at exactly (0,0) for ExternalShear /
   multipole comps / ell_comps; `PowerLawMultipole` m=1 singular at slope 2; `Isothermal.convergence_2d_from`
-  not jit-traceable with traced ell_comps (fixed: PyAutoGalaxy#633, record
+  (and `shear_yx_2d_from`) not jit-traceable with traced ell_comps (fixed: PyAutoGalaxy#633, record
   `complete/2026/09/isothermal-convergence-jit.md`). RAL p2a/p2b/p2c worktrees + bundles to remove.
 
 ## Phase 2b shipped — next is phase 2c (2026-09-27)
@@ -62,7 +62,9 @@ Parent-record: complete/2026/09/point-source-source-plane-p2c.md
   winning. Only then design the PyAutoFit gradient-entry-point switch (conditional on `n_params`)
   from the measured crossover — that design is a human decision before any library phase.
 - **Carried:** `Isothermal.convergence_2d_from` / `shear_yx_2d_from` not jit-traceable with traced
-  `ell_comps` (→ intake as PyAutoGalaxy bug); RAL p2a/p2b worktrees + bundle to remove.
+  `ell_comps` (both fixed by PyAutoGalaxy#633 — `shear_yx_2d_from` routes through `convergence_2d_from`;
+  jit == NumPy verified 2026-09-27, pre-#633 source raises TracerArrayConversionError); RAL p2a/p2b
+  worktrees + bundle to remove.
 
 ## Phase 2a shipped — remainder re-filed (2026-09-27)
 
