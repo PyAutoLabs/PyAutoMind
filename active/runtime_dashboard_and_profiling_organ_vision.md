@@ -5,6 +5,8 @@
 - Epic: profiling-research-wiki (dashboard leg; organ birth is a later, separate epic)
 - Autonomy: human-required
 - Filed: 2026-09-27
+- Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/345
+Issued: 2026-09-27
 
 ## Original prompt
 

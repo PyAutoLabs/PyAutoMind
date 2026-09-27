@@ -1,5 +1,22 @@
 # Active Tasks
 
+## profiling-runtime-dashboard
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/345
+- issued: 2026-09-27
+- prompt: active/runtime_dashboard_and_profiling_organ_vision.md
+- session: Claude Code remote (web), https://claude.ai/code/session_01MwuV47ESjoLFM8MuFZjw2s
+- location: remote-container clone of autolens_profiling (no task worktree); GitHub via the mcp__github__ tools
+- status: workspace-dev
+- autonomy: human-required (header); plan on the issue; merge is human via /prm
+- epic: profiling-research-wiki (dashboard leg; organ birth is a later, separate epic)
+- repos:
+  - autolens_profiling: claude/profiling-runtime-dashboard-b8vtjm
+- summary: |
+    build_dashboard.py -> dashboard/{series.json,state.json,index.html} (run time per cell x
+    config per release, provenance-qualified, drift badge), pinned release sweep in hpc/,
+    profile.yml + pages_dashboard.yml wiring. Brain-board registration deferred (PyAutoBrain
+    claimed by eyes-organ-order). Second branch per the human's choice so #344 and this can be open together.
+
 ## wiki-backfill-drift
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/343
 - issued: 2026-09-27
