@@ -15,14 +15,14 @@ Consequence: judge
 Witness: `benchmarks/runs/forward_model_consistency/` holds three scored runs from one model×harness, RESULTS.md shows the row with median and range, the card's tests pass including the (y,x)-swapped negative test, and `make_truth.py` is byte-deterministic on the recorded wheel.
 Review-minutes: 15
 Unattended: needs-access
-Blocked-by: PyAutoMind/active/oneshot_benchmark_harness.md (autolens_assistant#126)
+Unblocked: 2026-09-27 — harness shipped (autolens_assistant#127, PyAutoBrain#380; issue #126 closed; record complete/2026/09/oneshot-benchmark-harness.md)
 Filed: 2026-09-17
 
 ## Why
 
 Second of the two one-shot, machine-scored assistant benchmarks (design 2026-09-17;
-harness and score contract in `oneshot_benchmark_harness.md`, which this card is
-**blocked on**). No inference: the difficulty comes from chaining three workspace
+harness and score contract in `complete/2026/09/oneshot-benchmark-harness.md`, which this card was
+**blocked on** — shipped 2026-09-27). No inference: the difficulty comes from chaining three workspace
 packages (`imaging`, `point_source`, `interferometer`) plus data preparation so every
 stage depends on the previous one being right, and from a scorer that mostly rewards
 **agreement between packages**, which a wrong unit, sign or (y,x) convention breaks in

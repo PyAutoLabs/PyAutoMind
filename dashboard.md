@@ -42,7 +42,7 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 10 |
+| [In flight](#in-flight) (`active/`) | 9 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
@@ -264,14 +264,6 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/interferometer_mesh_breakdown_jax_a100.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/oneshot_benchmark_harness.md">One-shot benchmark harness and computed-score contract for the assistant benchmarks</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/126">issue #126</a> — issued 2026-09-17 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/380">PyAutoBrain#380</a>, <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/127">autolens_assistant#127</a></summary>
-
-```
-/start_dev active/oneshot_benchmark_harness.md
 ```
 
 </details>
@@ -2142,6 +2134,40 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
+<summary><b>assistant</b> — 4 task(s) · 7 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: assistant, benchmarks, colab, onboarding</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the judgment tier for the PyAutoMind bundle 'assistant' — 4 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/feature/autolens_assistant/benchmark_forward_model_consistency.md
+- draft/feature/autolens_assistant/benchmark_positions_initialised_inference.md
+- draft/feature/autolens_assistant/bootstrap_smoke_codex_and_bench_pr.md
+- draft/feature/autolens_assistant/colab_refinement_throughout.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Repo | Difficulty | Priority | Status |
+|--------|------|------------|----------|--------|
+| <a href="draft/feature/autolens_assistant/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging…</a> | autolens_assistant | medium | high | formalised |
+| <a href="draft/feature/autolens_assistant/benchmark_positions_initialised_inference.md">Benchmark card: positions-initialised imaging inference of a…</a> | autolens_assistant | medium | high | formalised |
+| <a href="draft/feature/autolens_assistant/bootstrap_smoke_codex_and_bench_pr.md">bootstrap-smoke: run Codex on the v2 prompt, then merge the…</a> | autolens_assistant | small | normal | draft |
+| <a href="draft/feature/autolens_assistant/colab_refinement_throughout.md">Refine the assistant for Google Colab, here and throughout</a> | autolens_assistant | medium | normal | draft |
+
+</details>
+
+<details>
 <summary><b>pyautobrain — bundle 1</b> — 4 task(s) · 7 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -2305,36 +2331,6 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-<details>
-<summary><b>euclid · hpc — bundle 2</b> — 2 task(s) · 3 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: catalogue, euclid, hpc</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the judgment tier for the PyAutoMind bundle 'euclid · hpc — bundle 2' — 2 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md
-- draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> | euclid | small | high | formalised |
-| <a href="draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md">euclid_dr1: every dataset rgb.jpg is upside down relative to the VIS…</a> | euclid | - | - | - |
-
-</details>
-
 _Showing 8 of 39 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
@@ -2390,7 +2386,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 |------|-------|------|
 | 2026-09-17 | filed | <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> |
 | 2026-09-17 | filed | <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source A100 speed-up campaign: profile and optimize with the…</a> |
-| 2026-09-17 | issued | <a href="active/oneshot_benchmark_harness.md">One-shot benchmark harness and computed-score contract for the…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autoarray/mesh_geometry_areas_transformed_adapt_image_indexerror.md">MeshGeometryRectangular.areas_transformed raises IndexError for…</a> |
@@ -2398,12 +2393,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/refactor/autofit/ep_analysis_level_compile_cache.md">EP: cache the compiled JAX likelihood on the Analysis across factor…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> |
 | 2026-09-17 | filed | <a href="draft/feature/autolens_assistant/benchmark_positions_initialised_inference.md">Benchmark card: positions-initialised imaging inference of a…</a> |
+| 2026-09-17 | filed | <a href="draft/feature/autolens_assistant/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-17 | filed | <a href="draft/feature/autolens_assistant/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging…</a> |
 | 2026-09-16 | filed | <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of…</a> |
 | 2026-09-16 | filed | <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding…</a> |
 | 2026-09-16 | filed | <a href="draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> /…</a> |
@@ -2413,6 +2408,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-15 | filed | <a href="draft/feature/pyautoheart/howto_real_settings_nightly.md">Nightly run of one HowTo tutorial per chapter at real settings</a> |
 | 2026-09-15 | filed | <a href="draft/docs/howtofit/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autolens_workspace/start_here_multistart_compile_time.md">imaging/start_here: 26-minute XLA compile of the 48-start Prodigy…</a> |
+| 2026-09-14 | filed | <a href="draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md"><code>curvature_reg_matrix</code> rebuilds <code>F + H</code> on every access — and the…</a> |
 
 </details>
 

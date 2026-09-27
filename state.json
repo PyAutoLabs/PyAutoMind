@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 10 in flight",
-  "updated": "2026-09-27T10:26:03Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 9 in flight",
+  "updated": "2026-09-27T10:26:58Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,12 +12,6 @@
       "text": "Interferometer likelihood campaign 2/3: Delaunay-1500 and rectangular mesh breakdown on JAX A100\u2026 \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/324",
       "prompt": "/start_dev active/interferometer_mesh_breakdown_jax_a100.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "One-shot benchmark harness and computed-score contract for the assistant benchmarks \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/380",
-      "prompt": "/start_dev active/oneshot_benchmark_harness.md"
     },
     {
       "severity": "yellow",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: autofit_workspace autofit_workspace#162 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/autofit_workspace/pull/162",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: autofit_workspace_test autofit_workspace_test#98 \u2014 ep-stale-tracking-per-variable",
+      "url": "https://github.com/PyAutoLabs/autofit_workspace_test/pull/98",
       "prompt": null
     }
   ]

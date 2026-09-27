@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1577 records across 8 buckets.
+1578 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -364,6 +364,7 @@ markers; everything below GENERATED is rebuilt.
 - [numpy-deflections-p2](2026/09/numpy-deflections-p2.md)
 - [numpy-deflections-p3](2026/09/numpy-deflections-p3.md)
 - [offtick-timing-legs-live](2026/09/offtick-timing-legs-live.md)
+- [oneshot-benchmark-harness](2026/09/oneshot-benchmark-harness.md) — One-shot, machine-scored assistant benchmarks: headless `benchmark.py run`
 - [order-lens-mge-bases-and-seed](2026/09/order-lens-mge-bases-and-seed.md)
 - [org-community-guidance-hub](2026/09/org-community-guidance-hub.md) — Organization contribution/conduct/support guidance centralized in .github; Scientist compatibility pointers an…
 - [org-community-guidance-scientist](2026/09/org-community-guidance-scientist.md) — Organization contribution/conduct/support guidance centralized in .github; Scientist compatibility pointers an…

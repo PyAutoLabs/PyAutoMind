@@ -1,3 +1,31 @@
+## oneshot-benchmark-harness
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/126 (closed)
+- completed: 2026-09-27
+- library-pr: PyAutoBrain https://github.com/PyAutoLabs/PyAutoBrain/pull/380 (merged)
+- workspace-pr: autolens_assistant https://github.com/PyAutoLabs/autolens_assistant/pull/127 (merged)
+- classification: feature (assistant, benchmarks) — supervised; Brain PR first (the assistant PR's `Brain-ref:`).
+
+- summary: One-shot, machine-scored assistant benchmarks: headless `benchmark.py run`
+  (harnesses.yaml adapters, private workdir without benchmarks/truth, compute shims),
+  computed-score contract (common gates × card metrics → RESULTS.md medians), prompt freeze
+  (prompt_sha256 + VERSIONS.lock), first one-shot card `oneshot-smoke`, 2026-07 cards retired to
+  prompts/conversational/, Brain clone VALIDATION_PLAN/partition update.
+- first headless runs (lens/autolens_assistant/benchmarks/RESULTS.md):
+  - `oneshot-smoke` v1, claude-sonnet-5 / claude-code, 2026-09-17: score 100 (23.7 s).
+  - `cosmos-web-ring-fit` v1, 2026-09-26: three runs 0 / 0 / 100. The zeros are
+    `finished: no_result_json` — the agent backgrounded the fit and ended its turn under
+    `claude -p`; fixed by contract wording in benchmarks/AGENTS.md; the zeros are retained as records.
+  - `bootstrap-smoke`: claude-code 97, 100; codex 13, 13.
+- witness deviation: the Witness names `benchmark.py run harness-smoke`, but as built `harness_smoke`
+  remains the operator-driven qualification card (new-run → manual session → score.md → score) and
+  `benchmark.py run` accepts only one-shot cards. `oneshot-smoke` is the headless end-to-end witness
+  and it passed. Not reopened.
+- unblocked: `draft/feature/autolens_assistant/benchmark_forward_model_consistency.md`,
+  `draft/feature/autolens_assistant/benchmark_positions_initialised_inference.md`.
+- closed: 2026-09-27.
+
+## Original prompt
+
 # One-shot benchmark harness and computed-score contract for the assistant benchmarks
 
 Type: feature
