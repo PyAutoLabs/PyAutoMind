@@ -20,10 +20,10 @@ Updated: 2026-09-27
 
 Found building the phase-2c model ladder (autolens_profiling#331, source-plane point-source campaign):
 an m=1 `PowerLawMultipole` with its slope tied to an isothermal lens (slope 2) gives `-inf` / NaN
-deflections, so the ladder used a satellite shear instead. The power-law multipole deflection has
-a factor that vanishes for m = 3 − γ... i.e. the m=1 term is degenerate at γ = 2 (the isothermal
-case, the most common slope), so this is a singular limit of the formula rather than a numerical
-accident.
+deflections, so the ladder used a satellite shear instead. The power-law multipole deflection
+appears to carry a denominator that vanishes when m = 3 − γ, which makes the m=1 term degenerate at
+γ = 2 (isothermal, the most common slope). If so, this is a singular limit of the formula rather
+than a numerical accident — confirm against the implementation.
 
 ## Fix direction
 
