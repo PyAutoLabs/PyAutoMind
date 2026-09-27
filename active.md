@@ -109,3 +109,16 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/328
 - heart-ack: "manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: organism-map blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml; release validation incomplete: no rehearsal for current source" (acknowledged 2026-09-27, none touch autolens_profiling)
 - resume: 2026-09-27 SHIPPED — PR autolens_profiling#328 open (6 commits defb5a8..2908bb2; RAL CPU numba/FFT/JAX-CPU rows + alma N sweep; sma adapt image kept at May-18 copy, human decision). Next = human /prm 328; then phase 2 (crossover) and phase 3 (A100 mask-radius sweep) can start in parallel. Follow-up draft filed: draft/feature/autoarray/interferometer_sparse_numpy_cache_curvature_and_data_vector.md
+
+## point-source-source-plane-p2c
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/329
+- issued: 2026-09-27
+- prompt: active/point_source_source_plane_phase_2c.md (phase 2c of campaign draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md)
+- epic: point-source-cpu-speed
+- session: Claude Code CLI (Opus 5.5), 2026-09-27
+- worktree: /home/jammy/Code/PyAutoLabs-wt/point-source-source-plane-p2c
+- autonomy: supervised (header); plan approved in-session 2026-09-27 (crossover study, workspace-only)
+- parallel-claim: autolens_profiling also claimed by pointsolver-step0-gather, point-source-cpu-p4 (#321) and interferometer-mesh-numba-p1; phase 2c touches only scripts/point_source_source/likelihood_breakdown/gradient_mode_crossover.py, results/breakdown/point_source_source/gradient_mode_crossover_*, hpc/batch_{cpu,gpu}/submit_gradient_mode_crossover_point_source_source_*, point_source_source_plane_campaign.md (Phase 2c section), README rows. Own worktree approved by the human 2026-09-27.
+- repos:
+  - autolens_profiling: feature/point-source-source-plane-p2c
+- status: workspace-dev
