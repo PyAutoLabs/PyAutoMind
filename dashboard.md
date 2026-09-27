@@ -268,7 +268,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/organ_cockpit_gut_void_sibling_reach.md">Organ cockpit: Gut void button reaches refs held on sibling repos</a> — <a href="https://github.com/PyAutoLabs/PyAutoGut/issues/11">issue #11</a> — issued 2026-09-26 — library-dev (BUILT, committed d956c380, unpushed — awaiting Heart YELLOW ack + /ship_library; checkpoint on the issue 2026-09-26)</summary>
+<details><summary>📋 <a href="active/organ_cockpit_gut_void_sibling_reach.md">Organ cockpit: Gut void button reaches refs held on sibling repos</a> — <a href="https://github.com/PyAutoLabs/PyAutoGut/issues/11">issue #11</a> — issued 2026-09-26 — library-shipped, awaiting-merge (PR open, head d956c380; 23 passed; Heart YELLOW acked by human 2026-09-27) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGut/pull/12">PyAutoGut#12</a> — ⏳ pending release: PyAutoGut</summary>
 
 ```
 /start_dev active/organ_cockpit_gut_void_sibling_reach.md
@@ -276,7 +276,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/organ_cockpit_nerves_unused_keys.md">Organ cockpit: Nerves board flags config keys not in use anymore</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/174">issue #174</a> — issued 2026-09-26 — library-dev (BUILT, committed 079b182, unpushed — awaiting Heart YELLOW ack + /ship_library; checkpoint on the issue 2026-09-26)</summary>
+<details><summary>📋 <a href="active/organ_cockpit_nerves_unused_keys.md">Organ cockpit: Nerves board flags config keys not in use anymore</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/174">issue #174</a> — issued 2026-09-26 — library-shipped, awaiting-merge (PR open, head 079b182; 206 passed; Heart YELLOW acked by human 2026-09-27) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/175">PyAutoNerves#175</a> — ⏳ pending release: PyAutoNerves</summary>
 
 ```
 /start_dev active/organ_cockpit_nerves_unused_keys.md
@@ -284,7 +284,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/organ_cockpit_start_dev_heart_gate.md">Organ cockpit: start_dev refuses or warns on the Heart feed before development…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/423">issue #423</a> — issued 2026-09-26 — library-dev (BUILT, committed e31d92f, unpushed — awaiting Heart YELLOW ack + /ship_library; checkpoint on the issue 2026-09-26)</summary>
+<details><summary>📋 <a href="active/organ_cockpit_start_dev_heart_gate.md">Organ cockpit: start_dev refuses or warns on the Heart feed before development…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/423">issue #423</a> — issued 2026-09-26 — library-shipped, awaiting-merge (PR open, head e31d92f; full suite 1077 passed / 1 pre-existing env failure; Heart YELLOW acked… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/424">PyAutoBrain#424</a> — ⏳ pending release: PyAutoBrain</summary>
 
 ```
 /start_dev active/organ_cockpit_start_dev_heart_gate.md
@@ -339,6 +339,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoBrain**
 
+- [PyAutoBrain#424](https://github.com/PyAutoLabs/PyAutoBrain/pull/424) — `active/organ_cockpit_start_dev_heart_gate.md`
 - [PyAutoBrain#404](https://github.com/PyAutoLabs/PyAutoBrain/pull/404) — `complete/2026/09/codex-context-efficiency.md`
 - [PyAutoBrain#387](https://github.com/PyAutoLabs/PyAutoBrain/pull/387) — `complete/2026/09/codex-token-efficiency.md`
 - [PyAutoBrain#406](https://github.com/PyAutoLabs/PyAutoBrain/pull/406) — `complete/2026/09/community-surface-brain.md`
@@ -349,6 +350,10 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 - [PyAutoGalaxy#629](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/629) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 
+**PyAutoGut**
+
+- [PyAutoGut#12](https://github.com/PyAutoLabs/PyAutoGut/pull/12) — `active/organ_cockpit_gut_void_sibling_reach.md`
+
 **PyAutoLens**
 
 - [PyAutoLens#750](https://github.com/PyAutoLabs/PyAutoLens/pull/750) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
@@ -358,6 +363,10 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoMind#425](https://github.com/PyAutoLabs/PyAutoMind/pull/425) — `complete/2026/09/codex-context-efficiency.md`
 - [PyAutoMind#427](https://github.com/PyAutoLabs/PyAutoMind/pull/427) — `complete/2026/09/community-surface-policy.md`
 - [PyAutoMind#406](https://github.com/PyAutoLabs/PyAutoMind/pull/406) — `complete/2026/09/provider-neutral-bundle-prompts.md`
+
+**PyAutoNerves**
+
+- [PyAutoNerves#175](https://github.com/PyAutoLabs/PyAutoNerves/pull/175) — `active/organ_cockpit_nerves_unused_keys.md`
 
 **PyAutoReduce**
 
