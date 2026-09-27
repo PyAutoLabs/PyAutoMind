@@ -108,3 +108,16 @@
   - autolens_profiling: feature/point-source-cpu-p4
 - parallel-claim: |
     autolens_profiling also claimed by interferometer-transform-real-scatter (1 file: hpc/batch_gpu interferometer A100 submit); file sets disjoint; human-approved own worktree 2026-09-26
+
+## point-source-source-plane-p2b
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/325
+- issued: 2026-09-27
+- prompt: active/point_source_source_plane_phase_2b.md (phase 2b of campaign draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md)
+- epic: point-source-cpu-speed
+- session: Claude Code CLI (Opus 5.5), 2026-09-27
+- worktree: /home/jammy/Code/PyAutoLabs-wt/point-source-source-plane-p2b
+- autonomy: supervised (header); plan approved in-session 2026-09-27 (backward-pass A/B, workspace-only)
+- parallel-claim: autolens_profiling also claimed by point-source-cpu-p4 (#321), pointsolver-step0-gather (p4b) and interferometer-mesh-breakdown-a100; phase 2b touches only scripts/point_source_source/likelihood_breakdown/backward_pass_ab.py, results/breakdown/point_source_source/backward_pass_ab_*, hpc/batch_{cpu,gpu}/submit_backward_pass_ab_point_source_source_*, point_source_source_plane_campaign.md (Phase 2b section), README rows. Own worktree approved by the human 2026-09-27.
+- repos:
+  - autolens_profiling: feature/point-source-source-plane-p2b
+- status: workspace-dev
