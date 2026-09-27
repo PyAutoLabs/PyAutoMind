@@ -81,13 +81,16 @@
 - prompt: active/interferometer_sparse_numpy_cache_curvature_and_data_vector.md
 - epic: interferometer-likelihood-campaign
 - session: Claude Code CLI (Opus 5.5), 2026-09-27; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge (PyAutoArray PR #582 open; human runs /prm)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/interferometer-sparse-cache
 - autonomy: supervised (header); plan approved in-session 2026-09-27 (cache curvature_matrix / data_vector on the interferometer sparse + mapping inversions)
 - parallel-claim: "PyAutoArray also claimed by point-source-cpu-p4b / PR #580 — PointSolver step-0 files; this task touches only autoarray/inversion/inversion/interferometer*/ and test_autoarray/inversion/inversion/interferometer*/; human-approved 2026-09-27"
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/582
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/582
+- heart-ack: "manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: organism-map blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml; release validation incomplete: no rehearsal for current source" (acknowledged 2026-09-27)
 - repos:
   - PyAutoArray: feature/interferometer-sparse-cache
-- resume: 2026-09-27 BUILT, UNPUSHED — PyAutoArray feature/interferometer-sparse-cache local commit ef905789 (cached_property on interferometer/sparse.py data_vector/curvature_matrix/curvature_matrix_diag, numba curvature_matrix_diag, mapping.py data_vector/curvature_matrix + count tests red 2/2 -> green 1/1). test_autoarray 1736 passed; PyAutoGalaxy/PyAutoLens interferometer 40/35 passed. Laptop sma harness: evaluations {1,1} (was {2,4}); FoM bit-identical before/after (Delaunay -3162.6272344520685 laptop, rect -3168.595092417778 = pin); numba full call Delaunay 492->343 ms, rect 1275->1245 ms (fnnls-dominated, noisy); JAX sma FoM bit-identical, jaxpr 305->272 eqns; workspace_test sparse JAX scripts pass. Harness counter needs a cached_property-aware wrapper in the after-measurement PR (patch kept in session scratchpad). Next = /ship_library.
+- resume: 2026-09-27 SHIPPED — PyAutoArray PR #582 open (head ef905789, pending-release label; CI pending at open). Verification: red 2/2 -> green 1/1 count tests; test_autoarray 1736; galaxy/lens interferometer 40/35; workspace_test 3 JAX sparse scripts pass; laptop sma harness {2,4}->{1,1}, FoM bit-identical, Delaunay numba 492->343 ms. Next = human /prm 582; then workspace after-measurement PR in autolens_profiling (harness counter fix = session scratchpad harness_cached_property_counter.patch: cached_property-aware counter + pop-before-access F/D sub-rows; RAL CPU numba re-run of sma/alma/alma_high both meshes on merged main). Follow-up draft filed: draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md
 
 ## where-to-file-block
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/442
