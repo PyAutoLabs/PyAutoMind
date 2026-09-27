@@ -46,13 +46,13 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 248 |
+| [Backlog](#backlog) (`draft/`) | 247 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 23
+**Highest priority** (filed as `high`) — showing 12 of 22
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -82,14 +82,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/pyautomind/where_to_file_block.md">docs: "Where to file" block in every public AGENTS.md — route user…</a> — pyautomind · small · supervised · high</summary>
-
-```
-/start_dev draft/docs/pyautomind/where_to_file_block.md
 ```
 
 </details>
@@ -146,6 +138,14 @@ anything you could not verify.
 
 ```
 /start_dev draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md">Final numerics audit of every mesh interpolator</a> — autoarray · large · supervised · high</summary>
+
+```
+/start_dev draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md
 ```
 
 </details>
@@ -542,7 +542,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**248** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **55** of them belong to an epic and are listed only under [Epics](#epics) below.
+**247** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **55** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 69</summary>
@@ -1797,15 +1797,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>docs</b> — 16</summary>
-
-<details><summary>📋 <a href="draft/docs/pyautomind/where_to_file_block.md">docs: "Where to file" block in every public AGENTS.md — route user…</a> — pyautomind · small · supervised · high</summary>
-
-```
-/start_dev draft/docs/pyautomind/where_to_file_block.md
-```
-
-</details>
+<summary><b>docs</b> — 15</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
 
@@ -3068,7 +3060,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 </details>
 
-67 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+66 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3108,12 +3100,12 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 - `draft/refactor/workspaces/abell_1201_local_cleanup.md`
 - `draft/docs/autolens/split_lensing_regimes.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
-- `draft/docs/pyautomind/where_to_file_block.md`
 - `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
 - `draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md`
 - `draft/test/workspaces/mesh_magnification_correctness.md`
 - `draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md`
-- _… and 27 more_
+- `draft/test/workspaces/restore_workspace_test_likelihood_baselines.md`
+- _… and 26 more_
 
 </details>
 
