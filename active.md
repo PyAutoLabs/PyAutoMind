@@ -5,9 +5,11 @@
 - issued: 2026-09-26
 - prompt: active/organ_cockpit_nerves_unused_keys.md
 - session: Claude Code CLI (Fable architect, Opus execution), 2026-09-26; session ID https://claude.ai/code/session_01SbKQQHRRgm2b69aT9t7771
-- status: library-dev (BUILT, committed 079b182, unpushed — awaiting Heart YELLOW ack + /ship_library; checkpoint on the issue 2026-09-26)
-- resume: /ship_library bundle cockpit-followups → push + PR + merge on green → dispatch nerves_board.yml / gut_board.yml → /prm. 206 tests; AST scan; real counts Fit 8 / Array 1 / Galaxy 1 / Lens 58 (dead Dynesty block) / CTI 8 unused
+- status: library-shipped, awaiting-merge (PR open, head 079b182; 206 passed; Heart YELLOW acked by human 2026-09-27)
+- resume: /prm https://github.com/PyAutoLabs/PyAutoNerves/pull/175 (human merge on green) → dispatch nerves_board.yml / gut_board.yml → close-out
 - autonomy: safe (header); bundle cockpit-followups (with gut-void-sibling-reach, start-dev-heart-gate); epic organ-cockpit; plan approved in session and on the issue; merge is human
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/175
+- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/175
 - worktree: /home/jammy/Code/PyAutoLabs-wt/cockpit-followups
 - repos:
   - PyAutoNerves: feature/nerves-unused-keys
@@ -19,9 +21,11 @@
 - issued: 2026-09-26
 - prompt: active/organ_cockpit_gut_void_sibling_reach.md
 - session: Claude Code CLI (Fable architect, Opus execution), 2026-09-26; session ID https://claude.ai/code/session_01SbKQQHRRgm2b69aT9t7771
-- status: library-dev (BUILT, committed d956c380, unpushed — awaiting Heart YELLOW ack + /ship_library; checkpoint on the issue 2026-09-26)
-- resume: /ship_library bundle cockpit-followups → push + PR + merge on green → dispatch nerves_board.yml / gut_board.yml → /prm. 23 tests; PAT_PYAUTOLABS path masked; 8 overdue sibling refs in the void-plan; Void links 44→53
+- status: library-shipped, awaiting-merge (PR open, head d956c380; 23 passed; Heart YELLOW acked by human 2026-09-27)
+- resume: /prm https://github.com/PyAutoLabs/PyAutoGut/pull/12 (human merge on green) → dispatch nerves_board.yml / gut_board.yml → close-out
 - autonomy: safe (header); bundle cockpit-followups (with nerves-unused-keys, start-dev-heart-gate); epic organ-cockpit; plan approved in session and on the issue; merge is human
+- library-pr: https://github.com/PyAutoLabs/PyAutoGut/pull/12
+- pending-release: PyAutoGut@https://github.com/PyAutoLabs/PyAutoGut/pull/12
 - worktree: /home/jammy/Code/PyAutoLabs-wt/cockpit-followups
 - repos:
   - PyAutoGut: feature/gut-void-sibling-reach
@@ -33,9 +37,11 @@
 - issued: 2026-09-26
 - prompt: active/organ_cockpit_start_dev_heart_gate.md
 - session: Claude Code CLI (Fable architect, Opus execution), 2026-09-26; session ID https://claude.ai/code/session_01SbKQQHRRgm2b69aT9t7771
-- status: library-dev (BUILT, committed e31d92f, unpushed — awaiting Heart YELLOW ack + /ship_library; checkpoint on the issue 2026-09-26)
-- resume: /ship_library bundle cockpit-followups → push + PR + merge on green → dispatch nerves_board.yml / gut_board.yml → /prm. 41 targeted tests; heart_feed.py live STALE exit 1; step 0a in start_dev + start_bundle + route + WORKFLOW
+- status: library-shipped, awaiting-merge (PR open, head e31d92f; full suite 1077 passed / 1 pre-existing env failure; Heart YELLOW acked by human 2026-09-27)
+- resume: /prm https://github.com/PyAutoLabs/PyAutoBrain/pull/424 (human merge on green) → dispatch nerves_board.yml / gut_board.yml → close-out
 - autonomy: safe (header); bundle cockpit-followups (with nerves-unused-keys, gut-void-sibling-reach); epic organ-cockpit; plan approved in session and on the issue; merge is human
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/424
+- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/424
 - worktree: /home/jammy/Code/PyAutoLabs-wt/cockpit-followups
 - repos:
   - PyAutoBrain: feature/start-dev-heart-gate
