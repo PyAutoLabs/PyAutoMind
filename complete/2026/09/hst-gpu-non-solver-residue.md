@@ -1,3 +1,20 @@
+# The non-solver residue — HST GPU likelihood breakdown around the certified solve (campaign COMPLETE)
+
+Retired 2026-09-27 via `/intake reconcile draft/research/autolens_profiling` (human-requested). Campaign map for epic
+`hst-gpu-non-solver-residue`; it was never issued itself — its phases shipped one at a time:
+
+- Phase 1 — measured decomposition of the fused A100 call (#268, PR #270): `complete/2026/09/hst-gpu-residue-p1.md`
+- Phase 2 — `Fitness._vmap` composition, completed inconclusive: `complete/2026/09/hst-gpu-residue-p2.md`
+- Phase 3 — PSF convolution, no fp64 lever (autolens_profiling#296): `complete/2026/09/hst-gpu-residue-p3.md`
+- Phase 4 — log-det Cholesky reuse, no lever (autolens_profiling#303, PR #306): `complete/2026/09/hst-gpu-residue-p4.md`
+
+Verdict (the map's own last revision, 2026-09-24): **the fp64 levers in this map are exhausted.** Remaining work lives
+outside the map and is filed elsewhere: the human fp32-cube precision decision (phase 3), the cond-free batched fallback
+(now certified-solver C2, `draft/feature/autofit/certified_solver_batched_guard_c2.md`), and the qhull callback /
+batching work.
+
+## Original prompt
+
 # The non-solver residue — optimise the HST GPU likelihood breakdown around the certified solve
 
 Type: research

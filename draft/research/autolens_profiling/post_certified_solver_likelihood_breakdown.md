@@ -42,7 +42,7 @@ Publish machine-readable measurements and a concise per-hardware/per-mesh verdic
 
 Reconcile overlap at planning time with these existing Mind records, reusing useful results/instrumentation without duplicating or silently replacing ongoing work:
 
-- draft/research/autolens_profiling/hst_gpu_non_solver_residue_programme.md: broader HST/A100 optimization campaign, predating production integration.
+- complete/2026/09/hst-gpu-non-solver-residue.md (COMPLETE 2026-09-27): broader HST/A100 optimization campaign, predating production integration.
 - complete/2026/09/fixed-lens-light-numba-cpu.md: completed CPU campaign; HST Delaunay evidence is reusable, not full nine-cell coverage.
 - complete/2026/09/fixed-light-numba-phase1.md (harness shipped, legs unrun) and complete/2026/09/fixed-light-numba-solver.md: the CPU measurement/decomposition.
 
