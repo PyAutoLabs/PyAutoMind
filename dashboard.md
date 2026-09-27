@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 248 |
+| [Backlog](#backlog) (`draft/`) | 252 |
 
 > **No batch in flight.**
 
@@ -541,7 +541,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**248** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **54** of them belong to an epic and are listed only under [Epics](#epics) below.
+**252** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **58** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 70</summary>
@@ -2963,7 +2963,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 </details>
 
 <details>
-<summary><b>interferometer-likelihood-campaign</b> — 5 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+<summary><b>interferometer-likelihood-campaign</b> — 9 queued prompt(s) — ⚠️ not in `epics.md`</summary>
 
 <details><summary>📋 <a href="draft/bug/pyautoheart/ral_venv_dependency_floor_drift.md">RAL PyAuto venv: third-party packages below the library floors…</a> — pyautoheart · easy · supervised · medium</summary>
 
@@ -2973,10 +2973,34 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 </details>
 
+<details><summary>📋 <a href="draft/feature/autoarray/edge_zeroed_log_det_cholesky_reuse.md">Reuse the fnnls Cholesky factor for the log det when edge-zeroed pixels…</a> — autoarray · small · supervised · low</summary>
+
+```
+/start_dev draft/feature/autoarray/edge_zeroed_log_det_cholesky_reuse.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/feature/autoarray/interferometer_chunked_transform_mapping_matrix.md">Interferometer likelihood campaign: chunk TransformerNUFFT.transform_mapping_matrix over columns and visibilities</a> — autoarray · medium · supervised · medium</summary>
 
 ```
 /start_dev draft/feature/autoarray/interferometer_chunked_transform_mapping_matrix.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/interferometer_direct_conv_prange_load_balance.md">Load-balance the <code>prange</code> direct_conv interferometer kernel (Delaunay stalls at 2 threads, autolens_profiling#332)</a> — autoarray · small · supervised · low</summary>
+
+```
+/start_dev draft/feature/autoarray/interferometer_direct_conv_prange_load_balance.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/interferometer_numba_gate_retune_70.md">Retune the interferometer numba gate 60 → 70 (in-situ crossover, autolens_profiling#332)</a> — autoarray · small · supervised · low</summary>
+
+```
+/start_dev draft/feature/autoarray/interferometer_numba_gate_retune_70.md
 ```
 
 </details>
@@ -2993,6 +3017,14 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 ```
 /start_dev draft/research/autolens_profiling/interferometer_mesh_breakdown_numba_cpu_decision_matrix.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/interferometer_nnls_memo_scattered_stream_guard.md">fnnls warm-start memo: stop it slowing scattered evaluation streams (interferometer CPU, autolens_profiling#332)</a> — autolens_profiling · medium · supervised · medium</summary>
+
+```
+/start_dev draft/research/autolens_profiling/interferometer_nnls_memo_scattered_stream_guard.md
 ```
 
 </details>
@@ -3118,13 +3150,15 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 </details>
 
-67 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+70 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
 
 - `draft/feature/autoarray/adapt_linear_default_flip.md — unknown theme keyword(s): inference`
+- `draft/feature/autoarray/edge_zeroed_log_det_cholesky_reuse.md — unknown theme keyword(s): inversion`
 - `draft/feature/autoarray/interferometer_chunked_transform_mapping_matrix.md — unknown theme keyword(s): jax-gpu, vram`
+- `draft/feature/autoarray/interferometer_numba_gate_retune_70.md — unknown theme keyword(s): config`
 - `draft/feature/autoarray/source_clumps_robust_scale.md — unknown theme keyword(s): source-reconstruction`
 - `draft/feature/autofit/certified_solver_batched_guard_c2.md — unknown theme keyword(s): inversion`
 - `draft/feature/autolens/coolest_pixel_grid_export.md — unknown theme keyword(s): coolest, interop, euclid`
@@ -3185,6 +3219,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 - `draft/research/autolens_profiling/cluster_pointsolver_speed.md — unknown theme keyword(s): jax`
 - `draft/research/autolens_profiling/interferometer_fixed_mapper_curvature_preload.md — unknown theme keyword(s): likelihood-profiling, jax-gpu`
 - `draft/research/autolens_profiling/interferometer_mesh_breakdown_numba_cpu_decision_matrix.md — unknown theme keyword(s): likelihood-profiling`
+- `draft/research/autolens_profiling/interferometer_nnls_memo_scattered_stream_guard.md — unknown theme keyword(s): nnls, likelihood-profiling`
 - `draft/research/autolens_profiling/interferometer_w_tilde_fft_size_levers.md — unknown theme keyword(s): likelihood-profiling, jax-gpu`
 - `draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md — unknown theme keyword(s): jax-gpu`
 - `draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md — unknown theme keyword(s): jax`
