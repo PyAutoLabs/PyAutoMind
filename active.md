@@ -20,6 +20,24 @@
   - PyAutoGut: feature/eyes-organ-order
 - resume: bundle worktree created; implement the reorder per the issue plan (Eyes between Memory and Heart), then repos_sync --write, then ship
 
+## workspace-config-cleanup
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/441
+- issued: 2026-09-27
+- prompt: active/workspace_config_cleanup.md
+- epic: organ-cockpit
+- session: Claude Code CLI (Opus 5.5 main session + Opus subagent), 2026-09-27; session ID unavailable
+- status: library-dev
+- autonomy: supervised (header); plan approved in-session 2026-09-27 (library-first: Nerves board equivalence + allow-list, PyAutoGalaxy promotion, then workspace deletes)
+- worktree: ~/Code/PyAutoLabs-wt/workspace-config-cleanup
+- parallel-claim: "PyAutoNerves is also claimed by eyes-organ-order (PyAutoMind#439), whose Nerves diff is only AGENTS.md; this task touches only scripts/board.py + its tests. Parallel worktree human-approved 2026-09-27; noted on #439 and #441."
+- repos:
+  - PyAutoNerves: feature/workspace-config-cleanup
+  - PyAutoGalaxy: feature/workspace-config-cleanup
+  - autofit_workspace: feature/workspace-config-cleanup
+  - autogalaxy_workspace: feature/workspace-config-cleanup
+  - autolens_workspace: feature/workspace-config-cleanup
+  - autocti_workspace: feature/workspace-config-cleanup
+
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
 - issued: 2026-09-22

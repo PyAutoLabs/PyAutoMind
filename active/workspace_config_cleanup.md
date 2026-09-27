@@ -16,6 +16,7 @@ Witness: after the change, a local Nerves board render (`python3 scripts/board.p
 Review-minutes: 3
 Unattended: ready
 Filed: 2026-09-27
+Issued: 2026-09-27
 Epic: organ-cockpit
 Lane: local-dev
 
