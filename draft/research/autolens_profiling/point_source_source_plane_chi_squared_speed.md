@@ -44,7 +44,8 @@ Parent-record: complete/2026/09/point-source-source-plane-p2c.md
   point-source and a non-point-source analysis, GPU regression check, then refresh the profiling rows.
 - **Carried:** intake PyAutoGalaxy bugs — `jax.grad` NaN at exactly (0,0) for ExternalShear /
   multipole comps / ell_comps; `PowerLawMultipole` m=1 singular at slope 2; `Isothermal.convergence_2d_from`
-  not jit-traceable with traced ell_comps. RAL p2a/p2b/p2c worktrees + bundles to remove.
+  not jit-traceable with traced ell_comps (fixed: PyAutoGalaxy#633, record
+  `complete/2026/09/isothermal-convergence-jit.md`). RAL p2a/p2b/p2c worktrees + bundles to remove.
 
 ## Phase 2b shipped — next is phase 2c (2026-09-27)
 

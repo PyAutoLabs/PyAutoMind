@@ -1,3 +1,16 @@
+## isothermal-convergence-jit
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/632
+- completed: 2026-09-27
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/633
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/633
+- merged: 152695e0 (single commit 3ac1ec1f); CI green on all 4 legs; Heart freeze not frozen
+- summary: `PowerLawCore.convergence_2d_from` (power_law_core.py) called `convergence_func(grid_radius=...)` without `xp`, so the default `np` hit `Isothermal.axis_ratio` with a JAX tracer (`TracerArrayConversionError` under `jax.jit`). It was the only `convergence_func(...)` call site omitting `xp`; the fix passes `xp=xp`, repairing PowerLaw, PowerLawIntermediate, IsothermalCore and other subclasses too.
+- test: jax-free spy-`xp` regression in `test_autogalaxy/profiles/mass/total/test_isothermal.py` asserting `convergence_func` receives the caller's `xp`; red on unfixed main, green after. Scratch jit witness: jit output equals NumPy output.
+- workspace impact: none (API Changes: None).
+- origin: carried from point-source-source-plane-p2c `carried:` intake list (the phase 2b bug).
+
+## Original prompt
+
 # Isothermal.convergence_2d_from not jit-traceable (PowerLawCore drops xp)
 
 Type: bug
