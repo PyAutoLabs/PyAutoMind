@@ -29,12 +29,6 @@ epic, never picked standalone.
 - ledger: draft/feature/autolens/source_cluster_arc.md
 - notes: 12 phased prompts under draft/; issue phases ONE at a time as predecessors near shipping — no bulk issue queues. Science half: the PyAutoCortex project ledger of the science project it births (arc phase 11).
 
-## profiling-research-wiki
-- title: Profiling research wiki — every campaign's why, verdict, headline and release state, kept in autolens_profiling/wiki/
-- ledger: autolens_profiling/wiki/index.md
-- status: COMPLETE 2026-09-27 — phase 1 SHIPPED (autolens_profiling#338 merged `a825d074`, issue #337 closed, record `complete/2026/09/profiling-research-wiki.md`: index with 22 rows, four live campaign pages, check_wiki.py lint leg); phase 2 SHIPPED (autolens_profiling#340 merged `5deb704a`, issue #339 closed, record `complete/2026/09/profiling-research-wiki-p2.md`: all 18 stub pages backfilled with why / phases / tag-verified release tables / caveats, index rebuilt, seven no-note library speed-ups recorded, PyAutoArray#582 F/D counts settled). Follow-ups drafted: `draft/maintenance/autolens_profiling/wiki_backfill_ledger_and_mind_drift.md` (ledger + Mind drift the backfill surfaced), `draft/refactor/autolens_profiling/notes_logs_and_sidecars_out_of_results_notes.md`, `draft/feature/autolens_profiling/runtime_dashboard_and_profiling_organ_vision.md`
-- notes: born from the 2026-09-27 profiling review — no index covered point-source or interferometer, 7 of 9 September profiling epics had no live ledger, the "why" lived in issue bodies. Home is the profiling repo (Memory = science, Cortex = science runs, Mind ledgers get archived). Dashboard leg and any organ birth come after phase 2.
-
 ## point-source-cpu-speed
 - title: Point-source (single-source) PointSolver CPU speed-up
 - ledger: autolens_profiling/wiki/campaigns/point_source_image_plane_cpu.md (full record: results/notes/point_source_cpu_campaign.md)
