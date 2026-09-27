@@ -63,14 +63,16 @@
 - prompt: active/pointsolver_step0_gather_containment.md
 - epic: point-source-cpu-speed
 - session: Claude Code CLI (Opus 5.5 subagent), 2026-09-26; session ID unavailable
-- status: library-dev
+- status: library-shipped, profiling-pending (PyAutoArray PR #580 open; 8490H job 357321 queued)
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/580
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/580
 - autonomy: supervised (header); plan approved in-session 2026-09-26 (phase 4b: step-0 containment without the (N,3,2) gather; prototype + laptop measurement first)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/pointsolver-step0-gather
 - repos:
   - PyAutoArray: feature/pointsolver-step0-gather
   - autolens_profiling: feature/point-source-cpu-p4b
 - parallel-claim: "autolens_profiling is also claimed by point-source-cpu-p4 (PR #321 open), interferometer-mesh-breakdown-a100 and point-source-source-plane-p2a. p4b is the human-approved sequential follow-on of p4: its branch feature/point-source-cpu-p4b is based on feature/point-source-cpu-p4 until #321 merges, then rebases onto main. It touches scripts/point_source_image/likelihood_breakdown/solver_config_sweep.py and later results/breakdown/point_source_image/ + point_source_cpu_campaign.md (Phase 4b section); disjoint from the interferometer and source-plane tasks. Human-approved 2026-09-26."
-- checkpoint: 2026-09-26 WIP commit 8755072f on PyAutoArray feature/pointsolver-step0-gather (LOCAL only, not pushed): 4 step-0 routes behind array._STEP0_CONTAINMENT, scratch bit-identity OK; resume = tests (fuzz, refinement, HLO guard red-on-main) -> PyAutoArray+PyAutoLens suites -> --step0-route laptop A/B in the p4b profiling worktree (no changes there yet) -> pick default (see issue #579 checkpoint comment)
+- checkpoint: 2026-09-27 PyAutoArray PR #580 open (default route structured; Heart YELLOW acked by human: manifest drift + stale rehearsal). autolens_profiling feature/point-source-cpu-p4b has LOCAL unpushed commits da46563 7725a6b f7edb9f 311e690 84a867b 9f3fc61 db94264 (harness --step0-route, instrument fixes, laptop/EPYC/A100 results, ledger Phase 4b). Quotable RAL 8490H job 357321 PENDING on saturated ral (10-4); on finish it writes solver_config_sweep_step0_hpc_ral_cpu_fp64.json in /mnt/ral/jnightin/autolens_profiling_wt/pointsolver-step0-gather. Resume = pull that JSON -> commit + update the ledger NOT RUN (queued) subsection -> make the A100 fiducial gate device-aware (...806) -> rebase onto main once #321 merges -> ship_workspace data PR; PyAutoLens needs no PR
 
 ## point-source-cpu-p4
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/314
