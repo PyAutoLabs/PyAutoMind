@@ -1,4 +1,4 @@
-# Interferometer likelihood campaign 3/3 — mesh numba CPU breakdown + CPU-vs-GPU decision matrix — phase map (phases 1-2 shipped / awaiting merge; phases 3 & 4 next)
+# Interferometer likelihood campaign 3/3 — mesh numba CPU breakdown + CPU-vs-GPU decision matrix — phase map (phases 1-2 shipped; phases 3 & 4 next)
 
 Type: research
 Target: autolens_profiling
@@ -35,9 +35,10 @@ Updated: 2026-09-27
   `draft/feature/autoarray/interferometer_sparse_numpy_cache_curvature_and_data_vector.md` — library half
   shipped 2026-09-27 (`complete/2026/09/interferometer-sparse-cache.md`, PyAutoArray#582).
 
-## Phase 2 shipped — awaiting merge (2026-09-27)
+## Phase 2 shipped (2026-09-27)
 
-- **PR:** https://github.com/PyAutoLabs/autolens_profiling/pull/333 (issue #332), human runs /prm.
+- **PR:** https://github.com/PyAutoLabs/autolens_profiling/pull/333 (issue #332) — MERGED 2026-09-27,
+  merge `f075a6c5`; record `complete/2026/09/interferometer-mesh-numba-p2.md`.
 - **Crossover (in situ, alma radius sweep, RAL CPU, PyAutoArray e281abf3):** nnz/col ≈ 66 Delaunay
   (r5.0 55.6 → 0.886, r6.0 81.4 → 1.169), ≈ 72 rect (r4.25 59.7 → 0.749, r5.0 82.7 → 1.225).
   Gate 60 routes every measured cell right; one gate ≈ 70 fits both best (retune prompt drafted).
@@ -45,12 +46,14 @@ Updated: 2026-09-27
 - **Follow-ups filed (draft):** `draft/research/autolens_profiling/interferometer_nnls_memo_scattered_stream_guard.md`,
   `draft/feature/autoarray/{interferometer_numba_gate_retune_70,interferometer_direct_conv_prange_load_balance,edge_zeroed_log_det_cholesky_reuse}.md`.
 - **Next:** phase 3 (A100 mask-radius sweep) and phase 4 (decision matrix); the phase-2 CPU rows at
-  r2.0 / 3.5 / 5.0 are the CPU half of the phase-4 witness.
+  r2.0 / 3.5 / 5.0 are the CPU half of the phase-4 witness. Caveat for phase 4: the phase-1 alma
+  N-sweep rows remain on the uncached library — note it (or re-run) before mixing them with the
+  cached-library crossover.
 
 ## Phase 2 issued (2026-09-27)
 
 - **Issue:** https://github.com/PyAutoLabs/autolens_profiling/issues/332 (task
-  `interferometer-mesh-numba-p2`, prompt `active/interferometer_mesh_numba_cpu_phase_2.md`,
+  `interferometer-mesh-numba-p2`, prompt folded into `complete/2026/09/interferometer-mesh-numba-p2.md`,
   branch `feature/interferometer-mesh-numba-p2`). Plan approved by the human in-session.
 - **Folded in:** `draft/research/autolens_profiling/interferometer_sparse_cache_after_measurement.md`
   (harness `cached_property` counter fix + RAL CPU numba re-run on PyAutoArray main >= e281abf3) —
@@ -118,7 +121,7 @@ Record `complete/2026/09/interferometer-mesh-numba-p1.md` (task `interferometer-
 - Witness: gated-arm JSON `configuration.inversion_path == "InversionInterferometerSparseNumba"`,
   numba vs FFT log-evidence <= 0.5 nat (expect ~1e-8), step sum within 10 % of the full call.
 
-### Phase 2 — in-situ crossover + CPU lever list (CPU only) — SHIPPED 2026-09-27 (#332, PR #333 awaiting merge)
+### Phase 2 — in-situ crossover + CPU lever list (CPU only) — SHIPPED 2026-09-27 (#332, PR #333 merged `f075a6c5`)
 
 - Sweep numba vs NumPy FFT across alma r2.0 / 3.5 / 5.0 and alma_high r3.5 for both meshes
   (nnz/col ~10 -> 123); re-derive rect nnz in situ (the #226 rect values do not reproduce as
@@ -129,7 +132,7 @@ Record `complete/2026/09/interferometer-mesh-numba-p1.md` (task `interferometer-
   `NUMBA_NUM_THREADS` scaling, fnnls warm-start memo, Cholesky reuse, `kernel_index_arrays`
   preload, MGE+mesh numba route), one draft prompt per worthwhile lever.
 - Witness: measured crossover bracketed by two measured points per mesh.
-- Folded in (2026-09-27): the former `draft/research/autolens_profiling/interferometer_sparse_cache_after_measurement.md` (harness cached_property counter fix + RAL CPU numba re-run of sma/alma/alma_high on PyAutoArray main ≥ e281abf3) — now in `active/interferometer_mesh_numba_cpu_phase_2.md`.
+- Folded in (2026-09-27): the former `draft/research/autolens_profiling/interferometer_sparse_cache_after_measurement.md` (harness cached_property counter fix + RAL CPU numba re-run of sma/alma/alma_high on PyAutoArray main ≥ e281abf3) — folded into the phase-2 record `complete/2026/09/interferometer-mesh-numba-p2.md`.
 
 ### Phase 3 — A100 mask-radius sweep (new RAL GPU jobs)
 

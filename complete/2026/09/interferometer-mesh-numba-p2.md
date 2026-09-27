@@ -1,3 +1,50 @@
+# interferometer-mesh-numba-p2
+
+- Repo: autolens_profiling (workspace-only)
+- Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/332 (closed by the merge)
+- PR: https://github.com/PyAutoLabs/autolens_profiling/pull/333 (MERGED, merge commit `f075a6c5`, head `9a4981d`, 2026-09-27; lint green, the only check)
+- Epic: interferometer-likelihood-campaign — phase 2 of `draft/research/autolens_profiling/interferometer_mesh_breakdown_numba_cpu_decision_matrix.md`
+- Folds in the retired `interferometer_sparse_cache_after_measurement.md` (cached_property counter).
+
+## What shipped
+
+Phase 2 of the interferometer mesh numba-CPU campaign: the in-situ numba-vs-FFT
+crossover, the CPU lever arms, the cached_property counter fold-in and RAL CPU rows.
+
+- **Crossover on the cached library:** Delaunay nnz/col ~66-67, rectangular ~72-73.
+  Bracketing cells: Delaunay r5.0 0.886 / r6.0 1.169; rect r4.25 0.749 / r5.0 1.225
+  (numba/FFT time ratio).
+- **Gate:** the current gate 60 routes every measured cell to the right path; the
+  single-gate minimax is ~70 (retune filed as a draft, below).
+- **Caching fix confirmed on RAL:** 0.5-0.6x at alma / alma_high (RAL jobs
+  358985 / 358986 / 359000).
+- **alma baseline:** numba 1.26 s vs FFT 2.59 s (Delaunay); 1.83 s vs 2.94 s (rect).
+- **Lever ranking:** fnnls memo guard, gate retune, prange load balance, rect
+  edge-zeroed log-det Cholesky miss.
+- **Not levers:** marshalling, the MGE+mesh route, FFT size (already drafted).
+
+## Caveat
+
+The phase-1 alma N-sweep rows remain on the **uncached** library; phase 4's decision
+matrix must not mix them with the cached-library crossover without a note.
+
+## Follow-ups filed
+
+- `draft/research/autolens_profiling/interferometer_nnls_memo_scattered_stream_guard.md`
+- `draft/feature/autoarray/interferometer_numba_gate_retune_70.md`
+- `draft/feature/autoarray/interferometer_direct_conv_prange_load_balance.md`
+- `draft/feature/autoarray/edge_zeroed_log_det_cholesky_reuse.md`
+
+Campaign next: phase 3 (A100 mask-radius sweep), then phase 4 (decision matrix).
+RAL worktrees `/mnt/ral/jnightin/autolens_profiling_wt/interferometer-mesh-numba-p{1,2}`
+left in place for phase 3 dataset reuse.
+
+## Heart ack carried from the active.md row
+
+- heart-ack: "2026-09-27 YELLOW acknowledged by the human ('approve you to continue', same set as #328/#582, none touch autolens_profiling): manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: organism-map blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml; release validation incomplete: no rehearsal for current source"
+
+## Original prompt
+
 # Interferometer likelihood campaign 3/3 — phase 2: numba vs FFT CPU crossover + CPU lever list
 
 Type: research

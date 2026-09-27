@@ -100,23 +100,6 @@
   - PyAutoLens: feature/pointsolver-mcs-headroom
   - autolens_profiling: feature/pointsolver-mcs-headroom
 
-## interferometer-mesh-numba-p2
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/332
-- issued: 2026-09-27
-- prompt: active/interferometer_mesh_numba_cpu_phase_2.md (phase 2 of campaign draft/research/autolens_profiling/interferometer_mesh_breakdown_numba_cpu_decision_matrix.md; folds in the retired interferometer_sparse_cache_after_measurement.md)
-- epic: interferometer-likelihood-campaign
-- session: Claude Code CLI (Opus 5.5), 2026-09-27; session ID unavailable
-- status: awaiting-merge (PR #333 open; human runs /prm)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/interferometer-mesh-numba-p2
-- autonomy: supervised (header); plan approved in-session 2026-09-27 (phase 2: in-situ numba vs FFT crossover + CPU lever arms + cached_property counter fold-in + RAL CPU rows, workspace-only)
-- parallel-claim: "autolens_profiling is also claimed by point-source-source-plane-p2c (#329 / PR #331), whose files are scripts/point_source_source/**, results/breakdown/point_source_source/** and the point-source notes; this phase touches only scripts/misc/likelihood_breakdown/interferometer_pixelized_numpy.py, scripts/interferometer/likelihood_breakdown/*_numba.py, scripts/misc/test/test_interferometer_pixelized_numpy.py, hpc/batch_cpu/*interferometer*numba*, results/breakdown/interferometer/**numba*, results/notes/numba_interferometer_verdict.md and results/notes/interferometer_mesh_cpu_breakdown_2026_09.md; README dashboards regenerated at ship (#177 precedent). Human-approved 2026-09-27. At worktree creation the guard named pointsolver-mcs-headroom (PyAutoArray#583; autolens_profiling files scripts/point_source_image/**, results/breakdown/point_source_image/**, point-source hpc submits, CPU ledger) instead — equally disjoint; worktree created under the same disjoint-files approval (judgement call by the executing agent, flagged for the human)."
-- parallel-claim-confirmed: "human confirmed 2026-09-27 the parallel claim alongside pointsolver-mcs-headroom (PyAutoArray#583; its autolens_profiling files scripts/point_source_image/**, results/breakdown/point_source_image/**, point-source submits and the CPU ledger are disjoint)"
-- repos:
-  - autolens_profiling: feature/interferometer-mesh-numba-p2
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/333
-- heart-ack: "2026-09-27 YELLOW acknowledged by the human ('approve you to continue', same set as #328/#582, none touch autolens_profiling): manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: organism-map blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml; release validation incomplete: no rehearsal for current source"
-- resume: "2026-09-27 shipped: commits 5d806c4 92a2061 6022e2d 9a4981d pushed to feature/interferometer-mesh-numba-p2, PR #333 open (lint pending at open). RAL jobs 358985/358986/359000 COMPLETED and committed. Next: human /prm 333 -> close-out (complete record; RAL worktree /mnt/ral/jnightin/autolens_profiling_wt/interferometer-mesh-numba-p2 + .bundle to clean) -> campaign phase 3 (A100 mask-radius sweep r2.0/r5.0) via start_dev."
-
 ## point-source-source-plane-p2e
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/334
 - issued: 2026-09-27
