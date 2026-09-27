@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-09-27T18:47:57Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
+  "updated": "2026-09-27T19:08:07Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Point-source CPU speed-up phase 4c \u2014 raise `MAX_CONTAINING_SIZE` headroom\u2026 \u2014 library-shipped, awaiting-merge (N=20 human-chosen; PyAutoArray #584 + PyAutoLens #753 + autolens_profiling #335 open; human runs\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/584",
-      "prompt": "/start_dev active/pointsolver_max_containing_size_headroom.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -33,12 +27,6 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#584 \u2014 Point-source CPU speed-up phase 4c \u2014 raise `MAX_CONTAINING_SIZE` headroom\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/584",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#576 \u2014 interferometer-mge-w-tilde-route",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/576",
       "prompt": null
@@ -53,6 +41,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#578 \u2014 interferometer-transform-real-scatter",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/578",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#584 \u2014 pointsolver-mcs-headroom",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/584",
       "prompt": null
     },
     {
@@ -126,6 +120,12 @@
       "text": "waiting on PyAutoGalaxy's release: Workspace config cleanup: remove orphan config keys the Nerves board flags",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/issues/441",
       "prompt": "/start_dev active/workspace_config_cleanup.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGut PyAutoGut#12 \u2014 What shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoGut/pull/12",
+      "prompt": null
     }
   ]
 }

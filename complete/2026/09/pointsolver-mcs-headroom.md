@@ -1,3 +1,45 @@
+## pointsolver-mcs-headroom
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/583
+- completed: 2026-09-27
+- epic: point-source-cpu-speed (phase 4c)
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/584
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/753
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/335
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/584
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/753
+- summary: |
+    Phase 4c of the point-source CPU-speed epic. MAX_CONTAINING_SIZE rose from 15 to 20,
+    which gives 3 triangles of headroom over the observed maximum of 17. The human chose 20
+    at +6.2 % scalar cost. That misses the ~5 % rule, and the human accepted the miss.
+
+### What shipped
+
+- **PyAutoArray#584** (merged 9428eca2) — `MAX_CONTAINING_SIZE` 15 → 20 in
+  `autoarray/structures/triangles/`, plus a new truncation test that fails at 15 and passes at 20.
+- **PyAutoLens#753** (merged e92bde01) — the ShapeSolver JAX rejection message now quotes
+  `MAX_CONTAINING_SIZE` from autoarray instead of a hard-coded value.
+- **autolens_profiling#335** (merged c1523ef1) — the MCS 18/20/24 measurement, its HPC submits,
+  `results/breakdown/point_source_image/` and the CPU ledger notes.
+
+### Evidence
+
+- RAL 8490H job 358976 (loaded node): mcs20 ran at 0.941 [0.922, 0.953] × control, with compile
+  time +7 %. A100 job 359102: 1.00×.
+- Image sets, positions, log L and the fiducial are bit-identical. Gradients differ by at most
+  6.1e-14 relative.
+- Suites: PyAutoArray 1738 passed; PyAutoLens 759 passed + 1 xfail. Pins unchanged; smoke 31/31.
+  Heart YELLOW (manifest drift ×3, release validation incomplete) was acknowledged by the human.
+
+### Left open
+
+- The A100 vmap-4 +8 % single cell (likely noise), and the draw-12 fold-line attribution, which
+  was carried from 4a and not re-verified. Both are filed under "Phase 4c leftovers" in
+  `draft/research/autolens_profiling/pointsolver_cpu_speed_campaign_remainder.md`.
+- The RAL scratch worktree `/mnt/ral/jnightin/autolens_profiling_wt/pointsolver-mcs-headroom` was
+  left in place.
+
+## Original prompt
+
 # Point-source CPU speed-up phase 4c — raise `MAX_CONTAINING_SIZE` headroom (15 → ~20, measured)
 
 Type: feature

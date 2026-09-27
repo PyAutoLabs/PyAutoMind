@@ -78,28 +78,6 @@
 - summary: Add an explicit vis_lp-only inspection mode that combines the main normal-model output tree with the 100-lens SED/Sersic tree, without requiring vis_pix or selecting the other 200 main-tree lenses.
 - resume: Implemented + committed locally as c6b514d on feature/vis-lp-inspection-bundle (133 tests green, not pushed). Human reviews diff (scratchpad part1_diff.txt) before ship_workspace; then sync tooling to the euclid_dr1 science clone/RAL and submit the 4,922-tile vis_lp-only bundle (OUTPUT_DIR=dr1_full, INITIAL_SEARCH_NAME=vis_lp, DATASET_NAMES_PATH=all, TAR_TO set) as a Cortex run.
 
-## pointsolver-mcs-headroom
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/583
-- issued: 2026-09-27
-- prompt: active/pointsolver_max_containing_size_headroom.md
-- epic: point-source-cpu-speed
-- session: Claude Code CLI (Opus 5.5 main session + Opus subagent), 2026-09-27; session ID unavailable
-- status: library-shipped, awaiting-merge (N=20 human-chosen; PyAutoArray #584 + PyAutoLens #753 + autolens_profiling #335 open; human runs /prm)
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/584
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/753
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/335
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/584
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/753
-- heart-ack: "2026-09-27 human acked YELLOW: manifest drift x3 (hub blurb, organism-map blocks, workspace checkouts) + release validation incomplete (no rehearsal for current source)"
-- autonomy: supervised (header); plan approved in-session 2026-09-27 (measure MCS 18/20/24 first; no default change without the human's call at step 2)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/pointsolver-mcs-headroom
-- parallel-claim: "Three disjoint claims human-approved 2026-09-27: PyAutoArray vs interferometer-sparse-cache (#582, only autoarray/inversion/inversion/interferometer*; since completed) — this task touches only autoarray/structures/triangles/; PyAutoLens vs workspace-config-cleanup (Lens#751, awaiting release) — this task touches only autolens/point/solver/shape_solver.py + its test; autolens_profiling vs point-source-source-plane-p2c (scripts/point_source_source/…, source-plane ledger) — this task touches only scripts/point_source_image/…, new hpc submits, results/breakdown/point_source_image/ and the CPU ledger."
-- resume: step 1 measurement (MCS 18/20/24 vs control, laptop + RAL 8490H) in autolens_profiling; then step 2 human checkpoint picks N
-- repos:
-  - PyAutoArray: feature/pointsolver-mcs-headroom
-  - PyAutoLens: feature/pointsolver-mcs-headroom
-  - autolens_profiling: feature/pointsolver-mcs-headroom
-
 ## point-source-source-plane-p2e
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/334
 - issued: 2026-09-27
