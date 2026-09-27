@@ -155,3 +155,48 @@ Recorded from the human's "do these:" reply to the agent's items on 2026-09-25.
   re-evaluates only flagged lanes host-side and splices; analyses without the hook unchanged.
 - No aux channel exists today: `stats=` is a Python dict of traced scalars and the profiling
   harness extracts it via `jax.debug.callback`.
+
+## Amendment (2026-09-27): interferometer sparse-path cells (autolens_profiling#320, lever 1)
+
+Source: `autolens_profiling/results/notes/interferometer_mesh_a100_breakdown_2026_09.md`,
+"Ranked levers" §1. RAL jobs 356370-356387, A100 fp64, PyAutoArray `14d63360`.
+
+**Why C2 should cover it.** The interferometer sparse path (`InversionInterferometerSparse`,
+mapper-only JAX inversion) already honours `Settings(positive_only_solver="certified")`, and
+`positive_only_solver_used == "certified"` was confirmed at trace time. Certified vs PDIP
+figure of merit agrees to ≤ 1.2e-7 nats. The measured scalar `jax.jit(fn)` full-pipeline gains
+(`solver_ab.full_pipeline_certified` in the breakdown JSONs) are:
+
+| Cell (A100 fp64, alma 1M vis unless noted) | PDIP | certified | change | certified passes |
+|---|---:|---:|---:|---:|
+| Delaunay-1500 AdaptSplit | 49.51 ms | 33.11 ms | −33 % | 3 |
+| Delaunay N=4000 | 142.55 ms | 91.54 ms | −36 % | 4 |
+| rect 39×39 Constant (1369 solved) | 44.46 ms | 39.65 ms | −11 % | 12 |
+| rect 64×64 | 119.20 ms | 109.96 ms | −8 % | 12 |
+| sma Delaunay / rect | 32.61 / 28.08 | 14.70 / 20.02 | −55 % / −29 % | 0 / 8 |
+| jvla Delaunay / rect | 563.3 / 564.4 | 526.9 / 547.5 | −6 % / −3 % | 0 / 3 |
+
+The solve is 47–49 % of the alma call, 22–23 % at alma_high and 3–4 % at jvla, where the W~
+curvature matrix (FFT-bound) dominates. The PDIP `jit(vmap)` per-call rows at alma are 29.4 /
+24.1 ms (b64), and vmap stops amortising above N ≈ 2500. **Certified under `jit(vmap)` was not
+measured on interferometer.** That measurement is the one that decides, and it is exactly C2's
+guarded-batch row.
+
+**Proposed C2 additions:**
+
+1. Add alma Delaunay-1500 and alma rect 39×39 on the sparse path to C2's matched A100 fp64
+   table. Use the cells `autolens_profiling/scripts/interferometer/likelihood_breakdown/{delaunay,pixelization}.py`
+   with `apply_sparse_operator(method="nufft", batch_size=128)` and the production batch B.
+   Measure certified+none, the guarded batch and library PDIP `jit(vmap)` under the same
+   near-peak gate (Δ = 100 nats, pin 0.1 nats).
+2. Measure the uncertified-lane rate on interferometer lanes. C1's rates are imaging-only, and
+   the interferometer F (dense W~ blocks) is a different system. Rect needed 3–13 passes here
+   against Delaunay's 0–4.
+3. Apply the C2 build rule (≥ 15 % saving) per interferometer cell. On the scalar numbers the
+   rect cell is marginal (−11 % scalar at alma) and may stay on PDIP vmap, like imaging
+   rectangular pix1.
+4. Record, not fix: the A100 sma Delaunay dense-vs-sparse spread (5.2e-6 nats) and the
+   CPU-vs-GPU spread (2.3e-5 nats) are PDIP / reduction round-off on the AdaptSplit system. Rect
+   is 0.0. Do not pin interferometer Delaunay tighter than ~1e-4 nats across devices.
+
+Out of scope for C2: jvla (F-bound; the solver is ≤ 4 % of the call).

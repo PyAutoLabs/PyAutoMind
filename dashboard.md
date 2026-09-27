@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 238 |
+| [Backlog](#backlog) (`draft/`) | 240 |
 
 > **No batch in flight.**
 
@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/interferometer_mesh_breakdown_jax_a100.md">Interferometer likelihood campaign 2/3: Delaunay-1500 and rectangular mesh breakdown on JAX A100…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/320">issue #320</a> — issued 2026-09-26 — workspace-dev</summary>
+<details><summary>📋 <a href="active/interferometer_mesh_breakdown_jax_a100.md">Interferometer likelihood campaign 2/3: Delaunay-1500 and rectangular mesh breakdown on JAX A100…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/320">issue #320</a> — issued 2026-09-26 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/324">autolens_profiling#324</a></summary>
 
 ```
 /start_dev active/interferometer_mesh_breakdown_jax_a100.md
@@ -544,7 +544,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**238** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **53** of them belong to an epic and are listed only under [Epics](#epics) below.
+**240** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **55** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 68</summary>
@@ -2909,7 +2909,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 </details>
 
 <details>
-<summary><b>interferometer-likelihood-campaign</b> — 3 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+<summary><b>interferometer-likelihood-campaign</b> — 5 queued prompt(s) — ⚠️ not in `epics.md`</summary>
 
 <details><summary>📋 <a href="draft/bug/pyautoheart/ral_venv_dependency_floor_drift.md">RAL PyAuto venv: third-party packages below the library floors…</a> — pyautoheart · easy · supervised · medium</summary>
 
@@ -2927,10 +2927,26 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 </details>
 
+<details><summary>📋 <a href="draft/research/autolens_profiling/interferometer_fixed_mapper_curvature_preload.md">Interferometer fixed-mapper searches: reuse the W~ curvature matrix across likelihood calls…</a> — autolens_profiling · medium · supervised · normal</summary>
+
+```
+/start_dev draft/research/autolens_profiling/interferometer_fixed_mapper_curvature_preload.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/research/autolens_profiling/interferometer_mesh_breakdown_numba_cpu_decision_matrix.md">Interferometer likelihood campaign 3/3: mesh breakdown on numba sparse CPU…</a> — autolens_profiling · large · supervised · high</summary>
 
 ```
 /start_dev draft/research/autolens_profiling/interferometer_mesh_breakdown_numba_cpu_decision_matrix.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/interferometer_w_tilde_fft_size_levers.md">Interferometer W~ curvature matrix is FFT-bound on the mask extent: pruned padded…</a> — autolens_profiling · medium · supervised · normal</summary>
+
+```
+/start_dev draft/research/autolens_profiling/interferometer_w_tilde_fft_size_levers.md
 ```
 
 </details>
@@ -3035,7 +3051,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 </details>
 
-63 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+65 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3098,7 +3114,9 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 - `draft/maintenance/howtofit/minimum_library_version_stale.md — unknown theme keyword(s): version-handshake, tutorials`
 - `draft/research/autolens_assistant/free_agent_harness_evaluation.md — unknown theme keyword(s): assistant, support-policy`
 - `draft/research/autolens_profiling/cluster_pointsolver_speed.md — unknown theme keyword(s): jax`
+- `draft/research/autolens_profiling/interferometer_fixed_mapper_curvature_preload.md — unknown theme keyword(s): likelihood-profiling, jax-gpu`
 - `draft/research/autolens_profiling/interferometer_mesh_breakdown_numba_cpu_decision_matrix.md — unknown theme keyword(s): likelihood-profiling`
+- `draft/research/autolens_profiling/interferometer_w_tilde_fft_size_levers.md — unknown theme keyword(s): likelihood-profiling, jax-gpu`
 - `draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md — unknown theme keyword(s): jax-gpu`
 - `draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md — unknown theme keyword(s): jax`
 - `draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md — unknown theme keyword(s): euclid, hpc`
