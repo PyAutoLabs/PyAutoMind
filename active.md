@@ -68,8 +68,9 @@
 - prompt: active/pointsolver_step0_gather_containment.md
 - epic: point-source-cpu-speed
 - session: Claude Code CLI (Opus 5.5 subagent), 2026-09-26; session ID unavailable
-- status: library-merged, profiling-pending (PyAutoArray PR #580 MERGED 2026-09-27 as 4383ea81; 8490H job 357321 DONE, committed; profiling data PR waits on #321)
+- status: awaiting-merge (PyAutoArray #580 MERGED 4383ea81; autolens_profiling data PR #330 open)
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/580
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/330
 - pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/580
 - autonomy: supervised (header); plan approved in-session 2026-09-26 (phase 4b: step-0 containment without the (N,3,2) gather; prototype + laptop measurement first)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/pointsolver-step0-gather
