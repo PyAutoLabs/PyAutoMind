@@ -26,7 +26,7 @@
 - prompt: active/workspace_config_cleanup.md
 - epic: organ-cockpit
 - session: Claude Code CLI (Opus 5.5 main session + Opus subagent), 2026-09-27; session ID unavailable
-- status: library-shipped, workspace-pending
+- status: workspace-shipped, awaiting-merge (7 PRs open; merge order Galaxy#630 -> Lens#751, Nerves#176 any time, then workspaces; autolens_workspace#578 after the PyAutoGalaxy release; human runs /prm)
 - autonomy: supervised (header); plan approved in-session 2026-09-27 (library-first: Nerves board equivalence + allow-list, PyAutoGalaxy promotion, then workspace deletes)
 - worktree: ~/Code/PyAutoLabs-wt/workspace-config-cleanup
 - parallel-claim: "PyAutoNerves is also claimed by eyes-organ-order (PyAutoMind#439), whose Nerves diff is only AGENTS.md; this task touches only scripts/board.py + its tests. Parallel worktree human-approved 2026-09-27; noted on #439 and #441."
@@ -36,7 +36,12 @@
 - pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/630
 - pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/751
 - pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/176
-- resume: "Library PRs open (merge Galaxy#630 first, then Lens#751; Nerves#176 independent); Heart YELLOW 85 human-acked. Next: finish + /ship_workspace the 4 workspace repos in the same worktree."
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/164
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/250
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/578
+- workspace-pr: https://github.com/PyAutoLabs/autocti_workspace/pull/34
+- release-gate: PyAutoGalaxy
+- resume: "All 7 PRs open, Heart YELLOW 85 human-acked. Next: /prm in library-first order (Galaxy#630 -> Lens#751; Nerves#176 independent), then autofit/autogalaxy/autocti workspace PRs; autolens_workspace#578 only after PyAutoGalaxy#630 is released."
 - repos:
   - PyAutoNerves: feature/workspace-config-cleanup
   - PyAutoGalaxy: feature/workspace-config-cleanup
