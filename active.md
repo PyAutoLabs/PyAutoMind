@@ -5,15 +5,20 @@
 - issued: 2026-09-27
 - prompt: active/jax_grad_nan_at_zero_components.md
 - session: Claude Code CLI (Opus 5.5 main session + Opus subagent), 2026-09-27; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - autonomy: human-required (no header); plan approved in-session 2026-09-27
 - worktree: ~/Code/PyAutoLabs-wt/jax-grad-nan-zero-components
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/634
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/754
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/634
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/754
+- heart-ack: "2026-09-27 human acknowledged YELLOW at ship: manifest drift (hub blurb 7, organism-map 1, workspace checkouts 1) + release validation incomplete (no rehearsal for current source)"
 - parallel-claim: "PyAutoGalaxy and PyAutoLens are also claimed by workspace-config-cleanup (PyAutoMind#441), whose Galaxy #630 / Lens #751 PRs are merged and awaiting release (no live edits); this task touches convert.py, isothermal.py + tests, and 6 Lens test pins. Parallel worktree human-approved 2026-09-27."
 - repos:
   - PyAutoGalaxy: feature/jax-grad-nan-zero-components
   - PyAutoLens: feature/jax-grad-nan-zero-components
 - scope: "2026-09-27 human-approved extension: remove Isothermal q<=0.99999 clamp (series near q->1) so ell_comps grad at 0 is correct; companion PyAutoLens PR repins 6 tests pinned to the clamp artefact."
-- resume: galaxy fix done (convert.py tracer-only lax.select nudge + isothermal series); lens repin in progress; then /ship_library (Galaxy first, Lens with it)
+- resume: "PRs open (Galaxy #634 a2175896, Lens #754 8c2a2a27). Workspace impact (iii) none: round-Isothermal workspace_test parity scripts tracer_jax.py + profiles_jit.py pass on branch. Next: /prm Galaxy #634 then Lens #754 (merge together, Galaxy first), then close-out. Follow-ups filed: draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md, draft/feature/autolens_inference/drop_1e3_prior_centring_after_631.md"
 
 ## eyes-organ-order
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/439
