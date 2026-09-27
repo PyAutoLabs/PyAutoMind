@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 241 |
+| [Backlog](#backlog) (`draft/`) | 246 |
 
 > **No batch in flight.**
 
@@ -537,7 +537,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**241** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **54** of them belong to an epic and are listed only under [Epics](#epics) below.
+**246** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **54** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 69</summary>
@@ -1414,7 +1414,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>research</b> — 19</summary>
+<summary><b>research</b> — 24</summary>
 
 <details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon</a> — autofit · large · human-required · high</summary>
 
@@ -1564,6 +1564,46 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/research/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_report.md">HPC campaign epic — research report and phased plan</a> — autofit</summary>
+
+```
+/start_dev draft/research/autofit/hpc_campaign_epic_report.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_surveys/carbon.md">Energy and CO2e for PyAuto HPC campaigns: methods, inputs, worked estimate</a> — autofit</summary>
+
+```
+/start_dev draft/research/autofit/hpc_campaign_epic_surveys/carbon.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_surveys/codebase.md">HPC campaign epic: what the codebase already has</a> — autofit</summary>
+
+```
+/start_dev draft/research/autofit/hpc_campaign_epic_surveys/codebase.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_surveys/euclid_hpc.md">euclid_dr1 HPC glue + Slurm mechanics — research report</a> — autofit</summary>
+
+```
+/start_dev draft/research/autofit/hpc_campaign_epic_surveys/euclid_hpc.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_surveys/prior_art.md">Prior art: status, right-sizing and failure triage for large HPC fit campaigns</a> — autofit</summary>
+
+```
+/start_dev draft/research/autofit/hpc_campaign_epic_surveys/prior_art.md
 ```
 
 </details>
@@ -2348,7 +2388,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 39 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 40 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -2994,7 +3034,20 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 ## Hygiene
 
-61 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+5 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
+
+<details>
+<summary>Headerless prompts</summary>
+
+- `draft/research/autofit/hpc_campaign_epic_report.md`
+- `draft/research/autofit/hpc_campaign_epic_surveys/carbon.md`
+- `draft/research/autofit/hpc_campaign_epic_surveys/codebase.md`
+- `draft/research/autofit/hpc_campaign_epic_surveys/euclid_hpc.md`
+- `draft/research/autofit/hpc_campaign_epic_surveys/prior_art.md`
+
+</details>
+
+66 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3039,7 +3092,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 - `draft/test/workspaces/mesh_magnification_correctness.md`
 - `draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md`
 - `draft/test/workspaces/restore_workspace_test_likelihood_baselines.md`
-- _… and 21 more_
+- _… and 26 more_
 
 </details>
 
