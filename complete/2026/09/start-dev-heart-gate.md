@@ -14,8 +14,8 @@ epic organ-cockpit. Fable-planned, Opus-executed; Heart YELLOW acked by the huma
   readiness`); start_dev stops on RED before planning and warns on YELLOW.
 - Mirrored in `skills/start_bundle`, `skills/route` and `skills/WORKFLOW.md`; full suite 1077
   passed / 1 pre-existing env failure.
-- Tier `notify`: shadow row deferred at close-out — the merged-unchanged question was not
-  asked in this (subagent) session; append with `lifecycle.py shadow-row` once answered.
+- Tier `notify`: shadow row deferred at close-out, then appended 2026-09-27 once the human
+  answered — PyAutoBrain#424 merged unchanged (`merged-unchanged`, stage 1).
 
 ## Original prompt
 
