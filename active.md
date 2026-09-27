@@ -104,3 +104,17 @@
 - parallel-claim: "autolens_profiling is also claimed by point-source-source-plane-p2c (#329 / PR #331), whose files are scripts/point_source_source/**, results/breakdown/point_source_source/** and the point-source notes; this phase touches only scripts/misc/likelihood_breakdown/interferometer_pixelized_numpy.py, scripts/interferometer/likelihood_breakdown/*_numba.py, scripts/misc/test/test_interferometer_pixelized_numpy.py, hpc/batch_cpu/*interferometer*numba*, results/breakdown/interferometer/**numba*, results/notes/numba_interferometer_verdict.md and results/notes/interferometer_mesh_cpu_breakdown_2026_09.md; README dashboards regenerated at ship (#177 precedent). Human-approved 2026-09-27."
 - repos:
   - autolens_profiling: feature/interferometer-mesh-numba-p2
+
+## point-source-gradient-mode
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1648
+- issued: 2026-09-27
+- prompt: active/point_source_source_plane_phase_2d.md (phase 2d of campaign draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md)
+- epic: point-source-cpu-speed
+- session: Claude Code CLI (Opus 5.5), 2026-09-27
+- worktree: /home/jammy/Code/PyAutoLabs-wt/point-source-gradient-mode
+- autonomy: supervised (header); plan approved in-session 2026-09-27 (library-first: PyAutoFit then PyAutoLens, then autolens_profiling follow-up)
+- parallel-claim: "PyAutoLens also claimed by workspace-config-cleanup (Lens#751 merged, awaiting release) and pointsolver-mcs-headroom (point solver); this task touches only autolens/point/model/analysis.py + a new test. autolens_profiling also claimed by pointsolver-mcs-headroom and interferometer-mesh-numba-p2; follow-up touches only a new cell, its results and the source-plane note. Parallel worktree approved by the human 2026-09-27."
+- repos:
+  - PyAutoFit: feature/point-source-gradient-mode
+  - PyAutoLens: feature/point-source-gradient-mode
+- status: library-dev
