@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-09-27T22:41:20Z",
+  "updated": "2026-09-27T22:43:10Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "Run-time-over-time dashboard for the *_profiling repos (and the organ question) \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/346",
       "prompt": "/start_dev active/runtime_dashboard_and_profiling_organ_vision.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "apply_over_sampling drops the sparse operator; dense route convolves the mapping matrix twice \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/586",
+      "prompt": "/start_dev active/sparse_operator_dropped_and_double_convolution.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#629 \u2014 interferometer-mge-w-tilde-route",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/629",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#633 \u2014 isothermal-convergence-jit",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/633",
       "prompt": null
     }
   ]

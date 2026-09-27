@@ -268,7 +268,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/sparse_operator_dropped_and_double_convolution.md">apply_over_sampling drops the sparse operator; dense route convolves the mapping matrix twice</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/585">issue #585</a> — issued 2026-09-27 — library-dev</summary>
+<details><summary>📋 <a href="active/sparse_operator_dropped_and_double_convolution.md">apply_over_sampling drops the sparse operator; dense route convolves the mapping matrix twice</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/585">issue #585</a> — issued 2026-09-27 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/586">PyAutoArray#586</a></summary>
 
 ```
 /start_dev active/sparse_operator_dropped_and_double_convolution.md
