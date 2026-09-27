@@ -1,3 +1,30 @@
+## profiling-research-wiki
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/337
+- completed: 2026-09-27
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/338
+- epic: profiling-research-wiki (phase 1 of 2)
+- heart-ack: "manifest drift x4 (hub blurb 7, organism-map 1, where-to-file 2, workspace checkouts 1); PyAutoMemory open PR 7d old; release validation incomplete (no rehearsal for current source)" — acknowledged by the human at ship
+
+### Summary
+- Born from the 2026-09-27 profiling review: six weeks of campaigns had no index beyond fixed-light + GPU residue, 7 of 9 September profiling epics had no live ledger, and the "why" of each phase lived in issue bodies and Mind `## Original prompt` sections.
+- Home decided: `autolens_profiling/wiki/` (Memory = science, Cortex = science runs, Mind ledgers get archived), mirroring `autolens_inference/wiki/project/state.md`.
+- Shipped: `wiki/index.md` (22 rows: Campaign | Question | Status | Headline (host + job) | Verdict | Library PRs (release) | Profiling PRs | Ledger | Mind contract | Next | Superseded-by | Last updated); full pages for the four live campaigns (point-source image-plane CPU, point-source source-plane, interferometer likelihood, cluster PointSolver) with why / phase table with pre-registered rules / release table / open drafts / caveats; 18 header-only stubs; `wiki/README.md` + `_template.md` (ten-label header contract).
+- Drift check: `scripts/misc/tooling/check_wiki.py --check` (stdlib) in `lint.yml` — every `results/notes/*.md` linked from the wiki, every campaign page indexed with the full header, every relative link resolves; 5 pytest cases; wiki pages added to the lychee leg.
+- Corrections: PyAutoArray #553–555 recorded as released in 2026.9.19.1 (results/README.md + one dated line in `profiling_campaign_status_2026_09.md`). All 14 library-PR release states on the pages verified with `git tag --contains`.
+- Mind: `epics.md` ledger pointers for `point-source-cpu-speed` and `cluster-pointsolver-speed` now point at the wiki campaign pages; new epic `profiling-research-wiki`.
+
+### Traps / notes
+- Brain FeatureDecision sized this "too-large / split-into-phases" with code-shaped phase names; re-phased as docs: phase 1 (this) + phase 2 backfill.
+- PyAutoMind was claimed by `eyes-organ-order`; this task claimed only `autolens_profiling` and made the Mind edits in the canonical checkout (index was clean), rebasing twice around the dashboard self-heal bot.
+- Executor could not verify release state for PyAutoGalaxy#629, PyAutoLens#750, PyAutoArray#567/#516/#517/#518/#520, PyAutoGalaxy#595/#602/#605, PyAutoLens#718/#720, PyAutoFit#1430 — pages say "not verified"; PyAutoArray#582 F/D evaluation count differs between ledger (F×2, D×4) and Mind record (F=2, D=2) — both reported. Phase 2 resolves these.
+- lychee not installed locally; that leg ran in CI (green).
+
+### Remainder (re-filed)
+- Phase 2 backfill: `draft/docs/autolens_profiling/profiling_research_wiki_phase_2_backfill.md`.
+- Follow-ons: `draft/refactor/autolens_profiling/notes_logs_and_sidecars_out_of_results_notes.md`, `draft/feature/autolens_profiling/runtime_dashboard_and_profiling_organ_vision.md`.
+
+## Original prompt
+
 # Profiling research wiki for autolens_profiling
 
 - Work type: docs
