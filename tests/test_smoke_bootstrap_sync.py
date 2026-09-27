@@ -325,10 +325,11 @@ def test_bounded_repos_sync_write_only_changes_smoke_block(tmp_path, monkeypatch
     # write must never invoke any unrelated writer, even in an empty workspace.
     monkeypatch.setattr(repos_sync, "__file__", str(mind / "scripts/repos_sync.py"))
     for name in ("load_history_policy", "load_remote_sessions", "load_deliverable_policy",
-                 "load_session_hook", "load_deliverable_hook"):
+                 "load_filing_policy", "load_session_hook", "load_deliverable_hook"):
         monkeypatch.setattr(repos_sync, name, lambda *a: "")
     monkeypatch.setattr(repos_sync, "system_map", lambda *a: "")
-    for name in ("write_root_marker", "write_block", "write_codex_hooks", "write_session_hooks"):
+    for name in ("write_root_marker", "write_block", "write_codex_hooks", "write_session_hooks",
+                 "write_filing_blocks"):
         monkeypatch.setattr(repos_sync, name, lambda *a, **k: pytest.fail("unrelated writer"))
     monkeypatch.setattr(sys, "argv", ["repos_sync.py", "--root", str(tmp_path),
                                     "--write", "--only", sync.LABEL])

@@ -995,7 +995,8 @@ This longer walkthrough is loaded when a Mind operation needs its detail;
   `python3 scripts/repos_sync.py --write`.
 - **Policy** — `policy/` holds the universal rules single-sourced here and
   generated verbatim into every repo's AGENTS.md by `repos_sync.py --write`:
-  `never_rewrite_history.md`, `remote_sessions.md`, `end_at_deliverable.md`
+  `never_rewrite_history.md`, `remote_sessions.md`, `end_at_deliverable.md`,
+  `where_to_file.md`
   (plus the hooks that enforce them, `session_start_hook.sh` and
   `end_at_deliverable_hook.sh`). Edit the canonical file, never a generated copy.
   `repos_sync.py --write --only "generated Codex hooks"` renders opted-in

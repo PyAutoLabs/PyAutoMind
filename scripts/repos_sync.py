@@ -96,6 +96,9 @@ repo's CI with a path it rejects.
     this one is NOT opt-in-silent: an AGENTS.md without the markers is
     reported, because a repo missing this safety rule is the failure mode.
     --write inserts the markers itself under an existing history block
+  * the where-to-file policy block — same not-silent contract as the
+    deliverable block (a repo without it is reported); --write inserts the
+    markers itself under an existing deliverable block
   * target-repo layout lints — every checked-out repo that lints its own
     top-level entries allowlists the `.claude/` and `CLAUDE.md` that --write
     installs (a repo that does not is skipped by --write and named here)
@@ -196,6 +199,8 @@ REMOTE_BEGIN = "<!-- repos_sync:remote:begin -->"
 REMOTE_END = "<!-- repos_sync:remote:end -->"
 DELIVERABLE_BEGIN = "<!-- repos_sync:deliverable:begin -->"
 DELIVERABLE_END = "<!-- repos_sync:deliverable:end -->"
+FILING_BEGIN = "<!-- repos_sync:filing:begin -->"
+FILING_END = "<!-- repos_sync:filing:end -->"
 ORGANS_BEGIN = "<!-- repos_sync:organs:begin -->"
 ORGANS_END = "<!-- repos_sync:organs:end -->"
 
@@ -228,6 +233,7 @@ SESSION_HOOKS = "generated hooks (session-start + end-at-deliverable)"
 CHECKOUTS = "workspace checkouts (manifest ↔ disk)"
 CODEX_HOOKS_REL = ".codex/hooks.json"
 CODEX_HOOKS = "generated Codex hooks"
+FILING_BLOCKS = "where-to-file blocks (generated)"
 
 
 # What a Claude Code web/mobile session must know before its first command:
@@ -262,6 +268,16 @@ REMOTE_SESSIONS_FILE = "policy/remote_sessions.md"
 # rides beside the PreToolUse hook below, which enforces it — prose for the
 # reasoning, the hook for the moment of temptation.
 DELIVERABLE_POLICY_FILE = "policy/end_at_deliverable.md"
+
+# Where a user-facing report goes: the org Discussions hub, never a repo's
+# Issues — only the Mind's development flow opens issues. The *why* is decided
+# once in `policy/community_surface.md` (PyAutoMind#403); this file is only the
+# *what* an agent needs at the moment it is about to file, and it rides in every
+# repo for the same reason as the blocks above: a collaborator's agent reading
+# one clone of one library sees that repo's AGENTS.md and nothing else, and
+# before this block the only filing recipe it could find was `gh issue create`.
+# Same not-silent contract as the deliverable block (PyAutoMind#442).
+FILING_POLICY_FILE = "policy/where_to_file.md"
 
 # The PreToolUse guard that makes the rule above unbypassable by reasoning.
 # Installed and drift-checked exactly like the SessionStart hook (same
@@ -320,6 +336,10 @@ def load_remote_sessions(mind_root):
 
 def load_deliverable_policy(mind_root):
     return (mind_root / DELIVERABLE_POLICY_FILE).read_text().rstrip("\n")
+
+
+def load_filing_policy(mind_root):
+    return (mind_root / FILING_POLICY_FILE).read_text().rstrip("\n")
 
 
 def load_session_hook(mind_root):
@@ -1038,6 +1058,79 @@ def insert_deliverable_markers(root, repos):
         )
         agents.write_text(text)
         print(f"inserted deliverable markers: {agents}")
+
+
+def check_filing_blocks(root, repos, policy):
+    """The where-to-file block: one source, N copies, and — like the
+    deliverable block — a repo missing it is reported, not skipped.
+
+    A collaborator's agent that files a user report as a repo issue is the
+    failure mode, and it happens in exactly the repos a rollout forgot. The
+    report says which of three states the repo is in:
+
+    * the filing markers are there — the copy must be the canonical text;
+    * the deliverable markers are there and the filing markers are not —
+      `--write` inserts the block itself, so the fix is to run it;
+    * neither — a human has to place the markers before --write can fill them.
+    """
+    problems = []
+    for name in repos:
+        agents = repo_checkout(root, name) / "AGENTS.md"
+        if not agents.exists():
+            continue  # not checked out here
+        text = agents.read_text()
+        if FILING_BEGIN in text and FILING_END in text:
+            if extract_block(text, FILING_BEGIN, FILING_END) != policy:
+                problems.append(
+                    f"'{name}': where-to-file block is stale — run "
+                    f"`python3 PyAutoMind/scripts/repos_sync.py --write`"
+                )
+        elif DELIVERABLE_BEGIN in text and DELIVERABLE_END in text:
+            problems.append(
+                f"'{name}': no where-to-file block — run "
+                f"`python3 PyAutoMind/scripts/repos_sync.py --write` "
+                f"(it inserts one after the deliverable block)"
+            )
+        else:
+            problems.append(
+                f"'{name}': no where-to-file block — add the markers "
+                f"({FILING_BEGIN} / {FILING_END}) to its AGENTS.md, "
+                f"then run `python3 PyAutoMind/scripts/repos_sync.py --write`"
+            )
+    return problems
+
+
+def insert_filing_markers(root, repos):
+    """Place the filing markers under the deliverable block where they are
+    missing, so the same run can fill them. A repo without the deliverable
+    markers is left alone and named by `check_filing_blocks` instead."""
+    for name in repos:
+        agents = repo_checkout(root, name) / "AGENTS.md"
+        if not agents.exists():
+            continue
+        text = agents.read_text()
+        if FILING_BEGIN in text or FILING_END in text:
+            continue
+        if DELIVERABLE_END not in text:
+            continue  # no anchor — reported by the check, not guessed at here
+        text = text.replace(
+            DELIVERABLE_END,
+            f"{DELIVERABLE_END}\n\n{FILING_BEGIN}\n{FILING_END}",
+            1,
+        )
+        agents.write_text(text)
+        print(f"inserted where-to-file markers: {agents}")
+
+
+def write_filing_blocks(root, repos, policy):
+    """Insert the filing markers and fill the block in every checked-out repo —
+    and write nothing else. The narrow entry point the propagation workflow
+    calls: a full `--write` would also regenerate the organism-map and other
+    AGENTS.md blocks, which that job deliberately never commits."""
+    insert_filing_markers(root, repos)
+    for name in repos:
+        write_block(repo_checkout(root, name) / "AGENTS.md", policy,
+                    FILING_BEGIN, FILING_END, required=False)
 
 
 # --------------------------------------------------------------------------
@@ -1977,6 +2070,7 @@ def main():
     hpol = load_history_policy(mind_root)
     remote = load_remote_sessions(mind_root)
     deliverable = load_deliverable_policy(mind_root)
+    filing = load_filing_policy(mind_root)
     hook_text = load_session_hook(mind_root)
     deliverable_hook_text = load_deliverable_hook(mind_root)
 
@@ -2018,6 +2112,9 @@ def main():
                         REMOTE_BEGIN, REMOTE_END, required=False)
             write_block(repo_checkout(root, name) / "AGENTS.md", deliverable,
                         DELIVERABLE_BEGIN, DELIVERABLE_END, required=False)
+        # The where-to-file block self-installs the same way, one step further
+        # down: under the deliverable block that the loop above just filled.
+        write_filing_blocks(root, repos, filing)
         for rel, bold in PUBLIC_TABLE_TARGETS:
             write_block(public_target(root, rel), organ_public_table(repos, bold=bold),
                         ORGANS_BEGIN, ORGANS_END, required=False)
@@ -2053,6 +2150,7 @@ def main():
             lambda: check_remote_blocks(root, repos, remote),
         "end-at-deliverable blocks (generated)":
             lambda: check_deliverable_blocks(root, repos, deliverable),
+        FILING_BLOCKS: lambda: check_filing_blocks(root, repos, filing),
         "public front-door organ tables (generated)":
             lambda: check_public_tables(root, repos),
         "hub organism blurb (organs present)": lambda: check_hub_blurb(root, repos),
