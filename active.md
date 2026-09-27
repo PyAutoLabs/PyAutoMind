@@ -108,18 +108,3 @@
   - autolens_profiling: feature/point-source-cpu-p4
 - parallel-claim: |
     autolens_profiling also claimed by interferometer-transform-real-scatter (1 file: hpc/batch_gpu interferometer A100 submit); file sets disjoint; human-approved own worktree 2026-09-26
-
-## interferometer-mesh-breakdown-a100
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/320
-- issued: 2026-09-26
-- prompt: active/interferometer_mesh_breakdown_jax_a100.md
-- session: Claude Code CLI (Opus 5.5), 2026-09-26
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/324
-- heart-ack: "manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: organism-map blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml; release validation stale: source moved since rehearsal (PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens) (acknowledged 2026-09-27, none touch autolens_profiling)"
-- worktree: /home/jammy/Code/PyAutoLabs-wt/interferometer-mesh-breakdown-a100
-- autonomy: supervised (header); plan approved in-session 2026-09-26
-- parallel-claim: "autolens_profiling is also claimed by point-source-cpu-p4, point-source-source-plane-breakdown and point-source-folder-split. File sets are disjoint: this task touches scripts/interferometer/, hpc/batch_gpu/submit_breakdown_interferometer_*, results/breakdown/interferometer/ and results/notes/interferometer_mesh_*. The only shared surface is the generated README dashboards, regenerated at ship. Human-approved 2026-09-26, #177 precedent."
-- repos:
-  - autolens_profiling: feature/interferometer-mesh-breakdown-a100
-- resume: PHASES A+B+C DONE (2026-09-27). Phase C shipped: findings note results/notes/interferometer_mesh_a100_breakdown_2026_09.md with ranked levers (commit 0b80f88); origin/main merged in (75e7be4, README findings-list conflict with #322 resolved, build_readme --check clean); branch pushed, PR https://github.com/PyAutoLabs/autolens_profiling/pull/324 open (Closes #320). Next = human /prm 324, then close-out (lifecycle record). Follow-ups filed: C2 amendment appended to draft/feature/autofit/certified_solver_batched_guard_c2.md (lever 1, interferometer sparse cells); draft/research/autolens_profiling/interferometer_w_tilde_fft_size_levers.md (lever 2); draft/research/autolens_profiling/interferometer_fixed_mapper_curvature_preload.md (lever 3).

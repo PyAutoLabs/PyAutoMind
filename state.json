@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 9 in flight",
-  "updated": "2026-09-27T10:31:45Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
+  "updated": "2026-09-27T10:35:04Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Interferometer likelihood campaign 2/3: Delaunay-1500 and rectangular mesh breakdown on JAX A100\u2026 \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/324",
-      "prompt": "/start_dev active/interferometer_mesh_breakdown_jax_a100.md"
-    },
     {
       "severity": "yellow",
       "text": "Organ cockpit: Gut void button reaches refs held on sibling repos \u2014 library-shipped, awaiting-merge (PR open, head d956c380; 23 passed; Heart YELLOW acked by human 2026-09-27)",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoMind PyAutoMind#425 \u2014 codex-context-efficiency",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/pull/425",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoMind PyAutoMind#427 \u2014 Shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/pull/427",
       "prompt": null
     }
   ]

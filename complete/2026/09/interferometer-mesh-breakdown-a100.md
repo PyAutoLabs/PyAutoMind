@@ -1,3 +1,16 @@
+## interferometer-mesh-breakdown-a100
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/320
+- completed: 2026-09-27
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/324
+- summary: Interferometer likelihood campaign 2/3. The Delaunay-1500 breakdown cell now times the sparse (W~) path the library runs, and a new JAX rectangular-mesh cell sits beside it. Adds JAX CPU runs for sma/alma and 18 RAL A100 jobs: both meshes x sma/alma/alma_high/jvla x fp64/mp, plus an alma N sweep. The note `results/notes/interferometer_mesh_a100_breakdown_2026_09.md` ranks the levers. Witness PASS: the alma Delaunay step sum is 50.73 ms against a full JIT of 49.51 ms. Baseline alma is 49.5 / 44.5 ms (fp64 / mp), against 67.5 / 60 for imaging. Merge commit 5c70fb40.
+- gpu-n-sweep: the A100 fp64 alma N-sweep rows (Delaunay N=1000/2500/4000, rectangular N=1024/2500) are in `results/breakdown/interferometer/n_sweep/`. Campaign task 3/3 (`draft/research/autolens_profiling/interferometer_mesh_breakdown_numba_cpu_decision_matrix.md`) takes its GPU rows from there.
+- superseded: `draft/bug/autolens_profiling/interferometer_delaunay_breakdown_oom_sma.md` was already retired at intake (Mind fc5d693f). Proof it is fixed: CPU sma Delaunay now completes at 1.71 GB RSS.
+- follow-ups: lever 1 went into the C2 amendment in `draft/feature/autofit/certified_solver_batched_guard_c2.md` (Mind 3d6c2080, header 35bc4f98). Lever 2 is `draft/research/autolens_profiling/interferometer_w_tilde_fft_size_levers.md` and lever 3 is `draft/research/autolens_profiling/interferometer_fixed_mapper_curvature_preload.md`.
+- heart: human acknowledged YELLOW at ship (2026-09-27): manifest drift x3 and stale release validation, none of which touch autolens_profiling.
+- ral-worktree: /mnt/ral/jnightin/autolens_profiling_wt/interferometer-mesh-breakdown-a100 is left in place on RAL (remote, not cleaned by this close-out).
+
+## Original prompt
+
 # Interferometer likelihood campaign 2/3: Delaunay-1500 and rectangular mesh breakdown on JAX A100 (sparse operator), optimisation task list
 
 Type: research
