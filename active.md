@@ -26,7 +26,7 @@
 - prompt: active/workspace_config_cleanup.md
 - epic: organ-cockpit
 - session: Claude Code CLI (Opus 5.5 main session + Opus subagent), 2026-09-27; session ID unavailable
-- status: workspace-shipped, awaiting-merge (7 PRs open; merge order Galaxy#630 -> Lens#751, Nerves#176 any time, then workspaces; autolens_workspace#578 after the PyAutoGalaxy release; human runs /prm)
+- status: awaiting-release (6/7 merged 2026-09-27: Galaxy#630 cbd89ced, Lens#751 1e6372fd, Nerves#176 0b6e7c78, autofit_ws#164 aa7361df, autogalaxy_ws#250 7fd1953d, autocti_ws#34 7aa79ac6; autolens_workspace#578 OPEN, held for the PyAutoGalaxy release)
 - autonomy: supervised (header); plan approved in-session 2026-09-27 (library-first: Nerves board equivalence + allow-list, PyAutoGalaxy promotion, then workspace deletes)
 - worktree: ~/Code/PyAutoLabs-wt/workspace-config-cleanup
 - parallel-claim: "PyAutoNerves is also claimed by eyes-organ-order (PyAutoMind#439), whose Nerves diff is only AGENTS.md; this task touches only scripts/board.py + its tests. Parallel worktree human-approved 2026-09-27; noted on #439 and #441."
@@ -41,7 +41,7 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/578
 - workspace-pr: https://github.com/PyAutoLabs/autocti_workspace/pull/34
 - release-gate: PyAutoGalaxy
-- resume: "All 7 PRs open, Heart YELLOW 85 human-acked. Next: /prm in library-first order (Galaxy#630 -> Lens#751; Nerves#176 independent), then autofit/autogalaxy/autocti workspace PRs; autolens_workspace#578 only after PyAutoGalaxy#630 is released."
+- resume: "6/7 merged. Once PyAutoGalaxy (with #630) is on PyPI: /prm autolens_workspace#578, then full close-out (records, issue #441 close, worktree removal). Nerves board re-dispatched after merge."
 - repos:
   - PyAutoNerves: feature/workspace-config-cleanup
   - PyAutoGalaxy: feature/workspace-config-cleanup
