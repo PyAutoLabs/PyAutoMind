@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-09-27T13:57:03Z",
+  "updated": "2026-09-27T14:21:02Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -18,12 +18,6 @@
       "text": "Point-source CPU speed-up phase 4b \u2014 cut the step-0 triangle gather /\u2026 \u2014 library-shipped, profiling-pending (PyAutoArray PR #580 open; 8490H job 357321 queued)",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/580",
       "prompt": "/start_dev active/pointsolver_step0_gather_containment.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Workspace config cleanup: remove orphan config keys the Nerves board flags \u2014 workspace-shipped, awaiting-merge (7 PRs open; merge order Galaxy#630 -> Lens#751, Nerves#176 any time, then workspaces\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/630",
-      "prompt": "/start_dev active/workspace_config_cleanup.md"
     },
     {
       "severity": "yellow",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoLens PyAutoLens#751 \u2014 Workspace config cleanup: remove orphan config keys the Nerves board flags",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/751",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoLens PyAutoLens#750 \u2014 interferometer-mge-w-tilde-route",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/750",
       "prompt": null
     }
   ]
