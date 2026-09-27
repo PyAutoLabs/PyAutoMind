@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/profiling_research_wiki_phase_2_backfill.md">Profiling research wiki — phase 2: backfill the closed campaigns</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/339">issue #339</a> — issued 2026-09-27 — workspace-dev</summary>
+<details><summary>📋 <a href="active/profiling_research_wiki_phase_2_backfill.md">Profiling research wiki — phase 2: backfill the closed campaigns</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/339">issue #339</a> — issued 2026-09-27 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/340">autolens_profiling#340</a></summary>
 
 ```
 /start_dev active/profiling_research_wiki_phase_2_backfill.md
