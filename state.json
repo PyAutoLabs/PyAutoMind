@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-09-27T21:39:53Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
+  "updated": "2026-09-27T21:49:51Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Profiling research wiki \u2014 phase 2: backfill the closed campaigns \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/340",
-      "prompt": "/start_dev active/profiling_research_wiki_phase_2_backfill.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -126,6 +120,12 @@
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#634 \u2014 Summary",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/634",
       "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "waiting on PyAutoGalaxy's release: Workspace config cleanup: remove orphan config keys the Nerves board flags",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/issues/441",
+      "prompt": "/start_dev active/workspace_config_cleanup.md"
     }
   ]
 }

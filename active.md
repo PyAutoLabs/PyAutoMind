@@ -1,24 +1,5 @@
 # Active Tasks
 
-## profiling-research-wiki-p2
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/339
-- issued: 2026-09-27
-- prompt: active/profiling_research_wiki_phase_2_backfill.md
-- session: Claude Code remote (web), https://claude.ai/code/session_01MwuV47ESjoLFM8MuFZjw2s
-- location: remote-container clone of autolens_profiling (no task worktree); GitHub via the mcp__github__ tools
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/340
-- autonomy: human-required (header); plan on the issue; merge is human via /prm
-- epic: profiling-research-wiki (phase 2 of 2)
-- repos:
-  - autolens_profiling: claude/profiling-wiki-phase-2-b8vtjm
-- summary: |
-    PR #340 open (head 6211028, 20 files): all 18 stub pages backfilled, index rebuilt, no-note
-    speed-ups table, every library release verified against tags (no "not verified" left),
-    PyAutoArray#582 F/D discrepancy settled. check_wiki --check OK, wiki tests 5 passed, ruff clean;
-    lychee runs in CI. The PR body lists out-of-scope ledger and Mind corrections for follow-up.
-- resume: /prm 340 when lint.yml is green; close-out records the corrections list as follow-ups
-
 ## eyes-organ-order
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/439
 - issued: 2026-09-25
