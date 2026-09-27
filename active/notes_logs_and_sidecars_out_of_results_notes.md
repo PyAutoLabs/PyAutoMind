@@ -5,6 +5,8 @@
 - Epic: profiling-research-wiki
 - Autonomy: human-required
 - Filed: 2026-09-27
+- Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/341
+Issued: 2026-09-27
 
 ## Original prompt
 

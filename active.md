@@ -1,5 +1,22 @@
 # Active Tasks
 
+## profiling-notes-sidecars-out
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/341
+- issued: 2026-09-27
+- prompt: active/notes_logs_and_sidecars_out_of_results_notes.md
+- session: Claude Code remote (web), https://claude.ai/code/session_01MwuV47ESjoLFM8MuFZjw2s
+- location: remote-container clone of autolens_profiling (no task worktree); GitHub via the mcp__github__ tools
+- status: workspace-dev
+- autonomy: human-required (header); plan on the issue; merge is human via /prm
+- epic: profiling-research-wiki (follow-on)
+- repos:
+  - autolens_profiling: claude/profiling-wiki-phase-2-b8vtjm
+- summary: |
+    Move the 16 .out logs to results/logs/<campaign>/ and the 10 JSON sidecars beside the
+    results they describe (results/breakdown/imaging/), rewrite ledger and wiki links, write the
+    artefact policy into results/README.md, add check_results_layout.py to lint.yml, and attach a
+    provenance block to device_info_dict() so every device-recording result JSON carries it.
+
 ## eyes-organ-order
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/439
 - issued: 2026-09-25
