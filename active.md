@@ -61,3 +61,13 @@
   - euclid_strong_lens_modeling_pipeline: feature/vis-lp-inspection-bundle
 - summary: Add an explicit vis_lp-only inspection mode that combines the main normal-model output tree with the 100-lens SED/Sersic tree, without requiring vis_pix or selecting the other 200 main-tree lenses.
 - resume: Implemented + committed locally as c6b514d on feature/vis-lp-inspection-bundle (133 tests green, not pushed). Human reviews diff (scratchpad part1_diff.txt) before ship_workspace; then sync tooling to the euclid_dr1 science clone/RAL and submit the 4,922-tile vis_lp-only bundle (OUTPUT_DIR=dr1_full, INITIAL_SEARCH_NAME=vis_lp, DATASET_NAMES_PATH=all, TAR_TO set) as a Cortex run.
+
+## sparse-operator-oversampling-cache
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/585
+- issued: 2026-09-27
+- status: library-dev
+- prompt: active/sparse_operator_dropped_and_double_convolution.md
+- session: Claude Code CLI (Opus 5.5), 2026-09-27
+- worktree: /home/jammy/Code/PyAutoLabs-wt/sparse-operator-oversampling-cache
+- repos:
+  - PyAutoArray: feature/sparse-operator-oversampling-cache
