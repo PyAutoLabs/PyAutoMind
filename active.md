@@ -6,16 +6,20 @@
 - prompt: active/runtime_dashboard_and_profiling_organ_vision.md
 - session: Claude Code remote (web), https://claude.ai/code/session_01MwuV47ESjoLFM8MuFZjw2s
 - location: remote-container clone of autolens_profiling (no task worktree); GitHub via the mcp__github__ tools
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/346
 - autonomy: human-required (header); plan on the issue; merge is human via /prm
 - epic: profiling-research-wiki (dashboard leg; organ birth is a later, separate epic)
 - repos:
   - autolens_profiling: claude/profiling-runtime-dashboard-b8vtjm
 - summary: |
-    build_dashboard.py -> dashboard/{series.json,state.json,index.html} (run time per cell x
-    config per release, provenance-qualified, drift badge), pinned release sweep in hpc/,
-    profile.yml + pages_dashboard.yml wiring. Brain-board registration deferred (PyAutoBrain
-    claimed by eyes-organ-order). Second branch per the human's choice so #344 and this can be open together.
+    PR #346 open (head 8c8a6ea, 13 files): build_dashboard.py -> dashboard/{series,state}.json +
+    index.html (143 series, 61 cells, 4 releases; all markers hollow until the first pinned sweep
+    carries the provenance block), hpc/release_sweep.conf + submit_release_sweep.sh, profile.yml
+    and pages_dashboard.yml wiring, lint --check. Every local gate green; feed validated against
+    board/_state.py. Item 4 (Brain board registration) re-filed as
+    draft/feature/pyautobrain/register_profiling_dashboard_on_brain_board.md.
+- resume: /prm 346 when lint.yml is green (Pages enablement happens on the first publish after merge)
 
 ## wiki-backfill-drift
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/343
