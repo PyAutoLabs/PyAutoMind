@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1595 records across 8 buckets.
+1596 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -399,6 +399,7 @@ markers; everything below GENERATED is rebuilt.
 - [point-source-source-plane-p2a](2026/09/point-source-source-plane-p2a.md)
 - [point-source-source-plane-p2b](2026/09/point-source-source-plane-p2b.md)
 - [point-source-source-plane-p2c](2026/09/point-source-source-plane-p2c.md)
+- [point-source-source-plane-p2e](2026/09/point-source-source-plane-p2e.md)
 - [pointsolver-mcs-headroom](2026/09/pointsolver-mcs-headroom.md)
 - [pointsolver-step0-gather](2026/09/pointsolver-step0-gather.md)
 - [positions-threshold-repin](2026/09/positions-threshold-repin.md)

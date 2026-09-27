@@ -1,4 +1,4 @@
-# Point-source source-plane chi-squared speed-up campaign — phase 2e+ (phases 1, 2a–2d shipped)
+# Point-source source-plane chi-squared speed-up campaign — remaining candidates (phases 1–2e shipped)
 
 Type: research
 Target: autolens_profiling
@@ -12,7 +12,7 @@ Themes:
 - jax
 Difficulty: large
 Autonomy: supervised
-Priority: normal
+Priority: low
 Status: formalised
 Consequence: judge
 Review-minutes: 25
@@ -21,7 +21,22 @@ Epic: point-source-cpu-speed
 Lane: any
 Filed: 2026-09-26
 Updated: 2026-09-27
-Parent-record: complete/2026/09/point-source-gradient-mode.md
+Parent-record: complete/2026/09/point-source-source-plane-p2e.md
+
+## Phases 1–2e shipped — campaign core complete; remaining candidates parked (2026-09-27)
+
+- **Phase 2e merged:** autolens_profiling#336 at `17e2596` (issue #334). Record
+  `complete/2026/09/point-source-source-plane-p2e.md`. The real `af.MultiStartAdam` step runs forward
+  mode at 0.36–0.58× reverse on the quiet RAL EPYC (matching phase 2c); L24 compile 95.9 → 11.2 s.
+- **State of the likelihood:** the forward call is at its CPU dispatch floor (phase 2a); the gradient
+  takes the cheaper AD mode by default once PyAutoFit#1649 / PyAutoLens#752 are released.
+- **Remaining candidates (not started; issue one at a time only if wanted):**
+  1. blackjax NUTS / SMC forward-mode `value_and_grad` (they differentiate the log-density
+     themselves; phase 2d scoped them out).
+  2. A100 `vmap` throughput row (the single call is launch-bound; batch throughput is the GPU number
+     that matters).
+- **Filed alongside:** `draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md`,
+  `draft/bug/autogalaxy/power_law_multipole_m1_singular_at_isothermal_slope.md`.
 
 ## Phase 2d shipped (library) — next is phase 2e (2026-09-27)
 
