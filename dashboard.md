@@ -284,7 +284,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/pointsolver_max_containing_size_headroom.md">Point-source CPU speed-up phase 4c — raise <code>MAX_CONTAINING_SIZE</code> headroom…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/583">issue #583</a> — issued 2026-09-27 — library-dev</summary>
+<details><summary>📋 <a href="active/pointsolver_max_containing_size_headroom.md">Point-source CPU speed-up phase 4c — raise <code>MAX_CONTAINING_SIZE</code> headroom…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/583">issue #583</a> — issued 2026-09-27 — library-shipped, awaiting-merge (N=20 human-chosen; PyAutoArray #584 + PyAutoLens #753 + autolens_profiling #335 open; human runs… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/584">PyAutoArray#584</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/753">PyAutoLens#753</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/335">autolens_profiling#335</a> — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoLens</summary>
 
 ```
 /start_dev active/pointsolver_max_containing_size_headroom.md
@@ -326,6 +326,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#584](https://github.com/PyAutoLabs/PyAutoArray/pull/584) — `active/pointsolver_max_containing_size_headroom.md`
 - [PyAutoArray#576](https://github.com/PyAutoLabs/PyAutoArray/pull/576) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - [PyAutoArray#582](https://github.com/PyAutoLabs/PyAutoArray/pull/582) — `complete/2026/09/interferometer-sparse-cache.md`
 - [PyAutoArray#578](https://github.com/PyAutoLabs/PyAutoArray/pull/578) — `complete/2026/09/interferometer-transform-real-scatter.md`
@@ -357,6 +358,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoLens**
 
+- [PyAutoLens#753](https://github.com/PyAutoLabs/PyAutoLens/pull/753) — `active/pointsolver_max_containing_size_headroom.md`
 - [PyAutoLens#751](https://github.com/PyAutoLabs/PyAutoLens/pull/751) — `active/workspace_config_cleanup.md`
 - [PyAutoLens#750](https://github.com/PyAutoLabs/PyAutoLens/pull/750) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - [PyAutoLens#752](https://github.com/PyAutoLabs/PyAutoLens/pull/752) — `complete/2026/09/point-source-gradient-mode.md`
