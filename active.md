@@ -1,5 +1,21 @@
 # Active Tasks
 
+## profiling-research-wiki-p2
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/339
+- issued: 2026-09-27
+- prompt: active/profiling_research_wiki_phase_2_backfill.md
+- session: Claude Code remote (web), https://claude.ai/code/session_01MwuV47ESjoLFM8MuFZjw2s
+- location: remote-container clone of autolens_profiling (no task worktree); GitHub via the mcp__github__ tools
+- status: workspace-dev
+- autonomy: human-required (header); plan on the issue; merge is human via /prm
+- epic: profiling-research-wiki (phase 2 of 2)
+- repos:
+  - autolens_profiling: claude/profiling-wiki-phase-2-b8vtjm
+- summary: |
+    Backfill the 18 stub pages under wiki/campaigns/ (why, phase table, tag-verified release
+    table, caveats), record the seven no-note library speed-ups, refresh the index rows.
+    Mind edits are ledger-only on the session branch (PyAutoMind is claimed by eyes-organ-order).
+
 ## eyes-organ-order
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/439
 - issued: 2026-09-25

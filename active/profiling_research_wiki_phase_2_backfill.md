@@ -6,6 +6,8 @@
 - Autonomy: human-required
 - Filed: 2026-09-27
 - Depends on: phase 1 (autolens_profiling#337) merged
+- Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/339
+Issued: 2026-09-27
 
 ## Original prompt
 
