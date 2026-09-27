@@ -2,6 +2,7 @@
 
 Type: bug
 Target: @PyAutoGalaxy
+Issued: 2026-09-27
 
 ## Original request (verbatim)
 

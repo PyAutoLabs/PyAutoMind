@@ -1,5 +1,18 @@
 # Active Tasks
 
+## isothermal-convergence-jit
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/632
+- issued: 2026-09-27
+- prompt: active/isothermal_convergence_jit.md
+- session: Claude Code CLI (Opus 5.5 main session + Opus subagent), 2026-09-27; session ID unavailable
+- status: library-dev
+- autonomy: human-required (no header); plan approved in-session 2026-09-27
+- worktree: ~/Code/PyAutoLabs-wt/isothermal-convergence-jit
+- parallel-claim: "PyAutoGalaxy is also claimed by workspace-config-cleanup (PyAutoMind#441), awaiting-release with Galaxy#630 already merged, and by jax-grad-nan-zero-components (PyAutoGalaxy#631), which touches only autogalaxy/convert.py + tests; this task touches only autogalaxy/profiles/mass/total/power_law_core.py + test_isothermal.py. Parallel claim human-approved 2026-09-27."
+- heart-ack: "2026-09-27 YELLOW acknowledged by the human: manifest drift x3 vs PyAutoMind/repos.yaml (hub organism blurb 7, organism-map blocks 1, workspace checkouts 1); release validation incomplete: no rehearsal for current source"
+- repos:
+  - PyAutoGalaxy: feature/isothermal-convergence-jit
+
 ## jax-grad-nan-zero-components
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/631
 - issued: 2026-09-27
