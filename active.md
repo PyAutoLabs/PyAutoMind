@@ -110,3 +110,16 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/333
 - heart-ack: "2026-09-27 YELLOW acknowledged by the human ('approve you to continue', same set as #328/#582, none touch autolens_profiling): manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: organism-map blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml; release validation incomplete: no rehearsal for current source"
 - resume: "2026-09-27 shipped: commits 5d806c4 92a2061 6022e2d 9a4981d pushed to feature/interferometer-mesh-numba-p2, PR #333 open (lint pending at open). RAL jobs 358985/358986/359000 COMPLETED and committed. Next: human /prm 333 -> close-out (complete record; RAL worktree /mnt/ral/jnightin/autolens_profiling_wt/interferometer-mesh-numba-p2 + .bundle to clean) -> campaign phase 3 (A100 mask-radius sweep r2.0/r5.0) via start_dev."
+
+## point-source-source-plane-p2e
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/334
+- issued: 2026-09-27
+- prompt: active/point_source_source_plane_phase_2e.md (phase 2e of campaign draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md)
+- epic: point-source-cpu-speed
+- session: Claude Code CLI (Opus 5.5), 2026-09-27
+- worktree: /home/jammy/Code/PyAutoLabs-wt/point-source-source-plane-p2e
+- autonomy: supervised (header); approved in-session 2026-09-27 as the phase-2d plan's workspace follow-up
+- parallel-claim: "autolens_profiling also claimed by pointsolver-mcs-headroom and interferometer-mesh-numba-p2; phase 2e touches only scripts/point_source_source/likelihood_breakdown/gradient_mode_library_ab.py, its results/submits, point_source_source_plane_campaign.md (Phase 2e section), README rows. Approved with the phase-2d plan 2026-09-27."
+- repos:
+  - autolens_profiling: feature/point-source-source-plane-p2e
+- status: workspace-dev
