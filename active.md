@@ -87,6 +87,7 @@
 - parallel-claim: "PyAutoArray also claimed by point-source-cpu-p4b / PR #580 — PointSolver step-0 files; this task touches only autoarray/inversion/inversion/interferometer*/ and test_autoarray/inversion/inversion/interferometer*/; human-approved 2026-09-27"
 - repos:
   - PyAutoArray: feature/interferometer-sparse-cache
+- resume: 2026-09-27 BUILT, UNPUSHED — PyAutoArray feature/interferometer-sparse-cache local commit ef905789 (cached_property on interferometer/sparse.py data_vector/curvature_matrix/curvature_matrix_diag, numba curvature_matrix_diag, mapping.py data_vector/curvature_matrix + count tests red 2/2 -> green 1/1). test_autoarray 1736 passed; PyAutoGalaxy/PyAutoLens interferometer 40/35 passed. Laptop sma harness: evaluations {1,1} (was {2,4}); FoM bit-identical before/after (Delaunay -3162.6272344520685 laptop, rect -3168.595092417778 = pin); numba full call Delaunay 492->343 ms, rect 1275->1245 ms (fnnls-dominated, noisy); JAX sma FoM bit-identical, jaxpr 305->272 eqns; workspace_test sparse JAX scripts pass. Harness counter needs a cached_property-aware wrapper in the after-measurement PR (patch kept in session scratchpad). Next = /ship_library.
 
 ## where-to-file-block
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/442
