@@ -1,5 +1,17 @@
 # Active Tasks
 
+## profiling-research-wiki
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/337
+- issued: 2026-09-27
+- prompt: active/profiling_research_wiki.md
+- session: Claude Code CLI (Fable architect, Opus execution), 2026-09-27; session ID unavailable
+- status: workspace-dev
+- epic: profiling-research-wiki
+- worktree: /home/jammy/Code/PyAutoLabs-wt/profiling-research-wiki
+- repos:
+  - autolens_profiling: feature/profiling-research-wiki
+- notes: "phase 1 of 2 (index + live pages + drift check); PyAutoMind epics.md pointer edit at close-out via detached temp worktree (Mind claimed by eyes-organ-order)"
+
 ## eyes-organ-order
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/439
 - issued: 2026-09-25
