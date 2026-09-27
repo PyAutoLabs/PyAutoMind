@@ -117,10 +117,12 @@
 - prompt: active/interferometer_mesh_numba_cpu_phase_1.md (phase 1 of campaign draft/research/autolens_profiling/interferometer_mesh_breakdown_numba_cpu_decision_matrix.md)
 - epic: interferometer-likelihood-campaign
 - session: Claude Code CLI (Opus 5.5), 2026-09-27; session ID unavailable
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs-wt/interferometer-mesh-numba-p1
 - autonomy: supervised (header); plan approved in-session 2026-09-27 (phase 1: library-dispatch numba CPU cells + --mask-radius + RAL CPU rows, workspace-only)
 - parallel-claim: "autolens_profiling is also claimed by point-source-cpu-p4 (#321), point-source-cpu-p4b (pointsolver-step0-gather) and point-source-source-plane-p2b; this phase touches only scripts/misc/likelihood_breakdown/interferometer_pixelized_numpy.py (+ --mask-radius in interferometer_pixelized.py), scripts/interferometer/likelihood_breakdown/*_numba.py, hpc/batch_cpu/*interferometer*, results/breakdown/interferometer/**numba*, and instruments/interferometer.py only if needed for the mask radius; README dashboards regenerated at ship (#177 precedent). Human-approved 2026-09-27."
 - repos:
   - autolens_profiling: feature/interferometer-mesh-numba-p1
-- resume: 2026-09-27 RAL CPU rows (bbcb9a2) + sma re-pin/laptop refresh (2908bb2) committed LOCALLY on feature/interferometer-mesh-numba-p1 (on top of defb5a8, 7cc976f, a40ffb7, 9721d39; not pushed); RAL jobs 357554-357561 COMPLETED, 0 tracebacks, source_revisions = mains, no contention. sma decision recorded (human 2026-09-27: keep the May-18 lensed_source.fits adapt image, md5 a978d8b1, shared with the #324 A100 rows): pins -3162.627234657415 / -3168.595092417778, laptop + RAL + A100 sma rows consistent, no pinned_drift. Next = /ship_workspace.
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/328
+- heart-ack: "manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: organism-map blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml; release validation incomplete: no rehearsal for current source" (acknowledged 2026-09-27, none touch autolens_profiling)
+- resume: 2026-09-27 SHIPPED — PR autolens_profiling#328 open (6 commits defb5a8..2908bb2; RAL CPU numba/FFT/JAX-CPU rows + alma N sweep; sma adapt image kept at May-18 copy, human decision). Next = human /prm 328; then phase 2 (crossover) and phase 3 (A100 mask-radius sweep) can start in parallel. Follow-up draft filed: draft/feature/autoarray/interferometer_sparse_numpy_cache_curvature_and_data_vector.md
