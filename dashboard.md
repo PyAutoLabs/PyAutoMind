@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 248 |
+| [Backlog](#backlog) (`draft/`) | 249 |
 
 > **No batch in flight.**
 
@@ -527,10 +527,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**248** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **54** of them belong to an epic and are listed only under [Epics](#epics) below.
+**249** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **54** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 70</summary>
+<summary><b>bug</b> — 71</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1080,6 +1080,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/autoarray/mesh_geometry_areas_transformed_adapt_image_indexerror.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autogalaxy/jax_grad_nan_at_zero_components.md">jax.grad NaN at exactly zero components (ExternalShear, multipole_comps, ell_comps)</a> — autogalaxy</summary>
+
+```
+/start_dev draft/bug/autogalaxy/jax_grad_nan_at_zero_components.md
 ```
 
 </details>
@@ -3055,7 +3063,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 </details>
 
-66 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+67 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3082,6 +3090,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 - `draft/feature/workspaces/model_figures_6_rollout.md`
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md`
+- `draft/bug/autogalaxy/jax_grad_nan_at_zero_components.md`
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
 - `draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md`
 - `draft/bug/health_fixes/release_timeout_policy.md`
@@ -3099,8 +3108,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 - `draft/test/workspaces/mesh_magnification_correctness.md`
 - `draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md`
 - `draft/test/workspaces/restore_workspace_test_likelihood_baselines.md`
-- `draft/test/workspaces/smoke_workspace_fixes.md`
-- _… and 26 more_
+- _… and 27 more_
 
 </details>
 
