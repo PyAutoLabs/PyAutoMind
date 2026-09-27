@@ -1,3 +1,32 @@
+## point-source-gradient-mode
+
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1648
+- completed: 2026-09-27
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1649 (merge `867af1c`)
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/752 (merge `b3c9b68`)
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1649
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/752
+- epic: point-source-cpu-speed
+- parent-record: complete/2026/09/point-source-source-plane-p2c.md
+- campaign: draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md
+
+Phase 2d of the source-plane point-source chi-squared campaign — the library half: an analysis-declared `gradient_mode` in PyAutoFit, with PyAutoLens `AnalysisPoint` declaring `"forward"`. Merged in PyAutoFit#1649 then PyAutoLens#752. **Scope recorded = the two library PRs**; the planned autolens_profiling follow-up (real `MultiStartGradient` A/B) was not done and is re-filed in the campaign prompt as the next step.
+
+**Shipped**
+- PyAutoFit: `autofit/jax/gradient.py` (`GRADIENT_MODES`, `validate_gradient_mode`, `resolve_gradient_mode`, `value_and_grad_from`, `grad_from`; lazy JAX import; forward = `jax.jacfwd(..., has_aux=True)` over the flat vector, likelihood traced once); `af.Analysis.gradient_mode = "reverse"`; `Fitness(gradient_mode=None)` (`_grad` via `grad_from`, `__setstate__` default for old pickles); `MultiStartGradient(gradient_mode=None)` validated at construction, resolved at fit time, both `value_and_grad` sites (physical + scaler/bijector-stepped) via the helper, mode logged once and recorded in `search_internal` / `samples_info["gradient_mode"]`. Not in the search identifier. 28 new tests.
+- PyAutoLens: `AnalysisPoint.gradient_mode = "forward"`; 3 new tests (declared mode; fwd ≡ rev gradient over prior medians + PRNGKey 0..15, worst 1.8e-12; MultiStart fwd vs rev).
+
+**Validation:** tests red → green (Lens: 2/3 failed on unfixed code); full suites PyAutoFit 2926 passed / 2 skipped (serial — xdist trips on prior-property test IDs), PyAutoLens 762 passed / 1 xfailed; new tests pass on RAL A100 (job 359057); CI green on every leg for both PRs. Heart YELLOW (manifest drift ×3, release validation incomplete) acknowledged by the human.
+
+**Carried**
+- Next (re-filed): autolens_profiling `gradient_mode_library_ab.py` — real `MultiStartGradient` step on the phase-2c L5 / L24 rungs, `gradient_mode="forward"` vs `"reverse"`, RAL gpu-node CPU + A100; best run once the libraries are released (or against the mains).
+- Later: blackjax NUTS / SMC forward-mode `value_and_grad`.
+- Intake: `Galaxy` duplicate PyTreeDef registration when a JAX `Fitness` (`autofit.jax.register_model`) precedes autoarray `register_instance_pytree` / `register_tracer_classes` in one process (Lens JAX tests run in a subprocess to avoid it); `PowerLawMultipole` m=1 singular at slope 2.
+- Trap: `worktree_create` rewrote the root `activate.sh`; 13 bundles' symlinked `activate.sh` were regenerated as real per-task files (bug prompt `draft/bug/pyautobrain/worktree_sh_clobbers_root_activate.md`).
+- RAL cleanup: `/mnt/ral/jnightin/p2d_check`; p2a/p2b/p2c RAL worktrees + bundles.
+
+## Original prompt
+
 # Point-source source-plane chi-squared campaign — phase 2d: analysis-declared gradient_mode
 
 Type: feature

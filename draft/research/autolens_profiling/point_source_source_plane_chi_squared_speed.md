@@ -1,4 +1,4 @@
-# Point-source source-plane chi-squared speed-up campaign — phase 2d+ (phases 1, 2a, 2b, 2c shipped)
+# Point-source source-plane chi-squared speed-up campaign — phase 2e+ (phases 1, 2a–2d shipped)
 
 Type: research
 Target: autolens_profiling
@@ -21,7 +21,23 @@ Epic: point-source-cpu-speed
 Lane: any
 Filed: 2026-09-26
 Updated: 2026-09-27
-Parent-record: complete/2026/09/point-source-source-plane-p2c.md
+Parent-record: complete/2026/09/point-source-gradient-mode.md
+
+## Phase 2d shipped (library) — next is phase 2e (2026-09-27)
+
+- **Merged:** PyAutoFit#1649 at `867af1c` then PyAutoLens#752 at `b3c9b68` (issue PyAutoFit#1648);
+  both pending release. Record `complete/2026/09/point-source-gradient-mode.md`. `af.Analysis.gradient_mode`
+  defaults to `"reverse"`; `AnalysisPoint` declares `"forward"`; `af.MultiStartAdam(gradient_mode=...)`
+  overrides; helpers in `autofit/jax/gradient.py`.
+- **Next: phase 2e (workspace, the re-filed remainder of phase 2d's plan)** — autolens_profiling
+  `scripts/point_source_source/likelihood_breakdown/gradient_mode_library_ab.py`: the real
+  `MultiStartGradient` step on the phase-2c L5 and L24 rungs with `gradient_mode="forward"` vs
+  `"reverse"`, RAL gpu-node CPU + A100, confirming the phase-2b/2c gain arrives through the library
+  path; campaign-note section. Run against the library mains now (merged) or after the release.
+- **Later:** blackjax NUTS / SMC forward-mode `value_and_grad` (phase 2d scoped it out).
+- **Carried:** intake — `Galaxy` duplicate PyTreeDef registration (JAX `Fitness` then
+  `register_tracer_classes` in one process); `PowerLawMultipole` m=1 singular at slope 2. RAL cleanup
+  (`/mnt/ral/jnightin/p2d_check`, p2a/p2b/p2c worktrees).
 
 ## Phase 2c shipped — next is phase 2d (2026-09-27)
 

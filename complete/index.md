@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1591 records across 8 buckets.
+1592 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -390,6 +390,7 @@ markers; everything below GENERATED is rebuilt.
 - [point-source-cpu-p3](2026/09/point-source-cpu-p3.md)
 - [point-source-cpu-p4](2026/09/point-source-cpu-p4.md)
 - [point-source-folder-split](2026/09/point-source-folder-split.md) — closed completed 2026-09-26
+- [point-source-gradient-mode](2026/09/point-source-gradient-mode.md)
 - [point-source-shared-breakdown](2026/09/point-source-shared-breakdown.md)
 - [point-source-smoke-runtime-regression](2026/09/point-source-smoke-runtime-regression.md) — not a library regression
 - [point-source-source-plane-breakdown](2026/09/point-source-source-plane-breakdown.md)
