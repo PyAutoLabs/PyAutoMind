@@ -121,7 +121,6 @@
   - autolens_profiling: feature/interferometer-mesh-numba-p2
 - resume: "2026-09-27 local commits 5d806c4 (harness: cached_property counter, adapt guard, previous_row, --levers) + 92a2061 (RAL crossover arrays + lever submit) on feature/interferometer-mesh-numba-p2, NOT pushed. RAL worktree /mnt/ral/jnightin/autolens_profiling_wt/interferometer-mesh-numba-p2 (bundle of 4c267b7..92a2061). Jobs: 358985 (Delaunay crossover array 0-6: sma r3.5, alma r2.0/3.5/4.25/5.0/6.0, alma_high r3.5) + 358986 (rect, same) on euclid-ral-gpu-1; 359000 levers (alma r3.5 both meshes, --nodelist=euclid-ral-gpu-2 idle node; 358987 cancelled). Pull: rsync -av euclid_jump:/mnt/ral/jnightin/autolens_profiling_wt/interferometer-mesh-numba-p2/results/breakdown/interferometer/ results/breakdown/interferometer/ (+ hpc/batch_cpu/output/output.{358985_*,358986_*,359000}.out). Next: pull -> check witness (crossover bracketed per mesh; {1,1}; sma pins) -> notes (numba_interferometer_verdict.md crossover section; interferometer_mesh_cpu_breakdown_2026_09.md ranked levers + per-lever draft prompts; gate 60 confirm or general.yaml retune prompt) -> build_readme.py -> ship_workspace."
 
-
 ## point-source-gradient-mode
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1648
 - issued: 2026-09-27
