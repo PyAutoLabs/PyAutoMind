@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-09-27T15:22:46Z",
+  "updated": "2026-09-27T15:27:52Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Point-source CPU speed-up phase 4b \u2014 cut the step-0 triangle gather /\u2026 \u2014 awaiting-merge (PyAutoArray #580 MERGED 4383ea81; autolens_profiling data PR #330 open)",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/580",
+      "prompt": "/start_dev active/pointsolver_step0_gather_containment.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoMind PyAutoMind#425 \u2014 codex-context-efficiency",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/pull/425",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoMind PyAutoMind#427 \u2014 Shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/pull/427",
       "prompt": null
     }
   ]

@@ -276,7 +276,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/pointsolver_step0_gather_containment.md">Point-source CPU speed-up phase 4b — cut the step-0 triangle gather /…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/579">issue #579</a> — issued 2026-09-26 — library-merged, profiling-pending (PyAutoArray PR #580 MERGED 2026-09-27 as 4383ea81; 8490H job 357321 DONE, committed; profiling… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/580">PyAutoArray#580</a> — ⏳ pending release: PyAutoArray</summary>
+<details><summary>📋 <a href="active/pointsolver_step0_gather_containment.md">Point-source CPU speed-up phase 4b — cut the step-0 triangle gather /…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/579">issue #579</a> — issued 2026-09-26 — awaiting-merge (PyAutoArray #580 MERGED 4383ea81; autolens_profiling data PR #330 open) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/580">PyAutoArray#580</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/330">autolens_profiling#330</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 /start_dev active/pointsolver_step0_gather_containment.md
