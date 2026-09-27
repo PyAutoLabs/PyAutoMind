@@ -119,3 +119,16 @@
 - parallel-claim: "PyAutoArray also claimed by point-source-cpu-p4b / PR #580 — PointSolver step-0 files; this task touches only autoarray/inversion/inversion/interferometer*/ and test_autoarray/inversion/inversion/interferometer*/; human-approved 2026-09-27"
 - repos:
   - PyAutoArray: feature/interferometer-sparse-cache
+
+## where-to-file-block
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/442
+- issued: 2026-09-27
+- prompt: active/where_to_file_block.md
+- session: claude (Fable architect, Opus worker; ID unavailable)
+- status: library-dev
+- autonomy: supervised (header); plan approved in-session 2026-09-27 (bot-push rollout, not a PR wave)
+- worktree: ~/Code/PyAutoLabs-wt/where-to-file-block
+- parallel-claim: "PyAutoMind and PyAutoBrain are also claimed by eyes-organ-order (PyAutoMind#439), whose Mind diff touches repos.yaml organ order, the two hook copies and one 4-line hunk in scripts/repos_sync.py _repo_resolver, and whose Brain diff touches agents/_pyauto_root.py, bin/_pyauto_root.sh, docs/; this task touches only repos_sync.py block constants/new functions/main wiring, policy/, tests/, skills/create_issue, .github/workflows/session_hook_propagate.yml and Brain skills/intake/. Parallel claim human-approved 2026-09-27; noted on #439 and #442."
+- repos:
+  - PyAutoMind: feature/where-to-file-block
+  - PyAutoBrain: feature/where-to-file-block

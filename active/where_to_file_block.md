@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: high
 Lane: any
+Issued: 2026-09-27
 
 ## Request (2026-09-27, from the collaborator Slack)
 
