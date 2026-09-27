@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-09-27T16:22:17Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
+  "updated": "2026-09-27T16:31:24Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Interferometer likelihood campaign: cache curvature_matrix / data_vector on the NumPy sparse interferometer\u2026 \u2014 library-shipped, awaiting-merge (PyAutoArray PR #582 open; human runs /prm)",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/582",
-      "prompt": "/start_dev active/interferometer_sparse_numpy_cache_curvature_and_data_vector.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -33,14 +27,14 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#582 \u2014 Interferometer likelihood campaign: cache curvature_matrix / data_vector on the NumPy sparse interferometer\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/582",
+      "text": "pending release: PyAutoArray PyAutoArray#576 \u2014 interferometer-mge-w-tilde-route",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/576",
       "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#576 \u2014 interferometer-mge-w-tilde-route",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/576",
+      "text": "pending release: PyAutoArray PyAutoArray#582 \u2014 interferometer-sparse-cache",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/582",
       "prompt": null
     },
     {
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoLens PyAutoLens#750 \u2014 interferometer-mge-w-tilde-route",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/750",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoMind PyAutoMind#425 \u2014 codex-context-efficiency",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/pull/425",
       "prompt": null
     }
   ]

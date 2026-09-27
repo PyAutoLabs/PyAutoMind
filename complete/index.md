@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1588 records across 8 buckets.
+1589 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -300,6 +300,7 @@ markers; everything below GENERATED is rebuilt.
 - [interferometer-preload-cpu](2026/09/interferometer-preload-cpu.md)
 - [interferometer-preload-nufft-type1](2026/09/interferometer-preload-nufft-type1.md)
 - [interferometer-preload-prose](2026/09/interferometer-preload-prose.md)
+- [interferometer-sparse-cache](2026/09/interferometer-sparse-cache.md)
 - [interferometer-sparse-operator-numpy-cpu-path](2026/09/interferometer-sparse-operator-numpy-cpu-path.md)
 - [interferometer-transform-real-scatter](2026/09/interferometer-transform-real-scatter.md) — `TransformerNUFFT.transform_mapping_matrix` now scatters the real mapping matrix, flips, then casts to complex…
 - [interferometer-xp-jnp-call-sites](2026/09/interferometer-xp-jnp-call-sites.md)

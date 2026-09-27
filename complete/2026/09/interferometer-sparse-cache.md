@@ -1,3 +1,40 @@
+## interferometer-sparse-cache
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/581
+- completed: 2026-09-27
+- epic: interferometer-likelihood-campaign
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/582 (merge e281abf3, 2026-09-27; 3/3 unittest jobs green)
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/582
+- summary: |
+    `data_vector`, `curvature_matrix` and `curvature_matrix_diag` on the interferometer sparse
+    inversions (`autoarray/inversion/inversion/interferometer/sparse.py`, including a numba
+    `curvature_matrix_diag` override) and on `interferometer/mapping.py` are now `@cached_property`.
+    Each is now evaluated once per `figure_of_merit` instead of several times. New evaluation-count
+    tests went red on unfixed source (F=2, D=2) and green after the fix (1, 1). test_autoarray:
+    1736 passed. PyAutoGalaxy interferometer tests: 40 passed. PyAutoLens interferometer tests: 35
+    passed. The 3 autolens_workspace_test JAX sparse scripts pass. Laptop sma timings: Delaunay numba
+    492 -> 343 ms, NumPy FFT 1783 -> 923 ms. The figure of merit is unchanged and the JAX jaxpr
+    shrinks from 305 to 272 eqns.
+- scope: |
+    PARTIAL. Only the library change shipped. The workspace after-measurement did not ship: the
+    autolens_profiling harness counter fix plus RAL CPU numba re-runs of sma/alma/alma_high on both
+    meshes. That work is re-filed as
+    `draft/research/autolens_profiling/interferometer_sparse_cache_after_measurement.md`, which
+    carries the harness diff. The prompt's RAL alma Delaunay witness (2297 ms -> ~1.3 s) is therefore
+    NOT yet witnessed.
+- follow-ups: |
+    - `draft/research/autolens_profiling/interferometer_sparse_cache_after_measurement.md`: the
+      remainder above. It can fold into campaign phase 2.
+    - `draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md`: filed
+      at ship.
+- heart: YELLOW acked at ship (manifest drift x3 + no rehearsal for current source); freeze flag clear at merge.
+- observed: |
+    The `pointsolver-step0-gather` (point-source-cpu-p4b) row in active.md still claims PyAutoArray,
+    although PyAutoArray PR #580 has merged. That row was left untouched, because it belongs to
+    another task; its own /prm should release it.
+- session: Claude Code CLI (Opus 5.5), 2026-09-27; close-out run under /prm by an Opus subagent.
+
+## Original prompt
+
 # Interferometer likelihood campaign: cache curvature_matrix / data_vector on the NumPy sparse interferometer inversions
 
 Type: feature

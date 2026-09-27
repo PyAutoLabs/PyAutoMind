@@ -32,7 +32,8 @@ Updated: 2026-09-27
   where JAX-CPU is fastest. Witness PASS (`InversionInterferometerSparseNumba`; numba vs FFT
   <= 9.1e-13 nat; step sum 0.996-1.006). sma adapt image kept at the May-18 copy (human, 2026-09-27).
 - **Next:** Phases 2 and 3 are unblocked and can be issued in parallel. Follow-up filed:
-  `draft/feature/autoarray/interferometer_sparse_numpy_cache_curvature_and_data_vector.md`.
+  `draft/feature/autoarray/interferometer_sparse_numpy_cache_curvature_and_data_vector.md` — library half
+  shipped 2026-09-27 (`complete/2026/09/interferometer-sparse-cache.md`, PyAutoArray#582).
 
 ## Campaign contract
 
@@ -106,6 +107,7 @@ Record `complete/2026/09/interferometer-mesh-numba-p1.md` (task `interferometer-
   `NUMBA_NUM_THREADS` scaling, fnnls warm-start memo, Cholesky reuse, `kernel_index_arrays`
   preload, MGE+mesh numba route), one draft prompt per worthwhile lever.
 - Witness: measured crossover bracketed by two measured points per mesh.
+- Fold-in candidate: `draft/research/autolens_profiling/interferometer_sparse_cache_after_measurement.md` (harness cached_property counter fix + RAL CPU numba re-run of sma/alma/alma_high on PyAutoArray main ≥ e281abf3) — phase 2 re-runs these rows anyway.
 
 ### Phase 3 — A100 mask-radius sweep (new RAL GPU jobs)
 
