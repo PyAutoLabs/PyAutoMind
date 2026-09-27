@@ -62,24 +62,6 @@
 - summary: Add an explicit vis_lp-only inspection mode that combines the main normal-model output tree with the 100-lens SED/Sersic tree, without requiring vis_pix or selecting the other 200 main-tree lenses.
 - resume: Implemented + committed locally as c6b514d on feature/vis-lp-inspection-bundle (133 tests green, not pushed). Human reviews diff (scratchpad part1_diff.txt) before ship_workspace; then sync tooling to the euclid_dr1 science clone/RAL and submit the 4,922-tile vis_lp-only bundle (OUTPUT_DIR=dr1_full, INITIAL_SEARCH_NAME=vis_lp, DATASET_NAMES_PATH=all, TAR_TO set) as a Cortex run.
 
-## pointsolver-step0-gather
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/579
-- issued: 2026-09-26
-- prompt: active/pointsolver_step0_gather_containment.md
-- epic: point-source-cpu-speed
-- session: Claude Code CLI (Opus 5.5 subagent), 2026-09-26; session ID unavailable
-- status: awaiting-merge (PyAutoArray #580 MERGED 4383ea81; autolens_profiling data PR #330 open)
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/580
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/330
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/580
-- autonomy: supervised (header); plan approved in-session 2026-09-26 (phase 4b: step-0 containment without the (N,3,2) gather; prototype + laptop measurement first)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/pointsolver-step0-gather
-- repos:
-  - PyAutoArray: feature/pointsolver-step0-gather
-  - autolens_profiling: feature/point-source-cpu-p4b
-- parallel-claim: "autolens_profiling is also claimed by point-source-cpu-p4 (PR #321 open), interferometer-mesh-breakdown-a100 and point-source-source-plane-p2a. p4b is the human-approved sequential follow-on of p4: its branch feature/point-source-cpu-p4b is based on feature/point-source-cpu-p4 until #321 merges, then rebases onto main. It touches scripts/point_source_image/likelihood_breakdown/solver_config_sweep.py and later results/breakdown/point_source_image/ + point_source_cpu_campaign.md (Phase 4b section); disjoint from the interferometer and source-plane tasks. Human-approved 2026-09-26."
-- checkpoint: 2026-09-27 16:40 PyAutoArray #580 MERGED (4383ea81). autolens_profiling feature/point-source-cpu-p4b complete + LOCAL/unpushed: harness --step0-route, instrument fixes, backend-aware fiducial (8c7bc61), laptop/EPYC/A100 + quotable 8490H job 357321 (f1b4930: 1.44x scalar, 2.27x vmap-16, -60% containment, all_gates_pass, loaded node load~200) + ledger Phase 4b; build_readme --check clean. Resume = after autolens_profiling #321 merges: rebase p4b onto main -> /ship_workspace (data PR) -> /prm -> full close-out
-
 ## point-source-source-plane-p2c
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/329
 - issued: 2026-09-27

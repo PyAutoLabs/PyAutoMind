@@ -1,3 +1,44 @@
+# Point-source (single-source) CPU speed-up campaign — phase 4b: step-0 containment without the (N,3,2) triangle gather
+
+Phase 4b replaced the JAX PointSolver's step-0 `vertices[indices]` materialisation with a structured containment test on the static lattice. It shipped whole: a library change in PyAutoArray plus a data PR in autolens_profiling. The follow-ups it leaves are carried in `draft/research/autolens_profiling/pointsolver_cpu_speed_campaign_remainder.md`.
+
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/579
+- completed: 2026-09-27
+- parent: complete/2026/09/point-source-cpu-p4.md (phase 4a; was `active/pointsolver_cpu_speed_phase_4.md`, issue autolens_profiling#314)
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/580
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/330
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/580
+
+## Shipped
+
+- The human ran `/prm` on 2026-09-27 and both PRs merged:
+  - [PyAutoArray#580](https://github.com/PyAutoLabs/PyAutoArray/pull/580) merged at `4383ea81a06aea5820c950386b5bcf294dc9929b` (branch head `c13b2d73`). It is labelled `pending-release`, so it is **not yet released**.
+  - [autolens_profiling#330](https://github.com/PyAutoLabs/autolens_profiling/pull/330) merged at `81af10f7505a9fda97aebdd6aed4f65b510cf9ab` (branch head `cc46e659`).
+  - At close-out, both branch heads were proven ancestors of `origin/main`.
+- **Library:** four step-0 containment routes sit behind the module switch `array._STEP0_CONTAINMENT`. The default is `structured`, and all four routes are bit-identical on every route tested. The PR also fixes the WIP bug (`type(shape) is Point`).
+- **Tests:** a step-0 route bit-identity fuzz, refinement tests and an HLO guard (no `(N,3,2)` gather), each red on main before the fix. Suites: PyAutoArray 1732 passed, PyAutoLens 758 passed + 1 xfail. Targeted smoke 31/31.
+- **autolens_profiling:** the harness gained `--step0-route`, instrument fixes and a backend-aware fiducial, plus laptop, EPYC, A100 and RAL 8490H rows and a "Phase 4b" ledger section. The WALL-BASIS rows of the step-0 submits were fixed after the first lint run went red.
+
+## Evidence
+
+- **Quotable row: RAL Xeon 8490H, job 357321, CPU fp64.** `structured` against the gather:
+  - 1.44x faster on a single call and 2.27x at vmap-16
+  - containment time −60 %
+  - compile time +8.6 %
+  - temp memory −47 %
+  - `all_gates_pass`
+  - The node was loaded (load ~200), so compare ratios, not absolute ms, against phase 4a.
+- **Supplementary rows:** EPYC 1.62x; A100 1.00x (no change on GPU); laptop 1.38x.
+- **Heart:** YELLOW twice with no RED: first for manifest drift, then for a stale/incomplete rehearsal. The human acknowledged it both times.
+
+## Follow-ups (carried in the remainder draft)
+
+- `nopad` is dead weight in `_STEP0_CONTAINMENT` and can be deleted in a later library cleanup.
+- The RAL scratch copies `/mnt/ral/jnightin/autolens_profiling_wt/pointsolver-step0-gather` and `/mnt/ral/jnightin/autolens_profiling_wt/PyAutoArray_pointsolver-step0-gather` were deliberately left in place.
+- A quiet-node 8490H re-run is needed if absolute ms against phase 4a are ever wanted.
+
+## Original prompt
+
 # Point-source CPU speed-up phase 4b — cut the step-0 triangle gather / containment in the JAX PointSolver
 
 Type: feature
@@ -21,7 +62,7 @@ Epic: point-source-cpu-speed
 Filed: 2026-09-26
 Issued: 2026-09-26
 Issue: https://github.com/PyAutoLabs/PyAutoArray/issues/579
-Parent: active/pointsolver_cpu_speed_phase_4.md (issue autolens_profiling#314)
+Parent: complete/2026/09/point-source-cpu-p4.md (was active/pointsolver_cpu_speed_phase_4.md; issue autolens_profiling#314)
 
 ## Goal
 

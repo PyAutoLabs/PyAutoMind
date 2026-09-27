@@ -64,7 +64,7 @@ The candidate settings (±9.9″/0.2 control 1.824 ms) are:
 - Ledger: `lens/autolens_profiling/results/notes/point_source_cpu_campaign.md`, "Phase 4a".
 - The images on the workspace prior reach max radius 1.81″; the broad stress set reaches 2.52″.
 - Step 0 is ≈ 66 % of the likelihood (1.21 ms of it containment at ±9.9″/0.2).
-- Phase 4b (`draft/feature/autoarray/pointsolver_step0_gather_containment.md`) may shrink the gain from
+- Phase 4b (shipped 2026-09-27, record `complete/2026/09/pointsolver-step0-gather.md`) may shrink the gain from
   a smaller extent. **Re-measure after 4b lands** if it lands first, and keep the extent choice
   primarily a correctness/prose decision.
 

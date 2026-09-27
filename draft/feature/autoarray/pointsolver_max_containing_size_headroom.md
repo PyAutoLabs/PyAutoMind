@@ -72,5 +72,5 @@ note, "Phase 4a".
   reads the new value (or switch to a `None` sentinel resolved at call time), and grep PyAutoLens for
   any copy of the constant.
 - PyAutoArray is currently claimed by `interferometer-transform-real-scatter`. Check at `start_dev`.
-  Coordinate with phase 4b (`pointsolver_step0_gather_containment.md`), which also touches the
+  Coordinate with phase 4b (shipped 2026-09-27, record `complete/2026/09/pointsolver-step0-gather.md`, PyAutoArray#580), which also touches the
   triangles code, and prefer landing 4b first.

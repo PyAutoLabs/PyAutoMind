@@ -21,7 +21,7 @@ Split out of `point-source-cpu-p4` at close-out on 2026-09-27. Phase 4a shipped 
 [autolens_profiling#321](https://github.com/PyAutoLabs/autolens_profiling/pull/321), record
 `complete/2026/09/point-source-cpu-p4.md`, whose `## Original prompt` holds the full campaign contract.
 The phase-4 code levers have their own prompts:
-- phase 4b: `active/pointsolver_step0_gather_containment.md`
+- phase 4b: shipped 2026-09-27, record `complete/2026/09/pointsolver-step0-gather.md` (PyAutoArray#580, autolens_profiling#330)
 - phase 4c: `draft/feature/autoarray/pointsolver_max_containing_size_headroom.md`
 - the extent warning: `draft/feature/autolens/pointsolver_extent_sanity_check.md`
 - per-package extents: `draft/feature/autolens_workspace/pointsolver_grid_extent_per_package.md`
@@ -46,6 +46,11 @@ phase-4 levers resolve.
 - **Unmeasured controls:**
   - the `--xla_disable_hlo_passes=constant_folding` A/B on the post-4b code
   - repeated (median) compile timings, if compile becomes a gate. Phase 3 had one cold compile per route.
+- **Phase 4b leftovers** (record `complete/2026/09/pointsolver-step0-gather.md`):
+  - `nopad` is dead weight in PyAutoArray `_STEP0_CONTAINMENT`. Delete it in a later library cleanup; `structured` is the default.
+  - The RAL scratch copies `/mnt/ral/jnightin/autolens_profiling_wt/pointsolver-step0-gather` and
+    `/mnt/ral/jnightin/autolens_profiling_wt/PyAutoArray_pointsolver-step0-gather` were left in place. Remove them with the RAL cleanup above.
+  - The quotable 8490H row (job 357321) ran on a loaded node (load ~200). Re-run it on a quiet node if absolute ms against phase 4a are ever wanted; the ratios stand.
 - **Campaign completion evidence** (campaign contract): baseline/final comparison, every candidate
   disposition, and a GPU regression check for any shared library change. Record them in
   `results/notes/point_source_cpu_campaign.md` once the phase-4 levers are resolved, then close the epic.
