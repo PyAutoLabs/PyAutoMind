@@ -1,25 +1,5 @@
 # Active Tasks
 
-## jax-grad-nan-zero-components
-- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/631
-- issued: 2026-09-27
-- prompt: active/jax_grad_nan_at_zero_components.md
-- session: Claude Code CLI (Opus 5.5 main session + Opus subagent), 2026-09-27; session ID unavailable
-- status: library-shipped, awaiting-merge
-- autonomy: human-required (no header); plan approved in-session 2026-09-27
-- worktree: ~/Code/PyAutoLabs-wt/jax-grad-nan-zero-components
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/634
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/754
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/634
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/754
-- heart-ack: "2026-09-27 human acknowledged YELLOW at ship: manifest drift (hub blurb 7, organism-map 1, workspace checkouts 1) + release validation incomplete (no rehearsal for current source)"
-- parallel-claim: "PyAutoGalaxy and PyAutoLens are also claimed by workspace-config-cleanup (PyAutoMind#441), whose Galaxy #630 / Lens #751 PRs are merged and awaiting release (no live edits); this task touches convert.py, isothermal.py + tests, and 6 Lens test pins. Parallel worktree human-approved 2026-09-27."
-- repos:
-  - PyAutoGalaxy: feature/jax-grad-nan-zero-components
-  - PyAutoLens: feature/jax-grad-nan-zero-components
-- scope: "2026-09-27 human-approved extension: remove Isothermal q<=0.99999 clamp (series near q->1) so ell_comps grad at 0 is correct; companion PyAutoLens PR repins 6 tests pinned to the clamp artefact."
-- resume: "PRs open (Galaxy #634 a2175896, Lens #754 8c2a2a27). Workspace impact (iii) none: round-Isothermal workspace_test parity scripts tracer_jax.py + profiles_jit.py pass on branch. Next: /prm Galaxy #634 then Lens #754 (merge together, Galaxy first), then close-out. Follow-ups filed: draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md, draft/feature/autolens_inference/drop_1e3_prior_centring_after_631.md"
-
 ## eyes-organ-order
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/439
 - issued: 2026-09-25
@@ -49,7 +29,6 @@
 - status: awaiting-release (6/7 merged 2026-09-27: Galaxy#630 cbd89ced, Lens#751 1e6372fd, Nerves#176 0b6e7c78, autofit_ws#164 aa7361df, autogalaxy_ws#250 7fd1953d, autocti_ws#34 7aa79ac6; autolens_workspace#578 OPEN, held for the PyAutoGalaxy release)
 - autonomy: supervised (header); plan approved in-session 2026-09-27 (library-first: Nerves board equivalence + allow-list, PyAutoGalaxy promotion, then workspace deletes)
 - worktree: ~/Code/PyAutoLabs-wt/workspace-config-cleanup
-- parallel-claim: "PyAutoGalaxy and PyAutoLens are also claimed by jax-grad-nan-zero-components (PyAutoGalaxy#631), convert.py/isothermal.py + tests and 6 Lens test pins; parallel worktree human-approved 2026-09-27."
 - parallel-claim: "PyAutoNerves is also claimed by eyes-organ-order (PyAutoMind#439), whose Nerves diff is only AGENTS.md; this task touches only scripts/board.py + its tests. Parallel worktree human-approved 2026-09-27; noted on #439 and #441."
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/630
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/751

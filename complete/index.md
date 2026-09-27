@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1594 records across 8 buckets.
+1595 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -310,6 +310,7 @@ markers; everything below GENERATED is rebuilt.
 - [jax-faddeeva-clamp-audit](2026/09/jax-faddeeva-clamp-audit.md)
 - [jax-grad-delaunay-constant-folding-guard](2026/09/jax-grad-delaunay-constant-folding-guard.md) — rtol 1e-10 guard retired
 - [jax-grad-delaunay-fd-sweep-repin](2026/09/jax-grad-delaunay-fd-sweep-repin.md) — Heart RED corrective
+- [jax-grad-nan-zero-components](2026/09/jax-grad-nan-zero-components.md)
 - [jax-import-order-x64](2026/09/jax-import-order-x64.md)
 - [jax-runtime-and-parity](2026/09/jax-runtime-and-parity.md)
 - [jit-visualization-outputs](2026/09/jit-visualization-outputs.md) — health_fixes

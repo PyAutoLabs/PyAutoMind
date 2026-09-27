@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-09-27T19:38:15Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
+  "updated": "2026-09-27T19:39:33Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "jax.grad NaN at exactly zero components (ExternalShear, multipole_comps, ell_comps) \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/634",
-      "prompt": "/start_dev active/jax_grad_nan_at_zero_components.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -105,12 +99,6 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#634 \u2014 jax.grad NaN at exactly zero components (ExternalShear, multipole_comps, ell_comps)",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/634",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#630 \u2014 Workspace config cleanup: remove orphan config keys the Nerves board flags",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/630",
       "prompt": null
@@ -126,6 +114,18 @@
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#633 \u2014 isothermal-convergence-jit",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/633",
       "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#634 \u2014 Summary",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/634",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "waiting on PyAutoGalaxy's release: Workspace config cleanup: remove orphan config keys the Nerves board flags",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/issues/441",
+      "prompt": "/start_dev active/workspace_config_cleanup.md"
     }
   ]
 }
