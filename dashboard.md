@@ -284,7 +284,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/pointsolver_step0_gather_containment.md">Point-source CPU speed-up phase 4b — cut the step-0 triangle gather /…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/579">issue #579</a> — issued 2026-09-26 — library-dev</summary>
+<details><summary>📋 <a href="active/pointsolver_step0_gather_containment.md">Point-source CPU speed-up phase 4b — cut the step-0 triangle gather /…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/579">issue #579</a> — issued 2026-09-26 — library-shipped, profiling-pending (PyAutoArray PR #580 open; 8490H job 357321 queued) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/580">PyAutoArray#580</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 /start_dev active/pointsolver_step0_gather_containment.md
@@ -326,6 +326,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#580](https://github.com/PyAutoLabs/PyAutoArray/pull/580) — `active/pointsolver_step0_gather_containment.md`
 - [PyAutoArray#576](https://github.com/PyAutoLabs/PyAutoArray/pull/576) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - [PyAutoArray#578](https://github.com/PyAutoLabs/PyAutoArray/pull/578) — `complete/2026/09/interferometer-transform-real-scatter.md`
 

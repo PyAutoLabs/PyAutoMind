@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-09-27T13:43:23Z",
+  "updated": "2026-09-27T13:43:59Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "Point-source (single-source) CPU speed-up campaign \u2014 phase 4: profile the residue\u2026 \u2014 awaiting-merge (phase 4a PR #321 open; human runs /prm)",
       "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/321",
       "prompt": "/start_dev active/pointsolver_cpu_speed_phase_4.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Point-source CPU speed-up phase 4b \u2014 cut the step-0 triangle gather /\u2026 \u2014 library-shipped, profiling-pending (PyAutoArray PR #580 open; 8490H job 357321 queued)",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/580",
+      "prompt": "/start_dev active/pointsolver_step0_gather_containment.md"
     },
     {
       "severity": "yellow",
@@ -35,6 +41,12 @@
       "severity": "yellow",
       "text": "pending release: .github .github#16 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/.github/pull/16",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#580 \u2014 Point-source CPU speed-up phase 4b \u2014 cut the step-0 triangle gather /\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/580",
       "prompt": null
     },
     {
@@ -113,18 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoLens PyAutoLens#750 \u2014 interferometer-mge-w-tilde-route",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/750",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoMind PyAutoMind#425 \u2014 codex-context-efficiency",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/pull/425",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoMind PyAutoMind#427 \u2014 Shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/pull/427",
       "prompt": null
     }
   ]
