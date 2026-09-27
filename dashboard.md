@@ -292,7 +292,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/where_to_file_block.md">docs: "Where to file" block in every public AGENTS.md — route user…</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/442">issue #442</a> — issued 2026-09-27 — library-dev</summary>
+<details><summary>📋 <a href="active/where_to_file_block.md">docs: "Where to file" block in every public AGENTS.md — route user…</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/442">issue #442</a> — issued 2026-09-27 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/443">PyAutoMind#443</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/425">PyAutoBrain#425</a></summary>
 
 ```
 /start_dev active/where_to_file_block.md

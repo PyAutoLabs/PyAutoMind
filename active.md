@@ -97,7 +97,10 @@
 - issued: 2026-09-27
 - prompt: active/where_to_file_block.md
 - session: claude (Fable architect, Opus worker; ID unavailable)
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/443
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/425
+- heart-ack: "manifest drift: hub organism blurb (organs present) — 7 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: organism-map blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml; release validation incomplete: no rehearsal for current source"
 - autonomy: supervised (header); plan approved in-session 2026-09-27 (bot-push rollout, not a PR wave)
 - worktree: ~/Code/PyAutoLabs-wt/where-to-file-block
 - parallel-claim: "PyAutoMind and PyAutoBrain are also claimed by eyes-organ-order (PyAutoMind#439), whose Mind diff touches repos.yaml organ order, the two hook copies and one 4-line hunk in scripts/repos_sync.py _repo_resolver, and whose Brain diff touches agents/_pyauto_root.py, bin/_pyauto_root.sh, docs/; this task touches only repos_sync.py block constants/new functions/main wiring, policy/, tests/, skills/create_issue, .github/workflows/session_hook_propagate.yml and Brain skills/intake/. Parallel claim human-approved 2026-09-27; noted on #439 and #442."
