@@ -104,9 +104,11 @@
 ## sparse-operator-oversampling-cache
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/585
 - issued: 2026-09-27
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - prompt: active/sparse_operator_dropped_and_double_convolution.md
 - session: Claude Code CLI (Opus 5.5), 2026-09-27
 - worktree: /home/jammy/Code/PyAutoLabs-wt/sparse-operator-oversampling-cache
 - repos:
   - PyAutoArray: feature/sparse-operator-oversampling-cache
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/586
+- heart-ack: "YELLOW 2026-09-27 acknowledged by human ('prm'): manifest drift x4 vs repos.yaml (hub organism blurb, organism-map blocks, where-to-file blocks, workspace checkouts); PyAutoMemory open PR 7d old"
