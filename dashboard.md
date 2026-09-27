@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 256 |
+| [Backlog](#backlog) (`draft/`) | 257 |
 
 > **No batch in flight.**
 
@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/runtime_dashboard_and_profiling_organ_vision.md">Run-time-over-time dashboard for the *_profiling repos (and the organ question)</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/345">issue #345</a> — issued 2026-09-27 — workspace-dev</summary>
+<details><summary>📋 <a href="active/runtime_dashboard_and_profiling_organ_vision.md">Run-time-over-time dashboard for the *_profiling repos (and the organ question)</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/345">issue #345</a> — issued 2026-09-27 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/346">autolens_profiling#346</a></summary>
 
 ```
 /start_dev active/runtime_dashboard_and_profiling_organ_vision.md
@@ -545,7 +545,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**256** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **58** of them belong to an epic and are listed only under [Epics](#epics) below.
+**257** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **58** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 72</summary>
@@ -1129,7 +1129,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>feature</b> — 40</summary>
+<summary><b>feature</b> — 41</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_assistant/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging, point_source and interferometer</a> — autolens_assistant · medium · supervised · high</summary>
 
@@ -1447,6 +1447,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/autolens_inference/drop_1e3_prior_centring_after_631.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/register_profiling_dashboard_on_brain_board.md">Register the profiling run-time dashboard on the Brain board</a> — pyautobrain</summary>
+
+```
+/start_dev draft/feature/pyautobrain/register_profiling_dashboard_on_brain_board.md
 ```
 
 </details>
@@ -2448,7 +2456,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 39 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 40 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -3126,11 +3134,12 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 ## Hygiene
 
-5 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
+6 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
 
 <details>
 <summary>Headerless prompts</summary>
 
+- `draft/feature/pyautobrain/register_profiling_dashboard_on_brain_board.md`
 - `draft/research/autofit/hpc_campaign_epic_report.md`
 - `draft/research/autofit/hpc_campaign_epic_surveys/carbon.md`
 - `draft/research/autofit/hpc_campaign_epic_surveys/codebase.md`
@@ -3139,7 +3148,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 </details>
 
-68 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+69 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3162,6 +3171,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 - `draft/feature/euclid/euclid_dr1_prep_epic.md`
 - `draft/feature/jax_substructure/5_prng_key_vmap_noise.md`
 - `draft/feature/jax_substructure/6_deflection_equivalence_test.md`
+- `draft/feature/pyautobrain/register_profiling_dashboard_on_brain_board.md`
 - `draft/feature/pyautoeyes/group_cluster_gallery.md`
 - `draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md`
 - `draft/feature/workspaces/model_figures_6_rollout.md`
@@ -3183,8 +3193,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 - `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
 - `draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md`
 - `draft/test/workspaces/mesh_magnification_correctness.md`
-- `draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md`
-- _… and 28 more_
+- _… and 29 more_
 
 </details>
 

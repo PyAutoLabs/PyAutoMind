@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-09-27T22:38:32Z",
+  "updated": "2026-09-27T22:41:20Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Run-time-over-time dashboard for the *_profiling repos (and the organ question) \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/346",
+      "prompt": "/start_dev active/runtime_dashboard_and_profiling_organ_vision.md"
+    },
     {
       "severity": "yellow",
       "text": "Ledger and Mind drift surfaced by the profiling wiki backfill \u2014 awaiting-merge",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#633 \u2014 isothermal-convergence-jit",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/633",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#634 \u2014 Summary",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/634",
       "prompt": null
     }
   ]
