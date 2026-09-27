@@ -73,4 +73,7 @@
 - parallel-claim: "autolens_profiling also claimed by pointsolver-mcs-headroom and interferometer-mesh-numba-p2; phase 2e touches only scripts/point_source_source/likelihood_breakdown/gradient_mode_library_ab.py, its results/submits, point_source_source_plane_campaign.md (Phase 2e section), README rows. Approved with the phase-2d plan 2026-09-27."
 - repos:
   - autolens_profiling: feature/point-source-source-plane-p2e
-- status: workspace-dev
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/336
+- status: awaiting-merge (PR #336 open; human runs /prm)
+- heart-ack: "2026-09-27 YELLOW acknowledged by the human: manifest drift x3 vs PyAutoMind/repos.yaml (hub organism blurb 7, organism-map blocks 1, workspace checkouts 1); release validation incomplete: no rehearsal for current source"
+- decision: "2026-09-27 forward-mode speed-up confirmed through the real MultiStartAdam step (EPYC 0.36-0.58x reverse, L24 compile 95.9 -> 11.2 s); verdict records campaign phases 1-2e complete. On merge: close out and mark the campaign prompt's remaining candidates (blackjax fwd, A100 vmap row) as parked/next." 
