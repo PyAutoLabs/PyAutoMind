@@ -1,4 +1,35 @@
-# Point-source source-plane chi-squared speed-up campaign — phase 2b+ (phases 1, 2a shipped)
+## point-source-source-plane-p2a
+
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/322
+- completed: 2026-09-27
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/323 (merge `9c0203e`)
+- epic: point-source-cpu-speed
+- parent-record: complete/2026/09/point-source-source-plane-breakdown.md
+
+Phase 2a of the source-plane point-source chi-squared campaign (single-source only): the RAL CPU and A100 reference rows for the `point_source_source/source_plane` breakdown, plus a pytree-input A/B that sizes the fixed per-call `ModelInstance` flatten cost, merged in autolens_profiling#323.
+
+**Shipped**
+- `scripts/point_source_source/likelihood_breakdown/pytree_input_ab.py` — pytree vs flat_leaves vs flat_vector input A/B on the fused solved likelihood.
+- `results/breakdown/point_source_source/source_plane_hpc_{ral_cpu,a100}_fp64.{json,png}` and `pytree_input_ab_hpc_{ral_cpu,a100}_fp64.{json,png}`; README rows.
+- Submit scripts `hpc/batch_cpu/submit_breakdown_point_source_source_source_plane_ral_cpu_fp64`, `hpc/batch_gpu/submit_breakdown_point_source_source_source_plane_a100_fp64`; RAL job log `results/notes/point_source_source_plane_2026_09_26_ral_job_356368.out`.
+- Campaign note `results/notes/point_source_source_plane_campaign.md` updated with the phase 2a section.
+
+**Measured (RAL CPU 8490H, quiet — the reference; A100 fp64)**
+- fused solved 0.1465 ms / plain 0.1450 ms; `value_and_grad` 2.26× forward (+0.185 ms), 4× compile.
+- pytree / flat_vector = 1.361 [1.343, 1.385] → 0.0385 ms saved (plain 0.0452 ms); flat_leaves ≈ flat_vector, so the cost is the Python flatten of `ModelInstance`.
+- A100 launch-bound: 0.222 / 0.265 ms.
+
+**Decision (human, 2026-09-26):** NO-GO on the PyAutoFit flatten fast path — the relative bar (26–31 %) passes, the absolute 0.05 ms bar fails. Phase 2b = the backward-pass lever (jacfwd/jacrev ordering + analytic SIE Hessian study; library-first only if a lever appears). Remainder re-filed at `draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md`.
+
+**Not done / carried**
+- Laptop rows never refreshed (host busy; RAL is the reference).
+- `scripts/misc/wall/check_submits.py` misses `python3 -u`; `hpc/sync pull` skips batch_cpu logs (scp'd by hand).
+- RAL worktree `/mnt/ral/jnightin/autolens_profiling_wt/point-source-source-plane-p2a` to remove.
+- Heart YELLOW at ship, acknowledged by the human 2026-09-26.
+
+## Original prompt
+
+# Point-source source-plane chi-squared speed-up campaign — phases 2+ (phase 1 shipped)
 
 Type: research
 Target: autolens_profiling
@@ -20,25 +51,8 @@ Unattended: needs-slicing
 Epic: point-source-cpu-speed
 Lane: any
 Filed: 2026-09-26
-Updated: 2026-09-27
-Parent-record: complete/2026/09/point-source-source-plane-p2a.md
-
-## Phase 2a shipped — remainder re-filed (2026-09-27)
-
-- **Merged:** autolens_profiling#323 at `9c0203e` (issue #322). Record
-  `complete/2026/09/point-source-source-plane-p2a.md` (it folds the previous version of this
-  prompt, including the phase 1 section below).
-- **Measured (RAL CPU 8490H, quiet — the reference):** fused solved 0.1465 ms / plain 0.1450 ms;
-  `value_and_grad` 2.26× forward (+0.185 ms), 4× compile. Pytree / flat_vector = 1.361
-  [1.343, 1.385] → 0.0385 ms saved (plain 0.0452); flat_leaves ≈ flat_vector, so the cost is the
-  Python flatten of `ModelInstance`. A100 launch-bound 0.222 / 0.265 ms.
-- **Human decision (2026-09-26):** NO-GO on the PyAutoFit flatten fast path (step (b) below) —
-  relative 26–31 % passes, absolute 0.05 ms bar fails. Steps (a), (b) and (d) below are done.
-- **Next: phase 2b = the backward-pass lever** (step (c)): jacfwd/jacrev ordering and an analytic
-  SIE Hessian study on the solved likelihood; library-first (PyAutoLens) only if a lever appears.
-- **Carried:** laptop rows never refreshed (RAL is the reference); `scripts/misc/wall/check_submits.py`
-  misses `python3 -u`; `hpc/sync pull` skips batch_cpu logs; RAL worktree
-  `/mnt/ral/jnightin/autolens_profiling_wt/point-source-source-plane-p2a` to remove.
+Updated: 2026-09-26
+Parent-record: complete/2026/09/point-source-source-plane-breakdown.md
 
 ## Phase 1 shipped — remainder re-filed (2026-09-26)
 

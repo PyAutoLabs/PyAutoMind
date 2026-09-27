@@ -2580,7 +2580,7 @@ Continue the 'Point-source (single-source) PointSolver CPU speed-up' epic. Its c
 
 </details>
 
-<details><summary>📋 <a href="draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md">Point-source source-plane chi-squared speed-up campaign — phases 2+ (phase 1 shipped)</a> — autolens_profiling · large · supervised · normal</summary>
+<details><summary>📋 <a href="draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md">Point-source source-plane chi-squared speed-up campaign — phase 2b+ (phases 1, 2a shipped)</a> — autolens_profiling · large · supervised · normal</summary>
 
 ```
 /start_dev draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md
