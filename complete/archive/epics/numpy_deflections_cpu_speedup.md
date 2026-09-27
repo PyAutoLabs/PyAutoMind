@@ -81,7 +81,7 @@ library-first ship inside each phase.
 |---|---|---|---|---|
 | 1 | `complete/2026/09/numpy-deflections-p1.md` (was `draft/feature/autoarray/numpy_deflections_p1_sph_decorator_tracer.md`) | @PyAutoArray, @PyAutoGalaxy, @PyAutoLens, @autolens_profiling | measure (`scripts/lens/deflections/`), `*Sph` over-sampled re-materialisation, sub-size-1 short-circuit, tracer double trace | **SHIPPED 2026-09-02** — PyAutoArray#516, PyAutoGalaxy#595, PyAutoLens#718, autolens_profiling#210 merged; record `complete/2026/09/numpy-deflections-p1.md` |
 | 2 | `complete/2026/09/numpy-deflections-p2.md` (was `draft/feature/autogalaxy/numpy_deflections_p2_mge_wofz.md`, PyAutoGalaxy#596) | @PyAutoGalaxy, @autolens_profiling | `scipy.special.wofz` on numpy, spherical MGE branch, exact exp_term mask (cache lever dropped: 0.34 ms/call); targets re-scoped to measured ceilings gNFW ~2.3×, gNFWSph ~59×, Gaussian sph ~16×, Gaussian ell ~1.07× | **SHIPPED 2026-09-02** — PyAutoGalaxy#597 + autolens_profiling#212 merged; record `complete/2026/09/numpy-deflections-p2.md` |
-| 3 | `active/numpy_deflections_p3_closed_form_geometry.md` (was `draft/feature/autogalaxy/numpy_deflections_p3_closed_form_geometry.md`, PyAutoGalaxy#598) | @PyAutoGalaxy, @PyAutoArray, @autolens_profiling | PowerLaw series with factor-driven term count, NFW/NFWSph masks, Isothermal hoists, rotation-matrix grid transform | **PR-OPEN 2026-09-03** — PyAutoArray#519 → PyAutoGalaxy#599 → autolens_profiling#213 |
+| 3 | `active/numpy_deflections_p3_closed_form_geometry.md` (was `draft/feature/autogalaxy/numpy_deflections_p3_closed_form_geometry.md`, PyAutoGalaxy#598) | @PyAutoGalaxy, @PyAutoArray, @autolens_profiling | PowerLaw series with factor-driven term count, NFW/NFWSph masks, Isothermal hoists, rotation-matrix grid transform | **MERGED 2026-09-03, released 2026.9.4.1** (row corrected 2026-09-27; was PR-OPEN) — PyAutoArray#519 → PyAutoGalaxy#599 → autolens_profiling#213 |
 
 Phase 1 carries the measurement package: every later phase's before/after numbers come from the
 cells it lands, so it is a hard predecessor of phases 2 and 3. Phases 2 and 3 touch disjoint files
@@ -257,7 +257,7 @@ the 2× line, the remainder being the HK24 polynomial arithmetic. JAX path untou
 autolens_profiling#213 (`d735d950`) merged via `/prm`; #598 closed; record `complete/2026/09/numpy-deflections-p3.md`.
 Final same-box hst table across the epic: *Sph direct-Grid2D 570–710× (phase 1), gNFW 2.4–3.1× and gNFWSph 58–67×
 (phase 2), PowerLaw 5.7×, Isothermal 2.1×, NFWSph 1.9×, NFW 1.6×, Gaussian(q=1) 2.0× (phase 3). Only NFW missed its
-2× line (HK24 polynomial arithmetic is the floor). Both libraries pending-release. Follow-ups outside the epic:
+2× line (HK24 polynomial arithmetic is the floor). Both libraries pending-release. [Corrected 2026-09-27: released 2026.9.4.1; against the epic's nine-profile goal gNFW (2.4–3.1× vs 5×) and elliptical Gaussian (1.7–1.8×) also fell short of their original lines, re-scoped in phase 2.] Follow-ups outside the epic:
 JAX-path audit `draft/research/autogalaxy/jax_faddeeva_seams_and_spherical_clamp_audit.md`; successor
 `draft/feature/autogalaxy/precompute_fixed_geometry_gaussian_deflections.md`.
 

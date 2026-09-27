@@ -12,7 +12,7 @@ Consequence: judge
 Witness: All nine backend/mesh combinations have measured whole-call and exclusive breakdown records that reconcile within 5% or quantify instrumentation uncertainty; a ranked optimization assessment states measured contribution, correctness constraints and whole-call speedup ceiling for each candidate.
 Review-minutes: 20
 Unattended: needs-slicing
-Blocked-by: PyAutoMind/complete/2026/09/certified-positive-solver.md — PyAutoArray#567 merged 2026-09-23, unreleased — blocked on the release that ships it (phase B policy shipped in complete/2026/09/certified-solver-phase-b.md; production default flip is draft/feature/autoarray/certified_solver_scalar_default_flip.md)
+Blocked-by: PyAutoMind/complete/2026/09/certified-positive-solver.md — PyAutoArray#567 merged 2026-09-23, unreleased — blocked on the release that ships it (phase B policy shipped in complete/2026/09/certified-solver-phase-b.md; production default flip is draft/feature/autoarray/certified_solver_scalar_default_flip.md) — RESOLVED 2026-09-27: PyAutoArray#567 released 2026.9.26.1; the default-flip draft was retired unbuilt (`complete/2026/09/certified-solver-scalar-default-flip.md`) and the library default stays `pdip`, so "post-certified" means the opt-in solver as configured, not a new default
 Superseded-in-part: GPU (A100 / RTX) columns measured by autolens_profiling#268 (hst-gpu-non-solver-residue phase 1, 2026-09-16); numba CPU columns are the fixed-lens-light-numba-cpu campaign's (#263/#265/#267)
 
 ## Original request
@@ -24,7 +24,7 @@ Now intake a follow up issue which is that once the ceritifed solver is implemen
 
 After the production certified solver and its dispatch are implemented and validated in the installed stack, use @autolens_profiling to measure where the likelihood spends time and assess feasible optimization of the remaining bottlenecks. This is one bounded assessment task; library implementation is a separate follow-up. Do not substitute the earlier solver monkeypatch or assume that certified solving is selected or fastest on native CPU.
 
-Dependency: PyAutoMind/complete/2026/09/certified-positive-solver.md (PyAutoArray#567, merged 2026-09-23, unreleased). Record the merged library revision and actual production-selected solver/configuration for every measurement.
+Dependency: PyAutoMind/complete/2026/09/certified-positive-solver.md (PyAutoArray#567, merged 2026-09-23, released 2026.9.26.1). Record the merged library revision and actual production-selected solver/configuration for every measurement.
 
 ## Required measurements
 

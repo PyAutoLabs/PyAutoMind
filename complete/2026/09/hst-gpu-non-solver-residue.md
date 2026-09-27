@@ -1,4 +1,5 @@
 # The non-solver residue — HST GPU likelihood breakdown around the certified solve (campaign COMPLETE)
+- pointer-correction: 2026-09-27 — `draft/feature/autofit/certified_solver_cond_free_batched_fallback.md` was renamed `certified_solver_batched_guard_c2.md`; 1 reference(s) below updated
 
 Retired 2026-09-27 via `/intake reconcile draft/research/autolens_profiling` (human-requested). Campaign map for epic
 `hst-gpu-non-solver-residue`; it was never issued itself — its phases shipped one at a time:
@@ -178,7 +179,7 @@ The table above is superseded:
   51–250; rectangular 232 at the fiducial incl. 152 edges, draws 366–943). Note:
   `autolens_profiling/results/notes/hst_gpu_residue_phase4_logdet_2026_09.md` (+ sidecar `..._phase4_job350651.json`).
   **The fp64 levers in this map are exhausted.** Remaining, all outside this map: the human fp32-cube precision decision
-  (phase 3), the cond-free batched fallback (`draft/feature/autofit/certified_solver_cond_free_batched_fallback.md`) and the
+  (phase 3), the cond-free batched fallback (`draft/feature/autofit/certified_solver_batched_guard_c2.md`) and the
   qhull callback / batching work filed elsewhere.
 - Not levers: mesh/mapper/weights, border relocator, mixed fusions, the F GEMM alone (fp64 dense floor; a symmetric
   rank-k custom call is the only idea). Overlap of qhull with the ray trace is blocked (border relocation consumes the

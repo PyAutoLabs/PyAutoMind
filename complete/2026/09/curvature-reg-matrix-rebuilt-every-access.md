@@ -1,3 +1,29 @@
+## curvature-reg-matrix-rebuilt-every-access
+- issue: none — folded into https://github.com/PyAutoLabs/autolens_profiling/issues/267 (fixed-light numba levers, lever 3) on the human's ask, 2026-09-16
+- completed: 2026-09-16 (shipped inside PyAutoArray#555; recorded 2026-09-27 at the wiki-backfill drift close-out)
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/555 (merge `91240e43`, released 2026.9.19.1)
+- epic: fixed-lens-light-numba-cpu (lever 3; record `complete/2026/09/fixed-light-numba-levers.md`)
+
+### Summary
+- The draft asked first for a determination (does the docstring's cache hazard on
+  `AbstractInversion.curvature_reg_matrix` still exist?) and then for a numpy/numba-only fix.
+  Both landed as lever 3 of autolens_profiling#267: the in-place `curvature_matrix +=` form was
+  gone since 2025-06-26, the hazard does not exist, and PyAutoArray#555 made
+  `curvature_reg_matrix` a `cached_property` (n_calls 2 → 1 per evaluation) alongside reading
+  log det(F + λH) off the NNLS Cholesky factor. The `n_calls >= 2` handshake test in
+  `autolens_profiling/scripts/misc/test/test_fixed_light_numba.py` was updated deliberately.
+- Measured in the levers record: lever 3 273.2 → 230.0 ms per call (1.19x) on the HST Delaunay
+  N=1500 single-thread numba route; identity on the A100 (the JAX path never runs fnnls).
+- The JAX branch was untouched, as the fold-in scope required; the residue phase-1 HLO census
+  found `F + λH` fused into the single GEMM under the production jit (no JAX cost).
+
+### Traps / notes
+- The draft sat in `draft/` for 11 days after its scope shipped because the fold-in was recorded
+  in the levers record and on #267, not on the draft. A `Folded-into:` header is a pointer, not a
+  retirement; the wiki backfill (autolens_profiling#339) found it as pickable backlog.
+
+## Original prompt
+
 # `curvature_reg_matrix` rebuilds `F + H` on every access — and the docstring's reason not to cache it is stale
 
 Type: bug
