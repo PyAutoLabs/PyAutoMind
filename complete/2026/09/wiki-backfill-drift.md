@@ -1,3 +1,39 @@
+## wiki-backfill-drift
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/343
+- completed: 2026-09-27
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/344 (merge `3ea93024`, head `fc622de`, 11 files, +20/−2)
+- epic: profiling-research-wiki (follow-on)
+- merge: by the human's typed `/prm` on green (lint.yml one run, one job, success; `mergeable_state: clean`)
+- heart: GREY at the door (Pages host not on the container allowlist); docs and ledger only
+
+### Summary
+- Nine `results/notes/` ledgers gained one dated `> **Correction — 2026-09-27:**` line beside the
+  text the wiki backfill (#339 / #340) found false or stale: the #566 issue vs PR #567,
+  the harness-injection scope (phases 1–3 only), the Delaunay warm-compile exception to
+  "≤ 2 s warm", the alma_high outcome, the unverified date of A100 jobs 323017–323022, the
+  un-ingested NNLS A100 job 330046, the 2026-09-25 C1 human decisions, the levers release
+  (2026.9.19.1), and the retired scalar config flip. No measurement or original wording was
+  rewritten; no wiki page changed. The artefact-policy date was fixed to 2026-09-27.
+- Mind (ledger-only commits on the session branch, landed by the ledger merge): two stale
+  `Blocked-by:` lines resolved on `post_certified_solver_likelihood_breakdown.md` and
+  `certified_solver_batched_guard_c2.md`; four records repointed from the renamed
+  `certified_solver_cond_free_batched_fallback.md` to `certified_solver_batched_guard_c2.md`
+  with a `pointer-correction:` line; `image_source_mappings_epic.md` release tags and
+  `numpy_deflections_cpu_speedup.md` phase-3 row and goal-shortfall note corrected;
+  `mass-field-profiling-live.md` pointer to the shipped resume draft; the
+  `curvature_reg_matrix_rebuilt_every_access.md` draft retired with
+  `complete/2026/09/curvature-reg-matrix-rebuilt-every-access.md` (PyAutoArray#555 settled it);
+  `complete/archive/epics/certified_positive_solver_epic.md` written from the four records.
+
+### Traps / notes
+- A correction line goes after the paragraph it corrects; a marker that wraps across lines
+  ("harness\n  injection") needs a marker from one line. Bare filename mentions in prose stay
+  valid as names; only paths and links change.
+- `lifecycle.py close --prompt draft/...` resolves a draft (unlike `record --prompt`), so a
+  folded draft is retired with one verb.
+
+## Original prompt
+
 # Ledger and Mind drift surfaced by the profiling wiki backfill
 
 - Work type: maintenance
