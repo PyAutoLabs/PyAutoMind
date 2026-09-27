@@ -13,7 +13,7 @@
 - repos:
   - autolens_profiling: claude/profiling-runtime-dashboard-b8vtjm
 - summary: |
-    PR #346 open (head 8c8a6ea, 13 files): build_dashboard.py -> dashboard/{series,state}.json +
+    PR #346 open (head a516a0d after the lychee fix: the README's Pages URL 404s until the site's first publish, so lint.yml excludes it for now; 14 files): build_dashboard.py -> dashboard/{series,state}.json +
     index.html (143 series, 61 cells, 4 releases; all markers hollow until the first pinned sweep
     carries the provenance block), hpc/release_sweep.conf + submit_release_sweep.sh, profile.yml
     and pages_dashboard.yml wiring, lint --check. Every local gate green; feed validated against
