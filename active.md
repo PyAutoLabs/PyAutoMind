@@ -1,5 +1,20 @@
 # Active Tasks
 
+## wiki-backfill-drift
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/343
+- issued: 2026-09-27
+- prompt: active/wiki_backfill_ledger_and_mind_drift.md
+- session: Claude Code remote (web), https://claude.ai/code/session_01MwuV47ESjoLFM8MuFZjw2s
+- location: remote-container clone of autolens_profiling (no task worktree); GitHub via the mcp__github__ tools
+- status: workspace-dev
+- autonomy: safe (header)
+- epic: profiling-research-wiki (follow-on)
+- repos:
+  - autolens_profiling: claude/profiling-wiki-phase-2-b8vtjm
+- summary: |
+    Dated correction lines in nine results/notes ledgers; seven Mind pointer fixes; one draft
+    retired with a record; the certified-positive-solver epic archived from its records.
+
 ## eyes-organ-order
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/439
 - issued: 2026-09-25
