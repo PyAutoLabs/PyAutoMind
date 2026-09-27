@@ -1,4 +1,4 @@
-# Point-source source-plane chi-squared speed-up campaign — phase 2c+ (phases 1, 2a, 2b shipped)
+# Point-source source-plane chi-squared speed-up campaign — phase 2d+ (phases 1, 2a, 2b, 2c shipped)
 
 Type: research
 Target: autolens_profiling
@@ -21,7 +21,30 @@ Epic: point-source-cpu-speed
 Lane: any
 Filed: 2026-09-26
 Updated: 2026-09-27
-Parent-record: complete/2026/09/point-source-source-plane-p2b.md
+Parent-record: complete/2026/09/point-source-source-plane-p2c.md
+
+## Phase 2c shipped — next is phase 2d (2026-09-27)
+
+- **Merged:** autolens_profiling#331 at `4c267b7` (issue #329). Record
+  `complete/2026/09/point-source-source-plane-p2c.md`; cell
+  `scripts/point_source_source/likelihood_breakdown/gradient_mode_crossover.py`; design memo in the
+  campaign note ("Phase 2c" → "Design memo").
+- **Result:** no forward/reverse crossover through n = 24 (solved) / 27 (plain) on any host or call
+  shape; forward mode's single-call lead grows with model size (0.41 → 0.22 on the quiet RAL EPYC,
+  0.64 → 0.36 on A100) and rev compile grows 3.4 → 80 s vs fwd ≤ 11 s. Cause: reverse-over-forward
+  through the inner jacfwd lensing Hessian. An `n_params` threshold is the wrong design.
+- **Next: phase 2d (human decision 2026-09-27) = analysis-declared `gradient_mode`, library-first
+  (PyAutoFit, then PyAutoLens):** `af.Analysis.gradient_mode = "reverse"` (default, no behaviour
+  change elsewhere); `AnalysisPoint` declares `"forward"`; a search keyword overrides. One PyAutoFit
+  helper returns `value_and_grad` (reverse) or `jacfwd(has_aux=True)` over the flat parameter vector
+  (forward) and feeds `Fitness.grad` (`autofit/non_linear/fitness.py:933`) and the multi-start
+  gradient search (`autofit/non_linear/search/mle/multi_start_gradient/search.py:974`, `:1072`,
+  vmapped `:1089`). blackjax NUTS/SMC are a later step. Use the flat vector, not the `ModelInstance`
+  pytree (linked priors give more leaves than parameters). Gates: fwd ≡ rev parity tests on a
+  point-source and a non-point-source analysis, GPU regression check, then refresh the profiling rows.
+- **Carried:** intake PyAutoGalaxy bugs — `jax.grad` NaN at exactly (0,0) for ExternalShear /
+  multipole comps / ell_comps; `PowerLawMultipole` m=1 singular at slope 2; `Isothermal.convergence_2d_from`
+  not jit-traceable with traced ell_comps. RAL p2a/p2b/p2c worktrees + bundles to remove.
 
 ## Phase 2b shipped — next is phase 2c (2026-09-27)
 

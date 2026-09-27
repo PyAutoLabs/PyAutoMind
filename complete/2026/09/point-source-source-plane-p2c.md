@@ -1,3 +1,29 @@
+## point-source-source-plane-p2c
+
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/329
+- completed: 2026-09-27
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/331 (merge `4c267b7`)
+- epic: point-source-cpu-speed
+- parent-record: complete/2026/09/point-source-source-plane-p2b.md
+- campaign: draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md
+
+Phase 2c of the source-plane point-source chi-squared campaign (single-source only): the forward vs reverse gradient crossover as the model grows, merged in autolens_profiling#331. Workspace-only.
+
+**Shipped**
+- `scripts/point_source_source/likelihood_breakdown/gradient_mode_crossover.py` — model ladder L5 → L24 (Isothermal; + ExternalShear; + m=4 / m=3 PowerLawMultipole comps; + satellite Isothermal; PowerLaw free slope + satellite shear; + second satellite), solved lane 5/7/9/11/16/19/24 free params, plain lane +3 (PointFlux's unused flux). Both routes take the flat parameter vector (instance built in the trace, as `Fitness.call`). Single call and `jit(vmap)` B=8; bootstrap crossover estimate.
+- Results `results/breakdown/point_source_source/gradient_mode_crossover_{local_cpu_fp64,hpc_ral_gpunode_cpu_fp64,hpc_a100_fp64}.{json,png}`; RAL submits (CPU reference on the gpu partition, no `--gres`); job log 358770; campaign note "Phase 2c" section + design memo; README bullet.
+
+**Result:** gate green on all 14 rung × lane cells on every host (log L ≤ 4.1e-12, gradients ≤ 3.5e-9). **No crossover within the ladder**: fwd single-call ratio falls 0.41 → 0.22 (EPYC, job 358770) and 0.64 → 0.36 (A100, job 358771); batched 0.35–0.56 on EPYC (only projected crossing: batched CPU at n ≈ 280–320). rev lower + compile 3.4 → 80 s on EPYC vs fwd ≤ 11 s. Cause: reverse-over-forward through the inner jacfwd lensing Hessian — rev cost grows with each mass profile.
+
+**Human decision (2026-09-27): phase 2d = analysis-declared `gradient_mode` in PyAutoFit** — `af.Analysis` default `"reverse"`, `AnalysisPoint` declares `"forward"`, search keyword override; one helper feeding `Fitness.grad` (`fitness.py:933`) and the multi-start gradient search (`search.py:974`, `:1072`, vmapped `:1089`); blackjax later; flat vector, not the pytree. Library-first, GPU regression check, fwd ≡ rev parity tests on a non-point-source analysis.
+
+**Carried**
+- Intake (PyAutoGalaxy): `jax.grad` NaN at exactly (0,0) for ExternalShear / multipole comps / ell_comps; `PowerLawMultipole` m=1 singular at slope 2; `Isothermal.convergence_2d_from` not jit-traceable with traced ell_comps.
+- RAL cleanup: `/mnt/ral/jnightin/autolens_profiling_wt/point-source-source-plane-{p2a,p2b,p2c}`, bundles/logs, local branches in `/mnt/ral/jnightin/autolens_profiling`.
+- Heart YELLOW at ship, acknowledged by the human.
+
+## Original prompt
+
 # Point-source source-plane chi-squared campaign — phase 2c: fwd vs rev gradient crossover
 
 Type: research

@@ -62,23 +62,6 @@
 - summary: Add an explicit vis_lp-only inspection mode that combines the main normal-model output tree with the 100-lens SED/Sersic tree, without requiring vis_pix or selecting the other 200 main-tree lenses.
 - resume: Implemented + committed locally as c6b514d on feature/vis-lp-inspection-bundle (133 tests green, not pushed). Human reviews diff (scratchpad part1_diff.txt) before ship_workspace; then sync tooling to the euclid_dr1 science clone/RAL and submit the 4,922-tile vis_lp-only bundle (OUTPUT_DIR=dr1_full, INITIAL_SEARCH_NAME=vis_lp, DATASET_NAMES_PATH=all, TAR_TO set) as a Cortex run.
 
-## point-source-source-plane-p2c
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/329
-- issued: 2026-09-27
-- prompt: active/point_source_source_plane_phase_2c.md (phase 2c of campaign draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md)
-- epic: point-source-cpu-speed
-- session: Claude Code CLI (Opus 5.5), 2026-09-27
-- worktree: /home/jammy/Code/PyAutoLabs-wt/point-source-source-plane-p2c
-- autonomy: supervised (header); plan approved in-session 2026-09-27 (crossover study, workspace-only)
-- parallel-claim: autolens_profiling also claimed by pointsolver-step0-gather, point-source-cpu-p4 (#321) and interferometer-mesh-numba-p1; phase 2c touches only scripts/point_source_source/likelihood_breakdown/gradient_mode_crossover.py, results/breakdown/point_source_source/gradient_mode_crossover_*, hpc/batch_{cpu,gpu}/submit_gradient_mode_crossover_point_source_source_*, point_source_source_plane_campaign.md (Phase 2c section), README rows. Own worktree approved by the human 2026-09-27.
-- repos:
-  - autolens_profiling: feature/point-source-source-plane-p2c
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/331
-- status: awaiting-merge (PR #331 open; human runs /prm)
-- heart-ack: "2026-09-27 YELLOW acknowledged by the human: manifest drift x3 vs PyAutoMind/repos.yaml (hub organism blurb 7, organism-map blocks 1, workspace checkouts 1); release validation incomplete: no rehearsal for current source"
-- decision: "2026-09-27 no crossover through n=24/27 (fwd lead grows with model size; structural: reverse-over-forward through the inner lensing Hessian). Human chose phase 2d = analysis-declared gradient_mode in PyAutoFit (af.Analysis default reverse, AnalysisPoint forward, search keyword override; one helper for Fitness.grad + multi-start gradient; blackjax later), library-first."
-- carried: RAL cleanup /mnt/ral/jnightin/autolens_profiling_wt/point-source-source-plane-{p2a,p2b,p2c} + p2b.bundle/p2c.bundle/logs + local branches in /mnt/ral/jnightin/autolens_profiling; intake: Isothermal convergence_2d_from not jit-traceable with traced ell_comps; jax.grad NaN at exactly (0,0) for ExternalShear/multipole comps/ell_comps; PowerLawMultipole m=1 singular at slope 2
-
 ## pointsolver-mcs-headroom
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/583
 - issued: 2026-09-27
