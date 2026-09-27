@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 257 |
+| [Backlog](#backlog) (`draft/`) | 260 |
 
 > **No batch in flight.**
 
@@ -529,7 +529,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**257** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **58** of them belong to an epic and are listed only under [Epics](#epics) below.
+**260** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **58** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 73</summary>
@@ -1121,7 +1121,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>feature</b> — 40</summary>
+<summary><b>feature</b> — 41</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_assistant/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging, point_source and interferometer</a> — autolens_assistant · medium · supervised · high</summary>
 
@@ -1439,6 +1439,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/autolens_inference/drop_1e3_prior_centring_after_631.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens_profiling/runtime_dashboard_and_profiling_organ_vision.md">Run-time-over-time dashboard for the *_profiling repos (and the organ question)</a> — autolens_profiling</summary>
+
+```
+/start_dev draft/feature/autolens_profiling/runtime_dashboard_and_profiling_organ_vision.md
 ```
 
 </details>
@@ -1840,7 +1848,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>docs</b> — 15</summary>
+<summary><b>docs</b> — 16</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
 
@@ -1954,6 +1962,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
+<details><summary>📋 <a href="draft/docs/autolens_profiling/profiling_research_wiki_phase_2_backfill.md">Profiling research wiki — phase 2: backfill the closed campaigns</a> — autolens_profiling</summary>
+
+```
+/start_dev draft/docs/autolens_profiling/profiling_research_wiki_phase_2_backfill.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md">Phase 2 — drop the hand-written quick-update sentence from the workspace scripts</a> — autolens_workspace</summary>
 
 ```
@@ -1965,7 +1981,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>refactor</b> — 12</summary>
+<summary><b>refactor</b> — 13</summary>
 
 <details><summary>📋 <a href="draft/refactor/autonerves/config_yaml_parse_cache.md">Cache <code>autonerves</code> config parsing — 308 YAML files parsed per script run</a> — autonerves · medium · safe · medium</summary>
 
@@ -2059,6 +2075,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/refactor/autoarray/sparse_operator_int32_indexes.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/autolens_profiling/notes_logs_and_sidecars_out_of_results_notes.md">Move committed job logs and JSON sidecars out of results/notes/</a> — autolens_profiling</summary>
+
+```
+/start_dev draft/refactor/autolens_profiling/notes_logs_and_sidecars_out_of_results_notes.md
 ```
 
 </details>
@@ -2438,7 +2462,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 40 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 41 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -3116,11 +3140,14 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 ## Hygiene
 
-5 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
+8 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
 
 <details>
 <summary>Headerless prompts</summary>
 
+- `draft/feature/autolens_profiling/runtime_dashboard_and_profiling_organ_vision.md`
+- `draft/refactor/autolens_profiling/notes_logs_and_sidecars_out_of_results_notes.md`
+- `draft/docs/autolens_profiling/profiling_research_wiki_phase_2_backfill.md`
 - `draft/research/autofit/hpc_campaign_epic_report.md`
 - `draft/research/autofit/hpc_campaign_epic_surveys/carbon.md`
 - `draft/research/autofit/hpc_campaign_epic_surveys/codebase.md`
@@ -3129,7 +3156,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 </details>
 
-68 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+71 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3148,6 +3175,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 - `draft/feature/autolens_assistant/colab_refinement_throughout.md`
 - `draft/feature/autolens_inference/drop_1e3_prior_centring_after_631.md`
 - `draft/feature/autolens_jax_joss/autolens_jax_joss_benchmark_repo.md`
+- `draft/feature/autolens_profiling/runtime_dashboard_and_profiling_organ_vision.md`
 - `draft/feature/autolens_workspace/pointsolver_grid_extent_per_package.md`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md`
 - `draft/feature/jax_substructure/5_prng_key_vmap_noise.md`
@@ -3167,14 +3195,13 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 - `draft/bug/priors/14_replace_transform_stack_with_bijectors.md`
 - `draft/bug/priors/z_features.md`
 - `draft/refactor/autogalaxy/critical_curves_dispatch_cluster.md`
+- `draft/refactor/autolens_profiling/notes_logs_and_sidecars_out_of_results_notes.md`
 - `draft/refactor/workspaces/abell_1201_local_cleanup.md`
 - `draft/docs/autolens/split_lensing_regimes.md`
+- `draft/docs/autolens_profiling/profiling_research_wiki_phase_2_backfill.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
 - `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
-- `draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md`
-- `draft/test/workspaces/mesh_magnification_correctness.md`
-- `draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md`
-- _… and 28 more_
+- _… and 31 more_
 
 </details>
 
