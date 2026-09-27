@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 257 |
+| [Backlog](#backlog) (`draft/`) | 258 |
 
 > **No batch in flight.**
 
@@ -521,7 +521,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**257** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **58** of them belong to an epic and are listed only under [Epics](#epics) below.
+**258** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **58** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 73</summary>
@@ -1832,7 +1832,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>docs</b> — 15</summary>
+<summary><b>docs</b> — 16</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
 
@@ -1942,6 +1942,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/docs/autofit/howtofit_chapter_3_prose_references.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_profiling/profiling_research_wiki.md">Profiling research wiki for autolens_profiling</a> — autolens_profiling</summary>
+
+```
+/start_dev draft/docs/autolens_profiling/profiling_research_wiki.md
 ```
 
 </details>
@@ -2430,7 +2438,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 40 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 41 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -3108,11 +3116,12 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 ## Hygiene
 
-5 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
+6 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
 
 <details>
 <summary>Headerless prompts</summary>
 
+- `draft/docs/autolens_profiling/profiling_research_wiki.md`
 - `draft/research/autofit/hpc_campaign_epic_report.md`
 - `draft/research/autofit/hpc_campaign_epic_surveys/carbon.md`
 - `draft/research/autofit/hpc_campaign_epic_surveys/codebase.md`
@@ -3121,7 +3130,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 </details>
 
-68 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+69 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3161,12 +3170,12 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 - `draft/refactor/autogalaxy/critical_curves_dispatch_cluster.md`
 - `draft/refactor/workspaces/abell_1201_local_cleanup.md`
 - `draft/docs/autolens/split_lensing_regimes.md`
+- `draft/docs/autolens_profiling/profiling_research_wiki.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
 - `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
 - `draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md`
 - `draft/test/workspaces/mesh_magnification_correctness.md`
-- `draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md`
-- _… and 28 more_
+- _… and 29 more_
 
 </details>
 
