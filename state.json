@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-09-27T13:43:59Z",
+  "updated": "2026-09-27T13:57:03Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -21,7 +21,7 @@
     },
     {
       "severity": "yellow",
-      "text": "Workspace config cleanup: remove orphan config keys the Nerves board flags \u2014 library-shipped, workspace-pending",
+      "text": "Workspace config cleanup: remove orphan config keys the Nerves board flags \u2014 workspace-shipped, awaiting-merge (7 PRs open; merge order Galaxy#630 -> Lens#751, Nerves#176 any time, then workspaces\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/630",
       "prompt": "/start_dev active/workspace_config_cleanup.md"
     },
@@ -111,6 +111,12 @@
     },
     {
       "severity": "yellow",
+      "text": "waiting on PyAutoGalaxy's release: Workspace config cleanup: remove orphan config keys the Nerves board flags",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/issues/441",
+      "prompt": "/start_dev active/workspace_config_cleanup.md"
+    },
+    {
+      "severity": "yellow",
       "text": "pending release: PyAutoGut PyAutoGut#12 \u2014 What shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoGut/pull/12",
       "prompt": null
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoLens PyAutoLens#751 \u2014 Workspace config cleanup: remove orphan config keys the Nerves board flags",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/751",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#750 \u2014 interferometer-mge-w-tilde-route",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/750",
       "prompt": null
     }
   ]

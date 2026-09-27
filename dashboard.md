@@ -308,7 +308,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/workspace_config_cleanup.md">Workspace config cleanup: remove orphan config keys the Nerves board flags</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/441">issue #441</a> — issued 2026-09-27 — library-shipped, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/630">PyAutoGalaxy#630</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/751">PyAutoLens#751</a>, <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/176">PyAutoNerves#176</a> — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoLens — ⏳ pending release: PyAutoNerves</summary>
+<details><summary>📋 <a href="active/workspace_config_cleanup.md">Workspace config cleanup: remove orphan config keys the Nerves board flags</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/441">issue #441</a> — issued 2026-09-27 — workspace-shipped, awaiting-merge (7 PRs open; merge order Galaxy#630 -&gt; Lens#751, Nerves#176 any time, then workspaces… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/630">PyAutoGalaxy#630</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/751">PyAutoLens#751</a>, <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/176">PyAutoNerves#176</a>, <a href="https://github.com/PyAutoLabs/autofit_workspace/pull/164">autofit_workspace#164</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/250">autogalaxy_workspace#250</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/578">autolens_workspace#578</a>, <a href="https://github.com/PyAutoLabs/autocti_workspace/pull/34">autocti_workspace#34</a> — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoLens — ⏳ pending release: PyAutoNerves — ⏸ waiting on PyAutoGalaxy's release</summary>
 
 ```
 /start_dev active/workspace_config_cleanup.md
@@ -343,6 +343,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 - [PyAutoGalaxy#630](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/630) — `active/workspace_config_cleanup.md`
 - [PyAutoGalaxy#629](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/629) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
+- ⏸ waiting: [Workspace config cleanup: remove orphan config keys the Nerves board flags](active/workspace_config_cleanup.md)
 
 **PyAutoGut**
 
