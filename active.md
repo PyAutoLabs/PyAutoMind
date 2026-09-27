@@ -33,6 +33,7 @@
 - repos:
   - PyAutoNerves: feature/workspace-config-cleanup
   - PyAutoGalaxy: feature/workspace-config-cleanup
+  - PyAutoLens: feature/workspace-config-cleanup
   - autofit_workspace: feature/workspace-config-cleanup
   - autogalaxy_workspace: feature/workspace-config-cleanup
   - autolens_workspace: feature/workspace-config-cleanup
