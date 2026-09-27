@@ -3,28 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 9 in flight",
-  "updated": "2026-09-27T10:38:35Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
+  "updated": "2026-09-27T10:40:30Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Organ cockpit: Gut void button reaches refs held on sibling repos \u2014 library-shipped, awaiting-merge (PR open, head d956c380; 23 passed; Heart YELLOW acked by human 2026-09-27)",
-      "url": "https://github.com/PyAutoLabs/PyAutoGut/pull/12",
-      "prompt": "/start_dev active/organ_cockpit_gut_void_sibling_reach.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Organ cockpit: Nerves board flags config keys not in use anymore \u2014 library-shipped, awaiting-merge (PR open, head 079b182; 206 passed; Heart YELLOW acked by human 2026-09-27)",
-      "url": "https://github.com/PyAutoLabs/PyAutoNerves/pull/175",
-      "prompt": "/start_dev active/organ_cockpit_nerves_unused_keys.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Organ cockpit: start_dev refuses or warns on the Heart feed before development\u2026 \u2014 library-shipped, awaiting-merge (PR open, head e31d92f; full suite 1077 passed / 1 pre-existing env failure; Heart YELLOW acked\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/424",
-      "prompt": "/start_dev active/organ_cockpit_start_dev_heart_gate.md"
-    },
     {
       "severity": "yellow",
       "text": "Point-source (single-source) CPU speed-up campaign \u2014 phase 4: profile the residue\u2026 \u2014 awaiting-merge (phase 4a PR #321 open; human runs /prm)",
@@ -63,12 +45,6 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#424 \u2014 Organ cockpit: start_dev refuses or warns on the Heart feed before development\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/424",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#404 \u2014 codex-context-efficiency",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/404",
       "prompt": null
@@ -99,13 +75,19 @@
     },
     {
       "severity": "yellow",
+      "text": "pending release: PyAutoBrain PyAutoBrain#424 \u2014 What shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/424",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#629 \u2014 interferometer-mge-w-tilde-route",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/629",
       "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoGut PyAutoGut#12 \u2014 Organ cockpit: Gut void button reaches refs held on sibling repos",
+      "text": "pending release: PyAutoGut PyAutoGut#12 \u2014 What shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoGut/pull/12",
       "prompt": null
     },
@@ -125,6 +107,24 @@
       "severity": "yellow",
       "text": "pending release: PyAutoMind PyAutoMind#427 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/pull/427",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoMind PyAutoMind#406 \u2014 provider-neutral-bundle-prompts",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/pull/406",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoNerves PyAutoNerves#175 \u2014 What shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoNerves/pull/175",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoReduce PyAutoReduce#77 \u2014 mass-field-reduce",
+      "url": "https://github.com/PyAutoLabs/PyAutoReduce/pull/77",
       "prompt": null
     }
   ]

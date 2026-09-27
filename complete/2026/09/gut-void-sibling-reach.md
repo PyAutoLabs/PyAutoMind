@@ -1,3 +1,22 @@
+# Gut Void reaches condemned refs held on sibling repos
+
+PyAutoGut#12 → `dad7367c` (closing PyAutoGut#11), merged 2026-09-27 with `--merge`.
+Member of bundle `cockpit-followups` (with nerves-unused-keys, start-dev-heart-gate);
+epic organ-cockpit. Fable-planned, Opus-executed; Heart YELLOW acked by the human 2026-09-27.
+
+- issue: https://github.com/PyAutoLabs/PyAutoGut/issues/11
+- completed: 2026-09-27
+- library-pr: https://github.com/PyAutoLabs/PyAutoGut/pull/12
+- pending-release: PyAutoGut@https://github.com/PyAutoLabs/PyAutoGut/pull/12
+
+## What shipped
+- `void.yml` authenticates with `PAT_PYAUTOLABS` so the Void button can delete refs held on
+  sibling repos; board rows for refs held elsewhere now get the button.
+- Per-ref failure reporting instead of one opaque job failure; tests (23 passed), README and
+  AGENTS.md updated; `gut_board.yml` re-dispatched after merge.
+
+## Original prompt
+
 # Organ cockpit: Gut void button reaches refs held on sibling repos
 
 Type: feature

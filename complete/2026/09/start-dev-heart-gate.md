@@ -1,3 +1,24 @@
+# start_dev "Heart at the door" readiness gate
+
+PyAutoBrain#424 → `7de135cd` (closing PyAutoBrain#423), merged 2026-09-27 with `--merge`.
+Member of bundle `cockpit-followups` (with nerves-unused-keys, gut-void-sibling-reach);
+epic organ-cockpit. Fable-planned, Opus-executed; Heart YELLOW acked by the human 2026-09-27.
+
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/423
+- completed: 2026-09-27
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/424
+- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/424
+
+## What shipped
+- `bin/heart_feed.py` reads the published Heart `state.json` (fallback `pyauto-heart
+  readiness`); start_dev stops on RED before planning and warns on YELLOW.
+- Mirrored in `skills/start_bundle`, `skills/route` and `skills/WORKFLOW.md`; full suite 1077
+  passed / 1 pre-existing env failure.
+- Tier `notify`: shadow row deferred at close-out — the merged-unchanged question was not
+  asked in this (subagent) session; append with `lifecycle.py shadow-row` once answered.
+
+## Original prompt
+
 # Organ cockpit: start_dev refuses or warns on the Heart feed before development starts
 
 Type: feature

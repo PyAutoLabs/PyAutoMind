@@ -1,3 +1,24 @@
+# Nerves board flags library config keys no library code reads
+
+PyAutoNerves#175 → `eb27da24` (closing PyAutoNerves#174), merged 2026-09-27 with `--merge`.
+Member of bundle `cockpit-followups` (with gut-void-sibling-reach, start-dev-heart-gate);
+epic organ-cockpit. Fable-planned, Opus-executed; Heart YELLOW acked by the human 2026-09-27.
+
+- issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/174
+- completed: 2026-09-27
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/175
+- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/175
+
+## What shipped
+- `scripts/board.py`: a `conf.instance` lookup scan classifies every library config key as
+  used / section-read / unused; unused keys render as info items on the Nerves board.
+- `nerves_board.yml`, tests (206 passed), README and AGENTS.md updated; board re-dispatched
+  after merge.
+- Follow-up filed: workspace config cleanup (79 orphan workspace keys across 14 files, the
+  `fit_imaging {}:` typo, and a human-review-gated library-side unused-key list).
+
+## Original prompt
+
 # Organ cockpit: Nerves board flags config keys not in use anymore
 
 Type: feature

@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1580 records across 8 buckets.
+1583 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -260,6 +260,7 @@ markers; everything below GENERATED is rebuilt.
 - [generate-markdown-leaks-worktree-paths](2026/09/generate-markdown-leaks-worktree-paths.md)
 - [grid-offset-prior](2026/09/grid-offset-prior.md) — Widened both waveband DatasetModel grid-offset priors from ±0.2 to ±0.5 arcsec and added prior_edge_y/x to ast…
 - [gut-board](2026/09/gut-board.md) — closed
+- [gut-void-sibling-reach](2026/09/gut-void-sibling-reach.md)
 - [hands-board-family-footer](2026/09/hands-board-family-footer.md)
 - [hands-state-feed](2026/09/hands-state-feed.md) — closed
 - [heart-board-family-footer](2026/09/heart-board-family-footer.md)
@@ -357,6 +358,7 @@ markers; everything below GENERATED is rebuilt.
 - [multistart-cpu-memory-probe](2026/09/multistart-cpu-memory-probe.md) — - `MultiStartGradient._warn_if_unbatched_exceeds_memory` now skips its batch-1/batch-2 memory probe (two throw…
 - [natural-language-first-docs](2026/09/natural-language-first-docs.md)
 - [nerves-board](2026/09/nerves-board.md) — closed
+- [nerves-unused-keys](2026/09/nerves-unused-keys.md)
 - [notify-slack-community-discussions](2026/09/notify-slack-community-discussions.md)
 - [nufft-threshold-subhalo-pin-rebuild](2026/09/nufft-threshold-subhalo-pin-rebuild.md)
 - [numba-interferometer-kernel-levers](2026/09/numba-interferometer-kernel-levers.md)
@@ -431,6 +433,7 @@ markers; everything below GENERATED is rebuilt.
 - [smoke-relevance-gate](2026/09/smoke-relevance-gate.md)
 - [smoke-timings-ingester](2026/09/smoke-timings-ingester.md)
 - [sparse-operator-ignores-disable-jax](2026/09/sparse-operator-ignores-disable-jax.md)
+- [start-dev-heart-gate](2026/09/start-dev-heart-gate.md)
 - [start-here-mode](2026/09/start-here-mode.md)
 - [start-here-release-profile-script-cap](2026/09/start-here-release-profile-script-cap.md)
 - [subhalo-followup-moved-to-cortex](2026/09/subhalo-followup-moved-to-cortex.md)

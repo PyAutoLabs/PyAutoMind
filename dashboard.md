@@ -42,7 +42,7 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 9 |
+| [In flight](#in-flight) (`active/`) | 6 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
@@ -260,30 +260,6 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/organ_cockpit_gut_void_sibling_reach.md">Organ cockpit: Gut void button reaches refs held on sibling repos</a> — <a href="https://github.com/PyAutoLabs/PyAutoGut/issues/11">issue #11</a> — issued 2026-09-26 — library-shipped, awaiting-merge (PR open, head d956c380; 23 passed; Heart YELLOW acked by human 2026-09-27) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGut/pull/12">PyAutoGut#12</a> — ⏳ pending release: PyAutoGut</summary>
-
-```
-/start_dev active/organ_cockpit_gut_void_sibling_reach.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/organ_cockpit_nerves_unused_keys.md">Organ cockpit: Nerves board flags config keys not in use anymore</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/174">issue #174</a> — issued 2026-09-26 — library-shipped, awaiting-merge (PR open, head 079b182; 206 passed; Heart YELLOW acked by human 2026-09-27) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/175">PyAutoNerves#175</a> — ⏳ pending release: PyAutoNerves</summary>
-
-```
-/start_dev active/organ_cockpit_nerves_unused_keys.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/organ_cockpit_start_dev_heart_gate.md">Organ cockpit: start_dev refuses or warns on the Heart feed before development…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/423">issue #423</a> — issued 2026-09-26 — library-shipped, awaiting-merge (PR open, head e31d92f; full suite 1077 passed / 1 pre-existing env failure; Heart YELLOW acked… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/424">PyAutoBrain#424</a> — ⏳ pending release: PyAutoBrain</summary>
-
-```
-/start_dev active/organ_cockpit_start_dev_heart_gate.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/point_source_source_plane_phase_2b.md">Point-source source-plane chi-squared campaign — phase 2b: backward-pass A/B</a> — issued 2026-09-27</summary>
 
 ```
@@ -339,12 +315,12 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoBrain**
 
-- [PyAutoBrain#424](https://github.com/PyAutoLabs/PyAutoBrain/pull/424) — `active/organ_cockpit_start_dev_heart_gate.md`
 - [PyAutoBrain#404](https://github.com/PyAutoLabs/PyAutoBrain/pull/404) — `complete/2026/09/codex-context-efficiency.md`
 - [PyAutoBrain#387](https://github.com/PyAutoLabs/PyAutoBrain/pull/387) — `complete/2026/09/codex-token-efficiency.md`
 - [PyAutoBrain#406](https://github.com/PyAutoLabs/PyAutoBrain/pull/406) — `complete/2026/09/community-surface-brain.md`
 - [PyAutoBrain#409](https://github.com/PyAutoLabs/PyAutoBrain/pull/409) — `complete/2026/09/notify-slack-community-discussions.md`
 - [PyAutoBrain#384](https://github.com/PyAutoLabs/PyAutoBrain/pull/384) — `complete/2026/09/provider-neutral-bundle-prompts.md`
+- [PyAutoBrain#424](https://github.com/PyAutoLabs/PyAutoBrain/pull/424) — `complete/2026/09/start-dev-heart-gate.md`
 
 **PyAutoGalaxy**
 
@@ -352,7 +328,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoGut**
 
-- [PyAutoGut#12](https://github.com/PyAutoLabs/PyAutoGut/pull/12) — `active/organ_cockpit_gut_void_sibling_reach.md`
+- [PyAutoGut#12](https://github.com/PyAutoLabs/PyAutoGut/pull/12) — `complete/2026/09/gut-void-sibling-reach.md`
 
 **PyAutoLens**
 
@@ -366,7 +342,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoNerves**
 
-- [PyAutoNerves#175](https://github.com/PyAutoLabs/PyAutoNerves/pull/175) — `active/organ_cockpit_nerves_unused_keys.md`
+- [PyAutoNerves#175](https://github.com/PyAutoLabs/PyAutoNerves/pull/175) — `complete/2026/09/nerves-unused-keys.md`
 
 **PyAutoReduce**
 
@@ -2355,17 +2331,14 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-26 | filed | <a href="draft/feature/autolens_assistant/colab_refinement_throughout.md">Refine the assistant for Google Colab, here and throughout</a> |
 | 2026-09-26 | issued | <a href="active/pointsolver_step0_gather_containment.md">Point-source CPU speed-up phase 4b — cut the step-0 triangle gather /…</a> |
 | 2026-09-26 | issued | <a href="active/pointsolver_cpu_speed_phase_4.md">Point-source (single-source) CPU speed-up campaign — phase 4: profile…</a> |
-| 2026-09-26 | issued | <a href="active/organ_cockpit_start_dev_heart_gate.md">Organ cockpit: start_dev refuses or warns on the Heart feed before…</a> |
-| 2026-09-26 | issued | <a href="active/organ_cockpit_nerves_unused_keys.md">Organ cockpit: Nerves board flags config keys not in use anymore</a> |
-| 2026-09-26 | issued | <a href="active/organ_cockpit_gut_void_sibling_reach.md">Organ cockpit: Gut void button reaches refs held on sibling repos</a> |
+| 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
+| 2026-09-25 | filed | <a href="draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md">Keep caches off <code>$HOME</code> on HPC — phase 2 remainder: euclid pipeline…</a> |
+| 2026-09-25 | issued | <a href="active/eyes_organ_order.md">Canonical organ order — Eyes after Memory, before Heart</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
-| 2026-09-25 | filed | <a href="draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md">Keep caches off <code>$HOME</code> on HPC — phase 2 remainder: euclid pipeline…</a> |
-| 2026-09-25 | issued | <a href="active/eyes_organ_order.md">Canonical organ order — Eyes after Memory, before Heart</a> |
 | 2026-09-24 | filed | <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> |
 | 2026-09-24 | filed | <a href="draft/bug/autofit/nautilus_converged_run_double_pass.md">Nautilus: a converged single-chunk fit still runs a second no-op…</a> |
 | 2026-09-23 | filed | <a href="draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
@@ -2373,14 +2346,14 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-20 | planned | <a href="planned.md#vis-magnitude-catalogue-top1000">vis-magnitude-catalogue-top1000</a> |
 | 2026-09-20 | issued | <a href="active/vis_magnitude_catalogue_top1000.md">Export VIS magnitudes for the Euclid DR1 top-1000 fits</a> |
 | 2026-09-19 | issued | <a href="parked.md#catalogue-inspection-before-vis-pix">catalogue-inspection-before-vis-pix</a> |
+| 2026-09-18 | parked | <a href="parked.md#fixed-light-numba-s7">fixed-light-numba-s7</a> |
+| 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
+| 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-18 | parked | <a href="parked.md#fixed-light-numba-s7">fixed-light-numba-s7</a> |
-| 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
-| 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> |
 | 2026-09-18 | filed | <a href="draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md">The latent smoke's empty-block assertion names one cause…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its…</a> |
@@ -2388,14 +2361,14 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/pyautobrain/sizing_faculty_none_rule_keyword_false_judge_triage.md">Sizing faculty: a <code>none</code> rule, keyword hits on prose that only…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> |
+| 2026-09-17 | filed | <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> |
+| 2026-09-17 | filed | <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source A100 speed-up campaign: profile and optimize with the…</a> |
+| 2026-09-17 | filed | <a href="draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-17 | filed | <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> |
-| 2026-09-17 | filed | <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source A100 speed-up campaign: profile and optimize with the…</a> |
-| 2026-09-17 | filed | <a href="draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autoarray/mesh_geometry_areas_transformed_adapt_image_indexerror.md">MeshGeometryRectangular.areas_transformed raises IndexError for…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
@@ -2403,14 +2376,14 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> |
 | 2026-09-17 | filed | <a href="draft/feature/autolens_assistant/benchmark_positions_initialised_inference.md">Benchmark card: positions-initialised imaging inference of a…</a> |
 | 2026-09-17 | filed | <a href="draft/feature/autolens_assistant/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging…</a> |
+| 2026-09-16 | filed | <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of…</a> |
+| 2026-09-16 | filed | <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding…</a> |
+| 2026-09-16 | filed | <a href="draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> /…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-16 | filed | <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of…</a> |
-| 2026-09-16 | filed | <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding…</a> |
-| 2026-09-16 | filed | <a href="draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> /…</a> |
 | 2026-09-16 | filed | <a href="draft/feature/autolens/coolest_pixel_grid_export.md">COOLEST: export MGE lens light and pixelized sources as pixel grids</a> |
 | 2026-09-16 | filed | <a href="draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md">Adaptive Delaunay mesh places two mesh pixels 0.001" apart — a…</a> |
 | 2026-09-15 | filed | <a href="draft/maintenance/howtofit/minimum_library_version_stale.md">The workspace staleness warning keys off a value documented never to…</a> |
@@ -2418,6 +2391,9 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-15 | filed | <a href="draft/docs/howtofit/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autolens_workspace/start_here_multistart_compile_time.md">imaging/start_here: 26-minute XLA compile of the 48-start Prodigy…</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md"><code>curvature_reg_matrix</code> rebuilds <code>F + H</code> on every access — and the…</a> |
+| 2026-09-14 | filed | <a href="draft/docs/autofit/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the…</a> |
+| 2026-09-14 | filed | <a href="draft/bug/autofit/mcmc_thin_zero_and_check_size_short_chain.md">Emcee/Zeus: thin can be 0, and check_size blows up on short chains</a> |
+| 2026-09-13 | filed | <a href="draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md">cluster/mass_parameterizations*.py promise model.info prints (and…</a> |
 
 </details>
 
