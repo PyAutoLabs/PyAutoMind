@@ -11,11 +11,13 @@ Themes:
 - profiling
 - inversion
 - hpc-gpu
+- interferometer
 Difficulty: large
 Autonomy: supervised
 Priority: normal
 Status: draft — C1 verdict recorded 2026-09-25 (human: proceed; build rule passes in 3/4 cells; 2026-09-25 human decisions: gate Δ = 100 / 0.1 nats adopted, rectangular pix1 stays on PDIP vmap — see "Human decisions (2026-09-25)"); still blocked on the PyAutoArray#567 release
 Epic: certified-positive-solver
+Epic-link: interferometer-likelihood-campaign
 Phase: C2
 Consequence: judge
 Blocked-by: the PyAutoArray release shipping PyAutoArray#567 (C1 is COMPLETE: `complete/2026/09/certified-solver-phase-c1-lane-rate.md`, autolens_profiling#309 merged 2026-09-25; human chose to proceed)
