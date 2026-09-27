@@ -26,10 +26,17 @@
 - prompt: active/workspace_config_cleanup.md
 - epic: organ-cockpit
 - session: Claude Code CLI (Opus 5.5 main session + Opus subagent), 2026-09-27; session ID unavailable
-- status: library-dev
+- status: library-shipped, workspace-pending
 - autonomy: supervised (header); plan approved in-session 2026-09-27 (library-first: Nerves board equivalence + allow-list, PyAutoGalaxy promotion, then workspace deletes)
 - worktree: ~/Code/PyAutoLabs-wt/workspace-config-cleanup
 - parallel-claim: "PyAutoNerves is also claimed by eyes-organ-order (PyAutoMind#439), whose Nerves diff is only AGENTS.md; this task touches only scripts/board.py + its tests. Parallel worktree human-approved 2026-09-27; noted on #439 and #441."
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/630
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/751
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/176
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/630
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/751
+- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/176
+- resume: "Library PRs open (merge Galaxy#630 first, then Lens#751; Nerves#176 independent); Heart YELLOW 85 human-acked. Next: finish + /ship_workspace the 4 workspace repos in the same worktree."
 - repos:
   - PyAutoNerves: feature/workspace-config-cleanup
   - PyAutoGalaxy: feature/workspace-config-cleanup
