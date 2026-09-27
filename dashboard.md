@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 239 |
+| [Backlog](#backlog) (`draft/`) | 240 |
 
 > **No batch in flight.**
 
@@ -521,7 +521,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**239** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **54** of them belong to an epic and are listed only under [Epics](#epics) below.
+**240** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **55** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 68</summary>
@@ -2954,6 +2954,19 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 ```
 /start_dev draft/maintenance/autolens_profiling/mass_field_flat_adoption_science_repos.md
+```
+
+</details>
+
+</details>
+
+<details>
+<summary><b>organ-cockpit</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+
+<details><summary>📋 <a href="draft/maintenance/workspaces/workspace_config_cleanup.md">Workspace config cleanup: remove orphan config keys the Nerves board flags</a> — workspaces · small · supervised · normal</summary>
+
+```
+/start_dev draft/maintenance/workspaces/workspace_config_cleanup.md
 ```
 
 </details>
