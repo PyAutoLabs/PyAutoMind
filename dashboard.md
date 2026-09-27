@@ -268,7 +268,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/isothermal_convergence_jit.md">Isothermal.convergence_2d_from not jit-traceable (PowerLawCore drops xp)</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/632">issue #632</a> — issued 2026-09-27 — library-dev</summary>
+<details><summary>📋 <a href="active/isothermal_convergence_jit.md">Isothermal.convergence_2d_from not jit-traceable (PowerLawCore drops xp)</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/632">issue #632</a> — issued 2026-09-27 — library-shipped, awaiting-merge (PR open; workspace impact (iii) none — API Changes: None; /smoke_test not yet run) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/633">PyAutoGalaxy#633</a> — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 /start_dev active/isothermal_convergence_jit.md
@@ -350,6 +350,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#633](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/633) — `active/isothermal_convergence_jit.md`
 - [PyAutoGalaxy#630](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/630) — `active/workspace_config_cleanup.md`
 - [PyAutoGalaxy#629](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/629) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - ⏸ waiting: [Workspace config cleanup: remove orphan config keys the Nerves board flags](active/workspace_config_cleanup.md)
