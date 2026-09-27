@@ -73,3 +73,16 @@
 - repos:
   - autolens_profiling: feature/point-source-source-plane-p2b
 - status: workspace-dev
+
+## interferometer-mesh-numba-p1
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/326
+- issued: 2026-09-27
+- prompt: active/interferometer_mesh_numba_cpu_phase_1.md (phase 1 of campaign draft/research/autolens_profiling/interferometer_mesh_breakdown_numba_cpu_decision_matrix.md)
+- epic: interferometer-likelihood-campaign
+- session: Claude Code CLI (Opus 5.5), 2026-09-27; session ID unavailable
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/interferometer-mesh-numba-p1
+- autonomy: supervised (header); plan approved in-session 2026-09-27 (phase 1: library-dispatch numba CPU cells + --mask-radius + RAL CPU rows, workspace-only)
+- parallel-claim: "autolens_profiling is also claimed by point-source-cpu-p4 (#321), point-source-cpu-p4b (pointsolver-step0-gather) and point-source-source-plane-p2b; this phase touches only scripts/misc/likelihood_breakdown/interferometer_pixelized_numpy.py (+ --mask-radius in interferometer_pixelized.py), scripts/interferometer/likelihood_breakdown/*_numba.py, hpc/batch_cpu/*interferometer*, results/breakdown/interferometer/**numba*, and instruments/interferometer.py only if needed for the mask radius; README dashboards regenerated at ship (#177 precedent). Human-approved 2026-09-27."
+- repos:
+  - autolens_profiling: feature/interferometer-mesh-numba-p1

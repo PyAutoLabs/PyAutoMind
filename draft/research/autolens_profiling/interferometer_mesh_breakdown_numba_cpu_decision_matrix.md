@@ -1,4 +1,4 @@
-# Interferometer likelihood campaign 3/3: mesh breakdown on numba sparse CPU, and the CPU-vs-GPU "which likelihood when" decision matrix
+# Interferometer likelihood campaign 3/3 — mesh numba CPU breakdown + CPU-vs-GPU decision matrix — phase map (phase 1 issued)
 
 Type: research
 Target: autolens_profiling
@@ -11,7 +11,7 @@ Themes:
 Difficulty: large
 Autonomy: supervised
 Priority: high
-Status: formalised
+Status: campaign map — phases issued one at a time
 Consequence: glance
 Witness: `results/notes/interferometer_likelihood_decision_matrix_2026_09.md` has a CPU-vs-A100 row for Delaunay-1500 at sma, alma and alma_high with mask radii 2.0/3.5/5.0, and the numba breakdown JSON's `configuration.inversion_path` reads `InversionInterferometerSparseNumba` for the gated arm.
 Review-minutes: 8
@@ -19,6 +19,104 @@ Unattended: needs-slicing
 Lane: local-dev
 Epic: interferometer-likelihood-campaign
 Filed: 2026-09-25
+Updated: 2026-09-27
+
+## Campaign contract
+
+Task 3/3 of `interferometer-likelihood-campaign` (1/3 MGE and 2/3 mesh-on-A100, PR #324, are
+shipped). The Feature Agent sized it large; the human approved a four-phase split on
+2026-09-27. At start-dev issue ONLY the next bounded phase (one issue + one PR each, all in
+autolens_profiling), retaining this prompt in `draft/` as the campaign intent until every
+phase is resolved. Phases 2 and 3 can run in parallel once Phase 1 lands `--mask-radius`.
+The #235 imaging numba discipline governs every CPU row: 1 thread pinned
+(`NUMBA_NUM_THREADS=1`, BLAS=1), memo off, iid instance stream, log-evidence pins
+(`pinned_expected` / `pinned_drift`), step sum vs the full library call, quiet RAL CPU
+(`gpu` partition, no `--gres`) as the timing reference — the laptop fails the ABBA gate.
+
+## Survey (2026-09-27)
+
+- `scripts/interferometer/likelihood_breakdown/delaunay_numba.py` / `pixelization_numba.py`
+  still import the prototype pack (`scripts/misc/numba_interferometer/inversion`), not the
+  factory; the shared harness `scripts/misc/likelihood_breakdown/interferometer_pixelized.py`
+  is JAX-only (`xp=jnp`, asserts `InversionInterferometerSparse`).
+- Gate: PyAutoArray `autoarray/inversion/inversion/factory.py:242-321`
+  `_use_interferometer_numba` (xp is np, one mapper, sub_fraction == 1, mean nnz/col <=
+  `interferometer_numba_nnz_per_source_max`, `config/general.yaml:21` = 60.0). The task-2/3
+  setups (AdaptSplit Delaunay, edge-zeroed rect, `over_sample_size_pixelization=1`) pass it;
+  nnz/col decides. The NumPy path solves with fnnls and reuses its Cholesky for the log-det.
+- Predicted Delaunay nnz/col: sma r3.5 7.7, alma r2.0 ~10, alma r3.5 30.8, alma r5.0 ~63,
+  alma_high r3.5 123 — alma r5.0 straddles the 60 gate: the natural crossover probe.
+- All task-2/3 A100 rows are at mask r3.5, so the witness's r2.0 / r5.0 GPU rows need new jobs.
+- No `results/runtime/` file records Nautilus evaluation counts — the original time-per-fit
+  cross-check has no source as written (decision below).
+- sdp81 (108,384 vis) is local in `autolens_workspace/dataset/interferometer/sdp81/` but has no
+  instrument preset / real-space mask.
+- No interferometer `hpc/batch_cpu/` submit scripts exist; template
+  `hpc/batch_cpu/submit_breakdown_imaging_fixed_light_numba_delaunay_ral_hst_fp64`.
+
+## Decision (human-approved default, 2026-09-27)
+
+Time-per-fit: take Nautilus evaluation counts from already-completed fits' search output
+(`samples_summary` / `search.summary` total evaluations — e.g. the Q1 example lens GPU fit and
+`autolens_inference/output/`), cite each source, and label the column "indicative". No new
+Nautilus runs in this campaign.
+
+## Phases
+
+### Phase 1 — library-dispatch CPU cells (CPU only) — ISSUED 2026-09-27
+
+Prompt `active/interferometer_mesh_numba_cpu_phase_1.md` (task `interferometer-mesh-numba-p1`, autolens_profiling#326).
+- New sibling harness `scripts/misc/likelihood_breakdown/interferometer_pixelized_numpy.py`
+  reusing the JAX harness's dataset / mesh / adapt setup, timing the library's own
+  `InversionInterferometerSparseNumba` / `InversionInterferometerSparse(xp=np)` steps
+  (triplets, D, F incl. `kernel_index_arrays` marshalling, regularisation, fnnls, log-det,
+  chi-squared). Three arms on identical inputs via
+  `Settings(interferometer_numba_nnz_per_source_max=...)`: numba (gate forced to admit),
+  NumPy FFT (gate 0), JAX-CPU FFT (existing harness). JSON records
+  `configuration.inversion_path`; the cell asserts the path it asked for.
+- Re-point `delaunay_numba.py` / `pixelization_numba.py` at the new harness (thin CLI
+  wrappers); the prototype pack stays untouched.
+- `--mask-radius` on both harnesses (preset default 3.5; W~ preload cache keyed by radius).
+- RAL `hpc/batch_cpu/submit_breakdown_interferometer_{delaunay,pixelization}_numba_ral_*`
+  for sma / alma / alma_high at r3.5 plus the alma N sweep (1000/1500/2500/4000).
+- Witness: gated-arm JSON `configuration.inversion_path == "InversionInterferometerSparseNumba"`,
+  numba vs FFT log-evidence <= 0.5 nat (expect ~1e-8), step sum within 10 % of the full call.
+
+### Phase 2 — in-situ crossover + CPU lever list (CPU only)
+
+- Sweep numba vs NumPy FFT across alma r2.0 / 3.5 / 5.0 and alma_high r3.5 for both meshes
+  (nnz/col ~10 -> 123); re-derive rect nnz in situ (the #226 rect values do not reproduce as
+  4·M/1521).
+- New section in `results/notes/numba_interferometer_verdict.md`; confirm 60 / ~77 or file the
+  PyAutoArray `general.yaml` retune prompt.
+- `results/notes/interferometer_mesh_cpu_breakdown_2026_09.md`: ranked levers (prange +
+  `NUMBA_NUM_THREADS` scaling, fnnls warm-start memo, Cholesky reuse, `kernel_index_arrays`
+  preload, MGE+mesh numba route), one draft prompt per worthwhile lever.
+- Witness: measured crossover bracketed by two measured points per mesh.
+
+### Phase 3 — A100 mask-radius sweep (new RAL GPU jobs)
+
+- Delaunay-1500 fp64 at r2.0 and r5.0 for sma / alma / alma_high (6 jobs; rect optional +6)
+  via the existing `hpc/batch_gpu/submit_breakdown_interferometer_*` with `--mask-radius`.
+- Witness: `results/breakdown/interferometer/<inst>/delaunay_hpc_a100_fp64_r{2.0,5.0}.json`
+  with non-null steps.
+
+### Phase 4 — the decision matrix (epic deliverable)
+
+- `results/notes/interferometer_likelihood_decision_matrix_2026_09.md`: N_vis (190 / 1e5 sdp81
+  / 1M / 5M / 25M) x mask radius x source (MGE-20, Delaunay-1500, rect 39²) x device/path;
+  ms/eval, one-off setup s, peak RAM/VRAM, log-evidence agreement; every cell filled or marked
+  blocked with the reason (e.g. CPU alma_high MGE W~ empty, A100 library dense OOM >= alma); a
+  short rule set; `results/README.md` pointer.
+- sdp81 row: add an sdp81 preset + mask to `instruments/interferometer.py`; one CPU + one small
+  A100 job.
+- Time-per-fit column per the decision above.
+- Witness: the campaign witness (CPU-vs-A100 Delaunay-1500 rows at sma / alma / alma_high x
+  r2.0 / 3.5 / 5.0).
+
+## Original prompt
+
+_Filed 2026-09-25 by the Intake Agent; preserved verbatim below the header._
 
 Mirror of the imaging numba CPU campaign (#263-#282: HST Delaunay 932 -> 230 ms) for
 the interferometer sparse path on CPU, through the **library dispatch**
