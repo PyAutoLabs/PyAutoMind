@@ -84,7 +84,13 @@
 - prompt: active/pointsolver_max_containing_size_headroom.md
 - epic: point-source-cpu-speed
 - session: Claude Code CLI (Opus 5.5 main session + Opus subagent), 2026-09-27; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge (N=20 human-chosen; PyAutoArray #584 + PyAutoLens #753 + autolens_profiling #335 open; human runs /prm)
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/584
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/753
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/335
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/584
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/753
+- heart-ack: "2026-09-27 human acked YELLOW: manifest drift x3 (hub blurb, organism-map blocks, workspace checkouts) + release validation incomplete (no rehearsal for current source)"
 - autonomy: supervised (header); plan approved in-session 2026-09-27 (measure MCS 18/20/24 first; no default change without the human's call at step 2)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/pointsolver-mcs-headroom
 - parallel-claim: "Three disjoint claims human-approved 2026-09-27: PyAutoArray vs interferometer-sparse-cache (#582, only autoarray/inversion/inversion/interferometer*; since completed) — this task touches only autoarray/structures/triangles/; PyAutoLens vs workspace-config-cleanup (Lens#751, awaiting release) — this task touches only autolens/point/solver/shape_solver.py + its test; autolens_profiling vs point-source-source-plane-p2c (scripts/point_source_source/…, source-plane ledger) — this task touches only scripts/point_source_image/…, new hpc submits, results/breakdown/point_source_image/ and the CPU ledger."
