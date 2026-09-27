@@ -1060,6 +1060,14 @@ def insert_deliverable_markers(root, repos):
         print(f"inserted deliverable markers: {agents}")
 
 
+def filing_block_excluded(repo_spec):
+    """A manifest entry carrying `filing_block: false` is out of scope for the
+    where-to-file block: neither written nor reported. A recorded exclusion,
+    not drift — the private single-user repo that carries it sits outside the
+    propagation job's reach, so reporting it would be a permanent red line."""
+    return isinstance(repo_spec, dict) and repo_spec.get("filing_block") is False
+
+
 def check_filing_blocks(root, repos, policy):
     """The where-to-file block: one source, N copies, and — like the
     deliverable block — a repo missing it is reported, not skipped.
@@ -1074,7 +1082,9 @@ def check_filing_blocks(root, repos, policy):
     * neither — a human has to place the markers before --write can fill them.
     """
     problems = []
-    for name in repos:
+    for name, spec in repos.items():
+        if filing_block_excluded(spec):
+            continue  # recorded manifest exclusion
         agents = repo_checkout(root, name) / "AGENTS.md"
         if not agents.exists():
             continue  # not checked out here
@@ -1104,7 +1114,9 @@ def insert_filing_markers(root, repos):
     """Place the filing markers under the deliverable block where they are
     missing, so the same run can fill them. A repo without the deliverable
     markers is left alone and named by `check_filing_blocks` instead."""
-    for name in repos:
+    for name, spec in repos.items():
+        if filing_block_excluded(spec):
+            continue
         agents = repo_checkout(root, name) / "AGENTS.md"
         if not agents.exists():
             continue
@@ -1128,7 +1140,9 @@ def write_filing_blocks(root, repos, policy):
     calls: a full `--write` would also regenerate the organism-map and other
     AGENTS.md blocks, which that job deliberately never commits."""
     insert_filing_markers(root, repos)
-    for name in repos:
+    for name, spec in repos.items():
+        if filing_block_excluded(spec):
+            continue
         write_block(repo_checkout(root, name) / "AGENTS.md", policy,
                     FILING_BEGIN, FILING_END, required=False)
 

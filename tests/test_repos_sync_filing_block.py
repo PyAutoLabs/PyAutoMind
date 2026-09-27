@@ -200,6 +200,35 @@ def test_write_fills_a_stale_block_and_is_idempotent(tmp_path):
 
 
 # --------------------------------------------------------------------------
+# The recorded manifest exclusion (`filing_block: false`)
+# --------------------------------------------------------------------------
+
+EXCLUDED = {"SoloDesk": {"category": "assistant", "filing_block": False}}
+
+
+def test_an_excluded_repo_is_neither_reported_nor_written(tmp_path):
+    """Both marker-less states and a stale copy are silent for an excluded repo,
+    and the writer leaves every one of them byte-for-byte alone."""
+    for body in ("# SoloDesk\n\nno generated blocks\n",
+                 f"# SoloDesk\n\n{_deliverable_block()}",
+                 f"# SoloDesk\n\n{_deliverable_block()}\n{_filing_block('stale')}"):
+        _repo(tmp_path, "SoloDesk", body)
+        assert repos_sync.check_filing_blocks(tmp_path, EXCLUDED, CANON) == []
+        repos_sync.write_filing_blocks(tmp_path, EXCLUDED, CANON)
+        assert (tmp_path / "SoloDesk" / "AGENTS.md").read_text() == body
+
+
+def test_the_exclusion_is_only_an_explicit_false(tmp_path):
+    """Absent or truthy keeps the repo in scope — only `false` opts out."""
+    for spec in ({"category": "assistant"},
+                 {"category": "assistant", "filing_block": True}):
+        _repo(tmp_path, "SoloDesk", "# SoloDesk\n\nno generated blocks\n")
+        problems = repos_sync.check_filing_blocks(
+            tmp_path, {"SoloDesk": spec}, CANON)
+        assert len(problems) == 1 and "SoloDesk" in problems[0], spec
+
+
+# --------------------------------------------------------------------------
 # The rollout: the propagation workflow carries this block and only this block
 # --------------------------------------------------------------------------
 

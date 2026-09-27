@@ -26,6 +26,17 @@ name: Tenant Firewall Gate
 # one repo propagation never writes to — is asserted instead. On `push` to
 # main nothing is skipped.
 #
+# The where-to-file block (`policy/where_to_file.md`, PyAutoMind#442) has the
+# same unmeetable precondition: the sibling organs are checked out at their
+# mains, and the block reaches them only when session_hook_propagate.yml runs
+# on the push to main after merge. So a PR that changes the policy file sets a
+# second output, `filing_pr`, which asserts PyAutoMind's own block (the test that
+# pins it) and drops the `where-to-file blocks (generated)` leg with the same
+# loud banner. The two decisions are independent: a PR touching both a hook and
+# the policy skips both legs and prints both banners; one touching neither runs
+# every leg. The decision reads the PR's diff, not its body, so a PR with no
+# `Brain-ref:` line gets the skip exactly as one with it does.
+#
 # All three organs are checked out. PyAutoHands was omitted at first — its
 # firewall clear waited behind the version-stamp task that claimed the repo
 # (PyAutoHands#235) — and joined once that leg landed as PyAutoHands#237,
@@ -38,6 +49,7 @@ on:
       - "scripts/repos_sync.py"
       - "policy/session_start_hook.sh"
       - "policy/end_at_deliverable_hook.sh"
+      - "policy/where_to_file.md"
       - "repos.yaml"
       - ".github/workflows/firewall_gate.yml"
   pull_request:
@@ -45,6 +57,7 @@ on:
       - "scripts/repos_sync.py"
       - "policy/session_start_hook.sh"
       - "policy/end_at_deliverable_hook.sh"
+      - "policy/where_to_file.md"
       - "repos.yaml"
       - ".github/workflows/firewall_gate.yml"
   workflow_dispatch:
@@ -123,6 +136,13 @@ jobs:
           else
             echo "hook_pr=false" >> "$GITHUB_OUTPUT"
           fi
+          # Independent of the hook decision above (PyAutoMind#442).
+          if printf '%s\n' "$changed" | grep -qxF \
+              -e 'policy/where_to_file.md'; then
+            echo "filing_pr=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "filing_pr=false" >> "$GITHUB_OUTPUT"
+          fi
 
       # The compensating control, and it runs FIRST so it is never shadowed by
       # the leg below: PyAutoMind is the one repo the propagation workflow
@@ -135,30 +155,61 @@ jobs:
           python3 -m pytest PyAutoMind/tests/test_session_hook_sync.py -q \
             -k "hook_ships_and_is_the_installed_text"
 
-      - name: Drift check (canonical-hook PR — 'generated hooks' leg skipped)
-        if: steps.hookpr.outputs.hook_pr == 'true'
+      # The same compensating control for the where-to-file block: propagation
+      # never writes PyAutoMind's AGENTS.md, so its own copy is the PR's to keep.
+      - name: Assert PyAutoMind's own where-to-file block (propagation never writes here)
+        if: steps.hookpr.outputs.filing_pr == 'true'
         run: |
-          echo "=============================================================="
-          echo "SKIPPED LEG: 'generated hooks (session-start + end-at-deliverable)'"
-          echo "WHY: this PR edits a canonical hook (policy/session_start_hook.sh"
-          echo "  or policy/end_at_deliverable_hook.sh). The sibling organs are"
-          echo "  checked out at their mains, so their installed copies are stale"
-          echo "  BY CONSTRUCTION until .github/workflows/session_hook_propagate.yml"
-          echo "  runs on the push to main after this PR merges — propagation is"
-          echo "  what syncs them, and it cannot have run yet. The leg's"
-          echo "  precondition is unmeetable on a pull request."
-          echo "STILL ENFORCED: PyAutoMind's own installed copies must match the"
-          echo "  canonical files (asserted in the step above). A green run here"
-          echo "  means 'the hook copies this PR controls are in sync' — NOT"
-          echo "  'every repo is in sync'. The rest is propagation's job."
-          echo "ON push TO main this leg is never skipped."
-          echo "=============================================================="
-          python3 PyAutoMind/scripts/repos_sync.py --check \
-            --root "$GITHUB_WORKSPACE" \
-            --skip "generated hooks (session-start + end-at-deliverable)"
+          pip install pytest
+          python3 -m pytest PyAutoMind/tests/test_repos_sync_filing_block.py -q \
+            -k "pyautomind_carries_its_own_block"
 
-      # The unchanged path: every push to main, and every PR that does not edit
-      # a canonical hook, still runs all legs exactly as before.
+      - name: Drift check (canonical-hook or where-to-file PR — unmeetable legs skipped)
+        if: steps.hookpr.outputs.hook_pr == 'true' || steps.hookpr.outputs.filing_pr == 'true'
+        env:
+          HOOK_PR: ${{ steps.hookpr.outputs.hook_pr }}
+          FILING_PR: ${{ steps.hookpr.outputs.filing_pr }}
+        run: |
+          skip=()
+          if [ "$HOOK_PR" = "true" ]; then
+            echo "=============================================================="
+            echo "SKIPPED LEG: 'generated hooks (session-start + end-at-deliverable)'"
+            echo "WHY: this PR edits a canonical hook (policy/session_start_hook.sh"
+            echo "  or policy/end_at_deliverable_hook.sh). The sibling organs are"
+            echo "  checked out at their mains, so their installed copies are stale"
+            echo "  BY CONSTRUCTION until .github/workflows/session_hook_propagate.yml"
+            echo "  runs on the push to main after this PR merges — propagation is"
+            echo "  what syncs them, and it cannot have run yet. The leg's"
+            echo "  precondition is unmeetable on a pull request."
+            echo "STILL ENFORCED: PyAutoMind's own installed copies must match the"
+            echo "  canonical files (asserted in the step above). A green run here"
+            echo "  means 'the hook copies this PR controls are in sync' — NOT"
+            echo "  'every repo is in sync'. The rest is propagation's job."
+            echo "ON push TO main this leg is never skipped."
+            echo "=============================================================="
+            skip+=(--skip "generated hooks (session-start + end-at-deliverable)")
+          fi
+          if [ "$FILING_PR" = "true" ]; then
+            echo "=============================================================="
+            echo "SKIPPED LEG: 'where-to-file blocks (generated)'"
+            echo "WHY: this PR changes policy/where_to_file.md. The sibling organs"
+            echo "  are checked out at their mains, so their AGENTS.md blocks are"
+            echo "  stale BY CONSTRUCTION; the block arrives by propagation"
+            echo "  (.github/workflows/session_hook_propagate.yml) on the push to"
+            echo "  main after this PR merges, and it cannot have run yet."
+            echo "STILL ENFORCED: PyAutoMind's own where-to-file block must be the"
+            echo "  canonical text (asserted in the step above). The rest is"
+            echo "  propagation's job."
+            echo "ON push TO main this leg is never skipped."
+            echo "=============================================================="
+            skip+=(--skip "where-to-file blocks (generated)")
+          fi
+          python3 PyAutoMind/scripts/repos_sync.py --check \
+            --root "$GITHUB_WORKSPACE" "${skip[@]}"
+
+      # The unchanged path: every push to main, and every PR that edits neither
+      # a canonical hook nor the where-to-file policy, still runs all legs
+      # exactly as before.
       - name: Drift check (all legs — absent repos are skipped)
-        if: steps.hookpr.outputs.hook_pr != 'true'
+        if: steps.hookpr.outputs.hook_pr != 'true' && steps.hookpr.outputs.filing_pr != 'true'
         run: python3 PyAutoMind/scripts/repos_sync.py --check --root "$GITHUB_WORKSPACE"
