@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/notes_logs_and_sidecars_out_of_results_notes.md">Move committed job logs and JSON sidecars out of results/notes/</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/341">issue #341</a> — issued 2026-09-27 — workspace-dev</summary>
+<details><summary>📋 <a href="active/notes_logs_and_sidecars_out_of_results_notes.md">Move committed job logs and JSON sidecars out of results/notes/</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/341">issue #341</a> — issued 2026-09-27 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/342">autolens_profiling#342</a></summary>
 
 ```
 /start_dev active/notes_logs_and_sidecars_out_of_results_notes.md
