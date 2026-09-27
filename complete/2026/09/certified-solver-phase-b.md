@@ -34,9 +34,10 @@
   blocked on the release shipping PyAutoArray#567.
 - follow-ups:
   - Phase C cond-free batched fallback:
-    `draft/feature/autofit/certified_solver_cond_free_batched_fallback.md`.
+    `draft/feature/autofit/certified_solver_batched_guard_c2.md`.
   - Delaunay carries a ~2e-10 run-to-run floor and ~2.5e-9 cross-composition
     residual — never pin tighter than 1e-9 on Delaunay.
+- pointer-correction: 2026-09-27 — `draft/feature/autofit/certified_solver_cond_free_batched_fallback.md` was renamed `certified_solver_batched_guard_c2.md`; 1 reference(s) below updated
 
 ## Original prompt
 

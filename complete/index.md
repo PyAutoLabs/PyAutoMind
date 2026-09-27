@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1599 records across 8 buckets.
+1600 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -200,6 +200,7 @@ markers; everything below GENERATED is rebuilt.
 - [cortex-tasks-not-phases](2026/09/cortex-tasks-not-phases.md)
 - [cosmos-web-ring-greeting](2026/09/cosmos-web-ring-greeting.md)
 - [cron-delivery-headroom](2026/09/cron-delivery-headroom.md)
+- [curvature-reg-matrix-rebuilt-every-access](2026/09/curvature-reg-matrix-rebuilt-every-access.md)
 - [dataset-fits-image-only](2026/09/dataset-fits-image-only.md) — `dataset.fits` was written twice per search since PyAutoGalaxy#479 / PyAutoLens#574 (`files/` from `save_attri…
 - [defer-import-scipy-special-pyplot](2026/09/defer-import-scipy-special-pyplot.md)
 - [delaunay-adapt-split-regularization](2026/09/delaunay-adapt-split-regularization.md)

@@ -33,8 +33,9 @@
 - follow-ups: the campaign map's fp64 levers are exhausted. Remaining,
   outside this map: the human fp32-cube precision decision (phase 3), the
   cond-free batched fallback
-  (`draft/feature/autofit/certified_solver_cond_free_batched_fallback.md`),
+  (`draft/feature/autofit/certified_solver_batched_guard_c2.md`),
   and the qhull callback / batching work filed elsewhere.
+- pointer-correction: 2026-09-27 — `draft/feature/autofit/certified_solver_cond_free_batched_fallback.md` was renamed `certified_solver_batched_guard_c2.md`; 1 reference(s) below updated
 
 ## Original prompt
 

@@ -1,8 +1,9 @@
 ## certified-solver-scalar-default-flip
+- pointer-correction: 2026-09-27 — `draft/feature/autofit/certified_solver_cond_free_batched_fallback.md` was renamed `certified_solver_batched_guard_c2.md`; 2 reference(s) below updated
 
 - issue: none — never started (retired at `/start_dev` planning, 2026-09-24)
 - completed: 2026-09-24 (retired, not implemented)
-- superseded-by: `draft/feature/autofit/certified_solver_cond_free_batched_fallback.md` (certified-positive-solver phase C)
+- superseded-by: `draft/feature/autofit/certified_solver_batched_guard_c2.md` (certified-positive-solver phase C)
 - retired-at: `/start_dev` planning session, 2026-09-24, on the human's call ("retire this prompt as superseded by phase C")
 
 ### Why this is a record and not a backlog prompt
@@ -67,7 +68,7 @@ Phase B (autolens_profiling#300, PR #302, A100 array 350588) measured scalar cer
 at 1.7x (Delaunay) / 1.4x (rectangular) over scalar PDIP with every lane inside the 1e-9 gate, and the
 human adopted the policy on 2026-09-24. Under `jit(vmap)` certified+PDIP is slower than PDIP (the
 batched `lax.cond` is a select), so the vmap path keeps PDIP until the phase-C guard
-(`draft/feature/autofit/certified_solver_cond_free_batched_fallback.md`) exists.
+(`draft/feature/autofit/certified_solver_batched_guard_c2.md`) exists.
 
 ## Do
 

@@ -46,13 +46,13 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 258 |
+| [Backlog](#backlog) (`draft/`) | 257 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 23
+**Highest priority** (filed as `high`) — showing 12 of 22
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -82,14 +82,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md"><code>curvature_reg_matrix</code> rebuilds <code>F + H</code> on every access — and the docstring's…</a> — autoarray · medium · supervised · high</summary>
-
-```
-/start_dev draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md
 ```
 
 </details>
@@ -146,6 +138,14 @@ anything you could not verify.
 
 ```
 /start_dev draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md">Final numerics audit of every mesh interpolator</a> — autoarray · large · supervised · high</summary>
+
+```
+/start_dev draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md
 ```
 
 </details>
@@ -537,10 +537,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**258** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **58** of them belong to an epic and are listed only under [Epics](#epics) below.
+**257** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **58** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 73</summary>
+<summary><b>bug</b> — 72</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -570,14 +570,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md"><code>curvature_reg_matrix</code> rebuilds <code>F + H</code> on every access — and the docstring's…</a> — autoarray · medium · supervised · high</summary>
-
-```
-/start_dev draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md
 ```
 
 </details>
@@ -2425,16 +2417,17 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>inversion</b> — 2 task(s) · 4 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: correctness, inversion, performance, sparse-operator</summary>
+<summary><b>ci</b> — 3 task(s) · 3 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: ci, robustness</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
 
 ```
-You are the judgment tier for the PyAutoMind bundle 'inversion' — 2 INDEPENDENT tasks run in one orchestrated session.
+You are the judgment tier for the PyAutoMind bundle 'ci' — 3 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
-- draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md
-- draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md
+- draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md
+- draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md
+- draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md
 
 Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -2449,12 +2442,13 @@ Contract (the `start_bundle` skill is the full body):
 
 | Prompt | Repo | Difficulty | Priority | Status |
 |--------|------|------------|----------|--------|
-| <a href="draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md"><code>curvature_reg_matrix</code> rebuilds <code>F + H</code> on every access — and the…</a> | autoarray | medium | high | - |
-| <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular…</a> | autoarray | medium | high | formalised |
+| <a href="draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> /…</a> | pyautoheart | small | high | formalised |
+| <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> | pyautomind | small | high | formalised |
+| <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> | pyautomemory | small | medium | formalised |
 
 </details>
 
-_Showing 8 of 41 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 40 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -3195,7 +3189,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 </details>
 
-72 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+71 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3222,7 +3216,6 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 - `draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md — unknown theme keyword(s): colab`
 - `draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md — unknown theme keyword(s): source-reconstruction`
 - `draft/bug/autoarray/batched_jit_vmap_b50_wrong_log_likelihood_a100.md — unknown theme keyword(s): jax, inversion`
-- `draft/bug/autoarray/curvature_reg_matrix_rebuilt_every_access.md — unknown theme keyword(s): inversion, performance`
 - `draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md — unknown theme keyword(s): jax`
 - `draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md — unknown theme keyword(s): jax`
 - `draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md — unknown theme keyword(s): simulation, robustness`
