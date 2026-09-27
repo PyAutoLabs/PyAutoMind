@@ -78,3 +78,19 @@
 - heart-ack: "2026-09-27 YELLOW acknowledged by the human: manifest drift x3 vs PyAutoMind/repos.yaml (hub organism blurb 7, organism-map blocks 1, workspace checkouts 1); release validation incomplete: no rehearsal for current source"
 - decision: "2026-09-27 no crossover through n=24/27 (fwd lead grows with model size; structural: reverse-over-forward through the inner lensing Hessian). Human chose phase 2d = analysis-declared gradient_mode in PyAutoFit (af.Analysis default reverse, AnalysisPoint forward, search keyword override; one helper for Fitness.grad + multi-start gradient; blackjax later), library-first."
 - carried: RAL cleanup /mnt/ral/jnightin/autolens_profiling_wt/point-source-source-plane-{p2a,p2b,p2c} + p2b.bundle/p2c.bundle/logs + local branches in /mnt/ral/jnightin/autolens_profiling; intake: Isothermal convergence_2d_from not jit-traceable with traced ell_comps; jax.grad NaN at exactly (0,0) for ExternalShear/multipole comps/ell_comps; PowerLawMultipole m=1 singular at slope 2
+
+## pointsolver-mcs-headroom
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/583
+- issued: 2026-09-27
+- prompt: active/pointsolver_max_containing_size_headroom.md
+- epic: point-source-cpu-speed
+- session: Claude Code CLI (Opus 5.5 main session + Opus subagent), 2026-09-27; session ID unavailable
+- status: library-dev
+- autonomy: supervised (header); plan approved in-session 2026-09-27 (measure MCS 18/20/24 first; no default change without the human's call at step 2)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/pointsolver-mcs-headroom
+- parallel-claim: "Three disjoint claims human-approved 2026-09-27: PyAutoArray vs interferometer-sparse-cache (#582, only autoarray/inversion/inversion/interferometer*; since completed) — this task touches only autoarray/structures/triangles/; PyAutoLens vs workspace-config-cleanup (Lens#751, awaiting release) — this task touches only autolens/point/solver/shape_solver.py + its test; autolens_profiling vs point-source-source-plane-p2c (scripts/point_source_source/…, source-plane ledger) — this task touches only scripts/point_source_image/…, new hpc submits, results/breakdown/point_source_image/ and the CPU ledger."
+- resume: step 1 measurement (MCS 18/20/24 vs control, laptop + RAL 8490H) in autolens_profiling; then step 2 human checkpoint picks N
+- repos:
+  - PyAutoArray: feature/pointsolver-mcs-headroom
+  - PyAutoLens: feature/pointsolver-mcs-headroom
+  - autolens_profiling: feature/pointsolver-mcs-headroom
