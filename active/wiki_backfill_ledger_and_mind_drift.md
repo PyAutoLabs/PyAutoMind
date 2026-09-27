@@ -5,6 +5,8 @@
 - Epic: profiling-research-wiki (follow-up; the epic itself is complete)
 - Autonomy: safe
 - Filed: 2026-09-27
+- Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/343
+Issued: 2026-09-27
 - Status: split out of `profiling-research-wiki-p2` at close-out — the wiki backfill shipped in
   `complete/2026/09/profiling-research-wiki-p2.md` (autolens_profiling#340); these are the
   stale lines it found in sources it was told not to edit.
