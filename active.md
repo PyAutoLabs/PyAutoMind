@@ -77,3 +77,16 @@
   - PyAutoArray: feature/pointsolver-mcs-headroom
   - PyAutoLens: feature/pointsolver-mcs-headroom
   - autolens_profiling: feature/pointsolver-mcs-headroom
+
+## interferometer-mesh-numba-p2
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/332
+- issued: 2026-09-27
+- prompt: active/interferometer_mesh_numba_cpu_phase_2.md (phase 2 of campaign draft/research/autolens_profiling/interferometer_mesh_breakdown_numba_cpu_decision_matrix.md; folds in the retired interferometer_sparse_cache_after_measurement.md)
+- epic: interferometer-likelihood-campaign
+- session: Claude Code CLI (Opus 5.5), 2026-09-27; session ID unavailable
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/interferometer-mesh-numba-p2
+- autonomy: supervised (header); plan approved in-session 2026-09-27 (phase 2: in-situ numba vs FFT crossover + CPU lever arms + cached_property counter fold-in + RAL CPU rows, workspace-only)
+- parallel-claim: "autolens_profiling is also claimed by point-source-source-plane-p2c (#329 / PR #331), whose files are scripts/point_source_source/**, results/breakdown/point_source_source/** and the point-source notes; this phase touches only scripts/misc/likelihood_breakdown/interferometer_pixelized_numpy.py, scripts/interferometer/likelihood_breakdown/*_numba.py, scripts/misc/test/test_interferometer_pixelized_numpy.py, hpc/batch_cpu/*interferometer*numba*, results/breakdown/interferometer/**numba*, results/notes/numba_interferometer_verdict.md and results/notes/interferometer_mesh_cpu_breakdown_2026_09.md; README dashboards regenerated at ship (#177 precedent). Human-approved 2026-09-27."
+- repos:
+  - autolens_profiling: feature/interferometer-mesh-numba-p2
