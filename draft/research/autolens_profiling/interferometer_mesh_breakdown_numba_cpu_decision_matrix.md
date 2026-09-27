@@ -1,4 +1,4 @@
-# Interferometer likelihood campaign 3/3 — mesh numba CPU breakdown + CPU-vs-GPU decision matrix — phase map (phase 1 issued)
+# Interferometer likelihood campaign 3/3 — mesh numba CPU breakdown + CPU-vs-GPU decision matrix — phase map (phase 1 shipped; phases 2 & 3 unblocked)
 
 Type: research
 Target: autolens_profiling
@@ -20,6 +20,19 @@ Lane: local-dev
 Epic: interferometer-likelihood-campaign
 Filed: 2026-09-25
 Updated: 2026-09-27
+
+## Phase 1 shipped (2026-09-27)
+
+- **Merged:** autolens_profiling#328 at `ea2711d9` (issue #326). Record
+  `complete/2026/09/interferometer-mesh-numba-p1.md`.
+- **Landed:** library-dispatch harness `scripts/misc/likelihood_breakdown/interferometer_pixelized_numpy.py`,
+  `--mask-radius` on the JAX harness, thin numba cells, 8 RAL CPU submits, RAL CPU fp64 rows
+  (sma / alma / alma_high, both meshes) + alma N sweep.
+- **Headline:** numba 2-4x faster than NumPy FFT at sma / alma; loses at alma_high (nnz/col 118-162),
+  where JAX-CPU is fastest. Witness PASS (`InversionInterferometerSparseNumba`; numba vs FFT
+  <= 9.1e-13 nat; step sum 0.996-1.006). sma adapt image kept at the May-18 copy (human, 2026-09-27).
+- **Next:** Phases 2 and 3 are unblocked and can be issued in parallel. Follow-up filed:
+  `draft/feature/autoarray/interferometer_sparse_numpy_cache_curvature_and_data_vector.md`.
 
 ## Campaign contract
 
@@ -63,9 +76,9 @@ Nautilus runs in this campaign.
 
 ## Phases
 
-### Phase 1 — library-dispatch CPU cells (CPU only) — ISSUED 2026-09-27
+### Phase 1 — library-dispatch CPU cells (CPU only) — SHIPPED 2026-09-27
 
-Prompt `active/interferometer_mesh_numba_cpu_phase_1.md` (task `interferometer-mesh-numba-p1`, autolens_profiling#326).
+Record `complete/2026/09/interferometer-mesh-numba-p1.md` (task `interferometer-mesh-numba-p1`, autolens_profiling#326, PR #328 merge `ea2711d9`).
 - New sibling harness `scripts/misc/likelihood_breakdown/interferometer_pixelized_numpy.py`
   reusing the JAX harness's dataset / mesh / adapt setup, timing the library's own
   `InversionInterferometerSparseNumba` / `InversionInterferometerSparse(xp=np)` steps

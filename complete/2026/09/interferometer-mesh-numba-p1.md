@@ -1,3 +1,38 @@
+# interferometer-mesh-numba-p1 — mesh numba CPU breakdown via library dispatch (campaign 3/3, phase 1)
+
+- Repo: autolens_profiling
+- Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/326
+- PR: https://github.com/PyAutoLabs/autolens_profiling/pull/328 (MERGED, merge `ea2711d9`, 2026-09-27; lint green)
+- Epic: interferometer-likelihood-campaign (phase map `draft/research/autolens_profiling/interferometer_mesh_breakdown_numba_cpu_decision_matrix.md`)
+- Workspace-only; no library PR, no pending-release. Heart YELLOW acked at ship (manifest drift + no rehearsal; none touch autolens_profiling).
+
+## Shipped scope
+
+- New NumPy/numba library-dispatch breakdown harness
+  `scripts/misc/likelihood_breakdown/interferometer_pixelized_numpy.py` (times the library's own
+  `InversionInterferometerSparseNumba` / `InversionInterferometerSparse(xp=np)` steps on the JAX
+  harness's inputs); shared setup + `--mask-radius` on the JAX harness; thin numba cells
+  (`delaunay_numba.py` / `pixelization_numba.py`).
+- 8 RAL CPU submits `hpc/batch_cpu/submit_breakdown_interferometer_{delaunay,pixelization}_numba_ral_*`.
+- RAL CPU fp64 rows for sma / alma / alma_high on both meshes plus the alma N sweep
+  (`results/breakdown/interferometer/**`).
+
+## Findings
+
+- numba is 2-4x faster than NumPy FFT at sma and alma; it loses at alma_high (nnz/col 118-162),
+  where JAX-CPU is fastest.
+- Witness PASS: gated arm `configuration.inversion_path == InversionInterferometerSparseNumba`;
+  numba vs FFT log-evidence <= 9.1e-13 nat; step sum / full call 0.996-1.006.
+- Human decision 2026-09-27: keep the May-18 sma adapt image; pins re-set.
+
+## Follow-ups
+
+- Campaign phases 2 (in-situ crossover) and 3 (A100 mask-radius sweep) are now unblocked.
+- `draft/feature/autoarray/interferometer_sparse_numpy_cache_curvature_and_data_vector.md`.
+- RAL worktree `/mnt/ral/jnightin/autolens_profiling_wt/interferometer-mesh-numba-p1` left in place.
+
+## Original prompt
+
 # Interferometer likelihood campaign 3/3 — phase 1: library-dispatch numba CPU breakdown cells
 
 Type: research
