@@ -87,6 +87,10 @@ repos:
   # in-scope repo keeps the hook — a library or workspace opened alone in a web
   # session needs Python 3.12 exactly like an organ (PyAutoMind#369).
   #
+  # `filing_block: false` opts a repo OUT of the generated where-to-file
+  # AGENTS.md block (`policy/where_to_file.md`): it is neither written nor
+  # reported there. A recorded exclusion, not drift (PyAutoMind#442).
+  #
   # `codex_hooks:` is the explicit, opt-in rollout manifest for generated
   # `.codex/hooks.json`. Unlike the universal Claude SessionStart bootstrap,
   # Codex registrations are added only after their existing hook implementation
@@ -293,6 +297,8 @@ repos:
     github: Jammy2211/euclid_assistant
     category: assistant
     session_hook: false
+    # Private single-user assistant in the Jammy2211 namespace, outside the propagation job's reach.
+    filing_block: false
   euclid_strong_lens_modeling_pipeline:
     path: lens/euclid_strong_lens_modeling_pipeline
     smoke_bootstrap: true

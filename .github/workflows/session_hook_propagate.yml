@@ -27,6 +27,15 @@ name: Propagate the canonical hooks
 # Codex is deliberately narrower: `repos.yaml` opts in only implementations
 # already verified against Codex's PreToolUse payload. The same propagation
 # run writes `.codex/hooks.json` for those repos and nowhere else.
+#
+# ONE AGENTS.md BLOCK RIDES ALONG: the where-to-file block
+# (`policy/where_to_file.md`, PyAutoMind#442). Same justification — the commit is
+# a byte copy of text already reviewed on the Mind PR that changed it, and ~48
+# AGENTS.md copies are a PR wave nobody would read (human-approved: bot push).
+# The job writes ONLY that block, through `repos_sync.write_filing_blocks`
+# (insert the markers under the deliverable block, fill them, touch nothing
+# else); the organism-map, history, remote-session and deliverable blocks stay
+# out of this job and keep their reviewed regeneration waves.
 
 on:
   push:
@@ -34,6 +43,7 @@ on:
     paths:
       - "policy/session_start_hook.sh"
       - "policy/end_at_deliverable_hook.sh"
+      - "policy/where_to_file.md"
       - "repos.yaml"
       - "scripts/repos_sync.py"
       - ".github/workflows/session_hook_propagate.yml"
@@ -134,7 +144,7 @@ jobs:
 
           # The SAME function `repos_sync.py --write` calls for this leg, called
           # directly rather than through the CLI: the full `--write` would also
-          # rewrite the generated AGENTS.md blocks in every clone (changes this
+          # rewrite the OTHER generated AGENTS.md blocks in every clone (changes this
           # job deliberately does not commit) and then run every drift check
           # against a half-workspace, whose origin leg would print the clones'
           # credentialed remotes and whose exit status would have to be ignored.
@@ -159,6 +169,10 @@ jobs:
               repos_sync.load_deliverable_hook(mind_root),
           )
           repos_sync.write_codex_hooks(Path("tree"), repos)
+          # The one AGENTS.md block this job propagates (see the header).
+          repos_sync.write_filing_blocks(
+              Path("tree"), repos, repos_sync.load_filing_policy(mind_root),
+          )
           PY
           then
             echo "::error::the hook generator failed — nothing has been propagated"
@@ -179,7 +193,7 @@ jobs:
             git -C "$repo" config user.name "github-actions[bot]"
             git -C "$repo" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-            for rel in .claude/hooks/session-start.sh .claude/hooks/end-at-deliverable.sh .claude/settings.json .codex/hooks.json; do
+            for rel in .claude/hooks/session-start.sh .claude/hooks/end-at-deliverable.sh .claude/settings.json .codex/hooks.json AGENTS.md; do
               [ -e "$repo/$rel" ] && git -C "$repo" add -- "$rel"
             done
 
@@ -187,7 +201,7 @@ jobs:
             # file in silence, and this job would then report it "current" while
             # its hook stayed a pass behind. Say so instead.
             unstaged=""
-            for rel in .claude/hooks/session-start.sh .claude/hooks/end-at-deliverable.sh .claude/settings.json .codex/hooks.json; do
+            for rel in .claude/hooks/session-start.sh .claude/hooks/end-at-deliverable.sh .claude/settings.json .codex/hooks.json AGENTS.md; do
               if [ -e "$repo/$rel" ] && ! git -C "$repo" ls-files --error-unmatch -- "$rel" >/dev/null 2>&1; then
                 unstaged="$unstaged $rel"
               fi
@@ -211,7 +225,7 @@ jobs:
             fi
 
             git -C "$repo" commit --quiet \
-              -m "session: propagate the canonical hooks (repos_sync --write)"
+              -m "session: propagate the canonical hooks and where-to-file block (repos_sync)"
             if git -C "$repo" push --quiet origin HEAD; then
               pushed="$pushed $slug"
             else

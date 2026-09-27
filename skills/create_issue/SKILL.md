@@ -81,6 +81,12 @@ triage — that's `$start-dev`).
 
 ### 3. Assemble + create the issue
 
+**User-facing reports never become repo issues.** If the input is a question,
+idea or bug report from a user or collaborator (or an agent acting for one)
+rather than a Mind lifecycle task, stop here: draft the Discussion (title,
+category, body) and hand it to the human, per `policy/where_to_file.md`. The
+maintainer may later file a Mind prompt for it; that prompt comes back here.
+
 **If the prompt body carries an `Issue:` line, reuse that issue — skip creation** (a
 Cortex-spawned gate ref, filed with its issue already open; see REFERENCE.md "A
 Cortex-spawned dev follow-up gets its issue at filing"). Never open a second.
