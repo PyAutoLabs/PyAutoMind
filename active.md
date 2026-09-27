@@ -5,8 +5,10 @@
 - issued: 2026-09-27
 - prompt: active/profiling_research_wiki.md
 - session: Claude Code CLI (Fable architect, Opus execution), 2026-09-27; session ID unavailable
-- status: workspace-dev
+- status: awaiting-merge
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/338
 - epic: profiling-research-wiki
+- heart-ack: "manifest drift x4 (hub blurb 7, organism-map 1, where-to-file 2, workspace checkouts 1); PyAutoMemory open PR 7d old; release validation incomplete (no rehearsal for current source)"
 - worktree: /home/jammy/Code/PyAutoLabs-wt/profiling-research-wiki
 - repos:
   - autolens_profiling: feature/profiling-research-wiki
