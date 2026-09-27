@@ -119,4 +119,10 @@
 - repos:
   - PyAutoFit: feature/point-source-gradient-mode
   - PyAutoLens: feature/point-source-gradient-mode
-- status: library-dev
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1649
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/752
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1649
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/752
+- status: library-shipped, workspace-pending (PyAutoFit#1649 then PyAutoLens#752 awaiting /prm; autolens_profiling follow-up after merge)
+- heart-ack: "2026-09-27 YELLOW acknowledged by the human: manifest drift x3 vs PyAutoMind/repos.yaml (hub organism blurb 7, organism-map blocks 1, workspace checkouts 1); release validation incomplete: no rehearsal for current source"
+- carried: RAL scratch /mnt/ral/jnightin/p2d_check (clones, bundles, pylib, job script) + p2a/p2b/p2c RAL worktrees to remove; latent: Galaxy duplicate PyTreeDef registration (autofit.jax.register_model then autoarray register_instance_pytree) -> intake; PowerLawMultipole m=1 singular at slope 2 -> intake
