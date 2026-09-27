@@ -308,7 +308,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/workspace_config_cleanup.md">Workspace config cleanup: remove orphan config keys the Nerves board flags</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/441">issue #441</a> — issued 2026-09-27 — library-dev</summary>
+<details><summary>📋 <a href="active/workspace_config_cleanup.md">Workspace config cleanup: remove orphan config keys the Nerves board flags</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/441">issue #441</a> — issued 2026-09-27 — library-shipped, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/630">PyAutoGalaxy#630</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/751">PyAutoLens#751</a>, <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/176">PyAutoNerves#176</a> — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoLens — ⏳ pending release: PyAutoNerves</summary>
 
 ```
 /start_dev active/workspace_config_cleanup.md
@@ -340,6 +340,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#630](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/630) — `active/workspace_config_cleanup.md`
 - [PyAutoGalaxy#629](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/629) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 
 **PyAutoGut**
@@ -348,6 +349,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoLens**
 
+- [PyAutoLens#751](https://github.com/PyAutoLabs/PyAutoLens/pull/751) — `active/workspace_config_cleanup.md`
 - [PyAutoLens#750](https://github.com/PyAutoLabs/PyAutoLens/pull/750) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 
 **PyAutoMind**
@@ -358,6 +360,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoNerves**
 
+- [PyAutoNerves#176](https://github.com/PyAutoLabs/PyAutoNerves/pull/176) — `active/workspace_config_cleanup.md`
 - [PyAutoNerves#175](https://github.com/PyAutoLabs/PyAutoNerves/pull/175) — `complete/2026/09/nerves-unused-keys.md`
 
 **PyAutoReduce**
