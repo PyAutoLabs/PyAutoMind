@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
-| [Backlog](#backlog) (`draft/`) | 240 |
+| [Backlog](#backlog) (`draft/`) | 241 |
 
 > **No batch in flight.**
 
@@ -150,7 +150,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 115
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 116
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -208,6 +208,14 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/pyautobrain/worktree_sh_clobbers_root_activate.md">worktree.sh bundle creation clobbers the unversioned root activate.sh</a> — pyautobrain · small · safe · normal</summary>
+
+```
+/start_dev draft/bug/pyautobrain/worktree_sh_clobbers_root_activate.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md rename</a> — pyautobrain · small · supervised · normal</summary>
 
 ```
@@ -236,14 +244,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/research/pyautohands/git_docs.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/test/autolens_workspace_test/jax_zero_contour.md">Verify jax.jit / jax.grad parity on the critical-curve and caustic calculations</a> — autolens_workspace_test · medium · safe · normal</summary>
-
-```
-/start_dev draft/test/autolens_workspace_test/jax_zero_contour.md
 ```
 
 </details>
@@ -521,10 +521,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**240** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **55** of them belong to an epic and are listed only under [Epics](#epics) below.
+**241** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **55** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 68</summary>
+<summary><b>bug</b> — 69</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -842,6 +842,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/pyautobrain/sizing_faculty_none_rule_keyword_false_judge_triage.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautobrain/worktree_sh_clobbers_root_activate.md">worktree.sh bundle creation clobbers the unversioned root activate.sh</a> — pyautobrain · small · safe · normal</summary>
+
+```
+/start_dev draft/bug/pyautobrain/worktree_sh_clobbers_root_activate.md
 ```
 
 </details>
@@ -2163,8 +2171,8 @@ You are the judgment tier for the PyAutoMind bundle 'pyautobrain — bundle 1' �
 Members:
 - draft/maintenance/pyautobrain/workspace_resolver_fanout.md
 - draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md
+- draft/bug/pyautobrain/worktree_sh_clobbers_root_activate.md
 - draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md
-- draft/bug/pyautobrain/cortex_test_worktree_symlink.md
 
 Contract (the `start_bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -2181,8 +2189,8 @@ Contract (the `start_bundle` skill is the full body):
 |--------|------------|----------|--------|
 | <a href="draft/maintenance/pyautobrain/workspace_resolver_fanout.md">Workspace resolver fan-out: the hook, the smoke shims and the…</a> | large | high | formalised |
 | <a href="draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md">Intake Agent silently drops unknown Type values and overrides…</a> | small | medium | formalised |
+| <a href="draft/bug/pyautobrain/worktree_sh_clobbers_root_activate.md">worktree.sh bundle creation clobbers the unversioned root activate.sh</a> | small | normal | formalised |
 | <a href="draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md">Unregistered worktrees are invisible to the conflict guard</a> | small | normal | formalised |
-| <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails…</a> | small | low | formalised |
 
 </details>
 
