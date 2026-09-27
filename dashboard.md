@@ -284,7 +284,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/wiki_backfill_ledger_and_mind_drift.md">Ledger and Mind drift surfaced by the profiling wiki backfill</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/343">issue #343</a> — issued 2026-09-27 — workspace-dev</summary>
+<details><summary>📋 <a href="active/wiki_backfill_ledger_and_mind_drift.md">Ledger and Mind drift surfaced by the profiling wiki backfill</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/343">issue #343</a> — issued 2026-09-27 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/344">autolens_profiling#344</a></summary>
 
 ```
 /start_dev active/wiki_backfill_ledger_and_mind_drift.md
