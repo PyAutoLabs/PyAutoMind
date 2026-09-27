@@ -2664,14 +2664,6 @@ Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonic
 
 </details>
 
-<details><summary>📋 <b>Profiling research wiki — every campaign's why, verdict, headline and release state, kept in autolens_profiling/wiki/</b> — ledger: `autolens_profiling/wiki/index.md` — COMPLETE 2026-09-27 — phase 1 SHIPPED (autolens_profiling#338 merged <code>a825d074</code>, issue #337 closed, record…</summary>
-
-```
-Continue the 'Profiling research wiki — every campaign's why, verdict, headline and release state, kept in autolens_profiling/wiki/' epic. Its canonical state lives in autolens_profiling/wiki/index.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: born from the 2026-09-27 profiling review — no index covered point-source or interferometer, 7 of 9 September profiling epics had no live ledger, the "why" lived in issue bodies. Home is the profiling repo (Memory = science, Cortex = science runs, Mind ledgers get archived). Dashboard leg and any organ birth come after phase 2.
-```
-
-</details>
-
 <details>
 <summary><b>Point-source (single-source) PointSolver CPU speed-up</b> — 4 queued prompt(s), in order</summary>
 
