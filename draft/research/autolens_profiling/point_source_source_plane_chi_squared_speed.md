@@ -1,4 +1,4 @@
-# Point-source source-plane chi-squared speed-up campaign — phase 2b+ (phases 1, 2a shipped)
+# Point-source source-plane chi-squared speed-up campaign — phase 2c+ (phases 1, 2a, 2b shipped)
 
 Type: research
 Target: autolens_profiling
@@ -21,7 +21,24 @@ Epic: point-source-cpu-speed
 Lane: any
 Filed: 2026-09-26
 Updated: 2026-09-27
-Parent-record: complete/2026/09/point-source-source-plane-p2a.md
+Parent-record: complete/2026/09/point-source-source-plane-p2b.md
+
+## Phase 2b shipped — next is phase 2c (2026-09-27)
+
+- **Merged:** autolens_profiling#327 at `4dc05a4` (issue #325). Record
+  `complete/2026/09/point-source-source-plane-p2b.md`; cell
+  `scripts/point_source_source/likelihood_breakdown/backward_pass_ab.py` (the A/B harness to extend).
+- **Verdict:** forward-mode gradient (`jax.jacfwd` over the flat 5-vector) is **GO** — −46 % solved /
+  −38 % plain on the quiet RAL gpu-node EPYC 7702 CPUs (human re-based the rule off the busy 8490H),
+  −24–34 % on A100, A100 compile 4.1 → 1.8 s. Analytic SIE Hessian adds nothing on top of `fwd`;
+  jacrev Hessian ordering is a no-op.
+- **Next: phase 2c (human decision 2026-09-27) = crossover study, workspace-only.** Extend the A/B
+  harness from 5 to ~20 free parameters (external shear, multipoles, a second lens; single-source
+  only) and measure `fwd` vs `rev` per `n_params` on RAL CPU + A100 to find where forward mode stops
+  winning. Only then design the PyAutoFit gradient-entry-point switch (conditional on `n_params`)
+  from the measured crossover — that design is a human decision before any library phase.
+- **Carried:** `Isothermal.convergence_2d_from` / `shear_yx_2d_from` not jit-traceable with traced
+  `ell_comps` (→ intake as PyAutoGalaxy bug); RAL p2a/p2b worktrees + bundle to remove.
 
 ## Phase 2a shipped — remainder re-filed (2026-09-27)
 

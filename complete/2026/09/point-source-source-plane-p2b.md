@@ -1,3 +1,33 @@
+## point-source-source-plane-p2b
+
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/325
+- completed: 2026-09-27
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/327 (merge `4dc05a4`)
+- epic: point-source-cpu-speed
+- parent-record: complete/2026/09/point-source-source-plane-p2a.md
+- campaign: draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md
+
+Phase 2b of the source-plane point-source chi-squared campaign (single-source only): a backward-pass A/B that prototypes the gradient levers inside a profiling cell (no library edits), merged in autolens_profiling#327.
+
+**Shipped**
+- `scripts/point_source_source/likelihood_breakdown/backward_pass_ab.py` — routes `rev` (production `value_and_grad`), `fwd` (jacfwd over the flat parameter vector), `rev_jacrev`, `rev_analytic` (closed-form SIE Hessian), `fwd_analytic`; scoped monkeypatch of `LensCalc._hessian_via_jax`; correctness gate before timing; interleaved 20×20 timing with bootstrap CIs; pre-registered verdict block.
+- Results `results/breakdown/point_source_source/backward_pass_ab_{local_cpu_fp64,hpc_ral_gpunode_cpu_fp64,hpc_a100_fp64}.{json,png}`; RAL submits; job log 357381; campaign note "Phase 2b" section; README bullet.
+
+**Correctness:** green on every route/host/lane — Hessians ≤ 9.8e-16 vs jacfwd (incl. near-critical points); log L ≤ 1.7e-12; gradients ≤ 3e-11 over PRNGKey 0..15; eager ≡ JIT. `shear_yx_2d_from` returns `[:,0]=γ₂, [:,1]=γ₁`.
+
+**Verdict (human re-based the rule onto the quiet RAL gpu-node EPYC 7702 row, job 357381; 8490H job 357380 cancelled — node 10-2 busy with DR1 arrays):**
+- `fwd` GO: −46 % solved (0.636 → 0.341 ms), −38 % plain; A100 −24–34 %, compile 4.1 → 1.8 s; laptop −28–37 %. Flops unchanged — the saving is reverse-tape/dispatch structure.
+- `rev_analytic` passes on CPU only and adds nothing over `fwd` — not pursued. `rev_jacrev` NO-GO (≤ 3 %).
+
+**Next (human decision 2026-09-27):** phase 2c = workspace-only crossover study of fwd vs rev as `n_params` grows (5 → ~20: shear, multipoles, second lens) on RAL CPU + A100, then design the PyAutoFit gradient-entry-point switch from the measured crossover.
+
+**Carried**
+- Library bug: `Isothermal.convergence_2d_from` / `shear_yx_2d_from` not jit-traceable with traced `ell_comps` (`PowerLawCore.convergence_2d_from` calls `convergence_func` without `xp`; `autogalaxy/convert.py:80`) → intake as a PyAutoGalaxy bug.
+- RAL cleanup: `/mnt/ral/jnightin/autolens_profiling_wt/point-source-source-plane-p2a`, `.../point-source-source-plane-p2b`, `p2b.bundle`, `p2b_worktree_add.log`, local branch in `/mnt/ral/jnightin/autolens_profiling`.
+- Heart YELLOW at ship (manifest drift ×3, release validation incomplete), acknowledged by the human.
+
+## Original prompt
+
 # Point-source source-plane chi-squared campaign — phase 2b: backward-pass A/B
 
 Type: research
