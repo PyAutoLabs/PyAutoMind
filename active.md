@@ -122,3 +122,16 @@
 - repos:
   - autolens_profiling: feature/point-source-source-plane-p2c
 - status: workspace-dev
+
+## interferometer-sparse-cache
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/581
+- issued: 2026-09-27
+- prompt: active/interferometer_sparse_numpy_cache_curvature_and_data_vector.md
+- epic: interferometer-likelihood-campaign
+- session: Claude Code CLI (Opus 5.5), 2026-09-27; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/interferometer-sparse-cache
+- autonomy: supervised (header); plan approved in-session 2026-09-27 (cache curvature_matrix / data_vector on the interferometer sparse + mapping inversions)
+- parallel-claim: "PyAutoArray also claimed by point-source-cpu-p4b / PR #580 — PointSolver step-0 files; this task touches only autoarray/inversion/inversion/interferometer*/ and test_autoarray/inversion/inversion/interferometer*/; human-approved 2026-09-27"
+- repos:
+  - PyAutoArray: feature/interferometer-sparse-cache

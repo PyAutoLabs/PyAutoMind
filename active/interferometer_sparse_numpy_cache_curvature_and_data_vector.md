@@ -12,12 +12,13 @@ Themes:
 Difficulty: small
 Autonomy: supervised
 Priority: medium
-Status: draft
+Status: formalised
 Consequence: glance
 Witness: On the NumPy path (`FitInterferometer(..., xp=np)`), one `figure_of_merit` of `InversionInterferometerSparse` and `InversionInterferometerSparseNumba` evaluates `curvature_matrix_diag` exactly once and `data_vector` exactly once (the `evaluations_per_figure_of_merit` counter in `scripts/misc/likelihood_breakdown/interferometer_pixelized_numpy.py` reads {curvature_matrix_diag: 1, data_vector: 1}, down from {2, 4}), the log evidence is bit-identical to before on the sma / alma rows, the JAX path (jit + vmap + grad) is unaffected, and the RAL CPU alma Delaunay numba full call drops from 2297 ms towards ~1.3 s.
 Review-minutes: 10
 Epic: interferometer-likelihood-campaign
 Filed: 2026-09-27
+Issued: 2026-09-27
 
 Source: autolens_profiling#326 phase 1 (PR autolens_profiling#328), RAL CPU rows
 `results/breakdown/interferometer/{,sma/,alma_high/}*_numba_hpc_ral_cpu_fp64.json`
