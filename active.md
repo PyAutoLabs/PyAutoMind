@@ -136,7 +136,11 @@
 - issued: 2026-09-28
 - prompt: active/board_family_footer_test_stale_after_nerves_gut.md
 - session: Claude Code CLI (Fable architect, Opus execution), 2026-09-28; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/242
+- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/292
+- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/242
+- pending-release: PyAutoHands@https://github.com/PyAutoLabs/PyAutoHands/pull/292
 - worktree: ~/Code/PyAutoLabs-wt/board-footer-family-fix
 - autonomy: safe (header); plan approved in-session 2026-09-28; merge is human
 - heart-ack: "YELLOW 2026-09-28 acknowledged by human: PyAutoMemory: open PR 8d old; manifest drift: workspace checkouts (autolens_visualization unregistered — cleared by PyAutoMind#447, now merged); workspace validation timeout autolens_test multi_dataset/rectangular.py (cloud#36404726969)"
@@ -144,6 +148,7 @@
   - PyAutoHeart: feature/board-footer-family-fix
   - PyAutoHands: feature/board-footer-family-fix
 - parallel-claim: "PyAutoHeart and PyAutoHands are also claimed by eyes-organ-order (PyAutoMind#439), and PyAutoHeart by autolens-visualization-rebirth (PyAutoMind#446). There is no file overlap: this task touches only tests/test_dashboard.py (Heart) and tests/test_board.py (Hands), the footer-family tests; #439 touches organ-order lists in config/docs; #446 touches Heart config/repos.yaml excluded list. Parallel worktree human-approved 2026-09-28; noted on #450."
+- resume: "2 PRs open (Heart#242, Hands#292; test files only, no workspace impact). They clear the pre-existing footer red on Heart#240/#241 and Hands#291. Merge is human; then /prm."
 
 ## interferometer-mesh-breakdown-jax
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/348
