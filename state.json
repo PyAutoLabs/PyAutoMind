@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-09-28T17:49:37Z",
+  "updated": "2026-09-28T18:28:24Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "PyAutoEyes phase 1a \u2014 re-birth autolens_visualization as the lens project repo \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/pull/447",
+      "prompt": "/start_dev active/eyes_p1a_autolens_visualization_rebirth.md"
+    },
     {
       "severity": "yellow",
       "text": "apply_over_sampling drops the sparse operator; dense route convolves the mapping matrix twice \u2014 library-shipped, awaiting-merge",
@@ -63,6 +69,12 @@
     },
     {
       "severity": "yellow",
+      "text": "pending release: PyAutoBrain PyAutoBrain#426 \u2014 PyAutoEyes phase 1a \u2014 re-birth autolens_visualization as the lens project repo",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/426",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#404 \u2014 codex-context-efficiency",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/404",
       "prompt": null
@@ -113,18 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#629 \u2014 interferometer-mge-w-tilde-route",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/629",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#633 \u2014 isothermal-convergence-jit",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/633",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#634 \u2014 Summary",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/634",
       "prompt": null
     }
   ]

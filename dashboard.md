@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/eyes_p1a_autolens_visualization_rebirth.md">PyAutoEyes phase 1a — re-birth autolens_visualization as the lens project repo</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/446">issue #446</a> — issued 2026-09-28 — library-dev</summary>
+<details><summary>📋 <a href="active/eyes_p1a_autolens_visualization_rebirth.md">PyAutoEyes phase 1a — re-birth autolens_visualization as the lens project repo</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/446">issue #446</a> — issued 2026-09-28 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/447">PyAutoMind#447</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/426">PyAutoBrain#426</a>, <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/240">PyAutoHeart#240</a>, <a href="https://github.com/PyAutoLabs/autolens_visualization/pull/1">autolens_visualization#1</a> — ⏳ pending release: PyAutoMind — ⏳ pending release: PyAutoBrain — ⏳ pending release: PyAutoHeart — ⏳ pending release: autolens_visualization</summary>
 
 ```
 /start_dev active/eyes_p1a_autolens_visualization_rebirth.md
@@ -310,6 +310,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoBrain**
 
+- [PyAutoBrain#426](https://github.com/PyAutoLabs/PyAutoBrain/pull/426) — `active/eyes_p1a_autolens_visualization_rebirth.md`
 - [PyAutoBrain#404](https://github.com/PyAutoLabs/PyAutoBrain/pull/404) — `complete/2026/09/codex-context-efficiency.md`
 - [PyAutoBrain#387](https://github.com/PyAutoLabs/PyAutoBrain/pull/387) — `complete/2026/09/codex-token-efficiency.md`
 - [PyAutoBrain#406](https://github.com/PyAutoLabs/PyAutoBrain/pull/406) — `complete/2026/09/community-surface-brain.md`
@@ -333,6 +334,10 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 - [PyAutoGut#12](https://github.com/PyAutoLabs/PyAutoGut/pull/12) — `complete/2026/09/gut-void-sibling-reach.md`
 
+**PyAutoHeart**
+
+- [PyAutoHeart#240](https://github.com/PyAutoLabs/PyAutoHeart/pull/240) — `active/eyes_p1a_autolens_visualization_rebirth.md`
+
 **PyAutoLens**
 
 - [PyAutoLens#751](https://github.com/PyAutoLabs/PyAutoLens/pull/751) — `active/workspace_config_cleanup.md`
@@ -343,6 +348,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoMind**
 
+- [PyAutoMind#447](https://github.com/PyAutoLabs/PyAutoMind/pull/447) — `active/eyes_p1a_autolens_visualization_rebirth.md`
 - [PyAutoMind#425](https://github.com/PyAutoLabs/PyAutoMind/pull/425) — `complete/2026/09/codex-context-efficiency.md`
 - [PyAutoMind#427](https://github.com/PyAutoLabs/PyAutoMind/pull/427) — `complete/2026/09/community-surface-policy.md`
 - [PyAutoMind#406](https://github.com/PyAutoLabs/PyAutoMind/pull/406) — `complete/2026/09/provider-neutral-bundle-prompts.md`
@@ -374,6 +380,10 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [autolens_profiling#313](https://github.com/PyAutoLabs/autolens_profiling/pull/313) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - [autolens_profiling#319](https://github.com/PyAutoLabs/autolens_profiling/pull/319) — `complete/2026/09/interferometer-transform-real-scatter.md`
 - [autolens_profiling#293](https://github.com/PyAutoLabs/autolens_profiling/pull/293) — `complete/2026/09/point-source-shared-breakdown.md`
+
+**autolens_visualization**
+
+- [autolens_visualization#1](https://github.com/PyAutoLabs/autolens_visualization/pull/1) — `active/eyes_p1a_autolens_visualization_rebirth.md`
 
 **autolens_workspace**
 
