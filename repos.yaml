@@ -128,6 +128,13 @@ repos:
     organ: Memory
     role: "Long-term scientific/software/project knowledge (see science pointer below)."
     public_role: "Provides long-term scientific knowledge through cross-linked literature wikis, concepts and verifiable citations."
+  PyAutoEyes:
+    path: organs/PyAutoEyes
+    github: PyAutoLabs/PyAutoEyes
+    category: organ
+    organ: Eyes
+    role: "The Eyes — where the organism sees what its figures look like: the cross-project visualization dashboard over the `<lib>_visualization` project repos (autolens_visualization first) — the registry of those repos, the tracked-manifest read contract (`gallery/viz_manifest.yaml`) and the Pages board that links to their PNGs as the single point of contact for the visual behaviour of the whole ecosystem. Renders nothing and copies no figures (the project repos render and hold them); never judges them (the Brain's Eyes conductor does) and never edits library plot code (critiques route through intake)."
+    public_role: "The dashboard of every figure the PyAuto libraries draw: it gathers each library's rendered gallery on realistic data into one board, so what the software shows can be seen, judged and improved in one place."
   PyAutoHeart:
     path: organs/PyAutoHeart
     github: PyAutoLabs/PyAutoHeart
@@ -157,13 +164,6 @@ repos:
     organ: Gut
     role: "Owns the lifecycle of condemned self-material (stale branches, stashes, dead code/tests): holds it as durable, recoverable git refs through a transit window and voids it on a sweep. The storage mirror of Memory (retention vs release)."
     public_role: "Holds stale branches, dead code and other condemned material as recoverable Git references before it is permanently removed."
-  PyAutoEyes:
-    path: organs/PyAutoEyes
-    github: PyAutoLabs/PyAutoEyes
-    category: organ
-    organ: Eyes
-    role: "The Eyes — where the organism sees what its figures look like: the cross-project visualization dashboard over the `<lib>_visualization` project repos (autolens_visualization first) — the registry of those repos, the tracked-manifest read contract (`gallery/viz_manifest.yaml`) and the Pages board that links to their PNGs as the single point of contact for the visual behaviour of the whole ecosystem. Renders nothing and copies no figures (the project repos render and hold them); never judges them (the Brain's Eyes conductor does) and never edits library plot code (critiques route through intake)."
-    public_role: "The dashboard of every figure the PyAuto libraries draw: it gathers each library's rendered gallery on realistic data into one board, so what the software shows can be seen, judged and improved in one place."
   # --- scientific libraries ----------------------------------------------
   PyAutoFit:
     path: fit/PyAutoFit
