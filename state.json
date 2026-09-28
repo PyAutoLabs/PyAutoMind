@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-09-28T20:46:35Z",
+  "updated": "2026-09-28T21:02:42Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "PyAutoEyes phase 2 \u2014 cross-project dashboard, critique route, Brain chip, conductor registry \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoEyes/pull/3",
+      "prompt": "/start_dev active/eyes_p2_board_and_conductor_registry.md"
+    },
     {
       "severity": "yellow",
       "text": "Point-source A100 campaign \u2014 phase 0+1 (lean): baseline + bottleneck map\u2026 \u2014 awaiting-merge (autolens_profiling#353 open; supervised, merge is human)",
@@ -69,6 +75,12 @@
     },
     {
       "severity": "yellow",
+      "text": "pending release: PyAutoBrain PyAutoBrain#429 \u2014 PyAutoEyes phase 2 \u2014 cross-project dashboard, critique route, Brain chip, conductor registry",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/429",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#426 \u2014 autolens-visualization-rebirth",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/426",
       "prompt": null
@@ -113,18 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#384 \u2014 provider-neutral-bundle-prompts",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/384",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#424 \u2014 What shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/424",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoCortex PyAutoCortex#46 \u2014 eyes-organ-order",
-      "url": "https://github.com/PyAutoLabs/PyAutoCortex/pull/46",
       "prompt": null
     }
   ]

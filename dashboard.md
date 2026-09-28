@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/eyes_p2_board_and_conductor_registry.md">PyAutoEyes phase 2 — cross-project dashboard, critique route, Brain chip, conductor registry</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/451">issue #451</a> — issued 2026-09-28 — library-dev</summary>
+<details><summary>📋 <a href="active/eyes_p2_board_and_conductor_registry.md">PyAutoEyes phase 2 — cross-project dashboard, critique route, Brain chip, conductor registry</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/451">issue #451</a> — issued 2026-09-28 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoEyes/pull/3">PyAutoEyes#3</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/429">PyAutoBrain#429</a> — ⏳ pending release: PyAutoEyes — ⏳ pending release: PyAutoBrain</summary>
 
 ```
 /start_dev active/eyes_p2_board_and_conductor_registry.md
@@ -318,6 +318,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoBrain**
 
+- [PyAutoBrain#429](https://github.com/PyAutoLabs/PyAutoBrain/pull/429) — `active/eyes_p2_board_and_conductor_registry.md`
 - [PyAutoBrain#426](https://github.com/PyAutoLabs/PyAutoBrain/pull/426) — `complete/2026/09/autolens-visualization-rebirth.md`
 - [PyAutoBrain#404](https://github.com/PyAutoLabs/PyAutoBrain/pull/404) — `complete/2026/09/codex-context-efficiency.md`
 - [PyAutoBrain#387](https://github.com/PyAutoLabs/PyAutoBrain/pull/387) — `complete/2026/09/codex-token-efficiency.md`
@@ -334,6 +335,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoEyes**
 
+- [PyAutoEyes#3](https://github.com/PyAutoLabs/PyAutoEyes/pull/3) — `active/eyes_p2_board_and_conductor_registry.md`
 - [PyAutoEyes#2](https://github.com/PyAutoLabs/PyAutoEyes/pull/2) — `complete/2026/09/eyes-organ-skeleton.md`
 
 **PyAutoFit**
