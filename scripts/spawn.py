@@ -202,6 +202,11 @@ MIND_RULES = [
 
 MEMORY_RULES = [
     ("bibliography/README.md", "KEEP"),
+    # Rule 1 exception (first match wins, so it precedes scripts/*): the
+    # wikilink ratchet baseline lists THIS instance's known-broken links, so it
+    # is instance content (it names sub-wiki pages). read_baseline() treats an
+    # absent file as an empty baseline, so a fresh repo starts at zero.
+    ("scripts/wikilink_baseline.txt", "DROP"),
     ("scripts/*", "KEEP"), ("tests/*", "KEEP"),
     ("Makefile", "KEEP"), ("LICENSE", "KEEP"),
     ("AGENTS.md", "KEEP"), ("CLAUDE.md", "KEEP"), (".gitignore", "KEEP"),
@@ -234,6 +239,13 @@ MEMORY_RULES = [
     # scripts/backfill_arxiv_refs.py SHIP via scripts/*, so an adopter with a
     # populated reading queue re-adds the workflow deliberately.
     (".github/workflows/arxiv_refs.yml", "DROP"),
+    # DROP: the queue sweep runs on a cron and dispatches workflows with
+    # actions: write — instance machinery like its queue_actions/queue_filing
+    # siblings, and a scheduled job breaks the fresh-repo invariant.
+    (".github/workflows/queue_sweep.yml", "DROP"),
+    # Installed hook copies (propagated by the PyAutoBrain installer / session
+    # hook propagation), not source content — same rule as the Mind table.
+    (".claude/*", "DROP"), (".codex/*", "DROP"),
     # The shared wiki schema is template content; the sub-wikis are instance
     # content (the generator stamps an empty wiki/example/ instead).
     ("wiki/AGENTS.md", "KEEP"), ("wiki/CLAUDE.md", "KEEP"),

@@ -375,8 +375,9 @@ def load_manifest(mind_root):
 
 
 def load_unmapped_checkouts(mind_root):
-    """Directory names at the workspace root that ARE git checkouts but are
-    deliberately not body-map repos (`unmapped_checkouts:` in repos.yaml).
+    """Checkouts that ARE git checkouts but are deliberately not body-map repos
+    (`unmapped_checkouts:` in repos.yaml): a bare name at the workspace root,
+    or a root-relative `family/name` path inside a family directory.
 
     The disk -> manifest half of `check_checkouts` has no other way to tell a
     deliberate neighbour (the org `.github` profile repo) from a checkout
@@ -1726,10 +1727,29 @@ def check_checkouts(root, repos, unmapped, marker):
         f"declare (add it to repos.yaml, or to unmapped_checkouts:)"
         for path in all_checkouts(root)
         for name in [path.name]
-        if path.resolve() not in declared_paths and not (
-            path.parent == root and name in unmapped)
+        if path.resolve() not in declared_paths
+        and not is_unmapped(root, path, unmapped)
     ]
     return problems
+
+
+def is_unmapped(root, path, unmapped):
+    """Is `path` a checkout `unmapped_checkouts:` declares a deliberate
+    neighbour? A bare entry (`.github`) names a checkout directly at the root;
+    an entry with a slash (`family/some_checkout`) is a root-relative path, for
+    a neighbour that lives inside a family directory. A bare name never matches
+    inside a family: that would silently excuse every same-named checkout in
+    every family, which is the blind spot this leg exists to close."""
+    try:
+        rel = path.relative_to(root).as_posix()
+    except ValueError:
+        try:
+            rel = path.resolve().relative_to(root.resolve()).as_posix()
+        except ValueError:
+            return False
+    entries = {str(entry).strip("/") for entry in unmapped}
+    return rel in entries if "/" in rel else (
+        path.parent == root and path.name in entries)
 
 
 # --------------------------------------------------------------------------

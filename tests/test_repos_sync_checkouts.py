@@ -101,6 +101,30 @@ def test_a_declared_neighbour_is_not_drift(tmp_path):
     assert check(root, unmapped=["stray_tool"]) == []
 
 
+def test_a_family_relative_neighbour_is_not_drift(tmp_path, monkeypatch):
+    """A deliberate neighbour inside a family directory is declared by its
+    root-relative path; the bare name alone still does not excuse it, and a
+    root-level bare entry keeps working alongside."""
+    root = make_root(tmp_path)
+    make_checkout(root, "root_tool")
+    make_checkout(root / "family", "stray_tool")
+
+    class Resolver:
+        def repo_path(self, _root, name):
+            return root / name
+
+        def iter_checkouts(self, _root):
+            return [root / "OrganOne", root / "LibTwo", root / "root_tool",
+                    root / "family" / "stray_tool"]
+
+    monkeypatch.setattr(repos_sync, "_repo_resolver", lambda _root: Resolver())
+    problems = check(root, unmapped=["root_tool"])
+    assert len(problems) == 1 and "stray_tool" in problems[0]
+    assert "stray_tool" in check(root, unmapped=["root_tool", "stray_tool"])[0]
+    assert check(root, unmapped=["root_tool", "family/stray_tool"]) == []
+    assert "root_tool" in check(root, unmapped=["family/stray_tool"])[0]
+
+
 def test_a_directory_that_is_not_a_checkout_is_ignored(tmp_path):
     """Scratch directories at the root are not repos and never were; requiring
     them to be declared would make the leg go red on everybody's junk."""
