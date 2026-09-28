@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 9 in flight",
-  "updated": "2026-09-28T19:04:51Z",
+  "updated": "2026-09-28T19:12:03Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Canonical organ order \u2014 Eyes after Memory, before Heart \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/pull/449",
+      "prompt": "/start_dev active/eyes_organ_order.md"
+    },
     {
       "severity": "yellow",
       "text": "PyAutoEyes phase 1a \u2014 re-birth autolens_visualization as the lens project repo \u2014 library-shipped, awaiting-merge",
@@ -69,6 +75,12 @@
     },
     {
       "severity": "yellow",
+      "text": "pending release: PyAutoBrain PyAutoBrain#427 \u2014 Canonical organ order \u2014 Eyes after Memory, before Heart",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/427",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#426 \u2014 PyAutoEyes phase 1a \u2014 re-birth autolens_visualization as the lens project repo",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/426",
       "prompt": null
@@ -111,20 +123,8 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1649 \u2014 point-source-gradient-mode",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1649",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#630 \u2014 Workspace config cleanup: remove orphan config keys the Nerves board flags",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/630",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#629 \u2014 interferometer-mge-w-tilde-route",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/629",
+      "text": "pending release: PyAutoCortex PyAutoCortex#46 \u2014 Canonical organ order \u2014 Eyes after Memory, before Heart",
+      "url": "https://github.com/PyAutoLabs/PyAutoCortex/pull/46",
       "prompt": null
     }
   ]

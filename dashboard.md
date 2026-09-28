@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/eyes_organ_order.md">Canonical organ order — Eyes after Memory, before Heart</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/439">issue #439</a> — issued 2026-09-25 — workspace-dev</summary>
+<details><summary>📋 <a href="active/eyes_organ_order.md">Canonical organ order — Eyes after Memory, before Heart</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/439">issue #439</a> — issued 2026-09-25 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/449">PyAutoMind#449</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/427">PyAutoBrain#427</a>, <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/241">PyAutoHeart#241</a>, <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/291">PyAutoHands#291</a>, <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/46">PyAutoCortex#46</a>, <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/177">PyAutoNerves#177</a>, <a href="https://github.com/PyAutoLabs/PyAutoGut/pull/13">PyAutoGut#13</a>, <a href="https://github.com/PyAutoLabs/PyAutoScientist/pull/35">PyAutoScientist#35</a> — ⏳ pending release: PyAutoMind — ⏳ pending release: PyAutoBrain — ⏳ pending release: PyAutoHeart — ⏳ pending release: PyAutoHands — ⏳ pending release: PyAutoCortex — ⏳ pending release: PyAutoNerves — ⏳ pending release: PyAutoGut — ⏳ pending release: PyAutoScientist</summary>
 
 ```
 /start_dev active/eyes_organ_order.md
@@ -342,6 +342,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoBrain**
 
+- [PyAutoBrain#427](https://github.com/PyAutoLabs/PyAutoBrain/pull/427) — `active/eyes_organ_order.md`
 - [PyAutoBrain#426](https://github.com/PyAutoLabs/PyAutoBrain/pull/426) — `active/eyes_p1a_autolens_visualization_rebirth.md`
 - [PyAutoBrain#404](https://github.com/PyAutoLabs/PyAutoBrain/pull/404) — `complete/2026/09/codex-context-efficiency.md`
 - [PyAutoBrain#387](https://github.com/PyAutoLabs/PyAutoBrain/pull/387) — `complete/2026/09/codex-token-efficiency.md`
@@ -349,6 +350,10 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoBrain#409](https://github.com/PyAutoLabs/PyAutoBrain/pull/409) — `complete/2026/09/notify-slack-community-discussions.md`
 - [PyAutoBrain#384](https://github.com/PyAutoLabs/PyAutoBrain/pull/384) — `complete/2026/09/provider-neutral-bundle-prompts.md`
 - [PyAutoBrain#424](https://github.com/PyAutoLabs/PyAutoBrain/pull/424) — `complete/2026/09/start-dev-heart-gate.md`
+
+**PyAutoCortex**
+
+- [PyAutoCortex#46](https://github.com/PyAutoLabs/PyAutoCortex/pull/46) — `active/eyes_organ_order.md`
 
 **PyAutoFit**
 
@@ -364,10 +369,16 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoGut**
 
+- [PyAutoGut#13](https://github.com/PyAutoLabs/PyAutoGut/pull/13) — `active/eyes_organ_order.md`
 - [PyAutoGut#12](https://github.com/PyAutoLabs/PyAutoGut/pull/12) — `complete/2026/09/gut-void-sibling-reach.md`
+
+**PyAutoHands**
+
+- [PyAutoHands#291](https://github.com/PyAutoLabs/PyAutoHands/pull/291) — `active/eyes_organ_order.md`
 
 **PyAutoHeart**
 
+- [PyAutoHeart#241](https://github.com/PyAutoLabs/PyAutoHeart/pull/241) — `active/eyes_organ_order.md`
 - [PyAutoHeart#240](https://github.com/PyAutoLabs/PyAutoHeart/pull/240) — `active/eyes_p1a_autolens_visualization_rebirth.md`
 
 **PyAutoLens**
@@ -380,6 +391,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoMind**
 
+- [PyAutoMind#449](https://github.com/PyAutoLabs/PyAutoMind/pull/449) — `active/eyes_organ_order.md`
 - [PyAutoMind#447](https://github.com/PyAutoLabs/PyAutoMind/pull/447) — `active/eyes_p1a_autolens_visualization_rebirth.md`
 - [PyAutoMind#425](https://github.com/PyAutoLabs/PyAutoMind/pull/425) — `complete/2026/09/codex-context-efficiency.md`
 - [PyAutoMind#427](https://github.com/PyAutoLabs/PyAutoMind/pull/427) — `complete/2026/09/community-surface-policy.md`
@@ -387,12 +399,17 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoNerves**
 
+- [PyAutoNerves#177](https://github.com/PyAutoLabs/PyAutoNerves/pull/177) — `active/eyes_organ_order.md`
 - [PyAutoNerves#176](https://github.com/PyAutoLabs/PyAutoNerves/pull/176) — `active/workspace_config_cleanup.md`
 - [PyAutoNerves#175](https://github.com/PyAutoLabs/PyAutoNerves/pull/175) — `complete/2026/09/nerves-unused-keys.md`
 
 **PyAutoReduce**
 
 - [PyAutoReduce#77](https://github.com/PyAutoLabs/PyAutoReduce/pull/77) — `complete/2026/09/mass-field-reduce.md`
+
+**PyAutoScientist**
+
+- [PyAutoScientist#35](https://github.com/PyAutoLabs/PyAutoScientist/pull/35) — `active/eyes_organ_order.md`
 
 **autofit_workspace**
 
