@@ -85,3 +85,18 @@
 - heart-ack: "YELLOW 2026-09-28 acknowledged by human at ship: autolens_test multi_dataset/rectangular.py timeout (cloud#36404726969); manifest drift 1 mismatch vs repos.yaml; PyAutoMemory open PR 8d old"
 - follow-up: draft/bug/autolens/point_image_pair_all_forward_grad_nan.md (released forward-mode gradient NaN, found here)
 - resume: human go/no-go on phase 2 (memo in results/notes/point_source_gpu_breakdown_2026_09.md); then /prm #353
+
+## eyes-board-conductor-registry
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/451
+- issued: 2026-09-28
+- prompt: active/eyes_p2_board_and_conductor_registry.md
+- epic: pyautoeyes-birth
+- session: Claude Code CLI (Fable architect, Opus execution), 2026-09-28; session ID unavailable
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/eyes-board-conductor-registry
+- autonomy: supervised (header); epic phasing human-approved ("do next phase") 2026-09-28; merge is human
+- heart-ack: "2026-09-28 YELLOW acknowledged by human: PyAutoMemory open PR 8d old; manifest drift workspace checkouts (autolens_visualization unregistered, stale Heart snapshot); workspace validation timeout autolens_test multi_dataset/rectangular.py (cloud#36404726969)"
+- repos:
+  - PyAutoEyes: feature/eyes-board-conductor-registry
+  - PyAutoBrain: feature/eyes-board-conductor-registry
+- parallel-claim: "PyAutoEyes and PyAutoBrain are also claimed by eyes-organ-skeleton (PyAutoMind#448), which is MERGED (PyAutoEyes#2, PyAutoBrain#428) and whose close-out is running concurrently; no open branch overlap. Noted on #451."
