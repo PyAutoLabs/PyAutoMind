@@ -20,8 +20,22 @@ Unattended: needs-slicing
 Epic: point-source-cpu-speed
 Lane: any
 Filed: 2026-09-26
-Updated: 2026-09-27
+Updated: 2026-09-28
 Parent-record: complete/2026/09/point-source-source-plane-p2e.md
+
+## Runtime refresh + A100 vmap row shipped (PR open) (2026-09-28)
+
+- **Slice:** autolens_profiling#349 → PR #351 (draft, awaiting human merge); prompt
+  `active/point_source_source_plane_runtime_refresh.md`. PyAutoFit#1649 / PyAutoLens#752 are released
+  in 2026.9.27.2 (wiki corrected).
+- **Rows (euclid-ral-gpu-2, qualified):** RAL CPU job 366911 single JIT 0.258 ms; A100 job 366912
+  vmap(b64) 5.6 µs/call ≈ 114× the single call; launch-bound through b1024 (0.29 µs/call, diag 366914).
+  The A100 cell `single_jit` (0.642 ms) is a warm-up artefact (steady 0.267 ms) → filed
+  `draft/bug/autolens_profiling/runtime_cell_single_jit_gpu_warmup.md`. Source-plane A100 leg added to
+  the release sweep.
+- **Remaining candidate:** blackjax NUTS / SMC forward-mode `value_and_grad` — stays parked until
+  `lens/autolens_inference/scripts/point_source/searches/` has a point-source search leaf (its
+  admission bar is the likelihood's share of a fit + eval count).
 
 ## Phases 1–2e shipped — campaign core complete; remaining candidates parked (2026-09-27)
 

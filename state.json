@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 23 picks \u00b7 9 in flight",
-  "updated": "2026-09-28T19:52:38Z",
+  "updated": "2026-09-28T19:56:15Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -18,6 +18,12 @@
       "text": "PyAutoEyes phase 1a \u2014 re-birth autolens_visualization as the lens project repo \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/pull/447",
       "prompt": "/start_dev active/eyes_p1a_autolens_visualization_rebirth.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Point-source source-plane chi-squared campaign \u2014 runtime refresh on 2026.9.27.2 + A100 vmap\u2026 \u2014 awaiting-merge (draft PR; Heart YELLOW with 3 un-acked unrelated reasons listed on the PR)",
+      "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/351",
+      "prompt": "/start_dev active/point_source_source_plane_runtime_refresh.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#424 \u2014 What shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/424",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoCortex PyAutoCortex#46 \u2014 Canonical organ order \u2014 Eyes after Memory, before Heart",
-      "url": "https://github.com/PyAutoLabs/PyAutoCortex/pull/46",
       "prompt": null
     }
   ]

@@ -292,7 +292,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/point_source_source_plane_runtime_refresh.md">Point-source source-plane chi-squared campaign — runtime refresh on 2026.9.27.2 + A100 vmap…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/349">issue #349</a> — issued 2026-09-28 — workspace-dev</summary>
+<details><summary>📋 <a href="active/point_source_source_plane_runtime_refresh.md">Point-source source-plane chi-squared campaign — runtime refresh on 2026.9.27.2 + A100 vmap…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/349">issue #349</a> — issued 2026-09-28 — awaiting-merge (draft PR; Heart YELLOW with 3 un-acked unrelated reasons listed on the PR) — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/351">autolens_profiling#351</a></summary>
 
 ```
 /start_dev active/point_source_source_plane_runtime_refresh.md
