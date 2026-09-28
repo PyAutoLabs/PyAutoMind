@@ -1,3 +1,66 @@
+## autolens-visualization-rebirth
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/446
+- completed: 2026-09-28
+- epic: pyautoeyes-birth (phase 1a)
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/447
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/426
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/240
+- library-pr: https://github.com/PyAutoLabs/autolens_visualization/pull/1
+- pending-release: PyAutoMind@https://github.com/PyAutoLabs/PyAutoMind/pull/447
+- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/426
+- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/240
+- pending-release: autolens_visualization@https://github.com/PyAutoLabs/autolens_visualization/pull/1
+
+Phase 1a of the `pyautoeyes-birth` epic moves the lens figures back into their own
+project repo. `PyAutoLabs/autolens_visualization` was re-created by the human
+(`gh repo create`), and the current PyAutoEyes main history was pushed to it so
+every PNG keeps its provenance. It is cloned at `lens/autolens_visualization` and
+registered in the body map as a `project` row.
+
+## Layering (human decision 2026-09-28)
+
+There are two layers, the same shape as `autolens_profiling` / `autolens_inference`
+under the Brain board. **Project repos** `<lib>_visualization` make, store and
+track the figures of one library: producers, simulators, datasets, `plots.yaml`,
+instruments, tracked PNGs, `GALLERY.md` and the render harness. **The organ
+PyAutoEyes** is the cross-project dashboard. It reads each project repo's
+tracked `gallery/viz_manifest.yaml` and links to the PNGs. It renders nothing,
+copies no figures, never judges (the Brain Eyes conductor does) and never
+edits plot code.
+
+## PRs (merge order, 2026-09-28, all merged by the human via /prm)
+
+1. PyAutoLabs/PyAutoBrain#426 (`d8710e42`): Eyes conductor and `/eyes` default instance point at `lens/autolens_visualization`; layering paragraph; `clean_slate.sh` dataset-wipe exclusion
+2. PyAutoLabs/autolens_visualization#1 (`0e96a285`): tracked `gallery/viz_manifest.yaml` (producer, domain, path, size, sha256, `rendered_with`), `--check` on a stale manifest, `render.yml` commits it and fires `eyes-refresh` at PyAutoEyes
+3. PyAutoLabs/PyAutoMind#447 (`9fe391ad`): `repos.yaml` project row; PyAutoEyes role rewritten to the layered wording; `ROUTING.md` target
+4. PyAutoLabs/PyAutoHeart#240 (`cfbe3d41`): `autolens_visualization` drift exclusion / organism list
+
+At close-out, every task branch (worktree HEAD and local `feature/autolens-visualization-rebirth`)
+was proven an ancestor of `origin/main` in all four repos.
+
+## Follow-ups
+
+- Map-block PRs from `repos_sync --write` after #447/#449: PyAutoLabs/PyAutoNerves#178 (`375bfb2b`),
+  PyAutoLabs/PyAutoGut#14 (`e929009d`) and PyAutoLabs/PyAutoScientist#36 (`443ca86b`) are merged.
+  PyAutoLabs/PyAutoCortex#47 is open.
+- `.github` `profile/README.md` is human-only. The patch is at `tmp/handover/map-block-dotgithub-post449.patch`.
+- The generated-hooks leg of `repos_sync --check` (38 copies) stays red until a human
+  runs `gh workflow run session_hook_propagate.yml -R PyAutoLabs/PyAutoMind`.
+- PAT: the `eyes-refresh` dispatch warns and skips until `PAT_PYAUTOLABS` covers PyAutoEyes
+  and `autolens_visualization` (human secret edit).
+- Pages: enabling GitHub Pages for the PyAutoEyes dashboard is a human step.
+- **Phase 1b is PyAutoMind#448 (`eyes-organ-skeleton`), in flight.** It is shipped and awaiting merge,
+  and it strips PyAutoEyes to the organ skeleton. Next after it is phase 2.
+
+## Gates
+
+- Heart YELLOW, acknowledged by the human 2026-09-28 (PyAutoMemory PR age; the manifest drift
+  cleared by this task; the autolens_test multi_dataset/rectangular.py timeout).
+- The PyAutoMind#447 firewall leg was red by construction until Brain#426 merged (CI reads Brain main's
+  organism-map block). Brain merged first.
+
+## Original prompt
+
 # PyAutoEyes phase 1a — re-birth autolens_visualization as the lens project repo
 
 Type: feature
