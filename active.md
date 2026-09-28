@@ -99,7 +99,6 @@
 - repos:
   - PyAutoEyes: feature/eyes-board-conductor-registry
   - PyAutoBrain: feature/eyes-board-conductor-registry
-- parallel-claim: "PyAutoEyes and PyAutoBrain are also claimed by eyes-organ-skeleton (PyAutoMind#448), which is MERGED (PyAutoEyes#2, PyAutoBrain#428) and whose close-out is running concurrently; no open branch overlap. Noted on #451."
 
 ## point-source-search-nautilus-leaf
 - issue: https://github.com/PyAutoLabs/autolens_inference/issues/15
