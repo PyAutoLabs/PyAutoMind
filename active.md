@@ -100,3 +100,15 @@
   - PyAutoEyes: feature/eyes-board-conductor-registry
   - PyAutoBrain: feature/eyes-board-conductor-registry
 - parallel-claim: "PyAutoEyes and PyAutoBrain are also claimed by eyes-organ-skeleton (PyAutoMind#448), which is MERGED (PyAutoEyes#2, PyAutoBrain#428) and whose close-out is running concurrently; no open branch overlap. Noted on #451."
+
+## point-source-search-nautilus-leaf
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/15
+- issued: 2026-09-28
+- prompt: active/point_source_search_nautilus_leaf.md
+- epic: point-source-cpu-speed
+- session: Claude Code CLI (Opus 5.5 main session + Opus subagent), 2026-09-28; session ID unavailable
+- status: workspace-dev
+- autonomy: supervised (header); plan approved in-session 2026-09-28 (workspace-only, no library edits)
+- worktree: ~/Code/PyAutoLabs-wt/point-source-search-nautilus-leaf
+- repos:
+  - autolens_inference: feature/point-source-search-nautilus-leaf
