@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-09-28T20:31:20Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
+  "updated": "2026-09-28T20:35:45Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Canonical organ order \u2014 Eyes after Memory, before Heart \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/pull/449",
-      "prompt": "/start_dev active/eyes_organ_order.md"
-    },
     {
       "severity": "yellow",
       "text": "PyAutoEyes phase 1b \u2014 strip the organ to its dashboard skeleton \u2014 library-shipped, awaiting-merge",
@@ -75,12 +69,6 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#427 \u2014 Canonical organ order \u2014 Eyes after Memory, before Heart",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/427",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#428 \u2014 PyAutoEyes phase 1b \u2014 strip the organ to its dashboard skeleton",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/428",
       "prompt": null
@@ -111,6 +99,12 @@
     },
     {
       "severity": "yellow",
+      "text": "pending release: PyAutoBrain PyAutoBrain#427 \u2014 eyes-organ-order",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/427",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#409 \u2014 notify-slack-community-discussions",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/409",
       "prompt": null
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#424 \u2014 What shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/424",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoCortex PyAutoCortex#46 \u2014 eyes-organ-order",
+      "url": "https://github.com/PyAutoLabs/PyAutoCortex/pull/46",
       "prompt": null
     }
   ]

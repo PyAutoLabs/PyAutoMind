@@ -6,7 +6,8 @@
 - Autonomy: safe
 - Filed: 2026-09-27
 - Status: split out of `profiling-runtime-dashboard` (autolens_profiling#345) at ship — PyAutoBrain
-  was claimed by `eyes-organ-order`, so the board registration could not ride that PR.
+  was claimed by `eyes-organ-order`, so the board registration could not ride that PR. That
+  claim was released when #439 closed on 2026-09-28 (`complete/2026/09/eyes-organ-order.md`).
 
 ## Original prompt
 
