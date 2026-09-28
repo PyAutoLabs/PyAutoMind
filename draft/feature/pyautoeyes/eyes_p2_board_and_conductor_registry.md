@@ -20,7 +20,7 @@ Epic: pyautoeyes-birth
 Phase: 2
 Filed: 2026-09-25
 
-Blocked on: phase 1b shipped.
+Blocked on: none — phase 1b COMPLETE 2026-09-28 (PyAutoMind#448; record `complete/2026/09/eyes-organ-skeleton.md`).
 
 ## Task
 
