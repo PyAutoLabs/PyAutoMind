@@ -268,7 +268,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/eyes_p1b_organ_skeleton.md">PyAutoEyes phase 1b — strip the organ to its dashboard skeleton</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/448">issue #448</a> — issued 2026-09-28 — library-dev</summary>
+<details><summary>📋 <a href="active/eyes_p1b_organ_skeleton.md">PyAutoEyes phase 1b — strip the organ to its dashboard skeleton</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/448">issue #448</a> — issued 2026-09-28 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoEyes/pull/2">PyAutoEyes#2</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/428">PyAutoBrain#428</a> — ⏳ pending release: PyAutoEyes — ⏳ pending release: PyAutoBrain</summary>
 
 ```
 /start_dev active/eyes_p1b_organ_skeleton.md
@@ -336,6 +336,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 - [PyAutoBrain#427](https://github.com/PyAutoLabs/PyAutoBrain/pull/427) — `active/eyes_organ_order.md`
 - [PyAutoBrain#426](https://github.com/PyAutoLabs/PyAutoBrain/pull/426) — `active/eyes_p1a_autolens_visualization_rebirth.md`
+- [PyAutoBrain#428](https://github.com/PyAutoLabs/PyAutoBrain/pull/428) — `active/eyes_p1b_organ_skeleton.md`
 - [PyAutoBrain#404](https://github.com/PyAutoLabs/PyAutoBrain/pull/404) — `complete/2026/09/codex-context-efficiency.md`
 - [PyAutoBrain#387](https://github.com/PyAutoLabs/PyAutoBrain/pull/387) — `complete/2026/09/codex-token-efficiency.md`
 - [PyAutoBrain#406](https://github.com/PyAutoLabs/PyAutoBrain/pull/406) — `complete/2026/09/community-surface-brain.md`
@@ -346,6 +347,10 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 **PyAutoCortex**
 
 - [PyAutoCortex#46](https://github.com/PyAutoLabs/PyAutoCortex/pull/46) — `active/eyes_organ_order.md`
+
+**PyAutoEyes**
+
+- [PyAutoEyes#2](https://github.com/PyAutoLabs/PyAutoEyes/pull/2) — `active/eyes_p1b_organ_skeleton.md`
 
 **PyAutoFit**
 

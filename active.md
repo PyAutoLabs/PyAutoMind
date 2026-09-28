@@ -123,13 +123,19 @@
 - prompt: active/eyes_p1b_organ_skeleton.md
 - epic: pyautoeyes-birth
 - session: Claude Code CLI (Fable architect, Opus execution), 2026-09-28; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/2
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/428
+- pending-release: PyAutoEyes@https://github.com/PyAutoLabs/PyAutoEyes/pull/2
+- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/428
+- heart-ack: "2026-09-28 YELLOW acknowledged by human: PyAutoMemory open PR 8d old; manifest drift workspace checkouts (autolens_visualization unregistered, stale Heart snapshot); workspace validation timeout autolens_test multi_dataset/rectangular.py (cloud#36404726969) — current set identical, no new reasons"
 - worktree: ~/Code/PyAutoLabs-wt/eyes-organ-skeleton
-- autonomy: supervised (header); plan approved in-session 2026-09-28; PRs wait for PyAutoMind#447 (phase 1a) to merge; merge is human
+- autonomy: supervised (header); plan approved in-session 2026-09-28; PyAutoMind#447 + autolens_visualization#1 merged; merge is human
 - repos:
   - PyAutoEyes: feature/eyes-organ-skeleton
   - PyAutoBrain: feature/eyes-organ-skeleton
 - parallel-claim: "PyAutoBrain is also claimed by eyes-organ-order (PyAutoMind#439) and autolens-visualization-rebirth (PyAutoMind#446). There is no file overlap: this task touches only tests/test_policy_seams.py and config/policy.yaml (the PyAutoEyes witness row); #446 touches the eyes conductor prose, docs and clean_slate; #439 touches _pyauto_root and docs. Parallel worktree human-approved 2026-09-28; noted on #448."
+- resume: "PRs open (PyAutoEyes#2 first, then PyAutoBrain#428); live pyauto-eyes check OK; next: human /prm (merge Eyes then Brain), then enable GitHub Pages for PyAutoEyes (Settings → Pages → source GitHub Actions) so pages_dashboard.yml publishes"
 
 ## interferometer-mesh-breakdown-jax
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/348

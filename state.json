@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-09-28T20:27:56Z",
+  "updated": "2026-09-28T20:30:39Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -18,6 +18,12 @@
       "text": "PyAutoEyes phase 1a \u2014 re-birth autolens_visualization as the lens project repo \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/pull/447",
       "prompt": "/start_dev active/eyes_p1a_autolens_visualization_rebirth.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "PyAutoEyes phase 1b \u2014 strip the organ to its dashboard skeleton \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoEyes/pull/2",
+      "prompt": "/start_dev active/eyes_p1b_organ_skeleton.md"
     },
     {
       "severity": "yellow",
@@ -87,6 +93,12 @@
     },
     {
       "severity": "yellow",
+      "text": "pending release: PyAutoBrain PyAutoBrain#428 \u2014 PyAutoEyes phase 1b \u2014 strip the organ to its dashboard skeleton",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/428",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#404 \u2014 codex-context-efficiency",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/404",
       "prompt": null
@@ -113,18 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#384 \u2014 provider-neutral-bundle-prompts",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/384",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#424 \u2014 What shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/424",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoCortex PyAutoCortex#46 \u2014 Canonical organ order \u2014 Eyes after Memory, before Heart",
-      "url": "https://github.com/PyAutoLabs/PyAutoCortex/pull/46",
       "prompt": null
     }
   ]
