@@ -45,7 +45,8 @@ categories:
   pipeline: {}
   project: {}
 
-# `unmapped_checkouts:` names directories at the workspace root that ARE git
+# `unmapped_checkouts:` names directories at the workspace root (a bare name) or
+# inside a family directory (a root-relative `family/name` path) that ARE git
 # checkouts but are deliberately NOT body-map repos. Identity, like everything
 # else here: it says "this one is not ours", which is the only way the
 # disk -> manifest half of `repos_sync.py --check` can tell a deliberate
@@ -53,6 +54,7 @@ categories:
 # that belongs to the organism belongs under `repos:`, not here.
 unmapped_checkouts:
   - .github              # PyAutoLabs/.github — the org profile repo, not an organism repo
+  - lens/COWLS_COSMOS_Web_Lens_Survey  # Jammy2211/COWLS_COSMOS_Web_Lens_Survey — a personal data-release checkout, not an organism repo
 
 # Bootstrap-only rollout coordinated with active consumer tasks on 2026-09-18.
 # Their runner bodies and task branches remain untouched by propagation.
