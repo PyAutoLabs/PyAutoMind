@@ -46,13 +46,13 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 256 |
+| [Backlog](#backlog) (`draft/`) | 257 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 22
+**Highest priority** (filed as `high`) — showing 12 of 23
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -66,6 +66,14 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautoheart/board_family_footer_test_stale_after_nerves_gut.md">Heart and Hands board-footer tests expect the old six-organ family after Nerves…</a> — pyautoheart · small · safe · high</summary>
+
+```
+/start_dev draft/bug/pyautoheart/board_family_footer_test_stale_after_nerves_gut.md
 ```
 
 </details>
@@ -142,15 +150,15 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md">Final numerics audit of every mesh interpolator</a> — autoarray · large · supervised · high</summary>
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 119
+
+<details><summary>📋 <a href="draft/bug/pyautoheart/board_family_footer_test_stale_after_nerves_gut.md">Heart and Hands board-footer tests expect the old six-organ family after Nerves…</a> — pyautoheart · small · safe · high</summary>
 
 ```
-/start_dev draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md
+/start_dev draft/bug/pyautoheart/board_family_footer_test_stale_after_nerves_gut.md
 ```
 
 </details>
-
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 118
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -236,14 +244,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/pyautohands/git_docs.md">Use readthedocs or migrate to GitHub docs</a> — pyautohands · small · supervised · normal</summary>
-
-```
-/start_dev draft/research/pyautohands/git_docs.md
 ```
 
 </details>
@@ -580,10 +580,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**256** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **57** of them belong to an epic and are listed only under [Epics](#epics) below.
+**257** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **57** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 72</summary>
+<summary><b>bug</b> — 73</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -597,6 +597,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautoheart/board_family_footer_test_stale_after_nerves_gut.md">Heart and Hands board-footer tests expect the old six-organ family after Nerves…</a> — pyautoheart · small · safe · high</summary>
+
+```
+/start_dev draft/bug/pyautoheart/board_family_footer_test_stale_after_nerves_gut.md
 ```
 
 </details>
@@ -2392,40 +2400,6 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>pyautoheart — bundle 1</b> — 4 task(s) · 6 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the judgment tier for the PyAutoMind bundle 'pyautoheart — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md
-- draft/bug/pyautoheart/heart_smoke_runner_deletes_the_tracked_output.md
-- draft/bug/pyautoheart/manifest_drift_parser_drops_suffixed_check_legs.md
-- draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Difficulty | Priority | Status |
-|--------|------------|----------|--------|
-| <a href="draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md">Local smoke env creation fails: smoke_install.sh flat pip chain vs…</a> | medium | high | formalised |
-| <a href="draft/bug/pyautoheart/heart_smoke_runner_deletes_the_tracked_output.md">Heart smoke runner deletes the tracked output/.gitignore when wiping…</a> | small | medium | formalised |
-| <a href="draft/bug/pyautoheart/manifest_drift_parser_drops_suffixed_check_legs.md">Heart's manifest_drift parser silently drops any check leg with a…</a> | small | normal | formalised |
-| <a href="draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md">release-integrate: analyze-side foreign-path filter and a…</a> | medium | low | formalised |
-
-</details>
-
-<details>
 <summary><b>euclid</b> — 4 task(s) · 5 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: catalogue, docs, euclid, jax, latent</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -2456,6 +2430,40 @@ Contract (the `start_bundle` skill is the full body):
 | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> | euclid | small | medium | draft |
 | <a href="draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md"><code>vis_lp</code> passes <code>batch_size=50</code> to <code>af.Nautilus</code>, which has no such…</a> | euclid | small | medium | formalised |
 | <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of…</a> | euclid | low | low | draft |
+
+</details>
+
+<details>
+<summary><b>pyautoheart — bundle 1</b> — 4 task(s) · 5 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the judgment tier for the PyAutoMind bundle 'pyautoheart — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/bug/pyautoheart/board_family_footer_test_stale_after_nerves_gut.md
+- draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md
+- draft/bug/pyautoheart/heart_smoke_runner_deletes_the_tracked_output.md
+- draft/bug/pyautoheart/manifest_drift_parser_drops_suffixed_check_legs.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/bug/pyautoheart/board_family_footer_test_stale_after_nerves_gut.md">Heart and Hands board-footer tests expect the old six-organ family…</a> | small | high | formalised |
+| <a href="draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md">Local smoke env creation fails: smoke_install.sh flat pip chain vs…</a> | medium | high | formalised |
+| <a href="draft/bug/pyautoheart/heart_smoke_runner_deletes_the_tracked_output.md">Heart smoke runner deletes the tracked output/.gitignore when wiping…</a> | small | medium | formalised |
+| <a href="draft/bug/pyautoheart/manifest_drift_parser_drops_suffixed_check_legs.md">Heart's manifest_drift parser silently drops any check leg with a…</a> | small | normal | formalised |
 
 </details>
 
