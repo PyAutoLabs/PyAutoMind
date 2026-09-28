@@ -80,7 +80,15 @@
 - prompt: active/eyes_p1a_autolens_visualization_rebirth.md
 - epic: pyautoeyes-birth
 - session: Claude Code CLI (Fable architect, Opus execution), 2026-09-28; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/447
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/426
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/240
+- library-pr: https://github.com/PyAutoLabs/autolens_visualization/pull/1
+- pending-release: PyAutoMind@https://github.com/PyAutoLabs/PyAutoMind/pull/447
+- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/426
+- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/240
+- pending-release: autolens_visualization@https://github.com/PyAutoLabs/autolens_visualization/pull/1
 - worktree: ~/Code/PyAutoLabs-wt/autolens-visualization-rebirth
 - autonomy: supervised (header); plan approved in-session 2026-09-28; merge is human
 - heart-ack: "YELLOW 2026-09-28 acknowledged by human: PyAutoMemory: open PR 8d old; manifest drift: workspace checkouts (autolens_visualization unregistered — cleared by this task's Mind PR); workspace validation timeout autolens_test multi_dataset/rectangular.py (cloud#36404726969)"
@@ -90,4 +98,4 @@
   - PyAutoBrain: feature/autolens-visualization-rebirth
   - PyAutoHeart: feature/autolens-visualization-rebirth
 - parallel-claim: "PyAutoMind, PyAutoBrain and PyAutoHeart are also claimed by eyes-organ-order (PyAutoMind#439). The only overlap is Mind repos.yaml: #439 reorders the organ rows; this task adds a project row after autolens_inference and rewrites the PyAutoEyes role string. Parallel worktree human-approved 2026-09-28; noted on #439 and #446."
-- resume: "start_library creates the worktree at ~/Code/PyAutoLabs-wt/autolens-visualization-rebirth; then implement per the issue plan and ship Mind → Brain → Heart → autolens_visualization."
+- resume: "4 PRs open (merge is human, order Mind#447 → Brain#426 → Heart#240 → autolens_visualization#1). Mind#447 firewall leg is red-by-construction until Brain#426 merges (CI checks out Brain main, whose organism-map block #426 regenerates) — merge Brain first or re-run after. Then /prm; after merge ship the tmp/handover/map-block-*.patch one-line PRs (Cortex, Nerves, Gut, Scientist, .github)."
