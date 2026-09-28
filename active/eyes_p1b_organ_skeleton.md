@@ -19,6 +19,7 @@ Review-minutes: 15
 Epic: pyautoeyes-birth
 Phase: 1b
 Filed: 2026-09-28
+Issued: 2026-09-28
 
 Blocked on: phase 1a shipped (history confirmed on `PyAutoLabs/autolens_visualization`).
 

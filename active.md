@@ -100,6 +100,19 @@
 - parallel-claim: "PyAutoMind, PyAutoBrain and PyAutoHeart are also claimed by eyes-organ-order (PyAutoMind#439). The only overlap is Mind repos.yaml: #439 reorders the organ rows; this task adds a project row after autolens_inference and rewrites the PyAutoEyes role string. Parallel worktree human-approved 2026-09-28; noted on #439 and #446."
 - resume: "4 PRs open (merge is human, order Mind#447 → Brain#426 → Heart#240 → autolens_visualization#1). Mind#447 firewall leg is red-by-construction until Brain#426 merges (CI checks out Brain main, whose organism-map block #426 regenerates) — merge Brain first or re-run after. Then /prm; after merge ship the tmp/handover/map-block-*.patch one-line PRs (Cortex, Nerves, Gut, Scientist, .github)."
 
+## eyes-organ-skeleton
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/448
+- issued: 2026-09-28
+- prompt: active/eyes_p1b_organ_skeleton.md
+- epic: pyautoeyes-birth
+- session: Claude Code CLI (Fable architect, Opus execution), 2026-09-28; session ID unavailable
+- status: library-dev
+- autonomy: supervised (header); plan approved in-session 2026-09-28; PRs wait for PyAutoMind#447 (phase 1a) to merge; merge is human
+- repos:
+  - PyAutoEyes: feature/eyes-organ-skeleton
+  - PyAutoBrain: feature/eyes-organ-skeleton
+- parallel-claim: "PyAutoBrain is also claimed by eyes-organ-order (PyAutoMind#439) and autolens-visualization-rebirth (PyAutoMind#446). There is no file overlap: this task touches only tests/test_policy_seams.py and config/policy.yaml (the PyAutoEyes witness row); #446 touches the eyes conductor prose, docs and clean_slate; #439 touches _pyauto_root and docs. Parallel worktree human-approved 2026-09-28; noted on #448."
+
 ## interferometer-mesh-breakdown-jax
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/348
 - issued: 2026-09-28
