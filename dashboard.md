@@ -268,7 +268,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/point_source_gpu_p01.md">Point-source A100 campaign — phase 0+1 (lean): baseline + bottleneck map…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/350">issue #350</a> — issued 2026-09-28 — workspace-dev</summary>
+<details><summary>📋 <a href="active/point_source_gpu_p01.md">Point-source A100 campaign — phase 0+1 (lean): baseline + bottleneck map…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/350">issue #350</a> — issued 2026-09-28 — awaiting-merge (autolens_profiling#353 open; supervised, merge is human) — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/353">autolens_profiling#353</a></summary>
 
 ```
 /start_dev active/point_source_gpu_p01.md

@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-09-28T20:37:01Z",
+  "updated": "2026-09-28T20:40:04Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "PyAutoEyes phase 1b \u2014 strip the organ to its dashboard skeleton \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoEyes/pull/2",
       "prompt": "/start_dev active/eyes_p1b_organ_skeleton.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Point-source A100 campaign \u2014 phase 0+1 (lean): baseline + bottleneck map\u2026 \u2014 awaiting-merge (autolens_profiling#353 open; supervised, merge is human)",
+      "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/353",
+      "prompt": "/start_dev active/point_source_gpu_p01.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#424 \u2014 What shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/424",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoCortex PyAutoCortex#46 \u2014 eyes-organ-order",
-      "url": "https://github.com/PyAutoLabs/PyAutoCortex/pull/46",
       "prompt": null
     }
   ]
