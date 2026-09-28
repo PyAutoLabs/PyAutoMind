@@ -1,4 +1,4 @@
-# Interferometer likelihood campaign 3/3 — mesh numba CPU breakdown + CPU-vs-GPU decision matrix — phase map (phases 1-2 shipped; phase 3 issued; phase 4 next)
+# Interferometer likelihood campaign 3/3 — mesh numba CPU breakdown + CPU-vs-GPU decision matrix — phase map (phases 1-3 shipped; phase 4 next)
 
 Type: research
 Target: autolens_profiling
@@ -35,11 +35,13 @@ Updated: 2026-09-28
   `draft/feature/autoarray/interferometer_sparse_numpy_cache_curvature_and_data_vector.md` — library half
   shipped 2026-09-27 (`complete/2026/09/interferometer-sparse-cache.md`, PyAutoArray#582).
 
-## Phase 3 issued (2026-09-28)
+## Phase 3 shipped (2026-09-28)
 
-- **Issue:** https://github.com/PyAutoLabs/autolens_profiling/issues/348 (task
-  `interferometer-mesh-breakdown-jax`, prompt `active/interferometer_mesh_breakdown_jax_phase_3.md`,
-  branch `feature/interferometer-mesh-breakdown-jax`). Plan approved by the human in-session.
+- **PR:** https://github.com/PyAutoLabs/autolens_profiling/pull/352 (issue #348) — MERGED 2026-09-28,
+  merge `15131f91`; record `complete/2026/09/interferometer-mesh-breakdown-jax.md`.
+- **Headline:** only F grows with the mask radius (~0.8–1.2 µs per FFT-extent pixel, any N_vis); solve flat
+  17.6–26.6 ms; alma Delaunay full JIT 39.1 / 49.5 / 70.2 ms at r2.0 / 3.5 / 5.0, alma_high 54.1 / 101.5 / 190.9;
+  no sparse OOM (alma_high r5.0 incl.). Caveat: the r3.5 column is the #324 rows on older library revisions.
 - **Scope:** 12 RAL A100 fp64 jobs — Delaunay-1500 and rect 39² at sma / alma / alma_high × r2.0 / r5.0
   (rect included: phase 4 has a rect column); ledger section + wiki campaign page.
 - **Survey finding (phase 4):** phase-2 CPU radius rows exist only at alma (r2.0 / 4.25 / 5.0 / 6.0);
@@ -144,7 +146,7 @@ Record `complete/2026/09/interferometer-mesh-numba-p1.md` (task `interferometer-
 - Witness: measured crossover bracketed by two measured points per mesh.
 - Folded in (2026-09-27): the former `draft/research/autolens_profiling/interferometer_sparse_cache_after_measurement.md` (harness cached_property counter fix + RAL CPU numba re-run of sma/alma/alma_high on PyAutoArray main ≥ e281abf3) — folded into the phase-2 record `complete/2026/09/interferometer-mesh-numba-p2.md`.
 
-### Phase 3 — A100 mask-radius sweep (new RAL GPU jobs) — ISSUED 2026-09-28 (#348)
+### Phase 3 — A100 mask-radius sweep (new RAL GPU jobs) — SHIPPED 2026-09-28 (#348, PR #352 merged `15131f91`)
 
 - Delaunay-1500 fp64 at r2.0 and r5.0 for sma / alma / alma_high (6 jobs; rect optional +6)
   via the existing `hpc/batch_gpu/submit_breakdown_interferometer_*` with `--mask-radius`.

@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1607 records across 8 buckets.
+1608 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -298,6 +298,7 @@ markers; everything below GENERATED is rebuilt.
 - [interferometer-apply-operator-rfft2](2026/09/interferometer-apply-operator-rfft2.md)
 - [interferometer-dirty-images-call-sites](2026/09/interferometer-dirty-images-call-sites.md)
 - [interferometer-mesh-breakdown-a100](2026/09/interferometer-mesh-breakdown-a100.md) — Interferometer likelihood campaign 2/3. The Delaunay-1500 breakdown cell now times the sparse (W~) path the li…
+- [interferometer-mesh-breakdown-jax](2026/09/interferometer-mesh-breakdown-jax.md)
 - [interferometer-mesh-numba-p1](2026/09/interferometer-mesh-numba-p1.md) — campaign 3/3, phase 1
 - [interferometer-mesh-numba-p2](2026/09/interferometer-mesh-numba-p2.md)
 - [interferometer-mge-breakdown](2026/09/interferometer-mge-breakdown.md) — Interferometer likelihood campaign 1/3. Adds an interferometer MGE breakdown cell to the shared harness (libra…

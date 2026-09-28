@@ -1,3 +1,31 @@
+# interferometer-mesh-breakdown-jax
+
+- Repo: autolens_profiling (workspace-only)
+- Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/348 (closed with a Shipped comment)
+- PR: https://github.com/PyAutoLabs/autolens_profiling/pull/352 (MERGED, merge commit `15131f91`, head `3459e25`, 2026-09-28; lint green, the only check; origin/main merged into the branch to resolve a `wiki/index.md` row conflict with #351)
+- Epic: interferometer-likelihood-campaign, phase 3 of `draft/research/autolens_profiling/interferometer_mesh_breakdown_numba_cpu_decision_matrix.md`
+- Heart: the human acknowledged YELLOW at ship (2026-09-28). The reasons were a workspace validation timeout (autolens_test multi_dataset/rectangular.py), manifest drift ×1, a PyAutoMemory PR 8 days old and incomplete release validation. None of them touch autolens_profiling.
+
+## What shipped
+
+Phase 3 of the campaign, the A100 mask-radius sweep. 12 RAL A100 fp64 jobs ran: Delaunay-1500 and rectangular 39² at sma / alma / alma_high, radius r2.0 / r5.0, on the sparse (W~) path.
+- **Jobs:** 366895 / 366896 (tasks 2-5) and 366907 / 366908 (sma, tasks 0-1).
+- **Libraries** (the mirror, refreshed by HPCPullPyAuto): Nerves bf104102, Fit 404b3e5f, Array 9428eca2, Galaxy c9609825, Lens 21b520be. nufftax 0.6.1.
+- **Submits:** `hpc/batch_gpu/submit_breakdown_interferometer_{delaunay,pixelization}_a100_radius_sweep_fp64`, each a 6-task array.
+- **Witness met:** every JSON has non-null steps and the requested `mask_radius_arcsec`. The inversion path is `sparse`, step sum ÷ full JIT is 1.002–1.051, and no sparse leg ran out of memory, including alma_high r5.0.
+- **Headline:** only F grows with the radius, 4.9–7.8× from r2.0 to r5.0, at about 0.8–1.2 µs per FFT-extent pixel whatever N_vis. The solve stays flat at 17.6–26.6 ms.
+  - Full JIT, alma Delaunay: 39.1 / 49.5 / 70.2 ms at r2.0 / r3.5 / r5.0.
+  - Full JIT, alma_high Delaunay: 54.1 / 101.5 / 190.9 ms.
+  - vmap gains only 6 % at alma_high r5.0.
+- **Ledger:** `results/notes/interferometer_mesh_a100_breakdown_2026_09.md` § "Mask-radius sweep — A100 fp64 (phase 3, #348)". The wiki campaign page and index row are updated.
+- **Caveats:** the r3.5 column reuses the #324 rows, which ran on older library revisions. The A100 JSONs don't record peak VRAM. For Delaunay, the A100 nnz/col is taken from the triplet count and overstates the in-situ value.
+
+## For phase 4
+
+CPU radius rows exist only at alma (r2.0 / 4.25 / 5.0 / 6.0). sma and alma_high CPU rows at r2.0 / r5.0 must be added before the CPU-vs-A100 decision-matrix witness can be met. The RAL worktree `/mnt/ral/jnightin/autolens_profiling_wt/interferometer-mesh-breakdown-jax` is left in place on RAL; this close-out does not clean it.
+
+## Original prompt
+
 # Interferometer likelihood campaign 3/3 — phase 3: A100 mask-radius sweep (Delaunay-1500 + rect 39², fp64)
 
 Type: research

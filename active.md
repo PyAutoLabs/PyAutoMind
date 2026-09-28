@@ -54,22 +54,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/586
 - heart-ack: "YELLOW 2026-09-27 acknowledged by human ('prm'): manifest drift x4 vs repos.yaml (hub organism blurb, organism-map blocks, where-to-file blocks, workspace checkouts); PyAutoMemory open PR 7d old"
 
-## interferometer-mesh-breakdown-jax
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/348
-- issued: 2026-09-28
-- prompt: active/interferometer_mesh_breakdown_jax_phase_3.md (phase 3 of campaign draft/research/autolens_profiling/interferometer_mesh_breakdown_numba_cpu_decision_matrix.md)
-- epic: interferometer-likelihood-campaign
-- session: Claude Code CLI (Opus 5.5), 2026-09-28; session ID unavailable
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/352
-- worktree: /home/jammy/Code/PyAutoLabs-wt/interferometer-mesh-breakdown-jax
-- autonomy: supervised (header); plan approved in-session 2026-09-28 (phase 3: 12 RAL A100 fp64 jobs, Delaunay-1500 + rect 39² at sma/alma/alma_high × r2.0/r5.0, ledger + wiki write-up, workspace-only)
-- ral-worktree: /mnt/ral/jnightin/autolens_profiling_wt/interferometer-mesh-breakdown-jax (fe0d4b5; mirror /mnt/ral/jnightin/PyAuto refreshed by HPCPullPyAuto 2026-09-28 to Nerves bf104102 / Fit 404b3e5f / Array 9428eca2 / Galaxy c9609825 / Lens 21b520be; nufftax 0.6.1)
-- ral-jobs: delaunay 366895 (tasks 2-5) + 366907 (sma tasks 0-1), pixelization 366896 (tasks 2-5) + 366908 (sma tasks 0-1); 366895_0-1 / 366896_0-1 cancelled (sma dataset missing in the RAL worktree; seeded from the canonical RAL checkout, md5 = the #324 A100 worktree copy). All 12 legs COMPLETED 2026-09-28 in 1-3 min each; rows + ledger + wiki committed 04187dd, lint green locally
-- heart-ack: "human acknowledged YELLOW at ship 2026-09-28: workspace validation timeout (autolens_test multi_dataset/rectangular.py), manifest drift x1, PyAutoMemory PR 8d old, release validation incomplete; none touch autolens_profiling"
-- repos:
-  - autolens_profiling: feature/interferometer-mesh-breakdown-jax
-
 ## point-source-gpu-p01
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/350
 - issued: 2026-09-28
