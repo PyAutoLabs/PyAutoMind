@@ -73,3 +73,19 @@
   - PyAutoArray: feature/sparse-operator-oversampling-cache
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/586
 - heart-ack: "YELLOW 2026-09-27 acknowledged by human ('prm'): manifest drift x4 vs repos.yaml (hub organism blurb, organism-map blocks, where-to-file blocks, workspace checkouts); PyAutoMemory open PR 7d old"
+
+## autolens-visualization-rebirth
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/446
+- issued: 2026-09-28
+- prompt: active/eyes_p1a_autolens_visualization_rebirth.md
+- epic: pyautoeyes-birth
+- session: Claude Code CLI (Fable architect, Opus execution), 2026-09-28; session ID unavailable
+- status: library-dev
+- autonomy: supervised (header); plan approved in-session 2026-09-28; merge is human
+- repos:
+  - autolens_visualization: feature/autolens-visualization-rebirth
+  - PyAutoMind: feature/autolens-visualization-rebirth
+  - PyAutoBrain: feature/autolens-visualization-rebirth
+  - PyAutoHeart: feature/autolens-visualization-rebirth
+- parallel-claim: "PyAutoMind, PyAutoBrain and PyAutoHeart are also claimed by eyes-organ-order (PyAutoMind#439). The only overlap is Mind repos.yaml: #439 reorders the organ rows; this task adds a project row after autolens_inference and rewrites the PyAutoEyes role string. Parallel worktree human-approved 2026-09-28; noted on #439 and #446."
+- resume: "start_library creates the worktree at ~/Code/PyAutoLabs-wt/autolens-visualization-rebirth; then implement per the issue plan and ship Mind → Brain → Heart → autolens_visualization."

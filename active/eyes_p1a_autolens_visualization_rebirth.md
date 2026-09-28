@@ -21,6 +21,7 @@ Review-minutes: 15
 Epic: pyautoeyes-birth
 Phase: 1a
 Filed: 2026-09-28
+Issued: 2026-09-28
 
 Blocked on: human repo creation (`gh repo create PyAutoLabs/autolens_visualization --public` — the agent is denied `gh repo create`).
 
