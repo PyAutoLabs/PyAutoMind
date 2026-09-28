@@ -62,11 +62,11 @@
 ### Remainder (re-filed)
 - `draft/feature/pyautobrain/register_profiling_dashboard_on_brain_board.md` — Brain board
   registration (item 4).
-- Human: enable GitHub Pages on autolens_profiling (Settings → Pages → Source: GitHub
-  Actions), then dispatch `pages_dashboard.yml`; the next push to `dashboard/**` on `main`
-  publishes by itself after that.
-- Drop the lychee exclude for the Pages URL once `pages_dashboard.yml` has published (a one-line
-  follow-up, no draft filed).
+- Done 2026-09-28: the human enabled GitHub Pages (Settings → Pages → Source: GitHub Actions);
+  `pages_dashboard.yml` run 2, dispatched on `114ff37e`, published the site (github-pages
+  deployment success, <https://pyautolabs.github.io/autolens_profiling/>). The lychee exclude
+  came out in autolens_profiling#347 (merge `163704e6`, lint green with the real link check).
+  Every push to `dashboard/**` on `main` now republishes by itself.
 
 ## Original prompt
 
