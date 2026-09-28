@@ -107,6 +107,7 @@
 - epic: pyautoeyes-birth
 - session: Claude Code CLI (Fable architect, Opus execution), 2026-09-28; session ID unavailable
 - status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/eyes-organ-skeleton
 - autonomy: supervised (header); plan approved in-session 2026-09-28; PRs wait for PyAutoMind#447 (phase 1a) to merge; merge is human
 - repos:
   - PyAutoEyes: feature/eyes-organ-skeleton
@@ -124,3 +125,15 @@
 - autonomy: supervised (header); plan approved in-session 2026-09-28 (phase 3: 12 RAL A100 fp64 jobs, Delaunay-1500 + rect 39² at sma/alma/alma_high × r2.0/r5.0, ledger + wiki write-up, workspace-only)
 - repos:
   - autolens_profiling: feature/interferometer-mesh-breakdown-jax
+
+## source-plane-runtime-refresh
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/349
+- issued: 2026-09-28
+- prompt: active/point_source_source_plane_runtime_refresh.md
+- epic: point-source-cpu-speed
+- session: Claude Code CLI (Opus 5.5 main session + Opus subagent), 2026-09-28; session ID unavailable
+- status: workspace-dev
+- autonomy: supervised (header); plan approved in-session 2026-09-28
+- worktree: ~/Code/PyAutoLabs-wt/source-plane-runtime-refresh
+- repos:
+  - autolens_profiling: feature/source-plane-runtime-refresh
