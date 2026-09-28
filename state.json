@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 9 in flight",
-  "updated": "2026-09-28T20:18:25Z",
+  "updated": "2026-09-28T20:24:26Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Heart and Hands board-footer tests expect the old six-organ family after Nerves\u2026 \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoHeart/pull/242",
+      "prompt": "/start_dev active/board_family_footer_test_stale_after_nerves_gut.md"
+    },
     {
       "severity": "yellow",
       "text": "Canonical organ order \u2014 Eyes after Memory, before Heart \u2014 library-shipped, awaiting-merge",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#424 \u2014 What shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/424",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoCortex PyAutoCortex#46 \u2014 Canonical organ order \u2014 Eyes after Memory, before Heart",
-      "url": "https://github.com/PyAutoLabs/PyAutoCortex/pull/46",
       "prompt": null
     }
   ]

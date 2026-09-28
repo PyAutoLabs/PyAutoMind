@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/board_family_footer_test_stale_after_nerves_gut.md">Heart and Hands board-footer tests expect the old six-organ family after Nerves…</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/450">issue #450</a> — issued 2026-09-28 — library-dev</summary>
+<details><summary>📋 <a href="active/board_family_footer_test_stale_after_nerves_gut.md">Heart and Hands board-footer tests expect the old six-organ family after Nerves…</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/450">issue #450</a> — issued 2026-09-28 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/242">PyAutoHeart#242</a>, <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/292">PyAutoHands#292</a> — ⏳ pending release: PyAutoHeart — ⏳ pending release: PyAutoHands</summary>
 
 ```
 /start_dev active/board_family_footer_test_stale_after_nerves_gut.md
@@ -374,10 +374,12 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoHands**
 
+- [PyAutoHands#292](https://github.com/PyAutoLabs/PyAutoHands/pull/292) — `active/board_family_footer_test_stale_after_nerves_gut.md`
 - [PyAutoHands#291](https://github.com/PyAutoLabs/PyAutoHands/pull/291) — `active/eyes_organ_order.md`
 
 **PyAutoHeart**
 
+- [PyAutoHeart#242](https://github.com/PyAutoLabs/PyAutoHeart/pull/242) — `active/board_family_footer_test_stale_after_nerves_gut.md`
 - [PyAutoHeart#241](https://github.com/PyAutoLabs/PyAutoHeart/pull/241) — `active/eyes_organ_order.md`
 - [PyAutoHeart#240](https://github.com/PyAutoLabs/PyAutoHeart/pull/240) — `active/eyes_p1a_autolens_visualization_rebirth.md`
 
