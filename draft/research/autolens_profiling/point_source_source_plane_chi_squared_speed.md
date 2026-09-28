@@ -23,10 +23,10 @@ Filed: 2026-09-26
 Updated: 2026-09-28
 Parent-record: complete/2026/09/point-source-source-plane-p2e.md
 
-## Runtime refresh + A100 vmap row shipped (PR open) (2026-09-28)
+## Runtime refresh + A100 vmap row shipped — merged c483417 (2026-09-28)
 
-- **Slice:** autolens_profiling#349 → PR #351 (draft, awaiting human merge); prompt
-  `active/point_source_source_plane_runtime_refresh.md`. PyAutoFit#1649 / PyAutoLens#752 are released
+- **Slice:** autolens_profiling#349 → PR #351, merged c483417 (2026-09-28); record
+  `complete/2026/09/source-plane-runtime-refresh.md`. PyAutoFit#1649 / PyAutoLens#752 are released
   in 2026.9.27.2 (wiki corrected).
 - **Rows (euclid-ral-gpu-2, qualified):** RAL CPU job 366911 single JIT 0.258 ms; A100 job 366912
   vmap(b64) 5.6 µs/call ≈ 114× the single call; launch-bound through b1024 (0.29 µs/call, diag 366914).

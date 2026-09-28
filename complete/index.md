@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1602 records across 8 buckets.
+1603 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -449,6 +449,7 @@ markers; everything below GENERATED is rebuilt.
 - [smoke-jax-cache-threshold](2026/09/smoke-jax-cache-threshold.md)
 - [smoke-relevance-gate](2026/09/smoke-relevance-gate.md)
 - [smoke-timings-ingester](2026/09/smoke-timings-ingester.md)
+- [source-plane-runtime-refresh](2026/09/source-plane-runtime-refresh.md)
 - [sparse-operator-ignores-disable-jax](2026/09/sparse-operator-ignores-disable-jax.md)
 - [start-dev-heart-gate](2026/09/start-dev-heart-gate.md)
 - [start-here-mode](2026/09/start-here-mode.md)
