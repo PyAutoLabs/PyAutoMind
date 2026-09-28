@@ -42,17 +42,17 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 8 |
+| [In flight](#in-flight) (`active/`) | 9 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 258 |
+| [Backlog](#backlog) (`draft/`) | 257 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 23
+**Highest priority** (filed as `high`) — showing 12 of 22
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -66,14 +66,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautoheart/board_family_footer_test_stale_after_nerves_gut.md">Heart and Hands board-footer tests expect the old six-organ family after Nerves…</a> — pyautoheart · small · safe · high</summary>
-
-```
-/start_dev draft/bug/pyautoheart/board_family_footer_test_stale_after_nerves_gut.md
 ```
 
 </details>
@@ -150,15 +142,15 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 119
-
-<details><summary>📋 <a href="draft/bug/pyautoheart/board_family_footer_test_stale_after_nerves_gut.md">Heart and Hands board-footer tests expect the old six-organ family after Nerves…</a> — pyautoheart · small · safe · high</summary>
+<details><summary>📋 <a href="draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md">Final numerics audit of every mesh interpolator</a> — autoarray · large · supervised · high</summary>
 
 ```
-/start_dev draft/bug/pyautoheart/board_family_footer_test_stale_after_nerves_gut.md
+/start_dev draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md
 ```
 
 </details>
+
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 118
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -248,9 +240,25 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/research/pyautohands/git_docs.md">Use readthedocs or migrate to GitHub docs</a> — pyautohands · small · supervised · normal</summary>
+
+```
+/start_dev draft/research/pyautohands/git_docs.md
+```
+
+</details>
+
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
+
+<details><summary>📋 <a href="active/board_family_footer_test_stale_after_nerves_gut.md">Heart and Hands board-footer tests expect the old six-organ family after Nerves…</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/450">issue #450</a> — issued 2026-09-28 — library-dev</summary>
+
+```
+/start_dev active/board_family_footer_test_stale_after_nerves_gut.md
+```
+
+</details>
 
 <details><summary>📋 <a href="active/eyes_organ_order.md">Canonical organ order — Eyes after Memory, before Heart</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/439">issue #439</a> — issued 2026-09-25 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/449">PyAutoMind#449</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/427">PyAutoBrain#427</a>, <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/241">PyAutoHeart#241</a>, <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/291">PyAutoHands#291</a>, <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/46">PyAutoCortex#46</a>, <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/177">PyAutoNerves#177</a>, <a href="https://github.com/PyAutoLabs/PyAutoGut/pull/13">PyAutoGut#13</a>, <a href="https://github.com/PyAutoLabs/PyAutoScientist/pull/35">PyAutoScientist#35</a> — ⏳ pending release: PyAutoMind — ⏳ pending release: PyAutoBrain — ⏳ pending release: PyAutoHeart — ⏳ pending release: PyAutoHands — ⏳ pending release: PyAutoCortex — ⏳ pending release: PyAutoNerves — ⏳ pending release: PyAutoGut — ⏳ pending release: PyAutoScientist</summary>
 
@@ -572,10 +580,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**258** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **58** of them belong to an epic and are listed only under [Epics](#epics) below.
+**257** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **58** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 73</summary>
+<summary><b>bug</b> — 72</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -589,14 +597,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautoheart/board_family_footer_test_stale_after_nerves_gut.md">Heart and Hands board-footer tests expect the old six-organ family after Nerves…</a> — pyautoheart · small · safe · high</summary>
-
-```
-/start_dev draft/bug/pyautoheart/board_family_footer_test_stale_after_nerves_gut.md
 ```
 
 </details>
@@ -2392,6 +2392,40 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
+<summary><b>pyautoheart — bundle 1</b> — 4 task(s) · 6 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the judgment tier for the PyAutoMind bundle 'pyautoheart — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md
+- draft/bug/pyautoheart/heart_smoke_runner_deletes_the_tracked_output.md
+- draft/bug/pyautoheart/manifest_drift_parser_drops_suffixed_check_legs.md
+- draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md">Local smoke env creation fails: smoke_install.sh flat pip chain vs…</a> | medium | high | formalised |
+| <a href="draft/bug/pyautoheart/heart_smoke_runner_deletes_the_tracked_output.md">Heart smoke runner deletes the tracked output/.gitignore when wiping…</a> | small | medium | formalised |
+| <a href="draft/bug/pyautoheart/manifest_drift_parser_drops_suffixed_check_legs.md">Heart's manifest_drift parser silently drops any check leg with a…</a> | small | normal | formalised |
+| <a href="draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md">release-integrate: analyze-side foreign-path filter and a…</a> | medium | low | formalised |
+
+</details>
+
+<details>
 <summary><b>euclid</b> — 4 task(s) · 5 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: catalogue, docs, euclid, jax, latent</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -2422,40 +2456,6 @@ Contract (the `start_bundle` skill is the full body):
 | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> | euclid | small | medium | draft |
 | <a href="draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md"><code>vis_lp</code> passes <code>batch_size=50</code> to <code>af.Nautilus</code>, which has no such…</a> | euclid | small | medium | formalised |
 | <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of…</a> | euclid | low | low | draft |
-
-</details>
-
-<details>
-<summary><b>pyautoheart — bundle 1</b> — 4 task(s) · 5 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the judgment tier for the PyAutoMind bundle 'pyautoheart — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/bug/pyautoheart/board_family_footer_test_stale_after_nerves_gut.md
-- draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md
-- draft/bug/pyautoheart/heart_smoke_runner_deletes_the_tracked_output.md
-- draft/bug/pyautoheart/manifest_drift_parser_drops_suffixed_check_legs.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Difficulty | Priority | Status |
-|--------|------------|----------|--------|
-| <a href="draft/bug/pyautoheart/board_family_footer_test_stale_after_nerves_gut.md">Heart and Hands board-footer tests expect the old six-organ family…</a> | small | high | formalised |
-| <a href="draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md">Local smoke env creation fails: smoke_install.sh flat pip chain vs…</a> | medium | high | formalised |
-| <a href="draft/bug/pyautoheart/heart_smoke_runner_deletes_the_tracked_output.md">Heart smoke runner deletes the tracked output/.gitignore when wiping…</a> | small | medium | formalised |
-| <a href="draft/bug/pyautoheart/manifest_drift_parser_drops_suffixed_check_legs.md">Heart's manifest_drift parser silently drops any check leg with a…</a> | small | normal | formalised |
 
 </details>
 
@@ -2503,17 +2503,18 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-28 | issued | <a href="active/eyes_p1a_autolens_visualization_rebirth.md">PyAutoEyes phase 1a — re-birth autolens_visualization as the lens…</a> |
 | 2026-09-28 | issued | <a href="active/point_source_gpu_p01.md">Point-source A100 campaign — phase 0+1 (lean): baseline + bottleneck…</a> |
 | 2026-09-28 | issued | <a href="active/interferometer_mesh_breakdown_jax_phase_3.md">Interferometer likelihood campaign 3/3 — phase 3: A100 mask-radius…</a> |
+| 2026-09-28 | issued | <a href="active/board_family_footer_test_stale_after_nerves_gut.md">Heart and Hands board-footer tests expect the old six-organ family…</a> |
 | 2026-09-27 | issued | <a href="active/sparse_operator_dropped_and_double_convolution.md">apply_over_sampling drops the sparse operator; dense route convolves…</a> |
 | 2026-09-27 | issued | <a href="active/workspace_config_cleanup.md">Workspace config cleanup: remove orphan config keys the Nerves board…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/power_law_multipole_m1_singular_at_isothermal_slope.md">PowerLawMultipole with m=1 returns -inf / NaN deflections at slope…</a> |
-| 2026-09-27 | filed | <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-27 | filed | <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently…</a> |
 | 2026-09-27 | filed | <a href="draft/feature/autolens_inference/drop_1e3_prior_centring_after_631.md">Drop the 1e-3 prior centring for shear / multipole / ell_comps…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
 | 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
@@ -2523,12 +2524,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
 | 2026-09-25 | filed | <a href="draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md">Keep caches off <code>$HOME</code> on HPC — phase 2 remainder: euclid pipeline…</a> |
 | 2026-09-25 | issued | <a href="active/eyes_organ_order.md">Canonical organ order — Eyes after Memory, before Heart</a> |
-| 2026-09-24 | filed | <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-24 | filed | <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> |
 | 2026-09-24 | filed | <a href="draft/bug/autofit/nautilus_converged_run_double_pass.md">Nautilus: a converged single-chunk fit still runs a second no-op…</a> |
 | 2026-09-23 | filed | <a href="draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
 | 2026-09-22 | issued | <a href="active/vis_lp_inspection_bundle.md">Support vis_lp-only products in inspection bundles</a> |
@@ -2538,12 +2539,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> |
 | 2026-09-18 | filed | <a href="draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md">The latent smoke's empty-block assertion names one cause…</a> |
-| 2026-09-18 | filed | <a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-18 | filed | <a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/pyautobrain/sizing_faculty_none_rule_keyword_false_judge_triage.md">Sizing faculty: a <code>none</code> rule, keyword hits on prose that only…</a> |
@@ -2553,12 +2554,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autoarray/mesh_geometry_areas_transformed_adapt_image_indexerror.md">MeshGeometryRectangular.areas_transformed raises IndexError for…</a> |
-| 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autofit/ep_analysis_level_compile_cache.md">EP: cache the compiled JAX likelihood on the Analysis across factor…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> |
 | 2026-09-17 | filed | <a href="draft/feature/autolens_assistant/benchmark_positions_initialised_inference.md">Benchmark card: positions-initialised imaging inference of a…</a> |
@@ -2568,7 +2569,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-16 | filed | <a href="draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> /…</a> |
 | 2026-09-16 | filed | <a href="draft/feature/autolens/coolest_pixel_grid_export.md">COOLEST: export MGE lens light and pixelized sources as pixel grids</a> |
 | 2026-09-16 | filed | <a href="draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md">Adaptive Delaunay mesh places two mesh pixels 0.001" apart — a…</a> |
-| 2026-09-15 | filed | <a href="draft/maintenance/howtofit/minimum_library_version_stale.md">The workspace staleness warning keys off a value documented never to…</a> |
 
 </details>
 
