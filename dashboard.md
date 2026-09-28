@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 257 |
+| [Backlog](#backlog) (`draft/`) | 258 |
 
 > **No batch in flight.**
 
@@ -513,7 +513,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**257** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **58** of them belong to an epic and are listed only under [Epics](#epics) below.
+**258** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **59** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 72</summary>
@@ -2900,25 +2900,17 @@ Continue the 'autolens_inference — inference benchmarking repo, birth to first
 </details>
 
 <details>
-<summary><b>PyAutoEyes — the perception organ: every library's rendered figures, one harness, an instance registry, a Pages board</b> — 8 queued prompt(s), in order</summary>
+<summary><b>PyAutoEyes — two layers: <code>&lt;lib&gt;_visualization</code> project repos make, store and track every library's figures; the organ PyAutoEyes is the cross-project Pages dashboard over them (registry, manifest contract, critique route)</b> — 9 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>PyAutoEyes — the perception organ: every library's rendered figures, one harness, an instance registry, a Pages board</b> — ledger: `PyAutoEyes/dashboard.md` — phase 0 COMPLETE 2026-09-25 (PyAutoMind#437 closed; record <code>complete/2026/09/pyautoeyes-birth-organ-row.md</code>; nine organ PRs…</summary>
-
-```
-Continue the 'PyAutoEyes — the perception organ: every library's rendered figures, one harness, an instance registry, a Pages board' epic. Its canonical state lives in PyAutoEyes/dashboard.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: human decision 2026-09-25 — promote `autolens_visualization` (PyAutoMind#436, PR #1 merged) to the organ PyAutoEyes (GitHub rename, not re-create; plain git PNGs, re-render on library release only). Phases under `draft/feature/pyautoeyes/`: 0 organ row + boundary prose + local move (done: `complete/2026/09/pyautoeyes-birth-organ-row.md`), 1 restructure into `lens/` + organ skeleton / `eyes/` harness / `bin/pyauto-eyes` (`eyes_p1_repo_restructure_skeleton.md`), 2 organ board + conductor registry (`eyes_p2_board_and_conductor_registry.md`), 3 galaxy instance (`eyes_p3_galaxy_instance.md`), 4 fit + cti instances (`eyes_p4_fit_cti_instances.md`), 5 retire duplicate galleries + public surfaces (`eyes_p5_retire_duplicates_public_surfaces.md`). Lens-instance follow-ups carried from #436: multi-galaxy gallery (`multi_galaxy_gallery.md`, phase 6), group + cluster galleries (`group_cluster_gallery.md`, phase 7); Eyes survey recursive producer scan (`draft/bug/pyautobrain/eyes_survey_recursive_producers.md`). Plot critiques recorded on #436 carry over for a later `/eyes` pass. Ledger `PyAutoEyes/dashboard.md` lands in phase 2; until then the phase prompts are the state. Every phase ships under a contemporaneous human Heart RED override while Heart is RED; merge stays human.
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautoeyes/eyes_p1_repo_restructure_skeleton.md">PyAutoEyes phase 1 — repo restructure into lens/ + organ skeleton</a> — pyautoeyes · large · supervised · high</summary>
+<details><summary>📋 <b>PyAutoEyes — two layers: <code>&lt;lib&gt;_visualization</code> project repos make, store and track every library's figures; the organ PyAutoEyes is the cross-project Pages dashboard over them (registry, manifest contract, critique route)</b> — ledger: `PyAutoEyes/dashboard.md` — phase 0 COMPLETE 2026-09-25 (PyAutoMind#437 closed; record <code>complete/2026/09/pyautoeyes-birth-organ-row.md</code>; nine organ PRs…</summary>
 
 ```
-/start_dev draft/feature/pyautoeyes/eyes_p1_repo_restructure_skeleton.md
+Continue the 'PyAutoEyes — two layers: `<lib>_visualization` project repos make, store and track every library's figures; the organ PyAutoEyes is the cross-project Pages dashboard over them (registry, manifest contract, critique route)' epic. Its canonical state lives in PyAutoEyes/dashboard.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: human decision 2026-09-25 — promote `autolens_visualization` (PyAutoMind#436, PR #1 merged) to the organ PyAutoEyes (GitHub rename, not re-create; plain git PNGs, re-render on library release only). Human decision 2026-09-28, superseding the 2026-09-25 "one instance subtree per library inside the organ" layout: "we want both: project repos make/store/track figures, the organ is the cross-project dashboard; same layering as autolens_profiling/autolens_inference". Project repos `<lib>_visualization` (lens/autolens_visualization first; then galaxy/autogalaxy_visualization, fit/autofit_visualization, cti/autocti_visualization) own producers, simulators, datasets, `plots.yaml`, instruments, tracked PNGs, `GALLERY.md`, the render harness and lint/render workflows (re-render on library release dispatch), and commit a TRACKED `gallery/viz_manifest.yaml` + rendered stack version — the organ's read contract. The organ PyAutoEyes holds `registry.yaml` (one row per instance), the manifest contract, the `eyes/` package, `bin/pyauto-eyes` (`board`, `check`, `survey`) and a Pages dashboard (refreshed by `repository_dispatch` from each project repo's `render.yml` + cron, Cortex pattern) that shows thumbnails LINKED to the raw PNGs in the project repos (never copies them), per-instance freshness, survey gaps/orphans and a per-figure "suggest an improvement" affordance routed through intake; it renders nothing, never judges (the Brain Eyes conductor does, per instance via the registry) and never edits library plot code. Phases under `draft/feature/pyautoeyes/`: 0 organ row + boundary prose + local move (done: `complete/2026/09/pyautoeyes-birth-organ-row.md`), 1a re-birth `autolens_visualization` as the lens project repo — human `gh repo create`, push the current PyAutoEyes main history to it, tracked manifest, body-map project row, conductor default instance (`eyes_p1a_autolens_visualization_rebirth.md`), 1b strip PyAutoEyes to the organ skeleton — registry, `eyes/` package, `bin/pyauto-eyes`, Pages workflows (`eyes_p1b_organ_skeleton.md`), 2 dashboard content + critique route + Brain board chip + conductor `--instance` (`eyes_p2_board_and_conductor_registry.md`), 3 birth `autogalaxy_visualization` (`eyes_p3_galaxy_instance.md`), 4 birth `autofit_visualization` + `autocti_visualization` (`eyes_p4_fit_cti_instances.md`), 5 retire duplicate galleries + public surfaces (`eyes_p5_retire_duplicates_public_surfaces.md`). Lens project-repo follow-ups carried from #436, now targeting `autolens_visualization`: multi-galaxy gallery (`multi_galaxy_gallery.md`, phase 6), group + cluster galleries (`group_cluster_gallery.md`, phase 7); Eyes survey recursive producer scan (`draft/bug/pyautobrain/eyes_survey_recursive_producers.md`). Plot critiques recorded on #436 carry over for a later `/eyes` pass. Ledger `PyAutoEyes/dashboard.md` lands in phase 1b/2; until then the phase prompts are the state. Every phase ships under a contemporaneous human Heart RED override while Heart is RED; merge stays human.
 ```
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautoeyes/eyes_p2_board_and_conductor_registry.md">PyAutoEyes phase 2 — organ board + Eyes conductor registry awareness</a> — pyautoeyes · large · supervised · high</summary>
+<details><summary>📋 <a href="draft/feature/pyautoeyes/eyes_p2_board_and_conductor_registry.md">PyAutoEyes phase 2 — cross-project dashboard, critique route, Brain chip, conductor registry</a> — pyautoeyes · large · supervised · high</summary>
 
 ```
 /start_dev draft/feature/pyautoeyes/eyes_p2_board_and_conductor_registry.md
@@ -2926,7 +2918,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautoeyes/eyes_p3_galaxy_instance.md">PyAutoEyes phase 3 — galaxy instance (PyAutoGalaxy figures)</a> — pyautoeyes · medium · supervised · normal</summary>
+<details><summary>📋 <a href="draft/feature/pyautoeyes/eyes_p3_galaxy_instance.md">PyAutoEyes phase 3 — birth autogalaxy_visualization (PyAutoGalaxy figures)</a> — pyautoeyes · large · supervised · normal</summary>
 
 ```
 /start_dev draft/feature/pyautoeyes/eyes_p3_galaxy_instance.md
@@ -2934,7 +2926,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautoeyes/eyes_p4_fit_cti_instances.md">PyAutoEyes phase 4 — fit + cti instances (PyAutoFit, PyAutoCTI figures)</a> — pyautoeyes · large · supervised · normal</summary>
+<details><summary>📋 <a href="draft/feature/pyautoeyes/eyes_p4_fit_cti_instances.md">PyAutoEyes phase 4 — birth autofit_visualization + autocti_visualization</a> — pyautoeyes · large · supervised · normal</summary>
 
 ```
 /start_dev draft/feature/pyautoeyes/eyes_p4_fit_cti_instances.md
@@ -2950,7 +2942,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautoeyes/multi_galaxy_gallery.md">PyAutoEyes lens instance: multi-galaxy gallery — producer and dataset</a> — pyautoeyes · medium · supervised · normal</summary>
+<details><summary>📋 <a href="draft/feature/pyautoeyes/multi_galaxy_gallery.md">autolens_visualization: multi-galaxy gallery — producer and dataset</a> — pyautoeyes · medium · supervised · normal</summary>
 
 ```
 /start_dev draft/feature/pyautoeyes/multi_galaxy_gallery.md
@@ -2958,7 +2950,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautoeyes/group_cluster_gallery.md">PyAutoEyes lens instance: group and cluster galleries (point-source + extended)</a> — pyautoeyes · large · supervised · normal</summary>
+<details><summary>📋 <a href="draft/feature/pyautoeyes/group_cluster_gallery.md">autolens_visualization: group and cluster galleries (point-source + extended)</a> — pyautoeyes · large · supervised · normal</summary>
 
 ```
 /start_dev draft/feature/pyautoeyes/group_cluster_gallery.md
@@ -2970,6 +2962,22 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 ```
 /start_dev draft/bug/pyautobrain/eyes_survey_recursive_producers.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoeyes/eyes_p1a_autolens_visualization_rebirth.md">PyAutoEyes phase 1a — re-birth autolens_visualization as the lens project repo</a> — pyautoeyes · medium · supervised · high</summary>
+
+```
+/start_dev draft/feature/pyautoeyes/eyes_p1a_autolens_visualization_rebirth.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoeyes/eyes_p1b_organ_skeleton.md">PyAutoEyes phase 1b — strip the organ to its dashboard skeleton</a> — pyautoeyes · large · supervised · high</summary>
+
+```
+/start_dev draft/feature/pyautoeyes/eyes_p1b_organ_skeleton.md
 ```
 
 </details>
@@ -3116,7 +3124,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 
 </details>
 
-69 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+70 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3141,6 +3149,7 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 - `draft/feature/jax_substructure/6_deflection_equivalence_test.md`
 - `draft/feature/pyautobrain/register_profiling_dashboard_on_brain_board.md`
 - `draft/feature/pyautoeyes/group_cluster_gallery.md`
+- `draft/feature/pyautoeyes/multi_galaxy_gallery.md`
 - `draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md`
 - `draft/feature/workspaces/model_figures_6_rollout.md`
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
@@ -3160,12 +3169,11 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 - `draft/docs/howtolens/cluster_pixelized_source.md`
 - `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
 - `draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md`
-- `draft/test/workspaces/mesh_magnification_correctness.md`
-- _… and 29 more_
+- _… and 30 more_
 
 </details>
 
-71 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+72 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3184,7 +3192,8 @@ Continue the 'PyAutoEyes — the perception organ: every library's rendered figu
 - `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md — unknown theme keyword(s): euclid, catalogue`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md — unknown theme keyword(s): euclid`
 - `draft/feature/euclid/single_process_cpu_route_jax_vis_lp_numba_vis_pix.md — unknown theme keyword(s): euclid, jax, hpc`
-- `draft/feature/pyautoeyes/eyes_p1_repo_restructure_skeleton.md — unknown theme keyword(s): infrastructure`
+- `draft/feature/pyautoeyes/eyes_p1a_autolens_visualization_rebirth.md — unknown theme keyword(s): infrastructure`
+- `draft/feature/pyautoeyes/eyes_p1b_organ_skeleton.md — unknown theme keyword(s): infrastructure`
 - `draft/feature/pyautoeyes/eyes_p2_board_and_conductor_registry.md — unknown theme keyword(s): infrastructure`
 - `draft/feature/pyautoeyes/eyes_p3_galaxy_instance.md — unknown theme keyword(s): infrastructure`
 - `draft/feature/pyautoeyes/eyes_p4_fit_cti_instances.md — unknown theme keyword(s): infrastructure`

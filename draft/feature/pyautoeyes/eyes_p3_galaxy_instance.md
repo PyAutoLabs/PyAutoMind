@@ -1,31 +1,47 @@
-# PyAutoEyes phase 3 — galaxy instance (PyAutoGalaxy figures)
+# PyAutoEyes phase 3 — birth autogalaxy_visualization (PyAutoGalaxy figures)
 
 Type: feature
-Target: PyAutoEyes
+Target: autogalaxy_visualization
 Repos:
+- autogalaxy_visualization
 - PyAutoEyes
+- PyAutoMind
+- PyAutoBrain
+- PyAutoHeart
 Themes:
 - visualization
 - infrastructure
-Difficulty: medium
+Difficulty: large
 Autonomy: supervised
 Priority: normal
 Lane: local-dev
 Status: draft
 Consequence: judge
-Witness: the galaxy instance survey reports no gaps/orphans; `pyauto-eyes check galaxy` green; GALLERY.md links resolve (lychee); board shows a galaxy row
+Witness: `pyauto-brain eyes survey galaxy/autogalaxy_visualization` reports no gaps/orphans; its `gallery/gallery_build.py --check` green and tracked `gallery/viz_manifest.yaml` committed; `pyauto-eyes check` green with the galaxy registry row; the PyAutoEyes dashboard shows a galaxy section; `repos_sync.py --check` clean
 Review-minutes: 15
 Epic: pyautoeyes-birth
 Phase: 3
 Filed: 2026-09-25
 
-Blocked on: phase 2 shipped.
+Blocked on: phase 2 shipped; human repo creation (`gh repo create PyAutoLabs/autogalaxy_visualization --public`).
 
 ## Task
 
-Port `autogalaxy_workspace_test/scripts/{imaging,interferometer,ellipse}/visualization/`
-to `galaxy/scripts/<domain>/visualization.py` (flat producers, HST-scale
-imaging + SMA interferometer presets shared from `eyes/instruments`),
-`plots.yaml` all-true, datasets simulated into `galaxy/dataset`. Register the
-instance in `registry.yaml`; render; board row; `render.yml`
-`pyautogalaxy-release` dispatch event.
+Human first: `gh repo create PyAutoLabs/autogalaxy_visualization --public`.
+Agent, local checkout at `galaxy/autogalaxy_visualization`, mirroring the
+`autolens_visualization` project-repo layout from phase 1a:
+
+- Port `autogalaxy_workspace_test/scripts/{imaging,interferometer,ellipse}/visualization/`
+  to flat producers `scripts/<domain>/visualization.py` (HST-scale imaging +
+  SMA interferometer presets copied from `autolens_visualization/instruments`),
+  all-true `config/visualize/plots.yaml`, datasets simulated into `dataset/`
+  with simulators under `scripts/misc/simulators/`.
+- Render harness (`gallery/gallery_build.py` + `gallery_run.sh`), tracked PNGs,
+  `GALLERY.md`, tracked `gallery/viz_manifest.yaml`; `lint.yml` + `render.yml`
+  on the `pyautogalaxy-release` dispatch, which also fires `eyes-refresh` at
+  PyAutoEyes.
+- Registration, as phase 1a: Mind `repos.yaml` project row + `repos_sync
+  --write`, `ROUTING.md` target, Brain `clean_slate.sh` exclusion, Heart drift
+  exclusion.
+- PyAutoEyes `registry.yaml` galaxy row; PyAutoGalaxy's release workflow fires
+  the `pyautogalaxy-release` dispatch (as PyAutoLens does for lens).

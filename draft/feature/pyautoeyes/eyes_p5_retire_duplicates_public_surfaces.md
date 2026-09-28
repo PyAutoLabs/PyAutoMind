@@ -27,8 +27,12 @@ Blocked on: phase 4 shipped.
 
 ## Task
 
-Delete `autolens_workspace_test/gallery/` (no CI uses it) and decide, per
-workspace_test, whether their `visualization*.py` scripts stay as smoke
-scripts; RTD `docs/organs/eyes.md` full page; PyAutoScientist + hub prose;
+Delete `autolens_workspace_test/gallery/` (no CI uses it; the lens figures
+live in `autolens_visualization`) and decide, per workspace_test, whether
+their `visualization*.py` scripts stay as smoke scripts; drop
+`autolens_workspace_test` as a secondary Eyes conductor instance. RTD
+`docs/organs/eyes.md` full page describing the two layers (the
+`<lib>_visualization` project repos and the PyAutoEyes dashboard);
+PyAutoScientist + hub prose linking the dashboard;
 `autolens_profiling`/`autolens_inference` unchanged (profiling stays
 per-library by the pinned-timing argument).
