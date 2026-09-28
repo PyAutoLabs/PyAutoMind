@@ -1,26 +1,5 @@
 # Active Tasks
 
-## profiling-runtime-dashboard
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/345
-- issued: 2026-09-27
-- prompt: active/runtime_dashboard_and_profiling_organ_vision.md
-- session: Claude Code remote (web), https://claude.ai/code/session_01MwuV47ESjoLFM8MuFZjw2s
-- location: remote-container clone of autolens_profiling (no task worktree); GitHub via the mcp__github__ tools
-- status: awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/346
-- autonomy: human-required (header); plan on the issue; merge is human via /prm
-- epic: profiling-research-wiki (dashboard leg; organ birth is a later, separate epic)
-- repos:
-  - autolens_profiling: claude/profiling-runtime-dashboard-b8vtjm
-- summary: |
-    PR #346 open (head a516a0d after the lychee fix: the README's Pages URL 404s until the site's first publish, so lint.yml excludes it for now; 14 files): build_dashboard.py -> dashboard/{series,state}.json +
-    index.html (143 series, 61 cells, 4 releases; all markers hollow until the first pinned sweep
-    carries the provenance block), hpc/release_sweep.conf + submit_release_sweep.sh, profile.yml
-    and pages_dashboard.yml wiring, lint --check. Every local gate green; feed validated against
-    board/_state.py. Item 4 (Brain board registration) re-filed as
-    draft/feature/pyautobrain/register_profiling_dashboard_on_brain_board.md.
-- resume: /prm 346 when lint.yml is green (Pages enablement happens on the first publish after merge)
-
 ## eyes-organ-order
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/439
 - issued: 2026-09-25
