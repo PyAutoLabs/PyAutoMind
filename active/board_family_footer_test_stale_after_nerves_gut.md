@@ -10,6 +10,7 @@ Autonomy: safe
 Priority: high
 Lane: local-dev
 Status: formalised
+Issued: 2026-09-28
 Consequence: notify
 Witness: In both PyAutoHeart and PyAutoHands, `pytest tests/test_dashboard.py -k footer` is green, and the expected family list is derived from PyAutoBrain (`_theme.py` ORGANS / the policy board list), not a hard-coded literal.
 Review-minutes: 0

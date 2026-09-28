@@ -131,6 +131,20 @@
   - PyAutoBrain: feature/eyes-organ-skeleton
 - parallel-claim: "PyAutoBrain is also claimed by eyes-organ-order (PyAutoMind#439) and autolens-visualization-rebirth (PyAutoMind#446). There is no file overlap: this task touches only tests/test_policy_seams.py and config/policy.yaml (the PyAutoEyes witness row); #446 touches the eyes conductor prose, docs and clean_slate; #439 touches _pyauto_root and docs. Parallel worktree human-approved 2026-09-28; noted on #448."
 
+## board-footer-family-fix
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/450
+- issued: 2026-09-28
+- prompt: active/board_family_footer_test_stale_after_nerves_gut.md
+- session: Claude Code CLI (Fable architect, Opus execution), 2026-09-28; session ID unavailable
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/board-footer-family-fix
+- autonomy: safe (header); plan approved in-session 2026-09-28; merge is human
+- heart-ack: "YELLOW 2026-09-28 acknowledged by human: PyAutoMemory: open PR 8d old; manifest drift: workspace checkouts (autolens_visualization unregistered — cleared by PyAutoMind#447, now merged); workspace validation timeout autolens_test multi_dataset/rectangular.py (cloud#36404726969)"
+- repos:
+  - PyAutoHeart: feature/board-footer-family-fix
+  - PyAutoHands: feature/board-footer-family-fix
+- parallel-claim: "PyAutoHeart and PyAutoHands are also claimed by eyes-organ-order (PyAutoMind#439), and PyAutoHeart by autolens-visualization-rebirth (PyAutoMind#446). There is no file overlap: this task touches only tests/test_dashboard.py (Heart) and tests/test_board.py (Hands), the footer-family tests; #439 touches organ-order lists in config/docs; #446 touches Heart config/repos.yaml excluded list. Parallel worktree human-approved 2026-09-28; noted on #450."
+
 ## interferometer-mesh-breakdown-jax
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/348
 - issued: 2026-09-28
