@@ -81,6 +81,7 @@
 - epic: pyautoeyes-birth
 - session: Claude Code CLI (Fable architect, Opus execution), 2026-09-28; session ID unavailable
 - status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/autolens-visualization-rebirth
 - autonomy: supervised (header); plan approved in-session 2026-09-28; merge is human
 - repos:
   - autolens_visualization: feature/autolens-visualization-rebirth
