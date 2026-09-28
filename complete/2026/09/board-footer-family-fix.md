@@ -1,3 +1,24 @@
+## board-footer-family-fix
+
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/450
+- completed: 2026-09-28
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/242 (branch tip `e365e47`, merged 2026-09-28)
+- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/292 (branch tip `3a7a715`, merged 2026-09-28)
+- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/242
+- pending-release: PyAutoHands@https://github.com/PyAutoLabs/PyAutoHands/pull/292
+
+Heart and Hands board-footer tests expected the old six-organ family after PyAutoBrain added the Nerves and Gut boards (PyAutoNerves#172, PyAutoGut#9), leaving Heart main CI red and PyAutoHeart#240/#241 and PyAutoHands#291 showing a pre-existing red. Test files only; no API change, no workspace impact.
+
+**Shipped**
+- PyAutoHeart `tests/test_dashboard.py` and PyAutoHands `tests/test_board.py`: the footer-family expectation is derived from the Brain (`theme().board_links("", BOARD_KEY)`, i.e. `config/policy.yaml` `board: boards:`), the same read the renderer makes; policy order, Cortex present and self omitted are still asserted, so the next organ birth cannot re-break them.
+- Full suites outside the bundle env: Heart 1063 passed, Hands 472 passed; footer tests 3/3 each against the PyAutoBrain#427 (eyes-organ-order) branch and a scratch policy with an `eyes` board after `memory`.
+
+**Traps / notes**
+- Worked under a human-approved parallel claim alongside eyes-organ-order (#439) and autolens-visualization-rebirth (#446); no file overlap.
+- Tier `notify`: shadow row not appended at close-out (the human's merged-unchanged / after-substantive-change answer was not available to the close-out agent); append with `lifecycle.py shadow-row` once answered.
+
+## Original prompt
+
 # Heart and Hands board-footer tests expect the old six-organ family after Nerves and Gut joined
 
 Type: bug
