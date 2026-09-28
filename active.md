@@ -99,3 +99,15 @@
   - PyAutoHeart: feature/autolens-visualization-rebirth
 - parallel-claim: "PyAutoMind, PyAutoBrain and PyAutoHeart are also claimed by eyes-organ-order (PyAutoMind#439). The only overlap is Mind repos.yaml: #439 reorders the organ rows; this task adds a project row after autolens_inference and rewrites the PyAutoEyes role string. Parallel worktree human-approved 2026-09-28; noted on #439 and #446."
 - resume: "4 PRs open (merge is human, order Mind#447 → Brain#426 → Heart#240 → autolens_visualization#1). Mind#447 firewall leg is red-by-construction until Brain#426 merges (CI checks out Brain main, whose organism-map block #426 regenerates) — merge Brain first or re-run after. Then /prm; after merge ship the tmp/handover/map-block-*.patch one-line PRs (Cortex, Nerves, Gut, Scientist, .github)."
+
+## interferometer-mesh-breakdown-jax
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/348
+- issued: 2026-09-28
+- prompt: active/interferometer_mesh_breakdown_jax_phase_3.md (phase 3 of campaign draft/research/autolens_profiling/interferometer_mesh_breakdown_numba_cpu_decision_matrix.md)
+- epic: interferometer-likelihood-campaign
+- session: Claude Code CLI (Opus 5.5), 2026-09-28; session ID unavailable
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/interferometer-mesh-breakdown-jax
+- autonomy: supervised (header); plan approved in-session 2026-09-28 (phase 3: 12 RAL A100 fp64 jobs, Delaunay-1500 + rect 39² at sma/alma/alma_high × r2.0/r5.0, ledger + wiki write-up, workspace-only)
+- repos:
+  - autolens_profiling: feature/interferometer-mesh-breakdown-jax
