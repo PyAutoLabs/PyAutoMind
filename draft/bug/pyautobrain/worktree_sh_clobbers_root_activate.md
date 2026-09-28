@@ -6,13 +6,14 @@ Repos:
 - PyAutoBrain
 Difficulty: small
 Autonomy: safe
-Priority: normal
+Priority: medium
 Lane: local-dev
 Status: formalised
 Consequence: notify
-Witness: after creating a new task bundle with `worktree_create`, `~/Code/PyAutoLabs/activate.sh` is byte-identical to before, and `ls -l ~/Code/PyAutoLabs-wt/*/activate.sh` shows every bundle's activate.sh as a real file (no symlink to the root)
+Witness: hermetic test — a fabricated PYAUTO_MAIN (tmp dir) containing a root `activate.sh` with known bytes; after `worktree_create <task>` the root `activate.sh` is byte-identical to before and the bundle's `activate.sh` is a regular file (not a symlink) holding the per-task PYTHONPATH; the test never touches the real workspace root
 Review-minutes: 0
 Unattended: ready
+Updated: 2026-09-28
 
 ## Bug
 
@@ -48,5 +49,23 @@ writes through that symlink into the root file.
 ## Witness
 
 `ls -l ~/Code/PyAutoLabs-wt/*/activate.sh` currently shows symlinks → the root activate.sh.
+
+## Recurrence 2026-09-28
+
+1. **Recurred today** for task `autolens-visualization-rebirth`: the root activate.sh (restored
+   on 2026-09-27) was again overwritten with that task's per-task PYTHONPATH file, and the new
+   bundle got a symlink instead of its own activate.sh.
+2. **Origin of the root file:** the 2026-09-18 root backup has no `activate.sh`, so the root
+   file was itself created by an earlier run of this same defect. This explains the standing
+   memory that "root activate.sh points PYTHONPATH at a stale library worktree".
+3. **Witness is hermetic:** test against a fabricated `PYAUTO_MAIN` with a root `activate.sh`,
+   never the real `~/Code/PyAutoLabs` (see header Witness). Check `organs/PyAutoBrain/tests`
+   for existing worktree.sh tests and extend them.
+4. **The helper must never touch the root.** The auto-mode classifier treats restoring the
+   unversioned root file as irreversible, so the fix is purely preventive: skip `activate.sh`
+   (and generally any name `worktree_create` itself writes) in the sibling loop, and
+   `rm -f "$root/activate.sh"` (removing any symlink) before writing it. Any repair of existing
+   bundle symlinks acts on bundle paths only.
+5. **Priority raised normal → medium** on the recurrence.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-09-27 from file:../worktree_sh_clobbers_root_activate.md -->

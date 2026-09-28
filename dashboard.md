@@ -168,6 +168,14 @@ anything you could not verify.
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/pyautobrain/worktree_sh_clobbers_root_activate.md">worktree.sh bundle creation clobbers the unversioned root activate.sh</a> — pyautobrain · small · safe · medium</summary>
+
+```
+/start_dev draft/bug/pyautobrain/worktree_sh_clobbers_root_activate.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/feature/pyautohands/smoke_profile_cannot_see_a_missing_sampler.md">Smoke profile cannot see a missing sampler dependency — add an import…</a> — pyautohands · small · safe · medium</summary>
 
 ```
@@ -204,14 +212,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautobrain/worktree_sh_clobbers_root_activate.md">worktree.sh bundle creation clobbers the unversioned root activate.sh</a> — pyautobrain · small · safe · normal</summary>
-
-```
-/start_dev draft/bug/pyautobrain/worktree_sh_clobbers_root_activate.md
 ```
 
 </details>
@@ -662,6 +662,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/pyautobrain/worktree_sh_clobbers_root_activate.md">worktree.sh bundle creation clobbers the unversioned root activate.sh</a> — pyautobrain · small · safe · medium</summary>
+
+```
+/start_dev draft/bug/pyautobrain/worktree_sh_clobbers_root_activate.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/bug/pyautoheart/heart_smoke_runner_deletes_the_tracked_output.md">Heart smoke runner deletes the tracked output/.gitignore when wiping output/</a> — pyautoheart · small · safe · medium</summary>
 
 ```
@@ -850,14 +858,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/pyautobrain/sizing_faculty_none_rule_keyword_false_judge_triage.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautobrain/worktree_sh_clobbers_root_activate.md">worktree.sh bundle creation clobbers the unversioned root activate.sh</a> — pyautobrain · small · safe · normal</summary>
-
-```
-/start_dev draft/bug/pyautobrain/worktree_sh_clobbers_root_activate.md
 ```
 
 </details>
@@ -2293,7 +2293,7 @@ Contract (the `start_bundle` skill is the full body):
 |--------|------------|----------|--------|
 | <a href="draft/maintenance/pyautobrain/workspace_resolver_fanout.md">Workspace resolver fan-out: the hook, the smoke shims and the…</a> | large | high | formalised |
 | <a href="draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md">Intake Agent silently drops unknown Type values and overrides…</a> | small | medium | formalised |
-| <a href="draft/bug/pyautobrain/worktree_sh_clobbers_root_activate.md">worktree.sh bundle creation clobbers the unversioned root activate.sh</a> | small | normal | formalised |
+| <a href="draft/bug/pyautobrain/worktree_sh_clobbers_root_activate.md">worktree.sh bundle creation clobbers the unversioned root activate.sh</a> | small | medium | formalised |
 | <a href="draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md">Unregistered worktrees are invisible to the conflict guard</a> | small | normal | formalised |
 
 </details>
