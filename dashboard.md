@@ -42,11 +42,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 6 |
+| [In flight](#in-flight) (`active/`) | 7 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 257 |
+| [Backlog](#backlog) (`draft/`) | 256 |
 
 > **No batch in flight.**
 
@@ -264,6 +264,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/eyes_p1a_autolens_visualization_rebirth.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/eyes_p1b_organ_skeleton.md">PyAutoEyes phase 1b — strip the organ to its dashboard skeleton</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/448">issue #448</a> — issued 2026-09-28 — library-dev</summary>
+
+```
+/start_dev active/eyes_p1b_organ_skeleton.md
 ```
 
 </details>
@@ -539,7 +547,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**257** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **58** of them belong to an epic and are listed only under [Epics](#epics) below.
+**256** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **57** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 72</summary>
@@ -2458,6 +2466,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-28 | issued | <a href="active/eyes_p1b_organ_skeleton.md">PyAutoEyes phase 1b — strip the organ to its dashboard skeleton</a> |
 | 2026-09-28 | issued | <a href="active/eyes_p1a_autolens_visualization_rebirth.md">PyAutoEyes phase 1a — re-birth autolens_visualization as the lens…</a> |
 | 2026-09-28 | issued | <a href="active/interferometer_mesh_breakdown_jax_phase_3.md">Interferometer likelihood campaign 3/3 — phase 3: A100 mask-radius…</a> |
 | 2026-09-27 | issued | <a href="active/sparse_operator_dropped_and_double_convolution.md">apply_over_sampling drops the sparse operator; dense route convolves…</a> |
@@ -2467,12 +2476,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/power_law_multipole_m1_singular_at_isothermal_slope.md">PowerLawMultipole with m=1 returns -inf / NaN deflections at slope…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently…</a> |
 | 2026-09-27 | filed | <a href="draft/feature/autolens_inference/drop_1e3_prior_centring_after_631.md">Drop the 1e-3 prior centring for shear / multipole / ell_comps…</a> |
-| 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
 | 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
 | 2026-09-26 | filed | <a href="draft/feature/autolens_assistant/bootstrap_smoke_codex_and_bench_pr.md">bootstrap-smoke: run Codex on the v2 prompt, then merge the…</a> |
 | 2026-09-26 | filed | <a href="draft/refactor/workspaces/abell_1201_local_cleanup.md">Repo cleanup: retire the Abell 1201 worktree and local raw data</a> |
@@ -2482,12 +2491,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-25 | issued | <a href="active/eyes_organ_order.md">Canonical organ order — Eyes after Memory, before Heart</a> |
 | 2026-09-24 | filed | <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> |
 | 2026-09-24 | filed | <a href="draft/bug/autofit/nautilus_converged_run_double_pass.md">Nautilus: a converged single-chunk fit still runs a second no-op…</a> |
-| 2026-09-23 | filed | <a href="draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-23 | filed | <a href="draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
 | 2026-09-22 | issued | <a href="active/vis_lp_inspection_bundle.md">Support vis_lp-only products in inspection bundles</a> |
 | 2026-09-19 | issued | <a href="parked.md#catalogue-inspection-before-vis-pix">catalogue-inspection-before-vis-pix</a> |
 | 2026-09-18 | parked | <a href="parked.md#fixed-light-numba-s7">fixed-light-numba-s7</a> |
@@ -2497,12 +2506,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-18 | filed | <a href="draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md">The latent smoke's empty-block assertion names one cause…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a> |
-| 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/pyautobrain/sizing_faculty_none_rule_keyword_false_judge_triage.md">Sizing faculty: a <code>none</code> rule, keyword hits on prose that only…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> |
 | 2026-09-17 | filed | <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> |
@@ -2512,12 +2521,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/bug/autoarray/mesh_geometry_areas_transformed_adapt_image_indexerror.md">MeshGeometryRectangular.areas_transformed raises IndexError for…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autofit/ep_analysis_level_compile_cache.md">EP: cache the compiled JAX likelihood on the Analysis across factor…</a> |
-| 2026-09-17 | filed | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-17 | filed | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> |
 | 2026-09-17 | filed | <a href="draft/feature/autolens_assistant/benchmark_positions_initialised_inference.md">Benchmark card: positions-initialised imaging inference of a…</a> |
 | 2026-09-17 | filed | <a href="draft/feature/autolens_assistant/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging…</a> |
 | 2026-09-16 | filed | <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of…</a> |
@@ -2527,7 +2536,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-16 | filed | <a href="draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md">Adaptive Delaunay mesh places two mesh pixels 0.001" apart — a…</a> |
 | 2026-09-15 | filed | <a href="draft/maintenance/howtofit/minimum_library_version_stale.md">The workspace staleness warning keys off a value documented never to…</a> |
 | 2026-09-15 | filed | <a href="draft/feature/pyautoheart/howto_real_settings_nightly.md">Nightly run of one HowTo tutorial per chapter at real settings</a> |
-| 2026-09-15 | filed | <a href="draft/docs/howtofit/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> |
 
 </details>
 
@@ -2926,7 +2934,7 @@ Continue the 'autolens_inference — inference benchmarking repo, birth to first
 </details>
 
 <details>
-<summary><b>PyAutoEyes — two layers: <code>&lt;lib&gt;_visualization</code> project repos make, store and track every library's figures; the organ PyAutoEyes is the cross-project Pages dashboard over them (registry, manifest contract, critique route)</b> — 8 queued prompt(s), in order</summary>
+<summary><b>PyAutoEyes — two layers: <code>&lt;lib&gt;_visualization</code> project repos make, store and track every library's figures; the organ PyAutoEyes is the cross-project Pages dashboard over them (registry, manifest contract, critique route)</b> — 7 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>PyAutoEyes — two layers: <code>&lt;lib&gt;_visualization</code> project repos make, store and track every library's figures; the organ PyAutoEyes is the cross-project Pages dashboard over them (registry, manifest contract, critique route)</b> — ledger: `PyAutoEyes/dashboard.md` — phase 0 COMPLETE 2026-09-25 (PyAutoMind#437 closed; record <code>complete/2026/09/pyautoeyes-birth-organ-row.md</code>; nine organ PRs…</summary>
 
@@ -2988,14 +2996,6 @@ Continue the 'PyAutoEyes — two layers: `<lib>_visualization` project repos mak
 
 ```
 /start_dev draft/bug/pyautobrain/eyes_survey_recursive_producers.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautoeyes/eyes_p1b_organ_skeleton.md">PyAutoEyes phase 1b — strip the organ to its dashboard skeleton</a> — pyautoeyes · large · supervised · high</summary>
-
-```
-/start_dev draft/feature/pyautoeyes/eyes_p1b_organ_skeleton.md
 ```
 
 </details>
@@ -3191,7 +3191,7 @@ Continue the 'PyAutoEyes — two layers: `<lib>_visualization` project repos mak
 
 </details>
 
-71 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+70 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3210,7 +3210,6 @@ Continue the 'PyAutoEyes — two layers: `<lib>_visualization` project repos mak
 - `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md — unknown theme keyword(s): euclid, catalogue`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md — unknown theme keyword(s): euclid`
 - `draft/feature/euclid/single_process_cpu_route_jax_vis_lp_numba_vis_pix.md — unknown theme keyword(s): euclid, jax, hpc`
-- `draft/feature/pyautoeyes/eyes_p1b_organ_skeleton.md — unknown theme keyword(s): infrastructure`
 - `draft/feature/pyautoeyes/eyes_p2_board_and_conductor_registry.md — unknown theme keyword(s): infrastructure`
 - `draft/feature/pyautoeyes/eyes_p3_galaxy_instance.md — unknown theme keyword(s): infrastructure`
 - `draft/feature/pyautoeyes/eyes_p4_fit_cti_instances.md — unknown theme keyword(s): infrastructure`
