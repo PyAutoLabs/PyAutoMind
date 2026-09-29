@@ -5,7 +5,8 @@
 - issued: 2026-09-29
 - prompt: active/nautilus_converged_run_double_pass.md
 - session: Codex; session ID unavailable
-- status: library-dev, override authorized; finishing validation
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1652
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/ep-nautilus-single-pass
 - repos:
   - PyAutoFit: feature/ep-nautilus-single-pass
@@ -14,7 +15,7 @@
 - heart-red-override:
   - authorization: 'Live human: "yeah, and then do a $prm" — task #1651 development shipping and same-turn merge only after all required CI is green; no release.'
   - reasons: 'PyAutoFit: 1 commit(s) behind origin; PyAutoLens: 1 commit(s) behind origin'
-  - evidence: '2934 passed / 2 skipped; Nautilus 16 passed; autofit smoke 8 scripts + 2 notebooks passed; seeded posterior arrays identical; broader smoke resumed before shipping.'
+  - evidence: '2934 passed / 2 skipped; Nautilus 16 passed; all 160 downstream scripts + 6 notebooks passed across 8 workspaces; seeded posterior arrays identical. PR #1652, commit 84ae77fc0.'
 
 ## workspace-config-cleanup
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/441

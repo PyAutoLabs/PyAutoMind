@@ -50,6 +50,8 @@ case still loops.
 
 ## Handoff — 2026-09-29
 
+Latest: human authorized the named override and same-turn `/prm` ("yeah, and then do a $prm"). All 160 downstream scripts + 6 notebooks passed across 8 workspace groups. Commit `84ae77fc0`, pending-release PR https://github.com/PyAutoLabs/PyAutoFit/pull/1652. CI judgment / merge / close-out next. The earlier uncommitted/paused state below is superseded.
+
 - Human approved implementation after the explanation: “ok, do it.” Issue #1651 holds the plan.
 - Worktree: `/home/jammy/Code/PyAutoLabs/.worktrees/ep-nautilus-single-pass/PyAutoFit`; branch `feature/ep-nautilus-single-pass`, base `69bb11d54`; two source/test files modified, not committed.
 - `Nautilus.call_search` now uses `Sampler.run()`'s convergence return; finite cumulative budgets use `n_like`, and global limits stop on batch overshoot. No public signature change.
