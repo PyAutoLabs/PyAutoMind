@@ -86,7 +86,7 @@
 ## eyes-fit-cti-instances
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/455
 - issued: 2026-09-29
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - prompt: active/eyes_p4_fit_cti_instances.md
 - epic: pyautoeyes-birth (phase 4)
 - session: Claude Code CLI (Fable 5.1), 2026-09-29
@@ -98,6 +98,16 @@
   - PyAutoMind: feature/eyes-fit-cti-instances
   - PyAutoBrain: feature/eyes-fit-cti-instances
   - PyAutoHeart: feature/eyes-fit-cti-instances
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/431
+- library-pr: https://github.com/PyAutoLabs/autofit_visualization/pull/1
+- library-pr: https://github.com/PyAutoLabs/autocti_visualization/pull/1
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/456
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/244
+- library-pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/5
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/180
+- library-pr: https://github.com/PyAutoLabs/PyAutoGut/pull/16
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/49
+- heart-ack: "YELLOW 2026-09-29 acknowledged by human ('Acknowledge YELLOW, ship'): workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py); manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml; PyAutoMemory: open PR 8d old; release validation incomplete: no rehearsal for current source"
 
 ## interferometer-streaming-visibilities
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/588

@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/eyes_p4_fit_cti_instances.md">PyAutoEyes phase 4 — birth autofit_visualization + autocti_visualization</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/455">issue #455</a> — issued 2026-09-29 — library-dev</summary>
+<details><summary>📋 <a href="active/eyes_p4_fit_cti_instances.md">PyAutoEyes phase 4 — birth autofit_visualization + autocti_visualization</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/455">issue #455</a> — issued 2026-09-29 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/431">PyAutoBrain#431</a>, <a href="https://github.com/PyAutoLabs/autofit_visualization/pull/1">autofit_visualization#1</a>, <a href="https://github.com/PyAutoLabs/autocti_visualization/pull/1">autocti_visualization#1</a>, <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/456">PyAutoMind#456</a>, <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/244">PyAutoHeart#244</a>, <a href="https://github.com/PyAutoLabs/PyAutoEyes/pull/5">PyAutoEyes#5</a>, <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/180">PyAutoNerves#180</a>, <a href="https://github.com/PyAutoLabs/PyAutoGut/pull/16">PyAutoGut#16</a>, <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/49">PyAutoCortex#49</a></summary>
 
 ```
 /start_dev active/eyes_p4_fit_cti_instances.md
