@@ -12,7 +12,8 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: medium
-Status: draft
+Status: active
+Issued: 2026-09-29
 Consequence: glance
 Witness: a fit built from chunked visibilities (`Interferometer.from_stream` / `apply_sparse_operator_streamed`) matches the in-memory `apply_sparse_operator` fit to 1e-8 in chi_squared, model image, residual map and dirty image; `fast_chi_squared` and `noise_normalization` read precomputed scalars when present; a pixelization-only `FitInterferometer` allocates no N_vis arrays per evaluation.
 Review-minutes: 10
