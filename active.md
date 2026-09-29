@@ -1,5 +1,17 @@
 # Active Tasks
 
+## ep-nautilus-single-pass
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1651
+- issued: 2026-09-29
+- prompt: active/nautilus_converged_run_double_pass.md
+- session: Codex; session ID unavailable
+- status: library-dev, awaiting Heart RED development-only override
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/ep-nautilus-single-pass
+- repos:
+  - PyAutoFit: feature/ep-nautilus-single-pass
+- notes: Human approved the convergence/budget regression and timing plan; see issue. Heart entry YELLOW for old PRs in HowToGalaxy, HowToLens and PyAutoMemory.
+- checkpoint: Implementation complete, uncommitted; 2934 passed / 2 skipped serially, Nautilus 16 passed, autofit smoke 8 scripts + 2 notebooks passed. Seeded posterior arrays identical; redundant update cost 68–75 ms. Current Heart RED: PyAutoFit and PyAutoLens each 1 commit behind origin. See prompt handoff and issue for evidence. No PR or merge.
+
 ## workspace-config-cleanup
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/441
 - issued: 2026-09-27
@@ -86,7 +98,7 @@
 ## eyes-fit-cti-instances
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/455
 - issued: 2026-09-29
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - prompt: active/eyes_p4_fit_cti_instances.md
 - epic: pyautoeyes-birth (phase 4)
 - session: Claude Code CLI (Fable 5.1), 2026-09-29
@@ -98,6 +110,16 @@
   - PyAutoMind: feature/eyes-fit-cti-instances
   - PyAutoBrain: feature/eyes-fit-cti-instances
   - PyAutoHeart: feature/eyes-fit-cti-instances
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/431
+- library-pr: https://github.com/PyAutoLabs/autofit_visualization/pull/1
+- library-pr: https://github.com/PyAutoLabs/autocti_visualization/pull/1
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/456
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/244
+- library-pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/5
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/180
+- library-pr: https://github.com/PyAutoLabs/PyAutoGut/pull/16
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/49
+- heart-ack: "YELLOW 2026-09-29 acknowledged by human ('Acknowledge YELLOW, ship'): workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py); manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml; PyAutoMemory: open PR 8d old; release validation incomplete: no rehearsal for current source"
 
 ## interferometer-streaming-visibilities
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/588
@@ -105,7 +127,11 @@
 - prompt: active/interferometer_streaming_visibilities.md
 - source: https://github.com/orgs/PyAutoLabs/discussions/13
 - session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-29
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/589
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/637
+- heart-ack: "YELLOW 2026-09-29 acknowledged at ship per the approved plan: workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py); manifest drift: workspace checkouts (manifest <-> disk) 1 mismatch vs PyAutoMind/repos.yaml; PyAutoMemory: open PR 8d old; release validation incomplete: no rehearsal for current source"
+- follow-up: draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md (Phase 2, array-free dataset); draft/feature/autolens/interferometer_sparse_precomputed_data_term.md (PyAutoLens parity)
 - autonomy: supervised (header); plan approved in-session 2026-09-29 (Phase 1: precomputed scalars + chunked accumulation + skip N_vis allocations; Phase 2 array-free dataset filed at ship)
 - worktree: ~/Code/PyAutoLabs-wt/interferometer-streaming-visibilities
 - parallel-claim: "PyAutoArray is also claimed by sparse-operator-oversampling-cache (#585, PR #586 open/green, 4 lines in inversion/interferometer/abstract.py + its test; trivial rebase). PyAutoGalaxy is also claimed by workspace-config-cleanup (#441; Galaxy #630 already merged, held for release; disjoint files). Parallel claims human-approved 2026-09-29 with the plan."
