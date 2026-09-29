@@ -5,11 +5,12 @@
 - issued: 2026-09-29
 - prompt: active/nautilus_converged_run_double_pass.md
 - session: Codex; session ID unavailable
-- status: library-dev
+- status: library-dev, awaiting Heart RED development-only override
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/ep-nautilus-single-pass
 - repos:
   - PyAutoFit: feature/ep-nautilus-single-pass
 - notes: Human approved the convergence/budget regression and timing plan; see issue. Heart entry YELLOW for old PRs in HowToGalaxy, HowToLens and PyAutoMemory.
+- checkpoint: Implementation complete, uncommitted; 2934 passed / 2 skipped serially, Nautilus 16 passed, autofit smoke 8 scripts + 2 notebooks passed. Seeded posterior arrays identical; redundant update cost 68–75 ms. Current Heart RED: PyAutoFit and PyAutoLens each 1 commit behind origin. See prompt handoff and issue for evidence. No PR or merge.
 
 ## workspace-config-cleanup
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/441
