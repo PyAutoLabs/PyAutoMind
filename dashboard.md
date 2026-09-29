@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 258 |
+| [Backlog](#backlog) (`draft/`) | 259 |
 
 > **No batch in flight.**
 
@@ -573,7 +573,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**258** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **56** of them belong to an epic and are listed only under [Epics](#epics) below.
+**259** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **56** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 74</summary>
@@ -1173,7 +1173,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>feature</b> — 41</summary>
+<summary><b>feature</b> — 42</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_assistant/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging, point_source and interferometer</a> — autolens_assistant · medium · supervised · high</summary>
 
@@ -1227,6 +1227,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/pyautohands/smoke_profile_cannot_see_a_missing_sampler.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/interferometer_streaming_visibilities.md">Streaming visibilities for memory efficiency on the sparse interferometer path</a> — autoarray · medium · supervised · medium</summary>
+
+```
+/start_dev draft/feature/autoarray/interferometer_streaming_visibilities.md
 ```
 
 </details>
@@ -2508,7 +2516,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 40 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 41 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -3233,7 +3241,7 @@ Continue the 'PyAutoEyes — two layers: `<lib>_visualization` project repos mak
 
 </details>
 
-70 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+71 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3242,6 +3250,7 @@ Continue the 'PyAutoEyes — two layers: `<lib>_visualization` project repos mak
 - `draft/feature/autoarray/edge_zeroed_log_det_cholesky_reuse.md — unknown theme keyword(s): inversion`
 - `draft/feature/autoarray/interferometer_chunked_transform_mapping_matrix.md — unknown theme keyword(s): jax-gpu, vram`
 - `draft/feature/autoarray/interferometer_numba_gate_retune_70.md — unknown theme keyword(s): config`
+- `draft/feature/autoarray/interferometer_streaming_visibilities.md — unknown theme keyword(s): sparse-operator, memory`
 - `draft/feature/autoarray/source_clumps_robust_scale.md — unknown theme keyword(s): source-reconstruction`
 - `draft/feature/autofit/certified_solver_batched_guard_c2.md — unknown theme keyword(s): inversion`
 - `draft/feature/autolens/coolest_pixel_grid_export.md — unknown theme keyword(s): coolest, interop, euclid`
