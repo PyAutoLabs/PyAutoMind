@@ -268,7 +268,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/nautilus_converged_run_double_pass.md">Nautilus: a converged single-chunk fit still runs a second no-op <code>run()</code> pass…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1651">issue #1651</a> — issued 2026-09-29 — library-dev</summary>
+<details><summary>📋 <a href="active/nautilus_converged_run_double_pass.md">Nautilus: a converged single-chunk fit still runs a second no-op <code>run()</code> pass…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1651">issue #1651</a> — issued 2026-09-29 — library-dev, awaiting Heart RED development-only override</summary>
 
 ```
 /start_dev active/nautilus_converged_run_double_pass.md
