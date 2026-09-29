@@ -15,13 +15,14 @@ Difficulty: large
 Autonomy: supervised
 Priority: normal
 Lane: local-dev
-Status: draft
+Status: active
 Consequence: judge
 Witness: `pyauto-brain eyes survey galaxy/autogalaxy_visualization` reports no gaps/orphans; its `gallery/gallery_build.py --check` green and tracked `gallery/viz_manifest.yaml` committed; `pyauto-eyes check` green with the galaxy registry row; the PyAutoEyes dashboard shows a galaxy section; `repos_sync.py --check` clean
 Review-minutes: 15
 Epic: pyautoeyes-birth
 Phase: 3
 Filed: 2026-09-25
+Issued: 2026-09-29
 
 Blocked on: human repo creation (`gh repo create PyAutoLabs/autogalaxy_visualization --public`); phase 2 shipped 2026-09-28 (`complete/2026/09/eyes-board-conductor-registry.md`).
 
