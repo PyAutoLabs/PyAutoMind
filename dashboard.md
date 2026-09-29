@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 259 |
+| [Backlog](#backlog) (`draft/`) | 261 |
 
 > **No batch in flight.**
 
@@ -593,7 +593,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**259** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **56** of them belong to an epic and are listed only under [Epics](#epics) below.
+**261** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **58** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 73</summary>
@@ -3020,7 +3020,7 @@ Continue the 'autolens_inference — inference benchmarking repo, birth to first
 </details>
 
 <details>
-<summary><b>PyAutoEyes — two layers: <code>&lt;lib&gt;_visualization</code> project repos make, store and track every library's figures; the organ PyAutoEyes is the cross-project Pages dashboard over them (registry, manifest contract, critique route)</b> — 5 queued prompt(s), in order</summary>
+<summary><b>PyAutoEyes — two layers: <code>&lt;lib&gt;_visualization</code> project repos make, store and track every library's figures; the organ PyAutoEyes is the cross-project Pages dashboard over them (registry, manifest contract, critique route)</b> — 7 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>PyAutoEyes — two layers: <code>&lt;lib&gt;_visualization</code> project repos make, store and track every library's figures; the organ PyAutoEyes is the cross-project Pages dashboard over them (registry, manifest contract, critique route)</b> — ledger: `PyAutoEyes/dashboard.md` — phase 0 COMPLETE 2026-09-25 (PyAutoMind#437 closed; record <code>complete/2026/09/pyautoeyes-birth-organ-row.md</code>; nine organ PRs…</summary>
 
@@ -3054,6 +3054,14 @@ Continue the 'PyAutoEyes — two layers: `<lib>_visualization` project repos mak
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/autocti_visualization/render_yml_blocked_until_pyautocti_release.md">autocti_visualization render.yml fails on the released stack until PyAutoCTI releases</a> — autocti_visualization · small · supervised · normal</summary>
+
+```
+/start_dev draft/bug/autocti_visualization/render_yml_blocked_until_pyautocti_release.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/bug/pyautobrain/eyes_survey_recursive_producers.md">Eyes survey scans producers non-recursively, so nested visualization/ producers read as ORPHAN…</a> — pyautobrain · small · safe · normal</summary>
 
 ```
@@ -3066,6 +3074,14 @@ Continue the 'PyAutoEyes — two layers: `<lib>_visualization` project repos mak
 
 ```
 /start_dev draft/feature/pyautohands/release_fires_visualization_dispatch.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autofit_visualization/seed_samplers_for_byte_stable_rerenders.md">autofit_visualization — seed every sampler so re-renders are byte-stable</a> — autofit_visualization · small · safe · normal</summary>
+
+```
+/start_dev draft/maintenance/autofit_visualization/seed_samplers_for_byte_stable_rerenders.md
 ```
 
 </details>
@@ -3261,7 +3277,7 @@ Continue the 'PyAutoEyes — two layers: `<lib>_visualization` project repos mak
 
 </details>
 
-72 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+73 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3291,6 +3307,7 @@ Continue the 'PyAutoEyes — two layers: `<lib>_visualization` project repos mak
 - `draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md — unknown theme keyword(s): jax`
 - `draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md — unknown theme keyword(s): simulation, robustness`
 - `draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md — unknown theme keyword(s): inversion, sparse-operator, correctness`
+- `draft/bug/autocti_visualization/render_yml_blocked_until_pyautocti_release.md — unknown theme keyword(s): infrastructure`
 - `draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md — unknown theme keyword(s): jax`
 - `draft/bug/autofit/mcmc_thin_zero_and_check_size_short_chain.md — unknown theme keyword(s): mcmc, test-mode, robustness`
 - `draft/bug/autofit/model_from_json_drops_zero_free_parameter_components.md — unknown theme keyword(s): serialization`
