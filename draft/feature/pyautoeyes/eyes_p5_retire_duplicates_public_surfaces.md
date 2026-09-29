@@ -23,7 +23,7 @@ Epic: pyautoeyes-birth
 Phase: 5
 Filed: 2026-09-25
 
-Blocked on: phase 4 shipped.
+Unblocked: phase 4 COMPLETE 2026-09-29 (PyAutoMind#455; record complete/2026/09/eyes-fit-cti-instances.md).
 
 ## Task
 

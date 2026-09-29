@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1610 records across 8 buckets.
+1611 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -241,6 +241,7 @@ markers; everything below GENERATED is rebuilt.
 - [euclid-single-rgb-vis-lp](2026/09/euclid-single-rgb-vis-lp.md)
 - [experimental-colab](2026/09/experimental-colab.md)
 - [eyes-board-conductor-registry](2026/09/eyes-board-conductor-registry.md)
+- [eyes-fit-cti-instances](2026/09/eyes-fit-cti-instances.md)
 - [eyes-galaxy-instance](2026/09/eyes-galaxy-instance.md)
 - [eyes-organ-order](2026/09/eyes-organ-order.md)
 - [eyes-organ-skeleton](2026/09/eyes-organ-skeleton.md) — PyAutoEyes is stripped to the cross-project dashboard skeleton. The lens scripts, dataset and GALLERY.md are g…

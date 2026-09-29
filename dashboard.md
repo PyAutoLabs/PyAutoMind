@@ -42,7 +42,7 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 8 |
+| [In flight](#in-flight) (`active/`) | 7 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
@@ -252,14 +252,6 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/eyes_p4_fit_cti_instances.md">PyAutoEyes phase 4 — birth autofit_visualization + autocti_visualization</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/455">issue #455</a> — issued 2026-09-29 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/431">PyAutoBrain#431</a>, <a href="https://github.com/PyAutoLabs/autofit_visualization/pull/1">autofit_visualization#1</a>, <a href="https://github.com/PyAutoLabs/autocti_visualization/pull/1">autocti_visualization#1</a>, <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/456">PyAutoMind#456</a>, <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/244">PyAutoHeart#244</a>, <a href="https://github.com/PyAutoLabs/PyAutoEyes/pull/5">PyAutoEyes#5</a>, <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/180">PyAutoNerves#180</a>, <a href="https://github.com/PyAutoLabs/PyAutoGut/pull/16">PyAutoGut#16</a>, <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/49">PyAutoCortex#49</a></summary>
-
-```
-/start_dev active/eyes_p4_fit_cti_instances.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/interferometer_streaming_visibilities.md">Streaming visibilities for memory efficiency on the sparse interferometer path</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/588">issue #588</a> — issued 2026-09-29 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/589">PyAutoArray#589</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/637">PyAutoGalaxy#637</a></summary>
 
 ```
@@ -339,6 +331,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoBrain#387](https://github.com/PyAutoLabs/PyAutoBrain/pull/387) — `complete/2026/09/codex-token-efficiency.md`
 - [PyAutoBrain#406](https://github.com/PyAutoLabs/PyAutoBrain/pull/406) — `complete/2026/09/community-surface-brain.md`
 - [PyAutoBrain#429](https://github.com/PyAutoLabs/PyAutoBrain/pull/429) — `complete/2026/09/eyes-board-conductor-registry.md`
+- [PyAutoBrain#431](https://github.com/PyAutoLabs/PyAutoBrain/pull/431) — `complete/2026/09/eyes-fit-cti-instances.md`
 - [PyAutoBrain#430](https://github.com/PyAutoLabs/PyAutoBrain/pull/430) — `complete/2026/09/eyes-galaxy-instance.md`
 - [PyAutoBrain#427](https://github.com/PyAutoLabs/PyAutoBrain/pull/427) — `complete/2026/09/eyes-organ-order.md`
 - [PyAutoBrain#428](https://github.com/PyAutoLabs/PyAutoBrain/pull/428) — `complete/2026/09/eyes-organ-skeleton.md`
@@ -353,6 +346,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 **PyAutoEyes**
 
 - [PyAutoEyes#3](https://github.com/PyAutoLabs/PyAutoEyes/pull/3) — `complete/2026/09/eyes-board-conductor-registry.md`
+- [PyAutoEyes#5](https://github.com/PyAutoLabs/PyAutoEyes/pull/5) — `complete/2026/09/eyes-fit-cti-instances.md`
 - [PyAutoEyes#4](https://github.com/PyAutoLabs/PyAutoEyes/pull/4) — `complete/2026/09/eyes-galaxy-instance.md`
 - [PyAutoEyes#2](https://github.com/PyAutoLabs/PyAutoEyes/pull/2) — `complete/2026/09/eyes-organ-skeleton.md`
 
@@ -382,6 +376,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 - [PyAutoHeart#240](https://github.com/PyAutoLabs/PyAutoHeart/pull/240) — `complete/2026/09/autolens-visualization-rebirth.md`
 - [PyAutoHeart#242](https://github.com/PyAutoLabs/PyAutoHeart/pull/242) — `complete/2026/09/board-footer-family-fix.md`
+- [PyAutoHeart#244](https://github.com/PyAutoLabs/PyAutoHeart/pull/244) — `complete/2026/09/eyes-fit-cti-instances.md`
 - [PyAutoHeart#243](https://github.com/PyAutoLabs/PyAutoHeart/pull/243) — `complete/2026/09/eyes-galaxy-instance.md`
 - [PyAutoHeart#241](https://github.com/PyAutoLabs/PyAutoHeart/pull/241) — `complete/2026/09/eyes-organ-order.md`
 
@@ -398,6 +393,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoMind#447](https://github.com/PyAutoLabs/PyAutoMind/pull/447) — `complete/2026/09/autolens-visualization-rebirth.md`
 - [PyAutoMind#425](https://github.com/PyAutoLabs/PyAutoMind/pull/425) — `complete/2026/09/codex-context-efficiency.md`
 - [PyAutoMind#427](https://github.com/PyAutoLabs/PyAutoMind/pull/427) — `complete/2026/09/community-surface-policy.md`
+- [PyAutoMind#456](https://github.com/PyAutoLabs/PyAutoMind/pull/456) — `complete/2026/09/eyes-fit-cti-instances.md`
 - [PyAutoMind#453](https://github.com/PyAutoLabs/PyAutoMind/pull/453) — `complete/2026/09/eyes-galaxy-instance.md`
 - [PyAutoMind#449](https://github.com/PyAutoLabs/PyAutoMind/pull/449) — `complete/2026/09/eyes-organ-order.md`
 - [PyAutoMind#406](https://github.com/PyAutoLabs/PyAutoMind/pull/406) — `complete/2026/09/provider-neutral-bundle-prompts.md`
@@ -415,6 +411,14 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 **PyAutoScientist**
 
 - [PyAutoScientist#35](https://github.com/PyAutoLabs/PyAutoScientist/pull/35) — `complete/2026/09/eyes-organ-order.md`
+
+**autocti_visualization**
+
+- [autocti_visualization#1](https://github.com/PyAutoLabs/autocti_visualization/pull/1) — `complete/2026/09/eyes-fit-cti-instances.md`
+
+**autofit_visualization**
+
+- [autofit_visualization#1](https://github.com/PyAutoLabs/autofit_visualization/pull/1) — `complete/2026/09/eyes-fit-cti-instances.md`
 
 **autofit_workspace**
 
@@ -2543,19 +2547,18 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
 | 2026-09-29 | issued | <a href="active/interferometer_streaming_visibilities.md">Streaming visibilities for memory efficiency on the sparse…</a> |
 | 2026-09-29 | filed | <a href="draft/maintenance/pyautomind/session_start_hook_copies_regen.md">Regenerate the 28 drifted <code>.claude/hooks/session-start.sh</code> copies…</a> |
-| 2026-09-29 | issued | <a href="active/eyes_p4_fit_cti_instances.md">PyAutoEyes phase 4 — birth autofit_visualization +…</a> |
 | 2026-09-29 | issued | <a href="active/nautilus_converged_run_double_pass.md">Nautilus: a converged single-chunk fit still runs a second no-op…</a> |
 | 2026-09-28 | issued | <a href="active/point_source_gpu_p01.md">Point-source A100 campaign — phase 0+1 (lean): baseline + bottleneck…</a> |
 | 2026-09-28 | filed | <a href="draft/bug/autolens/point_image_pair_all_forward_grad_nan.md">Forward-mode gradient is NaN for FitPositionsImagePairAll(Solved)…</a> |
 | 2026-09-28 | issued | <a href="active/point_source_search_nautilus_leaf.md">First point-source search leaf: Nautilus on the source-plane solved…</a> |
 | 2026-09-27 | issued | <a href="active/sparse_operator_dropped_and_double_convolution.md">apply_over_sampling drops the sparse operator; dense route convolves…</a> |
 | 2026-09-27 | issued | <a href="active/workspace_config_cleanup.md">Workspace config cleanup: remove orphan config keys the Nerves board…</a> |
+| 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/power_law_multipole_m1_singular_at_isothermal_slope.md">PowerLawMultipole with m=1 returns -inf / NaN deflections at slope…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently…</a> |
@@ -2565,12 +2568,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-26 | filed | <a href="draft/feature/autolens_assistant/bootstrap_smoke_codex_and_bench_pr.md">bootstrap-smoke: run Codex on the v2 prompt, then merge the…</a> |
 | 2026-09-26 | filed | <a href="draft/refactor/workspaces/abell_1201_local_cleanup.md">Repo cleanup: retire the Abell 1201 worktree and local raw data</a> |
 | 2026-09-26 | filed | <a href="draft/feature/autolens_assistant/colab_refinement_throughout.md">Refine the assistant for Google Colab, here and throughout</a> |
+| 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
 | 2026-09-25 | filed | <a href="draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md">Keep caches off <code>$HOME</code> on HPC — phase 2 remainder: euclid pipeline…</a> |
 | 2026-09-24 | filed | <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> |
 | 2026-09-23 | filed | <a href="draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
@@ -2580,12 +2583,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> |
+| 2026-09-18 | filed | <a href="draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md">The latent smoke's empty-block assertion names one cause…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-18 | filed | <a href="draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md">The latent smoke's empty-block assertion names one cause…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
@@ -2595,12 +2598,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source A100 speed-up campaign: profile and optimize with the…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> |
+| 2026-09-17 | filed | <a href="draft/bug/autoarray/mesh_geometry_areas_transformed_adapt_image_indexerror.md">MeshGeometryRectangular.areas_transformed raises IndexError for…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-17 | filed | <a href="draft/bug/autoarray/mesh_geometry_areas_transformed_adapt_image_indexerror.md">MeshGeometryRectangular.areas_transformed raises IndexError for…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autofit/ep_analysis_level_compile_cache.md">EP: cache the compiled JAX likelihood on the Analysis across factor…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> |
@@ -2610,6 +2613,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-16 | filed | <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding…</a> |
 | 2026-09-16 | filed | <a href="draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> /…</a> |
 | 2026-09-16 | filed | <a href="draft/feature/autolens/coolest_pixel_grid_export.md">COOLEST: export MGE lens light and pixelized sources as pixel grids</a> |
+| 2026-09-16 | filed | <a href="draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md">Adaptive Delaunay mesh places two mesh pixels 0.001" apart — a…</a> |
 
 </details>
 
@@ -3021,7 +3025,7 @@ Continue the 'autolens_inference — inference benchmarking repo, birth to first
 <details><summary>📋 <b>PyAutoEyes — two layers: <code>&lt;lib&gt;_visualization</code> project repos make, store and track every library's figures; the organ PyAutoEyes is the cross-project Pages dashboard over them (registry, manifest contract, critique route)</b> — ledger: `PyAutoEyes/dashboard.md` — phase 0 COMPLETE 2026-09-25 (PyAutoMind#437 closed; record <code>complete/2026/09/pyautoeyes-birth-organ-row.md</code>; nine organ PRs…</summary>
 
 ```
-Continue the 'PyAutoEyes — two layers: `<lib>_visualization` project repos make, store and track every library's figures; the organ PyAutoEyes is the cross-project Pages dashboard over them (registry, manifest contract, critique route)' epic. Its canonical state lives in PyAutoEyes/dashboard.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: human decision 2026-09-25 — promote `autolens_visualization` (PyAutoMind#436, PR #1 merged) to the organ PyAutoEyes (GitHub rename, not re-create; plain git PNGs, re-render on library release only). Human decision 2026-09-28, superseding the 2026-09-25 "one instance subtree per library inside the organ" layout: "we want both: project repos make/store/track figures, the organ is the cross-project dashboard; same layering as autolens_profiling/autolens_inference". Project repos `<lib>_visualization` (lens/autolens_visualization first; then galaxy/autogalaxy_visualization, fit/autofit_visualization, cti/autocti_visualization) own producers, simulators, datasets, `plots.yaml`, instruments, tracked PNGs, `GALLERY.md`, the render harness and lint/render workflows (re-render on library release dispatch), and commit a TRACKED `gallery/viz_manifest.yaml` + rendered stack version — the organ's read contract. The organ PyAutoEyes holds `registry.yaml` (one row per instance), the manifest contract, the `eyes/` package, `bin/pyauto-eyes` (`board`, `check`, `survey`) and a Pages dashboard (refreshed by `repository_dispatch` from each project repo's `render.yml` + cron, Cortex pattern) that shows thumbnails LINKED to the raw PNGs in the project repos (never copies them), per-instance freshness, survey gaps/orphans and a per-figure "suggest an improvement" affordance routed through intake; it renders nothing, never judges (the Brain Eyes conductor does, per instance via the registry) and never edits library plot code. Phases under `draft/feature/pyautoeyes/`: 0 organ row + boundary prose + local move (done: `complete/2026/09/pyautoeyes-birth-organ-row.md`), 1a re-birth `autolens_visualization` as the lens project repo — human `gh repo create`, push the current PyAutoEyes main history to it, tracked manifest, body-map project row, conductor default instance (done: `complete/2026/09/autolens-visualization-rebirth.md`), 1b strip PyAutoEyes to the organ skeleton — registry, `eyes/` package, `bin/pyauto-eyes`, Pages workflows (done: `complete/2026/09/eyes-organ-skeleton.md`), 2 dashboard content + critique route + Brain board chip + conductor `--instance` (done: `complete/2026/09/eyes-board-conductor-registry.md`), 3 birth `autogalaxy_visualization` (done: `complete/2026/09/eyes-galaxy-instance.md`), 4 birth `autofit_visualization` + `autocti_visualization` (`eyes_p4_fit_cti_instances.md`), 5 retire duplicate galleries + public surfaces (`eyes_p5_retire_duplicates_public_surfaces.md`). Lens project-repo follow-ups carried from #436, now targeting `autolens_visualization`: multi-galaxy gallery (`multi_galaxy_gallery.md`, phase 6), group + cluster galleries (`group_cluster_gallery.md`, phase 7); Eyes survey recursive producer scan (`draft/bug/pyautobrain/eyes_survey_recursive_producers.md`). Release dispatch sender (found in the phase-3 survey 2026-09-29: nothing sends `pyautolens-release` / `pyautogalaxy-release` today): `draft/feature/pyautohands/release_fires_visualization_dispatch.md`. Plot critiques recorded on #436 carry over for a later `/eyes` pass. Ledger `PyAutoEyes/dashboard.md` landed in phase 1b (content grows in phase 2). Every phase ships under a contemporaneous human Heart RED override while Heart is RED; merge stays human.
+Continue the 'PyAutoEyes — two layers: `<lib>_visualization` project repos make, store and track every library's figures; the organ PyAutoEyes is the cross-project Pages dashboard over them (registry, manifest contract, critique route)' epic. Its canonical state lives in PyAutoEyes/dashboard.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: human decision 2026-09-25 — promote `autolens_visualization` (PyAutoMind#436, PR #1 merged) to the organ PyAutoEyes (GitHub rename, not re-create; plain git PNGs, re-render on library release only). Human decision 2026-09-28, superseding the 2026-09-25 "one instance subtree per library inside the organ" layout: "we want both: project repos make/store/track figures, the organ is the cross-project dashboard; same layering as autolens_profiling/autolens_inference". Project repos `<lib>_visualization` (lens/autolens_visualization first; then galaxy/autogalaxy_visualization, fit/autofit_visualization, cti/autocti_visualization) own producers, simulators, datasets, `plots.yaml`, instruments, tracked PNGs, `GALLERY.md`, the render harness and lint/render workflows (re-render on library release dispatch), and commit a TRACKED `gallery/viz_manifest.yaml` + rendered stack version — the organ's read contract. The organ PyAutoEyes holds `registry.yaml` (one row per instance), the manifest contract, the `eyes/` package, `bin/pyauto-eyes` (`board`, `check`, `survey`) and a Pages dashboard (refreshed by `repository_dispatch` from each project repo's `render.yml` + cron, Cortex pattern) that shows thumbnails LINKED to the raw PNGs in the project repos (never copies them), per-instance freshness, survey gaps/orphans and a per-figure "suggest an improvement" affordance routed through intake; it renders nothing, never judges (the Brain Eyes conductor does, per instance via the registry) and never edits library plot code. Phases under `draft/feature/pyautoeyes/`: 0 organ row + boundary prose + local move (done: `complete/2026/09/pyautoeyes-birth-organ-row.md`), 1a re-birth `autolens_visualization` as the lens project repo — human `gh repo create`, push the current PyAutoEyes main history to it, tracked manifest, body-map project row, conductor default instance (done: `complete/2026/09/autolens-visualization-rebirth.md`), 1b strip PyAutoEyes to the organ skeleton — registry, `eyes/` package, `bin/pyauto-eyes`, Pages workflows (done: `complete/2026/09/eyes-organ-skeleton.md`), 2 dashboard content + critique route + Brain board chip + conductor `--instance` (done: `complete/2026/09/eyes-board-conductor-registry.md`), 3 birth `autogalaxy_visualization` (done: `complete/2026/09/eyes-galaxy-instance.md`), 4 birth `autofit_visualization` + `autocti_visualization` (done: `complete/2026/09/eyes-fit-cti-instances.md`), 5 retire duplicate galleries + public surfaces (`eyes_p5_retire_duplicates_public_surfaces.md`). Lens project-repo follow-ups carried from #436, now targeting `autolens_visualization`: multi-galaxy gallery (`multi_galaxy_gallery.md`, phase 6), group + cluster galleries (`group_cluster_gallery.md`, phase 7); Eyes survey recursive producer scan (`draft/bug/pyautobrain/eyes_survey_recursive_producers.md`). Release dispatch sender (found in the phase-3 survey 2026-09-29: nothing sends `pyautolens-release` / `pyautogalaxy-release` today): `draft/feature/pyautohands/release_fires_visualization_dispatch.md`. Plot critiques recorded on #436 carry over for a later `/eyes` pass. Ledger `PyAutoEyes/dashboard.md` landed in phase 1b (content grows in phase 2). Every phase ships under a contemporaneous human Heart RED override while Heart is RED; merge stays human.
 ```
 
 </details>

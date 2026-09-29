@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-09-29T19:24:53Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 7 in flight",
+  "updated": "2026-09-29T20:23:35Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "PyAutoEyes phase 4 \u2014 birth autofit_visualization + autocti_visualization \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/431",
-      "prompt": "/start_dev active/eyes_p4_fit_cti_instances.md"
-    },
     {
       "severity": "yellow",
       "text": "Streaming visibilities for memory efficiency on the sparse interferometer path \u2014 library-shipped, awaiting-merge",
@@ -107,6 +101,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#429 \u2014 eyes-board-conductor-registry",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/429",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoBrain PyAutoBrain#431 \u2014 eyes-fit-cti-instances",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/431",
       "prompt": null
     },
     {
