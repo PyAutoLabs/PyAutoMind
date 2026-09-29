@@ -16,15 +16,16 @@ Difficulty: large
 Autonomy: supervised
 Priority: normal
 Lane: local-dev
-Status: draft
+Status: active
 Consequence: judge
 Witness: the fit and cti project-repo surveys report no gaps/orphans; each repo's `gallery_build.py --check` green with a tracked manifest; `pyauto-eyes check` green over all four registry rows; the PyAutoEyes dashboard shows fit and cti sections; `repos_sync.py --check` clean
 Review-minutes: 15
 Epic: pyautoeyes-birth
 Phase: 4
 Filed: 2026-09-25
+Issued: 2026-09-29
 
-Blocked on: human repo creation only — phase 3 COMPLETE 2026-09-29 (PyAutoMind#452; record `complete/2026/09/eyes-galaxy-instance.md`); still needs `gh repo create PyAutoLabs/autofit_visualization --public` and `gh repo create PyAutoLabs/autocti_visualization --public`.
+Issue: https://github.com/PyAutoLabs/PyAutoMind/issues/455 — both repos created 2026-09-29.
 
 ## Task
 
