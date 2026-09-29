@@ -115,7 +115,11 @@
 - prompt: active/interferometer_streaming_visibilities.md
 - source: https://github.com/orgs/PyAutoLabs/discussions/13
 - session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-29
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/589
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/637
+- heart-ack: "YELLOW 2026-09-29 acknowledged at ship per the approved plan: workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py); manifest drift: workspace checkouts (manifest <-> disk) 1 mismatch vs PyAutoMind/repos.yaml; PyAutoMemory: open PR 8d old; release validation incomplete: no rehearsal for current source"
+- follow-up: draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md (Phase 2, array-free dataset); draft/feature/autolens/interferometer_sparse_precomputed_data_term.md (PyAutoLens parity)
 - autonomy: supervised (header); plan approved in-session 2026-09-29 (Phase 1: precomputed scalars + chunked accumulation + skip N_vis allocations; Phase 2 array-free dataset filed at ship)
 - worktree: ~/Code/PyAutoLabs-wt/interferometer-streaming-visibilities
 - parallel-claim: "PyAutoArray is also claimed by sparse-operator-oversampling-cache (#585, PR #586 open/green, 4 lines in inversion/interferometer/abstract.py + its test; trivial rebase). PyAutoGalaxy is also claimed by workspace-config-cleanup (#441; Galaxy #630 already merged, held for release; disjoint files). Parallel claims human-approved 2026-09-29 with the plan."
