@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/eyes_p3_galaxy_instance.md">PyAutoEyes phase 3 — birth autogalaxy_visualization (PyAutoGalaxy figures)</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/452">issue #452</a> — issued 2026-09-29 — library-dev</summary>
+<details><summary>📋 <a href="active/eyes_p3_galaxy_instance.md">PyAutoEyes phase 3 — birth autogalaxy_visualization (PyAutoGalaxy figures)</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/452">issue #452</a> — issued 2026-09-29 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/430">PyAutoBrain#430</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_visualization/pull/1">autogalaxy_visualization#1</a>, <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/453">PyAutoMind#453</a>, <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/243">PyAutoHeart#243</a>, <a href="https://github.com/PyAutoLabs/PyAutoEyes/pull/4">PyAutoEyes#4</a>, <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/179">PyAutoNerves#179</a>, <a href="https://github.com/PyAutoLabs/PyAutoGut/pull/15">PyAutoGut#15</a>, <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/48">PyAutoCortex#48</a> — ⏳ pending release: PyAutoBrain — ⏳ pending release: autogalaxy_visualization — ⏳ pending release: PyAutoMind — ⏳ pending release: PyAutoHeart — ⏳ pending release: PyAutoEyes</summary>
 
 ```
 /start_dev active/eyes_p3_galaxy_instance.md
@@ -318,6 +318,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoBrain**
 
+- [PyAutoBrain#430](https://github.com/PyAutoLabs/PyAutoBrain/pull/430) — `active/eyes_p3_galaxy_instance.md`
 - [PyAutoBrain#426](https://github.com/PyAutoLabs/PyAutoBrain/pull/426) — `complete/2026/09/autolens-visualization-rebirth.md`
 - [PyAutoBrain#404](https://github.com/PyAutoLabs/PyAutoBrain/pull/404) — `complete/2026/09/codex-context-efficiency.md`
 - [PyAutoBrain#387](https://github.com/PyAutoLabs/PyAutoBrain/pull/387) — `complete/2026/09/codex-token-efficiency.md`
@@ -335,6 +336,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoEyes**
 
+- [PyAutoEyes#4](https://github.com/PyAutoLabs/PyAutoEyes/pull/4) — `active/eyes_p3_galaxy_instance.md`
 - [PyAutoEyes#3](https://github.com/PyAutoLabs/PyAutoEyes/pull/3) — `complete/2026/09/eyes-board-conductor-registry.md`
 - [PyAutoEyes#2](https://github.com/PyAutoLabs/PyAutoEyes/pull/2) — `complete/2026/09/eyes-organ-skeleton.md`
 
@@ -362,6 +364,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoHeart**
 
+- [PyAutoHeart#243](https://github.com/PyAutoLabs/PyAutoHeart/pull/243) — `active/eyes_p3_galaxy_instance.md`
 - [PyAutoHeart#240](https://github.com/PyAutoLabs/PyAutoHeart/pull/240) — `complete/2026/09/autolens-visualization-rebirth.md`
 - [PyAutoHeart#242](https://github.com/PyAutoLabs/PyAutoHeart/pull/242) — `complete/2026/09/board-footer-family-fix.md`
 - [PyAutoHeart#241](https://github.com/PyAutoLabs/PyAutoHeart/pull/241) — `complete/2026/09/eyes-organ-order.md`
@@ -376,6 +379,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoMind**
 
+- [PyAutoMind#453](https://github.com/PyAutoLabs/PyAutoMind/pull/453) — `active/eyes_p3_galaxy_instance.md`
 - [PyAutoMind#447](https://github.com/PyAutoLabs/PyAutoMind/pull/447) — `complete/2026/09/autolens-visualization-rebirth.md`
 - [PyAutoMind#425](https://github.com/PyAutoLabs/PyAutoMind/pull/425) — `complete/2026/09/codex-context-efficiency.md`
 - [PyAutoMind#427](https://github.com/PyAutoLabs/PyAutoMind/pull/427) — `complete/2026/09/community-surface-policy.md`
@@ -404,6 +408,10 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 - [autofit_workspace_test#98](https://github.com/PyAutoLabs/autofit_workspace_test/pull/98) — `complete/2026/09/ep-stale-tracking-per-variable.md`
 - [autofit_workspace_test#99](https://github.com/PyAutoLabs/autofit_workspace_test/pull/99) — `complete/2026/09/samples-errors-at-sigma-instance.md`
+
+**autogalaxy_visualization**
+
+- [autogalaxy_visualization#1](https://github.com/PyAutoLabs/autogalaxy_visualization/pull/1) — `active/eyes_p3_galaxy_instance.md`
 
 **autogalaxy_workspace**
 

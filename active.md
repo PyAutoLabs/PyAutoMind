@@ -89,7 +89,7 @@
 - prompt: active/eyes_p3_galaxy_instance.md
 - epic: pyautoeyes-birth
 - session: Claude Code CLI (Fable 5.1 architect, Opus execution), 2026-09-29; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/eyes-galaxy-instance
 - autonomy: supervised (header); plan approved in-session 2026-09-29; merge is human
 - repos:
@@ -98,3 +98,18 @@
   - PyAutoMind: feature/eyes-galaxy-instance
   - PyAutoBrain: feature/eyes-galaxy-instance
   - PyAutoHeart: feature/eyes-galaxy-instance
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/430
+- library-pr: https://github.com/PyAutoLabs/autogalaxy_visualization/pull/1
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/453
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/243
+- library-pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/4
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/179
+- library-pr: https://github.com/PyAutoLabs/PyAutoGut/pull/15
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/48
+- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/430
+- pending-release: autogalaxy_visualization@https://github.com/PyAutoLabs/autogalaxy_visualization/pull/1
+- pending-release: PyAutoMind@https://github.com/PyAutoLabs/PyAutoMind/pull/453
+- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/243
+- pending-release: PyAutoEyes@https://github.com/PyAutoLabs/PyAutoEyes/pull/4
+- heart-ack: "2026-09-29 YELLOW acknowledged via the approved plan at ship: workspace validation timeout autolens_test scripts/multi_dataset/rectangular.py (cloud#36404726969); manifest drift workspace checkouts 1 mismatch vs repos.yaml; PyAutoMemory open PR 8d old; release validation incomplete (no rehearsal for current source)"
+- resume: human merges in order Brain → autogalaxy_visualization → Mind → Heart → Eyes (+ Nerves/Gut/Cortex map blocks), then /prm; post-merge: grant PAT_PYAUTOLABS to autogalaxy_visualization, workflow_dispatch its render.yml, run pyauto-eyes check
