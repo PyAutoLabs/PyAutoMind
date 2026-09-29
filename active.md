@@ -98,3 +98,17 @@
   - PyAutoMind: feature/eyes-fit-cti-instances
   - PyAutoBrain: feature/eyes-fit-cti-instances
   - PyAutoHeart: feature/eyes-fit-cti-instances
+
+## interferometer-streaming-visibilities
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/588
+- issued: 2026-09-29
+- prompt: active/interferometer_streaming_visibilities.md
+- source: https://github.com/orgs/PyAutoLabs/discussions/13
+- session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-29
+- status: library-dev
+- autonomy: supervised (header); plan approved in-session 2026-09-29 (Phase 1: precomputed scalars + chunked accumulation + skip N_vis allocations; Phase 2 array-free dataset filed at ship)
+- worktree: ~/Code/PyAutoLabs-wt/interferometer-streaming-visibilities
+- parallel-claim: "PyAutoArray is also claimed by sparse-operator-oversampling-cache (#585, PR #586 open/green, 4 lines in inversion/interferometer/abstract.py + its test; trivial rebase). PyAutoGalaxy is also claimed by workspace-config-cleanup (#441; Galaxy #630 already merged, held for release; disjoint files). Parallel claims human-approved 2026-09-29 with the plan."
+- repos:
+  - PyAutoArray: feature/interferometer-streaming-visibilities
+  - PyAutoGalaxy: feature/interferometer-streaming-visibilities
