@@ -24,7 +24,7 @@ Epic: pyautoeyes-birth
 Phase: 4
 Filed: 2026-09-25
 
-Blocked on: phase 3 shipped; human repo creation (`gh repo create PyAutoLabs/autofit_visualization --public` and `gh repo create PyAutoLabs/autocti_visualization --public`).
+Blocked on: human repo creation only — phase 3 COMPLETE 2026-09-29 (PyAutoMind#452; record `complete/2026/09/eyes-galaxy-instance.md`); still needs `gh repo create PyAutoLabs/autofit_visualization --public` and `gh repo create PyAutoLabs/autocti_visualization --public`.
 
 ## Task
 

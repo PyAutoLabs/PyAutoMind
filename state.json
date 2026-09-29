@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-09-29T09:07:57Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
+  "updated": "2026-09-29T09:26:28Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "PyAutoEyes phase 3 \u2014 birth autogalaxy_visualization (PyAutoGalaxy figures) \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/430",
-      "prompt": "/start_dev active/eyes_p3_galaxy_instance.md"
-    },
     {
       "severity": "yellow",
       "text": "Point-source A100 campaign \u2014 phase 0+1 (lean): baseline + bottleneck map\u2026 \u2014 awaiting-merge (autolens_profiling#353 open; supervised, merge is human)",
@@ -75,12 +69,6 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#430 \u2014 PyAutoEyes phase 3 \u2014 birth autogalaxy_visualization (PyAutoGalaxy figures)",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/430",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#426 \u2014 autolens-visualization-rebirth",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/426",
       "prompt": null
@@ -111,6 +99,12 @@
     },
     {
       "severity": "yellow",
+      "text": "pending release: PyAutoBrain PyAutoBrain#430 \u2014 eyes-galaxy-instance",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/430",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#427 \u2014 eyes-organ-order",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/427",
       "prompt": null
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#409 \u2014 notify-slack-community-discussions",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/409",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoBrain PyAutoBrain#384 \u2014 provider-neutral-bundle-prompts",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/384",
       "prompt": null
     }
   ]
