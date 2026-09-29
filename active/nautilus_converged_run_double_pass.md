@@ -13,6 +13,8 @@ Status: formalised
 Consequence: glance
 Witness: a converged single-chunk Nautilus fit calls the sampler's run() once and performs no during_analysis update.
 Filed: 2026-09-24
+Issued: 2026-09-29
+Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1651
 
 ## Finding
 

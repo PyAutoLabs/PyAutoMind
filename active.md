@@ -1,5 +1,16 @@
 # Active Tasks
 
+## ep-nautilus-single-pass
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1651
+- issued: 2026-09-29
+- prompt: active/nautilus_converged_run_double_pass.md
+- session: Codex; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/ep-nautilus-single-pass
+- repos:
+  - PyAutoFit: feature/ep-nautilus-single-pass
+- notes: Human approved the convergence/budget regression and timing plan; see issue. Heart entry YELLOW for old PRs in HowToGalaxy, HowToLens and PyAutoMemory.
+
 ## workspace-config-cleanup
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/441
 - issued: 2026-09-27
