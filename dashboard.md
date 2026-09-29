@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 258 |
+| [Backlog](#backlog) (`draft/`) | 260 |
 
 > **No batch in flight.**
 
@@ -150,7 +150,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 118
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 119
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/interferometer_streaming_visibilities.md">Streaming visibilities for memory efficiency on the sparse interferometer path</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/588">issue #588</a> — issued 2026-09-29 — library-dev</summary>
+<details><summary>📋 <a href="active/interferometer_streaming_visibilities.md">Streaming visibilities for memory efficiency on the sparse interferometer path</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/588">issue #588</a> — issued 2026-09-29 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/589">PyAutoArray#589</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/637">PyAutoGalaxy#637</a></summary>
 
 ```
 /start_dev active/interferometer_streaming_visibilities.md
@@ -581,7 +581,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**258** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **56** of them belong to an epic and are listed only under [Epics](#epics) below.
+**260** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **56** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 74</summary>
@@ -1181,7 +1181,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>feature</b> — 41</summary>
+<summary><b>feature</b> — 43</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_assistant/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging, point_source and interferometer</a> — autolens_assistant · medium · supervised · high</summary>
 
@@ -1219,6 +1219,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/autofit_assistant/data_loading_and_selection_cuts_skill.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/interferometer_sparse_precomputed_data_term.md">PyAutoLens parity: precomputed data term on the sparse interferometer path…</a> — autolens · small · supervised · medium</summary>
+
+```
+/start_dev draft/feature/autolens/interferometer_sparse_precomputed_data_term.md
 ```
 
 </details>
@@ -1267,6 +1275,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/pyautoheart/howto_real_settings_nightly.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md">Array-free streamed interferometer dataset (streaming visibilities, phase 2)</a> — autoarray · large · supervised · medium</summary>
+
+```
+/start_dev draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md
 ```
 
 </details>
@@ -2516,7 +2532,7 @@ Contract (the `start_bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 40 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 41 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -3241,7 +3257,7 @@ Continue the 'PyAutoEyes — two layers: `<lib>_visualization` project repos mak
 
 </details>
 
-70 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+72 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3249,10 +3265,12 @@ Continue the 'PyAutoEyes — two layers: `<lib>_visualization` project repos mak
 - `draft/feature/autoarray/adapt_linear_default_flip.md — unknown theme keyword(s): inference`
 - `draft/feature/autoarray/edge_zeroed_log_det_cholesky_reuse.md — unknown theme keyword(s): inversion`
 - `draft/feature/autoarray/interferometer_chunked_transform_mapping_matrix.md — unknown theme keyword(s): jax-gpu, vram`
+- `draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md — unknown theme keyword(s): sparse-operator, memory`
 - `draft/feature/autoarray/interferometer_numba_gate_retune_70.md — unknown theme keyword(s): config`
 - `draft/feature/autoarray/source_clumps_robust_scale.md — unknown theme keyword(s): source-reconstruction`
 - `draft/feature/autofit/certified_solver_batched_guard_c2.md — unknown theme keyword(s): inversion`
 - `draft/feature/autolens/coolest_pixel_grid_export.md — unknown theme keyword(s): coolest, interop, euclid`
+- `draft/feature/autolens/interferometer_sparse_precomputed_data_term.md — unknown theme keyword(s): sparse-operator, memory`
 - `draft/feature/autolens_assistant/benchmark_forward_model_consistency.md — unknown theme keyword(s): assistant, benchmarks`
 - `draft/feature/autolens_assistant/benchmark_positions_initialised_inference.md — unknown theme keyword(s): assistant, benchmarks`
 - `draft/feature/autolens_assistant/bootstrap_smoke_codex_and_bench_pr.md — unknown theme keyword(s): assistant, benchmarks, onboarding`
