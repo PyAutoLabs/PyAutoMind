@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-09-29T20:30:02Z",
+  "updated": "2026-09-29T20:58:17Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "Streaming visibilities for memory efficiency on the sparse interferometer path \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/589",
       "prompt": "/start_dev active/interferometer_streaming_visibilities.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Nautilus: a converged single-chunk fit still runs a second no-op `run()` pass\u2026 \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1652",
+      "prompt": "/start_dev active/nautilus_converged_run_double_pass.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#427 \u2014 eyes-organ-order",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/427",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#428 \u2014 eyes-organ-skeleton",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/428",
       "prompt": null
     }
   ]
