@@ -70,25 +70,6 @@
 - follow-up: draft/bug/autolens/point_image_pair_all_forward_grad_nan.md (released forward-mode gradient NaN, found here)
 - resume: human go/no-go on phase 2 (memo in results/notes/point_source_gpu_breakdown_2026_09.md); then /prm #353
 
-## eyes-board-conductor-registry
-- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/451
-- issued: 2026-09-28
-- prompt: active/eyes_p2_board_and_conductor_registry.md
-- epic: pyautoeyes-birth
-- session: Claude Code CLI (Fable architect, Opus execution), 2026-09-28; session ID unavailable
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/3
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/429
-- pending-release: PyAutoEyes@https://github.com/PyAutoLabs/PyAutoEyes/pull/3
-- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/429
-- worktree: ~/Code/PyAutoLabs-wt/eyes-board-conductor-registry
-- autonomy: supervised (header); epic phasing human-approved ("do next phase") 2026-09-28; merge is human
-- heart-ack: "2026-09-28 YELLOW acknowledged by human: PyAutoMemory open PR 8d old; manifest drift workspace checkouts (autolens_visualization unregistered, stale Heart snapshot); workspace validation timeout autolens_test multi_dataset/rectangular.py (cloud#36404726969)"
-- repos:
-  - PyAutoEyes: feature/eyes-board-conductor-registry
-  - PyAutoBrain: feature/eyes-board-conductor-registry
-- resume: "PRs open (PyAutoEyes#3 first, then PyAutoBrain#429); live pyauto-eyes check OK; Heart YELLOW = acked set (+ STALE release-validation marker, release-only); next: human /prm (merge Eyes then Brain); no workspace impact"
-
 ## point-source-search-nautilus-leaf
 - issue: https://github.com/PyAutoLabs/autolens_inference/issues/15
 - issued: 2026-09-28

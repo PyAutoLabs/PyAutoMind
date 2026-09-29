@@ -23,7 +23,7 @@ Epic: pyautoeyes-birth
 Phase: 3
 Filed: 2026-09-25
 
-Blocked on: phase 2 shipped; human repo creation (`gh repo create PyAutoLabs/autogalaxy_visualization --public`).
+Blocked on: human repo creation (`gh repo create PyAutoLabs/autogalaxy_visualization --public`); phase 2 shipped 2026-09-28 (`complete/2026/09/eyes-board-conductor-registry.md`).
 
 ## Task
 
