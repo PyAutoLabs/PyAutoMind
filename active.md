@@ -1,5 +1,17 @@
 # Active Tasks
 
+## cockpit-integrated-navigation
+- issue: https://github.com/PyAutoLabs/pyautolabs.github.io/issues/18
+- issued: 2026-09-30
+- prompt: active/cockpit-integrated-navigation.md
+- session: Codex (GPT-6), Fable 5.1 independent plan review
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/cockpit-integrated-navigation
+- repos:
+  - pyautolabs.github.io: feature/cockpit-integrated-navigation
+- approval: User approved plan and requested Fable review then implementation; no merge authorization.
+- resume: Implement accepted plan and address Fable history, viewport, service-worker and internal-navigation findings; browser-check mobile and desktop.
+
 ## interferometer-decision-matrix
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/356
 - issued: 2026-09-30
