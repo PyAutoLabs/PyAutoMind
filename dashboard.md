@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 262 |
+| [Backlog](#backlog) (`draft/`) | 263 |
 
 > **No batch in flight.**
 
@@ -568,10 +568,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**262** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **59** of them belong to an epic and are listed only under [Epics](#epics) below.
+**263** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **59** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 75</summary>
+<summary><b>bug</b> — 76</summary>
 
 <details><summary>📋 <a href="draft/bug/autolens/point_image_pair_all_forward_grad_nan.md">Forward-mode gradient is NaN for FitPositionsImagePairAll(Solved) — released default gradient_mode="forward"</a> — autolens · small · supervised · high</summary>
 
@@ -721,6 +721,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/pyautobrain/worktree_sh_clobbers_root_activate.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautoheart/dashboard_section_labels_wrap.md">Heart dashboard section names wrap into narrow columns</a> — pyautoheart · small · human-required · medium</summary>
+
+```
+/start_dev draft/bug/pyautoheart/dashboard_section_labels_wrap.md
 ```
 
 </details>
@@ -3224,7 +3232,7 @@ Continue the 'Streaming visibilities — array-free sparse interferometer datase
 
 </details>
 
-71 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+72 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3264,12 +3272,12 @@ Continue the 'Streaming visibilities — array-free sparse interferometer datase
 - `draft/bug/priors/13_collapse_prior_and_message.md`
 - `draft/bug/priors/14_replace_transform_stack_with_bijectors.md`
 - `draft/bug/priors/z_features.md`
+- `draft/bug/pyautoheart/dashboard_section_labels_wrap.md`
 - `draft/refactor/autogalaxy/critical_curves_dispatch_cluster.md`
 - `draft/refactor/workspaces/abell_1201_local_cleanup.md`
 - `draft/docs/autolens/split_lensing_regimes.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
-- `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
-- _… and 31 more_
+- _… and 32 more_
 
 </details>
 
