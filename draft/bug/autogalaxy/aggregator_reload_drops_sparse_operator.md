@@ -21,4 +21,4 @@ Found 2026-09-30 in the Discussion #13 phase-2 survey. `autogalaxy/aggregator/in
 rebuilds `aa.Interferometer(data, noise_map, uv, transformer_class)` and never re-attaches a sparse operator, so a reloaded sparse fit runs
 `InversionInterferometerMapping`/w-tilde instead — a silent class change (cf. memory: assert the inversion class before blaming hardware).
 Fix: persist a `sparse_operator` marker (settings json or `dataset.fits` header) in `save_attributes` and re-apply on reload; the array-free
-case is handled by `draft/feature/autogalaxy/streaming_p2_fit_save_reload.md`.
+case shipped in `complete/2026/09/streaming-p2-fit-save-reload.md` (PyAutoGalaxy#639 + PyAutoLens#758).

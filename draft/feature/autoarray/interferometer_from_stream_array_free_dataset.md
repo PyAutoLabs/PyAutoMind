@@ -63,12 +63,14 @@ with 8 zero visibilities and a `TransformerDFT`. The upstream design should not 
 | Phase | Member prompt | Repos | Status |
 |---|---|---|---|
 | 1 | complete/2026/09/streaming-p1-array-free-dataset.md | PyAutoArray | SHIPPED 2026-09-30 — PyAutoArray#593 (merge bd03e09e), pending release |
-| 2 | `active/streaming_p2_fit_save_reload.md` | PyAutoGalaxy, PyAutoLens | issued 2026-09-30 — PyAutoGalaxy#638 |
+| 2 | complete/2026/09/streaming-p2-fit-save-reload.md | PyAutoGalaxy, PyAutoLens | SHIPPED 2026-09-30 — PyAutoGalaxy#639 (4c834ced) + PyAutoLens#758 (efd13c4c), pending release |
 | 3 | `draft/feature/autoarray/streaming_p3_visualizer.md` | PyAutoArray, PyAutoGalaxy, PyAutoLens | draft |
 | 4 | `draft/feature/autoarray/streaming_p4_light_profile_identity.md` | PyAutoArray, PyAutoGalaxy, PyAutoLens | draft |
 | 5 | `draft/feature/autoarray/streaming_p5_cubes_phase_centre.md` | PyAutoArray (+ datacube example) | draft |
 
 Deferred from phase 1: mild +100 MB RSS drift at 4e6 vis and super-linear witness wall time (likely per-chunk npz reads) — look at in phase 2.
+
+Deferred from phase 2: no public switch to disable `visualize_before_fit` (the witness used `search._visualize_before_fit = False`; `PYAUTO_TEST_MODE=1` does not skip it) — add one in phase 3; the database-path `save_fits` gap is filed as `draft/bug/autogalaxy/database_paths_dataset_fits_not_registered.md`.
 
 Design decisions taken with the phase plan (2026-09-30, human-approved): (a) array-free datasets carry
 `transformer=None` (no stub class); `AbstractInversionInterferometer.mask` reads the dataset mask;

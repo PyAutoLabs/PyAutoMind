@@ -21,7 +21,7 @@ Witness: fits with a non-linear light profile plus a pixelization, and with non-
 Review-minutes: 8
 Unattended: ready
 Parent: draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md
-Blocked-by: draft/feature/autogalaxy/streaming_p2_fit_save_reload.md
+Blocked-by: none (phase 2 merged 2026-09-30)
 
 Source: https://github.com/orgs/PyAutoLabs/discussions/13 phase 2, sliced 2026-09-30.
 

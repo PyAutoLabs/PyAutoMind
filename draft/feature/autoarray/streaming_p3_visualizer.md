@@ -21,7 +21,7 @@ Witness: `visualize_before_fit` and `visualize` (ag + al interferometer visualiz
 Review-minutes: 6
 Unattended: ready
 Parent: draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md
-Blocked-by: draft/feature/autogalaxy/streaming_p2_fit_save_reload.md
+Blocked-by: none (phase 2 merged 2026-09-30)
 
 Source: https://github.com/orgs/PyAutoLabs/discussions/13 phase 2, sliced 2026-09-30 (decision (c)). After this phase ships, post the promised follow-up on the discussion (see epics.md notes).
 

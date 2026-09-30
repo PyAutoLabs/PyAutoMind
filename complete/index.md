@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1626 records across 8 buckets.
+1627 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -476,6 +476,7 @@ markers; everything below GENERATED is rebuilt.
 - [start-here-mode](2026/09/start-here-mode.md)
 - [start-here-release-profile-script-cap](2026/09/start-here-release-profile-script-cap.md)
 - [streaming-p1-array-free-dataset](2026/09/streaming-p1-array-free-dataset.md)
+- [streaming-p2-fit-save-reload](2026/09/streaming-p2-fit-save-reload.md)
 - [subhalo-followup-moved-to-cortex](2026/09/subhalo-followup-moved-to-cortex.md)
 - [support-sections-point-to-discussions](2026/09/support-sections-point-to-discussions.md)
 - [test-mode-bypass-save-results](2026/09/test-mode-bypass-save-results.md) — closed completed 2026-09-14

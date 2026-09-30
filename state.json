@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-09-30T16:20:04Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
+  "updated": "2026-09-30T16:22:33Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,12 +12,6 @@
       "text": "Linear-solver programme phase 2: fix the raw-forward PDIP amplitude bias in PyAutoArray \u2014 library-shipped, workspace-pending",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/595",
       "prompt": "/start_dev active/raw_pdip_forward_amplitude_bias_fix.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Streaming phase 2: pixelization-only fits, save_attributes and aggregator reload on array-free datasets \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/639",
-      "prompt": "/start_dev active/streaming_p2_fit_save_reload.md"
     },
     {
       "severity": "yellow",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#431 \u2014 eyes-fit-cti-instances",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/431",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoBrain PyAutoBrain#430 \u2014 eyes-galaxy-instance",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/430",
       "prompt": null
     }
   ]
