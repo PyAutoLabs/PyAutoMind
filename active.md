@@ -124,12 +124,15 @@
 
 ## interferometer-sparse-precomputed-data-term
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/756
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/757
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/757
+- heart-ack: "YELLOW 2026-09-30 acknowledged at ship per the approved plan: workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py); manifest drift: public front-door organ tables (generated) 1 mismatch vs PyAutoMind/repos.yaml; HowToGalaxy: open PR 8d old; HowToLens: open PR 8d old; release validation incomplete: no rehearsal for current source"
 - issued: 2026-09-30
 - prompt: active/interferometer_sparse_precomputed_data_term.md
 - source: https://github.com/orgs/PyAutoLabs/discussions/13
 - parent: complete/2026/09/interferometer-streaming-visibilities.md
 - session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-30
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/interferometer-sparse-precomputed-data-term
 - autonomy: supervised (header); plan approved in-session 2026-09-30 (mirror PyAutoGalaxy#637 in autolens: data=None gate, inversion_with_data, cached profile properties, ported tests)
 - parallel-claim: "PyAutoLens is also claimed by workspace-config-cleanup (#441); its PyAutoLens PR #751 is already MERGED (test_autolens/model_figure/* only) and the claim is held for the release gate. Disjoint files. Parallel claim human-approved 2026-09-30 with the plan."
