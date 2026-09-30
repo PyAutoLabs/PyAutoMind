@@ -1,3 +1,20 @@
+- issue: https://github.com/PyAutoLabs/pyautolabs.github.io/issues/18 (closed)
+- completed: 2026-09-30
+- workspace-pr: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/19 (MERGED)
+- commit: e30b69df173668fec987dfcafa486e5ad2bd4723
+- merge-commit: 54d97ec21ef05af106d892690a027ecae44f134a
+- deployment: https://github.com/PyAutoLabs/pyautolabs.github.io/actions/runs/36760609419
+- live: https://pyautolabs.github.io/cockpit/
+- summary: Persistent icon/label navigation embeds nine independently published boards in one mobile-friendly cockpit. Overview preserves feed cards. Hash URLs, Back/Forward, accessible focus/status, touch targets, landscape layout, reload/new-tab recovery and updated offline shell implemented.
+- review: Independent Fable 5.1 plan review; addressed history, worker-boundary, dynamic-height and inter-board-navigation findings.
+- validation: Chromium nine live board snapshots across five viewport sizes (45 combinations), history/reload/polling, overview and embedded clipboard, keyboard focus, failure recovery, external URL guarding; live HTTP preview + worker scope/cache/offline; JS/JSON syntax and diff checks all passed. Post-deploy touch-emulated 390px browser confirms ten navigation links, embedded Heart/Brain switching without new tabs, Back to Heart, no shell overflow, shell-v2 worker and no JS page errors.
+- heart-red-override: User "Authorize shipping cockpit #18" after exact RED reason `release validation FAILED (stage integrate)` and other Heart reasons were shown. All applicable branch checks passed. User then separately authorized "merge and deploy". Heart RED remains unrelated to this static Pages publication; no library release performed.
+- ci: No PR checks configured; explicitly disclosed before acting on the user's merge command. Pages build, deploy and report-build-status jobs passed on the merge commit.
+- limitations: Physical iOS/Android and installed-app launch untested. Existing Eyes child board requires horizontal scrolling below approximately 797px; shell contains overflow. Owning-repo follow-up remains outside this task.
+- evidence: Local browser scripts, JSON results and screenshots preserved under PyAutoMind/tmp/cockpit-integrated-navigation-evidence/ before worktree removal (not versioned).
+
+## Original prompt
+
 # Integrated cockpit navigation with mobile-friendly organ icons
 
 Type: feature

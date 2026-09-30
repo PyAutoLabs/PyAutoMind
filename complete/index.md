@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1629 records across 8 buckets.
+1630 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -161,6 +161,7 @@ markers; everything below GENERATED is rebuilt.
 - [certified-solver-phase-c1-lane-rate](2026/09/certified-solver-phase-c1-lane-rate.md) — Certified-positive-solver phase C1 captured real Nautilus proposal batches at production n_batch=20 (HST fixed…
 - [certified-solver-scalar-default-flip](2026/09/certified-solver-scalar-default-flip.md)
 - [ci-smoke-speedup](2026/09/ci-smoke-speedup.md)
+- [cockpit-integrated-navigation](2026/09/cockpit-integrated-navigation.md) — closed
 - [cockpit-page](2026/09/cockpit-page.md) — closed
 - [codex-context-efficiency](2026/09/codex-context-efficiency.md)
 - [codex-hook-parity](2026/09/codex-hook-parity.md)

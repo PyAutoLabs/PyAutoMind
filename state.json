@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-09-30T18:45:05Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
+  "updated": "2026-09-30T18:45:34Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Integrated cockpit navigation with mobile-friendly organ icons \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/pyautolabs.github.io/pull/19",
-      "prompt": "/start_dev active/cockpit-integrated-navigation.md"
-    },
     {
       "severity": "yellow",
       "text": "PointSolver padding defaults follow the effective backend \u2014 arc phase 1b \u2014 library-shipped, awaiting-merge",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#429 \u2014 eyes-board-conductor-registry",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/429",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoBrain PyAutoBrain#431 \u2014 eyes-fit-cti-instances",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/431",
       "prompt": null
     }
   ]
