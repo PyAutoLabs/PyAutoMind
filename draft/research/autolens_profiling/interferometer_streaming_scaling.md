@@ -20,6 +20,10 @@ Epic: streaming-visibilities
 
 Source: the 2026-09-30 go/no-go question on Discussion https://github.com/orgs/PyAutoLabs/discussions/13 (HRSAstro's 2e8-sample ALMA cube). Phases 1-2 of the streaming epic are merged (PyAutoArray#593, PyAutoGalaxy#639, PyAutoLens#758). A scratchpad run of this benchmark was made in the CLI session on 2026-09-30 (`bench_stream.py`); this campaign ports it into the repo so the evidence is versioned and re-runnable per release.
 
+## Scratchpad result to reproduce (2026-09-30)
+
+In-memory `apply_sparse_operator` OOMs at 1e6 visibilities under a 10 GB cap (3.1 GB allocation in `nufft_precision_operator_via_nufft_from`; 2.1 GB peak already at 1e5). Streaming at chunk 65536: 16 / 52 / 174 / 539 s at 1e6 / 4e6 / 1.6e7 / 5e7 (≈11 s per 1e6 vis, linear), peak RSS 1.5–1.8 GB flat; chunk 4096 is 5× slower (per-chunk fixed cost: nufft spread 46 %, JAX recompiles ~73 across 40 chunks, device→host copies). 2e8 ⇒ ~37 min, ~1.8 GB. Verdict GO; the table is on the epic ledger.
+
 ## Why
 
 The array-free dataset only earns its maintenance cost (a second dataset kind every interferometer code path branches on) if it makes a real difference at the visibility counts real data reach. In-house datasets are ≤1.1e5 visibilities; the discussion's case is 2e8. The decision on phases 3-5 (visualizer, non-linear light profiles, cubes) rests on measured crossover memory and on the accumulator being linear and fast enough to reach 2e8.

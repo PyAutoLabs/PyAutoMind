@@ -82,6 +82,30 @@ re-attaches the operator for array-free datasets; the in-memory sparse reload ga
 (mask shape/pixel_scales/origin, eps, transformer class). Public commitment: the reply on Discussion #13
 promises a follow-up post when this lands.
 
+## Go/no-go benchmark (2026-09-30, laptop CPU, 15 GB RAM, 10 GB address-space cap per run)
+
+400-px circular mask at 0.05"/pix (125,676 pixels), TransformerNUFFT, synthetic visibilities generated per chunk in memory (no disk). Scratchpad `bench_stream.py`; to be ported as the `interferometer_streaming_scaling` campaign in autolens_profiling.
+
+| N_vis | path | chunk | peak RSS | wall | s per 1e6 vis | outcome |
+|---|---|---|---|---|---|---|
+| 1e5 | in-memory `apply_sparse_operator` | — | 2068 MB | 6.9 s | 69 | OK |
+| 1e6 | in-memory `apply_sparse_operator` | — | 6611 MB | 9.0 s | — | **OOM** (3.1 GB allocation in `nufft_precision_operator_via_nufft_from` L615) |
+| 4e6 | in-memory (parity run) | — | 4385 MB | — | — | **OOM** (6.3 GB allocation) |
+| 1e5 | stream | 4096 | 850 MB | 16.7 s | 167 | OK |
+| 1e6 | stream | 4096 | 872 MB | 77.7 s | 78 | OK |
+| 4e6 | stream | 4096 | 884 MB | 178 s | 45 | OK |
+| 1.6e7 | stream | 4096 | 990 MB | 647 s | 40 | OK |
+| 1e6 | stream | 65536 | 1498 MB | 15.8 s | 16 | OK |
+| 4e6 | stream | 65536 | 1509 MB | 52.2 s | 13 | OK |
+| 1.6e7 | stream | 65536 | 1493 MB | 174 s | 11 | OK |
+| 5e7 | stream | 65536 | 1755 MB | 539 s | 11 | OK |
+
+- The in-memory sparse path **cannot build the operator above ~1e6 visibilities on a 16 GB laptop**: its one-shot NUFFT precision build allocates ~3 kB per visibility of temporaries (3.1 GB at 1e6, 6.3 GB at 4e6). Streaming is flat at 1.5–1.8 GB to 5e7 and linear in time.
+- Chunk size is the lever: 65536 is 5× faster than 4096 (per-chunk fixed cost — one chunk profiles at ~0.57 s: 46 % nufft spread, ~4 s of JAX recompiles across 40 chunks (73 compiles → likely a recompile per chunk), ~5 s device→host `np.asarray`). Room for a further 2–3× if the recompile is removed.
+- **2e8 extrapolation:** streaming ≈ 11 s/1e6 → ~37 min on this laptop CPU at chunk 65536, ~1.8 GB RSS; in-memory ≈ 600 GB of temporaries — impossible on any node.
+- Parity: established earlier at 5e5 (log_evidence rel 1.5e-16) and 4e6 in the phase-1 tests; the 4e6 parity child here OOMed on the *in-memory* side, not the streamed one.
+- **Verdict: GO.** The array-free dataset is the only route to sparse fits above ~1e6 visibilities on a laptop, not just to 2e8. Phases 3–5 proceed; the campaign prompt `draft/research/autolens_profiling/interferometer_streaming_scaling.md` versions this evidence.
+
 ## What (original scope, now sliced above)
 
 1. **Constructor.** `Interferometer.from_stream(chunks, real_space_mask, ...)` and/or
