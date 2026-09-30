@@ -20,6 +20,6 @@ Witness: summing per-channel `SparseTerms` equals the MFS terms accumulated over
 Review-minutes: 4
 Unattended: ready
 Parent: draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md
-Blocked-by: draft/feature/autoarray/streaming_p3_visualizer.md
+Blocked-by: none (phase 3 merged 2026-09-30)
 
 Source: https://github.com/orgs/PyAutoLabs/discussions/13 phase 2, sliced 2026-09-30. No phase-centre code exists today; `SparseTerms.__add__` exists and is tested; datacube examples live in `autolens_workspace/scripts/interferometer/features/datacube/`.

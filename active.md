@@ -38,29 +38,6 @@
   - autolens_inference: feature/point-source-search-nautilus-leaf
 - resume: "Branch pushed (2307eea), NO PR yet. Probe RAL job 366937 COMPLETED (seed 0: wall_s 56.6 s, 4,850 evals, per_call 4.72 us batched, likelihood_share 0.041% [single-basis 1.8%], all truth |dsigma|<0.74; row committed). Seeds 1-4 = RAL array 367140 (%1, euclid-ral-gpu-2). Next: sacct -j 367140; scp euclid_jump:/mnt/ral/jnightin/autolens_inference-wt-psleaf/results/searches/point_source/nautilus/simple/source_plane_solved/hpc_a100_jax_cpu_dense_fp64/search_seed{1..4}.{json,png} into the same path in the local worktree (+ hpc/batch_cpu/{output,error}/*367140* logs by hand); check each seed recovers truth; build_readme.py; wiki admission-bar entry (wiki/project/state.md); scripts/point_source/searches/README.md leaf note; ruff/pytest/check_submits; /ship_workspace to PR (Heart YELLOW ack: PyAutoMemory open PR 7d old; other YELLOW -> DRAFT); then remove RAL worktree: cd /mnt/ral/jnightin/autolens_inference && git worktree remove /mnt/ral/jnightin/autolens_inference-wt-psleaf"
 
-## streaming-p3-visualizer
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/596
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/597
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/640
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/761
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/597
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/640
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/761
-- issued: 2026-09-30
-- prompt: active/streaming_p3_visualizer.md
-- epic: streaming-visibilities (phase 3 of 5; ledger draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md)
-- source: https://github.com/orgs/PyAutoLabs/discussions/13
-- session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-30
-- status: library-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/streaming-p3-visualizer
-- autonomy: supervised (header); plan + design decisions approved in-session 2026-09-30 (branch in place on is_array_free; natural-weighted dirty panels from the terms; in-memory byte-unchanged; _recon_array + logger fixes)
-- parallel-claim: "PyAutoArray is also claimed by raw-pdip-forward-polish (#594, PR #595 open; files autoarray/util/jax_nnls.py, inversion_util.py, settings.py, config/general.yaml, NNLS tests). This task touches plot modules and fit/fit_interferometer.py only — disjoint. Parallel claim human-approved 2026-09-30 with the plan."
-- repos:
-  - PyAutoArray: feature/streaming-p3-visualizer
-  - PyAutoGalaxy: feature/streaming-p3-visualizer
-  - PyAutoLens: feature/streaming-p3-visualizer
-- heart-red-override: "RED 2026-09-30T18:32Z — exact reasons: `release validation FAILED (stage integrate)`; `PyAutoLens: on branch feature/point-solver-padding-backend (not main)`; `PyAutoLens: 2 uncommitted source change(s)` (other-session drift). Live human authorization in-session 2026-09-30 for #596 / feature/streaming-p3-visualizer (Array+Galaxy+Lens): 'Authorize override for #596' (commit, push, pending-release PRs only; merge separate + checks green; no release). Branch gates: autoarray 1898, autogalaxy 1293, autolens 776+1 xfail; red-checks; Codex astra review FINDINGS (1): model-image composition for mixed galaxies, fixed in-branch + red-checked."
-
 ## heart-dashboard-clarity
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/heart-dashboard-clarity
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/245
