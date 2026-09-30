@@ -1,5 +1,17 @@
 # Active Tasks
 
+## cockpit-panel-icons
+- issue: https://github.com/PyAutoLabs/pyautolabs.github.io/issues/20
+- issued: 2026-09-30
+- prompt: active/cockpit-panel-icons.md
+- session: Codex (GPT-6)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/cockpit-panel-icons
+- repos:
+  - pyautolabs.github.io: feature/cockpit-panel-icons
+- approval: User approved implementation with “go”; no merge/deploy authorization.
+- resume: Add existing organ icons to overview card headings and pinned Heart; verify narrow layout and syntax; ship via Heart gate.
+
 ## interferometer-decision-matrix
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/356
 - issued: 2026-09-30
