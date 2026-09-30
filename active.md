@@ -42,23 +42,6 @@
 - repo-note: PyAutoFit branch feature/ep-moment-projection is merged (PyAutoFit#1656, b13169e, 2026-09-30); the worktree is kept for phase 2, and the next phase claims autofit_workspace_test via /start_workspace
 - summary: LaplaceOptimiser(projection="mode"|"moments"): nested quadrature (outer Gauss–Legendre over the scale variable on its support, inner conditional Laplace) ported from the analytic_ep_minimal referee; MeanField.from_weighted_nodes; SUCCESS/BAD_PROJECTION/FAILURE semantics; tests; phase 2 = autofit_workspace_test un-park via start_workspace after merge.
 
-## streaming-p1-array-free-dataset
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/592
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/593
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/593
-- issued: 2026-09-30
-- prompt: active/streaming_p1_array_free_dataset.md
-- epic: streaming-visibilities (phase 1 of 5; ledger draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md)
-- source: https://github.com/orgs/PyAutoLabs/discussions/13
-- session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-30
-- status: library-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/streaming-p1-array-free-dataset
-- autonomy: supervised (header); phase plan + design decisions (a)-(e) approved in-session 2026-09-30
-- parallel-claim: "PyAutoArray is also claimed by raw-pdip-forward-polish (registered 2026-09-30); file sets disjoint (see that entry); parallel claim human-approved 2026-09-30."
-- repos:
-  - PyAutoArray: feature/streaming-p1-array-free-dataset
-- heart-red-override: "RED 2026-09-30T12:42Z — exact reason: `release validation FAILED (stage integrate)` (unrelated release-integrate leg). Live human authorization in-session 2026-09-30 for #592 / feature/streaming-p1-array-free-dataset: 'Authorize override for #592' (commit, push, pending-release PR only; merge separate + checks green; no release). Branch gates: test_autoarray 1779 passed; autogalaxy/interferometer 43 + autolens/interferometer 29 passed unchanged; red-checks 3/1/2 fail on revert; Codex astra review FINDINGS (4): 3 fixed in-branch, #4 = phase-2 scope."
-
 ## raw-pdip-forward-polish
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/594
 - issued: 2026-09-30

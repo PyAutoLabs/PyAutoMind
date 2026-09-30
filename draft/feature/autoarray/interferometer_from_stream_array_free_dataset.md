@@ -62,11 +62,13 @@ with 8 zero visibilities and a `TransformerDFT`. The upstream design should not 
 
 | Phase | Member prompt | Repos | Status |
 |---|---|---|---|
-| 1 | `active/streaming_p1_array_free_dataset.md` | PyAutoArray | issued 2026-09-30 — PyAutoArray#592 |
+| 1 | complete/2026/09/streaming-p1-array-free-dataset.md | PyAutoArray | SHIPPED 2026-09-30 — PyAutoArray#593 (merge bd03e09e), pending release |
 | 2 | `draft/feature/autogalaxy/streaming_p2_fit_save_reload.md` | PyAutoGalaxy, PyAutoLens | draft |
 | 3 | `draft/feature/autoarray/streaming_p3_visualizer.md` | PyAutoArray, PyAutoGalaxy, PyAutoLens | draft |
 | 4 | `draft/feature/autoarray/streaming_p4_light_profile_identity.md` | PyAutoArray, PyAutoGalaxy, PyAutoLens | draft |
 | 5 | `draft/feature/autoarray/streaming_p5_cubes_phase_centre.md` | PyAutoArray (+ datacube example) | draft |
+
+Deferred from phase 1: mild +100 MB RSS drift at 4e6 vis and super-linear witness wall time (likely per-chunk npz reads) — look at in phase 2.
 
 Design decisions taken with the phase plan (2026-09-30, human-approved): (a) array-free datasets carry
 `transformer=None` (no stub class); `AbstractInversionInterferometer.mask` reads the dataset mask;

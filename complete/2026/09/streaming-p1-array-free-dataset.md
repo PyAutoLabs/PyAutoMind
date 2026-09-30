@@ -1,3 +1,29 @@
+## streaming-p1-array-free-dataset
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/592
+- completed: 2026-09-30
+- epic: streaming-visibilities (phase 1 of 5)
+- source: https://github.com/orgs/PyAutoLabs/discussions/13
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/593
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/593
+
+### What shipped
+- **PyAutoArray#593** (merge bd03e09e) — the array-free interferometer dataset: `Interferometer.from_stream(chunks, real_space_mask, ...)` and `from_sparse_terms(terms, real_space_mask)` build a dataset whose `data`, `noise_map`, `uv_wavelengths` and `transformer` are all `None`, carrying `sparse_terms` and the sparse operator with its cached scalars; `is_array_free`; `SparseTerms` provenance (`shape_native`, `pixel_scales`, `origin`, `eps`, `transformer_class_name`) with mismatch refusal in `__add__` and in `from_sparse_terms`, and recorded-value merge when one operand is unrecorded; `AbstractInversionInterferometer.mask` read from the dataset (the one transformer read on the sparse likelihood path); typed `exc.DatasetException` / `exc.InversionException` from every array- or transformer-dependent property; `dirty_image_natural` and `dirty_beam` on both dataset kinds (in-memory `dirty_image` unchanged). `test_autoarray` 1783 passed; sibling interferometer suites unchanged (43 / 29).
+- Parity: sparse inversion on the array-free dataset vs in-memory `apply_sparse_operator` at rel 1e-8 (numpy + jax); 5e5-vis witness log_evidence rel 1.5e-16.
+- Memory witness (fresh process per N, NUFFT, 400×400 mask = 125k pixels, 4096-vis chunks): peak RSS 821 / 776 / 831 / 929 MB at 5e5 / 1e6 / 2e6 / 4e6 vis (import baseline 171 MB, one-chunk 536 MB) — flat in N_vis, set by the image size; the held arrays would add 24→192 MB (+ the transformer's copy). Not the discussion's 36 MB, which is pyuvimage's own accumulator over its own baseline.
+
+### Review and override
+- Codex gpt-6-astra review before PR-open: 4 findings — #1 geometry guard in `from_sparse_terms`, #2 `origin` in `__add__`, #3 provenance merge, all fixed in-branch with red-checked tests; #4 (`AnalysisInterferometer.save_attributes` / aggregator cannot handle an array-free dataset) is phase 2 by design. Record: https://github.com/PyAutoLabs/PyAutoArray/pull/593#issuecomment-5913414871.
+- Shipped under the human-authorized Heart RED development override (`release validation FAILED (stage integrate)`, unrelated); recorded on the issue, PR body, `active.md` and `autonomy_log.md` (row `red-override`). Merged on a separate human `/prm` with all legs green.
+
+### Deferred (noted on the epic ledger)
+- Mild +100 MB drift at 4e6 vis and super-linear witness wall time (2× N ≈ 3× time above 1e6; likely the witness's per-chunk npz reads) — look at in phase 2.
+- Analysis lifecycle (save/reload) → phase 2 `draft/feature/autogalaxy/streaming_p2_fit_save_reload.md`; visualizer → phase 3; non-linear light profiles → phase 4; cubes/phase centre → phase 5.
+
+### Notes
+- Bundle `activate.sh` is a symlink to the root file that other sessions rewrite; this task used a private `env_private.sh`.
+
+## Original prompt
+
 # Streaming phase 1: array-free Interferometer.from_stream / from_sparse_terms (PyAutoArray)
 
 Type: feature
