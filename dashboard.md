@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 263 |
+| [Backlog](#backlog) (`draft/`) | 262 |
 
 > **No batch in flight.**
 
@@ -580,7 +580,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**263** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **59** of them belong to an epic and are listed only under [Epics](#epics) below.
+**262** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **59** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 75</summary>
@@ -1188,7 +1188,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>feature</b> — 42</summary>
+<summary><b>feature</b> — 41</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_assistant/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging, point_source and interferometer</a> — autolens_assistant · medium · supervised · high</summary>
 
@@ -1498,14 +1498,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/autoarray/adapt_linear_default_flip.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautolabs.github.io/cockpit-integrated-navigation.md">Integrated cockpit navigation with mobile-friendly organ icons</a> — pyautolabs.github.io · medium</summary>
-
-```
-/start_dev draft/feature/pyautolabs.github.io/cockpit-integrated-navigation.md
 ```
 
 </details>
@@ -3244,7 +3236,7 @@ Continue the 'Streaming visibilities — array-free sparse interferometer datase
 
 </details>
 
-72 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+71 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3271,7 +3263,6 @@ Continue the 'Streaming visibilities — array-free sparse interferometer datase
 - `draft/feature/pyautoeyes/group_cluster_gallery.md`
 - `draft/feature/pyautoeyes/multi_galaxy_gallery.md`
 - `draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md`
-- `draft/feature/pyautolabs.github.io/cockpit-integrated-navigation.md`
 - `draft/feature/workspaces/model_figures_6_rollout.md`
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md`
@@ -3289,7 +3280,8 @@ Continue the 'Streaming visibilities — array-free sparse interferometer datase
 - `draft/refactor/workspaces/abell_1201_local_cleanup.md`
 - `draft/docs/autolens/split_lensing_regimes.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
-- _… and 32 more_
+- `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
+- _… and 31 more_
 
 </details>
 
