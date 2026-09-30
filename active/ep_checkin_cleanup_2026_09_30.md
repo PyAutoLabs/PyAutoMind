@@ -16,6 +16,8 @@ Consequence: glance
 Witness: `cortex.py` census shows zero `open` runs for ic50_workspace and slope_hierarchy_scale; `projects.yaml` loads with a duplicate-key check passing (one row per key); the analytic_gaussian ledger carries astra's criterion-2 opinion as a `note`; and each of the four ledgers' `## Now` names a concrete next submission or a named blocker.
 Review-minutes: 3
 Unattended: needs-slicing
+Issued: 2026-09-30
+Issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/50
 
 
 The 2026-09-30 Cortex check-in of the four active EP projects (ep_toy_gaussian,
