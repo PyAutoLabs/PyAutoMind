@@ -46,13 +46,21 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 258 |
+| [Backlog](#backlog) (`draft/`) | 259 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 23
+**Highest priority** (filed as `high`) — showing 12 of 24
+
+<details><summary>📋 <a href="draft/bug/autoarray/sparse_data_none_data_subtracted_dict_guard.md">Sparse data=None path: guard data_subtracted_dict, harden noise check and data-term dtype…</a> — autoarray · small · supervised · high</summary>
+
+```
+/start_dev draft/bug/autoarray/sparse_data_none_data_subtracted_dict_guard.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/bug/autolens/point_image_pair_all_forward_grad_nan.md">Forward-mode gradient is NaN for FitPositionsImagePairAll(Solved) — released default gradient_mode="forward"</a> — autolens · small · supervised · high</summary>
 
@@ -142,15 +150,7 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md">Physical model check when speeding up smoke tests</a> — workspaces · medium · supervised · high</summary>
-
-```
-/start_dev draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md
-```
-
-</details>
-
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 118
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 119
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -581,10 +581,18 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**258** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **56** of them belong to an epic and are listed only under [Epics](#epics) below.
+**259** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **56** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 73</summary>
+<summary><b>bug</b> — 74</summary>
+
+<details><summary>📋 <a href="draft/bug/autoarray/sparse_data_none_data_subtracted_dict_guard.md">Sparse data=None path: guard data_subtracted_dict, harden noise check and data-term dtype…</a> — autoarray · small · supervised · high</summary>
+
+```
+/start_dev draft/bug/autoarray/sparse_data_none_data_subtracted_dict_guard.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/bug/autolens/point_image_pair_all_forward_grad_nan.md">Forward-mode gradient is NaN for FitPositionsImagePairAll(Solved) — released default gradient_mode="forward"</a> — autolens · small · supervised · high</summary>
 
@@ -2449,6 +2457,38 @@ Contract (the `start_bundle` skill is the full body):
 </details>
 
 <details>
+<summary><b>interferometer</b> — 3 task(s) · 6 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: jax-grad, memory, sparse-operator</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the judgment tier for the PyAutoMind bundle 'interferometer' — 3 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/bug/autoarray/sparse_data_none_data_subtracted_dict_guard.md
+- draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md
+- draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md
+
+Contract (the `start_bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
+5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Repo | Difficulty | Priority | Status |
+|--------|------|------------|----------|--------|
+| <a href="draft/bug/autoarray/sparse_data_none_data_subtracted_dict_guard.md">Sparse data=None path: guard data_subtracted_dict, harden noise check…</a> | autoarray | small | high | draft |
+| <a href="draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md">Array-free streamed interferometer dataset (streaming visibilities…</a> | autoarray | large | medium | draft |
+| <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> | autoarray | small | low | formalised |
+
+</details>
+
+<details>
 <summary><b>pyautoheart — bundle 1</b> — 4 task(s) · 6 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -2479,40 +2519,6 @@ Contract (the `start_bundle` skill is the full body):
 | <a href="draft/bug/pyautoheart/heart_smoke_runner_deletes_the_tracked_output.md">Heart smoke runner deletes the tracked output/.gitignore when wiping…</a> | small | medium | formalised |
 | <a href="draft/bug/pyautoheart/manifest_drift_parser_drops_suffixed_check_legs.md">Heart's manifest_drift parser silently drops any check leg with a…</a> | small | normal | formalised |
 | <a href="draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md">release-integrate: analyze-side foreign-path filter and a…</a> | medium | low | formalised |
-
-</details>
-
-<details>
-<summary><b>euclid</b> — 4 task(s) · 5 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: catalogue, docs, euclid, jax, latent</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the judgment tier for the PyAutoMind bundle 'euclid' — 4 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md
-- draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md
-- draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md
-- draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md
-
-Contract (the `start_bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Run `/start_dev <member prompt>` for EACH member: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run `/start_library` (or `/start_workspace`) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
-5. Ship each member on its own: `/ship_library` or `/ship_workspace`, ONE PR per task, so `/prm` closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> | euclid | small | high | draft |
-| <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> | euclid | small | medium | draft |
-| <a href="draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md"><code>vis_lp</code> passes <code>batch_size=50</code> to <code>af.Nautilus</code>, which has no such…</a> | euclid | small | medium | formalised |
-| <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of…</a> | euclid | low | low | draft |
 
 </details>
 
@@ -3233,7 +3239,7 @@ Continue the 'autolens_inference — inference benchmarking repo, birth to first
 
 </details>
 
-71 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+72 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3260,6 +3266,7 @@ Continue the 'autolens_inference — inference benchmarking repo, birth to first
 - `draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md — unknown theme keyword(s): jax`
 - `draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md — unknown theme keyword(s): jax`
 - `draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md — unknown theme keyword(s): simulation, robustness`
+- `draft/bug/autoarray/sparse_data_none_data_subtracted_dict_guard.md — unknown theme keyword(s): sparse-operator`
 - `draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md — unknown theme keyword(s): inversion, sparse-operator, correctness`
 - `draft/bug/autocti_visualization/render_yml_blocked_until_pyautocti_release.md — unknown theme keyword(s): infrastructure`
 - `draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md — unknown theme keyword(s): jax`
