@@ -1,3 +1,14 @@
+## Summary
+
+A PyAutoMind draft was counted as an open critique of every instance whose repo name appeared in its text, so the cti `render.yml blocked` draft (which cites `autofit_visualization` as the working precedent) showed under both `fit` and `cti`: 8 critiques for 7 drafts on the PyAutoEyes dashboard and in `state.json`. `find_critiques()` now attributes a draft to the one instance its light header names (`Target:`, else the first `Repos:` bullet matching a registered instance's repo or name); text mention remains the fallback only for drafts whose header names no registered instance. The registry is threaded through `gather()` and the board CLI. Witness: the new attribution test was red against the unfixed function and is green after; 77 tests pass; regenerated dashboard shows lens 3, galaxy 2, fit 1, cti 1.
+
+## Notes
+
+- Follow-up from PyAutoEyes phase 5 (PyAutoEyes#6, record `complete/2026/09/eyes-retire-duplicates-surfaces.md`).
+- Heart YELLOW at ship (HowToGalaxy / HowToLens open PRs and the reasons already acknowledged on #6); PR CI (lint) green; merged under the human's "go".
+
+## Original prompt
+
 # Eyes dashboard counts one Mind draft as a critique of two instances when it mentions both
 
 Type: bug

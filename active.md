@@ -57,17 +57,6 @@
 - repos:
   - PyAutoLens: feature/interferometer-sparse-precomputed-data-term
 
-## eyes-critique-attribution
-- issue: https://github.com/PyAutoLabs/PyAutoEyes/issues/8
-- issued: 2026-09-30
-- prompt: active/critique_text_match_double_counts_cross_instance_drafts.md
-- session: Claude Code CLI (Fable 5.1 main session + Opus subagent), 2026-09-30; session ID e944a175
-- status: workspace-dev
-- autonomy: safe (header); plan stated in-session 2026-09-30 and approved ("fix the followup quick")
-- worktree: ~/Code/PyAutoLabs-wt/eyes-critique-attribution
-- repos:
-  - PyAutoEyes: feature/eyes-critique-attribution
-
 ## ep-checkin-cleanup
 - issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/50
 - issued: 2026-09-30
