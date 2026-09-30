@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 258 |
+| [Backlog](#backlog) (`draft/`) | 259 |
 
 > **No batch in flight.**
 
@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/eyes_p5_retire_duplicates_public_surfaces.md">PyAutoEyes phase 5 — retire duplicate galleries + public surfaces</a> — <a href="https://github.com/PyAutoLabs/PyAutoEyes/issues/6">issue #6</a> — issued 2026-09-30 — workspace-dev</summary>
+<details><summary>📋 <a href="active/eyes_p5_retire_duplicates_public_surfaces.md">PyAutoEyes phase 5 — retire duplicate galleries + public surfaces</a> — <a href="https://github.com/PyAutoLabs/PyAutoEyes/issues/6">issue #6</a> — issued 2026-09-30 — awaiting-merge (PRs open 2026-09-30; order Brain → autolens_workspace_test → PyAutoScientist → PyAutoEyes → hub, hub after the… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/432">PyAutoBrain#432</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/327">autolens_workspace_test#327</a>, <a href="https://github.com/PyAutoLabs/PyAutoScientist/pull/37">PyAutoScientist#37</a>, <a href="https://github.com/PyAutoLabs/PyAutoEyes/pull/7">PyAutoEyes#7</a>, <a href="https://github.com/PyAutoLabs/pyautolabs.github.io/pull/17">pyautolabs.github.io#17</a></summary>
 
 ```
 /start_dev active/eyes_p5_retire_duplicates_public_surfaces.md
@@ -603,7 +603,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**258** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **56** of them belong to an epic and are listed only under [Epics](#epics) below.
+**259** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **57** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 73</summary>
@@ -3022,7 +3022,7 @@ Continue the 'autolens_inference — inference benchmarking repo, birth to first
 </details>
 
 <details>
-<summary><b>PyAutoEyes — two layers: <code>&lt;lib&gt;_visualization</code> project repos make, store and track every library's figures; the organ PyAutoEyes is the cross-project Pages dashboard over them (registry, manifest contract, critique route)</b> — 5 queued prompt(s), in order</summary>
+<summary><b>PyAutoEyes — two layers: <code>&lt;lib&gt;_visualization</code> project repos make, store and track every library's figures; the organ PyAutoEyes is the cross-project Pages dashboard over them (registry, manifest contract, critique route)</b> — 6 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>PyAutoEyes — two layers: <code>&lt;lib&gt;_visualization</code> project repos make, store and track every library's figures; the organ PyAutoEyes is the cross-project Pages dashboard over them (registry, manifest contract, critique route)</b> — ledger: `PyAutoEyes/dashboard.md` — phase 0 COMPLETE 2026-09-25 (PyAutoMind#437 closed; record <code>complete/2026/09/pyautoeyes-birth-organ-row.md</code>; nine organ PRs…</summary>
 
@@ -3052,6 +3052,14 @@ Continue the 'PyAutoEyes — two layers: `<lib>_visualization` project repos mak
 
 ```
 /start_dev draft/bug/autocti_visualization/render_yml_blocked_until_pyautocti_release.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautoeyes/critique_text_match_double_counts_cross_instance_drafts.md">Eyes dashboard counts one Mind draft as a critique of two instances…</a> — pyautoeyes · small · safe · low</summary>
+
+```
+/start_dev draft/bug/pyautoeyes/critique_text_match_double_counts_cross_instance_drafts.md
 ```
 
 </details>
