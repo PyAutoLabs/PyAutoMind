@@ -94,7 +94,7 @@ arc-segmentation boundary), Richard+17 (HFF magnification-map deliverables), Ate
   PyAutoLens#753 (merged 2026-09-27; cap now 20). Point-source CPU campaign
   records are sibling work, not completion of this arc's phase 2.
 - Brain classifies the existing phase-1 umbrella as too large. Next bounded step:
-  `active/point_solver_error_audit.md` (phase 1a). This is
+  `complete/2026/09/point-solver-error-audit.md` (phase 1a). This is
   an audit-only workspace PR before evidence-driven library hardening; phase 1
   stays incomplete until the audit and required hardening are accepted.
 - Full phase-1 repo claims conflict: PyAutoArray is claimed by
@@ -105,7 +105,7 @@ arc-segmentation boundary), Richard+17 (HFF magnification-map deliverables), Ate
 - start_dev: Heart STALE (no report.json); planning may continue. Phase 1a plan approved 2026-09-30; issued as autolens_workspace_test#328
   on feature/point-solver-error-audit. No issues queued for later phases.
 
-## Phase 1a execution — 2026-09-30
+## Phase 1a execution — 2026-09-30 (historical session log; now shipped)
 
 - User approved the plan with “go”; issued only autolens_workspace_test#328.
   Worktree: `/home/jammy/Code/PyAutoLabs/.worktrees/point-solver-error-audit`;
@@ -139,3 +139,20 @@ arc-segmentation boundary), Richard+17 (HFF magnification-map deliverables), Ate
 - Shipping update: live user authorized RED override and green-CI merge.
   PR https://github.com/PyAutoLabs/autolens_workspace_test/pull/329 opened
   at `c54fcf8`; all CI legs pending judgment. No later phase issued.
+
+## Current state — phase 1a shipped, 2026-09-30
+
+PR https://github.com/PyAutoLabs/autolens_workspace_test/pull/329 MERGED as
+`bf3f7532ac780b682e64207c1a94394bbe5a1819`; issue #328 CLOSED.
+All jobs in Actions run 36756347920 passed at `c54fcf8`, including Python
+3.12 and 3.13 smoke. Live human authorized development-only Heart RED override
+and merge on green checks; exact RED remained “release validation FAILED
+(stage integrate)”. No release authorized.
+
+Record: `complete/2026/09/point-solver-error-audit.md`. The task claim is released;
+worktree removal and generated-artifact deletion were explicitly authorized.
+The previous ship-blocked notes above are historical, not the current state.
+
+Next: return to the parent phase-1 bug prompt for a bounded padding-default
+fix/regression, then settle duplicate-image handling and containment overflow.
+Phase 1 as a whole is NOT complete; phase 2 remains gated. No new issues queued.

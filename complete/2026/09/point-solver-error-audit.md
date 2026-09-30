@@ -1,3 +1,34 @@
+# PointSolver error audit — cluster arc phase 1a
+
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/328
+- pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/329
+- epic: cluster-strong-lensing
+- scope: Audit-only phase 1a; parent phase 1 still requires hardening. No library edits or subsequent phase issues.
+
+## Delivered
+
+Three opt-in audit scripts, RESULTS.md, and three version-pinned JSON evidence files under `scripts/point_source/solver/`. Measured an analytic isothermal-plus-shear quad and a frozen near-caustic fixture across 24 NumPy/eager-JAX/JIT cases; checked 16 historical-Hessian method replays and capacity/dtype witnesses.
+
+Findings: explicit call-time xp=jnp inherits the NumPy constructor's padding default and fails under JIT; symmetric quad can return six centroids for four distinct image groups; synthetic capacity overflow silently truncates. Float32 NaN placeholders preserve float64 vertices in the tested paths. Neither physical fixture exceeds the old cap (maximum 13). Local point magnification is the appropriate filter; historical step changes affect threshold survival but do not demonstrate the original position-error regression at threshold 0.1.
+
+Historical corrections: cap parameter removed by 5c42d8133 in December 2024, not April 2026; JAX jacfwd arrived in March 2026 (ee92bebe). The old-stack import lacked autoconf; the report explicitly distinguishes a historical-method replay on current deflections from a full historical-stack bisect.
+
+## Validation and authorization
+
+Local 24-case audit, 16 replay comparisons, capacity/dtype witnesses, image-plane parity, Black and diff checks passed. Workspace smoke 32/32 passed. GitHub Actions run 36756347920 succeeded at c54fcf8792719d9c0fa5ef19711db3def12c6fcd: changes job and both Python 3.12/3.13 smoke legs green. PR #329 merged 2026-09-30T18:14:51Z as bf3f7532ac780b682e64207c1a94394bbe5a1819; branch ancestry verified against origin/main.
+
+Live human authorization: “Override Heart RED for #328; ship the PR, then merge when CI is green”. Exact RED reason: “release validation FAILED (stage integrate)”. Development shipping and green-CI merge only; no release. Human also authorized removal of the task worktree and generated artifacts after merging.
+
+## Next
+
+Parent `draft/bug/autolens/point_solver_error_bisect_health.md` retains hardening: padding backend selection, duplicate-image policy/regressions, loud containment-overflow signal and deliberate cluster capacity policy. Do not unlock phase 2 merely because the audit shipped. Cortex phase 11 remains dropped under R-20260907-05; any successor needs a fresh science-project birth.
+
+## Neighbourhood reconciliation
+
+No sibling prompt retired: the parent `point_solver_error_bisect_health.md` still needs hardening. `point_image_pair_all_forward_grad_nan.md`, `jit_cache_not_hit_modeling_visualization.md`, and `positions_threshold_fixture_off_axis.md` had overlap/stale-status signals, not proof that this audit completed them. Recheck through `/intake reconcile draft/bug/autolens`. The research/workspaces scope returned no suspects.
+
+## Original prompt
+
 # PointSolver error audit — Source & Cluster arc phase 1a
 
 Type: research

@@ -90,7 +90,7 @@ magnification) assumes a trusted PointSolver.
 
 ## Phase 1a audit correction — 2026-09-30
 
-Active audit: autolens_workspace_test#328; prompt `active/point_solver_error_audit.md`.
+Audit shipped: autolens_workspace_test#329 merged; #328 closed; record `complete/2026/09/point-solver-error-audit.md`.
 Git evidence corrects two historical claims above: the solver's configurable
 `max_containing_size` was removed by PyAutoLens `5c42d8133` on 2024-12-16;
 `fca58c468` removed the stale parameter documentation while refactoring xp.
