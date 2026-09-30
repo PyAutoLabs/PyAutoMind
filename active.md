@@ -40,18 +40,19 @@
 
 ## linear-solver-accuracy-study
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/354
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/355
 - issued: 2026-09-30
 - prompt: active/raw_forward_pdip_nnls_early_stopping.md
 - epic: linear-solver-programme
 - session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-30; session ID unavailable
-- status: workspace-dev
+- status: awaiting-merge
 - autonomy: supervised (header); plan approved in-session 2026-09-30 (phase 1: autolens_profiling only, no library edits)
 - worktree: ~/Code/PyAutoLabs-wt/linear-solver-accuracy-study
 - repos:
   - autolens_profiling: feature/linear-solver-accuracy-study
 - summary: Phase 1 of the linear-solver programme — a dedicated `scripts/lens/solver/` package in autolens_profiling (system corpus, solver-candidate registry, accuracy + early-stopping cells, README stats), a pre-registered rule, and a campaign page recording which raw-PDIP variant fixes the ~4 % amplitude bias while keeping 48/48 SLaM points converged. Library fix = phase 2 (own prompt, PyAutoArray).
-- heart-red-hold: 2026-09-30 ship gate RED (PyAutoArray/PyAutoLens 2 behind origin; release validation FAILED stage integrate; workspace validation 1 timeout cloud#36404726969; manifest drift front-door tables) — none in autolens_profiling; human override/ack needed
-- resume: "Phase 1 COMPLETE locally: branch feature/linear-solver-accuracy-study head 18a9b70 (5 commits), all gates green, NOT pushed, no PR (Heart RED at ship). Verdict: no drop-in candidate; post-hoc euclid latent: polish +7.5e-5 / tol 1e-5 +5.1e-4 / jaxnnls cap>50 -3e-8 all green. Next: human ack/override → /ship_workspace linear-solver-accuracy-study (PR body drafted on issue #354 comment); then /prm; then phase 2 draft/bug/autoarray/raw_pdip_forward_amplitude_bias_fix.md once PyAutoArray claim sparse-data-none-guard clears."
+- heart-red-override: authorised by the live human in the Claude Code session 2026-09-30 ~12:05 BST ("Continue this work:" on the resume note naming #354, whose next step reads "acknowledge or override the RED, then re-run /ship_workspace linear-solver-accuracy-study (or push the branch and open the PR with the drafted body), then /prm"; the human then pushed the branch directly ~12:20 BST after the auto-mode classifier denied the agent push); RED reasons at the 11:52 BST gate: "PyAutoArray: 2 commit(s) behind origin"; "PyAutoLens: 2 commit(s) behind origin"; "release validation FAILED (stage integrate)"; "workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py)"; "manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml" (first two cleared by ff-pull ~12:07 BST, still RED score 45); none in autolens_profiling; scope: push + pending PR #355; merge only via /prm on all-green required checks; no release
+- resume: "Phase 1 shipped to PR https://github.com/PyAutoLabs/autolens_profiling/pull/355 (head 18a9b70, opened 2026-09-30 under the heart-red-override above). Verdict: no drop-in candidate; post-hoc euclid latent: polish +7.5e-5 / tol 1e-5 +5.1e-4 / jaxnnls cap>50 -3e-8 all green. Next: /prm linear-solver-accuracy-study once lint.yml is green (merge stays human); then phase 2 draft/bug/autoarray/raw_pdip_forward_amplitude_bias_fix.md once PyAutoArray claim sparse-data-none-guard clears."
 
 ## ep-projection-exception
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1653
