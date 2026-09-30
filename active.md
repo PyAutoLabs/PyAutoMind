@@ -50,7 +50,8 @@
 - repos:
   - autolens_profiling: feature/linear-solver-accuracy-study
 - summary: Phase 1 of the linear-solver programme — a dedicated `scripts/lens/solver/` package in autolens_profiling (system corpus, solver-candidate registry, accuracy + early-stopping cells, README stats), a pre-registered rule, and a campaign page recording which raw-PDIP variant fixes the ~4 % amplitude bias while keeping 48/48 SLaM points converged. Library fix = phase 2 (own prompt, PyAutoArray).
-- resume: "Issue #354 filed, worktree not yet created. Next: /start_workspace, then delegate phases (skeleton → captures → rule + runs + wiki) to Opus."
+- heart-red-hold: 2026-09-30 ship gate RED (PyAutoArray/PyAutoLens 2 behind origin; release validation FAILED stage integrate; workspace validation 1 timeout cloud#36404726969; manifest drift front-door tables) — none in autolens_profiling; human override/ack needed
+- resume: "Phase 1 COMPLETE locally: branch feature/linear-solver-accuracy-study head 18a9b70 (5 commits), all gates green, NOT pushed, no PR (Heart RED at ship). Verdict: no drop-in candidate; post-hoc euclid latent: polish +7.5e-5 / tol 1e-5 +5.1e-4 / jaxnnls cap>50 -3e-8 all green. Next: human ack/override → /ship_workspace linear-solver-accuracy-study (PR body drafted on issue #354 comment); then /prm; then phase 2 draft/bug/autoarray/raw_pdip_forward_amplitude_bias_fix.md once PyAutoArray claim sparse-data-none-guard clears."
 
 ## ep-projection-exception
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1653
