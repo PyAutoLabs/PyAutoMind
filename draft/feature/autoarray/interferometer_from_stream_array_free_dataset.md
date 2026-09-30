@@ -80,8 +80,9 @@ with 8 zero visibilities and a `TransformerDFT`. The upstream design should not 
 5. **Per-channel cubes.** MFS terms are the sum of channel terms (`SparseTerms.__add__`);
    phase-centre shifts applied chunk by chunk. Test sum-of-channels == MFS to 1e-12.
 6. **PyAutoLens parity.** Same `save_attributes` / aggregator / visualizer changes in
-   `autolens/interferometer/model/` and `autolens/aggregator/`; depends on
-   `draft/feature/autolens/interferometer_sparse_precomputed_data_term.md` landing first.
+   `autolens/interferometer/model/` and `autolens/aggregator/`; builds on the PyAutoLens
+   phase-1 parity, now merged (PyAutoLens#757) —
+   `complete/2026/09/interferometer-sparse-precomputed-data-term.md`.
 
 Slicing suggestion: (1)+(2) PyAutoArray/PyAutoGalaxy; (3); (4); (5); (6). Measure RSS with
 a fresh process per N_vis (as the discussion did), not in-process deltas.

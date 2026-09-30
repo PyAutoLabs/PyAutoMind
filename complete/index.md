@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1618 records across 8 buckets.
+1620 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -315,6 +315,7 @@ markers; everything below GENERATED is rebuilt.
 - [interferometer-preload-prose](2026/09/interferometer-preload-prose.md)
 - [interferometer-sparse-cache](2026/09/interferometer-sparse-cache.md)
 - [interferometer-sparse-operator-numpy-cpu-path](2026/09/interferometer-sparse-operator-numpy-cpu-path.md)
+- [interferometer-sparse-precomputed-data-term](2026/09/interferometer-sparse-precomputed-data-term.md)
 - [interferometer-streaming-visibilities](2026/09/interferometer-streaming-visibilities.md)
 - [interferometer-transform-real-scatter](2026/09/interferometer-transform-real-scatter.md) — `TransformerNUFFT.transform_mapping_matrix` now scatters the real mapping matrix, flips, then casts to complex…
 - [interferometer-xp-jnp-call-sites](2026/09/interferometer-xp-jnp-call-sites.md)
@@ -463,6 +464,7 @@ markers; everything below GENERATED is rebuilt.
 - [smoke-relevance-gate](2026/09/smoke-relevance-gate.md)
 - [smoke-timings-ingester](2026/09/smoke-timings-ingester.md)
 - [source-plane-runtime-refresh](2026/09/source-plane-runtime-refresh.md)
+- [sparse-data-none-guard](2026/09/sparse-data-none-guard.md)
 - [sparse-operator-ignores-disable-jax](2026/09/sparse-operator-ignores-disable-jax.md)
 - [sparse-operator-oversampling-cache](2026/09/sparse-operator-oversampling-cache.md)
 - [start-dev-heart-gate](2026/09/start-dev-heart-gate.md)

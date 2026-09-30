@@ -1,3 +1,26 @@
+## sparse-data-none-guard
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/590
+- completed: 2026-09-30
+- source: https://github.com/PyAutoLabs/PyAutoLens/pull/757#issuecomment-5907806825 (Codex astra review of Discussion #13 phase 1)
+- parent: complete/2026/09/interferometer-streaming-visibilities.md
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/591
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/253
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/581
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/591
+
+### What shipped
+- **PyAutoArray#591** (merge d4298445) — `AbstractInversion.data_subtracted_dict` raises a clear `exc.InversionException` naming `fit.inversion_with_data` when the inversion was built without data (was `TypeError` / `{mapper: None}`); `subplot_of_mapper` / `subplot_mappings` catch it and skip the panel; `check_noise_map_real_imag_equal` uses `atol=0.0` (scale-free); `apply_sparse_operator` computes the cached `data_term` from complex128-promoted copies so one-shot equals `sparse_terms_from_chunks` for complex64 data (700140007.0, was 700140000.0). Four tests, each red with its fix reverted; `test_autoarray` 1765 passed.
+- **autogalaxy_workspace#253** (merge 826b7f2b) and **autolens_workspace#581** (merge b1cbf848) — `scripts/interferometer/features/pixelization/fit.py` use `fit.inversion_with_data` for the mapper diagnostics, one prose sentence, notebooks regenerated. Red control: with `fit.inversion` both scripts fail on the phase-1 PyAutoArray base (TypeError / ValueError); both pass under the smoke profile with the change; workspace smoke CI green.
+
+### Not shipped
+- Review finding C (mutating `noise_map` after `apply_sparse_operator` stales W~, the dirty image and now the two scalars) predates phase 1; not changed. A setter that drops `sparse_operator` would be the general fix if wanted.
+
+### Notes
+- Heart YELLOW acknowledged at ship (same reason set as the parent task). Merged in order PyAutoLens#757 → PyAutoArray#591 → workspace PRs (library-first gate).
+- The worktree's `dataset/interferometer/{clumpy,simple}` were copies from the canonical workspaces for the local smoke runs (gitignored).
+
+## Original prompt
+
 # Sparse data=None path: guard data_subtracted_dict, harden noise check and data-term dtype (Discussion #13 review fixes)
 
 Type: bug
