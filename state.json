@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-09-30T13:57:08Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
+  "updated": "2026-09-30T13:58:48Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Raw-forward PDIP NNLS early stopping: a dedicated autolens_profiling study, then the PyAutoArray\u2026 \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autolens_profiling/issues/354",
-      "prompt": "/start_dev active/raw_forward_pdip_nnls_early_stopping.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#427 \u2014 eyes-organ-order",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/427",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoBrain PyAutoBrain#428 \u2014 eyes-organ-skeleton",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/428",
       "prompt": null
     }
   ]

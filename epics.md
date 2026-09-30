@@ -93,8 +93,8 @@ epic, never picked standalone.
 
 ## linear-solver-programme
 - title: Linear-solver accuracy/tolerance programme — a standing autolens_profiling package for positive-only solver studies
-- ledger: autolens_profiling/wiki/campaigns/linear_solver_accuracy.md (contract: active/raw_forward_pdip_nnls_early_stopping.md)
-- status: phase 1 complete locally 2026-09-30 (autolens_profiling#354, branch head 18a9b70, held at Heart RED ship gate — PR pending human ack); verdict: no drop-in candidate, released raw stop blind to reference-inactive-column flux; phase 2 prompt filed
+- ledger: autolens_profiling/wiki/campaigns/linear_solver_accuracy.md (contract: complete/2026/09/linear-solver-accuracy-study.md)
+- status: phase 1 shipped 2026-09-30 — autolens_profiling#355 merged (3ad68afad), record `complete/2026/09/linear-solver-accuracy-study.md`; verdict: no drop-in candidate, released raw stop blind to reference-inactive-column flux (post-hoc polish / tol 1e-5 / jaxnnls cap>50 all green on euclid); next = phase 2 `draft/bug/autoarray/raw_pdip_forward_amplitude_bias_fix.md`
 - notes: human intent 2026-09-30 — solver tolerance/accuracy keeps recurring (#571/#572/#573, certified solver, 07-09 NNLS ledger, warm-start memo), so it gets one home that accumulates runs and data across releases. Phase 1 = `scripts/lens/solver/` package + corpus + CPU fp64 accuracy/early-stopping study + pre-registered rule + wiki page. Phase 2 = PyAutoArray fix per the verdict (`draft/bug/autoarray/raw_pdip_forward_amplitude_bias_fix.md`, to be filed by phase 1; library-first, then re-verify the euclid latent test on library main). Phase 3 = GPU/vmap/A100 timing + parity rows (absorbs `draft/research/autoarray/mge_nnls_fix_pyautoarray_571_slam_60.md`). Standing: re-run the accuracy cell per release.
 
 ## streaming-visibilities

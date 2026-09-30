@@ -11,13 +11,13 @@ Autonomy: supervised
 Priority: high
 Status: formalised
 Filed: 2026-09-30
-Blocked-by: phase 1 verdict (autolens_profiling#354, task `linear-solver-accuracy-study`) AND the PyAutoArray claim of task `sparse-data-none-guard` (active.md)
+Blocked-by: the PyAutoArray claim of task `sparse-data-none-guard` (active.md)
 Witness: a PyAutoArray regression test loads the phase-1 corpus npz (copied from autolens_profiling `results/lens/solver/corpus/` as a fixture beside `test_autoarray/inversion/inversion/files/mge_slam_nnls_systems.npz`) and asserts, per system, converged AND amplitude agreement with fnnls (amp_rel_max ≤ 1e-3, source flux_rel ≤ 1e-4) — an amplitude assertion, not logL — red on unfixed main; plus euclid `tests/test_compute_latent_variable.py::test_latent_euclid_variables_traces_under_jax_jit` passes on library main with no config override.
 Review-minutes: 3
 Consequence: glance
 Unattended: needs-slicing
 
-Epic `linear-solver-programme`, phase 2. Contract: `active/raw_forward_pdip_nnls_early_stopping.md`.
+Epic `linear-solver-programme`, phase 2. Contract: `complete/2026/09/linear-solver-accuracy-study.md` (phase-1 record with the original programme prompt folded in; the phase-1 verdict blocker is satisfied — autolens_profiling#355 merged 2026-09-30).
 
 ## Symptom
 
@@ -28,7 +28,7 @@ test has been red since 2026-09-25. logL cannot see it (Δχ² ~1e-5); amplitude
 
 ## Fix
 
-Candidate: <from phase 1 verdict>
+Candidate: phase 1 verdict (autolens_profiling#355, `complete/2026/09/linear-solver-accuracy-study.md`): **no candidate passes the pre-registered rule** — raw PDIP reports converged on 81/81 (KKT ~3e-14) yet leaves 11.5 % of the reference amplitude on euclid columns inactive in the reference (total_source_flux +5.76 %); jacobi diverges on 29/81. Post-hoc, each of these turns the euclid latent test green: forward polish (+7.5e-5), tol 1e-5 (+5.1e-4), jaxnnls tol with cap > 50 (-3e-8); caps ≤ 16 are unsafe. The binding constraint is the stopping test, not the iteration budget. Choose among these on the post-hoc evidence and gate on inactive-column flux, not logL/KKT.
 
 Implement exactly the candidate the phase-1 pre-registered rule admits (converged 100 %, 48/48
 SLaM incl.; worst amp_rel_max ≤ 1e-3; worst source flux_rel ≤ 1e-4; KKT ≤ 10× pdip_jacobi's;

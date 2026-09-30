@@ -16,7 +16,7 @@ Review-minutes: 3
 Consequence: glance
 Unattended: needs-slicing
 
-Epic `linear-solver-programme`, phase 3. Contract: `active/raw_forward_pdip_nnls_early_stopping.md`.
+Epic `linear-solver-programme`, phase 3. Contract: `complete/2026/09/linear-solver-accuracy-study.md` (phase-1 record with the original programme prompt folded in).
 
 This prompt was filed on 2026-09-24 as a standalone PyAutoArray#571 follow-up (SLaM 60-column GPU
 timing and parity, single and vmap). The original ask below now lives in the phase-1

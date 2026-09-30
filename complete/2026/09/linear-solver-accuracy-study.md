@@ -1,3 +1,33 @@
+## linear-solver-accuracy-study
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/354
+- completed: 2026-09-30
+- epic: linear-solver-programme (phase 1)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/355
+- shipped-comment: https://github.com/PyAutoLabs/autolens_profiling/issues/354#issuecomment-5912714790
+
+### What shipped
+- **autolens_profiling#355** (merge 3ad68afad, head 18a9b70): phase 1 of the linear-solver programme, the new `scripts/lens/solver/` package.
+  - Corpus of **81 captured positive-only linear systems**: the 8-system #571 fixture, 48 SLaM `source_lp[1]` points, a 24-system conditioning spread, and the euclid `vis_lp` system.
+  - **17 pre-registered + 7 post-hoc solver candidates** built from library primitives; accuracy, early-stopping and euclid-latent cells; README stats via `build_readme.py`; tests; lint smoke wiring.
+  - Ledger `results/notes/linear_solver_accuracy_2026_09.md` and campaign page `wiki/campaigns/linear_solver_accuracy.md` (with its `wiki/index.md` row). Decision rule pre-registered at `327f571`, before the deciding run.
+  - Re-pinned the `xla_attribution.py` anchors to PyAutoArray `d4298445`.
+
+### Verdict
+- **Under the pre-registered rule, no candidate passes.** The released raw PDIP reports converged on 81/81 systems (objective gap ~1e-13, KKT ~3e-14). Even so, it leaves 11.5 % of the reference amplitude on euclid source columns that are inactive in the reference (total_source_flux +5.76 %). logL, the objective and KKT do not detect this. jacobi diverges on 29/81.
+- **Post-hoc results (inputs to phase 2):** each of these turns the euclid latent test green: forward polish (+7.5e-5), tol 1e-5 (+5.1e-4), jaxnnls tol with cap > 50 (-3e-8). Caps ≤ 16 are unsafe. The binding constraint is the stopping test, not the iteration budget.
+
+### Not shipped (scope filed vs scope merged)
+- This prompt's deliverable 4, the PyAutoArray fix plus re-verifying the euclid pipeline on library main, is **not** in this record. It is phase 2: `draft/bug/autoarray/raw_pdip_forward_amplitude_bias_fix.md`. The Witness/Success criteria that name the euclid test passing on PyAutoArray main belong to phase 2.
+- Phase 3 (MGE NNLS timing/parity, #571 / SLaM 60): `draft/research/autoarray/mge_nnls_fix_pyautoarray_571_slam_60.md`.
+
+### Gates
+- ruff; `build_readme` / `check_wiki` / `check_results_layout` / `build_dashboard` / `check_submits --check`; pytest 984 passed / 5 skipped; 4 smokes; CI `lint.yml` pull_request run 36717624883 success.
+
+### Notes
+- Shipped under the **Heart RED development override** (recorded on the issue, in the PR body, active.md and autonomy_log.md; RED reasons were outside autolens_profiling). A human merged it through /prm with lint green; Heart is still RED for release. This is not a library PR, so there is no pending-release line.
+
+## Original prompt
+
 # Raw-forward PDIP NNLS early stopping: a dedicated autolens_profiling study, then the PyAutoArray fix
 
 Type: research

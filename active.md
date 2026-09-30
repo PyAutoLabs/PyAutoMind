@@ -24,22 +24,6 @@
   - autolens_inference: feature/point-source-search-nautilus-leaf
 - resume: "Branch pushed (2307eea), NO PR yet. Probe RAL job 366937 COMPLETED (seed 0: wall_s 56.6 s, 4,850 evals, per_call 4.72 us batched, likelihood_share 0.041% [single-basis 1.8%], all truth |dsigma|<0.74; row committed). Seeds 1-4 = RAL array 367140 (%1, euclid-ral-gpu-2). Next: sacct -j 367140; scp euclid_jump:/mnt/ral/jnightin/autolens_inference-wt-psleaf/results/searches/point_source/nautilus/simple/source_plane_solved/hpc_a100_jax_cpu_dense_fp64/search_seed{1..4}.{json,png} into the same path in the local worktree (+ hpc/batch_cpu/{output,error}/*367140* logs by hand); check each seed recovers truth; build_readme.py; wiki admission-bar entry (wiki/project/state.md); scripts/point_source/searches/README.md leaf note; ruff/pytest/check_submits; /ship_workspace to PR (Heart YELLOW ack: PyAutoMemory open PR 7d old; other YELLOW -> DRAFT); then remove RAL worktree: cd /mnt/ral/jnightin/autolens_inference && git worktree remove /mnt/ral/jnightin/autolens_inference-wt-psleaf"
 
-## linear-solver-accuracy-study
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/354
-- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/355
-- issued: 2026-09-30
-- prompt: active/raw_forward_pdip_nnls_early_stopping.md
-- epic: linear-solver-programme
-- session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-30; session ID unavailable
-- status: awaiting-merge
-- autonomy: supervised (header); plan approved in-session 2026-09-30 (phase 1: autolens_profiling only, no library edits)
-- worktree: ~/Code/PyAutoLabs-wt/linear-solver-accuracy-study
-- repos:
-  - autolens_profiling: feature/linear-solver-accuracy-study
-- summary: Phase 1 of the linear-solver programme — a dedicated `scripts/lens/solver/` package in autolens_profiling (system corpus, solver-candidate registry, accuracy + early-stopping cells, README stats), a pre-registered rule, and a campaign page recording which raw-PDIP variant fixes the ~4 % amplitude bias while keeping 48/48 SLaM points converged. Library fix = phase 2 (own prompt, PyAutoArray).
-- heart-red-override: authorised by the live human in the Claude Code session 2026-09-30 ~12:05 BST ("Continue this work:" on the resume note naming #354, whose next step reads "acknowledge or override the RED, then re-run /ship_workspace linear-solver-accuracy-study (or push the branch and open the PR with the drafted body), then /prm"; the human then pushed the branch directly ~12:20 BST after the auto-mode classifier denied the agent push); RED reasons at the 11:52 BST gate: "PyAutoArray: 2 commit(s) behind origin"; "PyAutoLens: 2 commit(s) behind origin"; "release validation FAILED (stage integrate)"; "workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py)"; "manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml" (first two cleared by ff-pull ~12:07 BST, still RED score 45); none in autolens_profiling; scope: push + pending PR #355; merge only via /prm on all-green required checks; no release
-- resume: "Phase 1 shipped to PR https://github.com/PyAutoLabs/autolens_profiling/pull/355 (head 18a9b70, opened 2026-09-30 under the heart-red-override above). Verdict: no drop-in candidate; post-hoc euclid latent: polish +7.5e-5 / tol 1e-5 +5.1e-4 / jaxnnls cap>50 -3e-8 all green. Next: /prm linear-solver-accuracy-study once lint.yml is green (merge stays human); then phase 2 draft/bug/autoarray/raw_pdip_forward_amplitude_bias_fix.md once PyAutoArray claim sparse-data-none-guard clears."
-
 ## ep-moment-projection
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1654
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1656
