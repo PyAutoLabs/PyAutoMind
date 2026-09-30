@@ -13,7 +13,8 @@ Themes:
 Difficulty: small
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
+Issued: 2026-09-30
 Consequence: glance
 Witness: on a sparse-operator dataset with the precomputed-data-term gate on (`fit.inversion.dataset.data is None`), `fit.inversion.data_subtracted_dict` raises `InversionException` naming `inversion_with_data` (no TypeError, no `{mapper: None}`), and `InversionPlotter.subplot_of_mapper` / `subplot_mappings` on that inversion skip cleanly instead of raising; `check_noise_map_real_imag_equal` rejects sigma 1e-9 vs 2e-9; `apply_sparse_operator` on complex64 data gives `data_term` equal to the complex128 value and to `sparse_terms_from_chunks`; the two workspace `interferometer/features/pixelization/fit.py` scripts run under the smoke profile using `fit.inversion_with_data`.
 Review-minutes: 5

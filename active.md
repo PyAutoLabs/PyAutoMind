@@ -68,3 +68,18 @@
 - repos:
   - PyAutoCortex: feature/ep-checkin-cleanup
 - summary: Clear the 2026-09-30 EP Cortex check-in issues in order (stale open runs, stale Now sections, tripled projects.yaml, stranded euclid_dr1 ledger edit), then prepare each of the four EP projects' next submission or name its blocker; stop at the go/no-go table.
+
+## sparse-data-none-guard
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/590
+- issued: 2026-09-30
+- prompt: active/sparse_data_none_data_subtracted_dict_guard.md
+- source: https://github.com/PyAutoLabs/PyAutoLens/pull/757#issuecomment-5907806825 (Codex astra review of Discussion #13 phase 1)
+- parent: complete/2026/09/interferometer-streaming-visibilities.md
+- session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-30
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/sparse-data-none-guard
+- autonomy: supervised (header); plan approved in-session 2026-09-30 (guard data_subtracted_dict on data=None + plotter handlers, allclose atol=0, complex128 data term, tests; workspace pixelization fit.py → inversion_with_data)
+- repos:
+  - PyAutoArray: feature/sparse-data-none-guard
+  - autogalaxy_workspace: feature/sparse-data-none-guard
+  - autolens_workspace: feature/sparse-data-none-guard
