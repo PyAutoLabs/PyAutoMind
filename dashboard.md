@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/interferometer_decision_matrix.md">Interferometer likelihood campaign 3/3 — phase 4: the decision matrix (epic deliverable)</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/356">issue #356</a> — issued 2026-09-30 — workspace-dev</summary>
+<details><summary>📋 <a href="active/interferometer_decision_matrix.md">Interferometer likelihood campaign 3/3 — phase 4: the decision matrix (epic deliverable)</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/356">issue #356</a> — issued 2026-09-30 — awaiting-merge</summary>
 
 ```
 /start_dev active/interferometer_decision_matrix.md
