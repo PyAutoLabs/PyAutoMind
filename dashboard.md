@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/ep_hierarchical_scatter_moment_matching.md">EP: moment-matching projection for the hierarchical scatter…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1654">issue #1654</a> — issued 2026-09-30 — library-merged, workspace-pending (PyAutoFit#1656 merged 2026-09-30; phase 2 = autofit_workspace_test via /start_workspace… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1656">PyAutoFit#1656</a> — ⏳ pending release: PyAutoFit</summary>
+<details><summary>📋 <a href="active/ep_hierarchical_scatter_moment_matching.md">EP: moment-matching projection for the hierarchical scatter…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1654">issue #1654</a> — issued 2026-09-30 — workspace-dev (phase 2: autofit_workspace_test; library PyAutoFit#1656 merged 2026-09-30; supervised) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1656">PyAutoFit#1656</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 /start_dev active/ep_hierarchical_scatter_moment_matching.md
