@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-09-30T15:01:32Z",
+  "updated": "2026-09-30T15:08:26Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "EP: moment-matching projection for the hierarchical scatter\u2026 \u2014 workspace-shipped, awaiting-merge (autofit_workspace_test PR #105 open; library PyAutoFit#1656 merged; supervised, merge is human\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1656",
+      "prompt": "/start_dev active/ep_hierarchical_scatter_moment_matching.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#430 \u2014 eyes-galaxy-instance",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/430",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#427 \u2014 eyes-organ-order",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/427",
       "prompt": null
     }
   ]
