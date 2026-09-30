@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/ep_hierarchical_scatter_moment_matching.md">EP: moment-matching projection for the hierarchical scatter…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1654">issue #1654</a> — issued 2026-09-30 — library-dev</summary>
+<details><summary>📋 <a href="active/ep_hierarchical_scatter_moment_matching.md">EP: moment-matching projection for the hierarchical scatter…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1654">issue #1654</a> — issued 2026-09-30 — library-shipped, workspace-pending (PyAutoFit#1656 open; phase 2 = autofit_workspace_test via /start_workspace after merge… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1656">PyAutoFit#1656</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 /start_dev active/ep_hierarchical_scatter_moment_matching.md
@@ -284,7 +284,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/raw_forward_pdip_nnls_early_stopping.md">Raw-forward PDIP NNLS early stopping: a dedicated autolens_profiling study, then the PyAutoArray…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/354">issue #354</a> — issued 2026-09-30 — workspace-dev</summary>
+<details><summary>📋 <a href="active/raw_forward_pdip_nnls_early_stopping.md">Raw-forward PDIP NNLS early stopping: a dedicated autolens_profiling study, then the PyAutoArray…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/354">issue #354</a> — issued 2026-09-30 — awaiting-merge</summary>
 
 ```
 /start_dev active/raw_forward_pdip_nnls_early_stopping.md
@@ -355,6 +355,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoFit**
 
+- [PyAutoFit#1656](https://github.com/PyAutoLabs/PyAutoFit/pull/1656) — `active/ep_hierarchical_scatter_moment_matching.md`
 - [PyAutoFit#1655](https://github.com/PyAutoLabs/PyAutoFit/pull/1655) — `active/ep_project_nonfinite_suff_stats_ic50_n50.md`
 - [PyAutoFit#1652](https://github.com/PyAutoLabs/PyAutoFit/pull/1652) — `complete/2026/09/ep-nautilus-single-pass.md`
 - [PyAutoFit#1649](https://github.com/PyAutoLabs/PyAutoFit/pull/1649) — `complete/2026/09/point-source-gradient-mode.md`
