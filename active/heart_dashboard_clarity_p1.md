@@ -4,10 +4,12 @@ Type: feature
 Target: PyAutoHeart
 Difficulty: medium
 Autonomy: human-required
-Status: draft
+Status: active
+Issued: 2026-09-30
+Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/245
 Priority: high
 
-@PyAutoHeart. Parent intent, verbatim request, findings, design and the Fable review (2026-09-30) with its numbered amendments: `heart_dashboard_clarity.md` in this directory. Human approved the amended plan on 2026-09-30, including neutral headings.
+@PyAutoHeart. Parent intent, verbatim request, findings, design and the Fable review (2026-09-30) with its numbered amendments: `draft/feature/pyautoheart/heart_dashboard_clarity.md` in Mind. Human approved the amended plan on 2026-09-30, including neutral headings.
 
 Scope (parent detailed step 2, the display half of step 1, the CLI half of step 4, applicable step 5 validation):
 

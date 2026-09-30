@@ -60,3 +60,16 @@
   - PyAutoGalaxy: feature/streaming-p3-visualizer
   - PyAutoLens: feature/streaming-p3-visualizer
 - heart-red-override: "RED 2026-09-30T18:32Z — exact reasons: `release validation FAILED (stage integrate)`; `PyAutoLens: on branch feature/point-solver-padding-backend (not main)`; `PyAutoLens: 2 uncommitted source change(s)` (other-session drift). Live human authorization in-session 2026-09-30 for #596 / feature/streaming-p3-visualizer (Array+Galaxy+Lens): 'Authorize override for #596' (commit, push, pending-release PRs only; merge separate + checks green; no release). Branch gates: autoarray 1898, autogalaxy 1293, autolens 776+1 xfail; red-checks; Codex astra review FINDINGS (1): model-image composition for mixed galaxies, fixed in-branch + red-checked."
+
+## heart-dashboard-clarity
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/heart-dashboard-clarity
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/245
+- issued: 2026-09-30
+- session: Codex; session ID unavailable
+- status: library-dev
+- repos:
+  - PyAutoHeart: feature/heart-dashboard-clarity
+- heart-red-override:
+  - authorization: Human said "yes go" after being asked to authorize this dashboard task despite the two reported RED reasons; development only, not merge or release.
+  - reasons: "PyAutoLens: 2 commit(s) behind origin"; "release validation FAILED (stage integrate)"
+  - validation: pending branch tests and review; no failed gate is waived.
