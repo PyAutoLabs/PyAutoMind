@@ -18,6 +18,8 @@ Consequence: judge
 Witness: an `Interferometer.from_stream(chunks, real_space_mask, ...)` dataset with `data`, `noise_map` and `uv_wavelengths` all `None` and no transformer runs a pixelization-only `ag.FitInterferometer` under `AnalysisInterferometer` end to end (log_likelihood, `jax.jit`, result save + aggregator reload, visualizer output) with log_evidence equal to the in-memory `apply_sparse_operator` fit at rel 1e-8, and peak RSS independent of N_vis (flat across 5e5..4e6 visibilities, ~36 MB over baseline as in the discussion's table).
 Review-minutes: 15
 Unattended: needs-slicing
+Epic: streaming-visibilities
+Ledger: true
 Parent: complete/2026/09/interferometer-streaming-visibilities.md
 
 Source: GitHub Discussion https://github.com/orgs/PyAutoLabs/discussions/13 (HRSAstro,
@@ -56,7 +58,27 @@ touches visibilities — but the process still holds them, because:
 pyuvimage works around all of this with `stub_dataset_from_terms`, a fake `Interferometer`
 with 8 zero visibilities and a `TransformerDFT`. The upstream design should not need a stub.
 
-## What
+## Phases (ledger — issued ONE at a time as each predecessor merges)
+
+| Phase | Member prompt | Repos | Status |
+|---|---|---|---|
+| 1 | `draft/feature/autoarray/streaming_p1_array_free_dataset.md` | PyAutoArray | issued 2026-09-30 |
+| 2 | `draft/feature/autogalaxy/streaming_p2_fit_save_reload.md` | PyAutoGalaxy, PyAutoLens | draft |
+| 3 | `draft/feature/autoarray/streaming_p3_visualizer.md` | PyAutoArray, PyAutoGalaxy, PyAutoLens | draft |
+| 4 | `draft/feature/autoarray/streaming_p4_light_profile_identity.md` | PyAutoArray, PyAutoGalaxy, PyAutoLens | draft |
+| 5 | `draft/feature/autoarray/streaming_p5_cubes_phase_centre.md` | PyAutoArray (+ datacube example) | draft |
+
+Design decisions taken with the phase plan (2026-09-30, human-approved): (a) array-free datasets carry
+`transformer=None` (no stub class); `AbstractInversionInterferometer.mask` reads the dataset mask;
+consumers gate and raise a typed `DatasetException`. (b) `SparseTerms` persists as FITS extensions in
+`dataset.fits` (EXTNAME lookup), never npz. (c) in-memory `dirty_image` (unweighted adjoint) is unchanged;
+new `dirty_image_natural` / `dirty_beam` on both paths; array-free plots use them, labelled. (d) reload
+re-attaches the operator for array-free datasets; the in-memory sparse reload gap is
+`draft/bug/autogalaxy/aggregator_reload_drops_sparse_operator.md`. (e) `SparseTerms` carries provenance
+(mask shape/pixel_scales/origin, eps, transformer class). Public commitment: the reply on Discussion #13
+promises a follow-up post when this lands.
+
+## What (original scope, now sliced above)
 
 1. **Constructor.** `Interferometer.from_stream(chunks, real_space_mask, ...)` and/or
    `Interferometer.from_sparse_terms(terms, real_space_mask)` with optional
