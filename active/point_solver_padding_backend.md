@@ -8,8 +8,9 @@ Repos:
 Difficulty: small
 Autonomy: supervised
 Priority: high
-Status: blocked
-Blocked-by: Heart RED — release validation FAILED (stage integrate)
+Status: active
+Issued: 2026-09-30
+Issue: https://github.com/PyAutoLabs/PyAutoLens/issues/759
 Consequence: judge
 Epic: cluster-strong-lensing
 Phase: 1
@@ -72,3 +73,5 @@ task-specific. Await a live development-only override for
 `point-solver-padding-backend` before issuing/starting this task. No issue,
 worktree, or source edit yet. The user approved the bounded fix with “go”;
 no second plan approval is needed.
+
+Live user override: “I authorize”, in direct response to the phase-1b development-only RED override request. Exact RED: “release validation FAILED (stage integrate)”. Development shipping only; merge remains separate.

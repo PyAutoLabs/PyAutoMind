@@ -160,9 +160,12 @@ Phase 1 as a whole is NOT complete; phase 2 remains gated. No new issues queued.
 ## Phase 1b prepared — 2026-09-30
 
 User approved the next padding-default fix with “go”. Filed the single bounded
-plan `draft/bug/autolens/point_solver_padding_backend.md`: choose omitted
+plan `active/point_solver_padding_backend.md`: choose omitted
 remove_infinities from resolved call-time xp; preserve explicit overrides;
 NumPy and JAX regressions. No repo claims conflict. No issue or source edits.
 Full Vitals refresh at 18:22:29Z reports RED “release validation FAILED
 (stage integrate)”; await a task-specific development-only override. The
 completed #328 grant does not carry over. No other phase prompts/issues queued.
+
+Phase 1b authorized and issued as PyAutoLens#759. User granted the task-specific
+RED development override; implementation on feature/point-solver-padding-backend.
