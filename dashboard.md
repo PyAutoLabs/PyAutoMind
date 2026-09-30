@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/point_solver_error_audit.md">PointSolver error audit — Source &amp; Cluster arc phase 1a</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/328">issue #328</a> — issued 2026-09-30 — workspace-dev</summary>
+<details><summary>📋 <a href="active/point_solver_error_audit.md">PointSolver error audit — Source &amp; Cluster arc phase 1a</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/328">issue #328</a> — issued 2026-09-30 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/329">autolens_workspace_test#329</a></summary>
 
 ```
 /start_dev active/point_solver_error_audit.md
@@ -276,7 +276,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/streaming_p3_visualizer.md">Streaming phase 3: visualizer on array-free datasets…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/596">issue #596</a> — issued 2026-09-30 — library-dev</summary>
+<details><summary>📋 <a href="active/streaming_p3_visualizer.md">Streaming phase 3: visualizer on array-free datasets…</a> — issued 2026-09-30</summary>
 
 ```
 /start_dev active/streaming_p3_visualizer.md

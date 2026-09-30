@@ -44,28 +44,13 @@
 - prompt: active/point_solver_error_audit.md
 - epic: cluster-strong-lensing
 - session: Codex; session ID unavailable
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/329
 - autonomy: supervised; plan and branch approved by user ("go") 2026-09-30
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/point-solver-error-audit
 - repos:
   - autolens_workspace_test: feature/point-solver-error-audit
-- ship-blocked: Heart RED "release validation FAILED (stage integrate)" (2026-09-30T17:54:24Z); no override granted
+- heart-red-override: Live user 2026-09-30: "Override Heart RED for #328; ship the PR, then merge when CI is green". Exact RED: "release validation FAILED (stage integrate)". Gates passed: 24 audit rows, 16 historical comparisons, capacity/dtype witnesses, image-plane parity, 32/32 smoke, Black, staged diff and in-session review. Development shipping and green-CI merge this turn only; no release.
 - evidence: 24 measured audit rows; 16 historical-method comparisons; 32/32 workspace smoke; existing image-plane parity passed; Black and staged diff checks passed
 - results: scripts/point_source/solver/RESULTS.md (task worktree); JSON witnesses beside it; logs ../scratch/
-- resume: Implementation complete and staged on feature/point-solver-error-audit (base 7a47bac), no feature commit/push/PR because Heart is RED. Obtain a live development-only override for #328 after re-reading readiness, then commit/push/open the pending-release PR through ship_workspace. Issue comment 5916747192 records findings. No library fixes or later phase issues started.
-
-## streaming-p3-visualizer
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/596
-- issued: 2026-09-30
-- prompt: active/streaming_p3_visualizer.md
-- epic: streaming-visibilities (phase 3 of 5; ledger draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md)
-- source: https://github.com/orgs/PyAutoLabs/discussions/13
-- session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-30
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/streaming-p3-visualizer
-- autonomy: supervised (header); plan + design decisions approved in-session 2026-09-30 (branch in place on is_array_free; natural-weighted dirty panels from the terms; in-memory byte-unchanged; _recon_array + logger fixes)
-- parallel-claim: "PyAutoArray is also claimed by raw-pdip-forward-polish (#594, PR #595 open; files autoarray/util/jax_nnls.py, inversion_util.py, settings.py, config/general.yaml, NNLS tests). This task touches plot modules and fit/fit_interferometer.py only — disjoint. Parallel claim human-approved 2026-09-30 with the plan."
-- repos:
-  - PyAutoArray: feature/streaming-p3-visualizer
-  - PyAutoGalaxy: feature/streaming-p3-visualizer
-  - PyAutoLens: feature/streaming-p3-visualizer
+- resume: PR #329 open at c54fcf8; waiting for every CI run/matrix leg to pass, then merge and close phase 1a. User authorized RED development shipping and green-CI merge this turn. Parent phase 1 remains incomplete.

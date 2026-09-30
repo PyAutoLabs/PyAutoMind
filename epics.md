@@ -27,7 +27,7 @@ epic, never picked standalone.
 ## cluster-strong-lensing
 - title: Cluster strong lensing — Source & Cluster arc
 - ledger: draft/feature/autolens/source_cluster_arc.md
-- status: phase 1a audit implemented locally 2026-09-30 (autolens_workspace_test#328): 24 audit rows, 16 historical-method comparisons, 32/32 smoke. Awaiting Heart RED development-shipping override; no PR yet. Parent phase 1 remains incomplete pending hardening. Cortex phase 11 was dropped by R-20260907-05; a successor requires a fresh science-project birth.
+- status: phase 1a audit implemented locally 2026-09-30 (autolens_workspace_test#328): 24 audit rows, 16 historical-method comparisons, 32/32 smoke. PR autolens_workspace_test#329 open at c54fcf8 under explicit Heart RED override; CI pending. Parent phase 1 remains incomplete pending hardening. Cortex phase 11 was dropped by R-20260907-05; a successor requires a fresh science-project birth.
 - notes: 12 phased prompts under draft/; issue phases ONE at a time as predecessors near shipping — no bulk issue queues. Science half: the PyAutoCortex project ledger of the science project it births (arc phase 11).
 
 ## point-source-cpu-speed

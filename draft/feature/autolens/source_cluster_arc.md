@@ -135,3 +135,7 @@ arc-segmentation boundary), Richard+17 (HFF magnification-map deliverables), Ate
   Progress: https://github.com/PyAutoLabs/autolens_workspace_test/issues/328#issuecomment-5916747192
 - Phase 1 is still incomplete. Do not start phase 2 or revive the dropped
   Cortex project; review the audit and resolve required hardening first.
+
+- Shipping update: live user authorized RED override and green-CI merge.
+  PR https://github.com/PyAutoLabs/autolens_workspace_test/pull/329 opened
+  at `c54fcf8`; all CI legs pending judgment. No later phase issued.
