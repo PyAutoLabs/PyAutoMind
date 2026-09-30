@@ -1,3 +1,11 @@
+# Heart dashboard clarity: completed review packet
+
+The human-approved, Fable-reviewed three-phase dashboard plan is delivered: PR A #246, PR B #248, PR C #250 all merged on 2026-09-30. Phase records are `heart-dashboard-clarity.md`, `heart-dashboard-reasons.md` and `heart-dashboard-timings.md` in this directory.
+
+This parent explicitly defined itself as the review packet, not a fourth implementation task. Its scope is covered by those three merged PRs, so it is retired under /prm rather than offered as unfinished backlog. The historical health observations below are not current readiness; actual integration failures and ecosystem cleanup remain separately scoped operational work.
+
+## Original prompt
+
 # Heart dashboard: readable status and a systematic path to green
 
 Type: feature

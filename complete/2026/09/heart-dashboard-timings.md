@@ -1,3 +1,17 @@
+# Heart dashboard timing clarity
+
+Merged PyAutoHeart PR #250 on 2026-09-30 as `46d267f2e1a1d9731e17a523ddae4e0b10e3d1c4`, from head `984b1f60210af19469e4c816bb3608de755a68a6`. Issue #249 closed; all claimed commits proven ancestors of origin/main.
+
+Timing cards now make current seconds prominent, label baseline/change and coverage, preserve unavailable and baseline-building imports, show suite Python legs independently with their three slowest tests and expandable remaining detail, and display CI median/max/count/window before accessible charts with missing-data gaps and text equivalents. Copy labels no longer truncate. Readiness and the performance consumer contract are unchanged.
+
+Validation: 1099 Heart tests, 147 final presentation tests, 53 Brain consumer tests; four baseline comparisons of performance/verdict/score/blockers; Chromium light/dark at 375/390/1280px, keyboard disclosures, 200% text and copy labels. Exact-head CI run 36770498391 passed every step in Python 3.12 and 3.13.
+
+After merge, dashboard publisher dispatched: https://github.com/PyAutoLabs/PyAutoHeart/actions/runs/36772075665 (completed successfully). Existing release integration failure is not repaired by this presentation work. No scientific release performed.
+
+All three approved dashboard phases are merged (#246, #248, #250). The Fable-reviewed parent packet is retired separately as `complete/2026/09/heart-dashboard-clarity-plan.md`. Preview images and validation logs are retained locally under `tmp/heart-dashboard-timings-evidence/`.
+
+## Original prompt
+
 # Heart clarity PR C: readable import, unit-test and CI timings
 
 Type: feature

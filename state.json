@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
-  "updated": "2026-09-30T20:09:06Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 2 in flight",
+  "updated": "2026-09-30T20:22:24Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Heart clarity PR C: readable import, unit-test and CI timings \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoHeart/pull/250",
-      "prompt": "/start_dev active/heart_dashboard_clarity_p3.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#429 \u2014 eyes-board-conductor-registry",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/429",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoBrain PyAutoBrain#431 \u2014 eyes-fit-cti-instances",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/431",
       "prompt": null
     }
   ]
