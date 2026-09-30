@@ -10,7 +10,8 @@ Themes:
 - memory
 Autonomy: supervised
 Priority: medium
-Status: draft
+Status: active
+Issued: 2026-09-30
 Epic: streaming-visibilities
 Phase: 1
 Difficulty: medium
