@@ -93,6 +93,6 @@ Those claims remain intact. Profiling main also has untracked dataset/abell_1201
 Heart: STALE — test run status unknown (no report.json); install verification not
 run; no release validation for current source. Refresh at shipping.
 
-Awaiting human plan and issue-body approval under start_dev; no issue or worktree
-has been created. After approval create only this issue through create_issue,
-register the claim, and continue implementation.
+Plan and branch approved by user (“go”) 2026-09-30. Issued as #328; implementation
+and local validation complete. See active.md and the parent epic ledger for
+results and the Heart RED ship block. No feature commit/push/PR yet.

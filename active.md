@@ -70,4 +70,7 @@
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/point-solver-error-audit
 - repos:
   - autolens_workspace_test: feature/point-solver-error-audit
-- resume: Execute approved phase 1a audit; libraries read-only. Issue #328.
+- ship-blocked: Heart RED "release validation FAILED (stage integrate)" (2026-09-30T17:54:24Z); no override granted
+- evidence: 24 measured audit rows; 16 historical-method comparisons; 32/32 workspace smoke; existing image-plane parity passed; Black and staged diff checks passed
+- results: scripts/point_source/solver/RESULTS.md (task worktree); JSON witnesses beside it; logs ../scratch/
+- resume: Implementation complete and staged on feature/point-solver-error-audit (base 7a47bac), no feature commit/push/PR because Heart is RED. Obtain a live development-only override for #328 after re-reading readiness, then commit/push/open the pending-release PR through ship_workspace. Issue comment 5916747192 records findings. No library fixes or later phase issues started.

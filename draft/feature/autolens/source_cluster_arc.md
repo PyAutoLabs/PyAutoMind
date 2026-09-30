@@ -104,3 +104,34 @@ arc-segmentation boundary), Richard+17 (HFF magnification-map deliverables), Ate
   targets different cluster scripts. Other repositories are read-only inputs.
 - start_dev: Heart STALE (no report.json); planning may continue. Phase 1a plan approved 2026-09-30; issued as autolens_workspace_test#328
   on feature/point-solver-error-audit. No issues queued for later phases.
+
+## Phase 1a execution — 2026-09-30
+
+- User approved the plan with “go”; issued only autolens_workspace_test#328.
+  Worktree: `/home/jammy/Code/PyAutoLabs/.worktrees/point-solver-error-audit`;
+  workspace branch `feature/point-solver-error-audit`, base `7a47bac`.
+- Implemented audit scripts, RESULTS.md and three JSON witnesses under
+  `autolens_workspace_test/scripts/point_source/solver/`. 24 full-data CPU
+  NumPy/eager-JAX/JIT rows; 16 historical-Hessian replay comparisons;
+  capacity/dtype checks; existing image-plane parity passes; workspace smoke
+  **32 passed, 0 failed**. Formatting and staged diff whitespace checks pass.
+- Historical attribution is limited: pre-March stack import lacks autoconf.
+  The report explicitly distinguishes historical-method replay on current
+  deflections from a full historical-stack bisect.
+- Findings: call-time xp override uses the constructor's padding default and
+  fails under jit; symmetric quad returns duplicate centroids on NumPy/eager
+  JAX at scale 0.05; synthetic capacity overflow silently truncates. Float32
+  NaN placeholders preserve float64 vertices in the tested paths. Actual
+  fixture containment counts peak at 13. Local point magnification remains
+  the appropriate filter quantity; buffer changes do not explain a positional
+  regression at threshold 0.1 in these fixtures.
+- Corrected chronology: cap argument removed in 2024-12 (`5c42d8133`), not
+  April 2026; JAX jacfwd added 2026-03-02 (`ee92bebe`), NumPy Richardson in
+  April. The parent bug prompt carries these corrections and hardening scope.
+- **Not shipped:** staged local changes, no feature commit/push/PR. Latest
+  Heart RED: “release validation FAILED (stage integrate)” at
+  2026-09-30T17:54:24Z. Earlier PyAutoGalaxy CI RED cleared on refresh.
+  Await live development-only override for #328, then ship_workspace.
+  Progress: https://github.com/PyAutoLabs/autolens_workspace_test/issues/328#issuecomment-5916747192
+- Phase 1 is still incomplete. Do not start phase 2 or revive the dropped
+  Cortex project; review the audit and resolve required hardening first.

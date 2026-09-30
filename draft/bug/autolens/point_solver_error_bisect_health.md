@@ -87,3 +87,21 @@ Blocks: every later phase of the arc (profiling, cluster source science, point
 magnification) assumes a trusted PointSolver.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-08-19 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/483da28c-8c96-4c83-ad87-a43448ca2164/scratchpad/source_cluster_phases/phase01_point_solver_error_regression_bisect.md -->
+
+## Phase 1a audit correction — 2026-09-30
+
+Active audit: autolens_workspace_test#328; prompt `active/point_solver_error_audit.md`.
+Git evidence corrects two historical claims above: the solver's configurable
+`max_containing_size` was removed by PyAutoLens `5c42d8133` on 2024-12-16;
+`fca58c468` removed the stale parameter documentation while refactoring xp.
+The JAX jacfwd Hessian arrived in PyAutoGalaxy `ee92bebe` on 2026-03-02;
+`eacdcd77` on 2026-04-18 added NumPy Richardson extrapolation.
+Current cap is 20 (PyAutoArray#584), not 15. Preserve the original hypothesis
+above as intake history; use these corrected boundaries for subsequent work.
+
+Current audit witnesses: constructor-default solver + explicit xp=jnp under jit
+raises NonConcreteBooleanIndexError unless padding is explicit; the symmetric
+quad can return duplicate triangle centroids at scale 0.05; synthetic 24-triangle
+containment silently truncates at caps 15 and 20. Float32 NaN placeholders did
+not downcast float64 vertices in eager or jit tests. These findings remain in
+the parent hardening scope; no additional issues have been queued.
