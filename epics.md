@@ -27,7 +27,7 @@ epic, never picked standalone.
 ## cluster-strong-lensing
 - title: Cluster strong lensing — Source & Cluster arc
 - ledger: draft/feature/autolens/source_cluster_arc.md
-- status: reconciled 2026-09-30 — no numbered phase completed or in flight; phase 1a PointSolver error audit prompt filed, awaiting plan approval. Separately shipped solver fixes must be reused. Cortex phase 11 was dropped by R-20260907-05 when inference_programme retired; any successor requires a fresh science-project birth.
+- status: reconciled 2026-09-30 — no numbered phase completed or in flight; phase 1a PointSolver error audit active (autolens_workspace_test#328; approved 2026-09-30). Separately shipped solver fixes must be reused. Cortex phase 11 was dropped by R-20260907-05 when inference_programme retired; any successor requires a fresh science-project birth.
 - notes: 12 phased prompts under draft/; issue phases ONE at a time as predecessors near shipping — no bulk issue queues. Science half: the PyAutoCortex project ledger of the science project it births (arc phase 11).
 
 ## point-source-cpu-speed

@@ -94,7 +94,7 @@ arc-segmentation boundary), Richard+17 (HFF magnification-map deliverables), Ate
   PyAutoLens#753 (merged 2026-09-27; cap now 20). Point-source CPU campaign
   records are sibling work, not completion of this arc's phase 2.
 - Brain classifies the existing phase-1 umbrella as too large. Next bounded step:
-  `draft/research/workspaces/point_solver_error_audit.md` (phase 1a). This is
+  `active/point_solver_error_audit.md` (phase 1a). This is
   an audit-only workspace PR before evidence-driven library hardening; phase 1
   stays incomplete until the audit and required hardening are accepted.
 - Full phase-1 repo claims conflict: PyAutoArray is claimed by
@@ -102,6 +102,5 @@ arc-segmentation boundary), Richard+17 (HFF magnification-map deliverables), Ate
   `interferometer-decision-matrix`. Phase 1a writes only autolens_workspace_test;
   the worktree conflict guard passes for that repo. Its open #106 is related but
   targets different cluster scripts. Other repositories are read-only inputs.
-- start_dev: Heart STALE (no report.json); planning may continue. Phase 1a prompt
-  and detailed plan filed; awaiting explicit plan/issue-body approval before
-  issue creation and worktree setup. No issues queued for later phases.
+- start_dev: Heart STALE (no report.json); planning may continue. Phase 1a plan approved 2026-09-30; issued as autolens_workspace_test#328
+  on feature/point-solver-error-audit. No issues queued for later phases.

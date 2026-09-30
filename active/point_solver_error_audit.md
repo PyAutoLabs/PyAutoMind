@@ -7,7 +7,9 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
+Issued: 2026-09-30
+Issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/328
 Epic: cluster-strong-lensing
 Phase: 1
 Parent: draft/feature/autolens/source_cluster_arc.md

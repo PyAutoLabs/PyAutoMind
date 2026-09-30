@@ -56,3 +56,16 @@
 - summary: Return the #573 polished iterate (≤ 10 tight warm-started Jacobi-system PDIP iterations) as the raw-forward PDIP forward value in both the custom_vjp forward and the primal, so jit/grad/eager agree; new amplitude regression test over the phase-1 corpus (8 #571 + euclid, fnnls reference) red on d4298445; euclid latent jit test then passes on library main with no override; downstream autolens_profiling ledger row after the library merge.
 - heart-red-override: authorised by the live human in the Claude Code session 2026-09-30 ("ok do phase 2" launched the task; at the ship gate the human pushed feature/raw-pdip-forward-polish directly ~16:35 BST after the auto-mode classifier denied the agent push); Heart at the 16:25 BST gate: RED "release validation FAILED (stage integrate)"; YELLOW "workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py)", "manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml"; none in PyAutoArray; scope: push + pending-release PR #595; merge only via /prm on all-green required checks; no release
 - resume: "Library phase DONE: PyAutoArray#595 MERGED 2026-09-30 (merge 7a89e19a0, head 42c52358) via /prm on green CI; pending release. Workspace phase NEXT in ~/Code/PyAutoLabs-wt/raw-pdip-forward-polish/autolens_profiling (branch feature/raw-pdip-forward-polish, 4 uncommitted re-run files that overwrote the v2026.8.17.1 stamp in place — pre-fix copies in git HEAD): (1) re-base scripts/lens/solver/euclid_latent.py validation leg from pre-fix jit 3.511093374 to eager 3.3198794874 (fixed pdip_raw = 3.320127537, +7.47e-5) and re-run it; (2) decide the artefact label for post-fix rows (branch/PR label or re-stamp) so pre/post both survive; (3) ledger row in results/notes/linear_solver_accuracy_2026_09.md + wiki/campaigns/linear_solver_accuracy.md (+ index) + build_readme.py; note tol_1e-2 no longer reproduces pdip_raw; (4) ruff/pytest/check_* gates; (5) /ship_workspace raw-pdip-forward-polish (library-first gate: #595 merged; release-gate: PyAutoArray until released), then /prm closes the task. euclid pipeline + autolens_workspace_test: no edits."
+
+## point-solver-error-audit
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/328
+- issued: 2026-09-30
+- prompt: active/point_solver_error_audit.md
+- epic: cluster-strong-lensing
+- session: Codex; session ID unavailable
+- status: workspace-dev
+- autonomy: supervised; plan and branch approved by user ("go") 2026-09-30
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/point-solver-error-audit
+- repos:
+  - autolens_workspace_test: feature/point-solver-error-audit
+- resume: Execute approved phase 1a audit; libraries read-only. Issue #328.
