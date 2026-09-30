@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/dashboard_section_labels_wrap.md">Heart dashboard section names wrap into narrow columns</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/251">issue #251</a> — issued 2026-09-30 — library-dev</summary>
+<details><summary>📋 <a href="active/dashboard_section_labels_wrap.md">Heart dashboard section names wrap into narrow columns</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/251">issue #251</a> — issued 2026-09-30 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/252">PyAutoHeart#252</a></summary>
 
 ```
 /start_dev active/dashboard_section_labels_wrap.md

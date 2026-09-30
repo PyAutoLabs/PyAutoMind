@@ -29,7 +29,14 @@
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/251
 - issued: 2026-09-30
 - session: Codex; session ID unavailable
-- status: library-dev
+- status: awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/252
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/heart-dashboard-section-labels
 - repos:
   - PyAutoHeart: feature/heart-dashboard-section-labels
+- heart-red-override:
+  - authorization: Same-session human-approved Fable-reviewed Heart readability plan, human "yes go" after the exact RED reason was surfaced, and current user correction of remaining section-label wrapping; development shipping only.
+  - reason: release validation FAILED (stage integrate)
+  - observed: 2026-09-30T20:29:52.811107+00:00; RED, score 45
+  - gates: 1099 Heart tests, 158 targeted tests, published-board browser checks at 320/375/390/430/768/900/1280px in light/dark and 200% text passed; in-session visual/diff review.
+- resume: PR #252 at 7241a4f; judge both exact-head GitHub CI legs with /prm before merging, then dispatch heart-health.yml and close the issue/Mind task.
