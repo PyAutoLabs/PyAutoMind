@@ -1,5 +1,19 @@
 # Active Tasks
 
+## interferometer-decision-matrix
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/356
+- issued: 2026-09-30
+- prompt: active/interferometer_decision_matrix.md
+- epic: interferometer-likelihood-campaign
+- session: Claude Code CLI (Opus 5.5 main session + Opus subagent), 2026-09-30
+- status: workspace-dev
+- autonomy: supervised (header); plan approved in-session 2026-09-30 via Plan Mode (workspace-only, no library edits)
+- parallel-claim: "autolens_profiling is also claimed by raw-pdip-forward-polish (workspace-pending). File sets disjoint (this task: instruments/interferometer.py, new hpc/batch_{cpu,gpu}/submit_breakdown_interferometer_*_{radius_gaps,sdp81}_*, new results/breakdown/interferometer/** JSONs, results/notes/interferometer_likelihood_decision_matrix_2026_09.md, wiki/campaigns/interferometer_likelihood.md, wiki/index.md row, results/README.md Campaign findings paragraph; raw-pdip: results/notes/linear_solver_accuracy_2026_09.md, wiki/campaigns/linear_solver_accuracy.md, euclid_latent.py). Whichever ships second merges results/README.md. Parallel claim human-approved 2026-09-30 with the plan."
+- worktree: ~/Code/PyAutoLabs-wt/interferometer-decision-matrix
+- repos:
+  - autolens_profiling: feature/interferometer-decision-matrix
+- resume: "Issued; next start_workspace (worktree), then delegated execution: sdp81 preset, RAL CPU gap array + sdp81 CPU/A100 jobs, note."
+
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
 - issued: 2026-09-22

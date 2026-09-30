@@ -1,4 +1,4 @@
-# Interferometer likelihood campaign 3/3 — mesh numba CPU breakdown + CPU-vs-GPU decision matrix — phase map (phases 1-3 shipped; phase 4 next)
+# Interferometer likelihood campaign 3/3 — mesh numba CPU breakdown + CPU-vs-GPU decision matrix — phase map (phases 1-3 shipped; phase 4 issued #356)
 
 Type: research
 Target: autolens_profiling
@@ -19,7 +19,7 @@ Unattended: needs-slicing
 Lane: local-dev
 Epic: interferometer-likelihood-campaign
 Filed: 2026-09-25
-Updated: 2026-09-28
+Updated: 2026-09-30
 
 ## Phase 1 shipped (2026-09-27)
 
@@ -34,6 +34,14 @@ Updated: 2026-09-28
 - **Next:** Phases 2 and 3 are unblocked and can be issued in parallel. Follow-up filed:
   `draft/feature/autoarray/interferometer_sparse_numpy_cache_curvature_and_data_vector.md` — library half
   shipped 2026-09-27 (`complete/2026/09/interferometer-sparse-cache.md`, PyAutoArray#582).
+
+## Phase 4 issued (2026-09-30)
+
+- **Issue:** https://github.com/PyAutoLabs/autolens_profiling/issues/356 (task `interferometer-decision-matrix`,
+  prompt `active/interferometer_decision_matrix.md`, branch `feature/interferometer-decision-matrix`). Plan approved in-session.
+- **Scope:** sdp81 preset (real uv coverage, alma grid, simulated source); 8 RAL CPU gap cells (sma / alma_high x r2.0 / r5.0 x
+  Delaunay + rect); sdp81 CPU + A100 row (Delaunay, rect, MGE-20); decision-matrix note + README / wiki pointers.
+- **Parallel claim:** autolens_profiling shared with `raw-pdip-forward-polish` (disjoint files; README paragraph merges trivially).
 
 ## Phase 3 shipped (2026-09-28)
 
