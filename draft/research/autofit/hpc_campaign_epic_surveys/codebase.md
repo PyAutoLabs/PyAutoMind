@@ -152,6 +152,7 @@ It uses a closed, restricted YAML subset. The fields are:
 - `ledger`: the project's own state file
 - `assistant`, `witness_file`
 - `partition`: `gpu | ral | both`
+  - Correction (human, 2026-09-30): `both` must never mean submitting CPU-only arrays as `ral,gpu`; CPU arrays go on `ral` only. See the hard constraint in `../hpc_campaign_epic.md`.
 - `status`, plus an optional `note`
 
 The **`euclid_dr1` row is at :104-116**:

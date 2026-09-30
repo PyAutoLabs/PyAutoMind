@@ -12,6 +12,16 @@ Written 2026-09-27 by the Fable architect session. No code edited. Companion to 
 - **One declarative `campaign.yaml` is the spine** of everything else: stages, manifest, resources, success checks, per-index `aftercorr` chaining, failure classes, resubmission. All fit-level and campaign-level machinery lands in PyAutoFit (`autofit.campaign`) behind a scheduler-adapter protocol; Slurm is the first adapter. Lensing guidance, templates and the `hpc/sync` verbs land in `autolens_assistant`.
 - **Six phases, ~14 issues across 6 repos.** Phase 0 (bug fixes) and phase 1 (status record) are independently shippable and are the first pilot on the remaining Euclid DR1 tiles.
 
+## 0a. Hard constraint (human, 2026-09-30)
+
+CPU-only bulk/production arrays **never** go on RAL's `gpu` partition (nor `ral,gpu` /
+`gpu,ral`), even when `ral` is busy — on 09-30 they filled all 124 CPUs on both A100 nodes and
+idled all 8 GPUs for hours. Every submit/plan/queue component (C2 campaign file, the Slurm
+adapter, C8 scheduler-action tool, C3 `site.yaml`) must enforce it: lint `#SBATCH --partition`
+and refuse `gpu` for scripts without `gres/gpu`, outside the narrow timing-leg exemption
+(≤8 CPUs/task, throttle ≤`%2`, no pending gres/gpu jobs). Check TRES, not partition name, to
+tell a GPU run. Full rule: `hpc_campaign_epic.md` § "Hard constraint (human, 2026-09-30)".
+
 ## 1. Research findings
 
 ### 1.1 What the codebase does today (file refs are canonical `main`, 2026-09-27)
@@ -179,7 +189,7 @@ site: ral            # selects the Nerves site layer
 
 **`digest.json` / `digest.md`** (one per campaign, written by the collector under `<project_root>/campaign/<name>/`): per-stage counts by state and failure class, p50/p95/max wall and RSS vs request, CPU efficiency, idle-capacity snapshot, ETA (remaining CPU-h ÷ effective throughput), disk used and forecast, energy/CO2e so far (central + range), drift flags with proposed actions, and the `failed_<class>.txt` index lists. The markdown is ≤2 KB; the JSON carries per-task rows for tools.
 
-**`site.yaml`** (Nerves layer, GA4HPC vocabulary): partitions with `cores_per_node`, `mem_per_node_mb`, `max_time`, `max_array_size`, `tdp_w_per_cpu`, `cpu_is_thread`, `gpu_model`, `gpu_tdp_w`; `pue` with `pue_low`/`pue_high`; `grid_region`; `ci_basis`; `energy_accounting: false`.
+**`site.yaml`** (Nerves layer, GA4HPC vocabulary): partitions (with a GPU-only flag so `gpu` is never packed with CPU tasks, §0a) with `cores_per_node`, `mem_per_node_mb`, `max_time`, `max_array_size`, `tdp_w_per_cpu`, `cpu_is_thread`, `gpu_model`, `gpu_tdp_w`; `pue` with `pue_low`/`pue_high`; `grid_region`; `ci_basis`; `energy_accounting: false`.
 
 ### 3.3 How the agent consumes it
 
@@ -199,7 +209,7 @@ No timers, no subscriptions, no cluster-side daemon; the collector runs when inv
 | Integrity checks on stage outputs | **Core, phase 0** | `.completed` inside zip + expected members + `zipfile.testzip()`; atomic writes make truncation impossible rather than merely detected |
 | Guaranteed resume of interrupted fits | **Core, phase 1** | USR1 handler flushes the Nautilus checkpoint and writes `timeout_pending`; attempt counter; checkpoint kept until `.completed`; `--time-min` becomes safe |
 | Disk lifecycle and forecasting | **Yes, cheap** | per-fit `bytes` in the status record → campaign total and forecast; `du` retired; `hpc_mode` retention policy (`keep_loose: never/until_pulled`) documented; no automatic deletion |
-| Fairness to other users | **Yes, as plan parameters** | throttle ≤ fraction of idle CPUs at plan time, `--nice`, never `--qos` escalation; digest shows the share of the partition in use |
+| Fairness to other users | **Yes, as plan parameters** | throttle ≤ fraction of idle CPUs at plan time, `--nice`, never `--qos` escalation; CPU-only arrays never on `gpu` (§0a); digest shows the share of the partition in use |
 | Allowlisted, logged scheduler-action tool | **Core** | C8; six verbs, audit log on the cluster, hook blocks raw scheduler commands over ssh |
 | Notifications | **Drop agent-side** | Slurm `--mail-type=END,FAIL` already exists; anything else needs a timer the session rule forbids |
 | End-of-campaign report | **Yes** | C5 `campaign report`: compute, carbon (two bases + range + CI basis), failure census, per-stage tables, pointers to results; paste-ready paper paragraph |

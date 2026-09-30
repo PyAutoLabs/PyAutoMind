@@ -21,6 +21,33 @@ Filed: 2026-09-27
 
 Research report and phased epic plan: `hpc_campaign_epic_report.md` alongside this file (written 2026-09-27 by the Fable architect session; no code edited).
 
+## Hard constraint (human, 2026-09-30)
+
+Every phase that builds submit, plan or queue tooling (campaign `plan`/`submit`, the
+scheduler adapter, the allowlisted scheduler-action tool, `hpc/sync` verbs, `site.yaml`)
+must enforce this rule, not merely document it:
+
+- **Never submit bulk or production CPU-only arrays to RAL's `gpu` partition** — including
+  `--partition=ral,gpu` and `gpu,ral`, and even when `ral` nodes are drained or busy; the jobs
+  wait for `ral` instead.
+- Why: on 2026-09-30 euclid_dr1 CPU arrays submitted with `ral,gpu` occupied all 124 CPUs on
+  both euclid-ral-gpu-1 and gpu-2; all 8 A100s sat idle but unschedulable for hours, with
+  3,938 CPU tasks queued eligible for those nodes. The human called it bad practice that must
+  never happen.
+- Narrow exemption: small bounded CPU timing legs (e.g. autolens_profiling quiet-node timing)
+  may use `gpu` without `--gres` only if all three hold: ≤8 CPUs per task, array throttle
+  ≤`%2`, and no GPU jobs pending at submit time (`squeue -p gpu -t PD` shows none requesting
+  gres/gpu).
+- Diagnosis: a partition name does not tell you the device. Before calling a job a "GPU run",
+  check its TRES for `gres/gpu` with `scontrol show job`; for a stuck A100 job compare the
+  node's `AllocTRES` cpu with `CfgTRES`.
+- Never reorder, hold or cancel another campaign's jobs without the human's OK.
+- Suggested enforcement: submit tooling lints every `#SBATCH --partition` (and any
+  `--partition`/`-p` override) and refuses a partition list containing `gpu` for a script
+  that requests no `gres/gpu`, unless the exemption's three conditions are checked and met
+  at submit time. `site.yaml` should mark `gpu` as GPU-only so the planner never packs CPU
+  tasks there.
+
 ## Original request (verbatim)
 
 # Deep research: an epic for running large HPC modelling campaigns efficiently, token-cheaply and low-carbon
