@@ -187,8 +187,13 @@ Recorded so nobody re-derives them:
 - `POST .../discussions` is 404 (GitHub: the REST Discussions API is
   read-only), `api.github.com/graphql` is refused by the proxy for every
   query, `search/issues` is refused (org-wide search is not
-  repository-scoped), and `github.com/...` HTML is 403. **No session can
-  create, convert or answer a Discussion**; those are the human's clicks.
+  repository-scoped), and `github.com/...` HTML is 403. **No remote
+  (proxied) session can create, convert or answer a Discussion**; there those
+  are the human's clicks. The refusal is the proxy's, not GitHub's: a local
+  CLI with an authenticated `gh` posts, answers and closes Discussions
+  through GraphQL (measured 2026-09-30 on discussion #13 —
+  `PyAutoBrain/skills/GITHUB_ACCESS.md` → "Discussions"), after the human
+  has approved the text.
 - `GET repos/<repo>` reports `has_discussions`: true on PyAutoLens only. The
   session token has admin on every attached repo, so `PATCH` could enable
   Discussions elsewhere — deliberately not done (decision 1).
