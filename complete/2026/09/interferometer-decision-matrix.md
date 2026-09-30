@@ -1,3 +1,37 @@
+# interferometer-decision-matrix
+
+- Repo: autolens_profiling (workspace-only)
+- Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/356 (closed by the PR, then given a Shipped comment)
+- PR: https://github.com/PyAutoLabs/autolens_profiling/pull/358 (MERGED, merge commit `227b5c91`, head `3884df05`, 2026-09-30; `lint` green, the only check)
+- completed: 2026-09-30
+- Epic: interferometer-likelihood-campaign, phase 4 (the epic deliverable) of the campaign map, now at `complete/archive/epics/interferometer_likelihood_campaign.md`
+- Heart: RED development override, authorized by the live human on 2026-09-30 (~21:00 BST, "i authoroize.") for push and PR-open. The reasons at the gate were: release validation FAILED (stage integrate); workspace validation timeout (autolens_test multi_dataset/rectangular.py); manifest drift ×2. None of them is in autolens_profiling. The merge came from a separate human /prm. Nothing was released.
+- Scope merged: **13 of 14 new cells**. Pending: the CPU rect 39² cell at alma_high r5.0 (RAL job 375978_3, still RUNNING at merge; the note's row reads "pending"). It is re-filed as `draft/research/autolens_profiling/interferometer_decision_matrix_last_cell.md`.
+
+## What shipped
+
+- **sdp81 preset:** `instruments/interferometer.py` gains `sdp81`: real SDP.81 uv coverage from `instruments/uv_coverage/sdp81_uv_wavelengths.fits`, 108,384 vis, 0.05″, 800², r3.5, nufft. There is a simulator hook in `scripts/misc/simulators/interferometer.py`, and the simulated `dataset/interferometer/sdp81/` is tracked.
+- **Cells:**
+  - 7 of 8 RAL CPU radius-gap cells: sma and alma_high × r2.0 / r5.0 × Delaunay-1500 / rect 39², each with numba and NumPy FFT arms.
+  - The sdp81 row on CPU and A100: Delaunay, rect, and MGE-20 dense + W~.
+  - 26 new `results/breakdown/interferometer/**` JSON/PNG rows.
+- **Note:** `results/notes/interferometer_likelihood_decision_matrix_2026_09.md` holds the matrix, the setup cost, verification, indicative time per fit, blocked cells and caveats. It gives five draft rules:
+  1. On the W~ path, the per-call cost is set by the masked-pixel extent, not by N_vis. sdp81 costs the same as alma r3.5 on the A100: 53.7 vs 49.5 ms.
+  2. Meshes on the A100 always use W~ sparse. Dense OOMs from 1e6 vis and is 17–21× slower at sdp81.
+  3. Meshes on CPU should trust the library numba gate (60). It routed every measured cell to the faster arm.
+  4. The A100 wins every mesh cell by 8–114×, and the margin grows with the mask. CPU is viable only up to about 1 s per call. Above ~20k masked pixels, use the A100.
+  5. MGE should always use `apply_sparse_operator()` (W~) on both devices.
+- **RAL partition rule** (human, 2026-09-30): CPU timing legs on the `gpu` partition are limited to ≤8 CPUs/task and an array throttle of ≤%2. It is enforced by `scripts/misc/wall/check_submits.py`, with tests, and documented in `hpc/README.md`. The existing `*_crossover_fp64` submits were moved to the %2 throttle.
+- **Pointers:** `results/README.md`, the Phase-4 section of `wiki/campaigns/interferometer_likelihood.md`, the `wiki/index.md` row text, and regenerated READMEs and dashboard.
+- **Verification:** numba vs FFT ≤ 7.5e-9 nat; step sum 0.96–1.03; CPU vs A100 ≤ 1e-3 nat on the new cells. The existing alma_high r3.5 rect cell misses at 1.5e-3, which the note records. The gated arm's `inversion_path` is `InversionInterferometerSparseNumba`.
+- **Libraries:** a private RAL clone of the mains at `/mnt/ral/jnightin/PyAuto_branch/interferometer-decision-matrix`: Nerves 1ec1c82, Fit b13169e2, Array 7a89e19a, Galaxy 4c834ced, Lens efd13c4c. The shared mirror was behind and in use, so it was left alone.
+
+## Left open
+
+- The last cell, alma_high rect r5.0 CPU (375978_3). It is re-filed as `draft/research/autolens_profiling/interferometer_decision_matrix_last_cell.md`. That PR also flips the `wiki/index.md` interferometer row to shipped and cleans up the RAL worktree and the private library clone.
+
+## Original prompt
+
 # Interferometer likelihood campaign 3/3 — phase 4: the decision matrix (epic deliverable)
 
 Type: research

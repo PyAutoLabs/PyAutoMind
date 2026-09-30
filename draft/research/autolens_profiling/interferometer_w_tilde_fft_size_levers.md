@@ -63,7 +63,7 @@ and how big the extent is.
    call and the log-evidence / reconstruction shift against 0.01″. Predicted: 2× coarser gives
    ~4× smaller M, putting F near the alma_high row (~67 ms). Whether the science tolerates it is
    the question, not the speed. The mask-radius half (2.0 / 3.5 / 5.0″) is in task 3/3's
-   decision matrix on CPU (`draft/research/autolens_profiling/interferometer_mesh_breakdown_numba_cpu_decision_matrix.md`);
+   decision matrix on CPU (`complete/archive/epics/interferometer_likelihood_campaign.md`, retired 2026-09-30; the matrix is `results/notes/interferometer_likelihood_decision_matrix_2026_09.md`);
    do not duplicate it.
 3. Verdict in a note section. If (1) wins by ≥ 10 % of F at jvla with a ≤ 1e-12 F match, file
    the PyAutoArray change (the NumPy branch `:1155-1169` gets the same pruning via

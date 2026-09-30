@@ -38,4 +38,4 @@ The array-free dataset only earns its maintenance cost (a second dataset kind ev
 3. `wiki/campaigns/interferometer_streaming.md` from `_template.md`: table, 2e8 extrapolation (in-memory RSS ≈ 96 B/vis + temporaries vs streaming RSS; accumulation time at the best chunk), a cProfile top-10 of one chunk if any rate exceeds 5 s per 1e6 vis, and the go/no-go for the epic's phases 3-5. Link from `wiki/index.md`.
 4. A100 rows (RAL) are optional follow-ups; CPU rows decide the memory question.
 
-Parallel claims: autolens_profiling is claimed by `interferometer-decision-matrix` and `raw-pdip-forward-polish`; this campaign adds a new task folder and results folder only (shared files: `wiki/index.md` rows + generated README/dashboard).
+Parallel claims: autolens_profiling is claimed by `raw-pdip-forward-polish` (`interferometer-decision-matrix` shipped 2026-09-30, `complete/2026/09/interferometer-decision-matrix.md`); this campaign adds a new task folder and results folder only (shared files: `wiki/index.md` rows + generated README/dashboard).

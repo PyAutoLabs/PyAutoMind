@@ -1,4 +1,4 @@
-# Interferometer likelihood campaign 3/3 — mesh numba CPU breakdown + CPU-vs-GPU decision matrix — phase map (phases 1-3 shipped; phase 4 issued #356)
+# Interferometer likelihood campaign 3/3 — mesh numba CPU breakdown + CPU-vs-GPU decision matrix — phase map (COMPLETE: phases 1-4 shipped; one-cell follow-up filed)
 
 Type: research
 Target: autolens_profiling
@@ -11,7 +11,7 @@ Themes:
 Difficulty: large
 Autonomy: supervised
 Priority: high
-Status: campaign map — phases issued one at a time
+Status: COMPLETE 2026-09-30 — campaign map retired to complete/archive/epics/ (phases 1-4 shipped; last cell tracked by draft/research/autolens_profiling/interferometer_decision_matrix_last_cell.md)
 Consequence: glance
 Witness: `results/notes/interferometer_likelihood_decision_matrix_2026_09.md` has a CPU-vs-A100 row for Delaunay-1500 at sma, alma and alma_high with mask radii 2.0/3.5/5.0, and the numba breakdown JSON's `configuration.inversion_path` reads `InversionInterferometerSparseNumba` for the gated arm.
 Review-minutes: 8
@@ -19,7 +19,27 @@ Unattended: needs-slicing
 Lane: local-dev
 Epic: interferometer-likelihood-campaign
 Filed: 2026-09-25
-Updated: 2026-09-30
+Updated: 2026-09-30 (retired)
+
+## Phase 4 shipped (2026-09-30)
+
+- **Merged:** autolens_profiling#358 at `227b5c91` (issue #356, closed). Record
+  `complete/2026/09/interferometer-decision-matrix.md`. Shipped under a human-authorized Heart
+  RED development override (push + PR-open), merged by a separate human /prm with `lint` green.
+- **Landed:** the `sdp81` preset (real SDP.81 uv coverage, 108,384 vis), 13 of the 14 new cells
+  (7/8 RAL CPU radius-gap cells + the sdp81 CPU/A100 row), the decision-matrix note
+  `results/notes/interferometer_likelihood_decision_matrix_2026_09.md` with 5 draft rules, and
+  the RAL partition-rule lint (`check_submits.py`: CPU legs on `gpu` ≤8 CPUs/task, throttle ≤%2).
+- **Headline:** on the W~ path the masked-pixel count, not N_vis, sets the per-call cost (sdp81 ≈
+  alma r3.5 on the A100, 53.7 vs 49.5 ms). The A100 W~ path beats the best CPU arm by 8–114×,
+  with the margin growing with the mask. The packaged numba gate (60) routes every measured cell
+  to the faster CPU arm.
+- **Pending (the only open item):** the CPU rect 39² cell at alma_high r5.0 (RAL 375978_3) was still
+  running at merge. It is tracked by `draft/research/autolens_profiling/interferometer_decision_matrix_last_cell.md`,
+  which also flips the `wiki/index.md` row to shipped and cleans up the RAL worktree and the private library clone.
+- **Epic:** complete apart from that one-cell follow-up. This map was retired to
+  `complete/archive/epics/interferometer_likelihood_campaign.md`. Other drafts tagged
+  `Epic: interferometer-likelihood-campaign` are independent levers or follow-ups, not campaign phases.
 
 ## Phase 1 shipped (2026-09-27)
 
@@ -161,7 +181,7 @@ Record `complete/2026/09/interferometer-mesh-numba-p1.md` (task `interferometer-
 - Witness: `results/breakdown/interferometer/<inst>/delaunay_hpc_a100_fp64_r{2.0,5.0}.json`
   with non-null steps.
 
-### Phase 4 — the decision matrix (epic deliverable)
+### Phase 4 — the decision matrix (epic deliverable) — SHIPPED 2026-09-30 (#356, PR #358 merged `227b5c91`; 13/14 cells, last cell follow-up)
 
 - `results/notes/interferometer_likelihood_decision_matrix_2026_09.md`: N_vis (190 / 1e5 sdp81
   / 1M / 5M / 25M) x mask radius x source (MGE-20, Delaunay-1500, rect 39²) x device/path;

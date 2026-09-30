@@ -1,21 +1,5 @@
 # Active Tasks
 
-## interferometer-decision-matrix
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/356
-- issued: 2026-09-30
-- prompt: active/interferometer_decision_matrix.md
-- epic: interferometer-likelihood-campaign
-- session: Claude Code CLI (Opus 5.5 main session + Opus subagent), 2026-09-30
-- status: awaiting-merge
-- autonomy: supervised (header); plan approved in-session 2026-09-30 via Plan Mode (workspace-only, no library edits)
-- parallel-claim: "autolens_profiling is also claimed by raw-pdip-forward-polish (workspace-pending). File sets disjoint (this task: instruments/interferometer.py, new hpc/batch_{cpu,gpu}/submit_breakdown_interferometer_*_{radius_gaps,sdp81}_*, new results/breakdown/interferometer/** JSONs, results/notes/interferometer_likelihood_decision_matrix_2026_09.md, wiki/campaigns/interferometer_likelihood.md, wiki/index.md row, results/README.md Campaign findings paragraph; raw-pdip: results/notes/linear_solver_accuracy_2026_09.md, wiki/campaigns/linear_solver_accuracy.md, euclid_latent.py). Whichever ships second merges results/README.md. Parallel claim human-approved 2026-09-30 with the plan."
-- worktree: ~/Code/PyAutoLabs-wt/interferometer-decision-matrix
-- repos:
-  - autolens_profiling: feature/interferometer-decision-matrix
-- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/358 (pending-release, head a402118)
-- heart-red-override: authorised by the live human in the Claude Code session 2026-09-30 (~21:00 BST, "i authoroize.") for #356; Heart at the gate: RED "release validation FAILED (stage integrate)", "workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py)", "manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml", "manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml"; none in autolens_profiling; branch gates green (repo lint, pytest 995); scope: push + PR #358; merge only via /prm on all-green required checks; no release
-- resume: "PR #358 OPEN awaiting CI + /prm (merge human). One cell pending: RAL 375978_3 (alma_high rect r5.0 CPU, ETA ~22:30 2026-09-30) — pull alma_high/pixelization_numba_hpc_ral_cpu_fp64_r5.0.{json,png} from /mnt/ral/jnightin/autolens_profiling_wt/interferometer-decision-matrix into the worktree, fill the rect alma_high r5.0 row + status line + blocked table in results/notes/interferometer_likelihood_decision_matrix_2026_09.md, build_readme.py + build_dashboard.py (+ --check), commit+push to the PR. At close-out: flip wiki/index.md row to shipped, retire campaign prompt draft/research/autolens_profiling/interferometer_mesh_breakdown_numba_cpu_decision_matrix.md to complete/ + epic, remove RAL worktree + /mnt/ral/jnightin/PyAuto_branch/interferometer-decision-matrix."
-
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
 - issued: 2026-09-22
