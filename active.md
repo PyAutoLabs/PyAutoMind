@@ -38,27 +38,6 @@
   - autolens_inference: feature/point-source-search-nautilus-leaf
 - resume: "Branch pushed (2307eea), NO PR yet. Probe RAL job 366937 COMPLETED (seed 0: wall_s 56.6 s, 4,850 evals, per_call 4.72 us batched, likelihood_share 0.041% [single-basis 1.8%], all truth |dsigma|<0.74; row committed). Seeds 1-4 = RAL array 367140 (%1, euclid-ral-gpu-2). Next: sacct -j 367140; scp euclid_jump:/mnt/ral/jnightin/autolens_inference-wt-psleaf/results/searches/point_source/nautilus/simple/source_plane_solved/hpc_a100_jax_cpu_dense_fp64/search_seed{1..4}.{json,png} into the same path in the local worktree (+ hpc/batch_cpu/{output,error}/*367140* logs by hand); check each seed recovers truth; build_readme.py; wiki admission-bar entry (wiki/project/state.md); scripts/point_source/searches/README.md leaf note; ruff/pytest/check_submits; /ship_workspace to PR (Heart YELLOW ack: PyAutoMemory open PR 7d old; other YELLOW -> DRAFT); then remove RAL worktree: cd /mnt/ral/jnightin/autolens_inference && git worktree remove /mnt/ral/jnightin/autolens_inference-wt-psleaf"
 
-## raw-pdip-forward-polish
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/594
-- issued: 2026-09-30
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/595
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/357
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/595
-- prompt: active/raw_pdip_forward_amplitude_bias_fix.md
-- epic: linear-solver-programme
-- session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-30; session ID unavailable
-- status: awaiting-merge (workspace PR open; library merged PyAutoArray#595, pending release)
-- autonomy: supervised (header); plan approved in-session 2026-09-30 via Plan Mode (forward polish = the #573 mechanism returned as the forward value; regression fixture 8 #571 systems + euclid vis_lp with fnnls x_ref; gates on inactive-column/total/source flux ≤ 1e-3, not amp_rel_max)
-- parallel-claim: "PyAutoArray is also claimed by streaming-p1-array-free-dataset (active). File sets disjoint (this task: autoarray/util/jax_nnls.py, autoarray/config/general.yaml, autoarray/settings.py docstring, autoarray/inversion/inversion/inversion_util.py docstring, test_autoarray/inversion/inversion/{test_nnls_raw_forward_amplitude.py,files/mge_solver_reference_systems.npz,files/README.md}; streaming-p1: autoarray/dataset/**, autoarray/fit/fit_interferometer.py, autoarray/inversion/inversion/interferometer/**). Whichever ships second rebases. Parallel claim human-approved 2026-09-30 with the plan."
-- worktree: ~/Code/PyAutoLabs-wt/raw-pdip-forward-polish
-- repos:
-  - PyAutoArray: feature/raw-pdip-forward-polish
-  - autolens_profiling: feature/raw-pdip-forward-polish
-- summary: Return the #573 polished iterate (≤ 10 tight warm-started Jacobi-system PDIP iterations) as the raw-forward PDIP forward value in both the custom_vjp forward and the primal, so jit/grad/eager agree; new amplitude regression test over the phase-1 corpus (8 #571 + euclid, fnnls reference) red on d4298445; euclid latent jit test then passes on library main with no override; downstream autolens_profiling ledger row after the library merge.
-- heart-red-override: authorised by the live human in the Claude Code session 2026-09-30 ("ok do phase 2" launched the task; at the ship gate the human pushed feature/raw-pdip-forward-polish directly ~16:35 BST after the auto-mode classifier denied the agent push); Heart at the 16:25 BST gate: RED "release validation FAILED (stage integrate)"; YELLOW "workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py)", "manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml"; none in PyAutoArray; scope: push + pending-release PR #595; merge only via /prm on all-green required checks; no release
-- resume: "Both PRs open/merged: PyAutoArray#595 MERGED (pending release), autolens_profiling#357 OPEN (head ad365df) under the workspace heart-red-override. Next: /prm raw-pdip-forward-polish once lint.yml is green → merges #357, closes PyAutoArray#594 and the task (record must carry `- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/595`). Phase 3 of the epic: draft/research/autoarray/mge_nnls_fix_pyautoarray_571_slam_60.md."
-- heart-red-override: workspace phase — authorised by the live human 2026-09-30 ("do the workspace phase"; pushed feature/raw-pdip-forward-polish to autolens_profiling directly ~18:55 BST at the gate); Heart at the 18:50 BST gate: RED "PyAutoGalaxy: CI failure"; RED "release validation FAILED (stage integrate)"; YELLOW "workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py)", "manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml"; none in autolens_profiling; scope: push + PR #357; merge only via /prm on all-green checks; no release
-
 ## point-solver-error-audit
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/328
 - issued: 2026-09-30

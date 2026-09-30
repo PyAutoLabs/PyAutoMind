@@ -10,7 +10,7 @@ Priority: medium
 Memory: wiki/lensing/sources/dark-matter-substructure.md; reading-queue.md; wiki/lensing/sources/lens-modeling-methods.md
 Status: formalised
 Filed: 2026-09-24, retargeted: 2026-09-30 (epic linear-solver-programme)
-Blocked-by: a release shipping the phase-2 fix (draft/bug/autoarray/raw_pdip_forward_amplitude_bias_fix.md) AND the RAL mirror synced via HPCPullPyAuto
+Blocked-by: a release shipping the phase-2 fix (PyAutoArray#595, merged 2026-09-30 pending release; record complete/2026/09/raw-pdip-forward-polish.md) AND the RAL mirror synced via HPCPullPyAuto
 Witness: `scripts/lens/solver/timing.py` rows plus `accuracy.py --device gpu` rows on the phase-1 corpus (`results/lens/solver/corpus/`: slam_fixture_571, slam48_hst, slam_spread_hst, euclid_vis_lp — 81 systems) record, for the SLaM source_lp[1] 60-column model and the captured euclid system, single / vmap16 / vmap50 per-evaluation cost on the RTX 2060 and RAL A100 fp64 for jacobi vs raw (released phase-2 solver), the NNLS share of each batch, and GPU-vs-CPU parity (max |dlogL| and amplitude/`flux_inactive_rel` agreement) on the 48 near-truth vectors — appended to `results/notes/linear_solver_accuracy_2026_09.md` and `wiki/campaigns/linear_solver_accuracy.md`.
 Review-minutes: 3
 Consequence: glance

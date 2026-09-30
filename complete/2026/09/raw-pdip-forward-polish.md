@@ -1,3 +1,49 @@
+## raw-pdip-forward-polish
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/594
+- completed: 2026-09-30
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/595 (merge 7a89e19a0, head 42c52358)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/357 (merge 4652580b2, head ad365df)
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/595
+- epic: linear-solver-programme (phase 2)
+- summary: |
+    Phase 2 of epic linear-solver-programme. PyAutoArray#595: the raw-forward PDIP solver
+    (`nnls_preconditioning_no_mapper: raw`, #572) now returns the #573/#574 polished iterate
+    (<= 10 tight warm-started Jacobi-system PDIP iterations) as its forward value, via
+    `_raw_forward_polished()` shared by the custom_vjp primal and forward, so jit / grad / eager
+    agree; backward unchanged. `RAW_POLISH_MAX_ITER` added (old name aliased); docstrings and
+    config wording updated. New fixture `mge_solver_reference_systems.npz` (8 #571 systems +
+    euclid vis_lp, fnnls x_ref) and `test_nnls_raw_forward_amplitude.py` (107 cases; 12 red on
+    base bd03e09e — euclid inactive/total flux 0.115, source flux k1/k2/k3/k5 1.6e-3..6.4e-3;
+    green after). End-to-end jit-vs-eager relaxed to rtol 1e-9 after the 3.12 Actions leg showed
+    5.4e-11 runner-dependent XLA reassociation.
+    autolens_profiling#357: `euclid_latent.py` validation re-based to the post-fix jit
+    3.320127604; all 6 solver cells re-run against PyAutoArray 7a89e19a0 (provenance recorded;
+    artefacts overwrote the v2026.8.17.1 stamp in place, pre-fix at 3ad68af); ledger Phase 2
+    section, campaign page + index, README regen.
+- results: |
+    Corpus 81/81 converged incl. 48/48 SLaM; fixed pdip_raw == phase-1 pdip_raw_polish on 81/81.
+    Worst inactive-column flux 0.115 -> 3.31e-4; source-flux misses 53/81 -> 1/81 (euclid proxy
+    only); euclid total_source_flux jit-vs-eager +5.76e-2 -> +7.47e-5; euclid pipeline latent
+    test 19/19 on library main with no override. autolens_workspace_test: 7 mapper-less/MGE
+    scripts pass, no pin moved (mge_group JIT now equals NumPy to 6e-12).
+- rule-verdict: |
+    Not admissible under the phase-1 pre-registered rule as written — criteria 2-4 fail on
+    recorded rule weaknesses: euclid source-column proxy 4.96e-2 vs actual latent 7.5e-5;
+    flat-direction system sig 0.219 shared by all accurate candidates; 5/52 KKT ratios at the
+    3e-16 floor. Shipped on the direct flux/latent evidence above.
+- gates: |
+    PyAutoArray pytest 1890 + CI 3 legs green; autolens_profiling ruff / 5 checks / pytest 984 /
+    9 smokes + lint green. Both PRs shipped under the Heart RED development override (recorded on
+    the issue, the PRs, active.md and autonomy_log); merged by human /prm on green checks. Heart
+    RED for release throughout (release validation FAILED stage integrate; later also a
+    PyAutoGalaxy CI failure — unrelated).
+- next: |
+    Phase 3 = draft/research/autoarray/mge_nnls_fix_pyautoarray_571_slam_60.md (GPU/A100 timing
+    + parity rows). PyAutoArray#595 awaits a release (pending-release above; cleared only by
+    /review_release).
+
+## Original prompt
+
 # Linear-solver programme phase 2: fix the raw-forward PDIP amplitude bias in PyAutoArray
 
 Type: bug
