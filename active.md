@@ -27,10 +27,11 @@
 ## raw-pdip-forward-polish
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/594
 - issued: 2026-09-30
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/595
 - prompt: active/raw_pdip_forward_amplitude_bias_fix.md
 - epic: linear-solver-programme
 - session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-30; session ID unavailable
-- status: library-dev
+- status: library-shipped, workspace-pending
 - autonomy: supervised (header); plan approved in-session 2026-09-30 via Plan Mode (forward polish = the #573 mechanism returned as the forward value; regression fixture 8 #571 systems + euclid vis_lp with fnnls x_ref; gates on inactive-column/total/source flux ≤ 1e-3, not amp_rel_max)
 - parallel-claim: "PyAutoArray is also claimed by streaming-p1-array-free-dataset (active). File sets disjoint (this task: autoarray/util/jax_nnls.py, autoarray/config/general.yaml, autoarray/settings.py docstring, autoarray/inversion/inversion/inversion_util.py docstring, test_autoarray/inversion/inversion/{test_nnls_raw_forward_amplitude.py,files/mge_solver_reference_systems.npz,files/README.md}; streaming-p1: autoarray/dataset/**, autoarray/fit/fit_interferometer.py, autoarray/inversion/inversion/interferometer/**). Whichever ships second rebases. Parallel claim human-approved 2026-09-30 with the plan."
 - worktree: ~/Code/PyAutoLabs-wt/raw-pdip-forward-polish
@@ -38,8 +39,8 @@
   - PyAutoArray: feature/raw-pdip-forward-polish
   - autolens_profiling: feature/raw-pdip-forward-polish
 - summary: Return the #573 polished iterate (≤ 10 tight warm-started Jacobi-system PDIP iterations) as the raw-forward PDIP forward value in both the custom_vjp forward and the primal, so jit/grad/eager agree; new amplitude regression test over the phase-1 corpus (8 #571 + euclid, fnnls reference) red on d4298445; euclid latent jit test then passes on library main with no override; downstream autolens_profiling ledger row after the library merge.
-- heart-red-hold: 2026-09-30 ~16:25 BST ship_library gate RED — "release validation FAILED (stage integrate)"; YELLOW "workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py)", "manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml"; none in PyAutoArray; human override + human push needed (auto-mode classifier denies the agent push)
-- resume: "Library fix COMPLETE locally: PyAutoArray feature/raw-pdip-forward-polish head 31b1c2d7 (7e62fa4d red test + fixture, 31b1c2d7 fix), NOT pushed, no PR. Gates: new test 107/107 (12 red on base), full pytest 1890, euclid latent test 19/19 with +7.47e-5 jit-vs-eager (was +5.76e-2), corpus 81/81 == pdip_raw_polish, workspace_test 7 scripts pass, no pin moved. PR body drafted at scratchpad p2_pr_body.md (also to be posted on #594). Next: human RED override → push → gh pr create --label pending-release → /prm; then workspace phase in the same worktree's autolens_profiling (uncommitted re-run results with the colliding v2026.8.17.1 stamp; euclid_latent.py validation leg pinned to pre-fix 3.511 must be re-based; ledger row + campaign page + build_readme)."
+- heart-red-override: authorised by the live human in the Claude Code session 2026-09-30 ("ok do phase 2" launched the task; at the ship gate the human pushed feature/raw-pdip-forward-polish directly ~16:35 BST after the auto-mode classifier denied the agent push); Heart at the 16:25 BST gate: RED "release validation FAILED (stage integrate)"; YELLOW "workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py)", "manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml"; none in PyAutoArray; scope: push + pending-release PR #595; merge only via /prm on all-green required checks; no release
+- resume: "Library PR OPEN: PyAutoArray#595 (head 31b1c2d7, pending-release) under the heart-red-override above; awaiting CI + /prm raw-pdip-forward-polish (merge human). Then workspace phase in the same worktree's autolens_profiling: commit the post-fix accuracy re-run (files overwrote the v2026.8.17.1 stamp in place — label the ledger row by branch/PR, or re-stamp), re-base euclid_latent.py validation leg from pre-fix jit 3.511 to eager 3.3199, append the phase-2 ledger row to results/notes/linear_solver_accuracy_2026_09.md + campaign page wiki/campaigns/linear_solver_accuracy.md + build_readme.py, then /ship_workspace (library-first gate: #595 merged and released)."
 
 ## streaming-p2-fit-save-reload
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/638
