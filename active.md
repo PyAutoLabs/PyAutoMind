@@ -27,13 +27,15 @@
 ## ep-moment-projection
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1654
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1656
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/105
+- release-gate: PyAutoFit
 - pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1656
 - issued: 2026-09-30
 - prompt: active/ep_hierarchical_scatter_moment_matching.md
 - session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-30; session ID a45b0125
-- status: workspace-dev (phase 2: autofit_workspace_test; library PyAutoFit#1656 merged 2026-09-30; supervised)
+- status: workspace-shipped, awaiting-merge (autofit_workspace_test PR #105 open; library PyAutoFit#1656 merged; supervised, merge is human via /prm)
 - autonomy: supervised (header); plan approved in-session 2026-09-30 (Plan Mode); default projection stays "mode"
-- heart-red-override: authorised by the live human in the Claude Code session 2026-09-30 ~10:55 BST ("Override for all three (Recommended)", offered for PyAutoCortex#50 and "for opening the two PyAutoFit tasks (issue + worktree + plan; no merge, no release)"); RED reasons at the 10:51 BST tick: "PyAutoArray: 2 commit(s) behind origin"; "PyAutoLens: 2 commit(s) behind origin"; "release validation FAILED (stage integrate)"; scope: issue + worktree + plan; PR-open permitted; no merge/release; plan approved in-session ~11:20 BST via Plan Mode; PR-open authorised in-session 2026-09-30 ~11:50 BST ('Yes, both #1653 and #1654')
+- heart-red-override: authorised by the live human in the Claude Code session 2026-09-30 ~10:55 BST ("Override for all three (Recommended)", offered for PyAutoCortex#50 and "for opening the two PyAutoFit tasks (issue + worktree + plan; no merge, no release)"); RED reasons at the 10:51 BST tick: "PyAutoArray: 2 commit(s) behind origin"; "PyAutoLens: 2 commit(s) behind origin"; "release validation FAILED (stage integrate)"; scope: issue + worktree + plan; PR-open permitted; no merge/release; plan approved in-session ~11:20 BST via Plan Mode; PR-open authorised in-session 2026-09-30 ~11:50 BST ('Yes, both #1653 and #1654'); workspace PR-open authorised in-session 2026-09-30 ~16:05 BST ('Override: open the workspace PR')
 - parallel-claim: "ep-projection-exception merged 2026-09-30 (PyAutoFit#1655); claim released"
 - worktree: ~/Code/PyAutoLabs-wt/ep-moment-projection
 - repos:
