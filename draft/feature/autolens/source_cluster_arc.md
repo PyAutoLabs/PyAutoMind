@@ -60,12 +60,15 @@ arc-segmentation boundary), Richard+17 (HFF magnification-map deliverables), Ate
 10. `draft/feature/workspaces/cluster_pixelized_analysisfactor.md` — per-source-mask
     pixelized refinement via AnalysisFactor; implements the extended_source plan in
     `draft/docs/workspaces/cluster_regime_narrative.md`. Gates: 4, 9.
-11. → **Cortex** `PyAutoCortex/phases/inference_programme/cluster_extended_source_inference.md`
+11. → **Cortex** `PyAutoCortex/archive/tasks/inference_programme/cluster_extended_source_inference.md`
     — JAX-gradient joint-inference feasibility verdict (go/no-go only). Moved out of the
     Mind on 2026-09-01 in the Cortex phase-4 migration (was
-    `draft/research/autolens/cluster_extended_source_inference.md`); Cortex state `planned`,
-    ready when phase 10 (still a Mind draft) is issued and its ref is added to the Cortex
-    phase's `Gates:`. Gate: 10.
+    `draft/research/autolens/cluster_extended_source_inference.md`). **Dropped** by human
+    ruling `R-20260907-05` when `inference_programme` was retired on 2026-09-07.
+    History: `PyAutoCortex/projects/inference_programme.md`; ruling:
+    `PyAutoCortex/archive/rulings/2026/09/R-20260907-05.md`.
+    Any future science project/task needs a fresh Cortex birth; do not revive the
+    retired project implicitly. Original dependency remains phase 10.
 
     **Known drift, not fixed here:** two different prompts both declare `Phase: 10` under
     two different parents — `draft/feature/workspaces/cluster_pixelized_analysisfactor.md`
@@ -75,3 +78,30 @@ arc-segmentation boundary), Richard+17 (HFF magnification-map deliverables), Ate
 12. `draft/docs/howtolens/cluster_pixelized_source.md` — HowToLens cluster tutorial
     pixelized source + fix the already-stale cross-reference (the stale-claim fix may
     land early if a HowToLens release precedes phase 10). Gate: 10.
+
+## Reconciliation — 2026-09-30
+
+- Last completed numbered phase: none found. Phases 1-10 and 12 remain drafts;
+  no matching active.md row or open phase issue/PR was found. No adjacent
+  DECISIONS/RESULTS file was present. Phase 11 is dropped as recorded above.
+- Cross-checked open issues/PRs in PyAutoLens, PyAutoArray, PyAutoGalaxy,
+  PyAutoNerves, autolens_workspace, autolens_workspace_test, autolens_profiling
+  and HowToLens. Related open autolens_workspace_test#106 concerns cluster
+  likelihood scripts and precision-floor sensitivity; it does not complete phase 1.
+- Separately shipped evidence to reuse: PyAutoLens#710 (dataset-cap guard),
+  PyAutoLens#480 (source-plane selection in magnification filtering),
+  PyAutoGalaxy#591 (adaptive Richardson Hessian), PyAutoArray#584 and
+  PyAutoLens#753 (merged 2026-09-27; cap now 20). Point-source CPU campaign
+  records are sibling work, not completion of this arc's phase 2.
+- Brain classifies the existing phase-1 umbrella as too large. Next bounded step:
+  `draft/research/workspaces/point_solver_error_audit.md` (phase 1a). This is
+  an audit-only workspace PR before evidence-driven library hardening; phase 1
+  stays incomplete until the audit and required hardening are accepted.
+- Full phase-1 repo claims conflict: PyAutoArray is claimed by
+  `raw-pdip-forward-polish`; autolens_profiling by that task and
+  `interferometer-decision-matrix`. Phase 1a writes only autolens_workspace_test;
+  the worktree conflict guard passes for that repo. Its open #106 is related but
+  targets different cluster scripts. Other repositories are read-only inputs.
+- start_dev: Heart STALE (no report.json); planning may continue. Phase 1a prompt
+  and detailed plan filed; awaiting explicit plan/issue-body approval before
+  issue creation and worktree setup. No issues queued for later phases.

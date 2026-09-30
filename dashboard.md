@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 263 |
+| [Backlog](#backlog) (`draft/`) | 264 |
 
 > **No batch in flight.**
 
@@ -580,7 +580,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**263** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **60** of them belong to an epic and are listed only under [Epics](#epics) below.
+**264** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **61** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 75</summary>
@@ -2617,9 +2617,9 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 Long-running multi-phase programmes. Each epic's 📋 prompt has Claude read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
 
 <details>
-<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 13 queued prompt(s), in order</summary>
+<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 14 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>Cluster strong lensing — Source &amp; Cluster arc</b> — ledger: `draft/feature/autolens/source_cluster_arc.md`</summary>
+<details><summary>📋 <b>Cluster strong lensing — Source &amp; Cluster arc</b> — ledger: `draft/feature/autolens/source_cluster_arc.md` — reconciled 2026-09-30 — no numbered phase completed or in flight; phase 1a PointSolver error audit prompt filed, awaiting plan…</summary>
 
 ```
 Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonical state lives in draft/feature/autolens/source_cluster_arc.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 12 phased prompts under draft/; issue phases ONE at a time as predecessors near shipping — no bulk issue queues. Science half: the PyAutoCortex project ledger of the science project it births (arc phase 11).
@@ -2631,6 +2631,14 @@ Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonic
 
 ```
 /start_dev draft/bug/autolens/point_solver_error_bisect_health.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/workspaces/point_solver_error_audit.md">PointSolver error audit — Source &amp; Cluster arc phase 1a</a> — workspaces · medium · supervised · high</summary>
+
+```
+/start_dev draft/research/workspaces/point_solver_error_audit.md
 ```
 
 </details>
@@ -3244,7 +3252,7 @@ Continue the 'Streaming visibilities — array-free sparse interferometer datase
 
 </details>
 
-71 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+72 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3289,7 +3297,7 @@ Continue the 'Streaming visibilities — array-free sparse interferometer datase
 - `draft/docs/autolens/split_lensing_regimes.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
 - `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
-- _… and 31 more_
+- _… and 32 more_
 
 </details>
 
