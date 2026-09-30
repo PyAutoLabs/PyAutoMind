@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 261 |
+| [Backlog](#backlog) (`draft/`) | 262 |
 
 > **No batch in flight.**
 
@@ -585,7 +585,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**261** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **59** of them belong to an epic and are listed only under [Epics](#epics) below.
+**262** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **60** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 74</summary>
@@ -2805,7 +2805,7 @@ Continue the 'Cluster PointSolver speed-up — data, likelihood_breakdown, then 
 </details>
 
 <details>
-<summary><b>Expectation propagation (EP) campaign</b> — 7 queued prompt(s), in order</summary>
+<summary><b>Expectation propagation (EP) campaign</b> — 8 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Expectation propagation (EP) campaign</b> — ledger: `draft/research/graphical_ep/ep_campaign.md`</summary>
 
@@ -2835,6 +2835,14 @@ Continue the 'Expectation propagation (EP) campaign' epic. Its canonical state l
 
 ```
 /start_dev draft/bug/autofit/ep_factors_end_the_run_with_zero.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/ep_moments_loggaussian_transformed_scatter.md">EP moments projection drifts a log-space (LogGaussian / TransformedMessage) scatter to log…</a> — autofit · small · supervised · normal</summary>
+
+```
+/start_dev draft/bug/autofit/ep_moments_loggaussian_transformed_scatter.md
 ```
 
 </details>
