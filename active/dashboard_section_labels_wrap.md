@@ -5,7 +5,9 @@ Target: PyAutoHeart
 Difficulty: small
 Priority: medium
 Autonomy: human-required
-Status: draft
+Status: active
+Issued: 2026-09-30
+Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/251
 
 ## Original request (verbatim)
 
@@ -17,4 +19,4 @@ The Fable-reviewed dashboard plan, approved and delivered in PRs #246, #248, #25
 
 Plan: keep mobile stacked rows, set a stable natural width for section names in desktop/table mode, and verify the longest section name and summary at 320/375/390/768/1280px including 200% text and no page overflow. Use a Heart-local CSS override. No readiness or payload change. This is within the previously approved readability scope.
 
-Proposed branch: `fix/heart-dashboard-section-labels` (or `feature/` prefix required by worktree workflow).
+Proposed branch: `feature/heart-dashboard-section-labels`.
