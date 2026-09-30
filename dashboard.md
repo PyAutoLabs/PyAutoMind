@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/raw_pdip_forward_amplitude_bias_fix.md">Linear-solver programme phase 2: fix the raw-forward PDIP amplitude bias in PyAutoArray</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/594">issue #594</a> — issued 2026-09-30 — library-shipped, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/595">PyAutoArray#595</a></summary>
+<details><summary>📋 <a href="active/raw_pdip_forward_amplitude_bias_fix.md">Linear-solver programme phase 2: fix the raw-forward PDIP amplitude bias in PyAutoArray</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/594">issue #594</a> — issued 2026-09-30 — library-merged, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/595">PyAutoArray#595</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 /start_dev active/raw_pdip_forward_amplitude_bias_fix.md
@@ -286,6 +286,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#595](https://github.com/PyAutoLabs/PyAutoArray/pull/595) — `active/raw_pdip_forward_amplitude_bias_fix.md`
 - [PyAutoArray#576](https://github.com/PyAutoLabs/PyAutoArray/pull/576) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - [PyAutoArray#582](https://github.com/PyAutoLabs/PyAutoArray/pull/582) — `complete/2026/09/interferometer-sparse-cache.md`
 - [PyAutoArray#589](https://github.com/PyAutoLabs/PyAutoArray/pull/589) — `complete/2026/09/interferometer-streaming-visibilities.md`
