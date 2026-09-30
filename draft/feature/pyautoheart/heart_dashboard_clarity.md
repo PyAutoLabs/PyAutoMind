@@ -9,7 +9,7 @@ Priority: high
 Autonomy: human-required
 Status: draft
 
-@PyAutoHeart owns this implementation. Planning only: awaiting Fable review and human approval.
+@PyAutoHeart owns this implementation. Fable review and human approval complete; PR A is open as Heart #246.
 
 ## Original request (verbatim)
 
@@ -106,7 +106,7 @@ Each gets the relevant validation from step 5. This parent is the review packet,
 
 ## Fable review handoff
 
-Fable review requested by the author (Codex session, 2026-09-30) and **completed the same day** — see “Fable review (2026-09-30)” below. Human approval of the amended plan is still pending; no implementation has started.
+Fable review requested by the author (Codex session, 2026-09-30) and **completed the same day** — see “Fable review (2026-09-30)” below. Human approved the amended plan; PR A implementation is tracked in Heart #245 / PR #246.
 
 ## First operational step toward green
 
