@@ -1,3 +1,43 @@
+# Point-source A100 campaign — phase 0+1 (lean): launch-bound bottleneck map on current main
+
+One exclusive RAL A100 job on the current library mains mapped where the image-plane `PointSolver` likelihood spends its GPU time, and wrote the upper bound for every phase-2 lever. This is the bounded phase 0+1 task of the phased campaign `draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md`. That prompt stays open as campaign intent. Phase 2 has not been issued and waits on the human go/no-go.
+
+## Shipped
+
+- Merged [autolens_profiling#353](https://github.com/PyAutoLabs/autolens_profiling/pull/353) into `main` at `2da9c29831325d91a737cf5316e19b5cc20705f7` on 2026-09-30 (7 commits). Closes autolens_profiling#350.
+- New cell `scripts/point_source_image/likelihood_breakdown/gpu_bottleneck_map.py`. It covers the baseline with CUDA graphs on and off, vmap 1–256 with memory, a device trace, an fp32 what-if and forward/reverse gradients with a finite-difference check.
+- New point-solver stage map `_point_solver_stage_map.py` with the unit test `scripts/misc/test/test_point_solver_stage_map.py`.
+- New submit `hpc/batch_gpu/submit_breakdown_point_source_image_gpu_bottleneck_map_a100_fp64`, with a measured WALL-BASIS.
+- Results `results/breakdown/point_source_image/gpu_bottleneck_map_*` (A100 fp64 + fp32, laptop witness) and the job-366916 log.
+- Ledger `results/notes/point_source_gpu_breakdown_2026_09.md`, the wiki campaign page `point_source_gpu_breakdown` and its index row.
+
+## Evidence
+
+- RAL job 366916 ran on euclid-ral-gpu-1 in 7:12 wall.
+- Scalar call: 0.910 ms with graphs on, 1.097 ms with graphs off. That is +8.6 % against job 359102, not bisected; the suspects are PyAutoGalaxy#634 and PyAutoLens#754.
+- vmap cost per likelihood at batches 1/4/16/64/256 is 0.970 / 0.274 / 0.0766 / 0.0253 / 0.0120 ms. Batch 256 uses 134 MB (~83k L/s) and every lane is bit-identical to the scalar value.
+- The trace shows 173 kernels per call, the device busy 57 % of the wall time and a 5 µs median gap between kernels, so the call is launch/host-bound.
+- fp32 what-if: 1.27× faster scalar, 1.06× at vmap-16 and 0.86× at batch 256, with |Δ log L| ≤ 1.6e-5.
+- Reverse gradient: 1.80 ms, 1.92× the primal.
+- Phase-2 upper bounds:
+  - Removing all launch/host overhead gives at most 1.69× scalar (1.55× at vmap-16).
+  - The neighbourhood sort is worth at most 1.24×.
+  - The implicit-gradient Jacobian is worth at most 1.92× per reverse gradient.
+  - Deflections and the step-0 lattice are worth 2–4 %, below the 5.45 % minimum detectable improvement.
+- `all_gates_pass: false` was left deliberately. The forward-mode gradient is NaN for `FitPositionsImagePairAll(Solved)`. The strict finite-difference check fails at 2 of 6 smooth points with no topology change.
+- Heart was YELLOW; the human acknowledged it on 2026-09-28 with reasons unrelated to this repo.
+
+## Handoff
+
+- **Phase 2 go/no-go is the human's.** The memo in the ledger says the admission bar needs one autolens_inference measurement first: the likelihood share of an image-plane fit and its eval count, batched versus serial. The campaign prompt stays in `draft/` as campaign intent, so the next bounded phase is issued from it.
+- Follow-up bug, already filed: `draft/bug/autolens/point_image_pair_all_forward_grad_nan.md`. The released `gradient_mode="forward"` gives NaN gradients for `FitPositionsImagePairAll(Solved)`.
+- Open follow-ups, not fixed here:
+  - bisect the +8.6 % scalar drift against job 359102;
+  - investigate the strict finite-difference failures at centre_1 and centre_0.
+- Leftover on RAL: the scratch worktree `/mnt/ral/jnightin/autolens_profiling_wt/point-source-gpu-p01`, which holds the superseded runs `_p01_run1_366913/` and `_p01_run2_366915/`.
+
+## Original prompt
+
 # Point-source A100 campaign — phase 0+1 (lean): baseline + bottleneck map on current main
 
 Type: research

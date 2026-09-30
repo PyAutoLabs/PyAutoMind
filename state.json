@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-09-30T09:12:46Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
+  "updated": "2026-09-30T09:30:26Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,12 +12,6 @@
       "text": "PyAutoLens parity: precomputed data term on the sparse interferometer path\u2026 \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/757",
       "prompt": "/start_dev active/interferometer_sparse_precomputed_data_term.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Point-source A100 campaign \u2014 phase 0+1 (lean): baseline + bottleneck map\u2026 \u2014 awaiting-merge (autolens_profiling#353 open; supervised, merge is human)",
-      "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/353",
-      "prompt": "/start_dev active/point_source_gpu_p01.md"
     },
     {
       "severity": "yellow",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#427 \u2014 eyes-organ-order",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/427",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoBrain PyAutoBrain#428 \u2014 eyes-organ-skeleton",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/428",
       "prompt": null
     }
   ]

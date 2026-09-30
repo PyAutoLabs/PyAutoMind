@@ -18,7 +18,7 @@ Consequence: judge
 Review-minutes: 30
 Unattended: ready
 Filed: 2026-09-17
-Updated: 2026-09-19
+Updated: 2026-09-30
 
 ## Campaign contract (2026-09-19)
 
@@ -106,6 +106,11 @@ The CPU campaign does not depend on this campaign finishing or obtaining a GPU s
 Coordinate changes to the shared solver with the CPU campaign to avoid conflicts.
 
 ### Phase 1 — A100 bottleneck map
+
+Phase 0+1 (lean, preserved-revision reproduction skipped by human decision 2026-09-28) shipped in
+[autolens_profiling#353](https://github.com/PyAutoLabs/autolens_profiling/pull/353) and is recorded in
+`complete/2026/09/point-source-gpu-p01.md`. Phase 2 awaits the human go/no-go (memo in
+`results/notes/point_source_gpu_breakdown_2026_09.md`: one autolens_inference image-plane fit timing first).
 
 - Use the profiling repo's actual `hpc/README.md` and sync configuration. This
   repo's `hpc/sync` has no push: update RAL code with git and library checkouts
