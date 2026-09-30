@@ -106,9 +106,15 @@
 - prompt: active/eyes_p5_retire_duplicates_public_surfaces.md
 - epic: pyautoeyes-birth
 - session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-30; session ID e944a175
-- status: workspace-dev
 - autonomy: supervised (header); plan approved in-session 2026-09-30 (keep workspace_test visualization scripts; include the Eyes state.json cockpit feed; bug draft eyes_survey_recursive_producers closed as moot)
+- status: awaiting-merge (PRs open 2026-09-30; order Brain → autolens_workspace_test → PyAutoScientist → PyAutoEyes → hub, hub after the Eyes Pages deploy)
+- heart-ack: "YELLOW at ship 2026-09-30 09:30Z, reasons unrelated to this task: workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py); manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml; HowToGalaxy: open PR 8d old; HowToLens: open PR 8d old; release validation incomplete: no rehearsal for current source. Ack basis = plan approval in-session (which quoted the door-time YELLOW); the human should confirm the changed reason set at /prm."
 - worktree: ~/Code/PyAutoLabs-wt/eyes-retire-duplicates-surfaces
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/432
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/327
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/37
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/7
+- workspace-pr: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/17
 - repos:
   - PyAutoEyes: feature/eyes-retire-duplicates-surfaces
   - autolens_workspace_test: feature/eyes-retire-duplicates-surfaces
