@@ -55,12 +55,14 @@
 
 ## ep-projection-exception
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1653
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1655
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1655
 - issued: 2026-09-30
 - prompt: active/ep_project_nonfinite_suff_stats_ic50_n50.md
 - session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-30; session ID a45b0125
-- status: library-dev
+- status: library-shipped, awaiting-merge (PyAutoFit#1655 open; supervised, merge is human via /prm)
 - autonomy: supervised (header); plan approved in-session 2026-09-30 (Plan Mode)
-- heart-red-override: authorised by the live human in the Claude Code session 2026-09-30 ~10:55 BST ("Override for all three (Recommended)", offered for PyAutoCortex#50 and "for opening the two PyAutoFit tasks (issue + worktree + plan; no merge, no release)"); RED reasons at the 10:51 BST tick: "PyAutoArray: 2 commit(s) behind origin"; "PyAutoLens: 2 commit(s) behind origin"; "release validation FAILED (stage integrate)"; scope: issue + worktree + plan; PR-open permitted; no merge/release; plan approved in-session ~11:20 BST via Plan Mode
+- heart-red-override: authorised by the live human in the Claude Code session 2026-09-30 ~10:55 BST ("Override for all three (Recommended)", offered for PyAutoCortex#50 and "for opening the two PyAutoFit tasks (issue + worktree + plan; no merge, no release)"); RED reasons at the 10:51 BST tick: "PyAutoArray: 2 commit(s) behind origin"; "PyAutoLens: 2 commit(s) behind origin"; "release validation FAILED (stage integrate)"; scope: issue + worktree + plan; PR-open permitted; no merge/release; plan approved in-session ~11:20 BST via Plan Mode; PR-open authorised in-session 2026-09-30 ~11:50 BST ('Yes, both #1653 and #1654')
 - parallel-claim: "PyAutoFit is also claimed by ep-moment-projection (registered in the same session, 2026-09-30). File sets disjoint (A: messages/abstract.py, mapper/prior/abstract.py, non_linear/result.py, graphical/expectation_propagation/optimiser.py:150-162, exc.py, test_autofit/messages/test_project_nonfinite.py, test_autofit/graphical/functionality/test_factor_failure_recovery.py; B: graphical/laplace/*, graphical/mean_field.py, graphical/declarative/factor/hierarchical.py, graphical/expectation_propagation/diagnostics.py:47, graphical/README.md, test_autofit/graphical/functionality/test_moment_projection.py). A ships first; B rebases. Parallel claim human-approved 2026-09-30 with the plan."
 - worktree: ~/Code/PyAutoLabs-wt/ep-projection-exception
 - repos:
