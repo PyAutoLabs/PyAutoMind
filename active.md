@@ -56,3 +56,14 @@
 - parallel-claim: "PyAutoLens is also claimed by workspace-config-cleanup (#441); its PyAutoLens PR #751 is already MERGED (test_autolens/model_figure/* only) and the claim is held for the release gate. Disjoint files. Parallel claim human-approved 2026-09-30 with the plan."
 - repos:
   - PyAutoLens: feature/interferometer-sparse-precomputed-data-term
+
+## eyes-critique-attribution
+- issue: https://github.com/PyAutoLabs/PyAutoEyes/issues/8
+- issued: 2026-09-30
+- prompt: active/critique_text_match_double_counts_cross_instance_drafts.md
+- session: Claude Code CLI (Fable 5.1 main session + Opus subagent), 2026-09-30; session ID e944a175
+- status: workspace-dev
+- autonomy: safe (header); plan stated in-session 2026-09-30 and approved ("fix the followup quick")
+- worktree: ~/Code/PyAutoLabs-wt/eyes-critique-attribution
+- repos:
+  - PyAutoEyes: feature/eyes-critique-attribution

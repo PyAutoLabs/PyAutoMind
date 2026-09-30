@@ -13,6 +13,7 @@ Epic: pyautoeyes-birth
 Consequence: notify
 Witness: a hermetic test in `tests/test_context.py` (or `test_board.py`) with two registered instances and one Mind draft whose body names both repos, asserting the draft is attributed to exactly one instance (its `Target:`/primary repo) — red on main, green after the fix.
 Filed: 2026-09-30
+Issued: 2026-09-30
 
 `eyes.context.gather` collects "open critiques" as the PyAutoMind drafts that
 mention an instance by text. The draft
