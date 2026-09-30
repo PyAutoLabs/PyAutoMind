@@ -1,3 +1,52 @@
+## ep-moment-projection
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1654
+- completed: 2026-09-30
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1656
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/105
+- release-gate: PyAutoFit
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1656
+
+### What shipped
+- **PyAutoFit#1656** (merge b13169e2c): `af.LaplaceOptimiser(projection="moments")` adds opt-in moment-matching by nested quadrature, ported from the `analytic_ep_minimal` referee. The outer step is a Gauss–Legendre rule over each scale variable on its support, windowed to the cavity mean ± 8σ, with up to 4 re-windowing passes. The inner step is a conditional Laplace, using value-based central differences and a Newton polish. The kwargs are `n_quadrature=64`, `quadrature_half_width=8.0`, `moment_max_size=4` and `moment_max_outer=2`. The default stays `"mode"`, and any factor the moments path does not apply to falls back to the mode path bit-for-bit. Also new:
+  - `MeanField.from_weighted_nodes`
+  - `_HierarchicalFactor.scale_variables`
+  - the numpy-only module `autofit.graphical.laplace.moments`
+  - `autofit/graphical/README.md` §3.2, §3.3 and §3.5
+- Library tests: 13 new tests. Known moments match `scipy.integrate.quad` to 1e-9. On the tight toy (50, 50.5, 49.5), mode gives 0 SUCCESS (all BAD_PROJECTION) and moments gives 3/3 SUCCESS. The full suite passes: 2947 passed, 2 skipped.
+- **autofit_workspace_test#105** (merge 8f6e19c):
+  - `analytic_autofit.py` passes `projection` through and seeds the DynestyStatic joint fit (`SeededDynestyStatic`).
+  - `analytic_gaussian.py` is un-parked from `no_run.yaml` and added to `smoke_tests.txt`.
+  - `analytic_gaussian_collapse.py` has a per-seed 0.5·std_ref scatter check, which does not gate (4/5 seeds pass).
+  - The docstrings and labels match the 2026-09-30 runs.
+- Witness, `analytic_gaussian.py` on the moments path (PARITY 41/41):
+  - Leg A: 18/18.
+  - Leg B autofit EP sigma: 6.3401 ± 2.4609 against the closed form 6.5667 ± 2.8832 (a 0.079, b 0.146).
+  - HierarchicalFactor SUCCESS=25.
+  - The mode-path control gives 9.3722 ± 3.5663 (a 0.973 FAIL) and BAD_PROJECTION=19.
+  - Smoke: 15/15 (177 s). `analytic_gaussian.py` takes 119–130 s against the 300 s cap.
+
+### Deviations from the approved plan (recorded on PyAutoFit#1656)
+1. The inner Hessian and polish gradient use value-based central differences, not gradient finite differences. At σ≈0.017 the forward-difference gradient cancelled catastrophically, the Hessian went indefinite, and every update ended BAD_PROJECTION or FAILURE.
+2. Up to 4 re-windowing passes, not 2. Two passes left a 15% variance error on a tilted density 14x narrower than the cavity.
+3. `_SCALE_ARGUMENT_NAMES` stays in `expectation_propagation/diagnostics.py`.
+4. The scale support `(0, inf)` is applied by argument name.
+5. `moments.py` is numpy-only. A module-level scipy import broke `test_lazy_transformed_support`.
+6. The end-to-end test uses two toys, because the mode path succeeds on the first one.
+- Design departure from the prompt: the prompt proposed Gauss–Hermite centred on the Hessian. That centring fails exactly when the tilted σ density has no interior mode, so the support-aware Gauss–Legendre rule from the referee was used instead.
+
+### Follow-ups
+- `draft/bug/autofit/ep_moments_loggaussian_transformed_scatter.md` has two items:
+  1. `analytic_gaussian_priors.py` stays parked. Its loggaussian leg fails (43/48, log sigma 3.2832 against 1.8338) on two Jacobian inconsistencies: `_OuterAxis.to_physical` applies the Jacobian to a cavity that is already base-space, and `PriorFactor` evaluates a physical density against a base-space cavity. A scratch fix recovers 1.8161 ± 0.3716.
+  2. The fallback for factors with 3 finite-limit outer variables, which exceed `moment_max_outer=2`. This is why collapse seed 0 misses the scatter check.
+- PyAutoFit#1656 is unreleased, so the release gate is still open: the workspace scripts need a PyAutoFit release that carries `projection="moments"`.
+- The moments path costs about 16x the mode path per hierarchical projection (0.64 s against 0.04 s on the toy). That cost is why it is opt-in.
+
+### Notes
+- Supervised task. It was opened under the human-authorised Heart RED development override (issue, worktree, plan and PR-open only). Both PRs were merged by the human via /prm.
+- Tier: `Consequence: glance`, so no shadow row.
+
+## Original prompt
+
 # EP: moment-matching projection for the hierarchical scatter (the cure the Laplace path cannot give)
 
 Type: feature

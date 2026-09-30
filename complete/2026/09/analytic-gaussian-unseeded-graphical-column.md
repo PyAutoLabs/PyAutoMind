@@ -1,3 +1,15 @@
+## analytic-gaussian-unseeded-graphical-column
+- completed: 2026-09-30
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/105
+- retired-by: /prm close-out of ep-moment-projection (`complete/2026/09/ep-moment-projection.md`). This prompt's scope sits inside that record.
+
+### What shipped
+- autofit_workspace_test#105 (merge 8f6e19c) seeds `run_joint_fit` in `scripts/graphical/analytic_autofit.py`. The new `SeededDynestyStatic` injects `rstate=np.random.default_rng(seed)` into the sampler kwargs, and `random` / `numpy.random` are seeded for the initializer's live-point draws. This is the "preferred" option in the prompt below.
+- Witness met: after seeding, 3 smoke-profile runs of `analytic_gaussian.py` (96 / 130 / 104 s) gave byte-identical tables, as recorded in the PR #105 body. Before seeding, 2 of 6 smoke runs had exited 1 on the graphical column with EP green.
+- `run_joint_fit` uses its own `seed=0` default, which equals the script's `SEED = 0`. It does not thread `SEED` through explicitly, so a future change to `SEED` would not reach it. This is a minor gap and does not reopen the prompt.
+
+## Original prompt
+
 # `analytic_gaussian.py`'s graphical column is an unseeded run, so its PARITY count is not reproducible
 
 Type: bug

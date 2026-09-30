@@ -17,7 +17,7 @@ Review-minutes: 3
 Unattended: ready
 Epic: graphical-ep
 Filed: 2026-09-30
-Parent: draft/feature/autofit/ep_hierarchical_scatter_moment_matching.md (PyAutoFit#1654, library PR #1656)
+Parent: complete/2026/09/ep-moment-projection.md (PyAutoFit#1654, library PR #1656, workspace PR autofit_workspace_test#105)
 
 ## What was seen
 

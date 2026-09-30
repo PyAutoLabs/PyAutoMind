@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1624 records across 8 buckets.
+1626 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -132,6 +132,7 @@ markers; everything below GENERATED is rebuilt.
 - [aggregator-temp-unzip](2026/09/aggregator-temp-unzip.md)
 - [agwt-multi-delaunay-release-timeout](2026/09/agwt-multi-delaunay-release-timeout.md)
 - [analytic-gaussian-benchmark](2026/09/analytic-gaussian-benchmark.md) — Closed-form conjugate hierarchical Gaussian benchmark under
+- [analytic-gaussian-unseeded-graphical-column](2026/09/analytic-gaussian-unseeded-graphical-column.md)
 - [arcsec-after-decimal](2026/09/arcsec-after-decimal.md) — - `arcsec_after_decimal` is now a per-call keyword on `plot_array`, `plot_grid`
 - [arxiv-digest-api-retry](2026/09/arxiv-digest-api-retry.md)
 - [astrometric-offsets-catalogue](2026/09/astrometric-offsets-catalogue.md)
@@ -225,6 +226,7 @@ markers; everything below GENERATED is rebuilt.
 - [ep-laplace-deterministic-hessian](2026/09/ep-laplace-deterministic-hessian.md) — closed completed 2026-09-07
 - [ep-laplace-hessian](2026/09/ep-laplace-hessian.md)
 - [ep-message-support](2026/09/ep-message-support.md)
+- [ep-moment-projection](2026/09/ep-moment-projection.md)
 - [ep-nautilus-single-pass](2026/09/ep-nautilus-single-pass.md)
 - [ep-no-multiprocessing-pool](2026/09/ep-no-multiprocessing-pool.md)
 - [ep-prior-id-zero](2026/09/ep-prior-id-zero.md)

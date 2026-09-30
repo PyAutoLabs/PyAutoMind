@@ -83,5 +83,6 @@ The witness scripts are borrowed verbatim from
 - PyAutoFit#1580 — merged, the most recent STALE-reporting fix; this evidence is from a mirror
   that contains it (RAL PyAutoFit `66f9f8d5d` contains `08207bad0`)
 - `PyAutoCortex/rulings/2026/09/R-20260910-04.md` — the ruling
+- 2026-09-30: `LaplaceOptimiser(projection="moments")` (PyAutoFit#1656, record `complete/2026/09/ep-moment-projection.md`) gives 3/3 HierarchicalFactor SUCCESS on the tight toy (50, 50.5, 49.5) where the default mode path gives 0 (all BAD_PROJECTION); the `BAD_PROJECTION`-only `HierarchicalFactor` case may be cured under `projection="moments"` — re-check seed 140 / the 18 leg-B seeds with it before fixing the mode path
 
 <!-- formalised by the Intake (Conception) Agent on 2026-09-10 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/0797ba95-88e6-4a0d-a71a-b75f4417dc2c/scratchpad/item1.md -->

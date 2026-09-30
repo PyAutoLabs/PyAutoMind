@@ -24,26 +24,6 @@
   - autolens_inference: feature/point-source-search-nautilus-leaf
 - resume: "Branch pushed (2307eea), NO PR yet. Probe RAL job 366937 COMPLETED (seed 0: wall_s 56.6 s, 4,850 evals, per_call 4.72 us batched, likelihood_share 0.041% [single-basis 1.8%], all truth |dsigma|<0.74; row committed). Seeds 1-4 = RAL array 367140 (%1, euclid-ral-gpu-2). Next: sacct -j 367140; scp euclid_jump:/mnt/ral/jnightin/autolens_inference-wt-psleaf/results/searches/point_source/nautilus/simple/source_plane_solved/hpc_a100_jax_cpu_dense_fp64/search_seed{1..4}.{json,png} into the same path in the local worktree (+ hpc/batch_cpu/{output,error}/*367140* logs by hand); check each seed recovers truth; build_readme.py; wiki admission-bar entry (wiki/project/state.md); scripts/point_source/searches/README.md leaf note; ruff/pytest/check_submits; /ship_workspace to PR (Heart YELLOW ack: PyAutoMemory open PR 7d old; other YELLOW -> DRAFT); then remove RAL worktree: cd /mnt/ral/jnightin/autolens_inference && git worktree remove /mnt/ral/jnightin/autolens_inference-wt-psleaf"
 
-## ep-moment-projection
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1654
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1656
-- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/105
-- release-gate: PyAutoFit
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1656
-- issued: 2026-09-30
-- prompt: active/ep_hierarchical_scatter_moment_matching.md
-- session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-30; session ID a45b0125
-- status: workspace-shipped, awaiting-merge (autofit_workspace_test PR #105 open; library PyAutoFit#1656 merged; supervised, merge is human via /prm)
-- autonomy: supervised (header); plan approved in-session 2026-09-30 (Plan Mode); default projection stays "mode"
-- heart-red-override: authorised by the live human in the Claude Code session 2026-09-30 ~10:55 BST ("Override for all three (Recommended)", offered for PyAutoCortex#50 and "for opening the two PyAutoFit tasks (issue + worktree + plan; no merge, no release)"); RED reasons at the 10:51 BST tick: "PyAutoArray: 2 commit(s) behind origin"; "PyAutoLens: 2 commit(s) behind origin"; "release validation FAILED (stage integrate)"; scope: issue + worktree + plan; PR-open permitted; no merge/release; plan approved in-session ~11:20 BST via Plan Mode; PR-open authorised in-session 2026-09-30 ~11:50 BST ('Yes, both #1653 and #1654'); workspace PR-open authorised in-session 2026-09-30 ~16:05 BST ('Override: open the workspace PR')
-- parallel-claim: "ep-projection-exception merged 2026-09-30 (PyAutoFit#1655); claim released"
-- worktree: ~/Code/PyAutoLabs-wt/ep-moment-projection
-- repos:
-  - PyAutoFit: feature/ep-moment-projection
-  - autofit_workspace_test: feature/ep-moment-projection
-- repo-note: PyAutoFit branch feature/ep-moment-projection is merged (PyAutoFit#1656, b13169e, 2026-09-30); the worktree is kept for phase 2, and the next phase claims autofit_workspace_test via /start_workspace
-- summary: LaplaceOptimiser(projection="mode"|"moments"): nested quadrature (outer Gauss–Legendre over the scale variable on its support, inner conditional Laplace) ported from the analytic_ep_minimal referee; MeanField.from_weighted_nodes; SUCCESS/BAD_PROJECTION/FAILURE semantics; tests; phase 2 = autofit_workspace_test un-park via start_workspace after merge.
-
 ## raw-pdip-forward-polish
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/594
 - issued: 2026-09-30
