@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-09-30T15:45:48Z",
+  "updated": "2026-09-30T15:57:00Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Streaming phase 2: pixelization-only fits, save_attributes and aggregator reload on array-free datasets \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/639",
+      "prompt": "/start_dev active/streaming_p2_fit_save_reload.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#430 \u2014 eyes-galaxy-instance",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/430",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#427 \u2014 eyes-organ-order",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/427",
       "prompt": null
     }
   ]

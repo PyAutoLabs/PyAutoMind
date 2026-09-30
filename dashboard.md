@@ -268,7 +268,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/streaming_p2_fit_save_reload.md">Streaming phase 2: pixelization-only fits, save_attributes and aggregator reload on array-free datasets</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/638">issue #638</a> — issued 2026-09-30 — library-dev</summary>
+<details><summary>📋 <a href="active/streaming_p2_fit_save_reload.md">Streaming phase 2: pixelization-only fits, save_attributes and aggregator reload on array-free datasets</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/638">issue #638</a> — issued 2026-09-30 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/639">PyAutoGalaxy#639</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/758">PyAutoLens#758</a> — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoLens</summary>
 
 ```
 /start_dev active/streaming_p2_fit_save_reload.md
@@ -339,6 +339,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#639](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/639) — `active/streaming_p2_fit_save_reload.md`
 - [PyAutoGalaxy#629](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/629) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - [PyAutoGalaxy#637](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/637) — `complete/2026/09/interferometer-streaming-visibilities.md`
 - [PyAutoGalaxy#633](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/633) — `complete/2026/09/isothermal-convergence-jit.md`
@@ -365,6 +366,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoLens**
 
+- [PyAutoLens#758](https://github.com/PyAutoLabs/PyAutoLens/pull/758) — `active/streaming_p2_fit_save_reload.md`
 - [PyAutoLens#750](https://github.com/PyAutoLabs/PyAutoLens/pull/750) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - [PyAutoLens#757](https://github.com/PyAutoLabs/PyAutoLens/pull/757) — `complete/2026/09/interferometer-sparse-precomputed-data-term.md`
 - [PyAutoLens#754](https://github.com/PyAutoLabs/PyAutoLens/pull/754) — `complete/2026/09/jax-grad-nan-zero-components.md`
