@@ -15,13 +15,14 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Lane: local-dev
-Status: draft
+Status: active
 Consequence: judge
 Witness: `autolens_workspace_test/gallery/` deleted with no CI referencing it; RTD `docs/organs/eyes.md` full page builds; `repos_sync.py --check` green
 Review-minutes: 15
 Epic: pyautoeyes-birth
 Phase: 5
 Filed: 2026-09-25
+Issued: 2026-09-30
 
 Unblocked: phase 4 COMPLETE 2026-09-29 (PyAutoMind#455; record complete/2026/09/eyes-fit-cti-instances.md).
 
