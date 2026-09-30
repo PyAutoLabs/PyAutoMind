@@ -80,3 +80,16 @@
 - repos:
   - PyAutoFit: feature/ep-moment-projection
 - summary: LaplaceOptimiser(projection="mode"|"moments"): nested quadrature (outer Gauss–Legendre over the scale variable on its support, inner conditional Laplace) ported from the analytic_ep_minimal referee; MeanField.from_weighted_nodes; SUCCESS/BAD_PROJECTION/FAILURE semantics; tests; phase 2 = autofit_workspace_test un-park via start_workspace after merge.
+
+## streaming-p1-array-free-dataset
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/592
+- issued: 2026-09-30
+- prompt: active/streaming_p1_array_free_dataset.md
+- epic: streaming-visibilities (phase 1 of 5; ledger draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md)
+- source: https://github.com/orgs/PyAutoLabs/discussions/13
+- session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-30
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/streaming-p1-array-free-dataset
+- autonomy: supervised (header); phase plan + design decisions (a)-(e) approved in-session 2026-09-30
+- repos:
+  - PyAutoArray: feature/streaming-p1-array-free-dataset

@@ -62,7 +62,7 @@ with 8 zero visibilities and a `TransformerDFT`. The upstream design should not 
 
 | Phase | Member prompt | Repos | Status |
 |---|---|---|---|
-| 1 | `draft/feature/autoarray/streaming_p1_array_free_dataset.md` | PyAutoArray | issued 2026-09-30 |
+| 1 | `active/streaming_p1_array_free_dataset.md` | PyAutoArray | issued 2026-09-30 — PyAutoArray#592 |
 | 2 | `draft/feature/autogalaxy/streaming_p2_fit_save_reload.md` | PyAutoGalaxy, PyAutoLens | draft |
 | 3 | `draft/feature/autoarray/streaming_p3_visualizer.md` | PyAutoArray, PyAutoGalaxy, PyAutoLens | draft |
 | 4 | `draft/feature/autoarray/streaming_p4_light_profile_identity.md` | PyAutoArray, PyAutoGalaxy, PyAutoLens | draft |
