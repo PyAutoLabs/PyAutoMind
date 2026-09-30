@@ -40,28 +40,6 @@
   - autolens_inference: feature/point-source-search-nautilus-leaf
 - resume: "Branch pushed (2307eea), NO PR yet. Probe RAL job 366937 COMPLETED (seed 0: wall_s 56.6 s, 4,850 evals, per_call 4.72 us batched, likelihood_share 0.041% [single-basis 1.8%], all truth |dsigma|<0.74; row committed). Seeds 1-4 = RAL array 367140 (%1, euclid-ral-gpu-2). Next: sacct -j 367140; scp euclid_jump:/mnt/ral/jnightin/autolens_inference-wt-psleaf/results/searches/point_source/nautilus/simple/source_plane_solved/hpc_a100_jax_cpu_dense_fp64/search_seed{1..4}.{json,png} into the same path in the local worktree (+ hpc/batch_cpu/{output,error}/*367140* logs by hand); check each seed recovers truth; build_readme.py; wiki admission-bar entry (wiki/project/state.md); scripts/point_source/searches/README.md leaf note; ruff/pytest/check_submits; /ship_workspace to PR (Heart YELLOW ack: PyAutoMemory open PR 7d old; other YELLOW -> DRAFT); then remove RAL worktree: cd /mnt/ral/jnightin/autolens_inference && git worktree remove /mnt/ral/jnightin/autolens_inference-wt-psleaf"
 
-## eyes-retire-duplicates-surfaces
-- issue: https://github.com/PyAutoLabs/PyAutoEyes/issues/6
-- issued: 2026-09-30
-- prompt: active/eyes_p5_retire_duplicates_public_surfaces.md
-- epic: pyautoeyes-birth
-- session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-30; session ID e944a175
-- autonomy: supervised (header); plan approved in-session 2026-09-30 (keep workspace_test visualization scripts; include the Eyes state.json cockpit feed; bug draft eyes_survey_recursive_producers closed as moot)
-- status: awaiting-merge (PRs open 2026-09-30; order Brain → autolens_workspace_test → PyAutoScientist → PyAutoEyes → hub, hub after the Eyes Pages deploy)
-- heart-ack: "YELLOW at ship 2026-09-30 09:30Z, reasons unrelated to this task: workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py); manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml; HowToGalaxy: open PR 8d old; HowToLens: open PR 8d old; release validation incomplete: no rehearsal for current source. Ack basis = plan approval in-session (which quoted the door-time YELLOW); the human should confirm the changed reason set at /prm."
-- worktree: ~/Code/PyAutoLabs-wt/eyes-retire-duplicates-surfaces
-- workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/432
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/327
-- workspace-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/37
-- workspace-pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/7
-- workspace-pr: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/17
-- repos:
-  - PyAutoEyes: feature/eyes-retire-duplicates-surfaces
-  - autolens_workspace_test: feature/eyes-retire-duplicates-surfaces
-  - PyAutoBrain: feature/eyes-retire-duplicates-surfaces
-  - PyAutoScientist: feature/eyes-retire-duplicates-surfaces
-  - pyautolabs.github.io: feature/eyes-retire-duplicates-surfaces
-
 ## interferometer-sparse-precomputed-data-term
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/756
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/757

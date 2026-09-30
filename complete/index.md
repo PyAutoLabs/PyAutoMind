@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1615 records across 8 buckets.
+1616 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -246,6 +246,7 @@ markers; everything below GENERATED is rebuilt.
 - [eyes-galaxy-instance](2026/09/eyes-galaxy-instance.md)
 - [eyes-organ-order](2026/09/eyes-organ-order.md)
 - [eyes-organ-skeleton](2026/09/eyes-organ-skeleton.md) — PyAutoEyes is stripped to the cross-project dashboard skeleton. The lens scripts, dataset and GALLERY.md are g…
+- [eyes-retire-duplicates-surfaces](2026/09/eyes-retire-duplicates-surfaces.md)
 - [fitness-vmap-outer-jit](2026/09/fitness-vmap-outer-jit.md)
 - [fixed-lens-light-numba-cpu](2026/09/fixed-lens-light-numba-cpu.md) — CPU fixed-lens-light campaign closed at the user's request. Phases1–6, including4b and5b, completed; phase7 ex…
 - [fixed-lens-light-source-only](2026/09/fixed-lens-light-source-only.md)
