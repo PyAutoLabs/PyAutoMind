@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 258 |
+| [Backlog](#backlog) (`draft/`) | 264 |
 
 > **No batch in flight.**
 
@@ -150,7 +150,7 @@ anything you could not verify.
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 118
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 119
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -590,10 +590,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**258** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **55** of them belong to an epic and are listed only under [Epics](#epics) below.
+**264** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **61** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 74</summary>
+<summary><b>bug</b> — 75</summary>
 
 <details><summary>📋 <a href="draft/bug/autolens/point_image_pair_all_forward_grad_nan.md">Forward-mode gradient is NaN for FitPositionsImagePairAll(Solved) — released default gradient_mode="forward"</a> — autolens · small · supervised · high</summary>
 
@@ -1099,6 +1099,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/autogalaxy/aggregator_reload_drops_sparse_operator.md">Aggregator reload of an in-memory sparse-operator interferometer fit silently falls back…</a> — autogalaxy · small · supervised · low</summary>
+
+```
+/start_dev draft/bug/autogalaxy/aggregator_reload_drops_sparse_operator.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md">Give the JAX PowerLaw deflections branch the same exact unit-vector transform…</a> — autogalaxy · small · safe · low</summary>
 
 ```
@@ -1190,7 +1198,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>feature</b> — 42</summary>
+<summary><b>feature</b> — 41</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_assistant/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging, point_source and interferometer</a> — autolens_assistant · medium · supervised · high</summary>
 
@@ -1276,14 +1284,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/pyautoheart/howto_real_settings_nightly.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md">Array-free streamed interferometer dataset (streaming visibilities, phase 2)</a> — autoarray · large · supervised · medium</summary>
-
-```
-/start_dev draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md
 ```
 
 </details>
@@ -3017,6 +3017,67 @@ Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens
 </details>
 
 <details>
+<summary><b>Streaming visibilities — array-free sparse interferometer dataset (Discussion #13 phase 2)</b> — 6 queued prompt(s), in order</summary>
+
+<details><summary>📋 <b>Streaming visibilities — array-free sparse interferometer dataset (Discussion #13 phase 2)</b> — ledger: `draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md` — phase 1 issued 2026-09-30 (PyAutoArray); phases 2-5 drafted, issue one at a time as each predecessor merges. Phase 1 of the…</summary>
+
+```
+Continue the 'Streaming visibilities — array-free sparse interferometer dataset (Discussion #13 phase 2)' epic. Its canonical state lives in draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: source = https://github.com/orgs/PyAutoLabs/discussions/13 (HRSAstro; reference impl pyuvimage `streaming.py`). The posted reply promises a follow-up on the thread when the array-free dataset lands — post it at the close of phase 3 (fit + save/reload + visualizer usable end to end), not phase 5. Design decisions (a)-(e) are recorded in the ledger.
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/streaming_p1_array_free_dataset.md">Streaming phase 1: array-free Interferometer.from_stream / from_sparse_terms (PyAutoArray)</a> — autoarray · medium · supervised · medium</summary>
+
+```
+/start_dev draft/feature/autoarray/streaming_p1_array_free_dataset.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autogalaxy/streaming_p2_fit_save_reload.md">Streaming phase 2: pixelization-only fits, save_attributes and aggregator reload on array-free datasets</a> — autogalaxy · medium · supervised · medium</summary>
+
+```
+/start_dev draft/feature/autogalaxy/streaming_p2_fit_save_reload.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/streaming_p3_visualizer.md">Streaming phase 3: visualizer on array-free datasets…</a> — autoarray · medium · supervised · medium</summary>
+
+```
+/start_dev draft/feature/autoarray/streaming_p3_visualizer.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/streaming_p4_light_profile_identity.md">Streaming phase 4: non-linear light profiles array-free via the data-term identity</a> — autoarray · medium · supervised · medium</summary>
+
+```
+/start_dev draft/feature/autoarray/streaming_p4_light_profile_identity.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/streaming_p5_cubes_phase_centre.md">Streaming phase 5: per-channel cubes and phase-centre shifts in sparse_terms_from_chunks</a> — autoarray · small · supervised · medium</summary>
+
+```
+/start_dev draft/feature/autoarray/streaming_p5_cubes_phase_centre.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md">Array-free streamed interferometer dataset (streaming visibilities, phase 2)</a> — autoarray · large · supervised · medium</summary>
+
+```
+/start_dev draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md
+```
+
+</details>
+
+</details>
+
+<details>
 <summary><b>interferometer-likelihood-campaign</b> — 9 queued prompt(s) — ⚠️ not in `epics.md`</summary>
 
 <details><summary>📋 <a href="draft/bug/pyautoheart/ral_venv_dependency_floor_drift.md">RAL PyAuto venv: third-party packages below the library floors…</a> — pyautoheart · easy · supervised · medium</summary>
@@ -3250,7 +3311,7 @@ Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens
 
 </details>
 
-71 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+77 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3261,7 +3322,12 @@ Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens
 - `draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md — unknown theme keyword(s): sparse-operator, memory`
 - `draft/feature/autoarray/interferometer_numba_gate_retune_70.md — unknown theme keyword(s): config`
 - `draft/feature/autoarray/source_clumps_robust_scale.md — unknown theme keyword(s): source-reconstruction`
+- `draft/feature/autoarray/streaming_p1_array_free_dataset.md — unknown theme keyword(s): sparse-operator, memory`
+- `draft/feature/autoarray/streaming_p3_visualizer.md — unknown theme keyword(s): sparse-operator, memory`
+- `draft/feature/autoarray/streaming_p4_light_profile_identity.md — unknown theme keyword(s): sparse-operator, memory`
+- `draft/feature/autoarray/streaming_p5_cubes_phase_centre.md — unknown theme keyword(s): sparse-operator, memory`
 - `draft/feature/autofit/certified_solver_batched_guard_c2.md — unknown theme keyword(s): inversion`
+- `draft/feature/autogalaxy/streaming_p2_fit_save_reload.md — unknown theme keyword(s): sparse-operator, memory`
 - `draft/feature/autolens/coolest_pixel_grid_export.md — unknown theme keyword(s): coolest, interop, euclid`
 - `draft/feature/autolens_assistant/benchmark_forward_model_consistency.md — unknown theme keyword(s): assistant, benchmarks`
 - `draft/feature/autolens_assistant/benchmark_positions_initialised_inference.md — unknown theme keyword(s): assistant, benchmarks`
@@ -3284,6 +3350,7 @@ Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens
 - `draft/bug/autofit/model_from_json_drops_zero_free_parameter_components.md — unknown theme keyword(s): serialization`
 - `draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md — unknown theme keyword(s): nautilus`
 - `draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md — unknown theme keyword(s): jax, nautilus`
+- `draft/bug/autogalaxy/aggregator_reload_drops_sparse_operator.md — unknown theme keyword(s): sparse-operator, aggregator`
 - `draft/bug/autogalaxy/jax_power_law_deflections_exact_unit_vector_transform.md — unknown theme keyword(s): jax, mass-profiles`
 - `draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md — unknown theme keyword(s): caustics, lens-calc`
 - `draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md — unknown theme keyword(s): jax, mass-profiles`
