@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-09-30T17:38:27Z",
+  "updated": "2026-09-30T17:51:06Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Linear-solver programme phase 2: fix the raw-forward PDIP amplitude bias in PyAutoArray \u2014 awaiting-merge (workspace PR open; library merged PyAutoArray#595, pending release)",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/595",
+      "prompt": "/start_dev active/raw_pdip_forward_amplitude_bias_fix.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#431 \u2014 eyes-fit-cti-instances",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/431",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#430 \u2014 eyes-galaxy-instance",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/430",
       "prompt": null
     }
   ]
