@@ -160,7 +160,7 @@ Phase 1 as a whole is NOT complete; phase 2 remains gated. No new issues queued.
 ## Phase 1b prepared — 2026-09-30
 
 User approved the next padding-default fix with “go”. Filed the single bounded
-plan `active/point_solver_padding_backend.md`: choose omitted
+plan `complete/2026/09/point-solver-padding-backend.md`: choose omitted
 remove_infinities from resolved call-time xp; preserve explicit overrides;
 NumPy and JAX regressions. No repo claims conflict. No issue or source edits.
 Full Vitals refresh at 18:22:29Z reports RED “release validation FAILED
@@ -194,3 +194,14 @@ The prior blocked/prepared notes are historical. No merge or release authorized.
 Current deliverable is these open PRs. Parent phase 1 remains incomplete:
 next, after phase 1b ships, settle duplicate-image and containment-overflow
 policy in the parent bug prompt. No later phase issue has been queued.
+
+## Phase 1b merged — 2026-09-30
+
+PyAutoLens#760 merged as `73dc5d275`; autolens_workspace_test#330 merged as
+`7f75f6c2`, library first, after all seven GitHub jobs passed. Issue #759 closed.
+Completion: `complete/2026/09/point-solver-padding-backend.md`; active claim
+released. The PR-open/validation notes above are historical. PyAutoLens release
+obligation retained in the completion record; no release authorized.
+
+Next logical step remains bounded duplicate-image / containment-overflow policy
+work within parent phase 1. Phase 2 remains gated; no further issue queued.

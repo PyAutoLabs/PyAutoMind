@@ -1,3 +1,55 @@
+# PointSolver effective-backend padding — phase 1b
+
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/759
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/760
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/330
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/760
+- release-gate: PyAutoLens
+
+## Shipped
+
+Both PRs merged on 2026-09-30, library first: PyAutoLens merge
+`73dc5d27512c79effc835909618398d64cdddb9a`; workspace merge
+`7f75f6c22900f2cbfd4d5edc3ee98d155624a119`. Both task heads are ancestors
+of origin/main (zero unmerged commits per repo).
+
+Omitted PointSolver.solve remove_infinities follows the effective call-time xp.
+NumPy strips padding; JAX retains static padding, including constructor backend
+overrides. Explicit True/False remains authoritative. Added six NumPy cases and
+an opt-in 12-case workspace matrix for ordinary and registered tracers, eager/JIT.
+
+## Validation and authorization
+
+Full library rerun: 776 passed, 1 xfailed, 34 warnings. Initial run terminated;
+no result inferred from it. Focused matrix 12/12 and full smoke 32/32 passed.
+New NumPy and JAX regressions failed before the fix. In-session diff review,
+Black and diff checks passed. No independent review claimed.
+
+Every exact-head GitHub run and job passed: library Tests run 36760677556
+(Python 3.12, 3.13, no-JAX), Docs 36760677644; workspace Smoke Tests
+36760733834 (changes, Python 3.12 and 3.13). All three runs were pull_request;
+no additional push runs existed for either head. Both PRs CLEAN/MERGEABLE.
+Heart freeze expired, read clear. Live user $prm authorized this merge and
+close-out separately from the development-only RED override. Heart's recorded
+RED remains “release validation FAILED (stage integrate)”; no release authorized.
+
+## Remaining epic scope
+
+Phase 1b is complete; parent phase 1 is not. Duplicate-image handling and
+containment-overflow policy remain in the parent bug prompt. No next-phase issue
+queued. Cortex phase 11 remains dropped under R-20260907-05.
+Library merge is not publication; pending-release obligation retained above.
+
+## Neighbourhood reconciliation
+
+No sibling prompt retired. Folder-scoped reconciliation flagged four bug and
+eight feature prompts through references/overlap; this merge proves only the
+bounded padding fix, not those broader scopes. Parent solver hardening was
+updated and retained. Re-run `/intake reconcile draft/bug/autolens` or
+`/intake reconcile draft/feature/autolens` to inspect the standing candidates.
+
+## Original prompt
+
 # PointSolver padding defaults follow the effective backend — arc phase 1b
 
 Type: bug

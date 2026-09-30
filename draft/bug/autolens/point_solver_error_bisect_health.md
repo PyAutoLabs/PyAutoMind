@@ -105,3 +105,12 @@ quad can return duplicate triangle centroids at scale 0.05; synthetic 24-triangl
 containment silently truncates at caps 15 and 20. Float32 NaN placeholders did
 not downcast float64 vertices in eager or jit tests. These findings remain in
 the parent hardening scope; no additional issues have been queued.
+
+## Phase 1b padding fix merged — 2026-09-30
+
+The backend-default padding witness above is fixed by PyAutoLens#760
+(`73dc5d275`), with regression coverage in autolens_workspace_test#330
+(`7f75f6c2`). Record: `complete/2026/09/point-solver-padding-backend.md`.
+Explicit call-time xp now controls omitted remove_infinities; explicit options
+are unchanged. All library and workspace CI jobs passed. Duplicate-image and
+containment-overflow policy remain open within this parent prompt.
