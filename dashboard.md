@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/cockpit-panel-icons.md">Reuse organ icons in cockpit overview panel headings</a> — <a href="https://github.com/PyAutoLabs/pyautolabs.github.io/issues/20">issue #20</a> — issued 2026-09-30 — workspace-dev</summary>
+<details><summary>📋 <a href="active/cockpit-panel-icons.md">Reuse organ icons in cockpit overview panel headings</a> — <a href="https://github.com/PyAutoLabs/pyautolabs.github.io/issues/20">issue #20</a> — issued 2026-09-30 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/pyautolabs.github.io/pull/21">pyautolabs.github.io#21</a></summary>
 
 ```
 /start_dev active/cockpit-panel-icons.md

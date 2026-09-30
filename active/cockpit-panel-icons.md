@@ -34,3 +34,13 @@ Check all ten panel headings at 320px and desktop width, light/dark appearance, 
 Branch survey: website and Mind clean on main; no active website claim. Existing navigation work shipped in PR #19. Heart entry feed STALE (test run status unknown, install verification not run, no release validation for current source); fresh ship gate remains required.
 
 Approval: user approved implementation with “go” on 2026-09-30. No merge or deploy authorization for this new task.
+
+## Implementation handoff
+
+Implemented in `/home/jammy/Code/PyAutoLabs/.worktrees/cockpit-panel-icons/pyautolabs.github.io`, branch `feature/cockpit-panel-icons`, base `54d97ec`. Committed and pushed as `59f2fdc`. Two files changed: cockpit/index.html and cockpit/sw.js. Reuses ORGANS icons, decorative aria-hidden markup, grouped icon/name headings, narrow-screen wrapping and shell cache v3.
+
+Passed Chromium checks: all ten headings, navigation/icon consistency, status dots/text intact, no horizontal overflow at 320px and 1440px in light/dark. No JS errors. Mobile screenshot inspected. Inline and worker JS syntax plus diff checks pass. Evidence/PR body in sibling checks/ directory.
+
+Heart RED: `release validation FAILED (stage integrate)`. Other current reasons: `workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py)`; `manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml`.
+
+Live authorization: “Authorize shipping cockpit #20”, recorded in the issue, PR body, active.md and autonomy_log.md. PR https://github.com/PyAutoLabs/pyautolabs.github.io/pull/21 is open with pending-release. Next: await human merge/deploy request; no merge/deploy authorization yet.
