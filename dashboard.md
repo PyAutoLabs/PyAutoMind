@@ -46,13 +46,13 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 262 |
+| [Backlog](#backlog) (`draft/`) | 266 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 23
+**Highest priority** (filed as `high`) — showing 12 of 26
 
 <details><summary>📋 <a href="draft/bug/autolens/point_image_pair_all_forward_grad_nan.md">Forward-mode gradient is NaN for FitPositionsImagePairAll(Solved) — released default gradient_mode="forward"</a> — autolens · small · supervised · high</summary>
 
@@ -142,10 +142,10 @@ anything you could not verify.
 
 </details>
 
-<details><summary>📋 <a href="draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md">Physical model check when speeding up smoke tests</a> — workspaces · medium · supervised · high</summary>
+<details><summary>📋 <a href="draft/feature/pyautoheart/heart_dashboard_clarity_p1.md">Heart clarity PR A: readable layout, lyric header, all-tier actions…</a> — pyautoheart · medium · human-required · high</summary>
 
 ```
-/start_dev draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md
+/start_dev draft/feature/pyautoheart/heart_dashboard_clarity_p1.md
 ```
 
 </details>
@@ -268,7 +268,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/streaming_p3_visualizer.md">Streaming phase 3: visualizer on array-free datasets…</a> — issued 2026-09-30</summary>
+<details><summary>📋 <a href="active/streaming_p3_visualizer.md">Streaming phase 3: visualizer on array-free datasets…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/596">issue #596</a> — issued 2026-09-30 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/597">PyAutoArray#597</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/640">PyAutoGalaxy#640</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/761">PyAutoLens#761</a> — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoLens</summary>
 
 ```
 /start_dev active/streaming_p3_visualizer.md
@@ -294,6 +294,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#597](https://github.com/PyAutoLabs/PyAutoArray/pull/597) — `active/streaming_p3_visualizer.md`
 - [PyAutoArray#576](https://github.com/PyAutoLabs/PyAutoArray/pull/576) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - [PyAutoArray#582](https://github.com/PyAutoLabs/PyAutoArray/pull/582) — `complete/2026/09/interferometer-sparse-cache.md`
 - [PyAutoArray#589](https://github.com/PyAutoLabs/PyAutoArray/pull/589) — `complete/2026/09/interferometer-streaming-visibilities.md`
@@ -340,6 +341,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#640](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/640) — `active/streaming_p3_visualizer.md`
 - [PyAutoGalaxy#629](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/629) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - [PyAutoGalaxy#637](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/637) — `complete/2026/09/interferometer-streaming-visibilities.md`
 - [PyAutoGalaxy#633](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/633) — `complete/2026/09/isothermal-convergence-jit.md`
@@ -367,6 +369,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoLens**
 
+- [PyAutoLens#761](https://github.com/PyAutoLabs/PyAutoLens/pull/761) — `active/streaming_p3_visualizer.md`
 - [PyAutoLens#750](https://github.com/PyAutoLabs/PyAutoLens/pull/750) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - [PyAutoLens#757](https://github.com/PyAutoLabs/PyAutoLens/pull/757) — `complete/2026/09/interferometer-sparse-precomputed-data-term.md`
 - [PyAutoLens#754](https://github.com/PyAutoLabs/PyAutoLens/pull/754) — `complete/2026/09/jax-grad-nan-zero-components.md`
@@ -581,7 +584,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**262** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **59** of them belong to an epic and are listed only under [Epics](#epics) below.
+**266** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **59** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 75</summary>
@@ -1189,7 +1192,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>feature</b> — 41</summary>
+<summary><b>feature</b> — 45</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_assistant/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging, point_source and interferometer</a> — autolens_assistant · medium · supervised · high</summary>
 
@@ -1203,6 +1206,30 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/autolens_assistant/benchmark_positions_initialised_inference.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoheart/heart_dashboard_clarity_p1.md">Heart clarity PR A: readable layout, lyric header, all-tier actions…</a> — pyautoheart · medium · human-required · high</summary>
+
+```
+/start_dev draft/feature/pyautoheart/heart_dashboard_clarity_p1.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoheart/heart_dashboard_clarity_p2.md">Heart clarity PR B: structured reasons aligned with readiness, drift categories, score…</a> — pyautoheart · medium · human-required · high</summary>
+
+```
+/start_dev draft/feature/pyautoheart/heart_dashboard_clarity_p2.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoheart/heart_dashboard_clarity.md">Heart dashboard: readable status and a systematic path to green</a> — pyautoheart · large · human-required · high</summary>
+
+```
+/start_dev draft/feature/pyautoheart/heart_dashboard_clarity.md
 ```
 
 </details>
@@ -1267,6 +1294,14 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/feature/autolens/coolest_pixel_grid_export.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoheart/heart_dashboard_clarity_p3.md">Heart clarity PR C: readable import, unit-test and CI timings</a> — pyautoheart · medium · human-required · medium</summary>
+
+```
+/start_dev draft/feature/pyautoheart/heart_dashboard_clarity_p3.md
 ```
 
 </details>
@@ -3237,7 +3272,7 @@ Continue the 'Streaming visibilities — array-free sparse interferometer datase
 
 </details>
 
-71 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+75 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3264,6 +3299,10 @@ Continue the 'Streaming visibilities — array-free sparse interferometer datase
 - `draft/feature/pyautoeyes/group_cluster_gallery.md`
 - `draft/feature/pyautoeyes/multi_galaxy_gallery.md`
 - `draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md`
+- `draft/feature/pyautoheart/heart_dashboard_clarity.md`
+- `draft/feature/pyautoheart/heart_dashboard_clarity_p1.md`
+- `draft/feature/pyautoheart/heart_dashboard_clarity_p2.md`
+- `draft/feature/pyautoheart/heart_dashboard_clarity_p3.md`
 - `draft/feature/workspaces/model_figures_6_rollout.md`
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md`
@@ -3278,11 +3317,7 @@ Continue the 'Streaming visibilities — array-free sparse interferometer datase
 - `draft/bug/priors/14_replace_transform_stack_with_bijectors.md`
 - `draft/bug/priors/z_features.md`
 - `draft/refactor/autogalaxy/critical_curves_dispatch_cluster.md`
-- `draft/refactor/workspaces/abell_1201_local_cleanup.md`
-- `draft/docs/autolens/split_lensing_regimes.md`
-- `draft/docs/howtolens/cluster_pixelized_source.md`
-- `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
-- _… and 31 more_
+- _… and 35 more_
 
 </details>
 
