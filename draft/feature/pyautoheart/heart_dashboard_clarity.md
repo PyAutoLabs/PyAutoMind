@@ -9,7 +9,7 @@ Priority: high
 Autonomy: human-required
 Status: draft
 
-@PyAutoHeart owns this implementation. Fable review and human approval complete; PR A is open as Heart #246.
+@PyAutoHeart owns this implementation. Fable review and human approval complete; PR A merged as Heart #246; PR B is ready and PR C remains dependent on B.
 
 ## Original request (verbatim)
 
@@ -90,7 +90,7 @@ Inspect rendered representative fixtures and the saved current snapshot at 375/3
 
 The Feature Agent classified this as large and recommended phases through start_library / ship_library. **Amended after Fable review to three sequential PRs** so the user's highest-value item (one systematic prompt) lands first:
 
-- **PR A — `heart_dashboard_clarity_p1.md`** (small, ~150–250 source lines): readability CSS (≥1rem primary text, non-monospace summaries, structural bolding of durations already built from fields in `_unit_*_details`), the lyric in the hero lede, all-tier reasons/counts, prominent worded “Refresh all missing evidence” and “Fix Heart systematically” buttons, `<details>` disclosures for passing inventories, Heart-scoped copy-button override with success/failure feedback and a selectable `<pre>` fallback, and a v0 `fix all` (dashboard button + `pyauto-heart fix all` topic) built from the payloads that exist today: `blockers`, `stale_plan`, `Section.action`, drift and timing actions.
+- **PR A — merged; record `complete/2026/09/heart-dashboard-clarity.md`** (small, ~150–250 source lines): readability CSS (≥1rem primary text, non-monospace summaries, structural bolding of durations already built from fields in `_unit_*_details`), the lyric in the hero lede, all-tier reasons/counts, prominent worded “Refresh all missing evidence” and “Fix Heart systematically” buttons, `<details>` disclosures for passing inventories, Heart-scoped copy-button override with success/failure feedback and a selectable `<pre>` fallback, and a v0 `fix all` (dashboard button + `pyauto-heart fix all` topic) built from the payloads that exist today: `blockers`, `stale_plan`, `Section.action`, drift and timing actions.
 - **PR B — `heart_dashboard_clarity_p2.md`**: structured entries (`sections[].entries`), repo reasons aligned with the readiness rules, drift categories with paths, correct remedies for behind/dirty/branch rows, row actions for Release validation and Test run, score `penalties` breakdown, and the fix-all prompt upgraded to consume the structured entries.
 - **PR C — `heart_dashboard_clarity_p3.md`**: timing presentation (imports, unit tests, CI) including the Import-timing false-green fix.
 
@@ -179,3 +179,7 @@ The plan is sound and its findings are accurate; approve for implementation afte
 ## Human approval (2026-09-30)
 
 The human approved the amended three-PR plan ("I approve"), following the recommendation of neutral headings with Heart identity accents. This authorizes implementation in phase order, not merge or release.
+
+## PR A close-out (2026-09-30)
+
+Heart #246 merged as d9974f92a62195510cab3349add9c1b874d6f991; issue #245 closed. Its active prompt is folded into `complete/2026/09/heart-dashboard-clarity.md`. The branch survey above is historical. PR B is unblocked; PR C remains dependent on B. Dashboard publish dispatched as run 36766128623.

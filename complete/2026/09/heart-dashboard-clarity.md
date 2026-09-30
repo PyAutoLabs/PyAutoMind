@@ -1,3 +1,22 @@
+# Heart dashboard PR A: readable status and systematic repair prompts
+
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/245
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/246
+- completed: 2026-09-30
+- merge: d9974f92a62195510cab3349add9c1b874d6f991
+
+PR A of the Fable-reviewed, human-approved dashboard plan. Shipped larger prose text, neutral headings, the supplied lyric, native disclosure panels, all-tier HTML reasons, prominent evidence-refresh and systematic prompts, additive JSON fix_plan and `pyauto-heart fix all`. The pure prompt builder retains uncapped source observations and existing action routes. Clipboard controls have 44px targets, truthful success/failure feedback and selectable fallbacks. Existing verdict, score, blockers and performance contracts remain unchanged.
+
+Validation: 1070 Heart tests, 53 Brain consumer tests, generated-payload consumer parity, Chromium at 375/390/1280px, 200% text, long names, keyboard and clipboard rejection/success checks. GitHub run 36765819699: both Python 3.12/3.13 jobs and tenant checks successful. Human prm authorized merge separately from the development-only RED override. Heart's integration-validation failure is not repaired by this UI.
+
+Dashboard deployment dispatched on main: https://github.com/PyAutoLabs/PyAutoHeart/actions/runs/36766128623 (do not imply deployed until the workflow completes).
+
+Remaining approved scope: `draft/feature/pyautoheart/heart_dashboard_clarity_p2.md` (PR B: structured reasons, remedies, score) now ready; `heart_dashboard_clarity_p3.md` (PR C: timing presentation and false-green fix) remains dependent on B. Parent review packet remains in draft as the design reference, not completed implementation scope.
+
+Local evidence archived under `tmp/heart-dashboard-clarity-evidence/` before worktree removal. No scientific data products were produced. Heart is organ tooling, not a released scientific library; no pending library-release obligation was recorded.
+
+## Original prompt
+
 # Heart clarity PR A: readable layout, lyric header, all-tier actions and a v0 systematic prompt
 
 Type: feature
