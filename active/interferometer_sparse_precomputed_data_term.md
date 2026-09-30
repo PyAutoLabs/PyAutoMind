@@ -11,7 +11,8 @@ Themes:
 Difficulty: small
 Autonomy: supervised
 Priority: medium
-Status: draft
+Status: active
+Issued: 2026-09-30
 Consequence: glance
 Witness: `al.FitInterferometer` on a sparse-operator dataset with a pixelization-only source (no non-linear light profiles) builds its inversion with `data=None`, never evaluates `profile_visibilities` / `profile_subtracted_visibilities` during `figure_of_merit` (spy on `aa.Visibilities.zeros` and `transformer.visibilities_from`), log_evidence is bit-equal to the data-passed path, and `test_autolens/interferometer` is green.
 Review-minutes: 3

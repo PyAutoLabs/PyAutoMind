@@ -115,3 +115,17 @@
   - PyAutoBrain: feature/eyes-retire-duplicates-surfaces
   - PyAutoScientist: feature/eyes-retire-duplicates-surfaces
   - pyautolabs.github.io: feature/eyes-retire-duplicates-surfaces
+
+## interferometer-sparse-precomputed-data-term
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/756
+- issued: 2026-09-30
+- prompt: active/interferometer_sparse_precomputed_data_term.md
+- source: https://github.com/orgs/PyAutoLabs/discussions/13
+- parent: complete/2026/09/interferometer-streaming-visibilities.md
+- session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-30
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/interferometer-sparse-precomputed-data-term
+- autonomy: supervised (header); plan approved in-session 2026-09-30 (mirror PyAutoGalaxy#637 in autolens: data=None gate, inversion_with_data, cached profile properties, ported tests)
+- parallel-claim: "PyAutoLens is also claimed by workspace-config-cleanup (#441); its PyAutoLens PR #751 is already MERGED (test_autolens/model_figure/* only) and the claim is held for the release gate. Disjoint files. Parallel claim human-approved 2026-09-30 with the plan."
+- repos:
+  - PyAutoLens: feature/interferometer-sparse-precomputed-data-term
