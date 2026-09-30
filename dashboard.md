@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/heart_dashboard_clarity_p3.md">Heart clarity PR C: readable import, unit-test and CI timings</a> — issued 2026-09-30</summary>
+<details><summary>📋 <a href="active/heart_dashboard_clarity_p3.md">Heart clarity PR C: readable import, unit-test and CI timings</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/249">issue #249</a> — issued 2026-09-30 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/250">PyAutoHeart#250</a></summary>
 
 ```
 /start_dev active/heart_dashboard_clarity_p3.md
