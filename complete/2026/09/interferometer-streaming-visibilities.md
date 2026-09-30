@@ -1,3 +1,29 @@
+## interferometer-streaming-visibilities
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/588
+- completed: 2026-09-30
+- source: https://github.com/orgs/PyAutoLabs/discussions/13
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/589
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/637
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/589
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/637
+
+### What shipped (phase 1 of Discussion #13, HRSAstro)
+- **PyAutoArray#589** (merge 6d986bd) — `InterferometerSparseOperator` carries `data_term` (sum d²/σ²) and `noise_normalization` (sum log 2πσ²), computed once by `apply_sparse_operator`; `fast_chi_squared` and `FitInterferometer.noise_normalization` read the cached scalars per likelihood call (per-call reductions remain the fallback, bit-identical). New chunked primitive: `aa.SparseTerms` (W~, dirty image, dirty beam, sum of weights, the two scalars, n_vis; field-wise `__add__`), `sparse_terms_from_chunks(chunks, ...)` over `(uv_wavelengths, data, noise_map)` chunks, `InterferometerSparseOperator.from_sparse_terms`, `Interferometer.apply_sparse_operator_from_chunks`. `DatasetInterface(data=None)` allowed when the operator carries `data_term`. `check_noise_map_real_imag_equal` runs once per chunk. Parity: chunked vs one-shot W~ 5.8e-16 rel, dirty image 3.0e-15, scalars ≤2.7e-16; `fast_chi_squared(data=None)` vs array path 1.5e-16 rel.
+- **PyAutoGalaxy#637** (merge 813d288) — `uses_precomputed_data_term_from(dataset, galaxies, data, noise_map)` (identity/type checks only, jit-safe); `galaxies_to_inversion` passes `data=None` when it holds, so a sparse pixelization-only fit never evaluates `profile_visibilities` / `profile_subtracted_visibilities` (the two N_vis allocations per call). `FitInterferometer.inversion_with_data` for output/plot paths; visualizer switched to it. Witness: log_evidence one-shot vs chunked operator 1.8e-16 rel; tracemalloc peak per `figure_of_merit` 3.2 MB (flat in N_vis) vs 7.6 MB @1e5 / 22.0 MB @4e5 before; 9.8 ms vs 11.2 ms per evaluation.
+- Scope recorded = scope merged: items 2 and 3 of the discussion's "suggested shape", plus the accumulation primitive of item 1. The array-free dataset itself (item 1 proper) is phase 2.
+
+### Not shipped here (follow-ups filed at ship)
+- `draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md` — phase 2: `Interferometer.from_stream`, transformer-less dataset, save/aggregator/visualizer contract, light-profile identity, per-channel cubes, RSS witness.
+- `draft/feature/autolens/interferometer_sparse_precomputed_data_term.md` — PyAutoLens parity (`tracer_to_inversion` still passes the subtracted data); unblocked by this merge (library-first).
+- Reply to HRSAstro on Discussion #13 is deferred to phase 2 per the draft, via `/community`.
+
+### Notes
+- Heart YELLOW acknowledged at ship (workspace validation 1 timeout on autolens_test multi_dataset/rectangular.py, unrelated; manifest drift 1; PyAutoMemory PR age; no rehearsal). Freeze expired (2026.9.27.2 window) at merge.
+- Branch `feature/interferometer-streaming-visibilities` shared by both repos; PyAutoGalaxy CI resolved the same-named PyAutoArray branch. Parallel PyAutoArray claim `sparse-operator-oversampling-cache` (#585, PR #586) touches 4 lines of `inversion/interferometer/abstract.py` — rebase there is trivial.
+- Behaviour change to note in release notes: on the sparse path with no non-linear light profile, `fit.inversion.dataset.data` is `None`; use `fit.inversion_with_data` or `fit.data`.
+
+## Original prompt
+
 # Streaming visibilities for memory efficiency on the sparse interferometer path
 
 Type: feature

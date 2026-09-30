@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1611 records across 8 buckets.
+1612 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -312,6 +312,7 @@ markers; everything below GENERATED is rebuilt.
 - [interferometer-preload-prose](2026/09/interferometer-preload-prose.md)
 - [interferometer-sparse-cache](2026/09/interferometer-sparse-cache.md)
 - [interferometer-sparse-operator-numpy-cpu-path](2026/09/interferometer-sparse-operator-numpy-cpu-path.md)
+- [interferometer-streaming-visibilities](2026/09/interferometer-streaming-visibilities.md)
 - [interferometer-transform-real-scatter](2026/09/interferometer-transform-real-scatter.md) — `TransformerNUFFT.transform_mapping_matrix` now scatters the real mapping matrix, flips, then casts to complex…
 - [interferometer-xp-jnp-call-sites](2026/09/interferometer-xp-jnp-call-sites.md)
 - [isothermal-convergence-jit](2026/09/isothermal-convergence-jit.md) — `PowerLawCore.convergence_2d_from` (power_law_core.py) called `convergence_func(grid_radius=...)` without `xp`…

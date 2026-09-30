@@ -18,7 +18,7 @@ Consequence: judge
 Witness: an `Interferometer.from_stream(chunks, real_space_mask, ...)` dataset with `data`, `noise_map` and `uv_wavelengths` all `None` and no transformer runs a pixelization-only `ag.FitInterferometer` under `AnalysisInterferometer` end to end (log_likelihood, `jax.jit`, result save + aggregator reload, visualizer output) with log_evidence equal to the in-memory `apply_sparse_operator` fit at rel 1e-8, and peak RSS independent of N_vis (flat across 5e5..4e6 visibilities, ~36 MB over baseline as in the discussion's table).
 Review-minutes: 15
 Unattended: needs-slicing
-Parent: active/interferometer_streaming_visibilities.md
+Parent: complete/2026/09/interferometer-streaming-visibilities.md
 
 Source: GitHub Discussion https://github.com/orgs/PyAutoLabs/discussions/13 (HRSAstro,
 "Streaming visibilities for memory efficiency"); phase 1 = PyAutoArray#588 (PRs on

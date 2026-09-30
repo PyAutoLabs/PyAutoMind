@@ -16,7 +16,7 @@ Consequence: glance
 Witness: `al.FitInterferometer` on a sparse-operator dataset with a pixelization-only source (no non-linear light profiles) builds its inversion with `data=None`, never evaluates `profile_visibilities` / `profile_subtracted_visibilities` during `figure_of_merit` (spy on `aa.Visibilities.zeros` and `transformer.visibilities_from`), log_evidence is bit-equal to the data-passed path, and `test_autolens/interferometer` is green.
 Review-minutes: 3
 Unattended: ready
-Parent: active/interferometer_streaming_visibilities.md
+Parent: complete/2026/09/interferometer-streaming-visibilities.md
 
 Source: GitHub Discussion https://github.com/orgs/PyAutoLabs/discussions/13 (HRSAstro,
 "Streaming visibilities for memory efficiency"); phase 1 = PyAutoArray#588 (PRs on
@@ -52,4 +52,4 @@ on every call.
 - Check `autolens/aggregator/` and `autolens/plot/` (and `al.agg` fit reconstruction) for
   `inversion.data` / `inversion.data_vector` reads that would break on `data=None`.
 
-Blocked on the phase-1 PyAutoArray + PyAutoGalaxy PRs merging (library-first).
+Blocked on the phase-1 PyAutoArray + PyAutoGalaxy PRs merging (library-first). (merged 2026-09-30)

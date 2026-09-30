@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-09-29T20:58:17Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
+  "updated": "2026-09-30T07:59:47Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Streaming visibilities for memory efficiency on the sparse interferometer path \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/589",
-      "prompt": "/start_dev active/interferometer_streaming_visibilities.md"
-    },
     {
       "severity": "yellow",
       "text": "Nautilus: a converged single-chunk fit still runs a second no-op `run()` pass\u2026 \u2014 library-shipped, awaiting-merge",
@@ -59,6 +53,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#582 \u2014 interferometer-sparse-cache",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/582",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#589 \u2014 interferometer-streaming-visibilities",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/589",
       "prompt": null
     },
     {
