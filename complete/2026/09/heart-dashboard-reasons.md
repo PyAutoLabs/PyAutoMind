@@ -1,3 +1,17 @@
+# Heart dashboard reasons and remedies
+
+Merged PyAutoHeart PR #248 on 2026-09-30 as `7c59414da12155b907415d05ecceb955bb0bc105`, from head `32ba3bd1b72f1b118efbfa2b070829b088b835f5`. Issue #247 closed. All claimed branch commits are ancestors of origin/main.
+
+Repository rows now use authoritative readiness reasons, distinguish release blockers from advisory checkout state, and offer appropriate remedies. All drift categories and reasons remain accessible, with source/age disclosures and an explained score breakdown. Release validation and test-run findings have actions. Structured entries preserve Brain consumers and public-path privacy.
+
+Validation: 1081 Heart tests, 53 Brain consumer tests, unchanged legacy verdict fields across 14 fixture/profile comparisons, and browser checks at 375/390/1280 pixels in both themes, including 200% zoom, keyboard disclosures, clipboard failure and touch targets. Exact-head CI run 36768359819 passed both Python 3.12 and 3.13 jobs and every executed step.
+
+Dashboard publication dispatched after merge: https://github.com/PyAutoLabs/PyAutoHeart/actions/runs/36768598628 (completed successfully). No scientific release was performed. Existing release-validation integrate failure remains; same-session human override authorized this dashboard work only.
+
+PR C is unblocked; the parent packet remains as the reference for its remaining timing scope.
+
+## Original prompt
+
 # Heart clarity PR B: structured reasons aligned with readiness, drift categories, score breakdown
 
 Type: feature

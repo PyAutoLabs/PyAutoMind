@@ -4,11 +4,10 @@ Type: feature
 Target: PyAutoHeart
 Difficulty: medium
 Autonomy: human-required
-Status: blocked
-Blocked-by: heart_dashboard_clarity_p2
+Status: ready
 Priority: medium
 
-@PyAutoHeart. Parent intent, findings, design and the Fable review with its numbered amendments: `heart_dashboard_clarity.md` in this directory. Human approved the amended plan on 2026-09-30; await PR B delivery.
+@PyAutoHeart. Parent intent, findings, design and the Fable review with its numbered amendments: `heart_dashboard_clarity.md` in this directory. Human approved the amended plan on 2026-09-30; PR B merged as #248; implementation is now unblocked.
 
 Scope (parent detailed step 3, applicable step 5 validation):
 
