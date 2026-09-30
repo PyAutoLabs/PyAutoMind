@@ -51,3 +51,17 @@
   - autolens_profiling: feature/linear-solver-accuracy-study
 - summary: Phase 1 of the linear-solver programme — a dedicated `scripts/lens/solver/` package in autolens_profiling (system corpus, solver-candidate registry, accuracy + early-stopping cells, README stats), a pre-registered rule, and a campaign page recording which raw-PDIP variant fixes the ~4 % amplitude bias while keeping 48/48 SLaM points converged. Library fix = phase 2 (own prompt, PyAutoArray).
 - resume: "Issue #354 filed, worktree not yet created. Next: /start_workspace, then delegate phases (skeleton → captures → rule + runs + wiki) to Opus."
+
+## ep-projection-exception
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1653
+- issued: 2026-09-30
+- prompt: active/ep_project_nonfinite_suff_stats_ic50_n50.md
+- session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-30; session ID a45b0125
+- status: library-dev
+- autonomy: supervised (header); plan approved in-session 2026-09-30 (Plan Mode)
+- heart-red-override: authorised by the live human in the Claude Code session 2026-09-30 ~10:55 BST ("Override for all three (Recommended)", offered for PyAutoCortex#50 and "for opening the two PyAutoFit tasks (issue + worktree + plan; no merge, no release)"); RED reasons at the 10:51 BST tick: "PyAutoArray: 2 commit(s) behind origin"; "PyAutoLens: 2 commit(s) behind origin"; "release validation FAILED (stage integrate)"; scope: issue + worktree + plan; PR-open permitted; no merge/release; plan approved in-session ~11:20 BST via Plan Mode
+- parallel-claim: "PyAutoFit is also claimed by ep-moment-projection (registered in the same session, 2026-09-30). File sets disjoint (A: messages/abstract.py, mapper/prior/abstract.py, non_linear/result.py, graphical/expectation_propagation/optimiser.py:150-162, exc.py, test_autofit/messages/test_project_nonfinite.py, test_autofit/graphical/functionality/test_factor_failure_recovery.py; B: graphical/laplace/*, graphical/mean_field.py, graphical/declarative/factor/hierarchical.py, graphical/expectation_propagation/diagnostics.py:47, graphical/README.md, test_autofit/graphical/functionality/test_moment_projection.py). A ships first; B rebases. Parallel claim human-approved 2026-09-30 with the plan."
+- worktree: ~/Code/PyAutoLabs-wt/ep-projection-exception
+- repos:
+  - PyAutoFit: feature/ep-projection-exception
+- summary: Replace the bare assert in AbstractMessage.project with ProjectionException(ValueError) naming the non-finite input (prior id + path context added at Prior.project / Result.projected_model); list it in factor_step's recovery tuple so one bad projection degrades to the previous message instead of killing the EP run; tests for both.

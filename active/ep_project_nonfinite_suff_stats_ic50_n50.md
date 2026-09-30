@@ -4,19 +4,20 @@ Type: bug
 Target: PyAutoFit
 Repos:
 - PyAutoFit
-- autofit_workspace_test
 Themes:
 - graphical-ep
 Difficulty: small
 Autonomy: supervised
 Priority: medium
-Status: draft
+Status: issued
 Consequence: glance
 Witness: a unit test in `test_autofit/graphical/` in which a factor's search returns samples containing one non-finite value (e.g. `NormalMessage.project(np.array([1.0, 2.0, np.nan]), np.zeros(3))`, which today raises a bare `AssertionError` from `autofit/messages/abstract.py:316`) and, driven through `factor_step`, the EP run records that factor step as `StatusFlag.EXCEPTION`, keeps the previous message and carries on, instead of dying. The error message names the prior id and says which input was non-finite (the samples, the log weights, or an overflow). Plus a direct `project` test: a nan sample is either dropped with a warning or rejected with a `ValueError`, and never trips an `assert`.
 Review-minutes: 5
 Unattended: ready
 Epic: graphical-ep
 Filed: 2026-09-30
+Issued: 2026-09-30
+Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1653
 
 ## Why
 
@@ -65,6 +66,8 @@ disabled and no samples were kept. The fix should report the condition so the ne
 identifies itself.
 
 ## Scope
+
+autofit_workspace_test: no edits; graphical smoke scripts rerun at ship.
 
 - Replace the `assert` with a `ValueError`, or a `SearchException` subclass that `factor_step`
   catches, naming the prior id and the offending condition. Or drop non-finite samples/weights with
