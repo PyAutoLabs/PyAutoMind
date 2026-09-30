@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/cockpit-integrated-navigation.md">Integrated cockpit navigation with mobile-friendly organ icons</a> — <a href="https://github.com/PyAutoLabs/pyautolabs.github.io/issues/18">issue #18</a> — issued 2026-09-30 — workspace-dev</summary>
+<details><summary>📋 <a href="active/cockpit-integrated-navigation.md">Integrated cockpit navigation with mobile-friendly organ icons</a> — <a href="https://github.com/PyAutoLabs/pyautolabs.github.io/issues/18">issue #18</a> — issued 2026-09-30 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/pyautolabs.github.io/pull/19">pyautolabs.github.io#19</a></summary>
 
 ```
 /start_dev active/cockpit-integrated-navigation.md

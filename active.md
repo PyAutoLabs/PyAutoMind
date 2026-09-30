@@ -5,12 +5,23 @@
 - issued: 2026-09-30
 - prompt: active/cockpit-integrated-navigation.md
 - session: Codex (GPT-6), Fable 5.1 independent plan review
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/cockpit-integrated-navigation
 - repos:
   - pyautolabs.github.io: feature/cockpit-integrated-navigation
 - approval: User approved plan and requested Fable review then implementation; no merge authorization.
-- resume: Implement accepted plan and address Fable history, viewport, service-worker and internal-navigation findings; browser-check mobile and desktop.
+- resume: PR #19 open with pending-release; commit e30b69d pushed. Await human review/merge via prm. No merge authorization. All browser checks passed; evidence and draft PR body in worktree ../checks/.
+- validation: Chromium nine live board snapshots × five viewport sizes; history, reload, inter-board links, polling, keyboard, clipboard, failures, HTTP preview, SW scope/cache/offline passed. Inline JS/worker syntax, manifest JSON and diff checks pass. No real iOS/Android device test.
+- heart-red-override:
+  - authorization: 'Authorize shipping cockpit #18'
+  - scope: commit, push and pending-release PR only; no merge or release
+  - red-reasons: 'release validation FAILED (stage integrate)'
+  - evidence: Fable 5.1 plan review findings addressed; Chromium 45 board/viewport cases plus history, clipboard, focus, failure recovery, live preview, SW/offline and syntax checks passed.
+- heart-reasons-at-override: "release validation FAILED (stage integrate)" (RED, 2026-09-30T18:30:40.573510+00:00); additional reasons: workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py); manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml.
+- limitation: Existing Eyes board content is about 797px wide; horizontally scrolls inside frame on narrower screens. Owning-repo follow-up, no scope expansion.
+
+- workspace-pr: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/19
+- commit: e30b69d
 
 ## interferometer-decision-matrix
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/356

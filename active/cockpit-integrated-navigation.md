@@ -64,3 +64,13 @@ Live preflight: all nine canonical board URLs returned HTTP 200 and no X-Frame-O
 
 Branch survey: website clean on main, recent branches main and docs/restore-organ-sentence. No active task claims website. Mind main has a separate untracked point-solver prompt; preserve unrelated work.
 Approval: user approved plan and authorized implementation following Fable review. No merge authorization.
+
+## Implementation handoff — 2026-09-30
+
+- Worktree: `/home/jammy/Code/PyAutoLabs/.worktrees/cockpit-integrated-navigation/pyautolabs.github.io`; branch `feature/cockpit-integrated-navigation`; base `db14308`. Source changes committed and pushed as `e30b69d`.
+- Changed: cockpit/index.html, cockpit/sw.js, README.md, AGENTS.md. Icon navigation, responsive single-board view, hash/history, clipboard, focus, recovery and external-link handling implemented; all Fable material plan findings addressed.
+- Evidence in sibling `checks/`: browser-check.cjs, browser-results.json, layout.json, board-audit.json, pwa-check.cjs, edge-check.cjs, mobile/dark PNGs, pr-body.md. Playwright installed there only, no application dependencies added.
+- Passed: nine live HTML board snapshots × five mobile/tablet/desktop sizes; history, route reload, inter-board links, polling preserving frame, two clipboard contexts, keyboard focus, failure recovery and external URL guard. Live cross-origin localhost preview, SW cockpit-only scope, shell-only cache and offline navigation passed. No JS page errors. Syntax/JSON/whitespace checks pass.
+- Physical iOS/Android and installed-app launch not tested. Eyes child content overflows to roughly 797px; shell stays responsive and contains scrolling. Report owning-repo follow-up.
+- Heart live refresh 2026-09-30T18:30:40.573510+00:00 RED: `release validation FAILED (stage integrate)`. YELLOW reasons: `workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py)`; `manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml`.
+- Live authorization: “Authorize shipping cockpit #18”. Recorded on issue, PR body, active.md and autonomy_log.md. PR https://github.com/PyAutoLabs/pyautolabs.github.io/pull/19 is open with pending-release. Next: human review and separate prm/merge authorization; no merge or release authorization.
