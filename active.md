@@ -26,12 +26,14 @@
 
 ## ep-checkin-cleanup
 - issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/50
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/51
 - issued: 2026-09-30
 - prompt: active/ep_checkin_cleanup_2026_09_30.md
 - session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-30; session ID a45b0125
-- status: library-dev
+- status: library-shipped, awaiting-merge (PyAutoCortex PR open; supervised, merge is human via /prm)
 - autonomy: supervised (header); plan approved in-session 2026-09-30 (ledgers on Cortex main via cortex.py verbs + checkin --apply; projects.yaml de-dup + duplicate-key guard via PR; PyAutoFit read-only, fixes route through /intake)
 - worktree: ~/Code/PyAutoLabs-wt/ep-checkin-cleanup
 - repos:
   - PyAutoCortex: feature/ep-checkin-cleanup
 - summary: Clear the 2026-09-30 EP Cortex check-in issues in order (stale open runs, stale Now sections, tripled projects.yaml, stranded euclid_dr1 ledger edit), then prepare each of the four EP projects' next submission or name its blocker; stop at the go/no-go table.
+- heart-red-override: authorised by the live human in-session 2026-09-30 ~10:55 BST ("Override for all three (Recommended)") for PyAutoCortex#50 push + PR-open; RED reasons at the 10:51 tick: "PyAutoArray: 2 commit(s) behind origin"; "PyAutoLens: 2 commit(s) behind origin"; "release validation FAILED (stage integrate)"; branch gates passed: pytest 65 green, cortex check OK, ledger_merge → code
