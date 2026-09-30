@@ -22,3 +22,7 @@ Scope (parent detailed step 1 data model, the remainder of step 4, applicable st
 Nothing new enters `blockers`; a `SCHEMA_VERSION` bump to 4 is optional. Preserve verdict/score. Dispatch `heart-health.yml` after merge.
 
 Proposed branch `feature/heart-dashboard-reasons`. Follow start-dev → start-library → ship-library. Implementation approved on 2026-09-30; existing dependency and shipping gates still apply.
+
+## Delivery (2026-09-30)
+
+PR https://github.com/PyAutoLabs/PyAutoHeart/pull/248 at 32ba3bd. 1081 Heart tests, 53 Brain consumer tests, 14 readiness baseline comparisons and mobile/desktop light/dark browser checks passed. Current RED: release validation FAILED (stage integrate), covered by the same-session dashboard development override; no merge or release authority. Brain consumer notice is on issue #247 and docs/internals.md. After human merge, publish via heart-health.yml and continue PR C. Local evidence/previews are in the task worktree root.

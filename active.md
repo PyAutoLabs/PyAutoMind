@@ -45,10 +45,16 @@
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/247
 - issued: 2026-09-30
 - session: Codex; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/248
+- commit: 32ba3bd1b72f1b118efbfa2b070829b088b835f5
 - repos:
   - PyAutoHeart: feature/heart-dashboard-reasons
 - heart-red-override:
   - authorization: Human approved the three-PR dashboard plan, said "yes go" to development despite Heart RED, then "ok go" to PR B after PR A merged; no merge or release authority.
   - reasons: "release validation FAILED (stage integrate)" (last local observation; refresh at ship).
-  - validation: pending PR B tests/review; no failed branch gate waived.
+  - validation: 1081 Heart tests + 53 Brain tests PASS; 14 baseline readiness comparisons identical; Chromium light/dark 375/390/1280px, keyboard, 200% text and clipboard fallback PASS; in-session implementation review, Fable plan review.
+  - current-red: "release validation FAILED (stage integrate)" at 2026-09-30T19:48:11.100352+00:00; RED / 45.
+
+- resume: PR B #248 open with pending-release label; human merge required. After merge dispatch heart-health.yml, then begin approved PR C from draft/feature/pyautoheart/heart_dashboard_clarity_p3.md.
+- evidence: Worktree root contains heart-tests.log, targeted.log, brain-consumer-tests.log, browser-checks.log and preview-light/dark-{375,390,1280}.png.
