@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 262 |
+| [Backlog](#backlog) (`draft/`) | 263 |
 
 > **No batch in flight.**
 
@@ -580,7 +580,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**262** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **59** of them belong to an epic and are listed only under [Epics](#epics) below.
+**263** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **60** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 75</summary>
@@ -3007,7 +3007,7 @@ Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens
 </details>
 
 <details>
-<summary><b>Streaming visibilities — array-free sparse interferometer dataset (Discussion #13 phase 2)</b> — 4 queued prompt(s), in order</summary>
+<summary><b>Streaming visibilities — array-free sparse interferometer dataset (Discussion #13 phase 2)</b> — 5 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Streaming visibilities — array-free sparse interferometer dataset (Discussion #13 phase 2)</b> — ledger: `draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md` — phases 1-2 SHIPPED 2026-09-30 (P1 PyAutoArray#593 bd03e09e; P2 PyAutoGalaxy#639 4c834ced + PyAutoLens#758 efd13c4c; records…</summary>
 
@@ -3045,6 +3045,14 @@ Continue the 'Streaming visibilities — array-free sparse interferometer datase
 
 ```
 /start_dev draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/interferometer_streaming_scaling.md">Campaign: interferometer streaming (array-free) vs in-memory — memory and time scaling…</a> — autolens_profiling · small · supervised · high</summary>
+
+```
+/start_dev draft/research/autolens_profiling/interferometer_streaming_scaling.md
 ```
 
 </details>
@@ -3285,7 +3293,7 @@ Continue the 'Streaming visibilities — array-free sparse interferometer datase
 
 </details>
 
-76 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+77 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3361,6 +3369,7 @@ Continue the 'Streaming visibilities — array-free sparse interferometer datase
 - `draft/research/autolens_profiling/interferometer_fixed_mapper_curvature_preload.md — unknown theme keyword(s): likelihood-profiling, jax-gpu`
 - `draft/research/autolens_profiling/interferometer_mesh_breakdown_numba_cpu_decision_matrix.md — unknown theme keyword(s): likelihood-profiling`
 - `draft/research/autolens_profiling/interferometer_nnls_memo_scattered_stream_guard.md — unknown theme keyword(s): nnls, likelihood-profiling`
+- `draft/research/autolens_profiling/interferometer_streaming_scaling.md — unknown theme keyword(s): sparse-operator, memory`
 - `draft/research/autolens_profiling/interferometer_w_tilde_fft_size_levers.md — unknown theme keyword(s): likelihood-profiling, jax-gpu`
 - `draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md — unknown theme keyword(s): jax-gpu`
 - `draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md — unknown theme keyword(s): jax`
