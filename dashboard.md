@@ -42,17 +42,17 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 3 |
+| [In flight](#in-flight) (`active/`) | 4 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 260 |
+| [Backlog](#backlog) (`draft/`) | 259 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 24
+**Highest priority** (filed as `high`) — showing 12 of 23
 
 <details><summary>📋 <a href="draft/bug/autolens/point_image_pair_all_forward_grad_nan.md">Forward-mode gradient is NaN for FitPositionsImagePairAll(Solved) — released default gradient_mode="forward"</a> — autolens · small · supervised · high</summary>
 
@@ -264,6 +264,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/point_source_search_nautilus_leaf.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/raw_forward_pdip_nnls_early_stopping.md">Raw-forward PDIP NNLS early stopping: a dedicated autolens_profiling study, then the PyAutoArray…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/354">issue #354</a> — issued 2026-09-30 — workspace-dev</summary>
+
+```
+/start_dev active/raw_forward_pdip_nnls_early_stopping.md
 ```
 
 </details>
@@ -566,7 +574,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**260** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **57** of them belong to an epic and are listed only under [Epics](#epics) below.
+**259** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **57** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 73</summary>
@@ -1499,7 +1507,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 </details>
 
 <details>
-<summary><b>research</b> — 27</summary>
+<summary><b>research</b> — 26</summary>
 
 <details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon</a> — autofit · large · human-required · high</summary>
 
@@ -1529,14 +1537,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/research/autoarray/delaunay_research.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/raw_forward_pdip_nnls_early_stopping.md">Raw-forward PDIP NNLS early stopping: a dedicated autolens_profiling study, then the PyAutoArray…</a> — autolens_profiling · too-large · supervised · high</summary>
-
-```
-/start_dev draft/research/autolens_profiling/raw_forward_pdip_nnls_early_stopping.md
 ```
 
 </details>
@@ -2517,7 +2517,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-30 | filed | <a href="draft/research/autolens_profiling/raw_forward_pdip_nnls_early_stopping.md">Raw-forward PDIP NNLS early stopping: a dedicated autolens_profiling…</a> |
+| 2026-09-30 | issued | <a href="active/raw_forward_pdip_nnls_early_stopping.md">Raw-forward PDIP NNLS early stopping: a dedicated autolens_profiling…</a> |
 | 2026-09-30 | issued | <a href="active/ep_checkin_cleanup_2026_09_30.md">EP cortex check-in clean-up (2026-09-30) — clear the small issues…</a> |
 | 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
 | 2026-09-29 | filed | <a href="draft/maintenance/pyautomind/session_start_hook_copies_regen.md">Regenerate the 28 drifted <code>.claude/hooks/session-start.sh</code> copies…</a> |
@@ -3000,6 +3000,14 @@ Continue the 'autolens_inference — inference benchmarking repo, birth to first
 
 </details>
 
+<details><summary>📋 <b>Linear-solver accuracy/tolerance programme — a standing autolens_profiling package for positive-only solver studies</b> — ledger: `autolens_profiling/wiki/campaigns/linear_solver_accuracy.md (contract: active/raw_forward_pdip_nnls_early_stopping.md)` — phase 1 issued 2026-09-30 (autolens_profiling#354, task <code>linear-solver-accuracy-study</code>)</summary>
+
+```
+Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens_profiling package for positive-only solver studies' epic. Its canonical state lives in autolens_profiling/wiki/campaigns/linear_solver_accuracy.md (contract: active/raw_forward_pdip_nnls_early_stopping.md) — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: human intent 2026-09-30 — solver tolerance/accuracy keeps recurring (#571/#572/#573, certified solver, 07-09 NNLS ledger, warm-start memo), so it gets one home that accumulates runs and data across releases. Phase 1 = `scripts/lens/solver/` package + corpus + CPU fp64 accuracy/early-stopping study + pre-registered rule + wiki page. Phase 2 = PyAutoArray fix per the verdict (`draft/bug/autoarray/raw_pdip_forward_amplitude_bias_fix.md`, to be filed by phase 1; library-first, then re-verify the euclid latent test on library main). Phase 3 = GPU/vmap/A100 timing + parity rows (absorbs `draft/research/autoarray/mge_nnls_fix_pyautoarray_571_slam_60.md`). Standing: re-run the accuracy cell per release.
+```
+
+</details>
+
 <details>
 <summary><b>interferometer-likelihood-campaign</b> — 9 queued prompt(s) — ⚠️ not in `epics.md`</summary>
 
@@ -3234,7 +3242,7 @@ Continue the 'autolens_inference — inference benchmarking repo, birth to first
 
 </details>
 
-72 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+71 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3308,7 +3316,6 @@ Continue the 'autolens_inference — inference benchmarking repo, birth to first
 - `draft/research/autolens_profiling/interferometer_w_tilde_fft_size_levers.md — unknown theme keyword(s): likelihood-profiling, jax-gpu`
 - `draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md — unknown theme keyword(s): jax-gpu`
 - `draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md — unknown theme keyword(s): jax`
-- `draft/research/autolens_profiling/raw_forward_pdip_nnls_early_stopping.md — unknown theme keyword(s): nnls, jax, correctness`
 - `draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md — unknown theme keyword(s): euclid, hpc`
 - `draft/triage/autolens/jit_fit_from_is_vacuous.md — unknown theme keyword(s): testing, jax`
 
