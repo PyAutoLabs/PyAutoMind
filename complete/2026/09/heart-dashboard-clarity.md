@@ -9,7 +9,7 @@ PR A of the Fable-reviewed, human-approved dashboard plan. Shipped larger prose 
 
 Validation: 1070 Heart tests, 53 Brain consumer tests, generated-payload consumer parity, Chromium at 375/390/1280px, 200% text, long names, keyboard and clipboard rejection/success checks. GitHub run 36765819699: both Python 3.12/3.13 jobs and tenant checks successful. Human prm authorized merge separately from the development-only RED override. Heart's integration-validation failure is not repaired by this UI.
 
-Dashboard deployment dispatched on main: https://github.com/PyAutoLabs/PyAutoHeart/actions/runs/36766128623 (do not imply deployed until the workflow completes).
+Dashboard deployment dispatched on main: https://github.com/PyAutoLabs/PyAutoHeart/actions/runs/36766128623 — completed successfully; live HTML verified to contain the systematic prompt, lyric and copy-status controls.
 
 Remaining approved scope: `draft/feature/pyautoheart/heart_dashboard_clarity_p2.md` (PR B: structured reasons, remedies, score) now ready; `heart_dashboard_clarity_p3.md` (PR C: timing presentation and false-green fix) remains dependent on B. Parent review packet remains in draft as the design reference, not completed implementation scope.
 
