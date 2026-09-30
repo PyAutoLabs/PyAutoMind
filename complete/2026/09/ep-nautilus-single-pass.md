@@ -1,3 +1,20 @@
+## ep-nautilus-single-pass
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1651
+- completed: 2026-09-30
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1652 (merge `5cf687d8`, head `84ae77fc`, 2 files, +71/−19)
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1652
+- merge: by the human's `/prm` on green; post-merge close-out by subagent
+
+### Summary
+- A converged Nautilus search now finishes on Nautilus's convergence return value, so a converged
+  single-chunk fit calls `run()` once and performs no redundant during_analysis update. Finite update
+  budgets and global limits advance on the cumulative likelihood count, not posterior sample counts;
+  global limits also stop when a batch overshoots them. No API change, no workspace migration.
+- Evidence at ship: 2934 passed / 2 skipped; Nautilus 16 passed (8 new); 160 downstream scripts +
+  6 notebooks passed across 8 workspaces; seeded posterior arrays identical.
+
+## Original prompt
+
 # Nautilus: a converged single-chunk fit still runs a second no-op `run()` pass with a during_analysis update
 
 Type: bug

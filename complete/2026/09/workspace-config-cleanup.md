@@ -1,3 +1,30 @@
+## workspace-config-cleanup
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/441
+- completed: 2026-09-30
+- epic: organ-cockpit
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/630 (merge `cbd89ced`, 2026-09-27)
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/751 (merge `1e6372fd`, 2026-09-27)
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/176 (merge `0b6e7c78`, 2026-09-27)
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/164 (merge `aa7361df`, 2026-09-27)
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/250 (merge `7fd1953d`, 2026-09-27)
+- workspace-pr: https://github.com/PyAutoLabs/autocti_workspace/pull/34 (merge `7aa79ac6`, 2026-09-27)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/578 (merge `bf77575d`, 2026-09-30)
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/630
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/751
+- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/176
+- merge: shipped in two waves (6/7 on 2026-09-27; autolens_workspace#578 on 2026-09-30 by the human's `/prm`)
+
+### Summary
+- Removed workspace config keys no library reads, as flagged by the PyAutoNerves config board (dead
+  `hpc.*` live-update toggles, removed-parameter notation, unused `subplot_shape` tables), across the
+  autofit / autogalaxy / autolens / autocti workspaces. PyAutoGalaxy#630 promoted dPIE `ra`/`rs`
+  notation and `Delaunay.areas_factor` into library defaults, so the workspace copies were dropped;
+  PyAutoLens#751 and PyAutoNerves#176 (board equivalence + allow-list) completed the library side.
+- autolens_workspace#578 was held for the PyAutoGalaxy release (it relies on the #630 defaults); it
+  merged 2026-09-30.
+
+## Original prompt
+
 # Workspace config cleanup: remove orphan config keys the Nerves board flags
 
 Type: maintenance

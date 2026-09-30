@@ -1,3 +1,26 @@
+## sparse-operator-oversampling-cache
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/585
+- completed: 2026-09-30
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/586 (merge `134a0741`, head `4a0ca313`, 7 files, +232/−6)
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/586
+- merge: by the human's `/prm` on green; post-merge close-out by subagent
+
+### Summary
+- `Imaging.apply_over_sampling` now carries `sparse_operator` and `noise_covariance_matrix` through,
+  so calling `apply_sparse_operator[_cpu]()` before `apply_over_sampling()` no longer silently falls
+  back to the dense `InversionImagingMapping` route (the cause of Euclid DR1 `vis_pix` running dense).
+- `operated_mapping_matrix_list` is cached, so the dense route no longer PSF-convolves / NUFFT-transforms
+  the mapping matrix twice per likelihood evaluation.
+
+### Traps / notes
+- At close-out the task worktree `~/Code/PyAutoLabs-wt/sparse-operator-oversampling-cache/PyAutoArray`
+  held 11 STAGED, uncommitted changes (−1157 lines across the interferometer dataset/fit/inversion
+  modules and tests, apparently reversing the later #588/#589 work). Not part of #586; left in place
+  for a human to inspect, so the worktree and local branch `feature/sparse-operator-oversampling-cache`
+  were not removed.
+
+## Original prompt
+
 # apply_over_sampling drops the sparse operator; dense route convolves the mapping matrix twice
 
 Type: bug

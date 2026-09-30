@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1612 records across 8 buckets.
+1615 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -224,6 +224,7 @@ markers; everything below GENERATED is rebuilt.
 - [ep-laplace-deterministic-hessian](2026/09/ep-laplace-deterministic-hessian.md) — closed completed 2026-09-07
 - [ep-laplace-hessian](2026/09/ep-laplace-hessian.md)
 - [ep-message-support](2026/09/ep-message-support.md)
+- [ep-nautilus-single-pass](2026/09/ep-nautilus-single-pass.md)
 - [ep-no-multiprocessing-pool](2026/09/ep-no-multiprocessing-pool.md)
 - [ep-prior-id-zero](2026/09/ep-prior-id-zero.md)
 - [ep-release-search-internals](2026/09/ep-release-search-internals.md)
@@ -460,6 +461,7 @@ markers; everything below GENERATED is rebuilt.
 - [smoke-timings-ingester](2026/09/smoke-timings-ingester.md)
 - [source-plane-runtime-refresh](2026/09/source-plane-runtime-refresh.md)
 - [sparse-operator-ignores-disable-jax](2026/09/sparse-operator-ignores-disable-jax.md)
+- [sparse-operator-oversampling-cache](2026/09/sparse-operator-oversampling-cache.md)
 - [start-dev-heart-gate](2026/09/start-dev-heart-gate.md)
 - [start-here-mode](2026/09/start-here-mode.md)
 - [start-here-release-profile-script-cap](2026/09/start-here-release-profile-script-cap.md)
@@ -482,6 +484,7 @@ markers; everything below GENERATED is rebuilt.
 - [witt-wynne-catalogue](2026/09/witt-wynne-catalogue.md)
 - [witt-wynne-guide-fixes](2026/09/witt-wynne-guide-fixes.md)
 - [workspace-array-regroup](2026/09/workspace-array-regroup.md)
+- [workspace-config-cleanup](2026/09/workspace-config-cleanup.md)
 - [workspace-dead-weight-cleanup](2026/09/workspace-dead-weight-cleanup.md)
 - [workspace-family-regroup](2026/09/workspace-family-regroup.md)
 - [workspace-interferometer-mge-sparse-operator-memory-docs](2026/09/workspace-interferometer-mge-sparse-operator-memory-docs.md) — draft retired at the /prm close-out of `interferometer-mge-w-tilde-route`, never issued
