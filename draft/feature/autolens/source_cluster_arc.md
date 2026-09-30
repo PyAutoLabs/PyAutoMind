@@ -156,3 +156,13 @@ The previous ship-blocked notes above are historical, not the current state.
 Next: return to the parent phase-1 bug prompt for a bounded padding-default
 fix/regression, then settle duplicate-image handling and containment overflow.
 Phase 1 as a whole is NOT complete; phase 2 remains gated. No new issues queued.
+
+## Phase 1b prepared — 2026-09-30
+
+User approved the next padding-default fix with “go”. Filed the single bounded
+plan `draft/bug/autolens/point_solver_padding_backend.md`: choose omitted
+remove_infinities from resolved call-time xp; preserve explicit overrides;
+NumPy and JAX regressions. No repo claims conflict. No issue or source edits.
+Full Vitals refresh at 18:22:29Z reports RED “release validation FAILED
+(stage integrate)”; await a task-specific development-only override. The
+completed #328 grant does not carry over. No other phase prompts/issues queued.
