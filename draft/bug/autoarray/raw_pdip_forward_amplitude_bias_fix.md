@@ -11,7 +11,7 @@ Autonomy: supervised
 Priority: high
 Status: formalised
 Filed: 2026-09-30
-Blocked-by: the PyAutoArray claim of task `sparse-data-none-guard` (active.md)
+Blocked-by: none (the PyAutoArray claim of `sparse-data-none-guard` cleared 2026-09-30 — `complete/2026/09/sparse-data-none-guard.md`, PyAutoArray#591 merged)
 Witness: a PyAutoArray regression test loads the phase-1 corpus npz (copied from autolens_profiling `results/lens/solver/corpus/` as a fixture beside `test_autoarray/inversion/inversion/files/mge_slam_nnls_systems.npz`) and asserts, per system, converged AND amplitude agreement with fnnls (amp_rel_max ≤ 1e-3, source flux_rel ≤ 1e-4) — an amplitude assertion, not logL — red on unfixed main; plus euclid `tests/test_compute_latent_variable.py::test_latent_euclid_variables_traces_under_jax_jit` passes on library main with no config override.
 Review-minutes: 3
 Consequence: glance
