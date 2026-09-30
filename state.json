@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-09-30T09:30:26Z",
+  "updated": "2026-09-30T09:35:47Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "PyAutoLens parity: precomputed data term on the sparse interferometer path\u2026 \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/757",
       "prompt": "/start_dev active/interferometer_sparse_precomputed_data_term.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Sparse data=None path: guard data_subtracted_dict, harden noise check and data-term dtype\u2026 \u2014 library-shipped, workspace-pending",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/591",
+      "prompt": "/start_dev active/sparse_data_none_data_subtracted_dict_guard.md"
     },
     {
       "severity": "yellow",
@@ -29,6 +35,12 @@
       "severity": "yellow",
       "text": "pending release: .github .github#16 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/.github/pull/16",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#591 \u2014 Sparse data=None path: guard data_subtracted_dict, harden noise check and data-term dtype\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/591",
       "prompt": null
     },
     {
@@ -113,18 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#430 \u2014 eyes-galaxy-instance",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/430",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#427 \u2014 eyes-organ-order",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/427",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#428 \u2014 eyes-organ-skeleton",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/428",
       "prompt": null
     }
   ]

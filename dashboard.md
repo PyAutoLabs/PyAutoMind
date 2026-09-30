@@ -276,7 +276,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/sparse_data_none_data_subtracted_dict_guard.md">Sparse data=None path: guard data_subtracted_dict, harden noise check and data-term dtype…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/590">issue #590</a> — issued 2026-09-30 — library-dev</summary>
+<details><summary>📋 <a href="active/sparse_data_none_data_subtracted_dict_guard.md">Sparse data=None path: guard data_subtracted_dict, harden noise check and data-term dtype…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/590">issue #590</a> — issued 2026-09-30 — library-shipped, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/591">PyAutoArray#591</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 /start_dev active/sparse_data_none_data_subtracted_dict_guard.md
@@ -302,6 +302,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#591](https://github.com/PyAutoLabs/PyAutoArray/pull/591) — `active/sparse_data_none_data_subtracted_dict_guard.md`
 - [PyAutoArray#576](https://github.com/PyAutoLabs/PyAutoArray/pull/576) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - [PyAutoArray#582](https://github.com/PyAutoLabs/PyAutoArray/pull/582) — `complete/2026/09/interferometer-sparse-cache.md`
 - [PyAutoArray#589](https://github.com/PyAutoLabs/PyAutoArray/pull/589) — `complete/2026/09/interferometer-streaming-visibilities.md`
