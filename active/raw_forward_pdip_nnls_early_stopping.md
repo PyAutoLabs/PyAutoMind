@@ -16,6 +16,8 @@ Autonomy: supervised
 Priority: high
 Status: formalised
 Filed: 2026-09-30
+Issued: 2026-09-30
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/354
 Consequence: glance
 Witness: on PyAutoArray main with no config override, `tests/test_compute_latent_variable.py::test_latent_euclid_variables_traces_under_jax_jit` in euclid_strong_lens_modeling_pipeline passes (jit total_source_flux within rel 1e-3 of eager 3.31988), the 48 #571 SLaM source_lp[1] points still converge, and lens/autolens_profiling/wiki carries a campaign page + index row recording the benchmark and the chosen solver.
 Review-minutes: 3

@@ -37,3 +37,17 @@
   - PyAutoCortex: feature/ep-checkin-cleanup
 - summary: Clear the 2026-09-30 EP Cortex check-in issues in order (stale open runs, stale Now sections, tripled projects.yaml, stranded euclid_dr1 ledger edit), then prepare each of the four EP projects' next submission or name its blocker; stop at the go/no-go table.
 - heart-red-override: authorised by the live human in-session 2026-09-30 ~10:55 BST ("Override for all three (Recommended)") for PyAutoCortex#50 push + PR-open; RED reasons at the 10:51 tick: "PyAutoArray: 2 commit(s) behind origin"; "PyAutoLens: 2 commit(s) behind origin"; "release validation FAILED (stage integrate)"; branch gates passed: pytest 65 green, cortex check OK, ledger_merge → code
+
+## linear-solver-accuracy-study
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/354
+- issued: 2026-09-30
+- prompt: active/raw_forward_pdip_nnls_early_stopping.md
+- epic: linear-solver-programme
+- session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-30; session ID unavailable
+- status: workspace-dev
+- autonomy: supervised (header); plan approved in-session 2026-09-30 (phase 1: autolens_profiling only, no library edits)
+- worktree: ~/Code/PyAutoLabs-wt/linear-solver-accuracy-study
+- repos:
+  - autolens_profiling: feature/linear-solver-accuracy-study
+- summary: Phase 1 of the linear-solver programme — a dedicated `scripts/lens/solver/` package in autolens_profiling (system corpus, solver-candidate registry, accuracy + early-stopping cells, README stats), a pre-registered rule, and a campaign page recording which raw-PDIP variant fixes the ~4 % amplitude bias while keeping 48/48 SLaM points converged. Library fix = phase 2 (own prompt, PyAutoArray).
+- resume: "Issue #354 filed, worktree not yet created. Next: /start_workspace, then delegate phases (skeleton → captures → rule + runs + wiki) to Opus."
