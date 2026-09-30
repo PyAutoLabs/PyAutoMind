@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
-  "updated": "2026-09-30T09:55:36Z",
+  "updated": "2026-09-30T10:00:04Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "EP cortex check-in clean-up (2026-09-30) \u2014 clear the small issues, then relaunch\u2026 \u2014 library-shipped, awaiting-merge (PyAutoCortex PR open; supervised, merge is human via /prm)",
+      "url": "https://github.com/PyAutoLabs/PyAutoCortex/pull/51",
+      "prompt": "/start_dev active/ep_checkin_cleanup_2026_09_30.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#427 \u2014 eyes-organ-order",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/427",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#428 \u2014 eyes-organ-skeleton",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/428",
       "prompt": null
     }
   ]

@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/ep_checkin_cleanup_2026_09_30.md">EP cortex check-in clean-up (2026-09-30) — clear the small issues, then relaunch…</a> — <a href="https://github.com/PyAutoLabs/PyAutoCortex/issues/50">issue #50</a> — issued 2026-09-30 — library-dev</summary>
+<details><summary>📋 <a href="active/ep_checkin_cleanup_2026_09_30.md">EP cortex check-in clean-up (2026-09-30) — clear the small issues, then relaunch…</a> — <a href="https://github.com/PyAutoLabs/PyAutoCortex/issues/50">issue #50</a> — issued 2026-09-30 — library-shipped, awaiting-merge (PyAutoCortex PR open; supervised, merge is human via /prm) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/51">PyAutoCortex#51</a></summary>
 
 ```
 /start_dev active/ep_checkin_cleanup_2026_09_30.md
