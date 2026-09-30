@@ -268,7 +268,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/streaming_p1_array_free_dataset.md">Streaming phase 1: array-free Interferometer.from_stream / from_sparse_terms (PyAutoArray)</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/592">issue #592</a> — issued 2026-09-30 — library-dev</summary>
+<details><summary>📋 <a href="active/streaming_p1_array_free_dataset.md">Streaming phase 1: array-free Interferometer.from_stream / from_sparse_terms (PyAutoArray)</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/592">issue #592</a> — issued 2026-09-30 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/593">PyAutoArray#593</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 /start_dev active/streaming_p1_array_free_dataset.md
@@ -294,6 +294,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#593](https://github.com/PyAutoLabs/PyAutoArray/pull/593) — `active/streaming_p1_array_free_dataset.md`
 - [PyAutoArray#576](https://github.com/PyAutoLabs/PyAutoArray/pull/576) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - [PyAutoArray#582](https://github.com/PyAutoLabs/PyAutoArray/pull/582) — `complete/2026/09/interferometer-sparse-cache.md`
 - [PyAutoArray#589](https://github.com/PyAutoLabs/PyAutoArray/pull/589) — `complete/2026/09/interferometer-streaming-visibilities.md`
