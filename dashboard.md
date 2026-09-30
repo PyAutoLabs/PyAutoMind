@@ -292,7 +292,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/streaming_p1_array_free_dataset.md">Streaming phase 1: array-free Interferometer.from_stream / from_sparse_terms (PyAutoArray)</a> — issued 2026-09-30</summary>
+<details><summary>📋 <a href="active/streaming_p1_array_free_dataset.md">Streaming phase 1: array-free Interferometer.from_stream / from_sparse_terms (PyAutoArray)</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/592">issue #592</a> — issued 2026-09-30 — library-dev</summary>
 
 ```
 /start_dev active/streaming_p1_array_free_dataset.md
