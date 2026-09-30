@@ -1,3 +1,21 @@
+## ep-projection-exception
+
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1653
+- completed: 2026-09-30
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1655
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1655
+- merged: 07f6e0b (PyAutoFit main, 2026-09-30, via /prm)
+
+### What shipped
+- `autofit.exc.ProjectionException(ValueError)` replaces the bare `assert` in `AbstractMessage.project`. It names the non-finite input (samples / nan or +inf log weights / all -inf log weights / weighted-moment overflow) and survives `python -O`.
+- `Prior.project` adds the prior id and `Result.projected_model` adds the parameter path (`from e`).
+- EP `factor_step` lists it in its recovery tuple. One bad projection keeps the previous message with `StatusFlag.EXCEPTION` instead of killing the graph fit.
+- Tests: red witness 10 failures on unmodified source; new tests 29 passed; full suite 2946 passed, 2 skipped. Workspace smoke passes for analytic_ep_minimal and analytic_gaussian_collapse.
+- Behaviour change: non-EP callers of `Result.projected_model` now get a `ValueError` subclass instead of `AssertionError`.
+- Spawned from ep-checkin-cleanup (PyAutoCortex#50). Shipped in parallel with ep-moment-projection (PyAutoFit#1654 / PR#1656): the two file sets were disjoint, and this one went first.
+
+## Original prompt
+
 # EP message projection asserts on non-finite sufficient statistics and kills the whole EP run (ic50_workspace N=50 rung, RAL 342411)
 
 Type: bug

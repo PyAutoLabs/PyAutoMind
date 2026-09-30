@@ -1,3 +1,21 @@
+## ep-checkin-cleanup
+
+- issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/50
+- completed: 2026-09-30
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/51
+- merged: 505907f (PyAutoCortex main, 2026-09-30, via /prm)
+
+### What shipped
+- **Ledger side (on Cortex `main` directly via cortex.py verbs + `checkin --apply`):** ledger commits c1135f3, d7ce4a8, 47ad968, d75ae0c and check-in 67b6939. The seven stale open runs are closed, the stale `## Now` sections of the four EP projects are rewritten, and the stranded euclid_dr1 ledger edit has landed.
+- **Code side (PyAutoCortex#51):** `projects.yaml` de-duplicated. 25e0168 had tripled it, and it goes from 610 to 290 lines with the 17 keys unchanged. `cortex.py check` now rejects a repeated project key (a raw column-0 scan before `yaml.safe_load`, in `_duplicate_key_problems`). REFERENCE.md documents the one-row-per-key rule. 65 tests pass.
+- **Spawned from this task:** PyAutoFit#1653 (ep-projection-exception) and PyAutoFit#1654 (ep-moment-projection).
+
+### Follow-ups
+- The `projects.yaml` header comment (lines 12–13) still cites a REFERENCE.md "restricted YAML subset" section that no longer exists.
+- Human follow-ups recorded in the Cortex ledgers: the ep_toy wave-2 submit, the analytic_gaussian diagnostic, and the slope `samples.csv` summary.
+
+## Original prompt
+
 # EP cortex check-in clean-up (2026-09-30) — clear the small issues, then relaunch runs
 
 Type: maintenance

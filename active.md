@@ -24,20 +24,6 @@
   - autolens_inference: feature/point-source-search-nautilus-leaf
 - resume: "Branch pushed (2307eea), NO PR yet. Probe RAL job 366937 COMPLETED (seed 0: wall_s 56.6 s, 4,850 evals, per_call 4.72 us batched, likelihood_share 0.041% [single-basis 1.8%], all truth |dsigma|<0.74; row committed). Seeds 1-4 = RAL array 367140 (%1, euclid-ral-gpu-2). Next: sacct -j 367140; scp euclid_jump:/mnt/ral/jnightin/autolens_inference-wt-psleaf/results/searches/point_source/nautilus/simple/source_plane_solved/hpc_a100_jax_cpu_dense_fp64/search_seed{1..4}.{json,png} into the same path in the local worktree (+ hpc/batch_cpu/{output,error}/*367140* logs by hand); check each seed recovers truth; build_readme.py; wiki admission-bar entry (wiki/project/state.md); scripts/point_source/searches/README.md leaf note; ruff/pytest/check_submits; /ship_workspace to PR (Heart YELLOW ack: PyAutoMemory open PR 7d old; other YELLOW -> DRAFT); then remove RAL worktree: cd /mnt/ral/jnightin/autolens_inference && git worktree remove /mnt/ral/jnightin/autolens_inference-wt-psleaf"
 
-## ep-checkin-cleanup
-- issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/50
-- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/51
-- issued: 2026-09-30
-- prompt: active/ep_checkin_cleanup_2026_09_30.md
-- session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-30; session ID a45b0125
-- status: library-shipped, awaiting-merge (PyAutoCortex PR open; supervised, merge is human via /prm)
-- autonomy: supervised (header); plan approved in-session 2026-09-30 (ledgers on Cortex main via cortex.py verbs + checkin --apply; projects.yaml de-dup + duplicate-key guard via PR; PyAutoFit read-only, fixes route through /intake)
-- worktree: ~/Code/PyAutoLabs-wt/ep-checkin-cleanup
-- repos:
-  - PyAutoCortex: feature/ep-checkin-cleanup
-- summary: Clear the 2026-09-30 EP Cortex check-in issues in order (stale open runs, stale Now sections, tripled projects.yaml, stranded euclid_dr1 ledger edit), then prepare each of the four EP projects' next submission or name its blocker; stop at the go/no-go table.
-- heart-red-override: authorised by the live human in-session 2026-09-30 ~10:55 BST ("Override for all three (Recommended)") for PyAutoCortex#50 push + PR-open; RED reasons at the 10:51 tick: "PyAutoArray: 2 commit(s) behind origin"; "PyAutoLens: 2 commit(s) behind origin"; "release validation FAILED (stage integrate)"; branch gates passed: pytest 65 green, cortex check OK, ledger_merge → code
-
 ## linear-solver-accuracy-study
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/354
 - pr: https://github.com/PyAutoLabs/autolens_profiling/pull/355
@@ -54,22 +40,6 @@
 - heart-red-override: authorised by the live human in the Claude Code session 2026-09-30 ~12:05 BST ("Continue this work:" on the resume note naming #354, whose next step reads "acknowledge or override the RED, then re-run /ship_workspace linear-solver-accuracy-study (or push the branch and open the PR with the drafted body), then /prm"; the human then pushed the branch directly ~12:20 BST after the auto-mode classifier denied the agent push); RED reasons at the 11:52 BST gate: "PyAutoArray: 2 commit(s) behind origin"; "PyAutoLens: 2 commit(s) behind origin"; "release validation FAILED (stage integrate)"; "workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py)"; "manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml" (first two cleared by ff-pull ~12:07 BST, still RED score 45); none in autolens_profiling; scope: push + pending PR #355; merge only via /prm on all-green required checks; no release
 - resume: "Phase 1 shipped to PR https://github.com/PyAutoLabs/autolens_profiling/pull/355 (head 18a9b70, opened 2026-09-30 under the heart-red-override above). Verdict: no drop-in candidate; post-hoc euclid latent: polish +7.5e-5 / tol 1e-5 +5.1e-4 / jaxnnls cap>50 -3e-8 all green. Next: /prm linear-solver-accuracy-study once lint.yml is green (merge stays human); then phase 2 draft/bug/autoarray/raw_pdip_forward_amplitude_bias_fix.md once PyAutoArray claim sparse-data-none-guard clears."
 
-## ep-projection-exception
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1653
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1655
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1655
-- issued: 2026-09-30
-- prompt: active/ep_project_nonfinite_suff_stats_ic50_n50.md
-- session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-30; session ID a45b0125
-- status: library-shipped, awaiting-merge (PyAutoFit#1655 open; supervised, merge is human via /prm)
-- autonomy: supervised (header); plan approved in-session 2026-09-30 (Plan Mode)
-- heart-red-override: authorised by the live human in the Claude Code session 2026-09-30 ~10:55 BST ("Override for all three (Recommended)", offered for PyAutoCortex#50 and "for opening the two PyAutoFit tasks (issue + worktree + plan; no merge, no release)"); RED reasons at the 10:51 BST tick: "PyAutoArray: 2 commit(s) behind origin"; "PyAutoLens: 2 commit(s) behind origin"; "release validation FAILED (stage integrate)"; scope: issue + worktree + plan; PR-open permitted; no merge/release; plan approved in-session ~11:20 BST via Plan Mode; PR-open authorised in-session 2026-09-30 ~11:50 BST ('Yes, both #1653 and #1654')
-- parallel-claim: "PyAutoFit is also claimed by ep-moment-projection (registered in the same session, 2026-09-30). File sets disjoint (A: messages/abstract.py, mapper/prior/abstract.py, non_linear/result.py, graphical/expectation_propagation/optimiser.py:150-162, exc.py, test_autofit/messages/test_project_nonfinite.py, test_autofit/graphical/functionality/test_factor_failure_recovery.py; B: graphical/laplace/*, graphical/mean_field.py, graphical/declarative/factor/hierarchical.py, graphical/expectation_propagation/diagnostics.py:47, graphical/README.md, test_autofit/graphical/functionality/test_moment_projection.py). A ships first; B rebases. Parallel claim human-approved 2026-09-30 with the plan."
-- worktree: ~/Code/PyAutoLabs-wt/ep-projection-exception
-- repos:
-  - PyAutoFit: feature/ep-projection-exception
-- summary: Replace the bare assert in AbstractMessage.project with ProjectionException(ValueError) naming the non-finite input (prior id + path context added at Prior.project / Result.projected_model); list it in factor_step's recovery tuple so one bad projection degrades to the previous message instead of killing the EP run; tests for both.
-
 ## ep-moment-projection
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1654
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1656
@@ -77,13 +47,14 @@
 - issued: 2026-09-30
 - prompt: active/ep_hierarchical_scatter_moment_matching.md
 - session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-30; session ID a45b0125
-- status: library-shipped, workspace-pending (PyAutoFit#1656 open; phase 2 = autofit_workspace_test via /start_workspace after merge; supervised, merge is human via /prm)
+- status: library-merged, workspace-pending (PyAutoFit#1656 merged 2026-09-30; phase 2 = autofit_workspace_test via /start_workspace; supervised)
 - autonomy: supervised (header); plan approved in-session 2026-09-30 (Plan Mode); default projection stays "mode"
 - heart-red-override: authorised by the live human in the Claude Code session 2026-09-30 ~10:55 BST ("Override for all three (Recommended)", offered for PyAutoCortex#50 and "for opening the two PyAutoFit tasks (issue + worktree + plan; no merge, no release)"); RED reasons at the 10:51 BST tick: "PyAutoArray: 2 commit(s) behind origin"; "PyAutoLens: 2 commit(s) behind origin"; "release validation FAILED (stage integrate)"; scope: issue + worktree + plan; PR-open permitted; no merge/release; plan approved in-session ~11:20 BST via Plan Mode; PR-open authorised in-session 2026-09-30 ~11:50 BST ('Yes, both #1653 and #1654')
-- parallel-claim: "PyAutoFit is also claimed by ep-projection-exception (#1653, registered in the same session, 2026-09-30). File sets disjoint (B: graphical/laplace/*, graphical/mean_field.py, graphical/declarative/factor/hierarchical.py, graphical/expectation_propagation/diagnostics.py:47, graphical/README.md, test_autofit/graphical/functionality/test_moment_projection.py; A: messages/abstract.py, mapper/prior/abstract.py, non_linear/result.py, graphical/expectation_propagation/optimiser.py:150-162, exc.py, test_autofit/messages/test_project_nonfinite.py, test_autofit/graphical/functionality/test_factor_failure_recovery.py). A ships first; B rebases on it. Parallel claim human-approved 2026-09-30 with the plan."
+- parallel-claim: "ep-projection-exception merged 2026-09-30 (PyAutoFit#1655); claim released"
 - worktree: ~/Code/PyAutoLabs-wt/ep-moment-projection
 - repos:
   - PyAutoFit: feature/ep-moment-projection
+- repo-note: PyAutoFit branch feature/ep-moment-projection is merged (PyAutoFit#1656, b13169e, 2026-09-30); the worktree is kept for phase 2, and the next phase claims autofit_workspace_test via /start_workspace
 - summary: LaplaceOptimiser(projection="mode"|"moments"): nested quadrature (outer Gauss–Legendre over the scale variable on its support, inner conditional Laplace) ported from the analytic_ep_minimal referee; MeanField.from_weighted_nodes; SUCCESS/BAD_PROJECTION/FAILURE semantics; tests; phase 2 = autofit_workspace_test un-park via start_workspace after merge.
 
 ## streaming-p1-array-free-dataset
