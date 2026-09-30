@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/raw_pdip_forward_amplitude_bias_fix.md">Linear-solver programme phase 2: fix the raw-forward PDIP amplitude bias in PyAutoArray</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/594">issue #594</a> — issued 2026-09-30 — library-dev</summary>
+<details><summary>📋 <a href="active/raw_pdip_forward_amplitude_bias_fix.md">Linear-solver programme phase 2: fix the raw-forward PDIP amplitude bias in PyAutoArray</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/594">issue #594</a> — issued 2026-09-30 — library-shipped, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/595">PyAutoArray#595</a></summary>
 
 ```
 /start_dev active/raw_pdip_forward_amplitude_bias_fix.md
