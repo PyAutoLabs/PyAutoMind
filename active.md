@@ -43,14 +43,19 @@
 
 ## streaming-p2-fit-save-reload
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/638
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/639
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/758
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/639
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/758
 - issued: 2026-09-30
 - prompt: active/streaming_p2_fit_save_reload.md
 - epic: streaming-visibilities (phase 2 of 5; ledger draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md)
 - source: https://github.com/orgs/PyAutoLabs/discussions/13
 - session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-30
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/streaming-p2-fit-save-reload
 - autonomy: supervised (header); plan approved in-session 2026-09-30 (fit guards, SparseTerms FITS extensions in save_attributes, EXTNAME aggregator loader with re-attached operator; ag + al)
 - repos:
   - PyAutoGalaxy: feature/streaming-p2-fit-save-reload
   - PyAutoLens: feature/streaming-p2-fit-save-reload
+- heart-red-override: "RED 2026-09-30T12:42Z — exact reason: `release validation FAILED (stage integrate)` (unrelated release-integrate leg). Live human authorization in-session 2026-09-30 for #638 / feature/streaming-p2-fit-save-reload (PyAutoGalaxy + PyAutoLens): 'Authorize override for #638' (commit, push, pending-release PRs only; merge separate + checks green; no release). Branch gates: test_autogalaxy 1284 passed; test_autolens 770 passed + 1 xfailed; round-trip red-check; Codex astra review FINDINGS (3): #1 + #3 fixed in-branch (red-checked), #2 pre-existing → bug draft filed."
