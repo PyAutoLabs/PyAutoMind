@@ -57,12 +57,18 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/590
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/591
 - pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/591
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/253
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/581
+- release-gate: PyAutoArray
+- release-gate: PyAutoGalaxy
+- release-gate: PyAutoLens
+- resume: "Library PR PyAutoArray#591 (CI pending at ship). Workspace PRs are DRAFT: autogalaxy_workspace#253 needs #591 merged (library-first); autolens_workspace#581 additionally needs PyAutoLens#757 merged (inversion_with_data) — its CI is red by design until then. /prm order: PyAutoLens#757, PyAutoArray#591, then the two workspace PRs."
 - issued: 2026-09-30
 - prompt: active/sparse_data_none_data_subtracted_dict_guard.md
 - source: https://github.com/PyAutoLabs/PyAutoLens/pull/757#issuecomment-5907806825 (Codex astra review of Discussion #13 phase 1)
 - parent: complete/2026/09/interferometer-streaming-visibilities.md
 - session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-30
-- status: library-shipped, workspace-pending
+- status: library-shipped, awaiting-merge
 - heart-ack: "YELLOW 2026-09-30 acknowledged at ship per the approved plan: workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py); manifest drift: public front-door organ tables (generated) 1 mismatch vs PyAutoMind/repos.yaml; HowToGalaxy: open PR 8d old; HowToLens: open PR 8d old; release validation incomplete: no rehearsal for current source"
 - worktree: ~/Code/PyAutoLabs-wt/sparse-data-none-guard
 - autonomy: supervised (header); plan approved in-session 2026-09-30 (guard data_subtracted_dict on data=None + plotter handlers, allclose atol=0, complex128 data term, tests; workspace pixelization fit.py → inversion_with_data)
