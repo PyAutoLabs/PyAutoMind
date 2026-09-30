@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-09-30T09:37:11Z",
+  "updated": "2026-09-30T09:37:33Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -15,7 +15,7 @@
     },
     {
       "severity": "yellow",
-      "text": "Sparse data=None path: guard data_subtracted_dict, harden noise check and data-term dtype\u2026 \u2014 library-shipped, workspace-pending",
+      "text": "Sparse data=None path: guard data_subtracted_dict, harden noise check and data-term dtype\u2026 \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/591",
       "prompt": "/start_dev active/sparse_data_none_data_subtracted_dict_guard.md"
     },
@@ -87,6 +87,12 @@
     },
     {
       "severity": "yellow",
+      "text": "waiting on PyAutoArray's release: Sparse data=None path: guard data_subtracted_dict, harden noise check and data-term dtype\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/issues/590",
+      "prompt": "/start_dev active/sparse_data_none_data_subtracted_dict_guard.md"
+    },
+    {
+      "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#426 \u2014 autolens-visualization-rebirth",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/426",
       "prompt": null
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#431 \u2014 eyes-fit-cti-instances",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/431",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#430 \u2014 eyes-galaxy-instance",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/430",
       "prompt": null
     }
   ]

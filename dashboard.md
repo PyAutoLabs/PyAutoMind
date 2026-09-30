@@ -276,7 +276,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/sparse_data_none_data_subtracted_dict_guard.md">Sparse data=None path: guard data_subtracted_dict, harden noise check and data-term dtype…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/590">issue #590</a> — issued 2026-09-30 — library-shipped, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/591">PyAutoArray#591</a> — ⏳ pending release: PyAutoArray</summary>
+<details><summary>📋 <a href="active/sparse_data_none_data_subtracted_dict_guard.md">Sparse data=None path: guard data_subtracted_dict, harden noise check and data-term dtype…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/590">issue #590</a> — issued 2026-09-30 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/591">PyAutoArray#591</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/253">autogalaxy_workspace#253</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/581">autolens_workspace#581</a> — ⏳ pending release: PyAutoArray — ⏸ waiting on PyAutoArray's release — ⏸ waiting on PyAutoGalaxy's release — ⏸ waiting on PyAutoLens's release</summary>
 
 ```
 /start_dev active/sparse_data_none_data_subtracted_dict_guard.md
@@ -310,6 +310,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoArray#584](https://github.com/PyAutoLabs/PyAutoArray/pull/584) — `complete/2026/09/pointsolver-mcs-headroom.md`
 - [PyAutoArray#580](https://github.com/PyAutoLabs/PyAutoArray/pull/580) — `complete/2026/09/pointsolver-step0-gather.md`
 - [PyAutoArray#586](https://github.com/PyAutoLabs/PyAutoArray/pull/586) — `complete/2026/09/sparse-operator-oversampling-cache.md`
+- ⏸ waiting: [Sparse data=None path: guard data_subtracted_dict, harden noise check and data-term dtype…](active/sparse_data_none_data_subtracted_dict_guard.md)
 
 **PyAutoBrain**
 
@@ -349,6 +350,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoGalaxy#633](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/633) — `complete/2026/09/isothermal-convergence-jit.md`
 - [PyAutoGalaxy#634](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/634) — `complete/2026/09/jax-grad-nan-zero-components.md`
 - [PyAutoGalaxy#630](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/630) — `complete/2026/09/workspace-config-cleanup.md`
+- ⏸ waiting: [Sparse data=None path: guard data_subtracted_dict, harden noise check and data-term dtype…](active/sparse_data_none_data_subtracted_dict_guard.md)
 
 **PyAutoGut**
 
@@ -376,6 +378,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoLens#752](https://github.com/PyAutoLabs/PyAutoLens/pull/752) — `complete/2026/09/point-source-gradient-mode.md`
 - [PyAutoLens#753](https://github.com/PyAutoLabs/PyAutoLens/pull/753) — `complete/2026/09/pointsolver-mcs-headroom.md`
 - [PyAutoLens#751](https://github.com/PyAutoLabs/PyAutoLens/pull/751) — `complete/2026/09/workspace-config-cleanup.md`
+- ⏸ waiting: [Sparse data=None path: guard data_subtracted_dict, harden noise check and data-term dtype…](active/sparse_data_none_data_subtracted_dict_guard.md)
 
 **PyAutoMind**
 
