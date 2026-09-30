@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1631 records across 8 buckets.
+1632 records across 8 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -163,6 +163,7 @@ markers; everything below GENERATED is rebuilt.
 - [ci-smoke-speedup](2026/09/ci-smoke-speedup.md)
 - [cockpit-integrated-navigation](2026/09/cockpit-integrated-navigation.md) — closed
 - [cockpit-page](2026/09/cockpit-page.md) — closed
+- [cockpit-panel-icons](2026/09/cockpit-panel-icons.md) — closed
 - [codex-context-efficiency](2026/09/codex-context-efficiency.md)
 - [codex-hook-parity](2026/09/codex-hook-parity.md)
 - [codex-skill-discovery](2026/09/codex-skill-discovery.md)

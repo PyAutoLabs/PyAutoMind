@@ -1,3 +1,17 @@
+- issue: https://github.com/PyAutoLabs/pyautolabs.github.io/issues/20 (closed)
+- completed: 2026-09-30
+- workspace-pr: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/21 (MERGED)
+- commit: 59f2fdc94b07e7a154a2222dfb8d6bf47e2aacc3
+- merge-commit: 556bdfe14f535eb3e65416a3bc4a7c5426b7386c
+- deployment: https://github.com/PyAutoLabs/pyautolabs.github.io/actions/runs/36762072025 (build/deploy/report jobs successful)
+- live: https://pyautolabs.github.io/cockpit/
+- summary: Reused the navigation organ icons beside each name in the nine Overview cards and pinned Heart panel. Decorative aria-hidden icons, grouped icon/name headings, wrapping on narrow screens, status dots/text preserved and shell cache bumped to v3.
+- validation: Chromium all ten headings at 320px/1440px in light/dark, no horizontal overflow or JS errors, status and matching icons checked; mobile screenshot and diff reviewed; inline/worker JS syntax and diff whitespace passed. Post-deploy touch-emulated 320px browser confirms ten icons, ten status labels, no overflow/JS errors and served worker v3. Physical devices not tested.
+- authorization: Live user “Authorize shipping cockpit #20” after Heart RED `release validation FAILED (stage integrate)` and passed branch checks; separately authorized “merge and deploy”. No library release performed. No PR checks configured (disclosed); exact deployed merge confirmed.
+- evidence: Browser scripts, screenshots and results retained locally in PyAutoMind/tmp/cockpit-panel-icons-evidence/ before worktree removal.
+
+## Original prompt
+
 # Reuse organ icons in cockpit overview panel headings
 
 Type: feature

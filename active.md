@@ -1,26 +1,5 @@
 # Active Tasks
 
-## cockpit-panel-icons
-- issue: https://github.com/PyAutoLabs/pyautolabs.github.io/issues/20
-- issued: 2026-09-30
-- prompt: active/cockpit-panel-icons.md
-- session: Codex (GPT-6)
-- status: awaiting-merge
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/cockpit-panel-icons
-- repos:
-  - pyautolabs.github.io: feature/cockpit-panel-icons
-- approval: User approved implementation with “go”; no merge/deploy authorization.
-- resume: PR #21 open with pending-release; commit 59f2fdc pushed. Browser and syntax checks passed. Await human merge/deploy request; PR body/screenshots/results in worktree ../checks/.
-- validation: Ten icon headings, preserved status dots/text, no horizontal overflow at 320px/1440px in light/dark Chromium; no JS errors; inline/worker syntax and diff checks pass.
-- heart-red-override:
-  - authorization: 'Authorize shipping cockpit #20'
-  - scope: commit, push and pending-release PR only; no merge or release
-  - red-reasons: 'release validation FAILED (stage integrate)'
-  - evidence: Ten panel headings × four width/theme cases; status/overflow/JS error checks, screenshot review, inline/worker syntax and diff checks all pass.
-
-- workspace-pr: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/21
-- commit: 59f2fdc
-
 ## interferometer-decision-matrix
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/356
 - issued: 2026-09-30
