@@ -1,28 +1,5 @@
 # Active Tasks
 
-## cockpit-integrated-navigation
-- issue: https://github.com/PyAutoLabs/pyautolabs.github.io/issues/18
-- issued: 2026-09-30
-- prompt: active/cockpit-integrated-navigation.md
-- session: Codex (GPT-6), Fable 5.1 independent plan review
-- status: awaiting-merge
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/cockpit-integrated-navigation
-- repos:
-  - pyautolabs.github.io: feature/cockpit-integrated-navigation
-- approval: User approved plan and requested Fable review then implementation; no merge authorization.
-- resume: PR #19 open with pending-release; commit e30b69d pushed. Await human review/merge via prm. No merge authorization. All browser checks passed; evidence and draft PR body in worktree ../checks/.
-- validation: Chromium nine live board snapshots × five viewport sizes; history, reload, inter-board links, polling, keyboard, clipboard, failures, HTTP preview, SW scope/cache/offline passed. Inline JS/worker syntax, manifest JSON and diff checks pass. No real iOS/Android device test.
-- heart-red-override:
-  - authorization: 'Authorize shipping cockpit #18'
-  - scope: commit, push and pending-release PR only; no merge or release
-  - red-reasons: 'release validation FAILED (stage integrate)'
-  - evidence: Fable 5.1 plan review findings addressed; Chromium 45 board/viewport cases plus history, clipboard, focus, failure recovery, live preview, SW/offline and syntax checks passed.
-- heart-reasons-at-override: "release validation FAILED (stage integrate)" (RED, 2026-09-30T18:30:40.573510+00:00); additional reasons: workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py); manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml.
-- limitation: Existing Eyes board content is about 797px wide; horizontally scrolls inside frame on narrower screens. Owning-repo follow-up, no scope expansion.
-
-- workspace-pr: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/19
-- commit: e30b69d
-
 ## interferometer-decision-matrix
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/356
 - issued: 2026-09-30
@@ -67,10 +44,14 @@
 - prompt: active/point_solver_padding_backend.md
 - epic: cluster-strong-lensing
 - session: Codex; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/point-solver-padding-backend
 - repos:
   - PyAutoLens: feature/point-solver-padding-backend
   - autolens_workspace_test: feature/point-solver-padding-backend
-- heart-red-override: Live user “I authorize” in response to phase-1b task-specific development-only override request. Exact RED “release validation FAILED (stage integrate)”. Plan approved with “go”. Commit/push/open PRs after applicable tests pass; no merge/release authority.
-- resume: Implement effective-backend padding default with NumPy/JAX regression coverage; library ships first.
+- heart-red-override: Live user “I authorize” in response to phase-1b task-specific development-only override request. Exact RED “release validation FAILED (stage integrate)”. Plan approved with “go”. Commit/push/open PRs only; no merge/release authority. Gates passed: 776 library tests (1 xfailed), 12 focused cases, 32 smoke scripts, in-session review. Fresh main-checkout Heart at 18:35:14Z confirmed the same exact RED reason.
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/760
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/330
+- release-gate: PyAutoLens
+- validation: PyAutoLens 776 passed, 1 xfailed; focused regression 12/12 passed; full workspace smoke 32/32 passed; Black/diff checks and in-session review passed. No independent review claimed on supervised path.
+- resume: Human review and explicit merge command required. Library #760 before workspace #330; workspace release gate applies. Phase 1 remains incomplete; no next-phase issue queued.

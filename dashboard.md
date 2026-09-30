@@ -268,7 +268,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/point_solver_padding_backend.md">PointSolver padding defaults follow the effective backend — arc phase 1b</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/759">issue #759</a> — issued 2026-09-30 — library-dev</summary>
+<details><summary>📋 <a href="active/point_solver_padding_backend.md">PointSolver padding defaults follow the effective backend — arc phase 1b</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/759">issue #759</a> — issued 2026-09-30 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/760">PyAutoLens#760</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/330">autolens_workspace_test#330</a> — ⏸ waiting on PyAutoLens's release</summary>
 
 ```
 /start_dev active/point_solver_padding_backend.md
@@ -390,6 +390,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoLens#753](https://github.com/PyAutoLabs/PyAutoLens/pull/753) — `complete/2026/09/pointsolver-mcs-headroom.md`
 - [PyAutoLens#758](https://github.com/PyAutoLabs/PyAutoLens/pull/758) — `complete/2026/09/streaming-p2-fit-save-reload.md`
 - [PyAutoLens#751](https://github.com/PyAutoLabs/PyAutoLens/pull/751) — `complete/2026/09/workspace-config-cleanup.md`
+- ⏸ waiting: [PointSolver padding defaults follow the effective backend — arc phase 1b](active/point_solver_padding_backend.md)
 
 **PyAutoMind**
 

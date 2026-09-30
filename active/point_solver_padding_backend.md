@@ -75,3 +75,11 @@ worktree, or source edit yet. The user approved the bounded fix with “go”;
 no second plan approval is needed.
 
 Live user override: “I authorize”, in direct response to the phase-1b development-only RED override request. Exact RED: “release validation FAILED (stage integrate)”. Development shipping only; merge remains separate.
+
+## Current state — PRs open 2026-09-30
+
+Prior blocked notes above are historical. Issue PyAutoLens#759, library PR #760
+(commit 9c747c069), workspace PR autolens_workspace_test#330 (9cbcc37).
+776 library tests passed, 1 xfailed; focused matrix 12/12; full smoke 32/32.
+Development-only override exercised; no merge or release authorized.
+Library-first merge and PyAutoLens release gate apply.

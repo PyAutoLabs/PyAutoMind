@@ -169,3 +169,28 @@ completed #328 grant does not carry over. No other phase prompts/issues queued.
 
 Phase 1b authorized and issued as PyAutoLens#759. User granted the task-specific
 RED development override; implementation on feature/point-solver-padding-backend.
+
+## Phase 1b validation — 2026-09-30
+
+PyAutoLens#759 now selects omitted padding from the effective call-time backend.
+The new NumPy regression failed before the fix; the JAX override also failed
+before the fix. All 12 constructor/backend/tracer combinations pass after it,
+including registered-tracer JIT and explicit padding options. Full library and
+workspace validation are running. Fresh main-checkout Heart at 18:35:14Z has
+the authorized RED reason only: “release validation FAILED (stage integrate)”.
+The prior blocked/prepared notes are historical. No merge or release authorized.
+
+## Phase 1b PRs open — 2026-09-30
+
+- Library: https://github.com/PyAutoLabs/PyAutoLens/pull/760 (`9c747c069`).
+- Workspace: https://github.com/PyAutoLabs/autolens_workspace_test/pull/330 (`9cbcc37`).
+- Both pending-release. Library merges first; workspace release-gate: PyAutoLens.
+- Complete library rerun: 776 passed, 1 xfailed, 34 warnings. First attempt was
+  terminated; no success inferred from it. Focused matrix 12/12 and smoke 32/32
+  passed. Black/diff checks and in-session review passed.
+- Live development-only RED override and validation recorded in issue #759,
+  both PRs, active.md and autonomy_log.md. No merge or release authorized.
+
+Current deliverable is these open PRs. Parent phase 1 remains incomplete:
+next, after phase 1b ships, settle duplicate-image and containment-overflow
+policy in the parent bug prompt. No later phase issue has been queued.
