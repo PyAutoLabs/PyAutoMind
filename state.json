@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-09-30T12:45:07Z",
+  "updated": "2026-09-30T12:50:05Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "EP cortex check-in clean-up (2026-09-30) \u2014 clear the small issues, then relaunch\u2026 \u2014 library-shipped, awaiting-merge (PyAutoCortex PR open; supervised, merge is human via /prm)",
       "url": "https://github.com/PyAutoLabs/PyAutoCortex/pull/51",
       "prompt": "/start_dev active/ep_checkin_cleanup_2026_09_30.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "EP message projection asserts on non-finite sufficient statistics and kills the whole\u2026 \u2014 library-shipped, awaiting-merge (PyAutoFit#1655 open; supervised, merge is human via /prm)",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1655",
+      "prompt": "/start_dev active/ep_project_nonfinite_suff_stats_ic50_n50.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#430 \u2014 eyes-galaxy-instance",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/430",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#427 \u2014 eyes-organ-order",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/427",
       "prompt": null
     }
   ]
