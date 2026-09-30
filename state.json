@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-09-30T08:38:05Z",
+  "updated": "2026-09-30T08:41:34Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "PyAutoEyes phase 5 \u2014 retire duplicate galleries + public surfaces \u2014 awaiting-merge (PRs open 2026-09-30; order Brain \u2192 autolens_workspace_test \u2192 PyAutoScientist \u2192 PyAutoEyes \u2192 hub, hub after the\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/432",
       "prompt": "/start_dev active/eyes_p5_retire_duplicates_public_surfaces.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "PyAutoLens parity: precomputed data term on the sparse interferometer path\u2026 \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/757",
+      "prompt": "/start_dev active/interferometer_sparse_precomputed_data_term.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#431 \u2014 eyes-fit-cti-instances",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/431",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#430 \u2014 eyes-galaxy-instance",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/430",
       "prompt": null
     }
   ]

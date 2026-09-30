@@ -260,7 +260,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/interferometer_sparse_precomputed_data_term.md">PyAutoLens parity: precomputed data term on the sparse interferometer path…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/756">issue #756</a> — issued 2026-09-30 — library-dev</summary>
+<details><summary>📋 <a href="active/interferometer_sparse_precomputed_data_term.md">PyAutoLens parity: precomputed data term on the sparse interferometer path…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/756">issue #756</a> — issued 2026-09-30 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/757">PyAutoLens#757</a> — ⏳ pending release: PyAutoLens</summary>
 
 ```
 /start_dev active/interferometer_sparse_precomputed_data_term.md
@@ -392,6 +392,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoLens**
 
+- [PyAutoLens#757](https://github.com/PyAutoLabs/PyAutoLens/pull/757) — `active/interferometer_sparse_precomputed_data_term.md`
 - [PyAutoLens#751](https://github.com/PyAutoLabs/PyAutoLens/pull/751) — `active/workspace_config_cleanup.md`
 - [PyAutoLens#750](https://github.com/PyAutoLabs/PyAutoLens/pull/750) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - [PyAutoLens#754](https://github.com/PyAutoLabs/PyAutoLens/pull/754) — `complete/2026/09/jax-grad-nan-zero-components.md`
