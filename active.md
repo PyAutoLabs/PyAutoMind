@@ -56,3 +56,17 @@
   - PyAutoArray: feature/raw-pdip-forward-polish
   - autolens_profiling: feature/raw-pdip-forward-polish
 - summary: Return the #573 polished iterate (≤ 10 tight warm-started Jacobi-system PDIP iterations) as the raw-forward PDIP forward value in both the custom_vjp forward and the primal, so jit/grad/eager agree; new amplitude regression test over the phase-1 corpus (8 #571 + euclid, fnnls reference) red on d4298445; euclid latent jit test then passes on library main with no override; downstream autolens_profiling ledger row after the library merge.
+
+## streaming-p2-fit-save-reload
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/638
+- issued: 2026-09-30
+- prompt: active/streaming_p2_fit_save_reload.md
+- epic: streaming-visibilities (phase 2 of 5; ledger draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md)
+- source: https://github.com/orgs/PyAutoLabs/discussions/13
+- session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-30
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/streaming-p2-fit-save-reload
+- autonomy: supervised (header); plan approved in-session 2026-09-30 (fit guards, SparseTerms FITS extensions in save_attributes, EXTNAME aggregator loader with re-attached operator; ag + al)
+- repos:
+  - PyAutoGalaxy: feature/streaming-p2-fit-save-reload
+  - PyAutoLens: feature/streaming-p2-fit-save-reload

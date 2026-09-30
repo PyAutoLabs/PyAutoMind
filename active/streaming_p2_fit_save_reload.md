@@ -11,7 +11,8 @@ Themes:
 - memory
 Autonomy: supervised
 Priority: medium
-Status: draft
+Status: active
+Issued: 2026-09-30
 Epic: streaming-visibilities
 Phase: 2
 Difficulty: medium
@@ -20,7 +21,6 @@ Witness: a pixelization-only `ag.FitInterferometer` and `al.FitInterferometer` o
 Review-minutes: 8
 Unattended: ready
 Parent: draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md
-Blocked-by: none (phase 1 merged 2026-09-30, PyAutoArray#593)
 
 Source: https://github.com/orgs/PyAutoLabs/discussions/13 phase 2, sliced 2026-09-30 (decisions (b), (d)).
 
