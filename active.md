@@ -32,7 +32,7 @@
 - prompt: active/raw_pdip_forward_amplitude_bias_fix.md
 - epic: linear-solver-programme
 - session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-30; session ID unavailable
-- status: library-merged, workspace-pending
+- status: workspace-dev (library merged: PyAutoArray#595, pending release)
 - autonomy: supervised (header); plan approved in-session 2026-09-30 via Plan Mode (forward polish = the #573 mechanism returned as the forward value; regression fixture 8 #571 systems + euclid vis_lp with fnnls x_ref; gates on inactive-column/total/source flux ≤ 1e-3, not amp_rel_max)
 - parallel-claim: "PyAutoArray is also claimed by streaming-p1-array-free-dataset (active). File sets disjoint (this task: autoarray/util/jax_nnls.py, autoarray/config/general.yaml, autoarray/settings.py docstring, autoarray/inversion/inversion/inversion_util.py docstring, test_autoarray/inversion/inversion/{test_nnls_raw_forward_amplitude.py,files/mge_solver_reference_systems.npz,files/README.md}; streaming-p1: autoarray/dataset/**, autoarray/fit/fit_interferometer.py, autoarray/inversion/inversion/interferometer/**). Whichever ships second rebases. Parallel claim human-approved 2026-09-30 with the plan."
 - worktree: ~/Code/PyAutoLabs-wt/raw-pdip-forward-polish
