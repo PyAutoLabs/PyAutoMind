@@ -92,7 +92,7 @@ The Feature Agent classified this as large and recommended phases through start_
 
 - **PR A — merged; record `complete/2026/09/heart-dashboard-clarity.md`** (small, ~150–250 source lines): readability CSS (≥1rem primary text, non-monospace summaries, structural bolding of durations already built from fields in `_unit_*_details`), the lyric in the hero lede, all-tier reasons/counts, prominent worded “Refresh all missing evidence” and “Fix Heart systematically” buttons, `<details>` disclosures for passing inventories, Heart-scoped copy-button override with success/failure feedback and a selectable `<pre>` fallback, and a v0 `fix all` (dashboard button + `pyauto-heart fix all` topic) built from the payloads that exist today: `blockers`, `stale_plan`, `Section.action`, drift and timing actions.
 - **PR B — `complete/2026/09/heart-dashboard-reasons.md` (merged #248)**: structured entries (`sections[].entries`), repo reasons aligned with the readiness rules, drift categories with paths, correct remedies for behind/dirty/branch rows, row actions for Release validation and Test run, score `penalties` breakdown, and the fix-all prompt upgraded to consume the structured entries.
-- **PR C — `heart_dashboard_clarity_p3.md`**: timing presentation (imports, unit tests, CI) including the Import-timing false-green fix.
+- **PR C — `active/heart_dashboard_clarity_p3.md` (PR #250)**: timing presentation (imports, unit tests, CI) including the Import-timing false-green fix.
 
 Each gets the relevant validation from step 5. This parent is the review packet, not a fourth implementation task. Actual library failures, cleanup or performance optimizations discovered through it become separately scoped work; this plan does not promise to turn the whole ecosystem green.
 

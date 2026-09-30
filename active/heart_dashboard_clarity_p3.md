@@ -21,3 +21,7 @@ Scope (parent detailed step 3, applicable step 5 validation):
 Preserve verdict/score, the `performance` block's own schema and the Brain/hygiene reads of `performance`. Dispatch `heart-health.yml` after merge.
 
 Proposed branch `feature/heart-dashboard-timings`. Follow start-dev → start-library → ship-library. Implementation approved on 2026-09-30; existing dependency and shipping gates still apply.
+
+## Delivery (2026-09-30)
+
+PR https://github.com/PyAutoLabs/PyAutoHeart/pull/250 is open at 984b1f6. Heart 1099 tests, final 147 display tests, Brain consumers 53 tests and responsive browser checks passed. Await human /prm; dispatch heart-health.yml after merge.

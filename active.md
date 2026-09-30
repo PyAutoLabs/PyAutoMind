@@ -28,8 +28,14 @@
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/249
 - issued: 2026-09-30
 - session: Codex; session ID unavailable
-- status: library-dev
+- status: awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/250
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/heart-dashboard-timings
 - repos:
   - PyAutoHeart: feature/heart-dashboard-timings
-- heart-override: Same-session human development-only approval for the Fable-reviewed dashboard plan; C explicitly requested. Existing integrate failure is not a dashboard defect and this work does not authorize release.
+- heart-red-override:
+  - authorization: Human approved the amended three-PR dashboard plan, "yes go" after the exact RED reason was surfaced, then "$prm and ddo C" in this session; development shipping only, no C merge or release.
+  - reason: release validation FAILED (stage integrate)
+  - observed: 2026-09-30T20:06:10.501884+00:00; RED, score 45
+  - gates: Heart 1099 passed; final display 147 passed; Brain consumers 53 passed; mobile/desktop light/dark, keyboard, 200% text and copy-label checks passed; Fable plan review and in-session implementation review.
+- resume: PR #250 at 984b1f6; judge all exact-head CI legs with /prm before merging, then dispatch heart-health.yml and close the Mind task. No further implementation planned.
