@@ -72,12 +72,14 @@
 
 ## ep-moment-projection
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1654
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1656
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1656
 - issued: 2026-09-30
 - prompt: active/ep_hierarchical_scatter_moment_matching.md
 - session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-30; session ID a45b0125
-- status: library-dev
+- status: library-shipped, workspace-pending (PyAutoFit#1656 open; phase 2 = autofit_workspace_test via /start_workspace after merge; supervised, merge is human via /prm)
 - autonomy: supervised (header); plan approved in-session 2026-09-30 (Plan Mode); default projection stays "mode"
-- heart-red-override: authorised by the live human in the Claude Code session 2026-09-30 ~10:55 BST ("Override for all three (Recommended)", offered for PyAutoCortex#50 and "for opening the two PyAutoFit tasks (issue + worktree + plan; no merge, no release)"); RED reasons at the 10:51 BST tick: "PyAutoArray: 2 commit(s) behind origin"; "PyAutoLens: 2 commit(s) behind origin"; "release validation FAILED (stage integrate)"; scope: issue + worktree + plan; PR-open permitted; no merge/release; plan approved in-session ~11:20 BST via Plan Mode
+- heart-red-override: authorised by the live human in the Claude Code session 2026-09-30 ~10:55 BST ("Override for all three (Recommended)", offered for PyAutoCortex#50 and "for opening the two PyAutoFit tasks (issue + worktree + plan; no merge, no release)"); RED reasons at the 10:51 BST tick: "PyAutoArray: 2 commit(s) behind origin"; "PyAutoLens: 2 commit(s) behind origin"; "release validation FAILED (stage integrate)"; scope: issue + worktree + plan; PR-open permitted; no merge/release; plan approved in-session ~11:20 BST via Plan Mode; PR-open authorised in-session 2026-09-30 ~11:50 BST ('Yes, both #1653 and #1654')
 - parallel-claim: "PyAutoFit is also claimed by ep-projection-exception (#1653, registered in the same session, 2026-09-30). File sets disjoint (B: graphical/laplace/*, graphical/mean_field.py, graphical/declarative/factor/hierarchical.py, graphical/expectation_propagation/diagnostics.py:47, graphical/README.md, test_autofit/graphical/functionality/test_moment_projection.py; A: messages/abstract.py, mapper/prior/abstract.py, non_linear/result.py, graphical/expectation_propagation/optimiser.py:150-162, exc.py, test_autofit/messages/test_project_nonfinite.py, test_autofit/graphical/functionality/test_factor_failure_recovery.py). A ships first; B rebases on it. Parallel claim human-approved 2026-09-30 with the plan."
 - worktree: ~/Code/PyAutoLabs-wt/ep-moment-projection
 - repos:
