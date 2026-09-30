@@ -42,17 +42,17 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 4 |
+| [In flight](#in-flight) (`active/`) | 5 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 263 |
+| [Backlog](#backlog) (`draft/`) | 262 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 24
+**Highest priority** (filed as `high`) — showing 12 of 23
 
 <details><summary>📋 <a href="draft/bug/autolens/point_image_pair_all_forward_grad_nan.md">Forward-mode gradient is NaN for FitPositionsImagePairAll(Solved) — released default gradient_mode="forward"</a> — autolens · small · supervised · high</summary>
 
@@ -90,14 +90,6 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/raw_pdip_forward_amplitude_bias_fix.md">Linear-solver programme phase 2: fix the raw-forward PDIP amplitude bias in PyAutoArray</a> — autoarray · medium · supervised · high</summary>
-
-```
-/start_dev draft/bug/autoarray/raw_pdip_forward_amplitude_bias_fix.md
 ```
 
 </details>
@@ -146,6 +138,14 @@ anything you could not verify.
 
 ```
 /start_dev draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md">Physical model check when speeding up smoke tests</a> — workspaces · medium · supervised · high</summary>
+
+```
+/start_dev draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md
 ```
 
 </details>
@@ -264,6 +264,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 /start_dev active/point_source_search_nautilus_leaf.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/raw_pdip_forward_amplitude_bias_fix.md">Linear-solver programme phase 2: fix the raw-forward PDIP amplitude bias in PyAutoArray</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/594">issue #594</a> — issued 2026-09-30 — library-dev</summary>
+
+```
+/start_dev active/raw_pdip_forward_amplitude_bias_fix.md
 ```
 
 </details>
@@ -577,10 +585,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**263** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **60** of them belong to an epic and are listed only under [Epics](#epics) below.
+**262** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **60** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 75</summary>
+<summary><b>bug</b> — 74</summary>
 
 <details><summary>📋 <a href="draft/bug/autolens/point_image_pair_all_forward_grad_nan.md">Forward-mode gradient is NaN for FitPositionsImagePairAll(Solved) — released default gradient_mode="forward"</a> — autolens · small · supervised · high</summary>
 
@@ -618,14 +626,6 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ```
 /start_dev draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/raw_pdip_forward_amplitude_bias_fix.md">Linear-solver programme phase 2: fix the raw-forward PDIP amplitude bias in PyAutoArray</a> — autoarray · medium · supervised · high</summary>
-
-```
-/start_dev draft/bug/autoarray/raw_pdip_forward_amplitude_bias_fix.md
 ```
 
 </details>
@@ -2529,7 +2529,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | Date | Event | Task |
 |------|-------|------|
 | 2026-09-30 | issued | <a href="active/streaming_p1_array_free_dataset.md">Streaming phase 1: array-free Interferometer.from_stream /…</a> |
-| 2026-09-30 | filed | <a href="draft/bug/autoarray/raw_pdip_forward_amplitude_bias_fix.md">Linear-solver programme phase 2: fix the raw-forward PDIP amplitude…</a> |
+| 2026-09-30 | issued | <a href="active/raw_pdip_forward_amplitude_bias_fix.md">Linear-solver programme phase 2: fix the raw-forward PDIP amplitude…</a> |
 | 2026-09-30 | issued | <a href="active/ep_hierarchical_scatter_moment_matching.md">EP: moment-matching projection for the hierarchical scatter…</a> |
 | 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
 | 2026-09-29 | filed | <a href="draft/maintenance/pyautomind/session_start_hook_copies_regen.md">Regenerate the 28 drifted <code>.claude/hooks/session-start.sh</code> copies…</a> |

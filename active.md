@@ -54,6 +54,22 @@
 - status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/streaming-p1-array-free-dataset
 - autonomy: supervised (header); phase plan + design decisions (a)-(e) approved in-session 2026-09-30
+- parallel-claim: "PyAutoArray is also claimed by raw-pdip-forward-polish (registered 2026-09-30); file sets disjoint (see that entry); parallel claim human-approved 2026-09-30."
 - repos:
   - PyAutoArray: feature/streaming-p1-array-free-dataset
 - heart-red-override: "RED 2026-09-30T12:42Z — exact reason: `release validation FAILED (stage integrate)` (unrelated release-integrate leg). Live human authorization in-session 2026-09-30 for #592 / feature/streaming-p1-array-free-dataset: 'Authorize override for #592' (commit, push, pending-release PR only; merge separate + checks green; no release). Branch gates: test_autoarray 1779 passed; autogalaxy/interferometer 43 + autolens/interferometer 29 passed unchanged; red-checks 3/1/2 fail on revert; Codex astra review FINDINGS (4): 3 fixed in-branch, #4 = phase-2 scope."
+
+## raw-pdip-forward-polish
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/594
+- issued: 2026-09-30
+- prompt: active/raw_pdip_forward_amplitude_bias_fix.md
+- epic: linear-solver-programme
+- session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-09-30; session ID unavailable
+- status: library-dev
+- autonomy: supervised (header); plan approved in-session 2026-09-30 via Plan Mode (forward polish = the #573 mechanism returned as the forward value; regression fixture 8 #571 systems + euclid vis_lp with fnnls x_ref; gates on inactive-column/total/source flux ≤ 1e-3, not amp_rel_max)
+- parallel-claim: "PyAutoArray is also claimed by streaming-p1-array-free-dataset (active). File sets disjoint (this task: autoarray/util/jax_nnls.py, autoarray/config/general.yaml, autoarray/settings.py docstring, autoarray/inversion/inversion/inversion_util.py docstring, test_autoarray/inversion/inversion/{test_nnls_raw_forward_amplitude.py,files/mge_solver_reference_systems.npz,files/README.md}; streaming-p1: autoarray/dataset/**, autoarray/fit/fit_interferometer.py, autoarray/inversion/inversion/interferometer/**). Whichever ships second rebases. Parallel claim human-approved 2026-09-30 with the plan."
+- worktree: ~/Code/PyAutoLabs-wt/raw-pdip-forward-polish
+- repos:
+  - PyAutoArray: feature/raw-pdip-forward-polish
+  - autolens_profiling: feature/raw-pdip-forward-polish
+- summary: Return the #573 polished iterate (≤ 10 tight warm-started Jacobi-system PDIP iterations) as the raw-forward PDIP forward value in both the custom_vjp forward and the primal, so jit/grad/eager agree; new amplitude regression test over the phase-1 corpus (8 #571 + euclid, fnnls reference) red on d4298445; euclid latent jit test then passes on library main with no override; downstream autolens_profiling ledger row after the library merge.
