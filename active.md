@@ -37,3 +37,16 @@
 - repos:
   - autolens_inference: feature/point-source-search-nautilus-leaf
 - resume: "Branch pushed (2307eea), NO PR yet. Probe RAL job 366937 COMPLETED (seed 0: wall_s 56.6 s, 4,850 evals, per_call 4.72 us batched, likelihood_share 0.041% [single-basis 1.8%], all truth |dsigma|<0.74; row committed). Seeds 1-4 = RAL array 367140 (%1, euclid-ral-gpu-2). Next: sacct -j 367140; scp euclid_jump:/mnt/ral/jnightin/autolens_inference-wt-psleaf/results/searches/point_source/nautilus/simple/source_plane_solved/hpc_a100_jax_cpu_dense_fp64/search_seed{1..4}.{json,png} into the same path in the local worktree (+ hpc/batch_cpu/{output,error}/*367140* logs by hand); check each seed recovers truth; build_readme.py; wiki admission-bar entry (wiki/project/state.md); scripts/point_source/searches/README.md leaf note; ruff/pytest/check_submits; /ship_workspace to PR (Heart YELLOW ack: PyAutoMemory open PR 7d old; other YELLOW -> DRAFT); then remove RAL worktree: cd /mnt/ral/jnightin/autolens_inference && git worktree remove /mnt/ral/jnightin/autolens_inference-wt-psleaf"
+
+## heart-dashboard-reasons
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/heart-dashboard-reasons
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/247
+- issued: 2026-09-30
+- session: Codex; session ID unavailable
+- status: library-dev
+- repos:
+  - PyAutoHeart: feature/heart-dashboard-reasons
+- heart-red-override:
+  - authorization: Human approved the three-PR dashboard plan, said "yes go" to development despite Heart RED, then "ok go" to PR B after PR A merged; no merge or release authority.
+  - reasons: "release validation FAILED (stage integrate)" (last local observation; refresh at ship).
+  - validation: pending PR B tests/review; no failed branch gate waived.
