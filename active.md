@@ -1,18 +1,23 @@
 # Active Tasks
 
 ## dashboard-prompt-budget
+- heart-red-override:
+  - authorization: User “I authorize you to conitnue” (2026-10-01), directly authorizing commit/push/opening the three development PRs after the changed RED reason and passed branch gates were reported. No merge or release authority.
+  - reasons: `release validation FAILED (stage integrate)`
+  - gates: 2,323 tests passed (Brain 1,131; Heart 1,113; Eyes 79), Eyes Ruff/format/live 265-figure checks passed; no scientific API or workspace smoke impact; in-session diff review.
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/261
 - issued: 2026-10-01
 - prompt: active/dashboard_prompt_budget.md
 - session: Codex; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dashboard-prompt-budget
 - repos:
   - PyAutoBrain: feature/dashboard-prompt-budget
   - PyAutoHeart: feature/dashboard-prompt-budget
   - PyAutoEyes: feature/dashboard-prompt-budget
 - authorization: Plan approved “ok go”; development entry override “i authorize, go” for Heart RED “PyAutoGalaxy: CI failure” (run 24007765443). No release or merge authority.
-- resume: Implementation complete, uncommitted; 2,323 tests pass (Brain 1,131, Heart 1,113, Eyes 79), Eyes lint/format/live checks pass. Await shipping override for NEW Heart RED `release validation FAILED (stage integrate)`. PR bodies and logs in task-root logs/. Then commit/push/open 3 linked PRs; Brain must merge before Heart. See active/dashboard_prompt_budget.md for complete validation and gate record.
+- prs: https://github.com/PyAutoLabs/PyAutoBrain/pull/439 (862823a); https://github.com/PyAutoLabs/PyAutoHeart/pull/262 (58f25a0, draft pending Brain); https://github.com/PyAutoLabs/PyAutoEyes/pull/11 (afa48e5)
+- resume: Shipped to three pending-release PRs under recorded human RED override; 2,323 tests pass. Await human merge command and green CI; merge Brain before marking Heart ready. No merge/release authority. See active/dashboard_prompt_budget.md for validation and logs.
 
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102

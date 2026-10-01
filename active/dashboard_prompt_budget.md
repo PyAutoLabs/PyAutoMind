@@ -47,7 +47,7 @@ Bug and Feature conductors run on this prompt; both found no matching Memory con
 
 ## Validated implementation — 2026-10-01
 
-- Implementation complete in `.worktrees/dashboard-prompt-budget/{PyAutoBrain,PyAutoHeart,PyAutoEyes}`, all on `feature/dashboard-prompt-budget`; changes remain uncommitted pending the changed Heart shipping gate.
+- Implementation committed and pushed from `.worktrees/dashboard-prompt-budget/{PyAutoBrain,PyAutoHeart,PyAutoEyes}`, all on `feature/dashboard-prompt-budget`.
 - Shared 50,000-character clipboard guard covers the theme family, Heart's override and standalone batch packets. Oversized requests download intact for attachment; no silent truncation or false copy success.
 - Eyes was the other standalone clipboard path discovered during the approved inventory. It enforces the same ceiling without adding a Brain checkout dependency; dashboard.html regenerated.
 - Heart emits a prompt under 45,000 characters, explicitly marking omissions and referring to board.json. Complete source observations are retained in additive `fix_plan.evidence`; readiness calculations are unchanged.
@@ -56,5 +56,6 @@ Bug and Feature conductors run on this prompt; both found no matching Memory con
 - Brain's full test run needs `env -u PYAUTO_MIND -u PYAUTO_HEART` after activation: the grouped-layout fixture expects its temporary paths to override ambient worktree hints. Initial run was 1 failed/1,130 passed; the isolated fixture and then full suite passed with those hints removed, without modifying source for that failure.
 - Full logs: task-root `logs/heart-tests.log`, `logs/brain-tests-clean-env.log`; PR drafts: `logs/{brain,heart,eyes}-pr.md`.
 - Refreshed vitals RED: `release validation FAILED (stage integrate)`. Yellow reasons: `workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py)`; `manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml`; `manifest drift: tenant firewall (organ code) — 1 mismatch(es) vs PyAutoMind/repos.yaml`; `manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml`.
-- The earlier override covered `PyAutoGalaxy: CI failure`, not this new release-validation failure. Await live human authorization for commit/push/opening development PRs under the new RED reason; no release or merge authority.
-- Next: after authorization, commit/push the three repositories and open linked pending-release PRs. Merge Brain before Heart so the shared browser guard is present. Update active.md with PR URLs and stop at PR-open.
+- Shipping authorization: user “I authorize you to conitnue” (2026-10-01), directly replying to the request to commit, push and open all three PRs despite `release validation FAILED (stage integrate)`, after all 2,323 tests passed. Development only; no release or merge authority.
+- PRs: https://github.com/PyAutoLabs/PyAutoBrain/pull/439 (`862823a`); https://github.com/PyAutoLabs/PyAutoHeart/pull/262 (`58f25a0`, draft pending Brain); https://github.com/PyAutoLabs/PyAutoEyes/pull/11 (`afa48e5`). All labeled pending-release.
+- Next: human merge command and green required CI; merge Brain before marking Heart ready so the shared browser guard is present. Eyes is independent. Stopped at PR-open; no background waiting or merge authority.
