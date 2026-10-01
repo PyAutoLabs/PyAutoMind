@@ -10,6 +10,7 @@
 - repos:
   - PyAutoBrain: feature/dashboard-prompt-budget
   - PyAutoHeart: feature/dashboard-prompt-budget
+  - PyAutoEyes: feature/dashboard-prompt-budget
 - authorization: Plan approved “ok go”; development entry override “i authorize, go” for Heart RED “PyAutoGalaxy: CI failure” (run 24007765443). No release or merge authority.
 - resume: Implement approved 50,000-character dashboard prompt budget and bounded Heart evidence summaries; validate before shipping.
 
