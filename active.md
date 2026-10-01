@@ -23,3 +23,16 @@
 - repos:
   - autolens_inference: feature/point-source-search-nautilus-leaf
 - resume: "Branch pushed (2307eea), NO PR yet. Probe RAL job 366937 COMPLETED (seed 0: wall_s 56.6 s, 4,850 evals, per_call 4.72 us batched, likelihood_share 0.041% [single-basis 1.8%], all truth |dsigma|<0.74; row committed). Seeds 1-4 = RAL array 367140 (%1, euclid-ral-gpu-2). Next: sacct -j 367140; scp euclid_jump:/mnt/ral/jnightin/autolens_inference-wt-psleaf/results/searches/point_source/nautilus/simple/source_plane_solved/hpc_a100_jax_cpu_dense_fp64/search_seed{1..4}.{json,png} into the same path in the local worktree (+ hpc/batch_cpu/{output,error}/*367140* logs by hand); check each seed recovers truth; build_readme.py; wiki admission-bar entry (wiki/project/state.md); scripts/point_source/searches/README.md leaf note; ruff/pytest/check_submits; /ship_workspace to PR (Heart YELLOW ack: PyAutoMemory open PR 7d old; other YELLOW -> DRAFT); then remove RAL worktree: cd /mnt/ral/jnightin/autolens_inference && git worktree remove /mnt/ral/jnightin/autolens_inference-wt-psleaf"
+
+## ecosystem-layers
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/440
+- issued: 2026-10-01
+- prompt: active/explore_source_project_workspace_and_organ_level.md
+- session: Codex (GPT-6), local, 2026-10-01
+- status: workspace-dev
+- autonomy: supervised; research plan and feature/ecosystem-layers explicitly approved in-session
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/ecosystem-layers
+- repos:
+  - PyAutoBrain: feature/ecosystem-layers
+- summary: Research library/project/organ roles and agent routing; one non-normative design note; evidence repos read-only.
+- resume: Approved plan in Brain issue #440. Write docs/research/ecosystem_levels.md, validate sources and docs, then offer research PR; no policy or organ implementation.

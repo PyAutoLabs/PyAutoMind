@@ -11,7 +11,9 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: normal
-Status: formalised
+Status: issued
+Issued: 2026-10-01
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/440
 Consequence: judge
 Review-minutes: 20
 Unattended: ready
