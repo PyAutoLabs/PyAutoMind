@@ -26,13 +26,14 @@
 
 ## ecosystem-role-docs
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/442
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/443
 - issued: 2026-10-01
 - prompt: active/adopt_ecosystem_responsibility_roles.md
 - session: Codex (GPT-6), local, 2026-10-01
-- status: awaiting-input
+- status: awaiting-merge
 - autonomy: supervised; plan and branch approved in-session ("contiue and i approve")
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/ecosystem-role-docs
 - repos:
   - PyAutoBrain: feature/ecosystem-role-docs
 - summary: Adopt library/project/organ responsibility vocabulary and reconcile canonical/public Eyes descriptions; preserve repository categories and release gates.
-- resume: Five-file documentation adoption complete locally; includes factual Eyes skill boundary fix, no command/workflow changes. Independent Claude Fable 5.1 final working-tree review CLEAN; Sphinx zero warnings; links/whitespace PASS. Reviewed hashes in task-bundle review-final-hashes.json. Not committed/pushed. Heart YELLOW: public front-door organ tables (generated), 1 mismatch vs repos.yaml; workspace checkouts (manifest ↔ disk), 1 mismatch vs repos.yaml. Await exact-reason shipping acknowledgement for #442, then commit/push/PR; merge separate. See issue comment 5938948186, task-bundle fable-final-review.md, heart-readiness.json and research-pr.md.
+- resume: Five-file documentation adoption committed/pushed as 6a124d9; pending-release PR https://github.com/PyAutoLabs/PyAutoBrain/pull/443 open. Independent Claude Fable 5.1 final working-tree review CLEAN; all committed files match reviewed hashes in task-bundle review-final-hashes.json. Sphinx zero warnings; links/whitespace PASS; scientific smoke N/A. Heart GREEN at shipping (2026-10-01T19:24:04.745228+00:00), prior YELLOW checkpoint superseded with no override. CI running at initial snapshot. Next: human /prm on green CI; no merge authority or background waiter. Inference docs correction remains separately filed.
