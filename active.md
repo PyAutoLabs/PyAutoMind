@@ -29,10 +29,10 @@
 - issued: 2026-10-01
 - prompt: active/explore_source_project_workspace_and_organ_level.md
 - session: Codex (GPT-6), local, 2026-10-01
-- status: workspace-dev
+- status: awaiting-input
 - autonomy: supervised; research plan and feature/ecosystem-layers explicitly approved in-session
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/ecosystem-layers
 - repos:
   - PyAutoBrain: feature/ecosystem-layers
 - summary: Research library/project/organ roles and agent routing; one non-normative design note; evidence repos read-only.
-- resume: Approved plan in Brain issue #440. Write docs/research/ecosystem_levels.md, validate sources and docs, then offer research PR; no policy or organ implementation.
+- resume: Research note complete locally (docs/research/ecosystem_levels.md, 302 lines); Sphinx build passes with zero warnings, 15 pinned source files verified. Not committed/pushed. Heart RED: release validation FAILED (stage integrate). Await live development-only override for Brain #440 before commit/push/PR; record grant in four AUTONOMY.md sinks. Merge separate. Task-bundle research-validation.txt, heart-readiness.json and research-pr.md hold evidence and PR draft.
