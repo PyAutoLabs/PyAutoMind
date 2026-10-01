@@ -37,3 +37,12 @@ User asked whether there was a follow-up. Proposed applying the new structured f
 Branch survey: Memory main clean, behind origin/main by 1; helper fetched current origin/main for the new isolated feature/memory-cockpit-catch-up worktree. No active claims. Mind isolated branch codex/memory-cockpit-catch-up.
 
 Acceptance: a stale lensing cutoff yields one clear attention row with date, reason, seven-day threshold, evidence and manual action; recent activity in another domain cannot suppress it; healthy/unknown remain distinguishable without pixels.
+
+## Implementation handoff — 2026-10-01
+
+- Approved scope: user's “ok go” to paper-ingestion freshness follow-up. Implemented in `/home/jammy/Code/PyAutoLabs/.worktrees/memory-cockpit-catch-up/PyAutoMemory`, branch `feature/memory-cockpit-catch-up`; no source commit/push/PR yet.
+- Changed `scripts/board.py`, `tests/test_board.py`, `README.md`. One pure lensing model drives board HTML/Markdown and feed row. Actual ingestion is separate from DONE activity; legacy all-scope fields preserved. Explicit manual scientific-judgement action plus runbook/evidence links. Unknown is not fresh; healthy has no attention row.
+- Validation: 254 tests passed, make validate passed, live/stale/unknown feeds passed Brain validator; Chromium 390/1280 light/dark board, cockpit stale/unknown, unique action, clipboard and runbook checks passed. In-session diff/visual review complete; physical devices untested. No numerical downstream smoke applies.
+- Evidence: worktree `tests.log`, `validation.log`, `checks/{live,stale,unknown}-state.json`, browser.py/screenshots, implementation.patch and pr-body.md. Live evidence: last lensing activity 2026-09-11, stale under seven-day policy.
+- Heart RED at 2026-10-01T10:10:03.098482+00:00: `release validation FAILED (stage integrate)`. Other reasons: `workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py)`; `manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml`.
+- Next: live task-specific RED development override for Memory #109, record all four sinks, then commit/push and open pending-release PR. No override, merge or release authority for this task. Prior #434 override was task-specific and does not transfer.

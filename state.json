@@ -2,11 +2,17 @@
   "schema_version": 1,
   "organ": "mind",
   "repo": "PyAutoMind",
-  "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-10-01T10:09:29Z",
+  "status": "red",
+  "headline": "RED \u2014 24 picks \u00b7 5 in flight",
+  "updated": "2026-10-01T10:12:45Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "red",
+      "text": "Lensing catch-up: structured freshness and a safe manual action \u2014 awaiting-input",
+      "url": "https://github.com/PyAutoLabs/PyAutoMemory/issues/109",
+      "prompt": "/start_dev active/cockpit_lensing_catch_up.md"
+    },
     {
       "severity": "yellow",
       "text": "Streaming phase 5: per-channel cubes and phase-centre shifts in sparse_terms_from_chunks \u2014 library-shipped, workspace-pending",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#404 \u2014 codex-context-efficiency",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/404",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#387 \u2014 What shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/387",
       "prompt": null
     }
   ]

@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/cockpit_lensing_catch_up.md">Lensing catch-up: structured freshness and a safe manual action</a> — <a href="https://github.com/PyAutoLabs/PyAutoMemory/issues/109">issue #109</a> — issued 2026-10-01 — library-dev</summary>
+<details><summary>📋 <a href="active/cockpit_lensing_catch_up.md">Lensing catch-up: structured freshness and a safe manual action</a> — <a href="https://github.com/PyAutoLabs/PyAutoMemory/issues/109">issue #109</a> — issued 2026-10-01 — awaiting-input</summary>
 
 ```
 /start_dev active/cockpit_lensing_catch_up.md
