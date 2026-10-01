@@ -1,5 +1,37 @@
 # Compact expandable Heart dashboard rows
 
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/253
+- pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/254
+- merged: 2026-10-01
+- merge-commit: 57c6ba620c9675eac63c055df70edec59f3f9e42
+- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/254
+
+## Shipped
+
+All check categories appear in a compact grid above the score, with collapsed disclosures, short summaries and accessible copy icons. Libraries expands to complete repository rows; timing details stay inside their category. The lyric is removed; systematic repair actions follow the score and evidence gaps appear last.
+
+Fixture correction 30850e4 replaces an instance-specific repository literal with synthetic data and removes the ordering assumption. Readiness computation and CLI/Markdown/JSON contracts are unchanged.
+
+## Validation and authorization
+
+GitHub Actions run 36835614953 on 30850e4045477de49fe53b75e174c2013127ddb7 completed successfully: both Python 3.12 and 3.13 jobs, including pytest and tenant firewall. This workflow runs once per PR commit; feature pushes do not trigger a duplicate run. Mergeability was CLEAN before the explicit human /prm merge authorization.
+
+Local original suite: 1103 passed. Fixture correction: 162 dashboard tests passed; tenant-firewall gate OK. Clipboard success/failure and HTML render smoke passed. Browser evidence from the shipping session covers 320/390/768/1280px light/dark layouts and disclosure/copy interactions.
+
+The recorded development override covers Heart RED `release validation FAILED (stage integrate)`; this PR does not fix or clear that release condition. No release performed.
+
+Branch ancestry proved against fetched origin/main (0 unmerged commits); only PyAutoHeart claimed by this task. No remaining implementation scope or downstream workspace changes.
+
+Local screenshots, preview and validation/failure logs preserved under PyAutoMind/tmp/compact-dashboard-rows/ before worktree cleanup.
+
+## Follow-up knowledge
+
+Use synthetic names in new organ fixture files and run the tenant-firewall gate alongside pytest. Existing tests passing does not establish that CI's configuration boundary check passes.
+
+## Original prompt
+
+# Compact expandable Heart dashboard rows
+
 Issued: 2026-10-01
 Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/253
 

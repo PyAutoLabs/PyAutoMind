@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1639 records across 8 buckets.
+1640 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -118,6 +118,10 @@ markers; everything below GENERATED is rebuilt.
 <!-- CURATED:END -->
 
 <!-- GENERATED:START — edit records, not this block; regenerate with `lifecycle.py index --apply` -->
+
+## 2026/10
+
+- [compact-dashboard-rows](2026/10/compact-dashboard-rows.md)
 
 ## 2026/09
 
