@@ -1,3 +1,18 @@
+- issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/109
+- completed: 2026-10-01
+- library-pr: https://github.com/PyAutoLabs/PyAutoMemory/pull/110
+- pending-release: PyAutoMemory@https://github.com/PyAutoLabs/PyAutoMemory/pull/110
+- commit: 92b15c2e1f4378b35f83cb3a566ca60a362fcc02
+- merge-commit: dc9c3b5bcca6834e89d4e06783e9c072ff8a5a71
+- summary: Lensing-specific catch-up freshness drives the HTML/Markdown banner and cockpit feed. Structured cutoff, age, seven-day threshold/deadline, checked time, provenance and manual scientific-judgement action. Actual ingestion and queue completion remain distinct; healthy adds no noise, unknown is never fresh. Legacy all-scope fields preserved.
+- validation: 254 tests, make validate (citations/structure/wikilinks), Brain feed validator for live/stale/unknown cases, Chromium 390/1280 light/dark banner and cockpit action/clipboard/runbook checks passed. In-session review; no independent review claimed.
+- ci: All runs/jobs checked for head 92b15c2; validate run 36847897313/job 110322334064 SUCCESS. PR CLEAN/MERGEABLE; branch ancestry in origin/main verified.
+- authorization: Live “I authorize” to the task-specific Heart RED development shipping request; subsequent `$prm` authorized merge and close-out. RED `release validation FAILED (stage integrate)` not resolved by this task; no release performed.
+- evidence: organs/PyAutoMind/tmp/memory-cockpit-catch-up-evidence/ (local, unversioned) holds tests, validation, rendered feeds, browser scripts/screenshots, patch and PR description.
+- limitations: Physical devices untested. Post-merge board deployment is separate from merge evidence. No paper ingestion, automated remediation or new scheduling.
+
+## Original prompt
+
 # Lensing catch-up: structured freshness and a safe manual action
 
 Type: feature
