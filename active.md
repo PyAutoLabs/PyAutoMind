@@ -45,7 +45,7 @@
   - scope: Task PyAutoHeart#257, development shipping and merge on all-green CI during this turn; no release.
   - reasons: release validation FAILED (stage integrate); workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py)
   - gates: 896 relevant tests passed; independent review CLEAN; generated dashboard checks passed.
-- resume: User authorized RED override and merge on green CI. Commit/push eight reviewed branches, open linked PRs, inspect every run/job, merge Brain first then consumers. Preserve canonical Cortex ledger edits.
+- resume: Eight PRs committed, pushed and opened. Memory #113 merged with green CI. Initial per-head CI review: Brain #436, Heart #259, Hands #293 and Eyes #10 pending; Cortex #53 green, waits for Brain generator. Gut #17 and Scientist #38 have no PR CI; awaiting explicit local-validation merge consent (16 and 8 tests passed). Merge authorization lasts current turn only; if stopped rerun prm. All eight must merge before closeout. Preserve canonical Cortex ledger edits.
 - workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/436
 - workspace-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/259
 - workspace-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/293
