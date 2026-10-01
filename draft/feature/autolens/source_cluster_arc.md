@@ -327,7 +327,7 @@ autolens_workspace, autolens_workspace_test, autolens_profiling and HowToLens.
 workspace_test#106 remains separate cluster-likelihood work; Array#600 claims
 PyAutoArray for streaming phase 5. Cortex ruling R-20260907-05 remains in force.
 
-Next bounded prompt: `active/point_solver_image_accuracy.md`
+Next bounded prompt: `complete/2026/10/point-solver-image-accuracy.md`
 (phase 1d). Use the shipped report's uncapped NumPy counterexamples to trace
 image-position accuracy and test conditioning-aware diagnostics against its
 independent root reference. This progresses a separate necessary contract
@@ -353,7 +353,7 @@ edits; no later phase queued. Parent phase 1 incomplete; phase 2 gated.
 
 ## Phase 1d issued — 2026-10-01
 
-User “I approve” granted the plan and task-specific development-only RED override. Only autolens_workspace_test#333 issued; prompt active/point_solver_image_accuracy.md. Worktree .worktrees/point-solver-image-accuracy, branch feature/point-solver-image-accuracy at 13c9d1f. Implement and validate through PR creation; no merge/release authorized.
+User “I approve” granted the plan and task-specific development-only RED override. Only autolens_workspace_test#333 issued; prompt complete/2026/10/point-solver-image-accuracy.md. Worktree .worktrees/point-solver-image-accuracy, branch feature/point-solver-image-accuracy at 13c9d1f. Implement and validate through PR creation; no merge/release authorized.
 
 
 ## Phase 1d PR open — 2026-10-01
@@ -393,3 +393,15 @@ Last completed subphase remains 1c; 1d awaits review/merge. Phase 1 remains
 incomplete; phase 2 gated; no later issue queued. Next production scope is an
 observable containment-overflow contract once Array's claim clears, with
 separate accuracy/identity work still required. Cortex phase 11 stays dropped.
+
+## Phase 1d merged — 2026-10-01
+
+Human `$prm` authorized merge after all three jobs in run 36847665642 passed
+at 4bec6a7. PR autolens_workspace_test#334 MERGED as
+26da5b1458490fbf0f01d4c5d4a7e7c99eee3fc4; issue #333 CLOSED.
+Completion: complete/2026/10/point-solver-image-accuracy.md; active claim released.
+Earlier PR-open statements are historical. Last completed subphase is 1d;
+NO-GO findings retained, parent phase 1 incomplete and phase 2 gated.
+No later issue queued, no release authorized; Cortex phase 11 stays dropped.
+The prior streaming #600 Array claim is closed; recheck all claims at the next
+start_dev before planning the observable-overflow contract.

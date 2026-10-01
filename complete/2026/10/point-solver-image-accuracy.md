@@ -1,3 +1,39 @@
+# PointSolver image-position accuracy — phase 1d shipped
+
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/333 (closed)
+- PR: https://github.com/PyAutoLabs/autolens_workspace_test/pull/334 (MERGED)
+- merged: 2026-10-01T10:31:07Z, commit 26da5b1458490fbf0f01d4c5d4a7e7c99eee3fc4
+- head: 4bec6a72a20659dca5bd08c8348142ab2c64d5c4; ancestor of origin/main
+- epic: cluster-strong-lensing, phase 1d
+
+Added the bounded CPU fp64 research cell, pinned 32-row evidence and
+IMAGE_ACCURACY.md under scripts/point_source/solver/. NO-GO for production
+promotion: 10/32 raw rows miss per-root coverage; the conditioning screen
+falsely accepts three non-converged candidates. Requiring convergence rejects
+those but covers only 1–2 of four true images in every closest-cusp row.
+No production solver, defaults, capacity or API changed.
+
+Final matrix/provenance and geometry 32/32, evidence/read-only/corruption/empty
+controls, padding 12/12, image-plane/JIT and full smoke 32/32 PASS. Black,
+compile/JSON/diff and in-session review pass. Every job in GitHub run
+36847665642 succeeded at the exact head: changes, smoke Python 3.12 and 3.13.
+
+Live user approved the plan and development-only Heart RED override with
+“I approve”; RED remained “release validation FAILED (stage integrate)” with
+workspace timeout and manifest drift additional reasons. Human `$prm` then
+separately authorized green-CI merge and close-out. No release authorized.
+This workspace research task adds no library pending-release obligation;
+phase 1b's existing PyAutoLens obligation remains in its own completion record.
+
+Parent phase 1 remains incomplete; phase 2 stays gated. Next bounded production
+scope is observable containment overflow, plus separate accuracy/identity work.
+The prior PyAutoArray streaming #600 claim is now closed; recheck claims at
+next start_dev. No subsequent issue is queued. Cortex phase 11 remains dropped
+under R-20260907-05. Generated worktree artifacts are awaiting the cleanup choice;
+the committed evidence and report are durable in the merged repository.
+
+## Original prompt
+
 # PointSolver uncapped image-position accuracy — cluster arc phase 1d
 
 Type: research
