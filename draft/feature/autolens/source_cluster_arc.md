@@ -34,13 +34,45 @@ draws; Fig. 4 fractional-uncertainty map with constant-μ contours; critical cur
 arc-segmentation boundary), Richard+17 (HFF magnification-map deliverables), Atek+15
 (magnification as source-science tool), Jullo+08 (multi-z cluster cosmography).
 
-## Phases (order is load-bearing)
+## Current ownership and dependencies — approved 2026-10-01
 
-1. `draft/bug/autolens/point_solver_error_bisect_health.md` — bisect the error-behavior
-   change (prime suspect: magnification-filter Hessian buffer=self.scale → hardcoded
-   0.01, Mar 2026) + health-harden. Blocks everything point/cluster.
-2. `draft/research/autolens_profiling/point_solver_profiling_cells.md` — quasar /
-   cluster-runtime / single-source / factor-graph profiling cells. Gate: 1.
+The Source & Cluster arc now owns magnification/source-science capabilities.
+Remaining PointSolver correctness/settings/performance work and the old phase-2
+profiling scope belong to `cluster-pointsolver-speed` (display title: Cluster
+PointSolver — robustness and performance). Canonical planning contract:
+`draft/research/autolens_profiling/cluster_pointsolver_speed.md`.
+
+Phase 1a–1d are completed evidence/fixes; remaining phase-1 scope is TRANSFERRED,
+not solved or declared safe. Phase 2 is TRANSFERRED, not completed. Historical
+entries below saying phase 1 blocks the entire arc or phase 2 remains gated are
+superseded by this approved split. Preserve original numbering for cross-links.
+**Next arc step: phase 3, critical-curve dispatch**, sliced through start_dev.
+No next-phase issue is opened by this reorganisation.
+
+- Phases 3–8 retain their explicit intra-arc dependencies, with no blanket
+  PointSolver-health prerequisite. Magnification at supplied/observed image
+  coordinates, pixel-based arc areas, and associated maps do not require a
+  forward point solve. Phase 6's forward ShapeSolver scope transfers too.
+- Phase 9 depends on 3 and 5–8. Examples using supplied image positions and
+  independently validated fit/model inputs can proceed. Any path discovering
+  images or consuming solver-dependent posteriors must pass the specific
+  coverage/accuracy/overflow checks for that workload; known-invalid fit results
+  cannot become valid merely because post-processing avoids a solver call.
+- Phases 10 and 12 retain their declared dependencies and workload-specific
+  validation. No generic solver completion gate is added. Phase 11 stays dropped.
+- `autolens_profiling` owns robustness/settings investigations and cost evidence;
+  stable numerical witnesses become integration tests in
+  `autolens_workspace_test`, with an explicit PR-smoke or scheduled/release CI
+  lane. Research-cell success alone never establishes production correctness.
+
+## Phases (original numbers retained; dependencies below govern)
+
+1. **Transferred remainder** — `draft/bug/autolens/point_solver_error_bisect_health.md`
+   now belongs to `cluster-pointsolver-speed`. Subphases 1a–1d shipped; unresolved
+   overflow, accuracy/identity and regression work remains there.
+2. **Transferred scope** — `draft/research/autolens_profiling/point_solver_profiling_cells.md`
+   now belongs to the solver programme. Reconcile existing cells and single-source
+   campaign ownership before issuing missing coverage; no duplicate campaign.
 3. `draft/refactor/autogalaxy/critical_curves_dispatch_cluster.md` — context-aware
    engine dispatch, dedupe twin plot_utils, cluster plots honor the flag. Before all
    map/segmentation phases.
@@ -49,14 +81,14 @@ arc-segmentation boundary), Richard+17 (HFF magnification-map deliverables), Ate
 5. `draft/feature/autolens/point_magnification_api.md` — μ at a point, documented in
    source_science + point package; parity decision; multi-plane.
 6. `draft/feature/autolens/area_magnification_leggos.md` — LEGGOS Eq. 6-7 pixel-
-   inversion area μ as primary; ShapeSolver rehabilitate-or-retire; wiki ingest.
+   inversion area μ as primary; wiki ingest. Forward ShapeSolver work transferred.
    Gates: 3, 5.
 7. `draft/feature/autolens/magnification_errors_posterior_draws.md` — standalone
    posterior-draw errors in source_science; latent decision. Gates: 5, 6.
 8. `draft/feature/autolens/magnification_maps_visualization.md` — image-plane contour
    maps, source-plane mesh maps, Fig-4 uncertainty map, pretty pass. Gates: 3-7.
 9. `draft/feature/workspaces/cluster_source_science.md` — new cluster/source_science.py
-   (point-source tier). Gates: 1, 3, 5-8.
+   (point-source tier). Gates: 3, 5-8; workload-specific solver checks only.
 10. `draft/feature/workspaces/cluster_pixelized_analysisfactor.md` — per-source-mask
     pixelized refinement via AnalysisFactor; implements the extended_source plan in
     `draft/docs/workspaces/cluster_regime_narrative.md`. Gates: 4, 9.
@@ -405,3 +437,12 @@ NO-GO findings retained, parent phase 1 incomplete and phase 2 gated.
 No later issue queued, no release authorized; Cortex phase 11 stays dropped.
 The prior streaming #600 Array claim is closed; recheck all claims at the next
 start_dev before planning the observable-overflow contract.
+
+## Human-approved extraction — 2026-10-01
+
+User request (verbatim):
+
+> Ok  I agreem autolens_profiling is evolving into "make autolens fast" but also "these are the settings I need to ensure the analysis is robust" so this work is also more and more belonging there, albeit we need numerical integration tests in autolens_workspace_test which ensure this all makes it way into CI. Update accordingly and then wrap up
+
+Applied to campaign ownership, phase prompts and dependencies. No production
+code moved, no new issues queued, no release or Cortex project authorized.

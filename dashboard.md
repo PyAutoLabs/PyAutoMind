@@ -2649,28 +2649,12 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 Long-running multi-phase programmes. Each epic's 📋 prompt has Claude read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
 
 <details>
-<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 13 queued prompt(s), in order</summary>
+<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 11 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>Cluster strong lensing — Source &amp; Cluster arc</b> — ledger: `draft/feature/autolens/source_cluster_arc.md` — Last completed subphase 1d (autolens_workspace_test#334 MERGED as 26da5b1; #333 CLOSED; 2026-10-01). Record…</summary>
-
-```
-Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonical state lives in draft/feature/autolens/source_cluster_arc.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 12 phased prompts under draft/; issue phases ONE at a time as predecessors near shipping — no bulk issue queues. Science half: the PyAutoCortex project ledger of the science project it births (arc phase 11).
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens/point_solver_error_bisect_health.md">PointSolver error-behavior change: bisect the 2025-11→2026-05 candidates, then health-harden</a> — autolens · too-large · supervised · high</summary>
+<details><summary>📋 <b>Cluster strong lensing — Source &amp; Cluster arc</b> — ledger: `draft/feature/autolens/source_cluster_arc.md` — Completed evidence/fixes 1a–1d (latest workspace_test#334, 26da5b1; #333 closed). On 2026-10-01 the human transferred remaining…</summary>
 
 ```
-/start_dev draft/bug/autolens/point_solver_error_bisect_health.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/point_solver_profiling_cells.md">PointSolver profiling cells: lensed quasar → cluster runtime tier → single/multi-source →…</a> — autolens_profiling · large · supervised · normal</summary>
-
-```
-/start_dev draft/research/autolens_profiling/point_solver_profiling_cells.md
+Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonical state lives in draft/feature/autolens/source_cluster_arc.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: Original phase numbers retained for history; phases 1 remainder and 2 transferred, phase 6 narrowed. Issue ONE bounded phase at a time as predecessors near shipping; no bulk queue. autolens_profiling owns robustness/settings/performance evidence; autolens_workspace_test owns numerical integration regressions wired into CI. Science project birth still requires a fresh explicit Cortex decision.
 ```
 
 </details>
@@ -2699,7 +2683,7 @@ Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonic
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/autolens/area_magnification_leggos.md">Area magnification (LEGGOS-style): per-pixel inversion sum as primary; ShapeSolver rehabilitate-or-retire</a> — autolens · large · supervised · high</summary>
+<details><summary>📋 <a href="draft/feature/autolens/area_magnification_leggos.md">Area magnification (LEGGOS-style): per-pixel inversion sum as primary</a> — autolens · large · supervised · high</summary>
 
 ```
 /start_dev draft/feature/autolens/area_magnification_leggos.md
@@ -2819,20 +2803,36 @@ Continue the 'Point-source (single-source) PointSolver CPU speed-up' epic. Its c
 </details>
 
 <details>
-<summary><b>Cluster PointSolver speed-up — data, likelihood_breakdown, then levers</b> — 1 queued prompt(s), in order</summary>
+<summary><b>Cluster PointSolver — robustness and performance</b> — 3 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>Cluster PointSolver speed-up — data, likelihood_breakdown, then levers</b> — ledger: `autolens_profiling/wiki/campaigns/cluster_pointsolver.md (contract: draft/research/autolens_profiling/cluster_pointsolver_speed.md)` — filed 2026-09-26, not started</summary>
+<details><summary>📋 <b>Cluster PointSolver — robustness and performance</b> — ledger: `draft/research/autolens_profiling/cluster_pointsolver_speed.md` — Expanded by human agreement 2026-10-01 to own robust analysis settings, numerical correctness and performance. Carries Source &amp;…</summary>
 
 ```
-Continue the 'Cluster PointSolver speed-up — data, likelihood_breakdown, then levers' epic. Its canonical state lives in autolens_profiling/wiki/campaigns/cluster_pointsolver.md (contract: draft/research/autolens_profiling/cluster_pointsolver_speed.md) — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: split out of `point-source-cpu-speed` on 2026-09-26. Phase 1 works out representative cluster data and builds/refreshes `autolens_profiling/scripts/cluster/likelihood_breakdown/` to a released-code baseline before any lever is ranked; carried evidence (two-source cluster rows from point-source p1-p3, dPIE/NFW deflection share, grid-extent guidance) lives in the prompt.
+Continue the 'Cluster PointSolver — robustness and performance' epic. Its canonical state lives in draft/research/autolens_profiling/cluster_pointsolver_speed.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: Stable epic identifier retained. autolens_profiling owns campaign evidence and robust-settings/cost guidance; autolens_workspace_test owns bounded numerical regressions in required PR smoke or scheduled/release CI. Failing cases may be timed diagnostically but cannot underpin accepted speed/settings claims. Reconcile old profiling coverage with completed single-source campaigns; no duplication. Previous repo wiki/campaigns/cluster_pointsolver.md is the speed-only survey; reconcile it at first implementation, with this Mind contract authoritative for the expanded plan. Issue ONE bounded task at a time, no bulk queue.
 ```
 
 </details>
 
-<details><summary>📋 <a href="draft/research/autolens_profiling/cluster_pointsolver_speed.md">Cluster PointSolver speed-up — work out the data and likelihood_breakdown, then rank…</a> — autolens_profiling · large · supervised · normal</summary>
+<details><summary>📋 <a href="draft/bug/autolens/point_solver_error_bisect_health.md">PointSolver error-behavior change: bisect the 2025-11→2026-05 candidates, then health-harden</a> — autolens · too-large · supervised · high</summary>
+
+```
+/start_dev draft/bug/autolens/point_solver_error_bisect_health.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/cluster_pointsolver_speed.md">Cluster PointSolver — robustness, analysis settings and performance</a> — autolens_profiling · large · supervised · normal</summary>
 
 ```
 /start_dev draft/research/autolens_profiling/cluster_pointsolver_speed.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/point_solver_profiling_cells.md">PointSolver profiling cells: lensed quasar → cluster runtime tier → single/multi-source →…</a> — autolens_profiling · large · supervised · normal</summary>
+
+```
+/start_dev draft/research/autolens_profiling/point_solver_profiling_cells.md
 ```
 
 </details>

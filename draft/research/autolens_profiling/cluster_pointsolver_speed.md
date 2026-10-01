@@ -1,9 +1,10 @@
-# Cluster PointSolver speed-up — work out the data and likelihood_breakdown, then rank levers
+# Cluster PointSolver — robustness, analysis settings and performance
 
 Type: research
 Target: autolens_profiling
 Repos:
 - autolens_profiling
+- autolens_workspace_test
 - PyAutoLens
 - PyAutoArray
 - PyAutoGalaxy
@@ -23,18 +24,90 @@ Epic: cluster-pointsolver-speed
 Filed: 2026-09-26
 Parent-record: complete/2026/09/point-source-cpu-p3.md
 
-## Status
+## Status and ownership — approved 2026-10-01
 
-**Filed, not started.** Split out of the point-source CPU campaign (epic `point-source-cpu-speed`,
-prompt `complete/2026/09/point-source-cpu-p4.md`) by human decision on
-2026-09-26. That campaign is now single-source only; everything cluster-scale lives here. Issue one
-bounded phase at a time; this prompt stays the campaign intent until its phases are resolved.
+Canonical planning ledger for epic `cluster-pointsolver-speed` (identifier
+retained; display title broadened). `autolens_profiling` is the execution/evidence
+home for both “make autolens fast” and “which settings make the analysis robust”.
+This expands the unstarted cluster speed campaign; it does not restart completed
+single-source work. The profiling repo's `wiki/campaigns/cluster_pointsolver.md`
+is the earlier speed-only survey, to be reconciled when the first campaign task
+starts; this Mind contract governs the newly approved scope in the meantime.
+
+Transferred from Source & Cluster arc:
+- `draft/bug/autolens/point_solver_error_bisect_health.md`: remaining phase-1
+  overflow, accuracy/identity and regression obligations, historical-bisect
+  limitation disposition. Completed 1a–1d records remain in their original arc.
+- `draft/research/autolens_profiling/point_solver_profiling_cells.md`: old phase-2
+  coverage gaps, reconciled with current profiling taxonomy and the already
+  completed single-source campaign before any issue is filed.
+- Forward ShapeSolver rehabilitation/retirement and its finite-source convergence
+  tests from arc phase 6. Primary pixel-based area magnification stays in the arc.
+
+No task in this programme is issued by this transfer. Issue ONE bounded task at
+a time as its predecessor nears shipping; not the umbrella and not a bulk queue.
+
+## Working contract
+
+1. **Robustness/settings evidence belongs in autolens_profiling.** Measure initial
+   grid scale, extent, target precision, capacity, backend/dtype and applicable
+   source/redshift regimes against independent numerical references. Publish the
+   supported settings and their tested domain, unresolved outcomes, cost and
+   provenance together. Shared library repairs remain general, not cluster-only.
+2. **Numerical integration guarantees belong in autolens_workspace_test.** Distil
+   every accepted repair/settings claim into bounded reproducible regressions:
+   positions, per-image coverage, overflow, unresolved multiplicity, eager/JIT/vmap
+   and registered-tracer/gradient behavior where affected. Name and wire a CI lane:
+   cheap deterministic witnesses in required PR smoke; expensive coverage in the
+   scheduled/release suite. A standalone opt-in diagnostic with no CI consumer is
+   not completion of this regression obligation. Existing 1c/1d cells remain
+   historical evidence in workspace_test; do not move or duplicate them wholesale.
+3. **Performance measurement can begin before all repairs finish.** Label failing
+   cases diagnostic/invalid and retain their timings, but exclude them from
+   accepted speed-up and robust-settings claims. Matching the old likelihood is
+   insufficient: require independent accuracy/coverage, no silent truncation and
+   relevant derivative/batch checks before accepting an optimisation. Record
+   compile, first-call and warmed costs separately on pinned hardware.
+4. **Finite acceptance target.** Specify supported workloads/tolerances first;
+   detect overflow, establish per-image accuracy/coverage, expose unresolved cases,
+   and verify backend behavior. Do not use “trusted everywhere” as an unbounded
+   exit condition or silently change scientific tolerances to win speed.
+5. **Handoffs.** Profiling evidence → bounded library repair → CI regression →
+   settings recommendation. Downstream Source & Cluster tasks depend on the
+   concrete capability they use, not completion of this whole programme.
+
+## Next task selection and workstreams
+
+Next production candidate: observable containment-overflow contract under eager,
+JIT and vmap, including caller invalid-result behavior and CI witnesses. Recheck
+claims and approve the API design through start_dev before issuing it. The earlier
+streaming #600 Array claim has closed; that is not a standing conflict waiver.
+Representative cluster data and baseline profiling below can be scoped without
+waiting for every accuracy question; failing configurations remain labelled.
+
+Accuracy/identity work uses 1c/1d's counterexamples: three non-converged false
+accepts from the local correction screen; adding convergence loses closest-cusp
+coverage. Investigate safeguarded refinement/nonlinear error control, not another
+unqualified distance/residual rule. Forward ShapeSolver work requires its own
+bounded current-code audit, backend dispatch, per-image area/convergence evidence
+and CI tests, or an explicit retirement decision. Preserve the old phase-6
+requirement to compare any promoted forward implementation with independent
+simulated area truth/pixel-based results; it no longer blocks the primary API.
+
+Completed evidence: `complete/2026/09/point-solver-error-audit.md`,
+`complete/2026/09/point-solver-padding-backend.md`,
+`complete/2026/10/point-solver-duplicate-policy.md`,
+`complete/2026/10/point-solver-image-accuracy.md`.
+
+## User-approved expansion (verbatim)
+
+Ok  I agreem autolens_profiling is evolving into "make autolens fast" but also "these are the settings I need to ensure the analysis is robust" so this work is also more and more belonging there, albeit we need numerical integration tests in autolens_workspace_test which ensure this all makes it way into CI. Update accordingly and then wrap up
 
 ## User request (verbatim)
 
 Lets push through all work on single source, working in autolens_profiling/scritps/point_source, we will do cluster use case as as eparate epic so maybe move this as part of an intake that will do that whole thing starting from working out the data and likelihood_breakdown.
 
-## Phase 1 — work out the cluster data and a released-code likelihood_breakdown baseline
+## Profiling workstream — cluster data and a released-code baseline
 
 No lever is ranked until this exists. Deliverables:
 
@@ -103,7 +176,7 @@ This inherits the point-source campaign contract (phase-4 prompt, "Campaign cont
 - negative results recorded;
 - one bounded phase per issue and PR.
 
-## Later phases (sketch, re-rank after phase 1)
+## Later performance candidates (re-rank after the baseline)
 
 2. Deflection-cost lever (JAX dPIE/NFW deflection cell first; PyAutoGalaxy change separately scoped).
 3. Cluster grid-extent guidance with completeness evidence.

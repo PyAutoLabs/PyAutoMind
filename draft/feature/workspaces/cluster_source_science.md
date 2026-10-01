@@ -22,7 +22,7 @@ Filed: 2026-08-19 (backfilled from git)
 
 # Cluster source_science.py: robust magnification science at cluster scale (no meshes yet)
 
-Part of the Source & Cluster arc (phase 9 of 12), gated on phases 1, 3, 5-8. User
+Part of the Source & Cluster arc (phase 9 of 12), gated on phases 3, 5-8. User
 request (verbatim): "Make extra sure source_science.py cluster is robust, e.g. all
 examples of magnifications above but no mesh support yet."
 
@@ -51,3 +51,14 @@ draft/docs/workspaces/cluster_regime_narrative.md (narrative alignment) — this
 delivers the science example; that draft delivers the regime prose.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-08-19 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/483da28c-8c96-4c83-ad87-a43448ca2164/scratchpad/source_cluster_phases/phase09_cluster_source_science.md -->
+
+## Workload-specific solver dependency — approved 2026-10-01
+
+Use supplied/observed multiple-image positions and validated fit/model inputs for
+primary magnification products. This post-processing does not require completion
+of the whole PointSolver programme. Any example discovering image positions, or
+using a posterior obtained from solver-dependent inference, must establish the
+relevant accuracy, coverage, overflow and backend checks for that workload first.
+Do not use known-invalid fit results or call solver parity alone a correctness
+proof. The PointSolver robustness/performance campaign owns those repairs and
+settings guidance; integration regressions belong in autolens_workspace_test/CI.

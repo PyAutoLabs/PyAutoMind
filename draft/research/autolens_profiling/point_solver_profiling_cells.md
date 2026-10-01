@@ -4,6 +4,7 @@ Type: research
 Target: autolens_profiling
 Repos:
 - autolens_profiling
+- autolens_workspace_test
 Themes:
 - point-source
 - profiling
@@ -16,13 +17,13 @@ Consequence: glance
 Witness: Four cells exist in the repo taxonomy — a lensed-quasar runtime cell with fluxes, a cluster single-source runtime cell, a cluster multi-source multi-redshift runtime cell including a factor-graph fit, and the multiplane check promoted to the runtime tier — each with smoke early-exit, eager/JIT/vmap tiers and a pinned-likelihood drift record, and all four appear in the results/runtime dashboard.
 Review-minutes: 3
 Unattended: ready
-Epic: cluster-strong-lensing
-Phase: 2
-Parent: draft/feature/autolens/source_cluster_arc.md
+Epic: cluster-pointsolver-speed
+Origin-phase: cluster-strong-lensing phase 2
+Parent: draft/research/autolens_profiling/cluster_pointsolver_speed.md
 Filed: 2026-08-19 (backfilled from git)
 
-Part of the Source & Cluster arc (phase 2 of 12), gated on phase 1 (PointSolver health
-verdict). User request (verbatim): "Once satisfied extend to profiling examples in
+Transferred from Source & Cluster arc phase 2 on 2026-10-01. Owned by the
+PointSolver robustness/performance campaign; no blanket phase-1 completion gate. User request (verbatim): "Once satisfied extend to profiling examples in
 autolens_profiling but simple lensed quasar, cluster scale with single source, then
 cluster with multiple source redshifts and finally cluster with multiplane ray tracing."
 
@@ -56,3 +57,17 @@ multi-source multi-z runtime incl. factor-graph; multiplane already-covered chec
 runtime promotion), results in the standard results/runtime dashboard.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-08-19 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/483da28c-8c96-4c83-ad87-a43448ca2164/scratchpad/source_cluster_phases/phase02_point_solver_profiling_cells.md -->
+
+## Reconcile before issuing — approved 2026-10-01
+
+The August survey above is historical, not an assertion about current coverage.
+Reconcile point_source_image/ and point_source_source/ plus completed single-source
+CPU work before adding cells. Coordinate quasar/single-source gaps with that
+campaign; this prompt owns only missing coverage, never duplicate speed work.
+Cluster workloads and robustness/settings sweeps belong in autolens_profiling.
+Diagnostic timings may include explicitly failing cases; accepted speed and
+settings claims require independent accuracy/coverage, observable overflow and
+applicable JIT/vmap/gradient checks. Distil bounded numerical witnesses into
+autolens_workspace_test and assign required PR-smoke or scheduled/release CI
+coverage. The old four-cell list is an inventory to reconcile, not four issues
+to queue. No issue created by transfer.
