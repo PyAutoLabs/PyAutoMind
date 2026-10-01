@@ -12,7 +12,9 @@ Themes:
 - memory
 Autonomy: supervised
 Priority: medium
-Status: draft
+Status: active
+Issued: 2026-10-01
+Issue: https://github.com/PyAutoLabs/PyAutoArray/issues/598
 Epic: streaming-visibilities
 Phase: 4
 Difficulty: medium
@@ -21,7 +23,7 @@ Witness: fits with a non-linear light profile plus a pixelization, and with non-
 Review-minutes: 8
 Unattended: ready
 Parent: draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md
-Blocked-by: none (phase 2 merged 2026-09-30)
+Blocked-by: none
 
 Source: https://github.com/orgs/PyAutoLabs/discussions/13 phase 2, sliced 2026-09-30.
 

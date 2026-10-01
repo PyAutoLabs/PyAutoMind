@@ -23,3 +23,20 @@
 - repos:
   - autolens_inference: feature/point-source-search-nautilus-leaf
 - resume: "Branch pushed (2307eea), NO PR yet. Probe RAL job 366937 COMPLETED (seed 0: wall_s 56.6 s, 4,850 evals, per_call 4.72 us batched, likelihood_share 0.041% [single-basis 1.8%], all truth |dsigma|<0.74; row committed). Seeds 1-4 = RAL array 367140 (%1, euclid-ral-gpu-2). Next: sacct -j 367140; scp euclid_jump:/mnt/ral/jnightin/autolens_inference-wt-psleaf/results/searches/point_source/nautilus/simple/source_plane_solved/hpc_a100_jax_cpu_dense_fp64/search_seed{1..4}.{json,png} into the same path in the local worktree (+ hpc/batch_cpu/{output,error}/*367140* logs by hand); check each seed recovers truth; build_readme.py; wiki admission-bar entry (wiki/project/state.md); scripts/point_source/searches/README.md leaf note; ruff/pytest/check_submits; /ship_workspace to PR (Heart YELLOW ack: PyAutoMemory open PR 7d old; other YELLOW -> DRAFT); then remove RAL worktree: cd /mnt/ral/jnightin/autolens_inference && git worktree remove /mnt/ral/jnightin/autolens_inference-wt-psleaf"
+
+## streaming-p4-light-profile-identity
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/598
+- issued: 2026-10-01
+- prompt: active/streaming_p4_light_profile_identity.md
+- epic: streaming-visibilities (phase 4 of 5; ledger draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md)
+- source: https://github.com/orgs/PyAutoLabs/discussions/13
+- session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-10-01
+- status: library-dev
+- autonomy: supervised (header); plan approved in-session 2026-10-01 (Plan Mode)
+- worktree: ~/Code/PyAutoLabs-wt/streaming-p4-light-profile-identity
+- repos:
+  - PyAutoArray: feature/streaming-p4-light-profile-identity
+  - PyAutoGalaxy: feature/streaming-p4-light-profile-identity
+  - PyAutoLens: feature/streaming-p4-light-profile-identity
+- summary: Ordinary (non-linear) light profiles fit array-free via data_term - 2 i_p.d~ + i_p.W~i_p (DatasetInterface data_term override; no-inversion chi_squared hook); profile_visibilities never formed.
+- resume: Issue + plan on #598; next /start_library (Array -> Galaxy -> Lens), red-check parity tests on unfixed source first (fast_chi_squared would silently use the unsubtracted data_term).
