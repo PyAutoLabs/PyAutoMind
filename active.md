@@ -1,5 +1,20 @@
 # Active Tasks
 
+## heart-score-resusitate
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/255
+- issued: 2026-10-01
+- prompt: active/heart-score-resusitate.md
+- session: Codex; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/heart-score-resusitate
+- repos:
+  - PyAutoHeart: feature/heart-score-resusitate
+- summary: Approved Score and Resusitate headers, compact readiness text and repair rows with icon copy controls.
+- heart-red-override:
+  - authorization: Live user "I approve" on 2026-10-01 in response to the task plan and development-only RED override. No merge/release authority.
+  - reasons: release validation FAILED (stage integrate)
+  - gates: Pending branch validation.
+
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
 - issued: 2026-09-22
