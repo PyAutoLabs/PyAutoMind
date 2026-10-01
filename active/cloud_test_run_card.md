@@ -1,4 +1,6 @@
 # Show cloud-observed workspace tests on the Heart board
+Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/265
+Issued: 2026-10-01
 Type: bug
 Difficulty: small
 Autonomy: human-required
