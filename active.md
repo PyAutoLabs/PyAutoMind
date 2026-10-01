@@ -29,7 +29,7 @@
 - issued: 2026-10-01
 - prompt: active/trial_ecosystem_role_routing.md
 - session: Codex (GPT-6), local, 2026-10-01
-- status: awaiting-input
+- status: awaiting-merge
 - autonomy: supervised; human "ok do it" authorized the recommended next routing trial
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/ecosystem-routing-trial
 - repos:
@@ -38,5 +38,11 @@
 - workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/445
 - review: original routing trial independently reviewed CLEAN; organ-specification continuation self-checked only. User explicitly instructed no further Fable reviews.
 - validation: Sphinx HTML 0 warnings; frozen input/response hashes and JSON verified; 36 source paragraphs checked against pinned commits; Heart GREEN score 100 at 2026-10-01T19:53:08.542623+00:00
-- ship-blocker: Heart RED score 80 at 2026-10-01T20:02:44.036627+00:00 — autofit_workspace: Smoke Tests failure on main
-- resume: Organ specification complete locally at docs/research/profiling_inference_organs.md, with a link from the trial report; uncommitted/unpushed behind current Heart RED. Sphinx HTML zero warnings; seven pinned source objects verified; frozen trial files unchanged. PR #445 still contains only the earlier trial commit 6ea1571 (all three CI jobs passed). Need fresh GREEN or an explicit development-only override for the exact current RED reasons before committing/pushing this extension. Rewrite PR title/body around combined final scope after push. Do not call Fable for reviews; do not describe the extension as independently reviewed. No organ repositories or follow-up implementation tasks created.
+- ship-gate: Development-only human RED override exercised; Heart remains RED for release (see block below).
+- resume: PR #445 updated with organ specification at 71aa4b2; commit/push authorized by live human RED override, issue comment 5939613197. Sphinx zero warnings; seven pinned citations verified; frozen trial unchanged. No further Fable reviews. Await separately authorized /prm and every exact-head CI run/leg green; no organ/exporter implementation performed.
+- heart-red-override:
+  - authorization: live user "I authorize, continue", replying to the task-specific documentation push request on 2026-10-01
+  - reason: "autofit_workspace: Smoke Tests failure on main"
+  - snapshot: 2026-10-01T20:02:44.036627+00:00; RED score 80
+  - passed-gates: Sphinx HTML zero warnings; seven pinned references resolve; whitespace PASS; frozen trial unchanged; author contract review; scientific smoke N/A (prose only)
+  - scope: commit/push/update PR #445 only; no merge, release or CI bypass; no claim to repair Heart
