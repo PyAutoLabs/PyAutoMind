@@ -1,3 +1,28 @@
+# Dashboard prompt budget
+
+Completed: 2026-10-01
+Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/261
+
+## Shipped
+
+- https://github.com/PyAutoLabs/PyAutoBrain/pull/439 — MERGED (`c7bfd68`): shared 50,000-character clipboard ceiling, complete-request downloads, batch-page coverage and truthful copy feedback.
+- https://github.com/PyAutoLabs/PyAutoHeart/pull/262 — MERGED (`ff7003f`): repair prompts under 45,000 characters with uncapped observations in `fix_plan.evidence`; test uses configured Pages URL.
+- https://github.com/PyAutoLabs/PyAutoEyes/pull/11 — MERGED (`f73e38e`): standalone figure-review clipboard guard and regenerated dashboard.
+
+Brain merged before Heart; every task branch was proven an ancestor of origin/main. No scientific library release obligation; these are infrastructure changes.
+
+## Validation
+
+2,323 local tests passed (Brain 1,131; Heart 1,113; Eyes 79), with Eyes lint/format and all 265 live figure URL checks passing. All five latest-head CI jobs passed: Brain Python 3.12/3.13, Heart Python 3.12/3.13, Eyes lint. The tenant-policy assertion repair also passed its nine focused tests and the CI-style firewall check. The synthetic prompt fell from 1,351,774 to 2,452 characters while preserving the complete 1,350,000-character observation.
+
+Logs retained locally under PyAutoMind/tmp/dashboard-prompt-budget/ (not versioned).
+
+## Authorization
+
+Development shipping used the recorded human override for Heart RED `release validation FAILED (stage integrate)`; user “I authorize you to conitnue”. The subsequent explicit `/prm` authorized merge and full close-out after CI passed. No release or release rehearsal was authorized or performed. Heart readiness is not claimed cleared.
+
+## Original prompt
+
 # Bound dashboard assistant prompts
 
 Type: bug
