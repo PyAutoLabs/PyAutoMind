@@ -29,5 +29,5 @@ historical references as historical. Results and lessons remain the human's word
 Do not edit Cortex state, science results, run tooling or historical archives.
 Do not move ledgers or infer the live ledger path from a stale instruction.
 Validate every changed path against the owning contract. This task complements
-`draft/docs/pyautobrain/adopt_ecosystem_responsibility_roles.md` but has its own
+`complete/2026/10/ecosystem-role-docs.md` but has its own
 repo, issue and PR. Existing claim is a scheduling constraint, not merge authorization.
