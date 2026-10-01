@@ -5,7 +5,9 @@ Target: PyAutoMemory
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
+Issued: 2026-10-01
+Issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/109
 
 @PyAutoMemory only. Follow-up to PyAutoBrain#434 (Brain PR #435 and website PR #22).
 
