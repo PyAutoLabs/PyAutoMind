@@ -2,15 +2,15 @@
   "schema_version": 1,
   "organ": "mind",
   "repo": "PyAutoMind",
-  "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 3 in flight",
-  "updated": "2026-10-01T19:27:36Z",
+  "status": "yellow",
+  "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
+  "updated": "2026-10-01T19:29:06Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
-      "severity": "red",
-      "text": "Adopt ecosystem responsibility roles and reconcile Brain documentation \u2014 awaiting-input",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/issues/442",
+      "severity": "yellow",
+      "text": "Adopt ecosystem responsibility roles and reconcile Brain documentation \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/443",
       "prompt": "Use the start-dev skill. active/adopt_ecosystem_responsibility_roles.md"
     },
     {
