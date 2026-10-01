@@ -1,6 +1,8 @@
 # Make dashboard AI prompts portable across assistants
 
 Type: bug
+Issued: 2026-10-01
+Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/257
 Autonomy: safe
 
 ## Original request
