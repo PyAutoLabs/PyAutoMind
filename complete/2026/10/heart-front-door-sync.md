@@ -1,3 +1,13 @@
+# Public organ table synchronized
+
+Merged https://github.com/PyAutoLabs/.github/pull/25 at ae57b34fccab4196b79396e306a59a35eb53394b on 2026-10-01. Closes https://github.com/PyAutoLabs/.github/issues/24.
+
+Updated only profile/README.md: PyAutoEyes now uses the body-map role and manifest order. Exact canonical generator equality and git diff --check passed. The repository configures no CI workflows; this was disclosed before the human invoked prm. No runtime tests apply to generated Markdown. No library or release dependency.
+
+Human-approved documentation task. All claimed source work merged. Unrelated Mind task records were preserved when synchronizing the ledger. Task worktrees contain no irreplaceable data and are eligible for standard cleanup.
+
+## Original prompt
+
 # Refresh the public organ table from the body map
 Issue: https://github.com/PyAutoLabs/.github/issues/24
 Issued: 2026-10-01
