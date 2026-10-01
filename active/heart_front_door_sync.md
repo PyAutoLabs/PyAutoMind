@@ -1,4 +1,6 @@
 # Refresh the public organ table from the body map
+Issue: https://github.com/PyAutoLabs/.github/issues/24
+Issued: 2026-10-01
 Type: docs
 Difficulty: small
 Autonomy: human-required
