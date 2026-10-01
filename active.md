@@ -41,5 +41,5 @@
   - shipping-reading: Direct vitals/readiness reports release validation FAILED (stage integrate); reported in-session alongside original feed reason.
   - gates: 315 relevant tests PASS; Ruff/diff checks PASS; in-session review; no scientific API/workspace smoke impact.
 - workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/438
-- workspace-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/260 (draft, depends on Brain #438)
-- resume: Shared checker and rendered Brain/Mind/Cortex/Heart assertions implemented. Merge Brain #438 on human instruction and green CI first; then ready/re-run Heart #260 with checker available on Brain main. No merge authorization for this task. Logs .worktrees/task-notes/copy-contract-*.log.
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/260 (ready; dependency Brain #438 merged)
+- resume: Brain #438 merged (332aa1c0510265a8156c39fc64501ad8b5966760) after Python 3.12/3.13 CI passed. Heart #260 marked ready; user "try again" authorized retry of dependency-blocked run 36864852227 after Brain merge. Await green rerun, then prm merges Heart and closes #437, records completion and removes both worktrees. No background waiter armed.
