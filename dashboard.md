@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/cockpit_actionable_state.md">Human-first cockpit: actionable state and honest freshness</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/434">issue #434</a> — issued 2026-10-01 — library-dev</summary>
+<details><summary>📋 <a href="active/cockpit_actionable_state.md">Human-first cockpit: actionable state and honest freshness</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/434">issue #434</a> — issued 2026-10-01 — awaiting-input</summary>
 
 ```
 /start_dev active/cockpit_actionable_state.md

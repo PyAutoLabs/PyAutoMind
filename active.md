@@ -29,14 +29,16 @@
 - issued: 2026-10-01
 - prompt: active/cockpit_actionable_state.md
 - session: Codex; session ID unavailable
-- status: library-dev
+- status: awaiting-input
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/cockpit-actionable-state
 - repos:
   - PyAutoBrain: feature/cockpit-actionable-state
   - pyautolabs.github.io: feature/cockpit-actionable-state
 - summary: Additive structured action/state metadata with overnight reference producer and cockpit freshness/next-action improvements.
 - approval: User approved the scoped plan in-session, “I approve”; no merge authorization.
-- resume: Implement Brain producer/contract first, then website consumer; tests and ship skills to open PRs.
+- resume: Implementation complete, Brain 1107 tests + website 10 tests + Chromium/PWA checks passed. Await live task-specific Heart RED development override for #434 before commit/push/PR-open; prepared PR descriptions/diffs and validation at worktree checks/validation.md. No merge authorization.
+
+- heart-block: RED "release validation FAILED (stage integrate)" (readiness snapshot 2026-10-01T09:07:21.635376+00:00); no task-specific override granted.
 
 ## streaming-p5-cubes-phase-centre
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/600
