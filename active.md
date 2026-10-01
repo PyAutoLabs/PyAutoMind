@@ -28,14 +28,17 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/600
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/601
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/643
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/582
 - pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/601
 - pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/643
+- release-gate: PyAutoArray
+- release-gate: PyAutoGalaxy
 - issued: 2026-10-01
 - prompt: active/streaming_p5_cubes_phase_centre.md
 - epic: streaming-visibilities (phase 5 of 5; ledger draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md)
 - source: https://github.com/orgs/PyAutoLabs/discussions/13
 - session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-10-01
-- status: library-shipped, workspace-pending
+- status: library-shipped, workspace-shipped, awaiting-merge
 - autonomy: supervised (header); plan approved in-session 2026-10-01 (Plan Mode); combined library + workspace, library first
 - worktree: ~/Code/PyAutoLabs-wt/streaming-p5-cubes-phase-centre
 - repos:
@@ -45,9 +48,9 @@
 - heart-red-override:
   - authorization: Live user "Yes: library now, workspace when its run passes" on 2026-10-01 in the Fable CLI session, in answer to the override question naming streaming-p5-cubes-phase-centre (PyAutoArray#600). Push + PR-open only (library PRs now; the autolens_workspace PR under the same grant once its full-profile run + smoke pass); merge is a separate human /prm on green checks; no release.
   - reasons: release validation FAILED (stage integrate); workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py); manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml
-  - gates: tests 1917 (autoarray) / 1307 (autogalaxy); Codex astra review 5 findings, 3 introduced fixed + red-checked, 2 pre-existing filed (draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md); workspace smoke exit 0 + lint OK, full run pending.
+  - gates: tests 1917 (autoarray) / 1307 (autogalaxy); Codex astra review 5 findings, 3 introduced fixed + red-checked, 2 pre-existing filed (draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md); workspace: full-profile run exit 0 (~13 min), pyauto-heart smoke autolens 42/42 scripts + 2/2 notebooks PASS, lint OK; workspace PR opened under the same grant.
 - summary: MFS SparseTerms = sum of per-channel terms (__radd__, 1e-12 parity vs in-memory MFS); phase_centre=(y, x) arcsec in sparse_terms_from_chunks / from_stream (data * exp(+2πi(u l0 + v m0)), provenance-checked in __add__); array-free datacube example modeling_array_free.py in autolens_workspace under the smoke profile.
-- resume: Library PRs open (PyAutoArray#601, PyAutoGalaxy#643), CI pending. Workspace: modeling_array_free.py drafted in the task worktree (smoke exit 0, lint OK), full-profile run in progress → then /ship_workspace (notebook regen, smoke test, PR under the same override grant). Then human /prm (Array → Galaxy → workspace), Discussion #13 follow-up post.
+- resume: All three PRs open — PyAutoArray#601, PyAutoGalaxy#643, autolens_workspace#582 — CI pending. Next: human /prm (Array -> Galaxy -> workspace, library-first; the workspace `phase_centre`/`sum()` sections need the released library: release-gate). Then Discussion #13 follow-up post (draft reply_discussion13_followup.md; rewrite its "Not yet" paragraph: P4 + P5 now in) — epic complete after that.
 
 ## point-solver-image-accuracy
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/333
