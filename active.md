@@ -65,3 +65,15 @@
   - additional: "workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py)"; "manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml"
   - gates: bounded cell, saved evidence/provenance/read-only summary, padding and image-plane checks, full workspace smoke, formatting/compile/JSON/diff.
 - resume: Implement approved uncapped image-accuracy cell, validate then ship_workspace; no later phase issued.
+
+## memory-cockpit-catch-up
+- issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/109
+- issued: 2026-10-01
+- prompt: active/cockpit_lensing_catch_up.md
+- session: Codex; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/memory-cockpit-catch-up
+- repos:
+  - PyAutoMemory: feature/memory-cockpit-catch-up
+- approval: User “ok go” approved the scoped paper-ingestion freshness follow-up; no merge authority.
+- resume: Implement scoped lensing catch-up state, shared board/feed reasons and safe manual actions; validate then ship gate.
