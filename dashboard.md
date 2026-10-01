@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 263 |
+| [Backlog](#backlog) (`draft/`) | 264 |
 
 > **No batch in flight.**
 
@@ -580,7 +580,7 @@ Use the route skill. start the planned PyAutoMind task latent-nan-guard-honest-r
 
 ## Backlog
 
-**263** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **55** of them belong to an epic and are listed only under [Epics](#epics) below.
+**264** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **55** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 78</summary>
@@ -1947,7 +1947,7 @@ Use the start-dev skill. draft/maintenance/pyautomind/session_start_hook_copies_
 </details>
 
 <details>
-<summary><b>docs</b> — 17</summary>
+<summary><b>docs</b> — 18</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
 
@@ -2073,6 +2073,14 @@ Use the start-dev skill. draft/docs/workspaces/assistants_regime_extension.md
 
 ```
 Use the start-dev skill. draft/docs/autofit/howtofit_chapter_3_prose_references.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/github/heart_front_door_sync.md">Refresh the public organ table from the body map</a> — github · small · human-required</summary>
+
+```
+Use the start-dev skill. draft/docs/github/heart_front_door_sync.md
 ```
 
 </details>
@@ -3228,7 +3236,7 @@ Use the start-dev skill. draft/research/autolens_profiling/interferometer_stream
 
 </details>
 
-72 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+73 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3271,9 +3279,9 @@ Use the start-dev skill. draft/research/autolens_profiling/interferometer_stream
 - `draft/refactor/workspaces/abell_1201_local_cleanup.md`
 - `draft/docs/autolens/split_lensing_regimes.md`
 - `draft/docs/autolens_inference/reconcile_cortex_ledger_references.md`
+- `draft/docs/github/heart_front_door_sync.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
-- `draft/docs/pyautobrain/adopt_ecosystem_responsibility_roles.md`
-- _… and 32 more_
+- _… and 33 more_
 
 </details>
 
