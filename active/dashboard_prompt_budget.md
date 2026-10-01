@@ -1,6 +1,8 @@
 # Bound dashboard assistant prompts
 
 Type: bug
+Issued: 2026-10-01
+Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/261
 Primary: @PyAutoHeart
 Related: @PyAutoBrain
 
@@ -24,7 +26,7 @@ Keep every dashboard assistant copy action within a conservative size budget. Re
 - Small prompts and shell commands retain their meaning.
 - Tests cover huge nested snapshot data, Unicode, exact boundaries, overrides and clipboard failure/manual fallback.
 
-## Implementation plan awaiting approval
+## Implementation plan (approved 2026-10-01: “ok go”)
 
 1. Reproduce the overflow with a synthetic large snapshot using Heart's dashboard fixtures. Retain the full observations in their existing evidence artifacts; do not change readiness calculations.
 2. In PyAutoHeart/heart/dashboard.py build_fix_plan, replace raw JSON embedding with a budgeted summary. Keep the workflow instructions and snapshot identity, summarize finding counts/categories, and provide actual accessible evidence locations. If the summary itself exceeds budget, emit a compact health-workflow prompt that explicitly instructs discovery and reading of the authoritative evidence.

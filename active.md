@@ -1,5 +1,18 @@
 # Active Tasks
 
+## dashboard-prompt-budget
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/261
+- issued: 2026-10-01
+- prompt: active/dashboard_prompt_budget.md
+- session: Codex; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dashboard-prompt-budget
+- repos:
+  - PyAutoBrain: feature/dashboard-prompt-budget
+  - PyAutoHeart: feature/dashboard-prompt-budget
+- authorization: Plan approved “ok go”; development entry override “i authorize, go” for Heart RED “PyAutoGalaxy: CI failure” (run 24007765443). No release or merge authority.
+- resume: Implement approved 50,000-character dashboard prompt budget and bounded Heart evidence summaries; validate before shipping.
+
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
 - issued: 2026-09-22
