@@ -35,3 +35,16 @@
 - notes: Generated Markdown only; plan and exact diff approved in chat. Isolated Mind ledger preserves other session's canonical branch. Generic classifier does not resolve .github; manually classified docs.
 - pr: https://github.com/PyAutoLabs/.github/pull/25
 - validation: Exact generator equality and diff-check passed; generated Markdown only, no runtime test applicability.
+
+## ecosystem-role-docs
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/442
+- issued: 2026-10-01
+- prompt: active/adopt_ecosystem_responsibility_roles.md
+- session: Codex (GPT-6), local, 2026-10-01
+- status: workspace-dev
+- autonomy: supervised; plan and branch approved in-session ("contiue and i approve")
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/ecosystem-role-docs
+- repos:
+  - PyAutoBrain: feature/ecosystem-role-docs
+- summary: Adopt library/project/organ responsibility vocabulary and reconcile canonical/public Eyes descriptions; preserve repository categories and release gates.
+- resume: Approved plan in Brain #442. Edit ORGANISM.md and relevant docs, build Sphinx/check links, independent review, then shipping gate. Inference docs follow-up remains separately filed under existing repo claim.

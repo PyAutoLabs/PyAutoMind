@@ -9,7 +9,9 @@ Autonomy: supervised
 Priority: normal
 Consequence: judge
 Filed: 2026-10-01
-Status: draft
+Status: issued
+Issued: 2026-10-01
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/442
 
 ## Original user request (verbatim)
 
