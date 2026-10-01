@@ -66,7 +66,7 @@ with 8 zero visibilities and a `TransformerDFT`. The upstream design should not 
 | 2 | complete/2026/09/streaming-p2-fit-save-reload.md | PyAutoGalaxy, PyAutoLens | SHIPPED 2026-09-30 — PyAutoGalaxy#639 (4c834ced) + PyAutoLens#758 (efd13c4c), pending release |
 | 3 | complete/2026/09/streaming-p3-visualizer.md | PyAutoArray, PyAutoGalaxy, PyAutoLens | SHIPPED 2026-09-30 — PyAutoArray#597 (c1d85810) + PyAutoGalaxy#640 (6d522ce4) + PyAutoLens#761 (a2fbe881), pending release |
 | 4 | complete/2026/10/streaming-p4-light-profile-identity.md | PyAutoArray, PyAutoGalaxy, PyAutoLens | SHIPPED 2026-10-01 — PyAutoArray#599 (176f61e7) + PyAutoGalaxy#642 (574743ab) + PyAutoLens#762 (bcf2ab6f), pending release |
-| 5 | `draft/feature/autoarray/streaming_p5_cubes_phase_centre.md` | PyAutoArray (+ datacube example) | draft |
+| 5 | `active/streaming_p5_cubes_phase_centre.md` | PyAutoArray, autolens_workspace | ISSUED 2026-10-01 — PyAutoArray#600, in development |
 
 Deferred from phase 1: mild +100 MB RSS drift at 4e6 vis and super-linear witness wall time (likely per-chunk npz reads) — look at in phase 2.
 

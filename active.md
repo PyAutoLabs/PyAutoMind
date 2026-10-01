@@ -55,3 +55,20 @@
 - summary: Additive structured action/state metadata with overnight reference producer and cockpit freshness/next-action improvements.
 - approval: User approved the scoped plan in-session, “I approve”; no merge authorization.
 - resume: Implement Brain producer/contract first, then website consumer; tests and ship skills to open PRs.
+
+## streaming-p5-cubes-phase-centre
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/600
+- issued: 2026-10-01
+- prompt: active/streaming_p5_cubes_phase_centre.md
+- epic: streaming-visibilities (phase 5 of 5; ledger draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md)
+- source: https://github.com/orgs/PyAutoLabs/discussions/13
+- session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-10-01
+- status: library-dev
+- autonomy: supervised (header); plan approved in-session 2026-10-01 (Plan Mode); combined library + workspace, library first
+- worktree: ~/Code/PyAutoLabs-wt/streaming-p5-cubes-phase-centre
+- repos:
+  - PyAutoArray: feature/streaming-p5-cubes-phase-centre
+  - autolens_workspace: feature/streaming-p5-cubes-phase-centre
+- summary: MFS SparseTerms = sum of per-channel terms (__radd__, 1e-12 parity vs in-memory MFS); phase_centre=(y, x) arcsec in sparse_terms_from_chunks / from_stream (data * exp(+2πi(u l0 + v m0)), provenance-checked in __add__); array-free datacube example modeling_array_free.py in autolens_workspace under the smoke profile.
+- resume: Issue + plan on #600; next /start_library (PyAutoArray) then /start_workspace (autolens_workspace); DFT point-source test pins the shift sign.
+
