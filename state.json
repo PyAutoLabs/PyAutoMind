@@ -2,11 +2,17 @@
   "schema_version": 1,
   "organ": "mind",
   "repo": "PyAutoMind",
-  "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-01T09:09:12Z",
+  "status": "red",
+  "headline": "RED \u2014 24 picks \u00b7 4 in flight",
+  "updated": "2026-10-01T09:13:11Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "red",
+      "text": "Human-first cockpit: actionable state and honest freshness \u2014 awaiting-input",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/issues/434",
+      "prompt": "/start_dev active/cockpit_actionable_state.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#406 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/406",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#429 \u2014 eyes-board-conductor-registry",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/429",
       "prompt": null
     }
   ]

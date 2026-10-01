@@ -414,3 +414,15 @@ The goal is therefore:
 «Build a cockpit that becomes the control plane for PyAutoLabs, first for a human and eventually for a human + autonomous agents.»
 
 When implementing future dashboard changes, keep this architectural direction in mind, but always favour the simplest design that improves the cockpit today.
+
+
+## Implementation handoff — 2026-10-01
+
+- User approved the scoped plan in-session (“I approve”). Implemented in `/home/jammy/Code/PyAutoLabs/.worktrees/cockpit-actionable-state/{PyAutoBrain,pyautolabs.github.io}`, both on `feature/cockpit-actionable-state`; no source commits, pushes or PRs yet.
+- Brain: optional v1 item id/state/reason/action/safety/decision metadata and producer `valid_until`; overnight reference producer preserves run links and gate annotations. Legacy feeds remain compatible.
+- Website: enriched actions/reasons/decision display; pure observation model separates source status from fetch/freshness; validates caches and identity; generated/checked ages; last-known failures retained; timeout, shell cache v4 and transition tests.
+- Tests: Brain focused 104 and full 1107 passed; website Node 10 passed; nine published feeds validated; Chromium mobile/landscape/desktop light/dark, keyboard clipboard, history, polling/frame preservation, offline/recovery and shell-only PWA caching passed. Tenant-firewall and diff checks passed. In-session review complete; no independent-review claim.
+- Evidence and prepared PRs: task `checks/validation.md`, `checks/{brain,website}.patch`, `checks/{brain,website}-pr.md`, browser/PWA scripts and screenshots; full log `brain-full-tests.log`. Physical devices untested.
+- Initial full-suite failures came from the generated activation symlink inheriting another task's environment. Replaced only this task's symlink with a private activation, unset per-organ path overrides for resolver tests; full suite then passed. Underlying helper bug already tracked separately.
+- Heart readiness snapshot 2026-10-01T09:07:21.635376+00:00 RED: `release validation FAILED (stage integrate)`. Other reasons: `workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py)`; `manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml`.
+- Next: live task-specific Heart RED development override for #434, then record all four sinks and ship Brain + website as pending-release PRs. No override or merge authorization granted. Do not repeat plan approval; implementation is complete.
