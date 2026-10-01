@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 261 |
+| [Backlog](#backlog) (`draft/`) | 262 |
 
 > **No batch in flight.**
 
@@ -580,7 +580,7 @@ Use the route skill. start the planned PyAutoMind task latent-nan-guard-honest-r
 
 ## Backlog
 
-**261** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **55** of them belong to an epic and are listed only under [Epics](#epics) below.
+**262** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **55** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 78</summary>
@@ -2173,7 +2173,7 @@ Use the start-dev skill. draft/refactor/autoarray/sparse_operator_int32_indexes.
 </details>
 
 <details>
-<summary><b>test</b> — 8</summary>
+<summary><b>test</b> — 9</summary>
 
 <details><summary>📋 <a href="draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md">Physical model check when speeding up smoke tests</a> — workspaces · medium · supervised · high</summary>
 
@@ -2235,6 +2235,14 @@ Use the start-dev skill. draft/test/workspaces/smoke_workspace_fixes.md
 
 ```
 Use the start-dev skill. draft/test/autolens_workspace_test/mge_group_dataset_with_real_group_members.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/pyautobrain/dashboard_copy_contract.md">Reject assistant-specific commands in copied dashboard prompts</a> — pyautobrain · safe</summary>
+
+```
+Use the start-dev skill. draft/test/pyautobrain/dashboard_copy_contract.md
 ```
 
 </details>
@@ -3212,7 +3220,7 @@ Use the start-dev skill. draft/research/autolens_profiling/interferometer_stream
 
 </details>
 
-70 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+71 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3257,7 +3265,7 @@ Use the start-dev skill. draft/research/autolens_profiling/interferometer_stream
 - `draft/docs/howtolens/cluster_pixelized_source.md`
 - `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
 - `draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md`
-- _… and 30 more_
+- _… and 31 more_
 
 </details>
 
