@@ -29,16 +29,24 @@
 - issued: 2026-10-01
 - prompt: active/cockpit_actionable_state.md
 - session: Codex; session ID unavailable
-- status: awaiting-input
+- status: workspace-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/cockpit-actionable-state
 - repos:
   - PyAutoBrain: feature/cockpit-actionable-state
   - pyautolabs.github.io: feature/cockpit-actionable-state
 - summary: Additive structured action/state metadata with overnight reference producer and cockpit freshness/next-action improvements.
 - approval: User approved the scoped plan in-session, “I approve”; no merge authorization.
-- resume: Implementation complete, Brain 1107 tests + website 10 tests + Chromium/PWA checks passed. Await live task-specific Heart RED development override for #434 before commit/push/PR-open; prepared PR descriptions/diffs and validation at worktree checks/validation.md. No merge authorization.
 
-- heart-block: RED "release validation FAILED (stage integrate)" (readiness snapshot 2026-10-01T09:07:21.635376+00:00); no task-specific override granted.
+- heart-red-override:
+  - authorization: Live user “Ship cockpit #434 despite Heart RED”; commit/push/PR-open only, no merge/release.
+  - reasons: release validation FAILED (stage integrate)
+  - snapshot: 2026-10-01T09:18:46.359669+00:00
+  - gates: Brain 1107 tests; website 10 tests; nine live feeds; Chromium responsive/clipboard/history/offline and PWA checks; tenant firewall and in-session diff review passed.
+
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/435
+- workspace-pr: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/22
+- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/435
+- resume: PRs #435 / #22 open with pending-release; commits 385c465 / ce36701. Next human /prm: inspect all checks, merge Brain first then website, close #434 and clean worktrees. Shipping override recorded; no current merge authorization.
 
 ## streaming-p5-cubes-phase-centre
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/600

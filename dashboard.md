@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/cockpit_actionable_state.md">Human-first cockpit: actionable state and honest freshness</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/434">issue #434</a> — issued 2026-10-01 — awaiting-input</summary>
+<details><summary>📋 <a href="active/cockpit_actionable_state.md">Human-first cockpit: actionable state and honest freshness</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/434">issue #434</a> — issued 2026-10-01 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/435">PyAutoBrain#435</a>, <a href="https://github.com/PyAutoLabs/pyautolabs.github.io/pull/22">pyautolabs.github.io#22</a> — ⏳ pending release: PyAutoBrain</summary>
 
 ```
 /start_dev active/cockpit_actionable_state.md
@@ -309,6 +309,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoBrain**
 
+- [PyAutoBrain#435](https://github.com/PyAutoLabs/PyAutoBrain/pull/435) — `active/cockpit_actionable_state.md`
 - [PyAutoBrain#426](https://github.com/PyAutoLabs/PyAutoBrain/pull/426) — `complete/2026/09/autolens-visualization-rebirth.md`
 - [PyAutoBrain#404](https://github.com/PyAutoLabs/PyAutoBrain/pull/404) — `complete/2026/09/codex-context-efficiency.md`
 - [PyAutoBrain#387](https://github.com/PyAutoLabs/PyAutoBrain/pull/387) — `complete/2026/09/codex-token-efficiency.md`
