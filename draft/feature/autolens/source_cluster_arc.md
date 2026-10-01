@@ -218,7 +218,7 @@ work within parent phase 1. Phase 2 remains gated; no further issue queued.
   PyAutoGalaxy#641 and autolens_workspace#579 concern Scribbler. No adjacent
   DECISIONS/RESULTS file exists beside this ledger; shipped audit evidence is
   workspace_test `scripts/point_source/solver/RESULTS.md` and its JSON files.
-- Next bounded step filed: `draft/research/workspaces/point_solver_duplicate_policy.md`
+- Next bounded step filed: `complete/2026/10/point-solver-duplicate-policy.md`
   (phase 1c). Reproduce the duplicate quad witness, test boundary and close-pair
   controls across backends, and establish a safe production policy before a
   library patch. The audit's distance grouping is explicitly diagnostic only.
@@ -242,7 +242,7 @@ work within parent phase 1. Phase 2 remains gated; no further issue queued.
 
 User approved the detailed plan with "I approve". Only issue
 https://github.com/PyAutoLabs/autolens_workspace_test/issues/331 was opened.
-Prompt: `active/point_solver_duplicate_policy.md`. Workspace worktree:
+Prompt: `complete/2026/10/point-solver-duplicate-policy.md`. Workspace worktree:
 `/home/jammy/Code/PyAutoLabs/.worktrees/point-solver-duplicate-policy`, branch
 `feature/point-solver-duplicate-policy`, base `7f75f6c2`. Heart entry STALE;
 conflict guard clear. Implement duplicate-policy evidence then ship_workspace.
@@ -298,3 +298,20 @@ https://github.com/PyAutoLabs/autolens_workspace_test/pull/332 is open at
 `2941721`, labelled pending-release. No merge/release authorized. Last shipped
 subphase remains 1b; 1c is PR-open, parent phase 1 incomplete, phase 2 gated.
 Do not repeat successful validation without changed inputs or a new concern.
+
+## Phase 1c merged and closed — 2026-10-01
+
+This entry supersedes the historical local-only / PR-open states above.
+Human `/prm` authorized merge after all three GitHub jobs passed on 2941721.
+autolens_workspace_test#332 merged at 13c9d1ff58b56716f63766e6409a9ee8e870f95f;
+issue #331 closed. Completion: `complete/2026/10/point-solver-duplicate-policy.md`.
+Independent Fable CLEAN; final 54 scalar + 6 vmap/provenance, padding 12/12,
+image-plane/JIT and smoke 32/32 passed. Research verdict remains NO-GO for the
+tested grouping heuristics: uncapped NumPy accuracy/identity failures and JAX
+truncation require separate contracts. Last completed subphase is now 1c.
+Parent phase 1 remains incomplete; phase 2 gated; no later issue queued.
+Next bounded plan must use the shipped report to distinguish conditioning-aware
+image-position accuracy/identity from observable containment overflow. No
+production default or capacity change was shipped. No release authorized.
+The phase-1b PyAutoLens pending-release obligation remains in its own record.
+Cortex phase 11 stays dropped under R-20260907-05; no science project born.
