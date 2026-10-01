@@ -29,12 +29,18 @@
 - issued: 2026-10-01
 - prompt: active/cockpit_digest_freshness.md
 - session: Codex; session ID unavailable
-- status: library-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/memory-digest-state
 - repos:
   - PyAutoMemory: feature/memory-digest-state
 - approval: User “ok then go” approved digest freshness increment; no merge authority.
-- resume: Implementation complete locally; 272 tests, make validate, shared v1 feed validation and Chromium checks passed. Await task-specific Heart RED override before source commit/push/PR.
-- blocker: Heart RED — release validation FAILED (stage integrate). Prior overrides do not transfer to #111.
+- prs: https://github.com/PyAutoLabs/PyAutoMemory/pull/112
+- commit: ac22777
+- resume: PR #112 open with pending-release; all local checks passed. Human /prm when CI is green.
+- heart-red-override:
+  - authorization: Live user “I authorize” in response to the task-specific #111 shipping request; commit/push/PR only, no merge/release.
+  - reason: release validation FAILED (stage integrate)
+  - verdict-at: 2026-10-01T10:39:00.775996+00:00
+  - gates: 272 tests, make validate, shared v1 feeds, Chromium responsive/actions/clipboard, in-session diff/visual review PASS.
 - evidence: /home/jammy/Code/PyAutoLabs/.worktrees/memory-digest-state/checks/validation.md
 - pr-draft: /home/jammy/Code/PyAutoLabs/.worktrees/memory-digest-state/checks/pr-body.md

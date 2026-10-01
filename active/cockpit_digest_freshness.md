@@ -39,3 +39,5 @@ Branch survey: Memory clean main at dc9c3b5; no active Memory claims. Worktree f
 ## Validation / shipping checkpoint
 
 Implemented in feature/memory-digest-state, uncommitted pending task-specific Heart override. 272 tests pass; make validate passes; shared Brain v1 validation accepts healthy/stale/unknown; Chromium mobile/desktop light/dark checks pass including evidence links and clipboard. Diff review found no issues. Heart RED: `release validation FAILED (stage integrate)`. Evidence and PR draft: `.worktrees/memory-digest-state/checks/` under workspace root.
+
+Shipping authorized by live user “I authorize” after exact Heart RED and branch gates were reported. Commit ac22777; pending-release PR https://github.com/PyAutoLabs/PyAutoMemory/pull/112. Await human /prm and green CI; no merge/release authority.

@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/cockpit_digest_freshness.md">Structured arXiv digest freshness in the cockpit</a> — <a href="https://github.com/PyAutoLabs/PyAutoMemory/issues/111">issue #111</a> — issued 2026-10-01 — library-dev</summary>
+<details><summary>📋 <a href="active/cockpit_digest_freshness.md">Structured arXiv digest freshness in the cockpit</a> — <a href="https://github.com/PyAutoLabs/PyAutoMemory/issues/111">issue #111</a> — issued 2026-10-01 — awaiting-merge</summary>
 
 ```
 /start_dev active/cockpit_digest_freshness.md
