@@ -2,11 +2,17 @@
   "schema_version": 1,
   "organ": "mind",
   "repo": "PyAutoMind",
-  "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
-  "updated": "2026-10-01T19:24:11Z",
+  "status": "red",
+  "headline": "RED \u2014 24 picks \u00b7 3 in flight",
+  "updated": "2026-10-01T19:27:15Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "red",
+      "text": "Adopt ecosystem responsibility roles and reconcile Brain documentation \u2014 awaiting-input",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/issues/442",
+      "prompt": "Use the start-dev skill. active/adopt_ecosystem_responsibility_roles.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#387 \u2014 What shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/387",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#406 \u2014 Shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/406",
       "prompt": null
     }
   ]

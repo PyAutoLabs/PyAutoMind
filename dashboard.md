@@ -252,7 +252,7 @@ Use the start-dev skill. draft/research/pyautohands/git_docs.md
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/adopt_ecosystem_responsibility_roles.md">Adopt ecosystem responsibility roles and reconcile Brain documentation</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/442">issue #442</a> — issued 2026-10-01 — workspace-dev</summary>
+<details><summary>📋 <a href="active/adopt_ecosystem_responsibility_roles.md">Adopt ecosystem responsibility roles and reconcile Brain documentation</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/442">issue #442</a> — issued 2026-10-01 — awaiting-input</summary>
 
 ```
 Use the start-dev skill. active/adopt_ecosystem_responsibility_roles.md
