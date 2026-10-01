@@ -9,11 +9,12 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
 Epic: cluster-strong-lensing
 Phase: 1d
 Parent: draft/feature/autolens/source_cluster_arc.md
 Filed: 2026-10-01
+Issued: 2026-10-01
 
 ## Purpose and evidence
 
@@ -100,3 +101,6 @@ Await plan approval and live task-specific development-only override before
 issue creation or implementation. Brain direct research; declared medium versus
 heuristic too-large (11): bounded existing-fixture diagnostic scope justifies
 medium; no production API/gradient/general-lens work included.
+
+## Approved and issued
+User “I approve” approved the plan and task-specific development-only Heart RED override. Issue autolens_workspace_test#333; branch feature/point-solver-image-accuracy, base 13c9d1f. Proceed through PR creation, no merge/release. Prior awaiting-approval statements are historical.
