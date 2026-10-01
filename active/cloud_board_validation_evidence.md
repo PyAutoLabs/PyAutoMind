@@ -1,4 +1,6 @@
 # Ingest authoritative validation evidence into the cloud Heart board
+Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/263
+Issued: 2026-10-01
 Type: bug
 Difficulty: medium
 Autonomy: human-required
