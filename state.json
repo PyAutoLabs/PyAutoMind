@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
-  "updated": "2026-10-01T10:33:05Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 2 in flight",
+  "updated": "2026-10-01T10:33:25Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "PointSolver uncapped image-position accuracy \u2014 cluster arc phase 1d \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autolens_workspace_test/pull/334",
-      "prompt": "/start_dev active/point_solver_image_accuracy.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#387 \u2014 What shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/387",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoBrain PyAutoBrain#406 \u2014 Shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/406",
       "prompt": null
     }
   ]

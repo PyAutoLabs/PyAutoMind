@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1646 records across 9 buckets.
+1647 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -126,6 +126,7 @@ markers; everything below GENERATED is rebuilt.
 - [heart-score-resusitate](2026/10/heart-score-resusitate.md)
 - [memory-cockpit-catch-up](2026/10/memory-cockpit-catch-up.md) — Lensing-specific catch-up freshness drives the HTML/Markdown banner and cockpit feed. Structured cutoff, age, …
 - [point-solver-duplicate-policy](2026/10/point-solver-duplicate-policy.md)
+- [point-solver-image-accuracy](2026/10/point-solver-image-accuracy.md)
 - [streaming-p4-light-profile-identity](2026/10/streaming-p4-light-profile-identity.md)
 - [streaming-p5-cubes-phase-centre](2026/10/streaming-p5-cubes-phase-centre.md)
 
