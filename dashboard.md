@@ -42,11 +42,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 2 |
+| [In flight](#in-flight) (`active/`) | 3 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 264 |
+| [Backlog](#backlog) (`draft/`) | 263 |
 
 > **No batch in flight.**
 
@@ -251,6 +251,14 @@ Use the start-dev skill. draft/research/pyautohands/git_docs.md
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
+
+<details><summary>📋 <a href="active/adopt_ecosystem_responsibility_roles.md">Adopt ecosystem responsibility roles and reconcile Brain documentation</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/442">issue #442</a> — issued 2026-10-01 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/adopt_ecosystem_responsibility_roles.md
+```
+
+</details>
 
 <details><summary>📋 <a href="active/point_source_search_nautilus_leaf.md">First point-source search leaf: Nautilus on the source-plane solved likelihood (admission bar)</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/15">issue #15</a> — issued 2026-09-28 — workspace-dev</summary>
 
@@ -580,7 +588,7 @@ Use the route skill. start the planned PyAutoMind task latent-nan-guard-honest-r
 
 ## Backlog
 
-**264** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **55** of them belong to an epic and are listed only under [Epics](#epics) below.
+**263** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **55** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 78</summary>
@@ -1947,7 +1955,7 @@ Use the start-dev skill. draft/maintenance/pyautomind/session_start_hook_copies_
 </details>
 
 <details>
-<summary><b>docs</b> — 18</summary>
+<summary><b>docs</b> — 17</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
 
@@ -1993,14 +2001,6 @@ Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sig
 
 ```
 Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/pyautobrain/adopt_ecosystem_responsibility_roles.md">Adopt ecosystem responsibility roles and reconcile Brain documentation</a> — pyautobrain · small · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/docs/pyautobrain/adopt_ecosystem_responsibility_roles.md
 ```
 
 </details>
@@ -2447,7 +2447,7 @@ Members:
 - draft/maintenance/pyautobrain/workspace_resolver_fanout.md
 - draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md
 - draft/bug/pyautobrain/worktree_sh_clobbers_root_activate.md
-- draft/docs/pyautobrain/adopt_ecosystem_responsibility_roles.md
+- draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md
 
 Contract (the `start-bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -2465,7 +2465,7 @@ Contract (the `start-bundle` skill is the full body):
 | <a href="draft/maintenance/pyautobrain/workspace_resolver_fanout.md">Workspace resolver fan-out: the hook, the smoke shims and the…</a> | large | high | formalised |
 | <a href="draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md">Intake Agent silently drops unknown Type values and overrides…</a> | small | medium | formalised |
 | <a href="draft/bug/pyautobrain/worktree_sh_clobbers_root_activate.md">worktree.sh bundle creation clobbers the unversioned root activate.sh</a> | small | medium | formalised |
-| <a href="draft/docs/pyautobrain/adopt_ecosystem_responsibility_roles.md">Adopt ecosystem responsibility roles and reconcile Brain documentation</a> | small | normal | draft |
+| <a href="draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md">Unregistered worktrees are invisible to the conflict guard</a> | small | normal | formalised |
 
 </details>
 
@@ -2583,7 +2583,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-10-01 | filed | <a href="draft/docs/autolens_inference/reconcile_cortex_ledger_references.md">Reconcile inference documentation with the current Cortex ledger…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
-| 2026-10-01 | filed | <a href="draft/docs/pyautobrain/adopt_ecosystem_responsibility_roles.md">Adopt ecosystem responsibility roles and reconcile Brain documentation</a> |
+| 2026-10-01 | issued | <a href="active/adopt_ecosystem_responsibility_roles.md">Adopt ecosystem responsibility roles and reconcile Brain documentation</a> |
 | 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
 | 2026-09-29 | filed | <a href="draft/maintenance/pyautomind/session_start_hook_copies_regen.md">Regenerate the 28 drifted <code>.claude/hooks/session-start.sh</code> copies…</a> |
 | 2026-09-28 | filed | <a href="draft/bug/autolens/point_image_pair_all_forward_grad_nan.md">Forward-mode gradient is NaN for FitPositionsImagePairAll(Solved)…</a> |
@@ -3236,7 +3236,7 @@ Use the start-dev skill. draft/research/autolens_profiling/interferometer_stream
 
 </details>
 
-73 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+72 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3281,7 +3281,7 @@ Use the start-dev skill. draft/research/autolens_profiling/interferometer_stream
 - `draft/docs/autolens_inference/reconcile_cortex_ledger_references.md`
 - `draft/docs/github/heart_front_door_sync.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
-- _… and 33 more_
+- _… and 32 more_
 
 </details>
 
