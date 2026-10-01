@@ -26,13 +26,23 @@
 
 ## ecosystem-layers
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/440
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/441
 - issued: 2026-10-01
 - prompt: active/explore_source_project_workspace_and_organ_level.md
 - session: Codex (GPT-6), local, 2026-10-01
-- status: awaiting-input
+- status: awaiting-merge
 - autonomy: supervised; research plan and feature/ecosystem-layers explicitly approved in-session
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/ecosystem-layers
 - repos:
   - PyAutoBrain: feature/ecosystem-layers
 - summary: Research library/project/organ roles and agent routing; one non-normative design note; evidence repos read-only.
-- resume: Research note complete locally (docs/research/ecosystem_levels.md, 321 lines). Independent Claude Fable 5.1 review CLEAN after all findings resolved; reviewed SHA256 3345cd00f3354c428426ef87d9092ef7683ca570e5c3bb8941d1abc860ef9d0b. Sphinx zero warnings; 32 citations/17 pinned source files verified. Not committed/pushed. Heart RED: release validation FAILED (stage integrate). Await live development-only override for Brain #440 before commit/push/PR; record grant in four AUTONOMY.md sinks. Merge separate. Task-bundle fable-final-review.md, research-validation.txt and research-pr.md hold evidence and PR draft.
+- resume: Research note committed/pushed as 9ae0db9; pending-release PR https://github.com/PyAutoLabs/PyAutoBrain/pull/441 open. Independent Claude Fable 5.1 final draft review CLEAN; committed content matches reviewed SHA256 3345cd00f3354c428426ef87d9092ef7683ca570e5c3bb8941d1abc860ef9d0b. Sphinx zero warnings; 32 citations/17 pinned sources verified. Development-only Heart RED override recorded below and on issue/PR/autonomy log. Next: human /prm when every required CI leg is green; no merge authorization or background waiter. Task-bundle fable-final-review.md and research-validation.txt retain evidence.
+- heart-red-override:
+  - authorization: 'Live user "yes do it", then "I authorize", to the task-specific Brain #440 request for development-only commit, push and PR creation.'
+  - scope: 'ecosystem-layers; feature/ecosystem-layers; no merge, release, rehearsal or CI bypass.'
+  - snapshot: "2026-10-01T17:10:05.266085+00:00"
+  - red-reason: "release validation FAILED (stage integrate)"
+  - other-reason: "workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py)"
+  - other-reason: "manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml"
+  - other-reason: "manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml"
+  - passed-gates: "Sphinx zero warnings; 32 citations/17 pinned source files; whitespace; independent Claude Fable 5.1 draft review CLEAN; scientific smoke N/A (research Markdown only). Reviewed SHA256 3345cd00f3354c428426ef87d9092ef7683ca570e5c3bb8941d1abc860ef9d0b."
