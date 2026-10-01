@@ -41,20 +41,30 @@
 
 ## streaming-p4-light-profile-identity
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/598
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/599
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/642
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/762
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/599
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/642
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/762
 - issued: 2026-10-01
 - prompt: active/streaming_p4_light_profile_identity.md
 - epic: streaming-visibilities (phase 4 of 5; ledger draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md)
 - source: https://github.com/orgs/PyAutoLabs/discussions/13
 - session: Claude Code CLI (Fable 5.1 main session + Opus subagents), 2026-10-01
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - autonomy: supervised (header); plan approved in-session 2026-10-01 (Plan Mode)
 - worktree: ~/Code/PyAutoLabs-wt/streaming-p4-light-profile-identity
 - repos:
   - PyAutoArray: feature/streaming-p4-light-profile-identity
   - PyAutoGalaxy: feature/streaming-p4-light-profile-identity
   - PyAutoLens: feature/streaming-p4-light-profile-identity
-- summary: Ordinary (non-linear) light profiles fit array-free via data_term - 2 i_p.d~ + i_p.W~i_p (DatasetInterface data_term override; no-inversion chi_squared hook); profile_visibilities never formed.
-- resume: Issue + plan on #598; next /start_library (Array -> Galaxy -> Lens), red-check parity tests on unfixed source first (fast_chi_squared would silently use the unsubtracted data_term).
+- heart-red-override:
+  - authorization: Live user "Yes, ship (push + PR-open)" on 2026-10-01 in the Fable CLI session, in answer to the override question naming streaming-p4-light-profile-identity (PyAutoArray#598). Push + PR-open only; merge is a separate human /prm on green checks; no release.
+  - reasons: release validation FAILED (stage integrate); workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py); manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml
+  - gates: tests 1903 / 1305 / 793+1xfail (autoarray / autogalaxy / autolens); Codex astra review 4 findings, 3 fixed in-branch + red-checked, 1 pre-existing filed (draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md); smoke n/a (library-only, no workspace consumer of from_stream yet).
+- summary: Ordinary (non-linear) light profiles fit array-free via data_term - 2 i.d~ + i.W~i on the total model image (DatasetInterface data_term override; FitInterferometer.sparse_chi_squared hook; typed raises for model_data and for data/noise-map overrides); profile_visibilities never formed; in-memory sparse path bit-for-bit unchanged.
+- resume: PRs open (#599 / #642 / #762), CI pending. Next: human /prm, merge Array -> Galaxy -> Lens; then Discussion #13 follow-up post (draft in session scratchpad reply_discussion13_followup.md, needs text approval; update its "Not yet" paragraph since P4 is now in) and phase 5 (draft/feature/autoarray/streaming_p5_cubes_phase_centre.md).
 
 ## point-solver-duplicate-policy
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/331

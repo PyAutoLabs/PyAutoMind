@@ -65,12 +65,14 @@ with 8 zero visibilities and a `TransformerDFT`. The upstream design should not 
 | 1 | complete/2026/09/streaming-p1-array-free-dataset.md | PyAutoArray | SHIPPED 2026-09-30 — PyAutoArray#593 (merge bd03e09e), pending release |
 | 2 | complete/2026/09/streaming-p2-fit-save-reload.md | PyAutoGalaxy, PyAutoLens | SHIPPED 2026-09-30 — PyAutoGalaxy#639 (4c834ced) + PyAutoLens#758 (efd13c4c), pending release |
 | 3 | complete/2026/09/streaming-p3-visualizer.md | PyAutoArray, PyAutoGalaxy, PyAutoLens | SHIPPED 2026-09-30 — PyAutoArray#597 (c1d85810) + PyAutoGalaxy#640 (6d522ce4) + PyAutoLens#761 (a2fbe881), pending release |
-| 4 | `active/streaming_p4_light_profile_identity.md` | PyAutoArray, PyAutoGalaxy, PyAutoLens | ISSUED 2026-10-01 — PyAutoArray#598, in development |
+| 4 | `active/streaming_p4_light_profile_identity.md` | PyAutoArray, PyAutoGalaxy, PyAutoLens | SHIPPED 2026-10-01 — PyAutoArray#599 + PyAutoGalaxy#642 + PyAutoLens#762 (issue #598), awaiting merge |
 | 5 | `draft/feature/autoarray/streaming_p5_cubes_phase_centre.md` | PyAutoArray (+ datacube example) | draft |
 
 Deferred from phase 1: mild +100 MB RSS drift at 4e6 vis and super-linear witness wall time (likely per-chunk npz reads) — look at in phase 2.
 
 Deferred from phase 2: no public switch to disable `visualize_before_fit` (the witness used `search._visualize_before_fit = False`; `PYAUTO_TEST_MODE=1` does not skip it) — add one in phase 3; the database-path `save_fits` gap is filed as `draft/bug/autogalaxy/database_paths_dataset_fits_not_registered.md`.
+
+Deferred from phase 4: `galaxy_image_dict` dict-merge drops a mixed ordinary+linear galaxy's ordinary light (pre-existing; `draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md`); in-memory sparse fits with ordinary light could also take the identity (would relax exact-equality tests).
 
 Deferred from phase 3: a public switch to skip `visualize_before_fit` only (before-fit-only visualization) → a PyAutoFit draft; the accumulator's per-chunk JAX recompile → the profiling campaign (`draft/research/autolens_profiling/interferometer_streaming_scaling.md`).
 
