@@ -1,5 +1,33 @@
 # Heart Score and Resusitate sections
 
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/255
+- pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/256
+- merged: 2026-10-01
+- merge-commit: 6463c80050c82a73919bb01cca55edd534be3718
+- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/256
+
+## Shipped
+
+Replaced the large verdict box with Score and Resusitate sections matching Observed checks. Score retains the numeric score, small readiness text, expandable penalties, provenance and reason counts. Repair labels reveal their full prompts; right-aligned clipboard icons copy the original payloads. Evidence gaps remains below.
+
+No readiness computation or CLI/Markdown/JSON change. No remaining scope or downstream workspace changes.
+
+## Validation and merge evidence
+
+Actions run 36837833217 on 4e879031cabacd0b2955e7b1dbe020ea714b7083: Python 3.12 and 3.13 jobs completed successfully, including pytest and tenant firewall. One PR workflow run is expected for this repo. GitHub merge state CLEAN; all claimed branch commits proven included in fetched origin/main (0 unmerged commits; repository not shallow).
+
+Local suite: 1105 passed in 67.31s. Tenant firewall, HTML rendering, in-session diff review and diff --check passed. Browser verification unavailable because sandbox socket restrictions prevented Chromium startup. Preview and test logs preserved under PyAutoMind/tmp/heart-score-resusitate/.
+
+Human `$prm also rebuild it` authorized merge, close-out and the web-dashboard rebuild. The previously recorded Heart RED development override remains scoped to development: `release validation FAILED (stage integrate)` is not repaired by this presentation change. No package release performed.
+
+## Web rebuild
+
+Manually dispatched Heart Health on merged head 6463c80: https://github.com/PyAutoLabs/PyAutoHeart/actions/runs/36838075304. Both Cloud health checks + dashboard and Publish the board to GitHub Pages completed successfully during close-out.
+
+## Original prompt
+
+# Heart Score and Resusitate sections
+
 Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/255
 Issued: 2026-10-01
 Type: feature
