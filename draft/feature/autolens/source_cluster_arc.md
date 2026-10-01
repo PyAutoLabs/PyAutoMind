@@ -315,3 +315,38 @@ image-position accuracy/identity from observable containment overflow. No
 production default or capacity change was shipped. No release authorized.
 The phase-1b PyAutoLens pending-release obligation remains in its own record.
 Cortex phase 11 stays dropped under R-20260907-05; no science project born.
+
+
+## Phase 1d prepared — 2026-10-01
+
+Reconciled fresh Mind main with GitHub: latest completed subphase is 1c,
+workspace_test#332 merged 13c9d1f, #331 closed, all three CI jobs SUCCESS.
+No arc task is active and no adjacent DECISIONS/RESULTS files exist. Checked
+open issues/PRs in PyAutoLens, PyAutoArray, PyAutoGalaxy, PyAutoNerves,
+autolens_workspace, autolens_workspace_test, autolens_profiling and HowToLens.
+workspace_test#106 remains separate cluster-likelihood work; Array#600 claims
+PyAutoArray for streaming phase 5. Cortex ruling R-20260907-05 remains in force.
+
+Next bounded prompt: `draft/research/workspaces/point_solver_image_accuracy.md`
+(phase 1d). Use the shipped report's uncapped NumPy counterexamples to trace
+image-position accuracy and test conditioning-aware diagnostics against its
+independent root reference. This progresses a separate necessary contract
+while Array is claimed; it does not resolve or defer away overflow observability.
+Only autolens_workspace_test will be edited. No production changes proposed.
+Brain FeatureDecision: direct research, declared medium / heuristic too-large
+(score 11). Retain medium because the scope is two existing fixtures, CPU fp64,
+a bounded three-level refinement extension and one evidence/report cell; API,
+gradient, GPU and general-lens completeness work are excluded. Memory consulted.
+Workspace main clean, eight commits behind origin/main; fresh-main setup planned.
+Conflict guard passes. Proposed branch feature/point-solver-image-accuracy.
+
+Entry feed was STALE; full Vitals at 2026-10-01T09:18:46.359669+00:00 is RED:
+- release validation FAILED (stage integrate)
+Additional readiness reasons:
+- workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py)
+- manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml
+
+Await explicit approval of the filed plan and a task-specific development-only
+RED override before issue creation/start_workspace. Previous overrides applied
+to completed tasks only. No phase-1d issue, implementation worktree or source
+edits; no later phase queued. Parent phase 1 incomplete; phase 2 gated.
