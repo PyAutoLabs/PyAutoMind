@@ -276,7 +276,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/streaming_p4_light_profile_identity.md">Streaming phase 4: non-linear light profiles array-free via the data-term identity</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/598">issue #598</a> — issued 2026-10-01 — library-dev</summary>
+<details><summary>📋 <a href="active/streaming_p4_light_profile_identity.md">Streaming phase 4: non-linear light profiles array-free via the data-term identity</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/598">issue #598</a> — issued 2026-10-01 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/599">PyAutoArray#599</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/642">PyAutoGalaxy#642</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/762">PyAutoLens#762</a> — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoLens</summary>
 
 ```
 /start_dev active/streaming_p4_light_profile_identity.md
@@ -302,6 +302,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#599](https://github.com/PyAutoLabs/PyAutoArray/pull/599) — `active/streaming_p4_light_profile_identity.md`
 - [PyAutoArray#576](https://github.com/PyAutoLabs/PyAutoArray/pull/576) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - [PyAutoArray#582](https://github.com/PyAutoLabs/PyAutoArray/pull/582) — `complete/2026/09/interferometer-sparse-cache.md`
 - [PyAutoArray#589](https://github.com/PyAutoLabs/PyAutoArray/pull/589) — `complete/2026/09/interferometer-streaming-visibilities.md`
@@ -349,6 +350,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#642](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/642) — `active/streaming_p4_light_profile_identity.md`
 - [PyAutoGalaxy#629](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/629) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - [PyAutoGalaxy#637](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/637) — `complete/2026/09/interferometer-streaming-visibilities.md`
 - [PyAutoGalaxy#633](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/633) — `complete/2026/09/isothermal-convergence-jit.md`
@@ -378,6 +380,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoLens**
 
+- [PyAutoLens#762](https://github.com/PyAutoLabs/PyAutoLens/pull/762) — `active/streaming_p4_light_profile_identity.md`
 - [PyAutoLens#750](https://github.com/PyAutoLabs/PyAutoLens/pull/750) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - [PyAutoLens#757](https://github.com/PyAutoLabs/PyAutoLens/pull/757) — `complete/2026/09/interferometer-sparse-precomputed-data-term.md`
 - [PyAutoLens#754](https://github.com/PyAutoLabs/PyAutoLens/pull/754) — `complete/2026/09/jax-grad-nan-zero-components.md`

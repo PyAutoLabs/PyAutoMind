@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-10-01T08:37:36Z",
+  "updated": "2026-10-01T08:39:48Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "PointSolver duplicate-image policy \u2014 cluster arc phase 1c \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/autolens_workspace_test/issues/331",
       "prompt": "/start_dev active/point_solver_duplicate_policy.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Streaming phase 4: non-linear light profiles array-free via the data-term identity \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/599",
+      "prompt": "/start_dev active/streaming_p4_light_profile_identity.md"
     },
     {
       "severity": "yellow",
@@ -29,6 +35,12 @@
       "severity": "yellow",
       "text": "pending release: .github .github#16 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/.github/pull/16",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#599 \u2014 Streaming phase 4: non-linear light profiles array-free via the data-term identity",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/599",
       "prompt": null
     },
     {
@@ -113,18 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#387 \u2014 What shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/387",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#406 \u2014 Shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/406",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#429 \u2014 eyes-board-conductor-registry",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/429",
       "prompt": null
     }
   ]
