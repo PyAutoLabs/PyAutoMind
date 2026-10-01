@@ -34,4 +34,7 @@
 - repos:
   - PyAutoMemory: feature/memory-digest-state
 - approval: User “ok then go” approved digest freshness increment; no merge authority.
-- resume: Implement structured digest observations/actions, validate and ship through Heart gate.
+- resume: Implementation complete locally; 272 tests, make validate, shared v1 feed validation and Chromium checks passed. Await task-specific Heart RED override before source commit/push/PR.
+- blocker: Heart RED — release validation FAILED (stage integrate). Prior overrides do not transfer to #111.
+- evidence: /home/jammy/Code/PyAutoLabs/.worktrees/memory-digest-state/checks/validation.md
+- pr-draft: /home/jammy/Code/PyAutoLabs/.worktrees/memory-digest-state/checks/pr-body.md
