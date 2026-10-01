@@ -6,6 +6,7 @@ Repos:
 - PyAutoArray
 - PyAutoLens
 - autolens_profiling
+- autolens_workspace_test
 - PyAutoNerves
 Themes:
 - point-source
@@ -16,9 +17,9 @@ Status: formalised
 Consequence: judge
 Review-minutes: 25
 Unattended: needs-slicing
-Epic: cluster-strong-lensing
-Phase: 1
-Parent: draft/feature/autolens/source_cluster_arc.md
+Epic: cluster-pointsolver-speed
+Origin-phase: cluster-strong-lensing phase 1
+Parent: draft/research/autolens_profiling/cluster_pointsolver_speed.md
 Filed: 2026-08-19 (backfilled from git)
 
 # PointSolver error-behavior change: bisect the 2025-11→2026-05 candidates, then health-harden
@@ -83,8 +84,9 @@ Health-hardening follow-ons from the audit, same branch:
   `point_solver.py:119`, not `:111`) was confirmed to return a fixed model-independent
   pair and now emits a one-shot warning, so this epic no longer needs to carry it.
 
-Blocks: every later phase of the arc (profiling, cluster source science, point
-magnification) assumes a trusted PointSolver.
+Current dependency rule (2026-10-01): blocks only consumers of the affected
+solver capabilities. The Source & Cluster arc's blanket gate is removed; see
+the parent campaign's correctness, settings and CI contract.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-08-19 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/483da28c-8c96-4c83-ad87-a43448ca2164/scratchpad/source_cluster_phases/phase01_point_solver_error_regression_bisect.md -->
 
@@ -144,3 +146,16 @@ Record: `complete/2026/10/point-solver-duplicate-policy.md`. The corrected Fable
 CLEAN no-go report is shipped. Parent scope remains open for separate
 image-plane accuracy/identity and observable-overflow contracts; no later
 phase issue has been queued.
+
+## Remaining scope transferred — approved 2026-10-01
+
+This umbrella now belongs to cluster-pointsolver-speed, with investigations and
+settings guidance in autolens_profiling and numerical regressions in
+autolens_workspace_test wired into CI. Phase 1a–1d shipped; 1d is
+workspace_test#334 (26da5b1), record complete/2026/10/point-solver-image-accuracy.md.
+Remaining: observable overflow and caller policy; positional accuracy and image
+identity/unresolved multiplicity; production regression coverage; explicit
+disposition of the historical full-stack-bisect limitation. Float32 downcast was
+not reproduced; do not treat it as a proven defect. The original broad “same
+branch” instruction above is superseded: issue one bounded repair at a time.
+The original arc can resume at phase 3; this transfer does not declare a solver fix.

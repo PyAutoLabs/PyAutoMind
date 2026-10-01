@@ -56,3 +56,10 @@ Work:
    cluster/likelihood_function.py:387 (no such method — calls route through LensCalc).
 
 <!-- formalised by the Intake (Conception) Agent on 2026-08-19 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/483da28c-8c96-4c83-ad87-a43448ca2164/scratchpad/source_cluster_phases/phase05_point_magnification_api.md -->
+
+## Solver boundary — approved 2026-10-01
+
+Magnification at supplied/observed coordinates and explicit source redshift can
+proceed independently of forward PointSolver repairs. Do not silently substitute
+solver-discovered coordinates in these examples; any such path must satisfy its
+workload's accuracy/coverage/overflow checks from the separate solver programme.

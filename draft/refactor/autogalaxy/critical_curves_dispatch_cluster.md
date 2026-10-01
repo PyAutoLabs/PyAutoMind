@@ -70,3 +70,10 @@ Sequencing: before the magnification-map phases — critical curves are the cont
 overlay on every magnification map and the LEGGOS-style arc-segmentation boundary.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-08-19 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/483da28c-8c96-4c83-ad87-a43448ca2164/scratchpad/source_cluster_phases/phase03_critical_curves_dispatch_cluster.md -->
+
+## Arc scheduling — approved 2026-10-01
+
+This is the next Source & Cluster arc step after extraction of its old phase-1
+remainder and phase-2 profiling into cluster-pointsolver-speed. No blanket
+PointSolver-health gate applies. Re-audit the historical findings against current
+source and slice this too-large prompt through start_dev before issuing one task.
