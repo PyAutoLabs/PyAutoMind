@@ -24,4 +24,4 @@ I copied the "Fix Heart systematically" prompt from PyautoHeart dashboard but ge
 
 Heart `heart/dashboard.py:build_fix_plan` starts its prompt with `/health`; multiple other payload producers do likewise. Brain owns shared dashboard code in `board/_theme.py`, `board/_board.py` and dashboard generators in its conductors.
 
-Audit prompt producers, choose a shared conversion boundary where practical, update affected producers/renderers and tests, then regenerate artifacts and validate copied text. Await user plan approval before source edits; no issue, worktree or implementation yet.
+Audit prompt producers, choose a shared conversion boundary where practical, update affected producers/renderers and tests, then regenerate artifacts and validate copied text. Plan approved 2026-10-01, including full dashboard coverage. Implemented in feature/dashboard-portable-prompts worktrees; tests and independent review passed. Awaiting explicit Heart RED development-shipping override for issue #257.

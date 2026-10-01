@@ -29,7 +29,7 @@
 - issued: 2026-10-01
 - prompt: active/dashboard_portable_skill_prompts.md
 - session: Codex
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dashboard-portable-prompts
 - repos:
   - PyAutoBrain: feature/dashboard-portable-prompts
@@ -39,4 +39,18 @@
   - PyAutoEyes: feature/dashboard-portable-prompts
   - PyAutoGut: feature/dashboard-portable-prompts
   - PyAutoScientist: feature/dashboard-portable-prompts
-- resume: Approved whole-dashboard compatibility fix; worktrees created. Convert AI payloads and provider-specific guidance, test rendering, regenerate artifacts, ship PRs.
+  - PyAutoCortex: feature/dashboard-portable-prompts
+- heart-red-override:
+  - authorization: "yes you may commit push open prs and merge once CI is green"
+  - scope: Task PyAutoHeart#257, development shipping and merge on all-green CI during this turn; no release.
+  - reasons: release validation FAILED (stage integrate); workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py)
+  - gates: 896 relevant tests passed; independent review CLEAN; generated dashboard checks passed.
+- resume: User authorized RED override and merge on green CI. Commit/push eight reviewed branches, open linked PRs, inspect every run/job, merge Brain first then consumers. Preserve canonical Cortex ledger edits.
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/436
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/259
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/293
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoMemory/pull/113
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/10
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoGut/pull/17
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/38
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/53
