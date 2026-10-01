@@ -28,8 +28,10 @@
 - issue: https://github.com/PyAutoLabs/.github/issues/24
 - issued: 2026-10-01
 - session: Codex; current health session
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/heart-front-door-sync
 - repos:
   - .github: feature/heart-front-door-sync
 - notes: Generated Markdown only; plan and exact diff approved in chat. Isolated Mind ledger preserves other session's canonical branch. Generic classifier does not resolve .github; manually classified docs.
+- pr: https://github.com/PyAutoLabs/.github/pull/25
+- validation: Exact generator equality and diff-check passed; generated Markdown only, no runtime test applicability.
