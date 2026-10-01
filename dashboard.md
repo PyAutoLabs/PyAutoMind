@@ -252,7 +252,7 @@ Use the start-dev skill. draft/research/pyautohands/git_docs.md
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/dashboard_prompt_budget.md">Bound dashboard assistant prompts</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/261">issue #261</a> — issued 2026-10-01 — library-dev</summary>
+<details><summary>📋 <a href="active/dashboard_prompt_budget.md">Bound dashboard assistant prompts</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/261">issue #261</a> — issued 2026-10-01 — library-shipped, awaiting-merge</summary>
 
 ```
 Use the start-dev skill. active/dashboard_prompt_budget.md
