@@ -24,24 +24,6 @@
   - autolens_inference: feature/point-source-search-nautilus-leaf
 - resume: "Branch pushed (2307eea), NO PR yet. Probe RAL job 366937 COMPLETED (seed 0: wall_s 56.6 s, 4,850 evals, per_call 4.72 us batched, likelihood_share 0.041% [single-basis 1.8%], all truth |dsigma|<0.74; row committed). Seeds 1-4 = RAL array 367140 (%1, euclid-ral-gpu-2). Next: sacct -j 367140; scp euclid_jump:/mnt/ral/jnightin/autolens_inference-wt-psleaf/results/searches/point_source/nautilus/simple/source_plane_solved/hpc_a100_jax_cpu_dense_fp64/search_seed{1..4}.{json,png} into the same path in the local worktree (+ hpc/batch_cpu/{output,error}/*367140* logs by hand); check each seed recovers truth; build_readme.py; wiki admission-bar entry (wiki/project/state.md); scripts/point_source/searches/README.md leaf note; ruff/pytest/check_submits; /ship_workspace to PR (Heart YELLOW ack: PyAutoMemory open PR 7d old; other YELLOW -> DRAFT); then remove RAL worktree: cd /mnt/ral/jnightin/autolens_inference && git worktree remove /mnt/ral/jnightin/autolens_inference-wt-psleaf"
 
-## point-solver-duplicate-policy
-- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/331
-- issued: 2026-10-01
-- prompt: active/point_solver_duplicate_policy.md
-- epic: cluster-strong-lensing
-- session: Codex; independent Claude Fable review session 2eb5a6d4-323e-4a3f-bd9b-6506a6de2b0f
-- status: awaiting-merge
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/point-solver-duplicate-policy
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/332
-- repos:
-  - autolens_workspace_test: feature/point-solver-duplicate-policy
-- resume: PR #332 open, pending-release, head 2941721. Independent Fable CLEAN after all six findings resolved; final exact-script sweep 54 scalar + 6 vmap, provenance/read-only summarize PASS, padding 12/12, image-plane/JIT PASS, smoke 32/32. NO-GO for tested grouping rules: uncapped NumPy image-position failures and JAX truncation are separate problems (18 rows exceed cap; 12 actually truncate). Future zero-candidate coverage handling is advisory only. Wait for human /prm and green CI; no merge/release authorized, no later phase queued.
-- heart-red-override:
-  - authorization: Live user "ok review with fable" to the #331 task-specific development-only override request; review first, commit/push/PR only.
-  - reasons: "release validation FAILED (stage integrate)" (2026-10-01T08:46:35.028848+00:00; re-read before ship)
-  - gates: final-revision 54 scalar + 6 vmap and provenance PASS; padding 12/12; image-plane/JIT PASS; smoke 32/32; formatting/JSON/diff PASS; independent Fable CLEAN.
-- validation-logs: /home/jammy/Code/PyAutoLabs/.worktrees/point-solver-duplicate-policy/scratch/ (duplicate-policy-final-stable.log, padding.log, image-plane.log, smoke.log, fable-review.md, fable-rereview.md)
-
 ## cockpit-actionable-state
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/434
 - issued: 2026-10-01

@@ -1,5 +1,65 @@
 # PointSolver duplicate-image policy — cluster arc phase 1c
 
+Completed: 2026-10-01
+Issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/331 (closed)
+PR: https://github.com/PyAutoLabs/autolens_workspace_test/pull/332 (merged)
+Merge: 13c9d1ff58b56716f63766e6409a9ee8e870f95f
+Reviewed head: 2941721607d4075571c30e365a989bc033251c93
+Epic: cluster-strong-lensing
+
+## Shipped scope and result
+
+Workspace-only numerical research: duplicate_policy.py, raw evidence JSON and
+DUPLICATE_POLICY.md under scripts/point_source/solver/. NO-GO for promoting the
+three tested grouping heuristics. All 36 analytic quad rows pass, but four
+resolved untruncated NumPy controls fail each rule. 18 near-cusp rows exceed
+JAX capacity 20; only 12 JAX rows truncate (uncapped maximum 87). NumPy already
+has image-position errors despite small source residuals; root polishing can
+accept inaccurate positions. Direct distance grouping merges four true roots
+into two. Vmap agreement does not prove physical completeness. No cap-size A/B
+was run, so overflow is not established as the sole cause.
+
+Phase 1c complete; parent phase 1 remains incomplete. Separate image-plane
+accuracy/identity and observable overflow contracts are next. Phase 2 remains
+gated; no later issue queued. Cortex phase 11 stays dropped under R-20260907-05.
+The existing PyAutoLens release obligation remains in
+complete/2026/09/point-solver-padding-backend.md; this research adds none.
+
+## Validation, review and authorization
+
+Final exact-script run: 54 scalar cases + 6 vmap controls, pinned script SHA
+and before/after provenance PASS; summarize verified read-only. Padding 12/12,
+image-plane/JIT regression, full smoke 32/32, Black/compile/JSON/diff passed.
+An earlier rerun failed environment provenance after another task overwrote the
+shared activation symlink; discarded and successfully rerun with a task-owned
+activation file.
+
+Independent claude-fable-5-1 review: six findings fixed, re-review CLEAN
+(session 2eb5a6d4-323e-4a3f-bd9b-6506a6de2b0f). GitHub run 36839380744 on exact
+head 2941721 completed successfully: changes, smoke Python 3.12, smoke Python
+3.13. All claimed commits are ancestors of origin/main; no unmerged commits.
+
+Shipping used the recorded live development-only Heart RED override:
+"release validation FAILED (stage integrate)" at 2026-10-01T08:46:35.028848+00:00.
+Human /prm separately authorized this merge and close-out. No release authorized.
+
+## Close-out
+
+Issue closed; active claim released and epic/parent references reconciled.
+Dashboard regenerated with this completion. Task worktree cleanup is subject
+to the ignored-data confirmation; retain it unless deletion is authorized.
+Review and validation logs remain in the task bundle scratch/ until archived.
+
+Folder-scoped reconciliation: draft/research/workspaces is clean.
+draft/bug/autolens reports four suspects: point_image_pair_all_forward_grad_nan,
+point_solver_error_bisect_health, jit_cache_not_hit_modeling_visualization and
+positions_threshold_fixture_off_axis. None is covered by this research-only
+merge; retain all four. Follow-up door: `/intake reconcile draft/bug/autolens`.
+
+## Original prompt
+
+# PointSolver duplicate-image policy — cluster arc phase 1c
+
 Type: research
 Target: autolens_workspace_test
 Repos:

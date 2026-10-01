@@ -117,7 +117,7 @@ containment-overflow policy remain open within this parent prompt.
 
 ## Phase 1c local policy evidence — 2026-10-01 (not shipped)
 
-Task autolens_workspace_test#331, `active/point_solver_duplicate_policy.md`:
+Task autolens_workspace_test#331, `complete/2026/10/point-solver-duplicate-policy.md`:
 54 scalar cases + 6 vmap controls. All three grouping candidates repair the
 quad witness, but closer-to-cusp controls reach 87 uncapped candidates versus
 JAX capacity 20; a fine-resolution case has four NumPy images and three JAX
@@ -135,3 +135,12 @@ not a repair for those uncapped failures. Four resolved untruncated NumPy
 controls fail each candidate rule. Corrected report and final-revision evidence
 are in autolens_workspace_test#332 (`2941721`, open, Fable CLEAN). No later issue
 queued; retain both image-plane accuracy/identity and overflow in phase-1 scope.
+
+## Phase 1c merged — 2026-10-01
+
+Supersedes the historical unshipped/open states above: autolens_workspace_test#332
+merged at 13c9d1f after all GitHub jobs passed; #331 closed under human `/prm`.
+Record: `complete/2026/10/point-solver-duplicate-policy.md`. The corrected Fable
+CLEAN no-go report is shipped. Parent scope remains open for separate
+image-plane accuracy/identity and observable-overflow contracts; no later
+phase issue has been queued.
