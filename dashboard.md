@@ -252,7 +252,7 @@ Use the start-dev skill. draft/research/pyautohands/git_docs.md
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/explore_source_project_workspace_and_organ_level.md">Explore source, project/workspace, and organ levels in the agentic ecosystem</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/440">issue #440</a> — issued 2026-10-01 — awaiting-input</summary>
+<details><summary>📋 <a href="active/explore_source_project_workspace_and_organ_level.md">Explore source, project/workspace, and organ levels in the agentic ecosystem</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/440">issue #440</a> — issued 2026-10-01 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/441">PyAutoBrain#441</a></summary>
 
 ```
 Use the start-dev skill. active/explore_source_project_workspace_and_organ_level.md

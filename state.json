@@ -2,15 +2,15 @@
   "schema_version": 1,
   "organ": "mind",
   "repo": "PyAutoMind",
-  "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 3 in flight",
-  "updated": "2026-10-01T17:35:42Z",
+  "status": "yellow",
+  "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
+  "updated": "2026-10-01T17:39:10Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
-      "severity": "red",
-      "text": "Explore source, project/workspace, and organ levels in the agentic ecosystem \u2014 awaiting-input",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/issues/440",
+      "severity": "yellow",
+      "text": "Explore source, project/workspace, and organ levels in the agentic ecosystem \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/441",
       "prompt": "Use the start-dev skill. active/explore_source_project_workspace_and_organ_level.md"
     },
     {
