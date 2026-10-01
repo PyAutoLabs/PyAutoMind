@@ -35,3 +35,7 @@ Apply the shared structured state/action contract to arXiv digest freshness, dis
 - `tests/test_board.py`: timestamps, weekday boundaries, scopes, empty healthy case, action/evidence links, renderer parity and feed validation. Update README documentation. Run `make test`, `make validate`, shared Brain validator and browser checks.
 
 Branch survey: Memory clean main at dc9c3b5; no active Memory claims. Worktree feature/memory-digest-state created from origin/main. Mind isolated codex/memory-digest-state. Approval is the user's current “ok then go”; no new scope/merge authority inferred.
+
+## Validation / shipping checkpoint
+
+Implemented in feature/memory-digest-state, uncommitted pending task-specific Heart override. 272 tests pass; make validate passes; shared Brain v1 validation accepts healthy/stale/unknown; Chromium mobile/desktop light/dark checks pass including evidence links and clipboard. Diff review found no issues. Heart RED: `release validation FAILED (stage integrate)`. Evidence and PR draft: `.worktrees/memory-digest-state/checks/` under workspace root.
