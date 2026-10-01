@@ -31,3 +31,11 @@ Missing release validation: −15 (1 × 15, cap 15)
 ## Approval
 
 User replied "I approve" on 2026-10-01 to the above layout and the development-only override for Heart RED `release validation FAILED (stage integrate)`. Scope: this task's implementation and development shipping; no merge or release.
+
+## Implementation handoff
+
+PR: https://github.com/PyAutoLabs/PyAutoHeart/pull/256 (pending-release). Commit: `4e87903` on `feature/heart-score-resusitate` in `/home/jammy/Code/PyAutoLabs/.worktrees/heart-score-resusitate/PyAutoHeart`.
+
+Implemented Score and Resusitate sections, small readiness text, icon copy rows with view/select disclosure, existing evidence sections retained. Full suite: **1105 passed in 67.31s**; tenant firewall OK; HTML preview generated; diff review passed. Browser startup blocked by sandbox socket permission; preview and full-tests.log are in task root.
+
+Both Python CI jobs in progress at the single post-push check. User approval covers this task and the known RED development override; merge/deployment remain pending explicit instruction. Next: `/prm` once CI is green, then publish via Heart Health when authorized.

@@ -5,7 +5,9 @@
 - issued: 2026-10-01
 - prompt: active/heart-score-resusitate.md
 - session: Codex; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/256
+- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/256
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/heart-score-resusitate
 - repos:
   - PyAutoHeart: feature/heart-score-resusitate
@@ -13,7 +15,9 @@
 - heart-red-override:
   - authorization: Live user "I approve" on 2026-10-01 in response to the task plan and development-only RED override. No merge/release authority.
   - reasons: release validation FAILED (stage integrate)
-  - gates: Pending branch validation.
+  - gates: 1105 Heart tests passed; tenant-firewall OK; HTML render and in-session diff review passed. Browser verification blocked by sandbox sockets. No downstream scientific smoke applies.
+  - records: Issue #255, PR #256, active.md and autonomy_log.md record the override.
+- resume: PR #256 opened with pending-release label at 4e87903. Both Python CI jobs in progress at the single post-push check. Preview and full-tests.log in task root. Await human /prm; no merge or deployment authorized for this task.
 
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
