@@ -84,3 +84,39 @@ match committed bytes. Sphinx passes with zero warnings; input/response integrit
 JSON, score totals, local download paths and pinned source excerpts verified.
 Heart GREEN score 100, 2026-10-01T19:53:08.542623+00:00. Earlier transient manifest
 YELLOW cleared after canonical vitals refresh; no override was used.
+
+## Authorized continuation — 2026-10-01
+
+Original user request (verbatim):
+
+> continue, stop asking fable for reviews
+
+Continue the recommended profiling/inference organ specification in the same
+research task and existing Brain worktree/PR. Do not invoke Fable reviews again.
+The preceding trial evidence stays frozen. This extension is design prose only,
+not an organ birth, source migration, schema rollout or science campaign.
+
+Plan: inspect the current project outputs and Eyes/Cortex/Brain contracts; add
+`docs/research/profiling_inference_organs.md` describing ownership, registry and
+versioned project-read contracts, domain-specific comparison rules, freshness and
+partial failure handling, dashboard/action boundaries, rollout and acceptance
+criteria. Use pinned public repository sources and distinguish existing fields
+from proposed fields. Link it from the trial report. Validate source citations,
+examples and Sphinx locally; no independent-review claim for the extension.
+Update the existing issue and PR around the combined final deliverable.
+
+## Continuation deliverable and shipping gate
+
+`docs/research/profiling_inference_organs.md` is complete locally: ownership,
+current producer inventory, proposed domain registries/envelopes, profiling and
+inference comparison boundaries, freshness/partial failure semantics, cockpit
+transition, phased implementation and acceptance cases. The trial report links
+it; frozen evaluation artifacts are unchanged. No new Fable review was invoked.
+Local Sphinx HTML build passes with zero warnings; all seven pinned citations
+resolve to git objects. Source contracts were checked by the author, not an
+independent reviewer. Organ names and second real adopters remain rollout choices.
+
+Ship gate at 2026-10-01T20:02:44.036627+00:00: Heart RED, score 80.
+Exact reason: `autofit_workspace: Smoke Tests failure on main`.
+No commit/push of the extension; PR #445 remains the previously validated trial.
+Resume with fresh GREEN or the canonical human development-only RED override.

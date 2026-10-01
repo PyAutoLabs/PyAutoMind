@@ -29,13 +29,14 @@
 - issued: 2026-10-01
 - prompt: active/trial_ecosystem_role_routing.md
 - session: Codex (GPT-6), local, 2026-10-01
-- status: awaiting-merge
+- status: awaiting-input
 - autonomy: supervised; human "ok do it" authorized the recommended next routing trial
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/ecosystem-routing-trial
 - repos:
   - PyAutoBrain: feature/ecosystem-routing-trial
-- summary: Six-case exploratory baseline/checklist comparison of ecosystem routing; retain bounded evidence and report before changing machinery.
+- summary: Routing trial plus authorized profiling/inference organ specification; proposal only, no implementation or new organ.
 - workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/445
-- review: independent Claude Fable FINDINGS corrected; focused re-review CLEAN; all 14 committed files match reviewed SHA256 snapshot
+- review: original routing trial independently reviewed CLEAN; organ-specification continuation self-checked only. User explicitly instructed no further Fable reviews.
 - validation: Sphinx HTML 0 warnings; frozen input/response hashes and JSON verified; 36 source paragraphs checked against pinned commits; Heart GREEN score 100 at 2026-10-01T19:53:08.542623+00:00
-- resume: PR #445 open at 6ea15719854f19a3c9a8f2d0c828fbfdfbc8e3cc. Both conditions correct on 6/6 change targets; checklist conflates decision owner in three fields while action routes stay correct. Retain guidance, no mandatory checklist. Context scoring leniency is disclosed as grading-time; no retrieval-efficiency claim. Review evidence at tmp/ecosystem-routing-trial-review/. Next human /prm judges every exact-head CI run/leg and merges/closes. Candidate organ-specification work proposed only; not filed.
+- ship-blocker: Heart RED score 80 at 2026-10-01T20:02:44.036627+00:00 — autofit_workspace: Smoke Tests failure on main
+- resume: Organ specification complete locally at docs/research/profiling_inference_organs.md, with a link from the trial report; uncommitted/unpushed behind current Heart RED. Sphinx HTML zero warnings; seven pinned source objects verified; frozen trial files unchanged. PR #445 still contains only the earlier trial commit 6ea1571 (all three CI jobs passed). Need fresh GREEN or an explicit development-only override for the exact current RED reasons before committing/pushing this extension. Rewrite PR title/body around combined final scope after push. Do not call Fable for reviews; do not describe the extension as independently reviewed. No organ repositories or follow-up implementation tasks created.
