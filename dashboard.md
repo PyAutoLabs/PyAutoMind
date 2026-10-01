@@ -268,7 +268,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/streaming_p5_cubes_phase_centre.md">Streaming phase 5: per-channel cubes and phase-centre shifts in sparse_terms_from_chunks</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/600">issue #600</a> — issued 2026-10-01 — library-dev</summary>
+<details><summary>📋 <a href="active/streaming_p5_cubes_phase_centre.md">Streaming phase 5: per-channel cubes and phase-centre shifts in sparse_terms_from_chunks</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/600">issue #600</a> — issued 2026-10-01 — library-shipped, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/601">PyAutoArray#601</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/643">PyAutoGalaxy#643</a> — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 /start_dev active/streaming_p5_cubes_phase_centre.md
@@ -294,6 +294,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#601](https://github.com/PyAutoLabs/PyAutoArray/pull/601) — `active/streaming_p5_cubes_phase_centre.md`
 - [PyAutoArray#576](https://github.com/PyAutoLabs/PyAutoArray/pull/576) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - [PyAutoArray#582](https://github.com/PyAutoLabs/PyAutoArray/pull/582) — `complete/2026/09/interferometer-sparse-cache.md`
 - [PyAutoArray#589](https://github.com/PyAutoLabs/PyAutoArray/pull/589) — `complete/2026/09/interferometer-streaming-visibilities.md`
@@ -342,6 +343,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#643](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/643) — `active/streaming_p5_cubes_phase_centre.md`
 - [PyAutoGalaxy#629](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/629) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - [PyAutoGalaxy#637](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/637) — `complete/2026/09/interferometer-streaming-visibilities.md`
 - [PyAutoGalaxy#633](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/633) — `complete/2026/09/isothermal-convergence-jit.md`
