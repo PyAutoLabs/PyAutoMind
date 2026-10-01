@@ -73,3 +73,20 @@
 - summary: MFS SparseTerms = sum of per-channel terms (__radd__, 1e-12 parity vs in-memory MFS); phase_centre=(y, x) arcsec in sparse_terms_from_chunks / from_stream (data * exp(+2πi(u l0 + v m0)), provenance-checked in __add__); array-free datacube example modeling_array_free.py in autolens_workspace under the smoke profile.
 - resume: Library PRs open (PyAutoArray#601, PyAutoGalaxy#643), CI pending. Workspace: modeling_array_free.py drafted in the task worktree (smoke exit 0, lint OK), full-profile run in progress → then /ship_workspace (notebook regen, smoke test, PR under the same override grant). Then human /prm (Array → Galaxy → workspace), Discussion #13 follow-up post.
 
+
+## point-solver-image-accuracy
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/333
+- issued: 2026-10-01
+- prompt: active/point_solver_image_accuracy.md
+- epic: cluster-strong-lensing
+- session: Codex; session ID unavailable
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/point-solver-image-accuracy
+- repos:
+  - autolens_workspace_test: feature/point-solver-image-accuracy
+- approval: Live user “I approve” approved phase 1d plan and development-only RED override through PR creation; no merge/release.
+- heart-red-override:
+  - reasons: "release validation FAILED (stage integrate)"
+  - additional: "workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py)"; "manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml"
+  - gates: bounded cell, saved evidence/provenance/read-only summary, padding and image-plane checks, full workspace smoke, formatting/compile/JSON/diff.
+- resume: Implement approved uncapped image-accuracy cell, validate then ship_workspace; no later phase issued.

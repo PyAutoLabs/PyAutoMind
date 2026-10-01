@@ -327,7 +327,7 @@ autolens_workspace, autolens_workspace_test, autolens_profiling and HowToLens.
 workspace_test#106 remains separate cluster-likelihood work; Array#600 claims
 PyAutoArray for streaming phase 5. Cortex ruling R-20260907-05 remains in force.
 
-Next bounded prompt: `draft/research/workspaces/point_solver_image_accuracy.md`
+Next bounded prompt: `active/point_solver_image_accuracy.md`
 (phase 1d). Use the shipped report's uncapped NumPy counterexamples to trace
 image-position accuracy and test conditioning-aware diagnostics against its
 independent root reference. This progresses a separate necessary contract
@@ -350,3 +350,7 @@ Await explicit approval of the filed plan and a task-specific development-only
 RED override before issue creation/start_workspace. Previous overrides applied
 to completed tasks only. No phase-1d issue, implementation worktree or source
 edits; no later phase queued. Parent phase 1 incomplete; phase 2 gated.
+
+## Phase 1d issued — 2026-10-01
+
+User “I approve” granted the plan and task-specific development-only RED override. Only autolens_workspace_test#333 issued; prompt active/point_solver_image_accuracy.md. Worktree .worktrees/point-solver-image-accuracy, branch feature/point-solver-image-accuracy at 13c9d1f. Implement and validate through PR creation; no merge/release authorized.
