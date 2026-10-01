@@ -74,11 +74,18 @@
 - issued: 2026-10-01
 - prompt: active/cockpit_lensing_catch_up.md
 - session: Codex; session ID unavailable
-- status: awaiting-input
+- status: library-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/memory-cockpit-catch-up
 - repos:
   - PyAutoMemory: feature/memory-cockpit-catch-up
 - approval: User “ok go” approved the scoped paper-ingestion freshness follow-up; no merge authority.
-- resume: Implementation complete, 254 tests + make validate + feed/browser checks passed. Await task-specific Heart RED development override for Memory #109 before commit/push/PR-open. Evidence and PR body in worktree checks/. No merge authority.
 
-- heart-block: RED "release validation FAILED (stage integrate)" at 2026-10-01T10:10:03.098482+00:00; no task-specific override.
+- heart-red-override:
+  - authorization: Live user “I authorize” in response to “Ship Memory #109 despite Heart RED”; commit/push/PR-open only, no merge/release.
+  - reasons: release validation FAILED (stage integrate)
+  - snapshot: 2026-10-01T10:10:03.098482+00:00
+  - gates: 254 tests, make validate, shared feed validator, Chromium mobile/desktop light-dark and cockpit clipboard/runbook checks, in-session review passed.
+
+- library-pr: https://github.com/PyAutoLabs/PyAutoMemory/pull/110
+- pending-release: PyAutoMemory@https://github.com/PyAutoLabs/PyAutoMemory/pull/110
+- resume: PR #110 open at 92b15c2, pending-release. Next human /prm checks every CI run/job, merges, closes #109 and cleans worktree. No merge/release authority in shipping turn.

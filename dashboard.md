@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/cockpit_lensing_catch_up.md">Lensing catch-up: structured freshness and a safe manual action</a> — <a href="https://github.com/PyAutoLabs/PyAutoMemory/issues/109">issue #109</a> — issued 2026-10-01 — awaiting-input</summary>
+<details><summary>📋 <a href="active/cockpit_lensing_catch_up.md">Lensing catch-up: structured freshness and a safe manual action</a> — <a href="https://github.com/PyAutoLabs/PyAutoMemory/issues/109">issue #109</a> — issued 2026-10-01 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMemory/pull/110">PyAutoMemory#110</a> — ⏳ pending release: PyAutoMemory</summary>
 
 ```
 /start_dev active/cockpit_lensing_catch_up.md
@@ -394,6 +394,10 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoLens#761](https://github.com/PyAutoLabs/PyAutoLens/pull/761) — `complete/2026/09/streaming-p3-visualizer.md`
 - [PyAutoLens#751](https://github.com/PyAutoLabs/PyAutoLens/pull/751) — `complete/2026/09/workspace-config-cleanup.md`
 - [PyAutoLens#762](https://github.com/PyAutoLabs/PyAutoLens/pull/762) — `complete/2026/10/streaming-p4-light-profile-identity.md`
+
+**PyAutoMemory**
+
+- [PyAutoMemory#110](https://github.com/PyAutoLabs/PyAutoMemory/pull/110) — `active/cockpit_lensing_catch_up.md`
 
 **PyAutoMind**
 
