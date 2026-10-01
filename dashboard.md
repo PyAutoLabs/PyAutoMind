@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 263 |
+| [Backlog](#backlog) (`draft/`) | 262 |
 
 > **No batch in flight.**
 
@@ -588,7 +588,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**263** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **57** of them belong to an epic and are listed only under [Epics](#epics) below.
+**262** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **56** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 78</summary>
@@ -3039,35 +3039,6 @@ Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens
 </details>
 
 <details>
-<summary><b>Streaming visibilities — array-free sparse interferometer dataset (Discussion #13 phase 2)</b> — 2 queued prompt(s), in order</summary>
-
-<details><summary>📋 <b>Streaming visibilities — array-free sparse interferometer dataset (Discussion #13 phase 2)</b> — ledger: `draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md` — phases 1-4 SHIPPED (P4 2026-10-01: PyAutoArray#599 + PyAutoGalaxy#642 + PyAutoLens#762, record…</summary>
-
-```
-Continue the 'Streaming visibilities — array-free sparse interferometer dataset (Discussion #13 phase 2)' epic. Its canonical state lives in draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: source = https://github.com/orgs/PyAutoLabs/discussions/13 (HRSAstro; reference impl pyuvimage `streaming.py`). The posted reply promises a follow-up on the thread when the array-free dataset lands — post it at the close of phase 3 (fit + save/reload + visualizer usable end to end), not phase 5. Design decisions (a)-(e) are recorded in the ledger.
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md">Array-free streamed interferometer dataset (streaming visibilities, phase 2)</a> — autoarray · large · supervised · medium</summary>
-
-```
-/start_dev draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/interferometer_streaming_scaling.md">Campaign: interferometer streaming (array-free) vs in-memory — memory and time scaling…</a> — autolens_profiling · small · supervised · high</summary>
-
-```
-/start_dev draft/research/autolens_profiling/interferometer_streaming_scaling.md
-```
-
-</details>
-
-</details>
-
-<details>
 <summary><b>interferometer-likelihood-campaign</b> — 9 queued prompt(s) — ⚠️ not in `epics.md`</summary>
 
 <details><summary>📋 <a href="draft/bug/pyautoheart/ral_venv_dependency_floor_drift.md">RAL PyAuto venv: third-party packages below the library floors…</a> — pyautoheart · easy · supervised · medium</summary>
@@ -3236,6 +3207,19 @@ Continue the 'Streaming visibilities — array-free sparse interferometer datase
 
 </details>
 
+<details>
+<summary><b>streaming-visibilities</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/interferometer_streaming_scaling.md">Campaign: interferometer streaming (array-free) vs in-memory — memory and time scaling…</a> — autolens_profiling · small · supervised · high</summary>
+
+```
+/start_dev draft/research/autolens_profiling/interferometer_streaming_scaling.md
+```
+
+</details>
+
+</details>
+
 ## Hygiene
 
 6 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
@@ -3301,7 +3285,7 @@ Continue the 'Streaming visibilities — array-free sparse interferometer datase
 
 </details>
 
-76 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+75 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3309,7 +3293,6 @@ Continue the 'Streaming visibilities — array-free sparse interferometer datase
 - `draft/feature/autoarray/adapt_linear_default_flip.md — unknown theme keyword(s): inference`
 - `draft/feature/autoarray/edge_zeroed_log_det_cholesky_reuse.md — unknown theme keyword(s): inversion`
 - `draft/feature/autoarray/interferometer_chunked_transform_mapping_matrix.md — unknown theme keyword(s): jax-gpu, vram`
-- `draft/feature/autoarray/interferometer_from_stream_array_free_dataset.md — unknown theme keyword(s): sparse-operator, memory`
 - `draft/feature/autoarray/interferometer_numba_gate_retune_70.md — unknown theme keyword(s): config`
 - `draft/feature/autoarray/source_clumps_robust_scale.md — unknown theme keyword(s): source-reconstruction`
 - `draft/feature/autofit/certified_solver_batched_guard_c2.md — unknown theme keyword(s): inversion`
