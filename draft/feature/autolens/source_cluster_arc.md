@@ -205,3 +205,35 @@ obligation retained in the completion record; no release authorized.
 
 Next logical step remains bounded duplicate-image / containment-overflow policy
 work within parent phase 1. Phase 2 remains gated; no further issue queued.
+
+## Reconciliation and phase 1c plan — 2026-10-01
+
+- GitHub confirms phase 1b merged: PyAutoLens#760 at `73dc5d275` and
+  autolens_workspace_test#330 at `7f75f6c2`, on 2026-09-30. The latest
+  completed subphase is 1b; numbered phase 1 remains incomplete.
+- Cross-checked epics.md, all active.md entries, and open issues/PRs in
+  PyAutoLens, PyAutoArray, PyAutoGalaxy, PyAutoNerves, autolens_workspace,
+  autolens_workspace_test, autolens_profiling and HowToLens. No arc task is
+  currently in flight. workspace_test#106 is separate cluster likelihood work;
+  PyAutoGalaxy#641 and autolens_workspace#579 concern Scribbler. No adjacent
+  DECISIONS/RESULTS file exists beside this ledger; shipped audit evidence is
+  workspace_test `scripts/point_source/solver/RESULTS.md` and its JSON files.
+- Next bounded step filed: `draft/research/workspaces/point_solver_duplicate_policy.md`
+  (phase 1c). Reproduce the duplicate quad witness, test boundary and close-pair
+  controls across backends, and establish a safe production policy before a
+  library patch. The audit's distance grouping is explicitly diagnostic only.
+- Brain FeatureDecision: direct research, autolens_workspace_test only; declared
+  medium versus heuristic large. Scope is bounded to existing two fixtures,
+  CPU diagnostics and a policy report; no production algorithm/default change.
+  Memory consultation included the prior CPU campaign's accepted vertex-tie
+  witness and capacity finding. Conflict guard passes. Workspace main is clean
+  but six commits behind origin/main; use fresh main during setup.
+- Heart entry feed: STALE, "test run status unknown (no report.json)"; planning
+  may proceed. Plan is awaiting explicit approval under start_dev/AGENTS.md.
+  No phase issue or implementation worktree has been created, no tests/source
+  edited, and no later phase issue queued. The separate Mind worktree holds
+  planning records only.
+- Next after approval: create_issue for this single task, start_workspace,
+  implement the evidence cell, then ship_workspace. Containment-overflow policy
+  remains in parent phase 1; phase 2 stays gated. Cortex's project ledger and
+  R-20260907-05 still record phase 11 as dropped; no successor is implied.
