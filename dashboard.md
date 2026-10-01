@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 261 |
+| [Backlog](#backlog) (`draft/`) | 262 |
 
 > **No batch in flight.**
 
@@ -150,7 +150,7 @@ Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speedin
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 123
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 124
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -580,7 +580,7 @@ Use the route skill. start the planned PyAutoMind task latent-nan-guard-honest-r
 
 ## Backlog
 
-**261** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **55** of them belong to an epic and are listed only under [Epics](#epics) below.
+**262** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **55** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 78</summary>
@@ -1545,7 +1545,7 @@ Use the start-dev skill. draft/feature/pyautobrain/register_profiling_dashboard_
 </details>
 
 <details>
-<summary><b>research</b> — 26</summary>
+<summary><b>research</b> — 27</summary>
 
 <details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon</a> — autofit · large · human-required · high</summary>
 
@@ -1639,6 +1639,14 @@ Use the start-dev skill. draft/research/autoarray/rectangular_kernel_bandwidth_d
 
 ```
 Use the start-dev skill. draft/research/libraries/intel_macos_support_policy.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/pyautobrain/explore_source_project_workspace_and_organ_level.md">Explore source, project/workspace, and organ levels in the agentic ecosystem</a> — pyautobrain · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/research/pyautobrain/explore_source_project_workspace_and_organ_level.md
 ```
 
 </details>
@@ -3212,7 +3220,7 @@ Use the start-dev skill. draft/research/autolens_profiling/interferometer_stream
 
 </details>
 
-70 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+71 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3257,7 +3265,7 @@ Use the start-dev skill. draft/research/autolens_profiling/interferometer_stream
 - `draft/docs/howtolens/cluster_pixelized_source.md`
 - `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
 - `draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md`
-- _… and 30 more_
+- _… and 31 more_
 
 </details>
 
