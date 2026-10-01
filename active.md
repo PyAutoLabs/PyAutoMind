@@ -37,3 +37,17 @@
 - resume: Implemented locally; 54 scalar rows + 6 vmap controls complete, padding 12/12 and full smoke 32/32 passed, image-plane parity and formatting/JSON/diff checks passed, in-session review complete. NO-GO for tested grouping heuristics; close-cusp candidates exceed cap 20 (uncapped max 87), with a four-NumPy/three-JAX missing-image witness. Next: live task-specific Heart RED development override, then commit/push/open pending-release PR using tmp/duplicate-pr.md in the separate Mind planning checkout. No feature commit/push/PR yet; no merge/release authorized.
 - heart-block: RED "release validation FAILED (stage integrate)" (snapshot 2026-10-01T08:11:41.393196+00:00; current readiness re-read at handoff). No override granted.
 - validation-logs: /home/jammy/Code/PyAutoLabs/.worktrees/point-solver-duplicate-policy/scratch/{duplicate-policy,padding,image-plane,smoke}.log
+
+## cockpit-actionable-state
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/434
+- issued: 2026-10-01
+- prompt: active/cockpit_actionable_state.md
+- session: Codex; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/cockpit-actionable-state
+- repos:
+  - PyAutoBrain: feature/cockpit-actionable-state
+  - pyautolabs.github.io: feature/cockpit-actionable-state
+- summary: Additive structured action/state metadata with overnight reference producer and cockpit freshness/next-action improvements.
+- approval: User approved the scoped plan in-session, “I approve”; no merge authorization.
+- resume: Implement Brain producer/contract first, then website consumer; tests and ship skills to open PRs.

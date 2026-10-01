@@ -8,7 +8,9 @@ Repos:
 Difficulty: medium
 Priority: high
 Autonomy: supervised
-Status: draft
+Status: active
+Issued: 2026-10-01
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/434
 
 Affected repositories: @PyAutoBrain and @pyautolabs.github.io.
 
