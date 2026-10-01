@@ -41,3 +41,17 @@
   - reasons: "release validation FAILED (stage integrate)" (2026-10-01T08:46:35.028848+00:00; re-read before ship)
   - gates: final-revision 54 scalar + 6 vmap and provenance PASS; padding 12/12; image-plane/JIT PASS; smoke 32/32; formatting/JSON/diff PASS; independent Fable CLEAN.
 - validation-logs: /home/jammy/Code/PyAutoLabs/.worktrees/point-solver-duplicate-policy/scratch/ (duplicate-policy-final-stable.log, padding.log, image-plane.log, smoke.log, fable-review.md, fable-rereview.md)
+
+## cockpit-actionable-state
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/434
+- issued: 2026-10-01
+- prompt: active/cockpit_actionable_state.md
+- session: Codex; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/cockpit-actionable-state
+- repos:
+  - PyAutoBrain: feature/cockpit-actionable-state
+  - pyautolabs.github.io: feature/cockpit-actionable-state
+- summary: Additive structured action/state metadata with overnight reference producer and cockpit freshness/next-action improvements.
+- approval: User approved the scoped plan in-session, “I approve”; no merge authorization.
+- resume: Implement Brain producer/contract first, then website consumer; tests and ship skills to open PRs.
