@@ -426,3 +426,11 @@ When implementing future dashboard changes, keep this architectural direction in
 - Initial full-suite failures came from the generated activation symlink inheriting another task's environment. Replaced only this task's symlink with a private activation, unset per-organ path overrides for resolver tests; full suite then passed. Underlying helper bug already tracked separately.
 - Heart readiness snapshot 2026-10-01T09:07:21.635376+00:00 RED: `release validation FAILED (stage integrate)`. Other reasons: `workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py)`; `manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml`.
 - Next: live task-specific Heart RED development override for #434, then record all four sinks and ship Brain + website as pending-release PRs. No override or merge authorization granted. Do not repeat plan approval; implementation is complete.
+
+## Shipped to PRs — 2026-10-01
+
+- Live authorization: “Ship cockpit #434 despite Heart RED”. Exact reason unchanged at snapshot 2026-10-01T09:18:46.359669+00:00: `release validation FAILED (stage integrate)`. Override recorded on issue, both PR bodies, active.md and autonomy_log.md.
+- Brain: 385c4654ec2ae3282116c41aad7836c41760b27a, https://github.com/PyAutoLabs/PyAutoBrain/pull/435.
+- Website: ce36701, https://github.com/PyAutoLabs/pyautolabs.github.io/pull/22; depends on Brain #435 for merge order.
+- Both PRs pending-release, no merge/deployment/release performed. Tested diffs verified unchanged before commit; validation evidence remains under worktree checks/validation.md.
+- Next: human /prm on both PRs; judge checks, merge Brain then website, close task and preserve review evidence before worktree cleanup.

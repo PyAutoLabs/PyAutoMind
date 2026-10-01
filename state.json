@@ -2,15 +2,15 @@
   "schema_version": 1,
   "organ": "mind",
   "repo": "PyAutoMind",
-  "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-01T09:43:27Z",
+  "status": "yellow",
+  "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
+  "updated": "2026-10-01T09:44:40Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
-      "severity": "red",
-      "text": "Human-first cockpit: actionable state and honest freshness \u2014 awaiting-input",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/issues/434",
+      "severity": "yellow",
+      "text": "Human-first cockpit: actionable state and honest freshness \u2014 workspace-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/435",
       "prompt": "/start_dev active/cockpit_actionable_state.md"
     },
     {
@@ -117,14 +117,14 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#426 \u2014 autolens-visualization-rebirth",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/426",
+      "text": "pending release: PyAutoBrain PyAutoBrain#435 \u2014 Human-first cockpit: actionable state and honest freshness",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/435",
       "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#404 \u2014 codex-context-efficiency",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/404",
+      "text": "pending release: PyAutoBrain PyAutoBrain#426 \u2014 autolens-visualization-rebirth",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/426",
       "prompt": null
     }
   ]
