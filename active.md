@@ -29,7 +29,7 @@
 - issued: 2026-10-01
 - prompt: active/dashboard_copy_contract.md
 - session: Codex
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dashboard-copy-contract
 - repos:
   - PyAutoBrain: feature/dashboard-copy-contract
@@ -38,4 +38,8 @@
   - authorization: "yes I authorie"
   - scope: New dashboard regression-check task; development only, no merge/release.
   - reasons: PyAutoGalaxy: CI failure — https://api.github.com/repos/PyAutoLabs/PyAutoGalaxy/actions/runs/24007765443
-- resume: Add shared rendered-copy contract and use in Brain/Mind/Cortex/Heart tests; ship Brain before dependent Heart test integration.
+  - shipping-reading: Direct vitals/readiness reports release validation FAILED (stage integrate); reported in-session alongside original feed reason.
+  - gates: 315 relevant tests PASS; Ruff/diff checks PASS; in-session review; no scientific API/workspace smoke impact.
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/438
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/260 (draft, depends on Brain #438)
+- resume: Shared checker and rendered Brain/Mind/Cortex/Heart assertions implemented. Merge Brain #438 on human instruction and green CI first; then ready/re-run Heart #260 with checker available on Brain main. No merge authorization for this task. Logs .worktrees/task-notes/copy-contract-*.log.
