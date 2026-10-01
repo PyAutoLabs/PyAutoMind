@@ -42,7 +42,7 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 4 |
+| [In flight](#in-flight) (`active/`) | 3 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
@@ -268,14 +268,6 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/streaming_p5_cubes_phase_centre.md">Streaming phase 5: per-channel cubes and phase-centre shifts in sparse_terms_from_chunks</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/600">issue #600</a> — issued 2026-10-01 — library-shipped, workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/601">PyAutoArray#601</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/643">PyAutoGalaxy#643</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/582">autolens_workspace#582</a> — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoGalaxy — ⏸ waiting on PyAutoArray's release — ⏸ waiting on PyAutoGalaxy's release</summary>
-
-```
-/start_dev active/streaming_p5_cubes_phase_centre.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/vis_lp_inspection_bundle.md">Support vis_lp-only products in inspection bundles</a> — issued 2026-09-22</summary>
 
 ```
@@ -294,7 +286,6 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
-- [PyAutoArray#601](https://github.com/PyAutoLabs/PyAutoArray/pull/601) — `active/streaming_p5_cubes_phase_centre.md`
 - [PyAutoArray#576](https://github.com/PyAutoLabs/PyAutoArray/pull/576) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - [PyAutoArray#582](https://github.com/PyAutoLabs/PyAutoArray/pull/582) — `complete/2026/09/interferometer-sparse-cache.md`
 - [PyAutoArray#589](https://github.com/PyAutoLabs/PyAutoArray/pull/589) — `complete/2026/09/interferometer-streaming-visibilities.md`
@@ -307,7 +298,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoArray#593](https://github.com/PyAutoLabs/PyAutoArray/pull/593) — `complete/2026/09/streaming-p1-array-free-dataset.md`
 - [PyAutoArray#597](https://github.com/PyAutoLabs/PyAutoArray/pull/597) — `complete/2026/09/streaming-p3-visualizer.md`
 - [PyAutoArray#599](https://github.com/PyAutoLabs/PyAutoArray/pull/599) — `complete/2026/10/streaming-p4-light-profile-identity.md`
-- ⏸ waiting: [Streaming phase 5: per-channel cubes and phase-centre shifts in sparse_terms_from_chunks](active/streaming_p5_cubes_phase_centre.md)
+- [PyAutoArray#601](https://github.com/PyAutoLabs/PyAutoArray/pull/601) — `complete/2026/10/streaming-p5-cubes-phase-centre.md`
 
 **PyAutoBrain**
 
@@ -345,7 +336,6 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoGalaxy**
 
-- [PyAutoGalaxy#643](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/643) — `active/streaming_p5_cubes_phase_centre.md`
 - [PyAutoGalaxy#629](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/629) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - [PyAutoGalaxy#637](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/637) — `complete/2026/09/interferometer-streaming-visibilities.md`
 - [PyAutoGalaxy#633](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/633) — `complete/2026/09/isothermal-convergence-jit.md`
@@ -354,7 +344,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoGalaxy#640](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/640) — `complete/2026/09/streaming-p3-visualizer.md`
 - [PyAutoGalaxy#630](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/630) — `complete/2026/09/workspace-config-cleanup.md`
 - [PyAutoGalaxy#642](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/642) — `complete/2026/10/streaming-p4-light-profile-identity.md`
-- ⏸ waiting: [Streaming phase 5: per-channel cubes and phase-centre shifts in sparse_terms_from_chunks](active/streaming_p5_cubes_phase_centre.md)
+- [PyAutoGalaxy#643](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/643) — `complete/2026/10/streaming-p5-cubes-phase-centre.md`
 
 **PyAutoGut**
 
@@ -2573,7 +2563,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-01 | issued | <a href="active/streaming_p5_cubes_phase_centre.md">Streaming phase 5: per-channel cubes and phase-centre shifts in…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
 | 2026-10-01 | issued | <a href="active/point_solver_image_accuracy.md">PointSolver uncapped image-position accuracy — cluster arc phase 1d</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
@@ -2583,12 +2572,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-28 | filed | <a href="draft/bug/autolens/point_image_pair_all_forward_grad_nan.md">Forward-mode gradient is NaN for FitPositionsImagePairAll(Solved)…</a> |
 | 2026-09-28 | issued | <a href="active/point_source_search_nautilus_leaf.md">First point-source search leaf: Nautilus on the source-plane solved…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
+| 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/power_law_multipole_m1_singular_at_isothermal_slope.md">PowerLawMultipole with m=1 returns -inf / NaN deflections at slope…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently…</a> |
 | 2026-09-27 | filed | <a href="draft/feature/autolens_inference/drop_1e3_prior_centring_after_631.md">Drop the 1e-3 prior centring for shear / multipole / ell_comps…</a> |
@@ -2598,12 +2587,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-26 | filed | <a href="draft/refactor/workspaces/abell_1201_local_cleanup.md">Repo cleanup: retire the Abell 1201 worktree and local raw data</a> |
 | 2026-09-26 | filed | <a href="draft/feature/autolens_assistant/colab_refinement_throughout.md">Refine the assistant for Google Colab, here and throughout</a> |
 | 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
+| 2026-09-25 | filed | <a href="draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md">Keep caches off <code>$HOME</code> on HPC — phase 2 remainder: euclid pipeline…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-25 | filed | <a href="draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md">Keep caches off <code>$HOME</code> on HPC — phase 2 remainder: euclid pipeline…</a> |
 | 2026-09-24 | filed | <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> |
 | 2026-09-24 | filed | <a href="draft/research/autoarray/mge_nnls_fix_pyautoarray_571_slam_60.md">Linear-solver programme phase 3: GPU/vmap/A100 timing and parity rows…</a> |
 | 2026-09-23 | filed | <a href="draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
@@ -2613,12 +2602,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> |
+| 2026-09-18 | filed | <a href="draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md">The latent smoke's empty-block assertion names one cause…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-18 | filed | <a href="draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md">The latent smoke's empty-block assertion names one cause…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
@@ -2628,12 +2617,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source A100 speed-up campaign: profile and optimize with the…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> |
+| 2026-09-17 | filed | <a href="draft/bug/autoarray/mesh_geometry_areas_transformed_adapt_image_indexerror.md">MeshGeometryRectangular.areas_transformed raises IndexError for…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-17 | filed | <a href="draft/bug/autoarray/mesh_geometry_areas_transformed_adapt_image_indexerror.md">MeshGeometryRectangular.areas_transformed raises IndexError for…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autofit/ep_analysis_level_compile_cache.md">EP: cache the compiled JAX likelihood on the Analysis across factor…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> |
@@ -2643,6 +2632,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-16 | filed | <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding…</a> |
 | 2026-09-16 | filed | <a href="draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> /…</a> |
 | 2026-09-16 | filed | <a href="draft/feature/autolens/coolest_pixel_grid_export.md">COOLEST: export MGE lens light and pixelized sources as pixel grids</a> |
+| 2026-09-16 | filed | <a href="draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md">Adaptive Delaunay mesh places two mesh pixels 0.001" apart — a…</a> |
 
 </details>
 

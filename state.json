@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-01T10:27:30Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
+  "updated": "2026-10-01T10:30:51Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,12 +12,6 @@
       "text": "PointSolver uncapped image-position accuracy \u2014 cluster arc phase 1d \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autolens_workspace_test/pull/334",
       "prompt": "/start_dev active/point_solver_image_accuracy.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Streaming phase 5: per-channel cubes and phase-centre shifts in sparse_terms_from_chunks \u2014 library-shipped, workspace-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/601",
-      "prompt": "/start_dev active/streaming_p5_cubes_phase_centre.md"
     },
     {
       "severity": "yellow",
@@ -35,12 +29,6 @@
       "severity": "yellow",
       "text": "pending release: .github .github#16 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/.github/pull/16",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#601 \u2014 Streaming phase 5: per-channel cubes and phase-centre shifts in sparse_terms_from_chunks",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/601",
       "prompt": null
     },
     {
@@ -117,14 +105,26 @@
     },
     {
       "severity": "yellow",
-      "text": "waiting on PyAutoArray's release: Streaming phase 5: per-channel cubes and phase-centre shifts in sparse_terms_from_chunks",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/issues/600",
-      "prompt": "/start_dev active/streaming_p5_cubes_phase_centre.md"
+      "text": "pending release: PyAutoArray PyAutoArray#601 \u2014 streaming-p5-cubes-phase-centre",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/601",
+      "prompt": null
     },
     {
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#426 \u2014 autolens-visualization-rebirth",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/426",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoBrain PyAutoBrain#404 \u2014 codex-context-efficiency",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/404",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoBrain PyAutoBrain#387 \u2014 What shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/387",
       "prompt": null
     }
   ]
