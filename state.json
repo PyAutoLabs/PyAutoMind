@@ -2,22 +2,22 @@
   "schema_version": 1,
   "organ": "mind",
   "repo": "PyAutoMind",
-  "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-10-01T08:41:43Z",
+  "status": "yellow",
+  "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
+  "updated": "2026-10-01T08:56:37Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "red",
-      "text": "PointSolver duplicate-image policy \u2014 cluster arc phase 1c \u2014 awaiting-input",
-      "url": "https://github.com/PyAutoLabs/autolens_workspace_test/issues/331",
-      "prompt": "/start_dev active/point_solver_duplicate_policy.md"
-    },
     {
       "severity": "yellow",
       "text": "Heart Score and Resusitate sections \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoHeart/pull/256",
       "prompt": "/start_dev active/heart-score-resusitate.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "PointSolver duplicate-image policy \u2014 cluster arc phase 1c \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autolens_workspace_test/pull/332",
+      "prompt": "/start_dev active/point_solver_duplicate_policy.md"
     },
     {
       "severity": "yellow",

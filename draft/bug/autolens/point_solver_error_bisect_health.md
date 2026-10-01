@@ -127,3 +127,11 @@ NO-GO for promoting the tested heuristics. Prioritize an observable overflow
 contract before revisiting deduplication on capacity-clean controls. All local
 validation passes (smoke 32/32, padding 12/12, image-plane parity); Heart RED
 currently blocks shipping #331 pending live human override. No later task issued.
+
+Phase 1c correction after independent Fable review: uncapped NumPy already
+fails image-plane accuracy near the cusp; fixed residual cutoffs can accept
+inaccurate polished positions. Overflow observability is a separate requirement,
+not a repair for those uncapped failures. Four resolved untruncated NumPy
+controls fail each candidate rule. Corrected report and final-revision evidence
+are in autolens_workspace_test#332 (`2941721`, open, Fable CLEAN). No later issue
+queued; retain both image-plane accuracy/identity and overflow in phase-1 scope.

@@ -75,15 +75,15 @@
 - issued: 2026-10-01
 - prompt: active/point_solver_duplicate_policy.md
 - epic: cluster-strong-lensing
-- session: Codex; session ID unavailable
-- status: workspace-dev
+- session: Codex; independent Claude Fable review session 2eb5a6d4-323e-4a3f-bd9b-6506a6de2b0f
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/point-solver-duplicate-policy
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/332
 - repos:
   - autolens_workspace_test: feature/point-solver-duplicate-policy
-- resume: Implemented locally; 54 scalar rows + 6 vmap controls complete, padding 12/12 and full smoke 32/32 passed, image-plane parity and formatting/JSON/diff checks passed, in-session review complete. NO-GO for tested grouping heuristics; close-cusp candidates exceed cap 20 (uncapped max 87), with a four-NumPy/three-JAX missing-image witness. Next: live task-specific Heart RED development override, then commit/push/open pending-release PR using tmp/duplicate-pr.md in the separate Mind planning checkout. No feature commit/push/PR yet; no merge/release authorized.
-- heart-block: RED "release validation FAILED (stage integrate)" (snapshot 2026-10-01T08:11:41.393196+00:00; current readiness re-read at handoff). No override granted.
-- validation-logs: /home/jammy/Code/PyAutoLabs/.worktrees/point-solver-duplicate-policy/scratch/{duplicate-policy,padding,image-plane,smoke}.log
+- resume: PR #332 open, pending-release, head 2941721. Independent Fable CLEAN after all six findings resolved; final exact-script sweep 54 scalar + 6 vmap, provenance/read-only summarize PASS, padding 12/12, image-plane/JIT PASS, smoke 32/32. NO-GO for tested grouping rules: uncapped NumPy image-position failures and JAX truncation are separate problems (18 rows exceed cap; 12 actually truncate). Future zero-candidate coverage handling is advisory only. Wait for human /prm and green CI; no merge/release authorized, no later phase queued.
 - heart-red-override:
-  - authorization: Live user "ok review with fable" in response to the #331 development-only override request; review first, commit/push/PR only; no merge or release.
+  - authorization: Live user "ok review with fable" to the #331 task-specific development-only override request; review first, commit/push/PR only.
   - reasons: "release validation FAILED (stage integrate)" (2026-10-01T08:46:35.028848+00:00; re-read before ship)
-  - gates: 54 scalar + 6 vmap final-revision sweep and provenance PASS; padding 12/12; image-plane/JIT PASS; smoke 32/32; formatting/JSON/diff PASS; independent Fable CLEAN after six findings resolved.
+  - gates: final-revision 54 scalar + 6 vmap and provenance PASS; padding 12/12; image-plane/JIT PASS; smoke 32/32; formatting/JSON/diff PASS; independent Fable CLEAN.
+- validation-logs: /home/jammy/Code/PyAutoLabs/.worktrees/point-solver-duplicate-policy/scratch/ (duplicate-policy-final-stable.log, padding.log, image-plane.log, smoke.log, fable-review.md, fable-rereview.md)
