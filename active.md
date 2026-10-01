@@ -24,30 +24,6 @@
   - autolens_inference: feature/point-source-search-nautilus-leaf
 - resume: "Branch pushed (2307eea), NO PR yet. Probe RAL job 366937 COMPLETED (seed 0: wall_s 56.6 s, 4,850 evals, per_call 4.72 us batched, likelihood_share 0.041% [single-basis 1.8%], all truth |dsigma|<0.74; row committed). Seeds 1-4 = RAL array 367140 (%1, euclid-ral-gpu-2). Next: sacct -j 367140; scp euclid_jump:/mnt/ral/jnightin/autolens_inference-wt-psleaf/results/searches/point_source/nautilus/simple/source_plane_solved/hpc_a100_jax_cpu_dense_fp64/search_seed{1..4}.{json,png} into the same path in the local worktree (+ hpc/batch_cpu/{output,error}/*367140* logs by hand); check each seed recovers truth; build_readme.py; wiki admission-bar entry (wiki/project/state.md); scripts/point_source/searches/README.md leaf note; ruff/pytest/check_submits; /ship_workspace to PR (Heart YELLOW ack: PyAutoMemory open PR 7d old; other YELLOW -> DRAFT); then remove RAL worktree: cd /mnt/ral/jnightin/autolens_inference && git worktree remove /mnt/ral/jnightin/autolens_inference-wt-psleaf"
 
-## cockpit-actionable-state
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/434
-- issued: 2026-10-01
-- prompt: active/cockpit_actionable_state.md
-- session: Codex; session ID unavailable
-- status: workspace-shipped, awaiting-merge
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/cockpit-actionable-state
-- repos:
-  - PyAutoBrain: feature/cockpit-actionable-state
-  - pyautolabs.github.io: feature/cockpit-actionable-state
-- summary: Additive structured action/state metadata with overnight reference producer and cockpit freshness/next-action improvements.
-- approval: User approved the scoped plan in-session, “I approve”; no merge authorization.
-
-- heart-red-override:
-  - authorization: Live user “Ship cockpit #434 despite Heart RED”; commit/push/PR-open only, no merge/release.
-  - reasons: release validation FAILED (stage integrate)
-  - snapshot: 2026-10-01T09:18:46.359669+00:00
-  - gates: Brain 1107 tests; website 10 tests; nine live feeds; Chromium responsive/clipboard/history/offline and PWA checks; tenant firewall and in-session diff review passed.
-
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/435
-- workspace-pr: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/22
-- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/435
-- resume: PRs #435 / #22 open with pending-release; commits 385c465 / ce36701. Next human /prm: inspect all checks, merge Brain first then website, close #434 and clean worktrees. Shipping override recorded; no current merge authorization.
-
 ## streaming-p5-cubes-phase-centre
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/600
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/601
@@ -72,4 +48,3 @@
   - gates: tests 1917 (autoarray) / 1307 (autogalaxy); Codex astra review 5 findings, 3 introduced fixed + red-checked, 2 pre-existing filed (draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md); workspace smoke exit 0 + lint OK, full run pending.
 - summary: MFS SparseTerms = sum of per-channel terms (__radd__, 1e-12 parity vs in-memory MFS); phase_centre=(y, x) arcsec in sparse_terms_from_chunks / from_stream (data * exp(+2πi(u l0 + v m0)), provenance-checked in __add__); array-free datacube example modeling_array_free.py in autolens_workspace under the smoke profile.
 - resume: Library PRs open (PyAutoArray#601, PyAutoGalaxy#643), CI pending. Workspace: modeling_array_free.py drafted in the task worktree (smoke exit 0, lint OK), full-profile run in progress → then /ship_workspace (notebook regen, smoke test, PR under the same override grant). Then human /prm (Array → Galaxy → workspace), Discussion #13 follow-up post.
-

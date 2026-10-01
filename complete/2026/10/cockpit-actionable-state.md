@@ -1,3 +1,19 @@
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/434
+- completed: 2026-10-01
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/435
+- workspace-pr: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/22
+- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/435
+- merge-commits: Brain 0cfb5a5842b68befa8211a7663f20f0b70271d2a; website e30a8c271b4ac8c6e13706a08961996231ac366d
+- summary: Additive v1 state/action/safety/decision metadata with overnight workflow evidence; cockpit reason/action rendering, honest freshness and cache validation, generated/checked ages, shell cache v4. No persistent agent or automated remediation.
+- validation: Brain 1107 local tests; website 10 Node tests; all nine published feeds; Chromium mobile/landscape/desktop light/dark, keyboard clipboard, history/frame retention, offline/recovery and shell-only PWA checks; tenant firewall and whitespace checks passed. In-session review only.
+- ci: Brain run 36844547238, Python 3.12 and 3.13 both SUCCESS on 385c465. Website has no configured PR checks, disclosed before current /prm authorization. Both PRs CLEAN/MERGEABLE before merge; git ancestry proves both branch heads in origin/main.
+- authorization: Live user “Ship cockpit #434 despite Heart RED” for development shipping; separate subsequent `$prm` authorized merge and close-out. Heart RED `release validation FAILED (stage integrate)` remains unrelated to these changes; no release performed.
+- evidence: organs/PyAutoMind/tmp/cockpit-actionable-state-evidence/ (local, not versioned), including validation.md, patches, PR descriptions, browser scripts/screenshots and full test logs.
+- reconciliation: No stale references to this task remain. Intake flagged unrelated draft/feature/pyautobrain/batch_slice.md by resemblance only; retained for /intake reconcile draft/feature/pyautobrain.
+- limitations: Physical iOS/Android and installed-app launch not tested; site publication runs after merge and is not claimed complete by merge evidence alone. Other feed producers adopt optional fields incrementally.
+
+## Original prompt
+
 # Human-first cockpit: actionable state and honest freshness
 
 Type: feature
