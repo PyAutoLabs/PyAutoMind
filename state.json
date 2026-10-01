@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-10-01T10:15:22Z",
+  "updated": "2026-10-01T10:21:14Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -21,7 +21,7 @@
     },
     {
       "severity": "yellow",
-      "text": "Streaming phase 5: per-channel cubes and phase-centre shifts in sparse_terms_from_chunks \u2014 library-shipped, workspace-pending",
+      "text": "Streaming phase 5: per-channel cubes and phase-centre shifts in sparse_terms_from_chunks \u2014 library-shipped, workspace-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/601",
       "prompt": "/start_dev active/streaming_p5_cubes_phase_centre.md"
     },
@@ -123,9 +123,9 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#426 \u2014 autolens-visualization-rebirth",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/426",
-      "prompt": null
+      "text": "waiting on PyAutoArray's release: Streaming phase 5: per-channel cubes and phase-centre shifts in sparse_terms_from_chunks",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/issues/600",
+      "prompt": "/start_dev active/streaming_p5_cubes_phase_centre.md"
     }
   ]
 }

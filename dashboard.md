@@ -276,7 +276,7 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 </details>
 
-<details><summary>📋 <a href="active/streaming_p5_cubes_phase_centre.md">Streaming phase 5: per-channel cubes and phase-centre shifts in sparse_terms_from_chunks</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/600">issue #600</a> — issued 2026-10-01 — library-shipped, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/601">PyAutoArray#601</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/643">PyAutoGalaxy#643</a> — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoGalaxy</summary>
+<details><summary>📋 <a href="active/streaming_p5_cubes_phase_centre.md">Streaming phase 5: per-channel cubes and phase-centre shifts in sparse_terms_from_chunks</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/600">issue #600</a> — issued 2026-10-01 — library-shipped, workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/601">PyAutoArray#601</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/643">PyAutoGalaxy#643</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/582">autolens_workspace#582</a> — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoGalaxy — ⏸ waiting on PyAutoArray's release — ⏸ waiting on PyAutoGalaxy's release</summary>
 
 ```
 /start_dev active/streaming_p5_cubes_phase_centre.md
@@ -315,6 +315,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoArray#593](https://github.com/PyAutoLabs/PyAutoArray/pull/593) — `complete/2026/09/streaming-p1-array-free-dataset.md`
 - [PyAutoArray#597](https://github.com/PyAutoLabs/PyAutoArray/pull/597) — `complete/2026/09/streaming-p3-visualizer.md`
 - [PyAutoArray#599](https://github.com/PyAutoLabs/PyAutoArray/pull/599) — `complete/2026/10/streaming-p4-light-profile-identity.md`
+- ⏸ waiting: [Streaming phase 5: per-channel cubes and phase-centre shifts in sparse_terms_from_chunks](active/streaming_p5_cubes_phase_centre.md)
 
 **PyAutoBrain**
 
@@ -361,6 +362,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoGalaxy#640](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/640) — `complete/2026/09/streaming-p3-visualizer.md`
 - [PyAutoGalaxy#630](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/630) — `complete/2026/09/workspace-config-cleanup.md`
 - [PyAutoGalaxy#642](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/642) — `complete/2026/10/streaming-p4-light-profile-identity.md`
+- ⏸ waiting: [Streaming phase 5: per-channel cubes and phase-centre shifts in sparse_terms_from_chunks](active/streaming_p5_cubes_phase_centre.md)
 
 **PyAutoGut**
 
