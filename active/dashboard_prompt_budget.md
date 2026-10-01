@@ -59,3 +59,11 @@ Bug and Feature conductors run on this prompt; both found no matching Memory con
 - Shipping authorization: user “I authorize you to conitnue” (2026-10-01), directly replying to the request to commit, push and open all three PRs despite `release validation FAILED (stage integrate)`, after all 2,323 tests passed. Development only; no release or merge authority.
 - PRs: https://github.com/PyAutoLabs/PyAutoBrain/pull/439 (`862823a`); https://github.com/PyAutoLabs/PyAutoHeart/pull/262 (`58f25a0`, draft pending Brain); https://github.com/PyAutoLabs/PyAutoEyes/pull/11 (`afa48e5`). All labeled pending-release.
 - Next: human merge command and green required CI; merge Brain before marking Heart ready so the shared browser guard is present. Eyes is independent. Stopped at PR-open; no background waiting or merge authority.
+
+## CI repair — 2026-10-01
+
+- `/prm` found Brain #439 and Eyes #11 green, but both Heart #262 legs failed the tenant firewall after all 1,113 tests passed. No PR was merged.
+- Failure: `PyAutoHeart/tests/test_fix.py: new instance fact(s) in unlisted file — 'pyautolabs.github.io' (line 89)`. Logs saved in task-root `logs/heart-ci-110412983424.log` and `logs/heart-ci-110412983761.log`.
+- User authorized the named repair: “can you perform the repair”. Changed the assertion to use `dashboard.PAGES_URL`, preserving its check of the evidence URL without hard-coding tenant identity.
+- Validation: all 9 test_fix.py tests pass; tenant firewall passes against a CI-style layout containing Heart, Mind and Brain checkouts; git diff --check passes.
+- Pushed Heart commit `66a717c` to existing PR #262. Replaces Heart's previously recorded head `58f25a0`. Next: re-run `/prm` to judge fresh CI; Brain remains the prerequisite for Heart.

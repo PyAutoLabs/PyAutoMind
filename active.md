@@ -16,7 +16,7 @@
   - PyAutoHeart: feature/dashboard-prompt-budget
   - PyAutoEyes: feature/dashboard-prompt-budget
 - authorization: Plan approved “ok go”; development entry override “i authorize, go” for Heart RED “PyAutoGalaxy: CI failure” (run 24007765443). No release or merge authority.
-- prs: https://github.com/PyAutoLabs/PyAutoBrain/pull/439 (862823a); https://github.com/PyAutoLabs/PyAutoHeart/pull/262 (58f25a0, draft pending Brain); https://github.com/PyAutoLabs/PyAutoEyes/pull/11 (afa48e5)
+- prs: https://github.com/PyAutoLabs/PyAutoBrain/pull/439 (862823a); https://github.com/PyAutoLabs/PyAutoHeart/pull/262 (66a717c, tenant-firewall repair pushed; draft pending Brain); https://github.com/PyAutoLabs/PyAutoEyes/pull/11 (afa48e5)
 - resume: Shipped to three pending-release PRs under recorded human RED override; 2,323 tests pass. Await human merge command and green CI; merge Brain before marking Heart ready. No merge/release authority. See active/dashboard_prompt_budget.md for validation and logs.
 
 ## vis-lp-inspection-bundle
