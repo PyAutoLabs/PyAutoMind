@@ -3,10 +3,16 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-01T08:07:25Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
+  "updated": "2026-10-01T08:15:57Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Compact expandable Heart dashboard rows \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoHeart/pull/254",
+      "prompt": "/start_dev active/compact-dashboard-rows.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#429 \u2014 eyes-board-conductor-registry",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/429",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#431 \u2014 eyes-fit-cti-instances",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/431",
       "prompt": null
     }
   ]

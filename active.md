@@ -1,5 +1,24 @@
 # Active Tasks
 
+## compact-dashboard-rows
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/253
+- issued: 2026-10-01
+- prompt: active/compact-dashboard-rows.md
+- session: Codex; session ID unavailable
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/254
+- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/254
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/compact-dashboard-rows
+- repos:
+  - PyAutoHeart: feature/compact-dashboard-rows
+- summary: Approved compact collapsed category rows, icon copy actions, table first, score and repair actions below, evidence gaps last.
+- heart-red-override:
+  - authorization: Live human 2026-10-01 explicitly authorized development shipping of this branch despite the known Heart RED reason; push and pending-release PR only, no merge or release.
+  - reasons: "release validation FAILED (stage integrate)"; current verdict timestamp 2026-10-01T08:11:41.393196+00:00. No additional RED reasons.
+  - gates: 1103 Heart tests passed at unchanged c20d5a6; HTML render and clipboard smoke passed; in-session diff review and diff --check passed; Chromium 320/390/768/1280px light/dark layout and interaction checks passed. No scientific downstream impact.
+  - records: Authorization and gates recorded on issue #253, PR body, this entry and first autonomy_log.md table.
+- resume: PR #254 open at unchanged c20d5a6 with pending-release label. Stop at PR-open; no merge or release authorized.
+
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
 - issued: 2026-09-22
