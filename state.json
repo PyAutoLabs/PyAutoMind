@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-10-01T10:09:29Z",
+  "updated": "2026-10-01T10:13:30Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "PointSolver uncapped image-position accuracy \u2014 cluster arc phase 1d \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autolens_workspace_test/pull/334",
+      "prompt": "/start_dev active/point_solver_image_accuracy.md"
+    },
     {
       "severity": "yellow",
       "text": "Streaming phase 5: per-channel cubes and phase-centre shifts in sparse_terms_from_chunks \u2014 library-shipped, workspace-pending",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#404 \u2014 codex-context-efficiency",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/404",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#387 \u2014 What shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/387",
       "prompt": null
     }
   ]

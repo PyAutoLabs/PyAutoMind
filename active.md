@@ -55,7 +55,7 @@
 - prompt: active/point_solver_image_accuracy.md
 - epic: cluster-strong-lensing
 - session: Codex; session ID unavailable
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/point-solver-image-accuracy
 - repos:
   - autolens_workspace_test: feature/point-solver-image-accuracy
@@ -64,7 +64,10 @@
   - reasons: "release validation FAILED (stage integrate)"
   - additional: "workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py)"; "manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml"
   - gates: bounded cell, saved evidence/provenance/read-only summary, padding and image-plane checks, full workspace smoke, formatting/compile/JSON/diff.
-- resume: Implement approved uncapped image-accuracy cell, validate then ship_workspace; no later phase issued.
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/334
+- resume: PR #334 open pending-release at 4bec6a7. Final 32-row sweep/provenance and geometry PASS; evidence controls, padding 12/12, image-plane/JIT and smoke 32/32 PASS; in-session review. NO-GO: three non-converged false accepts; convergence requirement misses closest-cusp images. Wait for human /prm and green CI. No merge/release or later issue authorized.
+- validation-logs: /home/jammy/Code/PyAutoLabs/.worktrees/point-solver-image-accuracy/scratch/
+- ship-heart: RED reason unchanged at 2026-10-01T10:10:03.098482+00:00; approved development-only override exercised through PR-open.
 
 ## memory-cockpit-catch-up
 - issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/109
