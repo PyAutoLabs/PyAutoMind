@@ -24,12 +24,6 @@ members out of the pick lists and work-type sections and shows them only
 grouped, phase-ordered, under their epic — worked in order through the
 epic, never picked standalone.
 
-## cluster-strong-lensing
-- title: Cluster strong lensing — Source & Cluster arc
-- ledger: draft/feature/autolens/source_cluster_arc.md
-- status: Completed evidence/fixes 1a–1d (latest workspace_test#334, 26da5b1; #333 closed). On 2026-10-01 the human transferred remaining phase-1 repairs, phase-2 profiling and forward ShapeSolver work from phase 6 to cluster-pointsolver-speed (robustness and performance). Transferred is not solved. Blanket PointSolver gate removed; next arc step is phase 3 critical-curve dispatch, sliced via start_dev. Supplied-coordinate magnification and pixel-based areas can proceed; solver-discovered images and solver-dependent inference retain workload-specific correctness gates. Cortex phase 11 stays dropped under R-20260907-05; phase-1b PyAutoLens pending-release obligation retained.
-- notes: Original phase numbers retained for history; phases 1 remainder and 2 transferred, phase 6 narrowed. Issue ONE bounded phase at a time as predecessors near shipping; no bulk queue. autolens_profiling owns robustness/settings/performance evidence; autolens_workspace_test owns numerical integration regressions wired into CI. Science project birth still requires a fresh explicit Cortex decision.
-
 ## point-source-cpu-speed
 - title: Point-source (single-source) PointSolver CPU speed-up
 - ledger: autolens_profiling/wiki/campaigns/point_source_image_plane_cpu.md (full record: results/notes/point_source_cpu_campaign.md)
