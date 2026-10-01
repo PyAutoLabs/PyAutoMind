@@ -12,7 +12,7 @@
   - PyAutoHeart: feature/dashboard-prompt-budget
   - PyAutoEyes: feature/dashboard-prompt-budget
 - authorization: Plan approved “ok go”; development entry override “i authorize, go” for Heart RED “PyAutoGalaxy: CI failure” (run 24007765443). No release or merge authority.
-- resume: Implement approved 50,000-character dashboard prompt budget and bounded Heart evidence summaries; validate before shipping.
+- resume: Implementation complete, uncommitted; 2,323 tests pass (Brain 1,131, Heart 1,113, Eyes 79), Eyes lint/format/live checks pass. Await shipping override for NEW Heart RED `release validation FAILED (stage integrate)`. PR bodies and logs in task-root logs/. Then commit/push/open 3 linked PRs; Brain must merge before Heart. See active/dashboard_prompt_budget.md for complete validation and gate record.
 
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102

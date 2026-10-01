@@ -4,7 +4,7 @@ Type: bug
 Issued: 2026-10-01
 Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/261
 Primary: @PyAutoHeart
-Related: @PyAutoBrain
+Related: @PyAutoBrain @PyAutoEyes
 
 ## Original request
 
@@ -44,3 +44,17 @@ Initial source targets: PyAutoBrain and PyAutoHeart; expand only if the dashboar
 ## Reasoning record
 
 Bug and Feature conductors run on this prompt; both found no matching Memory context. Bug heuristic reports medium severity, multi-repo, infrastructure owner Heart, investigate-first. Source inspection identifies unbounded serialization in build_fix_plan and an unguarded shared copy listener. No library/scientific API change is intended; the heuristic's public-API warning is not supported by the identified scope.
+
+## Validated implementation — 2026-10-01
+
+- Implementation complete in `.worktrees/dashboard-prompt-budget/{PyAutoBrain,PyAutoHeart,PyAutoEyes}`, all on `feature/dashboard-prompt-budget`; changes remain uncommitted pending the changed Heart shipping gate.
+- Shared 50,000-character clipboard guard covers the theme family, Heart's override and standalone batch packets. Oversized requests download intact for attachment; no silent truncation or false copy success.
+- Eyes was the other standalone clipboard path discovered during the approved inventory. It enforces the same ceiling without adding a Brain checkout dependency; dashboard.html regenerated.
+- Heart emits a prompt under 45,000 characters, explicitly marking omissions and referring to board.json. Complete source observations are retained in additive `fix_plan.evidence`; readiness calculations are unchanged.
+- Synthetic reproduction: 1,351,774-character old prompt → 2,452-character new prompt; all 1,350,000 raw observation characters preserved.
+- Validation: Heart 1,113 passed; Brain 1,131 passed; Eyes 79 passed (2,323 total). Eyes Ruff lint/format and live check of all 265 figure URLs plus state schema passed. All diffs pass whitespace checks.
+- Brain's full test run needs `env -u PYAUTO_MIND -u PYAUTO_HEART` after activation: the grouped-layout fixture expects its temporary paths to override ambient worktree hints. Initial run was 1 failed/1,130 passed; the isolated fixture and then full suite passed with those hints removed, without modifying source for that failure.
+- Full logs: task-root `logs/heart-tests.log`, `logs/brain-tests-clean-env.log`; PR drafts: `logs/{brain,heart,eyes}-pr.md`.
+- Refreshed vitals RED: `release validation FAILED (stage integrate)`. Yellow reasons: `workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py)`; `manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml`; `manifest drift: tenant firewall (organ code) — 1 mismatch(es) vs PyAutoMind/repos.yaml`; `manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml`.
+- The earlier override covered `PyAutoGalaxy: CI failure`, not this new release-validation failure. Await live human authorization for commit/push/opening development PRs under the new RED reason; no release or merge authority.
+- Next: after authorization, commit/push the three repositories and open linked pending-release PRs. Merge Brain before Heart so the shared browser guard is present. Update active.md with PR URLs and stop at PR-open.
