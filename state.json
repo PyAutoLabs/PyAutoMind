@@ -2,11 +2,17 @@
   "schema_version": 1,
   "organ": "mind",
   "repo": "PyAutoMind",
-  "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-01T08:24:23Z",
+  "status": "red",
+  "headline": "RED \u2014 24 picks \u00b7 4 in flight",
+  "updated": "2026-10-01T08:25:11Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "red",
+      "text": "PointSolver duplicate-image policy \u2014 cluster arc phase 1c \u2014 awaiting-input",
+      "url": "https://github.com/PyAutoLabs/autolens_workspace_test/issues/331",
+      "prompt": "/start_dev active/point_solver_duplicate_policy.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#429 \u2014 eyes-board-conductor-registry",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/429",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#431 \u2014 eyes-fit-cti-instances",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/431",
       "prompt": null
     }
   ]

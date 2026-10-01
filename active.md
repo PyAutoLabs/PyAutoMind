@@ -47,8 +47,10 @@
 - prompt: active/point_solver_duplicate_policy.md
 - epic: cluster-strong-lensing
 - session: Codex; session ID unavailable
-- status: workspace-dev
+- status: awaiting-input
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/point-solver-duplicate-policy
 - repos:
   - autolens_workspace_test: feature/point-solver-duplicate-policy
-- resume: Phase 1c plan approved in session. Reproduce duplicates and close-pair controls, publish policy evidence, then ship_workspace. Heart entry STALE; refresh at shipping. No later phase issued.
+- resume: Implemented locally; 54 scalar rows + 6 vmap controls complete, padding 12/12 and full smoke 32/32 passed, image-plane parity and formatting/JSON/diff checks passed, in-session review complete. NO-GO for tested grouping heuristics; close-cusp candidates exceed cap 20 (uncapped max 87), with a four-NumPy/three-JAX missing-image witness. Next: live task-specific Heart RED development override, then commit/push/open pending-release PR using tmp/duplicate-pr.md in the separate Mind planning checkout. No feature commit/push/PR yet; no merge/release authorized.
+- heart-block: RED "release validation FAILED (stage integrate)" (snapshot 2026-10-01T08:11:41.393196+00:00; current readiness re-read at handoff). No override granted.
+- validation-logs: /home/jammy/Code/PyAutoLabs/.worktrees/point-solver-duplicate-policy/scratch/{duplicate-policy,padding,image-plane,smoke}.log

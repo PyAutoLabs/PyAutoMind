@@ -92,3 +92,31 @@ Conflict guard passes for autolens_workspace_test. Heart entry feed is STALE:
 explicit human approval; no issue, implementation worktree or source/test edit.
 
 Approved 2026-10-01: user "I approve". Issued as #331; workspace development started.
+
+## Validated local deliverable — 2026-10-01
+
+Implemented `scripts/point_source/solver/duplicate_policy.py`, raw JSON and
+`DUPLICATE_POLICY.md`. 54 scalar rows + 6 vmap controls. All 36 quad rows meet
+the four-image positional criterion under all three policies; all 18 new
+near-cusp rows exceed JAX capacity 20 (uncapped maximum 87). Independent roots
+show a four-NumPy/three-JAX fine-precision witness; no cap-size A/B, so no
+sole-cause attribution. Distance grouping of the true roots can reduce four
+to two. NO-GO for promoting these heuristics; overflow observability is next.
+
+Validation: padding 12/12, existing image-plane/JIT regression, full smoke
+32/32, evidence/JSON totals, Black/compile/diff checks and in-session review
+all pass. No independent-review claim. Worktree branch remains local and
+uncommitted on base `7f75f6c2`; three new scripts/evidence/report files only.
+Logs: task bundle `scratch/{duplicate-policy,padding,image-plane,smoke}.log`.
+PR body: separate Mind planning checkout `tmp/duplicate-pr.md`.
+
+Ship gate: fresh authoritative Heart RED, "release validation FAILED (stage
+integrate)" (snapshot 2026-10-01T08:11:41.393196+00:00, re-read at handoff).
+Yellow reasons also recorded in task scratch `readiness-final.json`:
+"workspace validation not passing (0 failed, 1 timeout, cloud#36404726969:
+autolens_test scripts/multi_dataset/rectangular.py)" and "manifest drift:
+public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml".
+Await live task-specific development-only override for #331, then ship_workspace.
+The plan approval is not a RED override. No source commit/push/PR, merge or
+release authorized. Do not repeat successful tests absent source changes or
+new concerns. No later phase issued; parent phase 1 remains incomplete.

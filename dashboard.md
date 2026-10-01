@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/point_solver_duplicate_policy.md">PointSolver duplicate-image policy — cluster arc phase 1c</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/331">issue #331</a> — issued 2026-10-01 — workspace-dev</summary>
+<details><summary>📋 <a href="active/point_solver_duplicate_policy.md">PointSolver duplicate-image policy — cluster arc phase 1c</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/331">issue #331</a> — issued 2026-10-01 — awaiting-input</summary>
 
 ```
 /start_dev active/point_solver_duplicate_policy.md
