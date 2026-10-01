@@ -29,10 +29,13 @@
 - issued: 2026-10-01
 - prompt: active/trial_ecosystem_role_routing.md
 - session: Codex (GPT-6), local, 2026-10-01
-- status: workspace-dev
+- status: awaiting-merge
 - autonomy: supervised; human "ok do it" authorized the recommended next routing trial
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/ecosystem-routing-trial
 - repos:
   - PyAutoBrain: feature/ecosystem-routing-trial
 - summary: Six-case exploratory baseline/checklist comparison of ecosystem routing; retain bounded evidence and report before changing machinery.
-- resume: Approved research step and detailed plan in Brain #444. Freeze cases/key/protocol before fresh-context evaluations; write report, validate and independently review; ship gate separate.
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/445
+- review: independent Claude Fable FINDINGS corrected; focused re-review CLEAN; all 14 committed files match reviewed SHA256 snapshot
+- validation: Sphinx HTML 0 warnings; frozen input/response hashes and JSON verified; 36 source paragraphs checked against pinned commits; Heart GREEN score 100 at 2026-10-01T19:53:08.542623+00:00
+- resume: PR #445 open at 6ea15719854f19a3c9a8f2d0c828fbfdfbc8e3cc. Both conditions correct on 6/6 change targets; checklist conflates decision owner in three fields while action routes stay correct. Retain guidance, no mandatory checklist. Context scoring leniency is disclosed as grading-time; no retrieval-efficiency claim. Review evidence at tmp/ecosystem-routing-trial-review/. Next human /prm judges every exact-head CI run/leg and merges/closes. Candidate organ-specification work proposed only; not filed.
