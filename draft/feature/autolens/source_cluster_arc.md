@@ -354,3 +354,42 @@ edits; no later phase queued. Parent phase 1 incomplete; phase 2 gated.
 ## Phase 1d issued — 2026-10-01
 
 User “I approve” granted the plan and task-specific development-only RED override. Only autolens_workspace_test#333 issued; prompt active/point_solver_image_accuracy.md. Worktree .worktrees/point-solver-image-accuracy, branch feature/point-solver-image-accuracy at 13c9d1f. Implement and validate through PR creation; no merge/release authorized.
+
+
+## Phase 1d PR open — 2026-10-01
+
+Implemented and validated autolens_workspace_test#333; PR
+https://github.com/PyAutoLabs/autolens_workspace_test/pull/334 open at
+`4bec6a72a20659dca5bd08c8348142ab2c64d5c4`, labelled pending-release.
+Files: scripts/point_source/solver/{image_accuracy.py,
+image_accuracy_evidence.json,IMAGE_ACCURACY.md}. No production changes.
+
+Final exact-script matrix: 32/32 CPU fp64 rows, zero resource limits,
+geometry correspondence 32/32, before/after script/helper/library/environment
+provenance PASS. 10/32 raw rows miss per-root coverage; three non-converged
+polished candidates falsely pass the conditioning screen, one in a resolved
+reference-pair row. Requiring convergence removes all three false accepts but
+covers only one or two of four images in every closest-cusp row. NO-GO for
+production promotion; neither extra refinement nor this local correction
+screen establishes safe image identity. See report for the exact counterexample.
+
+Validation: saved-matrix/read-only summary, coordinate-metric recomputation,
+four corrupt-evidence controls and empty-candidate controls PASS; existing
+padding 12/12, image-plane/JIT PASS; full workspace smoke 32/32; Black,
+compile/JSON/diff checks and in-session review PASS (not independent review).
+Logs: .worktrees/point-solver-image-accuracy/scratch/{image-accuracy-final.log,
+evidence-validation.log,summary.log,padding.log,image-plane.log,smoke.log,
+review.md,vitals.log,readiness.json}. Task-owned activation avoids shared-link
+clobbering. Earlier development passes are not the shipped evidence.
+
+Live user “I approve” authorized the plan and task-specific development-only
+Heart RED override through PR creation. Ship-time readiness re-read at
+2026-10-01T10:10:03.098482+00:00 retains “release validation FAILED (stage integrate)”.
+Additional reasons unchanged: “workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py)”;
+“manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml”.
+Recorded on issue, PR, active.md and autonomy_log.md. No merge/release authorized.
+GitHub changes gate passed; Python 3.12/3.13 smoke queued at handoff.
+Last completed subphase remains 1c; 1d awaits review/merge. Phase 1 remains
+incomplete; phase 2 gated; no later issue queued. Next production scope is an
+observable containment-overflow contract once Array's claim clears, with
+separate accuracy/identity work still required. Cortex phase 11 stays dropped.

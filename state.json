@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-10-01T10:13:05Z",
+  "updated": "2026-10-01T10:13:47Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "Lensing catch-up: structured freshness and a safe manual action \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/PyAutoMemory/issues/109",
       "prompt": "/start_dev active/cockpit_lensing_catch_up.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "PointSolver uncapped image-position accuracy \u2014 cluster arc phase 1d \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autolens_workspace_test/pull/334",
+      "prompt": "/start_dev active/point_solver_image_accuracy.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#426 \u2014 autolens-visualization-rebirth",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/426",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#404 \u2014 codex-context-efficiency",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/404",
       "prompt": null
     }
   ]
