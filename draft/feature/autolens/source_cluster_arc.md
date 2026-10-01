@@ -237,3 +237,12 @@ work within parent phase 1. Phase 2 remains gated; no further issue queued.
   implement the evidence cell, then ship_workspace. Containment-overflow policy
   remains in parent phase 1; phase 2 stays gated. Cortex's project ledger and
   R-20260907-05 still record phase 11 as dropped; no successor is implied.
+
+## Phase 1c issued — 2026-10-01
+
+User approved the detailed plan with "I approve". Only issue
+https://github.com/PyAutoLabs/autolens_workspace_test/issues/331 was opened.
+Prompt: `active/point_solver_duplicate_policy.md`. Workspace worktree:
+`/home/jammy/Code/PyAutoLabs/.worktrees/point-solver-duplicate-policy`, branch
+`feature/point-solver-duplicate-policy`, base `7f75f6c2`. Heart entry STALE;
+conflict guard clear. Implement duplicate-policy evidence then ship_workspace.
