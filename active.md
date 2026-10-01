@@ -45,7 +45,7 @@
   - scope: Task PyAutoHeart#257, development shipping and merge on all-green CI during this turn; no release.
   - reasons: release validation FAILED (stage integrate); workspace validation not passing (0 failed, 1 timeout, cloud#36404726969: autolens_test scripts/multi_dataset/rectangular.py)
   - gates: 896 relevant tests passed; independent review CLEAN; generated dashboard checks passed.
-- resume: prm approved 2026-10-01, including no-CI merges for Gut/Scientist against passed local tests. Seven of eight PRs merged: Brain #436, Heart #259, Hands #293, Memory #113, Gut #17, Scientist #38, Cortex #53. Eyes #10 remains open: lint job 110349110657 failed live check with "FAIL dashboard: stale for galaxy — run `pyauto-eyes board`"; Ruff/format passed, tests 76 passed/1 skipped. Failure log .worktrees/task-notes/eyes-ci-failure.log. Do not close task or remove worktree until Eyes repaired and merged. No background waiter or auto-merge armed. Canonical Cortex ledger edits preserved.
+- resume: Seven of eight PRs merged. Eyes #10 repaired in 119d0c8: regenerated dashboard from published manifests, preserving all survey/critique context. Ruff and formatting passed, 77 tests passed, live pyauto-eyes check passed for all 265 URLs and every manifest plus state schema. Pushed; new CI must pass before merge. Resume prm on Eyes #10 then complete task/cleanup all eight worktrees. Preserve canonical Cortex ledger edits.
 - workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/436
 - workspace-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/259
 - workspace-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/293
