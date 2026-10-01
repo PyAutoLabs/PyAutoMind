@@ -43,3 +43,15 @@
 - resume: PR #334 open pending-release at 4bec6a7. Final 32-row sweep/provenance and geometry PASS; evidence controls, padding 12/12, image-plane/JIT and smoke 32/32 PASS; in-session review. NO-GO: three non-converged false accepts; convergence requirement misses closest-cusp images. Wait for human /prm and green CI. No merge/release or later issue authorized.
 - validation-logs: /home/jammy/Code/PyAutoLabs/.worktrees/point-solver-image-accuracy/scratch/
 - ship-heart: RED reason unchanged at 2026-10-01T10:10:03.098482+00:00; approved development-only override exercised through PR-open.
+
+## memory-digest-state
+- issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/111
+- issued: 2026-10-01
+- prompt: active/cockpit_digest_freshness.md
+- session: Codex; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/memory-digest-state
+- repos:
+  - PyAutoMemory: feature/memory-digest-state
+- approval: User “ok then go” approved digest freshness increment; no merge authority.
+- resume: Implement structured digest observations/actions, validate and ship through Heart gate.
