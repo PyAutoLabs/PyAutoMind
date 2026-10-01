@@ -28,8 +28,10 @@
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/265
 - issued: 2026-10-01
 - session: Codex local health remediation
-- status: library-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/cloud-test-run-card
 - repos:
   - PyAutoHeart: feature/cloud-test-run-card
 - notes: User requested end-to-end completion without questions; scope is measured cloud test card and sanctioned dev-box publish.
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/266
+- validation: 1143 Heart tests passed; tenant firewall and diff-check passed; local Heart GREEN/100.
