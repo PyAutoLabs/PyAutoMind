@@ -2,15 +2,15 @@
   "schema_version": 1,
   "organ": "mind",
   "repo": "PyAutoMind",
-  "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-10-01T10:13:47Z",
+  "status": "yellow",
+  "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
+  "updated": "2026-10-01T10:15:03Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
-      "severity": "red",
-      "text": "Lensing catch-up: structured freshness and a safe manual action \u2014 awaiting-input",
-      "url": "https://github.com/PyAutoLabs/PyAutoMemory/issues/109",
+      "severity": "yellow",
+      "text": "Lensing catch-up: structured freshness and a safe manual action \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoMemory/pull/110",
       "prompt": "/start_dev active/cockpit_lensing_catch_up.md"
     },
     {
