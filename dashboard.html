@@ -1404,17 +1404,45 @@ Contract (the `start-bundle` skill is the full body):
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/research/autolens_profiling/interferometer_streaming_scaling.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autolens_profiling/interferometer_streaming_scaling.md">Campaign: interferometer streaming (array-free) vs in-memory — memory and time scaling…</a><span class="tags"><span class="pill w">🔬 research</span><span class="pill">autolens_profiling</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 </details>
 <ul class="boards"><li class="muted" style="padding:.3rem 0">Boards:</li><li><a data-organ="brain" href="https://pyautolabs.github.io/PyAutoBrain/">Brain</a></li><li><a data-organ="cortex" href="https://pyautolabs.github.io/PyAutoCortex/">Cortex</a></li><li><a data-organ="memory" href="https://pyautolabs.github.io/PyAutoMemory/">Memory</a></li><li><a data-organ="eyes" href="https://pyautolabs.github.io/PyAutoEyes/">Eyes</a></li><li><a data-organ="heart" href="https://pyautolabs.github.io/PyAutoHeart/">Heart</a></li><li><a data-organ="hands" href="https://pyautolabs.github.io/PyAutoHands/">Hands</a></li><li><a data-organ="nerves" href="https://pyautolabs.github.io/PyAutoNerves/">Nerves</a></li><li><a data-organ="gut" href="https://pyautolabs.github.io/PyAutoGut/">Gut</a></li><li><a data-organ="organism" href="https://pyautolabs.github.io/PyAutoScientist/">Scientist</a></li></ul>
-<script>async function copyCmd(b){
+<script>const MAX_PROMPT_CHARS = 50000;
+function promptFits(text){
+  let count=0;for(const character of text){if(++count>MAX_PROMPT_CHARS)return false;}
+  return true;
+}
+function guardPrompt(text, button){
+  let status=document.getElementById('prompt-budget-status');
+  if(promptFits(text)){
+    if(status){if(status.dataset.url)URL.revokeObjectURL(status.dataset.url);status.remove();}
+    return true;
+  }
+  if(!status){status=document.createElement('p');status.id='prompt-budget-status';
+    status.setAttribute('role','status');status.setAttribute('aria-live','polite');
+    button.insertAdjacentElement('afterend',status);}
+  if(status.dataset.url)URL.revokeObjectURL(status.dataset.url);
+  status.textContent='Not copied: this request exceeds the 50,000-character budget. '+
+    'Download the complete request and attach the file to your coding chat. Nothing was cut off. ';
+  const link=document.createElement('a');
+  link.href=URL.createObjectURL(new Blob([text],{type:'text/plain;charset=utf-8'}));
+  status.dataset.url=link.href;link.download='dashboard-request.txt';
+  link.textContent='Download complete request';status.appendChild(link);
+  return false;
+}
+async function copyCmd(b){
   const cmd=b.dataset.cmd;
-  try{await navigator.clipboard.writeText(cmd);}
+  if(!guardPrompt(cmd,b))return;
+  let copied=false;
+  try{await navigator.clipboard.writeText(cmd);copied=true;}
   catch(e){const t=document.createElement("textarea");t.value=cmd;
-    document.body.appendChild(t);t.select();document.execCommand("copy");
-    t.remove();}
+    document.body.appendChild(t);
+    try{t.select();copied=document.execCommand("copy")===true;}
+    catch(e){copied=false;}finally{t.remove();}}
   const old=b.textContent;
-  b.textContent="\u2713";b.classList.add("ok");
+  b.textContent=copied?"\u2713":"Copy failed";
+  if(copied)b.classList.add("ok");
   setTimeout(()=>{b.textContent=old;b.classList.remove("ok");},1200);}
 document.addEventListener("click",e=>{
-  const b=e.target.closest("button.copy");if(b)copyCmd(b);});
+  const b=e.target.closest("button.copy");
+  if(b && guardPrompt(b.dataset.cmd,b))copyCmd(b);});
 // Recent shows one page and reveals the next on each tap of the … button,
 // which retires itself once the feed is exhausted. Every row is already in the
 // DOM, so this never re-renders or re-sorts anything.
