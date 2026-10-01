@@ -52,7 +52,8 @@
 - worktree: ~/Code/PyAutoLabs-wt/streaming-p5-cubes-phase-centre
 - repos:
   - PyAutoArray: feature/streaming-p5-cubes-phase-centre
+  - PyAutoGalaxy: feature/streaming-p5-cubes-phase-centre
   - autolens_workspace: feature/streaming-p5-cubes-phase-centre
 - summary: MFS SparseTerms = sum of per-channel terms (__radd__, 1e-12 parity vs in-memory MFS); phase_centre=(y, x) arcsec in sparse_terms_from_chunks / from_stream (data * exp(+2πi(u l0 + v m0)), provenance-checked in __add__); array-free datacube example modeling_array_free.py in autolens_workspace under the smoke profile.
-- resume: Issue + plan on #600; next /start_library (PyAutoArray) then /start_workspace (autolens_workspace); DFT point-source test pins the shift sign.
+- resume: Library commit d3069dbd (PyAutoArray, 1913 tests); Codex review 5 findings — F1 (FITS round trip drops phase_centre → PyAutoGalaxy writer/loader, repo added to the task), F2 (reject phase_centre in apply_sparse_operator_from_chunks), F4 (data_term from shifted data) being fixed; F3/F5 pre-existing filed draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md; workspace example modeling_array_free.py in progress (smoke exit 0).
 
