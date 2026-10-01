@@ -1,3 +1,19 @@
+# Structured arXiv digest freshness
+
+Merged 2026-10-01: https://github.com/PyAutoLabs/PyAutoMemory/pull/112
+Issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/111
+Source: ac22777; merge: 1e89ddd.
+
+Independent lensing and interests digest records now expose healthy/stale/unknown state, last recorded date, observation time, weekday threshold, explanation, evidence links and explicit safety-labelled investigation actions. The board and cockpit share these observations. Quiet days stay healthy; malformed/future/missing evidence remains unknown. Digest delivery stays distinct from human lensing catch-up. No agent, notification service or automatic remediation was added.
+
+Validation: 272 local tests; make validate; shared Brain v1 feed validator; Chromium mobile/desktop light/dark, three states, workflow/stamp links and clipboard; in-session diff/visual review. Exact-head CI run 36850871389 and every validate step passed; PR was CLEAN/MERGEABLE. No upstream library dependency or release obligation.
+
+Human “I authorize” permitted development shipping despite Heart RED `release validation FAILED (stage integrate)`; subsequent `$prm` authorized merge and close-out. Heart remains RED; no release authorized.
+
+Evidence retained in organs/PyAutoMind/tmp/memory-digest-state-evidence/. No follow-up required within the approved scope. Dates represent recorded digest heartbeats, not full workflow success or invented run IDs.
+
+## Original prompt
+
 # Structured arXiv digest freshness in the cockpit
 
 Type: feature
@@ -39,3 +55,5 @@ Branch survey: Memory clean main at dc9c3b5; no active Memory claims. Worktree f
 ## Validation / shipping checkpoint
 
 Implemented in feature/memory-digest-state, uncommitted pending task-specific Heart override. 272 tests pass; make validate passes; shared Brain v1 validation accepts healthy/stale/unknown; Chromium mobile/desktop light/dark checks pass including evidence links and clipboard. Diff review found no issues. Heart RED: `release validation FAILED (stage integrate)`. Evidence and PR draft: `.worktrees/memory-digest-state/checks/` under workspace root.
+
+Shipping authorized by live user “I authorize” after exact Heart RED and branch gates were reported. Commit ac22777; pending-release PR https://github.com/PyAutoLabs/PyAutoMemory/pull/112. Await human /prm and green CI; no merge/release authority.
