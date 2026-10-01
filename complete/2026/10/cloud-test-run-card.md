@@ -1,3 +1,13 @@
+# Cloud test-run card reflects observed smoke results
+
+PyAutoHeart PR #266 makes the published board render measured workspace test results already ingested by the cloud health workflow. Missing artifacts remain unknown; measured failures and conclusion-only counts keep their existing semantics. No release score, threshold, skip or weight changed.
+
+Validation: 1,143 Heart tests passed in an isolated worktree with the required Brain sibling; dashboard focused tests 128 passed; tenant firewall and diff-check passed. The previous shell path-test failure came from the missing sibling in the first isolated run, and passed unchanged once the normal worktree layout was restored. User authorized end-to-end work including CI judgement, merge, and dashboard publication.
+
+The older dev-box worktree/timing/profiling observations are advisory and will be refreshed with the privacy-scrubbed `pyauto-heart tick && pyauto-heart publish` after merge. User worktrees remain intact. The task worktrees have only reproducible Python/pytest caches; evidence and logs are stored outside them.
+
+## Original prompt
+
 # Show cloud-observed workspace tests on the Heart board
 Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/265
 Issued: 2026-10-01
