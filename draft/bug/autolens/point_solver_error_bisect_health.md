@@ -114,3 +114,16 @@ The backend-default padding witness above is fixed by PyAutoLens#760
 Explicit call-time xp now controls omitted remove_infinities; explicit options
 are unchanged. All library and workspace CI jobs passed. Duplicate-image and
 containment-overflow policy remain open within this parent prompt.
+
+## Phase 1c local policy evidence — 2026-10-01 (not shipped)
+
+Task autolens_workspace_test#331, `active/point_solver_duplicate_policy.md`:
+54 scalar cases + 6 vmap controls. All three grouping candidates repair the
+quad witness, but closer-to-cusp controls reach 87 uncapped candidates versus
+JAX capacity 20; a fine-resolution case has four NumPy images and three JAX
+images. This is not sole-cause attribution without a cap-size A/B. The direct
+true-root distance control also collapses four distinct images to two.
+NO-GO for promoting the tested heuristics. Prioritize an observable overflow
+contract before revisiting deduplication on capacity-clean controls. All local
+validation passes (smoke 32/32, padding 12/12, image-plane parity); Heart RED
+currently blocks shipping #331 pending live human override. No later task issued.
