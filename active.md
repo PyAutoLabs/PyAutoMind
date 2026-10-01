@@ -29,10 +29,10 @@
 - issued: 2026-10-01
 - prompt: active/adopt_ecosystem_responsibility_roles.md
 - session: Codex (GPT-6), local, 2026-10-01
-- status: workspace-dev
+- status: awaiting-input
 - autonomy: supervised; plan and branch approved in-session ("contiue and i approve")
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/ecosystem-role-docs
 - repos:
   - PyAutoBrain: feature/ecosystem-role-docs
 - summary: Adopt library/project/organ responsibility vocabulary and reconcile canonical/public Eyes descriptions; preserve repository categories and release gates.
-- resume: Approved plan in Brain #442. Edit ORGANISM.md and relevant docs, build Sphinx/check links, independent review, then shipping gate. Inference docs follow-up remains separately filed under existing repo claim.
+- resume: Five-file documentation adoption complete locally; includes factual Eyes skill boundary fix, no command/workflow changes. Independent Claude Fable 5.1 final working-tree review CLEAN; Sphinx zero warnings; links/whitespace PASS. Reviewed hashes in task-bundle review-final-hashes.json. Not committed/pushed. Heart YELLOW: public front-door organ tables (generated), 1 mismatch vs repos.yaml; workspace checkouts (manifest ↔ disk), 1 mismatch vs repos.yaml. Await exact-reason shipping acknowledgement for #442, then commit/push/PR; merge separate. See issue comment 5938948186, task-bundle fable-final-review.md, heart-readiness.json and research-pr.md.
