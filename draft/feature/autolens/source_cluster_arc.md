@@ -246,3 +246,26 @@ Prompt: `active/point_solver_duplicate_policy.md`. Workspace worktree:
 `/home/jammy/Code/PyAutoLabs/.worktrees/point-solver-duplicate-policy`, branch
 `feature/point-solver-duplicate-policy`, base `7f75f6c2`. Heart entry STALE;
 conflict guard clear. Implement duplicate-policy evidence then ship_workspace.
+
+## Phase 1c validated, awaiting development ship gate — 2026-10-01
+
+- #331 has a complete local research deliverable (54 scalar rows + 6 vmap
+  controls): `scripts/point_source/solver/{duplicate_policy.py,
+  duplicate_policy_evidence.json,DUPLICATE_POLICY.md}` in its task worktree.
+- Decision: NO-GO for promoting distance/shared-edge/root-polishing heuristics.
+  They repair the 36 quad rows, but all 18 near-cusp rows exceed cap 20;
+  uncapped counts reach 87. Fine NumPy finds four images where eager/JIT JAX
+  find three (observed after capped selection; no sole-cause cap-size A/B).
+  Grouping independent true roots by 2×precision can collapse four to two.
+- Recommended next bounded library work: observable containment-overflow
+  contract, then revisit image identity on capacity-clean close-pair evidence.
+  This refines the prior ordering; no new follow-up issue has been created.
+- Validation: full smoke 32/32; padding matrix 12/12; image-plane/JIT regression,
+  saved-matrix and analytic reference checks, Black/compile/JSON/diff checks
+  and in-session review passed. No production code changed.
+- Current blocker: Heart RED "release validation FAILED (stage integrate)".
+  Work remains local/uncommitted on `feature/point-solver-duplicate-policy`;
+  no PR yet. Await a live development-only RED override for #331, then
+  ship_workspace. No merge/release authorized. Details and logs in active prompt.
+- Last shipped subphase remains 1b. Phase 1c is validated but NOT shipped;
+  parent phase 1 remains incomplete and phase 2 gated. Cortex unchanged.
