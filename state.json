@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-01T19:49:12Z",
+  "updated": "2026-10-01T19:56:45Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Trial ecosystem role routing against current guidance \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/445",
+      "prompt": "Use the start-dev skill. active/trial_ecosystem_role_routing.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#387 \u2014 What shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/387",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#406 \u2014 Shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/406",
       "prompt": null
     }
   ]
