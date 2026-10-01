@@ -40,3 +40,15 @@
   - PyAutoLens: feature/streaming-p4-light-profile-identity
 - summary: Ordinary (non-linear) light profiles fit array-free via data_term - 2 i_p.d~ + i_p.W~i_p (DatasetInterface data_term override; no-inversion chi_squared hook); profile_visibilities never formed.
 - resume: Issue + plan on #598; next /start_library (Array -> Galaxy -> Lens), red-check parity tests on unfixed source first (fast_chi_squared would silently use the unsubtracted data_term).
+
+## point-solver-duplicate-policy
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/331
+- issued: 2026-10-01
+- prompt: active/point_solver_duplicate_policy.md
+- epic: cluster-strong-lensing
+- session: Codex; session ID unavailable
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/point-solver-duplicate-policy
+- repos:
+  - autolens_workspace_test: feature/point-solver-duplicate-policy
+- resume: Phase 1c plan approved in session. Reproduce duplicates and close-pair controls, publish policy evidence, then ship_workspace. Heart entry STALE; refresh at shipping. No later phase issued.

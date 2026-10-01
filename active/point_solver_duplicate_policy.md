@@ -7,11 +7,13 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
 Epic: cluster-strong-lensing
 Phase: 1
 Parent: draft/bug/autolens/point_solver_error_bisect_health.md
 Filed: 2026-10-01
+Issued: 2026-10-01
+Issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/331
 
 ## Original user request (verbatim)
 
@@ -88,3 +90,5 @@ commits behind origin/main at survey time; start_workspace must use fresh main.
 Conflict guard passes for autolens_workspace_test. Heart entry feed is STALE:
 "test run status unknown (no report.json)"; planning is permitted. Plan pending
 explicit human approval; no issue, implementation worktree or source/test edit.
+
+Approved 2026-10-01: user "I approve". Issued as #331; workspace development started.
