@@ -252,7 +252,7 @@ Use the start-dev skill. draft/research/pyautohands/git_docs.md
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/point_audits_wheel_provenance.md">Make point-solver audits work with installed wheels</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/335">issue #335</a> — issued 2026-10-01 — workspace-dev</summary>
+<details><summary>📋 <a href="active/point_audits_wheel_provenance.md">Make point-solver audits work with installed wheels</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/335">issue #335</a> — issued 2026-10-01 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/336">autolens_workspace_test#336</a></summary>
 
 ```
 Use the start-dev skill. active/point_audits_wheel_provenance.md

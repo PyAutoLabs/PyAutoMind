@@ -29,9 +29,10 @@
 - issued: 2026-10-01
 - prompt: active/point_audits_wheel_provenance.md
 - session: Codex; session ID unavailable
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/336
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/point-audits-wheel-provenance
 - repos:
   - autolens_workspace_test: feature/point-audits-wheel-provenance
-- corrective-red: "release validation FAILED (stage integrate); live user approval: continue, I approve of this plan; causal fix for wheel-incompatible point-solver audits; issue #335 records authorization. No merge/release/rehearsal."
-- resume: Implement wheel provenance and pinned historical replay, validate, open pending-release PR.
+- corrective-red: "release validation FAILED (stage integrate); live user approval: continue, I approve of this plan; causal fix for wheel-incompatible point-solver audits; authorization: https://github.com/PyAutoLabs/autolens_workspace_test/issues/335#issuecomment-5935062749. No merge/release/rehearsal."
+- resume: "PR #336 open at e4ba91f, pending-release. 32/32 Heart-isolated smoke; 9 regression tests in source, wheel and isolated environments; full 24-case TestPyPI wheel audit and resume; historical replay 16/16 with zero difference. CI Python 3.12 running / 3.13 queued at last check. No merge/release/rehearsal. Human /prm after green checks; then fresh release evidence through release skill. Heart RED score 45, unchanged integrate failure; workspace timeout and two manifest warnings remain."
