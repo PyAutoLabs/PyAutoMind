@@ -268,7 +268,7 @@ Use the start-dev skill. active/point_source_search_nautilus_leaf.md
 
 </details>
 
-<details><summary>📋 <a href="active/trial_ecosystem_role_routing.md">Trial ecosystem role routing against current guidance</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/444">issue #444</a> — issued 2026-10-01 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/445">PyAutoBrain#445</a></summary>
+<details><summary>📋 <a href="active/trial_ecosystem_role_routing.md">Trial ecosystem role routing against current guidance</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/444">issue #444</a> — issued 2026-10-01 — awaiting-input — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/445">PyAutoBrain#445</a></summary>
 
 ```
 Use the start-dev skill. active/trial_ecosystem_role_routing.md
