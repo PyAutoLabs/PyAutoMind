@@ -42,11 +42,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 2 |
+| [In flight](#in-flight) (`active/`) | 3 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 264 |
+| [Backlog](#backlog) (`draft/`) | 263 |
 
 > **No batch in flight.**
 
@@ -256,6 +256,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 Use the start-dev skill. active/point_source_search_nautilus_leaf.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/trial_ecosystem_role_routing.md">Trial ecosystem role routing against current guidance</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/444">issue #444</a> — issued 2026-10-01 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/trial_ecosystem_role_routing.md
 ```
 
 </details>
@@ -580,7 +588,7 @@ Use the route skill. start the planned PyAutoMind task latent-nan-guard-honest-r
 
 ## Backlog
 
-**264** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **55** of them belong to an epic and are listed only under [Epics](#epics) below.
+**263** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **55** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 79</summary>
@@ -1553,7 +1561,7 @@ Use the start-dev skill. draft/feature/pyautobrain/register_profiling_dashboard_
 </details>
 
 <details>
-<summary><b>research</b> — 27</summary>
+<summary><b>research</b> — 26</summary>
 
 <details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon</a> — autofit · large · human-required · high</summary>
 
@@ -1647,14 +1655,6 @@ Use the start-dev skill. draft/research/autoarray/rectangular_kernel_bandwidth_d
 
 ```
 Use the start-dev skill. draft/research/libraries/intel_macos_support_policy.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/pyautobrain/trial_ecosystem_role_routing.md">Trial ecosystem role routing against current guidance</a> — pyautobrain · medium · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/research/pyautobrain/trial_ecosystem_role_routing.md
 ```
 
 </details>
@@ -2579,7 +2579,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-01 | filed | <a href="draft/research/pyautobrain/trial_ecosystem_role_routing.md">Trial ecosystem role routing against current guidance</a> |
+| 2026-10-01 | issued | <a href="active/trial_ecosystem_role_routing.md">Trial ecosystem role routing against current guidance</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
 | 2026-10-01 | filed | <a href="draft/docs/autolens_inference/reconcile_cortex_ledger_references.md">Reconcile inference documentation with the current Cortex ledger…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
@@ -3236,7 +3236,7 @@ Use the start-dev skill. draft/research/autolens_profiling/interferometer_stream
 
 </details>
 
-73 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+72 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3281,7 +3281,7 @@ Use the start-dev skill. draft/research/autolens_profiling/interferometer_stream
 - `draft/docs/autolens/split_lensing_regimes.md`
 - `draft/docs/autolens_inference/reconcile_cortex_ledger_references.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
-- _… and 33 more_
+- _… and 32 more_
 
 </details>
 

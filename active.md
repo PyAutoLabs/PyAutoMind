@@ -23,3 +23,16 @@
 - repos:
   - autolens_inference: feature/point-source-search-nautilus-leaf
 - resume: "Branch pushed (2307eea), NO PR yet. Probe RAL job 366937 COMPLETED (seed 0: wall_s 56.6 s, 4,850 evals, per_call 4.72 us batched, likelihood_share 0.041% [single-basis 1.8%], all truth |dsigma|<0.74; row committed). Seeds 1-4 = RAL array 367140 (%1, euclid-ral-gpu-2). Next: sacct -j 367140; scp euclid_jump:/mnt/ral/jnightin/autolens_inference-wt-psleaf/results/searches/point_source/nautilus/simple/source_plane_solved/hpc_a100_jax_cpu_dense_fp64/search_seed{1..4}.{json,png} into the same path in the local worktree (+ hpc/batch_cpu/{output,error}/*367140* logs by hand); check each seed recovers truth; build_readme.py; wiki admission-bar entry (wiki/project/state.md); scripts/point_source/searches/README.md leaf note; ruff/pytest/check_submits; /ship_workspace to PR (Heart YELLOW ack: PyAutoMemory open PR 7d old; other YELLOW -> DRAFT); then remove RAL worktree: cd /mnt/ral/jnightin/autolens_inference && git worktree remove /mnt/ral/jnightin/autolens_inference-wt-psleaf"
+
+## ecosystem-routing-trial
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/444
+- issued: 2026-10-01
+- prompt: active/trial_ecosystem_role_routing.md
+- session: Codex (GPT-6), local, 2026-10-01
+- status: workspace-dev
+- autonomy: supervised; human "ok do it" authorized the recommended next routing trial
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/ecosystem-routing-trial
+- repos:
+  - PyAutoBrain: feature/ecosystem-routing-trial
+- summary: Six-case exploratory baseline/checklist comparison of ecosystem routing; retain bounded evidence and report before changing machinery.
+- resume: Approved research step and detailed plan in Brain #444. Freeze cases/key/protocol before fresh-context evaluations; write report, validate and independently review; ship gate separate.
