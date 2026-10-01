@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1648 records across 9 buckets.
+1649 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -123,6 +123,7 @@ markers; everything below GENERATED is rebuilt.
 
 - [cockpit-actionable-state](2026/10/cockpit-actionable-state.md) — Additive v1 state/action/safety/decision metadata with overnight workflow evidence; cockpit reason/action rend…
 - [compact-dashboard-rows](2026/10/compact-dashboard-rows.md)
+- [dashboard-portable-prompts](2026/10/dashboard-portable-prompts.md)
 - [heart-score-resusitate](2026/10/heart-score-resusitate.md)
 - [memory-cockpit-catch-up](2026/10/memory-cockpit-catch-up.md) — Lensing-specific catch-up freshness drives the HTML/Markdown banner and cockpit feed. Structured cutoff, age, …
 - [memory-digest-state](2026/10/memory-digest-state.md)

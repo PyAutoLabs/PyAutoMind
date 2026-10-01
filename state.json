@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
-  "updated": "2026-10-01T12:17:47Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 2 in flight",
+  "updated": "2026-10-01T12:27:03Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Make dashboard AI prompts portable across assistants \u2014 workspace-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/436",
-      "prompt": "Use the start-dev skill. active/dashboard_portable_skill_prompts.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#387 \u2014 What shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/387",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoBrain PyAutoBrain#406 \u2014 Shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/406",
       "prompt": null
     }
   ]
