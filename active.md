@@ -28,8 +28,11 @@
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/263
 - issued: 2026-10-01
 - session: Codex, local health remediation
-- status: library-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/cloud-board-validation-evidence
 - repos:
   - PyAutoHeart: feature/cloud-board-validation-evidence
 - notes: Infrastructure task. Plan approved in chat; no release or publication included.
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/264
+- validation: 1139 full-suite tests plus 40 focused tests pass; tenant firewall passes; real-artifact isolated readiness GREEN/100; live Heart GREEN/100.
+- resume: Judge every exact-head CI leg through prm; merge and publish are separate actions.
