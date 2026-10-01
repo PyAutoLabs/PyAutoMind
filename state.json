@@ -4,14 +4,14 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
-  "updated": "2026-10-01T11:37:03Z",
+  "updated": "2026-10-01T11:39:20Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
       "severity": "yellow",
       "text": "Make dashboard AI prompts portable across assistants \u2014 workspace-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/436",
-      "prompt": "/start_dev active/dashboard_portable_skill_prompts.md"
+      "prompt": "Use the start-dev skill. active/dashboard_portable_skill_prompts.md"
     },
     {
       "severity": "yellow",
