@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 262 |
+| [Backlog](#backlog) (`draft/`) | 261 |
 
 > **No batch in flight.**
 
@@ -580,7 +580,7 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 
 ## Backlog
 
-**262** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **56** of them belong to an epic and are listed only under [Epics](#epics) below.
+**261** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **55** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 78</summary>
@@ -2641,107 +2641,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 Long-running multi-phase programmes. Each epic's 📋 prompt has Claude read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
 
 <details>
-<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 11 queued prompt(s), in order</summary>
-
-<details><summary>📋 <b>Cluster strong lensing — Source &amp; Cluster arc</b> — ledger: `draft/feature/autolens/source_cluster_arc.md` — Completed evidence/fixes 1a–1d (latest workspace_test#334, 26da5b1; #333 closed). On 2026-10-01 the human transferred remaining…</summary>
-
-```
-Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonical state lives in draft/feature/autolens/source_cluster_arc.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: Original phase numbers retained for history; phases 1 remainder and 2 transferred, phase 6 narrowed. Issue ONE bounded phase at a time as predecessors near shipping; no bulk queue. autolens_profiling owns robustness/settings/performance evidence; autolens_workspace_test owns numerical integration regressions wired into CI. Science project birth still requires a fresh explicit Cortex decision.
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/refactor/autogalaxy/critical_curves_dispatch_cluster.md">Critical curves: implement context-aware dispatch, dedupe engines, make clusters honor</a> — autogalaxy · too-large · supervised · high</summary>
-
-```
-/start_dev draft/refactor/autogalaxy/critical_curves_dispatch_cluster.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/test/workspaces/mesh_magnification_correctness.md">Mesh magnification correctness: simulate-and-recover across every mesh variant</a> — workspaces · large · supervised · normal</summary>
-
-```
-/start_dev draft/test/workspaces/mesh_magnification_correctness.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens/point_magnification_api.md">Magnification at a point: surface the existing API in source_science + point…</a> — autolens · large · supervised · high</summary>
-
-```
-/start_dev draft/feature/autolens/point_magnification_api.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens/area_magnification_leggos.md">Area magnification (LEGGOS-style): per-pixel inversion sum as primary</a> — autolens · large · supervised · high</summary>
-
-```
-/start_dev draft/feature/autolens/area_magnification_leggos.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens/magnification_errors_posterior_draws.md">Magnification errors via posterior draws, standalone in source_science</a> — autolens · large · supervised · normal</summary>
-
-```
-/start_dev draft/feature/autolens/magnification_errors_posterior_draws.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens/magnification_maps_visualization.md">Magnification maps: image-plane contour maps, source-plane mesh maps, uncertainty maps</a> — autolens · large · supervised · high</summary>
-
-```
-/start_dev draft/feature/autolens/magnification_maps_visualization.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/workspaces/cluster_source_science.md">Cluster source_science.py: robust magnification science at cluster scale (no meshes</a> — workspaces · large · supervised · high</summary>
-
-```
-/start_dev draft/feature/workspaces/cluster_source_science.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/cluster_regime_narrative.md">Cluster package: point-source-default narrative + extended-source follow-up feature</a> — workspaces · medium · supervised · high</summary>
-
-```
-/start_dev draft/docs/workspaces/cluster_regime_narrative.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/workspaces/cluster_pixelized_analysisfactor.md">Cluster pixelized-source refinement: per-source masks via AnalysisFactor</a> — workspaces · large · supervised · normal</summary>
-
-```
-/start_dev draft/feature/workspaces/cluster_pixelized_analysisfactor.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/howtolens/cluster_pixelized_source.md">HowToLens cluster tutorial: show a pixelized source + fix the</a> — howtolens · large · supervised · normal</summary>
-
-```
-/start_dev draft/docs/howtolens/cluster_pixelized_source.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens/source_cluster_arc.md">Source &amp; Cluster arc — magnification science, PointSolver trust, cluster extended sources</a> — autolens · too-large · supervised · high</summary>
-
-```
-/start_dev draft/feature/autolens/source_cluster_arc.md
-```
-
-</details>
-
-</details>
-
-<details>
 <summary><b>Point-source (single-source) PointSolver CPU speed-up</b> — 5 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Point-source (single-source) PointSolver CPU speed-up</b> — ledger: `autolens_profiling/wiki/campaigns/point_source_image_plane_cpu.md (full record: results/notes/point_source_cpu_campaign.md)` — phases 1-3 shipped (p2 + p3 released in 2026.9.26.1: PyAutoArray <code>7fa8d271</code>, PyAutoLens <code>86054bbc</code>); phase 4a (re-baseline +…</summary>
@@ -3129,6 +3028,91 @@ Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens
 </details>
 
 <details>
+<summary><b>cluster-strong-lensing</b> — 10 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+
+<details><summary>📋 <a href="draft/refactor/autogalaxy/critical_curves_dispatch_cluster.md">Critical curves: implement context-aware dispatch, dedupe engines, make clusters honor</a> — autogalaxy · too-large · supervised · high</summary>
+
+```
+/start_dev draft/refactor/autogalaxy/critical_curves_dispatch_cluster.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/workspaces/mesh_magnification_correctness.md">Mesh magnification correctness: simulate-and-recover across every mesh variant</a> — workspaces · large · supervised · normal</summary>
+
+```
+/start_dev draft/test/workspaces/mesh_magnification_correctness.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/point_magnification_api.md">Magnification at a point: surface the existing API in source_science + point…</a> — autolens · large · supervised · high</summary>
+
+```
+/start_dev draft/feature/autolens/point_magnification_api.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/area_magnification_leggos.md">Area magnification (LEGGOS-style): per-pixel inversion sum as primary</a> — autolens · large · supervised · high</summary>
+
+```
+/start_dev draft/feature/autolens/area_magnification_leggos.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/magnification_errors_posterior_draws.md">Magnification errors via posterior draws, standalone in source_science</a> — autolens · large · supervised · normal</summary>
+
+```
+/start_dev draft/feature/autolens/magnification_errors_posterior_draws.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/magnification_maps_visualization.md">Magnification maps: image-plane contour maps, source-plane mesh maps, uncertainty maps</a> — autolens · large · supervised · high</summary>
+
+```
+/start_dev draft/feature/autolens/magnification_maps_visualization.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/workspaces/cluster_source_science.md">Cluster source_science.py: robust magnification science at cluster scale (no meshes</a> — workspaces · large · supervised · high</summary>
+
+```
+/start_dev draft/feature/workspaces/cluster_source_science.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/cluster_regime_narrative.md">Cluster package: point-source-default narrative + extended-source follow-up feature</a> — workspaces · medium · supervised · high</summary>
+
+```
+/start_dev draft/docs/workspaces/cluster_regime_narrative.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/workspaces/cluster_pixelized_analysisfactor.md">Cluster pixelized-source refinement: per-source masks via AnalysisFactor</a> — workspaces · large · supervised · normal</summary>
+
+```
+/start_dev draft/feature/workspaces/cluster_pixelized_analysisfactor.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/howtolens/cluster_pixelized_source.md">HowToLens cluster tutorial: show a pixelized source + fix the</a> — howtolens · large · supervised · normal</summary>
+
+```
+/start_dev draft/docs/howtolens/cluster_pixelized_source.md
+```
+
+</details>
+
+</details>
+
+<details>
 <summary><b>pyautoeyes-birth</b> — 5 queued prompt(s) — ⚠️ not in `epics.md`</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautoeyes/multi_galaxy_gallery.md">autolens_visualization: multi-galaxy gallery — producer and dataset</a> — pyautoeyes · medium · supervised · normal</summary>
@@ -3228,7 +3212,7 @@ Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens
 
 </details>
 
-71 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+70 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3242,7 +3226,6 @@ Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens
 - `draft/feature/autolens/area_magnification_leggos.md`
 - `draft/feature/autolens/magnification_maps_visualization.md`
 - `draft/feature/autolens/pointsolver_extent_sanity_check.md`
-- `draft/feature/autolens/source_cluster_arc.md`
 - `draft/feature/autolens_assistant/bootstrap_smoke_codex_and_bench_pr.md`
 - `draft/feature/autolens_assistant/colab_refinement_throughout.md`
 - `draft/feature/autolens_inference/drop_1e3_prior_centring_after_631.md`
@@ -3273,7 +3256,8 @@ Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens
 - `draft/docs/autolens/split_lensing_regimes.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
 - `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
-- _… and 31 more_
+- `draft/test/autoarray/final_numerics_audit_of_every_mesh_interpolator.md`
+- _… and 30 more_
 
 </details>
 
