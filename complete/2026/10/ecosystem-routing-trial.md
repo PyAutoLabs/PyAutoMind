@@ -1,3 +1,49 @@
+## ecosystem-routing-trial
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/444
+- completed: 2026-10-01
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/445
+- head: 71aa4b20bcd199e6bcf20daa462f2727a8a86d21
+- merge: 13d0da5a4ca7b2bd4be571655f90e1f5fa1f5525
+- summary: Evaluated the role-routing checklist and specified future profiling/inference organ read contracts; no runtime or organ implementation.
+
+### Findings and design
+
+Both conditions chose all six change targets correctly. The checklist confused
+three decision-owner fields while its action routes stayed correct. Scores
+36/36 vs 33/36 use disclosed grading-time context leniency; stricter contract
+coverage can favour the checklist. One synthetic paired sample with no actual
+retrieval supports no mandatory extra checklist or efficiency claim.
+
+The organ specification defines project evidence ownership, domain registries and
+read contracts, separate cockpit feeds, profiling comparability and inference
+quality boundaries, freshness/partial failures, rollout and acceptance cases.
+Names and second real adopters remain implementation choices. No organ birth,
+exporter, runtime schema rollout, science run or scientific conclusion is shipped.
+The inference documentation reconciliation and project-board registration remain
+separate filed work; candidate implementation tasks were proposed, not filed.
+
+### Validation and authorization
+
+Exact-head CI: Docs run 36919465134, job 110561587603 SUCCESS; Brain Tests run
+36919463980, Python 3.12 job 110561583971 and Python 3.13 job 110561583637 SUCCESS.
+Both runs completed successfully; PR CLEAN/MERGEABLE. Human $prm authorized merge.
+Local Sphinx HTML zero warnings; seven specification source references resolve;
+trial hashes/JSON/score totals/download paths checked and 36 source-excerpt
+paragraphs verified against pinned commits; frozen trial unchanged by extension.
+
+Original routing trial: independent Fable FINDINGS corrected, re-review CLEAN.
+User then instructed "continue, stop asking fable for reviews"; no further Fable
+review invoked. Organ specification is author-checked only, not independently
+reviewed. Earlier independent reports retained in tmp/ecosystem-routing-trial-review/.
+
+Shipping override: live user "I authorize, continue" for exact Heart RED reason
+`autofit_workspace: Smoke Tests failure on main`, snapshot
+2026-10-01T20:02:44.036627+00:00, score 80. Four-sink override recorded; issue comment
+5939613197. Development-only grant did not fix Heart, authorize release or bypass
+checks. Merge is separately authorized by $prm; no Heart recheck at merge.
+
+## Original prompt
+
 # Trial ecosystem role routing against current guidance
 
 Type: research
