@@ -58,7 +58,7 @@ touches visibilities — but the process still holds them, because:
 pyuvimage works around all of this with `stub_dataset_from_terms`, a fake `Interferometer`
 with 8 zero visibilities and a `TransformerDFT`. The upstream design should not need a stub.
 
-## Phases (ledger — ALL FIVE MERGED 2026-10-01; libraries pending release; remaining: Discussion #13 follow-up post)
+## Phases (ledger — ALL FIVE MERGED 2026-10-01; libraries pending release; Discussion #13 follow-up POSTED 2026-10-01: https://github.com/PyAutoLabs/.github/discussions/13#discussioncomment-18696488)
 
 | Phase | Member prompt | Repos | Status |
 |---|---|---|---|
