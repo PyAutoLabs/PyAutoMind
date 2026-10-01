@@ -1,6 +1,8 @@
 # Reject assistant-specific commands in copied dashboard prompts
 
 Type: test
+Issued: 2026-10-01
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/437
 Autonomy: safe
 
 ## Original request
