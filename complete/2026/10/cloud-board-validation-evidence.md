@@ -1,3 +1,15 @@
+# Cloud board validation evidence
+
+Merged https://github.com/PyAutoLabs/PyAutoHeart/pull/264 at 0bff26a3b391dccf70ae969ab590478d2995f881 on 2026-10-01. Closes https://github.com/PyAutoLabs/PyAutoHeart/issues/263.
+
+The daily cloud board now reads smoke results and collects matching rehearsal/integration artifacts through the canonical validator. The collector preserves producer timestamps, run identity, attempt and SHA, adverse conclusions and incomplete evidence. No readiness thresholds, weights, skips or local tick behavior changed.
+
+Validation: 1139 full-suite tests passed; 40 focused tests passed after the last two edge cases. Tenant firewall and whitespace checks passed. Real artifact collection in isolated state yielded GREEN/100 without changing live state. Every exact-head GitHub run was checked: Heart Tests 36917011559 succeeded on both Python 3.12 and 3.13. Human prm authorized merge and closeout.
+
+Implementation is merged. Cloud-board deployment verification is a separate action, not claimed here. No package release dependency. Artifacts and logs remain in the session .heart-evidence directory outside the task bundle. The task bundle contains only clean tracked work plus reproducible pytest/Python caches, so normal cleanup is safe.
+
+## Original prompt
+
 # Ingest authoritative validation evidence into the cloud Heart board
 Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/263
 Issued: 2026-10-01
