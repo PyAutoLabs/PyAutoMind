@@ -21,3 +21,7 @@ Fix: the wipe in PyAutoHeart's smoke command (the step documented as "wipes stal
 Witness: after the fix, running the smoke wipe against a workspace whose output/ holds a tracked .gitignore leaves `git status --short` empty; before the fix it shows ` D output/.gitignore`.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-09-16 from user-intake -->
+
+## Reconciliation — 2026-10-01
+
+Keep open — source confirms the defect. Heart origin/main `ff7003f`, `heart/smoke.py:540-548`, iterates every output child and unlinks files or recursively removes directories, with no tracked-file exemption. No destructive smoke run was performed during this audit. The reconciler's referenced tenant-firewall completion is a different defect and is not completion evidence for this task.

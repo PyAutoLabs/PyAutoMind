@@ -62,3 +62,7 @@ Fix the consumer, and make the coupling explicit rather than conventional:
 
 Do not fix this by reformatting the producer's output to suit the regex — that leaves the
 next leg free to trip the same wire.
+
+## Reconciliation — 2026-10-01
+
+Keep open — source confirms the defect. Heart origin/main `ff7003f`, `heart/checks/manifest_drift.py:45`, still anchors the status regex at end-of-line. `parse_check_output` silently ignores a `check` line that does not match unless it happens to match the problem-line regex; the later no-checks guard only detects an entirely unparseable report. The workspace-location completion filed this follow-up rather than implementing it.

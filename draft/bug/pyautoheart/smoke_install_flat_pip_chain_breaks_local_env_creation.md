@@ -53,3 +53,7 @@ CI (the reusable Smoke Tests workflow, flat checkout with the chain cloned besid
 2. Heart builds a throwaway flat shim dir of symlinks (`PyAutoFit -> fit/PyAutoFit`, ...) and runs the installer with cwd there — zero workspace edits, one Heart change.
 3. Apply the same resolution to the legacy `./{repo}` fallback.
 Also consider: Heart should refuse to silently reuse a cached env when (re)creation fails, so a stale env cannot hide dependency changes.
+
+## Reconciliation — 2026-10-01
+
+Keep open — source confirms the defect. Heart origin/main `ff7003f`, `heart/smoke.py:314-324`, still launches the workspace installer with `cwd=organism_root` and retains the flat `./<repo>` legacy install targets. No layout shim or resolved-path contract is supplied there. `complete/2026/09/workspace-resolver-fanout.md` explicitly deferred these installers to phase 3. No environment recreation or package installation was performed during this audit.

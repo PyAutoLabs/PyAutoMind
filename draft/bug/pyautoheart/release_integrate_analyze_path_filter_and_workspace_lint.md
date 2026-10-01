@@ -44,3 +44,7 @@ Background: nightly Release Integrate runs 34323573912 (2026-09-09) and
 failures that autolens_workspace_test#311 had committed by accident; awt#313
 removed them and the 2026-09-11 nightly went green. See the record above for
 the trap that cost a CI round (the tenant firewall reads test modules).
+
+## Reconciliation — 2026-10-01
+
+Keep open — this is deliberately unshipped remainder. GitHub confirms [PR #225](https://github.com/PyAutoLabs/PyAutoHeart/pull/225) merged on 2026-09-11; `complete/2026/09/release-integrate-discard-stale-result-files.md` explicitly says only the pre-run deletion shipped and re-files the two other guards here. Heart origin/main `ff7003f` still reads JSON in `heart/validate.py`, `heart/checks/test_run.py`, and `heart/checks/script_timing.py` without the requested foreign-result-path warning/filter. The earlier record's phrase “Scope shipped vs filed” describes the parent task, not completion of this remainder.

@@ -73,3 +73,7 @@ the witness-campaign close-out (PyAutoMind#398). Its witness — a
 euclid_strong_lens_modeling_pipeline PR touching only `tests/` shows
 `unit / smoke (3.12)` and `unit / smoke (3.13)` run and pass rather than `skipped` —
 is this prompt's witness in other words.
+
+## Reconciliation — 2026-10-01
+
+Keep open — source confirms the defect. Heart origin/main `ff7003f`, `.github/workflows/smoke-tests.yml:184-192`, still applies the smoke-only path list to every PR without consulting the custom runner; the smoke job gates on that output at lines 221-223. Merged [PR #220](https://github.com/PyAutoLabs/PyAutoHeart/pull/220) introduced the relevance filter, not the custom-runner repair. `complete/2026/09/smoke-relevance-gate.md` describes that earlier change, and `witness-campaign.md` explicitly describes folding the duplicate report into this surviving prompt.

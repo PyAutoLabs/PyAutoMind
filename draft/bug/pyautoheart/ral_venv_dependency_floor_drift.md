@@ -38,3 +38,7 @@ Re-read the installed versions with `pip freeze` before acting.
   PyAuto* dependency floors and pins, not only library hashes.
 
 <!-- filed from autolens_profiling#308 phase C (PR #312), 2026-09-26 -->
+
+## Reconciliation — 2026-10-01
+
+Keep open — completion is unverified. `complete/2026/09/interferometer-mge-breakdown.md`, `interferometer-mge-w-tilde-route.md`, and `interferometer-transform-real-scatter.md` explicitly retain this as a still-open follow-up. No live RAL package audit or install was performed in this reconciliation, so the historical package versions are not asserted to be current. Retirement still needs evidence for both the live environment and the dependency-floor sync check; a `Status: draft` match is not proof of completion.
