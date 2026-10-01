@@ -68,3 +68,13 @@ Chromium preview verification passed at 320, 390, 768 and 1280px in light/dark m
 
 Pending-release PR: https://github.com/PyAutoLabs/PyAutoHeart/pull/254
 Status: library-shipped, awaiting-merge. No merge or release authorized.
+
+## CI fixture correction — 2026-10-01
+
+User reported PR #254 failed both CI jobs because the tenant firewall found a new instance-specific repository literal in tests/test_dashboard_disclosures.py. Resumed the existing task through the Bug Agent; no new issue or branch.
+
+Fix pushed as `30850e4`: replace that literal with `FixtureLibrary` and assert its presence independent of ordering. Six-repository coverage remains intact.
+
+Validation: `repos_sync.py --check --only "tenant firewall (organ code)" --root <task-worktree>` OK; 162 dashboard/reasons/timing/fix tests passed; git diff --check passed. Both Python CI jobs were in progress on 30850e4 at the single post-push check. No merge performed.
+
+Learning: new organ test files must use synthetic repository names or approved shared fixture surfaces; run the tenant-firewall gate alongside pytest before pushing.
