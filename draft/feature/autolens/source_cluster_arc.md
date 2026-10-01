@@ -269,3 +269,32 @@ conflict guard clear. Implement duplicate-policy evidence then ship_workspace.
   ship_workspace. No merge/release authorized. Details and logs in active prompt.
 - Last shipped subphase remains 1b. Phase 1c is validated but NOT shipped;
   parent phase 1 remains incomplete and phase 2 gated. Cortex unchanged.
+
+## Phase 1c Fable review and PR open — 2026-10-01
+
+Independent `claude-fable-5-1` review initially returned FINDINGS; all six
+resolved, then re-review CLEAN (session
+`2eb5a6d4-323e-4a3f-bd9b-6506a6de2b0f`). This supersedes the earlier inference
+that close-pair work should simply wait for capacity-clean evidence: NumPy
+is uncapped and already exhibits substantial image-position errors near the
+cusp. Small residuals also let root polishing accept inaccurate positions.
+The report now separates these accuracy/identity problems from JAX truncation,
+adds per-root coverage and polishing errors, and makes summarize read-only.
+
+Final exact-script rerun: 54 scalar + 6 vmap; script SHA pinned, explicit
+before/after library/environment/script provenance PASS. 18 rows exceed JAX
+capacity 20, but only 12 JAX rows truncate; four resolved untruncated NumPy
+controls fail each rule. All 36 quad rows meet the grouping criterion. Existing
+padding 12/12, image-plane/JIT, smoke 32/32, Black/compile/JSON/diff pass.
+One rerun failed provenance because the shared activation symlink was clobbered
+by another task and its bundle removed; discarded, then rerun successfully
+with a task-owned activation file. Final log: task scratch/duplicate-policy-final-stable.log.
+
+User "ok review with fable" granted the requested development-only override
+for #331 with review first. Heart RED remained exactly "release validation
+FAILED (stage integrate)" at 2026-10-01T08:46:35.028848+00:00. Recorded on issue,
+PR, active.md and autonomy_log.md. PR
+https://github.com/PyAutoLabs/autolens_workspace_test/pull/332 is open at
+`2941721`, labelled pending-release. No merge/release authorized. Last shipped
+subphase remains 1b; 1c is PR-open, parent phase 1 incomplete, phase 2 gated.
+Do not repeat successful validation without changed inputs or a new concern.

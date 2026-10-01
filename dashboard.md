@@ -252,7 +252,7 @@ anything you could not verify.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/point_solver_duplicate_policy.md">PointSolver duplicate-image policy — cluster arc phase 1c</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/331">issue #331</a> — issued 2026-10-01 — awaiting-input</summary>
+<details><summary>📋 <a href="active/point_solver_duplicate_policy.md">PointSolver duplicate-image policy — cluster arc phase 1c</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/331">issue #331</a> — issued 2026-10-01 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/332">autolens_workspace_test#332</a></summary>
 
 ```
 /start_dev active/point_solver_duplicate_policy.md
@@ -2628,7 +2628,7 @@ Long-running multi-phase programmes. Each epic's 📋 prompt has Claude read its
 <details>
 <summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 13 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>Cluster strong lensing — Source &amp; Cluster arc</b> — ledger: `draft/feature/autolens/source_cluster_arc.md` — Phase 1a audit and phase 1b padding fix shipped 2026-09-30 (autolens_workspace_test#329/#330, PyAutoLens#760; issues #328/#759…</summary>
+<details><summary>📋 <b>Cluster strong lensing — Source &amp; Cluster arc</b> — ledger: `draft/feature/autolens/source_cluster_arc.md` — Last shipped subphase 1b (PyAutoLens#760, autolens_workspace_test#330; 2026-09-30). Phase 1c issue autolens_workspace_test#331…</summary>
 
 ```
 Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonical state lives in draft/feature/autolens/source_cluster_arc.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (/start_dev — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 12 phased prompts under draft/; issue phases ONE at a time as predecessors near shipping — no bulk issue queues. Science half: the PyAutoCortex project ledger of the science project it births (arc phase 11).
