@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1661 records across 9 buckets.
+1662 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -141,6 +141,7 @@ markers; everything below GENERATED is rebuilt.
 - [point-solver-image-accuracy](2026/10/point-solver-image-accuracy.md)
 - [point-source-search-nautilus-leaf](2026/10/point-source-search-nautilus-leaf.md)
 - [profiling-summary-v1](2026/10/profiling-summary-v1.md) — PyAutoPulse phase 1 — `build_dashboard.py` gains a fourth output, `dashboard/summary.json`, the `profiling-sum…
+- [pyautopulse-organ-decision](2026/10/pyautopulse-organ-decision.md)
 - [streaming-p4-light-profile-identity](2026/10/streaming-p4-light-profile-identity.md)
 - [streaming-p5-cubes-phase-centre](2026/10/streaming-p5-cubes-phase-centre.md)
 

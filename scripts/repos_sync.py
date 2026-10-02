@@ -140,8 +140,8 @@ def _repo_resolver(root):
 
 ORGANS = frozenset({"PyAutoBrain", "PyAutoMind", "PyAutoCortex",
                     "PyAutoMemory", "PyAutoEyes", "PyAutoHeart",
-                    "PyAutoHands", "PyAutoNerves", "PyAutoGut",
-                    "PyAutoScientist"})
+                    "PyAutoHands", "PyAutoPulse", "PyAutoNerves",
+                    "PyAutoGut", "PyAutoScientist"})
 
 
 def bootstrap_checkout(root, name):
