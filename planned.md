@@ -91,3 +91,15 @@
 - repos:
   - autolens_profiling: feature/timing-noise-audit
 - summary: Audit all runtime-sensitive tests and production profiling gates for noise, uncertainty and inconclusive outcomes; issue bounded implementation phases after inventory. Immediate ABBA cutoff repair is handled by the blocking task's PR #361.
+
+## knn-partial-point-block
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/609
+- filed: 2026-10-02
+- prompt: active/fix_knn_neighbor_search_for_a_partial.md
+- classification: both
+- suggested-branch: feature/knn-partial-point-block
+- blocked-by: mesh-interpolator-numerics-audit (using PyAutoArray and autolens_workspace_test)
+- affected-repos:
+  - PyAutoArray
+  - autolens_workspace_test
+- resume: Audit#603 discovered deterministic partial-final-block neighbor corruption; filed separately per explicit user request. No implementation begun or worktree created. Audit retains strict expected-failure witness citing609. Schedule repair independently and promote regression after fix.
