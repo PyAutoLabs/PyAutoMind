@@ -260,7 +260,7 @@ Use the start-dev skill. active/evaluation_grid_cap_preserves_field.md
 
 </details>
 
-<details><summary>📋 <a href="active/lint_lychee_exclude_github_blob_pages.md">Lint: exclude github.com blob pages from lychee (Pulse main red, Eyes exposed)</a> — <a href="https://github.com/PyAutoLabs/PyAutoPulse/issues/3">issue #3</a> — issued 2026-10-02 — library-dev</summary>
+<details><summary>📋 <a href="active/lint_lychee_exclude_github_blob_pages.md">Lint: exclude github.com blob pages from lychee (Pulse main red, Eyes exposed)</a> — <a href="https://github.com/PyAutoLabs/PyAutoPulse/issues/3">issue #3</a> — issued 2026-10-02 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/4">PyAutoPulse#4</a>, <a href="https://github.com/PyAutoLabs/PyAutoEyes/pull/13">PyAutoEyes#13</a> — ⏳ pending release: PyAutoPulse — ⏳ pending release: PyAutoEyes</summary>
 
 ```
 Use the start-dev skill. active/lint_lychee_exclude_github_blob_pages.md
@@ -330,6 +330,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoEyes**
 
+- [PyAutoEyes#13](https://github.com/PyAutoLabs/PyAutoEyes/pull/13) — `active/lint_lychee_exclude_github_blob_pages.md`
 - [PyAutoEyes#3](https://github.com/PyAutoLabs/PyAutoEyes/pull/3) — `complete/2026/09/eyes-board-conductor-registry.md`
 - [PyAutoEyes#5](https://github.com/PyAutoLabs/PyAutoEyes/pull/5) — `complete/2026/09/eyes-fit-cti-instances.md`
 - [PyAutoEyes#4](https://github.com/PyAutoLabs/PyAutoEyes/pull/4) — `complete/2026/09/eyes-galaxy-instance.md`
@@ -420,6 +421,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoPulse**
 
+- [PyAutoPulse#4](https://github.com/PyAutoLabs/PyAutoPulse/pull/4) — `active/lint_lychee_exclude_github_blob_pages.md`
 - [PyAutoPulse#2](https://github.com/PyAutoLabs/PyAutoPulse/pull/2) — `complete/2026/10/pyautopulse-organ-skeleton.md`
 
 **PyAutoReduce**
