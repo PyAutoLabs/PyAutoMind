@@ -145,7 +145,7 @@
 - issued: 2026-10-02
 - prompt: active/mesh_geometry_areas_transformed_adapt_image_indexerror.md
 - session: Codex GPT-6; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/autoarray-bundle-1
 - repos:
   - PyAutoArray: feature/mesh-geometry-transformed-areas
@@ -156,6 +156,12 @@
   - "manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml"
 - heart-stale: "release validation incomplete: no rehearsal for current source"
 - authorization: Human acknowledged exact Heart YELLOW reason and authorized development PR shipping for this bundle; no release or merge, 2026-10-02.
+
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/608
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/339
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/608
+- release-gate: PyAutoArray
+- validation: Full 1919 passed, focused34 passed, smoke2 passed, exit0; provenance verified. Logs scratch/mesh-geometry. Commits20ed237a/bdd698c. Explicit guard-cell geometry replaces obsolete uniform-partition expectations; standalone helper unchanged. Shared worktree advances to other bundle members. Awaiting human library-first merge/release.
 
 ## pyautopulse-organ-row
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/463
