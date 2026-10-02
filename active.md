@@ -45,9 +45,13 @@
 - prompt: active/lint_lychee_exclude_github_blob_pages.md
 - epic: profiling-organ-birth
 - session: Claude Code CLI (Fable 5.1); session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/lint-lychee-exclude-blob
 - repos:
   - PyAutoPulse: feature/lint-lychee-exclude-blob
   - PyAutoEyes: feature/lint-lychee-exclude-blob
+- library-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/4
+- library-pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/13
+- pending-release: PyAutoPulse@https://github.com/PyAutoLabs/PyAutoPulse/pull/4
+- pending-release: PyAutoEyes@https://github.com/PyAutoLabs/PyAutoEyes/pull/13
 - resume: Corrective: PyAutoPulse main lint red on lychee 503s for github.com blob pages (token did not help). Exclude `^https://github\.com/.*/blob/` in both organs' lint.yml. Two PRs, end at PR-open, merge /prm (Pulse first).
