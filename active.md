@@ -94,6 +94,11 @@
 - pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/644
 - validation: Array 1922 passed, Galaxy 1307 passed, focused 23 passed; downstream API/equivalence passed; Heart GREEN. Logs in shared worktree scratch/snr-helper. Commits 54c360be / ba7c70dc. PRs open, merge remains human. Shared Array worktree advanced to next member.
 
+- heart-ack:
+  - "manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml"
+- heart-stale: "release validation incomplete: no rehearsal for current source"
+- authorization: Human acknowledged exact Heart YELLOW reason and authorized development PR shipping for this bundle; no release or merge, 2026-10-02.
+
 ## mesh-interpolator-numerics-audit
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/603
 - issued: 2026-10-02
@@ -105,6 +110,11 @@
   - PyAutoArray: feature/mesh-interpolator-numerics-audit
   - autolens_workspace_test: feature/mesh-interpolator-numerics-audit
 - resume: Bundle autoarray — bundle 1; approved plan 2026-10-02. Sequential shared worktrees; branch selected only when prior member is shipped. Linked companion PRs and coordination with critical-curves-dispatch-audit explicitly authorized by user. Preserve all other worktrees. No merge authorization.
+
+- heart-ack:
+  - "manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml"
+- heart-stale: "release validation incomplete: no rehearsal for current source"
+- authorization: Human acknowledged exact Heart YELLOW reason and authorized development PR shipping for this bundle; no release or merge, 2026-10-02.
 
 ## fit-util-masked-division
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/604
@@ -125,6 +135,11 @@
 - workspace-stash: autolens_workspace_test 9b85ea65282820b33e73f5d4e360422fda43a3da holds validated companion changes on feature/fit-util-masked-division; restore by exact hash after current member finishes. Never pop an unrelated stash.
 - next: After acknowledgement and geometry delegate completion, restore this branch and stash, open linked workspace PR, mark library PR ready, update state. Shared worktree temporarily on geometry member; no merge authorized.
 
+- heart-ack:
+  - "manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml"
+- heart-stale: "release validation incomplete: no rehearsal for current source"
+- authorization: Human acknowledged exact Heart YELLOW reason and authorized development PR shipping for this bundle; no release or merge, 2026-10-02.
+
 ## mesh-geometry-transformed-areas
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/605
 - issued: 2026-10-02
@@ -136,6 +151,11 @@
   - PyAutoArray: feature/mesh-geometry-transformed-areas
   - autolens_workspace_test: feature/mesh-geometry-transformed-areas
 - resume: Bundle autoarray — bundle 1; approved plan 2026-10-02. Sequential shared worktrees; branch selected only when prior member is shipped. Linked companion PRs and coordination with critical-curves-dispatch-audit explicitly authorized by user. Preserve all other worktrees. No merge authorization.
+
+- heart-ack:
+  - "manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml"
+- heart-stale: "release validation incomplete: no rehearsal for current source"
+- authorization: Human acknowledged exact Heart YELLOW reason and authorized development PR shipping for this bundle; no release or merge, 2026-10-02.
 
 ## pyautopulse-organ-row
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/463
