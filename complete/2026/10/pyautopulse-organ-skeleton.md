@@ -1,3 +1,18 @@
+## pyautopulse-organ-skeleton
+- issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/1
+- completed: 2026-10-02
+- epic: profiling-organ-birth
+- library-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/2
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/449
+- pending-release: PyAutoPulse@https://github.com/PyAutoLabs/PyAutoPulse/pull/2
+- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/449
+- summary: Phase 2 of `profiling-organ-birth`: the PyAutoPulse organ skeleton — `registry.yaml` (lens row only; `repo` is a body-map identity, path/github resolved from `PyAutoMind/repos.yaml`), `pulse/` package (registry, `profiling-summary@1` validator, ingest that resolves the branch to ONE commit and reads at that SHA, `receipts/<instance>.json` + last-good `snapshots/`, board with transport/freshness/qualification kept separate and the producer's own comparisons/limitations, `state.json` `organ: pulse`), `bin/pyauto-pulse check|board|census|fetch`, 76 hermetic tests over the spec's reader acceptance cases + a second-producer fixture, lint/pages/refresh workflows (`repository_dispatch: pulse-refresh`), AGENTS/REFERENCE/README. First live render committed (lens @ `d9f385f0`, 159 records, status yellow — 157/159 producer-unqualified; transport health never greens unknown quality). Brain: witness row, `boards: pulse` (deferred from phase 0), exemption removed, Pulse chip style. Human: one task two PRs; Pages enabled before merge.
+- deviations: `--mind PATH` before `$PYAUTO_MIND` (Eyes order); comparison endpoints resolved via `<comparison_key>@<version>` (live feed stores versions, not record ids); refused pairs are per-comparison; `host` counts as changed only when both records name one; receipts/snapshots rewritten only when more than `fetched_at` changes (nightly commits nothing); `lint.yml` checks out Mind + Brain; lint passes `GITHUB_TOKEN` to lychee.
+- traps: github.com answers unauthenticated `blob` page fetches with 503 for every repo (status page green) — lychee over github.com links needs `--github-token ${{ secrets.GITHUB_TOKEN }}`, else lint is a coin flip (Eyes main lint failed the same way 2026-10-02 10:57). A brand-new org repo has no `pending-release` label and `ensure_workspace_labels.sh` does not know it. Brain full pytest has one `PYAUTO_MIND`-env artefact (`test_grouped_organ_consumers`), passes under `env -u PYAUTO_MIND`.
+- follow-ups: autolens_profiling `pages_dashboard.yml` `pulse-refresh` sender (copy autolens_visualization/render.yml:85-99); PyAutoEyes lint `--github-token`; add PyAutoPulse to `ensure_workspace_labels.sh`; phase 3 `draft/feature/pyautopulse/profiling_organ_p3_brain_board_cockpit_transition.md`; phase 4 waits for a real second `_profiling` producer.
+
+## Original prompt
+
 # Profiling organ phase 2 — the organ skeleton: registry, reader, board, workflows
 
 Type: feature
