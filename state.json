@@ -2,11 +2,17 @@
   "schema_version": 1,
   "organ": "mind",
   "repo": "PyAutoMind",
-  "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 12 in flight",
-  "updated": "2026-10-02T09:45:04Z",
+  "status": "red",
+  "headline": "RED \u2014 24 picks \u00b7 12 in flight",
+  "updated": "2026-10-02T09:52:34Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "red",
+      "text": "Critical-curve dispatch: current cluster evidence and contract \u2014 workspace-dev, blocked-at-ship-gate",
+      "url": "https://github.com/PyAutoLabs/autolens_workspace_test/issues/337",
+      "prompt": "Use the start-dev skill. active/critical_curves_dispatch_audit.md"
+    },
     {
       "severity": "yellow",
       "text": "Benchmark card: forward-model consistency across imaging, point_source and interferometer \u2014 awaiting-merge",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#601 \u2014 streaming-p5-cubes-phase-centre",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/601",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#426 \u2014 autolens-visualization-rebirth",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/426",
       "prompt": null
     }
   ]
