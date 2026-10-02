@@ -640,3 +640,24 @@ creation and linked workspace smoke underway; no next phase issued.
 
 Phase 3b library PR: PyAutoGalaxy#646 (f19a3377), pending-release. Linked
 workspace CI and profiling-ledger changes are prepared; full smoke running.
+
+
+## Phase 3b shipped to PRs — 2026-10-02
+
+- PyAutoGalaxy#646 @f19a3377: field-preserving cap; all exact-head CI green.
+- autolens_workspace_test#343 @fcd6bd5: draft required-CI invariant, waiting for
+  a library dependency containing the fix; library-first/release gate retained.
+- autolens_profiling#365 @d8a46c3: cumulative before/after ledger/wiki.
+
+Full Galaxy tests 1315 passed; focused 49 passed; full companion smoke 33/33
+in 501.91s, new cap example 2.2s. Same cap probe records 60 arcsec field at
+0.06 arcsec/pixel; original phase-3a artifacts unchanged. Exact current Heart
+map/table YELLOW reasons acknowledged. Issue #645 remains open, active task
+retained, all worktrees clean and available for review. No phase-3b merge or
+release performed. No later phase issued. Phase 3a evidence worktree retained
+as explicitly requested; its claim/issue closed and dashboard regenerated.
+
+Next handoff: review/merge the library fix and research PR when green; release
+availability then permits the draft workspace regression to pass installed-stack
+CI and merge. Only after this phase nears completion should seed/path coverage
+be scoped as the next single issue. Separate masked-caustic prompt remains open.

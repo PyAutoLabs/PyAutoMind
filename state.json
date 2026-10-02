@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 11 in flight",
-  "updated": "2026-10-02T11:15:58Z",
+  "updated": "2026-10-02T11:23:45Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -15,7 +15,7 @@
     },
     {
       "severity": "yellow",
-      "text": "Preserve the LensCalc evaluation field when the grid cap activates \u2014 library-shipped, workspace-dev",
+      "text": "Preserve the LensCalc evaluation field when the grid cap activates \u2014 awaiting-merge, workspace-release-gated",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/646",
       "prompt": "Use the start-dev skill. active/evaluation_grid_cap_preserves_field.md"
     },
