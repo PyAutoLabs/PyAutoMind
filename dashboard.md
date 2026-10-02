@@ -260,7 +260,7 @@ Use the start-dev skill. active/evaluation_grid_cap_preserves_field.md
 
 </details>
 
-<details><summary>📋 <a href="active/pulse_public_links.md">Pulse public links: org-profile organ row and the hub's Pulse board link</a> — <a href="https://github.com/PyAutoLabs/pyautolabs.github.io/issues/25">issue #25</a> — issued 2026-10-02 — library-dev</summary>
+<details><summary>📋 <a href="active/pulse_public_links.md">Pulse public links: org-profile organ row and the hub's Pulse board link</a> — <a href="https://github.com/PyAutoLabs/pyautolabs.github.io/issues/25">issue #25</a> — issued 2026-10-02 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/pyautolabs.github.io/pull/26">pyautolabs.github.io#26</a>, <a href="https://github.com/PyAutoLabs/.github/pull/26">.github#26</a> — ⏳ pending release: pyautolabs.github.io</summary>
 
 ```
 Use the start-dev skill. active/pulse_public_links.md
@@ -475,6 +475,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **pyautolabs.github.io**
 
+- [pyautolabs.github.io#26](https://github.com/PyAutoLabs/pyautolabs.github.io/pull/26) — `active/pulse_public_links.md`
 - [pyautolabs.github.io#9](https://github.com/PyAutoLabs/pyautolabs.github.io/pull/9) — `complete/2026/09/community-surface-website.md`
 - [pyautolabs.github.io#24](https://github.com/PyAutoLabs/pyautolabs.github.io/pull/24) — `complete/2026/10/pyautopulse-brain-board-cockpit.md`
 - [pyautolabs.github.io#23](https://github.com/PyAutoLabs/pyautolabs.github.io/pull/23) — `complete/2026/10/pyautopulse-organ-row.md`
