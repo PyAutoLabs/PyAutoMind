@@ -1,3 +1,44 @@
+# PointSolver extent sanity check — complete
+
+- completed: 2026-10-02
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/763
+- epic: point-source-cpu-speed
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/764
+
+## Shipped
+
+- PyAutoLens#764: `0dd420877e18da8e94cbb3dfb5dbe97ad34eb45c` — NumPy-only diagnostic once at AnalysisPoint construction; warning for observed positions near/outside the grid using margin `2 * scale + 3 * position sigma`; oversized-grid INFO suppressed in test/small-dataset mode.
+- autolens_workspace_test#338: `5140a56e9f6ee37d65effd82964cec0ab7ac5f7d` — construction warning plus unchanged image-plane likelihood pin and repeated JIT/vmap parity; registered in smoke.
+- autolens_profiling#363: `134695058dd16752ddb3d9bad747422ff0173ee5` — campaign page and full ledger.
+
+Every claimed branch has zero commits ahead of origin/main after merge. No extent, scale, MAX_CONTAINING_SIZE or likelihood-path default changed. Observed-position coverage is explicitly not a proof of image completeness across the model prior. Cluster work remains separate.
+
+## Validation
+
+27 focused NumPy tests passed; full library suite 820 passed, 1 expected failure. All 33 distinct workspace smoke scripts have passing evidence after the documented environment recovery; final new-script run 56.2 s under the unchanged 300 s cap. All 8 GitHub CI jobs passed across library docs, Python 3.12/3.13/no-JAX tests, workspace changes and Python 3.12/3.13 smoke, and profiling lint.
+
+The initial local smoke error was a missing __Env__ heading. A concurrent environment rebuild caused 21 missing-package failures, all recovered. One subsequent timeout coincided with a host scheduling/suspension delay; the unchanged script passed its bounded retry. Original reports are retained in the task root.
+
+## Human decisions and release
+
+Human acknowledged the reported Heart YELLOW development checkpoint through “prm and continue”. Library and campaign PRs merged first. Human subsequently instructed “can you merge and well do release after”, explicitly permitting workspace merge before the library release. The workspace release gate is discharged by that instruction; the library pending-release obligation above remains. No release was started.
+
+## Follow-up and retention
+
+Next bounded epic member: `draft/feature/autolens_workspace/pointsolver_grid_extent_per_package.md`, choosing per-package galaxy-scale extents with fresh correctness/performance evidence. No next phase issued in this close-out. The broad timing-noise audit remains autolens_profiling#362.
+
+Task worktree retained pending the human's cleanup choice: roughly 884 KB of generated smoke datasets and 20 KB of aggregator output, plus validation logs. The earlier inference worktree/data remain preserved under the separate explicit instruction.
+
+## Neighbour reconciliation
+
+`/intake reconcile draft/feature/autolens_workspace` found no suspects. The
+`draft/feature/autolens` scan flagged eight existing Source & Cluster / COOLEST /
+magnification prompts; none is implemented by this extent diagnostic, so all
+remain filed. Revisit via `/intake reconcile draft/feature/autolens` as separate
+work. No sibling prompt retired by resemblance.
+
+## Original prompt
+
 # PointSolver grid-extent sanity check — warn when the data approach the solver grid edge, hint when the grid is oversized
 
 Type: feature

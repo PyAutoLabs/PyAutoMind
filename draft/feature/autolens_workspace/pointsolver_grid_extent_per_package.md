@@ -20,7 +20,7 @@ Unattended: needs-decision
 Epic: point-source-cpu-speed
 Filed: 2026-09-26
 Parent: complete/2026/09/point-source-cpu-p4.md (issue autolens_profiling#314)
-Depends-on: draft/feature/autolens/pointsolver_extent_sanity_check.md (library first)
+Depends-on: complete/2026/10/pointsolver-extent-sanity-check.md (merged; PyAutoLens#764 release pending)
 
 ## Human decision (2026-09-26, live)
 
