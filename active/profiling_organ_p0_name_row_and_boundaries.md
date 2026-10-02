@@ -14,12 +14,13 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
 Consequence: judge
 Witness: `python3 PyAutoMind/scripts/repos_sync.py --check` green (hub-blurb leg aside) with the new organ row; every generated `repos_sync:map` block and organ table names the organ; `config/policy.yaml` `boards:` lists it; Brain/Heart/Hands pytest green
 Review-minutes: 15
 Unattended: never
 Filed: 2026-10-02
+Issued: 2026-10-02
 Epic: profiling-organ-birth
 Phase: 0
 

@@ -141,3 +141,22 @@
 - pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/268
 - pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/446
 - resume: Heart 1168 + Brain 1141 tests passed; tenant firewall passes; vitals GREEN. Merge Brain #446 first, then ready/merge Heart #268 after CI. Complete plan/results in active prompt. No merge authority.
+
+## pyautopulse-organ-row
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/463
+- issued: 2026-10-02
+- prompt: active/profiling_organ_p0_name_row_and_boundaries.md
+- epic: profiling-organ-birth
+- session: Claude Code CLI (Fable 5.1); session ID unavailable
+- status: library-dev
+- repos:
+  - PyAutoMind: feature/pyautopulse-organ-row
+  - PyAutoBrain: feature/pyautopulse-organ-row
+  - PyAutoHeart: feature/pyautopulse-organ-row
+  - PyAutoHands: feature/pyautopulse-organ-row
+  - pyautolabs.github.io: feature/pyautopulse-organ-row
+  - PyAutoCortex: feature/pyautopulse-organ-row
+  - PyAutoNerves: feature/pyautopulse-organ-row
+  - PyAutoGut: feature/pyautopulse-organ-row
+  - PyAutoScientist: feature/pyautopulse-organ-row
+- resume: Phase 0 of profiling-organ-birth. Human decisions 2026-10-02: PyAutoPulse, organ key `pulse`, organ row AFTER Hands before Nerves, `boards:` entry deferred to phase 2, plan approved. Repo PyAutoLabs/PyAutoPulse created (public, empty). Next: /start_library then implement per issue #463; PRs Mind → Brain → Heart → Hands → hub (+ map-block PRs Cortex/Nerves/Gut/Scientist); merge human via /prm.
