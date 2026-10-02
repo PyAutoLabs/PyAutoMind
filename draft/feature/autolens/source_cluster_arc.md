@@ -629,3 +629,11 @@ start_library; no additional successor queue. Original overall phase 3 remains o
 
 Phase 3b issued: PyAutoGalaxy#645, feature/evaluation-grid-cap-field in the
 isolated task bundle. Approved concurrency recorded; implementation underway.
+
+
+Phase 3b implementation: corrected capped physical spacing and both-axis limit,
+with conservative subpixel padding and unchanged existing zoom centre/mask policy.
+Before: six new test failures; after: 49 focused and 1315 full Galaxy tests pass.
+Same probe now spans 60 arcsec at 0.06 arcsec/pixel. Human acknowledged the two
+current Heart YELLOW map/table drift reasons and authorized shipping. Library PR
+creation and linked workspace smoke underway; no next phase issued.
