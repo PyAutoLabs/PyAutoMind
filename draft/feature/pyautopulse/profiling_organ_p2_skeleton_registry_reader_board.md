@@ -1,9 +1,9 @@
 # Profiling organ phase 2 — the organ skeleton: registry, reader, board, workflows
 
 Type: feature
-Target: profiling_organ
+Target: PyAutoPulse
 Repos:
-- profiling_organ
+- PyAutoPulse
 - PyAutoBrain
 Themes:
 - profiling
@@ -12,7 +12,7 @@ Autonomy: supervised
 Priority: high
 Status: draft
 Consequence: judge
-Witness: `bin/pyauto-<key> check` prints `check: OK` against the lens registry row (summary resolves at one commit, validates, receipt written); hermetic pytest green over the acceptance cases; `bin/pyauto-<key> board` writes `dashboard.md/.html` + `state.json` (validated by `PyAutoBrain/board/_state.py`) with one `autolens_profiling` row linking to its Pages page; lint/pages/refresh workflows green
+Witness: `bin/pyauto-pulse check` prints `check: OK` against the lens registry row (summary resolves at one commit, validates, receipt written); hermetic pytest green over the acceptance cases; `bin/pyauto-pulse board` writes `dashboard.md/.html` + `state.json` (validated by `PyAutoBrain/board/_state.py`) with one `autolens_profiling` row linking to its Pages page; lint/pages/refresh workflows green
 Review-minutes: 20
 Unattended: ready
 Filed: 2026-10-02
@@ -21,9 +21,8 @@ Phase: 2
 
 Blocked on: phase 0 shipped (the repo exists and is named) and phase 1 shipped (the `profiling-summary` v1 file it reads is published).
 
-Phase 2 of the `profiling-organ-birth` epic. `profiling_organ` is a
-**placeholder target** until phase 0 names the repo; phase 0 renames this
-folder and the `Target:`/`Repos:` lines. Modelled on the Eyes skeleton
+Phase 2 of the `profiling-organ-birth` epic. Human decision 2026-10-02: the
+organ is **PyAutoPulse** (organ key `pulse`); the repo is created in phase 0. Modelled on the Eyes skeleton
 (`complete/2026/09/eyes-organ-skeleton.md`, PyAutoEyes#2): the organ reads,
 validates and links; it renders no measurement, judges nothing and copies no
 result trees.
@@ -58,9 +57,9 @@ result trees.
    missing → "freshness policy unspecified", shown with the age), scientific
    qualification. A valid empty feed reads "no measurements". No league table
    across cells; no recomputed ratio; no Heart verdict. `state.json` is the
-   organ's own cockpit feed (`organ: <key>`, `repo: <Name>`), status summarising
+   organ's own cockpit feed (`organ: pulse`, `repo: PyAutoPulse`), status summarising
    the organ's monitoring scope only.
-4. **`bin/pyauto-<key>`** dispatcher (Heart/Eyes pattern): `check`, `board`,
+4. **`bin/pyauto-pulse`** dispatcher (Heart/Eyes pattern): `check`, `board`,
    `census`, `fetch [--instance K]`.
 5. **Tests** (hermetic, fixtures under `tests/fixtures/`): the spec's acceptance
    cases that belong to the reader — valid empty producer; one project

@@ -1,11 +1,11 @@
 # Profiling organ phase 3 — Brain board card and cockpit transition
 
 Type: feature
-Target: profiling_organ
+Target: PyAutoPulse
 Repos:
 - PyAutoBrain
 - autolens_profiling
-- profiling_organ
+- PyAutoPulse
 Themes:
 - profiling
 Difficulty: medium
@@ -23,7 +23,8 @@ Phase: 3
 Blocked on: phase 2 shipped (the organ's `state.json` exists and is published).
 
 Phase 3 of the `profiling-organ-birth` epic — the **organ → Brain board**
-interface. `profiling_organ` is the phase-0 placeholder target.
+interface. Human decision 2026-10-02: the organ is **PyAutoPulse** (organ key
+`pulse`).
 
 ## Context
 
@@ -44,7 +45,7 @@ organ feed and retires nothing the project publishes.
 
 ## Task
 
-1. **PyAutoBrain** `board/_board.py`: a `collect_<key>()` strip composed like
+1. **PyAutoBrain** `board/_board.py`: a `collect_pulse()` strip composed like
    `collect_eyes()` (the organ's renderer decides the numbers, the Brain board
    shows them), fed from the organ's `state.json`/board head; the `boards`
    family already lists the organ from phase 0. `board/_theme.py` ORGANS key

@@ -23,8 +23,7 @@ Filed: 2026-10-02
 Epic: profiling-organ-birth
 Phase: 0
 
-Phase 0 of the `profiling-organ-birth` epic. **Human-gated**: the organ's name,
-the `gh repo create`, and the `.github` org-profile row are human acts. Gates
+Phase 0 of the `profiling-organ-birth` epic. **Human-gated**: the `gh repo create`, and the `.github` org-profile row are human acts. Gates
 phases 2 and 3 (the organ skeleton needs the repo; the cockpit transition
 needs the organ identity). Phase 1 (the project-side summary contract in
 `autolens_profiling`) does **not** wait on this phase.
@@ -70,45 +69,42 @@ project is phase 4 when one exists.
 
 ## Human decisions this phase needs (answer on the issue)
 
-1. **The organ's name.** Candidates in the body metaphor, agent-recommended
-   first — the human picks, the agent never does:
-   - `PyAutoPulse` — the pulse is a rate read over time, which is exactly what
-     the run-time-over-release board shows; organ key `pulse`.
-   - `PyAutoMuscle` — raw performance; organ key `muscle`.
-   - `PyAutoReflex` — speed of response; organ key `reflex`.
-   - `PyAutoMetabolism` — compute cost/energy; organ key `metabolism`.
-   The cockpit key must be the organ's key, not the legacy wire label
-   `profiling` that `autolens_profiling/dashboard/state.json` emits today (spec,
-   "Two interfaces": that label is not proof the project is an organ).
+1. **The organ's name — DECIDED 2026-10-02: `PyAutoPulse`, organ key `pulse`**
+   (human, verbatim: "lets go with PyAutoPulse"). The pulse is a rate read
+   over time, which is what the run-time-over-release board shows. The
+   cockpit key is `pulse`, not the legacy wire label `profiling` that
+   `autolens_profiling/dashboard/state.json` emits today (spec, "Two
+   interfaces": that label is not proof the project is an organ). History
+   note from the human: a `PyAutoPulse` repo existed once and was renamed to
+   `PyAutoHeart`; the name is free again and the new repo is a fresh create.
+   Candidates not chosen: PyAutoMuscle, PyAutoReflex, PyAutoMetabolism.
 2. **Fresh repo, not a rename.** Unlike Eyes, nothing is promoted: the project
-   repo stays a project. Human runs `gh repo create PyAutoLabs/<Name> --public`
+   repo stays a project. Human runs `gh repo create PyAutoLabs/PyAutoPulse --public`
    (the public-surface guard denies it to the agent).
 3. **Canonical organ order.** The human ruled 2026-09-25 that organs read Brain,
    Mind, Cortex, Memory, Eyes, Heart, Hands, Nerves, Gut. Where does the new
    organ sit? Default proposal: after Eyes (both are perception/dashboard
    organs), before Heart.
 
-## Task (phase 0), once the name is chosen
+## Task (phase 0)
 
 One task worktree, PRs in the Cortex order **Mind → Brain → Heart → Hands → hub**:
 
-1. **PyAutoMind**: `repos.yaml` organ row (`path: organs/<Name>`, `github:
-   PyAutoLabs/<Name>`, `category: organ`, `organ: <Key>`, `role`, `public_role`
+1. **PyAutoMind**: `repos.yaml` organ row (`path: organs/PyAutoPulse`, `github:
+   PyAutoLabs/PyAutoPulse`, `category: organ`, `organ: pulse`, `role`, `public_role`
    — role text from the spec's "Decision" and "Ownership" sections, modelled on
    the Eyes row); `ORGANS` frozenset in `scripts/repos_sync.py` (~line 141);
    `policy/session_start_hook.sh` dir chains (~lines 134–140); `ROUTING.md`;
    `epics.md` `profiling-organ-birth` notes (name chosen, ledger repointed to
-   `<Name>/dashboard.md` once phase 2 lands); rename the placeholder draft
-   folder `draft/feature/profiling_organ/` → `draft/feature/<name>/` and the
-   `Target:` lines in phases 2–3; decision record
-   `complete/2026/10/<name>-organ-decision.md` (what state the organ owns,
+   `PyAutoPulse/dashboard.md` once phase 2 lands); decision record
+   `complete/2026/10/pyautopulse-organ-decision.md` (what state the organ owns,
    boundaries against the profiling conductor, the project repos, Heart and
    Mind — modelled on `pyautoeyes-organ-decision.md`); then
    `python3 scripts/repos_sync.py --write` (map blocks, organ tables, hooks).
 2. **PyAutoBrain**: `SIBLING_ORGANS` (`agents/_pyauto_root.py` ~line 60 and
    `bin/_pyauto_root.sh`); `ORGANISM.md` organ-table row + boundary prose +
    growth-rule paragraph (the fourth capability to earn an organ, after Gut,
-   Cortex, Eyes); `docs/concepts/organism.md`; new `docs/organs/<name>.md` +
+   Cortex, Eyes); `docs/concepts/organism.md`; new `docs/organs/pyautopulse.md` +
    toctree; `README.md` organ count; `organs/AGENTS.md` routing row;
    `config/policy.yaml` `boards:` family entry (so `board/_board.py` derives
    its Pages URL — no card yet, that is phase 3); profiling conductor prose
@@ -122,7 +118,7 @@ One task worktree, PRs in the Cortex order **Mind → Brain → Heart → Hands 
 5. **pyautolabs.github.io** `index.html` blurb; **PyAutoScientist** README
    table (generated); **.github** profile row (human).
 
-Local: clone the fresh empty repo at `organs/<Name>` with the standard organ
+Local: clone the fresh empty repo at `organs/PyAutoPulse` with the standard organ
 stubs (`AGENTS.md` with repos_sync markers, `CLAUDE.md` → `@AGENTS.md`,
 `README.md`, LICENSE). Content arrives in phase 2.
 
