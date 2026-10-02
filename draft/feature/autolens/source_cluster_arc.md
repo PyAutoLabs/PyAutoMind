@@ -490,3 +490,36 @@ guard clear. Proposed feature/critical-curves-dispatch-audit; implementation
 worktree only after plan approval. No issue or implementation edits yet.
 Cortex projects/inference_programme.md and R-20260907-05 retain phase 11 as
 DROPPED; no implicit science-project birth or revival.
+
+## Concurrent unissued implementation proposal — 2026-10-02
+
+
+The old `draft/feature/autolens/source_cluster_arc.md` path was retired by Mind's
+epic lifecycle; this archived file is the live arc ledger. No adjacent
+DECISIONS/RESULTS file exists. Confirmed workspace_test#334 merged and #333
+closed; PyAutoLens#760 merged and #759 closed. No related phase-3 open issue or
+PR appears in the affected repos, and no active.md row claims its repos. The
+old phase-1 remainder and phase-2 profiling remain transferred, not complete.
+The Cortex phase-11 task remains dropped under R-20260907-05.
+
+The next arc work is phase 3. Current source invalidates one historical defect:
+`autogalaxy/plot/plot_utils.py` is gone, leaving one
+`autogalaxy/util/plot_utils.py`. The config selector still defaults to marching
+squares; PyAutoLens cluster plots still call marching-squares LensCalc methods
+directly for each plane. Filed the first bounded subphase at
+`draft/feature/autolens/cluster_curves_engine_dispatch.md` to make those plots
+honor configured engine selection while preserving multi-plane geometry.
+Brain classifies that slice as a direct library feature (declared medium,
+heuristic large); Heart entry feed GREEN, conflict guard clear. Plan and branch
+name await human approval. No issue or implementation worktree has been created,
+no source edited, and no later phase issue queued. Context-aware JIT dispatch,
+doc fixes and cluster-scale performance/accuracy remain phase-3 work.
+
+## Approved sequence — 2026-10-02
+
+Human “go” in this session approves critical_curves_dispatch_audit (phase 3a).
+The concurrent cluster_curves_engine_dispatch draft has no issue or approval
+record; preserve it as an implementation candidate to reconcile after the audit.
+Its historical phase-3a label does not authorize a second issue. The canonical
+ledger is restored under draft/; the archived-location statement above is
+superseded. Only the approved audit is issued now.
