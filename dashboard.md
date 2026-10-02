@@ -284,7 +284,7 @@ Use the start-dev skill. active/colab_refinement_throughout.md
 
 </details>
 
-<details><summary>📋 <a href="active/critical_curves_dispatch_audit.md">Critical-curve dispatch: current cluster evidence and contract</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/337">issue #337</a> — issued 2026-10-02 — workspace-dev</summary>
+<details><summary>📋 <a href="active/critical_curves_dispatch_audit.md">Critical-curve dispatch: current cluster evidence and contract</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/337">issue #337</a> — issued 2026-10-02 — workspace-dev, blocked-at-ship-gate</summary>
 
 ```
 Use the start-dev skill. active/critical_curves_dispatch_audit.md

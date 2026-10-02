@@ -570,3 +570,25 @@ Initial full smoke attempt timed out existing delaunay.py and delaunay_mge.py at
 is in progress; its first script passed (165.2s). No PR or phase completion yet.
 Heart GREEN does not waive the full smoke gate. No source/library default changed,
 no later issue queued, no Cortex project revived.
+
+
+## Shipping checkpoint — 2026-10-02
+
+Heart refreshed at 2026-10-02T09:49:31.721134+00:00 returned RED, score 45:
+`PyAutoFit: 1 commit(s) behind origin`; `PyAutoGalaxy: 1 commit(s) behind origin`;
+`PyAutoLens: 1 commit(s) behind origin`. These are release Colab-link updates.
+Also YELLOW: `manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml`.
+STALE: `release validation incomplete: no rehearsal for current source`.
+
+Ship-workspace therefore stopped before PR creation. Full smoke retry passed
+five scripts (Delaunay, Delaunay MGE, rectangular, MGE, LP), then our process tree
+was stopped at the Heart gate; remaining smoke scripts unrun. The small new
+example independently passed both runtimes. Profiling 1002 passed/5 skipped,
+artifact negative controls and lint/docs checks remain valid.
+
+Both implementation worktrees are uncommitted and preserved under
+.worktrees/critical-curves-dispatch-audit/ on feature/critical-curves-dispatch-audit.
+Scratch holds raw workers/logs/PR drafts; profiling results hold frozen measured
+source, JSON/PNG and the cumulative research ledger/wiki. No job remains running.
+Resume: resolve Heart via the normal workflow, complete full workspace smoke,
+then ship both companion PRs for #337. No successor issue or phase completion.

@@ -68,13 +68,13 @@
 - prompt: active/critical_curves_dispatch_audit.md
 - epic: cluster-strong-lensing
 - session: Codex, 2026-10-02
-- status: workspace-dev
+- status: workspace-dev, blocked-at-ship-gate
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/critical-curves-dispatch-audit
 - repos:
   - autolens_workspace_test: feature/critical-curves-dispatch-audit
   - autolens_profiling: feature/critical-curves-dispatch-audit
 - coordination: Human authorized concurrent separate scope alongside point-source-search-nautilus-leaf / profiling#361 on 2026-10-02.
-- resume: Phase 3a research and workspace CI example implemented; pinned JSON/PNG + wiki validate. Profiling 1002 passed/5 skipped and lint/docs checks green. Full Heart workspace smoke retry in progress after existing scripts timed out; no PR until gate passes. Evidence and logs under task scratch; candidate next step is field-preserving grid-cap fix, not issued. No phase completion or merge authorized.
+- resume: Phase 3a research/JSON/PNG/wiki and independent CI example implemented, uncommitted in both feature worktrees. Profiling 1002 passed/5 skipped; lint/docs/artifact validation green. Refreshed Heart RED: PyAutoFit/PyAutoGalaxy/PyAutoLens each 1 commit behind origin, plus manifest YELLOW. Smoke retry passed first five then stopped at gate; remainder unrun. Resolve Heart, complete full smoke, ship two companion PRs for #337. Raw workers/logs/PR drafts in scratch. No successor issue, phase completion or merge authorization.
 
 ## over-sample-snr-helper
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/602
