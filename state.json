@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 13 in flight",
-  "updated": "2026-10-02T11:43:42Z",
+  "headline": "RED \u2014 24 picks \u00b7 12 in flight",
+  "updated": "2026-10-02T11:50:27Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -36,12 +36,6 @@
       "text": "fit_util: masked divisions NaN the gradient on the JAX path \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/607",
       "prompt": "Use the start-dev skill. active/fit_util_masked_division_grad_nan.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Publish all observed Heart monitoring families \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoHeart/pull/271",
-      "prompt": "Use the start-dev skill. active/heart_publication_coverage.md"
     },
     {
       "severity": "yellow",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#584 \u2014 pointsolver-mcs-headroom",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/584",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#580 \u2014 Shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/580",
       "prompt": null
     }
   ]
