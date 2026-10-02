@@ -252,7 +252,7 @@ Use the start-dev skill. draft/research/pyautohands/git_docs.md
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging, point_source and interferometer</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/142">issue #142</a> — issued 2026-10-02 — workspace-dev</summary>
+<details><summary>📋 <a href="active/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging, point_source and interferometer</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/142">issue #142</a> — issued 2026-10-02 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/146">autolens_assistant#146</a></summary>
 
 ```
 Use the start-dev skill. active/benchmark_forward_model_consistency.md

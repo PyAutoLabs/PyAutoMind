@@ -16,12 +16,15 @@
 - issued: 2026-10-02
 - prompt: active/benchmark_forward_model_consistency.md
 - session: Codex; session ID unavailable
-- status: workspace-dev
+- status: awaiting-merge
 - bundle: assistant
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/assistant
 - repos:
   - autolens_assistant: feature/benchmark-forward-model-consistency
-- resume: Plan approved 2026-10-02. Sequential execution in shared worktree; one issue and PR per member. Merge remains human.
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/146
+- commit: cfeedf5bcb3e10e698642a8da5a92c855676cefb
+- validation: Final targeted 59 passed / 0 failed; earlier full suite 137 passed / 0 failed / 1 skipped. API/freeze and seven FITS byte-determinism checks pass. Three actual Claude calibration scores 0/0/0; failures retained, first timing confounded by test overlap.
+- resume: PR open with pending-release label; human /prm after CI. Shared worktree now proceeds to other bundle branches. Logs in .worktrees/assistant/scratch/forward-*.log. No merge authorization.
 
 ## benchmark-positions-inference
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/143

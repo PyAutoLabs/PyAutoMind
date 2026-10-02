@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 12 in flight",
-  "updated": "2026-10-02T09:27:35Z",
+  "updated": "2026-10-02T09:29:31Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Benchmark card: forward-model consistency across imaging, point_source and interferometer \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autolens_assistant/pull/146",
+      "prompt": "Use the start-dev skill. active/benchmark_forward_model_consistency.md"
+    },
     {
       "severity": "yellow",
       "text": "Add `over_sample_size_via_snr_from` so a signal-to-noise map can steer over-sampling without a second\u2026 \u2014 library-shipped, awaiting-merge",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#426 \u2014 autolens-visualization-rebirth",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/426",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#404 \u2014 codex-context-efficiency",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/404",
       "prompt": null
     }
   ]
