@@ -210,27 +210,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/365
 - final-validation: Galaxy 1315 passed; focused 49 passed; full companion smoke 33/33 in 501.91s (changed example 2.2s). Galaxy exact-head CI all green; new companion CI pending. Wiki/results-layout and whitespace checks pass. No raw phase-3a evidence changed.
 
-## heart-publication-coverage
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/270
-- issued: 2026-10-02
-- prompt: active/heart_publication_coverage.md
-- session: Codex; session ID unavailable
-- status: library-shipped, awaiting-merge
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/heart-publication-coverage
-- coordination: Human approved concurrent isolated Heart work alongside pyautopulse-organ-row; that PR merged before worktree creation.
-- repos:
-  - PyAutoHeart: feature/heart-publication-coverage
-- validation: 1177 Heart tests passed; tenant firewall passed; real snapshot round trip exported 16 monitoring families.
-- heart-reasons:
-  - manifest drift: organism-map blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml
-  - manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml
-
-- heart-ack: Human acknowledged both recorded YELLOW reasons on 2026-10-02: "do that i authorise"; unchanged at shipping, no RED blockers.
-- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/271
-- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/271
-- commit: 0c1b7d6e98a620082e6f47c133db438e04fb51f2
-- resume: PR open with pending-release label; Python 3.12 and 3.13 CI in progress at handoff. Run /prm on human authorization once green. No workspace API impact; scientific smoke not applicable.
-
 ## pyautopulse-organ-skeleton
 - issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/1
 - issued: 2026-10-02

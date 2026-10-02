@@ -1,3 +1,21 @@
+# Heart publication coverage
+
+Merged PyAutoHeart #271 on 2026-10-02, merge commit e57425943c3eccad04c6d02f8da6049210a4e960.
+Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/270
+PR: https://github.com/PyAutoLabs/PyAutoHeart/pull/271
+
+Exports all observed monitoring families with complete public inventories and original timestamps. Missing legacy sections receive fallback observations; cloud observations take precedence. Missing, malformed or expired evidence remains unresolved, with private findings retained as redacted records. Release gates are unchanged.
+
+Validation: 1177 local tests passed; tenant firewall passed; real-snapshot replay exported 16 families. CI run 37002521370 passed both Python 3.12 and 3.13 jobs at head 0c1b7d6e98a620082e6f47c133db438e04fb51f2. All head runs checked; one pull_request run exists.
+
+Human acknowledged the exact two generated-map/front-door Heart YELLOW reasons before shipping and invoked /prm to authorize merge and closeout.
+
+- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/271
+
+The merged code needs the next local publication and Pages render to update live evidence. No scientific workspace API changes; scientific smoke not applicable.
+
+## Original prompt
+
 # Publish all observed Heart monitoring families
 
 Type: bug
