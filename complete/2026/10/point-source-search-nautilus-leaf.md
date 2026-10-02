@@ -1,3 +1,19 @@
+# Point-source Nautilus admission bar — completed
+
+- Issue: https://github.com/PyAutoLabs/autolens_inference/issues/15
+- Epic: point-source-cpu-speed
+- Merged 2026-10-02: autolens_inference#17 (`b0e49501`), autolens_profiling#361 (`6ee2b30a`).
+- Scope: first source-plane solved Nautilus search leaf, shared runner, fixed-vector timing estimate, five RAL seeds, result/log evidence, dashboards and campaign reconciliation. No solver defaults changed.
+- Results: five fresh fits recover all five parameters within 0.74 sigma; wall 50.38–58.51 s, 4,700–4,850 evaluations, estimated steady batched likelihood share 0.0405–0.0447%. This is not an image-plane PointSolver timing or a gradient-sampler admission result.
+- Approved CI repair: unchanged 1.031 practical overhead budget, one-sided 95% Student-t bounds, explicit INCONCLUSIVE outcome, unconditional mean >1.5 gross failure. Broader audit filed as autolens_profiling#362 (draft/bug/autolens_profiling/timing_noise_audit.md, planned).
+- Validation: inference 78 tests and smoke/lint/dashboard/submit checks pass. Profiling changed module 46 passed; lint/format/wiki/README checks pass. Exact-head CI: inference run 36985308077 and profiling run 36987124161, every run/job success. Heart GREEN at ship.
+- Local expanded suite interrupted after 813 passes, 4 skips and one layout-related failure: prior-exit hazard test scans a sibling PyAutoFit checkout. Added the missing worktree symlink; all five tests in that module then passed. Complete CI is the full-suite evidence. Local logs remain in the profiling task's tmp directory.
+- Limitations: fixed-vector timings estimate fit share, rather than instrumenting every evaluation. No load/affinity/dirty-state capture for historical RAL rows. Small-sample Student-t assumptions remain for audit #362. Raw logs retain nonfatal visualization warmup warnings.
+- Data: human explicitly chose KEEP inference worktree/data (3.1 MB output + 676 KB dataset). RAL worktree and bulk output retained. Profiling scratch logs retained for diagnosis.
+- Next campaign member: draft/feature/autolens/pointsolver_extent_sanity_check.md, then per-package workspace extents; issue one bounded phase after plan approval. Source-plane blackjax work needs its own admission bar. Broader timing audit is a separate planned task.
+
+## Original prompt
+
 # First point-source search leaf: Nautilus on the source-plane solved likelihood (admission bar)
 
 Type: feature

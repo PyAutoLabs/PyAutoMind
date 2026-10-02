@@ -18,8 +18,8 @@ Adopt the terminology and reconcile existing documentation (recommended)
 ## Scope
 
 Follow the discrepancies documented by Brain#441 and
-`PyAutoBrain/docs/research/ecosystem_levels.md`. After the existing
-`point-source-search-nautilus-leaf` claim is released, inspect current Cortex
+`PyAutoBrain/docs/research/ecosystem_levels.md`. The `point-source-search-nautilus-leaf` claim was released on 2026-10-02
+(record `complete/2026/10/point-source-search-nautilus-leaf.md`). Inspect current Cortex
 AGENTS.md/REFERENCE.md and the project registry row, then update inference
 `CORTEX.md` and affected passages of `AGENTS.md` to describe the current
 Now / Runs / Log model, science/development boundary and actual ledger locations.

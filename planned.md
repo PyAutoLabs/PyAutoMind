@@ -83,9 +83,10 @@
 ## timing-noise-audit
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/362
 - filed: 2026-10-02
-- prompt: active/timing_noise_audit.md
+- prompt: draft/bug/autolens_profiling/timing_noise_audit.md
 - status: planned
-- blocked-by: point-source-search-nautilus-leaf
+- blocked-by: critical-curves-dispatch-audit
+- prior-blocker-cleared: point-source-search-nautilus-leaf merged 2026-10-02; see complete/2026/10/point-source-search-nautilus-leaf.md
 - repos:
   - autolens_profiling: feature/timing-noise-audit
 - summary: Audit all runtime-sensitive tests and production profiling gates for noise, uncertainty and inconclusive outcomes; issue bounded implementation phases after inventory. Immediate ABBA cutoff repair is handled by the blocking task's PR #361.

@@ -3,7 +3,7 @@
 Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/362
 Issued: 2026-10-02
 Type: bug
-Target: workspaces
+Target: autolens_profiling
 Repos:
 - autolens_profiling
 Difficulty: large

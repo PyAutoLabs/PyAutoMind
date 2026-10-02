@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 12 in flight",
-  "updated": "2026-10-02T09:01:59Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 10 in flight",
+  "updated": "2026-10-02T09:07:44Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "First point-source search leaf: Nautilus on the source-plane solved likelihood (admission bar) \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autolens_inference/pull/17",
-      "prompt": "Use the start-dev skill. active/point_source_search_nautilus_leaf.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#387 \u2014 What shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/387",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoBrain PyAutoBrain#406 \u2014 Shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/406",
       "prompt": null
     }
   ]

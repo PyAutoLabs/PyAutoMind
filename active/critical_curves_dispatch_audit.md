@@ -102,8 +102,8 @@ wiki/campaigns/critical_curves.md page. Workspace_test retains only the small
 scripts/cluster/critical_curves.py numerical regression, wired into smoke_tests.txt.
 One task / existing issue #337, one PR per affected repository, no new phase issue.
 
-Repo claim conflict: point-source-search-nautilus-leaf claims autolens_profiling
-for PR #361. User explicitly answered "Allow concurrent, separate scope".
+Previous repo claim conflict cleared 2026-10-02: point-source-search-nautilus-leaf
+merged PR #361 and released its claim (complete/2026/10/point-source-search-nautilus-leaf.md). User explicitly answered "Allow concurrent, separate scope".
 That PR touches point-source campaign ledgers and a fixed-light test; this task
 is restricted to critical-curves files plus lens/wiki navigation links.
 Profiling branch feature/critical-curves-dispatch-audit, base 4d6523f. Its canonical
