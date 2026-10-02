@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 12 in flight",
-  "updated": "2026-10-02T09:03:03Z",
+  "updated": "2026-10-02T09:05:30Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "Complete Heart monitoring score and repair coverage \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoHeart/pull/268",
       "prompt": "Use the start-dev skill. active/complete_monitoring_score_and_repairs.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Add `over_sample_size_via_snr_from` so a signal-to-noise map can steer over-sampling without a second\u2026 \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/606",
+      "prompt": "Use the start-dev skill. active/over_sample_size_via_snr_from.md"
     },
     {
       "severity": "yellow",
@@ -35,6 +41,12 @@
       "severity": "yellow",
       "text": "pending release: .github .github#16 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/.github/pull/16",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#606 \u2014 Add `over_sample_size_via_snr_from` so a signal-to-noise map can steer over-sampling without a second\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/606",
       "prompt": null
     },
     {
@@ -113,18 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#601 \u2014 streaming-p5-cubes-phase-centre",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/601",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#446 \u2014 Complete Heart monitoring score and repair coverage",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/446",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#426 \u2014 autolens-visualization-rebirth",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/426",
       "prompt": null
     }
   ]

@@ -324,7 +324,7 @@ Use the start-dev skill. active/mesh_geometry_areas_transformed_adapt_image_inde
 
 </details>
 
-<details><summary>📋 <a href="active/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can steer over-sampling without a second…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/602">issue #602</a> — issued 2026-10-02 — library-dev</summary>
+<details><summary>📋 <a href="active/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can steer over-sampling without a second…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/602">issue #602</a> — issued 2026-10-02 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/606">PyAutoArray#606</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/644">PyAutoGalaxy#644</a> — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 Use the start-dev skill. active/over_sample_size_via_snr_from.md
@@ -358,6 +358,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#606](https://github.com/PyAutoLabs/PyAutoArray/pull/606) — `active/over_sample_size_via_snr_from.md`
 - [PyAutoArray#576](https://github.com/PyAutoLabs/PyAutoArray/pull/576) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - [PyAutoArray#582](https://github.com/PyAutoLabs/PyAutoArray/pull/582) — `complete/2026/09/interferometer-sparse-cache.md`
 - [PyAutoArray#589](https://github.com/PyAutoLabs/PyAutoArray/pull/589) — `complete/2026/09/interferometer-streaming-visibilities.md`
@@ -409,6 +410,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#644](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/644) — `active/over_sample_size_via_snr_from.md`
 - [PyAutoGalaxy#629](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/629) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - [PyAutoGalaxy#637](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/637) — `complete/2026/09/interferometer-streaming-visibilities.md`
 - [PyAutoGalaxy#633](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/633) — `complete/2026/09/isothermal-convergence-jit.md`
