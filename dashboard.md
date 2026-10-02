@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 7 |
-| [Backlog](#backlog) (`draft/`) | 259 |
+| [Backlog](#backlog) (`draft/`) | 260 |
 
 > **No batch in flight.**
 
@@ -284,7 +284,7 @@ Use the start-dev skill. active/colab_refinement_throughout.md
 
 </details>
 
-<details><summary>📋 <a href="active/critical_curves_dispatch_audit.md">Critical-curve dispatch: current cluster evidence and contract</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/337">issue #337</a> — issued 2026-10-02 — workspace-dev, blocked-at-ship-gate</summary>
+<details><summary>📋 <a href="active/critical_curves_dispatch_audit.md">Critical-curve dispatch: current cluster evidence and contract</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/337">issue #337</a> — issued 2026-10-02 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/341">autolens_workspace_test#341</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/364">autolens_profiling#364</a></summary>
 
 ```
 Use the start-dev skill. active/critical_curves_dispatch_audit.md
@@ -696,7 +696,7 @@ Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_parti
 
 ## Backlog
 
-**259** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **58** of them belong to an epic and are listed only under [Epics](#epics) below.
+**260** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **59** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 78</summary>
@@ -3025,7 +3025,7 @@ Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens
 </details>
 
 <details>
-<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 12 queued prompt(s), in order</summary>
+<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 13 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Cluster strong lensing — Source &amp; Cluster arc</b> — ledger: `draft/feature/autolens/source_cluster_arc.md` — In progress — subphases 1a–1d shipped; remaining solver work transferred to cluster-pointsolver-speed, not solved. Next is phase…</summary>
 
@@ -3111,6 +3111,14 @@ Use the start-dev skill. draft/feature/workspaces/cluster_pixelized_analysisfact
 
 ```
 Use the start-dev skill. draft/docs/howtolens/cluster_pixelized_source.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autogalaxy/evaluation_grid_cap_preserves_field.md">Preserve the LensCalc evaluation field when the grid cap activates</a> — autogalaxy · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/bug/autogalaxy/evaluation_grid_cap_preserves_field.md
 ```
 
 </details>
@@ -3331,7 +3339,7 @@ Use the start-dev skill. draft/research/autolens_profiling/interferometer_stream
 
 </details>
 
-70 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+71 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3359,6 +3367,7 @@ Use the start-dev skill. draft/research/autolens_profiling/interferometer_stream
 - `draft/feature/workspaces/model_figures_6_rollout.md`
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md`
+- `draft/bug/autogalaxy/evaluation_grid_cap_preserves_field.md`
 - `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
 - `draft/bug/autolens/point_image_pair_all_forward_grad_nan.md`
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
@@ -3375,8 +3384,7 @@ Use the start-dev skill. draft/research/autolens_profiling/interferometer_stream
 - `draft/docs/autolens/split_lensing_regimes.md`
 - `draft/docs/autolens_inference/reconcile_cortex_ledger_references.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
-- `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
-- _… and 30 more_
+- _… and 31 more_
 
 </details>
 
