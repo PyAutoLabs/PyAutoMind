@@ -1,3 +1,34 @@
+# Heart monitoring coverage — completed
+
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/267
+- pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/446
+- pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/268
+- merged: 2026-10-02
+- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/446
+- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/268
+
+## Shipped
+
+Headline monitoring score and systematic repair action share the complete inventory: all configured repositories, advisory and nested findings, missing evidence and unfinished baselines. A perfect monitoring score requires fresh green evidence across applicable checks. Release readiness remains separately labelled and its gate unchanged. Brain health gains explicit dashboard scope and cannot stop at release GREEN while monitoring is incomplete.
+
+Collectors retain observation times; published local inventory keeps complete findings and privacy-safe placeholders. Older undated or incomplete evidence requires refresh and publication. Underlying advisory findings were not repaired by this task; they are covered by the expanded repair action. No scientific-library API migration or package release.
+
+## Merge and validation evidence
+
+Human /prm authorized merge and close-out. Brain merged first at cf13380a0ab02c354ca85d7560bdd0eeaede3a9e; Heart at aa358d3cfca29c8c7c33781945cbf000cb20d8bb. Both repository histories are non-shallow, and origin/main contains every claimed branch commit (zero unmerged).
+
+Brain Actions run 36987274190 and Heart run 36987344066 each have passing Python 3.12 and 3.13 jobs. All runs for each head enumerated: one pull_request run per repo, every job completed successfully. Both PRs CLEAN/MERGEABLE before merge.
+
+Local validation: Heart 1168 passed; Brain 1141 passed; collector timestamp tests 34 passed; tenant firewall and whitespace checks passed. Independent bounded review found no remaining blockers. End-to-end captured board: monitoring RED/42/incomplete, release GREEN/100; Brain adopts the distinct monitoring state correctly.
+
+Logs and generated preview preserved under PyAutoMind/tmp/heart-monitoring-coverage/ (local scratch). Development worktrees contain only code/test caches, no scientific data products; remove after close-out. No remaining implementation scope.
+
+## Backlog reconciliation
+
+No sibling prompt is proven completed by these PRs. Six unrelated existing suspects remain filed under draft/bug/pyautoheart: reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests; heart_smoke_runner_deletes_the_tracked_output; manifest_drift_parser_drops_suffixed_check_legs; ral_venv_dependency_floor_drift; release_integrate_analyze_path_filter_and_workspace_lint; smoke_install_flat_pip_chain_breaks_local_env_creation. Revisit with `pyauto-brain intake reconcile draft/bug/pyautoheart`; overlap/reference hints alone are not merge proof for this task.
+
+## Original prompt
+
 # Complete Heart monitoring score and repair coverage
 
 Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/267
