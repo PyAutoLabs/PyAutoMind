@@ -7,7 +7,9 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
+Issued: 2026-10-02
+Issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/337
 Epic: cluster-strong-lensing
 Phase: 3a
 Parent: draft/refactor/autogalaxy/critical_curves_dispatch_cluster.md
@@ -85,3 +87,5 @@ too-large (20) with read-only library references. After restricting routing to
 the sole workspace target it still scores 13 / too-large; retain declared medium
 because this is two CPU fixtures and an evidence report, with no production
 API change. Re-slice if the bounded matrix exposes broader required work.
+
+Plan approved by human “go” on 2026-10-02; issued as #337.

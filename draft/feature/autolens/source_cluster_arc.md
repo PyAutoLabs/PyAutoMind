@@ -479,7 +479,7 @@ internal JIT and an externally jittable plotting API must be distinguished.
 Do not implement the old automatic-JIT proposal from historical timings alone.
 
 Filed one bounded research prompt:
-draft/research/workspaces/critical_curves_dispatch_audit.md (phase 3a).
+active/critical_curves_dispatch_audit.md (phase 3a).
 Evidence first: current dispatch/call boundaries, two synthetic fixtures,
 per-source-plane curve/caustic geometry, bounded cold/warm/disabled-JIT timings,
 and an explicit dispatch contract. Production/default changes remain phase 3
@@ -523,3 +523,7 @@ record; preserve it as an implementation candidate to reconcile after the audit.
 Its historical phase-3a label does not authorize a second issue. The canonical
 ledger is restored under draft/; the archived-location statement above is
 superseded. Only the approved audit is issued now.
+
+Phase 3a issued as autolens_workspace_test#337 after human approval “go”.
+Workspace branch feature/critical-curves-dispatch-audit; implementation and
+validation in progress. Heart entry GREEN. No merge/release authorized.
