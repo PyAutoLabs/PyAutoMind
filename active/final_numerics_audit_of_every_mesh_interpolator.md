@@ -9,6 +9,7 @@ Difficulty: large
 Autonomy: supervised
 Priority: high
 Status: formalised
+Issued: 2026-10-02
 Filed: 2026-08-26
 
 One last systematic round of numerics testing across **every** `@PyAutoArray`

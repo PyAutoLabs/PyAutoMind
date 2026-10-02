@@ -16,6 +16,7 @@ Witness: `benchmarks/runs/positions_initialised_inference/` holds three scored r
 Review-minutes: 15
 Unattended: needs-access
 Unblocked: 2026-09-27 — harness shipped (autolens_assistant#127, PyAutoBrain#380; issue #126 closed; record complete/2026/09/oneshot-benchmark-harness.md)
+Issued: 2026-10-02
 Filed: 2026-09-17
 
 ## Why
