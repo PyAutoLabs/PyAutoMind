@@ -153,3 +153,20 @@ acknowledgment requested before development PR opening.
   and drafted PR bodies are retained in the isolated task root.
 - On acknowledgment: ship PyAutoLens first, then the workspace companion (with
   PyAutoLens release gate) and the campaign-record PR. Do not issue another phase.
+
+## Shipped for review — 2026-10-02
+
+Human instructed “prm and continue” after the Heart YELLOW checkpoint. That
+acknowledges development shipping on the reported verdict; no release is
+authorized. The readiness reasons remain manifest drift and missing rehearsal.
+
+- Library: https://github.com/PyAutoLabs/PyAutoLens/pull/764 (`b9726f75a`).
+- Workspace: https://github.com/PyAutoLabs/autolens_workspace_test/pull/338 (`3f81643`).
+- Campaign record: https://github.com/PyAutoLabs/autolens_profiling/pull/363 (`44087ce`).
+
+All three are mergeable but CI is pending. At judgment: library docs plus
+Python 3.12, 3.13 and no-JAX tests in progress; workspace Python 3.12/3.13
+smoke in progress (changes job passed); profiling lint in progress. No merge
+or cleanup. Workspace retains its PyAutoLens release gate. Per workspace
+AGENTS.md, judged once and stopped; no background waiter is armed. Resume prm
+when checks finish, preserving the one-phase-at-a-time campaign rule.

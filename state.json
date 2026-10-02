@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 12 in flight",
-  "updated": "2026-10-02T10:28:33Z",
+  "updated": "2026-10-02T10:30:06Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -30,6 +30,12 @@
       "text": "Add `over_sample_size_via_snr_from` so a signal-to-noise map can steer over-sampling without a second\u2026 \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/606",
       "prompt": "Use the start-dev skill. active/over_sample_size_via_snr_from.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "PointSolver grid-extent sanity check \u2014 warn when the data approach the solver\u2026 \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/764",
+      "prompt": "Use the start-dev skill. active/pointsolver_extent_sanity_check.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#593 \u2014 streaming-p1-array-free-dataset",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/593",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#597 \u2014 streaming-p3-visualizer",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/597",
       "prompt": null
     }
   ]

@@ -184,11 +184,16 @@
 - prompt: active/pointsolver_extent_sanity_check.md
 - epic: point-source-cpu-speed
 - session: Codex; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/pointsolver-extent-sanity-check
 - repos:
   - PyAutoLens: feature/pointsolver-extent-sanity-check
   - autolens_workspace_test: feature/pointsolver-extent-sanity-check
   - autolens_profiling: feature/pointsolver-extent-sanity-check (campaign ledger only)
 - coordination: Human approved the plan and concurrent disjoint workspace-test changes on 2026-10-02. Workspace scope is new scripts/point_source/jax_likelihood/solver_extent.py and its smoke list/profile entry; preserve all other tasks' edits.
-- resume: Approved implementation complete; full PyAutoLens suite 820 passed/1 xfailed, 27 focused tests passed, all 33 distinct Heart autolens_test smoke scripts have passing evidence (new regression 56.2s under unchanged 300s cap). Original environment-failure and host-interrupted reports retained in task root. Source and ledger changes are uncommitted pending required human acknowledgment of Heart YELLOW (85): manifest drift and absent release rehearsal. Then ship library first, workspace companion with PyAutoLens release gate, and campaign-record PR; no new phase/default changes.
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/764
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/338
+- campaign-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/363
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/764
+- release-gate: PyAutoLens
+- resume: Human acknowledged Heart YELLOW (85) via “prm and continue”. Three PRs opened; CI pending at judgment (library docs + Python 3.12/3.13/no-JAX, workspace Python 3.12/3.13, profiling lint). No merge. Next prm must judge every exact-head run/leg, then library-first and release gates. Local evidence: 820 passed/1 xfailed, 27 focused tests, 33 distinct smoke passes after documented recovery. Keep this sole bounded phase active; no next phase or solver default changes.

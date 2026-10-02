@@ -324,7 +324,7 @@ Use the start-dev skill. active/over_sample_size_via_snr_from.md
 
 </details>
 
-<details><summary>📋 <a href="active/pointsolver_extent_sanity_check.md">PointSolver grid-extent sanity check — warn when the data approach the solver…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/763">issue #763</a> — issued 2026-10-02 — library-dev</summary>
+<details><summary>📋 <a href="active/pointsolver_extent_sanity_check.md">PointSolver grid-extent sanity check — warn when the data approach the solver…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/763">issue #763</a> — issued 2026-10-02 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/764">PyAutoLens#764</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/338">autolens_workspace_test#338</a> — ⏳ pending release: PyAutoLens — ⏸ waiting on PyAutoLens's release</summary>
 
 ```
 Use the start-dev skill. active/pointsolver_extent_sanity_check.md
@@ -445,6 +445,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoLens**
 
+- [PyAutoLens#764](https://github.com/PyAutoLabs/PyAutoLens/pull/764) — `active/pointsolver_extent_sanity_check.md`
 - [PyAutoLens#750](https://github.com/PyAutoLabs/PyAutoLens/pull/750) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - [PyAutoLens#757](https://github.com/PyAutoLabs/PyAutoLens/pull/757) — `complete/2026/09/interferometer-sparse-precomputed-data-term.md`
 - [PyAutoLens#754](https://github.com/PyAutoLabs/PyAutoLens/pull/754) — `complete/2026/09/jax-grad-nan-zero-components.md`
@@ -455,6 +456,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoLens#761](https://github.com/PyAutoLabs/PyAutoLens/pull/761) — `complete/2026/09/streaming-p3-visualizer.md`
 - [PyAutoLens#751](https://github.com/PyAutoLabs/PyAutoLens/pull/751) — `complete/2026/09/workspace-config-cleanup.md`
 - [PyAutoLens#762](https://github.com/PyAutoLabs/PyAutoLens/pull/762) — `complete/2026/10/streaming-p4-light-profile-identity.md`
+- ⏸ waiting: [PointSolver grid-extent sanity check — warn when the data approach the solver…](active/pointsolver_extent_sanity_check.md)
 
 **PyAutoMemory**
 
