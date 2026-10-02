@@ -103,3 +103,15 @@
   - PyAutoArray
   - autolens_workspace_test
 - resume: Audit#603 discovered deterministic partial-final-block neighbor corruption; filed separately per explicit user request. No implementation begun or worktree created. Audit retains strict expected-failure witness citing609. Schedule repair independently and promote regression after fix.
+
+## sibson-internal-edge-continuity
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/610
+- filed: 2026-10-02
+- prompt: draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md
+- classification: both
+- suggested-branch: feature/sibson-internal-edge-continuity
+- blocked-by: mesh-interpolator-numerics-audit (using PyAutoArray and autolens_workspace_test)
+- affected-repos:
+  - PyAutoArray
+  - autolens_workspace_test
+- resume: Audit#603 found incorrect internal-edge Sibson weights and near-edge partition failure. Filed separately per explicit user request; strict expected-failure regressions retained in audit. No repair begun or worktree created. Plan algorithmic repair independently.
