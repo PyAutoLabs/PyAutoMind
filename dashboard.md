@@ -260,7 +260,7 @@ Use the start-dev skill. active/evaluation_grid_cap_preserves_field.md
 
 </details>
 
-<details><summary>📋 <a href="active/profiling_organ_p3_brain_board_cockpit_transition.md">Profiling organ phase 3 — Brain board card and cockpit transition</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/450">issue #450</a> — issued 2026-10-02 — library-dev</summary>
+<details><summary>📋 <a href="active/profiling_organ_p3_brain_board_cockpit_transition.md">Profiling organ phase 3 — Brain board card and cockpit transition</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/450">issue #450</a> — issued 2026-10-02 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/451">PyAutoBrain#451</a>, <a href="https://github.com/PyAutoLabs/pyautolabs.github.io/pull/24">pyautolabs.github.io#24</a> — ⏳ pending release: PyAutoBrain — ⏳ pending release: pyautolabs.github.io</summary>
 
 ```
 Use the start-dev skill. active/profiling_organ_p3_brain_board_cockpit_transition.md
@@ -306,6 +306,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoBrain**
 
+- [PyAutoBrain#451](https://github.com/PyAutoLabs/PyAutoBrain/pull/451) — `active/profiling_organ_p3_brain_board_cockpit_transition.md`
 - [PyAutoBrain#426](https://github.com/PyAutoLabs/PyAutoBrain/pull/426) — `complete/2026/09/autolens-visualization-rebirth.md`
 - [PyAutoBrain#404](https://github.com/PyAutoLabs/PyAutoBrain/pull/404) — `complete/2026/09/codex-context-efficiency.md`
 - [PyAutoBrain#387](https://github.com/PyAutoLabs/PyAutoBrain/pull/387) — `complete/2026/09/codex-token-efficiency.md`
@@ -474,6 +475,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **pyautolabs.github.io**
 
+- [pyautolabs.github.io#24](https://github.com/PyAutoLabs/pyautolabs.github.io/pull/24) — `active/profiling_organ_p3_brain_board_cockpit_transition.md`
 - [pyautolabs.github.io#9](https://github.com/PyAutoLabs/pyautolabs.github.io/pull/9) — `complete/2026/09/community-surface-website.md`
 - [pyautolabs.github.io#23](https://github.com/PyAutoLabs/pyautolabs.github.io/pull/23) — `complete/2026/10/pyautopulse-organ-row.md`
 
