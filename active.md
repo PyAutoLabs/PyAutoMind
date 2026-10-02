@@ -38,3 +38,16 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/343
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/365
 - final-validation: Galaxy 1315 passed; focused 49 passed; full companion smoke 33/33 in 501.91s (changed example 2.2s). Galaxy exact-head CI all green; new companion CI pending. Wiki/results-layout and whitespace checks pass. No raw phase-3a evidence changed.
+
+## lint-lychee-exclude-blob
+- issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/3
+- issued: 2026-10-02
+- prompt: active/lint_lychee_exclude_github_blob_pages.md
+- epic: profiling-organ-birth
+- session: Claude Code CLI (Fable 5.1); session ID unavailable
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/lint-lychee-exclude-blob
+- repos:
+  - PyAutoPulse: feature/lint-lychee-exclude-blob
+  - PyAutoEyes: feature/lint-lychee-exclude-blob
+- resume: Corrective: PyAutoPulse main lint red on lychee 503s for github.com blob pages (token did not help). Exclude `^https://github\.com/.*/blob/` in both organs' lint.yml. Two PRs, end at PR-open, merge /prm (Pulse first).
