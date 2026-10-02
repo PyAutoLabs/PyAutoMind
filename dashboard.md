@@ -42,7 +42,7 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 12 |
+| [In flight](#in-flight) (`active/`) | 11 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 6 |
@@ -284,14 +284,6 @@ Use the start-dev skill. active/colab_refinement_throughout.md
 
 </details>
 
-<details><summary>📋 <a href="active/complete_monitoring_score_and_repairs.md">Complete Heart monitoring score and repair coverage</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/267">issue #267</a> — issued 2026-10-02 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/268">PyAutoHeart#268</a> — ⏳ pending release: PyAutoHeart — ⏳ pending release: PyAutoBrain</summary>
-
-```
-Use the start-dev skill. active/complete_monitoring_score_and_repairs.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/critical_curves_dispatch_audit.md">Critical-curve dispatch: current cluster evidence and contract</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/337">issue #337</a> — issued 2026-10-02 — workspace-dev</summary>
 
 ```
@@ -375,7 +367,6 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoBrain**
 
-- [PyAutoBrain#446](https://github.com/PyAutoLabs/PyAutoBrain/pull/446) — `active/complete_monitoring_score_and_repairs.md`
 - [PyAutoBrain#426](https://github.com/PyAutoLabs/PyAutoBrain/pull/426) — `complete/2026/09/autolens-visualization-rebirth.md`
 - [PyAutoBrain#404](https://github.com/PyAutoLabs/PyAutoBrain/pull/404) — `complete/2026/09/codex-context-efficiency.md`
 - [PyAutoBrain#387](https://github.com/PyAutoLabs/PyAutoBrain/pull/387) — `complete/2026/09/codex-token-efficiency.md`
@@ -389,6 +380,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoBrain#384](https://github.com/PyAutoLabs/PyAutoBrain/pull/384) — `complete/2026/09/provider-neutral-bundle-prompts.md`
 - [PyAutoBrain#424](https://github.com/PyAutoLabs/PyAutoBrain/pull/424) — `complete/2026/09/start-dev-heart-gate.md`
 - [PyAutoBrain#435](https://github.com/PyAutoLabs/PyAutoBrain/pull/435) — `complete/2026/10/cockpit-actionable-state.md`
+- [PyAutoBrain#446](https://github.com/PyAutoLabs/PyAutoBrain/pull/446) — `complete/2026/10/heart-monitoring-coverage.md`
 
 **PyAutoCortex**
 
@@ -433,13 +425,13 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoHeart**
 
-- [PyAutoHeart#268](https://github.com/PyAutoLabs/PyAutoHeart/pull/268) — `active/complete_monitoring_score_and_repairs.md`
 - [PyAutoHeart#240](https://github.com/PyAutoLabs/PyAutoHeart/pull/240) — `complete/2026/09/autolens-visualization-rebirth.md`
 - [PyAutoHeart#242](https://github.com/PyAutoLabs/PyAutoHeart/pull/242) — `complete/2026/09/board-footer-family-fix.md`
 - [PyAutoHeart#244](https://github.com/PyAutoLabs/PyAutoHeart/pull/244) — `complete/2026/09/eyes-fit-cti-instances.md`
 - [PyAutoHeart#243](https://github.com/PyAutoLabs/PyAutoHeart/pull/243) — `complete/2026/09/eyes-galaxy-instance.md`
 - [PyAutoHeart#241](https://github.com/PyAutoLabs/PyAutoHeart/pull/241) — `complete/2026/09/eyes-organ-order.md`
 - [PyAutoHeart#254](https://github.com/PyAutoLabs/PyAutoHeart/pull/254) — `complete/2026/10/compact-dashboard-rows.md`
+- [PyAutoHeart#268](https://github.com/PyAutoLabs/PyAutoHeart/pull/268) — `complete/2026/10/heart-monitoring-coverage.md`
 - [PyAutoHeart#256](https://github.com/PyAutoLabs/PyAutoHeart/pull/256) — `complete/2026/10/heart-score-resusitate.md`
 
 **PyAutoLens**
@@ -2601,14 +2593,13 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-10-02 | issued | <a href="active/mesh_geometry_areas_transformed_adapt_image_indexerror.md">MeshGeometryRectangular.areas_transformed raises IndexError for…</a> |
 | 2026-10-02 | issued | <a href="active/final_numerics_audit_of_every_mesh_interpolator.md">Final numerics audit of every mesh interpolator</a> |
 | 2026-10-02 | issued | <a href="active/critical_curves_dispatch_audit.md">Critical-curve dispatch: current cluster evidence and contract</a> |
-| 2026-10-02 | issued | <a href="active/complete_monitoring_score_and_repairs.md">Complete Heart monitoring score and repair coverage</a> |
 | 2026-10-02 | issued | <a href="active/benchmark_positions_initialised_inference.md">Benchmark card: positions-initialised imaging inference of a…</a> |
+| 2026-10-02 | issued | <a href="active/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-02 | issued | <a href="active/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging…</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autolens_profiling/timing_noise_audit.md">Audit timing tests and profiling gates for measurement noise</a> |
 | 2026-10-02 | issued | <a href="active/over_sample_size_via_snr_from.md">Add <code>over_sample_size_via_snr_from</code> so a signal-to-noise map can…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
@@ -2618,12 +2609,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
 | 2026-09-29 | filed | <a href="draft/maintenance/pyautomind/session_start_hook_copies_regen.md">Regenerate the 28 drifted <code>.claude/hooks/session-start.sh</code> copies…</a> |
 | 2026-09-28 | filed | <a href="draft/bug/autolens/point_image_pair_all_forward_grad_nan.md">Forward-mode gradient is NaN for FitPositionsImagePairAll(Solved)…</a> |
+| 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/power_law_multipole_m1_singular_at_isothermal_slope.md">PowerLawMultipole with m=1 returns -inf / NaN deflections at slope…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently…</a> |
@@ -2633,12 +2624,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-26 | filed | <a href="draft/refactor/workspaces/abell_1201_local_cleanup.md">Repo cleanup: retire the Abell 1201 worktree and local raw data</a> |
 | 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
 | 2026-09-25 | filed | <a href="draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md">Keep caches off <code>$HOME</code> on HPC — phase 2 remainder: euclid pipeline…</a> |
+| 2026-09-24 | filed | <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-24 | filed | <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> |
 | 2026-09-24 | filed | <a href="draft/research/autoarray/mge_nnls_fix_pyautoarray_571_slam_60.md">Linear-solver programme phase 3: GPU/vmap/A100 timing and parity rows…</a> |
 | 2026-09-23 | filed | <a href="draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
 | 2026-09-22 | issued | <a href="active/vis_lp_inspection_bundle.md">Support vis_lp-only products in inspection bundles</a> |
@@ -2648,12 +2639,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> |
 | 2026-09-18 | filed | <a href="draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md">The latent smoke's empty-block assertion names one cause…</a> |
+| 2026-09-18 | filed | <a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-18 | filed | <a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/pyautobrain/sizing_faculty_none_rule_keyword_false_judge_triage.md">Sizing faculty: a <code>none</code> rule, keyword hits on prose that only…</a> |
@@ -2663,6 +2654,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
+| 2026-09-17 | filed | <a href="draft/refactor/autofit/ep_analysis_level_compile_cache.md">EP: cache the compiled JAX likelihood on the Analysis across factor…</a> |
 
 </details>
 

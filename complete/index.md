@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1660 records across 9 buckets.
+1661 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -132,6 +132,7 @@ markers; everything below GENERATED is rebuilt.
 - [ecosystem-role-docs](2026/10/ecosystem-role-docs.md)
 - [ecosystem-routing-trial](2026/10/ecosystem-routing-trial.md) — Evaluated the role-routing checklist and specified future profiling/inference organ read contracts; no runtime…
 - [heart-front-door-sync](2026/10/heart-front-door-sync.md)
+- [heart-monitoring-coverage](2026/10/heart-monitoring-coverage.md)
 - [heart-score-resusitate](2026/10/heart-score-resusitate.md)
 - [memory-cockpit-catch-up](2026/10/memory-cockpit-catch-up.md) — Lensing-specific catch-up freshness drives the HTML/Markdown banner and cockpit feed. Structured cutoff, age, …
 - [memory-digest-state](2026/10/memory-digest-state.md)
