@@ -95,3 +95,39 @@
   - PyAutoArray: feature/over-sample-snr-helper
   - PyAutoGalaxy: feature/over-sample-snr-helper
 - resume: Bundle autoarray — bundle 1; plan and branch approved 2026-10-02. One execution delegate per member; sequential shared worktrees; linked companion PRs authorized. Preserve unregistered sparse-operator-oversampling-cache worktree. Parent owns lifecycle and shipping. No merge authorization.
+
+## mesh-interpolator-numerics-audit
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/603
+- issued: 2026-10-02
+- prompt: active/final_numerics_audit_of_every_mesh_interpolator.md
+- session: Codex GPT-6; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/autoarray-bundle-1
+- repos:
+  - PyAutoArray: feature/mesh-interpolator-numerics-audit
+  - autolens_workspace_test: feature/mesh-interpolator-numerics-audit
+- resume: Bundle autoarray — bundle 1; approved plan 2026-10-02. Sequential shared worktrees; branch selected only when prior member is shipped. Linked companion PRs and coordination with critical-curves-dispatch-audit explicitly authorized by user. Preserve all other worktrees. No merge authorization.
+
+## fit-util-masked-division
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/604
+- issued: 2026-10-02
+- prompt: active/fit_util_masked_division_grad_nan.md
+- session: Codex GPT-6; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/autoarray-bundle-1
+- repos:
+  - PyAutoArray: feature/fit-util-masked-division
+  - autolens_workspace_test: feature/fit-util-masked-division
+- resume: Bundle autoarray — bundle 1; approved plan 2026-10-02. Sequential shared worktrees; branch selected only when prior member is shipped. Linked companion PRs and coordination with critical-curves-dispatch-audit explicitly authorized by user. Preserve all other worktrees. No merge authorization.
+
+## mesh-geometry-transformed-areas
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/605
+- issued: 2026-10-02
+- prompt: active/mesh_geometry_areas_transformed_adapt_image_indexerror.md
+- session: Codex GPT-6; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/autoarray-bundle-1
+- repos:
+  - PyAutoArray: feature/mesh-geometry-transformed-areas
+  - autolens_workspace_test: feature/mesh-geometry-transformed-areas
+- resume: Bundle autoarray — bundle 1; approved plan 2026-10-02. Sequential shared worktrees; branch selected only when prior member is shipped. Linked companion PRs and coordination with critical-curves-dispatch-audit explicitly authorized by user. Preserve all other worktrees. No merge authorization.
