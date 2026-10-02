@@ -132,3 +132,24 @@ worktree (only those two campaign files; no critical-curves overlap).
 
 Heart refreshed YELLOW (85): manifest drift and absent release rehearsal. Human
 acknowledgment requested before development PR opening.
+
+## Validation complete; shipping checkpoint — 2026-10-02
+
+- Full PyAutoLens suite: **820 passed, 1 xfailed**, 44 warnings, 1413.88 s.
+- Focused new NumPy cases: **27 passed**.
+- Workspace: **33 distinct smoke scripts have passing evidence**. The new script
+  passed finally in **56.2 s** under the unchanged **300 s** cap.
+- The initial new-script failure was a missing `__Env__` declaration heading,
+  corrected without changing assertions or pins. A concurrent cache rebuild
+  caused 21 missing-NumPy failures; all 21 passed after restoration. A subsequent
+  new-script timeout coincided with a host-wide delay (30 s requested sleep took
+  428 s; JAX heartbeat 30 → 438 s); the unchanged script passed the bounded retry.
+- Evidence: task-root `library-tests.log`, `extent-tests.log`,
+  `extent-smoke-profile.log`, `smoke-first-report.json`,
+  `smoke-recovery-report.json`, `smoke-rerun-report.json`,
+  `smoke-combined-summary.json`. The full smoke list is restored.
+- No PR opened or source commit made: ship skills require acknowledgment of
+  refreshed Heart **YELLOW (85)**. The request is pending. Source/ledger changes
+  and drafted PR bodies are retained in the isolated task root.
+- On acknowledgment: ship PyAutoLens first, then the workspace companion (with
+  PyAutoLens release gate) and the campaign-record PR. Do not issue another phase.
