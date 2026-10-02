@@ -111,12 +111,19 @@
 - issued: 2026-10-02
 - prompt: active/fit_util_masked_division_grad_nan.md
 - session: Codex GPT-6; session ID unavailable
-- status: library-dev
+- status: awaiting-input
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/autoarray-bundle-1
 - repos:
   - PyAutoArray: feature/fit-util-masked-division
   - autolens_workspace_test: feature/fit-util-masked-division
 - resume: Bundle autoarray — bundle 1; approved plan 2026-10-02. Sequential shared worktrees; branch selected only when prior member is shipped. Linked companion PRs and coordination with critical-curves-dispatch-audit explicitly authorized by user. Preserve all other worktrees. No merge authorization.
+
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/607
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/607
+- validation: Full Array serial 1924 passed, exit 0; focused 33 passed; 3 targeted smoke checks passed (imaging unchanged retry after timeout). Logs scratch/masked-division.
+- checkpoint: Awaiting explicit Heart YELLOW acknowledgement (workspace-manifest drift, 1 mismatch); stale release rehearsal. RED doc-only main-checkout lag fixed; PR 607 was prematurely opened then made draft, commit e5e05217.
+- workspace-stash: autolens_workspace_test 9b85ea65282820b33e73f5d4e360422fda43a3da holds validated companion changes on feature/fit-util-masked-division; restore by exact hash after current member finishes. Never pop an unrelated stash.
+- next: After acknowledgement and geometry delegate completion, restore this branch and stash, open linked workspace PR, mark library PR ready, update state. Shared worktree temporarily on geometry member; no merge authorized.
 
 ## mesh-geometry-transformed-areas
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/605
