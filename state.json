@@ -3,10 +3,16 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 11 in flight",
-  "updated": "2026-10-02T09:00:30Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 12 in flight",
+  "updated": "2026-10-02T09:02:15Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Complete Heart monitoring score and repair coverage \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoHeart/pull/268",
+      "prompt": "Use the start-dev skill. active/complete_monitoring_score_and_repairs.md"
+    },
     {
       "severity": "yellow",
       "text": "First point-source search leaf: Nautilus on the source-plane solved likelihood (admission bar) \u2014 awaiting-merge",
@@ -111,20 +117,14 @@
     },
     {
       "severity": "yellow",
+      "text": "pending release: PyAutoBrain PyAutoBrain#446 \u2014 Complete Heart monitoring score and repair coverage",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/446",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
       "text": "pending release: PyAutoBrain PyAutoBrain#426 \u2014 autolens-visualization-rebirth",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/426",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#404 \u2014 codex-context-efficiency",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/404",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoBrain PyAutoBrain#387 \u2014 What shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/387",
       "prompt": null
     }
   ]
