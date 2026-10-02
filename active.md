@@ -83,3 +83,15 @@
 - repos:
   - autolens_workspace_test: feature/critical-curves-dispatch-audit
 - resume: Plan approved with “go”; standalone CPU research, phase 3a. Implement bounded current-dispatch and geometry/timing audit, validate, ship_workspace. Concurrent unissued cluster_curves_engine_dispatch draft remains a candidate pending these results. No later issue queue.
+
+## over-sample-snr-helper
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/602
+- issued: 2026-10-02
+- prompt: active/over_sample_size_via_snr_from.md
+- session: Codex GPT-6; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/autoarray-bundle-1
+- repos:
+  - PyAutoArray: feature/over-sample-snr-helper
+  - PyAutoGalaxy: feature/over-sample-snr-helper
+- resume: Bundle autoarray — bundle 1; plan and branch approved 2026-10-02. One execution delegate per member; sequential shared worktrees; linked companion PRs authorized. Preserve unregistered sparse-operator-oversampling-cache worktree. Parent owns lifecycle and shipping. No merge authorization.
