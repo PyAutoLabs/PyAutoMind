@@ -57,3 +57,29 @@ write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
 - suggested-branch: feature/catalogue-before-vis-pix
 - affected-repos:
   - euclid_strong_lens_modeling_pipeline
+
+## bootstrap-smoke-codex
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/144
+- parked: 2026-10-02
+- status: queued (human-deferred) — requested quicker wrap after inference PR
+- prompt: active/bootstrap_smoke_codex_and_bench_pr.md
+- classification: workspace
+- suggested-branch: feature/bootstrap-smoke-codex
+- bundle: assistant
+- affected-repos:
+  - autolens_assistant
+- resume: Plan approved and issue created; implementation not started. Reuse approved issue plan, survey current claims, and resume through start_workspace. No branch or PR created for this member.
+- carry-forward: Preserve bench/bootstrap-smoke-stage-b; approved plan carries 7ca904b, add0556, ca19325 to fresh member branch before one Codex v2 run.
+
+## colab-refinement-throughout
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/145
+- parked: 2026-10-02
+- status: queued (human-deferred) — requested quicker wrap after inference PR
+- prompt: active/colab_refinement_throughout.md
+- classification: workspace
+- suggested-branch: feature/colab-refinement-throughout
+- bundle: assistant
+- affected-repos:
+  - autolens_assistant
+- resume: Plan approved and issue created; implementation not started. Reuse approved issue plan, survey current claims, and resume through start_workspace. No branch or PR created for this member.
+- scope: Existing Colab skills/setup/Ring notebook only; extra Teacher/SLACS notebook twins deferred.
