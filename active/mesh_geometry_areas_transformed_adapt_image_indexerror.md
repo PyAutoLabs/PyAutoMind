@@ -8,6 +8,7 @@ Difficulty: easy
 Autonomy: safe
 Priority: low
 Status: formalised
+Issued: 2026-10-02
 Consequence: glance
 Witness: `areas_transformed` and `edges_transformed` on a `RectangularBilinearAdaptImage` mapper both return, the areas equal the outer product of the edge spacings (unit test), and under `xp=jnp` `edges_transformed` either returns the raw array or is documented NumPy-only.
 Review-minutes: 3
