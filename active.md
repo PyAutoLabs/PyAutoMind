@@ -65,9 +65,13 @@
 - prompt: active/profiling_organ_p2_skeleton_registry_reader_board.md
 - epic: profiling-organ-birth
 - session: Claude Code CLI (Fable 5.1); session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/pyautopulse-organ-skeleton
 - repos:
   - PyAutoPulse: feature/pyautopulse-organ-skeleton
   - PyAutoBrain: feature/pyautopulse-organ-skeleton
-- resume: Phase 2 of profiling-organ-birth. Human 2026-10-02: one task, two PRs (PyAutoPulse first, Brain after); plan approved on the issue; Brain `boards: pulse` lands here. Heart YELLOW 85 at the door (Cortex checkout drift owned by another session; .github table; no rehearsal). Implementation delegated to Opus in the worktree; ship via /ship_library, end at PR-open; human enables Pages on PyAutoPulse; merge /prm.
+- library-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/2
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/449
+- pending-release: PyAutoPulse@https://github.com/PyAutoLabs/PyAutoPulse/pull/2
+- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/449
+- resume: Shipped 2026-10-02 (Heart YELLOW 85 acknowledged by human: Cortex checkout drift owned by another session; .github table; no rehearsal). Two PRs open; merge PyAutoPulse#2 FIRST, then PyAutoBrain#449 (witness row needs PyAutoPulse/tests on main). Human enables GitHub Pages on PyAutoPulse (source: GitHub Actions) before merge. Pulse: 76 tests, ruff clean, check: OK online (lens d9f385f0). Brain: 1140 passed + 1 PYAUTO_MIND env artefact. Follow-ups: pulse-refresh sender in autolens_profiling; phase 3. Merge via /prm; no merge authority here.
