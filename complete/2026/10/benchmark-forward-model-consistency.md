@@ -1,3 +1,17 @@
+## benchmark-forward-model-consistency
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/142
+- completed: 2026-10-02
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/146
+- merge-commit: 8770eeae3be5b6c51188b43dad13733a9c5afc15
+- classification: feature, standalone assistant workspace
+- summary: Added the frozen imaging/point-source/interferometer consistency card, physical conversions, source-centre-aware scorer, retained science artifacts, deterministic truth and calibration results.
+- validation: Final targeted59 passed/0 failed; earlier full suite137 passed/0 failed/1 skipped. API audit and freeze checks pass. Seven FITS files byte-deterministic on released2026.9.27.2 wheels. Both exact-head CI jobs passed before merge.
+- calibration: Claude Code2.1.287 / claude-fable-5-1, three scores0/0/0. First run produced near-reference science but exceeded budgets; other two timed out without result.json. First timing overlaps tests; caveat recorded. Original scores preserved and rescored after equivalent-model inspection repair.
+- artifacts: benchmarks/prompts/oneshot/forward_model_consistency/, benchmarks/truth/forward_model_consistency/, benchmarks/runs/forward_model_consistency/.
+- close-out: Human authorized merge. Issue closed, active prompt/claim retired. Shared assistant worktree retained because independent inference issue143 / PR147 is unmerged and holds runtime data. Bootstrap144 and Colab145 remain queued by human request.
+
+## Original prompt
+
 # Benchmark card: forward-model consistency across imaging, point_source and interferometer
 
 Type: feature

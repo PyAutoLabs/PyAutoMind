@@ -2,22 +2,16 @@
   "schema_version": 1,
   "organ": "mind",
   "repo": "PyAutoMind",
-  "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 12 in flight",
-  "updated": "2026-10-02T11:51:08Z",
+  "status": "yellow",
+  "headline": "YELLOW \u2014 24 picks \u00b7 9 in flight",
+  "updated": "2026-10-02T11:53:37Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
-      "severity": "red",
-      "text": "Benchmark card: positions-initialised imaging inference of a simulated lens \u2014 awaiting-input",
-      "url": "https://github.com/PyAutoLabs/autolens_assistant/issues/143",
-      "prompt": "Use the start-dev skill. active/benchmark_positions_initialised_inference.md"
-    },
-    {
       "severity": "yellow",
-      "text": "Benchmark card: forward-model consistency across imaging, point_source and interferometer \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autolens_assistant/pull/146",
-      "prompt": "Use the start-dev skill. active/benchmark_forward_model_consistency.md"
+      "text": "Benchmark card: positions-initialised imaging inference of a simulated lens \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autolens_assistant/pull/147",
+      "prompt": "Use the start-dev skill. active/benchmark_positions_initialised_inference.md"
     },
     {
       "severity": "yellow",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#580 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/580",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#595 \u2014 raw-pdip-forward-polish",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/595",
       "prompt": null
     }
   ]
