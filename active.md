@@ -172,7 +172,7 @@
 - prompt: active/profiling_organ_p0_name_row_and_boundaries.md
 - epic: profiling-organ-birth
 - session: Claude Code CLI (Fable 5.1); session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/pyautopulse-organ-row
 - repos:
   - PyAutoMind: feature/pyautopulse-organ-row
@@ -185,7 +185,18 @@
   - PyAutoGut: feature/pyautopulse-organ-row
   - PyAutoScientist: feature/pyautopulse-organ-row
   - PyAutoEyes: feature/pyautopulse-organ-row
-- resume: Phase 0 of profiling-organ-birth. Human decisions 2026-10-02: PyAutoPulse, organ key `pulse`, organ row AFTER Hands before Nerves, `boards:` entry deferred to phase 2, plan approved. Repo PyAutoLabs/PyAutoPulse created (public, empty). Next: /start_library then implement per issue #463; PRs Mind → Brain → Heart → Hands → hub (+ map-block PRs Cortex/Nerves/Gut/Scientist); merge human via /prm.
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/465
+- pending-release: PyAutoMind@https://github.com/PyAutoLabs/PyAutoMind/pull/465
+- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/447
+- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/269
+- pending-release: PyAutoHands@https://github.com/PyAutoLabs/PyAutoHands/pull/294
+- pending-release: pyautolabs.github.io@https://github.com/PyAutoLabs/pyautolabs.github.io/pull/23
+- pending-release: PyAutoCortex@https://github.com/PyAutoLabs/PyAutoCortex/pull/54
+- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/181
+- pending-release: PyAutoGut@https://github.com/PyAutoLabs/PyAutoGut/pull/18
+- pending-release: PyAutoEyes@https://github.com/PyAutoLabs/PyAutoEyes/pull/12
+- pending-release: PyAutoScientist@https://github.com/PyAutoLabs/PyAutoScientist/pull/39
+- resume: Shipped 2026-10-02 (Heart YELLOW 85 acknowledged by human: PyAutoPulse clone drift resolved by the Mind PR + no-rehearsal). Ten PRs open; merge order Mind first, then Brain → Heart → Hands → hub; Cortex/Nerves/Gut/Eyes/Scientist (generated blocks) any time after Mind. PyAutoPulse first commit b449c80 pushed. Follow-ups after Mind merges: hook propagation to 32 non-task repos; .github org-profile row (human). Merge via /prm; no merge authority here.
 
 ## pointsolver-extent-sanity-check
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/763
