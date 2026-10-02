@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-02T12:32:30Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
+  "updated": "2026-10-02T12:37:58Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Benchmark card: positions-initialised imaging inference of a simulated lens \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autolens_assistant/pull/147",
-      "prompt": "Use the start-dev skill. active/benchmark_positions_initialised_inference.md"
-    },
     {
       "severity": "yellow",
       "text": "Preserve the LensCalc evaluation field when the grid cap activates \u2014 awaiting-merge, workspace-release-gated",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#611 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/611",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#606 \u2014 Shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/606",
       "prompt": null
     }
   ]
