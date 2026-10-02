@@ -101,3 +101,16 @@ Ledger: `lens/autolens_profiling/results/notes/point_source_cpu_campaign.md`, se
 Changing any solver default (extent, scale, `MAX_CONTAINING_SIZE`); cluster solvers (epic
 `cluster-pointsolver-speed`, though the check should behave sensibly there: warn on edge, and the
 oversize hint is probably never triggered).
+
+## Resume preparation — 2026-10-02 (plan awaiting approval)
+
+The preceding issued epic member is complete: `complete/2026/10/point-source-search-nautilus-leaf.md`, inference#17 and profiling#361 merged. Broad timing-noise audit is a separate issue, profiling#362.
+
+### Proposed bounded implementation
+1. Add a private NumPy-only diagnostic called once by `AnalysisPoint.__init__` in `autolens/point/model/analysis.py` when a solver and usable observed positions are present. Compare each position with the four stored solver bounds using margin `2 * initial scale + 3 * position sigma`. Warn when outside/within that margin; the message must explain that observed-position coverage does not guarantee completeness over the model prior.
+2. Emit a softer INFO hint when both solver half-widths exceed three times the required observed-position envelope about the solver midpoint, including the same margin. Suppress the performance hint in test/small-dataset mode. No solver default or likelihood/JAX path changes. Handle solver=None, absent/empty positions and separate analyses independently.
+3. Add NumPy unit cases in `test_autolens/point/model/test_analysis.py`: safe, near-edge, outside, asymmetric/offset bounds, noise-scaled margins, oversize hint, absent inputs, test-mode behavior and one diagnostic per construction. Verify the full library suite. Existing `autolens/analysis/result.py` constructs solvers from the dataset mask grid; no extra masked-data fallback is proposed for those paths.
+4. Add one isolated workspace regression script beside `scripts/point_source/jax_likelihood/image_plane.py` to capture an undersized-grid warning and verify the established likelihood pin is unchanged, then run targeted point-source smoke. Library first, then workspace companion; keep the original campaign limits.
+
+### Survey and guard
+Canonical `PyAutoLens` and `autolens_workspace_test` are both clean on main. Proposed branch: `feature/pointsolver-extent-sanity-check`. PyAutoLens is unclaimed. `autolens_workspace_test` is claimed by critical-curves-dispatch-audit, mesh-interpolator-numerics-audit, fit-util-masked-division and mesh-geometry-transformed-areas. start_workspace conflict guard refuses until the human permits coordinated disjoint work or the claims clear. No issue/worktree/source edits started for this phase.
