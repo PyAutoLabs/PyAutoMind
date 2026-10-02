@@ -604,3 +604,14 @@ have cleared. Human explicitly acknowledged the remaining Heart YELLOW reason:
 profiling fast-forwarded unrelated merged PR #361 and its changed test passed
 46 cases. No measurement evidence was altered. Next cap-fix plan is prepared in
 task scratch, unissued pending predecessor shipping/review.
+
+
+## Phase 3a PRs opened — 2026-10-02
+
+Research: autolens_profiling#364 @89b6d00; CI: autolens_workspace_test#341 @06f7b8f.
+Full workspace smoke 33/33 passed (new example 2.9s). Heart YELLOW acknowledged;
+all RED reasons cleared after clean canonical PyAutoLens fast-forward. Both PRs
+pending-release, cross-linked; /prm awaiting all workflow/matrix legs.
+Next single prompt filed, unissued: draft/bug/autogalaxy/evaluation_grid_cap_preserves_field.md
+(phase 3b). Includes explicit effective-Zoom2D footprint/rounding contract; does
+not silently absorb the independent masked-caustic discrepancy draft. No bulk queue.
