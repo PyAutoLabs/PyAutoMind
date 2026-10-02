@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1664 records across 9 buckets.
+1668 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -132,11 +132,15 @@ markers; everything below GENERATED is rebuilt.
 - [ecosystem-layers](2026/10/ecosystem-layers.md)
 - [ecosystem-role-docs](2026/10/ecosystem-role-docs.md)
 - [ecosystem-routing-trial](2026/10/ecosystem-routing-trial.md) — Evaluated the role-routing checklist and specified future profiling/inference organ read contracts; no runtime…
+- [fit-util-masked-division](2026/10/fit-util-masked-division.md)
 - [heart-front-door-sync](2026/10/heart-front-door-sync.md)
 - [heart-monitoring-coverage](2026/10/heart-monitoring-coverage.md)
 - [heart-score-resusitate](2026/10/heart-score-resusitate.md)
 - [memory-cockpit-catch-up](2026/10/memory-cockpit-catch-up.md) — Lensing-specific catch-up freshness drives the HTML/Markdown banner and cockpit feed. Structured cutoff, age, …
 - [memory-digest-state](2026/10/memory-digest-state.md)
+- [mesh-geometry-transformed-areas](2026/10/mesh-geometry-transformed-areas.md)
+- [mesh-interpolator-numerics-audit](2026/10/mesh-interpolator-numerics-audit.md)
+- [over-sample-snr-helper](2026/10/over-sample-snr-helper.md)
 - [point-audits-wheel-provenance](2026/10/point-audits-wheel-provenance.md) — Point-solver audits now work with installed wheels, preserve checkout provenance, fingerprint installed packag…
 - [point-solver-duplicate-policy](2026/10/point-solver-duplicate-policy.md)
 - [point-solver-image-accuracy](2026/10/point-solver-image-accuracy.md)

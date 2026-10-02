@@ -100,7 +100,7 @@
 - prompt: draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md
 - classification: both
 - suggested-branch: feature/knn-partial-point-block
-- blocked-by: mesh-interpolator-numerics-audit (using PyAutoArray and autolens_workspace_test)
+- prior-blocker-cleared: Audit PRs Array611/workspace342 merged 2026-10-02; see complete/2026/10/mesh-interpolator-numerics-audit.md. Survey current claims at start-dev.
 - affected-repos:
   - PyAutoArray
   - autolens_workspace_test
@@ -112,7 +112,7 @@
 - prompt: draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md
 - classification: both
 - suggested-branch: feature/sibson-internal-edge-continuity
-- blocked-by: mesh-interpolator-numerics-audit (using PyAutoArray and autolens_workspace_test)
+- prior-blocker-cleared: Audit PRs Array611/workspace342 merged 2026-10-02; see complete/2026/10/mesh-interpolator-numerics-audit.md. Survey current claims at start-dev.
 - affected-repos:
   - PyAutoArray
   - autolens_workspace_test

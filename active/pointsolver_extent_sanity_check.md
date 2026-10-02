@@ -115,7 +115,7 @@ The preceding issued epic member is complete: `complete/2026/10/point-source-sea
 4. Add one isolated workspace regression script beside `scripts/point_source/jax_likelihood/image_plane.py` to capture an undersized-grid warning and verify the established likelihood pin is unchanged, then run targeted point-source smoke. Library first, then workspace companion; keep the original campaign limits.
 
 ### Survey and guard
-Canonical `PyAutoLens` and `autolens_workspace_test` are both clean on main. Proposed branch: `feature/pointsolver-extent-sanity-check`. PyAutoLens is unclaimed. `autolens_workspace_test` is claimed by critical-curves-dispatch-audit, mesh-interpolator-numerics-audit, fit-util-masked-division and mesh-geometry-transformed-areas. start_workspace conflict guard refuses until the human permits coordinated disjoint work or the claims clear. No issue/worktree/source edits started for this phase.
+Canonical `PyAutoLens` and `autolens_workspace_test` are both clean on main. Proposed branch: `feature/pointsolver-extent-sanity-check`. PyAutoLens is unclaimed. At the original survey, `autolens_workspace_test` was claimed by critical-curves-dispatch-audit and the autoarray bundle. Those tasks have since merged (2026-10-02); the bundle claims are released. See `complete/2026/10/mesh-interpolator-numerics-audit.md`, `fit-util-masked-division.md`, and `mesh-geometry-transformed-areas.md` in the same completion folder. Re-survey current claims before new work. No issue/worktree/source edits started for this phase.
 
 ## Approval and coordination
 

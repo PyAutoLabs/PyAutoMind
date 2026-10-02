@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 13 in flight",
-  "updated": "2026-10-02T11:43:42Z",
+  "headline": "RED \u2014 24 picks \u00b7 9 in flight",
+  "updated": "2026-10-02T12:09:34Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -27,33 +27,9 @@
     },
     {
       "severity": "yellow",
-      "text": "Final numerics audit of every mesh interpolator \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/611",
-      "prompt": "Use the start-dev skill. active/final_numerics_audit_of_every_mesh_interpolator.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "fit_util: masked divisions NaN the gradient on the JAX path \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/607",
-      "prompt": "Use the start-dev skill. active/fit_util_masked_division_grad_nan.md"
-    },
-    {
-      "severity": "yellow",
       "text": "Publish all observed Heart monitoring families \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoHeart/pull/271",
       "prompt": "Use the start-dev skill. active/heart_publication_coverage.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "MeshGeometryRectangular.areas_transformed raises IndexError for adapt-image meshes \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/608",
-      "prompt": "Use the start-dev skill. active/mesh_geometry_areas_transformed_adapt_image_indexerror.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Add `over_sample_size_via_snr_from` so a signal-to-noise map can steer over-sampling without a second\u2026 \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/606",
-      "prompt": "Use the start-dev skill. active/over_sample_size_via_snr_from.md"
     },
     {
       "severity": "yellow",
@@ -71,30 +47,6 @@
       "severity": "yellow",
       "text": "pending release: .github .github#16 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/.github/pull/16",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#611 \u2014 Final numerics audit of every mesh interpolator",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/611",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#607 \u2014 fit_util: masked divisions NaN the gradient on the JAX path",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/607",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#608 \u2014 MeshGeometryRectangular.areas_transformed raises IndexError for adapt-image meshes",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/608",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#606 \u2014 Add `over_sample_size_via_snr_from` so a signal-to-noise map can steer over-sampling without a second\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/606",
       "prompt": null
     },
     {
@@ -125,6 +77,54 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#584 \u2014 pointsolver-mcs-headroom",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/584",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#580 \u2014 Shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/580",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#595 \u2014 raw-pdip-forward-polish",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/595",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#591 \u2014 sparse-data-none-guard",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/591",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#586 \u2014 sparse-operator-oversampling-cache",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/586",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#593 \u2014 streaming-p1-array-free-dataset",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/593",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#597 \u2014 streaming-p3-visualizer",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/597",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#607 \u2014 Shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/607",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#608 \u2014 Shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/608",
       "prompt": null
     }
   ]

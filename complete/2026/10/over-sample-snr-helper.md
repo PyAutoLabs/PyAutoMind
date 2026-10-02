@@ -1,3 +1,25 @@
+# over-sample-snr-helper
+
+Issue: https://github.com/PyAutoLabs/PyAutoArray/issues/602
+Date: 2026-10-02
+
+## Shipped
+Added direct S/N threshold over-sampling helper and clarified Galaxy adapt-image documentation. Array1922passed; Galaxy1307passed; focused23passed; downstream equivalence passed.
+
+- https://github.com/PyAutoLabs/PyAutoArray/pull/606
+- https://github.com/PyAutoLabs/PyAutoGalaxy/pull/644
+
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/606
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/644
+
+Human authorized linked PRs, development shipping with exact Heart YELLOW acknowledgment, then merge and full close-out. Every head run and matrix leg was checked; merge receipts are recorded by GitHub. No release performed. Shared bundle worktree cleanup follows all four members; logs and data preserved under organs/PyAutoMind/tmp/autoarray-bundle-1-closeout/.
+
+For workspace conflict updates, the human explicitly acknowledged generated organism-map and public front-door table drift (one mismatch each); stale release rehearsal evidence remained disclosed. Only smoke manifest entries were reconciled; scripts unchanged.
+
+Backlog reconciliation retained four resemblance-only suspects; no sibling was proven complete. Recheck `/intake reconcile draft/bug/autoarray` (non_uniform_over_sample_jax_compile_cost, rectangular_mapper_bilinear_row_weights, sparse_terms_nufft_origin_and_mask_compatibility) and `/intake reconcile draft/feature/autoarray` (source_clumps_robust_scale).
+
+## Original prompt
+
 # Add `over_sample_size_via_snr_from` so a signal-to-noise map can steer over-sampling without a second division
 
 Type: feature

@@ -1,3 +1,24 @@
+# mesh-interpolator-numerics-audit
+
+Issue: https://github.com/PyAutoLabs/PyAutoArray/issues/603
+Date: 2026-10-02
+
+## Shipped
+Added independent numerical tests and analytic physical source recovery for all mesh interpolator classes. Fullsnapshot1940passed1xfail; finalfocused90passed4strictxfails; smoke1passed plus conflict-resolution smoke9s. No unexpected failures. Two defects filed separately as Array609/610; not repaired by this audit. Durable report scripts/imaging/mesh_interpolator_source_recovery.md in workspace.
+
+- https://github.com/PyAutoLabs/PyAutoArray/pull/611
+- https://github.com/PyAutoLabs/autolens_workspace_test/pull/342
+
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/611
+
+Human authorized linked PRs, development shipping with exact Heart YELLOW acknowledgment, then merge and full close-out. Every head run and matrix leg was checked; merge receipts are recorded by GitHub. No release performed. Shared bundle worktree cleanup follows all four members; logs and data preserved under organs/PyAutoMind/tmp/autoarray-bundle-1-closeout/.
+
+For workspace conflict updates, the human explicitly acknowledged generated organism-map and public front-door table drift (one mismatch each); stale release rehearsal evidence remained disclosed. Only smoke manifest entries were reconciled; scripts unchanged.
+
+Backlog reconciliation retained four resemblance-only suspects; no sibling was proven complete. Recheck `/intake reconcile draft/bug/autoarray` (non_uniform_over_sample_jax_compile_cost, rectangular_mapper_bilinear_row_weights, sparse_terms_nufft_origin_and_mask_compatibility) and `/intake reconcile draft/feature/autoarray` (source_clumps_robust_scale).
+
+## Original prompt
+
 # Final numerics audit of every mesh interpolator
 
 Type: test
