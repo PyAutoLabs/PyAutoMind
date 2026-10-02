@@ -31,7 +31,7 @@ Review-minutes: 15
 
 Found during approved audit PyAutoArray#603. Original user instruction: "Any bug found is filed separately; this task is the audit, not the fixes."
 
-In autoarray/inversion/mesh/interpolator/sibson.py:_sibson_single_from_tables, every on-edge query is replaced with seed-triangle barycentric weights, including internal edges where off-edge natural neighbors contribute. For square points [(-1,-1),(-1,1),(1,-1),(1,1)], query(0,0), independent symmetry requires four weights0.25 and interpolated y*x=0. Actual weights0.5 for opposite diagonal nodes yield1. Generic jittered mesh boundary sweep found jumps up to0.02680921 at +/-1e-8 around internal edge midpoints.
+In autoarray/inversion/mesh/interpolator/sibson.py:_sibson_single_from_tables, every on-edge query is replaced with seed-triangle barycentric weights, including internal edges where off-edge natural neighbors contribute. For square points [(-1,-1),(-1,1),(1,-1),(1,1)], query(0,0), independent symmetry requires four weights0.25 and interpolated y*x=0. Actual weights0.5 for opposite diagonal nodes yield1. Lattice mesh boundary sweep found jumps up to0.02680921 at +/-1e-8 around internal edge midpoints.
 
 Near the square center at (+/-1e-8,0), cancellation yields returned positive weights summing1.123877166 and interpolated y*x=-1.123877166, with no overflow/degenerate flag. Code normalizes signed contributions before discarding negative weights. At epsilon0.01 weights sum1 and y*x is near0; error worsens at1e-6 and1e-8.
 

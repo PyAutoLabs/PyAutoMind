@@ -292,7 +292,7 @@ Use the start-dev skill. active/critical_curves_dispatch_audit.md
 
 </details>
 
-<details><summary>📋 <a href="active/final_numerics_audit_of_every_mesh_interpolator.md">Final numerics audit of every mesh interpolator</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/603">issue #603</a> — issued 2026-10-02 — library-dev</summary>
+<details><summary>📋 <a href="active/final_numerics_audit_of_every_mesh_interpolator.md">Final numerics audit of every mesh interpolator</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/603">issue #603</a> — issued 2026-10-02 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/611">PyAutoArray#611</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/342">autolens_workspace_test#342</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 Use the start-dev skill. active/final_numerics_audit_of_every_mesh_interpolator.md
@@ -358,6 +358,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#611](https://github.com/PyAutoLabs/PyAutoArray/pull/611) — `active/final_numerics_audit_of_every_mesh_interpolator.md`
 - [PyAutoArray#607](https://github.com/PyAutoLabs/PyAutoArray/pull/607) — `active/fit_util_masked_division_grad_nan.md`
 - [PyAutoArray#608](https://github.com/PyAutoLabs/PyAutoArray/pull/608) — `active/mesh_geometry_areas_transformed_adapt_image_indexerror.md`
 - [PyAutoArray#606](https://github.com/PyAutoLabs/PyAutoArray/pull/606) — `active/over_sample_size_via_snr_from.md`

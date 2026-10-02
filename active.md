@@ -99,12 +99,14 @@
 - heart-stale: "release validation incomplete: no rehearsal for current source"
 - authorization: Human acknowledged exact Heart YELLOW reason and authorized development PR shipping for this bundle; no release or merge, 2026-10-02.
 
+- ci: Exact-head snapshot 2026-10-02: all required checks green on both linked PRs; open, awaiting human merge.
+
 ## mesh-interpolator-numerics-audit
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/603
 - issued: 2026-10-02
 - prompt: active/final_numerics_audit_of_every_mesh_interpolator.md
 - session: Codex GPT-6; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/autoarray-bundle-1
 - repos:
   - PyAutoArray: feature/mesh-interpolator-numerics-audit
@@ -115,6 +117,11 @@
   - "manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml"
 - heart-stale: "release validation incomplete: no rehearsal for current source"
 - authorization: Human acknowledged exact Heart YELLOW reason and authorized development PR shipping for this bundle; no release or merge, 2026-10-02.
+
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/611
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/342
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/611
+- validation: Full snapshot 1940 passed/1 strict xfail/0 unexpected failures; final interpolation suite 90 passed/4 strict xfails/0 unexpected failures; smoke1 passed/0 failed; all exit0. Commits509fb814/a22ff41. Final added tests covered by final focused suite; production unchanged. Report scripts/imaging/mesh_interpolator_source_recovery.md; logs scratch/numerics-audit. Follow-up defects609/610 queued separately. Exact-head CI snapshot: Array611 three legs in progress; workspace342 no checks reported yet. No merge authorization. Library-first order; no new runtime API release needed by companion script.
 
 ## fit-util-masked-division
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/604
@@ -140,6 +147,8 @@
 - release-gate: PyAutoArray
 - resume-shipping: Library e5e05217 / workspace95d696e, both ready PRs. Provenance-correct repeat fit-util/imaging smoke2pass exit0; earlier interferometer smoke passed. Full suite1924passed exit0 verified against bundle. Remaining human library-first merge/release. Scratch stash9b85ea65282820b33e73f5d4e360422fda43a3da retained recoverably; contents now committed. Shared worktree advanced to audit.
 
+- ci: Exact-head snapshot 2026-10-02: all required checks green on both linked PRs; open, awaiting human merge.
+
 ## mesh-geometry-transformed-areas
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/605
 - issued: 2026-10-02
@@ -162,6 +171,8 @@
 - pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/608
 - release-gate: PyAutoArray
 - validation: Full 1919 passed, focused34 passed, smoke2 passed, exit0; provenance verified. Logs scratch/mesh-geometry. Commits20ed237a/bdd698c. Explicit guard-cell geometry replaces obsolete uniform-partition expectations; standalone helper unchanged. Shared worktree advances to other bundle members. Awaiting human library-first merge/release.
+
+- ci: Exact-head snapshot 2026-10-02: all required checks green on both linked PRs; open, awaiting human merge.
 
 ## pyautopulse-organ-row
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/463
