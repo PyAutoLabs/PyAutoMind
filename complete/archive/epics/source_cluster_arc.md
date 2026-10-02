@@ -454,3 +454,26 @@ code moved, no new issues queued, no release or Cortex project authorized.
 - ledger: draft/feature/autolens/source_cluster_arc.md
 - status: Completed evidence/fixes 1a–1d (latest workspace_test#334, 26da5b1; #333 closed). On 2026-10-01 the human transferred remaining phase-1 repairs, phase-2 profiling and forward ShapeSolver work from phase 6 to cluster-pointsolver-speed (robustness and performance). Transferred is not solved. Blanket PointSolver gate removed; next arc step is phase 3 critical-curve dispatch, sliced via start_dev. Supplied-coordinate magnification and pixel-based areas can proceed; solver-discovered images and solver-dependent inference retain workload-specific correctness gates. Cortex phase 11 stays dropped under R-20260907-05; phase-1b PyAutoLens pending-release obligation retained.
 - notes: Original phase numbers retained for history; phases 1 remainder and 2 transferred, phase 6 narrowed. Issue ONE bounded phase at a time as predecessors near shipping; no bulk queue. autolens_profiling owns robustness/settings/performance evidence; autolens_workspace_test owns numerical integration regressions wired into CI. Science project birth still requires a fresh explicit Cortex decision.
+
+## Phase 3a planning — 2026-10-02
+
+The old `draft/feature/autolens/source_cluster_arc.md` path was retired by Mind's
+epic lifecycle; this archived file is the live arc ledger. No adjacent
+DECISIONS/RESULTS file exists. Confirmed workspace_test#334 merged and #333
+closed; PyAutoLens#760 merged and #759 closed. No related phase-3 open issue or
+PR appears in the affected repos, and no active.md row claims its repos. The
+old phase-1 remainder and phase-2 profiling remain transferred, not complete.
+The Cortex phase-11 task remains dropped under R-20260907-05.
+
+The next arc work is phase 3. Current source invalidates one historical defect:
+`autogalaxy/plot/plot_utils.py` is gone, leaving one
+`autogalaxy/util/plot_utils.py`. The config selector still defaults to marching
+squares; PyAutoLens cluster plots still call marching-squares LensCalc methods
+directly for each plane. Filed the first bounded subphase at
+`draft/feature/autolens/cluster_curves_engine_dispatch.md` to make those plots
+honor configured engine selection while preserving multi-plane geometry.
+Brain classifies that slice as a direct library feature (declared medium,
+heuristic large); Heart entry feed GREEN, conflict guard clear. Plan and branch
+name await human approval. No issue or implementation worktree has been created,
+no source edited, and no later phase issue queued. Context-aware JIT dispatch,
+doc fixes and cluster-scale performance/accuracy remain phase-3 work.
