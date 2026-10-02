@@ -292,7 +292,7 @@ Use the start-dev skill. active/critical_curves_dispatch_audit.md
 
 </details>
 
-<details><summary>📋 <a href="active/point_source_search_nautilus_leaf.md">First point-source search leaf: Nautilus on the source-plane solved likelihood (admission bar)</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/15">issue #15</a> — issued 2026-09-28 — workspace-dev</summary>
+<details><summary>📋 <a href="active/point_source_search_nautilus_leaf.md">First point-source search leaf: Nautilus on the source-plane solved likelihood (admission bar)</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/15">issue #15</a> — issued 2026-09-28 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_inference/pull/17">autolens_inference#17</a></summary>
 
 ```
 Use the start-dev skill. active/point_source_search_nautilus_leaf.md
