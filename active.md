@@ -43,7 +43,8 @@
   - manifest drift: organism-map blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml
   - manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml
   - release validation incomplete: no rehearsal for current source
-- resume: PR 147 open with pending-release label; human /prm after CI. Heart YELLOW reasons explicitly acknowledged in-session 2026-10-02 for this development PR only. Human requested ending bundle here and queued bootstrap/Colab in planned.md. All owned compute stopped. Logs in .worktrees/assistant/scratch/positions-*.log. No merge authorization.
+- ci: wiki-currency PASS; clone-boundary FAIL on five benchmarks/datasets/positions_initialised_inference files (run 37000939518).
+- resume: PR 147 open; DO NOT MERGE until clone-boundary resolved. Brain REFERENCE_PROFILES lacks benchmarks/datasets domain classification; needs matching assistant modes/maintainer.md + Brain classification or reviewed layout resolution preserving frozen-card evidence. Cross-repo follow-up not undertaken because human requested wrapping at PR-open. Heart YELLOW reasons explicitly acknowledged in-session 2026-10-02 for this development PR only. Human requested ending bundle here and queued bootstrap/Colab in planned.md. All owned compute stopped. Logs in .worktrees/assistant/scratch/positions-*.log. No merge authorization.
 
 ## over-sample-snr-helper
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/602
