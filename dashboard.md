@@ -42,17 +42,25 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 13 |
+| [In flight](#in-flight) (`active/`) | 12 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 7 |
-| [Backlog](#backlog) (`draft/`) | 258 |
+| [Backlog](#backlog) (`draft/`) | 259 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 21
+**Highest priority** (filed as `high`) — showing 12 of 22
+
+<details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/bug/autolens/point_image_pair_all_forward_grad_nan.md">Forward-mode gradient is NaN for FitPositionsImagePairAll(Solved) — released default gradient_mode="forward"</a> — autolens · small · supervised · high</summary>
 
@@ -142,15 +150,7 @@ Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autolens_profiling/timing_noise_audit.md">Audit timing tests and profiling gates for measurement noise</a> — autolens_profiling · large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autolens_profiling/timing_noise_audit.md
-```
-
-</details>
-
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 123
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 124
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -304,14 +304,6 @@ Use the start-dev skill. active/final_numerics_audit_of_every_mesh_interpolator.
 
 ```
 Use the start-dev skill. active/fit_util_masked_division_grad_nan.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/609">issue #609</a> — filed 2026-10-02</summary>
-
-```
-Use the start-dev skill. active/fix_knn_neighbor_search_for_a_partial.md
 ```
 
 </details>
@@ -683,7 +675,7 @@ Use the start-dev skill. draft/bug/autolens_profiling/timing_noise_audit.md
 <details><summary>📋 <b>knn-partial-point-block</b> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/609">issue #609</a> — filed 2026-10-02</summary>
 
 ```
-Use the start-dev skill. active/fix_knn_neighbor_search_for_a_partial.md
+Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md
 ```
 
 </details>
@@ -692,10 +684,18 @@ Use the start-dev skill. active/fix_knn_neighbor_search_for_a_partial.md
 
 ## Backlog
 
-**258** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **58** of them belong to an epic and are listed only under [Epics](#epics) below.
+**259** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **58** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 77</summary>
+<summary><b>bug</b> — 78</summary>
+
+<details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/bug/autolens/point_image_pair_all_forward_grad_nan.md">Forward-mode gradient is NaN for FitPositionsImagePairAll(Solved) — released default gradient_mode="forward"</a> — autolens · small · supervised · high</summary>
 
@@ -2510,6 +2510,40 @@ Contract (the `start-bundle` skill is the full body):
 </details>
 
 <details>
+<summary><b>autoarray — bundle 1</b> — 4 task(s) · 5 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the judgment tier for the PyAutoMind bundle 'autoarray — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md
+- draft/maintenance/autoarray/files_experiment_scripts_import_a_removed_module.md
+- draft/maintenance/autoarray/small_datasets_followups_after_8c.md
+- draft/refactor/autoarray/sparse_operator_int32_indexes.md
+
+Contract (the `start-bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Use the start-dev skill for EACH member prompt: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run the start-library skill (or the start-workspace skill) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
+5. Ship each member on its own: the ship-library skill or the ship-workspace skill, ONE PR per task, so the prm skill closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> | small | high | formalised |
+| <a href="draft/maintenance/autoarray/files_experiment_scripts_import_a_removed_module.md"><code>files/*_experiment.py</code> import a module that no longer exists…</a> | small | low | formalised |
+| <a href="draft/maintenance/autoarray/small_datasets_followups_after_8c.md">After the phase-8c releases: bump the autonerves floor, drop the…</a> | small | low | formalised |
+| <a href="draft/refactor/autoarray/sparse_operator_int32_indexes.md">Sparse CPU operator: shrink the 172 MB per-dataset payload…</a> | - | - | - |
+
+</details>
+
+<details>
 <summary><b>euclid</b> — 4 task(s) · 5 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: catalogue, docs, euclid, jax, latent</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -2575,36 +2609,6 @@ Contract (the `start-bundle` skill is the full body):
 
 </details>
 
-<details>
-<summary><b>euclid · hpc — bundle 2</b> — 2 task(s) · 3 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: catalogue, euclid, hpc</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the judgment tier for the PyAutoMind bundle 'euclid · hpc — bundle 2' — 2 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md
-- draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
-
-Contract (the `start-bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Use the start-dev skill for EACH member prompt: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run the start-library skill (or the start-workspace skill) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
-5. Ship each member on its own: the ship-library skill or the ship-workspace skill, ONE PR per task, so the prm skill closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> | euclid | small | high | formalised |
-| <a href="draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md">euclid_dr1: every dataset rgb.jpg is upside down relative to the VIS…</a> | euclid | - | - | - |
-
-</details>
-
 _Showing 8 of 41 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
@@ -2621,7 +2625,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-10-02 | issued | <a href="active/profiling_organ_p0_name_row_and_boundaries.md">Profiling organ phase 0 — name the organ, register its row, write…</a> |
 | 2026-10-02 | issued | <a href="active/pointsolver_extent_sanity_check.md">PointSolver grid-extent sanity check — warn when the data approach…</a> |
 | 2026-10-02 | issued | <a href="active/mesh_geometry_areas_transformed_adapt_image_indexerror.md">MeshGeometryRectangular.areas_transformed raises IndexError for…</a> |
-| 2026-10-02 | filed | <a href="active/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
+| 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
 | 2026-10-02 | issued | <a href="active/final_numerics_audit_of_every_mesh_interpolator.md">Final numerics audit of every mesh interpolator</a> |
 
 <details><summary>… 10 more (40 left)</summary>

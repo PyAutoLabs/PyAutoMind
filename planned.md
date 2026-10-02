@@ -95,7 +95,7 @@
 ## knn-partial-point-block
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/609
 - filed: 2026-10-02
-- prompt: active/fix_knn_neighbor_search_for_a_partial.md
+- prompt: draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md
 - classification: both
 - suggested-branch: feature/knn-partial-point-block
 - blocked-by: mesh-interpolator-numerics-audit (using PyAutoArray and autolens_workspace_test)
