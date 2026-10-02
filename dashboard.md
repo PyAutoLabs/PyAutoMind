@@ -284,7 +284,7 @@ Use the start-dev skill. active/colab_refinement_throughout.md
 
 </details>
 
-<details><summary>📋 <a href="active/evaluation_grid_cap_preserves_field.md">Preserve the LensCalc evaluation field when the grid cap activates</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/645">issue #645</a> — issued 2026-10-02 — library-dev</summary>
+<details><summary>📋 <a href="active/evaluation_grid_cap_preserves_field.md">Preserve the LensCalc evaluation field when the grid cap activates</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/645">issue #645</a> — issued 2026-10-02 — library-shipped, workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/646">PyAutoGalaxy#646</a> — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 Use the start-dev skill. active/evaluation_grid_cap_preserves_field.md
@@ -410,6 +410,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#646](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/646) — `active/evaluation_grid_cap_preserves_field.md`
 - [PyAutoGalaxy#644](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/644) — `active/over_sample_size_via_snr_from.md`
 - [PyAutoGalaxy#629](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/629) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - [PyAutoGalaxy#637](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/637) — `complete/2026/09/interferometer-streaming-visibilities.md`

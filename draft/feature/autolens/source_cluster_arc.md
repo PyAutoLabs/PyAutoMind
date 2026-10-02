@@ -637,3 +637,6 @@ Before: six new test failures; after: 49 focused and 1315 full Galaxy tests pass
 Same probe now spans 60 arcsec at 0.06 arcsec/pixel. Human acknowledged the two
 current Heart YELLOW map/table drift reasons and authorized shipping. Library PR
 creation and linked workspace smoke underway; no next phase issued.
+
+Phase 3b library PR: PyAutoGalaxy#646 (f19a3377), pending-release. Linked
+workspace CI and profiling-ledger changes are prepared; full smoke running.
