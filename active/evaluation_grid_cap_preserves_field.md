@@ -9,7 +9,9 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
+Issued: 2026-10-02
+Issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/645
 Epic: cluster-strong-lensing
 Phase: 3b
 Parent: draft/refactor/autogalaxy/critical_curves_dispatch_cluster.md
@@ -70,3 +72,11 @@ API, general masked-caustic fix, magnification map, or Cortex revival.
 
 Proposed branch: feature/evaluation-grid-cap-field. Plan/branch approval and
 fresh repo-claim survey are required before issue/worktree/source changes.
+
+## Approval — 2026-10-02
+
+Human answered "Approve plan and separate scope". Both phase-3a PRs are now
+merged. Approval covers the stated effective-Zoom2D footprint/rounding contract
+and concurrency alongside Galaxy docs, workspace numerical-audit and point-solver
+ledger tasks, with their files untouched. No further phases are authorized for
+bulk issue creation.

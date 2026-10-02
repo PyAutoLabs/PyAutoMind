@@ -479,7 +479,7 @@ internal JIT and an externally jittable plotting API must be distinguished.
 Do not implement the old automatic-JIT proposal from historical timings alone.
 
 Filed one bounded research prompt:
-active/critical_curves_dispatch_audit.md (phase 3a).
+complete/2026/10/critical-curves-dispatch-audit.md (phase 3a).
 Evidence first: current dispatch/call boundaries, two synthetic fixtures,
 per-source-plane curve/caustic geometry, bounded cold/warm/disabled-JIT timings,
 and an explicit dispatch contract. Production/default changes remain phase 3
@@ -612,6 +612,20 @@ Research: autolens_profiling#364 @89b6d00; CI: autolens_workspace_test#341 @06f7
 Full workspace smoke 33/33 passed (new example 2.9s). Heart YELLOW acknowledged;
 all RED reasons cleared after clean canonical PyAutoLens fast-forward. Both PRs
 pending-release, cross-linked; /prm awaiting all workflow/matrix legs.
-Next single prompt filed, unissued: draft/bug/autogalaxy/evaluation_grid_cap_preserves_field.md
+Next single prompt filed, unissued: active/evaluation_grid_cap_preserves_field.md
 (phase 3b). Includes explicit effective-Zoom2D footprint/rounding contract; does
 not silently absorb the independent masked-caustic discrepancy draft. No bulk queue.
+
+
+## Phase 3a merged; phase 3b approved — 2026-10-02
+
+Both PRs merged after all exact-head CI jobs passed: profiling#364 (97f24eb),
+workspace_test#341 (121f9b9). Issue #337 closed; completion record
+complete/2026/10/critical-curves-dispatch-audit.md replaces its active prompt/claim.
+Evidence worktree retained by explicit human request; no cleanup deletion.
+Human approved phase 3b plan plus separate-scope concurrency on Galaxy,
+workspace_test and profiling. Next: issue the one filed cap-fix prompt and enter
+start_library; no additional successor queue. Original overall phase 3 remains open.
+
+Phase 3b issued: PyAutoGalaxy#645, feature/evaluation-grid-cap-field in the
+isolated task bundle. Approved concurrency recorded; implementation underway.
