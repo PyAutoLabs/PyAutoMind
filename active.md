@@ -31,38 +31,19 @@
 - issued: 2026-10-02
 - prompt: active/benchmark_positions_initialised_inference.md
 - session: Codex; session ID unavailable
-- status: awaiting-input
+- status: awaiting-merge
 - bundle: assistant
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/assistant
 - repos:
   - autolens_assistant: feature/benchmark-positions-inference
 - commit: a22696b
 - validation: 42 final targeted passed / 0 failed; freeze-check passed; 3/3 recorded scores reproduce after cleanup. Genuine reference ESS6120.8, 58,200 calls. Calibration 0/0/0 (two no-result timeouts, one scientific success exceeding compute budget).
-- resume: Implementation and evidence committed, clean tracked tree. PR body ready at .worktrees/assistant/scratch/positions-pr.md. Await live acknowledgment of Heart YELLOW generated organism-map drift, generated public-front-door drift, and missing release rehearsal; then push feature/benchmark-positions-inference and open its PR. No merge authorization. User considering quicker wrap leaving bootstrap/Colab queued.
-
-## bootstrap-smoke-codex
-- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/144
-- issued: 2026-10-02
-- prompt: active/bootstrap_smoke_codex_and_bench_pr.md
-- session: Codex; session ID unavailable
-- status: workspace-dev
-- bundle: assistant
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/assistant
-- repos:
-  - autolens_assistant: feature/bootstrap-smoke-codex
-- resume: Plan approved 2026-10-02. Sequential execution in shared worktree; one issue and PR per member. Merge remains human.
-
-## colab-refinement-throughout
-- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/145
-- issued: 2026-10-02
-- prompt: active/colab_refinement_throughout.md
-- session: Codex; session ID unavailable
-- status: workspace-dev
-- bundle: assistant
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/assistant
-- repos:
-  - autolens_assistant: feature/colab-refinement-throughout
-- resume: Plan approved 2026-10-02. Sequential execution in shared worktree; one issue and PR per member. Merge remains human.
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/147
+- heart-ack:
+  - manifest drift: organism-map blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml
+  - manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml
+  - release validation incomplete: no rehearsal for current source
+- resume: PR 147 open with pending-release label; human /prm after CI. Heart YELLOW reasons explicitly acknowledged in-session 2026-10-02 for this development PR only. Human requested ending bundle here and queued bootstrap/Colab in planned.md. All owned compute stopped. Logs in .worktrees/assistant/scratch/positions-*.log. No merge authorization.
 
 ## over-sample-snr-helper
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/602

@@ -117,3 +117,29 @@
   - PyAutoArray
   - autolens_workspace_test
 - resume: Audit#603 found incorrect internal-edge Sibson weights and near-edge partition failure. Filed separately per explicit user request; strict expected-failure regressions retained in audit. No repair begun or worktree created. Plan algorithmic repair independently.
+
+## bootstrap-smoke-codex
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/144
+- planned: 2026-10-02
+- status: queued — human requested quicker wrap after inference PR
+- prompt: active/bootstrap_smoke_codex_and_bench_pr.md
+- classification: workspace
+- suggested-branch: feature/bootstrap-smoke-codex
+- bundle: assistant
+- affected-repos:
+  - autolens_assistant
+- resume: Plan approved and issue created; implementation not started. Reuse approved issue plan, survey current claims, and resume through start_workspace. No branch or PR created for this member.
+- carry-forward: Preserve bench/bootstrap-smoke-stage-b; approved plan carries 7ca904b, add0556, ca19325 to fresh member branch before one Codex v2 run.
+
+## colab-refinement-throughout
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/145
+- planned: 2026-10-02
+- status: queued — human requested quicker wrap after inference PR
+- prompt: active/colab_refinement_throughout.md
+- classification: workspace
+- suggested-branch: feature/colab-refinement-throughout
+- bundle: assistant
+- affected-repos:
+  - autolens_assistant
+- resume: Plan approved and issue created; implementation not started. Reuse approved issue plan, survey current claims, and resume through start_workspace. No branch or PR created for this member.
+- scope: Existing Colab skills/setup/Ring notebook only; extra Teacher/SLACS notebook twins deferred.
