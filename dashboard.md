@@ -308,7 +308,7 @@ Use the start-dev skill. active/fit_util_masked_division_grad_nan.md
 
 </details>
 
-<details><summary>📋 <a href="active/heart_publication_coverage.md">Publish all observed Heart monitoring families</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/270">issue #270</a> — issued 2026-10-02 — library-dev</summary>
+<details><summary>📋 <a href="active/heart_publication_coverage.md">Publish all observed Heart monitoring families</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/270">issue #270</a> — issued 2026-10-02 — library-dev, awaiting-heart-ack</summary>
 
 ```
 Use the start-dev skill. active/heart_publication_coverage.md

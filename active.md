@@ -215,11 +215,17 @@
 - issued: 2026-10-02
 - prompt: active/heart_publication_coverage.md
 - session: Codex; session ID unavailable
-- status: library-dev
+- status: library-dev, awaiting-heart-ack
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/heart-publication-coverage
 - coordination: Human approved concurrent isolated Heart work alongside pyautopulse-organ-row; that PR merged before worktree creation.
 - repos:
   - PyAutoHeart: feature/heart-publication-coverage
+- validation: 1177 Heart tests passed; tenant firewall passed; real snapshot round trip exported 16 monitoring families.
+- awaiting: Ship-library requires acknowledgement of current Heart YELLOW reasons before push/PR.
+- heart-reasons:
+  - manifest drift: organism-map blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml
+  - manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml
+- resume: Source and tests complete in worktree; PR body prepared in canonical Mind tmp/heart-publication-pr.txt. On human acknowledgement, re-read Heart and ship branch; merge remains a separate human action.
 
 ## pyautopulse-organ-skeleton
 - issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/1
