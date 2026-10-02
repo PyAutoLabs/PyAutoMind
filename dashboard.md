@@ -268,7 +268,7 @@ Use the start-dev skill. active/evaluation_grid_cap_preserves_field.md
 
 </details>
 
-<details><summary>📋 <a href="active/profiling_organ_p2_skeleton_registry_reader_board.md">Profiling organ phase 2 — the organ skeleton: registry, reader, board, workflows</a> — <a href="https://github.com/PyAutoLabs/PyAutoPulse/issues/1">issue #1</a> — issued 2026-10-02 — library-dev</summary>
+<details><summary>📋 <a href="active/profiling_organ_p2_skeleton_registry_reader_board.md">Profiling organ phase 2 — the organ skeleton: registry, reader, board, workflows</a> — <a href="https://github.com/PyAutoLabs/PyAutoPulse/issues/1">issue #1</a> — issued 2026-10-02 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/2">PyAutoPulse#2</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/449">PyAutoBrain#449</a> — ⏳ pending release: PyAutoPulse — ⏳ pending release: PyAutoBrain</summary>
 
 ```
 Use the start-dev skill. active/profiling_organ_p2_skeleton_registry_reader_board.md
@@ -314,6 +314,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoBrain**
 
+- [PyAutoBrain#449](https://github.com/PyAutoLabs/PyAutoBrain/pull/449) — `active/profiling_organ_p2_skeleton_registry_reader_board.md`
 - [PyAutoBrain#426](https://github.com/PyAutoLabs/PyAutoBrain/pull/426) — `complete/2026/09/autolens-visualization-rebirth.md`
 - [PyAutoBrain#404](https://github.com/PyAutoLabs/PyAutoBrain/pull/404) — `complete/2026/09/codex-context-efficiency.md`
 - [PyAutoBrain#387](https://github.com/PyAutoLabs/PyAutoBrain/pull/387) — `complete/2026/09/codex-token-efficiency.md`
@@ -424,6 +425,10 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoNerves#175](https://github.com/PyAutoLabs/PyAutoNerves/pull/175) — `complete/2026/09/nerves-unused-keys.md`
 - [PyAutoNerves#176](https://github.com/PyAutoLabs/PyAutoNerves/pull/176) — `complete/2026/09/workspace-config-cleanup.md`
 - [PyAutoNerves#181](https://github.com/PyAutoLabs/PyAutoNerves/pull/181) — `complete/2026/10/pyautopulse-organ-row.md`
+
+**PyAutoPulse**
+
+- [PyAutoPulse#2](https://github.com/PyAutoLabs/PyAutoPulse/pull/2) — `active/profiling_organ_p2_skeleton_registry_reader_board.md`
 
 **PyAutoReduce**
 

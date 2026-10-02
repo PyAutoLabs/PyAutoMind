@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-02T12:14:21Z",
+  "updated": "2026-10-02T12:32:30Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -18,6 +18,12 @@
       "text": "Preserve the LensCalc evaluation field when the grid cap activates \u2014 awaiting-merge, workspace-release-gated",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/646",
       "prompt": "Use the start-dev skill. active/evaluation_grid_cap_preserves_field.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Profiling organ phase 2 \u2014 the organ skeleton: registry, reader, board, workflows \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoPulse/pull/2",
+      "prompt": "Use the start-dev skill. active/profiling_organ_p2_skeleton_registry_reader_board.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#611 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/611",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#606 \u2014 Shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/606",
       "prompt": null
     }
   ]
