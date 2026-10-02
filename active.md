@@ -204,3 +204,14 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/646
 - pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/646
 - library-commit: f19a3377; 1315 full and 49 focused tests pass. Linked CI witness and profiling ledger/wiki prepared; full workspace smoke in progress.
+
+## heart-publication-coverage
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/270
+- issued: 2026-10-02
+- prompt: active/heart_publication_coverage.md
+- session: Codex; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/heart-publication-coverage
+- coordination: Human approved concurrent isolated Heart work alongside pyautopulse-organ-row; that PR merged before worktree creation.
+- repos:
+  - PyAutoHeart: feature/heart-publication-coverage
