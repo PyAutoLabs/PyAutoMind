@@ -42,11 +42,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 12 |
+| [In flight](#in-flight) (`active/`) | 11 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 7 |
-| [Backlog](#backlog) (`draft/`) | 259 |
+| [Backlog](#backlog) (`draft/`) | 260 |
 
 > **No batch in flight.**
 
@@ -332,14 +332,6 @@ Use the start-dev skill. active/pointsolver_extent_sanity_check.md
 
 </details>
 
-<details><summary>📋 <a href="active/profiling_organ_p0_name_row_and_boundaries.md">Profiling organ phase 0 — name the organ, register its row, write…</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/463">issue #463</a> — issued 2026-10-02 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/465">PyAutoMind#465</a> — ⏳ pending release: PyAutoMind — ⏳ pending release: PyAutoBrain — ⏳ pending release: PyAutoHeart — ⏳ pending release: PyAutoHands — ⏳ pending release: pyautolabs.github.io — ⏳ pending release: PyAutoCortex — ⏳ pending release: PyAutoNerves — ⏳ pending release: PyAutoGut — ⏳ pending release: PyAutoEyes — ⏳ pending release: PyAutoScientist</summary>
-
-```
-Use the start-dev skill. active/profiling_organ_p0_name_row_and_boundaries.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/vis_lp_inspection_bundle.md">Support vis_lp-only products in inspection bundles</a> — issued 2026-09-22</summary>
 
 ```
@@ -379,7 +371,6 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoBrain**
 
-- [PyAutoBrain#447](https://github.com/PyAutoLabs/PyAutoBrain/pull/447) — `active/profiling_organ_p0_name_row_and_boundaries.md`
 - [PyAutoBrain#426](https://github.com/PyAutoLabs/PyAutoBrain/pull/426) — `complete/2026/09/autolens-visualization-rebirth.md`
 - [PyAutoBrain#404](https://github.com/PyAutoLabs/PyAutoBrain/pull/404) — `complete/2026/09/codex-context-efficiency.md`
 - [PyAutoBrain#387](https://github.com/PyAutoLabs/PyAutoBrain/pull/387) — `complete/2026/09/codex-token-efficiency.md`
@@ -394,19 +385,20 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoBrain#424](https://github.com/PyAutoLabs/PyAutoBrain/pull/424) — `complete/2026/09/start-dev-heart-gate.md`
 - [PyAutoBrain#435](https://github.com/PyAutoLabs/PyAutoBrain/pull/435) — `complete/2026/10/cockpit-actionable-state.md`
 - [PyAutoBrain#446](https://github.com/PyAutoLabs/PyAutoBrain/pull/446) — `complete/2026/10/heart-monitoring-coverage.md`
+- [PyAutoBrain#447](https://github.com/PyAutoLabs/PyAutoBrain/pull/447) — `complete/2026/10/pyautopulse-organ-row.md`
 
 **PyAutoCortex**
 
-- [PyAutoCortex#54](https://github.com/PyAutoLabs/PyAutoCortex/pull/54) — `active/profiling_organ_p0_name_row_and_boundaries.md`
 - [PyAutoCortex#46](https://github.com/PyAutoLabs/PyAutoCortex/pull/46) — `complete/2026/09/eyes-organ-order.md`
+- [PyAutoCortex#54](https://github.com/PyAutoLabs/PyAutoCortex/pull/54) — `complete/2026/10/pyautopulse-organ-row.md`
 
 **PyAutoEyes**
 
-- [PyAutoEyes#12](https://github.com/PyAutoLabs/PyAutoEyes/pull/12) — `active/profiling_organ_p0_name_row_and_boundaries.md`
 - [PyAutoEyes#3](https://github.com/PyAutoLabs/PyAutoEyes/pull/3) — `complete/2026/09/eyes-board-conductor-registry.md`
 - [PyAutoEyes#5](https://github.com/PyAutoLabs/PyAutoEyes/pull/5) — `complete/2026/09/eyes-fit-cti-instances.md`
 - [PyAutoEyes#4](https://github.com/PyAutoLabs/PyAutoEyes/pull/4) — `complete/2026/09/eyes-galaxy-instance.md`
 - [PyAutoEyes#2](https://github.com/PyAutoLabs/PyAutoEyes/pull/2) — `complete/2026/09/eyes-organ-skeleton.md`
+- [PyAutoEyes#12](https://github.com/PyAutoLabs/PyAutoEyes/pull/12) — `complete/2026/10/pyautopulse-organ-row.md`
 
 **PyAutoFit**
 
@@ -430,19 +422,18 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoGut**
 
-- [PyAutoGut#18](https://github.com/PyAutoLabs/PyAutoGut/pull/18) — `active/profiling_organ_p0_name_row_and_boundaries.md`
 - [PyAutoGut#13](https://github.com/PyAutoLabs/PyAutoGut/pull/13) — `complete/2026/09/eyes-organ-order.md`
 - [PyAutoGut#12](https://github.com/PyAutoLabs/PyAutoGut/pull/12) — `complete/2026/09/gut-void-sibling-reach.md`
+- [PyAutoGut#18](https://github.com/PyAutoLabs/PyAutoGut/pull/18) — `complete/2026/10/pyautopulse-organ-row.md`
 
 **PyAutoHands**
 
-- [PyAutoHands#294](https://github.com/PyAutoLabs/PyAutoHands/pull/294) — `active/profiling_organ_p0_name_row_and_boundaries.md`
 - [PyAutoHands#292](https://github.com/PyAutoLabs/PyAutoHands/pull/292) — `complete/2026/09/board-footer-family-fix.md`
 - [PyAutoHands#291](https://github.com/PyAutoLabs/PyAutoHands/pull/291) — `complete/2026/09/eyes-organ-order.md`
+- [PyAutoHands#294](https://github.com/PyAutoLabs/PyAutoHands/pull/294) — `complete/2026/10/pyautopulse-organ-row.md`
 
 **PyAutoHeart**
 
-- [PyAutoHeart#269](https://github.com/PyAutoLabs/PyAutoHeart/pull/269) — `active/profiling_organ_p0_name_row_and_boundaries.md`
 - [PyAutoHeart#240](https://github.com/PyAutoLabs/PyAutoHeart/pull/240) — `complete/2026/09/autolens-visualization-rebirth.md`
 - [PyAutoHeart#242](https://github.com/PyAutoLabs/PyAutoHeart/pull/242) — `complete/2026/09/board-footer-family-fix.md`
 - [PyAutoHeart#244](https://github.com/PyAutoLabs/PyAutoHeart/pull/244) — `complete/2026/09/eyes-fit-cti-instances.md`
@@ -451,6 +442,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoHeart#254](https://github.com/PyAutoLabs/PyAutoHeart/pull/254) — `complete/2026/10/compact-dashboard-rows.md`
 - [PyAutoHeart#268](https://github.com/PyAutoLabs/PyAutoHeart/pull/268) — `complete/2026/10/heart-monitoring-coverage.md`
 - [PyAutoHeart#256](https://github.com/PyAutoLabs/PyAutoHeart/pull/256) — `complete/2026/10/heart-score-resusitate.md`
+- [PyAutoHeart#269](https://github.com/PyAutoLabs/PyAutoHeart/pull/269) — `complete/2026/10/pyautopulse-organ-row.md`
 
 **PyAutoLens**
 
@@ -473,7 +465,6 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoMind**
 
-- [PyAutoMind#465](https://github.com/PyAutoLabs/PyAutoMind/pull/465) — `active/profiling_organ_p0_name_row_and_boundaries.md`
 - [PyAutoMind#447](https://github.com/PyAutoLabs/PyAutoMind/pull/447) — `complete/2026/09/autolens-visualization-rebirth.md`
 - [PyAutoMind#425](https://github.com/PyAutoLabs/PyAutoMind/pull/425) — `complete/2026/09/codex-context-efficiency.md`
 - [PyAutoMind#427](https://github.com/PyAutoLabs/PyAutoMind/pull/427) — `complete/2026/09/community-surface-policy.md`
@@ -481,13 +472,14 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoMind#453](https://github.com/PyAutoLabs/PyAutoMind/pull/453) — `complete/2026/09/eyes-galaxy-instance.md`
 - [PyAutoMind#449](https://github.com/PyAutoLabs/PyAutoMind/pull/449) — `complete/2026/09/eyes-organ-order.md`
 - [PyAutoMind#406](https://github.com/PyAutoLabs/PyAutoMind/pull/406) — `complete/2026/09/provider-neutral-bundle-prompts.md`
+- [PyAutoMind#465](https://github.com/PyAutoLabs/PyAutoMind/pull/465) — `complete/2026/10/pyautopulse-organ-row.md`
 
 **PyAutoNerves**
 
-- [PyAutoNerves#181](https://github.com/PyAutoLabs/PyAutoNerves/pull/181) — `active/profiling_organ_p0_name_row_and_boundaries.md`
 - [PyAutoNerves#177](https://github.com/PyAutoLabs/PyAutoNerves/pull/177) — `complete/2026/09/eyes-organ-order.md`
 - [PyAutoNerves#175](https://github.com/PyAutoLabs/PyAutoNerves/pull/175) — `complete/2026/09/nerves-unused-keys.md`
 - [PyAutoNerves#176](https://github.com/PyAutoLabs/PyAutoNerves/pull/176) — `complete/2026/09/workspace-config-cleanup.md`
+- [PyAutoNerves#181](https://github.com/PyAutoLabs/PyAutoNerves/pull/181) — `complete/2026/10/pyautopulse-organ-row.md`
 
 **PyAutoReduce**
 
@@ -495,8 +487,8 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoScientist**
 
-- [PyAutoScientist#39](https://github.com/PyAutoLabs/PyAutoScientist/pull/39) — `active/profiling_organ_p0_name_row_and_boundaries.md`
 - [PyAutoScientist#35](https://github.com/PyAutoLabs/PyAutoScientist/pull/35) — `complete/2026/09/eyes-organ-order.md`
+- [PyAutoScientist#39](https://github.com/PyAutoLabs/PyAutoScientist/pull/39) — `complete/2026/10/pyautopulse-organ-row.md`
 
 **autocti_visualization**
 
@@ -539,8 +531,8 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **pyautolabs.github.io**
 
-- [pyautolabs.github.io#23](https://github.com/PyAutoLabs/pyautolabs.github.io/pull/23) — `active/profiling_organ_p0_name_row_and_boundaries.md`
 - [pyautolabs.github.io#9](https://github.com/PyAutoLabs/pyautolabs.github.io/pull/9) — `complete/2026/09/community-surface-website.md`
+- [pyautolabs.github.io#23](https://github.com/PyAutoLabs/pyautolabs.github.io/pull/23) — `complete/2026/10/pyautopulse-organ-row.md`
 
 ## Human review
 
@@ -696,10 +688,10 @@ Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_parti
 
 ## Backlog
 
-**259** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **58** of them belong to an epic and are listed only under [Epics](#epics) below.
+**260** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **58** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 78</summary>
+<summary><b>bug</b> — 79</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -1321,6 +1313,14 @@ Use the start-dev skill. draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_
 
 ```
 Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/health_fixes/heart_publication_coverage.md">Publish all observed Heart monitoring families</a> — health_fixes</summary>
+
+```
+Use the start-dev skill. draft/bug/health_fixes/heart_publication_coverage.md
 ```
 
 </details>
@@ -2634,17 +2634,16 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-10-02 | issued | <a href="active/fit_util_masked_division_grad_nan.md">fit_util: masked divisions NaN the gradient on the JAX path</a> |
 | 2026-10-02 | issued | <a href="active/bootstrap_smoke_codex_and_bench_pr.md">bootstrap-smoke: run Codex on the v2 prompt, then merge the…</a> |
 | 2026-10-02 | issued | <a href="active/colab_refinement_throughout.md">Refine the assistant for Google Colab, here and throughout</a> |
-| 2026-10-02 | issued | <a href="active/profiling_organ_p0_name_row_and_boundaries.md">Profiling organ phase 0 — name the organ, register its row, write…</a> |
 | 2026-10-02 | issued | <a href="active/evaluation_grid_cap_preserves_field.md">Preserve the LensCalc evaluation field when the grid cap activates</a> |
 | 2026-10-02 | issued | <a href="active/pointsolver_extent_sanity_check.md">PointSolver grid-extent sanity check — warn when the data approach…</a> |
 | 2026-10-02 | issued | <a href="active/mesh_geometry_areas_transformed_adapt_image_indexerror.md">MeshGeometryRectangular.areas_transformed raises IndexError for…</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
+| 2026-10-02 | issued | <a href="active/final_numerics_audit_of_every_mesh_interpolator.md">Final numerics audit of every mesh interpolator</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-02 | issued | <a href="active/final_numerics_audit_of_every_mesh_interpolator.md">Final numerics audit of every mesh interpolator</a> |
 | 2026-10-02 | issued | <a href="active/benchmark_positions_initialised_inference.md">Benchmark card: positions-initialised imaging inference of a…</a> |
 | 2026-10-02 | issued | <a href="active/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging…</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autolens_profiling/timing_noise_audit.md">Audit timing tests and profiling gates for measurement noise</a> |
@@ -2654,12 +2653,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
 | 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
+| 2026-09-29 | filed | <a href="draft/maintenance/pyautomind/session_start_hook_copies_regen.md">Regenerate the 28 drifted <code>.claude/hooks/session-start.sh</code> copies…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-29 | filed | <a href="draft/maintenance/pyautomind/session_start_hook_copies_regen.md">Regenerate the 28 drifted <code>.claude/hooks/session-start.sh</code> copies…</a> |
 | 2026-09-28 | filed | <a href="draft/bug/autolens/point_image_pair_all_forward_grad_nan.md">Forward-mode gradient is NaN for FitPositionsImagePairAll(Solved)…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
@@ -2669,12 +2668,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
 | 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
 | 2026-09-26 | filed | <a href="draft/refactor/workspaces/abell_1201_local_cleanup.md">Repo cleanup: retire the Abell 1201 worktree and local raw data</a> |
+| 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
 | 2026-09-25 | filed | <a href="draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md">Keep caches off <code>$HOME</code> on HPC — phase 2 remainder: euclid pipeline…</a> |
 | 2026-09-24 | filed | <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> |
 | 2026-09-24 | filed | <a href="draft/research/autoarray/mge_nnls_fix_pyautoarray_571_slam_60.md">Linear-solver programme phase 3: GPU/vmap/A100 timing and parity rows…</a> |
@@ -2684,12 +2683,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-18 | parked | <a href="parked.md#fixed-light-numba-s7">fixed-light-numba-s7</a> |
 | 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
+| 2026-09-18 | filed | <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-18 | filed | <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> |
 | 2026-09-18 | filed | <a href="draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md">The latent smoke's empty-block assertion names one cause…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a> |
@@ -2699,6 +2698,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> |
 | 2026-09-17 | filed | <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source A100 speed-up campaign: profile and optimize with the…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads…</a> |
+| 2026-09-17 | filed | <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> |
 
 </details>
 
@@ -2717,10 +2717,10 @@ Long-running multi-phase programmes. Each epic's 📋 prompt has the assistant r
 <details>
 <summary><b>PyAutoPulse — the cross-project dashboard layer above the <code>&lt;lib&gt;_profiling</code> project repos: instance registry, <code>profiling-summary</code> read contract, organ board, cockpit transition</b> — 2 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>PyAutoPulse — the cross-project dashboard layer above the <code>&lt;lib&gt;_profiling</code> project repos: instance registry, <code>profiling-summary</code> read contract, organ board, cockpit transition</b> — ledger: `active/profiling_organ_p0_name_row_and_boundaries.md` — filed 2026-10-02; name decided 2026-10-02 (PyAutoPulse, key <code>pulse</code>); phase 1 COMPLETE 2026-10-02 (autolens_profiling#359 closed…</summary>
+<details><summary>📋 <b>PyAutoPulse — the cross-project dashboard layer above the <code>&lt;lib&gt;_profiling</code> project repos: instance registry, <code>profiling-summary</code> read contract, organ board, cockpit transition</b> — ledger: `complete/2026/10/pyautopulse-organ-row.md` — filed 2026-10-02; name decided 2026-10-02 (PyAutoPulse, key <code>pulse</code>); phase 1 COMPLETE 2026-10-02 (autolens_profiling#359 closed…</summary>
 
 ```
-Continue the 'PyAutoPulse — the cross-project dashboard layer above the `<lib>_profiling` project repos: instance registry, `profiling-summary` read contract, organ board, cockpit transition' epic. Its canonical state lives in active/profiling_organ_p0_name_row_and_boundaries.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: human request 2026-10-02 to begin the organ filed from the 2026-10-01 intake; design authority is `PyAutoBrain/docs/research/profiling_inference_organs.md` (Brain #444, read contracts and acceptance cases) on `ecosystem_levels.md` (Brain #440, roles not hierarchy) — do not re-derive either. Same layering as PyAutoEyes over `<lib>_visualization` (precedent `complete/2026/09/pyautoeyes-organ-decision.md`): project repos own producers, results, drift policy and their own Pages page; the organ owns the registry, the versioned read contract, ingest receipts and the cross-project board; the Brain's profiling conductor is the only judge. Phases under `draft/feature/`: 0 name + organ row + boundaries (`pyautomind/profiling_organ_p0_name_row_and_boundaries.md`, human-gated: fresh `gh repo create PyAutoLabs/PyAutoPulse`, org-profile row; name decided by the human 2026-10-02 — PyAutoPulse, organ key `pulse`; an earlier repo of that name became PyAutoHeart, so this is a fresh create), 1 `profiling-summary` v1 exporter in autolens_profiling (done: `complete/2026/10/profiling-summary-v1.md`, PR autolens_profiling#360), 2 organ skeleton — registry, reader, receipts, board, workflows (`pyautopulse/profiling_organ_p2_skeleton_registry_reader_board.md`), 3 Brain board strip + cockpit identity transition (`pyautopulse/profiling_organ_p3_brain_board_cockpit_transition.md`; supersedes `pyautobrain/register_profiling_dashboard_on_brain_board.md` unless that ships first), 4 second real `<lib>_profiling` adopter — no prompt until a real producer exists (spec: never manufacture empty siblings; a fixture is phase 2). Repoint the ledger to `PyAutoPulse/dashboard.md` once phase 2 lands. Issue ONE phase at a time. The inference organ is a separate epic, not started.
+Continue the 'PyAutoPulse — the cross-project dashboard layer above the `<lib>_profiling` project repos: instance registry, `profiling-summary` read contract, organ board, cockpit transition' epic. Its canonical state lives in complete/2026/10/pyautopulse-organ-row.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: human request 2026-10-02 to begin the organ filed from the 2026-10-01 intake; design authority is `PyAutoBrain/docs/research/profiling_inference_organs.md` (Brain #444, read contracts and acceptance cases) on `ecosystem_levels.md` (Brain #440, roles not hierarchy) — do not re-derive either. Same layering as PyAutoEyes over `<lib>_visualization` (precedent `complete/2026/09/pyautoeyes-organ-decision.md`): project repos own producers, results, drift policy and their own Pages page; the organ owns the registry, the versioned read contract, ingest receipts and the cross-project board; the Brain's profiling conductor is the only judge. Phases under `draft/feature/`: 0 name + organ row + boundaries (`pyautomind/profiling_organ_p0_name_row_and_boundaries.md`, human-gated: fresh `gh repo create PyAutoLabs/PyAutoPulse`, org-profile row; name decided by the human 2026-10-02 — PyAutoPulse, organ key `pulse`; an earlier repo of that name became PyAutoHeart, so this is a fresh create), 1 `profiling-summary` v1 exporter in autolens_profiling (done: `complete/2026/10/profiling-summary-v1.md`, PR autolens_profiling#360), 2 organ skeleton — registry, reader, receipts, board, workflows (`pyautopulse/profiling_organ_p2_skeleton_registry_reader_board.md`), 3 Brain board strip + cockpit identity transition (`pyautopulse/profiling_organ_p3_brain_board_cockpit_transition.md`; supersedes `pyautobrain/register_profiling_dashboard_on_brain_board.md` unless that ships first), 4 second real `<lib>_profiling` adopter — no prompt until a real producer exists (spec: never manufacture empty siblings; a fixture is phase 2). Repoint the ledger to `PyAutoPulse/dashboard.md` once phase 2 lands. Issue ONE phase at a time. The inference organ is a separate epic, not started.
 ```
 
 </details>
@@ -3331,7 +3331,7 @@ Use the start-dev skill. draft/research/autolens_profiling/interferometer_stream
 
 </details>
 
-70 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+71 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3364,6 +3364,7 @@ Use the start-dev skill. draft/research/autolens_profiling/interferometer_stream
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
 - `draft/bug/autolens_profiling/timing_noise_audit.md`
 - `draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md`
+- `draft/bug/health_fixes/heart_publication_coverage.md`
 - `draft/bug/health_fixes/release_timeout_policy.md`
 - `draft/bug/health_fixes/samples_parameter_paths.md`
 - `draft/bug/priors/12_single_source_density_refactor.md`
@@ -3375,8 +3376,7 @@ Use the start-dev skill. draft/research/autolens_profiling/interferometer_stream
 - `draft/docs/autolens/split_lensing_regimes.md`
 - `draft/docs/autolens_inference/reconcile_cortex_ledger_references.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
-- `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
-- _… and 30 more_
+- _… and 31 more_
 
 </details>
 
