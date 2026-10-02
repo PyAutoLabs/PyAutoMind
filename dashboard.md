@@ -42,7 +42,7 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 12 |
+| [In flight](#in-flight) (`active/`) | 11 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 7 |
@@ -280,14 +280,6 @@ Use the start-dev skill. active/bootstrap_smoke_codex_and_bench_pr.md
 
 ```
 Use the start-dev skill. active/colab_refinement_throughout.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/critical_curves_dispatch_audit.md">Critical-curve dispatch: current cluster evidence and contract</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/337">issue #337</a> — issued 2026-10-02 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/341">autolens_workspace_test#341</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/364">autolens_profiling#364</a></summary>
-
-```
-Use the start-dev skill. active/critical_curves_dispatch_audit.md
 ```
 
 </details>
@@ -2644,7 +2636,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-02 | issued | <a href="active/critical_curves_dispatch_audit.md">Critical-curve dispatch: current cluster evidence and contract</a> |
 | 2026-10-02 | issued | <a href="active/benchmark_positions_initialised_inference.md">Benchmark card: positions-initialised imaging inference of a…</a> |
 | 2026-10-02 | issued | <a href="active/benchmark_forward_model_consistency.md">Benchmark card: forward-model consistency across imaging…</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autolens_profiling/timing_noise_audit.md">Audit timing tests and profiling gates for measurement noise</a> |
@@ -2654,12 +2645,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
 | 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
+| 2026-09-29 | filed | <a href="draft/maintenance/pyautomind/session_start_hook_copies_regen.md">Regenerate the 28 drifted <code>.claude/hooks/session-start.sh</code> copies…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-29 | filed | <a href="draft/maintenance/pyautomind/session_start_hook_copies_regen.md">Regenerate the 28 drifted <code>.claude/hooks/session-start.sh</code> copies…</a> |
 | 2026-09-28 | filed | <a href="draft/bug/autolens/point_image_pair_all_forward_grad_nan.md">Forward-mode gradient is NaN for FitPositionsImagePairAll(Solved)…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
@@ -2669,12 +2660,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
 | 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
 | 2026-09-26 | filed | <a href="draft/refactor/workspaces/abell_1201_local_cleanup.md">Repo cleanup: retire the Abell 1201 worktree and local raw data</a> |
+| 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
 | 2026-09-25 | filed | <a href="draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md">Keep caches off <code>$HOME</code> on HPC — phase 2 remainder: euclid pipeline…</a> |
 | 2026-09-24 | filed | <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> |
 | 2026-09-24 | filed | <a href="draft/research/autoarray/mge_nnls_fix_pyautoarray_571_slam_60.md">Linear-solver programme phase 3: GPU/vmap/A100 timing and parity rows…</a> |
@@ -2684,12 +2675,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-18 | parked | <a href="parked.md#fixed-light-numba-s7">fixed-light-numba-s7</a> |
 | 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
+| 2026-09-18 | filed | <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-18 | filed | <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> |
 | 2026-09-18 | filed | <a href="draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md">The latent smoke's empty-block assertion names one cause…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a> |
@@ -2699,6 +2690,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> |
 | 2026-09-17 | filed | <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source A100 speed-up campaign: profile and optimize with the…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads…</a> |
+| 2026-09-17 | filed | <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> |
 
 </details>
 
@@ -3027,7 +3019,7 @@ Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens
 <details>
 <summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 13 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>Cluster strong lensing — Source &amp; Cluster arc</b> — ledger: `draft/feature/autolens/source_cluster_arc.md` — In progress — subphases 1a–1d shipped; remaining solver work transferred to cluster-pointsolver-speed, not solved. Next is phase…</summary>
+<details><summary>📋 <b>Cluster strong lensing — Source &amp; Cluster arc</b> — ledger: `draft/feature/autolens/source_cluster_arc.md` — In progress — 1a–1d and phase 3a audit shipped (profiling#364, workspace_test#341). Phase 3b field-preserving grid-cap fix…</summary>
 
 ```
 Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonical state lives in draft/feature/autolens/source_cluster_arc.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: Issue ONE bounded phase at a time; no bulk queue. Preserve original phase numbers and the approved 2026-10-01 ownership split. Phases 3–8 have no blanket PointSolver gate; solver-dependent workloads retain correctness gates. Cortex phase 11 remains dropped under R-20260907-05; any future science birth needs a fresh explicit decision.

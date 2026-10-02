@@ -1,3 +1,18 @@
+## critical-curves-dispatch-audit
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/337 (closed)
+- completed: 2026-10-02
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/364 (MERGED 97f24ebda8809048b324d5bce9d55fa1344ff872)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/341 (MERGED 121f9b92ee4853625168aa7554144a7defe13054)
+- summary: Phase 3a evidence and contract shipped. Research, raw CPU JSON/PNG, frozen measured source and cumulative wiki live in autolens_profiling/scripts/lens/critical_curves and linked results/wiki. Small analytic two-source-plane critical-curve/caustic regression is in workspace required smoke. No production API/default changed.
+- findings: Automatic seeds miss cluster components; explicit far-source path has 20.65 arcsec closing chord and 6.16 arcsec reference distance; caustic admission inherits parent failure. Outer-JIT list wrappers fail. Evaluation-grid cap distorts a 60 arcsec field to ~8333 arcsec. Selector-only patch is not safe.
+- evidence: Pinned 14-worker CPU matrix retains four 120-second timeouts as incomplete, including partial curves. A post-processing CPU-name validator repair preserves exact measured source and checks numerical AST identity plus library/config/runtime hashes. Raw observations are not speed-up claims on this loaded host.
+- validation: Profiling 1002 passed/5 skipped; upstream changed test 46 passed; local workspace smoke 33/33. Lint/wiki/result layout/generated docs and artifact negative controls pass. All exact-head Actions jobs passed: profiling lint and workspace changes + smoke 3.12/3.13.
+- heart: YELLOW manifest drift explicitly acknowledged by human; library-behind/branch RED reasons cleared before shipping. No release performed.
+- handoff: Approved single successor draft/bug/autogalaxy/evaluation_grid_cap_preserves_field.md, phase 3b. Separate masked-caustic draft remains independent; overall phase 3 remains open. Cortex phase 11 remains dropped.
+- worktree: Kept by explicit human request at /home/jammy/Code/PyAutoLabs/.worktrees/critical-curves-dispatch-audit (1.9 GB scratch/raw logs/worker evidence/cache, 2.1 MB output). Claim released; do not delete evidence as ordinary abandoned work.
+
+## Original prompt
+
 # Critical-curve dispatch: current cluster evidence and contract
 
 Type: research

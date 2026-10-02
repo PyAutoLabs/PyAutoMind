@@ -62,27 +62,6 @@
   - autolens_assistant: feature/colab-refinement-throughout
 - resume: Plan approved 2026-10-02. Sequential execution in shared worktree; one issue and PR per member. Merge remains human.
 
-## critical-curves-dispatch-audit
-- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/337
-- issued: 2026-10-02
-- prompt: active/critical_curves_dispatch_audit.md
-- epic: cluster-strong-lensing
-- session: Codex, 2026-10-02
-- status: awaiting-merge
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/critical-curves-dispatch-audit
-- repos:
-  - autolens_workspace_test: feature/critical-curves-dispatch-audit
-  - autolens_profiling: feature/critical-curves-dispatch-audit
-- coordination: Human authorized concurrent separate scope alongside point-source-search-nautilus-leaf / profiling#361 on 2026-10-02.
-- resume: Phase 3a research/JSON/PNG/wiki and independent CI example implemented, uncommitted in both feature worktrees. Profiling 1002 passed/5 skipped; lint/docs/artifact validation green. Refreshed Heart RED: PyAutoFit/PyAutoGalaxy/PyAutoLens each 1 commit behind origin, plus manifest YELLOW. Smoke retry passed first five then stopped at gate; remainder unrun. Resolve Heart, complete full smoke, ship two companion PRs for #337. Raw workers/logs/PR drafts in scratch. No successor issue, phase completion or merge authorization.
-
-- heart-ack: "manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml"
-- authorization: Human answered "Acknowledge YELLOW and proceed" on 2026-10-02; ship phase-3a PRs after smoke, merge under this turn's explicit /prm when all CI passes. No release authority.
-
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/341
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/364
-- validation: Full workspace smoke 33/33; profiling 1002 passed/5 skipped, updated upstream test 46 passed; lint/docs/artifact checks pass. Human /prm active; awaiting all CI legs. Earlier blocked checkpoint superseded.
-
 ## over-sample-snr-helper
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/602
 - issued: 2026-10-02
