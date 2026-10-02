@@ -332,7 +332,7 @@ Use the start-dev skill. active/pointsolver_extent_sanity_check.md
 
 </details>
 
-<details><summary>📋 <a href="active/profiling_organ_p0_name_row_and_boundaries.md">Profiling organ phase 0 — name the organ, register its row, write…</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/463">issue #463</a> — issued 2026-10-02 — library-dev</summary>
+<details><summary>📋 <a href="active/profiling_organ_p0_name_row_and_boundaries.md">Profiling organ phase 0 — name the organ, register its row, write…</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/463">issue #463</a> — issued 2026-10-02 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/465">PyAutoMind#465</a> — ⏳ pending release: PyAutoMind — ⏳ pending release: PyAutoBrain — ⏳ pending release: PyAutoHeart — ⏳ pending release: PyAutoHands — ⏳ pending release: pyautolabs.github.io — ⏳ pending release: PyAutoCortex — ⏳ pending release: PyAutoNerves — ⏳ pending release: PyAutoGut — ⏳ pending release: PyAutoEyes — ⏳ pending release: PyAutoScientist</summary>
 
 ```
 Use the start-dev skill. active/profiling_organ_p0_name_row_and_boundaries.md
@@ -379,6 +379,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoBrain**
 
+- [PyAutoBrain#447](https://github.com/PyAutoLabs/PyAutoBrain/pull/447) — `active/profiling_organ_p0_name_row_and_boundaries.md`
 - [PyAutoBrain#426](https://github.com/PyAutoLabs/PyAutoBrain/pull/426) — `complete/2026/09/autolens-visualization-rebirth.md`
 - [PyAutoBrain#404](https://github.com/PyAutoLabs/PyAutoBrain/pull/404) — `complete/2026/09/codex-context-efficiency.md`
 - [PyAutoBrain#387](https://github.com/PyAutoLabs/PyAutoBrain/pull/387) — `complete/2026/09/codex-token-efficiency.md`
@@ -396,10 +397,12 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoCortex**
 
+- [PyAutoCortex#54](https://github.com/PyAutoLabs/PyAutoCortex/pull/54) — `active/profiling_organ_p0_name_row_and_boundaries.md`
 - [PyAutoCortex#46](https://github.com/PyAutoLabs/PyAutoCortex/pull/46) — `complete/2026/09/eyes-organ-order.md`
 
 **PyAutoEyes**
 
+- [PyAutoEyes#12](https://github.com/PyAutoLabs/PyAutoEyes/pull/12) — `active/profiling_organ_p0_name_row_and_boundaries.md`
 - [PyAutoEyes#3](https://github.com/PyAutoLabs/PyAutoEyes/pull/3) — `complete/2026/09/eyes-board-conductor-registry.md`
 - [PyAutoEyes#5](https://github.com/PyAutoLabs/PyAutoEyes/pull/5) — `complete/2026/09/eyes-fit-cti-instances.md`
 - [PyAutoEyes#4](https://github.com/PyAutoLabs/PyAutoEyes/pull/4) — `complete/2026/09/eyes-galaxy-instance.md`
@@ -427,16 +430,19 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoGut**
 
+- [PyAutoGut#18](https://github.com/PyAutoLabs/PyAutoGut/pull/18) — `active/profiling_organ_p0_name_row_and_boundaries.md`
 - [PyAutoGut#13](https://github.com/PyAutoLabs/PyAutoGut/pull/13) — `complete/2026/09/eyes-organ-order.md`
 - [PyAutoGut#12](https://github.com/PyAutoLabs/PyAutoGut/pull/12) — `complete/2026/09/gut-void-sibling-reach.md`
 
 **PyAutoHands**
 
+- [PyAutoHands#294](https://github.com/PyAutoLabs/PyAutoHands/pull/294) — `active/profiling_organ_p0_name_row_and_boundaries.md`
 - [PyAutoHands#292](https://github.com/PyAutoLabs/PyAutoHands/pull/292) — `complete/2026/09/board-footer-family-fix.md`
 - [PyAutoHands#291](https://github.com/PyAutoLabs/PyAutoHands/pull/291) — `complete/2026/09/eyes-organ-order.md`
 
 **PyAutoHeart**
 
+- [PyAutoHeart#269](https://github.com/PyAutoLabs/PyAutoHeart/pull/269) — `active/profiling_organ_p0_name_row_and_boundaries.md`
 - [PyAutoHeart#240](https://github.com/PyAutoLabs/PyAutoHeart/pull/240) — `complete/2026/09/autolens-visualization-rebirth.md`
 - [PyAutoHeart#242](https://github.com/PyAutoLabs/PyAutoHeart/pull/242) — `complete/2026/09/board-footer-family-fix.md`
 - [PyAutoHeart#244](https://github.com/PyAutoLabs/PyAutoHeart/pull/244) — `complete/2026/09/eyes-fit-cti-instances.md`
@@ -467,6 +473,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoMind**
 
+- [PyAutoMind#465](https://github.com/PyAutoLabs/PyAutoMind/pull/465) — `active/profiling_organ_p0_name_row_and_boundaries.md`
 - [PyAutoMind#447](https://github.com/PyAutoLabs/PyAutoMind/pull/447) — `complete/2026/09/autolens-visualization-rebirth.md`
 - [PyAutoMind#425](https://github.com/PyAutoLabs/PyAutoMind/pull/425) — `complete/2026/09/codex-context-efficiency.md`
 - [PyAutoMind#427](https://github.com/PyAutoLabs/PyAutoMind/pull/427) — `complete/2026/09/community-surface-policy.md`
@@ -477,6 +484,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoNerves**
 
+- [PyAutoNerves#181](https://github.com/PyAutoLabs/PyAutoNerves/pull/181) — `active/profiling_organ_p0_name_row_and_boundaries.md`
 - [PyAutoNerves#177](https://github.com/PyAutoLabs/PyAutoNerves/pull/177) — `complete/2026/09/eyes-organ-order.md`
 - [PyAutoNerves#175](https://github.com/PyAutoLabs/PyAutoNerves/pull/175) — `complete/2026/09/nerves-unused-keys.md`
 - [PyAutoNerves#176](https://github.com/PyAutoLabs/PyAutoNerves/pull/176) — `complete/2026/09/workspace-config-cleanup.md`
@@ -487,6 +495,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoScientist**
 
+- [PyAutoScientist#39](https://github.com/PyAutoLabs/PyAutoScientist/pull/39) — `active/profiling_organ_p0_name_row_and_boundaries.md`
 - [PyAutoScientist#35](https://github.com/PyAutoLabs/PyAutoScientist/pull/35) — `complete/2026/09/eyes-organ-order.md`
 
 **autocti_visualization**
@@ -530,6 +539,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **pyautolabs.github.io**
 
+- [pyautolabs.github.io#23](https://github.com/PyAutoLabs/pyautolabs.github.io/pull/23) — `active/profiling_organ_p0_name_row_and_boundaries.md`
 - [pyautolabs.github.io#9](https://github.com/PyAutoLabs/pyautolabs.github.io/pull/9) — `complete/2026/09/community-surface-website.md`
 
 ## Human review

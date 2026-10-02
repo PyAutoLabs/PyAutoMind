@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 12 in flight",
-  "updated": "2026-10-02T10:43:43Z",
+  "updated": "2026-10-02T10:47:12Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -36,6 +36,12 @@
       "text": "Add `over_sample_size_via_snr_from` so a signal-to-noise map can steer over-sampling without a second\u2026 \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/606",
       "prompt": "Use the start-dev skill. active/over_sample_size_via_snr_from.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Profiling organ phase 0 \u2014 name the organ, register its row, write\u2026 \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/pull/465",
+      "prompt": "Use the start-dev skill. active/profiling_organ_p0_name_row_and_boundaries.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#591 \u2014 sparse-data-none-guard",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/591",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#586 \u2014 sparse-operator-oversampling-cache",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/586",
       "prompt": null
     }
   ]
