@@ -31,8 +31,11 @@
 - epic: profiling-organ-birth
 - session: Claude Code remote (web), https://claude.ai/code/session_01B5uEFSAb34aK5R6PTX7jJm, 2026-10-02
 - location: remote-clone (/home/user/autolens_profiling in the session container; no task worktree)
-- status: workspace-dev
-- autonomy: supervised (header); human said "start_dev phase 1" 2026-10-02; plan on the issue
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/360
+- head: b93db79
+- autonomy: supervised (header); human said "start_dev phase 1" 2026-10-02; plan on the issue; ended at PR-open, merge human (/prm)
+- heart: GREY at the door and at ship (Pages host blocked in the remote container); no verdict consulted
 - repos:
   - autolens_profiling: feature/profiling-summary-v1
 - summary: PyAutoPulse phase 1 — `build_dashboard.py` gains `dashboard/summary.json`, the `profiling-summary` v1 project→organ read contract (envelope, records, producer drift comparisons, coverage, limitations), self-validated, published beside series.json; series/state/index byte-identical.
