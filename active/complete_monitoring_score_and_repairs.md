@@ -1,5 +1,7 @@
 # Complete Heart monitoring score and repair coverage
 
+Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/267
+Issued: 2026-10-02
 Type: bug
 Priority: high
 Difficulty: medium
@@ -22,7 +24,7 @@ Published board timestamp 2026-10-01T20:28:06.722401+00:00: release verdict gree
 
 Current score is readiness.compute's weighted release penalties. dashboard.build_fix_plan already includes section summaries and full evidence references, but the health conductor's documented completion condition is release GREEN. Grey local rows use a generic tick/publish action; establish per-family refresh requirements rather than assuming this gathers every deep check.
 
-## Implementation plan awaiting approval
+## Implementation plan approved 2026-10-02
 
 1. Heart: audit all registered checks and all dashboard projections; build a complete structured findings/coverage inventory with stable identity, status, applicability, freshness, source and remedy. Include nested performance rows, skipped scripts, omitted observations and expected-but-missing checks.
 2. Heart: calculate transparent monitoring penalties from that inventory; 100 iff all applicable checks are fresh green. Keep readiness.compute's release gate and its score available under explicit release labels; update HTML, JSON, terminal, Markdown, badge and state consumers consistently, preserving compatible fields where necessary.
