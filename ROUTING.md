@@ -49,7 +49,7 @@ The second folder names the affected repo or domain, e.g. `autoarray`, `autofit`
 `autolens_inference`, `autolens_visualization`, `autogalaxy_visualization`,
 `autofit_visualization`, `autocti_visualization`,
 `autolens_workspace_developer`, `autohands`,
-`pyautobrain`, `pyautoeyes`; the workspace bucket `workspaces`; or a topic series kept
+`pyautobrain`, `pyautoeyes`, `pyautopulse`; the workspace bucket `workspaces`; or a topic series kept
 together as a unit (`jax_substructure`, `weak`, `cluster`, `priors`).
 
 Within the libraries, work classifies as **library** vs **workspace** for the
