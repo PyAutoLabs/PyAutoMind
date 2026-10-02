@@ -11,12 +11,14 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: formalised
+Status: active
 Consequence: judge
 Review-minutes: 20
 Unattended: ready
 Epic: point-source-cpu-speed
 Filed: 2026-09-26
+Issued: 2026-10-02
+Issue: https://github.com/PyAutoLabs/PyAutoLens/issues/763
 Parent: complete/2026/09/point-source-cpu-p4.md (issue autolens_profiling#314)
 
 ## Human decision (2026-09-26, live)
@@ -102,7 +104,7 @@ Changing any solver default (extent, scale, `MAX_CONTAINING_SIZE`); cluster solv
 `cluster-pointsolver-speed`, though the check should behave sensibly there: warn on edge, and the
 oversize hint is probably never triggered).
 
-## Resume preparation — 2026-10-02 (plan awaiting approval)
+## Approved implementation — 2026-10-02
 
 The preceding issued epic member is complete: `complete/2026/10/point-source-search-nautilus-leaf.md`, inference#17 and profiling#361 merged. Broad timing-noise audit is a separate issue, profiling#362.
 
@@ -114,3 +116,7 @@ The preceding issued epic member is complete: `complete/2026/10/point-source-sea
 
 ### Survey and guard
 Canonical `PyAutoLens` and `autolens_workspace_test` are both clean on main. Proposed branch: `feature/pointsolver-extent-sanity-check`. PyAutoLens is unclaimed. `autolens_workspace_test` is claimed by critical-curves-dispatch-audit, mesh-interpolator-numerics-audit, fit-util-masked-division and mesh-geometry-transformed-areas. start_workspace conflict guard refuses until the human permits coordinated disjoint work or the claims clear. No issue/worktree/source edits started for this phase.
+
+## Approval and coordination
+
+Human: "I approve, continue" (2026-10-02), approving the implementation and coordinated disjoint workspace-test edits. Workspace work is restricted to a new point-source extent regression and its smoke registration/config; preserve other tasks' scripts and registrations. PyAutoLens tests use the existing `test_analysis_point.py` naming (the draft `test_analysis.py` path does not exist).

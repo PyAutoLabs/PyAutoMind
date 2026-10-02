@@ -145,3 +145,17 @@
   - PyAutoGut: feature/pyautopulse-organ-row
   - PyAutoScientist: feature/pyautopulse-organ-row
 - resume: Phase 0 of profiling-organ-birth. Human decisions 2026-10-02: PyAutoPulse, organ key `pulse`, organ row AFTER Hands before Nerves, `boards:` entry deferred to phase 2, plan approved. Repo PyAutoLabs/PyAutoPulse created (public, empty). Next: /start_library then implement per issue #463; PRs Mind → Brain → Heart → Hands → hub (+ map-block PRs Cortex/Nerves/Gut/Scientist); merge human via /prm.
+
+## pointsolver-extent-sanity-check
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/763
+- issued: 2026-10-02
+- prompt: active/pointsolver_extent_sanity_check.md
+- epic: point-source-cpu-speed
+- session: Codex; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/pointsolver-extent-sanity-check
+- repos:
+  - PyAutoLens: feature/pointsolver-extent-sanity-check
+  - autolens_workspace_test: feature/pointsolver-extent-sanity-check
+- coordination: Human approved the plan and concurrent disjoint workspace-test changes on 2026-10-02. Workspace scope is new scripts/point_source/jax_likelihood/solver_extent.py and its smoke list/profile entry; preserve all other tasks' edits.
+- resume: Implement approved construction-time NumPy edge warning (margin 2*scale+3*sigma), oversize INFO hint, unit tests and standalone JAX regression. No solver defaults/likelihood changes; library first.
