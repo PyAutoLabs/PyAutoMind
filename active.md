@@ -23,3 +23,51 @@
 - repos:
   - autolens_inference: feature/point-source-search-nautilus-leaf
 - resume: "Branch pushed (2307eea), NO PR yet. Probe RAL job 366937 COMPLETED (seed 0: wall_s 56.6 s, 4,850 evals, per_call 4.72 us batched, likelihood_share 0.041% [single-basis 1.8%], all truth |dsigma|<0.74; row committed). Seeds 1-4 = RAL array 367140 (%1, euclid-ral-gpu-2). Next: sacct -j 367140; scp euclid_jump:/mnt/ral/jnightin/autolens_inference-wt-psleaf/results/searches/point_source/nautilus/simple/source_plane_solved/hpc_a100_jax_cpu_dense_fp64/search_seed{1..4}.{json,png} into the same path in the local worktree (+ hpc/batch_cpu/{output,error}/*367140* logs by hand); check each seed recovers truth; build_readme.py; wiki admission-bar entry (wiki/project/state.md); scripts/point_source/searches/README.md leaf note; ruff/pytest/check_submits; /ship_workspace to PR (Heart YELLOW ack: PyAutoMemory open PR 7d old; other YELLOW -> DRAFT); then remove RAL worktree: cd /mnt/ral/jnightin/autolens_inference && git worktree remove /mnt/ral/jnightin/autolens_inference-wt-psleaf"
+
+## benchmark-forward-model-consistency
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/142
+- issued: 2026-10-02
+- prompt: active/benchmark_forward_model_consistency.md
+- session: Codex; session ID unavailable
+- status: workspace-dev
+- bundle: assistant
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/assistant
+- repos:
+  - autolens_assistant: feature/benchmark-forward-model-consistency
+- resume: Plan approved 2026-10-02. Sequential execution in shared worktree; one issue and PR per member. Merge remains human.
+
+## benchmark-positions-inference
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/143
+- issued: 2026-10-02
+- prompt: active/benchmark_positions_initialised_inference.md
+- session: Codex; session ID unavailable
+- status: workspace-dev
+- bundle: assistant
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/assistant
+- repos:
+  - autolens_assistant: feature/benchmark-positions-inference
+- resume: Plan approved 2026-10-02. Sequential execution in shared worktree; one issue and PR per member. Merge remains human.
+
+## bootstrap-smoke-codex
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/144
+- issued: 2026-10-02
+- prompt: active/bootstrap_smoke_codex_and_bench_pr.md
+- session: Codex; session ID unavailable
+- status: workspace-dev
+- bundle: assistant
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/assistant
+- repos:
+  - autolens_assistant: feature/bootstrap-smoke-codex
+- resume: Plan approved 2026-10-02. Sequential execution in shared worktree; one issue and PR per member. Merge remains human.
+
+## colab-refinement-throughout
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/145
+- issued: 2026-10-02
+- prompt: active/colab_refinement_throughout.md
+- session: Codex; session ID unavailable
+- status: workspace-dev
+- bundle: assistant
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/assistant
+- repos:
+  - autolens_assistant: feature/colab-refinement-throughout
+- resume: Plan approved 2026-10-02. Sequential execution in shared worktree; one issue and PR per member. Merge remains human.

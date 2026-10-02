@@ -16,6 +16,7 @@ Consequence: judge
 Review-minutes: 10
 Unattended: needs-input
 Follows: complete/2026/09/self-bootstrapping-greeting.md (autolens_assistant#138 / #139, merged 2026-09-26)
+Issued: 2026-10-02
 Filed: 2026-09-26
 
 ## Why
