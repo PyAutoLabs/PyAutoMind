@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 11 in flight",
-  "updated": "2026-10-02T11:13:33Z",
+  "updated": "2026-10-02T11:15:35Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "Benchmark card: forward-model consistency across imaging, point_source and interferometer \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autolens_assistant/pull/146",
       "prompt": "Use the start-dev skill. active/benchmark_forward_model_consistency.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Preserve the LensCalc evaluation field when the grid cap activates \u2014 library-shipped, workspace-dev",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/646",
+      "prompt": "Use the start-dev skill. active/evaluation_grid_cap_preserves_field.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#595 \u2014 raw-pdip-forward-polish",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/595",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#591 \u2014 sparse-data-none-guard",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/591",
       "prompt": null
     }
   ]

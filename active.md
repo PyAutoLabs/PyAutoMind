@@ -186,7 +186,7 @@
 - prompt: active/evaluation_grid_cap_preserves_field.md
 - epic: cluster-strong-lensing
 - session: Codex; session ID unavailable
-- status: library-dev
+- status: library-shipped, workspace-dev
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/evaluation-grid-cap-field
 - repos:
   - PyAutoGalaxy: feature/evaluation-grid-cap-field
@@ -200,3 +200,7 @@
   - "manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml"
 - authorization: Human answered "Acknowledge both and ship" for phase 3b on 2026-10-02. No release authority; no additional phase queued.
 - validation: Before fix six geometry failures/two compatibility passes; after fix 49 focused and 1315 full Galaxy tests pass. Real-decorator probe yields 1000x1000 at 0.06 arcsec with pixel-centre bounds ±29.97. Companion CI example passes standalone; full workspace smoke in progress.
+
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/646
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/646
+- library-commit: f19a3377; 1315 full and 49 focused tests pass. Linked CI witness and profiling ledger/wiki prepared; full workspace smoke in progress.
