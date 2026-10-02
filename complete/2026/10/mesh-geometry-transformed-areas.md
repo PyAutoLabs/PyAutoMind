@@ -1,3 +1,26 @@
+# mesh-geometry-transformed-areas
+
+Issue: https://github.com/PyAutoLabs/PyAutoArray/issues/605
+Date: 2026-10-02
+
+## Shipped
+Derived transformed cell areas from geometry edges, preserving guard cells and supporting adapt-image slim weights. Full1919passed, focused34passed, smoke2passed; conflict-resolution smoke passed5.3s.
+
+- https://github.com/PyAutoLabs/PyAutoArray/pull/608
+- https://github.com/PyAutoLabs/autolens_workspace_test/pull/339
+
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/608
+
+Human authorized linked PRs, development shipping with exact Heart YELLOW acknowledgment, then merge and full close-out. Every head run and matrix leg was checked; merge receipts are recorded by GitHub. No release performed. Shared bundle worktree cleanup follows all four members; logs and data preserved under organs/PyAutoMind/tmp/autoarray-bundle-1-closeout/.
+
+For workspace conflict updates, the human explicitly acknowledged generated organism-map and public front-door table drift (one mismatch each); stale release rehearsal evidence remained disclosed. Only smoke manifest entries were reconciled; scripts unchanged.
+
+Final workspace head c7ac7f3747717d67c06eefb528317c4a1130624d passed every job in run37003384830, including Python3.12/3.13. Workspace merge87fd033242e4f33cfa435965d627717b86803675. Both conflicts resolved by preserving the union of smoke registrations; scripts unchanged.
+
+Backlog reconciliation retained four resemblance-only suspects; no sibling was proven complete. Recheck `/intake reconcile draft/bug/autoarray` (non_uniform_over_sample_jax_compile_cost, rectangular_mapper_bilinear_row_weights, sparse_terms_nufft_origin_and_mask_compatibility) and `/intake reconcile draft/feature/autoarray` (source_clumps_robust_scale).
+
+## Original prompt
+
 # MeshGeometryRectangular.areas_transformed raises IndexError for adapt-image meshes
 
 Type: bug
