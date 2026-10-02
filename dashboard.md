@@ -46,13 +46,13 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 263 |
+| [Backlog](#backlog) (`draft/`) | 264 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 23
+**Highest priority** (filed as `high`) — showing 12 of 24
 
 <details><summary>📋 <a href="draft/bug/autolens/point_image_pair_all_forward_grad_nan.md">Forward-mode gradient is NaN for FitPositionsImagePairAll(Solved) — released default gradient_mode="forward"</a> — autolens · small · supervised · high</summary>
 
@@ -134,18 +134,18 @@ Use the start-dev skill. draft/maintenance/organs/reduce_session_token_load.md
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md">Local smoke env creation fails: smoke_install.sh flat pip chain vs the grouped…</a> — pyautoheart · medium · supervised · high</summary>
+<details><summary>📋 <a href="draft/bug/pyautoheart/complete_monitoring_score_and_repairs.md">Complete Heart monitoring score and repair coverage</a> — pyautoheart · medium · high</summary>
 
 ```
-Use the start-dev skill. draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md
+Use the start-dev skill. draft/bug/pyautoheart/complete_monitoring_score_and_repairs.md
 ```
 
 </details>
 
-<details><summary>📋 <a href="draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md">Physical model check when speeding up smoke tests</a> — workspaces · medium · supervised · high</summary>
+<details><summary>📋 <a href="draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md">Local smoke env creation fails: smoke_install.sh flat pip chain vs the grouped…</a> — pyautoheart · medium · supervised · high</summary>
 
 ```
-Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md
+Use the start-dev skill. draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md
 ```
 
 </details>
@@ -580,10 +580,10 @@ Use the route skill. start the planned PyAutoMind task latent-nan-guard-honest-r
 
 ## Backlog
 
-**263** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **56** of them belong to an epic and are listed only under [Epics](#epics) below.
+**264** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **56** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 78</summary>
+<summary><b>bug</b> — 79</summary>
 
 <details><summary>📋 <a href="draft/bug/autolens/point_image_pair_all_forward_grad_nan.md">Forward-mode gradient is NaN for FitPositionsImagePairAll(Solved) — released default gradient_mode="forward"</a> — autolens · small · supervised · high</summary>
 
@@ -637,6 +637,14 @@ Use the start-dev skill. draft/bug/autoarray/rectangular_mapper_bilinear_row_wei
 
 ```
 Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautoheart/complete_monitoring_score_and_repairs.md">Complete Heart monitoring score and repair coverage</a> — pyautoheart · medium · high</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautoheart/complete_monitoring_score_and_repairs.md
 ```
 
 </details>
@@ -2496,10 +2504,10 @@ Contract (the `start-bundle` skill is the full body):
 You are the judgment tier for the PyAutoMind bundle 'pyautoheart — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
 
 Members:
+- draft/bug/pyautoheart/complete_monitoring_score_and_repairs.md
 - draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md
 - draft/bug/pyautoheart/heart_smoke_runner_deletes_the_tracked_output.md
 - draft/bug/pyautoheart/manifest_drift_parser_drops_suffixed_check_legs.md
-- draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md
 
 Contract (the `start-bundle` skill is the full body):
 1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
@@ -2514,10 +2522,10 @@ Contract (the `start-bundle` skill is the full body):
 
 | Prompt | Difficulty | Priority | Status |
 |--------|------------|----------|--------|
+| <a href="draft/bug/pyautoheart/complete_monitoring_score_and_repairs.md">Complete Heart monitoring score and repair coverage</a> | medium | high | - |
 | <a href="draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md">Local smoke env creation fails: smoke_install.sh flat pip chain vs…</a> | medium | high | formalised |
 | <a href="draft/bug/pyautoheart/heart_smoke_runner_deletes_the_tracked_output.md">Heart smoke runner deletes the tracked output/.gitignore when wiping…</a> | small | medium | formalised |
 | <a href="draft/bug/pyautoheart/manifest_drift_parser_drops_suffixed_check_legs.md">Heart's manifest_drift parser silently drops any check leg with a…</a> | small | normal | formalised |
-| <a href="draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md">release-integrate: analyze-side foreign-path filter and a…</a> | medium | low | formalised |
 
 </details>
 
@@ -3228,7 +3236,7 @@ Use the start-dev skill. draft/research/autolens_profiling/interferometer_stream
 
 </details>
 
-72 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+73 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3268,12 +3276,12 @@ Use the start-dev skill. draft/research/autolens_profiling/interferometer_stream
 - `draft/bug/priors/13_collapse_prior_and_message.md`
 - `draft/bug/priors/14_replace_transform_stack_with_bijectors.md`
 - `draft/bug/priors/z_features.md`
+- `draft/bug/pyautoheart/complete_monitoring_score_and_repairs.md`
 - `draft/refactor/autogalaxy/critical_curves_dispatch_cluster.md`
 - `draft/refactor/workspaces/abell_1201_local_cleanup.md`
 - `draft/docs/autolens/split_lensing_regimes.md`
 - `draft/docs/autolens_inference/reconcile_cortex_ledger_references.md`
-- `draft/docs/howtolens/cluster_pixelized_source.md`
-- _… and 32 more_
+- _… and 33 more_
 
 </details>
 
