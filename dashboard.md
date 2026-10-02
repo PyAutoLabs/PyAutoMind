@@ -300,7 +300,7 @@ Use the start-dev skill. active/final_numerics_audit_of_every_mesh_interpolator.
 
 </details>
 
-<details><summary>📋 <a href="active/fit_util_masked_division_grad_nan.md">fit_util: masked divisions NaN the gradient on the JAX path</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/604">issue #604</a> — issued 2026-10-02 — awaiting-input — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/607">PyAutoArray#607</a> — ⏳ pending release: PyAutoArray</summary>
+<details><summary>📋 <a href="active/fit_util_masked_division_grad_nan.md">fit_util: masked divisions NaN the gradient on the JAX path</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/604">issue #604</a> — issued 2026-10-02 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/607">PyAutoArray#607</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/340">autolens_workspace_test#340</a> — ⏳ pending release: PyAutoArray — ⏸ waiting on PyAutoArray's release</summary>
 
 ```
 Use the start-dev skill. active/fit_util_masked_division_grad_nan.md
@@ -374,6 +374,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoArray#597](https://github.com/PyAutoLabs/PyAutoArray/pull/597) — `complete/2026/09/streaming-p3-visualizer.md`
 - [PyAutoArray#599](https://github.com/PyAutoLabs/PyAutoArray/pull/599) — `complete/2026/10/streaming-p4-light-profile-identity.md`
 - [PyAutoArray#601](https://github.com/PyAutoLabs/PyAutoArray/pull/601) — `complete/2026/10/streaming-p5-cubes-phase-centre.md`
+- ⏸ waiting: [fit_util: masked divisions NaN the gradient on the JAX path](active/fit_util_masked_division_grad_nan.md)
 - ⏸ waiting: [MeshGeometryRectangular.areas_transformed raises IndexError for adapt-image meshes](active/mesh_geometry_areas_transformed_adapt_image_indexerror.md)
 
 **PyAutoBrain**

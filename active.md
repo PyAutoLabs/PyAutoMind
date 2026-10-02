@@ -121,7 +121,7 @@
 - issued: 2026-10-02
 - prompt: active/fit_util_masked_division_grad_nan.md
 - session: Codex GPT-6; session ID unavailable
-- status: awaiting-input
+- status: library-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/autoarray-bundle-1
 - repos:
   - PyAutoArray: feature/fit-util-masked-division
@@ -131,14 +131,14 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/607
 - pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/607
 - validation: Full Array serial 1924 passed, exit 0; focused 33 passed; 3 targeted smoke checks passed (imaging unchanged retry after timeout). Logs scratch/masked-division.
-- checkpoint: Awaiting explicit Heart YELLOW acknowledgement (workspace-manifest drift, 1 mismatch); stale release rehearsal. RED doc-only main-checkout lag fixed; PR 607 was prematurely opened then made draft, commit e5e05217.
-- workspace-stash: autolens_workspace_test 9b85ea65282820b33e73f5d4e360422fda43a3da holds validated companion changes on feature/fit-util-masked-division; restore by exact hash after current member finishes. Never pop an unrelated stash.
-- next: After acknowledgement and geometry delegate completion, restore this branch and stash, open linked workspace PR, mark library PR ready, update state. Shared worktree temporarily on geometry member; no merge authorized.
 
 - heart-ack:
   - "manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml"
 - heart-stale: "release validation incomplete: no rehearsal for current source"
 - authorization: Human acknowledged exact Heart YELLOW reason and authorized development PR shipping for this bundle; no release or merge, 2026-10-02.
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/340
+- release-gate: PyAutoArray
+- resume-shipping: Library e5e05217 / workspace95d696e, both ready PRs. Provenance-correct repeat fit-util/imaging smoke2pass exit0; earlier interferometer smoke passed. Full suite1924passed exit0 verified against bundle. Remaining human library-first merge/release. Scratch stash9b85ea65282820b33e73f5d4e360422fda43a3da retained recoverably; contents now committed. Shared worktree advanced to audit.
 
 ## mesh-geometry-transformed-areas
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/605
