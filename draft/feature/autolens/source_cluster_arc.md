@@ -592,3 +592,15 @@ Scratch holds raw workers/logs/PR drafts; profiling results hold frozen measured
 source, JSON/PNG and the cumulative research ledger/wiki. No job remains running.
 Resume: resolve Heart via the normal workflow, complete full workspace smoke,
 then ship both companion PRs for #337. No successor issue or phase completion.
+
+
+## Resume authorized — 2026-10-02
+
+Human requested "prm and continue", authorizing the two phase-3a PR merges when
+all CI passes. No PR yet; resume ship-workspace first. Library-behind RED reasons
+have cleared. Human explicitly acknowledged the remaining Heart YELLOW reason:
+`manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml`
+(the separately active PyAutoPulse registration). Full smoke is running again;
+profiling fast-forwarded unrelated merged PR #361 and its changed test passed
+46 cases. No measurement evidence was altered. Next cap-fix plan is prepared in
+task scratch, unissued pending predecessor shipping/review.
