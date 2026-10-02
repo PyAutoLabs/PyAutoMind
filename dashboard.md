@@ -260,7 +260,7 @@ Use the start-dev skill. active/benchmark_forward_model_consistency.md
 
 </details>
 
-<details><summary>📋 <a href="active/benchmark_positions_initialised_inference.md">Benchmark card: positions-initialised imaging inference of a simulated lens</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/143">issue #143</a> — issued 2026-10-02 — workspace-dev</summary>
+<details><summary>📋 <a href="active/benchmark_positions_initialised_inference.md">Benchmark card: positions-initialised imaging inference of a simulated lens</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/143">issue #143</a> — issued 2026-10-02 — awaiting-input</summary>
 
 ```
 Use the start-dev skill. active/benchmark_positions_initialised_inference.md

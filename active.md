@@ -31,12 +31,14 @@
 - issued: 2026-10-02
 - prompt: active/benchmark_positions_initialised_inference.md
 - session: Codex; session ID unavailable
-- status: workspace-dev
+- status: awaiting-input
 - bundle: assistant
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/assistant
 - repos:
   - autolens_assistant: feature/benchmark-positions-inference
-- resume: Plan approved 2026-10-02. Sequential execution in shared worktree; one issue and PR per member. Merge remains human.
+- commit: a22696b
+- validation: 42 final targeted passed / 0 failed; freeze-check passed; 3/3 recorded scores reproduce after cleanup. Genuine reference ESS6120.8, 58,200 calls. Calibration 0/0/0 (two no-result timeouts, one scientific success exceeding compute budget).
+- resume: Implementation and evidence committed, clean tracked tree. PR body ready at .worktrees/assistant/scratch/positions-pr.md. Await live acknowledgment of Heart YELLOW generated organism-map drift, generated public-front-door drift, and missing release rehearsal; then push feature/benchmark-positions-inference and open its PR. No merge authorization. User considering quicker wrap leaving bootstrap/Colab queued.
 
 ## bootstrap-smoke-codex
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/144
