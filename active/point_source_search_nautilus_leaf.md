@@ -48,3 +48,43 @@ same runner.
 ## User request (verbatim, 2026-09-28)
 
 "Prm and continue" → chose "Point-source search leaf (Recommended)" → "Approve as planned".
+
+## Approved CI repair, 2026-10-02
+
+Human approved the focused Student-t uncertainty fix and audit filing. This repairs the ledger companion PR #361 on the existing task branch; it is not a new campaign phase.
+
+# Fix uncertainty handling in the ABBA instrumentation overhead test
+
+Type: bug
+Target: workspaces
+Repos:
+- autolens_profiling
+Difficulty: small
+Autonomy: supervised
+Priority: high
+Status: formalised
+Consequence: judge
+Review-minutes: 20
+Unattended: ready
+
+# Fix uncertainty handling in the ABBA instrumentation overhead test
+
+Type: bug
+Target: autolens_profiling
+Repos:
+- autolens_profiling
+Difficulty: small
+Autonomy: supervised
+Priority: high
+Consequence: judge
+
+## Goal
+Unblock the existing point-source phase's ledger PR #361 by correcting its unrelated timing test's noise decision. Keep the 1.031 practical overhead threshold, correctness/coverage assertions and an unconditional 1.5 gross-regression guard. Use the one-sided 95% Student-t lower confidence bound on the three ABBA ratios to fail only a resolved exceedance; report overlapping measurements as inconclusive. Add deterministic cases for pass, failure, overlap and gross regression. Limit this patch to the test module; broader production/test gate audit is filed separately.
+
+## Evidence
+Failed ratios: [1.0218478812434695, 1.0243047139025747, 1.0470684004725312], mean 1.0310736652061918. Coverage 99.95%; likelihood equality passed. The existing block-range guard does not resolve whether the mean exceeds 1.031. Five local repeats showed large scatter. Do not increase the budget or rerun until green.
+
+## Original user request
+fix the noise cutoff, intake na issue to fix this long term (e.g. check all trests but also make sure the whole mechanism accounts ofr noise) and then prm and continue this task
+
+<!-- formalised by the Intake (Conception) Agent on 2026-10-02 from file:tmp/noise-cutoff.md -->
