@@ -1,3 +1,26 @@
+# benchmark-positions-inference — positions-initialised imaging inference benchmark card
+
+- Issue: https://github.com/PyAutoLabs/autolens_assistant/issues/143 (closed, completed)
+- Completed: 2026-10-02
+- PRs:
+  - https://github.com/PyAutoLabs/autolens_assistant/pull/147 — MERGED (bc60aea)
+  - https://github.com/PyAutoLabs/PyAutoBrain/pull/448 — MERGED (0aea96a)
+
+## What shipped
+
+- **autolens_assistant#147**: the `positions_initialised_inference` one-shot benchmark card (point_source positions, then imaging), its frozen dataset and truth, harness wiring, the card's tests, and three scored runs from one model×harness with the RESULTS.md row (median and range). Before merge the branch merged `main` after #146 to bring it current.
+- **PyAutoBrain#448**: the clone-boundary fix. `benchmarks/datasets/*` is now classified **domain** in Brain's `_SHARED_DOMAIN`, and the assistant's `modes/maintainer.md` carries the same classification. This clears the clone-boundary failure on the five `benchmarks/datasets/positions_initialised_inference` files (run 37000939518).
+
+## Results
+
+All three official scores are **zero**: two runs timed out without a result, and one reached a correct scientific answer but went over the compute budget. That is the honest baseline. The genuine reference run reached ESS 6120.8 in 58,200 calls. Validation was 42 targeted tests passing with 0 failures, the freeze check passed, and all 3 recorded scores reproduced after cleanup.
+
+## Follow-ups
+
+- The bootstrap (#144) and Colab (#145) follow-ups stay queued as their own tasks. This close does not touch them.
+
+## Original prompt
+
 # Benchmark card: positions-initialised imaging inference of a simulated lens
 
 Type: feature

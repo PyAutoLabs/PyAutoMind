@@ -11,26 +11,6 @@
 - summary: Add an explicit vis_lp-only inspection mode that combines the main normal-model output tree with the 100-lens SED/Sersic tree, without requiring vis_pix or selecting the other 200 main-tree lenses.
 - resume: Implemented + committed locally as c6b514d on feature/vis-lp-inspection-bundle (133 tests green, not pushed). Human reviews diff (scratchpad part1_diff.txt) before ship_workspace; then sync tooling to the euclid_dr1 science clone/RAL and submit the 4,922-tile vis_lp-only bundle (OUTPUT_DIR=dr1_full, INITIAL_SEARCH_NAME=vis_lp, DATASET_NAMES_PATH=all, TAR_TO set) as a Cortex run.
 
-## benchmark-positions-inference
-- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/143
-- issued: 2026-10-02
-- prompt: active/benchmark_positions_initialised_inference.md
-- session: Codex; session ID unavailable
-- status: awaiting-merge
-- bundle: assistant
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/assistant
-- repos:
-  - autolens_assistant: feature/benchmark-positions-inference
-- commit: a22696b
-- validation: 42 final targeted passed / 0 failed; freeze-check passed; 3/3 recorded scores reproduce after cleanup. Genuine reference ESS6120.8, 58,200 calls. Calibration 0/0/0 (two no-result timeouts, one scientific success exceeding compute budget).
-- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/147
-- heart-ack:
-  - manifest drift: organism-map blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml
-  - manifest drift: public front-door organ tables (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml
-  - release validation incomplete: no rehearsal for current source
-- ci: wiki-currency PASS; clone-boundary FAIL on five benchmarks/datasets/positions_initialised_inference files (run 37000939518).
-- resume: PR 147 open; DO NOT MERGE until clone-boundary resolved. Brain REFERENCE_PROFILES lacks benchmarks/datasets domain classification; needs matching assistant modes/maintainer.md + Brain classification or reviewed layout resolution preserving frozen-card evidence. Cross-repo follow-up not undertaken because human requested wrapping at PR-open. Heart YELLOW reasons explicitly acknowledged in-session 2026-10-02 for this development PR only. Human requested ending bundle here and queued bootstrap/Colab in parked.md. All owned compute stopped. Logs in .worktrees/assistant/scratch/positions-*.log. No merge authorization.
-
 ## evaluation-grid-cap-field
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/645
 - issued: 2026-10-02
