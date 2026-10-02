@@ -74,7 +74,7 @@
   - autolens_workspace_test: feature/critical-curves-dispatch-audit
   - autolens_profiling: feature/critical-curves-dispatch-audit
 - coordination: Human authorized concurrent separate scope alongside point-source-search-nautilus-leaf / profiling#361 on 2026-10-02.
-- resume: Plan approved with “go”; standalone CPU research, phase 3a. Implement bounded current-dispatch and geometry/timing audit, validate, ship_workspace. Concurrent unissued cluster_curves_engine_dispatch draft remains a candidate pending these results. No later issue queue.
+- resume: Phase 3a research and workspace CI example implemented; pinned JSON/PNG + wiki validate. Profiling 1002 passed/5 skipped and lint/docs checks green. Full Heart workspace smoke retry in progress after existing scripts timed out; no PR until gate passes. Evidence and logs under task scratch; candidate next step is field-preserving grid-cap fix, not issued. No phase completion or merge authorized.
 
 ## over-sample-snr-helper
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/602
