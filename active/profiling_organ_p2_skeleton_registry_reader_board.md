@@ -10,12 +10,13 @@ Themes:
 Difficulty: large
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
 Consequence: judge
 Witness: `bin/pyauto-pulse check` prints `check: OK` against the lens registry row (summary resolves at one commit, validates, receipt written); hermetic pytest green over the acceptance cases; `bin/pyauto-pulse board` writes `dashboard.md/.html` + `state.json` (validated by `PyAutoBrain/board/_state.py`) with one `autolens_profiling` row linking to its Pages page; lint/pages/refresh workflows green
 Review-minutes: 20
 Unattended: ready
 Filed: 2026-10-02
+Issued: 2026-10-02
 Epic: profiling-organ-birth
 Phase: 2
 

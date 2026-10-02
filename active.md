@@ -220,3 +220,16 @@
 - coordination: Human approved concurrent isolated Heart work alongside pyautopulse-organ-row; that PR merged before worktree creation.
 - repos:
   - PyAutoHeart: feature/heart-publication-coverage
+
+## pyautopulse-organ-skeleton
+- issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/1
+- issued: 2026-10-02
+- prompt: active/profiling_organ_p2_skeleton_registry_reader_board.md
+- epic: profiling-organ-birth
+- session: Claude Code CLI (Fable 5.1); session ID unavailable
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/pyautopulse-organ-skeleton
+- repos:
+  - PyAutoPulse: feature/pyautopulse-organ-skeleton
+  - PyAutoBrain: feature/pyautopulse-organ-skeleton
+- resume: Phase 2 of profiling-organ-birth. Human 2026-10-02: one task, two PRs (PyAutoPulse first, Brain after); plan approved on the issue; Brain `boards: pulse` lands here. Heart YELLOW 85 at the door (Cortex checkout drift owned by another session; .github table; no rehearsal). Implementation delegated to Opus in the worktree; ship via /ship_library, end at PR-open; human enables Pages on PyAutoPulse; merge /prm.
