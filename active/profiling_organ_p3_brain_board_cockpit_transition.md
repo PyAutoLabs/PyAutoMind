@@ -4,19 +4,19 @@ Type: feature
 Target: PyAutoPulse
 Repos:
 - PyAutoBrain
-- autolens_profiling
-- PyAutoPulse
+- pyautolabs.github.io
 Themes:
 - profiling
 Difficulty: medium
 Autonomy: supervised
 Priority: normal
-Status: draft
+Status: active
 Consequence: judge
 Witness: the Brain board (`board/_board.py`) renders one organ strip for the profiling organ beside Cortex/Eyes, reading the organ's `state.json`; the `autolens_profiling` project page stays reachable from it; `board/_state.py` validates both feeds; no duplicate card for the same scope; Brain pytest green
 Review-minutes: 10
 Unattended: ready
 Filed: 2026-10-02
+Issued: 2026-10-02
 Epic: profiling-organ-birth
 Phase: 3
 
@@ -25,6 +25,14 @@ Blocked on: phase 2 shipped (the organ's `state.json` exists and is published).
 Phase 3 of the `profiling-organ-birth` epic — the **organ → Brain board**
 interface. Human decision 2026-10-02: the organ is **PyAutoPulse** (organ key
 `pulse`).
+
+## Scope note (human, 2026-10-02)
+
+Narrowed at issue time: PyAutoBrain + pyautolabs.github.io only. The `autolens_profiling`
+`build_state()` identity change (task item 3) is split into
+`draft/feature/autolens_profiling/cockpit_feed_project_identity.md`, blocked on task
+`evaluation-grid-cap-field`'s claim of that repo; the Brain never consumed the project feed, so
+there is no source transition to keep in lockstep. PyAutoPulse itself is untouched.
 
 ## Context
 

@@ -39,19 +39,15 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/365
 - final-validation: Galaxy 1315 passed; focused 49 passed; full companion smoke 33/33 in 501.91s (changed example 2.2s). Galaxy exact-head CI all green; new companion CI pending. Wiki/results-layout and whitespace checks pass. No raw phase-3a evidence changed.
 
-## lint-lychee-exclude-blob
-- issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/3
+## pyautopulse-brain-board-cockpit
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/450
 - issued: 2026-10-02
-- prompt: active/lint_lychee_exclude_github_blob_pages.md
+- prompt: active/profiling_organ_p3_brain_board_cockpit_transition.md
 - epic: profiling-organ-birth
 - session: Claude Code CLI (Fable 5.1); session ID unavailable
-- status: library-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/lint-lychee-exclude-blob
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/pyautopulse-brain-board-cockpit
 - repos:
-  - PyAutoPulse: feature/lint-lychee-exclude-blob
-  - PyAutoEyes: feature/lint-lychee-exclude-blob
-- library-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/4
-- library-pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/13
-- pending-release: PyAutoPulse@https://github.com/PyAutoLabs/PyAutoPulse/pull/4
-- pending-release: PyAutoEyes@https://github.com/PyAutoLabs/PyAutoEyes/pull/13
-- resume: Corrective: PyAutoPulse main lint red on lychee 503s for github.com blob pages (token did not help). Exclude `^https://github\.com/.*/blob/` in both organs' lint.yml. Two PRs, end at PR-open, merge /prm (Pulse first).
+  - PyAutoBrain: feature/pyautopulse-brain-board-cockpit
+  - pyautolabs.github.io: feature/pyautopulse-brain-board-cockpit
+- resume: Phase 3 of profiling-organ-birth, NARROWED by the human 2026-10-02 to Brain strip + conductor prose + hub cockpit card; autolens_profiling identity change split to draft/feature/autolens_profiling/cockpit_feed_project_identity.md (blocked on evaluation-grid-cap-field). Plan on PyAutoBrain#450. Implementation delegated to Opus in the worktree; ship via /ship_library (hub PR + Brain PR), end at PR-open; /prm merges; close-out retires draft/feature/pyautobrain/register_profiling_dashboard_on_brain_board.md.

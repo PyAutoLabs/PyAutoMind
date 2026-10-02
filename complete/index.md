@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1673 records across 9 buckets.
+1674 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -139,6 +139,7 @@ markers; everything below GENERATED is rebuilt.
 - [heart-monitoring-coverage](2026/10/heart-monitoring-coverage.md)
 - [heart-publication-coverage](2026/10/heart-publication-coverage.md)
 - [heart-score-resusitate](2026/10/heart-score-resusitate.md)
+- [lint-lychee-exclude-blob](2026/10/lint-lychee-exclude-blob.md) — Corrective: lychee in both organs' `lint.yml` now excludes `^https://github\.com/.*/blob/`. GitHub answers non…
 - [memory-cockpit-catch-up](2026/10/memory-cockpit-catch-up.md) — Lensing-specific catch-up freshness drives the HTML/Markdown banner and cockpit feed. Structured cutoff, age, …
 - [memory-digest-state](2026/10/memory-digest-state.md)
 - [mesh-geometry-transformed-areas](2026/10/mesh-geometry-transformed-areas.md)

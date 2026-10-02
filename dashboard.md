@@ -260,10 +260,10 @@ Use the start-dev skill. active/evaluation_grid_cap_preserves_field.md
 
 </details>
 
-<details><summary>📋 <a href="active/lint_lychee_exclude_github_blob_pages.md">Lint: exclude github.com blob pages from lychee (Pulse main red, Eyes exposed)</a> — <a href="https://github.com/PyAutoLabs/PyAutoPulse/issues/3">issue #3</a> — issued 2026-10-02 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/4">PyAutoPulse#4</a>, <a href="https://github.com/PyAutoLabs/PyAutoEyes/pull/13">PyAutoEyes#13</a> — ⏳ pending release: PyAutoPulse — ⏳ pending release: PyAutoEyes</summary>
+<details><summary>📋 <a href="active/profiling_organ_p3_brain_board_cockpit_transition.md">Profiling organ phase 3 — Brain board card and cockpit transition</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/450">issue #450</a> — issued 2026-10-02 — library-dev</summary>
 
 ```
-Use the start-dev skill. active/lint_lychee_exclude_github_blob_pages.md
+Use the start-dev skill. active/profiling_organ_p3_brain_board_cockpit_transition.md
 ```
 
 </details>
@@ -330,11 +330,11 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoEyes**
 
-- [PyAutoEyes#13](https://github.com/PyAutoLabs/PyAutoEyes/pull/13) — `active/lint_lychee_exclude_github_blob_pages.md`
 - [PyAutoEyes#3](https://github.com/PyAutoLabs/PyAutoEyes/pull/3) — `complete/2026/09/eyes-board-conductor-registry.md`
 - [PyAutoEyes#5](https://github.com/PyAutoLabs/PyAutoEyes/pull/5) — `complete/2026/09/eyes-fit-cti-instances.md`
 - [PyAutoEyes#4](https://github.com/PyAutoLabs/PyAutoEyes/pull/4) — `complete/2026/09/eyes-galaxy-instance.md`
 - [PyAutoEyes#2](https://github.com/PyAutoLabs/PyAutoEyes/pull/2) — `complete/2026/09/eyes-organ-skeleton.md`
+- [PyAutoEyes#13](https://github.com/PyAutoLabs/PyAutoEyes/pull/13) — `complete/2026/10/lint-lychee-exclude-blob.md`
 - [PyAutoEyes#12](https://github.com/PyAutoLabs/PyAutoEyes/pull/12) — `complete/2026/10/pyautopulse-organ-row.md`
 
 **PyAutoFit**
@@ -421,7 +421,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoPulse**
 
-- [PyAutoPulse#4](https://github.com/PyAutoLabs/PyAutoPulse/pull/4) — `active/lint_lychee_exclude_github_blob_pages.md`
+- [PyAutoPulse#4](https://github.com/PyAutoLabs/PyAutoPulse/pull/4) — `complete/2026/10/lint-lychee-exclude-blob.md`
 - [PyAutoPulse#2](https://github.com/PyAutoLabs/PyAutoPulse/pull/2) — `complete/2026/10/pyautopulse-organ-skeleton.md`
 
 **PyAutoReduce**
@@ -2601,8 +2601,8 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
 | 2026-10-02 | parked | <a href="parked.md#colab-refinement-throughout">colab-refinement-throughout</a> |
 | 2026-10-02 | parked | <a href="parked.md#bootstrap-smoke-codex">bootstrap-smoke-codex</a> |
+| 2026-10-02 | issued | <a href="active/profiling_organ_p3_brain_board_cockpit_transition.md">Profiling organ phase 3 — Brain board card and cockpit transition</a> |
 | 2026-10-02 | issued | <a href="active/evaluation_grid_cap_preserves_field.md">Preserve the LensCalc evaluation field when the grid cap activates</a> |
-| 2026-10-02 | issued | <a href="active/lint_lychee_exclude_github_blob_pages.md">Lint: exclude github.com blob pages from lychee (Pulse main red, Eyes…</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autolens_profiling/timing_noise_audit.md">Audit timing tests and profiling gates for measurement noise</a> |
@@ -2684,18 +2684,18 @@ Long-running multi-phase programmes. Each epic's 📋 prompt has the assistant r
 <details>
 <summary><b>PyAutoPulse — the cross-project dashboard layer above the <code>&lt;lib&gt;_profiling</code> project repos: instance registry, <code>profiling-summary</code> read contract, organ board, cockpit transition</b> — 1 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>PyAutoPulse — the cross-project dashboard layer above the <code>&lt;lib&gt;_profiling</code> project repos: instance registry, <code>profiling-summary</code> read contract, organ board, cockpit transition</b> — ledger: `complete/2026/10/pyautopulse-organ-skeleton.md` — filed 2026-10-02; name decided 2026-10-02 (PyAutoPulse, key <code>pulse</code>); phase 1 COMPLETE 2026-10-02 (autolens_profiling#359 closed…</summary>
+<details><summary>📋 <b>PyAutoPulse — the cross-project dashboard layer above the <code>&lt;lib&gt;_profiling</code> project repos: instance registry, <code>profiling-summary</code> read contract, organ board, cockpit transition</b> — ledger: `active/profiling_organ_p3_brain_board_cockpit_transition.md` — filed 2026-10-02; name decided 2026-10-02 (PyAutoPulse, key <code>pulse</code>); phase 1 COMPLETE 2026-10-02 (autolens_profiling#359 closed…</summary>
 
 ```
-Continue the 'PyAutoPulse — the cross-project dashboard layer above the `<lib>_profiling` project repos: instance registry, `profiling-summary` read contract, organ board, cockpit transition' epic. Its canonical state lives in complete/2026/10/pyautopulse-organ-skeleton.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: human request 2026-10-02 to begin the organ filed from the 2026-10-01 intake; design authority is `PyAutoBrain/docs/research/profiling_inference_organs.md` (Brain #444, read contracts and acceptance cases) on `ecosystem_levels.md` (Brain #440, roles not hierarchy) — do not re-derive either. Same layering as PyAutoEyes over `<lib>_visualization` (precedent `complete/2026/09/pyautoeyes-organ-decision.md`): project repos own producers, results, drift policy and their own Pages page; the organ owns the registry, the versioned read contract, ingest receipts and the cross-project board; the Brain's profiling conductor is the only judge. Phases under `draft/feature/`: 0 name + organ row + boundaries (`pyautomind/profiling_organ_p0_name_row_and_boundaries.md`, human-gated: fresh `gh repo create PyAutoLabs/PyAutoPulse`, org-profile row; name decided by the human 2026-10-02 — PyAutoPulse, organ key `pulse`; an earlier repo of that name became PyAutoHeart, so this is a fresh create), 1 `profiling-summary` v1 exporter in autolens_profiling (done: `complete/2026/10/profiling-summary-v1.md`, PR autolens_profiling#360), 2 organ skeleton — registry, reader, receipts, board, workflows (`pyautopulse/profiling_organ_p2_skeleton_registry_reader_board.md`), 3 Brain board strip + cockpit identity transition (`pyautopulse/profiling_organ_p3_brain_board_cockpit_transition.md`; supersedes `pyautobrain/register_profiling_dashboard_on_brain_board.md` unless that ships first), 4 second real `<lib>_profiling` adopter — no prompt until a real producer exists (spec: never manufacture empty siblings; a fixture is phase 2). Repoint the ledger to `PyAutoPulse/dashboard.md` once phase 2 lands. Issue ONE phase at a time. The inference organ is a separate epic, not started.
+Continue the 'PyAutoPulse — the cross-project dashboard layer above the `<lib>_profiling` project repos: instance registry, `profiling-summary` read contract, organ board, cockpit transition' epic. Its canonical state lives in active/profiling_organ_p3_brain_board_cockpit_transition.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: human request 2026-10-02 to begin the organ filed from the 2026-10-01 intake; design authority is `PyAutoBrain/docs/research/profiling_inference_organs.md` (Brain #444, read contracts and acceptance cases) on `ecosystem_levels.md` (Brain #440, roles not hierarchy) — do not re-derive either. Same layering as PyAutoEyes over `<lib>_visualization` (precedent `complete/2026/09/pyautoeyes-organ-decision.md`): project repos own producers, results, drift policy and their own Pages page; the organ owns the registry, the versioned read contract, ingest receipts and the cross-project board; the Brain's profiling conductor is the only judge. Phases under `draft/feature/`: 0 name + organ row + boundaries (`pyautomind/profiling_organ_p0_name_row_and_boundaries.md`, human-gated: fresh `gh repo create PyAutoLabs/PyAutoPulse`, org-profile row; name decided by the human 2026-10-02 — PyAutoPulse, organ key `pulse`; an earlier repo of that name became PyAutoHeart, so this is a fresh create), 1 `profiling-summary` v1 exporter in autolens_profiling (done: `complete/2026/10/profiling-summary-v1.md`, PR autolens_profiling#360), 2 organ skeleton — registry, reader, receipts, board, workflows (`pyautopulse/profiling_organ_p2_skeleton_registry_reader_board.md`), 3 Brain board strip + cockpit identity transition (`pyautopulse/profiling_organ_p3_brain_board_cockpit_transition.md`; supersedes `pyautobrain/register_profiling_dashboard_on_brain_board.md` unless that ships first), 4 second real `<lib>_profiling` adopter — no prompt until a real producer exists (spec: never manufacture empty siblings; a fixture is phase 2). Repoint the ledger to `PyAutoPulse/dashboard.md` once phase 2 lands. Issue ONE phase at a time. The inference organ is a separate epic, not started.
 ```
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautopulse/profiling_organ_p3_brain_board_cockpit_transition.md">Profiling organ phase 3 — Brain board card and cockpit transition</a> — pyautopulse · medium · supervised · normal</summary>
+<details><summary>📋 <a href="draft/feature/autolens_profiling/cockpit_feed_project_identity.md">autolens_profiling: cockpit feed stops claiming <code>organ: profiling</code></a> — autolens_profiling · small · supervised · normal</summary>
 
 ```
-Use the start-dev skill. draft/feature/pyautopulse/profiling_organ_p3_brain_board_cockpit_transition.md
+Use the start-dev skill. draft/feature/autolens_profiling/cockpit_feed_project_identity.md
 ```
 
 </details>

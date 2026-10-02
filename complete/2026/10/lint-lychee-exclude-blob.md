@@ -1,3 +1,16 @@
+## lint-lychee-exclude-blob
+- issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/3
+- completed: 2026-10-02
+- epic: profiling-organ-birth
+- library-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/4
+- library-pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/13
+- pending-release: PyAutoPulse@https://github.com/PyAutoLabs/PyAutoPulse/pull/4
+- pending-release: PyAutoEyes@https://github.com/PyAutoLabs/PyAutoEyes/pull/13
+- summary: Corrective: lychee in both organs' `lint.yml` now excludes `^https://github\.com/.*/blob/`. GitHub answers non-browser fetches of blob pages with 503 regardless of auth (status page green; reproduced on cpython's README); the `--github-token` attempt (PyAutoPulse `b2d4a595`) did not change the outcome. PyAutoPulse main lint green again at `e381113`.
+- traps: lychee `--github-token` does not avoid the blob-page 503 (it still fetches the HTML); exclude blob URLs or link raw/Pages instead.
+
+## Original prompt
+
 # Lint: exclude github.com blob pages from lychee (Pulse main red, Eyes exposed)
 
 Type: bug
