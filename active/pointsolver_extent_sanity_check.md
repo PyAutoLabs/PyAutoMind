@@ -120,3 +120,15 @@ Canonical `PyAutoLens` and `autolens_workspace_test` are both clean on main. Pro
 ## Approval and coordination
 
 Human: "I approve, continue" (2026-10-02), approving the implementation and coordinated disjoint workspace-test edits. Workspace work is restricted to a new point-source extent regression and its smoke registration/config; preserve other tasks' scripts and registrations. PyAutoLens tests use the existing `test_analysis_point.py` naming (the draft `test_analysis.py` path does not exist).
+
+## Implementation progress — 2026-10-02
+
+The approved diagnostic and 27 NumPy tests are implemented. Tests live in the new
+`test_analysis_point_extent.py` alongside existing analysis tests. Standalone JAX
+regression passes the existing likelihood pin and repeated jit/vmap log checks.
+Full library and Heart isolated workspace smoke are running. Canonical campaign
+page and full ledger updates are isolated in the task's `autolens_profiling`
+worktree (only those two campaign files; no critical-curves overlap).
+
+Heart refreshed YELLOW (85): manifest drift and absent release rehearsal. Human
+acknowledgment requested before development PR opening.
