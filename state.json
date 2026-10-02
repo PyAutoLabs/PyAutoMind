@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
-  "updated": "2026-10-02T14:36:47Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 2 in flight",
+  "updated": "2026-10-02T14:49:57Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,12 +12,6 @@
       "text": "Preserve the LensCalc evaluation field when the grid cap activates \u2014 awaiting-merge, workspace-release-gated",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/646",
       "prompt": "Use the start-dev skill. active/evaluation_grid_cap_preserves_field.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Profiling organ phase 3 \u2014 Brain board card and cockpit transition \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/451",
-      "prompt": "Use the start-dev skill. active/profiling_organ_p3_brain_board_cockpit_transition.md"
     },
     {
       "severity": "yellow",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#606 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/606",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#599 \u2014 streaming-p4-light-profile-identity",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/599",
       "prompt": null
     }
   ]
