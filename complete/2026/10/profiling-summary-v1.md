@@ -1,3 +1,20 @@
+## profiling-summary-v1
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/359
+- completed: 2026-10-02
+- epic: profiling-organ-birth (phase 1)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/360
+- head: b93db793d7ac4f85d17b38b63924346c101f7215
+- merge: 4d6523f6ca56f6921d225596307007b71bb16bc2
+- summary: PyAutoPulse phase 1 — `build_dashboard.py` gains a fourth output, `dashboard/summary.json`, the `profiling-summary` v1 project→organ read contract (envelope with schema/version, project/scope, generated_at, evidence_updated_at, valid_until null, producer_revision, comparison_policy, coverage {expected, observed, excluded}; one record per plotted point with a stable `<series key>@<version>` id; one comparison per series carrying the producer's own drift badge with a `qualified` flag and reasons; explicit limitations). `validate_summary()` refuses unknown schema/version, missing fields, duplicate ids, non-finite numbers, bad dates and unsafe evidence paths before anything is written; a valid empty feed is "no measurements". `series.json`, `state.json` and `index.html` are byte-identical (the summary is written with the committed render stamp; `--check` reuses the committed `producer_revision`). `pages_dashboard.yml` publishes the file beside `series.json`; `dashboard/README.md` documents the grammar; `AGENTS.md` names the folder. First render: 145 series, 159 records, 4 releases, 6 excluded rows.
+- verification: local — ruff clean, 14 dashboard tests (7 existing + 7 new), `build_dashboard.py --check` current, `check_results_layout.py --check` / `build_readme.py --check` unchanged, `PyAutoBrain/board/_state.py dashboard/state.json` ok, tooling pure stdlib. CI — lint run 36982602027 attempt 2 SUCCESS on the exact head; attempt 1 failed only on lychee 504 Gateway Timeouts from github.com for eight links in the untouched top-level README (log quoted in session; re-run requested by the human). Merge state clean; `/prm` merged; head proven ancestor of `origin/main`, 0 ahead.
+- heart: GREY at the door and at ship (Pages host blocked in the remote container); no readiness verdict consulted; no RED override used. Project repo only — no library change, nothing pending release.
+- design-authority: `PyAutoBrain/docs/research/profiling_inference_organs.md` (Brain #444) on `ecosystem_levels.md` (Brain #440); the cockpit `state.json` still says `organ: profiling` — the identity moves in phase 3, by design.
+- traps: `producer_revision` is HEAD at render, never the hash of the commit that contains the file; `--check` must reuse the committed value or every commit reads STALE. `evidence_updated_at` is the newest release DATE encoded in a library version (result rows carry no measurement wall-clock) — the newest in the tree is 2026-08-17 even though 2026.9.27.1 releases exist elsewhere. A pre-#342 row's `host` can still be set (device.hostname fallback) while `has_provenance` is false.
+- next: phase 0 (`draft/feature/pyautomind/profiling_organ_p0_name_row_and_boundaries.md`, human `gh repo create PyAutoLabs/PyAutoPulse` first), then phase 2 (`draft/feature/pyautopulse/profiling_organ_p2_skeleton_registry_reader_board.md`, the reader against this file). Follow-up for the organ's refresh: a one-line `repository_dispatch` sender in this repo's `pages_dashboard.yml` once PyAutoPulse exists (phase 2 names it).
+- session: Claude Code remote (web), https://claude.ai/code/session_01B5uEFSAb34aK5R6PTX7jJm; remote clone, no task worktree.
+
+## Original prompt
+
 # Profiling organ phase 1 — publish the `profiling-summary` v1 contract from autolens_profiling
 
 Type: feature
