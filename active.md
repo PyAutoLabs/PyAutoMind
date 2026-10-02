@@ -17,14 +17,13 @@
 - prompt: active/evaluation_grid_cap_preserves_field.md
 - epic: cluster-strong-lensing
 - session: Codex; session ID unavailable
-- status: awaiting-merge, workspace-release-gated
+- status: library-merged, workspace-release-gated
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/evaluation-grid-cap-field
 - repos:
   - PyAutoGalaxy: feature/evaluation-grid-cap-field
   - autolens_workspace_test: feature/evaluation-grid-cap-field
-  - autolens_profiling: feature/evaluation-grid-cap-field
 - coordination: Human approved plan and separate-scope concurrency on 2026-10-02 alongside Galaxy docs, workspace numerical-audit and point-solver ledger tasks. Restrict edits to evaluation_grid, new operate tests, critical_curves CI and critical_curves campaign ledger/wiki. Prior phase-3a claim is released in its completion record; retained evidence worktree is not an active claim.
-- resume: Phase 3b shipped: Galaxy#646 f19a3377; profiling#365 d8a46c3; workspace#343 fcd6bd5 is DRAFT until library fix is available to CI dependencies. Library-first gate; no release performed or phase-3b merge authorized. All local checks pass. Resume /prm for library/research when green, release-dependent workspace afterward. No further phase issued.
+- resume: 2026-10-02 /prm merged Galaxy#646 (2e36de4e) and profiling#365 (9d0b1317); autolens_profiling claim released (branch merged, Pulse tasks may proceed there). workspace#343 fcd6bd5 stays DRAFT until PyAutoGalaxy is released with the fix; then mark ready and /prm it to close the task. No release performed. No further phase issued.
 
 - heart-ack:
   - "manifest drift: organism-map blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml"

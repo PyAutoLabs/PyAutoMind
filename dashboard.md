@@ -252,7 +252,7 @@ Use the start-dev skill. draft/research/pyautohands/git_docs.md
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/evaluation_grid_cap_preserves_field.md">Preserve the LensCalc evaluation field when the grid cap activates</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/645">issue #645</a> — issued 2026-10-02 — awaiting-merge, workspace-release-gated — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/646">PyAutoGalaxy#646</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/343">autolens_workspace_test#343</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/365">autolens_profiling#365</a> — ⏳ pending release: PyAutoGalaxy</summary>
+<details><summary>📋 <a href="active/evaluation_grid_cap_preserves_field.md">Preserve the LensCalc evaluation field when the grid cap activates</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/645">issue #645</a> — issued 2026-10-02 — library-merged, workspace-release-gated — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/646">PyAutoGalaxy#646</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/343">autolens_workspace_test#343</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/365">autolens_profiling#365</a> — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 Use the start-dev skill. active/evaluation_grid_cap_preserves_field.md
