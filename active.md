@@ -207,3 +207,14 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/343
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/365
 - final-validation: Galaxy 1315 passed; focused 49 passed; full companion smoke 33/33 in 501.91s (changed example 2.2s). Galaxy exact-head CI all green; new companion CI pending. Wiki/results-layout and whitespace checks pass. No raw phase-3a evidence changed.
+
+## heart-publication-coverage
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/270
+- issued: 2026-10-02
+- prompt: active/heart_publication_coverage.md
+- session: Codex; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/heart-publication-coverage
+- coordination: Human approved concurrent isolated Heart work alongside pyautopulse-organ-row; that PR merged before worktree creation.
+- repos:
+  - PyAutoHeart: feature/heart-publication-coverage
