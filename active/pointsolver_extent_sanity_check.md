@@ -170,3 +170,22 @@ smoke in progress (changes job passed); profiling lint in progress. No merge
 or cleanup. Workspace retains its PyAutoLens release gate. Per workspace
 AGENTS.md, judged once and stopped; no background waiter is armed. Resume prm
 when checks finish, preserving the one-phase-at-a-time campaign rule.
+
+## prm — partial merge, release checkpoint — 2026-10-02
+
+Verified every job for the three exact PR heads: library docs, Python 3.12,
+Python 3.13 and no-JAX tests (4); workspace changes plus Python 3.12/3.13 smoke
+(3); profiling lint (1). All 8 completed successfully; all PRs CLEAN/MERGEABLE.
+Heart freeze command returned `not frozen`.
+
+- PyAutoLens#764 merged: `0dd420877e18da8e94cbb3dfb5dbe97ad34eb45c`.
+- autolens_profiling#363 merged: `134695058dd16752ddb3d9bad747422ff0173ee5`.
+- autolens_workspace_test#338 stays OPEN and green: recorded PyAutoLens release
+  gate still applies. Latest published release `2026.10.2.1` at 09:29:37 UTC
+  predates the 10:41:21 UTC library merge; no fetched tag contains the merge.
+
+The ship-workspace release rule prevents merging the dependent workspace
+change before the supporting library is released. No release authorization
+is implied by prm. Keep issue #763, prompt, claims and all worktrees intact;
+no cleanup or second campaign phase. Once a release contains #764, resume
+prm to merge #338 and perform the full close-out.

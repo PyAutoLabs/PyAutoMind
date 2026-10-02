@@ -190,7 +190,7 @@
 - prompt: active/pointsolver_extent_sanity_check.md
 - epic: point-source-cpu-speed
 - session: Codex; session ID unavailable
-- status: library-shipped, awaiting-merge
+- status: library-merged, awaiting-release
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/pointsolver-extent-sanity-check
 - repos:
   - PyAutoLens: feature/pointsolver-extent-sanity-check
@@ -202,4 +202,4 @@
 - campaign-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/363
 - pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/764
 - release-gate: PyAutoLens
-- resume: Human acknowledged Heart YELLOW (85) via “prm and continue”. Three PRs opened; CI pending at judgment (library docs + Python 3.12/3.13/no-JAX, workspace Python 3.12/3.13, profiling lint). No merge. Next prm must judge every exact-head run/leg, then library-first and release gates. Local evidence: 820 passed/1 xfailed, 27 focused tests, 33 distinct smoke passes after documented recovery. Keep this sole bounded phase active; no next phase or solver default changes.
+- resume: prm verified all 8 exact-head CI jobs green and Heart not frozen. PyAutoLens#764 merged 0dd420877; profiling#363 merged 134695058. Workspace#338 remains open/green behind its PyAutoLens release gate; latest release 2026.10.2.1 predates this merge and no fetched tag contains it. After a release contains #764, resume prm for workspace merge and full close-out. Issue/prompt/claims/worktrees retained; no second phase issued.

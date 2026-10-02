@@ -324,7 +324,7 @@ Use the start-dev skill. active/over_sample_size_via_snr_from.md
 
 </details>
 
-<details><summary>📋 <a href="active/pointsolver_extent_sanity_check.md">PointSolver grid-extent sanity check — warn when the data approach the solver…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/763">issue #763</a> — issued 2026-10-02 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/764">PyAutoLens#764</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/338">autolens_workspace_test#338</a> — ⏳ pending release: PyAutoLens — ⏸ waiting on PyAutoLens's release</summary>
+<details><summary>📋 <a href="active/pointsolver_extent_sanity_check.md">PointSolver grid-extent sanity check — warn when the data approach the solver…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/763">issue #763</a> — issued 2026-10-02 — library-merged, awaiting-release — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/764">PyAutoLens#764</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/338">autolens_workspace_test#338</a> — ⏳ pending release: PyAutoLens — ⏸ waiting on PyAutoLens's release</summary>
 
 ```
 Use the start-dev skill. active/pointsolver_extent_sanity_check.md
