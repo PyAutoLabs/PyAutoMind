@@ -308,7 +308,7 @@ Use the start-dev skill. active/fit_util_masked_division_grad_nan.md
 
 </details>
 
-<details><summary>📋 <a href="active/heart_publication_coverage.md">Publish all observed Heart monitoring families</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/270">issue #270</a> — issued 2026-10-02 — library-dev, awaiting-heart-ack</summary>
+<details><summary>📋 <a href="active/heart_publication_coverage.md">Publish all observed Heart monitoring families</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/270">issue #270</a> — issued 2026-10-02 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/271">PyAutoHeart#271</a> — ⏳ pending release: PyAutoHeart</summary>
 
 ```
 Use the start-dev skill. active/heart_publication_coverage.md
@@ -452,6 +452,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoHeart**
 
+- [PyAutoHeart#271](https://github.com/PyAutoLabs/PyAutoHeart/pull/271) — `active/heart_publication_coverage.md`
 - [PyAutoHeart#240](https://github.com/PyAutoLabs/PyAutoHeart/pull/240) — `complete/2026/09/autolens-visualization-rebirth.md`
 - [PyAutoHeart#242](https://github.com/PyAutoLabs/PyAutoHeart/pull/242) — `complete/2026/09/board-footer-family-fix.md`
 - [PyAutoHeart#244](https://github.com/PyAutoLabs/PyAutoHeart/pull/244) — `complete/2026/09/eyes-fit-cti-instances.md`
