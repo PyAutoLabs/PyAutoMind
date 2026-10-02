@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 7 |
-| [Backlog](#backlog) (`draft/`) | 260 |
+| [Backlog](#backlog) (`draft/`) | 259 |
 
 > **No batch in flight.**
 
@@ -688,10 +688,10 @@ Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_parti
 
 ## Backlog
 
-**260** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **58** of them belong to an epic and are listed only under [Epics](#epics) below.
+**259** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **58** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 79</summary>
+<summary><b>bug</b> — 78</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -1313,14 +1313,6 @@ Use the start-dev skill. draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_
 
 ```
 Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/health_fixes/heart_publication_coverage.md">Publish all observed Heart monitoring families</a> — health_fixes</summary>
-
-```
-Use the start-dev skill. draft/bug/health_fixes/heart_publication_coverage.md
 ```
 
 </details>
@@ -3331,7 +3323,7 @@ Use the start-dev skill. draft/research/autolens_profiling/interferometer_stream
 
 </details>
 
-71 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+70 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3364,7 +3356,6 @@ Use the start-dev skill. draft/research/autolens_profiling/interferometer_stream
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
 - `draft/bug/autolens_profiling/timing_noise_audit.md`
 - `draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md`
-- `draft/bug/health_fixes/heart_publication_coverage.md`
 - `draft/bug/health_fixes/release_timeout_policy.md`
 - `draft/bug/health_fixes/samples_parameter_paths.md`
 - `draft/bug/priors/12_single_source_density_refactor.md`
@@ -3376,7 +3367,8 @@ Use the start-dev skill. draft/research/autolens_profiling/interferometer_stream
 - `draft/docs/autolens/split_lensing_regimes.md`
 - `draft/docs/autolens_inference/reconcile_cortex_ledger_references.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
-- _… and 31 more_
+- `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
+- _… and 30 more_
 
 </details>
 
