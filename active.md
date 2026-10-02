@@ -134,6 +134,7 @@
 - epic: profiling-organ-birth
 - session: Claude Code CLI (Fable 5.1); session ID unavailable
 - status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/pyautopulse-organ-row
 - repos:
   - PyAutoMind: feature/pyautopulse-organ-row
   - PyAutoBrain: feature/pyautopulse-organ-row
@@ -144,6 +145,7 @@
   - PyAutoNerves: feature/pyautopulse-organ-row
   - PyAutoGut: feature/pyautopulse-organ-row
   - PyAutoScientist: feature/pyautopulse-organ-row
+  - PyAutoEyes: feature/pyautopulse-organ-row
 - resume: Phase 0 of profiling-organ-birth. Human decisions 2026-10-02: PyAutoPulse, organ key `pulse`, organ row AFTER Hands before Nerves, `boards:` entry deferred to phase 2, plan approved. Repo PyAutoLabs/PyAutoPulse created (public, empty). Next: /start_library then implement per issue #463; PRs Mind → Brain → Heart → Hands → hub (+ map-block PRs Cortex/Nerves/Gut/Scientist); merge human via /prm.
 
 ## pointsolver-extent-sanity-check
