@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 12 in flight",
-  "updated": "2026-10-02T10:30:06Z",
+  "updated": "2026-10-02T10:34:53Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -24,6 +24,12 @@
       "text": "Benchmark card: forward-model consistency across imaging, point_source and interferometer \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autolens_assistant/pull/146",
       "prompt": "Use the start-dev skill. active/benchmark_forward_model_consistency.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "MeshGeometryRectangular.areas_transformed raises IndexError for adapt-image meshes \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/608",
+      "prompt": "Use the start-dev skill. active/mesh_geometry_areas_transformed_adapt_image_indexerror.md"
     },
     {
       "severity": "yellow",
@@ -59,6 +65,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#607 \u2014 fit_util: masked divisions NaN the gradient on the JAX path",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/607",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#608 \u2014 MeshGeometryRectangular.areas_transformed raises IndexError for adapt-image meshes",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/608",
       "prompt": null
     },
     {
@@ -113,18 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#591 \u2014 sparse-data-none-guard",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/591",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#586 \u2014 sparse-operator-oversampling-cache",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/586",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#593 \u2014 streaming-p1-array-free-dataset",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/593",
       "prompt": null
     }
   ]
