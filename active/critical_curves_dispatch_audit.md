@@ -4,6 +4,7 @@ Type: research
 Target: autolens_workspace_test
 Repos:
 - autolens_workspace_test
+- autolens_profiling
 Difficulty: medium
 Autonomy: supervised
 Priority: high
@@ -89,3 +90,21 @@ because this is two CPU fixtures and an evidence report, with no production
 API change. Re-slice if the bounded matrix exposes broader required work.
 
 Plan approved by human “go” on 2026-10-02; issued as #337.
+
+## Human scope update — 2026-10-02
+
+User: "This also feels like work which, once were done, belongs in autolens_profiling (in its lens or misc folder) as a task which we build up a wiki which adds more information and research for us to draw on as we run more expwriment. We do of course still need autolens_workspace_test examples for CI."
+
+This supersedes the original workspace-only artifact placement. The experiment
+moves to autolens_profiling scripts/lens/critical_curves/dispatch.py, versioned
+JSON/PNG under results/lens/critical_curves/, a results/notes ledger and an indexed
+wiki/campaigns/critical_curves.md page. Workspace_test retains only the small
+scripts/cluster/critical_curves.py numerical regression, wired into smoke_tests.txt.
+One task / existing issue #337, one PR per affected repository, no new phase issue.
+
+Repo claim conflict: point-source-search-nautilus-leaf claims autolens_profiling
+for PR #361. User explicitly answered "Allow concurrent, separate scope".
+That PR touches point-source campaign ledgers and a fixed-light test; this task
+is restricted to critical-curves files plus lens/wiki navigation links.
+Profiling branch feature/critical-curves-dispatch-audit, base 4d6523f. Its canonical
+checkout has unrelated untracked dataset/abell_1201/; it is untouched.
