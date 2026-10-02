@@ -9,7 +9,9 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
+Issued: 2026-10-02
+Issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/645
 Epic: cluster-strong-lensing
 Phase: 3b
 Parent: draft/refactor/autogalaxy/critical_curves_dispatch_cluster.md

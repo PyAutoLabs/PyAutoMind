@@ -612,7 +612,7 @@ Research: autolens_profiling#364 @89b6d00; CI: autolens_workspace_test#341 @06f7
 Full workspace smoke 33/33 passed (new example 2.9s). Heart YELLOW acknowledged;
 all RED reasons cleared after clean canonical PyAutoLens fast-forward. Both PRs
 pending-release, cross-linked; /prm awaiting all workflow/matrix legs.
-Next single prompt filed, unissued: draft/bug/autogalaxy/evaluation_grid_cap_preserves_field.md
+Next single prompt filed, unissued: active/evaluation_grid_cap_preserves_field.md
 (phase 3b). Includes explicit effective-Zoom2D footprint/rounding contract; does
 not silently absorb the independent masked-caustic discrepancy draft. No bulk queue.
 
@@ -626,3 +626,6 @@ Evidence worktree retained by explicit human request; no cleanup deletion.
 Human approved phase 3b plan plus separate-scope concurrency on Galaxy,
 workspace_test and profiling. Next: issue the one filed cap-fix prompt and enter
 start_library; no additional successor queue. Original overall phase 3 remains open.
+
+Phase 3b issued: PyAutoGalaxy#645, feature/evaluation-grid-cap-field in the
+isolated task bundle. Approved concurrency recorded; implementation underway.
