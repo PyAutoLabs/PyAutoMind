@@ -101,5 +101,5 @@ epic, never picked standalone.
 ## cluster-strong-lensing
 - title: Cluster strong lensing — Source & Cluster arc
 - ledger: draft/feature/autolens/source_cluster_arc.md
-- status: In progress — subphases 1a–1d shipped; remaining solver work transferred to cluster-pointsolver-speed, not solved. Next is phase 3 critical-curve dispatch; bounded phase 3a audit prepared for approval. Restored 2026-10-02 after an accidental automated retirement.
+- status: In progress — subphases 1a–1d shipped; remaining solver work transferred to cluster-pointsolver-speed, not solved. Next is phase 3 critical-curve dispatch; approved phase 3a audit #337 implemented in profiling with workspace CI counterpart; validating the required smoke gate. Restored 2026-10-02 after an accidental automated retirement.
 - notes: Issue ONE bounded phase at a time; no bulk queue. Preserve original phase numbers and the approved 2026-10-01 ownership split. Phases 3–8 have no blanket PointSolver gate; solver-dependent workloads retain correctness gates. Cortex phase 11 remains dropped under R-20260907-05; any future science birth needs a fresh explicit decision.

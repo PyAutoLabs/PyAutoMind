@@ -539,3 +539,34 @@ Initial audit found fixed ±3 arcsec auto seeds miss cluster components, the
 far-source explicit path is incomplete at default tracing budget, outer-JIT
 list wrappers fail, and the capped evaluation-grid formula changes field extent.
 Final evidence and PRs pending; no production fix or phase completion claimed.
+
+
+## Phase 3a evidence — 2026-10-02
+
+Research implemented in autolens_profiling/scripts/lens/critical_curves/dispatch.py,
+results/notes/critical_curves_dispatch.md, versioned JSON/PNG and the indexed
+wiki/campaigns/critical_curves.md. Small independent analytic per-plane CI example
+implemented in autolens_workspace_test/scripts/cluster/critical_curves.py and its
+required smoke list. Both task worktrees remain feature/critical-curves-dispatch-audit.
+
+Pinned CPU fp64 matrix: 14 workers, four 120s timeouts retained as incomplete,
+with partial quantities preserved. All marching-squares controls/convergence
+checks pass. Automatic seeds miss cluster components; explicit far-source
+critical curve has a 20.65 arcsec closing chord and 6.16 arcsec reference distance.
+A near-reference caustic cannot rescue its invalid parent curve. Outer-JIT list
+wrappers raise NonConcreteBooleanIndexError. Capped grid witness expands a
+60 arcsec field to ~8333 arcsec; selector-only dispatch remains NO-GO.
+Next candidate is one bounded field-preserving grid-cap fix, not yet issued.
+
+Measured driver hash is archived alongside the evidence. Post-processing fixed
+CPU-device validation (TFRT_CPU_0), recording separate collector provenance and
+verifying identical numerical ASTs; no measurement rerun/replacement. Read-only
+validation and four corrupt-evidence controls pass. Profiling suite: 1002 passed,
+5 skipped; lint/wiki/results/dashboard checks pass. New CI example passed both
+source JAX 0.10.2 and isolated JAX 0.11.2; existing zero-contour example passed.
+
+Initial full smoke attempt timed out existing delaunay.py and delaunay_mge.py at
+300 seconds under concurrent host load, then was stopped. One sequential retry
+is in progress; its first script passed (165.2s). No PR or phase completion yet.
+Heart GREEN does not waive the full smoke gate. No source/library default changed,
+no later issue queued, no Cortex project revived.
