@@ -527,3 +527,15 @@ superseded. Only the approved audit is issued now.
 Phase 3a issued as autolens_workspace_test#337 after human approval “go”.
 Workspace branch feature/critical-curves-dispatch-audit; implementation and
 validation in progress. Heart entry GREEN. No merge/release authorized.
+
+## Research ownership clarified — 2026-10-02
+
+Human directed phase-3 research into autolens_profiling, building a cumulative
+wiki as experiments accumulate, with bounded CI examples in workspace_test.
+Phase 3a issue #337 now covers both repos; no extra issue. Concurrent separate
+scope alongside profiling#361 explicitly authorized. Research: lens/critical_curves
+and linked results/wiki. CI: cluster/critical_curves.py in required smoke.
+Initial audit found fixed ±3 arcsec auto seeds miss cluster components, the
+far-source explicit path is incomplete at default tracing budget, outer-JIT
+list wrappers fail, and the capped evaluation-grid formula changes field extent.
+Final evidence and PRs pending; no production fix or phase completion claimed.

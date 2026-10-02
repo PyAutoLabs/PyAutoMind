@@ -86,6 +86,8 @@
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/critical-curves-dispatch-audit
 - repos:
   - autolens_workspace_test: feature/critical-curves-dispatch-audit
+  - autolens_profiling: feature/critical-curves-dispatch-audit
+- coordination: Human authorized concurrent separate scope alongside point-source-search-nautilus-leaf / profiling#361 on 2026-10-02.
 - resume: Plan approved with “go”; standalone CPU research, phase 3a. Implement bounded current-dispatch and geometry/timing audit, validate, ship_workspace. Concurrent unissued cluster_curves_engine_dispatch draft remains a candidate pending these results. No later issue queue.
 
 ## over-sample-snr-helper
