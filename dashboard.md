@@ -284,7 +284,7 @@ Use the start-dev skill. active/colab_refinement_throughout.md
 
 </details>
 
-<details><summary>📋 <a href="active/evaluation_grid_cap_preserves_field.md">Preserve the LensCalc evaluation field when the grid cap activates</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/645">issue #645</a> — issued 2026-10-02 — library-shipped, workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/646">PyAutoGalaxy#646</a> — ⏳ pending release: PyAutoGalaxy</summary>
+<details><summary>📋 <a href="active/evaluation_grid_cap_preserves_field.md">Preserve the LensCalc evaluation field when the grid cap activates</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/645">issue #645</a> — issued 2026-10-02 — awaiting-merge, workspace-release-gated — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/646">PyAutoGalaxy#646</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/343">autolens_workspace_test#343</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/365">autolens_profiling#365</a> — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 Use the start-dev skill. active/evaluation_grid_cap_preserves_field.md
@@ -3037,7 +3037,7 @@ Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens
 <details>
 <summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 12 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>Cluster strong lensing — Source &amp; Cluster arc</b> — ledger: `draft/feature/autolens/source_cluster_arc.md` — In progress — 1a–1d and phase 3a audit shipped (profiling#364, workspace_test#341). Phase 3b field-preserving grid-cap fix…</summary>
+<details><summary>📋 <b>Cluster strong lensing — Source &amp; Cluster arc</b> — ledger: `draft/feature/autolens/source_cluster_arc.md` — In progress — 1a–1d and phase 3a audit merged (profiling#364, workspace_test#341). Phase 3b field-preserving cap fix open in…</summary>
 
 ```
 Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonical state lives in draft/feature/autolens/source_cluster_arc.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: Issue ONE bounded phase at a time; no bulk queue. Preserve original phase numbers and the approved 2026-10-01 ownership split. Phases 3–8 have no blanket PointSolver gate; solver-dependent workloads retain correctness gates. Cortex phase 11 remains dropped under R-20260907-05; any future science birth needs a fresh explicit decision.
