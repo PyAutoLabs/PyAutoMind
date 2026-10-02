@@ -454,3 +454,39 @@ code moved, no new issues queued, no release or Cortex project authorized.
 - ledger: draft/feature/autolens/source_cluster_arc.md
 - status: Completed evidence/fixes 1a–1d (latest workspace_test#334, 26da5b1; #333 closed). On 2026-10-01 the human transferred remaining phase-1 repairs, phase-2 profiling and forward ShapeSolver work from phase 6 to cluster-pointsolver-speed (robustness and performance). Transferred is not solved. Blanket PointSolver gate removed; next arc step is phase 3 critical-curve dispatch, sliced via start_dev. Supplied-coordinate magnification and pixel-based areas can proceed; solver-discovered images and solver-dependent inference retain workload-specific correctness gates. Cortex phase 11 stays dropped under R-20260907-05; phase-1b PyAutoLens pending-release obligation retained.
 - notes: Original phase numbers retained for history; phases 1 remainder and 2 transferred, phase 6 narrowed. Issue ONE bounded phase at a time as predecessors near shipping; no bulk queue. autolens_profiling owns robustness/settings/performance evidence; autolens_workspace_test owns numerical integration regressions wired into CI. Science project birth still requires a fresh explicit Cortex decision.
+
+## Reconciliation and phase 3a plan — 2026-10-02
+
+Restored the canonical draft ledger and epics.md entry. Automation commit
+5c0dea2e retired this unfinished epic because its status opened with
+"Completed evidence/fixes" and lifecycle.py matches the COMPLETE prefix.
+The retirement was not a human decision to finish the arc. Historical retirement
+text above is retained; current status now starts "In progress".
+
+GitHub confirms latest completed subphase 1d: workspace_test#334 MERGED as
+26da5b1458490fbf0f01d4c5d4a7e7c99eee3fc4; #333 CLOSED. No current arc claim
+in active.md and no matching open phase issue/PR across PyAutoLens, PyAutoArray,
+PyAutoGalaxy, autolens_workspace, autolens_workspace_test, autolens_profiling,
+and HowToLens. workspace_test#106 is separate cluster-likelihood work;
+Galaxy#641 and workspace#579/#583 are Scribbler; profiling#359/#360 is Pulse.
+No adjacent DECISIONS/RESULTS files found at either ledger location.
+
+Phase 3 is next under the approved ownership split. Current-source read shows
+that the duplicate plot/plot_utils.py no longer exists; util/plot_utils.py is
+canonical. Static config dispatch, wrong default docstrings, and cluster
+bypass remain. The zero-contour wrapper constructs NumPy/list outputs, so
+internal JIT and an externally jittable plotting API must be distinguished.
+Do not implement the old automatic-JIT proposal from historical timings alone.
+
+Filed one bounded research prompt:
+draft/research/workspaces/critical_curves_dispatch_audit.md (phase 3a).
+Evidence first: current dispatch/call boundaries, two synthetic fixtures,
+per-source-plane curve/caustic geometry, bounded cold/warm/disabled-JIT timings,
+and an explicit dispatch contract. Production/default changes remain phase 3
+follow-up work; no further prompts or issues queued.
+
+Heart entry GREEN (feed updated 12h ago). Workspace main clean; active-claim
+guard clear. Proposed feature/critical-curves-dispatch-audit; implementation
+worktree only after plan approval. No issue or implementation edits yet.
+Cortex projects/inference_programme.md and R-20260907-05 retain phase 11 as
+DROPPED; no implicit science-project birth or revival.
