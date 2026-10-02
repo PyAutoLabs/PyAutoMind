@@ -23,3 +23,16 @@
 - repos:
   - autolens_inference: feature/point-source-search-nautilus-leaf
 - resume: "Branch pushed (2307eea), NO PR yet. Probe RAL job 366937 COMPLETED (seed 0: wall_s 56.6 s, 4,850 evals, per_call 4.72 us batched, likelihood_share 0.041% [single-basis 1.8%], all truth |dsigma|<0.74; row committed). Seeds 1-4 = RAL array 367140 (%1, euclid-ral-gpu-2). Next: sacct -j 367140; scp euclid_jump:/mnt/ral/jnightin/autolens_inference-wt-psleaf/results/searches/point_source/nautilus/simple/source_plane_solved/hpc_a100_jax_cpu_dense_fp64/search_seed{1..4}.{json,png} into the same path in the local worktree (+ hpc/batch_cpu/{output,error}/*367140* logs by hand); check each seed recovers truth; build_readme.py; wiki admission-bar entry (wiki/project/state.md); scripts/point_source/searches/README.md leaf note; ruff/pytest/check_submits; /ship_workspace to PR (Heart YELLOW ack: PyAutoMemory open PR 7d old; other YELLOW -> DRAFT); then remove RAL worktree: cd /mnt/ral/jnightin/autolens_inference && git worktree remove /mnt/ral/jnightin/autolens_inference-wt-psleaf"
+
+## profiling-summary-v1
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/359
+- issued: 2026-10-02
+- prompt: active/profiling_summary_v1_exporter.md
+- epic: profiling-organ-birth
+- session: Claude Code remote (web), https://claude.ai/code/session_01B5uEFSAb34aK5R6PTX7jJm, 2026-10-02
+- location: remote-clone (/home/user/autolens_profiling in the session container; no task worktree)
+- status: workspace-dev
+- autonomy: supervised (header); human said "start_dev phase 1" 2026-10-02; plan on the issue
+- repos:
+  - autolens_profiling: feature/profiling-summary-v1
+- summary: PyAutoPulse phase 1 — `build_dashboard.py` gains `dashboard/summary.json`, the `profiling-summary` v1 project→organ read contract (envelope, records, producer drift comparisons, coverage, limitations), self-validated, published beside series.json; series/state/index byte-identical.

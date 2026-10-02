@@ -9,7 +9,9 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: issued
+Issued: 2026-10-02
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/359
 Consequence: judge
 Witness: `python scripts/misc/tooling/build_dashboard.py` also writes `dashboard/summary.json` (`schema: profiling-summary`, `version: 1`) and `--check` is idempotent on it; `pytest scripts/misc/test/test_build_dashboard.py` covers the envelope, the record grammar and every rejection case; `lint.yml` green; `series.json`, `state.json`, `index.html` and the drift badge byte-identical to before
 Review-minutes: 12
