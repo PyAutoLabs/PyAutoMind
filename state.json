@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 11 in flight",
-  "updated": "2026-10-02T11:06:17Z",
+  "updated": "2026-10-02T11:12:32Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "Benchmark card: forward-model consistency across imaging, point_source and interferometer \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autolens_assistant/pull/146",
       "prompt": "Use the start-dev skill. active/benchmark_forward_model_consistency.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Final numerics audit of every mesh interpolator \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/611",
+      "prompt": "Use the start-dev skill. active/final_numerics_audit_of_every_mesh_interpolator.md"
     },
     {
       "severity": "yellow",
@@ -47,6 +53,12 @@
       "severity": "yellow",
       "text": "pending release: .github .github#16 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/.github/pull/16",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#611 \u2014 Final numerics audit of every mesh interpolator",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/611",
       "prompt": null
     },
     {
@@ -113,18 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#591 \u2014 sparse-data-none-guard",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/591",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#586 \u2014 sparse-operator-oversampling-cache",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/586",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#593 \u2014 streaming-p1-array-free-dataset",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/593",
       "prompt": null
     }
   ]
