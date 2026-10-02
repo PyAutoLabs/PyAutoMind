@@ -23,7 +23,7 @@ Split out of `point-source-cpu-p4` at close-out on 2026-09-27. Phase 4a shipped 
 The phase-4 code levers have their own prompts:
 - phase 4b: shipped 2026-09-27, record `complete/2026/09/pointsolver-step0-gather.md` (PyAutoArray#580, autolens_profiling#330)
 - phase 4c: shipped 2026-09-27, record `complete/2026/09/pointsolver-mcs-headroom.md` (PyAutoArray#584, PyAutoLens#753, autolens_profiling#335)
-- the extent warning: `draft/feature/autolens/pointsolver_extent_sanity_check.md`
+- the extent warning: `complete/2026/10/pointsolver-extent-sanity-check.md`
 - per-package extents: `draft/feature/autolens_workspace/pointsolver_grid_extent_per_package.md`
 
 This prompt holds only the phase 1–3 leftovers that no other prompt carries. Pick it up after the

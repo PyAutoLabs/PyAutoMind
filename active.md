@@ -31,28 +31,6 @@
 - ci: wiki-currency PASS; clone-boundary FAIL on five benchmarks/datasets/positions_initialised_inference files (run 37000939518).
 - resume: PR 147 open; DO NOT MERGE until clone-boundary resolved. Brain REFERENCE_PROFILES lacks benchmarks/datasets domain classification; needs matching assistant modes/maintainer.md + Brain classification or reviewed layout resolution preserving frozen-card evidence. Cross-repo follow-up not undertaken because human requested wrapping at PR-open. Heart YELLOW reasons explicitly acknowledged in-session 2026-10-02 for this development PR only. Human requested ending bundle here and queued bootstrap/Colab in parked.md. All owned compute stopped. Logs in .worktrees/assistant/scratch/positions-*.log. No merge authorization.
 
-
-
-## pointsolver-extent-sanity-check
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/763
-- issued: 2026-10-02
-- prompt: active/pointsolver_extent_sanity_check.md
-- epic: point-source-cpu-speed
-- session: Codex; session ID unavailable
-- status: library-merged, awaiting-release
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/pointsolver-extent-sanity-check
-- repos:
-  - PyAutoLens: feature/pointsolver-extent-sanity-check
-  - autolens_workspace_test: feature/pointsolver-extent-sanity-check
-  - autolens_profiling: feature/pointsolver-extent-sanity-check (campaign ledger only)
-- coordination: Human approved the plan and concurrent disjoint workspace-test changes on 2026-10-02. Workspace scope is new scripts/point_source/jax_likelihood/solver_extent.py and its smoke list/profile entry; preserve all other tasks' edits.
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/764
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/338
-- campaign-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/363
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/764
-- release-gate: PyAutoLens
-- resume: prm verified all 8 exact-head CI jobs green and Heart not frozen. PyAutoLens#764 merged 0dd420877; profiling#363 merged 134695058. Workspace#338 remains open/green behind its PyAutoLens release gate; latest release 2026.10.2.1 predates this merge and no fetched tag contains it. After a release contains #764, resume prm for workspace merge and full close-out. Issue/prompt/claims/worktrees retained; no second phase issued.
-
 ## evaluation-grid-cap-field
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/645
 - issued: 2026-10-02
