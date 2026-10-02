@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 4 |
 | [Planned](#planned) (`planned.md`) | 5 |
-| [Backlog](#backlog) (`draft/`) | 257 |
+| [Backlog](#backlog) (`draft/`) | 260 |
 
 > **No batch in flight.**
 
@@ -652,7 +652,7 @@ Use the route skill. start the planned PyAutoMind task latent-nan-guard-honest-r
 
 ## Backlog
 
-**257** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **57** of them belong to an epic and are listed only under [Epics](#epics) below.
+**260** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **60** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 77</summary>
@@ -2657,6 +2657,43 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 ## Epics
 
 Long-running multi-phase programmes. Each epic's 📋 prompt has the assistant read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
+
+<details>
+<summary><b>PyAutoPulse — the cross-project dashboard layer above the <code>&lt;lib&gt;_profiling</code> project repos: instance registry, <code>profiling-summary</code> read contract, organ board, cockpit transition</b> — 3 queued prompt(s), in order</summary>
+
+<details><summary>📋 <b>PyAutoPulse — the cross-project dashboard layer above the <code>&lt;lib&gt;_profiling</code> project repos: instance registry, <code>profiling-summary</code> read contract, organ board, cockpit transition</b> — ledger: `draft/feature/pyautomind/profiling_organ_p0_name_row_and_boundaries.md` — filed 2026-10-02; name decided 2026-10-02 (PyAutoPulse, key <code>pulse</code>); phase 1 COMPLETE 2026-10-02 (autolens_profiling#359 closed…</summary>
+
+```
+Continue the 'PyAutoPulse — the cross-project dashboard layer above the `<lib>_profiling` project repos: instance registry, `profiling-summary` read contract, organ board, cockpit transition' epic. Its canonical state lives in draft/feature/pyautomind/profiling_organ_p0_name_row_and_boundaries.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: human request 2026-10-02 to begin the organ filed from the 2026-10-01 intake; design authority is `PyAutoBrain/docs/research/profiling_inference_organs.md` (Brain #444, read contracts and acceptance cases) on `ecosystem_levels.md` (Brain #440, roles not hierarchy) — do not re-derive either. Same layering as PyAutoEyes over `<lib>_visualization` (precedent `complete/2026/09/pyautoeyes-organ-decision.md`): project repos own producers, results, drift policy and their own Pages page; the organ owns the registry, the versioned read contract, ingest receipts and the cross-project board; the Brain's profiling conductor is the only judge. Phases under `draft/feature/`: 0 name + organ row + boundaries (`pyautomind/profiling_organ_p0_name_row_and_boundaries.md`, human-gated: fresh `gh repo create PyAutoLabs/PyAutoPulse`, org-profile row; name decided by the human 2026-10-02 — PyAutoPulse, organ key `pulse`; an earlier repo of that name became PyAutoHeart, so this is a fresh create), 1 `profiling-summary` v1 exporter in autolens_profiling (done: `complete/2026/10/profiling-summary-v1.md`, PR autolens_profiling#360), 2 organ skeleton — registry, reader, receipts, board, workflows (`pyautopulse/profiling_organ_p2_skeleton_registry_reader_board.md`), 3 Brain board strip + cockpit identity transition (`pyautopulse/profiling_organ_p3_brain_board_cockpit_transition.md`; supersedes `pyautobrain/register_profiling_dashboard_on_brain_board.md` unless that ships first), 4 second real `<lib>_profiling` adopter — no prompt until a real producer exists (spec: never manufacture empty siblings; a fixture is phase 2). Repoint the ledger to `PyAutoPulse/dashboard.md` once phase 2 lands. Issue ONE phase at a time. The inference organ is a separate epic, not started.
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautomind/profiling_organ_p0_name_row_and_boundaries.md">Profiling organ phase 0 — name the organ, register its row, write…</a> — pyautomind · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautomind/profiling_organ_p0_name_row_and_boundaries.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautopulse/profiling_organ_p2_skeleton_registry_reader_board.md">Profiling organ phase 2 — the organ skeleton: registry, reader, board, workflows</a> — pyautopulse · large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautopulse/profiling_organ_p2_skeleton_registry_reader_board.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautopulse/profiling_organ_p3_brain_board_cockpit_transition.md">Profiling organ phase 3 — Brain board card and cockpit transition</a> — pyautopulse · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautopulse/profiling_organ_p3_brain_board_cockpit_transition.md
+```
+
+</details>
+
+</details>
 
 <details>
 <summary><b>Point-source (single-source) PointSolver CPU speed-up</b> — 5 queued prompt(s), in order</summary>
