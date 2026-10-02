@@ -89,12 +89,18 @@
 - issued: 2026-10-02
 - prompt: active/over_sample_size_via_snr_from.md
 - session: Codex GPT-6; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/autoarray-bundle-1
 - repos:
   - PyAutoArray: feature/over-sample-snr-helper
   - PyAutoGalaxy: feature/over-sample-snr-helper
 - resume: Bundle autoarray — bundle 1; plan and branch approved 2026-10-02. One execution delegate per member; sequential shared worktrees; linked companion PRs authorized. Preserve unregistered sparse-operator-oversampling-cache worktree. Parent owns lifecycle and shipping. No merge authorization.
+
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/606
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/644
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/606
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/644
+- validation: Array 1922 passed, Galaxy 1307 passed, focused 23 passed; downstream API/equivalence passed; Heart GREEN. Logs in shared worktree scratch/snr-helper. Commits 54c360be / ba7c70dc. PRs open, merge remains human. Shared Array worktree advanced to next member.
 
 ## mesh-interpolator-numerics-audit
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/603
