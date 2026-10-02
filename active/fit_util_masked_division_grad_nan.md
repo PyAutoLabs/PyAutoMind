@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: safe
 Priority: medium
 Status: formalised
+Issued: 2026-10-02
 Consequence: glance
 Witness: A `jax.grad` test on each of the three `fit_util.py` `xp.where` division sites (`chi_squared_map_with_mask_from`, `residual_flux_fraction_map_from`, `residual_flux_fraction_map_with_mask_from`) asserts a finite gradient with a masked-out pixel carrying zero noise or zero data, a forward test covers the unmasked-zero-data case at the `_with_mask` site, and forward NumPy and JAX values are unchanged.
 Review-minutes: 3

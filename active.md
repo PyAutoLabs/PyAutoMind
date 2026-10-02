@@ -16,13 +16,65 @@
 - issued: 2026-09-28
 - prompt: active/point_source_search_nautilus_leaf.md
 - epic: point-source-cpu-speed
-- session: Claude Code CLI (Opus 5.5 main session + Opus subagent), 2026-09-28; session ID unavailable
-- status: workspace-dev
+- session: Codex, resumed 2026-10-02; approved 2026-09-28 plan retained
+- status: awaiting-merge
 - autonomy: supervised (header); plan approved in-session 2026-09-28 (workspace-only, no library edits)
 - worktree: ~/Code/PyAutoLabs-wt/point-source-search-nautilus-leaf
 - repos:
   - autolens_inference: feature/point-source-search-nautilus-leaf
-- resume: "Branch pushed (2307eea), NO PR yet. Probe RAL job 366937 COMPLETED (seed 0: wall_s 56.6 s, 4,850 evals, per_call 4.72 us batched, likelihood_share 0.041% [single-basis 1.8%], all truth |dsigma|<0.74; row committed). Seeds 1-4 = RAL array 367140 (%1, euclid-ral-gpu-2). Next: sacct -j 367140; scp euclid_jump:/mnt/ral/jnightin/autolens_inference-wt-psleaf/results/searches/point_source/nautilus/simple/source_plane_solved/hpc_a100_jax_cpu_dense_fp64/search_seed{1..4}.{json,png} into the same path in the local worktree (+ hpc/batch_cpu/{output,error}/*367140* logs by hand); check each seed recovers truth; build_readme.py; wiki admission-bar entry (wiki/project/state.md); scripts/point_source/searches/README.md leaf note; ruff/pytest/check_submits; /ship_workspace to PR (Heart YELLOW ack: PyAutoMemory open PR 7d old; other YELLOW -> DRAFT); then remove RAL worktree: cd /mnt/ral/jnightin/autolens_inference && git worktree remove /mnt/ral/jnightin/autolens_inference-wt-psleaf"
+  - autolens_profiling: feature/point-source-search-nautilus-leaf
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/17
+- ledger-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/361
+- ledger-worktree: /home/jammy/Code/PyAutoLabs/.worktrees/point-source-resume/autolens_profiling
+- resume: "All five RAL seeds recovered and imported (366937 + 367140), identical recorded library revisions, max truth offset 0.74 sigma; estimated warmed batched likelihood share 0.0405–0.0447%, wall 50.38–58.51 s. Inference results/docs and profiling campaign reconciliation prepared. 78 tests, ruff, dashboard, wall-submit checks pass; Heart GREEN 2026-10-02. PRs open: autolens_inference#17 (e76566b) and autolens_profiling#361. Leaf import smoke passed. CI pending when checked. Next: human /prm when checks are green; no new phase issued. Keep RAL worktree/output until bulk outputs are preserved; do not force-remove it."
+
+## benchmark-forward-model-consistency
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/142
+- issued: 2026-10-02
+- prompt: active/benchmark_forward_model_consistency.md
+- session: Codex; session ID unavailable
+- status: workspace-dev
+- bundle: assistant
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/assistant
+- repos:
+  - autolens_assistant: feature/benchmark-forward-model-consistency
+- resume: Plan approved 2026-10-02. Sequential execution in shared worktree; one issue and PR per member. Merge remains human.
+
+## benchmark-positions-inference
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/143
+- issued: 2026-10-02
+- prompt: active/benchmark_positions_initialised_inference.md
+- session: Codex; session ID unavailable
+- status: workspace-dev
+- bundle: assistant
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/assistant
+- repos:
+  - autolens_assistant: feature/benchmark-positions-inference
+- resume: Plan approved 2026-10-02. Sequential execution in shared worktree; one issue and PR per member. Merge remains human.
+
+## bootstrap-smoke-codex
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/144
+- issued: 2026-10-02
+- prompt: active/bootstrap_smoke_codex_and_bench_pr.md
+- session: Codex; session ID unavailable
+- status: workspace-dev
+- bundle: assistant
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/assistant
+- repos:
+  - autolens_assistant: feature/bootstrap-smoke-codex
+- resume: Plan approved 2026-10-02. Sequential execution in shared worktree; one issue and PR per member. Merge remains human.
+
+## colab-refinement-throughout
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/145
+- issued: 2026-10-02
+- prompt: active/colab_refinement_throughout.md
+- session: Codex; session ID unavailable
+- status: workspace-dev
+- bundle: assistant
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/assistant
+- repos:
+  - autolens_assistant: feature/colab-refinement-throughout
+- resume: Plan approved 2026-10-02. Sequential execution in shared worktree; one issue and PR per member. Merge remains human.
 
 ## critical-curves-dispatch-audit
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/337
@@ -35,3 +87,51 @@
 - repos:
   - autolens_workspace_test: feature/critical-curves-dispatch-audit
 - resume: Plan approved with “go”; standalone CPU research, phase 3a. Implement bounded current-dispatch and geometry/timing audit, validate, ship_workspace. Concurrent unissued cluster_curves_engine_dispatch draft remains a candidate pending these results. No later issue queue.
+
+## over-sample-snr-helper
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/602
+- issued: 2026-10-02
+- prompt: active/over_sample_size_via_snr_from.md
+- session: Codex GPT-6; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/autoarray-bundle-1
+- repos:
+  - PyAutoArray: feature/over-sample-snr-helper
+  - PyAutoGalaxy: feature/over-sample-snr-helper
+- resume: Bundle autoarray — bundle 1; plan and branch approved 2026-10-02. One execution delegate per member; sequential shared worktrees; linked companion PRs authorized. Preserve unregistered sparse-operator-oversampling-cache worktree. Parent owns lifecycle and shipping. No merge authorization.
+
+## mesh-interpolator-numerics-audit
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/603
+- issued: 2026-10-02
+- prompt: active/final_numerics_audit_of_every_mesh_interpolator.md
+- session: Codex GPT-6; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/autoarray-bundle-1
+- repos:
+  - PyAutoArray: feature/mesh-interpolator-numerics-audit
+  - autolens_workspace_test: feature/mesh-interpolator-numerics-audit
+- resume: Bundle autoarray — bundle 1; approved plan 2026-10-02. Sequential shared worktrees; branch selected only when prior member is shipped. Linked companion PRs and coordination with critical-curves-dispatch-audit explicitly authorized by user. Preserve all other worktrees. No merge authorization.
+
+## fit-util-masked-division
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/604
+- issued: 2026-10-02
+- prompt: active/fit_util_masked_division_grad_nan.md
+- session: Codex GPT-6; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/autoarray-bundle-1
+- repos:
+  - PyAutoArray: feature/fit-util-masked-division
+  - autolens_workspace_test: feature/fit-util-masked-division
+- resume: Bundle autoarray — bundle 1; approved plan 2026-10-02. Sequential shared worktrees; branch selected only when prior member is shipped. Linked companion PRs and coordination with critical-curves-dispatch-audit explicitly authorized by user. Preserve all other worktrees. No merge authorization.
+
+## mesh-geometry-transformed-areas
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/605
+- issued: 2026-10-02
+- prompt: active/mesh_geometry_areas_transformed_adapt_image_indexerror.md
+- session: Codex GPT-6; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/autoarray-bundle-1
+- repos:
+  - PyAutoArray: feature/mesh-geometry-transformed-areas
+  - autolens_workspace_test: feature/mesh-geometry-transformed-areas
+- resume: Bundle autoarray — bundle 1; approved plan 2026-10-02. Sequential shared worktrees; branch selected only when prior member is shipped. Linked companion PRs and coordination with critical-curves-dispatch-audit explicitly authorized by user. Preserve all other worktrees. No merge authorization.
