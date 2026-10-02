@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 12 in flight",
-  "updated": "2026-10-02T09:52:34Z",
+  "updated": "2026-10-02T10:13:12Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "Critical-curve dispatch: current cluster evidence and contract \u2014 workspace-dev, blocked-at-ship-gate",
       "url": "https://github.com/PyAutoLabs/autolens_workspace_test/issues/337",
       "prompt": "Use the start-dev skill. active/critical_curves_dispatch_audit.md"
+    },
+    {
+      "severity": "red",
+      "text": "fit_util: masked divisions NaN the gradient on the JAX path \u2014 awaiting-input",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/607",
+      "prompt": "Use the start-dev skill. active/fit_util_masked_division_grad_nan.md"
     },
     {
       "severity": "yellow",
@@ -41,6 +47,12 @@
       "severity": "yellow",
       "text": "pending release: .github .github#16 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/.github/pull/16",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#607 \u2014 fit_util: masked divisions NaN the gradient on the JAX path",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/607",
       "prompt": null
     },
     {
@@ -113,18 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#597 \u2014 streaming-p3-visualizer",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/597",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#599 \u2014 streaming-p4-light-profile-identity",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/599",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#601 \u2014 streaming-p5-cubes-phase-centre",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/601",
       "prompt": null
     }
   ]

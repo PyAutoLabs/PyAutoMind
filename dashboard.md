@@ -300,7 +300,7 @@ Use the start-dev skill. active/final_numerics_audit_of_every_mesh_interpolator.
 
 </details>
 
-<details><summary>📋 <a href="active/fit_util_masked_division_grad_nan.md">fit_util: masked divisions NaN the gradient on the JAX path</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/604">issue #604</a> — issued 2026-10-02 — library-dev</summary>
+<details><summary>📋 <a href="active/fit_util_masked_division_grad_nan.md">fit_util: masked divisions NaN the gradient on the JAX path</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/604">issue #604</a> — issued 2026-10-02 — awaiting-input — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/607">PyAutoArray#607</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 Use the start-dev skill. active/fit_util_masked_division_grad_nan.md
@@ -358,6 +358,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#607](https://github.com/PyAutoLabs/PyAutoArray/pull/607) — `active/fit_util_masked_division_grad_nan.md`
 - [PyAutoArray#606](https://github.com/PyAutoLabs/PyAutoArray/pull/606) — `active/over_sample_size_via_snr_from.md`
 - [PyAutoArray#576](https://github.com/PyAutoLabs/PyAutoArray/pull/576) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - [PyAutoArray#582](https://github.com/PyAutoLabs/PyAutoArray/pull/582) — `complete/2026/09/interferometer-sparse-cache.md`
