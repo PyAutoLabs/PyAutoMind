@@ -1,5 +1,7 @@
 # Complete Heart monitoring score and repair coverage
 
+Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/267
+Issued: 2026-10-02
 Type: bug
 Priority: high
 Difficulty: medium
@@ -22,7 +24,7 @@ Published board timestamp 2026-10-01T20:28:06.722401+00:00: release verdict gree
 
 Current score is readiness.compute's weighted release penalties. dashboard.build_fix_plan already includes section summaries and full evidence references, but the health conductor's documented completion condition is release GREEN. Grey local rows use a generic tick/publish action; establish per-family refresh requirements rather than assuming this gathers every deep check.
 
-## Implementation plan awaiting approval
+## Implementation plan approved 2026-10-02
 
 1. Heart: audit all registered checks and all dashboard projections; build a complete structured findings/coverage inventory with stable identity, status, applicability, freshness, source and remedy. Include nested performance rows, skipped scripts, omitted observations and expected-but-missing checks.
 2. Heart: calculate transparent monitoring penalties from that inventory; 100 iff all applicable checks are fresh green. Keep readiness.compute's release gate and its score available under explicit release labels; update HTML, JSON, terminal, Markdown, badge and state consumers consistently, preserving compatible fields where necessary.
@@ -32,3 +34,16 @@ Current score is readiness.compute's weighted release penalties. dashboard.build
 
 Proposed branch: feature/heart-monitoring-coverage
 Primary repo: PyAutoHeart. Supporting repo: PyAutoBrain. Infrastructure development via start-library/ship-library.
+
+## Implemented — awaiting merge
+
+- Heart PR: https://github.com/PyAutoLabs/PyAutoHeart/pull/268 (draft pending Brain).
+- Brain PR: https://github.com/PyAutoLabs/PyAutoBrain/pull/446 (merge first).
+- Both branches: feature/heart-monitoring-coverage. Heart head 70e1177; Brain head cfe5c97.
+- Worktree: /home/jammy/Code/PyAutoLabs/.worktrees/heart-monitoring-coverage.
+- Full tests: Heart 1168 passed; Brain 1141 passed. Collector timestamp tests 34 passed. Tenant firewall and whitespace checks pass. Independent bounded review: no remaining blockers.
+- End-to-end captured board: monitoring RED/42/incomplete; release GREEN/100 unchanged. New health dashboard scope retains all findings and does not exit successfully at release GREEN.
+- Authoritative vitals GREEN at shipping; no source-library API impact or scientific workspace smoke requirement.
+- Full logs: task root logs/{heart-suite-final,brain-suite,heart-collectors,tenant-firewall}.log; local preview.html and board.json.
+- Source observation timestamps added to collectors; older undated or partial published evidence stays unresolved until refreshed and republished. Underlying advisory repairs remain work for the expanded button.
+- Next: /prm; merge Brain #446 first, mark Heart #268 ready and merge after its checks pass. No merge or release authority in this session. Published board changes only after merge/publish.
