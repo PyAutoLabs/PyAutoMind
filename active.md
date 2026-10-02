@@ -45,9 +45,12 @@
 - prompt: active/pulse_public_links.md
 - epic: profiling-organ-birth
 - session: Claude Code CLI (Fable 5.1); session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/pulse-public-links
 - repos:
   - pyautolabs.github.io: feature/pulse-public-links
   - .github: feature/pulse-public-links
+- library-pr: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/26
+- library-pr: https://github.com/PyAutoLabs/.github/pull/26
+- pending-release: pyautolabs.github.io@https://github.com/PyAutoLabs/pyautolabs.github.io/pull/26
 - resume: Two one-liners left from the Pulse organ birth: `.github/profile/README.md` organ-table Pulse row (after Hands) and hub `index.html` link to the Pulse board. Edits in-session; ship two PRs at PR-open; merge /prm.
