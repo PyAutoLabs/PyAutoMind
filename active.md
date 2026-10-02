@@ -45,9 +45,13 @@
 - prompt: active/profiling_organ_p3_brain_board_cockpit_transition.md
 - epic: profiling-organ-birth
 - session: Claude Code CLI (Fable 5.1); session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/pyautopulse-brain-board-cockpit
 - repos:
   - PyAutoBrain: feature/pyautopulse-brain-board-cockpit
   - pyautolabs.github.io: feature/pyautopulse-brain-board-cockpit
-- resume: Phase 3 of profiling-organ-birth, NARROWED by the human 2026-10-02 to Brain strip + conductor prose + hub cockpit card; autolens_profiling identity change split to draft/feature/autolens_profiling/cockpit_feed_project_identity.md (blocked on evaluation-grid-cap-field). Plan on PyAutoBrain#450. Implementation delegated to Opus in the worktree; ship via /ship_library (hub PR + Brain PR), end at PR-open; /prm merges; close-out retires draft/feature/pyautobrain/register_profiling_dashboard_on_brain_board.md.
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/451
+- library-pr: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/24
+- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/451
+- pending-release: pyautolabs.github.io@https://github.com/PyAutoLabs/pyautolabs.github.io/pull/24
+- resume: Shipped 2026-10-02 (Heart YELLOW 85 acknowledged by human). Two independent PRs open: PyAutoBrain#451 (Pulse strip, conductor prose, organ doc; full pytest 1142 passed) and pyautolabs.github.io#24 (Pulse cockpit card; node check + cockpit-state 10/10). Merge via /prm, either order. Close-out: retire draft/feature/pyautobrain/register_profiling_dashboard_on_brain_board.md against the record. Follow-ups: autolens_profiling cockpit-feed identity (filed, blocked); optional hub index.html Pulse-board link.
