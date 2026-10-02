@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 12 in flight",
-  "updated": "2026-10-02T09:05:30Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 11 in flight",
+  "updated": "2026-10-02T09:08:08Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -18,12 +18,6 @@
       "text": "Add `over_sample_size_via_snr_from` so a signal-to-noise map can steer over-sampling without a second\u2026 \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/606",
       "prompt": "Use the start-dev skill. active/over_sample_size_via_snr_from.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "First point-source search leaf: Nautilus on the source-plane solved likelihood (admission bar) \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autolens_inference/pull/17",
-      "prompt": "Use the start-dev skill. active/point_source_search_nautilus_leaf.md"
     },
     {
       "severity": "yellow",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#601 \u2014 streaming-p5-cubes-phase-centre",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/601",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoBrain PyAutoBrain#446 \u2014 Complete Heart monitoring score and repair coverage",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/446",
       "prompt": null
     }
   ]
