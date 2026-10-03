@@ -7,7 +7,14 @@
 - epic: community-organ-birth
 - session: Codex Work; session ID unavailable
 - location: /tmp/feedback-distribution (standalone clones)
-- status: workspace-dev
+- status: awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/458
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/149
+- workspace-pr: https://github.com/PyAutoLabs/autofit_assistant/pull/53
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/32
+- workspace-pr: https://github.com/PyAutoLabs/autocti_assistant/pull/34
+- validation: 1168 Brain tests; 67 focused after boundary correction; four discovery/generation checks; two synthetic feedback checks passed.
+- resume: Human /prm across all five PRs, Brain first; do not close phase 4 until all companions merge.
 - repos:
   - PyAutoBrain: feature/assistant-feedback-distribution
   - autolens_assistant: feature/assistant-feedback-distribution

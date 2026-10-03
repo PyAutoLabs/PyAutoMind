@@ -252,7 +252,7 @@ Use the start-dev skill. draft/research/pyautohands/git_docs.md
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/assistant_feedback_distribution.md">Distribute portable feedback to assistants</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/148">issue #148</a> — issued 2026-10-03 — workspace-dev</summary>
+<details><summary>📋 <a href="active/assistant_feedback_distribution.md">Distribute portable feedback to assistants</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/148">issue #148</a> — issued 2026-10-03 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/458">PyAutoBrain#458</a>, <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/149">autolens_assistant#149</a>, <a href="https://github.com/PyAutoLabs/autofit_assistant/pull/53">autofit_assistant#53</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_assistant/pull/32">autogalaxy_assistant#32</a>, <a href="https://github.com/PyAutoLabs/autocti_assistant/pull/34">autocti_assistant#34</a></summary>
 
 ```
 Use the start-dev skill. active/assistant_feedback_distribution.md
