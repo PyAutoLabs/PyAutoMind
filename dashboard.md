@@ -252,7 +252,7 @@ Use the start-dev skill. draft/research/pyautohands/git_docs.md
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/ears_followthrough.md">Community follow-through</a> — <a href="https://github.com/PyAutoLabs/PyAutoEars/issues/6">issue #6</a> — issued 2026-10-03 — workspace-dev</summary>
+<details><summary>📋 <a href="active/ears_followthrough.md">Community follow-through</a> — <a href="https://github.com/PyAutoLabs/PyAutoEars/issues/6">issue #6</a> — issued 2026-10-03 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/459">PyAutoBrain#459</a>, <a href="https://github.com/PyAutoLabs/PyAutoEars/pull/7">PyAutoEars#7</a></summary>
 
 ```
 Use the start-dev skill. active/ears_followthrough.md

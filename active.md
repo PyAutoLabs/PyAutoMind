@@ -7,7 +7,11 @@
 - epic: community-organ-birth
 - session: Codex Work; session ID unavailable
 - location: /tmp/ears-followthrough (standalone clones)
-- status: workspace-dev
+- status: awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/459
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoEars/pull/7
+- validation: Ears 59 passed; Brain 1132 passed / 42 environment skips; 48 focused community tests; tenant firewall and cockpit contract pass. Browser smoke pending existing CI after local download failure.
+- resume: Judge all exact-head CI including browser smoke, human /prm Brain first then Ears; no release or automatic replies.
 - repos:
   - PyAutoEars: feature/ears-followthrough
   - PyAutoBrain: feature/ears-followthrough

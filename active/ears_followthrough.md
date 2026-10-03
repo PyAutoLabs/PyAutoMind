@@ -30,3 +30,37 @@ Verify each target repo is public before reading or exporting its links. Read is
 Extend snapshot v1 with a strictly validated optional follow_through projection, preserving old snapshots. Gather public Discussion body/comment evidence (including replies and closed discussions), discard bodies after projection. Render delivery evidence and portable draft prompts in ears/board.py and forward validated follow-through in Brain's _ears_feed.py; skill tells Brain to compose updates for approval from evidence only. Tests cover live collector wiring and schema safety, not just the reducer.
 
 Fresh standalone clones /tmp/ears-followthrough; branch feature/ears-followthrough in Ears and Brain. No active claim conflicts. Memory consulted: no existing follow-through implementation found. Existing whole-programme development authorization continues. Heart has the same previously acknowledged RED reasons; no release or CI bypass.
+
+
+## PR handoff
+- https://github.com/PyAutoLabs/PyAutoBrain/pull/459 — 65af04a025333a68aff5db00e65b4405f8d09931
+- https://github.com/PyAutoLabs/PyAutoEars/pull/7 — 1c421a785bd919ed5f4168835be0222de01fb2da
+
+59 Ears tests passed. Brain: 1132 passed, 42 environment skips; 48 focused community/adapter tests passed. Tenant firewall and cockpit state contract pass. Existing Ears browser CI must validate rendering/copy; local Chromium download returned a corrupt archive. Source PRs await human /prm, Brain first. No posting, release, or current production deployment claimed.
+
+Evidence convention also includes explicit Delivery-update: <release URL> after publication. Ordinary release mentions do not clear update owed. Later branch reverts require a source revert link or reopened issue; not a semantic audit of all future commits.
+
+Ship-time Heart RED reasons (existing programme development authorization):
+```
+  [red] release validation FAILED (stage integrate)
+  [red] PyAutoHeart/workflows/Release Integrate: failure
+  [red] PyAutoArray/Tests: red
+  [red] PyAutoArray/Tests: red
+  [red] PyAutoFit/Tests: red
+  [red] autofit_workspace_test/Smoke Tests: red
+  [red] autogalaxy_workspace_test/Smoke Tests: red
+  [red] autolens_workspace_test/Smoke Tests: red
+  [red] CI wall-clock: 26 gates · slowest PyAutoBrain Nightly Release 83m · 1 slowed · 6 hang events
+  [red] Release readiness: release validation FAILED (stage integrate)
+  [red] PyAutoCTI/test_autocti/extract/two_d/parallel/test_parallel_fpr.py::test__estimate_capture: red
+  [red] PyAutoNerves/test_autonerves/test_fitsable.py::test__output_to_fits: red
+  [red] Unit-test timing: 3 test regressions (>3× baseline), 1 slow (>1.5×)
+  [red] autolens_test: red
+  [red] Release validation: NOT release_ready — v2026.10.3.1.dev79901 profile=release (2026-10-03T07:43:31+00:00)
+  [red] validation_report/stages/integrate: fail
+  [red] autolens_assistant: red
+  [red] autolens_profiling: red
+  [red] autolens_workspace_test: red
+  [red] Worktree drift: 0 orphan / 0 missing / 4 dirty
+  [red] euclid_strong_lens_modeling_pipeline: red
+```
