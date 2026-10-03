@@ -47,8 +47,8 @@ PR-open until human `/prm`. Do not turn this programme into a second tracker.
 | Phase | Deliverable | State / dependency |
 |---|---|---|
 | 0 | Portable solicited-feedback workflow | Merged 2026-10-03: Brain#454 / b065945; `complete/2026/10/community-feedback.md` |
-| 1 | Organ identity, boundaries and repository bootstrap | Human created repository 2026-10-03; standalone bootstrap Ears#1 / PR#2 merged (911a463); `complete/2026/10/ears-bootstrap.md`. Cross-organ identity propagation remains unissued. |
-| 2 | Collector extraction, read contracts and dashboard parity | Standalone collector/contracts/board merged in Ears PR#2; Brain adapter/extraction and live deployment remain outstanding. |
+| 1 | Organ identity, boundaries and repository bootstrap | Complete 2026-10-03: bootstrap Ears#2 plus integration Brain#456 / Mind#469 and companions; `complete/2026/10/ears-integration.md`. |
+| 2 | Collector extraction, read contracts and dashboard parity | Complete 2026-10-03: Ears#2/#3 and Brain#456; published feed, compatibility adapter and live Ears/cockpit deployment witnessed; `complete/2026/10/ears-integration.md`. |
 | 3 | Listening reliability and category-sensitive triage | Not issued; depends on 2 |
 | 4 | Assistant distribution of /feedback | Not issued; phase 0 merged; inspect existing assistant-template distribution before edits |
 | 5 | Follow-through from conversation to delivered work | Not issued; depends on 2–3 |
@@ -220,3 +220,18 @@ and Brain adapter integration phase. No new issue or active claim was created
 for this read-only deployment diagnosis. The same published Heart RED reasons
 (2026-10-03T10:12:06Z) remain covered by the existing development authorization;
 no release or source merge is authorized by this continuation alone.
+
+
+## 2026-10-03 integration complete
+
+Human `Prm` authorized all 13 integration PR merges; Brain#455 is closed.
+Completion: `complete/2026/10/ears-integration.md`. Canonical identity, generated
+maps, Brain feed adapter and public cockpit are shipped. Ears Pages activation
+was fixed by the human; production deployment 37129202159 attempt 2 succeeded.
+Live board: https://pyautolabs.github.io/PyAutoEars/ ; cockpit:
+https://pyautolabs.github.io/cockpit/ (deployment 37134336099 succeeded).
+Earlier activation blockers and PR-open statements above are historical.
+
+Source coverage remains honestly partial/unavailable where recorded. Next
+bounded work is phase 3 listening reliability/category-sensitive triage.
+Phases 4–6 remain unissued. Heart RED release restrictions remain; no release.

@@ -1,3 +1,39 @@
+## ears-integration
+
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/455
+- completed: 2026-10-03
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/456
+- library-pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/14
+- library-pr: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/27
+- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/295
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/182
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/272
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/55
+- library-pr: https://github.com/PyAutoLabs/PyAutoEars/pull/3
+- library-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/5
+- library-pr: https://github.com/PyAutoLabs/.github/pull/29
+- library-pr: https://github.com/PyAutoLabs/PyAutoGut/pull/19
+- library-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/40
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/469
+
+## Shipped
+
+Organ identity and generated maps register Ears across the organism. Brain consumes Ears public snapshot/state via a validated compatibility adapter; direct triage remains available. Cockpit and public entry points link the live dashboard.
+
+Human `Prm` authorized all 13 merges on 2026-10-03. Exact heads were verified and every PR confirmed merged. Brain merged first; Mind firewall and dashboard freshness then passed their dependency reruns. All configured applicable PR jobs passed. Spawn template publication is intentionally skipped on PR events; privacy tests passed. Five identity/docs/cockpit PRs have no PR jobs; recorded local validation and the human merge authorization cover them. No protection bypass.
+
+Live Ears: https://pyautolabs.github.io/PyAutoEars/
+Live cockpit: https://pyautolabs.github.io/cockpit/
+Cockpit Pages deployment 37134336099 succeeded; initial Ears production deployment 37129202159 attempt 2 succeeded. Both public URLs returned HTTP 200 after integration.
+
+Validation before shipping: Brain 1150, Mind 619, Ears 22, Heart 19 tests passed; Hands 7 passed/1 skipped; cockpit JavaScript 10 passed; Sphinx no warnings. Independent review CLEAN after excluded-only coverage and maintainer-casing fixes. Ears PR Chromium tests passed responsive light/dark and clipboard success/denial.
+
+Known bounds: nested Discussion reply coverage remains partial; euclid_assistant is unavailable. Unknown/stale evidence stays explicit. Heart remains RED for release; no release occurred. Listening reliability, assistant distribution, follow-through and synthesis remain later phases of community-organ-birth.
+
+Issue closed completed. Lifecycle close releases all source claims and folds the original prompt below; dashboard is regenerated with the record. Retained standalone development clones are not worktrees and their matching local working changes are preserved.
+
+## Original prompt
+
 # Integrate the live Ears organ
 
 Type: feature

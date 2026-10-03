@@ -42,7 +42,7 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 3 |
+| [In flight](#in-flight) (`active/`) | 2 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 6 |
 | [Planned](#planned) (`planned.md`) | 8 |
@@ -251,14 +251,6 @@ Use the start-dev skill. draft/research/pyautohands/git_docs.md
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
-
-<details><summary>📋 <a href="active/ears_integration.md">Integrate the live Ears organ</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/455">issue #455</a> — issued 2026-10-03 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/456">PyAutoBrain#456</a>, <a href="https://github.com/PyAutoLabs/PyAutoEyes/pull/14">PyAutoEyes#14</a>, <a href="https://github.com/PyAutoLabs/pyautolabs.github.io/pull/27">pyautolabs.github.io#27</a>, <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/295">PyAutoHands#295</a>, <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/182">PyAutoNerves#182</a>, <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/272">PyAutoHeart#272</a>, <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/55">PyAutoCortex#55</a>, <a href="https://github.com/PyAutoLabs/PyAutoEars/pull/3">PyAutoEars#3</a>, <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/5">PyAutoPulse#5</a>, <a href="https://github.com/PyAutoLabs/.github/pull/29">.github#29</a>, <a href="https://github.com/PyAutoLabs/PyAutoGut/pull/19">PyAutoGut#19</a>, <a href="https://github.com/PyAutoLabs/PyAutoScientist/pull/40">PyAutoScientist#40</a></summary>
-
-```
-Use the start-dev skill. active/ears_integration.md
-```
-
-</details>
 
 <details><summary>📋 <a href="active/evaluation_grid_cap_preserves_field.md">Preserve the LensCalc evaluation field when the grid cap activates</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/645">issue #645</a> — issued 2026-10-02 — library-merged, workspace-release-gated — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/646">PyAutoGalaxy#646</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/343">autolens_workspace_test#343</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/365">autolens_profiling#365</a> — ⏳ pending release: PyAutoGalaxy</summary>
 
@@ -2596,7 +2588,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-03 | issued | <a href="active/ears_integration.md">Integrate the live Ears organ</a> |
 | 2026-10-02 | filed | <a href="planned.md#timing-noise-audit">timing-noise-audit</a> |
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
 | 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
@@ -2606,12 +2597,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autolens_profiling/timing_noise_audit.md">Audit timing tests and profiling gates for measurement noise</a> |
+| 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
 | 2026-10-01 | filed | <a href="draft/docs/autolens_inference/reconcile_cortex_ledger_references.md">Reconcile inference documentation with the current Cortex ledger…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
@@ -2621,12 +2612,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/power_law_multipole_m1_singular_at_isothermal_slope.md">PowerLawMultipole with m=1 returns -inf / NaN deflections at slope…</a> |
+| 2026-09-27 | filed | <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-27 | filed | <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently…</a> |
 | 2026-09-27 | filed | <a href="draft/feature/autolens_inference/drop_1e3_prior_centring_after_631.md">Drop the 1e-3 prior centring for shear / multipole / ell_comps…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
 | 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
@@ -2636,12 +2627,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-24 | filed | <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> |
 | 2026-09-24 | filed | <a href="draft/research/autoarray/mge_nnls_fix_pyautoarray_571_slam_60.md">Linear-solver programme phase 3: GPU/vmap/A100 timing and parity rows…</a> |
 | 2026-09-23 | filed | <a href="draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
+| 2026-09-22 | issued | <a href="active/vis_lp_inspection_bundle.md">Support vis_lp-only products in inspection bundles</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-22 | issued | <a href="active/vis_lp_inspection_bundle.md">Support vis_lp-only products in inspection bundles</a> |
 | 2026-09-19 | issued | <a href="parked.md#catalogue-inspection-before-vis-pix">catalogue-inspection-before-vis-pix</a> |
 | 2026-09-18 | parked | <a href="parked.md#fixed-light-numba-s7">fixed-light-numba-s7</a> |
 | 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
@@ -2651,12 +2642,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-18 | filed | <a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
+| 2026-09-17 | filed | <a href="draft/bug/pyautobrain/sizing_faculty_none_rule_keyword_false_judge_triage.md">Sizing faculty: a <code>none</code> rule, keyword hits on prose that only…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-17 | filed | <a href="draft/bug/pyautobrain/sizing_faculty_none_rule_keyword_false_judge_triage.md">Sizing faculty: a <code>none</code> rule, keyword hits on prose that only…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> |
 | 2026-09-17 | filed | <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> |
 | 2026-09-17 | filed | <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source A100 speed-up campaign: profile and optimize with the…</a> |
@@ -2666,6 +2657,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/refactor/autofit/ep_analysis_level_compile_cache.md">EP: cache the compiled JAX likelihood on the Analysis across factor…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> |
 | 2026-09-16 | filed | <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of…</a> |
+| 2026-09-16 | filed | <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding…</a> |
 
 </details>
 
@@ -2684,10 +2676,10 @@ Long-running multi-phase programmes. Each epic's 📋 prompt has the assistant r
 <details>
 <summary><b>PyAutoEars — community listening, solicited feedback, dashboard and follow-through</b> — 1 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>PyAutoEars — community listening, solicited feedback, dashboard and follow-through</b> — ledger: `draft/feature/pyautoears/community_organ_birth.md` — In progress; feedback Brain#454 and standalone Ears#2 merged 2026-10-03; records complete/2026/10/community-feedback.md and…</summary>
+<details><summary>📋 <b>PyAutoEars — community listening, solicited feedback, dashboard and follow-through</b> — ledger: `draft/feature/pyautoears/community_organ_birth.md` — In progress; phases 0–2 merged 2026-10-03. Feedback: Brain#454; bootstrap: Ears#2; integration: Brain#456, Mind#469 and 11…</summary>
 
 ```
-Continue the 'PyAutoEars — community listening, solicited feedback, dashboard and follow-through' epic. Its canonical state lives in draft/feature/pyautoears/community_organ_birth.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: Human-approved scope includes software/scientific help, assistant and tutorial feedback, explicit user/agent reports, coverage reliability, delivery follow-up and recurring themes. Issue one bounded phase at a time. Preserve Brain judgement, Mind task state and the single Discussions hub. Human authorization "Yes I authorise you to proceed for the whole task" follows the reported Heart RED; tests mandatory, no merge or release inferred. Public PyAutoEars exists; standalone collector/board PR #2 is pending. Brain adapter and cross-organ identity follow after merging; do not publish unverified board links.
+Continue the 'PyAutoEars — community listening, solicited feedback, dashboard and follow-through' epic. Its canonical state lives in draft/feature/pyautoears/community_organ_birth.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: Human-approved programme includes listening reliability, assistant distribution, delivery follow-up and recurring themes. Issue one bounded phase at a time. Preserve Brain judgement, Mind task state and the single Discussions hub. Human `Prm` authorized the integration merges; Heart remains RED for release. Nested Discussion replies remain partial and euclid_assistant unavailable. Next bounded phase: listening reliability and category-sensitive triage.
 ```
 
 </details>

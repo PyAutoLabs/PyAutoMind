@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
-  "updated": "2026-10-03T15:15:06Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 2 in flight",
+  "updated": "2026-10-03T15:48:07Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Integrate the live Ears organ \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/456",
-      "prompt": "Use the start-dev skill. active/ears_integration.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#599 \u2014 streaming-p4-light-profile-identity",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/599",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#601 \u2014 streaming-p5-cubes-phase-centre",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/601",
       "prompt": null
     }
   ]
