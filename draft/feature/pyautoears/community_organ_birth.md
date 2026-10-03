@@ -49,7 +49,7 @@ PR-open until human `/prm`. Do not turn this programme into a second tracker.
 | 0 | Portable solicited-feedback workflow | Merged 2026-10-03: Brain#454 / b065945; `complete/2026/10/community-feedback.md` |
 | 1 | Organ identity, boundaries and repository bootstrap | Complete 2026-10-03: bootstrap Ears#2 plus integration Brain#456 / Mind#469 and companions; `complete/2026/10/ears-integration.md`. |
 | 2 | Collector extraction, read contracts and dashboard parity | Complete 2026-10-03: Ears#2/#3 and Brain#456; published feed, compatibility adapter and live Ears/cockpit deployment witnessed; `complete/2026/10/ears-integration.md`. |
-| 3 | Listening reliability and category-sensitive triage | Issued: Ears#4; active/listening_reliability.md |
+| 3 | Listening reliability and category-sensitive triage | Merged 2026-10-03: Ears#5 and Brain#457; complete/2026/10/ears-listening-reliability.md |
 | 4 | Assistant distribution of /feedback | Not issued; phase 0 merged; inspect existing assistant-template distribution before edits |
 | 5 | Follow-through from conversation to delivered work | Not issued; depends on 2–3 |
 | 6 | Recurring feedback synthesis | Not issued; depends on report/coverage contracts and real reports |
@@ -235,3 +235,17 @@ Earlier activation blockers and PR-open statements above are historical.
 Source coverage remains honestly partial/unavailable where recorded. Next
 bounded work is phase 3 listening reliability/category-sensitive triage.
 Phases 4–6 remain unissued. Heart RED release restrictions remain; no release.
+
+
+## 2026-10-03 listening reliability merged
+
+Human `Prm` merged Ears#5 and Brain#457 after all five CI jobs passed.
+Ears#4 closed completed; record `complete/2026/10/ears-listening-reliability.md`.
+Discussion reply pagination, explicit unknown activity and category-specific
+triage shipped. Historical notes above describing phase3 as next are superseded.
+Production coverage must still reflect actual token/source access. Next bounded
+phase: phase4 assistant distribution of /feedback. Phases5–6 remain unissued.
+
+Production witness: Ears board run37137496430 succeeded; published snapshot
+generated 2026-10-03T16:37:04.144623+00:00 contains 13 conversations. Discussion
+hub receipt is complete. Only euclid_assistant remains unavailable.
