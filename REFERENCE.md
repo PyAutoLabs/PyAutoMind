@@ -474,6 +474,19 @@ faculty at conception and all overridable by declaring them:
   read the witness, not the diff. `judge` is a PI's call — a public API, a
   default, an error contract, a science-policy question, an external reporter's
   request.
+
+  **The declared tier also decides who merges** (2026-10-02,
+  `PyAutoBrain/AUTONOMY.md` "Merge authority follows Consequence"). `notify`:
+  the shipping session waits for CI inside its turn, merges on green and runs
+  the `/prm` close-out itself. `glance`: the same, only when the `Witness:`
+  check passed; the human reads a post-merge summary, and each auto-merge
+  appends a row to the Shadow window in `autonomy_log.md` (confirmed at 20
+  clean rows; any revert demotes `glance` back to a human `/prm`). `judge`, or
+  no declared header: the human runs `/prm`, as before. Only a tier **written
+  in the prompt** carries merge authority — a tier the sizing faculty would
+  infer for a header-less prompt never does. Never auto-merged at any tier: a
+  `decision-taken` PR, a Heart RED-override or corrective-PR-exception ship,
+  red/pending/conflicting CI, or a SKIPPED test leg.
 - **`Witness:`** free text: the machine-checkable claim that will make this
   reviewable in minutes rather than by reading the diff. Look at what the fast
   completion records carry — "ids bit-identical, 62 → 9.7 ms", "31-rule
@@ -852,7 +865,7 @@ appends to the window):
 ```bash
 python3 scripts/lifecycle.py close <slug> --date YYYY-MM-DD --from-file <body.md> \
     [--prompt <path|filename>] [--pr Repo#N …] \
-    [--tier notify --gate "<cell>" --action <merged-unchanged|…> [--stage 1|2]] \
+    [--tier glance --gate "<cell>" --action <merged-unchanged|…> [--stage 1|2]] \
     [--no-shadow-row] [--apply]
 ```
 
@@ -867,9 +880,12 @@ it found — and writes nothing. `--apply` does it.
   takes a repo-relative path or a bare filename.
 - **It drops the `parked.md` / `planned.md` pointer too**, which `record` does
   not — only `active.md` was ever pruned.
-- **The shadow row is never inferred.** Only `--tier notify` feeds the window,
+- **The shadow row is never inferred.** Only `--tier glance` feeds the window
+  (re-scoped from `notify` on 2026-10-02, when `notify` auto-merge was granted),
   and only with `--gate` and `--action`: the row records the gate that *ran* and
-  what the human *did*, so a missing cell yields no row and a line saying so.
+  what *happened* to the PR — `merged-unchanged` at an auto-merge, amended by
+  the human if they later find something substantive, `reverted` if it was
+  backed out — so a missing cell yields no row and a line saying so.
   `--no-shadow-row` suppresses the leg outright.
 - **Two refusals**, both exit 1: a record for the slug already exists anywhere
   under `complete/` (a completion record is the one file here that is not
