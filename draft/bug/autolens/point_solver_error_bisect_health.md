@@ -19,7 +19,7 @@ Review-minutes: 25
 Unattended: needs-slicing
 Epic: cluster-pointsolver-speed
 Origin-phase: cluster-strong-lensing phase 1
-Parent: draft/research/autolens_profiling/cluster_pointsolver_speed.md
+Parent: https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/cluster_pointsolver_speed.md
 Filed: 2026-08-19 (backfilled from git)
 
 # PointSolver error-behavior change: bisect the 2025-11→2026-05 candidates, then health-harden

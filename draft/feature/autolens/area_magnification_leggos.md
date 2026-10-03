@@ -65,7 +65,7 @@ Work:
 ## Scope separation — approved 2026-10-01
 
 Forward ShapeSolver rehabilitation-or-retirement is owned by
-`draft/research/autolens_profiling/cluster_pointsolver_speed.md`. That includes
+`https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/cluster_pointsolver_speed.md`. That includes
 current-code audit, xp/JIT behavior, per-image splitting, finite-source area
 convergence/accuracy, flux-path implications and independent cross-validation.
 The historical audit above is retained as context, not a current API verdict.

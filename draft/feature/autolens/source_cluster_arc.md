@@ -40,7 +40,7 @@ The Source & Cluster arc now owns magnification/source-science capabilities.
 Remaining PointSolver correctness/settings/performance work and the old phase-2
 profiling scope belong to `cluster-pointsolver-speed` (display title: Cluster
 PointSolver — robustness and performance). Canonical planning contract:
-`draft/research/autolens_profiling/cluster_pointsolver_speed.md`.
+`https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/cluster_pointsolver_speed.md`.
 
 Phase 1a–1d are completed evidence/fixes; remaining phase-1 scope is TRANSFERRED,
 not solved or declared safe. Phase 2 is TRANSFERRED, not completed. Historical
@@ -70,7 +70,7 @@ No next-phase issue is opened by this reorganisation.
 1. **Transferred remainder** — `draft/bug/autolens/point_solver_error_bisect_health.md`
    now belongs to `cluster-pointsolver-speed`. Subphases 1a–1d shipped; unresolved
    overflow, accuracy/identity and regression work remains there.
-2. **Transferred scope** — `draft/research/autolens_profiling/point_solver_profiling_cells.md`
+2. **Transferred scope** — `https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/point_solver_profiling_cells.md`
    now belongs to the solver programme. Reconcile existing cells and single-source
    campaign ownership before issuing missing coverage; no duplicate campaign.
 3. `draft/refactor/autogalaxy/critical_curves_dispatch_cluster.md` — context-aware
