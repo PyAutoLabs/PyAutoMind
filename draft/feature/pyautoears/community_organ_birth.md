@@ -190,3 +190,33 @@ retained. The earlier PR-open statements above are historical. No release or
 live Pages deployment is claimed. Next bounded work: register organ identity,
 wire Brain to Ears, and obtain a real collection/Pages witness; later assistant
 distribution, follow-through and synthesis remain open.
+
+
+## 2026-10-03 live collection witness and activation blocker
+
+Continuation verified the close-out landed on Mind main (`fd61046e`). Ears
+main `911a4634c54ef19b39d98c58b0704b9badf3b9b8` ran the production workflow:
+https://github.com/PyAutoLabs/PyAutoEars/actions/runs/37129202159
+
+The render job succeeded and uploaded Pages artifact `11276112237`. Its actual
+`snapshot.json`, independently downloaded and inspected, was generated at
+2026-10-03T14:19:47.326815+00:00: 13 conversations and 45 source receipts,
+43 complete, 1 partial (PyAutoLabs/.github, nested Discussion reply coverage),
+1 unavailable (Jammy2211/euclid_assistant; permissions/rate limit/endpoint not
+further distinguished). No synthetic data; successful rendering is not a claim
+of complete coverage. State validation succeeded in the production workflow.
+
+Deploy job `111220910061` failed at actions/deploy-pages with HTTP 404:
+“Ensure GitHub Pages has been enabled”. Required setting:
+https://github.com/PyAutoLabs/PyAutoEars/settings/pages → Build and deployment
+→ Source: GitHub Actions. Then rerun the failed deploy job (or Ears board).
+The connected GitHub tools cannot change Pages settings. No browser fallback
+was attempted without its required approval. No live site is claimed.
+
+Per the approved phase-2 acceptance gate, do not switch Brain's public links
+or collector until the published feed is witnessed. Next: enable Pages, check
+live snapshot/state and responsive board, then issue the bounded organ identity
+and Brain adapter integration phase. No new issue or active claim was created
+for this read-only deployment diagnosis. The same published Heart RED reasons
+(2026-10-03T10:12:06Z) remain covered by the existing development authorization;
+no release or source merge is authorized by this continuation alone.
