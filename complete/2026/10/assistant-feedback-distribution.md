@@ -1,3 +1,28 @@
+# Assistant feedback distribution
+
+Completed 2026-10-03 under explicit human "Merge and continue" authorization.
+
+Merged PyAutoBrain#458 (f00437d), autolens_assistant#149 (1098c8a),
+autofit_assistant#53 (a52bdba), autogalaxy_assistant#32 (a3973a5),
+autocti_assistant#34 (6db8840). All nine CI jobs passed on the exact heads;
+all five published heads verified ancestors of main. Issue autolens_assistant#148 closed.
+
+Canonical standalone feedback generator and clone-sync classification now ship
+with Brain. All four assistants expose their own Claude/Codex discovery adapters
+and embedded portable report template/invitation. User reviews and submits;
+no telemetry, private-history retrieval, automatic posting or science-code change.
+
+Validation: 1168 Brain tests, 67 focused tests after boundary correction,
+four discovery/generation checks, two synthetic drafting checks. CI caught a
+hard-coded reference in a new test; corrected to cover every configured
+reference, then all tests and tenant firewall passed in both Python CI legs.
+
+Whole-programme Heart RED development override remains; merge authorized
+separately this turn, no release. Standalone local clones retained. Phase 5
+follow-through remains separate work; no source release obligation created.
+
+## Original prompt
+
 # Distribute portable feedback to assistants
 
 Type: feature
