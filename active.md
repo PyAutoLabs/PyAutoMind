@@ -37,3 +37,17 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/343
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/365
 - final-validation: Galaxy 1315 passed; focused 49 passed; full companion smoke 33/33 in 501.91s (changed example 2.2s). Galaxy exact-head CI all green; new companion CI pending. Wiki/results-layout and whitespace checks pass. No raw phase-3a evidence changed.
+
+## pulse-refresh-project-identity
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/366
+- issued: 2026-10-03
+- prompt: active/pulse_refresh_dispatch_sender.md
+- companion-prompt: active/cockpit_feed_project_identity.md
+- epic: profiling-organ-birth
+- session: Codex Work, 2026-10-03
+- status: workspace-dev
+- location: /workspace/scratch/367a506ce50f (fresh session clones)
+- repos:
+  - autolens_profiling: feature/pulse-refresh-project-identity
+- summary: One task / one PR combining Pulse dispatch sender and project badge identity, as explicitly authorized by the handoff.
+- resume: #365 merged; claim released. Implement and validate; published Heart entry feed is STALE with monitoring RED, not covered by earlier YELLOW acknowledgement. Obtain current authoritative readiness before ship. Phase 4 excluded.

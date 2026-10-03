@@ -9,14 +9,16 @@ Themes:
 Difficulty: small
 Autonomy: supervised
 Priority: normal
-Status: draft
+Status: active
+Issued: 2026-10-03
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/366
 Consequence: notify
 Witness: a `pages_dashboard.yml` run on main ends with a `repository_dispatch` to `PyAutoLabs/PyAutoPulse` (event `pulse-refresh`, payload repo/sha/summary path); the Pulse `dashboard_refresh.yml` run it triggers is green and its receipt names the new commit
 Review-minutes: 2
 Unattended: ready
 Filed: 2026-10-02
 Epic: profiling-organ-birth
-Blocked-by: evaluation-grid-cap-field (claims autolens_profiling)
+Unblocked: 2026-10-03 — #365 merged; autolens_profiling claim explicitly released
 
 The receiving side shipped in phase 2 (`PyAutoPulse/.github/workflows/dashboard_refresh.yml`,
 `repository_dispatch: types: [pulse-refresh]`). This is the one-step sender the spec calls a project

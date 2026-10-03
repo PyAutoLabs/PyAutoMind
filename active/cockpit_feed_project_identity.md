@@ -9,14 +9,16 @@ Themes:
 Difficulty: small
 Autonomy: supervised
 Priority: normal
-Status: draft
+Status: active
+Issued: 2026-10-03
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/366
 Consequence: notify
 Witness: `dashboard/state.json` validates with `PyAutoBrain/board/_state.py`; its `organ` is no longer `profiling`; `scripts/misc/test/test_build_dashboard.py` green; the project's own Pages badge still renders
 Review-minutes: 3
 Unattended: ready
 Filed: 2026-10-02
 Epic: profiling-organ-birth
-Blocked-by: evaluation-grid-cap-field (claims autolens_profiling)
+Unblocked: 2026-10-03 — #365 merged; autolens_profiling claim explicitly released
 
 Split out of phase 3 (`complete/…/pyautopulse-brain-board-cockpit` once shipped; PyAutoBrain#450) on
 2026-10-02 because `autolens_profiling` was claimed by another task. The organ **PyAutoPulse**
