@@ -42,7 +42,6 @@
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/366
 - issued: 2026-10-03
 - prompt: active/pulse_refresh_dispatch_sender.md
-- companion-prompt: active/cockpit_feed_project_identity.md
 - epic: profiling-organ-birth
 - session: Codex Work, 2026-10-03
 - status: awaiting-merge
@@ -54,4 +53,4 @@
 - commit: 4a9d571b8ac8ba876d4e3ef656e9c8b0dafa4f7a
 - validation: 14 dashboard tests passed; Ruff check/format, dashboard idempotence (145 series), Brain state contract and mocked dispatch paths passed. summary.json byte-identical.
 - heart: published vitals STALE, scoped GREEN with no scoped blockers; exact reason "release validation stale: source moved since rehearsal (PyAutoFit, PyAutoGalaxy, PyAutoLens)"; board generated 2026-10-02T10:52:40.749454+00:00.
-- resume: Run /prm for #367 after required CI and current Heart check. After merge verify main Pages dispatch, Pulse refresh success and receipt naming new source commit; live witness remains pending. Both active prompts belong to this one issue/PR and must close together. Phase 4 excluded; no release or auto-merge authorized.
+- resume: Run /prm for #367 after required CI and current Heart check. After merge verify main Pages dispatch, Pulse refresh success and receipt naming new source commit; live witness remains pending. Both original prompts are folded into active/pulse_refresh_dispatch_sender.md for this one issue/PR. Phase 4 excluded; no release or auto-merge authorized.
