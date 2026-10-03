@@ -1,3 +1,33 @@
+# Community delivery follow-through
+
+Completed 2026-10-03 under explicit human "Merge if ci is green" authorization.
+
+Merged Brain#459 (566106d71cb7adb6724e82d2bbdd5b98d9034418), then
+Ears#7 (cb33814bc0591bc5ce48555df6a44a3f3b597f91). Both published heads
+are merge ancestors, verified through GitHub compare (merge base equals head,
+behind_by=0). All five exact-head jobs passed: Brain Python 3.12/3.13 and
+Ears Python 3.12/3.13 plus browser. No skipped job or failing gate bypass.
+
+Ears derives explicit maintainer Discussion -> issue -> required PR -> release
+links, respects Mind pending-release obligations, and surfaces update owed.
+Missing, stale, partial, private and reverted evidence stays unknown. Closed
+Discussions stay settled. Brain validates evidence and drafts for approval;
+no automatic posting, release promises, task-state duplication or raw-body export.
+
+Validation: Ears 59 tests; local Brain 1132 passed / 42 environment skips;
+48 focused adapter/community tests; tenant firewall and cockpit schema pass.
+Exact-head CI supplied complete matrix and browser evidence after local Chromium
+download failed. Browser covered responsive widths/themes and clipboard actions.
+
+Limitations: explicit Delivery-* evidence links required; later reverts need
+source revert evidence or issue reopening. No semantic audit of all later history.
+Heart's previously authorized RED development state remains; this human turn
+separately authorized merge, not release. Production deployment is a main-branch
+workflow and is not claimed complete by this record. Standalone clones retained.
+Phase 6 recurring themes remains unissued and requires real report evidence.
+
+## Original prompt
+
 # Community follow-through
 
 Type: feature
