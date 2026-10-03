@@ -1,5 +1,44 @@
 # Active Tasks
 
+## assistant-feedback-distribution
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/148
+- issued: 2026-10-03
+- prompt: active/assistant_feedback_distribution.md
+- epic: community-organ-birth
+- session: Codex Work; session ID unavailable
+- location: /tmp/feedback-distribution (standalone clones)
+- status: workspace-dev
+- repos:
+  - PyAutoBrain: feature/assistant-feedback-distribution
+  - autolens_assistant: feature/assistant-feedback-distribution
+  - autofit_assistant: feature/assistant-feedback-distribution
+  - autogalaxy_assistant: feature/assistant-feedback-distribution
+  - autocti_assistant: feature/assistant-feedback-distribution
+- summary: Distribute the canonical portable feedback workflow through assistant clone sync and actual discovery adapters.
+- authorization: Existing whole-programme development authorization continued by "OK do thr next stuff"; judge-tier human /prm required, no release or merge.
+- heart-red-override: Same previously reported published RED reasons; development only.
+  - "release validation FAILED (stage integrate)"
+  - "PyAutoHeart/workflows/Release Integrate: failure"
+  - "PyAutoArray/Tests: red"
+  - "PyAutoArray/Tests: red"
+  - "PyAutoFit/Tests: red"
+  - "autofit_workspace_test/Smoke Tests: red"
+  - "autogalaxy_workspace_test/Smoke Tests: red"
+  - "autolens_workspace_test/Smoke Tests: red"
+  - "CI wall-clock: 26 gates \u00b7 slowest PyAutoBrain Nightly Release 83m \u00b7 1 slowed \u00b7 6 hang events"
+  - "Release readiness: release validation FAILED (stage integrate)"
+  - "PyAutoCTI/test_autocti/extract/two_d/parallel/test_parallel_fpr.py::test__estimate_capture: red"
+  - "PyAutoNerves/test_autonerves/test_fitsable.py::test__output_to_fits: red"
+  - "Unit-test timing: 3 test regressions (>3\u00d7 baseline), 1 slow (>1.5\u00d7)"
+  - "autolens_test: red"
+  - "Release validation: NOT release_ready \u2014 v2026.10.3.1.dev79901 profile=release (2026-10-03T07:43:31+00:00)"
+  - "validation_report/stages/integrate: fail"
+  - "autolens_assistant: red"
+  - "autolens_profiling: red"
+  - "autolens_workspace_test: red"
+  - "Worktree drift: 0 orphan / 0 missing / 4 dirty"
+  - "euclid_strong_lens_modeling_pipeline: red"
+
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
 - issued: 2026-09-22
