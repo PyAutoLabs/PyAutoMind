@@ -7,12 +7,38 @@
 - epic: community-organ-birth
 - session: Codex Work; session ID unavailable
 - location: /tmp/ears-reliability (standalone clones)
-- status: library-dev
+- status: awaiting-merge
 - repos:
   - PyAutoEars: feature/ears-listening-reliability
   - PyAutoBrain: feature/ears-listening-reliability
 - summary: Complete bounded reply coverage and category-sensitive triage.
 - authorization: Existing whole-programme development authorization continued by human "Continue"; judge-tier human /prm required. Heart RED release reasons unchanged from integration task; no release or merge.
+- library-pr: https://github.com/PyAutoLabs/PyAutoEars/pull/5
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/457
+- validation: Ears 43 passed; snapshot/state smoke valid; independent Ears review CLEAN. Brain 1123 passed with 42 absent-Cortex skips, then all 47 Cortex tests passed (1165 unique tests covered). Community-focused 27 passed.
+- resume: Both PRs open on feature/ears-listening-reliability. Ears head 66260ab874bb08e49ec4ae4c675c3f34479c8919; Brain head cd72445267db89d42713786e8dc5a30c285087fd. Human /prm after exact-head CI; production GraphQL witness after merge. Local clean commits have identical published Git trees; commit identities differ through MCP. No merge/release/timer.
+- heart-red-override: Existing accepted whole-programme development authorization continued by human "Continue"; exact previously reported reasons retained below.
+  - "release validation FAILED (stage integrate)"
+  - "PyAutoHeart/workflows/Release Integrate: failure"
+  - "PyAutoArray/Tests: red"
+  - "PyAutoArray/Tests: red"
+  - "PyAutoFit/Tests: red"
+  - "autofit_workspace_test/Smoke Tests: red"
+  - "autogalaxy_workspace_test/Smoke Tests: red"
+  - "autolens_workspace_test/Smoke Tests: red"
+  - "CI wall-clock: 26 gates · slowest PyAutoBrain Nightly Release 83m · 1 slowed · 6 hang events"
+  - "Release readiness: release validation FAILED (stage integrate)"
+  - "PyAutoCTI/test_autocti/extract/two_d/parallel/test_parallel_fpr.py::test__estimate_capture: red"
+  - "PyAutoNerves/test_autonerves/test_fitsable.py::test__output_to_fits: red"
+  - "Unit-test timing: 3 test regressions (>3× baseline), 1 slow (>1.5×)"
+  - "autolens_test: red"
+  - "Release validation: NOT release_ready — v2026.10.3.1.dev79901 profile=release (2026-10-03T07:43:31+00:00)"
+  - "validation_report/stages/integrate: fail"
+  - "autolens_assistant: red"
+  - "autolens_profiling: red"
+  - "autolens_workspace_test: red"
+  - "Worktree drift: 0 orphan / 0 missing / 4 dirty"
+  - "euclid_strong_lens_modeling_pipeline: red"
 
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102

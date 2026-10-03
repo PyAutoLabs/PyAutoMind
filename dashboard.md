@@ -260,7 +260,7 @@ Use the start-dev skill. active/evaluation_grid_cap_preserves_field.md
 
 </details>
 
-<details><summary>📋 <a href="active/listening_reliability.md">Trustworthy listening and category-sensitive triage</a> — <a href="https://github.com/PyAutoLabs/PyAutoEars/issues/4">issue #4</a> — issued 2026-10-03 — library-dev</summary>
+<details><summary>📋 <a href="active/listening_reliability.md">Trustworthy listening and category-sensitive triage</a> — <a href="https://github.com/PyAutoLabs/PyAutoEars/issues/4">issue #4</a> — issued 2026-10-03 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoEars/pull/5">PyAutoEars#5</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/457">PyAutoBrain#457</a></summary>
 
 ```
 Use the start-dev skill. active/listening_reliability.md
@@ -2687,7 +2687,7 @@ Long-running multi-phase programmes. Each epic's 📋 prompt has the assistant r
 <details><summary>📋 <b>PyAutoEars — community listening, solicited feedback, dashboard and follow-through</b> — ledger: `draft/feature/pyautoears/community_organ_birth.md` — In progress; phases 0–2 merged 2026-10-03. Feedback: Brain#454; bootstrap: Ears#2; integration: Brain#456, Mind#469 and 11…</summary>
 
 ```
-Continue the 'PyAutoEars — community listening, solicited feedback, dashboard and follow-through' epic. Its canonical state lives in draft/feature/pyautoears/community_organ_birth.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: Human-approved programme includes listening reliability, assistant distribution, delivery follow-up and recurring themes. Issue one bounded phase at a time. Preserve Brain judgement, Mind task state and the single Discussions hub. Human `Prm` authorized the integration merges; Heart remains RED for release. Nested Discussion replies remain partial and euclid_assistant unavailable. Listening reliability/category-sensitive triage issued as Ears#4, active/listening_reliability.md.
+Continue the 'PyAutoEars — community listening, solicited feedback, dashboard and follow-through' epic. Its canonical state lives in draft/feature/pyautoears/community_organ_birth.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: Human-approved programme includes listening reliability, assistant distribution, delivery follow-up and recurring themes. Issue one bounded phase at a time. Preserve Brain judgement, Mind task state and the single Discussions hub. Human `Prm` authorized the integration merges; Heart remains RED for release. Nested Discussion replies remain partial and euclid_assistant unavailable. Listening reliability/category-sensitive triage Ears#4 awaits human /prm: Ears#5 and Brain#457; active/listening_reliability.md.
 ```
 
 </details>
