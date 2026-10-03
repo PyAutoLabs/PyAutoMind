@@ -27,8 +27,9 @@ epic, never picked standalone.
 ## community-organ-birth
 - title: PyAutoEars — community listening, solicited feedback, dashboard and follow-through
 - ledger: draft/feature/pyautoears/community_organ_birth.md
-- status: In progress; feedback Brain#454 and standalone Ears#2 merged 2026-10-03; records complete/2026/10/community-feedback.md and ears-bootstrap.md. Pages live: run 37129202159 attempt 2 succeeded; public feed and copy action verified (13 conversations; 43 complete, 1 partial, 1 unavailable source). Identity/Brain integration issued as Brain#455, active/ears_integration.md; PRs in preparation. Later phases remain unissued.
-- notes: Human-approved scope includes software/scientific help, assistant and tutorial feedback, explicit user/agent reports, coverage reliability, delivery follow-up and recurring themes. Issue one bounded phase at a time. Preserve Brain judgement, Mind task state and the single Discussions hub. Human authorization "Yes I authorise you to proceed for the whole task" follows the reported Heart RED; tests mandatory, no merge or release inferred. Public PyAutoEars exists; standalone collector/board PR #2 is pending. Brain adapter and cross-organ identity follow after merging; do not publish unverified board links.
+- status: In progress; phases 0–2 merged 2026-10-03. Feedback: Brain#454; bootstrap: Ears#2; integration: Brain#456, Mind#469 and 11 companions. Brain#455 closed completed; record complete/2026/10/ears-integration.md. Ears board and cockpit live; public feed/copy witness and responsive browser CI passed. Later phases remain unissued.
+- notes: Human-approved programme includes listening reliability, assistant distribution, delivery follow-up and recurring themes. Issue one bounded phase at a time. Preserve Brain judgement, Mind task state and the single Discussions hub. Human `Prm` authorized the integration merges; Heart remains RED for release. Nested Discussion replies remain partial and euclid_assistant unavailable. Next bounded phase: listening reliability and category-sensitive triage.
+
 
 ## profiling-organ-birth
 - title: PyAutoPulse — the cross-project dashboard layer above the `<lib>_profiling` project repos: instance registry, `profiling-summary` read contract, organ board, cockpit transition
