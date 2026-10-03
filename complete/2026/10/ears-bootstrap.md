@@ -1,3 +1,26 @@
+# ears-bootstrap
+
+- completed: 2026-10-03
+- issue: https://github.com/PyAutoLabs/PyAutoEars/issues/1 (closed completed)
+- library-pr: https://github.com/PyAutoLabs/PyAutoEars/pull/2 (MERGED)
+- merge-commit: 911a4634c54ef19b39d98c58b0704b9badf3b9b8
+- pending-release: PyAutoEars@https://github.com/PyAutoLabs/PyAutoEars/pull/2
+- epic: community-organ-birth
+
+## Delivered
+
+Standalone public-community collector, source receipts, strict snapshots, responsive dashboard and state/badge feeds. 22 tests passed; Python 3.12/3.13 and browser jobs passed (run 37126922695). Chromium 390/1280px light/dark, clipboard success/denial and no page errors; screenshots reviewed. Cross-organ identity, Brain adapter, live deployment, follow-through and synthesis remain in the epic.
+
+## Merge evidence
+
+Human: "Prm I authorise". Every workflow run and job for the submitted head was completed/success; GitHub mergeability clean. Remote head proven ancestor of origin/main; local source tree identical to that head (commit metadata differs because publication used GitHub Git objects). No scientific runtime changes. Heart RED development override remains recorded in issue/PR/autonomy log; this merge does not clear release health. No release performed.
+
+## Remaining work
+
+See `draft/feature/pyautoears/community_organ_birth.md`; the programme is not complete. Local checkouts are standalone clones, not managed task worktrees; no worktree removal applies.
+
+## Original prompt
+
 # PyAutoEars standalone listening organ
 
 Type: feature

@@ -27,7 +27,7 @@ epic, never picked standalone.
 ## community-organ-birth
 - title: PyAutoEars — community listening, solicited feedback, dashboard and follow-through
 - ledger: draft/feature/pyautoears/community_organ_birth.md
-- status: In progress; first independent feedback phase PR-open 2026-10-03 (PyAutoBrain#453 / PR#454); human created PyAutoEars; standalone organ Ears#1 / PR#2 open, integration pending
+- status: In progress; feedback Brain#454 and standalone Ears#2 merged 2026-10-03; records complete/2026/10/community-feedback.md and ears-bootstrap.md. Identity integration, Brain adapter and live deployment next; no later phase issued.
 - notes: Human-approved scope includes software/scientific help, assistant and tutorial feedback, explicit user/agent reports, coverage reliability, delivery follow-up and recurring themes. Issue one bounded phase at a time. Preserve Brain judgement, Mind task state and the single Discussions hub. Human authorization "Yes I authorise you to proceed for the whole task" follows the reported Heart RED; tests mandatory, no merge or release inferred. Public PyAutoEars exists; standalone collector/board PR #2 is pending. Brain adapter and cross-organ identity follow after merging; do not publish unverified board links.
 
 ## profiling-organ-birth

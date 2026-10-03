@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1677 records across 9 buckets.
+1679 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -126,11 +126,13 @@ markers; everything below GENERATED is rebuilt.
 - [cloud-board-validation-evidence](2026/10/cloud-board-validation-evidence.md)
 - [cloud-test-run-card](2026/10/cloud-test-run-card.md)
 - [cockpit-actionable-state](2026/10/cockpit-actionable-state.md) — Additive v1 state/action/safety/decision metadata with overnight workflow evidence; cockpit reason/action rend…
+- [community-feedback](2026/10/community-feedback.md)
 - [compact-dashboard-rows](2026/10/compact-dashboard-rows.md)
 - [critical-curves-dispatch-audit](2026/10/critical-curves-dispatch-audit.md) — Phase 3a evidence and contract shipped. Research, raw CPU JSON/PNG, frozen measured source and cumulative wiki…
 - [dashboard-copy-contract](2026/10/dashboard-copy-contract.md)
 - [dashboard-portable-prompts](2026/10/dashboard-portable-prompts.md)
 - [dashboard-prompt-budget](2026/10/dashboard-prompt-budget.md)
+- [ears-bootstrap](2026/10/ears-bootstrap.md)
 - [ecosystem-layers](2026/10/ecosystem-layers.md)
 - [ecosystem-role-docs](2026/10/ecosystem-role-docs.md)
 - [ecosystem-routing-trial](2026/10/ecosystem-routing-trial.md) — Evaluated the role-routing checklist and specified future profiling/inference organ read contracts; no runtime…
