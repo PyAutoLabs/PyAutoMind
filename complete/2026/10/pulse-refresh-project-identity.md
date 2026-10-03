@@ -1,3 +1,19 @@
+## pulse-refresh-project-identity
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/366
+- completed: 2026-10-03
+- epic: profiling-organ-birth
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/367
+- merge: efcece3ea39c622e62cc61518f58394ee3986d4c
+- summary: Combined producer follow-ups: project badge identifies as autolens_profiling; successful Pages deployment dispatches pulse-refresh to PyAutoPulse using PAT_PYAUTOLABS with repo, SHA and summary path. Preserved drift/triage links and byte-identical summary.json. Documentation and existing tests updated.
+- validation: 14 focused tests, Ruff, dashboard idempotence (145 series), Brain state validator and mocked sender missing-token/success/error paths passed. Exact-head PR lint workflow passed all jobs before merge, including full misc tests, link checks and section smoke.
+- witness: Pages run 37113415404 succeeded; repository_dispatch Pulse refresh 37113444767 succeeded; receipts/lens.json resolved the merge SHA above, fetched 2026-10-03T09:33:29Z, outcome ok, 159 records and no schema errors.
+- authorization: Human requested /prm and continuation if possible on 2026-10-03. No release. Ship-time published Heart was STALE, scoped GREEN; /prm preserves that gate and does not re-judge it.
+- next-phase: Phase 4 deferred. Organisation repository inventory on 2026-10-03 contains only autolens_profiling among *_profiling repositories; no real second producer exists. No empty sibling or phase-4 prompt created.
+- traps: Mind only recognises one registered active prompt for this task; fold companion scope into it. Use workspace-pr, not pr, for the resume key. Shell pushes unavailable; connected GitHub tree/commit/ref operations preserve the same validated tree and trigger Mind Ledger Merge.
+- cleanup: Session used dedicated clones, no task worktree. Profiling checkout is clean on merged main; local feature branch removed after ancestry proof.
+
+## Original prompt
+
 # autolens_profiling: tell the PyAutoPulse board to refresh (repository_dispatch pulse-refresh)
 
 Type: feature
