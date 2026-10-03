@@ -49,7 +49,7 @@
 - repos:
   - autolens_profiling: feature/pulse-refresh-project-identity
 - summary: One task / one PR combining Pulse dispatch sender and project badge identity, as explicitly authorized by the handoff.
-- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/367
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/367
 - commit: 4a9d571b8ac8ba876d4e3ef656e9c8b0dafa4f7a
 - validation: 14 dashboard tests passed; Ruff check/format, dashboard idempotence (145 series), Brain state contract and mocked dispatch paths passed. summary.json byte-identical.
 - heart: published vitals STALE, scoped GREEN with no scoped blockers; exact reason "release validation stale: source moved since rehearsal (PyAutoFit, PyAutoGalaxy, PyAutoLens)"; board generated 2026-10-02T10:52:40.749454+00:00.
