@@ -82,7 +82,6 @@
 - affected-repos:
   - autolens_workspace_test
 
-
 ## knn-partial-point-block
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/609
 - filed: 2026-10-02

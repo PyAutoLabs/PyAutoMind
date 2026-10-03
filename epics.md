@@ -30,7 +30,6 @@ epic, never picked standalone.
 - status: In progress; phases 0–2 merged 2026-10-03. Feedback: Brain#454; bootstrap: Ears#2; integration: Brain#456, Mind#469 and 11 companions. Brain#455 closed completed; record complete/2026/10/ears-integration.md. Ears board and cockpit live; public feed/copy witness and responsive browser CI passed. Later phases remain unissued.
 - notes: Human-approved programme includes listening reliability, assistant distribution, delivery follow-up and recurring themes. Issue one bounded phase at a time. Preserve Brain judgement, Mind task state and the single Discussions hub. Human `Prm` authorized the integration merges; Heart remains RED for release. Listening reliability/category-sensitive triage merged: Ears#5 and Brain#457; Ears#4 closed; complete/2026/10/ears-listening-reliability.md. Production run37137496430 passed; live Discussion hub coverage complete, only euclid_assistant unavailable. Next: phase4 assistant distribution of /feedback.
 
-
 ## profiling-organ-birth
 - title: PyAutoPulse — the cross-project dashboard layer above the `<lib>_profiling` project repos: instance registry, `profiling-summary` read contract, organ board, cockpit transition
 - ledger: complete/2026/10/pyautopulse-brain-board-cockpit.md
