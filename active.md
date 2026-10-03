@@ -1,20 +1,5 @@
 # Active Tasks
 
-## pulse-campaign-control-room
-- issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/6
-- issued: 2026-10-03
-- prompt: active/campaign_control_room.md
-- session: Codex Work
-- status: awaiting-merge
-- worktree: /workspace/scratch/df4e4aa94b97
-- repos:
-  - PyAutoPulse: feature/campaign-control-room
-  - PyAutoMind: feature/pulse-task-migration
-- summary: Single-chat campaign check-in and profiling task migration into Pulse.
-- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/7
-- resume: Pulse#7 has 86 passing tests and scoped Heart GREEN. Merge Pulse before this Mind migration; then close out issue Pulse#6 and release both claims. No compute submitted.
-- validation: Ruff, formatting, 86 tests, offline snapshot/feed check, 26 source hashes and copy-handler checks pass. Mind lifecycle check passes with one pre-existing batch calibration warning.
-
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
 - issued: 2026-09-22
