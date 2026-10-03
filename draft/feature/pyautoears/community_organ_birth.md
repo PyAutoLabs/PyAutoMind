@@ -50,7 +50,7 @@ PR-open until human `/prm`. Do not turn this programme into a second tracker.
 | 1 | Organ identity, boundaries and repository bootstrap | Complete 2026-10-03: bootstrap Ears#2 plus integration Brain#456 / Mind#469 and companions; `complete/2026/10/ears-integration.md`. |
 | 2 | Collector extraction, read contracts and dashboard parity | Complete 2026-10-03: Ears#2/#3 and Brain#456; published feed, compatibility adapter and live Ears/cockpit deployment witnessed; `complete/2026/10/ears-integration.md`. |
 | 3 | Listening reliability and category-sensitive triage | Merged 2026-10-03: Ears#5 and Brain#457; complete/2026/10/ears-listening-reliability.md |
-| 4 | Assistant distribution of /feedback | Issued autolens_assistant#148; active/assistant_feedback_distribution.md |
+| 4 | Assistant distribution of /feedback | Awaiting human /prm: Brain#458, autolens_assistant#149, autofit_assistant#53, autogalaxy_assistant#32, autocti_assistant#34; issue autolens_assistant#148; active/assistant_feedback_distribution.md |
 | 5 | Follow-through from conversation to delivered work | Not issued; depends on 2–3 |
 | 6 | Recurring feedback synthesis | Not issued; depends on report/coverage contracts and real reports |
 
