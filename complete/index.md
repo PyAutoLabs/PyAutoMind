@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1683 records across 9 buckets.
+1684 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -157,6 +157,7 @@ markers; everything below GENERATED is rebuilt.
 - [point-source-search-nautilus-leaf](2026/10/point-source-search-nautilus-leaf.md)
 - [pointsolver-extent-sanity-check](2026/10/pointsolver-extent-sanity-check.md)
 - [profiling-summary-v1](2026/10/profiling-summary-v1.md) — PyAutoPulse phase 1 — `build_dashboard.py` gains a fourth output, `dashboard/summary.json`, the `profiling-sum…
+- [pulse-campaign-control-room](2026/10/pulse-campaign-control-room.md) — One editable/copyable check-in prompt, 11 campaign rows, 25 open tasks, then detailed measurement evidence. 26…
 - [pulse-public-links](2026/10/pulse-public-links.md) — The two public-surface one-liners left from the PyAutoPulse organ birth: `.github/profile/README.md` organ tab…
 - [pulse-refresh-project-identity](2026/10/pulse-refresh-project-identity.md) — Combined producer follow-ups: project badge identifies as autolens_profiling; successful Pages deployment disp…
 - [pyautopulse-brain-board-cockpit](2026/10/pyautopulse-brain-board-cockpit.md) — Phase 3 of `profiling-organ-birth`, NARROWED by the human 2026-10-02 to the organ → Brain board interface: `co…
