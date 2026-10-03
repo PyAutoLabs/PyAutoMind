@@ -47,8 +47,8 @@ PR-open until human `/prm`. Do not turn this programme into a second tracker.
 | Phase | Deliverable | State / dependency |
 |---|---|---|
 | 0 | Portable solicited-feedback workflow | PR-open: Brain#454 for #453; 1100 tests pass / 42 skipped; human /prm; `active/community_feedback.md` |
-| 1 | Organ identity, boundaries and repository bootstrap | Not issued; fresh PyAutoLabs/PyAutoEars repo creation required; available GitHub connector has no create-repository action |
-| 2 | Collector extraction, read contracts and dashboard parity | Not issued; depends on 1 and preserved compatibility tests |
+| 1 | Organ identity, boundaries and repository bootstrap | Human created repository 2026-10-03; standalone bootstrap Ears#1 / PR#2. Cross-organ identity propagation remains unissued. |
+| 2 | Collector extraction, read contracts and dashboard parity | Standalone collector/contracts/board implemented in Ears PR#2; Brain adapter/extraction and live deployment remain outstanding. |
 | 3 | Listening reliability and category-sensitive triage | Not issued; depends on 2 |
 | 4 | Assistant distribution of /feedback | Not issued; phase 0 merged; inspect existing assistant-template distribution before edits |
 | 5 | Follow-through from conversation to delivered work | Not issued; depends on 2–3 |
@@ -161,3 +161,20 @@ uploads, comprehensive historical migration, separate task tracker, scientific
 truth inferred from a successful run, automatic code changes from complaints,
 or API-billed background agent. Future sources need demonstrated demand and
 their own explicit access/publication scope.
+
+## 2026-10-03 continuation
+
+Human: "Repository made continue". Repository verified public/writeable; initial
+README seed 1b0c069 permits a feature PR. Ears#1 / PR#2 implements the
+standalone source collector, receipts, snapshot validation, board, shared state
+contract and CI/Pages workflows. 22 tests pass. CI passes on Python 3.12/3.13 and Chromium (run 37126922695): 390/1280px,
+light/dark, clipboard success/denial, no page errors or horizontal overflow.
+Mobile light and desktop dark screenshots visually reviewed; PR is review-ready. No live Pages claim.
+
+Scope order adjusted to avoid touching Brain while feedback #454 is still
+unmerged: this bootstrap delivers standalone parts of phases 1–3; it does not
+claim organism-wide registration or completed extraction. Nested Discussion
+reply coverage remains explicitly partial. Shared identity propagation, Brain
+adapter/cockpit switch, Pages setup and a real collection/deployment witness
+are the next integration phase after these PRs are merged. Full follow-through,
+assistant distribution and theme synthesis remain as specified above.
