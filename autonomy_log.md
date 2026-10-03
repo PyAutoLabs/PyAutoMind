@@ -353,38 +353,40 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked` /
 
 The calibration row `ship_library` / `ship_workspace` append at PR-open goes in
 the table **above**, at the end of its last segment, in date order — never in
-the Shadow window below, which is `/prm`'s alone, tier-`notify` only, with a
-fixed and tested `human action` vocabulary.
+the Shadow window below, which is the close-out's alone, tier-`glance` only
+(tier-`notify` until 2026-10-02), with a fixed and tested `human action`
+vocabulary.
 
-## Shadow window — the tier-`notify` merge decision
+## Shadow window — the tier-`glance` merge decision
 
-Opened **2026-08-30**. **RE-OPENED 2026-09-03**: the nominal 2026-09-27 close is
-void. The window is **counted, not dated** — it runs to **40 tier-`notify`
-candidates** and re-opens from the first row appended by `/prm` close-out. The
-rule's own instruction governs: *extend the window; do not lower the bar*.
+**RE-SCOPED 2026-10-02 to tier `glance`.** The human granted `notify`
+auto-merge early, by dated doctrine edit (`PyAutoBrain/AUTONOMY.md` "Merge
+authority follows Consequence — 2026-10-02"), with this window at **13/40, all clean** — all 12 `/prm`-appended rows
+`merged-unchanged`, plus one pre-`/prm` stage-2 row; nothing amended, nothing
+reverted. The rest of the evidence cited there: ~200 recent
+merged PRs across 8 repos carried 0 reviews and mostly merged under an hour
+after opening with 1–2 commits, and the first table above stood at 120
+`merged-unchanged` / 12 `amended` / 2 `rejected` / 2 `reverted`.
 
-Nothing fed the table between 2026-08-31 and the row that re-opens the window,
-because the append was anchored to a **batch review slot**. The *two-slot
-batching epic* was retired on 2026-09-03
-(`complete/archive/epics/two_slot_batching_epic.md`), but the batch slot door
-itself was not: it lives on and runs only when a batch is launched, which on
-most days is never. So the append moved to `/prm` close-out — the one act that
-happens on every shipped task (PyAutoBrain#364).
+From 2026-10-02 the window counts **tier-`glance` auto-merges**: a declared
+`Consequence: glance` task whose `Witness:` check passed is merged by its
+shipping session on green CI, and its close-out appends one row here, recorded
+`merged-unchanged` at merge. The human reads the post-merge summary and
+**amends the row** to `merged-after-substantive-change` if they find something
+substantive, or to `reverted` if it was backed out. `glance` is **confirmed at
+20 clean rows**; **any `reverted` row demotes `glance` back to a human
+`/prm`** at once, by dated doctrine edit citing the row.
 
-Protocol, power calculation and the **pre-registered decision rule** live in the
-tier-`notify` protocol prompt, folded under `## Original prompt` in
-`complete/2026/09/prm-shadow-row-notify-tier.md` — read it before appending, and
-before interpreting anything here.
+The `notify` history (opened 2026-08-30, re-opened 2026-09-03, fed from `/prm`
+close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
+Its protocol, power calculation and pre-registered rule are in
+`complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-In one line: while the window runs, tier-`notify` work still waits for the human
-as it always has, but the gate's verdict and the human's action are both
-recorded, so the question "how often would auto-merge have been wrong on this
-organism's own work?" is answered with data rather than intuition.
+Count toward 20: 0 (stage 1: 0, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: none yet; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14
 
-Count toward 40: 13 (stage 1: 12, stage 2: 1) — window re-opened 2026-09-03; first /prm-appended row: 2026-09-09; legacy rows not counted: 1
-
-One row per tier-`notify` candidate at close-out. `human action` ∈
-`merged-unchanged` / `merged-after-substantive-change` / `not-merged`.
+One row per tier-`glance` candidate at close-out. `human action` ∈
+`merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
+`reverted`.
 **Substantive** is fixed in advance: a change the human would have minded
 finding already merged — a changed default, a user-visible error message, a
 removed or weakened test, a renamed public thing, a docs claim that was wrong.

@@ -18,6 +18,8 @@ import sys
 from pathlib import Path
 from types import SimpleNamespace
 
+import pytest
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 import lifecycle  # noqa: E402
@@ -29,16 +31,16 @@ import lifecycle  # noqa: E402
 SHADOW_LOG = """\
 # Autonomy calibration log
 
-## Shadow window — the tier-`notify` merge decision
+## Shadow window — the tier-`glance` merge decision
 
-Count toward 40: 0 (stage 1: 0, stage 2: 0)
+Count toward 20: 0 (stage 1: 0, stage 2: 0)
 
-One row per tier-`notify` candidate at close-out.
+One row per tier-`glance` candidate at close-out.
 
 | date | task | tier | gate (tests/smoke/review/heart/witness[/adversary]) \
 | human action | stage |
 |------|------|------|---------|--------------|-------|
-| 2026-09-07 | flywheel-tuning (Flywheel#1) | notify | tests 3 pass \
+| 2026-10-02 | flywheel-tuning (Flywheel#1) | glance | tests 3 pass \
 | merged-unchanged | 1 |
 """
 
@@ -255,39 +257,41 @@ def test_it_refuses_a_bad_date_and_a_missing_body(tmp_path, monkeypatch,
 # --------------------------------------------------------------------------- #
 # the shadow window leg
 # --------------------------------------------------------------------------- #
-def test_tier_notify_with_a_gate_and_an_action_appends_one_row(tmp_path,
+def test_tier_glance_with_a_gate_and_an_action_appends_one_row(tmp_path,
                                                                monkeypatch):
     root = _mind(tmp_path)
     _at(monkeypatch, root)
     assert lifecycle.cmd_close(_args(
-        root, apply=True, tier="notify", gate="tests 3 pass",
-        action="merged-unchanged", pr=["Flywheel#8"])) == 0
+        root, apply=True, tier="glance", gate="tests 3 pass",
+        action="merged-unchanged", pr=["Flywheel#8"], date="2026-10-03")) == 0
     log = (root / "autonomy_log.md").read_text()
-    assert "sprocket-calibration (Flywheel#8)" in log
-    assert "Count toward 40: 2" in log
+    assert "sprocket-calibration (Flywheel#8) | glance |" in log
+    assert "Count toward 20: 2" in log
 
 
-def test_a_tier_that_is_not_notify_appends_nothing(tmp_path, monkeypatch):
-    """Anything but `notify` is outside the pre-registered window: no row, no
-    question, no ledger line."""
+@pytest.mark.parametrize("tier", ["notify", "judge"])
+def test_a_tier_that_is_not_glance_appends_nothing(tier, tmp_path, monkeypatch):
+    """Anything but `glance` is outside the window — `notify` included, since
+    `notify` auto-merge was granted on 2026-10-02 and its window closed: no
+    row, no question, no ledger line."""
     root = _mind(tmp_path)
     _at(monkeypatch, root)
     before = (root / "autonomy_log.md").read_text()
     assert lifecycle.cmd_close(_args(
-        root, apply=True, tier="glance", gate="tests 3 pass",
+        root, apply=True, tier=tier, gate="tests 3 pass",
         action="merged-unchanged")) == 0
     assert (root / "autonomy_log.md").read_text() == before
 
 
-def test_tier_notify_without_a_gate_writes_no_row_and_says_why(tmp_path,
+def test_tier_glance_without_a_gate_writes_no_row_and_says_why(tmp_path,
                                                                monkeypatch,
                                                                capsys):
-    """The row records the gate that RAN and what the human DID — inventing
-    either is the one thing the protocol cannot survive."""
+    """The row records the gate that RAN and what HAPPENED to the PR —
+    inventing either is the one thing the protocol cannot survive."""
     root = _mind(tmp_path)
     _at(monkeypatch, root)
     before = (root / "autonomy_log.md").read_text()
-    assert lifecycle.cmd_close(_args(root, apply=True, tier="notify")) == 0
+    assert lifecycle.cmd_close(_args(root, apply=True, tier="glance")) == 0
     assert (root / "autonomy_log.md").read_text() == before
     assert "--gate/--action are missing" in capsys.readouterr().out
 
@@ -297,7 +301,7 @@ def test_no_shadow_row_suppresses_the_leg_outright(tmp_path, monkeypatch):
     _at(monkeypatch, root)
     before = (root / "autonomy_log.md").read_text()
     assert lifecycle.cmd_close(_args(
-        root, apply=True, tier="notify", gate="tests 3 pass",
+        root, apply=True, tier="glance", gate="tests 3 pass",
         action="merged-unchanged", no_shadow_row=True)) == 0
     assert (root / "autonomy_log.md").read_text() == before
 

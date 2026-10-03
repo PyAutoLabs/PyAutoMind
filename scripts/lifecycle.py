@@ -26,11 +26,11 @@ Subcommands
         removing the active/ prompt. Run `index --apply` afterwards.
 
   close <slug> --date YYYY-MM-DD --from-file <path> [--prompt <path|name>]
-        [--pr Repo#N ...] [--tier notify --gate "<cell>" --action <what>]
+        [--pr Repo#N ...] [--tier glance --gate "<cell>" --action <what>]
         [--no-shadow-row] [--apply]
         The /prm hook: the whole Mind-side close-out as one verb — `record`
         (which folds the prompt, refreshes the index and prunes active.md),
-        plus the parked.md/planned.md pointer, plus the tier-`notify` shadow
+        plus the parked.md/planned.md pointer, plus the tier-`glance` shadow
         row, plus the sweep for references the merge falsified (printed, never
         rewritten). Dry run by default. Unlike `record --prompt` it resolves a
         draft/ prompt too, and it stages nothing. It does NOT render the
@@ -100,27 +100,33 @@ DRAFT_DIR = ROOT / "draft"
 ACTIVE_MD = ROOT / "active.md"
 AUTONOMY_LOG = ROOT / "autonomy_log.md"
 
-# --- the tier-`notify` shadow window ---------------------------------------
-# The pre-registered decision rule (protocol prompt: batch_notify_tier_merge)
-# grades tier-`notify` candidates over a window of at least 40 rows. The window
-# is COUNTED, not dated: it re-opened on 2026-09-03 and runs from the first row
-# `/prm` close-out appended, because the old append was anchored to a batch
-# review slot that only runs when a batch is launched.
+# --- the tier-`glance` shadow window ---------------------------------------
+# The window ran over tier-`notify` candidates (protocol prompt:
+# batch_notify_tier_merge, 40 rows) until 2026-10-02, when the human granted
+# `notify` auto-merge early at 13/40, all clean, by dated doctrine edit
+# (PyAutoBrain/AUTONOMY.md "Merge authority follows Consequence — 2026-10-02")
+# and re-scoped the window to tier `glance`: each auto-merged `glance` PR
+# appends one row, recorded `merged-unchanged` at merge and amended by the
+# human if they find something substantive. `glance` is confirmed at 20 clean
+# rows; any `reverted` row demotes the tier back to a human `/prm`. The
+# `notify` rows stay listed as history and are named as uncounted.
 SHADOW_HEADING = "## Shadow window"
 SHADOW_TABLE_HEADER = "| date | task | tier | gate"
+SHADOW_TIER = "glance"
 SHADOW_ACTIONS = (
     "merged-unchanged",
     "merged-after-substantive-change",
     "not-merged",
+    "reverted",
 )
 SHADOW_STAGES = ("1", "2")
-SHADOW_TARGET = 40
-SHADOW_REOPENED = "2026-09-03"
+SHADOW_TARGET = 20
+SHADOW_REOPENED = "2026-10-02"
 # Rows dated before this are the pre-`/prm` history: listed, never counted as
 # "the first row `/prm` appended".
 SHADOW_PRM_EPOCH = "2026-09-07"
-SHADOW_COUNT_PREFIX = "Count toward 40:"
-SHADOW_COUNT_ANCHOR = "One row per tier-`notify` candidate"
+SHADOW_COUNT_PREFIX = f"Count toward {SHADOW_TARGET}:"
+SHADOW_COUNT_ANCHOR = "One row per tier-`glance` candidate"
 
 H2_RE = re.compile(r"^##\s+(.+?)\s*$")
 
@@ -2282,7 +2288,7 @@ def cmd_check(args) -> int:
 
 
 # --------------------------------------------------------------------------- #
-# the tier-`notify` shadow window (autonomy_log.md)
+# the tier-`glance` shadow window (autonomy_log.md)
 # --------------------------------------------------------------------------- #
 def _md_cells(line: str) -> "list[str]":
     """The cells of one markdown table row, honouring escaped pipes.
@@ -2345,24 +2351,33 @@ def shadow_rows(text: str) -> "list[list[str]]":
 def shadow_count_line(rows: "list[list[str]]") -> str:
     """The section's one-line state of the window, derived from the rows.
 
-    Only stage-1 and stage-2 rows count: the window's own rule forbids pooling
-    the two, and legacy rows carry neither (they predate the stage column's
-    meaning). They stay listed — deleting history to make a counter tidy is how
-    a pre-registered rule stops being pre-registered — and are named as
-    uncounted so the number cannot be read as "the table has N rows".
+    Only tier-`glance` stage-1 and stage-2 rows dated from the re-scope count:
+    the window's own rule forbids pooling the two stages, legacy rows carry
+    neither (they predate the stage column's meaning), and every earlier row
+    belongs to the tier-`notify` window that closed when `notify` was granted
+    on 2026-10-02. They all stay listed — deleting history to make a counter
+    tidy is how a pre-registered rule stops being pre-registered — and are
+    named as uncounted so the number cannot be read as "the table has N rows".
     """
-    staged = [r for r in rows if len(r) > 5 and r[5] in SHADOW_STAGES]
-    legacy = len(rows) - len(staged)
-    one = sum(1 for r in staged if r[5] == "1")
-    two = sum(1 for r in staged if r[5] == "2")
-    firsts = sorted(r[0] for r in staged if r[0] >= SHADOW_PRM_EPOCH)
+    graded = [r for r in rows if shadow_counts(r)]
+    uncounted = len(rows) - len(graded)
+    one = sum(1 for r in graded if r[5] == "1")
+    two = sum(1 for r in graded if r[5] == "2")
+    firsts = sorted(r[0] for r in graded)
     first = firsts[0] if firsts else "none yet"
-    line = (f"{SHADOW_COUNT_PREFIX} {len(staged)} (stage 1: {one}, stage 2: "
-            f"{two}) — window re-opened {SHADOW_REOPENED}; "
-            f"first /prm-appended row: {first}")
-    if legacy:
-        line += f"; legacy rows not counted: {legacy}"
+    line = (f"{SHADOW_COUNT_PREFIX} {len(graded)} (stage 1: {one}, stage 2: "
+            f"{two}) — window re-scoped to tier `{SHADOW_TIER}` "
+            f"{SHADOW_REOPENED}; first `{SHADOW_TIER}` row: {first}")
+    if uncounted:
+        line += (f"; earlier rows not counted (the tier-`notify` window, "
+                 f"closed {SHADOW_REOPENED}, and legacy): {uncounted}")
     return line
+
+
+def shadow_counts(row: "list[str]") -> bool:
+    """Whether one table row counts toward the current window."""
+    return (len(row) > 5 and row[5] in SHADOW_STAGES
+            and row[2] == SHADOW_TIER and row[0] >= SHADOW_REOPENED)
 
 
 def _shadow_cell(value: str) -> str:
@@ -2398,7 +2413,7 @@ def shadow_apply(text: str, row: str) -> str:
 
 
 def cmd_shadow_row(args) -> int:
-    """Append one tier-`notify` row to the shadow window (the /prm close-out hook).
+    """Append one tier-`glance` row to the shadow window (the close-out hook).
 
     Dry-run by default: the row and the count line it would produce are printed
     and nothing is written, because the caller is a skill reading a number back
@@ -2436,7 +2451,7 @@ def cmd_shadow_row(args) -> int:
 #
 # Shipping a task ends with six chores in a fixed order, and `/prm` spends its
 # prose telling a session to do each one: write the record, remove the prompt,
-# drop the registry entry, append the tier-`notify` shadow row, regenerate
+# drop the registry entry, append the tier-`glance` shadow row, regenerate
 # complete/index.md, repoint what the merge falsified. Every one of them was a
 # step a session could skip — two of them (the index and the `active.md` prune)
 # were folded into `record` after exactly that, each following its own
@@ -2550,22 +2565,23 @@ def close_references(root: Path, slug: str, rel: str) -> "list[str]":
 def close_shadow_task(args) -> "tuple[str | None, str]":
     """(the shadow row's task cell, why there is no row).
 
-    The tier-`notify` auto-merge decision is pre-registered over 40 candidates
-    and the close-out is what feeds the window — but only for tier `notify`,
-    and only with the gate that actually ran and the answer the human actually
-    gave. Neither is ever inferred here: a missing cell yields no row and a
-    line saying so."""
+    The tier-`glance` auto-merge confirmation is counted over 20 rows and the
+    close-out is what feeds the window — but only for tier `glance`, and only
+    with the gate that actually ran and the action that actually happened (an
+    auto-merge records `merged-unchanged` at merge; the human amends the row
+    if they later find something substantive). Neither is ever inferred here:
+    a missing cell yields no row and a line saying so."""
     if getattr(args, "no_shadow_row", False):
         return None, "suppressed (--no-shadow-row)"
     tier = (getattr(args, "tier", None) or "").strip().lower()
     if not tier:
-        return None, ("skipped — no --tier given (pass `--tier notify` with "
-                      "--gate/--action to feed the shadow window)")
-    if tier != "notify":
-        return None, f"skipped — tier `{tier}` is not `notify`"
+        return None, (f"skipped — no --tier given (pass `--tier {SHADOW_TIER}` "
+                      "with --gate/--action to feed the shadow window)")
+    if tier != SHADOW_TIER:
+        return None, f"skipped — tier `{tier}` is not `{SHADOW_TIER}`"
     if not (args.gate and args.action):
-        return None, ("tier notify, but --gate/--action are missing — the row "
-                      "records the gate that RAN and what the human DID with "
+        return None, (f"tier {SHADOW_TIER}, but --gate/--action are missing — "
+                      "the row records the gate that RAN and what happened to "
                       "the PR, and neither is ever invented; run "
                       "`lifecycle.py shadow-row … --apply` once you have them")
     task = args.slug
@@ -2615,7 +2631,7 @@ def cmd_close(args) -> int:
     row = None
     if task_cell is not None:
         row = "| " + " | ".join(_shadow_cell(c) for c in (
-            args.date, task_cell, "notify", args.gate, args.action,
+            args.date, task_cell, SHADOW_TIER, args.gate, args.action,
             args.stage)) + " |"
 
     print(f"close: {args.slug}")
@@ -2649,7 +2665,7 @@ def cmd_close(args) -> int:
 
     if row is not None:
         sh = _CloseArgs(log=getattr(args, "log", None), date=args.date,
-                        task=task_cell, tier="notify", gate=args.gate,
+                        task=task_cell, tier=SHADOW_TIER, gate=args.gate,
                         action=args.action, stage=args.stage, apply=True)
         cmd_shadow_row(sh)
 
@@ -2704,7 +2720,7 @@ def main() -> int:
         "close",
         help="the Mind-side close-out for one shipped task, as one verb: "
              "record + remove the prompt + drop the registry entry + index "
-             "(+ the tier-`notify` shadow row)",
+             "(+ the tier-`glance` shadow row)",
     )
     cl.add_argument("slug", help="the task slug being closed out")
     cl.add_argument("--date", required=True, help="completion date YYYY-MM-DD")
@@ -2719,12 +2735,13 @@ def main() -> int:
                     metavar="REF",
                     help="the PR(s) this task shipped (`Repo#N`), named in the "
                          "shadow row's task cell")
-    cl.add_argument("--tier", help="the task's sizing tier; only `notify` "
-                                   "feeds the shadow window")
-    cl.add_argument("--gate", help="with --tier notify: the gate cell copied "
+    cl.add_argument("--tier", help="the task's declared Consequence tier; "
+                                   "only `glance` feeds the shadow window")
+    cl.add_argument("--gate", help="with --tier glance: the gate cell copied "
                                    "from the task's ship calibration row")
     cl.add_argument("--action", choices=list(SHADOW_ACTIONS),
-                    help="with --tier notify: what the human did with the PR")
+                    help="with --tier glance: what happened to the PR "
+                         "(`merged-unchanged` at an auto-merge)")
     cl.add_argument("--stage", default="1", choices=list(SHADOW_STAGES),
                     help="the shadow row's protocol stage (default: 1)")
     cl.add_argument("--no-shadow-row", action="store_true", dest="no_shadow_row",
@@ -2737,21 +2754,22 @@ def main() -> int:
 
     sr = sub.add_parser(
         "shadow-row",
-        help="append one tier-`notify` row to the shadow window in "
+        help="append one tier-`glance` row to the shadow window in "
              "autonomy_log.md (the /prm close-out hook)",
     )
     sr.add_argument("--date", help="merge date YYYY-MM-DD (default: today, UTC)")
     sr.add_argument("--task", required=True,
                     help="task slug plus the PR refs, e.g. "
                          "'my-task (PyAutoBrain#1 / PR#2)'")
-    sr.add_argument("--tier", default="notify",
-                    help="the sizing tier (default: notify)")
+    sr.add_argument("--tier", default=SHADOW_TIER,
+                    help=f"the declared Consequence tier (default: "
+                         f"{SHADOW_TIER})")
     sr.add_argument("--gate", required=True,
                     help="the gate cell, copied from the task's ship "
                          "calibration row (tests/smoke/review/heart/witness"
                          "[/adversary])")
     sr.add_argument("--action", required=True, choices=list(SHADOW_ACTIONS),
-                    help="what the human did with the PR")
+                    help="what happened to the PR")
     sr.add_argument("--stage", default="1", choices=list(SHADOW_STAGES),
                     help="1 = four-leg gate + witness; 2 = plus the "
                          "independent-model adversary leg")

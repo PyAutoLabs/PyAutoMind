@@ -1,19 +1,20 @@
-"""Contract tests for the tier-`notify` shadow window and its append hook.
+"""Contract tests for the tier-`glance` shadow window and its append hook.
 
-The shadow window is a **pre-registered** decision rule: over a window of at
-least 40 tier-`notify` candidates, the human's action at close-out decides
-whether an agent may ever merge its own low-consequence work. A pre-registered
+The shadow window is a **pre-registered** decision rule. It ran over tier-`notify`
+candidates until `notify` auto-merge was granted on 2026-10-02; it now counts
+tier-`glance` auto-merges, and 20 clean rows confirm `glance` (any `reverted`
+row demotes it). A pre-registered
 rule that anyone can quietly reshape is not pre-registered, so two things are
 pinned here:
 
 1. **The live ledger's schema** — heading, header row, six cells per row, an
    allowed `human action` on every row the rule actually grades, and a count
    line that agrees with the rows it claims to count. A count line drifting
-   from its table is the exact failure that would let the window "reach 40"
-   without 40 candidates.
+   from its table is the exact failure that would let the window "reach 20"
+   without 20 candidates.
 2. **The append itself** — `lifecycle.py shadow-row` on a fixture: dry run
    writes nothing, `--apply` appends exactly one row and moves the count, and
-   an action outside the three allowed values is refused.
+   an action outside the allowed values is refused.
 
 Same two rules as the other lifecycle tests: fictional fixtures only (`tests/**`
 is KEEP-copied into the public template), and every leg must be shown to fail
@@ -55,19 +56,19 @@ FIXTURE = """\
 |------|------|-----------------|-------|---------|
 | 2026-08-01 | sprocket-calibration (#1) | safe | tests pass | merged-unchanged |
 
-## Shadow window — the tier-`notify` merge decision
+## Shadow window — the tier-`glance` merge decision
 
-Opened **2026-08-30**.
+Re-scoped **2026-10-02**.
 
-Count toward 40: 1 (stage 1: 1, stage 2: 0) — window re-opened 2026-09-03; \
-first /prm-appended row: 2026-09-07
+Count toward 20: 1 (stage 1: 1, stage 2: 0) — window re-scoped to tier \
+`glance` 2026-10-02; first `glance` row: 2026-10-02
 
-One row per tier-`notify` candidate at close-out.
+One row per tier-`glance` candidate at close-out.
 
 | date | task | tier | gate (tests/smoke/review/heart/witness[/adversary]) \
 | human action | stage |
 |------|------|------|---------|--------------|-------|
-| 2026-09-07 | flywheel-tuning (Flywheel#1 / PR#2) | notify | tests 3 pass \
+| 2026-10-02 | flywheel-tuning (Flywheel#1 / PR#2) | glance | tests 3 pass \
 | merged-unchanged | 1 |
 
 ## Freeze overrides
@@ -114,9 +115,9 @@ def test_every_row_carries_all_six_cells():
 
 
 @needs_window
-def test_every_prm_appended_row_records_one_of_the_three_allowed_actions():
+def test_every_prm_appended_row_records_one_of_the_allowed_actions():
     """`human action` is a merge outcome, and the decision is a count over
-    exactly three of them.
+    exactly these.
 
     The boundary is the window's own: rows before the `/prm` epoch were
     appended at **PR-open** by the retired batch protocol, so their action cell
@@ -146,7 +147,7 @@ def test_the_count_line_agrees_with_the_rows_it_counts():
     assert m, f"count line does not parse: {line!r}"
     total, one, two = (int(g) for g in m.groups())
 
-    graded = [r for r in rows if r[5] in lifecycle.SHADOW_STAGES]
+    graded = [r for r in rows if lifecycle.shadow_counts(r)]
     assert (total, one, two) == (
         len(graded),
         sum(1 for r in graded if r[5] == "1"),
@@ -182,19 +183,19 @@ def test_a_dry_run_leaves_the_file_byte_identical(tmp_path):
     before committing to it, so the default must not write."""
     log = _fixture(tmp_path)
     before = log.read_bytes()
-    r = _run(log, "--date", "2026-09-08", "--task", "widget-press (Widget#3)",
+    r = _run(log, "--date", "2026-10-03", "--task", "widget-press (Widget#3)",
              "--gate", "tests 4 pass", "--action", "merged-unchanged",
              "--stage", "1")
     assert r.returncode == 0, r.stderr
     assert log.read_bytes() == before
-    assert "| 2026-09-08 | widget-press (Widget#3) | notify |" in r.stdout
-    assert "Count toward 40: 2 (stage 1: 2, stage 2: 0)" in r.stdout
+    assert "| 2026-10-03 | widget-press (Widget#3) | glance |" in r.stdout
+    assert "Count toward 20: 2 (stage 1: 2, stage 2: 0)" in r.stdout
 
 
 def test_apply_appends_exactly_one_row_and_moves_the_count(tmp_path):
     log = _fixture(tmp_path)
     before = lifecycle.shadow_rows(log.read_text())
-    r = _run(log, "--date", "2026-09-08", "--task", "widget-press (Widget#3)",
+    r = _run(log, "--date", "2026-10-03", "--task", "widget-press (Widget#3)",
              "--gate", "tests 4 pass", "--action",
              "merged-after-substantive-change", "--stage", "2", "--apply")
     assert r.returncode == 0, r.stderr
@@ -203,18 +204,18 @@ def test_apply_appends_exactly_one_row_and_moves_the_count(tmp_path):
     after = lifecycle.shadow_rows(text)
     assert len(after) == len(before) + 1
     assert after[:-1] == before, "an existing row was rewritten"
-    assert after[-1] == ["2026-09-08", "widget-press (Widget#3)", "notify",
+    assert after[-1] == ["2026-10-03", "widget-press (Widget#3)", "glance",
                          "tests 4 pass", "merged-after-substantive-change", "2"]
-    assert ("Count toward 40: 2 (stage 1: 1, stage 2: 1) — window re-opened "
-            "2026-09-03; first /prm-appended row: 2026-09-07") in text
+    assert ("Count toward 20: 2 (stage 1: 1, stage 2: 1) — window re-scoped "
+            "to tier `glance` 2026-10-02; first `glance` row: 2026-10-02") in text
     # the rest of the ledger is untouched
     assert "## Freeze overrides" in text
     assert "| 2026-08-01 | sprocket-calibration (#1) |" in text
 
 
-def test_an_action_outside_the_three_values_is_refused(tmp_path):
-    """The window counts three outcomes. A fourth would be uncountable, and
-    the rule is pre-registered over exactly these."""
+def test_an_action_outside_the_allowed_values_is_refused(tmp_path):
+    """The window counts a fixed set of outcomes. Another would be
+    uncountable, and the rule is pre-registered over exactly these."""
     log = _fixture(tmp_path)
     before = log.read_bytes()
     r = _run(log, "--task", "t", "--gate", "g", "--action", "merged-ish",
@@ -237,7 +238,7 @@ def test_a_pipe_in_a_cell_cannot_split_the_row(tmp_path):
     """An unescaped pipe in a free-text cell would silently add a column and
     push `stage` off the end of the row."""
     log = _fixture(tmp_path)
-    r = _run(log, "--date", "2026-09-08", "--task", "widget | press",
+    r = _run(log, "--date", "2026-10-03", "--task", "widget | press",
              "--gate", "tests pass | smoke n/a", "--action", "not-merged",
              "--stage", "1", "--apply")
     assert r.returncode == 0, r.stderr
@@ -261,18 +262,18 @@ def test_the_count_line_is_created_when_the_section_has_none(tmp_path):
     """A window that predates the count line still gets one, anchored before
     the paragraph that defines the rows."""
     body = FIXTURE.replace(
-        "Count toward 40: 1 (stage 1: 1, stage 2: 0) — window re-opened "
-        "2026-09-03; first /prm-appended row: 2026-09-07\n\n", "")
+        "Count toward 20: 1 (stage 1: 1, stage 2: 0) — window re-scoped to "
+        "tier `glance` 2026-10-02; first `glance` row: 2026-10-02\n\n", "")
     assert lifecycle.SHADOW_COUNT_PREFIX not in body
     log = _fixture(tmp_path, body)
-    r = _run(log, "--date", "2026-09-08", "--task", "widget-press",
+    r = _run(log, "--date", "2026-10-03", "--task", "widget-press",
              "--gate", "tests pass", "--action", "not-merged", "--stage", "1",
              "--apply")
     assert r.returncode == 0, r.stderr
     text = log.read_text()
     count = next(ln for ln in text.splitlines()
                  if ln.startswith(lifecycle.SHADOW_COUNT_PREFIX))
-    assert "Count toward 40: 2" in count
+    assert "Count toward 20: 2" in count
     idx = text.index(count)
     assert idx < text.index(lifecycle.SHADOW_COUNT_ANCHOR)
 
@@ -287,11 +288,11 @@ def test_legacy_rows_are_listed_but_never_counted(tmp_path):
         "| 2026-08-31 | old-flywheel-run | supervised | tests pass "
         "| PR #9 opened, merged later | shipped |\n")
     log = _fixture(tmp_path, body)
-    r = _run(log, "--date", "2026-09-08", "--task", "widget-press",
+    r = _run(log, "--date", "2026-10-03", "--task", "widget-press",
              "--gate", "tests pass", "--action", "not-merged", "--stage", "1",
              "--apply")
     assert r.returncode == 0, r.stderr
     text = log.read_text()
     assert "| 2026-08-31 | old-flywheel-run |" in text
-    assert "Count toward 40: 2 (stage 1: 2, stage 2: 0)" in text
-    assert "legacy rows not counted: 1" in text
+    assert "Count toward 20: 2 (stage 1: 2, stage 2: 0)" in text
+    assert "and legacy): 1" in text
