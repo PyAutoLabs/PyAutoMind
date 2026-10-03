@@ -42,17 +42,17 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 2 |
+| [In flight](#in-flight) (`active/`) | 3 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 6 |
-| [Planned](#planned) (`planned.md`) | 8 |
-| [Backlog](#backlog) (`draft/`) | 258 |
+| [Planned](#planned) (`planned.md`) | 7 |
+| [Backlog](#backlog) (`draft/`) | 232 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 23
+**Highest priority** (filed as `high`) — showing 12 of 20
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -150,7 +150,7 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 125
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 113
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -251,6 +251,14 @@ Use the start-dev skill. draft/research/pyautohands/git_docs.md
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
+
+<details><summary>📋 <a href="active/campaign_control_room.md">Pulse campaign control room and task migration</a> — <a href="https://github.com/PyAutoLabs/PyAutoPulse/issues/6">issue #6</a> — issued 2026-10-03 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/7">PyAutoPulse#7</a></summary>
+
+```
+Use the start-dev skill. active/campaign_control_room.md
+```
+
+</details>
 
 <details><summary>📋 <a href="active/evaluation_grid_cap_preserves_field.md">Preserve the LensCalc evaluation field when the grid cap activates</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/645">issue #645</a> — issued 2026-10-02 — library-merged, workspace-release-gated — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/646">PyAutoGalaxy#646</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/343">autolens_workspace_test#343</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/365">autolens_profiling#365</a> — ⏳ pending release: PyAutoGalaxy</summary>
 
@@ -585,7 +593,7 @@ Use the start-dev skill. active/colab_refinement_throughout.md
 Scoped but not started; some are not yet prompt files. Full detail in [`planned.md`](planned.md).
 
 <details>
-<summary><b>8</b> task(s)</summary>
+<summary><b>7</b> task(s)</summary>
 
 <details><summary>📋 <b>isothermal-ell-sph-oversampling-at-the-cusp</b> — found 2026-08-09 — planned — NOT yet a prompt file; file one via <code>/intake</code> before starting</summary>
 
@@ -627,14 +635,6 @@ Use the route skill. start the planned PyAutoMind task latent-nan-guard-honest-r
 
 </details>
 
-<details><summary>📋 <b>timing-noise-audit</b> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/362">issue #362</a> — filed 2026-10-02 — planned</summary>
-
-```
-Use the start-dev skill. draft/bug/autolens_profiling/timing_noise_audit.md
-```
-
-</details>
-
 <details><summary>📋 <b>knn-partial-point-block</b> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/609">issue #609</a> — filed 2026-10-02</summary>
 
 ```
@@ -655,10 +655,10 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ## Backlog
 
-**258** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **57** of them belong to an epic and are listed only under [Epics](#epics) below.
+**232** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 79</summary>
+<summary><b>bug</b> — 75</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -736,14 +736,6 @@ Use the start-dev skill. draft/bug/pyautoheart/smoke_install_flat_pip_chain_brea
 
 ```
 Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens_profiling/timing_noise_audit.md">Audit timing tests and profiling gates for measurement noise</a> — autolens_profiling · large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autolens_profiling/timing_noise_audit.md
 ```
 
 </details>
@@ -1124,14 +1116,6 @@ Use the start-dev skill. draft/bug/priors/15_transformed_message_logpdf_jacobian
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md">jax_profiling/gradient/imaging/pixelization.py: 3.2% of its pin move is unattributed</a> — workspaces · medium · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/bug/workspaces/gradient_pixelization_pin_residual_drift.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/bug/autocti_workspace/dataset_1d_results_database_examples_drift.md">autocti_workspace: the dataset_1d results/database example scripts have drifted</a> — autocti_workspace · large · supervised · normal</summary>
 
 ```
@@ -1236,14 +1220,6 @@ Use the start-dev skill. draft/bug/pyautobrain/cortex_test_worktree_symlink.md
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/workspaces/profile_lens_aggregator_needs_config_dir.md">profile_lens_aggregator.py cannot run from the autolens_workspace_developer root: no config/ directory</a> — workspaces · small · safe · low</summary>
-
-```
-Use the start-dev skill. draft/bug/workspaces/profile_lens_aggregator_needs_config_dir.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md">The reconstruction noise map is not the truncated posterior the NNLS solve…</a> — autoarray · medium · human-required · low</summary>
 
 ```
@@ -1268,14 +1244,6 @@ Use the start-dev skill. draft/bug/pyautolens/point_source_json_datasets_record_
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/workspaces/mge_likelihood_breakdown_steps_are_cumulative_an.md">MGE likelihood_breakdown steps are cumulative and <code>linear_gaussians</code> is reported as 0</a> — workspaces · medium · safe · low</summary>
-
-```
-Use the start-dev skill. draft/bug/workspaces/mge_likelihood_breakdown_steps_are_cumulative_an.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites (follow-up to PyAutoGalaxy#631)</a> — autogalaxy</summary>
 
 ```
@@ -1295,7 +1263,7 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>feature</b> — 35</summary>
+<summary><b>feature</b> — 32</summary>
 
 <details><summary>📋 <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding against the raw maximum finds…</a> — autoarray · small · supervised · medium</summary>
 
@@ -1309,14 +1277,6 @@ Use the start-dev skill. draft/feature/autoarray/source_clumps_robust_scale.md
 
 ```
 Use the start-dev skill. draft/feature/autofit_assistant/data_loading_and_selection_cuts_skill.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md">Numba breakdown harness: perturb the instance so the operated-matrix memo cannot hide…</a> — autolens_profiling · small · safe · medium</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens_profiling/numba_breakdown_harness_memo_blind.md
 ```
 
 </details>
@@ -1465,14 +1425,6 @@ Use the start-dev skill. draft/feature/autolens/multi_plane_time_delays.md
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/autolens_profiling/search_settings_estimation_infrastructure.md">Search settings-estimation + profiling infrastructure (n_starts / batch_size / n_batch)</a> — autolens_profiling · large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens_profiling/search_settings_estimation_infrastructure.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/feature/autolens_workspace/oversampled_psf_dataset_adoption.md">Adopt oversampled PSFs in the start-here dataset chain (option a)</a> — autolens_workspace · large · supervised · normal</summary>
 
 ```
@@ -1537,14 +1489,6 @@ Use the start-dev skill. draft/feature/autogalaxy/dpie_sigma0_parameterization.m
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/autolens_profiling/gradient_cost_probe.md">A gradient-cost probe: forward vs <code>value_and_grad</code> ms/eval and a strict FD check…</a> — autolens_profiling · small · safe · low</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens_profiling/gradient_cost_probe.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/feature/pyautohands/release_board_run_logs_enrichment.md">Release board: local run_logs enrichment</a> — pyautohands · small · supervised · low</summary>
 
 ```
@@ -1580,220 +1524,7 @@ Use the start-dev skill. draft/feature/autolens_inference/drop_1e3_prior_centrin
 </details>
 
 <details>
-<summary><b>research</b> — 26</summary>
-
-<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon</a> — autofit · large · human-required · high</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source A100 speed-up campaign: profile and optimize with the shared breakdown</a> — autolens_profiling · large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> — euclid · large · human-required · high</summary>
-
-```
-Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/research/autoarray/delaunay_research.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autonerves/pair_jax_xla_env_vars_with_measured.md">Pair JAX/XLA env vars with measured compile and run times, per backend</a> — autonerves · too-large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/research/autonerves/pair_jax_xla_env_vars_with_measured.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autoarray/delaunay_callback_persistent_cache_miss.md">Delaunay-family JAX modules never hit the persistent compilation cache</a> — autoarray · medium · safe · medium</summary>
-
-```
-Use the start-dev skill. draft/research/autoarray/delaunay_callback_persistent_cache_miss.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens/quick_update_plotting_cost.md">Quick-update plotting cost — minutes per update, and it is not JAX…</a> — autolens · medium · safe · medium</summary>
-
-```
-Use the start-dev skill. draft/research/autolens/quick_update_plotting_cost.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autoarray/mge_nnls_fix_pyautoarray_571_slam_60.md">Linear-solver programme phase 3: GPU/vmap/A100 timing and parity rows for the solver…</a> — autoarray · too-large · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/research/autoarray/mge_nnls_fix_pyautoarray_571_slam_60.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/pyautohands/git_docs.md">Use readthedocs or migrate to GitHub docs</a> — pyautohands · small · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/research/pyautohands/git_docs.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/pyautoreduce/acceptance_noise_rebaseline.md">Re-baseline the slacs0008 acceptance parity after the HAP-dedupe fix</a> — pyautoreduce · small · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/research/pyautoreduce/acceptance_noise_rebaseline.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md">Kernel-CDF bandwidth defaults — config-dependent quality, investigate adaptivity</a> — autoarray · medium · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/libraries/intel_macos_support_policy.md">Is Intel macOS a supported platform, and what is the numpy-only contract?</a> — libraries · medium · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/research/libraries/intel_macos_support_policy.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md">Checkerboard PSF-mismatch residual diagnostic — research + document + ingest papers</a> — pyautomemory · medium · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/autofit_profiling_bootstrap.md">autofit_profiling: bootstrap the repo + general PyAutoFit profiling epic</a> — autofit · large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/autofit_profiling_bootstrap.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/imaging_production_over_sampling.md">Profile imaging pixelizations at production over-sampling</a> — autolens_profiling · large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/research/autolens_profiling/imaging_production_over_sampling.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/post_certified_solver_likelihood_breakdown.md">Assess remaining likelihood bottlenecks after certified solver integration on CPU and GPUs</a> — autolens_profiling · large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/research/autolens_profiling/post_certified_solver_likelihood_breakdown.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_assistant/free_agent_harness_evaluation.md">Record harness-smoke runs for free Codex, a named OpenCode configuration and Gemini…</a> — autolens_assistant · low-medium · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/research/autolens_assistant/free_agent_harness_evaluation.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms w.r.t</a> — autoarray · small · supervised · low</summary>
-
-```
-Use the start-dev skill. draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/graphical_ep/transformed_message_declares_support.md">Should <code>TransformedMessage</code> carry its own support, rather than the prior?</a> — graphical_ep · medium · human-required · low</summary>
-
-```
-Use the start-dev skill. draft/research/graphical_ep/transformed_message_declares_support.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/pyautoreduce/legacy_flux_scale_parity.md">Chase the ~6% flux scale between PyAutoReduce and legacy SLACS reductions</a> — pyautoreduce · medium · safe · low</summary>
-
-```
-Use the start-dev skill. draft/research/pyautoreduce/legacy_flux_scale_parity.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md">PyAutoArray Delaunay interpolator's <code>pure_callback</code> vs vmap — minor efficiency follow-up</a> — autoarray · too-large · supervised · low</summary>
-
-```
-Use the start-dev skill. draft/research/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_report.md">HPC campaign epic — research report and phased plan</a> — autofit</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/hpc_campaign_epic_report.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_surveys/carbon.md">Energy and CO2e for PyAuto HPC campaigns: methods, inputs, worked estimate</a> — autofit</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/hpc_campaign_epic_surveys/carbon.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_surveys/codebase.md">HPC campaign epic: what the codebase already has</a> — autofit</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/hpc_campaign_epic_surveys/codebase.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_surveys/euclid_hpc.md">euclid_dr1 HPC glue + Slurm mechanics — research report</a> — autofit</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/hpc_campaign_epic_surveys/euclid_hpc.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_surveys/prior_art.md">Prior art: status, right-sizing and failure triage for large HPC fit campaigns</a> — autofit</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/hpc_campaign_epic_surveys/prior_art.md
-```
-
-</details>
-
-</details>
-
-<details>
-<summary><b>maintenance</b> — 23</summary>
+<summary><b>maintenance</b> — 22</summary>
 
 <details><summary>📋 <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> — organs · medium · supervised · high</summary>
 
@@ -1847,14 +1578,6 @@ Use the start-dev skill. draft/maintenance/pyautobrain/unregistered_worktrees_in
 
 ```
 Use the start-dev skill. draft/maintenance/workspaces/config_key_mirror_drift.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md">jax_compile/probe.py lost its cell builder with the searches tier — give profiling…</a> — autolens_profiling · medium · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md
 ```
 
 </details>
@@ -1975,6 +1698,163 @@ Use the start-dev skill. draft/maintenance/euclid/skip_fit_output_no_longer_gate
 
 ```
 Use the start-dev skill. draft/maintenance/pyautomind/session_start_hook_copies_regen.md
+```
+
+</details>
+
+</details>
+
+<details>
+<summary><b>research</b> — 19</summary>
+
+<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon</a> — autofit · large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> — euclid · large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/research/autoarray/delaunay_research.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/delaunay_callback_persistent_cache_miss.md">Delaunay-family JAX modules never hit the persistent compilation cache</a> — autoarray · medium · safe · medium</summary>
+
+```
+Use the start-dev skill. draft/research/autoarray/delaunay_callback_persistent_cache_miss.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/pyautohands/git_docs.md">Use readthedocs or migrate to GitHub docs</a> — pyautohands · small · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/research/pyautohands/git_docs.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/pyautoreduce/acceptance_noise_rebaseline.md">Re-baseline the slacs0008 acceptance parity after the HAP-dedupe fix</a> — pyautoreduce · small · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/research/pyautoreduce/acceptance_noise_rebaseline.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md">Kernel-CDF bandwidth defaults — config-dependent quality, investigate adaptivity</a> — autoarray · medium · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/libraries/intel_macos_support_policy.md">Is Intel macOS a supported platform, and what is the numpy-only contract?</a> — libraries · medium · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/research/libraries/intel_macos_support_policy.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md">Checkerboard PSF-mismatch residual diagnostic — research + document + ingest papers</a> — pyautomemory · medium · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_assistant/free_agent_harness_evaluation.md">Record harness-smoke runs for free Codex, a named OpenCode configuration and Gemini…</a> — autolens_assistant · low-medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/research/autolens_assistant/free_agent_harness_evaluation.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms w.r.t</a> — autoarray · small · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/graphical_ep/transformed_message_declares_support.md">Should <code>TransformedMessage</code> carry its own support, rather than the prior?</a> — graphical_ep · medium · human-required · low</summary>
+
+```
+Use the start-dev skill. draft/research/graphical_ep/transformed_message_declares_support.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/pyautoreduce/legacy_flux_scale_parity.md">Chase the ~6% flux scale between PyAutoReduce and legacy SLACS reductions</a> — pyautoreduce · medium · safe · low</summary>
+
+```
+Use the start-dev skill. draft/research/pyautoreduce/legacy_flux_scale_parity.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md">PyAutoArray Delaunay interpolator's <code>pure_callback</code> vs vmap — minor efficiency follow-up</a> — autoarray · too-large · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/research/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_report.md">HPC campaign epic — research report and phased plan</a> — autofit</summary>
+
+```
+Use the start-dev skill. draft/research/autofit/hpc_campaign_epic_report.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_surveys/carbon.md">Energy and CO2e for PyAuto HPC campaigns: methods, inputs, worked estimate</a> — autofit</summary>
+
+```
+Use the start-dev skill. draft/research/autofit/hpc_campaign_epic_surveys/carbon.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_surveys/codebase.md">HPC campaign epic: what the codebase already has</a> — autofit</summary>
+
+```
+Use the start-dev skill. draft/research/autofit/hpc_campaign_epic_surveys/codebase.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_surveys/euclid_hpc.md">euclid_dr1 HPC glue + Slurm mechanics — research report</a> — autofit</summary>
+
+```
+Use the start-dev skill. draft/research/autofit/hpc_campaign_epic_surveys/euclid_hpc.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_surveys/prior_art.md">Prior art: status, right-sizing and failure triage for large HPC fit campaigns</a> — autofit</summary>
+
+```
+Use the start-dev skill. draft/research/autofit/hpc_campaign_epic_surveys/prior_art.md
 ```
 
 </details>
@@ -2315,38 +2195,6 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 Sets of INDEPENDENT tasks that make sense in one orchestrated session: an architect session plans them, subagents implement them, and every member still gets its own issue and its own PR — so the prm skill closes each one out unchanged. Not an epic: nothing here is ordered or phase-gated, and every member also appears in its usual section above — a bundle is an extra view of the backlog, never a replacement. Pinned bundles are the human record in `bundles.md`; auto bundles are recomputed from the backlog every time this page is rendered and are proposals, never records. Full record in [`bundles.md`](bundles.md).
 
 <details>
-<summary><b>point-source — bundle 2</b> — 3 task(s) · 8 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: euclid, jax-gpu</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the judgment tier for the PyAutoMind bundle 'point-source — bundle 2' — 3 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md
-- draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md
-- draft/refactor/autolens/witt_wynne_solver_library_home.md
-
-Contract (the `start-bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Use the start-dev skill for EACH member prompt: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run the start-library skill (or the start-workspace skill) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
-5. Ship each member on its own: the ship-library skill or the ship-workspace skill, ONE PR per task, so the prm skill closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source A100 speed-up campaign: profile and optimize with the…</a> | autolens_profiling | large | high | formalised |
-| <a href="draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a> | pyautolens | medium | low | formalised |
-| <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> | autolens | medium | low | draft |
-
-</details>
-
-<details>
 <summary><b>autoarray — bundle 1</b> — 4 task(s) · 7 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -2447,40 +2295,6 @@ Contract (the `start-bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>workspaces — bundle 1</b> — 4 task(s) · 7 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the judgment tier for the PyAutoMind bundle 'workspaces — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md
-- draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md
-- draft/maintenance/workspaces/sync_remaining_workspace_config_priors_copies.md
-- draft/bug/workspaces/mge_likelihood_breakdown_steps_are_cumulative_an.md
-
-Contract (the `start-bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Use the start-dev skill for EACH member prompt: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run the start-library skill (or the start-workspace skill) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
-5. Ship each member on its own: the ship-library skill or the ship-workspace skill, ONE PR per task, so the prm skill closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Difficulty | Priority | Status |
-|--------|------------|----------|--------|
-| <a href="draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md">Physical model check when speeding up smoke tests</a> | medium | high | formalised |
-| <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> | easy | medium | formalised |
-| <a href="draft/maintenance/workspaces/sync_remaining_workspace_config_priors_copies.md">Sync remaining workspace config/priors copies</a> | small | medium | formalised |
-| <a href="draft/bug/workspaces/mge_likelihood_breakdown_steps_are_cumulative_an.md">MGE likelihood_breakdown steps are cumulative and <code>linear_gaussians</code>…</a> | medium | low | formalised |
-
-</details>
-
-<details>
 <summary><b>pyautoheart — bundle 1</b> — 4 task(s) · 6 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -2549,6 +2363,38 @@ Contract (the `start-bundle` skill is the full body):
 </details>
 
 <details>
+<summary><b>workspaces — bundle 1</b> — 3 task(s) · 5 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the judgment tier for the PyAutoMind bundle 'workspaces — bundle 1' — 3 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md
+- draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md
+- draft/maintenance/workspaces/sync_remaining_workspace_config_priors_copies.md
+
+Contract (the `start-bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Use the start-dev skill for EACH member prompt: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run the start-library skill (or the start-workspace skill) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
+5. Ship each member on its own: the ship-library skill or the ship-workspace skill, ONE PR per task, so the prm skill closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md">Physical model check when speeding up smoke tests</a> | medium | high | formalised |
+| <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> | easy | medium | formalised |
+| <a href="draft/maintenance/workspaces/sync_remaining_workspace_config_priors_copies.md">Sync remaining workspace config/priors copies</a> | small | medium | formalised |
+
+</details>
+
+<details>
 <summary><b>ci</b> — 3 task(s) · 3 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: ci, robustness</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -2580,7 +2426,37 @@ Contract (the `start-bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 40 auto bundles — pin one in `bundles.md` to keep it on the page._
+<details>
+<summary><b>euclid · hpc — bundle 2</b> — 2 task(s) · 3 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: catalogue, euclid, hpc</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the judgment tier for the PyAutoMind bundle 'euclid · hpc — bundle 2' — 2 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md
+- draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
+
+Contract (the `start-bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Use the start-dev skill for EACH member prompt: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run the start-library skill (or the start-workspace skill) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
+5. Ship each member on its own: the ship-library skill or the ship-workspace skill, ONE PR per task, so the prm skill closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Repo | Difficulty | Priority | Status |
+|--------|------|------------|----------|--------|
+| <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> | euclid | small | high | formalised |
+| <a href="draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md">euclid_dr1: every dataset rgb.jpg is upside down relative to the VIS…</a> | euclid | - | - | - |
+
+</details>
+
+_Showing 8 of 39 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -2588,7 +2464,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-02 | filed | <a href="planned.md#timing-noise-audit">timing-noise-audit</a> |
+| 2026-10-03 | issued | <a href="active/campaign_control_room.md">Pulse campaign control room and task migration</a> |
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
 | 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
 | 2026-10-02 | parked | <a href="parked.md#colab-refinement-throughout">colab-refinement-throughout</a> |
@@ -2596,14 +2472,13 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-10-02 | issued | <a href="active/evaluation_grid_cap_preserves_field.md">Preserve the LensCalc evaluation field when the grid cap activates</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
-| 2026-10-02 | filed | <a href="draft/bug/autolens_profiling/timing_noise_audit.md">Audit timing tests and profiling gates for measurement noise</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
+| 2026-10-01 | filed | <a href="draft/docs/autolens_inference/reconcile_cortex_ledger_references.md">Reconcile inference documentation with the current Cortex ledger…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-01 | filed | <a href="draft/docs/autolens_inference/reconcile_cortex_ledger_references.md">Reconcile inference documentation with the current Cortex ledger…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
 | 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
@@ -2613,28 +2488,27 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/power_law_multipole_m1_singular_at_isothermal_slope.md">PowerLawMultipole with m=1 returns -inf / NaN deflections at slope…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently…</a> |
+| 2026-09-27 | filed | <a href="draft/feature/autolens_inference/drop_1e3_prior_centring_after_631.md">Drop the 1e-3 prior centring for shear / multipole / ell_comps…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-27 | filed | <a href="draft/feature/autolens_inference/drop_1e3_prior_centring_after_631.md">Drop the 1e-3 prior centring for shear / multipole / ell_comps…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
 | 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
 | 2026-09-26 | filed | <a href="draft/refactor/workspaces/abell_1201_local_cleanup.md">Repo cleanup: retire the Abell 1201 worktree and local raw data</a> |
 | 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
 | 2026-09-25 | filed | <a href="draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md">Keep caches off <code>$HOME</code> on HPC — phase 2 remainder: euclid pipeline…</a> |
 | 2026-09-24 | filed | <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> |
-| 2026-09-24 | filed | <a href="draft/research/autoarray/mge_nnls_fix_pyautoarray_571_slam_60.md">Linear-solver programme phase 3: GPU/vmap/A100 timing and parity rows…</a> |
 | 2026-09-23 | filed | <a href="draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
 | 2026-09-22 | issued | <a href="active/vis_lp_inspection_bundle.md">Support vis_lp-only products in inspection bundles</a> |
+| 2026-09-19 | issued | <a href="parked.md#catalogue-inspection-before-vis-pix">catalogue-inspection-before-vis-pix</a> |
+| 2026-09-18 | parked | <a href="parked.md#fixed-light-numba-s7">fixed-light-numba-s7</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-19 | issued | <a href="parked.md#catalogue-inspection-before-vis-pix">catalogue-inspection-before-vis-pix</a> |
-| 2026-09-18 | parked | <a href="parked.md#fixed-light-numba-s7">fixed-light-numba-s7</a> |
 | 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> |
@@ -2643,14 +2517,13 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/pyautobrain/sizing_faculty_none_rule_keyword_false_judge_triage.md">Sizing faculty: a <code>none</code> rule, keyword hits on prose that only…</a> |
+| 2026-09-17 | filed | <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> |
+| 2026-09-17 | filed | <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-17 | filed | <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> |
-| 2026-09-17 | filed | <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> |
-| 2026-09-17 | filed | <a href="draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md">Point-source A100 speed-up campaign: profile and optimize with the…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
@@ -2658,6 +2531,9 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> |
 | 2026-09-16 | filed | <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of…</a> |
 | 2026-09-16 | filed | <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding…</a> |
+| 2026-09-16 | filed | <a href="draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> /…</a> |
+| 2026-09-16 | filed | <a href="draft/feature/autolens/coolest_pixel_grid_export.md">COOLEST: export MGE lens light and pixelized sources as pixel grids</a> |
+| 2026-09-16 | filed | <a href="draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md">Adaptive Delaunay mesh places two mesh pixels 0.001" apart — a…</a> |
 
 </details>
 
@@ -2703,20 +2579,12 @@ Continue the 'PyAutoPulse — the cross-project dashboard layer above the `<lib>
 </details>
 
 <details>
-<summary><b>Point-source (single-source) PointSolver CPU speed-up</b> — 4 queued prompt(s), in order</summary>
+<summary><b>Point-source (single-source) PointSolver CPU speed-up</b> — 1 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Point-source (single-source) PointSolver CPU speed-up</b> — ledger: `autolens_profiling/wiki/campaigns/point_source_image_plane_cpu.md (full record: results/notes/point_source_cpu_campaign.md)` — phases 1-3 shipped (p2 + p3 released in 2026.9.26.1: PyAutoArray <code>7fa8d271</code>, PyAutoLens <code>86054bbc</code>); phase 4a (re-baseline +…</summary>
 
 ```
-Continue the 'Point-source (single-source) PointSolver CPU speed-up' epic. Its canonical state lives in autolens_profiling/wiki/campaigns/point_source_image_plane_cpu.md (full record: results/notes/point_source_cpu_campaign.md) — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: human decision 2026-09-26 — SINGLE-SOURCE only, the `scripts/point_source_image/` + `scripts/point_source_source/` use case (formerly `scripts/point_source/`); the cluster use case moved to epic `cluster-pointsolver-speed`. Phase-4 campaign prompt recorded at `complete/2026/09/point-source-cpu-p4.md` (phase 4a, autolens_profiling#321, merge `3e4a068`; its `## Original prompt` holds the campaign contract); phase 4b shipped (record `complete/2026/09/pointsolver-step0-gather.md`); phase 4c shipped (record `complete/2026/09/pointsolver-mcs-headroom.md`); extent sanity check complete 2026-10-02: PyAutoLens#764, workspace-test#338 and profiling#363 merged; record `complete/2026/10/pointsolver-extent-sanity-check.md`; library release pending, human approved workspace merge before release. Open members: `draft/feature/autolens_workspace/pointsolver_grid_extent_per_package.md`, carried leftovers `draft/research/autolens_profiling/pointsolver_cpu_speed_campaign_remainder.md`; source-plane member prompt `draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md` (phases 2+, re-filed at close-out; ledger `results/notes/point_source_source_plane_campaign.md`) (re-tagged from `cluster-strong-lensing`, which is the unrelated Source & Cluster arc). Records `complete/2026/09/point-source-cpu-p{1,2,3,4}.md`. Issue ONE bounded phase at a time; any library default change (PyAutoLens `shape_solver.py` / PyAutoArray `MAX_CONTAINING_SIZE`) is a human decision at the phase-4a checkpoint.
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens_profiling/runtime_cell_single_jit_gpu_warmup.md">Runtime cells' A100 <code>single_jit</code> includes the post-compile warm-up — source-plane 0.642 ms…</a> — autolens_profiling · small · supervised · low</summary>
-
-```
-Use the start-dev skill. draft/bug/autolens_profiling/runtime_cell_single_jit_gpu_warmup.md
+Continue the 'Point-source (single-source) PointSolver CPU speed-up' epic. Its canonical state lives in autolens_profiling/wiki/campaigns/point_source_image_plane_cpu.md (full record: results/notes/point_source_cpu_campaign.md) — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: human decision 2026-09-26 — SINGLE-SOURCE only, the `scripts/point_source_image/` + `scripts/point_source_source/` use case (formerly `scripts/point_source/`); the cluster use case moved to epic `cluster-pointsolver-speed`. Phase-4 campaign prompt recorded at `complete/2026/09/point-source-cpu-p4.md` (phase 4a, autolens_profiling#321, merge `3e4a068`; its `## Original prompt` holds the campaign contract); phase 4b shipped (record `complete/2026/09/pointsolver-step0-gather.md`); phase 4c shipped (record `complete/2026/09/pointsolver-mcs-headroom.md`); extent sanity check complete 2026-10-02: PyAutoLens#764, workspace-test#338 and profiling#363 merged; record `complete/2026/10/pointsolver-extent-sanity-check.md`; library release pending, human approved workspace merge before release. Open members: `draft/feature/autolens_workspace/pointsolver_grid_extent_per_package.md`, carried leftovers `https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/pointsolver_cpu_speed_campaign_remainder.md`; source-plane member prompt `https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/point_source_source_plane_chi_squared_speed.md` (phases 2+, re-filed at close-out; ledger `results/notes/point_source_source_plane_campaign.md`) (re-tagged from `cluster-strong-lensing`, which is the unrelated Source & Cluster arc). Records `complete/2026/09/point-source-cpu-p{1,2,3,4}.md`. Issue ONE bounded phase at a time; any library default change (PyAutoLens `shape_solver.py` / PyAutoArray `MAX_CONTAINING_SIZE`) is a human decision at the phase-4a checkpoint.
 ```
 
 </details>
@@ -2729,31 +2597,15 @@ Use the start-dev skill. draft/feature/autolens_workspace/pointsolver_grid_exten
 
 </details>
 
-<details><summary>📋 <a href="draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md">Point-source source-plane chi-squared speed-up campaign — remaining candidates (phases 1–2e shipped)</a> — autolens_profiling · large · supervised · low</summary>
-
-```
-Use the start-dev skill. draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/pointsolver_cpu_speed_campaign_remainder.md">Point-source (single-source) CPU campaign — carried leftovers and completion evidence</a> — autolens_profiling · small · supervised · low</summary>
-
-```
-Use the start-dev skill. draft/research/autolens_profiling/pointsolver_cpu_speed_campaign_remainder.md
-```
-
-</details>
-
 </details>
 
 <details>
-<summary><b>Cluster PointSolver — robustness and performance</b> — 3 queued prompt(s), in order</summary>
+<summary><b>Cluster PointSolver — robustness and performance</b> — 1 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>Cluster PointSolver — robustness and performance</b> — ledger: `draft/research/autolens_profiling/cluster_pointsolver_speed.md` — Expanded by human agreement 2026-10-01 to own robust analysis settings, numerical correctness and performance. Carries Source &amp;…</summary>
+<details><summary>📋 <b>Cluster PointSolver — robustness and performance</b> — ledger: `https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/cluster_pointsolver_speed.md` — Expanded by human agreement 2026-10-01 to own robust analysis settings, numerical correctness and performance. Carries Source &amp;…</summary>
 
 ```
-Continue the 'Cluster PointSolver — robustness and performance' epic. Its canonical state lives in draft/research/autolens_profiling/cluster_pointsolver_speed.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: Stable epic identifier retained. autolens_profiling owns campaign evidence and robust-settings/cost guidance; autolens_workspace_test owns bounded numerical regressions in required PR smoke or scheduled/release CI. Failing cases may be timed diagnostically but cannot underpin accepted speed/settings claims. Reconcile old profiling coverage with completed single-source campaigns; no duplication. Previous repo wiki/campaigns/cluster_pointsolver.md is the speed-only survey; reconcile it at first implementation, with this Mind contract authoritative for the expanded plan. Issue ONE bounded task at a time, no bulk queue.
+Continue the 'Cluster PointSolver — robustness and performance' epic. Its canonical state lives in https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/cluster_pointsolver_speed.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: Stable epic identifier retained. autolens_profiling owns campaign evidence and robust-settings/cost guidance; autolens_workspace_test owns bounded numerical regressions in required PR smoke or scheduled/release CI. Failing cases may be timed diagnostically but cannot underpin accepted speed/settings claims. Reconcile old profiling coverage with completed single-source campaigns; no duplication. Previous repo wiki/campaigns/cluster_pointsolver.md is the speed-only survey; reconcile it at first implementation, with this Mind contract authoritative for the expanded plan. Issue ONE bounded task at a time, no bulk queue.
 ```
 
 </details>
@@ -2762,22 +2614,6 @@ Continue the 'Cluster PointSolver — robustness and performance' epic. Its cano
 
 ```
 Use the start-dev skill. draft/bug/autolens/point_solver_error_bisect_health.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/cluster_pointsolver_speed.md">Cluster PointSolver — robustness, analysis settings and performance</a> — autolens_profiling · large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/research/autolens_profiling/cluster_pointsolver_speed.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/point_solver_profiling_cells.md">PointSolver profiling cells: lensed quasar → cluster runtime tier → single/multi-source →…</a> — autolens_profiling · large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/research/autolens_profiling/point_solver_profiling_cells.md
 ```
 
 </details>
@@ -2978,7 +2814,7 @@ Continue the 'autolens_inference — inference benchmarking repo, birth to first
 <details><summary>📋 <b>Linear-solver accuracy/tolerance programme — a standing autolens_profiling package for positive-only solver studies</b> — ledger: `autolens_profiling/wiki/campaigns/linear_solver_accuracy.md (contract: complete/2026/09/linear-solver-accuracy-study.md)` — phase 2 SHIPPED 2026-09-30 — PyAutoArray#595 merged (7a89e19a0, forward polish; pending release) + autolens_profiling#357 merged…</summary>
 
 ```
-Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens_profiling package for positive-only solver studies' epic. Its canonical state lives in autolens_profiling/wiki/campaigns/linear_solver_accuracy.md (contract: complete/2026/09/linear-solver-accuracy-study.md) — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: human intent 2026-09-30 — solver tolerance/accuracy keeps recurring (#571/#572/#573, certified solver, 07-09 NNLS ledger, warm-start memo), so it gets one home that accumulates runs and data across releases. Phase 1 = `scripts/lens/solver/` package + corpus + CPU fp64 accuracy/early-stopping study + pre-registered rule + wiki page. Phase 2 = PyAutoArray fix per the verdict (shipped: `complete/2026/09/raw-pdip-forward-polish.md`; library-first, then re-verify the euclid latent test on library main). Phase 3 = GPU/vmap/A100 timing + parity rows (absorbs `draft/research/autoarray/mge_nnls_fix_pyautoarray_571_slam_60.md`). Standing: re-run the accuracy cell per release.
+Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens_profiling package for positive-only solver studies' epic. Its canonical state lives in autolens_profiling/wiki/campaigns/linear_solver_accuracy.md (contract: complete/2026/09/linear-solver-accuracy-study.md) — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: human intent 2026-09-30 — solver tolerance/accuracy keeps recurring (#571/#572/#573, certified solver, 07-09 NNLS ledger, warm-start memo), so it gets one home that accumulates runs and data across releases. Phase 1 = `scripts/lens/solver/` package + corpus + CPU fp64 accuracy/early-stopping study + pre-registered rule + wiki page. Phase 2 = PyAutoArray fix per the verdict (shipped: `complete/2026/09/raw-pdip-forward-polish.md`; library-first, then re-verify the euclid latent test on library main). Phase 3 = GPU/vmap/A100 timing + parity rows (absorbs `https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/mge_nnls_fix_pyautoarray_571_slam_60.md`). Standing: re-run the accuracy cell per release.
 ```
 
 </details>
@@ -3093,7 +2929,7 @@ Use the start-dev skill. draft/feature/autolens/source_cluster_arc.md
 </details>
 
 <details>
-<summary><b>interferometer-likelihood-campaign</b> — 9 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+<summary><b>interferometer-likelihood-campaign</b> — 5 queued prompt(s) — ⚠️ not in `epics.md`</summary>
 
 <details><summary>📋 <a href="draft/bug/pyautoheart/ral_venv_dependency_floor_drift.md">RAL PyAuto venv: third-party packages below the library floors…</a> — pyautoheart · easy · supervised · medium</summary>
 
@@ -3131,38 +2967,6 @@ Use the start-dev skill. draft/feature/autoarray/interferometer_direct_conv_pran
 
 ```
 Use the start-dev skill. draft/feature/autoarray/interferometer_numba_gate_retune_70.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/interferometer_decision_matrix_last_cell.md">Interferometer decision matrix — fill the last cell…</a> — autolens_profiling · small · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/research/autolens_profiling/interferometer_decision_matrix_last_cell.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/interferometer_fixed_mapper_curvature_preload.md">Interferometer fixed-mapper searches: reuse the W~ curvature matrix across likelihood calls…</a> — autolens_profiling · medium · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/research/autolens_profiling/interferometer_fixed_mapper_curvature_preload.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/interferometer_nnls_memo_scattered_stream_guard.md">fnnls warm-start memo: stop it slowing scattered evaluation streams (interferometer CPU, autolens_profiling#332)</a> — autolens_profiling · medium · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/research/autolens_profiling/interferometer_nnls_memo_scattered_stream_guard.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/interferometer_w_tilde_fft_size_levers.md">Interferometer W~ curvature matrix is FFT-bound on the mask extent: pruned padded…</a> — autolens_profiling · medium · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/research/autolens_profiling/interferometer_w_tilde_fft_size_levers.md
 ```
 
 </details>
@@ -3248,32 +3052,6 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 </details>
 
-<details>
-<summary><b>mass-field</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
-
-<details><summary>📋 <a href="draft/maintenance/autolens_profiling/mass_field_flat_adoption_science_repos.md">Remaining code consumers move to the flat <code>fields=</code> form: profiling, inference, JOSS…</a> — autolens_profiling · large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/maintenance/autolens_profiling/mass_field_flat_adoption_science_repos.md
-```
-
-</details>
-
-</details>
-
-<details>
-<summary><b>streaming-visibilities</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/interferometer_streaming_scaling.md">Campaign: interferometer streaming (array-free) vs in-memory — memory and time scaling…</a> — autolens_profiling · small · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/research/autolens_profiling/interferometer_streaming_scaling.md
-```
-
-</details>
-
-</details>
-
 ## Hygiene
 
 5 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
@@ -3289,7 +3067,7 @@ Use the start-dev skill. draft/research/autolens_profiling/interferometer_stream
 
 </details>
 
-70 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+64 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3320,7 +3098,6 @@ Use the start-dev skill. draft/research/autolens_profiling/interferometer_stream
 - `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
 - `draft/bug/autolens/point_image_pair_all_forward_grad_nan.md`
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
-- `draft/bug/autolens_profiling/timing_noise_audit.md`
 - `draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md`
 - `draft/bug/health_fixes/release_timeout_policy.md`
 - `draft/bug/health_fixes/samples_parameter_paths.md`
@@ -3334,11 +3111,12 @@ Use the start-dev skill. draft/research/autolens_profiling/interferometer_stream
 - `draft/docs/autolens_inference/reconcile_cortex_ledger_references.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
 - `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
-- _… and 30 more_
+- `draft/test/workspaces/mesh_magnification_correctness.md`
+- _… and 24 more_
 
 </details>
 
-72 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+63 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3379,7 +3157,6 @@ Use the start-dev skill. draft/research/autolens_profiling/interferometer_stream
 - `draft/bug/autogalaxy/power_law_multipole_m1_singular_at_isothermal_slope.md — unknown theme keyword(s): mass-profiles, jax`
 - `draft/bug/autolens/point_image_pair_all_forward_grad_nan.md — unknown theme keyword(s): jax, gradients`
 - `draft/bug/autolens/positions_threshold_fixture_off_axis.md — unknown theme keyword(s): testing`
-- `draft/bug/autolens_profiling/runtime_cell_single_jit_gpu_warmup.md — unknown theme keyword(s): jax`
 - `draft/bug/autolens_workspace/start_here_multistart_compile_time.md — unknown theme keyword(s): jax, compile-time, first-contact`
 - `draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md — unknown theme keyword(s): euclid, catalogue`
 - `draft/bug/euclid/drawer_pix_initializer_exception_flake.md — unknown theme keyword(s): euclid, ci, source-reconstruction`
@@ -3400,19 +3177,11 @@ Use the start-dev skill. draft/research/autolens_profiling/interferometer_stream
 - `draft/docs/autofit/howtofit_chapter_3_prose_references.md — unknown theme keyword(s): autofit`
 - `draft/docs/howtofit/tutorial_4_runtime_claim.md — unknown theme keyword(s): tutorials`
 - `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
-- `draft/maintenance/autolens_profiling/jax_compile_probe_needs_own_cell_builder.md — unknown theme keyword(s): jax, compile`
 - `draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md — unknown theme keyword(s): euclid, docs`
 - `draft/maintenance/howtofit/minimum_library_version_stale.md — unknown theme keyword(s): version-handshake, tutorials`
 - `draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md — unknown theme keyword(s): jax-grad`
 - `draft/research/autofit/hpc_campaign_epic.md — unknown theme keyword(s): hpc, euclid, carbon`
 - `draft/research/autolens_assistant/free_agent_harness_evaluation.md — unknown theme keyword(s): assistant, support-policy`
-- `draft/research/autolens_profiling/cluster_pointsolver_speed.md — unknown theme keyword(s): jax`
-- `draft/research/autolens_profiling/interferometer_fixed_mapper_curvature_preload.md — unknown theme keyword(s): likelihood-profiling, jax-gpu`
-- `draft/research/autolens_profiling/interferometer_nnls_memo_scattered_stream_guard.md — unknown theme keyword(s): nnls, likelihood-profiling`
-- `draft/research/autolens_profiling/interferometer_streaming_scaling.md — unknown theme keyword(s): sparse-operator, memory`
-- `draft/research/autolens_profiling/interferometer_w_tilde_fft_size_levers.md — unknown theme keyword(s): likelihood-profiling, jax-gpu`
-- `draft/research/autolens_profiling/point_source_image_plane_gpu_breakdown.md — unknown theme keyword(s): jax-gpu`
-- `draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md — unknown theme keyword(s): jax`
 - `draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md — unknown theme keyword(s): euclid, hpc`
 - `draft/triage/autolens/jit_fit_from_is_vacuous.md — unknown theme keyword(s): testing, jax`
 

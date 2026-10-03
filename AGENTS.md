@@ -6,6 +6,12 @@ when the task needs them. Read [README.md](README.md) for the public overview.
 
 ## Where work lives
 
+- Profiling campaign intent and pending tasks live in **PyAutoPulse**
+  (`campaigns.yaml`, `tasks/`, `CHECKIN.md`). Use its single-chat check-in first.
+  Mind holds bounded implementation phases and repository claims, linking the
+  canonical Pulse task. See `docs/pulse-task-migration.md`.
+
+
 - `draft/<work-type>/<target>/<name>.md` holds unstarted prompts. Work types:
   `feature`, `bug`, `refactor`, `docs`, `test`, `release`, `maintenance`,
   `research`, and `triage` when genuinely unclear. `human_review` is reserved
