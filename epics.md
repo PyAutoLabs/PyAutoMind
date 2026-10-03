@@ -24,6 +24,12 @@ members out of the pick lists and work-type sections and shows them only
 grouped, phase-ordered, under their epic — worked in order through the
 epic, never picked standalone.
 
+## community-organ-birth
+- title: PyAutoEars — community listening, solicited feedback, dashboard and follow-through
+- ledger: draft/feature/pyautoears/community_organ_birth.md
+- status: In progress; first independent feedback phase PR-open 2026-10-03 (PyAutoBrain#453 / PR#454); organ repository not yet created through this session
+- notes: Human-approved scope includes software/scientific help, assistant and tutorial feedback, explicit user/agent reports, coverage reliability, delivery follow-up and recurring themes. Issue one bounded phase at a time. Preserve Brain judgement, Mind task state and the single Discussions hub. Human authorization "Yes I authorise you to proceed for the whole task" follows the reported Heart RED; tests mandatory, no merge or release inferred. Fresh public PyAutoEars repo creation needs a capable authorized surface; do not publish broken board links.
+
 ## profiling-organ-birth
 - title: PyAutoPulse — the cross-project dashboard layer above the `<lib>_profiling` project repos: instance registry, `profiling-summary` read contract, organ board, cockpit transition
 - ledger: complete/2026/10/pyautopulse-brain-board-cockpit.md
