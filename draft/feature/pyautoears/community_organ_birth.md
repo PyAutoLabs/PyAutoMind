@@ -46,9 +46,9 @@ PR-open until human `/prm`. Do not turn this programme into a second tracker.
 
 | Phase | Deliverable | State / dependency |
 |---|---|---|
-| 0 | Portable solicited-feedback workflow | PR-open: Brain#454 for #453; 1100 tests pass / 42 skipped; human /prm; `active/community_feedback.md` |
-| 1 | Organ identity, boundaries and repository bootstrap | Human created repository 2026-10-03; standalone bootstrap Ears#1 / PR#2. Cross-organ identity propagation remains unissued. |
-| 2 | Collector extraction, read contracts and dashboard parity | Standalone collector/contracts/board implemented in Ears PR#2; Brain adapter/extraction and live deployment remain outstanding. |
+| 0 | Portable solicited-feedback workflow | Merged 2026-10-03: Brain#454 / b065945; `complete/2026/10/community-feedback.md` |
+| 1 | Organ identity, boundaries and repository bootstrap | Human created repository 2026-10-03; standalone bootstrap Ears#1 / PR#2 merged (911a463); `complete/2026/10/ears-bootstrap.md`. Cross-organ identity propagation remains unissued. |
+| 2 | Collector extraction, read contracts and dashboard parity | Standalone collector/contracts/board merged in Ears PR#2; Brain adapter/extraction and live deployment remain outstanding. |
 | 3 | Listening reliability and category-sensitive triage | Not issued; depends on 2 |
 | 4 | Assistant distribution of /feedback | Not issued; phase 0 merged; inspect existing assistant-template distribution before edits |
 | 5 | Follow-through from conversation to delivered work | Not issued; depends on 2–3 |
@@ -178,3 +178,15 @@ reply coverage remains explicitly partial. Shared identity propagation, Brain
 adapter/cockpit switch, Pages setup and a real collection/deployment witness
 are the next integration phase after these PRs are merged. Full follow-through,
 assistant distribution and theme synthesis remain as specified above.
+
+
+## 2026-10-03 merge close-out
+
+Human "Prm I authorise" authorized both merges after all five CI jobs passed.
+Brain#454 merged b065945; Ears#2 merged 911a463; issues Brain#453 and Ears#1
+closed completed. Records: `complete/2026/10/community-feedback.md` and
+`complete/2026/10/ears-bootstrap.md`. Claims released; pending-release obligations
+retained. The earlier PR-open statements above are historical. No release or
+live Pages deployment is claimed. Next bounded work: register organ identity,
+wire Brain to Ears, and obtain a real collection/Pages witness; later assistant
+distribution, follow-through and synthesis remain open.

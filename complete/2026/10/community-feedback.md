@@ -1,3 +1,26 @@
+# community-feedback
+
+- completed: 2026-10-03
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/453 (closed completed)
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/454 (MERGED)
+- merge-commit: b065945531e5e77bf9bb53eb58f4080062155c34
+- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/454
+- epic: community-organ-birth
+
+## Delivered
+
+Portable /feedback skill, invitation, report template and command discovery. Quick and bounded retrospective modes produce drafts for human review and manual Discussions submission. Local suite: 1100 passed, 42 skipped; focused 45 passed; three forward cases passed. Both Python CI jobs passed (run 37122782864). Assistant distribution remains in the epic.
+
+## Merge evidence
+
+Human: "Prm I authorise". Every workflow run and job for the submitted head was completed/success; GitHub mergeability clean. Remote head proven ancestor of origin/main; local source tree identical to that head (commit metadata differs because publication used GitHub Git objects). No scientific runtime changes. Heart RED development override remains recorded in issue/PR/autonomy log; this merge does not clear release health. No release performed.
+
+## Remaining work
+
+See `draft/feature/pyautoears/community_organ_birth.md`; the programme is not complete. Local checkouts are standalone clones, not managed task worktrees; no worktree removal applies.
+
+## Original prompt
+
 # Solicit user-reviewed feedback from PyAutoLabs sessions
 
 Type: feature
