@@ -135,6 +135,13 @@ repos:
     organ: Eyes
     role: "The Eyes — where the organism sees what its figures look like: the cross-project visualization dashboard over the `<lib>_visualization` project repos (autolens_visualization, autogalaxy_visualization, autofit_visualization and autocti_visualization) — the registry of those repos, the tracked-manifest read contract (`gallery/viz_manifest.yaml`) and the Pages board that links to their PNGs as the single point of contact for the visual behaviour of the whole ecosystem. Renders nothing and copies no figures (the project repos render and hold them); never judges them (the Brain's Eyes conductor does) and never edits library plot code (critiques route through intake)."
     public_role: "The dashboard of every figure the PyAuto libraries draw: it gathers each library's rendered gallery on realistic data into one board, so what the software shows can be seen, judged and improved in one place."
+  PyAutoEars:
+    path: organs/PyAutoEars
+    github: PyAutoLabs/PyAutoEars
+    category: organ
+    organ: Ears
+    role: "The Ears — the community listening organ: owns read-only public conversation collection, the versioned community snapshot contract, coverage receipts and the dashboard. GitHub conversations remain authoritative; Brain’s Community conductor owns judgement, reply drafts and development routing, and Mind owns task state. Never posts replies, labels or issues, exports raw transcripts or private sources, or treats unknown coverage as no work."
+    public_role: "Listens to public community conversations and feedback, showing who may need attention and where listening coverage is incomplete; the Community workflow helps you decide how to respond."
   PyAutoHeart:
     path: organs/PyAutoHeart
     github: PyAutoLabs/PyAutoHeart

@@ -1,5 +1,66 @@
 # Active Tasks
 
+## ears-integration
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/455
+- issued: 2026-10-03
+- prompt: active/ears_integration.md
+- epic: community-organ-birth
+- session: Codex Work, 2026-10-03
+- status: awaiting-merge
+- location: /workspace/scratch/d089a60828d6 (standalone clones)
+- repos:
+  - PyAutoBrain: feature/ears-integration
+  - PyAutoMind: feature/ears-integration
+  - PyAutoEars: feature/ears-integration
+  - PyAutoHeart: feature/ears-integration
+  - PyAutoHands: feature/ears-integration
+  - pyautolabs.github.io: feature/ears-integration
+  - PyAutoCortex: feature/ears-integration
+  - PyAutoNerves: feature/ears-integration
+  - PyAutoGut: feature/ears-integration
+  - PyAutoEyes: feature/ears-integration
+  - PyAutoScientist: feature/ears-integration
+  - PyAutoPulse: feature/ears-integration
+  - .github: feature/ears-integration
+- summary: Register Ears identity and consume its published evidence from Brain and the cockpit.
+- authorization: User resumed the accepted programme after fixing Pages; development continues under the existing task authorization, no new source merge or release.
+- validation: Brain 1150 passed; Mind 619 passed; independent review CLEAN after two regression fixes; live Ears state valid and copy action verified.
+- heart-red-override: Continued accepted programme development authorization; source merge remains human /prm.
+  - "release validation FAILED (stage integrate)"
+  - "PyAutoHeart/workflows/Release Integrate: failure"
+  - "PyAutoArray/Tests: red"
+  - "PyAutoArray/Tests: red"
+  - "PyAutoFit/Tests: red"
+  - "autofit_workspace_test/Smoke Tests: red"
+  - "autogalaxy_workspace_test/Smoke Tests: red"
+  - "autolens_workspace_test/Smoke Tests: red"
+  - "CI wall-clock: 26 gates · slowest PyAutoBrain Nightly Release 83m · 1 slowed · 6 hang events"
+  - "Release readiness: release validation FAILED (stage integrate)"
+  - "PyAutoCTI/test_autocti/extract/two_d/parallel/test_parallel_fpr.py::test__estimate_capture: red"
+  - "PyAutoNerves/test_autonerves/test_fitsable.py::test__output_to_fits: red"
+  - "Unit-test timing: 3 test regressions (>3× baseline), 1 slow (>1.5×)"
+  - "autolens_test: red"
+  - "Release validation: NOT release_ready — v2026.10.3.1.dev79901 profile=release (2026-10-03T07:43:31+00:00)"
+  - "validation_report/stages/integrate: fail"
+  - "autolens_assistant: red"
+  - "autolens_profiling: red"
+  - "autolens_workspace_test: red"
+  - "Worktree drift: 0 orphan / 0 missing / 4 dirty"
+  - "euclid_strong_lens_modeling_pipeline: red"
+- resume: Integration PRs opened; judge-tier human /prm after all required CI. Merge Brain/Ears then public cockpit and identity companions as a coordinated set; preserve claims until close-out. Later listening reliability, assistant distribution, follow-through and synthesis remain unissued.
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/456
+- library-pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/14
+- library-pr: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/27
+- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/295
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/182
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/272
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/55
+- library-pr: https://github.com/PyAutoLabs/PyAutoEars/pull/3
+- library-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/5
+- library-pr: https://github.com/PyAutoLabs/.github/pull/29
+- library-pr: https://github.com/PyAutoLabs/PyAutoGut/pull/19
+- library-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/40
+
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
 - issued: 2026-09-22
