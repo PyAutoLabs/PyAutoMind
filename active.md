@@ -45,9 +45,13 @@
 - companion-prompt: active/cockpit_feed_project_identity.md
 - epic: profiling-organ-birth
 - session: Codex Work, 2026-10-03
-- status: workspace-dev
+- status: awaiting-merge
 - location: /workspace/scratch/367a506ce50f (fresh session clones)
 - repos:
   - autolens_profiling: feature/pulse-refresh-project-identity
 - summary: One task / one PR combining Pulse dispatch sender and project badge identity, as explicitly authorized by the handoff.
-- resume: #365 merged; claim released. Implement and validate; published Heart entry feed is STALE with monitoring RED, not covered by earlier YELLOW acknowledgement. Obtain current authoritative readiness before ship. Phase 4 excluded.
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/367
+- commit: 4a9d571b8ac8ba876d4e3ef656e9c8b0dafa4f7a
+- validation: 14 dashboard tests passed; Ruff check/format, dashboard idempotence (145 series), Brain state contract and mocked dispatch paths passed. summary.json byte-identical.
+- heart: published vitals STALE, scoped GREEN with no scoped blockers; exact reason "release validation stale: source moved since rehearsal (PyAutoFit, PyAutoGalaxy, PyAutoLens)"; board generated 2026-10-02T10:52:40.749454+00:00.
+- resume: Run /prm for #367 after required CI and current Heart check. After merge verify main Pages dispatch, Pulse refresh success and receipt naming new source commit; live witness remains pending. Both active prompts belong to this one issue/PR and must close together. Phase 4 excluded; no release or auto-merge authorized.

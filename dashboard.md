@@ -268,7 +268,7 @@ Use the start-dev skill. active/evaluation_grid_cap_preserves_field.md
 
 </details>
 
-<details><summary>📋 <a href="active/pulse_refresh_dispatch_sender.md">autolens_profiling: tell the PyAutoPulse board to refresh (repository_dispatch pulse-refresh)</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/366">issue #366</a> — issued 2026-10-03 — workspace-dev</summary>
+<details><summary>📋 <a href="active/pulse_refresh_dispatch_sender.md">autolens_profiling: tell the PyAutoPulse board to refresh (repository_dispatch pulse-refresh)</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/366">issue #366</a> — issued 2026-10-03 — awaiting-merge</summary>
 
 ```
 Use the start-dev skill. active/pulse_refresh_dispatch_sender.md
