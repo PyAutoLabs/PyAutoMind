@@ -1,5 +1,19 @@
 # Active Tasks
 
+## ears-listening-reliability
+- issue: https://github.com/PyAutoLabs/PyAutoEars/issues/4
+- issued: 2026-10-03
+- prompt: active/listening_reliability.md
+- epic: community-organ-birth
+- session: Codex Work; session ID unavailable
+- location: /tmp/ears-reliability (standalone clones)
+- status: library-dev
+- repos:
+  - PyAutoEars: feature/ears-listening-reliability
+  - PyAutoBrain: feature/ears-listening-reliability
+- summary: Complete bounded reply coverage and category-sensitive triage.
+- authorization: Existing whole-programme development authorization continued by human "Continue"; judge-tier human /prm required. Heart RED release reasons unchanged from integration task; no release or merge.
+
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
 - issued: 2026-09-22
