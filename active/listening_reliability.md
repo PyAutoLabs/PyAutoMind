@@ -19,3 +19,43 @@ Accepted scope: community-organ-birth phase 3; existing whole-task development a
 @PyAutoBrain owns category-sensitive triage: bug reproduction, scientific assumptions/data/inference, proposal use case/outcome. Do not ask all scientific questions for tracebacks. Preserve human approval for outward replies and existing commands. Any truncated/failed triage activity must be explicit.
 
 Validation: multi-page discussion comments/replies; null/deleted actors; cursor failures/budgets; partial GraphQL responses; REST fallback; >30 items/oldest item; PR review replies; multiple maintainers; response age independent of updated_at; accepted proposals/broadcast; empty success vs inaccessible; malicious HTML. Existing Ears and Brain suites, state contract and applicable CI. No new scheduling, billing, source, reply, release or merge authorization. Tier: judge — merge mode: human /prm.
+
+## PR-open handoff
+
+Ears PR#5 (`66260ab874bb08e49ec4ae4c675c3f34479c8919`) and Brain PR#457
+(`cd72445267db89d42713786e8dc5a30c285087fd`) are open; neither merged.
+Ears 43 tests pass; state/snapshot smoke valid; independent collector review CLEAN.
+Brain full run 1123 pass/42 absent-Cortex skips; then 47/47 Cortex tests passed
+with dependency fetched (1165 unique tests covered). Focused community 27 pass.
+Logs: /tmp/ears-brain-tests.log and /tmp/ears-cortex-tests.log. Source clones:
+/tmp/ears-reliability; clean feature commits have identical published Git trees.
+
+Discussion read capability is bounded and honest: GraphQL errors or restricted
+tokens/proxies retain partial REST fallback. No production GraphQL witness yet;
+existing Pages workflow provides it after merge. Exact-head CI supplies browser
+tests. Next action: human /prm with green checks, then phase4 distribution.
+
+Existing whole-programme authorization continued with "Continue". Heart remains
+RED for release; exact previously reported reasons:
+
+- release validation FAILED (stage integrate)
+- PyAutoHeart/workflows/Release Integrate: failure
+- PyAutoArray/Tests: red
+- PyAutoArray/Tests: red
+- PyAutoFit/Tests: red
+- autofit_workspace_test/Smoke Tests: red
+- autogalaxy_workspace_test/Smoke Tests: red
+- autolens_workspace_test/Smoke Tests: red
+- CI wall-clock: 26 gates · slowest PyAutoBrain Nightly Release 83m · 1 slowed · 6 hang events
+- Release readiness: release validation FAILED (stage integrate)
+- PyAutoCTI/test_autocti/extract/two_d/parallel/test_parallel_fpr.py::test__estimate_capture: red
+- PyAutoNerves/test_autonerves/test_fitsable.py::test__output_to_fits: red
+- Unit-test timing: 3 test regressions (>3× baseline), 1 slow (>1.5×)
+- autolens_test: red
+- Release validation: NOT release_ready — v2026.10.3.1.dev79901 profile=release (2026-10-03T07:43:31+00:00)
+- validation_report/stages/integrate: fail
+- autolens_assistant: red
+- autolens_profiling: red
+- autolens_workspace_test: red
+- Worktree drift: 0 orphan / 0 missing / 4 dirty
+- euclid_strong_lens_modeling_pipeline: red
