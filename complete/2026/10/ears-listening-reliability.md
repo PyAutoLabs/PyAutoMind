@@ -1,3 +1,24 @@
+## ears-listening-reliability
+
+- issue: https://github.com/PyAutoLabs/PyAutoEars/issues/4
+- completed: 2026-10-03
+- library-pr: https://github.com/PyAutoLabs/PyAutoEars/pull/5
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/457
+
+## Shipped
+
+Human `Prm` authorized both merges. Ears#5 merged d28beb9de131d99aeb93c76f1ef3502797fed36e; Brain#457 merged 5598a952d08034803dd505e5e046669d9104d524. Exact heads verified, all five applicable CI jobs successful, both PRs confirmed merged. Issue Ears#4 closed completed.
+
+Discussion comments and each reply connection are paginated with fixed read-only GraphQL queries. Failures, caps, missing/deleted actors and ambiguous ordering preserve unknown coverage. REST fallback cannot erase gaps. Snapshot v1 unchanged; accepted answers establish response settlement only, never delivery. Brain triage now distinguishes bug reproduction, scientific assumptions/data/inference, proposals and broadcasts; bounded reads report their limits.
+
+Validation: Ears 43 tests and snapshot/state smoke passed; independent collector review CLEAN. Brain full run 1123 pass/42 absent-Cortex skips, then all 47 Cortex tests passed with dependency present (1165 unique tests covered). Exact-head CI: Ears run37136522430 browser/Python3.12/3.13; Brain run37136524869 Python3.12/3.13, all success.
+
+Production witness: Ears board run37137496430 succeeded from merge d28beb9. Published snapshot generated 2026-10-03T16:37:04.144623+00:00 contains 13 conversations. All readable source receipts, including the Discussion hub, are complete; only Jammy2211/euclid_assistant remains unavailable (permissions/rate limit/endpoint not further distinguished). Post-merge Ears tests run37137496436 also passed. Restricted tokens/proxies remain explicitly partial. Heart remains RED for release; no release performed. Phases4–6 remain unissued; next is assistant distribution of /feedback.
+
+Source claims released by lifecycle close; dashboard regenerated with this record. Standalone source clones retained; no task worktree to remove. No timer or waiter outlives this turn.
+
+## Original prompt
+
 # Trustworthy listening and category-sensitive triage
 
 Type: feature
