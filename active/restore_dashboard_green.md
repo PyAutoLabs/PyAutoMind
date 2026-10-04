@@ -283,3 +283,9 @@ Last published evidence: monitoring RED33/incomplete, release RED60 with `releas
 - Human authorized investigating the Anthropic blocker. Mind `morning_status.yml` (`pyauto-update-digest`) and `arxiv_interests.yml` failed with `oauth_not_allowed_for_organization` since 09-17/18. `arxiv_papers.yml` showed green only because its Claude step was skipped on no-paper days. Cause: the 07-09 `CLAUDE_CODE_OAUTH_TOKEN` was minted on the owner's personal account, which then moved to the Newcastle Team org. Not expiry, not workflow config.
 - Human (Newcastle org admin) minted a new `claude setup-token` token under the Newcastle **Team** org. The bounded local check `claude -p "reply OK"` passed; repo secret updated 2026-10-04T16:09:34Z. Team plan is seat-based: no API key, no admin policy change, no other member affected.
 - No code change, no PR, no workflow rerun, no message sent. Next: confirm the next scheduled digest (05:09 UTC) and arxiv_interests runs succeed, then close the blocker. Heart #274 comment 5981939348.
+
+### 2026-10-04 post-merge release validation (resumed from parked)
+
+- Human: "prm this and then begin other work to get to green, doing a relase now is fine". PR280 already merged and closed out; nothing for /prm.
+- Preflight PASS; rehearsal Hands 37216594735 success at 2026.10.4.2.dev80301 (minor=2 required: libraries pin `autonerves>2026.10.4.1`). Integration Heart 37217670612 dispatched 16:41 UTC. Artifacts tmp/heart-validation-37216594735 (commit_shas.json, rehearsal.json).
+- Resume: download release-stage-report into that dir, ingest with `pyauto-brain release validate --ingest`, then on GREEN `pyauto-brain release -- 2`. CTI#112 not in release.yml; separate decision. Other dashboard findings (hang events, worktree drift, no-run census, baselines) remain after release.
