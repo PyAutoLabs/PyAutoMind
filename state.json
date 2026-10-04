@@ -2,11 +2,29 @@
   "schema_version": 1,
   "organ": "mind",
   "repo": "PyAutoMind",
-  "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-10-04T18:25:30Z",
+  "status": "red",
+  "headline": "RED \u2014 24 picks \u00b7 7 in flight",
+  "updated": "2026-10-04T18:33:31Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "red",
+      "text": "Interferometer decision matrix: commit the last cell (CPU rect 39\u00b2 alma_high r5.0)\u2026 \u2014 library-dev, ship-blocked (Heart RED)",
+      "url": "https://github.com/PyAutoLabs/autolens_profiling/issues/369",
+      "prompt": "Use the start-dev skill. active/interferometer_decision_matrix_last_cell.md"
+    },
+    {
+      "severity": "red",
+      "text": "Point-source wiki reconcile + CPU campaign completion evidence (docs-only) \u2014 library-dev, ship-blocked (Heart RED)",
+      "url": "https://github.com/PyAutoLabs/autolens_profiling/issues/370",
+      "prompt": "Use the start-dev skill. active/point_source_wiki_reconcile_cpu_completion.md"
+    },
+    {
+      "severity": "red",
+      "text": "Runtime cells' A100 `single_jit` warm-up: option (a), a steady median beside\u2026 \u2014 library-dev, ship-blocked (Heart RED)",
+      "url": "https://github.com/PyAutoLabs/autolens_profiling/issues/371",
+      "prompt": "Use the start-dev skill. active/runtime_cell_single_jit_gpu_warmup_option_a.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -107,24 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#608 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/608",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#611 \u2014 Shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/611",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#606 \u2014 Shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/606",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#599 \u2014 streaming-p4-light-profile-identity",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/599",
       "prompt": null
     }
   ]

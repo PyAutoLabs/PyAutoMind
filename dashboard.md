@@ -260,7 +260,7 @@ Use the start-dev skill. active/evaluation_grid_cap_preserves_field.md
 
 </details>
 
-<details><summary>📋 <a href="active/interferometer_decision_matrix_last_cell.md">Interferometer decision matrix: commit the last cell (CPU rect 39² alma_high r5.0)…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/369">issue #369</a> — issued 2026-10-04 — library-dev</summary>
+<details><summary>📋 <a href="active/interferometer_decision_matrix_last_cell.md">Interferometer decision matrix: commit the last cell (CPU rect 39² alma_high r5.0)…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/369">issue #369</a> — issued 2026-10-04 — library-dev, ship-blocked (Heart RED)</summary>
 
 ```
 Use the start-dev skill. active/interferometer_decision_matrix_last_cell.md
@@ -284,7 +284,7 @@ Use the start-dev skill. active/point_image_pair_all_forward_grad_nan.md
 
 </details>
 
-<details><summary>📋 <a href="active/point_source_wiki_reconcile_cpu_completion.md">Point-source wiki reconcile + CPU campaign completion evidence (docs-only)</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/370">issue #370</a> — issued 2026-10-04 — library-dev</summary>
+<details><summary>📋 <a href="active/point_source_wiki_reconcile_cpu_completion.md">Point-source wiki reconcile + CPU campaign completion evidence (docs-only)</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/370">issue #370</a> — issued 2026-10-04 — library-dev, ship-blocked (Heart RED)</summary>
 
 ```
 Use the start-dev skill. active/point_source_wiki_reconcile_cpu_completion.md
@@ -292,7 +292,7 @@ Use the start-dev skill. active/point_source_wiki_reconcile_cpu_completion.md
 
 </details>
 
-<details><summary>📋 <a href="active/runtime_cell_single_jit_gpu_warmup_option_a.md">Runtime cells' A100 <code>single_jit</code> warm-up: option (a), a steady median beside…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/371">issue #371</a> — issued 2026-10-04 — library-dev</summary>
+<details><summary>📋 <a href="active/runtime_cell_single_jit_gpu_warmup_option_a.md">Runtime cells' A100 <code>single_jit</code> warm-up: option (a), a steady median beside…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/371">issue #371</a> — issued 2026-10-04 — library-dev, ship-blocked (Heart RED)</summary>
 
 ```
 Use the start-dev skill. active/runtime_cell_single_jit_gpu_warmup_option_a.md
