@@ -62,31 +62,34 @@
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/369
 - issued: 2026-10-04
 - session: claude-code subagent (Opus 5.5), https://claude.ai/code/session_01S11WE9oj7Mvkfhc4EPBnyN
-- status: library-dev
+- status: library-dev, ship-blocked (Heart RED)
 - worktree: ~/Code/PyAutoLabs-wt/interferometer-decision-matrix-last-cell
 - prompt: active/interferometer_decision_matrix_last_cell.md
 - repos:
   - autolens_profiling: feature/interferometer-decision-matrix-last-cell
 - coordination: same session as interferometer-streaming-scaling (#368) and the human-approved priority order (2026-10-04). Touches only the decision-matrix note, results/breakdown/interferometer/alma_high/, wiki/campaigns/interferometer_likelihood.md and the existing interferometer wiki/index.md row; disjoint from #368's paths.
+- resume: local commit 93a002a on feature/interferometer-decision-matrix-last-cell, lint + pytest green locally. Heart RED at ship gate: "release validation FAILED (stage integrate)" (pyauto-heart readiness 2026-10-04). Committed locally, NOT pushed, no PR. Ship needs a live human RED override (AUTONOMY.md "Human override for Heart RED (development only)") or a GREEN/YELLOW Heart; PR body drafted at scratchpad checkin/prA.md (session-local).
 
 ## point-source-wiki-reconcile
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/370
 - issued: 2026-10-04
 - session: claude-code subagent (Opus 5.5), https://claude.ai/code/session_01S11WE9oj7Mvkfhc4EPBnyN
-- status: library-dev
+- status: library-dev, ship-blocked (Heart RED)
 - worktree: ~/Code/PyAutoLabs-wt/point-source-wiki-reconcile
 - prompt: active/point_source_wiki_reconcile_cpu_completion.md
 - repos:
   - autolens_profiling: feature/point-source-wiki-reconcile
 - coordination: same session as interferometer-streaming-scaling (#368) and interferometer-decision-matrix-last-cell (#369), human-approved priority order 2026-10-04. Touches only the three point-source campaign pages, their wiki/index.md rows and results/notes/point_source_cpu_campaign.md.
+- resume: local commit 0560284 on feature/point-source-wiki-reconcile, lint + pytest green locally. Heart RED at ship gate: "release validation FAILED (stage integrate)" (pyauto-heart readiness 2026-10-04). Committed locally, NOT pushed, no PR. Ship needs a live human RED override (AUTONOMY.md "Human override for Heart RED (development only)") or a GREEN/YELLOW Heart; PR body drafted at scratchpad checkin/prB.md (session-local).
 
 ## runtime-single-jit-median
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/371
 - issued: 2026-10-04
 - session: claude-code subagent (Opus 5.5), https://claude.ai/code/session_01S11WE9oj7Mvkfhc4EPBnyN
-- status: library-dev
+- status: library-dev, ship-blocked (Heart RED)
 - worktree: ~/Code/PyAutoLabs-wt/runtime-single-jit-median
 - prompt: active/runtime_cell_single_jit_gpu_warmup_option_a.md
 - repos:
   - autolens_profiling: feature/runtime-single-jit-median
 - coordination: same session as #368/#369/#370, human-approved priority order 2026-10-04 (option (a) decided). Touches scripts/misc/likelihood_breakdown/timing.py, the source-plane runtime cell, build_dashboard.py, dashboard/, tests and the source-plane ledger caveat.
+- resume: local commit 87a7fcc on feature/runtime-single-jit-median, lint + pytest green locally. Heart RED at ship gate: "release validation FAILED (stage integrate)" (pyauto-heart readiness 2026-10-04). Committed locally, NOT pushed, no PR. Ship needs a live human RED override (AUTONOMY.md "Human override for Heart RED (development only)") or a GREEN/YELLOW Heart; PR body drafted at scratchpad checkin/prC.md (session-local).
