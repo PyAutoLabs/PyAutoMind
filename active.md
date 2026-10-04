@@ -21,7 +21,7 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/275
 - completed-phase: PR279 merged at3d86fd8; complete/2026/10/retired-repo-sidecars.md. Both CI legs passed, issue278 closed.
 - validation: Heart 1181 tests passed; focused 20 passed (4 regression cases failed before fix); independent review CLEAN; Python 3.12/3.13 CI green at 1c9b924.
-- resume: PR280 f5bad35 repairs old JAX bounds to>=0.11.2,<0.12 across3 recipes. Native control replay deadlocked in LAPACK; source removes captured path,3 exact-wheel candidate passes. Same-run comparison honestly inconclusive. Human /prm only; final-head CI must be judged. Canonical RED60 integratefail and monitoring RED33 preserved/published; timings refreshed, science/worktrees and Anthropic blocker untouched. See final continuation in prompt.
+- resume: PR280 f5bad35 repairs old JAX bounds to>=0.11.2,<0.12 across3 recipes. Native control replay deadlocked in LAPACK; source removes captured path,3 exact-wheel candidate passes. Same-run comparison honestly inconclusive. Human /prm only; final-head CI37207278755 passed both Python legs; redundant diagnostic37207278790 cancelled (no evidence). Canonical RED60 integratefail and monitoring RED33 preserved/published; timings refreshed, science/worktrees and Anthropic blocker untouched. See final continuation in prompt.
 
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
