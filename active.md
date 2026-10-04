@@ -57,6 +57,7 @@
 - repos:
   - autolens_profiling: feature/interferometer-streaming-scaling
 - coordination: adds scripts/interferometer/streaming_scaling/, results/streaming_scaling/, wiki/campaigns/interferometer_streaming.md + one wiki/index.md row only; parallel autolens_profiling worktrees touch other paths.
+- resume: 2026-10-04 phase-1 runs + wiki/index/results README rows done and all lints/pytest green in the worktree (uncommitted). PARKED at ship gate: pyauto-heart readiness RED "release validation FAILED (stage integrate)" (not caused by this task). Human Heart-RED override needed to commit/push/open PR; PR body drafted. Dashboard regen was timestamp-only, not committed.
 
 ## interferometer-decision-matrix-last-cell
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/369
