@@ -1,3 +1,102 @@
+# PyAutoInsight — inference campaign organ delivered
+
+- issue: https://github.com/PyAutoLabs/PyAutoInsight/issues/1 (closed completed)
+- live: https://pyautolabs.github.io/PyAutoInsight/
+- authorisation: human selected PyAutoInsight, supplied task-specific Heart RED development override, then `/prm — merge the PyAutoInsight rollout and complete migration/deployment`.
+
+## Delivered
+
+One editable all-inference check-in prompt above eight campaigns and the open
+task ledger; evidence/results/diagnostics/provenance/coverage below. Six original
+Mind task records remain byte-preserved with source revisions and hashes; five
+source drafts and one idea fragment were removed only after the destination
+merged. Existing blockers, priorities, decisions and issue links remain. The
+Cortex documentation task is complete; five domain tasks remain open under their
+existing blocked/decision/slicing gates. Mind retains implementation lifecycle;
+Cortex retains scientific observations and conclusions; projects retain execution
+and raw samples. No inference conductor or retired programme was revived.
+
+A project-owned inference-summary@1 exporter over real autolens_inference results,
+independent organ reader, identity registry, one-commit receipts, last-good cache,
+CLI, Markdown/HTML, state.json and badge are deployed. Failed/incomplete stages,
+unknown diagnostics/provenance and unavailable archives remain visible. Timing
+clocks have explicit definitions; overlapping parent stages are not summed.
+One real producer is registered; a second-producer fixture proves generic reading.
+
+Canonical Mind body map/adapters, Brain docs/routing/cockpit/test witnesses,
+public hub/profile and peer organ lists are integrated. Project dashboards remain
+separate and the cockpit has one inference-organ card. CHECKIN.md defines the
+single-chat workflow with durable source-backed reports; board refresh does not
+stamp check-ins or infer scientific acceptance.
+
+## Merge and migration evidence
+
+Insight #2 destination merged aabc4869410824a62cf1816925cda7f88994b95a before
+Mind #472 source cleanup merged 9aeabfe99b1e511a0d48ca6a9db415ced117c654.
+Insight #3 merged ca2418d009afe8049093e7510e17ba3bf092afa2 with the migration
+landing record and completed documentation-task state. All 18 PRs below are
+confirmed merged through GitHub's PR state; no branch protection was bypassed.
+
+## End-to-end publication and deployment witness
+
+Producer publication 37187664457 succeeded and triggered repository_dispatch
+receiver 37187697228. Payload and receipt agree on published source
+26778b158538711a5a79acbadb0699a103446bd7: 56 records, outcome ok, no cache/errors,
+captured 2026-10-04T08:09:22Z. This was an actual producer-to-organ trigger.
+
+Pages deployment 37188389863 succeeded at ca2418d009afe8049093e7510e17ba3bf092afa2.
+On 4 October the public index, state.json and badge.json returned HTTP 200 and
+matched those merged files byte-for-byte. HTML SHA256:
+34e78563dbce9566152c818bcf7a8e5718d9f1abde1a14466af430e98ba44ae7.
+Brain's contract validator accepted the downloaded feed (organ insight,
+repo PyAutoInsight, yellow). Published headings preserve prompt/campaign/task/
+evidence order. Executing the downloaded HTML's JavaScript passes edited-text
+clipboard copy, fallback, clipboard-denial and manual-selection scenarios.
+These are HTTP/content/runtime checks, not a claimed browser screenshot review.
+
+## Validation and limits
+
+Insight 77 tests and Ruff/format/offline checks passed; Mind 619 tests passed.
+Full applicable repository suites and hosted PR jobs passed, including producer
+simulator/SLaM smoke. Canonical generator/firewall/config checks passed. Mind's
+scheduled non-PR drift writer was intentionally skipped on PRs, while privacy
+tests passed. Hub/profile/Scientist/Cortex/Gut had no PR-triggered workflows;
+applicable local suites and review supplied their validation. Two existing Mind
+lifecycle warnings remain unrelated (old pending-release marker and batch timing).
+
+The board is intentionally yellow: provenance/diagnostic/scientific assessment
+coverage is incomplete. No current scheduler access, new scientific acceptance,
+compute submission, default change, release or full science check-in was claimed.
+No implementation/deployment dependency remains. The first science sweep is a
+normal use of the delivered CHECKIN.md workflow, not unfinished organ setup.
+
+Standalone repository clones are retained. No task-owned multi-repository
+worktree required deletion; temporary Brain read-only worktree is removed if
+clean. No remote branch deletion is part of /prm.
+
+## Merged PRs
+
+- https://github.com/PyAutoLabs/PyAutoBrain/pull/460
+- https://github.com/PyAutoLabs/pyautolabs.github.io/pull/28
+- https://github.com/PyAutoLabs/.github/pull/31
+- https://github.com/PyAutoLabs/PyAutoScientist/pull/41
+- https://github.com/PyAutoLabs/PyAutoCortex/pull/56
+- https://github.com/PyAutoLabs/PyAutoPulse/pull/8
+- https://github.com/PyAutoLabs/PyAutoMemory/pull/114
+- https://github.com/PyAutoLabs/PyAutoEyes/pull/15
+- https://github.com/PyAutoLabs/PyAutoEars/pull/8
+- https://github.com/PyAutoLabs/PyAutoHeart/pull/273
+- https://github.com/PyAutoLabs/PyAutoHands/pull/296
+- https://github.com/PyAutoLabs/PyAutoNerves/pull/183
+- https://github.com/PyAutoLabs/PyAutoGut/pull/20
+- https://github.com/PyAutoLabs/PyAutoMind/pull/471
+- https://github.com/PyAutoLabs/PyAutoMind/pull/472
+- https://github.com/PyAutoLabs/PyAutoInsight/pull/2
+- https://github.com/PyAutoLabs/PyAutoInsight/pull/3
+- https://github.com/PyAutoLabs/autolens_inference/pull/18
+
+## Original prompt
+
 # PyAutoInsight: inference campaigns and evidence organ
 
 Type: feature
