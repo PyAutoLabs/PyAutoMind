@@ -37,3 +37,14 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/343
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/365
 - final-validation: Galaxy 1315 passed; focused 49 passed; full companion smoke 33/33 in 501.91s (changed example 2.2s). Galaxy exact-head CI all green; new companion CI pending. Wiki/results-layout and whitespace checks pass. No raw phase-3a evidence changed.
+
+## interferometer-streaming-scaling
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/368
+- issued: 2026-10-04
+- session: claude-code subagent (Opus 5.5), https://claude.ai/code/session_01S11WE9oj7Mvkfhc4EPBnyN
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/interferometer-streaming-scaling
+- prompt: active/interferometer_streaming_scaling.md
+- repos:
+  - autolens_profiling: feature/interferometer-streaming-scaling
+- coordination: adds scripts/interferometer/streaming_scaling/, results/streaming_scaling/, wiki/campaigns/interferometer_streaming.md + one wiki/index.md row only; parallel autolens_profiling worktrees touch other paths.
