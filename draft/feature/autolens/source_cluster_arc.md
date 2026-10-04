@@ -612,8 +612,8 @@ Research: autolens_profiling#364 @89b6d00; CI: autolens_workspace_test#341 @06f7
 Full workspace smoke 33/33 passed (new example 2.9s). Heart YELLOW acknowledged;
 all RED reasons cleared after clean canonical PyAutoLens fast-forward. Both PRs
 pending-release, cross-linked; /prm awaiting all workflow/matrix legs.
-Next single prompt filed, unissued: active/evaluation_grid_cap_preserves_field.md
-(phase 3b). Includes explicit effective-Zoom2D footprint/rounding contract; does
+Next single prompt filed, unissued: phase 3b cap fix (now recorded at
+complete/2026/10/evaluation-grid-cap-field.md). Includes explicit effective-Zoom2D footprint/rounding contract; does
 not silently absorb the independent masked-caustic discrepancy draft. No bulk queue.
 
 
@@ -661,3 +661,13 @@ Next handoff: review/merge the library fix and research PR when green; release
 availability then permits the draft workspace regression to pass installed-stack
 CI and merge. Only after this phase nears completion should seed/path coverage
 be scoped as the next single issue. Separate masked-caustic prompt remains open.
+
+
+## Phase 3b merged — 2026-10-04
+
+All three PRs merged: PyAutoGalaxy#646 (2e36de4e, 2026-10-02; released in
+2026.10.4.1), autolens_profiling#365 (9d0b1317, 2026-10-02) and
+autolens_workspace_test#343 (ebb9c866, 2026-10-04). Issue #645 closed via /prm.
+Record: complete/2026/10/evaluation-grid-cap-field.md. No later phase issued;
+seed/path coverage remains the next single-issue candidate, and the separate
+masked-caustic prompt is still open.
