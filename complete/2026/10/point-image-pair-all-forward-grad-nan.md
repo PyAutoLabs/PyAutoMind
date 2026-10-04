@@ -1,3 +1,23 @@
+## point-image-pair-all-forward-grad-nan
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/767
+- completed: 2026-10-04
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/768
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/768
+- PyAutoLens#768 merged 2026-10-04T20:41Z (head 0659903d, merge dffea805) via human /prm. It was pushed and opened under the in-session Heart RED development override.
+- Fix: under JAX, `all_permutations_log_likelihoods` is wrapped in a `jax.custom_jvp`. The tangent comes from `_log_likelihoods_padding_safe`, which uses a double-`where` to mask the `inf` sentinel rows. The primal is unchanged, so the log likelihood is bit-identical: CPU fiducial `7.743201200876812`, the autolens_profiling pin.
+- Traps:
+  - A per-position double-`where` was still NaN once jitted, because XLA algsimp + fusion leaked the discarded branch.
+  - A fully vectorised primal moved the fiducial by 1 ULP.
+  - The autolens_profiling GPU pin (`…806`) was not re-measured.
+- Validation:
+  - forward == reverse == `Fitness.grad` over `PRNGKey(0..15)` for both pair-all classes plus the source-plane control;
+  - the new tests fail on the unfixed source;
+  - `pytest test_autolens/` gave 825 passed, 1 xfailed;
+  - downstream point_source jax_grad/jax_likelihood smoke passed.
+- **Patch release suggested.** The defect (NaN forward gradient, so every MultiStartAdam start is non-finite) is live for every user of 2026.9.27.2+ who runs a gradient search on `FitPositionsImagePairAll(Solved)`. The pending-release key above is carried verbatim. /prm never clears it; /review_release does.
+
+## Original prompt
+
 # Forward-mode gradient is NaN for FitPositionsImagePairAll(Solved) — released default gradient_mode="forward"
 
 Type: bug

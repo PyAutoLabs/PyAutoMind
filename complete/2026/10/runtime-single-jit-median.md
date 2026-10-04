@@ -1,3 +1,20 @@
+## runtime-single-jit-median
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/371
+- completed: 2026-10-04
+- epic: point-source-cpu-speed
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/374
+- autolens_profiling#374 merged 2026-10-04T20:41Z (head 87a7fcc0, merge 4d9e6506) via human /prm (Heart RED development override). It ships option (a) of the PyAutoPulse contract `tasks/runtime_cell_single_jit_gpu_warmup.md`:
+  - `timing.py`: adds `steady_median_profile` (≥ 5 warm calls, then N individually timed calls; returns median/p10/p90) and an opt-in `jit_profile(median_n_warm=, median_n_timed=)`;
+  - `source_plane_solved.py`: the witness cell writes `full_pipeline_single_jit_median_ms` / `_p10_ms` / `_p90_ms` beside the unchanged `full_pipeline_single_jit`;
+  - `build_dashboard.py`: labels GPU first-block rows "first block after compile" and shows the steady median where a row carries it. No row is re-based.
+- Validation: 9 new tests, and pytest gave 1029 passed. The local CPU witness gave single_jit 0.417 ms vs steady median 0.388 ms. No HPC job was run.
+- **Scope merged ≠ scope filed.** Not shipped:
+  - the four imaging release-sweep cells (the contract's "Reach") are not wired;
+  - the A100 witness, where the median should agree with job 366914's 0.267 ms to within p10–p90, runs at the next release sweep.
+  Both are re-filed as `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md`.
+
+## Original prompt
+
 # Runtime cells' A100 `single_jit` warm-up: option (a), a steady median beside the existing statistic
 
 Type: bug

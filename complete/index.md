@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1690 records across 9 buckets.
+1694 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -148,6 +148,7 @@ markers; everything below GENERATED is rebuilt.
 - [heart-publication-coverage](2026/10/heart-publication-coverage.md)
 - [heart-score-resusitate](2026/10/heart-score-resusitate.md)
 - [insight-organ-birth](2026/10/insight-organ-birth.md)
+- [interferometer-decision-matrix-last-cell](2026/10/interferometer-decision-matrix-last-cell.md)
 - [jax-lapack-compatibility-repair](2026/10/jax-lapack-compatibility-repair.md)
 - [lint-lychee-exclude-blob](2026/10/lint-lychee-exclude-blob.md) — Corrective: lychee in both organs' `lint.yml` now excludes `^https://github\.com/.*/blob/`. GitHub answers non…
 - [memory-cockpit-catch-up](2026/10/memory-cockpit-catch-up.md) — Lensing-specific catch-up freshness drives the HTML/Markdown banner and cockpit feed. Structured cutoff, age, …
@@ -156,9 +157,11 @@ markers; everything below GENERATED is rebuilt.
 - [mesh-interpolator-numerics-audit](2026/10/mesh-interpolator-numerics-audit.md)
 - [over-sample-snr-helper](2026/10/over-sample-snr-helper.md)
 - [point-audits-wheel-provenance](2026/10/point-audits-wheel-provenance.md) — Point-solver audits now work with installed wheels, preserve checkout provenance, fingerprint installed packag…
+- [point-image-pair-all-forward-grad-nan](2026/10/point-image-pair-all-forward-grad-nan.md)
 - [point-solver-duplicate-policy](2026/10/point-solver-duplicate-policy.md)
 - [point-solver-image-accuracy](2026/10/point-solver-image-accuracy.md)
 - [point-source-search-nautilus-leaf](2026/10/point-source-search-nautilus-leaf.md)
+- [point-source-wiki-reconcile](2026/10/point-source-wiki-reconcile.md)
 - [pointsolver-extent-sanity-check](2026/10/pointsolver-extent-sanity-check.md)
 - [profiling-summary-v1](2026/10/profiling-summary-v1.md) — PyAutoPulse phase 1 — `build_dashboard.py` gains a fourth output, `dashboard/summary.json`, the `profiling-sum…
 - [pulse-campaign-control-room](2026/10/pulse-campaign-control-room.md) — One editable/copyable check-in prompt, 11 campaign rows, 25 open tasks, then detailed measurement evidence. 26…
@@ -169,6 +172,7 @@ markers; everything below GENERATED is rebuilt.
 - [pyautopulse-organ-row](2026/10/pyautopulse-organ-row.md) — Phase 0 of `profiling-organ-birth`: PyAutoPulse (organ key `pulse`, display `Pulse`) registered as the cross-p…
 - [pyautopulse-organ-skeleton](2026/10/pyautopulse-organ-skeleton.md) — Phase 2 of `profiling-organ-birth`: the PyAutoPulse organ skeleton — `registry.yaml` (lens row only; `repo` is…
 - [retired-repo-sidecars](2026/10/retired-repo-sidecars.md) — Aggregate only repositories in a valid current Heart monitoring roster; preserve all caches, configured advers…
+- [runtime-single-jit-median](2026/10/runtime-single-jit-median.md)
 - [streaming-p4-light-profile-identity](2026/10/streaming-p4-light-profile-identity.md)
 - [streaming-p5-cubes-phase-centre](2026/10/streaming-p5-cubes-phase-centre.md)
 - [unit-timing-distinct-baseline](2026/10/unit-timing-distinct-baseline.md) — Select the latest distinct prior unit timing run per repository/Python leg within the current epoch. Preserve …

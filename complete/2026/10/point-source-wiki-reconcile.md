@@ -1,3 +1,25 @@
+## point-source-wiki-reconcile
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/370
+- completed: 2026-10-04
+- epic: point-source-cpu-speed
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/373
+- autolens_profiling#373 merged 2026-10-04T20:49Z (head 0cefdea2, merge 1e2d8832) via human /prm (Heart RED development override). It is a docs-only reconciliation of the image-plane CPU, A100 and source-plane point-source campaign pages and their `wiki/index.md` rows. Every claim was re-checked on 2026-10-04 with `gh` + `git tag --contains | sort -V`:
+  - PyAutoLens#764 is merged and released in 2026.10.4.1;
+  - #580/#584/#753 are in 2026.9.27.2;
+  - #353 was merged 2026-09-30;
+  - autolens_inference#17 and #361 were merged 2026-10-02.
+- Adds "Campaign completion evidence" to `results/notes/point_source_cpu_campaign.md`, built from committed rows only. Baseline → final is 24.69 → 2.095 ms, cross-node and indicative; the final-code single-node row is still an unmeasured control. The section also gives the disposition of every candidate and an A100 check for every shared library change. The epic close is left to the human.
+- Validation: all autolens_profiling lints passed, and pytest gave 1018 passed.
+- **Scope merged ≠ scope filed.** Still owed, re-filed as `draft/maintenance/autolens/point_source_cpu_campaign_owed_leftovers.md` (contract: PyAutoPulse `tasks/pointsolver_cpu_speed_campaign_remainder.md`):
+  - RAL leftover cleanup (mirror sync unverified);
+  - the register_model grad-zero prompt;
+  - the `test_static_lattice_jax.py` move;
+  - CI smoke cells;
+  - the `nopad` deletion;
+  - quiet-node re-runs.
+
+## Original prompt
+
 # Point-source wiki reconcile + CPU campaign completion evidence (docs-only)
 
 Type: research
