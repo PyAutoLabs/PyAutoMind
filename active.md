@@ -5,12 +5,14 @@
 - issued: 2026-10-04
 - prompt: active/restore_dashboard_green.md
 - session: Codex; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge; dashboard-repair-in-progress
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/heart-dashboard-repair
 - repos:
   - PyAutoHeart: feature/heart-dashboard-repair
 - authorization: Human approved phased dashboard repair plan on 2026-10-04; tier undeclared, merge via human /prm. Preserve unfinished work and scientific evidence.
-- resume: Canonical clean-main synchronization completed; missing Insight/Ears cloned. Investigate manifest parser and standalone-worktree observation defects; audit retained evidence before any cleanup. Full dashboard completion remains required.
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/275
+- validation: Heart 1181 tests passed; focused 20 passed (4 regression cases failed before fix); independent review CLEAN; Python 3.12/3.13 CI green at 1c9b924.
+- resume: Human merge approval requested for #275; not yet authorized. TestPyPI rehearsal Hands#37198725621 running, workspace smoke Heart#37198914051 queued. After rehearsal passes download its artifact, capture exact library heads and run Brain release validate --stage3-plan, then ingest. Preserve dirty science and retained worktrees. Full dashboard remains RED/incomplete; see active prompt for detailed findings.
 
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
