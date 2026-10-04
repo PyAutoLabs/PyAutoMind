@@ -101,3 +101,34 @@ euclid_strong_lens_modeling_pipeline: red
   published GitHub Pages; then lifecycle close-out. No merge or deployment
   verification has been claimed. Browser visual check remains outstanding;
   editable-copy native/fallback behavior is covered by executable Node tests.
+
+
+## Merge and migration checkpoint — 2026-10-04
+
+Human merge authority: `/prm — merge the PyAutoInsight rollout and complete migration/deployment`.
+
+All sixteen initial PRs listed above are confirmed merged. Mind PR472 then
+removed five source drafts and the exact NUTS/HMC idea fragment after verifying
+the destination merge ancestry and all six source/destination SHA256 values.
+Source cleanup merge: 9aeabfe99b1e511a0d48ca6a9db415ced117c654.
+Current epic/idea references now point to Insight; scientific run records and
+mixed implementation work remain in Cortex/projects/Mind as appropriate.
+Full Mind suite: 619 passed; registry/dashboard/lifecycle round-trips pass.
+Released claims for the fourteen repositories whose integration work is done;
+only Insight and Mind remain claimed for the deployment and final close-out.
+
+Producer publication run37187664457 succeeded, including its refresh sender.
+Insight repository_dispatch run37187697228 succeeded; its payload and committed
+receipt agree on published source26778b158538711a5a79acbadb0699a103446bd7,
+56 records, no cache/errors, captured2026-10-04T08:09:22Z. A refresh has not
+stamped a science check-in (`last_checkin: null`). Insight PR3 records the
+completed documentation task while retaining its original frozen text.
+
+Remaining concrete external dependency: enable GitHub Pages with source
+GitHub Actions at https://github.com/PyAutoLabs/PyAutoInsight/settings/pages.
+The deployment failed in actions/configure-pages@v5 with "Create Pages site
+failed. Error: Resource not accessible by integration"; the GitHub connector
+has no repository-settings mutation. Live URL currently returns404. After
+setting, rerun the failed Pages job, verify HTML/state/copy on the published
+site, then perform normal issue/lifecycle close-out. No completion record or
+live deployment is claimed before that verification.

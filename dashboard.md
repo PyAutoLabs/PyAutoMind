@@ -260,7 +260,7 @@ Use the start-dev skill. active/evaluation_grid_cap_preserves_field.md
 
 </details>
 
-<details><summary>📋 <a href="active/insight_organ_birth.md">PyAutoInsight: inference campaigns and evidence organ</a> — <a href="https://github.com/PyAutoLabs/PyAutoInsight/issues/1">issue #1</a> — issued 2026-10-04 — workspace-dev</summary>
+<details><summary>📋 <a href="active/insight_organ_birth.md">PyAutoInsight: inference campaigns and evidence organ</a> — <a href="https://github.com/PyAutoLabs/PyAutoInsight/issues/1">issue #1</a> — issued 2026-10-04 — awaiting-input — repository Pages enablement; implementation and source migration merged</summary>
 
 ```
 Use the start-dev skill. active/insight_organ_birth.md
