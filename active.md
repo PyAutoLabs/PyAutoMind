@@ -5,7 +5,7 @@
 - issued: 2026-10-04
 - prompt: active/restore_dashboard_green.md
 - session: Codex; session ID unavailable
-- status: library-dev; five compatibility PRs open, Array/Lens/CTI full suites pending
+- status: library-shipped, awaiting-merge; eight reviewed compatibility PRs, human /prm only
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/restore-dashboard-green
 - repos:
   - PyAutoHeart: feature/restore-dashboard-green
@@ -21,12 +21,14 @@
   - authorization: I authorize development investigation and repair despite the current RED reason above. Follow start-dev and record the task-specific authorization wherever required.
   - reasons: "release validation FAILED (stage integrate)"
   - scope: Heart dashboard repair #274 and bounded timeout investigation; applicable tests and independent review remain required; human /prm only.
-  - passed-gates: 1222 full Heart tests; YAML/firewall/whitespace; independent Sol CLEAN; exact-wheel candidate 3/3. Diagnostic comparison remains inconclusive, not release validation.
+  - passed-gates: 9255 full-suite tests (2 skips,5 xfails) across8 repos; independent Sol CLEAN; 25 resolver cases and fresh normal resolution PASS; CPU/CUDA endpoint witnesses PASS; hosted compatibility37210342253 and Heart unit37210342215 PASS at8721c2e. Original comparison inconclusive; broader point-gradient timeout both versions; not release clearance.
 - authorization: Human approved phased dashboard repair plan on 2026-10-04; tier undeclared, merge via human /prm. Preserve unfinished work and scientific evidence.
 - diagnostic-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/280
 - diagnostic-head: 8721c2e3e747561d4cf010fb2a1a6e431224cbb4
-- diagnostic-validation: 1222 full Heart tests PASS; YAML/firewall/whitespace PASS; independent Sol CLEAN including41 focused tests; native replay37205459198 reproduces LAPACK deadlock; comparison37206724174 inconclusive (3 controls/3 candidates pass); no release clearance.
-- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/275
+- diagnostic-validation: 1222 Heart tests; independent review CLEAN; native LAPACK capture37205459198; original comparison37206724174 remains inconclusive; final-head unit37210342215 and two-endpoint compatibility37210342253 PASS. Original failed release preserved.
+- completed-phase: PR279 merged at3d86fd8; complete/2026/10/retired-repo-sidecars.md. Both CI legs passed, issue278 closed.
+- validation: Heart1222/Nerves237/Hands472/Fit2959/Array1959/Galaxy1315/Lens820/CTI271 tests PASS; independent Sol CLEAN; package/CPU/CUDA/hosted endpoint checks PASS. Lens two Python CI legs and CTI CI pending at handoff; other six PRs all checks passed.
+- resume: Human /prm the eight coordinated PRs after exact-head checks. Publish policy-bearing Nerves first; strict consumer guard>2026.10.4.1 needs higher base version chosen by human. Keep original release RED60, inconclusive comparison, and broader point-gradient timeout evidence. No full validation/release authorized; plan next validation via Release Agent after merges. Anthropic/science records untouched; full continuation in prompt.
 - library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/184
 - pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/184
 - library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/297
@@ -37,9 +39,12 @@
 - pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/647
 - library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/280
 - pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/280
-- completed-phase: PR279 merged at3d86fd8; complete/2026/10/retired-repo-sidecars.md. Both CI legs passed, issue278 closed.
-- validation: Heart 1181 tests passed; focused 20 passed (4 regression cases failed before fix); independent review CLEAN; Python 3.12/3.13 CI green at 1c9b924.
-- resume: Compatibility policy preserves>=0.7,<0.12 excluding0.10.* /0.11.0; consumer guards prevent old-Nerves fallback. Nerves/Hands/Fit/Galaxy/Heart PRs open, independent review CLEAN; Array/Lens/CTI full suites pending before PRs. Heart8721c2e hosted endpoint CI37210342253 and unit CI37210342215 pending. Original release remains RED60; point-source broader diagnostic times out on both endpoints. Human /prm only.
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/612
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/612
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/766
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/766
+- library-pr: https://github.com/PyAutoLabs/PyAutoCTI/pull/112
+- pending-release: PyAutoCTI@https://github.com/PyAutoLabs/PyAutoCTI/pull/112
 
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102

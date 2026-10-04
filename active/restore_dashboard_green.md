@@ -194,3 +194,34 @@ Open PRs:
 - PyAutoHeart: https://github.com/PyAutoLabs/PyAutoHeart/pull/280 at 8721c2e3e747561d4cf010fb2a1a6e431224cbb4
 
 Heart hosted compatibility37210342253 and unit37210342215 pending. Nerves Python3.12/3.13/no-JAX CI37210297058 passed. Exact authoritative Heart reason remains `release validation FAILED (stage integrate)` (RED60). Prior live human development override remains in force; no release/merge authorized. Anthropic OAuth blocker untouched.
+
+
+## Compatibility repair ready for human review
+
+JAX remains >=0.7,<0.12, excluding0.10.* and0.11.0. Tested endpoints0.9.2 and0.11.2 pass CPU and actual CUDA original-likelihood/numerical witnesses. The retained range is not blanket certification. The native-confirmed0.10.2 LAPACK/Eigen path is absent in0.9.2 and disabled in OSS builds from0.11.1; exclusions beyond0.10.2 are source-based precautions. Historical FFT workaround remains.
+
+Hosted Heart compatibility run37210342253 passes both endpoints at8721c2e: Python3.12.14,113 unchanged non-JAX pins, original workspace/Hands commits, three original-likelihood trials each, numerical/gradient/NUFFT/Optax/shortNUTS checks,20FFT iterations. Artifacts and provenance verified. Heart unit CI37210342215 passes both Python legs. Local original likelihood also passes3CPU+1CUDA per version.25 wheel resolver cases and fresh normal no-prerelease resolution pass.
+
+Release coordination: publish policy-bearing Nerves before repaired family wheels; consumers require autonerves>2026.10.4.1. Strict bound excludes same-base dev/post versions. Human chooses higher base version; synthetic2026.10.4.2 test wheels are not a release/version decision. Source builds retain9999.0.0.dev0. Existing lockfiles/old published wheels need explicit repaired-family upgrades; whole-family backtracking remains possible.
+
+Incomplete evidence: broader point_source/jax_grad/gradient.py exceeds unchanged300s diagnostic cap on BOTH endpoints after solved-source finite-difference checks. No demonstrated version-specific cause; logs/native-capture attempts and hashes retained. Earlier control/candidate comparison37206724174 remains inconclusive. No full release integration/rehearsal rerun; original failure is authoritative.
+
+Exact Heart reason: release validation FAILED (stage integrate), RED60. Live authorization: “I authorize development investigation and repair despite the current RED reason above. Follow start-dev and record the task-specific authorization wherever required.” Compatibility plan approved “ok yes do it properly then”; Galaxy claim exception approved “Allow isolated metadata change”. Independent Sol review CLEAN, full suites/targeted evidence listed below. Development only; human /prm and green required CI for merge. No release, upstream report, Anthropic OAuth/credential changes, quarantine, timeout increase, evidence deletion or unattended watcher. Retained science/worktrees and Galaxy's evaluation-grid-cap-field task preserved.
+
+Exact-head completed CI checks at this checkpoint: Nerves184 (Python3.12/3.13/no-JAX), Hands297 (Python3.12/3.13/3.14), Fit1659 (Python3.12/3.13/no-JAX/docs), Galaxy647 (Python3.12/3.13/no-JAX/docs), Array612 (Python3.12/3.13/no-JAX), Heart280 (Python3.12/3.13 and both compatibility endpoints) all pass.
+
+All eight local suites pass:9255 tests,2 skips,5 expected failures. Counts: Heart1222, Nerves237, Hands472, Fit2959, Array1959, Galaxy1315, Lens820, CTI271. Full logs/hashes retained under Mind tmp/heart-timeout-20261004/full-suites.
+
+Open PRs (all pending-release, human /prm):
+- PyAutoNerves: https://github.com/PyAutoLabs/PyAutoNerves/pull/184 at `249ba9e9f13039e6154bd29a9cdfd55a5ea85c09`
+- PyAutoHands: https://github.com/PyAutoLabs/PyAutoHands/pull/297 at `a76fd9b454a8d043935a13d7a074d7fb73cb0487`
+- PyAutoFit: https://github.com/PyAutoLabs/PyAutoFit/pull/1659 at `14e244fe3be7f986fde5409cc8d37155bdbfe716`
+- PyAutoGalaxy: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/647 at `363b1f3d9bd4ed53aaddc81dc693f3d61b6369c9`
+- PyAutoHeart: https://github.com/PyAutoLabs/PyAutoHeart/pull/280 at `8721c2e3e747561d4cf010fb2a1a6e431224cbb4`
+- PyAutoArray: https://github.com/PyAutoLabs/PyAutoArray/pull/612 at `13b41fcb9a2bc4033fc46ab708871ff36dced47e`
+- PyAutoLens: https://github.com/PyAutoLabs/PyAutoLens/pull/766 at `972a1917568b8fb6c157869f869597973eadac9a`
+- PyAutoCTI: https://github.com/PyAutoLabs/PyAutoCTI/pull/112 at `e8ed5b1b86f01223b13e8eade94e533d8e1364fb`
+
+Lens unit Python3.12/3.13 and CTI CI pending at handoff; Lens docs/no-JAX passed. Human /prm must judge all exact-head required checks. Merge/publish protected Nerves first; do not release these consumer wheels against old Nerves.
+
+Next: human /prm for the reviewed PR set; retain umbrella task until post-merge release-validation planning and remaining findings are resolved. Plan any full validation through the canonical Release Agent with explicit authorization. Investigate the broader point-gradient diagnostic separately with discriminating evidence; do not treat its two timeouts as JAX-version attribution. Anthropic OAuth blocker and science/performance backlog remain untouched.

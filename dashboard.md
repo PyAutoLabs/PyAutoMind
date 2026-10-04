@@ -260,7 +260,7 @@ Use the start-dev skill. active/evaluation_grid_cap_preserves_field.md
 
 </details>
 
-<details><summary>📋 <a href="active/restore_dashboard_green.md">Restore complete Heart dashboard health</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/274">issue #274</a> — issued 2026-10-04 — library-dev; five compatibility PRs open, Array/Lens/CTI full suites pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/275">PyAutoHeart#275</a>, <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/184">PyAutoNerves#184</a>, <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/297">PyAutoHands#297</a>, <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1659">PyAutoFit#1659</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/647">PyAutoGalaxy#647</a>, <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/280">PyAutoHeart#280</a> — ⏳ pending release: PyAutoNerves — ⏳ pending release: PyAutoHands — ⏳ pending release: PyAutoFit — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoHeart</summary>
+<details><summary>📋 <a href="active/restore_dashboard_green.md">Restore complete Heart dashboard health</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/274">issue #274</a> — issued 2026-10-04 — library-shipped, awaiting-merge; eight reviewed compatibility PRs, human /prm only — PRs: <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/184">PyAutoNerves#184</a>, <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/297">PyAutoHands#297</a>, <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1659">PyAutoFit#1659</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/647">PyAutoGalaxy#647</a>, <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/280">PyAutoHeart#280</a>, <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/612">PyAutoArray#612</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/766">PyAutoLens#766</a>, <a href="https://github.com/PyAutoLabs/PyAutoCTI/pull/112">PyAutoCTI#112</a> — ⏳ pending release: PyAutoNerves — ⏳ pending release: PyAutoHands — ⏳ pending release: PyAutoFit — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoHeart — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoLens — ⏳ pending release: PyAutoCTI</summary>
 
 ```
 Use the start-dev skill. active/restore_dashboard_green.md
@@ -286,6 +286,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#612](https://github.com/PyAutoLabs/PyAutoArray/pull/612) — `active/restore_dashboard_green.md`
 - [PyAutoArray#576](https://github.com/PyAutoLabs/PyAutoArray/pull/576) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - [PyAutoArray#582](https://github.com/PyAutoLabs/PyAutoArray/pull/582) — `complete/2026/09/interferometer-sparse-cache.md`
 - [PyAutoArray#589](https://github.com/PyAutoLabs/PyAutoArray/pull/589) — `complete/2026/09/interferometer-streaming-visibilities.md`
@@ -324,6 +325,10 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoBrain#451](https://github.com/PyAutoLabs/PyAutoBrain/pull/451) — `complete/2026/10/pyautopulse-brain-board-cockpit.md`
 - [PyAutoBrain#447](https://github.com/PyAutoLabs/PyAutoBrain/pull/447) — `complete/2026/10/pyautopulse-organ-row.md`
 - [PyAutoBrain#449](https://github.com/PyAutoLabs/PyAutoBrain/pull/449) — `complete/2026/10/pyautopulse-organ-skeleton.md`
+
+**PyAutoCTI**
+
+- [PyAutoCTI#112](https://github.com/PyAutoLabs/PyAutoCTI/pull/112) — `active/restore_dashboard_green.md`
 
 **PyAutoCortex**
 
@@ -398,6 +403,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoLens**
 
+- [PyAutoLens#766](https://github.com/PyAutoLabs/PyAutoLens/pull/766) — `active/restore_dashboard_green.md`
 - [PyAutoLens#750](https://github.com/PyAutoLabs/PyAutoLens/pull/750) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - [PyAutoLens#757](https://github.com/PyAutoLabs/PyAutoLens/pull/757) — `complete/2026/09/interferometer-sparse-precomputed-data-term.md`
 - [PyAutoLens#754](https://github.com/PyAutoLabs/PyAutoLens/pull/754) — `complete/2026/09/jax-grad-nan-zero-components.md`
