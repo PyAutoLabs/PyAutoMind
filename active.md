@@ -5,12 +5,13 @@
 - issued: 2026-10-04
 - prompt: active/retired_repository_sidecars.md
 - session: Codex; session ID unavailable
-- status: library-dev
+- status: library-dev, awaiting Heart RED shipping authorization
+- validation: 22 focused / 1200 full tests pass; independent review CLEAN; copied-cache replay excludes only PyAutoConf and PyAutoBuild, preserving all 150 files and configured/global observations.
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/retired-repo-sidecars
 - repos:
   - PyAutoHeart: feature/retired-repo-sidecars
 - authorization: Approved dashboard collector-repair plan and explicit instruction to continue Heart work. Human /prm merge.
-- resume: Fix aggregation roster against valid current Heart config; preserve cache files and evidence on config errors. Parent #274.
+- resume: Implementation reviewed and tested, uncommitted in task worktree. Shipping held for current human RED override: release validation FAILED (stage integrate). Issue contains evidence; draft PR body /tmp/heart-retired-pr.md. Parent #274.
 
 ## heart-dashboard-remaining
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/274
@@ -21,7 +22,7 @@
 - authorization: Human approved phased dashboard repair plan on 2026-10-04; tier undeclared, merge via human /prm. Preserve unfinished work and scientific evidence.
 - library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/275
 - validation: Heart 1181 tests passed; focused 20 passed (4 regression cases failed before fix); independent review CLEAN; Python 3.12/3.13 CI green at 1c9b924.
-- resume: Human /prm merged #275 at 9d7d590; collector phase recorded in complete/2026/10/heart-dashboard-collectors.md, Heart claim released. Rehearsal Hands#37198725621 passed; artifacts and exact source SHAs in /tmp/heart-validation-37198725621; release integration dispatched. Workspace smoke Heart#37198914051 passed. Release integration Heart#37199991757 running (TestPyPI install passed). Baseline repair PR #277 merged at 51c329f and recorded in complete/2026/10/unit-timing-distinct-baseline.md; live unit timings refreshed; all 20 manifest checks now pass after seven preserving fast-forwards (128 local files verified plus Cortex science). Integration still running; sole release gap is validation. Preserve dirty science/retained worktrees. Mind digest fails with OAuth organization policy HTTP 403.
+- resume: Human /prm merged #275 at 9d7d590; collector phase recorded in complete/2026/10/heart-dashboard-collectors.md, Heart claim released. Rehearsal Hands#37198725621 passed; artifacts and exact source SHAs in /tmp/heart-validation-37198725621; release integration dispatched. Workspace smoke Heart#37198914051 passed. Release integration Heart#37199991757 running (TestPyPI install passed). Baseline repair PR #277 merged at 51c329f and recorded in complete/2026/10/unit-timing-distinct-baseline.md; live unit timings refreshed; all 20 manifest checks now pass after seven preserving fast-forwards (128 local files verified plus Cortex science). Integration finished: 723 passed, 82 skipped, one 1805s rectangular_rtu.py timeout. Evidence ingested; release RED60: release validation FAILED (stage integrate). Preserve dirty science/retained worktrees. Mind digest fails with OAuth organization policy HTTP 403.
 
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
