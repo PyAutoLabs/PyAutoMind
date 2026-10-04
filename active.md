@@ -18,7 +18,7 @@
   - reasons: release validation FAILED (stage integrate)
   - gates: 22 focused / 1200 full tests PASS; independent review CLEAN; all 150 cache files preserved in isolated replay; no workspace API impact; separate main smoke run 37198914051 passed.
   - scope: commit/push/pending-release PR only; human merge required; no release or failed-check bypass.
-- resume: PR #279 open at ba9d2f3 under recorded RED override; CI pending, human /prm required. Timeout diagnostics continue under #274; retime 37203338570 (3 repeats per Python leg,300s cap,native dump120s) is smoke-profile/current-source diagnostic only. Anthropic credentials/workflow untouched by explicit instruction.
+- resume: PR #279 open at ba9d2f3 under recorded RED override; both Python CI legs passed, human /prm required. Timeout diagnostics under #274 completed: smoke37203338570 and release-settings37203617994 each6/6 PASS, NEITHER; current-source diagnostics do not clear TestPyPI integration failure. Anthropic credentials/workflow untouched by explicit instruction.
 
 ## heart-dashboard-remaining
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/274
