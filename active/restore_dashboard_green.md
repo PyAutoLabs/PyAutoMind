@@ -91,3 +91,7 @@ Started existing autolens_workspace_test retime workflow 37203338570 for multi_d
 - PR #279 Python3.12/3.13 checks passed. Explicit human /prm requested separately under RED override; no merge grant yet.
 
 Follow-up37203617994 completed 6/6 passes with exact resolved release environment overlay: Python3.12 7.8/4.9/4.9s; Python3.13 9.2/8.0/7.7s; both NEITHER. Together with the smoke-profile diagnostic this is12/12 passing focused executions. No stall/native dump was captured, and no claim of a fix or release clearance follows; these used current source rather than the exact TestPyPI integration installation. Saved logs `/tmp/heart-rectangular-retime.log` and `/tmp/heart-rectangular-release-retime.log`. No further jobs/watchers left by this session. PR279 CI green; human /prm still required. Anthropic workflow and credentials remain untouched.
+
+### PR279 merged — 2026-10-04
+
+Human /prm merged PR279 at 3d86fd8; issue278 closed and phase recorded in [complete/2026/10/retired-repo-sidecars.md](../complete/2026/10/retired-repo-sidecars.md). This supersedes earlier awaiting-authorization/PR-open checkpoints. No retired-repo work remains pending; umbrella274 stays open for genuine health findings.

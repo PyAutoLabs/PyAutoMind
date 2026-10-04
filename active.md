@@ -1,25 +1,5 @@
 # Active Tasks
 
-## retired-repo-sidecars
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/278
-- issued: 2026-10-04
-- prompt: active/retired_repository_sidecars.md
-- session: Codex; session ID unavailable
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/279
-- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/279
-- validation: 22 focused / 1200 full tests pass; independent review CLEAN; copied-cache replay excludes only PyAutoConf and PyAutoBuild, preserving all 150 files and configured/global observations.
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/retired-repo-sidecars
-- repos:
-  - PyAutoHeart: feature/retired-repo-sidecars
-- authorization: Approved dashboard collector-repair plan and explicit instruction to continue Heart work. Human /prm merge.
-- heart-red-override:
-  - authorization: Human “I authorise both need help with latter if its doable” explicitly authorized #278 shipping despite RED and timeout work. Later “dont do thr anthropic stuff do whatever work you can without it” withdraws only Anthropic migration; leave credentials/workflow untouched.
-  - reasons: release validation FAILED (stage integrate)
-  - gates: 22 focused / 1200 full tests PASS; independent review CLEAN; all 150 cache files preserved in isolated replay; no workspace API impact; separate main smoke run 37198914051 passed.
-  - scope: commit/push/pending-release PR only; human merge required; no release or failed-check bypass.
-- resume: PR #279 open at ba9d2f3 under recorded RED override; both Python CI legs passed, human /prm required. Timeout diagnostics under #274 completed: smoke37203338570 and release-settings37203617994 each6/6 PASS, NEITHER; current-source diagnostics do not clear TestPyPI integration failure. Anthropic credentials/workflow untouched by explicit instruction.
-
 ## heart-dashboard-remaining
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/274
 - issued: 2026-10-04
@@ -28,6 +8,7 @@
 - status: dashboard-repair-in-progress
 - authorization: Human approved phased dashboard repair plan on 2026-10-04; tier undeclared, merge via human /prm. Preserve unfinished work and scientific evidence.
 - library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/275
+- completed-phase: PR279 merged at3d86fd8; complete/2026/10/retired-repo-sidecars.md. Both CI legs passed, issue278 closed.
 - validation: Heart 1181 tests passed; focused 20 passed (4 regression cases failed before fix); independent review CLEAN; Python 3.12/3.13 CI green at 1c9b924.
 - resume: Human /prm merged #275 at 9d7d590; collector phase recorded in complete/2026/10/heart-dashboard-collectors.md, Heart claim released. Rehearsal Hands#37198725621 passed; artifacts and exact source SHAs in /tmp/heart-validation-37198725621; release integration dispatched. Workspace smoke Heart#37198914051 passed. Release integration Heart#37199991757 running (TestPyPI install passed). Baseline repair PR #277 merged at 51c329f and recorded in complete/2026/10/unit-timing-distinct-baseline.md; live unit timings refreshed; all 20 manifest checks now pass after seven preserving fast-forwards (128 local files verified plus Cortex science). Integration finished: 723 passed, 82 skipped, one 1805s rectangular_rtu.py timeout. Evidence ingested; release RED60: release validation FAILED (stage integrate). Preserve dirty science/retained worktrees. Mind digest fails with OAuth organization policy HTTP 403.
 
