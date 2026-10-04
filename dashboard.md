@@ -268,7 +268,7 @@ Use the start-dev skill. active/restore_dashboard_green.md
 
 </details>
 
-<details><summary>📋 <a href="active/unit_timing_distinct_baseline.md">Select a distinct prior run for unit timing comparisons</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/276">issue #276</a> — issued 2026-10-04 — library-dev</summary>
+<details><summary>📋 <a href="active/unit_timing_distinct_baseline.md">Select a distinct prior run for unit timing comparisons</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/276">issue #276</a> — issued 2026-10-04 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/277">PyAutoHeart#277</a> — ⏳ pending release: PyAutoHeart</summary>
 
 ```
 Use the start-dev skill. active/unit_timing_distinct_baseline.md
@@ -386,6 +386,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoHeart**
 
+- [PyAutoHeart#277](https://github.com/PyAutoLabs/PyAutoHeart/pull/277) — `active/unit_timing_distinct_baseline.md`
 - [PyAutoHeart#240](https://github.com/PyAutoLabs/PyAutoHeart/pull/240) — `complete/2026/09/autolens-visualization-rebirth.md`
 - [PyAutoHeart#242](https://github.com/PyAutoLabs/PyAutoHeart/pull/242) — `complete/2026/09/board-footer-family-fix.md`
 - [PyAutoHeart#244](https://github.com/PyAutoLabs/PyAutoHeart/pull/244) — `complete/2026/09/eyes-fit-cti-instances.md`

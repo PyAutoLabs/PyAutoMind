@@ -5,12 +5,15 @@
 - issued: 2026-10-04
 - prompt: active/unit_timing_distinct_baseline.md
 - session: Codex; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/277
+- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/277
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/unit-timing-distinct-baseline
 - repos:
   - PyAutoHeart: feature/unit-timing-distinct-baseline
 - authorization: Continuation of the human-approved whole-dashboard repair plan and explicit 2026-10-04 instruction to merge #275 and continue. Human /prm remains the merge mode.
-- resume: Reproduced baseline self-selection on clean main with 18 older distinct observations available; repair selector/caller, test and report real before/after comparisons.
+- validation: 111 focused and 1183 full tests passed; independent review CLEAN; isolated replay restores 289/300 comparisons, with 11 missing and one slowdown retained. Commit 7874594.
+- resume: PR #277 open with pending-release; CI running. Human /prm required for merge. After merge refresh unit_timings and publish the real board; no live cache was changed by the isolated diagnostic.
 
 ## heart-dashboard-remaining
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/274
@@ -21,7 +24,7 @@
 - authorization: Human approved phased dashboard repair plan on 2026-10-04; tier undeclared, merge via human /prm. Preserve unfinished work and scientific evidence.
 - library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/275
 - validation: Heart 1181 tests passed; focused 20 passed (4 regression cases failed before fix); independent review CLEAN; Python 3.12/3.13 CI green at 1c9b924.
-- resume: Human /prm merged #275 at 9d7d590; collector phase recorded in complete/2026/10/heart-dashboard-collectors.md, Heart claim released. Rehearsal Hands#37198725621 passed; artifacts and exact source SHAs in /tmp/heart-validation-37198725621; release integration dispatched. Workspace smoke Heart#37198914051 queued. Continue baseline-self-comparison repair as separate task; preserve dirty science/retained worktrees. Mind digest fails with OAuth organization policy HTTP 403.
+- resume: Human /prm merged #275 at 9d7d590; collector phase recorded in complete/2026/10/heart-dashboard-collectors.md, Heart claim released. Rehearsal Hands#37198725621 passed; artifacts and exact source SHAs in /tmp/heart-validation-37198725621; release integration dispatched. Workspace smoke Heart#37198914051 passed. Release integration Heart#37199991757 running (TestPyPI install passed). Baseline repair is PR #277, awaiting human /prm; preserve dirty science/retained worktrees. Mind digest fails with OAuth organization policy HTTP 403.
 
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
