@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 7 |
 | [Planned](#planned) (`planned.md`) | 7 |
-| [Backlog](#backlog) (`draft/`) | 225 |
+| [Backlog](#backlog) (`draft/`) | 226 |
 
 > **No batch in flight.**
 
@@ -693,7 +693,7 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ## Backlog
 
-**225** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **43** of them belong to an epic and are listed only under [Epics](#epics) below.
+**226** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **44** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 73</summary>
@@ -2585,7 +2585,7 @@ Continue the 'PyAutoPulse — the cross-project dashboard layer above the `<lib>
 </details>
 
 <details>
-<summary><b>Point-source (single-source) PointSolver CPU speed-up</b> — 1 queued prompt(s), in order</summary>
+<summary><b>Point-source (single-source) PointSolver CPU speed-up</b> — 2 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Point-source (single-source) PointSolver CPU speed-up</b> — ledger: `autolens_profiling/wiki/campaigns/point_source_image_plane_cpu.md (full record: results/notes/point_source_cpu_campaign.md)` — phases 1-3 shipped (p2 + p3 released in 2026.9.26.1: PyAutoArray <code>7fa8d271</code>, PyAutoLens <code>86054bbc</code>); phase 4a (re-baseline +…</summary>
 
@@ -2599,6 +2599,14 @@ Continue the 'Point-source (single-source) PointSolver CPU speed-up' epic. Its c
 
 ```
 Use the start-dev skill. draft/feature/autolens_workspace/pointsolver_grid_extent_per_package.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/point_source_wiki_reconcile_cpu_completion.md">Point-source wiki reconcile + CPU campaign completion evidence (docs-only)</a> — autolens_profiling · small · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/research/autolens_profiling/point_source_wiki_reconcile_cpu_completion.md
 ```
 
 </details>
@@ -3049,7 +3057,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 </details>
 
-58 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+59 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3094,7 +3102,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 - `draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md`
 - `draft/test/workspaces/restore_workspace_test_likelihood_baselines.md`
 - `draft/test/workspaces/smoke_workspace_fixes.md`
-- _… and 18 more_
+- _… and 19 more_
 
 </details>
 
