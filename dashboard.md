@@ -46,13 +46,13 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 6 |
 | [Planned](#planned) (`planned.md`) | 7 |
-| [Backlog](#backlog) (`draft/`) | 226 |
+| [Backlog](#backlog) (`draft/`) | 227 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 20
+**Highest priority** (filed as `high`) — showing 12 of 21
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -82,6 +82,14 @@ Use the start-dev skill. draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_
 
 ```
 Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautoheart/retired_repository_sidecars.md">Exclude retired repository sidecars from current Heart observations</a> — pyautoheart · small · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautoheart/retired_repository_sidecars.md
 ```
 
 </details>
@@ -138,14 +146,6 @@ Use the start-dev skill. draft/bug/pyautoheart/smoke_install_flat_pip_chain_brea
 
 ```
 Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> — autoarray · large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md
 ```
 
 </details>
@@ -657,10 +657,10 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ## Backlog
 
-**226** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **43** of them belong to an epic and are listed only under [Epics](#epics) below.
+**227** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **43** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 74</summary>
+<summary><b>bug</b> — 75</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -690,6 +690,14 @@ Use the start-dev skill. draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_
 
 ```
 Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautoheart/retired_repository_sidecars.md">Exclude retired repository sidecars from current Heart observations</a> — pyautoheart · small · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautoheart/retired_repository_sidecars.md
 ```
 
 </details>
@@ -3019,7 +3027,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 </details>
 
-59 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+60 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3056,6 +3064,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 - `draft/bug/priors/13_collapse_prior_and_message.md`
 - `draft/bug/priors/14_replace_transform_stack_with_bijectors.md`
 - `draft/bug/priors/z_features.md`
+- `draft/bug/pyautoheart/retired_repository_sidecars.md`
 - `draft/refactor/autogalaxy/critical_curves_dispatch_cluster.md`
 - `draft/refactor/workspaces/abell_1201_local_cleanup.md`
 - `draft/docs/autolens/split_lensing_regimes.md`
@@ -3063,8 +3072,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 - `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
 - `draft/test/workspaces/mesh_magnification_correctness.md`
 - `draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md`
-- `draft/test/workspaces/restore_workspace_test_likelihood_baselines.md`
-- _… and 19 more_
+- _… and 20 more_
 
 </details>
 
