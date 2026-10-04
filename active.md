@@ -5,7 +5,7 @@
 - issued: 2026-10-04
 - prompt: active/restore_dashboard_green.md
 - session: Codex; session ID unavailable
-- status: dashboard-repair-in-progress
+- status: library-shipped, awaiting-merge; diagnostic investigation active
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/restore-dashboard-green
 - repos:
   - PyAutoHeart: feature/restore-dashboard-green
@@ -14,6 +14,9 @@
   - reasons: "release validation FAILED (stage integrate)"
   - scope: Heart dashboard repair #274 and bounded timeout investigation; applicable tests and independent review remain required; human /prm only.
 - authorization: Human approved phased dashboard repair plan on 2026-10-04; tier undeclared, merge via human /prm. Preserve unfinished work and scientific evidence.
+- diagnostic-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/280
+- diagnostic-head: 91b410f186d3aadfa20f3502e26e50c8d2d46d0a
+- diagnostic-validation: 1214 full Heart tests PASS; final 14 focused PASS; tenant firewall/whitespace PASS; independent Sol review CLEAN, committed blobs verified. Hosted diagnostic run37205459198 running; never release clearance.
 - library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/275
 - completed-phase: PR279 merged at3d86fd8; complete/2026/10/retired-repo-sidecars.md. Both CI legs passed, issue278 closed.
 - validation: Heart 1181 tests passed; focused 20 passed (4 regression cases failed before fix); independent review CLEAN; Python 3.12/3.13 CI green at 1c9b924.

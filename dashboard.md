@@ -260,7 +260,7 @@ Use the start-dev skill. active/evaluation_grid_cap_preserves_field.md
 
 </details>
 
-<details><summary>📋 <a href="active/restore_dashboard_green.md">Restore complete Heart dashboard health</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/274">issue #274</a> — issued 2026-10-04 — dashboard-repair-in-progress — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/275">PyAutoHeart#275</a></summary>
+<details><summary>📋 <a href="active/restore_dashboard_green.md">Restore complete Heart dashboard health</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/274">issue #274</a> — issued 2026-10-04 — library-shipped, awaiting-merge; diagnostic investigation active — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/275">PyAutoHeart#275</a></summary>
 
 ```
 Use the start-dev skill. active/restore_dashboard_green.md
