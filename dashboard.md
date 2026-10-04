@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 7 |
 | [Planned](#planned) (`planned.md`) | 7 |
-| [Backlog](#backlog) (`draft/`) | 225 |
+| [Backlog](#backlog) (`draft/`) | 226 |
 
 > **No batch in flight.**
 
@@ -701,7 +701,7 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ## Backlog
 
-**225** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **43** of them belong to an epic and are listed only under [Epics](#epics) below.
+**226** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **44** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 73</summary>
@@ -2919,7 +2919,7 @@ Use the start-dev skill. draft/feature/autolens/source_cluster_arc.md
 </details>
 
 <details>
-<summary><b>interferometer-likelihood-campaign</b> — 5 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+<summary><b>interferometer-likelihood-campaign</b> — 6 queued prompt(s) — ⚠️ not in `epics.md`</summary>
 
 <details><summary>📋 <a href="draft/bug/pyautoheart/ral_venv_dependency_floor_drift.md">RAL PyAuto venv: third-party packages below the library floors…</a> — pyautoheart · easy · supervised · medium</summary>
 
@@ -2941,6 +2941,14 @@ Use the start-dev skill. draft/feature/autoarray/edge_zeroed_log_det_cholesky_re
 
 ```
 Use the start-dev skill. draft/feature/autoarray/interferometer_chunked_transform_mapping_matrix.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/interferometer_curvature_preload_phase1.md">Fixed-mapper interferometer searches, phase 1: pin the <code>preloads.curvature_matrix</code> reuse invariant and measure…</a> — autoarray · small · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/autoarray/interferometer_curvature_preload_phase1.md
 ```
 
 </details>
@@ -3106,7 +3114,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 </details>
 
-62 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+63 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3114,6 +3122,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 - `draft/feature/autoarray/adapt_linear_default_flip.md — unknown theme keyword(s): inference`
 - `draft/feature/autoarray/edge_zeroed_log_det_cholesky_reuse.md — unknown theme keyword(s): inversion`
 - `draft/feature/autoarray/interferometer_chunked_transform_mapping_matrix.md — unknown theme keyword(s): jax-gpu, vram`
+- `draft/feature/autoarray/interferometer_curvature_preload_phase1.md — unknown theme keyword(s): inversion, likelihood-profiling`
 - `draft/feature/autoarray/interferometer_numba_gate_retune_70.md — unknown theme keyword(s): config`
 - `draft/feature/autoarray/source_clumps_robust_scale.md — unknown theme keyword(s): source-reconstruction`
 - `draft/feature/autofit/certified_solver_batched_guard_c2.md — unknown theme keyword(s): inversion`
