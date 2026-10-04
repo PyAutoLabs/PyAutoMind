@@ -175,3 +175,22 @@ Plan:
 Tier: undeclared — merge mode: human /prm.
 
 Brain routes this as ecosystem release-error/library, split into evidence, dependency-policy and workflow PRs. Fix owners confirmed from source: Nerves owns package requirements; Hands owns three conflicting overrides; Heart owns diagnostic evidence and CI baseline. Existing umbrella issue reused. Branch survey: Nerves/Hands clean main, no conflicting active claims; added task worktrees, preserve Array science worktree.
+
+### Compatibility repair checkpoint (2026-10-04)
+
+Human approved isolated Galaxy metadata change: “Allow isolated metadata change”. Existing evaluation-grid-cap-field task and its retained worktree/release gate are untouched. Consumer guard extends to Fit/Array/Galaxy/Lens/CTI because a repaired package must reject older permissive Nerves.
+
+Implemented retained JAX range>=0.7,<0.12 with exclusions0.10.* /0.11.0, preserving Intel-macOS markers. Tagged source is the basis for exclusions beyond observed0.10.2. Both0.9.2 and0.11.2 pass original likelihood (3CPU+1CUDA each), numerical/gradient/NUFFT/Optax/shortNUTS checks on CPU/CUDA, historicalFFT20iterations with existing workaround. Older endpoint also passes NumPy2.0/SciPy1.13 numerical probe. LocalPython3.12.10 differs from hosted incident3.12.14; no performance comparison or blanket older-version certification.
+
+25 live wheel resolver cases pass. Fresh ignore-installed/no-prerelease PyPI resolution passes with synthetic stable VERSION=2026.10.4.2 wheels; test version only, no publishing/version selection. Strict autonerves>2026.10.4.1 excludes same-base dev/post variants; human release needs higher base and policy-bearing Nerves published first. Existing source builds use9999.0.0.dev0. Old published wheels/whole-family backtracking not retroactively protected.
+
+Point-source gradient broader probe times out at unchanged300s on BOTH versions after solved-source finite-difference checks; cause unresolved, logs/native-capture attempts retained. Independent Sol review CLEAN across eight repos. Full suites passed: Heart1222, Nerves237, Hands472, Fit2959+2skips, Galaxy1315. Array/Lens/CTI suites pending.
+
+Open PRs:
+- PyAutoNerves: https://github.com/PyAutoLabs/PyAutoNerves/pull/184 at 249ba9e9f13039e6154bd29a9cdfd55a5ea85c09
+- PyAutoHands: https://github.com/PyAutoLabs/PyAutoHands/pull/297 at a76fd9b454a8d043935a13d7a074d7fb73cb0487
+- PyAutoFit: https://github.com/PyAutoLabs/PyAutoFit/pull/1659 at 14e244fe3be7f986fde5409cc8d37155bdbfe716
+- PyAutoGalaxy: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/647 at 363b1f3d9bd4ed53aaddc81dc693f3d61b6369c9
+- PyAutoHeart: https://github.com/PyAutoLabs/PyAutoHeart/pull/280 at 8721c2e3e747561d4cf010fb2a1a6e431224cbb4
+
+Heart hosted compatibility37210342253 and unit37210342215 pending. Nerves Python3.12/3.13/no-JAX CI37210297058 passed. Exact authoritative Heart reason remains `release validation FAILED (stage integrate)` (RED60). Prior live human development override remains in force; no release/merge authorized. Anthropic OAuth blocker untouched.

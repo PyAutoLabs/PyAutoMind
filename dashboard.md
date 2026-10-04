@@ -260,7 +260,7 @@ Use the start-dev skill. active/evaluation_grid_cap_preserves_field.md
 
 </details>
 
-<details><summary>📋 <a href="active/restore_dashboard_green.md">Restore complete Heart dashboard health</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/274">issue #274</a> — issued 2026-10-04 — library-dev; approved compatibility extension, PR280 open — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/275">PyAutoHeart#275</a></summary>
+<details><summary>📋 <a href="active/restore_dashboard_green.md">Restore complete Heart dashboard health</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/274">issue #274</a> — issued 2026-10-04 — library-dev; five compatibility PRs open, Array/Lens/CTI full suites pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/275">PyAutoHeart#275</a>, <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/184">PyAutoNerves#184</a>, <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/297">PyAutoHands#297</a>, <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1659">PyAutoFit#1659</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/647">PyAutoGalaxy#647</a>, <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/280">PyAutoHeart#280</a> — ⏳ pending release: PyAutoNerves — ⏳ pending release: PyAutoHands — ⏳ pending release: PyAutoFit — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoHeart</summary>
 
 ```
 Use the start-dev skill. active/restore_dashboard_green.md
@@ -345,6 +345,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoFit**
 
+- [PyAutoFit#1659](https://github.com/PyAutoLabs/PyAutoFit/pull/1659) — `active/restore_dashboard_green.md`
 - [PyAutoFit#1656](https://github.com/PyAutoLabs/PyAutoFit/pull/1656) — `complete/2026/09/ep-moment-projection.md`
 - [PyAutoFit#1652](https://github.com/PyAutoLabs/PyAutoFit/pull/1652) — `complete/2026/09/ep-nautilus-single-pass.md`
 - [PyAutoFit#1655](https://github.com/PyAutoLabs/PyAutoFit/pull/1655) — `complete/2026/09/ep-projection-exception.md`
@@ -353,6 +354,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 **PyAutoGalaxy**
 
 - [PyAutoGalaxy#646](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/646) — `active/evaluation_grid_cap_preserves_field.md`
+- [PyAutoGalaxy#647](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/647) — `active/restore_dashboard_green.md`
 - [PyAutoGalaxy#629](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/629) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - [PyAutoGalaxy#637](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/637) — `complete/2026/09/interferometer-streaming-visibilities.md`
 - [PyAutoGalaxy#633](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/633) — `complete/2026/09/isothermal-convergence-jit.md`
@@ -372,12 +374,14 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoHands**
 
+- [PyAutoHands#297](https://github.com/PyAutoLabs/PyAutoHands/pull/297) — `active/restore_dashboard_green.md`
 - [PyAutoHands#292](https://github.com/PyAutoLabs/PyAutoHands/pull/292) — `complete/2026/09/board-footer-family-fix.md`
 - [PyAutoHands#291](https://github.com/PyAutoLabs/PyAutoHands/pull/291) — `complete/2026/09/eyes-organ-order.md`
 - [PyAutoHands#294](https://github.com/PyAutoLabs/PyAutoHands/pull/294) — `complete/2026/10/pyautopulse-organ-row.md`
 
 **PyAutoHeart**
 
+- [PyAutoHeart#280](https://github.com/PyAutoLabs/PyAutoHeart/pull/280) — `active/restore_dashboard_green.md`
 - [PyAutoHeart#240](https://github.com/PyAutoLabs/PyAutoHeart/pull/240) — `complete/2026/09/autolens-visualization-rebirth.md`
 - [PyAutoHeart#242](https://github.com/PyAutoLabs/PyAutoHeart/pull/242) — `complete/2026/09/board-footer-family-fix.md`
 - [PyAutoHeart#244](https://github.com/PyAutoLabs/PyAutoHeart/pull/244) — `complete/2026/09/eyes-fit-cti-instances.md`
@@ -423,6 +427,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoNerves**
 
+- [PyAutoNerves#184](https://github.com/PyAutoLabs/PyAutoNerves/pull/184) — `active/restore_dashboard_green.md`
 - [PyAutoNerves#177](https://github.com/PyAutoLabs/PyAutoNerves/pull/177) — `complete/2026/09/eyes-organ-order.md`
 - [PyAutoNerves#175](https://github.com/PyAutoLabs/PyAutoNerves/pull/175) — `complete/2026/09/nerves-unused-keys.md`
 - [PyAutoNerves#176](https://github.com/PyAutoLabs/PyAutoNerves/pull/176) — `complete/2026/09/workspace-config-cleanup.md`

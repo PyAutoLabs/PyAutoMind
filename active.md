@@ -5,12 +5,18 @@
 - issued: 2026-10-04
 - prompt: active/restore_dashboard_green.md
 - session: Codex; session ID unavailable
-- status: library-dev; approved compatibility extension, PR280 open
+- status: library-dev; five compatibility PRs open, Array/Lens/CTI full suites pending
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/restore-dashboard-green
 - repos:
   - PyAutoHeart: feature/restore-dashboard-green
   - PyAutoNerves: feature/restore-dashboard-green
   - PyAutoHands: feature/restore-dashboard-green
+  - PyAutoFit: feature/restore-dashboard-green
+  - PyAutoArray: feature/restore-dashboard-green
+  - PyAutoLens: feature/restore-dashboard-green
+  - PyAutoCTI: feature/restore-dashboard-green
+  - PyAutoGalaxy: feature/restore-dashboard-green
+- coordination: Human approved isolated Galaxy dependency-metadata change alongside evaluation-grid-cap-field (merged library PR646; retained workspace release gate); no changes to its files or task.
 - heart-red-override:
   - authorization: I authorize development investigation and repair despite the current RED reason above. Follow start-dev and record the task-specific authorization wherever required.
   - reasons: "release validation FAILED (stage integrate)"
@@ -18,12 +24,22 @@
   - passed-gates: 1222 full Heart tests; YAML/firewall/whitespace; independent Sol CLEAN; exact-wheel candidate 3/3. Diagnostic comparison remains inconclusive, not release validation.
 - authorization: Human approved phased dashboard repair plan on 2026-10-04; tier undeclared, merge via human /prm. Preserve unfinished work and scientific evidence.
 - diagnostic-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/280
-- diagnostic-head: f5bad35e46f0a4b6264f5cd240ee156d28c1f26e
+- diagnostic-head: 8721c2e3e747561d4cf010fb2a1a6e431224cbb4
 - diagnostic-validation: 1222 full Heart tests PASS; YAML/firewall/whitespace PASS; independent Sol CLEAN including41 focused tests; native replay37205459198 reproduces LAPACK deadlock; comparison37206724174 inconclusive (3 controls/3 candidates pass); no release clearance.
 - library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/275
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/184
+- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/184
+- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/297
+- pending-release: PyAutoHands@https://github.com/PyAutoLabs/PyAutoHands/pull/297
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1659
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1659
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/647
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/647
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/280
+- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/280
 - completed-phase: PR279 merged at3d86fd8; complete/2026/10/retired-repo-sidecars.md. Both CI legs passed, issue278 closed.
 - validation: Heart 1181 tests passed; focused 20 passed (4 regression cases failed before fix); independent review CLEAN; Python 3.12/3.13 CI green at 1c9b924.
-- resume: PR280 f5bad35 repairs old JAX bounds to>=0.11.2,<0.12 across3 recipes. Native control replay deadlocked in LAPACK; source removes captured path,3 exact-wheel candidate passes. Same-run comparison honestly inconclusive. Human /prm only; final-head CI37207278755 passed both Python legs; redundant diagnostic37207278790 cancelled (no evidence). Canonical RED60 integratefail and monitoring RED33 preserved/published; timings refreshed, science/worktrees and Anthropic blocker untouched. See final continuation in prompt.
+- resume: Compatibility policy preserves>=0.7,<0.12 excluding0.10.* /0.11.0; consumer guards prevent old-Nerves fallback. Nerves/Hands/Fit/Galaxy/Heart PRs open, independent review CLEAN; Array/Lens/CTI full suites pending before PRs. Heart8721c2e hosted endpoint CI37210342253 and unit CI37210342215 pending. Original release remains RED60; point-source broader diagnostic times out on both endpoints. Human /prm only.
 
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
