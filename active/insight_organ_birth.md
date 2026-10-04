@@ -77,3 +77,27 @@ autolens_workspace_test: red
 Worktree drift: 0 orphan / 0 missing / 4 dirty
 euclid_strong_lens_modeling_pipeline: red
 ```
+
+## Shipping checkpoint — 2026-10-04
+
+- Organ: https://github.com/PyAutoLabs/PyAutoInsight/pull/2; 77 tests,
+  lint and hosted Dashboard Refresh pass. No check-in stamped by refresh.
+- Producer: https://github.com/PyAutoLabs/autolens_inference/pull/18;
+  full hosted lint workflow passes, including scientific simulator/SLaM smoke.
+- Registration: https://github.com/PyAutoLabs/PyAutoMind/pull/471.
+- Integration: Brain #460, hub #28, .github #31, Scientist #41,
+  Cortex #56, Pulse #8, Memory #114, Eyes #15, Ears #8,
+  Heart #273, Hands #296, Nerves #183, Gut #20.
+  All triggered integration PR workflows passed at their published heads.
+- Destination contains eight campaigns and six frozen source task records;
+  Mind source originals remain until the destination is merged.
+- Captured producer evidence: feature/insight-producer commit
+  9c362a7a298238d766f61e812c694813e94830d1 (56 records, 15 parent runs).
+  This is explicitly branch evidence, not a verified main publication.
+- Remaining gated sequence: explicit human merge command under AUTONOMY.md
+  RED development override; merge destination/registration/integrations and
+  producer; hash-checked Mind source cleanup and generated ledger round-trip;
+  verify actual producer publication dispatch, expected receipt revision and
+  published GitHub Pages; then lifecycle close-out. No merge or deployment
+  verification has been claimed. Browser visual check remains outstanding;
+  editable-copy native/fallback behavior is covered by executable Node tests.
