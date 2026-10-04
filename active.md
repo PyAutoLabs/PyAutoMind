@@ -43,23 +43,9 @@
 - issued: 2026-10-04
 - prompt: active/insight_organ_birth.md
 - session: Codex Work
-- status: workspace-dev
+- status: awaiting-input — repository Pages enablement; implementation and source migration merged
 - repos:
-  - PyAutoInsight: feature/insight-control-room
-  - autolens_inference: feature/insight-producer
-  - PyAutoMind: feature/insight-integration
-  - PyAutoBrain: feature/insight-integration
-  - PyAutoHeart: feature/insight-integration
-  - PyAutoHands: feature/insight-integration
-  - PyAutoCortex: feature/insight-integration
-  - PyAutoPulse: feature/insight-integration
-  - PyAutoMemory: feature/insight-integration
-  - PyAutoEyes: feature/insight-integration
-  - PyAutoEars: feature/insight-integration
-  - PyAutoNerves: feature/insight-integration
-  - PyAutoGut: feature/insight-integration
-  - PyAutoScientist: feature/insight-integration
-  - pyautolabs.github.io: feature/insight-integration
-  - .github: feature/insight-integration
-- resume: Producer PR18; Brain460; hub28; .github31; Scientist41; Cortex56; Pulse8; Memory114; Eyes15; Ears8; Heart273; Hands296; Nerves183; Gut20. Insight control-room PR being published. Wait human /prm on green; source cleanup only after Insight destination merges. No compute launched.
+  - PyAutoInsight: feature/insight-migration-landed
+  - PyAutoMind: codex/insight-deployment-checkpoint
+- resume: All 16 initial rollout PRs and Mind#472 source cleanup merged. Insight#3 archives completed docs task and records migration evidence. Producer publication37187664457 and dispatched receiver37187697228 passed; receipt source26778b158538711a5a79acbadb0699a103446bd7, 56 records, no cache. Pages needs Settings → Pages → Source GitHub Actions (workflow token cannot create site). After enablement rerun Pages, verify live page/feed/copy behaviour, then close Insight#1 and lifecycle. Full gates retained; no compute launched.
 - heart-red-override: Human 2026-10-04 "I authorize on red and repo made, continue"; applies to Insight#1 development; full test/CI and merge gates retained. Exact published reason set in active/insight_organ_birth.md.
