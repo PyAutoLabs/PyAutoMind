@@ -52,7 +52,7 @@ anything you could not verify.
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 20
+**Highest priority** (filed as `high`) — showing 12 of 21
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -90,6 +90,14 @@ Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_foreve
 
 ```
 Use the start-dev skill. draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautoheart/unit_timing_distinct_baseline.md">Select a distinct prior run for unit timing comparisons</a> — pyautoheart · small · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautoheart/unit_timing_distinct_baseline.md
 ```
 
 </details>
@@ -142,15 +150,7 @@ Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speedin
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> — autoarray · large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md
-```
-
-</details>
-
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 113
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 112
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -260,7 +260,7 @@ Use the start-dev skill. active/evaluation_grid_cap_preserves_field.md
 
 </details>
 
-<details><summary>📋 <a href="active/restore_dashboard_green.md">Restore complete Heart dashboard health</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/274">issue #274</a> — issued 2026-10-04 — library-shipped, awaiting-merge; dashboard-repair-in-progress — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/275">PyAutoHeart#275</a></summary>
+<details><summary>📋 <a href="active/restore_dashboard_green.md">Restore complete Heart dashboard health</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/274">issue #274</a> — issued 2026-10-04 — dashboard-repair-in-progress — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/275">PyAutoHeart#275</a></summary>
 
 ```
 Use the start-dev skill. active/restore_dashboard_green.md
@@ -384,6 +384,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoHeart#243](https://github.com/PyAutoLabs/PyAutoHeart/pull/243) — `complete/2026/09/eyes-galaxy-instance.md`
 - [PyAutoHeart#241](https://github.com/PyAutoLabs/PyAutoHeart/pull/241) — `complete/2026/09/eyes-organ-order.md`
 - [PyAutoHeart#254](https://github.com/PyAutoLabs/PyAutoHeart/pull/254) — `complete/2026/10/compact-dashboard-rows.md`
+- [PyAutoHeart#275](https://github.com/PyAutoLabs/PyAutoHeart/pull/275) — `complete/2026/10/heart-dashboard-collectors.md`
 - [PyAutoHeart#268](https://github.com/PyAutoLabs/PyAutoHeart/pull/268) — `complete/2026/10/heart-monitoring-coverage.md`
 - [PyAutoHeart#271](https://github.com/PyAutoLabs/PyAutoHeart/pull/271) — `complete/2026/10/heart-publication-coverage.md`
 - [PyAutoHeart#256](https://github.com/PyAutoLabs/PyAutoHeart/pull/256) — `complete/2026/10/heart-score-resusitate.md`
@@ -696,6 +697,14 @@ Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_foreve
 
 ```
 Use the start-dev skill. draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautoheart/unit_timing_distinct_baseline.md">Select a distinct prior run for unit timing comparisons</a> — pyautoheart · small · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautoheart/unit_timing_distinct_baseline.md
 ```
 
 </details>
@@ -1032,14 +1041,6 @@ Use the start-dev skill. draft/bug/howtofit/tutorial_5_ep_shared_centre_never_as
 
 ```
 Use the start-dev skill. draft/bug/pyautobrain/sizing_faculty_none_rule_keyword_false_judge_triage.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautoheart/manifest_drift_parser_drops_suffixed_check_legs.md">Heart's manifest_drift parser silently drops any check leg with a suffix after…</a> — pyautoheart · small · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautoheart/manifest_drift_parser_drops_suffixed_check_legs.md
 ```
 
 </details>
@@ -2279,40 +2280,6 @@ Contract (the `start-bundle` skill is the full body):
 </details>
 
 <details>
-<summary><b>pyautoheart — bundle 1</b> — 4 task(s) · 6 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the judgment tier for the PyAutoMind bundle 'pyautoheart — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md
-- draft/bug/pyautoheart/heart_smoke_runner_deletes_the_tracked_output.md
-- draft/bug/pyautoheart/manifest_drift_parser_drops_suffixed_check_legs.md
-- draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md
-
-Contract (the `start-bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Use the start-dev skill for EACH member prompt: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run the start-library skill (or the start-workspace skill) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
-5. Ship each member on its own: the ship-library skill or the ship-workspace skill, ONE PR per task, so the prm skill closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Difficulty | Priority | Status |
-|--------|------------|----------|--------|
-| <a href="draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md">Local smoke env creation fails: smoke_install.sh flat pip chain vs…</a> | medium | high | formalised |
-| <a href="draft/bug/pyautoheart/heart_smoke_runner_deletes_the_tracked_output.md">Heart smoke runner deletes the tracked output/.gitignore when wiping…</a> | small | medium | formalised |
-| <a href="draft/bug/pyautoheart/manifest_drift_parser_drops_suffixed_check_legs.md">Heart's manifest_drift parser silently drops any check leg with a…</a> | small | normal | formalised |
-| <a href="draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md">release-integrate: analyze-side foreign-path filter and a…</a> | medium | low | formalised |
-
-</details>
-
-<details>
 <summary><b>euclid</b> — 4 task(s) · 5 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: catalogue, docs, euclid, jax, latent</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -2343,6 +2310,38 @@ Contract (the `start-bundle` skill is the full body):
 | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> | euclid | small | medium | draft |
 | <a href="draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md"><code>vis_lp</code> passes <code>batch_size=50</code> to <code>af.Nautilus</code>, which has no such…</a> | euclid | small | medium | formalised |
 | <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of…</a> | euclid | low | low | draft |
+
+</details>
+
+<details>
+<summary><b>pyautoheart — bundle 1</b> — 3 task(s) · 5 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the judgment tier for the PyAutoMind bundle 'pyautoheart — bundle 1' — 3 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md
+- draft/bug/pyautoheart/heart_smoke_runner_deletes_the_tracked_output.md
+- draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md
+
+Contract (the `start-bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Use the start-dev skill for EACH member prompt: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run the start-library skill (or the start-workspace skill) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
+5. Ship each member on its own: the ship-library skill or the ship-workspace skill, ONE PR per task, so the prm skill closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md">Local smoke env creation fails: smoke_install.sh flat pip chain vs…</a> | medium | high | formalised |
+| <a href="draft/bug/pyautoheart/heart_smoke_runner_deletes_the_tracked_output.md">Heart smoke runner deletes the tracked output/.gitignore when wiping…</a> | small | medium | formalised |
+| <a href="draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md">release-integrate: analyze-side foreign-path filter and a…</a> | medium | low | formalised |
 
 </details>
 
@@ -3027,7 +3026,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 </details>
 
-59 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+60 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3064,6 +3063,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 - `draft/bug/priors/13_collapse_prior_and_message.md`
 - `draft/bug/priors/14_replace_transform_stack_with_bijectors.md`
 - `draft/bug/priors/z_features.md`
+- `draft/bug/pyautoheart/unit_timing_distinct_baseline.md`
 - `draft/refactor/autogalaxy/critical_curves_dispatch_cluster.md`
 - `draft/refactor/workspaces/abell_1201_local_cleanup.md`
 - `draft/docs/autolens/split_lensing_regimes.md`
@@ -3071,8 +3071,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 - `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
 - `draft/test/workspaces/mesh_magnification_correctness.md`
 - `draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md`
-- `draft/test/workspaces/restore_workspace_test_likelihood_baselines.md`
-- _… and 19 more_
+- _… and 20 more_
 
 </details>
 

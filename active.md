@@ -1,18 +1,15 @@
 # Active Tasks
 
-## heart-dashboard-repair
+## heart-dashboard-remaining
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/274
 - issued: 2026-10-04
 - prompt: active/restore_dashboard_green.md
 - session: Codex; session ID unavailable
-- status: library-shipped, awaiting-merge; dashboard-repair-in-progress
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/heart-dashboard-repair
-- repos:
-  - PyAutoHeart: feature/heart-dashboard-repair
+- status: dashboard-repair-in-progress
 - authorization: Human approved phased dashboard repair plan on 2026-10-04; tier undeclared, merge via human /prm. Preserve unfinished work and scientific evidence.
 - library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/275
 - validation: Heart 1181 tests passed; focused 20 passed (4 regression cases failed before fix); independent review CLEAN; Python 3.12/3.13 CI green at 1c9b924.
-- resume: Human merge approval requested for #275; not yet authorized. TestPyPI rehearsal Hands#37198725621 running, workspace smoke Heart#37198914051 queued. After rehearsal passes download its artifact, capture exact library heads and run Brain release validate --stage3-plan, then ingest. Preserve dirty science and retained worktrees. Full dashboard remains RED/incomplete; see active prompt for detailed findings.
+- resume: Human /prm merged #275 at 9d7d590; collector phase recorded in complete/2026/10/heart-dashboard-collectors.md, Heart claim released. Rehearsal Hands#37198725621 passed; artifacts and exact source SHAs in /tmp/heart-validation-37198725621; release integration dispatched. Workspace smoke Heart#37198914051 queued. Continue baseline-self-comparison repair as separate task; preserve dirty science/retained worktrees. Mind digest fails with OAuth organization policy HTTP 403.
 
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
