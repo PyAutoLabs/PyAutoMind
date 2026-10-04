@@ -79,3 +79,14 @@
 - repos:
   - autolens_profiling: feature/point-source-wiki-reconcile
 - coordination: same session as interferometer-streaming-scaling (#368) and interferometer-decision-matrix-last-cell (#369), human-approved priority order 2026-10-04. Touches only the three point-source campaign pages, their wiki/index.md rows and results/notes/point_source_cpu_campaign.md.
+
+## runtime-single-jit-median
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/371
+- issued: 2026-10-04
+- session: claude-code subagent (Opus 5.5), https://claude.ai/code/session_01S11WE9oj7Mvkfhc4EPBnyN
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/runtime-single-jit-median
+- prompt: active/runtime_cell_single_jit_gpu_warmup_option_a.md
+- repos:
+  - autolens_profiling: feature/runtime-single-jit-median
+- coordination: same session as #368/#369/#370, human-approved priority order 2026-10-04 (option (a) decided). Touches scripts/misc/likelihood_breakdown/timing.py, the source-plane runtime cell, build_dashboard.py, dashboard/, tests and the source-plane ledger caveat.
