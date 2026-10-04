@@ -85,3 +85,42 @@ write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
   - autolens_assistant
 - resume: Plan approved and issue created; implementation not started. Reuse approved issue plan, survey current claims, and resume through start_workspace. No branch or PR created for this member.
 - scope: Existing Colab skills/setup/Ring notebook only; extra Teacher/SLACS notebook twins deferred.
+
+## heart-dashboard-remaining
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/274
+- parked: 2026-10-04 — human requested “wrap up well contnue heart work elsehwere another time”.
+- repos-none-claimed: no active repo claims; all eight compatibility branches are merged.
+- issued: 2026-10-04
+- prompt: active/restore_dashboard_green.md
+- status: parked by human; compatibility repair merged; remaining Heart work deferred to another chat
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/restore-dashboard-green
+- coordination: Human approved isolated Galaxy dependency-metadata change alongside evaluation-grid-cap-field (merged library PR646; retained workspace release gate); no changes to its files or task.
+- heart-red-override:
+  - authorization: I authorize development investigation and repair despite the current RED reason above. Follow start-dev and record the task-specific authorization wherever required.
+  - reasons: "release validation FAILED (stage integrate)"
+  - scope: Heart dashboard repair #274 and bounded timeout investigation; applicable tests and independent review remain required; human /prm only.
+  - passed-gates: 9255 full-suite tests (2 skips,5 xfails) across8 repos; independent Sol CLEAN; 25 resolver cases and fresh normal resolution PASS; CPU/CUDA endpoint witnesses PASS; hosted compatibility37210342253 and Heart unit37210342215 PASS at8721c2e. Original comparison inconclusive; broader point-gradient timeout both versions; not release clearance.
+- authorization: Human approved phased dashboard repair plan on 2026-10-04; tier undeclared, merge via human /prm. Preserve unfinished work and scientific evidence.
+- diagnostic-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/280
+- diagnostic-head: 8721c2e3e747561d4cf010fb2a1a6e431224cbb4
+- diagnostic-validation: 1222 Heart tests; independent review CLEAN; native LAPACK capture37205459198; original comparison37206724174 remains inconclusive; final-head unit37210342215 and two-endpoint compatibility37210342253 PASS. Original failed release preserved.
+- completed-phase: PR279 merged at3d86fd8; complete/2026/10/retired-repo-sidecars.md. Both CI legs passed, issue278 closed.
+- validation: Heart1222/Nerves237/Hands472/Fit2959/Array1959/Galaxy1315/Lens820/CTI271 tests PASS; independent Sol CLEAN; package/CPU/CUDA/hosted endpoint checks PASS. All28 current-head CI jobs passed before merges.
+- resume: All8 PRs merged after28/28 exact-head CI jobs passed; freeze clear. Completion phase record complete/2026/10/jax-lapack-compatibility-repair.md. Protected Nerves must publish first; release not authorized. Keep #274 and retained worktree open for remaining dashboard scope, original validation failure and point-gradient timeout. Anthropic blocker handed to separate chat at human request; untouched here.
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/184
+- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/184
+- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/297
+- pending-release: PyAutoHands@https://github.com/PyAutoLabs/PyAutoHands/pull/297
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1659
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1659
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/647
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/647
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/280
+- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/280
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/612
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/612
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/766
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/766
+- library-pr: https://github.com/PyAutoLabs/PyAutoCTI/pull/112
+- pending-release: PyAutoCTI@https://github.com/PyAutoLabs/PyAutoCTI/pull/112
+- retention: Keep the existing worktree and all science/dataset/diagnostic products. Do not remove or reset it as close-out cleanup.

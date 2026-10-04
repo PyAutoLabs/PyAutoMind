@@ -270,3 +270,10 @@ Original release validation remains failed. Prior interleaved comparison remains
 Canonical clean main checkouts fast-forwarded; retained task worktree/data and unrelated dirty science untouched. No Anthropic auth changes, release/rehearsal, upstream report, watcher or cap increase. #274 and active prompt retained for remaining scope; do not close whole umbrella or delete retained worktree.
 
 Evidence: Mind tmp/heart-timeout-20261004/prm-audit.json, merged-prs.json, full-suites/, hosted-37210342253/; Heart committed diagnostics. User requested an Anthropic-repair prompt for a separate chat; handoff supplied, no auth work performed here.
+
+
+## Session closed / remaining scope parked — 2026-10-04
+
+Human requested `$prm and wrap up well contnue heart work elsehwere another time`. Reverified all eight compatibility PRs are MERGED. The shipped phase is recorded at complete/2026/10/jax-lapack-compatibility-repair.md. Moved the remaining umbrella entry to parked.md and released all active repo claims. #274 remains open for unfinished Heart scope. Retain the existing worktree, all diagnostic evidence and science/data products; no cleanup deletion, watcher or further experiments.
+
+Last published evidence: monitoring RED33/incomplete, release RED60 with `release validation FAILED (stage integrate)`. Next chat: read this continuation and the completed compatibility phase, refresh authoritative Heart evidence, and plan post-merge validation through the Release Agent. Publish protected Nerves before consumer wheels; no release/rehearsal is authorized by this wrap-up. Broader point-gradient timeout, historical cancelled-run evidence gaps, timing/no-run findings and retained science records remain unresolved. Anthropic repair was handed off separately and untouched here.
