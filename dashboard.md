@@ -268,7 +268,7 @@ Use the start-dev skill. active/restore_dashboard_green.md
 
 </details>
 
-<details><summary>📋 <a href="active/retired_repository_sidecars.md">Exclude retired repository sidecars from current Heart observations</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/278">issue #278</a> — issued 2026-10-04 — library-dev, awaiting Heart RED shipping authorization</summary>
+<details><summary>📋 <a href="active/retired_repository_sidecars.md">Exclude retired repository sidecars from current Heart observations</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/278">issue #278</a> — issued 2026-10-04 — library-dev</summary>
 
 ```
 Use the start-dev skill. active/retired_repository_sidecars.md

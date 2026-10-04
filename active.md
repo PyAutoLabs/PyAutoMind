@@ -5,13 +5,18 @@
 - issued: 2026-10-04
 - prompt: active/retired_repository_sidecars.md
 - session: Codex; session ID unavailable
-- status: library-dev, awaiting Heart RED shipping authorization
+- status: library-dev
 - validation: 22 focused / 1200 full tests pass; independent review CLEAN; copied-cache replay excludes only PyAutoConf and PyAutoBuild, preserving all 150 files and configured/global observations.
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/retired-repo-sidecars
 - repos:
   - PyAutoHeart: feature/retired-repo-sidecars
 - authorization: Approved dashboard collector-repair plan and explicit instruction to continue Heart work. Human /prm merge.
-- resume: Implementation reviewed and tested, uncommitted in task worktree. Shipping held for current human RED override: release validation FAILED (stage integrate). Issue contains evidence; draft PR body /tmp/heart-retired-pr.md. Parent #274.
+- heart-red-override:
+  - authorization: Human “I authorise both need help with latter if its doable” explicitly authorized #278 shipping despite RED and timeout work. Later “dont do thr anthropic stuff do whatever work you can without it” withdraws only Anthropic migration; leave credentials/workflow untouched.
+  - reasons: release validation FAILED (stage integrate)
+  - gates: 22 focused / 1200 full tests PASS; independent review CLEAN; all 150 cache files preserved in isolated replay; no workspace API impact; separate main smoke run 37198914051 passed.
+  - scope: commit/push/pending-release PR only; human merge required; no release or failed-check bypass.
+- resume: Ship tested #278 patch under recorded RED override, then continue #274 timeout diagnosis. Anthropic work explicitly excluded.
 
 ## heart-dashboard-remaining
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/274
