@@ -140,7 +140,7 @@ def _repo_resolver(root):
 
 ORGANS = frozenset({"PyAutoBrain", "PyAutoMind", "PyAutoCortex",
                     "PyAutoMemory", "PyAutoEyes", "PyAutoEars", "PyAutoHeart",
-                    "PyAutoHands", "PyAutoPulse", "PyAutoNerves",
+                    "PyAutoHands", "PyAutoPulse", "PyAutoInsight", "PyAutoNerves",
                     "PyAutoGut", "PyAutoScientist"})
 
 
