@@ -268,7 +268,7 @@ Use the start-dev skill. active/interferometer_streaming_scaling.md
 
 </details>
 
-<details><summary>📋 <a href="active/point_image_pair_all_forward_grad_nan.md">Forward-mode gradient is NaN for FitPositionsImagePairAll(Solved) — released default gradient_mode="forward"</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/767">issue #767</a> — issued 2026-10-04 — issued</summary>
+<details><summary>📋 <a href="active/point_image_pair_all_forward_grad_nan.md">Forward-mode gradient is NaN for FitPositionsImagePairAll(Solved) — released default gradient_mode="forward"</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/767">issue #767</a> — issued 2026-10-04 — library-dev</summary>
 
 ```
 Use the start-dev skill. active/point_image_pair_all_forward_grad_nan.md
