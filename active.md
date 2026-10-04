@@ -68,3 +68,14 @@
 - repos:
   - autolens_profiling: feature/interferometer-decision-matrix-last-cell
 - coordination: same session as interferometer-streaming-scaling (#368) and the human-approved priority order (2026-10-04). Touches only the decision-matrix note, results/breakdown/interferometer/alma_high/, wiki/campaigns/interferometer_likelihood.md and the existing interferometer wiki/index.md row; disjoint from #368's paths.
+
+## point-source-wiki-reconcile
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/370
+- issued: 2026-10-04
+- session: claude-code subagent (Opus 5.5), https://claude.ai/code/session_01S11WE9oj7Mvkfhc4EPBnyN
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/point-source-wiki-reconcile
+- prompt: active/point_source_wiki_reconcile_cpu_completion.md
+- repos:
+  - autolens_profiling: feature/point-source-wiki-reconcile
+- coordination: same session as interferometer-streaming-scaling (#368) and interferometer-decision-matrix-last-cell (#369), human-approved priority order 2026-10-04. Touches only the three point-source campaign pages, their wiki/index.md rows and results/notes/point_source_cpu_campaign.md.
