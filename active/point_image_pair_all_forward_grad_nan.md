@@ -13,6 +13,8 @@ Autonomy: supervised
 Priority: high
 Status: formalised
 Filed: 2026-09-28
+Issued: 2026-10-04
+Issue: https://github.com/PyAutoLabs/PyAutoLens/issues/767
 Found-by: autolens_profiling#350 (point-source A100 phase 0+1, RAL job 366916), independently reproduced 2026-09-28
 
 ## Symptom

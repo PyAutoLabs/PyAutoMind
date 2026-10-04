@@ -1,5 +1,14 @@
 # Active Tasks
 
+## point-image-pair-all-forward-grad-nan
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/767
+- issued: 2026-10-04
+- prompt: active/point_image_pair_all_forward_grad_nan.md
+- status: issued
+- repos:
+  - PyAutoLens: feature/pair-all-forward-grad-nan (not claimed)
+- summary: Forward-mode (default gradient_mode) gradient is NaN for FitPositionsImagePairAll(Solved) because inf-sentinel padded model positions give inf*0 tangents in square_distance; fix with double-where in pair_all.py. Witness reproduced on 2026.10.4.1+3 CPU.
+
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
 - issued: 2026-09-22
