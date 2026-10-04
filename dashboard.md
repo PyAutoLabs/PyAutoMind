@@ -42,17 +42,17 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 3 |
+| [In flight](#in-flight) (`active/`) | 4 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 6 |
 | [Planned](#planned) (`planned.md`) | 7 |
-| [Backlog](#backlog) (`draft/`) | 227 |
+| [Backlog](#backlog) (`draft/`) | 226 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 21
+**Highest priority** (filed as `high`) — showing 12 of 20
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -90,14 +90,6 @@ Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_foreve
 
 ```
 Use the start-dev skill. draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautoheart/unit_timing_distinct_baseline.md">Select a distinct prior run for unit timing comparisons</a> — pyautoheart · small · human-required · high</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautoheart/unit_timing_distinct_baseline.md
 ```
 
 </details>
@@ -146,6 +138,14 @@ Use the start-dev skill. draft/bug/pyautoheart/smoke_install_flat_pip_chain_brea
 
 ```
 Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> — autoarray · large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md
 ```
 
 </details>
@@ -264,6 +264,14 @@ Use the start-dev skill. active/evaluation_grid_cap_preserves_field.md
 
 ```
 Use the start-dev skill. active/restore_dashboard_green.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/unit_timing_distinct_baseline.md">Select a distinct prior run for unit timing comparisons</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/276">issue #276</a> — issued 2026-10-04 — library-dev</summary>
+
+```
+Use the start-dev skill. active/unit_timing_distinct_baseline.md
 ```
 
 </details>
@@ -656,10 +664,10 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ## Backlog
 
-**227** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **43** of them belong to an epic and are listed only under [Epics](#epics) below.
+**226** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **43** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 75</summary>
+<summary><b>bug</b> — 74</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -697,14 +705,6 @@ Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_foreve
 
 ```
 Use the start-dev skill. draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautoheart/unit_timing_distinct_baseline.md">Select a distinct prior run for unit timing comparisons</a> — pyautoheart · small · human-required · high</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautoheart/unit_timing_distinct_baseline.md
 ```
 
 </details>
@@ -2447,6 +2447,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-04 | issued | <a href="active/unit_timing_distinct_baseline.md">Select a distinct prior run for unit timing comparisons</a> |
 | 2026-10-04 | issued | <a href="active/restore_dashboard_green.md">Restore complete Heart dashboard health</a> |
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
 | 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
@@ -2456,12 +2457,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
-| 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
 | 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
 | 2026-09-29 | filed | <a href="draft/maintenance/pyautomind/session_start_hook_copies_regen.md">Regenerate the 28 drifted <code>.claude/hooks/session-start.sh</code> copies…</a> |
@@ -2471,12 +2472,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/power_law_multipole_m1_singular_at_isothermal_slope.md">PowerLawMultipole with m=1 returns -inf / NaN deflections at slope…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
-| 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
 | 2026-09-26 | filed | <a href="draft/refactor/workspaces/abell_1201_local_cleanup.md">Repo cleanup: retire the Abell 1201 worktree and local raw data</a> |
 | 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
 | 2026-09-25 | filed | <a href="draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md">Keep caches off <code>$HOME</code> on HPC — phase 2 remainder: euclid pipeline…</a> |
@@ -2486,12 +2487,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-19 | issued | <a href="parked.md#catalogue-inspection-before-vis-pix">catalogue-inspection-before-vis-pix</a> |
 | 2026-09-18 | parked | <a href="parked.md#fixed-light-numba-s7">fixed-light-numba-s7</a> |
 | 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
-| 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> |
 | 2026-09-18 | filed | <a href="draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md">The latent smoke's empty-block assertion names one cause…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its…</a> |
@@ -2501,12 +2502,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> |
 | 2026-09-17 | filed | <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads…</a> |
-| 2026-09-17 | filed | <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-17 | filed | <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autofit/ep_analysis_level_compile_cache.md">EP: cache the compiled JAX likelihood on the Analysis across factor…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> |
@@ -2516,7 +2517,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-16 | filed | <a href="draft/feature/autolens/coolest_pixel_grid_export.md">COOLEST: export MGE lens light and pixelized sources as pixel grids</a> |
 | 2026-09-16 | filed | <a href="draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md">Adaptive Delaunay mesh places two mesh pixels 0.001" apart — a…</a> |
 | 2026-09-15 | filed | <a href="draft/maintenance/howtofit/minimum_library_version_stale.md">The workspace staleness warning keys off a value documented never to…</a> |
-| 2026-09-15 | filed | <a href="draft/feature/pyautoheart/howto_real_settings_nightly.md">Nightly run of one HowTo tutorial per chapter at real settings</a> |
 
 </details>
 
@@ -3026,7 +3026,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 </details>
 
-60 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+59 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3063,7 +3063,6 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 - `draft/bug/priors/13_collapse_prior_and_message.md`
 - `draft/bug/priors/14_replace_transform_stack_with_bijectors.md`
 - `draft/bug/priors/z_features.md`
-- `draft/bug/pyautoheart/unit_timing_distinct_baseline.md`
 - `draft/refactor/autogalaxy/critical_curves_dispatch_cluster.md`
 - `draft/refactor/workspaces/abell_1201_local_cleanup.md`
 - `draft/docs/autolens/split_lensing_regimes.md`
@@ -3071,7 +3070,8 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 - `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
 - `draft/test/workspaces/mesh_magnification_correctness.md`
 - `draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md`
-- _… and 20 more_
+- `draft/test/workspaces/restore_workspace_test_likelihood_baselines.md`
+- _… and 19 more_
 
 </details>
 
