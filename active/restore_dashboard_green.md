@@ -83,3 +83,9 @@ Human approved the phased implementation plan on 2026-10-04: "I approve of the p
 Human “I authorise both need help with latter if its doable” authorized #278 development shipping despite RED and timeout work. Subsequent “Hmmm dont do thr anthropic stuff do whatever work you can without it” withdraws the Anthropic migration only; credentials and workflow remain untouched. #278 shipped as Heart PR #279 (ba9d2f3); human /prm remains required.
 
 Started existing autolens_workspace_test retime workflow 37203338570 for multi_dataset/jax_likelihood/rectangular_rtu.py, 3 repeats per Python leg,300s cap,native stack dump after120s. This is smoke-profile/current-source diagnostic evidence, not the TestPyPI release environment and cannot clear release validation. Prior causal research record is complete/2026/08/xla-cpu-eigen-pool-deadlock.md; do not re-open its settled decision against filing upstream.
+
+### Focused timeout evidence
+
+- Re-time 37203338570 completed all six repetitions under the default smoke profile: Python3.12 15.9/8.2/8.3s; Python3.13 15.6/8.0/7.8s. Harness verdict NEITHER on both; no native dump triggered. This does not clear the failed TestPyPI release.
+- Actual build_env_for_script resolution for rectangular_rtu.py shows only PYAUTO_TEST_MODE (2 vs0) and PYAUTO_FAST_PLOTS (1 vs0) differ; the script declaration already enables JAX/full datasets. Follow-up diagnostic 37203617994 uses exactly those two release overlays,3 repeats per leg,300s cap,native dump120s. Preceding draft dispatch37203585601 was cancelled before measurement to use the exact resolved overlay; it is not diagnostic evidence.
+- PR #279 Python3.12/3.13 checks passed. Explicit human /prm requested separately under RED override; no merge grant yet.
