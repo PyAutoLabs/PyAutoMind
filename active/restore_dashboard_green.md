@@ -60,3 +60,13 @@ Tier: undeclared — merge mode: human /prm.
 Follow-up 2026-10-04: user explicitly requested getting new repos such as PyAutoInsight and PyAutoPulse. Cloned PyAutoInsight and PyAutoEars into their canonical organs/ paths; fast-forwarded clean PyAutoPulse main by ten commits to f180151. All three checkouts are clean and match origin/main. Broader source-repair plan approval is still pending.
 
 Human approved the phased implementation plan on 2026-10-04: "I approve of the plan". Proceed with bounded repairs and validation; preserve unfinished work. Tier remains undeclared, with human /prm for merges. Register the issue and worktree before source repairs.
+
+### 2026-10-04 generated drift cleared
+
+- Continued on explicit user request: "Do dashboard repair and continue heart work".
+- Fast-forwarded Eyes, both assistants, both profiling/inference projects and the Lens developer workspace after checking upstream changes did not overlap any local files. Verified all 128 local files byte-for-byte unchanged; receipt `/tmp/heart-preserving-sync.json`.
+- Cortex upstream overlapped only generated dashboard.md/dashboard.html/state.json. Backed up every local changed file with SHA256 receipt in `/tmp/heart-cortex-before-sync`, restored only those three generated files, fast-forwarded main, and regenerated the dashboard using `pyauto-brain cortex dashboard --apply`. Science records, projects.yaml and checkin.yaml stayed byte-identical. Local science remains uncommitted intentionally.
+- `repos_sync.py --check` now passes all 20 checks: all 46 declared checkouts present, all generated hooks and organism maps current. No new source implementation or PR was required.
+- Heart after manifest sync: monitoring RED 46/100; release readiness STALE 85, sole release reason "release validation incomplete: no rehearsal for current source". Integration run 37199991757 still running at checkpoint; do not dispatch another.
+- PyAutoGalaxy CI was showing an old September observation despite passing current main tests. Exact live API payload and collector replay confirm current main success; refreshed CI via its owning collector without changing policy or injecting evidence.
+- Asked human to restore Anthropic OAuth credential/organization access for Mind digest's oauth_not_allowed_for_organization failure. No messaging workflow rerun authorized.
