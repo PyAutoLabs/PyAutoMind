@@ -6,6 +6,11 @@ when the task needs them. Read [README.md](README.md) for the public overview.
 
 ## Where work lives
 
+- Inference campaign intent and pending domain tasks live in **PyAutoInsight**
+  (`campaigns.yaml`, `tasks/`, `CHECKIN.md`). Mind retains bounded implementation
+  issue/PR lifecycle and claims. See `docs/insight-task-migration.md`; source
+  removal follows the destination merge, never precedes it.
+
 - Profiling campaign intent and pending tasks live in **PyAutoPulse**
   (`campaigns.yaml`, `tasks/`, `CHECKIN.md`). Use its single-chat check-in first.
   Mind holds bounded implementation phases and repository claims, linking the

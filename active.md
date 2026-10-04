@@ -37,3 +37,29 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/343
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/365
 - final-validation: Galaxy 1315 passed; focused 49 passed; full companion smoke 33/33 in 501.91s (changed example 2.2s). Galaxy exact-head CI all green; new companion CI pending. Wiki/results-layout and whitespace checks pass. No raw phase-3a evidence changed.
+
+## insight-organ-birth
+- issue: https://github.com/PyAutoLabs/PyAutoInsight/issues/1
+- issued: 2026-10-04
+- prompt: active/insight_organ_birth.md
+- session: Codex Work
+- status: workspace-dev
+- repos:
+  - PyAutoInsight: feature/insight-control-room
+  - autolens_inference: feature/insight-producer
+  - PyAutoMind: feature/insight-integration
+  - PyAutoBrain: feature/insight-integration
+  - PyAutoHeart: feature/insight-integration
+  - PyAutoHands: feature/insight-integration
+  - PyAutoCortex: feature/insight-integration
+  - PyAutoPulse: feature/insight-integration
+  - PyAutoMemory: feature/insight-integration
+  - PyAutoEyes: feature/insight-integration
+  - PyAutoEars: feature/insight-integration
+  - PyAutoNerves: feature/insight-integration
+  - PyAutoGut: feature/insight-integration
+  - PyAutoScientist: feature/insight-integration
+  - pyautolabs.github.io: feature/insight-integration
+  - .github: feature/insight-integration
+- resume: Producer PR18; Brain460; hub28; .github31; Scientist41; Cortex56; Pulse8; Memory114; Eyes15; Ears8; Heart273; Hands296; Nerves183; Gut20. Insight control-room PR being published. Wait human /prm on green; source cleanup only after Insight destination merges. No compute launched.
+- heart-red-override: Human 2026-10-04 "I authorize on red and repo made, continue"; applies to Insight#1 development; full test/CI and merge gates retained. Exact published reason set in active/insight_organ_birth.md.
