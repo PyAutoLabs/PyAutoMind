@@ -77,3 +77,9 @@ Human approved the phased implementation plan on 2026-10-04: "I approve of the p
 - Authoritative canonical ingest completed with RED60, exact reason `release validation FAILED (stage integrate)`. Artifacts `/tmp/heart-validation-37198725621`, failed leg JSON `/tmp/heart-failed-multidataset`, logs `/tmp/heart-integration-failure.log`. Heart published current real evidence; monitoring RED33/100.
 - Issue #278 fixes retired-repo cache leakage (PyAutoConf and PyAutoBuild) through a valid current Heart roster. Task branch feature/retired-repo-sidecars has an uncommitted three-file patch; 22 focused and 1200 full tests pass, independent review CLEAN. Copied-cache replay preserves every one of 150 sidecar files and all configured/global evidence. Shipping authorization under current RED requested; no grant received yet. Do not publish or claim the patch live until authorized.
 - User OAuth-access question remains pending. Existing science files and retained worktrees stay intact.
+
+### Authorization and diagnostic continuation
+
+Human “I authorise both need help with latter if its doable” authorized #278 development shipping despite RED and timeout work. Subsequent “Hmmm dont do thr anthropic stuff do whatever work you can without it” withdraws the Anthropic migration only; credentials and workflow remain untouched. #278 shipped as Heart PR #279 (ba9d2f3); human /prm remains required.
+
+Started existing autolens_workspace_test retime workflow 37203338570 for multi_dataset/jax_likelihood/rectangular_rtu.py, 3 repeats per Python leg,300s cap,native stack dump after120s. This is smoke-profile/current-source diagnostic evidence, not the TestPyPI release environment and cannot clear release validation. Prior causal research record is complete/2026/08/xla-cpu-eigen-pool-deadlock.md; do not re-open its settled decision against filing upstream.

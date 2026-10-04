@@ -268,7 +268,7 @@ Use the start-dev skill. active/restore_dashboard_green.md
 
 </details>
 
-<details><summary>📋 <a href="active/retired_repository_sidecars.md">Exclude retired repository sidecars from current Heart observations</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/278">issue #278</a> — issued 2026-10-04 — library-dev</summary>
+<details><summary>📋 <a href="active/retired_repository_sidecars.md">Exclude retired repository sidecars from current Heart observations</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/278">issue #278</a> — issued 2026-10-04 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/279">PyAutoHeart#279</a> — ⏳ pending release: PyAutoHeart</summary>
 
 ```
 Use the start-dev skill. active/retired_repository_sidecars.md
@@ -386,6 +386,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoHeart**
 
+- [PyAutoHeart#279](https://github.com/PyAutoLabs/PyAutoHeart/pull/279) — `active/retired_repository_sidecars.md`
 - [PyAutoHeart#240](https://github.com/PyAutoLabs/PyAutoHeart/pull/240) — `complete/2026/09/autolens-visualization-rebirth.md`
 - [PyAutoHeart#242](https://github.com/PyAutoLabs/PyAutoHeart/pull/242) — `complete/2026/09/board-footer-family-fix.md`
 - [PyAutoHeart#244](https://github.com/PyAutoLabs/PyAutoHeart/pull/244) — `complete/2026/09/eyes-fit-cti-instances.md`

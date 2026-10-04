@@ -5,7 +5,9 @@
 - issued: 2026-10-04
 - prompt: active/retired_repository_sidecars.md
 - session: Codex; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/279
+- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/279
 - validation: 22 focused / 1200 full tests pass; independent review CLEAN; copied-cache replay excludes only PyAutoConf and PyAutoBuild, preserving all 150 files and configured/global observations.
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/retired-repo-sidecars
 - repos:
@@ -16,7 +18,7 @@
   - reasons: release validation FAILED (stage integrate)
   - gates: 22 focused / 1200 full tests PASS; independent review CLEAN; all 150 cache files preserved in isolated replay; no workspace API impact; separate main smoke run 37198914051 passed.
   - scope: commit/push/pending-release PR only; human merge required; no release or failed-check bypass.
-- resume: Ship tested #278 patch under recorded RED override, then continue #274 timeout diagnosis. Anthropic work explicitly excluded.
+- resume: PR #279 open at ba9d2f3 under recorded RED override; CI pending, human /prm required. Timeout diagnostics continue under #274; retime 37203338570 (3 repeats per Python leg,300s cap,native dump120s) is smoke-profile/current-source diagnostic only. Anthropic credentials/workflow untouched by explicit instruction.
 
 ## heart-dashboard-remaining
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/274
