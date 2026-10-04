@@ -4,12 +4,12 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
-  "updated": "2026-10-04T13:44:55Z",
+  "updated": "2026-10-04T13:55:25Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
       "severity": "yellow",
-      "text": "Restore complete Heart dashboard health \u2014 library-shipped, awaiting-merge; diagnostic investigation active",
+      "text": "Restore complete Heart dashboard health \u2014 library-shipped, awaiting-merge; native-confirmed dependency repair prepared",
       "url": "https://github.com/PyAutoLabs/PyAutoHeart/pull/275",
       "prompt": "Use the start-dev skill. active/restore_dashboard_green.md"
     },

@@ -5,7 +5,7 @@
 - issued: 2026-10-04
 - prompt: active/restore_dashboard_green.md
 - session: Codex; session ID unavailable
-- status: library-shipped, awaiting-merge; diagnostic investigation active
+- status: library-shipped, awaiting-merge; native-confirmed dependency repair prepared
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/restore-dashboard-green
 - repos:
   - PyAutoHeart: feature/restore-dashboard-green
@@ -13,14 +13,15 @@
   - authorization: I authorize development investigation and repair despite the current RED reason above. Follow start-dev and record the task-specific authorization wherever required.
   - reasons: "release validation FAILED (stage integrate)"
   - scope: Heart dashboard repair #274 and bounded timeout investigation; applicable tests and independent review remain required; human /prm only.
+  - passed-gates: 1222 full Heart tests; YAML/firewall/whitespace; independent Sol CLEAN; exact-wheel candidate 3/3. Diagnostic comparison remains inconclusive, not release validation.
 - authorization: Human approved phased dashboard repair plan on 2026-10-04; tier undeclared, merge via human /prm. Preserve unfinished work and scientific evidence.
 - diagnostic-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/280
-- diagnostic-head: 91b410f186d3aadfa20f3502e26e50c8d2d46d0a
-- diagnostic-validation: 1214 full Heart tests PASS; final 14 focused PASS; tenant firewall/whitespace PASS; independent Sol review CLEAN, committed blobs verified. Hosted diagnostic run37205459198 running; never release clearance.
+- diagnostic-head: f5bad35e46f0a4b6264f5cd240ee156d28c1f26e
+- diagnostic-validation: 1222 full Heart tests PASS; YAML/firewall/whitespace PASS; independent Sol CLEAN including41 focused tests; native replay37205459198 reproduces LAPACK deadlock; comparison37206724174 inconclusive (3 controls/3 candidates pass); no release clearance.
 - library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/275
 - completed-phase: PR279 merged at3d86fd8; complete/2026/10/retired-repo-sidecars.md. Both CI legs passed, issue278 closed.
 - validation: Heart 1181 tests passed; focused 20 passed (4 regression cases failed before fix); independent review CLEAN; Python 3.12/3.13 CI green at 1c9b924.
-- resume: PRs275/277/279 merged;20 manifest checks pass and46 repos present. Release integration37199991757 remains failed. PR280 captured native reproduction in diagnostic37205459198: pass9.905s then timeout300.021s, all4 Eigen workers blocked in LAPACK Cholesky ParallelBatchMap, no FFT frames. JAX0.11.2 disables this OSS fan-out; preparing same-runner ABAB comparison before changing old<0.11 workflow caps. 1221 full tests and22 final focused pass; independent re-review CLEAN. Preserve science/worktrees; no Anthropic work, release or merge authority.
+- resume: PR280 f5bad35 repairs old JAX bounds to>=0.11.2,<0.12 across3 recipes. Native control replay deadlocked in LAPACK; source removes captured path,3 exact-wheel candidate passes. Same-run comparison honestly inconclusive. Human /prm only; final-head CI must be judged. Canonical RED60 integratefail and monitoring RED33 preserved/published; timings refreshed, science/worktrees and Anthropic blocker untouched. See final continuation in prompt.
 
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102

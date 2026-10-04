@@ -133,3 +133,24 @@ Starting Heart main34c73d3, clean; no competing Heart Mind claim. Task branch fe
 - Official JAX 0.10.2 lapack_kernels.cc schedules chunks and waits. JAX 0.11.2 compiles this fan-out out of open-source builds under PLATFORM_GOOGLE and executes inline. Heart's <0.11 cap downgrades away from that remedy. No upstream report filed.
 - Comparison prepared on PR280: two isolated environments, 113 non-JAX pins unchanged, JAX/JAXlib 0.10.2 vs 0.11.2; six alternating fresh processes on one runner and shared dataset. Cap 300s, native capture 120s. Success requires a native-confirmed control stall and every candidate passing. Missing reproduction is inconclusive. Controls remain preserved.
 - 21 focused tests pass; independent review and full suite underway. Production workflow bounds remain unchanged pending candidate evidence.
+
+### Timeout repair prepared — PR280, human /prm only
+
+PR https://github.com/PyAutoLabs/PyAutoHeart/pull/280 at f5bad35e46f0a4b6264f5cd240ee156d28c1f26e.
+
+- Exact-wheel replay37205459198 reproduced the stall (pass9.905s, timeout300.021s). All four Eigen workers blocked in LAPACK ParallelBatchMap/CholeskyFactorization/lapack_dpotrf_ffi; no FFT/ducc0 frames. This supplies native evidence for the current incident, distinct from the historical FFT deadlock. No upstream report.
+- JAX0.11.2 removes that blocking fan-out in open-source builds. Heart's three old `<0.11` recipes forcibly downgraded the installed runtime to0.10.2. PR280 now requires matching JAX/JAXlib>=0.11.2,<0.12 in smoke, integration and notebook validation; unchanged control manifest preserves0.10.2.
+- Comparison37206724174: 3control passes15.724/12.671/12.733s; 3candidate passes12.359/12.668/12.167s. Only JAX/JAXlib differ;113 pins, Python3.12.14, source refs, release environment and runner topology match. The diagnostic correctly returned INCONCLUSIVE/failure because no same-run control stalled. This is candidate compatibility evidence, not a measured failure-rate improvement; do not erase or label that run green.
+- Final full suite1222PASS175.37s; YAML parsing, tenant firewall and whitespace PASS. Independent Sol review CLEAN, including41 workflow/diagnostic tests, native/source remedy and autonerves compatibility. Python3.12/3.13 CI passed on diagnostic commit a954d5a; final bound-change CI is separate and must be judged by /prm.
+- Canonical readiness still RED60, sole exact reason `release validation FAILED (stage integrate)`. Fresh Heart board published with failed validation preserved; monitoring remains RED33/incomplete. Bounded diagnostic evidence is not full integration clearance.
+
+Task-specific live authorization: “I authorize development investigation and repair despite the current RED reason above. Follow start-dev and record the task-specific authorization wherever required.” Applicable branch gates passed above; development shipping only. Human /prm required; no merge or production release performed.
+
+### Other findings and continuation
+
+- Refreshed unit/import and CI timing through their collectors:12 suites,300 tracked tests,one slowed suite leg,12 clean imports;26 CI gates,one slow gate,six historical suspect events retained. Legacy per-test view has21>1.5x,268 within,11 missing baselines. All20 manifest surfaces pass;46 repos present.
+- Inspected cancelled Array37002625195 and Fit36036709408: GitHub now returns no jobs/logs. Insufficient evidence to establish or dismiss a hang; current main-cancellation policy leaves them suspect. No evidence erased.
+- Preserved dirty science records, datasets/results, retained worktrees and existing scientific/performance backlog. Legacy script-timing646 comparisons lack observation time and local source logs; remain unknown, not silently rebased against incompatible wheel timings. Anthropic OAuth blocker remains documented and untouched.
+- Next: human /prm280 after checking final-head CI and the explicitly inconclusive diagnostic evidence. Then use the canonical Release Agent to plan discriminating post-merge validation; no full release/rehearsal dispatched here. Remaining science/performance/no-run findings retain existing owners/tasks; no claim dashboard is green.
+
+Evidence: committed diagnostics manifest/native witness and docs/release_validation.md; local detailed artifacts under organs/PyAutoMind/tmp/heart-timeout-20261004/hosted-37205459198 and hosted-37206724174. No unattended watchers.
