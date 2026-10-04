@@ -5,10 +5,12 @@
 - issued: 2026-10-04
 - prompt: active/restore_dashboard_green.md
 - session: Codex; session ID unavailable
-- status: library-shipped, awaiting-merge; native-confirmed dependency repair prepared
+- status: library-dev; approved compatibility extension, PR280 open
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/restore-dashboard-green
 - repos:
   - PyAutoHeart: feature/restore-dashboard-green
+  - PyAutoNerves: feature/restore-dashboard-green
+  - PyAutoHands: feature/restore-dashboard-green
 - heart-red-override:
   - authorization: I authorize development investigation and repair despite the current RED reason above. Follow start-dev and record the task-specific authorization wherever required.
   - reasons: "release validation FAILED (stage integrate)"

@@ -156,3 +156,22 @@ Task-specific live authorization: “I authorize development investigation and r
 Evidence: committed diagnostics manifest/native witness and docs/release_validation.md; local detailed artifacts under organs/PyAutoMind/tmp/heart-timeout-20261004/hosted-37205459198 and hosted-37206724174. No unattended watchers.
 
 Final-head CI37207278755 passed Python3.12 and3.13 at f5bad35. PR path filtering evaluates the entire diff and triggered redundant diagnostic37207278790 on the bound-only commit; cancelled explicitly after completed comparison37206724174, so it provides no additional diagnostic evidence. No watchers remain.
+
+## Approved compatibility extension
+
+# Preserve tested JAX compatibility while excluding native deadlocks
+Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/274
+Type: bug
+Repos: @PyAutoHeart @PyAutoNerves @PyAutoHands
+Original user request: "ok yes do it properly then"
+Approved context: retain0.11.2 CI baseline, evaluate0.9.2 as older supported line, exclude problematic intermediate releases if evidence warrants, protect user installs and align release recipes. CPU/GPU likelihood/gradient/FFT checks, dependency resolution, independent review. Preserve historical FFT workaround and incident0.10.2 native witness. No release, upstream report, merge, watcher, quarantine or cap increase. Existing development RED override remains task-specific.
+
+Plan:
+1. Reconstruct isolated wheel environments with115 incident pins, changing onlyjax/jaxlib to0.9.2 and0.11.2; verify metadata and imports. Test the exact failed rectangular_rtu script and historical FFT reproducer bounded with existing workaround, then representative likelihood/gradient/sampler numerical correctness and CPU/GPU timings. Keep control evidence intact. Probe resolver endpoints and incompatibilities.
+2. Use findings to choose a conservative two-line policy; do not assume absent native path means older runtime fully supported. Avoid changing library mathematics for an upstream scheduling defect. Inventory published dependency ownership and direct/user install recipes.
+3. In PyAutoNerves pyproject.toml express supported versions with exclusions and preserved platform markers; document compatibility/update behaviour and maintain minimum/current CI coverage where bounded. In PyAutoHands release.yml align3 overrides with policy. Keep Heart incident control manifest immutable and add compatibility evidence/validation without relabeling original inconclusive comparison. Additional repo edits only if actual required dependency consumers identified.
+4. Test resolver fresh/upgrade/conflict behaviour, affected repo suites and bounded CPU/GPU cases. Independent review before ship; record limitations and release coordination in issue/PR/Mind. No production release; human /prm.
+
+Tier: undeclared — merge mode: human /prm.
+
+Brain routes this as ecosystem release-error/library, split into evidence, dependency-policy and workflow PRs. Fix owners confirmed from source: Nerves owns package requirements; Hands owns three conflicting overrides; Heart owns diagnostic evidence and CI baseline. Existing umbrella issue reused. Branch survey: Nerves/Hands clean main, no conflicting active claims; added task worktrees, preserve Array science worktree.
