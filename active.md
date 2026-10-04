@@ -1,5 +1,17 @@
 # Active Tasks
 
+## retired-repo-sidecars
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/278
+- issued: 2026-10-04
+- prompt: active/retired_repository_sidecars.md
+- session: Codex; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/retired-repo-sidecars
+- repos:
+  - PyAutoHeart: feature/retired-repo-sidecars
+- authorization: Approved dashboard collector-repair plan and explicit instruction to continue Heart work. Human /prm merge.
+- resume: Fix aggregation roster against valid current Heart config; preserve cache files and evidence on config errors. Parent #274.
+
 ## heart-dashboard-remaining
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/274
 - issued: 2026-10-04

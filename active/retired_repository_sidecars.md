@@ -1,5 +1,8 @@
 # Exclude retired repository sidecars from current Heart observations
 
+Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/278
+Issued: 2026-10-04
+
 Type: bug
 Priority: high
 Difficulty: small
