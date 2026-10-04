@@ -95,3 +95,11 @@ Follow-up37203617994 completed 6/6 passes with exact resolved release environmen
 ### PR279 merged — 2026-10-04
 
 Human /prm merged PR279 at 3d86fd8; issue278 closed and phase recorded in [complete/2026/10/retired-repo-sidecars.md](../complete/2026/10/retired-repo-sidecars.md). This supersedes earlier awaiting-authorization/PR-open checkpoints. No retired-repo work remains pending; umbrella274 stays open for genuine health findings.
+
+### 2026-10-04 resumed exact-environment investigation
+
+- Live user authorization: “I authorize development investigation and repair despite the current RED reason above. Follow start-dev and record the task-specific authorization wherever required.” Prepare tested independently reviewed PRs; merges remain explicit human /prm. No Anthropic credentials/digest/OAuth work, production release, external messages, unattended watchers, cap increases, quarantine, evidence erasure or destructive cleanup.
+- Refreshed canonical Heart tick/readiness: RED60, exact reason `release validation FAILED (stage integrate)`; monitoring RED33/incomplete. Published feed reported STALE45 and is outdated; it does not supersede canonical failed evidence.
+- Saved failure artifact reviewed: Python3.12.14; 723 passes,82 skips,one1805s materialization timeout. Original workspace df35fd4553f861575af7c27ad25b5f4d8d97d09c; Hands760affdbcbf0605266e49b33a65f7bef89f9b0b3. Exact library SHAs remain in /tmp/heart-validation-37198725621/commit_shas.json.
+- Discriminating new evidence: integration installed JAX/JAXlib0.11.2 then workflow explicitly downgraded both to0.10.2. Both passing focused retimes installed0.11.2. This runtime difference is not a proven cause. Historical Eigen/ducc0 research reviewed; no upstream filing.
+- Isolated diagnostic reconstruction under Mind tmp/heart-timeout-20261004: archived exact workspace+Hands,115 final package pins extracted from failed log, clean venv installing exact TestPyPI wheels. No source edits or canonical science changes. Next: verify import/version provenance, bounded target repetitions with native capture, compare only discriminating runtime changes if failure reproduces.

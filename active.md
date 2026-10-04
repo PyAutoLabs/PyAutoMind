@@ -6,6 +6,10 @@
 - prompt: active/restore_dashboard_green.md
 - session: Codex; session ID unavailable
 - status: dashboard-repair-in-progress
+- heart-red-override:
+  - authorization: I authorize development investigation and repair despite the current RED reason above. Follow start-dev and record the task-specific authorization wherever required.
+  - reasons: "release validation FAILED (stage integrate)"
+  - scope: Heart dashboard repair #274 and bounded timeout investigation; applicable tests and independent review remain required; human /prm only.
 - authorization: Human approved phased dashboard repair plan on 2026-10-04; tier undeclared, merge via human /prm. Preserve unfinished work and scientific evidence.
 - library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/275
 - completed-phase: PR279 merged at3d86fd8; complete/2026/10/retired-repo-sidecars.md. Both CI legs passed, issue278 closed.
