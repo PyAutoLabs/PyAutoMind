@@ -1,5 +1,8 @@
 # Select a distinct prior run for unit timing comparisons
 
+Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/276
+Issued: 2026-10-04
+
 Type: bug
 Priority: high
 Difficulty: small

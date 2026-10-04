@@ -1,5 +1,17 @@
 # Active Tasks
 
+## unit-timing-distinct-baseline
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/276
+- issued: 2026-10-04
+- prompt: active/unit_timing_distinct_baseline.md
+- session: Codex; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/unit-timing-distinct-baseline
+- repos:
+  - PyAutoHeart: feature/unit-timing-distinct-baseline
+- authorization: Continuation of the human-approved whole-dashboard repair plan and explicit 2026-10-04 instruction to merge #275 and continue. Human /prm remains the merge mode.
+- resume: Reproduced baseline self-selection on clean main with 18 older distinct observations available; repair selector/caller, test and report real before/after comparisons.
+
 ## heart-dashboard-remaining
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/274
 - issued: 2026-10-04
