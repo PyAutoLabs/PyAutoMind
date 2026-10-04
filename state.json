@@ -4,15 +4,9 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
-  "updated": "2026-10-04T15:04:07Z",
+  "updated": "2026-10-04T15:54:51Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Restore complete Heart dashboard health \u2014 library-shipped, awaiting-merge; eight reviewed compatibility PRs, human /prm only",
-      "url": "https://github.com/PyAutoLabs/PyAutoNerves/pull/184",
-      "prompt": "Use the start-dev skill. active/restore_dashboard_green.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -107,6 +101,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#607 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/607",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#612 \u2014 jax-lapack-compatibility-repair",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/612",
       "prompt": null
     },
     {

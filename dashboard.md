@@ -260,7 +260,7 @@ Use the start-dev skill. active/evaluation_grid_cap_preserves_field.md
 
 </details>
 
-<details><summary>📋 <a href="active/restore_dashboard_green.md">Restore complete Heart dashboard health</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/274">issue #274</a> — issued 2026-10-04 — library-shipped, awaiting-merge; eight reviewed compatibility PRs, human /prm only — PRs: <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/184">PyAutoNerves#184</a>, <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/297">PyAutoHands#297</a>, <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1659">PyAutoFit#1659</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/647">PyAutoGalaxy#647</a>, <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/280">PyAutoHeart#280</a>, <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/612">PyAutoArray#612</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/766">PyAutoLens#766</a>, <a href="https://github.com/PyAutoLabs/PyAutoCTI/pull/112">PyAutoCTI#112</a> — ⏳ pending release: PyAutoNerves — ⏳ pending release: PyAutoHands — ⏳ pending release: PyAutoFit — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoHeart — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoLens — ⏳ pending release: PyAutoCTI</summary>
+<details><summary>📋 <a href="active/restore_dashboard_green.md">Restore complete Heart dashboard health</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/274">issue #274</a> — issued 2026-10-04 — compatibility phase merged; remaining dashboard evidence and validation planning — PRs: <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/184">PyAutoNerves#184</a>, <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/297">PyAutoHands#297</a>, <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1659">PyAutoFit#1659</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/647">PyAutoGalaxy#647</a>, <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/280">PyAutoHeart#280</a>, <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/612">PyAutoArray#612</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/766">PyAutoLens#766</a>, <a href="https://github.com/PyAutoLabs/PyAutoCTI/pull/112">PyAutoCTI#112</a> — ⏳ pending release: PyAutoNerves — ⏳ pending release: PyAutoHands — ⏳ pending release: PyAutoFit — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoHeart — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoLens — ⏳ pending release: PyAutoCTI</summary>
 
 ```
 Use the start-dev skill. active/restore_dashboard_green.md
@@ -299,6 +299,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoArray#593](https://github.com/PyAutoLabs/PyAutoArray/pull/593) — `complete/2026/09/streaming-p1-array-free-dataset.md`
 - [PyAutoArray#597](https://github.com/PyAutoLabs/PyAutoArray/pull/597) — `complete/2026/09/streaming-p3-visualizer.md`
 - [PyAutoArray#607](https://github.com/PyAutoLabs/PyAutoArray/pull/607) — `complete/2026/10/fit-util-masked-division.md`
+- [PyAutoArray#612](https://github.com/PyAutoLabs/PyAutoArray/pull/612) — `complete/2026/10/jax-lapack-compatibility-repair.md`
 - [PyAutoArray#608](https://github.com/PyAutoLabs/PyAutoArray/pull/608) — `complete/2026/10/mesh-geometry-transformed-areas.md`
 - [PyAutoArray#611](https://github.com/PyAutoLabs/PyAutoArray/pull/611) — `complete/2026/10/mesh-interpolator-numerics-audit.md`
 - [PyAutoArray#606](https://github.com/PyAutoLabs/PyAutoArray/pull/606) — `complete/2026/10/over-sample-snr-helper.md`
@@ -329,6 +330,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 **PyAutoCTI**
 
 - [PyAutoCTI#112](https://github.com/PyAutoLabs/PyAutoCTI/pull/112) — `active/restore_dashboard_green.md`
+- [PyAutoCTI#112](https://github.com/PyAutoLabs/PyAutoCTI/pull/112) — `complete/2026/10/jax-lapack-compatibility-repair.md`
 
 **PyAutoCortex**
 
@@ -355,6 +357,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoFit#1652](https://github.com/PyAutoLabs/PyAutoFit/pull/1652) — `complete/2026/09/ep-nautilus-single-pass.md`
 - [PyAutoFit#1655](https://github.com/PyAutoLabs/PyAutoFit/pull/1655) — `complete/2026/09/ep-projection-exception.md`
 - [PyAutoFit#1649](https://github.com/PyAutoLabs/PyAutoFit/pull/1649) — `complete/2026/09/point-source-gradient-mode.md`
+- [PyAutoFit#1659](https://github.com/PyAutoLabs/PyAutoFit/pull/1659) — `complete/2026/10/jax-lapack-compatibility-repair.md`
 
 **PyAutoGalaxy**
 
@@ -367,6 +370,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoGalaxy#639](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/639) — `complete/2026/09/streaming-p2-fit-save-reload.md`
 - [PyAutoGalaxy#640](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/640) — `complete/2026/09/streaming-p3-visualizer.md`
 - [PyAutoGalaxy#630](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/630) — `complete/2026/09/workspace-config-cleanup.md`
+- [PyAutoGalaxy#647](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/647) — `complete/2026/10/jax-lapack-compatibility-repair.md`
 - [PyAutoGalaxy#644](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/644) — `complete/2026/10/over-sample-snr-helper.md`
 - [PyAutoGalaxy#642](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/642) — `complete/2026/10/streaming-p4-light-profile-identity.md`
 - [PyAutoGalaxy#643](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/643) — `complete/2026/10/streaming-p5-cubes-phase-centre.md`
@@ -382,6 +386,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoHands#297](https://github.com/PyAutoLabs/PyAutoHands/pull/297) — `active/restore_dashboard_green.md`
 - [PyAutoHands#292](https://github.com/PyAutoLabs/PyAutoHands/pull/292) — `complete/2026/09/board-footer-family-fix.md`
 - [PyAutoHands#291](https://github.com/PyAutoLabs/PyAutoHands/pull/291) — `complete/2026/09/eyes-organ-order.md`
+- [PyAutoHands#297](https://github.com/PyAutoLabs/PyAutoHands/pull/297) — `complete/2026/10/jax-lapack-compatibility-repair.md`
 - [PyAutoHands#294](https://github.com/PyAutoLabs/PyAutoHands/pull/294) — `complete/2026/10/pyautopulse-organ-row.md`
 
 **PyAutoHeart**
@@ -397,6 +402,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoHeart#268](https://github.com/PyAutoLabs/PyAutoHeart/pull/268) — `complete/2026/10/heart-monitoring-coverage.md`
 - [PyAutoHeart#271](https://github.com/PyAutoLabs/PyAutoHeart/pull/271) — `complete/2026/10/heart-publication-coverage.md`
 - [PyAutoHeart#256](https://github.com/PyAutoLabs/PyAutoHeart/pull/256) — `complete/2026/10/heart-score-resusitate.md`
+- [PyAutoHeart#280](https://github.com/PyAutoLabs/PyAutoHeart/pull/280) — `complete/2026/10/jax-lapack-compatibility-repair.md`
 - [PyAutoHeart#269](https://github.com/PyAutoLabs/PyAutoHeart/pull/269) — `complete/2026/10/pyautopulse-organ-row.md`
 - [PyAutoHeart#279](https://github.com/PyAutoLabs/PyAutoHeart/pull/279) — `complete/2026/10/retired-repo-sidecars.md`
 - [PyAutoHeart#277](https://github.com/PyAutoLabs/PyAutoHeart/pull/277) — `complete/2026/10/unit-timing-distinct-baseline.md`
@@ -413,6 +419,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoLens#758](https://github.com/PyAutoLabs/PyAutoLens/pull/758) — `complete/2026/09/streaming-p2-fit-save-reload.md`
 - [PyAutoLens#761](https://github.com/PyAutoLabs/PyAutoLens/pull/761) — `complete/2026/09/streaming-p3-visualizer.md`
 - [PyAutoLens#751](https://github.com/PyAutoLabs/PyAutoLens/pull/751) — `complete/2026/09/workspace-config-cleanup.md`
+- [PyAutoLens#766](https://github.com/PyAutoLabs/PyAutoLens/pull/766) — `complete/2026/10/jax-lapack-compatibility-repair.md`
 - [PyAutoLens#764](https://github.com/PyAutoLabs/PyAutoLens/pull/764) — `complete/2026/10/pointsolver-extent-sanity-check.md`
 - [PyAutoLens#762](https://github.com/PyAutoLabs/PyAutoLens/pull/762) — `complete/2026/10/streaming-p4-light-profile-identity.md`
 
@@ -437,6 +444,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoNerves#177](https://github.com/PyAutoLabs/PyAutoNerves/pull/177) — `complete/2026/09/eyes-organ-order.md`
 - [PyAutoNerves#175](https://github.com/PyAutoLabs/PyAutoNerves/pull/175) — `complete/2026/09/nerves-unused-keys.md`
 - [PyAutoNerves#176](https://github.com/PyAutoLabs/PyAutoNerves/pull/176) — `complete/2026/09/workspace-config-cleanup.md`
+- [PyAutoNerves#184](https://github.com/PyAutoLabs/PyAutoNerves/pull/184) — `complete/2026/10/jax-lapack-compatibility-repair.md`
 - [PyAutoNerves#181](https://github.com/PyAutoLabs/PyAutoNerves/pull/181) — `complete/2026/10/pyautopulse-organ-row.md`
 
 **PyAutoPulse**
