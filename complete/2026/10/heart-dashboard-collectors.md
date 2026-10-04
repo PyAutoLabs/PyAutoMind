@@ -1,3 +1,25 @@
+# Heart dashboard collector observation repairs
+
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/274 (umbrella remains open)
+- pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/275
+- merged: 2026-10-04
+- merge-commit: 9d7d5904a059910fa03f4880d5b9cad928043282
+- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/275
+
+## Shipped scope
+
+Manifest coverage-suffixed headings are parsed; unknown statuses are adverse on their own check rather than silently dropped. Standalone linked worktrees are detected, and symlink-only bundles are not falsely called real task worktrees. This closes only the collector phase; whole-dashboard repairs remain in active/restore_dashboard_green.md and issue #274.
+
+## Validation
+
+Four new regressions failed before the patch. Afterward: 20 focused passes, 1181 full Heart passes, independent review CLEAN. Exact-head Actions run 37198830968: both Python 3.12 and 3.13 passed. Every branch commit is contained in origin/main; zero unmerged commits. Live producer check after merge: 20 headings, 20 parsed checks, including all seven hook mismatches.
+
+## Proven sibling retirement
+
+The following draft's entire parser-defect scope is covered by #275; retire it under the human /prm authorization. Other Heart bug drafts remain separate work.
+
+## Original prompt
+
 # Heart's manifest_drift parser silently drops any check leg with a suffix after its status
 
 Type: bug
