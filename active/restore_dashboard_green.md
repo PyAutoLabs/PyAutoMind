@@ -103,3 +103,16 @@ Human /prm merged PR279 at 3d86fd8; issue278 closed and phase recorded in [compl
 - Saved failure artifact reviewed: Python3.12.14; 723 passes,82 skips,one1805s materialization timeout. Original workspace df35fd4553f861575af7c27ad25b5f4d8d97d09c; Hands760affdbcbf0605266e49b33a65f7bef89f9b0b3. Exact library SHAs remain in /tmp/heart-validation-37198725621/commit_shas.json.
 - Discriminating new evidence: integration installed JAX/JAXlib0.11.2 then workflow explicitly downgraded both to0.10.2. Both passing focused retimes installed0.11.2. This runtime difference is not a proven cause. Historical Eigen/ducc0 research reviewed; no upstream filing.
 - Isolated diagnostic reconstruction under Mind tmp/heart-timeout-20261004: archived exact workspace+Hands,115 final package pins extracted from failed log, clean venv installing exact TestPyPI wheels. No source edits or canonical science changes. Next: verify import/version provenance, bounded target repetitions with native capture, compare only discriminating runtime changes if failure reproduces.
+
+## Bounded exact-wheel diagnostic phase (approved umbrella #274)
+
+- Preserve the failed run's package pins, workspace/Hands SHAs, Python patch version and source URL in a diagnostic manifest.
+- Add a manual Heart workflow that installs only those wheels and dependencies, checks exact workspace/Hands commits, and invokes their existing release environment resolver.
+- Run only rectangular_rtu.py, at most six fresh processes, native dump after120s,300s cap. Preserve results and stop on the first failure. Never emit or ingest release-stage evidence.
+- Validate manifest/provenance/error handling and process timeout behavior locally; independently review the final branch; prepare a PR, with human /prm for merge.
+
+Tier: undeclared — merge mode: human /prm.
+
+Detailed files: `.github/workflows/release-diagnostic.yml` (manual isolated Ubuntu runner, Python3.12.14, explicit wheels, upload diagnostic artifacts even on failure); `.github/scripts/release_diagnostic.py` (manifest validation, package/import/environment receipt, existing Hands env resolver and workspace retime native-stack helpers, bounded capture); `diagnostics/release-37199991757.json` (115 observed final pins and immutable repo SHAs); `tests/test_release_diagnostic.py` (fail-closed manifest and bounded child-process regressions); `docs/release_validation.md` (diagnostic meaning/limitations and invocation).
+
+Starting Heart main34c73d3, clean; no competing Heart Mind claim. Task branch feature/restore-dashboard-green under .worktrees/restore-dashboard-green. Existing approved umbrella plan and live user development override apply to this evidence-gathering phase. No causal fix asserted and release RED remains `release validation FAILED (stage integrate)`.
