@@ -1,5 +1,8 @@
 # Restore complete Heart dashboard health
 
+Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/274
+Issued: 2026-10-04
+
 Type: maintenance
 Priority: high
 Difficulty: large

@@ -1,5 +1,17 @@
 # Active Tasks
 
+## heart-dashboard-repair
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/274
+- issued: 2026-10-04
+- prompt: active/restore_dashboard_green.md
+- session: Codex; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/heart-dashboard-repair
+- repos:
+  - PyAutoHeart: feature/heart-dashboard-repair
+- authorization: Human approved phased dashboard repair plan on 2026-10-04; tier undeclared, merge via human /prm. Preserve unfinished work and scientific evidence.
+- resume: Canonical clean-main synchronization completed; missing Insight/Ears cloned. Investigate manifest parser and standalone-worktree observation defects; audit retained evidence before any cleanup. Full dashboard completion remains required.
+
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
 - issued: 2026-09-22
