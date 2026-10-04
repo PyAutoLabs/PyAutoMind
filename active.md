@@ -1,5 +1,17 @@
 # Active Tasks
 
+## nnls-memo-scattered-backoff
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/613
+- issued: 2026-10-04
+- prompt: active/nnls_memo_scattered_backoff.md
+- session: claude (Opus 5.5 subagent, https://claude.ai/code/session_01S11WE9oj7Mvkfhc4EPBnyN)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/nnls-memo-scattered-backoff
+- repos:
+  - PyAutoArray: feature/nnls-memo-scattered-backoff
+- summary: Per-key exponential back-off for the fnnls warm-start memo after consecutive fallbacks, so scattered (iid) streams stop paying for a bad seed every other solve; local-walk behaviour unchanged. Pulse task organs/PyAutoPulse/tasks/interferometer_nnls_memo_scattered_stream_guard.md.
+- resume: in progress (library-dev).
+
 ## point-image-pair-all-forward-grad-nan
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/767
 - issued: 2026-10-04
