@@ -17,8 +17,9 @@
 - issued: 2026-10-04
 - prompt: active/point_image_pair_all_forward_grad_nan.md
 - session: claude (Opus 5.5 subagent, session_01S11WE9oj7Mvkfhc4EPBnyN; resume ID unavailable)
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/point-image-pair-all-forward-grad-nan
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/768 (draft, pending-release; Heart RED override = push+PR-open only, human /prm required)
 - heart-override: human granted Heart RED development override (push + PR-open only, no merge) in-session 2026-10-04
 - repos:
   - PyAutoLens: feature/point-image-pair-all-forward-grad-nan
