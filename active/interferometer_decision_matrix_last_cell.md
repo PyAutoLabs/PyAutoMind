@@ -12,6 +12,7 @@ Autonomy: supervised
 Priority: normal
 Consequence: judge
 Epic: interferometer-likelihood-campaign
+Issued: 2026-10-04
 
 Contract: the PyAutoPulse task `organs/PyAutoPulse/tasks/interferometer_decision_matrix_last_cell.md`
 (https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/interferometer_decision_matrix_last_cell.md;

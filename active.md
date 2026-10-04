@@ -57,3 +57,14 @@
 - repos:
   - autolens_profiling: feature/interferometer-streaming-scaling
 - coordination: adds scripts/interferometer/streaming_scaling/, results/streaming_scaling/, wiki/campaigns/interferometer_streaming.md + one wiki/index.md row only; parallel autolens_profiling worktrees touch other paths.
+
+## interferometer-decision-matrix-last-cell
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/369
+- issued: 2026-10-04
+- session: claude-code subagent (Opus 5.5), https://claude.ai/code/session_01S11WE9oj7Mvkfhc4EPBnyN
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/interferometer-decision-matrix-last-cell
+- prompt: active/interferometer_decision_matrix_last_cell.md
+- repos:
+  - autolens_profiling: feature/interferometer-decision-matrix-last-cell
+- coordination: same session as interferometer-streaming-scaling (#368) and the human-approved priority order (2026-10-04). Touches only the decision-matrix note, results/breakdown/interferometer/alma_high/, wiki/campaigns/interferometer_likelihood.md and the existing interferometer wiki/index.md row; disjoint from #368's paths.
