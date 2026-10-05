@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
-  "updated": "2026-10-05T17:38:17Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 2 in flight",
+  "updated": "2026-10-05T17:39:48Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Full Euclid style coverage and Niek manuscript review \u2014 awaiting-merge",
-      "url": "https://github.com/Jammy2211/euclid_assistant/pull/13",
-      "prompt": "Use the start-dev skill. active/niek_full_style_review.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#606 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/606",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#599 \u2014 streaming-p4-light-profile-identity",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/599",
       "prompt": null
     }
   ]

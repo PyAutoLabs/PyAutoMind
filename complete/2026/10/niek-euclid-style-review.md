@@ -1,3 +1,17 @@
+# Complete Euclid style coverage and manuscript review
+
+Merged euclid_assistant PR #13: https://github.com/Jammy2211/euclid_assistant/pull/13
+Issue: https://github.com/Jammy2211/euclid_assistant/issues/12
+Merge commit: aa140de8f12feca1d071d3915a9a9456b061780a
+
+Added a reproducible inventory of 163 Style Guide and 98 PDD review criteria, corrected source interpretations, improved deterministic scope/checks, and expanded manual review procedures. Independent Claude Opus 5.5 reviews and follow-up findings were resolved. Local validation: 85 passed, one optional Vale skip, CLI smoke passed. Both current-head GitHub Actions Python 3.12/3.13 jobs succeeded; no unmerged dependencies.
+
+The reviewed manuscript was delivered locally as collaborator/niekpaper_euclid_reviewed.zip, containing the 17-page PDF, editable sources/assets, detailed changelog, source patch, review records and author questions. Archive/hash checks and a build from extracted contents passed. Original scientific table measurements and figure assets were preserved; remaining scientific/figure-production decisions are explicitly documented for the author. The original archive is unchanged.
+
+User authorized merge through “prm on assistant”. Earlier shipping approval was recorded; Heart had recovered to GREEN before shipping, so no RED override was exercised. No release was performed. Review/build evidence preserved outside the task worktree in collaborator/niekpaper_review/review/assistant_closeout before cleanup.
+
+## Original prompt
+
 # Full Euclid style coverage and Niek manuscript review
 
 Issued: 2026-10-05
