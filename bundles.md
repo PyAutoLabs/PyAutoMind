@@ -32,3 +32,13 @@ with a ⚠️ rather than silently dropping it.
 
 <!-- No entries yet: the dashboard's auto bundles cover the same-repo case, so
      pin one only when the grouping is something a rule would not find. -->
+
+## pyautobrain-worktree-guards
+- title: PyAutoBrain worktree, guard and intake fixes
+- members:
+  - active/worktree_sh_clobbers_root_activate.md
+  - active/unregistered_worktrees_invisible_to_conflict_guard.md
+  - active/cortex_test_worktree_symlink.md
+  - active/intake_agent_silently_drops_unknown_type_values.md
+- rationale: four small PyAutoBrain worktree/guard/intake fixes; one shared Brain worktree, sequential
+- status: in progress 2026-10-05

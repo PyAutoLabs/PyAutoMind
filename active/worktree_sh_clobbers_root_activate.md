@@ -14,6 +14,7 @@ Witness: hermetic test — a fabricated PYAUTO_MAIN (tmp dir) containing a root 
 Review-minutes: 0
 Unattended: ready
 Updated: 2026-09-28
+Issued: 2026-10-05
 
 ## Bug
 

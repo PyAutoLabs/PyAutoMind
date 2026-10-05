@@ -12,6 +12,7 @@ Consequence: notify
 Witness: `python3 -m pytest PyAutoBrain/tests/test_cortex_conductor.py::test_a_fixture_tree_finds_the_schema_its_checkout_ships` passes from inside a task worktree root created by `worktree_create` (where the Cortex checkout is a symlink to the canonical checkout) as well as from the canonical root
 Review-minutes: 0
 Unattended: ready
+Issued: 2026-10-05
 
 ## Symptom (observed 2026-09-02, task batch-review-integration)
 

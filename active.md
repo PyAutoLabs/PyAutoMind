@@ -1,5 +1,53 @@
 # Active Tasks
 
+## worktree-sh-root-activate-clobber
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/469
+- issued: 2026-10-05
+- prompt: active/worktree_sh_clobbers_root_activate.md
+- session: claude (Opus 5.5, bundle pyautobrain-worktree-guards)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/pyautobrain-worktree-guards
+- repos:
+  - PyAutoBrain: feature/worktree-sh-root-activate-clobber
+- summary: worktree_create never writes through a symlinked activate.sh (skip own names in sibling loops, rm -f before write) + opt-in worktree_repair_activate for bundle paths; hermetic test.
+- bundle: pyautobrain-worktree-guards
+
+## unregistered-worktree-guard
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/470
+- issued: 2026-10-05
+- prompt: active/unregistered_worktrees_invisible_to_conflict_guard.md
+- session: claude (Opus 5.5, bundle pyautobrain-worktree-guards)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/pyautobrain-worktree-guards
+- repos:
+  - PyAutoBrain: feature/unregistered-worktree-guard
+- summary: Conflict guard warns (exit unchanged) on unregistered on-disk worktrees of the requested repo; report-only worktree_audit_orphans lists orphans and zero-work STALE? claims.
+- bundle: pyautobrain-worktree-guards
+
+## cortex-find-script-symlink
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/471
+- issued: 2026-10-05
+- prompt: active/cortex_test_worktree_symlink.md
+- session: claude (Opus 5.5, bundle pyautobrain-worktree-guards)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/pyautobrain-worktree-guards
+- repos:
+  - PyAutoBrain: feature/cortex-find-script-symlink
+- summary: Cortex find_script walks ancestors without resolving symlinks (absolute() not resolve()); restore deleted witness test + tmp_path symlink regression test.
+- bundle: pyautobrain-worktree-guards
+
+## intake-declared-header-fields
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/472
+- issued: 2026-10-05
+- prompt: active/intake_agent_silently_drops_unknown_type_values.md
+- session: claude (Opus 5.5, bundle pyautobrain-worktree-guards)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/pyautobrain-worktree-guards
+- repos:
+  - PyAutoBrain: feature/intake-declared-header-fields
+- summary: Intake honours declared Target and Repos, flags unknown Type visibly (alias map hygiene->maintenance, else triage), splits leading header block from title/body.
+- bundle: pyautobrain-worktree-guards
+
 ## nnls-memo-scattered-backoff
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/613
 - issued: 2026-10-04

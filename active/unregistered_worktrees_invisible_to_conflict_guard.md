@@ -12,6 +12,7 @@ Consequence: notify
 Witness: a worktree that exists on disk but appears in no Mind registry is either reported by `worktree_check_conflict` (or an adjacent audit command) or is gone; demonstrated against the `scientific-workflow-language` HowToFit worktree named below.
 Review-minutes: 0
 Unattended: ready
+Issued: 2026-10-05
 
 `worktree_check_conflict <task> <repo>` decides whether a repo is claimed by
 reading the PyAutoMind registries (`active.md`, `planned.md`, `parked.md`). A

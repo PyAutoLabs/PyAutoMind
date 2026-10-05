@@ -40,11 +40,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 2 |
+| [In flight](#in-flight) (`active/`) | 6 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 6 |
 | [Planned](#planned) (`planned.md`) | 7 |
-| [Backlog](#backlog) (`draft/`) | 231 |
+| [Backlog](#backlog) (`draft/`) | 227 |
 
 > **No batch in flight.**
 
@@ -148,28 +148,12 @@ Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 112
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 108
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
 ```
 Use the start-dev skill. draft/test/autolens_workspace/no_untimed_network_downloads_check.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md">Intake Agent silently drops unknown Type values and overrides declared Target…</a> — pyautobrain · small · safe · medium</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautobrain/worktree_sh_clobbers_root_activate.md">worktree.sh bundle creation clobbers the unversioned root activate.sh</a> — pyautobrain · small · safe · medium</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautobrain/worktree_sh_clobbers_root_activate.md
 ```
 
 </details>
@@ -230,14 +214,6 @@ Use the start-dev skill. draft/feature/pyautobrain/board_without_gh_phase2_legs.
 
 </details>
 
-<details><summary>📋 <a href="draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md">Unregistered worktrees are invisible to the conflict guard</a> — pyautobrain · small · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/research/pyautohands/git_docs.md">Use readthedocs or migrate to GitHub docs</a> — pyautohands · small · supervised · normal</summary>
 
 ```
@@ -246,9 +222,49 @@ Use the start-dev skill. draft/research/pyautohands/git_docs.md
 
 </details>
 
+<details><summary>📋 <a href="draft/test/autolens_workspace_test/jax_zero_contour.md">Verify jax.jit / jax.grad parity on the critical-curve and caustic calculations</a> — autolens_workspace_test · medium · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/test/autolens_workspace_test/jax_zero_contour.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/batch_slice.md"><code>batch slice</code> — the decomposition pass for <code>needs-slicing</code> prompts</a> — pyautobrain · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/batch_slice.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/pyautofit/remove_eden_packaging_tooling.md">Remove the dead EDEN packaging tooling from PyAutoFit</a> — pyautofit · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/refactor/pyautofit/remove_eden_packaging_tooling.md
+```
+
+</details>
+
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
+
+<details><summary>📋 <a href="active/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails in every…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/471">issue #471</a> — issued 2026-10-05 — library-dev</summary>
+
+```
+Use the start-dev skill. active/cortex_test_worktree_symlink.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/intake_agent_silently_drops_unknown_type_values.md">Intake Agent silently drops unknown Type values and overrides declared Target…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/472">issue #472</a> — issued 2026-10-05 — library-dev</summary>
+
+```
+Use the start-dev skill. active/intake_agent_silently_drops_unknown_type_values.md
+```
+
+</details>
 
 <details><summary>📋 <a href="active/nnls_memo_scattered_backoff.md">fnnls warm-start memo: per-key back-off on scattered evaluation streams</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/613">issue #613</a> — issued 2026-10-04 — library-dev</summary>
 
@@ -258,10 +274,26 @@ Use the start-dev skill. active/nnls_memo_scattered_backoff.md
 
 </details>
 
+<details><summary>📋 <a href="active/unregistered_worktrees_invisible_to_conflict_guard.md">Unregistered worktrees are invisible to the conflict guard</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/470">issue #470</a> — issued 2026-10-05 — library-dev</summary>
+
+```
+Use the start-dev skill. active/unregistered_worktrees_invisible_to_conflict_guard.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/vis_lp_inspection_bundle.md">Support vis_lp-only products in inspection bundles</a> — issued 2026-09-22</summary>
 
 ```
 Use the start-dev skill. active/vis_lp_inspection_bundle.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/worktree_sh_clobbers_root_activate.md">worktree.sh bundle creation clobbers the unversioned root activate.sh</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/469">issue #469</a> — issued 2026-10-05 — library-dev</summary>
+
+```
+Use the start-dev skill. active/worktree_sh_clobbers_root_activate.md
 ```
 
 </details>
@@ -675,10 +707,10 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ## Backlog
 
-**231** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
+**227** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 73</summary>
+<summary><b>bug</b> — 70</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -820,22 +852,6 @@ Use the start-dev skill. draft/bug/euclid/bundle_sersic_products_read_output_dir
 
 ```
 Use the start-dev skill. draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md">Intake Agent silently drops unknown Type values and overrides declared Target…</a> — pyautobrain · small · safe · medium</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautobrain/worktree_sh_clobbers_root_activate.md">worktree.sh bundle creation clobbers the unversioned root activate.sh</a> — pyautobrain · small · safe · medium</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautobrain/worktree_sh_clobbers_root_activate.md
 ```
 
 </details>
@@ -1216,14 +1232,6 @@ Use the start-dev skill. draft/bug/autogalaxy/power_law_multipole_m1_singular_at
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/pyautobrain/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails in every…</a> — pyautobrain · small · safe · low</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautobrain/cortex_test_worktree_symlink.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md">The reconstruction noise map is not the truncated posterior the NNLS solve…</a> — autoarray · medium · human-required · low</summary>
 
 ```
@@ -1536,7 +1544,7 @@ Use the start-dev skill. draft/feature/autoarray/adapt_linear_default_flip.md
 </details>
 
 <details>
-<summary><b>maintenance</b> — 23</summary>
+<summary><b>maintenance</b> — 22</summary>
 
 <details><summary>📋 <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> — organs · medium · supervised · high</summary>
 
@@ -1574,14 +1582,6 @@ Use the start-dev skill. draft/maintenance/workspaces/sync_remaining_workspace_c
 
 ```
 Use the start-dev skill. draft/maintenance/howtofit/minimum_library_version_stale.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md">Unregistered worktrees are invisible to the conflict guard</a> — pyautobrain · small · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md
 ```
 
 </details>
@@ -2207,6 +2207,44 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 Sets of INDEPENDENT tasks that make sense in one orchestrated session: an architect session plans them, subagents implement them, and every member still gets its own issue and its own PR — so the prm skill closes each one out unchanged. Not an epic: nothing here is ordered or phase-gated, and every member also appears in its usual section above — a bundle is an extra view of the backlog, never a replacement. Pinned bundles are the human record in `bundles.md`; auto bundles are recomputed from the backlog every time this page is rendered and are proposals, never records. Full record in [`bundles.md`](bundles.md).
 
 <details>
+<summary><b>PyAutoBrain worktree, guard and intake fixes</b> — 4 task(s) · 8 pts · pinned — in progress 2026-10-05</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the judgment tier for the PyAutoMind bundle 'PyAutoBrain worktree, guard and intake fixes' — 4 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- active/worktree_sh_clobbers_root_activate.md
+- active/unregistered_worktrees_invisible_to_conflict_guard.md
+- active/cortex_test_worktree_symlink.md
+- active/intake_agent_silently_drops_unknown_type_values.md
+
+Why they are bundled: four small PyAutoBrain worktree/guard/intake fixes; one shared Brain worktree, sequential
+
+Contract (the `start-bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Use the start-dev skill for EACH member prompt: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run the start-library skill (or the start-workspace skill) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
+5. Ship each member on its own: the ship-library skill or the ship-workspace skill, ONE PR per task, so the prm skill closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+four small PyAutoBrain worktree/guard/intake fixes; one shared Brain worktree, sequential
+
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="active/worktree_sh_clobbers_root_activate.md">active/worktree_sh_clobbers_root_activate.md</a> | - | - | - |
+| <a href="active/unregistered_worktrees_invisible_to_conflict_guard.md">active/unregistered_worktrees_invisible_to_conflict_guard.md</a> | - | - | - |
+| <a href="active/cortex_test_worktree_symlink.md">active/cortex_test_worktree_symlink.md</a> | - | - | - |
+| <a href="active/intake_agent_silently_drops_unknown_type_values.md">active/intake_agent_silently_drops_unknown_type_values.md</a> | - | - | - |
+
+</details>
+
+<details>
 <summary><b>autoarray — bundle 1</b> — 4 task(s) · 7 pts · auto — proposed</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -2237,40 +2275,6 @@ Contract (the `start-bundle` skill is the full body):
 | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> | large | high | formalised |
 | <a href="draft/maintenance/autoarray/files_experiment_scripts_import_a_removed_module.md"><code>files/*_experiment.py</code> import a module that no longer exists…</a> | small | low | formalised |
 | <a href="draft/maintenance/autoarray/small_datasets_followups_after_8c.md">After the phase-8c releases: bump the autonerves floor, drop the…</a> | small | low | formalised |
-
-</details>
-
-<details>
-<summary><b>pyautobrain — bundle 1</b> — 4 task(s) · 7 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the judgment tier for the PyAutoMind bundle 'pyautobrain — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/maintenance/pyautobrain/workspace_resolver_fanout.md
-- draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md
-- draft/bug/pyautobrain/worktree_sh_clobbers_root_activate.md
-- draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md
-
-Contract (the `start-bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Use the start-dev skill for EACH member prompt: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run the start-library skill (or the start-workspace skill) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
-5. Ship each member on its own: the ship-library skill or the ship-workspace skill, ONE PR per task, so the prm skill closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Difficulty | Priority | Status |
-|--------|------------|----------|--------|
-| <a href="draft/maintenance/pyautobrain/workspace_resolver_fanout.md">Workspace resolver fan-out: the hook, the smoke shims and the…</a> | large | high | formalised |
-| <a href="draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md">Intake Agent silently drops unknown Type values and overrides…</a> | small | medium | formalised |
-| <a href="draft/bug/pyautobrain/worktree_sh_clobbers_root_activate.md">worktree.sh bundle creation clobbers the unversioned root activate.sh</a> | small | medium | formalised |
-| <a href="draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md">Unregistered worktrees are invisible to the conflict guard</a> | small | normal | formalised |
 
 </details>
 
@@ -2468,7 +2472,41 @@ Contract (the `start-bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 39 auto bundles — pin one in `bundles.md` to keep it on the page._
+<details>
+<summary><b>autofit — bundle 1</b> — 4 task(s) · 7 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the judgment tier for the PyAutoMind bundle 'autofit — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/bug/autofit/ep_test_suite_is_not_xdist_safe.md
+- draft/bug/autofit/visualization_warmup_swallowed_exception.md
+- draft/bug/autofit/assertion_repr_recurses_forever.md
+- draft/bug/autofit/model_function_cannot_resolve_config_priors.md
+
+Contract (the `start-bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Use the start-dev skill for EACH member prompt: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run the start-library skill (or the start-workspace skill) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
+5. Ship each member on its own: the ship-library skill or the ship-workspace skill, ONE PR per task, so the prm skill closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/bug/autofit/ep_test_suite_is_not_xdist_safe.md">EP test suite is not xdist-safe: tests share one on-disk output…</a> | small | medium | formalised |
+| <a href="draft/bug/autofit/visualization_warmup_swallowed_exception.md">Visualization warm-up swallowed for ellipse and point-source analyses</a> | large | medium | formalised |
+| <a href="draft/bug/autofit/assertion_repr_recurses_forever.md">Assertion repr recurses forever</a> | small | normal | formalised |
+| <a href="draft/bug/autofit/model_function_cannot_resolve_config_priors.md">af.Model(function) cannot resolve config priors</a> | small | normal | formalised |
+
+</details>
+
+_Showing 8 of 37 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -2476,76 +2514,76 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-05 | issued | <a href="active/worktree_sh_clobbers_root_activate.md">worktree.sh bundle creation clobbers the unversioned root activate.sh</a> |
+| 2026-10-05 | issued | <a href="active/unregistered_worktrees_invisible_to_conflict_guard.md">Unregistered worktrees are invisible to the conflict guard</a> |
 | 2026-10-05 | filed | <a href="draft/feature/pyautopulse/profiling_setup_browser.md">Setup-first profiling: dashboard, evidence catalogue, scripts and…</a> |
+| 2026-10-05 | issued | <a href="active/intake_agent_silently_drops_unknown_type_values.md">Intake Agent silently drops unknown Type values and overrides…</a> |
+| 2026-10-05 | issued | <a href="active/cortex_test_worktree_symlink.md">Cortex conductor test resolves through the worktree symlink and fails…</a> |
 | 2026-10-04 | issued | <a href="active/nnls_memo_scattered_backoff.md">fnnls warm-start memo: per-key back-off on scattered evaluation…</a> |
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
 | 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
 | 2026-10-02 | parked | <a href="parked.md#colab-refinement-throughout">colab-refinement-throughout</a> |
 | 2026-10-02 | parked | <a href="parked.md#bootstrap-smoke-codex">bootstrap-smoke-codex</a> |
-| 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
-| 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
-| 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
-| 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
+| 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
+| 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
+| 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
 | 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
 | 2026-09-29 | filed | <a href="draft/maintenance/pyautomind/session_start_hook_copies_regen.md">Regenerate the 28 drifted <code>.claude/hooks/session-start.sh</code> copies…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/power_law_multipole_m1_singular_at_isothermal_slope.md">PowerLawMultipole with m=1 returns -inf / NaN deflections at slope…</a> |
-| 2026-09-27 | filed | <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently…</a> |
-| 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
-| 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
-| 2026-09-26 | filed | <a href="draft/refactor/workspaces/abell_1201_local_cleanup.md">Repo cleanup: retire the Abell 1201 worktree and local raw data</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-27 | filed | <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently…</a> |
+| 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
+| 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
+| 2026-09-26 | filed | <a href="draft/refactor/workspaces/abell_1201_local_cleanup.md">Repo cleanup: retire the Abell 1201 worktree and local raw data</a> |
 | 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
 | 2026-09-25 | filed | <a href="draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md">Keep caches off <code>$HOME</code> on HPC — phase 2 remainder: euclid pipeline…</a> |
 | 2026-09-24 | filed | <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> |
 | 2026-09-23 | filed | <a href="draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
 | 2026-09-22 | issued | <a href="active/vis_lp_inspection_bundle.md">Support vis_lp-only products in inspection bundles</a> |
 | 2026-09-19 | issued | <a href="parked.md#catalogue-inspection-before-vis-pix">catalogue-inspection-before-vis-pix</a> |
-| 2026-09-18 | parked | <a href="parked.md#fixed-light-numba-s7">fixed-light-numba-s7</a> |
-| 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
-| 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
-| 2026-09-18 | filed | <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-18 | parked | <a href="parked.md#fixed-light-numba-s7">fixed-light-numba-s7</a> |
+| 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
+| 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
+| 2026-09-18 | filed | <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> |
 | 2026-09-18 | filed | <a href="draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md">The latent smoke's empty-block assertion names one cause…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/pyautobrain/sizing_faculty_none_rule_keyword_false_judge_triage.md">Sizing faculty: a <code>none</code> rule, keyword hits on prose that only…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> |
-| 2026-09-17 | filed | <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> |
-| 2026-09-17 | filed | <a href="draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads…</a> |
-| 2026-09-17 | filed | <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> |
-| 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-17 | filed | <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> |
+| 2026-09-17 | filed | <a href="draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads…</a> |
+| 2026-09-17 | filed | <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> |
+| 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autofit/ep_analysis_level_compile_cache.md">EP: cache the compiled JAX likelihood on the Analysis across factor…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> |
 | 2026-09-16 | filed | <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of…</a> |
 | 2026-09-16 | filed | <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding…</a> |
 | 2026-09-16 | filed | <a href="draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> /…</a> |
 | 2026-09-16 | filed | <a href="draft/feature/autolens/coolest_pixel_grid_export.md">COOLEST: export MGE lens light and pixelized sources as pixel grids</a> |
-| 2026-09-16 | filed | <a href="draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md">Adaptive Delaunay mesh places two mesh pixels 0.001" apart — a…</a> |
-| 2026-09-15 | filed | <a href="draft/maintenance/howtofit/minimum_library_version_stale.md">The workspace staleness warning keys off a value documented never to…</a> |
-| 2026-09-15 | filed | <a href="draft/feature/pyautoheart/howto_real_settings_nightly.md">Nightly run of one HowTo tutorial per chapter at real settings</a> |
-| 2026-09-15 | filed | <a href="draft/docs/howtofit/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> |
 
 </details>
 

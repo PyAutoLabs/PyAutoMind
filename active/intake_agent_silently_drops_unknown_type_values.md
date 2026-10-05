@@ -12,6 +12,7 @@ Consequence: notify
 Witness: a pytest that feeds each of the four inputs above through the intake decision and asserts the written header equals the declared header, the path is under the declared target, and `Type: hygiene` raises/flags — red on main, green after the fix.
 Review-minutes: 0
 Unattended: ready
+Issued: 2026-10-05
 
 Observed across five /intake runs on 2026-09-16 (config-priors-drift follow-ups, config-yaml-comments prompt). The Intake (Conception) Agent, `PyAutoBrain/agents/conductors/intake/_intake.py`, mishandles declared headers in four ways, each requiring a hand fix of the written file:
 1. A declared `Type: hygiene` is not in WORK_TYPES (`agents/faculties/sizing/_sizing.py`, valid home is `maintenance`) and is DROPPED SILENTLY — the decision then infers `feature` or `docs` with no warning that the declaration was rejected. An unknown declared Type should be an explicit error or a visible "(declared: hygiene → unknown, using maintenance)" note.
