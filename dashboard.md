@@ -252,7 +252,7 @@ Use the start-dev skill. draft/research/pyautohands/git_docs.md
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/define_standard_responsive_sizing_for_organism_b.md">Define standard responsive sizing for organism boards</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/461">issue #461</a> — issued 2026-10-05 — library-dev</summary>
+<details><summary>📋 <a href="active/define_standard_responsive_sizing_for_organism_b.md">Define standard responsive sizing for organism boards</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/461">issue #461</a> — issued 2026-10-05 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/462">PyAutoBrain#462</a></summary>
 
 ```
 Use the start-dev skill. active/define_standard_responsive_sizing_for_organism_b.md
