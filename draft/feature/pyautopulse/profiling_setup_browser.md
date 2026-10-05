@@ -47,7 +47,7 @@ Tier: judge — merge mode: human /prm.
 
 Merged 2026-10-05: https://github.com/PyAutoLabs/PyAutoPulse/pull/11.
 Record: `complete/2026/10/profiling-setup-contract.md`. Reader v2 is available;
-the live registry stays v1 until the browser consumer migration. Phase 2 is merged; Phase 3 is next.
+the live registry stays v1 until the browser consumer migration. Phase 2 and project Phase 3a are merged; Pulse Phase 3b is PR #13.
 
 Suggested issue: `feat: accept setup-based profiling evidence`
 Suggested branch: `feature/profiling-setup-contract`
@@ -101,7 +101,8 @@ Suggested branch: `feature/profiling-setup-catalogue`
 
 ### Phase 3: Scientist-facing browsing (separate project and Pulse PRs)
 
-Suggested branches: `feature/profiling-setup-page` (project),
+Project Phase 3a merged: autolens_profiling#379; record `complete/2026/10/profiling-setup-page.md`.
+Pulse branch:
 `feature/profiling-setup-browser` (Pulse).
 
 - Reuse `PyAutoBrain/board/_theme.py`, including its existing Pulse SVG hero,

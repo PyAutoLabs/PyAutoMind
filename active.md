@@ -43,42 +43,26 @@
 - pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/281
 - resume: PR281 head6b7bd40 fixes report dependency and adds pinned current-incident diagnostic.141 targeted/1222 preceding full tests and expanded independent Sol review PASS. Hosted bounded replay37287631900 PASS33.666s, zero provenance errors; local fresh fit40.851s no-repro. Final-head CI both Python legs green. Latest integration37217670612 remains RED. Next human mergePR281 then fresh wheels/integration (Lens main advanced to dffea805). No production release.
 
-## profiling-setup-page
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/378
-- issued: 2026-10-05
-- prompt: active/profiling_setup_page.md
-- session: Codex; session ID unavailable
-- status: awaiting-merge
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-setup-page
-- repos:
-  - autolens_profiling: feature/profiling-setup-page
-- summary: Phase 3a of the approved profiling refactor; dataset/model/instrument setup browser using merged catalogue #377 and shared theme. Pulse front page follows separately.
-- authorization: live "$prm and continue" plus approved parent Phase 3 plan; human merge; no bulk profiling. Phase 2 shipping override does not authorize Phase 3 shipping.
-
-- progress: Project browser implemented with shared theme, dataset/model disclosures, selectors, verified lazy shards, history, missing coverage, linear scoped charts and evidence disclosures. Pulse front page follows in its own PR.
-- validation: 1061 full tests pass (5 skips); final 48 focused tests pass; final Chromium interaction/responsive/error-state suite passes; seven section smokes pass; Ruff and existing metadata/generation/Pulse checks pass; inline visual/code review complete.
-- previous-shipping-blocker: Heart RED `release validation FAILED (stage integrate)`; no task-specific #378 shipping override yet. Source remains uncommitted/unpushed.
-- pr-draft: .worktrees/profiling-setup-page/phase3-pr-body.md
-- previews: .worktrees/profiling-setup-page/browser-artifacts/setup-1280.png and setup-390.png
-
-- heart-red-override: Live user "I authroize, continue and do the next phase" responding to the explicit #378 development-shipping override request. Exact RED `release validation FAILED (stage integrate)`; 1061 full/48 final focused tests, Chromium interactions, seven smokes and inline review pass. Commit/push/PR only; merge separate, no release.
-
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/379
-- commit: e84086a
-
 ## profiling-setup-browser
 - issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/12
 - issued: 2026-10-05
 - prompt: active/profiling_setup_browser_frontpage.md
 - session: Codex; session ID unavailable
-- status: blocked
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-setup-browser
 - repos:
   - PyAutoPulse: feature/profiling-setup-browser
 - summary: Phase 3b implemented and reviewed: shared theme, compact campaign controls, setup routing and same-commit v2 evidence. 188 full tests; 15 final focused tests; Chromium and real-data render smoke PASS. Project UI #379 CI green, awaiting human merge.
 - authorization: user "I authroize, continue and do the next phase" plus approved parent plan. Human merge; no bulk compute. Ship-time Heart override remains separate for this task.
 
-- blocked-by: Task-specific development ship gate for Pulse #12. Heart RED `release validation FAILED (stage integrate)`; freeze clear. Implementation complete, uncommitted; no independent review claimed.
 - pr-draft: .worktrees/profiling-setup-browser/phase3b-pr-body.md
 - review: .worktrees/profiling-setup-browser/review.md
 - previews: .worktrees/profiling-setup-browser/browser-artifacts/pulse-1280.png and setup-390.png
+
+- heart-red-override:
+  - authorization: Live user “I authorize, merge prm and then cotniue” for Pulse #12; development ship and same-turn explicit merge on green CI; no release.
+  - reason: `release validation FAILED (stage integrate)` (2026-10-05T08:55:49.359202+00:00; score 60).
+  - gates: 188 full tests and 15 final focused PASS; Ruff, CLI/Chromium and real-data smoke PASS; inline code and visual review PASS; no independent review claimed.
+
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/13
+- commit: 3c7bed2

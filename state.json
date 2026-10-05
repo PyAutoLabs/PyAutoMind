@@ -2,22 +2,16 @@
   "schema_version": 1,
   "organ": "mind",
   "repo": "PyAutoMind",
-  "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-10-05T10:58:04Z",
+  "status": "yellow",
+  "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
+  "updated": "2026-10-05T11:29:57Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
-      "severity": "red",
-      "text": "Make Pulse a compact setup-oriented profiling front page \u2014 blocked",
-      "url": "https://github.com/PyAutoLabs/PyAutoPulse/issues/12",
-      "prompt": "Use the start-dev skill. active/profiling_setup_browser_frontpage.md"
-    },
-    {
       "severity": "yellow",
-      "text": "Browse profiling by dataset, model and instrument \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/379",
-      "prompt": "Use the start-dev skill. active/profiling_setup_page.md"
+      "text": "Make Pulse a compact setup-oriented profiling front page \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoPulse/pull/13",
+      "prompt": "Use the start-dev skill. active/profiling_setup_browser_frontpage.md"
     },
     {
       "severity": "yellow",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#608 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/608",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#611 \u2014 Shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/611",
       "prompt": null
     }
   ]

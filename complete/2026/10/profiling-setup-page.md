@@ -1,3 +1,15 @@
+# Profiling project setup browser
+
+Merged autolens_profiling#379 (4832679a61121291ea581c61f3f187b9cf3e6776), closes #378. Exact head e84086ae00129e9af4c2fbd0df47024e377622b1 passed lint run37298134702, all jobs successful. User explicitly authorized prm on 2026-10-05.
+
+Project page now routes dataset/model/instrument/configuration to exact captured profiling evidence, with shared theme, linear metric groups and collapsed qualification/evidence. Catalogue descriptors make source configurations readable. Original measurements/v1 payloads unchanged; archives remain unreviewed. No baseline execution or acceptance.
+
+Validation: 1061 full tests (5 skipped), 48 final focused tests, Chromium desktop/mobile/history/failure/keyboard checks, seven smokes, Ruff/metadata/Pulse contracts, inline code/visual review. Heart RED override recorded at ship; release remains blocked by `release validation FAILED (stage integrate)`.
+
+Parent Phase 3a complete. Pulse front-page consumer is separate #12; source taxonomy and Brain routing follow in Phase 4.
+
+## Original prompt
+
 # Browse profiling by dataset, model and instrument
 
 Type: feature
