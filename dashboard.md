@@ -258,7 +258,7 @@ Use the start-dev skill. active/cortex_test_worktree_symlink.md
 
 </details>
 
-<details><summary>📋 <a href="active/dashboard_prose_followup.md">Remove remaining dashboard-owned introductory prose</a> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/300">issue #300</a> — issued 2026-10-05 — library-dev</summary>
+<details><summary>📋 <a href="active/dashboard_prose_followup.md">Remove remaining dashboard-owned introductory prose</a> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/300">issue #300</a> — issued 2026-10-05 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/301">PyAutoHands#301</a>, <a href="https://github.com/PyAutoLabs/PyAutoEyes/pull/18">PyAutoEyes#18</a>, <a href="https://github.com/PyAutoLabs/PyAutoInsight/pull/6">PyAutoInsight#6</a></summary>
 
 ```
 Use the start-dev skill. active/dashboard_prose_followup.md

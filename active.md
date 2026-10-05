@@ -76,10 +76,14 @@
 - issued: 2026-10-05
 - prompt: active/dashboard_prose_followup.md
 - session: Codex (session ID unavailable)
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/301
+- library-pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/18
+- library-pr: https://github.com/PyAutoLabs/PyAutoInsight/pull/6
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dashboard-prose-followup
 - repos:
   - PyAutoHands: feature/dashboard-prose-followup
   - PyAutoEyes: feature/dashboard-prose-followup
   - PyAutoInsight: feature/dashboard-prose-followup
 - summary: Remove dashboard-owned tutorial prose found in the all-board live audit; shared-header stale renders refreshed.
+- resume: Human /prm for all three, then refresh and verify live Eyes/Hands/Insight. Hands472 / Eyes79 / Insight77 tests; lint/format, offline Insight, 265 Eyes URL checks, mobile/desktop text checks PASS. Heart STALE with no RED/YELLOW reasons.

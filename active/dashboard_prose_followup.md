@@ -22,3 +22,9 @@ On Heart, the text "Is it safe to release? See what needs attention, then copy a
 is unecessarily, another example of somehtin gI already know. Remove it. Scan this problem for all dashboards
 Hands has same issue "What the Hands shipped — a record of execution, newest first. Tap 📋 to put a command on your clipboard for an AI assistant chat."
 same for Nerves "Every config file and option across the libraries and the workspaces that override them — read-only." someone using a dashboard knows what it does.
+
+## Handoff
+
+PRs: Hands#301, Eyes#18, Insight#6. All 628 tests pass; lint/format, Insight offline contract, Eyes 265 live figure URLs and rendered mobile/desktop text checks pass. Heart STALE (PyAutoNerves rehearsal source moved), no RED/YELLOW reasons. No merge grant; human /prm.
+
+Live audit: all 13 dashboards inspected; stale shared-header renderings refreshed on Cortex, Hands, Memory, Nerves, Gut, Eyes and Scientist. Heart/Hands/Nerves quoted introductions are absent live. Eyes custom introduction and Hands/Insight secondary guidance are removed in these PRs, not yet published. Evidence: tmp/dashboard-prose-followup/live-audit.json and browser captures.
