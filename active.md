@@ -28,12 +28,21 @@
 - issued: 2026-10-05
 - prompt: active/profiling_setup_contract.md
 - session: Codex; session ID unavailable
-- status: awaiting-input (Heart RED shipping gate)
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-setup-contract
 - repos:
   - PyAutoPulse: feature/profiling-setup-contract
 - summary: Phase 1 of the approved full setup-first profiling refactor; v2 contract reader with v1 compatibility. Parent draft/feature/pyautopulse/profiling_setup_browser.md.
 - authorization: human approved full plan and coordination on 2026-10-05; merges remain human /prm.
+- validation: 184 tests passed; Ruff lint/format and offline snapshot/dashboard/Brain-state checks passed. No separate independent review required or claimed on this human-approved path.
+- heart-red-override:
+  - authorization: user "I authorize" (2026-10-05), responding to the explicit development-only shipping request for Pulse #10.
+  - reasons: "release validation FAILED (stage integrate)"
+  - scope: commit, push, pending-release PR only; merge separate, no release/rehearsal/CI bypass.
+  - passed-gates: 184 tests; Ruff lint/format; pyauto-pulse check --offline.
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/11
+- head: d9d2377
+- resume: phase 1 shipped to PR #11, awaiting human /prm and green CI. Next is project setup catalogue/exporter (parent plan phase 2), then browser and script/wiki/assistant migration. No merge authorized.
 
 ## community-board-readability
 - issue: https://github.com/PyAutoLabs/PyAutoEars/issues/9
@@ -43,6 +52,3 @@
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-board-readability
 - repos:
   - PyAutoEars: feature/community-board-readability
-- validation: 184 tests passed; ruff check/format clean; pyauto-pulse check --offline passed against production v1 snapshot and Brain state contract.
-- heart: RED, exact reason `release validation FAILED (stage integrate)` from vitals readiness --json; override not yet authorized after surfacing this reason.
-- resume: implementation complete and staged, not committed/pushed. Review diff in .worktrees/profiling-setup-contract/.scratch/phase-1.patch; prepared PR body in .scratch/pr-body.md. On task-specific human RED development override, record all four override sinks then commit/push/open pending-release PR. Human merge remains separate. Parent full refactor continues after this reader phase lands.

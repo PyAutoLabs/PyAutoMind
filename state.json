@@ -2,15 +2,15 @@
   "schema_version": 1,
   "organ": "mind",
   "repo": "PyAutoMind",
-  "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-05T08:41:56Z",
+  "status": "yellow",
+  "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
+  "updated": "2026-10-05T08:44:41Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
-      "severity": "red",
-      "text": "Accept setup-based profiling evidence \u2014 awaiting-input (Heart RED shipping gate)",
-      "url": "https://github.com/PyAutoLabs/PyAutoPulse/issues/10",
+      "severity": "yellow",
+      "text": "Accept setup-based profiling evidence \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoPulse/pull/11",
       "prompt": "Use the start-dev skill. active/profiling_setup_contract.md"
     },
     {
