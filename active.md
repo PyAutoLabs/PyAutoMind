@@ -28,7 +28,7 @@
 - issued: 2026-10-04
 - prompt: active/restore_dashboard_green.md
 - session: Codex (GPT-6), session ID unavailable; resumed 2026-10-05
-- status: library-shipped, awaiting-merge; bounded JAX investigation in progress
+- status: library-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/restore-dashboard-green
 - repos:
   - PyAutoHeart: feature/restore-dashboard-green
@@ -41,7 +41,7 @@
   - validation: 119 focused and1222 full Heart tests PASS; actual empty-venv emitter replay PASS retaining22 adverse rows; independent Sol CLEAN; no scientific API/smoke impact.
 - library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/281
 - pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/281
-- resume: PR281 head6b7bd40 fixes report dependency and adds pinned current-incident diagnostic.141 targeted/1222 preceding full tests and expanded independent Sol review PASS. Hosted bounded replay37287631900 running; local fresh fit40.851s no-repro. Latest integration37217670612 remains RED. Human merge required; no release.
+- resume: PR281 head6b7bd40 fixes report dependency and adds pinned current-incident diagnostic.141 targeted/1222 preceding full tests and expanded independent Sol review PASS. Hosted bounded replay37287631900 PASS33.666s, zero provenance errors; local fresh fit40.851s no-repro. Final-head CI both Python legs green. Latest integration37217670612 remains RED. Next human mergePR281 then fresh wheels/integration (Lens main advanced to dffea805). No production release.
 
 ## profiling-setup-catalogue
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/376
