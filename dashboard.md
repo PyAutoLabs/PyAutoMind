@@ -260,7 +260,7 @@ Use the start-dev skill. active/nnls_memo_scattered_backoff.md
 
 </details>
 
-<details><summary>📋 <a href="active/profiling_setup_browser_frontpage.md">Make Pulse a compact setup-oriented profiling front page</a> — <a href="https://github.com/PyAutoLabs/PyAutoPulse/issues/12">issue #12</a> — issued 2026-10-05 — workspace-dev</summary>
+<details><summary>📋 <a href="active/profiling_setup_browser_frontpage.md">Make Pulse a compact setup-oriented profiling front page</a> — <a href="https://github.com/PyAutoLabs/PyAutoPulse/issues/12">issue #12</a> — issued 2026-10-05 — blocked</summary>
 
 ```
 Use the start-dev skill. active/profiling_setup_browser_frontpage.md

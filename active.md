@@ -71,9 +71,14 @@
 - issued: 2026-10-05
 - prompt: active/profiling_setup_browser_frontpage.md
 - session: Codex; session ID unavailable
-- status: workspace-dev
+- status: blocked
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-setup-browser
 - repos:
   - PyAutoPulse: feature/profiling-setup-browser
-- summary: Approved Phase 3b: shared theme, campaign copy controls, compact review metadata, setup browser and v2 registration. Producer #377 merged; project UI #379 separate.
+- summary: Phase 3b implemented and reviewed: shared theme, compact campaign controls, setup routing and same-commit v2 evidence. 188 full tests; 15 final focused tests; Chromium and real-data render smoke PASS. Project UI #379 CI green, awaiting human merge.
 - authorization: user "I authroize, continue and do the next phase" plus approved parent plan. Human merge; no bulk compute. Ship-time Heart override remains separate for this task.
+
+- blocked-by: Task-specific development ship gate for Pulse #12. Heart RED `release validation FAILED (stage integrate)`; freeze clear. Implementation complete, uncommitted; no independent review claimed.
+- pr-draft: .worktrees/profiling-setup-browser/phase3b-pr-body.md
+- review: .worktrees/profiling-setup-browser/review.md
+- previews: .worktrees/profiling-setup-browser/browser-artifacts/pulse-1280.png and setup-390.png
