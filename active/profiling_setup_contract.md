@@ -3,11 +3,13 @@
 Type: feature
 Target: pyautopulse
 Repos: PyAutoPulse
-Difficulty: large
+Difficulty: medium
 Consequence: judge
 Autonomy: human-required
 Priority: high
 Filed: 2026-10-05
+Issued: 2026-10-05
+Issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/10
 
 Primary repo: @PyAutoPulse
 Classification: workspace/organ; no library changes.
@@ -61,3 +63,7 @@ the setup browser itself is a later phase. No measurements are submitted.
 Original follow-up authorization (verbatim):
 
 > yeah I authorize you to contonue, can you even remove its worttree?
+
+Routing correction: the Feature CLI inferred library for this single-organ task.
+PyAutoPulse is a stdlib/YAML organ, not a scientific library; use the approved
+standalone workspace/organ route. This is the bounded reader phase of the epic.
