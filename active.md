@@ -70,3 +70,16 @@
   - euclid_strong_lens_modeling_pipeline: feature/vis-lp-inspection-bundle
 - summary: Add an explicit vis_lp-only inspection mode that combines the main normal-model output tree with the 100-lens SED/Sersic tree, without requiring vis_pix or selecting the other 200 main-tree lenses.
 - resume: Implemented + committed locally as c6b514d on feature/vis-lp-inspection-bundle (133 tests green, not pushed). Human reviews diff (scratchpad part1_diff.txt) before ship_workspace; then sync tooling to the euclid_dr1 science clone/RAL and submit the 4,922-tile vis_lp-only bundle (OUTPUT_DIR=dr1_full, INITIAL_SEARCH_NAME=vis_lp, DATASET_NAMES_PATH=all, TAR_TO set) as a Cortex run.
+
+## dashboard-prose-followup
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/300
+- issued: 2026-10-05
+- prompt: active/dashboard_prose_followup.md
+- session: Codex (session ID unavailable)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dashboard-prose-followup
+- repos:
+  - PyAutoHands: feature/dashboard-prose-followup
+  - PyAutoEyes: feature/dashboard-prose-followup
+  - PyAutoInsight: feature/dashboard-prose-followup
+- summary: Remove dashboard-owned tutorial prose found in the all-board live audit; shared-header stale renders refreshed.
