@@ -47,7 +47,7 @@ Tier: judge — merge mode: human /prm.
 
 Merged 2026-10-05: https://github.com/PyAutoLabs/PyAutoPulse/pull/11.
 Record: `complete/2026/10/profiling-setup-contract.md`. Reader v2 is available;
-the live registry stays v1 until phase 2. Next implementation phase is phase 2.
+the live registry stays v1 until the browser consumer migration. Phase 2 is merged; Phase 3 is next.
 
 Suggested issue: `feat: accept setup-based profiling evidence`
 Suggested branch: `feature/profiling-setup-contract`
@@ -70,7 +70,12 @@ Suggested branch: `feature/profiling-setup-contract`
 - Test v1/v2 coexistence, unknown versions, empty projects, invalid references,
   units, non-finite values, unsafe evidence paths, duplicate IDs and mismatches.
 
-### Phase 2: Project catalogue and complete exporter (autolens_profiling)
+### Phase 2: Project catalogue and complete exporter (autolens_profiling) — COMPLETE
+
+Merged 2026-10-05: https://github.com/PyAutoLabs/autolens_profiling/pull/377.
+Record: `complete/2026/10/profiling-setup-catalogue.md`. Companion v2 catalogue
+and lazy evidence shards are available; existing v1 consumers remain supported.
+
 
 Suggested issue: `feat: publish a complete profiling setup catalogue`
 Suggested branch: `feature/profiling-setup-catalogue`

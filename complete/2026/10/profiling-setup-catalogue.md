@@ -1,3 +1,32 @@
+# Profiling setup catalogue — Phase 2
+
+Merged https://github.com/PyAutoLabs/autolens_profiling/pull/377 at
+dcfa056e0bc6d7665740dd17284c7e78024eb878 (head 33b23b2a24f2c71b253619bcd1dac6129c37863d).
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/376.
+
+Published a registry, stdlib multi-axis evidence adapters, 708-file inventory,
+20,709 measurements in 508 independently valid setup shards, 183 script routes,
+435 explicitly unmeasured planned slots and exact source anchors. Preserves v1
+feed bytes and historical results; legacy records remain unreviewed. Unknown
+metadata, static memory estimates and unbound hazards are explicit, not invented
+scientific acceptance. Catalogue docs explain same-commit evidence and lazy shards.
+
+Validation: 1,055 local tests passed, 5 skipped; 26 catalogue tests; seven section
+smokes; Ruff, README/wiki/layout/wall contracts; all v2 index/shards validated by
+Pulse; hashes and unchanged historical artifacts checked. Inline review passed,
+no independent review claimed. GitHub run 37293284247 and lint job 111708506216
+passed every step on the exact head; sole eligible workflow run, PR CLEAN.
+
+Heart remained RED: `release validation FAILED (stage integrate)`. Live user
+"$prm and continue" authorized this task's development override and human merge;
+recorded in issue, PR body, active row and autonomy log. No release authorization.
+
+Phase 3 continues with project browser task profiling-setup-page, followed by the
+Pulse browser PR. No scientific scripts moved and no baseline campaign executed.
+Session logs/PR draft retained in .worktree-archives/profiling-setup-catalogue-2026-10-05.
+
+## Original prompt
+
 # Publish the complete profiling setup catalogue
 
 Type: feature
