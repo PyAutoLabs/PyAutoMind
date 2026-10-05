@@ -16,7 +16,6 @@ write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
 - [catalogue-inspection-before-vis-pix](#catalogue-inspection-before-vis-pix)
 - [bootstrap-smoke-codex](#bootstrap-smoke-codex)
 - [colab-refinement-throughout](#colab-refinement-throughout)
-- [heart-dashboard-remaining](#heart-dashboard-remaining)
 
 <!-- toc:end -->
 
