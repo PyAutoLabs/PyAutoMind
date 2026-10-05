@@ -9,7 +9,8 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: normal
-Status: formalised
+Status: active
+Issued: 2026-10-05
 Consequence: judge
 Review-minutes: 20
 Unattended: ready

@@ -22,3 +22,15 @@
   - euclid_strong_lens_modeling_pipeline: feature/vis-lp-inspection-bundle
 - summary: Add an explicit vis_lp-only inspection mode that combines the main normal-model output tree with the 100-lens SED/Sersic tree, without requiring vis_pix or selecting the other 200 main-tree lenses.
 - resume: Implemented + committed locally as c6b514d on feature/vis-lp-inspection-bundle (133 tests green, not pushed). Human reviews diff (scratchpad part1_diff.txt) before ship_workspace; then sync tooling to the euclid_dr1 science clone/RAL and submit the 4,922-tile vis_lp-only bundle (OUTPUT_DIR=dr1_full, INITIAL_SEARCH_NAME=vis_lp, DATASET_NAMES_PATH=all, TAR_TO set) as a Cortex run.
+
+## standard-board-sizing
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/461
+- issued: 2026-10-05
+- prompt: active/define_standard_responsive_sizing_for_organism_b.md
+- session: Codex (session ID unavailable)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/standard-board-sizing
+- repos:
+  - PyAutoBrain: feature/standard-board-sizing
+- summary: Approved Brain-only responsive sizing standard (1240px, responsive gutters, 65ch prose), 13-board adoption audit and browser evidence. Consumer changes are separate follow-ups. Tier judge; human /prm.
+- resume: Plan approved; issue and worktree created. Implement shared theme and adoption report, validate, then ship_library to open PR.
