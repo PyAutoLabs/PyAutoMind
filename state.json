@@ -2,14 +2,14 @@
   "schema_version": 1,
   "organ": "mind",
   "repo": "PyAutoMind",
-  "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-05T11:29:57Z",
+  "status": "red",
+  "headline": "RED \u2014 24 picks \u00b7 4 in flight",
+  "updated": "2026-10-05T11:31:49Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
-      "severity": "yellow",
-      "text": "Make Pulse a compact setup-oriented profiling front page \u2014 awaiting-merge",
+      "severity": "red",
+      "text": "Make Pulse a compact setup-oriented profiling front page \u2014 blocked",
       "url": "https://github.com/PyAutoLabs/PyAutoPulse/pull/13",
       "prompt": "Use the start-dev skill. active/profiling_setup_browser_frontpage.md"
     },

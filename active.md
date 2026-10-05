@@ -48,7 +48,7 @@
 - issued: 2026-10-05
 - prompt: active/profiling_setup_browser_frontpage.md
 - session: Codex; session ID unavailable
-- status: awaiting-merge
+- status: blocked
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-setup-browser
 - repos:
   - PyAutoPulse: feature/profiling-setup-browser
@@ -66,3 +66,6 @@
 
 - workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/13
 - commit: 3c7bed2
+
+- blocked-by: PR #13 lint run37303257792 fails lychee on installed node_modules/playwright/README.md; Python/Chromium/offline and refresh pass. prm stopped on red, no rerun or code edits. Correct link-check input scope before resuming.
+- ci-log: .worktrees/profiling-setup-browser/pulse-ci-failure.log
