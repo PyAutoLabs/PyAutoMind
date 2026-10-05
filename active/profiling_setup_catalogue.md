@@ -75,3 +75,44 @@ Do the next phase
 
 Routing correction: no PyAutoLens library edit or dependency; standalone workspace
 phase per the parent approved plan. The CLI heuristic is not the scope authority.
+
+## Implementation checkpoint — 2026-10-05
+
+Implemented in the registered worktree: catalogue registry and stdlib adapters,
+exact metric JSON pointers checked against original sources, explicit reference
+candidates, metadata with unknown reasons, baseline matrix and source inventory.
+The index exports 20,709 measurements through 508 independently v2-valid shards;
+708 evidence files and 183 script entry points are inventoried. It retains 8
+static memory estimates and 12 hazards with unknown applicability separately.
+435 baseline slots remain explicitly not measured. No acceptance, recommendation,
+baseline run or temporal comparison is manufactured.
+
+Transport refinement: a monolithic export was too large for initial browser
+loading. The root index (about 2.2 MB) contains setups, candidate references,
+inventory and manifests; detailed measurement shards total about 44 MB and are
+loaded only for a chosen setup. Consumers resolve shard paths relative to the
+index, evidence paths relative to the same repository revision, and deduplicate
+records by ID. Hashes/counts verified across every source and shard.
+
+Contract constraint found during implementation: v2 selections require a measured
+software identity even for missing slots. Future baseline coverage therefore
+uses the `planned_cells` extension until a measured stack exists; no fake software
+version is supplied to satisfy the validator. coverage.expected.cells counts only
+v2 selections, with planned_slots separate. A later reader iteration may promote
+this extension, but current independent v2 validation passes.
+
+Existing v1 dashboard files and all historical evidence are byte-unchanged.
+Integration covers build_dashboard regeneration/check, lint workflow independent
+Pulse validation, and Pages staging. No library API or scientific script changes.
+
+26 targeted catalogue tests pass. Full misc suite: 1,055 passed, 5 skipped, 17 warnings. All seven existing section
+smokes pass; final rerun log is in the task worktree. Ruff, README, wiki, result
+layout, wall-submit contracts, deterministic generation and independent Pulse
+validation pass. Inline review covered provenance, selection/failure semantics,
+source anchors, shard transport and deployment. No claim of independent review.
+
+Ship gate: Heart still returns RED, exact reason `release validation FAILED
+(stage integrate)` (2026-10-05). Freeze is clear. The earlier override covered
+Pulse#10 only. Source commit/push/PR await a new live override for #376 under
+Brain AUTONOMY.md "Human override for Heart RED (development only)". PR body is
+prepared at `.worktrees/profiling-setup-catalogue/phase2-pr-body.md`.

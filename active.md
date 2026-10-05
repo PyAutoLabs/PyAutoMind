@@ -48,9 +48,14 @@
 - issued: 2026-10-05
 - prompt: active/profiling_setup_catalogue.md
 - session: Codex; session ID unavailable
-- status: workspace-dev
+- status: awaiting-heart-override
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-setup-catalogue
 - repos:
   - autolens_profiling: feature/profiling-setup-catalogue
 - summary: Phase 2 of approved setup-first profiling refactor: registry, multi-axis adapters, complete inventory and deterministic v2 catalogue beside v1 feed. Pulse reader #11 merged.
 - authorization: user "Do the next phase"; parent detailed plan already approved; human merge, no bulk compute.
+
+- progress: Implementation and inline review complete; v2 registry/exporter, 708 source files, 20,709 measurements, 508 lazy shards, 435 planned baseline slots. Existing results/v1 files unchanged.
+- validation: 26 catalogue tests, 1,055 full-suite tests passed (5 skipped), seven section smokes, Ruff and metadata/layout checks; Pulse validates index and every shard. Final full-suite rerun result in worktree phase2-pytest-final.log.
+- shipping-blocker: Heart RED `release validation FAILED (stage integrate)` (2026-10-05); no task-specific override yet. Prior Pulse#10 override does not authorize #376.
+- pr-draft: .worktrees/profiling-setup-catalogue/phase2-pr-body.md; source uncommitted/unpushed pending live override. No PR yet.
