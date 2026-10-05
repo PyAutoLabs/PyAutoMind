@@ -47,8 +47,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/12
 - issued: 2026-10-05
 - prompt: active/profiling_setup_browser_frontpage.md
-- session: Codex; session ID unavailable
-- status: blocked
+- session: Codex (GPT-6), session ID unavailable; resumed repair 2026-10-05
+- status: workspace-dev, repairing PR13
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-setup-browser
 - repos:
   - PyAutoPulse: feature/profiling-setup-browser
@@ -69,3 +69,5 @@
 
 - blocked-by: PR #13 lint run37303257792 fails lychee on installed node_modules/playwright/README.md; Python/Chromium/offline and refresh pass. prm stopped on red, no rerun or code edits. Correct link-check input scope before resuming.
 - ci-log: .worktrees/profiling-setup-browser/pulse-ci-failure.log
+
+- current-repair: User explicitly requested PR13 CI and conflict repair in current Heart RED discussion; original request and bounded plan recorded in active prompt. Development repair/push only, no merge/release authorization assumed.

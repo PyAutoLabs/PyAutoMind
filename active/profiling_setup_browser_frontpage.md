@@ -84,3 +84,17 @@ Original request (verbatim):
 I authroize, continue and do the next phase
 
 Routing correction: the CLI name heuristic says library; this is the approved standalone organ/workspace phase, no scientific/library API edits. Relevant architecture and prior decisions are already in the parent plan and phase records.
+
+### 2026-10-05 repair continuation in the existing PR
+
+Original user request (verbatim):
+can we start fixing stuff? Also can this be fixed: [Pulse \#13](<https://github.com/PyAutoLabs/PyAutoPulse/pull/13>) remains unmerged:
+
+- CI still fails at `lychee (markdown link-rot)` on Playwright’s vendor documentation.
+- GitHub now also reports merge conflicts.
+
+Current request authorizes repair of existing Pulse issue12/PR13 in this session. Exact known Heart RED remains `release validation FAILED (stage integrate)`. Development repair, tests and updating the same PR only; no new merge or release authority inferred from the prior-session grant.
+
+Plan: resume clean feature/profiling-setup-browser at3c7bed2, same task claim and retained worktree; merge current origin/main without rewriting history. Resolve generated receipt/snapshot/dashboard conflicts by feature's normal v2 ingest at current project commit, preserving exact captured provenance. Limit lychee inputs to tracked project Markdown using a null-delimited array; keep existing authored-document exclusions. Run Ruff, full pytest, offline state/board verification, browser harness and real lychee scope check as available. Push only tested repair, judge exact-head CI once ready. Tier undeclared, human merge.
+
+Root: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-setup-browser/PyAutoPulse. Same Mind task retained; no independent duplicate issue. Original feature plan remains approved. Brain BugDecision config-error/single-repo; fixing locus .github/workflows/lint.yml plus generated conflict reconciliation.
