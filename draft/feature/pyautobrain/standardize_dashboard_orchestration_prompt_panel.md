@@ -84,3 +84,7 @@ Give every organism dashboard a consistent panel near the top for copying a gene
 The user combined the shared-standards guidance with this panel task on 2026-10-05. The earlier intake-only instruction described the original filing, not a permanent prohibition on starting this work. Run start-dev on this combined prompt, audit the registered board owners and work destinations, and present the concrete shared design and bounded phases before source edits. The user has approved combining these requirements; do not ask again whether to combine them. Implementation approval must cover the actual affected repos and rollout. Declared tier: judge; merge mode: human /prm.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-10-05 from file:tmp/dashboard-prompt-panel.md -->
+
+## Execution progress
+
+User approved execution with “ok go”. Phase 1 is active as `active/shared_orchestration_panel_core.md` / PyAutoBrain#465, branch `feature/orchestration-panel-core`. It delivers the shared API and canonical standards index. Subsequent phases adopt Ears/Heart and remaining boards, add Mind-generated instruction discovery, and expose it through Scientist. The combined scope remains approved; dependent consumers wait for the shared API merge (human /prm).
