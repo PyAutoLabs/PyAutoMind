@@ -40,3 +40,15 @@
   - scope: causal investigation, tested correction, commit/push/pending-release PR; human merge separate; no production release or gate bypass.
   - validation: pending current repair; prior compatibility phase remains merged and preserved in completion records.
 - resume: e62b080 starting head; latest run37217670612 has 19 timeouts and3 aggregator errors; report emitter failed import yaml. See active prompt continuation for bounded plan.
+
+## profiling-setup-catalogue
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/376
+- issued: 2026-10-05
+- prompt: active/profiling_setup_catalogue.md
+- session: Codex; session ID unavailable
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-setup-catalogue
+- repos:
+  - autolens_profiling: feature/profiling-setup-catalogue
+- summary: Phase 2 of approved setup-first profiling refactor: registry, multi-axis adapters, complete inventory and deterministic v2 catalogue beside v1 feed. Pulse reader #11 merged.
+- authorization: user "Do the next phase"; parent detailed plan already approved; human merge, no bulk compute.
