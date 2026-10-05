@@ -1,3 +1,17 @@
+# Shared banner and navigation: PyAutoEyes
+
+Merged https://github.com/PyAutoLabs/PyAutoEyes/pull/17 (857161d2e5e75213d92ef058636cdde8cd52c92a), closing https://github.com/PyAutoLabs/PyAutoEyes/issues/16.
+
+The board now uses the shared logo banner followed immediately by prominent section links. Counts remain optional and owned by this board. Existing evidence, freshness safeguards and action payloads are preserved.
+
+Validation: 79 passed in 1.29s; ten viewport/theme browser cases; all workflow runs and every CI job on 0890d526461ce7dfccdf0b13e9167a21486e3021 succeeded. Heart GREEN, 100, at 2026-10-05T17:25:39Z.
+
+Local evidence: tmp/board-navigation/ (test logs, CI verdict and renders/PyAutoEyes/ browser screenshots).
+
+- pending-release: PyAutoEyes@https://github.com/PyAutoLabs/PyAutoEyes/pull/17
+
+## Original prompt
+
 # Adopt shared board navigation in PyAutoEyes
 
 Type: feature

@@ -1,3 +1,17 @@
+# Shared banner and navigation: PyAutoHeart
+
+Merged https://github.com/PyAutoLabs/PyAutoHeart/pull/283 (57a4822a24e18f45ef69de5fb7c026bc24c2564f), closing https://github.com/PyAutoLabs/PyAutoHeart/issues/282.
+
+The board now uses the shared logo banner followed immediately by prominent section links. Counts remain optional and owned by this board. Existing evidence, freshness safeguards and action payloads are preserved.
+
+Validation: 1227 passed in 71.20s (0:01:11); ten viewport/theme browser cases; all workflow runs and every CI job on 0e3234894e760cf1b2ec02bc8bbb129155cb9803 succeeded. Heart GREEN, 100, at 2026-10-05T17:25:39Z.
+
+Local evidence: tmp/board-navigation/ (test logs, CI verdict and renders/PyAutoHeart/ browser screenshots).
+
+- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/283
+
+## Original prompt
+
 # Adopt shared board navigation in PyAutoHeart
 
 Type: feature

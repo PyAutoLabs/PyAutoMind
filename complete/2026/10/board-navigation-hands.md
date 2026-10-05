@@ -1,3 +1,17 @@
+# Shared banner and navigation: PyAutoHands
+
+Merged https://github.com/PyAutoLabs/PyAutoHands/pull/299 (51fa335a320dac658337b1cd1ef4ebb4f3ed07e9), closing https://github.com/PyAutoLabs/PyAutoHands/issues/298.
+
+The board now uses the shared logo banner followed immediately by prominent section links. Counts remain optional and owned by this board. Existing evidence, freshness safeguards and action payloads are preserved.
+
+Validation: 472 passed in 154.26s (0:02:34); ten viewport/theme browser cases; all workflow runs and every CI job on 4e27f89eef85941f5368bcf0e592b0bfb7fc019a succeeded. Heart GREEN, 100, at 2026-10-05T17:25:39Z.
+
+Local evidence: tmp/board-navigation/ (test logs, CI verdict and renders/PyAutoHands/ browser screenshots).
+
+- pending-release: PyAutoHands@https://github.com/PyAutoLabs/PyAutoHands/pull/299
+
+## Original prompt
+
 # Adopt shared board navigation in PyAutoHands
 
 Type: feature

@@ -1,3 +1,17 @@
+# Shared banner and navigation: PyAutoEars
+
+Merged https://github.com/PyAutoLabs/PyAutoEars/pull/12 (90b73b261bdbb011673d331e6dee43a0c1d0ed9a), closing https://github.com/PyAutoLabs/PyAutoEars/issues/11.
+
+The board now uses the shared logo banner followed immediately by prominent section links. Counts remain optional and owned by this board. Existing evidence, freshness safeguards and action payloads are preserved.
+
+Validation: 71 passed in 0.23s; ten viewport/theme browser cases; all workflow runs and every CI job on 1fa5b027a253fd752ec62f4961351442da67f0e2 succeeded. Heart GREEN, 100, at 2026-10-05T17:25:39Z.
+
+Local evidence: tmp/board-navigation/ (test logs, CI verdict and renders/PyAutoEars/ browser screenshots).
+
+- pending-release: PyAutoEars@https://github.com/PyAutoLabs/PyAutoEars/pull/12
+
+## Original prompt
+
 # Adopt shared board navigation in PyAutoEars
 
 Type: feature

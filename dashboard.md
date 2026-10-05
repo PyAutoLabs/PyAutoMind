@@ -42,11 +42,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 13 |
+| [In flight](#in-flight) (`active/`) | 3 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 6 |
 | [Planned](#planned) (`planned.md`) | 7 |
-| [Backlog](#backlog) (`draft/`) | 234 |
+| [Backlog](#backlog) (`draft/`) | 231 |
 
 > **No batch in flight.**
 
@@ -252,87 +252,7 @@ Use the start-dev skill. draft/research/pyautohands/git_docs.md
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/board_navigation_ears.md">Adopt shared board navigation in PyAutoEars</a> — <a href="https://github.com/PyAutoLabs/PyAutoEars/issues/11">issue #11</a> — issued 2026-10-05 — library-shipped — PRs: <a href="https://github.com/PyAutoLabs/PyAutoEars/pull/12">PyAutoEars#12</a> — ⏳ pending release: PyAutoEars</summary>
-
-```
-Use the start-dev skill. active/board_navigation_ears.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/board_navigation_eyes.md">Adopt shared board navigation in PyAutoEyes</a> — <a href="https://github.com/PyAutoLabs/PyAutoEyes/issues/16">issue #16</a> — issued 2026-10-05 — library-shipped — PRs: <a href="https://github.com/PyAutoLabs/PyAutoEyes/pull/17">PyAutoEyes#17</a> — ⏳ pending release: PyAutoEyes</summary>
-
-```
-Use the start-dev skill. active/board_navigation_eyes.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/board_navigation_gut.md">Adopt shared board navigation in PyAutoGut</a> — <a href="https://github.com/PyAutoLabs/PyAutoGut/issues/21">issue #21</a> — issued 2026-10-05 — library-shipped — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGut/pull/22">PyAutoGut#22</a> — ⏳ pending release: PyAutoGut</summary>
-
-```
-Use the start-dev skill. active/board_navigation_gut.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/board_navigation_hands.md">Adopt shared board navigation in PyAutoHands</a> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/298">issue #298</a> — issued 2026-10-05 — library-shipped — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/299">PyAutoHands#299</a> — ⏳ pending release: PyAutoHands</summary>
-
-```
-Use the start-dev skill. active/board_navigation_hands.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/board_navigation_heart.md">Adopt shared board navigation in PyAutoHeart</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/282">issue #282</a> — issued 2026-10-05 — library-shipped — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/283">PyAutoHeart#283</a> — ⏳ pending release: PyAutoHeart</summary>
-
-```
-Use the start-dev skill. active/board_navigation_heart.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/board_navigation_insight.md">Adopt shared board navigation in PyAutoInsight</a> — <a href="https://github.com/PyAutoLabs/PyAutoInsight/issues/4">issue #4</a> — issued 2026-10-05 — library-shipped — PRs: <a href="https://github.com/PyAutoLabs/PyAutoInsight/pull/5">PyAutoInsight#5</a> — ⏳ pending release: PyAutoInsight</summary>
-
-```
-Use the start-dev skill. active/board_navigation_insight.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/board_navigation_memory.md">Adopt shared board navigation in PyAutoMemory</a> — <a href="https://github.com/PyAutoLabs/PyAutoMemory/issues/115">issue #115</a> — issued 2026-10-05 — library-shipped — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMemory/pull/116">PyAutoMemory#116</a> — ⏳ pending release: PyAutoMemory</summary>
-
-```
-Use the start-dev skill. active/board_navigation_memory.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/board_navigation_nerves.md">Adopt shared board navigation in PyAutoNerves</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/185">issue #185</a> — issued 2026-10-05 — library-shipped — PRs: <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/186">PyAutoNerves#186</a> — ⏳ pending release: PyAutoNerves</summary>
-
-```
-Use the start-dev skill. active/board_navigation_nerves.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/board_navigation_pulse.md">Adopt shared board navigation in PyAutoPulse</a> — <a href="https://github.com/PyAutoLabs/PyAutoPulse/issues/14">issue #14</a> — issued 2026-10-05 — library-shipped — PRs: <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/15">PyAutoPulse#15</a> — ⏳ pending release: PyAutoPulse</summary>
-
-```
-Use the start-dev skill. active/board_navigation_pulse.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/board_navigation_scientist.md">Adopt shared board navigation in PyAutoScientist</a> — <a href="https://github.com/PyAutoLabs/PyAutoScientist/issues/42">issue #42</a> — issued 2026-10-05 — library-shipped — PRs: <a href="https://github.com/PyAutoLabs/PyAutoScientist/pull/43">PyAutoScientist#43</a> — ⏳ pending release: PyAutoScientist</summary>
-
-```
-Use the start-dev skill. active/board_navigation_scientist.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/niek_full_style_review.md">Full Euclid style coverage and Niek manuscript review</a> — <a href="https://github.com/Jammy2211/euclid_assistant/issues/12">issue #12</a> — issued 2026-10-05 — awaiting-merge</summary>
+<details><summary>📋 <a href="active/niek_full_style_review.md">Full Euclid style coverage and Niek manuscript review</a> — <a href="https://github.com/Jammy2211/euclid_assistant/issues/12">issue #12</a> — issued 2026-10-05 — awaiting-merge — PRs: <a href="https://github.com/Jammy2211/euclid_assistant/pull/13">euclid_assistant#13</a></summary>
 
 ```
 Use the start-dev skill. active/niek_full_style_review.md
@@ -417,17 +337,17 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoEars**
 
-- [PyAutoEars#12](https://github.com/PyAutoLabs/PyAutoEars/pull/12) — `active/board_navigation_ears.md`
+- [PyAutoEars#12](https://github.com/PyAutoLabs/PyAutoEars/pull/12) — `complete/2026/10/board-navigation-ears.md`
 - [PyAutoEars#10](https://github.com/PyAutoLabs/PyAutoEars/pull/10) — `complete/2026/10/community-board-readability.md`
 - [PyAutoEars#2](https://github.com/PyAutoLabs/PyAutoEars/pull/2) — `complete/2026/10/ears-bootstrap.md`
 
 **PyAutoEyes**
 
-- [PyAutoEyes#17](https://github.com/PyAutoLabs/PyAutoEyes/pull/17) — `active/board_navigation_eyes.md`
 - [PyAutoEyes#3](https://github.com/PyAutoLabs/PyAutoEyes/pull/3) — `complete/2026/09/eyes-board-conductor-registry.md`
 - [PyAutoEyes#5](https://github.com/PyAutoLabs/PyAutoEyes/pull/5) — `complete/2026/09/eyes-fit-cti-instances.md`
 - [PyAutoEyes#4](https://github.com/PyAutoLabs/PyAutoEyes/pull/4) — `complete/2026/09/eyes-galaxy-instance.md`
 - [PyAutoEyes#2](https://github.com/PyAutoLabs/PyAutoEyes/pull/2) — `complete/2026/09/eyes-organ-skeleton.md`
+- [PyAutoEyes#17](https://github.com/PyAutoLabs/PyAutoEyes/pull/17) — `complete/2026/10/board-navigation-eyes.md`
 - [PyAutoEyes#13](https://github.com/PyAutoLabs/PyAutoEyes/pull/13) — `complete/2026/10/lint-lychee-exclude-blob.md`
 - [PyAutoEyes#12](https://github.com/PyAutoLabs/PyAutoEyes/pull/12) — `complete/2026/10/pyautopulse-organ-row.md`
 
@@ -456,27 +376,27 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoGut**
 
-- [PyAutoGut#22](https://github.com/PyAutoLabs/PyAutoGut/pull/22) — `active/board_navigation_gut.md`
 - [PyAutoGut#13](https://github.com/PyAutoLabs/PyAutoGut/pull/13) — `complete/2026/09/eyes-organ-order.md`
 - [PyAutoGut#12](https://github.com/PyAutoLabs/PyAutoGut/pull/12) — `complete/2026/09/gut-void-sibling-reach.md`
+- [PyAutoGut#22](https://github.com/PyAutoLabs/PyAutoGut/pull/22) — `complete/2026/10/board-navigation-gut.md`
 - [PyAutoGut#18](https://github.com/PyAutoLabs/PyAutoGut/pull/18) — `complete/2026/10/pyautopulse-organ-row.md`
 
 **PyAutoHands**
 
-- [PyAutoHands#299](https://github.com/PyAutoLabs/PyAutoHands/pull/299) — `active/board_navigation_hands.md`
 - [PyAutoHands#292](https://github.com/PyAutoLabs/PyAutoHands/pull/292) — `complete/2026/09/board-footer-family-fix.md`
 - [PyAutoHands#291](https://github.com/PyAutoLabs/PyAutoHands/pull/291) — `complete/2026/09/eyes-organ-order.md`
+- [PyAutoHands#299](https://github.com/PyAutoLabs/PyAutoHands/pull/299) — `complete/2026/10/board-navigation-hands.md`
 - [PyAutoHands#297](https://github.com/PyAutoLabs/PyAutoHands/pull/297) — `complete/2026/10/jax-lapack-compatibility-repair.md`
 - [PyAutoHands#294](https://github.com/PyAutoLabs/PyAutoHands/pull/294) — `complete/2026/10/pyautopulse-organ-row.md`
 
 **PyAutoHeart**
 
-- [PyAutoHeart#283](https://github.com/PyAutoLabs/PyAutoHeart/pull/283) — `active/board_navigation_heart.md`
 - [PyAutoHeart#240](https://github.com/PyAutoLabs/PyAutoHeart/pull/240) — `complete/2026/09/autolens-visualization-rebirth.md`
 - [PyAutoHeart#242](https://github.com/PyAutoLabs/PyAutoHeart/pull/242) — `complete/2026/09/board-footer-family-fix.md`
 - [PyAutoHeart#244](https://github.com/PyAutoLabs/PyAutoHeart/pull/244) — `complete/2026/09/eyes-fit-cti-instances.md`
 - [PyAutoHeart#243](https://github.com/PyAutoLabs/PyAutoHeart/pull/243) — `complete/2026/09/eyes-galaxy-instance.md`
 - [PyAutoHeart#241](https://github.com/PyAutoLabs/PyAutoHeart/pull/241) — `complete/2026/09/eyes-organ-order.md`
+- [PyAutoHeart#283](https://github.com/PyAutoLabs/PyAutoHeart/pull/283) — `complete/2026/10/board-navigation-heart.md`
 - [PyAutoHeart#254](https://github.com/PyAutoLabs/PyAutoHeart/pull/254) — `complete/2026/10/compact-dashboard-rows.md`
 - [PyAutoHeart#275](https://github.com/PyAutoLabs/PyAutoHeart/pull/275) — `complete/2026/10/heart-dashboard-collectors.md`
 - [PyAutoHeart#268](https://github.com/PyAutoLabs/PyAutoHeart/pull/268) — `complete/2026/10/heart-monitoring-coverage.md`
@@ -490,7 +410,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoInsight**
 
-- [PyAutoInsight#5](https://github.com/PyAutoLabs/PyAutoInsight/pull/5) — `active/board_navigation_insight.md`
+- [PyAutoInsight#5](https://github.com/PyAutoLabs/PyAutoInsight/pull/5) — `complete/2026/10/board-navigation-insight.md`
 
 **PyAutoLens**
 
@@ -510,7 +430,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoMemory**
 
-- [PyAutoMemory#116](https://github.com/PyAutoLabs/PyAutoMemory/pull/116) — `active/board_navigation_memory.md`
+- [PyAutoMemory#116](https://github.com/PyAutoLabs/PyAutoMemory/pull/116) — `complete/2026/10/board-navigation-memory.md`
 - [PyAutoMemory#110](https://github.com/PyAutoLabs/PyAutoMemory/pull/110) — `complete/2026/10/memory-cockpit-catch-up.md`
 
 **PyAutoMind**
@@ -526,16 +446,16 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoNerves**
 
-- [PyAutoNerves#186](https://github.com/PyAutoLabs/PyAutoNerves/pull/186) — `active/board_navigation_nerves.md`
 - [PyAutoNerves#177](https://github.com/PyAutoLabs/PyAutoNerves/pull/177) — `complete/2026/09/eyes-organ-order.md`
 - [PyAutoNerves#175](https://github.com/PyAutoLabs/PyAutoNerves/pull/175) — `complete/2026/09/nerves-unused-keys.md`
 - [PyAutoNerves#176](https://github.com/PyAutoLabs/PyAutoNerves/pull/176) — `complete/2026/09/workspace-config-cleanup.md`
+- [PyAutoNerves#186](https://github.com/PyAutoLabs/PyAutoNerves/pull/186) — `complete/2026/10/board-navigation-nerves.md`
 - [PyAutoNerves#184](https://github.com/PyAutoLabs/PyAutoNerves/pull/184) — `complete/2026/10/jax-lapack-compatibility-repair.md`
 - [PyAutoNerves#181](https://github.com/PyAutoLabs/PyAutoNerves/pull/181) — `complete/2026/10/pyautopulse-organ-row.md`
 
 **PyAutoPulse**
 
-- [PyAutoPulse#15](https://github.com/PyAutoLabs/PyAutoPulse/pull/15) — `active/board_navigation_pulse.md`
+- [PyAutoPulse#15](https://github.com/PyAutoLabs/PyAutoPulse/pull/15) — `complete/2026/10/board-navigation-pulse.md`
 - [PyAutoPulse#4](https://github.com/PyAutoLabs/PyAutoPulse/pull/4) — `complete/2026/10/lint-lychee-exclude-blob.md`
 - [PyAutoPulse#2](https://github.com/PyAutoLabs/PyAutoPulse/pull/2) — `complete/2026/10/pyautopulse-organ-skeleton.md`
 
@@ -545,8 +465,8 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoScientist**
 
-- [PyAutoScientist#43](https://github.com/PyAutoLabs/PyAutoScientist/pull/43) — `active/board_navigation_scientist.md`
 - [PyAutoScientist#35](https://github.com/PyAutoLabs/PyAutoScientist/pull/35) — `complete/2026/09/eyes-organ-order.md`
+- [PyAutoScientist#43](https://github.com/PyAutoLabs/PyAutoScientist/pull/43) — `complete/2026/10/board-navigation-scientist.md`
 - [PyAutoScientist#39](https://github.com/PyAutoLabs/PyAutoScientist/pull/39) — `complete/2026/10/pyautopulse-organ-row.md`
 
 **autocti_visualization**
@@ -765,7 +685,7 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ## Backlog
 
-**234** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
+**231** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 73</summary>
@@ -1357,7 +1277,7 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>feature</b> — 36</summary>
+<summary><b>feature</b> — 33</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautopulse/profiling_setup_browser.md">Setup-first profiling: dashboard, evidence catalogue, scripts and assistant</a> — pyautopulse · too-large · human-required · high</summary>
 
@@ -1531,30 +1451,6 @@ Use the start-dev skill. draft/feature/autolens/multi_plane_time_delays.md
 
 ```
 Use the start-dev skill. draft/feature/autolens_workspace/oversampled_psf_dataset_adoption.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautobrain/board_navigation_independent_consumers.md">Shared banner and navigation: Eyes and Insight</a> — pyautobrain · large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautobrain/board_navigation_independent_consumers.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautobrain/board_navigation_shared_consumers.md">Shared banner and navigation: Ears and shared consumers</a> — pyautobrain · large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautobrain/board_navigation_shared_consumers.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautobrain/standard_board_banner_and_navigation.md">Standard board banners and Ears-style navigation</a> — pyautobrain · large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautobrain/standard_board_banner_and_navigation.md
 ```
 
 </details>
@@ -2590,39 +2486,21 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-05 | filed | <a href="draft/feature/pyautobrain/standard_board_banner_and_navigation.md">Standard board banners and Ears-style navigation</a> |
-| 2026-10-05 | filed | <a href="draft/feature/pyautobrain/board_navigation_independent_consumers.md">Shared banner and navigation: Eyes and Insight</a> |
-| 2026-10-05 | filed | <a href="draft/feature/pyautobrain/board_navigation_shared_consumers.md">Shared banner and navigation: Ears and shared consumers</a> |
 | 2026-10-05 | filed | <a href="draft/feature/pyautopulse/profiling_setup_browser.md">Setup-first profiling: dashboard, evidence catalogue, scripts and…</a> |
 | 2026-10-05 | issued | <a href="active/niek_full_style_review.md">Full Euclid style coverage and Niek manuscript review</a> |
-| 2026-10-05 | issued | <a href="active/board_navigation_scientist.md">Adopt shared board navigation in PyAutoScientist</a> |
-| 2026-10-05 | issued | <a href="active/board_navigation_pulse.md">Adopt shared board navigation in PyAutoPulse</a> |
-| 2026-10-05 | issued | <a href="active/board_navigation_nerves.md">Adopt shared board navigation in PyAutoNerves</a> |
-| 2026-10-05 | issued | <a href="active/board_navigation_memory.md">Adopt shared board navigation in PyAutoMemory</a> |
-| 2026-10-05 | issued | <a href="active/board_navigation_insight.md">Adopt shared board navigation in PyAutoInsight</a> |
-
-<details><summary>… 10 more (40 left)</summary>
-
-| Date | Event | Task |
-|------|-------|------|
-| 2026-10-05 | issued | <a href="active/board_navigation_heart.md">Adopt shared board navigation in PyAutoHeart</a> |
-| 2026-10-05 | issued | <a href="active/board_navigation_hands.md">Adopt shared board navigation in PyAutoHands</a> |
-| 2026-10-05 | issued | <a href="active/board_navigation_gut.md">Adopt shared board navigation in PyAutoGut</a> |
-| 2026-10-05 | issued | <a href="active/board_navigation_eyes.md">Adopt shared board navigation in PyAutoEyes</a> |
-| 2026-10-05 | issued | <a href="active/board_navigation_ears.md">Adopt shared board navigation in PyAutoEars</a> |
 | 2026-10-04 | issued | <a href="active/nnls_memo_scattered_backoff.md">fnnls warm-start memo: per-key back-off on scattered evaluation…</a> |
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
 | 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
 | 2026-10-02 | parked | <a href="parked.md#colab-refinement-throughout">colab-refinement-throughout</a> |
 | 2026-10-02 | parked | <a href="parked.md#bootstrap-smoke-codex">bootstrap-smoke-codex</a> |
-
-<details><summary>… 10 more (30 left)</summary>
-
-| Date | Event | Task |
-|------|-------|------|
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
+
+<details><summary>… 10 more (40 left)</summary>
+
+| Date | Event | Task |
+|------|-------|------|
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
 | 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
@@ -2630,14 +2508,14 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/power_law_multipole_m1_singular_at_isothermal_slope.md">PowerLawMultipole with m=1 returns -inf / NaN deflections at slope…</a> |
-
-<details><summary>… 10 more (20 left)</summary>
-
-| Date | Event | Task |
-|------|-------|------|
 | 2026-09-27 | filed | <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
 | 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
+
+<details><summary>… 10 more (30 left)</summary>
+
+| Date | Event | Task |
+|------|-------|------|
 | 2026-09-26 | filed | <a href="draft/refactor/workspaces/abell_1201_local_cleanup.md">Repo cleanup: retire the Abell 1201 worktree and local raw data</a> |
 | 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
 | 2026-09-25 | filed | <a href="draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md">Keep caches off <code>$HOME</code> on HPC — phase 2 remainder: euclid pipeline…</a> |
@@ -2645,14 +2523,14 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-23 | filed | <a href="draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
 | 2026-09-22 | issued | <a href="active/vis_lp_inspection_bundle.md">Support vis_lp-only products in inspection bundles</a> |
 | 2026-09-19 | issued | <a href="parked.md#catalogue-inspection-before-vis-pix">catalogue-inspection-before-vis-pix</a> |
-
-<details><summary>… 10 more (10 left)</summary>
-
-| Date | Event | Task |
-|------|-------|------|
 | 2026-09-18 | parked | <a href="parked.md#fixed-light-numba-s7">fixed-light-numba-s7</a> |
 | 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
+
+<details><summary>… 10 more (20 left)</summary>
+
+| Date | Event | Task |
+|------|-------|------|
 | 2026-09-18 | filed | <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> |
 | 2026-09-18 | filed | <a href="draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md">The latent smoke's empty-block assertion names one cause…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its…</a> |
@@ -2660,6 +2538,24 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/pyautobrain/sizing_faculty_none_rule_keyword_false_judge_triage.md">Sizing faculty: a <code>none</code> rule, keyword hits on prose that only…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> |
+| 2026-09-17 | filed | <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> |
+| 2026-09-17 | filed | <a href="draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads…</a> |
+| 2026-09-17 | filed | <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> |
+
+<details><summary>… 10 more (10 left)</summary>
+
+| Date | Event | Task |
+|------|-------|------|
+| 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
+| 2026-09-17 | filed | <a href="draft/refactor/autofit/ep_analysis_level_compile_cache.md">EP: cache the compiled JAX likelihood on the Analysis across factor…</a> |
+| 2026-09-17 | filed | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> |
+| 2026-09-16 | filed | <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of…</a> |
+| 2026-09-16 | filed | <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding…</a> |
+| 2026-09-16 | filed | <a href="draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> /…</a> |
+| 2026-09-16 | filed | <a href="draft/feature/autolens/coolest_pixel_grid_export.md">COOLEST: export MGE lens light and pixelized sources as pixel grids</a> |
+| 2026-09-16 | filed | <a href="draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md">Adaptive Delaunay mesh places two mesh pixels 0.001" apart — a…</a> |
+| 2026-09-15 | filed | <a href="draft/maintenance/howtofit/minimum_library_version_stale.md">The workspace staleness warning keys off a value documented never to…</a> |
+| 2026-09-15 | filed | <a href="draft/feature/pyautoheart/howto_real_settings_nightly.md">Nightly run of one HowTo tutorial per chapter at real settings</a> |
 
 </details>
 
@@ -3193,7 +3089,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 </details>
 
-66 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+63 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3213,9 +3109,6 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 - `draft/feature/euclid/euclid_dr1_prep_epic.md`
 - `draft/feature/jax_substructure/5_prng_key_vmap_noise.md`
 - `draft/feature/jax_substructure/6_deflection_equivalence_test.md`
-- `draft/feature/pyautobrain/board_navigation_independent_consumers.md`
-- `draft/feature/pyautobrain/board_navigation_shared_consumers.md`
-- `draft/feature/pyautobrain/standard_board_banner_and_navigation.md`
 - `draft/feature/pyautobrain/standardize_dashboard_orchestration_prompt_panel.md`
 - `draft/feature/pyautoears/community_organ_birth.md`
 - `draft/feature/pyautoeyes/group_cluster_gallery.md`
@@ -3238,7 +3131,10 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 - `draft/refactor/autogalaxy/critical_curves_dispatch_cluster.md`
 - `draft/refactor/workspaces/abell_1201_local_cleanup.md`
 - `draft/docs/autolens/split_lensing_regimes.md`
-- _… and 26 more_
+- `draft/docs/howtolens/cluster_pixelized_source.md`
+- `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
+- `draft/test/workspaces/mesh_magnification_correctness.md`
+- _… and 23 more_
 
 </details>
 

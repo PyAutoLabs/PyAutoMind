@@ -3,74 +3,14 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 13 in flight",
-  "updated": "2026-10-05T17:30:35Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
+  "updated": "2026-10-05T17:38:17Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
       "severity": "yellow",
-      "text": "Adopt shared board navigation in PyAutoEars \u2014 library-shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoEars/pull/12",
-      "prompt": "Use the start-dev skill. active/board_navigation_ears.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Adopt shared board navigation in PyAutoEyes \u2014 library-shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoEyes/pull/17",
-      "prompt": "Use the start-dev skill. active/board_navigation_eyes.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Adopt shared board navigation in PyAutoGut \u2014 library-shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoGut/pull/22",
-      "prompt": "Use the start-dev skill. active/board_navigation_gut.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Adopt shared board navigation in PyAutoHands \u2014 library-shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoHands/pull/299",
-      "prompt": "Use the start-dev skill. active/board_navigation_hands.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Adopt shared board navigation in PyAutoHeart \u2014 library-shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoHeart/pull/283",
-      "prompt": "Use the start-dev skill. active/board_navigation_heart.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Adopt shared board navigation in PyAutoInsight \u2014 library-shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoInsight/pull/5",
-      "prompt": "Use the start-dev skill. active/board_navigation_insight.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Adopt shared board navigation in PyAutoMemory \u2014 library-shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoMemory/pull/116",
-      "prompt": "Use the start-dev skill. active/board_navigation_memory.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Adopt shared board navigation in PyAutoNerves \u2014 library-shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoNerves/pull/186",
-      "prompt": "Use the start-dev skill. active/board_navigation_nerves.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Adopt shared board navigation in PyAutoPulse \u2014 library-shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoPulse/pull/15",
-      "prompt": "Use the start-dev skill. active/board_navigation_pulse.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Adopt shared board navigation in PyAutoScientist \u2014 library-shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoScientist/pull/43",
-      "prompt": "Use the start-dev skill. active/board_navigation_scientist.md"
-    },
-    {
-      "severity": "yellow",
       "text": "Full Euclid style coverage and Niek manuscript review \u2014 awaiting-merge",
-      "url": "https://github.com/Jammy2211/euclid_assistant/issues/12",
+      "url": "https://github.com/Jammy2211/euclid_assistant/pull/13",
       "prompt": "Use the start-dev skill. active/niek_full_style_review.md"
     },
     {
@@ -125,6 +65,66 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#580 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/580",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#595 \u2014 raw-pdip-forward-polish",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/595",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#591 \u2014 sparse-data-none-guard",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/591",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#586 \u2014 sparse-operator-oversampling-cache",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/586",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#593 \u2014 streaming-p1-array-free-dataset",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/593",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#597 \u2014 streaming-p3-visualizer",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/597",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#607 \u2014 Shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/607",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#612 \u2014 jax-lapack-compatibility-repair",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/612",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#608 \u2014 Shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/608",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#611 \u2014 Shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/611",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#606 \u2014 Shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/606",
       "prompt": null
     }
   ]

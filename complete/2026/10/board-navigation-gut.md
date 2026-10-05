@@ -1,3 +1,17 @@
+# Shared banner and navigation: PyAutoGut
+
+Merged https://github.com/PyAutoLabs/PyAutoGut/pull/22 (52a957707e79c0600897b806e8930e7fb5ddeb1b), closing https://github.com/PyAutoLabs/PyAutoGut/issues/21.
+
+The board now uses the shared logo banner followed immediately by prominent section links. Counts remain optional and owned by this board. Existing evidence, freshness safeguards and action payloads are preserved.
+
+Validation: 23 passed in 0.73s; ten viewport/theme browser cases; all workflow runs and every CI job on 5b11f5ebba57449b48092fe41631a32d695aaf2e succeeded. Heart GREEN, 100, at 2026-10-05T17:25:39Z.
+
+Local evidence: tmp/board-navigation/ (test logs, CI verdict and renders/PyAutoGut/ browser screenshots).
+
+- pending-release: PyAutoGut@https://github.com/PyAutoLabs/PyAutoGut/pull/22
+
+## Original prompt
+
 # Adopt shared board navigation in PyAutoGut
 
 Type: feature

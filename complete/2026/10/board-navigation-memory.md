@@ -1,15 +1,29 @@
-# Adopt shared board navigation in PyAutoNerves
+# Shared banner and navigation: PyAutoMemory
+
+Merged https://github.com/PyAutoLabs/PyAutoMemory/pull/116 (1932c4b45ede9346a81ef225f59c5c806e4e2f74), closing https://github.com/PyAutoLabs/PyAutoMemory/issues/115.
+
+The board now uses the shared logo banner followed immediately by prominent section links. Counts remain optional and owned by this board. Existing evidence, freshness safeguards and action payloads are preserved.
+
+Validation: 272 passed in 20.93s; ten viewport/theme browser cases; all workflow runs and every CI job on 75521dab3c66555575648fb9d8650e9d3d8cc96d succeeded. Heart GREEN, 100, at 2026-10-05T17:25:39Z.
+
+Local evidence: tmp/board-navigation/ (test logs, CI verdict and renders/PyAutoMemory/ browser screenshots).
+
+- pending-release: PyAutoMemory@https://github.com/PyAutoLabs/PyAutoMemory/pull/116
+
+## Original prompt
+
+# Adopt shared board navigation in PyAutoMemory
 
 Type: feature
-Target: PyAutoNerves
+Target: PyAutoMemory
 Repos:
-- PyAutoNerves
+- PyAutoMemory
 Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: active
 Issued: 2026-10-05
-Issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/185
+Issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/115
 Consequence: judge
 Filed: 2026-10-05
 

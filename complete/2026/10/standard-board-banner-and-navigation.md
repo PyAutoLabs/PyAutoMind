@@ -1,3 +1,33 @@
+# Standard board banner and navigation rollout
+
+All 13 published boards now use the shared logo banner followed by prominent section navigation. Counts are optional, and each board retains its own evidence and action meanings. Ears no longer shows the unclear "STALE — refresh required before judging the queue" wording; it shows a readable last-checked timestamp and a plain explanation below the cards when needed.
+
+## Merged implementation
+
+- PyAutoBrain#464: shared API and Brain, Mind, Cortex adoption.
+- PyAutoEars#12: https://github.com/PyAutoLabs/PyAutoEars/pull/12
+- PyAutoMemory#116: https://github.com/PyAutoLabs/PyAutoMemory/pull/116
+- PyAutoHeart#283: https://github.com/PyAutoLabs/PyAutoHeart/pull/283
+- PyAutoHands#299: https://github.com/PyAutoLabs/PyAutoHands/pull/299
+- PyAutoPulse#15: https://github.com/PyAutoLabs/PyAutoPulse/pull/15
+- PyAutoNerves#186: https://github.com/PyAutoLabs/PyAutoNerves/pull/186
+- PyAutoGut#22: https://github.com/PyAutoLabs/PyAutoGut/pull/22
+- PyAutoScientist#43: https://github.com/PyAutoLabs/PyAutoScientist/pull/43
+- PyAutoEyes#17: https://github.com/PyAutoLabs/PyAutoEyes/pull/17
+- PyAutoInsight#5: https://github.com/PyAutoLabs/PyAutoInsight/pull/5
+
+## Validation and publication
+
+1,186 core tests and 2,655 consumer tests passed. Every CI workflow and job on each PR head passed before merging. Browser evidence covers five viewport widths and light/dark for all owners, plus keyboard section navigation. The Ears browser suite also checks clipboard actions, expiry and overflow. Heart was GREEN before shipping.
+
+All 13 live Pages URLs were fetched after publication and contain the shared navigation. Their actual published HTML passed 130 Chromium cases (five widths × two themes): header order, card geometry, anchor targets, keyboard activation and no page overflow. Cortex was explicitly regenerated through its existing dashboard refresh workflow. Local raw evidence is retained at `tmp/board-navigation/`, including CI results, test logs, rendered pages, screenshots and `live-status.json`.
+
+Core and consumer issues closed; claims released; dashboards regenerated as part of this close-out. Existing prompt panels retain their payloads and remain a separate task.
+
+Reconciliation left the unrelated `draft/feature/pyautobrain/batch_slice.md` suspect unchanged: resemblance is not proof of coverage. Its follow-up door is `pyauto-brain intake reconcile draft/feature/pyautobrain`.
+
+## Original prompt
+
 # Standard board banners and Ears-style navigation
 
 Type: feature

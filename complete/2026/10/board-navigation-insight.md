@@ -1,3 +1,17 @@
+# Shared banner and navigation: PyAutoInsight
+
+Merged https://github.com/PyAutoLabs/PyAutoInsight/pull/5 (20772fcc26d288812c2f6037d097fb626db7c7bb), closing https://github.com/PyAutoLabs/PyAutoInsight/issues/4.
+
+The board now uses the shared logo banner followed immediately by prominent section links. Counts remain optional and owned by this board. Existing evidence, freshness safeguards and action payloads are preserved.
+
+Validation: 77 passed in 1.99s; ten viewport/theme browser cases; all workflow runs and every CI job on d4ebffa3f3f7fa7db4849053834e816749192a24 succeeded. Heart GREEN, 100, at 2026-10-05T17:25:39Z.
+
+Local evidence: tmp/board-navigation/ (test logs, CI verdict and renders/PyAutoInsight/ browser screenshots).
+
+- pending-release: PyAutoInsight@https://github.com/PyAutoLabs/PyAutoInsight/pull/5
+
+## Original prompt
+
 # Adopt shared board navigation in PyAutoInsight
 
 Type: feature

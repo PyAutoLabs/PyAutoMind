@@ -1,3 +1,17 @@
+# Shared banner and navigation: PyAutoScientist
+
+Merged https://github.com/PyAutoLabs/PyAutoScientist/pull/43 (559fbec442b57b2ebdcf1e985776b7fe3e2b2b36), closing https://github.com/PyAutoLabs/PyAutoScientist/issues/42.
+
+The board now uses the shared logo banner followed immediately by prominent section links. Counts remain optional and owned by this board. Existing evidence, freshness safeguards and action payloads are preserved.
+
+Validation: 8 passed in 0.04s; ten viewport/theme browser cases; all workflow runs and every CI job on b1c5ca10903e278f326aaa1c1e5364ff8e90732a succeeded. Heart GREEN, 100, at 2026-10-05T17:25:39Z.
+
+Local evidence: tmp/board-navigation/ (test logs, CI verdict and renders/PyAutoScientist/ browser screenshots).
+
+- pending-release: PyAutoScientist@https://github.com/PyAutoLabs/PyAutoScientist/pull/43
+
+## Original prompt
+
 # Adopt shared board navigation in PyAutoScientist
 
 Type: feature
