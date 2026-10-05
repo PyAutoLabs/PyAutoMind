@@ -1,3 +1,24 @@
+# Remaining dashboard-owned introductory prose
+
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/300
+- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/301
+- library-pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/18
+- library-pr: https://github.com/PyAutoLabs/PyAutoInsight/pull/6
+
+Removed the custom Eyes introduction and usage tutorial, Hands explanation of its relationship to Heart, and Insight check-in/campaign/ledger guidance. Retained concise links, operational data and exact prompts. Eyes and Insight generated dashboard surfaces committed alongside renderer changes.
+
+All three PRs merged, branch ancestry verified. All six CI jobs succeeded. Local validation: Hands472/Eyes79/Insight77 tests (628 total); lint/format; Eyes 265 live figure URLs; Insight offline contracts; mobile/desktop visible-text checks. Heart ship-time STALE with no RED/YELLOW reasons.
+
+The live audit covered all 13 boards. Seven stale shared-theme renderings were refreshed; the quoted Heart/Hands/Nerves introductions are absent. This record completes the owner-specific prose follow-up, not the broader orchestration adoption and generated AGENTS guidance initiative.
+
+Reconciliation: retain unrelated batch_slice.md on resemblance-only evidence; review via /intake reconcile draft/feature/pyautobrain.
+
+## Publication handoff
+
+GitHub publication jobs are queued without assigned runners: Hands run 37363739823, Eyes Pages run 37363681281, Insight Pages run 37363693166. Live HTML still showed the previous custom paragraphs at verification; source changes are merged, publication not yet confirmed. Worktree removed and claims released.
+
+## Original prompt
+
 # Remove remaining dashboard-owned introductory prose
 
 Type: feature

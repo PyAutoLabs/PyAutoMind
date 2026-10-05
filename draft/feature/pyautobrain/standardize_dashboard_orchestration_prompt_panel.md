@@ -109,4 +109,17 @@ Remove all explanatory text which says what a dashboard does and how to use it -
 
 Refinement shipped: `complete/2026/10/dashboard-minimal-text.md` — Brain#468, Ears#13 and Heart#284 merged. Shared introductions removed; Ears timestamp removed; Heart top panel adopted. Remaining initiative scope is other panel consumers, generated guidance and published verification. Do not re-file these completed changes.
 
-All-board live prose audit follow-up: `active/dashboard_prose_followup.md` (Hands#300; PRs Hands#301/Eyes#18/Insight#6). Seven shared-theme renders refreshed; quoted Heart/Hands/Nerves intros absent live. Custom owner prose removals await merge and publication.
+All-board live prose audit follow-up: `complete/2026/10/dashboard-prose-followup.md` (Hands#300; PRs Hands#301/Eyes#18/Insight#6). Seven shared-theme renders refreshed; quoted Heart/Hands/Nerves intros absent live. Custom owner prose removals merged as Hands#301/Eyes#18/Insight#6; publication dispatched; GitHub runner queue still pending at close-out.
+
+## Organ-named prompt headings — requested 2026-10-05
+
+Replace generic panel headings with concise action sentences containing the organ name in bold. No explanatory subtitle. Cover all dashboards and validate mobile/desktop line length without horizontal overflow. Mind quoted subtitle is absent from the live HTML as verified during this request. Proposed wording submitted for approval in session: Brain — Plan your next move with your Brain; Mind — Put your Mind to work; Cortex — Check in with your Cortex; Ears — Use your Ears to hear the community; Heart — Keep your Heart healthy; Hands — Ship with your Hands; Memory — Build your Memory; Pulse — Check your Pulse; Insight — Find your next Insight; Nerves — Check your Nerves for config drift; Gut — Clear out your Gut; Eyes — Review figures with your Eyes; Scientist — Work with your Scientist.
+
+Original request (verbatim):
+
+At the top of mind "Plan and coordinate devleopment" button is good, remove the text "Review the task queue, choose
+priorities and carry accepted work through the development workflow." as this again is just elling me what I aleady know.
+instead of "Plan and coordinate development" be more direct what the prompt does or link it to Mind. It could
+be "Do some tasks on you Mind". For ears it could be One chat. The whole
+community. -> "Use your Ears to listen to the community". I want each setense to be concise, span one line, but use the
+organ name to remind us where we are. The organ name should be in bold.   Then do this across all dashboards, thinking carefully aobut how the organ name makes its way into the text.
