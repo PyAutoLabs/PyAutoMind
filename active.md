@@ -48,7 +48,7 @@
 - issued: 2026-10-05
 - prompt: active/profiling_setup_catalogue.md
 - session: Codex; session ID unavailable
-- status: shipping
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-setup-catalogue
 - repos:
   - autolens_profiling: feature/profiling-setup-catalogue
@@ -61,3 +61,6 @@
 - pr-draft: .worktrees/profiling-setup-catalogue/phase2-pr-body.md; source uncommitted/unpushed pending live override. No PR yet.
 
 - heart-red-override: Live user "$prm and continue" responding to the explicit #376 development-shipping override request; authorizes commit/push/PR and current-turn human /prm merge only on green CI. Exact Heart RED `release validation FAILED (stage integrate)`. 1,055 tests pass (5 skips), seven smokes, independent Pulse contract, Ruff/metadata checks and inline review pass; no independent review claimed; no release or CI bypass.
+
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/377
+- commit: 33b23b2a24f2c71b253619bcd1dac6129c37863d

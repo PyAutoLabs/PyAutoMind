@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-05T09:55:36Z",
+  "updated": "2026-10-05T09:58:42Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Publish the complete profiling setup catalogue \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/377",
+      "prompt": "Use the start-dev skill. active/profiling_setup_catalogue.md"
+    },
     {
       "severity": "yellow",
       "text": "Restore complete Heart dashboard health \u2014 library-shipped, awaiting-merge",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#611 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/611",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#606 \u2014 Shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/606",
       "prompt": null
     }
   ]
