@@ -42,9 +42,9 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 2 |
+| [In flight](#in-flight) (`active/`) | 3 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
-| [Parked](#parked) (`parked.md`) | 7 |
+| [Parked](#parked) (`parked.md`) | 6 |
 | [Planned](#planned) (`planned.md`) | 7 |
 | [Backlog](#backlog) (`draft/`) | 229 |
 
@@ -256,6 +256,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 Use the start-dev skill. active/nnls_memo_scattered_backoff.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/restore_dashboard_green.md">Restore complete Heart dashboard health</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/274">issue #274</a> — issued 2026-10-04 — library-dev</summary>
+
+```
+Use the start-dev skill. active/restore_dashboard_green.md
 ```
 
 </details>
@@ -544,7 +552,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 Started or scoped, not currently in flight — resume by moving the row back to `active.md`. Full detail in [`parked.md`](parked.md).
 
 <details>
-<summary><b>7</b> task(s)</summary>
+<summary><b>6</b> task(s)</summary>
 
 <details><summary>📋 <b>single-source-density-design</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1500">issue #1500</a> — parked 2026-08-18</summary>
 
@@ -590,14 +598,6 @@ Use the start-dev skill. active/bootstrap_smoke_codex_and_bench_pr.md
 
 ```
 Use the start-dev skill. active/colab_refinement_throughout.md
-```
-
-</details>
-
-<details><summary>📋 <b>heart-dashboard-remaining</b> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/274">issue #274</a> — issued 2026-10-04 — parked by human; compatibility repair merged; remaining Heart work deferred to another chat</summary>
-
-```
-Use the start-dev skill. active/restore_dashboard_green.md
 ```
 
 </details>
@@ -2457,8 +2457,8 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | Date | Event | Task |
 |------|-------|------|
 | 2026-10-05 | filed | <a href="draft/feature/pyautopulse/profiling_setup_browser.md">Setup-first profiling: dashboard, evidence catalogue, scripts and…</a> |
-| 2026-10-04 | issued | <a href="parked.md#heart-dashboard-remaining">heart-dashboard-remaining</a> |
 | 2026-10-04 | issued | <a href="active/nnls_memo_scattered_backoff.md">fnnls warm-start memo: per-key back-off on scattered evaluation…</a> |
+| 2026-10-04 | issued | <a href="active/restore_dashboard_green.md">Restore complete Heart dashboard health</a> |
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
 | 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
 | 2026-10-02 | parked | <a href="parked.md#colab-refinement-throughout">colab-refinement-throughout</a> |

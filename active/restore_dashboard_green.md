@@ -289,3 +289,18 @@ Last published evidence: monitoring RED33/incomplete, release RED60 with `releas
 - Human: "prm this and then begin other work to get to green, doing a relase now is fine". PR280 already merged and closed out; nothing for /prm.
 - Preflight PASS; rehearsal Hands 37216594735 success at 2026.10.4.2.dev80301 (minor=2 required: libraries pin `autonerves>2026.10.4.1`). Integration Heart 37217670612 dispatched 16:41 UTC. Artifacts tmp/heart-validation-37216594735 (commit_shas.json, rehearsal.json).
 - Resume: download release-stage-report into that dir, ingest with `pyauto-brain release validate --ingest`, then on GREEN `pyauto-brain release -- 2`. CTI#112 not in release.yml; separate decision. Other dashboard findings (hang events, worktree drift, no-run census, baselines) remain after release.
+
+### 2026-10-05 bounded RED recovery — authorized continuation
+
+Original request (verbatim): "Can we investigate heart red and do the only steps required to make it yellow so I dont have to authorise steps"
+Live follow-up (verbatim): "Yes I authroize", answering the explicit request to authorize corrective investigation and repairs under Heart #274 for `release validation FAILED (stage integrate)`.
+
+Scope: only the failing integration and its missing report. Broader dashboard findings excluded. No production release, weakening checks, quarantine, timeout inflation, evidence deletion or automatic merge. Tier undeclared; merge mode human /prm.
+
+Plan:
+1. Resume clean Heart feature/restore-dashboard-green from current origin/main e62b080. No competing Heart claim. Use retained workspace .worktrees/restore-dashboard-green; source its activate.sh before tests.
+2. In .github/workflows/workspace-validation.yml, provision the declared PyYAML dependency before emit_release_report invokes heart.validate. Reproduce the import failure in an empty venv, then exercise actual report emission with downloaded run37217670612 artifacts; verify failures remain failures. Run workflow-wiring/validate tests and relevant suite; independent review before shipping.
+3. Inspect one representative JAX stall from exact TestPyPI2026.10.4.2.dev80301 and hosted logs. Establish execution vs tracing/compilation and exact versions. Run only a bounded causal diagnostic through existing facilities; do not guess a runtime fix or repeat the four-hour full integration blindly. Claim an additional repo only after causal localization and conflict survey.
+4. Publish the bounded tested repair PR under this live RED authorization, recording exact reason, causal mapping, evidence and remaining integration blockers. Human merge remains separate. Fresh validation after fixes and truthful Heart ingest are required before claiming YELLOW.
+
+Authorization applies to #274 in this session only. Source failures and reporting failures are separate: restoring report emission alone cannot clear RED. Latest report702 passed/3 failed/19 timeout/82 skipped; old cached report723 passed/1 timeout.

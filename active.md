@@ -22,3 +22,21 @@
   - euclid_strong_lens_modeling_pipeline: feature/vis-lp-inspection-bundle
 - summary: Add an explicit vis_lp-only inspection mode that combines the main normal-model output tree with the 100-lens SED/Sersic tree, without requiring vis_pix or selecting the other 200 main-tree lenses.
 - resume: Implemented + committed locally as c6b514d on feature/vis-lp-inspection-bundle (133 tests green, not pushed). Human reviews diff (scratchpad part1_diff.txt) before ship_workspace; then sync tooling to the euclid_dr1 science clone/RAL and submit the 4,922-tile vis_lp-only bundle (OUTPUT_DIR=dr1_full, INITIAL_SEARCH_NAME=vis_lp, DATASET_NAMES_PATH=all, TAR_TO set) as a Cortex run.
+
+## restore-dashboard-green
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/274
+- issued: 2026-10-04
+- prompt: active/restore_dashboard_green.md
+- session: Codex (GPT-6), session ID unavailable; resumed 2026-10-05
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/restore-dashboard-green
+- repos:
+  - PyAutoHeart: feature/restore-dashboard-green
+- summary: Bounded release integration recovery; report emitter dependency fix and exact-wheel execution-stall investigation. Broader dashboard scope remains deferred.
+- corrective-red:
+  - authorization: Live user "Yes I authroize" to corrective investigation and repairs under Heart #274 for the surfaced exact RED reason.
+  - evidence: https://github.com/PyAutoLabs/PyAutoHeart/issues/274#issuecomment-5991210852
+  - reason: release validation FAILED (stage integrate)
+  - scope: causal investigation, tested correction, commit/push/pending-release PR; human merge separate; no production release or gate bypass.
+  - validation: pending current repair; prior compatibility phase remains merged and preserved in completion records.
+- resume: e62b080 starting head; latest run37217670612 has 19 timeouts and3 aggregator errors; report emitter failed import yaml. See active prompt continuation for bounded plan.
