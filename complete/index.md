@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1700 records across 9 buckets.
+1701 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -177,6 +177,7 @@ markers; everything below GENERATED is rebuilt.
 - [pyautopulse-organ-decision](2026/10/pyautopulse-organ-decision.md)
 - [pyautopulse-organ-row](2026/10/pyautopulse-organ-row.md) — Phase 0 of `profiling-organ-birth`: PyAutoPulse (organ key `pulse`, display `Pulse`) registered as the cross-p…
 - [pyautopulse-organ-skeleton](2026/10/pyautopulse-organ-skeleton.md) — Phase 2 of `profiling-organ-birth`: the PyAutoPulse organ skeleton — `registry.yaml` (lens row only; `repo` is…
+- [restore-dashboard-green](2026/10/restore-dashboard-green.md)
 - [retired-repo-sidecars](2026/10/retired-repo-sidecars.md) — Aggregate only repositories in a valid current Heart monitoring roster; preserve all caches, configured advers…
 - [runtime-single-jit-median](2026/10/runtime-single-jit-median.md)
 - [streaming-p4-light-profile-identity](2026/10/streaming-p4-light-profile-identity.md)

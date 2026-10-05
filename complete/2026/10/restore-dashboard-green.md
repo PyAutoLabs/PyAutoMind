@@ -1,3 +1,31 @@
+# Heart release readiness recovered
+
+Completed: 2026-10-05
+Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/274
+PR: https://github.com/PyAutoLabs/PyAutoHeart/pull/281 (MERGED)
+Merge: f6a7fd0233ae87e43be9da857f741fc6cc97cc4d
+- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/281
+
+## Delivered scope
+
+User narrowed the original whole-dashboard request to minimum release recovery to YELLOW. Canonical Brain health now reports GREEN100 (2026-10-05T15:27:58Z), zero blockers/warnings/evidence gaps. No production release. Broader monitoring housekeeping remains deferred in draft/maintenance/pyautoheart/dashboard_housekeeping_after_release_recovery.md; no complete-monitoring-green claim.
+
+PR281 restores report generation by installing PyYAML and prevents the native-confirmed FFT/Eigen pool deadlock in release-script CI using the established threading flag. JAX/LAPACK compatibility work from the preceding session stays intact.
+
+## Validation
+
+- 146 focused and1227 full Heart tests; independent Sol CLEAN; both Python3.12/3.13 exact-head CI legs green before explicit human merge.
+- Native control37310709808 captured four FFT/ducc0 blocked workers; three pristine exact-wheel candidate fits37312018327 passed47.383/45.188/45.237s.
+- Successful full integration https://github.com/PyAutoLabs/PyAutoHeart/actions/runs/37327150241 on merged Heartmain:724passed/0failed/0timeout/82existing skips; all51 executed workflow jobs successful and two intentionally disabled notebook jobs skipped. Installation checks A–F passed.
+- The shapelet target passed53.62s within the full matrix, compared with the previous1805s timeout. Previous fullrun37286150846 retained703pass/3fail/18timeout/82skip for comparison.
+- Reused successful TestPyPI2026.10.5.1.dev80401 wheels after independently verifying allfive librarySHAs still matched currentmain; no unnecessary rebuild. Canonical `pyauto-brain release validate --ingest ... --commit-shas ...` combined the rehearsal and integration artifacts and cleared the failed evidence. Follow-up `health --scope release --json assess` confirmed GREEN100/actionnone.
+
+## Close-out
+
+Pulse13 also merged as authorized; separate complete/2026/10/profiling-setup-browser.md records that task. All eight real branches in the retained Heart recovery worktree were clean and proven ancestors of their origin/main.98 non-cache ignored test artifacts preserved in tmp/heart-red-20261005/heart-closeout-data.tar.gz (2083095bytes); diagnostic reports remain outside the worktree in the same scratch root. Original scope and historical checkpoints below are retained as history, superseded by this final outcome.
+
+## Original prompt
+
 # Restore complete Heart dashboard health
 
 Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/274
