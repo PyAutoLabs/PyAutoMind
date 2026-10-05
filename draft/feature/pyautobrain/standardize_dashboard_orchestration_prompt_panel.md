@@ -90,3 +90,19 @@ The user combined the shared-standards guidance with this panel task on 2026-10-
 User approved the combined implementation with “ok go”. Phase 1 merged as PyAutoBrain#466 (5d764f6), closing issue #465. The shipped scope is recorded in `complete/2026/10/orchestration-panel-core.md`: shared API, canonical standards index and Brain/Mind/Cortex renderer adoption. Validation: 1,195 tests, strict docs and browser witness; all three CI jobs green.
 
 Remaining approved work: Ears/Heart pilots and remaining boards, Mind-generated instruction discovery, Scientist entry links and published verification. The shared API dependency is now merged; continue through bounded start-dev phases. This parent prompt remains open for that remaining scope.
+
+## Presentation refinement — 2026-10-05
+
+Remove dashboard-purpose and usage/tutorial prose from the visible boards, including masthead ledes and orchestration-panel descriptions. Keep concise headings, button labels, GitHub destinations, optional-direction inputs and prompt previews. Do not substitute new explanatory prose. This is the single-user presentation standard and applies across the remaining board rollout as well as Brain-owned renderers already migrated.
+
+Specific requirements:
+- Mind: remove the entire “Every task the Mind is holding…” masthead paragraph.
+- Ears: remove the visible “Last checked …” line entirely; preserve snapshot timestamps in the data contract.
+- Heart: remove the “Is it safe to release?…” introduction and place the main “Fix Heart systematically” action in the top shared panel after navigation. Reuse the exact existing fix-plan prompt plus the shared GitHub destination context; remove the duplicate bottom primary action. Retain the distinct missing-evidence action.
+- Audit static dashboard-purpose/usage paragraphs across the board family. Operational results, failure reasons, real stale/unknown evidence states, selectable prompt contents and repository links remain meaningful data, not tutorial text.
+
+Implementation plan: first update Brain's shared hero/panel rendering and presentation contract so optional/removed description text produces no empty spacing; adjust Brain/Mind/Cortex consumers. Then update Ears' top section and adopt the shared panel on Heart with its configured repository link and existing fix-plan payload. Finish owner-specific tutorial prose removals during the recorded all-board rollout. Validate representative rendered pages at mobile/desktop widths, action location and exact copy payloads; run affected existing suites and browser witness. Tier: judge; merge mode: human /prm.
+
+### Original refinement request (verbatim)
+
+Remove all explanatory text which says what a dashboard does and how to use it -- only I use this I dont need a reminder, on Mind this is "Every task the Mind is holding. Tap a task's 📋 and its start-dev skill prompt is on your clipboard — paste it into an AI assistant chat to route the assistant straight to that task. Recent is the same work by date — what has been happening rather than what to do next.", on Ears, just remove the "Last checked 05 Oct 2026, 17:30 UTC2 as its text whic breaks dashboard symmnetry, on heart remove the text "Is it safe to release? See what needs attention, then copy a prompt to work through it in your coding chat." and get the main button up there which basically will replace the "Fix Heart Systematically" button at the bottom.
