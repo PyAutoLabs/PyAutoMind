@@ -99,6 +99,17 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em;
 .hero .tag{margin:0;font-size:.63rem;font-weight:600;
  letter-spacing:.3em;text-transform:uppercase;color:var(--glow);opacity:.9}
 .lede{margin:0 0 .9rem}
+/* Section links share a shape whether or not the owner has a useful count. */
+.board-nav{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,10rem),1fr));
+ gap:.75rem;margin:1.5rem 0;min-width:0}
+.board-nav-card{display:flex;flex-direction:column;justify-content:center;gap:.25rem;
+ min-width:0;min-height:5.5rem;padding:1rem;border:1px solid var(--line);
+ border-top:3px solid var(--accent);border-radius:12px;background:var(--btn);
+ color:var(--fg);text-decoration:none}
+.board-nav-card:hover{background:var(--tint);text-decoration:none;border-color:var(--accent)}
+.board-nav-card:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.board-nav-count{font-size:1.8rem;font-weight:700;line-height:1.15;color:var(--accent)}
+.board-nav-label{font-weight:650}.board-nav-context{font-size:.8rem;color:var(--muted)}
 /* --- sections ---------------------------------------------------------- */
 h2{font-size:1.1rem;margin:2.1rem 0 .3rem;padding:0 0 .35rem;font-weight:650;
  position:relative;color:var(--accent);border-bottom:2px solid var(--edge)}
@@ -232,8 +243,7 @@ a.go:hover{opacity:.9;text-decoration:none}
 </style>
 </head>
 <body>
-<header class="hero"><span class="orb"><svg class="mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.4"/><path d="M20.2,37.6 L20.2,33.6 C20.2,32.4 19.4,31.6 18.4,30.8 C16.8,29.6 15.8,28.2 15.6,26.6 C15.5,25.6 14.9,25.2 13.9,24.9 C12.6,24.5 12.3,23.7 13.0,22.7 C13.8,21.6 14.5,20.6 14.6,19.4 C15.0,15.4 18.2,12.2 22.4,11.8 C27.2,11.3 31.6,14.6 32.3,19.2 C32.8,22.4 31.6,25.0 30.6,27.0 C29.9,28.4 29.6,29.6 29.6,31.2 L29.6,37.6"/><circle cx="24.6" cy="19.6" r="4.4"/><path d="M22.5,19.7 L24.0,21.3 L26.8,18.1"/><path d="M34.2,16.5 L38.8,16.5 M35.2,21.0 L39.4,21.0 M33.6,25.5 L37.2,25.5"/><g fill="currentColor" stroke="none"><circle cx="40.1" cy="16.5" r="1.4"/><circle cx="40.7" cy="21.0" r="1.4"/><circle cx="38.5" cy="25.5" r="1.4"/></g></svg></span><h1>PyAuto<b>Mind</b><span class="kind">Dashboard</span></h1><div class="rule"></div><p class="tag">Intent. Priority. Flow.</p></header><p class="lede">Every task the Mind is holding. Tap a task's 📋 and its start-dev skill prompt is on your clipboard — paste it into an AI assistant chat to route the assistant straight to that task. <a href="#recent">Recent</a> is the same work by date — what has been happening rather than what to do next.</p>
-<ul class="stats"><li><b>4</b><span>In flight</span></li><li><b>2</b><span>Human review</span></li><li><b>6</b><span>Parked</span></li><li><b>7</b><span>Planned</span></li><li><b>234</b><span>Backlog</span></li></ul>
+<header class="hero"><span class="orb"><svg class="mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.4"/><path d="M20.2,37.6 L20.2,33.6 C20.2,32.4 19.4,31.6 18.4,30.8 C16.8,29.6 15.8,28.2 15.6,26.6 C15.5,25.6 14.9,25.2 13.9,24.9 C12.6,24.5 12.3,23.7 13.0,22.7 C13.8,21.6 14.5,20.6 14.6,19.4 C15.0,15.4 18.2,12.2 22.4,11.8 C27.2,11.3 31.6,14.6 32.3,19.2 C32.8,22.4 31.6,25.0 30.6,27.0 C29.9,28.4 29.6,29.6 29.6,31.2 L29.6,37.6"/><circle cx="24.6" cy="19.6" r="4.4"/><path d="M22.5,19.7 L24.0,21.3 L26.8,18.1"/><path d="M34.2,16.5 L38.8,16.5 M35.2,21.0 L39.4,21.0 M33.6,25.5 L37.2,25.5"/><g fill="currentColor" stroke="none"><circle cx="40.1" cy="16.5" r="1.4"/><circle cx="40.7" cy="21.0" r="1.4"/><circle cx="38.5" cy="25.5" r="1.4"/></g></svg></span><h1>PyAuto<b>Mind</b><span class="kind">Dashboard</span></h1><div class="rule"></div><p class="tag">Intent. Priority. Flow.</p></header><nav class="board-nav" aria-label="Board sections"><a class="board-nav-card" href="#start-here"><span class="board-nav-label">Start here</span></a><a class="board-nav-card" href="#in-flight"><span class="board-nav-count">14</span><span class="board-nav-label">In flight</span></a><a class="board-nav-card" href="#human-review"><span class="board-nav-count">2</span><span class="board-nav-label">Human review</span></a><a class="board-nav-card" href="#parked"><span class="board-nav-count">6</span><span class="board-nav-label">Parked</span></a><a class="board-nav-card" href="#planned"><span class="board-nav-count">7</span><span class="board-nav-label">Planned</span></a><a class="board-nav-card" href="#backlog"><span class="board-nav-count">234</span><span class="board-nav-label">Backlog</span></a><a class="board-nav-card" href="#pending-release"><span class="board-nav-label">Pending release</span></a><a class="board-nav-card" href="#bundles"><span class="board-nav-label">Bundles</span></a><a class="board-nav-card" href="#recent"><span class="board-nav-label">Recent</span></a><a class="board-nav-card" href="#epics"><span class="board-nav-label">Epics</span></a></nav><p class="lede">Every task the Mind is holding. Tap a task's 📋 and its start-dev skill prompt is on your clipboard — paste it into an AI assistant chat to route the assistant straight to that task. <a href="#recent">Recent</a> is the same work by date — what has been happening rather than what to do next.</p>
 <div class="fresh"><p><b>Last updated 2026-10-05.</b> This page is generated from <code>active/</code>, <code>draft/</code> and the registry files, so it is only as current as they are. <code>dashboard_refresh.yml</code> re-renders it on every push to <code>main</code> — that heals a stale page, but not a stale prompt: a task that shipped without its prompt advancing to <code>complete/</code> keeps rendering here as pickable backlog. Reconciling those is the refresh below.</p>
 <div class="task"><button class="copy" data-cmd="Bring the PyAutoMind dashboard up to date. Work in the PyAutoMind checkout:
 
@@ -263,7 +273,7 @@ anything you could not verify." aria-label="Copy the AI command">📋</button><p
 </div>
 <p class="muted mdsrc"><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/dashboard.md">markdown version</a> · <a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/README.md">GitHub Page</a></p>
 <div class="verdict ok"><b>No batch in flight.</b></div>
-<h2>Start here</h2>
+<a id="start-here"></a><h2>Start here</h2>
 <h3>Highest priority <span class="facets">(filed as high) — showing 12 of 20</span></h3>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">autoarray</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">euclid</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
@@ -290,9 +300,19 @@ anything you could not verify." aria-label="Copy the AI command">📋</button><p
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/feature/pyautobrain/board_without_gh_phase2_legs.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautobrain/board_without_gh_phase2_legs.md">Board phase 2: the remaining four legs onto the seam</a><span class="tags"><span class="pill w">✨ feature</span><span class="pill">pyautobrain</span><span class="pill n">small</span><span class="pill g">safe</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/pyautobrain/unregistered_worktrees_invisible_to_conflict_guard.md">Unregistered worktrees are invisible to the conflict guard</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">pyautobrain</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/research/pyautohands/git_docs.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/pyautohands/git_docs.md">Use readthedocs or migrate to GitHub docs</a><span class="tags"><span class="pill w">🔬 research</span><span class="pill">pyautohands</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
-<h2>In flight <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active.md">markdown version</a></h2>
+<a id="in-flight"></a><h2>In flight <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active.md">markdown version</a></h2>
 <p class="muted">Issued — each has an open GitHub issue and usually a branch.</p>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. active/board_navigation_core.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/board_navigation_core.md">Shared banner and navigation: Brain, Mind and Cortex</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/463">issue #463</a><span class="facets"> — issued 2026-10-05</span> — <span class="facets">library-dev</span></p></div>
+<div class="task"><button class="copy" data-cmd="Use the start-dev skill. active/board_navigation_ears.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/board_navigation_ears.md">Adopt shared board navigation in PyAutoEars</a> — <a href="https://github.com/PyAutoLabs/PyAutoEars/issues/11">issue #11</a><span class="facets"> — issued 2026-10-05</span> — <span class="facets">library-dev</span></p></div>
+<div class="task"><button class="copy" data-cmd="Use the start-dev skill. active/board_navigation_eyes.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/board_navigation_eyes.md">Adopt shared board navigation in PyAutoEyes</a> — <a href="https://github.com/PyAutoLabs/PyAutoEyes/issues/16">issue #16</a><span class="facets"> — issued 2026-10-05</span> — <span class="facets">library-dev</span></p></div>
+<div class="task"><button class="copy" data-cmd="Use the start-dev skill. active/board_navigation_gut.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/board_navigation_gut.md">Adopt shared board navigation in PyAutoGut</a> — <a href="https://github.com/PyAutoLabs/PyAutoGut/issues/21">issue #21</a><span class="facets"> — issued 2026-10-05</span> — <span class="facets">library-dev</span></p></div>
+<div class="task"><button class="copy" data-cmd="Use the start-dev skill. active/board_navigation_hands.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/board_navigation_hands.md">Adopt shared board navigation in PyAutoHands</a> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/298">issue #298</a><span class="facets"> — issued 2026-10-05</span> — <span class="facets">library-dev</span></p></div>
+<div class="task"><button class="copy" data-cmd="Use the start-dev skill. active/board_navigation_heart.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/board_navigation_heart.md">Adopt shared board navigation in PyAutoHeart</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/282">issue #282</a><span class="facets"> — issued 2026-10-05</span> — <span class="facets">library-dev</span></p></div>
+<div class="task"><button class="copy" data-cmd="Use the start-dev skill. active/board_navigation_insight.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/board_navigation_insight.md">Adopt shared board navigation in PyAutoInsight</a> — <a href="https://github.com/PyAutoLabs/PyAutoInsight/issues/4">issue #4</a><span class="facets"> — issued 2026-10-05</span> — <span class="facets">library-dev</span></p></div>
+<div class="task"><button class="copy" data-cmd="Use the start-dev skill. active/board_navigation_memory.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/board_navigation_memory.md">Adopt shared board navigation in PyAutoMemory</a> — <a href="https://github.com/PyAutoLabs/PyAutoMemory/issues/115">issue #115</a><span class="facets"> — issued 2026-10-05</span> — <span class="facets">library-dev</span></p></div>
+<div class="task"><button class="copy" data-cmd="Use the start-dev skill. active/board_navigation_nerves.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/board_navigation_nerves.md">Adopt shared board navigation in PyAutoNerves</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/185">issue #185</a><span class="facets"> — issued 2026-10-05</span> — <span class="facets">library-dev</span></p></div>
+<div class="task"><button class="copy" data-cmd="Use the start-dev skill. active/board_navigation_pulse.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/board_navigation_pulse.md">Adopt shared board navigation in PyAutoPulse</a> — <a href="https://github.com/PyAutoLabs/PyAutoPulse/issues/14">issue #14</a><span class="facets"> — issued 2026-10-05</span> — <span class="facets">library-dev</span></p></div>
+<div class="task"><button class="copy" data-cmd="Use the start-dev skill. active/board_navigation_scientist.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/board_navigation_scientist.md">Adopt shared board navigation in PyAutoScientist</a> — <a href="https://github.com/PyAutoLabs/PyAutoScientist/issues/42">issue #42</a><span class="facets"> — issued 2026-10-05</span> — <span class="facets">library-dev</span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. active/niek_full_style_review.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/niek_full_style_review.md">Full Euclid style coverage and Niek manuscript review</a> — <a href="https://github.com/Jammy2211/euclid_assistant/issues/12">issue #12</a><span class="facets"> — issued 2026-10-05</span> — <span class="facets">workspace-dev</span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. active/nnls_memo_scattered_backoff.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/nnls_memo_scattered_backoff.md">fnnls warm-start memo: per-key back-off on scattered evaluation streams</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/613">issue #613</a><span class="facets"> — issued 2026-10-04</span> — <span class="facets">library-dev</span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. active/vis_lp_inspection_bundle.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/vis_lp_inspection_bundle.md">Support vis_lp-only products in inspection bundles</a><span class="facets"> — issued 2026-09-22</span></p></div>
@@ -386,7 +406,7 @@ PyAutoMind checkout (`python3 scripts/lifecycle.py record &lt;slug&gt; --date
 regenerate the dashboard. If I do not sign it off, file the follow-up with
 `/intake` instead.
 " aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md">Human review: the scaling_relation slam parks (imaging un-parked, multi_galaxy kept)</a><span class="tags"><span class="pill w y">👀 human_review</span><span class="pill">autolens_workspace</span><span class="pill n">normal</span></span><span class="facets"> — flagged for review 2026-08-29</span></p></div>
-<h2>Parked <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/parked.md">markdown version</a></h2>
+<a id="parked"></a><h2>Parked <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/parked.md">markdown version</a></h2>
 <details>
 <summary>6 task(s)</summary>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/bug/priors/12_single_source_density_refactor.md" aria-label="Copy the AI command">📋</button><p><b>single-source-density-design</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1500">issue #1500</a><span class="facets"> — parked 2026-08-18</span></p></div>
@@ -396,7 +416,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. active/bootstrap_smoke_codex_and_bench_pr.md" aria-label="Copy the AI command">📋</button><p><b>bootstrap-smoke-codex</b> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/144">issue #144</a><span class="facets"> — parked 2026-10-02</span> — <span class="facets">queued (human-deferred) — requested quicker wrap after inference PR</span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. active/colab_refinement_throughout.md" aria-label="Copy the AI command">📋</button><p><b>colab-refinement-throughout</b> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/145">issue #145</a><span class="facets"> — parked 2026-10-02</span> — <span class="facets">queued (human-deferred) — requested quicker wrap after inference PR</span></p></div>
 </details>
-<h2>Planned <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/planned.md">markdown version</a></h2>
+<a id="planned"></a><h2>Planned <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/planned.md">markdown version</a></h2>
 <details>
 <summary>7 task(s)</summary>
 <div class="task"><button class="copy" data-cmd="Use the route skill. start the planned PyAutoMind task isothermal-ell-sph-oversampling-at-the-cusp — its record is in planned.md" aria-label="Copy the AI command">📋</button><p><b>isothermal-ell-sph-oversampling-at-the-cusp</b><span class="facets"> — found 2026-08-09</span> — <span class="facets">planned — NOT yet a prompt file; file one via <code>/intake</code> before starting</span></p></div>
@@ -407,7 +427,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md" aria-label="Copy the AI command">📋</button><p><b>knn-partial-point-block</b> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/609">issue #609</a><span class="facets"> — filed 2026-10-02</span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md" aria-label="Copy the AI command">📋</button><p><b>sibson-internal-edge-continuity</b> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/610">issue #610</a><span class="facets"> — filed 2026-10-02</span></p></div>
 </details>
-<h2>Backlog <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/tree/main/draft">markdown version</a></h2>
+<a id="backlog"></a><h2>Backlog <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/tree/main/draft">markdown version</a></h2>
 <p class="muted">234 filed prompts, not started — sorted most-pickable first (priority, then size). 46 of them belong to an epic and are listed only under Epics below.</p>
 <details>
 <summary>bug — 73</summary>
@@ -624,7 +644,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 <summary>triage — 1</summary>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/triage/autolens/jit_fit_from_is_vacuous.md"><code>jax.jit(analysis.fit_from)</code> is vacuous in the jax_likelihood scripts</a><span class="tags"><span class="pill w y">❓ triage</span><span class="pill">autolens</span><span class="pill n">medium</span><span class="pill r">human-required</span><span class="pill n">medium</span></span></p></div>
 </details>
-<h2>Bundles <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/bundles.md">markdown version</a></h2>
+<a id="bundles"></a><h2>Bundles <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/bundles.md">markdown version</a></h2>
 <style>table.bundle{width:100%;border-collapse:collapse;font-size:.95em;
  margin:.1rem 0 .7rem}
 table.bundle td,table.bundle th{border-bottom:1px solid var(--line);
@@ -1012,24 +1032,84 @@ Contract (the `start-bundle` skill is the full body):
 <td class="pick"><button class="copy" data-cmd="Use the start-dev skill. active/niek_full_style_review.md" aria-label="Copy the AI prompt">📋</button></td>
 </tr>
 <tr>
+<td class="when">2026-10-05</td>
+<td class="what">issued</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/board_navigation_scientist.md">Adopt shared board navigation in PyAutoScientist</a></td>
+<td class="pick"><button class="copy" data-cmd="Use the start-dev skill. active/board_navigation_scientist.md" aria-label="Copy the AI prompt">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-10-05</td>
+<td class="what">issued</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/board_navigation_pulse.md">Adopt shared board navigation in PyAutoPulse</a></td>
+<td class="pick"><button class="copy" data-cmd="Use the start-dev skill. active/board_navigation_pulse.md" aria-label="Copy the AI prompt">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-10-05</td>
+<td class="what">issued</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/board_navigation_nerves.md">Adopt shared board navigation in PyAutoNerves</a></td>
+<td class="pick"><button class="copy" data-cmd="Use the start-dev skill. active/board_navigation_nerves.md" aria-label="Copy the AI prompt">📋</button></td>
+</tr>
+<tr>
+<td class="when">2026-10-05</td>
+<td class="what">issued</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/board_navigation_memory.md">Adopt shared board navigation in PyAutoMemory</a></td>
+<td class="pick"><button class="copy" data-cmd="Use the start-dev skill. active/board_navigation_memory.md" aria-label="Copy the AI prompt">📋</button></td>
+</tr>
+<tr hidden>
+<td class="when">2026-10-05</td>
+<td class="what">issued</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/board_navigation_insight.md">Adopt shared board navigation in PyAutoInsight</a></td>
+<td class="pick"><button class="copy" data-cmd="Use the start-dev skill. active/board_navigation_insight.md" aria-label="Copy the AI prompt">📋</button></td>
+</tr>
+<tr hidden>
+<td class="when">2026-10-05</td>
+<td class="what">issued</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/board_navigation_heart.md">Adopt shared board navigation in PyAutoHeart</a></td>
+<td class="pick"><button class="copy" data-cmd="Use the start-dev skill. active/board_navigation_heart.md" aria-label="Copy the AI prompt">📋</button></td>
+</tr>
+<tr hidden>
+<td class="when">2026-10-05</td>
+<td class="what">issued</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/board_navigation_hands.md">Adopt shared board navigation in PyAutoHands</a></td>
+<td class="pick"><button class="copy" data-cmd="Use the start-dev skill. active/board_navigation_hands.md" aria-label="Copy the AI prompt">📋</button></td>
+</tr>
+<tr hidden>
+<td class="when">2026-10-05</td>
+<td class="what">issued</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/board_navigation_gut.md">Adopt shared board navigation in PyAutoGut</a></td>
+<td class="pick"><button class="copy" data-cmd="Use the start-dev skill. active/board_navigation_gut.md" aria-label="Copy the AI prompt">📋</button></td>
+</tr>
+<tr hidden>
+<td class="when">2026-10-05</td>
+<td class="what">issued</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/board_navigation_eyes.md">Adopt shared board navigation in PyAutoEyes</a></td>
+<td class="pick"><button class="copy" data-cmd="Use the start-dev skill. active/board_navigation_eyes.md" aria-label="Copy the AI prompt">📋</button></td>
+</tr>
+<tr hidden>
+<td class="when">2026-10-05</td>
+<td class="what">issued</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/board_navigation_ears.md">Adopt shared board navigation in PyAutoEars</a></td>
+<td class="pick"><button class="copy" data-cmd="Use the start-dev skill. active/board_navigation_ears.md" aria-label="Copy the AI prompt">📋</button></td>
+</tr>
+<tr hidden>
 <td class="when">2026-10-04</td>
 <td class="what">issued</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/nnls_memo_scattered_backoff.md">fnnls warm-start memo: per-key back-off on scattered evaluation…</a></td>
 <td class="pick"><button class="copy" data-cmd="Use the start-dev skill. active/nnls_memo_scattered_backoff.md" aria-label="Copy the AI prompt">📋</button></td>
 </tr>
-<tr>
+<tr hidden>
 <td class="when">2026-10-02</td>
 <td class="what">filed</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a></td>
 <td class="pick"><button class="copy" data-cmd="Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md" aria-label="Copy the AI prompt">📋</button></td>
 </tr>
-<tr>
+<tr hidden>
 <td class="when">2026-10-02</td>
 <td class="what">filed</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/planned.md#knn-partial-point-block">knn-partial-point-block</a></td>
 <td class="pick"><button class="copy" data-cmd="Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md" aria-label="Copy the AI prompt">📋</button></td>
 </tr>
-<tr>
+<tr hidden>
 <td class="when">2026-10-02</td>
 <td class="what">parked</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/parked.md#colab-refinement-throughout">colab-refinement-throughout</a></td>
@@ -1215,69 +1295,9 @@ Contract (the `start-bundle` skill is the full body):
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautobrain/sizing_faculty_none_rule_keyword_false_judge_triage.md">Sizing faculty: a <code>none</code> rule, keyword hits on prose that only…</a></td>
 <td class="pick"><button class="copy" data-cmd="Use the start-dev skill. draft/bug/pyautobrain/sizing_faculty_none_rule_keyword_false_judge_triage.md" aria-label="Copy the AI prompt">📋</button></td>
 </tr>
-<tr hidden>
-<td class="when">2026-09-17</td>
-<td class="what">filed</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a></td>
-<td class="pick"><button class="copy" data-cmd="Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md" aria-label="Copy the AI prompt">📋</button></td>
-</tr>
-<tr hidden>
-<td class="when">2026-09-17</td>
-<td class="what">filed</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a></td>
-<td class="pick"><button class="copy" data-cmd="Use the start-dev skill. draft/maintenance/organs/reduce_session_token_load.md" aria-label="Copy the AI prompt">📋</button></td>
-</tr>
-<tr hidden>
-<td class="when">2026-09-17</td>
-<td class="what">filed</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads…</a></td>
-<td class="pick"><button class="copy" data-cmd="Use the start-dev skill. draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md" aria-label="Copy the AI prompt">📋</button></td>
-</tr>
-<tr hidden>
-<td class="when">2026-09-17</td>
-<td class="what">filed</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a></td>
-<td class="pick"><button class="copy" data-cmd="Use the start-dev skill. draft/refactor/autolens/witt_wynne_solver_library_home.md" aria-label="Copy the AI prompt">📋</button></td>
-</tr>
-<tr hidden>
-<td class="when">2026-09-17</td>
-<td class="what">filed</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a></td>
-<td class="pick"><button class="copy" data-cmd="Use the start-dev skill. draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md" aria-label="Copy the AI prompt">📋</button></td>
-</tr>
-<tr hidden>
-<td class="when">2026-09-17</td>
-<td class="what">filed</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/autofit/ep_analysis_level_compile_cache.md">EP: cache the compiled JAX likelihood on the Analysis across factor…</a></td>
-<td class="pick"><button class="copy" data-cmd="Use the start-dev skill. draft/refactor/autofit/ep_analysis_level_compile_cache.md" aria-label="Copy the AI prompt">📋</button></td>
-</tr>
-<tr hidden>
-<td class="when">2026-09-17</td>
-<td class="what">filed</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a></td>
-<td class="pick"><button class="copy" data-cmd="Use the start-dev skill. draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md" aria-label="Copy the AI prompt">📋</button></td>
-</tr>
-<tr hidden>
-<td class="when">2026-09-16</td>
-<td class="what">filed</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of…</a></td>
-<td class="pick"><button class="copy" data-cmd="Use the start-dev skill. draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md" aria-label="Copy the AI prompt">📋</button></td>
-</tr>
-<tr hidden>
-<td class="when">2026-09-16</td>
-<td class="what">filed</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding…</a></td>
-<td class="pick"><button class="copy" data-cmd="Use the start-dev skill. draft/feature/autoarray/source_clumps_robust_scale.md" aria-label="Copy the AI prompt">📋</button></td>
-</tr>
-<tr hidden>
-<td class="when">2026-09-16</td>
-<td class="what">filed</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> /…</a></td>
-<td class="pick"><button class="copy" data-cmd="Use the start-dev skill. draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md" aria-label="Copy the AI prompt">📋</button></td>
-</tr>
 </table>
 <button class="more" data-page="10">… 10 more (40 left)</button>
-<h2>Epics <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/epics.md">markdown version</a></h2>
+<a id="epics"></a><h2>Epics <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/epics.md">markdown version</a></h2>
 <p class="muted">Long-running multi-phase programmes — 📋 copies a prompt that works out where the epic stands from its ledger and continues it from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone.</p>
 <details>
 <summary>PyAutoEars — community listening, solicited feedback, dashboard and follow-through — 1 queued prompt(s), in order</summary>
