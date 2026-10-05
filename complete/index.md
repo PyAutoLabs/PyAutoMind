@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1701 records across 9 buckets.
+1702 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -180,6 +180,7 @@ markers; everything below GENERATED is rebuilt.
 - [restore-dashboard-green](2026/10/restore-dashboard-green.md)
 - [retired-repo-sidecars](2026/10/retired-repo-sidecars.md) — Aggregate only repositories in a valid current Heart monitoring roster; preserve all caches, configured advers…
 - [runtime-single-jit-median](2026/10/runtime-single-jit-median.md)
+- [standard-board-sizing](2026/10/standard-board-sizing.md)
 - [streaming-p4-light-profile-identity](2026/10/streaming-p4-light-profile-identity.md)
 - [streaming-p5-cubes-phase-centre](2026/10/streaming-p5-cubes-phase-centre.md)
 - [unit-timing-distinct-baseline](2026/10/unit-timing-distinct-baseline.md) — Select the latest distinct prior unit timing run per repository/Python leg within the current epoch. Preserve …

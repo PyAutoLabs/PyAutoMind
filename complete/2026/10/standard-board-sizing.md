@@ -1,3 +1,38 @@
+# Standard responsive sizing for organism boards
+
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/461
+- PR: https://github.com/PyAutoLabs/PyAutoBrain/pull/462
+- merged: 2026-10-05
+- merge-commit: 92da6d036342ef873cc2de7d8c3eebf311a2d8ab
+- scope: Approved Brain-only implementation and family adoption audit; no independent-renderer source changes or explicit deployment dispatched.
+
+## Delivered
+
+The shared theme uses a fluid 77.5rem (1240px) border-box maximum, 16/24px responsive gutters and 65ch prose. Data, metrics and status panels retain full available width. The new tokens and `.board-prose` utility preserve the existing Python API, identity, data contracts and orchestration actions.
+
+`PyAutoBrain/docs/board-sizing.md` records all 13 registered boards, their renderers and publication dependencies, before/after screenshots, source snapshot hashes, browser results and follow-up rollout phases. Eyes and Insight are independent layouts; Ears retains its compatible override; Pulse already consumes the shared theme.
+
+## Validation and merge
+
+- 1178 full-suite tests passed; 213 targeted renderer/theme tests passed.
+- 260 browser layout cases across all 13 boards, five widths and light/dark themes: no new page overflow.
+- 20 stress and keyboard interaction cases passed.
+- Strict Sphinx build, tenant firewall and applicable Brain/Mind discovery checks passed.
+- Heart canonical readiness GREEN 100/100 at ship time; no override used.
+- Exact head 761013ab631e54660a4aa462e5c8ece37dae52e7: Docs run 37342145536 passed; Brain Tests run 37342144143 passed both Python 3.12 and 3.13 legs. GitHub merge state CLEAN. Human `/prm` authorized merge and close-out.
+
+## Reconciliation
+
+Updated the orchestration-panel prompt to reference this completion record. Folder-scoped intake reconciliation flagged unrelated `draft/feature/pyautobrain/batch_slice.md` by resemblance only; retained for `intake reconcile draft/feature/pyautobrain` review, with no claim that this sizing PR covers it.
+
+## Remaining adoption work
+
+The accepted deliverable includes the plan for later consumer adoption, not its execution. Existing Mind expanded bundle-table phone overflow, Eyes/Insight independent-layout overflow/adoption, Ears token deduplication and loaded-gallery/cockpit verification are documented follow-ups requiring separate approved tasks. No claim of family-wide compliance or completed deployment is made.
+
+Committed evidence lives in `PyAutoBrain/docs/board-sizing/`. Local raw snapshots and logs are preserved in `PyAutoMind/tmp/standard-board-sizing/evidence/` before removing the task worktree.
+
+## Original prompt
+
 # Define standard responsive sizing for organism boards
 
 Type: feature
