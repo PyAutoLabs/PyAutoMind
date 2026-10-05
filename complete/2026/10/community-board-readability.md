@@ -1,5 +1,24 @@
 # Community board readability and orchestration
 
+Merged https://github.com/PyAutoLabs/PyAutoEars/pull/10 at af266b120674a8758e4be252d3109a7f487bbf6a on 2026-10-05; closes PyAutoEars#9.
+
+- pending-release: PyAutoEars@https://github.com/PyAutoLabs/PyAutoEars/pull/10
+
+## Delivered
+Larger colored metrics, prominent Community Hub and orchestration prompt actions, expandable attention/activity tables with authors, response age and evidence-backed progress, icon copy actions and fallback, compact follow-through, and bottom coverage table. Removed the requested observation/heuristics sentence. Plan hints remain render-time only; snapshot/feed contracts unchanged.
+
+## Validation
+71 local tests; Chromium light/dark mobile/desktop, keyboard, clipboard/fallback and expiry checks; synthetic/live-snapshot state validation; diff and visual self-review. All three exact-head CI jobs passed (Python 3.12, Python 3.13, browser), run 37285942158. No modelling workspace API changes.
+
+## Authorization and follow-up
+User authorized the task-specific development-only RED override with “I authorize”; exact reason `release validation FAILED (stage integrate)`. User then invoked `$prm and continue`, authorizing merge and close-out. No release performed. Pages deployment runs automatically from main.
+
+Preview, screenshots, logs and public snapshot preserved in `organs/PyAutoEars/output/community-board-readability/`. Disposable browser venv and caches may be removed with the task worktree. No irreplaceable science data were created.
+
+## Original prompt
+
+# Community board readability and orchestration
+
 Issued: 2026-10-05
 Issue: https://github.com/PyAutoLabs/PyAutoEars/issues/9
 Type: feature
