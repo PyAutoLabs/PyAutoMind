@@ -41,14 +41,14 @@
   - validation: 119 focused and1222 full Heart tests PASS; actual empty-venv emitter replay PASS retaining22 adverse rows; independent Sol CLEAN; no scientific API/smoke impact.
 - library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/281
 - pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/281
-- resume: PR281 head6b7bd40 fixes report dependency and adds pinned current-incident diagnostic.141 targeted/1222 preceding full tests and expanded independent Sol review PASS. Hosted bounded replay37287631900 PASS33.666s, zero provenance errors; local fresh fit40.851s no-repro. Final-head CI both Python legs green. Latest integration37217670612 remains RED. Next human mergePR281 then fresh wheels/integration (Lens main advanced to dffea805). No production release.
+- resume: PR281 headf855ec2 includes immutable current shapelet incident and3 isolated fresh replay attempts;143 relevant tests and independent Sol CLEAN. Hosted native-capture run37310709808 active; previous MGE replay passed33.666s without reproducing. Full integration37286150846 has4failedshards, guides stillrunning. No runtime fix asserted yet; human merge remains separate.
 
 ## profiling-setup-browser
 - issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/12
 - issued: 2026-10-05
 - prompt: active/profiling_setup_browser_frontpage.md
 - session: Codex (GPT-6), session ID unavailable; resumed repair 2026-10-05
-- status: workspace-dev, repairing PR13
+- status: workspace-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-setup-browser
 - repos:
   - PyAutoPulse: feature/profiling-setup-browser
@@ -65,9 +65,9 @@
   - gates: 188 full tests and 15 final focused PASS; Ruff, CLI/Chromium and real-data smoke PASS; inline code and visual review PASS; no independent review claimed.
 
 - workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/13
-- commit: 3c7bed2
+- commit: 63b212c
 
-- blocked-by: PR #13 lint run37303257792 fails lychee on installed node_modules/playwright/README.md; Python/Chromium/offline and refresh pass. prm stopped on red, no rerun or code edits. Correct link-check input scope before resuming.
+- repair: PR13 merge-conflict/link-scope repair63b212c;189pytest/Ruff/offline/Chromium PASS; independent Sol CLEAN; lint37310560345 and refresh37310560357 SUCCESS; mergeStateStatus CLEAN. Current live repair grant issuecomment-5994467928; no merge or release authorized.
 - ci-log: .worktrees/profiling-setup-browser/pulse-ci-failure.log
 
 - current-repair: User explicitly requested PR13 CI and conflict repair in current Heart RED discussion; original request and bounded plan recorded in active prompt. Development repair/push only, no merge/release authorization assumed.

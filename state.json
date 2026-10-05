@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-05T12:34:02Z",
+  "updated": "2026-10-05T12:37:15Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Make Pulse a compact setup-oriented profiling front page \u2014 workspace-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoPulse/pull/13",
+      "prompt": "Use the start-dev skill. active/profiling_setup_browser_frontpage.md"
+    },
     {
       "severity": "yellow",
       "text": "Restore complete Heart dashboard health \u2014 library-shipped, awaiting-merge",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#611 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/611",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#606 \u2014 Shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/606",
       "prompt": null
     }
   ]
