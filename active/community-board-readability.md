@@ -81,3 +81,14 @@ At the planning checkpoint, no implementation files had been edited and no issue
 - Heart readiness is RED, exact reason: `release validation FAILED (stage integrate)`; evidence `output/heart-readiness.json`.
 - Draft PR body: `output/pr-body.md`. No source commit, push, PR, merge or deployment yet.
 - Next: obtain a live development-only Heart RED override naming task/issue #9; record it in the four required sinks, then commit/push/open the pending-release PR. If Heart becomes permissible instead, re-read and proceed under that verdict. Merge remains human `/prm`.
+
+
+## Shipping handoff — 2026-10-05
+
+- Live user replied “I authorize” to the issue #9 development-only Heart RED override request.
+- Exact RED remains `release validation FAILED (stage integrate)`; authorization and passed gates recorded on issue comment https://github.com/PyAutoLabs/PyAutoEars/issues/9#issuecomment-5991154811, PR body, active registry and autonomy log.
+- Committed and pushed `1fee989` on `feature/community-board-readability`; worktree clean.
+- PR: https://github.com/PyAutoLabs/PyAutoEars/pull/10, labeled `pending-release`.
+- Existing validation: 71 tests, browser smoke, state validation and diff/visual review passed. Source unchanged since validation.
+- No modelling workspace API impact; no follow-up workspace phase required.
+- Deliverable reached: PR open, awaiting CI/human review and separate `/prm`; no merge or deployment authorized or performed.

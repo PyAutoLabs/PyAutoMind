@@ -27,7 +27,14 @@
 - issue: https://github.com/PyAutoLabs/PyAutoEars/issues/9
 - issued: 2026-10-05
 - session: Codex; session ID unavailable
-- status: awaiting-input
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoEars/pull/10
+- pending-release: PyAutoEars@https://github.com/PyAutoLabs/PyAutoEars/pull/10
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-board-readability
 - repos:
   - PyAutoEars: feature/community-board-readability
+- heart-red-override:
+  - authorization: Live user “I authorize” to the task-specific issue #9 development-only push/PR request; commit, push and PR only; merge separate.
+  - evidence: https://github.com/PyAutoLabs/PyAutoEars/issues/9#issuecomment-5991154811
+  - reason: release validation FAILED (stage integrate)
+  - gates: 71 pytest PASS; Chromium responsive/keyboard/clipboard/expiry PASS; state validation PASS; diff/visual self-review PASS; no workspace API impact.
