@@ -42,17 +42,17 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 3 |
+| [In flight](#in-flight) (`active/`) | 2 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 7 |
 | [Planned](#planned) (`planned.md`) | 7 |
-| [Backlog](#backlog) (`draft/`) | 229 |
+| [Backlog](#backlog) (`draft/`) | 230 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 20
+**Highest priority** (filed as `high`) — showing 12 of 21
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -251,14 +251,6 @@ Use the start-dev skill. draft/research/pyautohands/git_docs.md
 ## In flight
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
-
-<details><summary>📋 <a href="active/interferometer_streaming_scaling.md">Campaign phase 1: interferometer streaming vs in-memory scaling (CPU)</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/368">issue #368</a> — issued 2026-10-04 — merged, close-out held (glance shadow-row question pending) — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/375">autolens_profiling#375</a></summary>
-
-```
-Use the start-dev skill. active/interferometer_streaming_scaling.md
-```
-
-</details>
 
 <details><summary>📋 <a href="active/nnls_memo_scattered_backoff.md">fnnls warm-start memo: per-key back-off on scattered evaluation streams</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/613">issue #613</a> — issued 2026-10-04 — library-dev</summary>
 
@@ -678,7 +670,7 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ## Backlog
 
-**229** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
+**230** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 73</summary>
@@ -1270,7 +1262,15 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>feature</b> — 32</summary>
+<summary><b>feature</b> — 33</summary>
+
+<details><summary>📋 <a href="draft/feature/pyautopulse/profiling_setup_contract.md">Accept setup-based profiling evidence</a> — pyautopulse · large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautopulse/profiling_setup_contract.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/feature/pyautopulse/profiling_setup_browser.md">Setup-first profiling: dashboard, evidence catalogue, scripts and assistant</a> — pyautopulse · too-large · human-required · high</summary>
 
@@ -2464,9 +2464,9 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | Date | Event | Task |
 |------|-------|------|
 | 2026-10-05 | filed | <a href="draft/feature/pyautopulse/profiling_setup_browser.md">Setup-first profiling: dashboard, evidence catalogue, scripts and…</a> |
+| 2026-10-05 | filed | <a href="draft/feature/pyautopulse/profiling_setup_contract.md">Accept setup-based profiling evidence</a> |
 | 2026-10-04 | issued | <a href="parked.md#heart-dashboard-remaining">heart-dashboard-remaining</a> |
 | 2026-10-04 | issued | <a href="active/nnls_memo_scattered_backoff.md">fnnls warm-start memo: per-key back-off on scattered evaluation…</a> |
-| 2026-10-04 | issued | <a href="active/interferometer_streaming_scaling.md">Campaign phase 1: interferometer streaming vs in-memory scaling (CPU)</a> |
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
 | 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
 | 2026-10-02 | parked | <a href="parked.md#colab-refinement-throughout">colab-refinement-throughout</a> |
@@ -3066,7 +3066,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 </details>
 
-61 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+62 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3091,6 +3091,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 - `draft/feature/pyautoeyes/multi_galaxy_gallery.md`
 - `draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md`
 - `draft/feature/pyautopulse/profiling_setup_browser.md`
+- `draft/feature/pyautopulse/profiling_setup_contract.md`
 - `draft/feature/workspaces/model_figures_6_rollout.md`
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md`
@@ -3110,8 +3111,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 - `draft/docs/howtolens/cluster_pixelized_source.md`
 - `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
 - `draft/test/workspaces/mesh_magnification_correctness.md`
-- `draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md`
-- _… and 21 more_
+- _… and 22 more_
 
 </details>
 

@@ -202,17 +202,17 @@ Recent local branches:
 - Brain: main, feature/tiered-auto-merge, feature/abell-1201-point-mass,
   feature/cortex-may-submit, claude/pyauto-cti-ci-phase-5-n4idom.
 
-The conflict guard reports autolens_profiling claimed by
-`interferometer-streaming-scaling`. Its active entry records PR #375 merged,
-but close-out awaiting a human response and retained ignored logs. Do not
-remove the claim or old worktree implicitly. Obtain explicit coordination
-authorization or complete that task's human close-out before claiming the repo.
+Coordination authorized by the human on 2026-10-05, including removal of the
+merged streaming worktree. Its phase is recorded in
+`complete/2026/10/interferometer-streaming-scaling.md`; ignored files were
+archived and verified before removal. The old calibration answer remains
+unknown and no shadow-row outcome was invented.
 
 Heart at entry: STALE — Release STALE; monitoring RED · 45/100 · 125 unresolved
 (updated 21h ago). Entry helper exits 1; planning allowed. Re-read at shipping.
 
-The conceptual plan is approved; the detailed issue/branch plan is prepared
-for review. No issues, implementation worktrees, source edits or compute
+The conceptual and detailed plan, branch proposal and coordination are approved
+by the human (2026-10-05). No issues, implementation worktrees, source edits or compute
 dispatch have been performed at this checkpoint.
 
 ## Original request (verbatim)
