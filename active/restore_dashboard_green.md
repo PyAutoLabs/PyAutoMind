@@ -336,3 +336,13 @@ User requested starting fixes after run37286150846 reported four failed shards. 
 Run at most three separate pristine copies of the checkout, one fresh target per copy, stopping at first nonpass; existing native120s/cap300s limits stay unchanged. Preserve full multi_galaxy/simple dataset (FITS+JSON). New executable workflow test proves fit outputs cannot leak into next repetition and failed second attempt prevents third.143 focused diagnostic/workflow/validate tests PASS; manifest preparation PASS. Historical FFT/Eigen re-entrancy is a hypothesis: user workspace lacks the test-workspace Eigen-false workaround; require native stack before asserting cause or mitigation.
 
 Shapelet diagnostic shipped on current authorized PR281 atf855ec2 after143 tests/independent Sol CLEAN. Run37310709808 dispatched with incident37286150846; maximum3 independent fresh fits, stopfirstfailure, native120/cap300. No validation outcome claimed.
+
+### 2026-10-05 native-confirmed FFT repair — PR281
+
+Control37310709808 reproduced the shapelet stall at300.047s on exact Python3.12.14,115pins,workspace/Hands/library revisions. Zero provenance errors. All four Eigen workers wait in FFT/ducc0 latch fan-out; no old LAPACK signatures. Committed trimmed witness includes raw SHA2566c8d9837a5fd773384cbda21a4b3a7f3ced1af958768cffc2a21c172c76a804c.
+
+Candidate37312018327 applies only `--xla_cpu_multi_thread_eigen=false` and passes three pristine fits47.383/45.188/45.237s. Pins and source refs match control; all provenance errors empty, only recorded environment delta is XLA_FLAGS. Separate hosted runs, not an interleaved failure-rate estimate. This is the historical FFT deadlock, distinct from last night's JAX0.10.2 LAPACK repair.
+
+PR281 headad9bbc4 appends the proven flag to release-only run_scripts while preserving existing flags; no library default changes, cap changes, exclusions or readiness changes. Existing PyYAML emitter fix retained.146 focused and1227 full Heart tests PASS; independent Sol CLEAN atad9bbc4. Final unit CI37312612310 Python3.12/3.13 SUCCESS. Current full integration37286150846 predates fix and remains running with failed shards; no duplicate or cancellation. Fresh vitals2026-10-05T12:52:08Z remains RED60 `release validation FAILED (stage integrate)`.
+
+Live current-session development authorization retained; causal scope now verified FFT execution mitigation plus failed-report dependency repair. Human merge separate; after merge full integration and canonical ingest must establish recovery. Pulse13 repair is complete separately. No production release or upstream filing. Evidence retained in tmp/heart-red-20261005/{shapelet-37310709808,fft-candidate-37312018327}; full test log fft-full-heart-tests.log.

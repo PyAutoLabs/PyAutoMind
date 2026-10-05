@@ -41,7 +41,7 @@
   - validation: 119 focused and1222 full Heart tests PASS; actual empty-venv emitter replay PASS retaining22 adverse rows; independent Sol CLEAN; no scientific API/smoke impact.
 - library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/281
 - pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/281
-- resume: PR281 headf855ec2 includes immutable current shapelet incident and3 isolated fresh replay attempts;143 relevant tests and independent Sol CLEAN. Hosted native-capture run37310709808 active; previous MGE replay passed33.666s without reproducing. Full integration37286150846 has4failedshards, guides stillrunning. No runtime fix asserted yet; human merge remains separate.
+- resume: PR281 headad9bbc4 fixes native-confirmed FFT/ducc0 deadlock in release CI and missing report dependency. Exact-wheel candidate37312018327 passes3 pristine fits47.383/45.188/45.237s versus control300s timeout;146 focused/1227 full tests and independent Sol CLEAN. Final unit CI37312612310 Python3.12/3.13 SUCCESS. Full integration37286150846 predatesfix, stillrunning with failedshards. Human merge and fresh fullvalidation remain.
 
 ## profiling-setup-browser
 - issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/12
