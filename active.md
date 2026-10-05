@@ -48,9 +48,15 @@
 - issued: 2026-10-05
 - prompt: active/profiling_setup_page.md
 - session: Codex; session ID unavailable
-- status: workspace-dev
+- status: awaiting-heart-override
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-setup-page
 - repos:
   - autolens_profiling: feature/profiling-setup-page
 - summary: Phase 3a of the approved profiling refactor; dataset/model/instrument setup browser using merged catalogue #377 and shared theme. Pulse front page follows separately.
 - authorization: live "$prm and continue" plus approved parent Phase 3 plan; human merge; no bulk profiling. Phase 2 shipping override does not authorize Phase 3 shipping.
+
+- progress: Project browser implemented with shared theme, dataset/model disclosures, selectors, verified lazy shards, history, missing coverage, linear scoped charts and evidence disclosures. Pulse front page follows in its own PR.
+- validation: 1061 full tests pass (5 skips); final 48 focused tests pass; final Chromium interaction/responsive/error-state suite passes; seven section smokes pass; Ruff and existing metadata/generation/Pulse checks pass; inline visual/code review complete.
+- shipping-blocker: Heart RED `release validation FAILED (stage integrate)`; no task-specific #378 shipping override yet. Source remains uncommitted/unpushed.
+- pr-draft: .worktrees/profiling-setup-page/phase3-pr-body.md
+- previews: .worktrees/profiling-setup-page/browser-artifacts/setup-1280.png and setup-390.png
