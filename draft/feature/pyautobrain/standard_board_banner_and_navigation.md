@@ -70,3 +70,7 @@ All source repos are on main; no active claims conflict. Memory and Hands are tw
 - Independent consumers: `PyAutoEyes/eyes/board.py`, `PyAutoInsight/insight/board.py` and `insight/theme.py`. Adopt shared banner/card presentation without replacing their data models or disguising gallery/table overflow. Preserve locally owned content styling where compatible.
 - Document the contract and a completion matrix in Brain. Add focused renderer tests for escaping, optional counts, live link targets and freshness semantics; browser checks for card navigation, keyboard focus, long labels, mobile reflow, light/dark, copied prompts and existing deep links.
 - Source merging and live adoption are separate milestones. Existing refresh/publication workflows must regenerate HTML after Brain is available. Never report all boards live from the Brain merge alone; actual rollout is subject to its explicit authorization and existing publication mechanics.
+
+## Approved execution
+
+User approved this plan and authorized /prm on 2026-10-05. Core merged as PyAutoBrain#464; ten per-organ consumer tasks are active.

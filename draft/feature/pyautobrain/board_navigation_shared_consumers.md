@@ -24,7 +24,7 @@ Filed: 2026-10-05
 
 ## Scope
 
-After board_navigation_core merges, adopt the shared component in all eight consumer renderers listed in the parent plan, with one issue/PR per repository. Start with Ears: remove the quoted stale message, move readable timestamp/out-of-date metadata below navigation, update its browser expiry behavior, and preserve stale/unknown data semantics. Keep owner-specific destinations and actions. Use local fixtures and browser evidence to prove adoption in each board; verify regeneration/publication before claiming live. Split repo execution prompts before claims.
+After core PR PyAutoBrain#464 (merged; `complete/2026/10/board-navigation-core.md`), adopt the shared component in all eight consumer renderers listed in the parent plan, with one issue/PR per repository. Start with Ears: remove the quoted stale message, move readable timestamp/out-of-date metadata below navigation, update its browser expiry behavior, and preserve stale/unknown data semantics. Keep owner-specific destinations and actions. Use local fixtures and browser evidence to prove adoption in each board; verify regeneration/publication before claiming live. Split repo execution prompts before claims.
 
 ## Original user request (verbatim)
 

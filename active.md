@@ -34,17 +34,6 @@
   - euclid_assistant: feature/niek-euclid-style-review
 - summary: Approved full Style Guide/PDD coverage audit, assistant improvements, Niek manuscript corrections, independent Opus 5.5 review, and author ZIP. No merge authority.
 
-## board-navigation-core
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/463
-- issued: 2026-10-05
-- prompt: active/board_navigation_core.md
-- session: Codex (session ID unavailable)
-- status: library-dev
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/board-navigation-core
-- repos:
-  - PyAutoBrain: feature/board-navigation-core
-- summary: Approved shared banner/navigation component plus Brain, Mind and Cortex adoption. All-board rollout follows via shared and independent consumer phases. User approved plan and invoked /prm in this turn; all merge gates remain required.
-
 ## board-navigation-ears
 - issue: https://github.com/PyAutoLabs/PyAutoEars/issues/11
 - issued: 2026-10-05

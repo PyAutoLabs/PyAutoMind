@@ -1,3 +1,15 @@
+# Shared board banner and navigation
+
+Merged PyAutoBrain#464 (3cdd3c7792e9e6d7a6edc25d06a85fa6133ec9d9), closing PyAutoBrain#463.
+
+The shared theme now renders accessible section cards immediately after the logo banner, with optional owner-supplied counts and context. Brain, Mind and Cortex use the component. Responsive sizing, operational meanings and copy prompts are preserved. The remaining ten boards have separate active migration tasks.
+
+Validation: 1,186 tests; strict docs build; tenant firewall and discovery checks; 30 browser viewport/theme cases including keyboard navigation. Every Docs and Brain Tests CI job passed on bb858130adf0885e018b3d78cdd52be0ccd47a33. Heart refreshed GREEN (100), 2026-10-05T17:07:28Z.
+
+Evidence: tmp/board-navigation/core-evidence/ (local raw evidence), docs/board-navigation.md and its committed screenshots in Brain.
+
+## Original prompt
+
 # Shared banner and navigation: Brain, Mind and Cortex
 
 Type: feature

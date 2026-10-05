@@ -18,7 +18,7 @@ Filed: 2026-10-05
 
 ## Scope
 
-After board_navigation_core merges, adapt Eyes and Insight independent renderers to the same banner, card navigation and sizing contract. Preserve gallery/inference data, actions and identity. Resolve the independent outer-width and overflow integration needed for usable cards on compact screens; verify with loaded gallery assets and populated tables. Preserve Eyes local untracked dataset/, output/ and scripts/; use isolated worktrees. One issue/PR per repository; split repo execution prompts before claims. Verify all 13 board entries and remaining publication state for the final rollout report.
+After core PR PyAutoBrain#464 (merged; `complete/2026/10/board-navigation-core.md`), adapt Eyes and Insight independent renderers to the same banner, card navigation and sizing contract. Preserve gallery/inference data, actions and identity. Resolve the independent outer-width and overflow integration needed for usable cards on compact screens; verify with loaded gallery assets and populated tables. Preserve Eyes local untracked dataset/, output/ and scripts/; use isolated worktrees. One issue/PR per repository; split repo execution prompts before claims. Verify all 13 board entries and remaining publication state for the final rollout report.
 
 ## Original user request (verbatim)
 
