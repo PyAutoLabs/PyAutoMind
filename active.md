@@ -41,7 +41,7 @@
   - validation: 119 focused and1222 full Heart tests PASS; actual empty-venv emitter replay PASS retaining22 adverse rows; independent Sol CLEAN; no scientific API/smoke impact.
 - library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/281
 - pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/281
-- resume: Report dependency repair0e36334 in PR281; tests/review pass. Latest run37217670612 retained as RED; local exact-wheel bounded materialization-stall diagnostic running. Human merge required; no release.
+- resume: PR281 head6b7bd40 fixes report dependency and adds pinned current-incident diagnostic.141 targeted/1222 preceding full tests and expanded independent Sol review PASS. Hosted bounded replay37287631900 running; local fresh fit40.851s no-repro. Latest integration37217670612 remains RED. Human merge required; no release.
 
 ## profiling-setup-catalogue
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/376
