@@ -1,3 +1,20 @@
+# Minimal dashboard text and top Heart action
+
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/467
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/468
+- library-pr: https://github.com/PyAutoLabs/PyAutoEars/pull/13
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/284
+
+All three PRs merged in dependency order. Shared hero ledes and orchestration descriptions are no longer displayed; Mind's tutorial paragraphs removed; Ears Last checked and usage paragraphs removed; Heart systematic-fix prompt is in the top shared panel with work-repo link, no lower duplicate, and evidence refresh displayed only when available. Prompt and data contracts preserved.
+
+Validation: 2,493 local tests, strict docs, shared 10-case browser witness and Heart three-width exact-copy/layout checks. Every CI job passed: Brain three, Ears three, Heart two. Branch ancestry proven in each origin/main.
+
+Shipping used the explicit development-only RED override recorded on issue comment 6000820253: `autolens_workspace_test: Smoke Tests failure on main`. Human separately invoked /prm; this merge does not clear Heart or authorize release.
+
+Remaining broader orchestration rollout and cross-repo guidance are tracked in draft/feature/pyautobrain/standardize_dashboard_orchestration_prompt_panel.md. Unrelated batch_slice.md reconciliation suspect retained; /intake reconcile draft/feature/pyautobrain is its review door.
+
+## Original prompt
+
 # Remove dashboard tutorial prose and elevate Heart action
 
 Type: feature
