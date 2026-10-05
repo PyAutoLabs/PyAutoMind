@@ -1447,7 +1447,7 @@ Use the start-dev skill. draft/feature/autolens_workspace/oversampled_psf_datase
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautobrain/standardize_dashboard_orchestration_prompt_panel.md">Standardize dashboard orchestration prompt panels</a> — pyautobrain · large · supervised · normal</summary>
+<details><summary>📋 <a href="draft/feature/pyautobrain/standardize_dashboard_orchestration_prompt_panel.md">Shared dashboard orchestration panels and durable organism standards</a> — pyautobrain · large · supervised · normal</summary>
 
 ```
 Use the start-dev skill. draft/feature/pyautobrain/standardize_dashboard_orchestration_prompt_panel.md
