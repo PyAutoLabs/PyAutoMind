@@ -28,8 +28,10 @@
 - issued: 2026-10-05
 - prompt: active/shared_orchestration_panel_core.md
 - session: Codex (session ID unavailable)
-- status: workspace-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/466
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/orchestration-panel-core
 - repos:
   - PyAutoBrain: feature/orchestration-panel-core
 - summary: Shared orchestration panel API, Brain/Mind/Cortex adoption and standards index; approved combined initiative, first dependency phase. Human /prm.
+- resume: Human /prm for Brain#466, then approved Ears/Heart and remaining-board adoption plus Mind-generated AGENTS.md discovery and Scientist links. Core validation: 1195 tests, strict docs and browser witness pass; Heart STALE (PyAutoNerves rehearsal SHA), no RED reasons.

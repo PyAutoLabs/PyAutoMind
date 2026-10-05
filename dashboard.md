@@ -260,7 +260,7 @@ Use the start-dev skill. active/nnls_memo_scattered_backoff.md
 
 </details>
 
-<details><summary>📋 <a href="active/shared_orchestration_panel_core.md">Shared orchestration panel core and standards index</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/465">issue #465</a> — issued 2026-10-05 — workspace-dev</summary>
+<details><summary>📋 <a href="active/shared_orchestration_panel_core.md">Shared orchestration panel core and standards index</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/465">issue #465</a> — issued 2026-10-05 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/466">PyAutoBrain#466</a></summary>
 
 ```
 Use the start-dev skill. active/shared_orchestration_panel_core.md
