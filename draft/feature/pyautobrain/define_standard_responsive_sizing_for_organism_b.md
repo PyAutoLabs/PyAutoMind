@@ -9,7 +9,6 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: normal
-Memory: wiki/lensing/sources/dark-matter-substructure.md; wiki/galaxies/sources/massive-ellipticals.md; wiki/galaxies/sources/cosmos-survey.md
 Status: formalised
 Consequence: judge
 Review-minutes: 20
