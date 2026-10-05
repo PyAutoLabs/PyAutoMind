@@ -42,7 +42,7 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 13 |
+| [In flight](#in-flight) (`active/`) | 12 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 6 |
 | [Planned](#planned) (`planned.md`) | 7 |
@@ -328,14 +328,6 @@ Use the start-dev skill. active/board_navigation_pulse.md
 
 ```
 Use the start-dev skill. active/board_navigation_scientist.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/niek_full_style_review.md">Full Euclid style coverage and Niek manuscript review</a> — <a href="https://github.com/Jammy2211/euclid_assistant/issues/12">issue #12</a> — issued 2026-10-05 — awaiting-merge</summary>
-
-```
-Use the start-dev skill. active/niek_full_style_review.md
 ```
 
 </details>
@@ -2594,18 +2586,17 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-10-05 | filed | <a href="draft/feature/pyautobrain/board_navigation_independent_consumers.md">Shared banner and navigation: Eyes and Insight</a> |
 | 2026-10-05 | filed | <a href="draft/feature/pyautobrain/board_navigation_shared_consumers.md">Shared banner and navigation: Ears and shared consumers</a> |
 | 2026-10-05 | filed | <a href="draft/feature/pyautopulse/profiling_setup_browser.md">Setup-first profiling: dashboard, evidence catalogue, scripts and…</a> |
-| 2026-10-05 | issued | <a href="active/niek_full_style_review.md">Full Euclid style coverage and Niek manuscript review</a> |
 | 2026-10-05 | issued | <a href="active/board_navigation_scientist.md">Adopt shared board navigation in PyAutoScientist</a> |
 | 2026-10-05 | issued | <a href="active/board_navigation_pulse.md">Adopt shared board navigation in PyAutoPulse</a> |
 | 2026-10-05 | issued | <a href="active/board_navigation_nerves.md">Adopt shared board navigation in PyAutoNerves</a> |
 | 2026-10-05 | issued | <a href="active/board_navigation_memory.md">Adopt shared board navigation in PyAutoMemory</a> |
 | 2026-10-05 | issued | <a href="active/board_navigation_insight.md">Adopt shared board navigation in PyAutoInsight</a> |
+| 2026-10-05 | issued | <a href="active/board_navigation_heart.md">Adopt shared board navigation in PyAutoHeart</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-05 | issued | <a href="active/board_navigation_heart.md">Adopt shared board navigation in PyAutoHeart</a> |
 | 2026-10-05 | issued | <a href="active/board_navigation_hands.md">Adopt shared board navigation in PyAutoHands</a> |
 | 2026-10-05 | issued | <a href="active/board_navigation_gut.md">Adopt shared board navigation in PyAutoGut</a> |
 | 2026-10-05 | issued | <a href="active/board_navigation_eyes.md">Adopt shared board navigation in PyAutoEyes</a> |
@@ -2615,12 +2606,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
 | 2026-10-02 | parked | <a href="parked.md#colab-refinement-throughout">colab-refinement-throughout</a> |
 | 2026-10-02 | parked | <a href="parked.md#bootstrap-smoke-codex">bootstrap-smoke-codex</a> |
+| 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
@@ -2630,12 +2621,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/power_law_multipole_m1_singular_at_isothermal_slope.md">PowerLawMultipole with m=1 returns -inf / NaN deflections at slope…</a> |
+| 2026-09-27 | filed | <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-27 | filed | <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
 | 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
 | 2026-09-26 | filed | <a href="draft/refactor/workspaces/abell_1201_local_cleanup.md">Repo cleanup: retire the Abell 1201 worktree and local raw data</a> |
@@ -2645,12 +2636,12 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-23 | filed | <a href="draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
 | 2026-09-22 | issued | <a href="active/vis_lp_inspection_bundle.md">Support vis_lp-only products in inspection bundles</a> |
 | 2026-09-19 | issued | <a href="parked.md#catalogue-inspection-before-vis-pix">catalogue-inspection-before-vis-pix</a> |
+| 2026-09-18 | parked | <a href="parked.md#fixed-light-numba-s7">fixed-light-numba-s7</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-18 | parked | <a href="parked.md#fixed-light-numba-s7">fixed-light-numba-s7</a> |
 | 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> |
@@ -2660,6 +2651,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/pyautobrain/sizing_faculty_none_rule_keyword_false_judge_triage.md">Sizing faculty: a <code>none</code> rule, keyword hits on prose that only…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> |
+| 2026-09-17 | filed | <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> |
 
 </details>
 
