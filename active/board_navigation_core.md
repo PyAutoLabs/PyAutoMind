@@ -7,7 +7,8 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: normal
-Status: draft
+Status: active
+Issued: 2026-10-05
 Consequence: judge
 Filed: 2026-10-05
 
