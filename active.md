@@ -28,7 +28,7 @@
 - issued: 2026-10-05
 - prompt: active/profiling_setup_contract.md
 - session: Codex; session ID unavailable
-- status: workspace-dev
+- status: awaiting-input (Heart RED shipping gate)
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-setup-contract
 - repos:
   - PyAutoPulse: feature/profiling-setup-contract
@@ -43,3 +43,6 @@
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-board-readability
 - repos:
   - PyAutoEars: feature/community-board-readability
+- validation: 184 tests passed; ruff check/format clean; pyauto-pulse check --offline passed against production v1 snapshot and Brain state contract.
+- heart: RED, exact reason `release validation FAILED (stage integrate)` from vitals readiness --json; override not yet authorized after surfacing this reason.
+- resume: implementation complete and staged, not committed/pushed. Review diff in .worktrees/profiling-setup-contract/.scratch/phase-1.patch; prepared PR body in .scratch/pr-body.md. On task-specific human RED development override, record all four override sinks then commit/push/open pending-release PR. Human merge remains separate. Parent full refactor continues after this reader phase lands.

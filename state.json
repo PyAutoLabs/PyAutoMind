@@ -2,11 +2,17 @@
   "schema_version": 1,
   "organ": "mind",
   "repo": "PyAutoMind",
-  "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-05T08:36:34Z",
+  "status": "red",
+  "headline": "RED \u2014 24 picks \u00b7 4 in flight",
+  "updated": "2026-10-05T08:41:56Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "red",
+      "text": "Accept setup-based profiling evidence \u2014 awaiting-input (Heart RED shipping gate)",
+      "url": "https://github.com/PyAutoLabs/PyAutoPulse/issues/10",
+      "prompt": "Use the start-dev skill. active/profiling_setup_contract.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#606 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/606",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#599 \u2014 streaming-p4-light-profile-identity",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/599",
       "prompt": null
     }
   ]
