@@ -260,7 +260,7 @@ Use the start-dev skill. active/nnls_memo_scattered_backoff.md
 
 </details>
 
-<details><summary>📋 <a href="active/profiling_setup_page.md">Browse profiling by dataset, model and instrument</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/378">issue #378</a> — issued 2026-10-05 — awaiting-heart-override</summary>
+<details><summary>📋 <a href="active/profiling_setup_page.md">Browse profiling by dataset, model and instrument</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/378">issue #378</a> — issued 2026-10-05 — shipping</summary>
 
 ```
 Use the start-dev skill. active/profiling_setup_page.md
