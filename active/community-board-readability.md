@@ -1,5 +1,7 @@
 # Community board readability and orchestration
 
+Issued: 2026-10-05
+Issue: https://github.com/PyAutoLabs/PyAutoEars/issues/9
 Type: feature
 Difficulty: medium
 Priority: normal
@@ -34,7 +36,7 @@ table format as above.
 - I think for the table displaing all active issues chats and whatnot on the discussions, along side author name
 an entry which also gives a sense of maturity (E.g. issue versus plan versus PR is raised) would also be good.
 
-## Proposed plan — awaiting approval
+## Approved plan — 2026-10-05
 
 1. Larger colored metric tiles, a prominent Community Hub button and top-level single-chat community check-in prompt with optional direction and bounded delegation.
 2. Heart-style expandable conversation tables for attention, unknowns and activity: topic, repository, author, type, progress, readable waiting age and icon actions.

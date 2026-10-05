@@ -34,3 +34,12 @@
   - PyAutoPulse: feature/profiling-setup-contract
 - summary: Phase 1 of the approved full setup-first profiling refactor; v2 contract reader with v1 compatibility. Parent draft/feature/pyautopulse/profiling_setup_browser.md.
 - authorization: human approved full plan and coordination on 2026-10-05; merges remain human /prm.
+
+## community-board-readability
+- issue: https://github.com/PyAutoLabs/PyAutoEars/issues/9
+- issued: 2026-10-05
+- session: Codex; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-board-readability
+- repos:
+  - PyAutoEars: feature/community-board-readability
