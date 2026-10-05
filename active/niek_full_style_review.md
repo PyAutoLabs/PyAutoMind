@@ -1,5 +1,6 @@
 # Full Euclid style coverage and Niek manuscript review
 
+Issued: 2026-10-05
 Type: feature
 Consequence: judge
 Lane: local-dev
