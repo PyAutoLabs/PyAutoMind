@@ -7,6 +7,8 @@ Difficulty: large
 Consequence: judge
 Autonomy: human-required
 Filed: 2026-10-05
+Issued: 2026-10-05
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/378
 
 Primary repo: @autolens_profiling
 Classification: standalone workspace; no library API changes.
@@ -69,3 +71,12 @@ continues into this phase after the Phase 2 merge; no bulk profiling authorized.
 Original request (verbatim):
 
 $prm and continue
+
+## Branch survey and routing
+
+2026-10-05: canonical autolens_profiling main at merged catalogue dcfa056e;
+only pre-existing untracked dataset/abell_1201, preserved. No open PRs or active
+repo claims. Historical worktrees are out of scope. Workspace-only classification
+confirmed by Brain feature decision; generic API-risk heuristic is not a library
+scope. Phase 3 is already split into project then Pulse as the parent approved.
+Worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-setup-page.

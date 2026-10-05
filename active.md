@@ -42,3 +42,15 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/281
 - pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/281
 - resume: PR281 head6b7bd40 fixes report dependency and adds pinned current-incident diagnostic.141 targeted/1222 preceding full tests and expanded independent Sol review PASS. Hosted bounded replay37287631900 PASS33.666s, zero provenance errors; local fresh fit40.851s no-repro. Final-head CI both Python legs green. Latest integration37217670612 remains RED. Next human mergePR281 then fresh wheels/integration (Lens main advanced to dffea805). No production release.
+
+## profiling-setup-page
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/378
+- issued: 2026-10-05
+- prompt: active/profiling_setup_page.md
+- session: Codex; session ID unavailable
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-setup-page
+- repos:
+  - autolens_profiling: feature/profiling-setup-page
+- summary: Phase 3a of the approved profiling refactor; dataset/model/instrument setup browser using merged catalogue #377 and shared theme. Pulse front page follows separately.
+- authorization: live "$prm and continue" plus approved parent Phase 3 plan; human merge; no bulk profiling. Phase 2 shipping override does not authorize Phase 3 shipping.
