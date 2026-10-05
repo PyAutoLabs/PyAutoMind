@@ -34,8 +34,8 @@
   - PyAutoBrain: feature/standard-board-sizing
 - summary: Approved Brain-only responsive sizing standard (1240px, responsive gutters, 65ch prose), 13-board adoption audit and browser evidence. Consumer changes are separate follow-ups. Tier judge; human /prm.
 - library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/462
-- commit: 1bf3731
-- validation: 1178 full-suite tests and 213 targeted tests passed; 260 browser layout cases with no new overflow; 20 stress/interaction cases passed. Canonical Heart GREEN 100/100 at 2026-10-05T16:32:41Z. Tenant firewall and Brain/Mind discovery pass.
+- commit: 761013a
+- validation: 1178 full-suite tests and 213 targeted tests passed; 260 browser layout cases with no new overflow; 20 stress/interaction cases passed. Canonical Heart GREEN 100/100 at 2026-10-05T16:32:41Z. Tenant firewall and Brain/Mind discovery pass. Strict Sphinx build passes after adding report to contents (first CI docs warning fixed).
 - evidence: docs/board-sizing.md and docs/board-sizing/results.json in PR; full local logs at .worktrees/standard-board-sizing/evidence/.
 - follow-ups: Existing Mind bundle phone overflow; Eyes and Insight independent-layout adoption/overflow; Ears token deduplication. No consumer source edits or deployment dispatched.
 - resume: PR #462 open with pending-release label. Judge tier; human /prm after CI. Worktree clean. Keep task open until merge.
