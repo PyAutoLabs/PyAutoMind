@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1699 records across 9 buckets.
+1700 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -165,6 +165,7 @@ markers; everything below GENERATED is rebuilt.
 - [point-source-search-nautilus-leaf](2026/10/point-source-search-nautilus-leaf.md)
 - [point-source-wiki-reconcile](2026/10/point-source-wiki-reconcile.md)
 - [pointsolver-extent-sanity-check](2026/10/pointsolver-extent-sanity-check.md)
+- [profiling-setup-browser](2026/10/profiling-setup-browser.md)
 - [profiling-setup-catalogue](2026/10/profiling-setup-catalogue.md)
 - [profiling-setup-contract](2026/10/profiling-setup-contract.md) — Phase 1 reader of the full setup-first profiling refactor. Adds profiling-summary v2 setup/record/selection/ha…
 - [profiling-setup-page](2026/10/profiling-setup-page.md)

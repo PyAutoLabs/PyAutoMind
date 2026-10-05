@@ -102,8 +102,7 @@ Suggested branch: `feature/profiling-setup-catalogue`
 ### Phase 3: Scientist-facing browsing (separate project and Pulse PRs)
 
 Project Phase 3a merged: autolens_profiling#379; record `complete/2026/10/profiling-setup-page.md`.
-Pulse branch:
-`feature/profiling-setup-browser` (Pulse).
+Pulse Phase 3b merged: PyAutoPulse#13; record `complete/2026/10/profiling-setup-browser.md`.
 
 - Reuse `PyAutoBrain/board/_theme.py`, including its existing Pulse SVG hero,
   responsive width, typography and controls; adjust deployment dependencies

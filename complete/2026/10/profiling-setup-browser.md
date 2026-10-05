@@ -1,3 +1,18 @@
+# Pulse setup browser merged
+
+Completed: 2026-10-05
+Issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/12 (closed)
+PR: https://github.com/PyAutoLabs/PyAutoPulse/pull/13 (MERGED)
+Merge: 4b00106c664dafd0ed5f690048cad904b1f96061
+
+Shipped the Pulse setup browser with exact pinned v2 catalogue/shard provenance, shared theme, compact campaigns and interactive configuration navigation. Repaired Playwright vendor link checking by selecting only tracked Markdown, and resolved generated-data conflicts through normal ingestion without changing scientific records.
+
+Validation: 189 Python tests, Ruff, offline board/state, Chromium interactions, independent Sol CLEAN. Every exact-head GitHub CI job passed (lint37310560345 including real lychee, refresh37310560357). User explicitly authorized merge in this turn. Heart RED remains `release validation FAILED (stage integrate)`; no release implied.
+
+Scope is the phase3b Pulse frontpage only. Parent draft/feature/pyautopulse/profiling_setup_browser.md retains unshipped later phases; do not retire the parent. Root review/browser artifacts preserved at tmp/heart-red-20261005/pulse-closeout-evidence before cleanup. No irreplaceable science datasets in the worktree.
+
+## Original prompt
+
 # Make Pulse a compact setup-oriented profiling front page
 
 Type: feature
