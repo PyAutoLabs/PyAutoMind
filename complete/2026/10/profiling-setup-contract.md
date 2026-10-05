@@ -1,3 +1,19 @@
+## profiling-setup-contract
+- issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/10 (CLOSED)
+- completed: 2026-10-05
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/11 (MERGED)
+- head: d9d2377995c37550cf09de765cae7faf84c60a98
+- merge: caa500fa0a3976bf10209fdf7b34a826c9f8eff2
+- summary: Phase 1 reader of the full setup-first profiling refactor. Adds profiling-summary v2 setup/record/selection/hazard/recommendation validation, typed axes and exact selection identity checks while retaining v1 and the live v1 registry. Documents the producer grammar and tests corrupt/incompatible evidence and cached-snapshot preservation. No dashboard redesign or producer migration shipped in this phase.
+- validation: 184 tests passed locally; Ruff lint/format and pyauto-pulse check --offline passed. Exact-head GitHub lint run 37285494916 and Dashboard Refresh run 37285495040: both jobs successful; every test/validation step passed. Only dashboard write step skipped, intentionally disabled for PRs. Branch head proven ancestor of fetched origin/main.
+- heart-red-override: user "I authorize" allowed development shipping despite exact RED `release validation FAILED (stage integrate)`; recorded on issue, PR, active.md and autonomy_log.md. User subsequently invoked $prm to authorize this merge after CI passed. No release or rehearsal authorized; no claim Heart cleared.
+- release: no library dependency; pending-release label retained on the organ PR.
+- next: parent draft/feature/pyautopulse/profiling_setup_browser.md phase 2: autolens_profiling setup catalogue and exporter, then project/Pulse browsing, source taxonomy, wiki/assistant integration and baseline preparation. The full epic is not complete.
+- cleanup: no uncommitted code or scientific data in task worktree; disposable Python/pytest/Ruff caches only. Shipping scratch evidence archived under .worktree-archives/profiling-setup-contract-2026-10-05 in the workspace before removal.
+- session: Codex; session ID unavailable.
+
+## Original prompt
+
 # Accept setup-based profiling evidence
 
 Type: feature

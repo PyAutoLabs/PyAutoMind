@@ -43,7 +43,11 @@ Tier: judge — merge mode: human /prm.
 
 ## Detailed implementation and issue plan
 
-### Phase 1: Pulse contract reader (PyAutoPulse)
+### Phase 1: Pulse contract reader (PyAutoPulse) — COMPLETE
+
+Merged 2026-10-05: https://github.com/PyAutoLabs/PyAutoPulse/pull/11.
+Record: `complete/2026/10/profiling-setup-contract.md`. Reader v2 is available;
+the live registry stays v1 until phase 2. Next implementation phase is phase 2.
 
 Suggested issue: `feat: accept setup-based profiling evidence`
 Suggested branch: `feature/profiling-setup-contract`
@@ -212,8 +216,8 @@ Heart at entry: STALE — Release STALE; monitoring RED · 45/100 · 125 unresol
 (updated 21h ago). Entry helper exits 1; planning allowed. Re-read at shipping.
 
 The conceptual and detailed plan, branch proposal and coordination are approved
-by the human (2026-10-05). No issues, implementation worktrees, source edits or compute
-dispatch have been performed at this checkpoint.
+by the human (2026-10-05). Phase 1 has now shipped and merged (record above); remaining phases have not
+been implemented, and no compute has been dispatched.
 
 ## Original request (verbatim)
 
