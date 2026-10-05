@@ -28,10 +28,18 @@
 - issued: 2026-10-05
 - prompt: active/dashboard_minimal_text.md
 - session: Codex (session ID unavailable)
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/468
+- library-pr: https://github.com/PyAutoLabs/PyAutoEars/pull/13
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/284
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dashboard-minimal-text
 - repos:
   - PyAutoBrain: feature/dashboard-minimal-text
   - PyAutoEars: feature/dashboard-minimal-text
   - PyAutoHeart: feature/dashboard-minimal-text
 - summary: Approved minimal dashboard text refinement and top Heart systematic action; human /prm.
+- heart-red-override:
+  authorization: User “I authorize permission” in this session for #467; https://github.com/PyAutoLabs/PyAutoBrain/issues/467#issuecomment-6000820253
+  reason: autolens_workspace_test: Smoke Tests failure on main
+  gates: Brain 1195 / Heart 1227 / Ears 71 tests; strict docs; shared and Heart browser checks; inline review; tenant firewall and diff checks pass.
+- resume: Human /prm: Brain#468 first, then Ears#13 and Heart#284. Development-only RED override recorded; no merge/release grant. Verify published pages after merge.

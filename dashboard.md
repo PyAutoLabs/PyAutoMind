@@ -252,7 +252,7 @@ Use the start-dev skill. draft/research/pyautohands/git_docs.md
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/dashboard_minimal_text.md">Remove dashboard tutorial prose and elevate Heart action</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/467">issue #467</a> — issued 2026-10-05 — library-dev</summary>
+<details><summary>📋 <a href="active/dashboard_minimal_text.md">Remove dashboard tutorial prose and elevate Heart action</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/467">issue #467</a> — issued 2026-10-05 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/468">PyAutoBrain#468</a>, <a href="https://github.com/PyAutoLabs/PyAutoEars/pull/13">PyAutoEars#13</a>, <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/284">PyAutoHeart#284</a></summary>
 
 ```
 Use the start-dev skill. active/dashboard_minimal_text.md

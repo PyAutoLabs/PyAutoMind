@@ -22,3 +22,15 @@ Survey: Brain, Ears, Heart main clean; no conflicting claims. Branch feature/das
 
 ## Original user request
 Remove all explanatory text which says what a dashboard does and how to use it -- only I use this I dont need a reminder, on Mind this is "Every task the Mind is holding. Tap a task's 📋 and its start-dev skill prompt is on your clipboard — paste it into an AI assistant chat to route the assistant straight to that task. Recent is the same work by date — what has been happening rather than what to do next.", on Ears, just remove the "Last checked 05 Oct 2026, 17:30 UTC2 as its text whic breaks dashboard symmnetry, on heart remove the text "Is it safe to release? See what needs attention, then copy a prompt to work through it in your coding chat." and get the main button up there which basically will replace the "Fix Heart Systematically" button at the bottom.
+
+## Implementation handoff
+
+Implemented in the three claimed worktrees, uncommitted. Shared header ledes and panel descriptions omitted; Mind usage prose removed; Ears Last checked removed; Heart existing fix-plan prompt moved to top shared panel with repo link; duplicate lower action removed and evidence refresh conditional. Browser screenshots and draft PR bodies are in tmp/dashboard-minimal-text/.
+
+Ship-time Heart RED (2026-10-05T18:37:22Z): `autolens_workspace_test: Smoke Tests failure on main`. Additional STALE reason: `release validation stale: source moved since rehearsal (PyAutoNerves)`. No shipping override granted. Awaiting explicit development-only override for issue #467; PR/commit/push of implementation held.
+
+## Ship handoff
+
+User subsequently authorized: “I authorize permission”. Recorded on issue #467 (comment 6000820253), each PR, active.md and autonomy_log.md. Heart remains RED with the same exact reason above.
+
+PRs: Brain#468 (99b6aaf), Ears#13 (ff09eea), Heart#284 (795f306). Merge Brain first. Validation: Brain 1,195 tests, Heart 1,227, Ears 71; strict docs, shared browser witness, actual Heart three-width copy/layout check, tenant firewall and whitespace all pass. Ready for human /prm; no live rollout claimed.
