@@ -48,7 +48,7 @@
 - issued: 2026-10-05
 - prompt: active/profiling_setup_catalogue.md
 - session: Codex; session ID unavailable
-- status: awaiting-heart-override
+- status: shipping
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-setup-catalogue
 - repos:
   - autolens_profiling: feature/profiling-setup-catalogue
@@ -57,5 +57,7 @@
 
 - progress: Implementation and inline review complete; v2 registry/exporter, 708 source files, 20,709 measurements, 508 lazy shards, 435 planned baseline slots. Existing results/v1 files unchanged.
 - validation: 26 catalogue tests, 1,055 full-suite tests passed (5 skipped), seven section smokes, Ruff and metadata/layout checks; Pulse validates index and every shard. Final full-suite rerun result in worktree phase2-pytest-final.log.
-- shipping-blocker: Heart RED `release validation FAILED (stage integrate)` (2026-10-05); no task-specific override yet. Prior Pulse#10 override does not authorize #376.
+- previous-shipping-blocker: Heart RED `release validation FAILED (stage integrate)` (2026-10-05); no task-specific override yet. Prior Pulse#10 override does not authorize #376.
 - pr-draft: .worktrees/profiling-setup-catalogue/phase2-pr-body.md; source uncommitted/unpushed pending live override. No PR yet.
+
+- heart-red-override: Live user "$prm and continue" responding to the explicit #376 development-shipping override request; authorizes commit/push/PR and current-turn human /prm merge only on green CI. Exact Heart RED `release validation FAILED (stage integrate)`. 1,055 tests pass (5 skips), seven smokes, independent Pulse contract, Ruff/metadata checks and inline review pass; no independent review claimed; no release or CI bypass.
