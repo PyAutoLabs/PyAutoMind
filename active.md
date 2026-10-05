@@ -28,7 +28,7 @@
 - issued: 2026-10-04
 - prompt: active/restore_dashboard_green.md
 - session: Codex (GPT-6), session ID unavailable; resumed 2026-10-05
-- status: library-dev
+- status: library-shipped, awaiting-merge; bounded JAX investigation in progress
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/restore-dashboard-green
 - repos:
   - PyAutoHeart: feature/restore-dashboard-green
@@ -38,8 +38,10 @@
   - evidence: https://github.com/PyAutoLabs/PyAutoHeart/issues/274#issuecomment-5991210852
   - reason: release validation FAILED (stage integrate)
   - scope: causal investigation, tested correction, commit/push/pending-release PR; human merge separate; no production release or gate bypass.
-  - validation: pending current repair; prior compatibility phase remains merged and preserved in completion records.
-- resume: e62b080 starting head; latest run37217670612 has 19 timeouts and3 aggregator errors; report emitter failed import yaml. See active prompt continuation for bounded plan.
+  - validation: 119 focused and1222 full Heart tests PASS; actual empty-venv emitter replay PASS retaining22 adverse rows; independent Sol CLEAN; no scientific API/smoke impact.
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/281
+- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/281
+- resume: Report dependency repair0e36334 in PR281; tests/review pass. Latest run37217670612 retained as RED; local exact-wheel bounded materialization-stall diagnostic running. Human merge required; no release.
 
 ## profiling-setup-catalogue
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/376

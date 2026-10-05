@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-05T08:53:40Z",
+  "updated": "2026-10-05T08:58:07Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Restore complete Heart dashboard health \u2014 library-shipped, awaiting-merge; bounded JAX investigation in progress",
+      "url": "https://github.com/PyAutoLabs/PyAutoHeart/pull/281",
+      "prompt": "Use the start-dev skill. active/restore_dashboard_green.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#606 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/606",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#599 \u2014 streaming-p4-light-profile-identity",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/599",
       "prompt": null
     }
   ]

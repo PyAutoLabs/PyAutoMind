@@ -304,3 +304,7 @@ Plan:
 4. Publish the bounded tested repair PR under this live RED authorization, recording exact reason, causal mapping, evidence and remaining integration blockers. Human merge remains separate. Fresh validation after fixes and truthful Heart ingest are required before claiming YELLOW.
 
 Authorization applies to #274 in this session only. Source failures and reporting failures are separate: restoring report emission alone cannot clear RED. Latest report702 passed/3 failed/19 timeout/82 skipped; old cached report723 passed/1 timeout.
+
+2026-10-05 report repair validation: 2-line dependency setup, clean-env import failure reproduced, actual failed-run emission verified;119 focused and1222 full Heart tests passed; independent Sol review CLEAN with claim dispositions in tmp/heart-red-20261005/review-verdict.md. Canonical Release Agent ingest of latest run37217670612 completed; authoritative RED60 reason unchanged. Missing reports no longer conceal latest local evidence. JAX stalls are materialization/execution after quick compilation; no runtime fix asserted.
+
+Report repair PR: https://github.com/PyAutoLabs/PyAutoHeart/pull/281, head0e36334. Current task authorization is issuecomment-5991210852; evidence summary issuecomment-5991288446. Do not close umbrella274; JAX failures unresolved.
