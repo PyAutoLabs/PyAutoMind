@@ -46,7 +46,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 7 |
 | [Planned](#planned) (`planned.md`) | 7 |
-| [Backlog](#backlog) (`draft/`) | 229 |
+| [Backlog](#backlog) (`draft/`) | 230 |
 
 > **No batch in flight.**
 
@@ -678,7 +678,7 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ## Backlog
 
-**229** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
+**230** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 73</summary>
@@ -1270,7 +1270,7 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>feature</b> — 32</summary>
+<summary><b>feature</b> — 33</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautopulse/profiling_setup_browser.md">Setup-first profiling: dashboard, evidence catalogue, scripts and assistant</a> — pyautopulse · too-large · human-required · high</summary>
 
@@ -1388,6 +1388,14 @@ Use the start-dev skill. draft/feature/autolens_workspace/joss_cluster_benchmark
 
 ```
 Use the start-dev skill. draft/feature/pyautobrain/batch_slice.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoears/community-board-readability.md">Community board readability and orchestration</a> — pyautoears · medium · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautoears/community-board-readability.md
 ```
 
 </details>
@@ -3066,7 +3074,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 </details>
 
-61 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+62 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3086,6 +3094,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 - `draft/feature/euclid/euclid_dr1_prep_epic.md`
 - `draft/feature/jax_substructure/5_prng_key_vmap_noise.md`
 - `draft/feature/jax_substructure/6_deflection_equivalence_test.md`
+- `draft/feature/pyautoears/community-board-readability.md`
 - `draft/feature/pyautoears/community_organ_birth.md`
 - `draft/feature/pyautoeyes/group_cluster_gallery.md`
 - `draft/feature/pyautoeyes/multi_galaxy_gallery.md`
@@ -3110,8 +3119,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 - `draft/docs/howtolens/cluster_pixelized_source.md`
 - `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
 - `draft/test/workspaces/mesh_magnification_correctness.md`
-- `draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md`
-- _… and 21 more_
+- _… and 22 more_
 
 </details>
 
