@@ -1,5 +1,18 @@
 # Shared orchestration panel core and standards index
 
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/465
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/466
+
+Merged shared Ears-inspired orchestration panel, visible owner-supplied GitHub links mirrored in copied prompts, optional direction, exact preview, accessible copy feedback and complete over-budget download. Brain, Mind and Cortex renderers adopt the component. Added canonical standards index and Brain instruction pointer.
+
+Merge: 5d764f6fc6e216d4bca67563b8dcaaef2919eb26. Both workflow runs and all three jobs passed (Python 3.12, 3.13, strict docs). Local validation: 1,195 tests; 10 browser viewport/theme cases plus clipboard denial, budget, isolation and pending-edit checks.
+
+This completes only the core dependency phase. Remaining approved scope stays in draft/feature/pyautobrain/standardize_dashboard_orchestration_prompt_panel.md: Ears/Heart and other consumers, Mind-generated repo guidance, Scientist discovery, and published verification. No claim that all boards or instructions have migrated.
+
+## Original prompt
+
+# Shared orchestration panel core and standards index
+
 Type: feature
 Target: PyAutoBrain
 Repos:

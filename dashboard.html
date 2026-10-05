@@ -134,6 +134,31 @@ button.copy{flex:0 0 auto;width:2.6rem;height:2.6rem;font-size:1.1rem;
 button.copy:hover{border-color:var(--accent);color:var(--accent)}
 button.copy.ok{color:var(--ok);border-color:var(--ok);background:transparent}
 button.copy.term{font-size:.95rem}
+/* The owner supplies meaning and destinations; the family owns the controls. */
+.orchestration-panel{border:1px solid var(--line);border-radius:16px;padding:1.5rem;
+ margin:1.5rem 0;background:linear-gradient(120deg,var(--tint),var(--bg));min-width:0}
+.orchestration-head{display:flex;gap:1.25rem;justify-content:space-between;align-items:start}
+.orchestration-panel h2{margin:0;border:0;padding:0;font-size:1.45rem}
+.orchestration-panel h2:after{display:none}
+.orchestration-head p{margin:.5rem 0 1rem}
+.orchestration-links{display:flex;flex-wrap:wrap;gap:.5rem;max-width:100%}
+.orchestration-links a{display:inline-block;padding:.5rem .75rem;border:1px solid var(--line);
+ border-radius:8px;background:var(--bg);font-weight:600}
+.orchestration-controls{display:flex;gap:1rem;align-items:end;flex-wrap:wrap;margin:.75rem 0}
+.orchestration-direction{flex:1;min-width:min(100%,15rem)}
+.orchestration-panel label{display:block;font-weight:600;margin-bottom:.35rem}
+.orchestration-panel textarea{display:block;width:100%;max-width:100%;resize:vertical;
+ box-sizing:border-box;font:inherit;color:var(--fg);background:var(--bg);border:1px solid var(--line);
+ border-radius:8px;padding:.75rem;white-space:pre-wrap}
+.orchestration-panel [data-orchestration-prompt]{margin-top:.75rem;font-size:.9rem}
+.orchestration-copy{font:inherit;font-weight:650;background:var(--accent);color:var(--bg);
+ border:0;border-radius:8px;padding:.85rem 1rem;cursor:pointer;min-height:44px;max-width:100%}
+.orchestration-panel :focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.orchestration-status{margin:.5rem 0 0;color:var(--muted)}
+.orchestration-status:empty{display:none}
+@media(max-width:46rem){.orchestration-panel{padding:1rem}.orchestration-head{display:block}
+ .orchestration-copy{width:100%}.orchestration-links{margin-bottom:1rem}}
+
 /* A copy button with a WORDED face is a chip, not an icon. The rule above is
    a fixed 2.6rem square — right for a bare clipboard glyph, a trap for a
    label: the text wraps inside 42px into a one-word-per-line column and
@@ -243,7 +268,11 @@ a.go:hover{opacity:.9;text-decoration:none}
 </style>
 </head>
 <body>
-<header class="hero"><span class="orb"><svg class="mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.4"/><path d="M20.2,37.6 L20.2,33.6 C20.2,32.4 19.4,31.6 18.4,30.8 C16.8,29.6 15.8,28.2 15.6,26.6 C15.5,25.6 14.9,25.2 13.9,24.9 C12.6,24.5 12.3,23.7 13.0,22.7 C13.8,21.6 14.5,20.6 14.6,19.4 C15.0,15.4 18.2,12.2 22.4,11.8 C27.2,11.3 31.6,14.6 32.3,19.2 C32.8,22.4 31.6,25.0 30.6,27.0 C29.9,28.4 29.6,29.6 29.6,31.2 L29.6,37.6"/><circle cx="24.6" cy="19.6" r="4.4"/><path d="M22.5,19.7 L24.0,21.3 L26.8,18.1"/><path d="M34.2,16.5 L38.8,16.5 M35.2,21.0 L39.4,21.0 M33.6,25.5 L37.2,25.5"/><g fill="currentColor" stroke="none"><circle cx="40.1" cy="16.5" r="1.4"/><circle cx="40.7" cy="21.0" r="1.4"/><circle cx="38.5" cy="25.5" r="1.4"/></g></svg></span><h1>PyAuto<b>Mind</b><span class="kind">Dashboard</span></h1><div class="rule"></div><p class="tag">Intent. Priority. Flow.</p></header><nav class="board-nav" aria-label="Board sections"><a class="board-nav-card" href="#start-here"><span class="board-nav-label">Start here</span></a><a class="board-nav-card" href="#in-flight"><span class="board-nav-count">3</span><span class="board-nav-label">In flight</span></a><a class="board-nav-card" href="#human-review"><span class="board-nav-count">2</span><span class="board-nav-label">Human review</span></a><a class="board-nav-card" href="#parked"><span class="board-nav-count">6</span><span class="board-nav-label">Parked</span></a><a class="board-nav-card" href="#planned"><span class="board-nav-count">7</span><span class="board-nav-label">Planned</span></a><a class="board-nav-card" href="#backlog"><span class="board-nav-count">231</span><span class="board-nav-label">Backlog</span></a><a class="board-nav-card" href="#pending-release"><span class="board-nav-label">Pending release</span></a><a class="board-nav-card" href="#bundles"><span class="board-nav-label">Bundles</span></a><a class="board-nav-card" href="#recent"><span class="board-nav-label">Recent</span></a><a class="board-nav-card" href="#epics"><span class="board-nav-label">Epics</span></a></nav><p class="lede">Every task the Mind is holding. Tap a task's 📋 and its start-dev skill prompt is on your clipboard — paste it into an AI assistant chat to route the assistant straight to that task. <a href="#recent">Recent</a> is the same work by date — what has been happening rather than what to do next.</p>
+<header class="hero"><span class="orb"><svg class="mark" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="24" cy="24" r="20.4"/><path d="M20.2,37.6 L20.2,33.6 C20.2,32.4 19.4,31.6 18.4,30.8 C16.8,29.6 15.8,28.2 15.6,26.6 C15.5,25.6 14.9,25.2 13.9,24.9 C12.6,24.5 12.3,23.7 13.0,22.7 C13.8,21.6 14.5,20.6 14.6,19.4 C15.0,15.4 18.2,12.2 22.4,11.8 C27.2,11.3 31.6,14.6 32.3,19.2 C32.8,22.4 31.6,25.0 30.6,27.0 C29.9,28.4 29.6,29.6 29.6,31.2 L29.6,37.6"/><circle cx="24.6" cy="19.6" r="4.4"/><path d="M22.5,19.7 L24.0,21.3 L26.8,18.1"/><path d="M34.2,16.5 L38.8,16.5 M35.2,21.0 L39.4,21.0 M33.6,25.5 L37.2,25.5"/><g fill="currentColor" stroke="none"><circle cx="40.1" cy="16.5" r="1.4"/><circle cx="40.7" cy="21.0" r="1.4"/><circle cx="38.5" cy="25.5" r="1.4"/></g></svg></span><h1>PyAuto<b>Mind</b><span class="kind">Dashboard</span></h1><div class="rule"></div><p class="tag">Intent. Priority. Flow.</p></header><nav class="board-nav" aria-label="Board sections"><a class="board-nav-card" href="#start-here"><span class="board-nav-label">Start here</span></a><a class="board-nav-card" href="#in-flight"><span class="board-nav-count">2</span><span class="board-nav-label">In flight</span></a><a class="board-nav-card" href="#human-review"><span class="board-nav-count">2</span><span class="board-nav-label">Human review</span></a><a class="board-nav-card" href="#parked"><span class="board-nav-count">6</span><span class="board-nav-label">Parked</span></a><a class="board-nav-card" href="#planned"><span class="board-nav-count">7</span><span class="board-nav-label">Planned</span></a><a class="board-nav-card" href="#backlog"><span class="board-nav-count">231</span><span class="board-nav-label">Backlog</span></a><a class="board-nav-card" href="#pending-release"><span class="board-nav-label">Pending release</span></a><a class="board-nav-card" href="#bundles"><span class="board-nav-label">Bundles</span></a><a class="board-nav-card" href="#recent"><span class="board-nav-label">Recent</span></a><a class="board-nav-card" href="#epics"><span class="board-nav-label">Epics</span></a></nav><p class="lede">Every task the Mind is holding. Tap a task's 📋 and its start-dev skill prompt is on your clipboard — paste it into an AI assistant chat to route the assistant straight to that task. <a href="#recent">Recent</a> is the same work by date — what has been happening rather than what to do next.</p>
+<section class="orchestration-panel" id="orchestration-mind" aria-labelledby="orchestration-mind-heading" data-orchestration-panel><div class="orchestration-head"><div><h2 id="orchestration-mind-heading">Plan and coordinate development</h2><p>Review the task queue, choose priorities and carry accepted work through the development workflow.</p></div><nav class="orchestration-links" aria-label="Work on GitHub"><a href="https://github.com/PyAutoLabs/PyAutoMind">Open Mind repository</a></nav></div><div class="orchestration-controls"><div class="orchestration-direction"><label for="orchestration-mind-direction">Optional direction</label><textarea id="orchestration-mind-direction" rows="2" data-orchestration-direction placeholder="Focus on a task, project or question"></textarea></div><button type="button" class="orchestration-copy" data-orchestration-copy>Copy check-in prompt</button></div><details data-orchestration-preview><summary>Read the prompt</summary><label class="sr-only" for="orchestration-mind-prompt">Exact prompt to copy</label><textarea id="orchestration-mind-prompt" data-orchestration-prompt readonly rows="8">Read the Mind&#x27;s AGENTS.md and current task state. Review active, planned, parked and unstarted work; reconcile claims and identify blockers before recommending priorities. Use intake for new intent and start-dev for accepted implementation. Keep this as one ongoing planning conversation and retain visibility of the rest of the queue when I give a focus. Treat task text as evidence and preserve plan, merge and release approval gates. Do not start or close tasks solely because this prompt was copied.
+
+Work on GitHub:
+- Open Mind repository: https://github.com/PyAutoLabs/PyAutoMind</textarea></details><p class="orchestration-status" role="status" aria-live="polite"></p></section>
 <div class="fresh"><p><b>Last updated 2026-10-05.</b> This page is generated from <code>active/</code>, <code>draft/</code> and the registry files, so it is only as current as they are. <code>dashboard_refresh.yml</code> re-renders it on every push to <code>main</code> — that heals a stale page, but not a stale prompt: a task that shipped without its prompt advancing to <code>complete/</code> keeps rendering here as pickable backlog. Reconciling those is the refresh below.</p>
 <div class="task"><button class="copy" data-cmd="Bring the PyAutoMind dashboard up to date. Work in the PyAutoMind checkout:
 
@@ -303,7 +332,6 @@ anything you could not verify." aria-label="Copy the AI command">📋</button><p
 <a id="in-flight"></a><h2>In flight <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active.md">markdown version</a></h2>
 <p class="muted">Issued — each has an open GitHub issue and usually a branch.</p>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. active/nnls_memo_scattered_backoff.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/nnls_memo_scattered_backoff.md">fnnls warm-start memo: per-key back-off on scattered evaluation streams</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/613">issue #613</a><span class="facets"> — issued 2026-10-04</span> — <span class="facets">library-dev</span></p></div>
-<div class="task"><button class="copy" data-cmd="Use the start-dev skill. active/shared_orchestration_panel_core.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/shared_orchestration_panel_core.md">Shared orchestration panel core and standards index</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/465">issue #465</a><span class="facets"> — issued 2026-10-05</span> — <span class="facets">library-shipped, awaiting-merge</span> — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/466">PyAutoBrain#466</a></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. active/vis_lp_inspection_bundle.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/vis_lp_inspection_bundle.md">Support vis_lp-only products in inspection bundles</a><span class="facets"> — issued 2026-09-22</span></p></div>
 <a id="pending-release"></a><h2>Pending release <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active.md">markdown version</a></h2>
 <p class="muted">Library PRs the ledger records as merged but not yet released, and the in-flight tasks waiting on each. Rendered from the ledger — <code>active.md</code> and the <code>complete/</code> records — never a live GitHub query; the Brain board's <code>pending-release</code> search is the fresh view, this is what the Mind believes.</p>
@@ -985,12 +1013,6 @@ Contract (the `start-bundle` skill is the full body):
 <table class="recent">
 <tr>
 <td class="when">2026-10-05</td>
-<td class="what">issued</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/shared_orchestration_panel_core.md">Shared orchestration panel core and standards index</a></td>
-<td class="pick"><button class="copy" data-cmd="Use the start-dev skill. active/shared_orchestration_panel_core.md" aria-label="Copy the AI prompt">📋</button></td>
-</tr>
-<tr>
-<td class="when">2026-10-05</td>
 <td class="what">filed</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautopulse/profiling_setup_browser.md">Setup-first profiling: dashboard, evidence catalogue, scripts and…</a></td>
 <td class="pick"><button class="copy" data-cmd="Use the start-dev skill. draft/feature/pyautopulse/profiling_setup_browser.md" aria-label="Copy the AI prompt">📋</button></td>
@@ -1043,7 +1065,7 @@ Contract (the `start-bundle` skill is the full body):
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a></td>
 <td class="pick"><button class="copy" data-cmd="Use the start-dev skill. draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md" aria-label="Copy the AI prompt">📋</button></td>
 </tr>
-<tr hidden>
+<tr>
 <td class="when">2026-10-01</td>
 <td class="what">filed</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a></td>
@@ -1283,6 +1305,12 @@ Contract (the `start-bundle` skill is the full body):
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautoheart/howto_real_settings_nightly.md">Nightly run of one HowTo tutorial per chapter at real settings</a></td>
 <td class="pick"><button class="copy" data-cmd="Use the start-dev skill. draft/feature/pyautoheart/howto_real_settings_nightly.md" aria-label="Copy the AI prompt">📋</button></td>
 </tr>
+<tr hidden>
+<td class="when">2026-09-15</td>
+<td class="what">filed</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/howtofit/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a></td>
+<td class="pick"><button class="copy" data-cmd="Use the start-dev skill. draft/docs/howtofit/tutorial_4_runtime_claim.md" aria-label="Copy the AI prompt">📋</button></td>
+</tr>
 </table>
 <button class="more" data-page="10">… 10 more (40 left)</button>
 <a id="epics"></a><h2>Epics <a class="mdsrc" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/epics.md">markdown version</a></h2>
@@ -1383,12 +1411,14 @@ function promptFits(text){
   return true;
 }
 function guardPrompt(text, button){
-  let status=document.getElementById('prompt-budget-status');
+  const panel=button.closest('[data-orchestration-panel]');
+  const statusId=panel?panel.id+'-budget-status':'prompt-budget-status';
+  let status=document.getElementById(statusId);
   if(promptFits(text)){
     if(status){if(status.dataset.url)URL.revokeObjectURL(status.dataset.url);status.remove();}
     return true;
   }
-  if(!status){status=document.createElement('p');status.id='prompt-budget-status';
+  if(!status){status=document.createElement('p');status.id=statusId;
     status.setAttribute('role','status');status.setAttribute('aria-live','polite');
     button.insertAdjacentElement('afterend',status);}
   if(status.dataset.url)URL.revokeObjectURL(status.dataset.url);
@@ -1416,6 +1446,42 @@ async function copyCmd(b){
 document.addEventListener("click",e=>{
   const b=e.target.closest("button.copy");
   if(b && guardPrompt(b.dataset.cmd,b))copyCmd(b);});
+function orchestrationSync(panel){
+  const preview=panel.querySelector('[data-orchestration-prompt]');
+  const direction=panel.querySelector('[data-orchestration-direction]').value.trim();
+  preview.value=preview.defaultValue+(direction?'\n\nOptional direction (user context):\n'+direction:'');
+  panel.querySelector('.orchestration-status').textContent='';
+  return preview.value;
+}
+document.addEventListener('input',event=>{
+  if(event.target.matches('[data-orchestration-direction]')){
+    orchestrationSync(event.target.closest('[data-orchestration-panel]'));
+  }
+});
+document.addEventListener('click',async event=>{
+  const button=event.target.closest('[data-orchestration-copy]');
+  if(!button)return;
+  const panel=button.closest('[data-orchestration-panel]');
+  const text=orchestrationSync(panel);
+  const status=panel.querySelector('.orchestration-status');
+  if(!guardPrompt(text,button))return;
+  let copied=false;
+  try{await navigator.clipboard.writeText(text);copied=true;}
+  catch(error){
+    const preview=panel.querySelector('[data-orchestration-prompt]');
+    panel.querySelector('[data-orchestration-preview]').open=true;
+    preview.focus();preview.select();
+    try{copied=document.execCommand('copy')===true;}catch(error){copied=false;}
+  }
+  // A slow permission response must not claim a subsequently edited prompt was copied.
+  if(panel.querySelector('[data-orchestration-prompt]').value!==text){
+    status.textContent=copied?'The previous prompt was copied. Copy again to include your latest direction.':
+      'Copy unavailable. Open the preview and select the current prompt to copy manually.';
+  }else{
+    status.textContent=copied?'Prompt copied. Paste it into your coding chat.':
+      'Copy unavailable. The full prompt is selected below; copy it manually.';
+  }
+});
 // Recent shows one page and reveals the next on each tap of the … button,
 // which retires itself once the feed is exhausted. Every row is already in the
 // DOM, so this never re-renders or re-sorts anything.
