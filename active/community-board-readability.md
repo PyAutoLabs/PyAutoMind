@@ -63,4 +63,21 @@ Survey: main, clean, up to date with origin/main; only local branch is main; one
 Proposed branch: `feature/community-board-readability`.
 Use the standard worktree helper after approval, honoring the workspace path constraint.
 Heart at entry: STALE — Release STALE; monitoring RED; planning allowed by entry gate. Re-read at ship time.
-No implementation files edited and no issue or PR created before plan approval.
+At the planning checkpoint, no implementation files had been edited and no issue or PR had been created.
+
+
+## Handoff — 2026-10-05, implemented and validated, awaiting Heart override
+
+- User approved the plan with “ok go”; merge was not authorized.
+- Issue: https://github.com/PyAutoLabs/PyAutoEars/issues/9.
+- Worktree: `/home/jammy/Code/PyAutoLabs/.worktrees/community-board-readability/PyAutoEars`.
+- Branch: `feature/community-board-readability`, base `b7fb692`; source changes remain uncommitted because Heart blocks shipping.
+- Changed: `ears/board.py`, new `ears/presentation.py`, `ears/cli.py`, `REFERENCE.md`, `tests/board_browser.py`, new `tests/test_presentation.py`.
+- Implemented summary tiles, hub/check-in buttons, optional prompt direction/delegation, author/progress columns, expandable rows, icon copy actions, readable response times, compact follow-through and bottom coverage table.
+- Plan hints are render-time only, read from explicit Issue headers and nonempty plan sections in issued Mind records. Snapshot/delivery/feed contracts are unchanged; missing evidence never establishes maturity.
+- Validation: 71 tests passed (`output/pytest.log`); browser light/dark at 390/1280px passed keyboard, copying/fallback, optional direction, expiry and no overflow (`output/browser.log`, `_site/browser-fixture/browser-result.json`). Both generated state feeds passed Brain validation.
+- Rendered the real published snapshot (17 conversations); it is stale and the preview honestly displays refresh-needed progress. Preview `_site/preview/index.html`; screenshots `_site/preview/community-light.png`, `community-dark.png`, `community-top.png`.
+- Diff and visual self-review passed; separate independent review is not required on this ordinary approved-plan path. No workspace API changes; the CLI/browser render smoke is the applicable integration check.
+- Heart readiness is RED, exact reason: `release validation FAILED (stage integrate)`; evidence `output/heart-readiness.json`.
+- Draft PR body: `output/pr-body.md`. No source commit, push, PR, merge or deployment yet.
+- Next: obtain a live development-only Heart RED override naming task/issue #9; record it in the four required sinks, then commit/push/open the pending-release PR. If Heart becomes permissible instead, re-read and proceed under that verdict. Merge remains human `/prm`.

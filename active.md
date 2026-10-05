@@ -48,7 +48,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoEars/issues/9
 - issued: 2026-10-05
 - session: Codex; session ID unavailable
-- status: library-dev
+- status: awaiting-input
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/community-board-readability
 - repos:
   - PyAutoEars: feature/community-board-readability
