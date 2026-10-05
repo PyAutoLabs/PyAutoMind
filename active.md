@@ -28,11 +28,14 @@
 - issued: 2026-10-05
 - prompt: active/niek_full_style_review.md
 - session: Codex GPT-6
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/niek-euclid-style-review
 - repos:
   - euclid_assistant: feature/niek-euclid-style-review
 - summary: Approved full Style Guide/PDD coverage audit, assistant improvements, Niek manuscript corrections, independent Opus 5.5 review, and author ZIP. No merge authority.
+- pr: https://github.com/Jammy2211/euclid_assistant/pull/13
+- resume: Assistant commit 68c8e9c pushed; pending-release PR #13 open. 85 tests passed, 1 optional Vale skip; CLI smoke and independent Opus 5.5 review passed. Author ZIP delivered and clean-extraction build verified. Human /prm for merge.
+- authorization: User replied “ok do it, I approve” to issue #12 development-shipping request. Heart recovered from RED `PyAutoGalaxy: CI failure` to GREEN (100, 2026-10-05T17:25:39Z) before commit; no RED override exercised. No merge/release authority.
 
 ## board-navigation-ears
 - issue: https://github.com/PyAutoLabs/PyAutoEars/issues/11

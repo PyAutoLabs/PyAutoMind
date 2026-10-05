@@ -332,7 +332,7 @@ Use the start-dev skill. active/board_navigation_scientist.md
 
 </details>
 
-<details><summary>📋 <a href="active/niek_full_style_review.md">Full Euclid style coverage and Niek manuscript review</a> — <a href="https://github.com/Jammy2211/euclid_assistant/issues/12">issue #12</a> — issued 2026-10-05 — workspace-dev</summary>
+<details><summary>📋 <a href="active/niek_full_style_review.md">Full Euclid style coverage and Niek manuscript review</a> — <a href="https://github.com/Jammy2211/euclid_assistant/issues/12">issue #12</a> — issued 2026-10-05 — awaiting-merge</summary>
 
 ```
 Use the start-dev skill. active/niek_full_style_review.md
