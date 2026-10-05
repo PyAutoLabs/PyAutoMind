@@ -252,7 +252,7 @@ Use the start-dev skill. draft/research/pyautohands/git_docs.md
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/board_navigation_ears.md">Adopt shared board navigation in PyAutoEars</a> — <a href="https://github.com/PyAutoLabs/PyAutoEars/issues/11">issue #11</a> — issued 2026-10-05 — library-dev</summary>
+<details><summary>📋 <a href="active/board_navigation_ears.md">Adopt shared board navigation in PyAutoEars</a> — <a href="https://github.com/PyAutoLabs/PyAutoEars/issues/11">issue #11</a> — issued 2026-10-05 — library-shipped — PRs: <a href="https://github.com/PyAutoLabs/PyAutoEars/pull/12">PyAutoEars#12</a> — ⏳ pending release: PyAutoEars</summary>
 
 ```
 Use the start-dev skill. active/board_navigation_ears.md
@@ -260,7 +260,7 @@ Use the start-dev skill. active/board_navigation_ears.md
 
 </details>
 
-<details><summary>📋 <a href="active/board_navigation_eyes.md">Adopt shared board navigation in PyAutoEyes</a> — <a href="https://github.com/PyAutoLabs/PyAutoEyes/issues/16">issue #16</a> — issued 2026-10-05 — library-dev</summary>
+<details><summary>📋 <a href="active/board_navigation_eyes.md">Adopt shared board navigation in PyAutoEyes</a> — <a href="https://github.com/PyAutoLabs/PyAutoEyes/issues/16">issue #16</a> — issued 2026-10-05 — library-shipped — PRs: <a href="https://github.com/PyAutoLabs/PyAutoEyes/pull/17">PyAutoEyes#17</a> — ⏳ pending release: PyAutoEyes</summary>
 
 ```
 Use the start-dev skill. active/board_navigation_eyes.md
@@ -268,7 +268,7 @@ Use the start-dev skill. active/board_navigation_eyes.md
 
 </details>
 
-<details><summary>📋 <a href="active/board_navigation_gut.md">Adopt shared board navigation in PyAutoGut</a> — <a href="https://github.com/PyAutoLabs/PyAutoGut/issues/21">issue #21</a> — issued 2026-10-05 — library-dev</summary>
+<details><summary>📋 <a href="active/board_navigation_gut.md">Adopt shared board navigation in PyAutoGut</a> — <a href="https://github.com/PyAutoLabs/PyAutoGut/issues/21">issue #21</a> — issued 2026-10-05 — library-shipped — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGut/pull/22">PyAutoGut#22</a> — ⏳ pending release: PyAutoGut</summary>
 
 ```
 Use the start-dev skill. active/board_navigation_gut.md
@@ -276,7 +276,7 @@ Use the start-dev skill. active/board_navigation_gut.md
 
 </details>
 
-<details><summary>📋 <a href="active/board_navigation_hands.md">Adopt shared board navigation in PyAutoHands</a> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/298">issue #298</a> — issued 2026-10-05 — library-dev</summary>
+<details><summary>📋 <a href="active/board_navigation_hands.md">Adopt shared board navigation in PyAutoHands</a> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/298">issue #298</a> — issued 2026-10-05 — library-shipped — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/299">PyAutoHands#299</a> — ⏳ pending release: PyAutoHands</summary>
 
 ```
 Use the start-dev skill. active/board_navigation_hands.md
@@ -284,7 +284,7 @@ Use the start-dev skill. active/board_navigation_hands.md
 
 </details>
 
-<details><summary>📋 <a href="active/board_navigation_heart.md">Adopt shared board navigation in PyAutoHeart</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/282">issue #282</a> — issued 2026-10-05 — library-dev</summary>
+<details><summary>📋 <a href="active/board_navigation_heart.md">Adopt shared board navigation in PyAutoHeart</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/282">issue #282</a> — issued 2026-10-05 — library-shipped — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/283">PyAutoHeart#283</a> — ⏳ pending release: PyAutoHeart</summary>
 
 ```
 Use the start-dev skill. active/board_navigation_heart.md
@@ -292,7 +292,7 @@ Use the start-dev skill. active/board_navigation_heart.md
 
 </details>
 
-<details><summary>📋 <a href="active/board_navigation_insight.md">Adopt shared board navigation in PyAutoInsight</a> — <a href="https://github.com/PyAutoLabs/PyAutoInsight/issues/4">issue #4</a> — issued 2026-10-05 — library-dev</summary>
+<details><summary>📋 <a href="active/board_navigation_insight.md">Adopt shared board navigation in PyAutoInsight</a> — <a href="https://github.com/PyAutoLabs/PyAutoInsight/issues/4">issue #4</a> — issued 2026-10-05 — library-shipped — PRs: <a href="https://github.com/PyAutoLabs/PyAutoInsight/pull/5">PyAutoInsight#5</a> — ⏳ pending release: PyAutoInsight</summary>
 
 ```
 Use the start-dev skill. active/board_navigation_insight.md
@@ -300,7 +300,7 @@ Use the start-dev skill. active/board_navigation_insight.md
 
 </details>
 
-<details><summary>📋 <a href="active/board_navigation_memory.md">Adopt shared board navigation in PyAutoMemory</a> — <a href="https://github.com/PyAutoLabs/PyAutoMemory/issues/115">issue #115</a> — issued 2026-10-05 — library-dev</summary>
+<details><summary>📋 <a href="active/board_navigation_memory.md">Adopt shared board navigation in PyAutoMemory</a> — <a href="https://github.com/PyAutoLabs/PyAutoMemory/issues/115">issue #115</a> — issued 2026-10-05 — library-shipped — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMemory/pull/116">PyAutoMemory#116</a> — ⏳ pending release: PyAutoMemory</summary>
 
 ```
 Use the start-dev skill. active/board_navigation_memory.md
@@ -308,7 +308,7 @@ Use the start-dev skill. active/board_navigation_memory.md
 
 </details>
 
-<details><summary>📋 <a href="active/board_navigation_nerves.md">Adopt shared board navigation in PyAutoNerves</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/185">issue #185</a> — issued 2026-10-05 — library-dev</summary>
+<details><summary>📋 <a href="active/board_navigation_nerves.md">Adopt shared board navigation in PyAutoNerves</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/185">issue #185</a> — issued 2026-10-05 — library-shipped — PRs: <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/186">PyAutoNerves#186</a> — ⏳ pending release: PyAutoNerves</summary>
 
 ```
 Use the start-dev skill. active/board_navigation_nerves.md
@@ -316,7 +316,7 @@ Use the start-dev skill. active/board_navigation_nerves.md
 
 </details>
 
-<details><summary>📋 <a href="active/board_navigation_pulse.md">Adopt shared board navigation in PyAutoPulse</a> — <a href="https://github.com/PyAutoLabs/PyAutoPulse/issues/14">issue #14</a> — issued 2026-10-05 — library-dev</summary>
+<details><summary>📋 <a href="active/board_navigation_pulse.md">Adopt shared board navigation in PyAutoPulse</a> — <a href="https://github.com/PyAutoLabs/PyAutoPulse/issues/14">issue #14</a> — issued 2026-10-05 — library-shipped — PRs: <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/15">PyAutoPulse#15</a> — ⏳ pending release: PyAutoPulse</summary>
 
 ```
 Use the start-dev skill. active/board_navigation_pulse.md
@@ -324,7 +324,7 @@ Use the start-dev skill. active/board_navigation_pulse.md
 
 </details>
 
-<details><summary>📋 <a href="active/board_navigation_scientist.md">Adopt shared board navigation in PyAutoScientist</a> — <a href="https://github.com/PyAutoLabs/PyAutoScientist/issues/42">issue #42</a> — issued 2026-10-05 — library-dev</summary>
+<details><summary>📋 <a href="active/board_navigation_scientist.md">Adopt shared board navigation in PyAutoScientist</a> — <a href="https://github.com/PyAutoLabs/PyAutoScientist/issues/42">issue #42</a> — issued 2026-10-05 — library-shipped — PRs: <a href="https://github.com/PyAutoLabs/PyAutoScientist/pull/43">PyAutoScientist#43</a> — ⏳ pending release: PyAutoScientist</summary>
 
 ```
 Use the start-dev skill. active/board_navigation_scientist.md
@@ -417,11 +417,13 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoEars**
 
+- [PyAutoEars#12](https://github.com/PyAutoLabs/PyAutoEars/pull/12) — `active/board_navigation_ears.md`
 - [PyAutoEars#10](https://github.com/PyAutoLabs/PyAutoEars/pull/10) — `complete/2026/10/community-board-readability.md`
 - [PyAutoEars#2](https://github.com/PyAutoLabs/PyAutoEars/pull/2) — `complete/2026/10/ears-bootstrap.md`
 
 **PyAutoEyes**
 
+- [PyAutoEyes#17](https://github.com/PyAutoLabs/PyAutoEyes/pull/17) — `active/board_navigation_eyes.md`
 - [PyAutoEyes#3](https://github.com/PyAutoLabs/PyAutoEyes/pull/3) — `complete/2026/09/eyes-board-conductor-registry.md`
 - [PyAutoEyes#5](https://github.com/PyAutoLabs/PyAutoEyes/pull/5) — `complete/2026/09/eyes-fit-cti-instances.md`
 - [PyAutoEyes#4](https://github.com/PyAutoLabs/PyAutoEyes/pull/4) — `complete/2026/09/eyes-galaxy-instance.md`
@@ -454,12 +456,14 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoGut**
 
+- [PyAutoGut#22](https://github.com/PyAutoLabs/PyAutoGut/pull/22) — `active/board_navigation_gut.md`
 - [PyAutoGut#13](https://github.com/PyAutoLabs/PyAutoGut/pull/13) — `complete/2026/09/eyes-organ-order.md`
 - [PyAutoGut#12](https://github.com/PyAutoLabs/PyAutoGut/pull/12) — `complete/2026/09/gut-void-sibling-reach.md`
 - [PyAutoGut#18](https://github.com/PyAutoLabs/PyAutoGut/pull/18) — `complete/2026/10/pyautopulse-organ-row.md`
 
 **PyAutoHands**
 
+- [PyAutoHands#299](https://github.com/PyAutoLabs/PyAutoHands/pull/299) — `active/board_navigation_hands.md`
 - [PyAutoHands#292](https://github.com/PyAutoLabs/PyAutoHands/pull/292) — `complete/2026/09/board-footer-family-fix.md`
 - [PyAutoHands#291](https://github.com/PyAutoLabs/PyAutoHands/pull/291) — `complete/2026/09/eyes-organ-order.md`
 - [PyAutoHands#297](https://github.com/PyAutoLabs/PyAutoHands/pull/297) — `complete/2026/10/jax-lapack-compatibility-repair.md`
@@ -467,6 +471,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoHeart**
 
+- [PyAutoHeart#283](https://github.com/PyAutoLabs/PyAutoHeart/pull/283) — `active/board_navigation_heart.md`
 - [PyAutoHeart#240](https://github.com/PyAutoLabs/PyAutoHeart/pull/240) — `complete/2026/09/autolens-visualization-rebirth.md`
 - [PyAutoHeart#242](https://github.com/PyAutoLabs/PyAutoHeart/pull/242) — `complete/2026/09/board-footer-family-fix.md`
 - [PyAutoHeart#244](https://github.com/PyAutoLabs/PyAutoHeart/pull/244) — `complete/2026/09/eyes-fit-cti-instances.md`
@@ -482,6 +487,10 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoHeart#281](https://github.com/PyAutoLabs/PyAutoHeart/pull/281) — `complete/2026/10/restore-dashboard-green.md`
 - [PyAutoHeart#279](https://github.com/PyAutoLabs/PyAutoHeart/pull/279) — `complete/2026/10/retired-repo-sidecars.md`
 - [PyAutoHeart#277](https://github.com/PyAutoLabs/PyAutoHeart/pull/277) — `complete/2026/10/unit-timing-distinct-baseline.md`
+
+**PyAutoInsight**
+
+- [PyAutoInsight#5](https://github.com/PyAutoLabs/PyAutoInsight/pull/5) — `active/board_navigation_insight.md`
 
 **PyAutoLens**
 
@@ -501,6 +510,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoMemory**
 
+- [PyAutoMemory#116](https://github.com/PyAutoLabs/PyAutoMemory/pull/116) — `active/board_navigation_memory.md`
 - [PyAutoMemory#110](https://github.com/PyAutoLabs/PyAutoMemory/pull/110) — `complete/2026/10/memory-cockpit-catch-up.md`
 
 **PyAutoMind**
@@ -516,6 +526,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoNerves**
 
+- [PyAutoNerves#186](https://github.com/PyAutoLabs/PyAutoNerves/pull/186) — `active/board_navigation_nerves.md`
 - [PyAutoNerves#177](https://github.com/PyAutoLabs/PyAutoNerves/pull/177) — `complete/2026/09/eyes-organ-order.md`
 - [PyAutoNerves#175](https://github.com/PyAutoLabs/PyAutoNerves/pull/175) — `complete/2026/09/nerves-unused-keys.md`
 - [PyAutoNerves#176](https://github.com/PyAutoLabs/PyAutoNerves/pull/176) — `complete/2026/09/workspace-config-cleanup.md`
@@ -524,6 +535,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoPulse**
 
+- [PyAutoPulse#15](https://github.com/PyAutoLabs/PyAutoPulse/pull/15) — `active/board_navigation_pulse.md`
 - [PyAutoPulse#4](https://github.com/PyAutoLabs/PyAutoPulse/pull/4) — `complete/2026/10/lint-lychee-exclude-blob.md`
 - [PyAutoPulse#2](https://github.com/PyAutoLabs/PyAutoPulse/pull/2) — `complete/2026/10/pyautopulse-organ-skeleton.md`
 
@@ -533,6 +545,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoScientist**
 
+- [PyAutoScientist#43](https://github.com/PyAutoLabs/PyAutoScientist/pull/43) — `active/board_navigation_scientist.md`
 - [PyAutoScientist#35](https://github.com/PyAutoLabs/PyAutoScientist/pull/35) — `complete/2026/09/eyes-organ-order.md`
 - [PyAutoScientist#39](https://github.com/PyAutoLabs/PyAutoScientist/pull/39) — `complete/2026/10/pyautopulse-organ-row.md`
 

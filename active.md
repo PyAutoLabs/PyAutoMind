@@ -42,107 +42,127 @@
 - issued: 2026-10-05
 - prompt: active/board_navigation_ears.md
 - session: Codex (session ID unavailable)
-- status: library-dev
+- status: library-shipped
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/board-navigation-ears
 - repos:
   - PyAutoEars: feature/board-navigation-ears
 - summary: Approved all-board navigation adoption; depends on Brain PR #464. User invoked /prm for this execution turn.
+- library-pr: https://github.com/PyAutoLabs/PyAutoEars/pull/12
+- pending-release: PyAutoEars@https://github.com/PyAutoLabs/PyAutoEars/pull/12
 
 ## board-navigation-memory
 - issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/115
 - issued: 2026-10-05
 - prompt: active/board_navigation_memory.md
 - session: Codex (session ID unavailable)
-- status: library-dev
+- status: library-shipped
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/board-navigation-memory
 - repos:
   - PyAutoMemory: feature/board-navigation-memory
 - summary: Approved all-board navigation adoption; depends on Brain PR #464. User invoked /prm for this execution turn.
+- library-pr: https://github.com/PyAutoLabs/PyAutoMemory/pull/116
+- pending-release: PyAutoMemory@https://github.com/PyAutoLabs/PyAutoMemory/pull/116
 
 ## board-navigation-heart
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/282
 - issued: 2026-10-05
 - prompt: active/board_navigation_heart.md
 - session: Codex (session ID unavailable)
-- status: library-dev
+- status: library-shipped
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/board-navigation-heart
 - repos:
   - PyAutoHeart: feature/board-navigation-heart
 - summary: Approved all-board navigation adoption; depends on Brain PR #464. User invoked /prm for this execution turn.
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/283
+- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/283
 
 ## board-navigation-hands
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/298
 - issued: 2026-10-05
 - prompt: active/board_navigation_hands.md
 - session: Codex (session ID unavailable)
-- status: library-dev
+- status: library-shipped
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/board-navigation-hands
 - repos:
   - PyAutoHands: feature/board-navigation-hands
 - summary: Approved all-board navigation adoption; depends on Brain PR #464. User invoked /prm for this execution turn.
+- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/299
+- pending-release: PyAutoHands@https://github.com/PyAutoLabs/PyAutoHands/pull/299
 
 ## board-navigation-pulse
 - issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/14
 - issued: 2026-10-05
 - prompt: active/board_navigation_pulse.md
 - session: Codex (session ID unavailable)
-- status: library-dev
+- status: library-shipped
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/board-navigation-pulse
 - repos:
   - PyAutoPulse: feature/board-navigation-pulse
 - summary: Approved all-board navigation adoption; depends on Brain PR #464. User invoked /prm for this execution turn.
+- library-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/15
+- pending-release: PyAutoPulse@https://github.com/PyAutoLabs/PyAutoPulse/pull/15
 
 ## board-navigation-nerves
 - issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/185
 - issued: 2026-10-05
 - prompt: active/board_navigation_nerves.md
 - session: Codex (session ID unavailable)
-- status: library-dev
+- status: library-shipped
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/board-navigation-nerves
 - repos:
   - PyAutoNerves: feature/board-navigation-nerves
 - summary: Approved all-board navigation adoption; depends on Brain PR #464. User invoked /prm for this execution turn.
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/186
+- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/186
 
 ## board-navigation-gut
 - issue: https://github.com/PyAutoLabs/PyAutoGut/issues/21
 - issued: 2026-10-05
 - prompt: active/board_navigation_gut.md
 - session: Codex (session ID unavailable)
-- status: library-dev
+- status: library-shipped
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/board-navigation-gut
 - repos:
   - PyAutoGut: feature/board-navigation-gut
 - summary: Approved all-board navigation adoption; depends on Brain PR #464. User invoked /prm for this execution turn.
+- library-pr: https://github.com/PyAutoLabs/PyAutoGut/pull/22
+- pending-release: PyAutoGut@https://github.com/PyAutoLabs/PyAutoGut/pull/22
 
 ## board-navigation-scientist
 - issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/42
 - issued: 2026-10-05
 - prompt: active/board_navigation_scientist.md
 - session: Codex (session ID unavailable)
-- status: library-dev
+- status: library-shipped
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/board-navigation-scientist
 - repos:
   - PyAutoScientist: feature/board-navigation-scientist
 - summary: Approved all-board navigation adoption; depends on Brain PR #464. User invoked /prm for this execution turn.
+- library-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/43
+- pending-release: PyAutoScientist@https://github.com/PyAutoLabs/PyAutoScientist/pull/43
 
 ## board-navigation-eyes
 - issue: https://github.com/PyAutoLabs/PyAutoEyes/issues/16
 - issued: 2026-10-05
 - prompt: active/board_navigation_eyes.md
 - session: Codex (session ID unavailable)
-- status: library-dev
+- status: library-shipped
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/board-navigation-eyes
 - repos:
   - PyAutoEyes: feature/board-navigation-eyes
 - summary: Approved all-board navigation adoption; depends on Brain PR #464. User invoked /prm for this execution turn.
+- library-pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/17
+- pending-release: PyAutoEyes@https://github.com/PyAutoLabs/PyAutoEyes/pull/17
 
 ## board-navigation-insight
 - issue: https://github.com/PyAutoLabs/PyAutoInsight/issues/4
 - issued: 2026-10-05
 - prompt: active/board_navigation_insight.md
 - session: Codex (session ID unavailable)
-- status: library-dev
+- status: library-shipped
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/board-navigation-insight
 - repos:
   - PyAutoInsight: feature/board-navigation-insight
 - summary: Approved all-board navigation adoption; depends on Brain PR #464. User invoked /prm for this execution turn.
+- library-pr: https://github.com/PyAutoLabs/PyAutoInsight/pull/5
+- pending-release: PyAutoInsight@https://github.com/PyAutoLabs/PyAutoInsight/pull/5
