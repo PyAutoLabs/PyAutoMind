@@ -48,7 +48,7 @@
 - issued: 2026-10-05
 - prompt: active/profiling_setup_page.md
 - session: Codex; session ID unavailable
-- status: shipping
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-setup-page
 - repos:
   - autolens_profiling: feature/profiling-setup-page
@@ -62,3 +62,18 @@
 - previews: .worktrees/profiling-setup-page/browser-artifacts/setup-1280.png and setup-390.png
 
 - heart-red-override: Live user "I authroize, continue and do the next phase" responding to the explicit #378 development-shipping override request. Exact RED `release validation FAILED (stage integrate)`; 1061 full/48 final focused tests, Chromium interactions, seven smokes and inline review pass. Commit/push/PR only; merge separate, no release.
+
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/379
+- commit: e84086a
+
+## profiling-setup-browser
+- issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/12
+- issued: 2026-10-05
+- prompt: active/profiling_setup_browser_frontpage.md
+- session: Codex; session ID unavailable
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-setup-browser
+- repos:
+  - PyAutoPulse: feature/profiling-setup-browser
+- summary: Approved Phase 3b: shared theme, campaign copy controls, compact review metadata, setup browser and v2 registration. Producer #377 merged; project UI #379 separate.
+- authorization: user "I authroize, continue and do the next phase" plus approved parent plan. Human merge; no bulk compute. Ship-time Heart override remains separate for this task.
