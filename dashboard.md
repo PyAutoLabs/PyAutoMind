@@ -44,7 +44,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 6 |
 | [Planned](#planned) (`planned.md`) | 8 |
-| [Backlog](#backlog) (`draft/`) | 226 |
+| [Backlog](#backlog) (`draft/`) | 227 |
 
 > **No batch in flight.**
 
@@ -683,7 +683,7 @@ Use the start-dev skill. draft/bug/pyautobrain/sizing_faculty_none_rule_keyword_
 
 ## Backlog
 
-**226** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
+**227** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 71</summary>
@@ -1850,7 +1850,7 @@ Use the start-dev skill. draft/research/autofit/hpc_campaign_epic_surveys/prior_
 </details>
 
 <details>
-<summary><b>docs</b> — 15</summary>
+<summary><b>docs</b> — 16</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
 
@@ -1968,6 +1968,14 @@ Use the start-dev skill. draft/docs/autofit/howtofit_chapter_3_prose_references.
 
 ```
 Use the start-dev skill. draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md">Track and fix correctness issues in the HowToLens tutorials as they…</a> — howtolens</summary>
+
+```
+Use the start-dev skill. draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md
 ```
 
 </details>
@@ -3034,11 +3042,12 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## Hygiene
 
-5 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
+6 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
 
 <details>
 <summary>Headerless prompts</summary>
 
+- `draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md`
 - `draft/research/autofit/hpc_campaign_epic_report.md`
 - `draft/research/autofit/hpc_campaign_epic_surveys/carbon.md`
 - `draft/research/autofit/hpc_campaign_epic_surveys/codebase.md`
@@ -3047,7 +3056,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 </details>
 
-63 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+64 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3090,9 +3099,9 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 - `draft/refactor/workspaces/abell_1201_local_cleanup.md`
 - `draft/docs/autolens/split_lensing_regimes.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
+- `draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md`
 - `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
-- `draft/test/workspaces/mesh_magnification_correctness.md`
-- _… and 23 more_
+- _… and 24 more_
 
 </details>
 
