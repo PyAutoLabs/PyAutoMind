@@ -9,7 +9,7 @@ Themes:
 Difficulty: small
 Autonomy: safe
 Priority: normal
-Status: draft
+Status: active
 Consequence: glance
 Witness: `estimate_consequence` on a prompt whose `Witness:` value starts with `none` returns `judge` with a reason naming the none (unit test); the 14 prompts named below derive the tier their declared override carries today without the override, or the keyword change is recorded as declined per prompt with its reason; a `draft/triage/` prompt derives `judge` with a reason naming triage (unit test); a whole-backlog regrade before and after is recorded in the PR, and no prompt's derived tier moves from a cheaper tier to `judge` except the six `Witness: none —` ones and the two triage ones.
 Review-minutes: 3

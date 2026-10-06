@@ -22,3 +22,15 @@
   - euclid_strong_lens_modeling_pipeline: feature/vis-lp-inspection-bundle
 - summary: Add an explicit vis_lp-only inspection mode that combines the main normal-model output tree with the 100-lens SED/Sersic tree, without requiring vis_pix or selecting the other 200 main-tree lenses.
 - resume: Implemented + committed locally as c6b514d on feature/vis-lp-inspection-bundle (133 tests green, not pushed). Human reviews diff (scratchpad part1_diff.txt) before ship_workspace; then sync tooling to the euclid_dr1 science clone/RAL and submit the 4,922-tile vis_lp-only bundle (OUTPUT_DIR=dr1_full, INITIAL_SEARCH_NAME=vis_lp, DATASET_NAMES_PATH=all, TAR_TO set) as a Cortex run.
+
+## sizing-none-triage-rules
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/480
+- issued: 2026-10-06
+- prompt: active/sizing_faculty_none_rule_keyword_false_judge_triage.md
+- session: codex (GPT-6; session ID unavailable)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/sizing-none-triage-rules
+- repos:
+  - PyAutoBrain: feature/sizing-none-triage-rules
+- tier: glance
+- summary: Approved Witness-none, raises-keyword and triage sizing fixes; issue #480 contains the approved plan and merge-on-green witness.
