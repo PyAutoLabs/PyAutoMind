@@ -1,3 +1,22 @@
+# Setup-first profiling redesign — completed implementation
+
+Completed: 2026-10-06
+
+All six approved implementation phases are merged. This parent was an umbrella prompt with no separate issue or worktree; its bounded tasks supply the merge evidence:
+
+- Phase1: Pulse#11; complete/2026/10/profiling-setup-contract.md.
+- Phase2: project#377; complete/2026/10/profiling-setup-catalogue.md.
+- Phase3: project#379 and Pulse#13; profiling-setup-page.md and profiling-setup-browser.md.
+- Phase4: project#381 and Brain#478; profiling-model-layout.md and profiling-catalogue-routing.md.
+- Phase5: project#383 and assistant#151; profiling-setup-wiki.md and profiling-setup-advice.md.
+- Phase6: project#385 and Pulse#18; profiling-baseline-readiness.md and profiling-baseline-campaign.md.
+
+Records above live under complete/2026/10/. Phase6 exact-head CI and merge proofs are in its completion records. The approved readiness scope is complete; actual baseline collection, scientific acceptance and temporal charts were deliberately later work, not performed or authorized by this redesign. Pulse owns the pending setup-baseline campaign; its configuration, hardware, revision and capability unknowns remain explicit. Historical evidence and recommendations retain their qualifications.
+
+Retire this parent from pickable backlog under the current human /prm authorization. Preserve its original approved plan below as history; status prose inside the original prompt reflects earlier checkpoints rather than current work.
+
+## Original prompt
+
 # Setup-first profiling: dashboard, evidence catalogue, scripts and assistant
 
 Type: feature

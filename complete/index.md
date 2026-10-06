@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1729 records across 9 buckets.
+1732 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -185,6 +185,8 @@ markers; everything below GENERATED is rebuilt.
 - [point-source-search-nautilus-leaf](2026/10/point-source-search-nautilus-leaf.md)
 - [point-source-wiki-reconcile](2026/10/point-source-wiki-reconcile.md)
 - [pointsolver-extent-sanity-check](2026/10/pointsolver-extent-sanity-check.md)
+- [profiling-baseline-campaign](2026/10/profiling-baseline-campaign.md)
+- [profiling-baseline-readiness](2026/10/profiling-baseline-readiness.md)
 - [profiling-catalogue-routing](2026/10/profiling-catalogue-routing.md)
 - [profiling-model-layout](2026/10/profiling-model-layout.md)
 - [profiling-setup-advice](2026/10/profiling-setup-advice.md)
@@ -192,6 +194,7 @@ markers; everything below GENERATED is rebuilt.
 - [profiling-setup-catalogue](2026/10/profiling-setup-catalogue.md)
 - [profiling-setup-contract](2026/10/profiling-setup-contract.md) — Phase 1 reader of the full setup-first profiling refactor. Adds profiling-summary v2 setup/record/selection/ha…
 - [profiling-setup-page](2026/10/profiling-setup-page.md)
+- [profiling-setup-redesign](2026/10/profiling-setup-redesign.md)
 - [profiling-setup-wiki](2026/10/profiling-setup-wiki.md)
 - [profiling-summary-v1](2026/10/profiling-summary-v1.md) — PyAutoPulse phase 1 — `build_dashboard.py` gains a fourth output, `dashboard/summary.json`, the `profiling-sum…
 - [pulse-campaign-control-room](2026/10/pulse-campaign-control-room.md) — One editable/copyable check-in prompt, 11 campaign rows, 25 open tasks, then detailed measurement evidence. 26…
