@@ -258,7 +258,7 @@ Use the start-dev skill. active/nnls_memo_scattered_backoff.md
 
 </details>
 
-<details><summary>📋 <a href="active/organ_prompt_headings.md">Organ-named dashboard prompt headings</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/479">issue #479</a> — issued 2026-10-06 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/481">PyAutoBrain#481</a></summary>
+<details><summary>📋 <a href="active/organ_prompt_headings.md">Organ-named dashboard prompt headings</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/479">issue #479</a> — issued 2026-10-06 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/481">PyAutoBrain#481</a>, <a href="https://github.com/PyAutoLabs/PyAutoEars/pull/14">PyAutoEars#14</a>, <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/286">PyAutoHeart#286</a>, <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/302">PyAutoHands#302</a>, <a href="https://github.com/PyAutoLabs/PyAutoMemory/pull/117">PyAutoMemory#117</a>, <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/16">PyAutoPulse#16</a>, <a href="https://github.com/PyAutoLabs/PyAutoInsight/pull/7">PyAutoInsight#7</a>, <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/187">PyAutoNerves#187</a>, <a href="https://github.com/PyAutoLabs/PyAutoGut/pull/23">PyAutoGut#23</a>, <a href="https://github.com/PyAutoLabs/PyAutoEyes/pull/19">PyAutoEyes#19</a>, <a href="https://github.com/PyAutoLabs/PyAutoScientist/pull/44">PyAutoScientist#44</a></summary>
 
 ```
 Use the start-dev skill. active/organ_prompt_headings.md

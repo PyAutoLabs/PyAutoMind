@@ -42,11 +42,21 @@
   - PyAutoGut: feature/organ-prompt-headings
   - PyAutoEyes: feature/organ-prompt-headings
   - PyAutoScientist: feature/organ-prompt-headings
-- workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/481
 - summary: Approved thirteen organ-named headings; preserve payloads/controls/work links; shared responsive heading and owner rollout. Human /prm.
-- resume: Brain PR#481 opened, CI pending; ten tested consumer commits stay local until Brain merges; Heart YELLOW reasons acknowledged by user “yeah proceed $prm” on 2026-10-06; ship then merge all green PRs in dependency order authorized. Brain suite 1232 passed plus grouped fixture rerun 4 passed with inherited overrides removed; consumer suites passed; 104 board layouts and 14 clipboard cases pass. Evidence/PR bodies: tmp/organ-prompt-headings/.
 - heart-ack:
   - autogalaxy_workspace: open PR 7d old
   - autolens_workspace: open PR 7d old
   - euclid_strong_lens_modeling_pipeline: open PR 7d old
   - release validation stale: source moved since rehearsal (PyAutoNerves)
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/481
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoEars/pull/14
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/286
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/302
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoMemory/pull/117
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/16
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoInsight/pull/7
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/187
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoGut/pull/23
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/19
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/44
+- resume: All eleven PRs opened; Brain, Ears, Memory, Insight and Gut confirmed merged. Remaining consumer CI pending. Human authorized ship and /prm with the recorded Heart YELLOW acknowledgement. Do not close task or remove worktree until all eleven branches merged.
