@@ -105,3 +105,25 @@
   - PyAutoArray
   - autolens_workspace_test
 - resume: Audit#603 found incorrect internal-edge Sibson weights and near-edge partition failure. Filed separately per explicit user request; strict expected-failure regressions retained in audit. No repair begun or worktree created. Plan algorithmic repair independently.
+
+## organ-prompt-headings
+- planned: 2026-10-05
+- status: blocked — approved wording; Brain claims #469–#472 remain active (verified 2026-10-06)
+- classification: workspace
+- prompt: draft/feature/pyautobrain/standardize_dashboard_orchestration_prompt_panel.md
+- suggested-branch: feature/organ-prompt-headings
+- blocked-by: worktree-sh-root-activate-clobber, unregistered-worktree-guard, cortex-find-script-symlink, intake-declared-header-fields (using PyAutoBrain; issues #469–#472)
+- affected-repos:
+  - PyAutoBrain
+  - PyAutoEars
+  - PyAutoHeart
+  - PyAutoHands
+  - PyAutoMemory
+  - PyAutoPulse
+  - PyAutoInsight
+  - PyAutoNerves
+  - PyAutoGut
+  - PyAutoEyes
+  - PyAutoScientist
+- summary: Approved concise prompt headings with bold organ name, no subtitle, responsive single-line layout; Cortex is “Explore science with your Cortex”. Preserve domain payloads and GitHub work links. Shared heading/component changes precede owner adoption.
+- resume: Resume after Brain claims clear; approval persists. GitHub access restored 2026-10-06; all four issues remain OPEN and the conflict guard reports all four claims. Issue creation remains deferred; no implementation changes yet.
