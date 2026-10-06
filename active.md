@@ -53,7 +53,7 @@
   - autolens_assistant: feature/profiling-setup-advice
 - summary: Approved profiling redesign Phase5; evidence-qualified setup wiki / assistant lookup. No profiling jobs or baseline acceptance.
 - workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/151
-- commit: 874ab3afa54d0ff9206f90cd9231f4539fb49221
+- commit: d1621f2
 - resume: PR open; exact-head CI in progress at handoff. Independent CLEAN review and local checks complete; user runs /prm when green. No merge authorized.
 - heart-ack:
   - autogalaxy_workspace: open PR 7d old

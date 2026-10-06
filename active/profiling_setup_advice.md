@@ -67,3 +67,17 @@ SDP81 MGE/Delaunay/rectangular integration with all5 rules remaining unreviewed.
 PR body contains test evidence and baseline fixture/browser limitations. Next: human
 /prm after every required run/job is green; project first, then assistant.
 Phase6 remains unstarted; no profiling jobs or baseline acceptance.
+
+## CI boundary fix — 2026-10-06
+
+Human requested the fix after /prm correctly stopped on red clone-boundary CI.
+Existing task/branch reused; commit d1621f2 pushed to PR151. The unclassified
+examples/profiling/alma_delaunay.json moved byte-identically to docs/profiling/,
+covered by the existing domain docs/* rule. Updated skill links, query test and
+maintainer boundary explanation. No Brain change or weakened CI gate.
+Actual boundary reproduced before fix and passes after; 43 lookup tests pass,
+live query still14runtime analogues; Ruff/format/discovery/diff checks pass.
+Fresh Heart YELLOW reasons identical to the already acknowledged three open-PR
+reasons; PyAutoNerves rehearsal remains stale. No new override/merge grant.
+Logs: .worktrees/profiling-setup-advice/boundary-{before,fix-tests,fix-vitals}.log.
+Next: exact-head CI on d1621f2, then human /prm.
