@@ -24,7 +24,8 @@ name: Tenant Firewall Gate
 # the leg is dropped with `repos_sync.py --skip`, the run says so out loud, and
 # the part the PR really does control — PyAutoMind's own installed copies, the
 # one repo propagation never writes to — is asserted instead. On `push` to
-# main these hook legs are not skipped; standards use target-owned scope below.
+# main these hook legs are not skipped. The shared-standards leg is never
+# skipped: it is graded universally on the cloned mains (see below).
 #
 # The where-to-file block (`policy/where_to_file.md`, PyAutoMind#442) has the
 # same unmeetable precondition: the sibling organs are checked out at their
@@ -34,7 +35,7 @@ name: Tenant Firewall Gate
 # pins it) and drops the `where-to-file blocks (generated)` leg with the same
 # loud banner. The two decisions are independent: a PR touching both a hook and
 # the policy skips both legs and prints both banners; one touching neither runs
-# every existing leg. Standards are graded separately. The decision reads the PR's diff, not its body, so a PR with no
+# every existing leg. The decision reads the PR's diff, not its body, so a PR with no
 # `Brain-ref:` line gets the skip exactly as one with it does.
 #
 # All three organs are checked out. PyAutoHands was omitted at first — its
@@ -170,11 +171,12 @@ jobs:
           python3 -m pytest PyAutoMind/tests/test_repos_sync_filing_block.py -q \
             -k "pyautomind_carries_its_own_block"
 
-      # Standards rollout is staged across consumer PRs (#474). These sibling
-      # main clones do not belong to this Mind PR. Keep the default generator
-      # audit universal; CI grades Mind's owned block and generator behavior.
-      # Consumer PRs grade their own block, and the rollout completion audit
-      # checks every available registered checkout without --repo.
+      # The shared-standards rollout (#474) is complete: all 46 registered
+      # repos carry the generated block on main (PyAutoArray#614 and
+      # euclid_strong_lens_modeling_pipeline#110 were the last). This step
+      # keeps the hermetic generator tests and pins Mind's own block; the
+      # drift checks below now grade the standards leg universally on every
+      # cloned main, like every other leg — no --skip.
       - name: Shared standards generator and Mind-owned block
         run: |
           pip install pytest
@@ -188,8 +190,7 @@ jobs:
           HOOK_PR: ${{ steps.hookpr.outputs.hook_pr }}
           FILING_PR: ${{ steps.hookpr.outputs.filing_pr }}
         run: |
-          echo "Standards scope: Mind-owned block checked above; sibling main adoption is checked by consumer PRs and the universal completion audit."
-          skip=(--skip "shared-standards blocks (generated)")
+          skip=()
           if [ "$HOOK_PR" = "true" ]; then
             echo "=============================================================="
             echo "SKIPPED LEG: 'generated hooks (session-start + end-at-deliverable)'"
@@ -226,11 +227,8 @@ jobs:
           python3 PyAutoMind/scripts/repos_sync.py --check \
             --root "$GITHUB_WORKSPACE" "${skip[@]}"
 
-      # Preserve all existing legs. Standards are target-owned in this gate;
-      # running the generator without --skip remains the universal audit.
+      # Every leg, the shared-standards leg included, graded on the cloned mains.
       - name: Drift check (all legs — absent repos are skipped)
         if: steps.hookpr.outputs.hook_pr != 'true' && steps.hookpr.outputs.filing_pr != 'true'
         run: |
-          echo "Standards scope: Mind-owned block checked above; sibling main adoption is checked by consumer PRs and the universal completion audit."
-          python3 PyAutoMind/scripts/repos_sync.py --check --root "$GITHUB_WORKSPACE" \
-            --skip "shared-standards blocks (generated)"
+          python3 PyAutoMind/scripts/repos_sync.py --check --root "$GITHUB_WORKSPACE"

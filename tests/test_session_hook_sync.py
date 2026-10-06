@@ -837,7 +837,7 @@ def test_the_skipping_step_composes_both_decisions(tmp_path, hook_pr,
     )
     args = argv.read_text().splitlines()
     got = [args[i + 1] for i, a in enumerate(args) if a == "--skip"]
-    assert got == [repos_sync.STANDARDS_BLOCKS, *skipped], args
+    assert got == skipped, args
     assert proc.stdout.count("SKIPPED LEG") == len(skipped), proc.stdout
     for label in skipped:
         assert f"SKIPPED LEG: '{label}'" in proc.stdout
