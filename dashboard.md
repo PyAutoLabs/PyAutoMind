@@ -44,13 +44,13 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 6 |
 | [Planned](#planned) (`planned.md`) | 7 |
-| [Backlog](#backlog) (`draft/`) | 228 |
+| [Backlog](#backlog) (`draft/`) | 227 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 20
+**Highest priority** (filed as `high`) — showing 12 of 19
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -699,7 +699,7 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ## Backlog
 
-**228** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
+**227** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 71</summary>
@@ -1544,20 +1544,12 @@ Use the start-dev skill. draft/feature/autoarray/adapt_linear_default_flip.md
 </details>
 
 <details>
-<summary><b>maintenance</b> — 22</summary>
+<summary><b>maintenance</b> — 21</summary>
 
 <details><summary>📋 <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> — organs · medium · supervised · high</summary>
 
 ```
 Use the start-dev skill. draft/maintenance/organs/reduce_session_token_load.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/pyautobrain/workspace_resolver_fanout.md">Workspace resolver fan-out: the hook, the smoke shims and the hardcoded paths</a> — pyautobrain · large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/maintenance/pyautobrain/workspace_resolver_fanout.md
 ```
 
 </details>
