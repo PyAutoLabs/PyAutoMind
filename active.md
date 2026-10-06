@@ -28,21 +28,35 @@
 - issued: 2026-10-06
 - prompt: active/profiling_setup_wiki.md
 - session: Codex (session ID unavailable)
-- status: awaiting-input
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-setup-wiki
 - repos:
   - autolens_profiling: feature/profiling-setup-wiki
 - summary: Approved profiling redesign Phase5; evidence-qualified setup wiki / assistant lookup. No profiling jobs or baseline acceptance.
-- resume: Implementation/tests/independent CLEAN review complete; staged locally. Await current Heart YELLOW acknowledgement before source push/PR; no merge authorization.
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/383
+- commit: aa84d7363ec008d658199067cedd3e9edd51deaa
+- resume: PR open; exact-head CI in progress at handoff. Independent CLEAN review and local checks complete; user runs /prm when green. No merge authorized.
+- heart-ack:
+  - autogalaxy_workspace: open PR 7d old
+  - autolens_workspace: open PR 7d old
+  - euclid_strong_lens_modeling_pipeline: open PR 7d old
+- heart-ack-evidence: Human "yeah do it" on 2026-10-06 explicitly acknowledged this reason set for both Phase5 PRs. Stale rehearsal (PyAutoNerves) remains recorded; no RED override.
 
 ## profiling-setup-advice
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/150
 - issued: 2026-10-06
 - prompt: active/profiling_setup_advice.md
 - session: Codex (session ID unavailable)
-- status: awaiting-input
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-setup-advice
 - repos:
   - autolens_assistant: feature/profiling-setup-advice
 - summary: Approved profiling redesign Phase5; evidence-qualified setup wiki / assistant lookup. No profiling jobs or baseline acceptance.
-- resume: Implementation/tests/independent CLEAN review complete; staged locally. Await current Heart YELLOW acknowledgement before source push/PR; no merge authorization.
+- pr: https://github.com/PyAutoLabs/autolens_assistant/pull/151
+- commit: 874ab3afa54d0ff9206f90cd9231f4539fb49221
+- resume: PR open; exact-head CI in progress at handoff. Independent CLEAN review and local checks complete; user runs /prm when green. No merge authorized.
+- heart-ack:
+  - autogalaxy_workspace: open PR 7d old
+  - autolens_workspace: open PR 7d old
+  - euclid_strong_lens_modeling_pipeline: open PR 7d old
+- heart-ack-evidence: Human "yeah do it" on 2026-10-06 explicitly acknowledged this reason set for both Phase5 PRs. Stale rehearsal (PyAutoNerves) remains recorded; no RED override.

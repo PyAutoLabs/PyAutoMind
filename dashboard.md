@@ -258,7 +258,7 @@ Use the start-dev skill. active/nnls_memo_scattered_backoff.md
 
 </details>
 
-<details><summary>📋 <a href="active/profiling_setup_advice.md">Add evidence-qualified profiling setup lookup</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/150">issue #150</a> — issued 2026-10-06 — awaiting-input</summary>
+<details><summary>📋 <a href="active/profiling_setup_advice.md">Add evidence-qualified profiling setup lookup</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/150">issue #150</a> — issued 2026-10-06 — awaiting-merge</summary>
 
 ```
 Use the start-dev skill. active/profiling_setup_advice.md
@@ -266,7 +266,7 @@ Use the start-dev skill. active/profiling_setup_advice.md
 
 </details>
 
-<details><summary>📋 <a href="active/profiling_setup_wiki.md">Build catalogue-backed profiling setup wiki</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/382">issue #382</a> — issued 2026-10-06 — awaiting-input</summary>
+<details><summary>📋 <a href="active/profiling_setup_wiki.md">Build catalogue-backed profiling setup wiki</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/382">issue #382</a> — issued 2026-10-06 — awaiting-merge</summary>
 
 ```
 Use the start-dev skill. active/profiling_setup_wiki.md

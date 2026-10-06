@@ -54,3 +54,16 @@ Stale: release validation stale: source moved since rehearsal (PyAutoNerves).
 Current explicit acknowledgement requested; awaiting answer. No prior override carried
 forward. Next: on acknowledgement, commit/push/open separate PR; merge stays human /prm.
 No jobs, baseline acceptance or temporal charts. Phase6 unstarted.
+
+## PR handoff — 2026-10-06
+
+https://github.com/PyAutoLabs/autolens_profiling/pull/383 OPEN at `aa84d7363ec008d658199067cedd3e9edd51deaa`; branch/worktree unchanged.
+Human answered "yeah do it" to the explicit YELLOW acknowledgement request for
+both Phase5 branches/PRs. The three exact yellow reasons above remain unchanged.
+No RED override, release or merge authorized. Independent reviewed tree committed
+unchanged; pending-release label verified. Exact-head CI in progress at inspection.
+Both source worktrees clean. Project export committed at aa84d736 passes assistant
+SDP81 MGE/Delaunay/rectangular integration with all5 rules remaining unreviewed.
+PR body contains test evidence and baseline fixture/browser limitations. Next: human
+/prm after every required run/job is green; project first, then assistant.
+Phase6 remains unstarted; no profiling jobs or baseline acceptance.

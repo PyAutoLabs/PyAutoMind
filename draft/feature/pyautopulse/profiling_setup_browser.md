@@ -144,6 +144,8 @@ development-only shipping; no RED override. No profiling campaign or baseline
 acceptance; generic compile builder remains explicitly unavailable.
 Phase 5 started 2026-10-06: project #382 (`active/profiling_setup_wiki.md`) and
 assistant #150 (`active/profiling_setup_advice.md`), separate worktrees and PRs.
+Project PR383 and assistant PR151 are open, independently reviewed CLEAN;
+current Heart YELLOW reasons explicitly acknowledged for PR opening. Merge awaits /prm.
 Phase 6 remains unstarted.
 
 - Inventory every active script and its callers before moving it. Target
