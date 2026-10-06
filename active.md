@@ -33,7 +33,7 @@
 - repos:
   - autolens_profiling: feature/profiling-setup-wiki
 - summary: Approved profiling redesign Phase5; evidence-qualified setup wiki / assistant lookup. No profiling jobs or baseline acceptance.
-- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/383
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/383
 - commit: aa84d7363ec008d658199067cedd3e9edd51deaa
 - resume: PR open; exact-head CI in progress at handoff. Independent CLEAN review and local checks complete; user runs /prm when green. No merge authorized.
 - heart-ack:
@@ -52,7 +52,7 @@
 - repos:
   - autolens_assistant: feature/profiling-setup-advice
 - summary: Approved profiling redesign Phase5; evidence-qualified setup wiki / assistant lookup. No profiling jobs or baseline acceptance.
-- pr: https://github.com/PyAutoLabs/autolens_assistant/pull/151
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/151
 - commit: 874ab3afa54d0ff9206f90cd9231f4539fb49221
 - resume: PR open; exact-head CI in progress at handoff. Independent CLEAN review and local checks complete; user runs /prm when green. No merge authorized.
 - heart-ack:
