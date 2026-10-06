@@ -13,6 +13,7 @@ Autonomy: supervised
 Priority: normal
 Status: formalised
 Consequence: judge
+Blocked-by: draft/feature/pyautomind/standards_discovery_deferred_destinations.md — the only remaining scope (PyAutoArray + euclid pipeline standards blocks, then firewall restore and universal audit)
 Review-minutes: 25
 Unattended: needs-slicing
 
@@ -133,3 +134,7 @@ Heading phase completed: `complete/2026/10/organ-prompt-headings.md` records all
 ## Remaining rollout PRs — 2026-10-06
 
 Approved remaining phases implemented and tested: `active/orchestration_panel_consumers.md` (Ears#15; nine owner PRs) and `active/shared_standards_discovery.md` (Mind#474; 35 PRs including generator Mind#475 and contract Brain#483). Scientist README standards links are included in Scientist#45. All nine panels passed 1,441 owner tests and 72 browser layouts with clipboard/fallback/budget validation. Generator passed 652 tests and independent adversarial re-review. Forty-four of 46 source destinations now have generated guidance on open PRs; PyAutoArray and euclid_strong_lens_modeling_pipeline remain explicitly deferred for other active claims. Merge is human /prm; post-merge publication remains unverified for this new panel phase. Preserve these active tasks and PRs rather than filing replacements.
+
+## Remaining rollout merged — 2026-10-06
+
+Both remaining phases merged 2026-10-06 via /prm. Panel adoption is complete: `complete/2026/10/orchestration-panel-consumers.md` (Ears#16, Hands#303, Memory#118, Pulse#19, Insight#8, Nerves#188, Gut#24, Eyes#20, Scientist#45; Ears#15 closed) — all 13 board owners use the shared panel, live publication verified ~14:58 UTC (one panel, exact organ heading, links 200, no overflow at 375/390/1280 light+dark). Standards discovery shipped 44/46: `complete/2026/10/standards-discovery.md` (Mind#475, Brain#483, 33 consumer PRs; Mind#474 left open). The active phase prompts named above are closed. The only remaining scope is `draft/feature/pyautomind/standards_discovery_deferred_destinations.md` (PyAutoArray and euclid_strong_lens_modeling_pipeline once their claims clear, then restore broad firewall standards checking and run the universal completion audit). Retire this parent when that remainder ships.

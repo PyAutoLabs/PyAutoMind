@@ -1,3 +1,60 @@
+## standards-discovery
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/474
+- completed: 2026-10-06
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/475
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/483
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/57
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/287
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1660
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/648
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/769
+- library-pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/80
+- library-pr: https://github.com/PyAutoLabs/PyAutoCTI/pull/113
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/166
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/255
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/584
+- workspace-pr: https://github.com/PyAutoLabs/autocti_workspace/pull/36
+- workspace-pr: https://github.com/PyAutoLabs/autoreduce_workspace/pull/4
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/106
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/127
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/344
+- workspace-pr: https://github.com/PyAutoLabs/autocti_workspace_test/pull/23
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_developer/pull/28
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_developer/pull/146
+- workspace-pr: https://github.com/PyAutoLabs/HowToFit/pull/70
+- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/84
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/95
+- workspace-pr: https://github.com/PyAutoLabs/autocti_assistant/pull/35
+- workspace-pr: https://github.com/PyAutoLabs/autofit_assistant/pull/54
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/33
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/152
+- workspace-pr: https://github.com/Jammy2211/euclid_assistant/pull/14
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/386
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/19
+- workspace-pr: https://github.com/PyAutoLabs/autolens_visualization/pull/2
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_visualization/pull/2
+- workspace-pr: https://github.com/PyAutoLabs/autofit_visualization/pull/2
+- workspace-pr: https://github.com/PyAutoLabs/autocti_visualization/pull/2
+- workspace-pr: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/29
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/475
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/483
+- partial: 44/46 destinations shipped; PyAutoArray and euclid_strong_lens_modeling_pipeline deferred
+- remainder: draft/feature/pyautomind/standards_discovery_deferred_destinations.md
+
+**Partial close — merged scope only.** Issue Mind#474 stays OPEN (progress comment posted) until the two deferred destinations land.
+
+Merged 2026-10-06 via human /prm (tier `judge`; no shadow row): generator Mind#475 (72087111), contract docs Brain#483 (bdebd4e1) and 33 consumer PRs — Cortex#57, Heart#287, Fit#1660, Galaxy#648, Lens#769, Reduce#80, CTI#113, autofit_workspace#166, autogalaxy_workspace#255, autolens_workspace#584, autocti_workspace#36, autoreduce_workspace#4, autofit_workspace_test#106, autogalaxy_workspace_test#127, autolens_workspace_test#344, autocti_workspace_test#23, autofit_workspace_developer#28, autolens_workspace_developer#146, HowToFit#70, HowToGalaxy#84, HowToLens#95, autocti_assistant#35, autofit_assistant#54, autogalaxy_assistant#33, autolens_assistant#152, Jammy2211/euclid_assistant#14, autolens_profiling#386, autolens_inference#19, autolens_visualization#2, autogalaxy_visualization#2, autofit_visualization#2, autocti_visualization#2, pyautolabs.github.io#29. Every feature/standards-discovery head (35 worktree repos) proven an ancestor of origin/main; all 35 PRs `merged=true` via the API. The nine panel consumers' generated blocks shipped on their own branches (`complete/2026/10/orchestration-panel-consumers.md`). Total: **44/46** registered destinations carry the generated block on main.
+
+What shipped: Mind `policy/shared_standards.md` (one canonical universal discovery text plus a board-owner addition selected from explicit manifest board-owner metadata for the 13 owners); `scripts/repos_sync.py` bounded standards writer/checker (`shared-standards blocks (generated)`) with repeatable `--repo NAME`, flag/identity/marker validation before any mutation, partial-checkout denominator reporting and explicit deferred-target reporting; `tests/test_repos_sync_standards_block.py`; Brain `docs/standards.md` contract docs. Validation: 652 generator tests, 33 adversarial/standards cases, independent re-review CLEAN, strict Brain docs build passed. RTD `standards.html` + `board-orchestration.html` live 14:40:08 UTC.
+
+CI judged once at each exact head; skipped legs structural (Heart smoke relevance gate on AGENTS.md-only diffs; Reduce unittest-nojax excluded for autoreduce; Mind Spawn Drift push-only). Cortex, both *_workspace_developer repos and pyautolabs.github.io have no applicable CI and passed local `repos_sync.py --check --only "shared-standards blocks (generated)"`. Evidence: `tmp/ci-census/20261006T142801Z/`, `tmp/standards-discovery/` (audit.md, shipped.md, worktree-tmp/).
+
+**Deferred (not shipped, re-filed):** PyAutoArray (held by active claim `nnls-memo-scattered-backoff`, PyAutoArray#613) and euclid_strong_lens_modeling_pipeline (held by active claim `vis-lp-inspection-bundle`, euclid_strong_lens_modeling_pipeline#102). Mind `.github/workflows/firewall_gate.yml` keeps its staged standards rollout scope (target-owned check + `--skip "shared-standards blocks (generated)"` in the broad clone-main legs) until both land. Remainder: `draft/feature/pyautomind/standards_discovery_deferred_destinations.md`.
+
+Instruction-only change; no pending-release obligation.
+
+## Original prompt
+
 # Generate and distribute shared standards discovery
 
 Type: feature

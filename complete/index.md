@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1733 records across 9 buckets.
+1735 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -175,6 +175,7 @@ markers; everything below GENERATED is rebuilt.
 - [mesh-geometry-transformed-areas](2026/10/mesh-geometry-transformed-areas.md)
 - [mesh-interpolator-numerics-audit](2026/10/mesh-interpolator-numerics-audit.md)
 - [niek-euclid-style-review](2026/10/niek-euclid-style-review.md)
+- [orchestration-panel-consumers](2026/10/orchestration-panel-consumers.md)
 - [orchestration-panel-core](2026/10/orchestration-panel-core.md)
 - [organ-prompt-headings](2026/10/organ-prompt-headings.md)
 - [over-sample-snr-helper](2026/10/over-sample-snr-helper.md)
@@ -210,6 +211,7 @@ markers; everything below GENERATED is rebuilt.
 - [sizing-none-triage-rules](2026/10/sizing-none-triage-rules.md)
 - [standard-board-banner-and-navigation](2026/10/standard-board-banner-and-navigation.md)
 - [standard-board-sizing](2026/10/standard-board-sizing.md)
+- [standards-discovery](2026/10/standards-discovery.md)
 - [streaming-p4-light-profile-identity](2026/10/streaming-p4-light-profile-identity.md)
 - [streaming-p5-cubes-phase-centre](2026/10/streaming-p5-cubes-phase-centre.md)
 - [unit-timing-distinct-baseline](2026/10/unit-timing-distinct-baseline.md) — Select the latest distinct prior unit timing run per repository/Python leg within the current epoch. Preserve …
