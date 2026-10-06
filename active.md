@@ -51,6 +51,7 @@
 - status: workspace-dev
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/standards-discovery
 - repos:
+  - PyAutoBrain: feature/standards-discovery
   - PyAutoMind: feature/standards-discovery
   - PyAutoCortex: feature/standards-discovery
   - PyAutoHeart: feature/standards-discovery
@@ -86,4 +87,4 @@
   - autocti_visualization: feature/standards-discovery
   - pyautolabs.github.io: feature/standards-discovery
 - tier: judge
-- summary: Approved generated standards discovery; 34 initial claims. Nine panel consumers handled in their own branches, Brain after sizing. Array and Euclid pipeline deferred for external active claims. Human /prm.
+- summary: Approved generated standards discovery; 35 claims after sizing #482 merged. Nine panel consumers handled in their own branches. Array and Euclid pipeline deferred for external active claims. Human /prm.
