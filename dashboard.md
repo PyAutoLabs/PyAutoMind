@@ -40,11 +40,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 7 |
+| [In flight](#in-flight) (`active/`) | 8 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 6 |
 | [Planned](#planned) (`planned.md`) | 8 |
-| [Backlog](#backlog) (`draft/`) | 228 |
+| [Backlog](#backlog) (`draft/`) | 227 |
 
 > **No batch in flight.**
 
@@ -270,6 +270,14 @@ Use the start-dev skill. active/intake_agent_silently_drops_unknown_type_values.
 
 ```
 Use the start-dev skill. active/nnls_memo_scattered_backoff.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/profiling_catalogue_routing.md">Route profiling through the project source catalogue</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/477">issue #477</a> — issued 2026-10-06 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/profiling_catalogue_routing.md
 ```
 
 </details>
@@ -723,7 +731,7 @@ Use the start-dev skill. draft/feature/pyautobrain/standardize_dashboard_orchest
 
 ## Backlog
 
-**228** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
+**227** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 70</summary>
@@ -1291,7 +1299,7 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>feature</b> — 34</summary>
+<summary><b>feature</b> — 33</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautopulse/profiling_setup_browser.md">Setup-first profiling: dashboard, evidence catalogue, scripts and assistant</a> — pyautopulse · too-large · human-required · high</summary>
 
@@ -1553,14 +1561,6 @@ Use the start-dev skill. draft/feature/workspaces/gallery_runner_missing_tiers.m
 
 ```
 Use the start-dev skill. draft/feature/autoarray/adapt_linear_default_flip.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautobrain/profiling_catalogue_routing.md">Route profiling through the project source catalogue</a> — pyautobrain · medium · human-required</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautobrain/profiling_catalogue_routing.md
 ```
 
 </details>
@@ -2538,7 +2538,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-06 | filed | <a href="draft/feature/pyautobrain/profiling_catalogue_routing.md">Route profiling through the project source catalogue</a> |
+| 2026-10-06 | issued | <a href="active/profiling_catalogue_routing.md">Route profiling through the project source catalogue</a> |
 | 2026-10-06 | issued | <a href="active/profiling_model_layout.md">Migrate profiling scripts to dataset/model/measurement</a> |
 | 2026-10-05 | issued | <a href="active/worktree_sh_clobbers_root_activate.md">worktree.sh bundle creation clobbers the unversioned root activate.sh</a> |
 | 2026-10-05 | planned | <a href="planned.md#organ-prompt-headings">organ-prompt-headings</a> |
@@ -3141,7 +3141,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 </details>
 
-64 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+63 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3161,7 +3161,6 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 - `draft/feature/euclid/euclid_dr1_prep_epic.md`
 - `draft/feature/jax_substructure/5_prng_key_vmap_noise.md`
 - `draft/feature/jax_substructure/6_deflection_equivalence_test.md`
-- `draft/feature/pyautobrain/profiling_catalogue_routing.md`
 - `draft/feature/pyautobrain/standardize_dashboard_orchestration_prompt_panel.md`
 - `draft/feature/pyautoears/community_organ_birth.md`
 - `draft/feature/pyautoeyes/group_cluster_gallery.md`
@@ -3186,7 +3185,8 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 - `draft/docs/autolens/split_lensing_regimes.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
 - `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
-- _… and 24 more_
+- `draft/test/workspaces/mesh_magnification_correctness.md`
+- _… and 23 more_
 
 </details>
 

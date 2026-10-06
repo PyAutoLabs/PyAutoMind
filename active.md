@@ -81,3 +81,14 @@
 - repos:
   - autolens_profiling: feature/profiling-model-layout
 - summary: Approved Phase 4 source taxonomy; no profiling jobs, baseline acceptance or merge. Brain routing separate.
+
+## profiling-catalogue-routing
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/477
+- issued: 2026-10-06
+- prompt: active/profiling_catalogue_routing.md
+- session: Codex (session ID unavailable)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-catalogue-routing
+- repos:
+  - PyAutoBrain: feature/profiling-catalogue-routing
+- summary: Approved Phase4 stdlib catalogue routing. Human explicitly allowed isolated coordination with Brain claims #469–472. No compute/merge/Heart override.
