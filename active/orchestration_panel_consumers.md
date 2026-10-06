@@ -37,3 +37,21 @@ All nine canonical repos are on main. Eight are clean; Eyes has user-owned untra
 ## Delivery
 
 Workspace workflow using the already-merged Brain API. Tier: judge; merge mode: human /prm. No new behavior outside the approved parent initiative.
+
+## PRs opened — 2026-10-06
+
+Nine tested panel PRs open. 1,441 owner tests and 72 browser layouts plus integrated clipboard/fallback/budget flows passed; independent review CLEAN. Generated standards guidance included on each branch. Human /prm, then regenerate and verify live publication.
+
+| Repository | PR |
+|---|---|
+| PyAutoEars | https://github.com/PyAutoLabs/PyAutoEars/pull/16 |
+| PyAutoHands | https://github.com/PyAutoLabs/PyAutoHands/pull/303 |
+| PyAutoMemory | https://github.com/PyAutoLabs/PyAutoMemory/pull/118 |
+| PyAutoPulse | https://github.com/PyAutoLabs/PyAutoPulse/pull/19 |
+| PyAutoInsight | https://github.com/PyAutoLabs/PyAutoInsight/pull/8 |
+| PyAutoNerves | https://github.com/PyAutoLabs/PyAutoNerves/pull/188 |
+| PyAutoGut | https://github.com/PyAutoLabs/PyAutoGut/pull/24 |
+| PyAutoEyes | https://github.com/PyAutoLabs/PyAutoEyes/pull/20 |
+| PyAutoScientist | https://github.com/PyAutoLabs/PyAutoScientist/pull/45 |
+
+CI was judged once at each exact head: no failures observed; pending, skipped and absent checks are not green. The corresponding CI snapshots and local validation artifacts are preserved in the session scratch evidence. No timers, watchers or automatic merge subscriptions remain.
