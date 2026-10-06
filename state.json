@@ -3,22 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-06T08:38:57Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 2 in flight",
+  "updated": "2026-10-06T08:40:22Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Route profiling through the project source catalogue \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/issues/477",
-      "prompt": "Use the start-dev skill. active/profiling_catalogue_routing.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Migrate profiling scripts to dataset/model/measurement \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autolens_profiling/issues/380",
-      "prompt": "Use the start-dev skill. active/profiling_model_layout.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -125,6 +113,18 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#611 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/611",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#606 \u2014 Shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/606",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#599 \u2014 streaming-p4-light-profile-identity",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/599",
       "prompt": null
     }
   ]
