@@ -195,16 +195,18 @@ def test_grouped_target_uses_resolver(tmp_path, monkeypatch):
     assert sync.STANDARDS_BEGIN in path.read_text()
 
 
-def test_ci_preserves_existing_legs_and_explains_standards_scope():
+def test_ci_grades_standards_universally_on_cloned_mains():
+    """The staged rollout (#474) is complete, so the broad drift legs grade the
+    standards block on every cloned main; the hermetic generator step stays."""
     data = yaml.safe_load((MIND / ".github/workflows/firewall_gate.yml").read_text())
     steps = next(iter(data["jobs"].values()))["steps"]
     target = [step for step in steps if step.get("name") == "Shared standards generator and Mind-owned block"][0]
+    assert 'test_repos_sync_standards_block.py' in target['run']
     assert '--repo PyAutoMind' in target['run']
     broad = [step for step in steps if step.get("name", "").startswith("Drift check")]
     assert len(broad) == 2
     for step in broad:
-        assert '--skip "shared-standards blocks (generated)"' in step['run']
-        assert 'consumer PRs and the universal completion audit' in step['run']
+        assert sync.STANDARDS_BLOCKS not in step['run']
 
 
 @pytest.mark.parametrize("kind", ["checkout", "family", "agents", "agents-inside"])
