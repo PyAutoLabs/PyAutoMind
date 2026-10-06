@@ -66,3 +66,25 @@ Preserve numerical behavior, CLI arguments, output destinations and existing res
 Keep evidence qualification and unknowns explicit. Do not launch a baseline campaign, accept archived measurements as baselines, or restore temporal charts.
 
 Continue through implementation, testing and review. Apply current shipping gates; do not infer a new Heart RED override or merge authorization from previous sessions.
+
+## Phase 4b implementation checkpoint — 2026-10-06
+
+PR https://github.com/PyAutoLabs/PyAutoBrain/pull/478 OPEN at
+9021e632de8b584094ce47efc6a13672f3f91d7e; branch/worktree above, not merged.
+Implemented stdlib local/published catalogue routing, qualified legacy fallback,
+invalid/missing-producer errors, unchanged historical cell IDs and CPU caps,
+source availability checks and declared compile-probe dispatch/unavailability.
+Only profiling conductor, its agent/skill docs and tests changed.
+Validation: full Brain suite1,230 passed; final conductor suite48 passed;
+tenant firewall, discovery, syntax and whitespace pass. Existing unrelated
+skill line-count overruns remain report-only. Independent Sol CLEAN after fixing
+its P2: compile source availability now includes and dispatches the declared path.
+Live old/new project integration matches runtime coverage/usability/dispatch exactly;
+22 grid cells, unreviewed archive qualification, no generic compile builder invented.
+Heart STALE: `release validation stale: source moved since rehearsal (PyAutoNerves)`;
+no RED/YELLOW reasons, no override invoked. Current dev-ship policy permits this.
+Exact-head GitHub CI3.12/3.13 pending at handoff. No compute/baseline/merge performed.
+Logs: `.worktrees/profiling-catalogue-routing/{brain-full-tests.log,
+profiling-tests-reviewed.log,live-project-runtime.json,live-project-compile.json,
+legacy-project-runtime.json,heart-readiness.json,tenant.log,discovery.log}`.
+Next: human reviews both PRs and runs /prm once required checks are green.

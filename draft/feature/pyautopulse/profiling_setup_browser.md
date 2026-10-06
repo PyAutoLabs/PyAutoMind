@@ -134,6 +134,15 @@ Pulse Phase 3b merged: PyAutoPulse#13; record `complete/2026/10/profiling-setup-
 
 ### Phase 4: Source taxonomy and orchestration (project, then Brain)
 
+Implemented and reviewed 2026-10-06; awaiting human merge:
+- Project task #380 / PR [#381](https://github.com/PyAutoLabs/autolens_profiling/pull/381),
+  head4dedf1a, exact-head lint SUCCESS. Active record `active/profiling_model_layout.md`.
+- Brain task #477 / PR [#478](https://github.com/PyAutoLabs/PyAutoBrain/pull/478),
+  head9021e63, CI pending. Active record `active/profiling_catalogue_routing.md`.
+Both independent reviews CLEAN. Heart STALE passes development-only shipping;
+no RED override, profiling campaign, baseline acceptance or merge authorized.
+Phases5–6 remain unstarted.
+
 Suggested branches: `feature/profiling-model-layout` (project),
 `feature/profiling-catalogue-routing` (Brain).
 

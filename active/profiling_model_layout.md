@@ -86,3 +86,7 @@ Evidence: `.worktrees/profiling-model-layout/{before.json,caller-inventory.json,
 check_preservation.py,pytest-green.log,smokes.log,generation-final.log,browser-final.log,
 heart-readiness.json}`; inventory also committed as catalogue/migration.md.
 Next: finish separate Brain #477 review/shipping, then human reviews/merges project PR.
+
+Final exact-head CI: project head4dedf1a lint run37435473812/job112176093067
+SUCCESS, GitHub mergeStateStatus CLEAN. Separate Brain PR478 is now open.
+Both remain unmerged. Parent later phases remain unstarted.

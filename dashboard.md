@@ -274,7 +274,7 @@ Use the start-dev skill. active/nnls_memo_scattered_backoff.md
 
 </details>
 
-<details><summary>📋 <a href="active/profiling_catalogue_routing.md">Route profiling through the project source catalogue</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/477">issue #477</a> — issued 2026-10-06 — workspace-dev</summary>
+<details><summary>📋 <a href="active/profiling_catalogue_routing.md">Route profiling through the project source catalogue</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/477">issue #477</a> — issued 2026-10-06 — awaiting-merge</summary>
 
 ```
 Use the start-dev skill. active/profiling_catalogue_routing.md
