@@ -1,3 +1,22 @@
+# Profiling scripts: dataset/model migration
+
+Completed: 2026-10-06
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/380
+PR: https://github.com/PyAutoLabs/autolens_profiling/pull/381
+Merge commit: a36590ac41f5708a546fd5e35e81f8124d646c5c
+
+Migrated 80 scientific scripts/helpers to scripts/<dataset>/<model>/<measurement>.py with thin legacy wrappers. Added an explicit route manifest and catalogue export; updated imports, runtime/latent/compile dispatch, HPC, CI, documentation and tests. CLI arguments, output identities and numerical bodies are preserved. Shared tooling/components retain documented homes.
+
+Validation: 1,071 tests passed, 6 skipped; final catalogue/routing 37 passed; 52 import smokes, 182 HPC shell syntax checks, eight-leg HPC and full runtime/latent dry-runs passed. Numerical ASTs matched after path normalization and all 1,388 result files remained byte-identical. Browser, Ruff, formatting and producer contract checks passed. Independent review CLEAN. Exact-head CI run 37435473812, job 112176093067, all steps successful at 4dedf1a63469dd77ccd5e78338491d77c05e65cf.
+
+Heart STALE: release validation stale: source moved since rehearsal (PyAutoNerves). Current dev-ship policy allowed shipping; no RED override. Human /prm authorized merge on 2026-10-06. Branch ancestry proved against fetched origin/main after merge.
+
+Generic compile builder remains explicitly unavailable. Archives remain unreviewed evidence, not baselines. No profiling jobs, campaign, baseline acceptance or temporal charts. Parent phases 5–6 remain unstarted. Brain routing shipped separately in PyAutoBrain#478.
+
+Validation evidence archived locally under .worktree-archives/profiling-phase4-20261006/profiling-model-layout/ with copy hashes verified. Committed inventory: catalogue/migration.md.
+
+## Original prompt
+
 # Migrate profiling scripts to dataset/model/measurement
 
 Type: feature
@@ -67,3 +86,26 @@ Preserve numerical behavior, CLI arguments, output destinations and existing res
 Keep evidence qualification and unknowns explicit. Do not launch a baseline campaign, accept archived measurements as baselines, or restore temporal charts.
 
 Continue through implementation, testing and review. Apply current shipping gates; do not infer a new Heart RED override or merge authorization from previous sessions.
+
+## Phase 4a implementation checkpoint — 2026-10-06
+
+Project PR https://github.com/PyAutoLabs/autolens_profiling/pull/381 is OPEN at
+4dedf1a63469dd77ccd5e78338491d77c05e65cf (not merged). Worktree and branch above.
+80 canonical scientific scripts/helpers, thin legacy wrappers, stdlib route manifest
+and catalogue export; runtime/latent/compile capability, imports, HPC/CI/docs updated.
+Numerical ASTs match after path normalization; all 1,388 result hashes unchanged.
+1,071 full tests passed, 6 skipped, 17 warnings; final37 catalogue/routing tests passed.
+52 import smokes, full dry-run matrices,182 shell syntax checks/eight-leg HPC dry-run,
+Ruff/format, README/dashboard/wiki/layout/wall, Pulse schema and Chromium checks pass.
+Independent Sol CLEAN; full review includes compatibility globals and dispatch sets.
+Heart current verdict STALE: `release validation stale: source moved since rehearsal
+(PyAutoNerves)`; no RED/YELLOW reasons and dev-ship passes. No override invoked.
+PR CI lint pending at first exact-head inspection. No compute/baseline/merge performed.
+Evidence: `.worktrees/profiling-model-layout/{before.json,caller-inventory.json,
+check_preservation.py,pytest-green.log,smokes.log,generation-final.log,browser-final.log,
+heart-readiness.json}`; inventory also committed as catalogue/migration.md.
+Next: finish separate Brain #477 review/shipping, then human reviews/merges project PR.
+
+Final exact-head CI: project head4dedf1a lint run37435473812/job112176093067
+SUCCESS, GitHub mergeStateStatus CLEAN. Separate Brain PR478 is now open.
+Both remain unmerged. Parent later phases remain unstarted.

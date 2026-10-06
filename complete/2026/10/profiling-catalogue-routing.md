@@ -1,3 +1,24 @@
+# Profiling catalogue routing in Brain
+
+Completed: 2026-10-06
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/477
+PR: https://github.com/PyAutoLabs/PyAutoBrain/pull/478
+Merge commit: fb82b9da490ad282ad6fa21e728c9e84aa2c1adc
+
+Added stdlib routing from the project's local manifest or published v2 catalogue. Legacy AST fallback applies only when the new producer is absent. Invalid/missing routes retain explicit unknown coverage; unsafe identities are rejected. Runtime cell/output identities and CPU caps are preserved. Missing sources and unavailable compile builders suppress dispatch; available compile probes use their declared source path.
+
+Validation: full Brain suite 1,230 passed; final conductor suite 48 passed; tenant firewall, discovery and syntax passed. Live old/new project integration matched runtime decision fields across 22 grid cells. Independent review CLEAN after its compile-path finding was fixed. Exact-head CI run 37436134919 passed every job/step on Python 3.12 and 3.13 at 9021e632de8b584094ce47efc6a13672f3f91d7e.
+
+Heart STALE: release validation stale: source moved since rehearsal (PyAutoNerves). Current dev-ship policy allowed shipping; no RED override. Human /prm authorized merge on 2026-10-06. Branch ancestry proved against fetched origin/main after merge. Isolated Brain coordination was explicitly authorized.
+
+Archive presence is unreviewed evidence, never an accepted baseline. Generic compile builder remains unavailable. No jobs, campaigns, baseline acceptance or temporal charts. Parent phases 5–6 remain unstarted. Project migration merged first as autolens_profiling#381.
+
+Validation evidence archived locally under .worktree-archives/profiling-phase4-20261006/profiling-catalogue-routing/ with copy hashes verified.
+
+Reconciliation: retained unrelated `draft/feature/pyautobrain/batch_slice.md` on resemblance-only evidence; follow-up door `/intake reconcile draft/feature/pyautobrain`. Retained the profiling parent because phases 5–6 are unshipped.
+
+## Original prompt
+
 # Route profiling through the project source catalogue
 
 Type: feature
@@ -66,3 +87,25 @@ Preserve numerical behavior, CLI arguments, output destinations and existing res
 Keep evidence qualification and unknowns explicit. Do not launch a baseline campaign, accept archived measurements as baselines, or restore temporal charts.
 
 Continue through implementation, testing and review. Apply current shipping gates; do not infer a new Heart RED override or merge authorization from previous sessions.
+
+## Phase 4b implementation checkpoint — 2026-10-06
+
+PR https://github.com/PyAutoLabs/PyAutoBrain/pull/478 OPEN at
+9021e632de8b584094ce47efc6a13672f3f91d7e; branch/worktree above, not merged.
+Implemented stdlib local/published catalogue routing, qualified legacy fallback,
+invalid/missing-producer errors, unchanged historical cell IDs and CPU caps,
+source availability checks and declared compile-probe dispatch/unavailability.
+Only profiling conductor, its agent/skill docs and tests changed.
+Validation: full Brain suite1,230 passed; final conductor suite48 passed;
+tenant firewall, discovery, syntax and whitespace pass. Existing unrelated
+skill line-count overruns remain report-only. Independent Sol CLEAN after fixing
+its P2: compile source availability now includes and dispatches the declared path.
+Live old/new project integration matches runtime coverage/usability/dispatch exactly;
+22 grid cells, unreviewed archive qualification, no generic compile builder invented.
+Heart STALE: `release validation stale: source moved since rehearsal (PyAutoNerves)`;
+no RED/YELLOW reasons, no override invoked. Current dev-ship policy permits this.
+Exact-head GitHub CI3.12/3.13 pending at handoff. No compute/baseline/merge performed.
+Logs: `.worktrees/profiling-catalogue-routing/{brain-full-tests.log,
+profiling-tests-reviewed.log,live-project-runtime.json,live-project-compile.json,
+legacy-project-runtime.json,heart-readiness.json,tenant.log,discovery.log}`.
+Next: human reviews both PRs and runs /prm once required checks are green.
