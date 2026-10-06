@@ -258,7 +258,7 @@ Use the start-dev skill. active/nnls_memo_scattered_backoff.md
 
 </details>
 
-<details><summary>📋 <a href="active/standards_discovery_deferred_destinations.md">Finish the generated standards-discovery rollout: PyAutoArray and the Euclid pipeline</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/474">issue #474</a> — issued 2026-10-06 — workspace-dev</summary>
+<details><summary>📋 <a href="active/standards_discovery_deferred_destinations.md">Finish the generated standards-discovery rollout: PyAutoArray and the Euclid pipeline</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/474">issue #474</a> — issued 2026-10-06 — pr-open, awaiting-human-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/614">PyAutoArray#614</a>, <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/110">euclid_strong_lens_modeling_pipeline#110</a></summary>
 
 ```
 Use the start-dev skill. active/standards_discovery_deferred_destinations.md
