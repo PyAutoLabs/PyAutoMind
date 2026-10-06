@@ -28,7 +28,7 @@
 - issued: 2026-10-06
 - prompt: active/organ_prompt_headings.md
 - session: Codex (session ID unavailable)
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/organ-prompt-headings
 - repos:
   - PyAutoBrain: feature/organ-prompt-headings
@@ -42,8 +42,9 @@
   - PyAutoGut: feature/organ-prompt-headings
   - PyAutoEyes: feature/organ-prompt-headings
   - PyAutoScientist: feature/organ-prompt-headings
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/481
 - summary: Approved thirteen organ-named headings; preserve payloads/controls/work links; shared responsive heading and owner rollout. Human /prm.
-- resume: Eleven local commits tested and PR bodies prepared; Heart YELLOW reasons acknowledged by user “yeah proceed $prm” on 2026-10-06; ship then merge all green PRs in dependency order authorized. Brain suite 1232 passed plus grouped fixture rerun 4 passed with inherited overrides removed; consumer suites passed; 104 board layouts and 14 clipboard cases pass. Evidence/PR bodies: tmp/organ-prompt-headings/.
+- resume: Brain PR#481 opened, CI pending; ten tested consumer commits stay local until Brain merges; Heart YELLOW reasons acknowledged by user “yeah proceed $prm” on 2026-10-06; ship then merge all green PRs in dependency order authorized. Brain suite 1232 passed plus grouped fixture rerun 4 passed with inherited overrides removed; consumer suites passed; 104 board layouts and 14 clipboard cases pass. Evidence/PR bodies: tmp/organ-prompt-headings/.
 - heart-ack:
   - autogalaxy_workspace: open PR 7d old
   - autolens_workspace: open PR 7d old

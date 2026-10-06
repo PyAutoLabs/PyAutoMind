@@ -258,7 +258,7 @@ Use the start-dev skill. active/nnls_memo_scattered_backoff.md
 
 </details>
 
-<details><summary>📋 <a href="active/organ_prompt_headings.md">Organ-named dashboard prompt headings</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/479">issue #479</a> — issued 2026-10-06 — workspace-dev</summary>
+<details><summary>📋 <a href="active/organ_prompt_headings.md">Organ-named dashboard prompt headings</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/479">issue #479</a> — issued 2026-10-06 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/481">PyAutoBrain#481</a></summary>
 
 ```
 Use the start-dev skill. active/organ_prompt_headings.md
