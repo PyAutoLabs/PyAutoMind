@@ -9,7 +9,6 @@
 - [latent-nan-guard-honest-run](#latent-nan-guard-honest-run)
 - [knn-partial-point-block](#knn-partial-point-block)
 - [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
-- [organ-prompt-headings](#organ-prompt-headings)
 
 <!-- toc:end -->
 
