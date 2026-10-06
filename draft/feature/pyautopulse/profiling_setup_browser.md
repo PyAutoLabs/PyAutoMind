@@ -142,7 +142,9 @@ Completed and merged 2026-10-06 under the human /prm authorization:
 Both exact-head CI runs and independent reviews passed. Heart STALE permitted
 development-only shipping; no RED override. No profiling campaign or baseline
 acceptance; generic compile builder remains explicitly unavailable.
-Phases 5–6 remain unstarted.
+Phase 5 started 2026-10-06: project #382 (`active/profiling_setup_wiki.md`) and
+assistant #150 (`active/profiling_setup_advice.md`), separate worktrees and PRs.
+Phase 6 remains unstarted.
 
 - Inventory every active script and its callers before moving it. Target
   `scripts/<dataset>/<model>/<measurement>.py`, including imaging and

@@ -7,6 +7,8 @@ Difficulty: medium
 Consequence: judge
 Autonomy: human-required
 Filed: 2026-10-06
+Issued: 2026-10-06
+Issue: https://github.com/PyAutoLabs/autolens_assistant/issues/150
 
 Primary repo: @autolens_assistant. Workspace-only; no scientific library API changes.
 Parent: draft/feature/pyautopulse/profiling_setup_browser.md, approved Phase 5.

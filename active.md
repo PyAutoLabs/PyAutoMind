@@ -22,3 +22,25 @@
   - euclid_strong_lens_modeling_pipeline: feature/vis-lp-inspection-bundle
 - summary: Add an explicit vis_lp-only inspection mode that combines the main normal-model output tree with the 100-lens SED/Sersic tree, without requiring vis_pix or selecting the other 200 main-tree lenses.
 - resume: Implemented + committed locally as c6b514d on feature/vis-lp-inspection-bundle (133 tests green, not pushed). Human reviews diff (scratchpad part1_diff.txt) before ship_workspace; then sync tooling to the euclid_dr1 science clone/RAL and submit the 4,922-tile vis_lp-only bundle (OUTPUT_DIR=dr1_full, INITIAL_SEARCH_NAME=vis_lp, DATASET_NAMES_PATH=all, TAR_TO set) as a Cortex run.
+
+## profiling-setup-wiki
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/382
+- issued: 2026-10-06
+- prompt: active/profiling_setup_wiki.md
+- session: Codex (session ID unavailable)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-setup-wiki
+- repos:
+  - autolens_profiling: feature/profiling-setup-wiki
+- summary: Approved profiling redesign Phase5; evidence-qualified setup wiki / assistant lookup. No profiling jobs or baseline acceptance.
+
+## profiling-setup-advice
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/150
+- issued: 2026-10-06
+- prompt: active/profiling_setup_advice.md
+- session: Codex (session ID unavailable)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-setup-advice
+- repos:
+  - autolens_assistant: feature/profiling-setup-advice
+- summary: Approved profiling redesign Phase5; evidence-qualified setup wiki / assistant lookup. No profiling jobs or baseline acceptance.
