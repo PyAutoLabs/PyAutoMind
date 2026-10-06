@@ -54,3 +54,48 @@
   - PyAutoScientist: feature/orchestration-panel-consumers
 - tier: judge
 - summary: Approved remaining shared-panel consumers and Scientist standards links; preserve domain prompts, actions and gates. Human /prm.
+
+## standards-discovery
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/474
+- issued: 2026-10-06
+- prompt: active/shared_standards_discovery.md
+- session: codex (GPT-6; session ID unavailable)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/standards-discovery
+- repos:
+  - PyAutoMind: feature/standards-discovery
+  - PyAutoCortex: feature/standards-discovery
+  - PyAutoHeart: feature/standards-discovery
+  - PyAutoFit: feature/standards-discovery
+  - PyAutoGalaxy: feature/standards-discovery
+  - PyAutoLens: feature/standards-discovery
+  - PyAutoReduce: feature/standards-discovery
+  - PyAutoCTI: feature/standards-discovery
+  - autofit_workspace: feature/standards-discovery
+  - autogalaxy_workspace: feature/standards-discovery
+  - autolens_workspace: feature/standards-discovery
+  - autocti_workspace: feature/standards-discovery
+  - autoreduce_workspace: feature/standards-discovery
+  - autofit_workspace_test: feature/standards-discovery
+  - autogalaxy_workspace_test: feature/standards-discovery
+  - autolens_workspace_test: feature/standards-discovery
+  - autocti_workspace_test: feature/standards-discovery
+  - autofit_workspace_developer: feature/standards-discovery
+  - autolens_workspace_developer: feature/standards-discovery
+  - HowToFit: feature/standards-discovery
+  - HowToGalaxy: feature/standards-discovery
+  - HowToLens: feature/standards-discovery
+  - autocti_assistant: feature/standards-discovery
+  - autofit_assistant: feature/standards-discovery
+  - autogalaxy_assistant: feature/standards-discovery
+  - autolens_assistant: feature/standards-discovery
+  - euclid_assistant: feature/standards-discovery
+  - autolens_profiling: feature/standards-discovery
+  - autolens_inference: feature/standards-discovery
+  - autolens_visualization: feature/standards-discovery
+  - autogalaxy_visualization: feature/standards-discovery
+  - autofit_visualization: feature/standards-discovery
+  - autocti_visualization: feature/standards-discovery
+  - pyautolabs.github.io: feature/standards-discovery
+- tier: judge
+- summary: Approved generated standards discovery; 34 initial claims. Nine panel consumers handled in their own branches, Brain after sizing. Array and Euclid pipeline deferred for external active claims. Human /prm.
