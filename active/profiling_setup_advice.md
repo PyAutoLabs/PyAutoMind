@@ -38,3 +38,19 @@ read fresh shipping gates, no RED override or merge authority carried forward.
 start phase 5
 
 The complete approved Phase5 requirements and original redesign request remain in the parent.
+
+## Implementation and review checkpoint — 2026-10-06
+
+Stdlib committed-snapshot reader, skill/recipe, query fixture and generated discovery.43focused tests pass; applicable full189pass1skip. Full suite9 fixture errors require autolens2026.9.27.2; same failure on unchanged main. Citation/provenance/discovery/Ruff checks pass. Live ALMA14runtime analogues; staged producer integration verifies all5 rules for SDP81 MGE/Delaunay/rectangular. Independent Sol CLEAN at staged treead267485e953feddbd125fbf9248c8b3329b7962.
+
+Implementation is staged in the registered branch/worktree, not committed or pushed;
+no PR yet. PR body and review evidence: `.worktrees/profiling-setup-advice/pr-body.md`,
+`review.txt` and test logs alongside it. User asked to start Phase5; scope remains approved.
+Fresh ship gate Heart YELLOW (2026-10-06T11:10:42Z):
+- autogalaxy_workspace: open PR 7d old
+- autolens_workspace: open PR 7d old
+- euclid_strong_lens_modeling_pipeline: open PR 7d old
+Stale: release validation stale: source moved since rehearsal (PyAutoNerves).
+Current explicit acknowledgement requested; awaiting answer. No prior override carried
+forward. Next: on acknowledgement, commit/push/open separate PR; merge stays human /prm.
+No jobs, baseline acceptance or temporal charts. Phase6 unstarted.

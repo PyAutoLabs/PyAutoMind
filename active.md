@@ -28,19 +28,21 @@
 - issued: 2026-10-06
 - prompt: active/profiling_setup_wiki.md
 - session: Codex (session ID unavailable)
-- status: workspace-dev
+- status: awaiting-input
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-setup-wiki
 - repos:
   - autolens_profiling: feature/profiling-setup-wiki
 - summary: Approved profiling redesign Phase5; evidence-qualified setup wiki / assistant lookup. No profiling jobs or baseline acceptance.
+- resume: Implementation/tests/independent CLEAN review complete; staged locally. Await current Heart YELLOW acknowledgement before source push/PR; no merge authorization.
 
 ## profiling-setup-advice
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/150
 - issued: 2026-10-06
 - prompt: active/profiling_setup_advice.md
 - session: Codex (session ID unavailable)
-- status: workspace-dev
+- status: awaiting-input
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-setup-advice
 - repos:
   - autolens_assistant: feature/profiling-setup-advice
 - summary: Approved profiling redesign Phase5; evidence-qualified setup wiki / assistant lookup. No profiling jobs or baseline acceptance.
+- resume: Implementation/tests/independent CLEAN review complete; staged locally. Await current Heart YELLOW acknowledgement before source push/PR; no merge authorization.
