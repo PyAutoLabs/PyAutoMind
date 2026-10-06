@@ -78,4 +78,4 @@ it `ready`. Also seen: an unknown `Unattended:` value (`needs-decision`) is not
 a grade the faculty knows and falls through to derived `ready`; either reject
 it in `declared_header` or document the vocabulary.
 
-<!-- filed 2026-09-17 at the witness campaign close-out (PyAutoMind#398), by hand: the intake agent's own header bugs (draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md) are still open -->
+<!-- filed 2026-09-17 at the witness campaign close-out (PyAutoMind#398), by hand: the intake agent's own header bugs (draft/bug/pyautobrain/intake_agent_silently_drops_unknown_type_values.md) are still open; closed 2026-10-06 → complete/2026/10/intake-declared-header-fields.md (PyAutoBrain#476) -->

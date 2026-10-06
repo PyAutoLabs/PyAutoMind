@@ -1,3 +1,17 @@
+## intake-declared-header-fields
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/472
+- completed: 2026-10-06
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/476
+- bundle: pyautobrain-worktree-guards
+
+Merged PyAutoBrain#476 (a3a2ca3) into main 2026-10-06 via /prm (tier `notify`; PyAutoBrain has no PR test CI, gate was the local full Brain suite). Issue #472 closed.
+
+Intake honours declared Target: and Repos: (validated, notes for unknowns); unknown declared Type: is never silently dropped — aliases map with a visible note (hygiene -> maintenance), else triage with a note naming the valid set; a leading header block no longer becomes the title/slug or is echoed into the body. New tests/test_intake_declared_fields.py (11); full suite 1206 passed. formalise/_derive_fields out of scope.
+
+No workspace impact (Brain tooling only); no pending-release obligation.
+
+## Original prompt
+
 # Intake Agent silently drops unknown Type values and overrides declared Target and Repos
 
 Type: bug

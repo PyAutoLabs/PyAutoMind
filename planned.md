@@ -109,11 +109,10 @@
 
 ## organ-prompt-headings
 - planned: 2026-10-05
-- status: blocked — approved wording; Brain claims #469–#472 remain active (verified 2026-10-06)
+- status: planned — approved wording; former Brain blockers #469–#472 merged and closed 2026-10-06 (PyAutoBrain#473–#476), claims released
 - classification: workspace
 - prompt: draft/feature/pyautobrain/standardize_dashboard_orchestration_prompt_panel.md
 - suggested-branch: feature/organ-prompt-headings
-- blocked-by: worktree-sh-root-activate-clobber, unregistered-worktree-guard, cortex-find-script-symlink, intake-declared-header-fields (using PyAutoBrain; issues #469–#472)
 - affected-repos:
   - PyAutoBrain
   - PyAutoEars

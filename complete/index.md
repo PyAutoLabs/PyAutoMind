@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1720 records across 9 buckets.
+1724 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -143,6 +143,7 @@ markers; everything below GENERATED is rebuilt.
 - [community-board-readability](2026/10/community-board-readability.md)
 - [community-feedback](2026/10/community-feedback.md)
 - [compact-dashboard-rows](2026/10/compact-dashboard-rows.md)
+- [cortex-find-script-symlink](2026/10/cortex-find-script-symlink.md)
 - [critical-curves-dispatch-audit](2026/10/critical-curves-dispatch-audit.md) — Phase 3a evidence and contract shipped. Research, raw CPU JSON/PNG, frozen measured source and cumulative wiki…
 - [dashboard-copy-contract](2026/10/dashboard-copy-contract.md)
 - [dashboard-minimal-text](2026/10/dashboard-minimal-text.md)
@@ -164,6 +165,7 @@ markers; everything below GENERATED is rebuilt.
 - [heart-publication-coverage](2026/10/heart-publication-coverage.md)
 - [heart-score-resusitate](2026/10/heart-score-resusitate.md)
 - [insight-organ-birth](2026/10/insight-organ-birth.md)
+- [intake-declared-header-fields](2026/10/intake-declared-header-fields.md)
 - [interferometer-decision-matrix-last-cell](2026/10/interferometer-decision-matrix-last-cell.md)
 - [interferometer-streaming-scaling](2026/10/interferometer-streaming-scaling.md) — CPU streaming scaling cells and evidence shipped, including accumulation to 5e7 visibilities, in-memory failur…
 - [jax-lapack-compatibility-repair](2026/10/jax-lapack-compatibility-repair.md)
@@ -202,6 +204,8 @@ markers; everything below GENERATED is rebuilt.
 - [streaming-p4-light-profile-identity](2026/10/streaming-p4-light-profile-identity.md)
 - [streaming-p5-cubes-phase-centre](2026/10/streaming-p5-cubes-phase-centre.md)
 - [unit-timing-distinct-baseline](2026/10/unit-timing-distinct-baseline.md) — Select the latest distinct prior unit timing run per repository/Python leg within the current epoch. Preserve …
+- [unregistered-worktree-guard](2026/10/unregistered-worktree-guard.md)
+- [worktree-sh-root-activate-clobber](2026/10/worktree-sh-root-activate-clobber.md)
 
 ## 2026/09
 
