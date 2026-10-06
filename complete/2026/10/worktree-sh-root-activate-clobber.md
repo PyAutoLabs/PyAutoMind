@@ -1,3 +1,17 @@
+## worktree-sh-root-activate-clobber
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/469
+- completed: 2026-10-06
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/473
+- bundle: pyautobrain-worktree-guards
+
+Merged PyAutoBrain#473 (9b73033) into main 2026-10-06 via /prm (tier `notify`; PyAutoBrain has no PR test CI, gate was the local full Brain suite). Issue #469 closed.
+
+worktree_create no longer symlinks the names it writes itself (activate.sh, root marker) into a bundle and removes any pre-existing link before writing activate.sh, so a new bundle cannot clobber the unversioned workspace-root file or retarget other bundles. Adds opt-in worktree_repair_activate (bundle paths only). New tests/test_worktree_activate.py (4, hermetic); full suite 1199 passed; new tests red on unfixed code first.
+
+No workspace impact (Brain tooling only); no pending-release obligation.
+
+## Original prompt
+
 # worktree.sh bundle creation clobbers the unversioned root activate.sh
 
 Type: bug

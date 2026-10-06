@@ -1,3 +1,17 @@
+## unregistered-worktree-guard
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/470
+- completed: 2026-10-06
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/474
+- bundle: pyautobrain-worktree-guards
+
+Merged PyAutoBrain#474 (db2aa37) into main 2026-10-06 via /prm (tier `notify`; PyAutoBrain has no PR test CI, gate was the local full Brain suite). Issue #470 closed.
+
+worktree_check_conflict reads git worktree list for the requested repos and WARNs on any worktree no active.md claim covers (exit code unchanged). New report-only worktree_audit_orphans lists unclaimed worktrees with ahead/behind/dirty and flags zero-commit claims STALE? (48 orphans on the dev box at ship time; removes nothing). New tests/test_worktree_orphan_guard.py (8); full suite 1203 passed.
+
+No workspace impact (Brain tooling only); no pending-release obligation.
+
+## Original prompt
+
 # Unregistered worktrees are invisible to the conflict guard
 
 Type: maintenance

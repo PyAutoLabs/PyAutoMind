@@ -1,3 +1,17 @@
+## cortex-find-script-symlink
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/471
+- completed: 2026-10-06
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/475
+- bundle: pyautobrain-worktree-guards
+
+Merged PyAutoBrain#475 (d08edc8) into main 2026-10-06 via /prm (tier `notify`; PyAutoBrain has no PR test CI, gate was the local full Brain suite). Issue #471 closed.
+
+Cortex find_script walks root.absolute().parents instead of root.resolve().parents, so a task worktree with a symlinked PyAutoCortex finds its own script, not the canonical one. Restored test_a_fixture_tree_finds_the_schema_its_checkout_ships verbatim + tmp_path symlink regression test. Cortex tests 49 passed; full suite 1197 passed.
+
+No workspace impact (Brain tooling only); no pending-release obligation.
+
+## Original prompt
+
 # Cortex conductor test resolves through the worktree symlink and fails in every task worktree
 
 Type: bug
