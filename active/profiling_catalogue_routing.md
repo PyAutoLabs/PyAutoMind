@@ -7,6 +7,8 @@ Difficulty: medium
 Consequence: judge
 Autonomy: human-required
 Filed: 2026-10-06
+Issued: 2026-10-06
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/477
 
 Primary repo: @PyAutoBrain. Standalone organ task, no library changes.
 Parent: draft/feature/pyautopulse/profiling_setup_browser.md, approved Phase 4.
