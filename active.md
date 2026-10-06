@@ -60,3 +60,26 @@
 - workspace-pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/19
 - workspace-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/44
 - resume: All eleven PRs opened; Brain, Ears, Memory, Insight and Gut confirmed merged. Remaining consumer CI pending. Human authorized ship and /prm with the recorded Heart YELLOW acknowledgement. Do not close task or remove worktree until all eleven branches merged.
+
+## profiling-baseline-readiness
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/384
+- issued: 2026-10-06
+- prompt: active/profiling_baseline_readiness.md
+- session: Codex (session ID unavailable)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-baseline-readiness
+- repos:
+  - autolens_profiling: feature/profiling-baseline-readiness
+- summary: Approved profiling redesign Phase 6; specification and pending campaign only. No jobs, pin changes, archive acceptance or charts. Human /prm.
+
+## profiling-baseline-campaign
+- issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/17
+- issued: 2026-10-06
+- prompt: active/profiling_baseline_campaign.md
+- session: Codex (session ID unavailable)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-baseline-campaign
+- repos:
+  - PyAutoPulse: feature/profiling-baseline-campaign
+- summary: Approved profiling redesign Phase 6; specification and pending campaign only. No jobs, pin changes, archive acceptance or charts. Human /prm.
+- coordination: Human explicitly allowed isolated Pulse work alongside organ-prompt-headings, limited to campaign/task metadata and generated board.
