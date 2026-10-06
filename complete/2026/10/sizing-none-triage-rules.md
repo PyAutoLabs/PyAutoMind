@@ -1,3 +1,18 @@
+# Sizing none, keyword and triage rules
+
+Completed 2026-10-06. Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/480
+PR: https://github.com/PyAutoLabs/PyAutoBrain/pull/482 — merged as 8c860cf836aec8407eb0a3fdda03654b773c455a.
+
+Explicit Witness: none is now an absent witness with its explanatory reason retained. Removed the broad raises keyword while retaining error-contract checks. Triage derives judge and unattended never; unknown unattended values explain their fallback. Declared overrides retain precedence.
+
+Validation: independent review CLEAN at 632aab2; independent real CLI synthetic cases and 41 targeted tests pass. Both GitHub CI matrix jobs (Python 3.12 and 3.13) succeeded in run 37475595478. Immutable whole-backlog witness replayed independently: 229 prompts, 15 derived judge-to-glance changes, five explicit-none promotions to judge, zero unintended promotions, no effective consequence changes. Historical keyword decisions and moved list are in the PR.
+
+Heart remained YELLOW for the exact human-acknowledged reasons: three aged PRs (autogalaxy_workspace, autolens_workspace, euclid_strong_lens_modeling_pipeline) and stale PyAutoNerves rehearsal source. No scientific API or downstream workspace behavior changed; CLI/regrade is the relevant smoke witness.
+
+Declared tier glance; approved auto-merge-on-green executed in-turn after every CI run/job was judged. No watcher outlives the turn. No pending release obligation for this Brain tooling change.
+
+## Original prompt
+
 # Sizing faculty: a `none` rule, keyword hits on prose that only describes a surface, and a `triage` rule
 
 Type: bug
