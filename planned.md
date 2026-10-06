@@ -113,7 +113,7 @@
 - prompt: draft/bug/pyautobrain/sizing_faculty_none_rule_keyword_false_judge_triage.md
 - classification: library
 - suggested-branch: feature/sizing-none-triage-rules
-- blocked-by: organ-prompt-headings (using PyAutoBrain; PyAutoBrain#479, Codex)
+- prior-blocker-cleared: organ-prompt-headings merged 2026-10-06 (Brain#481); see complete/2026/10/organ-prompt-headings.md. Survey current claims before resuming.
 - tier: glance
 - resume: plan approved 2026-10-06 (on issue); route → start_library when unblocked
 - affected-repos:

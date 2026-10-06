@@ -1,5 +1,34 @@
 # Organ-named dashboard prompt headings
 
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/479
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/481
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoEars/pull/14
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/286
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/302
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoMemory/pull/117
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/16
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoInsight/pull/7
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/187
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoGut/pull/23
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/19
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/44
+
+All eleven PRs merged with every CI run and matrix job green (22 jobs). Per-repository git ancestry proves every task branch is contained in origin/main. Brain merged first, then consumers tested against the merged helper. The human acknowledged the named Heart YELLOW reason set and explicitly authorized /prm on 2026-10-06.
+
+All thirteen dashboards now have source support for their approved concise action headings with only the organ name bold. Shared escaped heading markup and responsive typography preserve domain prompts, copy controls and work links; explanatory panel subtitles are absent. Brain's long task labels fit 320px columns. Consumer-generated pages refreshed where tracked.
+
+Validation: all affected suites; strict docs; 104 rendered board/viewport/theme cases at 320/375/768/1440px without horizontal overflow; 14 clipboard/layout cases plus denial, budget, isolation and pending-edit witnesses. Eyes checked all 265 PNG URLs, 265 preserved copy payloads and 554 preserved links. Hands/Memory/Nerves/Gut payloads and links identical on the same input snapshots. The local Brain grouped-path fixture required inherited overrides removed; its rerun and both complete remote Python matrices pass.
+
+This completes only the organ-named heading phase. The parent standardize_dashboard_orchestration_prompt_panel.md retains broader orchestration adoption and generated standards-discovery work; do not retire that parent on heading evidence.
+
+Publication: previously merged prose cleanups Hands#301, Eyes#18 and Insight#6 are now verified live; removed prose absent on all three sites. All thirteen live Pages dashboards verified with exact approved text and only the organ name in strong emphasis on 2026-10-06. Successful manual refresh jobs: Cortex 37468432096; Heart 37468435968; Hands 37468440200; Nerves 37468444594; Gut 37468449113; Scientist 37468453423. Other boards published through their normal merge-triggered workflows. Evidence and screenshots remain in tmp/organ-prompt-headings/ (not committed).
+
+Reconciliation: retained the broader orchestration/standards parent, appended the heading completion link, and cleared the sizing-none-triage-rules blocker. Intake flagged unrelated batch_slice.md on resemblance only; retained, with follow-up `/intake reconcile draft/feature/pyautobrain`. No irreplaceable ignored data products in the task worktrees; synthetic fixtures retained under tmp/organ-prompt-headings/.
+
+## Original prompt
+
+# Organ-named dashboard prompt headings
+
 Issued: 2026-10-06
 Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/479
 Type: feature

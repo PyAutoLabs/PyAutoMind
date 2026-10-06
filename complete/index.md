@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1728 records across 9 buckets.
+1729 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -176,6 +176,7 @@ markers; everything below GENERATED is rebuilt.
 - [mesh-interpolator-numerics-audit](2026/10/mesh-interpolator-numerics-audit.md)
 - [niek-euclid-style-review](2026/10/niek-euclid-style-review.md)
 - [orchestration-panel-core](2026/10/orchestration-panel-core.md)
+- [organ-prompt-headings](2026/10/organ-prompt-headings.md)
 - [over-sample-snr-helper](2026/10/over-sample-snr-helper.md)
 - [point-audits-wheel-provenance](2026/10/point-audits-wheel-provenance.md) — Point-solver audits now work with installed wheels, preserve checkout provenance, fingerprint installed packag…
 - [point-image-pair-all-forward-grad-nan](2026/10/point-image-pair-all-forward-grad-nan.md)
