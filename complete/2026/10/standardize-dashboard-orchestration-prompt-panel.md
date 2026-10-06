@@ -1,3 +1,27 @@
+## standardize-dashboard-orchestration-prompt-panel
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/474
+- completed: 2026-10-06
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/466
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/475
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/483
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/476
+
+**Initiative retired as fully shipped.** I retired it under the 2026-10-06 /prm authorization, on proof rather than resemblance: every phase and acceptance item maps to a merged and recorded phase. The parent was a draft coordinating prompt, so it had no PRs of its own. Its phases shipped as follows:
+
+- **Core panel and standards index**: `complete/2026/10/orchestration-panel-core.md` (Brain#466, issue Brain#465). The shared panel API has GitHub work links mirrored in the copied prompt, optional direction, exact preview and accessible copy feedback. It also added the canonical standards index, and Brain, Mind and Cortex renderers adopted the panel.
+- **Minimal text and the Heart top action**: `complete/2026/10/dashboard-minimal-text.md` (Brain#468, Ears#13, Heart#284). "Fix Heart systematically" moved to the top panel with no lower duplicate.
+- **Owner prose follow-up**: `complete/2026/10/dashboard-prose-followup.md` (Hands#301, Eyes#18, Insight#6). These were later verified live.
+- **Organ-named headings**: `complete/2026/10/organ-prompt-headings.md` (Brain#481 plus ten consumer PRs). All 13 live dashboards were verified.
+- **Panel consumers**: `complete/2026/10/orchestration-panel-consumers.md` (Ears#16, Hands#303, Memory#118, Pulse#19, Insight#8, Nerves#188, Gut#24, Eyes#20, Scientist#45). All 13 board owners now use the shared panel, and the Scientist README links the canonical standards. Live publication was verified at about 14:58 UTC on 2026-10-06 across 54 layouts, and RTD `standards.html` and `board-orchestration.html` were live from 14:40 UTC.
+- **Standards discovery**: `complete/2026/10/standards-discovery.md` (generator Mind#475, contract Brain#483, 33 consumer PRs; 44/46).
+- **Standards discovery, deferred wave**: `complete/2026/10/standards-discovery-deferred.md` (PyAutoArray#614, euclid_strong_lens_modeling_pipeline#110, firewall restore Mind#476). This brought coverage to 46/46. The universal audit against all 46 `origin/main`s passed, and Mind#474 is closed.
+
+Acceptance coverage: the adoption matrix with renderer owner, prompt and work destination per board lives in Brain `docs/board-orchestration.md`. The sizing, banner/navigation and orchestration standards are indexed in Brain `docs/standards.md`. Generated `AGENTS.md` discovery guidance is checked by `repos_sync.py` and graded universally by Mind `firewall_gate.yml`.
+
+Nothing from the stated scope remains. No pending-release obligation, since every change was organ, docs or instruction only.
+
+## Original prompt
+
 # Shared dashboard orchestration panels and durable organism standards
 
 Type: feature
@@ -13,7 +37,6 @@ Autonomy: supervised
 Priority: normal
 Status: formalised
 Consequence: judge
-Blocked-by: draft/feature/pyautomind/standards_discovery_deferred_destinations.md — the only remaining scope (PyAutoArray + euclid pipeline standards blocks, then firewall restore and universal audit)
 Review-minutes: 25
 Unattended: needs-slicing
 
