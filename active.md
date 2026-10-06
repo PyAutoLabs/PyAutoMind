@@ -28,11 +28,13 @@
 - issued: 2026-10-06
 - prompt: active/standards_discovery_deferred_destinations.md
 - session: claude (Opus 5.5 subagent, CLI; session ID unavailable)
-- status: workspace-dev
+- status: pr-open, awaiting-human-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/614
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/110
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/standards-discovery-deferred
 - repos:
   - PyAutoArray: feature/standards-discovery-deferred
   - euclid_strong_lens_modeling_pipeline: feature/standards-discovery-deferred
 - tier: judge
 - summary: Generated shared-standards AGENTS.md block for the two deferred destinations (AGENTS.md-only PRs), proceeding alongside nnls-memo-scattered-backoff and vis-lp-inspection-bundle claims with human approval. Human /prm.
-- resume: Generating + opening AGENTS.md-only PRs in both repos; firewall_gate.yml skip removal + universal audit follow after both merge.
+- resume: AGENTS.md-only PRs open (Array#614, pipeline#110); bounded checks OK, universal 46/46 OK with both branches. Human /prm both, then remove firewall_gate.yml standards skip + universal audit + close #474.
