@@ -258,7 +258,7 @@ Use the start-dev skill. active/nnls_memo_scattered_backoff.md
 
 </details>
 
-<details><summary>📋 <a href="active/profiling_baseline_campaign.md">Profiling baseline campaign</a> — <a href="https://github.com/PyAutoLabs/PyAutoPulse/issues/17">issue #17</a> — issued 2026-10-06 — workspace-dev</summary>
+<details><summary>📋 <a href="active/profiling_baseline_campaign.md">Profiling baseline campaign</a> — <a href="https://github.com/PyAutoLabs/PyAutoPulse/issues/17">issue #17</a> — issued 2026-10-06 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/18">PyAutoPulse#18</a></summary>
 
 ```
 Use the start-dev skill. active/profiling_baseline_campaign.md
@@ -266,7 +266,7 @@ Use the start-dev skill. active/profiling_baseline_campaign.md
 
 </details>
 
-<details><summary>📋 <a href="active/profiling_baseline_readiness.md">Profiling baseline readiness</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/384">issue #384</a> — issued 2026-10-06 — workspace-dev</summary>
+<details><summary>📋 <a href="active/profiling_baseline_readiness.md">Profiling baseline readiness</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/384">issue #384</a> — issued 2026-10-06 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/385">autolens_profiling#385</a></summary>
 
 ```
 Use the start-dev skill. active/profiling_baseline_readiness.md

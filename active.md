@@ -28,22 +28,34 @@
 - issued: 2026-10-06
 - prompt: active/profiling_baseline_readiness.md
 - session: Codex (session ID unavailable)
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-baseline-readiness
 - repos:
   - autolens_profiling: feature/profiling-baseline-readiness
 - summary: Approved profiling redesign Phase 6; specification and pending campaign only. No jobs, pin changes, archive acceptance or charts. Human /prm.
-- resume: Implemented and independently CLEAN (tree a4df8471e2e910ce16f1dc188b771a23353c086a). 1126 full-suite tests pass/6 skip, final46 focused, browser/lint/catalogue/wiki/layout/submit checks pass. Ship pending current human Heart YELLOW acknowledgement; local staged changes, no commit/PR yet.
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/385
+- resume: PR opened at 62a6ad1e82735e360c7cf25be62253a286493b17. 1126 full tests passed/6 skipped; final46 focused; browser/lint/wiki/catalogue/layout/submit checks passed; independent CLEAN exact commit tree. Draft177 unresolved choices; no jobs or acceptance. Human acknowledged current Heart YELLOW for shipping only; merge requires current /prm and all CI.
+- heart-ack:
+  - autogalaxy_workspace: open PR 7d old
+  - autolens_workspace: open PR 7d old
+  - euclid_strong_lens_modeling_pipeline: open PR 7d old
+  - release validation stale: source moved since rehearsal (PyAutoNerves)
 
 ## profiling-baseline-campaign
 - issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/17
 - issued: 2026-10-06
 - prompt: active/profiling_baseline_campaign.md
 - session: Codex (session ID unavailable)
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-baseline-campaign
 - repos:
   - PyAutoPulse: feature/profiling-baseline-campaign
 - summary: Approved profiling redesign Phase 6; specification and pending campaign only. No jobs, pin changes, archive acceptance or charts. Human /prm.
 - coordination: Human explicitly allowed isolated Pulse work alongside organ-prompt-headings, limited to campaign/task metadata and generated board.
-- resume: Implemented and independently CLEAN (tree 30039505bfb3d96b71fc168b0a52ab3c71070f4d).189 tests, Ruff and offline board check pass. Pending campaign remains needs-decision; pins/checkin/receipts unchanged. Ship pending same current Heart YELLOW acknowledgement; project evidence URLs to pin after reviewed project commit.
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/18
+- resume: PR opened at b4e4c80a9d22643db9156b956db4635523078ad4. 189 tests; Ruff and offline check passed; independent CLEAN plus final immutable-link verification. Merge project#385 first; domain campaign remains needs-decision/unissued after implementation closes. Human acknowledged current Heart YELLOW for shipping only; merge requires current /prm and all CI.
+- heart-ack:
+  - autogalaxy_workspace: open PR 7d old
+  - autolens_workspace: open PR 7d old
+  - euclid_strong_lens_modeling_pipeline: open PR 7d old
+  - release validation stale: source moved since rehearsal (PyAutoNerves)

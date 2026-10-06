@@ -143,7 +143,7 @@ Both exact-head CI runs and independent reviews passed. Heart STALE permitted
 development-only shipping; no RED override. No profiling campaign or baseline
 acceptance; generic compile builder remains explicitly unavailable.
 Phase 5 completed and merged 2026-10-06; records below.
-Phase 6 is in progress under project #384 and Pulse #17; specification/campaign readiness only, no jobs or baseline acceptance.
+Phase 6 implemented in project PR #385 (issue #384) and Pulse PR #18 (issue #17), awaiting human /prm and CI. Specification/campaign readiness only; no jobs or baseline acceptance.
 
 - Inventory every active script and its callers before moving it. Target
   `scripts/<dataset>/<model>/<measurement>.py`, including imaging and
@@ -172,7 +172,7 @@ Merged 2026-10-06 under human /prm:
 - autolens_assistant#151 (910db578), record `complete/2026/10/profiling-setup-advice.md`.
 All exact-head CI runs/jobs passed, including the repaired clone boundary.
 Historical recommendations remain unreviewed; no baseline acceptance or profiling jobs.
-Phase 6 is in progress under project #384 and Pulse #17; specification/campaign readiness only, no jobs or baseline acceptance.
+Phase 6 implemented in project PR #385 (issue #384) and Pulse PR #18 (issue #17), awaiting human /prm and CI. Specification/campaign readiness only; no jobs or baseline acceptance.
 
 - Add per-setup wiki navigation generated/validated against the catalogue;
   connect selected evidence, hazards, supported recommendations, scripts and
