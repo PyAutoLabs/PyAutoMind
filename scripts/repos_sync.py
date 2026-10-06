@@ -10,6 +10,8 @@ Usage:
     python3 repos_sync.py --write        # regenerate docs/hooks, then check
     python3 repos_sync.py --write --only "generated Codex hooks"
                                          # bounded Codex-hook regeneration
+    python3 repos_sync.py --write --only "shared-standards blocks (generated)" --repo NAME
+                                         # bounded standards-only regeneration
     python3 repos_sync.py --root <dir>   # override the workspace root
                                          # (default: PyAutoBrain's shared
                                          # resolver — see workspace_root)
@@ -234,6 +236,10 @@ CHECKOUTS = "workspace checkouts (manifest ↔ disk)"
 CODEX_HOOKS_REL = ".codex/hooks.json"
 CODEX_HOOKS = "generated Codex hooks"
 FILING_BLOCKS = "where-to-file blocks (generated)"
+STANDARDS_BLOCKS = "shared-standards blocks (generated)"
+STANDARDS_BEGIN = "<!-- repos_sync:standards:begin -->"
+STANDARDS_END = "<!-- repos_sync:standards:end -->"
+STANDARDS_POLICY_FILE = "policy/shared_standards.md"
 
 
 # What a Claude Code web/mobile session must know before its first command:
@@ -1146,6 +1152,108 @@ def write_filing_blocks(root, repos, policy):
             continue
         write_block(repo_checkout(root, name) / "AGENTS.md", policy,
                     FILING_BEGIN, FILING_END, required=False)
+
+
+def load_standards_policy(mind_root):
+    return (Path(mind_root) / STANDARDS_POLICY_FILE).read_text().strip()
+
+
+def render_standards_policy(policy, repo_spec):
+    universal, separator, board = policy.partition("\n<!-- board-owners -->\n")
+    if not separator or not universal.strip() or not board.strip():
+        raise ValueError("shared standards policy requires universal and board-owner text")
+    owner = repo_spec.get("board_owner", False)
+    if not isinstance(owner, bool):
+        raise ValueError("board_owner must be a boolean")
+    return universal.strip() + ("\n\n" + board.strip() if owner else "")
+
+
+def standards_marker_error(text):
+    begins, ends = text.count(STANDARDS_BEGIN), text.count(STANDARDS_END)
+    if not begins and not ends:
+        return None
+    if begins != 1 or ends != 1 or text.index(STANDARDS_BEGIN) > text.index(STANDARDS_END):
+        return "malformed or duplicate shared-standards markers"
+    return None
+
+
+def check_standards_blocks(root, repos, policy):
+    """Universal for available registered checkouts, independent of other policies."""
+    problems = []
+    for name, spec in repos.items():
+        expected = render_standards_policy(policy, spec)
+        repo_dir = repo_checkout(root, name)
+        if not repo_dir.is_dir():
+            continue  # coverage is reported separately, never claimed as adoption
+        agents = repo_dir / "AGENTS.md"
+        if not agents.is_file():
+            problems.append(f"'{name}': no AGENTS.md — needs repository guidance")
+            continue
+        text = agents.read_text()
+        error = standards_marker_error(text)
+        if error:
+            problems.append(f"'{name}': {error}")
+        elif STANDARDS_BEGIN not in text:
+            problems.append(f"'{name}': no shared-standards block — run bounded --write")
+        elif extract_block(text, STANDARDS_BEGIN, STANDARDS_END) != expected:
+            problems.append(f"'{name}': shared-standards block is stale — run bounded --write")
+    return problems
+
+
+def standards_write_target(root, name):
+    """Refuse a selected alias that could write another checkout's guidance."""
+    root = Path(root).absolute()
+    checkout = repo_checkout(root, name).absolute()
+    try:
+        relative = checkout.relative_to(root)
+        checkout.resolve().relative_to(root.resolve())
+    except ValueError as error:
+        raise ValueError(f"'{name}': standards target escapes the selected root") from error
+    current = root
+    for part in relative.parts:
+        current = current / part
+        if current.is_symlink():
+            raise ValueError(f"'{name}': standards target follows a checkout/family symlink")
+    agents = checkout / "AGENTS.md"
+    if agents.is_symlink():
+        raise ValueError(f"'{name}': AGENTS.md is a symlink; refusing standards write")
+    return agents
+
+
+def write_standards_blocks(root, repos, policy):
+    """Preflight every selected target, then change only its standards block."""
+    updates = []
+    for name, spec in repos.items():
+        expected = render_standards_policy(policy, spec)
+        agents = standards_write_target(root, name)
+        if not agents.parent.is_dir():
+            print(f"skipped (checkout absent): {name}")
+            continue
+        if not agents.is_file():
+            raise ValueError(f"'{name}': no AGENTS.md — cannot create repository guidance")
+        text = agents.read_bytes().decode("utf-8")
+        error = standards_marker_error(text)
+        if error:
+            raise ValueError(f"'{name}': {error}")
+        newline = "\r\n" if "\r\n" in text else "\n"
+        block = f"{STANDARDS_BEGIN}\n{expected}\n{STANDARDS_END}".replace("\n", newline)
+        if STANDARDS_BEGIN in text:
+            start, stop = text.index(STANDARDS_BEGIN), text.index(STANDARDS_END) + len(STANDARDS_END)
+            updated = text[:start] + block + text[stop:]
+        else:
+            # Append when no existing block exists; preserve every original byte.
+            updated = text + ("" if text.endswith(newline * 2) else newline if text.endswith(newline) else newline * 2) + block + newline
+        updates.append((agents, text, updated))
+    for agents, text, updated in updates:
+        if updated != text:
+            agents.write_bytes(updated.encode("utf-8"))
+        print(f"{'updated' if updated != text else 'unchanged'}: {agents}")
+
+
+def standards_coverage(root, repos):
+    seen = [name for name in repos if repo_checkout(root, name).is_dir()]
+    absent = [name for name in repos if name not in seen]
+    return len(seen), len(repos), absent
 
 
 # --------------------------------------------------------------------------
@@ -2090,6 +2198,10 @@ def main():
         help="run every drift-check leg but this one (repeatable; use the "
              "label the check prints; subtracts from --only)",
     )
+    parser.add_argument(
+        "--repo", action="append", metavar="NAME",
+        help="scope the standards-only check/write to this registered repo (repeatable)",
+    )
     args = parser.parse_args()
 
     mind_root = Path(__file__).resolve().parents[1]
@@ -2108,12 +2220,90 @@ def main():
     hook_text = load_session_hook(mind_root)
     deliverable_hook_text = load_deliverable_hook(mind_root)
 
+    # Lazy (label -> thunk) so --only pays for exactly the selected legs.
+    checks = {
+        smoke_sync.LABEL: lambda: smoke_sync.check(
+            root, repos, (mind_root / smoke_sync.SOURCE).read_text()),
+        "PyAutoHeart/config/repos.yaml": lambda: check_heart(root, repos),
+        "PyAutoHands/pre_build.sh": lambda: check_pre_build(root, repos),
+        "PyAutoHands/autohands/config/workspaces.yaml":
+            lambda: check_hands_workspaces(root, repos),
+        "ensure_workspace_labels.sh": lambda: check_labels(root, repos),
+        "hygiene conductor coverage":
+            lambda: check_hygiene_coverage(root, repos, mind_root),
+        "local checkout origins": lambda: check_origins(root, repos),
+        CHECKOUTS: lambda: check_checkouts(root, repos, unmapped, marker),
+        "tenant firewall (organ code)": lambda: check_tenant_firewall(root, repos),
+        "organism-map blocks (generated)":
+            lambda: check_map_blocks(root, repos, smap),
+        "never-rewrite-history blocks (generated)":
+            lambda: check_history_blocks(root, repos, hpol),
+        "remote-session blocks (generated)":
+            lambda: check_remote_blocks(root, repos, remote),
+        "end-at-deliverable blocks (generated)":
+            lambda: check_deliverable_blocks(root, repos, deliverable),
+        STANDARDS_BLOCKS: lambda: check_standards_blocks(root, standards_repos, standards),
+        FILING_BLOCKS: lambda: check_filing_blocks(root, repos, filing),
+        "public front-door organ tables (generated)":
+            lambda: check_public_tables(root, repos),
+        "hub organism blurb (organs present)": lambda: check_hub_blurb(root, repos),
+        "CLAUDE.md → AGENTS.md pointers":
+            lambda: check_claude_md_pointers(root, repos),
+        SESSION_HOOKS: lambda: check_session_hooks(
+            root, repos, hook_text, deliverable_hook_text),
+        CODEX_HOOKS: lambda: check_codex_hooks(root, repos),
+        "target-repo layout lints": lambda: check_structure_lints(root, repos),
+    }
+    # Both flags match the printed label exactly, and both are validated
+    # against the FULL registry before anything is narrowed — naming a real leg
+    # that --only already excluded is a no-op, naming a leg that does not exist
+    # is a typo, and only the second one is allowed to be silent.
+    for flag, selected in (("--only", args.only), ("--skip", args.skip)):
+        unknown = [label for label in selected or [] if label not in checks]
+        if unknown:
+            raise SystemExit(
+                f"repos_sync: unknown {flag} check(s): "
+                + ", ".join(f"'{u}'" for u in unknown)
+                + "; choose from: "
+                + ", ".join(f"'{label}'" for label in checks)
+            )
+    if args.only:
+        checks = {label: checks[label] for label in args.only}
+    if args.skip:
+        # Subtraction, after selection: --only says what to run, --skip takes
+        # legs back off that list.
+        checks = {label: run_check for label, run_check in checks.items()
+                  if label not in args.skip}
+    unknown_repos = [name for name in args.repo or [] if name not in repos]
+    if unknown_repos:
+        raise SystemExit("repos_sync: unknown --repo name(s): " + ", ".join(unknown_repos))
+    if args.repo and (not args.only or set(args.only) != {STANDARDS_BLOCKS}):
+        raise SystemExit("repos_sync: --repo requires --only '" + STANDARDS_BLOCKS + "'")
+    standards_repos = ({name: repos[name] for name in args.repo} if args.repo else repos)
+    try:
+        if STANDARDS_BLOCKS in checks:
+            standards = load_standards_policy(mind_root)
+            for spec in standards_repos.values():
+                render_standards_policy(standards, spec)
+        if args.write and STANDARDS_BLOCKS in checks:
+            # Validate every target before even unrelated default writers can run.
+            for name in standards_repos:
+                agents = standards_write_target(root, name)
+                if agents.parent.is_dir() and not agents.is_file():
+                    raise ValueError(f"'{name}': no AGENTS.md — cannot create repository guidance")
+                if agents.is_file() and standards_marker_error(agents.read_text()):
+                    raise ValueError(f"'{name}': {standards_marker_error(agents.read_text())}")
+    except ValueError as error:
+        raise SystemExit(f"repos_sync: {error}") from error
+
     # `--write --only "generated Codex hooks"` is the bounded rollout command:
     # it must not fan out unrelated generated docs or Claude hooks while a task
     # intentionally holds only the Codex opt-in repos.
-    codex_only_write = args.only and set(args.only) == {CODEX_HOOKS}
-    smoke_only_write = args.only and set(args.only) == {smoke_sync.LABEL}
-    if args.write and not codex_only_write and not smoke_only_write:
+    codex_only_write = set(checks) == {CODEX_HOOKS}
+    smoke_only_write = set(checks) == {smoke_sync.LABEL}
+    standards_only_write = set(checks) == {STANDARDS_BLOCKS}
+    write_enabled = args.write and bool(checks)
+    if write_enabled and not codex_only_write and not smoke_only_write and not standards_only_write:
         # The marker goes with the routing table: both are workspace-root
         # artifacts of the body map, and the marker is what lets the resolver
         # (and the checkout leg below) find this root again from anywhere under
@@ -2154,67 +2344,17 @@ def main():
                         ORGANS_BEGIN, ORGANS_END, required=False)
         write_claude_md_pointers(root, repos)
         write_session_hooks(root, repos, hook_text, deliverable_hook_text)
-    if args.write and not smoke_only_write:
+    if write_enabled and not smoke_only_write and not standards_only_write:
         write_codex_hooks(root, repos)
     smoke_enabled = smoke_sync.rollout_enabled(mind_root)
-    if args.write and not codex_only_write and smoke_enabled:
+    if write_enabled and not codex_only_write and not standards_only_write and smoke_enabled:
         smoke_sync.write(root, repos, (mind_root / smoke_sync.SOURCE).read_text())
-    if args.write and smoke_only_write and not smoke_enabled:
+    if write_enabled and smoke_only_write and not smoke_enabled:
         raise SystemExit("smoke bootstrap rollout is held; use smoke_bootstrap_sync.py --dry-run")
 
-    # Lazy (label -> thunk) so --only pays for exactly the selected legs.
-    checks = {
-        smoke_sync.LABEL: lambda: smoke_sync.check(
-            root, repos, (mind_root / smoke_sync.SOURCE).read_text()),
-        "PyAutoHeart/config/repos.yaml": lambda: check_heart(root, repos),
-        "PyAutoHands/pre_build.sh": lambda: check_pre_build(root, repos),
-        "PyAutoHands/autohands/config/workspaces.yaml":
-            lambda: check_hands_workspaces(root, repos),
-        "ensure_workspace_labels.sh": lambda: check_labels(root, repos),
-        "hygiene conductor coverage":
-            lambda: check_hygiene_coverage(root, repos, mind_root),
-        "local checkout origins": lambda: check_origins(root, repos),
-        CHECKOUTS: lambda: check_checkouts(root, repos, unmapped, marker),
-        "tenant firewall (organ code)": lambda: check_tenant_firewall(root, repos),
-        "organism-map blocks (generated)":
-            lambda: check_map_blocks(root, repos, smap),
-        "never-rewrite-history blocks (generated)":
-            lambda: check_history_blocks(root, repos, hpol),
-        "remote-session blocks (generated)":
-            lambda: check_remote_blocks(root, repos, remote),
-        "end-at-deliverable blocks (generated)":
-            lambda: check_deliverable_blocks(root, repos, deliverable),
-        FILING_BLOCKS: lambda: check_filing_blocks(root, repos, filing),
-        "public front-door organ tables (generated)":
-            lambda: check_public_tables(root, repos),
-        "hub organism blurb (organs present)": lambda: check_hub_blurb(root, repos),
-        "CLAUDE.md → AGENTS.md pointers":
-            lambda: check_claude_md_pointers(root, repos),
-        SESSION_HOOKS: lambda: check_session_hooks(
-            root, repos, hook_text, deliverable_hook_text),
-        CODEX_HOOKS: lambda: check_codex_hooks(root, repos),
-        "target-repo layout lints": lambda: check_structure_lints(root, repos),
-    }
-    # Both flags match the printed label exactly, and both are validated
-    # against the FULL registry before anything is narrowed — naming a real leg
-    # that --only already excluded is a no-op, naming a leg that does not exist
-    # is a typo, and only the second one is allowed to be silent.
-    for flag, selected in (("--only", args.only), ("--skip", args.skip)):
-        unknown = [label for label in selected or [] if label not in checks]
-        if unknown:
-            raise SystemExit(
-                f"repos_sync: unknown {flag} check(s): "
-                + ", ".join(f"'{u}'" for u in unknown)
-                + "; choose from: "
-                + ", ".join(f"'{label}'" for label in checks)
-            )
-    if args.only:
-        checks = {label: checks[label] for label in args.only}
-    if args.skip:
-        # Subtraction, after selection: --only says what to run, --skip takes
-        # legs back off that list.
-        checks = {label: run_check for label, run_check in checks.items()
-                  if label not in args.skip}
+    if write_enabled and STANDARDS_BLOCKS in checks:
+        write_standards_blocks(root, standards_repos, standards)
+
     drift = False
     for label, run_check in checks.items():
         if label == smoke_sync.LABEL and not smoke_enabled:
@@ -2222,6 +2362,11 @@ def main():
             continue
         problems = run_check()
         status = "OK" if not problems else f"{len(problems)} mismatch(es)"
+        if label == STANDARDS_BLOCKS:
+            seen, total, absent = standards_coverage(root, standards_repos)
+            print(f"  • {seen} of {total} selected registered repos checked out")
+            for name in absent:
+                print(f"  • checkout absent, adoption unverified: {name}")
         if label == SESSION_HOOKS:
             # The one leg whose blind spot is invisible in its own verdict: it
             # skips absent repos by design, so a four-repo session reads "OK"
