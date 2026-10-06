@@ -76,11 +76,14 @@
 - issued: 2026-10-06
 - prompt: active/profiling_model_layout.md
 - session: Codex (session ID unavailable)
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-model-layout
 - repos:
   - autolens_profiling: feature/profiling-model-layout
 - summary: Approved Phase 4 source taxonomy; no profiling jobs, baseline acceptance or merge. Brain routing separate.
+
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/381
+- commit: 4dedf1a63469dd77ccd5e78338491d77c05e65cf
 
 ## profiling-catalogue-routing
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/477

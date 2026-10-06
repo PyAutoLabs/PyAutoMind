@@ -67,3 +67,22 @@ Preserve numerical behavior, CLI arguments, output destinations and existing res
 Keep evidence qualification and unknowns explicit. Do not launch a baseline campaign, accept archived measurements as baselines, or restore temporal charts.
 
 Continue through implementation, testing and review. Apply current shipping gates; do not infer a new Heart RED override or merge authorization from previous sessions.
+
+## Phase 4a implementation checkpoint — 2026-10-06
+
+Project PR https://github.com/PyAutoLabs/autolens_profiling/pull/381 is OPEN at
+4dedf1a63469dd77ccd5e78338491d77c05e65cf (not merged). Worktree and branch above.
+80 canonical scientific scripts/helpers, thin legacy wrappers, stdlib route manifest
+and catalogue export; runtime/latent/compile capability, imports, HPC/CI/docs updated.
+Numerical ASTs match after path normalization; all 1,388 result hashes unchanged.
+1,071 full tests passed, 6 skipped, 17 warnings; final37 catalogue/routing tests passed.
+52 import smokes, full dry-run matrices,182 shell syntax checks/eight-leg HPC dry-run,
+Ruff/format, README/dashboard/wiki/layout/wall, Pulse schema and Chromium checks pass.
+Independent Sol CLEAN; full review includes compatibility globals and dispatch sets.
+Heart current verdict STALE: `release validation stale: source moved since rehearsal
+(PyAutoNerves)`; no RED/YELLOW reasons and dev-ship passes. No override invoked.
+PR CI lint pending at first exact-head inspection. No compute/baseline/merge performed.
+Evidence: `.worktrees/profiling-model-layout/{before.json,caller-inventory.json,
+check_preservation.py,pytest-green.log,smokes.log,generation-final.log,browser-final.log,
+heart-readiness.json}`; inventory also committed as catalogue/migration.md.
+Next: finish separate Brain #477 review/shipping, then human reviews/merges project PR.
