@@ -471,7 +471,10 @@ def run_check(tmp_path, monkeypatch, capsys, *argv):
     )
     monkeypatch.setattr(
         sys, "argv",
-        ["repos_sync.py", "--check", "--root", str(tmp_path), *argv],
+        # This hook fixture predates standards discovery and supplies no
+        # standards guidance. Its own tests grade that separate leg.
+        ["repos_sync.py", "--check", "--root", str(tmp_path),
+         "--skip", repos_sync.STANDARDS_BLOCKS, *argv],
     )
     with pytest.raises(SystemExit) as exit_info:
         repos_sync.main()
@@ -628,20 +631,18 @@ FULL_IF = ("steps.hookpr.outputs.hook_pr != 'true' && "
 
 
 def test_the_skip_is_reachable_only_from_a_pull_request():
-    """`push` to main must still run every leg: the decision step that enables
-    the skip is itself gated on the event, and every step carrying `--skip` is
-    gated on that step's output."""
+    """Hook skips stay PR-only; standards are scoped independently to Mind."""
     steps = gate_steps()
     decision = next(step for step in steps if step.get("id") == "hookpr")
     assert decision["if"] == "github.event_name == 'pull_request'"
 
-    skipping = [step for step in steps if "--skip" in (step.get("run") or "")]
+    skipping = [step for step in steps if 'skip+=(--skip "generated hooks' in (step.get("run") or "")]
     assert skipping, steps
     for step in skipping:
         assert step["if"] == SKIP_IF, step
 
     full = next(step for step in steps
-                if "--skip" not in (step.get("run") or "")
+                if step.get("if") == FULL_IF
                 and "repos_sync.py --check" in (step.get("run") or ""))
     assert full["if"] == FULL_IF
 
@@ -836,7 +837,7 @@ def test_the_skipping_step_composes_both_decisions(tmp_path, hook_pr,
     )
     args = argv.read_text().splitlines()
     got = [args[i + 1] for i, a in enumerate(args) if a == "--skip"]
-    assert got == skipped, args
+    assert got == [repos_sync.STANDARDS_BLOCKS, *skipped], args
     assert proc.stdout.count("SKIPPED LEG") == len(skipped), proc.stdout
     for label in skipped:
         assert f"SKIPPED LEG: '{label}'" in proc.stdout

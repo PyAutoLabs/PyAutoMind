@@ -24,7 +24,7 @@ name: Tenant Firewall Gate
 # the leg is dropped with `repos_sync.py --skip`, the run says so out loud, and
 # the part the PR really does control — PyAutoMind's own installed copies, the
 # one repo propagation never writes to — is asserted instead. On `push` to
-# main nothing is skipped.
+# main these hook legs are not skipped; standards use target-owned scope below.
 #
 # The where-to-file block (`policy/where_to_file.md`, PyAutoMind#442) has the
 # same unmeetable precondition: the sibling organs are checked out at their
@@ -34,7 +34,7 @@ name: Tenant Firewall Gate
 # pins it) and drops the `where-to-file blocks (generated)` leg with the same
 # loud banner. The two decisions are independent: a PR touching both a hook and
 # the policy skips both legs and prints both banners; one touching neither runs
-# every leg. The decision reads the PR's diff, not its body, so a PR with no
+# every existing leg. Standards are graded separately. The decision reads the PR's diff, not its body, so a PR with no
 # `Brain-ref:` line gets the skip exactly as one with it does.
 #
 # All three organs are checked out. PyAutoHands was omitted at first — its
@@ -50,6 +50,9 @@ on:
       - "policy/session_start_hook.sh"
       - "policy/end_at_deliverable_hook.sh"
       - "policy/where_to_file.md"
+      - "policy/shared_standards.md"
+      - "tests/test_repos_sync_standards_block.py"
+      - "AGENTS.md"
       - "repos.yaml"
       - ".github/workflows/firewall_gate.yml"
   pull_request:
@@ -58,6 +61,9 @@ on:
       - "policy/session_start_hook.sh"
       - "policy/end_at_deliverable_hook.sh"
       - "policy/where_to_file.md"
+      - "policy/shared_standards.md"
+      - "tests/test_repos_sync_standards_block.py"
+      - "AGENTS.md"
       - "repos.yaml"
       - ".github/workflows/firewall_gate.yml"
   workflow_dispatch:
@@ -164,13 +170,26 @@ jobs:
           python3 -m pytest PyAutoMind/tests/test_repos_sync_filing_block.py -q \
             -k "pyautomind_carries_its_own_block"
 
+      # Standards rollout is staged across consumer PRs (#474). These sibling
+      # main clones do not belong to this Mind PR. Keep the default generator
+      # audit universal; CI grades Mind's owned block and generator behavior.
+      # Consumer PRs grade their own block, and the rollout completion audit
+      # checks every available registered checkout without --repo.
+      - name: Shared standards generator and Mind-owned block
+        run: |
+          pip install pytest
+          python3 -m pytest PyAutoMind/tests/test_repos_sync_standards_block.py -q
+          python3 PyAutoMind/scripts/repos_sync.py --check --root "$GITHUB_WORKSPACE" \
+            --only "shared-standards blocks (generated)" --repo PyAutoMind
+
       - name: Drift check (canonical-hook or where-to-file PR — unmeetable legs skipped)
         if: steps.hookpr.outputs.hook_pr == 'true' || steps.hookpr.outputs.filing_pr == 'true'
         env:
           HOOK_PR: ${{ steps.hookpr.outputs.hook_pr }}
           FILING_PR: ${{ steps.hookpr.outputs.filing_pr }}
         run: |
-          skip=()
+          echo "Standards scope: Mind-owned block checked above; sibling main adoption is checked by consumer PRs and the universal completion audit."
+          skip=(--skip "shared-standards blocks (generated)")
           if [ "$HOOK_PR" = "true" ]; then
             echo "=============================================================="
             echo "SKIPPED LEG: 'generated hooks (session-start + end-at-deliverable)'"
@@ -207,9 +226,11 @@ jobs:
           python3 PyAutoMind/scripts/repos_sync.py --check \
             --root "$GITHUB_WORKSPACE" "${skip[@]}"
 
-      # The unchanged path: every push to main, and every PR that edits neither
-      # a canonical hook nor the where-to-file policy, still runs all legs
-      # exactly as before.
+      # Preserve all existing legs. Standards are target-owned in this gate;
+      # running the generator without --skip remains the universal audit.
       - name: Drift check (all legs — absent repos are skipped)
         if: steps.hookpr.outputs.hook_pr != 'true' && steps.hookpr.outputs.filing_pr != 'true'
-        run: python3 PyAutoMind/scripts/repos_sync.py --check --root "$GITHUB_WORKSPACE"
+        run: |
+          echo "Standards scope: Mind-owned block checked above; sibling main adoption is checked by consumer PRs and the universal completion audit."
+          python3 PyAutoMind/scripts/repos_sync.py --check --root "$GITHUB_WORKSPACE" \
+            --skip "shared-standards blocks (generated)"

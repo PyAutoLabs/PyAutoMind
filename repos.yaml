@@ -60,6 +60,9 @@ unmapped_checkouts:
 # Their runner bodies and task branches remain untouched by propagation.
 smoke_bootstrap_rollout: true
 
+# `board_owner: true` identifies owners of organism presentation boards.
+# Every registered repo receives shared-standards discovery; only these owners
+# receive board component guidance. This is independent of hook/filing scope.
 repos:
   # --- organs -----------------------------------------------------------
   # `public_role` is the curated copy shown in the public front-door organ
@@ -99,6 +102,7 @@ repos:
   # has been verified against Codex's PreToolUse wire format. An absent key is
   # intentionally out of scope, not drift.
   PyAutoBrain:
+    board_owner: true
     path: organs/PyAutoBrain
     github: PyAutoLabs/PyAutoBrain
     category: organ
@@ -107,6 +111,7 @@ repos:
     public_role: "Works out *how*: classifies, plans and routes work through specialist reasoning and coding agents."
     codex_hooks: [mind-commit-guard, end-at-deliverable]
   PyAutoMind:
+    board_owner: true
     path: organs/PyAutoMind
     github: PyAutoLabs/PyAutoMind
     category: organ
@@ -115,6 +120,7 @@ repos:
     public_role: "Captures intent: every piece of work begins as a plain-English description of *what* should change and is tracked from the initial idea to its completed implementation."
     codex_hooks: [end-at-deliverable]
   PyAutoCortex:
+    board_owner: true
     path: organs/PyAutoCortex
     github: PyAutoLabs/PyAutoCortex
     category: organ
@@ -122,6 +128,7 @@ repos:
     role: "The Cortex — where the organism keeps track of what is true: the science body map (`projects.yaml`) and one ledger per science project (what was run, what came back, what was learned, where to pick up); the science mirror of the Mind (runs and a dated log, not prompts and PRs)."
     public_role: "Holds the science body map and one ledger per science project — the runs on the cluster and a dated log of what was set off, seen and learned — so a project is picked up where it was left, apart from software development."
   PyAutoMemory:
+    board_owner: true
     path: organs/PyAutoMemory
     github: PyAutoLabs/PyAutoMemory
     category: organ
@@ -129,6 +136,7 @@ repos:
     role: "Long-term scientific/software/project knowledge (see science pointer below)."
     public_role: "Provides long-term scientific knowledge through cross-linked literature wikis, concepts and verifiable citations."
   PyAutoEyes:
+    board_owner: true
     path: organs/PyAutoEyes
     github: PyAutoLabs/PyAutoEyes
     category: organ
@@ -136,6 +144,7 @@ repos:
     role: "The Eyes — where the organism sees what its figures look like: the cross-project visualization dashboard over the `<lib>_visualization` project repos (autolens_visualization, autogalaxy_visualization, autofit_visualization and autocti_visualization) — the registry of those repos, the tracked-manifest read contract (`gallery/viz_manifest.yaml`) and the Pages board that links to their PNGs as the single point of contact for the visual behaviour of the whole ecosystem. Renders nothing and copies no figures (the project repos render and hold them); never judges them (the Brain's Eyes conductor does) and never edits library plot code (critiques route through intake)."
     public_role: "The dashboard of every figure the PyAuto libraries draw: it gathers each library's rendered gallery on realistic data into one board, so what the software shows can be seen, judged and improved in one place."
   PyAutoEars:
+    board_owner: true
     path: organs/PyAutoEars
     github: PyAutoLabs/PyAutoEars
     category: organ
@@ -143,6 +152,7 @@ repos:
     role: "The Ears — the community listening organ: owns read-only public conversation collection, the versioned community snapshot contract, coverage receipts and the dashboard. GitHub conversations remain authoritative; Brain’s Community conductor owns judgement, reply drafts and development routing, and Mind owns task state. Never posts replies, labels or issues, exports raw transcripts or private sources, or treats unknown coverage as no work."
     public_role: "Listens to public community conversations and feedback, showing who may need attention and where listening coverage is incomplete; the Community workflow helps you decide how to respond."
   PyAutoHeart:
+    board_owner: true
     path: organs/PyAutoHeart
     github: PyAutoLabs/PyAutoHeart
     category: organ
@@ -150,6 +160,7 @@ repos:
     role: "Health/readiness — the authoritative \"is it safe to release?\" verdict."
     public_role: "Monitors repository health and supplies the authoritative GREEN/YELLOW/RED release-readiness verdict."
   PyAutoHands:
+    board_owner: true
     path: organs/PyAutoHands
     github: PyAutoLabs/PyAutoHands
     category: organ
@@ -157,6 +168,7 @@ repos:
     role: "Packaging, tagging, notebook generation, PyPI release execution."
     public_role: "Executes builds and releases: packages libraries, generates notebooks, creates tags and publishes releases to PyPI."
   PyAutoPulse:
+    board_owner: true
     path: organs/PyAutoPulse
     github: PyAutoLabs/PyAutoPulse
     category: organ
@@ -164,6 +176,7 @@ repos:
     role: "The Pulse — where the organism feels how fast it runs: the cross-project profiling dashboard over the `<lib>_profiling` project repos (today autolens_profiling) — campaign intent and pending domain tasks, the instance registry, the versioned `profiling-summary` read contract (v1 live at `autolens_profiling/dashboard/summary.json`), the ingest receipts (resolved commit per project per render) and the Pages board. Validates the exchange contract only; never moves pins, combines unmatched timings, applies the compile threshold to runtime, computes an ecosystem-wide speed score or issues a Heart verdict, and never judges (the Brain's profiling conductor does); the project repos keep their producers, results, drift policy and their own Pages page."
     public_role: "The dashboard of how fast the PyAuto libraries run: it gathers each library's profiling results into one board, so run times and how they change across releases can be seen in one place."
   PyAutoInsight:
+    board_owner: true
     path: organs/PyAutoInsight
     github: PyAutoLabs/PyAutoInsight
     category: organ
@@ -171,6 +184,7 @@ repos:
     role: "Owns inference campaign intent and pending domain tasks, the cross-project inference instance registry, versioned `inference-summary` read contract, ingest receipts and evidence dashboard. Projects own execution, producers and raw samples; Cortex owns scientific run records, observations and human conclusions; Mind owns bounded implementation lifecycle and repository claims. Never infers scientific acceptance from execution, ranks incompatible runs or submits compute on refresh."
     public_role: "Coordinates inference campaigns and their tasks in one place, showing results, diagnostics, provenance and missing evidence across projects while keeping scientific conclusions with the human and Cortex."
   PyAutoNerves:
+    board_owner: true
     path: organs/PyAutoNerves
     github: PyAutoLabs/PyAutoNerves
     package: autonerves
@@ -179,6 +193,7 @@ repos:
     role: "The Nerves — the configuration/serialization layer connecting workspace conventions to libraries (layered config, version handshake, test_mode), delivered as the `autonerves` package."
     public_role: "Provides the configuration and serialization layer connecting shared conventions across the scientific libraries and workspaces."
   PyAutoGut:
+    board_owner: true
     path: organs/PyAutoGut
     github: PyAutoLabs/PyAutoGut
     category: organ
@@ -360,6 +375,7 @@ repos:
     role: "Rendered PyAutoCTI figures — every Dataset1D and ImagingCI dataset/fit visualizer output on small simulated charge-injection data, the producers and harness that render them, re-rendered on each release; aggregated by the PyAutoEyes dashboard."
 
   PyAutoScientist:
+    board_owner: true
     path: organs/PyAutoScientist
     github: PyAutoLabs/PyAutoScientist
     category: project
