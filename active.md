@@ -33,6 +33,7 @@
 - repos:
   - autolens_profiling: feature/profiling-baseline-readiness
 - summary: Approved profiling redesign Phase 6; specification and pending campaign only. No jobs, pin changes, archive acceptance or charts. Human /prm.
+- resume: Implemented and independently CLEAN (tree a4df8471e2e910ce16f1dc188b771a23353c086a). 1126 full-suite tests pass/6 skip, final46 focused, browser/lint/catalogue/wiki/layout/submit checks pass. Ship pending current human Heart YELLOW acknowledgement; local staged changes, no commit/PR yet.
 
 ## profiling-baseline-campaign
 - issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/17
@@ -45,3 +46,4 @@
   - PyAutoPulse: feature/profiling-baseline-campaign
 - summary: Approved profiling redesign Phase 6; specification and pending campaign only. No jobs, pin changes, archive acceptance or charts. Human /prm.
 - coordination: Human explicitly allowed isolated Pulse work alongside organ-prompt-headings, limited to campaign/task metadata and generated board.
+- resume: Implemented and independently CLEAN (tree 30039505bfb3d96b71fc168b0a52ab3c71070f4d).189 tests, Ruff and offline board check pass. Pending campaign remains needs-decision; pins/checkin/receipts unchanged. Ship pending same current Heart YELLOW acknowledgement; project evidence URLs to pin after reviewed project commit.
