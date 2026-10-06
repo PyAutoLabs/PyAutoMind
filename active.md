@@ -34,3 +34,23 @@
   - PyAutoBrain: feature/sizing-none-triage-rules
 - tier: glance
 - summary: Approved Witness-none, raises-keyword and triage sizing fixes; issue #480 contains the approved plan and merge-on-green witness.
+
+## orchestration-panel-consumers
+- issue: https://github.com/PyAutoLabs/PyAutoEars/issues/15
+- issued: 2026-10-06
+- prompt: active/orchestration_panel_consumers.md
+- session: codex (GPT-6; session ID unavailable)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/orchestration-panel-consumers
+- repos:
+  - PyAutoEars: feature/orchestration-panel-consumers
+  - PyAutoHands: feature/orchestration-panel-consumers
+  - PyAutoMemory: feature/orchestration-panel-consumers
+  - PyAutoPulse: feature/orchestration-panel-consumers
+  - PyAutoInsight: feature/orchestration-panel-consumers
+  - PyAutoNerves: feature/orchestration-panel-consumers
+  - PyAutoGut: feature/orchestration-panel-consumers
+  - PyAutoEyes: feature/orchestration-panel-consumers
+  - PyAutoScientist: feature/orchestration-panel-consumers
+- tier: judge
+- summary: Approved remaining shared-panel consumers and Scientist standards links; preserve domain prompts, actions and gates. Human /prm.
