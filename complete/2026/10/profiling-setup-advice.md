@@ -1,3 +1,54 @@
+# Shipped — profiling-setup-advice
+
+Completed: 2026-10-06
+Issue: https://github.com/PyAutoLabs/autolens_assistant/issues/150
+PR: https://github.com/PyAutoLabs/autolens_assistant/pull/151
+Merge commit: 910db578af5fb5a30aeb67dbeeaf0f98646f0d59
+Exact reviewed CI head: d1621f230dd426810a0bda15d7de3685f94058ba
+
+Adds a standard-library lookup and assistant skill for profiling setup questions. It reports exact matches, approximate analogues or no applicable evidence, retaining validation status, unknowns, configuration differences and immutable record citations.
+
+The reader verifies one committed index/shard/source snapshot, record values and JSON pointers. Historical recommendations remain qualified context; numeric analogues are not extrapolated. Fit-time arithmetic requires explicit assumptions and known single-call latency metadata. No scientific code is run or baseline accepted.
+
+## Scripts Changed
+- `autoassistant/profiling.py`: qualified catalogue lookup and explicit conditional fit-time arithmetic.
+- `scripts/profiling_lookup.py` and `docs/profiling/alma_delaunay.json`: runnable offline lookup example.
+- `skills/al_profiling_setup.md`, routing/source registry and generated Claude/Codex discovery adapters.
+- Existing wiki-currency CI clones the cited profiling catalogue; focused consumer contracts added.
+
+## Validation
+- Applicable assistant suite: 189 passed, 1 skipped; final focused suite after review fixes: 43 passed.
+- Full suite also encountered 9 errors in the pre-existing forward-model fixture, which requires autolens==2026.9.27.2 instead of installed 9999.0.0.dev0. The same failure reproduces on unchanged main; no fixture or gate weakened.
+- Committed project producer integration (`aa84d7363ec008d658199067cedd3e9edd51deaa`): SDP.81 MGE/Delaunay/rectangular lookups resolve all five historical recommendations and preserve unreviewed status.
+- Live committed ALMA example: 14 runtime candidates, all approximate/unreviewed; no prediction.
+- Ruff/format, citation resolution, provenance check, generated discovery check, recipe API gate and workflow YAML parse passed. Provenance reports 91 existing moving-ref warnings.
+- Independent review checked identity, malformed inputs, exact pointers and batching assumptions.
+
+Closes #150.
+
+
+
+## Merge evidence
+
+CI runs37456421944/wiki-currency and37456421689/clone-boundary passed every job/step. Final boundary fix moved the unchanged query to domain-classified docs/profiling/.
+Human /prm authorized this merge. Both repositories are full clones; fetched origin/main
+contains the task head with zero unmerged commits. Project merged before assistant.
+Independent CLEAN reviews preceded shipping; assistant's final four-file placement repair
+passed43 focused tests, actual clone-boundary, live query and final GitHub CI.
+
+Ship Heart YELLOW reasons explicitly acknowledged by the human:
+- autogalaxy_workspace: open PR 7d old
+- autolens_workspace: open PR 7d old
+- euclid_strong_lens_modeling_pipeline: open PR 7d old
+Stale: release validation stale: source moved since rehearsal (PyAutoNerves).
+No RED override, release, profiling jobs, baseline acceptance or temporal charts.
+Phase6 remains unstarted; retain the parent draft for that scope.
+
+Local evidence archived under .worktree-archives/profiling-phase5-20261006/profiling-setup-advice/;
+copied files hash-verified, synthetic review/integration fixtures retained there.
+
+## Original prompt
+
 # Add evidence-qualified profiling setup lookup
 
 Type: feature

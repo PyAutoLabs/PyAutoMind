@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1726 records across 9 buckets.
+1728 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -186,10 +186,12 @@ markers; everything below GENERATED is rebuilt.
 - [pointsolver-extent-sanity-check](2026/10/pointsolver-extent-sanity-check.md)
 - [profiling-catalogue-routing](2026/10/profiling-catalogue-routing.md)
 - [profiling-model-layout](2026/10/profiling-model-layout.md)
+- [profiling-setup-advice](2026/10/profiling-setup-advice.md)
 - [profiling-setup-browser](2026/10/profiling-setup-browser.md)
 - [profiling-setup-catalogue](2026/10/profiling-setup-catalogue.md)
 - [profiling-setup-contract](2026/10/profiling-setup-contract.md) — Phase 1 reader of the full setup-first profiling refactor. Adds profiling-summary v2 setup/record/selection/ha…
 - [profiling-setup-page](2026/10/profiling-setup-page.md)
+- [profiling-setup-wiki](2026/10/profiling-setup-wiki.md)
 - [profiling-summary-v1](2026/10/profiling-summary-v1.md) — PyAutoPulse phase 1 — `build_dashboard.py` gains a fourth output, `dashboard/summary.json`, the `profiling-sum…
 - [pulse-campaign-control-room](2026/10/pulse-campaign-control-room.md) — One editable/copyable check-in prompt, 11 campaign rows, 25 open tasks, then detailed measurement evidence. 26…
 - [pulse-public-links](2026/10/pulse-public-links.md) — The two public-surface one-liners left from the PyAutoPulse organ birth: `.github/profile/README.md` organ tab…

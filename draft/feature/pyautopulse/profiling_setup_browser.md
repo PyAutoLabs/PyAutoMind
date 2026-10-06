@@ -142,10 +142,7 @@ Completed and merged 2026-10-06 under the human /prm authorization:
 Both exact-head CI runs and independent reviews passed. Heart STALE permitted
 development-only shipping; no RED override. No profiling campaign or baseline
 acceptance; generic compile builder remains explicitly unavailable.
-Phase 5 started 2026-10-06: project #382 (`active/profiling_setup_wiki.md`) and
-assistant #150 (`active/profiling_setup_advice.md`), separate worktrees and PRs.
-Project PR383 and assistant PR151 are open, independently reviewed CLEAN;
-current Heart YELLOW reasons explicitly acknowledged for PR opening. Merge awaits /prm.
+Phase 5 completed and merged 2026-10-06; records below.
 Phase 6 remains unstarted.
 
 - Inventory every active script and its callers before moving it. Target
@@ -168,10 +165,14 @@ Phase 6 remains unstarted.
 - Update only affected Brain skill/agent documentation and tests; do not change
   the ownership boundaries between Brain, Pulse, Cortex, Mind and projects.
 
-### Phase 5: Wiki and assistant consumption (separate project/assistant PRs)
+### Phase 5: Wiki and assistant consumption — COMPLETE
 
-Suggested branches: `feature/profiling-setup-wiki` (project),
-`feature/profiling-setup-advice` (assistant).
+Merged 2026-10-06 under human /prm:
+- autolens_profiling#383 (3b3589c9), record `complete/2026/10/profiling-setup-wiki.md`.
+- autolens_assistant#151 (910db578), record `complete/2026/10/profiling-setup-advice.md`.
+All exact-head CI runs/jobs passed, including the repaired clone boundary.
+Historical recommendations remain unreviewed; no baseline acceptance or profiling jobs.
+Phase 6 remains unstarted.
 
 - Add per-setup wiki navigation generated/validated against the catalogue;
   connect selected evidence, hazards, supported recommendations, scripts and
