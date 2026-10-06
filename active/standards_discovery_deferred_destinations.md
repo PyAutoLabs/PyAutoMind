@@ -16,6 +16,7 @@ Witness: `python3 scripts/repos_sync.py --check --only "shared-standards blocks 
 Review-minutes: 10
 Unattended: needs-slicing
 Filed: 2026-10-06
+Issued: 2026-10-06
 
 - Status: split out of `standards-discovery` at close-out — 44/46 destinations shipped in
   `complete/2026/10/standards-discovery.md` (generator PyAutoMind#475, contract PyAutoBrain#483,
