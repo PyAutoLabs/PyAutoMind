@@ -40,11 +40,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 2 |
+| [In flight](#in-flight) (`active/`) | 3 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 6 |
 | [Planned](#planned) (`planned.md`) | 7 |
-| [Backlog](#backlog) (`draft/`) | 227 |
+| [Backlog](#backlog) (`draft/`) | 226 |
 
 > **No batch in flight.**
 
@@ -254,6 +254,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 Use the start-dev skill. active/nnls_memo_scattered_backoff.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/standards_discovery_deferred_destinations.md">Finish the generated standards-discovery rollout: PyAutoArray and the Euclid pipeline</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/474">issue #474</a> — issued 2026-10-06 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/standards_discovery_deferred_destinations.md
 ```
 
 </details>
@@ -675,7 +683,7 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ## Backlog
 
-**227** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
+**226** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 70</summary>
@@ -1243,7 +1251,7 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>feature</b> — 33</summary>
+<summary><b>feature</b> — 32</summary>
 
 <details><summary>📋 <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding against the raw maximum finds…</a> — autoarray · small · supervised · medium</summary>
 
@@ -1321,14 +1329,6 @@ Use the start-dev skill. draft/feature/pyautobrain/brain_board_follow_ups.md
 
 ```
 Use the start-dev skill. draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautomind/standards_discovery_deferred_destinations.md">Finish the generated standards-discovery rollout: PyAutoArray and the Euclid pipeline</a> — pyautomind · small · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautomind/standards_discovery_deferred_destinations.md
 ```
 
 </details>
@@ -2444,7 +2444,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-06 | filed | <a href="draft/feature/pyautomind/standards_discovery_deferred_destinations.md">Finish the generated standards-discovery rollout: PyAutoArray and the…</a> |
+| 2026-10-06 | issued | <a href="active/standards_discovery_deferred_destinations.md">Finish the generated standards-discovery rollout: PyAutoArray and the…</a> |
 | 2026-10-04 | issued | <a href="active/nnls_memo_scattered_backoff.md">fnnls warm-start memo: per-key back-off on scattered evaluation…</a> |
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
 | 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
