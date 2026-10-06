@@ -40,10 +40,10 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 4 |
+| [In flight](#in-flight) (`active/`) | 5 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 6 |
-| [Planned](#planned) (`planned.md`) | 8 |
+| [Planned](#planned) (`planned.md`) | 7 |
 | [Backlog](#backlog) (`draft/`) | 228 |
 
 > **No batch in flight.**
@@ -254,6 +254,14 @@ Issued — each has an open GitHub issue and usually a branch. The full record f
 
 ```
 Use the start-dev skill. active/nnls_memo_scattered_backoff.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/organ_prompt_headings.md">Organ-named dashboard prompt headings</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/479">issue #479</a> — issued 2026-10-06 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/organ_prompt_headings.md
 ```
 
 </details>
@@ -629,7 +637,7 @@ Use the start-dev skill. active/colab_refinement_throughout.md
 Scoped but not started; some are not yet prompt files. Full detail in [`planned.md`](planned.md).
 
 <details>
-<summary><b>8</b> task(s)</summary>
+<summary><b>7</b> task(s)</summary>
 
 <details><summary>📋 <b>isothermal-ell-sph-oversampling-at-the-cusp</b> — found 2026-08-09 — planned — NOT yet a prompt file; file one via <code>/intake</code> before starting</summary>
 
@@ -683,14 +691,6 @@ Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_parti
 
 ```
 Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md
-```
-
-</details>
-
-<details><summary>📋 <b>organ-prompt-headings</b> — planned 2026-10-05 — planned — approved wording; former Brain blockers #469–#472 merged and closed 2026-10-06 (PyAutoBrain#473–#476), claims released</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautobrain/standardize_dashboard_orchestration_prompt_panel.md
 ```
 
 </details>
@@ -2476,9 +2476,9 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-06 | issued | <a href="active/organ_prompt_headings.md">Organ-named dashboard prompt headings</a> |
 | 2026-10-06 | issued | <a href="active/profiling_setup_wiki.md">Build catalogue-backed profiling setup wiki</a> |
 | 2026-10-06 | issued | <a href="active/profiling_setup_advice.md">Add evidence-qualified profiling setup lookup</a> |
-| 2026-10-05 | planned | <a href="planned.md#organ-prompt-headings">organ-prompt-headings</a> |
 | 2026-10-05 | filed | <a href="draft/feature/pyautopulse/profiling_setup_browser.md">Setup-first profiling: dashboard, evidence catalogue, scripts and…</a> |
 | 2026-10-04 | issued | <a href="active/nnls_memo_scattered_backoff.md">fnnls warm-start memo: per-key back-off on scattered evaluation…</a> |
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |

@@ -60,3 +60,24 @@
   - autolens_workspace: open PR 7d old
   - euclid_strong_lens_modeling_pipeline: open PR 7d old
 - heart-ack-evidence: Human "yeah do it" on 2026-10-06 explicitly acknowledged this reason set for both Phase5 PRs. Stale rehearsal (PyAutoNerves) remains recorded; no RED override.
+
+## organ-prompt-headings
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/479
+- issued: 2026-10-06
+- prompt: active/organ_prompt_headings.md
+- session: Codex (session ID unavailable)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/organ-prompt-headings
+- repos:
+  - PyAutoBrain: feature/organ-prompt-headings
+  - PyAutoEars: feature/organ-prompt-headings
+  - PyAutoHeart: feature/organ-prompt-headings
+  - PyAutoHands: feature/organ-prompt-headings
+  - PyAutoMemory: feature/organ-prompt-headings
+  - PyAutoPulse: feature/organ-prompt-headings
+  - PyAutoInsight: feature/organ-prompt-headings
+  - PyAutoNerves: feature/organ-prompt-headings
+  - PyAutoGut: feature/organ-prompt-headings
+  - PyAutoEyes: feature/organ-prompt-headings
+  - PyAutoScientist: feature/organ-prompt-headings
+- summary: Approved thirteen organ-named headings; preserve payloads/controls/work links; shared responsive heading and owner rollout. Human /prm.
