@@ -1,3 +1,15 @@
+# Readable profiling measurements and separate Numba likelihoods
+
+Merged https://github.com/PyAutoLabs/PyAutoPulse/pull/28 (17fcdd0416f1e231ffc08fb9c1ffc5e6da51394e); closes PyAutoPulse#27.
+
+Numba likelihoods have separate model pages, configuration choices and source links. Readable labels distinguish individual evaluations and batches. Recorded totals precede descending component timings; overlapping prefixes and repeated probes remain available in collapsed diagnostics. Compact rows expose raw keys and source links on expansion. No measurements, producer scripts or scientific libraries changed.
+
+Validation: 193 Python tests, Ruff, Chromium regression suite, offline reader checks, and captured A100 visual inspection. Every run on head e1c11a4f2e000e19affcd2d8f7b2f7ec4596b15f passed: lint run 37636345578/job112843463630 and Dashboard Refresh run37636345425/job112843478095. No skipped or pending jobs. Heart YELLOW acknowledged explicitly before shipping (two workspace manifest mismatches; absent current-source release rehearsal). Human /prm authorized merge and close-out.
+
+All approved scope completed. Preview and validation evidence preserved outside the task worktree under tmp/profiling-readable-metrics/.
+
+## Original prompt
+
 # Separate likelihood implementations and explain profiling measurements
 
 Type: bug
