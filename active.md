@@ -72,9 +72,13 @@
 - issued: 2026-10-07
 - prompt: active/profiling_layout_completion.md
 - session: Codex local
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-layout-completion
 - repos:
   - autolens_profiling: feature/profiling-layout-completion
 - summary: Approved Phase B wrapper retirement and likelihood-specific hazard documentation; preserve historical aliases and results.
-- resume: Audit legacy callers, implement in isolated workspace, validate and ship; parent retains Phase C.
+- resume: Phase B PR #390 open at bdfc553; 1136 tests pass, 6 skipped, focused 18 pass after final empty-package cleanup, seven import smokes and tooling checks pass; independent Sol CLEAN. Next human /prm; Phase C remains in parent.
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/390
+- heart-yellow-reasons: manifest drift: shared-standards blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml
+- heart-stale-reasons: release validation stale: source moved since rehearsal (PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens)
+- heart-ack: Human said "I acknowledge, go" in this session for the same exact reason set; repeated unchanged before Phase B ship. Development PR only; merge remains human /prm.

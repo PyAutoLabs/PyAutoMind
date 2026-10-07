@@ -58,3 +58,14 @@ Review-routing answer: Prepare a review handoff for Fable
 
 
 Continuation: ok thats good, continue
+
+## PR-open checkpoint — 2026-10-07
+
+PR: https://github.com/PyAutoLabs/autolens_profiling/pull/390
+Head: bdfc553 (feature/profiling-layout-completion)
+
+Removed 80 forwarding wrappers and three empty package markers. All 80 canonical scientific bodies, routing identities, baseline and archived result data are unchanged. The results README has one updated navigation link. Split imaging hazard guidance beside MGE/rectangular cells; moved parallel and streaming guides; repaired stale current commands and 29 HPC comment/display labels (commands/resources/output paths unchanged). Brain and assistant callers already consume canonical routes.
+
+Validation: 1136 passed, 6 skipped in the full Python suite; 18 focused route/loader tests repeated after the final empty-marker removal. Seven import smokes, runtime/latent dry runs, 47 wall contracts across 181 submissions, shell syntax, Ruff (265 files), catalogue/Pulse contract, dashboard/README/wiki idempotence and results layout pass. Independent Sol review CLEAN. Logs, review surface and verdict are in the task worktree bundle.
+
+Heart YELLOW: `manifest drift: shared-standards blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml`. Stale: `release validation stale: source moved since rehearsal (PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens)`. Same exact reason set already acknowledged by the human in this session; no new reasons. Next human /prm after CI; Phase C remains pending in parent.

@@ -6,7 +6,7 @@ Repos: autolens_profiling, PyAutoPulse
 Consequence: judge
 Autonomy: human-required
 Filed: 2026-10-07
-Status: plan approved; Phase A merged in #388; Phases B/C pending
+Status: Phase A merged in #388; Phase B PR #390 awaiting merge; Phase C pending
 
 ## Phase progress
 
@@ -14,7 +14,9 @@ Human approved the concrete plan with "ok go". Phase A merged in
 https://github.com/PyAutoLabs/autolens_profiling/pull/388 on 2026-10-07;
 issue #387 is closed. Completion and validation:
 complete/2026/10/profiling-dashboard-completion.md.
-Phases B/C remain pending under the approved plan. No scientific campaign or
+Phase B is active/profiling_layout_completion.md (issue #389), implemented in
+https://github.com/PyAutoLabs/autolens_profiling/pull/390 and awaiting human merge.
+Phase C remains pending under the approved plan. No scientific campaign or
 Fable review occurred. Published-site verification follows deployment.
 
 ## Current direction

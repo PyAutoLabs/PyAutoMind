@@ -258,7 +258,7 @@ Use the start-dev skill. active/dashboard_freshness.md
 
 </details>
 
-<details><summary>📋 <a href="active/profiling_layout_completion.md">Finish profiling source and hazard layout consolidation</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/389">issue #389</a> — issued 2026-10-07 — workspace-dev</summary>
+<details><summary>📋 <a href="active/profiling_layout_completion.md">Finish profiling source and hazard layout consolidation</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/389">issue #389</a> — issued 2026-10-07 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/390">autolens_profiling#390</a></summary>
 
 ```
 Use the start-dev skill. active/profiling_layout_completion.md
@@ -274,7 +274,7 @@ Use the start-dev skill. active/pyautofit_add_a_regression_test_for_fork.md
 
 </details>
 
-<details><summary>📋 <a href="active/pyautolens_single_image_recovery_in_result_image.md">PyAutoLens: single-image recovery in <code>Result.image_plane_multiple_image_positions_from</code> is blind to inf-padded JAX solver output</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/771">issue #771</a> — issued 2026-10-07 — library-dev</summary>
+<details><summary>📋 <a href="active/pyautolens_single_image_recovery_in_result_image.md">PyAutoLens: single-image recovery in <code>Result.image_plane_multiple_image_positions_from</code> is blind to inf-padded JAX solver output</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/771">issue #771</a> — issued 2026-10-07 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/772">PyAutoLens#772</a> — ⏳ pending release: PyAutoLens</summary>
 
 ```
 Use the start-dev skill. active/pyautolens_single_image_recovery_in_result_image.md
@@ -422,6 +422,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoLens**
 
+- [PyAutoLens#772](https://github.com/PyAutoLabs/PyAutoLens/pull/772) — `active/pyautolens_single_image_recovery_in_result_image.md`
 - [PyAutoLens#750](https://github.com/PyAutoLabs/PyAutoLens/pull/750) — `complete/2026/09/interferometer-mge-w-tilde-route.md`
 - [PyAutoLens#757](https://github.com/PyAutoLabs/PyAutoLens/pull/757) — `complete/2026/09/interferometer-sparse-precomputed-data-term.md`
 - [PyAutoLens#754](https://github.com/PyAutoLabs/PyAutoLens/pull/754) — `complete/2026/09/jax-grad-nan-zero-components.md`
