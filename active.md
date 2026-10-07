@@ -69,3 +69,16 @@
 - conflict-override: PyAutoLens also claimed by scribbler-wave2-radial-panels-regrid (#770, __init__.py re-export only; no file overlap) — orchestrator decision 2026-10-07
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/772
 - pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/772
+
+## profiling-browser-completion
+- issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/21
+- issued: 2026-10-07
+- prompt: active/profiling_browser_completion.md
+- session: Codex local
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-browser-completion
+- repos:
+  - PyAutoPulse: feature/profiling-browser-completion
+- summary: Approved Phase C setup-browser parity, preserving captured provenance and scientific qualifications.
+- coordination: Human explicitly said "Coordinate in parallel" with dashboard-freshness (#486). This branch owns setup_browser.* and browser tests; freshness owns board/ingest/workflows. Re-render generated dashboard from merged sources when reconciling.
+- resume: Port measurement navigation and qualified hazards, test real data and multi-instance routes, then ship.

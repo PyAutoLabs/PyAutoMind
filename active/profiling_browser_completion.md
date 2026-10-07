@@ -6,6 +6,8 @@ Repos: PyAutoPulse
 Consequence: judge
 Autonomy: human-required
 Filed: 2026-10-07
+Issued: 2026-10-07
+Issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/21
 
 Primary: @PyAutoPulse. Standalone organ/workspace change.
 Parent: draft/feature/autolens_profiling/profiling_redesign_completion.md
