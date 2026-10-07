@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 2 in flight",
-  "updated": "2026-10-07T07:59:14Z",
+  "updated": "2026-10-07T07:59:52Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Shared dashboard freshness footer \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/487",
+      "prompt": "Use the start-dev skill. active/dashboard_freshness.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#615 \u2014 nnls-memo-scattered-backoff",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/615",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#606 \u2014 Shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/606",
       "prompt": null
     }
   ]

@@ -250,7 +250,7 @@ Use the start-dev skill. draft/refactor/pyautofit/remove_eden_packaging_tooling.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/dashboard_freshness.md">Shared dashboard freshness footer</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/486">issue #486</a> — issued 2026-10-07 — library-dev</summary>
+<details><summary>📋 <a href="active/dashboard_freshness.md">Shared dashboard freshness footer</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/486">issue #486</a> — issued 2026-10-07 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/487">PyAutoBrain#487</a>, <a href="https://github.com/PyAutoLabs/PyAutoEars/pull/18">PyAutoEars#18</a>, <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/289">PyAutoHeart#289</a>, <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/305">PyAutoHands#305</a>, <a href="https://github.com/PyAutoLabs/PyAutoMemory/pull/120">PyAutoMemory#120</a>, <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/22">PyAutoPulse#22</a>, <a href="https://github.com/PyAutoLabs/PyAutoInsight/pull/10">PyAutoInsight#10</a>, <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/190">PyAutoNerves#190</a>, <a href="https://github.com/PyAutoLabs/PyAutoGut/pull/26">PyAutoGut#26</a>, <a href="https://github.com/PyAutoLabs/PyAutoEyes/pull/22">PyAutoEyes#22</a>, <a href="https://github.com/PyAutoLabs/PyAutoScientist/pull/47">PyAutoScientist#47</a></summary>
 
 ```
 Use the start-dev skill. active/dashboard_freshness.md
