@@ -47,10 +47,16 @@ name: Propagate the canonical hooks
 # carries real guidance. It runs only on `workflow_dispatch`, never on the push
 # trigger, so the deletion wave is always a human act: dispatch with
 # `dry_run: true` first (the diffs are reported, nothing is pushed), then for
-# real. Only a tracked CLAUDE.md that the function removed is staged; nothing
-# else about what the job writes changes. Repos outside its reach are cleaned
-# by hand: PyAutoMind (never a target, below) and every repo carrying
-# `session_hook: false` (not a target either).
+# real. The removal covers each repo's root AND every tracked folder below it
+# whose CLAUDE.md sits beside an AGENTS.md (PyAutoMind#484 — a session started
+# inside such a folder loses every ancestor AGENTS.md). Only a tracked
+# CLAUDE.md that the function removed is staged — the job reads them back from
+# `git ls-files --deleted`, since nothing else here deletes a file; nothing else
+# about what the job writes changes. Repos outside its reach are cleaned by
+# hand: PyAutoMind (never a target, below) and any repo carrying
+# `session_hook: false` (not a target either). None needs it today: PyAutoMind
+# carries no CLAUDE.md, and euclid_assistant — the one `session_hook: false`
+# repo — was hand-cleaned (a39e35c).
 
 on:
   push:
@@ -220,12 +226,15 @@ jobs:
             for rel in .claude/hooks/session-start.sh .claude/hooks/end-at-deliverable.sh .claude/settings.json .codex/hooks.json AGENTS.md; do
               [ -e "$repo/$rel" ] && git -C "$repo" add -- "$rel"
             done
-            # Stage the pointer's deletion only: a tracked CLAUDE.md that is now
-            # gone was removed by remove_claude_md_pointers (nothing else here
-            # deletes files). A content-bearing one is still on disk, unstaged.
-            if [ ! -e "$repo/CLAUDE.md" ] && git -C "$repo" ls-files --error-unmatch -- CLAUDE.md >/dev/null 2>&1; then
-              git -C "$repo" rm --cached --quiet -- CLAUDE.md
-            fi
+            # Stage the pointers' deletions only — at the root and in every
+            # nested folder: a tracked CLAUDE.md that is now gone was removed by
+            # remove_claude_md_pointers (nothing else here deletes files). A
+            # content-bearing one is still on disk, unstaged. On a push run the
+            # removal never ran, so this stages nothing.
+            git -C "$repo" ls-files -z --deleted -- CLAUDE.md '*/CLAUDE.md' \
+              | while IFS= read -r -d '' gone; do
+                  git -C "$repo" rm --cached --quiet -- "$gone"
+                done
 
             # A repo that .gitignore's .claude/ would have `git add` skip the
             # file in silence, and this job would then report it "current" while

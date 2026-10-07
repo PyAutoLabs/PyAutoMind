@@ -69,10 +69,12 @@ allowlisted the entry, rather than breaking that repo's CI with a path it
 rejects.
 
 --write also REMOVES one thing: the retired `CLAUDE.md` -> `AGENTS.md` pointer
-(PyAutoMind#482). Claude Code loads AGENTS.md natively now, and any CLAUDE.md in
-the cwd or an ancestor makes it ignore every AGENTS.md, so the pointer hides the
-file it points at. Only a content-free pointer is deleted; a CLAUDE.md carrying
-real guidance is reported and left for a human (see "CLAUDE.md retirement").
+(PyAutoMind#482), at a repo's root and in every tracked folder below it that has
+an AGENTS.md (PyAutoMind#484). Claude Code loads AGENTS.md natively now, and any
+CLAUDE.md in the cwd or an ancestor makes it ignore every AGENTS.md, so the
+pointer hides the file it points at. Only a content-free pointer is deleted; a
+CLAUDE.md carrying real guidance is reported and left for a human (see
+"CLAUDE.md retirement").
 
 --check (always run) verifies, against the manifest:
 
@@ -108,8 +110,10 @@ real guidance is reported and left for a human (see "CLAUDE.md retirement").
     deliverable block (a repo without it is reported); --write inserts the
     markers itself under an existing deliverable block
   * the CLAUDE.md retirement (leg "CLAUDE.md → AGENTS.md pointers") — a
-    checked-out repo that has an AGENTS.md has NO CLAUDE.md; each one still
-    present is named, as a removable pointer or as content to move by hand
+    checked-out repo that has an AGENTS.md has NO CLAUDE.md, and neither has
+    any tracked folder below its root that has one (`git ls-files`, so
+    untracked/ignored trees are never read); each one still present is
+    named, as a removable pointer or as content to move by hand
   * target-repo layout lints — every checked-out repo that lints its own
     top-level entries allowlists the `.claude/` that --write installs (a repo
     that does not is skipped by --write and named here)
@@ -369,15 +373,32 @@ def load_deliverable_hook(mind_root):
 # AGENTS.md.
 CLAUDE_IMPORT_RE = re.compile(r"(?m)^@AGENTS\.md\s*$")
 
-# The one prose paragraph the retired pointers carried beside the import. It is
-# boilerplate ABOUT the pointer, not guidance, so a CLAUDE.md holding only this
-# (plus headings and comments) is still content-free. Compared with whitespace
-# normalised, so the two line-wrappings in the wild both match. Anything else is
-# content, and content is never deleted by a script.
+# The prose paragraphs the retired pointers carried beside the import. Each is
+# boilerplate ABOUT the pointer, not guidance, so a CLAUDE.md holding only one of
+# them (plus headings and comments) is still content-free. Compared with
+# whitespace normalised, so every line-wrapping in the wild matches, and matched
+# EXACTLY — a new wording is content until it is listed here. The first is the
+# repo-root shape; the rest are the nested-folder shapes (PyAutoMind#484: the
+# assistant `scripts/` and sub-wiki folders, the Memory sub-wikis and a
+# workspace_test folder), each a pointer whose sibling AGENTS.md carries
+# everything the sentence mentions. Anything else is content, and content is
+# never deleted by a script.
+_CLAUDE_POINTER_TAIL = (
+    "Claude Code loads them via the import below; if your tool does not "
+    "process `@`-imports, open `AGENTS.md` in this directory and read it "
+    "directly."
+)
 CLAUDE_POINTER_BOILERPLATE = (
-    "The canonical, agent-agnostic instructions live in `AGENTS.md`. Claude "
-    "Code loads them via the import below; if your tool does not process "
-    "`@`-imports, open `AGENTS.md` in this directory and read it directly.",
+    "The canonical, agent-agnostic instructions live in `AGENTS.md`. "
+    + _CLAUDE_POINTER_TAIL,
+    "The canonical instructions for this folder live in `AGENTS.md`. "
+    + _CLAUDE_POINTER_TAIL,
+    "The canonical schema and usage rules for this literature sub-wiki live "
+    "in `AGENTS.md`. " + _CLAUDE_POINTER_TAIL,
+    "The canonical scope and usage rules for this Euclid sub-wiki live in "
+    "`AGENTS.md` (schema shared with `../literature/AGENTS.md`). "
+    + _CLAUDE_POINTER_TAIL,
+    "Shared instructions live in [AGENTS.md](AGENTS.md).",
 )
 HTML_COMMENT_RE = re.compile(r"<!--.*?-->", re.S)
 
@@ -1356,6 +1377,12 @@ def check_hub_blurb(root, repos):
 # (not-checked-out) repos are skipped, exactly like the map-block generation, so
 # this runs cleanly in a partial/web checkout; repos with no AGENTS.md are out
 # of scope (a CLAUDE.md there may be the repo's only guidance).
+#
+# Nested folders (PyAutoMind#484): the same rule applies to every TRACKED
+# CLAUDE.md below a repo's root — a session started inside such a folder loses
+# every ancestor AGENTS.md. Discovery is `git ls-files`, never a directory walk,
+# and a nested CLAUDE.md with no sibling AGENTS.md is out of scope exactly like
+# a root one in a repo with no AGENTS.md.
 
 
 def claude_md_is_pointer(text):
@@ -1379,10 +1406,44 @@ def claude_md_is_pointer(text):
     return prose == "" or prose in CLAUDE_POINTER_BOILERPLATE
 
 
+def tracked_nested_claude_mds(repo_dir):
+    """Every TRACKED `CLAUDE.md` below `repo_dir`'s root, as repo-relative
+    paths that still exist on disk.
+
+    Read from `git ls-files`, never a directory walk: untracked and ignored
+    trees (`tmp/`, `output/`, `.worktrees/`, a virtualenv) are not the repo's
+    content and are never in scope. A checkout that is not a git repository
+    (or where git fails) yields nothing — the root check still runs. A tracked
+    file already deleted from the working tree is skipped, so the removal is
+    idempotent before its deletion is committed.
+    """
+    if not (repo_dir / ".git").exists():
+        # Not its own git checkout (a fixture, a copied tree): without this,
+        # `git -C` would climb to an enclosing repository and list ITS files.
+        return []
+    try:
+        proc = subprocess.run(
+            ["git", "-C", str(repo_dir), "ls-files", "-z", "--", "*/CLAUDE.md"],
+            capture_output=True, text=True, check=False,
+        )
+    except OSError:
+        return []
+    if proc.returncode != 0:
+        return []
+    return sorted(
+        rel
+        for rel in proc.stdout.split("\0")
+        if rel and Path(rel).name == "CLAUDE.md" and (repo_dir / rel).is_file()
+    )
+
+
 def stray_claude_mds(root, repos):
-    """`(name, path, is_pointer)` for every checked-out repo that has an
-    AGENTS.md AND a CLAUDE.md — the one input both the check and the removal
-    read, so they cannot disagree about which files are in scope."""
+    """`(label, path, is_pointer)` for every CLAUDE.md that sits beside an
+    AGENTS.md in a checked-out repo — at the repo root, or (PyAutoMind#484) in
+    any tracked folder below it. The one input both the check and the removal
+    read, so they cannot disagree about which files are in scope. `label` is
+    the repo name for a root file and `<repo>/<relative path>` for a nested
+    one."""
     found = []
     for name in repos:
         repo_dir = repo_checkout(root, name)
@@ -1392,29 +1453,40 @@ def stray_claude_mds(root, repos):
             # checkouts" leg owns it — so this narrows the leg, not the
             # coverage.
             continue
-        if not (repo_dir / "AGENTS.md").exists():
-            continue  # no AGENTS.md: a CLAUDE.md there is not a pointer
-        claude = repo_dir / "CLAUDE.md"
-        if claude.is_file() or claude.is_symlink():
-            text = claude.read_text(errors="replace") if claude.is_file() else ""
-            found.append((name, claude, claude_md_is_pointer(text)))
+        if (repo_dir / "AGENTS.md").exists():
+            claude = repo_dir / "CLAUDE.md"
+            if claude.is_file() or claude.is_symlink():
+                text = claude.read_text(errors="replace") if claude.is_file() else ""
+                found.append((name, claude, claude_md_is_pointer(text)))
+        # The same rule one level down: a session started INSIDE a folder whose
+        # CLAUDE.md sits beside an AGENTS.md loses every ancestor AGENTS.md.
+        # A nested CLAUDE.md with no sibling AGENTS.md is out of scope (it may
+        # be that folder's only guidance) and is neither reported nor touched.
+        for rel in tracked_nested_claude_mds(repo_dir):
+            claude = repo_dir / rel
+            if not (claude.parent / "AGENTS.md").exists():
+                continue
+            text = claude.read_text(errors="replace")
+            found.append((f"{name}/{Path(rel).as_posix()}", claude,
+                          claude_md_is_pointer(text)))
     return found
 
 
 def check_claude_md_pointers(root, repos):
-    """A repo with an AGENTS.md must have no CLAUDE.md (it would hide AGENTS.md
-    from Claude Code). Each survivor is named, split by what to do about it."""
+    """A folder with an AGENTS.md must have no CLAUDE.md (it would hide AGENTS.md
+    from Claude Code) — the repo root and every tracked folder below it. Each
+    survivor is named, split by what to do about it."""
     problems = []
-    for name, _claude, is_pointer in stray_claude_mds(root, repos):
+    for label, _claude, is_pointer in stray_claude_mds(root, repos):
         if is_pointer:
             problems.append(
-                f"'{name}': has a retired CLAUDE.md pointer, which hides AGENTS.md "
+                f"'{label}': has a retired CLAUDE.md pointer, which hides AGENTS.md "
                 "from Claude Code — remove it (`repos_sync.py --write` or the "
                 "session_hook_propagate job)"
             )
         else:
             problems.append(
-                f"'{name}': CLAUDE.md carries content beyond the AGENTS.md import "
+                f"'{label}': CLAUDE.md carries content beyond the AGENTS.md import "
                 "— move it into AGENTS.md and delete CLAUDE.md by hand (never "
                 "deleted automatically)"
             )
@@ -1432,9 +1504,12 @@ def repos_without_agents_md(root, repos):
 
 
 def remove_claude_md_pointers(root, repos):
-    """Delete every content-free CLAUDE.md pointer in a checked-out repo that has
-    an AGENTS.md; leave (and name) any CLAUDE.md that carries content. Returns
-    the removed paths. Idempotent: a repo with no CLAUDE.md is untouched."""
+    """Delete every content-free CLAUDE.md pointer that sits beside an AGENTS.md
+    in a checked-out repo — at the root or in any tracked folder below it; leave
+    (and name) any CLAUDE.md that carries content. Returns the removed paths.
+    Idempotent: a repo with no such CLAUDE.md is untouched. Deletes from the
+    working tree only — staging the deletion is the caller's act (the
+    propagation job stages `git ls-files --deleted`)."""
     removed = []
     for _name, claude, is_pointer in stray_claude_mds(root, repos):
         if is_pointer:
