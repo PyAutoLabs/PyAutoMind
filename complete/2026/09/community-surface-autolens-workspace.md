@@ -13,7 +13,6 @@ Updated community support documentation and issue templates, preserving reposito
 All exact-head workflows and jobs passed, including Python 3.12 and 3.13 smoke tests, Navigator checks, and size guard.
 Git ancestry verified against origin/main before close-out.
 
-- pending-release: autolens_workspace@https://github.com/PyAutoLabs/autolens_workspace/pull/570
 
 The shared worktree remains until the final Mind policy PR is merged.
 

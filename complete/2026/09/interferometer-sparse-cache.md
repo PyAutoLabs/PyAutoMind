@@ -3,7 +3,6 @@
 - completed: 2026-09-27
 - epic: interferometer-likelihood-campaign
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/582 (merge e281abf3, 2026-09-27; 3/3 unittest jobs green)
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/582
 - summary: |
     `data_vector`, `curvature_matrix` and `curvature_matrix_diag` on the interferometer sparse
     inversions (`autoarray/inversion/inversion/interferometer/sparse.py`, including a numba

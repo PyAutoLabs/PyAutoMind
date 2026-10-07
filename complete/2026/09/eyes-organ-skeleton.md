@@ -4,8 +4,6 @@
 - epic: pyautoeyes-birth (phase 1b)
 - library-pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/2
 - library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/428
-- pending-release: PyAutoEyes@https://github.com/PyAutoLabs/PyAutoEyes/pull/2
-- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/428
 - summary: PyAutoEyes is stripped to the cross-project dashboard skeleton. The lens scripts, dataset and GALLERY.md are gone; their history now lives on PyAutoLabs/autolens_visualization (PR #1). What is left is `registry.yaml` (one lens instance), the `eyes/` package (registry, manifest reader, board builder, check), `bin/pyauto-eyes`, `dashboard.md/.html`, hermetic tests and lint/pages/refresh workflows. The organ renders nothing, judges nothing and copies nothing: it reads each project's tracked `viz_manifest.yaml` from its raw GitHub URL and links to its PNGs. Brain#428 adds the PyAutoEyes `test_witness` row to `config/policy.yaml`.
 - verification: after the merge, `bin/pyauto-eyes check` on main printed `check: OK` (registry 1 instance; lens manifest schema 1, 40 figures; all 40 raw URLs resolve; dashboard current). `lint` on the merge commit passed.
 - human-steps: (1) enable GitHub Pages on PyAutoEyes with source "GitHub Actions". The merge-commit `Pages Dashboard` run 36480443757 failed at configure-pages with "Resource not accessible by integration" because Pages is not enabled; re-run it after enabling. (2) In a later PR, remove the lychee `pyautolabs.github.io/PyAutoEyes` exclusion in `.github/workflows/lint.yml`. (3) PAT_PYAUTOLABS must be granted to autolens_visualization and must cover PyAutoEyes, or render.yml's `eyes-refresh` dispatch warns and skips.

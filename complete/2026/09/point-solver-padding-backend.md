@@ -3,8 +3,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/759
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/760
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/330
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/760
-- release-gate: PyAutoLens
 
 ## Shipped
 

@@ -6,9 +6,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/599
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/642
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/762
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/599
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/642
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/762
 
 ### What shipped
 - **PyAutoArray#599** (merge 176f61e7) — `aa.DatasetInterface(data_term=)`: per-interface χ² data term that `AbstractInversionInterferometer.fast_chi_squared` reads in preference to `sparse_operator.data_term` when `data is None`; `aa.util.inversion_interferometer.sparse_profile_terms_from(sparse_operator, image, extent_index, xp)` → `(W̃i, d̃−W̃i, data_term−2iᵀd̃+iᵀW̃i)` from one `operated_matrix_slim_from` product; `aa.FitInterferometer.sparse_chi_squared` hook (`None` by default) consulted by `chi_squared` on an array-free dataset before the `DatasetException`; maps still raise. `test_autoarray` 1903.

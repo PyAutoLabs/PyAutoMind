@@ -10,11 +10,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/179
 - library-pr: https://github.com/PyAutoLabs/PyAutoGut/pull/15
 - library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/48
-- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/430
-- pending-release: autogalaxy_visualization@https://github.com/PyAutoLabs/autogalaxy_visualization/pull/1
-- pending-release: PyAutoMind@https://github.com/PyAutoLabs/PyAutoMind/pull/453
-- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/243
-- pending-release: PyAutoEyes@https://github.com/PyAutoLabs/PyAutoEyes/pull/4
 
 ### What shipped
 - **autogalaxy_visualization#1** (merge a0b0177a) — the new project repo:

@@ -9,9 +9,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/250 (merge `7fd1953d`, 2026-09-27)
 - workspace-pr: https://github.com/PyAutoLabs/autocti_workspace/pull/34 (merge `7aa79ac6`, 2026-09-27)
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/578 (merge `bf77575d`, 2026-09-30)
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/630
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/751
-- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/176
 - merge: shipped in two waves (6/7 on 2026-09-27; autolens_workspace#578 on 2026-09-30 by the human's `/prm`)
 
 ### Summary

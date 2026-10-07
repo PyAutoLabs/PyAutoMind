@@ -8,7 +8,6 @@ Validation: 1227 passed in 71.20s (0:01:11); ten viewport/theme browser cases; a
 
 Local evidence: tmp/board-navigation/ (test logs, CI verdict and renders/PyAutoHeart/ browser screenshots).
 
-- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/283
 
 ## Original prompt
 

@@ -4,7 +4,6 @@
 - source: https://github.com/orgs/PyAutoLabs/discussions/13
 - parent: complete/2026/09/interferometer-streaming-visibilities.md
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/757
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/757
 
 ### What shipped
 - **PyAutoLens#757** (merge 092897e4) — PyAutoLens parity for Discussion #13 phase 1: `FitInterferometer.tracer_to_inversion` gated on autogalaxy's `uses_precomputed_data_term_from` (sparse operator with `data_term`, dataset's own data/noise map, no non-linear light profile) and passes `data=None`, so sparse pixelization-only lens fits never allocate `profile_visibilities` / `profile_subtracted_visibilities` per likelihood call; `FitInterferometer.inversion_with_data` (shallow copy carrying `fit.data`, shares the reconstruction) for output paths; the interferometer visualizer uses it; `profile_visibilities` / `profile_subtracted_visibilities` are `cached_property`. Tests mirror autogalaxy's phase-1 additions plus a bit-equality control against the gate forced off.

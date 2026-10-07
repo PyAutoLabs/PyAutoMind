@@ -10,7 +10,6 @@ Validation: 1177 local tests passed; tenant firewall passed; real-snapshot repla
 
 Human acknowledged the exact two generated-map/front-door Heart YELLOW reasons before shipping and invoked /prm to authorize merge and closeout.
 
-- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/271
 
 The merged code needs the next local publication and Pages render to update live evidence. No scientific workspace API changes; scientific smoke not applicable.
 

@@ -9,8 +9,6 @@ Added direct S/N threshold over-sampling helper and clarified Galaxy adapt-image
 - https://github.com/PyAutoLabs/PyAutoArray/pull/606
 - https://github.com/PyAutoLabs/PyAutoGalaxy/pull/644
 
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/606
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/644
 
 Human authorized linked PRs, development shipping with exact Heart YELLOW acknowledgment, then merge and full close-out. Every head run and matrix leg was checked; merge receipts are recorded by GitHub. No release performed. Shared bundle worktree cleanup follows all four members; logs and data preserved under organs/PyAutoMind/tmp/autoarray-bundle-1-closeout/.
 

@@ -4,8 +4,6 @@
 - source: https://github.com/orgs/PyAutoLabs/discussions/13
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/589
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/637
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/589
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/637
 
 ### What shipped (phase 1 of Discussion #13, HRSAstro)
 - **PyAutoArray#589** (merge 6d986bd) — `InterferometerSparseOperator` carries `data_term` (sum d²/σ²) and `noise_normalization` (sum log 2πσ²), computed once by `apply_sparse_operator`; `fast_chi_squared` and `FitInterferometer.noise_normalization` read the cached scalars per likelihood call (per-call reductions remain the fallback, bit-identical). New chunked primitive: `aa.SparseTerms` (W~, dirty image, dirty beam, sum of weights, the two scalars, n_vis; field-wise `__add__`), `sparse_terms_from_chunks(chunks, ...)` over `(uv_wavelengths, data, noise_map)` chunks, `InterferometerSparseOperator.from_sparse_terms`, `Interferometer.apply_sparse_operator_from_chunks`. `DatasetInterface(data=None)` allowed when the operator carries `data_term`. `check_noise_map_real_imag_equal` runs once per chunk. Parity: chunked vs one-shot W~ 5.8e-16 rel, dirty image 3.0e-15, scalars ≤2.7e-16; `fast_chi_squared(data=None)` vs array path 1.5e-16 rel.

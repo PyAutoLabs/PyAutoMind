@@ -5,8 +5,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/584
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/753
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/335
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/584
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/753
 - summary: |
     Phase 4c of the point-source CPU-speed epic. MAX_CONTAINING_SIZE rose from 15 to 20,
     which gives 3 triangles of headroom over the observed maximum of 17. The human chose 20

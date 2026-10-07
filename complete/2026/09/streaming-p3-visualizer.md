@@ -6,9 +6,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/597
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/640
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/761
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/597
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/640
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/761
 
 ### What shipped
 - **PyAutoArray#597** (merge c1d85810) — `aa.fit.fit_interferometer.dirty_model_image_natural_from(dataset, image)` (W̃·m/Σw, no transformer); array-free branches in `subplot_interferometer_dataset` / `subplot_interferometer_dirty_images` (1×2 natural dirty image / beam, same filenames), `fits_interferometer` (guards `data`, natural extensions), `subplot_fit_interferometer` / `subplot_fit_interferometer_dirty_images` (`model_image=None`); `inversion_plots._recon_array` reads `mapped_reconstructed_data_dict` for array-free interferometer inversions and both handlers catch `InversionException` (a live escape bug). `test_autoarray` 1898.

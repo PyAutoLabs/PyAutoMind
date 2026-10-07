@@ -8,7 +8,6 @@ Validation: 189 passed in 7.62s; ten viewport/theme browser cases; all workflow 
 
 Local evidence: tmp/board-navigation/ (test logs, CI verdict and renders/PyAutoPulse/ browser screenshots).
 
-- pending-release: PyAutoPulse@https://github.com/PyAutoLabs/PyAutoPulse/pull/15
 
 ## Original prompt
 

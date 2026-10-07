@@ -7,7 +7,6 @@ Phase 4b replaced the JAX PointSolver's step-0 `vertices[indices]` materialisati
 - parent: complete/2026/09/point-source-cpu-p4.md (phase 4a; was `active/pointsolver_cpu_speed_phase_4.md`, issue autolens_profiling#314)
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/580
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/330
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/580
 
 ## Shipped
 

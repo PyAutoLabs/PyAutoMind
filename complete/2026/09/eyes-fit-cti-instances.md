@@ -11,12 +11,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/180
 - library-pr: https://github.com/PyAutoLabs/PyAutoGut/pull/16
 - library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/49
-- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/431
-- pending-release: autofit_visualization@https://github.com/PyAutoLabs/autofit_visualization/pull/1
-- pending-release: autocti_visualization@https://github.com/PyAutoLabs/autocti_visualization/pull/1
-- pending-release: PyAutoMind@https://github.com/PyAutoLabs/PyAutoMind/pull/456
-- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/244
-- pending-release: PyAutoEyes@https://github.com/PyAutoLabs/PyAutoEyes/pull/5
 
 ### What shipped
 - **autofit_visualization#1** (merge b2063ad) — the fit project repo: 4 flat producers (`samples`, `model`, `ep`, `visualizer`) rendering 49 tracked PNGs on `gaussian_x1` with real cheap searches (both corner plots for DynestyStatic/Nautilus/Emcee/Zeus, six LBFGS MLE variants, MultiStartAdam figure-of-merit; `ModelPlotter` variants; the EP graph/state/factor figures and `EPPlotter`; `VisualizerExample`); tracked JSON datasets; all-true config with `model_figure` and `force_visualize_overwrite`; `lint.yml` + `render.yml` (`pyautofit-release`, fires `eyes-refresh`). No `instruments/` (1D toy data). Full render 2–5 min (EP is the slow domain).

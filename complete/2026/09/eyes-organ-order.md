@@ -10,14 +10,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/177
 - library-pr: https://github.com/PyAutoLabs/PyAutoGut/pull/13
 - library-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/35
-- pending-release: PyAutoMind@https://github.com/PyAutoLabs/PyAutoMind/pull/449
-- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/427
-- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/241
-- pending-release: PyAutoHands@https://github.com/PyAutoLabs/PyAutoHands/pull/291
-- pending-release: PyAutoCortex@https://github.com/PyAutoLabs/PyAutoCortex/pull/46
-- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/177
-- pending-release: PyAutoGut@https://github.com/PyAutoLabs/PyAutoGut/pull/13
-- pending-release: PyAutoScientist@https://github.com/PyAutoLabs/PyAutoScientist/pull/35
 
 Phase 0 of `pyautoeyes-birth` (PyAutoMind#437) had put Eyes after Gut. The human ruled
 on 2026-09-25 that the canonical organ order is **Brain, Mind, Cortex, Memory, Eyes,

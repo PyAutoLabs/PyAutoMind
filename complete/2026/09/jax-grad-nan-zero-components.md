@@ -9,8 +9,6 @@
 
 ## Pending release
 
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/634
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/754
 
 ## Follow-ups
 

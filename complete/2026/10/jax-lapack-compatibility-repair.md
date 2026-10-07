@@ -9,7 +9,6 @@
 - pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/184
 - merge: PyAutoNerves 82a60579a1e715e62094c9d3e14f3a8e10540970
 - library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/297
-- pending-release: PyAutoHands@https://github.com/PyAutoLabs/PyAutoHands/pull/297
 - merge: PyAutoHands 5e42698d6f4d51912624c4c93bd3afe9fdf41d63
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1659
 - pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1659
@@ -18,7 +17,6 @@
 - pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/647
 - merge: PyAutoGalaxy 1aa5aa7f2d52d61c6554e0dc7d7cbc70d0b85eb5
 - library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/280
-- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/280
 - merge: PyAutoHeart 4920ab98a8a42026ff91545b890a9ff64de43e11
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/612
 - pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/612
@@ -27,7 +25,6 @@
 - pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/766
 - merge: PyAutoLens b695e57b69d168e33b760b169c29cfcf0d9cd8f9
 - library-pr: https://github.com/PyAutoLabs/PyAutoCTI/pull/112
-- pending-release: PyAutoCTI@https://github.com/PyAutoLabs/PyAutoCTI/pull/112
 - merge: PyAutoCTI 5e876a01fed677d3923e501ca6b1cc79ed0e1bbe
 
 All eight PRs merged after all28 jobs across12 current-head workflow runs passed, mergeability CLEAN, freeze clear, and independent Sol review CLEAN. Git ancestry proves every claimed branch is merged.9255 local tests passed (2 skips,5 xfails). CPU/CUDA original-likelihood and numerical probes pass0.9.2/0.11.2; hosted37210342253 passes both withPython3.12.14 and113 unchanged non-JAX pins.25 resolver cases plus fresh normal resolution pass.

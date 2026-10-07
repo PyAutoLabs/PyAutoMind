@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/276
 - completed: 2026-10-04
 - library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/277
-- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/277
 - summary: Select the latest distinct prior unit timing run per repository/Python leg within the current epoch. Preserve cache guards, unknown chronology and legacy callers.
 - validation: 111 focused tests and 1183 full tests passed; independent review CLEAN. All exact-head GitHub jobs passed (Python 3.12 and 3.13, run 37200820333). Isolated real-data replay restored 289/300 comparisons, retaining 11 unknown comparisons and one slowdown.
 - merge: Human-authorized /prm merged commit 7874594 via merge commit 51c329f497a25113e862e3dff096dffa895da980. Git ancestry proves the entire task branch is merged.

@@ -6,7 +6,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/591
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/253
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/581
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/591
 
 ### What shipped
 - **PyAutoArray#591** (merge d4298445) — `AbstractInversion.data_subtracted_dict` raises a clear `exc.InversionException` naming `fit.inversion_with_data` when the inversion was built without data (was `TypeError` / `{mapper: None}`); `subplot_of_mapper` / `subplot_mappings` catch it and skip the panel; `check_noise_map_real_imag_equal` uses `atol=0.0` (scale-free); `apply_sparse_operator` computes the cached `data_term` from complex128-promoted copies so one-shot equals `sparse_terms_from_chunks` for complex64 data (700140007.0, was 700140000.0). Four tests, each red with its fix reverted; `test_autoarray` 1765 passed.

@@ -22,7 +22,6 @@ Completed the shared instrumentation prerequisite for the point-source CPU and G
 
 The CPU speed-up campaign may now profile and iterate against this baseline. The GPU campaign must first run the preserved harness on A100 before drawing optimization conclusions.
 
-- pending-release: autolens_profiling@https://github.com/PyAutoLabs/autolens_profiling/pull/293
 
 ## Original prompt
 

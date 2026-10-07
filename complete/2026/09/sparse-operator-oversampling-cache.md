@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/585
 - completed: 2026-09-30
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/586 (merge `134a0741`, head `4a0ca313`, 7 files, +232/−6)
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/586
 - merge: by the human's `/prm` on green; post-merge close-out by subagent
 
 ### Summary

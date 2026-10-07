@@ -3,7 +3,6 @@
 - completed: 2026-09-30
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/595 (merge 7a89e19a0, head 42c52358)
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/357 (merge 4652580b2, head ad365df)
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/595
 - epic: linear-solver-programme (phase 2)
 - summary: |
     Phase 2 of epic linear-solver-programme. PyAutoArray#595: the raw-forward PDIP solver

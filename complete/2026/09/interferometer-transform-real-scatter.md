@@ -3,8 +3,6 @@
 - completed: 2026-09-26
 - library-pr: PyAutoArray https://github.com/PyAutoLabs/PyAutoArray/pull/578 (head `f9d3bc67`, merged 2026-09-26T18:26:18Z)
 - workspace-pr: autolens_profiling https://github.com/PyAutoLabs/autolens_profiling/pull/319 (head `c11c8f81`, merged 2026-09-26T18:26:21Z)
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/578
-- pending-release: autolens_profiling@https://github.com/PyAutoLabs/autolens_profiling/pull/319
 - merge-order: library-first — PyAutoArray#578 → autolens_profiling#319, both by the human's /prm on 2026-09-26.
 - heart-ack: "2026-09-26 YELLOW acknowledged by human: manifest drift hub blurb 7; organism-map blocks 1; workspace checkouts 1; release validation stale (source moved since rehearsal)"
 

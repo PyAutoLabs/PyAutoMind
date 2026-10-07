@@ -3,7 +3,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/408
 - completed: 2026-09-20
 - library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/409
-- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/409
 
 ## Shipped
 

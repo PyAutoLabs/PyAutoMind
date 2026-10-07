@@ -9,7 +9,6 @@ Derived transformed cell areas from geometry edges, preserving guard cells and s
 - https://github.com/PyAutoLabs/PyAutoArray/pull/608
 - https://github.com/PyAutoLabs/autolens_workspace_test/pull/339
 
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/608
 
 Human authorized linked PRs, development shipping with exact Heart YELLOW acknowledgment, then merge and full close-out. Every head run and matrix leg was checked; merge receipts are recorded by GitHub. No release performed. Shared bundle worktree cleanup follows all four members; logs and data preserved under organs/PyAutoMind/tmp/autoarray-bundle-1-closeout/.
 

@@ -4,8 +4,6 @@
 - epic: pyautoeyes-birth (phase 2)
 - library-pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/3
 - library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/429
-- pending-release: PyAutoEyes@https://github.com/PyAutoLabs/PyAutoEyes/pull/3
-- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/429
 
 ### What shipped
 - **PyAutoEyes#3** (merge a2e1ee7):
