@@ -78,7 +78,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/490
 - started: 2026-10-07
 - session: Codex; session ID unavailable
-- status: workspace-dev
+- status: awaiting-merge — 12 PRs open; Brain #491 first; 11 dependent drafts; Scientist deferred
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dashboard-section-disclosures
 - plan: approved 2026-10-07; judge tier, human /prm
 - deferred: PyAutoScientist until community-pages claim clears
@@ -95,10 +95,23 @@
   - PyAutoInsight: feature/dashboard-section-disclosures
   - PyAutoEars: feature/dashboard-section-disclosures
   - PyAutoMind: feature/dashboard-section-disclosures
-- checkpoint: implementation staged for 12 boards; Heart RED development override required before commit/push/PR; Scientist claim still deferred
+- checkpoint: authorized RED ship completed; human merge only; see issue #490 PR index
 - heart-red-override:
   - authorization: 2026-10-07 human “I authorize”, in response to the task-specific Brain #490 development ship request; commit/push/PR only, no merge/release
   - reason: PyAutoFit: 5 commit(s) behind origin
   - reason: PyAutoGalaxy: 12 commit(s) behind origin
   - reason: PyAutoLens: 8 commit(s) behind origin
   - gates: owner/renderer tests, 120 browser cases, Sphinx zero warnings, relevant lint/artifact/contract checks passed; detailed evidence on issue
+- prs:
+  - PyAutoBrain: https://github.com/PyAutoLabs/PyAutoBrain/pull/491
+  - PyAutoMind: https://github.com/PyAutoLabs/PyAutoMind/pull/479
+  - PyAutoCortex: https://github.com/PyAutoLabs/PyAutoCortex/pull/58
+  - PyAutoMemory: https://github.com/PyAutoLabs/PyAutoMemory/pull/123
+  - PyAutoHeart: https://github.com/PyAutoLabs/PyAutoHeart/pull/291
+  - PyAutoHands: https://github.com/PyAutoLabs/PyAutoHands/pull/307
+  - PyAutoPulse: https://github.com/PyAutoLabs/PyAutoPulse/pull/24
+  - PyAutoNerves: https://github.com/PyAutoLabs/PyAutoNerves/pull/193
+  - PyAutoGut: https://github.com/PyAutoLabs/PyAutoGut/pull/27
+  - PyAutoEyes: https://github.com/PyAutoLabs/PyAutoEyes/pull/23
+  - PyAutoInsight: https://github.com/PyAutoLabs/PyAutoInsight/pull/11
+  - PyAutoEars: https://github.com/PyAutoLabs/PyAutoEars/pull/21

@@ -95,3 +95,28 @@ Exact current RED reasons:
 - PyAutoLens: 8 commit(s) behind origin
 
 Validation: renderer and owner suites passed (Brain full-run failures resolved by focused reruns); 120 Chromium cases passed; Sphinx zero warnings; applicable Ruff, artifact and contract checks passed. Full evidence is recorded in the implementation handoff.
+
+## PR-open handoff — 2026-10-07
+
+The human-authorized development ship is complete for the 12 unblocked dashboards. The implementation is committed and pushed; no PR was merged and no page was published.
+
+| Repository | PR | Commit | Review state |
+|---|---|---|---|
+| PyAutoBrain | https://github.com/PyAutoLabs/PyAutoBrain/pull/491 | `cbe0701f` | Ready for review |
+| PyAutoMind | https://github.com/PyAutoLabs/PyAutoMind/pull/479 | `91c4f058` | Draft; depends on Brain #491 |
+| PyAutoCortex | https://github.com/PyAutoLabs/PyAutoCortex/pull/58 | `7bfcbaeb` | Draft; depends on Brain #491 |
+| PyAutoMemory | https://github.com/PyAutoLabs/PyAutoMemory/pull/123 | `c65eebc8` | Draft; depends on Brain #491 |
+| PyAutoHeart | https://github.com/PyAutoLabs/PyAutoHeart/pull/291 | `6eb36641` | Draft; depends on Brain #491 |
+| PyAutoHands | https://github.com/PyAutoLabs/PyAutoHands/pull/307 | `fd9ad49f` | Draft; depends on Brain #491 |
+| PyAutoPulse | https://github.com/PyAutoLabs/PyAutoPulse/pull/24 | `fdabed32` | Draft; depends on Brain #491 |
+| PyAutoNerves | https://github.com/PyAutoLabs/PyAutoNerves/pull/193 | `e68ab996` | Draft; depends on Brain #491 |
+| PyAutoGut | https://github.com/PyAutoLabs/PyAutoGut/pull/27 | `aefd1afd` | Draft; depends on Brain #491 |
+| PyAutoEyes | https://github.com/PyAutoLabs/PyAutoEyes/pull/23 | `3965eced` | Draft; depends on Brain #491 |
+| PyAutoInsight | https://github.com/PyAutoLabs/PyAutoInsight/pull/11 | `fba6864b` | Draft; depends on Brain #491 |
+| PyAutoEars | https://github.com/PyAutoLabs/PyAutoEars/pull/21 | `0fb3d02a` | Draft; depends on Brain #491 |
+
+Merge Brain #491 first through human /prm. The 11 dependent drafts require that shared API on Brain main; then rerun their checks, refresh generated artifacts if ledger/evidence inputs moved, and mark them ready for review. Core CI was checked once: docs passed; Python 3.12 and 3.13 tests were running. No CI watcher or scheduled continuation was armed.
+
+After merging current upstream refreshes, 40 additional Chromium cases passed for Mind, Pulse, Eyes and Insight. Pulse/Insight offline checks passed again. Earlier validation and exact authorized RED reasons remain recorded above and in every PR body.
+
+Scientist remains deferred under the community-pages claim. The umbrella issue remains open until that consumer is migrated and all 13 published boards are verified. Worktrees are retained under `/home/jammy/Code/PyAutoLabs/.worktrees/dashboard-section-disclosures` for review and /prm.
