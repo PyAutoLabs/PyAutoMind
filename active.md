@@ -5,7 +5,7 @@
 - issued: 2026-10-07
 - prompt: active/dashboard_checkin_prompts.md
 - session: Codex local
-- status: workspace-dev, awaiting-heart-override
+- status: workspace-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dashboard-checkin-prompts
 - repos:
   - PyAutoBrain: feature/dashboard-checkin-prompts
@@ -20,8 +20,20 @@
   - PyAutoEyes: feature/dashboard-checkin-prompts
   - PyAutoScientist: feature/dashboard-checkin-prompts
 - summary: Implement the thirteen individually approved check-in prompts; no dashboard restructuring, merge or publication.
-- resume: All 13 prompts implemented; 1268 applicable tests pass. Required lint/offline checks and Eyes live 265-PNG check pass. Full evidence, diffs and PR drafts: .worktrees/dashboard-checkin-prompts/scratch/review.md. Source uncommitted pending explicit development-only Heart RED override for #484. No merge or publication authorization.
-- heart-red-reasons: PyAutoFit: 5 commit(s) behind origin; PyAutoArray: 2 commit(s) behind origin; PyAutoLens: 2 commit(s) behind origin (canonical readiness 2026-10-07T06:43:42.803462+00:00).
+- resume: All 13 prompts implemented and pushed as 11 pending-release PRs. 1268 applicable local tests pass, plus targeted metadata-portability reruns; all approved rendered wording verified. Tenant firewall, required lint/offline checks and Eyes live-link check pass. Next: human /prm when every required CI leg is green; then regenerate/publish Mind and Cortex boards from merged Brain. No merge or publication authorization.
+- heart-ack: Human said "those are fixed, so continue". Fresh canonical Heart YELLOW at 2026-10-07T06:49:56.708128+00:00; no RED reasons. Remaining warning: manifest drift: shared-standards blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml. Release validation remains stale because source moved since rehearsal. Development PRs only.
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/485
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoEars/pull/17
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/288
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/304
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoMemory/pull/119
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/20
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoInsight/pull/9
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/189
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoGut/pull/25
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/21
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/46
+- validation: .worktrees/dashboard-checkin-prompts/scratch/review.md; scratch/shipped.json holds exact commit SHAs.
 
 ## profiling-dashboard-completion
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/387
