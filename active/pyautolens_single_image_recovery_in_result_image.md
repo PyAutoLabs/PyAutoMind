@@ -8,6 +8,7 @@ Difficulty: medium
 Autonomy: safe
 Priority: normal
 Memory: wiki/galaxies/sources/massive-ellipticals.md; wiki/lensing/sources/dark-matter-substructure.md; wiki/galaxies/sources/light-profile-fitting.md
+Issued: 2026-10-07
 Status: formalised
 Consequence: judge
 Witness: a new test in test_autolens feeding `image_plane_multiple_image_positions_from` a 1-image array padded with inf rows fails on main and passes with the fix
