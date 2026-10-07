@@ -138,3 +138,14 @@ User authorization: “I authorize, maybe we should get those repos up to date f
 Current Heart is YELLOW: `manifest drift: workspace checkouts (manifest ↔ disk) — 2 mismatch(es) vs PyAutoMind/repos.yaml`. Stale evidence: `release validation incomplete: no rehearsal for current source`.
 
 Next step: human `/prm` after all required checks pass. No merge or deployment performed.
+
+## CI reload-race repair — 2026-10-07
+
+User requested “fix the bug” after `/prm` stopped on PR #26's Chromium failure. Resumed the existing approved task/branch; no scope expansion or second issue.
+
+Root cause: panel opening was immediate, but URL persistence waited for the asynchronous native `toggle` event. A reload before event delivery restored Runtime. A same-task activation regression reproduced the failure deterministically (`open: true`, `axis: runtime` instead of `breakdown`). The fix persists selection synchronously from summary click activation, including native keyboard activation; closing retains native behavior. No sleeps or weakened assertions.
+
+Commit: `f3a34c5`, pushed to PR https://github.com/PyAutoLabs/PyAutoPulse/pull/26.
+Validation: 193 Python tests, Chromium including deterministic activation/reload and keyboard checks, Ruff lint/format, offline contract and whitespace checks PASS. Dashboard regenerated. Heart remains YELLOW for the previously recorded manifest mismatch; no new RED reason. Logs: task bundle `bug-repro.log`, `bug-browser.log`, `bug-pytest.log`, `bug-offline.log`, `bug-readiness.json`.
+
+Lesson: native details toggle events are queued; persist route state during activation when reload/share correctness requires synchronous state. GitHub CI on the new head is the remaining merge gate. Merge still requires `/prm`.
