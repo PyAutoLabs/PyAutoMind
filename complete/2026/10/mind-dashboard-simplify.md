@@ -1,3 +1,20 @@
+## mind-dashboard-simplify
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/488
+- completed: 2026-10-07
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/497
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/489
+- merge-commit: PyAutoBrain 5845a2c6ff40ce9df17a72ef39e612e85a8b4bb1; PyAutoMind 92c82cb1fa57c5878f2acb2db5e661043cf9293a
+
+### Outcome
+Mind dashboard navigation reduced to seven counted cards on one desktop row, with Human Review nested under Backlog (existing `#human-review` links still open it). Parked tasks no longer appear on the page or in Recent; their lifecycle records are retained. The persistent Bundles registry (`bundles.md`, `Bundle:` membership), its intake parser, census data, the `start-bundle` skill, discovery links and template/workflow wiring are retired; grouping can still be requested when starting work. `navigation_cards(..., columns=)` / `hero(..., navigation_columns=)` added; existing callers keep fluid layout.
+
+### Validation and limits
+Full Brain suite 1,271 passed; full Mind suite 696 passed (repository-location overrides cleared for hermetic fixtures). Ten Chromium cases (five widths × light/dark) passed; dashboard freshness and tenant-firewall checks passed. Brain#497 merged first with every leg green; Mind#489 was then merged with main, its pages confirmed current against Brain main, and merged with every leg that ran green (Lifecycle Drift path-filtered off the PR; passed on main at 881aa29c).
+
+User explicitly acknowledged Heart YELLOW (manifest drift: workspace checkouts, 2 mismatches; no rehearsal for current source) before PRs opened. Opening session lacked GitHub write access; a later session pushed and opened the PRs, and transient GitHub 500s delayed the merges. Run the skill installer after merging to prune the stale `start-bundle` link.
+
+## Original prompt
+
 # Simplify Mind dashboard and retire persistent bundles
 
 Type: feature
