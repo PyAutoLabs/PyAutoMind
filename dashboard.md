@@ -250,7 +250,7 @@ Use the start-dev skill. draft/refactor/pyautofit/remove_eden_packaging_tooling.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/closed_thread_followups.md">Detect actionable follow-ups on settled community threads</a> — <a href="https://github.com/PyAutoLabs/PyAutoEars/issues/19">issue #19</a> — issued 2026-10-07 — workspace-dev, validated; awaiting-heart-ack</summary>
+<details><summary>📋 <a href="active/closed_thread_followups.md">Detect actionable follow-ups on settled community threads</a> — <a href="https://github.com/PyAutoLabs/PyAutoEars/issues/19">issue #19</a> — issued 2026-10-07 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/489">PyAutoBrain#489</a>, <a href="https://github.com/PyAutoLabs/PyAutoEars/pull/20">PyAutoEars#20</a></summary>
 
 ```
 Use the start-dev skill. active/closed_thread_followups.md

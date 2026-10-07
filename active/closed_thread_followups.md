@@ -69,3 +69,16 @@ Shipping waits for explicit acknowledgement under ship_workspace step 3:
 - release validation stale: source moved since rehearsal (PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens)
 
 PR creation only after acknowledgement; merge remains human /prm.
+
+## PRs opened — 2026-10-07
+
+The user explicitly answered "Acknowledge and open PRs" to both exact Heart
+YELLOW reasons recorded above. Permission covers pushing and opening PRs, not
+merging or release. No conversation was reopened or replied to.
+
+- Brain: https://github.com/PyAutoLabs/PyAutoBrain/pull/489 (`c0bcca2`).
+- Ears: https://github.com/PyAutoLabs/PyAutoEars/pull/20 (`7d7b8bd`).
+- Both carry `pending-release`; source worktrees are clean.
+- Local evidence: 97 Ears + 66 Brain tests, schema validation, Chromium smoke,
+  and the live read-only Discussion #13 check all pass. CI running at handoff.
+- Next: human /prm after CI; merge Brain #489 before Ears #20, then close task.
