@@ -66,3 +66,4 @@
 - summary: per-library docs/general/community.md (Lens lists the SiriusFzh Visual Workbench), one merged "Community & Contributing" README section across 16 public repos + PyAutoScientist, front page community section moved to the bottom linking every project page. Wave 1 = 3 library PRs, wave 2 = README bundle.
 - tier: glance (auto-merge on green if Witness passes)
 - status: library-dev
+- heart-ack: manifest drift: shared-standards blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml; release validation stale: source moved since rehearsal (PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens) — acknowledged by the human 2026-10-07 at ship
