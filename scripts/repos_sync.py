@@ -249,6 +249,7 @@ CHECKOUTS = "workspace checkouts (manifest ↔ disk)"
 CODEX_HOOKS_REL = ".codex/hooks.json"
 CODEX_HOOKS = "generated Codex hooks"
 FILING_BLOCKS = "where-to-file blocks (generated)"
+MAP_BLOCKS = "organism-map blocks (generated)"
 STANDARDS_BLOCKS = "shared-standards blocks (generated)"
 STANDARDS_BEGIN = "<!-- repos_sync:standards:begin -->"
 STANDARDS_END = "<!-- repos_sync:standards:end -->"
@@ -2387,8 +2388,7 @@ def main():
             lambda: check_routing_table(root, categories, repos),
         "WORKFLOW.md owner map (generated)":
             lambda: check_owner_map(root, categories, repos),
-        "organism-map blocks (generated)":
-            lambda: check_map_blocks(root, repos, smap),
+        MAP_BLOCKS: lambda: check_map_blocks(root, repos, smap),
         "never-rewrite-history blocks (generated)":
             lambda: check_history_blocks(root, repos, hpol),
         "remote-session blocks (generated)":

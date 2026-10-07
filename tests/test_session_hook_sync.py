@@ -627,9 +627,11 @@ def gate_steps():
 
 # Either decision enables the one skipping step; only neither runs every leg.
 SKIP_IF = ("steps.hookpr.outputs.hook_pr == 'true' || "
-           "steps.hookpr.outputs.filing_pr == 'true'")
+           "steps.hookpr.outputs.filing_pr == 'true' || "
+           "steps.hookpr.outputs.map_pr == 'true'")
 FULL_IF = ("steps.hookpr.outputs.hook_pr != 'true' && "
-           "steps.hookpr.outputs.filing_pr != 'true'")
+           "steps.hookpr.outputs.filing_pr != 'true' && "
+           "steps.hookpr.outputs.map_pr != 'true'")
 
 
 def test_the_skip_is_reachable_only_from_a_pull_request():
@@ -697,25 +699,27 @@ def test_mind_checkout_is_deep_enough_to_diff_against_the_base():
 
 
 @pytest.mark.parametrize(
-    "changed, expected, filing",
+    "changed, expected, filing, mapped",
     [
-        ([repos_sync.SESSION_HOOK_FILE], "true", "false"),
-        ([repos_sync.DELIVERABLE_HOOK_FILE], "true", "false"),
-        (["repos.yaml"], "false", "false"),
+        ([repos_sync.SESSION_HOOK_FILE], "true", "false", "false"),
+        ([repos_sync.DELIVERABLE_HOOK_FILE], "true", "false", "false"),
+        # The organism-map decision (PyAutoMind#486) reads repos.yaml alone.
+        (["repos.yaml"], "false", "false", "true"),
         (["scripts/repos_sync.py", ".github/workflows/firewall_gate.yml"],
-         "false", "false"),
-        ([repos_sync.SESSION_HOOK_FILE, "repos.yaml"], "true", "false"),
+         "false", "false", "false"),
+        ([repos_sync.SESSION_HOOK_FILE, "repos.yaml"], "true", "false", "true"),
         # A path the hook's name is only a SUBSTRING of is a different file.
-        (["docs/policy/session_start_hook.sh.md"], "false", "false"),
+        (["docs/policy/session_start_hook.sh.md"], "false", "false", "false"),
         # The where-to-file decision is independent of the hook one.
-        ([repos_sync.FILING_POLICY_FILE], "false", "true"),
+        ([repos_sync.FILING_POLICY_FILE], "false", "true", "false"),
         ([repos_sync.FILING_POLICY_FILE, repos_sync.SESSION_HOOK_FILE],
-         "true", "true"),
-        (["docs/policy/where_to_file.md.bak"], "false", "false"),
+         "true", "true", "false"),
+        (["docs/policy/where_to_file.md.bak"], "false", "false", "false"),
+        (["docs/repos.yaml.md"], "false", "false", "false"),
     ],
 )
 def test_the_gate_decides_from_the_changed_files(tmp_path, changed, expected,
-                                                 filing):
+                                                 filing, mapped):
     """Execute the CI decision against a real two-branch repo.
 
     The `paths:` filter cannot answer this — it has already matched, and it
@@ -732,7 +736,7 @@ def test_the_gate_decides_from_the_changed_files(tmp_path, changed, expected,
                 ".github/workflows/firewall_gate.yml",
                 "docs/policy/session_start_hook.sh.md",
                 repos_sync.FILING_POLICY_FILE,
-                "docs/policy/where_to_file.md.bak"):
+                "docs/policy/where_to_file.md.bak", "docs/repos.yaml.md"):
         path = base / rel
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text("base\n")
@@ -756,7 +760,7 @@ def test_the_gate_decides_from_the_changed_files(tmp_path, changed, expected,
     )
 
     assert output.read_text().splitlines() == [
-        f"hook_pr={expected}", f"filing_pr={filing}"], proc.stdout
+        f"hook_pr={expected}", f"filing_pr={filing}", f"map_pr={mapped}"], proc.stdout
 
 
 # --------------------------------------------------------------------------
@@ -793,6 +797,30 @@ def test_the_gate_still_asserts_this_repos_own_filing_block():
         "the compensating control must run before the skipping drift check"
 
 
+def test_the_gate_skips_the_map_leg_by_its_printed_label():
+    """PyAutoMind#486: a renamed leg must break here rather than silently stop
+    being skipped."""
+    run = _skip_step()["run"]
+    assert f'--skip "{repos_sync.MAP_BLOCKS}"' in run, run
+    assert "repos.yaml" in run
+    assert run.count("ON push TO main this leg is never skipped") == 3
+
+
+def test_the_gate_still_asserts_the_manifest_renders_the_map():
+    """The compensating control for the map skip: the `-k` must select a test
+    that exists, and it must run before the skipping drift check."""
+    import test_repos_sync_organism_map as omap
+    step = next(step for step in gate_steps()
+                if step.get("if") == "steps.hookpr.outputs.map_pr == 'true'"
+                and "pytest" in (step.get("run") or ""))
+    assert "tests/test_repos_sync_organism_map.py" in step["run"]
+    selector = step["run"].split('-k "')[1].split('"')[0]
+    assert selector in omap.test_the_map_renders_from_the_manifest.__name__
+    steps = gate_steps()
+    assert steps.index(step) < steps.index(_skip_step()), \
+        "the compensating control must run before the skipping drift check"
+
+
 def test_the_filing_decision_ignores_the_pr_body():
     """A PR with no `Brain-ref:` line must get the skip exactly as one with it:
     the decision reads the diff, never the body the Brain-ref resolver reads."""
@@ -812,15 +840,18 @@ def test_the_gate_triggers_on_the_filing_policy():
 
 
 @pytest.mark.parametrize(
-    "hook_pr, filing_pr, skipped",
+    "hook_pr, filing_pr, map_pr, skipped",
     [
-        ("true", "false", [repos_sync.SESSION_HOOKS]),
-        ("false", "true", [repos_sync.FILING_BLOCKS]),
-        ("true", "true", [repos_sync.SESSION_HOOKS, repos_sync.FILING_BLOCKS]),
+        ("true", "false", "false", [repos_sync.SESSION_HOOKS]),
+        ("false", "true", "false", [repos_sync.FILING_BLOCKS]),
+        ("false", "false", "true", [repos_sync.MAP_BLOCKS]),
+        ("true", "true", "false", [repos_sync.SESSION_HOOKS, repos_sync.FILING_BLOCKS]),
+        ("true", "true", "true", [repos_sync.SESSION_HOOKS, repos_sync.FILING_BLOCKS,
+                                  repos_sync.MAP_BLOCKS]),
     ],
 )
 def test_the_skipping_step_composes_both_decisions(tmp_path, hook_pr,
-                                                   filing_pr, skipped):
+                                                   filing_pr, map_pr, skipped):
     """Execute the step with a stand-in python3 that records its argv: each
     decision adds exactly its own --skip (and banner), and both compose."""
     bindir = tmp_path / "bin"
@@ -833,7 +864,7 @@ def test_the_skipping_step_composes_both_decisions(tmp_path, hook_pr,
         ["bash", "-e", "-c", _skip_step()["run"]],
         cwd=tmp_path,
         env={**os.environ, "PATH": f"{bindir}:{os.environ['PATH']}",
-             "HOOK_PR": hook_pr, "FILING_PR": filing_pr,
+             "HOOK_PR": hook_pr, "FILING_PR": filing_pr, "MAP_PR": map_pr,
              "GITHUB_WORKSPACE": str(tmp_path)},
         check=True, capture_output=True, text=True,
     )
