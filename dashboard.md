@@ -250,7 +250,7 @@ Use the start-dev skill. draft/refactor/pyautofit/remove_eden_packaging_tooling.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/dashboard_checkin_prompts.md">Implement the agreed dashboard check-in prompts</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/484">issue #484</a> — issued 2026-10-07 — workspace-dev</summary>
+<details><summary>📋 <a href="active/dashboard_checkin_prompts.md">Implement the agreed dashboard check-in prompts</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/484">issue #484</a> — issued 2026-10-07 — workspace-dev, awaiting-heart-override</summary>
 
 ```
 Use the start-dev skill. active/dashboard_checkin_prompts.md
