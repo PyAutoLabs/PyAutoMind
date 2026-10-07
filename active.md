@@ -84,7 +84,7 @@
   - PyAutoBrain: feature/dashboard-markdown-icons
   - PyAutoMind: feature/dashboard-markdown-icons
 - summary: Approved right-aligned Markdown source icons in shared dashboard layout. Human merge.
-- resume: Implementation complete locally; awaiting explicit Heart YELLOW acknowledgement before ship. Source edits are uncommitted in the task worktrees. No PRs yet.
+- resume: Implementation validated; Heart warnings acknowledged by the human. Shipping Brain and dependent Mind PRs; human merge.
 - validation: 271 focused checks passed; 1270 Brain and 695 Mind full-suite tests passed, each remaining environment-sensitive fixture passed with worktree overrides removed; 40 browser cases passed.
 - evidence: /home/jammy/Code/PyAutoLabs/.worktrees/dashboard-markdown-icons/evidence/handoff.md
-- heart-pending: manifest drift: workspace checkouts (manifest ↔ disk) — 3 mismatch(es) vs PyAutoMind/repos.yaml; release validation incomplete: no rehearsal for current source
+- heart-ack: manifest drift: workspace checkouts (manifest ↔ disk) — 3 mismatch(es) vs PyAutoMind/repos.yaml; release validation incomplete: no rehearsal for current source — explicitly acknowledged by the human in this Codex session on 2026-10-07
