@@ -40,11 +40,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 2 |
+| [In flight](#in-flight) (`active/`) | 3 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 5 |
 | [Planned](#planned) (`planned.md`) | 7 |
-| [Backlog](#backlog) (`draft/`) | 235 |
+| [Backlog](#backlog) (`draft/`) | 234 |
 
 > **No batch in flight.**
 
@@ -266,6 +266,14 @@ Use the start-dev skill. active/profiling-readable-metrics.md
 
 </details>
 
+<details><summary>📋 <a href="active/trim_repo_role_text.md">Trim the verbose <code>role</code> rows in repos.yaml…</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/486">issue #486</a> — issued 2026-10-07 — library-dev</summary>
+
+```
+Use the start-dev skill. active/trim_repo_role_text.md
+```
+
+</details>
+
 ## Pending release
 
 Library PRs the ledger records as merged but not yet released, and the in-flight tasks waiting on each. Rendered from the ledger — `active.md` and the `complete/` records — never a live GitHub query; the Brain board's `pending-release` search is the fresh view, this is what the Mind believes.
@@ -467,7 +475,7 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ## Backlog
 
-**235** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **47** of them belong to an epic and are listed only under [Epics](#epics) below.
+**234** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **47** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 70</summary>
@@ -1509,20 +1517,12 @@ Use the start-dev skill. draft/research/autofit/search_extensibility_epic_survey
 </details>
 
 <details>
-<summary><b>maintenance</b> — 22</summary>
+<summary><b>maintenance</b> — 21</summary>
 
 <details><summary>📋 <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> — organs · medium · supervised · high</summary>
 
 ```
 Use the start-dev skill. draft/maintenance/organs/reduce_session_token_load.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/pyautomind/trim_repo_role_text.md">Trim the verbose <code>role</code> rows in repos.yaml…</a> — pyautomind · small · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/maintenance/pyautomind/trim_repo_role_text.md
 ```
 
 </details>
@@ -2286,7 +2286,7 @@ Contract (the `start-bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 40 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 39 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -2295,7 +2295,7 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | Date | Event | Task |
 |------|-------|------|
 | 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
-| 2026-10-07 | filed | <a href="draft/maintenance/pyautomind/trim_repo_role_text.md">Trim the verbose <code>role</code> rows in repos.yaml…</a> |
+| 2026-10-07 | issued | <a href="active/trim_repo_role_text.md">Trim the verbose <code>role</code> rows in repos.yaml…</a> |
 | 2026-10-07 | issued | <a href="active/profiling-readable-metrics.md">Separate likelihood implementations and explain profiling measurements</a> |
 | 2026-10-07 | issued | <a href="active/community_pages.md">Community pages + merged "Community &amp; Contributing" sections across…</a> |
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
@@ -2926,7 +2926,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 </details>
 
-72 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+71 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2971,7 +2971,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 - `draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md`
 - `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
 - `draft/test/workspaces/mesh_magnification_correctness.md`
-- _… and 32 more_
+- _… and 31 more_
 
 </details>
 
