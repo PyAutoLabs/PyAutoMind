@@ -258,7 +258,7 @@ Use the start-dev skill. active/community_pages.md
 
 </details>
 
-<details><summary>📋 <a href="active/sparse_noise_map_pooling_option.md">Sparse interferometer path: opt-in quadrature pooling of unequal real/imag noise sigma</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/617">issue #617</a> — issued 2026-10-07 — library-dev</summary>
+<details><summary>📋 <a href="active/sparse_noise_map_pooling_option.md">Sparse interferometer path: opt-in quadrature pooling of unequal real/imag noise sigma</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/617">issue #617</a> — issued 2026-10-07 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/619">PyAutoArray#619</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 Use the start-dev skill. active/sparse_noise_map_pooling_option.md
@@ -280,6 +280,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#619](https://github.com/PyAutoLabs/PyAutoArray/pull/619) — `active/sparse_noise_map_pooling_option.md`
 - [PyAutoArray#616](https://github.com/PyAutoLabs/PyAutoArray/pull/616) — `complete/2026/10/imshow-origin-lower-overlays.md`
 - [PyAutoArray#612](https://github.com/PyAutoLabs/PyAutoArray/pull/612) — `complete/2026/10/jax-lapack-compatibility-repair.md`
 - [PyAutoArray#615](https://github.com/PyAutoLabs/PyAutoArray/pull/615) — `complete/2026/10/nnls-memo-scattered-backoff.md`

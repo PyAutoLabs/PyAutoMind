@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
-  "updated": "2026-10-07T09:43:43Z",
+  "updated": "2026-10-07T09:49:59Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "Community pages + merged \"Community & Contributing\" sections across PyAutoLabs \u2014 library-shipped, awaiting-merge (18 PRs open 2026-10-07; wording follow-up commits in flight)",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/774",
       "prompt": "Use the start-dev skill. active/community_pages.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Sparse interferometer path: opt-in quadrature pooling of unequal real/imag noise sigma \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/619",
+      "prompt": "Use the start-dev skill. active/sparse_noise_map_pooling_option.md"
     },
     {
       "severity": "yellow",
@@ -24,6 +30,12 @@
       "text": "human review: the scaling_relation slam parks (imaging un-parked, multi_galaxy kept)",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md",
       "prompt": "Walk me through the completed work described in `draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md` so I can sign it off.\n\n1. Read the prompt: what was asked, and what it claims shipped.\n2. Find the evidence \u2014 the merged PR(s), the commits, the `complete/` record \u2014\n   and read the actual diff, not the description of it.\n3. Report what changed, what it does NOT cover, and anything you would have\n   done differently. Call out behaviour changes and test gaps explicitly.\n\nChange nothing while reviewing. When I sign it off, retire the prompt from the\nPyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date\n<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and\nregenerate the dashboard. If I do not sign it off, file the follow-up with\n`/intake` instead.\n"
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#619 \u2014 Sparse interferometer path: opt-in quadrature pooling of unequal real/imag noise sigma",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/619",
+      "prompt": null
     },
     {
       "severity": "yellow",
@@ -114,18 +126,6 @@
       "text": "pick: The reusable smoke workflow's relevance gate skips the `unit` / `slow` pytest\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md",
       "prompt": "Use the start-dev skill. draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: arXiv's Fastly edge refuses `urllib.request` outright \u2014 retrying a 406 only delays\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md",
-      "prompt": "Use the start-dev skill. draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: `@PyAutoArray` rectangular mesh mapper: mirrored row weights + round-off-dependent cell assignment",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md",
-      "prompt": "Use the start-dev skill. draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md"
     }
   ]
 }
