@@ -218,6 +218,10 @@ MEMORY_RULES = [
     # Same org-wide pointer docs as MIND_RULES — owner substitution; under
     # .github/ since the 2026-08 root declutter (all five organs match).
     ("AI_POLICY.md", "KEEP_SUB"), ("CONTRIBUTING.md", "KEEP_SUB"),
+    # Spec Memory rule 1c: the Memory's own agent skills are generic organism
+    # skills — the same class as MIND_RULES' `skills/*` KEEP (spec Mind rule 8).
+    # The canary scan still grades every kept file (PyAutoMind#484).
+    ("skills/*", "KEEP"),
     ("bibliography/*", "EMPTY"),
     # Same fail-closed discipline as MIND_RULES (spec rule 9d). validate.yml is
     # self-contained — no schedule, no secrets, no sibling repos — so it clears
