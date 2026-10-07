@@ -561,3 +561,20 @@ def test_instance_hpc_policy_page_is_dropped_but_policy_is_kept():
     assert spawn.match_rule(
         Path("policy/end_at_deliverable.md"), spawn.MIND_RULES
     )[1] == "KEEP"
+
+
+def test_memory_skills_are_kept_verbatim(tmp_path):
+    """Spec Memory rule 1c (PyAutoMind#484): the Memory's own agent skills are
+    generic organism skills, KEPT verbatim like the Mind's `skills/**` — never
+    UNMATCHED, never dropped."""
+    for rel in ("skills/catch_up/SKILL.md", "skills/catch_up/catch_up.md"):
+        assert spawn.match_rule(Path(rel), spawn.MEMORY_RULES)[1] == "KEEP", rel
+    mem = tmp_path / "PyAutoMemory"
+    files = dict(MINIMAL_MEMORY)
+    files["skills/catch_up/SKILL.md"] = "---\nname: catch-up\n---\nRead the log.\n"
+    files["skills/catch_up/catch_up.md"] = "# Catch up\n\nSummarise what changed.\n"
+    _fake_repo(mem, files)
+    out = tmp_path / "out"
+    assert spawn.generate_memory(mem, out) == []
+    for rel in ("skills/catch_up/SKILL.md", "skills/catch_up/catch_up.md"):
+        assert (out / rel).read_text() == files[rel], rel

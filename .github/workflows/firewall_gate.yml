@@ -38,14 +38,6 @@ name: Tenant Firewall Gate
 # every existing leg. The decision reads the PR's diff, not its body, so a PR with no
 # `Brain-ref:` line gets the skip exactly as one with it does.
 #
-# TEMPORARY third skip (PyAutoMind#482): the 'CLAUDE.md → AGENTS.md pointers'
-# leg now requires NO CLAUDE.md beside an AGENTS.md, and the organ mains keep
-# the retired pointer until the human-dispatched propagation wave removes it,
-# so the leg is dropped from BOTH drift checks (PR and push) with a loud
-# banner, and PyAutoMind's own absence of a CLAUDE.md is asserted instead.
-# Remove when the CLAUDE.md retirement wave has run (session_hook_propagate
-# dispatch) — tracked on PyAutoMind#482.
-#
 # All three organs are checked out. PyAutoHands was omitted at first — its
 # firewall clear waited behind the version-stamp task that claimed the repo
 # (PyAutoHands#235) — and joined once that leg landed as PyAutoHands#237,
@@ -192,21 +184,6 @@ jobs:
           python3 PyAutoMind/scripts/repos_sync.py --check --root "$GITHUB_WORKSPACE" \
             --only "shared-standards blocks (generated)" --repo PyAutoMind
 
-      # TEMPORARY: remove when the CLAUDE.md retirement wave has run
-      # (session_hook_propagate dispatch) — tracked on PyAutoMind#482.
-      # The compensating control for the pointer-leg skip in both drift checks
-      # below: propagation never writes PyAutoMind, so its own absence of a
-      # CLAUDE.md is the PR's to keep, and the retirement logic is pinned here.
-      - name: Assert PyAutoMind carries no CLAUDE.md (TEMPORARY, PyAutoMind#482)
-        run: |
-          pip install pytest
-          if [ -e PyAutoMind/CLAUDE.md ]; then
-            echo "::error::PyAutoMind/CLAUDE.md exists — it hides AGENTS.md from Claude Code (PyAutoMind#482)"
-            exit 1
-          fi
-          python3 -m pytest PyAutoMind/tests/test_repos_sync_structure_lint.py -q \
-            -k "claude_md or pointer or removal"
-
       - name: Drift check (canonical-hook or where-to-file PR — unmeetable legs skipped)
         if: steps.hookpr.outputs.hook_pr == 'true' || steps.hookpr.outputs.filing_pr == 'true'
         env:
@@ -214,22 +191,6 @@ jobs:
           FILING_PR: ${{ steps.hookpr.outputs.filing_pr }}
         run: |
           skip=()
-          # TEMPORARY: remove when the CLAUDE.md retirement wave has run
-          # (session_hook_propagate dispatch) — tracked on PyAutoMind#482.
-          echo "=============================================================="
-          echo "SKIPPED LEG (TEMPORARY): 'CLAUDE.md → AGENTS.md pointers'"
-          echo "WHY: PyAutoMind#482 inverted this leg — a repo with AGENTS.md must"
-          echo "  have NO CLAUDE.md — and the sibling organs are checked out at"
-          echo "  their mains, which still carry the retired pointer until the"
-          echo "  human-dispatched .github/workflows/session_hook_propagate.yml"
-          echo "  wave removes it. The leg's precondition is unmeetable until then,"
-          echo "  on pull requests AND on push to main."
-          echo "STILL ENFORCED: PyAutoMind itself carries no CLAUDE.md, and the"
-          echo "  retirement logic is pinned by its tests (asserted in the step"
-          echo "  above). Remove this skip when the CLAUDE.md retirement wave has"
-          echo "  run (session_hook_propagate dispatch) — tracked on PyAutoMind#482."
-          echo "=============================================================="
-          skip+=(--skip "CLAUDE.md → AGENTS.md pointers")
           if [ "$HOOK_PR" = "true" ]; then
             echo "=============================================================="
             echo "SKIPPED LEG: 'generated hooks (session-start + end-at-deliverable)'"
@@ -270,20 +231,4 @@ jobs:
       - name: Drift check (all legs — absent repos are skipped)
         if: steps.hookpr.outputs.hook_pr != 'true' && steps.hookpr.outputs.filing_pr != 'true'
         run: |
-          # TEMPORARY: remove when the CLAUDE.md retirement wave has run
-          # (session_hook_propagate dispatch) — tracked on PyAutoMind#482.
-          echo "=============================================================="
-          echo "SKIPPED LEG (TEMPORARY): 'CLAUDE.md → AGENTS.md pointers'"
-          echo "WHY: PyAutoMind#482 inverted this leg — a repo with AGENTS.md must"
-          echo "  have NO CLAUDE.md — and the sibling organs are checked out at"
-          echo "  their mains, which still carry the retired pointer until the"
-          echo "  human-dispatched .github/workflows/session_hook_propagate.yml"
-          echo "  wave removes it. The leg's precondition is unmeetable until then,"
-          echo "  on pull requests AND on push to main."
-          echo "STILL ENFORCED: PyAutoMind itself carries no CLAUDE.md, and the"
-          echo "  retirement logic is pinned by its tests (asserted in the step"
-          echo "  above). Remove this skip when the CLAUDE.md retirement wave has"
-          echo "  run (session_hook_propagate dispatch) — tracked on PyAutoMind#482."
-          echo "=============================================================="
-          python3 PyAutoMind/scripts/repos_sync.py --check --root "$GITHUB_WORKSPACE" \
-            --skip "CLAUDE.md → AGENTS.md pointers"
+          python3 PyAutoMind/scripts/repos_sync.py --check --root "$GITHUB_WORKSPACE"
