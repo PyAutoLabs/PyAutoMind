@@ -1,3 +1,33 @@
+# Dashboard freshness
+
+Shipped the shared freshness footer across all thirteen organ dashboards. Beside “Read the prompt”, smaller text reports “Last updated”: green below one hour, yellow below 24 hours, red thereafter, grey for unknown/incomplete collection. Native disclosure shows the exact UTC timestamp; Update opens the owning refresh workflow. Relative age advances without confusing page reload time with a successful collection. Pulse/Insight preserve scientific evidence/capture times and offline receipts.
+
+The Ears CI failure was an outdated count that included the newly added Update anchor. Commit 74ecc83 scopes the two existing work links separately and explicitly verifies the Update destination. Exact Playwright reproduction now passes; all 74 Ears Python tests and the state contract pass. Every current-head CI run/matrix job was green before merging all eleven PRs, shared Brain core first. Git ancestry and GitHub MERGED receipts independently prove every claimed branch landed.
+
+Validation: 3,945 Python cases across complete suites and targeted reruns; 120 browser layout cases; 14 clipboard checks; exact Ears owner-browser regression and CI. Independent review findings on receipt semantics and incomplete collection were fixed before shipment. Evidence retained locally in PyAutoMind/tmp/dashboard-freshness/.
+
+User explicitly authorized fixing red and /prm. Canonical Heart retains the disclosed, acknowledged YELLOW shared-standards manifest drift and stale release evidence; no RED reason, no release attempted. This organ/dashboard change creates no library release obligation.
+
+Merged PRs:
+
+- https://github.com/PyAutoLabs/PyAutoBrain/pull/487
+- https://github.com/PyAutoLabs/PyAutoEars/pull/18
+- https://github.com/PyAutoLabs/PyAutoHeart/pull/289
+- https://github.com/PyAutoLabs/PyAutoHands/pull/305
+- https://github.com/PyAutoLabs/PyAutoMemory/pull/120
+- https://github.com/PyAutoLabs/PyAutoPulse/pull/22
+- https://github.com/PyAutoLabs/PyAutoInsight/pull/10
+- https://github.com/PyAutoLabs/PyAutoNerves/pull/190
+- https://github.com/PyAutoLabs/PyAutoGut/pull/26
+- https://github.com/PyAutoLabs/PyAutoEyes/pull/22
+- https://github.com/PyAutoLabs/PyAutoScientist/pull/47
+
+Reconciliation: batch_slice.md, board_without_gh_phase2_legs.md and brain_board_follow_ups.md remain because resemblance does not establish coverage; follow-up door /intake reconcile draft/feature/pyautobrain. Historical coordination references remain, with current overlap instructions repointed to this completion record. Dashboard regeneration and lifecycle validation accompany this record.
+
+Publication: all thirteen live Pages dashboards verified with one shared freshness footer and the correct owner Update link. All thirteen refresh workflows succeeded. Scientist was queued behind obsolete scheduled run 37510712274; cancelling that old run allowed current-main publication 37591917906 to succeed. Brain/Ears currently show honest unknown for incomplete collection, rather than a fabricated fresh stamp.
+
+## Original prompt
+
 # Shared dashboard freshness footer
 
 Issued: 2026-10-07

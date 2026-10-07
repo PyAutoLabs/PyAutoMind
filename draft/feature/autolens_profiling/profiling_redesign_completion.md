@@ -110,9 +110,10 @@ Suggested branch: feature/profiling-browser-completion.
 
 The former prompt-update dependency is merged and its claim released; see
 `complete/2026/10/dashboard-checkin-prompts.md` (Brain #484, Pulse #20).
-A newer dashboard-freshness claim (#486) overlaps Pulse; the human explicitly
-authorized parallel coordination. Phase C owns setup-browser assets/tests; freshness
-owns board/ingest/workflow source, with generated HTML reconciled by rendering.
+Dashboard freshness (#486) is merged and its claim released; see
+`complete/2026/10/dashboard-freshness.md`. The human authorized parallel
+coordination. Phase C owns setup-browser assets/tests; preserve the merged
+freshness receipt contract and reconcile generated HTML by rendering.
 Adapt pulse/setup_browser.{js,css,py} to Phase A's
 overview, selection, populated-panel and hazard-discovery behavior, preserving
 captured commit/shard validation and unrelated check-in wording. Validate with
