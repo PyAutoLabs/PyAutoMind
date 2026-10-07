@@ -72,3 +72,13 @@
   - autolens_profiling: https://github.com/PyAutoLabs/autolens_profiling/pull/391
   - pyautolabs.github.io: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/30
 - heart-ack: manifest drift: shared-standards blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml; release validation stale: source moved since rehearsal (PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens) — acknowledged by the human 2026-10-07 at ship
+
+## profiling-results-ui
+- issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/25
+- issued: 2026-10-07
+- session: Codex
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/tmp/worktrees/profiling-results-ui
+- repos:
+  - PyAutoPulse: feature/profiling-results-ui
+- plan: active/profiling-results-ui.md; user approved with go

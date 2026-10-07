@@ -3,12 +3,14 @@
 Type: feature
 Difficulty: medium
 Consequence: judge
+Issued: 2026-10-07
+Issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/25
 
 @PyAutoPulse
 
-Implement the requested dashboard presentation changes without deleting captured results or changing measurement producers. Use the workspace development route. Plan approval pending.
+Implement the requested dashboard presentation changes without deleting captured results or changing measurement producers. Use the workspace development route. Plan approved by the user with “go”.
 
-## Implementation plan awaiting approval
+## Approved implementation plan
 
 - Simplify the landing board and standardize all requested display names.
 - Open each model in a dedicated browser tab with a stable, reloadable URL.
