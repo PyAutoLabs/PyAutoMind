@@ -44,32 +44,6 @@
 
 - heart-ack: User invoked $prm in direct response to the disclosed Heart YELLOW warning on 2026-10-07; authorizes shipping and green-CI merge. Exact warning: manifest drift: shared-standards blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml. Canonical readiness re-read unchanged, no RED reasons. Release evidence stale; no release authorized.
 
-## fork-context-darwin-test
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1661
-- issued: 2026-10-07
-- prompt: active/pyautofit_add_a_regression_test_for_fork.md
-- session: Claude CLI (Opus 5.5 worker under Fable 5.1 /community); session ID unavailable
-- status: library-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/fork-context-darwin-test
-- repos:
-  - PyAutoFit: feature/fork-context-darwin-test
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1662
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1662
-
-
-## padded-single-image-recovery
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/771
-- issued: 2026-10-07
-- prompt: active/pyautolens_single_image_recovery_in_result_image.md
-- session: Claude CLI (Opus 5.5 worker under Fable 5.1 /community); session ID unavailable
-- status: library-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/padded-single-image-recovery
-- repos:
-  - PyAutoLens: feature/padded-single-image-recovery
-- conflict-override: PyAutoLens also claimed by scribbler-wave2-radial-panels-regrid (#770, __init__.py re-export only; no file overlap) — orchestrator decision 2026-10-07
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/772
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/772
-
 ## profiling-browser-completion
 - issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/21
 - issued: 2026-10-07

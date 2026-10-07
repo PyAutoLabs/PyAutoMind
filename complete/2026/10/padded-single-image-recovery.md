@@ -1,3 +1,17 @@
+## padded-single-image-recovery
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/771
+- completed: 2026-10-07
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/772
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/772
+
+Merged PyAutoLens#772 (384e86e06) into main 2026-10-07 via human-typed /prm; issue #771 closed.
+
+`Result.image_plane_multiple_image_positions` and the inward walk in `image_plane_multiple_image_positions_for_single_image_from` now count finite rows (new private helper `Result._finite_multiple_images_from`) rather than array rows, so single-image recovery fires for the inf-padded static-shape output of the JAX point solver exactly as for the numpy solver, and only finite rows reach `PositionsLH` and the cached `files/multiple_image_positions.json`. No pins move (identity for numpy/finite input). Four new tests in `test_autolens/analysis/test_result.py`; witness 3/4 red on unfixed source; full `test_autolens` 831 passed, 1 xfailed.
+
+Pending release: merged is not released — the `pending-release:` key above stays until `/review_release` clears it.
+
+## Original prompt
+
 # PyAutoLens: single-image recovery in `Result.image_plane_multiple_image_positions_from` is blind to inf-padded JAX solver output
 
 Type: bug

@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1741 records across 9 buckets.
+1743 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -160,6 +160,7 @@ markers; everything below GENERATED is rebuilt.
 - [ecosystem-routing-trial](2026/10/ecosystem-routing-trial.md) — Evaluated the role-routing checklist and specified future profiling/inference organ read contracts; no runtime…
 - [evaluation-grid-cap-field](2026/10/evaluation-grid-cap-field.md)
 - [fit-util-masked-division](2026/10/fit-util-masked-division.md)
+- [fork-context-darwin-test](2026/10/fork-context-darwin-test.md)
 - [heart-dashboard-collectors](2026/10/heart-dashboard-collectors.md)
 - [heart-front-door-sync](2026/10/heart-front-door-sync.md)
 - [heart-monitoring-coverage](2026/10/heart-monitoring-coverage.md)
@@ -181,6 +182,7 @@ markers; everything below GENERATED is rebuilt.
 - [orchestration-panel-core](2026/10/orchestration-panel-core.md)
 - [organ-prompt-headings](2026/10/organ-prompt-headings.md)
 - [over-sample-snr-helper](2026/10/over-sample-snr-helper.md)
+- [padded-single-image-recovery](2026/10/padded-single-image-recovery.md)
 - [point-audits-wheel-provenance](2026/10/point-audits-wheel-provenance.md) — Point-solver audits now work with installed wheels, preserve checkout provenance, fingerprint installed packag…
 - [point-image-pair-all-forward-grad-nan](2026/10/point-image-pair-all-forward-grad-nan.md)
 - [point-solver-duplicate-policy](2026/10/point-solver-duplicate-policy.md)

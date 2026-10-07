@@ -396,7 +396,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 2 (stage 1: 2, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14
+Count toward 20: 3 (stage 1: 3, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -427,3 +427,4 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-09-28 | board-footer-family-fix (PyAutoHeart#242 / PyAutoHands#292) | notify | tests PASS — Heart full suite 1063 passed, Hands full suite 472 passed; PR CI Heart Tests success + Hands Tests success, mergeStateStatus CLEAN at /prm / smoke n/a — test files only, no library or workspace-script change / review none — no independent review leg recorded / heart not recorded — no ship calibration row was appended for this task / witness PASS — footer tests 3/3 each in Heart and Hands, expectation derived from PyAutoBrain theme().board_links (policy board list), also 3/3 against PyAutoBrain#427 and a scratch policy with eyes after memory | merged-unchanged | 1 |
 | 2026-10-06 | sizing-none-triage-rules (PyAutoBrain#482) | glance | tests PASS; smoke CLI/regrade PASS; review CLEAN; Heart YELLOW acknowledged; witness PASS | merged-unchanged | 1 |
 | 2026-10-07 | nnls-memo-scattered-backoff (PyAutoArray#615) | glance | tests PASS; smoke n/a (no workspace impact); review not recorded; Heart YELLOW acknowledged; witness PASS (local synthetic, Nautilus replay open) | merged-unchanged | 1 |
+| 2026-10-07 | fork-context-darwin-test (PyAutoFit#1662) | glance | tests PASS (CI unittest 3.12/3.13/nojax green; full test_autofit 2965 passed); smoke n/a (test-only, no workspace impact); review not recorded; Heart YELLOW acknowledged; witness PASS (4 new tests red with context.py reverted, green on main) | merged-unchanged | 1 |

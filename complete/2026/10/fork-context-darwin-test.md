@@ -1,3 +1,17 @@
+## fork-context-darwin-test
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1661
+- completed: 2026-10-07
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1662
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1662
+
+Merged PyAutoFit#1662 (1e58fb1c1) into main 2026-10-07 via human-typed /prm; issue #1661 closed. CI green (unittest 3.12, 3.13, unittest-nojax).
+
+Test-only: four new tests in `test_autofit/non_linear/test_fork_context.py` monkeypatch `sys.platform` to `darwin` and `win32` and assert `fork_context()` returns the `multiprocessing` module (exposing `Process`/`Queue`/`Pool`) and never calls no-argument `get_context()` — the import-time call that locked the start method, fixed by community PR #1657. Witness: the four tests fail with `context.py` reverted, pass on main; full `test_autofit` 2965 passed.
+
+Pending release: merged is not released — the `pending-release:` key above stays until `/review_release` clears it.
+
+## Original prompt
+
 # PyAutoFit: add a regression test for `fork_context()` not fixing the multiprocessing start…
 
 Type: bug
