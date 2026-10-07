@@ -1,5 +1,48 @@
 # Dashboard slogan order and collapsible sections
 
+- Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/490 (closed 2026-10-07)
+- Tier: judge — human /prm
+
+## What shipped
+
+Brain's `board/_theme.py::section_layout` is now the shared top-of-page layout. It renders the hero, then the orchestration (slogan) panel, then the navigation cards. Major titled sections are wrapped in native `<details>`/`<summary>` disclosures, collapsed by default. Each header keeps its stable anchor and shows owner-computed counts or a labelled status badge. Shared JS opens a section's ancestor disclosures for initial fragments, hash changes and repeated nav clicks, and a print rule expands everything. The contract is documented in Brain `docs/board-navigation.md`.
+
+All 13 boards adopted it:
+- Brain, Mind (Start Here count = unique tasks actually displayed), Cortex.
+- Heart: observed-check status aggregated as red > yellow, kept separate from release readiness.
+- Hands: counts omitted when collection fails.
+- Memory, Nerves, Gut, Pulse, Eyes, Insight, Ears.
+- Scientist: organ rows are in a collapsed "Organ dashboards" section (`#dashboards`) with an "N of M reporting" badge and the Heart's word.
+
+## PRs (all MERGED 2026-10-07)
+
+- PyAutoBrain#491 (c0dd43a9)
+- PyAutoMind#479 (87967520)
+- PyAutoCortex#58 (fcaf87fa)
+- PyAutoMemory#123 (05674dda)
+- PyAutoHeart#291 (670efe76)
+- PyAutoHands#307 (c0c03ebb)
+- PyAutoNerves#193 (97fb8eea)
+- PyAutoGut#27 (9e272655)
+- PyAutoEyes#23 (ab815f5d)
+- PyAutoInsight#11 (6e26ead3)
+- PyAutoPulse#24 (69fcc409)
+- PyAutoEars#21 (b38dfd5c)
+- PyAutoScientist#49 (5838a0c4)
+
+## Publication
+
+- The 12 live boards other than Scientist were verified in Chromium after merge. Nerves, Gut and Hands were republished by dispatch.
+- Scientist's Dashboard workflow was dispatched at close-out (run 37616812417, success). The live page (refreshed 2026-10-07T11:50:36Z) shows the panel above the nav and a collapsed "Organ dashboards" section.
+
+## Known follow-up
+
+Scientist's `heart_word()` cannot parse Heart's new headline `Monitoring RED · 38; release STALE`, so the Scientist board shows Heart as unknown/unavailable. This predates #490; the fix is a parser change in `PyAutoScientist/scripts/organism_board.py`.
+
+## Original prompt
+
+# Dashboard slogan order and collapsible sections
+
 Type: feature
 Issued: 2026-10-07
 Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/490
