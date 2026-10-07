@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1755 records across 9 buckets.
+1756 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -121,6 +121,7 @@ markers; everything below GENERATED is rebuilt.
 
 ## 2026/10
 
+- [absorb-claude-notes-agents-md](2026/10/absorb-claude-notes-agents-md.md)
 - [assistant-feedback-distribution](2026/10/assistant-feedback-distribution.md)
 - [benchmark-forward-model-consistency](2026/10/benchmark-forward-model-consistency.md) — Added the frozen imaging/point-source/interferometer consistency card, physical conversions, source-centre-awa…
 - [benchmark-positions-inference](2026/10/benchmark-positions-inference.md)

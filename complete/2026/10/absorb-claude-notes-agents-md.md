@@ -1,3 +1,18 @@
+## absorb-claude-notes-agents-md
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/492
+- completed: 2026-10-07
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/493
+
+- Merged as `8048a2f3` (2026-10-07); sibling of `retire-claude-md-pointers` (PyAutoMind#483).
+- `policy/workspace_model_delegation.md` absorbs the root `CLAUDE.md` "Claude-specific notes", corrected: points at `MODEL_DELEGATION.md`'s bounded-worker contract and heartbeat (the `WORKFLOW.md` template left in a7d8fce), Sonnet floor is ship_* step 4, slash commands are the installed skills. Body 1069 B.
+- `skills/WORKFLOW.md` / `skills/MODEL_DELEGATION.md`: "Model delegation" and "No OpenAI API fallback" have one home in MODEL_DELEGATION.md; the independent-review rule stays in WORKFLOW.md (pinned by `test_chat_orchestration_contract.py`).
+- Stale `CLAUDE.md` references dropped or marked legacy across ORGANISM.md, BUILD/HEART capabilities, repo_cleanup skill, agent_harness_smoke doc, `bin/install.sh`, tests; `_memory.py` reads only `wiki/AGENTS.md`.
+- 11 skill descriptions over 300 chars trimmed to ≤ 250, trigger phrases kept, no renames. Brain suite 1291 passed (clean shell).
+- Measured fact worth keeping: a fresh delegated `general-purpose` subagent DOES receive the full AGENTS.md hierarchy plus skill descriptions (~18-22k tokens); only built-in Explore/Plan skip it.
+- Partial vs done-when: `_clone.py` / `regroup_workspace.py` keep `CLAUDE.md` as tolerated-legacy until #482's wave lands — re-filed as `draft/maintenance/pyautobrain/drop_legacy_claude_md_patterns.md`. Human follow-up: re-run `bin/install.sh` in the root workspace and delete root `CLAUDE.md`.
+
+## Original prompt
+
 # Fold the Claude-specific notes into the generated AGENTS.md policy block; drop stale CLAUDE.md references; trim skill descriptions
 
 Type: maintenance
