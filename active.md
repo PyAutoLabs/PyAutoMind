@@ -78,13 +78,17 @@
 - issued: 2026-10-07
 - prompt: active/dashboard-markdown-icons.md
 - session: Codex GPT-6; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dashboard-markdown-icons
 - repos:
   - PyAutoBrain: feature/dashboard-markdown-icons
   - PyAutoMind: feature/dashboard-markdown-icons
 - summary: Approved right-aligned Markdown source icons in shared dashboard layout. Human merge.
-- resume: Implementation validated; Heart warnings acknowledged by the human. Shipping Brain and dependent Mind PRs; human merge.
+- resume: PRs open; merge Brain #499 before dependent Mind #490 after CI passes. Human merge; no automatic follow-up armed.
 - validation: 271 focused checks passed; 1270 Brain and 695 Mind full-suite tests passed, each remaining environment-sensitive fixture passed with worktree overrides removed; 40 browser cases passed.
 - evidence: /home/jammy/Code/PyAutoLabs/.worktrees/dashboard-markdown-icons/evidence/handoff.md
 - heart-ack: manifest drift: workspace checkouts (manifest ↔ disk) — 3 mismatch(es) vs PyAutoMind/repos.yaml; release validation incomplete: no rehearsal for current source — explicitly acknowledged by the human in this Codex session on 2026-10-07
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/499
+- prs:
+  - PyAutoBrain: https://github.com/PyAutoLabs/PyAutoBrain/pull/499 (85d270a)
+  - PyAutoMind: https://github.com/PyAutoLabs/PyAutoMind/pull/490 (5e0a914b)
