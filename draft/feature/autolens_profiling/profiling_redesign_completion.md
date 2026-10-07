@@ -6,16 +6,16 @@ Repos: autolens_profiling, PyAutoPulse
 Consequence: judge
 Autonomy: human-required
 Filed: 2026-10-07
-Status: plan approved; Phase A PR #388 open, awaiting human merge
+Status: plan approved; Phase A merged in #388; Phases B/C pending
 
 ## Phase progress
 
-Human approved the concrete plan with "ok go". Phase A is issue
-https://github.com/PyAutoLabs/autolens_profiling/issues/387; active prompt:
-active/profiling_dashboard_completion.md. Implementation and validation complete;
-Heart YELLOW acknowledged and PR https://github.com/PyAutoLabs/autolens_profiling/pull/388
-is open at 4c0961c. Phases B/C
-remain pending. No merge, deployment, scientific campaign or Fable review occurred.
+Human approved the concrete plan with "ok go". Phase A merged in
+https://github.com/PyAutoLabs/autolens_profiling/pull/388 on 2026-10-07;
+issue #387 is closed. Completion and validation:
+complete/2026/10/profiling-dashboard-completion.md.
+Phases B/C remain pending under the approved plan. No scientific campaign or
+Fable review occurred. Published-site verification follows deployment.
 
 ## Current direction
 
@@ -55,7 +55,7 @@ the phases below replace its generic automatic stubs with task-specific scope.
 
 ### Phase A: useful project dashboard (autolens_profiling)
 
-Suggested branch: feature/profiling-dashboard-completion.
+Completed: complete/2026/10/profiling-dashboard-completion.md (PR #388).
 
 1. Add a model/instrument overview in catalogue/browser.js and browser.css.
    Enumerate available measurement axes and recorded devices from evidence_shards;

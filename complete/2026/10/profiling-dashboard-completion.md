@@ -1,3 +1,20 @@
+# Profiling dashboard completion — Phase A
+
+Merged: 2026-10-07
+PR: https://github.com/PyAutoLabs/autolens_profiling/pull/388
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/387 (closed)
+Merge commit: a5966a32d5217316ab82ee6a3a517e250d5c7611
+
+Added axis/device/run availability navigation, useful initial selections and populated measurement panels. Added explicit, qualified hazard discovery and generated setup documentation. Scientific records and all 1379 tracked result artifacts are unchanged. The draft baseline inventory checksum was refreshed without changing scientific configuration or acceptance.
+
+Validation: 1136 Python tests passed across the full run and focused checksum rerun; 6 skipped. Expanded real Chromium checks, seven import smoke checks, lint/format, generated-artifact idempotence and Pulse contract validation passed. Independent Sol review CLEAN. GitHub head CI completed successfully, all 36 steps passed; merge state CLEAN. Human acknowledged the existing Heart YELLOW before shipping and authorized merge with /prm.
+
+This closes only Phase A. Approved source-layout consolidation (Phase B) and Pulse browser parity (Phase C) remain in draft/feature/autolens_profiling/profiling_redesign_completion.md. No new profiling campaign or scientific baseline acceptance occurred.
+
+Review logs and screenshots archived under .worktree-archives/profiling-dashboard-completion-20261007 in the workspace before worktree cleanup.
+
+## Original prompt
+
 # Make profiling measurements and hazards discoverable
 
 Type: feature

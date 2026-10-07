@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: safe
 Priority: high
 Memory: wiki/lensing/sources/dark-matter-substructure.md; wiki/galaxies/sources/massive-ellipticals.md; wiki/galaxies/sources/cosmos-survey.md
+Issued: 2026-10-07
 Status: formalised
 Consequence: glance
 Witness: a new test under test_autofit that monkeypatches sys.platform="darwin" and reloads parallel.context asserts multiprocessing.context._default_context._actual_context is None; it fails on the pre-#1657 code (revert the context.py hunk locally) and passes on main
