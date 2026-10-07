@@ -258,7 +258,7 @@ Use the start-dev skill. active/community_pages.md
 
 </details>
 
-<details><summary>📋 <a href="active/sparse_terms_oversampled_fine_grids.md">SparseTerms oversample=q: accumulate fine precision-operator and dirty-image grids for analytic uv-plane components…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/620">issue #620</a> — issued 2026-10-07 — library-dev</summary>
+<details><summary>📋 <a href="active/sparse_terms_oversampled_fine_grids.md">SparseTerms oversample=q: accumulate fine precision-operator and dirty-image grids for analytic uv-plane components…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/620">issue #620</a> — issued 2026-10-07 — library-shipped, awaiting-merge (judge tier; human /prm; Array first) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/621">PyAutoArray#621</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/650">PyAutoGalaxy#650</a> — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 Use the start-dev skill. active/sparse_terms_oversampled_fine_grids.md
@@ -272,6 +272,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#621](https://github.com/PyAutoLabs/PyAutoArray/pull/621) — `active/sparse_terms_oversampled_fine_grids.md`
 - [PyAutoArray#616](https://github.com/PyAutoLabs/PyAutoArray/pull/616) — `complete/2026/10/imshow-origin-lower-overlays.md`
 - [PyAutoArray#612](https://github.com/PyAutoLabs/PyAutoArray/pull/612) — `complete/2026/10/jax-lapack-compatibility-repair.md`
 - [PyAutoArray#615](https://github.com/PyAutoLabs/PyAutoArray/pull/615) — `complete/2026/10/nnls-memo-scattered-backoff.md`
@@ -284,6 +285,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#650](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/650) — `active/sparse_terms_oversampled_fine_grids.md`
 - [PyAutoGalaxy#647](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/647) — `complete/2026/10/jax-lapack-compatibility-repair.md`
 
 **PyAutoLens**
