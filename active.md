@@ -82,10 +82,16 @@
 - issued: 2026-10-07
 - prompt: active/sparse_terms_oversampled_fine_grids.md
 - session: Claude CLI (Opus 5.5 subagent, /start_dev); session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge (judge tier; human /prm; Array first)
 - worktree: ~/Code/PyAutoLabs-wt/sparse-terms-oversampled-fine-grids
 - repos:
   - PyAutoArray: feature/sparse-terms-oversampled-fine-grids (coordination with community-pages (README only); disjoint files; human-authorised 2026-10-07)
   - PyAutoGalaxy: feature/sparse-terms-oversampled-fine-grids (coordination with community-pages (README only) and scribbler-wave2-radial-panels-regrid (#641 merged, awaiting close-out); disjoint files, no README/radial-panel/regrid code; human-authorised 2026-10-07)
 - depends-on: sparse_noise_map_pooling_option — MERGED PyAutoArray#619 (2c5cb697)
 - tier: judge (human /prm)
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/621
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/650
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/621
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/650
+- heart-ack: manifest drift: shared-standards blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml; release validation stale: source moved since rehearsal (PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens) — YELLOW acknowledgement pre-authorised by the human 2026-10-07
+- workspace-impact: none (additive API; smoke autolens_workspace datacube/modeling_array_free.py PASS)
