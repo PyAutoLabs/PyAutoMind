@@ -4,12 +4,12 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 2 in flight",
-  "updated": "2026-10-07T21:19:20Z",
+  "updated": "2026-10-07T21:24:05Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
       "severity": "yellow",
-      "text": "Register autofit_inference and autofit_profiling across the organism, with minimal skeletons\u2026 \u2014 workspace-shipped, awaiting-merge \u2014 7 PRs open 2026-10-07 (merge order: skeletons \u2192 Mind#493 \u2192 Heart/Cortex/Pulse/.github); judge\u2026",
+      "text": "Register autofit_inference and autofit_profiling across the organism, with minimal skeletons\u2026 \u2014 workspace-shipped, awaiting-merge \u2014 5/7 MERGED 2026-10-07 by human /prm (autofit_inference#1, autofit_profiling#1, Mind#493\u2026",
       "url": "https://github.com/PyAutoLabs/autofit_inference/pull/1",
       "prompt": "Use the start-dev skill. active/search_extensibility_b1_registration.md"
     },
