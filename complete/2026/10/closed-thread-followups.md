@@ -1,3 +1,29 @@
+# Detect follow-ups on closed and answered community threads
+
+- issue: https://github.com/PyAutoLabs/PyAutoEars/issues/19
+- completed: 2026-10-07
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/489
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoEars/pull/20
+- summary: New external comments after closure or an accepted answer return a thread to Community review without requiring contributors to reopen it. Ears records activity evidence and source links; Community judges actionability and checks the acting account's permission.
+
+## Merge evidence
+
+Human-authorized `/prm`; Brain #489 merged first at 76c832cacec84b6b6105ee52af4fab47adcb5ab9, then Ears #20 at c290ffd8215dca92668b7788ac6784938b5ebfef. Both feature tips are ancestors of origin/main in full local clones.
+
+All runs and jobs on both exact feature heads were completed/success: Brain run 37598552428 (Python 3.12/3.13), Ears run 37598621790 (Python 3.12/3.13 and browser), five jobs total. Both PRs were CLEAN/MERGEABLE before merge.
+
+## Validation and boundaries
+
+97 local Ears tests and 66 targeted Brain tests passed; generated state validates. Chromium passed at 390/1280 widths and in light/dark themes, including copy fallback and the follow-up link. Live read-only collection detects Discussion #13 with complete coverage despite its closed/answered state. Jammy2211 can reopen that Discussion; this does not establish any contributor's rights.
+
+Collection is bounded by pagination and surfaces incomplete coverage. Quiet closed issue history is skipped; closed PRs are excluded. New activity is a review candidate, not automatic semantic classification or permission to reopen. Direct bounded triage retains unknown response state when it cannot establish complete post-settlement coverage. Source bodies are never published. Reopening, unlocking, clearing an answer and posting replies are separate authorized actions.
+
+The exact Heart YELLOW reasons were acknowledged before PR creation: generated shared-standards drift (2 mismatches) and stale release validation for PyAutoNerves/PyAutoFit/PyAutoArray/PyAutoGalaxy/PyAutoLens. This was development-only authorization, not a release. No library release obligations exist for this organ-only change.
+
+Task worktrees contain only source plus disposable test caches, synthetic browser output, logs and the temporary browser environment; no irreplaceable science data. Close-out releases the claim and removes the task worktree.
+
+## Original prompt
+
 # Detect actionable follow-ups on settled community threads
 
 Issue: https://github.com/PyAutoLabs/PyAutoEars/issues/19
