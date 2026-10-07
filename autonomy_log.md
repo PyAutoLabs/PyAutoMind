@@ -396,7 +396,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 3 (stage 1: 3, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14
+Count toward 20: 4 (stage 1: 4, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -428,3 +428,4 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-10-06 | sizing-none-triage-rules (PyAutoBrain#482) | glance | tests PASS; smoke CLI/regrade PASS; review CLEAN; Heart YELLOW acknowledged; witness PASS | merged-unchanged | 1 |
 | 2026-10-07 | nnls-memo-scattered-backoff (PyAutoArray#615) | glance | tests PASS; smoke n/a (no workspace impact); review not recorded; Heart YELLOW acknowledged; witness PASS (local synthetic, Nautilus replay open) | merged-unchanged | 1 |
 | 2026-10-07 | fork-context-darwin-test (PyAutoFit#1662) | glance | tests PASS (CI unittest 3.12/3.13/nojax green; full test_autofit 2965 passed); smoke n/a (test-only, no workspace impact); review not recorded; Heart YELLOW acknowledged; witness PASS (4 new tests red with context.py reverted, green on main) | merged-unchanged | 1 |
+| 2026-10-07 | imshow-origin-lower-overlays (PyAutoArray#616) | glance | tests 1981 pass / smoke n-a (private helpers, no public API) / review in-session diff / Heart YELLOW acked / witness red→green | merged-unchanged | 1 |
