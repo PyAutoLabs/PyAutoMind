@@ -1,3 +1,18 @@
+## retire-nested-claude-md-pointers
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/484
+- completed: 2026-10-07
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/485
+- merge-commit: a97e2f4923bb20ede48459caab787ad428b7c2f8
+
+- `firewall_gate.yml` TEMPORARY pointer-leg skip (from #483) removed; the pointer leg runs normally on PR and push, and the TEMPORARY tests are deleted.
+- `repos_sync.stray_claude_mds` now covers every tracked nested `CLAUDE.md` beside an AGENTS.md (via `git ls-files`, new helper `tracked_nested_claude_mds`); content-bearing files stay `KEPT`, leg name unchanged for Heart's parser.
+- `CLAUDE_POINTER_BOILERPLATE` gains four exact nested pointer wordings (scripts/, literature sub-wiki, Euclid sub-wiki, "Shared instructions live in [AGENTS.md](AGENTS.md).").
+- `session_hook_propagate.yml` stages nested deletions (`git ls-files --deleted -- CLAUDE.md '*/CLAUDE.md'`); still dispatch-only, honours `dry_run`.
+- Architect scope addition: Memory `skills/**` → KEEP verbatim in /spawn (spec rule 1c + `spawn.MEMORY_RULES`), clearing the two UNMATCHED catch_up files; spawn dry run exits 0.
+- Follow-up: the live workspace `--check` reports 16 removable nested pointers until the dispatch-only propagation wave is run by a human.
+
+## Original prompt
+
 # Retire nested CLAUDE.md pointers and remove the temporary firewall-gate skip
 
 Type: maintenance
