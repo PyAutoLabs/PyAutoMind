@@ -53,7 +53,7 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoGut/pull/26
 - library-pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/22
 - library-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/47
-- resume: Brain #487 merged after all three CI jobs passed. Ten consumer PRs open, checking every head-SHA run/job under user /prm authorization. Pulse upstream snapshot merge retested (192 pass). Remaining merge/publication/closeout follows green checks; no release authorized.
+- resume: /prm stopped on Ears #18 browser CI: tests/board_browser.py:50 expects 2 orchestration links; new Update makes 3. Brain #487 merged green. Eight consumers green, Eyes #22 pending at audit; all ten consumers remain open. Fix missed Ears owner-browser assertion through dev flow, run exact browser check, ship fix, then /prm. Log: worktree tmp/ci-failure-PyAutoEars-112691117119.log; all PRs listed above. No watcher/auto-rerun/cleanup.
 
 ## profiling-browser-completion
 - issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/21
