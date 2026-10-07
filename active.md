@@ -60,3 +60,15 @@
 - repos:
   - PyAutoLens: feature/padded-single-image-recovery
 - conflict-override: PyAutoLens also claimed by scribbler-wave2-radial-panels-regrid (#770, __init__.py re-export only; no file overlap) — orchestrator decision 2026-10-07
+
+## profiling-layout-completion
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/389
+- issued: 2026-10-07
+- prompt: active/profiling_layout_completion.md
+- session: Codex local
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-layout-completion
+- repos:
+  - autolens_profiling: feature/profiling-layout-completion
+- summary: Approved Phase B wrapper retirement and likelihood-specific hazard documentation; preserve historical aliases and results.
+- resume: Audit legacy callers, implement in isolated workspace, validate and ship; parent retains Phase C.

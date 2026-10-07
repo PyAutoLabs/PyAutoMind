@@ -6,6 +6,8 @@ Repos: autolens_profiling
 Consequence: judge
 Autonomy: human-required
 Filed: 2026-10-07
+Issued: 2026-10-07
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/389
 
 Primary: @autolens_profiling. Standalone workspace, no library changes.
 Parent: draft/feature/autolens_profiling/profiling_redesign_completion.md
