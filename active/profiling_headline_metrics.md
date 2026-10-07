@@ -53,3 +53,16 @@ Suggested branch: feature/profiling-headline-metrics.
 - No active registry conflict reported for PyAutoPulse. Conflict helper warns of an unregistered `feature/organism-map-regen-486` worktree; leave it untouched and inspect overlap during approved worktree setup.
 - Heart gate: STALE (exit 1), planning permitted. Ship-time verdict remains required.
 - No source edits or issue creation performed before approval.
+
+## Implementation handoff — 2026-10-07
+
+- Plan approved by the user; implementation complete on `feature/profiling-headline-metrics`.
+- Worktree: `/home/jammy/Code/PyAutoLabs/.worktrees/profiling-headline-metrics/PyAutoPulse`.
+- Changed: browser headline selection/rendering/CSS, JS and browser regression coverage, generated `dashboard.html`.
+- Validation: 193 Python tests; JS measurement assertions; Chromium suite (selection changes, Numba/missing/error states, stale response isolation, responsive layout); Ruff; offline board check all pass.
+- Evidence: worktree `tmp/{pytest-headlines.log,browser-headlines.log,check-headlines.log,readiness-headlines.json}`; preview `tmp/browser/model.png`; concrete PR body `tmp/pr-body.md`.
+- No producer, scientific-library or exchange-schema change; scientific workspace smoke is inapplicable.
+- Heart at ship time: YELLOW; exact reasons: `manifest drift: organism-map blocks (generated) — 8 mismatch(es) vs PyAutoMind/repos.yaml`; `manifest drift: workspace checkouts (manifest ↔ disk) — 2 mismatch(es) vs PyAutoMind/repos.yaml`.
+- Additional stale reason: `release validation incomplete: no rehearsal for current source`.
+- User acknowledgement requested before source commit/push/PR per ship-library step 3. Source changes are currently uncommitted; no PR yet. Merge remains human `/prm`.
+- Next: after acknowledgement, record it in PR/task, commit/push the explicit seven changed files, open PR and update task to awaiting-merge. Do not include `tmp/` artifacts in the commit.
