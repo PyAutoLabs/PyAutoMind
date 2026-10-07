@@ -250,7 +250,7 @@ Use the start-dev skill. draft/refactor/pyautofit/remove_eden_packaging_tooling.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/absorb_claude_notes_into_agents_md.md">Fold the Claude-specific notes into the generated AGENTS.md policy block; drop stale…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/492">issue #492</a> — issued 2026-10-07 — library-dev</summary>
+<details><summary>📋 <a href="active/absorb_claude_notes_into_agents_md.md">Fold the Claude-specific notes into the generated AGENTS.md policy block; drop stale…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/492">issue #492</a> — issued 2026-10-07 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/493">PyAutoBrain#493</a></summary>
 
 ```
 Use the start-dev skill. active/absorb_claude_notes_into_agents_md.md
