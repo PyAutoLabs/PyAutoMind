@@ -82,3 +82,13 @@
 - repos:
   - PyAutoPulse: feature/profiling-readable-metrics
 - plan: active/profiling-readable-metrics.md; user approved with go
+
+## trim-repo-role-text
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/486
+- issued: 2026-10-07
+- prompt: active/trim_repo_role_text.md
+- session: Claude CLI (Fable 5.1 architect, Opus execution subagent, /start_dev); https://claude.ai/code/session_01QmiavJnNzmKb6EJmgYATfx
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/trim-repo-role-text
+- repos:
+  - PyAutoMind: feature/trim-repo-role-text

@@ -10,6 +10,7 @@ Consequence: judge
 Priority: medium
 Status: draft
 Filed: 2026-10-07
+Issued: 2026-10-07
 
 ## Request (verbatim, 2026-10-07)
 
