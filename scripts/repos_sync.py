@@ -62,11 +62,17 @@ both registered in `<repo>/.claude/settings.json`:
 The copies must be byte-identical to the canonical files, so `--check` fails on
 any edit made to a copy.
 
-`.claude/` and `CLAUDE.md` are the only top-level entries --write creates in a
-target repo, and a repo may lint its own layout. Before writing either one,
---write reads that repo's own allowlist (see "Structure-lint agreement" below)
-and skips a repo that has not allowlisted the entry, rather than breaking that
-repo's CI with a path it rejects.
+`.claude/` is the only top-level entry --write creates in a target repo, and a
+repo may lint its own layout. Before writing it, --write reads that repo's own
+allowlist (see "Structure-lint agreement" below) and skips a repo that has not
+allowlisted the entry, rather than breaking that repo's CI with a path it
+rejects.
+
+--write also REMOVES one thing: the retired `CLAUDE.md` -> `AGENTS.md` pointer
+(PyAutoMind#482). Claude Code loads AGENTS.md natively now, and any CLAUDE.md in
+the cwd or an ancestor makes it ignore every AGENTS.md, so the pointer hides the
+file it points at. Only a content-free pointer is deleted; a CLAUDE.md carrying
+real guidance is reported and left for a human (see "CLAUDE.md retirement").
 
 --check (always run) verifies, against the manifest:
 
@@ -101,9 +107,12 @@ repo's CI with a path it rejects.
   * the where-to-file policy block — same not-silent contract as the
     deliverable block (a repo without it is reported); --write inserts the
     markers itself under an existing deliverable block
+  * the CLAUDE.md retirement (leg "CLAUDE.md → AGENTS.md pointers") — a
+    checked-out repo that has an AGENTS.md has NO CLAUDE.md; each one still
+    present is named, as a removable pointer or as content to move by hand
   * target-repo layout lints — every checked-out repo that lints its own
-    top-level entries allowlists the `.claude/` and `CLAUDE.md` that --write
-    installs (a repo that does not is skipped by --write and named here)
+    top-level entries allowlists the `.claude/` that --write installs (a repo
+    that does not is skipped by --write and named here)
 
 Exit code 0 = no drift; 1 = drift found (each mismatch printed).
 """
@@ -355,24 +364,22 @@ def load_session_hook(mind_root):
 def load_deliverable_hook(mind_root):
     return (mind_root / DELIVERABLE_HOOK_FILE).read_text()
 
-# The canonical content-free CLAUDE.md pointer. Guidance is agent-agnostic and
-# lives in AGENTS.md (read natively by Codex, Cursor, etc.); Claude Code loads
-# CLAUDE.md, not AGENTS.md, so every repo that has an AGENTS.md keeps a CLAUDE.md
-# whose only job is to `@`-import it (Anthropic's documented bridge — imported in
-# full at launch, recursive to depth 4). Kept as a real, greppable file (not a
-# symlink) so it can carry a Claude-only section later and avoids Windows symlink
-# friction. This is the body already committed to Mind and Brain.
-CLAUDE_MD_POINTER = """\
-@AGENTS.md
-
-<!-- Guidance is agent-agnostic and lives in AGENTS.md (read natively by Codex,
-     Cursor, etc.). Claude Code loads CLAUDE.md, not AGENTS.md, so this file exists
-     only to import that one source. Keep it a pointer — put content in AGENTS.md. -->
-"""
-
-# An `@AGENTS.md` import on its own line — the real bridge, not prose that merely
-# mentions AGENTS.md (the dead-pointer failure mode that motivated this check).
+# An `@AGENTS.md` import on its own line — the shape of the retired CLAUDE.md
+# pointer (see "CLAUDE.md retirement" below), not prose that merely mentions
+# AGENTS.md.
 CLAUDE_IMPORT_RE = re.compile(r"(?m)^@AGENTS\.md\s*$")
+
+# The one prose paragraph the retired pointers carried beside the import. It is
+# boilerplate ABOUT the pointer, not guidance, so a CLAUDE.md holding only this
+# (plus headings and comments) is still content-free. Compared with whitespace
+# normalised, so the two line-wrappings in the wild both match. Anything else is
+# content, and content is never deleted by a script.
+CLAUDE_POINTER_BOILERPLATE = (
+    "The canonical, agent-agnostic instructions live in `AGENTS.md`. Claude "
+    "Code loads them via the import below; if your tool does not process "
+    "`@`-imports, open `AGENTS.md` in this directory and read it directly.",
+)
+HTML_COMMENT_RE = re.compile(r"<!--.*?-->", re.S)
 
 
 def load_manifest(mind_root):
@@ -1291,20 +1298,6 @@ def standards_coverage(root, repos):
     return len(seen), len(repos), absent
 
 
-# --------------------------------------------------------------------------
-# CLAUDE.md → AGENTS.md pointer (repo hygiene)
-# --------------------------------------------------------------------------
-#
-# Standard: guidance lives in the agnostic AGENTS.md; Claude Code reads
-# CLAUDE.md, so every repo that HAS an AGENTS.md keeps a content-free CLAUDE.md
-# that `@`-imports it. This is a pure function of "is this repo checked out and
-# does it have an AGENTS.md?", so it lives here beside the other body-map drift
-# checks. Repos with no AGENTS.md are reported (for a human) but not auto-stubbed
-# — writing real per-repo guidance is its own work, out of scope here. Absent
-# (not-checked-out) repos are skipped, exactly like the map-block generation, so
-# this runs cleanly in a partial/web checkout.
-
-
 def check_public_tables(root, repos):
     """Every front-door README's generated organ table must match the body map
     (so a new organ can never silently drop out of the public front door).
@@ -1344,14 +1337,53 @@ def check_hub_blurb(root, repos):
     ]
 
 
+# --------------------------------------------------------------------------
+# CLAUDE.md retirement (repo hygiene, PyAutoMind#482)
+# --------------------------------------------------------------------------
+#
+# Standard: guidance lives in the agnostic AGENTS.md, and a repo that HAS an
+# AGENTS.md has NO CLAUDE.md. Claude Code (>= 2.1.277) loads AGENTS.md natively,
+# but in its default mode any CLAUDE.md in the cwd or an ancestor makes it ignore
+# every AGENTS.md — so the content-free pointer every repo used to carry (a
+# CLAUDE.md that `@`-imported AGENTS.md) now hides the file it pointed at. Codex,
+# Cursor etc. read AGENTS.md directly and never read CLAUDE.md, so retiring it
+# changes nothing for them.
+#
+# The check leg keeps its old printed name, "CLAUDE.md → AGENTS.md pointers",
+# byte-identical: PyAutoHeart's manifest-drift parser keys on it. The removal
+# side deletes only a content-free pointer; a CLAUDE.md carrying anything else
+# is reported for a human to fold into AGENTS.md, never deleted. Absent
+# (not-checked-out) repos are skipped, exactly like the map-block generation, so
+# this runs cleanly in a partial/web checkout; repos with no AGENTS.md are out
+# of scope (a CLAUDE.md there may be the repo's only guidance).
+
+
 def claude_md_is_pointer(text):
-    """A CLAUDE.md counts as compliant iff it `@`-imports AGENTS.md on its own
-    line (a real import that expands into context), not merely prose naming it."""
-    return CLAUDE_IMPORT_RE.search(text) is not None
+    """True iff this CLAUDE.md is a content-free pointer, safe to delete.
+
+    It must `@`-import AGENTS.md on its own line, and carry nothing else but
+    HTML comments, headings, blank lines and the pointer's own boilerplate
+    paragraph (CLAUDE_POINTER_BOILERPLATE). Any other prose is content — a
+    Claude-only note somebody added — and makes the file NOT a pointer.
+    """
+    if CLAUDE_IMPORT_RE.search(text) is None:
+        return False
+    rest = CLAUDE_IMPORT_RE.sub("", HTML_COMMENT_RE.sub("", text))
+    prose = " ".join(
+        " ".join(
+            line.strip()
+            for line in rest.splitlines()
+            if line.strip() and not line.lstrip().startswith("#")
+        ).split()
+    )
+    return prose == "" or prose in CLAUDE_POINTER_BOILERPLATE
 
 
-def check_claude_md_pointers(root, repos):
-    problems = []
+def stray_claude_mds(root, repos):
+    """`(name, path, is_pointer)` for every checked-out repo that has an
+    AGENTS.md AND a CLAUDE.md — the one input both the check and the removal
+    read, so they cannot disagree about which files are in scope."""
+    found = []
     for name in repos:
         repo_dir = repo_checkout(root, name)
         if not repo_dir.is_dir():
@@ -1361,23 +1393,37 @@ def check_claude_md_pointers(root, repos):
             # coverage.
             continue
         if not (repo_dir / "AGENTS.md").exists():
-            continue  # AGENTS-less repos are reported separately, not drift
-        if structure_lint_forbids(repo_dir, "CLAUDE.md"):
-            continue  # --write skips it; check_structure_lints reports it
+            continue  # no AGENTS.md: a CLAUDE.md there is not a pointer
         claude = repo_dir / "CLAUDE.md"
-        if not claude.exists():
-            problems.append(f"'{name}': has AGENTS.md but no CLAUDE.md pointer")
-        elif not claude_md_is_pointer(claude.read_text()):
+        if claude.is_file() or claude.is_symlink():
+            text = claude.read_text(errors="replace") if claude.is_file() else ""
+            found.append((name, claude, claude_md_is_pointer(text)))
+    return found
+
+
+def check_claude_md_pointers(root, repos):
+    """A repo with an AGENTS.md must have no CLAUDE.md (it would hide AGENTS.md
+    from Claude Code). Each survivor is named, split by what to do about it."""
+    problems = []
+    for name, _claude, is_pointer in stray_claude_mds(root, repos):
+        if is_pointer:
             problems.append(
-                f"'{name}': CLAUDE.md does not @-import AGENTS.md (dead pointer)"
+                f"'{name}': has a retired CLAUDE.md pointer, which hides AGENTS.md "
+                "from Claude Code — remove it (`repos_sync.py --write` or the "
+                "session_hook_propagate job)"
+            )
+        else:
+            problems.append(
+                f"'{name}': CLAUDE.md carries content beyond the AGENTS.md import "
+                "— move it into AGENTS.md and delete CLAUDE.md by hand (never "
+                "deleted automatically)"
             )
     return problems
 
 
 def repos_without_agents_md(root, repos):
-    """Checked-out repos that have no AGENTS.md at all — the pointer is
-    meaningless without a target, so these are reported for a human to write
-    real guidance rather than auto-stubbed."""
+    """Checked-out repos that have no AGENTS.md at all — reported for a human
+    to write real guidance rather than auto-stubbed."""
     return [
         name
         for name in repos
@@ -1385,41 +1431,33 @@ def repos_without_agents_md(root, repos):
     ]
 
 
-def write_claude_md_pointers(root, repos):
-    """Create the canonical pointer wherever a checked-out repo has an AGENTS.md
-    but a missing or non-compliant CLAUDE.md. Idempotent: a repo already carrying
-    the `@AGENTS.md` import is left untouched; a repo with no AGENTS.md is
-    skipped (nothing to point at)."""
-    for name in repos:
-        repo_dir = repo_checkout(root, name)
-        if not repo_dir.is_dir():
-            continue
-        if not (repo_dir / "AGENTS.md").exists():
-            print(f"skipped (no AGENTS.md): {repo_dir / 'CLAUDE.md'}")
-            continue
-        if structure_lint_forbids(repo_dir, "CLAUDE.md"):
+def remove_claude_md_pointers(root, repos):
+    """Delete every content-free CLAUDE.md pointer in a checked-out repo that has
+    an AGENTS.md; leave (and name) any CLAUDE.md that carries content. Returns
+    the removed paths. Idempotent: a repo with no CLAUDE.md is untouched."""
+    removed = []
+    for _name, claude, is_pointer in stray_claude_mds(root, repos):
+        if is_pointer:
+            claude.unlink()
+            removed.append(claude)
+            print(f"removed (content-free pointer): {claude}")
+        else:
             print(
-                "SKIPPED (repo's layout lint disallows it): "
-                f"{repo_dir / 'CLAUDE.md'}"
+                "KEPT (carries content — move it into AGENTS.md by hand): "
+                f"{claude}"
             )
-            continue
-        claude = repo_dir / "CLAUDE.md"
-        if claude.exists() and claude_md_is_pointer(claude.read_text()):
-            print(f"unchanged: {claude}")
-            continue
-        verb = "rewrote (dead pointer)" if claude.exists() else "created"
-        claude.write_text(CLAUDE_MD_POINTER)
-        print(f"{verb}: {claude}")
+    return removed
 
 
 # --------------------------------------------------------------------------
 # Structure-lint agreement
 # --------------------------------------------------------------------------
 #
-# `--write` creates exactly two top-level entries in a target repo: the
-# `.claude/` tooling folder and the `CLAUDE.md` pointer. A repo may lint its
-# own layout — an allowlist of the top-level entries it accepts — and such a
-# repo has no way to know this script is about to write into it. Installing
+# `--write` creates exactly one top-level entry in a target repo: the
+# `.claude/` tooling folder (the `CLAUDE.md` pointer it used to create is now
+# retired and only ever removed, which no allowlist can object to). A repo may
+# lint its own layout — an allowlist of the top-level entries it accepts — and
+# such a repo has no way to know this script is about to write into it. Installing
 # `.claude/` into a repo whose lint has not allowlisted it breaks that repo's
 # CI, and the breakage reads as the repo's fault rather than as this script's.
 #
@@ -1437,8 +1475,9 @@ def write_claude_md_pointers(root, repos):
 STRUCTURE_LINT_CANDIDATES = ("scripts/validate_structure.py",)
 
 # The top-level entries --write creates, each flagged with whether it is a
-# directory — which picks the allowlist that governs it.
-GENERATED_TOP_LEVEL = ((".claude", True), ("CLAUDE.md", False))
+# directory — which picks the allowlist that governs it. `CLAUDE.md` left this
+# tuple with PyAutoMind#482: --write deletes it now, never creates it.
+GENERATED_TOP_LEVEL = ((".claude", True),)
 
 # The module-level names a layout lint uses for its two allowlists. Matched
 # exactly: accepting near-miss spellings would turn "no allowlist found"
@@ -1560,7 +1599,7 @@ def check_structure_lints(root, repos):
         for allowlist in unreadable:
             problems.append(
                 f"'{name}': {rel} has no readable {allowlist} — cannot tell "
-                "whether it accepts the generated .claude/ and CLAUDE.md"
+                "whether it accepts the generated .claude/"
             )
     return problems
 
@@ -2381,7 +2420,7 @@ def main():
         for rel, bold in PUBLIC_TABLE_TARGETS:
             write_block(public_target(root, rel), organ_public_table(repos, bold=bold),
                         ORGANS_BEGIN, ORGANS_END, required=False)
-        write_claude_md_pointers(root, repos)
+        remove_claude_md_pointers(root, repos)
         write_session_hooks(root, repos, hook_text, deliverable_hook_text)
     if write_enabled and not smoke_only_write and not standards_only_write:
         write_codex_hooks(root, repos)
@@ -2443,7 +2482,7 @@ def main():
     missing = repos_without_agents_md(root, repos)
     if missing:
         print(f"note: {len(missing)} checked-out repo(s) have no AGENTS.md "
-              f"(pointer not applicable — needs human-written guidance):")
+              f"(needs human-written guidance):")
         for name in missing:
             print(f"  • {name}")
 

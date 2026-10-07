@@ -36,6 +36,21 @@ name: Propagate the canonical hooks
 # (insert the markers under the deliverable block, fill them, touch nothing
 # else); the organism-map, history, remote-session and deliverable blocks stay
 # out of this job and keep their reviewed regeneration waves.
+#
+# ONE DELETION RIDES ALONG, ON A HUMAN DISPATCH ONLY: the retired CLAUDE.md ->
+# AGENTS.md pointer (PyAutoMind#482). Claude Code loads AGENTS.md natively now,
+# and any CLAUDE.md in the cwd or an ancestor makes it ignore every AGENTS.md,
+# so the pointer hides the file it points at. Deleting a content-free pointer
+# is the same class of byte-trivial change as the copies above, made through
+# `repos_sync.remove_claude_md_pointers` — the function `--write` calls — which
+# deletes ONLY a content-free pointer and leaves (and logs) a CLAUDE.md that
+# carries real guidance. It runs only on `workflow_dispatch`, never on the push
+# trigger, so the deletion wave is always a human act: dispatch with
+# `dry_run: true` first (the diffs are reported, nothing is pushed), then for
+# real. Only a tracked CLAUDE.md that the function removed is staged; nothing
+# else about what the job writes changes. Repos outside its reach are cleaned
+# by hand: PyAutoMind (never a target, below) and every repo carrying
+# `session_hook: false` (not a target either).
 
 on:
   push:
@@ -109,6 +124,9 @@ jobs:
           # arxiv_papers.yml use the same secret).
           PAT: ${{ secrets.PAT_PYAUTOLABS }}
           DRY_RUN: ${{ inputs.dry_run }}
+          # The CLAUDE.md pointer removal is a human-dispatched wave only (see
+          # the header): a push to main never deletes anything.
+          RETIRE_CLAUDE_MD: ${{ github.event_name == 'workflow_dispatch' }}
         run: |
           set -uo pipefail
 
@@ -154,6 +172,7 @@ jobs:
           # clone untouched and the loop below reports all of them "already
           # current" — a green run that propagated nothing.
           if ! python3 - <<'PY'
+          import os
           import sys
           from pathlib import Path
 
@@ -173,6 +192,11 @@ jobs:
           repos_sync.write_filing_blocks(
               Path("tree"), repos, repos_sync.load_filing_policy(mind_root),
           )
+          # The one deletion this job carries (see the header) — human dispatch
+          # only. Removes content-free pointers; a content-bearing CLAUDE.md is
+          # logged as KEPT and left alone.
+          if os.environ.get("RETIRE_CLAUDE_MD") == "true":
+              repos_sync.remove_claude_md_pointers(Path("tree"), repos)
           PY
           then
             echo "::error::the hook generator failed — nothing has been propagated"
@@ -196,6 +220,12 @@ jobs:
             for rel in .claude/hooks/session-start.sh .claude/hooks/end-at-deliverable.sh .claude/settings.json .codex/hooks.json AGENTS.md; do
               [ -e "$repo/$rel" ] && git -C "$repo" add -- "$rel"
             done
+            # Stage the pointer's deletion only: a tracked CLAUDE.md that is now
+            # gone was removed by remove_claude_md_pointers (nothing else here
+            # deletes files). A content-bearing one is still on disk, unstaged.
+            if [ ! -e "$repo/CLAUDE.md" ] && git -C "$repo" ls-files --error-unmatch -- CLAUDE.md >/dev/null 2>&1; then
+              git -C "$repo" rm --cached --quiet -- CLAUDE.md
+            fi
 
             # A repo that .gitignore's .claude/ would have `git add` skip the
             # file in silence, and this job would then report it "current" while
@@ -225,7 +255,7 @@ jobs:
             fi
 
             git -C "$repo" commit --quiet \
-              -m "session: propagate the canonical hooks and where-to-file block (repos_sync)"
+              -m "session: propagate the canonical hooks and where-to-file block, retire the CLAUDE.md pointer (repos_sync)"
             if git -C "$repo" push --quiet origin HEAD; then
               pushed="$pushed $slug"
             else
