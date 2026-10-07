@@ -147,7 +147,7 @@ def test_scoped_write_touches_only_selected_agents(tmp_path, monkeypatch):
     before = snapshot(tmp_path)
     def forbidden(*_args, **_kwargs):
         raise AssertionError("unrelated generator invoked")
-    for name in ("write_root_marker", "write_block", "write_codex_hooks", "write_session_hooks", "write_claude_md_pointers"):
+    for name in ("write_root_marker", "write_block", "write_codex_hooks", "write_session_hooks", "remove_claude_md_pointers"):
         monkeypatch.setattr(sync, name, forbidden)
     monkeypatch.setattr(sync.smoke_sync, "write", forbidden)
     assert cli(tmp_path, monkeypatch, "--write", "--only", sync.STANDARDS_BLOCKS, "--repo", "LibAlpha") == 0

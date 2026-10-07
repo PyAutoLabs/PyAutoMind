@@ -481,8 +481,10 @@ def run_check(tmp_path, monkeypatch, capsys, *argv):
     return exit_info.value.code, capsys.readouterr().out
 
 
-def dead_pointer(root, name):
-    """An unrelated red leg — a CLAUDE.md that imports nothing."""
+def stray_claude_md(root, name):
+    """An unrelated red leg — a CLAUDE.md beside an AGENTS.md, which the
+    retirement (PyAutoMind#482) forbids. This one imports nothing, so it is
+    reported for a human rather than removable."""
     (root / name / "AGENTS.md").write_text("# guidance\n")
     (root / name / "CLAUDE.md").write_text("# nothing useful\n")
 
@@ -538,7 +540,7 @@ def test_skip_does_not_change_the_exit_code_of_the_remaining_legs(
     make_repo(tmp_path, "OrganOne", hook=HOOK_TEXT + "# stale wave\n")
     make_repo(tmp_path, "LibTwo")
     (tmp_path / "ToolThree").mkdir()
-    dead_pointer(tmp_path, "OrganOne")
+    stray_claude_md(tmp_path, "OrganOne")
 
     code, out = run_check(
         tmp_path, monkeypatch, capsys, "--skip", repos_sync.SESSION_HOOKS
@@ -546,7 +548,7 @@ def test_skip_does_not_change_the_exit_code_of_the_remaining_legs(
 
     assert code == 1
     assert f"check {repos_sync.SESSION_HOOKS}:" not in out, out
-    assert "dead pointer" in out, out
+    assert "CLAUDE.md carries content" in out, out
 
 
 def test_skip_subtracts_from_what_only_selected(tmp_path, monkeypatch, capsys):
