@@ -1,3 +1,19 @@
+# Profiling browser completion
+
+Completed: 2026-10-07
+
+Phase C merged in [PyAutoPulse#23](https://github.com/PyAutoLabs/PyAutoPulse/pull/23), merge `da2aee38cbdc85d747050cad18ce55579748c4d2`; issue #21 closed. The human authorized parallel coordination with dashboard-freshness and the final reconciliation/merge.
+
+Delivered useful runtime defaults, axis/device availability and selection, exact-link recovery, optional old-capture metadata support, and qualified related/shared hazard discovery. Preserved immutable capture provenance, verified shard loading, scoped instance routing and separate measurement-method/batch semantics. Reconciled generated dashboard with merged freshness changes in `549eb5d`.
+
+Validation: 193 Python tests, expanded real-data Chromium interaction suite, Ruff and offline receipt/contract checks passed. Every CI job passed on exact head `549eb5d42d1abf29f49ba3840afea794b9b54213`; conditional publishing step correctly skipped on PR. Independent Sol review CLEAN. The unchanged Heart yellow/stale reasons had explicit human acknowledgement in this session. No scientific campaign or baseline acceptance was part of this task.
+
+Published Pulse verification passed after deployment: MGE/HST has three visible runtime values, rectangular/HST one, both have four axis choices and expected qualified hazard sections; no browser errors.
+
+Parent completion: complete/2026/10/profiling-redesign-completion.md.
+
+## Original prompt
+
 # Complete Pulse profiling browser navigation
 
 Type: feature

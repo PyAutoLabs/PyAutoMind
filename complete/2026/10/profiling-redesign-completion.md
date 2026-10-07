@@ -1,12 +1,28 @@
 # Complete profiling navigation and useful dashboard output
 
+Completed: 2026-10-07
+
+All three approved phases are merged and the published dashboards verified:
+
+- Phase A: [autolens_profiling#388](https://github.com/PyAutoLabs/autolens_profiling/pull/388), complete/2026/10/profiling-dashboard-completion.md. Useful defaults, axis navigation and qualified hazard discovery.
+- Phase B: [autolens_profiling#390](https://github.com/PyAutoLabs/autolens_profiling/pull/390), complete/2026/10/profiling-layout-completion.md. Retired compatibility hierarchy, migrated active callers/docs and kept archived provenance.
+- Phase C: [PyAutoPulse#23](https://github.com/PyAutoLabs/PyAutoPulse/pull/23), complete/2026/10/profiling-browser-completion.md. Matching Pulse experience, reconciled with dashboard freshness.
+
+Published project checks passed during Phase A. After Phase C deployment, real Chromium checks at https://pyautolabs.github.io/PyAutoPulse/ showed three MGE/HST runtime values (256.1 ms, 187.1 ms, 561.2 ms), one rectangular/HST value (1.06 s), four axis choices for both, related rectangular hazards and shared hazards for both; no browser errors. These are separate archived measurements, not newly accepted baselines or comparable performance scores.
+
+Phase C validation: 193 Python tests, expanded Chromium interactions, Ruff, offline contract checks, independent CLEAN review and all exact-head CI jobs passed. Issues for all three phases closed. No new scientific campaign was required or run. The user waived Fable and explicitly approved the plan, parallel coordination and merges.
+
+## Original prompt
+
+# Complete profiling navigation and useful dashboard output
+
 Type: feature
 Target: autolens_profiling
 Repos: autolens_profiling, PyAutoPulse
 Consequence: judge
 Autonomy: human-required
 Filed: 2026-10-07
-Status: Phases A/B merged in #388/#390; Phase C Pulse PR #23 awaiting merge
+Status: All three phases merged; published project and Pulse checks passed
 
 ## Phase progress
 
@@ -16,9 +32,11 @@ issue #387 is closed. Completion and validation:
 complete/2026/10/profiling-dashboard-completion.md.
 Phase B merged in https://github.com/PyAutoLabs/autolens_profiling/pull/390;
 issue #389 is closed. Completion: complete/2026/10/profiling-layout-completion.md.
-Phase C is active/profiling_browser_completion.md (Pulse issue #21), implemented
-in https://github.com/PyAutoLabs/PyAutoPulse/pull/23 and awaiting human merge. No scientific campaign or
-Fable review occurred. Published-site verification follows deployment.
+Phase C completed in complete/2026/10/profiling-browser-completion.md,
+merged as https://github.com/PyAutoLabs/PyAutoPulse/pull/23. Published Pulse
+MGE and rectangular checks passed with visible runtime values, all four axis
+choices and qualified hazard sections; no browser errors. Project published
+checks passed during Phase A. No scientific campaign or Fable review occurred.
 
 ## Current direction
 
