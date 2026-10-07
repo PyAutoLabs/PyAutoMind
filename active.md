@@ -121,7 +121,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/194
 - issued: 2026-10-07
 - session: Claude CLI (Opus 5.5 execution subagent); session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/setuptools-include-packages
 - plan: approved 2026-10-07; judge tier, human /prm
 - repos:
@@ -136,10 +136,15 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/622
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/651
 - library-pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/81
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1664
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/775
+- library-pr: https://github.com/PyAutoLabs/PyAutoCTI/pull/114
 - pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/195
 - pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/622
 - pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/651
-- checkpoint: 4 of 7 PRs open (tests passed); PyAutoFit/PyAutoCTI/PyAutoLens edits held uncommitted in worktree — their unit tests hit ENOSPC (disk 100% full), ship once tests pass; Heart YELLOW at ship (shared-standards drift; rehearsal STALE)
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1664
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/775
+- checkpoint: all 7 library PRs open (tests passed per repo); Heart YELLOW at ship (shared-standards drift; rehearsal STALE); human /prm in library order Nerves → Array → Fit → Galaxy → Lens, then CTI, Reduce
 
 ## repos-sync-check-root-routing
 - prompt: active/repos_sync_check_root_routing_table.md
