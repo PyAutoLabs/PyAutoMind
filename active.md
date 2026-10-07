@@ -82,6 +82,8 @@
 - repos:
   - PyAutoMind: feature/mind-dashboard-simplify
   - PyAutoBrain: feature/mind-dashboard-simplify
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/497
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/489
 - prs:
   - PyAutoBrain: https://github.com/PyAutoLabs/PyAutoBrain/pull/497
   - PyAutoMind: https://github.com/PyAutoLabs/PyAutoMind/pull/489
