@@ -6,7 +6,7 @@
 - prompt: active/search_extensibility_b1_registration.md
 - epic: search-extensibility (phase B1 registration)
 - session: Claude CLI (Fable 5.1, /start_dev); https://claude.ai/code/session_01QJmrnXNQdq6HSruUt3MqVW
-- status: workspace-shipped, awaiting-merge — 7 PRs open 2026-10-07 (merge order: skeletons → Mind#493 → Heart/Cortex/Pulse/.github); judge tier: human /prm
+- status: workspace-shipped, awaiting-merge — 5/7 MERGED 2026-10-07 by human /prm (autofit_inference#1, autofit_profiling#1, Mind#493 ba34fdb5, Cortex#60, Pulse#33); OPEN: Heart#292 (red on the pre-existing Brain#499 markdown-link test break — bug draft draft/bug/pyautoheart/dashboard_markdown_link_test_broken_by_brain_499.md) and .github#34 (no CI configured; needs the human's explicit merge OK). RAL clones pulled. Resume: fix the Heart bug → re-run #292 → /prm both → close-out
 - worktree: ~/Code/PyAutoLabs-wt/search-ext-b1-registration
 - repos:
   - autofit_inference: feature/search-ext-b1-registration
