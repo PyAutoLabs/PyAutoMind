@@ -15,7 +15,7 @@ Targets: @PyAutoEars and @PyAutoBrain. Organ/workspace development; no scientifi
 
 The example is a closed, answered Discussion with subsequent external comments. Ears `ears/collect.py:conversation` unconditionally clears awaiting_response for answered/closed Discussions. `collect` requests only open issues and skips closed entries. Brain's direct Discussion triage also suppresses awaiting_response for answered threads. Existing settlement policy deliberately specified this behavior; update producer, consumer and documentation together.
 
-## High-level plan (pending approval)
+## High-level plan (approved 2026-10-07)
 
 1. Detect external follow-up activity after a thread was answered/closed, including nested Discussion replies and closed issue comments.
 2. Surface those threads as needing follow-up review, with source links and accurate closed/answered labels.
@@ -35,5 +35,11 @@ Tier: judge — merge mode: human /prm.
 
 ## Planning state
 
-Plan approval pending; no source edits or worktree created. Proposed branch: `feature/closed-thread-followups`.
+Plan approved by the user on 2026-10-07: "work that in and continue". Proposed branch: `feature/closed-thread-followups`.
 Heart entry verdict: STALE (release stale; monitoring red), planning permitted under start_dev step 0a. Full observed reasons saved locally in `heart-ears-check.log` at workspace root.
+
+## Permission refinement (approved)
+
+Original follow-up: Actually not sure I have permission   maybe other people cant reopen it too?   work that in and continue
+
+Detection must not depend on the commenter being able to reopen. GitHub viewerCanReopen confirms Jammy2211 can reopen Discussion #13; this says nothing about another commenter. Community must check the acting account capability when proposing a reopen, route to a maintainer if unavailable or unknown, and never tell contributors they must reopen for their request to count. Keep reopening, unlocking and clearing an accepted answer distinct; no automatic mutations. Add permission-aware prompt and triage tests.
