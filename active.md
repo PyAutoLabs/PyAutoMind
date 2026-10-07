@@ -77,9 +77,11 @@
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/488
 - issued: 2026-10-07
 - session: Codex (session ID unavailable)
-- status: library-dev
+- status: awaiting-input
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/mind-dashboard-simplify
 - repos:
   - PyAutoMind: feature/mind-dashboard-simplify
   - PyAutoBrain: feature/mind-dashboard-simplify
-- summary: Approved dashboard simplification and retirement of persistent Bundles; human /prm merge.
+- summary: Implementation complete in task worktrees; Brain 1271 tests and Mind 696 tests passed, browser/freshness/policy checks passed. Awaiting Heart YELLOW acknowledgment before source commits/PRs; human /prm merge.
+- awaiting: manifest drift: workspace checkouts (manifest ↔ disk) — 2 mismatch(es) vs PyAutoMind/repos.yaml
+- evidence: PyAutoBrain/tmp/handoff.md and each repo tmp/full-tests-clean-env.log in the task worktree; issue #488 carries the handoff.
