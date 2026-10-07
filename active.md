@@ -45,10 +45,13 @@
 - issued: 2026-10-07
 - prompt: active/pyautofit_add_a_regression_test_for_fork.md
 - session: Claude CLI (Opus 5.5 worker under Fable 5.1 /community); session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/fork-context-darwin-test
 - repos:
   - PyAutoFit: feature/fork-context-darwin-test
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1662
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1662
+
 
 ## padded-single-image-recovery
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/771
