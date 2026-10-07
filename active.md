@@ -20,6 +20,7 @@
   - PyAutoEyes: feature/dashboard-checkin-prompts
   - PyAutoScientist: feature/dashboard-checkin-prompts
 - summary: Implement the thirteen individually approved check-in prompts; no dashboard restructuring, merge or publication.
+- ears-follow-up: User approved board cleanup and coordination with PR #17 on 2026-10-07; shipped as Ears commit 1ed08da on the existing branch. 73 tests, Chromium copy/layout/expiry checks and state contract passed. PR #17 awaits human merge.
 - resume: All 13 prompts implemented and pushed as 11 pending-release PRs. 1268 applicable local tests pass, plus targeted metadata-portability reruns; all approved rendered wording verified. Tenant firewall, required lint/offline checks and Eyes live-link check pass. Next: human /prm when every required CI leg is green; then regenerate/publish Mind and Cortex boards from merged Brain. No merge or publication authorization.
 - heart-ack: Human said "those are fixed, so continue". Fresh canonical Heart YELLOW at 2026-10-07T06:49:56.708128+00:00; no RED reasons. Remaining warning: manifest drift: shared-standards blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml. Release validation remains stale because source moved since rehearsal. Development PRs only.
 - workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/485

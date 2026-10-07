@@ -258,3 +258,49 @@ When I ask about the organism itself, help me examine its architecture, workflow
 Carry clearly authorized work through the appropriate skills, retaining decisions and approvals already given in this conversation. Ask when a missing decision materially changes the next step. Preserve applicable development, compute, community-reply, merge and release approval requirements.
 
 Keep authoritative task state, scientific records and execution in their owning repositories. After taking action, report the outcome, where any changes were recorded and what remains unresolved. Stop at the session deliverable without scheduling background follow-up.
+
+
+## Approved Ears follow-up — 2026-10-07
+
+The user approved the following plan and coordination with existing Ears PR #17
+by replying "go". This extends the original prompt-only scope for Ears only.
+
+# Simplify the PyAutoEars community board
+
+Type: bug
+Difficulty: small
+Repos: @PyAutoEars
+
+## Original request
+
+Fix PyAutoEars: - Way too many links at the top of the copyable bit, looks like a bug.
+- Remove "Unknown Response state"
+- Remove Following Through
+
+## Plan
+
+- Keep only Community Hub and PyAutoEars links above the copyable check-in.
+- Remove the Unknown response state and Following through sections from HTML and Markdown, and remove their navigation cards.
+- Keep conversations with unknown responses visible in Community activity and retain underlying snapshot/state evidence.
+- Remove the freshness JavaScript reference to the removed follow-through section; verify copy and freshness behavior.
+
+## Implementation and validation
+
+Update ears/board.py::render_page and SCRIPT. Remove obsolete section-specific styles from ears/presentation.py where unused. Update REFERENCE.md to match the simplified display. Adjust existing presentation/browser assertions and run the repository tests, generated state validation, and relevant browser checks.
+
+Tier: undeclared — merge mode: human /prm.
+
+## Coordination
+
+PyAutoEars is claimed by dashboard-checkin-prompts, with open PR https://github.com/PyAutoLabs/PyAutoEars/pull/17. Coordinate explicitly with that task or wait for its claim to clear before worktree setup and edits.
+
+Implementation uses the existing dashboard-checkin-prompts worktree and branch,
+with Brain issue #484 and Ears PR #17 retained. No new issue or competing claim.
+
+Validation: Ears commit `1ed08da` pushed to PR #17. All 73 tests passed;
+Chromium mobile/desktop light/dark, copy success/denial, anchor and expiry
+checks passed with no JavaScript errors. Generated state passed Brain validation.
+Browser evidence: existing Ears worktree `_site/browser-fixture/`.
+Heart YELLOW at 2026-10-07T07:01:07.479678+00:00 retains the previously
+acknowledged manifest drift and stale rehearsal reasons. Await human merge;
+no merge or publication performed.
