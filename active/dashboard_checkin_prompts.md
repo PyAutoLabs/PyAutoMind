@@ -1,5 +1,7 @@
 # Implement the agreed dashboard check-in prompts
 
+Issued: 2026-10-07
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/484
 Type: docs
 Difficulty: medium
 Consequence: judge
