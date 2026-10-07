@@ -1064,10 +1064,36 @@ SHIP_STATUS_TOKENS = ("awaiting-merge", "pr open", "pr-open", "shipped")
 
 # How long a `complete/` record may keep an uncleared `pending-release:` before
 # the check mentions it. A warning, never an error: the library may simply not
-# have been released yet, which is the normal state of the key.
-PENDING_RELEASE_STALE_DAYS = 30
+# have been released yet, which is the normal state of the key. Releases ship
+# every few days, so two weeks uncleared already means a missed sweep (the
+# 2026-09-27 .. 2026-10-04 releases went unswept for 10 days under a 30-day
+# window that never fired).
+PENDING_RELEASE_STALE_DAYS = 14
 
-PENDING_RELEASE_RE = re.compile(r"^([\w.-]+)@(\S+)$")
+# The PUBLISHED SET — the only repos a `pending-release:` link may name, and the
+# only repos whose PRs carry the `pending-release` label. Defined once, here.
+# It mirrors the `release` job matrix of PyAutoHands/.github/workflows/release.yml
+# (the job that twine-uploads to PyPI and pushes the bare `<version>` tag); a
+# repo outside it is never published, so no release could ever clear a link to
+# it. Workspaces are tagged by `release_workspaces` but never uploaded to PyPI,
+# and organs ship on merge: neither belongs here. Change it only together with
+# that matrix (and PyAutoBrain/bin/ensure_workspace_labels.sh).
+PUBLISHED_REPOS = (
+    "PyAutoNerves",
+    "PyAutoFit",
+    "PyAutoArray",
+    "PyAutoGalaxy",
+    "PyAutoLens",
+)
+# The GitHub owner the published set lives under, and the repo whose latest
+# GitHub release names the current version (`--version latest`).
+PUBLISHED_OWNER = "PyAutoLabs"
+RELEASE_VERSION_REPO = "PyAutoLens"
+
+# A well-formed value: `<repo>@https://github.com/<owner>/<repo>/pull/<n>`,
+# nothing else on the line, and the two repo names agree.
+PENDING_RELEASE_RE = re.compile(
+    r"^([\w.-]+)@https://github\.com/([\w.-]+)/([\w.-]+)/pull/(\d+)$")
 
 
 def registry_multi(path: Path) -> "list[tuple[str, dict[str, list[str]]]]":
@@ -1203,6 +1229,323 @@ def pending_release_findings(root: Path,
             f"happened, /review_release never swept the ledger",
             (_rel(root, f),)))
     return problems
+
+
+# --------------------------------------------------------------------------- #
+# the pending-release chain: format, and clearing it after a release
+#
+# REFERENCE.md "The pending-release chain" is the contract. Two leaks motivated
+# this block: four releases published without the /review_release sweep, and
+# ~90 links named repos that never publish (organs, workspaces, profiling), so
+# no release could ever clear them. The format check stops the second; the
+# `clear-released` verb makes the first a single command.
+# --------------------------------------------------------------------------- #
+class PendingLink(NamedTuple):
+    """One `- pending-release:` line where the dashboard reads it."""
+    path: str          # repo-relative file
+    lineno: int        # 1-based
+    slug: str          # the active.md row / record the line belongs to
+    value: str         # the raw value after the key
+
+
+def pending_release_lines(root: Path) -> "list[PendingLink]":
+    """Every `pending-release:` field the ledger holds.
+
+    `active.md` is read whole; a `complete/` record only above its
+    `## Original prompt` boundary (the same head `_record_fields` reads), and
+    `complete/archive/` not at all — exactly what the dashboard renders."""
+    out: "list[PendingLink]" = []
+    files: "list[Path]" = []
+    if (root / "active.md").is_file():
+        files.append(root / "active.md")
+    complete = root / "complete"
+    archive = complete / "archive"
+    if complete.is_dir():
+        files += [f for f in sorted(complete.rglob("*.md"))
+                  if archive not in f.parents and f.name != "index.md"]
+    for f in files:
+        is_record = f.name != "active.md"
+        slug = f.stem
+        for i, line in enumerate(f.read_text(errors="replace").splitlines(), 1):
+            if is_record and re.match(r"^##\s+Original prompt\s*$", line, re.I):
+                break
+            h = H2_RE.match(line)
+            if h:
+                slug = _slugify_h2(h.group(1))
+                continue
+            m = FIELD_RE.match(line)
+            if m and m.group(1).strip() == "pending-release":
+                out.append(PendingLink(_rel(root, f), i, slug,
+                                       m.group(2).strip()))
+    return out
+
+
+def parse_pending_value(value: str, published=None):
+    """`(repo, owner, number, url)` for a well-formed value, else a reason str."""
+    published = PUBLISHED_REPOS if published is None else published
+    m = PENDING_RELEASE_RE.match(value)
+    if not m:
+        return ("not `<repo>@https://github.com/<owner>/<repo>/pull/<n>` "
+                "(one link per line, no placeholder such as `none`)")
+    lib, owner, repo, num = m.groups()
+    if lib != repo:
+        return f"names {lib} but links a {repo} PR"
+    if lib not in published:
+        return (f"{lib} is not in the published set "
+                f"({', '.join(published)}) — no release can ever clear it")
+    url = value.split("@", 1)[1]
+    return (lib, owner, int(num), url)
+
+
+def pending_release_format_findings(root: Path,
+                                    published=None) -> "list[Finding]":
+    """Malformed or unpublishable `pending-release:` lines — drift.
+
+    Unlike staleness this is an error: a link that names an unpublished repo,
+    or a placeholder like `none — workspace task`, is not "not released yet",
+    it is a line that can never be cleared."""
+    problems: "list[Finding]" = []
+    for link in pending_release_lines(root):
+        parsed = parse_pending_value(link.value, published)
+        if isinstance(parsed, tuple):
+            continue
+        where = f"{link.path}:{link.lineno}"
+        msg = (f"{where}: `pending-release: {link.value}` — {parsed} "
+               f"(REFERENCE.md \"The pending-release chain\")")
+        if link.path == "active.md":
+            problems.append(Finding(msg, (), (("active.md", link.slug),)))
+        else:
+            problems.append(Finding(msg, (link.path,)))
+    return problems
+
+
+# -- the network half (opt-in): which links does a release contain? ---------- #
+def _gh(args: "list[str]") -> "tuple[int, str, str]":
+    import subprocess
+    try:
+        r = subprocess.run(["gh", *args], capture_output=True, text=True)
+    except FileNotFoundError:
+        return 127, "", "gh not installed"
+    return r.returncode, r.stdout, r.stderr
+
+
+def resolve_release_version(version: str, owner: str = PUBLISHED_OWNER) -> str:
+    """`latest` -> the tag of the latest GitHub release; anything else as given.
+
+    The published tag is the bare version (`2026.10.4.1`); the GitHub release
+    is named `v<version>`, so a leading `v` is dropped either way."""
+    if version != "latest":
+        return version[1:] if version.startswith("v") else version
+    code, out, err = _gh(["api", f"repos/{owner}/{RELEASE_VERSION_REPO}/"
+                          "releases/latest", "--jq", ".tag_name"])
+    if code != 0 or not out.strip():
+        raise RuntimeError(f"cannot resolve the latest release: {err.strip()}")
+    tag = out.strip()
+    return tag[1:] if tag.startswith("v") else tag
+
+
+def gh_pr_contained(owner: str, repo: str, number: int, tag: str) -> "bool | None":
+    """True when the PR's merge commit is in `tag`; False when it is not (or
+    the PR never merged); None when GitHub could not say.
+
+    Containment, not dates: `compare/<tag>...<sha>` reports `behind` (or
+    `identical`) exactly when the merge commit is an ancestor of the tag — the
+    same question as `git merge-base --is-ancestor`, with no clone needed."""
+    code, out, _ = _gh(["api", f"repos/{owner}/{repo}/pulls/{number}",
+                        "--jq", '[.merged_at // "", .merge_commit_sha // ""] | @tsv'])
+    if code != 0:
+        return None
+    merged_at, _, sha = out.strip().partition("\t")
+    if not merged_at or not sha:
+        return False
+    code, out, _ = _gh(["api", f"repos/{owner}/{repo}/compare/{tag}...{sha}",
+                        "--jq", ".status"])
+    if code != 0:
+        return None
+    return out.strip() in ("behind", "identical")
+
+
+def gh_labelled_merged(owner: str, repo: str) -> "list[int]":
+    """Merged PRs in `repo` still carrying the `pending-release` label."""
+    code, out, _ = _gh(["pr", "list", "--repo", f"{owner}/{repo}",
+                        "--label", "pending-release", "--state", "merged",
+                        "--limit", "500", "--json", "number",
+                        "--jq", ".[].number"])
+    if code != 0:
+        return []
+    return [int(x) for x in out.split()]
+
+
+class ReleasePlan(NamedTuple):
+    version: str
+    released: "list[PendingLink]"          # Mind lines to delete
+    gates: "list[tuple[str, int, str]]"    # (path, lineno, lib) release-gate lines to delete
+    labels: "list[tuple[str, str, int]]"   # (owner, repo, number) labels to drop
+    unknown: "list[str]"                   # links GitHub could not answer for
+
+
+def plan_clear_released(root: Path, version: str, *, contained=None,
+                        labelled=None, published=None,
+                        owner: str = PUBLISHED_OWNER) -> ReleasePlan:
+    """What a published `version` clears: Mind lines, release-gates, labels.
+
+    `contained(owner, repo, number, tag)` and `labelled(owner, repo)` default
+    to the GitHub calls above and are injectable so the logic is testable
+    offline. A malformed or unpublishable line is NOT planned for deletion
+    here — `check` reports it; this verb only clears what a release cleared."""
+    contained = gh_pr_contained if contained is None else contained
+    labelled = gh_labelled_merged if labelled is None else labelled
+    published = PUBLISHED_REPOS if published is None else published
+    cache: "dict[tuple[str, str, int], bool | None]" = {}
+
+    def _is_in(o: str, repo: str, num: int):
+        key = (o, repo, num)
+        if key not in cache:
+            cache[key] = contained(o, repo, num, version)
+        return cache[key]
+
+    released: "list[PendingLink]" = []
+    unknown: "list[str]" = []
+    labels: "list[tuple[str, str, int]]" = []
+    for link in pending_release_lines(root):
+        parsed = parse_pending_value(link.value, published)
+        if not isinstance(parsed, tuple):
+            continue
+        lib, o, num, url = parsed
+        state = _is_in(o, lib, num)
+        if state is None:
+            unknown.append(url)
+        elif state:
+            released.append(link)
+            if (o, lib, num) not in labels:
+                labels.append((o, lib, num))
+    for repo in published:
+        for num in labelled(owner, repo):
+            if (owner, repo, num) in labels:
+                continue
+            if _is_in(owner, repo, num):
+                labels.append((owner, repo, num))
+
+    # A `release-gate: <lib>` on a complete/ record exists for the record's own
+    # pending links; once none of that library's remain, the gate is spent.
+    gates: "list[tuple[str, int, str]]" = []
+    by_path: "dict[str, list[PendingLink]]" = {}
+    for link in pending_release_lines(root):
+        by_path.setdefault(link.path, []).append(link)
+    gone = {(l.path, l.lineno) for l in released}
+    for path, links in by_path.items():
+        if path == "active.md":
+            continue
+        remaining = set()
+        for l in links:
+            if (l.path, l.lineno) in gone:
+                continue
+            p = parse_pending_value(l.value, published)
+            remaining.add(p[0] if isinstance(p, tuple)
+                          else l.value.split("@", 1)[0])
+        if not any((l.path, l.lineno) in gone for l in links):
+            continue
+        for i, line in enumerate((root / path).read_text(
+                errors="replace").splitlines(), 1):
+            m = FIELD_RE.match(line)
+            if m and m.group(1).strip() == "release-gate":
+                lib = m.group(2).strip().strip("`")
+                if lib not in remaining:
+                    gates.append((path, i, lib))
+    return ReleasePlan(version, released, gates, labels, unknown)
+
+
+def apply_release_plan(root: Path, plan: ReleasePlan) -> "list[str]":
+    """Delete the planned lines in place; returns the files touched."""
+    drop: "dict[str, set[int]]" = {}
+    for l in plan.released:
+        drop.setdefault(l.path, set()).add(l.lineno)
+    for path, lineno, _ in plan.gates:
+        drop.setdefault(path, set()).add(lineno)
+    for path, numbers in drop.items():
+        f = root / path
+        text = f.read_text()
+        lines = text.split("\n")
+        kept = [ln for i, ln in enumerate(lines, 1) if i not in numbers]
+        f.write_text("\n".join(kept))
+    return sorted(drop)
+
+
+def release_plan_warnings(plan: ReleasePlan) -> "list[Finding]":
+    """The plan as `check --network` warnings: lines a release already cleared."""
+    return [Finding(
+        f"{l.path}:{l.lineno}: `pending-release: {l.value}` is contained in "
+        f"release {plan.version} — run `lifecycle.py clear-released --version "
+        f"{plan.version} --apply`", (l.path,))
+        for l in plan.released]
+
+
+def _regenerate_dashboard(root: Path) -> bool:
+    """Run the Brain's dashboard generator against THIS Mind checkout."""
+    import os
+    import shutil
+    import subprocess
+    candidates = []
+    if os.environ.get("PYAUTO_BRAIN"):
+        candidates.append(Path(os.environ["PYAUTO_BRAIN"]) / "bin" / "pyauto-brain")
+    candidates.append(root.parent / "PyAutoBrain" / "bin" / "pyauto-brain")
+    exe = next((str(c) for c in candidates if c.is_file()), None) \
+        or shutil.which("pyauto-brain")
+    if not exe:
+        return False
+    env = dict(os.environ, PYAUTO_MIND=str(root))
+    r = subprocess.run([exe, "intake", "--apply", "dashboard"], env=env,
+                       cwd=str(root))
+    return r.returncode == 0
+
+
+def cmd_clear_released(args) -> int:
+    """The /review_release step-6 sweep as one verb (dry run by default)."""
+    root = ROOT
+    try:
+        version = resolve_release_version(args.version)
+    except RuntimeError as e:
+        print(f"clear-released: {e}", file=sys.stderr)
+        return 2
+    plan = plan_clear_released(root, version)
+    print(f"clear-released: release {version}")
+    print(f"  Mind lines contained in the release: {len(plan.released)}")
+    for l in plan.released:
+        print(f"    - {l.path}:{l.lineno}  {l.value}")
+    print(f"  spent release-gate lines: {len(plan.gates)}")
+    for path, lineno, lib in plan.gates:
+        print(f"    - {path}:{lineno}  release-gate: {lib}")
+    for url in plan.unknown:
+        print(f"  ? GitHub could not say whether {url} is released — left in place")
+    cmds = [["gh", "pr", "edit", str(n), "--repo", f"{o}/{r}",
+             "--remove-label", "pending-release"] for o, r, n in plan.labels]
+    print(f"  labels to drop: {len(cmds)}")
+    if args.apply:
+        touched = apply_release_plan(root, plan)
+        print(f"  wrote {len(touched)} file(s)")
+        if touched and not args.no_dashboard:
+            if _regenerate_dashboard(root):
+                print("  dashboard regenerated")
+            else:
+                print("  ! dashboard NOT regenerated — run "
+                      "`pyauto-brain intake --apply dashboard`")
+    if args.remove_labels:
+        failed = 0
+        for c in cmds:
+            code, _, err = _gh(c[1:])
+            if code != 0:
+                failed += 1
+                print(f"  ! {' '.join(c)}: {err.strip()}")
+        print(f"  labels dropped: {len(cmds) - failed}/{len(cmds)}")
+        if failed:
+            return 1
+    else:
+        for c in cmds:
+            print("    " + " ".join(c))
+    if not args.apply:
+        print("  (dry run — pass --apply to delete the Mind lines, "
+              "--remove-labels to drop the GitHub labels)")
+    return 0
 
 
 # --------------------------------------------------------------------------- #
@@ -2237,6 +2580,9 @@ def check_findings(root: Path) -> "tuple[list[Finding], list[Finding]]":
     # the key MEANS "not released yet", and a library can legitimately sit
     # unreleased for weeks — reported, exit code untouched.
     problems.extend(pr_key_findings(root))
+    # A `pending-release:` line that is malformed, a placeholder, or names a
+    # repo outside PUBLISHED_REPOS is different: no release can ever clear it.
+    problems.extend(pending_release_format_findings(root))
     warnings: "list[Finding]" = list(pending_release_findings(root))
 
     # The batch ledger, on the same footing: a member citing a prompt that
@@ -2259,6 +2605,15 @@ def cmd_check(args) -> int:
     base = getattr(args, "base", None)
 
     problems, warnings = check_findings(root)
+    # Opt-in network leg: links a published release already contains. Off by
+    # default so the offline CI check stays offline.
+    network = getattr(args, "network", None)
+    if network:
+        try:
+            plan = plan_clear_released(root, resolve_release_version(network))
+            warnings.extend(release_plan_warnings(plan))
+        except RuntimeError as e:
+            warnings.append(Finding(f"--network: {e}"))
     problems, out_problems = scope_findings(root, problems, wanted, base)
     warnings, out_warnings = scope_findings(root, warnings, wanted, base)
 
@@ -2803,7 +3158,34 @@ def main() -> int:
              "diff touched. Without it, a listed registry file puts ALL its "
              "entries in scope.",
     )
+    c.add_argument(
+        "--network", nargs="?", const="latest", metavar="VERSION",
+        help="also ask GitHub (gh) which `pending-release:` links a published "
+             "release already contains, and warn on each (default VERSION: "
+             "latest). Off by default: the check stays offline.",
+    )
     c.set_defaults(func=cmd_check)
+
+    cr = sub.add_parser(
+        "clear-released",
+        help="after a live release: drop the `pending-release:` lines (and "
+             "spent `release-gate:` lines) whose PR the release tag contains, "
+             "regenerate the dashboard, and drop the GitHub labels "
+             "(/review_release step 6; dry run by default)",
+    )
+    cr.add_argument("--version", required=True,
+                    help="the published version / tag, e.g. 2026.10.4.1, or "
+                         "`latest`")
+    cr.add_argument("--apply", action="store_true",
+                    help="delete the Mind lines and regenerate the dashboard "
+                         "(default: dry run)")
+    cr.add_argument("--remove-labels", action="store_true",
+                    dest="remove_labels",
+                    help="run the `gh pr edit --remove-label pending-release` "
+                         "calls (a GitHub write; default: print them)")
+    cr.add_argument("--no-dashboard", action="store_true", dest="no_dashboard",
+                    help="with --apply: skip the dashboard regeneration")
+    cr.set_defaults(func=cmd_clear_released)
 
     d = sub.add_parser(
         "dates",
