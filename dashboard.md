@@ -44,7 +44,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 5 |
 | [Planned](#planned) (`planned.md`) | 7 |
-| [Backlog](#backlog) (`draft/`) | 234 |
+| [Backlog](#backlog) (`draft/`) | 235 |
 
 > **No batch in flight.**
 
@@ -258,7 +258,7 @@ Use the start-dev skill. active/community_pages.md
 
 </details>
 
-<details><summary>📋 <a href="active/drop_legacy_claude_md_patterns.md">Drop the tolerated-legacy CLAUDE.md patterns in _clone.py and regroup_workspace.py</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/494">issue #494</a> — issued 2026-10-07 — library-dev</summary>
+<details><summary>📋 <a href="active/drop_legacy_claude_md_patterns.md">Drop the tolerated-legacy CLAUDE.md patterns in _clone.py and regroup_workspace.py</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/494">issue #494</a> — issued 2026-10-07 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/495">PyAutoBrain#495</a></summary>
 
 ```
 Use the start-dev skill. active/drop_legacy_claude_md_patterns.md
@@ -467,10 +467,10 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ## Backlog
 
-**234** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **47** of them belong to an epic and are listed only under [Epics](#epics) below.
+**235** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **47** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 70</summary>
+<summary><b>bug</b> — 71</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -1004,6 +1004,14 @@ Use the start-dev skill. draft/bug/pyautoheart/release_integrate_analyze_path_fi
 
 ```
 Use the start-dev skill. draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautopulse/profiling-readable-metrics.md">Separate likelihood implementations and explain profiling measurements</a> — pyautopulse · medium</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautopulse/profiling-readable-metrics.md
 ```
 
 </details>
@@ -2918,7 +2926,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 </details>
 
-71 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+72 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2956,14 +2964,14 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 - `draft/bug/priors/13_collapse_prior_and_message.md`
 - `draft/bug/priors/14_replace_transform_stack_with_bijectors.md`
 - `draft/bug/priors/z_features.md`
+- `draft/bug/pyautopulse/profiling-readable-metrics.md`
 - `draft/refactor/autogalaxy/critical_curves_dispatch_cluster.md`
 - `draft/refactor/workspaces/abell_1201_local_cleanup.md`
 - `draft/docs/autolens/split_lensing_regimes.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
 - `draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md`
 - `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
-- `draft/test/workspaces/mesh_magnification_correctness.md`
-- _… and 31 more_
+- _… and 32 more_
 
 </details>
 
