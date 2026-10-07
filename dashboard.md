@@ -43,7 +43,7 @@ anything you could not verify.
 | [Start here](#start-here) | 24 |
 | [In flight](#in-flight) | 2 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 238 |
+| [Backlog](#backlog) | 239 |
 | [Pending release](#pending-release) | 0 |
 | [Recent](#recent) | 50 |
 | [Epics](#epics) | 16 |
@@ -341,7 +341,7 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ## Backlog
 
-**236** unstarted prompts and **2** awaiting human review. Unstarted prompts are sorted most-pickable first (priority, then size). **49** of them belong to an epic and are listed only under [Epics](#epics) below.
+**237** unstarted prompts and **2** awaiting human review. Unstarted prompts are sorted most-pickable first (priority, then size). **50** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <a id="human-review"></a>
 <details>
@@ -2055,7 +2055,7 @@ Use the start-dev skill. draft/feature/autofit/results_library_epic_report.md
 </details>
 
 <details>
-<summary><b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — 1 queued prompt(s), in order</summary>
+<summary><b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — 2 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — ledger: `draft/research/autofit/search_extensibility_epic.md` — filed 2026-10-07; scoped (4 Opus surveys) and independently reviewed (Codex gpt-6-astra, Claude Fable high) the same day; all §5…</summary>
 
@@ -2069,6 +2069,14 @@ Continue the 'Search extensibility — a PyAutoFit search framework for many sam
 
 ```
 Use the start-dev skill. draft/research/autofit/search_extensibility_epic.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/autofit/search_conformance_metadata_layer.md">Search conformance suite, layer (i): metadata and serialization for all 15 searches…</a> — autofit · medium · safe · high</summary>
+
+```
+Use the start-dev skill. draft/test/autofit/search_conformance_metadata_layer.md
 ```
 
 </details>
@@ -2601,7 +2609,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 </details>
 
-72 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+73 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2646,11 +2654,11 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 - `draft/docs/howtolens/cluster_pixelized_source.md`
 - `draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md`
 - `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
-- _… and 32 more_
+- _… and 33 more_
 
 </details>
 
-68 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+69 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2714,6 +2722,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 - `draft/refactor/autonerves/config_yaml_parse_cache.md — unknown theme keyword(s): performance, ci`
 - `draft/docs/autofit/howtofit_chapter_3_prose_references.md — unknown theme keyword(s): autofit`
 - `draft/docs/howtofit/tutorial_4_runtime_claim.md — unknown theme keyword(s): tutorials`
+- `draft/test/autofit/search_conformance_metadata_layer.md — unknown theme keyword(s): searches, jax, ci`
 - `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
 - `draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md — unknown theme keyword(s): euclid, docs`
 - `draft/maintenance/howtofit/minimum_library_version_stale.md — unknown theme keyword(s): version-handshake, tutorials`
