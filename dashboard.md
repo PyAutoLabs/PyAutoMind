@@ -14,7 +14,7 @@
 | [Planned](#planned) | 7 |
 | [Backlog](#backlog) | 238 |
 | [Recent](#recent) | 50 |
-| [Pending release](#pending-release) | 0 |
+| [Pending release](#pending-release) | 1 |
 
 ## Start here
 
@@ -781,7 +781,7 @@ Use the start-dev skill. active/mind-dashboard-simplify.md
 
 </details>
 
-<details><summary>📋 <a href="active/search_conformance_metadata_layer.md">Search conformance suite, layer (i): metadata and serialization for all 15 searches…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1666">issue #1666</a> — issued 2026-10-07 — library-dev</summary>
+<details><summary>📋 <a href="active/search_conformance_metadata_layer.md">Search conformance suite, layer (i): metadata and serialization for all 15 searches…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1666">issue #1666</a> — issued 2026-10-07 — library-shipped, awaiting-merge — PR #1667 open 2026-10-07 (judge tier: human /prm); worktree kept for /prm close-out — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1667">PyAutoFit#1667</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 Use the start-dev skill. active/search_conformance_metadata_layer.md
@@ -2680,7 +2680,9 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 ## Pending release
 
-_(nothing pending release)_
+**PyAutoFit**
+
+- [PyAutoFit#1667](https://github.com/PyAutoLabs/PyAutoFit/pull/1667) — `active/search_conformance_metadata_layer.md`
 
 
 Boards: [brain](https://pyautolabs.github.io/PyAutoBrain/) · [cortex](https://pyautolabs.github.io/PyAutoCortex/) · [memory](https://pyautolabs.github.io/PyAutoMemory/) · [eyes](https://pyautolabs.github.io/PyAutoEyes/) · [ears](https://pyautolabs.github.io/PyAutoEars/) · [heart](https://pyautolabs.github.io/PyAutoHeart/) · [hands](https://pyautolabs.github.io/PyAutoHands/) · [pulse](https://pyautolabs.github.io/PyAutoPulse/) · [insight](https://pyautolabs.github.io/PyAutoInsight/) · [nerves](https://pyautolabs.github.io/PyAutoNerves/) · [gut](https://pyautolabs.github.io/PyAutoGut/) · [organism](https://pyautolabs.github.io/PyAutoScientist/)
