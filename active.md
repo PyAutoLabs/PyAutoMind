@@ -103,7 +103,9 @@
 - issued: 2026-10-07
 - prompt: active/absorb_claude_notes_into_agents_md.md
 - session: Claude CLI (Fable architect → Opus 5.5 executor, /start_dev); session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/absorb-claude-notes-agents-md
 - repos:
   - PyAutoBrain: feature/absorb-claude-notes-agents-md
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/493
+- heart-ack: manifest drift: CLAUDE.md → AGENTS.md pointers — 45 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: workspace checkouts (manifest ↔ disk) — 3 mismatch(es) vs PyAutoMind/repos.yaml; release validation incomplete: no rehearsal for current source — acknowledged by the human 2026-10-07 at ship
