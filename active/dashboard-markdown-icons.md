@@ -1,5 +1,7 @@
 # Right-aligned dashboard Markdown icons
 
+Issued: 2026-10-07
+
 ## Original request
 
 Common for "markdown version" text to be a URL next to dashboard items (e.g. on PyAutoMind) can you make this an icon
