@@ -19,6 +19,7 @@ Autonomy: human-required
 Priority: high
 Status: campaign map — phases route through /start_dev one at a time; this file is never issued itself and nothing here is bulk-issued
 Consequence: judge
+Witness: phase 0 — a fixture tree holding one corrupt result zip aggregates with `agg.errors` of length 1 instead of raising, and an unknown AggregateCSV column path raises instead of writing None; phase 1 — `python -m autofit.results status` over a fixture of completed, interrupted and corrupt results prints one line per state class with the right counts
 Review-minutes: 30
 Unattended: needs-slicing
 Epic: results-library

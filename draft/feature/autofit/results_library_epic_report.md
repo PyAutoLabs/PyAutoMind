@@ -1,5 +1,22 @@
 # Results library epic — lessons from building the Euclid DR1 catalogue
 
+Type: feature
+Target: autofit
+Repos:
+- PyAutoFit
+Themes:
+- results
+- euclid
+Difficulty: too-large
+Autonomy: human-required
+Priority: high
+Status: evidence record for the results-library epic — never issued; read it from the epic ledger
+Consequence: glance
+Review-minutes: 0
+Unattended: never
+Epic: results-library
+Filed: 2026-10-07
+
 Written 2026-10-07 by the Fable architect session, with five read-only Opus
 workers reviewing the Claude Code session logs (JSONL) for Sept 9 – Oct 7,
 2026, plus one survey of PyAutoFit and the DR1 science-clone tooling. No code
