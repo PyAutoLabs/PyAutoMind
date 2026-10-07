@@ -839,44 +839,7 @@ def test_the_skipping_step_composes_both_decisions(tmp_path, hook_pr,
     )
     args = argv.read_text().splitlines()
     got = [args[i + 1] for i, a in enumerate(args) if a == "--skip"]
-    # TEMPORARY (PyAutoMind#482): the pointer leg is skipped first on every
-    # run until the CLAUDE.md retirement wave has run; drop this prefix with it.
-    assert got == [POINTER_LEG] + skipped, args
-    assert proc.stdout.count("SKIPPED LEG") == len(skipped) + 1, proc.stdout
-    assert f"SKIPPED LEG (TEMPORARY): '{POINTER_LEG}'" in proc.stdout
+    assert got == skipped, args
+    assert proc.stdout.count("SKIPPED LEG") == len(skipped), proc.stdout
     for label in skipped:
         assert f"SKIPPED LEG: '{label}'" in proc.stdout
-
-
-# TEMPORARY: remove with the gate's skip when the CLAUDE.md retirement wave has
-# run (session_hook_propagate dispatch) — tracked on PyAutoMind#482.
-POINTER_LEG = "CLAUDE.md → AGENTS.md pointers"
-
-
-def test_the_gate_temporarily_skips_the_pointer_leg_in_both_drift_checks():
-    """The organ mains keep the retired pointer until the propagation wave, on
-    PRs and on push alike, so both drift checks drop the leg by its exact
-    label — loudly, marked TEMPORARY and tied to #482 — and nothing else."""
-    broad = [step for step in gate_steps()
-             if step.get("name", "").startswith("Drift check")]
-    assert len(broad) == 2
-    for step in broad:
-        run = step["run"]
-        assert f'--skip "{POINTER_LEG}"' in run, run
-        assert "SKIPPED LEG (TEMPORARY)" in run
-        assert "PyAutoMind#482" in run
-        assert "session_hook_propagate" in run
-
-
-def test_the_gate_asserts_mind_itself_carries_no_claude_md():
-    """The compensating control for that skip runs unconditionally."""
-    step = next(step for step in gate_steps()
-                if "PyAutoMind/CLAUDE.md" in (step.get("run") or ""))
-    assert "if" not in step
-    assert "test_repos_sync_structure_lint.py" in step["run"]
-
-
-def test_mind_itself_carries_no_claude_md():
-    """PyAutoMind is never a propagation target, so its own pointer is removed
-    in-repo; a CLAUDE.md here would hide AGENTS.md from Claude Code."""
-    assert not (Path(__file__).resolve().parents[1] / "CLAUDE.md").exists()
