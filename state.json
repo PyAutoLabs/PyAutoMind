@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-07T07:40:55Z",
+  "updated": "2026-10-07T07:45:09Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "PyAutoFit: add a regression test for `fork_context()` not fixing the multiprocessing start\u2026 \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1662",
       "prompt": "Use the start-dev skill. active/pyautofit_add_a_regression_test_for_fork.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "PyAutoLens: single-image recovery in `Result.image_plane_multiple_image_positions_from` is blind to inf-padded JAX solver output \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/772",
+      "prompt": "Use the start-dev skill. active/pyautolens_single_image_recovery_in_result_image.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#611 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/611",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#615 \u2014 nnls-memo-scattered-backoff",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/615",
       "prompt": null
     }
   ]
