@@ -6,11 +6,14 @@
 - prompt: active/search_conformance_metadata_layer.md
 - epic: search-extensibility (phase A0a(i))
 - session: Claude CLI (Fable 5.1, /start_dev); https://claude.ai/code/session_01QJmrnXNQdq6HSruUt3MqVW
-- status: library-dev
+- status: library-shipped, awaiting-merge — PR #1667 open 2026-10-07 (judge tier: human /prm); worktree kept for /prm close-out
 - worktree: ~/Code/PyAutoLabs-wt/search-conformance-metadata
 - repos:
   - PyAutoFit: feature/search-conformance-metadata
 - tier: judge (human /prm)
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1667
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1667
+- heart-ack: manifest drift: workspace checkouts (manifest ↔ disk) — 2 mismatch(es) vs PyAutoMind/repos.yaml (autofit_inference, autofit_profiling: B1 registration pending); release validation incomplete: no rehearsal for current source — acknowledged by the human 2026-10-07 at ship
 - summary: tests-only metadata/serialization conformance suite over the 15 public searches; frozen golden identifier table; collects on unittest-nojax. Human ruling: identifiers stay the same, any change flagged first.
 
 ## mind-dashboard-simplify
