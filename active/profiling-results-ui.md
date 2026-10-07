@@ -149,3 +149,5 @@ Commit: `f3a34c5`, pushed to PR https://github.com/PyAutoLabs/PyAutoPulse/pull/2
 Validation: 193 Python tests, Chromium including deterministic activation/reload and keyboard checks, Ruff lint/format, offline contract and whitespace checks PASS. Dashboard regenerated. Heart remains YELLOW for the previously recorded manifest mismatch; no new RED reason. Logs: task bundle `bug-repro.log`, `bug-browser.log`, `bug-pytest.log`, `bug-offline.log`, `bug-readiness.json`.
 
 Lesson: native details toggle events are queued; persist route state during activation when reload/share correctness requires synchronous state. GitHub CI on the new head is the remaining merge gate. Merge still requires `/prm`.
+
+CI confirmation: f3a34c5 — lint/Chromium run 37629490960 PASS (53s); Dashboard Refresh run 37629490950 PASS (12s). Ready for human /prm.
