@@ -34,3 +34,35 @@
 - summary: Wave 2 of the Scribbler proposal (radial-subtracted side-by-side panels, cross-grid mask regrid, white/black brushes, arcsinh default). Wave 1 (#635, docs #579/#251) is released in autogalaxy 2026.10.2.1.
 - resume: Library half merged (PyAutoGalaxy#641, PyAutoLens#770) on 2026-10-07, unreleased. Next: a release carrying both, then approve fork CI on autolens_workspace#583 / autogalaxy_workspace#254, mark ready, human /prm. Workspace prose describes white/black brushes, so neither docs PR may merge before the release.
 - pending-release: PyAutoGalaxy#641, PyAutoLens#770 (merged 2026-10-07, unreleased)
+
+## community-pages
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/773
+- discussion: https://github.com/orgs/PyAutoLabs/discussions/32
+- user-facing: true
+- author: @SiriusFzh (external, Discussion #32 trigger)
+- issued: 2026-10-07
+- prompt: active/community_pages.md
+- session: Claude CLI (Fable 5.1, /start_dev); session ID unavailable
+- worktree: ~/Code/PyAutoLabs-wt/community-pages
+- repos:
+  - PyAutoLens: feature/community-pages
+  - PyAutoGalaxy: feature/community-pages
+  - PyAutoFit: feature/community-pages
+  - PyAutoArray: feature/community-pages (coordination authorised with imshow-origin-lower-overlays, README only)
+  - autolens_workspace: feature/community-pages (coordination authorised with scribbler-wave2, README only)
+  - autogalaxy_workspace: feature/community-pages (coordination authorised with scribbler-wave2, README only)
+  - autofit_workspace: feature/community-pages
+  - autoreduce_workspace: feature/community-pages
+  - HowToLens: feature/community-pages
+  - HowToGalaxy: feature/community-pages
+  - HowToFit: feature/community-pages
+  - autolens_visualization: feature/community-pages
+  - autogalaxy_visualization: feature/community-pages
+  - autofit_visualization: feature/community-pages
+  - autocti_visualization: feature/community-pages
+  - autolens_profiling: feature/community-pages
+  - PyAutoScientist: feature/community-pages
+  - pyautolabs.github.io: feature/community-pages
+- summary: per-library docs/general/community.md (Lens lists the SiriusFzh Visual Workbench), one merged "Community & Contributing" README section across 16 public repos + PyAutoScientist, front page community section moved to the bottom linking every project page. Wave 1 = 3 library PRs, wave 2 = README bundle.
+- tier: glance (auto-merge on green if Witness passes)
+- status: library-dev
