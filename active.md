@@ -79,3 +79,17 @@
 - worktree: ~/Code/PyAutoLabs-wt/workspace-version-warning-outside-workspace
 - repos:
   - PyAutoNerves: feature/workspace-version-warning-outside-workspace
+
+## sparse-noise-map-pooling
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/617
+- discussion: https://github.com/orgs/PyAutoLabs/discussions/13
+- user-facing: true
+- author: @HRSAstro (external)
+- issued: 2026-10-07
+- prompt: active/sparse_noise_map_pooling_option.md
+- session: Claude CLI (Opus 5.5 subagent, /start_dev); session ID unavailable
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/sparse-noise-map-pooling
+- repos:
+  - PyAutoArray: feature/sparse-noise-map-pooling (coordination with imshow-origin-lower-overlays (merged, pending release) and community-pages (README only); disjoint files)
+- tier: judge (human /prm)
