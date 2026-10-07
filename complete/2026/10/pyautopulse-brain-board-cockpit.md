@@ -4,8 +4,6 @@
 - epic: profiling-organ-birth
 - library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/451
 - library-pr: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/24
-- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/451
-- pending-release: pyautolabs.github.io@https://github.com/PyAutoLabs/pyautolabs.github.io/pull/24
 - summary: Phase 3 of `profiling-organ-birth`, NARROWED by the human 2026-10-02 to the organ → Brain board interface: `collect_pulse()` strip on the Brain board (head counts of `PyAutoPulse/dashboard.md`, composed like Cortex/Eyes, display-only), mirrored test, board AGENTS line, profiling conductor + skill prose (Pulse board = where cross-project drift candidates are read; `autolens_profiling` owns semantics; `/profiling triage <comparison_key>` names a Pulse row — the `triage` verb takes no target), `docs/organs/pulse.md` state/cockpit paragraph; hub cockpit Pulse card after Hands fed from `PyAutoPulse/state.json`. Brain full pytest 1142 passed. Hub has no CI; human approved the merge. Supersedes `draft/feature/pyautobrain/register_profiling_dashboard_on_brain_board.md` (never shipped; the Brain never consumed the project feed, so no source transition was needed) — retired with this record.
 - deviations: autolens_profiling `build_state()` identity change split to `draft/feature/autolens_profiling/cockpit_feed_project_identity.md` (blocked on task evaluation-grid-cap-field's claim); hub README bullet added; no `sw.js` cache bump (caching unchanged).
 - traps: the Brain tenant-firewall CI step rejects a real instance name (`autolens_profiling`) in a test fixture — organ tests must use neutral names (`alpha_profiling`), as the Eyes fixture does; fixed on the branch (54a8008) before merge.

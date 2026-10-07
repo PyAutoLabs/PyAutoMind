@@ -8,7 +8,6 @@ Validation: 472 passed in 154.26s (0:02:34); ten viewport/theme browser cases; a
 
 Local evidence: tmp/board-navigation/ (test logs, CI verdict and renders/PyAutoHands/ browser screenshots).
 
-- pending-release: PyAutoHands@https://github.com/PyAutoLabs/PyAutoHands/pull/299
 
 ## Original prompt
 

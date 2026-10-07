@@ -8,7 +8,6 @@ Validation: 23 passed in 0.73s; ten viewport/theme browser cases; all workflow r
 
 Local evidence: tmp/board-navigation/ (test logs, CI verdict and renders/PyAutoGut/ browser screenshots).
 
-- pending-release: PyAutoGut@https://github.com/PyAutoLabs/PyAutoGut/pull/22
 
 ## Original prompt
 

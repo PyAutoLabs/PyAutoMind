@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/241
 - completed: 2026-09-10
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/242 (merge c8b6058)
-- pending-release: none — workspace-category task, no library PR, so the `active.md` row carried no uncleared `pending-release:` line.
 - summary: |
     The final fp64 A100 baseline of the pixelized imaging likelihood, taken after PyAutoNerves#162
     (`--xla_gpu_enable_triton_gemm=false`) and PyAutoArray #531/#533/#537, as the reference set the

@@ -4,8 +4,6 @@
 - completed: 2026-09-27
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1649 (merge `867af1c`)
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/752 (merge `b3c9b68`)
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1649
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/752
 - epic: point-source-cpu-speed
 - parent-record: complete/2026/09/point-source-source-plane-p2c.md
 - campaign: draft/research/autolens_profiling/point_source_source_plane_chi_squared_speed.md

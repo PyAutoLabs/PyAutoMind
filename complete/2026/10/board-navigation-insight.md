@@ -8,7 +8,6 @@ Validation: 77 passed in 1.99s; ten viewport/theme browser cases; all workflow r
 
 Local evidence: tmp/board-navigation/ (test logs, CI verdict and renders/PyAutoInsight/ browser screenshots).
 
-- pending-release: PyAutoInsight@https://github.com/PyAutoLabs/PyAutoInsight/pull/5
 
 ## Original prompt
 

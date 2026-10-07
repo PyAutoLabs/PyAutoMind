@@ -4,7 +4,6 @@
 - pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/275
 - merged: 2026-10-04
 - merge-commit: 9d7d5904a059910fa03f4880d5b9cad928043282
-- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/275
 
 ## Shipped scope
 

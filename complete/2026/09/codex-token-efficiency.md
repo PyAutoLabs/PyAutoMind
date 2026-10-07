@@ -4,7 +4,6 @@
 - pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/387
 - merge: `0a2174996722e505c6958cd565080f08c4bbfe06`
 - shipped: 2026-09-18
-- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/387
 
 ## What shipped
 

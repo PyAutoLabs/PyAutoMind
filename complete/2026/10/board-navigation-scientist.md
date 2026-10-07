@@ -8,7 +8,6 @@ Validation: 8 passed in 0.04s; ten viewport/theme browser cases; all workflow ru
 
 Local evidence: tmp/board-navigation/ (test logs, CI verdict and renders/PyAutoScientist/ browser screenshots).
 
-- pending-release: PyAutoScientist@https://github.com/PyAutoLabs/PyAutoScientist/pull/43
 
 ## Original prompt
 

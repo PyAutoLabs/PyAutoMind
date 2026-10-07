@@ -7,7 +7,6 @@ epic organ-cockpit. Fable-planned, Opus-executed; Heart YELLOW acked by the huma
 - issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/174
 - completed: 2026-09-27
 - library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/175
-- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/175
 
 ## What shipped
 - `scripts/board.py`: a `conf.instance` lookup scan classifies every library config key as

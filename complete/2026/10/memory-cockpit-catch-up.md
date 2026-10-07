@@ -1,7 +1,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/109
 - completed: 2026-10-01
 - library-pr: https://github.com/PyAutoLabs/PyAutoMemory/pull/110
-- pending-release: PyAutoMemory@https://github.com/PyAutoLabs/PyAutoMemory/pull/110
 - commit: 92b15c2e1f4378b35f83cb3a566ca60a362fcc02
 - merge-commit: dc9c3b5bcca6834e89d4e06783e9c072ff8a5a71
 - summary: Lensing-specific catch-up freshness drives the HTML/Markdown banner and cockpit feed. Structured cutoff, age, seven-day threshold/deadline, checked time, provenance and manual scientific-judgement action. Actual ingestion and queue completion remain distinct; healthy adds no noise, unknown is never fresh. Legacy all-scope fields preserved.

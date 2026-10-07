@@ -25,7 +25,6 @@ workflows succeeded; all jobs passed except the expected non-PR drift job skip.
 Merge commit: b86f5b26503b59cab2e4100c3dc5242a4d5b7c01.
 Git ancestry confirms the complete PR head is contained in origin/main.
 
-- pending-release: PyAutoMind@https://github.com/PyAutoLabs/PyAutoMind/pull/427
 
 Historical user-thread conversion remains in
 draft/maintenance/community/migrate_user_threads_to_discussions.md;

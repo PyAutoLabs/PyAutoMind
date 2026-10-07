@@ -3,8 +3,6 @@
 - completed: 2026-09-17
 - library-pr: PyAutoBrain#384 (merged `49d064d64e1078b2f56c68f5e9401b13269e50d9`)
 - library-pr: PyAutoMind#406 (merged `a7a3473c8fba92314a43163a88f1ed36ff0c75fe`)
-- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/384
-- pending-release: PyAutoMind@https://github.com/PyAutoLabs/PyAutoMind/pull/406
 - heart-ack: 2026-09-17 — the human explicitly authorized this task to ship and merge despite the exact live RED reasons `install verification FAILED (testpypi; checks F)` and `release validation FAILED (stage integrate)`. The override was development-only and task-scoped; it did not authorize a release, waive required GitHub checks, or claim that this branch repaired Heart.
 - what shipped: the intake bundle renderer now describes judgment and execution tiers provider-neutrally, resolves the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, and tells the active harness to use its native subagent mechanism with a direct-execution fallback. Regression tests reject Fable, Opus and `Agent(model=...)` in generated bundle prompts; the Mind Markdown and HTML dashboards were regenerated.
 - policy amendment: `AUTONOMY.md`, `skills/WORKFLOW.md`, both ship skills and `skills/prm/prm.md` now define the narrow live-human Heart-RED development override used here, including issue/PR/active-ledger recording, green-CI requirements, same-turn merge expiry, and explicit bans on release authorization, force merge and protection bypass. Focused policy tests cover the contract.

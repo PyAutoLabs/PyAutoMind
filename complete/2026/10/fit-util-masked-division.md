@@ -9,7 +9,6 @@ Guarded denominators before masked division and added analytic eager/JIT gradien
 - https://github.com/PyAutoLabs/PyAutoArray/pull/607
 - https://github.com/PyAutoLabs/autolens_workspace_test/pull/340
 
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/607
 
 Human authorized linked PRs, development shipping with exact Heart YELLOW acknowledgment, then merge and full close-out. Every head run and matrix leg was checked; merge receipts are recorded by GitHub. No release performed. Shared bundle worktree cleanup follows all four members; logs and data preserved under organs/PyAutoMind/tmp/autoarray-bundle-1-closeout/.
 

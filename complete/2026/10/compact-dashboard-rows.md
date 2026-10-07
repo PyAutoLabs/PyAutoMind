@@ -4,7 +4,6 @@
 - pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/254
 - merged: 2026-10-01
 - merge-commit: 57c6ba620c9675eac63c055df70edec59f3f9e42
-- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/254
 
 ## Shipped
 

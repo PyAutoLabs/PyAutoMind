@@ -8,7 +8,6 @@ Validation: 79 passed in 1.29s; ten viewport/theme browser cases; all workflow r
 
 Local evidence: tmp/board-navigation/ (test logs, CI verdict and renders/PyAutoEyes/ browser screenshots).
 
-- pending-release: PyAutoEyes@https://github.com/PyAutoLabs/PyAutoEyes/pull/17
 
 ## Original prompt
 

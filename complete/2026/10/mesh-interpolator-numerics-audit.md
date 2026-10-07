@@ -9,7 +9,6 @@ Added independent numerical tests and analytic physical source recovery for all 
 - https://github.com/PyAutoLabs/PyAutoArray/pull/611
 - https://github.com/PyAutoLabs/autolens_workspace_test/pull/342
 
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/611
 
 Human authorized linked PRs, development shipping with exact Heart YELLOW acknowledgment, then merge and full close-out. Every head run and matrix leg was checked; merge receipts are recorded by GitHub. No release performed. Shared bundle worktree cleanup follows all four members; logs and data preserved under organs/PyAutoMind/tmp/autoarray-bundle-1-closeout/.
 

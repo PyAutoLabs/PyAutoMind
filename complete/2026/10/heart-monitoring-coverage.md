@@ -4,8 +4,6 @@
 - pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/446
 - pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/268
 - merged: 2026-10-02
-- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/446
-- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/268
 
 ## Shipped
 

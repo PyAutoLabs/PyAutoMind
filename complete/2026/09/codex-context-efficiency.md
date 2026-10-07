@@ -3,8 +3,6 @@
 - completed: 2026-09-19
 - library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/404
 - library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/425
-- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/404
-- pending-release: PyAutoMind@https://github.com/PyAutoLabs/PyAutoMind/pull/425
 
 Delivered all five approved efficiency changes: slimmer entry instructions, conditional reference reads, bounded tool output, grouped/flat path resolution, and compact completed-phase handoffs. Added deterministic instruction-budget reporting. Safety and approval gates remain intact.
 

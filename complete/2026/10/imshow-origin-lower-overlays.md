@@ -25,8 +25,10 @@ development tracker for community Discussion #14 by @ClarkGuilty (originally PyA
 
 ## Pending release
 
-- pending-release: PyAutoArray#616 (merged 2026-10-07, unreleased). Discussion #14 reply drafted; post
-  after human approval, and post again / mark as answer once a release carries the fix.
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/616
+
+PyAutoArray#616 merged 2026-10-07, unreleased. Discussion #14 reply drafted; post
+after human approval, and post again / mark as answer once a release carries the fix.
 
 ## Left out (follow-up candidates)
 

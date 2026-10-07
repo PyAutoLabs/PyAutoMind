@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1651
 - completed: 2026-09-30
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1652 (merge `5cf687d8`, head `84ae77fc`, 2 files, +71/−19)
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1652
 - merge: by the human's `/prm` on green; post-merge close-out by subagent
 
 ### Summary

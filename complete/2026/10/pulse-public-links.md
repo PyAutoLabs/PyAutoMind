@@ -4,7 +4,6 @@
 - epic: profiling-organ-birth
 - library-pr: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/26
 - library-pr: https://github.com/PyAutoLabs/.github/pull/26
-- pending-release: pyautolabs.github.io@https://github.com/PyAutoLabs/pyautolabs.github.io/pull/26
 - summary: The two public-surface one-liners left from the PyAutoPulse organ birth: `.github/profile/README.md` organ table regenerated from the body map (`organ_public_table(bold=True)`) so the Pulse row sits after Hands — clears the Heart "public front-door organ tables" drift reason; hub `index.html` gains "The Pulse board" link beside the Eyes board link. Neither repo has CI; the human approved both merges.
 - traps: `repos_sync.load_manifest(mind_dir)` returns a tuple whose dict member is the repos map — pick it before calling `organ_public_table`; regenerating ONE front-door table this way avoids the whole-workspace `--write` spill.
 - follow-ups: autolens_profiling cockpit-feed identity + `pulse-refresh` dispatch sender (both filed under `draft/feature/autolens_profiling/`, blocked on task evaluation-grid-cap-field); phase 4 waits for a real second `_profiling` producer.

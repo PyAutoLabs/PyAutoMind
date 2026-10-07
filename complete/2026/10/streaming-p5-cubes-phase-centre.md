@@ -6,10 +6,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/601
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/643
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/582
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/601
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/643
-- release-gate: PyAutoArray
-- release-gate: PyAutoGalaxy
 
 ### What shipped
 - **PyAutoArray#601** (merge ffd13ba6; commits d3069dbd + review fix 8a2332f7) — `SparseTerms.phase_centre` provenance (arcsec, `(y, x)`; unshifted accumulations record `(0.0, 0.0)`, `None` = unrecorded) checked in `__add__` alongside `transformer_class_name`; `SparseTerms.__radd__` so `sum(list_of_terms)` works; `sparse_terms_from_chunks(..., phase_centre=)` multiplies each chunk's visibilities by `exp(+2πi(u l0 + v m0))` (l0 = x0, m0 = y0 in radians) before the dirty image AND the data term; `Interferometer.from_stream(phase_centre=)`; `apply_sparse_operator_from_chunks(phase_centre=)` raises (it would shift the operator but not the retained data). Sum of per-channel terms == one-shot accumulation == in-memory MFS `apply_sparse_operator` at rel 1e-12 (numpy and the JAX brute-force kernel path, spy-asserted); array-free dataset from summed terms matches the in-memory MFS inversion / `log_evidence` at 1e-10. `test_autoarray` 1917.

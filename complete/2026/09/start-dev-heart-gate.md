@@ -7,7 +7,6 @@ epic organ-cockpit. Fable-planned, Opus-executed; Heart YELLOW acked by the huma
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/423
 - completed: 2026-09-27
 - library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/424
-- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/424
 
 ## What shipped
 - `bin/heart_feed.py` reads the published Heart `state.json` (fallback `pyauto-heart

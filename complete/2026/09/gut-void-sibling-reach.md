@@ -7,7 +7,6 @@ epic organ-cockpit. Fable-planned, Opus-executed; Heart YELLOW acked by the huma
 - issue: https://github.com/PyAutoLabs/PyAutoGut/issues/11
 - completed: 2026-09-27
 - library-pr: https://github.com/PyAutoLabs/PyAutoGut/pull/12
-- pending-release: PyAutoGut@https://github.com/PyAutoLabs/PyAutoGut/pull/12
 
 ## What shipped
 - `void.yml` authenticates with `PAT_PYAUTOLABS` so the Void button can delete refs held on

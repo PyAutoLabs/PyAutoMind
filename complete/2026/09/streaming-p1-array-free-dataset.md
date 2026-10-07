@@ -4,7 +4,6 @@
 - epic: streaming-visibilities (phase 1 of 5)
 - source: https://github.com/orgs/PyAutoLabs/discussions/13
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/593
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/593
 
 ### What shipped
 - **PyAutoArray#593** (merge bd03e09e) — the array-free interferometer dataset: `Interferometer.from_stream(chunks, real_space_mask, ...)` and `from_sparse_terms(terms, real_space_mask)` build a dataset whose `data`, `noise_map`, `uv_wavelengths` and `transformer` are all `None`, carrying `sparse_terms` and the sparse operator with its cached scalars; `is_array_free`; `SparseTerms` provenance (`shape_native`, `pixel_scales`, `origin`, `eps`, `transformer_class_name`) with mismatch refusal in `__add__` and in `from_sparse_terms`, and recorded-value merge when one operand is unrecorded; `AbstractInversionInterferometer.mask` read from the dataset (the one transformer read on the sparse likelihood path); typed `exc.DatasetException` / `exc.InversionException` from every array- or transformer-dependent property; `dirty_image_natural` and `dirty_beam` on both dataset kinds (in-memory `dirty_image` unchanged). `test_autoarray` 1783 passed; sibling interferometer suites unchanged (43 / 29).

@@ -3,8 +3,6 @@
 - completed: 2026-09-30
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1656
 - workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/105
-- release-gate: PyAutoFit
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1656
 
 ### What shipped
 - **PyAutoFit#1656** (merge b13169e2c): `af.LaplaceOptimiser(projection="moments")` adds opt-in moment-matching by nested quadrature, ported from the `analytic_ep_minimal` referee. The outer step is a Gauss–Legendre rule over each scale variable on its support, windowed to the cavity mean ± 8σ, with up to 4 re-windowing passes. The inner step is a conditional Laplace, using value-based central differences and a Newton polish. The kwargs are `n_quadrature=64`, `quadrature_half_width=8.0`, `moment_max_size=4` and `moment_max_outer=2`. The default stays `"mode"`, and any factor the moments path does not apply to falls back to the mode path bit-for-bit. Also new:

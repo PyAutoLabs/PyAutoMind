@@ -4,7 +4,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoEars/issues/1 (closed completed)
 - library-pr: https://github.com/PyAutoLabs/PyAutoEars/pull/2 (MERGED)
 - merge-commit: 911a4634c54ef19b39d98c58b0704b9badf3b9b8
-- pending-release: PyAutoEars@https://github.com/PyAutoLabs/PyAutoEars/pull/2
 - epic: community-organ-birth
 
 ## Delivered

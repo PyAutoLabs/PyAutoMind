@@ -5,8 +5,6 @@
 - source: https://github.com/orgs/PyAutoLabs/discussions/13
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/639
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/758
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/639
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/758
 
 ### What shipped
 - **PyAutoGalaxy#639** (merge 4c834ced) — `FitInterferometer.profile_visibilities` / `profile_subtracted_visibilities` / `inversion_with_data` guard the transformer-less (array-free) dataset: pixelization-only and linear-light fits run, ordinary light profiles raise a typed `DatasetException` until phase 4. New `interferometer_hdu_list_from(dataset)` (+ `SPARSE_TERMS_HEADER_KEYS`, `SPARSE_TERMS_SCALARS_ORDER`): array-free datasets persist their `SparseTerms` in `dataset.fits` as `MASK` / `NUFFT_PRECISION_OPERATOR` / `DIRTY_IMAGE` / `DIRTY_BEAM` plus a lossless float64 `SPARSE_TERMS_SCALARS` HDU (FITS header cards hold ≤20 chars and truncate exponent-form float64; readable header copies kept); in-memory datasets write the same four arrays as before, EXTNAME-tagged. `save_attributes` uses it and writes `transformer_class.json` only with a transformer. The aggregator loader reads by EXTNAME (positional fallback for legacy files) and rebuilds array-free datasets via `aa.Interferometer.from_sparse_terms` with the operator re-attached. Also fixed (pre-existing, found in review): `agg_util.mask_header_from` read `PIXSCAY` for both axes. `test_autogalaxy` 1287 passed.

@@ -6,10 +6,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/426
 - library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/240
 - library-pr: https://github.com/PyAutoLabs/autolens_visualization/pull/1
-- pending-release: PyAutoMind@https://github.com/PyAutoLabs/PyAutoMind/pull/447
-- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/426
-- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/240
-- pending-release: autolens_visualization@https://github.com/PyAutoLabs/autolens_visualization/pull/1
 
 Phase 1a of the `pyautoeyes-birth` epic moves the lens figures back into their own
 project repo. `PyAutoLabs/autolens_visualization` was re-created by the human

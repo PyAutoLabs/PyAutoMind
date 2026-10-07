@@ -8,7 +8,6 @@ Validation: 272 passed in 20.93s; ten viewport/theme browser cases; all workflow
 
 Local evidence: tmp/board-navigation/ (test logs, CI verdict and renders/PyAutoMemory/ browser screenshots).
 
-- pending-release: PyAutoMemory@https://github.com/PyAutoLabs/PyAutoMemory/pull/116
 
 ## Original prompt
 

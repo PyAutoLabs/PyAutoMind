@@ -25,7 +25,6 @@ Reproduced and published the point-source CPU breakdown evidence on a quiet RAL 
 - Phase 2 (remove the JAX-only throwaway `jnp.unique` at `_vertices_and_indices` / `_plane_triangles`, PyAutoArray + PyAutoLens, red control bit-identical likelihood + cluster positions + gradient/vmap parity, interleaved A/B on RAL `ral` with medians and dispersion) is the next bounded task; re-filed as a draft pointing here.
 - GPU campaign must take its A100 baseline on the frozen revisions above before phase 2 merges, or from those SHAs afterwards.
 - Follow-ups found, not fixed: `check_submits.py` regex skips `python3 -u` submits (87 files) so its WALL-BASIS coverage rule never fires for them; canonical `activate.sh` PYTHONPATH pointed at the `certified-positive-solver` library worktree; point-source/cluster cells absent from the CI smoke step; `cache_fresh` counts GPU autotune entries only; XLA thread-pool vs 8-CPU affinity unverified (phase 2 protocol now records it).
-- pending-release: autolens_profiling@https://github.com/PyAutoLabs/autolens_profiling/pull/298
 
 ## Original prompt
 

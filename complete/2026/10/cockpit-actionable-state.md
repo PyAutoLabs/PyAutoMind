@@ -2,7 +2,6 @@
 - completed: 2026-10-01
 - library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/435
 - workspace-pr: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/22
-- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/435
 - merge-commits: Brain 0cfb5a5842b68befa8211a7663f20f0b70271d2a; website e30a8c271b4ac8c6e13706a08961996231ac366d
 - summary: Additive v1 state/action/safety/decision metadata with overnight workflow evidence; cockpit reason/action rendering, honest freshness and cache validation, generated/checked ages, shell cache v4. No persistent agent or automated remediation.
 - validation: Brain 1107 local tests; website 10 Node tests; all nine published feeds; Chromium mobile/landscape/desktop light/dark, keyboard clipboard, history/frame retention, offline/recovery and shell-only PWA checks; tenant firewall and whitespace checks passed. In-session review only.

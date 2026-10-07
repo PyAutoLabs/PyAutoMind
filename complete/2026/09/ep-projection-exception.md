@@ -3,7 +3,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1653
 - completed: 2026-09-30
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1655
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1655
 - merged: 07f6e0b (PyAutoFit main, 2026-09-30, via /prm)
 
 ### What shipped

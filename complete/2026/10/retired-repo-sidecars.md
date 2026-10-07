@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/278
 - completed: 2026-10-04
 - library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/279
-- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/279
 - summary: Aggregate only repositories in a valid current Heart monitoring roster; preserve all caches, configured adverse evidence and global checks. Missing/malformed configuration conservatively retains observations.
 - validation: Two regressions failed before repair; 22 focused and 1200 full tests passed; independent review CLEAN. Exact-head run37203283615 passed both Python3.12 and3.13. Copied-cache replay excluded only retired PyAutoConf/PyAutoBuild and preserved all150 files.
 - merge: Human “Yes merge via prm” authorized merge of ba9d2f3 at 3d86fd8684cf30172ff22950d391df3345a3799f. Git ancestry proves the entire task branch merged.

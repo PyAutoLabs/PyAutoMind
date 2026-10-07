@@ -2,7 +2,6 @@
 
 Merged https://github.com/PyAutoLabs/PyAutoEars/pull/10 at af266b120674a8758e4be252d3109a7f487bbf6a on 2026-10-05; closes PyAutoEars#9.
 
-- pending-release: PyAutoEars@https://github.com/PyAutoLabs/PyAutoEars/pull/10
 
 ## Delivered
 Larger colored metrics, prominent Community Hub and orchestration prompt actions, expandable attention/activity tables with authors, response age and evidence-backed progress, icon copy actions and fallback, compact follow-through, and bottom coverage table. Removed the requested observation/heuristics sentence. Plan hints remain render-time only; snapshot/feed contracts unchanged.

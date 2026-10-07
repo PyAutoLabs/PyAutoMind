@@ -4,7 +4,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/453 (closed completed)
 - library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/454 (MERGED)
 - merge-commit: b065945531e5e77bf9bb53eb58f4080062155c34
-- pending-release: PyAutoBrain@https://github.com/PyAutoLabs/PyAutoBrain/pull/454
 - epic: community-organ-birth
 
 ## Delivered

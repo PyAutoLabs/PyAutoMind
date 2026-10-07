@@ -3,7 +3,6 @@
 - completed: 2026-10-02
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/763
 - epic: point-source-cpu-speed
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/764
 
 ## Shipped
 

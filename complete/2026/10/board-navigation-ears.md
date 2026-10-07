@@ -8,7 +8,6 @@ Validation: 71 passed in 0.23s; ten viewport/theme browser cases; all workflow r
 
 Local evidence: tmp/board-navigation/ (test logs, CI verdict and renders/PyAutoEars/ browser screenshots).
 
-- pending-release: PyAutoEars@https://github.com/PyAutoLabs/PyAutoEars/pull/12
 
 ## Original prompt
 

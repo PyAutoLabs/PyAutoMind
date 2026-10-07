@@ -4,8 +4,6 @@
 - completed: 2026-09-28
 - library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/242 (branch tip `e365e47`, merged 2026-09-28)
 - library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/292 (branch tip `3a7a715`, merged 2026-09-28)
-- pending-release: PyAutoHeart@https://github.com/PyAutoLabs/PyAutoHeart/pull/242
-- pending-release: PyAutoHands@https://github.com/PyAutoLabs/PyAutoHands/pull/292
 
 Heart and Hands board-footer tests expected the old six-organ family after PyAutoBrain added the Nerves and Gut boards (PyAutoNerves#172, PyAutoGut#9), leaving Heart main CI red and PyAutoHeart#240/#241 and PyAutoHands#291 showing a pre-existing red. Test files only; no API change, no workspace impact.
 

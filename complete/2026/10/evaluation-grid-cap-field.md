@@ -5,7 +5,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/646
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/343
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/365
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/646
 - PyAutoGalaxy#646 merged 2026-10-02 (2e36de4e). `LensCalc.evaluation_grid` keeps the effective zoom's physical field and centre under the grid cap. The real-decorator witness now gives 1000x1000 at 0.06 arcsec, where it used to give 1000x1000 at 8.333 arcsec. The fix is included in release 2026.10.4.1. The pending-release key above is carried verbatim because /prm never clears it; /review_release clears it.
 - autolens_profiling#365 merged 2026-10-02 (9d0b1317). Adds before/after evidence to the critical_curves campaign ledger and wiki.
 - autolens_workspace_test#343 merged 2026-10-04T19:07Z (head fcd6bd5, merge ebb9c866). Adds the cap invariant to the required `scripts/cluster/critical_curves.py` example. It stayed DRAFT until the Galaxy release, then went through /prm.

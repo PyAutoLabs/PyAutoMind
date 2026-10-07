@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/243
 - completed: 2026-09-11
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/244 (merge 2a4216a)
-- pending-release: none — workspace-category task, no library PR, so the `active.md` row carried no `pending-release:` line.
 - summary: |
     Instrumented the pixelized reconstruction row the 2026-09-10 A100 baseline could only
     measure as one 37 ms block, and answered what it is made of. Five commits on

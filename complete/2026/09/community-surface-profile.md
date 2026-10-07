@@ -13,7 +13,6 @@ Updated the science-first organization profile and inherited support routing to 
 No CI is configured. The user explicitly approved merging without CI on 2026-09-19. Prior static validation and independent review were CLEAN.
 Git ancestry verified against origin/main before close-out.
 
-- pending-release: .github@https://github.com/PyAutoLabs/.github/pull/16
 
 The shared worktree remains until the final Mind policy PR is merged.
 
