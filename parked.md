@@ -55,7 +55,6 @@ write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
 - prompt: active/bootstrap_smoke_codex_and_bench_pr.md
 - classification: workspace
 - suggested-branch: feature/bootstrap-smoke-codex
-- bundle: assistant
 - affected-repos:
   - autolens_assistant
 - resume: Plan approved and issue created; implementation not started. Reuse approved issue plan, survey current claims, and resume through start_workspace. No branch or PR created for this member.
@@ -68,7 +67,6 @@ write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
 - prompt: active/colab_refinement_throughout.md
 - classification: workspace
 - suggested-branch: feature/colab-refinement-throughout
-- bundle: assistant
 - affected-repos:
   - autolens_assistant
 - resume: Plan approved and issue created; implementation not started. Reuse approved issue plan, survey current claims, and resume through start_workspace. No branch or PR created for this member.

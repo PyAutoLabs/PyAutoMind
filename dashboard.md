@@ -40,11 +40,13 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 2 |
-| [Human review](#human-review) (`draft/human_review/`) | 2 |
-| [Parked](#parked) (`parked.md`) | 5 |
-| [Planned](#planned) (`planned.md`) | 7 |
-| [Backlog](#backlog) (`draft/`) | 234 |
+| [Start here](#start-here) | 24 |
+| [In flight](#in-flight) | 2 |
+| [Planned](#planned) | 7 |
+| [Backlog](#backlog) | 236 |
+| [Pending release](#pending-release) | 5 |
+| [Recent](#recent) | 50 |
+| [Epics](#epics) | 15 |
 
 > **No batch in flight.**
 
@@ -305,101 +307,6 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 - [PyAutoNerves#195](https://github.com/PyAutoLabs/PyAutoNerves/pull/195) — `complete/2026/10/setuptools-include-packages.md`
 - [PyAutoNerves#192](https://github.com/PyAutoLabs/PyAutoNerves/pull/192) — `complete/2026/10/workspace-version-warning-outside-workspace.md`
 
-## Human review
-
-Shipped work waiting on **you** — tasks a human asked to check before calling them done. Nothing lands here on its own: a task only gets a review row when someone files one (`/intake` with `Type: human review`), so an empty section means nothing has been flagged, not that nothing shipped.
-
-<details><summary>📋 <a href="draft/human_review/autolens/multi_plane_cross_validation_review.md">Human review: multi-plane cross-validation (library tests + workspace guide)</a> — autolens · normal — flagged for review 2026-08-29</summary>
-
-```
-Walk me through the completed work described in `draft/human_review/autolens/multi_plane_cross_validation_review.md` so I can sign it off.
-
-1. Read the prompt: what was asked, and what it claims shipped.
-2. Find the evidence — the merged PR(s), the commits, the `complete/` record —
-   and read the actual diff, not the description of it.
-3. Report what changed, what it does NOT cover, and anything you would have
-   done differently. Call out behaviour changes and test gaps explicitly.
-
-Change nothing while reviewing. When I sign it off, retire the prompt from the
-PyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date
-<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and
-regenerate the dashboard. If I do not sign it off, file the follow-up with
-`/intake` instead.
-
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md">Human review: the scaling_relation slam parks (imaging un-parked, multi_galaxy kept)</a> — autolens_workspace · normal — flagged for review 2026-08-29</summary>
-
-```
-Walk me through the completed work described in `draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md` so I can sign it off.
-
-1. Read the prompt: what was asked, and what it claims shipped.
-2. Find the evidence — the merged PR(s), the commits, the `complete/` record —
-   and read the actual diff, not the description of it.
-3. Report what changed, what it does NOT cover, and anything you would have
-   done differently. Call out behaviour changes and test gaps explicitly.
-
-Change nothing while reviewing. When I sign it off, retire the prompt from the
-PyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date
-<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and
-regenerate the dashboard. If I do not sign it off, file the follow-up with
-`/intake` instead.
-
-```
-
-</details>
-
-## Parked
-
-Started or scoped, not currently in flight — resume by moving the row back to `active.md`. Full detail in [`parked.md`](parked.md).
-
-<details>
-<summary><b>5</b> task(s)</summary>
-
-<details><summary>📋 <b>single-source-density-design</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1500">issue #1500</a> — parked 2026-08-18</summary>
-
-```
-Use the start-dev skill. draft/bug/priors/12_single_source_density_refactor.md
-```
-
-</details>
-
-<details><summary>📋 <b>prior-message-collapse-design</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1500">issue #1500</a> — parked 2026-08-18</summary>
-
-```
-Use the start-dev skill. draft/bug/priors/13_collapse_prior_and_message.md
-```
-
-</details>
-
-<details><summary>📋 <b>fixed-light-numba-s7</b> — parked 2026-09-18</summary>
-
-```
-Use the route skill. resume the parked PyAutoMind task fixed-light-numba-s7 — its record is in parked.md
-```
-
-</details>
-
-<details><summary>📋 <b>bootstrap-smoke-codex</b> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/144">issue #144</a> — parked 2026-10-02 — queued (human-deferred) — requested quicker wrap after inference PR</summary>
-
-```
-Use the start-dev skill. active/bootstrap_smoke_codex_and_bench_pr.md
-```
-
-</details>
-
-<details><summary>📋 <b>colab-refinement-throughout</b> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/145">issue #145</a> — parked 2026-10-02 — queued (human-deferred) — requested quicker wrap after inference PR</summary>
-
-```
-Use the start-dev skill. active/colab_refinement_throughout.md
-```
-
-</details>
-
-</details>
-
 ## Planned
 
 Scoped but not started; some are not yet prompt files. Full detail in [`planned.md`](planned.md).
@@ -467,7 +374,57 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ## Backlog
 
-**234** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **47** of them belong to an epic and are listed only under [Epics](#epics) below.
+**234** unstarted prompts and **2** awaiting human review. Unstarted prompts are sorted most-pickable first (priority, then size). **47** of them belong to an epic and are listed only under [Epics](#epics) below.
+
+<a id="human-review"></a>
+<details>
+<summary><b>Human review</b> — 2</summary>
+
+Shipped work waiting on **you** — tasks a human asked to check before calling them done. Nothing lands here on its own: a task only gets a review row when someone files one (`/intake` with `Type: human review`), so an empty section means nothing has been flagged, not that nothing shipped.
+
+<details><summary>📋 <a href="draft/human_review/autolens/multi_plane_cross_validation_review.md">Human review: multi-plane cross-validation (library tests + workspace guide)</a> — autolens · normal — flagged for review 2026-08-29</summary>
+
+```
+Walk me through the completed work described in `draft/human_review/autolens/multi_plane_cross_validation_review.md` so I can sign it off.
+
+1. Read the prompt: what was asked, and what it claims shipped.
+2. Find the evidence — the merged PR(s), the commits, the `complete/` record —
+   and read the actual diff, not the description of it.
+3. Report what changed, what it does NOT cover, and anything you would have
+   done differently. Call out behaviour changes and test gaps explicitly.
+
+Change nothing while reviewing. When I sign it off, retire the prompt from the
+PyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date
+<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and
+regenerate the dashboard. If I do not sign it off, file the follow-up with
+`/intake` instead.
+
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md">Human review: the scaling_relation slam parks (imaging un-parked, multi_galaxy kept)</a> — autolens_workspace · normal — flagged for review 2026-08-29</summary>
+
+```
+Walk me through the completed work described in `draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md` so I can sign it off.
+
+1. Read the prompt: what was asked, and what it claims shipped.
+2. Find the evidence — the merged PR(s), the commits, the `complete/` record —
+   and read the actual diff, not the description of it.
+3. Report what changed, what it does NOT cover, and anything you would have
+   done differently. Call out behaviour changes and test gaps explicitly.
+
+Change nothing while reviewing. When I sign it off, retire the prompt from the
+PyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date
+<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and
+regenerate the dashboard. If I do not sign it off, file the follow-up with
+`/intake` instead.
+
+```
+
+</details>
+
+</details>
 
 <details>
 <summary><b>bug</b> — 70</summary>
@@ -2010,279 +1967,9 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 </details>
 
-## Bundles
-
-Sets of INDEPENDENT tasks that make sense in one orchestrated session: an architect session plans them, subagents implement them, and every member still gets its own issue and its own PR — so the prm skill closes each one out unchanged. Not an epic: nothing here is ordered or phase-gated, and every member also appears in its usual section above — a bundle is an extra view of the backlog, never a replacement. Pinned bundles are the human record in `bundles.md`; auto bundles are recomputed from the backlog every time this page is rendered and are proposals, never records. Full record in [`bundles.md`](bundles.md).
-
-<details>
-<summary><b>autoarray — bundle 1</b> — 4 task(s) · 7 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the judgment tier for the PyAutoMind bundle 'autoarray — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md
-- draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md
-- draft/maintenance/autoarray/files_experiment_scripts_import_a_removed_module.md
-- draft/maintenance/autoarray/small_datasets_followups_after_8c.md
-
-Contract (the `start-bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Use the start-dev skill for EACH member prompt: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run the start-library skill (or the start-workspace skill) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
-5. Ship each member on its own: the ship-library skill or the ship-workspace skill, ONE PR per task, so the prm skill closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Difficulty | Priority | Status |
-|--------|------------|----------|--------|
-| <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> | small | high | formalised |
-| <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> | large | high | formalised |
-| <a href="draft/maintenance/autoarray/files_experiment_scripts_import_a_removed_module.md"><code>files/*_experiment.py</code> import a module that no longer exists…</a> | small | low | formalised |
-| <a href="draft/maintenance/autoarray/small_datasets_followups_after_8c.md">After the phase-8c releases: bump the autonerves floor, drop the…</a> | small | low | formalised |
-
-</details>
-
-<details>
-<summary><b>euclid</b> — 4 task(s) · 5 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: catalogue, euclid, jax, latent</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the judgment tier for the PyAutoMind bundle 'euclid' — 4 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md
-- draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md
-- draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md
-- draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md
-
-Contract (the `start-bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Use the start-dev skill for EACH member prompt: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run the start-library skill (or the start-workspace skill) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
-5. Ship each member on its own: the ship-library skill or the ship-workspace skill, ONE PR per task, so the prm skill closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> | euclid | small | high | draft |
-| <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> | euclid | small | medium | draft |
-| <a href="draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md"><code>vis_lp</code> passes <code>batch_size=50</code> to <code>af.Nautilus</code>, which has no such…</a> | euclid | small | medium | formalised |
-| <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> | euclid | medium | normal | formalised |
-
-</details>
-
-<details>
-<summary><b>euclid — bundle 2</b> — 3 task(s) · 5 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: catalogue, docs, euclid, hpc</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the judgment tier for the PyAutoMind bundle 'euclid — bundle 2' — 3 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md
-- draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
-- draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md
-
-Contract (the `start-bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Use the start-dev skill for EACH member prompt: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run the start-library skill (or the start-workspace skill) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
-5. Ship each member on its own: the ship-library skill or the ship-workspace skill, ONE PR per task, so the prm skill closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> | euclid | small | high | formalised |
-| <a href="draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md">euclid_dr1: every dataset rgb.jpg is upside down relative to the VIS…</a> | euclid | - | - | - |
-| <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of…</a> | euclid | low | low | draft |
-
-</details>
-
-<details>
-<summary><b>pyautoheart — bundle 1</b> — 3 task(s) · 5 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the judgment tier for the PyAutoMind bundle 'pyautoheart — bundle 1' — 3 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md
-- draft/bug/pyautoheart/heart_smoke_runner_deletes_the_tracked_output.md
-- draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md
-
-Contract (the `start-bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Use the start-dev skill for EACH member prompt: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run the start-library skill (or the start-workspace skill) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
-5. Ship each member on its own: the ship-library skill or the ship-workspace skill, ONE PR per task, so the prm skill closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Difficulty | Priority | Status |
-|--------|------------|----------|--------|
-| <a href="draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md">Local smoke env creation fails: smoke_install.sh flat pip chain vs…</a> | medium | high | formalised |
-| <a href="draft/bug/pyautoheart/heart_smoke_runner_deletes_the_tracked_output.md">Heart smoke runner deletes the tracked output/.gitignore when wiping…</a> | small | medium | formalised |
-| <a href="draft/bug/pyautoheart/release_integrate_analyze_path_filter_and_workspace_lint.md">release-integrate: analyze-side foreign-path filter and a…</a> | medium | low | formalised |
-
-</details>
-
-<details>
-<summary><b>workspaces — bundle 1</b> — 3 task(s) · 5 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the judgment tier for the PyAutoMind bundle 'workspaces — bundle 1' — 3 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md
-- draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md
-- draft/maintenance/workspaces/sync_remaining_workspace_config_priors_copies.md
-
-Contract (the `start-bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Use the start-dev skill for EACH member prompt: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run the start-library skill (or the start-workspace skill) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
-5. Ship each member on its own: the ship-library skill or the ship-workspace skill, ONE PR per task, so the prm skill closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Difficulty | Priority | Status |
-|--------|------------|----------|--------|
-| <a href="draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md">Physical model check when speeding up smoke tests</a> | medium | high | formalised |
-| <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> | easy | medium | formalised |
-| <a href="draft/maintenance/workspaces/sync_remaining_workspace_config_priors_copies.md">Sync remaining workspace config/priors copies</a> | small | medium | formalised |
-
-</details>
-
-<details>
-<summary><b>ci</b> — 3 task(s) · 3 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: ci, robustness</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the judgment tier for the PyAutoMind bundle 'ci' — 3 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md
-- draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md
-- draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md
-
-Contract (the `start-bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Use the start-dev skill for EACH member prompt: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run the start-library skill (or the start-workspace skill) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
-5. Ship each member on its own: the ship-library skill or the ship-workspace skill, ONE PR per task, so the prm skill closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> /…</a> | pyautoheart | small | high | formalised |
-| <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> | pyautomind | small | high | formalised |
-| <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> | pyautomemory | small | medium | formalised |
-
-</details>
-
-<details>
-<summary><b>assistants</b> — 4 task(s) · 7 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the judgment tier for the PyAutoMind bundle 'assistants' — 4 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/feature/autofit_assistant/data_loading_and_selection_cuts_skill.md
-- draft/maintenance/ci/wiki_currency_check_version_gate.md
-- draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md
-- draft/docs/workspaces/assistants_regime_extension.md
-
-Contract (the `start-bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Use the start-dev skill for EACH member prompt: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run the start-library skill (or the start-workspace skill) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
-5. Ship each member on its own: the ship-library skill or the ship-workspace skill, ONE PR per task, so the prm skill closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Repo | Difficulty | Priority | Status |
-|--------|------|------------|----------|--------|
-| <a href="draft/feature/autofit_assistant/data_loading_and_selection_cuts_skill.md">autofit_assistant: a skill that owns loading the user's data and its…</a> | autofit_assistant | small | medium | - |
-| <a href="draft/maintenance/ci/wiki_currency_check_version_gate.md">wiki-currency's --check-version gate rots on every library main merge</a> | ci | medium | normal | formalised |
-| <a href="draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md">Checkerboard PSF-mismatch residual diagnostic — research + document +…</a> | pyautomemory | medium | normal | formalised |
-| <a href="draft/docs/workspaces/assistants_regime_extension.md">Assistants: regime-aware routing for multi_galaxy / group / cluster…</a> | workspaces | medium | low | in progress — autolens_assistant leg… |
-
-</details>
-
-<details>
-<summary><b>autofit — bundle 1</b> — 4 task(s) · 7 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the judgment tier for the PyAutoMind bundle 'autofit — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/bug/autofit/ep_test_suite_is_not_xdist_safe.md
-- draft/bug/autofit/visualization_warmup_swallowed_exception.md
-- draft/bug/autofit/assertion_repr_recurses_forever.md
-- draft/bug/autofit/model_function_cannot_resolve_config_priors.md
-
-Contract (the `start-bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Use the start-dev skill for EACH member prompt: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run the start-library skill (or the start-workspace skill) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
-5. Ship each member on its own: the ship-library skill or the ship-workspace skill, ONE PR per task, so the prm skill closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Difficulty | Priority | Status |
-|--------|------------|----------|--------|
-| <a href="draft/bug/autofit/ep_test_suite_is_not_xdist_safe.md">EP test suite is not xdist-safe: tests share one on-disk output…</a> | small | medium | formalised |
-| <a href="draft/bug/autofit/visualization_warmup_swallowed_exception.md">Visualization warm-up swallowed for ellipse and point-source analyses</a> | large | medium | formalised |
-| <a href="draft/bug/autofit/assertion_repr_recurses_forever.md">Assertion repr recurses forever</a> | small | normal | formalised |
-| <a href="draft/bug/autofit/model_function_cannot_resolve_config_priors.md">af.Model(function) cannot resolve config priors</a> | small | normal | formalised |
-
-</details>
-
-_Showing 8 of 39 auto bundles — pin one in `bundles.md` to keep it on the page._
-
 ## Recent
 
-The 50 newest things to happen to the work in hand, newest first — issued, parked, filed. Every other section on this page is laid out by state, which is exactly why none of them can answer “what has been happening?”. Shipped work is not here: it is read from `complete/index.md`, and a thousand records deep it would crowd out everything anyone can still act on. Showing the newest 10; … opens the next 10.
+The 50 newest things to happen to the work in hand, newest first — issued, filed, flagged for review. Every other section on this page is laid out by state, which is exactly why none of them can answer “what has been happening?”. Shipped work is not here: it is read from `complete/index.md`, and a thousand records deep it would crowd out everything anyone can still act on. Showing the newest 10; … opens the next 10.
 
 | Date | Event | Task |
 |------|-------|------|
@@ -2291,18 +1978,16 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-10-07 | issued | <a href="active/community_pages.md">Community pages + merged "Community &amp; Contributing" sections across…</a> |
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
 | 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
-| 2026-10-02 | parked | <a href="parked.md#colab-refinement-throughout">colab-refinement-throughout</a> |
-| 2026-10-02 | parked | <a href="parked.md#bootstrap-smoke-codex">bootstrap-smoke-codex</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
+| 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
+| 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
-| 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
 | 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
 | 2026-09-29 | filed | <a href="draft/maintenance/pyautomind/session_start_hook_copies_regen.md">Regenerate the 28 drifted <code>.claude/hooks/session-start.sh</code> copies…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
@@ -2311,29 +1996,28 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-27 | filed | <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
 | 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
+| 2026-09-26 | filed | <a href="draft/refactor/workspaces/abell_1201_local_cleanup.md">Repo cleanup: retire the Abell 1201 worktree and local raw data</a> |
+| 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-26 | filed | <a href="draft/refactor/workspaces/abell_1201_local_cleanup.md">Repo cleanup: retire the Abell 1201 worktree and local raw data</a> |
-| 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
 | 2026-09-25 | filed | <a href="draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md">Keep caches off <code>$HOME</code> on HPC — phase 2 remainder: euclid pipeline…</a> |
 | 2026-09-24 | filed | <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> |
 | 2026-09-23 | filed | <a href="draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
-| 2026-09-18 | parked | <a href="parked.md#fixed-light-numba-s7">fixed-light-numba-s7</a> |
 | 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> |
 | 2026-09-18 | filed | <a href="draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md">The latent smoke's empty-block assertion names one cause…</a> |
+| 2026-09-18 | filed | <a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its…</a> |
+| 2026-09-17 | filed | <a href="draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a> |
+| 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-18 | filed | <a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its…</a> |
-| 2026-09-17 | filed | <a href="draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a> |
-| 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> |
 | 2026-09-17 | filed | <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads…</a> |
@@ -2341,14 +2025,14 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autofit/ep_analysis_level_compile_cache.md">EP: cache the compiled JAX likelihood on the Analysis across factor…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> |
+| 2026-09-16 | filed | <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of…</a> |
+| 2026-09-16 | filed | <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding…</a> |
+| 2026-09-16 | filed | <a href="draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> /…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-16 | filed | <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of…</a> |
-| 2026-09-16 | filed | <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding…</a> |
-| 2026-09-16 | filed | <a href="draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> /…</a> |
 | 2026-09-16 | filed | <a href="draft/feature/autolens/coolest_pixel_grid_export.md">COOLEST: export MGE lens light and pixelized sources as pixel grids</a> |
 | 2026-09-16 | filed | <a href="draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md">Adaptive Delaunay mesh places two mesh pixels 0.001" apart — a…</a> |
 | 2026-09-15 | filed | <a href="draft/maintenance/howtofit/minimum_library_version_stale.md">The workspace staleness warning keys off a value documented never to…</a> |
@@ -2356,6 +2040,9 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-15 | filed | <a href="draft/docs/howtofit/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autolens_workspace/start_here_multistart_compile_time.md">imaging/start_here: 26-minute XLA compile of the 48-start Prodigy…</a> |
 | 2026-09-14 | filed | <a href="draft/docs/autofit/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the…</a> |
+| 2026-09-14 | filed | <a href="draft/bug/autofit/mcmc_thin_zero_and_check_size_short_chain.md">Emcee/Zeus: thin can be 0, and check_size blows up on short chains</a> |
+| 2026-09-13 | filed | <a href="draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md">cluster/mass_parameterizations*.py promise model.info prints (and…</a> |
+| 2026-09-13 | filed | <a href="draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md"><code>SimulatorImaging</code> draws Poisson noise before checking…</a> |
 
 </details>
 

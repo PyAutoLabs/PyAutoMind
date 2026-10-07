@@ -83,7 +83,6 @@ LEDGER_FILES = (
     "parked.md",
     "condemned.md",
     "epics.md",
-    "bundles.md",
     "ideas.md",
     "autonomy_log.md",
     "dashboard.md",

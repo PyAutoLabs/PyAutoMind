@@ -2,10 +2,7 @@
 
 The controlled vocabulary for a prompt's optional `Themes:` header — *what the
 work is about*, as opposed to `Target:`, which is only *where the code lives*.
-Themes are the key the dashboard's auto-bundler groups on, so they are
-deliberately few, deliberately topical, and deliberately cross-repo: "three
-things about MGE" is a session, "three things that live in autoarray" is a
-directory listing.
+Themes describe related work across repositories and help with explicit task selection.
 
 Usage, in a prompt's light header (see `REFERENCE.md`, "Prompt file format"):
 
@@ -15,15 +12,8 @@ Themes:
 - jax-gradient
 ```
 
-The **first** bullet is the primary theme and is the grouping key; the rest are
-affinity keywords that decide which prompts pack together inside that group.
-One to three keywords is the intended shape. A keyword that is not in the list
-below still renders — loudly, with a ⚠️ on the dashboard and a Hygiene count —
-so a typo is visible rather than silently becoming a free-text tag.
-
-This file is the source of truth and is meant to be edited by hand: adding a
-keyword here is the whole of adding a theme, and PyAutoBrain reads it rather
-than holding its own copy.
+The **first** bullet is the primary theme. One to three keywords is the
+intended shape; unknown keywords are reported in dashboard Hygiene.
 
 ## Vocabulary
 

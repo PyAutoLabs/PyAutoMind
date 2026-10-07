@@ -35,7 +35,6 @@ def test_ledger_dirs_and_registry_files_are_ledger():
         "parked.md",
         "condemned.md",
         "epics.md",
-        "bundles.md",
         "ideas.md",
         "autonomy_log.md",
         "dashboard.md",
