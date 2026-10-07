@@ -10,6 +10,7 @@ Consequence: judge
 Priority: high
 Status: draft
 Filed: 2026-10-07
+Issued: 2026-10-07
 
 ## Request (verbatim, from the 2026-10-07 token-efficiency review)
 

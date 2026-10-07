@@ -95,3 +95,13 @@
 - worktree: ~/Code/PyAutoLabs-wt/retire-claude-md-pointers
 - repos:
   - PyAutoMind: feature/retire-claude-md-pointers
+
+## absorb-claude-notes-agents-md
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/492
+- issued: 2026-10-07
+- prompt: active/absorb_claude_notes_into_agents_md.md
+- session: Claude CLI (Fable architect → Opus 5.5 executor, /start_dev); session ID unavailable
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/absorb-claude-notes-agents-md
+- repos:
+  - PyAutoBrain: feature/absorb-claude-notes-agents-md
