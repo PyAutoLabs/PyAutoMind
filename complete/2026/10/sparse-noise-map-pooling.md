@@ -1,5 +1,35 @@
 # Sparse interferometer path: opt-in quadrature pooling of unequal real/imag noise sigma
 
+Completed 2026-10-07 under human `/prm` (merged by the human 2026-10-07T10:07:50Z).
+
+Merged PyAutoArray#619 (https://github.com/PyAutoLabs/PyAutoArray/pull/619,
+merge commit 2c5cb697); feature head be725f88 verified an ancestor of
+origin/main; all three CI legs green. Issue
+https://github.com/PyAutoLabs/PyAutoArray/issues/617 closed.
+
+`sparse_terms_from_chunks(..., pool_noise_map=True)` now pools unequal
+real/imaginary noise sigma in quadrature, sigma^2 = (sigma_re^2 + sigma_im^2)/2,
+before building the sparse terms (bit-identical to pre-pooling the chunks with
+`noise_map_pooled_from`). The default call still raises on unequal sigma, so
+existing behaviour is unchanged unless the user opts in.
+
+Measured documentation pin: a 2 % real/imag asymmetry shifts the log
+likelihood by 9.9e-3 nats (7.7e-5 relative) in-pytest, and by 0.01-0.096 nats
+across seeds.
+
+Source: community GitHub Discussion https://github.com/orgs/PyAutoLabs/discussions/13
+(external contributor @HRSAstro, pyuvimage), comment
+https://github.com/PyAutoLabs/.github/discussions/13#discussioncomment-18741903 item 2.
+
+Not released: the option reaches users with the next PyAutoArray release.
+Follow-on: `sparse_terms_oversampled_fine_grids` (next task) was gated on this merge.
+
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/619
+
+## Original prompt
+
+# Sparse interferometer path: opt-in quadrature pooling of unequal real/imag noise sigma
+
 Type: feature
 Target: PyAutoArray
 Repos:
