@@ -47,8 +47,8 @@
   - autofit_visualization: feature/community-pages
   - autocti_visualization: feature/community-pages
   - autolens_profiling: feature/community-pages
-  - PyAutoScientist: feature/community-pages
   - pyautolabs.github.io: feature/community-pages
+- released: PyAutoScientist released 2026-10-07 by human decision (PyAutoScientist#48 merged 2026-10-07T10:05Z); now claimed by dashboard-section-disclosures
 - summary: per-library docs/general/community.md (Lens lists the SiriusFzh Visual Workbench), one merged "Community & Contributing" README section across 16 public repos + PyAutoScientist, front page community section moved to the bottom linking every project page. Wave 1 = 3 library PRs, wave 2 = README bundle.
 - tier: glance (auto-merge on green if Witness passes)
 - status: awaiting-merge — 13/18 MERGED 2026-10-07; 5 PRs HELD until the next release by human decision (autolens_profiling #391 after corrective #392 merged, plus the 4 *_visualization PRs): each fails only lychee 404 on the RTD community page — RTD builds red since 10-04 because pyproject `autonerves>2026.10.4.1` exceeds PyPI 2026.10.4.1; resume: after the autonerves release, re-run the 5 lints (gh run rerun --failed) and /prm them, then close out
@@ -78,10 +78,10 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/490
 - started: 2026-10-07
 - session: Codex; session ID unavailable
-- status: awaiting-merge — 12 PRs open; Brain #491 first; 11 dependent drafts; Scientist deferred
+- status: awaiting-merge — Brain #491 merged; 11 dependent PRs; Scientist migration in progress
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dashboard-section-disclosures
 - plan: approved 2026-10-07; judge tier, human /prm
-- deferred: PyAutoScientist until community-pages claim clears
+- scientist: claim released by community-pages 2026-10-07 (human decision, PyAutoScientist#48 merged); migrated under #490
 - repos:
   - PyAutoBrain: feature/dashboard-section-disclosures
   - PyAutoCortex: feature/dashboard-section-disclosures
@@ -95,6 +95,7 @@
   - PyAutoInsight: feature/dashboard-section-disclosures
   - PyAutoEars: feature/dashboard-section-disclosures
   - PyAutoMind: feature/dashboard-section-disclosures
+  - PyAutoScientist: feature/dashboard-section-disclosures
 - checkpoint: authorized RED ship completed; human merge only; see issue #490 PR index
 - heart-red-override:
   - authorization: 2026-10-07 human “I authorize”, in response to the task-specific Brain #490 development ship request; commit/push/PR only, no merge/release
