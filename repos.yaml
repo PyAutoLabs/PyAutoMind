@@ -353,6 +353,16 @@ repos:
     github: PyAutoLabs/autolens_inference
     category: project
     role: "Non-linear search and inference benchmarking runs and results — which searches, with or without gradients, on CPU and A100, find the right answer fastest."
+  autofit_profiling:
+    path: fit/autofit_profiling
+    github: PyAutoLabs/autofit_profiling
+    category: project
+    role: "PyAutoFit profiling runs and results — search.fit breakdowns and EP/graphical baselines; aggregated by PyAutoPulse."
+  autofit_inference:
+    path: fit/autofit_inference
+    github: PyAutoLabs/autofit_inference
+    category: project
+    role: "Non-linear search and inference benchmarking for PyAutoFit on toy likelihoods — which searches find the right answer fastest; aggregated by PyAutoInsight."
   autolens_visualization:
     path: lens/autolens_visualization
     github: PyAutoLabs/autolens_visualization
