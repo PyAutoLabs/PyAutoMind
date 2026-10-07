@@ -1,3 +1,22 @@
+# Profiling Results UI — completed
+
+- issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/25
+- completed: 2026-10-07
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/26 (MERGED)
+- merge-commit: d19d613fbb5688e9b24bed3c7fa3a49eb3513969
+
+Simplified the profiling dashboard, standardized the requested model labels, removed legacy/redundant controls and prose, and split results from script links. Model links open dedicated browser tabs; Instrument, Device and Configuration selectors share a row with Configuration details first. Normal choices are curated float64 / 1500-source-pixel defaults where applicable; captures and archive links remain intact. Compact timing bars use matching totals or a labeled shared maximum without joining unrelated setups or units.
+
+Fixed the CI-discovered reload race by persisting panel selection synchronously on activation rather than waiting for queued toggle events. The deterministic regression failed before the patch and passes with it; keyboard activation and reload behavior remain covered.
+
+Validation: 193 Python tests, Chromium responsive/interaction checks, Ruff lint/format, offline contract validation and git diff checks passed. Exact final head f3a34c564950f6522351904ae53b3229485afae7 had two successful Actions runs: lint 37629490960 (all steps including Chromium and link checks passed), Dashboard Refresh 37629490950. Mergeability CLEAN; human invoked /prm. Git ancestry proves the sole claimed branch merged.
+
+Heart's previous library-behind RED reasons cleared after refresh; the four libraries were already clean/current. Shipping proceeded under the recorded authorization with the existing manifest-mismatch YELLOW. No release or RED override was exercised.
+
+Local logs and rendered previews preserved outside the removed task bundle at /home/jammy/Code/PyAutoLabs/tmp/profiling-results-ui-evidence/ (preview/browser/ contains screenshots). No scientific data products were created or removed. Post-merge publication is handled by the normal Pages workflow.
+
+## Original prompt
+
 # Simplify profiling results navigation and presentation
 
 Type: feature

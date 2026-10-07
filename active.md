@@ -73,23 +73,6 @@
   - pyautolabs.github.io: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/30
 - heart-ack: manifest drift: shared-standards blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml; release validation stale: source moved since rehearsal (PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens) — acknowledged by the human 2026-10-07 at ship
 
-## profiling-results-ui
-- issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/25
-- issued: 2026-10-07
-- session: Codex
-- status: awaiting-merge
-- worktree: /home/jammy/Code/PyAutoLabs/tmp/worktrees/profiling-results-ui
-- repos:
-  - PyAutoPulse: feature/profiling-results-ui
-- plan: active/profiling-results-ui.md; user approved with go
-- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/26
-- commit: f3a34c5
-- checkpoint: reload race fixed on f3a34c5; GitHub lint (including Chromium) and dashboard refresh PASS; merge remains human /prm
-- ship-authorization: user “I authorize, maybe we should get those repos up to date first?”; all four libraries already clean/current after fetch; refreshed Heart cleared all RED reasons; no RED override exercised
-- heart: YELLOW — manifest drift: workspace checkouts (manifest ↔ disk) — 2 mismatch(es) vs PyAutoMind/repos.yaml; stale: release validation incomplete: no rehearsal for current source
-- validation: 193 Python tests; Chromium; Ruff; offline contract; git diff --check all passed
-- evidence: tmp/worktrees/profiling-results-ui/progress.md
-
 ## retire-nested-claude-md-pointers
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/484
 - issued: 2026-10-07
