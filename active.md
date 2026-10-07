@@ -73,3 +73,19 @@
   - PyAutoScientist: https://github.com/PyAutoLabs/PyAutoScientist/pull/48
   - pyautolabs.github.io: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/30
 - heart-ack: manifest drift: shared-standards blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml; release validation stale: source moved since rehearsal (PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens) — acknowledged by the human 2026-10-07 at ship
+
+## sparse-terms-oversampled-fine-grids
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/620
+- discussion: https://github.com/orgs/PyAutoLabs/discussions/13
+- user-facing: true
+- author: @HRSAstro (external)
+- issued: 2026-10-07
+- prompt: active/sparse_terms_oversampled_fine_grids.md
+- session: Claude CLI (Opus 5.5 subagent, /start_dev); session ID unavailable
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/sparse-terms-oversampled-fine-grids
+- repos:
+  - PyAutoArray: feature/sparse-terms-oversampled-fine-grids (coordination with community-pages (README only); disjoint files; human-authorised 2026-10-07)
+  - PyAutoGalaxy: feature/sparse-terms-oversampled-fine-grids (coordination with community-pages (README only) and scribbler-wave2-radial-panels-regrid (#641 merged, awaiting close-out); disjoint files, no README/radial-panel/regrid code; human-authorised 2026-10-07)
+- depends-on: sparse_noise_map_pooling_option — MERGED PyAutoArray#619 (2c5cb697)
+- tier: judge (human /prm)
