@@ -3,6 +3,8 @@
 Type: bug
 Difficulty: medium
 Consequence: judge
+Issued: 2026-10-07
+Issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/27
 Repos: PyAutoPulse
 
 @PyAutoPulse — workspace/organ presentation work, not a scientific library change.
@@ -11,7 +13,7 @@ Repos: PyAutoPulse
 
 I think that numba results should be their own section (e.g. Delaunay (numba) as they are their own likelihood function with their own source code root. Under Likelihood runtime I think text like "Single JIT Block", "Vmap.Per Call" can be turned into easier more descriptive text, so for th forst one may (JAX jit function), but think hard how to make this clearer. Not all likelihood breaksdown have a Component Total at the top, I think they should have longest blocks at the top goin descending, For A100 there is "Setup Prefix" which is longer than the component time so I'm not sure that should all be there? I also think all the text here could be clearer what it corresponds to, like "Reconstruction JIT.Steady Per Call S" can this just say what step of the likliehood function it is? We probably need a mapping of steps into a more human readable text extract of what they are rather than these which I assume are JAX-y names?
 
-## Proposed plan — approval pending
+## Approved plan — user: “go”
 
 - Separate each Numba likelihood into its own model entry, such as Delaunay (Numba), with implementation-specific results, defaults and script links. Preserve separate-tab navigation.
 - Replace raw runtime keys with labels distinguishing compiled single evaluations, post-compilation timing blocks, steady medians, total batch time and batch-average cost per evaluation.

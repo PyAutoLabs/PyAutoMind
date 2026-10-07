@@ -84,3 +84,13 @@
 - repos:
   - PyAutoBrain: feature/drop-legacy-claude-md-patterns
 - heart-ack: manifest drift: workspace checkouts (manifest ↔ disk) — 2 mismatch(es) vs PyAutoMind/repos.yaml; release validation incomplete: no rehearsal for current source — acknowledged by the human 2026-10-07 at ship
+
+## profiling-readable-metrics
+- issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/27
+- issued: 2026-10-07
+- session: Codex
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/tmp/worktrees/profiling-readable-metrics
+- repos:
+  - PyAutoPulse: feature/profiling-readable-metrics
+- plan: active/profiling-readable-metrics.md; user approved with go
