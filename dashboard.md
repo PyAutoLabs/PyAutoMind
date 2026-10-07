@@ -274,7 +274,7 @@ Use the start-dev skill. active/profiling-results-ui.md
 
 </details>
 
-<details><summary>📋 <a href="active/retire_claude_md_pointers.md">Retire the CLAUDE.md → AGENTS.md pointer files (AGENTS.md is native now)</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/482">issue #482</a> — issued 2026-10-07 — library-dev</summary>
+<details><summary>📋 <a href="active/retire_claude_md_pointers.md">Retire the CLAUDE.md → AGENTS.md pointer files (AGENTS.md is native now)</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/482">issue #482</a> — issued 2026-10-07 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/483">PyAutoMind#483</a></summary>
 
 ```
 Use the start-dev skill. active/retire_claude_md_pointers.md
