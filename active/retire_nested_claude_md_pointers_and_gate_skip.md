@@ -10,6 +10,8 @@ Consequence: judge
 Priority: high
 Status: draft
 Filed: 2026-10-07
+Issued: 2026-10-07
+Issue: https://github.com/PyAutoLabs/PyAutoMind/issues/484
 
 ## Request (verbatim, 2026-10-07)
 
