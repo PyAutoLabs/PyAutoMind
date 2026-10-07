@@ -266,7 +266,7 @@ Use the start-dev skill. active/dashboard-section-disclosures.md
 
 </details>
 
-<details><summary>📋 <a href="active/repos_sync_check_root_routing_table.md">repos_sync.py check mode never checks the workspace-root AGENTS.md routing table</a> — issued 2026-10-07</summary>
+<details><summary>📋 <a href="active/repos_sync_check_root_routing_table.md">repos_sync.py check mode never checks the workspace-root AGENTS.md routing table</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/480">issue #480</a> — issued 2026-10-07 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/481">PyAutoMind#481</a></summary>
 
 ```
 Use the start-dev skill. active/repos_sync_check_root_routing_table.md
@@ -274,7 +274,7 @@ Use the start-dev skill. active/repos_sync_check_root_routing_table.md
 
 </details>
 
-<details><summary>📋 <a href="active/setuptools_include_packages.md">setuptools package discovery picks up build/ (recursive build/lib/build/lib… nesting)</a> — issued 2026-10-07</summary>
+<details><summary>📋 <a href="active/setuptools_include_packages.md">setuptools package discovery picks up build/ (recursive build/lib/build/lib… nesting)</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/194">issue #194</a> — issued 2026-10-07 — library-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/195">PyAutoNerves#195</a>, <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/622">PyAutoArray#622</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/651">PyAutoGalaxy#651</a>, <a href="https://github.com/PyAutoLabs/PyAutoReduce/pull/81">PyAutoReduce#81</a> — ⏳ pending release: PyAutoNerves — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 Use the start-dev skill. active/setuptools_include_packages.md
@@ -288,6 +288,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoArray**
 
+- [PyAutoArray#622](https://github.com/PyAutoLabs/PyAutoArray/pull/622) — `active/setuptools_include_packages.md`
 - [PyAutoArray#616](https://github.com/PyAutoLabs/PyAutoArray/pull/616) — `complete/2026/10/imshow-origin-lower-overlays.md`
 - [PyAutoArray#612](https://github.com/PyAutoLabs/PyAutoArray/pull/612) — `complete/2026/10/jax-lapack-compatibility-repair.md`
 - [PyAutoArray#615](https://github.com/PyAutoLabs/PyAutoArray/pull/615) — `complete/2026/10/nnls-memo-scattered-backoff.md`
@@ -301,6 +302,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#651](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/651) — `active/setuptools_include_packages.md`
 - [PyAutoGalaxy#647](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/647) — `complete/2026/10/jax-lapack-compatibility-repair.md`
 - [PyAutoGalaxy#650](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/650) — `complete/2026/10/sparse-terms-oversampled-fine-grids.md`
 
@@ -312,6 +314,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoNerves**
 
+- [PyAutoNerves#195](https://github.com/PyAutoLabs/PyAutoNerves/pull/195) — `active/setuptools_include_packages.md`
 - [PyAutoNerves#186](https://github.com/PyAutoLabs/PyAutoNerves/pull/186) — `complete/2026/10/board-navigation-nerves.md`
 - [PyAutoNerves#184](https://github.com/PyAutoLabs/PyAutoNerves/pull/184) — `complete/2026/10/jax-lapack-compatibility-repair.md`
 - [PyAutoNerves#192](https://github.com/PyAutoLabs/PyAutoNerves/pull/192) — `complete/2026/10/workspace-version-warning-outside-workspace.md`

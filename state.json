@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-07T11:20:44Z",
+  "updated": "2026-10-07T11:35:06Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "Community pages + merged \"Community & Contributing\" sections across PyAutoLabs \u2014 awaiting-merge \u2014 13/18 MERGED 2026-10-07; 5 PRs HELD until the next release by human decision (autolens_profiling #391 after\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/774",
       "prompt": "Use the start-dev skill. active/community_pages.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "repos_sync.py check mode never checks the workspace-root AGENTS.md routing table \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/pull/481",
+      "prompt": "Use the start-dev skill. active/repos_sync_check_root_routing_table.md"
     },
     {
       "severity": "yellow",
@@ -24,6 +30,12 @@
       "text": "human review: the scaling_relation slam parks (imaging un-parked, multi_galaxy kept)",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md",
       "prompt": "Walk me through the completed work described in `draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md` so I can sign it off.\n\n1. Read the prompt: what was asked, and what it claims shipped.\n2. Find the evidence \u2014 the merged PR(s), the commits, the `complete/` record \u2014\n   and read the actual diff, not the description of it.\n3. Report what changed, what it does NOT cover, and anything you would have\n   done differently. Call out behaviour changes and test gaps explicitly.\n\nChange nothing while reviewing. When I sign it off, retire the prompt from the\nPyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date\n<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and\nregenerate the dashboard. If I do not sign it off, file the follow-up with\n`/intake` instead.\n"
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#622 \u2014 setuptools package discovery picks up build/ (recursive build/lib/build/lib\u2026 nesting)",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/622",
+      "prompt": null
     },
     {
       "severity": "yellow",
@@ -69,6 +81,12 @@
     },
     {
       "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#651 \u2014 setuptools package discovery picks up build/ (recursive build/lib/build/lib\u2026 nesting)",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/651",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#647 \u2014 jax-lapack-compatibility-repair",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/647",
       "prompt": null
@@ -99,33 +117,15 @@
     },
     {
       "severity": "yellow",
+      "text": "pending release: PyAutoNerves PyAutoNerves#195 \u2014 setuptools package discovery picks up build/ (recursive build/lib/build/lib\u2026 nesting)",
+      "url": "https://github.com/PyAutoLabs/PyAutoNerves/pull/195",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
       "text": "pending release: PyAutoNerves PyAutoNerves#186 \u2014 board-navigation-nerves",
       "url": "https://github.com/PyAutoLabs/PyAutoNerves/pull/186",
       "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoNerves PyAutoNerves#184 \u2014 jax-lapack-compatibility-repair",
-      "url": "https://github.com/PyAutoLabs/PyAutoNerves/pull/184",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoNerves PyAutoNerves#192 \u2014 workspace-version-warning-outside-workspace",
-      "url": "https://github.com/PyAutoLabs/PyAutoNerves/pull/192",
-      "prompt": null
-    },
-    {
-      "severity": "info",
-      "text": "pick: Fix KNN neighbor search for a partial final point block",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md",
-      "prompt": "Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md",
-      "prompt": "Use the start-dev skill. draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md"
     }
   ]
 }
