@@ -89,3 +89,13 @@
 - heart: YELLOW — manifest drift: workspace checkouts (manifest ↔ disk) — 2 mismatch(es) vs PyAutoMind/repos.yaml; stale: release validation incomplete: no rehearsal for current source
 - validation: 193 Python tests; Chromium; Ruff; offline contract; git diff --check all passed
 - evidence: tmp/worktrees/profiling-results-ui/progress.md
+
+## retire-nested-claude-md-pointers
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/484
+- issued: 2026-10-07
+- prompt: active/retire_nested_claude_md_pointers_and_gate_skip.md
+- session: Claude CLI (Fable 5.1 architect → Opus 5.5 execution, /start_dev); https://claude.ai/code/session_01QmiavJnNzmKb6EJmgYATfx
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/retire-nested-claude-md-pointers
+- repos:
+  - PyAutoMind: feature/retire-nested-claude-md-pointers
