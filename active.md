@@ -95,3 +95,24 @@
 - pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/650
 - heart-ack: manifest drift: shared-standards blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml; release validation stale: source moved since rehearsal (PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens) — YELLOW acknowledgement pre-authorised by the human 2026-10-07
 - workspace-impact: none (additive API; smoke autolens_workspace datacube/modeling_array_free.py PASS)
+
+## dashboard-section-disclosures
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/490
+- started: 2026-10-07
+- session: Codex; session ID unavailable
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dashboard-section-disclosures
+- plan: approved 2026-10-07; judge tier, human /prm
+- deferred: PyAutoScientist until community-pages claim clears
+- repos:
+  - PyAutoBrain: feature/dashboard-section-disclosures
+  - PyAutoCortex: feature/dashboard-section-disclosures
+  - PyAutoMemory: feature/dashboard-section-disclosures
+  - PyAutoHeart: feature/dashboard-section-disclosures
+  - PyAutoHands: feature/dashboard-section-disclosures
+  - PyAutoPulse: feature/dashboard-section-disclosures
+  - PyAutoNerves: feature/dashboard-section-disclosures
+  - PyAutoGut: feature/dashboard-section-disclosures
+  - PyAutoEyes: feature/dashboard-section-disclosures
+  - PyAutoInsight: feature/dashboard-section-disclosures
+  - PyAutoEars: feature/dashboard-section-disclosures

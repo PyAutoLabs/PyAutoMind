@@ -1,6 +1,8 @@
 # Dashboard slogan order and collapsible sections
 
 Type: feature
+Issued: 2026-10-07
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/490
 Consequence: judge
 
 Primary owner: @PyAutoBrain. Consumers: @PyAutoMind @PyAutoCortex @PyAutoMemory @PyAutoHeart @PyAutoHands @PyAutoPulse @PyAutoNerves @PyAutoGut @PyAutoScientist @PyAutoEyes @PyAutoInsight @PyAutoEars.
