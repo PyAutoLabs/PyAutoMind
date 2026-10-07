@@ -78,6 +78,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/30
 - issued: 2026-10-07
 - session: Codex; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/31
 - repos:
   - PyAutoPulse: feature/profiling-headline-metrics

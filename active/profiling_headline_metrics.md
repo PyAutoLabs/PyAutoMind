@@ -75,3 +75,7 @@ The user explicitly acknowledged both exact YELLOW reasons listed above and auth
 - Fast-forwarded to current main before committing; upstream changes were generated AGENTS.md role descriptions only, with no implementation or test changes.
 - GitHub returned Internal Server Error on two pushes and a GraphQL internal error on PR creation. Remote branch and PR were verified absent after these attempts.
 - The source changes are committed locally; seven intended files only, no scratch artifacts. Third push also failed with GitHub Internal Server Error at 2026-10-07T15:14:07Z. GitHub status still reported operational. Resume with a normal push of the existing commit, then use `tmp/pr-body.md` to open the PR. Existing user acknowledgement remains recorded; do not request it again for the same warnings.
+
+## GitHub recovery — 2026-10-07
+
+CLI push succeeded. GraphQL PR creation still failed; REST fallback succeeded: https://github.com/PyAutoLabs/PyAutoPulse/pull/31 at `87b7cd360a580a18ecd126c3959569015d9f2499`. User subsequently requested merge; CI must pass first.
