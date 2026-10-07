@@ -35,3 +35,24 @@
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/254
 - summary: Wave 2 of the Scribbler proposal (radial-subtracted side-by-side panels, cross-grid mask regrid, white/black brushes, arcsinh default). Wave 1 (#635, docs #579/#251) is released in autogalaxy 2026.10.2.1.
 - resume: Merge order is PyAutoGalaxy#641 → PyAutoLens#770 (mark ready, re-run CI) → release carrying both → approve fork CI on #583/#254, mark ready, merge. Workspace prose describes white/black brushes, so #583/#254 must not merge before the release. Human /prm for all merges.
+
+## dashboard-freshness
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/486
+- issued: 2026-10-07
+- prompt: active/dashboard_freshness.md
+- session: Codex local; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dashboard-freshness
+- repos:
+  - PyAutoBrain: feature/dashboard-freshness
+  - PyAutoEars: feature/dashboard-freshness
+  - PyAutoHeart: feature/dashboard-freshness
+  - PyAutoHands: feature/dashboard-freshness
+  - PyAutoMemory: feature/dashboard-freshness
+  - PyAutoPulse: feature/dashboard-freshness
+  - PyAutoInsight: feature/dashboard-freshness
+  - PyAutoNerves: feature/dashboard-freshness
+  - PyAutoGut: feature/dashboard-freshness
+  - PyAutoEyes: feature/dashboard-freshness
+  - PyAutoScientist: feature/dashboard-freshness
+- summary: User approved shared freshness footer; <1h green, <24h yellow, otherwise red, unknown grey; exact timestamp and real owner Update link. Shared core then thirteen-board adoption. Merge human /prm.

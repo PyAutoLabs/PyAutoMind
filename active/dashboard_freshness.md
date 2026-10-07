@@ -1,5 +1,7 @@
 # Shared dashboard freshness footer
 
+Issued: 2026-10-07
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/486
 Type: feature
 Target: @PyAutoBrain
 Difficulty: large
