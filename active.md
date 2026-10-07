@@ -1,5 +1,20 @@
 # Active Tasks
 
+## imshow-origin-lower-overlays
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/565
+- discussion: https://github.com/orgs/PyAutoLabs/discussions/14
+- user-facing: true
+- author: @ClarkGuilty (external)
+- issued: 2026-10-07
+- prompt: active/imshow_origin_lower_overlays.md
+- session: Claude CLI (Fable 5.1, /community → /start_dev); session ID unavailable
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/imshow-origin-lower-overlays
+- repos:
+  - PyAutoArray: feature/imshow-origin-lower-overlays
+- summary: plot_array vector overlays ignore imshow_origin "lower" (raster mirrored, overlays not). Fix: reflect overlay y about the extent midpoint, regression test from the Discussion.
+- resume: Plan approved 2026-10-07 and posted on #565. Next: implement in the worktree (Opus), ship_library, glance auto-merge on green, then reply on Discussion #14 and mark answer once released.
+
 ## scribbler-wave2-radial-panels-regrid
 - discussion: https://github.com/orgs/PyAutoLabs/discussions/23
 - user-facing: true
