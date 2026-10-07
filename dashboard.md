@@ -44,18 +44,26 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 5 |
 | [Planned](#planned) (`planned.md`) | 7 |
-| [Backlog](#backlog) (`draft/`) | 227 |
+| [Backlog](#backlog) (`draft/`) | 229 |
 
 > **No batch in flight.**
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 18
+**Highest priority** (filed as `high`) — showing 12 of 19
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
 ```
 Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/pyautofit_add_a_regression_test_for_fork.md">PyAutoFit: add a regression test for <code>fork_context()</code> not fixing the multiprocessing start…</a> — autofit · small · safe · high</summary>
+
+```
+Use the start-dev skill. draft/bug/autofit/pyautofit_add_a_regression_test_for_fork.md
 ```
 
 </details>
@@ -140,15 +148,7 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 </details>
 
-<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon</a> — autofit · large · human-required · high</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md
-```
-
-</details>
-
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 108
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 110
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -660,15 +660,23 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ## Backlog
 
-**227** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
+**229** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
-<summary><b>bug</b> — 70</summary>
+<summary><b>bug</b> — 72</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
 ```
 Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/pyautofit_add_a_regression_test_for_fork.md">PyAutoFit: add a regression test for <code>fork_context()</code> not fixing the multiprocessing start…</a> — autofit · small · safe · high</summary>
+
+```
+Use the start-dev skill. draft/bug/autofit/pyautofit_add_a_regression_test_for_fork.md
 ```
 
 </details>
@@ -1045,6 +1053,14 @@ Use the start-dev skill. draft/bug/autogalaxy/lenscalc_masked_grid_caustic_diffe
 
 ```
 Use the start-dev skill. draft/bug/autolens/jit_cache_not_hit_modeling_visualization.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens/pyautolens_single_image_recovery_in_result_image.md">PyAutoLens: single-image recovery in <code>Result.image_plane_multiple_image_positions_from</code> is blind to inf-padded JAX solver output</a> — autolens · medium · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/autolens/pyautolens_single_image_recovery_in_result_image.md
 ```
 
 </details>
@@ -2194,6 +2210,40 @@ Contract (the `start-bundle` skill is the full body):
 </details>
 
 <details>
+<summary><b>autofit — bundle 1</b> — 4 task(s) · 7 pts · auto — proposed</summary>
+
+<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
+
+```
+You are the judgment tier for the PyAutoMind bundle 'autofit — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
+
+Members:
+- draft/bug/autofit/pyautofit_add_a_regression_test_for_fork.md
+- draft/bug/autofit/ep_test_suite_is_not_xdist_safe.md
+- draft/bug/autofit/visualization_warmup_swallowed_exception.md
+- draft/bug/autofit/assertion_repr_recurses_forever.md
+
+Contract (the `start-bundle` skill is the full body):
+1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
+2. Use the start-dev skill for EACH member prompt: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
+3. One shared worktree per repo, not one per member: run the start-library skill (or the start-workspace skill) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
+4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
+5. Ship each member on its own: the ship-library skill or the ship-workspace skill, ONE PR per task, so the prm skill closes each member out unchanged. Never one PR for the bundle.
+6. Report per member: issue, branch, PR, and pass/fail counts.
+```
+
+</details>
+
+| Prompt | Difficulty | Priority | Status |
+|--------|------------|----------|--------|
+| <a href="draft/bug/autofit/pyautofit_add_a_regression_test_for_fork.md">PyAutoFit: add a regression test for <code>fork_context()</code> not fixing the…</a> | small | high | formalised |
+| <a href="draft/bug/autofit/ep_test_suite_is_not_xdist_safe.md">EP test suite is not xdist-safe: tests share one on-disk output…</a> | small | medium | formalised |
+| <a href="draft/bug/autofit/visualization_warmup_swallowed_exception.md">Visualization warm-up swallowed for ellipse and point-source analyses</a> | large | medium | formalised |
+| <a href="draft/bug/autofit/assertion_repr_recurses_forever.md">Assertion repr recurses forever</a> | small | normal | formalised |
+
+</details>
+
+<details>
 <summary><b>euclid</b> — 4 task(s) · 5 pts · auto — proposed — ⚠️ theme(s) not in `themes.md`: catalogue, euclid, jax, latent</summary>
 
 <details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
@@ -2386,40 +2436,6 @@ Contract (the `start-bundle` skill is the full body):
 | <a href="draft/maintenance/ci/wiki_currency_check_version_gate.md">wiki-currency's --check-version gate rots on every library main merge</a> | ci | medium | normal | formalised |
 | <a href="draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md">Checkerboard PSF-mismatch residual diagnostic — research + document +…</a> | pyautomemory | medium | normal | formalised |
 | <a href="draft/docs/workspaces/assistants_regime_extension.md">Assistants: regime-aware routing for multi_galaxy / group / cluster…</a> | workspaces | medium | low | in progress — autolens_assistant leg… |
-
-</details>
-
-<details>
-<summary><b>autofit — bundle 1</b> — 4 task(s) · 7 pts · auto — proposed</summary>
-
-<details><summary>📋 <b>Run this bundle</b> — one session, one issue and one PR per member</summary>
-
-```
-You are the judgment tier for the PyAutoMind bundle 'autofit — bundle 1' — 4 INDEPENDENT tasks run in one orchestrated session.
-
-Members:
-- draft/bug/autofit/ep_test_suite_is_not_xdist_safe.md
-- draft/bug/autofit/visualization_warmup_swallowed_exception.md
-- draft/bug/autofit/assertion_repr_recurses_forever.md
-- draft/bug/autofit/model_function_cannot_resolve_config_priors.md
-
-Contract (the `start-bundle` skill is the full body):
-1. Read each member prompt above in full, and plan all of them before editing anything. The members are independent — if any turns out to depend on another, say so and drop it from the bundle.
-2. Use the start-dev skill for EACH member prompt: one plan, one issue, one registry entry per member. Never file them as a bulk issue queue and never merge them into one issue.
-3. One shared worktree per repo, not one per member: run the start-library skill (or the start-workspace skill) once, naming the bundle as the task and listing every member's repos. A worktree holds one branch at a time, so inside it members are worked one at a time, each on its own `feature/<member-task>` branch cut from `origin/main`; members in different repos may run in parallel.
-4. For each member, resolve the execution tier from `PyAutoBrain/skills/WORKFLOW.md`, then delegate implementation through the current harness's native subagent mechanism, one execution delegate per member, with the member's issue plan, the worktree path and the branch to use. If that mechanism is unavailable, follow WORKFLOW's direct-execution fallback. The current session plans, judges and talks to the user; the execution delegate edits, tests and reports back.
-5. Ship each member on its own: the ship-library skill or the ship-workspace skill, ONE PR per task, so the prm skill closes each member out unchanged. Never one PR for the bundle.
-6. Report per member: issue, branch, PR, and pass/fail counts.
-```
-
-</details>
-
-| Prompt | Difficulty | Priority | Status |
-|--------|------------|----------|--------|
-| <a href="draft/bug/autofit/ep_test_suite_is_not_xdist_safe.md">EP test suite is not xdist-safe: tests share one on-disk output…</a> | small | medium | formalised |
-| <a href="draft/bug/autofit/visualization_warmup_swallowed_exception.md">Visualization warm-up swallowed for ellipse and point-source analyses</a> | large | medium | formalised |
-| <a href="draft/bug/autofit/assertion_repr_recurses_forever.md">Assertion repr recurses forever</a> | small | normal | formalised |
-| <a href="draft/bug/autofit/model_function_cannot_resolve_config_priors.md">af.Model(function) cannot resolve config priors</a> | small | normal | formalised |
 
 </details>
 
