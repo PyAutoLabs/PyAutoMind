@@ -144,7 +144,7 @@ over the registry without starting work:
 ```
 PyAutoMind/
 ├── README.md                ← short front page
-├── dashboard.md             ← GENERATED task page (picks / in flight / parked / planned / backlog)
+├── dashboard.md             ← GENERATED task page (seven sections; reviews within Backlog)
 │                              `pyauto-brain intake --apply dashboard`; CI self-heals the RENDER on
 │                              main — never a shipped prompt nobody retired (that is /prm's close-out
 │                              per task, `intake reconcile` across the backlog)
@@ -246,9 +246,9 @@ Prompts start at `draft/<work-type>/<target>/<name>.md` (and advance
 declaring `Type: human review` (`human-review`/`human_review` read the same) —
 `/intake` will never choose it for you, and no task acquires it by default.
 Review is opt-in, not a lifecycle stage, so an empty section means nothing was
-flagged, not that nothing shipped. It renders as its own **Human review** section
-on `dashboard.md`, directly under *In flight*, and is not counted as backlog: a
-review is not work to pick up, it is work waiting on you. Its 📋 hands out a
+flagged, not that nothing shipped. It renders as a **Human review** category
+within *Backlog* on `dashboard.md`, included once in its navigation count.
+Reviews stay out of development recommendations. Its 📋 hands out a
 read-and-report prompt rather than a `/start_dev`. Sign one off by retiring the
 prompt the usual way (`lifecycle.py record …`); don't sign it off and the
 follow-up is an ordinary `/intake`.
@@ -336,7 +336,6 @@ Free-form markdown. Strong conventions:
   Issued: 2026-08-19        # optional; set when the prompt advances to active/
   Blocked-by: PyAutoFit#1436          # optional; see "Declaring a gate" below
   Epic: cluster-strong-lensing        # optional; an entry in epics.md
-  Bundle: euclid-pipeline-tidy        # optional; an entry in bundles.md
   ```
 
   When present, `Type:` should match the work-type folder. The goal is light
@@ -395,17 +394,11 @@ Free-form markdown. Strong conventions:
   issue at `/start_dev` time and nowhere earlier — filing issues ahead of the work in
   general is the bulk-issue-queue anti-pattern, which stays forbidden.
 
-  **Declaring group membership — `Epic:` / `Bundle:`.** Both optional, both
-  naming a slug in the matching registry file, and the two mean opposite things
-  about ORDER. `Epic: <slug>` (`epics.md`, plus an optional `Phase: <n>`) says
-  this prompt is one phase of an ordered programme: the dashboard pulls it out
-  of every pick list and shows it only under its epic, worked in phase order.
-  `Bundle: <slug>` (`bundles.md`) says the opposite — this prompt is
-  INDEPENDENT, and a human has pinned it to a set worth running in one
-  orchestrated session. A bundle member keeps its normal place on the
-  dashboard and gains a Bundles card; it leaves only the *auto*-bundle pool,
-  since it is already spoken for. A slug naming no registry entry still
-  groups, loudly (⚠️ on the page), so a typo is visible rather than silent.
+  **Declaring ordered membership — `Epic:`.** Optional. `Epic: <slug>`
+  (`epics.md`, plus an optional `Phase: <n>`) makes this prompt one phase of an
+  ordered programme: the dashboard removes it from standalone pick lists and
+  shows it under its epic, worked in phase order. Related independent work can
+  be grouped explicitly when launching a task; there is no bundle registry.
 
   **Declaring what the work is ABOUT — `Themes:`.** Optional, and the same
   list shape as `Repos:` — a bare `Themes:` line, then one `- keyword` bullet
@@ -418,18 +411,11 @@ Free-form markdown. Strong conventions:
   - jax-gradient
   ```
 
-  The **first** keyword is the primary theme and is what the dashboard's
-  auto-bundler groups on, so a card reads "three things about MGE" rather than
-  "three things that live in autoarray"; the remaining keywords are affinity,
-  deciding which prompts pack together inside that group. One to three keywords
-  is the intended shape, primary first. A prompt with no `Themes:` still
-  bundles — the bundler falls back to `Target:` — so nothing waits on a theme.
-
-  The vocabulary is [`themes.md`](themes.md), a plain markdown list a human
-  edits directly (PyAutoBrain reads that file rather than holding its own
-  copy). A keyword that is not in it still groups, loudly: ⚠️ on the bundle
-  card and a count in the dashboard's Hygiene section, so the list never rots
-  into free-text tags. The **Intake (Conception) Agent** assigns `Themes:` when
+  The first keyword is the primary theme; one to three keywords is the
+  intended shape. Themes are optional metadata for selecting related work.
+  The vocabulary is [`themes.md`](themes.md), read directly by PyAutoBrain.
+  Unknown keywords appear in the dashboard's Hygiene count for correction.
+  The **Intake (Conception) Agent** assigns `Themes:` when
   it formalises a prompt.
 
   The optional `Difficulty:` / `Autonomy:` / `Priority:` keys let both people and
@@ -730,8 +716,8 @@ it are discarded rather than stamping every task with the day the clone was
 made.
 
 The dashboard's [Recent](dashboard.md#recent) table is the payoff: it holds the
-50 newest events on the work in hand — issued, parked, filed — and shows 10,
-opening the next 10 on each tap of `…`. Shipped work stays out of it;
+50 newest events on the work in hand — issued, filed, flagged for review — and
+shows 10, opening the next 10 on each tap of `…`. Parked and shipped work stay out;
 `complete/index.md` is where the ledger is read.
 
 ### Completion record (`complete/<YYYY>/<MM>/<slug>.md`) schema
@@ -789,7 +775,7 @@ no prompt.
 | Ledger — merged automatically | Code — always a human |
 |---|---|
 | `draft/**`, `active/**`, `complete/**` | `scripts/`, `tests/`, `.github/`, `skills/`, `policy/`, `docs/` |
-| `active.md`, `planned.md`, `parked.md`, `condemned.md`, `epics.md`, `bundles.md`, `ideas.md`, `autonomy_log.md` | `repos.yaml`, `themes.md`, `README.md`, `AGENTS.md`, `REFERENCE.md`, `ROUTING.md`, … |
+| `active.md`, `planned.md`, `parked.md`, `condemned.md`, `epics.md`, `ideas.md`, `autonomy_log.md` | `repos.yaml`, `themes.md`, `README.md`, `AGENTS.md`, `REFERENCE.md`, `ROUTING.md`, … |
 | `dashboard.md`, `dashboard.html` | anything unclassified — a new root file, a new top-level folder |
 
 Two exceptions inside the ledger dirs: a **dot-path** anywhere, and a file
@@ -1116,9 +1102,9 @@ declaring `Type: human review` (`human-review`/`human_review` read the same) —
 Review is opt-in, not a lifecycle stage: `/prm` and the ship skills close a task
 out exactly as before and never file a review.
 
-It renders as its own **Human review** section on `dashboard.md`, directly under
-*In flight*, and is deliberately not counted as backlog — a review is not work to
-pick up, it is work waiting on a person. Its 📋 hands out a read-and-report
+It renders as a **Human review** category within *Backlog* on `dashboard.md`,
+included once in the Backlog navigation count but excluded from development
+recommendations. Its 📋 hands out a read-and-report
 prompt, not a `/start_dev`. Sign one off by retiring the prompt the usual way
 (`scripts/lifecycle.py record …`, then regenerate the dashboard); if it does not
 pass, the follow-up is an ordinary `$intake`.

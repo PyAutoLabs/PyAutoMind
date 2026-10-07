@@ -83,8 +83,7 @@ MIND_RULES = [
     ("AI_POLICY.md", "KEEP_SUB"), ("CONTRIBUTING.md", "KEEP_SUB"),
     ("repos.yaml", "SPECIAL:body_map"),
     ("active.md", "EMPTY"), ("planned.md", "EMPTY"), ("epics.md", "EMPTY"),
-    ("bundles.md", "EMPTY"),
-    # `themes.md` is the `Themes:` vocabulary the dashboard groups bundles on.
+    # `themes.md` is the vocabulary for optional topical metadata.
     # EMPTY rather than KEEP: the keyword list is this org's science and
     # tooling domains ("mge", "cti", "docs-hub"), so shipping it verbatim would
     # stamp our subject matter into somebody else's fresh-slate Mind. An empty
@@ -302,7 +301,6 @@ EMPTY_TITLES = {
     "dashboard.md": "# PyAutoMind Dashboard",
     "active.md": "# Active Tasks",
     "epics.md": "# Epics",
-    "bundles.md": "# Bundles",
     "themes.md": "# Themes",
     "planned.md": "# Planned",
     "parked.md": "# Parked tasks",

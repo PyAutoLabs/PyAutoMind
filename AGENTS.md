@@ -30,7 +30,7 @@ when the task needs them. Read [README.md](README.md) for the public overview.
   `/hooks`; changed or untrusted project hooks are skipped. The remote Python
   SessionStart bootstrap applies to Claude sessions only.
 - Registry files (`active.md`, `planned.md`, `parked.md`, `condemned.md`,
-  `epics.md`, `ideas.md`, `bundles.md`) are changed through skills in `skills/`.
+  `epics.md`, `ideas.md`) are changed through skills in `skills/`.
   `dashboard.md` is generated: run `pyauto-brain intake --apply dashboard`
   after registry or draft changes. Never hand-edit it.
 
