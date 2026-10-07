@@ -1,5 +1,7 @@
 # Simplify Mind dashboard text and section order
 
+Issued: 2026-10-07
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/500
 Type: maintenance
 Difficulty: small
 Priority: normal

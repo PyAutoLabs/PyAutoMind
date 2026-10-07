@@ -51,3 +51,14 @@
   - autolens_profiling: https://github.com/PyAutoLabs/autolens_profiling/pull/391
   - pyautolabs.github.io: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/30
 - heart-ack: manifest drift: shared-standards blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml; release validation stale: source moved since rehearsal (PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens) — acknowledged by the human 2026-10-07 at ship
+
+## mind-dashboard-simplify
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/500
+- issued: 2026-10-07
+- session: Codex; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/mind-dashboard-simplify
+- repos:
+  - PyAutoBrain: feature/mind-dashboard-simplify
+  - PyAutoMind: feature/mind-dashboard-simplify
+- plan: approved; remove requested dashboard copy, move Epics below Start here and Pending release last; retain Update button; human /prm merge
