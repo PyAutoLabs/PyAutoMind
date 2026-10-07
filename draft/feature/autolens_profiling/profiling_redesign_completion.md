@@ -104,9 +104,9 @@ Suggested branch: feature/profiling-layout-completion; follows Phase A.
 
 Suggested branch: feature/profiling-browser-completion.
 
-Coordinate/serialize with active dashboard-checkin-prompts (Brain #484), which
-claims Pulse. Do not edit its worktree or claim Pulse concurrently without human
-coordination. Once available, adapt pulse/setup_browser.{js,css,py} to Phase A's
+The former prompt-update dependency is merged and its claim released; see
+`complete/2026/10/dashboard-checkin-prompts.md` (Brain #484, Pulse #20).
+Recheck current claims before starting. Adapt pulse/setup_browser.{js,css,py} to Phase A's
 overview, selection, populated-panel and hazard-discovery behavior, preserving
 captured commit/shard validation and unrelated check-in wording. Validate with
 Pulse's contract and real browser tests; regenerate via its own renderer.
@@ -131,7 +131,8 @@ Tier: judge — merge mode: human /prm.
 
 Survey: profiling main fef5f28 matches fetched origin/main, no other worktrees,
 only untracked dataset/abell_1201/ (preserve). Pulse main bfff2c8 matches fetched
-origin/main, clean; existing feature/dashboard-checkin-prompts worktree/claim.
+origin/main, clean. The then-existing prompt-update worktree/claim has since
+closed; see `complete/2026/10/dashboard-checkin-prompts.md`.
 No implementation issue or worktree yet. Heart entry remains YELLOW; full feed
 saved locally at tmp/profiling-completion-heart.txt. Read current ship gates later.
 
@@ -186,9 +187,9 @@ Checkout anchors (recheck before proceeding):
 - lens/autolens_profiling main: fef5f28da520df4a357805647cb0f093d5b22583.
 - organs/PyAutoPulse main: bfff2c8f86c69eaf0fa575872b5614a7d748e4aa.
 - Profiling has untracked dataset/abell_1201/; preserve it.
-- Mind active.md claims PyAutoPulse and PyAutoBrain for dashboard-checkin-prompts,
-  Brain issue #484, feature/dashboard-checkin-prompts. Its stated scope is
-  approved check-in wording, not restructuring. Coordinate before claiming either.
+- The earlier Mind claim on Pulse and Brain for approved check-in wording has
+  closed after all eleven PRs merged; see `complete/2026/10/dashboard-checkin-prompts.md`
+  (Brain #484). Restructuring remains outside that completed scope; recheck current claims.
 - Heart entry: YELLOW — Release YELLOW; monitoring RED, 39/100, 154 unresolved,
   updated 17h ago. This is a transient observation; re-read at workflow gates.
 

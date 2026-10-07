@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1738 records across 9 buckets.
+1739 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -145,6 +145,7 @@ markers; everything below GENERATED is rebuilt.
 - [compact-dashboard-rows](2026/10/compact-dashboard-rows.md)
 - [cortex-find-script-symlink](2026/10/cortex-find-script-symlink.md)
 - [critical-curves-dispatch-audit](2026/10/critical-curves-dispatch-audit.md) — Phase 3a evidence and contract shipped. Research, raw CPU JSON/PNG, frozen measured source and cumulative wiki…
+- [dashboard-checkin-prompts](2026/10/dashboard-checkin-prompts.md) — Thirteen individually approved ongoing-conversation prompts implemented and merged across eleven board owners.…
 - [dashboard-copy-contract](2026/10/dashboard-copy-contract.md)
 - [dashboard-minimal-text](2026/10/dashboard-minimal-text.md)
 - [dashboard-portable-prompts](2026/10/dashboard-portable-prompts.md)

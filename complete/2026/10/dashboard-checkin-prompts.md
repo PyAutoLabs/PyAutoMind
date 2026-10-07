@@ -1,3 +1,36 @@
+# Dashboard check-in prompts
+
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/484
+- completed: 2026-10-07
+- summary: Thirteen individually approved ongoing-conversation prompts implemented and merged across eleven board owners. Brain omits community, Mind supports requested bundling without maintained bundle records, and Cortex offers interpretation only when explicitly asked.
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/485
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoEars/pull/17
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/288
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/304
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoMemory/pull/119
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/20
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoInsight/pull/9
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/189
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoGut/pull/25
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/21
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/46
+
+## Scope and validation
+
+The approved specification is folded below. Existing panel controls, work links and dynamic Heart evidence remain intact. Brain/Heart/Hands derive organization identity from their declared board metadata, preserving the approved PyAutoLabs wording.
+
+Validated all thirteen complete rendered copy payloads. The original applicable checks passed (1,268 tests); the final Heart correction passed the full 1,227-test suite. All current PR-head CI runs and matrix legs passed: 13 workflows, 21 jobs, no skipped legs. Required lint/format, tenant-firewall, Pulse/Insight offline checks and Eyes live manifest/265-PNG checks passed.
+
+Ears #17 includes the separately approved board cleanup recorded in the task: 73 tests, Chromium copy/layout/expiry checks and state validation.
+
+All eleven branches are proven ancestors of origin/main. Heart ship-time YELLOW was acknowledged; no package release was performed. Future Brain community-section removal and Mind navigation/Bundles/Parked/Human Review restructuring are not included.
+
+Validation logs, diffs, CI audit and generated Ears browser evidence are retained locally under tmp/dashboard-checkin-prompts/. No scientific data products exist in these task worktrees.
+
+Post-merge: close the issue, release the shared claim, regenerate Mind with the merged Brain renderer, remove worktrees and merged local branches.
+
+## Original prompt
+
 # Implement the agreed dashboard check-in prompts
 
 Issued: 2026-10-07
