@@ -86,18 +86,6 @@
 - validation: 193 Python tests; Chromium; Ruff; offline contract; git diff --check all passed
 - evidence: tmp/worktrees/profiling-results-ui/progress.md
 
-## retire-claude-md-pointers
-- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/482
-- issued: 2026-10-07
-- prompt: active/retire_claude_md_pointers.md
-- session: Claude CLI (Fable architect → Opus 5.5 executor, /start_dev); session ID unavailable
-- status: library-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/retire-claude-md-pointers
-- repos:
-  - PyAutoMind: feature/retire-claude-md-pointers
-- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/483
-- heart-ack: manifest drift: CLAUDE.md → AGENTS.md pointers — 45 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: workspace checkouts (manifest ↔ disk) — 3 mismatch(es) vs PyAutoMind/repos.yaml; release validation incomplete: no rehearsal for current source — acknowledged by the human 2026-10-07 at ship
-
 ## absorb-claude-notes-agents-md
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/492
 - issued: 2026-10-07

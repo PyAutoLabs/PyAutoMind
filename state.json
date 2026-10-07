@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-07T13:04:38Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
+  "updated": "2026-10-07T13:11:20Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -18,12 +18,6 @@
       "text": "Community pages + merged \"Community & Contributing\" sections across PyAutoLabs \u2014 awaiting-merge \u2014 13/18 MERGED 2026-10-07; 5 PRs HELD until the next release by human decision (autolens_profiling #391 after\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/774",
       "prompt": "Use the start-dev skill. active/community_pages.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Retire the CLAUDE.md \u2192 AGENTS.md pointer files (AGENTS.md is native now) \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/pull/483",
-      "prompt": "Use the start-dev skill. active/retire_claude_md_pointers.md"
     },
     {
       "severity": "yellow",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoLens PyAutoLens#768 \u2014 point-image-pair-all-forward-grad-nan",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/768",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoLens PyAutoLens#775 \u2014 setuptools-include-packages",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/775",
       "prompt": null
     }
   ]

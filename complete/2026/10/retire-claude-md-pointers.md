@@ -1,3 +1,16 @@
+## retire-claude-md-pointers
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/482
+- completed: 2026-10-07
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/483
+
+- Merged as `4d63b637` (2026-10-07). Claude Code ≥ 2.1.277 loads `AGENTS.md` natively, and any `CLAUDE.md` in the cwd/ancestor chain suppresses every `AGENTS.md`, so the pointer files must all go together.
+- `scripts/repos_sync.py`: the `"CLAUDE.md → AGENTS.md pointers"` check leg (name byte-identical for Heart's `manifest_drift` parser) now flags a repo with both `AGENTS.md` and `CLAUDE.md`; `write_claude_md_pointers` → `remove_claude_md_pointers`, deleting content-free pointers only and reporting content-bearing ones (`KEPT`).
+- `session_hook_propagate.yml` carries the removal on `workflow_dispatch` only, honouring `dry_run`; `firewall_gate.yml` TEMPORARILY skips the pointer leg until the wave runs.
+- `spawn.py` / `spawn_spec.md` no longer generate `wiki/example/CLAUDE.md`; new `policy/hpc_ral.md` (dropped from the public template); Mind's own `CLAUDE.md` removed. Mind suite 684 passed.
+- Human follow-ups (out of scope per the prompt): dispatch `session_hook_propagate` (dry run first); hand-delete `euclid_assistant/CLAUDE.md`; re-spawn Mind/Memory templates; remove the TEMPORARY firewall skip + tests after the wave; extend removal to 17 nested pointers; apply the HPC stanza to root `AGENTS.md`, delete root `CLAUDE.md`, re-run `bin/install.sh`.
+
+## Original prompt
+
 # Retire the CLAUDE.md → AGENTS.md pointer files (AGENTS.md is native now)
 
 Type: maintenance
