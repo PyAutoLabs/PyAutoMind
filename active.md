@@ -78,7 +78,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/490
 - started: 2026-10-07
 - session: Codex; session ID unavailable
-- status: workspace-dev
+- status: awaiting-input
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dashboard-section-disclosures
 - plan: approved 2026-10-07; judge tier, human /prm
 - deferred: PyAutoScientist until community-pages claim clears
@@ -94,3 +94,5 @@
   - PyAutoEyes: feature/dashboard-section-disclosures
   - PyAutoInsight: feature/dashboard-section-disclosures
   - PyAutoEars: feature/dashboard-section-disclosures
+  - PyAutoMind: feature/dashboard-section-disclosures
+- checkpoint: implementation staged for 12 boards; Heart RED development override required before commit/push/PR; Scientist claim still deferred

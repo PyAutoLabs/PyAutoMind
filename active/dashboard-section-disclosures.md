@@ -52,3 +52,35 @@ All 13 owner checkouts are on main. Brain has an untracked delegation log; Mind 
 `worktree_check_conflict` reports Scientist claimed by `community-pages` (PR 48). Defer that consumer until the claim clears; do not bypass it. It also reports unregistered Brain/Mind/Heart/Hands worktrees that must be reconciled or shown unrelated before claiming those repos. Suggested branch: `feature/dashboard-section-disclosures`; use an isolated task checkout within the permitted workspace during setup.
 
 FeatureDecision routes through start_workspace/ship_workspace and recommends phased delivery due to the 13-repository scope. Proposed phases are shared component plus Brain-owned renderers, downstream owner migrations, then publication verification. Heart entry result: STALE (release STALE, monitoring RED); development planning permitted by the entry contract. Plan approval and issue registration remain pending; no dashboard source edits made.
+
+## Implementation handoff — 2026-10-07
+
+Plan approved by the human (“I approve, go”). Implementation is staged, not committed or pushed, on `feature/dashboard-section-disclosures` in `/home/jammy/Code/PyAutoLabs/.worktrees/dashboard-section-disclosures`.
+
+- Implemented 12 boards: Brain, Mind, Cortex, Heart, Hands, Memory, Nerves, Gut, Pulse, Eyes and Insight plus Ears. Scientist remains deferred: `community-pages` owns that repo (PR 48).
+- Brain `board/_theme.py::section_layout` composes the slogan panel above navigation and wraps major heading groups in native collapsed disclosures. Owners retain IDs/content, meaningful counts, status and copy payloads. Footer navigation stays outside disclosures. Shared JS handles initial/repeated/deep links and print state; keyboard controls are native.
+- Mind counts unique actually displayed Start Here tasks. Heart aggregates check states separately from release readiness. Hands omits counts when collection failed. Multiple navigation metrics keep their labels.
+- Renderer-owned artifacts regenerated in Mind, Cortex, Eyes, Pulse and Insight. Other owners render at publish time; local fixtures/real Nerves snapshots validate their adoption. Nothing has been published.
+
+### Validation
+
+- Brain full suite: 1,284 passed, six initial failures. Five Node clipboard failures fixed by guarding browser-only initialization; the grouped-checkout fixture failure was inherited `PYAUTO_MIND`. A rerun of both affected files plus disclosure regressions with that override unset passed all 15 tests. Focused renderer/theme suite: 289 passed before final added regressions; later layout/Mind/Hands tests passed.
+- Heart: 166 dashboard tests passed; seven disclosure tests passed including new status precedence coverage.
+- Hands: full suite 475 passed; final board suite 27 passed including failed-collection count coverage.
+- Memory 275; Gut 25; Pulse 193; Eyes 82; Insight 79; Ears 97; Nerves full suite 241 passed.
+- Chromium: 120 cases across 12 boards, five widths and light/dark. Order, collapsed defaults, anchor/deep-link/repeated navigation, keyboard, clipboard and overflow passed. Representative screenshot inspected.
+- Sphinx build passed with zero warnings. Ruff check/format passed for Pulse, Eyes, Insight. Pulse/Insight offline artifact+contract checks passed; Eyes live manifest/figure URL and cockpit checks passed. Cortex structural check passed. All diffs passed whitespace checks.
+- Evidence: workspace `tmp/dashboard-sections/` contains individual test logs, `browser-final/browser-results.json`, screenshots, renderer fixtures, `canonical-readiness.json`, and 12 prepared PR descriptions under `pr-drafts/`.
+
+### Shipping gate and next steps
+
+Canonical-workspace Heart readiness is **RED**. Exact RED reasons:
+- PyAutoFit: 5 commit(s) behind origin
+- PyAutoGalaxy: 12 commit(s) behind origin
+- PyAutoLens: 8 commit(s) behind origin
+
+No override has been granted. The earlier plan approval predates these reasons and is not the required contemporaneous development-shipping override. Source commits, pushes and PR-open are blocked by `skills/ship_workspace/ship_workspace.md` and `AUTONOMY.md` → Human override for Heart RED (development only). Leave the staged implementation intact.
+
+Next: obtain a task-specific override for Brain #490, record it in the four required sinks, refresh branch/claim state, commit and open the prepared dependent PRs (Brain API first; consumer CI needs it). Human /prm remains the merge mode. Update generated artifacts after any intervening ledger changes. Resume Scientist only after community-pages releases its claim. After merges refresh the existing publishers and verify all 13 live boards before closing the initiative.
+
+No unrelated local files, science ledgers or active campaigns were edited. Canonical Mind has unrelated untracked research drafts; do not stage them.
