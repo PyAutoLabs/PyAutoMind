@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1763 records across 9 buckets.
+1764 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -150,6 +150,7 @@ markers; everything below GENERATED is rebuilt.
 - [dashboard-checkin-prompts](2026/10/dashboard-checkin-prompts.md) — Thirteen individually approved ongoing-conversation prompts implemented and merged across eleven board owners.…
 - [dashboard-copy-contract](2026/10/dashboard-copy-contract.md)
 - [dashboard-freshness](2026/10/dashboard-freshness.md)
+- [dashboard-markdown-icons](2026/10/dashboard-markdown-icons.md)
 - [dashboard-minimal-text](2026/10/dashboard-minimal-text.md)
 - [dashboard-portable-prompts](2026/10/dashboard-portable-prompts.md)
 - [dashboard-prompt-budget](2026/10/dashboard-prompt-budget.md)
