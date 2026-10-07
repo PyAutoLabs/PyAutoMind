@@ -1,5 +1,7 @@
 # Profiling headline metrics
 
+Issued: 2026-10-07
+Issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/30
 Target: @PyAutoPulse
 Type: feature
 
@@ -22,7 +24,7 @@ In Confiuguration I think we should use 1500 source pixels - float64, but not ha
 
 Some runs wont have numbers yet, soon I will do a "Day Zero" run to fill in everything when we complete a major PyautoPulse campaign.
 
-## Proposed implementation plan (awaiting approval)
+## Approved implementation plan
 
 - Add always-visible headline metrics directly below the selectors, refreshing on every instrument, device or configuration change.
 - Show full single-likelihood runtime, per-likelihood batched runtime with batch-size context, JAX compile time, measured device memory and measured host memory. Use seconds and GB; preserve measurement provenance and distinguish peak/current semantics where supplied.

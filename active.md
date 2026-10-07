@@ -72,3 +72,11 @@
   - autolens_profiling: https://github.com/PyAutoLabs/autolens_profiling/pull/391
   - pyautolabs.github.io: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/30
 - heart-ack: manifest drift: shared-standards blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml; release validation stale: source moved since rehearsal (PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens) — acknowledged by the human 2026-10-07 at ship
+
+## profiling-headline-metrics
+- issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/30
+- issued: 2026-10-07
+- session: Codex; session ID unavailable
+- status: library-dev
+- repos:
+  - PyAutoPulse: feature/profiling-headline-metrics
