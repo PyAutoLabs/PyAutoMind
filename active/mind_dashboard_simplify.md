@@ -2,6 +2,8 @@
 
 Type: feature
 Target: PyAutoMind
+Issued: 2026-10-07
+Issue: https://github.com/PyAutoLabs/PyAutoMind/issues/488
 
 Update @PyAutoMind and its renderer/workflow in @PyAutoBrain.
 Remove persistent and automatically proposed task bundles and their workflow wiring;
@@ -23,7 +25,7 @@ track of bundles int he way we do which becomes outdated. Remove it from dashbpa
 - Lets not have "Human Review" as its own deediciated section and have it a sub category in "Backlog", which then
 - means its button disappearss and we have 7 buttons (1 row)
 
-## Implementation plan (awaiting approval)
+## Implementation plan (approved 2026-10-07)
 
 1. In Brain `agents/conductors/intake/_intake.py`, remove `parse_bundles`,
    automatic bundle generation, bundle cards/copy payloads and census membership
