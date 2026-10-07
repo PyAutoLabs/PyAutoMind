@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 16 |
-| [In flight](#in-flight) | 3 |
+| [In flight](#in-flight) | 4 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 240 |
+| [Backlog](#backlog) | 239 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -248,20 +248,12 @@ Use the start-dev skill. draft/feature/autofit/results_library_epic_report.md
 </details>
 
 <details>
-<summary><b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — 2 queued prompt(s), in order</summary>
+<summary><b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — 1 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — ledger: `draft/research/autofit/search_extensibility_epic.md` — filed 2026-10-07; scoped (4 Opus surveys) and independently reviewed (Codex gpt-6-astra, Claude Fable high) the same day; all §5…</summary>
 
 ```
 Continue the 'Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos' epic. Its canonical state lives in draft/research/autofit/search_extensibility_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: two dependency-ordered tracks. Track A (PyAutoFit framework): A0a(i) metadata conformance → A0b hygiene → A0a(ii) backend conformance; A0c repair PRs; A1 declare + gate (after the test-mode bypass) + declarative lazy registry + `run(ctx)` design note; A2 objective factory + fork rule + `run(ctx)` bridge (Drawer, Nautilus proofs); A3 RawSamples adapter + Checkpointer/resume split; A3b NSS onto Fitness + trace preflight + x64; A4 decompose NonLinearSearch + delete family bases (deprecated thin subclasses one release) + search-level seed with the legacy identifier table; A5 per-search migrations + generated consumers. Track B (repos): B1 registration (Mind repos.yaml → repos_sync, Heart excluded, Cortex row, Pulse `fit` @profiling-summary@2, Insight `fit` @inference-summary@1; adopts PyAutoPulse `tasks/autofit_profiling_bootstrap.md`), B2 harness + `gaussian_x3_blend`/`_separated` + pre-registered protocol + per-backend reference posteriors, B3 wave-1 PILOT (ranks nothing) + Insight registration + catalogue, B4a breakdown exporter + Pulse row + epic-1 bottleneck table / B4b EP baseline port, B5 consumers + scored wave 2 (50 seeds, RAL `ral` only, after A2 and A4). Human rulings 2026-10-07: RTD generic example stays DynestyStatic; SMC → weighted/evidence; deprecate `use_jax_jit`/`use_jax_vmap`; in-flight samplers target `run(ctx)` from A2. Start order: A0a(i), A0c and B1 registration first; issue ONE phase at a time through `start_dev`.
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autofit/search_extensibility_b1_registration.md">Register autofit_inference and autofit_profiling across the organism, with minimal skeletons…</a> — autofit · medium · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/feature/autofit/search_extensibility_b1_registration.md
 ```
 
 </details>
@@ -801,6 +793,14 @@ Use the start-dev skill. active/mind-dashboard-simplify.md
 
 ```
 Use the start-dev skill. active/search_conformance_metadata_layer.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/search_extensibility_b1_registration.md">Register autofit_inference and autofit_profiling across the organism, with minimal skeletons…</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/492">issue #492</a> — issued 2026-10-07 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/search_extensibility_b1_registration.md
 ```
 
 </details>
@@ -2476,18 +2476,19 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
 | 2026-10-07 | issued | <a href="active/mind-dashboard-simplify.md">Simplify Mind dashboard text and section order</a> |
 | 2026-10-07 | issued | <a href="active/search_conformance_metadata_layer.md">Search conformance suite, layer (i): metadata and serialization for…</a> |
+| 2026-10-07 | issued | <a href="active/search_extensibility_b1_registration.md">Register autofit_inference and autofit_profiling across the organism…</a> |
 | 2026-10-07 | filed | <a href="draft/research/autolens_profiling/linear_solver_phase3b_gpu_timing_cell.md">Linear-solver programme phase 3b: GPU/vmap timing cell for the solver…</a> |
 | 2026-10-07 | issued | <a href="active/linear_solver_phase3a_a100_parity.md">Linear-solver programme phase 3a: A100 parity of the solver corpus…</a> |
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
 | 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
-| 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
 | 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
@@ -2497,12 +2498,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/power_law_multipole_m1_singular_at_isothermal_slope.md">PowerLawMultipole with m=1 returns -inf / NaN deflections at slope…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
-| 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
 | 2026-09-26 | filed | <a href="draft/refactor/workspaces/abell_1201_local_cleanup.md">Repo cleanup: retire the Abell 1201 worktree and local raw data</a> |
 | 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
 | 2026-09-25 | filed | <a href="draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md">Keep caches off <code>$HOME</code> on HPC — phase 2 remainder: euclid pipeline…</a> |
@@ -2512,12 +2513,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> |
 | 2026-09-18 | filed | <a href="draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md">The latent smoke's empty-block assertion names one cause…</a> |
-| 2026-09-18 | filed | <a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-18 | filed | <a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> |
@@ -2527,12 +2528,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autofit/ep_analysis_level_compile_cache.md">EP: cache the compiled JAX likelihood on the Analysis across factor…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> |
-| 2026-09-16 | filed | <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-16 | filed | <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of…</a> |
 | 2026-09-16 | filed | <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding…</a> |
 | 2026-09-16 | filed | <a href="draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> /…</a> |
 | 2026-09-16 | filed | <a href="draft/feature/autolens/coolest_pixel_grid_export.md">COOLEST: export MGE lens light and pixelized sources as pixel grids</a> |
@@ -2542,7 +2543,6 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-15 | filed | <a href="draft/docs/howtofit/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autolens_workspace/start_here_multistart_compile_time.md">imaging/start_here: 26-minute XLA compile of the 48-start Prodigy…</a> |
 | 2026-09-14 | filed | <a href="draft/docs/autofit/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the…</a> |
-| 2026-09-14 | filed | <a href="draft/bug/autofit/mcmc_thin_zero_and_check_size_short_chain.md">Emcee/Zeus: thin can be 0, and check_size blows up on short chains</a> |
 
 </details>
 
@@ -2577,7 +2577,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-74 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+73 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2586,7 +2586,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autoarray/rectangular_multi_submesh.md`
 - `draft/feature/autofit/model_figures_epic.md`
 - `draft/feature/autofit/results_library_epic_report.md`
-- `draft/feature/autofit/search_extensibility_b1_registration.md`
 - `draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md`
 - `draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md`
 - `draft/feature/autogalaxy/piemass_potential.md`
@@ -2622,11 +2621,12 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/docs/autolens/split_lensing_regimes.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
 - `draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md`
-- _… and 34 more_
+- `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
+- _… and 33 more_
 
 </details>
 
-70 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+69 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2640,7 +2640,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autofit/certified_solver_batched_guard_c2.md — unknown theme keyword(s): inversion`
 - `draft/feature/autofit/results_library_epic.md — unknown theme keyword(s): hpc, euclid, results, aggregator`
 - `draft/feature/autofit/results_library_epic_report.md — unknown theme keyword(s): results, euclid`
-- `draft/feature/autofit/search_extensibility_b1_registration.md — unknown theme keyword(s): inference, infrastructure`
 - `draft/feature/autolens/cluster_curves_engine_dispatch.md — unknown theme keyword(s): critical-curves`
 - `draft/feature/autolens/coolest_pixel_grid_export.md — unknown theme keyword(s): coolest, interop, euclid`
 - `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md — unknown theme keyword(s): euclid, catalogue`
