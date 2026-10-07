@@ -9,11 +9,6 @@ Completed: 2026-10-07
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/775
 - library-pr: https://github.com/PyAutoLabs/PyAutoCTI/pull/114
 - library-pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/81
-- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/195
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/622
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/651
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1664
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/775
 
 All seven library PRs merged 2026-10-07 in library order (Nerves → Array → Fit → Galaxy → Lens, then CTI, Reduce) under a human `/prm`.
 

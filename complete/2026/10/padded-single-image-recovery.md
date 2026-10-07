@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/771
 - completed: 2026-10-07
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/772
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/772
 
 Merged PyAutoLens#772 (384e86e06) into main 2026-10-07 via human-typed /prm; issue #771 closed.
 

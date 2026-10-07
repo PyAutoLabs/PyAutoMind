@@ -24,7 +24,6 @@ https://github.com/PyAutoLabs/.github/discussions/13#discussioncomment-18741903 
 Not released: the option reaches users with the next PyAutoArray release.
 Follow-on: `sparse_terms_oversampled_fine_grids` (next task) was gated on this merge.
 
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/619
 
 ## Original prompt
 

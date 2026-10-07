@@ -18,8 +18,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/254
 - summary: Wave 2 of the Scribbler proposal (radial-subtracted side-by-side panels, cross-grid mask regrid, white/black brushes, arcsinh default). Wave 1 (#635, docs #579/#251) is released in autogalaxy 2026.10.2.1.
 - resume: Library half merged (PyAutoGalaxy#641, PyAutoLens#770) on 2026-10-07, unreleased. Next: a release carrying both, then approve fork CI on autolens_workspace#583 / autogalaxy_workspace#254, mark ready, human /prm. Workspace prose describes white/black brushes, so neither docs PR may merge before the release.
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/641
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/770
 
 ## community-pages
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/773

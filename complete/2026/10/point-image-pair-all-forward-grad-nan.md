@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/767
 - completed: 2026-10-04
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/768
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/768
 - PyAutoLens#768 merged 2026-10-04T20:41Z (head 0659903d, merge dffea805) via human /prm. It was pushed and opened under the in-session Heart RED development override.
 - Fix: under JAX, `all_permutations_log_likelihoods` is wrapped in a `jax.custom_jvp`. The tangent comes from `_log_likelihoods_padding_safe`, which uses a double-`where` to mask the `inf` sentinel rows. The primal is unchanged, so the log likelihood is bit-identical: CPU fiducial `7.743201200876812`, the autolens_profiling pin.
 - Traps:

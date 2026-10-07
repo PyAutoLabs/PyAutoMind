@@ -38,8 +38,6 @@ separately if wanted.
 
 Not released: reaches users with the next PyAutoArray / PyAutoGalaxy release.
 
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/621
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/650
 
 ## Original prompt
 

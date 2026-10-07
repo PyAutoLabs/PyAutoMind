@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1661
 - completed: 2026-10-07
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1662
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1662
 
 Merged PyAutoFit#1662 (1e58fb1c1) into main 2026-10-07 via human-typed /prm; issue #1661 closed. CI green (unittest 3.12, 3.13, unittest-nojax).
 

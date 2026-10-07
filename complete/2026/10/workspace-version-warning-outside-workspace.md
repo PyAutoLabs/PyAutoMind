@@ -20,7 +20,6 @@ https://github.com/PyAutoLabs/.github/discussions/13#discussioncomment-18741541.
 
 Not released: the fix reaches users with the next PyAutoNerves release.
 
-- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/192
 
 ## Original prompt
 
