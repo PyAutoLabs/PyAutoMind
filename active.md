@@ -67,3 +67,15 @@
 - tier: glance (auto-merge on green if Witness passes)
 - status: library-dev
 - heart-ack: manifest drift: shared-standards blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml; release validation stale: source moved since rehearsal (PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens) — acknowledged by the human 2026-10-07 at ship
+
+## workspace-version-warning-outside-workspace
+- issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/191
+- discussion: https://github.com/orgs/PyAutoLabs/discussions/13
+- user-facing: true
+- author: @HRSAstro (external)
+- issued: 2026-10-07
+- session: Claude CLI (Opus 5.5 subagent, /start_dev); session ID unavailable
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/workspace-version-warning-outside-workspace
+- repos:
+  - PyAutoNerves: feature/workspace-version-warning-outside-workspace
