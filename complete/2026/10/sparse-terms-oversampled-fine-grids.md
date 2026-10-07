@@ -1,3 +1,48 @@
+# SparseTerms oversample=q: fine precision-operator and dirty-image grids for analytic uv-plane components
+
+Completed 2026-10-07 under human `/prm` (PyAutoArray merged 2026-10-07T10:54:57Z, PyAutoGalaxy 2026-10-07T10:55:04Z; Array first).
+
+Merged PyAutoArray#621 (https://github.com/PyAutoLabs/PyAutoArray/pull/621,
+merge commit 8a293d2d, head 3c541485) and PyAutoGalaxy#650
+(https://github.com/PyAutoLabs/PyAutoGalaxy/pull/650, merge commit 0cee03f2,
+head 3e655583); both heads verified ancestors of origin/main. Issue
+https://github.com/PyAutoLabs/PyAutoArray/issues/620 closed by "Closes #620";
+Shipped comment https://github.com/PyAutoLabs/PyAutoArray/issues/620#issuecomment-6036437461.
+
+`sparse_terms_from_chunks(..., oversample=q, oversample_pad=0.25)` (even q,
+NUFFT transformer only) accumulates two fine grids in the same streaming pass:
+`precision_operator_fine` (K at arbitrary lags, full native shape plus a
+quarter-field lag pad) and `dirty_image_fine` (D at arbitrary positions, twice
+the field), carried on `SparseTerms`; `__add__` refuses mismatched `oversample`
+or fine/no-fine operands. PyAutoGalaxy persists them as optional
+`PRECISION_OPERATOR_FINE` / `DIRTY_IMAGE_FINE` HDUs, written only on request
+(`include_fine_grids=True`, not into `dataset.fits` by default); older files
+load with the fine grids as None.
+
+Measured cost (100x100 native, 2 chunks x 1e5 visibilities):
+
+| oversample | wall | peak RSS |
+|---|---|---|
+| None | 2.1 s | 2016 MB |
+| q=4 | 5.2 s | 2159 MB |
+| q=8 | 5.0 s | 2533 MB |
+
+Source: community GitHub Discussion https://github.com/orgs/PyAutoLabs/discussions/13
+(external contributor @HRSAstro, pyuvimage), comment
+https://github.com/PyAutoLabs/.github/discussions/13#discussioncomment-18741903 item 1
+(technical review Item B1). Depended on `sparse_noise_map_pooling_option` (PyAutoArray#619, merged first).
+
+Deferred, not in scope: B2 `point_column_terms_from` column-terms helper
+(positions/widths, FFT-space Gaussian smoothing + quintic spline) — file
+separately if wanted.
+
+Not released: reaches users with the next PyAutoArray / PyAutoGalaxy release.
+
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/621
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/650
+
+## Original prompt
+
 # SparseTerms oversample=q: accumulate fine precision-operator and dirty-image grids for analytic uv-plane components (streaming P6)
 
 Type: feature
