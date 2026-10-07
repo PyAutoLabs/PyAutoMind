@@ -121,6 +121,11 @@ MIND_RULES = [
     # dropped pages_dashboard.yml. DROP for the same reason as dashboard.html:
     # nothing shipped reads it until a fresh org regenerates the dashboard.
     ("state.json", "DROP"),
+    # `policy/hpc_ral.md` is the one instance page under policy/ (first match
+    # wins, so it precedes policy/*): this organism's cluster, SSH aliases, user
+    # and partitions, moved out of the unversioned root AGENTS.md
+    # (PyAutoMind#482). The rest of policy/ is org-agnostic safety text.
+    ("policy/hpc_ral.md", "DROP"),
     ("skills/*", "KEEP"), ("policy/*", "KEEP"),
     # .github is decided PER FILE by the spec's fresh-repo invariant (rule 9):
     # a shipped workflow must succeed on a freshly-spawned repo with no secrets
@@ -248,6 +253,9 @@ MEMORY_RULES = [
     (".claude/*", "DROP"), (".codex/*", "DROP"),
     # The shared wiki schema is template content; the sub-wikis are instance
     # content (the generator stamps an empty wiki/example/ instead).
+    # The CLAUDE.md KEEPs (here and above) are tolerant leftovers: the pointer
+    # files are retired (PyAutoMind#482), so they match nothing once a source
+    # repo has dropped its copy, and spawn never generates one.
     ("wiki/AGENTS.md", "KEEP"), ("wiki/CLAUDE.md", "KEEP"),
     ("wiki/*", "DROP"),
     # Instance branding:
@@ -422,7 +430,6 @@ concepts, and the citation metadata to verify them. Start at
 |-------|------------|
 | `wiki/example/` | An empty sub-wiki demonstrating the schema — copy it per domain. |
 | `wiki/AGENTS.md` | The canonical shared schema every sub-wiki inherits. |
-| `wiki/CLAUDE.md` | A thin Claude adapter importing the shared schema. |
 | `bibliography/` | Canonical BibTeX metadata every wiki claim cites against. |
 | `reading-queue.md` | What is waiting to be read and filed. |
 
@@ -444,10 +451,6 @@ types, naming, `[[wiki-links]]`, frontmatter, page structures, status
 flags — are defined once in [`../AGENTS.md`](../AGENTS.md) and inherited;
 a sub-wiki's own `AGENTS.md` (this file) records only its scope: what the
 domain covers, and which adjacent topics link out to sibling wikis.
-"""
-
-EXAMPLE_WIKI_CLAUDE = """\
-@AGENTS.md
 """
 
 EXAMPLE_WIKI_INDEX = """\
@@ -723,7 +726,6 @@ def generate_memory(memory_root, out_dir):
     wiki = out_dir / "wiki" / "example"
     wiki.mkdir(parents=True, exist_ok=True)
     (wiki / "AGENTS.md").write_text(EXAMPLE_WIKI_AGENTS)
-    (wiki / "CLAUDE.md").write_text(EXAMPLE_WIKI_CLAUDE)
     (wiki / "index.md").write_text(EXAMPLE_WIKI_INDEX)
     (wiki / "sources").mkdir(exist_ok=True)
     (wiki / "sources" / "EXAMPLE_stub.md").write_text(EXAMPLE_WIKI_STUB)
