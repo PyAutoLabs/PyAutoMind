@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1748 records across 9 buckets.
+1749 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -229,6 +229,7 @@ markers; everything below GENERATED is rebuilt.
 - [streaming-p5-cubes-phase-centre](2026/10/streaming-p5-cubes-phase-centre.md)
 - [unit-timing-distinct-baseline](2026/10/unit-timing-distinct-baseline.md) — Select the latest distinct prior unit timing run per repository/Python leg within the current epoch. Preserve …
 - [unregistered-worktree-guard](2026/10/unregistered-worktree-guard.md)
+- [workspace-version-warning-outside-workspace](2026/10/workspace-version-warning-outside-workspace.md)
 - [worktree-sh-root-activate-clobber](2026/10/worktree-sh-root-activate-clobber.md)
 
 ## 2026/09

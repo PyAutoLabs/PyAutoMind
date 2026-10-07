@@ -1,3 +1,29 @@
+# Skip the workspace version warning outside a workspace
+
+Completed 2026-10-07 under human `/prm` (merged by the human 2026-10-07T09:58:10Z).
+
+Merged PyAutoNerves#192 (https://github.com/PyAutoLabs/PyAutoNerves/pull/192,
+merge commit 91c2d0e6); feature head e4fd690 verified an ancestor of
+origin/main. Issue https://github.com/PyAutoLabs/PyAutoNerves/issues/191 closed.
+
+`autonerves.workspace.check_version` now returns silently when no version floor
+is found and the working directory does not look like a workspace (no `config/`
+directory), so running a plain script from a data directory no longer emits the
+"Cannot verify the workspace" warning on import of autofit/autogalaxy/autolens.
+A `config/` with no version keys still warns (genuinely misconfigured
+workspace). No walk-up to a parent workspace root. Workspace impact: none —
+every workspace root ships `config/`.
+
+Source: community GitHub Discussion https://github.com/orgs/PyAutoLabs/discussions/13
+(external contributor @HRSAstro), comment
+https://github.com/PyAutoLabs/.github/discussions/13#discussioncomment-18741541.
+
+Not released: the fix reaches users with the next PyAutoNerves release.
+
+- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/192
+
+## Original prompt
+
 # autonerves check_version warns 'Cannot verify the workspace' from directories that are not a workspace
 
 Type: bug

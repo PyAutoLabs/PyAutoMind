@@ -40,11 +40,11 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 3 |
+| [In flight](#in-flight) (`active/`) | 2 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 5 |
 | [Planned](#planned) (`planned.md`) | 7 |
-| [Backlog](#backlog) (`draft/`) | 226 |
+| [Backlog](#backlog) (`draft/`) | 227 |
 
 > **No batch in flight.**
 
@@ -148,7 +148,7 @@ Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 108
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 109
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -266,14 +266,6 @@ Use the start-dev skill. active/sparse_noise_map_pooling_option.md
 
 </details>
 
-<details><summary>📋 <a href="active/workspace_version_warning_outside_workspace.md">autonerves check_version warns 'Cannot verify the workspace' from directories that are not…</a> — issued 2026-10-07</summary>
-
-```
-Use the start-dev skill. active/workspace_version_warning_outside_workspace.md
-```
-
-</details>
-
 ## Pending release
 
 Library PRs the ledger records as merged but not yet released, and the in-flight tasks waiting on each. Rendered from the ledger — `active.md` and the `complete/` records — never a live GitHub query; the Brain board's `pending-release` search is the fresh view, this is what the Mind believes.
@@ -304,6 +296,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 - [PyAutoNerves#186](https://github.com/PyAutoLabs/PyAutoNerves/pull/186) — `complete/2026/10/board-navigation-nerves.md`
 - [PyAutoNerves#184](https://github.com/PyAutoLabs/PyAutoNerves/pull/184) — `complete/2026/10/jax-lapack-compatibility-repair.md`
+- [PyAutoNerves#192](https://github.com/PyAutoLabs/PyAutoNerves/pull/192) — `complete/2026/10/workspace-version-warning-outside-workspace.md`
 
 ## Human review
 
@@ -467,7 +460,7 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ## Backlog
 
-**226** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
+**227** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 70</summary>
@@ -1035,7 +1028,7 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>feature</b> — 32</summary>
+<summary><b>feature</b> — 33</summary>
 
 <details><summary>📋 <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding against the raw maximum finds…</a> — autoarray · small · supervised · medium</summary>
 
@@ -1121,6 +1114,14 @@ Use the start-dev skill. draft/feature/pyautohands/bump_colab_urls_autolens_assi
 
 ```
 Use the start-dev skill. draft/feature/autoarray/multiwavelength_inversion.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/sparse_terms_oversampled_fine_grids.md">SparseTerms oversample=q: accumulate fine precision-operator and dirty-image grids for analytic uv-plane components…</a> — autoarray · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/autoarray/sparse_terms_oversampled_fine_grids.md
 ```
 
 </details>
@@ -2222,7 +2223,7 @@ Contract (the `start-bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 37 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 38 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -2230,8 +2231,8 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-07 | issued | <a href="active/workspace_version_warning_outside_workspace.md">autonerves check_version warns 'Cannot verify the workspace' from…</a> |
 | 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
+| 2026-10-07 | filed | <a href="draft/feature/autoarray/sparse_terms_oversampled_fine_grids.md">SparseTerms oversample=q: accumulate fine precision-operator and…</a> |
 | 2026-10-07 | issued | <a href="active/sparse_noise_map_pooling_option.md">Sparse interferometer path: opt-in quadrature pooling of unequal…</a> |
 | 2026-10-07 | issued | <a href="active/community_pages.md">Community pages + merged "Community &amp; Contributing" sections across…</a> |
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
@@ -2883,7 +2884,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 </details>
 
-65 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+66 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2894,6 +2895,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 - `draft/feature/autoarray/interferometer_curvature_preload_phase1.md — unknown theme keyword(s): inversion, likelihood-profiling`
 - `draft/feature/autoarray/interferometer_numba_gate_retune_70.md — unknown theme keyword(s): config`
 - `draft/feature/autoarray/source_clumps_robust_scale.md — unknown theme keyword(s): source-reconstruction`
+- `draft/feature/autoarray/sparse_terms_oversampled_fine_grids.md — unknown theme keyword(s): sparse-operator, community`
 - `draft/feature/autofit/certified_solver_batched_guard_c2.md — unknown theme keyword(s): inversion`
 - `draft/feature/autolens/cluster_curves_engine_dispatch.md — unknown theme keyword(s): critical-curves`
 - `draft/feature/autolens/coolest_pixel_grid_export.md — unknown theme keyword(s): coolest, interop, euclid`
