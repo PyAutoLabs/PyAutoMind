@@ -955,6 +955,41 @@ def check_map_blocks(root, repos, smap):
     return problems
 
 
+# The two `required=True` targets of --write — the workspace-root AGENTS.md
+# routing table and PyAutoBrain/skills/WORKFLOW.md's owner map — had no check
+# leg, so a repos.yaml change without a --write left the root table stale
+# (missing two organs, stale role text) while check mode still printed OK.
+# Same contract as the write: an absent file is skipped (partial/web checkouts
+# carry neither), a present file without its markers is a problem (write would
+# hard-fail on it), and a present block must equal the generator byte-for-byte.
+
+
+def _check_required_block(root, path, label, expected):
+    if not path.exists():
+        return []  # partial/web checkout: write skips it too
+    shown = path.relative_to(root).as_posix() if path.is_relative_to(root) else path
+    text = path.read_text()
+    if MARK_BEGIN not in text or MARK_END not in text:
+        return [f"{shown}: no {MARK_BEGIN} / {MARK_END} block for the {label}"]
+    if extract_block(text, MARK_BEGIN, MARK_END) != expected:
+        return [
+            f"{shown}: {label} block is stale — run "
+            f"`python3 PyAutoMind/scripts/repos_sync.py --write`"
+        ]
+    return []
+
+
+def check_routing_table(root, categories, repos):
+    return _check_required_block(
+        Path(root), Path(root) / "AGENTS.md", "routing table", routing_table(categories, repos))
+
+
+def check_owner_map(root, categories, repos):
+    return _check_required_block(
+        Path(root), bootstrap_checkout(root, "PyAutoBrain") / "skills/WORKFLOW.md",
+        "owner map", owner_map(categories, repos))
+
+
 def check_history_blocks(root, repos, hpol):
     """Every AGENTS.md that opts into the repos_sync:history markers must carry
     the canonical policy verbatim. Single source (policy/never_rewrite_history.md)
@@ -2234,6 +2269,10 @@ def main():
         "local checkout origins": lambda: check_origins(root, repos),
         CHECKOUTS: lambda: check_checkouts(root, repos, unmapped, marker),
         "tenant firewall (organ code)": lambda: check_tenant_firewall(root, repos),
+        "root AGENTS.md routing table (generated)":
+            lambda: check_routing_table(root, categories, repos),
+        "WORKFLOW.md owner map (generated)":
+            lambda: check_owner_map(root, categories, repos),
         "organism-map blocks (generated)":
             lambda: check_map_blocks(root, repos, smap),
         "never-rewrite-history blocks (generated)":
