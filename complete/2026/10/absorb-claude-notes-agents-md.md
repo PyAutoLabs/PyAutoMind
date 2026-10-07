@@ -10,6 +10,7 @@
 - 11 skill descriptions over 300 chars trimmed to ≤ 250, trigger phrases kept, no renames. Brain suite 1291 passed (clean shell).
 - Measured fact worth keeping: a fresh delegated `general-purpose` subagent DOES receive the full AGENTS.md hierarchy plus skill descriptions (~18-22k tokens); only built-in Explore/Plan skip it.
 - Partial vs done-when: `_clone.py` / `regroup_workspace.py` keep `CLAUDE.md` as tolerated-legacy until #482's wave lands — re-filed as `draft/maintenance/pyautobrain/drop_legacy_claude_md_patterns.md`. Human follow-up: re-run `bin/install.sh` in the root workspace and delete root `CLAUDE.md`.
+- Remainder shipped 2026-10-07: PyAutoBrain#495 (`766c0063`) dropped the tolerated-legacy patterns — `complete/2026/10/drop-legacy-claude-md-patterns.md`; the "no file in PyAutoBrain names CLAUDE.md" done-when is now met.
 
 ## Original prompt
 

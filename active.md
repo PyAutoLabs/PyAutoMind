@@ -73,18 +73,6 @@
   - pyautolabs.github.io: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/30
 - heart-ack: manifest drift: shared-standards blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml; release validation stale: source moved since rehearsal (PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens) — acknowledged by the human 2026-10-07 at ship
 
-## drop-legacy-claude-md-patterns
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/494
-- issued: 2026-10-07
-- prompt: active/drop_legacy_claude_md_patterns.md
-- session: Claude CLI (Fable 5.1 architect, Opus 5.5 executor); https://claude.ai/code/session_01QmiavJnNzmKb6EJmgYATfx
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/495
-- worktree: ~/Code/PyAutoLabs-wt/drop-legacy-claude-md-patterns
-- repos:
-  - PyAutoBrain: feature/drop-legacy-claude-md-patterns
-- heart-ack: manifest drift: workspace checkouts (manifest ↔ disk) — 2 mismatch(es) vs PyAutoMind/repos.yaml; release validation incomplete: no rehearsal for current source — acknowledged by the human 2026-10-07 at ship
-
 ## profiling-readable-metrics
 - issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/27
 - issued: 2026-10-07
