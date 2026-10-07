@@ -266,7 +266,7 @@ Use the start-dev skill. active/profiling_layout_completion.md
 
 </details>
 
-<details><summary>📋 <a href="active/pyautofit_add_a_regression_test_for_fork.md">PyAutoFit: add a regression test for <code>fork_context()</code> not fixing the multiprocessing start…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1661">issue #1661</a> — issued 2026-10-07 — library-dev</summary>
+<details><summary>📋 <a href="active/pyautofit_add_a_regression_test_for_fork.md">PyAutoFit: add a regression test for <code>fork_context()</code> not fixing the multiprocessing start…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1661">issue #1661</a> — issued 2026-10-07 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1662">PyAutoFit#1662</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 Use the start-dev skill. active/pyautofit_add_a_regression_test_for_fork.md
@@ -360,6 +360,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoFit**
 
+- [PyAutoFit#1662](https://github.com/PyAutoLabs/PyAutoFit/pull/1662) — `active/pyautofit_add_a_regression_test_for_fork.md`
 - [PyAutoFit#1656](https://github.com/PyAutoLabs/PyAutoFit/pull/1656) — `complete/2026/09/ep-moment-projection.md`
 - [PyAutoFit#1652](https://github.com/PyAutoLabs/PyAutoFit/pull/1652) — `complete/2026/09/ep-nautilus-single-pass.md`
 - [PyAutoFit#1655](https://github.com/PyAutoLabs/PyAutoFit/pull/1655) — `complete/2026/09/ep-projection-exception.md`
