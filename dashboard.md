@@ -44,7 +44,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 6 |
 | [Planned](#planned) (`planned.md`) | 7 |
-| [Backlog](#backlog) (`draft/`) | 226 |
+| [Backlog](#backlog) (`draft/`) | 227 |
 
 > **No batch in flight.**
 
@@ -676,7 +676,7 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ## Backlog
 
-**226** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
+**227** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 70</summary>
@@ -1678,6 +1678,147 @@ Use the start-dev skill. draft/maintenance/pyautomind/session_start_hook_copies_
 </details>
 
 <details>
+<summary><b>docs</b> — 17</summary>
+
+<details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens/split_lensing_regimes.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/preloads_advanced_workspace_guide.md">Advanced workspace guide: <code>Preloads</code> (PyAutoArray)</a> — workspaces · too-large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/docs/workspaces/preloads_advanced_workspace_guide.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md">Adapt image is the S/N map: fix the prose and assess…</a> — autogalaxy · large · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a> — autolens_workspace · small · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a> — autolens_workspace · small · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md rename</a> — pyautobrain · small · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/docs/pyautobrain/rtd_organism_currency.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a> — autocti · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/docs/autocti/api_rst_rewrite.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> — autolens · medium · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens/plot_rst_missing_exports.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/demo_subplot_ellipse_errors.md">Demo <code>subplot_ellipse_errors</code> from a real ellipse model-fit</a> — workspaces · large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/docs/workspaces/demo_subplot_ellipse_errors.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md">cluster/mass_parameterizations*.py promise model.info prints (and figures) they never make</a> — autolens_workspace · small · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/howtofit/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> — howtofit · small · safe · low</summary>
+
+```
+Use the start-dev skill. draft/docs/howtofit/tutorial_4_runtime_claim.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter counts do not match…</a> — workspaces · small · safe · low</summary>
+
+```
+Use the start-dev skill. draft/docs/workspaces/model_bullet_parameter_count_drift.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/assistants_regime_extension.md">Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)</a> — workspaces · medium · safe · low</summary>
+
+```
+Use the start-dev skill. draft/docs/workspaces/assistants_regime_extension.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autofit/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the chapter_advanced rename</a> — autofit · trivial · safe · low</summary>
+
+```
+Use the start-dev skill. draft/docs/autofit/howtofit_chapter_3_prose_references.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/pyautobrain/dashboard_checkin_prompts.md">Implement the agreed dashboard check-in prompts</a> — pyautobrain · medium</summary>
+
+```
+Use the start-dev skill. draft/docs/pyautobrain/dashboard_checkin_prompts.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md">Phase 2 — drop the hand-written quick-update sentence from the workspace scripts</a> — autolens_workspace</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md">Track and fix correctness issues in the HowToLens tutorials as they…</a> — howtolens</summary>
+
+```
+Use the start-dev skill. draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md
+```
+
+</details>
+
+</details>
+
+<details>
 <summary><b>research</b> — 19</summary>
 
 <details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon</a> — autofit · large · human-required · high</summary>
@@ -1828,139 +1969,6 @@ Use the start-dev skill. draft/research/autofit/hpc_campaign_epic_surveys/euclid
 
 ```
 Use the start-dev skill. draft/research/autofit/hpc_campaign_epic_surveys/prior_art.md
-```
-
-</details>
-
-</details>
-
-<details>
-<summary><b>docs</b> — 16</summary>
-
-<details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/docs/autolens/split_lensing_regimes.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/preloads_advanced_workspace_guide.md">Advanced workspace guide: <code>Preloads</code> (PyAutoArray)</a> — workspaces · too-large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/docs/workspaces/preloads_advanced_workspace_guide.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md">Adapt image is the S/N map: fix the prose and assess…</a> — autogalaxy · large · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a> — autolens_workspace · small · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a> — autolens_workspace · small · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md rename</a> — pyautobrain · small · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/docs/pyautobrain/rtd_organism_currency.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a> — autocti · medium · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/docs/autocti/api_rst_rewrite.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> — autolens · medium · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/docs/autolens/plot_rst_missing_exports.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/demo_subplot_ellipse_errors.md">Demo <code>subplot_ellipse_errors</code> from a real ellipse model-fit</a> — workspaces · large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/docs/workspaces/demo_subplot_ellipse_errors.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md">cluster/mass_parameterizations*.py promise model.info prints (and figures) they never make</a> — autolens_workspace · small · supervised · low</summary>
-
-```
-Use the start-dev skill. draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/howtofit/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> — howtofit · small · safe · low</summary>
-
-```
-Use the start-dev skill. draft/docs/howtofit/tutorial_4_runtime_claim.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter counts do not match…</a> — workspaces · small · safe · low</summary>
-
-```
-Use the start-dev skill. draft/docs/workspaces/model_bullet_parameter_count_drift.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/assistants_regime_extension.md">Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)</a> — workspaces · medium · safe · low</summary>
-
-```
-Use the start-dev skill. draft/docs/workspaces/assistants_regime_extension.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autofit/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the chapter_advanced rename</a> — autofit · trivial · safe · low</summary>
-
-```
-Use the start-dev skill. draft/docs/autofit/howtofit_chapter_3_prose_references.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md">Phase 2 — drop the hand-written quick-update sentence from the workspace scripts</a> — autolens_workspace</summary>
-
-```
-Use the start-dev skill. draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md">Track and fix correctness issues in the HowToLens tutorials as they…</a> — howtolens</summary>
-
-```
-Use the start-dev skill. draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md
 ```
 
 </details>
@@ -3043,7 +3051,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 </details>
 
-63 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+64 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3086,9 +3094,9 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 - `draft/docs/autolens/split_lensing_regimes.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
 - `draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md`
+- `draft/docs/pyautobrain/dashboard_checkin_prompts.md`
 - `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
-- `draft/test/workspaces/mesh_magnification_correctness.md`
-- _… and 23 more_
+- _… and 24 more_
 
 </details>
 
