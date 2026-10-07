@@ -24,6 +24,12 @@ members out of the pick lists and work-type sections and shows them only
 grouped, phase-ordered, under their epic — worked in order through the
 epic, never picked standalone.
 
+## results-library
+- title: Results library — PyAutoFit infrastructure to index, complete, export, package and reconcile thousands of finished results (follow-up to hpc-campaign; Euclid DR1 is the pilot)
+- ledger: draft/feature/autofit/results_library_epic.md
+- status: filed 2026-10-07 from the DR1 catalogue post-mortem; NOT STARTED — no phase issued yet
+- notes: six phases, library first, one at a time. 0 integrity and honesty primitives (atomic STORED-media zips, in-zip `.completed` check, checkpoint probe + quarantine, `from_directory(on_error=)` with `agg.errors`, strict AggregateCSV by default with union header); 1 results index + status classes + `dataset_identity.json` + `agg.latest_per` + lazy zip-member reads + `python -m autofit.results {index,status,count}`; 2 completeness over a declared grid (per-product, `.missing.csv`) + `Aggregator.enrich`; 3 incremental honest exports (cached rows, row-or-reason, `columns.json`, plain-JSON view) + scheduler-agnostic chunk/merge; 4 `af.export.package` (size-capped parts, manifest, SHA256SUMS, verify, provenance README) + library diff/parity + run-to-run scatter helper; 5 assistant skill, pipeline scripts shrink, hpc/sync index pull, Cortex index hash, DR1 v1.1 as witness. Boundary: hpc-campaign (draft/research/autofit/hpc_campaign_epic.md) owns run time (status.json, failure records, resources, Slurm, carbon); this epic owns post-run. Phase 0 is identical to hpc-campaign phase 0 #A — issue it once, under whichever epic goes first, and record it done in the other. Does not block draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md. First step: phase 0 via `start_dev` as a single PyAutoFit issue. Evidence and lessons: draft/feature/autofit/results_library_epic_report.md.
+
 ## search-extensibility
 - title: Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos
 - ledger: draft/research/autofit/search_extensibility_epic.md
