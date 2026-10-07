@@ -77,11 +77,15 @@
 - issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/25
 - issued: 2026-10-07
 - session: Codex
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/tmp/worktrees/profiling-results-ui
 - repos:
   - PyAutoPulse: feature/profiling-results-ui
 - plan: active/profiling-results-ui.md; user approved with go
-- checkpoint: implementation and validation complete; Heart RED blocks source commit/push/PR pending task-specific human override
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/26
+- commit: 868d929
+- checkpoint: PR open; merge remains human /prm
+- ship-authorization: user “I authorize, maybe we should get those repos up to date first?”; all four libraries already clean/current after fetch; refreshed Heart cleared all RED reasons; no RED override exercised
+- heart: YELLOW — manifest drift: workspace checkouts (manifest ↔ disk) — 2 mismatch(es) vs PyAutoMind/repos.yaml; stale: release validation incomplete: no rehearsal for current source
 - validation: 193 Python tests; Chromium; Ruff; offline contract; git diff --check all passed
 - evidence: tmp/worktrees/profiling-results-ui/progress.md

@@ -125,3 +125,16 @@ Heart RED reasons (verbatim):
 - PyAutoLens: 2 commit(s) behind origin
 
 Next step: obtain the live human development-only shipping override required by Brain AUTONOMY.md, record it in all four required sinks, then commit/push/open the prepared PR. Merge remains a separate human action.
+
+## PR opened
+
+- PR: https://github.com/PyAutoLabs/PyAutoPulse/pull/26
+- Commit: `868d929`, branch `feature/profiling-results-ui`.
+- All 193 Python tests, Chromium interactions/responsive checks, Ruff lint/format, offline catalogue/dashboard checks and whitespace checks passed.
+- Model detail pages, curated float64/1500 defaults, compact proportional bars and requested copy/navigation cleanup are implemented; captures unchanged.
+
+User authorization: “I authorize, maybe we should get those repos up to date first?” Verified PyAutoFit, PyAutoArray, PyAutoGalaxy and PyAutoLens clean on main and equal to fetched origin/main. No pulls were necessary. Refreshed Heart cleared all four previous RED reasons before source commit/push/PR; no RED override was exercised.
+
+Current Heart is YELLOW: `manifest drift: workspace checkouts (manifest ↔ disk) — 2 mismatch(es) vs PyAutoMind/repos.yaml`. Stale evidence: `release validation incomplete: no rehearsal for current source`.
+
+Next step: human `/prm` after all required checks pass. No merge or deployment performed.
