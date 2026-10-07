@@ -797,7 +797,7 @@ Use the start-dev skill. active/search_conformance_metadata_layer.md
 
 </details>
 
-<details><summary>📋 <a href="active/search_extensibility_b1_registration.md">Register autofit_inference and autofit_profiling across the organism, with minimal skeletons…</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/492">issue #492</a> — issued 2026-10-07 — workspace-dev</summary>
+<details><summary>📋 <a href="active/search_extensibility_b1_registration.md">Register autofit_inference and autofit_profiling across the organism, with minimal skeletons…</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/492">issue #492</a> — issued 2026-10-07 — workspace-shipped, awaiting-merge — 7 PRs open 2026-10-07 (merge order: skeletons → Mind#493 → Heart/Cortex/Pulse/.github); judge… — PRs: <a href="https://github.com/PyAutoLabs/autofit_inference/pull/1">autofit_inference#1</a>, <a href="https://github.com/PyAutoLabs/autofit_profiling/pull/1">autofit_profiling#1</a>, <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/493">PyAutoMind#493</a>, <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/292">PyAutoHeart#292</a>, <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/60">PyAutoCortex#60</a>, <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/33">PyAutoPulse#33</a>, <a href="https://github.com/PyAutoLabs/.github/pull/34">.github#34</a></summary>
 
 ```
 Use the start-dev skill. active/search_extensibility_b1_registration.md

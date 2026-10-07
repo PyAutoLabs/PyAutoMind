@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-07T20:03:08Z",
+  "updated": "2026-10-07T20:37:17Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "Search conformance suite, layer (i): metadata and serialization for all 15 searches\u2026 \u2014 library-shipped, awaiting-merge \u2014 PR #1667 open 2026-10-07 (judge tier: human /prm); worktree kept for /prm close-out",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1667",
       "prompt": "Use the start-dev skill. active/search_conformance_metadata_layer.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Register autofit_inference and autofit_profiling across the organism, with minimal skeletons\u2026 \u2014 workspace-shipped, awaiting-merge \u2014 7 PRs open 2026-10-07 (merge order: skeletons \u2192 Mind#493 \u2192 Heart/Cortex/Pulse/.github); judge\u2026",
+      "url": "https://github.com/PyAutoLabs/autofit_inference/pull/1",
+      "prompt": "Use the start-dev skill. active/search_extensibility_b1_registration.md"
     },
     {
       "severity": "yellow",
@@ -120,12 +126,6 @@
       "text": "pick: Cache `autonerves` config parsing \u2014 308 YAML files parsed per script run",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/autonerves/config_yaml_parse_cache.md",
       "prompt": "Use the start-dev skill. draft/refactor/autonerves/config_yaml_parse_cache.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md",
-      "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md"
     }
   ]
 }
