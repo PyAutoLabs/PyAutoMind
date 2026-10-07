@@ -274,7 +274,7 @@ Use the start-dev skill. active/repos_sync_check_root_routing_table.md
 
 </details>
 
-<details><summary>📋 <a href="active/setuptools_include_packages.md">setuptools package discovery picks up build/ (recursive build/lib/build/lib… nesting)</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/194">issue #194</a> — issued 2026-10-07 — library-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/195">PyAutoNerves#195</a>, <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/622">PyAutoArray#622</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/651">PyAutoGalaxy#651</a>, <a href="https://github.com/PyAutoLabs/PyAutoReduce/pull/81">PyAutoReduce#81</a> — ⏳ pending release: PyAutoNerves — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoGalaxy</summary>
+<details><summary>📋 <a href="active/setuptools_include_packages.md">setuptools package discovery picks up build/ (recursive build/lib/build/lib… nesting)</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/194">issue #194</a> — issued 2026-10-07 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/195">PyAutoNerves#195</a>, <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/622">PyAutoArray#622</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/651">PyAutoGalaxy#651</a>, <a href="https://github.com/PyAutoLabs/PyAutoReduce/pull/81">PyAutoReduce#81</a>, <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1664">PyAutoFit#1664</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/775">PyAutoLens#775</a>, <a href="https://github.com/PyAutoLabs/PyAutoCTI/pull/114">PyAutoCTI#114</a> — ⏳ pending release: PyAutoNerves — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoFit — ⏳ pending release: PyAutoLens</summary>
 
 ```
 Use the start-dev skill. active/setuptools_include_packages.md
@@ -297,6 +297,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoFit**
 
+- [PyAutoFit#1664](https://github.com/PyAutoLabs/PyAutoFit/pull/1664) — `active/setuptools_include_packages.md`
 - [PyAutoFit#1662](https://github.com/PyAutoLabs/PyAutoFit/pull/1662) — `complete/2026/10/fork-context-darwin-test.md`
 - [PyAutoFit#1659](https://github.com/PyAutoLabs/PyAutoFit/pull/1659) — `complete/2026/10/jax-lapack-compatibility-repair.md`
 
@@ -308,6 +309,7 @@ Library PRs the ledger records as merged but not yet released, and the in-flight
 
 **PyAutoLens**
 
+- [PyAutoLens#775](https://github.com/PyAutoLabs/PyAutoLens/pull/775) — `active/setuptools_include_packages.md`
 - [PyAutoLens#766](https://github.com/PyAutoLabs/PyAutoLens/pull/766) — `complete/2026/10/jax-lapack-compatibility-repair.md`
 - [PyAutoLens#772](https://github.com/PyAutoLabs/PyAutoLens/pull/772) — `complete/2026/10/padded-single-image-recovery.md`
 - [PyAutoLens#768](https://github.com/PyAutoLabs/PyAutoLens/pull/768) — `complete/2026/10/point-image-pair-all-forward-grad-nan.md`
