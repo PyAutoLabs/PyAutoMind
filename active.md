@@ -49,7 +49,7 @@
 - released: PyAutoScientist released 2026-10-07 by human decision because its PR merged (https://github.com/PyAutoLabs/PyAutoScientist/pull/48, merged 2026-10-07T10:05Z; moved out of prs: so the claim guard stops matching it); now claimed by dashboard-section-disclosures
 - summary: per-library docs/general/community.md (Lens lists the SiriusFzh Visual Workbench), one merged "Community & Contributing" README section across 16 public repos + PyAutoScientist, front page community section moved to the bottom linking every project page. Wave 1 = 3 library PRs, wave 2 = README bundle.
 - tier: glance (auto-merge on green if Witness passes)
-- status: awaiting-merge — 13/18 MERGED 2026-10-07; 5 PRs HELD until the next release by human decision (autolens_profiling #391 after corrective #392 merged, plus the 4 *_visualization PRs): each fails only lychee 404 on the RTD community page — RTD builds red since 10-04 because pyproject `autonerves>2026.10.4.1` exceeds PyPI 2026.10.4.1; resume: after the autonerves release, re-run the 5 lints (gh run rerun --failed) and /prm them, then close out
+- status: awaiting-merge — 17/18 MERGED 2026-10-07 (the four *_visualization#3 PRs merged 18:07Z after release 2026.10.7.1 turned RTD green and their lychee lints re-ran clean); 1 PR HELD: autolens_profiling #391 — lint now fails only `build_dashboard.py --check` (dashboard/index.html STALE), a pre-existing main staleness (main fails the same check), not the PR; resume: re-render the profiling dashboard on main (or ack the check), re-run #391 lint, /prm it, then close out
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/774
 - prs:
   - PyAutoLens: https://github.com/PyAutoLabs/PyAutoLens/pull/774
