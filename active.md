@@ -117,6 +117,7 @@
   - PyAutoEars: https://github.com/PyAutoLabs/PyAutoEars/pull/21
 
 ## setuptools-include-packages
+- prompt: active/setuptools_include_packages.md
 - issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/194
 - issued: 2026-10-07
 - session: Claude CLI (Opus 5.5 execution subagent); session ID unavailable
@@ -131,13 +132,23 @@
   - PyAutoLens: feature/setuptools-include-packages (coordination authorised with community-pages, scribbler-wave2-radial-panels-regrid, pyproject.toml/.gitignore only)
   - PyAutoCTI: feature/setuptools-include-packages
   - PyAutoReduce: feature/setuptools-include-packages
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/195
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/622
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/651
+- library-pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/81
+- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/195
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/622
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/651
+- checkpoint: 4 of 7 PRs open (tests passed); PyAutoFit/PyAutoCTI/PyAutoLens edits held uncommitted in worktree — their unit tests hit ENOSPC (disk 100% full), ship once tests pass; Heart YELLOW at ship (shared-standards drift; rehearsal STALE)
 
 ## repos-sync-check-root-routing
+- prompt: active/repos_sync_check_root_routing_table.md
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/480
 - issued: 2026-10-07
 - session: Claude CLI (Opus 5.5 execution subagent); session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/repos-sync-check-root-routing
 - plan: approved 2026-10-07; judge tier, human /prm
 - repos:
   - PyAutoMind: feature/repos-sync-check-root-routing (coordination authorised with dashboard-section-disclosures, scripts/repos_sync.py only)
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/481
