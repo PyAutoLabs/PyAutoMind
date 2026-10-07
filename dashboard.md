@@ -258,7 +258,7 @@ Use the start-dev skill. active/community_pages.md
 
 </details>
 
-<details><summary>📋 <a href="active/drop_legacy_claude_md_patterns.md">Drop the tolerated-legacy CLAUDE.md patterns in _clone.py and regroup_workspace.py</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/494">issue #494</a> — issued 2026-10-07 — library-dev</summary>
+<details><summary>📋 <a href="active/drop_legacy_claude_md_patterns.md">Drop the tolerated-legacy CLAUDE.md patterns in _clone.py and regroup_workspace.py</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/494">issue #494</a> — issued 2026-10-07 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/495">PyAutoBrain#495</a></summary>
 
 ```
 Use the start-dev skill. active/drop_legacy_claude_md_patterns.md
