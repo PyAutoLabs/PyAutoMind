@@ -304,3 +304,15 @@ Browser evidence: existing Ears worktree `_site/browser-fixture/`.
 Heart YELLOW at 2026-10-07T07:01:07.479678+00:00 retains the previously
 acknowledged manifest drift and stale rehearsal reasons. Await human merge;
 no merge or publication performed.
+
+## Ears merge receipt — 2026-10-07
+
+Human invoked `/prm` for Ears PR #17. Merged as `d08c6c5550c01dc8965338b816a953555c99ecce`.
+Exact-head CI run 37584971507 passed all three jobs (Python 3.12, Python 3.13, browser);
+PR was CLEAN/MERGEABLE. Ears branch has zero commits outside origin/main.
+Canonical Ears main fast-forwarded to the merge.
+
+All ten sibling PRs are still OPEN with unmerged commits: Brain #485, Heart #288,
+Hands #304, Memory #119, Pulse #20, Insight #9, Nerves #189, Gut #25, Eyes #21,
+Scientist #46. Retain issue #484, active prompt/claim and shared worktree until
+the remaining authorized merges and full-task close-out. No other PR merged here.
