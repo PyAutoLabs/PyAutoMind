@@ -76,6 +76,8 @@
 - repos:
   - PyAutoEars: feature/closed-thread-followups
   - PyAutoBrain: feature/closed-thread-followups
-- status: workspace-dev
+- status: workspace-dev, validated; awaiting-heart-ack
 - summary: Detect post-settlement external activity and triage actionable follow-ups without requiring contributor reopen permissions.
 - tier: judge; human /prm
+- validation: 97 Ears + 66 Brain tests; state schema and Chromium browser checks pass; live Discussion #13 detected.
+- resume: Read active/closed_thread_followups.md; user acknowledgement of the recorded Heart YELLOW reasons is needed before source commit/push and PR creation. Prepared PR bodies and staged patches are in the task worktree root.

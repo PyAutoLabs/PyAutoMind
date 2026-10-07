@@ -45,3 +45,27 @@ Heart entry verdict: STALE (release stale; monitoring red), planning permitted u
 Original follow-up: Actually not sure I have permission   maybe other people cant reopen it too?   work that in and continue
 
 Detection must not depend on the commenter being able to reopen. GitHub viewerCanReopen confirms Jammy2211 can reopen Discussion #13; this says nothing about another commenter. Community must check the acting account capability when proposing a reopen, route to a maintainer if unavailable or unknown, and never tell contributors they must reopen for their request to count. Keep reopening, unlocking and clearing an accepted answer distinct; no automatic mutations. Add permission-aware prompt and triage tests.
+
+## Implementation and validation — 2026-10-07
+
+Implemented in `.worktrees/closed-thread-followups/{PyAutoEars,PyAutoBrain}` on
+`feature/closed-thread-followups`; staged, not yet pushed. The optional
+`follow_up` evidence links the oldest pending post-settlement comment. Closed
+issue scans are updated-first and skip quiet history; incomplete history is
+explicitly partial. Community accepts legacy snapshots and checks acting-viewer
+reopen permission. Direct bounded triage remains unknown when it cannot prove
+complete post-settlement coverage; the session must read full relevant comments.
+
+Validation: 97 Ears tests, 66 Brain tests; generated state schema valid; Chromium
+at 390/1280 widths in light/dark, clipboard success/failure, comment link and
+permission-aware text all pass. A read-only live check detects Discussion #13
+as closed/answered with pending follow-up and complete coverage.
+
+Review artifacts in the worktree root: `ears.patch`, `brain.patch`, `ears-pr.md`,
+`brain-pr.md`, `review-board/`, test logs. Merge Brain reader before Ears producer.
+
+Shipping waits for explicit acknowledgement under ship_workspace step 3:
+- manifest drift: shared-standards blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml
+- release validation stale: source moved since rehearsal (PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens)
+
+PR creation only after acknowledgement; merge remains human /prm.
