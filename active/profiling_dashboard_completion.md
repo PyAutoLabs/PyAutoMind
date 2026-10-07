@@ -7,6 +7,8 @@ Difficulty: large
 Consequence: judge
 Autonomy: human-required
 Filed: 2026-10-07
+Issued: 2026-10-07
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/387
 
 Primary: @autolens_profiling. Standalone workspace; no library API changes.
 Parent: draft/feature/autolens_profiling/profiling_redesign_completion.md
