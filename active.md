@@ -58,11 +58,14 @@
 - issued: 2026-10-07
 - prompt: active/pyautolens_single_image_recovery_in_result_image.md
 - session: Claude CLI (Opus 5.5 worker under Fable 5.1 /community); session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/padded-single-image-recovery
 - repos:
   - PyAutoLens: feature/padded-single-image-recovery
 - conflict-override: PyAutoLens also claimed by scribbler-wave2-radial-panels-regrid (#770, __init__.py re-export only; no file overlap) — orchestrator decision 2026-10-07
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/772
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/772
+
 
 ## profiling-layout-completion
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/389
