@@ -76,12 +76,15 @@
 ## mind-dashboard-simplify
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/488
 - issued: 2026-10-07
-- session: Codex (session ID unavailable)
-- status: awaiting-input
+- session: Codex (session ID unavailable); PRs opened by Claude Opus 5.5 2026-10-07
+- status: awaiting-merge — merge PyAutoBrain#497 first (Mind dashboard workflow reads Brain main), then refresh #489's generated pages and merge it; human /prm
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/mind-dashboard-simplify
 - repos:
   - PyAutoMind: feature/mind-dashboard-simplify
   - PyAutoBrain: feature/mind-dashboard-simplify
-- summary: Implementation complete in task worktrees; Brain 1271 tests and Mind 696 tests passed, browser/freshness/policy checks passed. Awaiting Heart YELLOW acknowledgment before source commits/PRs; human /prm merge.
-- awaiting: manifest drift: workspace checkouts (manifest ↔ disk) — 2 mismatch(es) vs PyAutoMind/repos.yaml
+- prs:
+  - PyAutoBrain: https://github.com/PyAutoLabs/PyAutoBrain/pull/497
+  - PyAutoMind: https://github.com/PyAutoLabs/PyAutoMind/pull/489
+- summary: Seven-card Mind navigation (Human Review nested under Backlog, Parked hidden); persistent Bundles registry, parser and start-bundle skill retired. Brain 1271 tests and Mind 696 tests passed, browser/freshness/policy checks passed.
+- heart-ack: manifest drift: workspace checkouts (manifest ↔ disk) — 2 mismatch(es) vs PyAutoMind/repos.yaml — acknowledged by the human on 2026-10-07 before shipping.
 - evidence: PyAutoBrain/tmp/handoff.md and each repo tmp/full-tests-clean-env.log in the task worktree; issue #488 carries the handoff.
