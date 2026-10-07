@@ -98,8 +98,12 @@
 - issued: 2026-10-07
 - prompt: active/sparse_noise_map_pooling_option.md
 - session: Claude CLI (Opus 5.5 subagent, /start_dev); session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/sparse-noise-map-pooling
 - repos:
   - PyAutoArray: feature/sparse-noise-map-pooling (coordination with imshow-origin-lower-overlays (merged, pending release) and community-pages (README only); disjoint files)
 - tier: judge (human /prm)
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/619
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/619
+- heart-ack: manifest drift: shared-standards blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml; release validation stale: source moved since rehearsal (PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens) — pre-acknowledged by the human 2026-10-07 at ship
+- resume: PR #619 open (judge). Next: human /prm. Must merge before sparse_terms_oversampled_fine_grids.
