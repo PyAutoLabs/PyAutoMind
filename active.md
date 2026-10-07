@@ -65,7 +65,27 @@
   - pyautolabs.github.io: feature/community-pages
 - summary: per-library docs/general/community.md (Lens lists the SiriusFzh Visual Workbench), one merged "Community & Contributing" README section across 16 public repos + PyAutoScientist, front page community section moved to the bottom linking every project page. Wave 1 = 3 library PRs, wave 2 = README bundle.
 - tier: glance (auto-merge on green if Witness passes)
-- status: library-dev
+- status: library-shipped, awaiting-merge (18 PRs open 2026-10-07; wording follow-up commits in flight)
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/774
+- prs:
+  - PyAutoLens: https://github.com/PyAutoLabs/PyAutoLens/pull/774
+  - PyAutoGalaxy: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/649
+  - PyAutoFit: https://github.com/PyAutoLabs/PyAutoFit/pull/1663
+  - PyAutoArray: https://github.com/PyAutoLabs/PyAutoArray/pull/618
+  - autolens_workspace: https://github.com/PyAutoLabs/autolens_workspace/pull/585
+  - autogalaxy_workspace: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/256
+  - autofit_workspace: https://github.com/PyAutoLabs/autofit_workspace/pull/167
+  - autoreduce_workspace: https://github.com/PyAutoLabs/autoreduce_workspace/pull/5
+  - HowToLens: https://github.com/PyAutoLabs/HowToLens/pull/96
+  - HowToGalaxy: https://github.com/PyAutoLabs/HowToGalaxy/pull/85
+  - HowToFit: https://github.com/PyAutoLabs/HowToFit/pull/71
+  - autolens_visualization: https://github.com/PyAutoLabs/autolens_visualization/pull/3
+  - autogalaxy_visualization: https://github.com/PyAutoLabs/autogalaxy_visualization/pull/3
+  - autofit_visualization: https://github.com/PyAutoLabs/autofit_visualization/pull/3
+  - autocti_visualization: https://github.com/PyAutoLabs/autocti_visualization/pull/3
+  - autolens_profiling: https://github.com/PyAutoLabs/autolens_profiling/pull/391
+  - PyAutoScientist: https://github.com/PyAutoLabs/PyAutoScientist/pull/48
+  - pyautolabs.github.io: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/30
 - heart-ack: manifest drift: shared-standards blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml; release validation stale: source moved since rehearsal (PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens) — acknowledged by the human 2026-10-07 at ship
 
 ## workspace-version-warning-outside-workspace
