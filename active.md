@@ -48,7 +48,7 @@
   - autocti_visualization: feature/community-pages
   - autolens_profiling: feature/community-pages
   - pyautolabs.github.io: feature/community-pages
-- released: PyAutoScientist released 2026-10-07 by human decision (PyAutoScientist#48 merged 2026-10-07T10:05Z); now claimed by dashboard-section-disclosures
+- released: PyAutoScientist released 2026-10-07 by human decision because its PR merged (https://github.com/PyAutoLabs/PyAutoScientist/pull/48, merged 2026-10-07T10:05Z; moved out of prs: so the claim guard stops matching it); now claimed by dashboard-section-disclosures
 - summary: per-library docs/general/community.md (Lens lists the SiriusFzh Visual Workbench), one merged "Community & Contributing" README section across 16 public repos + PyAutoScientist, front page community section moved to the bottom linking every project page. Wave 1 = 3 library PRs, wave 2 = README bundle.
 - tier: glance (auto-merge on green if Witness passes)
 - status: awaiting-merge — 13/18 MERGED 2026-10-07; 5 PRs HELD until the next release by human decision (autolens_profiling #391 after corrective #392 merged, plus the 4 *_visualization PRs): each fails only lychee 404 on the RTD community page — RTD builds red since 10-04 because pyproject `autonerves>2026.10.4.1` exceeds PyPI 2026.10.4.1; resume: after the autonerves release, re-run the 5 lints (gh run rerun --failed) and /prm them, then close out
@@ -70,7 +70,6 @@
   - autofit_visualization: https://github.com/PyAutoLabs/autofit_visualization/pull/3
   - autocti_visualization: https://github.com/PyAutoLabs/autocti_visualization/pull/3
   - autolens_profiling: https://github.com/PyAutoLabs/autolens_profiling/pull/391
-  - PyAutoScientist: https://github.com/PyAutoLabs/PyAutoScientist/pull/48
   - pyautolabs.github.io: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/30
 - heart-ack: manifest drift: shared-standards blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml; release validation stale: source moved since rehearsal (PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens) — acknowledged by the human 2026-10-07 at ship
 
