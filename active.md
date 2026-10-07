@@ -5,12 +5,14 @@
 - issued: 2026-10-04
 - prompt: active/nnls_memo_scattered_backoff.md
 - session: claude (Opus 5.5 subagent, https://claude.ai/code/session_01S11WE9oj7Mvkfhc4EPBnyN)
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/nnls-memo-scattered-backoff
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/615
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/615
 - repos:
   - PyAutoArray: feature/nnls-memo-scattered-backoff
 - summary: Per-key exponential back-off for the fnnls warm-start memo after consecutive fallbacks, so scattered (iid) streams stop paying for a bad seed every other solve; local-walk behaviour unchanged. Pulse task organs/PyAutoPulse/tasks/interferometer_nnls_memo_scattered_stream_guard.md.
-- resume: implemented locally, ship pending human (Heart RED). Local commit 0d9bbecd on feature/nnls-memo-scattered-backoff (not pushed, no PR); 1975 tests green; witness iid on/off 1.49x->1.17x, walk 0.18x kept. Follow-up: autolens_profiling harnesses should call nnls_memo.memo_clear(); real Nautilus-replay witness still open. Status on issue #613.
+- resume: shipped 2026-10-07 as PyAutoArray#615 (rebased e54123b4, pending-release, Heart YELLOW acknowledged; 1975 passed, 4 xfailed). No workspace impact. Next: CI green then human /prm. Follow-ups on #613 (not merge gates): real Nautilus-replay witness; autolens_profiling harnesses should call nnls_memo.memo_clear().
 
 ## vis-lp-inspection-bundle
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/102
