@@ -1,3 +1,17 @@
+# repos_sync.py check mode now checks the root AGENTS.md routing table and WORKFLOW owner map
+
+Completed: 2026-10-07
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/480
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/481
+
+Merged 2026-10-07 under a human `/prm`.
+
+- `repos_sync.py --write` regenerates two `required=True` blocks (workspace-root `AGENTS.md` routing table, `PyAutoBrain/skills/WORKFLOW.md` owner map) but check mode had no leg for either, so it reported OK while the root table was missing PyAutoEars and PyAutoInsight.
+- Added check legs `root AGENTS.md routing table (generated)` and `WORKFLOW.md owner map (generated)` (`check_routing_table`, `check_owner_map`): absent file skipped (partial/web checkouts), missing markers reported, stale block reported with the `--write` remedy.
+- New `tests/test_repos_sync_routing_blocks.py` (6 tests); full Mind suite 668 passed. Pre-existing unrelated `shared-standards: 2 mismatches` left untouched.
+
+## Original prompt
+
 # repos_sync.py check mode never checks the workspace-root AGENTS.md routing table
 
 Type: bug

@@ -40,7 +40,7 @@ anything you could not verify.
 
 | Where | Count |
 |-------|------:|
-| [In flight](#in-flight) (`active/`) | 3 |
+| [In flight](#in-flight) (`active/`) | 1 |
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 5 |
 | [Planned](#planned) (`planned.md`) | 7 |
@@ -258,59 +258,43 @@ Use the start-dev skill. active/community_pages.md
 
 </details>
 
-<details><summary>📋 <a href="active/repos_sync_check_root_routing_table.md">repos_sync.py check mode never checks the workspace-root AGENTS.md routing table</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/480">issue #480</a> — issued 2026-10-07 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/481">PyAutoMind#481</a></summary>
-
-```
-Use the start-dev skill. active/repos_sync_check_root_routing_table.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/setuptools_include_packages.md">setuptools package discovery picks up build/ (recursive build/lib/build/lib… nesting)</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/194">issue #194</a> — issued 2026-10-07 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/195">PyAutoNerves#195</a>, <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/622">PyAutoArray#622</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/651">PyAutoGalaxy#651</a>, <a href="https://github.com/PyAutoLabs/PyAutoReduce/pull/81">PyAutoReduce#81</a>, <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1664">PyAutoFit#1664</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/775">PyAutoLens#775</a>, <a href="https://github.com/PyAutoLabs/PyAutoCTI/pull/114">PyAutoCTI#114</a> — ⏳ pending release: PyAutoNerves — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoFit — ⏳ pending release: PyAutoLens</summary>
-
-```
-Use the start-dev skill. active/setuptools_include_packages.md
-```
-
-</details>
-
 ## Pending release
 
 Library PRs the ledger records as merged but not yet released, and the in-flight tasks waiting on each. Rendered from the ledger — `active.md` and the `complete/` records — never a live GitHub query; the Brain board's `pending-release` search is the fresh view, this is what the Mind believes.
 
 **PyAutoArray**
 
-- [PyAutoArray#622](https://github.com/PyAutoLabs/PyAutoArray/pull/622) — `active/setuptools_include_packages.md`
 - [PyAutoArray#616](https://github.com/PyAutoLabs/PyAutoArray/pull/616) — `complete/2026/10/imshow-origin-lower-overlays.md`
 - [PyAutoArray#612](https://github.com/PyAutoLabs/PyAutoArray/pull/612) — `complete/2026/10/jax-lapack-compatibility-repair.md`
 - [PyAutoArray#615](https://github.com/PyAutoLabs/PyAutoArray/pull/615) — `complete/2026/10/nnls-memo-scattered-backoff.md`
+- [PyAutoArray#622](https://github.com/PyAutoLabs/PyAutoArray/pull/622) — `complete/2026/10/setuptools-include-packages.md`
 - [PyAutoArray#619](https://github.com/PyAutoLabs/PyAutoArray/pull/619) — `complete/2026/10/sparse-noise-map-pooling.md`
 - [PyAutoArray#621](https://github.com/PyAutoLabs/PyAutoArray/pull/621) — `complete/2026/10/sparse-terms-oversampled-fine-grids.md`
 
 **PyAutoFit**
 
-- [PyAutoFit#1664](https://github.com/PyAutoLabs/PyAutoFit/pull/1664) — `active/setuptools_include_packages.md`
 - [PyAutoFit#1662](https://github.com/PyAutoLabs/PyAutoFit/pull/1662) — `complete/2026/10/fork-context-darwin-test.md`
 - [PyAutoFit#1659](https://github.com/PyAutoLabs/PyAutoFit/pull/1659) — `complete/2026/10/jax-lapack-compatibility-repair.md`
+- [PyAutoFit#1664](https://github.com/PyAutoLabs/PyAutoFit/pull/1664) — `complete/2026/10/setuptools-include-packages.md`
 
 **PyAutoGalaxy**
 
-- [PyAutoGalaxy#651](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/651) — `active/setuptools_include_packages.md`
 - [PyAutoGalaxy#647](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/647) — `complete/2026/10/jax-lapack-compatibility-repair.md`
+- [PyAutoGalaxy#651](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/651) — `complete/2026/10/setuptools-include-packages.md`
 - [PyAutoGalaxy#650](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/650) — `complete/2026/10/sparse-terms-oversampled-fine-grids.md`
 
 **PyAutoLens**
 
-- [PyAutoLens#775](https://github.com/PyAutoLabs/PyAutoLens/pull/775) — `active/setuptools_include_packages.md`
 - [PyAutoLens#766](https://github.com/PyAutoLabs/PyAutoLens/pull/766) — `complete/2026/10/jax-lapack-compatibility-repair.md`
 - [PyAutoLens#772](https://github.com/PyAutoLabs/PyAutoLens/pull/772) — `complete/2026/10/padded-single-image-recovery.md`
 - [PyAutoLens#768](https://github.com/PyAutoLabs/PyAutoLens/pull/768) — `complete/2026/10/point-image-pair-all-forward-grad-nan.md`
+- [PyAutoLens#775](https://github.com/PyAutoLabs/PyAutoLens/pull/775) — `complete/2026/10/setuptools-include-packages.md`
 
 **PyAutoNerves**
 
-- [PyAutoNerves#195](https://github.com/PyAutoLabs/PyAutoNerves/pull/195) — `active/setuptools_include_packages.md`
 - [PyAutoNerves#186](https://github.com/PyAutoLabs/PyAutoNerves/pull/186) — `complete/2026/10/board-navigation-nerves.md`
 - [PyAutoNerves#184](https://github.com/PyAutoLabs/PyAutoNerves/pull/184) — `complete/2026/10/jax-lapack-compatibility-repair.md`
+- [PyAutoNerves#195](https://github.com/PyAutoLabs/PyAutoNerves/pull/195) — `complete/2026/10/setuptools-include-packages.md`
 - [PyAutoNerves#192](https://github.com/PyAutoLabs/PyAutoNerves/pull/192) — `complete/2026/10/workspace-version-warning-outside-workspace.md`
 
 ## Human review
@@ -2294,8 +2278,6 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-07 | issued | <a href="active/setuptools_include_packages.md">setuptools package discovery picks up build/ (recursive…</a> |
-| 2026-10-07 | issued | <a href="active/repos_sync_check_root_routing_table.md">repos_sync.py check mode never checks the workspace-root AGENTS.md…</a> |
 | 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
 | 2026-10-07 | issued | <a href="active/community_pages.md">Community pages + merged "Community &amp; Contributing" sections across…</a> |
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
@@ -2304,13 +2286,13 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-10-02 | parked | <a href="parked.md#bootstrap-smoke-codex">bootstrap-smoke-codex</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
+| 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
+| 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
-| 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
 | 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
 | 2026-09-29 | filed | <a href="draft/maintenance/pyautomind/session_start_hook_copies_regen.md">Regenerate the 28 drifted <code>.claude/hooks/session-start.sh</code> copies…</a> |
@@ -2319,13 +2301,13 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/power_law_multipole_m1_singular_at_isothermal_slope.md">PowerLawMultipole with m=1 returns -inf / NaN deflections at slope…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
+| 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
+| 2026-09-26 | filed | <a href="draft/refactor/workspaces/abell_1201_local_cleanup.md">Repo cleanup: retire the Abell 1201 worktree and local raw data</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
-| 2026-09-26 | filed | <a href="draft/refactor/workspaces/abell_1201_local_cleanup.md">Repo cleanup: retire the Abell 1201 worktree and local raw data</a> |
 | 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
 | 2026-09-25 | filed | <a href="draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md">Keep caches off <code>$HOME</code> on HPC — phase 2 remainder: euclid pipeline…</a> |
 | 2026-09-24 | filed | <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> |
@@ -2334,13 +2316,13 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> |
+| 2026-09-18 | filed | <a href="draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md">The latent smoke's empty-block assertion names one cause…</a> |
+| 2026-09-18 | filed | <a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-18 | filed | <a href="draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md">The latent smoke's empty-block assertion names one cause…</a> |
-| 2026-09-18 | filed | <a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> |
@@ -2349,13 +2331,13 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-17 | filed | <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autofit/ep_analysis_level_compile_cache.md">EP: cache the compiled JAX likelihood on the Analysis across factor…</a> |
+| 2026-09-17 | filed | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> |
+| 2026-09-16 | filed | <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-17 | filed | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> |
-| 2026-09-16 | filed | <a href="draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md">euclid pipeline: <code>skip_fit_output</code> docs say it gates the whole of…</a> |
 | 2026-09-16 | filed | <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding…</a> |
 | 2026-09-16 | filed | <a href="draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> /…</a> |
 | 2026-09-16 | filed | <a href="draft/feature/autolens/coolest_pixel_grid_export.md">COOLEST: export MGE lens light and pixelized sources as pixel grids</a> |
@@ -2364,6 +2346,8 @@ The 50 newest things to happen to the work in hand, newest first — issued, par
 | 2026-09-15 | filed | <a href="draft/feature/pyautoheart/howto_real_settings_nightly.md">Nightly run of one HowTo tutorial per chapter at real settings</a> |
 | 2026-09-15 | filed | <a href="draft/docs/howtofit/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> |
 | 2026-09-14 | filed | <a href="draft/bug/autolens_workspace/start_here_multistart_compile_time.md">imaging/start_here: 26-minute XLA compile of the 48-start Prodigy…</a> |
+| 2026-09-14 | filed | <a href="draft/docs/autofit/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the…</a> |
+| 2026-09-14 | filed | <a href="draft/bug/autofit/mcmc_thin_zero_and_check_size_short_chain.md">Emcee/Zeus: thin can be 0, and check_size blows up on short chains</a> |
 
 </details>
 

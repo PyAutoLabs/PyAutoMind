@@ -1,3 +1,29 @@
+# setuptools package discovery picks up build/ — include allow-list
+
+Completed: 2026-10-07
+- issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/194
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/195
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/622
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1664
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/651
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/775
+- library-pr: https://github.com/PyAutoLabs/PyAutoCTI/pull/114
+- library-pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/81
+- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/195
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/622
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/651
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1664
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/775
+
+All seven library PRs merged 2026-10-07 in library order (Nerves → Array → Fit → Galaxy → Lens, then CTI, Reduce) under a human `/prm`.
+
+- `[tool.setuptools.packages.find]` in each repo's pyproject.toml now carries an `include = ["<pkg>*"]` allow-list (mirroring PyAutoHeart), keeping the existing excludes, so a local `pip install .` / `python -m build` no longer re-packages `build/` one level deeper.
+- The fix also removes the stray top-level `docs/`, `files/`, `paper/` and `scripts/` directories (105 files) that the published autofit wheel (2026.10.4.1) installed into site-packages: the old `exclude` patterns excluded only the top-level names, not their subpackages.
+- `build/` added to .gitignore where it was missing (PyAutoLens).
+- Nerves, Array, Fit, Galaxy and Lens are merged but unreleased (pending-release above); CTI and Reduce are outside the published set.
+
+## Original prompt
+
 # setuptools package discovery picks up build/ (recursive build/lib/build/lib… nesting)
 
 Type: bug
