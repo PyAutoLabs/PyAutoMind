@@ -115,3 +115,29 @@
   - PyAutoEyes: https://github.com/PyAutoLabs/PyAutoEyes/pull/23
   - PyAutoInsight: https://github.com/PyAutoLabs/PyAutoInsight/pull/11
   - PyAutoEars: https://github.com/PyAutoLabs/PyAutoEars/pull/21
+
+## setuptools-include-packages
+- issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/194
+- issued: 2026-10-07
+- session: Claude CLI (Opus 5.5 execution subagent); session ID unavailable
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/setuptools-include-packages
+- plan: approved 2026-10-07; judge tier, human /prm
+- repos:
+  - PyAutoNerves: feature/setuptools-include-packages (coordination authorised with dashboard-section-disclosures, pyproject.toml/.gitignore only)
+  - PyAutoArray: feature/setuptools-include-packages (coordination authorised with community-pages, pyproject.toml/.gitignore only)
+  - PyAutoFit: feature/setuptools-include-packages (coordination authorised with community-pages, pyproject.toml/.gitignore only)
+  - PyAutoGalaxy: feature/setuptools-include-packages (coordination authorised with community-pages, scribbler-wave2-radial-panels-regrid, pyproject.toml/.gitignore only)
+  - PyAutoLens: feature/setuptools-include-packages (coordination authorised with community-pages, scribbler-wave2-radial-panels-regrid, pyproject.toml/.gitignore only)
+  - PyAutoCTI: feature/setuptools-include-packages
+  - PyAutoReduce: feature/setuptools-include-packages
+
+## repos-sync-check-root-routing
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/480
+- issued: 2026-10-07
+- session: Claude CLI (Opus 5.5 execution subagent); session ID unavailable
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/repos-sync-check-root-routing
+- plan: approved 2026-10-07; judge tier, human /prm
+- repos:
+  - PyAutoMind: feature/repos-sync-check-root-routing (coordination authorised with dashboard-section-disclosures, scripts/repos_sync.py only)
