@@ -26,6 +26,7 @@ a sweep), mirroring the Heart ↔ vitals template. See the decision:
 - [feature/abandoned-spike](#featureabandoned-spike)
 - [euclid-sersic-variants](#euclid-sersic-variants)
 - [euclid-sersic-variants-analysis](#euclid-sersic-variants-analysis)
+- [euclid-vis-lp-inspection-bundle](#euclid-vis-lp-inspection-bundle)
 - [release-datasets/autolens-regenerable](#release-datasetsautolens-regenerable)
 - [release-datasets/autogalaxy-regenerable](#release-datasetsautogalaxy-regenerable)
 - [release-datasets-group-b/all-four](#release-datasets-group-ball-four)
@@ -133,6 +134,17 @@ One `##` block per item. Fields:
 - sweep-after: 2026-10-20
 - breaks-if-wrong: Loses the unmerged comparison script and tests if both this archive and the original source branch are deleted; recover from Gut during transit.
 - archive-ref: refs/heads/archive/condemned/euclid-sersic-variants-analysis on PyAutoGut origin @ 480c107cca8a66e85b12015ae6181005bac5fd72
+
+## euclid-vis-lp-inspection-bundle
+- type: branch
+- locator: euclid_strong_lens_modeling_pipeline `feature/vis-lp-inspection-bundle` (issue #102, closed as superseded; never pushed, no PR)
+- confidence: 1.0 (explicit user retirement)
+- reason: The user retired the vis_lp-only inspection-bundle task on 2026-10-07: its deliverable was produced by RAL job 350581 on 2026-09-23 and the final DR1 catalogue needs vis_lp + vis_pix. Useful parts are salvaged into draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md (Mind 4fdd1111).
+- merged: no
+- condemned: 2026-10-07
+- sweep-after: 2026-11-07
+- breaks-if-wrong: Loses the unpushed vis_lp-only bundle mode in build_inspect.py and friends (+133-test suite state) that the successor task salvages from; recover from Gut during transit.
+- archive-ref: refs/heads/archive/condemned/euclid-vis-lp-inspection-bundle on PyAutoGut origin @ c6b514d7a120825f9910ade4cfd7bc7db3416a5a
 
 ## release-datasets/autolens-regenerable
 - type: file
