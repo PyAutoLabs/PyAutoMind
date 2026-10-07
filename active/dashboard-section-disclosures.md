@@ -120,3 +120,13 @@ Merge Brain #491 first through human /prm. The 11 dependent drafts require that 
 After merging current upstream refreshes, 40 additional Chromium cases passed for Mind, Pulse, Eyes and Insight. Pulse/Insight offline checks passed again. Earlier validation and exact authorized RED reasons remain recorded above and in every PR body.
 
 Scientist remains deferred under the community-pages claim. The umbrella issue remains open until that consumer is migrated and all 13 published boards are verified. Worktrees are retained under `/home/jammy/Code/PyAutoLabs/.worktrees/dashboard-section-disclosures` for review and /prm.
+
+## Scientist migration — 2026-10-07
+
+The human released PyAutoScientist from `community-pages` (PyAutoScientist#48 merged 2026-10-07T10:05Z) and moved it under #490. Brain #491 and the 11 dependent PRs are merged and their 12 live boards verified.
+
+| Repository | PR | Commit | Review state |
+|---|---|---|---|
+| PyAutoScientist | https://github.com/PyAutoLabs/PyAutoScientist/pull/49 | `433538b3` | Ready for review |
+
+`scripts/organism_board.py` passes through `section_layout`. The slogan panel sits above the organ-board cards, and the verdict banner stays visible. Organ rows live in a collapsed "Organ dashboards" section (`#dashboards`, rows `#board-<organ>`). Its header shows `N of M reporting` and the Heart's own word, which is "unknown" when the Heart can't be read. Validation: 13 tests passed against Brain main, and 40 Chromium cases passed (4 fixtures × 5 widths × light/dark). Next: human /prm, then verify the published Scientist board and close #490.
