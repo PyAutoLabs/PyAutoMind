@@ -42,6 +42,8 @@
 
 - resume: Implementation validated across all thirteen boards; 3945 tests verified, 120 browser layout cases plus 14 clipboard checks. No source commits/PRs yet. Await explicit Heart YELLOW acknowledgement for shared-standards blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml. Then ship eleven owner PRs (Brain first), human /prm, verify publication. Evidence and PR drafts: worktree tmp/validation.md, tmp/pr-drafts/, tmp/browser/final-validation.json.
 
+- heart-ack: User invoked $prm in direct response to the disclosed Heart YELLOW warning on 2026-10-07; authorizes shipping and green-CI merge. Exact warning: manifest drift: shared-standards blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml. Canonical readiness re-read unchanged, no RED reasons. Release evidence stale; no release authorized.
+
 ## fork-context-darwin-test
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1661
 - issued: 2026-10-07
