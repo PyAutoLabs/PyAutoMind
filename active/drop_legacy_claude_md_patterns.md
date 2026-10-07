@@ -8,8 +8,9 @@ Difficulty: small
 Autonomy: supervised
 Consequence: judge
 Priority: low
-Status: draft — blocked-by: the PyAutoMind#482 `session_hook_propagate` removal wave (human-dispatched)
+Status: active — issued #494 (PyAutoMind#482 removal wave blocker cleared: root run 37627261984 + nested run 37631942996)
 Filed: 2026-10-07
+Issued: 2026-10-07
 
 - Split out of `absorb-claude-notes-agents-md` at close-out — the rest shipped in
   `complete/2026/10/absorb-claude-notes-agents-md.md`
