@@ -44,7 +44,7 @@ anything you could not verify.
 | [Human review](#human-review) (`draft/human_review/`) | 2 |
 | [Parked](#parked) (`parked.md`) | 5 |
 | [Planned](#planned) (`planned.md`) | 7 |
-| [Backlog](#backlog) (`draft/`) | 226 |
+| [Backlog](#backlog) (`draft/`) | 234 |
 
 > **No batch in flight.**
 
@@ -481,7 +481,7 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ## Backlog
 
-**226** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **46** of them belong to an epic and are listed only under [Epics](#epics) below.
+**234** filed prompts, not started. Each section is sorted most-pickable first (priority, then size). **47** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <details>
 <summary><b>bug</b> — 70</summary>
@@ -1310,6 +1310,219 @@ Use the start-dev skill. draft/feature/autoarray/adapt_linear_default_flip.md
 </details>
 
 <details>
+<summary><b>research</b> — 26</summary>
+
+<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon</a> — autofit · large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> — euclid · large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/research/autoarray/delaunay_research.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/delaunay_callback_persistent_cache_miss.md">Delaunay-family JAX modules never hit the persistent compilation cache</a> — autoarray · medium · safe · medium</summary>
+
+```
+Use the start-dev skill. draft/research/autoarray/delaunay_callback_persistent_cache_miss.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/pyautohands/git_docs.md">Use readthedocs or migrate to GitHub docs</a> — pyautohands · small · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/research/pyautohands/git_docs.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/pyautoreduce/acceptance_noise_rebaseline.md">Re-baseline the slacs0008 acceptance parity after the HAP-dedupe fix</a> — pyautoreduce · small · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/research/pyautoreduce/acceptance_noise_rebaseline.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md">Kernel-CDF bandwidth defaults — config-dependent quality, investigate adaptivity</a> — autoarray · medium · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/libraries/intel_macos_support_policy.md">Is Intel macOS a supported platform, and what is the numpy-only contract?</a> — libraries · medium · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/research/libraries/intel_macos_support_policy.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md">Checkerboard PSF-mismatch residual diagnostic — research + document + ingest papers</a> — pyautomemory · medium · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_assistant/free_agent_harness_evaluation.md">Record harness-smoke runs for free Codex, a named OpenCode configuration and Gemini…</a> — autolens_assistant · low-medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/research/autolens_assistant/free_agent_harness_evaluation.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms w.r.t</a> — autoarray · small · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/graphical_ep/transformed_message_declares_support.md">Should <code>TransformedMessage</code> carry its own support, rather than the prior?</a> — graphical_ep · medium · human-required · low</summary>
+
+```
+Use the start-dev skill. draft/research/graphical_ep/transformed_message_declares_support.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/pyautoreduce/legacy_flux_scale_parity.md">Chase the ~6% flux scale between PyAutoReduce and legacy SLACS reductions</a> — pyautoreduce · medium · safe · low</summary>
+
+```
+Use the start-dev skill. draft/research/pyautoreduce/legacy_flux_scale_parity.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md">PyAutoArray Delaunay interpolator's <code>pure_callback</code> vs vmap — minor efficiency follow-up</a> — autoarray · too-large · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/research/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_report.md">HPC campaign epic — research report and phased plan</a> — autofit</summary>
+
+```
+Use the start-dev skill. draft/research/autofit/hpc_campaign_epic_report.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_surveys/carbon.md">Energy and CO2e for PyAuto HPC campaigns: methods, inputs, worked estimate</a> — autofit</summary>
+
+```
+Use the start-dev skill. draft/research/autofit/hpc_campaign_epic_surveys/carbon.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_surveys/codebase.md">HPC campaign epic: what the codebase already has</a> — autofit</summary>
+
+```
+Use the start-dev skill. draft/research/autofit/hpc_campaign_epic_surveys/codebase.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_surveys/euclid_hpc.md">euclid_dr1 HPC glue + Slurm mechanics — research report</a> — autofit</summary>
+
+```
+Use the start-dev skill. draft/research/autofit/hpc_campaign_epic_surveys/euclid_hpc.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_surveys/prior_art.md">Prior art: status, right-sizing and failure triage for large HPC fit campaigns</a> — autofit</summary>
+
+```
+Use the start-dev skill. draft/research/autofit/hpc_campaign_epic_surveys/prior_art.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/search_extensibility_epic_report.md">Search extensibility epic: research report and phased plan</a> — autofit</summary>
+
+```
+Use the start-dev skill. draft/research/autofit/search_extensibility_epic_report.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/search_extensibility_epic_reviews/01_codex_gpt6_astra.md">**§1 Verdict**</a> — autofit</summary>
+
+```
+Use the start-dev skill. draft/research/autofit/search_extensibility_epic_reviews/01_codex_gpt6_astra.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/search_extensibility_epic_reviews/02_claude_fable_high.md">Independent review — search extensibility epic report (Fable, high effort)</a> — autofit</summary>
+
+```
+Use the start-dev skill. draft/research/autofit/search_extensibility_epic_reviews/02_claude_fable_high.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/search_extensibility_epic_surveys/01_search_architecture.md">01 — PyAutoFit non-linear search architecture audit</a> — autofit</summary>
+
+```
+Use the start-dev skill. draft/research/autofit/search_extensibility_epic_surveys/01_search_architecture.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/search_extensibility_epic_surveys/02_jax_interface.md">02 — JAX interface across PyAutoFit non-linear searches (read-only audit)</a> — autofit</summary>
+
+```
+Use the start-dev skill. draft/research/autofit/search_extensibility_epic_surveys/02_jax_interface.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/search_extensibility_epic_surveys/03_search_docs.md">03 — How non-linear searches are documented across PyAuto, and how…</a> — autofit</summary>
+
+```
+Use the start-dev skill. draft/research/autofit/search_extensibility_epic_surveys/03_search_docs.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/search_extensibility_epic_surveys/04_inference_profiling_infra.md">04 — Inference and profiling infrastructure survey for <code>autofit_inference</code> and <code>autofit_profiling</code></a> — autofit</summary>
+
+```
+Use the start-dev skill. draft/research/autofit/search_extensibility_epic_surveys/04_inference_profiling_infra.md
+```
+
+</details>
+
+</details>
+
+<details>
 <summary><b>maintenance</b> — 21</summary>
 
 <details><summary>📋 <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> — organs · medium · supervised · high</summary>
@@ -1476,163 +1689,6 @@ Use the start-dev skill. draft/maintenance/euclid/skip_fit_output_no_longer_gate
 
 ```
 Use the start-dev skill. draft/maintenance/pyautomind/session_start_hook_copies_regen.md
-```
-
-</details>
-
-</details>
-
-<details>
-<summary><b>research</b> — 19</summary>
-
-<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon</a> — autofit · large · human-required · high</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> — euclid · large · human-required · high</summary>
-
-```
-Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/research/autoarray/delaunay_research.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autoarray/delaunay_callback_persistent_cache_miss.md">Delaunay-family JAX modules never hit the persistent compilation cache</a> — autoarray · medium · safe · medium</summary>
-
-```
-Use the start-dev skill. draft/research/autoarray/delaunay_callback_persistent_cache_miss.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/pyautohands/git_docs.md">Use readthedocs or migrate to GitHub docs</a> — pyautohands · small · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/research/pyautohands/git_docs.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/pyautoreduce/acceptance_noise_rebaseline.md">Re-baseline the slacs0008 acceptance parity after the HAP-dedupe fix</a> — pyautoreduce · small · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/research/pyautoreduce/acceptance_noise_rebaseline.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md">Kernel-CDF bandwidth defaults — config-dependent quality, investigate adaptivity</a> — autoarray · medium · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/libraries/intel_macos_support_policy.md">Is Intel macOS a supported platform, and what is the numpy-only contract?</a> — libraries · medium · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/research/libraries/intel_macos_support_policy.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md">Checkerboard PSF-mismatch residual diagnostic — research + document + ingest papers</a> — pyautomemory · medium · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_assistant/free_agent_harness_evaluation.md">Record harness-smoke runs for free Codex, a named OpenCode configuration and Gemini…</a> — autolens_assistant · low-medium · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/research/autolens_assistant/free_agent_harness_evaluation.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms w.r.t</a> — autoarray · small · supervised · low</summary>
-
-```
-Use the start-dev skill. draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/graphical_ep/transformed_message_declares_support.md">Should <code>TransformedMessage</code> carry its own support, rather than the prior?</a> — graphical_ep · medium · human-required · low</summary>
-
-```
-Use the start-dev skill. draft/research/graphical_ep/transformed_message_declares_support.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/pyautoreduce/legacy_flux_scale_parity.md">Chase the ~6% flux scale between PyAutoReduce and legacy SLACS reductions</a> — pyautoreduce · medium · safe · low</summary>
-
-```
-Use the start-dev skill. draft/research/pyautoreduce/legacy_flux_scale_parity.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md">PyAutoArray Delaunay interpolator's <code>pure_callback</code> vs vmap — minor efficiency follow-up</a> — autoarray · too-large · supervised · low</summary>
-
-```
-Use the start-dev skill. draft/research/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_report.md">HPC campaign epic — research report and phased plan</a> — autofit</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/hpc_campaign_epic_report.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_surveys/carbon.md">Energy and CO2e for PyAuto HPC campaigns: methods, inputs, worked estimate</a> — autofit</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/hpc_campaign_epic_surveys/carbon.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_surveys/codebase.md">HPC campaign epic: what the codebase already has</a> — autofit</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/hpc_campaign_epic_surveys/codebase.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_surveys/euclid_hpc.md">euclid_dr1 HPC glue + Slurm mechanics — research report</a> — autofit</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/hpc_campaign_epic_surveys/euclid_hpc.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_surveys/prior_art.md">Prior art: status, right-sizing and failure triage for large HPC fit campaigns</a> — autofit</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/hpc_campaign_epic_surveys/prior_art.md
 ```
 
 </details>
@@ -2236,7 +2292,7 @@ Contract (the `start-bundle` skill is the full body):
 
 </details>
 
-_Showing 8 of 37 auto bundles — pin one in `bundles.md` to keep it on the page._
+_Showing 8 of 39 auto bundles — pin one in `bundles.md` to keep it on the page._
 
 ## Recent
 
@@ -2328,6 +2384,27 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 ## Epics
 
 Long-running multi-phase programmes. Each epic's 📋 prompt has the assistant read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
+
+<details>
+<summary><b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — 1 queued prompt(s), in order</summary>
+
+<details><summary>📋 <b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — ledger: `draft/research/autofit/search_extensibility_epic.md` — filed 2026-10-07; scoped (4 Opus surveys) and independently reviewed (Codex gpt-6-astra, Claude Fable high) the same day; all §5…</summary>
+
+```
+Continue the 'Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos' epic. Its canonical state lives in draft/research/autofit/search_extensibility_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: two dependency-ordered tracks. Track A (PyAutoFit framework): A0a(i) metadata conformance → A0b hygiene → A0a(ii) backend conformance; A0c repair PRs; A1 declare + gate (after the test-mode bypass) + declarative lazy registry + `run(ctx)` design note; A2 objective factory + fork rule + `run(ctx)` bridge (Drawer, Nautilus proofs); A3 RawSamples adapter + Checkpointer/resume split; A3b NSS onto Fitness + trace preflight + x64; A4 decompose NonLinearSearch + delete family bases (deprecated thin subclasses one release) + search-level seed with the legacy identifier table; A5 per-search migrations + generated consumers. Track B (repos): B1 registration (Mind repos.yaml → repos_sync, Heart excluded, Cortex row, Pulse `fit` @profiling-summary@2, Insight `fit` @inference-summary@1; adopts PyAutoPulse `tasks/autofit_profiling_bootstrap.md`), B2 harness + `gaussian_x3_blend`/`_separated` + pre-registered protocol + per-backend reference posteriors, B3 wave-1 PILOT (ranks nothing) + Insight registration + catalogue, B4a breakdown exporter + Pulse row + epic-1 bottleneck table / B4b EP baseline port, B5 consumers + scored wave 2 (50 seeds, RAL `ral` only, after A2 and A4). Human rulings 2026-10-07: RTD generic example stays DynestyStatic; SMC → weighted/evidence; deprecate `use_jax_jit`/`use_jax_vmap`; in-flight samplers target `run(ctx)` from A2. Start order: A0a(i), A0c and B1 registration first; issue ONE phase at a time through `start_dev`.
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/search_extensibility_epic.md">Search extensibility epic: a PyAutoFit search framework for many samplers, a unified…</a> — autofit · large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/research/autofit/search_extensibility_epic.md
+```
+
+</details>
+
+</details>
 
 <details>
 <summary><b>PyAutoEars — community listening, solicited feedback, dashboard and follow-through</b> — 1 queued prompt(s), in order</summary>
@@ -2834,7 +2911,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## Hygiene
 
-6 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
+13 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
 
 <details>
 <summary>Headerless prompts</summary>
@@ -2845,10 +2922,17 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 - `draft/research/autofit/hpc_campaign_epic_surveys/codebase.md`
 - `draft/research/autofit/hpc_campaign_epic_surveys/euclid_hpc.md`
 - `draft/research/autofit/hpc_campaign_epic_surveys/prior_art.md`
+- `draft/research/autofit/search_extensibility_epic_report.md`
+- `draft/research/autofit/search_extensibility_epic_reviews/01_codex_gpt6_astra.md`
+- `draft/research/autofit/search_extensibility_epic_reviews/02_claude_fable_high.md`
+- `draft/research/autofit/search_extensibility_epic_surveys/01_search_architecture.md`
+- `draft/research/autofit/search_extensibility_epic_surveys/02_jax_interface.md`
+- `draft/research/autofit/search_extensibility_epic_surveys/03_search_docs.md`
+- `draft/research/autofit/search_extensibility_epic_surveys/04_inference_profiling_infra.md`
 
 </details>
 
-63 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+71 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2893,11 +2977,11 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 - `draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md`
 - `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
 - `draft/test/workspaces/mesh_magnification_correctness.md`
-- _… and 23 more_
+- _… and 31 more_
 
 </details>
 
-65 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+66 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2964,6 +3048,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 - `draft/maintenance/howtofit/minimum_library_version_stale.md — unknown theme keyword(s): version-handshake, tutorials`
 - `draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md — unknown theme keyword(s): jax-grad`
 - `draft/research/autofit/hpc_campaign_epic.md — unknown theme keyword(s): hpc, euclid, carbon`
+- `draft/research/autofit/search_extensibility_epic.md — unknown theme keyword(s): searches, jax, documentation, inference`
 - `draft/research/autolens_assistant/free_agent_harness_evaluation.md — unknown theme keyword(s): assistant, support-policy`
 - `draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md — unknown theme keyword(s): euclid, hpc`
 - `draft/triage/autolens/jit_fit_from_is_vacuous.md — unknown theme keyword(s): testing, jax`
