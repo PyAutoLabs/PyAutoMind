@@ -75,10 +75,14 @@
 - author: @HRSAstro (external)
 - issued: 2026-10-07
 - session: Claude CLI (Opus 5.5 subagent, /start_dev); session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/workspace-version-warning-outside-workspace
 - repos:
   - PyAutoNerves: feature/workspace-version-warning-outside-workspace
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/192
+- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/192
+- heart-ack: manifest drift: shared-standards blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml; release validation stale: source moved since rehearsal (PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens) — acknowledged by the human 2026-10-07 at ship (pre-authorised)
+- resume: PR #192 open (judge tier). Human runs /prm; workspace impact (iii) none — every workspace root ships config/; only the two *_workspace_developer roots (no config/, no floor) go silent.
 
 ## sparse-noise-map-pooling
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/617
