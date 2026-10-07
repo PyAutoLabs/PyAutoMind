@@ -78,7 +78,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/490
 - started: 2026-10-07
 - session: Codex; session ID unavailable
-- status: awaiting-input
+- status: workspace-dev
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dashboard-section-disclosures
 - plan: approved 2026-10-07; judge tier, human /prm
 - deferred: PyAutoScientist until community-pages claim clears
@@ -96,3 +96,9 @@
   - PyAutoEars: feature/dashboard-section-disclosures
   - PyAutoMind: feature/dashboard-section-disclosures
 - checkpoint: implementation staged for 12 boards; Heart RED development override required before commit/push/PR; Scientist claim still deferred
+- heart-red-override:
+  - authorization: 2026-10-07 human “I authorize”, in response to the task-specific Brain #490 development ship request; commit/push/PR only, no merge/release
+  - reason: PyAutoFit: 5 commit(s) behind origin
+  - reason: PyAutoGalaxy: 12 commit(s) behind origin
+  - reason: PyAutoLens: 8 commit(s) behind origin
+  - gates: owner/renderer tests, 120 browser cases, Sphinx zero warnings, relevant lint/artifact/contract checks passed; detailed evidence on issue

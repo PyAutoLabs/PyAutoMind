@@ -84,3 +84,14 @@ No override has been granted. The earlier plan approval predates these reasons a
 Next: obtain a task-specific override for Brain #490, record it in the four required sinks, refresh branch/claim state, commit and open the prepared dependent PRs (Brain API first; consumer CI needs it). Human /prm remains the merge mode. Update generated artifacts after any intervening ledger changes. Resume Scientist only after community-pages releases its claim. After merges refresh the existing publishers and verify all 13 live boards before closing the initiative.
 
 No unrelated local files, science ledgers or active campaigns were edited. Canonical Mind has unrelated untracked research drafts; do not stage them.
+
+## Heart RED override — authorized 2026-10-07
+
+The human replied “I authorize” to the explicit development-only Heart RED override request for Brain #490. Authorized: commit, push and open the task PRs. Merge/release are not authorized.
+
+Exact current RED reasons:
+- PyAutoFit: 5 commit(s) behind origin
+- PyAutoGalaxy: 12 commit(s) behind origin
+- PyAutoLens: 8 commit(s) behind origin
+
+Validation: renderer and owner suites passed (Brain full-run failures resolved by focused reruns); 120 Chromium cases passed; Sphinx zero warnings; applicable Ruff, artifact and contract checks passed. Full evidence is recorded in the implementation handoff.
