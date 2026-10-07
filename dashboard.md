@@ -43,7 +43,7 @@ anything you could not verify.
 | [Start here](#start-here) | 24 |
 | [In flight](#in-flight) | 1 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 238 |
+| [Backlog](#backlog) | 239 |
 | [Pending release](#pending-release) | 0 |
 | [Recent](#recent) | 50 |
 | [Epics](#epics) | 16 |
@@ -333,7 +333,7 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ## Backlog
 
-**236** unstarted prompts and **2** awaiting human review. Unstarted prompts are sorted most-pickable first (priority, then size). **49** of them belong to an epic and are listed only under [Epics](#epics) below.
+**237** unstarted prompts and **2** awaiting human review. Unstarted prompts are sorted most-pickable first (priority, then size). **49** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <a id="human-review"></a>
 <details>
@@ -1425,7 +1425,7 @@ Use the start-dev skill. draft/research/autofit/search_extensibility_epic_survey
 </details>
 
 <details>
-<summary><b>maintenance</b> — 21</summary>
+<summary><b>maintenance</b> — 22</summary>
 
 <details><summary>📋 <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> — organs · medium · supervised · high</summary>
 
@@ -1455,6 +1455,14 @@ Use the start-dev skill. draft/maintenance/workspaces/sync_remaining_workspace_c
 
 ```
 Use the start-dev skill. draft/maintenance/howtofit/minimum_library_version_stale.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/pyautobrain/mind-dashboard-simplify.md">Simplify Mind dashboard text and section order</a> — pyautobrain · small · normal</summary>
+
+```
+Use the start-dev skill. draft/maintenance/pyautobrain/mind-dashboard-simplify.md
 ```
 
 </details>
@@ -2593,7 +2601,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 </details>
 
-72 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+73 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2638,7 +2646,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 - `draft/docs/howtolens/cluster_pixelized_source.md`
 - `draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md`
 - `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
-- _… and 32 more_
+- _… and 33 more_
 
 </details>
 
