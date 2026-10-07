@@ -51,7 +51,7 @@
   - pyautolabs.github.io: feature/community-pages
 - summary: per-library docs/general/community.md (Lens lists the SiriusFzh Visual Workbench), one merged "Community & Contributing" README section across 16 public repos + PyAutoScientist, front page community section moved to the bottom linking every project page. Wave 1 = 3 library PRs, wave 2 = README bundle.
 - tier: glance (auto-merge on green if Witness passes)
-- status: awaiting-merge — 13/18 MERGED 2026-10-07; autolens_profiling #391 waits on corrective #392 (dashboard theme re-render); 4 visualization PRs HELD until the next release by human decision (lychee 404 on the RTD community page: RTD builds red since 10-04, pyproject `autonerves>2026.10.4.1` exceeds PyPI 2026.10.4.1)
+- status: awaiting-merge — 13/18 MERGED 2026-10-07; 5 PRs HELD until the next release by human decision (autolens_profiling #391 after corrective #392 merged, plus the 4 *_visualization PRs): each fails only lychee 404 on the RTD community page — RTD builds red since 10-04 because pyproject `autonerves>2026.10.4.1` exceeds PyPI 2026.10.4.1; resume: after the autonerves release, re-run the 5 lints (gh run rerun --failed) and /prm them, then close out
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/774
 - prs:
   - PyAutoLens: https://github.com/PyAutoLabs/PyAutoLens/pull/774
