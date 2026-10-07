@@ -66,3 +66,16 @@
 - summary: per-library docs/general/community.md (Lens lists the SiriusFzh Visual Workbench), one merged "Community & Contributing" README section across 16 public repos + PyAutoScientist, front page community section moved to the bottom linking every project page. Wave 1 = 3 library PRs, wave 2 = README bundle.
 - tier: glance (auto-merge on green if Witness passes)
 - status: library-dev
+
+## closed-thread-followups
+- issue: https://github.com/PyAutoLabs/PyAutoEars/issues/19
+- issued: 2026-10-07
+- prompt: active/closed_thread_followups.md
+- session: Codex; session ID unavailable
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/closed-thread-followups
+- repos:
+  - PyAutoEars: feature/closed-thread-followups
+  - PyAutoBrain: feature/closed-thread-followups
+- status: workspace-dev
+- summary: Detect post-settlement external activity and triage actionable follow-ups without requiring contributor reopen permissions.
+- tier: judge; human /prm

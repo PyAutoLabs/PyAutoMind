@@ -1,5 +1,7 @@
 # Detect actionable follow-ups on settled community threads
 
+Issue: https://github.com/PyAutoLabs/PyAutoEars/issues/19
+Issued: 2026-10-07
 Type: bug
 Priority: high
 Difficulty: medium
