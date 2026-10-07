@@ -4,12 +4,12 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 2 in flight",
-  "updated": "2026-10-07T10:14:04Z",
+  "updated": "2026-10-07T10:17:48Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
       "severity": "yellow",
-      "text": "Community pages + merged \"Community & Contributing\" sections across PyAutoLabs \u2014 awaiting-merge \u2014 13/18 MERGED 2026-10-07; autolens_profiling #391 waits on corrective #392 (dashboard theme re-render); 4\u2026",
+      "text": "Community pages + merged \"Community & Contributing\" sections across PyAutoLabs \u2014 awaiting-merge \u2014 13/18 MERGED 2026-10-07; 5 PRs HELD until the next release by human decision (autolens_profiling #391 after\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/774",
       "prompt": "Use the start-dev skill. active/community_pages.md"
     },
