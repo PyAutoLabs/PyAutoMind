@@ -70,4 +70,4 @@ Soon, we are going to do a large scale inference run using PyAutoPulse and autol
 
 ## Status
 
-Not started; all report §5 questions ruled (§8). Next: B1 repo creation, then A0a(i)/A0c through `start_dev`.
+B1 human gate passed 2026-10-07 (both repos created, empty). A0a(i) prompt filed 2026-10-07 at `draft/test/autofit/search_conformance_metadata_layer.md`; start_dev plan drafted the same day and awaiting human approval (PyAutoFit claim still held by the merged community-pages task, PR #1663; release needed before registration). Survey findings folded into the A0a(i) plan: NUTS/SMC `search.json` round trip fails today (kind-string `inverse_mass_matrix`), the Emcee/NUTS/SMC construction mutation targets `output.search_internal` (invisible under the test config), only the jax family is absent on `unittest-nojax` (nautilus/zeus/emcee/dynesty stay installed), no capability attributes exist yet. Next after A0a(i): A0c and B1 registration, then A0b → A0a(ii).
