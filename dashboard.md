@@ -258,7 +258,7 @@ Use the start-dev skill. active/community_pages.md
 
 </details>
 
-<details><summary>📋 <a href="active/trim_repo_role_text.md">Trim the verbose <code>role</code> rows in repos.yaml…</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/486">issue #486</a> — issued 2026-10-07 — library-dev</summary>
+<details><summary>📋 <a href="active/trim_repo_role_text.md">Trim the verbose <code>role</code> rows in repos.yaml…</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/486">issue #486</a> — issued 2026-10-07 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/487">PyAutoMind#487</a></summary>
 
 ```
 Use the start-dev skill. active/trim_repo_role_text.md

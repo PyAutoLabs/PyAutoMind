@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 2 in flight",
-  "updated": "2026-10-07T14:26:48Z",
+  "updated": "2026-10-07T14:31:12Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "Community pages + merged \"Community & Contributing\" sections across PyAutoLabs \u2014 awaiting-merge \u2014 13/18 MERGED 2026-10-07; 5 PRs HELD until the next release by human decision (autolens_profiling #391 after\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/774",
       "prompt": "Use the start-dev skill. active/community_pages.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Trim the verbose `role` rows in repos.yaml\u2026 \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/pull/487",
+      "prompt": "Use the start-dev skill. active/trim_repo_role_text.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoLens PyAutoLens#775 \u2014 setuptools-include-packages",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/775",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoNerves PyAutoNerves#186 \u2014 board-navigation-nerves",
-      "url": "https://github.com/PyAutoLabs/PyAutoNerves/pull/186",
       "prompt": null
     }
   ]
