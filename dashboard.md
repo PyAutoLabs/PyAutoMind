@@ -260,7 +260,7 @@ Use the start-dev skill. active/community_pages.md
 
 </details>
 
-<details><summary>📋 <a href="active/dashboard-markdown-icons.md">Right-aligned dashboard Markdown icons</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/498">issue #498</a> — issued 2026-10-07 — library-dev</summary>
+<details><summary>📋 <a href="active/dashboard-markdown-icons.md">Right-aligned dashboard Markdown icons</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/498">issue #498</a> — issued 2026-10-07 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/499">PyAutoBrain#499</a></summary>
 
 ```
 Use the start-dev skill. active/dashboard-markdown-icons.md
