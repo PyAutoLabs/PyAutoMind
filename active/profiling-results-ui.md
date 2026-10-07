@@ -109,3 +109,19 @@ Split "Profiling evidence and scripts" in "Profiling Results" and "Profiling scr
 I think when we click "Delaunay" (or any button under imaging or another thing) it should open a new tab with all the
 above as a new page, theres a lot of info and we will ultimately want to compare run times across settings so want
 new tabs in my browser anyway!
+
+## Implementation handoff — 2026-10-07
+
+Implementation and local validation are complete on `feature/profiling-results-ui`, at `/home/jammy/Code/PyAutoLabs/tmp/worktrees/profiling-results-ui/PyAutoPulse`. Source changes remain uncommitted because the current Heart shipping gate is RED.
+
+193 Python tests, Chromium interactions/responsive checks, Ruff lint/format, offline contract validation, and `git diff --check` all passed. Full captured Delaunay/A100 preview verified with exact-commit shards. No raw results, captures or profiling producers changed. No independent review is claimed; this human-approved task does not require the autonomous review gate.
+
+The prepared PR body is `../pr-body.md`; logs are `../pulse-tests.log`, `../browser.log`, `../offline.log`, `../ruff.log` and `../preview.log`. Screenshots are `tmp/browser/delaunay-a100.png`, `model.png` and `landing.png` in the worktree.
+
+Heart RED reasons (verbatim):
+- PyAutoFit: 2 commit(s) behind origin
+- PyAutoArray: 2 commit(s) behind origin
+- PyAutoGalaxy: 2 commit(s) behind origin
+- PyAutoLens: 2 commit(s) behind origin
+
+Next step: obtain the live human development-only shipping override required by Brain AUTONOMY.md, record it in all four required sinks, then commit/push/open the prepared PR. Merge remains a separate human action.

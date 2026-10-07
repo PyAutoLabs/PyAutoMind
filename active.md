@@ -82,3 +82,6 @@
 - repos:
   - PyAutoPulse: feature/profiling-results-ui
 - plan: active/profiling-results-ui.md; user approved with go
+- checkpoint: implementation and validation complete; Heart RED blocks source commit/push/PR pending task-specific human override
+- validation: 193 Python tests; Chromium; Ruff; offline contract; git diff --check all passed
+- evidence: tmp/worktrees/profiling-results-ui/progress.md
