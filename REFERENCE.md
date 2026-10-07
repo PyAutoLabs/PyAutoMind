@@ -534,7 +534,7 @@ Each task is an H2 section:
 - library-pr: <url>               # optional until the PR exists; repeatable —
 - library-pr: <url>               # one line per PR, or one line of `<url>, <url>`
 - workspace-pr: <url>             # same shape, for the workspace half
-- pending-release: <lib>@<pr-url> # optional; a merged library PR not yet on PyPI
+- pending-release: <lib>@<pr-url> # optional; a merged PUBLISHED-library PR not yet on PyPI
 - release-gate: <lib>             # optional; this task waits on <lib>'s release
 - location: <cli-in-progress | ready-for-mobile | …>   # optional, used by /handoff
 - question: <issue-comment-url>   # optional; set when status is awaiting-input
@@ -610,24 +610,56 @@ The division of labour is deliberate and this is the whole of it:
 | **PyAutoHands** | the release that publishes it |
 | **Mind** | the *link* (`pending-release: <lib>@<pr-url>`) and the *gate* (`release-gate: <lib>`) — nothing else |
 
+- **Only the published set carries the chain.** `PUBLISHED_REPOS` in
+  `scripts/lifecycle.py` (defined once; it mirrors the `release` job matrix
+  of `PyAutoHands/.github/workflows/release.yml`, the job that uploads to PyPI
+  and pushes the bare `<version>` tag) is PyAutoNerves, PyAutoFit,
+  PyAutoArray, PyAutoGalaxy and PyAutoLens. An organ, a workspace, a
+  `_test`/`_developer`/HowTo/assistant/visualization/profiling repo is never
+  published, so no release could clear a link to it — such a PR gets neither
+  the label nor the line.
 - `ship_library` writes `pending-release: <lib>@<pr-url>` on the task's
-  `active.md` row when it opens a PR carrying the `pending-release` label.
-  `<lib>` is the library repo's name (`PyAutoArray`), the URL its PR.
+  `active.md` row when it opens a PR carrying the `pending-release` label —
+  i.e. only for a published-set repo. `<lib>` is the library repo's name
+  (`PyAutoArray`), the URL its PR; one link per line, nothing else on it.
+  There is no placeholder: a task with no published-library PR simply has no
+  `pending-release:` line (never `pending-release: none ...`).
 - `ship_workspace` writes `release-gate: <lib>` on a workspace task that is
   blocked behind that library's release. One line per library.
-- `/prm` close-out carries any uncleared `pending-release:` from the
-  `active.md` row into the completion record, so the obligation outlives the
-  row.
-- **`/review_release` step 5, the "Live run" branch, clears it** — that is the
+- `/prm` close-out carries any uncleared, well-formed `pending-release:` from
+  the `active.md` row into the completion record, so the obligation outlives
+  the row.
+- **`/review_release` step 6, the "Live run" branch, clears it** — that is the
   one step in the organism that establishes a release actually published. It
-  drops the `pending-release` label from the named PRs and deletes the
-  `pending-release:` lines from the `active.md` rows and `complete/` records
-  that name them. Nothing else may clear the key: a release that was dispatched
-  is not a release that published.
-- `lifecycle.py check` warns (never errors) on a `complete/` record whose
-  `pending-release:` is still uncleared after 30 days. A stale link is a
-  bookkeeping miss, not drift — the library may legitimately not have been
-  released yet.
+  runs one verb:
+
+  ```bash
+  python3 scripts/lifecycle.py clear-released --version <v>            # dry run
+  python3 scripts/lifecycle.py clear-released --version <v> --apply --remove-labels
+  ```
+
+  which asks GitHub which links the release tag *contains* (the PR's merge
+  commit is an ancestor of tag `<v>` — containment, never merge dates),
+  deletes those `pending-release:` lines from `active.md` and `complete/`,
+  drops a record's `release-gate: <lib>` once none of that library's links
+  remain, regenerates the dashboard, and — with `--remove-labels` — drops the
+  `pending-release` label from every released published-set PR, including
+  labelled PRs the ledger never linked. `--apply` and `--remove-labels` are
+  separate opt-ins; the default prints the plan and the `gh` commands. Nothing
+  else may clear the key: a release that was dispatched is not a release that
+  published. (PyAutoHands' release workflow also runs the label half after a
+  successful publish; the Mind half stays with this step.)
+- `lifecycle.py check` **errors** on a `pending-release:` value that is not
+  `<published-repo>@https://github.com/<owner>/<same-repo>/pull/<n>` — a
+  malformed line, a placeholder, or a non-published repo can never be
+  cleared, so it is drift.
+- `lifecycle.py check` **warns** (never errors) on a `complete/` record whose
+  well-formed `pending-release:` is still uncleared after
+  `PENDING_RELEASE_STALE_DAYS` (14) days. A stale link is a bookkeeping miss,
+  not drift — the library may legitimately not have been released yet.
+  `lifecycle.py check --network [<v>]` (opt-in; needs `gh`) adds a warning
+  for every link the latest (or named) release already contains, so a missed
+  sweep surfaces the same day instead of a fortnight later.
 
 The dashboard's **Pending release** section renders this **from the ledger
 only** — it never calls `gh` at render time, and it says so in its own blurb.

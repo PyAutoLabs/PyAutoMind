@@ -878,6 +878,8 @@ def test_check_reports_a_stale_pending_release_and_still_exits_zero(tmp_path,
             "- completed: 2026-01-01\n"
             f"- pending-release: Gadgets@{GADGET_PR}\n")
     _as_root(monkeypatch, tmp_path)
+    # The fictional repo must be in the published set, or the line is drift.
+    monkeypatch.setattr(lifecycle, "PUBLISHED_REPOS", ("Gadgets",))
     assert lifecycle.cmd_check(None) == 0
     out = capsys.readouterr().out
     assert "warning" in out and "pending-release" in out
