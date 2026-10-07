@@ -13,7 +13,7 @@ Priority: medium
 Consequence: judge
 Status: draft
 Filed: 2026-10-07
-Depends-on: linear_solver_phase3a_a100_parity.md (private base + parity rows)
+Depends-on: complete/2026/10/linear-solver-p3a-a100-parity.md (private base + parity rows; shipped autolens_profiling#394)
 Pulse task: https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/mge_nnls_fix_pyautoarray_571_slam_60.md
 
 ## Original request (chat 2026-10-07)
