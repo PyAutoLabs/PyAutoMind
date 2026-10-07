@@ -66,3 +66,12 @@ Suggested branch: feature/profiling-headline-metrics.
 - Additional stale reason: `release validation incomplete: no rehearsal for current source`.
 - User acknowledgement requested before source commit/push/PR per ship-library step 3. Source changes are currently uncommitted; no PR yet. Merge remains human `/prm`.
 - Next: after acknowledgement, record it in PR/task, commit/push the explicit seven changed files, open PR and update task to awaiting-merge. Do not include `tmp/` artifacts in the commit.
+
+## Ship acknowledgement — 2026-10-07
+
+The user explicitly acknowledged both exact YELLOW reasons listed above and authorized commit, push and PR creation. Merge remains human-controlled.
+
+- Commit: `87b7cd3` on `feature/profiling-headline-metrics` (PyAutoPulse).
+- Fast-forwarded to current main before committing; upstream changes were generated AGENTS.md role descriptions only, with no implementation or test changes.
+- GitHub returned Internal Server Error on two pushes and a GraphQL internal error on PR creation. Remote branch and PR were verified absent after these attempts.
+- The source changes are committed locally; seven intended files only, no scratch artifacts. Third push also failed with GitHub Internal Server Error at 2026-10-07T15:14:07Z. GitHub status still reported operational. Resume with a normal push of the existing commit, then use `tmp/pr-body.md` to open the PR. Existing user acknowledgement remains recorded; do not request it again for the same warnings.
