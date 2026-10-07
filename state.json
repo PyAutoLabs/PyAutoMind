@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 2 in flight",
-  "updated": "2026-10-07T06:45:06Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 1 in flight",
+  "updated": "2026-10-07T06:45:21Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "fnnls warm-start memo: per-key back-off on scattered evaluation streams \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/615",
-      "prompt": "Use the start-dev skill. active/nnls_memo_scattered_backoff.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -29,12 +23,6 @@
       "severity": "yellow",
       "text": "pending release: .github .github#16 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/.github/pull/16",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#615 \u2014 fnnls warm-start memo: per-key back-off on scattered evaluation streams",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/615",
       "prompt": null
     },
     {
@@ -125,6 +113,18 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#611 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/611",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#615 \u2014 nnls-memo-scattered-backoff",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/615",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#606 \u2014 Shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/606",
       "prompt": null
     }
   ]
