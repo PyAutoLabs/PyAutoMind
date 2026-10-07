@@ -44,3 +44,14 @@ Review-routing answer: Prepare a review handoff for Fable
 
 Continuation: ok continue
 Coordination answer: Coordinate in parallel
+
+## PR-open checkpoint — 2026-10-07
+
+PR: https://github.com/PyAutoLabs/PyAutoPulse/pull/23
+Head: 3cfb95b (feature/profiling-browser-completion)
+
+Implemented measurement availability overview, runtime defaults, axis/device/run selection, compatible filter persistence, populated exact-run panels and honest missing/unknown coverage. Related/shared/uncategorized findings retain applicability qualifications. Immutable capture URLs, same-commit hash validation, multi-instance navigation, inline v2 and older optional metadata are preserved. Independent review caught and verified correction of a porting regression in legacy batch/method grouping; the original grouping is retained and has new Chromium coverage.
+
+Validation: 192 Python tests; expanded real Chromium journeys over seven hash-preserved MGE/rectangular shards, missing memory, device filters, numeric identity, hazard scope, exact-link recovery, older metadata, inline v2, separate batch/method scales, corrupted shards/retry, async races, multi-project history, keyboard, responsive and dark-mode checks. Ruff (19 files), offline owner board regeneration and check pass. Independent Sol review CLEAN. No snapshots/receipts/campaign data or scientific evidence changes. Review surface/verdict/logs live in the task bundle.
+
+Heart YELLOW/stale reason set unchanged from the explicit human acknowledgement earlier in this session. Human explicitly authorized parallel coordination with dashboard-freshness (#486); this branch edits setup-browser assets/tests, leaving board/ingest/workflow source to that task. Regenerate dashboard from merged sources if generated HTML conflicts. Await human /prm after CI; published-site verification follows merge/deployment.

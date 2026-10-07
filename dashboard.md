@@ -258,7 +258,7 @@ Use the start-dev skill. active/dashboard_freshness.md
 
 </details>
 
-<details><summary>📋 <a href="active/profiling_browser_completion.md">Complete Pulse profiling browser navigation</a> — <a href="https://github.com/PyAutoLabs/PyAutoPulse/issues/21">issue #21</a> — issued 2026-10-07 — workspace-dev</summary>
+<details><summary>📋 <a href="active/profiling_browser_completion.md">Complete Pulse profiling browser navigation</a> — <a href="https://github.com/PyAutoLabs/PyAutoPulse/issues/21">issue #21</a> — issued 2026-10-07 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/23">PyAutoPulse#23</a></summary>
 
 ```
 Use the start-dev skill. active/profiling_browser_completion.md

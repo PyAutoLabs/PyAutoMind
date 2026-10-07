@@ -60,10 +60,14 @@
 - issued: 2026-10-07
 - prompt: active/profiling_browser_completion.md
 - session: Codex local
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/profiling-browser-completion
 - repos:
   - PyAutoPulse: feature/profiling-browser-completion
 - summary: Approved Phase C setup-browser parity, preserving captured provenance and scientific qualifications.
 - coordination: Human explicitly said "Coordinate in parallel" with dashboard-freshness (#486). This branch owns setup_browser.* and browser tests; freshness owns board/ingest/workflows. Re-render generated dashboard from merged sources when reconciling.
-- resume: Port measurement navigation and qualified hazards, test real data and multi-instance routes, then ship.
+- resume: Phase C PR #23 open at 3cfb95b; 192 Python tests and expanded Chromium pass; independent Sol CLEAN. Next human /prm when CI green; reconcile generated board if freshness branch merges first.
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/23
+- heart-yellow-reasons: manifest drift: shared-standards blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml
+- heart-stale-reasons: release validation stale: source moved since rehearsal (PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens)
+- heart-ack: Human's "I acknowledge, go" in this session covers the same exact reason set, repeated unchanged before Phase C shipping. Development PR only; human /prm for merge.

@@ -6,7 +6,7 @@ Repos: autolens_profiling, PyAutoPulse
 Consequence: judge
 Autonomy: human-required
 Filed: 2026-10-07
-Status: Phases A/B merged in #388/#390; Phase C pending
+Status: Phases A/B merged in #388/#390; Phase C Pulse PR #23 awaiting merge
 
 ## Phase progress
 
@@ -16,7 +16,8 @@ issue #387 is closed. Completion and validation:
 complete/2026/10/profiling-dashboard-completion.md.
 Phase B merged in https://github.com/PyAutoLabs/autolens_profiling/pull/390;
 issue #389 is closed. Completion: complete/2026/10/profiling-layout-completion.md.
-Phase C remains pending under the approved plan. No scientific campaign or
+Phase C is active/profiling_browser_completion.md (Pulse issue #21), implemented
+in https://github.com/PyAutoLabs/PyAutoPulse/pull/23 and awaiting human merge. No scientific campaign or
 Fable review occurred. Published-site verification follows deployment.
 
 ## Current direction
@@ -109,7 +110,10 @@ Suggested branch: feature/profiling-browser-completion.
 
 The former prompt-update dependency is merged and its claim released; see
 `complete/2026/10/dashboard-checkin-prompts.md` (Brain #484, Pulse #20).
-Recheck current claims before starting. Adapt pulse/setup_browser.{js,css,py} to Phase A's
+A newer dashboard-freshness claim (#486) overlaps Pulse; the human explicitly
+authorized parallel coordination. Phase C owns setup-browser assets/tests; freshness
+owns board/ingest/workflow source, with generated HTML reconciled by rendering.
+Adapt pulse/setup_browser.{js,css,py} to Phase A's
 overview, selection, populated-panel and hazard-discovery behavior, preserving
 captured commit/shard validation and unrelated check-in wording. Validate with
 Pulse's contract and real browser tests; regenerate via its own renderer.
