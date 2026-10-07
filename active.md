@@ -78,7 +78,9 @@
 - issued: 2026-10-07
 - prompt: active/trim_repo_role_text.md
 - session: Claude CLI (Fable 5.1 architect, Opus execution subagent, /start_dev); https://claude.ai/code/session_01QmiavJnNzmKb6EJmgYATfx
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/487
 - worktree: ~/Code/PyAutoLabs-wt/trim-repo-role-text
 - repos:
   - PyAutoMind: feature/trim-repo-role-text
+- heart-ack: manifest drift: workspace checkouts (manifest ↔ disk) — 2 mismatch(es) vs PyAutoMind/repos.yaml; release validation incomplete: no rehearsal for current source — acknowledged by the human 2026-10-07 at ship
