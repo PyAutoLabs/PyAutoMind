@@ -1,5 +1,18 @@
 # Active Tasks
 
+## search-conformance-metadata
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1666
+- issued: 2026-10-07
+- prompt: active/search_conformance_metadata_layer.md
+- epic: search-extensibility (phase A0a(i))
+- session: Claude CLI (Fable 5.1, /start_dev); https://claude.ai/code/session_01QJmrnXNQdq6HSruUt3MqVW
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/search-conformance-metadata
+- repos:
+  - PyAutoFit: feature/search-conformance-metadata
+- tier: judge (human /prm)
+- summary: tests-only metadata/serialization conformance suite over the 15 public searches; frozen golden identifier table; collects on unittest-nojax. Human ruling: identifiers stay the same, any change flagged first.
+
 ## community-pages
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/773
 - discussion: https://github.com/orgs/PyAutoLabs/discussions/32
@@ -12,7 +25,6 @@
 - repos:
   - PyAutoLens: feature/community-pages
   - PyAutoGalaxy: feature/community-pages
-  - PyAutoFit: feature/community-pages
   - PyAutoArray: feature/community-pages (coordination authorised with imshow-origin-lower-overlays, README only)
   - autolens_workspace: feature/community-pages (coordination authorised with scribbler-wave2, README only)
   - autogalaxy_workspace: feature/community-pages (coordination authorised with scribbler-wave2, README only)
@@ -27,6 +39,7 @@
   - autocti_visualization: feature/community-pages
   - autolens_profiling: feature/community-pages
   - pyautolabs.github.io: feature/community-pages
+- released: PyAutoFit released 2026-10-07 by human decision because its PR merged (https://github.com/PyAutoLabs/PyAutoFit/pull/1663, merged 2026-10-07T09:54Z; moved out of repos:/prs: so the claim guard stops matching it); now claimed by search-conformance-metadata
 - released: PyAutoScientist released 2026-10-07 by human decision because its PR merged (https://github.com/PyAutoLabs/PyAutoScientist/pull/48, merged 2026-10-07T10:05Z; moved out of prs: so the claim guard stops matching it); now claimed by dashboard-section-disclosures
 - summary: per-library docs/general/community.md (Lens lists the SiriusFzh Visual Workbench), one merged "Community & Contributing" README section across 16 public repos + PyAutoScientist, front page community section moved to the bottom linking every project page. Wave 1 = 3 library PRs, wave 2 = README bundle.
 - tier: glance (auto-merge on green if Witness passes)
@@ -35,7 +48,6 @@
 - prs:
   - PyAutoLens: https://github.com/PyAutoLabs/PyAutoLens/pull/774
   - PyAutoGalaxy: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/649
-  - PyAutoFit: https://github.com/PyAutoLabs/PyAutoFit/pull/1663
   - PyAutoArray: https://github.com/PyAutoLabs/PyAutoArray/pull/618
   - autolens_workspace: https://github.com/PyAutoLabs/autolens_workspace/pull/585
   - autogalaxy_workspace: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/256
