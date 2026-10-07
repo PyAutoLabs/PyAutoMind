@@ -77,11 +77,16 @@
 - issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/27
 - issued: 2026-10-07
 - session: Codex
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/tmp/worktrees/profiling-readable-metrics
 - repos:
   - PyAutoPulse: feature/profiling-readable-metrics
 - plan: active/profiling-readable-metrics.md; user approved with go
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/28
+- head: e1c11a4
+- validation: Ruff, 193 Python tests, Chromium and offline checks passed; captured A100 preview inspected
+- readiness: Heart YELLOW explicitly acknowledged by human on 2026-10-07; manifest drift (2 mismatches) and absent current-source release rehearsal
+- merge: human /prm; Consequence judge
 
 ## trim-repo-role-text
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/486

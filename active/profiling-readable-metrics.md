@@ -43,3 +43,10 @@ Primary/only edit repo: PyAutoPulse. Proposed branch: feature/profiling-readable
 - `scripts/misc/tooling/catalogue_adapters.py::DIRECT` maps `full_pipeline_single_jit` to `single_jit_block` and `total_step_by_step` to `component_total`.
 - `scripts/misc/tooling/build_dashboard.py` documents the single-JIT statistic as a ten-call block after the first call, potentially affected by A100 post-compile settling; `likelihood_runtime.py` divides total vmap batch time by batch size to produce `vmap.per_call`.
 - Existing reader treats all breakdown metrics as similar rows and title-cases raw keys; that is the presentation defect being corrected.
+
+## Implementation handoff — 2026-10-07
+
+PR: https://github.com/PyAutoLabs/PyAutoPulse/pull/28
+Head: e1c11a4
+
+All approved presentation changes implemented. Ruff, 193 Python tests, Chromium regressions and offline board checks pass. Captured A100 preview visually inspected. No producer, snapshot or scientific-library changes. Heart YELLOW (two manifest mismatches; no release rehearsal for current source) explicitly acknowledged by the user with “yes”. Await human `/prm`; issue stays open until merge.
