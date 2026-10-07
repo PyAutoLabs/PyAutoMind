@@ -1,5 +1,9 @@
 # Support vis_lp-only products in inspection bundles
 
+Status: withdrawn
+
+> **Superseded 2026-10-07 (human decision; never shipped).** Issue closed as superseded. The vis_lp inspection deliverable was produced by RAL job 350581 on 2026-09-23, and the final DR1 catalogue requires both vis_lp and vis_pix. Successor: `draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md` (Mind 4fdd1111). The unpushed implementation c6b514d is parked in PyAutoGut as `refs/heads/archive/condemned/euclid-vis-lp-inspection-bundle` (see `condemned.md`).
+
 Type: feature
 Lane: local-dev
 Autonomy: human-required

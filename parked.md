@@ -13,7 +13,6 @@ write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
 - [single-source-density-design](#single-source-density-design)
 - [prior-message-collapse-design](#prior-message-collapse-design)
 - [fixed-light-numba-s7](#fixed-light-numba-s7)
-- [catalogue-inspection-before-vis-pix](#catalogue-inspection-before-vis-pix)
 - [bootstrap-smoke-codex](#bootstrap-smoke-codex)
 - [colab-refinement-throughout](#colab-refinement-throughout)
 
@@ -48,17 +47,6 @@ write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
 - evidence: Phase5/5b/6 findings remain in completed records and merged profiling results.
 - resume: Only on explicit user request; rescope before issue/worktree/compute creation.
 - repos-none-claimed: No issue, worktree, source changes or jobs created for phase7.
-
-## catalogue-inspection-before-vis-pix
-- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/92
-- issued: 2026-09-19
-- parked: 2026-09-19 — issued but not in flight; registry placement reconciled with human approval.
-- repos-none-claimed: No worktree claimed by this entry; resume through start-dev.
-- prompt: active/catalogue_inspection_before_vis_pix.md
-- classification: workspace
-- suggested-branch: feature/catalogue-before-vis-pix
-- affected-repos:
-  - euclid_strong_lens_modeling_pipeline
 
 ## bootstrap-smoke-codex
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/144

@@ -1,5 +1,9 @@
 # Collect Euclid inspection images before vis_pix
 
+Status: withdrawn
+
+> **Superseded 2026-10-07 (human decision; never shipped).** Issue closed as superseded. The vis_lp inspection deliverable was produced by RAL job 350581 on 2026-09-23, and the final DR1 catalogue requires both vis_lp and vis_pix. Successor: `draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md` (Mind 4fdd1111). No branch or worktree was ever created.
+
 @euclid_strong_lens_modeling_pipeline
 
 Issued: 2026-09-19
