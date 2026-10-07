@@ -266,7 +266,7 @@ Use the start-dev skill. active/profiling-results-ui.md
 
 </details>
 
-<details><summary>📋 <a href="active/retire_nested_claude_md_pointers_and_gate_skip.md">Retire nested CLAUDE.md pointers and remove the temporary firewall-gate skip</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/484">issue #484</a> — issued 2026-10-07 — library-dev</summary>
+<details><summary>📋 <a href="active/retire_nested_claude_md_pointers_and_gate_skip.md">Retire nested CLAUDE.md pointers and remove the temporary firewall-gate skip</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/484">issue #484</a> — issued 2026-10-07 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/485">PyAutoMind#485</a></summary>
 
 ```
 Use the start-dev skill. active/retire_nested_claude_md_pointers_and_gate_skip.md
