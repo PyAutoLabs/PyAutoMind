@@ -1,3 +1,22 @@
+# Profiling layout completion — Phase B
+
+Merged: 2026-10-07
+PR: https://github.com/PyAutoLabs/autolens_profiling/pull/390
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/389 (closed)
+Merge commit: 16471e3f6cb7acc1ebe8392af3934821bc254dea
+
+Retired 80 forwarding wrappers and three empty package markers from obsolete measurement-first directories. Historical aliases remain in the route registry and resolve without legacy files; canonical targets are required. Removed the unused wrapper executor and migrated the remaining test loader. Model-specific hazard guidance now lives beside MGE/rectangular imaging likelihoods; parallel/streaming guides moved beside their canonical models. Updated current commands, navigation links and 29 HPC comment/display labels without changing execution, resource or output commands.
+
+All 80 canonical scientific bodies, route identities, registry, baseline configuration and archived scientific results are unchanged. The only results/ edit is a README navigation link. No scientific jobs were dispatched. Brain profiling and assistant callers already use canonical routes.
+
+Validation: full Python suite 1136 passed, 6 skipped; 18 focused checks repeated after empty-marker cleanup. Seven import smokes, runtime/latent dry sweeps, 47 wall contracts across 181 submits, shell syntax, Ruff (265 Python files), catalogue/Pulse contract, dashboard/README/wiki idempotence and results-layout checks passed. Independent Sol review CLEAN. Exact-head GitHub CI completed successfully: all 36 steps passed, merge state CLEAN. Human authorized merge with /prm after previously acknowledging unchanged Heart YELLOW/stale reasons.
+
+Review logs/surface/verdict archived and hash-verified in .worktree-archives/profiling-layout-completion-20261007 under the workspace. Task claim released and worktree cleaned during /prm closeout.
+
+Phase C (Pulse browser parity) remains approved and pending in draft/feature/autolens_profiling/profiling_redesign_completion.md. This record closes only Phase B.
+
+## Original prompt
+
 # Finish profiling source and hazard layout consolidation
 
 Type: refactor

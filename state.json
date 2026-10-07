@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-07T07:46:02Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
+  "updated": "2026-10-07T07:50:55Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Finish profiling source and hazard layout consolidation \u2014 workspace-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/390",
-      "prompt": "Use the start-dev skill. active/profiling_layout_completion.md"
-    },
     {
       "severity": "yellow",
       "text": "PyAutoFit: add a regression test for `fork_context()` not fixing the multiprocessing start\u2026 \u2014 library-shipped, awaiting-merge",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#608 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/608",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#611 \u2014 Shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/611",
       "prompt": null
     }
   ]

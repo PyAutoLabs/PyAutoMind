@@ -6,7 +6,7 @@ Repos: autolens_profiling, PyAutoPulse
 Consequence: judge
 Autonomy: human-required
 Filed: 2026-10-07
-Status: Phase A merged in #388; Phase B PR #390 awaiting merge; Phase C pending
+Status: Phases A/B merged in #388/#390; Phase C pending
 
 ## Phase progress
 
@@ -14,8 +14,8 @@ Human approved the concrete plan with "ok go". Phase A merged in
 https://github.com/PyAutoLabs/autolens_profiling/pull/388 on 2026-10-07;
 issue #387 is closed. Completion and validation:
 complete/2026/10/profiling-dashboard-completion.md.
-Phase B is active/profiling_layout_completion.md (issue #389), implemented in
-https://github.com/PyAutoLabs/autolens_profiling/pull/390 and awaiting human merge.
+Phase B merged in https://github.com/PyAutoLabs/autolens_profiling/pull/390;
+issue #389 is closed. Completion: complete/2026/10/profiling-layout-completion.md.
 Phase C remains pending under the approved plan. No scientific campaign or
 Fable review occurred. Published-site verification follows deployment.
 
@@ -87,7 +87,7 @@ Completed: complete/2026/10/profiling-dashboard-completion.md (PR #388).
 
 ### Phase B: finish source/documentation consolidation (autolens_profiling)
 
-Suggested branch: feature/profiling-layout-completion; follows Phase A.
+Completed: complete/2026/10/profiling-layout-completion.md (PR #390).
 
 1. Audit all 80 legacy routes and active callers in project scripts, HPC, CI,
    tests, README/wiki, Brain profiling and assistant lookup. Preserve historical
