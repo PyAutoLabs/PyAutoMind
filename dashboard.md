@@ -250,7 +250,7 @@ Use the start-dev skill. draft/refactor/pyautofit/remove_eden_packaging_tooling.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/imshow_origin_lower_overlays.md"><code>imshow_origin: lower</code> mirrors the raster but not the vector overlays in <code>plot_array</code></a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/565">issue #565</a> — issued 2026-10-07 — library-dev</summary>
+<details><summary>📋 <a href="active/imshow_origin_lower_overlays.md"><code>imshow_origin: lower</code> mirrors the raster but not the vector overlays in <code>plot_array</code></a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/565">issue #565</a> — issued 2026-10-07 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/616">PyAutoArray#616</a></summary>
 
 ```
 Use the start-dev skill. active/imshow_origin_lower_overlays.md
