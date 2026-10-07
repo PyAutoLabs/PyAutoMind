@@ -8,12 +8,15 @@
 - issued: 2026-10-07
 - prompt: active/imshow_origin_lower_overlays.md
 - session: Claude CLI (Fable 5.1, /community → /start_dev); session ID unavailable
-- status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/imshow-origin-lower-overlays
 - repos:
-  - PyAutoArray: feature/imshow-origin-lower-overlays
+  - PyAutoArray: feature/imshow-origin-lower-overlays (PR #616, 93961c68)
 - summary: plot_array vector overlays ignore imshow_origin "lower" (raster mirrored, overlays not). Fix: reflect overlay y about the extent midpoint, regression test from the Discussion.
-- resume: Plan approved 2026-10-07 and posted on #565. Next: implement in the worktree (Opus), ship_library, glance auto-merge on green, then reply on Discussion #14 and mark answer once released.
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/616
+- heart-yellow-reasons: manifest drift: shared-standards blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml; release validation stale: source moved since rehearsal (PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens)
+- heart-ack: Human's "I acknowledge" (2026-10-07, Claude CLI /community session) covers exactly that reason set for this ship. Development PR only.
+- resume: PR #616 open at 93961c68 (glance, auto-merge on green approved with the plan). Next: judge CI, /prm close-out, then draft the Discussion #14 reply for ClarkGuilty (human approves before posting) and mark it as answer once released.
 
 ## scribbler-wave2-radial-panels-regrid
 - discussion: https://github.com/orgs/PyAutoLabs/discussions/23
