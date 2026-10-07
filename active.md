@@ -1,5 +1,23 @@
 # Active Tasks
 
+## search-ext-b1-registration
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/492
+- issued: 2026-10-07
+- prompt: active/search_extensibility_b1_registration.md
+- epic: search-extensibility (phase B1 registration)
+- session: Claude CLI (Fable 5.1, /start_dev); https://claude.ai/code/session_01QJmrnXNQdq6HSruUt3MqVW
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/search-ext-b1-registration
+- repos:
+  - autofit_inference: feature/search-ext-b1-registration
+  - autofit_profiling: feature/search-ext-b1-registration
+  - PyAutoMind: feature/search-ext-b1-registration (coordination authorised by the human 2026-10-07 with mind-dashboard-simplify #491: repos.yaml, ROUTING.md, epics.md only)
+  - PyAutoHeart: feature/search-ext-b1-registration
+  - PyAutoCortex: feature/search-ext-b1-registration
+  - PyAutoPulse: feature/search-ext-b1-registration
+- tier: judge (human /prm)
+- summary: minimal lint-green skeletons for both new fit repos; Mind repos.yaml rows + repos_sync --write; Heart excluded; Cortex planned row; Pulse task adoption (no registry rows at B1); org profile rows; RAL clones. Clears Heart manifest-drift YELLOW.
+
 ## search-conformance-metadata
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1666
 - issued: 2026-10-07

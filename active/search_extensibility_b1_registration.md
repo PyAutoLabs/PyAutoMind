@@ -17,8 +17,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: high
 Epic: search-extensibility
-Status: draft
+Status: active
 Filed: 2026-10-07
+Issued: 2026-10-07
 
 Phase B1 (registration half) of the search-extensibility epic
 (`draft/research/autofit/search_extensibility_epic.md`; plan in
