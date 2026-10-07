@@ -43,7 +43,7 @@ anything you could not verify.
 | [Start here](#start-here) | 24 |
 | [In flight](#in-flight) | 1 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 238 |
+| [Backlog](#backlog) | 239 |
 | [Pending release](#pending-release) | 5 |
 | [Recent](#recent) | 50 |
 | [Epics](#epics) | 16 |
@@ -366,7 +366,7 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ## Backlog
 
-**236** unstarted prompts and **2** awaiting human review. Unstarted prompts are sorted most-pickable first (priority, then size). **48** of them belong to an epic and are listed only under [Epics](#epics) below.
+**237** unstarted prompts and **2** awaiting human review. Unstarted prompts are sorted most-pickable first (priority, then size). **48** of them belong to an epic and are listed only under [Epics](#epics) below.
 
 <a id="human-review"></a>
 <details>
@@ -984,7 +984,7 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>feature</b> — 33</summary>
+<summary><b>feature</b> — 34</summary>
 
 <details><summary>📋 <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding against the raw maximum finds…</a> — autoarray · small · supervised · medium</summary>
 
@@ -1246,6 +1246,14 @@ Use the start-dev skill. draft/feature/autoarray/adapt_linear_default_flip.md
 
 ```
 Use the start-dev skill. draft/feature/autofit/results_library_epic_report.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/dashboard-markdown-icons.md">Right-aligned dashboard Markdown icons</a> — pyautobrain</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/dashboard-markdown-icons.md
 ```
 
 </details>
@@ -2605,12 +2613,13 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## Hygiene
 
-14 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
+15 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
 
 <details>
 <summary>Headerless prompts</summary>
 
 - `draft/feature/autofit/results_library_epic_report.md`
+- `draft/feature/pyautobrain/dashboard-markdown-icons.md`
 - `draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md`
 - `draft/research/autofit/hpc_campaign_epic_report.md`
 - `draft/research/autofit/hpc_campaign_epic_surveys/carbon.md`
@@ -2627,7 +2636,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 </details>
 
-73 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+74 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2649,6 +2658,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 - `draft/feature/euclid/euclid_dr1_prep_epic.md`
 - `draft/feature/jax_substructure/5_prng_key_vmap_noise.md`
 - `draft/feature/jax_substructure/6_deflection_equivalence_test.md`
+- `draft/feature/pyautobrain/dashboard-markdown-icons.md`
 - `draft/feature/pyautoears/community_organ_birth.md`
 - `draft/feature/pyautoeyes/group_cluster_gallery.md`
 - `draft/feature/pyautoeyes/multi_galaxy_gallery.md`
@@ -2671,8 +2681,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 - `draft/refactor/workspaces/abell_1201_local_cleanup.md`
 - `draft/docs/autolens/split_lensing_regimes.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
-- `draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md`
-- _… and 33 more_
+- _… and 34 more_
 
 </details>
 
