@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 2 in flight",
-  "updated": "2026-10-07T17:50:11Z",
+  "updated": "2026-10-07T17:58:36Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -32,100 +32,100 @@
       "prompt": "Walk me through the completed work described in `draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md` so I can sign it off.\n\n1. Read the prompt: what was asked, and what it claims shipped.\n2. Find the evidence \u2014 the merged PR(s), the commits, the `complete/` record \u2014\n   and read the actual diff, not the description of it.\n3. Report what changed, what it does NOT cover, and anything you would have\n   done differently. Call out behaviour changes and test gaps explicitly.\n\nChange nothing while reviewing. When I sign it off, retire the prompt from the\nPyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date\n<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and\nregenerate the dashboard. If I do not sign it off, file the follow-up with\n`/intake` instead.\n"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#616 \u2014 What was completed",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/616",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: Fix KNN neighbor search for a partial final point block",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md",
+      "prompt": "Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#612 \u2014 jax-lapack-compatibility-repair",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/612",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md",
+      "prompt": "Use the start-dev skill. draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#615 \u2014 nnls-memo-scattered-backoff",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/615",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: SED chain waveband fit can spin forever in Nautilus exploration\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md",
+      "prompt": "Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#622 \u2014 setuptools-include-packages",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/622",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: The reusable smoke workflow's relevance gate skips the `unit` / `slow` pytest\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md",
+      "prompt": "Use the start-dev skill. draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#619 \u2014 sparse-noise-map-pooling",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/619",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: arXiv's Fastly edge refuses `urllib.request` outright \u2014 retrying a 406 only delays\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md",
+      "prompt": "Use the start-dev skill. draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#621 \u2014 sparse-terms-oversampled-fine-grids",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/621",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: `@PyAutoArray` rectangular mesh mapper: mirrored row weights + round-off-dependent cell assignment",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md",
+      "prompt": "Use the start-dev skill. draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1662 \u2014 fork-context-darwin-test",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1662",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
+      "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1659 \u2014 jax-lapack-compatibility-repair",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1659",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: Reduce the organism's per-session and per-task token load by half",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/organs/reduce_session_token_load.md",
+      "prompt": "Use the start-dev skill. draft/maintenance/organs/reduce_session_token_load.md"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1664 \u2014 setuptools-include-packages",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1664",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: Local smoke env creation fails: smoke_install.sh flat pip chain vs the grouped\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md",
+      "prompt": "Use the start-dev skill. draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#647 \u2014 jax-lapack-compatibility-repair",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/647",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: Physical model check when speeding up smoke tests",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md",
+      "prompt": "Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#651 \u2014 setuptools-include-packages",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/651",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: Fix Sibson interpolation at internal edges",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md",
+      "prompt": "Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#650 \u2014 sparse-terms-oversampled-fine-grids",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/650",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit/hpc_campaign_epic.md",
+      "prompt": "Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#766 \u2014 jax-lapack-compatibility-repair",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/766",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: Guard every workspace script against untimed network downloads",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace/no_untimed_network_downloads_check.md",
+      "prompt": "Use the start-dev skill. draft/test/autolens_workspace/no_untimed_network_downloads_check.md"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#772 \u2014 padded-single-image-recovery",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/772",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: Smoke profile cannot see a missing sampler dependency \u2014 add an import\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautohands/smoke_profile_cannot_see_a_missing_sampler.md",
+      "prompt": "Use the start-dev skill. draft/feature/pyautohands/smoke_profile_cannot_see_a_missing_sampler.md"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#768 \u2014 point-image-pair-all-forward-grad-nan",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/768",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: Cache `autonerves` config parsing \u2014 308 YAML files parsed per script run",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/autonerves/config_yaml_parse_cache.md",
+      "prompt": "Use the start-dev skill. draft/refactor/autonerves/config_yaml_parse_cache.md"
     },
     {
-      "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#775 \u2014 setuptools-include-packages",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/775",
-      "prompt": null
+      "severity": "info",
+      "text": "pick: Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md",
+      "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md"
     }
   ]
 }

@@ -44,7 +44,7 @@ anything you could not verify.
 | [In flight](#in-flight) | 2 |
 | [Planned](#planned) | 7 |
 | [Backlog](#backlog) | 238 |
-| [Pending release](#pending-release) | 5 |
+| [Pending release](#pending-release) | 0 |
 | [Recent](#recent) | 50 |
 | [Epics](#epics) | 16 |
 
@@ -272,40 +272,7 @@ Use the start-dev skill. active/dashboard-markdown-icons.md
 
 Library PRs the ledger records as merged but not yet released, and the in-flight tasks waiting on each. Rendered from the ledger — `active.md` and the `complete/` records — never a live GitHub query; the Brain board's `pending-release` search is the fresh view, this is what the Mind believes.
 
-**PyAutoArray**
-
-- [PyAutoArray#616](https://github.com/PyAutoLabs/PyAutoArray/pull/616) — `complete/2026/10/imshow-origin-lower-overlays.md`
-- [PyAutoArray#612](https://github.com/PyAutoLabs/PyAutoArray/pull/612) — `complete/2026/10/jax-lapack-compatibility-repair.md`
-- [PyAutoArray#615](https://github.com/PyAutoLabs/PyAutoArray/pull/615) — `complete/2026/10/nnls-memo-scattered-backoff.md`
-- [PyAutoArray#622](https://github.com/PyAutoLabs/PyAutoArray/pull/622) — `complete/2026/10/setuptools-include-packages.md`
-- [PyAutoArray#619](https://github.com/PyAutoLabs/PyAutoArray/pull/619) — `complete/2026/10/sparse-noise-map-pooling.md`
-- [PyAutoArray#621](https://github.com/PyAutoLabs/PyAutoArray/pull/621) — `complete/2026/10/sparse-terms-oversampled-fine-grids.md`
-
-**PyAutoFit**
-
-- [PyAutoFit#1662](https://github.com/PyAutoLabs/PyAutoFit/pull/1662) — `complete/2026/10/fork-context-darwin-test.md`
-- [PyAutoFit#1659](https://github.com/PyAutoLabs/PyAutoFit/pull/1659) — `complete/2026/10/jax-lapack-compatibility-repair.md`
-- [PyAutoFit#1664](https://github.com/PyAutoLabs/PyAutoFit/pull/1664) — `complete/2026/10/setuptools-include-packages.md`
-
-**PyAutoGalaxy**
-
-- [PyAutoGalaxy#647](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/647) — `complete/2026/10/jax-lapack-compatibility-repair.md`
-- [PyAutoGalaxy#651](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/651) — `complete/2026/10/setuptools-include-packages.md`
-- [PyAutoGalaxy#650](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/650) — `complete/2026/10/sparse-terms-oversampled-fine-grids.md`
-
-**PyAutoLens**
-
-- [PyAutoLens#766](https://github.com/PyAutoLabs/PyAutoLens/pull/766) — `complete/2026/10/jax-lapack-compatibility-repair.md`
-- [PyAutoLens#772](https://github.com/PyAutoLabs/PyAutoLens/pull/772) — `complete/2026/10/padded-single-image-recovery.md`
-- [PyAutoLens#768](https://github.com/PyAutoLabs/PyAutoLens/pull/768) — `complete/2026/10/point-image-pair-all-forward-grad-nan.md`
-- [PyAutoLens#775](https://github.com/PyAutoLabs/PyAutoLens/pull/775) — `complete/2026/10/setuptools-include-packages.md`
-
-**PyAutoNerves**
-
-- [PyAutoNerves#186](https://github.com/PyAutoLabs/PyAutoNerves/pull/186) — `complete/2026/10/board-navigation-nerves.md`
-- [PyAutoNerves#184](https://github.com/PyAutoLabs/PyAutoNerves/pull/184) — `complete/2026/10/jax-lapack-compatibility-repair.md`
-- [PyAutoNerves#195](https://github.com/PyAutoLabs/PyAutoNerves/pull/195) — `complete/2026/10/setuptools-include-packages.md`
-- [PyAutoNerves#192](https://github.com/PyAutoLabs/PyAutoNerves/pull/192) — `complete/2026/10/workspace-version-warning-outside-workspace.md`
+_(nothing pending release)_
 
 ## Planned
 
