@@ -16,7 +16,6 @@ Follow-ups (not merge gates, on #613): real Nautilus-replay witness (e.g. the
 autolens_profiling#332 ALMA Delaunay case); autolens_profiling harnesses should
 call nnls_memo.memo_clear() instead of clearing the private memo dict.
 
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/615
 
 ## Original prompt
 

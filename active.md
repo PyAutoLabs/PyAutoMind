@@ -18,8 +18,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/254
 - summary: Wave 2 of the Scribbler proposal (radial-subtracted side-by-side panels, cross-grid mask regrid, white/black brushes, arcsinh default). Wave 1 (#635, docs #579/#251) is released in autogalaxy 2026.10.2.1.
 - resume: Library half merged (PyAutoGalaxy#641, PyAutoLens#770) on 2026-10-07, unreleased. Next: a release carrying both, then approve fork CI on autolens_workspace#583 / autogalaxy_workspace#254, mark ready, human /prm. Workspace prose describes white/black brushes, so neither docs PR may merge before the release.
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/641
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/770
 
 ## community-pages
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/773
@@ -51,7 +49,7 @@
 - released: PyAutoScientist released 2026-10-07 by human decision because its PR merged (https://github.com/PyAutoLabs/PyAutoScientist/pull/48, merged 2026-10-07T10:05Z; moved out of prs: so the claim guard stops matching it); now claimed by dashboard-section-disclosures
 - summary: per-library docs/general/community.md (Lens lists the SiriusFzh Visual Workbench), one merged "Community & Contributing" README section across 16 public repos + PyAutoScientist, front page community section moved to the bottom linking every project page. Wave 1 = 3 library PRs, wave 2 = README bundle.
 - tier: glance (auto-merge on green if Witness passes)
-- status: awaiting-merge — 13/18 MERGED 2026-10-07; 5 PRs HELD until the next release by human decision (autolens_profiling #391 after corrective #392 merged, plus the 4 *_visualization PRs): each fails only lychee 404 on the RTD community page — RTD builds red since 10-04 because pyproject `autonerves>2026.10.4.1` exceeds PyPI 2026.10.4.1; resume: after the autonerves release, re-run the 5 lints (gh run rerun --failed) and /prm them, then close out
+- status: awaiting-merge — 17/18 MERGED 2026-10-07 (the four *_visualization#3 PRs merged 18:07Z after release 2026.10.7.1 turned RTD green and their lychee lints re-ran clean); 1 PR HELD: autolens_profiling #391 — lint now fails only `build_dashboard.py --check` (dashboard/index.html STALE), a pre-existing main staleness (main fails the same check), not the PR; resume: re-render the profiling dashboard on main (or ack the check), re-run #391 lint, /prm it, then close out
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/774
 - prs:
   - PyAutoLens: https://github.com/PyAutoLabs/PyAutoLens/pull/774
@@ -78,13 +76,17 @@
 - issued: 2026-10-07
 - prompt: active/dashboard-markdown-icons.md
 - session: Codex GPT-6; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dashboard-markdown-icons
 - repos:
   - PyAutoBrain: feature/dashboard-markdown-icons
   - PyAutoMind: feature/dashboard-markdown-icons
 - summary: Approved right-aligned Markdown source icons in shared dashboard layout. Human merge.
-- resume: Implementation validated; Heart warnings acknowledged by the human. Shipping Brain and dependent Mind PRs; human merge.
+- resume: Brain #499 MERGED after all 3 CI jobs passed. Mind #490 remains open: Dashboard Refresh failed against the old Brain main; privacy passed, template drift skipped. Awaiting human authorization to rerun refresh now the upstream is merged; prm forbids automatic reruns on red. Keep task/worktree until Mind merges.
 - validation: 271 focused checks passed; 1270 Brain and 695 Mind full-suite tests passed, each remaining environment-sensitive fixture passed with worktree overrides removed; 40 browser cases passed.
 - evidence: /home/jammy/Code/PyAutoLabs/.worktrees/dashboard-markdown-icons/evidence/handoff.md
 - heart-ack: manifest drift: workspace checkouts (manifest ↔ disk) — 3 mismatch(es) vs PyAutoMind/repos.yaml; release validation incomplete: no rehearsal for current source — explicitly acknowledged by the human in this Codex session on 2026-10-07
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/499
+- prs:
+  - PyAutoBrain: https://github.com/PyAutoLabs/PyAutoBrain/pull/499 (85d270a)
+  - PyAutoMind: https://github.com/PyAutoLabs/PyAutoMind/pull/490 (5e0a914b)

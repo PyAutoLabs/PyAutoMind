@@ -8,7 +8,6 @@ Validation: 237 passed in 1.53s; ten viewport/theme browser cases; all workflow 
 
 Local evidence: tmp/board-navigation/ (test logs, CI verdict and renders/PyAutoNerves/ browser screenshots).
 
-- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/186
 
 ## Original prompt
 
