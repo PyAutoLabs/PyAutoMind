@@ -323,3 +323,231 @@ def test_removal_is_idempotent_and_touches_nothing_else(tmp_path):
     assert sorted(p.name for p in repo.iterdir()) == ["AGENTS.md"]
     assert repos_sync.remove_claude_md_pointers(tmp_path, REPOS) == []
     assert (repo / "AGENTS.md").read_text() == "# guidance\n"
+
+
+# --- nested CLAUDE.md pointers (PyAutoMind#484) ----------------------------
+#
+# The same rule below a repo's root: a session started INSIDE a folder whose
+# CLAUDE.md sits beside an AGENTS.md loses every ancestor AGENTS.md. Discovery
+# is `git ls-files` — untracked and ignored trees are never read — and a nested
+# CLAUDE.md with no sibling AGENTS.md is out of scope (neither reported nor
+# touched).
+
+import subprocess  # noqa: E402
+
+import yaml  # noqa: E402
+
+GIT = ["git", "-c", "user.email=t@example.invalid", "-c", "user.name=t",
+       "-c", "init.defaultBranch=main"]
+NESTED_POINTERS = {
+    # The nested shapes found in the wild, one per wording.
+    "scripts/CLAUDE.md": """\
+# scripts — agent instructions
+
+The canonical instructions for this folder live in `AGENTS.md`. Claude Code loads them via
+the import below; if your tool does not process `@`-imports, open `AGENTS.md` in this
+directory and read it directly.
+
+@AGENTS.md
+""",
+    "wiki/literature/CLAUDE.md": """\
+# wiki/literature — schema and usage rules
+
+The canonical schema and usage rules for this literature sub-wiki live in `AGENTS.md`.
+Claude Code loads them via the import below; if your tool does not process `@`-imports, open
+`AGENTS.md` in this directory and read it directly.
+
+@AGENTS.md
+""",
+    "wiki/region/CLAUDE.md": """\
+# wiki/region — schema and usage rules
+
+The canonical scope and usage rules for this Euclid sub-wiki live in `AGENTS.md`
+(schema shared with `../literature/AGENTS.md`). Claude Code loads them via the import
+below; if your tool does not process `@`-imports, open `AGENTS.md` in this directory
+and read it directly.
+
+@AGENTS.md
+""",
+    "wiki/CLAUDE.md": """\
+# Claude Code adapter
+
+Shared instructions live in [AGENTS.md](AGENTS.md).
+
+@AGENTS.md
+""",
+    "wiki/deep/er/CLAUDE.md": "@AGENTS.md\n",
+}
+
+
+def make_git_repo(root, files, name="OrganOne", *, untracked=None):
+    """A checked-out git repo (root AGENTS.md included) with `files` tracked
+    and committed, plus `untracked` written but never added."""
+    repo = make_repo(root, name)
+    for rel, text in {**files, **(untracked or {})}.items():
+        path = repo / rel
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(text)
+    subprocess.run(GIT + ["init", "-q", str(repo)], check=True)
+    subprocess.run(GIT + ["-C", str(repo), "add", "AGENTS.md", *files],
+                   check=True)
+    subprocess.run(GIT + ["-C", str(repo), "commit", "-qm", "base"],
+                   check=True)
+    return repo
+
+
+def with_sibling_agents(files):
+    """Each CLAUDE.md in `files` plus the AGENTS.md beside it."""
+    out = dict(files)
+    for rel in files:
+        out[str(Path(rel).parent / "AGENTS.md")] = "# folder guidance\n"
+    return out
+
+
+def test_every_nested_wording_is_a_content_free_pointer():
+    for rel, text in NESTED_POINTERS.items():
+        assert repos_sync.claude_md_is_pointer(text), rel
+
+
+def test_a_near_miss_wording_is_content_not_a_pointer():
+    """The boilerplate is matched exactly: a reworded sentence is content."""
+    text = NESTED_POINTERS["wiki/CLAUDE.md"].replace(
+        "Shared instructions", "Shared and private instructions")
+    assert not repos_sync.claude_md_is_pointer(text)
+
+
+def test_check_names_each_tracked_nested_pointer(tmp_path):
+    make_git_repo(tmp_path, with_sibling_agents(NESTED_POINTERS))
+    problems = repos_sync.check_claude_md_pointers(tmp_path, REPOS)
+    assert len(problems) == len(NESTED_POINTERS), problems
+    for rel in NESTED_POINTERS:
+        assert any(f"'OrganOne/{rel}'" in p and "retired CLAUDE.md pointer" in p
+                   for p in problems), rel
+
+
+def test_check_reports_a_nested_content_bearing_claude_md(tmp_path):
+    make_git_repo(tmp_path, with_sibling_agents(
+        {"docs/CLAUDE.md": CONTENT_BEARING}))
+    problems = repos_sync.check_claude_md_pointers(tmp_path, REPOS)
+    assert len(problems) == 1
+    assert "'OrganOne/docs/CLAUDE.md'" in problems[0] and "by hand" in problems[0]
+
+
+def test_untracked_and_ignored_nested_claude_mds_are_never_read(tmp_path):
+    """`tmp/`, `output/`, `.worktrees/` hold copies of other checkouts; only the
+    repo's tracked content is in scope."""
+    untracked = with_sibling_agents({
+        "tmp/CLAUDE.md": "@AGENTS.md\n",
+        "output/run/CLAUDE.md": "@AGENTS.md\n",
+        ".worktrees/branch/CLAUDE.md": "@AGENTS.md\n",
+    })
+    untracked[".gitignore"] = "output/\n.worktrees/\n"
+    repo = make_git_repo(tmp_path, {}, untracked=untracked)
+    assert repos_sync.check_claude_md_pointers(tmp_path, REPOS) == []
+    assert repos_sync.remove_claude_md_pointers(tmp_path, REPOS) == []
+    assert (repo / "tmp/CLAUDE.md").exists()
+    assert (repo / "output/run/CLAUDE.md").exists()
+
+
+def test_a_nested_claude_md_without_a_sibling_agents_md_is_left_alone(tmp_path):
+    repo = make_git_repo(tmp_path, {"lonely/CLAUDE.md": "@AGENTS.md\n"})
+    assert repos_sync.check_claude_md_pointers(tmp_path, REPOS) == []
+    assert repos_sync.remove_claude_md_pointers(tmp_path, REPOS) == []
+    assert (repo / "lonely/CLAUDE.md").read_text() == "@AGENTS.md\n"
+
+
+def test_a_non_git_checkout_is_scanned_at_its_root_only(tmp_path):
+    """Without a .git of its own, `git -C` would climb to an enclosing repo;
+    the nested scan stays out and the root check still runs."""
+    repo = make_repo(tmp_path)
+    (repo / "CLAUDE.md").write_text("@AGENTS.md\n")
+    (repo / "sub").mkdir()
+    (repo / "sub/AGENTS.md").write_text("# folder\n")
+    (repo / "sub/CLAUDE.md").write_text("@AGENTS.md\n")
+    problems = repos_sync.check_claude_md_pointers(tmp_path, REPOS)
+    assert len(problems) == 1 and "'OrganOne':" in problems[0], problems
+    assert repos_sync.remove_claude_md_pointers(tmp_path, REPOS) == \
+        [repo / "CLAUDE.md"]
+    assert (repo / "sub/CLAUDE.md").exists()
+
+
+def test_nested_removal_deletes_pointers_keeps_content_and_is_idempotent(tmp_path):
+    files = with_sibling_agents({**NESTED_POINTERS,
+                                 "docs/CLAUDE.md": CONTENT_BEARING})
+    files["CLAUDE.md"] = POINTER_COMMENTED  # the root shape rides along
+    repo = make_git_repo(tmp_path, files)
+
+    removed = repos_sync.remove_claude_md_pointers(tmp_path, REPOS)
+
+    assert sorted(removed) == sorted(
+        [repo / "CLAUDE.md"] + [repo / rel for rel in NESTED_POINTERS])
+    for rel in NESTED_POINTERS:
+        assert not (repo / rel).exists(), rel
+        # The sibling AGENTS.md is never touched.
+        assert (repo / Path(rel).parent / "AGENTS.md").read_text() == \
+            "# folder guidance\n"
+    assert (repo / "docs/CLAUDE.md").read_text() == CONTENT_BEARING
+    problems = repos_sync.check_claude_md_pointers(tmp_path, REPOS)
+    assert len(problems) == 1 and "'OrganOne/docs/CLAUDE.md'" in problems[0]
+    # Idempotent while the deletions are still uncommitted: `git ls-files`
+    # still lists them, but a file no longer on disk is not re-reported.
+    assert repos_sync.remove_claude_md_pointers(tmp_path, REPOS) == []
+
+
+# --- the propagation job stages every deletion the removal made ------------
+
+def _propagate_run():
+    workflow = (Path(__file__).resolve().parents[1]
+                / ".github/workflows/session_hook_propagate.yml")
+    spec = yaml.safe_load(workflow.read_text())
+    return next(step["run"] for step in spec["jobs"]["propagate"]["steps"]
+                if "remove_claude_md_pointers" in (step.get("run") or ""))
+
+
+def _staging_snippet():
+    """The CLAUDE.md staging lines of the propagation step, verbatim."""
+    lines = _propagate_run().splitlines()
+    start = next(i for i, line in enumerate(lines)
+                 if "Stage the pointers' deletions" in line)
+    end = next(i for i in range(start, len(lines))
+               if lines[i].strip() == "done")
+    return "\n".join(lines[start:end + 1])
+
+
+def test_propagation_removal_stays_dispatch_only():
+    run = _propagate_run()
+    assert 'if os.environ.get("RETIRE_CLAUDE_MD") == "true":' in run
+    workflow = (Path(__file__).resolve().parents[1]
+                / ".github/workflows/session_hook_propagate.yml").read_text()
+    assert "RETIRE_CLAUDE_MD: ${{ github.event_name == 'workflow_dispatch' }}" \
+        in workflow
+
+
+def test_propagation_stages_every_removed_claude_md_and_nothing_else(tmp_path):
+    """Execute the job's own staging lines after a real removal: root and
+    nested deletions are staged, a KEPT file and every other change are not."""
+    files = with_sibling_agents({**NESTED_POINTERS,
+                                 "docs/CLAUDE.md": CONTENT_BEARING})
+    files["CLAUDE.md"] = POINTER_COMMENTED
+    files["notes.md"] = "base\n"
+    repo = make_git_repo(tmp_path, files)
+    (repo / "notes.md").write_text("an unrelated edit\n")
+    repos_sync.remove_claude_md_pointers(tmp_path, REPOS)
+
+    subprocess.run(["bash", "-c", _staging_snippet()], check=True,
+                   env={"PATH": "/usr/bin:/bin", "repo": str(repo)})
+
+    staged = subprocess.run(
+        ["git", "-C", str(repo), "diff", "--cached", "--name-status"],
+        check=True, capture_output=True, text=True).stdout.splitlines()
+    assert sorted(staged) == sorted(
+        f"D\t{rel}" for rel in ["CLAUDE.md", *NESTED_POINTERS])
+
+
+def test_propagation_staging_is_a_no_op_when_nothing_was_removed(tmp_path):
+    """A push run never calls the removal, so nothing may be staged."""
+    repo = make_git_repo(tmp_path, with_sibling_agents(NESTED_POINTERS))
+    subprocess.run(["bash", "-c", _staging_snippet()], check=True,
+                   env={"PATH": "/usr/bin:/bin", "repo": str(repo)})
+    assert subprocess.run(
+        ["git", "-C", str(repo), "diff", "--cached", "--quiet"]).returncode == 0
