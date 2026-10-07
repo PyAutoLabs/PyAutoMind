@@ -252,7 +252,7 @@ Use the start-dev skill. draft/refactor/pyautofit/remove_eden_packaging_tooling.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/community_pages.md">Community pages + merged "Community &amp; Contributing" sections across PyAutoLabs</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/773">issue #773</a> — issued 2026-10-07 — awaiting-merge — 13/18 MERGED 2026-10-07; 5 PRs HELD until the next release by human decision (autolens_profiling #391 after… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/774">PyAutoLens#774</a></summary>
+<details><summary>📋 <a href="active/community_pages.md">Community pages + merged "Community &amp; Contributing" sections across PyAutoLabs</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/773">issue #773</a> — issued 2026-10-07 — awaiting-merge — 17/18 MERGED 2026-10-07 (the four *_visualization#3 PRs merged 18:07Z after release 2026.10.7.1 turned RTD green… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/774">PyAutoLens#774</a></summary>
 
 ```
 Use the start-dev skill. active/community_pages.md
