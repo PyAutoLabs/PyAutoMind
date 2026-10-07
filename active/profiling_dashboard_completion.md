@@ -108,3 +108,22 @@ scientific settings, state, accepted results or runs changed.
 Next action: obtain the named Heart YELLOW acknowledgement, then follow
 ship_workspace commit/push/PR steps and update this record. Later phases remain
 in the parent; Phase B follows A and Phase C must coordinate the live Pulse claim.
+
+## Heart acknowledgement — 2026-10-07
+
+Human: "I acknowledge, go". The readiness re-query returns the same YELLOW
+warning and no RED reasons. Development commit/push/PR is authorized; merge
+and release remain separate. Continue ship_workspace; record PR below.
+
+## Development PR open — 2026-10-07
+
+PR: https://github.com/PyAutoLabs/autolens_profiling/pull/388
+Commit: 4c0961c (feature/profiling-dashboard-completion), pushed; pending-release label.
+Seven repository import smokes pass. Prior Python/browser/contract/lint results
+remain valid; source worktree clean. Heart YELLOW acknowledgement recorded above.
+Committed review surface is review-surface.json in the task bundle (explicit
+--repo resolver; default task resolution did not find the workspace-root worktree).
+Independent working-diff verdict still applies to the identical committed changes.
+
+No merge or publication performed. Next: human /prm when required CI is green,
+then continue approved Phase B; Phase C must first resolve the Pulse repository claim.

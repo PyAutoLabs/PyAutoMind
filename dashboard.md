@@ -250,7 +250,7 @@ Use the start-dev skill. draft/refactor/pyautofit/remove_eden_packaging_tooling.
 
 Issued — each has an open GitHub issue and usually a branch. The full record for each is in [`active.md`](active.md).
 
-<details><summary>📋 <a href="active/profiling_dashboard_completion.md">Make profiling measurements and hazards discoverable</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/387">issue #387</a> — issued 2026-10-07 — workspace-dev, awaiting-heart-ack</summary>
+<details><summary>📋 <a href="active/profiling_dashboard_completion.md">Make profiling measurements and hazards discoverable</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/387">issue #387</a> — issued 2026-10-07 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/388">autolens_profiling#388</a></summary>
 
 ```
 Use the start-dev skill. active/profiling_dashboard_completion.md
