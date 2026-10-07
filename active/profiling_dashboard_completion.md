@@ -80,3 +80,31 @@ Review-routing answer: Prepare a review handoff for Fable
 
 
 Latest authorization: ok go
+
+## Implementation checkpoint — 2026-10-07
+
+Phase A implemented in .worktrees/profiling-dashboard-completion/autolens_profiling,
+feature/profiling-dashboard-completion. No source commit/push/PR yet: ship gate
+requires acknowledgement of current Heart YELLOW warning:
+`manifest drift: shared-standards blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml`.
+No RED reasons. Release validation stale because all five listed library sources
+moved since rehearsal; no release authorization is sought.
+
+1136 Python tests pass across full run plus focused checksum rerun, 6 skipped.
+The initial full run's only failures were 3 failures/42 errors from the draft
+campaign's registry digest; after metadata-only registry review all 46 baseline
+tests pass. Expanded Chromium, Ruff, format, generated dashboard/catalogue,
+independent Pulse v2 contract, README/wiki/layout/wall checks pass. All 1379
+tracked result artifacts unchanged. Independent Sol review CLEAN after repairing
+device-filter persistence and testing incompatible exact-run links.
+
+Review and reproduction evidence: task bundle review-verdict.md, browser-check.log,
+pytest-full.log, baseline-tests.log, catalogue-check.log, dashboard-check.log,
+other *-check.log, browser-artifacts/setup-1280.png. Draft PR body: pr-body.md.
+Generated shard metadata was refreshed, but setup/record payloads remain unchanged.
+The draft baseline campaign changed only its registry integrity digest; no
+scientific settings, state, accepted results or runs changed.
+
+Next action: obtain the named Heart YELLOW acknowledgement, then follow
+ship_workspace commit/push/PR steps and update this record. Later phases remain
+in the parent; Phase B follows A and Phase C must coordinate the live Pulse claim.

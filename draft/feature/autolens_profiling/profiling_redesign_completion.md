@@ -6,7 +6,15 @@ Repos: autolens_profiling, PyAutoPulse
 Consequence: judge
 Autonomy: human-required
 Filed: 2026-10-07
-Status: direct review complete; concrete implementation plan awaiting approval
+Status: plan approved; Phase A implemented, awaiting Heart acknowledgement to ship
+
+## Phase progress
+
+Human approved the concrete plan with "ok go". Phase A is issue
+https://github.com/PyAutoLabs/autolens_profiling/issues/387; active prompt:
+active/profiling_dashboard_completion.md. Implementation and validation complete;
+shipping awaits the exact Heart YELLOW acknowledgement recorded there. Phases B/C
+remain pending. No merge, deployment, scientific campaign or Fable review occurred.
 
 ## Current direction
 

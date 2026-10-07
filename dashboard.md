@@ -258,7 +258,7 @@ Use the start-dev skill. active/dashboard_checkin_prompts.md
 
 </details>
 
-<details><summary>📋 <a href="active/profiling_dashboard_completion.md">Make profiling measurements and hazards discoverable</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/387">issue #387</a> — issued 2026-10-07 — workspace-dev</summary>
+<details><summary>📋 <a href="active/profiling_dashboard_completion.md">Make profiling measurements and hazards discoverable</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/387">issue #387</a> — issued 2026-10-07 — workspace-dev, awaiting-heart-ack</summary>
 
 ```
 Use the start-dev skill. active/profiling_dashboard_completion.md
