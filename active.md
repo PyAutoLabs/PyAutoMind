@@ -85,3 +85,13 @@
 - checkpoint: implementation and validation complete; Heart RED blocks source commit/push/PR pending task-specific human override
 - validation: 193 Python tests; Chromium; Ruff; offline contract; git diff --check all passed
 - evidence: tmp/worktrees/profiling-results-ui/progress.md
+
+## retire-claude-md-pointers
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/482
+- issued: 2026-10-07
+- prompt: active/retire_claude_md_pointers.md
+- session: Claude CLI (Fable architect → Opus 5.5 executor, /start_dev); session ID unavailable
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/retire-claude-md-pointers
+- repos:
+  - PyAutoMind: feature/retire-claude-md-pointers
