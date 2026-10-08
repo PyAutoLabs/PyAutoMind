@@ -789,7 +789,7 @@ Use the start-dev skill. active/board_one_click_update.md
 
 </details>
 
-<details><summary>📋 <a href="active/dashboard_control_labels.md">Standardize dashboard controls and remove redundant chrome</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/505">issue #505</a> — issued 2026-10-08 — library-dev</summary>
+<details><summary>📋 <a href="active/dashboard_control_labels.md">Standardize dashboard controls and remove redundant chrome</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/505">issue #505</a> — issued 2026-10-08 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/506">PyAutoBrain#506</a>, <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/294">PyAutoHeart#294</a>, <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/308">PyAutoHands#308</a>, <a href="https://github.com/PyAutoLabs/PyAutoMemory/pull/129">PyAutoMemory#129</a>, <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/40">PyAutoPulse#40</a>, <a href="https://github.com/PyAutoLabs/PyAutoEars/pull/27">PyAutoEars#27</a>, <a href="https://github.com/PyAutoLabs/PyAutoScientist/pull/50">PyAutoScientist#50</a></summary>
 
 ```
 Use the start-dev skill. active/dashboard_control_labels.md
