@@ -15,6 +15,7 @@ write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
 - [fixed-light-numba-s7](#fixed-light-numba-s7)
 - [bootstrap-smoke-codex](#bootstrap-smoke-codex)
 - [colab-refinement-throughout](#colab-refinement-throughout)
+- [board-one-click-update](#board-one-click-update)
 
 <!-- toc:end -->
 
