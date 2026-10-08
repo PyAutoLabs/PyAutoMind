@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 1 in flight",
-  "updated": "2026-10-08T20:08:58Z",
+  "updated": "2026-10-08T20:13:22Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Timing-noise audit phase 4: A/B go / lever rules gain INCONCLUSIVE +\u2026 \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autolens_profiling/issues/362",
+      "prompt": "Use the start-dev skill. active/timing_noise_audit_phase4_ab_rule_semantics.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -120,12 +126,6 @@
       "text": "pick: arXiv's Fastly edge refuses `urllib.request` outright \u2014 retrying a 406 only delays\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md",
       "prompt": "Use the start-dev skill. draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: `@PyAutoArray` rectangular mesh mapper: mirrored row weights + round-off-dependent cell assignment",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md",
-      "prompt": "Use the start-dev skill. draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md"
     }
   ]
 }
