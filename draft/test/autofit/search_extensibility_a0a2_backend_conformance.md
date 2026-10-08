@@ -16,7 +16,7 @@ Unattended: ready
 Priority: high
 Epic: search-extensibility
 Blocked-by: search-ext-a0b-hygiene (PyAutoFit, A0b must merge first; implemented stacked on its branch)
-Status: active
+Status: planned
 Issued: 2026-10-08
 Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1671
 Filed: 2026-10-08
