@@ -10,11 +10,11 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 16 |
-| [In flight](#in-flight) | 7 |
+| [In flight](#in-flight) | 8 |
 | [Planned](#planned) | 8 |
 | [Backlog](#backlog) | 241 |
 | [Recent](#recent) | 50 |
-| [Pending release](#pending-release) | 1 |
+| [Pending release](#pending-release) | 3 |
 
 ## Start here
 
@@ -829,6 +829,14 @@ Use the start-dev skill. active/linear_solver_phase4_jacobi_a100_batched_diverge
 
 </details>
 
+<details><summary>📋 <a href="active/memory_board_header_contract.md">memory-board-header-contract</a> — issued 2026-10-08</summary>
+
+```
+Use the start-dev skill. active/memory_board_header_contract.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/search_extensibility_a0b_hygiene.md">Search hygiene and dead code (epic search-extensibility, phase A0b)</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1670">issue #1670</a> — issued 2026-10-08 — library-dev</summary>
 
 ```
@@ -837,7 +845,7 @@ Use the start-dev skill. active/search_extensibility_a0b_hygiene.md
 
 </details>
 
-<details><summary>📋 <a href="active/search_extensibility_a0c_downstream_sweep.md">Search documentation repair, downstream sweep (epic search-extensibility, phase A0c part 2)</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/776">issue #776</a> — issued 2026-10-08 — library-dev</summary>
+<details><summary>📋 <a href="active/search_extensibility_a0c_downstream_sweep.md">Search documentation repair, downstream sweep (epic search-extensibility, phase A0c part 2)</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/776">issue #776</a> — issued 2026-10-08 — library-shipped + workspace-shipped, awaiting-merge — 9 PRs opened 2026-10-08 under --auto; glance tier → in-turn auto-merge on… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/777">PyAutoLens#777</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/652">PyAutoGalaxy#652</a>, <a href="https://github.com/PyAutoLabs/PyAutoCTI/pull/115">PyAutoCTI#115</a>, <a href="https://github.com/PyAutoLabs/HowToLens/pull/97">HowToLens#97</a>, <a href="https://github.com/PyAutoLabs/HowToGalaxy/pull/86">HowToGalaxy#86</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/257">autogalaxy_workspace#257</a>, <a href="https://github.com/PyAutoLabs/autocti_workspace/pull/37">autocti_workspace#37</a>, <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/157">autolens_assistant#157</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_assistant/pull/34">autogalaxy_assistant#34</a> — ⏳ pending release: PyAutoLens — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 Use the start-dev skill. active/search_extensibility_a0c_downstream_sweep.md
@@ -2522,6 +2530,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | Date | Event | Task |
 |------|-------|------|
 | 2026-10-08 | planned | <a href="planned.md#search-ext-a0a2-backend-conformance">search-ext-a0a2-backend-conformance</a> |
+| 2026-10-08 | issued | <a href="active/memory_board_header_contract.md">memory-board-header-contract</a> |
 | 2026-10-08 | issued | <a href="active/inference_setup_producer.md">inference-setup-producer</a> |
 | 2026-10-08 | issued | <a href="active/inference_setup_browser.md">inference-setup-browser</a> |
 | 2026-10-08 | issued | <a href="active/inference_sampler_literature.md">inference-sampler-literature</a> |
@@ -2530,12 +2539,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-08 | issued | <a href="active/search_extensibility_a0c_downstream_sweep.md">Search documentation repair, downstream sweep (epic…</a> |
 | 2026-10-08 | issued | <a href="active/linear_solver_phase4_jacobi_a100_batched_divergence.md">Linear-solver programme phase 4: why Jacobi PDIP trajectories diverge…</a> |
 | 2026-10-08 | issued | <a href="active/inference_setup_advice.md">Inference setup evidence lookup for the assistant</a> |
-| 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
 | 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
@@ -2545,12 +2554,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
 | 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
 | 2026-09-29 | filed | <a href="draft/maintenance/pyautomind/session_start_hook_copies_regen.md">Regenerate the 28 drifted <code>.claude/hooks/session-start.sh</code> copies…</a> |
-| 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/power_law_multipole_m1_singular_at_isothermal_slope.md">PowerLawMultipole with m=1 returns -inf / NaN deflections at slope…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently…</a> |
@@ -2560,12 +2569,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
 | 2026-09-25 | filed | <a href="draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md">Keep caches off <code>$HOME</code> on HPC — phase 2 remainder: euclid pipeline…</a> |
 | 2026-09-24 | filed | <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> |
-| 2026-09-23 | filed | <a href="draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-23 | filed | <a href="draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
 | 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> |
@@ -2575,12 +2584,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> |
 | 2026-09-17 | filed | <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> |
-| 2026-09-17 | filed | <a href="draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-17 | filed | <a href="draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autofit/ep_analysis_level_compile_cache.md">EP: cache the compiled JAX likelihood on the Analysis across factor…</a> |
@@ -2590,7 +2599,6 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-16 | filed | <a href="draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> /…</a> |
 | 2026-09-16 | filed | <a href="draft/feature/autolens/coolest_pixel_grid_export.md">COOLEST: export MGE lens light and pixelized sources as pixel grids</a> |
 | 2026-09-16 | filed | <a href="draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md">Adaptive Delaunay mesh places two mesh pixels 0.001" apart — a…</a> |
-| 2026-09-15 | filed | <a href="draft/maintenance/howtofit/minimum_library_version_stale.md">The workspace staleness warning keys off a value documented never to…</a> |
 
 </details>
 
@@ -2758,6 +2766,14 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 - [PyAutoFit#1667](https://github.com/PyAutoLabs/PyAutoFit/pull/1667) — `complete/2026/10/search-conformance-metadata.md`
 - [PyAutoFit#1669](https://github.com/PyAutoLabs/PyAutoFit/pull/1669) — `complete/2026/10/search-ext-a0c-fit-repair.md`
+
+**PyAutoGalaxy**
+
+- [PyAutoGalaxy#652](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/652) — `active/search_extensibility_a0c_downstream_sweep.md`
+
+**PyAutoLens**
+
+- [PyAutoLens#777](https://github.com/PyAutoLabs/PyAutoLens/pull/777) — `active/search_extensibility_a0c_downstream_sweep.md`
 
 
 Boards: [brain](https://pyautolabs.github.io/PyAutoBrain/) · [cortex](https://pyautolabs.github.io/PyAutoCortex/) · [memory](https://pyautolabs.github.io/PyAutoMemory/) · [eyes](https://pyautolabs.github.io/PyAutoEyes/) · [ears](https://pyautolabs.github.io/PyAutoEars/) · [heart](https://pyautolabs.github.io/PyAutoHeart/) · [hands](https://pyautolabs.github.io/PyAutoHands/) · [pulse](https://pyautolabs.github.io/PyAutoPulse/) · [insight](https://pyautolabs.github.io/PyAutoInsight/) · [nerves](https://pyautolabs.github.io/PyAutoNerves/) · [gut](https://pyautolabs.github.io/PyAutoGut/) · [organism](https://pyautolabs.github.io/PyAutoScientist/)

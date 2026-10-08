@@ -3,10 +3,16 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-10-08T08:31:00Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
+  "updated": "2026-10-08T08:39:10Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Search documentation repair, downstream sweep (epic search-extensibility, phase A0c part 2) \u2014 library-shipped + workspace-shipped, awaiting-merge \u2014 9 PRs opened 2026-10-08 under --auto; glance tier \u2192 in-turn auto-merge on\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/777",
+      "prompt": "Use the start-dev skill. active/search_extensibility_a0c_downstream_sweep.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -29,6 +35,18 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1669 \u2014 search-ext-a0c-fit-repair",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1669",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#652 \u2014 Search documentation repair, downstream sweep (epic search-extensibility, phase A0c part 2)",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/652",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoLens PyAutoLens#777 \u2014 Search documentation repair, downstream sweep (epic search-extensibility, phase A0c part 2)",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/777",
       "prompt": null
     },
     {
@@ -108,24 +126,6 @@
       "text": "pick: Guard every workspace script against untimed network downloads",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace/no_untimed_network_downloads_check.md",
       "prompt": "Use the start-dev skill. draft/test/autolens_workspace/no_untimed_network_downloads_check.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Smoke profile cannot see a missing sampler dependency \u2014 add an import\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautohands/smoke_profile_cannot_see_a_missing_sampler.md",
-      "prompt": "Use the start-dev skill. draft/feature/pyautohands/smoke_profile_cannot_see_a_missing_sampler.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Cache `autonerves` config parsing \u2014 308 YAML files parsed per script run",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/autonerves/config_yaml_parse_cache.md",
-      "prompt": "Use the start-dev skill. draft/refactor/autonerves/config_yaml_parse_cache.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md",
-      "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md"
     }
   ]
 }
