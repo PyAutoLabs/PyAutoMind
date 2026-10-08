@@ -44,12 +44,14 @@
 - issue: https://github.com/PyAutoLabs/PyAutoInsight/issues/21
 - issued: 2026-10-08
 - prompt: active/decision_history.md
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/decision-history
 - repos:
   - PyAutoInsight: feature/decision-history
   - PyAutoPulse: feature/decision-history
 - plan: approved; glance witness; auto-merge on green and deployment verification.
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoInsight/pull/22
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/39
 
 ## ears-table-readability
 - issue: https://github.com/PyAutoLabs/PyAutoEars/issues/23
