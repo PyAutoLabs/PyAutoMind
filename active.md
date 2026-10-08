@@ -39,3 +39,14 @@
 - worktree: ~/Code/PyAutoLabs-wt/linear-solver-p5-mapper-corpus
 - repos:
   - autolens_profiling: feature/linear-solver-p5-mapper-corpus
+
+## decision-history
+- issue: https://github.com/PyAutoLabs/PyAutoInsight/issues/21
+- issued: 2026-10-08
+- prompt: active/decision_history.md
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/decision-history
+- repos:
+  - PyAutoInsight: feature/decision-history
+  - PyAutoPulse: feature/decision-history
+- plan: approved; glance witness; auto-merge on green and deployment verification.

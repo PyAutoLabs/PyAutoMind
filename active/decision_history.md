@@ -7,6 +7,8 @@ Difficulty: medium
 Consequence: glance
 Autonomy: safe
 Filed: 2026-10-08
+Issued: 2026-10-08
+Issue: https://github.com/PyAutoLabs/PyAutoInsight/issues/21
 
 ## High-level plan
 
@@ -33,3 +35,5 @@ Branch survey: Insight canonical main clean; Pulse canonical feature/pulse-linea
 What both PyAutoPulse and PyAutoInsight need is a "Decision History" tab, which goes under "Profiling Results" / "Inference Results". These campaigns often reach a point where I'm rpesented with a load of evdience, and I make a key design decision about a likelihood function or inference pipeline like what is used in SLaM. When I flag a key decision is being made (maybe this needs a skill?) A high level summary of the whole campaign, the evidence, the decision and its implications should be procued and written to this Decision History tab. For now, when I click the Decision History drop down it should list each decision (e.g. "NNLS Solver Setup"), and then take one to a markdown page or something on GitHub so the decision can be read. Decisions can span multiple repos and dataset types so dont categorize drop down that way.
 
 Routing note: FeatureDecision direct/medium; override keyword-derived library route because both targets are organ dashboard/documentation repos with no published-library API changes. start_workspace → ship_workspace applies. Conflict helper passed for both repos.
+
+Approval: user “ok great go” approves the plan and green merge/deployment.
