@@ -2,13 +2,15 @@
 
 Target: @PyAutoEyes
 Type: feature
+Issued: 2026-10-08
+Issue: https://github.com/PyAutoLabs/PyAutoEyes/issues/25
 
 Retain a compact overview, use library → dataset → figure navigation, and display
 one selected figure prominently inside the dashboard with its critique actions.
 Use PyAutoPulse and PyAutoInsight Results sections as read-only navigation references;
 only PyAutoEyes implementation is in scope.
 
-## Proposed plan — awaiting approval
+## Approved plan — 2026-10-08
 
 - Use library names alone (PyAutoLens, PyAutoGalaxy, etc.) throughout visible navigation.
 - Reduce the overview to Library, Figures, Rendered with (version only), and

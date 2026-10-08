@@ -73,3 +73,12 @@
   - PyAutoBrain: feature/brain-dashboard-scope
 - coordination: user approved separate work alongside #504; no shared theme or board_update edits
 - tier: judge (human /prm)
+
+## eyes-focused-figure-browser
+- issue: https://github.com/PyAutoLabs/PyAutoEyes/issues/25
+- issued: 2026-10-08
+- session: Codex (session ID unavailable)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/eyes-focused-figure-browser
+- repos:
+  - PyAutoEyes: feature/eyes-focused-figure-browser
