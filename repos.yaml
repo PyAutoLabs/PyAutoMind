@@ -116,7 +116,7 @@ repos:
     github: PyAutoLabs/PyAutoBroca
     category: organ
     organ: Broca
-    role: "Assistant evaluation history, upkeep evidence, collection receipts and a private dashboard. Brain interprets; Mind tracks fixes; public assistants remain independent."
+    role: "Assistant evaluation history, upkeep evidence, collection receipts and an operational dashboard. Brain interprets; Mind tracks fixes; public assistants remain independent."
     public_role: "Tracks assistant evaluation and upkeep evidence."
   PyAutoMind:
     board_owner: true
