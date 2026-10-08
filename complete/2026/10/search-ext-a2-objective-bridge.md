@@ -1,3 +1,20 @@
+## search-ext-a2-objective-bridge
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1676
+- completed: 2026-10-08
+- epic: search-extensibility (phase A2)
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1679
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1679
+
+**Shipped:** PyAutoFit#1679 (merged 2026-10-08T19:53:16Z, human `/prm`; launched `--auto`, effective safe, tier judge).
+- `Fitness.objective(kind)` is the one lazily-jitted objective factory (`scalar`, `batched`, `value_and_grad`, `batched_value_and_grad`; per-kind cache; `compile=False` escape hatch). It is ported to every call site except NSS, which A3b takes. Emcee, Zeus, Drawer and the initializer now run jitted under JAX. BFGS/LBFGS on JAX pass `jac=` and stop finite-differencing. Nautilus and SMC take the batched objective, NUTS the scalar log-density.
+- `make_fitness(analysis, model, **overrides)` builds from the declared `objective_target`/`invalid_value`. `use_jax_jit`/`use_jax_vmap` are deprecated aliases (FutureWarning; defaults now `None`).
+- `parallel.PoolFactory` owns the EP core guard and the one JAX fork rule. `start_points(model, fitness, n)` plots the start once. The minimal `FitContext`/`run(ctx)` bridge ships with Drawer and Nautilus migrated as proofs.
+- Decisions taken (flagged on the PR): `docs/design/run_ctx.md` Revision 1 (six member-level clarifications, signature unchanged). D11 "refuses explicitly" reads as: a JAX analysis with `number_of_cores>1` runs on 1 core with one INFO line, and `search.summary` records it. It does not raise.
+- Validation: 3453 passed / 1 skipped / 9 xfailed; nojax 1178; PyAutoGalaxy 1357 and PyAutoLens 832 green; Emcee+JAX 0.26 ms/call (eager 14.3 ms); BFGS-JAX exact gradients. Golden identifiers unchanged.
+- Worktree `~/Code/PyAutoLabs-wt/search-ext-a2-objective-bridge` is kept. It holds the manual second checkout `PyAutoFit_a3` on `feature/search-ext-a3b-nss-preflight`, which belongs to A3b (PR #1681). Its removal is deferred to A3b's `/prm`.
+
+## Original prompt
+
 # Objective factory, PoolFactory, JAX fork rule and the run(ctx) bridge (epic search-extensibility, phase A2)
 
 Type: refactor

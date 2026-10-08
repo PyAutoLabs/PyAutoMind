@@ -1,3 +1,20 @@
+## search-ext-a3-samples-checkpointer
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1677
+- completed: 2026-10-08
+- epic: search-extensibility (phase A3)
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1680
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1680
+
+**Shipped:** PyAutoFit#1680 (merged 2026-10-08T19:53:46Z, after A2 #1679, human `/prm`; launched `--auto`, effective safe, tier judge). It was implemented in the A2 worktree's manual second checkout `PyAutoFit_a3` and had no worktree or `active.md` row of its own. The prompt was never moved out of `draft/`.
+- The single samples adapter is `autofit/non_linear/samples/adapter.py`: `RawSamples`, `samples_from_raw`, one log-prior helper, sentinel recognition without rewriting, and `ChainPosterior.thin` shared by Emcee/Zeus/NUTS with the empty-chain fallback. Every search implements one `raw_samples_from`, and `samples_via_internal_from` is written once on `NonLinearSearch`.
+- The Checkpointer is split from resume: `DillCheckpointer`, `PickleCheckpointer` (NUTS/SMC) and `NativeFileCheckpointer` (emcee HDF / dynesty savestate / nautilus hdf5 / NSS pkl), with atomic writes and `retain_after_completion`. Corruption and retention precedence are in `docs/design/checkpointing.md` (D5). `FitContext.checkpointer`/`resume` are wired.
+- Constructing Emcee, BlackJAXNUTS or SMC no longer mutates `conf.instance`. Pre-A3 output folders load through format-aware legacy detection.
+- Strict xfails 9 → 4: three `CONFIG_MUTATION_XFAIL` and two Dynesty `DISK_INTERNAL_XFAIL` flipped as named. The four A4 `AutoCorrelationsSettings` xfails stay strict.
+- Golden-test decision: the golden `samples.csv` fixtures (Emcee, Dynesty, Nautilus, NUTS, SMC; generated on main as their own first commit) are compared at rtol=1e-12, atol=0. Blackjax diagnostic keys are checked by shape only.
+- Validation: 3531 passed / 1 skipped / 4 xfailed on the integrated head; nojax 1253; afT ×7 smoke; Nautilus kill-and-resume; a pre-A3 folder reloads in the aggregator. Golden identifiers unchanged.
+
+## Original prompt
+
 # Samples adapter and Checkpointer/resume split (epic search-extensibility, phase A3)
 
 Type: refactor

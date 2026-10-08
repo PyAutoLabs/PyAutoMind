@@ -14,7 +14,7 @@ Witness: NSS fits `gaussian_x3_blend` with its ordered-centre assertions under J
 Unattended: ready
 Priority: high
 Epic: search-extensibility
-Blocked-by: search-ext-a2-objective-bridge, search-ext-a3-samples-checkpointer (PyAutoFit; both must be on the branch this stacks on)
+Blocked-by: none — RESOLVED 2026-10-08: A2 (PyAutoFit#1679, `complete/2026/10/search-ext-a2-objective-bridge.md`) and A3 (PyAutoFit#1680, `complete/2026/10/search-ext-a3-samples-checkpointer.md`) both merged to PyAutoFit main (was: search-ext-a2-objective-bridge, search-ext-a3-samples-checkpointer (PyAutoFit; both must be on the branch this stacks on))
 Status: planned
 Issued: 2026-10-08
 Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1678

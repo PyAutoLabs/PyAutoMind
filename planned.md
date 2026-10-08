@@ -9,7 +9,6 @@
 - [latent-nan-guard-honest-run](#latent-nan-guard-honest-run)
 - [knn-partial-point-block](#knn-partial-point-block)
 - [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
-- [search-ext-a3-samples-checkpointer](#search-ext-a3-samples-checkpointer)
 - [search-ext-a3b-nss-preflight](#search-ext-a3b-nss-preflight)
 
 <!-- toc:end -->
@@ -108,20 +107,6 @@
   - autolens_workspace_test
 - resume: Audit#603 found incorrect internal-edge Sibson weights and near-edge partition failure. Filed separately per explicit user request; strict expected-failure regressions retained in audit. No repair begun or worktree created. Plan algorithmic repair independently.
 
-## search-ext-a3-samples-checkpointer
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1677
-- planned: 2026-10-08
-- prompt: draft/refactor/autofit/search_extensibility_a3_samples_checkpointer.md
-- epic: search-extensibility (phase A3)
-- classification: library
-- suggested-branch: feature/search-ext-a3-samples-checkpointer (own branch from main in the A2 worktree's second checkout `PyAutoFit_a3`; implemented in parallel, PR base main)
-- blocked-by: search-ext-a2-objective-bridge (using PyAutoFit — claim only; the work runs in parallel)
-- affected-repos:
-  - PyAutoFit
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1680 (base = feature/search-ext-a2-objective-bridge; merge after PyAutoFit#1679)
-- status: shipped stacked, awaiting A2 merge then human /prm — 3531 passed / 4 strict xfails left (A4's); goldens byte-identical; conf.instance mutations gone
-- autonomy: --auto launch 2026-10-08; effective safe (refactor); Consequence judge
-
 ## search-ext-a3b-nss-preflight
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1678
 - planned: 2026-10-08
@@ -129,8 +114,7 @@
 - epic: search-extensibility (phase A3b)
 - classification: library
 - suggested-branch: feature/search-ext-a3b-nss-preflight (stacked on A2 + A3)
-- blocked-by: search-ext-a2-objective-bridge (using PyAutoFit; also needs search-ext-a3-samples-checkpointer)
+- blocked-by: none — RESOLVED 2026-10-08: A2 (PyAutoFit#1679, `complete/2026/10/search-ext-a2-objective-bridge.md`) and A3 (PyAutoFit#1680, `complete/2026/10/search-ext-a3-samples-checkpointer.md`) merged
 - affected-repos:
   - PyAutoFit
 - autonomy: --auto launch 2026-10-08; effective safe (refactor); Consequence judge
-

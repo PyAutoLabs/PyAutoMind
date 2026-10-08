@@ -1,3 +1,21 @@
+## search-ext-b3-pilot
+- issue: https://github.com/PyAutoLabs/autofit_inference/issues/4
+- completed: 2026-10-08
+- epic: search-extensibility (phase B3)
+- workspace-pr: https://github.com/PyAutoLabs/autofit_inference/pull/5
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoInsight/pull/23
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/61
+
+**Shipped (all merged 2026-10-08, human `/prm`, in this order):** autofit_inference#5 (19:53:50Z), PyAutoInsight#23 (19:53:55Z), PyAutoCortex#61 (19:54:01Z). Launched `--auto`, effective supervised (feature@large), tier judge.
+- **Wave-1 pilot of protocol `gaussian_x3@1`, stopped by the human wrap-up ruling (2026-10-08):** no more pilot compute. The PRs commit what exists: **223 of 520** pilot rows (203 from batch 1 plus 20 from batch 2), each flagged `pilot: true` and stamped with PyAutoFit `0dbf258c4f5e` (pre-A2). The pilot ranks nothing (protocol §9).
+- The 297 runs without a row are `deferred` with a reason. **Wave 2 runs on RAL `--partition=ral`.** NSS waits for A3b, plus the per-cell reasons (Zeus-JAX wall cap, BlackJAXNUTS-warm blend trace failure). The JAX blend Nautilus reference stays `pending` (2 of 3 seeds).
+- `catalogue/search_catalogue.json` covers every A1-registry search: 13 measured, NSS deferred, Drawer unsupported; nothing ranked. `results/calibration/gaussian_x3_wave1.json` has 17 calibration rows (fewer than 20), so the σ-ratio band and the ppc tolerance stay at `@1`. `dashboard/summary.json` publishes `inference-summary@1` with all 223 records.
+- **The `gaussian_x3@2` freeze is deferred.** It must land before any wave-2 row. The BFGS/LBFGS non-finite rows predate A2 (exact JAX gradients) and are expected to change.
+- Organs: PyAutoInsight registers `autofit_inference` as instance `fit` with the gaussian_x3 campaign and the wave-1 task. PyAutoCortex flips `projects.yaml` `autofit_inference` from planned to **active** and opens its ledger.
+- **Human ruling:** the campaign page stays in autofit_inference `wiki/project/state.md`. There is **no autofit_assistant PR**, because its dated `wiki/project/` entries are gitignored per-clone memory. The claimed `autofit_assistant` branch carried no commits.
+
+## Original prompt
+
 # Wave-1 pilot, Insight registration and the search catalogue (epic search-extensibility, phase B3)
 
 Type: feature
