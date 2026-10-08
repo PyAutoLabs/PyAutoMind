@@ -10,7 +10,7 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 16 |
-| [In flight](#in-flight) | 3 |
+| [In flight](#in-flight) | 4 |
 | [Planned](#planned) | 7 |
 | [Backlog](#backlog) | 240 |
 | [Recent](#recent) | 50 |
@@ -780,6 +780,14 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 </details>
 
 ## In flight
+
+<details><summary>📋 <a href="active/decision_history.md">Campaign decision history on Pulse and Insight</a> — <a href="https://github.com/PyAutoLabs/PyAutoInsight/issues/21">issue #21</a> — issued 2026-10-08 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/decision_history.md
+```
+
+</details>
 
 <details><summary>📋 <a href="active/linear_solver_phase5_mapper_corpus.md">Linear-solver programme phase 5: a Mapper (pixelized) corpus — is raw+polish admissible…</a> — issued 2026-10-08</summary>
 
@@ -1744,10 +1752,10 @@ Use the start-dev skill. draft/feature/autoarray/adapt_linear_default_flip.md
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautoinsight/decision_history.md">Campaign decision history on Pulse and Insight</a> — pyautoinsight · medium · safe</summary>
+<details><summary>📋 <a href="draft/feature/pyautoears/community_table_readability.md">Community table readability</a> — pyautoears</summary>
 
 ```
-Use the start-dev skill. draft/feature/pyautoinsight/decision_history.md
+Use the start-dev skill. draft/feature/pyautoears/community_table_readability.md
 ```
 
 </details>
@@ -2476,7 +2484,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-08 | issued | <a href="active/search_extensibility_b2_harness_protocol.md">autofit_inference harness, gaussian_x3 datasets, pre-registered…</a> |
 | 2026-10-08 | issued | <a href="active/search_extensibility_a1_declare_gate_registry.md">Search capability declarations, fail-fast gate, lazy registry and the…</a> |
 | 2026-10-08 | issued | <a href="active/linear_solver_phase5_mapper_corpus.md">Linear-solver programme phase 5: a Mapper (pixelized) corpus — is…</a> |
-| 2026-10-08 | filed | <a href="draft/feature/pyautoinsight/decision_history.md">Campaign decision history on Pulse and Insight</a> |
+| 2026-10-08 | issued | <a href="active/decision_history.md">Campaign decision history on Pulse and Insight</a> |
 | 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
 | 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
@@ -2577,7 +2585,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-73 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+74 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2599,6 +2607,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/jax_substructure/5_prng_key_vmap_noise.md`
 - `draft/feature/jax_substructure/6_deflection_equivalence_test.md`
 - `draft/feature/pyautoears/community_organ_birth.md`
+- `draft/feature/pyautoears/community_table_readability.md`
 - `draft/feature/pyautoeyes/group_cluster_gallery.md`
 - `draft/feature/pyautoeyes/multi_galaxy_gallery.md`
 - `draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md`
@@ -2621,8 +2630,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/refactor/workspaces/abell_1201_local_cleanup.md`
 - `draft/docs/autolens/split_lensing_regimes.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
-- `draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md`
-- _… and 33 more_
+- _… and 34 more_
 
 </details>
 
