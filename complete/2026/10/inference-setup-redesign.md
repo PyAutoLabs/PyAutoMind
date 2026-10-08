@@ -1,5 +1,31 @@
 # Setup-oriented inference evidence and navigation
 
+Completed: 2026-10-08
+
+All five approved phases implemented, independently reviewed, merged and published under the user's explicit instruction: "prm, and continue through all phases autonomously to the end". The assistant conflict was coordinated after explicit "Coordinate the two tasks" approval; both disjoint branches are now merged and combined discovery validates.
+
+## Delivered phases
+
+1. Contract: [Insight PR14](https://github.com/PyAutoLabs/PyAutoInsight/pull/14), complete/2026/10/inference-setup-contract.md. Versioned baseline/problem/initialization/evidence validation with retained v1 support.
+2. Producer: [autolens_inference PR21](https://github.com/PyAutoLabs/autolens_inference/pull/21), complete/2026/10/inference-setup-producer.md. Setup-local baselines and sampler leaves, frozen mass_total[1] problem verification, portable manifests, exact artifact identity, clock/work/start metadata and preserved historical provenance.
+3. Browser: [Insight PR16](https://github.com/PyAutoLabs/PyAutoInsight/pull/16), complete/2026/10/inference-setup-browser.md. Pulse-style setup navigation, new tabs, headline baseline qualifications, sampler/history/parity disclosures and responsive shared presentation.
+4. Assistant: [autolens_assistant PR158](https://github.com/PyAutoLabs/autolens_assistant/pull/158), complete/2026/10/inference-setup-advice.md. Pinned standard-library evidence lookup and qualified exact/analogue/absent outcomes, immutable citations and discovery skill. Project setup wiki documentation accompanies producer.
+5. Literature: [Memory PR125](https://github.com/PyAutoLabs/PyAutoMemory/pull/125), complete/2026/10/inference-sampler-literature.md. On-demand public-source candidate curation and five Insight candidate entries with copyable prompts. Narrow pre-existing header-test regression fixed separately in [Memory PR127](https://github.com/PyAutoLabs/PyAutoMemory/pull/127).
+
+## Evidence and limits
+
+Producer120tests/six import-CLI smokes, Insight168tests/Chromium, assistant252tests/1skip plus36focused, Memory275tests/three validation gates; independent CLEAN reviews and every required exact-head CI job passed before merge. Producer publication and cross-repo refresh succeeded. Live publication verification is recorded below.
+
+The catalogue contains56historical records across11declared setups, with no selected accepted baseline and no historical frozen prepared problem. New executors support future verified baseline exports; this development performed no campaign, scientific acceptance, sampler promotion or runtime extrapolation. Unsupported start modes fail explicitly. Preparation/init/fit clocks and work units remain separate; resume is distinct from warm and JIT/cache state.
+
+Heart remains STALE solely because no release rehearsal exists for current source; no RED/YELLOW reasons or release request. Canonical checkouts fast-forwarded, original untracked science data retained, completed feature worktrees/local branches removed after closeout. Runtime recommendations remain evidence-qualified until future scientifically accepted measurements exist.
+
+Final live verification: Pages run37752279786 succeeded at published e559e9e (browser merged d35196a), with exact HTTP200 byte agreement and real Chromium navigation/mobile/candidate checks. Details and immutable CI evidence are in the browser completion record. The merged assistant at combined main f46e296 passes discovery; actual producer de37acfe lookup returns8qualified analogues for HST Delaunay, preserving no-accepted-baseline status.
+
+## Original prompt
+
+# Setup-oriented inference evidence and navigation
+
 Type: feature
 Target: pyautoinsight
 Repos: PyAutoInsight, autolens_inference, autolens_assistant, PyAutoMemory
@@ -126,9 +152,9 @@ scientific acceptance is authorized. Preserve Heart gates and data products.
 
 - Phase1 contract: complete/2026/10/inference-setup-contract.md (Insight#14 merged).
 - Phase2 producer: complete/2026/10/inference-setup-producer.md (autolens_inference#21 merged de37acfe). Catalogue preserves56historical records across11setups; zero existing prepared problems and no accepted baseline. Future verified baseline export and sampler investigation are implemented.
-- Phase3 browser: active/inference_setup_browser.md (Insight#16 awaiting merge on77e4d21). Captured producer de37acfe;168tests and fixture/actual-producer Chromium checks; independent CLEAN. Root must confirm merge and live deployment before completion.
+- Phase3 browser: complete/2026/10/inference-setup-browser.md (Insight#16 merged d35196a; Pages e559e9e deployed and live Chromium verified).
 - Phase4 assistant advice: complete/2026/10/inference-setup-advice.md (autolens_assistant#158 merged cea768a). Pinned lookup, immutable citations and qualified matches;252tests/1skip and36focused tests, independent CLEAN.
 - Phase5a literature/curation: complete/2026/10/inference-sampler-literature.md (Memory#125 merged13499c3). Public-source candidates and on-demand curation guidance; no installation, compute or benchmark. Prerequisite complete/2026/10/memory-board-header-contract.md (Memory#127 merged).
-- Phase5b public candidate publication is included in the pending browser work and remains unclosed until merge/deployment evidence is confirmed.
+- Phase5b public candidate publication completed with the browser deployment; five candidates and editable prompts verified live.
 
-No new scientific acceptance or sampler promotion; Heart STALE rehearsal gap remains explicit. Worktrees are retained under root's coordination instruction pending reviewer/dependency cleanup.
+No new scientific acceptance or sampler promotion; Heart STALE rehearsal gap remains explicit. Completed worktrees are cleaned after lifecycle release; canonical untracked science data is retained.

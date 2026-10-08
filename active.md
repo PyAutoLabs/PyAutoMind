@@ -1,20 +1,5 @@
 # Active Tasks
 
-## inference-setup-browser
-- issue: https://github.com/PyAutoLabs/PyAutoInsight/issues/15
-- issued: 2026-10-08
-- prompt: active/inference_setup_browser.md
-- epic: inference-setup-redesign
-- session: Codex GPT-6; session ID unavailable
-- status: awaiting-merge
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/inference-setup-browser
-- repos:
-  - PyAutoInsight: feature/inference-setup-browser
-- plan: human authorized all phases autonomously to the end, including in-turn merge on passed gates; no compute or scientific acceptance.
-- workspace-pr: https://github.com/PyAutoLabs/PyAutoInsight/pull/16
-- evidence: 168 tests; fixture and actual-producer Chromium checks; independent CLEAN; Heart STALE rehearsal gap only. Captured producer de37acfe797465205128d45973af5e853c74a684 with56records/11setups; primary research and source pipeline verified.
-
-
 ## search-ext-a0c-downstream
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/776
 - issued: 2026-10-08

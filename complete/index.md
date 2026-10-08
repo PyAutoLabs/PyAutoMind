@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1780 records across 9 buckets.
+1782 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -177,8 +177,10 @@ markers; everything below GENERATED is rebuilt.
 - [imshow-origin-lower-overlays](2026/10/imshow-origin-lower-overlays.md)
 - [inference-sampler-literature](2026/10/inference-sampler-literature.md)
 - [inference-setup-advice](2026/10/inference-setup-advice.md)
+- [inference-setup-browser](2026/10/inference-setup-browser.md)
 - [inference-setup-contract](2026/10/inference-setup-contract.md)
 - [inference-setup-producer](2026/10/inference-setup-producer.md)
+- [inference-setup-redesign](2026/10/inference-setup-redesign.md)
 - [insight-organ-birth](2026/10/insight-organ-birth.md)
 - [intake-declared-header-fields](2026/10/intake-declared-header-fields.md)
 - [interferometer-decision-matrix-last-cell](2026/10/interferometer-decision-matrix-last-cell.md)
