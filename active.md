@@ -32,7 +32,10 @@
 - prompt: active/search_extensibility_b2_harness_protocol.md
 - epic: search-extensibility (phase B2)
 - session: Claude CLI (Fable 5.1, /start_dev --auto); session ID unavailable
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge — autofit_inference#3 opened 2026-10-08 under --auto (decide-and-flag, `decision-taken`); first run of lint.yml + witness.yml on GitHub pending
+- workspace-pr: https://github.com/PyAutoLabs/autofit_inference/pull/3
+- validation: 46 tests; ruff clean; build_readme/export/WALL --check pass; local witness run accepted; Insight check --offline validates the fixture; numpy Nautilus reference ×3 agrees to 0.019 nat / 0.015σ; DynestyStatic ln Z scatters 2.3 nat at default walks=5 (limitation, pilot item); JAX Nautilus refs and separated refs pending → B3
+- decision-taken: constant-likelihood validation rerun at n_live=2000 after n_live=500 measured −1.972 outside the ±0.1 window; both attempts kept
 - autonomy: --auto launch 2026-10-08; effective supervised (feature@large); ship checkpoint = decide-and-flag; Consequence judge → human /prm
 - worktree: ~/Code/PyAutoLabs-wt/search-ext-b2-harness
 - repos:
