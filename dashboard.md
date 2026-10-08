@@ -805,7 +805,7 @@ Use the start-dev skill. active/board_one_click_update.md
 
 </details>
 
-<details><summary>📋 <a href="active/broca-pages.md">Publish Broca dashboard with GitHub Pages Actions</a> — <a href="https://github.com/PyAutoLabs/PyAutoBroca/issues/3">issue #3</a> — issued 2026-10-08 — library-dev</summary>
+<details><summary>📋 <a href="active/broca-pages.md">Publish Broca dashboard with GitHub Pages Actions</a> — <a href="https://github.com/PyAutoLabs/PyAutoBroca/issues/3">issue #3</a> — issued 2026-10-08 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBroca/pull/4">PyAutoBroca#4</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/512">PyAutoBrain#512</a></summary>
 
 ```
 Use the start-dev skill. active/broca-pages.md
