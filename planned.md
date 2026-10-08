@@ -105,3 +105,27 @@
   - PyAutoArray
   - autolens_workspace_test
 - resume: Audit#603 found incorrect internal-edge Sibson weights and near-edge partition failure. Filed separately per explicit user request; strict expected-failure regressions retained in audit. No repair begun or worktree created. Plan algorithmic repair independently.
+
+## search-ext-a3-samples-checkpointer
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1677
+- planned: 2026-10-08
+- prompt: draft/refactor/autofit/search_extensibility_a3_samples_checkpointer.md
+- epic: search-extensibility (phase A3)
+- classification: library
+- suggested-branch: feature/search-ext-a3-samples-checkpointer (own branch from main in the A2 worktree's second checkout `PyAutoFit_a3`; implemented in parallel, PR base main)
+- blocked-by: search-ext-a2-objective-bridge (using PyAutoFit — claim only; the work runs in parallel)
+- affected-repos:
+  - PyAutoFit
+- autonomy: --auto launch 2026-10-08; effective safe (refactor); Consequence judge
+
+## search-ext-a3b-nss-preflight
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1678
+- planned: 2026-10-08
+- prompt: draft/refactor/autofit/search_extensibility_a3b_nss_preflight_x64.md
+- epic: search-extensibility (phase A3b)
+- classification: library
+- suggested-branch: feature/search-ext-a3b-nss-preflight (stacked on A2 + A3)
+- blocked-by: search-ext-a2-objective-bridge (using PyAutoFit; also needs search-ext-a3-samples-checkpointer)
+- affected-repos:
+  - PyAutoFit
+- autonomy: --auto launch 2026-10-08; effective safe (refactor); Consequence judge
