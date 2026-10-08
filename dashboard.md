@@ -781,7 +781,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/assistant-management-organ.md">Assistant evaluation and upkeep organ</a> — <a href="https://github.com/PyAutoLabs/PyAutoBroca/issues/1">issue #1</a> — issued 2026-10-08 — library-dev, awaiting-heart-ack</summary>
+<details><summary>📋 <a href="active/assistant-management-organ.md">Assistant evaluation and upkeep organ</a> — <a href="https://github.com/PyAutoLabs/PyAutoBroca/issues/1">issue #1</a> — issued 2026-10-08 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/495">PyAutoMind#495</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/511">PyAutoBrain#511</a>, <a href="https://github.com/PyAutoLabs/PyAutoBroca/pull/2">PyAutoBroca#2</a></summary>
 
 ```
 Use the start-dev skill. active/assistant-management-organ.md
