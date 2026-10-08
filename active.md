@@ -73,6 +73,7 @@
   - PyAutoBrain: feature/brain-dashboard-scope
 - coordination: user approved separate work alongside #504; no shared theme or board_update edits
 - tier: judge (human /prm)
+- next: implementation and validation complete locally; awaiting Heart YELLOW acknowledgement before commit/push/PR (see #507 checkpoint)
 
 ## eyes-focused-figure-browser
 - issue: https://github.com/PyAutoLabs/PyAutoEyes/issues/25

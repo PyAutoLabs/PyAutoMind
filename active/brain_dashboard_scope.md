@@ -58,3 +58,17 @@ Brain should it do anything else or is this sensible?
 - Tier: judge — merge mode: human /prm.
 
 Approval: user said "ok beghin" after the scope and concurrent-work coordination question. Shared theme and board_update service stay with #504.
+
+## Implementation checkpoint — 2026-10-08
+
+Implementation complete locally on feature/brain-dashboard-scope, based on 142ddef; source is intentionally uncommitted while ship-time Heart YELLOW awaits human acknowledgement.
+
+Reduced Brain to Agents & workflows, task routing, overnight exceptions and Maintenance. Removed retired source collectors and morning/wake-up/timer functionality, retaining independent local evidence commands and feed compatibility. Shared theme and #504 Update service untouched.
+
+Validation: 1,250 passed in full suite; one inherited-PYAUTO_MIND grouped-checkout fixture failure, then 4/4 passed with PYAUTO_MIND/PYAUTO_BRAIN unset. Ten browser cases passed. Agent surface, Brain project discovery, tenant firewall and diff checks passed. Logs and synthetic preview under task worktree tmp/; PR body prepared in tmp/pr-body.md.
+
+Heart YELLOW reasons (2026-10-08T11:33:17.112822+00:00):
+- manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml
+- release validation incomplete: no rehearsal for current source
+
+Next: obtain acknowledgement of the exact reason set, then commit/push/create PR via ship-library. No scientific workspace migration required; merge stays human /prm. Live dashboard unchanged until merge/publication.
