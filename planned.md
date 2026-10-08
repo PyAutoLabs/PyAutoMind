@@ -11,6 +11,7 @@
 - [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
 - [search-ext-a3-samples-checkpointer](#search-ext-a3-samples-checkpointer)
 - [search-ext-a3b-nss-preflight](#search-ext-a3b-nss-preflight)
+- [organ-banner-task-labels](#organ-banner-task-labels)
 
 <!-- toc:end -->
 
