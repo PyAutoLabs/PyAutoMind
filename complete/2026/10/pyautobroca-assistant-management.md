@@ -1,3 +1,21 @@
+## pyautobroca-assistant-management
+- issue: https://github.com/PyAutoLabs/PyAutoBroca/issues/1 (closed)
+- completed: 2026-10-08
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/495 (merged e6d4ce43)
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/511 (merged 3fd1d2c5)
+- library-pr: https://github.com/PyAutoLabs/PyAutoBroca/pull/2 (merged 043f03ab)
+- summary: PyAutoBroca owns immutable assistant evaluation records, collection receipts and a dashboard using Brain's shared components. Four public assistants covered; 14 historical AutoLens benchmarks plus four separately labelled maintenance inventories. No private assistant or raw transcripts ingested.
+- visibility: PUBLIC at the user's explicit request; tracked records and source inspected before conversion. GitHub Pages remains unconfigured; dashboard.html is the standalone snapshot.
+- validation: Broca 18 tests, Brain 1252 tests, Mind 696 tests; ten browser cases across five widths in light/dark, no page overflow, keyboard copy and exact preview verified. All final-head applicable CI jobs passed. Mind drift job intentionally skipped on PR events; privacy and firewall green. Brain Python 3.12/3.13 green. Broca push and PR test runs both green after Brain merged.
+- approvals: user approved scope/name, coordinated Brain/Mind changes, exact ship-time Heart YELLOW manifest-drift acknowledgement, all merges via prm, and public visibility. No release action.
+- boundaries: Brain interprets evidence; Mind owns implementation lifecycle; Cortex owns science; Heart owns readiness. Public assistants remain independent. No paid or recurring benchmark execution configured.
+- known limits: historic incomplete scorer/harness provenance prevents comparison; AutoCTI inventory finds no committed benchmark prompts; new response-quality baselines, deeper drift audits, project feedback and hosted publication remain future extensions rather than claims of this implementation.
+- reconciliation: no stale task references remain. Intake flagged unrelated batch_slice.md, board_without_gh_phase2_legs.md and brain_board_follow_ups.md on resemblance only; retained for /intake reconcile draft/feature/pyautobrain.
+- lifecycle: global check reports pre-existing unclaimed active/timing_noise_audit_phase1_inventory.md and a historical batch review-minutes warning; Broca-scoped lifecycle check passes.
+- cleanup: validation screenshots/logs preserved at .artifacts/pyautobroca-assistant-management; committed data and dashboard retained in canonical Broca. Worktree removal follows lifecycle close.
+
+## Original prompt
+
 # Assistant evaluation and upkeep organ
 
 Type: feature
