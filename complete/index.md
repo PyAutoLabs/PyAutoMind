@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1769 records across 9 buckets.
+1771 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -169,6 +169,7 @@ markers; everything below GENERATED is rebuilt.
 - [fit-util-masked-division](2026/10/fit-util-masked-division.md)
 - [fork-context-darwin-test](2026/10/fork-context-darwin-test.md)
 - [heart-dashboard-collectors](2026/10/heart-dashboard-collectors.md)
+- [heart-dashboard-markdown-link-test](2026/10/heart-dashboard-markdown-link-test.md)
 - [heart-front-door-sync](2026/10/heart-front-door-sync.md)
 - [heart-monitoring-coverage](2026/10/heart-monitoring-coverage.md)
 - [heart-publication-coverage](2026/10/heart-publication-coverage.md)
@@ -235,6 +236,7 @@ markers; everything below GENERATED is rebuilt.
 - [runtime-single-jit-median](2026/10/runtime-single-jit-median.md)
 - [scribbler-wave2-radial-panels-regrid](2026/10/scribbler-wave2-radial-panels-regrid.md)
 - [search-conformance-metadata](2026/10/search-conformance-metadata.md)
+- [search-ext-b1-registration](2026/10/search-ext-b1-registration.md)
 - [setuptools-include-packages](2026/10/setuptools-include-packages.md)
 - [sizing-none-triage-rules](2026/10/sizing-none-triage-rules.md)
 - [sparse-noise-map-pooling](2026/10/sparse-noise-map-pooling.md)

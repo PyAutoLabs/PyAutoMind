@@ -1,3 +1,24 @@
+## search-ext-b1-registration
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/492
+- completed: 2026-10-08
+- epic: search-extensibility (phase B1 registration)
+- workspace-pr: https://github.com/PyAutoLabs/autofit_inference/pull/1
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/1
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/493
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/292
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/60
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/33
+- workspace-pr: https://github.com/PyAutoLabs/.github/pull/34
+- merge-commit: PyAutoMind ba34fdb5; PyAutoHeart 8a6ebee353e75963f05bf66f4d37a4324a88a7d2
+
+### Outcome
+The two new fit benchmark repos (autofit_inference, autofit_profiling) are registered across the organism: lint-green skeletons with AGENTS.md and hooks on main; Mind `repos.yaml` rows propagated by `repos_sync`; Heart lists both as excluded; Cortex carries a `planned` row; Pulse adopts `tasks/autofit_profiling_bootstrap.md` as B4; the org profile table lists both. Five PRs merged 2026-10-07, Heart#292 and .github#34 on 2026-10-08 (human merge OK for the CI-less org profile). Clears the Heart manifest-drift YELLOW. RAL clones pulled at the skeleton heads.
+
+### Validation and limits
+Heart#292 was red on the pre-existing PyAutoBrain#499 theme change, fixed by PyAutoHeart#293 (test relaxed to the `dashboard.md` href; 129 dashboard tests locally, both CI legs green) and re-run green after merging main. Approved deviations: no Pulse/Insight registry rows at B1 (their `check` fails an instance without a published summary; rows land in B4a/B3); Cortex row `planned` until B3. Trap: registry PRs conflict on generated dashboard files when main moves; merge main and re-render with the explicit repo flag. `repos_sync --write --root <bundle>` refuses symlinked checkouts; run with `--skip "shared-standards blocks (generated)"` then `--only ... --repo X`.
+
+## Original prompt
+
 # Register autofit_inference and autofit_profiling across the organism, with minimal skeletons (epic search-extensibility, phase B1 registration)
 
 Type: feature

@@ -1,3 +1,17 @@
+## heart-dashboard-markdown-link-test
+- issue: none (small corrective fix shipped directly during the search-ext-b1-registration close-out)
+- completed: 2026-10-08
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/293
+- merge-commit: PyAutoHeart 01a708624fd81d77fb45299b21c224819d872225
+
+### Outcome
+`tests/test_dashboard.py::test_html_is_self_contained` pinned the literal `<a href="dashboard.md">markdown version</a>` anchor, which PyAutoBrain#499 restyles into an icon in the shared board theme, so every Heart test run since 2026-10-07 18:52Z was red. The assertion now checks the `dashboard.md` href survives the theme pass. Heart Tests green on 3.12 and 3.13; unblocked PyAutoHeart#292.
+
+### Validation and limits
+129 dashboard tests locally against PyAutoBrain main 1100c20; both CI legs green. Heart-side relaxation chosen over a Brain-side label exception, matching the theme's intent. Human approved the fix and the separate PR 2026-10-08.
+
+## Original prompt
+
 # Heart `test_html_is_self_contained` fails on main since PyAutoBrain#499 rewrote the "markdown version" link
 
 Type: bug

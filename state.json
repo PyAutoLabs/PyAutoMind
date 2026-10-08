@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 1 in flight",
-  "updated": "2026-10-08T07:20:11Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 0 in flight",
+  "updated": "2026-10-08T07:23:54Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Register autofit_inference and autofit_profiling across the organism, with minimal skeletons\u2026 \u2014 workspace-shipped, awaiting-merge \u2014 5/7 MERGED 2026-10-07 by human /prm (autofit_inference#1, autofit_profiling#1, Mind#493\u2026",
-      "url": "https://github.com/PyAutoLabs/autofit_inference/pull/1",
-      "prompt": "Use the start-dev skill. active/search_extensibility_b1_registration.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -48,12 +42,6 @@
       "text": "pick: SED chain waveband fit can spin forever in Nautilus exploration\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md",
       "prompt": "Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Heart `test_html_is_self_contained` fails on main since PyAutoBrain#499 rewrote the \"markdown version\" link",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautoheart/dashboard_markdown_link_test_broken_by_brain_499.md",
-      "prompt": "Use the start-dev skill. draft/bug/pyautoheart/dashboard_markdown_link_test_broken_by_brain_499.md"
     },
     {
       "severity": "info",
@@ -105,6 +93,12 @@
     },
     {
       "severity": "info",
+      "text": "pick: HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit/hpc_campaign_epic.md",
+      "prompt": "Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md"
+    },
+    {
+      "severity": "info",
       "text": "pick: Guard every workspace script against untimed network downloads",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace/no_untimed_network_downloads_check.md",
       "prompt": "Use the start-dev skill. draft/test/autolens_workspace/no_untimed_network_downloads_check.md"
@@ -126,6 +120,12 @@
       "text": "pick: Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md",
       "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md",
+      "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md"
     }
   ]
 }
