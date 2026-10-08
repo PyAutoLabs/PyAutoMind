@@ -21,7 +21,7 @@
 - issued: 2026-10-08
 - prompt: active/organ_banner_task_labels.md
 - session: Codex CLI, session ID unavailable
-- status: library-shipped, awaiting-merge
+- status: merged, publication verification in progress
 - approval: corrected label plan approved; user explicitly authorized merge and publication and parking board-one-click-update
 - tier: judge (explicit human merge authorization in current session)
 - heart-ack:
@@ -37,4 +37,6 @@
 - heart-ack-authorization: user explicitly answered “Acknowledge; ship, merge and publish”
 - library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/514
 - validation: 1252 tests passed; tenant firewall passed; all 15 banners preserve artwork and styling; five browser widths passed
-- next: await exact-head GitHub checks, merge under explicit user authorization, regenerate and verify all 15 published dashboards
+- merge: PyAutoBrain#514 at e20e0b0f9ef80877ccb2e4ef336cbf69c30b74da; all CI jobs green
+- publication: 14/15 public dashboards verified; Ears run 37835473692 is still collecting community data
+- next: verify Ears Community banner after deployment, close issue and Mind task, regenerate Mind dashboard, remove only this task worktree
