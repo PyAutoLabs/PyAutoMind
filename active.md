@@ -91,7 +91,9 @@
 - issued: 2026-10-08
 - prompt: active/dna-cockpit-registration.md
 - session: Codex GPT-6; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge — no configured PR checks; local tests passed; awaiting explicit no-checks merge acknowledgement
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dna-cockpit-registration
 - repos:
   - pyautolabs.github.io: feature/dna-cockpit-registration
+
+- library-pr: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/32
