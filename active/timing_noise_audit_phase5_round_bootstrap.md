@@ -13,7 +13,7 @@ Consequence: judge
 Status: active
 Filed: 2026-10-08
 Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/362
-Depends-on: active/timing_noise_audit_phase4_ab_rule_semantics.md (fix phase 3, PR #406; this branch stacks on it)
+Depends-on: complete/2026/10/timing-noise-audit-p4-ab-rule-semantics.md (fix phase 3, PR #406, merged 94861700)
 Pulse task: https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/timing_noise_audit.md
 
 ## Original request (chat 2026-10-08)

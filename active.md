@@ -5,9 +5,10 @@
 - issued: 2026-10-02
 - prompt: active/timing_noise_audit_phase5_round_bootstrap.md
 - session: Claude Code CLI (Opus 5.5 worker under --auto, supervised), session 016CCA6BtzDgw16aUaVuzzL9
-- status: workspace-dev
+- status: awaiting-merge
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/407
 - autonomy: --auto launch 2026-10-08 ("do next phase auto and the one after"); effective supervised (bug, Consequence judge); decide-and-flag at ship
-- stacked-on: timing-noise-audit-p4-ab-rule-semantics (PR #406; claim guard reports that sibling's autolens_profiling claim — deliberate stack per launch, merges after #406)
+- stacked-on: none — planned on #406, which merged first (94861700); PR #407 bases on main
 - worktree: ~/Code/PyAutoLabs-wt/timing-noise-audit-p5-round-bootstrap
 - repos:
   - autolens_profiling: feature/timing-noise-audit-p5-round-bootstrap
