@@ -12,13 +12,13 @@
 | [Epics](#epics) | 16 |
 | [In flight](#in-flight) | 4 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 239 |
+| [Backlog](#backlog) | 240 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 18
+**Highest priority** (filed as `high`) — showing 12 of 19
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -1494,7 +1494,15 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>feature</b> — 32</summary>
+<summary><b>feature</b> — 33</summary>
+
+<details><summary>📋 <a href="draft/feature/pyautodna/pyautodna_stack_management.md">PyAutoDNA: software stacks and compatibility</a> — pyautodna · large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautodna/pyautodna_stack_management.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding against the raw maximum finds…</a> — autoarray · small · supervised · medium</summary>
 
@@ -2577,7 +2585,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-73 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+74 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2598,6 +2606,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/euclid/euclid_dr1_prep_epic.md`
 - `draft/feature/jax_substructure/5_prng_key_vmap_noise.md`
 - `draft/feature/jax_substructure/6_deflection_equivalence_test.md`
+- `draft/feature/pyautodna/pyautodna_stack_management.md`
 - `draft/feature/pyautoears/community_organ_birth.md`
 - `draft/feature/pyautoeyes/group_cluster_gallery.md`
 - `draft/feature/pyautoeyes/multi_galaxy_gallery.md`
@@ -2621,8 +2630,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/refactor/workspaces/abell_1201_local_cleanup.md`
 - `draft/docs/autolens/split_lensing_regimes.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
-- `draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md`
-- _… and 33 more_
+- _… and 34 more_
 
 </details>
 
