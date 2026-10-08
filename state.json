@@ -2,11 +2,17 @@
   "schema_version": 1,
   "organ": "mind",
   "repo": "PyAutoMind",
-  "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-10-08T08:22:34Z",
+  "status": "red",
+  "headline": "RED \u2014 24 picks \u00b7 7 in flight",
+  "updated": "2026-10-08T08:23:15Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "red",
+      "text": "Inference setup evidence lookup for the assistant \u2014 blocked \u2014 autolens_assistant claimed by search-ext-a0c-downstream",
+      "url": "https://github.com/PyAutoLabs/autolens_assistant/issues/156",
+      "prompt": "Use the start-dev skill. active/inference_setup_advice.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -120,12 +126,6 @@
       "text": "pick: Cache `autonerves` config parsing \u2014 308 YAML files parsed per script run",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/autonerves/config_yaml_parse_cache.md",
       "prompt": "Use the start-dev skill. draft/refactor/autonerves/config_yaml_parse_cache.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md",
-      "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md"
     }
   ]
 }
