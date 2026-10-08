@@ -36,6 +36,7 @@
 - workspace-pr: https://github.com/PyAutoLabs/autofit_inference/pull/3
 - validation: 46 tests; ruff clean; build_readme/export/WALL --check pass; local witness run accepted; Insight check --offline validates the fixture; numpy Nautilus reference ×3 agrees to 0.019 nat / 0.015σ; DynestyStatic ln Z scatters 2.3 nat at default walks=5 (limitation, pilot item); JAX Nautilus refs and separated refs pending → B3
 - decision-taken: constant-likelihood validation rerun at n_live=2000 after n_live=500 measured −1.972 outside the ±0.1 window; both attempts kept
+- adversary: Codex gpt-6-astra review 2026-10-08 (draft/research/autofit/search_extensibility_epic_reviews/03_codex_astra_b2_pr3.md) → 12 findings, all enacted + pushed (reference rebuilt: mode weight 0.103 → 1.000, ln Z unchanged; identity keyed by data_seed + assertion_mechanism; separated control = disjoint priors, protocol amendment A1); local witness accepted/converged
 - autonomy: --auto launch 2026-10-08; effective supervised (feature@large); ship checkpoint = decide-and-flag; Consequence judge → human /prm
 - worktree: ~/Code/PyAutoLabs-wt/search-ext-b2-harness
 - repos:
@@ -84,3 +85,13 @@
 - heads: Mind 11196551; Brain 0b4471de; Broca 296225e
 - ci: Broca 16 passed / two renderer failures against Brain main (missing Broca theme); both pass locally with paired branch; rerun after Brain #511 merges
 - limits: private local board; no Pages deployment or scheduled refresh; no new response-quality campaign; raw historical transcripts remain in original sources
+
+## dna-cockpit-registration
+- issue: https://github.com/PyAutoLabs/pyautolabs.github.io/issues/31
+- issued: 2026-10-08
+- prompt: active/dna-cockpit-registration.md
+- session: Codex GPT-6; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dna-cockpit-registration
+- repos:
+  - pyautolabs.github.io: feature/dna-cockpit-registration
