@@ -3,6 +3,8 @@
 @PyAutoEars
 
 Type: feature
+Issued: 2026-10-08
+Issue: https://github.com/PyAutoLabs/PyAutoEars/issues/23
 
 ## Original request (verbatim)
 
@@ -22,7 +24,7 @@ its currently clutttered and hard to read,           All things under "Needs you
 
 Remove conversation subtitles and redundant source links; format expanded metadata with bold labels and readable spacing. Add an Updated date column to both conversation tables, using source timestamps. Remove the recurring-feedback placeholder. Preserve collection, uncertainty semantics, and the right-hand GitHub action.
 
-## Proposed plan (awaiting approval)
+## Approved plan
 
 - Remove grey repository/type/number subtitles beneath conversation titles.
 - Remove duplicate Open discussion/issue/PR links from expanded rows; retain the right-hand source action.
@@ -48,4 +50,4 @@ Tier: undeclared — merge mode: human /prm.
 - Proposed branch: `feature/ears-table-readability`.
 - Brain Feature Agent: small, direct task; `start_library` then `ship_library`; no relevant Memory matches.
 - Heart entry: STALE; planning may proceed, shipping requires a fresh gate.
-- No source edits, issue creation or task worktree setup before plan approval.
+- Plan approved on 2026-10-08; implementation authorized.

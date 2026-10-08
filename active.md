@@ -50,3 +50,14 @@
   - PyAutoInsight: feature/decision-history
   - PyAutoPulse: feature/decision-history
 - plan: approved; glance witness; auto-merge on green and deployment verification.
+
+## ears-table-readability
+- issue: https://github.com/PyAutoLabs/PyAutoEars/issues/23
+- issued: 2026-10-08
+- prompt: active/community_table_readability.md
+- session: Codex (GPT-6); session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/ears-table-readability
+- repos:
+  - PyAutoEars: feature/ears-table-readability
+- tier: undeclared (human /prm)
