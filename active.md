@@ -1,46 +1,19 @@
 # Active Tasks
 
-## inference-setup-producer
-- issue: https://github.com/PyAutoLabs/autolens_inference/issues/20
-- issued: 2026-10-08
-- prompt: active/inference_setup_producer.md
-- epic: inference-setup-redesign
-- session: Codex GPT-6; session ID unavailable
-- status: awaiting-merge
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/inference-setup-producer
-- repos:
-  - autolens_inference: feature/inference-setup-producer
-- plan: human authorized all phases autonomously to the end, including in-turn merge on passed gates; no compute or scientific acceptance.
-
-- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/21
-
 ## inference-setup-browser
 - issue: https://github.com/PyAutoLabs/PyAutoInsight/issues/15
 - issued: 2026-10-08
 - prompt: active/inference_setup_browser.md
 - epic: inference-setup-redesign
 - session: Codex GPT-6; session ID unavailable
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/inference-setup-browser
 - repos:
   - PyAutoInsight: feature/inference-setup-browser
 - plan: human authorized all phases autonomously to the end, including in-turn merge on passed gates; no compute or scientific acceptance.
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoInsight/pull/16
+- evidence: 168 tests; fixture and actual-producer Chromium checks; independent CLEAN; Heart STALE rehearsal gap only. Captured producer de37acfe797465205128d45973af5e853c74a684 with56records/11setups; primary research and source pipeline verified.
 
-## inference-sampler-literature
-- issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/124
-- issued: 2026-10-08
-- prompt: active/inference_sampler_literature.md
-- epic: inference-setup-redesign
-- session: Codex GPT-6; session ID unavailable
-- status: awaiting-merge
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/inference-sampler-literature
-- repos:
-  - PyAutoMemory: feature/inference-sampler-literature
-- prerequisite: complete/2026/10/memory-board-header-contract.md (merged)
-- prerequisite-pr: https://github.com/PyAutoLabs/PyAutoMemory/pull/127
-- plan: human authorized all phases autonomously to the end, including in-turn merge on passed gates; no compute or scientific acceptance.
-
-- workspace-pr: https://github.com/PyAutoLabs/PyAutoMemory/pull/125
 
 ## search-ext-a0c-downstream
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/776
@@ -88,19 +61,6 @@
   - PyAutoFit: feature/search-ext-a0b-hygiene (+ feature/search-ext-a0a2-backend-conformance stacked on it for the A0a(ii) PR)
 - tier: judge (human /prm)
 - heart-ack: STALE at launch (release validation incomplete: no rehearsal for current source)
-
-## inference-setup-advice
-- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/156
-- issued: 2026-10-08
-- prompt: active/inference_setup_advice.md
-- epic: inference-setup-redesign
-- session: Codex GPT-6; session ID unavailable
-- status: workspace-dev
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/inference-setup-advice
-- coordination: human explicitly approved "Coordinate the two tasks" with search-ext-a0c-downstream on 2026-10-08; preserve edits and reconcile shared discovery files before merge.
-- repos:
-  - autolens_assistant: feature/inference-setup-advice
-- plan: human authorized all phases autonomously to the end, including in-turn merge on passed gates.
 
 ## linear-solver-p4a-jacobi-a100-divergence
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/397

@@ -9,6 +9,8 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked` /
 
 | date | task | effective level | gates (tests/smoke/review/heart) | outcome |
 |------|------|-----------------|----------------------------------|---------|
+| 2026-10-08 | inference-setup-advice (autolens_assistant#156 / PR158) | safe (declared judge; explicit human merge authority) | 252 tests/1 skip in pinned runtime;36 focused; actual-producer pinned lookup; independent CLEAN; clone-boundary/wiki-currency exact-head CI PASS; Heart STALE rehearsal gap only | merged-unchanged (cea768a; human-authorized) |
+| 2026-10-08 | inference-setup-browser (Insight#15 / PR16) | supervised | 168 tests; fixture+actual-producer Chromium; independent CLEAN; captured producer de37acfe56records/11setups; primary research/source pipeline verified; Heart STALE rehearsal gap only | PR-open; awaiting green CI, merge and live-deployment confirmation |
 | 2026-10-08 | inference-setup-producer (autolens_inference#20 / PR21) | supervised | 120 tests; six import/CLI smokes; independent CLEAN including portable manifest/tamper/resume witnesses; Heart STALE release validation incomplete: no rehearsal for current source | PR-open; human-authorized merge on every green CI leg |
 | 2026-10-08 | inference-sampler-literature (Memory#124 / PR125) | supervised | validate passes; independent CLEAN primary-source handoff; pre-existing board test failure routed to prerequisite126/PR127; Heart STALE same rehearsal gap | PR-open; awaiting prerequisite and green CI |
 | 2026-10-08 | memory-board-header-contract (Memory#126 / PR127) | safe | 275 tests; all3 validation gates; independent CLEAN; red-main/green-fix witness; Heart STALE same rehearsal gap | PR-open; human-authorized prerequisite merge on green |

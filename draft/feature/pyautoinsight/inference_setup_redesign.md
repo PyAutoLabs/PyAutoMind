@@ -113,7 +113,7 @@ Reader contract implemented in Insight PR14 (issue13), commit 4f8eaec.
 Phase 1 merged via human /prm. Continue producer/catalogue/script migration. The live registry
 remains v1. No baseline scientific acceptance or runs were performed.
 Bounded prompt: complete/2026/10/inference-setup-contract.md. Full scope remains the five
-approved phases above; only phase 1 has been implemented.
+approved phases above; at that initial handoff only phase1 had been implemented.
 
 ## Continuing authorization — 2026-10-08
 
@@ -121,3 +121,14 @@ Human: "prm, and continue through all phases autonomously to the end".
 This grants implementation and in-turn merge/close-out of the approved remaining
 phases when their tests, independent review and CI pass. No compute/release or
 scientific acceptance is authorized. Preserve Heart gates and data products.
+
+## Implementation status — 2026-10-08
+
+- Phase1 contract: complete/2026/10/inference-setup-contract.md (Insight#14 merged).
+- Phase2 producer: complete/2026/10/inference-setup-producer.md (autolens_inference#21 merged de37acfe). Catalogue preserves56historical records across11setups; zero existing prepared problems and no accepted baseline. Future verified baseline export and sampler investigation are implemented.
+- Phase3 browser: active/inference_setup_browser.md (Insight#16 awaiting merge on77e4d21). Captured producer de37acfe;168tests and fixture/actual-producer Chromium checks; independent CLEAN. Root must confirm merge and live deployment before completion.
+- Phase4 assistant advice: complete/2026/10/inference-setup-advice.md (autolens_assistant#158 merged cea768a). Pinned lookup, immutable citations and qualified matches;252tests/1skip and36focused tests, independent CLEAN.
+- Phase5a literature/curation: complete/2026/10/inference-sampler-literature.md (Memory#125 merged13499c3). Public-source candidates and on-demand curation guidance; no installation, compute or benchmark. Prerequisite complete/2026/10/memory-board-header-contract.md (Memory#127 merged).
+- Phase5b public candidate publication is included in the pending browser work and remains unclosed until merge/deployment evidence is confirmed.
+
+No new scientific acceptance or sampler promotion; Heart STALE rehearsal gap remains explicit. Worktrees are retained under root's coordination instruction pending reviewer/dependency cleanup.
