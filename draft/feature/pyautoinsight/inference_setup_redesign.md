@@ -105,3 +105,12 @@ Sounds good, i like this **baseline-to-experiment contract** as I agree we will 
 ok thats all good, remember also we need to distinguish between cold start and warm start for samplers which I guess also is part of the contract
 
 ok begin
+
+## Phase 1 handoff — 2026-10-08
+
+Reader contract implemented in Insight PR14 (issue13), commit 4f8eaec.
+157 tests, Ruff and offline check pass; hosted lint/refresh pending at handoff.
+Await human /prm; next is producer/catalogue/script migration. The live registry
+remains v1. No baseline scientific acceptance or runs were performed.
+Bounded prompt: active/inference_setup_contract.md. Full scope remains the five
+approved phases above; only phase 1 has been implemented.
