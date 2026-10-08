@@ -12,7 +12,7 @@
 | [Epics](#epics) | 16 |
 | [In flight](#in-flight) | 3 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 241 |
+| [Backlog](#backlog) | 245 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -248,7 +248,7 @@ Use the start-dev skill. draft/feature/autofit/results_library_epic_report.md
 </details>
 
 <details>
-<summary><b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — 2 queued prompt(s), in order</summary>
+<summary><b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — 6 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — ledger: `draft/research/autofit/search_extensibility_epic.md` — filed 2026-10-07; scoped (4 Opus surveys) and independently reviewed (Codex gpt-6-astra, Claude Fable high) the same day; all §5…</summary>
 
@@ -262,6 +262,38 @@ Continue the 'Search extensibility — a PyAutoFit search framework for many sam
 
 ```
 Use the start-dev skill. draft/bug/autofit/search_kwarg_typos_in_workspace_scripts.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autofit_inference/search_extensibility_b3_wave1_pilot.md">Wave-1 pilot, Insight registration and the search catalogue (epic search-extensibility, phase B3)</a> — autofit_inference · large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autofit_inference/search_extensibility_b3_wave1_pilot.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/autofit/search_extensibility_a2_objective_bridge.md">Objective factory, PoolFactory, JAX fork rule and the run(ctx) bridge…</a> — autofit · large · safe · high</summary>
+
+```
+Use the start-dev skill. draft/refactor/autofit/search_extensibility_a2_objective_bridge.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/autofit/search_extensibility_a3_samples_checkpointer.md">Samples adapter and Checkpointer/resume split (epic search-extensibility, phase A3)</a> — autofit · large · safe · high</summary>
+
+```
+Use the start-dev skill. draft/refactor/autofit/search_extensibility_a3_samples_checkpointer.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/autofit/search_extensibility_a3b_nss_preflight_x64.md">NSS onto Fitness, trace preflight and x64 check (epic search-extensibility, phase A3b)</a> — autofit · medium · safe · high</summary>
+
+```
+Use the start-dev skill. draft/refactor/autofit/search_extensibility_a3b_nss_preflight_x64.md
 ```
 
 </details>
@@ -2636,7 +2668,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-69 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+73 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2650,6 +2682,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autofit/certified_solver_batched_guard_c2.md — unknown theme keyword(s): inversion`
 - `draft/feature/autofit/results_library_epic.md — unknown theme keyword(s): hpc, euclid, results, aggregator`
 - `draft/feature/autofit/results_library_epic_report.md — unknown theme keyword(s): results, euclid`
+- `draft/feature/autofit_inference/search_extensibility_b3_wave1_pilot.md — unknown theme keyword(s): searches, inference, benchmark`
 - `draft/feature/autolens/cluster_curves_engine_dispatch.md — unknown theme keyword(s): critical-curves`
 - `draft/feature/autolens/coolest_pixel_grid_export.md — unknown theme keyword(s): coolest, interop, euclid`
 - `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md — unknown theme keyword(s): euclid, catalogue`
@@ -2696,6 +2729,9 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md — unknown theme keyword(s): ci, robustness`
 - `draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md — unknown theme keyword(s): ci, robustness`
 - `draft/refactor/autofit/ep_analysis_level_compile_cache.md — unknown theme keyword(s): jax`
+- `draft/refactor/autofit/search_extensibility_a2_objective_bridge.md — unknown theme keyword(s): searches, jax`
+- `draft/refactor/autofit/search_extensibility_a3_samples_checkpointer.md — unknown theme keyword(s): searches, persistence`
+- `draft/refactor/autofit/search_extensibility_a3b_nss_preflight_x64.md — unknown theme keyword(s): searches, jax`
 - `draft/refactor/autolens/cache_readers_fall_back_to_zip_member.md — unknown theme keyword(s): aggregator, paths`
 - `draft/refactor/autolens/witt_wynne_solver_library_home.md — unknown theme keyword(s): euclid`
 - `draft/refactor/autonerves/config_yaml_parse_cache.md — unknown theme keyword(s): performance, ci`
