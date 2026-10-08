@@ -57,8 +57,11 @@
 - issue: https://github.com/PyAutoLabs/pyautolabs.github.io/issues/33
 - issued: 2026-10-08
 - session: Codex (session ID unavailable)
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/broca-cockpit
 - repos:
   - pyautolabs.github.io: feature/broca-cockpit
 - heart-ack: Existing user acknowledgement of manifest drift (workspace checkouts, 1 mismatch versus repos.yaml); recheck exact reasons before ship.
+- library-pr: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/34
+- validation: 10 Node tests pass; browser navigation, overview and deep-link reload pass at 390px and 1440px.
+- next: Await explicit no-PR-CI merge exception required by prm; then merge and verify Pages.
