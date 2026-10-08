@@ -56,6 +56,7 @@ a sweep), mirroring the Heart ↔ vitals template. See the decision:
 - [autolens_profiling/inference-programme-ledger](#autolens_profilinginference-programme-ledger)
 - [autolens-profiling/inference-programme](#autolens-profilinginference-programme)
 - [autofit_workspace_developer/searches-nss](#autofit_workspace_developersearches-nss)
+- [autolens-profiling/linear-solver-p5-mapper-corpus-large-npz](#autolens-profilinglinear-solver-p5-mapper-corpus-large-npz)
 
 <!-- toc:end -->
 
