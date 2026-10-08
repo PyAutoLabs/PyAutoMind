@@ -10,7 +10,7 @@ Difficulty: moderate
 Autonomy: supervised
 Priority: high
 Consequence: judge
-Status: draft
+Status: active
 Filed: 2026-10-08
 Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/362
 Depends-on: complete/2026/10/timing-noise-audit-p3-qualify-drift.md (fix phase 2 of the audit note)
