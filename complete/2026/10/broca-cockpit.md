@@ -1,3 +1,9 @@
+Shipped in PR #34 (merge 6ea549506d1a24df782d635130f5a3fd87468600). Broca is registered after Cortex with standard navigation, overview and dashboard embedding. Uses the supported no-feed state until a producer feed exists.
+
+Validation: 10 Node tests and Chromium mobile/desktop (390px, 1440px) navigation, overview and deep-link reload checks passed. No PR CI is configured; the user explicitly invoked prm after the exception was disclosed and approval requested. Feature ancestry confirms the entire branch merged. Pages deployment runs from main.
+
+## Original prompt
+
 # Complete Broca cockpit registration
 Type: bug
 Target: pyautolabs.github.io

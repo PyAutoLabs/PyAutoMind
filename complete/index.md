@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1803 records across 9 buckets.
+1804 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -139,6 +139,7 @@ markers; everything below GENERATED is rebuilt.
 - [board-navigation-scientist](2026/10/board-navigation-scientist.md)
 - [board-navigation-shared-consumers](2026/10/board-navigation-shared-consumers.md)
 - [brain-dashboard-scope](2026/10/brain-dashboard-scope.md)
+- [broca-cockpit](2026/10/broca-cockpit.md)
 - [broca-pages](2026/10/broca-pages.md) — Broca dashboard published at https://pyautolabs.github.io/PyAutoBroca/ with GitHub Pages Actions; shared board…
 - [closed-thread-followups](2026/10/closed-thread-followups.md) — New external comments after closure or an accepted answer return a thread to Community review without requirin…
 - [cloud-board-validation-evidence](2026/10/cloud-board-validation-evidence.md)
