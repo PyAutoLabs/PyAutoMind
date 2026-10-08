@@ -1,3 +1,29 @@
+## search-ext-a0c-fit-repair
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1668
+- completed: 2026-10-08
+- epic: search-extensibility (phase A0c part 1)
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1669
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1669
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/168
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/107
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/108
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_developer/pull/29
+- workspace-pr: https://github.com/PyAutoLabs/autofit_assistant/pull/55
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/502
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/503
+- merge-commit: PyAutoFit 8bb5f6e8; autofit_workspace dce1ad75; autofit_workspace_test 0ad2a918, 8666a07a; autofit_workspace_developer 06d86ac1; autofit_assistant 51719036; PyAutoBrain 896103a6, 13a5ef50
+
+### Outcome
+Search documentation and coverage repaired where the search facts originate. PyAutoFit `docs/api/searches.rst` lists all 15 searches; the search cookbook (library and workspace mirror) gains Nautilus; config READMEs, `configs.md`, `installation/source.md` and the citation files no longer claim per-search YAML, missing requirements files or MultiNest/PySwarms (blackjax, optax, prodigy and Nautilus added). The autofit workspace rosters, `llms.txt` and the LBFGS/JAX note in `mle.py` are correct. autofit_workspace_test gains executable integration scripts for SMC, Drawer, BFGS, MultiStartADABelief and MultiStartLion (on demand, not in smoke). `autofit_workspace_developer/searches/nss/` is deleted via Gut (condemned.md `autofit_workspace_developer/searches-nss`, pre-delete 7cb97c6) and the archive is defined in its README. autofit_assistant's search skill, wiki pages and config README carry the full roster. PyAutoBrain's samplers faculty gap rule is keyed on exported search classes (no MultiStart false positive, SMC/BFGS found, NSS once) and the sampler_pipeline skill points its benchmarking boundary at autolens_inference with a new Stage 5 documentation step.
+
+### Validation and limits
+PyAutoFit 3066 passed / 2 skipped / 5 xfailed; docs build green after a blank line in the NSS docstring (the only source-line change, made during /prm because listing NSS rendered a broken docstring). autofit_workspace smoke 4/4; workspace_test scripts 5/5 in and out of test mode; Brain samplers 10 passed, full suite green after renaming the fixture directory the tenant firewall flagged. autofit_assistant#55 CI green; its local `test_repo_readme_prompts_match_cards` failure and missing `literature.bib` citation check are pre-existing on main and untouched. autofit_workspace_developer has no CI; merged on explicit human OK. Human acknowledged Heart STALE (no rehearsal for current source). Plan drafted and shipped by Fable with three Opus workers; line drift found: `files/citation.tex` singular, `non_linear_search.md` claim at :58-60.
+
+### Follow-ups
+`af.Drawer` crashes under NullPaths (`draft/bug/autofit/drawer_crashes_under_nullpaths_timer_none.md`; the workspace_test Drawer script works around it). A0c part 2 (downstream PySwarms/MultiNest ghosts and "LBFGS only" claims in the al/ag/cti family) to file next. Then A0b → A0a(ii).
+
+## Original prompt
+
 # Search documentation and coverage repair, fit family + Brain (epic search-extensibility, phase A0c part 1)
 
 Type: docs
