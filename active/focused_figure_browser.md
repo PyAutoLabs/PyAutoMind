@@ -100,12 +100,15 @@ Survey (Brain Eyes conductor, local checkout): 40 PNGs on disk (imaging 22, inte
   one selected image with matching critique actions, and accessible enlargement.
   Hidden survey/context/state contracts remain intact. Generated HTML/Markdown updated.
 - Ruff and all 87 pytest tests pass. Live check passed all 265 image URLs, manifest
-  digests and Brain state schema. Ten standalone Chromium cases passed at five
-  widths in both themes with real PNGs, clipboard, keyboard, failure/retry and races.
-  Embedded checks are being finalized. Evidence: repo `.scratch/` logs/screenshots.
+  digests and Brain state schema. Twelve Chromium cases passed: five
+  widths in both themes plus phone/desktop iframe views, four real PNGs, clipboard,
+  keyboard, failure/retry and response races. Fixed modal Tab/Shift+Tab containment
+  in iframe; Escape restores image focus. Evidence: repo `.scratch/` logs/screenshots.
 - Heart YELLOW: `manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml`.
   Specific mismatch: unregistered `COWLS_COSMOS_Web_Lens_Survey` checkout.
 - Stale reason: `release validation incomplete: no rehearsal for current source`.
 - Ship requires human acknowledgement of this current YELLOW warning under
   ship_library step 3. PR draft is `.scratch/pr-body.md`; no merge authority.
 - No scientific workspace API changes; downstream surface is the board/cockpit.
+
+Implementation and all applicable local checks complete. Next action: human acknowledgement of the exact Heart YELLOW reason above, then commit/push and open the prepared PR. No source changes have been committed, pushed or published.
