@@ -38,3 +38,15 @@ Tier: undeclared — merge mode: human /prm.
 - Proposed branch: `feature/ears-followup-window`.
 - Worktree: `/home/jammy/Code/PyAutoLabs/.worktrees/ears-followup-window`.
 - Scope is Ears only; Brain is a read-only compatibility consumer.
+
+## Implementation handoff — 2026-10-08
+
+- PR: https://github.com/PyAutoLabs/PyAutoEars/pull/26; commit `d2ba095`.
+- Worktree: `/home/jammy/Code/PyAutoLabs/.worktrees/ears-followup-window/PyAutoEars`; branch `feature/ears-followup-window`.
+- Approved scope complete: 30-day cutoff based on latest pending external comment; historical retention and label; fresh-reply reactivation; open issues and unknown evidence unchanged.
+- Optional top-level historical timestamp preserves Brain's existing strict nested follow_up contract. Actual adapter accepts historical records and excludes them from awaiting-response counts.
+- Modified `ears/collect.py`, `ears/board.py`, `ears/presentation.py`, `REFERENCE.md` and existing follow-up/browser tests.
+- Validation: 126 Ears tests, 29 Brain adapter tests, Chromium desktop/mobile light/dark smoke and generated state contract pass. Screenshot inspected.
+- Evidence: worktree `_site/pytest.log`, `_site/adapter-tests.log`, `_site/browser.log`, `_site/browser-fixture/`.
+- Heart STALE: release validation incomplete: no rehearsal for current source; development shipping permitted.
+- No source work remains. Await human /prm; not merged or deployed.
