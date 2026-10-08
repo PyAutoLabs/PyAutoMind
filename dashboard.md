@@ -789,7 +789,7 @@ Use the start-dev skill. active/community_table_readability.md
 
 </details>
 
-<details><summary>📋 <a href="active/decision_history.md">Campaign decision history on Pulse and Insight</a> — <a href="https://github.com/PyAutoLabs/PyAutoInsight/issues/21">issue #21</a> — issued 2026-10-08 — workspace-dev</summary>
+<details><summary>📋 <a href="active/decision_history.md">Campaign decision history on Pulse and Insight</a> — <a href="https://github.com/PyAutoLabs/PyAutoInsight/issues/21">issue #21</a> — issued 2026-10-08 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoInsight/pull/22">PyAutoInsight#22</a>, <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/39">PyAutoPulse#39</a></summary>
 
 ```
 Use the start-dev skill. active/decision_history.md
