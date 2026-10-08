@@ -781,7 +781,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/community_table_readability.md">Community table readability</a> — <a href="https://github.com/PyAutoLabs/PyAutoEars/issues/23">issue #23</a> — issued 2026-10-08 — library-dev</summary>
+<details><summary>📋 <a href="active/community_table_readability.md">Community table readability</a> — <a href="https://github.com/PyAutoLabs/PyAutoEars/issues/23">issue #23</a> — issued 2026-10-08 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoEars/pull/24">PyAutoEars#24</a></summary>
 
 ```
 Use the start-dev skill. active/community_table_readability.md

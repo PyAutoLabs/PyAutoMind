@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-10-08T10:01:05Z",
+  "updated": "2026-10-08T10:01:41Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Community table readability \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoEars/pull/24",
+      "prompt": "Use the start-dev skill. active/community_table_readability.md"
+    },
     {
       "severity": "yellow",
       "text": "Campaign decision history on Pulse and Insight \u2014 awaiting-merge",
@@ -120,12 +126,6 @@
       "text": "pick: Physical model check when speeding up smoke tests",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md",
       "prompt": "Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Fix Sibson interpolation at internal edges",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md",
-      "prompt": "Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md"
     }
   ]
 }
