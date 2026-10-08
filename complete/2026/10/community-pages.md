@@ -1,3 +1,35 @@
+Community pages and a merged "Community & Contributing" README section across PyAutoLabs,
+triggered by Discussion #32 (SiriusFzh's PyAutoLens Visual Workbench).
+
+## What shipped
+
+- `docs/general/community.md` in PyAutoLens, PyAutoGalaxy and PyAutoFit, in each
+  `docs/index.md` General toctree; the PyAutoLens page lists the SiriusFzh Visual Workbench
+  (repo URL, labelled as a community project).
+- One `## Community & Contributing` section replacing `Community & Support` / `Contributing`
+  across 16 public repos plus PyAutoScientist, each linking the per-library RTD community page.
+- PyAutoLabs front page: the community section moved to the bottom, linking every project page.
+
+## PRs (all MERGED 2026-10-07)
+
+Wave 1 (libraries): PyAutoLens#774, PyAutoGalaxy#649, PyAutoFit#1663, PyAutoArray#618.
+Wave 2 (READMEs): autolens_workspace#585, autogalaxy_workspace#256, autofit_workspace#167,
+autoreduce_workspace#5, HowToLens#96, HowToGalaxy#85, HowToFit#71, autolens_visualization#3,
+autogalaxy_visualization#3, autofit_visualization#3, autocti_visualization#3,
+autolens_profiling#391 (after corrective #392), pyautolabs.github.io#30, PyAutoScientist#48.
+
+## Notes
+
+- Five PRs (autolens_profiling#391 and the four *_visualization#3) were held by human decision
+  until release 2026.10.7.1: their lychee lint 404'd on the new RTD community page because RTD
+  had been red since 2026-10-04 on the `autonerves>2026.10.4.1` floor. Lints re-ran clean once
+  RTD rebuilt; #391 additionally needed autolens_profiling main's dashboard re-rendered against
+  the current PyAutoBrain theme (0022385) and a branch update.
+- Heart acknowledged at ship: manifest drift (2 undeclared checkouts) and stale release
+  validation; both unrelated to this task.
+
+## Original prompt
+
 # Community pages + merged "Community & Contributing" sections across PyAutoLabs
 
 Type: docs

@@ -1,56 +1,30 @@
 # Active Tasks
 
-## community-pages
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/773
-- discussion: https://github.com/orgs/PyAutoLabs/discussions/32
-- user-facing: true
-- author: @SiriusFzh (external, Discussion #32 trigger)
+## search-ext-b1-registration
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/492
 - issued: 2026-10-07
-- prompt: active/community_pages.md
-- session: Claude CLI (Fable 5.1, /start_dev); session ID unavailable
-- worktree: ~/Code/PyAutoLabs-wt/community-pages
+- prompt: active/search_extensibility_b1_registration.md
+- epic: search-extensibility (phase B1 registration)
+- session: Claude CLI (Fable 5.1, /start_dev); https://claude.ai/code/session_01QJmrnXNQdq6HSruUt3MqVW
+- status: workspace-shipped, awaiting-merge — 5/7 MERGED 2026-10-07 by human /prm (autofit_inference#1, autofit_profiling#1, Mind#493 ba34fdb5, Cortex#60, Pulse#33); OPEN: Heart#292 (red on the pre-existing Brain#499 markdown-link test break — bug draft draft/bug/pyautoheart/dashboard_markdown_link_test_broken_by_brain_499.md) and .github#34 (no CI configured; needs the human's explicit merge OK). RAL clones pulled. Resume: fix the Heart bug → re-run #292 → /prm both → close-out
+- worktree: ~/Code/PyAutoLabs-wt/search-ext-b1-registration
 - repos:
-  - PyAutoLens: feature/community-pages
-  - PyAutoGalaxy: feature/community-pages
-  - PyAutoFit: feature/community-pages
-  - PyAutoArray: feature/community-pages (coordination authorised with imshow-origin-lower-overlays, README only)
-  - autolens_workspace: feature/community-pages (coordination authorised with scribbler-wave2, README only)
-  - autogalaxy_workspace: feature/community-pages (coordination authorised with scribbler-wave2, README only)
-  - autofit_workspace: feature/community-pages
-  - autoreduce_workspace: feature/community-pages
-  - HowToLens: feature/community-pages
-  - HowToGalaxy: feature/community-pages
-  - HowToFit: feature/community-pages
-  - autolens_visualization: feature/community-pages
-  - autogalaxy_visualization: feature/community-pages
-  - autofit_visualization: feature/community-pages
-  - autocti_visualization: feature/community-pages
-  - autolens_profiling: feature/community-pages
-  - pyautolabs.github.io: feature/community-pages
-- released: PyAutoScientist released 2026-10-07 by human decision because its PR merged (https://github.com/PyAutoLabs/PyAutoScientist/pull/48, merged 2026-10-07T10:05Z; moved out of prs: so the claim guard stops matching it); now claimed by dashboard-section-disclosures
-- summary: per-library docs/general/community.md (Lens lists the SiriusFzh Visual Workbench), one merged "Community & Contributing" README section across 16 public repos + PyAutoScientist, front page community section moved to the bottom linking every project page. Wave 1 = 3 library PRs, wave 2 = README bundle.
-- tier: glance (auto-merge on green if Witness passes)
-- status: awaiting-merge — 17/18 MERGED 2026-10-07 (the four *_visualization#3 PRs merged 18:07Z after release 2026.10.7.1 turned RTD green and their lychee lints re-ran clean); 1 PR HELD: autolens_profiling #391 — lint now fails only `build_dashboard.py --check` (dashboard/index.html STALE), a pre-existing main staleness (main fails the same check), not the PR; resume: re-render the profiling dashboard on main (or ack the check), re-run #391 lint, /prm it, then close out
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/774
-- prs:
-  - PyAutoLens: https://github.com/PyAutoLabs/PyAutoLens/pull/774
-  - PyAutoGalaxy: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/649
-  - PyAutoFit: https://github.com/PyAutoLabs/PyAutoFit/pull/1663
-  - PyAutoArray: https://github.com/PyAutoLabs/PyAutoArray/pull/618
-  - autolens_workspace: https://github.com/PyAutoLabs/autolens_workspace/pull/585
-  - autogalaxy_workspace: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/256
-  - autofit_workspace: https://github.com/PyAutoLabs/autofit_workspace/pull/167
-  - autoreduce_workspace: https://github.com/PyAutoLabs/autoreduce_workspace/pull/5
-  - HowToLens: https://github.com/PyAutoLabs/HowToLens/pull/96
-  - HowToGalaxy: https://github.com/PyAutoLabs/HowToGalaxy/pull/85
-  - HowToFit: https://github.com/PyAutoLabs/HowToFit/pull/71
-  - autolens_visualization: https://github.com/PyAutoLabs/autolens_visualization/pull/3
-  - autogalaxy_visualization: https://github.com/PyAutoLabs/autogalaxy_visualization/pull/3
-  - autofit_visualization: https://github.com/PyAutoLabs/autofit_visualization/pull/3
-  - autocti_visualization: https://github.com/PyAutoLabs/autocti_visualization/pull/3
-  - autolens_profiling: https://github.com/PyAutoLabs/autolens_profiling/pull/391
-  - pyautolabs.github.io: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/30
-- heart-ack: manifest drift: shared-standards blocks (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml; release validation stale: source moved since rehearsal (PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens) — acknowledged by the human 2026-10-07 at ship
+  - autofit_inference: feature/search-ext-b1-registration
+  - autofit_profiling: feature/search-ext-b1-registration
+  - PyAutoMind: feature/search-ext-b1-registration (coordination authorised by the human 2026-10-07 with mind-dashboard-simplify #491: repos.yaml, ROUTING.md, epics.md only)
+  - PyAutoHeart: feature/search-ext-b1-registration
+  - PyAutoCortex: feature/search-ext-b1-registration
+  - PyAutoPulse: feature/search-ext-b1-registration
+- tier: judge (human /prm)
+- workspace-pr: https://github.com/PyAutoLabs/autofit_inference/pull/1
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/1
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/493
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/292
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/60
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/33
+- workspace-pr: https://github.com/PyAutoLabs/.github/pull/34
+- heart-ack: manifest drift: workspace checkouts (manifest ↔ disk) — 2 mismatch(es) vs PyAutoMind/repos.yaml; release validation incomplete: no rehearsal for current source — acknowledged by the human 2026-10-07 at ship
+- summary: minimal lint-green skeletons for both new fit repos; Mind repos.yaml rows + repos_sync --write; Heart excluded; Cortex planned row; Pulse task adoption (no registry rows at B1); org profile rows; RAL clones. Clears Heart manifest-drift YELLOW.
 
 ## mind-dashboard-simplify
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/500

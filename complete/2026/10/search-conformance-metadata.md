@@ -1,3 +1,24 @@
+## search-conformance-metadata
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1666
+- completed: 2026-10-07
+- epic: search-extensibility (phase A0a(i))
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1667
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1667
+- merge-commit: PyAutoFit 81bfb8e1fb6b54832c3038e4e6186b3f0b78038d
+
+### Outcome
+Tests-only conformance suite, layer (i), over the 15 public searches (`test_autofit/non_linear/search/{conformance_roster,test_conformance}.py`): default construction, family base, `__identifier_fields__` and default-construction identifier against a frozen golden table (generated from main 908ca61a5 with `PYAUTO_TEST_MODE` unset), constructor-argument sets, `search.json` round trip and `conf.instance` unchanged by construction. Classes resolve lazily by class-path string, so the module collects on `unittest-nojax`; only NSS construction skips without blackjax. Five strict xfails, each pinned to one exception type, record later epic work: NUTS/SMC round trip (the serialised `inverse_mass_matrix` kind string is rejected — A0b) and Emcee/NUTS/SMC setting `output.search_internal=True` at construction (A3; the test pushes a `false` override because the test config masks it). No library source or identifier changed.
+
+### Validation and limits
+Full `test_autofit` 3066 passed / 2 skipped / 5 xfailed in the task worktree; no-jax leg emulated with an import hook (97 passed, 4 NSS skips, 5 xfails); perturbing one golden identifier fails exactly one case. CI: unittest 3.12, 3.13 and unittest-nojax green on head 886ebb218. `samples_info` key sets deferred to layer (ii), which lands after A0b.
+
+### Traps
+- `PYAUTO_TEST_MODE` changes Emcee and Zeus identifiers (apply_test_mode), so golden identifiers are computed with it removed.
+- The test config's `output.yaml` has `search_internal: true`, which hides the construction-time mutation; a `false` override is needed to observe it.
+- Heart's release-validation freeze (set by pre-build) blocked the library merge until it expired; `pyauto-heart freeze --show` exit 3 = frozen.
+
+## Original prompt
+
 # Search conformance suite, layer (i): metadata and serialization for all 15 searches on every CI leg (epic search-extensibility, phase A0a(i))
 
 Type: test
@@ -12,8 +33,9 @@ Difficulty: medium
 Autonomy: safe
 Priority: high
 Epic: search-extensibility
-Status: draft
+Status: active
 Filed: 2026-10-07
+Issued: 2026-10-07
 
 Phase A0a(i) of the search-extensibility epic
 (`draft/research/autofit/search_extensibility_epic.md`; plan in

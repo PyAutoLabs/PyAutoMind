@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1765 records across 9 buckets.
+1768 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -144,6 +144,7 @@ markers; everything below GENERATED is rebuilt.
 - [cockpit-actionable-state](2026/10/cockpit-actionable-state.md) — Additive v1 state/action/safety/decision metadata with overnight workflow evidence; cockpit reason/action rend…
 - [community-board-readability](2026/10/community-board-readability.md)
 - [community-feedback](2026/10/community-feedback.md)
+- [community-pages](2026/10/community-pages.md)
 - [compact-dashboard-rows](2026/10/compact-dashboard-rows.md)
 - [cortex-find-script-symlink](2026/10/cortex-find-script-symlink.md)
 - [critical-curves-dispatch-audit](2026/10/critical-curves-dispatch-audit.md) — Phase 3a evidence and contract shipped. Research, raw CPU JSON/PNG, frozen measured source and cumulative wiki…
@@ -178,6 +179,7 @@ markers; everything below GENERATED is rebuilt.
 - [interferometer-decision-matrix-last-cell](2026/10/interferometer-decision-matrix-last-cell.md)
 - [interferometer-streaming-scaling](2026/10/interferometer-streaming-scaling.md) — CPU streaming scaling cells and evidence shipped, including accumulation to 5e7 visibilities, in-memory failur…
 - [jax-lapack-compatibility-repair](2026/10/jax-lapack-compatibility-repair.md)
+- [linear-solver-p3a-a100-parity](2026/10/linear-solver-p3a-a100-parity.md)
 - [lint-lychee-exclude-blob](2026/10/lint-lychee-exclude-blob.md) — Corrective: lychee in both organs' `lint.yml` now excludes `^https://github\.com/.*/blob/`. GitHub answers non…
 - [memory-cockpit-catch-up](2026/10/memory-cockpit-catch-up.md) — Lensing-specific catch-up freshness drives the HTML/Markdown banner and cockpit feed. Structured cutoff, age, …
 - [memory-digest-state](2026/10/memory-digest-state.md)
@@ -231,6 +233,7 @@ markers; everything below GENERATED is rebuilt.
 - [retired-repo-sidecars](2026/10/retired-repo-sidecars.md) — Aggregate only repositories in a valid current Heart monitoring roster; preserve all caches, configured advers…
 - [runtime-single-jit-median](2026/10/runtime-single-jit-median.md)
 - [scribbler-wave2-radial-panels-regrid](2026/10/scribbler-wave2-radial-panels-regrid.md)
+- [search-conformance-metadata](2026/10/search-conformance-metadata.md)
 - [setuptools-include-packages](2026/10/setuptools-include-packages.md)
 - [sizing-none-triage-rules](2026/10/sizing-none-triage-rules.md)
 - [sparse-noise-map-pooling](2026/10/sparse-noise-map-pooling.md)

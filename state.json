@@ -4,14 +4,14 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 2 in flight",
-  "updated": "2026-10-07T18:36:58Z",
+  "updated": "2026-10-08T07:16:26Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
       "severity": "yellow",
-      "text": "Community pages + merged \"Community & Contributing\" sections across PyAutoLabs \u2014 awaiting-merge \u2014 17/18 MERGED 2026-10-07 (the four *_visualization#3 PRs merged 18:07Z after release 2026.10.7.1 turned RTD green\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/774",
-      "prompt": "Use the start-dev skill. active/community_pages.md"
+      "text": "Register autofit_inference and autofit_profiling across the organism, with minimal skeletons\u2026 \u2014 workspace-shipped, awaiting-merge \u2014 5/7 MERGED 2026-10-07 by human /prm (autofit_inference#1, autofit_profiling#1, Mind#493\u2026",
+      "url": "https://github.com/PyAutoLabs/autofit_inference/pull/1",
+      "prompt": "Use the start-dev skill. active/search_extensibility_b1_registration.md"
     },
     {
       "severity": "yellow",
@@ -24,6 +24,12 @@
       "text": "human review: the scaling_relation slam parks (imaging un-parked, multi_galaxy kept)",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md",
       "prompt": "Walk me through the completed work described in `draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md` so I can sign it off.\n\n1. Read the prompt: what was asked, and what it claims shipped.\n2. Find the evidence \u2014 the merged PR(s), the commits, the `complete/` record \u2014\n   and read the actual diff, not the description of it.\n3. Report what changed, what it does NOT cover, and anything you would have\n   done differently. Call out behaviour changes and test gaps explicitly.\n\nChange nothing while reviewing. When I sign it off, retire the prompt from the\nPyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date\n<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and\nregenerate the dashboard. If I do not sign it off, file the follow-up with\n`/intake` instead.\n"
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1667 \u2014 search-conformance-metadata",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1667",
+      "prompt": null
     },
     {
       "severity": "info",
@@ -42,6 +48,12 @@
       "text": "pick: SED chain waveband fit can spin forever in Nautilus exploration\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md",
       "prompt": "Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Heart `test_html_is_self_contained` fails on main since PyAutoBrain#499 rewrote the \"markdown version\" link",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautoheart/dashboard_markdown_link_test_broken_by_brain_499.md",
+      "prompt": "Use the start-dev skill. draft/bug/pyautoheart/dashboard_markdown_link_test_broken_by_brain_499.md"
     },
     {
       "severity": "info",
@@ -93,12 +105,6 @@
     },
     {
       "severity": "info",
-      "text": "pick: HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit/hpc_campaign_epic.md",
-      "prompt": "Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md"
-    },
-    {
-      "severity": "info",
       "text": "pick: Guard every workspace script against untimed network downloads",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace/no_untimed_network_downloads_check.md",
       "prompt": "Use the start-dev skill. draft/test/autolens_workspace/no_untimed_network_downloads_check.md"
@@ -120,12 +126,6 @@
       "text": "pick: Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md",
       "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md",
-      "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md"
     }
   ]
 }
