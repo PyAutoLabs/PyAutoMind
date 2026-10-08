@@ -15,7 +15,9 @@ Witness: a CI leg runs 1 seed of Nautilus on the committed `gaussian_x3_blend` d
 Unattended: ready
 Priority: high
 Epic: search-extensibility
-Status: draft
+Status: active
+Issued: 2026-10-08
+Issue: https://github.com/PyAutoLabs/autofit_inference/issues/2
 Filed: 2026-10-08
 
 Phase B2 of the search-extensibility epic (`draft/research/autofit/search_extensibility_epic.md`; plan
