@@ -183,6 +183,14 @@ repos:
     organ: Insight
     role: "Inference campaign intent, the cross-project inference instance registry, the versioned `inference-summary` read contract, ingest receipts and the evidence dashboard. Projects execute, Cortex records the science, Mind owns task state; never infers scientific acceptance or submits compute."
     public_role: "Coordinates inference campaigns and their tasks in one place, showing results, diagnostics, provenance and missing evidence across projects while keeping scientific conclusions with the human and Cortex."
+  PyAutoDNA:
+    board_owner: true
+    path: organs/PyAutoDNA
+    github: PyAutoLabs/PyAutoDNA
+    category: organ
+    organ: DNA
+    role: "Software-stack specifications, environment inventory receipts, support rationale, upgrade campaigns and adoption history. Brain coordinates, Heart validates readiness, Hands releases, Nerves enforces runtime compatibility; collection never upgrades environments."
+    public_role: "Records software-stack specifications, tracks what local, RAL and CI environments run, and coordinates validated upgrades with compatibility evidence and rollback history."
   PyAutoNerves:
     board_owner: true
     path: organs/PyAutoNerves
