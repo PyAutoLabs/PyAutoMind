@@ -789,7 +789,7 @@ Use the start-dev skill. active/linear_solver_phase5_mapper_corpus.md
 
 </details>
 
-<details><summary>📋 <a href="active/search_extensibility_a1_declare_gate_registry.md">Search capability declarations, fail-fast gate, lazy registry and the run(ctx) design note…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1674">issue #1674</a> — issued 2026-10-08 — library-dev</summary>
+<details><summary>📋 <a href="active/search_extensibility_a1_declare_gate_registry.md">Search capability declarations, fail-fast gate, lazy registry and the run(ctx) design note…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1674">issue #1674</a> — issued 2026-10-08 — library-shipped + workspace-shipped, awaiting-merge — 4 PRs opened 2026-10-08 under --auto (decide-and-flag, <code>decision-taken</code> on… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1675">PyAutoFit#1675</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/778">PyAutoLens#778</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/653">PyAutoGalaxy#653</a>, <a href="https://github.com/PyAutoLabs/PyAutoCTI/pull/116">PyAutoCTI#116</a> — ⏳ pending release: PyAutoFit — ⏳ pending release: PyAutoLens — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 Use the start-dev skill. active/search_extensibility_a1_declare_gate_registry.md
@@ -2699,6 +2699,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoFit**
 
+- [PyAutoFit#1675](https://github.com/PyAutoLabs/PyAutoFit/pull/1675) — `active/search_extensibility_a1_declare_gate_registry.md`
 - [PyAutoFit#1667](https://github.com/PyAutoLabs/PyAutoFit/pull/1667) — `complete/2026/10/search-conformance-metadata.md`
 - [PyAutoFit#1673](https://github.com/PyAutoLabs/PyAutoFit/pull/1673) — `complete/2026/10/search-ext-a0a2-backend-conformance.md`
 - [PyAutoFit#1672](https://github.com/PyAutoLabs/PyAutoFit/pull/1672) — `complete/2026/10/search-ext-a0b-hygiene.md`
@@ -2706,10 +2707,12 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#653](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/653) — `active/search_extensibility_a1_declare_gate_registry.md`
 - [PyAutoGalaxy#652](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/652) — `complete/2026/10/search-ext-a0c-downstream.md`
 
 **PyAutoLens**
 
+- [PyAutoLens#778](https://github.com/PyAutoLabs/PyAutoLens/pull/778) — `active/search_extensibility_a1_declare_gate_registry.md`
 - [PyAutoLens#777](https://github.com/PyAutoLabs/PyAutoLens/pull/777) — `complete/2026/10/search-ext-a0c-downstream.md`
 
 
