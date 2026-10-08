@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
-  "updated": "2026-10-08T13:31:41Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 2 in flight",
+  "updated": "2026-10-08T13:33:33Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Complete DNA cockpit registration \u2014 library-shipped, awaiting-merge \u2014 no configured PR checks; local tests passed; awaiting explicit no-checks merge acknowledgement",
-      "url": "https://github.com/PyAutoLabs/pyautolabs.github.io/pull/32",
-      "prompt": "Use the start-dev skill. active/dna-cockpit-registration.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -126,6 +120,12 @@
       "text": "pick: Reduce the organism's per-session and per-task token load by half",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/organs/reduce_session_token_load.md",
       "prompt": "Use the start-dev skill. draft/maintenance/organs/reduce_session_token_load.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Local smoke env creation fails: smoke_install.sh flat pip chain vs the grouped\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md",
+      "prompt": "Use the start-dev skill. draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md"
     }
   ]
 }
