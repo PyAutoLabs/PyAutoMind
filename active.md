@@ -82,4 +82,5 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/511
 - library-pr: https://github.com/PyAutoLabs/PyAutoBroca/pull/2
 - heads: Mind 11196551; Brain 0b4471de; Broca 296225e
+- ci: Broca 16 passed / two renderer failures against Brain main (missing Broca theme); both pass locally with paired branch; rerun after Brain #511 merges
 - limits: private local board; no Pages deployment or scheduled refresh; no new response-quality campaign; raw historical transcripts remain in original sources
