@@ -797,7 +797,7 @@ Use the start-dev skill. active/linear_solver_phase5_mapper_corpus.md
 
 </details>
 
-<details><summary>📋 <a href="active/pyautodna_stack_management.md">PyAutoDNA: software stacks and compatibility</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/509">issue #509</a> — issued 2026-10-08 — library-dev — implementation and validation complete locally; awaiting Heart YELLOW acknowledgement before source push/PR</summary>
+<details><summary>📋 <a href="active/pyautodna_stack_management.md">PyAutoDNA: software stacks and compatibility</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/509">issue #509</a> — issued 2026-10-08 — library-shipped, awaiting-merge — four review PRs open; human /prm in Mind → Brain → DNA → Scientist order — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/494">PyAutoMind#494</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/510">PyAutoBrain#510</a>, <a href="https://github.com/PyAutoLabs/PyAutoDNA/pull/1">PyAutoDNA#1</a>, <a href="https://github.com/PyAutoLabs/PyAutoScientist/pull/51">PyAutoScientist#51</a></summary>
 
 ```
 Use the start-dev skill. active/pyautodna_stack_management.md
