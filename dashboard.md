@@ -781,7 +781,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/inference_setup_contract.md">Inference setup and baseline-to-experiment contract</a> — <a href="https://github.com/PyAutoLabs/PyAutoInsight/issues/13">issue #13</a> — issued 2026-10-08 — workspace-dev</summary>
+<details><summary>📋 <a href="active/inference_setup_contract.md">Inference setup and baseline-to-experiment contract</a> — <a href="https://github.com/PyAutoLabs/PyAutoInsight/issues/13">issue #13</a> — issued 2026-10-08 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoInsight/pull/14">PyAutoInsight#14</a></summary>
 
 ```
 Use the start-dev skill. active/inference_setup_contract.md
