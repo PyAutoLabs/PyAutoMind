@@ -31,7 +31,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoInsight/issues/17
 - issued: 2026-10-08
 - prompt: active/inference_browser_polish.md
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoInsight/pull/18
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/inference-browser-polish
 - repos:
   - PyAutoInsight: feature/inference-browser-polish
