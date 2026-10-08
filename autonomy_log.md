@@ -407,7 +407,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 6 (stage 1: 6, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14
+Count toward 20: 7 (stage 1: 7, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -442,3 +442,4 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-10-07 | imshow-origin-lower-overlays (PyAutoArray#616) | glance | tests 1981 pass / smoke n-a (private helpers, no public API) / review in-session diff / Heart YELLOW acked / witness red→green | merged-unchanged | 1 |
 | 2026-10-07 | community-pages (PyAutoLens#774 / PyAutoGalaxy#649 / PyAutoFit#1663 / PyAutoArray#618 / autolens_workspace#585 / autogalaxy_workspace#256 / autofit_workspace#167 / autoreduce_workspace#5 / HowToLens#96 / HowToGalaxy#85 / HowToFit#71 / autolens_visualization#3 / autogalaxy_visualization#3 / autofit_visualization#3 / autocti_visualization#3 / autolens_profiling#391 / pyautolabs.github.io#30 / PyAutoScientist#48) | glance | lint PASS (ruff, lychee, dashboard idempotence) / smoke N/A docs-only / review human-held 5 PRs to release / heart YELLOW ack at ship (manifest drift, stale validation) / witness RTD community page HTTP 200 | merged-unchanged | 1 |
 | 2026-10-08 | shapelets-smoke-slow-park (autolens_workspace#587) | glance | tests 3 pass · smoke autolens 41/41+2nb · review CLEAN (independent Opus) · heart STALE · witness pass | merged-unchanged | 1 |
+| 2026-10-08 | search-ext-a0c-downstream (PyAutoLens#777 / PyAutoGalaxy#652 / PyAutoCTI#115 / HowToLens#97 / HowToGalaxy#86 / autogalaxy_workspace#257 / autocti_workspace#37 / autolens_assistant#157 / autogalaxy_assistant#34) | glance | tests 832/1357/271 pass (docs-only) / smoke ag searches exit 0, notebooks regenerated / review CLEAN, 1 finding resolved pre-PR / heart STALE / witness grep empty | merged-unchanged | 1 |

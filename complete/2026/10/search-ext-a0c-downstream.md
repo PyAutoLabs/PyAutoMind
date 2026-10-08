@@ -1,3 +1,28 @@
+## search-ext-a0c-downstream
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/776
+- completed: 2026-10-08
+- epic: search-extensibility (phase A0c part 2)
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/777
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/652
+- library-pr: https://github.com/PyAutoLabs/PyAutoCTI/pull/115
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/777
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/652
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/97
+- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/86
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/257
+- workspace-pr: https://github.com/PyAutoLabs/autocti_workspace/pull/37
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/157
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/34
+- merge-commit: PyAutoLens 7a97f601; PyAutoGalaxy c32b3304; PyAutoCTI 4c96d1b1; HowToLens df89f98b; HowToGalaxy 6d99dbff; autogalaxy_workspace 3afb5a6b; autocti_workspace f82dea34; autolens_assistant f46e296f; autogalaxy_assistant e317f381
+
+### Outcome
+The downstream sweep of removed-search ghosts and stale search claims across the lens, galaxy and CTI families. PySwarms/MultiNest are gone from the three libraries' docs and CITATIONS (Nautilus, Dynesty, Emcee, Zeus named instead; autocti's dead autosummary targets replaced by LBFGS); HowToLens and HowToGalaxy's optional searches tutorial describes LBFGS/BFGS and the MultiStart gradient optimisers instead of "LBFGS only"; autogalaxy_workspace's duplicated `__Start Point__` header is merged; autocti_workspace's config README lists only `GridSearch.yaml`; the al/ag assistants' search skill and concept page drop the per-search YAML claim and carry the full roster (NSS, BlackJAXNUTS, SMC, BFGS, MultiStart×4). First `--auto` run of the epic: Opus implementation + ship workers, Fable review and merge; tier glance auto-merged in-turn.
+
+### Validation and limits
+Library suites 832 / 1357 / 271 passed on docs-only diffs; ag searches guide smoke exit 0; notebooks regenerated; assistants provenance 0 errors. Review found one false claim before PR-open ("every start_here.py uses MultiStartProdigy"; 8/21 lens, 5/9 galaxy) and it was reworded. The HowTo PRs first failed the navigator catalogue-staleness leg because only the notebook had been regenerated; `regenerate_navigator.py` fixed `workspace_index.json` and the re-run was green. Heart STALE at launch and ship. Left outside the Witness for a follow-up: JOSS `paper/` files and PyAutoGalaxy/PyAutoCTI `files/citations.*` still mention PySwarms; autolens_assistant `wiki/core/api/searches.md`, `wiki/core/stack/autofit.md` and `config/visualize/plots_search.yaml` keep PySwarms text.
+
+## Original prompt
+
 # Search documentation repair, downstream sweep (epic search-extensibility, phase A0c part 2)
 
 Type: docs
