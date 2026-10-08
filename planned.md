@@ -120,13 +120,3 @@
   - PyAutoFit
 - autonomy: --auto launch 2026-10-08; effective safe (test); Consequence judge; the stacked PR is opened under this launch and merges by human /prm after A0b
 
-## inference-setup-advice
-- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/156
-- filed: 2026-10-08
-- prompt: active/inference_setup_advice.md
-- epic: inference-setup-redesign
-- session: Codex GPT-6; session ID unavailable
-- status: blocked — autolens_assistant claimed by search-ext-a0c-downstream
-- repos:
-  - autolens_assistant: feature/inference-setup-advice
-- plan: human authorized all phases autonomously to the end, including in-turn merge on passed gates.

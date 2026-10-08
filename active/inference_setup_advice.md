@@ -34,3 +34,7 @@ worktree .worktrees/inference-setup-advice and feature/inference-setup-advice.
 No conflicting claim. Tier judge; human-authorized merge on green all gates.
 
 Original request: prm, and continue through all phases autonomously to the end
+
+Coordination override: human explicitly approved "Coordinate the two tasks"
+with search-ext-a0c-downstream, preserving existing edits and reconciling shared
+discovery files before merge. No source edits occurred before this approval.
