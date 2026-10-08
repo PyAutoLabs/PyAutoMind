@@ -1,3 +1,41 @@
+Timing-noise audit phase 4 (fix phase 3 of the inventory): the pre-registered A/B go / lever rules gain an INCONCLUSIVE state, and argmax selection becomes a tie set. Issue autolens_profiling#362 stays open for fix phases (4)–(6) and phase 3b.
+
+**Shipped:** autolens_profiling#406 (merged 2026-10-08, 94861700). It adds one shared verdict, `scripts/misc/likelihood_breakdown/ab_verdict.py`, which provides `ab_rule_verdict`, `tie_set` and `paired_block_ratio_interval`.
+
+`ab_rule_verdict` applies these steps in order:
+1. A red correctness gate gives NO_GO.
+2. Invalid input gives INCONCLUSIVE.
+3. Fewer than 5 rounds or blocks gives INCONCLUSIVE.
+4. Each criterion is judged on its own interval:
+   - GO needs the whole interval and the point estimate to clear the bar.
+   - NO_GO needs the whole interval to lie on the bad side.
+   - Anything else is INCONCLUSIVE, recorded with the MDI.
+5. The criteria are combined as a conjunction.
+
+The verdict is wired into four rules:
+- **C7** `pytree_input_ab._phase2b_rule` now also bootstraps the saved milliseconds.
+- **C6** `backward_pass_ab._phase2c_rule`.
+- **P2** the `fixed_light_numba` promotion uses a paired-by-instance block Student-t interval.
+- **C10** `solver_config_sweep._fastest` now returns a tie set.
+
+No pre-registered bar was raised.
+
+**Decision taken (flagged in the PR):** C10's vmap rows and uncapped counts follow the tie set's labelled `point_leader`.
+
+**Re-judgement** (recorded as facts in the audit note; no JSON rewritten):
+- No go, no-go or NO_LEVER call changed:
+  - C7: 4 rows.
+  - C6: 24 rows, 15 GO and 9 NO_GO.
+  - P2: the s4b NO_LEVER, with the speedup interval at [−1.31 %, −0.32 %].
+- 7 of the 9 committed "best admissible" names are tie sets.
+- IP-4a's 2.37x leader is one of five tied configurations.
+
+**Ledger and verdict counts:** the audit note moves to 32 rows, 16 SOUND, 11 FRAGILE and 5 UNSAFE-SILENT. Phase 3b (C1 / C3 / C4 / C5 intervals) and a Holm / Bonferroni policy are recorded as follow-ups.
+
+**Witness:** `scripts/misc/test/test_ab_verdict.py` (37 tests) and the P2 tests in `test_fixed_light_numba.py`. The full suite gave 1210 passed and 6 skipped. The independent Opus review was CLEAN, and its 3 advisories were addressed. Heart was YELLOW, an 8× manifest drift plus no rehearsal, which the human acknowledged on 2026-10-08.
+
+## Original prompt
+
 # Timing-noise audit phase 4: A/B go / lever rules gain INCONCLUSIVE + tie sets (fix phase 3)
 
 Type: bug
