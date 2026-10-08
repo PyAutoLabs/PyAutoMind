@@ -5,7 +5,9 @@ Target: pyautobrain
 Consequence: judge
 Autonomy: human-required
 Priority: normal
-Status: draft
+Status: active
+Issued: 2026-10-08
+Issue: https://github.com/PyAutoLabs/PyAutoBroca/issues/1
 
 ## Original requests (verbatim)
 

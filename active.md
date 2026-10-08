@@ -75,3 +75,17 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/510
 - library-pr: https://github.com/PyAutoLabs/PyAutoDNA/pull/1
 - library-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/51
+
+## pyautobroca-assistant-management
+- issue: https://github.com/PyAutoLabs/PyAutoBroca/issues/1
+- issued: 2026-10-08
+- prompt: active/assistant-management-organ.md
+- session: Codex CLI (GPT-6), session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/pyautobroca-assistant-management
+- approval: user approved Broca and execution; explicitly allowed coordinated Brain/Mind changes preserving other tasks
+- tier: judge (human /prm)
+- repos:
+  - PyAutoBroca: feature/pyautobroca-assistant-management
+  - PyAutoBrain: feature/pyautobroca-assistant-management
+  - PyAutoMind: feature/pyautobroca-assistant-management
