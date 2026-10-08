@@ -4,15 +4,9 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 2 in flight",
-  "updated": "2026-10-08T19:58:03Z",
+  "updated": "2026-10-08T19:59:20Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Organ banner task labels \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/514",
-      "prompt": "Use the start-dev skill. active/organ_banner_task_labels.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -126,6 +120,12 @@
       "text": "pick: `@PyAutoArray` rectangular mesh mapper: mirrored row weights + round-off-dependent cell assignment",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
+      "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
     }
   ]
 }
