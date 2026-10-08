@@ -91,3 +91,21 @@ also there. I Will really look at one image at a time so why display them all in
 Remove this: Figures from PyAutoLabs/autolens_visualization, manifest gallery/viz_manifest.yaml, re-rendered on pyautolens-release.
 
 Survey (Brain Eyes conductor, local checkout): 40 PNGs on disk (imaging 22, interferometer 18); gaps none; orphans none; stale renders none.
+
+## Implementation handoff — 2026-10-08
+
+- Approved plan implemented in `.worktrees/eyes-focused-figure-browser/PyAutoEyes`,
+  branch `feature/eyes-focused-figure-browser`; changes are not committed/pushed yet.
+- Compact four-column overview, concise library/status labels, dataset disclosures,
+  one selected image with matching critique actions, and accessible enlargement.
+  Hidden survey/context/state contracts remain intact. Generated HTML/Markdown updated.
+- Ruff and all 87 pytest tests pass. Live check passed all 265 image URLs, manifest
+  digests and Brain state schema. Ten standalone Chromium cases passed at five
+  widths in both themes with real PNGs, clipboard, keyboard, failure/retry and races.
+  Embedded checks are being finalized. Evidence: repo `.scratch/` logs/screenshots.
+- Heart YELLOW: `manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml`.
+  Specific mismatch: unregistered `COWLS_COSMOS_Web_Lens_Survey` checkout.
+- Stale reason: `release validation incomplete: no rehearsal for current source`.
+- Ship requires human acknowledgement of this current YELLOW warning under
+  ship_library step 3. PR draft is `.scratch/pr-body.md`; no merge authority.
+- No scientific workspace API changes; downstream surface is the board/cockpit.
