@@ -1,5 +1,19 @@
 # Active Tasks
 
+## timing-noise-audit-p5-round-bootstrap
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/362
+- issued: 2026-10-02
+- prompt: active/timing_noise_audit_phase5_round_bootstrap.md
+- session: Claude Code CLI (Opus 5.5 worker under --auto, supervised), session 016CCA6BtzDgw16aUaVuzzL9
+- status: workspace-dev
+- autonomy: --auto launch 2026-10-08 ("do next phase auto and the one after"); effective supervised (bug, Consequence judge); decide-and-flag at ship
+- stacked-on: timing-noise-audit-p4-ab-rule-semantics (PR #406; claim guard reports that sibling's autolens_profiling claim — deliberate stack per launch, merges after #406)
+- worktree: ~/Code/PyAutoLabs-wt/timing-noise-audit-p5-round-bootstrap
+- repos:
+  - autolens_profiling: feature/timing-noise-audit-p5-round-bootstrap
+- tier: judge (human /prm)
+- heart-ack: YELLOW reason set (8 manifest drift + no rehearsal for current source) human-acknowledged 2026-10-08 for the remaining timing-noise phase PRs (same set as #405)
+
 ## timing-noise-audit-p4-ab-rule-semantics
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/362
 - issued: 2026-10-02

@@ -10,7 +10,7 @@ Difficulty: moderate
 Autonomy: supervised
 Priority: high
 Consequence: judge
-Status: draft
+Status: active
 Filed: 2026-10-08
 Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/362
 Depends-on: active/timing_noise_audit_phase4_ab_rule_semantics.md (fix phase 3, PR #406; this branch stacks on it)
