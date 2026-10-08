@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1795 records across 9 buckets.
+1796 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -198,6 +198,7 @@ markers; everything below GENERATED is rebuilt.
 - [linear-solver-p3a-a100-parity](2026/10/linear-solver-p3a-a100-parity.md)
 - [linear-solver-p3b-gpu-timing](2026/10/linear-solver-p3b-gpu-timing.md)
 - [linear-solver-p4a-jacobi-a100-divergence](2026/10/linear-solver-p4a-jacobi-a100-divergence.md)
+- [linear-solver-p5-mapper-corpus](2026/10/linear-solver-p5-mapper-corpus.md)
 - [lint-lychee-exclude-blob](2026/10/lint-lychee-exclude-blob.md) — Corrective: lychee in both organs' `lint.yml` now excludes `^https://github\.com/.*/blob/`. GitHub answers non…
 - [memory-board-header-contract](2026/10/memory-board-header-contract.md)
 - [memory-cockpit-catch-up](2026/10/memory-cockpit-catch-up.md) — Lensing-specific catch-up freshness drives the HTML/Markdown banner and cockpit feed. Structured cutoff, age, …

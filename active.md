@@ -43,15 +43,6 @@
 - tier: judge (human /prm)
 - heart-ack: STALE at launch (release validation incomplete: no rehearsal for current source)
 
-## linear-solver-p5-mapper-corpus
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/399
-- issued: 2026-10-08
-- session: Claude Code CLI (Fable 5.1), session 331e5f0e
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/linear-solver-p5-mapper-corpus
-- repos:
-  - autolens_profiling: feature/linear-solver-p5-mapper-corpus
-
 ## board-one-click-update
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/504
 - issued: 2026-10-08

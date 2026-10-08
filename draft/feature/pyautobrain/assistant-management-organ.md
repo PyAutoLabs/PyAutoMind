@@ -16,7 +16,7 @@ Status: draft
 ## Intent and scope
 
 Create a small dedicated organ owning assistant evaluation history, collection
-receipts and a shared dashboard. Working name: PyAutoMentor, pending human choice.
+receipts and a shared dashboard. Approved name: PyAutoBroca.
 @PyAutoBrain owns interpretation and development routing; @PyAutoMind retains task
 lifecycle and repository identity. Four public domain assistants are the initial
 coverage: autocti_assistant, autofit_assistant, autogalaxy_assistant,
@@ -64,3 +64,7 @@ copy/preview and private-field exclusion. Validate body-map generation and board
 registration. No changes to modeling libraries or scientific APIs expected.
 
 Tier: judge — merge mode: human /prm.
+
+## Approval
+
+User chose Broca and authorized execution: "do it, go". User explicitly allowed coordinated Brain/Mind changes, preserving board-one-click-update and pyautodna-stack-management.
