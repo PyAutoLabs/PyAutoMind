@@ -1,6 +1,8 @@
 # Organ banner task labels
 
 Consequence: judge
+Issued: 2026-10-08
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/513
 
 ## Original request
 
@@ -10,7 +12,7 @@ For the dashboards, I want to update the banner images at the top, but I only wa
 
 @PyAutoBrain owns the shared HTML banner in `board/_theme.py::hero`. Change only its grey `kind` label to an organ-specific functional label. Preserve SVG marks, wordmarks, taglines, colours and layout. Existing renderer calls remain compatible. Move Broca immediately after Nerves in the shared dashboard navigation, using `config/policy.yaml` → `board.boards`; preserve other entries' relative order.
 
-Proposed labels, awaiting approval: Brain: Orchestration; Mind: Planning; Cortex: Science; Memory: Knowledge; Eyes: Visualization; Ears: Community; Heart: Tests; Hands: Releases; Pulse: Profiling; Insight: Inference; DNA: Environments; Nerves: Configuration; Broca: Assistants; Gut: Cleanup; Scientist: Overview.
+Approved labels: Brain: Orchestration; Mind: Planning; Cortex: Science; Memory: Knowledge; Eyes: Visualization; Ears: Community; Heart: Tests; Hands: Releases; Pulse: Profiling; Insight: Inference; DNA: Environments; Nerves: Configuration; Broca: Assistants; Gut: Cleanup; Scientist: Overview.
 
 User correction (verbatim):
 
@@ -22,4 +24,4 @@ Branch proposed: `feature/organ-banner-task-labels`. Library workflow for the sh
 
 ## Planning state
 
-No source edited. Plan and label mapping await approval. Brain is currently claimed by `board-one-click-update` (PyAutoBrain issue #504); `worktree_check_conflict` reports a hard conflict. Do not create a competing implementation worktree until the claim is resolved. Heart entry verdict: STALE (release STALE; monitoring RED); planning permitted by start_dev.
+No source edited. User approved the corrected plan and label mapping with “continue” on 2026-10-08. Brain is currently claimed by `board-one-click-update` (PyAutoBrain issue #504); `worktree_check_conflict` reports a hard conflict. Do not create a competing implementation worktree until the claim is resolved. Heart entry verdict: STALE (release STALE; monitoring RED); planning permitted by start_dev.
