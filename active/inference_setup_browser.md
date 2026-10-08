@@ -8,6 +8,8 @@ Consequence: judge
 Autonomy: supervised
 Priority: high
 Filed: 2026-10-08
+Issued: 2026-10-08
+Issue: https://github.com/PyAutoLabs/PyAutoInsight/issues/15
 Epic: inference-setup-redesign (phase 3)
 
 ## Authorization

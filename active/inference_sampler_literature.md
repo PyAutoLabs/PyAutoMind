@@ -8,6 +8,8 @@ Consequence: judge
 Autonomy: supervised
 Priority: high
 Filed: 2026-10-08
+Issued: 2026-10-08
+Issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/124
 Epic: inference-setup-redesign (phase 5a)
 
 ## Authorization
