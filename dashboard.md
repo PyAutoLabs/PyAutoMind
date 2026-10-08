@@ -11,8 +11,8 @@
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 16 |
 | [In flight](#in-flight) | 1 |
-| [Planned](#planned) | 8 |
-| [Backlog](#backlog) | 241 |
+| [Planned](#planned) | 7 |
+| [Backlog](#backlog) | 242 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -116,7 +116,7 @@ Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 108
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 109
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -266,10 +266,10 @@ Use the start-dev skill. draft/bug/autofit/search_kwarg_typos_in_workspace_scrip
 
 </details>
 
-<details><summary>📋 <a href="draft/refactor/autofit/search_extensibility_a3b_nss_preflight_x64.md">NSS onto Fitness, trace preflight and x64 check (epic search-extensibility, phase A3b)</a> — autofit · medium · safe · high</summary>
+<details><summary>📋 <a href="draft/feature/autofit_inference/nss_settings_for_wave2.md">NSS settings for the wave-2 inference run: at least 50 MCMC steps…</a> — autofit_inference · trivial · safe · normal</summary>
 
 ```
-Use the start-dev skill. draft/refactor/autofit/search_extensibility_a3b_nss_preflight_x64.md
+Use the start-dev skill. draft/feature/autofit_inference/nss_settings_for_wave2.md
 ```
 
 </details>
@@ -802,7 +802,7 @@ Use the start-dev skill. active/timing_noise_audit_phase4_ab_rule_semantics.md
 Scoped but not started; some are not yet prompt files. Full detail in [`planned.md`](planned.md).
 
 <details>
-<summary><b>8</b> task(s)</summary>
+<summary><b>7</b> task(s)</summary>
 
 <details><summary>📋 <b>isothermal-ell-sph-oversampling-at-the-cusp</b> — found 2026-08-09 — planned — NOT yet a prompt file; file one via <code>/intake</code> before starting</summary>
 
@@ -860,14 +860,6 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 </details>
 
-<details><summary>📋 <b>search-ext-a3b-nss-preflight</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1678">issue #1678</a> — planned 2026-10-08</summary>
-
-```
-Use the start-dev skill. draft/refactor/autofit/search_extensibility_a3b_nss_preflight_x64.md
-```
-
-</details>
-
 </details>
 
 ## Backlog
@@ -921,7 +913,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>bug</b> — 69</summary>
+<summary><b>bug</b> — 70</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -1255,6 +1247,14 @@ Use the start-dev skill. draft/bug/autolens/positions_threshold_fixture_off_axis
 
 ```
 Use the start-dev skill. draft/bug/autolens_workspace/slam_simultaneous_subhalo_grid_search_fits_last.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md"><code>JAX_ENABLE_X64=False</code> is overridden to True, so the fp32 inference leg runs fp64…</a> — autonerves · small · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md
 ```
 
 </details>
@@ -2473,7 +2473,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-08 | planned | <a href="planned.md#search-ext-a3b-nss-preflight">search-ext-a3b-nss-preflight</a> |
+| 2026-10-08 | filed | <a href="draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md"><code>JAX_ENABLE_X64=False</code> is overridden to True, so the fp32 inference…</a> |
 | 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
 | 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
@@ -2628,7 +2628,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-70 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+69 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2688,7 +2688,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md — unknown theme keyword(s): ci, robustness`
 - `draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md — unknown theme keyword(s): ci, robustness`
 - `draft/refactor/autofit/ep_analysis_level_compile_cache.md — unknown theme keyword(s): jax`
-- `draft/refactor/autofit/search_extensibility_a3b_nss_preflight_x64.md — unknown theme keyword(s): searches, jax`
 - `draft/refactor/autolens/cache_readers_fall_back_to_zip_member.md — unknown theme keyword(s): aggregator, paths`
 - `draft/refactor/autolens/witt_wynne_solver_library_home.md — unknown theme keyword(s): euclid`
 - `draft/refactor/autonerves/config_yaml_parse_cache.md — unknown theme keyword(s): performance, ci`
@@ -2717,6 +2716,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - [PyAutoFit#1675](https://github.com/PyAutoLabs/PyAutoFit/pull/1675) — `complete/2026/10/search-ext-a1-declare-gate.md`
 - [PyAutoFit#1679](https://github.com/PyAutoLabs/PyAutoFit/pull/1679) — `complete/2026/10/search-ext-a2-objective-bridge.md`
 - [PyAutoFit#1680](https://github.com/PyAutoLabs/PyAutoFit/pull/1680) — `complete/2026/10/search-ext-a3-samples-checkpointer.md`
+- [PyAutoFit#1681](https://github.com/PyAutoLabs/PyAutoFit/pull/1681) — `complete/2026/10/search-ext-a3b-nss-preflight.md`
 
 **PyAutoGalaxy**
 

@@ -1,3 +1,33 @@
+## search-ext-a3b-nss-preflight
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1678
+- completed: 2026-10-08
+- epic: search-extensibility (phase A3b)
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1681
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1681
+
+**Shipped:** PyAutoFit#1681 (merged 2026-10-08T20:05:54Z after A2 #1679 and A3 #1680, via a human `/prm`). It was launched with `--auto`, effective autonomy safe, tier judge. The work was implemented in the A2 worktree's manual second checkout `PyAutoFit_a3` and had no worktree or `active.md` row of its own; there was only a `planned.md` row.
+- NSS now samples through `Fitness.objective` (built by `make_fitness`) and runs on `run(ctx)` + `raw_samples_from`, resuming from `NativeFileCheckpointer("nss_checkpoint.pkl")`. Assertions are traced, so NSS no longer raises `TracerBoolConversionError` under `jit`. The resume sanity check runs at the start of the run. `nss_log_likelihood_from` is removed, and `make_fitness` is now the only place that builds a `Fitness`.
+- New `autofit/non_linear/search/preflight.py`. `trace_preflight` runs a `jax.eval_shape` per declared objective kind, after the test-mode bypass and the REQUIRED gate. A failure raises a chained `SearchException`. `PYAUTO_JAX_PREFLIGHT=0` skips it, and `PYAUTO_JAX_PREFLIGHT_PROBE=1` adds an opt-in numerical probe. `check_x64` warns once, and raises when a search sets the new `requires_fp64` capability (default False; no search sets it). `docs/design/run_ctx.md` is at Revision 2.
+- Dynesty now chooses its single-core path with a private `_SingleCoreRun` sentinel. Only a `RuntimeError` from creating the pool still falls back; one raised mid-run (including `XlaRuntimeError`) now surfaces.
+- **Witness PASS (run on a98312308):**
+  - Leg 1: NSS fits `gaussian_x3_blend` under JAX on CPU at fp64.
+    - Default settings (n_live 200, 5 MCMC steps) gave ln Z 133.98 on seed 0 (correct), the wrong mode on seed 1, and ln Z about 27 nats low on seed 2.
+    - n_live 200 with 50 MCMC steps gave ln Z 135.35/137.62/135.67 on seeds 0–2, with all centres correct. That is inside the reference spread (Nautilus 137.06/137.07, Dynesty 134–139.7).
+    - The harness verdict is `not_assessed` because the jax_cpu reference is still pending.
+    - Pre-A3b main fails the same fit with `TracerBoolConversionError`, so A3b is what enables it.
+  - Leg 2: conformance `-k NSS`, 16 passed.
+  - Leg 3: a real NSS fit on an `np.asarray` JAX likelihood raises a chained `SearchException` in 0.05 s.
+  - Leg 4: the D2 regression passes for all 7 required searches.
+  - The x64 check warns once, and raises with `requires_fp64=True`.
+  - Full suite: 3555 passed, 1 skipped, 4 xfailed.
+- **Follow-ups found by the witness (not fixed; filed as drafts):**
+  1. The x64 warning text in `preflight.py:65` is wrong. It claims `JAX_ENABLE_X64=0` leaves x64 off, but `autonerves/jax_wrapper.py:88-97` forces True for any value that is not `"true"`.
+  2. The `autofit_inference` `local_jax_cpu_fp32` config actually runs fp64 (its rows record `device.x64` True), so no fp32 leg has ever measured fp32.
+     - Filed together with (1) as `draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md`.
+  3. When the NSS deferral is lifted in `autofit_inference`, its settings need at least 50 MCMC steps (about 5×ndim), not the n_live_200 default. Filed as `draft/feature/autofit_inference/nss_settings_for_wave2.md`.
+
+## Original prompt
+
 # NSS onto Fitness, trace preflight and x64 check (epic search-extensibility, phase A3b)
 
 Type: refactor
