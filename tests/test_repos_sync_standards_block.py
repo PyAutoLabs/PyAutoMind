@@ -57,11 +57,12 @@ def test_owner_guidance_is_explicit_and_independent_of_filing_exclusions():
     assert "organism standard" in sync.render_standards_policy(POLICY, {"filing_block": False})
 
 
-def test_manifest_ownership_is_boolean_and_includes_dna():
+def test_manifest_ownership_is_boolean_and_includes_dna_and_broca():
     _, specs = sync.load_manifest(MIND)
     owners = [spec for spec in specs.values() if spec.get("board_owner")]
-    assert len(owners) == 14
+    assert len(owners) == 15
     assert specs["PyAutoDNA"]["board_owner"] is True
+    assert specs["PyAutoBroca"]["board_owner"] is True
     assert all(isinstance(spec.get("board_owner", False), bool) for spec in specs.values())
 
 

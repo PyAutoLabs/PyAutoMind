@@ -110,6 +110,14 @@ repos:
     role: "Reasoning/orchestration layer; how work is decomposed and routed; the specialist agents."
     public_role: "Works out *how*: classifies, plans and routes work through specialist reasoning and coding agents."
     codex_hooks: [mind-commit-guard, end-at-deliverable]
+  PyAutoBroca:
+    board_owner: true
+    path: organs/PyAutoBroca
+    github: PyAutoLabs/PyAutoBroca
+    category: organ
+    organ: Broca
+    role: "Assistant evaluation history, upkeep evidence, collection receipts and a private dashboard. Brain interprets; Mind tracks fixes; public assistants remain independent."
+    public_role: "Tracks assistant evaluation and upkeep evidence."
   PyAutoMind:
     board_owner: true
     path: organs/PyAutoMind
