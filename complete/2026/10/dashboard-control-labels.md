@@ -1,3 +1,28 @@
+# Dashboard control labels
+
+Merged all requested dashboard cleanups: repository-only button names, standard Copy check-in prompt, Cortex Open-prefix removal, and removal of redundant GitHub Page links and the standalone stale/check-in widget. Shared refresh controls, prompts and evidence records are preserved.
+
+## Merged PRs
+- https://github.com/PyAutoLabs/PyAutoBrain/pull/506 — `142ddef1a15c635be5b69ef0da8d21b510f1c4f4`
+- https://github.com/PyAutoLabs/PyAutoHeart/pull/294 — `fbffe19d74c94aca121c2aa9e954d89583f0b7d6`
+- https://github.com/PyAutoLabs/PyAutoHands/pull/308 — `195e892c15f9beb65f936ebd1360a711b6e38f76`
+- https://github.com/PyAutoLabs/PyAutoMemory/pull/129 — `3fe8d5e3f75b05e4fe8c9e992c1d44f136f7a854`
+- https://github.com/PyAutoLabs/PyAutoPulse/pull/40 — `81a38da37e97fa14a11deda7fc80c49ffc6f6de6`
+- https://github.com/PyAutoLabs/PyAutoEars/pull/27 — `64a55338a70b6dff183ad0410171fe85b39f2894`
+- https://github.com/PyAutoLabs/PyAutoScientist/pull/50 — `3cf9ebdf0d8b6156dd438d0b459e35c39072883a`
+
+## Validation and CI repair
+All latest workflow runs and matrix legs passed before each merge. Heart's initial failures came from using Brain main before the shared change landed; the same Heart head passed after Brain merged. Ears' stale browser selector was corrected in commit 1d8154a, passed locally, then all three CI jobs passed. No checks bypassed.
+
+Seven source repo suites plus targeted reruns and unchanged consumer checks passed. Shared browser witness: 14 layout/copy cases. Ears owner browser witness passed. Pulse offline render, schema validation and formatting passed.
+
+## Authorization and close-out
+User approved the original plan, overlapping Brain/Ears worktree coordination, Heart YELLOW acknowledgement, then explicitly requested repair and /prm. Organ repositories have no pending-release obligations. All seven branch heads are ancestors of origin/main. No science products in the worktrees; only reproducible caches and synthetic browser fixtures (evidence preserved outside the task bundle).
+
+Dashboard publication uses the existing owner workflows. Mind dashboard regeneration and task worktree cleanup are part of this close-out.
+
+## Original prompt
+
 # Standardize dashboard controls and remove redundant chrome
 
 Type: maintenance
