@@ -12,7 +12,7 @@
 | [Epics](#epics) | 16 |
 | [In flight](#in-flight) | 1 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 239 |
+| [Backlog](#backlog) | 241 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -248,7 +248,7 @@ Use the start-dev skill. draft/feature/autofit/results_library_epic_report.md
 </details>
 
 <details>
-<summary><b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — 2 queued prompt(s), in order</summary>
+<summary><b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — 4 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — ledger: `draft/research/autofit/search_extensibility_epic.md` — filed 2026-10-07; scoped (4 Opus surveys) and independently reviewed (Codex gpt-6-astra, Claude Fable high) the same day; all §5…</summary>
 
@@ -262,6 +262,22 @@ Continue the 'Search extensibility — a PyAutoFit search framework for many sam
 
 ```
 Use the start-dev skill. draft/bug/autofit/search_kwarg_typos_in_workspace_scripts.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autofit/search_extensibility_a1_declare_gate_registry.md">Search capability declarations, fail-fast gate, lazy registry and the run(ctx) design note…</a> — autofit · large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autofit/search_extensibility_a1_declare_gate_registry.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autofit_inference/search_extensibility_b2_harness_protocol.md">autofit_inference harness, gaussian_x3 datasets, pre-registered protocol and reference posteriors…</a> — autofit_inference · large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autofit_inference/search_extensibility_b2_harness_protocol.md
 ```
 
 </details>
@@ -2602,7 +2618,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-69 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+71 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2616,6 +2632,8 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autofit/certified_solver_batched_guard_c2.md — unknown theme keyword(s): inversion`
 - `draft/feature/autofit/results_library_epic.md — unknown theme keyword(s): hpc, euclid, results, aggregator`
 - `draft/feature/autofit/results_library_epic_report.md — unknown theme keyword(s): results, euclid`
+- `draft/feature/autofit/search_extensibility_a1_declare_gate_registry.md — unknown theme keyword(s): searches, jax, documentation`
+- `draft/feature/autofit_inference/search_extensibility_b2_harness_protocol.md — unknown theme keyword(s): searches, inference, benchmark`
 - `draft/feature/autolens/cluster_curves_engine_dispatch.md — unknown theme keyword(s): critical-curves`
 - `draft/feature/autolens/coolest_pixel_grid_export.md — unknown theme keyword(s): coolest, interop, euclid`
 - `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md — unknown theme keyword(s): euclid, catalogue`
