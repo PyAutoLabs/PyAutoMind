@@ -6,11 +6,13 @@
 - prompt: active/inference_setup_producer.md
 - epic: inference-setup-redesign
 - session: Codex GPT-6; session ID unavailable
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/inference-setup-producer
 - repos:
   - autolens_inference: feature/inference-setup-producer
 - plan: human authorized all phases autonomously to the end, including in-turn merge on passed gates; no compute or scientific acceptance.
+
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/21
 
 ## inference-setup-browser
 - issue: https://github.com/PyAutoLabs/PyAutoInsight/issues/15
@@ -30,15 +32,18 @@
 - prompt: active/inference_sampler_literature.md
 - epic: inference-setup-redesign
 - session: Codex GPT-6; session ID unavailable
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/inference-sampler-literature
 - repos:
   - PyAutoMemory: feature/inference-sampler-literature
 - prerequisite: memory-board-header-contract (https://github.com/PyAutoLabs/PyAutoMemory/issues/126)
 - prerequisite-worktree: /home/jammy/Code/PyAutoLabs/.worktrees/memory-board-header-contract
 - prerequisite-branch: feature/memory-board-header-contract
+- prerequisite-pr: https://github.com/PyAutoLabs/PyAutoMemory/pull/127
 - prerequisite-plan: test-only shared-header regression; same-root coordinated owned claim; no literature changes.
 - plan: human authorized all phases autonomously to the end, including in-turn merge on passed gates; no compute or scientific acceptance.
+
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoMemory/pull/125
 
 ## search-ext-a0c-downstream
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/776
