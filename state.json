@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-08T13:10:49Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
+  "updated": "2026-10-08T13:14:41Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "Assistant evaluation and upkeep organ \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/pull/495",
       "prompt": "Use the start-dev skill. active/assistant-management-organ.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Complete DNA cockpit registration \u2014 library-shipped, awaiting-merge \u2014 no configured PR checks; local tests passed; awaiting explicit no-checks merge acknowledgement",
+      "url": "https://github.com/PyAutoLabs/pyautolabs.github.io/pull/32",
+      "prompt": "Use the start-dev skill. active/dna-cockpit-registration.md"
     },
     {
       "severity": "yellow",
@@ -120,12 +126,6 @@
       "text": "pick: arXiv's Fastly edge refuses `urllib.request` outright \u2014 retrying a 406 only delays\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md",
       "prompt": "Use the start-dev skill. draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: `@PyAutoArray` rectangular mesh mapper: mirrored row weights + round-off-dependent cell assignment",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md",
-      "prompt": "Use the start-dev skill. draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md"
     }
   ]
 }
