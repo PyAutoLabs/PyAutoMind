@@ -43,7 +43,7 @@
 - issued: 2026-10-08
 - prompt: active/organ_banner_task_labels.md
 - session: Codex CLI, session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - approval: corrected label plan approved; user explicitly authorized merge and publication and parking board-one-click-update
 - tier: judge (explicit human merge authorization in current session)
 - heart-ack:
@@ -57,4 +57,6 @@
   - manifest drift: where-to-file blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml
   - release validation incomplete: no rehearsal for current source
 - heart-ack-authorization: user explicitly answered “Acknowledge; ship, merge and publish”
-- next: create isolated worktree, implement labels and navigation ordering, validate, merge and publish
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/514
+- validation: 1252 tests passed; tenant firewall passed; all 15 banners preserve artwork and styling; five browser widths passed
+- next: await exact-head GitHub checks, merge under explicit user authorization, regenerate and verify all 15 published dashboards
