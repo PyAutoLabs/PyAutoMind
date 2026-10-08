@@ -81,14 +81,3 @@
 - tier: judge (human /prm)
 - heart-ack: STALE at launch (release validation incomplete: no rehearsal for current source)
 
-## inference-setup-advice
-- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/156
-- issued: 2026-10-08
-- prompt: active/inference_setup_advice.md
-- epic: inference-setup-redesign
-- session: Codex GPT-6; session ID unavailable
-- status: workspace-dev
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/inference-setup-advice
-- repos:
-  - autolens_assistant: feature/inference-setup-advice
-- plan: human authorized all phases autonomously to the end, including in-turn merge on passed gates.
