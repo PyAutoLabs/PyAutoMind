@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 16 |
-| [In flight](#in-flight) | 6 |
+| [In flight](#in-flight) | 7 |
 | [Planned](#planned) | 8 |
-| [Backlog](#backlog) | 242 |
+| [Backlog](#backlog) | 241 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -817,6 +817,14 @@ Use the start-dev skill. active/inference_setup_browser.md
 
 ```
 Use the start-dev skill. active/inference_setup_producer.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/linear_solver_phase4_jacobi_a100_batched_divergence.md">Linear-solver programme phase 4: why Jacobi PDIP trajectories diverge between batched…</a> — issued 2026-10-08</summary>
+
+```
+Use the start-dev skill. active/linear_solver_phase4_jacobi_a100_batched_divergence.md
 ```
 
 </details>
@@ -1795,7 +1803,7 @@ Use the start-dev skill. draft/feature/autoarray/adapt_linear_default_flip.md
 </details>
 
 <details>
-<summary><b>research</b> — 27</summary>
+<summary><b>research</b> — 26</summary>
 
 <details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon</a> — autofit · large · human-required · high</summary>
 
@@ -1825,14 +1833,6 @@ Use the start-dev skill. draft/research/autoarray/delaunay_research.md
 
 ```
 Use the start-dev skill. draft/research/autoarray/delaunay_callback_persistent_cache_miss.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/linear_solver_phase4_jacobi_a100_batched_divergence.md">Linear-solver programme phase 4: why Jacobi PDIP trajectories diverge between batched…</a> — autolens_profiling · moderate · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/research/autolens_profiling/linear_solver_phase4_jacobi_a100_batched_divergence.md
 ```
 
 </details>
@@ -2528,7 +2528,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-08 | filed | <a href="draft/feature/pyautoinsight/inference_setup_redesign.md">Setup-oriented inference evidence and navigation</a> |
 | 2026-10-08 | issued | <a href="active/search_extensibility_a0b_hygiene.md">Search hygiene and dead code (epic search-extensibility, phase A0b)</a> |
 | 2026-10-08 | issued | <a href="active/search_extensibility_a0c_downstream_sweep.md">Search documentation repair, downstream sweep (epic…</a> |
-| 2026-10-08 | filed | <a href="draft/research/autolens_profiling/linear_solver_phase4_jacobi_a100_batched_divergence.md">Linear-solver programme phase 4: why Jacobi PDIP trajectories diverge…</a> |
+| 2026-10-08 | issued | <a href="active/linear_solver_phase4_jacobi_a100_batched_divergence.md">Linear-solver programme phase 4: why Jacobi PDIP trajectories diverge…</a> |
 | 2026-10-08 | issued | <a href="active/inference_setup_advice.md">Inference setup evidence lookup for the assistant</a> |
 | 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
 
@@ -2625,7 +2625,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-75 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+74 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2670,11 +2670,11 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/refactor/workspaces/abell_1201_local_cleanup.md`
 - `draft/docs/autolens/split_lensing_regimes.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
-- _… and 35 more_
+- _… and 34 more_
 
 </details>
 
-71 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+70 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2747,7 +2747,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/research/autofit/hpc_campaign_epic.md — unknown theme keyword(s): hpc, euclid, carbon`
 - `draft/research/autofit/search_extensibility_epic.md — unknown theme keyword(s): searches, jax, documentation, inference`
 - `draft/research/autolens_assistant/free_agent_harness_evaluation.md — unknown theme keyword(s): assistant, support-policy`
-- `draft/research/autolens_profiling/linear_solver_phase4_jacobi_a100_batched_divergence.md — unknown theme keyword(s): linear-solver, gpu`
 - `draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md — unknown theme keyword(s): euclid, hpc`
 - `draft/triage/autolens/jit_fit_from_is_vacuous.md — unknown theme keyword(s): testing, jax`
 

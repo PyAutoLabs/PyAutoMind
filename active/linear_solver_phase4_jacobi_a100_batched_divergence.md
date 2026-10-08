@@ -11,8 +11,10 @@ Difficulty: moderate
 Autonomy: supervised
 Priority: medium
 Consequence: judge
-Status: draft
+Status: active
 Filed: 2026-10-08
+Issued: 2026-10-08
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/397
 Depends-on: complete/2026/10/linear-solver-p3b-gpu-timing.md (phase 3b rows and the finding)
 Pulse task: https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/mge_nnls_fix_pyautoarray_571_slam_60.md
 
