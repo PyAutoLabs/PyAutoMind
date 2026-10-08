@@ -1,6 +1,8 @@
 # Standardize dashboard controls and remove redundant chrome
 
 Type: maintenance
+Issued: 2026-10-08
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/505
 Difficulty: medium
 
 Primary: @PyAutoBrain. Audit all thirteen organ dashboards and change affected owner renderers only, including @PyAutoHeart, @PyAutoHands, @PyAutoMemory, @PyAutoPulse, @PyAutoEars and @PyAutoScientist. Cortex and Mind renderer code belongs to Brain.
@@ -74,3 +76,6 @@ Require explicit coordination authorization or wait for those tasks to ship. Pre
 Heart at planning: STALE (release STALE; monitoring RED), exit 1; planning permitted by start_dev. Re-read authoritative status at shipping.
 
 No issue, source edits or worktree created yet; next action is human plan review and overlap decision.
+
+## Approval
+User approved plan and coordination with existing Brain/Ears claims: `go`. Source development uses start_library / ship_library; no merge authorized.

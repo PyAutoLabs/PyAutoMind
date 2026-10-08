@@ -80,3 +80,21 @@
 - heart: STALE — release validation incomplete: no rehearsal for current source (2026-10-08T10:46:19Z)
 - next: human /prm for PR #26; merge not authorized
 
+
+## dashboard-control-labels
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/505
+- issued: 2026-10-08
+- prompt: active/dashboard_control_labels.md
+- session: Codex GPT-6; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dashboard-control-labels
+- tier: undeclared (human /prm)
+- approval: user approved plan and explicit coordination with board-one-click-update and ears-followup-window via `go`; separate worktrees
+- repos:
+  - PyAutoBrain: feature/dashboard-control-labels
+  - PyAutoHeart: feature/dashboard-control-labels
+  - PyAutoHands: feature/dashboard-control-labels
+  - PyAutoMemory: feature/dashboard-control-labels
+  - PyAutoPulse: feature/dashboard-control-labels
+  - PyAutoEars: feature/dashboard-control-labels
+  - PyAutoScientist: feature/dashboard-control-labels
