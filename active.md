@@ -52,3 +52,13 @@
   - autofit_assistant: feature/search-ext-b3-pilot
 - tier: judge (human /prm)
 - heart-ack: STALE at launch (release validation incomplete: no rehearsal for current source)
+
+## broca-cockpit
+- issue: https://github.com/PyAutoLabs/pyautolabs.github.io/issues/33
+- issued: 2026-10-08
+- session: Codex (session ID unavailable)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/broca-cockpit
+- repos:
+  - pyautolabs.github.io: feature/broca-cockpit
+- heart-ack: Existing user acknowledgement of manifest drift (workspace checkouts, 1 mismatch versus repos.yaml); recheck exact reasons before ship.
