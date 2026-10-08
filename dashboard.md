@@ -12,7 +12,7 @@
 | [Epics](#epics) | 16 |
 | [In flight](#in-flight) | 2 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 242 |
+| [Backlog](#backlog) | 244 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -1747,7 +1747,7 @@ Use the start-dev skill. draft/feature/autoarray/adapt_linear_default_flip.md
 </details>
 
 <details>
-<summary><b>research</b> — 28</summary>
+<summary><b>research</b> — 30</summary>
 
 <details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon</a> — autofit · large · human-required · high</summary>
 
@@ -1937,6 +1937,22 @@ Use the start-dev skill. draft/research/autofit/search_extensibility_epic_review
 
 ```
 Use the start-dev skill. draft/research/autofit/search_extensibility_epic_reviews/04_codex_astra_a1_pr1675.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/search_extensibility_epic_reviews/05_codex_astra_a2_a3_a3b_postmerge.md">Codex gpt-6-astra adversary review — A2/A3/A3b (PyAutoFit#1679/#1680/#1681), post-merge, 2026-10-08</a> — autofit</summary>
+
+```
+Use the start-dev skill. draft/research/autofit/search_extensibility_epic_reviews/05_codex_astra_a2_a3_a3b_postmerge.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/search_extensibility_epic_reviews/06_codex_astra_b3_postmerge.md">Codex gpt-6-astra adversary review — B3 (autofit_inference#5, PyAutoInsight#23, PyAutoCortex#61), post-merge, 2026-10-08</a> — autofit</summary>
+
+```
+Use the start-dev skill. draft/research/autofit/search_extensibility_epic_reviews/06_codex_astra_b3_postmerge.md
 ```
 
 </details>
@@ -2564,7 +2580,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 ## Hygiene
 
-15 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
+17 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
 
 <details>
 <summary>Headerless prompts</summary>
@@ -2580,6 +2596,8 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/research/autofit/search_extensibility_epic_reviews/02_claude_fable_high.md`
 - `draft/research/autofit/search_extensibility_epic_reviews/03_codex_astra_b2_pr3.md`
 - `draft/research/autofit/search_extensibility_epic_reviews/04_codex_astra_a1_pr1675.md`
+- `draft/research/autofit/search_extensibility_epic_reviews/05_codex_astra_a2_a3_a3b_postmerge.md`
+- `draft/research/autofit/search_extensibility_epic_reviews/06_codex_astra_b3_postmerge.md`
 - `draft/research/autofit/search_extensibility_epic_surveys/01_search_architecture.md`
 - `draft/research/autofit/search_extensibility_epic_surveys/02_jax_interface.md`
 - `draft/research/autofit/search_extensibility_epic_surveys/03_search_docs.md`
@@ -2587,7 +2605,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-74 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+76 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2632,7 +2650,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/docs/howtolens/cluster_pixelized_source.md`
 - `draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md`
 - `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
-- _… and 34 more_
+- _… and 36 more_
 
 </details>
 
