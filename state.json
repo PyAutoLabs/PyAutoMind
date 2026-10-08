@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-08T08:06:02Z",
+  "updated": "2026-10-08T08:11:07Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Inference setup and baseline-to-experiment contract \u2014 workspace-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoInsight/pull/14",
+      "prompt": "Use the start-dev skill. active/inference_setup_contract.md"
+    },
     {
       "severity": "yellow",
       "text": "Search documentation and coverage repair, fit family + Brain\u2026 \u2014 library-shipped + workspace-shipped, awaiting-merge \u2014 9 PRs opened 2026-10-08 (two Opus workers + one ship worker); merge order\u2026",
@@ -120,12 +126,6 @@
       "text": "pick: Smoke profile cannot see a missing sampler dependency \u2014 add an import\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautohands/smoke_profile_cannot_see_a_missing_sampler.md",
       "prompt": "Use the start-dev skill. draft/feature/pyautohands/smoke_profile_cannot_see_a_missing_sampler.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Cache `autonerves` config parsing \u2014 308 YAML files parsed per script run",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/autonerves/config_yaml_parse_cache.md",
-      "prompt": "Use the start-dev skill. draft/refactor/autonerves/config_yaml_parse_cache.md"
     }
   ]
 }

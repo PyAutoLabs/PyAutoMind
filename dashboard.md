@@ -781,7 +781,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/inference_setup_contract.md">Inference setup and baseline-to-experiment contract</a> — <a href="https://github.com/PyAutoLabs/PyAutoInsight/issues/13">issue #13</a> — issued 2026-10-08 — workspace-dev</summary>
+<details><summary>📋 <a href="active/inference_setup_contract.md">Inference setup and baseline-to-experiment contract</a> — <a href="https://github.com/PyAutoLabs/PyAutoInsight/issues/13">issue #13</a> — issued 2026-10-08 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoInsight/pull/14">PyAutoInsight#14</a></summary>
 
 ```
 Use the start-dev skill. active/inference_setup_contract.md
@@ -805,7 +805,7 @@ Use the start-dev skill. active/search_extensibility_a0c_fit_repair.md
 
 </details>
 
-<details><summary>📋 <a href="active/shapelets_modeling_smoke_slow_park.md">Park the autolens shapelets modeling smoke script that times out in release…</a> — issued 2026-10-08</summary>
+<details><summary>📋 <a href="active/shapelets_modeling_smoke_slow_park.md">Park the autolens shapelets modeling smoke script that times out in release…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/586">issue #586</a> — issued 2026-10-08 — workspace-dev</summary>
 
 ```
 Use the start-dev skill. active/shapelets_modeling_smoke_slow_park.md
