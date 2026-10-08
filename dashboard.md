@@ -884,7 +884,7 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 </details>
 
-<details><summary>📋 <b>search-ext-a0a2-backend-conformance</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1671">issue #1671</a> — planned 2026-10-08</summary>
+<details><summary>📋 <b>search-ext-a0a2-backend-conformance</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1671">issue #1671</a> — planned 2026-10-08 — shipped stacked, awaiting A0b merge then human /prm — 3207 passed / 2 skipped / 9 xfailed (6 new strict xfails: Dynesty×2 → A3…</summary>
 
 ```
 Use the start-dev skill. draft/test/autofit/search_extensibility_a0a2_backend_conformance.md
