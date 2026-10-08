@@ -58,8 +58,14 @@
 - issued: 2026-10-08
 - prompt: active/community_table_readability.md
 - session: Codex (GPT-6); session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/ears-table-readability
 - repos:
   - PyAutoEars: feature/ears-table-readability
 - tier: undeclared (human /prm)
+- library-pr: https://github.com/PyAutoLabs/PyAutoEars/pull/24
+- commit: eaf7cd3
+- validation: 106 Ears tests; 29 Brain adapter tests; additive snapshot compatibility; Chromium mobile/desktop light/dark smoke; generated state valid
+- evidence: .worktrees/ears-table-readability/PyAutoEars/_site/ (pytest.log, adapter-tests.log, browser.log, browser-fixture/)
+- heart: STALE — release validation incomplete: no rehearsal for current source (2026-10-08T09:57:44Z)
+- next: human /prm for PR #24; no merge authorized
