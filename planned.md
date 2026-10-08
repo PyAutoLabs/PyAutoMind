@@ -118,6 +118,8 @@
 - blocked-by: search-ext-a2-objective-bridge (using PyAutoFit — claim only; the work runs in parallel)
 - affected-repos:
   - PyAutoFit
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1680 (base = feature/search-ext-a2-objective-bridge; merge after PyAutoFit#1679)
+- status: shipped stacked, awaiting A2 merge then human /prm — 3531 passed / 4 strict xfails left (A4's); goldens byte-identical; conf.instance mutations gone
 - autonomy: --auto launch 2026-10-08; effective safe (refactor); Consequence judge
 
 ## search-ext-a3b-nss-preflight
