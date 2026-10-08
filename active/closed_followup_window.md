@@ -2,6 +2,8 @@
 
 @PyAutoEars
 Type: feature
+Issued: 2026-10-08
+Issue: https://github.com/PyAutoLabs/PyAutoEars/issues/25
 
 ## Original request (verbatim)
 

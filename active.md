@@ -61,3 +61,15 @@
 - tier: judge (human /prm)
 - approval: user approved shared authenticated Update service with "ok do it"
 - next: awaiting hosting preference after explaining setup; local service prototype preserved, shared button integration and shipping incomplete
+
+## ears-followup-window
+- issue: https://github.com/PyAutoLabs/PyAutoEars/issues/25
+- issued: 2026-10-08
+- prompt: active/closed_followup_window.md
+- session: Codex (GPT-6); session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/ears-followup-window
+- repos:
+  - PyAutoEars: feature/ears-followup-window
+- tier: undeclared (human /prm)
+- plan: 30-day follow-up rule approved by user; open issues unchanged
