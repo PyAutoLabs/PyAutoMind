@@ -10,15 +10,15 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 16 |
-| [In flight](#in-flight) | 3 |
+| [In flight](#in-flight) | 4 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 244 |
+| [Backlog](#backlog) | 242 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 19
+**Highest priority** (filed as `high`) — showing 12 of 18
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -821,6 +821,14 @@ Use the start-dev skill. active/search_extensibility_b3_wave1_pilot.md
 
 </details>
 
+<details><summary>📋 <a href="active/timing_noise_audit_phase2_overhead_verdict.md">Timing-noise audit phase 2: one shared ABBA overhead verdict for the CI…</a> — issued 2026-10-02</summary>
+
+```
+Use the start-dev skill. active/timing_noise_audit_phase2_overhead_verdict.md
+```
+
+</details>
+
 ## Planned
 
 Scoped but not started; some are not yet prompt files. Full detail in [`planned.md`](planned.md).
@@ -953,7 +961,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>bug</b> — 71</summary>
+<summary><b>bug</b> — 69</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -1031,14 +1039,6 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ```
 Use the start-dev skill. draft/bug/health_fixes/samples_parameter_paths.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens_profiling/timing_noise_audit_phase2_overhead_verdict.md">Timing-noise audit phase 2: one shared ABBA overhead verdict for the CI…</a> — autolens_profiling · moderate · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autolens_profiling/timing_noise_audit_phase2_overhead_verdict.md
 ```
 
 </details>
@@ -1503,14 +1503,6 @@ Use the start-dev skill. draft/bug/pyautolens/point_source_json_datasets_record_
 
 ```
 Use the start-dev skill. draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens_profiling/call_accounting_ci_timing_threshold.md">Relax call-accounting CI timing threshold</a> — autolens_profiling</summary>
-
-```
-Use the start-dev skill. draft/bug/autolens_profiling/call_accounting_ci_timing_threshold.md
 ```
 
 </details>
@@ -2524,12 +2516,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-08 | planned | <a href="planned.md#search-ext-a3b-nss-preflight">search-ext-a3b-nss-preflight</a> |
 | 2026-10-08 | planned | <a href="planned.md#search-ext-a3-samples-checkpointer">search-ext-a3-samples-checkpointer</a> |
 | 2026-10-08 | issued | <a href="active/search_extensibility_b3_wave1_pilot.md">Wave-1 pilot, Insight registration and the search catalogue (epic…</a> |
-| 2026-10-08 | filed | <a href="draft/bug/autolens_profiling/timing_noise_audit_phase2_overhead_verdict.md">Timing-noise audit phase 2: one shared ABBA overhead verdict for the…</a> |
 | 2026-10-08 | issued | <a href="active/board_one_click_update.md">One-click board Update</a> |
 | 2026-10-08 | issued | <a href="active/search_extensibility_a2_objective_bridge.md">Objective factory, PoolFactory, JAX fork rule and the run(ctx) bridge…</a> |
 | 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
 | 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
+| 2026-10-02 | issued | <a href="active/timing_noise_audit_phase2_overhead_verdict.md">Timing-noise audit phase 2: one shared ABBA overhead verdict for the…</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
 
 <details><summary>… 10 more (40 left)</summary>
@@ -2627,7 +2619,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-76 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+74 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2659,8 +2651,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
 - `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md`
-- `draft/bug/autolens_profiling/call_accounting_ci_timing_threshold.md`
-- `draft/bug/autolens_profiling/timing_noise_audit_phase2_overhead_verdict.md`
 - `draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md`
 - `draft/bug/health_fixes/release_timeout_policy.md`
 - `draft/bug/health_fixes/samples_parameter_paths.md`
@@ -2672,11 +2662,13 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/refactor/workspaces/abell_1201_local_cleanup.md`
 - `draft/docs/autolens/split_lensing_regimes.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
-- _… and 36 more_
+- `draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md`
+- `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
+- _… and 34 more_
 
 </details>
 
-72 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+71 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2722,7 +2714,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autogalaxy/power_law_multipole_m1_singular_at_isothermal_slope.md — unknown theme keyword(s): mass-profiles, jax`
 - `draft/bug/autolens/positions_threshold_fixture_off_axis.md — unknown theme keyword(s): testing`
 - `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md — unknown theme keyword(s): jax`
-- `draft/bug/autolens_profiling/timing_noise_audit_phase2_overhead_verdict.md — unknown theme keyword(s): measurement-tools`
 - `draft/bug/autolens_workspace/start_here_multistart_compile_time.md — unknown theme keyword(s): jax, compile-time, first-contact`
 - `draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md — unknown theme keyword(s): euclid, catalogue`
 - `draft/bug/euclid/drawer_pix_initializer_exception_flake.md — unknown theme keyword(s): euclid, ci, source-reconstruction`
