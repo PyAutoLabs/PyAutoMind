@@ -98,3 +98,5 @@
   - PyAutoPulse: feature/dashboard-control-labels
   - PyAutoEars: feature/dashboard-control-labels
   - PyAutoScientist: feature/dashboard-control-labels
+- heart-ack: user acknowledged YELLOW manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml, and authorized PRs after checks; canonical checkout-only check passes (48/48).
+- validation: seven repo suites plus focused correction reruns passed; 14 browser layouts and clipboard cases passed; Gut/Insight/Eyes/Nerves consumer checks passed; logs .task-logs/dashboard-control-labels/validation.md
