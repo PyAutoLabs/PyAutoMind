@@ -410,7 +410,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 8 (stage 1: 8, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14
+Count toward 20: 9 (stage 1: 9, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -447,3 +447,4 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-10-08 | shapelets-smoke-slow-park (autolens_workspace#587) | glance | tests 3 pass · smoke autolens 41/41+2nb · review CLEAN (independent Opus) · heart STALE · witness pass | merged-unchanged | 1 |
 | 2026-10-08 | search-ext-a0c-downstream (PyAutoLens#777 / PyAutoGalaxy#652 / PyAutoCTI#115 / HowToLens#97 / HowToGalaxy#86 / autogalaxy_workspace#257 / autocti_workspace#37 / autolens_assistant#157 / autogalaxy_assistant#34) | glance | tests 832/1357/271 pass (docs-only) / smoke ag searches exit 0, notebooks regenerated / review CLEAN, 1 finding resolved pre-PR / heart STALE / witness grep empty | merged-unchanged | 1 |
 | 2026-10-08 | inference-browser-polish (PyAutoInsight#18) | glance | 170 tests / Chromium synthetic+actual capture / independent CLEAN / Heart STALE rehearsal gap / witness verified backend-instrument isolation and readable Pulse hierarchy | merged-unchanged | 1 |
+| 2026-10-08 | likelihood-menu-labels (PyAutoInsight#20 / PyAutoPulse#37) | glance | 170/193 tests; Chromium fixtures+captured menus; independent CLEAN; Heart STALE release validation incomplete: no rehearsal for current source; witness explicit labels/order/plain Sersic and evidence disclosure removal | merged-unchanged | 1 |
