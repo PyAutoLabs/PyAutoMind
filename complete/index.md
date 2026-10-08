@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1804 records across 9 buckets.
+1805 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -281,6 +281,7 @@ markers; everything below GENERATED is rebuilt.
 - [streaming-p4-light-profile-identity](2026/10/streaming-p4-light-profile-identity.md)
 - [streaming-p5-cubes-phase-centre](2026/10/streaming-p5-cubes-phase-centre.md)
 - [timing-noise-audit-p1-inventory](2026/10/timing-noise-audit-p1-inventory.md)
+- [timing-noise-audit-p2-overhead-verdict](2026/10/timing-noise-audit-p2-overhead-verdict.md)
 - [trim-repo-role-text](2026/10/trim-repo-role-text.md) — root routing table
 - [unit-timing-distinct-baseline](2026/10/unit-timing-distinct-baseline.md) — Select the latest distinct prior unit timing run per repository/Python leg within the current epoch. Preserve …
 - [unregistered-worktree-guard](2026/10/unregistered-worktree-guard.md)

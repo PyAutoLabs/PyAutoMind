@@ -1,3 +1,17 @@
+Timing-noise audit phase 2 (fix phase 1 of the inventory): one shared ABBA overhead verdict for the CI call-accounting test and the fixed-light numba production cell. Issue autolens_profiling#362 stays open for fix phases (2)–(6).
+
+**Shipped:** autolens_profiling#404 (merged 2026-10-08). New `scripts/misc/likelihood_breakdown/overhead_verdict.py::abba_overhead_verdict(block_ratios, clean_mean_s, budget_ms, gross_ratio=1.5, confidence=0.95, min_blocks=3)`: the judged quantity is the excess in ms `(ratio − 1) × clean_mean × 1e3` with one-sided 95 % Student-t bounds (df = n − 1); order: invalid input → ValueError; mean ratio > 1.5 → FAIL_GROSS; n < 3 → INCONCLUSIVE; upper bound of the excess < 0 → INCONCLUSIVE "host-noise signature"; upper ≤ budget → PASS; lower > budget → FAIL; else INCONCLUSIVE. `fixed_light_numba.py` writes the verdict, bounds, confidence and reason into each row (RECORDED retired; no consumer read it), raises only on FAIL / FAIL_GROSS, and its promotion rule requires PASS on both arms (otherwise `INCONCLUSIVE` with `abba_unresolved_rows`, never a timing candidate or NO_LEVER). The CI test calls the same function object (identity asserted) with the cell's 12 ms budget through the fixture's own clean mean; INCONCLUSIVE is an `OverheadInconclusiveWarning`; `CI_OVERHEAD_RATIO` and `_ci_overhead_verdict` removed. Audit note rows T1/P1 → SOUND-with-caveats (13 / 9 / 9), fix phase 1 marked shipped; wiki campaign page and likelihood_breakdown README rows.
+
+**Witness:** all synthetic sets as specified (clear pass/fail, #361 blocks → INCONCLUSIVE [3.05, 21.8] ms, zero-variance boundary, n < 3, gross → FAIL_GROSS, below-1 laptop blocks → INCONCLUSIVE where the old rule gave PASS, 11 invalid inputs → ValueError). Pinned RAL rows judged as 32 identical blocks keep PASS / FAIL / PASS; **judged on its own 8 recorded blocks the 413.301 ms row is INCONCLUSIVE ([−7.30, +19.42] ms), not the PASS it was published with**, and 6 of the 17 committed decomposed RAL rows (8-block rows of levers 1–2 and controls, sparse_b_warm, sparse_t1 route a) re-judge INCONCLUSIVE; no JSON rewritten, recorded in the note. Full `scripts/misc/test` suite 1158 passed.
+
+**Human decision 2026-10-08:** the CI fixture's clean call is ~15–17 ms, so the shared 12 ms budget can only fail through the 1.5 gross guard there (a ×1.22 run the old 3 % rule failed now passes). Accepted and documented: the CI test is the coverage, cached-site-count and gross-breakage guard; the ms budget is judged on the cell's 225–415 ms production rows by the same function.
+
+**Caveats / not verified:** a full cell run stops before the ABBA section at the pre-existing S3-vs-S0 log-det gate on main too, so the new row fields and promotion block are covered by AST-lifted tests only; a 1-block row with mean ratio > 1.5 now raises where it used to be RECORDED; the lister cannot see the lowercase-parameter comparisons inside `overhead_verdict.py` (listed by hand).
+
+**Remainder:** fix phase (2) — dashboard qualification + drift wording (`build_dashboard.qualify` / `drift`), a profiling-summary contract change that needs a matching PyAutoPulse reader change; then (3) INCONCLUSIVE for go / lever / NO_LEVER rules. Pulse task `timing_noise_audit`.
+
+## Original prompt
+
 # Timing-noise audit phase 2: one shared ABBA overhead verdict for the CI test and the fixed-light numba cell
 
 Type: bug
