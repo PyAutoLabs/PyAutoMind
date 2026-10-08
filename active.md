@@ -16,6 +16,7 @@
 - pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/653
 - validation: 3409 passed / 2 skipped / 9 xfailed; nojax 1192 passed; Sphinx 30 warnings = baseline in full and emulated-minimal envs; downstream suites green; afT BlackJAXNUTS/MultiStartAdam accuracy asserts fail identically on main
 - decision-taken: factor-graph backend rules (use_jax=None derives from factors; agreement check after the test-mode bypass; gradient_mode disagreement → reverse); judgement values for status/warm_start/resumable/batched listed in the PR
+- adversary: Codex gpt-6-astra review 2026-10-08 (draft/research/autofit/search_extensibility_epic_reviews/04_codex_astra_a1_pr1675.md) → 6 findings, all reproduced + enacted + pushed (legacy pickle migration, hierarchical-factor inference, ModelAnalysis unwrap, NSS physical space, minimizer invalid_value=+inf, Emcee resumable=True); 3417 passed, goldens untouched
 - autonomy: --auto launch 2026-10-08 ("do A1 and B2 auto"); effective supervised (feature@large); ship checkpoint = decide-and-flag; Consequence judge → human /prm
 - worktree: ~/Code/PyAutoLabs-wt/search-ext-a1-declare-gate
 - repos:
