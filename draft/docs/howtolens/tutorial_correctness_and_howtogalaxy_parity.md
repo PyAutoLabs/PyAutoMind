@@ -68,6 +68,45 @@ While validating the tutorial fixes, also check the relevant PyAutoGalaxy geomet
 
 Do not change working source-code mathematics merely to match stale prose. The implementation and established convention are the source of truth.
 
+
+4. Tutorial 2 deflection vector field / `deflections.grid` clarity
+-----------------------------------------------------------------
+
+In @HowToLens/scripts/chapter_1_introduction/tutorial_2_ray_tracing.py, the section introducing the `VectorYX2D` returned by `deflections_yx_2d_from` can still lead a new user to confuse the coordinates where the vector field is sampled with the deflection vectors themselves.
+
+A student saw:
+
+```python
+print("Deflection angle's `Grid2D` at pixel 0:")
+print(deflections.grid.native[0, 0])
+print("Deflection angle magnitude at pixel 0:")
+print(deflections.magnitudes.native[0, 0])
+```
+
+with output approximately:
+
+```
+[ 5. -5.]
+1.6
+```
+
+and reasonably interpreted `[5, -5]` as the deflection vector, expecting its magnitude to be about 7.1 rather than 1.6. The actual deflection vector at that sample is approximately `[1.13, -1.13]`, whose magnitude is 1.6.
+
+The conceptual distinction should be made more explicit:
+
+- `deflections` is a **vector field**.
+- `deflections.grid` stores the image-plane `(y, x)` coordinates **where each vector is evaluated**; here pixel 0 is at `(5, -5)`.
+- `deflections.native[0, 0]` stores the actual **deflection vector** `(alpha_y, alpha_x)` at that coordinate; here it is about `(1.13, -1.13)`.
+- `deflections.magnitudes.native[0, 0]` is the magnitude of that deflection vector, not the magnitude of the associated grid coordinate.
+
+Improve this section so those three quantities are printed together and named unambiguously. Avoid wording such as "Deflection angle's Grid2D" if it suggests the grid contains deflection values; prefer language like "image-plane coordinate where the deflection vector is evaluated".
+
+The tutorial already explains that deflections are vectors and that `VectorYX2D` includes a `grid`, so this is primarily a pedagogical clarity issue: make the relationship **coordinate -> vector -> vector magnitude** visually explicit in the example.
+
+Also inspect the `VectorYX2D.grid` API/documentation in @PyAutoArray. If `grid` is intrinsically confusing for new users, consider whether its docs, repr, examples, or naming guidance should clarify that it is the sampling-coordinate grid associated with the vector field. Do not make an API-breaking rename as part of this task unless there is a compelling wider reason.
+
+There is no equivalent HowToGalaxy tutorial section from the initial search, so this item is primarily HowToLens/PyAutoArray rather than a parity fix.
+
 Ongoing process
 ===============
 
