@@ -10,6 +10,7 @@
 - [knn-partial-point-block](#knn-partial-point-block)
 - [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
 - [search-ext-a0a2-backend-conformance](#search-ext-a0a2-backend-conformance)
+- [inference-setup-advice](#inference-setup-advice)
 
 <!-- toc:end -->
 
