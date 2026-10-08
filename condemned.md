@@ -55,6 +55,7 @@ a sweep), mirroring the Heart ↔ vitals template. See the decision:
 - [autolens_workspace_developer/rectangular-spline-rotated-experiments](#autolens_workspace_developerrectangular-spline-rotated-experiments)
 - [autolens_profiling/inference-programme-ledger](#autolens_profilinginference-programme-ledger)
 - [autolens-profiling/inference-programme](#autolens-profilinginference-programme)
+- [autofit_workspace_developer/searches-nss](#autofit_workspace_developersearches-nss)
 
 <!-- toc:end -->
 
@@ -494,3 +495,14 @@ One `##` block per item. Fields:
 - sweep-after: 2026-12-10
 - breaks-if-wrong: the nine certified InferenceRefs_v1 reference posteriors and the frozen PROGRAMME/DECISIONS ledgers (the only record of what the programme established); the run outputs themselves are separately stashed on RAL at /mnt/ral/jnightin/inference_programme_retired_2026-09-07
 - archive-ref: refs/heads/archive/condemned/autolens-profiling/inference-programme @ c8b605801068ec3de04314b47da8f7272a038ba1 (PyAutoGut; pre-deletion autolens_profiling main)
+
+## autofit_workspace_developer/searches-nss
+- type: file
+- locator: autofit_workspace_developer searches/nss/ (10 files: README.md, __init__.py, _chunked_nss.py, _chunked_update.py, example.py, samples.py, search.py, tests/)
+- confidence: 0.95
+- reason: archive copy of the NSS search superseded by the live library implementation (`autofit.non_linear.search.nest.nss`), which has diverged; the copy could only mislead. Search-extensibility A0c part 1 (PyAutoFit#1668); human ruling 2026-10-08: delete via Gut, not banner.
+- merged: yes
+- condemned: 2026-10-08
+- sweep-after: n/a (committed deletion; history-only)
+- breaks-if-wrong: a developer wanting the pre-mainline NSS prototype; recoverable with `git checkout 7cb97c6 -- searches/nss` in autofit_workspace_developer
+- archive-ref: n/a — committed deletion in the A0c PR; bytes recoverable from remote history at pre-delete SHA `7cb97c6d4380324beb6fc724e3edd5ad0592b549` (autofit_workspace_developer main, 2026-10-08)
