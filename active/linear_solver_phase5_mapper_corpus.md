@@ -12,8 +12,10 @@ Difficulty: moderate
 Autonomy: supervised
 Priority: medium
 Consequence: judge
-Status: draft
+Status: active
 Filed: 2026-10-08
+Issued: 2026-10-08
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/399
 Depends-on: complete/2026/10/linear-solver-p3b-gpu-timing.md; autolens_profiling#398 (phase 4a: the A100 Jacobi batched/unbatched divergence is batch-shape-dependent Cholesky rounding amplified on Jacobi-unstable systems)
 Pulse task: https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/mge_nnls_fix_pyautoarray_571_slam_60.md
 
