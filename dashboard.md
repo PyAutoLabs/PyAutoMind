@@ -9,10 +9,10 @@
 | Where | Count |
 |-------|------:|
 | [Start here](#start-here) | 24 |
-| [Epics](#epics) | 16 |
+| [Epics](#epics) | 19 |
 | [In flight](#in-flight) | 2 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 240 |
+| [Backlog](#backlog) | 243 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -722,6 +722,19 @@ Use the start-dev skill. draft/feature/autofit/certified_solver_batched_guard_c2
 </details>
 
 <details>
+<summary><b>inference-setup-redesign (phase 2)</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+
+<details><summary>📋 <a href="draft/feature/autolens_inference/inference_setup_producer.md">inference-setup-producer</a> — autolens_inference · large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens_inference/inference_setup_producer.md
+```
+
+</details>
+
+</details>
+
+<details>
 <summary><b>pyautoeyes-birth</b> — 5 queued prompt(s) — ⚠️ not in `epics.md`</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautoeyes/multi_galaxy_gallery.md">autolens_visualization: multi-galaxy gallery — producer and dataset</a> — pyautoeyes · medium · supervised · normal</summary>
@@ -760,6 +773,32 @@ Use the start-dev skill. draft/feature/pyautohands/release_fires_visualization_d
 
 ```
 Use the start-dev skill. draft/maintenance/autofit_visualization/seed_samplers_for_byte_stable_rerenders.md
+```
+
+</details>
+
+</details>
+
+<details>
+<summary><b>inference-setup-redesign (phase 3)</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+
+<details><summary>📋 <a href="draft/feature/pyautoinsight/inference_setup_browser.md">inference-setup-browser</a> — pyautoinsight · large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautoinsight/inference_setup_browser.md
+```
+
+</details>
+
+</details>
+
+<details>
+<summary><b>inference-setup-redesign (phase 5a)</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+
+<details><summary>📋 <a href="draft/feature/pyautomemory/inference_sampler_literature.md">inference-sampler-literature</a> — pyautomemory · large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautomemory/inference_sampler_literature.md
 ```
 
 </details>
@@ -2569,7 +2608,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-74 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+77 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2585,6 +2624,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autolens/cluster_curves_engine_dispatch.md`
 - `draft/feature/autolens/magnification_maps_visualization.md`
 - `draft/feature/autolens/source_cluster_arc.md`
+- `draft/feature/autolens_inference/inference_setup_producer.md`
 - `draft/feature/autolens_jax_joss/autolens_jax_joss_benchmark_repo.md`
 - `draft/feature/autolens_workspace/pointsolver_grid_extent_per_package.md`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md`
@@ -2594,7 +2634,9 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/pyautoeyes/group_cluster_gallery.md`
 - `draft/feature/pyautoeyes/multi_galaxy_gallery.md`
 - `draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md`
+- `draft/feature/pyautoinsight/inference_setup_browser.md`
 - `draft/feature/pyautoinsight/inference_setup_redesign.md`
+- `draft/feature/pyautomemory/inference_sampler_literature.md`
 - `draft/feature/workspaces/model_figures_6_rollout.md`
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md`
@@ -2611,10 +2653,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/priors/14_replace_transform_stack_with_bijectors.md`
 - `draft/bug/priors/z_features.md`
 - `draft/refactor/autogalaxy/critical_curves_dispatch_cluster.md`
-- `draft/refactor/workspaces/abell_1201_local_cleanup.md`
-- `draft/docs/autolens/split_lensing_regimes.md`
-- `draft/docs/howtolens/cluster_pixelized_source.md`
-- _… and 34 more_
+- _… and 37 more_
 
 </details>
 
