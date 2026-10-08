@@ -22,6 +22,18 @@ Add a functional label to the existing organ metadata and use it for the banner 
 
 Branch proposed: `feature/organ-banner-task-labels`. Library workflow for the shared Brain implementation. Tier: judge; merge mode: human /prm.
 
-## Planning state
+## Execution state
 
-No source edited. User approved the corrected plan and label mapping with “continue” on 2026-10-08. Brain is currently claimed by `board-one-click-update` (PyAutoBrain issue #504); `worktree_check_conflict` reports a hard conflict. Do not create a competing implementation worktree until the claim is resolved. Heart entry verdict: STALE (release STALE; monitoring RED); planning permitted by start_dev.
+User approved the corrected plan, then explicitly authorized parking board-one-click-update, merging and publishing. The update task is parked with its worktree and edits preserved. Task worktree: `.worktrees/organ-banner-task-labels/PyAutoBrain`; branch: `feature/organ-banner-task-labels`.
+
+Heart YELLOW acknowledgement: user explicitly answered “Acknowledge; ship, merge and publish” after these exact warnings were presented:
+
+- manifest drift: end-at-deliverable blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml
+- manifest drift: generated hooks (session-start + end-at-deliverable) — 3 mismatch(es) vs PyAutoMind/repos.yaml
+- manifest drift: hub organism blurb (organs present) — 2 mismatch(es) vs PyAutoMind/repos.yaml
+- manifest drift: organism-map blocks (generated) — 7 mismatch(es) vs PyAutoMind/repos.yaml
+- manifest drift: public front-door organ tables (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml
+- manifest drift: root AGENTS.md routing table (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml
+- manifest drift: shared-standards blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml
+- manifest drift: where-to-file blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml
+- release validation incomplete: no rehearsal for current source

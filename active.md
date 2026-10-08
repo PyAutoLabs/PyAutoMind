@@ -46,4 +46,15 @@
 - status: library-dev
 - approval: corrected label plan approved; user explicitly authorized merge and publication and parking board-one-click-update
 - tier: judge (explicit human merge authorization in current session)
+- heart-ack:
+  - manifest drift: end-at-deliverable blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml
+  - manifest drift: generated hooks (session-start + end-at-deliverable) — 3 mismatch(es) vs PyAutoMind/repos.yaml
+  - manifest drift: hub organism blurb (organs present) — 2 mismatch(es) vs PyAutoMind/repos.yaml
+  - manifest drift: organism-map blocks (generated) — 7 mismatch(es) vs PyAutoMind/repos.yaml
+  - manifest drift: public front-door organ tables (generated) — 2 mismatch(es) vs PyAutoMind/repos.yaml
+  - manifest drift: root AGENTS.md routing table (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml
+  - manifest drift: shared-standards blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml
+  - manifest drift: where-to-file blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml
+  - release validation incomplete: no rehearsal for current source
+- heart-ack-authorization: user explicitly answered “Acknowledge; ship, merge and publish”
 - next: create isolated worktree, implement labels and navigation ordering, validate, merge and publish
