@@ -789,7 +789,7 @@ Use the start-dev skill. active/linear_solver_phase3b_gpu_timing_cell.md
 
 </details>
 
-<details><summary>📋 <a href="active/search_extensibility_a0c_fit_repair.md">Search documentation and coverage repair, fit family + Brain…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1668">issue #1668</a> — issued 2026-10-08 — library-dev</summary>
+<details><summary>📋 <a href="active/search_extensibility_a0c_fit_repair.md">Search documentation and coverage repair, fit family + Brain…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1668">issue #1668</a> — issued 2026-10-08 — library-shipped + workspace-shipped, awaiting-merge — 9 PRs opened 2026-10-08 (two Opus workers + one ship worker); merge order… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1669">PyAutoFit#1669</a>, <a href="https://github.com/PyAutoLabs/autofit_workspace/pull/168">autofit_workspace#168</a>, <a href="https://github.com/PyAutoLabs/autofit_workspace_test/pull/107">autofit_workspace_test#107</a>, <a href="https://github.com/PyAutoLabs/autofit_workspace_test/pull/108">autofit_workspace_test#108</a>, <a href="https://github.com/PyAutoLabs/autofit_workspace_developer/pull/29">autofit_workspace_developer#29</a>, <a href="https://github.com/PyAutoLabs/autofit_assistant/pull/55">autofit_assistant#55</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/502">PyAutoBrain#502</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/503">PyAutoBrain#503</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 Use the start-dev skill. active/search_extensibility_a0c_fit_repair.md
@@ -2691,6 +2691,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoFit**
 
+- [PyAutoFit#1669](https://github.com/PyAutoLabs/PyAutoFit/pull/1669) — `active/search_extensibility_a0c_fit_repair.md`
 - [PyAutoFit#1667](https://github.com/PyAutoLabs/PyAutoFit/pull/1667) — `complete/2026/10/search-conformance-metadata.md`
 
 
