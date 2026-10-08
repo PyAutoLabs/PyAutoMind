@@ -5,6 +5,7 @@ Approximate tokens are UTF-8 bytes / 4, rounded up. Report is read-only;
 ``check`` exits nonzero when a required file is missing or a budget is exceeded.
 The root may be grouped or flat. Repository placement uses Mind's checkout helper (Brain's resolver when present).
 """
+
 from __future__ import annotations
 
 import argparse
@@ -42,8 +43,12 @@ def measure(path: Path) -> dict:
     if not path.is_file():
         return {"path": str(path), "missing": True}
     data = path.read_bytes()
-    return {"path": str(path), "bytes": len(data),
-            "lines": len(data.splitlines()), "tokens_approx": math.ceil(len(data) / 4)}
+    return {
+        "path": str(path),
+        "bytes": len(data),
+        "lines": len(data.splitlines()),
+        "tokens_approx": math.ceil(len(data) / 4),
+    }
 
 
 def collect(root: Path) -> dict:
@@ -54,12 +59,17 @@ def collect(root: Path) -> dict:
     agents = ("workspace AGENTS", "Brain AGENTS", "Mind AGENTS")
     totals = {}
     if all("missing" not in paths[name] for name in agents):
-        totals["agents_tokens_approx"] = sum(paths[name]["tokens_approx"] for name in agents)
+        totals["agents_tokens_approx"] = sum(
+            paths[name]["tokens_approx"] for name in agents
+        )
     shared = ("context guide", "workflow guide")
     start = ("start_dev entry", "start_dev body", *shared)
     prm = ("prm entry", "prm body", *shared)
-    for label, names in (("start_dev_lines", start), ("prm_lines", prm),
-                         ("core_union_lines", tuple(dict.fromkeys((*start, *prm))))):
+    for label, names in (
+        ("start_dev_lines", start),
+        ("prm_lines", prm),
+        ("core_union_lines", tuple(dict.fromkeys((*start, *prm)))),
+    ):
         if all("missing" not in paths[name] for name in names):
             totals[label] = sum(paths[name]["lines"] for name in names)
     return {"root": str(root), "files": paths, "totals": totals}
@@ -67,13 +77,20 @@ def collect(root: Path) -> dict:
 
 def violations(result: dict, args: argparse.Namespace) -> list[str]:
     files = result["files"]
-    errors = [f"missing: {name}: {row['path']}" for name, row in files.items()
-              if "missing" in row]
+    errors = [
+        f"missing: {name}: {row['path']}"
+        for name, row in files.items()
+        if "missing" in row
+    ]
     total = result["totals"].get("agents_tokens_approx")
     if total is not None and total > args.agents_budget:
-        errors.append(f"AGENTS total: {total} > {args.agents_budget} approximate tokens")
-    for name, budget in (("start_dev_lines", args.start_dev_budget),
-                         ("prm_lines", args.prm_budget)):
+        errors.append(
+            f"AGENTS total: {total} > {args.agents_budget} approximate tokens"
+        )
+    for name, budget in (
+        ("start_dev_lines", args.start_dev_budget),
+        ("prm_lines", args.prm_budget),
+    ):
         lines = result["totals"].get(name)
         if lines is not None and lines > budget:
             errors.append(f"{name}: {lines} > {budget} lines")
@@ -83,8 +100,12 @@ def violations(result: dict, args: argparse.Namespace) -> list[str]:
 def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("command", choices=("report", "check"))
-    parser.add_argument("--root", type=Path, default=Path(os.environ.get("PYAUTO_ROOT", ".")),
-                        help="workspace root (grouped main or flat bundle)")
+    parser.add_argument(
+        "--root",
+        type=Path,
+        default=Path(os.environ.get("PYAUTO_ROOT", ".")),
+        help="workspace root (grouped main or flat bundle)",
+    )
     parser.add_argument("--agents-budget", type=int, default=7500)
     parser.add_argument("--start-dev-budget", type=int, default=400)
     parser.add_argument("--prm-budget", type=int, default=450)
@@ -104,9 +125,13 @@ def main(argv=None) -> int:
             if "missing" in row:
                 print(f"{name}: MISSING {row['path']}")
             else:
-                print(f"{name}: {row['bytes']} bytes, {row['lines']} lines, "
-                      f"~{row['tokens_approx']} tokens")
-        print(f"AGENTS total: ~{result['totals'].get('agents_tokens_approx', 'unknown')} tokens")
+                print(
+                    f"{name}: {row['bytes']} bytes, {row['lines']} lines, "
+                    f"~{row['tokens_approx']} tokens"
+                )
+        print(
+            f"AGENTS total: ~{result['totals'].get('agents_tokens_approx', 'unknown')} tokens"
+        )
         for name in ("start_dev_lines", "prm_lines", "core_union_lines"):
             print(f"{name}: {result['totals'].get(name, 'unknown')} lines")
         for issue in issues:

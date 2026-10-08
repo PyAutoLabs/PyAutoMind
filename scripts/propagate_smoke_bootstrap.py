@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Isolated-clone propagation; a failed target never reads as already current."""
+
 import argparse
 from pathlib import Path
 import subprocess
@@ -11,8 +12,9 @@ import smoke_bootstrap_sync as sync
 
 
 def git(repo, *args):
-    return subprocess.run(["git", "-C", str(repo), *args], check=True,
-                          capture_output=True, text=True).stdout
+    return subprocess.run(
+        ["git", "-C", str(repo), *args], check=True, capture_output=True, text=True
+    ).stdout
 
 
 def propagate(mind, tree, *, dry_run):
@@ -26,11 +28,22 @@ def propagate(mind, tree, *, dry_run):
     for name, spec in selected:
         slug = spec["github"]
         parts = slug.split("/")
-        if len(parts) != 2 or any(not p or not all(c.isalnum() or c in "-_." for c in p)
-                                  for p in parts):
+        if len(parts) != 2 or any(
+            not p or not all(c.isalnum() or c in "-_." for c in p) for p in parts
+        ):
             raise ValueError(f"invalid GitHub identity for {name}")
-        subprocess.run(["git", "clone", "--quiet", "--depth", "1",
-                        f"https://github.com/{slug}.git", str(tree / name)], check=True)
+        subprocess.run(
+            [
+                "git",
+                "clone",
+                "--quiet",
+                "--depth",
+                "1",
+                f"https://github.com/{slug}.git",
+                str(tree / name),
+            ],
+            check=True,
+        )
     source = (mind / sync.SOURCE).read_text()
     # A dry run still generates into disposable clones, so it can assert the
     # post-generation drift check and show precisely what would be committed.
@@ -53,7 +66,12 @@ def propagate(mind, tree, *, dry_run):
                 print(f"{name}: would push", flush=True)
                 continue
             git(repo, "config", "user.name", "github-actions[bot]")
-            git(repo, "config", "user.email", "41898282+github-actions[bot]@users.noreply.github.com")
+            git(
+                repo,
+                "config",
+                "user.email",
+                "41898282+github-actions[bot]@users.noreply.github.com",
+            )
             git(repo, "add", "--", str(sync.REL))
             git(repo, "commit", "-m", "ci: propagate canonical smoke bootstrap")
             git(repo, "push", "origin", "HEAD")

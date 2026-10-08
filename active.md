@@ -13,15 +13,6 @@
 - approval: user approved shared authenticated Update service with "ok do it"
 - next: awaiting hosting preference after explaining setup; local service prototype preserved, shared button integration and shipping incomplete
 
-## timing-noise-audit-p1-inventory
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/362
-- issued: 2026-10-02
-- session: Claude Code CLI (Fable 5.1), session 331e5f0e
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/timing-noise-audit-p1-inventory
-- repos:
-  - autolens_profiling: feature/timing-noise-audit-p1-inventory
-
 ## search-ext-a2-objective-bridge
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1676
 - issued: 2026-10-08

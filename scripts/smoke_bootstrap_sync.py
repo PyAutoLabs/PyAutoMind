@@ -6,6 +6,7 @@ repos_sync reports the held adoption separately; --check here always checks the
 actual installations. --require-all is for the propagation job, whose coverage
 must not silently shrink after a failed clone.
 """
+
 from __future__ import annotations
 
 import argparse
@@ -20,7 +21,7 @@ REL = Path(".github/scripts/run_smoke.py")
 SOURCE = Path("policy/smoke_bootstrap.py")
 BEGIN = "# pyauto:smoke-bootstrap:begin\n"
 END = "# pyauto:smoke-bootstrap:end\n"
-LEGACY = '''# CI puts PyAutoHands/autohands on PYTHONPATH (PyAutoHeart's reusable
+LEGACY = """# CI puts PyAutoHands/autohands on PYTHONPATH (PyAutoHeart's reusable
 # smoke-tests.yml clones it alongside the dependency chain); for local runs,
 # fall back to the sibling checkout.
 try:
@@ -30,7 +31,7 @@ except ImportError:  # pragma: no cover - local-run fallback
     import build_util
 
 AUTOHANDS = Path(build_util.__file__).resolve().parent
-'''
+"""
 
 
 def targets(repos):
@@ -62,7 +63,7 @@ def render(text, source):
         stop = text.index(END)
         if stop < start:
             raise ValueError("reversed bootstrap markers")
-        return text[:start] + block + text[stop + len(END):]
+        return text[:start] + block + text[stop + len(END) :]
     if text.count(LEGACY) != 1:
         raise ValueError("unknown legacy bootstrap; refusing to guess")
     return text.replace(LEGACY, block, 1)
@@ -76,16 +77,23 @@ def installations(root, repos, require_all=False):
     """
     root = root.absolute()
     import importlib.util
-    candidates = [p for p in (
-        root / "PyAutoBrain/agents/_repo_paths.py",
-        root / "organs/PyAutoBrain/agents/_repo_paths.py",
-    ) if p.is_file()]
+
+    candidates = [
+        p
+        for p in (
+            root / "PyAutoBrain/agents/_repo_paths.py",
+            root / "organs/PyAutoBrain/agents/_repo_paths.py",
+        )
+        if p.is_file()
+    ]
     if len({p.resolve() for p in candidates}) > 1:
         raise ValueError("PyAutoBrain: ambiguous flat and grouped checkouts")
     resolver_file = candidates[0] if candidates else None
     resolver = None
     if resolver_file is not None:
-        spec = importlib.util.spec_from_file_location("_pyauto_repo_paths", resolver_file)
+        spec = importlib.util.spec_from_file_location(
+            "_pyauto_repo_paths", resolver_file
+        )
         resolver = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(resolver)
     for name, _ in targets(repos):
@@ -93,13 +101,25 @@ def installations(root, repos, require_all=False):
             candidate = resolver.repo_path(root, name)
         else:
             candidate = root / name
-            grouped = [family / name for family in root.iterdir()
-                if family.is_dir() and not (family / ".git").exists()
-                and (family / name).exists()] if root.is_dir() else []
+            grouped = (
+                [
+                    family / name
+                    for family in root.iterdir()
+                    if family.is_dir()
+                    and not (family / ".git").exists()
+                    and (family / name).exists()
+                ]
+                if root.is_dir()
+                else []
+            )
             if grouped and candidate.exists():
-                raise ValueError(f"{name}: ambiguous checkouts: {[candidate, *grouped]}")
+                raise ValueError(
+                    f"{name}: ambiguous checkouts: {[candidate, *grouped]}"
+                )
             if grouped:
-                raise ValueError(f"{name}: grouped checkout requires PyAutoBrain/agents/_repo_paths.py")
+                raise ValueError(
+                    f"{name}: grouped checkout requires PyAutoBrain/agents/_repo_paths.py"
+                )
         if not candidate.exists():
             if require_all:
                 raise ValueError(f"{name}: checkout missing")
@@ -140,8 +160,10 @@ def write(root, repos, source, *, require_all=False, dry_run=False):
 
 def check(root, repos, source):
     try:
-        return [f"{path}: bootstrap differs from canonical source"
-                for path, _ in changes(root, repos, source)]
+        return [
+            f"{path}: bootstrap differs from canonical source"
+            for path, _ in changes(root, repos, source)
+        ]
     except (OSError, ValueError) as error:
         return [str(error)]
 
@@ -149,7 +171,9 @@ def check(root, repos, source):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path)
-    parser.add_argument("--mind", type=Path, default=Path(__file__).resolve().parents[1])
+    parser.add_argument(
+        "--mind", type=Path, default=Path(__file__).resolve().parents[1]
+    )
     mode = parser.add_mutually_exclusive_group()
     mode.add_argument("--write", action="store_true")
     mode.add_argument("--dry-run", action="store_true")
@@ -160,8 +184,17 @@ def main():
     repos = yaml.safe_load((args.mind / "repos.yaml").read_text())["repos"]
     selected = list(targets(repos))
     if args.targets:
-        print(json.dumps({"enabled": rollout_enabled(args.mind), "targets": [
-            {"name": name, "github": spec["github"]} for name, spec in selected]}))
+        print(
+            json.dumps(
+                {
+                    "enabled": rollout_enabled(args.mind),
+                    "targets": [
+                        {"name": name, "github": spec["github"]}
+                        for name, spec in selected
+                    ],
+                }
+            )
+        )
         return 0
     if args.root is None:
         parser.error("--root is required (writes never infer a destination)")
@@ -171,11 +204,14 @@ def main():
     if args.write or args.dry_run:
         if args.write and not rollout_enabled(args.mind):
             parser.error("rollout is held; use --dry-run until coordination clears")
-        write(args.root, repos, source, require_all=args.require_all,
-              dry_run=args.dry_run)
+        write(
+            args.root, repos, source, require_all=args.require_all, dry_run=args.dry_run
+        )
     problems = check(args.root, repos, source)
     seen = list(installations(args.root, repos, args.require_all))
-    print(f"check {LABEL}: {'OK' if not problems else str(len(problems)) + ' mismatch(es)'}")
+    print(
+        f"check {LABEL}: {'OK' if not problems else str(len(problems)) + ' mismatch(es)'}"
+    )
     print(f"  coverage: {len(seen)} of {len(selected)} checked out")
     for problem in problems:
         print(f"  {problem}")

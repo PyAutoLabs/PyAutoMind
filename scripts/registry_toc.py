@@ -99,12 +99,18 @@ def render(text: str) -> str:
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     mode = ap.add_mutually_exclusive_group(required=True)
-    mode.add_argument("--check", action="store_true",
-                      help="exit 1 if any contents block is stale")
-    mode.add_argument("--write", action="store_true",
-                      help="rewrite stale contents blocks in place")
-    ap.add_argument("--root", type=Path, default=ROOT,
-                    help="Mind repo root (default: this script's repo)")
+    mode.add_argument(
+        "--check", action="store_true", help="exit 1 if any contents block is stale"
+    )
+    mode.add_argument(
+        "--write", action="store_true", help="rewrite stale contents blocks in place"
+    )
+    ap.add_argument(
+        "--root",
+        type=Path,
+        default=ROOT,
+        help="Mind repo root (default: this script's repo)",
+    )
     args = ap.parse_args()
 
     stale = []
@@ -125,8 +131,10 @@ def main() -> int:
     if args.write:
         print(f"registry contents blocks: rewrote {', '.join(stale)}")
         return 0
-    print(f"registry contents blocks: STALE — {', '.join(stale)} "
-          "(run `python3 scripts/registry_toc.py --write`)")
+    print(
+        f"registry contents blocks: STALE — {', '.join(stale)} "
+        "(run `python3 scripts/registry_toc.py --write`)"
+    )
     return 1
 
 

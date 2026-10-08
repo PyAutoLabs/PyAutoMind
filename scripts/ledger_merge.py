@@ -168,7 +168,13 @@ def changed_paths(base: str, head: str = "HEAD"):
 # `<!-- toc:start -->` block) is taken from OURS; the caller regenerates the
 # contents block (`registry_toc.py --write`) after the merge.
 
-ENTRY_MERGED_FILES = ("active.md", "planned.md", "parked.md", "condemned.md", "epics.md")
+ENTRY_MERGED_FILES = (
+    "active.md",
+    "planned.md",
+    "parked.md",
+    "condemned.md",
+    "epics.md",
+)
 
 
 def split_entries(text: str):
@@ -188,7 +194,9 @@ def split_entries(text: str):
     # of a file has none and gains one the moment something is appended after
     # it, which must not read as "both sides changed it". Normalise every entry
     # to end in exactly one blank line; `join_entries` fixes the file's tail.
-    return "".join(preamble), [(slug, "".join(body).rstrip("\n") + "\n\n") for slug, body in entries]
+    return "".join(preamble), [
+        (slug, "".join(body).rstrip("\n") + "\n\n") for slug, body in entries
+    ]
 
 
 def join_entries(preamble: str, entries) -> str:
@@ -218,11 +226,11 @@ def merge_entries(base: str, ours: str, theirs: str):
             ours_changed = (not in_o) or o[slug] != b[slug]
             theirs_changed = (not in_t) or t[slug] != b[slug]
             if not theirs_changed:
-                result[slug] = o.get(slug)            # ours wins, deletion included
+                result[slug] = o.get(slug)  # ours wins, deletion included
             elif not ours_changed:
-                result[slug] = t.get(slug)            # theirs wins, deletion included
+                result[slug] = t.get(slug)  # theirs wins, deletion included
             elif o.get(slug) == t.get(slug):
-                result[slug] = o.get(slug)            # both made the same change
+                result[slug] = o.get(slug)  # both made the same change
             else:
                 conflicts.append(slug)
         else:
@@ -260,13 +268,21 @@ def resolve_conflicts(cwd=None) -> tuple[list[str], list[str]]:
     `## slug` registries merge by entry; anything else — or an entry both
     sides changed — is left unmerged for a human."""
     root = Path(cwd) if cwd else Path(__file__).resolve().parents[1]
-    unmerged = [p for p in _git("diff", "--name-only", "--diff-filter=U", cwd=root).stdout.splitlines() if p]
+    unmerged = [
+        p
+        for p in _git(
+            "diff", "--name-only", "--diff-filter=U", cwd=root
+        ).stdout.splitlines()
+        if p
+    ]
     resolved, unresolved = [], []
     for path in unmerged:
         if path in GENERATED_FILES:
             _git("checkout", "--ours", "--", path, cwd=root)
             _git("add", "--", path, cwd=root)
-            resolved.append(f"{path} (render: main's copy, regenerated after the merge)")
+            resolved.append(
+                f"{path} (render: main's copy, regenerated after the merge)"
+            )
         elif path in ENTRY_MERGED_FILES:
             stages = [_git("show", f":{n}:{path}", cwd=root) for n in (1, 2, 3)]
             if any(s.returncode != 0 for s in stages):
@@ -315,18 +331,30 @@ def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     sub = parser.add_subparsers(dest="command", required=True)
     cls = sub.add_parser("classify", help="ledger-only, or does it hold code?")
-    cls.add_argument("paths", nargs="*", help="repo-relative paths (else --base, else stdin)")
+    cls.add_argument(
+        "paths", nargs="*", help="repo-relative paths (else --base, else stdin)"
+    )
     cls.add_argument("--base", help="diff HEAD against the merge base with this ref")
-    cls.add_argument("--head", default="HEAD", help="the branch tip to judge (default HEAD)")
-    mrg = sub.add_parser("merge-entries",
-                         help="three-way merge a `## slug` registry file by entry")
+    cls.add_argument(
+        "--head", default="HEAD", help="the branch tip to judge (default HEAD)"
+    )
+    mrg = sub.add_parser(
+        "merge-entries", help="three-way merge a `## slug` registry file by entry"
+    )
     mrg.add_argument("base_file")
     mrg.add_argument("ours_file")
     mrg.add_argument("theirs_file")
-    mrg.add_argument("--write", metavar="PATH", help="write the merge here (else stdout)")
-    res = sub.add_parser("resolve", help="settle the ledger-grammar conflicts of an in-progress "
-                                         "git merge (renders take main, registries merge by entry)")
-    res.add_argument("--root", help="the repo with the merge in progress (default: this one)")
+    mrg.add_argument(
+        "--write", metavar="PATH", help="write the merge here (else stdout)"
+    )
+    res = sub.add_parser(
+        "resolve",
+        help="settle the ledger-grammar conflicts of an in-progress "
+        "git merge (renders take main, registries merge by entry)",
+    )
+    res.add_argument(
+        "--root", help="the repo with the merge in progress (default: this one)"
+    )
     args = parser.parse_args(argv)
     if args.command == "merge-entries":
         return _merge_entries_cli(args)
@@ -366,7 +394,9 @@ def main(argv=None) -> int:
 
     ledger, blocked = classify(paths)
     if blocked:
-        print(f"code: {len(blocked)} of {len(ledger) + len(blocked)} path(s) need a human")
+        print(
+            f"code: {len(blocked)} of {len(ledger) + len(blocked)} path(s) need a human"
+        )
         for path in blocked:
             print(f"  {path}")
         return 1

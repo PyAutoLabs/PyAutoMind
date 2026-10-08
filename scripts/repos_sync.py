@@ -138,10 +138,14 @@ import yaml
 
 def _repo_resolver(root):
     root = Path(root)
-    candidates = [p for p in (
-        root / "PyAutoBrain/agents/_repo_paths.py",
-        root / "organs/PyAutoBrain/agents/_repo_paths.py",
-    ) if p.is_file()]
+    candidates = [
+        p
+        for p in (
+            root / "PyAutoBrain/agents/_repo_paths.py",
+            root / "organs/PyAutoBrain/agents/_repo_paths.py",
+        )
+        if p.is_file()
+    ]
     if len({p.resolve() for p in candidates}) > 1:
         raise ValueError("PyAutoBrain: ambiguous flat and grouped checkouts")
     module_path = candidates[0] if candidates else None
@@ -153,10 +157,23 @@ def _repo_resolver(root):
     return None
 
 
-ORGANS = frozenset({"PyAutoBrain", "PyAutoMind", "PyAutoCortex",
-                    "PyAutoMemory", "PyAutoEyes", "PyAutoEars", "PyAutoHeart",
-                    "PyAutoHands", "PyAutoPulse", "PyAutoInsight", "PyAutoNerves",
-                    "PyAutoGut", "PyAutoScientist"})
+ORGANS = frozenset(
+    {
+        "PyAutoBrain",
+        "PyAutoMind",
+        "PyAutoCortex",
+        "PyAutoMemory",
+        "PyAutoEyes",
+        "PyAutoEars",
+        "PyAutoHeart",
+        "PyAutoHands",
+        "PyAutoPulse",
+        "PyAutoInsight",
+        "PyAutoNerves",
+        "PyAutoGut",
+        "PyAutoScientist",
+    }
+)
 
 
 def bootstrap_checkout(root, name):
@@ -180,8 +197,14 @@ def repo_checkout(root, name):
     # A family directory containing checkouts needs the shared resolver. It
     # must not silently turn a grouped checkout into an absent flat one.
     for family in root.iterdir() if root.is_dir() else ():
-        if family.is_dir() and not (family / ".git").exists() and (family / name).exists():
-            raise RuntimeError(f"{name}: grouped checkout requires PyAutoBrain/agents/_repo_paths.py")
+        if (
+            family.is_dir()
+            and not (family / ".git").exists()
+            and (family / name).exists()
+        ):
+            raise RuntimeError(
+                f"{name}: grouped checkout requires PyAutoBrain/agents/_repo_paths.py"
+            )
     return flat
 
 
@@ -200,9 +223,13 @@ def all_checkouts(root):
         if is_checkout(entry):
             checkouts.append(entry)
         elif not entry.is_symlink():
-            checkouts.extend(child for child in entry.iterdir()
-                             if child.is_dir() and is_checkout(child))
+            checkouts.extend(
+                child
+                for child in entry.iterdir()
+                if child.is_dir() and is_checkout(child)
+            )
     return sorted(checkouts)
+
 
 MARK_BEGIN = "<!-- repos_sync:begin -->"
 MARK_END = "<!-- repos_sync:end -->"
@@ -321,17 +348,13 @@ DELIVERABLE_HOOK_MATCHER = (
 CODEX_HOOK_DEFINITIONS = {
     "end-at-deliverable": {
         "matcher": DELIVERABLE_HOOK_MATCHER,
-        "command": (
-            'bash "$(git rev-parse --show-toplevel)/'
-            f'{DELIVERABLE_HOOK_REL}"'
-        ),
+        "command": (f'bash "$(git rev-parse --show-toplevel)/{DELIVERABLE_HOOK_REL}"'),
         "statusMessage": "Enforcing the end-at-deliverable policy",
     },
     "mind-commit-guard": {
         "matcher": "Bash",
         "command": (
-            'python3 "$(git rev-parse --show-toplevel)/'
-            'bin/mind_commit_guard.py"'
+            'python3 "$(git rev-parse --show-toplevel)/bin/mind_commit_guard.py"'
         ),
         "statusMessage": "Checking shared PyAutoMind commit safety",
     },
@@ -368,6 +391,7 @@ def load_session_hook(mind_root):
 
 def load_deliverable_hook(mind_root):
     return (mind_root / DELIVERABLE_HOOK_FILE).read_text()
+
 
 # An `@AGENTS.md` import on its own line — the shape of the retired CLAUDE.md
 # pointer (see "CLAUDE.md retirement" below), not prose that merely mentions
@@ -468,7 +492,11 @@ def load_root_resolver(mind_root):
     still resolves correctly from the marker.
     """
     if "module" not in _RESOLVER:
-        root = mind_root.parent.parent if mind_root.parent.name == "organs" else mind_root.parent
+        root = (
+            mind_root.parent.parent
+            if mind_root.parent.name == "organs"
+            else mind_root.parent
+        )
         agents = bootstrap_checkout(root, "PyAutoBrain") / "agents"
         module = None
         if (agents / "_pyauto_root.py").is_file():
@@ -505,12 +533,20 @@ def workspace_root(mind_root):
     """
     resolver = load_root_resolver(mind_root)
     if resolver is None:
-        return mind_root.parent.parent if mind_root.parent.name == "organs" else mind_root.parent
+        return (
+            mind_root.parent.parent
+            if mind_root.parent.name == "organs"
+            else mind_root.parent
+        )
     root, _reason = resolver.workspace_root_reason()
     if os.environ.get("PYAUTO_ROOT"):
         return root
     if bootstrap_checkout(root, mind_root.name).resolve() != mind_root:
-        return mind_root.parent.parent if mind_root.parent.name == "organs" else mind_root.parent
+        return (
+            mind_root.parent.parent
+            if mind_root.parent.name == "organs"
+            else mind_root.parent
+        )
     return root
 
 
@@ -532,6 +568,7 @@ def owner_of(repo_spec):
 # Generated blocks
 # --------------------------------------------------------------------------
 
+
 def routing_table(categories, repos):
     lines = [
         "| Repo | Canonical location | Role — go here when the task is about… |",
@@ -542,13 +579,17 @@ def routing_table(categories, repos):
         if not members:
             continue
         if spec and spec.get("collapse"):
-            locations = sorted({Path(repo.get('path', name)).parent.as_posix()
-                                for name, repo in members.items()})
-            label = ', '.join(f'`{location}/`' for location in locations)
+            locations = sorted(
+                {
+                    Path(repo.get("path", name)).parent.as_posix()
+                    for name, repo in members.items()
+                }
+            )
+            label = ", ".join(f"`{location}/`" for location in locations)
             lines.append(f"| **{spec['label']}** | {label} | {spec['role']} |")
         else:
             for name, repo in members.items():
-                location = repo.get('path', name)
+                location = repo.get("path", name)
                 lines.append(f"| **{name}** | `{location}` | {repo['role']} |")
     provenance = (
         "Generated from `PyAutoMind/repos.yaml` (the body map — the single "
@@ -632,8 +673,11 @@ def public_organs(repos):
     (`system_map`, strict category:organ per PyAutoBrain/ORGANISM.md); the two
     are deliberately allowed to differ."""
     organs = [(n, r) for n, r in repos.items() if r["category"] == "organ"]
-    front = [(n, r) for n, r in repos.items()
-             if r.get("front_door") and r["category"] != "organ"]
+    front = [
+        (n, r)
+        for n, r in repos.items()
+        if r.get("front_door") and r["category"] != "organ"
+    ]
     return organs + front
 
 
@@ -686,9 +730,7 @@ def extract_block(text, begin, end):
     or None if the marker pair is absent or empty. The counterpart to
     replace_block, used by the drift check so a generated block that has been
     hand-edited or left stale (repos.yaml changed without a --write) is caught."""
-    m = re.search(
-        re.escape(begin) + r"\n(.*?)\n" + re.escape(end), text, re.DOTALL
-    )
+    m = re.search(re.escape(begin) + r"\n(.*?)\n" + re.escape(end), text, re.DOTALL)
     return m.group(1) if m else None
 
 
@@ -716,6 +758,7 @@ def write_block(path, content, begin=MARK_BEGIN, end=MARK_END, *, required):
 # Drift checks
 # --------------------------------------------------------------------------
 
+
 def check_heart(root, repos):
     problems = []
     heart_yaml = bootstrap_checkout(root, "PyAutoHeart") / "config/repos.yaml"
@@ -726,9 +769,7 @@ def check_heart(root, repos):
         for entry in entries:
             name, owner = entry["name"], entry["owner"]
             if name not in repos:
-                problems.append(
-                    f"Heart polls '{name}' ({group}) — not in the manifest"
-                )
+                problems.append(f"Heart polls '{name}' ({group}) — not in the manifest")
             elif owner != owner_of(repos[name]):
                 problems.append(
                     f"Heart owner for '{name}' is '{owner}', manifest says "
@@ -768,14 +809,11 @@ def check_heart(root, repos):
     for name, spec in (data.get("version_skew") or {}).items():
         spec = spec or {}
         if name not in repos:
-            problems.append(
-                f"Heart version_skew '{name}' — not in the manifest"
-            )
+            problems.append(f"Heart version_skew '{name}' — not in the manifest")
         library = spec.get("library")
         if library not in repos:
             problems.append(
-                f"Heart version_skew '{name}' library '{library}' — "
-                f"not in the manifest"
+                f"Heart version_skew '{name}' library '{library}' — not in the manifest"
             )
             continue
         expected = repos[library].get("package")
@@ -815,15 +853,12 @@ def check_hands_workspaces(root, repos):
         entry = entry or {}
         name = entry.get("name")
         if name not in repos:
-            problems.append(
-                f"Hands libraries entry '{name}' — not in the manifest"
-            )
+            problems.append(f"Hands libraries entry '{name}' — not in the manifest")
             continue
         expected = repos[name].get("package")
         if expected is None:
             problems.append(
-                f"Hands libraries entry '{name}' has no 'package:' in the "
-                f"manifest"
+                f"Hands libraries entry '{name}' has no 'package:' in the manifest"
             )
         elif entry.get("package") != expected:
             problems.append(
@@ -832,9 +867,7 @@ def check_hands_workspaces(root, repos):
             )
     for name in data.get("slow_skip_default") or ():
         if name not in repos:
-            problems.append(
-                f"Hands slow_skip_default '{name}' — not in the manifest"
-            )
+            problems.append(f"Hands slow_skip_default '{name}' — not in the manifest")
     return problems
 
 
@@ -878,7 +911,12 @@ HYGIENE_CATEGORIES = ("library", "organ", "workspace")
 
 
 def check_hygiene_coverage(root, repos, mind_root):
-    helper, script = bootstrap_checkout(root, "PyAutoBrain") / HYGIENE_HELPER.removeprefix("PyAutoBrain/"), bootstrap_checkout(root, "PyAutoBrain") / HYGIENE_SCRIPT.removeprefix("PyAutoBrain/")
+    helper, script = (
+        bootstrap_checkout(root, "PyAutoBrain")
+        / HYGIENE_HELPER.removeprefix("PyAutoBrain/"),
+        bootstrap_checkout(root, "PyAutoBrain")
+        / HYGIENE_SCRIPT.removeprefix("PyAutoBrain/"),
+    )
     if not helper.exists() or not script.exists():
         return []  # Brain not checked out in this environment
 
@@ -1010,13 +1048,20 @@ def _check_required_block(root, path, label, expected):
 
 def check_routing_table(root, categories, repos):
     return _check_required_block(
-        Path(root), Path(root) / "AGENTS.md", "routing table", routing_table(categories, repos))
+        Path(root),
+        Path(root) / "AGENTS.md",
+        "routing table",
+        routing_table(categories, repos),
+    )
 
 
 def check_owner_map(root, categories, repos):
     return _check_required_block(
-        Path(root), bootstrap_checkout(root, "PyAutoBrain") / "skills/WORKFLOW.md",
-        "owner map", owner_map(categories, repos))
+        Path(root),
+        bootstrap_checkout(root, "PyAutoBrain") / "skills/WORKFLOW.md",
+        "owner map",
+        owner_map(categories, repos),
+    )
 
 
 def check_history_blocks(root, repos, hpol):
@@ -1214,8 +1259,13 @@ def write_filing_blocks(root, repos, policy):
     for name, spec in repos.items():
         if filing_block_excluded(spec):
             continue
-        write_block(repo_checkout(root, name) / "AGENTS.md", policy,
-                    FILING_BEGIN, FILING_END, required=False)
+        write_block(
+            repo_checkout(root, name) / "AGENTS.md",
+            policy,
+            FILING_BEGIN,
+            FILING_END,
+            required=False,
+        )
 
 
 def load_standards_policy(mind_root):
@@ -1225,7 +1275,9 @@ def load_standards_policy(mind_root):
 def render_standards_policy(policy, repo_spec):
     universal, separator, board = policy.partition("\n<!-- board-owners -->\n")
     if not separator or not universal.strip() or not board.strip():
-        raise ValueError("shared standards policy requires universal and board-owner text")
+        raise ValueError(
+            "shared standards policy requires universal and board-owner text"
+        )
     owner = repo_spec.get("board_owner", False)
     if not isinstance(owner, bool):
         raise ValueError("board_owner must be a boolean")
@@ -1236,7 +1288,11 @@ def standards_marker_error(text):
     begins, ends = text.count(STANDARDS_BEGIN), text.count(STANDARDS_END)
     if not begins and not ends:
         return None
-    if begins != 1 or ends != 1 or text.index(STANDARDS_BEGIN) > text.index(STANDARDS_END):
+    if (
+        begins != 1
+        or ends != 1
+        or text.index(STANDARDS_BEGIN) > text.index(STANDARDS_END)
+    ):
         return "malformed or duplicate shared-standards markers"
     return None
 
@@ -1258,9 +1314,13 @@ def check_standards_blocks(root, repos, policy):
         if error:
             problems.append(f"'{name}': {error}")
         elif STANDARDS_BEGIN not in text:
-            problems.append(f"'{name}': no shared-standards block — run bounded --write")
+            problems.append(
+                f"'{name}': no shared-standards block — run bounded --write"
+            )
         elif extract_block(text, STANDARDS_BEGIN, STANDARDS_END) != expected:
-            problems.append(f"'{name}': shared-standards block is stale — run bounded --write")
+            problems.append(
+                f"'{name}': shared-standards block is stale — run bounded --write"
+            )
     return problems
 
 
@@ -1272,12 +1332,16 @@ def standards_write_target(root, name):
         relative = checkout.relative_to(root)
         checkout.resolve().relative_to(root.resolve())
     except ValueError as error:
-        raise ValueError(f"'{name}': standards target escapes the selected root") from error
+        raise ValueError(
+            f"'{name}': standards target escapes the selected root"
+        ) from error
     current = root
     for part in relative.parts:
         current = current / part
         if current.is_symlink():
-            raise ValueError(f"'{name}': standards target follows a checkout/family symlink")
+            raise ValueError(
+                f"'{name}': standards target follows a checkout/family symlink"
+            )
     agents = checkout / "AGENTS.md"
     if agents.is_symlink():
         raise ValueError(f"'{name}': AGENTS.md is a symlink; refusing standards write")
@@ -1294,7 +1358,9 @@ def write_standards_blocks(root, repos, policy):
             print(f"skipped (checkout absent): {name}")
             continue
         if not agents.is_file():
-            raise ValueError(f"'{name}': no AGENTS.md — cannot create repository guidance")
+            raise ValueError(
+                f"'{name}': no AGENTS.md — cannot create repository guidance"
+            )
         text = agents.read_bytes().decode("utf-8")
         error = standards_marker_error(text)
         if error:
@@ -1302,11 +1368,25 @@ def write_standards_blocks(root, repos, policy):
         newline = "\r\n" if "\r\n" in text else "\n"
         block = f"{STANDARDS_BEGIN}\n{expected}\n{STANDARDS_END}".replace("\n", newline)
         if STANDARDS_BEGIN in text:
-            start, stop = text.index(STANDARDS_BEGIN), text.index(STANDARDS_END) + len(STANDARDS_END)
+            start, stop = (
+                text.index(STANDARDS_BEGIN),
+                text.index(STANDARDS_END) + len(STANDARDS_END),
+            )
             updated = text[:start] + block + text[stop:]
         else:
             # Append when no existing block exists; preserve every original byte.
-            updated = text + ("" if text.endswith(newline * 2) else newline if text.endswith(newline) else newline * 2) + block + newline
+            updated = (
+                text
+                + (
+                    ""
+                    if text.endswith(newline * 2)
+                    else newline
+                    if text.endswith(newline)
+                    else newline * 2
+                )
+                + block
+                + newline
+            )
         updates.append((agents, text, updated))
     for agents, text, updated in updates:
         if updated != text:
@@ -1335,8 +1415,9 @@ def check_public_tables(root, repos):
                 f"{rel}: no repos_sync:organs marker block "
                 "(add the markers, then run --write)"
             )
-        elif extract_block(text, ORGANS_BEGIN, ORGANS_END) != \
-                organ_public_table(repos, bold=bold):
+        elif extract_block(text, ORGANS_BEGIN, ORGANS_END) != organ_public_table(
+            repos, bold=bold
+        ):
             problems.append(
                 f"{rel}: organ table stale — run "
                 "`python3 PyAutoMind/scripts/repos_sync.py --write`"
@@ -1425,7 +1506,9 @@ def tracked_nested_claude_mds(repo_dir):
     try:
         proc = subprocess.run(
             ["git", "-C", str(repo_dir), "ls-files", "-z", "--", "*/CLAUDE.md"],
-            capture_output=True, text=True, check=False,
+            capture_output=True,
+            text=True,
+            check=False,
         )
     except OSError:
         return []
@@ -1468,8 +1551,9 @@ def stray_claude_mds(root, repos):
             if not (claude.parent / "AGENTS.md").exists():
                 continue
             text = claude.read_text(errors="replace")
-            found.append((f"{name}/{Path(rel).as_posix()}", claude,
-                          claude_md_is_pointer(text)))
+            found.append(
+                (f"{name}/{Path(rel).as_posix()}", claude, claude_md_is_pointer(text))
+            )
     return found
 
 
@@ -1500,7 +1584,8 @@ def repos_without_agents_md(root, repos):
     return [
         name
         for name in repos
-        if repo_checkout(root, name).is_dir() and not (repo_checkout(root, name) / "AGENTS.md").exists()
+        if repo_checkout(root, name).is_dir()
+        and not (repo_checkout(root, name) / "AGENTS.md").exists()
     ]
 
 
@@ -1518,10 +1603,7 @@ def remove_claude_md_pointers(root, repos):
             removed.append(claude)
             print(f"removed (content-free pointer): {claude}")
         else:
-            print(
-                "KEPT (carries content — move it into AGENTS.md by hand): "
-                f"{claude}"
-            )
+            print(f"KEPT (carries content — move it into AGENTS.md by hand): {claude}")
     return removed
 
 
@@ -1578,9 +1660,7 @@ def string_set_literal(node):
         return None
     names = set()
     for element in node.elts:
-        if not isinstance(element, ast.Constant) or not isinstance(
-            element.value, str
-        ):
+        if not isinstance(element, ast.Constant) or not isinstance(element.value, str):
             return None
         names.add(element.value)
     return names
@@ -1708,132 +1788,573 @@ FIREWALL_ALLOWLIST = {
     "PyAutoBrain/agents/conductors/bug/_bug.py": {"PyAutoArray"},
     "PyAutoBrain/agents/conductors/bug/bug.sh": {"PyAutoLabs"},
     "PyAutoBrain/agents/conductors/health/health.sh": {"PyAutoNerves"},
-    "PyAutoBrain/agents/conductors/hygiene/_hygiene_config.py": {"PyAutoArray", "PyAutoCTI", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace"},
-    "PyAutoBrain/agents/conductors/hygiene/_hygiene_optdeps.py": {"HowToFit", "HowToGalaxy", "HowToLens", "autocti_workspace", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace"},
-    "PyAutoBrain/agents/conductors/hygiene/_hygiene_refs.py": {"PyAutoArray", "PyAutoCTI", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens", "autolens_workspace"},
+    "PyAutoBrain/agents/conductors/hygiene/_hygiene_config.py": {
+        "PyAutoArray",
+        "PyAutoCTI",
+        "PyAutoFit",
+        "PyAutoGalaxy",
+        "PyAutoLens",
+        "autofit_workspace",
+        "autogalaxy_workspace",
+        "autolens_workspace",
+    },
+    "PyAutoBrain/agents/conductors/hygiene/_hygiene_optdeps.py": {
+        "HowToFit",
+        "HowToGalaxy",
+        "HowToLens",
+        "autocti_workspace",
+        "autofit_workspace",
+        "autogalaxy_workspace",
+        "autolens_workspace",
+    },
+    "PyAutoBrain/agents/conductors/hygiene/_hygiene_refs.py": {
+        "PyAutoArray",
+        "PyAutoCTI",
+        "PyAutoFit",
+        "PyAutoGalaxy",
+        "PyAutoLens",
+        "autolens_workspace",
+    },
     # hygiene.sh and _hygiene_repos.py carry NO entry on purpose: the conductor
     # now derives its repo sets from the body map, so it names no instance fact
     # at all. Re-adding an entry here would re-permit the drift that
     # check_hygiene_coverage exists to catch.
-    "PyAutoBrain/agents/conductors/clone/_clone.py": {"HowToFit", "PyAutoFit", "PyAutoLens", "autofit_assistant", "autofit_workspace", "autolens_assistant"},
-    "PyAutoBrain/agents/conductors/clone/clone.sh": {"HowToFit", "PyAutoFit", "autofit_workspace", "autolens_assistant"},
-    "PyAutoBrain/agents/conductors/community/_community.py": {"Jammy2211", "PyAutoLabs"},
+    "PyAutoBrain/agents/conductors/clone/_clone.py": {
+        "HowToFit",
+        "PyAutoFit",
+        "PyAutoLens",
+        "autofit_assistant",
+        "autofit_workspace",
+        "autolens_assistant",
+    },
+    "PyAutoBrain/agents/conductors/clone/clone.sh": {
+        "HowToFit",
+        "PyAutoFit",
+        "autofit_workspace",
+        "autolens_assistant",
+    },
+    "PyAutoBrain/agents/conductors/community/_community.py": {
+        "Jammy2211",
+        "PyAutoLabs",
+    },
     # autofit_workspace: the `_upstream_noise` docstring cites measured noise
     # counts ("autofit_workspace in 26 files") as the evidence for rejecting a
     # file-spread threshold — the names ARE the finding; the code itself
     # derives its repo sets from the body map.
-    "PyAutoBrain/agents/conductors/intake/_intake.py": {"PyAutoArray", "PyAutoNerves", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens", "autofit_workspace", "autolens_workspace"},
+    "PyAutoBrain/agents/conductors/intake/_intake.py": {
+        "PyAutoArray",
+        "PyAutoNerves",
+        "PyAutoFit",
+        "PyAutoGalaxy",
+        "PyAutoLens",
+        "autofit_workspace",
+        "autolens_workspace",
+    },
     "PyAutoBrain/agents/conductors/profiling/_profiling.py": {"autolens_profiling"},
     "PyAutoBrain/agents/conductors/profiling/profiling.sh": {"autolens_profiling"},
     "PyAutoBrain/agents/conductors/release/nightly.sh": {"PyAutoLabs", "PyAutoLens"},
-    "PyAutoBrain/agents/conductors/release/rehearse.sh": {"PyAutoArray", "PyAutoNerves", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens"},
-    "PyAutoBrain/agents/conductors/release/validate.sh": {"PyAutoArray", "PyAutoNerves", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens"},
-    "PyAutoBrain/agents/conductors/workspace/_workspace.py": {"HowToFit", "HowToGalaxy", "HowToLens", "PyAutoReduce", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace", "autoreduce_workspace"},
+    "PyAutoBrain/agents/conductors/release/rehearse.sh": {
+        "PyAutoArray",
+        "PyAutoNerves",
+        "PyAutoFit",
+        "PyAutoGalaxy",
+        "PyAutoLabs",
+        "PyAutoLens",
+    },
+    "PyAutoBrain/agents/conductors/release/validate.sh": {
+        "PyAutoArray",
+        "PyAutoNerves",
+        "PyAutoFit",
+        "PyAutoGalaxy",
+        "PyAutoLabs",
+        "PyAutoLens",
+    },
+    "PyAutoBrain/agents/conductors/workspace/_workspace.py": {
+        "HowToFit",
+        "HowToGalaxy",
+        "HowToLens",
+        "PyAutoReduce",
+        "autofit_workspace",
+        "autogalaxy_workspace",
+        "autolens_workspace",
+        "autoreduce_workspace",
+    },
     "PyAutoBrain/agents/faculties/memory/_memory.py": {"autolens_assistant"},
     "PyAutoBrain/agents/faculties/memory/memory.sh": {"autolens_assistant"},
     # The two autolens tokens are the findings maturation lane's experiment and
     # mature tiers — surfaces, not new files, so the entries grow rather than
     # the list.
-    "PyAutoBrain/agents/faculties/samplers/_samplers.py": {"PyAutoFit", "autofit_workspace_developer", "autofit_workspace_test", "autolens_inference", "autolens_profiling", "autolens_workspace_developer"},
-    "PyAutoBrain/agents/faculties/samplers/samplers.sh": {"PyAutoFit", "autofit_workspace_developer", "autofit_workspace_test", "autolens_inference", "autolens_profiling", "autolens_workspace_developer"},
+    "PyAutoBrain/agents/faculties/samplers/_samplers.py": {
+        "PyAutoFit",
+        "autofit_workspace_developer",
+        "autofit_workspace_test",
+        "autolens_inference",
+        "autolens_profiling",
+        "autolens_workspace_developer",
+    },
+    "PyAutoBrain/agents/faculties/samplers/samplers.sh": {
+        "PyAutoFit",
+        "autofit_workspace_developer",
+        "autofit_workspace_test",
+        "autolens_inference",
+        "autolens_profiling",
+        "autolens_workspace_developer",
+    },
     "PyAutoBrain/agents/faculties/sizing/_sizing.py": {"PyAutoFit"},
     "PyAutoBrain/docs/conf.py": {"PyAutoScientist"},
     "PyAutoBrain/bin/check_skill_line_counts.sh": {"admin_jammy", "autolens_profiling"},
-    "PyAutoBrain/bin/clean_slate.sh": {"HowToFit", "HowToGalaxy", "HowToLens", "PyAutoArray", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens", "autocti_workspace", "autofit_workspace", "autogalaxy_workspace", "autolens_inference", "autolens_profiling", "autolens_workspace"},
-    "PyAutoBrain/bin/ensure_workspace_labels.sh": {"HowToFit", "HowToGalaxy", "HowToLens", "Jammy2211", "PyAutoArray", "PyAutoNerves", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens", "PyAutoCTI", "autocti_workspace", "autocti_workspace_test", "autofit_workspace", "autofit_workspace_test", "autogalaxy_workspace", "autogalaxy_workspace_test", "autolens_workspace", "autolens_workspace_test", "euclid_strong_lens_modeling_pipeline"},
-    "PyAutoBrain/bin/install.sh": {"PyAutoFit", "PyAutoLabs", "admin_jammy", "autolens_profiling"},
+    "PyAutoBrain/bin/clean_slate.sh": {
+        "HowToFit",
+        "HowToGalaxy",
+        "HowToLens",
+        "PyAutoArray",
+        "PyAutoFit",
+        "PyAutoGalaxy",
+        "PyAutoLabs",
+        "PyAutoLens",
+        "autocti_workspace",
+        "autofit_workspace",
+        "autogalaxy_workspace",
+        "autolens_inference",
+        "autolens_profiling",
+        "autolens_workspace",
+    },
+    "PyAutoBrain/bin/ensure_workspace_labels.sh": {
+        "HowToFit",
+        "HowToGalaxy",
+        "HowToLens",
+        "Jammy2211",
+        "PyAutoArray",
+        "PyAutoNerves",
+        "PyAutoFit",
+        "PyAutoGalaxy",
+        "PyAutoLabs",
+        "PyAutoLens",
+        "PyAutoCTI",
+        "autocti_workspace",
+        "autocti_workspace_test",
+        "autofit_workspace",
+        "autofit_workspace_test",
+        "autogalaxy_workspace",
+        "autogalaxy_workspace_test",
+        "autolens_workspace",
+        "autolens_workspace_test",
+        "euclid_strong_lens_modeling_pipeline",
+    },
+    "PyAutoBrain/bin/install.sh": {
+        "PyAutoFit",
+        "PyAutoLabs",
+        "admin_jammy",
+        "autolens_profiling",
+    },
     "PyAutoBrain/bin/overnight_status.sh": {"PyAutoLabs", "autolens_assistant"},
     "PyAutoBrain/bin/pull_all_main.sh": {"PyAutoLabs"},
-    "PyAutoBrain/bin/version_drift.sh": {"PyAutoArray", "PyAutoNerves", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace"},
-    "PyAutoBrain/bin/worktree.sh": {"PyAutoArray", "PyAutoCTI", "PyAutoNerves", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens", "admin_jammy", "autolens_workspace"},
-    "PyAutoBrain/tests/test_activity_gate.py": {"HowToFit", "HowToLens", "PyAutoArray", "PyAutoNerves", "PyAutoFit", "PyAutoLens", "autolens_workspace"},
-    "PyAutoBrain/tests/test_clean_slate.py": {"PyAutoArray", "PyAutoFit", "PyAutoGalaxy", "autolens_workspace", "euclid_assistant"},
-    "PyAutoBrain/tests/test_clone_conductor.py": {"autofit_assistant", "autolens_assistant"},
+    "PyAutoBrain/bin/version_drift.sh": {
+        "PyAutoArray",
+        "PyAutoNerves",
+        "PyAutoFit",
+        "PyAutoGalaxy",
+        "PyAutoLabs",
+        "PyAutoLens",
+        "autofit_workspace",
+        "autogalaxy_workspace",
+        "autolens_workspace",
+    },
+    "PyAutoBrain/bin/worktree.sh": {
+        "PyAutoArray",
+        "PyAutoCTI",
+        "PyAutoNerves",
+        "PyAutoFit",
+        "PyAutoGalaxy",
+        "PyAutoLabs",
+        "PyAutoLens",
+        "admin_jammy",
+        "autolens_workspace",
+    },
+    "PyAutoBrain/tests/test_activity_gate.py": {
+        "HowToFit",
+        "HowToLens",
+        "PyAutoArray",
+        "PyAutoNerves",
+        "PyAutoFit",
+        "PyAutoLens",
+        "autolens_workspace",
+    },
+    "PyAutoBrain/tests/test_clean_slate.py": {
+        "PyAutoArray",
+        "PyAutoFit",
+        "PyAutoGalaxy",
+        "autolens_workspace",
+        "euclid_assistant",
+    },
+    "PyAutoBrain/tests/test_clone_conductor.py": {
+        "autofit_assistant",
+        "autolens_assistant",
+    },
     # Load-bearing real names: the sync fixture exercises the LIVE reference
     # profile (keyed `autolens_assistant`) and the library-name resolution that
     # maps a sibling to its own library dir, so synthetic names would test
     # neither. The fixture is a temp dir; nothing here reaches a real checkout.
-    "PyAutoBrain/tests/test_clone_sync.py": {"PyAutoCTI", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens", "autocti_assistant", "autogalaxy_assistant", "autolens_assistant"},
-    "PyAutoBrain/tests/test_community_conductor.py": {"Jammy2211", "PyAutoFit", "PyAutoLabs", "PyAutoLens", "admin_jammy"},
-    "PyAutoBrain/tests/test_hygiene_conductor.py": {"PyAutoArray", "PyAutoFit", "PyAutoGalaxy", "autofit_workspace", "autolens_workspace"},
+    "PyAutoBrain/tests/test_clone_sync.py": {
+        "PyAutoCTI",
+        "PyAutoGalaxy",
+        "PyAutoLabs",
+        "PyAutoLens",
+        "autocti_assistant",
+        "autogalaxy_assistant",
+        "autolens_assistant",
+    },
+    "PyAutoBrain/tests/test_community_conductor.py": {
+        "Jammy2211",
+        "PyAutoFit",
+        "PyAutoLabs",
+        "PyAutoLens",
+        "admin_jammy",
+    },
+    "PyAutoBrain/tests/test_hygiene_conductor.py": {
+        "PyAutoArray",
+        "PyAutoFit",
+        "PyAutoGalaxy",
+        "autofit_workspace",
+        "autolens_workspace",
+    },
     # Load-bearing real names: the ranking tests pin resolution against the
     # LIVE body map (`slug == "PyAutoLabs/PyAutoFit"`; `_upstream_noise`
     # filters via KNOWN_REPOS), so synthetic names would test nothing.
-    "PyAutoBrain/tests/test_intake_reconcile_ranking.py": {"PyAutoArray", "PyAutoFit", "PyAutoLabs", "autofit_workspace", "autolens_workspace"},
-    "PyAutoBrain/tests/test_mind_commit_guard.py": {"/home/jammy", "PyAutoFit", "PyAutoLabs"},
-    "PyAutoBrain/tests/test_policy_seams.py": {"PyAutoFit", "PyAutoLens", "autolens_workspace"},
+    "PyAutoBrain/tests/test_intake_reconcile_ranking.py": {
+        "PyAutoArray",
+        "PyAutoFit",
+        "PyAutoLabs",
+        "autofit_workspace",
+        "autolens_workspace",
+    },
+    "PyAutoBrain/tests/test_mind_commit_guard.py": {
+        "/home/jammy",
+        "PyAutoFit",
+        "PyAutoLabs",
+    },
+    "PyAutoBrain/tests/test_policy_seams.py": {
+        "PyAutoFit",
+        "PyAutoLens",
+        "autolens_workspace",
+    },
     "PyAutoBrain/tests/test_review_inplace.py": {"PyAutoArray", "PyAutoLabs"},
     "PyAutoBrain/tests/test_skill_install.py": {"PyAutoLabs"},
-    "PyAutoBrain/tests/test_workspace_conductor.py": {"HowToGalaxy", "HowToLens", "autolens_workspace", "autoreduce_workspace"},
-    "PyAutoHands/autohands/aggregate_results.py": {"PyAutoArray", "PyAutoNerves", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace"},
+    "PyAutoBrain/tests/test_workspace_conductor.py": {
+        "HowToGalaxy",
+        "HowToLens",
+        "autolens_workspace",
+        "autoreduce_workspace",
+    },
+    "PyAutoHands/autohands/aggregate_results.py": {
+        "PyAutoArray",
+        "PyAutoNerves",
+        "PyAutoFit",
+        "PyAutoGalaxy",
+        "PyAutoLabs",
+        "PyAutoLens",
+        "autofit_workspace",
+        "autogalaxy_workspace",
+        "autolens_workspace",
+    },
     # PyAutoScientist: the cross-board footer nav names the organism board.
     "PyAutoHands/autohands/board.py": {"PyAutoScientist"},
     "PyAutoHands/autohands/build_util.py": {"PyAutoNerves"},
-    "PyAutoHands/autohands/bump_colab_urls.sh": {"HowToFit", "HowToGalaxy", "HowToLens", "PyAutoLabs", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace"},
+    "PyAutoHands/autohands/bump_colab_urls.sh": {
+        "HowToFit",
+        "HowToGalaxy",
+        "HowToLens",
+        "PyAutoLabs",
+        "autofit_workspace",
+        "autogalaxy_workspace",
+        "autolens_workspace",
+    },
     "PyAutoHands/autohands/check_search_memory.py": {"PyAutoFit", "PyAutoLabs"},
     "PyAutoHands/autohands/clone_seed.py": {"autofit_assistant"},
     "PyAutoHands/autohands/create_analysis_issue.py": {"PyAutoLabs"},
     "PyAutoHands/autohands/env_config.py": {"PyAutoFit", "PyAutoLabs"},
     "PyAutoHands/autohands/generate_autofit.py": {"autofit_workspace"},
-    "PyAutoHands/autohands/generate_markdown.py": {"HowToFit", "HowToGalaxy", "HowToLens", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens"},
-    "PyAutoHands/autohands/generate_release_notes.py": {"PyAutoArray", "PyAutoNerves", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens", "PyAutoScientist"},
-    "PyAutoHands/autohands/navigator.py": {"HowToFit", "HowToGalaxy", "HowToLens", "PyAutoCTI", "PyAutoNerves", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens"},
-    "PyAutoHands/autohands/repro_command.py": {"PyAutoLabs", "autogalaxy_workspace_test"},
-    "PyAutoHands/autohands/run_all.py": {"HowToLens", "PyAutoLabs", "autolens_workspace", "euclid_strong_lens_modeling_pipeline"},
+    "PyAutoHands/autohands/generate_markdown.py": {
+        "HowToFit",
+        "HowToGalaxy",
+        "HowToLens",
+        "PyAutoFit",
+        "PyAutoGalaxy",
+        "PyAutoLens",
+    },
+    "PyAutoHands/autohands/generate_release_notes.py": {
+        "PyAutoArray",
+        "PyAutoNerves",
+        "PyAutoFit",
+        "PyAutoGalaxy",
+        "PyAutoLabs",
+        "PyAutoLens",
+        "PyAutoScientist",
+    },
+    "PyAutoHands/autohands/navigator.py": {
+        "HowToFit",
+        "HowToGalaxy",
+        "HowToLens",
+        "PyAutoCTI",
+        "PyAutoNerves",
+        "PyAutoFit",
+        "PyAutoGalaxy",
+        "PyAutoLens",
+    },
+    "PyAutoHands/autohands/repro_command.py": {
+        "PyAutoLabs",
+        "autogalaxy_workspace_test",
+    },
+    "PyAutoHands/autohands/run_all.py": {
+        "HowToLens",
+        "PyAutoLabs",
+        "autolens_workspace",
+        "euclid_strong_lens_modeling_pipeline",
+    },
     "PyAutoHands/autohands/run_notebook.py": {"autolens_workspace"},
-    "PyAutoHands/autohands/slack_release_notes.py": {"PyAutoArray", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens"},
-    "PyAutoHands/autohands/tag_and_merge.sh": {"PyAutoArray", "PyAutoNerves", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens"},
-    "PyAutoHands/pre_build.sh": {"HowToFit", "HowToGalaxy", "HowToLens", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens", "admin_jammy", "autofit_workspace", "autofit_workspace_developer", "autofit_workspace_test", "autogalaxy_workspace", "autogalaxy_workspace_test", "autolens_assistant", "autolens_workspace", "autolens_workspace_developer", "autolens_workspace_test", "euclid_strong_lens_modeling_pipeline"},
-    "PyAutoHands/tests/test_bump_colab_urls.py": {"Jammy2211", "PyAutoFit", "PyAutoLabs", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace"},
-    "PyAutoHands/tests/test_check_search_memory.py": {"PyAutoFit", "autogalaxy_workspace"},
+    "PyAutoHands/autohands/slack_release_notes.py": {
+        "PyAutoArray",
+        "PyAutoFit",
+        "PyAutoGalaxy",
+        "PyAutoLabs",
+        "PyAutoLens",
+    },
+    "PyAutoHands/autohands/tag_and_merge.sh": {
+        "PyAutoArray",
+        "PyAutoNerves",
+        "PyAutoFit",
+        "PyAutoGalaxy",
+        "PyAutoLens",
+    },
+    "PyAutoHands/pre_build.sh": {
+        "HowToFit",
+        "HowToGalaxy",
+        "HowToLens",
+        "PyAutoFit",
+        "PyAutoGalaxy",
+        "PyAutoLabs",
+        "PyAutoLens",
+        "admin_jammy",
+        "autofit_workspace",
+        "autofit_workspace_developer",
+        "autofit_workspace_test",
+        "autogalaxy_workspace",
+        "autogalaxy_workspace_test",
+        "autolens_assistant",
+        "autolens_workspace",
+        "autolens_workspace_developer",
+        "autolens_workspace_test",
+        "euclid_strong_lens_modeling_pipeline",
+    },
+    "PyAutoHands/tests/test_bump_colab_urls.py": {
+        "Jammy2211",
+        "PyAutoFit",
+        "PyAutoLabs",
+        "autofit_workspace",
+        "autogalaxy_workspace",
+        "autolens_workspace",
+    },
+    "PyAutoHands/tests/test_check_search_memory.py": {
+        "PyAutoFit",
+        "autogalaxy_workspace",
+    },
     "PyAutoHands/tests/test_env_config.py": {"PyAutoFit", "PyAutoLabs"},
-    "PyAutoHands/tests/test_generate_markdown.py": {"PyAutoArray", "autolens_workspace"},
+    "PyAutoHands/tests/test_generate_markdown.py": {
+        "PyAutoArray",
+        "autolens_workspace",
+    },
     "PyAutoHands/tests/test_python_matrix_workflow.py": {"PyAutoFit"},
-    "PyAutoHands/tests/test_release_notes.py": {"PyAutoArray", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens"},
+    "PyAutoHands/tests/test_release_notes.py": {
+        "PyAutoArray",
+        "PyAutoFit",
+        "PyAutoGalaxy",
+        "PyAutoLabs",
+        "PyAutoLens",
+    },
     "PyAutoHands/tests/test_repro_command.py": {"PyAutoFit", "PyAutoLabs"},
-    "PyAutoHands/tests/test_run_all_history.py": {"HowToLens", "autogalaxy_workspace_test", "euclid_strong_lens_modeling_pipeline"},
-    "PyAutoHands/tests/test_slack_release_notes.py": {"PyAutoArray", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens"},
-    "PyAutoHands/tests/test_workspace_config_precedence.py": {"autofit_workspace", "autofit_workspace_test", "autogalaxy_workspace", "autogalaxy_workspace_test", "autolens_workspace", "autolens_workspace_test"},
+    "PyAutoHands/tests/test_run_all_history.py": {
+        "HowToLens",
+        "autogalaxy_workspace_test",
+        "euclid_strong_lens_modeling_pipeline",
+    },
+    "PyAutoHands/tests/test_slack_release_notes.py": {
+        "PyAutoArray",
+        "PyAutoFit",
+        "PyAutoGalaxy",
+        "PyAutoLabs",
+        "PyAutoLens",
+    },
+    "PyAutoHands/tests/test_workspace_config_precedence.py": {
+        "autofit_workspace",
+        "autofit_workspace_test",
+        "autogalaxy_workspace",
+        "autogalaxy_workspace_test",
+        "autolens_workspace",
+        "autolens_workspace_test",
+    },
     "PyAutoHeart/heart/_color.sh": {"PyAutoFit"},
     "PyAutoHeart/heart/_common.sh": {"PyAutoLabs"},
     "PyAutoHeart/heart/checks/ci_status.py": {"autolens_workspace"},
     "PyAutoHeart/heart/checks/manifest_drift.py": {"PyAutoLabs", "admin_jammy"},
-    "PyAutoHeart/heart/checks/profiling_drift.py": {"PyAutoLabs", "autolens_profiling", "autolens_workspace_test"},
+    "PyAutoHeart/heart/checks/profiling_drift.py": {
+        "PyAutoLabs",
+        "autolens_profiling",
+        "autolens_workspace_test",
+    },
     "PyAutoHeart/heart/checks/script_timing.py": {"PyAutoLabs"},
     "PyAutoHeart/heart/checks/test_run.py": {"PyAutoLabs"},
-    "PyAutoHeart/heart/checks/unit_test_timing.py": {"PyAutoArray", "PyAutoNerves", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens"},
-    "PyAutoHeart/heart/checks/url_check.sh": {"HowToFit", "HowToGalaxy", "HowToLens", "Jammy2211", "PyAutoArray", "PyAutoNerves", "PyAutoFit", "PyAutoGalaxy", "PyAutoLabs", "PyAutoLens", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace"},
-    "PyAutoHeart/heart/checks/url_check_live.py": {"PyAutoLabs", "PyAutoLens", "admin_jammy"},
-    "PyAutoHeart/heart/checks/url_sweep.sh": {"HowToFit", "HowToGalaxy", "HowToLens", "PyAutoArray", "PyAutoNerves", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace", "euclid_strong_lens_modeling_pipeline"},
-    "PyAutoHeart/heart/checks/verify_install.sh": {"PyAutoNerves", "PyAutoLabs", "PyAutoLens", "autolens_workspace"},
+    "PyAutoHeart/heart/checks/unit_test_timing.py": {
+        "PyAutoArray",
+        "PyAutoNerves",
+        "PyAutoFit",
+        "PyAutoGalaxy",
+        "PyAutoLabs",
+        "PyAutoLens",
+    },
+    "PyAutoHeart/heart/checks/url_check.sh": {
+        "HowToFit",
+        "HowToGalaxy",
+        "HowToLens",
+        "Jammy2211",
+        "PyAutoArray",
+        "PyAutoNerves",
+        "PyAutoFit",
+        "PyAutoGalaxy",
+        "PyAutoLabs",
+        "PyAutoLens",
+        "autofit_workspace",
+        "autogalaxy_workspace",
+        "autolens_workspace",
+    },
+    "PyAutoHeart/heart/checks/url_check_live.py": {
+        "PyAutoLabs",
+        "PyAutoLens",
+        "admin_jammy",
+    },
+    "PyAutoHeart/heart/checks/url_sweep.sh": {
+        "HowToFit",
+        "HowToGalaxy",
+        "HowToLens",
+        "PyAutoArray",
+        "PyAutoNerves",
+        "PyAutoFit",
+        "PyAutoGalaxy",
+        "PyAutoLens",
+        "autofit_workspace",
+        "autogalaxy_workspace",
+        "autolens_workspace",
+        "euclid_strong_lens_modeling_pipeline",
+    },
+    "PyAutoHeart/heart/checks/verify_install.sh": {
+        "PyAutoNerves",
+        "PyAutoLabs",
+        "PyAutoLens",
+        "autolens_workspace",
+    },
     "PyAutoHeart/heart/checks/version_skew.py": {"PyAutoLabs"},
-    "PyAutoHeart/heart/checks/workspace_testmode_timing.py": {"PyAutoLabs", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace"},
+    "PyAutoHeart/heart/checks/workspace_testmode_timing.py": {
+        "PyAutoLabs",
+        "autofit_workspace",
+        "autogalaxy_workspace",
+        "autolens_workspace",
+    },
     "PyAutoHeart/heart/checks/worktree_drift.py": {"PyAutoLabs"},
     # PyAutoScientist: the cross-board footer nav names the organism board
     # (the family's one non-organ member) — same surface as the Hands entry.
-    "PyAutoHeart/heart/dashboard.py": {"autolens_profiling", "pyautolabs.github.io", "PyAutoScientist"},
+    "PyAutoHeart/heart/dashboard.py": {
+        "autolens_profiling",
+        "pyautolabs.github.io",
+        "PyAutoScientist",
+    },
     "PyAutoHeart/heart/fix.py": {"PyAutoFit", "PyAutoLabs"},
     "PyAutoHeart/heart/readiness.py": {"autolens_profiling", "autolens_workspace_test"},
     "PyAutoHeart/heart/shell/heart_prompt.sh": {"PyAutoLabs"},
     "PyAutoHeart/heart/state.py": {"PyAutoFit"},
     "PyAutoHeart/heart/tick.sh": {"autolens_profiling"},
-    "PyAutoHeart/heart/validate.py": {"PyAutoArray", "PyAutoNerves", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens", "autolens_workspace", "autolens_workspace_test"},
+    "PyAutoHeart/heart/validate.py": {
+        "PyAutoArray",
+        "PyAutoNerves",
+        "PyAutoFit",
+        "PyAutoGalaxy",
+        "PyAutoLens",
+        "autolens_workspace",
+        "autolens_workspace_test",
+    },
     "PyAutoHeart/scripts/health_audit.sh": {"PyAutoLabs"},
     "PyAutoHeart/scripts/health_release.sh": {"PyAutoLabs"},
     "PyAutoHeart/scripts/health_sync.sh": {"PyAutoLabs", "admin_jammy"},
-    "PyAutoHeart/tests/test_ci_status.py": {"PyAutoFit", "PyAutoLens", "autolens_workspace"},
-    "PyAutoHeart/tests/test_dashboard.py": {"PyAutoArray", "PyAutoNerves", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens", "autolens_workspace"},
-    "PyAutoHeart/tests/test_manifest_drift.py": {"PyAutoNerves", "PyAutoFit", "PyAutoLabs"},
+    "PyAutoHeart/tests/test_ci_status.py": {
+        "PyAutoFit",
+        "PyAutoLens",
+        "autolens_workspace",
+    },
+    "PyAutoHeart/tests/test_dashboard.py": {
+        "PyAutoArray",
+        "PyAutoNerves",
+        "PyAutoFit",
+        "PyAutoGalaxy",
+        "PyAutoLens",
+        "autolens_workspace",
+    },
+    "PyAutoHeart/tests/test_manifest_drift.py": {
+        "PyAutoNerves",
+        "PyAutoFit",
+        "PyAutoLabs",
+    },
     "PyAutoHeart/tests/test_noise.py": {"HowToFit", "autolens_workspace_test"},
-    "PyAutoHeart/tests/test_readiness.py": {"HowToLens", "PyAutoArray", "PyAutoNerves", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens", "autogalaxy_workspace", "autolens_workspace", "autolens_workspace_test"},
-    "PyAutoHeart/tests/test_repo_config.py": {"PyAutoCTI", "autocti_workspace", "autocti_workspace_test"},
+    "PyAutoHeart/tests/test_readiness.py": {
+        "HowToLens",
+        "PyAutoArray",
+        "PyAutoNerves",
+        "PyAutoFit",
+        "PyAutoGalaxy",
+        "PyAutoLens",
+        "autogalaxy_workspace",
+        "autolens_workspace",
+        "autolens_workspace_test",
+    },
+    "PyAutoHeart/tests/test_repo_config.py": {
+        "PyAutoCTI",
+        "autocti_workspace",
+        "autocti_workspace_test",
+    },
     "PyAutoHeart/tests/test_state.py": {"PyAutoArray", "PyAutoFit"},
     "PyAutoHeart/tests/test_test_run.py": {"autofit_workspace", "autolens_workspace"},
     "PyAutoHeart/tests/test_unit_test_timing.py": {"PyAutoFit"},
-    "PyAutoHeart/tests/test_url_check.py": {"HowToFit", "HowToGalaxy", "HowToLens", "Jammy2211", "PyAutoFit", "PyAutoLabs", "autofit_workspace", "autogalaxy_workspace", "autolens_workspace"},
-    "PyAutoHeart/tests/test_validate.py": {"PyAutoArray", "PyAutoNerves", "PyAutoFit", "PyAutoGalaxy", "PyAutoLens", "autolens_workspace", "autolens_workspace_test"},
-    "PyAutoHeart/tests/test_verify_install_script.py": {"Jammy2211", "PyAutoLabs", "autolens_workspace"},
-    "PyAutoHeart/tests/test_version_skew.py": {"HowToFit", "PyAutoFit", "PyAutoLens", "autofit_workspace", "autolens_assistant", "autolens_workspace", "autolens_workspace_test"},
+    "PyAutoHeart/tests/test_url_check.py": {
+        "HowToFit",
+        "HowToGalaxy",
+        "HowToLens",
+        "Jammy2211",
+        "PyAutoFit",
+        "PyAutoLabs",
+        "autofit_workspace",
+        "autogalaxy_workspace",
+        "autolens_workspace",
+    },
+    "PyAutoHeart/tests/test_validate.py": {
+        "PyAutoArray",
+        "PyAutoNerves",
+        "PyAutoFit",
+        "PyAutoGalaxy",
+        "PyAutoLens",
+        "autolens_workspace",
+        "autolens_workspace_test",
+    },
+    "PyAutoHeart/tests/test_verify_install_script.py": {
+        "Jammy2211",
+        "PyAutoLabs",
+        "autolens_workspace",
+    },
+    "PyAutoHeart/tests/test_version_skew.py": {
+        "HowToFit",
+        "PyAutoFit",
+        "PyAutoLens",
+        "autofit_workspace",
+        "autolens_assistant",
+        "autolens_workspace",
+        "autolens_workspace_test",
+    },
     "PyAutoHeart/tests/test_workspace_testmode_timing.py": {"autolens_workspace"},
 }
 
@@ -1872,15 +2393,19 @@ def check_tenant_firewall(root, repos):
             ):
                 for m in pattern.finditer(line):
                     hits.setdefault(m.group(0), lineno)
-            new = {t: n for t, n in hits.items() if t not in FIREWALL_ALLOWLIST.get(rel, ())}
+            new = {
+                t: n
+                for t, n in hits.items()
+                if t not in FIREWALL_ALLOWLIST.get(rel, ())
+            }
             if new:
                 facts = ", ".join(
                     f"'{tok}' (line {lineno})" for tok, lineno in sorted(new.items())
                 )
-                listed = "allowlisted file" if rel in FIREWALL_ALLOWLIST else "unlisted file"
-                problems.append(
-                    f"{rel}: new instance fact(s) in {listed} — {facts}"
+                listed = (
+                    "allowlisted file" if rel in FIREWALL_ALLOWLIST else "unlisted file"
                 )
+                problems.append(f"{rel}: new instance fact(s) in {listed} — {facts}")
     return problems
 
 
@@ -1974,8 +2499,7 @@ def check_checkouts(root, repos, unmapped, marker):
     if not (root / marker).is_file():
         return []
     problems = [
-        f"'{name}': declared in repos.yaml but not checked out at the "
-        f"workspace root"
+        f"'{name}': declared in repos.yaml but not checked out at the workspace root"
         for name in repos
         if not is_checkout(repo_checkout(root, name))
     ]
@@ -2006,11 +2530,13 @@ def is_unmapped(root, path, unmapped):
         except ValueError:
             return False
     entries = {str(entry).strip("/") for entry in unmapped}
-    return rel in entries if "/" in rel else (
-        path.parent == root and path.name in entries)
+    return (
+        rel in entries if "/" in rel else (path.parent == root and path.name in entries)
+    )
 
 
 # --------------------------------------------------------------------------
+
 
 def session_start_entries(settings):
     """Every hook command registered under SessionStart, whatever the nesting
@@ -2062,10 +2588,12 @@ def register_deliverable_hook(settings):
     already runs on PreToolUse (the workspace root, for one, guards Bash)."""
     hooks = settings.setdefault("hooks", {})
     groups = hooks.setdefault("PreToolUse", [])
-    groups.append({
-        "matcher": DELIVERABLE_HOOK_MATCHER,
-        "hooks": [{"type": "command", "command": DELIVERABLE_HOOK_COMMAND}],
-    })
+    groups.append(
+        {
+            "matcher": DELIVERABLE_HOOK_MATCHER,
+            "hooks": [{"type": "command", "command": DELIVERABLE_HOOK_COMMAND}],
+        }
+    )
     return settings
 
 
@@ -2135,10 +2663,17 @@ def check_session_hooks(root, repos, hook_text, deliverable_text):
             continue  # not checked out in this environment
         if structure_lint_forbids(repo_dir, ".claude"):
             continue  # --write skips it; check_structure_lints reports it
-        _check_installed_hook(problems, name, repo_dir, SESSION_HOOK_REL,
-                              SESSION_HOOK_FILE, hook_text)
-        _check_installed_hook(problems, name, repo_dir, DELIVERABLE_HOOK_REL,
-                              DELIVERABLE_HOOK_FILE, deliverable_text)
+        _check_installed_hook(
+            problems, name, repo_dir, SESSION_HOOK_REL, SESSION_HOOK_FILE, hook_text
+        )
+        _check_installed_hook(
+            problems,
+            name,
+            repo_dir,
+            DELIVERABLE_HOOK_REL,
+            DELIVERABLE_HOOK_FILE,
+            deliverable_text,
+        )
         settings = repo_dir / SESSION_SETTINGS_REL
         if not settings.exists():
             problems.append(f"'{name}': no {SESSION_SETTINGS_REL}")
@@ -2195,11 +2730,15 @@ def write_session_hooks(root, repos, hook_text, deliverable_text):
         if settings.exists():
             text = settings.read_text()
             missing = [
-                register for register, registered in (
+                register
+                for register, registered in (
                     (register_session_hook, settings_registers_hook(text)),
-                    (register_deliverable_hook,
-                     settings_registers_deliverable_hook(text)),
-                ) if not registered
+                    (
+                        register_deliverable_hook,
+                        settings_registers_deliverable_hook(text),
+                    ),
+                )
+                if not registered
             ]
             if not missing:
                 print(f"unchanged: {settings}")
@@ -2248,21 +2787,31 @@ def render_codex_hooks(repo_spec):
     groups = []
     for name in names:
         definition = CODEX_HOOK_DEFINITIONS[name]
-        groups.append({
-            "matcher": definition["matcher"],
-            "hooks": [{
-                "type": "command",
-                "command": definition["command"],
-                "statusMessage": definition["statusMessage"],
-            }],
-        })
-    return json.dumps({
-        "description": (
-            "Generated by PyAutoMind/scripts/repos_sync.py. Review and trust "
-            "the current hook definition with Codex /hooks before relying on it."
-        ),
-        "hooks": {"PreToolUse": groups},
-    }, indent=2) + "\n"
+        groups.append(
+            {
+                "matcher": definition["matcher"],
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": definition["command"],
+                        "statusMessage": definition["statusMessage"],
+                    }
+                ],
+            }
+        )
+    return (
+        json.dumps(
+            {
+                "description": (
+                    "Generated by PyAutoMind/scripts/repos_sync.py. Review and trust "
+                    "the current hook definition with Codex /hooks before relying on it."
+                ),
+                "hooks": {"PreToolUse": groups},
+            },
+            indent=2,
+        )
+        + "\n"
+    )
 
 
 def check_codex_hooks(root, repos):
@@ -2291,9 +2840,7 @@ def check_codex_hooks(root, repos):
         if not path.exists():
             problems.append(f"'{name}': no {CODEX_HOOKS_REL}")
         elif path.read_text() != expected:
-            problems.append(
-                f"'{name}': {CODEX_HOOKS_REL} differs from repos.yaml"
-            )
+            problems.append(f"'{name}': {CODEX_HOOKS_REL} differs from repos.yaml")
     return problems
 
 
@@ -2321,7 +2868,6 @@ def write_codex_hooks(root, repos):
             print(f"wrote: {path}")
 
 
-
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--write", action="store_true")
@@ -2335,7 +2881,7 @@ def main():
         action="append",
         metavar="CHECK",
         help="run only this drift-check leg (repeatable; use the label the "
-             "check prints)",
+        "check prints)",
     )
     # The complement, for the narrower case: every leg is the caller's to fail
     # EXCEPT one whose precondition that caller cannot meet. Subtracts from
@@ -2346,10 +2892,12 @@ def main():
         action="append",
         metavar="CHECK",
         help="run every drift-check leg but this one (repeatable; use the "
-             "label the check prints; subtracts from --only)",
+        "label the check prints; subtracts from --only)",
     )
     parser.add_argument(
-        "--repo", action="append", metavar="NAME",
+        "--repo",
+        action="append",
+        metavar="NAME",
         help="scope the standards-only check/write to this registered repo (repeatable)",
     )
     args = parser.parse_args()
@@ -2373,37 +2921,48 @@ def main():
     # Lazy (label -> thunk) so --only pays for exactly the selected legs.
     checks = {
         smoke_sync.LABEL: lambda: smoke_sync.check(
-            root, repos, (mind_root / smoke_sync.SOURCE).read_text()),
+            root, repos, (mind_root / smoke_sync.SOURCE).read_text()
+        ),
         "PyAutoHeart/config/repos.yaml": lambda: check_heart(root, repos),
         "PyAutoHands/pre_build.sh": lambda: check_pre_build(root, repos),
-        "PyAutoHands/autohands/config/workspaces.yaml":
-            lambda: check_hands_workspaces(root, repos),
+        "PyAutoHands/autohands/config/workspaces.yaml": lambda: check_hands_workspaces(
+            root, repos
+        ),
         "ensure_workspace_labels.sh": lambda: check_labels(root, repos),
-        "hygiene conductor coverage":
-            lambda: check_hygiene_coverage(root, repos, mind_root),
+        "hygiene conductor coverage": lambda: check_hygiene_coverage(
+            root, repos, mind_root
+        ),
         "local checkout origins": lambda: check_origins(root, repos),
         CHECKOUTS: lambda: check_checkouts(root, repos, unmapped, marker),
         "tenant firewall (organ code)": lambda: check_tenant_firewall(root, repos),
-        "root AGENTS.md routing table (generated)":
-            lambda: check_routing_table(root, categories, repos),
-        "WORKFLOW.md owner map (generated)":
-            lambda: check_owner_map(root, categories, repos),
+        "root AGENTS.md routing table (generated)": lambda: check_routing_table(
+            root, categories, repos
+        ),
+        "WORKFLOW.md owner map (generated)": lambda: check_owner_map(
+            root, categories, repos
+        ),
         MAP_BLOCKS: lambda: check_map_blocks(root, repos, smap),
-        "never-rewrite-history blocks (generated)":
-            lambda: check_history_blocks(root, repos, hpol),
-        "remote-session blocks (generated)":
-            lambda: check_remote_blocks(root, repos, remote),
-        "end-at-deliverable blocks (generated)":
-            lambda: check_deliverable_blocks(root, repos, deliverable),
-        STANDARDS_BLOCKS: lambda: check_standards_blocks(root, standards_repos, standards),
+        "never-rewrite-history blocks (generated)": lambda: check_history_blocks(
+            root, repos, hpol
+        ),
+        "remote-session blocks (generated)": lambda: check_remote_blocks(
+            root, repos, remote
+        ),
+        "end-at-deliverable blocks (generated)": lambda: check_deliverable_blocks(
+            root, repos, deliverable
+        ),
+        STANDARDS_BLOCKS: lambda: check_standards_blocks(
+            root, standards_repos, standards
+        ),
         FILING_BLOCKS: lambda: check_filing_blocks(root, repos, filing),
-        "public front-door organ tables (generated)":
-            lambda: check_public_tables(root, repos),
+        "public front-door organ tables (generated)": lambda: check_public_tables(
+            root, repos
+        ),
         "hub organism blurb (organs present)": lambda: check_hub_blurb(root, repos),
-        "CLAUDE.md → AGENTS.md pointers":
-            lambda: check_claude_md_pointers(root, repos),
+        "CLAUDE.md → AGENTS.md pointers": lambda: check_claude_md_pointers(root, repos),
         SESSION_HOOKS: lambda: check_session_hooks(
-            root, repos, hook_text, deliverable_hook_text),
+            root, repos, hook_text, deliverable_hook_text
+        ),
         CODEX_HOOKS: lambda: check_codex_hooks(root, repos),
         "target-repo layout lints": lambda: check_structure_lints(root, repos),
     }
@@ -2425,14 +2984,21 @@ def main():
     if args.skip:
         # Subtraction, after selection: --only says what to run, --skip takes
         # legs back off that list.
-        checks = {label: run_check for label, run_check in checks.items()
-                  if label not in args.skip}
+        checks = {
+            label: run_check
+            for label, run_check in checks.items()
+            if label not in args.skip
+        }
     unknown_repos = [name for name in args.repo or [] if name not in repos]
     if unknown_repos:
-        raise SystemExit("repos_sync: unknown --repo name(s): " + ", ".join(unknown_repos))
+        raise SystemExit(
+            "repos_sync: unknown --repo name(s): " + ", ".join(unknown_repos)
+        )
     if args.repo and (not args.only or set(args.only) != {STANDARDS_BLOCKS}):
-        raise SystemExit("repos_sync: --repo requires --only '" + STANDARDS_BLOCKS + "'")
-    standards_repos = ({name: repos[name] for name in args.repo} if args.repo else repos)
+        raise SystemExit(
+            "repos_sync: --repo requires --only '" + STANDARDS_BLOCKS + "'"
+        )
+    standards_repos = {name: repos[name] for name in args.repo} if args.repo else repos
     try:
         if STANDARDS_BLOCKS in checks:
             standards = load_standards_policy(mind_root)
@@ -2443,9 +3009,13 @@ def main():
             for name in standards_repos:
                 agents = standards_write_target(root, name)
                 if agents.parent.is_dir() and not agents.is_file():
-                    raise ValueError(f"'{name}': no AGENTS.md — cannot create repository guidance")
+                    raise ValueError(
+                        f"'{name}': no AGENTS.md — cannot create repository guidance"
+                    )
                 if agents.is_file() and standards_marker_error(agents.read_text()):
-                    raise ValueError(f"'{name}': {standards_marker_error(agents.read_text())}")
+                    raise ValueError(
+                        f"'{name}': {standards_marker_error(agents.read_text())}"
+                    )
     except ValueError as error:
         raise SystemExit(f"repos_sync: {error}") from error
 
@@ -2456,7 +3026,12 @@ def main():
     smoke_only_write = set(checks) == {smoke_sync.LABEL}
     standards_only_write = set(checks) == {STANDARDS_BLOCKS}
     write_enabled = args.write and bool(checks)
-    if write_enabled and not codex_only_write and not smoke_only_write and not standards_only_write:
+    if (
+        write_enabled
+        and not codex_only_write
+        and not smoke_only_write
+        and not standards_only_write
+    ):
         # The marker goes with the routing table: both are workspace-root
         # artifacts of the body map, and the marker is what lets the resolver
         # (and the checkout leg below) find this root again from anywhere under
@@ -2464,15 +3039,22 @@ def main():
         # to the parent of a checkout, which is how --write reaches a root that
         # has none yet, and every later call takes the marker instead.
         write_root_marker(root, marker)
-        write_block(root / "AGENTS.md", routing_table(categories, repos),
-                    required=True)
-        write_block(bootstrap_checkout(root, "PyAutoBrain") / "skills/WORKFLOW.md",
-                    owner_map(categories, repos), required=True)
+        write_block(root / "AGENTS.md", routing_table(categories, repos), required=True)
+        write_block(
+            bootstrap_checkout(root, "PyAutoBrain") / "skills/WORKFLOW.md",
+            owner_map(categories, repos),
+            required=True,
+        )
         for name, repo in repos.items():
             if repo["category"] != "organ":
                 continue
-            write_block(repo_checkout(root, name) / "AGENTS.md", smap, MAP_BEGIN, MAP_END,
-                        required=False)
+            write_block(
+                repo_checkout(root, name) / "AGENTS.md",
+                smap,
+                MAP_BEGIN,
+                MAP_END,
+                required=False,
+            )
         # The history policy is universal — written into every repo (not just
         # organs) that has added the markers.
         #
@@ -2483,27 +3065,54 @@ def main():
         # each repo to opt in is how the long tail stays unprotected.)
         insert_deliverable_markers(root, repos)
         for name in repos:
-            write_block(repo_checkout(root, name) / "AGENTS.md", hpol,
-                        HISTORY_BEGIN, HISTORY_END, required=False)
-            write_block(repo_checkout(root, name) / "AGENTS.md", remote,
-                        REMOTE_BEGIN, REMOTE_END, required=False)
-            write_block(repo_checkout(root, name) / "AGENTS.md", deliverable,
-                        DELIVERABLE_BEGIN, DELIVERABLE_END, required=False)
+            write_block(
+                repo_checkout(root, name) / "AGENTS.md",
+                hpol,
+                HISTORY_BEGIN,
+                HISTORY_END,
+                required=False,
+            )
+            write_block(
+                repo_checkout(root, name) / "AGENTS.md",
+                remote,
+                REMOTE_BEGIN,
+                REMOTE_END,
+                required=False,
+            )
+            write_block(
+                repo_checkout(root, name) / "AGENTS.md",
+                deliverable,
+                DELIVERABLE_BEGIN,
+                DELIVERABLE_END,
+                required=False,
+            )
         # The where-to-file block self-installs the same way, one step further
         # down: under the deliverable block that the loop above just filled.
         write_filing_blocks(root, repos, filing)
         for rel, bold in PUBLIC_TABLE_TARGETS:
-            write_block(public_target(root, rel), organ_public_table(repos, bold=bold),
-                        ORGANS_BEGIN, ORGANS_END, required=False)
+            write_block(
+                public_target(root, rel),
+                organ_public_table(repos, bold=bold),
+                ORGANS_BEGIN,
+                ORGANS_END,
+                required=False,
+            )
         remove_claude_md_pointers(root, repos)
         write_session_hooks(root, repos, hook_text, deliverable_hook_text)
     if write_enabled and not smoke_only_write and not standards_only_write:
         write_codex_hooks(root, repos)
     smoke_enabled = smoke_sync.rollout_enabled(mind_root)
-    if write_enabled and not codex_only_write and not standards_only_write and smoke_enabled:
+    if (
+        write_enabled
+        and not codex_only_write
+        and not standards_only_write
+        and smoke_enabled
+    ):
         smoke_sync.write(root, repos, (mind_root / smoke_sync.SOURCE).read_text())
     if write_enabled and smoke_only_write and not smoke_enabled:
-        raise SystemExit("smoke bootstrap rollout is held; use smoke_bootstrap_sync.py --dry-run")
+        raise SystemExit(
+            "smoke bootstrap rollout is held; use smoke_bootstrap_sync.py --dry-run"
+        )
 
     if write_enabled and STANDARDS_BLOCKS in checks:
         write_standards_blocks(root, standards_repos, standards)
@@ -2511,7 +3120,9 @@ def main():
     drift = False
     for label, run_check in checks.items():
         if label == smoke_sync.LABEL and not smoke_enabled:
-            print(f"deferred {label}: rollout held in repos.yaml; installations not graded")
+            print(
+                f"deferred {label}: rollout held in repos.yaml; installations not graded"
+            )
             continue
         problems = run_check()
         status = "OK" if not problems else f"{len(problems)} mismatch(es)"
@@ -2556,8 +3167,10 @@ def main():
     # auto-stubbed, and never fail the run.
     missing = repos_without_agents_md(root, repos)
     if missing:
-        print(f"note: {len(missing)} checked-out repo(s) have no AGENTS.md "
-              f"(needs human-written guidance):")
+        print(
+            f"note: {len(missing)} checked-out repo(s) have no AGENTS.md "
+            f"(needs human-written guidance):"
+        )
         for name in missing:
             print(f"  • {name}")
 
