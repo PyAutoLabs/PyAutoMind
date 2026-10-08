@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1793 records across 9 buckets.
+1794 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -138,6 +138,7 @@ markers; everything below GENERATED is rebuilt.
 - [board-navigation-pulse](2026/10/board-navigation-pulse.md)
 - [board-navigation-scientist](2026/10/board-navigation-scientist.md)
 - [board-navigation-shared-consumers](2026/10/board-navigation-shared-consumers.md)
+- [brain-dashboard-scope](2026/10/brain-dashboard-scope.md)
 - [closed-thread-followups](2026/10/closed-thread-followups.md) — New external comments after closure or an accepted answer return a thread to Community review without requirin…
 - [cloud-board-validation-evidence](2026/10/cloud-board-validation-evidence.md)
 - [cloud-test-run-card](2026/10/cloud-test-run-card.md)

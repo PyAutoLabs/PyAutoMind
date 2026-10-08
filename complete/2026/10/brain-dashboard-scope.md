@@ -1,3 +1,25 @@
+## brain-dashboard-scope
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/507
+- completed: 2026-10-08
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/508
+- merge: 589968c9575779f67d0a1f12b59972235c7397ba
+
+Brain's dashboard now leads with Agents & workflows, offers a focused prompt for unspecified tasks, shows overnight exceptions and combines Upkeep/Hygiene as Maintenance. Test/CI investigation routes through ci-speedup using Heart-owned evidence.
+
+Removed community projections/shortcut, readiness/release, version consistency, resume, autonomous history, the need-you/trend banner, redundant GitHub Page link and global Degraded section. Retired source collectors no longer run. Retired morning sync, its timer installer and wake-up skill/discovery; independent local sync/cleanup and Brain/Heart publication commands remain. Shared theme and the separate #504 Update service were untouched.
+
+Validation: all exact-head PR jobs passed (Python 3.12, Python 3.13, docs). Locally 1,250 suite tests passed; the one environment-dependent grouped-checkout failure passed with inherited PYAUTO_MIND/PYAUTO_BRAIN removed (4/4 grouped tests). Ten browser cases passed across five widths and light/dark modes. Feed compatibility, read-only requests, retired-section absence, retained prompts, generated surfaces and tenant firewall checked. No downstream scientific API impact. Local logs and synthetic preview retained under tmp/brain-dashboard-scope/ (ignored).
+
+Heart at ship: YELLOW (score 85), reasons explicitly acknowledged by the user: "manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml" and "release validation incomplete: no rehearsal for current source". The user separately authorized push followed by prm; every PR check was green before merge. No release authorization was inferred.
+
+Migration: existing local installations must disable any legacy pyauto-morning.timer or marked cron entry before updating; no replacement background task is installed. Brain local observations use `pyauto-brain board publish`; Heart uses its own successful tick followed by publish. A cloud dashboard refresh does not observe or sync local checkouts.
+
+Publication verified: Brain Board run 37771828126 succeeded for merge 589968c. The live https://pyautolabs.github.io/PyAutoBrain/ page contains Agents & workflows, Review overnight work and Maintenance; retired section anchors/banner/link are absent. No implementation scope deferred.
+
+Scoped reconciliation retained batch_slice.md, board_without_gh_phase2_legs.md and brain_board_follow_ups.md on resemblance-only evidence; no claim that this merge covers their broader scopes. Follow-up door: `/intake reconcile draft/feature/pyautobrain`.
+
+## Original prompt
+
 # Simplify Brain to agents and workflows
 
 Issued: 2026-10-08
