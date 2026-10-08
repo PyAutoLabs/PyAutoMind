@@ -11,7 +11,6 @@
 - [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
 - [search-ext-a3-samples-checkpointer](#search-ext-a3-samples-checkpointer)
 - [search-ext-a3b-nss-preflight](#search-ext-a3b-nss-preflight)
-- [organ-banner-task-labels](#organ-banner-task-labels)
 
 <!-- toc:end -->
 
@@ -135,16 +134,3 @@
   - PyAutoFit
 - autonomy: --auto launch 2026-10-08; effective safe (refactor); Consequence judge
 
-## organ-banner-task-labels
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/513
-- filed: 2026-10-08
-- planned: 2026-10-08
-- prompt: active/organ_banner_task_labels.md
-- status: blocked — approved plan; awaiting repository claim resolution
-- classification: library
-- suggested-branch: feature/organ-banner-task-labels
-- blocked-by: board-one-click-update (using PyAutoBrain; issue #504)
-- approval: user said “continue” after correcting Broca to Assistants, Heart to Tests, and moving Broca after Nerves
-- tier: judge (human /prm)
-- affected-repos:
-  - PyAutoBrain

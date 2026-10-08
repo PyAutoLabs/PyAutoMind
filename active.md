@@ -1,18 +1,5 @@
 # Active Tasks
 
-## board-one-click-update
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/504
-- issued: 2026-10-08
-- prompt: active/board_one_click_update.md
-- session: Codex CLI, session ID unavailable
-- status: library-dev
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/board-one-click-update
-- repos:
-  - PyAutoBrain: feature/board-one-click-update
-- tier: judge (human /prm)
-- approval: user approved shared authenticated Update service with "ok do it"
-- next: awaiting hosting preference after explaining setup; local service prototype preserved, shared button integration and shipping incomplete
-
 ## search-ext-a2-objective-bridge
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1676
 - issued: 2026-10-08
@@ -47,3 +34,16 @@
   - autofit_assistant: feature/search-ext-b3-pilot
 - tier: judge (human /prm)
 - heart-ack: STALE at launch (release validation incomplete: no rehearsal for current source)
+
+## organ-banner-task-labels
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/organ-banner-task-labels
+- repos:
+  - PyAutoBrain: feature/organ-banner-task-labels
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/513
+- issued: 2026-10-08
+- prompt: active/organ_banner_task_labels.md
+- session: Codex CLI, session ID unavailable
+- status: library-dev
+- approval: corrected label plan approved; user explicitly authorized merge and publication and parking board-one-click-update
+- tier: judge (explicit human merge authorization in current session)
+- next: create isolated worktree, implement labels and navigation ordering, validate, merge and publish

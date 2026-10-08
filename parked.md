@@ -72,3 +72,19 @@ write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
 - resume: Plan approved and issue created; implementation not started. Reuse approved issue plan, survey current claims, and resume through start_workspace. No branch or PR created for this member.
 - scope: Existing Colab skills/setup/Ring notebook only; extra Teacher/SLACS notebook twins deferred.
 
+
+## board-one-click-update
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/504
+- issued: 2026-10-08
+- prompt: active/board_one_click_update.md
+- session: Codex CLI, session ID unavailable
+- status: parked — user prioritized banner labels; preserve worktree and edits
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/board-one-click-update
+- repos:
+  - PyAutoBrain: feature/board-one-click-update
+- tier: judge (human /prm)
+- approval: user approved shared authenticated Update service with "ok do it"
+- next: awaiting hosting preference after explaining setup; local service prototype preserved, shared button integration and shipping incomplete
+
+- parked: 2026-10-08
+- park-authorization: user said “continue, get this merged and live so yeah park it”
