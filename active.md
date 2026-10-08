@@ -70,7 +70,7 @@
 - issued: 2026-10-08
 - prompt: active/pyautodna_stack_management.md
 - session: Codex CLI (GPT-6), session ID unavailable
-- status: library-dev — implementation and validation complete locally; awaiting Heart YELLOW acknowledgement before source push/PR
+- status: library-shipped, awaiting-merge — four review PRs open; human /prm in Mind → Brain → DNA → Scientist order
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/pyautodna-stack-management
 - tier: judge (human /prm)
 - approval: user approved scope/name with "DNA it is! go"; explicitly allowed coordinated Brain changes, preserving board-one-click-update
@@ -79,3 +79,8 @@
   - PyAutoBrain: feature/pyautodna-stack-management
   - PyAutoMind: feature/pyautodna-stack-management
   - PyAutoScientist: feature/pyautodna-stack-management
+
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/494
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/510
+- library-pr: https://github.com/PyAutoLabs/PyAutoDNA/pull/1
+- library-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/51

@@ -115,3 +115,16 @@ Human explicitly allowed coordinated Brain changes on 2026-10-08. Preserve board
 - Preview: PyAutoDNA/_site/index.html. Live publication has not occurred. Generated maps updated only in claimed consumers using isolated generation scope; remaining global propagation belongs to merge close-out.
 - Ship gate from Brain vitals: YELLOW85. Exact yellow reason: "manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml". Evidence names unregistered COWLS_COSMOS_Web_Lens_Survey checkout, unrelated to this feature. Stale reason: "release validation incomplete: no rehearsal for current source". Human acknowledgement requested via async question; no answer received yet. No source push/PR or merge authorized through this gate yet.
 - Next: obtain acknowledgement of that exact YELLOW reason (or refreshed permissible verdict), create public PyAutoLabs/PyAutoDNA with empty main bootstrap preserving history, commit/push the four feature branches and open dependent review PRs. Merge order Mind identity → Brain shared component → DNA → Scientist; human /prm remains required. Configure Pages only with the appropriate merge/publication step. Do not close #509 before all consumer work lands.
+
+## PR-open checkpoint — 2026-10-08
+
+Human acknowledged the recorded Heart YELLOW warning with “yes proceed”. Re-read readiness returned the same YELLOW85 receipt and exact reasons above; development shipping only, no release or merge. Created public PyAutoLabs/PyAutoDNA with preserved empty bootstrap main and pushed feature branches.
+
+- https://github.com/PyAutoLabs/PyAutoMind/pull/494
+- https://github.com/PyAutoLabs/PyAutoBrain/pull/510
+- https://github.com/PyAutoLabs/PyAutoDNA/pull/1
+- https://github.com/PyAutoLabs/PyAutoScientist/pull/51
+
+Source commits: Mind 1de20993; Brain b83a616; DNA 69642c3; Scientist a17a009. Saved validation: 1,979 tests plus 12 browser cases; source whitespace normalized during staged diff check. Applicable live CLI/render/feed smoke passed; scientific workspace migration/smoke is not applicable because scientific APIs/scripts are unchanged.
+
+Status: library-shipped, awaiting-merge. Merge via human /prm in Mind → Brain → DNA → Scientist order. DNA CI consumes Brain main and requires its shared-theme change. Pages configuration/publication and remaining generated-map propagation belong to post-merge close-out. Do not close #509 until all consumers land. No environment upgrades, scheduled jobs or compute submissions performed.
