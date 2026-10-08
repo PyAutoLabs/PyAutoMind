@@ -789,7 +789,7 @@ Use the start-dev skill. active/board_one_click_update.md
 
 </details>
 
-<details><summary>📋 <a href="active/brain_dashboard_scope.md">Simplify Brain to agents and workflows</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/507">issue #507</a> — issued 2026-10-08 — library-dev</summary>
+<details><summary>📋 <a href="active/brain_dashboard_scope.md">Simplify Brain to agents and workflows</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/507">issue #507</a> — issued 2026-10-08 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/508">PyAutoBrain#508</a></summary>
 
 ```
 Use the start-dev skill. active/brain_dashboard_scope.md
