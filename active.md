@@ -34,6 +34,10 @@
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/inference-sampler-literature
 - repos:
   - PyAutoMemory: feature/inference-sampler-literature
+- prerequisite: memory-board-header-contract (https://github.com/PyAutoLabs/PyAutoMemory/issues/126)
+- prerequisite-worktree: /home/jammy/Code/PyAutoLabs/.worktrees/memory-board-header-contract
+- prerequisite-branch: feature/memory-board-header-contract
+- prerequisite-plan: test-only shared-header regression; same-root coordinated owned claim; no literature changes.
 - plan: human authorized all phases autonomously to the end, including in-turn merge on passed gates; no compute or scientific acceptance.
 
 ## search-ext-a0c-downstream
@@ -42,7 +46,18 @@
 - prompt: active/search_extensibility_a0c_downstream_sweep.md
 - epic: search-extensibility (phase A0c part 2)
 - session: Claude CLI (Fable 5.1, /start_dev --auto); session ID unavailable
-- status: library-dev
+- status: library-shipped + workspace-shipped, awaiting-merge — 9 PRs opened 2026-10-08 under --auto; glance tier → in-turn auto-merge on green with the Witness held
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/777
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/652
+- library-pr: https://github.com/PyAutoLabs/PyAutoCTI/pull/115
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/777
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/652
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/97
+- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/86
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/257
+- workspace-pr: https://github.com/PyAutoLabs/autocti_workspace/pull/37
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/157
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/34
 - autonomy: --auto launch 2026-10-08 ("do all A0 tasks in --auto"); effective safe (docs@medium); Consequence glance, Witness = pyswarms/multinest grep empty + no dead autosummary target
 - worktree: ~/Code/PyAutoLabs-wt/search-ext-a0c-downstream
 - repos:
