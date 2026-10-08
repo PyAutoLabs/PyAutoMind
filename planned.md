@@ -106,3 +106,14 @@
   - autolens_workspace_test
 - resume: Audit#603 found incorrect internal-edge Sibson weights and near-edge partition failure. Filed separately per explicit user request; strict expected-failure regressions retained in audit. No repair begun or worktree created. Plan algorithmic repair independently.
 
+## search-ext-a0a2-backend-conformance
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1671
+- planned: 2026-10-08
+- prompt: active/search_extensibility_a0a2_backend_conformance.md
+- epic: search-extensibility (phase A0a(ii))
+- classification: library
+- suggested-branch: feature/search-ext-a0a2-backend-conformance (stacked on feature/search-ext-a0b-hygiene in the A0b worktree; PR based on that branch until A0b merges)
+- blocked-by: search-ext-a0b-hygiene (using PyAutoFit)
+- affected-repos:
+  - PyAutoFit
+- autonomy: --auto launch 2026-10-08; effective safe (test); Consequence judge; the stacked PR is opened under this launch and merges by human /prm after A0b

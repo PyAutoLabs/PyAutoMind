@@ -22,7 +22,9 @@ Witness: `grep -ri "pyswarms\|multinest"` over every listed repo's docs/, CITATI
 Unattended: ready
 Priority: high
 Epic: search-extensibility
-Status: draft
+Status: active
+Issued: 2026-10-08
+Issue: https://github.com/PyAutoLabs/PyAutoLens/issues/776
 Filed: 2026-10-08
 
 Part 2 of A0c (`draft/research/autofit/search_extensibility_epic.md`; part 1 is

@@ -14,7 +14,9 @@ Witness: `grep -rn make_sneakier_pool autofit/` returns zero hits; the two `ROUN
 Unattended: ready
 Priority: high
 Epic: search-extensibility
-Status: draft
+Status: active
+Issued: 2026-10-08
+Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1670
 Filed: 2026-10-08
 
 Phase A0b of the search-extensibility epic (`draft/research/autofit/search_extensibility_epic.md`;
