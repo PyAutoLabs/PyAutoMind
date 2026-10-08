@@ -1,5 +1,8 @@
 # PyAutoDNA: software stacks and compatibility
 
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/509
+Issued: 2026-10-08
+
 Type: feature
 Target: pyautodna
 Difficulty: large
@@ -97,3 +100,7 @@ RAL/CI observations; label uncollected surfaces. Obtain Heart verdict at ship.
 
 Suggested branch: feature/pyautodna-stack-management
 Tier: judge — merge mode: human /prm
+
+## Coordination and execution
+
+Human explicitly allowed coordinated Brain changes on 2026-10-08. Preserve board-one-click-update changes and use a separate worktree. Bootstrap source changes are confined to DNA, Brain, Mind identity, Scientist; the other organs supply evidence, not source edits. Feature classifier recommended workspace flow based on mixed organ references; use generic worktree/library source mechanics for these infrastructure repositories (no scientific workspace scripts).

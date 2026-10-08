@@ -61,3 +61,18 @@
 - tier: judge (human /prm)
 - approval: user approved shared authenticated Update service with "ok do it"
 - next: awaiting hosting preference after explaining setup; local service prototype preserved, shared button integration and shipping incomplete
+
+## pyautodna-stack-management
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/509
+- issued: 2026-10-08
+- prompt: active/pyautodna_stack_management.md
+- session: Codex CLI (GPT-6), session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/pyautodna-stack-management
+- tier: judge (human /prm)
+- approval: user approved scope/name with "DNA it is! go"; explicitly allowed coordinated Brain changes, preserving board-one-click-update
+- repos:
+  - PyAutoDNA: feature/pyautodna-stack-management
+  - PyAutoBrain: feature/pyautodna-stack-management
+  - PyAutoMind: feature/pyautodna-stack-management
+  - PyAutoScientist: feature/pyautodna-stack-management
