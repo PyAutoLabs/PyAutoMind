@@ -1,3 +1,11 @@
+SLOW-parked `scripts/multi_galaxy/features/advanced/shapelets/modeling.py` in autolens_workspace. It timed out at 1805s against the 1800s mode=release cap in the 2026.10.7.1 release smoke job (PyAutoHands run 37653172766), where the other 41 listed scripts passed. The fix is a `.py`-anchored `# SLOW 2026-10-08` entry in `config/build/no_run.yaml` plus the `smoke_tests.txt:47` line commented out with a pointer back to the park. Precedents are 9059d6f6 (multi_galaxy/start_here) and autogalaxy_workspace#131. The release `--list` run does not apply no_run.yaml (PyAutoHands build_util.py:1028/1040), so commenting out the smoke_tests.txt line is the change that stops that run from attempting the script. No library or script change. The script passes in about 15s under profile_smoke, so its release-profile sampler cost still needs profiling before the entry is restored.
+
+- PR: PyAutoLabs/autolens_workspace#587. Merged 2026-10-08 (merge 1fe70165) by the --auto shipping session (tier glance; Witness passed; CI 7/7 green).
+- Gate: tests 3 passed. Smoke autolens 41/41 scripts and 2/2 notebooks. Independent Opus review CLEAN. Heart STALE.
+- Follow-up noted, not filed: the PyAutoHands run_python.py:34 help text says "no_run.yaml applies either way", which is out of date for `--list` runs.
+
+## Original prompt
+
 # Park the autolens shapelets modeling smoke script that times out in release…
 
 Type: maintenance

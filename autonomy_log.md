@@ -9,6 +9,7 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked` /
 
 | date | task | effective level | gates (tests/smoke/review/heart) | outcome |
 |------|------|-----------------|----------------------------------|---------|
+| 2026-10-08 | shapelets-smoke-slow-park (autolens_workspace#586 / PR#587) | safe | tests 3 pass · smoke autolens 41/41 scripts + 2/2 notebooks (worktree) · review CLEAN (independent Opus subagent; witness basis-cited) · Heart STALE `release validation incomplete: no rehearsal for current source` · witness should_skip single-file match + smoke list 41 w/o shapelets | merged-unchanged (tier glance, in-turn auto-merge on green) |
 | 2026-10-08 | sandbox-citation-agents-md (autolens_assistant#154 / PR#155) | safe | tests 207 pass/1 skip/9 err pre-existing on main (version-pinned fixture) · smoke n/a (wiki frontmatter) · review CLEAN (independent Opus subagent; witness basis-cited) · Heart STALE `release validation incomplete: no rehearsal for current source` · witness --check-citations 0 missing | merged-unchanged (tier notify, in-turn auto-merge on green) |
 | 2026-10-07 | dashboard-section-disclosures (Brain#490; Brain#491 + 11 dependent drafts) | human-required | Owner/renderer tests, 120 Chromium cases, Sphinx zero warnings, lint/artifact/contract PASS; in-session diff/visual review; exact RED `PyAutoFit: 5 commit(s) behind origin`; `PyAutoGalaxy: 12 commit(s) behind origin`; `PyAutoLens: 8 commit(s) behind origin`; live human “I authorize” for commit/push/PR only, no merge/release | red-override |
 | 2026-10-05 | dashboard-minimal-text (Brain#467; Brain#468 / Ears#13 / Heart#284) | supervised | Brain1195/Heart1227/Ears71 PASS; strict docs; shared10-case and Heart3-width browser/copy checks PASS; inline review; tenant firewall/diff PASS; Heart RED `autolens_workspace_test: Smoke Tests failure on main`; live “I authorize permission” for this development ship, issuecomment-6000820253; merge separate, no release | red-override |
@@ -398,7 +399,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 5 (stage 1: 5, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14
+Count toward 20: 6 (stage 1: 6, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -432,3 +433,4 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-10-07 | fork-context-darwin-test (PyAutoFit#1662) | glance | tests PASS (CI unittest 3.12/3.13/nojax green; full test_autofit 2965 passed); smoke n/a (test-only, no workspace impact); review not recorded; Heart YELLOW acknowledged; witness PASS (4 new tests red with context.py reverted, green on main) | merged-unchanged | 1 |
 | 2026-10-07 | imshow-origin-lower-overlays (PyAutoArray#616) | glance | tests 1981 pass / smoke n-a (private helpers, no public API) / review in-session diff / Heart YELLOW acked / witness red→green | merged-unchanged | 1 |
 | 2026-10-07 | community-pages (PyAutoLens#774 / PyAutoGalaxy#649 / PyAutoFit#1663 / PyAutoArray#618 / autolens_workspace#585 / autogalaxy_workspace#256 / autofit_workspace#167 / autoreduce_workspace#5 / HowToLens#96 / HowToGalaxy#85 / HowToFit#71 / autolens_visualization#3 / autogalaxy_visualization#3 / autofit_visualization#3 / autocti_visualization#3 / autolens_profiling#391 / pyautolabs.github.io#30 / PyAutoScientist#48) | glance | lint PASS (ruff, lychee, dashboard idempotence) / smoke N/A docs-only / review human-held 5 PRs to release / heart YELLOW ack at ship (manifest drift, stale validation) / witness RTD community page HTTP 200 | merged-unchanged | 1 |
+| 2026-10-08 | shapelets-smoke-slow-park (autolens_workspace#587) | glance | tests 3 pass · smoke autolens 41/41+2nb · review CLEAN (independent Opus) · heart STALE · witness pass | merged-unchanged | 1 |
