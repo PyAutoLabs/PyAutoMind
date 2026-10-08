@@ -22,3 +22,8 @@ Integrity: ok · Freshness: freshness policy unspecified · evidence time unknow
 Captured source branch: main. Revision: de37acfe797465205128d45973af5e853c74a684. Capture time: 2026-10-08T08:44:26Z. Latest attempt: 2026-10-08T08:44:26Z."        For PyAutoPulse I like how clear the four options under Imaging are. Lets call Delaunay -> Delaunay (JAX) and Rectangular -> Rectangular (JAX). Lets do the same renames to PyAutoPulse, where we will also remove the "implementation unspecified" variants, put those brackets in for KNN, MGE and have Delaunay top, then Rectangular, then MGE, then KNN, then MGE Mass, then Sersic, so its in descending order of priority and typical use
 
 Routing: presentation-only organ changes, no scientific or public API changes; override keyword-derived library/large route to one bounded workspace task with two reviewed PRs. Branch survey clean main both repos; no competing claims.
+
+## Sersic clarification
+
+User chose: Keep one plain “Sersic” entry last, without claiming JAX or Numba.
+The fallback is suppressed when known Sersic implementations exist.

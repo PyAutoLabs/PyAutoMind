@@ -35,9 +35,20 @@
 - issue: https://github.com/PyAutoLabs/PyAutoInsight/issues/19
 - issued: 2026-10-08
 - prompt: active/likelihood_menu_labels.md
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/likelihood-menu-labels
 - repos:
   - PyAutoInsight: feature/likelihood-menu-labels
   - PyAutoPulse: feature/likelihood-menu-labels
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoInsight/pull/20
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/37
 - plan: user-directed followup of approved dashboard; continue through green merge/deployment with independent review.
+
+## linear-solver-p5-mapper-corpus
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/399
+- issued: 2026-10-08
+- session: Claude Code CLI (Fable 5.1), session 331e5f0e
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/linear-solver-p5-mapper-corpus
+- repos:
+  - autolens_profiling: feature/linear-solver-p5-mapper-corpus
