@@ -52,3 +52,15 @@
   - autofit_assistant: feature/search-ext-b3-pilot
 - tier: judge (human /prm)
 - heart-ack: STALE at launch (release validation incomplete: no rehearsal for current source)
+
+## broca-pages
+- issue: https://github.com/PyAutoLabs/PyAutoBroca/issues/3
+- issued: 2026-10-08
+- prompt: active/broca-pages.md
+- session: Codex CLI (GPT-6), session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/broca-pages
+- approval: user requested Pages deployment via Actions; existing authorization for all merges and coordinated Broca-related Brain changes applies
+- repos:
+  - PyAutoBroca: feature/broca-pages
+  - PyAutoBrain: feature/broca-pages

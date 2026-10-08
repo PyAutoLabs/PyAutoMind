@@ -1,5 +1,7 @@
 # Publish Broca dashboard with GitHub Pages Actions
 Type: feature
+Issued: 2026-10-08
+Issue: https://github.com/PyAutoLabs/PyAutoBroca/issues/3
 Target: pyautobroca
 Consequence: judge
 Autonomy: human-required
