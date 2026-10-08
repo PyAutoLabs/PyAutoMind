@@ -48,3 +48,16 @@
 - worktree: ~/Code/PyAutoLabs-wt/linear-solver-p5-mapper-corpus
 - repos:
   - autolens_profiling: feature/linear-solver-p5-mapper-corpus
+
+## board-one-click-update
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/504
+- issued: 2026-10-08
+- prompt: active/board_one_click_update.md
+- session: Codex CLI, session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/board-one-click-update
+- repos:
+  - PyAutoBrain: feature/board-one-click-update
+- tier: judge (human /prm)
+- approval: user approved shared authenticated Update service with "ok do it"
+- next: implement portable service/shared component; hosting and GitHub App configuration pending

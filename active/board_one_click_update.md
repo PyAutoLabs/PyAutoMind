@@ -1,5 +1,7 @@
 # One-click board Update
 
+Issued: 2026-10-08
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/504
 Type: feature
 Target: @PyAutoBrain
 Consequence: judge
