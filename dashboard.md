@@ -797,7 +797,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/inference_browser_polish.md">Simplify inference dashboard and match Pulse likelihood navigation</a> — <a href="https://github.com/PyAutoLabs/PyAutoInsight/issues/17">issue #17</a> — issued 2026-10-08 — workspace-dev</summary>
+<details><summary>📋 <a href="active/inference_browser_polish.md">Simplify inference dashboard and match Pulse likelihood navigation</a> — <a href="https://github.com/PyAutoLabs/PyAutoInsight/issues/17">issue #17</a> — issued 2026-10-08 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoInsight/pull/18">PyAutoInsight#18</a></summary>
 
 ```
 Use the start-dev skill. active/inference_browser_polish.md
