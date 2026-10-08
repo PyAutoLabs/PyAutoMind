@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1798 records across 9 buckets.
+1800 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -262,7 +262,9 @@ markers; everything below GENERATED is rebuilt.
 - [search-ext-a0b-hygiene](2026/10/search-ext-a0b-hygiene.md)
 - [search-ext-a0c-downstream](2026/10/search-ext-a0c-downstream.md)
 - [search-ext-a0c-fit-repair](2026/10/search-ext-a0c-fit-repair.md)
+- [search-ext-a1-declare-gate](2026/10/search-ext-a1-declare-gate.md)
 - [search-ext-b1-registration](2026/10/search-ext-b1-registration.md)
+- [search-ext-b2-harness](2026/10/search-ext-b2-harness.md)
 - [setuptools-include-packages](2026/10/setuptools-include-packages.md)
 - [shapelets-smoke-slow-park](2026/10/shapelets-smoke-slow-park.md)
 - [sizing-none-triage-rules](2026/10/sizing-none-triage-rules.md)

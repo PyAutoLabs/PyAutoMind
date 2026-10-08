@@ -1,3 +1,18 @@
+## search-ext-b2-harness
+- issue: https://github.com/PyAutoLabs/autofit_inference/issues/2
+- completed: 2026-10-08
+- epic: search-extensibility (phase B2)
+- workspace-pr: https://github.com/PyAutoLabs/autofit_inference/pull/3
+- merge-commit: autofit_inference ec35be49
+
+### Outcome
+autofit_inference has its harness, datasets, pre-registered protocol and reference posteriors. `wiki/project/protocol_gaussian_x3.md` (`gaussian_x3@1`) is the first commit and predates every result; seeded `gaussian_x3_blend` (plan numbers) and `gaussian_x3_separated` (disjoint centre priors, D15 option (b), amendment A1) datasets are committed as JSON; the harness ports autolens_inference's CLI (`{local,ral}_{numpy,jax_cpu}_{fp64,fp32}`), `_runner.run_search(sampler=, dataset_class=, model_type=)`, MLTracker, WALL gate and `batch_cpu` template (`--partition=ral` only); row schema v1 carries the protocol fields, reference identity `(dataset, backend, data_seed, assertion_mechanism)`, cold/warm run identities and failure wall times; the exporter emits `inference-summary@1` with producer-asserted verdicts and reference limitations; CI runs lint gates and a 1-seed Nautilus witness that must export `accepted`. Numpy reference: Nautilus `n_live=2000` ×3 (ln Z 137.061 ± 0.019, medians to 0.015σ, single mode weight 1.000), MAP ln P 186.668, `ln 3!` validation −1.825. `--auto` run at effective supervised; one decide-and-flag decision (constant-likelihood rerun at n_live=2000), accepted at merge.
+
+### Validation and limits
+65 tests; ruff; README/summary/WALL checks; Insight classifier validates both summaries; GitHub `lint` and `witness` green (witness accepted and converged). Independent adversary (Codex gpt-6-astra, `search_extensibility_epic_reviews/03_codex_astra_b2_pr3.md`): 12 findings, 11 reproduced, all enacted before merge; the committed reference was rebuilt from the same raw samples after the mode-clustering truncation was fixed (mode weight 0.103 → 1.000, ln Z/medians unchanged). Limitations recorded in protocol §10: DynestyStatic at default `walks=5` scatters ln Z by 2.3 nat (numpy) / 5.6 nat (JAX) and is excluded from the reference; JAX Nautilus references and separated references are `pending` for B3; `DynestyStatic` accepts no seed (A4); Dynesty termination is `not_assessed` until A3 exposes it. The raw reference outputs (151 MB, `output/`) are preserved in the canonical `fit/autofit_inference/output/` (gitignored); a reference rebuild needs them.
+
+## Original prompt
+
 # autofit_inference harness, gaussian_x3 datasets, pre-registered protocol and reference posteriors (epic search-extensibility, phase B2)
 
 Type: feature

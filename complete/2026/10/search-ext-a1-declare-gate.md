@@ -1,3 +1,24 @@
+## search-ext-a1-declare-gate
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1674
+- completed: 2026-10-08
+- epic: search-extensibility (phase A1)
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1675
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/778
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/653
+- library-pr: https://github.com/PyAutoLabs/PyAutoCTI/pull/116
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1675
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/778
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/653
+- merge-commit: PyAutoFit 0dbf258c; PyAutoLens 9e93e4a7; PyAutoGalaxy 48c73c05; PyAutoCTI 2a91ff5d
+
+### Outcome
+Every search declares 15 capability class attributes (`autofit/non_linear/search/capabilities.py`), mirrored by a declarative lazy `search/registry.py` with completeness and entry==attributes tests and `python -m autofit search-manifest --json` (`search-manifest@1`, the only cross-repo format). `Analysis.is_jax` replaces the nine `_use_jax` probes; `FactorGraphModel`/`ModelAnalysis` derive their backend from the flattened factors (D12), with legacy-pickle migration and the agreement check surviving wrappers. A JAX-required search given a numpy analysis raises one shared `SearchException` after the test-mode bypass (D2); `Nautilus(force_x1_cpu=True)` works with numpy. `docs/api/searches.rst`, an RTD capability matrix and a canonical citations page are generated from the manifest with a `--check` CI job and `autodoc_mock_imports` (D18); `docs/design/run_ctx.md` freezes the `run(ctx)` signature and `FitContext` members for A2 (D7). PyAutoLens/PyAutoGalaxy/PyAutoCTI `api/modeling.rst` point at the matrix via intersphinx. Golden identifiers unchanged. `--auto` run at effective supervised: one decide-and-flag decision (factor-graph backend rules) and four judgement values, reviewed and accepted at merge.
+
+### Validation and limits
+3417 passed / 2 skipped / 9 xfailed (A0's strict xfails only); nojax emulation green for `non_linear`/`analysis`; `import autofit` loads no optional backend; Sphinx 30 warnings = baseline in full and emulated-minimal envs; PyAutoLens 832 / PyAutoGalaxy 1357 passed; afT BlackJAXNUTS/MultiStartAdam accuracy asserts fail identically on main. Independent adversary (Codex gpt-6-astra, `draft/research/autofit/search_extensibility_epic_reviews/04_codex_astra_a1_pr1675.md`): Witness held; 6 findings, all reproduced and enacted before merge (legacy-pickle migration, hierarchical-factor inference, ModelAnalysis unwrap, NSS physical coordinates, minimizer `invalid_value=+inf` with the conditional pinned for A3, Emcee `resumable=True` correcting report §3.1). Known: four order-dependent `graphical/` test failures under the nojax emulation reproduce on main (not filed yet); the `checkpointer` attribute is deferred to A3; explicit `FactorGraphModel(use_jax=False)` with JAX children is rejected rather than forced to numpy.
+
+## Original prompt
+
 # Search capability declarations, fail-fast gate, lazy registry and the run(ctx) design note (epic search-extensibility, phase A1)
 
 Type: feature

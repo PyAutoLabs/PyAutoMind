@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-10-08T13:21:38Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
+  "updated": "2026-10-08T13:27:00Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,18 +12,6 @@
       "text": "Complete DNA cockpit registration \u2014 library-shipped, awaiting-merge \u2014 no configured PR checks; local tests passed; awaiting explicit no-checks merge acknowledgement",
       "url": "https://github.com/PyAutoLabs/pyautolabs.github.io/pull/32",
       "prompt": "Use the start-dev skill. active/dna-cockpit-registration.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Search capability declarations, fail-fast gate, lazy registry and the run(ctx) design note\u2026 \u2014 library-shipped + workspace-shipped, awaiting-merge \u2014 4 PRs opened 2026-10-08 under --auto (decide-and-flag, `decision-taken` on\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1675",
-      "prompt": "Use the start-dev skill. active/search_extensibility_a1_declare_gate_registry.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "autofit_inference harness, gaussian_x3 datasets, pre-registered protocol and reference posteriors\u2026 \u2014 workspace-shipped, awaiting-merge \u2014 autofit_inference#3 opened 2026-10-08 under --auto (decide-and-flag, `decision-taken`); first\u2026",
-      "url": "https://github.com/PyAutoLabs/autofit_inference/pull/3",
-      "prompt": "Use the start-dev skill. active/search_extensibility_b2_harness_protocol.md"
     },
     {
       "severity": "yellow",
@@ -36,12 +24,6 @@
       "text": "human review: the scaling_relation slam parks (imaging un-parked, multi_galaxy kept)",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md",
       "prompt": "Walk me through the completed work described in `draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md` so I can sign it off.\n\n1. Read the prompt: what was asked, and what it claims shipped.\n2. Find the evidence \u2014 the merged PR(s), the commits, the `complete/` record \u2014\n   and read the actual diff, not the description of it.\n3. Report what changed, what it does NOT cover, and anything you would have\n   done differently. Call out behaviour changes and test gaps explicitly.\n\nChange nothing while reviewing. When I sign it off, retire the prompt from the\nPyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date\n<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and\nregenerate the dashboard. If I do not sign it off, file the follow-up with\n`/intake` instead.\n"
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1675 \u2014 Search capability declarations, fail-fast gate, lazy registry and the run(ctx) design note\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1675",
-      "prompt": null
     },
     {
       "severity": "yellow",
@@ -69,8 +51,8 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#653 \u2014 Search capability declarations, fail-fast gate, lazy registry and the run(ctx) design note\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/653",
+      "text": "pending release: PyAutoFit PyAutoFit#1675 \u2014 search-ext-a1-declare-gate",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1675",
       "prompt": null
     },
     {
@@ -81,14 +63,20 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#778 \u2014 Search capability declarations, fail-fast gate, lazy registry and the run(ctx) design note\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/778",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#653 \u2014 search-ext-a1-declare-gate",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/653",
       "prompt": null
     },
     {
       "severity": "yellow",
       "text": "pending release: PyAutoLens PyAutoLens#777 \u2014 search-ext-a0c-downstream",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/777",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoLens PyAutoLens#778 \u2014 search-ext-a1-declare-gate",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/778",
       "prompt": null
     },
     {
@@ -126,6 +114,18 @@
       "text": "pick: `@PyAutoArray` rectangular mesh mapper: mirrored row weights + round-off-dependent cell assignment",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
+      "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Reduce the organism's per-session and per-task token load by half",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/organs/reduce_session_token_load.md",
+      "prompt": "Use the start-dev skill. draft/maintenance/organs/reduce_session_token_load.md"
     }
   ]
 }
