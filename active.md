@@ -66,7 +66,9 @@
 - issue: https://github.com/PyAutoLabs/PyAutoEyes/issues/25
 - issued: 2026-10-08
 - session: Codex (session ID unavailable)
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/eyes-focused-figure-browser
 - repos:
   - PyAutoEyes: feature/eyes-focused-figure-browser
+- library-pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/26
+- heart-ack: manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml

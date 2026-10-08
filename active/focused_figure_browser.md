@@ -112,3 +112,7 @@ Survey (Brain Eyes conductor, local checkout): 40 PNGs on disk (imaging 22, inte
 - No scientific workspace API changes; downstream surface is the board/cockpit.
 
 Implementation and all applicable local checks complete. Next action: human acknowledgement of the exact Heart YELLOW reason above, then commit/push and open the prepared PR. No source changes have been committed, pushed or published.
+
+## Ship authorization — 2026-10-08
+
+Human: "yes I authorize and prm". Acknowledges the exact Heart YELLOW manifest-drift reason recorded above and authorizes commit/push, PR creation and merge after all CI passes. PR: https://github.com/PyAutoLabs/PyAutoEyes/pull/26; commit b10afdd. Local validation unchanged and passing.
