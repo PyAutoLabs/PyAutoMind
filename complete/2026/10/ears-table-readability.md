@@ -1,5 +1,30 @@
 # Community table readability
 
+Completed: 2026-10-08
+Issue: https://github.com/PyAutoLabs/PyAutoEars/issues/23
+PR: https://github.com/PyAutoLabs/PyAutoEars/pull/24
+Merge commit: b525f42b6097db55188c6afc4c6e97611b8773f6
+
+## Delivered
+
+Removed grey repository/type/number subtitles and redundant links from expanded conversation rows. Expanded metadata has bold labels, spacing and grouped evidence. Both community tables and their Markdown counterpart show Updated dates, with labelled creation-date fallback and explicit missing dates. Removed the recurring-feedback placeholder.
+
+Optional nullable source timestamps are retained in snapshot v1, with legacy snapshot support. Brain accepts the added metadata and produces identical response decisions. No science workspace migration or pending release obligation.
+
+## Validation
+
+- 106 Ears tests; 29 Brain adapter tests passed.
+- Chromium at 390px and 1280px in light/dark mode passed, including expanded details, clipboard and freshness checks.
+- Generated state contract validated; screenshots inspected.
+- CI run 37760502398: Python 3.12, Python 3.13 and browser jobs all succeeded on eaf7cd3.
+- Ship-time Heart STALE: release validation incomplete: no rehearsal for current source; permitted for development.
+- User authorized merge and full close-out via /prm; all feature commits proven ancestors of origin/main.
+- Local logs/previews preserved under `tmp/ears-table-readability-evidence/`; temporary worktree scheduled for removal after the claim is released.
+
+## Original prompt
+
+# Community table readability
+
 @PyAutoEars
 
 Type: feature
