@@ -79,3 +79,27 @@ No issue, source edits or worktree created yet; next action is human plan review
 
 ## Approval
 User approved plan and coordination with existing Brain/Ears claims: `go`. Source development uses start_library / ship_library; no merge authorized.
+
+## Shipped implementation — 2026-10-08
+
+## Dashboard controls ready for review
+
+All four requested cleanups are implemented. Repository buttons display destination repository names; primary copy buttons say **Copy check-in prompt**; Cortex has no Open prefixes on repository buttons; redundant GitHub Page links and its legacy stale/check-in block are removed. Domain prompts, repository URLs, evidence records and shared refresh controls are preserved.
+
+| Repository | PR | Commit |
+|---|---|---|
+| PyAutoBrain | https://github.com/PyAutoLabs/PyAutoBrain/pull/506 | `cbb99de7` |
+| PyAutoHeart | https://github.com/PyAutoLabs/PyAutoHeart/pull/294 | `4ecd201a` |
+| PyAutoHands | https://github.com/PyAutoLabs/PyAutoHands/pull/308 | `28b4ed2c` |
+| PyAutoMemory | https://github.com/PyAutoLabs/PyAutoMemory/pull/129 | `34c837d7` |
+| PyAutoPulse | https://github.com/PyAutoLabs/PyAutoPulse/pull/40 | `01df8155` |
+| PyAutoEars | https://github.com/PyAutoLabs/PyAutoEars/pull/27 | `27de7d55` |
+| PyAutoScientist | https://github.com/PyAutoLabs/PyAutoScientist/pull/50 | `ad70a0d3` |
+
+Merge Brain first, then the consumers, and refresh the published dashboards. PRs are open, not merged. Initial CI: Memory and Scientist green; other checks running, with no failures reported at inspection.
+
+Validation: all affected checks pass across seven repositories after updating old presentation expectations. Brain's grouped-path test needed inherited worktree path overrides cleared (4/4 passed); other unchanged dashboard consumer checks pass (77 tests). Browser witness passed 14 light/dark layouts plus clipboard, fallback, over-budget download, isolation and pending-edit checks. Pulse formatting, offline regenerated dashboard and state-schema checks pass. Merge previews show no conflicts with the existing Brain/Ears task branches.
+
+The user acknowledged Heart YELLOW for the exact manifest-drift reason before shipping. A direct canonical checkout audit passes (48/48); the reported mismatch is specific to task-bundle context. No release or merge authorized.
+
+Source workflow: PyAutoBrain `skills/ship_library/ship_library.md`. No scientific-library API or workspace script impact; renderer and shared-component browser checks provide the applicable downstream smoke evidence.

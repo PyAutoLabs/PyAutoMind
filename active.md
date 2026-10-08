@@ -67,7 +67,7 @@
 - issued: 2026-10-08
 - prompt: active/dashboard_control_labels.md
 - session: Codex GPT-6; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/dashboard-control-labels
 - tier: undeclared (human /prm)
 - approval: user approved plan and explicit coordination with board-one-click-update and ears-followup-window via `go`; separate worktrees
@@ -81,3 +81,11 @@
   - PyAutoScientist: feature/dashboard-control-labels
 - heart-ack: user acknowledged YELLOW manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml, and authorized PRs after checks; canonical checkout-only check passes (48/48).
 - validation: seven repo suites plus focused correction reruns passed; 14 browser layouts and clipboard cases passed; Gut/Insight/Eyes/Nerves consumer checks passed; logs .task-logs/dashboard-control-labels/validation.md
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/506
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/294
+- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/308
+- library-pr: https://github.com/PyAutoLabs/PyAutoMemory/pull/129
+- library-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/40
+- library-pr: https://github.com/PyAutoLabs/PyAutoEars/pull/27
+- library-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/50
+- next: human /prm; merge Brain first, then consumers; regenerate published boards after merge. Initial CI running except Memory/Scientist green; no observed failures.
