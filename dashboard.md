@@ -805,7 +805,7 @@ Use the start-dev skill. active/board_one_click_update.md
 
 </details>
 
-<details><summary>📋 <a href="active/search_extensibility_a2_objective_bridge.md">Objective factory, PoolFactory, JAX fork rule and the run(ctx) bridge…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1676">issue #1676</a> — issued 2026-10-08 — library-dev</summary>
+<details><summary>📋 <a href="active/search_extensibility_a2_objective_bridge.md">Objective factory, PoolFactory, JAX fork rule and the run(ctx) bridge…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1676">issue #1676</a> — issued 2026-10-08 — library-shipped, awaiting-merge — PyAutoFit#1679 opened 2026-10-08 under --auto (decision-taken); A3 (#1677) integrating onto… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1679">PyAutoFit#1679</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 Use the start-dev skill. active/search_extensibility_a2_objective_bridge.md
@@ -2751,6 +2751,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoFit**
 
+- [PyAutoFit#1679](https://github.com/PyAutoLabs/PyAutoFit/pull/1679) — `active/search_extensibility_a2_objective_bridge.md`
 - [PyAutoFit#1667](https://github.com/PyAutoLabs/PyAutoFit/pull/1667) — `complete/2026/10/search-conformance-metadata.md`
 - [PyAutoFit#1673](https://github.com/PyAutoLabs/PyAutoFit/pull/1673) — `complete/2026/10/search-ext-a0a2-backend-conformance.md`
 - [PyAutoFit#1672](https://github.com/PyAutoLabs/PyAutoFit/pull/1672) — `complete/2026/10/search-ext-a0b-hygiene.md`
