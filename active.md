@@ -19,7 +19,11 @@
 - prompt: active/search_extensibility_a2_objective_bridge.md
 - epic: search-extensibility (phase A2; A3 runs in parallel in this worktree's second checkout `PyAutoFit_a3` on `feature/search-ext-a3-samples-checkpointer`; A3b stacks on both)
 - session: Claude CLI (Fable 5.1, /start_dev --auto); session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge — PyAutoFit#1679 opened 2026-10-08 under --auto (decision-taken); A3 (#1677) integrating onto this branch, A3b (#1678) after both
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1679
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1679
+- validation: 3453 passed / 1 skipped / 9 xfailed; nojax 1178; downstream suites green; Emcee+JAX 0.26 ms/call (eager 14.3 ms); BFGS-JAX exact gradients; one Fitness( site besides NSS
+- decision-taken: docs/design/run_ctx.md Revision 1 (six member-level clarifications, signature unchanged); JAX fork rule forces 1 core with one INFO line + search.summary record instead of raising (D11 reading flagged)
 - autonomy: --auto launch 2026-10-08 ("A2, A3, A3b and B3 in auto mode"); effective safe (refactor); Consequence judge → human /prm
 - worktree: ~/Code/PyAutoLabs-wt/search-ext-a2-objective-bridge
 - repos:
