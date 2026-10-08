@@ -1,3 +1,19 @@
+# Inference setup contract — phase 1 complete
+
+- issue: https://github.com/PyAutoLabs/PyAutoInsight/issues/13
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoInsight/pull/14
+- merged: 2026-10-08; 2d6ea0e4e45f6cc43df0133b38f50a8d4fcf0fe8
+- authorization: human `prm, and continue through all phases autonomously to the end`
+
+Version 2 reader, baseline/prepared problem identities, cold/warm/resume and
+compilation/cache distinctions, work units and strict comparisons delivered.
+157 tests, Ruff, offline validation passed. Both exact-head hosted runs and
+all their jobs passed; only PR-disabled publication step skipped.
+Parent draft/feature/pyautoinsight/inference_setup_redesign.md remains active
+for producer, UI, assistant/wiki and literature candidates. No compute performed.
+
+## Original prompt
+
 # Inference setup and baseline-to-experiment contract
 
 Type: feature

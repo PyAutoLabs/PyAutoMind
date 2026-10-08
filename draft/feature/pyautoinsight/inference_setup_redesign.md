@@ -110,7 +110,14 @@ ok begin
 
 Reader contract implemented in Insight PR14 (issue13), commit 4f8eaec.
 157 tests, Ruff and offline check pass; hosted lint/refresh pending at handoff.
-Await human /prm; next is producer/catalogue/script migration. The live registry
+Phase 1 merged via human /prm. Continue producer/catalogue/script migration. The live registry
 remains v1. No baseline scientific acceptance or runs were performed.
-Bounded prompt: active/inference_setup_contract.md. Full scope remains the five
+Bounded prompt: complete/2026/10/inference-setup-contract.md. Full scope remains the five
 approved phases above; only phase 1 has been implemented.
+
+## Continuing authorization — 2026-10-08
+
+Human: "prm, and continue through all phases autonomously to the end".
+This grants implementation and in-turn merge/close-out of the approved remaining
+phases when their tests, independent review and CI pass. No compute/release or
+scientific acceptance is authorized. Preserve Heart gates and data products.
