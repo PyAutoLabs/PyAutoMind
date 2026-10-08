@@ -38,3 +38,25 @@
 - follow-ups: Drawer crashes under NullPaths (draft/bug/autofit/drawer_crashes_under_nullpaths_timer_none.md); NSS docstring block-quote Sphinx warning now rendered (A0b); part 2 downstream ghost sweep to file after part 1 merges
 - plan: approved by the human 2026-10-08 (A0c part 1 prompt + issue plan); rulings: RTD generic example stays DynestyStatic; `autofit_workspace_developer/searches/nss/` deleted via Gut (condemned.md entry `autofit_workspace_developer/searches-nss`, committed deletion at 7cb97c6); one PR per repo for prose plus separate PRs for workspace_test scripts, Brain samplers gap rule, Brain sampler_pipeline docs
 - heart-ack: release validation incomplete: no rehearsal for current source — same reason set the human acknowledged 2026-10-07 for B1; carried under the human's 2026-10-08 "do all that" ship authorization
+
+## shapelets-smoke-slow-park
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/586
+- issued: 2026-10-08
+- session: Claude CLI (Opus 5.5 worker, --auto); session ID unavailable
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/shapelets-smoke-slow-park
+- repos:
+  - autolens_workspace: feature/shapelets-smoke-slow-park
+- tier: glance (auto-merge on green if Witness passes)
+- plan: --auto launch by the human 2026-10-08 (review_release 2026.10.7.1 follow-up); plan on the issue
+
+## sandbox-citation-agents-md
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/154
+- issued: 2026-10-08
+- session: Claude CLI (Opus 5.5 worker, --auto); session ID unavailable
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/sandbox-citation-agents-md
+- repos:
+  - autolens_assistant: feature/sandbox-citation-agents-md
+- tier: notify (auto-merge on green)
+- plan: --auto launch by the human 2026-10-08 (review_release 2026.10.7.1 follow-up); plan on the issue

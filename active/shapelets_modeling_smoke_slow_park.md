@@ -13,6 +13,7 @@ Consequence: glance
 Witness: config/build/no_run.yaml parks scripts/multi_galaxy/features/advanced/shapelets/modeling.py (.py-anchored) and the release-profile smoke run no longer lists/attempts it.
 Review-minutes: 3
 Unattended: ready
+Issued: 2026-10-08
 
 # Park the autolens shapelets modeling smoke script that times out in release smoke
 

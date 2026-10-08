@@ -13,6 +13,7 @@ Consequence: notify
 Witness: autoassistant wiki-currency `--check-citations` on autolens_assistant reports 0 missing cited paths.
 Review-minutes: 0
 Unattended: ready
+Issued: 2026-10-08
 
 # Repoint autolens_assistant wiki citation from retired autolens_workspace CLAUDE.md to AGENTS.md
 
