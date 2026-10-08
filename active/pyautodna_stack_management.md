@@ -128,3 +128,5 @@ Human acknowledged the recorded Heart YELLOW warning with “yes proceed”. Re-
 Source commits: Mind 1de20993; Brain b83a616; DNA 69642c3; Scientist a17a009. Saved validation: 1,979 tests plus 12 browser cases; source whitespace normalized during staged diff check. Applicable live CLI/render/feed smoke passed; scientific workspace migration/smoke is not applicable because scientific APIs/scripts are unchanged.
 
 Status: library-shipped, awaiting-merge. Merge via human /prm in Mind → Brain → DNA → Scientist order. DNA CI consumes Brain main and requires its shared-theme change. Pages configuration/publication and remaining generated-map propagation belong to post-merge close-out. Do not close #509 until all consumers land. No environment upgrades, scheduled jobs or compute submissions performed.
+
+Initial CI read: Scientist passed; Brain matrix pending; Mind privacy/firewall passed with drift skipped. DNA Python3.13 failed at Brain prompt_heading with KeyError dna (expected unmerged Brain #510 dependency); Python3.12 cancelled by fail-fast. Merge Brain #510 and rerun BOTH DNA legs before DNA merge. No green-CI claim.
