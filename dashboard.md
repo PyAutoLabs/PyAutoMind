@@ -797,7 +797,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/organ_banner_task_labels.md">Organ banner task labels</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/513">issue #513</a> — issued 2026-10-08 — library-dev</summary>
+<details><summary>📋 <a href="active/organ_banner_task_labels.md">Organ banner task labels</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/513">issue #513</a> — issued 2026-10-08 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/514">PyAutoBrain#514</a></summary>
 
 ```
 Use the start-dev skill. active/organ_banner_task_labels.md
