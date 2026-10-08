@@ -12,7 +12,7 @@
 | [Epics](#epics) | 16 |
 | [In flight](#in-flight) | 5 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 239 |
+| [Backlog](#backlog) | 240 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -1976,7 +1976,7 @@ Use the start-dev skill. draft/research/autofit/search_extensibility_epic_survey
 </details>
 
 <details>
-<summary><b>maintenance</b> — 21</summary>
+<summary><b>maintenance</b> — 22</summary>
 
 <details><summary>📋 <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> — organs · medium · supervised · high</summary>
 
@@ -2142,6 +2142,14 @@ Use the start-dev skill. draft/maintenance/euclid/skip_fit_output_no_longer_gate
 
 ```
 Use the start-dev skill. draft/maintenance/pyautomind/session_start_hook_copies_regen.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/pyautobrain/dashboard_control_labels.md">Standardize dashboard controls and remove redundant chrome</a> — pyautobrain · medium</summary>
+
+```
+Use the start-dev skill. draft/maintenance/pyautobrain/dashboard_control_labels.md
 ```
 
 </details>
@@ -2585,7 +2593,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-73 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+74 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2630,7 +2638,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/docs/autolens/split_lensing_regimes.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
 - `draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md`
-- _… and 33 more_
+- _… and 34 more_
 
 </details>
 
