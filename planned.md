@@ -117,5 +117,7 @@
 - blocked-by: search-ext-a0b-hygiene (using PyAutoFit)
 - affected-repos:
   - PyAutoFit
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1673 (base = feature/search-ext-a0b-hygiene; merge after PyAutoFit#1672)
+- status: shipped stacked, awaiting A0b merge then human /prm — 3207 passed / 2 skipped / 9 xfailed (6 new strict xfails: Dynesty×2 → A3 savestate deletion; Emcee/Zeus/NUTS/SMC → A4 import-time AutoCorrelationsSettings default); review CLEAN
 - autonomy: --auto launch 2026-10-08; effective safe (test); Consequence judge; the stacked PR is opened under this launch and merges by human /prm after A0b
 
