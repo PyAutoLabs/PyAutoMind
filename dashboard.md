@@ -789,7 +789,7 @@ Use the start-dev skill. active/board_one_click_update.md
 
 </details>
 
-<details><summary>📋 <a href="active/closed_followup_window.md">Limit closed-thread follow-up attention to 30 days</a> — <a href="https://github.com/PyAutoLabs/PyAutoEars/issues/25">issue #25</a> — issued 2026-10-08 — library-dev</summary>
+<details><summary>📋 <a href="active/closed_followup_window.md">Limit closed-thread follow-up attention to 30 days</a> — <a href="https://github.com/PyAutoLabs/PyAutoEars/issues/25">issue #25</a> — issued 2026-10-08 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoEars/pull/26">PyAutoEars#26</a></summary>
 
 ```
 Use the start-dev skill. active/closed_followup_window.md
