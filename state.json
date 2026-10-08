@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-10-08T12:04:48Z",
+  "updated": "2026-10-08T12:24:56Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "Search capability declarations, fail-fast gate, lazy registry and the run(ctx) design note\u2026 \u2014 library-shipped + workspace-shipped, awaiting-merge \u2014 4 PRs opened 2026-10-08 under --auto (decide-and-flag, `decision-taken` on\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1675",
       "prompt": "Use the start-dev skill. active/search_extensibility_a1_declare_gate_registry.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "autofit_inference harness, gaussian_x3 datasets, pre-registered protocol and reference posteriors\u2026 \u2014 workspace-shipped, awaiting-merge \u2014 autofit_inference#3 opened 2026-10-08 under --auto (decide-and-flag, `decision-taken`); first\u2026",
+      "url": "https://github.com/PyAutoLabs/autofit_inference/pull/3",
+      "prompt": "Use the start-dev skill. active/search_extensibility_b2_harness_protocol.md"
     },
     {
       "severity": "yellow",
@@ -120,12 +126,6 @@
       "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Reduce the organism's per-session and per-task token load by half",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/organs/reduce_session_token_load.md",
-      "prompt": "Use the start-dev skill. draft/maintenance/organs/reduce_session_token_load.md"
     }
   ]
 }

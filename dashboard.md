@@ -813,7 +813,7 @@ Use the start-dev skill. active/search_extensibility_a1_declare_gate_registry.md
 
 </details>
 
-<details><summary>📋 <a href="active/search_extensibility_b2_harness_protocol.md">autofit_inference harness, gaussian_x3 datasets, pre-registered protocol and reference posteriors…</a> — <a href="https://github.com/PyAutoLabs/autofit_inference/issues/2">issue #2</a> — issued 2026-10-08 — workspace-dev</summary>
+<details><summary>📋 <a href="active/search_extensibility_b2_harness_protocol.md">autofit_inference harness, gaussian_x3 datasets, pre-registered protocol and reference posteriors…</a> — <a href="https://github.com/PyAutoLabs/autofit_inference/issues/2">issue #2</a> — issued 2026-10-08 — workspace-shipped, awaiting-merge — autofit_inference#3 opened 2026-10-08 under --auto (decide-and-flag, <code>decision-taken</code>); first… — PRs: <a href="https://github.com/PyAutoLabs/autofit_inference/pull/3">autofit_inference#3</a></summary>
 
 ```
 Use the start-dev skill. active/search_extensibility_b2_harness_protocol.md
