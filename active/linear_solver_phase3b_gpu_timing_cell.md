@@ -11,8 +11,10 @@ Difficulty: moderate
 Autonomy: supervised
 Priority: medium
 Consequence: judge
-Status: draft
+Status: active
 Filed: 2026-10-07
+Issued: 2026-10-08
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/395
 Depends-on: complete/2026/10/linear-solver-p3a-a100-parity.md (private base + parity rows; shipped autolens_profiling#394)
 Pulse task: https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/mge_nnls_fix_pyautoarray_571_slam_60.md
 

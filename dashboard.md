@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 16 |
-| [In flight](#in-flight) | 1 |
+| [In flight](#in-flight) | 2 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 239 |
+| [Backlog](#backlog) | 238 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -772,6 +772,14 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 </details>
 
 ## In flight
+
+<details><summary>📋 <a href="active/linear_solver_phase3b_gpu_timing_cell.md">Linear-solver programme phase 3b: GPU/vmap timing cell for the solver corpus…</a> — issued 2026-10-08</summary>
+
+```
+Use the start-dev skill. active/linear_solver_phase3b_gpu_timing_cell.md
+```
+
+</details>
 
 <details><summary>📋 <a href="active/search_extensibility_a0c_fit_repair.md">Search documentation and coverage repair, fit family + Brain…</a> — issued 2026-10-08</summary>
 
@@ -1723,7 +1731,7 @@ Use the start-dev skill. draft/feature/autoarray/adapt_linear_default_flip.md
 </details>
 
 <details>
-<summary><b>research</b> — 27</summary>
+<summary><b>research</b> — 26</summary>
 
 <details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon</a> — autofit · large · human-required · high</summary>
 
@@ -1753,14 +1761,6 @@ Use the start-dev skill. draft/research/autoarray/delaunay_research.md
 
 ```
 Use the start-dev skill. draft/research/autoarray/delaunay_callback_persistent_cache_miss.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/linear_solver_phase3b_gpu_timing_cell.md">Linear-solver programme phase 3b: GPU/vmap timing cell for the solver corpus…</a> — autolens_profiling · moderate · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/research/autolens_profiling/linear_solver_phase3b_gpu_timing_cell.md
 ```
 
 </details>
@@ -2450,8 +2450,8 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | Date | Event | Task |
 |------|-------|------|
 | 2026-10-08 | issued | <a href="active/search_extensibility_a0c_fit_repair.md">Search documentation and coverage repair, fit family + Brain…</a> |
+| 2026-10-08 | issued | <a href="active/linear_solver_phase3b_gpu_timing_cell.md">Linear-solver programme phase 3b: GPU/vmap timing cell for the solver…</a> |
 | 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
-| 2026-10-07 | filed | <a href="draft/research/autolens_profiling/linear_solver_phase3b_gpu_timing_cell.md">Linear-solver programme phase 3b: GPU/vmap timing cell for the solver…</a> |
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
 | 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
@@ -2553,7 +2553,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-73 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+72 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2598,11 +2598,11 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/docs/howtolens/cluster_pixelized_source.md`
 - `draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md`
 - `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
-- _… and 33 more_
+- _… and 32 more_
 
 </details>
 
-69 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+68 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2673,7 +2673,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/research/autofit/hpc_campaign_epic.md — unknown theme keyword(s): hpc, euclid, carbon`
 - `draft/research/autofit/search_extensibility_epic.md — unknown theme keyword(s): searches, jax, documentation, inference`
 - `draft/research/autolens_assistant/free_agent_harness_evaluation.md — unknown theme keyword(s): assistant, support-policy`
-- `draft/research/autolens_profiling/linear_solver_phase3b_gpu_timing_cell.md — unknown theme keyword(s): linear-solver, gpu`
 - `draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md — unknown theme keyword(s): euclid, hpc`
 - `draft/triage/autolens/jit_fit_from_is_vacuous.md — unknown theme keyword(s): testing, jax`
 
