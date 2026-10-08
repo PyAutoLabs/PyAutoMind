@@ -35,19 +35,6 @@
 - tier: judge (human /prm)
 - heart-ack: STALE at launch (release validation incomplete: no rehearsal for current source)
 
-## timing-noise-audit-p3-qualify-drift
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/362
-- issued: 2026-10-02
-- session: Claude Code CLI (Opus 5.5 worker under --auto, supervised), session 016CCA6BtzDgw16aUaVuzzL9
-- status: awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/timing-noise-audit-p3-qualify-drift
-- repos:
-  - autolens_profiling: feature/timing-noise-audit-p3-qualify-drift
-- tier: judge (human /prm)
-- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/405
-- heart-ack: YELLOW reason set (8 manifest drift + no rehearsal for current source) human-acknowledged in chat 2026-10-08, this PR only
-- decision: drifted/improved keep status + single-sample caveat (human decision 2026-10-08)
-
 ## organ-banner-task-labels
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/organ-banner-task-labels
 - repos:
