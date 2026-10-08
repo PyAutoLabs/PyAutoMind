@@ -1,3 +1,21 @@
+## pyautodna-stack-management
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/509
+- completed: 2026-10-08
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/494
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/510
+- library-pr: https://github.com/PyAutoLabs/PyAutoDNA/pull/1
+- library-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/51
+
+Implemented DNA software stack specifications, real environment inventories, compatibility audits, support rationale, campaign evidence gates and standard dashboard integration. Source commits, installed versions, upstream releases and supplied validation remain distinct. No environment upgrades or compute submissions performed.
+
+All four PRs merged in dependency order under human /prm authorization. DNA initial CI failed because Brain main lacked its new heading; after merging Brain, both push and pull-request runs passed both Python 3.12 and 3.13 legs. Brain matrix/docs and Scientist tests passed; Mind privacy/firewall passed, with conditional drift job skipped. Local validation: 1979 tests and 12 browser cases passed.
+
+Two of seven environment surfaces observed: local and RAL login. Five declaration mismatches, including installed JAX/JAXlib 0.10.2; compute-node and CI inventory evidence remains unknown. No implied stack certification or automatic upgrade cadence.
+
+Heart YELLOW85 warning acknowledged before shipping; no release authorization. Worktree retained pending user's ignored-evidence cleanup choice. Pages publication and broader generated-map propagation remain operational follow-up, not a claim that every board is already updated.
+
+## Original prompt
+
 # PyAutoDNA: software stacks and compatibility
 
 Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/509

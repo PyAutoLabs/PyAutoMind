@@ -12,7 +12,7 @@
 | [Epics](#epics) | 16 |
 | [In flight](#in-flight) | 4 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 242 |
+| [Backlog](#backlog) | 241 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -781,18 +781,18 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/board_one_click_update.md">One-click board Update</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/504">issue #504</a> — issued 2026-10-08 — library-dev</summary>
+<details><summary>📋 <a href="active/assistant-management-organ.md">Assistant evaluation and upkeep organ</a> — <a href="https://github.com/PyAutoLabs/PyAutoBroca/issues/1">issue #1</a> — issued 2026-10-08 — library-dev</summary>
 
 ```
-Use the start-dev skill. active/board_one_click_update.md
+Use the start-dev skill. active/assistant-management-organ.md
 ```
 
 </details>
 
-<details><summary>📋 <a href="active/pyautodna_stack_management.md">PyAutoDNA: software stacks and compatibility</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/509">issue #509</a> — issued 2026-10-08 — library-shipped, awaiting-merge — four review PRs open; human /prm in Mind → Brain → DNA → Scientist order — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/494">PyAutoMind#494</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/510">PyAutoBrain#510</a>, <a href="https://github.com/PyAutoLabs/PyAutoDNA/pull/1">PyAutoDNA#1</a>, <a href="https://github.com/PyAutoLabs/PyAutoScientist/pull/51">PyAutoScientist#51</a></summary>
+<details><summary>📋 <a href="active/board_one_click_update.md">One-click board Update</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/504">issue #504</a> — issued 2026-10-08 — library-dev</summary>
 
 ```
-Use the start-dev skill. active/pyautodna_stack_management.md
+Use the start-dev skill. active/board_one_click_update.md
 ```
 
 </details>
@@ -1494,7 +1494,7 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>feature</b> — 33</summary>
+<summary><b>feature</b> — 32</summary>
 
 <details><summary>📋 <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding against the raw maximum finds…</a> — autoarray · small · supervised · medium</summary>
 
@@ -1716,14 +1716,6 @@ Use the start-dev skill. draft/feature/jax_substructure/5_prng_key_vmap_noise.md
 
 ```
 Use the start-dev skill. draft/feature/jax_substructure/6_deflection_equivalence_test.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautobrain/assistant-management-organ.md">Assistant evaluation and upkeep organ</a> — pyautobrain · human-required · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautobrain/assistant-management-organ.md
 ```
 
 </details>
@@ -2499,8 +2491,8 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 |------|-------|------|
 | 2026-10-08 | issued | <a href="active/search_extensibility_b2_harness_protocol.md">autofit_inference harness, gaussian_x3 datasets, pre-registered…</a> |
 | 2026-10-08 | issued | <a href="active/search_extensibility_a1_declare_gate_registry.md">Search capability declarations, fail-fast gate, lazy registry and the…</a> |
-| 2026-10-08 | issued | <a href="active/pyautodna_stack_management.md">PyAutoDNA: software stacks and compatibility</a> |
 | 2026-10-08 | issued | <a href="active/board_one_click_update.md">One-click board Update</a> |
+| 2026-10-08 | issued | <a href="active/assistant-management-organ.md">Assistant evaluation and upkeep organ</a> |
 | 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
 | 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
@@ -2603,7 +2595,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-76 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+75 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2624,7 +2616,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/euclid/euclid_dr1_prep_epic.md`
 - `draft/feature/jax_substructure/5_prng_key_vmap_noise.md`
 - `draft/feature/jax_substructure/6_deflection_equivalence_test.md`
-- `draft/feature/pyautobrain/assistant-management-organ.md`
 - `draft/feature/pyautoears/community_organ_birth.md`
 - `draft/feature/pyautoeyes/group_cluster_gallery.md`
 - `draft/feature/pyautoeyes/multi_galaxy_gallery.md`
@@ -2648,7 +2639,8 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/refactor/workspaces/abell_1201_local_cleanup.md`
 - `draft/docs/autolens/split_lensing_regimes.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
-- _… and 36 more_
+- `draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md`
+- _… and 35 more_
 
 </details>
 
