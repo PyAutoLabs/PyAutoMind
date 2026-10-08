@@ -12,7 +12,7 @@
 | [Epics](#epics) | 16 |
 | [In flight](#in-flight) | 4 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 240 |
+| [Backlog](#backlog) | 243 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -248,7 +248,7 @@ Use the start-dev skill. draft/feature/autofit/results_library_epic_report.md
 </details>
 
 <details>
-<summary><b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — 2 queued prompt(s), in order</summary>
+<summary><b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — 5 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — ledger: `draft/research/autofit/search_extensibility_epic.md` — filed 2026-10-07; scoped (4 Opus surveys) and independently reviewed (Codex gpt-6-astra, Claude Fable high) the same day; all §5…</summary>
 
@@ -266,10 +266,34 @@ Use the start-dev skill. draft/bug/autofit/drawer_crashes_under_nullpaths_timer_
 
 </details>
 
+<details><summary>📋 <a href="draft/docs/autolens/search_extensibility_a0c_downstream_sweep.md">Search documentation repair, downstream sweep (epic search-extensibility, phase A0c part 2)</a> — autolens · medium · safe · high</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens/search_extensibility_a0c_downstream_sweep.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/autofit/search_extensibility_a0b_hygiene.md">Search hygiene and dead code (epic search-extensibility, phase A0b)</a> — autofit · medium · safe · high</summary>
+
+```
+Use the start-dev skill. draft/refactor/autofit/search_extensibility_a0b_hygiene.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/research/autofit/search_extensibility_epic.md">Search extensibility epic: a PyAutoFit search framework for many samplers, a unified…</a> — autofit · large · human-required · high</summary>
 
 ```
 Use the start-dev skill. draft/research/autofit/search_extensibility_epic.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/test/autofit/search_extensibility_a0a2_backend_conformance.md">Search conformance suite, layer (ii): backend execution on the full-extras legs…</a> — autofit · medium · safe · high</summary>
+
+```
+Use the start-dev skill. draft/test/autofit/search_extensibility_a0a2_backend_conformance.md
 ```
 
 </details>
@@ -2634,7 +2658,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-69 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+72 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2694,11 +2718,14 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md — unknown theme keyword(s): ci, robustness`
 - `draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md — unknown theme keyword(s): ci, robustness`
 - `draft/refactor/autofit/ep_analysis_level_compile_cache.md — unknown theme keyword(s): jax`
+- `draft/refactor/autofit/search_extensibility_a0b_hygiene.md — unknown theme keyword(s): searches, jax`
 - `draft/refactor/autolens/cache_readers_fall_back_to_zip_member.md — unknown theme keyword(s): aggregator, paths`
 - `draft/refactor/autolens/witt_wynne_solver_library_home.md — unknown theme keyword(s): euclid`
 - `draft/refactor/autonerves/config_yaml_parse_cache.md — unknown theme keyword(s): performance, ci`
 - `draft/docs/autofit/howtofit_chapter_3_prose_references.md — unknown theme keyword(s): autofit`
+- `draft/docs/autolens/search_extensibility_a0c_downstream_sweep.md — unknown theme keyword(s): searches, documentation`
 - `draft/docs/howtofit/tutorial_4_runtime_claim.md — unknown theme keyword(s): tutorials`
+- `draft/test/autofit/search_extensibility_a0a2_backend_conformance.md — unknown theme keyword(s): searches, jax, ci`
 - `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
 - `draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md — unknown theme keyword(s): euclid, docs`
 - `draft/maintenance/howtofit/minimum_library_version_stale.md — unknown theme keyword(s): version-handshake, tutorials`
