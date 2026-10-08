@@ -12,7 +12,7 @@
 | [Epics](#epics) | 16 |
 | [In flight](#in-flight) | 2 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 239 |
+| [Backlog](#backlog) | 241 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -116,7 +116,7 @@ Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 108
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 110
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -138,6 +138,14 @@ Use the start-dev skill. draft/feature/pyautohands/smoke_profile_cannot_see_a_mi
 
 ```
 Use the start-dev skill. draft/refactor/autonerves/config_yaml_parse_cache.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autolens_assistant/sandbox_citation_agents_md.md">Repoint autolens_assistant wiki citation from retired autolens_workspace CLAUDE.md to AGENTS.md</a> — autolens_assistant · small · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/maintenance/autolens_assistant/sandbox_citation_agents_md.md
 ```
 
 </details>
@@ -202,14 +210,6 @@ Use the start-dev skill. draft/test/autolens_workspace_test/jax_zero_contour.md
 
 ```
 Use the start-dev skill. draft/feature/pyautobrain/batch_slice.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/refactor/pyautofit/remove_eden_packaging_tooling.md">Remove the dead EDEN packaging tooling from PyAutoFit</a> — pyautofit · medium · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/refactor/pyautofit/remove_eden_packaging_tooling.md
 ```
 
 </details>
@@ -1952,7 +1952,7 @@ Use the start-dev skill. draft/research/autofit/search_extensibility_epic_survey
 </details>
 
 <details>
-<summary><b>maintenance</b> — 21</summary>
+<summary><b>maintenance</b> — 23</summary>
 
 <details><summary>📋 <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> — organs · medium · supervised · high</summary>
 
@@ -1974,6 +1974,22 @@ Use the start-dev skill. draft/maintenance/workspaces/hpc_cache_off_home_phase2_
 
 ```
 Use the start-dev skill. draft/maintenance/workspaces/sync_remaining_workspace_config_priors_copies.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autolens_assistant/sandbox_citation_agents_md.md">Repoint autolens_assistant wiki citation from retired autolens_workspace CLAUDE.md to AGENTS.md</a> — autolens_assistant · small · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/maintenance/autolens_assistant/sandbox_citation_agents_md.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autolens_workspace/shapelets_modeling_smoke_slow_park.md">Park the autolens shapelets modeling smoke script that times out in release…</a> — autolens_workspace · small · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/maintenance/autolens_workspace/shapelets_modeling_smoke_slow_park.md
 ```
 
 </details>
