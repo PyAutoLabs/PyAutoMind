@@ -12,7 +12,7 @@
 | [Epics](#epics) | 16 |
 | [In flight](#in-flight) | 2 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 238 |
+| [Backlog](#backlog) | 239 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -248,12 +248,20 @@ Use the start-dev skill. draft/feature/autofit/results_library_epic_report.md
 </details>
 
 <details>
-<summary><b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — 1 queued prompt(s), in order</summary>
+<summary><b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — 2 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — ledger: `draft/research/autofit/search_extensibility_epic.md` — filed 2026-10-07; scoped (4 Opus surveys) and independently reviewed (Codex gpt-6-astra, Claude Fable high) the same day; all §5…</summary>
 
 ```
 Continue the 'Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos' epic. Its canonical state lives in draft/research/autofit/search_extensibility_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: two dependency-ordered tracks. Track A (PyAutoFit framework): A0a(i) metadata conformance → A0b hygiene → A0a(ii) backend conformance; A0c repair PRs; A1 declare + gate (after the test-mode bypass) + declarative lazy registry + `run(ctx)` design note; A2 objective factory + fork rule + `run(ctx)` bridge (Drawer, Nautilus proofs); A3 RawSamples adapter + Checkpointer/resume split; A3b NSS onto Fitness + trace preflight + x64; A4 decompose NonLinearSearch + delete family bases (deprecated thin subclasses one release) + search-level seed with the legacy identifier table; A5 per-search migrations + generated consumers. Track B (repos): B1 registration (Mind repos.yaml → repos_sync, Heart excluded, Cortex row, Pulse `fit` @profiling-summary@2, Insight `fit` @inference-summary@1; adopts PyAutoPulse `tasks/autofit_profiling_bootstrap.md`), B2 harness + `gaussian_x3_blend`/`_separated` + pre-registered protocol + per-backend reference posteriors, B3 wave-1 PILOT (ranks nothing) + Insight registration + catalogue, B4a breakdown exporter + Pulse row + epic-1 bottleneck table / B4b EP baseline port, B5 consumers + scored wave 2 (50 seeds, RAL `ral` only, after A2 and A4). Human rulings 2026-10-07: RTD generic example stays DynestyStatic; SMC → weighted/evidence; deprecate `use_jax_jit`/`use_jax_vmap`; in-flight samplers target `run(ctx)` from A2. Start order: A0a(i), A0c and B1 registration first; issue ONE phase at a time through `start_dev`.
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/drawer_crashes_under_nullpaths_timer_none.md">Drawer crashes under NullPaths: <code>self.timer</code> is None when <code>_fit</code> records time</a> — autofit · small · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/autofit/drawer_crashes_under_nullpaths_timer_none.md
 ```
 
 </details>
@@ -781,7 +789,7 @@ Use the start-dev skill. active/linear_solver_phase3b_gpu_timing_cell.md
 
 </details>
 
-<details><summary>📋 <a href="active/search_extensibility_a0c_fit_repair.md">Search documentation and coverage repair, fit family + Brain…</a> — issued 2026-10-08</summary>
+<details><summary>📋 <a href="active/search_extensibility_a0c_fit_repair.md">Search documentation and coverage repair, fit family + Brain…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1668">issue #1668</a> — issued 2026-10-08 — library-dev</summary>
 
 ```
 Use the start-dev skill. active/search_extensibility_a0c_fit_repair.md
@@ -2553,7 +2561,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-72 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+73 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2581,6 +2589,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/workspaces/model_figures_6_rollout.md`
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md`
+- `draft/bug/autofit/drawer_crashes_under_nullpaths_timer_none.md`
 - `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
 - `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md`
@@ -2597,12 +2606,11 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/docs/autolens/split_lensing_regimes.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
 - `draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md`
-- `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
-- _… and 32 more_
+- _… and 33 more_
 
 </details>
 
-68 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+69 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2634,6 +2642,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md — unknown theme keyword(s): sparse-operator`
 - `draft/bug/autocti_visualization/render_yml_blocked_until_pyautocti_release.md — unknown theme keyword(s): infrastructure`
 - `draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md — unknown theme keyword(s): jax`
+- `draft/bug/autofit/drawer_crashes_under_nullpaths_timer_none.md — unknown theme keyword(s): searches`
 - `draft/bug/autofit/mcmc_thin_zero_and_check_size_short_chain.md — unknown theme keyword(s): mcmc, test-mode, robustness`
 - `draft/bug/autofit/model_from_json_drops_zero_free_parameter_components.md — unknown theme keyword(s): serialization`
 - `draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md — unknown theme keyword(s): nautilus`
