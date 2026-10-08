@@ -72,3 +72,7 @@ Heart YELLOW reasons (2026-10-08T11:33:17.112822+00:00):
 - release validation incomplete: no rehearsal for current source
 
 Next: obtain acknowledgement of the exact reason set, then commit/push/create PR via ship-library. No scientific workspace migration required; merge stays human /prm. Live dashboard unchanged until merge/publication.
+
+## Ship — 2026-10-08
+
+User acknowledged the recorded Heart YELLOW reasons and explicitly authorized push then prm. Commit 41ec5c532ae263c3835d274da9ec6a5799dce1c0; PR https://github.com/PyAutoLabs/PyAutoBrain/pull/508. Awaiting CI before authorized merge and full close-out.

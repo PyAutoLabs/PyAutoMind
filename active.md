@@ -67,13 +67,16 @@
 - issued: 2026-10-08
 - prompt: active/brain_dashboard_scope.md
 - session: Codex CLI, session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/brain-dashboard-scope
 - repos:
   - PyAutoBrain: feature/brain-dashboard-scope
 - coordination: user approved separate work alongside #504; no shared theme or board_update edits
 - tier: judge (human /prm)
-- next: implementation and validation complete locally; awaiting Heart YELLOW acknowledgement before commit/push/PR (see #507 checkpoint)
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/508
+- heart-ack: user acknowledged exact YELLOW reasons (manifest drift 1 mismatch; no rehearsal for current source), then authorized push and prm
+- merge-authority: explicit user prm in current session, conditional on green CI
+- next: judge all CI for 41ec5c5, merge PR #508 when green, close #507 and clean task worktree
 
 ## eyes-focused-figure-browser
 - issue: https://github.com/PyAutoLabs/PyAutoEyes/issues/25
