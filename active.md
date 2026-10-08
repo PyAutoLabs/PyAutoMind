@@ -60,3 +60,17 @@
   - autolens_assistant: feature/sandbox-citation-agents-md
 - tier: notify (auto-merge on green)
 - plan: --auto launch by the human 2026-10-08 (review_release 2026.10.7.1 follow-up); plan on the issue
+
+## inference-setup-contract
+- issue: https://github.com/PyAutoLabs/PyAutoInsight/issues/13
+- issued: 2026-10-08
+- prompt: active/inference_setup_contract.md
+- epic: inference-setup-redesign (phase 1)
+- session: Codex GPT-6; session ID unavailable
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/inference-setup-contract
+- repos:
+  - PyAutoInsight: feature/inference-setup-contract
+- tier: judge (human /prm)
+- plan: approved in conversation; "ok begin" after baseline and cold/warm/resume refinements. Reader first, v1 retained; no compute or merge authorized.
+- remaining: validate v2 setup/baseline/experiment contract, test, ship PR; subsequent producer/UI/wiki/candidate phases remain in parent prompt.
