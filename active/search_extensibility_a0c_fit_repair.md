@@ -17,7 +17,9 @@ Difficulty: medium
 Autonomy: supervised
 Priority: high
 Epic: search-extensibility
-Status: draft
+Status: active
+Issued: 2026-10-08
+Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1668
 Filed: 2026-10-07
 
 Phase A0c of the search-extensibility epic (`draft/research/autofit/search_extensibility_epic.md`;
