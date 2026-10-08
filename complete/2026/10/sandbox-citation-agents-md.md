@@ -1,3 +1,10 @@
+Repointed the autolens_workspace citation in `autolens_assistant/wiki/core/operations/sandbox.md` from the retired `CLAUDE.md` (deleted 2026-10-07 by repos_sync) to `AGENTS.md`. That stale citation was the only failure in the release `wiki_currency_check / wiki-currency` job on `--check-citations` (PyAutoHands release run 37653172766, 2026.10.7.1). Locally the citation check went from 1 missing path to 0. autogalaxy_assistant, autofit_assistant and autocti_assistant were already at 0 missing, so nothing changed there.
+
+- PR: PyAutoLabs/autolens_assistant#155. Merged 2026-10-08 by the --auto shipping session (tier notify, CI green: boundary and wiki-currency).
+- Gate: tests 207 passed, 1 skipped, 9 errors. The errors are pre-existing on main: test_forward_model_consistency is pinned to autolens==2026.9.27.2. Smoke n/a (wiki frontmatter only). Independent Opus review CLEAN. Heart STALE.
+
+## Original prompt
+
 # Repoint autolens_assistant wiki citation from retired autolens_workspace CLAUDE.md to AGENTS.md
 
 Type: maintenance

@@ -50,17 +50,6 @@
 - tier: glance (auto-merge on green if Witness passes)
 - plan: --auto launch by the human 2026-10-08 (review_release 2026.10.7.1 follow-up); plan on the issue
 
-## sandbox-citation-agents-md
-- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/154
-- issued: 2026-10-08
-- session: Claude CLI (Opus 5.5 worker, --auto); session ID unavailable
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/sandbox-citation-agents-md
-- repos:
-  - autolens_assistant: feature/sandbox-citation-agents-md
-- tier: notify (auto-merge on green)
-- plan: --auto launch by the human 2026-10-08 (review_release 2026.10.7.1 follow-up); plan on the issue
-
 ## inference-setup-contract
 - issue: https://github.com/PyAutoLabs/PyAutoInsight/issues/13
 - issued: 2026-10-08
