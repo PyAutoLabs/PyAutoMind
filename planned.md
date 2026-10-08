@@ -9,6 +9,7 @@
 - [latent-nan-guard-honest-run](#latent-nan-guard-honest-run)
 - [knn-partial-point-block](#knn-partial-point-block)
 - [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
+- [search-ext-a0a2-backend-conformance](#search-ext-a0a2-backend-conformance)
 
 <!-- toc:end -->
 
