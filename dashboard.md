@@ -12,7 +12,7 @@
 | [Epics](#epics) | 16 |
 | [In flight](#in-flight) | 4 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 242 |
+| [Backlog](#backlog) | 243 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -892,7 +892,7 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 </details>
 
-<details><summary>📋 <b>search-ext-a3-samples-checkpointer</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1677">issue #1677</a> — planned 2026-10-08</summary>
+<details><summary>📋 <b>search-ext-a3-samples-checkpointer</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1677">issue #1677</a> — planned 2026-10-08 — shipped stacked, awaiting A2 merge then human /prm — 3531 passed / 4 strict xfails left (A4's); goldens byte-identical…</summary>
 
 ```
 Use the start-dev skill. draft/refactor/autofit/search_extensibility_a3_samples_checkpointer.md
@@ -1518,7 +1518,7 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>feature</b> — 32</summary>
+<summary><b>feature</b> — 33</summary>
 
 <details><summary>📋 <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding against the raw maximum finds…</a> — autoarray · small · supervised · medium</summary>
 
@@ -1772,6 +1772,14 @@ Use the start-dev skill. draft/feature/workspaces/gallery_runner_missing_tiers.m
 
 ```
 Use the start-dev skill. draft/feature/autoarray/adapt_linear_default_flip.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/organ_banner_task_labels.md">Organ banner task labels</a> — pyautobrain</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/organ_banner_task_labels.md
 ```
 
 </details>
@@ -2619,7 +2627,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-74 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+75 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2640,6 +2648,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/euclid/euclid_dr1_prep_epic.md`
 - `draft/feature/jax_substructure/5_prng_key_vmap_noise.md`
 - `draft/feature/jax_substructure/6_deflection_equivalence_test.md`
+- `draft/feature/pyautobrain/organ_banner_task_labels.md`
 - `draft/feature/pyautoears/community_organ_birth.md`
 - `draft/feature/pyautoeyes/group_cluster_gallery.md`
 - `draft/feature/pyautoeyes/multi_galaxy_gallery.md`
@@ -2663,8 +2672,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/docs/autolens/split_lensing_regimes.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
 - `draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md`
-- `draft/docs/workspaces/preloads_advanced_workspace_guide.md`
-- _… and 34 more_
+- _… and 35 more_
 
 </details>
 
