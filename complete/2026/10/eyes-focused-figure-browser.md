@@ -1,3 +1,28 @@
+# Focused figure browser for PyAutoEyes
+
+- Issue: https://github.com/PyAutoLabs/PyAutoEyes/issues/25 (closed)
+- PR: https://github.com/PyAutoLabs/PyAutoEyes/pull/26 (merged 2026-10-08)
+- Merge commit: be9cde14606c35e4c6213df0e35b6a6acca62e5e
+
+The overview now shows Library, Figures, rendering version and concise freshness.
+Library → dataset → figure navigation displays one selected image with matching
+review/improvement actions. Images load on demand and enlarge in an accessible
+in-page dialog. The visible gallery omits survey/repository/stack boilerplate;
+context markers, survey collection and Brain state-feed contracts remain intact.
+
+Validation: 87 pytest tests, Ruff, 12 Chromium cases across five widths and both
+themes plus phone/desktop iframe views, four real loaded PNGs, selection/actions,
+keyboard focus, clipboard, error/retry and response races. All 265 image URLs and
+manifest/state checks passed. GitHub lint run 37772907115 and every job/step passed,
+including Markdown link checks. Evidence retained in workspace
+`tmp/eyes-focused-figure-browser/` (logs, screenshots and browser results).
+
+Human approved the plan, acknowledged Heart YELLOW's unrelated workspace manifest
+drift (unregistered COWLS_COSMOS_Web_Lens_Survey checkout), and explicitly authorized
+shipping and /prm. No scientific API/workspace migration or release obligation.
+
+## Original prompt
+
 # Simplify the PyAutoEyes dashboard and browse one figure at a time
 
 Target: @PyAutoEyes
