@@ -1,3 +1,14 @@
+## drawer-nullpaths-timer-fix
+- issue: none (folded into PyAutoFit#1670, A0b)
+- completed: 2026-10-08
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1672
+- merge-commit: PyAutoFit 1d43b668
+
+### Outcome
+`af.Drawer` no longer crashes under `NullPaths`: `_fit` guards `self.timer` and `samples_via_internal_from` honours its `search_internal` argument; a unit test fits Drawer with default paths. Shipped inside A0b (PyAutoFit#1672). The autofit_workspace_test `Drawer.py` workaround is removed by the kwarg-typos follow-up draft.
+
+## Original prompt
+
 # Drawer crashes under NullPaths: `self.timer` is None when `_fit` records time
 
 Type: bug

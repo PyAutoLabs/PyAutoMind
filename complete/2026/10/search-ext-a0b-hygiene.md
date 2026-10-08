@@ -1,3 +1,19 @@
+## search-ext-a0b-hygiene
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1670
+- completed: 2026-10-08
+- epic: search-extensibility (phase A0b)
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1672
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1672
+- merge-commit: PyAutoFit 1d43b668
+
+### Outcome
+Hygiene and dead code out of the non-linear search layer: `make_sneakier_pool`/`SneakierPool`, the unread `iterations`, Zeus's dead autocorrelation block and the duplicated `_log_process_state` are gone; Drawer runs under `NullPaths` and honours `search_internal`; Nautilus no longer mutates `iterations_per_full_update`; `AbstractNest` defaults `number_of_cores=1`; unknown constructor kwargs warn; `samples_from` falls back only on `(FileNotFoundError, NotImplementedError)` with a WARNING; samples convert once per update and Emcee computes autocorrelation once per conversion; BlackJAXNUTS/SMC load from their own `search.json` (kind strings), deleting the A0a(i) `ROUND_TRIP_XFAIL` with identifiers unchanged; stale docstrings fixed; MLE tests moved `optimize/` → `mle/` (move-only commit). First `--auto` library phase of the epic (Opus worker, Fable review, human /prm).
+
+### Validation and limits
+3073 passed / 2 skipped / 3 xfailed (A3's strict xfails only); nojax emulation 915 passed; afW `searches/{mcmc,nest,mle}` and afT `searches/{Emcee,Zeus,DynestyStatic,Nautilus,LBFGS,Drawer}` exit 0; CI green on all legs. Two reviewer items, accepted at merge: `SettingsSearch.search_dict_for(search_cls)` was added instead of changing `search_dict`'s shape (223 Nautilus call sites); the start-point plot passes `plot_search=False` after the narrowed except exposed a swallowed Emcee `AttributeError`. The kwarg warning caught real typos in workspace scripts, filed as `draft/bug/autofit/search_kwarg_typos_in_workspace_scripts.md`. Retires `draft/bug/autofit/drawer_crashes_under_nullpaths_timer_none.md`.
+
+## Original prompt
+
 # Search hygiene and dead code (epic search-extensibility, phase A0b)
 
 Type: refactor

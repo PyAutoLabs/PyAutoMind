@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1784 records across 9 buckets.
+1787 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -157,6 +157,7 @@ markers; everything below GENERATED is rebuilt.
 - [dashboard-prompt-budget](2026/10/dashboard-prompt-budget.md)
 - [dashboard-prose-followup](2026/10/dashboard-prose-followup.md)
 - [dashboard-section-disclosures](2026/10/dashboard-section-disclosures.md)
+- [drawer-nullpaths-timer-fix](2026/10/drawer-nullpaths-timer-fix.md)
 - [drop-legacy-claude-md-patterns](2026/10/drop-legacy-claude-md-patterns.md)
 - [ears-bootstrap](2026/10/ears-bootstrap.md)
 - [ears-followthrough](2026/10/ears-followthrough.md)
@@ -246,6 +247,8 @@ markers; everything below GENERATED is rebuilt.
 - [sandbox-citation-agents-md](2026/10/sandbox-citation-agents-md.md)
 - [scribbler-wave2-radial-panels-regrid](2026/10/scribbler-wave2-radial-panels-regrid.md)
 - [search-conformance-metadata](2026/10/search-conformance-metadata.md)
+- [search-ext-a0a2-backend-conformance](2026/10/search-ext-a0a2-backend-conformance.md)
+- [search-ext-a0b-hygiene](2026/10/search-ext-a0b-hygiene.md)
 - [search-ext-a0c-downstream](2026/10/search-ext-a0c-downstream.md)
 - [search-ext-a0c-fit-repair](2026/10/search-ext-a0c-fit-repair.md)
 - [search-ext-b1-registration](2026/10/search-ext-b1-registration.md)

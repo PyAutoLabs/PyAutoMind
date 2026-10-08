@@ -1,3 +1,19 @@
+## search-ext-a0a2-backend-conformance
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1671
+- completed: 2026-10-08
+- epic: search-extensibility (phase A0a(ii))
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1673
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1673
+- merge-commit: PyAutoFit cf1acd72
+
+### Outcome
+Layer (ii) of the search conformance suite: `test_autofit/non_linear/search/test_conformance_backend.py` executes all 15 searches at `PYAUTO_TEST_MODE=1` on the full-extras legs with real `DirectoryPaths` (exact output file set, completed-path resume, `NullPaths` fit, `samples_from` fallback contract, frozen `samples_info` key sets), skipping NSS, BlackJAXNUTS, SMC and MultiStart×4 on `unittest-nojax` by the declared `jax_use`/`jax_modules` roster attributes added to `conformance_roster.py`, never by `importorskip`. Implemented stacked on A0b's branch and merged after it.
+
+### Validation and limits
+3207 passed / 2 skipped / 9 xfailed; nojax emulation 71 passed, 65 capability skips; module ~55 s. Six strict xfails record real bugs for later phases: Dynesty×2 (A3: `savestate.save` is deleted after a completed fit, so a restored folder always falls back to `samples.csv`) and Emcee/Zeus/BlackJAXNUTS/SMC (A4: the import-time `AutoCorrelationsSettings` default ignores run-time test mode; the module gives Emcee a fresh settings object to keep its backend covered). Minor findings not tested: Drawer `samples_info["time"]` is `None` even with real paths; NSS writes `time` as a float where every other search writes a string.
+
+## Original prompt
+
 # Search conformance suite, layer (ii): backend execution on the full-extras legs (epic search-extensibility, phase A0a(ii))
 
 Type: test
