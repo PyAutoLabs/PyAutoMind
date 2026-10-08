@@ -789,7 +789,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/inference_sampler_literature.md">inference-sampler-literature</a> — <a href="https://github.com/PyAutoLabs/PyAutoMemory/issues/124">issue #124</a> — issued 2026-10-08 — workspace-dev</summary>
+<details><summary>📋 <a href="active/inference_sampler_literature.md">inference-sampler-literature</a> — <a href="https://github.com/PyAutoLabs/PyAutoMemory/issues/124">issue #124</a> — issued 2026-10-08 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMemory/pull/125">PyAutoMemory#125</a></summary>
 
 ```
 Use the start-dev skill. active/inference_sampler_literature.md
@@ -813,7 +813,7 @@ Use the start-dev skill. active/inference_setup_browser.md
 
 </details>
 
-<details><summary>📋 <a href="active/inference_setup_producer.md">inference-setup-producer</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/20">issue #20</a> — issued 2026-10-08 — workspace-dev</summary>
+<details><summary>📋 <a href="active/inference_setup_producer.md">inference-setup-producer</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/20">issue #20</a> — issued 2026-10-08 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_inference/pull/21">autolens_inference#21</a></summary>
 
 ```
 Use the start-dev skill. active/inference_setup_producer.md
