@@ -1,14 +1,5 @@
 # Active Tasks
 
-## linear-solver-p3b-gpu-timing
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/395
-- issued: 2026-10-08
-- session: Claude Code CLI (Fable 5.1), session 331e5f0e
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/linear-solver-p3b-gpu-timing
-- repos:
-  - autolens_profiling: feature/linear-solver-p3b-gpu-timing
-
 ## inference-setup-producer
 - issue: https://github.com/PyAutoLabs/autolens_inference/issues/20
 - issued: 2026-10-08
@@ -80,4 +71,3 @@
   - PyAutoFit: feature/search-ext-a0b-hygiene (+ feature/search-ext-a0a2-backend-conformance stacked on it for the A0a(ii) PR)
 - tier: judge (human /prm)
 - heart-ack: STALE at launch (release validation incomplete: no rehearsal for current source)
-
