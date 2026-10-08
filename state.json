@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-10-08T09:54:26Z",
+  "updated": "2026-10-08T10:01:05Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Campaign decision history on Pulse and Insight \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoInsight/pull/22",
+      "prompt": "Use the start-dev skill. active/decision_history.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -120,12 +126,6 @@
       "text": "pick: Fix Sibson interpolation at internal edges",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit/hpc_campaign_epic.md",
-      "prompt": "Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md"
     }
   ]
 }
