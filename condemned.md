@@ -506,3 +506,14 @@ One `##` block per item. Fields:
 - sweep-after: n/a (committed deletion; history-only)
 - breaks-if-wrong: a developer wanting the pre-mainline NSS prototype; recoverable with `git checkout 7cb97c6 -- searches/nss` in autofit_workspace_developer
 - archive-ref: n/a — committed deletion in the A0c PR; bytes recoverable from remote history at pre-delete SHA `7cb97c6d4380324beb6fc724e3edd5ad0592b549` (autofit_workspace_developer main, 2026-10-08)
+
+## autolens-profiling/linear-solver-p5-mapper-corpus-large-npz
+- type: branch
+- locator: feature/linear-solver-p5-mapper-corpus (autolens_profiling, tip 70e8a9f)
+- confidence: 0.99
+- reason: superseded by PR #401 (merged 2026-10-08, 766f8202), which re-landed the same phase-5 work from a fresh branch without the three 50–56 MB corpus .npz files; the human decided the corpus stays out of git (external copies on RAL and the laptop, sha256 in the manifest). The old remote branch was deleted on the human's instruction; this archive ref holds the only remaining copy of its commits (3273726 carries the large files). Human-authorized condemnation 2026-10-08 ("Do the Gut").
+- merged: no
+- condemned: 2026-10-08
+- sweep-after: 2026-11-07
+- breaks-if-wrong: nothing science-side (every measurement row is on main via #401 and the corpus files exist out of git with verified hashes); the only unique content is the original commit 3273726's provenance SHA cited in the phase-5 ledger/PR text. Recoverable via `pyauto-gut recover autolens-profiling-linear-solver-p5-mapper-corpus-large-npz` until voided. Voiding is the point: it sheds the ~160 MB of corpus objects from the autolens_profiling remote.
+- archive-ref: refs/heads/archive/condemned/autolens-profiling-linear-solver-p5-mapper-corpus-large-npz on autolens_profiling origin (70e8a9f)

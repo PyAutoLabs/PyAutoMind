@@ -10,8 +10,9 @@ Difficulty: moderate
 Autonomy: supervised
 Priority: high
 Consequence: judge
-Status: draft
+Status: active
 Filed: 2026-10-08
+Issued: 2026-10-02
 Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/362
 Pulse task: https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/timing_noise_audit.md
 

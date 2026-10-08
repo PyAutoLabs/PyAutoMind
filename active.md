@@ -98,3 +98,12 @@
   - pyautolabs.github.io: feature/dna-cockpit-registration
 
 - library-pr: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/32
+
+## timing-noise-audit-p1-inventory
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/362
+- issued: 2026-10-02
+- session: Claude Code CLI (Fable 5.1), session 331e5f0e
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/timing-noise-audit-p1-inventory
+- repos:
+  - autolens_profiling: feature/timing-noise-audit-p1-inventory
