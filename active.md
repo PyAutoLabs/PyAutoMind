@@ -6,7 +6,16 @@
 - prompt: active/search_extensibility_a1_declare_gate_registry.md
 - epic: search-extensibility (phase A1)
 - session: Claude CLI (Fable 5.1, /start_dev --auto); session ID unavailable
-- status: library-dev
+- status: library-shipped + workspace-shipped, awaiting-merge — 4 PRs opened 2026-10-08 under --auto (decide-and-flag, `decision-taken` on #1675); merge PyAutoFit#1675 first, the three docs PRs after RTD latest rebuilds
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1675
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/778
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/653
+- library-pr: https://github.com/PyAutoLabs/PyAutoCTI/pull/116
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1675
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/778
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/653
+- validation: 3409 passed / 2 skipped / 9 xfailed; nojax 1192 passed; Sphinx 30 warnings = baseline in full and emulated-minimal envs; downstream suites green; afT BlackJAXNUTS/MultiStartAdam accuracy asserts fail identically on main
+- decision-taken: factor-graph backend rules (use_jax=None derives from factors; agreement check after the test-mode bypass; gradient_mode disagreement → reverse); judgement values for status/warm_start/resumable/batched listed in the PR
 - autonomy: --auto launch 2026-10-08 ("do A1 and B2 auto"); effective supervised (feature@large); ship checkpoint = decide-and-flag; Consequence judge → human /prm
 - worktree: ~/Code/PyAutoLabs-wt/search-ext-a1-declare-gate
 - repos:
