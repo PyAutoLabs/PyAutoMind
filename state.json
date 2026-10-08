@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
-  "updated": "2026-10-08T08:57:01Z",
+  "updated": "2026-10-08T09:01:19Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Search hygiene and dead code (epic search-extensibility, phase A0b) \u2014 library-shipped, awaiting-merge \u2014 PyAutoFit#1672 opened 2026-10-08 under --auto (tier judge \u2192 human /prm); A0a(ii) being\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1672",
+      "prompt": "Use the start-dev skill. active/search_extensibility_a0b_hygiene.md"
+    },
     {
       "severity": "yellow",
       "text": "Search documentation repair, downstream sweep (epic search-extensibility, phase A0c part 2) \u2014 library-shipped + workspace-shipped, awaiting-merge \u2014 9 PRs opened 2026-10-08 under --auto; glance tier \u2192 in-turn auto-merge on\u2026",
@@ -24,6 +30,12 @@
       "text": "human review: the scaling_relation slam parks (imaging un-parked, multi_galaxy kept)",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md",
       "prompt": "Walk me through the completed work described in `draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md` so I can sign it off.\n\n1. Read the prompt: what was asked, and what it claims shipped.\n2. Find the evidence \u2014 the merged PR(s), the commits, the `complete/` record \u2014\n   and read the actual diff, not the description of it.\n3. Report what changed, what it does NOT cover, and anything you would have\n   done differently. Call out behaviour changes and test gaps explicitly.\n\nChange nothing while reviewing. When I sign it off, retire the prompt from the\nPyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date\n<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and\nregenerate the dashboard. If I do not sign it off, file the follow-up with\n`/intake` instead.\n"
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1672 \u2014 Search hygiene and dead code (epic search-extensibility, phase A0b)",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1672",
+      "prompt": null
     },
     {
       "severity": "yellow",
@@ -114,18 +126,6 @@
       "text": "pick: Fix Sibson interpolation at internal edges",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit/hpc_campaign_epic.md",
-      "prompt": "Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Guard every workspace script against untimed network downloads",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace/no_untimed_network_downloads_check.md",
-      "prompt": "Use the start-dev skill. draft/test/autolens_workspace/no_untimed_network_downloads_check.md"
     }
   ]
 }

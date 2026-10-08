@@ -12,7 +12,7 @@
 | [Epics](#epics) | 16 |
 | [In flight](#in-flight) | 3 |
 | [Planned](#planned) | 8 |
-| [Backlog](#backlog) | 240 |
+| [Backlog](#backlog) | 241 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -248,7 +248,7 @@ Use the start-dev skill. draft/feature/autofit/results_library_epic_report.md
 </details>
 
 <details>
-<summary><b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — 3 queued prompt(s), in order</summary>
+<summary><b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — 4 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — ledger: `draft/research/autofit/search_extensibility_epic.md` — filed 2026-10-07; scoped (4 Opus surveys) and independently reviewed (Codex gpt-6-astra, Claude Fable high) the same day; all §5…</summary>
 
@@ -262,6 +262,14 @@ Continue the 'Search extensibility — a PyAutoFit search framework for many sam
 
 ```
 Use the start-dev skill. draft/bug/autofit/drawer_crashes_under_nullpaths_timer_none.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/search_kwarg_typos_in_workspace_scripts.md">Search constructor typos silently ignored in workspace scripts (<code>auto_correlations_settings</code>, <code>nlive</code>, <code>dynamic_delta</code>)</a> — autofit · small · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/autofit/search_kwarg_typos_in_workspace_scripts.md
 ```
 
 </details>
@@ -797,7 +805,7 @@ Use the start-dev skill. active/linear_solver_phase4_jacobi_a100_batched_diverge
 
 </details>
 
-<details><summary>📋 <a href="active/search_extensibility_a0b_hygiene.md">Search hygiene and dead code (epic search-extensibility, phase A0b)</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1670">issue #1670</a> — issued 2026-10-08 — library-dev</summary>
+<details><summary>📋 <a href="active/search_extensibility_a0b_hygiene.md">Search hygiene and dead code (epic search-extensibility, phase A0b)</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1670">issue #1670</a> — issued 2026-10-08 — library-shipped, awaiting-merge — PyAutoFit#1672 opened 2026-10-08 under --auto (tier judge → human /prm); A0a(ii) being… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1672">PyAutoFit#1672</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 Use the start-dev skill. active/search_extensibility_a0b_hygiene.md
@@ -2585,7 +2593,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-73 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+74 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2614,6 +2622,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md`
 - `draft/bug/autofit/drawer_crashes_under_nullpaths_timer_none.md`
+- `draft/bug/autofit/search_kwarg_typos_in_workspace_scripts.md`
 - `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
 - `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md`
@@ -2629,12 +2638,11 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/refactor/workspaces/abell_1201_local_cleanup.md`
 - `draft/docs/autolens/split_lensing_regimes.md`
 - `draft/docs/howtolens/cluster_pixelized_source.md`
-- `draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md`
-- _… and 33 more_
+- _… and 34 more_
 
 </details>
 
-70 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+71 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2670,6 +2678,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autofit/mcmc_thin_zero_and_check_size_short_chain.md — unknown theme keyword(s): mcmc, test-mode, robustness`
 - `draft/bug/autofit/model_from_json_drops_zero_free_parameter_components.md — unknown theme keyword(s): serialization`
 - `draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md — unknown theme keyword(s): nautilus`
+- `draft/bug/autofit/search_kwarg_typos_in_workspace_scripts.md — unknown theme keyword(s): searches`
 - `draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md — unknown theme keyword(s): jax, nautilus`
 - `draft/bug/autogalaxy/aggregator_reload_drops_sparse_operator.md — unknown theme keyword(s): sparse-operator, aggregator`
 - `draft/bug/autogalaxy/database_paths_dataset_fits_not_registered.md — unknown theme keyword(s): aggregator, database`
@@ -2716,6 +2725,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoFit**
 
+- [PyAutoFit#1672](https://github.com/PyAutoLabs/PyAutoFit/pull/1672) — `active/search_extensibility_a0b_hygiene.md`
 - [PyAutoFit#1667](https://github.com/PyAutoLabs/PyAutoFit/pull/1667) — `complete/2026/10/search-conformance-metadata.md`
 - [PyAutoFit#1669](https://github.com/PyAutoLabs/PyAutoFit/pull/1669) — `complete/2026/10/search-ext-a0c-fit-repair.md`
 
