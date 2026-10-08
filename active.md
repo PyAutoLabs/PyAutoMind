@@ -62,25 +62,6 @@
 - approval: user approved shared authenticated Update service with "ok do it"
 - next: awaiting hosting preference after explaining setup; local service prototype preserved, shared button integration and shipping incomplete
 
-## ears-followup-window
-- issue: https://github.com/PyAutoLabs/PyAutoEars/issues/25
-- issued: 2026-10-08
-- prompt: active/closed_followup_window.md
-- session: Codex (GPT-6); session ID unavailable
-- status: library-shipped, awaiting-merge
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/ears-followup-window
-- repos:
-  - PyAutoEars: feature/ears-followup-window
-- tier: undeclared (human /prm)
-- plan: 30-day follow-up rule approved by user; open issues unchanged
-- library-pr: https://github.com/PyAutoLabs/PyAutoEars/pull/26
-- commit: d2ba095
-- validation: 126 Ears tests; 29 Brain adapter tests; Chromium mobile/desktop light/dark smoke; generated state valid
-- evidence: .worktrees/ears-followup-window/PyAutoEars/_site/ (pytest.log, adapter-tests.log, browser.log, browser-fixture/)
-- heart: STALE — release validation incomplete: no rehearsal for current source (2026-10-08T10:46:19Z)
-- next: human /prm for PR #26; merge not authorized
-
-
 ## dashboard-control-labels
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/505
 - issued: 2026-10-08

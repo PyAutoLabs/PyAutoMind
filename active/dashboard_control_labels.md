@@ -36,7 +36,7 @@ stale, paste the check-in
 - Remove Open before repository links across the Cortex dashboard.
 - Remove redundant GitHub Page links and the old standalone last-check-in/stale block wherever present. Retain shared Last updated / Update controls and underlying evidence/check-in data.
 - Update the shared orchestration contract and affected expectations, render representative boards, inspect output for consistency.
-- Coordinate existing Brain board-one-click-update and Ears ears-followup-window claims before implementation. No source changes before approved plan and worktree setup.
+- Coordinate the existing Brain board-one-click-update claim before implementation. The Ears follow-up window is merged (PyAutoEars#26); see `complete/2026/10/ears-followup-window.md`. No source changes before approved plan and worktree setup.
 
 ## Proposed implementation plan (awaiting approval)
 
@@ -69,7 +69,7 @@ Affected source repos Brain, Heart, Hands, Memory, Ears and Scientist are on mai
 
 Hard claims confirmed by worktree_check_conflict:
 - Brain: board-one-click-update, feature/board-one-click-update; prototype and shared Update integration pending.
-- Ears: ears-followup-window, feature/ears-followup-window.
+- Ears: prior overlap resolved by merged PyAutoEars#26; task claim released. See `complete/2026/10/ears-followup-window.md`; integrate current Ears main before shipping.
 
 Require explicit coordination authorization or wait for those tasks to ship. Preserve unrelated dirty Cortex data and Eyes artifacts. Helper also reports unregistered Brain/Heart/Hands pending-release-published-only worktrees; inspect relevant branch differences before setup, without cleanup.
 

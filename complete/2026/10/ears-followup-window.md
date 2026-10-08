@@ -1,3 +1,27 @@
+# Closed-thread follow-up attention window
+
+Completed: 2026-10-08
+Issue: https://github.com/PyAutoLabs/PyAutoEars/issues/25
+PR: https://github.com/PyAutoLabs/PyAutoEars/pull/26
+Merge commit: e482c8a4a64f075993d14f807cca69058e2c2f40
+
+## Delivered
+
+Complete follow-ups on closed issues and closed/answered Discussions leave attention when the latest pending external human comment is older than 30 days. They remain in Community activity as Historical follow-up. Fresh external replies restore attention; bots and generic issue updates do not extend the window. Open issues and incomplete-evidence uncertainty are unchanged.
+
+The optional historical timestamp preserves the existing nested follow_up contract; Brain accepts it and excludes inactive follow-ups from its awaiting-response queue. No workspace migration or pending-release obligation.
+
+## Validation and merge
+
+- 126 Ears tests and 29 Brain adapter tests passed.
+- Chromium mobile/desktop light/dark smoke, historical row placement, clipboard/freshness and generated-state checks passed.
+- CI run 37765912688: Python 3.12, Python 3.13 and browser all passed on d2ba095.
+- Ship-time Heart STALE: release validation incomplete: no rehearsal for current source; development shipping permitted.
+- Human /prm authorized merge and close-out. All feature commits proven ancestors of origin/main.
+- Logs and previews preserved in `tmp/ears-followup-window-evidence/`. Temporary browser packages are reproducible tooling, not scientific data products.
+
+## Original prompt
+
 # Limit closed-thread follow-up attention to 30 days
 
 @PyAutoEars
