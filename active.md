@@ -36,11 +36,8 @@
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/inference-sampler-literature
 - repos:
   - PyAutoMemory: feature/inference-sampler-literature
-- prerequisite: memory-board-header-contract (https://github.com/PyAutoLabs/PyAutoMemory/issues/126)
-- prerequisite-worktree: /home/jammy/Code/PyAutoLabs/.worktrees/memory-board-header-contract
-- prerequisite-branch: feature/memory-board-header-contract
+- prerequisite: complete/2026/10/memory-board-header-contract.md (merged)
 - prerequisite-pr: https://github.com/PyAutoLabs/PyAutoMemory/pull/127
-- prerequisite-plan: test-only shared-header regression; same-root coordinated owned claim; no literature changes.
 - plan: human authorized all phases autonomously to the end, including in-turn merge on passed gates; no compute or scientific acceptance.
 
 - workspace-pr: https://github.com/PyAutoLabs/PyAutoMemory/pull/125
