@@ -60,4 +60,4 @@
   - PyAutoBrain: feature/board-one-click-update
 - tier: judge (human /prm)
 - approval: user approved shared authenticated Update service with "ok do it"
-- next: implement portable service/shared component; hosting and GitHub App configuration pending
+- next: awaiting hosting preference after explaining setup; local service prototype preserved, shared button integration and shipping incomplete

@@ -27,3 +27,11 @@ Replace the shared board Update link's multi-click workflow with a small authent
 Tier: judge — merge mode: human /prm.
 
 Suggested branch: feature/board-one-click-update
+
+## Checkpoint — 2026-10-08
+
+Task issue: PyAutoBrain#504. Worktree `.worktrees/board-one-click-update/PyAutoBrain`, branch `feature/board-one-click-update`, source base 896103a. Initial portable Flask/Gunicorn service is uncommitted under `board_update/` (GitHub App OAuth with PKCE, expiring in-memory sessions, allowlisted refresh dispatch, popup interface, container). Shared button integration, durable tests, deployment documentation, full validation and shipping remain incomplete. No service is deployed, no credentials/account were created, no workflow was dispatched and live boards are unchanged.
+
+Ad hoc mocked Flask-client checks passed for OAuth/PKCE, CSRF denial, arbitrary-ref denial, authenticated dispatch, duplicate suppression, OAuth replay denial and logout. This is prototype evidence only, not ship readiness. Virtualenv is in the task bundle `service-venv/`. No independent review or ship-time Heart assessment has occurred.
+
+User clarified they do not think they have hosting and asked what setup entails. Explained hosting account plus restricted GitHub App, possible hosting cost and maintenance. Asked whether to retain the existing button or finish and guide hosting setup; answer pending. Preserve all work. Do not select/provision a hosting account or charge without the user's choice. Resume approved implementation if the user opts to continue, then obtain host/app configuration; otherwise close out as cancelled using lifecycle workflow.
