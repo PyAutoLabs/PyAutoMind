@@ -1,3 +1,18 @@
+## mind-dashboard-simplify-2
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/500
+- completed: 2026-10-08
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/501
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/491
+- merge-commit: PyAutoBrain 1100c202f1661cda99d4584ab56080b289a72fc5; PyAutoMind 736328bc70aa6f667654d338e764f953024109d9
+
+### Outcome
+Mind dashboard copy trimmed as requested (Issued/Pending-release/Backlog/Human-review/Recent explanatory text, the refresh task row and the header metadata links removed); Epics now follows Start here and Pending release renders last; the Update button is retained. Brain#501 (renderer) merged 2026-10-07; Mind#491 (regenerated pages) merged 2026-10-08 after merging main and re-rendering, its conflict being on generated files only.
+
+### Validation and limits
+Per the PRs: Brain suite 1271 passed; Mind suite 696 passed; dashboard freshness check current. Human acknowledged Heart YELLOW (manifest drift, no rehearsal) at ship. Second task to carry this slug: the September task's record keeps `mind-dashboard-simplify.md`, so this record is suffixed `-2`, which also clears the `file in both active/ and complete/` lifecycle drift that was reddening Heart's Lifecycle Drift gate. Opened by a Codex session; closed out by the Fable session.
+
+## Original prompt
+
 # Simplify Mind dashboard text and section order
 
 Issued: 2026-10-07
