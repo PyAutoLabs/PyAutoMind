@@ -61,3 +61,15 @@
 - tier: judge (human /prm)
 - approval: user approved shared authenticated Update service with "ok do it"
 - next: awaiting hosting preference after explaining setup; local service prototype preserved, shared button integration and shipping incomplete
+
+## brain-dashboard-scope
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/507
+- issued: 2026-10-08
+- prompt: active/brain_dashboard_scope.md
+- session: Codex CLI, session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/brain-dashboard-scope
+- repos:
+  - PyAutoBrain: feature/brain-dashboard-scope
+- coordination: user approved separate work alongside #504; no shared theme or board_update edits
+- tier: judge (human /prm)

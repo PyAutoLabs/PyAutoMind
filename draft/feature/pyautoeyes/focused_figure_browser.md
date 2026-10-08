@@ -8,6 +8,64 @@ one selected figure prominently inside the dashboard with its critique actions.
 Use PyAutoPulse and PyAutoInsight Results sections as read-only navigation references;
 only PyAutoEyes implementation is in scope.
 
+## Proposed plan — awaiting approval
+
+- Use library names alone (PyAutoLens, PyAutoGalaxy, etc.) throughout visible navigation.
+- Reduce the overview to Library, Figures, Rendered with (version only), and
+  Freshness (Current/Behind/Ahead/Unknown); keep open critiques inside their library section.
+- Expand a library to choose a dataset, then select a figure from a labelled
+  dropdown. Show one large selected image and its suggestion/review actions.
+- Load only selected images; offer accessible in-page enlargement with close,
+  Escape and focus restoration, plus loading and failure feedback.
+- Remove visible survey summaries, repeated stack/date prose and repository/manifest
+  boilerplate. Preserve machine-readable evidence and counts consumed by Brain.
+- Verify browser interactions, responsive layout, renderer contracts and generated outputs.
+
+Tier: undeclared — merge mode: human /prm.
+
+### Implementation details
+
+Primary repository: PyAutoEyes. Brain classified this as medium, direct, library
+workflow (start_library → ship_library). Pulse and Insight require no edits.
+
+1. `eyes/board.py::render_html`: retain stable instance anchors, shared theme
+   `section_layout` disclosures and orchestration panel. Simplify table headers/rows
+   and instance headings. Nest dataset disclosures under library disclosures; each
+   dataset gets a labelled figure select and a single image viewer. Selecting a
+   figure updates its image, accessible label, review copy payload and suggestion
+   URL atomically. Keep critique ownership in the project repo.
+2. `eyes/board.py::CSS` and `JS`: replace thumbnail-grid styling with a responsive
+   image viewer and in-page enlarge control/dialog; constrain long names and use
+   shared sizing tokens. Assign image sources only when needed, and handle load
+   failures without navigating off the dashboard. Keyboard and touch controls
+   must remain usable inside the cockpit iframe. Provide usable no-JS figure links.
+3. Add a presentation-only compact freshness formatter; preserve InstanceView
+   freshness calculation and state-feed semantics. `render_markdown` gets matching
+   concise labels/text while retaining instance/context markers, leading counts
+   and a complete figure index. Keep survey collection/carry-forward intact.
+4. `tests/test_board.py`: update old grid/raw-link expectations; cover selection
+   metadata, safe escaping, unique control identifiers, empty/unavailable manifests,
+   concise status labels and preserved context/state contracts. Run repository
+   Ruff, pytest, board generation and manifest checks. Browser-check real loaded
+   images, selection/action matching, enlargement/close/Escape/focus, clipboard,
+   navigation anchors, failure states and no whole-page overflow at 390, 768,
+   820, 1024 and 1440px in light/dark modes.
+5. Regenerate `dashboard.html` and `dashboard.md` with `bin/pyauto-eyes board`;
+   include any legitimately changed generated feeds. Update guidance describing
+   the old thumbnail behavior if needed. Ship a reviewable PR through ship_library.
+
+### Initial branch survey
+
+- PyAutoEyes root: `/home/jammy/Code/PyAutoLabs/organs/PyAutoEyes`; branch `main`.
+  Untracked `dataset/`, `output/`, `scripts/` exist; preserve them. Only local branch
+  is main. Conflict guard returned clear; no matching active task found.
+- Mind root: `/home/jammy/Code/PyAutoLabs/organs/PyAutoMind`; branch `main`.
+- Proposed branch: `feature/eyes-focused-figure-browser`.
+- Planned worktree: workspace-local `.worktrees/eyes-focused-figure-browser/`,
+  respecting the workspace path boundary. Create after plan approval/registration.
+- Entry Heart status: STALE; release STALE, monitoring RED. Reassess at ship gate.
+- Next step: obtain plan approval, then create the issue and register/setup the worktree.
+
 ## Original user request (verbatim)
 
 PyAutoEyes dashboard: lens - PyAutoLens -> PyAutoLens, same for Galaxy

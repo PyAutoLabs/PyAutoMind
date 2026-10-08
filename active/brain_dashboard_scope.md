@@ -1,5 +1,7 @@
 # Simplify Brain to agents and workflows
 
+Issued: 2026-10-08
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/507
 Type: feature
 Target: @PyAutoBrain
 Consequence: judge
@@ -37,7 +39,7 @@ manage different tasks. When it does build up functionality it normally motivate
 so its purpoise could also be to be an abstract starting point for unspecified tasks. What is your  opinion on
 Brain should it do anything else or is this sensible?
 
-## Proposed scope — awaiting approval
+## Approved scope
 
 - Make Agents & workflows the first primary section, generated from the existing registry, with conductors, faculties and workflows explained in plain language. Focus the orchestration prompt on unspecified requests, planning and routing.
 - Remove the requested community surfaces, need-you/generated/trend banner, GitHub Page link, readiness/release, version consistency, resume, autonomous runs and global Degraded section from Brain's page and matching markdown.
@@ -54,3 +56,5 @@ Brain should it do anything else or is this sensible?
 - Existing repo claim: board-one-click-update, PyAutoBrain#504, feature/board-one-click-update; shared Update service prototype, awaiting hosting preference. Do not modify or cancel it. Serialize or obtain explicit coordination authorization before starting this task.
 - Suggested branch: feature/brain-dashboard-scope.
 - Tier: judge — merge mode: human /prm.
+
+Approval: user said "ok beghin" after the scope and concurrent-work coordination question. Shared theme and board_update service stay with #504.
