@@ -1,3 +1,26 @@
+# decision-history
+
+Completed: 2026-10-08
+Issue: https://github.com/PyAutoLabs/PyAutoInsight/issues/21
+PR: https://github.com/PyAutoLabs/PyAutoInsight/pull/22
+PR: https://github.com/PyAutoLabs/PyAutoPulse/pull/39
+
+Added Decision History directly below Results on both dashboards, as one flat newest-first list opening canonical GitHub Markdown records in a new tab. Cross-repository/dataset decisions are not categorized; both boards may link one canonical page. Indexes intentionally start empty: NNLS was an illustrative title, not an approved scientific decision.
+
+CHECKIN.md recognizes explicit decision flags and “record this decision”. The record template captures campaign context, pinned evidence, alternatives, the human's actual choice, implications and revisit conditions. A pending choice remains a draft; superseding choices preserve previous records. Scientific source ledgers stay authoritative. Capture grants no scientific acceptance, compute or implementation authority.
+
+Validated index schema/IDs/date/URLs and locally owned title/date/record existence, escaped HTML/Markdown, chronological ordering, malformed/stale CLI checks, regeneration roundtrip, decision-only refresh paths. Root full183 Insight/206 Pulse tests and both real Chromium suites passed. Independent CLEAN review verified cross-organ/new-tab/native disclosure/mobile behavior and human boundaries; its three findings were fixed. Both actual captured boards passed empty-state/navigation/desktop-mobile witness. Ruff/format/offline/diff checks pass. Heart STALE only: `release validation incomplete: no rehearsal for current source`.
+
+Approved glance plan with merge-on-green and witness. No library dependency or scientific data changes. Deployment and merge receipts recorded below.
+
+Exact-head PR checks: Insight0363a96 lint37760585984/job113255741706 and refresh37760586053/job113255742336; Pulse8159703 lint37760587153/job113255745668 and refresh37760587150/job113255750134. All jobs passed with CLEAN/MERGEABLE status and no skipped test steps. Merged Insight3ee88d610456a18882f0adba939b71c2eb4d0d81; Pulse7d94cf5a2eb70e6fd1cad55cd2565013b2dd2b0d. Every claimed branch is an ancestor of origin/main.
+
+Revert from the respective repos: `git revert -m 1 3ee88d610456a18882f0adba939b71c2eb4d0d81` (Insight); `git revert -m 1 7d94cf5a2eb70e6fd1cad55cd2565013b2dd2b0d` (Pulse).
+
+Final publication: Insight lint37760842886/refresh37760842888 and Pages37760873845 passed at c1abbf48d1ce3414529ff87f6a55362fba70dfed; Pulse lint37760862345/refresh37760862479 and Pages37760897071 passed at fe56107abfaa37329ac9e5741a23ffcba846a161. Initial Pages runs were superseded by these successful refreshed deployments. Live Chromium verified both native disclosures, navigation links, empty state and 1440/390px layouts. Issue closed; active claim released; Mind dashboard regenerated and checked; glance shadow row10/20 appended. Preview/live screenshots retained under Mind tmp/decision-history. Existing Pulse canonical feature checkout preserved.
+
+## Original prompt
+
 # Campaign decision history on Pulse and Insight
 
 Type: feature
