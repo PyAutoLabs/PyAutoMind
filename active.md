@@ -5,7 +5,8 @@
 - issued: 2026-10-02
 - prompt: active/timing_noise_audit_phase8_phase3b_intervals.md
 - session: Claude Code CLI (Opus 5.5 main + Opus worker under --auto, supervised)
-- status: workspace-dev
+- status: awaiting-merge
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/410 (judge tier; human /prm; flagged decisions: C1 5-round minimum on 4 repeats, C5 jit_profile estimator)
 - autonomy: --auto launch 2026-10-09 ("prm and then do 3b and leftovers fully wrap up --auto"); effective supervised (bug, Consequence judge); decide-and-flag at ship
 - worktree: ~/Code/PyAutoLabs-wt/timing-noise-audit-p8-phase3b-intervals
 - repos:
