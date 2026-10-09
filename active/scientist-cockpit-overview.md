@@ -1,6 +1,8 @@
 # Scientist cockpit overview
 
 Type: feature
+Issued: 2026-10-09
+Issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/52
 Difficulty: medium
 Consequence: judge
 

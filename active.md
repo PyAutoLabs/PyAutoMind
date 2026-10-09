@@ -43,3 +43,17 @@
 - tier: judge (human /prm)
 - heart-ack: Heart reason set of 2026-10-09 human-acknowledged 2026-10-09 ("work on heart will fix later") for the timing-noise phase PRs
 
+
+## scientist-cockpit-overview
+- issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/52
+- issued: 2026-10-09
+- prompt: active/scientist-cockpit-overview.md
+- session: Codex (session ID unavailable)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/scientist-cockpit-overview
+- repos:
+  - PyAutoScientist: feature/scientist-cockpit-overview
+  - pyautolabs.github.io: feature/scientist-cockpit-overview
+- tier: judge — human /prm
+- approval: implementation plan approved 2026-10-09; include time-bounded all-organ summaries in Scientist prompt and guidance.
+- heart-entry-override: user authorized planning despite the reported RED verdict ("yeah go ahead"); shipping gate remains applicable.
