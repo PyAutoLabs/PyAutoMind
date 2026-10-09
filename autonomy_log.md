@@ -9,6 +9,7 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked` /
 
 | date | task | effective level | gates (tests/smoke/review/heart) | outcome |
 |------|------|-----------------|----------------------------------|---------|
+| 2026-10-09 | scientist-cockpit-overview (Scientist #52) | human-authorized | 28 tests + 6 Chromium configurations; presentation smoke passed; independent review not required; Heart RED: release validation FAILED (stage integrate); human `$prm` + “I authroize” after evidence | red-override |
 | 2026-10-09 | timing-noise-audit-p9-familywise-policy (autolens_profiling #411, stacked on #410) | supervised | 1376/6 tests; smoke n/a (cell smoke-import OK); independent Opus FINDINGS (0 must / 2 should / 4 low) fixed → re-review CLEAN; Heart YELLOW (manifest drift ×8 + release validation incomplete: no rehearsal for current source), human-acknowledged 2026-10-09 | PR-open; judge tier, human /prm after #410 |
 | 2026-10-08 | decision-history (Insight22 / Pulse39) | safe | 183/206 tests; Chromium and actual captures; independent CLEAN; Heart STALE release validation incomplete: no rehearsal for current source; witness flat cross-organ history and human capture boundaries | PR-open; approved merge on green |
 | 2026-10-08 | likelihood-menu-labels (Insight20 / Pulse37) | safe | 170/193 tests; Chromium fixtures+captured menus; independent CLEAN; Heart STALE release validation incomplete: no rehearsal for current source; witness explicit labels/order/plain Sersic and evidence disclosure removal | PR-open; user-authorized merge on green |

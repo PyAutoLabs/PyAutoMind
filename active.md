@@ -57,4 +57,9 @@
 - tier: judge — human /prm
 - approval: implementation plan approved 2026-10-09; include time-bounded all-organ summaries in Scientist prompt and guidance.
 - heart-entry-override: user authorized planning despite the reported RED verdict ("yeah go ahead"); shipping gate remains applicable.
-- checkpoint: implementation and 28 tests plus 6 Chromium configurations passed; awaiting task-specific Heart RED shipping override. Source uncommitted; PR drafts and preview in .worktrees/scientist-cockpit-checks/.
+- checkpoint: 28 tests and six Chromium configurations passed; shipping and merge authorized in this turn by `$prm` and “I authroize”.
+- heart-red-override:
+  - authorization: human invoked `$prm` and said “I authroize” for Scientist #52 after passed validation and quoted RED reason.
+  - reason: release validation FAILED (stage integrate)
+  - evidence: 2026-10-09T14:14:19.748312+00:00; 28 tests and six browser configurations passed; presentation smoke passed; no independent-review gate applicable.
+  - scope: commit/push/open PRs and merge only on green required checks in this turn; no release or protection bypass.
