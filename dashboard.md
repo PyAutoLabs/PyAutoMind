@@ -789,7 +789,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/timing_noise_audit_phase10_headline_completion.md">Timing-noise audit phase 10: headline completion…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/362">issue #362</a> — issued 2026-10-02 — workspace-dev</summary>
+<details><summary>📋 <a href="active/timing_noise_audit_phase10_headline_completion.md">Timing-noise audit phase 10: headline completion…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/362">issue #362</a> — issued 2026-10-02 — awaiting-merge</summary>
 
 ```
 Use the start-dev skill. active/timing_noise_audit_phase10_headline_completion.md

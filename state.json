@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
-  "updated": "2026-10-09T14:38:03Z",
+  "updated": "2026-10-09T15:24:59Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Timing-noise audit phase 10: headline completion\u2026 \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autolens_profiling/issues/362",
+      "prompt": "Use the start-dev skill. active/timing_noise_audit_phase10_headline_completion.md"
+    },
     {
       "severity": "yellow",
       "text": "Timing-noise audit phase 8: intervals for C1, C3, C4, C5\u2026 \u2014 awaiting-merge",
@@ -120,12 +126,6 @@
       "text": "pick: SED chain waveband fit can spin forever in Nautilus exploration\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md",
       "prompt": "Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: The reusable smoke workflow's relevance gate skips the `unit` / `slow` pytest\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md",
-      "prompt": "Use the start-dev skill. draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md"
     }
   ]
 }
