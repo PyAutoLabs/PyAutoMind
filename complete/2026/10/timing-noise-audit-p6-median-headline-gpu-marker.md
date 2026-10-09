@@ -1,3 +1,16 @@
+Timing-noise audit phase 6 (fix phase 5 of the inventory): the single-jit headline gains a steady median and the "GPU-only" marker needs a qualified timeout. Issue autolens_profiling#362 stays open for phase 3b and leftovers.
+
+**Shipped:** autolens_profiling#408 (merged 2026-10-09, 3ce8d789, head 5788b960) via human `/prm`.
+
+- **P8:** shared `timing.headline_steady_median` called by 11 runtime cells after the legacy block; writes `full_pipeline_single_jit_median` (s), `_median_ms`, `_p10_ms`, `_p90_ms`, `_median_protocol` beside the unchanged block mean. Timed calls = 30 s / block mean clamped to [20, 200]; no median above a 2 s block mean. `build_dashboard` headlines the median ("steady median") where present; drift compares like estimators only — a mismatch is `estimator-mismatch`, published `insufficient`.
+- **P9:** `sweep.py` timeouts write `verdict: INCONCLUSIVE` + host, loads, timeout, elapsed (`cpu_unusable` kept); `build_dashboard.marker_verdict` renders GPU-only only when `qualify` passes; `--skip-existing` re-measures unqualified markers.
+- **Re-judgement:** no committed row has a median, no headline/badge changed; all 4 committed `.unusable.json` are laptop/no-load → inconclusive; ALMA `local_cpu_fp64` page entry GPU-only → "did not finish (inconclusive)".
+- **Pulse:** no profiling-summary@2 field changed (median maps to the existing `single_jit_median` metric).
+- **Witness:** `test_headline_estimator_and_marker.py` (T9): block mean 2.40× vs median 1.00× on an injected transient. Suite 1260 passed / 6 skipped. Review FINDINGS (3 low) fixed in 69e19ee, re-review CLEAN. Heart reason set human-acknowledged 2026-10-09.
+- **Leftovers:** README runtime table on the old headline; no producer writes `single_jit_repeats`; `wall/rates.py` omits the median calls.
+
+## Original prompt
+
 # Timing-noise audit phase 6: median headline estimator and GPU-only marker (fix phase 5, P8 + P9)
 
 Type: bug
