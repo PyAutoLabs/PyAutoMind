@@ -20,7 +20,8 @@
 - issued: 2026-10-02
 - prompt: active/timing_noise_audit_phase7_warmup_witness_band.md
 - session: Claude Code CLI (Opus 5.5 main + Opus worker under --auto, supervised)
-- status: workspace-dev
+- status: awaiting-merge
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/409 (stacked on #408 — merge #408 first)
 - autonomy: --auto authorized 2026-10-08 for fix phases 5–6, resumed 2026-10-09; effective supervised (bug, Consequence judge); decide-and-flag at ship
 - stacked-on: timing-noise-audit-p6-median-headline-gpu-marker (PR #408; claim guard reports that sibling's autolens_profiling claim — deliberate stack, merges after #408)
 - worktree: ~/Code/PyAutoLabs-wt/timing-noise-audit-p7-warmup-witness-band
