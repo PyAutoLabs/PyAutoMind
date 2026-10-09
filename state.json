@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 2 in flight",
-  "updated": "2026-10-09T12:14:17Z",
+  "updated": "2026-10-09T13:54:38Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "Timing-noise audit phase 8: intervals for C1, C3, C4, C5\u2026 \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autolens_profiling/issues/362",
       "prompt": "Use the start-dev skill. active/timing_noise_audit_phase8_phase3b_intervals.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Timing-noise audit phase 9: family-wise policy (C6, C10, C11), C12 round bootstrap\u2026 \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autolens_profiling/issues/362",
+      "prompt": "Use the start-dev skill. active/timing_noise_audit_phase9_familywise_policy.md"
     },
     {
       "severity": "yellow",
@@ -120,12 +126,6 @@
       "text": "pick: The reusable smoke workflow's relevance gate skips the `unit` / `slow` pytest\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md",
       "prompt": "Use the start-dev skill. draft/bug/pyautoheart/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: arXiv's Fastly edge refuses `urllib.request` outright \u2014 retrying a 406 only delays\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md",
-      "prompt": "Use the start-dev skill. draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md"
     }
   ]
 }

@@ -797,7 +797,7 @@ Use the start-dev skill. active/timing_noise_audit_phase8_phase3b_intervals.md
 
 </details>
 
-<details><summary>📋 <a href="active/timing_noise_audit_phase9_familywise_policy.md">Timing-noise audit phase 9: family-wise policy (C6, C10, C11), C12 round bootstrap…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/362">issue #362</a> — issued 2026-10-02 — workspace-dev</summary>
+<details><summary>📋 <a href="active/timing_noise_audit_phase9_familywise_policy.md">Timing-noise audit phase 9: family-wise policy (C6, C10, C11), C12 round bootstrap…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/362">issue #362</a> — issued 2026-10-02 — awaiting-merge</summary>
 
 ```
 Use the start-dev skill. active/timing_noise_audit_phase9_familywise_policy.md
