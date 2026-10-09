@@ -34,7 +34,9 @@
 - issued: 2026-10-02
 - prompt: active/timing_noise_audit_phase10_headline_completion.md
 - session: Claude Code CLI (Opus 5.5 main + Opus worker under --auto, supervised)
-- status: workspace-dev
+- status: awaiting-merge
+- prs:
+  - autolens_profiling: https://github.com/PyAutoLabs/autolens_profiling/pull/412 (stacked on #411 → #410; merge after both)
 - autonomy: --auto launch 2026-10-09 ("do all work until complete --auto"); effective supervised (bug, Consequence judge); decide-and-flag at ship
 - stacked-on: timing-noise-audit-p9-familywise-policy (PR #411; deliberate stack, merges after #411)
 - worktree: ~/Code/PyAutoLabs-wt/timing-noise-audit-p10-headline-completion
@@ -42,3 +44,8 @@
   - autolens_profiling: feature/timing-noise-audit-p10-headline-completion
 - tier: judge (human /prm)
 - heart-ack: Heart reason set of 2026-10-09 human-acknowledged 2026-10-09 ("work on heart will fix later") for the timing-noise phase PRs
+- heart-red-override:
+  - authorization: live human, 2026-10-09 (AskUserQuestion in the main session) — proceed under AUTONOMY.md "Human override for Heart RED (development only)" for phase 10's PR; recorded on https://github.com/PyAutoLabs/autolens_profiling/issues/362 (latest comment)
+  - red reasons: `release validation FAILED (stage integrate)` (+ 8 manifest-drift yellow reasons)
+  - branch gates passed: tests 1405 passed / 6 skipped; smoke import of edited cells OK; all lint.yml checks locally; independent Opus review FINDINGS (7) fixed → re-review CLEAN
+  - scope: commit / push / PR-open only; merge needs a separate human /prm with all checks green; no release
