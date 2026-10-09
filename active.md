@@ -19,7 +19,8 @@
 - issued: 2026-10-02
 - prompt: active/timing_noise_audit_phase9_familywise_policy.md
 - session: Claude Code CLI (Opus 5.5 main + Opus worker under --auto, supervised)
-- status: workspace-dev
+- status: awaiting-merge
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/411 (judge tier; human /prm AFTER #410; flagged: C11 kill gate INCONCLUSIVE on 4 rounds (--reps >= 6 or 4-round rule), GPU memo "below MDI" at 0.94 % paired MDI, P2 drift tolerances)
 - autonomy: --auto launch 2026-10-09 ("do all work until complete --auto"); effective supervised (bug, Consequence judge); decide-and-flag at ship
 - stacked-on: timing-noise-audit-p8-phase3b-intervals (PR #410; claim guard reports that sibling's autolens_profiling claim — deliberate stack, merges after #410)
 - worktree: ~/Code/PyAutoLabs-wt/timing-noise-audit-p9-familywise-policy
