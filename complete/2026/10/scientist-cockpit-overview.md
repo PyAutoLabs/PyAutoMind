@@ -1,3 +1,33 @@
+# Scientist cockpit home and cross-organ reporting
+
+- issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/52
+- completed: 2026-10-09
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/53
+- workspace-pr: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/35
+- tier: judge; explicit human /prm
+
+The cockpit Scientist home embeds the canonical PyAutoScientist dashboard, retaining its banner/logo and work panel. Fourteen organ cards are independently collapsed, three per desktop row, two on tablets and one on phones; expanded cards span the row and contain at most three concise owner-sourced updates. Redundant shortcuts and the separate verbose Overview were removed. Legacy #overview links resolve to #scientist.
+
+The copyable prompt defaults to the previous 24 hours and supports any requested period. REPORTING.md and repo guidance define all-organ coverage, dated evidence, deduplication, outcomes versus current work, and honest gaps. Current feed timestamps are not completion history; unsupported history is omitted. Tasks, science and authoritative records remain with their organs.
+
+## Validation and merge evidence
+
+- 13 Python renderer/collector tests, 6 Scientist Node tests and 9 cockpit Node tests passed; diff checks clean.
+- Chromium: 390/768/1440px × light/dark passed columns, full-row expansion, keyboard/focus, actual prompt clipboard contents, preserved direction/open cards through refresh, selected-frame persistence, inter-board links and Back/Forward. No browser errors or horizontal overflow. Physical devices not tested.
+- Scientist PR 53: head 5024a512; Board tests run 37945177097 and its tests job completed successfully. Merge 54554a03f6959f750b00368cecf4763cdc168bde.
+- Cockpit PR 35: head d2071087; no PR CI configured (Pages deployment only). Human explicitly authorized “Authorize merge using passed local validation”. Merge 67024017086ec9a2405cfe6c7b5cb6b675d12bb9.
+- Both feature heads are ancestors of origin/main, with zero unmerged commits.
+- Scientist Dashboard run 37945316211 succeeded; published page verified to contain 14 cards and REPORTING.md prompt before merging cockpit.
+- Checks, screenshots, browser script and PR drafts retained outside the removed worktree at `.worktrees/scientist-cockpit-checks/`.
+
+## Heart override
+
+After passed validation and quoted RED evidence, human invoked `$prm` and said “I authroize” for this task. Exact RED reason: `release validation FAILED (stage integrate)` at 2026-10-09T14:14:19.748312+00:00. Development shipping and in-turn green-check merge authorized; no release, protection bypass or claim of repairing Heart. Recorded on issue, PRs, active registry and the first autonomy-log table.
+
+Cockpit Pages run 37945443832 passed all three jobs (build, deploy, report-build-status); live shell verified to contain the Scientist route and no old native Overview.
+
+## Original prompt
+
 # Scientist cockpit overview
 
 Type: feature
