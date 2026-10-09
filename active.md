@@ -11,4 +11,5 @@
 - repos:
   - autolens_profiling: feature/timing-noise-audit-p6-median-headline-gpu-marker
 - tier: judge (human /prm)
-- heart-ack: YELLOW reason set (8 manifest drift + no rehearsal) acknowledged 2026-10-08; Heart on 2026-10-09 reads STALE/monitoring RED — a changed set, NOT covered; ship parks on leg 4 for a human ack
+- heart-ack: Heart STALE/monitoring-RED reason set of 2026-10-09 (Queue filing, PyAutoArray Tests, 3× workspace_test Smoke, CI wall-clock, autolens_inference/profiling red, worktree drift) human-acknowledged 2026-10-09 ("work on heart will fix later") for this task
+- contract: Pulse v2 (profiling-summary@2) contract change approved by human 2026-10-09 if the median headline needs it
