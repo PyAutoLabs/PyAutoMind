@@ -88,3 +88,15 @@ Proposed worktree bundle: .worktrees/scientist-cockpit-overview/ inside /home/ja
 I approve, I think a normal thing to do with this is to ask the Scientist for a high level summary of all work over all organs over 24 hours or a given time period. I'm not sure this needs to go into the dashboawrd design (it should be included in the copyable text of the prompt thing) but worth also thinking if the repo or something should be updated to be designed more carfully around it
 
 Implementation includes a Scientist-owned reporting guide, referenced from the copied prompt and repo entry instructions: resolve the reporting window/timezone; inspect owner records for all organs; summarize outcomes, active/blocked work and decisions; separate event dates from observation dates and disclose unavailable coverage. Default to the previous 24 hours, honor another requested period. No new dashboard history service.
+
+## Implementation checkpoint — 2026-10-09
+
+- Implemented in `.worktrees/scientist-cockpit-overview/{PyAutoScientist,pyautolabs.github.io}`, both on `feature/scientist-cockpit-overview`. Source remains uncommitted pending the Heart RED shipping override.
+- Scientist is now the canonical home; cockpit default/legacy Overview routes embed it. Fourteen organ disclosures, three/two/one columns, full-row expansion, at most three concise rows, validated live owner feeds and preserved controls/focus. Shared banner and work panel retained; redundant navigation removed.
+- Copyable prompt defaults to the previous 24 hours, accepts a requested period and points at new REPORTING.md. Repo guidance covers all-organ evidence, event dates, deduplication and missing coverage without inventing completion history.
+- Tests: 13 Python renderer/collection tests + 6 Scientist Node tests + 9 cockpit Node tests pass; both diff checks clean.
+- Browser: Chromium at 390/768/1440px in light/dark passes columns, full-row expansion, keyboard focus, actual copied payload, typed direction/open-card preservation, selected-frame persistence, organ links and Back/Forward. No page errors or horizontal overflow. Physical devices not tested.
+- Evidence: `.worktrees/scientist-cockpit-checks/{browser-results.json,browser-check.cjs,scientist-*-*.png,scientist.html,snapshot.json}`. The browser uses a captured published snapshot (14 organs, 11 valid feeds; Ears/DNA/Broca unavailable), not a claim of deployment.
+- PR drafts: `.worktrees/scientist-cockpit-checks/scientist-pr.md` and `website-pr.md`. Scientist publication precedes the shell merge.
+- Ship gate: vitals refreshed Heart, then `pyauto-heart readiness --json` at 2026-10-09T14:14:19.748312+00:00 returned RED (60). Exact RED reason: `release validation FAILED (stage integrate)`. Full readiness and vitals evidence are in the checks directory.
+- Next: obtain the task-specific live shipping override after this passed evidence; record it and exact reasons in the four required sinks, then commit/push/open coordinated pending-release PRs. Tier judge; no merge/release authority.

@@ -57,3 +57,4 @@
 - tier: judge — human /prm
 - approval: implementation plan approved 2026-10-09; include time-bounded all-organ summaries in Scientist prompt and guidance.
 - heart-entry-override: user authorized planning despite the reported RED verdict ("yeah go ahead"); shipping gate remains applicable.
+- checkpoint: implementation and 28 tests plus 6 Chromium configurations passed; awaiting task-specific Heart RED shipping override. Source uncommitted; PR drafts and preview in .worktrees/scientist-cockpit-checks/.
