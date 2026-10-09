@@ -797,7 +797,7 @@ Use the start-dev skill. active/timing_noise_audit_phase6_median_headline_gpu_ma
 
 </details>
 
-<details><summary>📋 <a href="active/timing_noise_audit_phase7_warmup_witness_band.md">Timing-noise audit phase 7: warm-up flag and witness band…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/362">issue #362</a> — issued 2026-10-02 — workspace-dev</summary>
+<details><summary>📋 <a href="active/timing_noise_audit_phase7_warmup_witness_band.md">Timing-noise audit phase 7: warm-up flag and witness band…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/362">issue #362</a> — issued 2026-10-02 — awaiting-merge</summary>
 
 ```
 Use the start-dev skill. active/timing_noise_audit_phase7_warmup_witness_band.md
