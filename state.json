@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-10-10T16:35:16Z",
+  "updated": "2026-10-10T16:37:54Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "Adopt the objective-factory contract in fitness dispatch integration assertions \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autofit_workspace_test/issues/109",
       "prompt": "Use the start-dev skill. active/heart_fitness_dispatch_refactor_adoption.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Reconcile the current generated-guidance manifest drift \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/issues/497",
+      "prompt": "Use the start-dev skill. active/heart_generated_manifest_drift.md"
     },
     {
       "severity": "yellow",
@@ -102,12 +108,6 @@
       "text": "waiting on PyAutoFit's release: Adopt the objective-factory contract in fitness dispatch integration assertions",
       "url": "https://github.com/PyAutoLabs/autofit_workspace_test/issues/109",
       "prompt": "Use the start-dev skill. active/heart_fitness_dispatch_refactor_adoption.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "waiting on PyAutoFit's release: Make the hierarchical guide backend declarations consistent",
-      "url": "https://github.com/PyAutoLabs/autolens_workspace/issues/588",
-      "prompt": "Use the start-dev skill. active/heart_hierarchical_backend_adoption.md"
     },
     {
       "severity": "yellow",
