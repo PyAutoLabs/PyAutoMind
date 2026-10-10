@@ -1,0 +1,69 @@
+# Adopt the objective-factory contract in fitness dispatch integration assertions
+
+Type: bug
+Target: health_fixes
+Autonomy: supervised
+Consequence: judge
+Priority: high
+Status: draft — blocked at Heart RED entry gate
+
+Primary repository: @autofit_workspace_test.
+
+## Incident evidence (2026-10-10)
+
+Health workflow then bug health completed. Supported vitals tick ingested release-integrate
+https://github.com/PyAutoLabs/PyAutoHeart/actions/runs/38038078541 .
+Heart at 2026-10-10T16:21:14.391928+00:00: RED, score 60; exact release RED:
+`release validation FAILED (stage integrate)`.
+Version 2026.10.10.1.dev81101: 726 passed, 2 failed, 85 skipped, zero timeouts;
+installation A–F passed. Same two failures recur from run 37907620652.
+Local evidence: workspace-root `tmp/heart-red-investigation/` (artifacts, logs,
+status-refreshed.json, health-refreshed.json, door.json).
+
+## Workflow boundary
+
+Draft only. start-dev step 0a stopped at Heart RED before planning, issue creation,
+claims or source edits. Requires live scoped RED authorization. No merge or release
+is authorized. Preserve Scientist adoption and Broca expansion plans. Recheck claims
+and remote refs before starting. Do not modify other sessions' worktrees.
+
+## Bounded defect and owner
+
+`scripts/jax_assertions/fitness_dispatch.py:43` fails `fitness.use_jax_jit is True`.
+The fixture builds `af.ex.Analysis` without `use_jax=True`; A2's factory selects
+backend from the analysis and no longer treats the deprecated flag as a backend
+selector. Subsequent `_call is _jit` / `_vmap` identity assertions also describe
+retired internals. Preserve behavioral coverage of scalar JIT, batches, pickle
+restoration and visualization; do not delete assertions or disable JAX.
+Fix locus candidate: integration-script adoption, after checking the library contract.
+Acceptance: focused script passes under release env and meaningful objective/roundtrip
+assertions hold; workspace smoke passes; fresh wheel integration clears this row.
+
+## Existing-work dependency and non-duplication
+
+A2 PyAutoFit issue #1676 / PR #1679 merged 2026-10-08. A3 #1677/#1680 and A3b
+#1678/#1681 also merged. Main 7d056728c is exactly the rehearsed SHA. CI run
+37836895635 passes Python 3.12, 3.13 and no-JAX. No active Mind PyAutoFit claim,
+no open PR here; only unrelated PyAutoFit PR #1665 is open (green).
+Completion records: `complete/2026/10/search-ext-a{2-objective-bridge,3-samples-checkpointer,3b-nss-preflight}.md`.
+Existing epic `draft/research/autofit/search_extensibility_epic.md` Resume lists
+unimplemented legacy-pickle/preflight/checkpoint findings; those are separate from
+this fixture failure. If investigation needs library changes, reuse/slice the
+existing follow-up rather than duplicating it. A4 completion alone is not evidence.
+Retained remote feature/search-ext-* refs are merged history, not active PRs.
+Canonical git worktree lists show no active refactor feature checkout; B3 pilot
+output worktree is explicitly retained in the epic and must remain untouched.
+
+## Original user request (verbatim)
+
+Investigate and resolve the current PyAutoHeart RED before we resume the PyAutoScientist adoption pilot. Use the health workflow first, then the bug/start-dev workflow for any fixes.
+
+Fetch the relevant repositories, read their AGENTS.md instructions, and inspect Heart’s latest authoritative verdict and underlying evidence. Distinguish current failures from stale evidence, expected in-progress work, and unrelated problems.
+
+Specifically check whether the failures are caused by, or already being addressed by, the ongoing PyAutoFit refactor. Find its Mind task records, issues, branches, worktrees, PRs and CI results. Trace each relevant Heart failure to concrete evidence; do not assume the refactor explains everything. Avoid duplicating work, modifying its claimed worktrees, or interfering with another session.
+
+Briefly report each RED reason, its likely cause, related existing work, and the next action. If the refactor already covers a failure, record that dependency and identify what completion or validation will clear it. For independent failures, create bounded tasks and implement the necessary fixes through the existing workflow. Make routine decisions autonomously; ask only for genuine blockers or required Heart RED authorization, quoting the exact reasons and requested scope.
+
+Refresh Heart through its supported procedures after fixes or completed upstream work. Do not suppress failures, weaken checks, or mark unresolved evidence green. Finish with the authoritative verdict, validation evidence, remaining blockers, and whether the Scientist dashboard phase can start.
+
+Leave the Scientist adoption and Broca expansion plans unchanged during this work. Their implementation resumes after Heart is sorted
