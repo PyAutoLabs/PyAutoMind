@@ -49,14 +49,20 @@ The current adoption guide expects several framework repos with retained names a
 
 Show active capabilities prominently, with all available organs discoverable in an expandable catalogue. Pair anatomical names with plain-language purposes. Setup prompts should work from goals such as understanding slow code rather than requiring users to learn organ names. Show connected resources, blockers, evidence freshness and what needs a human decision. Persist working state in repositories so a new chat/agent can resume.
 
-Workspaces and docs initially belong under project cards, not a new organ just for navigation. Investigate whether Broca should show assistant source dependencies and changes since evaluation; preserve project ownership of those sources. Only propose another organ if there is a distinct responsibility/state not already owned.
+Workspaces and docs belong under project cards and in Broca's cross-project communication/documentation view. James confirmed on 2026-10-10 that Broca should encompass all communication and documentation, including workspaces/tutorials; assistants are one part of that responsibility. Scope this through the linked draft `draft/feature/pyautobroca/broca_communication_documentation_and_workspaces.md`. Preserve project ownership of source material and existing evidence; do not create another organ merely for documentation navigation. The expanded Broca capability is planned, not already implemented.
 
 Keep human docs short and question-led: what can this Scientist do; connect this project; recommend a capability for a problem; what needs attention; resume in a fresh chat; explain or undo setup changes. Provide sufficient agent-readable contracts for reliable operation.
+
+## Confirmed pilot direction and future collaboration
+
+James confirmed that the collaborator works on independent projects of their own. This pilot creates their own Scientist, ideally spanning their projects with shared organs within that instance; it is not onboarding them as a contributor to PyAutoLabs. Framework improvements should be reusable across instances while configuration, tasks, scientific records and knowledge remain independently owned. Let the collaborator attempt a small real task through the onboarding instructions and record where James's help is needed; turn implicit maintainer knowledge into reliable onboarding.
+
+Shared PyAutoLabs use is a separate later milestone, not an initial pilot dependency. Preserve room for explicit instance/project/contributor ownership, one authoritative home per project record and several connected views rather than copied backlogs. A future shared Scientist should support individual chats over shared repository state, ordinary non-AI contributions, action-specific decision rights and concurrent task claims. Cortex may be shared per scientific project where appropriate; it is not intrinsically personal. Do not build full multi-user permissions or concurrency infrastructure as part of the initial independent pilot.
 
 ## Pilot decisions to resolve when work starts
 
 - Which collaborator project and one useful first outcome?
-- Personal or shared-lab instance, owners, visibility and approval boundaries?
+- Owners, visibility and approval boundaries within the collaborator's independent instance; whether they need to share it with their own group?
 - Available agent harness, GitHub access, local/remote execution and deployment environment?
 - Minimum dependencies for a useful starter; optional organ prerequisites and safe failure states?
 - Exact starter name, naming portability and upgrade distribution approach?
