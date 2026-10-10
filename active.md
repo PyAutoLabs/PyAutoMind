@@ -49,3 +49,27 @@
   - red reasons: `release validation FAILED (stage integrate)` (+ 8 manifest-drift yellow reasons)
   - branch gates passed: tests 1405 passed / 6 skipped; smoke import of edited cells OK; all lint.yml checks locally; independent Opus review FINDINGS (7) fixed → re-review CLEAN
   - scope: commit / push / PR-open only; merge needs a separate human /prm with all checks green; no release
+
+## heart-fitness-dispatch
+- issue: https://github.com/PyAutoLabs/autofit_workspace_test/issues/109
+- issued: 2026-10-10
+- prompt: active/heart_fitness_dispatch_refactor_adoption.md
+- session: Codex GPT-6; session ID unavailable
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/heart-fitness-dispatch
+- repos:
+  - autofit_workspace_test: feature/heart-fitness-dispatch
+- tier: judge (human /prm)
+- heart-red-override: live user 2026-10-10 authorized named repair scopes for `release validation FAILED (stage integrate)`; development/PR only, no merge/release/rehearsal; quote on issue.
+
+## heart-hierarchical-backend
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/588
+- issued: 2026-10-10
+- prompt: active/heart_hierarchical_backend_adoption.md
+- session: Codex GPT-6; session ID unavailable
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/heart-hierarchical-backend
+- repos:
+  - autolens_workspace: feature/heart-hierarchical-backend
+- tier: judge (human /prm)
+- heart-red-override: live user 2026-10-10 authorized named repair scopes for `release validation FAILED (stage integrate)`; development/PR only, no merge/release/rehearsal; quote on issue.

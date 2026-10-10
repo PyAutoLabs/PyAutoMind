@@ -5,7 +5,9 @@ Target: health_fixes
 Autonomy: supervised
 Consequence: judge
 Priority: high
-Status: draft — blocked at Heart RED entry gate
+Status: workspace-dev
+Issued: 2026-10-10
+Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/588
 
 Primary repository: @autolens_workspace.
 
@@ -64,3 +66,7 @@ Briefly report each RED reason, its likely cause, related existing work, and the
 Refresh Heart through its supported procedures after fixes or completed upstream work. Do not suppress failures, weaken checks, or mark unresolved evidence green. Finish with the authoritative verdict, validation evidence, remaining blockers, and whether the Scientist dashboard phase can start.
 
 Leave the Scientist adoption and Broca expansion plans unchanged during this work. Their implementation resumes after Heart is sorted
+
+## Authorization / active handoff
+
+2026-10-10 live user authorized the named repair scopes under `release validation FAILED (stage integrate)`: “yeah I authorize, fix the bugs and ensure when we continue work on the epic it knows this owkr happened but just get the fixes sorted for now”. Prior entry-gate stop resolved for development only. Issue holds implementation plan; no merge/release/rehearsal authority.
