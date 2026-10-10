@@ -55,24 +55,32 @@
 - issued: 2026-10-10
 - prompt: active/heart_fitness_dispatch_refactor_adoption.md
 - session: Codex GPT-6; session ID unavailable
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/heart-fitness-dispatch
 - repos:
   - autofit_workspace_test: feature/heart-fitness-dispatch
 - tier: judge (human /prm)
 - heart-red-override: live user 2026-10-10 authorized named repair scopes for `release validation FAILED (stage integrate)`; development/PR only, no merge/release/rehearsal; quote on issue.
+- pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/110
+- validation: release-profile script PASS 6.4s; smoke 15 PASS; independent review CLEAN with 7 mutation faults detected; commit 2ed66aa
+- release-gate: PyAutoFit
+- corrective-red: `release validation FAILED (stage integrate)`; live authorization on issue; one of two downstream integration repairs; fresh wheel validation still required.
 
 ## heart-hierarchical-backend
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/588
 - issued: 2026-10-10
 - prompt: active/heart_hierarchical_backend_adoption.md
 - session: Codex GPT-6; session ID unavailable
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/heart-hierarchical-backend
 - repos:
   - autolens_workspace: feature/heart-hierarchical-backend
 - tier: judge (human /prm)
 - heart-red-override: live user 2026-10-10 authorized named repair scopes for `release validation FAILED (stage integrate)`; development/PR only, no merge/release/rehearsal; quote on issue.
+- pr: https://github.com/PyAutoLabs/autolens_workspace/pull/589
+- validation: release-profile guide PASS 20.7s; smoke 41 PASS; regenerated notebook byte-identical; independent review CLEAN; commit 7a929d3b
+- release-gate: PyAutoFit
+- corrective-red: `release validation FAILED (stage integrate)`; live authorization on issue; one of two downstream integration repairs; fresh wheel validation still required.
 
 ## heart-manifest-drift
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/497

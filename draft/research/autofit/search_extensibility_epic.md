@@ -93,8 +93,10 @@ These are downstream adoption gaps from **already merged** A1/A2, not unfinished
   drift; DNA missing files already fixed by merged DNA#1 and local main synced.
 
 Branch/worktree claims and current shipping status live in active.md and the
-three issue records. Broad smoke and independent review are in progress at this
-handoff; PR links/evidence will be appended when complete. Do not repeat these
+three issue records. Workspace repairs are open: autofit_workspace_test PR #110 (2ed66aa; 15 smoke
+passes) and autolens_workspace PR #589 (7a929d3b; 41 smoke passes). Both have
+independent CLEAN review; release-profile passes are recorded above. CI/merge
+and fresh wheel integration remain pending; manifest PRs follow under Mind#497. Do not repeat these
 repairs or change another session's retained B3 pilot output worktree.
 **Review 05/06 findings below remain unresolved and retain their release/wave-2
 constraints.** These workspace repairs do not claim to fix legacy pickle,
