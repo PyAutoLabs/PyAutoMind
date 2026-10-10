@@ -5,7 +5,9 @@ Target: health_fixes
 Autonomy: supervised
 Consequence: judge
 Priority: high
-Status: draft — blocked at Heart RED entry gate
+Status: library-dev
+Issued: 2026-10-10
+Issue: https://github.com/PyAutoLabs/PyAutoMind/issues/497
 
 Primary repository: @PyAutoMind.
 

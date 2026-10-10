@@ -73,3 +73,26 @@
   - autolens_workspace: feature/heart-hierarchical-backend
 - tier: judge (human /prm)
 - heart-red-override: live user 2026-10-10 authorized named repair scopes for `release validation FAILED (stage integrate)`; development/PR only, no merge/release/rehearsal; quote on issue.
+
+## heart-manifest-drift
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/497
+- issued: 2026-10-10
+- prompt: active/heart_generated_manifest_drift.md
+- session: Codex GPT-6; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/heart-manifest-drift
+- repos:
+  - PyAutoBroca: feature/heart-manifest-drift
+  - PyAutoDNA: feature/heart-manifest-drift
+  - PyAutoCortex: feature/heart-manifest-drift
+  - PyAutoEyes: feature/heart-manifest-drift
+  - PyAutoEars: feature/heart-manifest-drift
+  - PyAutoPulse: feature/heart-manifest-drift
+  - PyAutoInsight: feature/heart-manifest-drift
+  - PyAutoNerves: feature/heart-manifest-drift
+  - PyAutoGut: feature/heart-manifest-drift
+  - PyAutoScientist: feature/heart-manifest-drift
+  - .github: feature/heart-manifest-drift
+  - pyautolabs.github.io: feature/heart-manifest-drift
+- tier: judge (human /prm)
+- heart-red-override: live user 2026-10-10 authorized generated-guidance repair under `release validation FAILED (stage integrate)`; non-causal development scope only, no merge/release/rehearsal.
