@@ -49,4 +49,3 @@
   - red reasons: `release validation FAILED (stage integrate)` (+ 8 manifest-drift yellow reasons)
   - branch gates passed: tests 1405 passed / 6 skipped; smoke import of edited cells OK; all lint.yml checks locally; independent Opus review FINDINGS (7) fixed → re-review CLEAN
   - scope: commit / push / PR-open only; merge needs a separate human /prm with all checks green; no release
-

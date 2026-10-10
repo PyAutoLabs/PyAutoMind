@@ -111,6 +111,14 @@ output worktree. Fresh supported wheel integration remains outstanding; the
 last authoritative failed run is still 38038078541. No release/rehearsal was
 performed or authorized. Scientist adoption and Broca expansion plans remain
 unchanged and paused pending Heart recovery.
+Post-merge Heart refresh (2026-10-10T16:48:47Z): **RED 60**, same failed
+integration verdict; manifest mismatches reduced from 14 to 1. Remaining local
+Cortex map drift is already fixed by merged Cortex#62, but the canonical
+checkout cannot fast-forward over existing science edits in projects.yaml.
+Preserve those edits; its owner must settle them before syncing. All three
+repair worktrees and their authorized generated data are removed; local repair
+branches removed, claims released, and Mind dashboard regenerated.
+
 **Review 05/06 findings below remain unresolved and retain their release/wave-2
 constraints.** These workspace repairs do not claim to fix legacy pickle,
 preflight, checkpoint finalization, or the inference evidence findings.

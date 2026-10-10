@@ -11,6 +11,27 @@ Validation: baseline backend-agreement SearchException reproduced in release pro
 
 Heart remains RED: `release validation FAILED (stage integrate)` from run 38038078541. Fresh supported wheel integration and evidence ingestion remain required; merge is not release/rehearsal authorization. Refactor review 05/06 blockers remain. Scientist adoption and Broca expansion plans unchanged. Epic handoff updated to prevent duplicate repairs.
 
+## Post-merge health and cleanup
+
+Supported Heart tick at 2026-10-10T16:48:47Z: **RED, score 60**;
+`release validation FAILED (stage integrate)` remains authoritative. Manifest
+mismatches fell from 14 to 1: only PyAutoCortex's local organism map is stale.
+Cortex#62 is merged upstream, but local science edits in projects.yaml block
+fast-forward; those edits were preserved without stash/reset. Its owner must
+finish or preserve that work before safely syncing. Every other repaired
+canonical checkout was fast-forwarded, with existing unrelated local files
+preserved. Fresh supported wheel integration remains required; Scientist's
+dashboard phase is still paused.
+
+All three repair worktrees removed via worktree_remove after human authorized
+deleting their generated data; all fourteen proven-merged local feature
+branches removed. Other sessions' worktrees/output untouched. Dashboard
+regenerated and checked current; scoped completion-record lifecycle validation
+passes. The full lifecycle check still reports pre-existing PR-key drift in
+three timing-noise tasks; all remaining active registry entries were compared
+and proved unchanged. Reconcile left unrelated release_timeout_policy and
+samples_parameter_paths prompts intact (no proof these repairs cover them).
+
 ## Original prompt
 
 # Make the hierarchical guide backend declarations consistent
