@@ -119,6 +119,34 @@ Preserve those edits; its owner must settle them before syncing. All three
 repair worktrees and their authorized generated data are removed; local repair
 branches removed, claims released, and Mind dashboard regenerated.
 
+### Recovery validation dispatched (2026-10-10)
+
+User requested: "do the next step to getitng heart out of red" after the merge
+handoff identified fresh supported wheel integration as the next step. Ran the
+Release conductor's preflight (PASS, no warnings), then its Stage 3 plan using
+the successful Hands rehearsal 38037015790 candidate
+`2026.10.10.1.dev81101`. Dispatched validation only:
+[Heart integration 38069404110](https://github.com/PyAutoLabs/PyAutoHeart/actions/runs/38069404110).
+No build, publication, version change, or Scientist/Broca implementation.
+
+Recovered the original wheel commit map unchanged from the authoritative
+release-stage-report artifact of Heart run 38038078541; candidate version
+matches the Hands artifact. Fit/Array/Galaxy/Lens main are identical to those
+wheel SHAs; Nerves main differs only in the merged AGENTS.md map update. Do not
+substitute newer main SHAs into the wheel evidence. A passing integration may
+still produce stale-source warnings, which must remain visible.
+
+Next health session: inspect every job of 38069404110. Download its
+`release-stage-report` into
+`/home/jammy/Code/PyAutoLabs/tmp/heart-recovery-validation/stage2`, alongside
+the preserved rehearsal.json, testpypi_version.txt and commit_shas.json. Then
+run the supported conductor:
+`pyauto-brain release validate --ingest /home/jammy/Code/PyAutoLabs/tmp/heart-recovery-validation/stage2 --commit-shas /home/jammy/Code/PyAutoLabs/tmp/heart-recovery-validation/stage2/commit_shas.json`.
+Inspect actual report failures and adopt Heart's resulting verdict. Until that
+run completes and evidence is ingested, the prior failed integration remains
+authoritative RED. No background watcher/reminder is armed. Keep the existing
+Cortex checkout/science-work blocker and the review 05/06 blockers below.
+
 **Review 05/06 findings below remain unresolved and retain their release/wave-2
 constraints.** These workspace repairs do not claim to fix legacy pickle,
 preflight, checkpoint finalization, or the inference evidence findings.
