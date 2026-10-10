@@ -74,6 +74,34 @@ B1 human gate passed 2026-10-07 (both repos created, empty). A0a(i) prompt filed
 
 2026-10-08 evening: A2 (PyAutoFit#1679), A3 (#1680), A3b (#1681, after an NSS witness PASS) and B3 (autofit_inference#5, PyAutoInsight#23, PyAutoCortex#61; wrap-up with no more compute, 223 of 520 pilot rows) all MERGED and closed out. Records are `complete/2026/10/search-ext-{a2-objective-bridge,a3-samples-checkpointer,a3b-nss-preflight,b3-pilot}.md`. Post-merge Codex gpt-6-astra reviews of everything after the A1 review: `search_extensibility_epic_reviews/05_codex_astra_a2_a3_a3b_postmerge.md` (FINDINGS, 7) and `06_codex_astra_b3_postmerge.md` (FINDINGS, 6). Nothing enacted yet; see Resume.
 
+## Heart recovery handoff (2026-10-10 — read before resuming)
+
+The human paused Scientist adoption to repair Heart, then authorized the bounded
+repair scopes under exact RED `release validation FAILED (stage integrate)`.
+The October 10 rehearsal (Heart run 38038078541, version 2026.10.10.1.dev81101)
+used PyAutoFit main 7d056728c: 726 pass / 2 fail / 85 skip; install A–F pass.
+These are downstream adoption gaps from **already merged** A1/A2, not unfinished A4:
+
+- autofit_workspace_test#109, task `heart-fitness-dispatch`: explicit JAX analysis
+  plus behavioral scalar/batched objective, compile reuse and pickle assertions.
+  Before: assertion failure; after: release-profile script PASS (6.4s).
+- autolens_workspace#588, task `heart-hierarchical-backend`: imaging analyses use
+  NumPy consistently with the existing graph and hierarchical factor. Before:
+  backend-agreement SearchException; after: release-profile script PASS (20.7s).
+  Matching notebook regenerated. No PyAutoFit library changes.
+- Mind#497, task `heart-manifest-drift`: independent generated guidance/table
+  drift; DNA missing files already fixed by merged DNA#1 and local main synced.
+
+Branch/worktree claims and current shipping status live in active.md and the
+three issue records. Broad smoke and independent review are in progress at this
+handoff; PR links/evidence will be appended when complete. Do not repeat these
+repairs or change another session's retained B3 pilot output worktree.
+**Review 05/06 findings below remain unresolved and retain their release/wave-2
+constraints.** These workspace repairs do not claim to fix legacy pickle,
+preflight, checkpoint finalization, or the inference evidence findings.
+Heart only clears through merged fixes plus fresh supported wheel integration
+and re-ingest; local passes do not make release readiness GREEN.
+
 ## Resume (2026-10-08 night — start here)
 
 Both post-merge astra reviews returned FINDINGS. None has been enacted. **The PyAutoFit pending-release PRs (#1679/#1680/#1681) must not ship in a release until the release blockers in the first list are fixed.** Verify each finding against current main before fixing it; earlier astra findings all reproduced. Then do A4 or B4 (the human chooses).
