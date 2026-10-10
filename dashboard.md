@@ -12,13 +12,13 @@
 | [Epics](#epics) | 16 |
 | [In flight](#in-flight) | 3 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 247 |
+| [Backlog](#backlog) | 248 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 18
+**Highest priority** (filed as `high`) — showing 12 of 19
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -929,7 +929,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>bug</b> — 71</summary>
+<summary><b>bug</b> — 72</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -999,6 +999,14 @@ Use the start-dev skill. draft/bug/pyautoheart/smoke_install_flat_pip_chain_brea
 
 ```
 Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md">Investigate Euclid Einstein-radius latent uncertainty collapse</a> — autofit · too-large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md
 ```
 
 </details>
@@ -2637,7 +2645,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-79 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+80 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2667,6 +2675,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/workspaces/model_figures_6_rollout.md`
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md`
+- `draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md`
 - `draft/bug/autofit/search_kwarg_typos_in_workspace_scripts.md`
 - `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
@@ -2681,8 +2690,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/pyautobrain/profiling_compile_drift_point_vs_point.md`
 - `draft/refactor/autogalaxy/critical_curves_dispatch_cluster.md`
 - `draft/refactor/workspaces/abell_1201_local_cleanup.md`
-- `draft/docs/autolens/split_lensing_regimes.md`
-- _… and 39 more_
+- _… and 40 more_
 
 </details>
 
