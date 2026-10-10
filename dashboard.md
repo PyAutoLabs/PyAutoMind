@@ -789,7 +789,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/heart_fitness_dispatch_refactor_adoption.md">Adopt the objective-factory contract in fitness dispatch integration assertions</a> — <a href="https://github.com/PyAutoLabs/autofit_workspace_test/issues/109">issue #109</a> — issued 2026-10-10 — workspace-dev</summary>
+<details><summary>📋 <a href="active/heart_fitness_dispatch_refactor_adoption.md">Adopt the objective-factory contract in fitness dispatch integration assertions</a> — <a href="https://github.com/PyAutoLabs/autofit_workspace_test/issues/109">issue #109</a> — issued 2026-10-10 — awaiting-merge — ⏸ waiting on PyAutoFit's release</summary>
 
 ```
 Use the start-dev skill. active/heart_fitness_dispatch_refactor_adoption.md
@@ -805,7 +805,7 @@ Use the start-dev skill. active/heart_generated_manifest_drift.md
 
 </details>
 
-<details><summary>📋 <a href="active/heart_hierarchical_backend_adoption.md">Make the hierarchical guide backend declarations consistent</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/588">issue #588</a> — issued 2026-10-10 — workspace-dev</summary>
+<details><summary>📋 <a href="active/heart_hierarchical_backend_adoption.md">Make the hierarchical guide backend declarations consistent</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/588">issue #588</a> — issued 2026-10-10 — awaiting-merge — ⏸ waiting on PyAutoFit's release</summary>
 
 ```
 Use the start-dev skill. active/heart_hierarchical_backend_adoption.md
@@ -2808,6 +2808,8 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - [PyAutoFit#1679](https://github.com/PyAutoLabs/PyAutoFit/pull/1679) — `complete/2026/10/search-ext-a2-objective-bridge.md`
 - [PyAutoFit#1680](https://github.com/PyAutoLabs/PyAutoFit/pull/1680) — `complete/2026/10/search-ext-a3-samples-checkpointer.md`
 - [PyAutoFit#1681](https://github.com/PyAutoLabs/PyAutoFit/pull/1681) — `complete/2026/10/search-ext-a3b-nss-preflight.md`
+- ⏸ waiting: [Adopt the objective-factory contract in fitness dispatch integration assertions](active/heart_fitness_dispatch_refactor_adoption.md)
+- ⏸ waiting: [Make the hierarchical guide backend declarations consistent](active/heart_hierarchical_backend_adoption.md)
 
 **PyAutoGalaxy**
 
