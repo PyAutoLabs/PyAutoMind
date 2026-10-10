@@ -96,7 +96,11 @@ Branch/worktree claims and current shipping status live in active.md and the
 three issue records. Workspace repairs are open: autofit_workspace_test PR #110 (2ed66aa; 15 smoke
 passes) and autolens_workspace PR #589 (7a929d3b; 41 smoke passes). Both have
 independent CLEAN review; release-profile passes are recorded above. CI/merge
-and fresh wheel integration remain pending; manifest PRs follow under Mind#497. Do not repeat these
+and fresh wheel integration remain pending. All 12 manifest PRs are linked from
+Mind#497 (full generator check, 946 tests and independent CLEAN). Initial PR CI
+is green for fitness; Lens smoke CI remains pending. Lens local smoke also
+passed its two notebooks. Heart refreshed to RED 60 with 14 canonical drift
+mismatches awaiting those merges; no release or merge has been performed. Do not repeat these
 repairs or change another session's retained B3 pilot output worktree.
 **Review 05/06 findings below remain unresolved and retain their release/wave-2
 constraints.** These workspace repairs do not claim to fix legacy pickle,

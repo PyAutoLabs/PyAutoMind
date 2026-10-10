@@ -9,6 +9,7 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked` /
 
 | date | task | effective level | gates (tests/smoke/review/heart) | outcome |
 |------|------|-----------------|----------------------------------|---------|
+| 2026-10-10 | heart-manifest-drift (Mind#497; 12 linked guidance PRs) | live human development-only authorization | full generator check, 946 tests, Eyes265 URLs PASS; independent CLEAN; Heart RED `release validation FAILED (stage integrate)`; non-causal guidance repair, no merge/release | red-override |
 | 2026-10-10 | heart-fitness-dispatch (af workspace test #109 / PR110) | live human corrective authorization | release script PASS; 15 smoke PASS; independent CLEAN + 7 mutation faults caught; Heart RED `release validation FAILED (stage integrate)`; no merge/release | corrective |
 | 2026-10-10 | heart-hierarchical-backend (lens workspace #588 / PR589) | live human corrective authorization | release guide PASS; 41 smoke PASS; notebook byte-identical; independent CLEAN; Heart RED `release validation FAILED (stage integrate)`; no merge/release | corrective |
 | 2026-10-09 | timing-noise-audit-p10-headline-completion (autolens_profiling #412, stacked on #411 → #410) | supervised | 1405/6 tests; smoke n/a (cell smoke-import OK); independent Opus FINDINGS (7, none blocking) fixed → re-review CLEAN; Heart RED `release validation FAILED (stage integrate)`; live human development override 2026-10-09 recorded on #362; PR-open only, judge tier, human /prm after #410/#411 | red-override |

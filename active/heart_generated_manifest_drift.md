@@ -5,7 +5,7 @@ Target: health_fixes
 Autonomy: supervised
 Consequence: judge
 Priority: high
-Status: library-dev
+Status: awaiting-merge
 Issued: 2026-10-10
 Issue: https://github.com/PyAutoLabs/PyAutoMind/issues/497
 
@@ -24,8 +24,9 @@ status-refreshed.json, health-refreshed.json, door.json).
 
 ## Workflow boundary
 
-Draft only. start-dev step 0a stopped at Heart RED before planning, issue creation,
-claims or source edits. Requires live scoped RED authorization. No merge or release
+Historical entry gate: start-dev step 0a initially stopped at Heart RED.
+Resolved by live scoped user authorization on 2026-10-10; implemented through
+start-dev worktrees and ship workflow. No merge or release
 is authorized. Preserve Scientist adoption and Broca expansion plans. Recheck claims
 and remote refs before starting. Do not modify other sessions' worktrees.
 
@@ -64,3 +65,10 @@ Briefly report each RED reason, its likely cause, related existing work, and the
 Refresh Heart through its supported procedures after fixes or completed upstream work. Do not suppress failures, weaken checks, or mark unresolved evidence green. Finish with the authoritative verdict, validation evidence, remaining blockers, and whether the Scientist dashboard phase can start.
 
 Leave the Scientist adoption and Broca expansion plans unchanged during this work. Their implementation resumes after Heart is sorted
+
+## Current deliverable (2026-10-10)
+
+https://github.com/PyAutoLabs/PyAutoMind/issues/497
+
+12 linked PRs; full canonical generator check PASS; 946 tests PASS; independent CLEAN; remaining CI runs pending, no observed failed test checks.
+Heart refresh remains RED 60, exact release blocker `release validation FAILED (stage integrate)`. All source corrections are committed/pushed; no merge or release performed. Full local logs/reviews in workspace-root `tmp/heart-red-investigation/`. Human merge and fresh supported integration evidence remain required.

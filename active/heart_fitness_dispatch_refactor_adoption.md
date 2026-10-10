@@ -5,7 +5,7 @@ Target: health_fixes
 Autonomy: supervised
 Consequence: judge
 Priority: high
-Status: workspace-dev
+Status: awaiting-merge
 Issued: 2026-10-10
 Issue: https://github.com/PyAutoLabs/autofit_workspace_test/issues/109
 
@@ -24,8 +24,9 @@ status-refreshed.json, health-refreshed.json, door.json).
 
 ## Workflow boundary
 
-Draft only. start-dev step 0a stopped at Heart RED before planning, issue creation,
-claims or source edits. Requires live scoped RED authorization. No merge or release
+Historical entry gate: start-dev step 0a initially stopped at Heart RED.
+Resolved by live scoped user authorization on 2026-10-10; implemented through
+start-dev worktrees and ship workflow. No merge or release
 is authorized. Preserve Scientist adoption and Broca expansion plans. Recheck claims
 and remote refs before starting. Do not modify other sessions' worktrees.
 
@@ -73,3 +74,10 @@ Leave the Scientist adoption and Broca expansion plans unchanged during this wor
 ## Authorization / active handoff
 
 2026-10-10 live user authorized the named repair scopes under `release validation FAILED (stage integrate)`: “yeah I authorize, fix the bugs and ensure when we continue work on the epic it knows this owkr happened but just get the fixes sorted for now”. Prior entry-gate stop resolved for development only. Issue holds implementation plan; no merge/release/rehearsal authority.
+
+## Current deliverable (2026-10-10)
+
+https://github.com/PyAutoLabs/autofit_workspace_test/pull/110
+
+release-profile PASS; 15 smoke scripts PASS; independent CLEAN with seven mutation faults detected; PR CI all three checks successful.
+Heart refresh remains RED 60, exact release blocker `release validation FAILED (stage integrate)`. All source corrections are committed/pushed; no merge or release performed. Full local logs/reviews in workspace-root `tmp/heart-red-investigation/`. Human merge and fresh supported integration evidence remain required.

@@ -78,8 +78,7 @@
 - tier: judge (human /prm)
 - heart-red-override: live user 2026-10-10 authorized named repair scopes for `release validation FAILED (stage integrate)`; development/PR only, no merge/release/rehearsal; quote on issue.
 - pr: https://github.com/PyAutoLabs/autolens_workspace/pull/589
-- validation: release-profile guide PASS 20.7s; smoke 41 PASS; regenerated notebook byte-identical; independent review CLEAN; commit 7a929d3b
-- release-gate: PyAutoFit
+- validation: release-profile guide PASS 20.7s; smoke 41 scripts + 2 notebooks PASS; regenerated notebook byte-identical; independent review CLEAN; commit 7a929d3b
 - corrective-red: `release validation FAILED (stage integrate)`; live authorization on issue; one of two downstream integration repairs; fresh wheel validation still required.
 
 ## heart-manifest-drift
@@ -87,7 +86,7 @@
 - issued: 2026-10-10
 - prompt: active/heart_generated_manifest_drift.md
 - session: Codex GPT-6; session ID unavailable
-- status: library-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/heart-manifest-drift
 - repos:
   - PyAutoBroca: feature/heart-manifest-drift
@@ -104,3 +103,18 @@
   - pyautolabs.github.io: feature/heart-manifest-drift
 - tier: judge (human /prm)
 - heart-red-override: live user 2026-10-10 authorized generated-guidance repair under `release validation FAILED (stage integrate)`; non-causal development scope only, no merge/release/rehearsal.
+- prs:
+  - PyAutoBroca: https://github.com/PyAutoLabs/PyAutoBroca/pull/5
+  - PyAutoDNA: https://github.com/PyAutoLabs/PyAutoDNA/pull/2
+  - PyAutoCortex: https://github.com/PyAutoLabs/PyAutoCortex/pull/62
+  - PyAutoEyes: https://github.com/PyAutoLabs/PyAutoEyes/pull/27
+  - PyAutoEars: https://github.com/PyAutoLabs/PyAutoEars/pull/28
+  - PyAutoPulse: https://github.com/PyAutoLabs/PyAutoPulse/pull/49
+  - PyAutoInsight: https://github.com/PyAutoLabs/PyAutoInsight/pull/24
+  - PyAutoNerves: https://github.com/PyAutoLabs/PyAutoNerves/pull/197
+  - PyAutoGut: https://github.com/PyAutoLabs/PyAutoGut/pull/29
+  - PyAutoScientist: https://github.com/PyAutoLabs/PyAutoScientist/pull/54
+  - .github: https://github.com/PyAutoLabs/.github/pull/36
+  - pyautolabs.github.io: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/36
+- validation: full task-bundle repos_sync check PASS; 946 existing tests PASS across generator/owners/hub; live Eyes 265 URLs PASS; independent review CLEAN; exact paths verified.
+- next: human /prm per PR; synchronize canonical checkouts safely after merge, then supported Heart tick. No merge/release/rehearsal authorized.
