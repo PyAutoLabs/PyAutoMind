@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1816 records across 9 buckets.
+1819 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -180,7 +180,10 @@ markers; everything below GENERATED is rebuilt.
 - [fork-context-darwin-test](2026/10/fork-context-darwin-test.md)
 - [heart-dashboard-collectors](2026/10/heart-dashboard-collectors.md)
 - [heart-dashboard-markdown-link-test](2026/10/heart-dashboard-markdown-link-test.md)
+- [heart-fitness-dispatch](2026/10/heart-fitness-dispatch.md)
 - [heart-front-door-sync](2026/10/heart-front-door-sync.md)
+- [heart-hierarchical-backend](2026/10/heart-hierarchical-backend.md)
+- [heart-manifest-drift](2026/10/heart-manifest-drift.md)
 - [heart-monitoring-coverage](2026/10/heart-monitoring-coverage.md)
 - [heart-publication-coverage](2026/10/heart-publication-coverage.md)
 - [heart-score-resusitate](2026/10/heart-score-resusitate.md)

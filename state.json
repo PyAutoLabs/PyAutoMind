@@ -3,28 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-10-10T16:37:54Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
+  "updated": "2026-10-10T16:48:30Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Adopt the objective-factory contract in fitness dispatch integration assertions \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_workspace_test/issues/109",
-      "prompt": "Use the start-dev skill. active/heart_fitness_dispatch_refactor_adoption.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Reconcile the current generated-guidance manifest drift \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/issues/497",
-      "prompt": "Use the start-dev skill. active/heart_generated_manifest_drift.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Make the hierarchical guide backend declarations consistent \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autolens_workspace/issues/588",
-      "prompt": "Use the start-dev skill. active/heart_hierarchical_backend_adoption.md"
-    },
     {
       "severity": "yellow",
       "text": "Timing-noise audit phase 10: headline completion\u2026 \u2014 awaiting-merge",
@@ -105,12 +87,6 @@
     },
     {
       "severity": "yellow",
-      "text": "waiting on PyAutoFit's release: Adopt the objective-factory contract in fitness dispatch integration assertions",
-      "url": "https://github.com/PyAutoLabs/autofit_workspace_test/issues/109",
-      "prompt": "Use the start-dev skill. active/heart_fitness_dispatch_refactor_adoption.md"
-    },
-    {
-      "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#652 \u2014 search-ext-a0c-downstream",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/652",
       "prompt": null
@@ -126,6 +102,30 @@
       "text": "pending release: PyAutoLens PyAutoLens#777 \u2014 search-ext-a0c-downstream",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/777",
       "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoLens PyAutoLens#778 \u2014 search-ext-a1-declare-gate",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/778",
+      "prompt": null
+    },
+    {
+      "severity": "info",
+      "text": "pick: Fix KNN neighbor search for a partial final point block",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md",
+      "prompt": "Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md",
+      "prompt": "Use the start-dev skill. draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: SED chain waveband fit can spin forever in Nautilus exploration\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md",
+      "prompt": "Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md"
     }
   ]
 }

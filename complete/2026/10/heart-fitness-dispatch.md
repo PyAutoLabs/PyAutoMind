@@ -1,4 +1,20 @@
-# Make the hierarchical guide backend declarations consistent
+## heart-fitness-dispatch
+- issue: https://github.com/PyAutoLabs/autofit_workspace_test/issues/109
+- completed: 2026-10-10
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/110
+- release-gate: PyAutoFit
+
+Shipped: PR #110 merged after human `/prm`; every head-SHA Actions run and job passed, including smoke Python 3.12 and 3.13. Git ancestry confirms zero unmerged commits.
+
+Replaced obsolete private Fitness dispatch assumptions with explicit JAX analysis and behavioral scalar/batch accuracy, compile reuse, objective cache and pickle reconstruction checks. Existing array/visualization coverage retained. Adopts already merged PyAutoFit A1/A2; no library changes or other-session worktrees modified.
+
+Validation: baseline failure reproduced using release profile; repaired script PASS (6.4s), full local smoke 15 PASS; independent CLEAN review and seven mutation faults detected.
+
+Heart remains RED: `release validation FAILED (stage integrate)` from run 38038078541. Fresh supported wheel integration and evidence ingestion are still required; this merge neither authorizes release/rehearsal nor clears the refactor epic's review 05/06 release blockers. Scientist adoption and Broca expansion plans unchanged. Epic handoff updated to prevent duplicate repair work.
+
+## Original prompt
+
+# Adopt the objective-factory contract in fitness dispatch integration assertions
 
 Type: bug
 Target: health_fixes
@@ -7,9 +23,9 @@ Consequence: judge
 Priority: high
 Status: awaiting-merge
 Issued: 2026-10-10
-Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/588
+Issue: https://github.com/PyAutoLabs/autofit_workspace_test/issues/109
 
-Primary repository: @autolens_workspace.
+Primary repository: @autofit_workspace_test.
 
 ## Incident evidence (2026-10-10)
 
@@ -32,27 +48,30 @@ and remote refs before starting. Do not modify other sessions' worktrees.
 
 ## Bounded defect and owner
 
-`scripts/guides/modeling/advanced/hierarchical.py:250` fails backend agreement:
-FactorGraphModel is_jax=False, AnalysisFactor0/1/2 is_jax=True.
-The graph and HierarchicalFactor explicitly use NumPy; AnalysisImaging(dataset=...)
-uses its JAX default. Confirm intended tutorial backend and align declarations
-without weakening PyAutoFit's whole-graph agreement guard or changing science.
-Current origin/main still contains this mismatch. Fix locus candidate: genuine
-workspace example configuration. Acceptance: guide passes release profile, smoke
-and applicable notebook generation, then fresh wheel integration clears this row.
+`scripts/jax_assertions/fitness_dispatch.py:43` fails `fitness.use_jax_jit is True`.
+The fixture builds `af.ex.Analysis` without `use_jax=True`; A2's factory selects
+backend from the analysis and no longer treats the deprecated flag as a backend
+selector. Subsequent `_call is _jit` / `_vmap` identity assertions also describe
+retired internals. Preserve behavioral coverage of scalar JIT, batches, pickle
+restoration and visualization; do not delete assertions or disable JAX.
+Fix locus candidate: integration-script adoption, after checking the library contract.
+Acceptance: focused script passes under release env and meaningful objective/roundtrip
+assertions hold; workspace smoke passes; fresh wheel integration clears this row.
 
 ## Existing-work dependency and non-duplication
 
-A1 PyAutoFit issue #1674 / PR #1675 introduced the backend agreement gate and is
-merged (0dbf258c). `complete/2026/10/search-ext-a1-declare-gate.md` explicitly records
-rejection of NumPy graph/JAX children as intended. No active Mind claim/open workspace
-PR addresses this guide. Pending release-blocker findings in epic review 05 concern
-different paths and do not repair these declarations.
-`draft/bug/health_fixes/samples_parameter_paths.md` / PyAutoFit#1327 mentions the same
-guide but traces a July sample KeyError, not this SearchException; do not conflate.
-Read lensing assistant guidance before finalizing the repair plan. Local workspace
-main is 11 commits behind origin/main; preserve it and create an isolated worktree
-from fetched current main after the gate/claim checks.
+A2 PyAutoFit issue #1676 / PR #1679 merged 2026-10-08. A3 #1677/#1680 and A3b
+#1678/#1681 also merged. Main 7d056728c is exactly the rehearsed SHA. CI run
+37836895635 passes Python 3.12, 3.13 and no-JAX. No active Mind PyAutoFit claim,
+no open PR here; only unrelated PyAutoFit PR #1665 is open (green).
+Completion records: `complete/2026/10/search-ext-a{2-objective-bridge,3-samples-checkpointer,3b-nss-preflight}.md`.
+Existing epic `draft/research/autofit/search_extensibility_epic.md` Resume lists
+unimplemented legacy-pickle/preflight/checkpoint findings; those are separate from
+this fixture failure. If investigation needs library changes, reuse/slice the
+existing follow-up rather than duplicating it. A4 completion alone is not evidence.
+Retained remote feature/search-ext-* refs are merged history, not active PRs.
+Canonical git worktree lists show no active refactor feature checkout; B3 pilot
+output worktree is explicitly retained in the epic and must remain untouched.
 
 ## Original user request (verbatim)
 
@@ -74,7 +93,7 @@ Leave the Scientist adoption and Broca expansion plans unchanged during this wor
 
 ## Current deliverable (2026-10-10)
 
-https://github.com/PyAutoLabs/autolens_workspace/pull/589
+https://github.com/PyAutoLabs/autofit_workspace_test/pull/110
 
-release-profile PASS; 41 smoke scripts and 2 notebooks PASS; independent CLEAN; navigator/size checks green, Python3.12/3.13 smoke CI pending.
+release-profile PASS; 15 smoke scripts PASS; independent CLEAN with seven mutation faults detected; PR CI all three checks successful.
 Heart refresh remains RED 60, exact release blocker `release validation FAILED (stage integrate)`. All source corrections are committed/pushed; no merge or release performed. Full local logs/reviews in workspace-root `tmp/heart-red-investigation/`. Human merge and fresh supported integration evidence remain required.

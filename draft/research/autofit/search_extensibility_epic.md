@@ -92,16 +92,25 @@ These are downstream adoption gaps from **already merged** A1/A2, not unfinished
 - Mind#497, task `heart-manifest-drift`: independent generated guidance/table
   drift; DNA missing files already fixed by merged DNA#1 and local main synced.
 
-Branch/worktree claims and current shipping status live in active.md and the
-three issue records. Workspace repairs are open: autofit_workspace_test PR #110 (2ed66aa; 15 smoke
-passes) and autolens_workspace PR #589 (7a929d3b; 41 smoke passes). Both have
-independent CLEAN review; release-profile passes are recorded above. CI/merge
-and fresh wheel integration remain pending. All 12 manifest PRs are linked from
-Mind#497 (full generator check, 946 tests and independent CLEAN). Initial PR CI
-is green for fitness; Lens smoke CI remains pending. Lens local smoke also
-passed its two notebooks. Heart refreshed to RED 60 with 14 canonical drift
-mismatches awaiting those merges; no release or merge has been performed. Do not repeat these
-repairs or change another session's retained B3 pilot output worktree.
+All 14 repair PRs merged on 2026-10-10 under human `/prm`. Workspace PRs
+[autofit_workspace_test#110](https://github.com/PyAutoLabs/autofit_workspace_test/pull/110)
+and [autolens_workspace#589](https://github.com/PyAutoLabs/autolens_workspace/pull/589)
+passed every configured CI run/job, including both Python 3.12/3.13 smoke legs.
+Local smoke: fitness 15 scripts; Lens 41 scripts + 2 notebooks; independent
+CLEAN reviews. All twelve manifest PRs linked in Mind#497 merged; Cortex,
+.github and public hub had no CI checks and received explicit human approval.
+Full generator check, 946 tests and independent CLEAN review passed.
+
+Completion records (original prompts folded; issues closed and claims released):
+- [Fitness dispatch](../../../complete/2026/10/heart-fitness-dispatch.md)
+- [Hierarchical backend](../../../complete/2026/10/heart-hierarchical-backend.md)
+- [Manifest drift](../../../complete/2026/10/heart-manifest-drift.md)
+
+Do not repeat these repairs or change another session's retained B3 pilot
+output worktree. Fresh supported wheel integration remains outstanding; the
+last authoritative failed run is still 38038078541. No release/rehearsal was
+performed or authorized. Scientist adoption and Broca expansion plans remain
+unchanged and paused pending Heart recovery.
 **Review 05/06 findings below remain unresolved and retain their release/wave-2
 constraints.** These workspace repairs do not claim to fix legacy pickle,
 preflight, checkpoint finalization, or the inference evidence findings.

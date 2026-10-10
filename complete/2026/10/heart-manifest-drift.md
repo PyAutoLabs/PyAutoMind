@@ -1,3 +1,30 @@
+## heart-manifest-drift
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/497
+- completed: 2026-10-10
+
+Shipped: all twelve PRs merged under human `/prm`. Every configured head-SHA Actions run and test job passed. Cortex, .github and public hub had no checks; human explicitly authorized all three after disclosure. Broca PR deployment skipped by design; build and both test runs passed. Every claimed branch has zero unmerged commits against origin/main.
+
+- pr: https://github.com/PyAutoLabs/PyAutoBroca/pull/5
+- pr: https://github.com/PyAutoLabs/PyAutoDNA/pull/2
+- pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/62
+- pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/27
+- pr: https://github.com/PyAutoLabs/PyAutoEars/pull/28
+- pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/49
+- pr: https://github.com/PyAutoLabs/PyAutoInsight/pull/24
+- pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/197
+- pr: https://github.com/PyAutoLabs/PyAutoGut/pull/29
+- pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/54
+- pr: https://github.com/PyAutoLabs/.github/pull/36
+- pr: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/36
+
+Restored canonical generated policy/maps/tables and public organ links. No Scientist adoption or Broca expansion plan changes. DNA missing guidance had already shipped in DNA#1; that checkout was synchronized. This task fixes independent manifest warnings, not the release integration failure.
+
+Validation: complete task-bundle repos_sync check PASS; 946 existing tests PASS; Eyes 265 live URLs PASS; independent CLEAN review verified exact canonical generated blocks and no unrelated edits. Two workspace RED causes shipped separately in heart-fitness-dispatch and heart-hierarchical-backend. Heart's failed release evidence still requires fresh supported integration validation; no release/rehearsal is authorized.
+
+Generator trap: --only does not bound every repos_sync generator. Applied canonical generators only to asserted claimed paths; did not modify another session's claimed worktree or retained output. The undeclared COWLS symlink was removed only from this task bundle, preserving its source checkout.
+
+## Original prompt
+
 # Reconcile the current generated-guidance manifest drift
 
 Type: bug
