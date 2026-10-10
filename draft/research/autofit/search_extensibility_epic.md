@@ -136,22 +136,38 @@ wheel SHAs; Nerves main differs only in the merged AGENTS.md map update. Do not
 substitute newer main SHAs into the wheel evidence. A passing integration may
 still produce stale-source warnings, which must remain visible.
 
-Next health session: inspect every job of 38069404110. Download its
-`release-stage-report` into
-`/home/jammy/Code/PyAutoLabs/tmp/heart-recovery-validation/stage2`, alongside
-the preserved rehearsal.json, testpypi_version.txt and commit_shas.json. Then
-run the supported conductor:
-`pyauto-brain release validate --ingest /home/jammy/Code/PyAutoLabs/tmp/heart-recovery-validation/stage2 --commit-shas /home/jammy/Code/PyAutoLabs/tmp/heart-recovery-validation/stage2/commit_shas.json`.
-Inspect actual report failures and adopt Heart's resulting verdict. Until that
-run completes and evidence is ingested, the prior failed integration remains
-authoritative RED. No background watcher/reminder is armed. Keep the existing
-Cortex checkout/science-work blocker and the review 05/06 blockers below.
+### Recovery validation completed and ingested (2026-10-10)
+
+Run 38069404110 completed successfully: 51 executed workflow jobs PASS;
+2 notebook jobs skipped by the release channel. Authoritative release-profile
+report: **728 passed, 0 failed, 85 skipped, 0 timeouts**. Both repaired script
+groups passed, and TestPyPI installation checks A–F passed. Downloaded the
+release-stage-report alongside the original rehearsal artifacts in
+`/home/jammy/Code/PyAutoLabs/tmp/heart-recovery-validation/stage2` and verified
+the version and full commit map matched before supported ingestion through
+`pyauto-brain release validate --ingest ... --commit-shas ...`.
+
+Heart verdict at **2026-10-10T18:43:53Z: YELLOW, score 85, no RED reasons**.
+The failed integration evidence is now superseded by the actual passing run.
+Remaining exact reasons:
+- `manifest drift: organism-map blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml`
+- `release validation stale: source moved since rehearsal (PyAutoNerves)`
+
+The first remains the Cortex canonical checkout blocked by preserved local
+science edits; merged Cortex#62 already contains its repair. The second is the
+Nerves AGENTS.md-only merge after these candidate wheels were built. No wheel
+SHA was relabelled and no --force used. A fresh candidate rehearsal/integration
+against current source is needed for that freshness leg. Original artifact,
+post-ingest verdict and logs are under tmp/heart-recovery-validation locally.
+No release/publication or Scientist/Broca implementation occurred. Scientist
+remains paused pending the remaining Heart warnings; refactor review 05/06
+release blockers below remain unresolved regardless of the passing matrix.
 
 **Review 05/06 findings below remain unresolved and retain their release/wave-2
 constraints.** These workspace repairs do not claim to fix legacy pickle,
 preflight, checkpoint finalization, or the inference evidence findings.
-Heart only clears through merged fixes plus fresh supported wheel integration
-and re-ingest; local passes do not make release readiness GREEN.
+The integration RED is cleared by the ingested wheel run above; remaining
+Heart warnings and separate refactor release blockers are not cleared by it.
 
 ## Resume (2026-10-08 night — start here)
 
