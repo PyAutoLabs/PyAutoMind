@@ -1,3 +1,9 @@
+# broca-communication-resource-dropdowns
+
+Completed within `complete/2026/10/organ-resource-dropdowns.md` (Heart#295, Broca#7, Scientist#66). Resource presentation scope fully covered; broader evidence ingestion remains separately planned.
+
+## Original prompt
+
 # Broca communication resource dropdowns including HowTo
 
 Type: feature

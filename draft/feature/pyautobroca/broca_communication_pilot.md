@@ -16,4 +16,4 @@ Next: inspect current owners and split cross-repository rollout into bounded PRs
 
 ## Filed presentation slice — 2026-10-11
 
-`broca_communication_resource_dropdowns_including.md` captures resource-specific dropdowns for docs, HowTo tutorials, workspaces and assistants, with useful evidence and Scientist deep links. Treat it as the presentation slice of this pilot; do not duplicate its implementation when planning inventory/evidence ingestion.
+`complete/2026/10/broca-communication-resource-dropdowns.md` captures resource-specific dropdowns for docs, HowTo tutorials, workspaces and assistants, with useful evidence and Scientist deep links. Treat it as the presentation slice of this pilot; do not duplicate its implementation when planning inventory/evidence ingestion.

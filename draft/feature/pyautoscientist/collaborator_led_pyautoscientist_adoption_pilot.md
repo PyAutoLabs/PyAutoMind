@@ -104,8 +104,8 @@ Completed foundations:
 - `complete/2026/10/scientist-resource-routing.md` — Scientist PR #58, separate headings and organ-linked resources, published and verified.
 
 The following owner-board work is part of this same epic:
-- `draft/feature/pyautoheart/heart_test_workspace_resource_dropdowns.md` — each test workspace gets meaningful Heart detail and a clear Scientist destination.
-- `draft/feature/pyautobroca/broca_communication_resource_dropdowns_including.md` — docs, HowTo tutorials, workspaces and assistants get meaningful Broca detail and clear Scientist destinations.
+- `complete/2026/10/heart-test-workspace-resource-dropdowns.md` — each test workspace gets meaningful Heart detail and a clear Scientist destination.
+- `complete/2026/10/broca-communication-resource-dropdowns.md` — docs, HowTo tutorials, workspaces and assistants get meaningful Broca detail and clear Scientist destinations.
 - `draft/feature/pyautobroca/broca_communication_contract.md` — prerequisite responsibility/inventory contract for expanded Broca implementation.
 - `draft/feature/pyautobroca/broca_communication_pilot.md` — complementary inventory/evidence work; reuse the dropdown slice instead of implementing it twice.
 - `draft/feature/pyautobroca/broca_communication_documentation_and_workspaces.md` — supporting Broca scope map, not an additional duplicate implementation task.
@@ -118,4 +118,4 @@ Heart presentation can be scoped independently. Broca dropdowns coordinate with 
 
 ## Current priority — 2026-10-11
 
-The human requested Heart test-workspace and Broca communication dropdowns next, before continuing the independent Scientist. `active/organ_resource_dropdowns.md` (Scientist#65) implements both destination slices plus Scientist deep links. Brain#518 remains awaiting merge; further independent-starter work is deferred until the owner-board slice is complete. Broca broader evidence ingestion and canonical role rollout remain separately recorded.
+The human requested Heart test-workspace and Broca communication dropdowns next, before continuing the independent Scientist. `complete/2026/10/organ-resource-dropdowns.md` (Scientist#65) records both destination slices and Scientist deep links merged in Heart#295, Broca#7 and Scientist#66. Brain#518 remains awaiting merge; independent-starter continuation is now next. Publication/live checks remain recorded separately. Broca broader evidence ingestion and canonical role rollout remain separately recorded.

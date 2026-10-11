@@ -1,3 +1,9 @@
+# heart-test-workspace-resource-dropdowns
+
+Completed within `complete/2026/10/organ-resource-dropdowns.md` (Heart#295, Broca#7, Scientist#66). Resource presentation scope fully covered; broader evidence ingestion remains separately planned.
+
+## Original prompt
+
 # Heart test workspace resource dropdowns
 
 Type: feature

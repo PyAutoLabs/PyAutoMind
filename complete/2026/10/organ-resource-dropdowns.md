@@ -1,5 +1,22 @@
 # Heart and Broca resource destinations
 
+- issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/65
+- completed: 2026-10-11
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/295
+- library-pr: https://github.com/PyAutoLabs/PyAutoBroca/pull/7
+- library-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/66
+- summary: Four Heart test-workspace dropdowns and 18 Broca communication-resource dropdowns, connected by Scientist stable deep links and a shared public catalogue. Project sources remain project-owned. Broca local scope documentation includes docs, tutorials, workspaces and assistants.
+
+Validation: Heart 142 tests, Broca 22, Scientist 76 Python + 7 JavaScript, 14 responsive/theme/no-JS browser cases; independent review CLEAN. Review caught foreign cached CI provenance; fixed by matching run URLs to canonical repository identity. Exact-head CI: six test/build jobs passed in five runs; Broca deployment intentionally skipped on PRs. All three branches proved ancestors of origin/main after merge.
+
+Heart release readiness remained STALE solely for absent current-source rehearsal; development was permitted. No release or deployment dispatched by this task. Publication/live checks remain in the epic publication follow-up; canonical Broca role rollout and broader evidence ingestion stay separate. Independent starter continuation can resume with Brain#518 still awaiting its own merge.
+
+Evidence archived locally under tmp/organ-resource-dropdowns/evidence/ before worktree cleanup.
+
+## Original prompt
+
+# Heart and Broca resource destinations
+
 Type: feature
 Issued: 2026-10-11
 Issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/65

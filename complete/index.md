@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1825 records across 9 buckets.
+1828 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -140,6 +140,7 @@ markers; everything below GENERATED is rebuilt.
 - [board-navigation-shared-consumers](2026/10/board-navigation-shared-consumers.md)
 - [brain-dashboard-scope](2026/10/brain-dashboard-scope.md)
 - [broca-cockpit](2026/10/broca-cockpit.md)
+- [broca-communication-resource-dropdowns](2026/10/broca-communication-resource-dropdowns.md)
 - [broca-pages](2026/10/broca-pages.md) — Broca dashboard published at https://pyautolabs.github.io/PyAutoBroca/ with GitHub Pages Actions; shared board…
 - [closed-thread-followups](2026/10/closed-thread-followups.md) — New external comments after closure or an accepted answer return a thread to Community review without requirin…
 - [cloud-board-validation-evidence](2026/10/cloud-board-validation-evidence.md)
@@ -187,6 +188,7 @@ markers; everything below GENERATED is rebuilt.
 - [heart-monitoring-coverage](2026/10/heart-monitoring-coverage.md)
 - [heart-publication-coverage](2026/10/heart-publication-coverage.md)
 - [heart-score-resusitate](2026/10/heart-score-resusitate.md)
+- [heart-test-workspace-resource-dropdowns](2026/10/heart-test-workspace-resource-dropdowns.md)
 - [imshow-origin-lower-overlays](2026/10/imshow-origin-lower-overlays.md)
 - [inference-browser-polish](2026/10/inference-browser-polish.md)
 - [inference-sampler-literature](2026/10/inference-sampler-literature.md)
@@ -219,6 +221,7 @@ markers; everything below GENERATED is rebuilt.
 - [orchestration-panel-core](2026/10/orchestration-panel-core.md)
 - [organ-banner-task-labels](2026/10/organ-banner-task-labels.md)
 - [organ-prompt-headings](2026/10/organ-prompt-headings.md)
+- [organ-resource-dropdowns](2026/10/organ-resource-dropdowns.md) — Four Heart test-workspace dropdowns and 18 Broca communication-resource dropdowns, connected by Scientist stab…
 - [over-sample-snr-helper](2026/10/over-sample-snr-helper.md)
 - [padded-single-image-recovery](2026/10/padded-single-image-recovery.md)
 - [point-audits-wheel-provenance](2026/10/point-audits-wheel-provenance.md) — Point-solver audits now work with installed wheels, preserve checkout provenance, fingerprint installed packag…
