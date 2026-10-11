@@ -65,3 +65,16 @@
 - validation: 30 discovery/installer tests, strict docs, actual seed/profile/project integration; independent review CLEAN at 4db12a8
 - heart: STALE — release validation incomplete: no rehearsal for current source; no RED/YELLOW reasons
 - evidence: .worktrees/scientist-local-discovery/evidence/
+
+## broca-resource-indent
+- issue: https://github.com/PyAutoLabs/PyAutoBroca/issues/10
+- issued: 2026-10-11
+- prompt: active/communication_resource_indentation.md
+- epic: scientist-adoption-pilot
+- status: workspace-dev
+- tier: judge (human /prm)
+- session: Codex; requested visual polish
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/broca-resource-indent
+- repos:
+  - PyAutoBroca: feature/broca-resource-indent
+  - PyAutoNerves: feature/broca-resource-indent
