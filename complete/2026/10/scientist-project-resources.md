@@ -1,5 +1,27 @@
 # Scientist project relationships and expandable cards
 
+- issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/55
+- completed: 2026-10-11
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/56
+- merge: c7d45cdbfa2dfd76a4e062980f55a08cb92909a1
+- tier: judge; explicit human /prm
+
+Phase 1 adds six expandable software-family cards with explicit software, shared dependency, workspace, tutorial, documentation, assistant and organ-record relationships. Versioned instance configuration resolves repository IDs from Mind's canonical map. Array and Reduce demonstrate assistant-free resources; public output requires explicit opt-in. Source material and evidence stay with project/organ owners. Broca's broader communication remit is coordinated in the contract, not falsely claimed implemented.
+
+Validation: 38 Python tests, 6 JavaScript tests, 6 responsive/theme Chromium cases and no-JavaScript disclosure passed. Independent review CLEAN. Exact-head Actions run 38145469676 and its sole tests job 114487757497 completed successfully; PR was CLEAN/MERGEABLE. Feature head 3010f0b is proven ancestor of origin/main. No upstream/sibling PR or library release obligation.
+
+Heart YELLOW shipping reason was explicitly acknowledged by James: `manifest drift: organism-map blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml`. The separate STALE reason was `release validation incomplete: no rehearsal for current source`. Cortex's local science changes remain untouched. No release or dashboard deployment was dispatched; the existing dashboard publication workflow must render the merged code.
+
+Evidence preserved locally in `PyAutoMind/tmp/scientist-project-resources/evidence/` before worktree removal. Only reproducible pytest/Python caches remained in the worktree; no scientific datasets or irreplaceable outputs.
+
+Remaining work stays in draft: minimal independent starter, optional-organ activation, record-preserving upgrades, collaborator validation, and separate Broca communication contract/pilot tasks. Next is start-dev on `draft/feature/pyautoscientist/scientist_minimal_starter.md`. The broader pilot and Broca programme prompts remain valid; this merge completes only their first bounded Scientist phase.
+
+Close-out validation: task-scoped lifecycle check passed. Global check reports pre-existing missing PR keys on timing-noise-audit phases p8/p9/p10; unrelated entries were left unchanged. Scoped Scientist and Broca reconciliation found no suspects.
+
+## Original prompt
+
+# Scientist project relationships and expandable cards
+
 Issued: 2026-10-11
 Issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/55
 Type: feature
