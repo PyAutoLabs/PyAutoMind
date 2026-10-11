@@ -81,3 +81,15 @@ Avoid generalising every topology/provider upfront. Use the real pilot to decide
 This is a programme-sized draft. At start-dev, agree the first bounded phase and split implementation prompts/PRs according to the one-prompt/one-task workflow. Preserve this broader intent while tracking the phases; do not dispatch the entire programme unattended.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-10-10 from file:/workspace/scratch/e0d7811f4dcc/adoption-pilot.md -->
+
+## Development breakdown — 2026-10-11
+
+James authorized implementation of the first coherent phase, with routine decisions autonomous and human merge. Current-state audit: Scientist cockpit/organ cards shipped in #53; Broca assistant evidence and Pages shipped in #2/#4. Neither programme is already active.
+
+- `scientist_project_resources.md` — bounded next phase; first Scientist phase starts now, remaining phases stay unclaimed.
+- `scientist_minimal_starter.md` — bounded next phase; first Scientist phase starts now, remaining phases stay unclaimed.
+- `scientist_optional_organ_activation.md` — bounded next phase; first Scientist phase starts now, remaining phases stay unclaimed.
+- `scientist_record_preserving_upgrades.md` — bounded next phase; first Scientist phase starts now, remaining phases stay unclaimed.
+- `scientist_collaborator_validation.md` — bounded next phase; first Scientist phase starts now, remaining phases stay unclaimed.
+
+Scientist phase 1 consumes canonical identities and exposes links only. Broca expanded communication ownership is agreed intent; inventory/evidence migration is deferred to its contract and pilot tasks. Shared multi-contributor operation remains later.

@@ -60,3 +60,12 @@ The current Broca repo/dashboard are public. Future adopter instances may differ
 Related: @PyAutoMind/draft/feature/pyautoscientist/collaborator_led_pyautoscientist_adoption_pilot.md. The first adopter has independent projects and their own Scientist. Reusable Broca improvements should support those projects without copying PyAutoLabs-specific state. Coordinate schemas with that pilot, but do not make the smallest starter wait for the whole Broca roadmap.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-10-10 from file:/workspace/scratch/e0d7811f4dcc/broca-scope.md -->
+
+## Development breakdown — 2026-10-11
+
+James authorized implementation of the first coherent phase, with routine decisions autonomous and human merge. Current-state audit: Scientist cockpit/organ cards shipped in #53; Broca assistant evidence and Pages shipped in #2/#4. Neither programme is already active.
+
+- `broca_communication_contract.md` — bounded next phase; first Scientist phase starts now, remaining phases stay unclaimed.
+- `broca_communication_pilot.md` — bounded next phase; first Scientist phase starts now, remaining phases stay unclaimed.
+
+Scientist phase 1 consumes canonical identities and exposes links only. Broca expanded communication ownership is agreed intent; inventory/evidence migration is deferred to its contract and pilot tasks. Shared multi-contributor operation remains later.
