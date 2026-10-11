@@ -55,9 +55,13 @@
 - issued: 2026-10-11
 - prompt: active/scientist_starter_init.md
 - epic: scientist-adoption-pilot
-- status: workspace-dev
+- status: awaiting-merge
 - tier: judge (human /prm)
 - session: Codex; ongoing epic implementation authorized
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/scientist-starter-init
 - repos:
   - PyAutoScientist: feature/scientist-starter-init
+- library-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/64
+- validation: 74 Python tests, 7 Node tests, offline CLI initialization/render and handoff commands; independent review CLEAN at 8852474
+- heart: STALE — release validation incomplete: no rehearsal for current source; no RED/YELLOW reasons
+- evidence: .worktrees/scientist-starter-init/evidence/

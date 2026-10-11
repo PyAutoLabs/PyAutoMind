@@ -23,3 +23,9 @@ Add scripts/starter.py with argument parsing, validation reused from instance_pr
 Audit: current Mind spawn generates a full template family; Brain installer modifies harness-wide settings. This task does not duplicate either or claim minimal harness readiness. Remaining parent work: adopt empty Mind/optional Memory templates, audit one harness, project connection and fresh-chat end-to-end proof.
 
 Branch survey: Scientist main clean at 002d305; no active claims. Unregistered DNA worktree left untouched. Branch feature/scientist-starter-init, worktree .worktrees/scientist-starter-init.
+
+## Implemented; awaiting merge
+
+PR: https://github.com/PyAutoLabs/PyAutoScientist/pull/64 (8852474). 74 Python and seven Node tests passed; independent review CLEAN with offline end-to-end initialization and generated handoff command execution. Existing/symlink/raced destinations refused; canonical map and existing records preserved. Evidence in .worktrees/scientist-starter-init/evidence/. Fresh Heart STALE solely for `release validation incomplete: no rehearsal for current source`, no RED/YELLOW. Human /prm required.
+
+Next parent slice: supported minimal Mind/template layout and one harness. This configuration initializer does not claim that those are operational.
