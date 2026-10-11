@@ -1,6 +1,8 @@
 # Heart and Broca resource destinations
 
 Type: feature
+Issued: 2026-10-11
+Issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/65
 Epic: scientist-adoption-pilot
 Difficulty: medium
 Consequence: judge

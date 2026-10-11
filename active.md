@@ -65,3 +65,17 @@
 - validation: 30 discovery/installer tests, strict docs, actual seed/profile/project integration; independent review CLEAN at 4db12a8
 - heart: STALE — release validation incomplete: no rehearsal for current source; no RED/YELLOW reasons
 - evidence: .worktrees/scientist-local-discovery/evidence/
+
+## organ-resource-dropdowns
+- issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/65
+- issued: 2026-10-11
+- prompt: active/organ_resource_dropdowns.md
+- epic: scientist-adoption-pilot
+- status: workspace-dev
+- tier: judge (human /prm)
+- session: Codex; owner-board priority explicitly authorized
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/organ-resource-dropdowns
+- repos:
+  - PyAutoHeart: feature/organ-resource-dropdowns
+  - PyAutoBroca: feature/organ-resource-dropdowns
+  - PyAutoScientist: feature/organ-resource-dropdowns
