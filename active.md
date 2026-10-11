@@ -71,7 +71,7 @@
 - issued: 2026-10-11
 - prompt: active/guides_workspaces_label.md
 - epic: scientist-adoption-pilot
-- status: workspace-dev
+- status: awaiting-merge
 - tier: judge (human /prm)
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/broca-guides-label
 - repos:
@@ -79,3 +79,10 @@
   - PyAutoHeart: feature/broca-guides-label
   - PyAutoInsight: feature/broca-guides-label
   - PyAutoNerves: feature/broca-guides-label
+- library-pr: https://github.com/PyAutoLabs/PyAutoBroca/pull/13
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/296
+- library-pr: https://github.com/PyAutoLabs/PyAutoInsight/pull/27
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/199
+- validation: Broca22, Heart142, Insight183, Nerves241 tests; Insight lint/offline contract; browser layout comparison and Heart indentation at390/1440px
+- heart: STALE — release validation incomplete: no rehearsal for current source; no RED/YELLOW reasons after syncing Nerves main
+- evidence: .worktrees/broca-guides-label/evidence/
