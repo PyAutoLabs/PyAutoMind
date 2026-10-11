@@ -1,3 +1,20 @@
+# Validated optional-organ connections
+
+- issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/71
+- shipped: 2026-10-11
+- epic: scientist-adoption-pilot
+- pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/72
+
+Merged after explicit human /prm. Exact head 13ced9edf689d770df55f04de865b07c25282f91 is an ancestor of origin/main. CI run 38171330434: tests passed, no other exact-head runs or skipped legs. Local 113 Python and 7 JS tests; final focused 22 connection tests passed. Independent review CLEAN.
+
+Adds scripts/connect_organ.py and STARTER guidance: preview then validate/apply an explicit connection to an already prepared organ; canonical identities and shared state contract; failed validation preserves records; repeated identical connections are no-ops; atomic profile replacement preserves permissions and refuses detected input changes. Valid red/old evidence is not confused with unconfigured capability. No provisioning, publication, owner-quality validation or release is claimed.
+
+Live Broca dashboard was HTTP 200 but state.json HTTP 404; the helper correctly refused connection without modifying the synthetic profile. Next prerequisite: draft/feature/pyautobroca/broca_published_state_feed.md, then real feed connection acceptance and owner-specific resumable setup. Record-preserving upgrades and actual collaborator validation remain separate epic phases.
+
+Heart at ship: STALE only — release validation incomplete: no rehearsal for current source; no RED/YELLOW. Evidence archived under tmp/scientist-organ-connection/. Task claim and worktree released during close-out.
+
+## Original prompt
+
 # Validated, repeatable optional-organ connection
 
 Type: feature
