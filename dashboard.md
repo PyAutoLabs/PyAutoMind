@@ -882,7 +882,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/communication_resource_indentation.md">Indent communication resource dropdowns</a> — <a href="https://github.com/PyAutoLabs/PyAutoBroca/issues/10">issue #10</a> — issued 2026-10-11 — workspace-dev</summary>
+<details><summary>📋 <a href="active/communication_resource_indentation.md">Indent communication resource dropdowns</a> — <a href="https://github.com/PyAutoLabs/PyAutoBroca/issues/10">issue #10</a> — issued 2026-10-11 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBroca/pull/11">PyAutoBroca#11</a>, <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/198">PyAutoNerves#198</a></summary>
 
 ```
 Use the start-dev skill. active/communication_resource_indentation.md

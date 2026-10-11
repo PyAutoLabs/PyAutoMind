@@ -12,8 +12,8 @@ Inspect successful post-merge deployments first, then use owning workflows as ne
 
 Also verify merged Heart#295, Broca#7 and Scientist#66 from `complete/2026/10/organ-resource-dropdowns.md`: publish Heart/Broca destinations before Scientist deep links, then check all four test-workspace and 18 communication-resource anchors on live pages. Source merges do not prove publication.
 
-## Latest Heart publication diagnosis — 2026-10-11
+## Heart and Hands publication verified — 2026-10-11
 
-Public Heart HTML lacks test-workspaces/resource-lens-tests. Latest successful heart-health run38134638064 at source1f94d00 predates merged Heart#295. Scheduled/manual-only workflow does not publish on this source merge. Build deploy dry-run aborts with `Could not obtain a readiness verdict ('stale').` despite authoritative readiness having only `release validation incomplete: no rehearsal for current source`. No dispatch or override attempted. Resolve the supported board-publication route before claiming Heart is live; do not run a software release to refresh HTML. Evidence: tmp/broca-resource-categories/build.json.
+Heart run https://github.com/PyAutoLabs/PyAutoHeart/actions/runs/38163976587 and Hands run https://github.com/PyAutoLabs/PyAutoHands/actions/runs/38163979000 succeeded. Live Heart HTML contains all four resource anchors (fit, galaxy, lens, cti tests). Live Hands no longer has the standalone Heart row. The earlier generic Build generate route was inapplicable to these owner dashboard-refresh workflows; no software release or readiness override was required. Other cross-board publication checks remain.
 
 Also verify the merged polish from `complete/2026/10/broca-resource-categories.md`: Broca#9 category dropdowns and assistant links; Hands#309 shortcut removal; Insight#26 nested PyAutoFit results; DNA#3 concise HTML. Existing automatic publication may cover some boards; inspect successful post-merge deployments before dispatching.
