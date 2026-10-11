@@ -78,3 +78,5 @@
 - repos:
   - PyAutoBroca: feature/broca-resource-categories
   - PyAutoHands: feature/broca-resource-categories
+  - PyAutoInsight: feature/broca-resource-categories
+  - PyAutoDNA: feature/broca-resource-categories
