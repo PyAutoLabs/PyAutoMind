@@ -1,3 +1,17 @@
+# Optional project resource discovery
+
+Epic: scientist-adoption-pilot
+
+Merged https://github.com/PyAutoLabs/PyAutoScientist/pull/68; issue #67 closed. Project cards support explicit available-to-add capability hints and expandable setup prompts. Canonical identity, public visibility and connected-resource catalogue boundaries are preserved. A separate Mira/Spectra fixture demonstrates independent naming with no connected assistant or organs.
+
+Validation: 91 Python tests, 7 JS tests, six light/dark responsive checks and no-JS access. Independent review CLEAN at 98978ea (70 targeted tests and 8 browser cases). Live snapshot/catalogue unchanged. Exact-head Actions run 38166320068 passed its test job; merge f0d5d12 contains head 98978ea.
+
+This completes discovery only. Next: starter handoff acceptance after Brain#518, one resumable optional-organ activation, record-preserving upgrade/rollback, then collaborator validation. Those parent prompts remain open. No package release or organ installation occurs here.
+
+Local validation evidence archived at `tmp/scientist-available-resources/`.
+
+## Original prompt
+
 # Discover optional project resources
 
 Type: feature

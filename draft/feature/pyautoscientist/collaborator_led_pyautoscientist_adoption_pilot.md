@@ -124,12 +124,12 @@ Dashboard polish merged: `complete/2026/10/broca-resource-categories.md` covers 
 
 ## Starter continuation — 2026-10-11
 
-`active/scientist_available_resources.md` (Scientist#67, PR#68) implements the next bounded standardization slice: explicit public available-to-add capabilities, independent naming hints and AI setup prompts in project cards. Validated on a fictitious differently named Scientist with no connected organs. Live connected relationships remain unchanged. This is discovery, not activation or a published release.
+`complete/2026/10/scientist-available-resources.md` (Scientist#67, PR#68) implements the next bounded standardization slice: explicit public available-to-add capabilities, independent naming hints and AI setup prompts in project cards. Validated on a fictitious differently named Scientist with no connected organs. Live connected relationships remain unchanged. This is discovery, not activation or a published release.
 
 Sequence from here:
-1. Merge/review this slice and the outstanding local-discovery Brain#518 independently; complete a fresh-session starter handoff acceptance run.
+1. Discovery merged in Scientist#68. Review/merge outstanding local-discovery Brain#518; complete a fresh-session starter handoff acceptance run.
 2. Prove resumable activation and evidence validation for one optional organ (`scientist_optional_organ_activation.md`), including incomplete versus stale/absent evidence.
 3. Record framework versions and demonstrate an upgrade/rollback preserving configuration and user records (`scientist_record_preserving_upgrades.md`).
 4. Run the collaborator acceptance task once their project/access choices are supplied; retain independent ownership. Shared multi-contributor operation stays later.
 
-Nerves' final Markdown icon removal is tracked separately as `active/remove_markdown_link.md`, PR#201. No unrelated package release is dispatched by these development tasks.
+Nerves' final Markdown icon removal is tracked separately as `complete/2026/10/nerves-markdown-link.md`, PR#201. No unrelated package release is dispatched by these development tasks.

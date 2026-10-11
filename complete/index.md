@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1832 records across 9 buckets.
+1834 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -218,6 +218,7 @@ markers; everything below GENERATED is rebuilt.
 - [mesh-interpolator-numerics-audit](2026/10/mesh-interpolator-numerics-audit.md)
 - [mind-dashboard-simplify](2026/10/mind-dashboard-simplify.md)
 - [mind-dashboard-simplify-2](2026/10/mind-dashboard-simplify-2.md)
+- [nerves-markdown-link](2026/10/nerves-markdown-link.md)
 - [niek-euclid-style-review](2026/10/niek-euclid-style-review.md)
 - [nnls-memo-scattered-backoff](2026/10/nnls-memo-scattered-backoff.md)
 - [orchestration-panel-consumers](2026/10/orchestration-panel-consumers.md)
@@ -270,6 +271,7 @@ markers; everything below GENERATED is rebuilt.
 - [retired-repo-sidecars](2026/10/retired-repo-sidecars.md) — Aggregate only repositories in a valid current Heart monitoring roster; preserve all caches, configured advers…
 - [runtime-single-jit-median](2026/10/runtime-single-jit-median.md)
 - [sandbox-citation-agents-md](2026/10/sandbox-citation-agents-md.md)
+- [scientist-available-resources](2026/10/scientist-available-resources.md)
 - [scientist-board-navigation](2026/10/scientist-board-navigation.md)
 - [scientist-cockpit-overview](2026/10/scientist-cockpit-overview.md)
 - [scientist-instance-profile](2026/10/scientist-instance-profile.md)

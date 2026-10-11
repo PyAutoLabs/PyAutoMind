@@ -20,4 +20,4 @@ Show relevant unconfigured project capabilities as grey available-to-add entries
 
 ## Discovery slice — 2026-10-11
 
-`active/scientist_available_resources.md` (Scientist#67) implements the explicit available-to-add project-resource presentation contract and differently named offline example. It does not activate organs. Next: complete starter handoff validation, then select one organ for resumable setup and prove its evidence path; follow with record-preserving upgrades/rollback and collaborator acceptance.
+`complete/2026/10/scientist-available-resources.md` (Scientist#67) implements the explicit available-to-add project-resource presentation contract and differently named offline example. It does not activate organs. Next: complete starter handoff validation, then select one organ for resumable setup and prove its evidence path; follow with record-preserving upgrades/rollback and collaborator acceptance.
