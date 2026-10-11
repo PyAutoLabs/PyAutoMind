@@ -1,3 +1,15 @@
+# Instance-neutral minimal seed instructions
+
+Epic: scientist-adoption-pilot
+
+Merged https://github.com/PyAutoLabs/PyAutoMind/pull/501; issue #500 closed. Minimal generation now writes neutral AGENTS.md rather than inheriting the live instance's community routing and optional-organ/automation assumptions. Existing user records and full-family output remain unchanged.
+
+Validation: 116 local spawn/privacy/template tests; actual seed canary/lifecycle checks; real read-only Claude follow-up; independent CLEAN review at 29de2d08 with full-family byte identity. Exact-head Actions38168255339 privacy job passed (entire tests directory); published-template drift job intentionally excluded on pull_request, not a test skip. Human /prm authorized merge.
+
+Full fresh-session skill provenance, project connection/resumption and optional-organ activation remain in the Scientist parent. Evidence archived under tmp/minimal-seed-instructions/.
+
+## Original prompt
+
 # Instance-neutral instructions for a minimal Mind seed
 
 Type: bug
