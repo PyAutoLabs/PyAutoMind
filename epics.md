@@ -122,3 +122,9 @@ epic, never picked standalone.
 - ledger: draft/feature/autolens/source_cluster_arc.md
 - status: In progress — 1a–1d, phase 3a audit (profiling#364, workspace_test#341) and phase 3b field-preserving cap fix (Galaxy#646, profiling#365, workspace_test#343; record `complete/2026/10/evaluation-grid-cap-field.md`) merged. No later phase issued. Remaining solver work stays transferred to cluster-pointsolver-speed.
 - notes: Issue ONE bounded phase at a time; no bulk queue. Preserve original phase numbers and the approved 2026-10-01 ownership split. Phases 3–8 have no blanket PointSolver gate; solver-dependent workloads retain correctness gates. Cortex phase 11 remains dropped under R-20260907-05; any future science birth needs a fresh explicit decision.
+
+## scientist-adoption-pilot
+- title: Scientist adoption pilot — project resources, clear organ destinations and a growing independent Scientist
+- ledger: draft/feature/pyautoscientist/collaborator_led_pyautoscientist_adoption_pilot.md
+- status: In progress — project cards and organ-linked resource routing merged and published (Scientist PRs #56 and #58); remaining members unissued.
+- notes: Heart test-workspace dropdowns and Broca docs/HowTo/workspace/assistant dropdowns are explicit members. Continue one bounded task at a time; preserve the Broca ownership-contract dependency. Starter, optional organs with grey available-to-add resources, upgrades preserving user records and collaborator validation remain in this epic. No collaborator details assumed; shared multi-contributor operation is later.

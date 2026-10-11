@@ -1,6 +1,7 @@
 # Collaborator-led PyAutoScientist adoption pilot
 
 Type: feature
+Epic: scientist-adoption-pilot
 Target: PyAutoScientist
 Repos:
 - PyAutoBrain
@@ -84,12 +85,29 @@ This is a programme-sized draft. At start-dev, agree the first bounded phase and
 
 ## Development breakdown — 2026-10-11
 
-James authorized implementation of the first coherent phase, with routine decisions autonomous and human merge. Current-state audit: Scientist cockpit/organ cards shipped in #53; Broca assistant evidence and Pages shipped in #2/#4. Neither programme is already active.
+James authorized implementation of the first coherent phase, with routine decisions autonomous and human merge. Current-state audit: Scientist cockpit/organ cards shipped in #53; Broca assistant evidence and Pages shipped in #2/#4. This was the initial audit; the completed phase and current follow-ups are recorded below.
 
 - `complete/2026/10/scientist-project-resources.md` — phase 1 merged in PyAutoScientist#56; remaining phases stay unclaimed.
-- `scientist_minimal_starter.md` — bounded next phase; first Scientist phase starts now, remaining phases stay unclaimed.
-- `scientist_optional_organ_activation.md` — bounded next phase; first Scientist phase starts now, remaining phases stay unclaimed.
-- `scientist_record_preserving_upgrades.md` — bounded next phase; first Scientist phase starts now, remaining phases stay unclaimed.
-- `scientist_collaborator_validation.md` — bounded next phase; first Scientist phase starts now, remaining phases stay unclaimed.
+- `scientist_minimal_starter.md` — planned follow-up; remains unissued and unclaimed.
+- `scientist_optional_organ_activation.md` — planned follow-up; remains unissued and unclaimed.
+- `scientist_record_preserving_upgrades.md` — planned follow-up; remains unissued and unclaimed.
+- `scientist_collaborator_validation.md` — planned follow-up; remains unissued and unclaimed.
 
 Scientist phase 1 consumes canonical identities and exposes links only. Broca expanded communication ownership is agreed intent; inventory/evidence migration is deferred to its contract and pilot tasks. Shared multi-contributor operation remains later.
+
+## Epic membership and dashboard follow-through — 2026-10-11
+
+Canonical epic: `scientist-adoption-pilot` in `epics.md`. All member prompts carry `Epic: scientist-adoption-pilot`; work is selected through this programme, not as unrelated standalone backlog. This file is the programme ledger, not a single implementation task.
+
+Completed foundations:
+- `complete/2026/10/scientist-project-resources.md` — Scientist PR #56, explicit relationships and project cards.
+- `complete/2026/10/scientist-resource-routing.md` — Scientist PR #58, separate headings and organ-linked resources, published and verified.
+
+The following owner-board work is part of this same epic:
+- `draft/feature/pyautoheart/heart_test_workspace_resource_dropdowns.md` — each test workspace gets meaningful Heart detail and a clear Scientist destination.
+- `draft/feature/pyautobroca/broca_communication_resource_dropdowns_including.md` — docs, HowTo tutorials, workspaces and assistants get meaningful Broca detail and clear Scientist destinations.
+- `draft/feature/pyautobroca/broca_communication_contract.md` — prerequisite responsibility/inventory contract for expanded Broca implementation.
+- `draft/feature/pyautobroca/broca_communication_pilot.md` — complementary inventory/evidence work; reuse the dropdown slice instead of implementing it twice.
+- `draft/feature/pyautobroca/broca_communication_documentation_and_workspaces.md` — supporting Broca scope map, not an additional duplicate implementation task.
+
+Heart presentation can be scoped independently. Broca dropdowns coordinate with its contract and available evidence; the starter must not wait for the entire Broca roadmap. Remaining starter, optional-organ, upgrade and collaborator-validation phases above retain their dependencies. Grey available-to-add resources are captured in `scientist_optional_organ_activation.md`. This membership update starts no implementation and changes no merge authority.

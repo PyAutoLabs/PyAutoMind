@@ -9,7 +9,7 @@
 | Where | Count |
 |-------|------:|
 | [Start here](#start-here) | 24 |
-| [Epics](#epics) | 16 |
+| [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 3 |
 | [Planned](#planned) | 7 |
 | [Backlog](#backlog) | 256 |
@@ -116,7 +116,7 @@ Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 111
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 109
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -649,6 +649,99 @@ Use the start-dev skill. draft/feature/autolens/cluster_curves_engine_dispatch.m
 
 ```
 Use the start-dev skill. draft/feature/autolens/source_cluster_arc.md
+```
+
+</details>
+
+</details>
+
+<details>
+<summary><b>Scientist adoption pilot — project resources, clear organ destinations and a growing independent Scientist</b> — 10 queued prompt(s), in order</summary>
+
+<details><summary>📋 <b>Scientist adoption pilot — project resources, clear organ destinations and a growing independent Scientist</b> — ledger: `draft/feature/pyautoscientist/collaborator_led_pyautoscientist_adoption_pilot.md` — In progress — project cards and organ-linked resource routing merged and published (Scientist PRs #56 and #58); remaining members…</summary>
+
+```
+Continue the 'Scientist adoption pilot — project resources, clear organ destinations and a growing independent Scientist' epic. Its canonical state lives in draft/feature/pyautoscientist/collaborator_led_pyautoscientist_adoption_pilot.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: Heart test-workspace dropdowns and Broca docs/HowTo/workspace/assistant dropdowns are explicit members. Continue one bounded task at a time; preserve the Broca ownership-contract dependency. Starter, optional organs with grey available-to-add resources, upgrades preserving user records and collaborator validation remain in this epic. No collaborator details assumed; shared multi-contributor operation is later.
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobroca/broca_communication_contract.md">Broca communication ownership and inventory contract</a> — pyautobroca · medium · supervised</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobroca/broca_communication_contract.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobroca/broca_communication_documentation_and_workspaces.md">Broca communication documentation and workspaces</a> — pyautobroca · large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobroca/broca_communication_documentation_and_workspaces.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobroca/broca_communication_pilot.md">Broca documentation and workspace upkeep pilot</a> — pyautobroca · medium · supervised</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobroca/broca_communication_pilot.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobroca/broca_communication_resource_dropdowns_including.md">Broca communication resource dropdowns including HowTo</a> — pyautobroca · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobroca/broca_communication_resource_dropdowns_including.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoheart/heart_test_workspace_resource_dropdowns.md">Heart test workspace resource dropdowns</a> — pyautoheart · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautoheart/heart_test_workspace_resource_dropdowns.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoscientist/collaborator_led_pyautoscientist_adoption_pilot.md">Collaborator-led PyAutoScientist adoption pilot</a> — pyautoscientist · too-large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautoscientist/collaborator_led_pyautoscientist_adoption_pilot.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoscientist/scientist_collaborator_validation.md">Independent collaborator validation</a> — pyautoscientist · medium · supervised</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautoscientist/scientist_collaborator_validation.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoscientist/scientist_minimal_starter.md">Minimal independent Scientist starter</a> — pyautoscientist · medium · supervised</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautoscientist/scientist_minimal_starter.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoscientist/scientist_optional_organ_activation.md">Progressive optional organ activation</a> — pyautoscientist · medium · supervised</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautoscientist/scientist_optional_organ_activation.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoscientist/scientist_record_preserving_upgrades.md">Record-preserving Scientist upgrades</a> — pyautoscientist · medium · supervised</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautoscientist/scientist_record_preserving_upgrades.md
 ```
 
 </details>
@@ -1510,7 +1603,7 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>feature</b> — 42</summary>
+<summary><b>feature</b> — 32</summary>
 
 <details><summary>📋 <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding against the raw maximum finds…</a> — autoarray · small · supervised · medium</summary>
 
@@ -1632,22 +1725,6 @@ Use the start-dev skill. draft/feature/pyautobrain/batch_slice.md
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautobroca/broca_communication_resource_dropdowns_including.md">Broca communication resource dropdowns including HowTo</a> — pyautobroca · medium · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautobroca/broca_communication_resource_dropdowns_including.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautoheart/heart_test_workspace_resource_dropdowns.md">Heart test workspace resource dropdowns</a> — pyautoheart · medium · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautoheart/heart_test_workspace_resource_dropdowns.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/feature/workspaces/group_los_halos.md">The imaging <code>features/advanced/los_halos</code> example needs improving and padding out before</a> — workspaces · medium · safe · normal</summary>
 
 ```
@@ -1704,14 +1781,6 @@ Use the start-dev skill. draft/feature/autolens_workspace/oversampled_psf_datase
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautobroca/broca_communication_documentation_and_workspaces.md">Broca communication documentation and workspaces</a> — pyautobroca · large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautobroca/broca_communication_documentation_and_workspaces.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/feature/workspaces/restore_multiple_sources_lensing_of_lens.md">Restore lensing-of-lens in the multiple_sources workspace example</a> — workspaces · large · supervised · normal</summary>
 
 ```
@@ -1760,14 +1829,6 @@ Use the start-dev skill. draft/feature/jax_substructure/6_deflection_equivalence
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautoscientist/collaborator_led_pyautoscientist_adoption_pilot.md">Collaborator-led PyAutoScientist adoption pilot</a> — pyautoscientist · too-large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautoscientist/collaborator_led_pyautoscientist_adoption_pilot.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/feature/autogalaxy/dpie_sigma0_parameterization.md">dPIE: optional central-dispersion (sigma_0) parameterization</a> — autogalaxy · small · supervised · low</summary>
 
 ```
@@ -1796,54 +1857,6 @@ Use the start-dev skill. draft/feature/workspaces/gallery_runner_missing_tiers.m
 
 ```
 Use the start-dev skill. draft/feature/autoarray/adapt_linear_default_flip.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautobroca/broca_communication_contract.md">Broca communication ownership and inventory contract</a> — pyautobroca · medium · supervised</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautobroca/broca_communication_contract.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautobroca/broca_communication_pilot.md">Broca documentation and workspace upkeep pilot</a> — pyautobroca · medium · supervised</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautobroca/broca_communication_pilot.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautoscientist/scientist_collaborator_validation.md">Independent collaborator validation</a> — pyautoscientist · medium · supervised</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautoscientist/scientist_collaborator_validation.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautoscientist/scientist_minimal_starter.md">Minimal independent Scientist starter</a> — pyautoscientist · medium · supervised</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautoscientist/scientist_minimal_starter.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautoscientist/scientist_optional_organ_activation.md">Progressive optional organ activation</a> — pyautoscientist · medium · supervised</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautoscientist/scientist_optional_organ_activation.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautoscientist/scientist_record_preserving_upgrades.md">Record-preserving Scientist upgrades</a> — pyautoscientist · medium · supervised</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautoscientist/scientist_record_preserving_upgrades.md
 ```
 
 </details>

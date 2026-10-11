@@ -1,6 +1,7 @@
 # Progressive optional organ activation
 
 Type: feature
+Epic: scientist-adoption-pilot
 Target: PyAutoScientist
 Difficulty: medium
 Autonomy: supervised

@@ -1,6 +1,7 @@
 # Record-preserving Scientist upgrades
 
 Type: feature
+Epic: scientist-adoption-pilot
 Target: PyAutoScientist
 Difficulty: medium
 Autonomy: supervised

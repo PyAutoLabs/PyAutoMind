@@ -1,6 +1,7 @@
 # Broca communication ownership and inventory contract
 
 Type: feature
+Epic: scientist-adoption-pilot
 Target: PyAutoBroca
 Difficulty: medium
 Autonomy: supervised

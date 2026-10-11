@@ -1,6 +1,7 @@
 # Independent collaborator validation
 
 Type: feature
+Epic: scientist-adoption-pilot
 Target: PyAutoScientist
 Difficulty: medium
 Autonomy: supervised

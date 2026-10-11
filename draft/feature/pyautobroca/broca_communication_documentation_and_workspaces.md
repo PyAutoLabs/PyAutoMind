@@ -1,6 +1,7 @@
 # Broca communication documentation and workspaces
 
 Type: feature
+Epic: scientist-adoption-pilot
 Target: PyAutoBroca
 Repos:
 - PyAutoBrain

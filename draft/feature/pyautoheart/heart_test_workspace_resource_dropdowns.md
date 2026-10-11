@@ -1,6 +1,7 @@
 # Heart test workspace resource dropdowns
 
 Type: feature
+Epic: scientist-adoption-pilot
 Target: PyAutoHeart
 Repos:
 - PyAutoHeart

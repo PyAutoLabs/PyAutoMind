@@ -1,6 +1,7 @@
 # Minimal independent Scientist starter
 
 Type: feature
+Epic: scientist-adoption-pilot
 Target: PyAutoScientist
 Difficulty: medium
 Autonomy: supervised

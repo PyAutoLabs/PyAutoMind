@@ -1,6 +1,7 @@
 # Broca documentation and workspace upkeep pilot
 
 Type: feature
+Epic: scientist-adoption-pilot
 Target: PyAutoBroca
 Difficulty: medium
 Autonomy: supervised

@@ -1,6 +1,7 @@
 # Broca communication resource dropdowns including HowTo
 
 Type: feature
+Epic: scientist-adoption-pilot
 Target: PyAutoBroca
 Repos:
 - PyAutoBroca
