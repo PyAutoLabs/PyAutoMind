@@ -21,3 +21,9 @@ Show relevant unconfigured project capabilities as grey available-to-add entries
 ## Discovery slice — 2026-10-11
 
 `complete/2026/10/scientist-available-resources.md` (Scientist#67) implements the explicit available-to-add project-resource presentation contract and differently named offline example. It does not activate organs. Next: complete starter handoff validation, then select one organ for resumable setup and prove its evidence path; follow with record-preserving upgrades/rollback and collaborator acceptance.
+
+## Validated connection slice — 2026-10-11
+
+Starter conversational acceptance is merged (Mind#503). `active/scientist_validated_organ_connection.md`, Scientist#71 / PR#72, adds preview/validate/apply for an already prepared public organ, with retry/no-op semantics and record preservation. 113 Python and 7 JS tests pass; independent review CLEAN. Fixture Broca connection/rendering and subsequent unavailable evidence are covered. This is the connection boundary, not full provisioning or activation state management.
+
+The live Broca board is HTTP 200 but state.json is HTTP 404 (2026-10-11); its current Pages artifact contains only HTML. The new helper correctly refuses connection without changing the profile. Next prerequisite: `draft/feature/pyautobroca/broca_published_state_feed.md`, keeping evidence ownership and communication scope in Broca. Then exercise a real validated feed connection, followed by resumable owner setup/provisioning and pause/needs-attention presentation. Keep record-preserving upgrades and actual collaborator validation separate.

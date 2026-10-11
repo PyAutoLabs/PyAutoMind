@@ -55,8 +55,12 @@
 - issued: 2026-10-11
 - prompt: active/scientist_validated_organ_connection.md
 - epic: scientist-adoption-pilot
-- status: workspace-dev
+- status: awaiting-merge
 - tier: judge (human /prm)
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/scientist-organ-connection
 - repos:
   - PyAutoScientist: feature/scientist-organ-connection
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/72
+- validation: 113 Python tests; 7 JS; final 22 connection tests; independent CLEAN
+- heart: STALE — release validation incomplete: no rehearsal for current source; no RED/YELLOW
+- limitation: live Broca state.json is HTTP 404; rejected without profile mutation; owner feed remains next task
