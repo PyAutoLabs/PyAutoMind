@@ -26,4 +26,4 @@ PRs: Brain#516 then Scientist#62. Both merged and Scientist#61 closed. The next 
 
 ## Minimal local Mind seed — 2026-10-11
 
-`active/scientist_minimal_mind_seed.md` (Mind#498) adds a local Mind-only mode to the existing generator: empty records/body map, no automation or satellite family. Remaining next step: explicitly configure canonical identities and validate one minimal local harness with Scientist + Brain + this seed; connect one synthetic existing project and prove fresh-chat resumption. Optional Memory remains separate and no remote access is assumed.
+`complete/2026/10/scientist-minimal-mind-seed.md` (Mind#498 closed; PR#499 merged) adds a local Mind-only mode to the existing generator: empty records/body map, no automation or satellite family. Remaining next step: explicitly configure canonical identities and validate one minimal local harness with Scientist + Brain + this seed; connect one synthetic existing project and prove fresh-chat resumption. Optional Memory remains separate and no remote access is assumed.

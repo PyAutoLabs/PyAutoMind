@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1824 records across 9 buckets.
+1825 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -266,6 +266,7 @@ markers; everything below GENERATED is rebuilt.
 - [scientist-board-navigation](2026/10/scientist-board-navigation.md)
 - [scientist-cockpit-overview](2026/10/scientist-cockpit-overview.md)
 - [scientist-instance-profile](2026/10/scientist-instance-profile.md)
+- [scientist-minimal-mind-seed](2026/10/scientist-minimal-mind-seed.md)
 - [scientist-project-resources](2026/10/scientist-project-resources.md)
 - [scientist-resource-routing](2026/10/scientist-resource-routing.md)
 - [scientist-starter-init](2026/10/scientist-starter-init.md)

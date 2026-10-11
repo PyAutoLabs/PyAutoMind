@@ -1,3 +1,15 @@
+## Shipped
+
+Merged https://github.com/PyAutoLabs/PyAutoMind/pull/499 (head 6db89f5e). Issue https://github.com/PyAutoLabs/PyAutoMind/issues/498. Epic: scientist-adoption-pilot.
+
+Opt-in local minimal Mind seed reuses existing privacy rules and lifecycle tooling, produces empty records and identity map without GitHub automation or satellite/Memory generation, and validates staging before writing exclusively to a new directory. Default generation verified unchanged. One pre-existing parked registry blank line normalized.
+
+Validation: 116 targeted tests; full suite 702 passed plus one pre-existing registry spacing failure fixed and passing rerun. Independent review CLEAN with 219 targeted cases and the registry regression, actual offline lifecycle closure, race protection and default-output comparison. Exact-head CI: Spawn Drift run38156031360 privacy job passed (full suite); drift job intentionally excluded on pull_request by workflow condition. Dashboard Refresh run38156031376 passed. GitHub clean/mergeable before merge; branch tip proven ancestor of origin/main. Ship-time Heart STALE solely absent release rehearsal.
+
+Remaining parent work: explicit canonical identities and minimal local harness integration, existing-project connection and fresh-chat acceptance; optional organs/Memory, upgrades and hosting remain separate. This is not a full runnable Scientist installation. Evidence archived locally in tmp/scientist-minimal-mind-seed/evidence/.
+
+## Original prompt
+
 # Local minimal Mind seed
 
 Type: feature
