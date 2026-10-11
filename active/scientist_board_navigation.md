@@ -1,6 +1,8 @@
 # Scientist-first board navigation
 
 Type: feature
+Issued: 2026-10-11
+Issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/59
 Epic: scientist-adoption-pilot
 Consequence: judge
 Difficulty: small
