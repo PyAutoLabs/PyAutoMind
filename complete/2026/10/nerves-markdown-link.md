@@ -8,6 +8,8 @@ Validation: 241 tests; exact-head Actions run 38165996885, all 3 matrix jobs pas
 
 Local validation evidence archived at `tmp/nerves-markdown-link/`.
 
+Publication: https://github.com/PyAutoLabs/PyAutoNerves/actions/runs/38167286532 succeeded; live HTML verified. Task worktree removed after evidence archival; active claim released.
+
 ## Original prompt
 
 # Remove Nerves Markdown utility link

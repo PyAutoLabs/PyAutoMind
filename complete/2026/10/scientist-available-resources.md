@@ -10,6 +10,8 @@ This completes discovery only. Next: starter handoff acceptance after Brain#518,
 
 Local validation evidence archived at `tmp/scientist-available-resources/`.
 
+Publication: https://github.com/PyAutoLabs/PyAutoScientist/actions/runs/38167288809 succeeded; live HTML verified. Task worktree removed after evidence archival; active claim released.
+
 ## Original prompt
 
 # Discover optional project resources
