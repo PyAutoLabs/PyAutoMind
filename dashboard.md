@@ -789,7 +789,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/scientist_project_resources.md">Scientist project relationships and expandable cards</a> — <a href="https://github.com/PyAutoLabs/PyAutoScientist/issues/55">issue #55</a> — issued 2026-10-11 — workspace-dev</summary>
+<details><summary>📋 <a href="active/scientist_project_resources.md">Scientist project relationships and expandable cards</a> — <a href="https://github.com/PyAutoLabs/PyAutoScientist/issues/55">issue #55</a> — issued 2026-10-11 — awaiting-input</summary>
 
 ```
 Use the start-dev skill. active/scientist_project_resources.md
