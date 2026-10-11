@@ -4,13 +4,13 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-11T14:59:26Z",
+  "updated": "2026-10-11T15:00:16Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
       "severity": "yellow",
       "text": "Scientist-first board navigation \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoScientist/issues/59",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/515",
       "prompt": "Use the start-dev skill. active/scientist_board_navigation.md"
     },
     {

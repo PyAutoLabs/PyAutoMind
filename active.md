@@ -67,14 +67,13 @@
   - PyAutoInsight: feature/scientist-board-navigation
   - PyAutoPulse: feature/scientist-board-navigation
   - PyAutoEars: feature/scientist-board-navigation
-- prs:
-  - PyAutoBrain: https://github.com/PyAutoLabs/PyAutoBrain/pull/515
-  - PyAutoScientist: https://github.com/PyAutoLabs/PyAutoScientist/pull/60
-  - PyAutoBroca: https://github.com/PyAutoLabs/PyAutoBroca/pull/6
-  - PyAutoEyes: https://github.com/PyAutoLabs/PyAutoEyes/pull/28
-  - PyAutoInsight: https://github.com/PyAutoLabs/PyAutoInsight/pull/25
-  - PyAutoPulse: https://github.com/PyAutoLabs/PyAutoPulse/pull/50
-  - PyAutoEars: https://github.com/PyAutoLabs/PyAutoEars/pull/29
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/515
+- library-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/60
+- library-pr: https://github.com/PyAutoLabs/PyAutoBroca/pull/6
+- library-pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/28
+- library-pr: https://github.com/PyAutoLabs/PyAutoInsight/pull/25
+- library-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/50
+- library-pr: https://github.com/PyAutoLabs/PyAutoEars/pull/29
 - merge-order: PyAutoBrain#515 first, then six consumer PRs; judge tier, human /prm
 - validation: 932 Python tests;6 Node;60 footer browser cases;6 Scientist interaction/theme cases plus no-JS;strict Sphinx;required owner checks;independent CLEAN
 - heart: STALE — release validation incomplete: no rehearsal for current source; no RED/YELLOW reasons
