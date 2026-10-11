@@ -71,7 +71,7 @@
 - issued: 2026-10-11
 - prompt: active/broca_resource_categories.md
 - epic: scientist-adoption-pilot
-- status: workspace-dev
+- status: awaiting-merge
 - tier: judge (human /prm)
 - session: Codex; requested board corrections
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/broca-resource-categories
@@ -80,3 +80,10 @@
   - PyAutoHands: feature/broca-resource-categories
   - PyAutoInsight: feature/broca-resource-categories
   - PyAutoDNA: feature/broca-resource-categories
+- library-pr: https://github.com/PyAutoLabs/PyAutoBroca/pull/9
+- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/309
+- library-pr: https://github.com/PyAutoLabs/PyAutoInsight/pull/26
+- library-pr: https://github.com/PyAutoLabs/PyAutoDNA/pull/3
+- validation: Broca22, Hands27, Insight183, DNA18 tests; Insight lint/offline check; responsive/hash/no-JS browser checks; independent review CLEAN
+- heart: STALE — release validation incomplete: no rehearsal for current source; no RED/YELLOW reasons
+- evidence: .worktrees/broca-resource-categories/evidence/

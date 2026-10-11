@@ -11,3 +11,7 @@ Inspect successful post-merge deployments first, then use owning workflows as ne
 ## Resource dropdown publication
 
 Also verify merged Heart#295, Broca#7 and Scientist#66 from `complete/2026/10/organ-resource-dropdowns.md`: publish Heart/Broca destinations before Scientist deep links, then check all four test-workspace and 18 communication-resource anchors on live pages. Source merges do not prove publication.
+
+## Latest Heart publication diagnosis — 2026-10-11
+
+Public Heart HTML lacks test-workspaces/resource-lens-tests. Latest successful heart-health run38134638064 at source1f94d00 predates merged Heart#295. Scheduled/manual-only workflow does not publish on this source merge. Build deploy dry-run aborts with `Could not obtain a readiness verdict ('stale').` despite authoritative readiness having only `release validation incomplete: no rehearsal for current source`. No dispatch or override attempted. Resolve the supported board-publication route before claiming Heart is live; do not run a software release to refresh HTML. Evidence: tmp/broca-resource-categories/build.json.
