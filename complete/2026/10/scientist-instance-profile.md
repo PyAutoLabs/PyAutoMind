@@ -1,3 +1,17 @@
+## Shipped
+
+Portable Scientist instance foundation merged in https://github.com/PyAutoLabs/PyAutoBrain/pull/516 then https://github.com/PyAutoLabs/PyAutoScientist/pull/62. Issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/61. Epic: scientist-adoption-pilot.
+
+Adds independently named instances, canonical repository resolution, own project configuration, explicit optional organ connections, empty offline preview and per-instance browser cache isolation. Existing records are retained. This is not the full bootstrap or independent deployment.
+
+Validation: 165 Python tests, 7 Node tests, strict docs, responsive browser and no-JavaScript checks, cache-isolation regression; independent review CLEAN. Exact PR heads: Brain 7c5e1f5, Scientist e69b948. All three Actions runs and four jobs passed (Brain docs and Python 3.12/3.13; Scientist board tests). Both branch tips proven ancestors of origin/main. Ship-time Heart STALE solely for absent current-source release rehearsal.
+
+Remaining epic work: minimal-starter bootstrap with empty user-owned state and a supported harness, project connection and fresh-chat resumption; optional-organ activation/grey hints; record-preserving upgrades. Parent scientist_minimal_starter.md remains open. Publishing is separate.
+
+Evidence archived locally at PyAutoMind/tmp/scientist-instance-profile/evidence/.
+
+## Original prompt
+
 # Portable Scientist instance profile
 
 Type: feature
