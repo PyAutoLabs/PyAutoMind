@@ -17,3 +17,7 @@ Start-dev must inspect current implementation and produce a bounded one-task/one
 ## Agreed discoverability direction — 2026-10-11
 
 Show relevant unconfigured project capabilities as grey available-to-add entries, including tutorials, workspace, assistant, workspace_test, profiling, inference and visualization. Clicking explains the purpose and offers a setup prompt; once created and validated, the entry becomes a normal repository link. Distinguish available-to-add, setup-incomplete and connected. Unavailable evidence for a connected resource must not make it appear uninstalled. Use stable capability IDs with configurable suggested names such as yourproject_workspace and yourproject_inference; suffixes are naming hints, never identity inference. Reuse the organ-linked resource cards shipped in Scientist PR #58. Implement with starter/optional-organ setup, not as a claim that missing repositories already exist.
+
+## Discovery slice — 2026-10-11
+
+`active/scientist_available_resources.md` (Scientist#67) implements the explicit available-to-add project-resource presentation contract and differently named offline example. It does not activate organs. Next: complete starter handoff validation, then select one organ for resumable setup and prove its evidence path; follow with record-preserving upgrades/rollback and collaborator acceptance.

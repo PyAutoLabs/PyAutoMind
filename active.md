@@ -65,3 +65,27 @@
 - validation: 30 discovery/installer tests, strict docs, actual seed/profile/project integration; independent review CLEAN at 4db12a8
 - heart: STALE — release validation incomplete: no rehearsal for current source; no RED/YELLOW reasons
 - evidence: .worktrees/scientist-local-discovery/evidence/
+
+## nerves-markdown-link
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/201
+- validation: 241 tests passed; Heart STALE (no release rehearsal), no RED/YELLOW
+- issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/200
+- issued: 2026-10-11
+- prompt: active/remove_markdown_link.md
+- epic: scientist-adoption-pilot
+- status: awaiting-merge
+- tier: judge (human /prm)
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nerves-markdown-link
+- repos:
+  - PyAutoNerves: feature/nerves-markdown-link
+
+## scientist-available-resources
+- issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/67
+- issued: 2026-10-11
+- prompt: active/scientist_available_resources.md
+- epic: scientist-adoption-pilot
+- status: workspace-dev
+- tier: judge (human /prm)
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/scientist-available-resources
+- repos:
+  - PyAutoScientist: feature/scientist-available-resources
