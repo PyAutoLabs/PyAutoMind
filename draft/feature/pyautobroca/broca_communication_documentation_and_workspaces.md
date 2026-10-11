@@ -70,3 +70,7 @@ James authorized implementation of the first coherent phase, with routine decisi
 - `broca_communication_pilot.md` — bounded next phase; first Scientist phase starts now, remaining phases stay unclaimed.
 
 Scientist phase 1 consumes canonical identities and exposes links only. Broca expanded communication ownership is agreed intent; inventory/evidence migration is deferred to its contract and pilot tasks. Shared multi-contributor operation remains later.
+
+## Shared Scientist feed prerequisite — 2026-10-11
+
+Broca#14 / PR#15 (`active/broca_published_state_feed.md`) implements the missing shared state.json feed, alongside the existing HTML artifact, as a bounded part of scientist-adoption-pilot. It reports saved collection/evaluation states and informational guides/workspaces inventory; no new measurement or quality verdict. Empty-assistant instances and independently supplied publishing identity/location are supported. 34 tests and consumer integration pass; independent re-review CLEAN. Live endpoint verification follows human merge and the existing Pages deployment. Broader communication upkeep remains separate.

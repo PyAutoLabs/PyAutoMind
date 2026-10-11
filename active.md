@@ -55,8 +55,14 @@
 - issued: 2026-10-11
 - prompt: active/broca_published_state_feed.md
 - epic: scientist-adoption-pilot
-- status: workspace-dev
+- status: awaiting-merge
 - tier: judge (human /prm)
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/broca-state-feed
 - repos:
   - PyAutoBroca: feature/broca-state-feed
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoBroca/pull/15
+- validation: 34 Broca tests; saved evidence check; shared validator; Scientist connect/retry/render integration
+- review: independent CLEAN after evaluation-expiry regression fix; consumer expiry and record/receipt byte preservation verified
+- heart: STALE — release validation incomplete: no rehearsal for current source; no RED/YELLOW
+- publication: user requested feed publication; existing pages.yml deploys on main after human merge
+- post-merge: verify successful pages.yml deployment for merge SHA, live /PyAutoBroca/state.json and Scientist connection; no live-feed success claimed yet
