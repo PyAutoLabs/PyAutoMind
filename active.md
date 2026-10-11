@@ -55,8 +55,13 @@
 - issued: 2026-10-11
 - prompt: active/scientist_resource_routing.md
 - session: Codex; ID unavailable
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/scientist-resource-routing
 - repos:
   - PyAutoScientist: feature/scientist-resource-routing
-- next: group project resources under dashboard links and verify; human /prm merge.
+- next: human /prm after CI, then publish dashboard when authorized.
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/58
+- commit: 8b9c67a
+- validation: 46 Python + 6 Node tests; 6 browser/theme cases plus no-JS; independent CLEAN.
+- heart: STALE — release validation incomplete: no rehearsal for current source; development gate passes.
+- evidence: /home/jammy/Code/PyAutoLabs/.worktrees/scientist-resource-routing/evidence/

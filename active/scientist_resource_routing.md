@@ -30,3 +30,7 @@ Tier: judge — merge mode: human /prm.
 `config/projects.json`: optional relation-to-dashboard resource mapping; explicit dashboard destinations; no shared assistant inventory entry. Add workspace_test identities already in Mind. `scripts/project_resources.py`: additive schema-v1 support for routes and profiling/inference/visualization/tests categories; combine groups sharing a public dashboard; safe linked organ/resource names in HTML and Markdown. `scripts/organism_board.py`: visible Dashboards heading, retain #dashboards grid anchor and refresh behavior. `PROJECTS.md`: document routing and first-class categories. Tests cover routing, private fallbacks, backwards compatibility and section order.
 
 Branch survey: Scientist and Mind main clean after fetch; no active Scientist claim/open PR. Old merged DNA worktree remains untouched. Routine implementation authorized as ongoing dashboard refinement; no merge/deploy implied.
+
+## Handoff
+
+Implemented in 8b9c67a, PR https://github.com/PyAutoLabs/PyAutoScientist/pull/58. 46 Python tests, 6 Node tests and 6 browser/theme cases plus no-JS passed; independent CLEAN. Heart STALE (release validation incomplete: no rehearsal for current source) passes development gate. No merge or deployment. User requested separate headings and organ-linked project resource rows; broad Broca/starter roadmap unchanged. Next: human /prm and dashboard publication.
