@@ -882,7 +882,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/scientist_board_navigation.md">Scientist-first board navigation</a> — <a href="https://github.com/PyAutoLabs/PyAutoScientist/issues/59">issue #59</a> — issued 2026-10-11 — workspace-dev</summary>
+<details><summary>📋 <a href="active/scientist_board_navigation.md">Scientist-first board navigation</a> — <a href="https://github.com/PyAutoLabs/PyAutoScientist/issues/59">issue #59</a> — issued 2026-10-11 — awaiting-merge</summary>
 
 ```
 Use the start-dev skill. active/scientist_board_navigation.md

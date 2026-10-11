@@ -56,7 +56,7 @@
 - prompt: active/scientist_board_navigation.md
 - epic: scientist-adoption-pilot
 - session: Codex (OpenAI), routine implementation authorized in ongoing initiative
-- status: workspace-dev
+- status: awaiting-merge
 - tier: judge (human /prm)
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/scientist-board-navigation
 - repos:
@@ -67,3 +67,16 @@
   - PyAutoInsight: feature/scientist-board-navigation
   - PyAutoPulse: feature/scientist-board-navigation
   - PyAutoEars: feature/scientist-board-navigation
+- prs:
+  - PyAutoBrain: https://github.com/PyAutoLabs/PyAutoBrain/pull/515
+  - PyAutoScientist: https://github.com/PyAutoLabs/PyAutoScientist/pull/60
+  - PyAutoBroca: https://github.com/PyAutoLabs/PyAutoBroca/pull/6
+  - PyAutoEyes: https://github.com/PyAutoLabs/PyAutoEyes/pull/28
+  - PyAutoInsight: https://github.com/PyAutoLabs/PyAutoInsight/pull/25
+  - PyAutoPulse: https://github.com/PyAutoLabs/PyAutoPulse/pull/50
+  - PyAutoEars: https://github.com/PyAutoLabs/PyAutoEars/pull/29
+- merge-order: PyAutoBrain#515 first, then six consumer PRs; judge tier, human /prm
+- validation: 932 Python tests;6 Node;60 footer browser cases;6 Scientist interaction/theme cases plus no-JS;strict Sphinx;required owner checks;independent CLEAN
+- heart: STALE — release validation incomplete: no rehearsal for current source; no RED/YELLOW reasons
+- evidence: .worktrees/scientist-board-navigation/evidence (review.md, validation.md, readiness.json and logs)
+- publication: pending merge and publish; follow active prompt rollout checklist, verify all15 live boards

@@ -111,3 +111,7 @@ The following owner-board work is part of this same epic:
 - `draft/feature/pyautobroca/broca_communication_documentation_and_workspaces.md` — supporting Broca scope map, not an additional duplicate implementation task.
 
 Heart presentation can be scoped independently. Broca dropdowns coordinate with its contract and available evidence; the starter must not wait for the entire Broca roadmap. Remaining starter, optional-organ, upgrade and collaborator-validation phases above retain their dependencies. Grey available-to-add resources are captured in `scientist_optional_organ_activation.md`. This membership update starts no implementation and changes no merge authority.
+
+### Navigation polish — 2026-10-11
+
+`active/scientist_board_navigation.md` (Scientist#59) is an additional bounded member of this epic: organ footer below Scientist cards and Scientist first across other boards. Implementation and independent review complete; seven coordinated PRs await human merge, Brain#515 first. Publication and live-board verification remain after merge.
