@@ -874,7 +874,7 @@ Use the start-dev skill. active/scientist_overnight_review_entry.md
 
 </details>
 
-<details><summary>📋 <a href="active/scientist_starter_acceptance.md">Independent Scientist fresh-session acceptance</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/502">issue #502</a> — issued 2026-10-11 — workspace-dev</summary>
+<details><summary>📋 <a href="active/scientist_starter_acceptance.md">Independent Scientist fresh-session acceptance</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/502">issue #502</a> — issued 2026-10-11 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/503">PyAutoMind#503</a></summary>
 
 ```
 Use the start-dev skill. active/scientist_starter_acceptance.md

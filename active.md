@@ -74,8 +74,12 @@
 - prompt: active/scientist_starter_acceptance.md
 - epic: scientist-adoption-pilot
 - session: Codex CLI (session ID unavailable)
-- status: workspace-dev
+- status: awaiting-merge
 - tier: judge (human /prm)
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/scientist-starter-acceptance
 - repos:
   - PyAutoMind: feature/scientist-starter-acceptance
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/503
+- validation: three real fresh CLI sessions; owner profile/project checks and HTML/JSON passed; 532 hashes preserved on confirmation resume; 40 local skill links valid
+- heart: STALE — release validation incomplete: no rehearsal for current source; no RED/YELLOW
+- evidence: task worktree PyAutoMind/tmp/acceptance; archive on close-out

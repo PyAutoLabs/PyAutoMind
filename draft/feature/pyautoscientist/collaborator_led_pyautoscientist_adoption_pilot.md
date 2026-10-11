@@ -133,3 +133,9 @@ Sequence from here:
 4. Run the collaborator acceptance task once their project/access choices are supplied; retain independent ownership. Shared multi-contributor operation stays later.
 
 Nerves' final Markdown icon removal is tracked separately as `complete/2026/10/nerves-markdown-link.md`, PR#201. No unrelated package release is dispatched by these development tasks.
+
+## Independent local acceptance recorded — 2026-10-11
+
+Mind#502 / PR#503 (`active/scientist_starter_acceptance.md`) verifies local skill provenance for a sampled skill, AI-led synthetic project connection with no assistant/organs, and fresh-conversation recovery without losing records. All 532 fixture files were preserved in the confirmation resume; profile/project validation and rendering passed. This bounded local acceptance supersedes the earlier pending diagnostic for these criteria, while pristine installation/full dev workflow and real collaborator validation remain unproven. The detailed report is `docs/scientist-starter-acceptance.md` in PR#503, awaiting human merge.
+
+Next: `scientist_optional_organ_activation.md` — select one useful organ, implement resumable setup with its owner validation, and show it connected only after validation. Then `scientist_record_preserving_upgrades.md`; retain `scientist_collaborator_validation.md` for actual owner choices/access. Reporting PRs Brain#519 and Scientist#70 remain independently awaiting merge.
