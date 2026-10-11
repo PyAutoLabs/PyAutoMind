@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1830 records across 9 buckets.
+1831 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -252,6 +252,7 @@ markers; everything below GENERATED is rebuilt.
 - [profiling-setup-redesign](2026/10/profiling-setup-redesign.md)
 - [profiling-setup-wiki](2026/10/profiling-setup-wiki.md)
 - [profiling-summary-v1](2026/10/profiling-summary-v1.md) — PyAutoPulse phase 1 — `build_dashboard.py` gains a fourth output, `dashboard/summary.json`, the `profiling-sum…
+- [publish-scientist-board-navigation](2026/10/publish-scientist-board-navigation.md) — Published merged board navigation, resource destinations and presentation polish. All14 other boards link Scie…
 - [pulse-campaign-control-room](2026/10/pulse-campaign-control-room.md) — One editable/copyable check-in prompt, 11 campaign rows, 25 open tasks, then detailed measurement evidence. 26…
 - [pulse-public-links](2026/10/pulse-public-links.md) — The two public-surface one-liners left from the PyAutoPulse organ birth: `.github/profile/README.md` organ tab…
 - [pulse-refresh-project-identity](2026/10/pulse-refresh-project-identity.md) — Combined producer follow-ups: project badge identifies as autolens_profiling; successful Pages deployment disp…

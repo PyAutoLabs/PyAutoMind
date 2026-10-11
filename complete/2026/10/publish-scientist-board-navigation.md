@@ -1,3 +1,27 @@
+# Scientist dashboard publication verified
+
+- completed: 2026-10-11
+- summary: Published merged board navigation, resource destinations and presentation polish. All14 other boards link Scientist first; Scientist has14 organ footer links below dashboards. Heart4 and Broca18 unique resource anchors verified live. Broca child offset26px on phone, native hash opens correct rows. Hands standalone Heart/action shortcuts absent. Insight Fit nested under results, DNA summary removed, Nerves GREEN/count banner removed.
+
+Successful owner workflows:
+- Heart https://github.com/PyAutoLabs/PyAutoHeart/actions/runs/38163976587
+- Hands https://github.com/PyAutoLabs/PyAutoHands/actions/runs/38163979000
+- Broca https://github.com/PyAutoLabs/PyAutoBroca/actions/runs/38164230178
+- Nerves https://github.com/PyAutoLabs/PyAutoNerves/actions/runs/38164249060
+- Cortex refresh https://github.com/PyAutoLabs/PyAutoCortex/actions/runs/38164251349 and pages38164264206
+- Memory https://github.com/PyAutoLabs/PyAutoMemory/actions/runs/38164253903
+- Gut https://github.com/PyAutoLabs/PyAutoGut/actions/runs/38164256997
+- Scientist https://github.com/PyAutoLabs/PyAutoScientist/actions/runs/38164259206
+- Brain https://github.com/PyAutoLabs/PyAutoBrain/actions/runs/38164282399
+- Insight existing successful post-merge Pages38163668684
+- DNA existing successful post-merge Pages38163656823
+
+Other boards already had the requested navigation; directly verified their public HTML without redundant dispatch. Live snapshots retained locally in tmp/live-checks/. No package release or science execution. No timestamps invented by publication; owner workflows follow their existing collection contracts.
+
+Overnight review relocation is NOT included: still separately filed in draft/feature/pyautoscientist/scientist_overnight_review_entry.md behind Brain#518. Publication refreshes already-merged source only.
+
+## Original prompt
+
 # Publish Scientist board navigation
 
 Type: maintenance

@@ -12,7 +12,7 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 4 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 256 |
+| [Backlog](#backlog) | 255 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -656,7 +656,7 @@ Use the start-dev skill. draft/feature/autolens/source_cluster_arc.md
 </details>
 
 <details>
-<summary><b>Scientist adoption pilot — project resources, clear organ destinations and a growing independent Scientist</b> — 10 queued prompt(s), in order</summary>
+<summary><b>Scientist adoption pilot — project resources, clear organ destinations and a growing independent Scientist</b> — 9 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Scientist adoption pilot — project resources, clear organ destinations and a growing independent Scientist</b> — ledger: `draft/feature/pyautoscientist/collaborator_led_pyautoscientist_adoption_pilot.md` — In progress — project cards and organ-linked resource routing merged and published (Scientist PRs #56 and #58); remaining members…</summary>
 
@@ -734,14 +734,6 @@ Use the start-dev skill. draft/feature/pyautoscientist/scientist_overnight_revie
 
 ```
 Use the start-dev skill. draft/feature/pyautoscientist/scientist_record_preserving_upgrades.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/pyautoscientist/publish_scientist_board_navigation.md">Publish Scientist board navigation</a> — pyautoscientist</summary>
-
-```
-Use the start-dev skill. draft/maintenance/pyautoscientist/publish_scientist_board_navigation.md
 ```
 
 </details>
@@ -2730,7 +2722,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-88 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+87 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2775,7 +2767,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md`
 - `draft/bug/health_fixes/release_timeout_policy.md`
 - `draft/bug/health_fixes/samples_parameter_paths.md`
-- _… and 48 more_
+- _… and 47 more_
 
 </details>
 
