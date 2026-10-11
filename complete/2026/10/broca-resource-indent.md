@@ -1,3 +1,17 @@
+# Communication indentation and Nerves summary removal
+
+- issue: https://github.com/PyAutoLabs/PyAutoBroca/issues/10
+- completed: 2026-10-11
+- library-pr: https://github.com/PyAutoLabs/PyAutoBroca/pull/11
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/198
+- summary: Broca resource rows visibly indented beneath categories, with a subtle guide. Nerves HTML GREEN/count summary removed; data feeds unchanged.
+
+Validation: Broca22 and Nerves241 tests pass; six phone/tablet/desktop light/dark browser checks measure indentation and verify hash reveal, keyboard and no overflow. All6 CI test/build jobs passed across4 runs. Broca deploy intentionally skipped on PRs. Nerves freeze clear. Both source heads proven ancestors of origin/main. No package release needed: Nerves edits only the unshipped board script.
+
+Heart and Hands owner dashboard refreshes succeeded (Heart38163976587, Hands38163979000); live Heart had all4 test resource anchors, Hands standalone Heart link absent. Generic Build generate was the wrong route for these existing owner refresh workflows, not a publication blocker. Remaining live rollouts are tracked in the publication follow-up. Evidence archived locally at tmp/broca-indent-evidence/.
+
+## Original prompt
+
 # Indent communication resource dropdowns
 
 Type: bug
