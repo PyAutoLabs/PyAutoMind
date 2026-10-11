@@ -12,7 +12,7 @@
 | [Epics](#epics) | 16 |
 | [In flight](#in-flight) | 3 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 248 |
+| [Backlog](#backlog) | 255 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -1510,7 +1510,7 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>feature</b> — 34</summary>
+<summary><b>feature</b> — 41</summary>
 
 <details><summary>📋 <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding against the raw maximum finds…</a> — autoarray · small · supervised · medium</summary>
 
@@ -1628,6 +1628,14 @@ Use the start-dev skill. draft/feature/euclid/upstream_dr1_final_catalogue_tooli
 
 ```
 Use the start-dev skill. draft/feature/pyautobrain/batch_slice.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoscientist/scientist_project_resources.md">Scientist project relationships and expandable cards</a> — pyautoscientist · medium · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautoscientist/scientist_project_resources.md
 ```
 
 </details>
@@ -1780,6 +1788,54 @@ Use the start-dev skill. draft/feature/workspaces/gallery_runner_missing_tiers.m
 
 ```
 Use the start-dev skill. draft/feature/autoarray/adapt_linear_default_flip.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobroca/broca_communication_contract.md">Broca communication ownership and inventory contract</a> — pyautobroca · medium · supervised</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobroca/broca_communication_contract.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobroca/broca_communication_pilot.md">Broca documentation and workspace upkeep pilot</a> — pyautobroca · medium · supervised</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobroca/broca_communication_pilot.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoscientist/scientist_collaborator_validation.md">Independent collaborator validation</a> — pyautoscientist · medium · supervised</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautoscientist/scientist_collaborator_validation.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoscientist/scientist_minimal_starter.md">Minimal independent Scientist starter</a> — pyautoscientist · medium · supervised</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautoscientist/scientist_minimal_starter.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoscientist/scientist_optional_organ_activation.md">Progressive optional organ activation</a> — pyautoscientist · medium · supervised</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautoscientist/scientist_optional_organ_activation.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoscientist/scientist_record_preserving_upgrades.md">Record-preserving Scientist upgrades</a> — pyautoscientist · medium · supervised</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautoscientist/scientist_record_preserving_upgrades.md
 ```
 
 </details>
@@ -2645,7 +2701,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-80 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+87 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2666,12 +2722,19 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/euclid/euclid_dr1_prep_epic.md`
 - `draft/feature/jax_substructure/5_prng_key_vmap_noise.md`
 - `draft/feature/jax_substructure/6_deflection_equivalence_test.md`
+- `draft/feature/pyautobroca/broca_communication_contract.md`
 - `draft/feature/pyautobroca/broca_communication_documentation_and_workspaces.md`
+- `draft/feature/pyautobroca/broca_communication_pilot.md`
 - `draft/feature/pyautoears/community_organ_birth.md`
 - `draft/feature/pyautoeyes/group_cluster_gallery.md`
 - `draft/feature/pyautoeyes/multi_galaxy_gallery.md`
 - `draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md`
 - `draft/feature/pyautoscientist/collaborator_led_pyautoscientist_adoption_pilot.md`
+- `draft/feature/pyautoscientist/scientist_collaborator_validation.md`
+- `draft/feature/pyautoscientist/scientist_minimal_starter.md`
+- `draft/feature/pyautoscientist/scientist_optional_organ_activation.md`
+- `draft/feature/pyautoscientist/scientist_project_resources.md`
+- `draft/feature/pyautoscientist/scientist_record_preserving_upgrades.md`
 - `draft/feature/workspaces/model_figures_6_rollout.md`
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md`
@@ -2683,14 +2746,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md`
 - `draft/bug/health_fixes/release_timeout_policy.md`
 - `draft/bug/health_fixes/samples_parameter_paths.md`
-- `draft/bug/priors/12_single_source_density_refactor.md`
-- `draft/bug/priors/13_collapse_prior_and_message.md`
-- `draft/bug/priors/14_replace_transform_stack_with_bijectors.md`
-- `draft/bug/priors/z_features.md`
-- `draft/bug/pyautobrain/profiling_compile_drift_point_vs_point.md`
-- `draft/refactor/autogalaxy/critical_curves_dispatch_cluster.md`
-- `draft/refactor/workspaces/abell_1201_local_cleanup.md`
-- _… and 40 more_
+- _… and 47 more_
 
 </details>
 
