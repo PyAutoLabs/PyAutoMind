@@ -55,9 +55,15 @@
 - issued: 2026-10-11
 - prompt: active/scientist_overnight_review_entry.md
 - epic: scientist-adoption-pilot
-- status: workspace-dev
+- status: awaiting-merge
 - tier: judge (human /prm)
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/scientist-overnight-review
 - repos:
   - PyAutoBrain: feature/scientist-overnight-review
   - PyAutoScientist: feature/scientist-overnight-review
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/519
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/70
+- validation: 85 Brain board/state tests; 91 Scientist Python tests; 7 JS tests
+- heart: STALE — release validation incomplete: no rehearsal for current source; no RED/YELLOW
+- scope: user clarified on-demand Scientist review; no relocated digest, new panel or collector
+- review: independent CLEAN at Brain e6a48ff / Scientist af7e747; 85 targeted tests and legacy-row render validation

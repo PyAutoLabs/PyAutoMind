@@ -866,7 +866,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/scientist_overnight_review_entry.md">Move overnight review entry to Scientist</a> — <a href="https://github.com/PyAutoLabs/PyAutoScientist/issues/69">issue #69</a> — issued 2026-10-11 — workspace-dev</summary>
+<details><summary>📋 <a href="active/scientist_overnight_review_entry.md">Move overnight review entry to Scientist</a> — <a href="https://github.com/PyAutoLabs/PyAutoScientist/issues/69">issue #69</a> — issued 2026-10-11 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/519">PyAutoBrain#519</a>, <a href="https://github.com/PyAutoLabs/PyAutoScientist/pull/70">PyAutoScientist#70</a></summary>
 
 ```
 Use the start-dev skill. active/scientist_overnight_review_entry.md

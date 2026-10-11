@@ -120,7 +120,7 @@ Heart presentation can be scoped independently. Broca dropdowns coordinate with 
 
 The human requested Heart test-workspace and Broca communication dropdowns next, before continuing the independent Scientist. `complete/2026/10/organ-resource-dropdowns.md` (Scientist#65) records both destination slices and Scientist deep links merged in Heart#295, Broca#7 and Scientist#66. Brain#518 is merged; independent-starter continuation is now next. Publication/live checks remain recorded separately. Broca broader evidence ingestion and canonical role rollout remain separately recorded.
 
-Dashboard polish merged: `complete/2026/10/broca-resource-categories.md` covers Broca, Hands, Insight and DNA. Publication is tracked separately. `scientist_overnight_review_entry.md` remains the requested Brain-to-Scientist move, unblocked by merged Brain#518.
+Dashboard polish merged: `complete/2026/10/broca-resource-categories.md` covers Broca, Hands, Insight and DNA. Publication is tracked separately. `active/scientist_overnight_review_entry.md` now implements the clarified on-demand Scientist review (Brain#519, Scientist#70): retire Brain dashboard polling, reuse Scientist check-in and owner evidence. No second activity ledger.
 
 ## Starter continuation — 2026-10-11
 

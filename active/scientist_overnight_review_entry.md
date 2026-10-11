@@ -17,11 +17,13 @@ I also dont know whwy Brain has "Review oernight work" that is a Scientist task,
 
 Move the Review overnight work user-facing board section/navigation from Brain to Scientist; retain Brain agent execution and authoritative source evidence. Read board/_board.py and Scientist organism_board.py contracts before selecting feed integration. Preserve exceptions, pending/missing runs and evidence dates; do not copy a competing ledger. Validate both boards. Brain#518 is merged; both repositories are unclaimed.
 
-## Bounded implementation
+## User clarification
 
-1. Remove the overnight section and its navigation entry from Brain HTML/Markdown. Retain Brain collection, JSON, status feed and agent execution. Make missing-run observations explicit in the existing state feed and retain run creation timestamps as evidence text.
-2. Add a native expandable Review overnight work section to Scientist, reading only overnight-ID items from its already validated connected Brain state feed. Keep pending, blocked, unreadable and absent runs distinguishable; show the source snapshot timestamp, evidence links and original reason. Empty feeds say only that no items were reported, not that overnight work succeeded. Render a selectable review prompt directing the existing workflow without running actions.
-3. Reuse existing browser collection, identity validation and cache/freshness handling. Update only the section's evidence body during refresh, preserving disclosure and prompt state. Show no section for a Scientist with no Brain connection; do not add network endpoints or copied ledgers.
-4. Verify server rendering and browser refresh, unavailable/stale feeds, escaping, empty independent profiles and Brain feed compatibility. Run targeted Brain tests and full Scientist Python/JS suites; independent review. Open coordinated PRs, judge-tier human /prm. Publish Brain before Scientist after merge.
+I still dont really understand why brain is collatig over night work, or work for the past 24 hours? Cant scientist just determine thison the fly?
 
-This task is presentation/routing, not optional-organ activation or starter-harness acceptance.
+## Final bounded implementation
+
+1. Remove the overnight section/navigation and scheduled workflow polling from Brain's dashboard. Keep the deprecated board.json overnight key empty for compatibility and stop generating overnight status items/verdicts. Retain explicit diagnostic helpers and actual owner workflows; no release/checking schedule changes.
+2. Reuse Scientist's existing check-in, which already handles overnight/24-hour/custom-period summaries. Make on-demand querying explicit: consult dated owner records and relevant workflow runs covering the requested interval, account for pagination/access gaps, distinguish blocked/pending/failed/absent evidence. Do not add another panel, feed, scheduled digest or ledger.
+3. Update owner instructions, REPORTING.md and regressions proving dashboard collection never calls the overnight API collector, retired observations cannot reappear on Brain, and its shared state schema remains valid. Test both boards and independently review.
+4. Open coordinated judge-tier PRs. Human /prm, then publish both boards. This is a reporting ownership correction; independent starter acceptance and optional activation remain later.
