@@ -18,6 +18,7 @@ def source(tmp_path):
     root = tmp_path / 'source'
     root.mkdir()
     files = {'README.md': 'Original guide', 'repos.yaml': 'private live identity',
+             'AGENTS.md': '# Source instance\nRoute to SourceLab community. Require OptionalCampaignOrgan.\n',
              'active.md': '# private task entry', 'planned.md': 'private plan',
              'draft/feature/demo.md': 'private prompt',
              '.github/workflows/lifecycle_drift.yml': 'name: example',
@@ -44,6 +45,12 @@ def test_minimal_empty_privacy_and_default_unchanged(source, tmp_path):
     assert 'private' not in (minimal / 'active.md').read_text()
     assert 'private' not in (minimal / 'planned.md').read_text()
     assert 'local' in (minimal / 'README.md').read_text().lower()
+    instructions = (minimal / 'AGENTS.md').read_text()
+    assert 'SourceLab' not in instructions
+    assert 'OptionalCampaignOrgan' not in instructions
+    assert 'No community destination is configured' in instructions
+    assert 'needs neither an assistant' in instructions
+    assert (default / 'AGENTS.md').read_bytes() == (source / 'AGENTS.md').read_bytes()
 
 
 def test_dry_run_and_nonoverwrite(source, tmp_path):
@@ -52,9 +59,12 @@ def test_dry_run_and_nonoverwrite(source, tmp_path):
     assert spawn.minimal_mind(source, dest) == 0
     record = dest / 'active.md'
     record.write_text('user records')
+    instructions = dest / 'AGENTS.md'
+    instructions.write_text('user-owned policy')
     with pytest.raises(ValueError, match='already exists'):
         spawn.minimal_mind(source, dest)
     assert record.read_text() == 'user records'
+    assert instructions.read_text() == 'user-owned policy'
     link = tmp_path / 'link'
     link.symlink_to(tmp_path / 'absent')
     with pytest.raises(ValueError, match='already exists'):

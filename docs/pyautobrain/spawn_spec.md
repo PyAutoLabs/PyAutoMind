@@ -185,7 +185,13 @@ user records are never refreshed by this command. It is not an upgrade tool.
 
 This mode reuses the Mind partition table and empty-index generation, but emits
 an empty `categories`/`repos` body map, omits all `.github/` files, and replaces
-README with local setup guidance. No Memory or project-family checkout is read
+README and AGENTS.md with local setup guidance. The agent instructions retain
+identity, lifecycle, approval and record-preservation boundaries without copying
+the source instance's community destination, optional-organ routing, hook setup
+or automated merge claims. They direct an agent to verify local capabilities
+before using bundled framework reference material. Existing user instructions
+are never rewritten; this applies only to a newly generated minimal seed.
+No Memory or project-family checkout is read
 or generated. The source is the checkout containing this script; `--root`,
 `--check` and `--stamp-family` are rejected in this mode. Default family output
 is unchanged. Warnings/canaries are checked in staging before destination writes.
