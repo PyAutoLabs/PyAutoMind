@@ -86,7 +86,7 @@ This is a programme-sized draft. At start-dev, agree the first bounded phase and
 
 James authorized implementation of the first coherent phase, with routine decisions autonomous and human merge. Current-state audit: Scientist cockpit/organ cards shipped in #53; Broca assistant evidence and Pages shipped in #2/#4. Neither programme is already active.
 
-- `scientist_project_resources.md` — bounded next phase; first Scientist phase starts now, remaining phases stay unclaimed.
+- `active/scientist_project_resources.md` — phase 1 active as PyAutoScientist#55; remaining phases stay unclaimed.
 - `scientist_minimal_starter.md` — bounded next phase; first Scientist phase starts now, remaining phases stay unclaimed.
 - `scientist_optional_organ_activation.md` — bounded next phase; first Scientist phase starts now, remaining phases stay unclaimed.
 - `scientist_record_preserving_upgrades.md` — bounded next phase; first Scientist phase starts now, remaining phases stay unclaimed.
