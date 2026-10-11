@@ -31,3 +31,9 @@ PRs: Brain#516 then Scientist#62. Both merged and Scientist#61 closed. The next 
 ## Workspace-local discovery — 2026-10-11
 
 `complete/2026/10/scientist-local-discovery.md` (Brain#517) integrates registered Brain/Mind skills at the workspace root for a minimal local Claude pilot, with explicit canonical identities and a synthetic no-assistant project walkthrough. CLI integration verifies generated Mind + 40 local skill links + named Scientist + project validation/rendering. Actual fresh-session conversational acceptance remains required before declaring an adopter harness validated. Optional organ activation, upgrades and hosting remain later tasks.
+
+## Fresh-session diagnostic — 2026-10-11
+
+Brain#518 merged and is recorded in `complete/2026/10/scientist-local-discovery.md`. A real read-only Claude session identified the synthetic Mira instance and its empty task state, but found source-instance assumptions in generated Mind instructions. `active/minimal_seed_instructions.md` (Mind#500, PR#501) fixes that minimal-seed output. A subsequent fresh read-only session correctly reports no configured community destination, no required optional organs, no installed automation, and user-record preservation.
+
+This is partial acceptance evidence only. The first diagnostic excluded the Skill tool and copied relative links needed regeneration after fixture relocation; its discovery result is not product-failure evidence. With corrected links and Skill available, the local skill name is visible, but its runtime provenance is not established because the fixture is nested in the maintainer workspace. Still required: prove workspace-local skill provenance, connect a project through an actual fresh conversation, and resume it while preserving user records. Do not claim full adopter-harness acceptance from these read-only checks. Evidence: tmp/scientist-local-discovery/acceptance-corrected-result.json and the Mind#500 task's acceptance.json.

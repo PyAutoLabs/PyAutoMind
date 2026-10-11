@@ -874,7 +874,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/minimal_seed_instructions.md">Instance-neutral instructions for a minimal Mind seed</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/500">issue #500</a> — issued 2026-10-11 — workspace-dev</summary>
+<details><summary>📋 <a href="active/minimal_seed_instructions.md">Instance-neutral instructions for a minimal Mind seed</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/500">issue #500</a> — issued 2026-10-11 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/501">PyAutoMind#501</a></summary>
 
 ```
 Use the start-dev skill. active/minimal_seed_instructions.md

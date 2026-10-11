@@ -55,8 +55,13 @@
 - issued: 2026-10-11
 - prompt: active/minimal_seed_instructions.md
 - epic: scientist-adoption-pilot
-- status: workspace-dev
+- status: awaiting-merge
 - tier: judge (human /prm)
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/minimal-seed-instructions
 - repos:
   - PyAutoMind: feature/minimal-seed-instructions
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/501
+- validation: 116 spawn/privacy/template tests; actual fresh seed canary/lifecycle clean; real read-only Claude instruction check passed
+- review: independent CLEAN at 29de2d08; full-family generation byte-identical
+- heart: STALE — release validation incomplete: no rehearsal for current source; no RED/YELLOW
+- evidence: .worktrees/minimal-seed-instructions/tests.log, acceptance.json, fresh-mind/
