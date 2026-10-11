@@ -693,6 +693,60 @@ def plan_repo(repo, rules):
 
 
 MINIMAL_BODY_MAP = "categories: {}\nrepos: {}\n"
+MINIMAL_AGENTS = """# Local Mind — agent instructions
+
+This Mind holds this instance's task intent and workflow state. Read README.md,
+repos.yaml and the task registries before proposing changes. Resolve this
+checkout explicitly; do not fall back to a parent workspace's or another user's
+Mind. A fresh seed has empty records and no configured repository identities.
+
+## Instance boundaries
+
+- repos.yaml is the canonical identity map. Names and directory suffixes do not
+  establish ownership, access or identity. Ask for missing identity and location
+  choices instead of inventing repositories or copying another instance's map.
+- Project source stays in its owning repositories. Scientist configuration owns
+  project/resource relationships. A connected project needs neither an assistant
+  nor a connected organ; an entry in repos.yaml does not activate an organ.
+- Brain, Memory, science ledgers and other organs are optional connections, not
+  services this seed installs. Use a capability only after verifying its local
+  configuration, availability and applicable instructions. Missing or stale
+  evidence is not a passing result or proof of an uninstalled capability.
+- No community destination is configured by this seed. Ask the owner for the
+  intended destination and permission before sending any external message.
+- Bundled tooling and reference documents are framework material, not evidence
+  of configured services. Check instance policy and actual capabilities before
+  applying remote workflow, repository rollout or release instructions. This
+  local seed installs no hooks, automation, remote access or auto-merge service.
+
+## Task records and workflow
+
+- Read REFERENCE.md on demand for schemas. Unstarted prompts belong under
+  draft/<work-type>/<target>/; issued prompts under active/; completed records
+  under complete/<YYYY>/<MM>/. Preserve existing records when resuming work.
+- Inspect active.md, planned.md and parked.md before claiming a task. Use this
+  Mind's installed skills and scripts/lifecycle.py for lifecycle changes. The
+  read-only local check is `python3 scripts/lifecycle.py check`.
+- Use the configured development workflow when available. One bounded task has
+  one prompt and its own reviewable change. If required workflow capabilities
+  are missing, report the missing step; do not silently use another instance.
+- Present a plan before source edits and retain approvals already given. Merge,
+  publication, access changes and releases require their applicable explicit
+  authorization. Do not provision services or run science merely to connect a
+  project. Keep unknown test counts and unavailable evidence explicit.
+- Dashboards are generated views, not task records; use the configured renderer
+  when available rather than hand-editing generated pages.
+
+## Preserve user state
+
+Never rewrite pushed history or initialize over a tracked repository. Inspect
+git status and fetch before editing a configured remote checkout; preserve
+uncommitted work. Never rerun seed generation over this directory or replace
+records with examples during an upgrade. Keep tmp/ scratch out of commits.
+
+Finish at the requested deliverable. Do not leave timers, subscriptions or
+background agents waiting for review or CI after the session ends.
+"""
 MINIMAL_README = """# Local Mind seed
 
 This is empty user-owned task state, generated from the supported Mind rules.
@@ -703,6 +757,8 @@ Read AGENTS.md and REFERENCE.md for record schemas. Populate repos.yaml with
 explicit canonical repository identities and categories for your own checkouts
 before connecting Scientist or invoking Brain workflows. Keep this map and your
 records when updating framework tooling; do not rerun seed generation here.
+AGENTS.md is generated for this local seed; it does not inherit the source
+instance's community routing, optional-organ assumptions or automation policy.
 
 The Scientist starter accepts this map with --repos once you have added the
 Scientist repository identity. See the framework's STARTER.md for its initializer.
@@ -740,6 +796,7 @@ def generate_mind(mind_root, out_dir, *, minimal=False):
     readme = out_dir / "README.md"
     if minimal:
         readme.write_text(MINIMAL_README)
+        (out_dir / "AGENTS.md").write_text(MINIMAL_AGENTS)
     elif readme.exists():
         readme.write_text(TEMPLATE_README_BANNER + readme.read_text())
     stamp_complete_index(out_dir)
