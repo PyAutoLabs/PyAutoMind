@@ -9,6 +9,7 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked` /
 
 | date | task | effective level | gates (tests/smoke/review/heart) | outcome |
 |------|------|-----------------|----------------------------------|---------|
+| 2026-10-11 | scientist-project-resources (Scientist#55 / PR56) | safe; explicit routine-autonomy request | 38 Python + 6 Node; 6 browser cases + no-JS; independent CLEAN; exact-head CI PASS; Heart YELLOW manifest drift: organism-map blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml, live human acknowledged | PR-open; judge tier, human /prm |
 | 2026-10-10 | heart-manifest-drift (Mind#497; 12 linked guidance PRs) | live human development-only authorization | full generator check, 946 tests, Eyes265 URLs PASS; independent CLEAN; Heart RED `release validation FAILED (stage integrate)`; non-causal guidance repair, no merge/release | red-override |
 | 2026-10-10 | heart-fitness-dispatch (af workspace test #109 / PR110) | live human corrective authorization | release script PASS; 15 smoke PASS; independent CLEAN + 7 mutation faults caught; Heart RED `release validation FAILED (stage integrate)`; no merge/release | corrective |
 | 2026-10-10 | heart-hierarchical-backend (lens workspace #588 / PR589) | live human corrective authorization | release guide PASS; 41 smoke PASS; notebook byte-identical; independent CLEAN; Heart RED `release validation FAILED (stage integrate)`; no merge/release | corrective |
