@@ -55,9 +55,13 @@
 - issued: 2026-10-11
 - prompt: active/scientist_minimal_mind_seed.md
 - epic: scientist-adoption-pilot
-- status: workspace-dev
+- status: awaiting-merge
 - tier: judge (human /prm)
 - session: Codex; ongoing epic implementation authorized
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/scientist-minimal-mind-seed
 - repos:
   - PyAutoMind: feature/scientist-minimal-mind-seed
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/499
+- validation: 702 full-suite cases passed; sole baseline spacing failure corrected and passes rerun; independent review CLEAN at 6db89f5e
+- heart: STALE — release validation incomplete: no rehearsal for current source; no RED/YELLOW reasons
+- evidence: .worktrees/scientist-minimal-mind-seed/evidence/

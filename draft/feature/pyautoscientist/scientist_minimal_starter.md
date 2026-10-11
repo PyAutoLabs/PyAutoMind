@@ -23,3 +23,7 @@ PRs: Brain#516 then Scientist#62. Both merged and Scientist#61 closed. The next 
 ## Configuration initialization slice — 2026-10-11
 
 `complete/2026/10/scientist-starter-init.md` (Scientist#63 closed; PR#64 merged) adds offline dry-run/apply initialization of a new configuration directory and a local fresh-chat handoff. This does not initialize Mind/Memory or install a harness. Audit found Mind spawn targets the fuller template family and Brain's installer writes harness-wide settings; the next bootstrap slice must explicitly support a minimal layout before invoking those. Reuse both existing owners rather than duplicating their templates or installer.
+
+## Minimal local Mind seed — 2026-10-11
+
+`active/scientist_minimal_mind_seed.md` (Mind#498) adds a local Mind-only mode to the existing generator: empty records/body map, no automation or satellite family. Remaining next step: explicitly configure canonical identities and validate one minimal local harness with Scientist + Brain + this seed; connect one synthetic existing project and prove fresh-chat resumption. Optional Memory remains separate and no remote access is assumed.

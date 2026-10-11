@@ -21,3 +21,9 @@ Detailed: generate_mind gains keyword-only minimal=False and selects an empty bo
 Survey: canonical Mind main clean; no active claims. Source worktree feature/scientist-minimal-mind-seed under .worktrees/scientist-minimal-mind-seed. Mind lifecycle administration stays canonical main. Routine implementation authorized by ongoing epic request. Tier judge, human /prm.
 
 Routing refinement: only Mind source changes; Scientist is the epic domain, not a second source claim.
+
+## Implemented; awaiting merge
+
+PR https://github.com/PyAutoLabs/PyAutoMind/pull/499, head 6db89f5e. 116 targeted generator tests; full suite 702 passed plus one pre-existing parked.md spacing failure, reproduced on main and corrected by removing one blank line; targeted rerun passes. Independent review CLEAN: 219 targeted checks plus registry regression, actual generated lifecycle closure with networking prohibited, race protection and default-output byte comparison. No unresolved failures. Heart STALE solely absent current-source rehearsal, no RED/YELLOW. Evidence .worktrees/scientist-minimal-mind-seed/evidence/.
+
+Next: human /prm, then configure canonical identities and validate a minimal local harness with Scientist/Brain/seed. Full project connection/fresh-chat acceptance remains in the parent.
