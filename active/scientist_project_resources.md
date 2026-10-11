@@ -1,5 +1,7 @@
 # Scientist project relationships and expandable cards
 
+Issued: 2026-10-11
+Issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/55
 Type: feature
 Target: PyAutoScientist
 Repos:

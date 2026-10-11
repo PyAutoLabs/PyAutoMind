@@ -49,3 +49,15 @@
   - red reasons: `release validation FAILED (stage integrate)` (+ 8 manifest-drift yellow reasons)
   - branch gates passed: tests 1405 passed / 6 skipped; smoke import of edited cells OK; all lint.yml checks locally; independent Opus review FINDINGS (7) fixed → re-review CLEAN
   - scope: commit / push / PR-open only; merge needs a separate human /prm with all checks green; no release
+
+## scientist-project-resources
+- issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/55
+- issued: 2026-10-11
+- prompt: active/scientist_project_resources.md
+- session: Codex; session ID unavailable
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/scientist-project-resources
+- repos:
+  - PyAutoScientist: feature/scientist-project-resources
+- authorization: James requested routine autonomous first-phase implementation, validation and PR; judge tier, human /prm merge.
+- next: implement configured project relationships and dashboard cards; remaining adoption and Broca phases are separate draft prompts.
