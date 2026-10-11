@@ -49,3 +49,14 @@
   - red reasons: `release validation FAILED (stage integrate)` (+ 8 manifest-drift yellow reasons)
   - branch gates passed: tests 1405 passed / 6 skipped; smoke import of edited cells OK; all lint.yml checks locally; independent Opus review FINDINGS (7) fixed → re-review CLEAN
   - scope: commit / push / PR-open only; merge needs a separate human /prm with all checks green; no release
+
+## broca-state-feed
+- issue: https://github.com/PyAutoLabs/PyAutoBroca/issues/14
+- issued: 2026-10-11
+- prompt: active/broca_published_state_feed.md
+- epic: scientist-adoption-pilot
+- status: workspace-dev
+- tier: judge (human /prm)
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/broca-state-feed
+- repos:
+  - PyAutoBroca: feature/broca-state-feed

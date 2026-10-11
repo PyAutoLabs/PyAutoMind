@@ -1,6 +1,8 @@
 # Publish Broca's shared organ state feed
 
 Type: feature
+Issued: 2026-10-11
+Issue: https://github.com/PyAutoLabs/PyAutoBroca/issues/14
 Target: PyAutoBroca
 Epic: scientist-adoption-pilot
 Difficulty: medium
