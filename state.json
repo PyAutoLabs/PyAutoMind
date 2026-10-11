@@ -2,15 +2,15 @@
   "schema_version": 1,
   "organ": "mind",
   "repo": "PyAutoMind",
-  "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-11T13:50:59Z",
+  "status": "yellow",
+  "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
+  "updated": "2026-10-11T14:01:31Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
-      "severity": "red",
-      "text": "Scientist project relationships and expandable cards \u2014 awaiting-input",
-      "url": "https://github.com/PyAutoLabs/PyAutoScientist/issues/55",
+      "severity": "yellow",
+      "text": "Scientist project relationships and expandable cards \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoScientist/pull/56",
       "prompt": "Use the start-dev skill. active/scientist_project_resources.md"
     },
     {
