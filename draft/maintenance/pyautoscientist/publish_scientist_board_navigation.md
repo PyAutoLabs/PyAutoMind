@@ -15,3 +15,5 @@ Also verify merged Heart#295, Broca#7 and Scientist#66 from `complete/2026/10/or
 ## Latest Heart publication diagnosis — 2026-10-11
 
 Public Heart HTML lacks test-workspaces/resource-lens-tests. Latest successful heart-health run38134638064 at source1f94d00 predates merged Heart#295. Scheduled/manual-only workflow does not publish on this source merge. Build deploy dry-run aborts with `Could not obtain a readiness verdict ('stale').` despite authoritative readiness having only `release validation incomplete: no rehearsal for current source`. No dispatch or override attempted. Resolve the supported board-publication route before claiming Heart is live; do not run a software release to refresh HTML. Evidence: tmp/broca-resource-categories/build.json.
+
+Also verify the merged polish from `complete/2026/10/broca-resource-categories.md`: Broca#9 category dropdowns and assistant links; Hands#309 shortcut removal; Insight#26 nested PyAutoFit results; DNA#3 concise HTML. Existing automatic publication may cover some boards; inspect successful post-merge deployments before dispatching.

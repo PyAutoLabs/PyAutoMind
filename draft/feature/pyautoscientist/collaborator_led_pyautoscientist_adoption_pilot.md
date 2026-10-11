@@ -119,3 +119,5 @@ Heart presentation can be scoped independently. Broca dropdowns coordinate with 
 ## Current priority — 2026-10-11
 
 The human requested Heart test-workspace and Broca communication dropdowns next, before continuing the independent Scientist. `complete/2026/10/organ-resource-dropdowns.md` (Scientist#65) records both destination slices and Scientist deep links merged in Heart#295, Broca#7 and Scientist#66. Brain#518 remains awaiting merge; independent-starter continuation is now next. Publication/live checks remain recorded separately. Broca broader evidence ingestion and canonical role rollout remain separately recorded.
+
+Dashboard polish merged: `complete/2026/10/broca-resource-categories.md` covers Broca, Hands, Insight and DNA. Publication is tracked separately. `scientist_overnight_review_entry.md` remains the requested Brain-to-Scientist move, pending the Brain#518 claim.

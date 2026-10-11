@@ -1,3 +1,21 @@
+# Dashboard presentation polish
+
+- issue: https://github.com/PyAutoLabs/PyAutoBroca/issues/8
+- completed: 2026-10-11
+- library-pr: https://github.com/PyAutoLabs/PyAutoBroca/pull/9
+- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/309
+- library-pr: https://github.com/PyAutoLabs/PyAutoInsight/pull/26
+- library-pr: https://github.com/PyAutoLabs/PyAutoDNA/pull/3
+- summary: Broca categories Workspaces/How To/Documentation and assistant deduplication with stable links; Hands shortcut removal; legacy Insight results nested under PyAutoFit with metadata trimmed; DNA verbose HTML summary removed. Evidence records, status feeds and check-in prompts preserved.
+
+Validation: Broca22, Hands27, Insight183, DNA18 tests; Insight ruff/format/offline checks; responsive/hash/no-JS tests; independent review CLEAN. Exact-head CI: all12 test/build/lint jobs passed across8 runs. Broca deployment job intentionally skipped on PRs. All4 source heads proven ancestors of origin/main after merge.
+
+Only presentation work shipped. Heart missing test rows is diagnosed as publication lag and remains in draft/maintenance/pyautoscientist/publish_scientist_board_navigation.md; Build deploy rejected STALE and no dispatch was attempted. Moving overnight review from Brain to Scientist remains in draft/feature/pyautoscientist/scientist_overnight_review_entry.md, blocked by the existing Brain#518 claim. Neither is claimed complete by this record.
+
+Evidence archived under tmp/broca-resource-categories/evidence/ before worktree cleanup. Heart at ship was STALE solely for missing release rehearsal, no RED/YELLOW reasons. No software release performed.
+
+## Original prompt
+
 # Broca resource categories and Heart publication visibility
 
 Type: bug
