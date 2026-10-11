@@ -1,6 +1,8 @@
 # Independent Scientist fresh-session acceptance
 
 Type: test
+Issued: 2026-10-11
+Issue: https://github.com/PyAutoLabs/PyAutoMind/issues/502
 Target: PyAutoMind
 Epic: scientist-adoption-pilot
 Difficulty: medium

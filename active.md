@@ -67,3 +67,15 @@
 - heart: STALE — release validation incomplete: no rehearsal for current source; no RED/YELLOW
 - scope: user clarified on-demand Scientist review; no relocated digest, new panel or collector
 - review: independent CLEAN at Brain e6a48ff / Scientist af7e747; 85 targeted tests and legacy-row render validation
+
+## scientist-starter-acceptance
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/502
+- issued: 2026-10-11
+- prompt: active/scientist_starter_acceptance.md
+- epic: scientist-adoption-pilot
+- session: Codex CLI (session ID unavailable)
+- status: workspace-dev
+- tier: judge (human /prm)
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/scientist-starter-acceptance
+- repos:
+  - PyAutoMind: feature/scientist-starter-acceptance
