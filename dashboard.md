@@ -12,7 +12,7 @@
 | [Epics](#epics) | 16 |
 | [In flight](#in-flight) | 3 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 254 |
+| [Backlog](#backlog) | 256 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -116,7 +116,7 @@ Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 109
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 111
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -1510,7 +1510,7 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>feature</b> — 40</summary>
+<summary><b>feature</b> — 42</summary>
 
 <details><summary>📋 <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding against the raw maximum finds…</a> — autoarray · small · supervised · medium</summary>
 
@@ -1628,6 +1628,22 @@ Use the start-dev skill. draft/feature/euclid/upstream_dr1_final_catalogue_tooli
 
 ```
 Use the start-dev skill. draft/feature/pyautobrain/batch_slice.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobroca/broca_communication_resource_dropdowns_including.md">Broca communication resource dropdowns including HowTo</a> — pyautobroca · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobroca/broca_communication_resource_dropdowns_including.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoheart/heart_test_workspace_resource_dropdowns.md">Heart test workspace resource dropdowns</a> — pyautoheart · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautoheart/heart_test_workspace_resource_dropdowns.md
 ```
 
 </details>
@@ -2693,7 +2709,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-86 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+88 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2717,10 +2733,12 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/pyautobroca/broca_communication_contract.md`
 - `draft/feature/pyautobroca/broca_communication_documentation_and_workspaces.md`
 - `draft/feature/pyautobroca/broca_communication_pilot.md`
+- `draft/feature/pyautobroca/broca_communication_resource_dropdowns_including.md`
 - `draft/feature/pyautoears/community_organ_birth.md`
 - `draft/feature/pyautoeyes/group_cluster_gallery.md`
 - `draft/feature/pyautoeyes/multi_galaxy_gallery.md`
 - `draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md`
+- `draft/feature/pyautoheart/heart_test_workspace_resource_dropdowns.md`
 - `draft/feature/pyautoscientist/collaborator_led_pyautoscientist_adoption_pilot.md`
 - `draft/feature/pyautoscientist/scientist_collaborator_validation.md`
 - `draft/feature/pyautoscientist/scientist_minimal_starter.md`
@@ -2736,9 +2754,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md`
 - `draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md`
 - `draft/bug/health_fixes/release_timeout_policy.md`
-- `draft/bug/health_fixes/samples_parameter_paths.md`
-- `draft/bug/priors/12_single_source_density_refactor.md`
-- _… and 46 more_
+- _… and 48 more_
 
 </details>
 
