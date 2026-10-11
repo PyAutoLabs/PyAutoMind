@@ -1,6 +1,8 @@
 # Workspace-local starter skill discovery
 
 Type: feature
+Issued: 2026-10-11
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/517
 Epic: scientist-adoption-pilot
 Difficulty: medium
 Consequence: judge
@@ -19,3 +21,5 @@ Docs: add a minimal local Claude walkthrough in docs/adoption/guide.md using cur
 Tests: missing or ambiguous registrations/sources, collision preflight, protected parent paths, idempotence, relative links, and no user-home mutation. Integration exercise with a generated Mind seed and a differently named synthetic Scientist, one project without assistant, offline validation and rendering. Independent review before PR. Tier judge; human /prm.
 
 Survey: Brain main clean, no active Brain claim. Existing unrelated worktrees left untouched. Branch feature/scientist-local-discovery; task .worktrees/scientist-local-discovery. Framework changes Brain only; user instance data stays separate.
+
+Routing refinement: Brain source only; Scientist is the epic domain, not a second source claim.
