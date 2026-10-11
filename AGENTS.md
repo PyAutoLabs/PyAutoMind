@@ -34,6 +34,8 @@ when the task needs them. Read [README.md](README.md) for the public overview.
   `dashboard.md` is generated: run `pyauto-brain intake --apply dashboard`
   after registry or draft changes. Never hand-edit it.
 
+Dashboard presentation tasks follow [the concise-copy policy](policy/dashboard_copy.md): structured facts and indented details, without repeated explanatory boilerplate.
+
 ## Hard rules
 
 1. **Never rewrite history on any branch with a remote.** No `git init` over an

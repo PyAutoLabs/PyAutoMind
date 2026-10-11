@@ -76,3 +76,6 @@
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/broca-guides-label
 - repos:
   - PyAutoBroca: feature/broca-guides-label
+  - PyAutoHeart: feature/broca-guides-label
+  - PyAutoInsight: feature/broca-guides-label
+  - PyAutoNerves: feature/broca-guides-label
