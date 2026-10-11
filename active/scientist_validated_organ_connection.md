@@ -1,6 +1,8 @@
 # Validated, repeatable optional-organ connection
 
 Type: feature
+Issued: 2026-10-11
+Issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/71
 Target: PyAutoScientist
 Epic: scientist-adoption-pilot
 Difficulty: medium
