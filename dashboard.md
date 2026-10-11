@@ -890,7 +890,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/organ_resource_dropdowns.md">Heart and Broca resource destinations</a> — <a href="https://github.com/PyAutoLabs/PyAutoScientist/issues/65">issue #65</a> — issued 2026-10-11 — workspace-dev</summary>
+<details><summary>📋 <a href="active/organ_resource_dropdowns.md">Heart and Broca resource destinations</a> — <a href="https://github.com/PyAutoLabs/PyAutoScientist/issues/65">issue #65</a> — issued 2026-10-11 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/295">PyAutoHeart#295</a>, <a href="https://github.com/PyAutoLabs/PyAutoBroca/pull/7">PyAutoBroca#7</a>, <a href="https://github.com/PyAutoLabs/PyAutoScientist/pull/66">PyAutoScientist#66</a></summary>
 
 ```
 Use the start-dev skill. active/organ_resource_dropdowns.md

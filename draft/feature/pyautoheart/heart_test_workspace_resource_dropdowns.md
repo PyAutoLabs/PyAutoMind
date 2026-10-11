@@ -9,10 +9,10 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: normal
-Status: formalised
+Status: in-progress
 Consequence: judge
 Review-minutes: 20
-Unattended: ready
+Unattended: claimed
 
 Give each registered `_workspace_test` repository its own discoverable expandable row on @PyAutoHeart's dashboard, grouped sensibly by project. Explain what that test workspace checks and why it belongs on Heart. The current Scientist-to-Heart link does not make this relationship clear.
 
@@ -45,3 +45,7 @@ intake a prompt to have _test workspaces have their own drop down on Heart with 
 ## Sizing and scope note
 
 Medium assumes a bounded owner-board presentation change using available evidence, with minimal Scientist deep-link integration if needed. No edits to HowTo/tutorial/test workspace sources are planned. Broader evidence ingestion or schema migration must remain in the existing roadmap or be sliced at start-dev.
+
+## Coordinated implementation
+
+Tracked by `active/organ_resource_dropdowns.md` (Scientist issue #65). Do not start a duplicate task: Heart, Broca and Scientist share one coordinated branch set. Broader evidence ingestion remains separate.

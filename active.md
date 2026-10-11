@@ -71,7 +71,7 @@
 - issued: 2026-10-11
 - prompt: active/organ_resource_dropdowns.md
 - epic: scientist-adoption-pilot
-- status: workspace-dev
+- status: awaiting-merge
 - tier: judge (human /prm)
 - session: Codex; owner-board priority explicitly authorized
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/organ-resource-dropdowns
@@ -79,3 +79,10 @@
   - PyAutoHeart: feature/organ-resource-dropdowns
   - PyAutoBroca: feature/organ-resource-dropdowns
   - PyAutoScientist: feature/organ-resource-dropdowns
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/295
+- library-pr: https://github.com/PyAutoLabs/PyAutoBroca/pull/7
+- library-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/66
+- merge-order: Heart#295 and Broca#7 destinations before Scientist#66; publish in that order too
+- validation: Heart 142, Broca 22, Scientist 76 Python + 7 JS tests; 12 responsive/theme + 2 no-JS browser cases; independent review CLEAN after canonical CI provenance fix
+- heart: STALE — release validation incomplete: no rehearsal for current source; no RED/YELLOW reasons
+- evidence: .worktrees/organ-resource-dropdowns/evidence/

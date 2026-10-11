@@ -115,3 +115,7 @@ Heart presentation can be scoped independently. Broca dropdowns coordinate with 
 ### Navigation polish — 2026-10-11
 
 `complete/2026/10/scientist-board-navigation.md` (Scientist#59) records the merged navigation polish: organ footer below Scientist cards and Scientist first across other boards. Seven coordinated PRs merged after CI and independent CLEAN review. Cross-board publication/live verification remains in `draft/maintenance/pyautoscientist/publish_scientist_board_navigation.md`, under this same epic.
+
+## Current priority — 2026-10-11
+
+The human requested Heart test-workspace and Broca communication dropdowns next, before continuing the independent Scientist. `active/organ_resource_dropdowns.md` (Scientist#65) implements both destination slices plus Scientist deep links. Brain#518 remains awaiting merge; further independent-starter work is deferred until the owner-board slice is complete. Broca broader evidence ingestion and canonical role rollout remain separately recorded.

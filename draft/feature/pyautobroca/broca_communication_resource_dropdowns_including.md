@@ -9,10 +9,10 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: normal
-Status: formalised
+Status: in-progress
 Consequence: judge
 Review-minutes: 20
-Unattended: ready
+Unattended: claimed
 
 Give the project communication resources listed on Scientist their own discoverable expandable rows on @PyAutoBroca's dashboard: assistants, user-facing workspaces, documentation and HowTo tutorials (including HowToFit, HowToGalaxy and HowToLens where registered). The current Scientist-to-Broca link does not make the individual resources or their relationship clear. Group by project and resource type without requiring an assistant.
 
@@ -47,3 +47,7 @@ intake a prompt to have _test workspaces have their own drop down on Heart with 
 ## Sizing and scope note
 
 Medium assumes a bounded owner-board presentation change using available evidence, with minimal Scientist deep-link integration if needed. No edits to HowTo/tutorial/test workspace sources are planned. Broader evidence ingestion or schema migration must remain in the existing roadmap or be sliced at start-dev.
+
+## Coordinated implementation
+
+Tracked by `active/organ_resource_dropdowns.md` (Scientist issue #65). Do not start a duplicate task: Heart, Broca and Scientist share one coordinated branch set. Broader evidence ingestion remains separate.
