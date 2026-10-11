@@ -16,7 +16,7 @@ Evidence preserved locally in `PyAutoMind/tmp/scientist-project-resources/eviden
 
 Remaining work stays in draft: minimal independent starter, optional-organ activation, record-preserving upgrades, collaborator validation, and separate Broca communication contract/pilot tasks. Next is start-dev on `draft/feature/pyautoscientist/scientist_minimal_starter.md`. The broader pilot and Broca programme prompts remain valid; this merge completes only their first bounded Scientist phase.
 
-Close-out validation: task-scoped lifecycle check passed. Global check reports pre-existing missing PR keys on timing-noise-audit phases p8/p9/p10; unrelated entries were left unchanged. Scoped Scientist and Broca reconciliation found no suspects.
+Close-out validation: record/prompt-scoped lifecycle check passed. Global check reports pre-existing missing PR keys on timing-noise-audit phases p8/p9/p10; the registry-scoped diff check also flags adjacent p10. The close-out removed only the Scientist registry entry; unrelated entries were left unchanged. Scoped Scientist and Broca reconciliation found no suspects.
 
 ## Original prompt
 
