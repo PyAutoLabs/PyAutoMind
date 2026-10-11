@@ -84,8 +84,13 @@
 - issued: 2026-10-11
 - prompt: active/scientist_available_resources.md
 - epic: scientist-adoption-pilot
-- status: workspace-dev
+- status: awaiting-merge
 - tier: judge (human /prm)
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/scientist-available-resources
 - repos:
   - PyAutoScientist: feature/scientist-available-resources
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/68
+- validation: 91 Python tests; 7 JS tests; responsive light/dark and no-JS checks; live snapshot/catalogue unchanged
+- review: independent CLEAN at 98978ea (70 targeted tests, 8 browser cases)
+- heart: STALE — release validation incomplete: no rehearsal for current source; no RED/YELLOW reasons
+- evidence: .worktrees/scientist-available-resources/evidence/

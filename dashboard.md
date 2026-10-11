@@ -882,7 +882,7 @@ Use the start-dev skill. active/remove_markdown_link.md
 
 </details>
 
-<details><summary>📋 <a href="active/scientist_available_resources.md">Discover optional project resources</a> — <a href="https://github.com/PyAutoLabs/PyAutoScientist/issues/67">issue #67</a> — issued 2026-10-11 — workspace-dev</summary>
+<details><summary>📋 <a href="active/scientist_available_resources.md">Discover optional project resources</a> — <a href="https://github.com/PyAutoLabs/PyAutoScientist/issues/67">issue #67</a> — issued 2026-10-11 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoScientist/pull/68">PyAutoScientist#68</a></summary>
 
 ```
 Use the start-dev skill. active/scientist_available_resources.md
