@@ -22,4 +22,4 @@ PRs: Brain#516 then Scientist#62. Both merged and Scientist#61 closed. The next 
 
 ## Configuration initialization slice — 2026-10-11
 
-`active/scientist_starter_init.md` (Scientist#63) adds offline dry-run/apply initialization of a new configuration directory and a local fresh-chat handoff. This does not initialize Mind/Memory or install a harness. Audit found Mind spawn targets the fuller template family and Brain's installer writes harness-wide settings; the next bootstrap slice must explicitly support a minimal layout before invoking those. Reuse both existing owners rather than duplicating their templates or installer.
+`complete/2026/10/scientist-starter-init.md` (Scientist#63 closed; PR#64 merged) adds offline dry-run/apply initialization of a new configuration directory and a local fresh-chat handoff. This does not initialize Mind/Memory or install a harness. Audit found Mind spawn targets the fuller template family and Brain's installer writes harness-wide settings; the next bootstrap slice must explicitly support a minimal layout before invoking those. Reuse both existing owners rather than duplicating their templates or installer.

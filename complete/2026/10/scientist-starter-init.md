@@ -1,3 +1,15 @@
+## Shipped
+
+Merged https://github.com/PyAutoLabs/PyAutoScientist/pull/64 at head 8852474. Issue #63. Epic: scientist-adoption-pilot.
+
+Offline starter command previews or exclusively creates a new directory with profile, empty projects and fresh-chat instructions. Existing directories and symlinks are refused. Canonical identities and user records are not copied or rewritten.
+
+74 Python tests, 7 Node tests, actual initializer/render and handoff commands passed. Independent review CLEAN. Exact-head Actions Board tests run 38154495123 and its tests job completed successfully; clean mergeability, branch ancestor of origin/main confirmed. Ship-time Heart STALE solely for absent current-source release rehearsal.
+
+Full Mind/Memory template bootstrap, minimal harness integration, optional organs and hosting remain separate parent work. Evidence archived locally under tmp/scientist-starter-init/evidence/.
+
+## Original prompt
+
 # Initialize an isolated Scientist configuration
 
 Type: feature
