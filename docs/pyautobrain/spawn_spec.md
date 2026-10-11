@@ -174,3 +174,25 @@ it can be kept verbatim.
 - Running `repos_sync.py --check` **inside a written PyAutoMind-template**
   (against a scratch root holding only organ clones) exits 0 — proving the
   template body map and scripts are self-consistent.
+
+## Local minimal Mind seed
+
+`python3 scripts/spawn.py --minimal-mind` validates a staged Mind-only seed and
+reports without retaining it. Add `--write NEW_DIRECTORY` to create the Mind
+checkout contents directly there (not a family parent directory). The parent
+must exist; the destination must not exist, including as a symlink. Existing
+user records are never refreshed by this command. It is not an upgrade tool.
+
+This mode reuses the Mind partition table and empty-index generation, but emits
+an empty `categories`/`repos` body map, omits all `.github/` files, and replaces
+README with local setup guidance. No Memory or project-family checkout is read
+or generated. The source is the checkout containing this script; `--root`,
+`--check` and `--stamp-family` are rejected in this mode. Default family output
+is unchanged. Warnings/canaries are checked in staging before destination writes.
+An I/O failure during final copy can leave a partial new directory; inspect it
+manually, because retry will refuse that directory too.
+
+Populate repos.yaml explicitly with owned repository identities before connecting
+the Scientist profile or running Brain workflows. This mode neither initializes
+git nor provisions repositories, installs harness skills, renders dashboards, or
+claims a complete runnable organism. Memory and other organs remain optional.

@@ -692,9 +692,37 @@ def plan_repo(repo, rules):
     return plan, warns
 
 
-def generate_mind(mind_root, out_dir):
+MINIMAL_BODY_MAP = "categories: {}\nrepos: {}\n"
+MINIMAL_README = """# Local Mind seed
+
+This is empty user-owned task state, generated from the supported Mind rules.
+No project, assistant or optional organ is assumed. No GitHub workflows, git
+repository, remote service or harness installation has been created.
+
+Read AGENTS.md and REFERENCE.md for record schemas. Populate repos.yaml with
+explicit canonical repository identities and categories for your own checkouts
+before connecting Scientist or invoking Brain workflows. Keep this map and your
+records when updating framework tooling; do not rerun seed generation here.
+
+The Scientist starter accepts this map with --repos once you have added the
+Scientist repository identity. See the framework's STARTER.md for its initializer.
+Choose and validate one local harness separately; this seed does not install one.
+Add Memory from its supported template only when you need knowledge storage.
+
+For a fresh chat, ask the assistant to read this README, AGENTS.md, repos.yaml
+and the task registries before proposing setup. Existing projects retain their
+source material. Do not publish, install or create remote resources implicitly.
+
+Local lifecycle tooling is available in scripts/lifecycle.py. An empty Mind can
+check its state with `python3 scripts/lifecycle.py check` from this directory.
+"""
+
+
+def generate_mind(mind_root, out_dir, *, minimal=False):
     plan, warns = plan_repo(mind_root, MIND_RULES)
     for rel, (action, src) in sorted(plan.items()):
+        if minimal and rel.parts[0] == ".github":
+            continue
         dest = out_dir / rel
         dest.parent.mkdir(parents=True, exist_ok=True)
         if action == "KEEP":
@@ -706,11 +734,13 @@ def generate_mind(mind_root, out_dir):
         elif action == "SPECIAL:autonomy_log":
             dest.write_text(autonomy_log_body(src))
         elif action == "SPECIAL:body_map":
-            dest.write_text(BODY_MAP_TEMPLATE)
+            dest.write_text(MINIMAL_BODY_MAP if minimal else BODY_MAP_TEMPLATE)
         elif action == "GENERATE:":
             dest.write_text("")
     readme = out_dir / "README.md"
-    if readme.exists():
+    if minimal:
+        readme.write_text(MINIMAL_README)
+    elif readme.exists():
         readme.write_text(TEMPLATE_README_BANNER + readme.read_text())
     stamp_complete_index(out_dir)
     return warns
@@ -967,8 +997,31 @@ def workspace_root(mind_root):
     return resolve(mind_root)
 
 
+def minimal_mind(mind_root, destination=None):
+    """Validate a local seed before exclusively creating a new destination."""
+    if destination is not None:
+        destination = Path(destination).absolute()
+        if destination.exists() or destination.is_symlink():
+            raise ValueError("minimal Mind destination already exists; preserve and resume its records")
+        if not destination.parent.is_dir():
+            raise ValueError("minimal Mind destination parent must exist")
+    with tempfile.TemporaryDirectory(prefix="mind_seed_") as tmp:
+        staged = Path(tmp)
+        warns = generate_mind(mind_root, staged, minimal=True)
+        if report({"minimal Mind": (warns, canary_scan(staged))}):
+            return EXIT_UNSAFE
+        if destination is None:
+            print("Preview only; use --write NEW_DIRECTORY to retain this local seed")
+        else:
+            # copytree's exclusive mkdir refuses an intervening creation too.
+            shutil.copytree(staged, destination)
+            print(f"written: {destination} (local Mind only)")
+    return EXIT_CLEAN
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--minimal-mind", action="store_true", help="local empty Mind only; new --write destination")
     parser.add_argument("--write", metavar="DIR")
     parser.add_argument("--check", metavar="DIR")
     parser.add_argument("--stamp-family", metavar="DIR")
@@ -976,6 +1029,14 @@ def main():
     args = parser.parse_args()
 
     mind_root = Path(__file__).resolve().parents[1]
+    if args.minimal_mind:
+        if args.check or args.stamp_family or args.root is not None:
+            parser.error("--minimal-mind cannot combine with --check, --stamp-family or --root")
+        try:
+            status = minimal_mind(mind_root, args.write)
+        except (ValueError, OSError) as exc:
+            parser.error(str(exc))
+        sys.exit(status)
     # `--root` still wins; only the default changed (see workspace_root).
     root = args.root or workspace_root(mind_root)
 

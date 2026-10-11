@@ -73,7 +73,6 @@ write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
 - resume: Plan approved and issue created; implementation not started. Reuse approved issue plan, survey current claims, and resume through start_workspace. No branch or PR created for this member.
 - scope: Existing Colab skills/setup/Ring notebook only; extra Teacher/SLACS notebook twins deferred.
 
-
 ## board-one-click-update
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/504
 - issued: 2026-10-08
