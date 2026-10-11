@@ -1,3 +1,15 @@
+# Workspace-local starter discovery
+
+Epic: scientist-adoption-pilot
+
+Merged https://github.com/PyAutoLabs/PyAutoBrain/pull/518; issue #517 closed. Adds workspace-local Brain/Mind skill discovery and a minimal local Claude walkthrough. CLI integration verifies an empty Mind seed,40 relative skills,a differently named Scientist and an assistant-free synthetic project. This completes the implementation slice; fresh-session conversational acceptance remains a separate parent checkpoint.
+
+Validation:30 discovery/installer tests,strict docs,independent CLEAN review at4db12a8. Exact-head Actions38158537089 (Python3.12/3.13) and38158537863 (docs) all pass. Merge7ef9e23 contains head4db12a8. Human authorized merge by “continue” following the explicit PR518 approval request.
+
+Evidence archived at tmp/scientist-local-discovery/evidence/. No release obligation or irreplaceable science data.
+
+## Original prompt
+
 # Workspace-local starter skill discovery
 
 Type: feature

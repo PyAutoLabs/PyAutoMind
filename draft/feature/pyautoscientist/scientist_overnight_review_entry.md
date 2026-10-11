@@ -5,7 +5,7 @@ Epic: scientist-adoption-pilot
 Consequence: judge
 Target: PyAutoScientist
 Repos: PyAutoBrain, PyAutoScientist
-Blocked-by: scientist-local-discovery (Brain#518)
+Prerequisite: scientist-local-discovery merged (Brain#518)
 
 ## Original request
 
