@@ -1,6 +1,8 @@
 # Initialize an isolated Scientist configuration
 
 Type: feature
+Issued: 2026-10-11
+Issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/63
 Epic: scientist-adoption-pilot
 Difficulty: medium
 Consequence: judge
