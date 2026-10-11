@@ -120,7 +120,7 @@ Heart presentation can be scoped independently. Broca dropdowns coordinate with 
 
 The human requested Heart test-workspace and Broca communication dropdowns next, before continuing the independent Scientist. `complete/2026/10/organ-resource-dropdowns.md` (Scientist#65) records both destination slices and Scientist deep links merged in Heart#295, Broca#7 and Scientist#66. Brain#518 is merged; independent-starter continuation is now next. Publication/live checks remain recorded separately. Broca broader evidence ingestion and canonical role rollout remain separately recorded.
 
-Dashboard polish merged: `complete/2026/10/broca-resource-categories.md` covers Broca, Hands, Insight and DNA. Publication is tracked separately. `active/scientist_overnight_review_entry.md` now implements the clarified on-demand Scientist review (Brain#519, Scientist#70): retire Brain dashboard polling, reuse Scientist check-in and owner evidence. No second activity ledger.
+Dashboard polish merged: `complete/2026/10/broca-resource-categories.md` covers Broca, Hands, Insight and DNA. Publication is tracked separately. `complete/2026/10/scientist-overnight-review.md` now implements the clarified on-demand Scientist review (Brain#519, Scientist#70): retire Brain dashboard polling, reuse Scientist check-in and owner evidence. No second activity ledger.
 
 ## Starter continuation — 2026-10-11
 
@@ -136,6 +136,6 @@ Nerves' final Markdown icon removal is tracked separately as `complete/2026/10/n
 
 ## Independent local acceptance recorded — 2026-10-11
 
-Mind#502 / PR#503 (`active/scientist_starter_acceptance.md`) verifies local skill provenance for a sampled skill, AI-led synthetic project connection with no assistant/organs, and fresh-conversation recovery without losing records. All 532 fixture files were preserved in the confirmation resume; profile/project validation and rendering passed. This bounded local acceptance supersedes the earlier pending diagnostic for these criteria, while pristine installation/full dev workflow and real collaborator validation remain unproven. The detailed report is `docs/scientist-starter-acceptance.md` in PR#503, awaiting human merge.
+Mind#502 / PR#503 (`complete/2026/10/scientist-starter-acceptance.md`) verifies local skill provenance for a sampled skill, AI-led synthetic project connection with no assistant/organs, and fresh-conversation recovery without losing records. All 532 fixture files were preserved in the confirmation resume; profile/project validation and rendering passed. This bounded local acceptance supersedes the earlier pending diagnostic for these criteria, while pristine installation/full dev workflow and real collaborator validation remain unproven. The detailed report is `docs/scientist-starter-acceptance.md` in merged PR#503.
 
-Next: `scientist_optional_organ_activation.md` — select one useful organ, implement resumable setup with its owner validation, and show it connected only after validation. Then `scientist_record_preserving_upgrades.md`; retain `scientist_collaborator_validation.md` for actual owner choices/access. Reporting PRs Brain#519 and Scientist#70 remain independently awaiting merge.
+Next: `scientist_optional_organ_activation.md` — select one useful organ, implement resumable setup with its owner validation, and show it connected only after validation. Then `scientist_record_preserving_upgrades.md`; retain `scientist_collaborator_validation.md` for actual owner choices/access. Reporting PRs Brain#519 and Scientist#70 are merged.

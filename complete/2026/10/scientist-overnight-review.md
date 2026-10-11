@@ -1,3 +1,15 @@
+# scientist-overnight-review
+
+- issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/69
+- shipped: 2026-10-11
+- epic: scientist-adoption-pilot
+
+Brain no longer polls or aggregates overnight work for its dashboard. Scientist answers interval reviews on demand using dated owner records. No new collector or digest. Exact-head CI passed: Brain 38169300105 (3.12/3.13), Scientist 38169300282. Merge ancestry proven at Brain 3f500327 and Scientist ee1b6f30. Local 85 Brain, 91 Scientist Python, 7 JS tests; independent CLEAN. No release or publication claimed.
+
+Human authorized merge and close-out, then continue on optional-organ setup. Evidence archived under tmp/scientist-overnight-review/.
+
+## Original prompt
+
 # Move overnight review entry to Scientist
 
 Type: feature

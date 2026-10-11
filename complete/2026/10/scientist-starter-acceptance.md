@@ -1,3 +1,15 @@
+# scientist-starter-acceptance
+
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/502
+- shipped: 2026-10-11
+- epic: scientist-adoption-pilot
+
+Local conversational acceptance report merged at 81493dc1; ancestry proven. Three fresh sessions verified sampled local skill provenance, two-file synthetic project connection and saved-state resumption; 532 hashes preserved on confirmation. Owner validation/rendering passed. Exact-head CI38170578151 privacy passed; published-template drift intentionally skipped on PR events (not a test leg). Limits: existing authenticated nested installation, disabled hooks; no full harness/dev/release/real collaborator certification.
+
+Human authorized merge and close-out, then continue on optional-organ setup. Evidence archived under tmp/scientist-starter-acceptance/.
+
+## Original prompt
+
 # Independent Scientist fresh-session acceptance
 
 Type: test
