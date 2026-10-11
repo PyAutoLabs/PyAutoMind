@@ -142,4 +142,10 @@ Next: `scientist_optional_organ_activation.md` — select one useful organ, impl
 
 ## Optional-organ connection boundary — 2026-10-11
 
-Scientist#71 / PR#72 (`complete/2026/10/scientist-organ-connection.md`) implements validated connection preview/apply, failure-preserving retry and unchanged repeats. Independent review CLEAN; 113 Python / 7 JS tests. Full organ provisioning remains later. Live checking discovered Broca lacks the shared published state feed, so `active/broca_published_state_feed.md` is the next explicit prerequisite, ahead of real Broca connection acceptance. Existing reporting and local starter acceptance PRs Brain#519, Scientist#70 and Mind#503 are merged and closed out; Scientist#72 is now merged and closed out.
+Scientist#71 / PR#72 (`complete/2026/10/scientist-organ-connection.md`) implements validated connection preview/apply, failure-preserving retry and unchanged repeats. Independent review CLEAN; 113 Python / 7 JS tests. Full organ provisioning remains later. Live checking discovered Broca lacks the shared published state feed, so `complete/2026/10/broca-state-feed.md` is the next explicit prerequisite, ahead of real Broca connection acceptance. Existing reporting and local starter acceptance PRs Brain#519, Scientist#70 and Mind#503 are merged and closed out; Scientist#72 is now merged and closed out.
+
+## Broca feed live acceptance complete — 2026-10-11
+
+Broca#15 merged and issue#14 closed; `complete/2026/10/broca-state-feed.md` records the result. Pages run 38172715636 built/deployed exact merge 0204cd5. The real HTTPS state.json returns 200 and validates; Scientist successfully connected, retried without changes and rendered it using a new synthetic profile with records preserved. Earlier missing-feed and pending-publication statements above are historical and superseded. Existing red evidence and October 8 collection time remain unchanged.
+
+The published-feed/validated-connection prerequisite is complete. Next: resumable optional-organ provisioning and owner-specific setup validation, then record-preserving upgrades and actual collaborator acceptance. No real collaborator access or full activation workflow is implied.

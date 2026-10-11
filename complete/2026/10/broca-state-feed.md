@@ -1,3 +1,20 @@
+# Broca shared state feed
+
+- issue: https://github.com/PyAutoLabs/PyAutoBroca/issues/14
+- shipped: 2026-10-11
+- epic: scientist-adoption-pilot
+- pr: https://github.com/PyAutoLabs/PyAutoBroca/pull/15
+
+Human /prm authorized merge and full close-out. Head 43d0201c69e438f99f8a0b50081227620bb998d1 merged at 0204cd5ab943d7079667d9def193c92b57b21cf9; ancestry proven. Exact-head CI: Tests push 38172423590 and PR 38172433146 passed; Pages 38172433318 build passed, deployment intentionally skipped on PR (not a test). No pending/failing test legs.
+
+Broca now publishes Brain's shared state contract from saved receipts/records. Explicit canonical publishing identity, configurable URL, assistant-free communication configuration, separate collection/evaluation clocks, conservative same-day outcomes and validity bounded by passing-evaluation deadlines. Guides/workspaces are inventory, not quality results. No source copying, collection, execution or evidence rewrite. Local 34 tests; saved-data check/shared validator and Scientist integration passed. Independent re-review CLEAN after expiry regression fix.
+
+Published successfully by Pages run 38172715636 at the exact merge SHA (build and deploy passed). Real https://pyautolabs.github.io/PyAutoBroca/state.json returned 200 and passed the shared validator. Scientist's actual HTTPS connection helper applied to a new synthetic Mira profile; identical retry was a no-op, collection/rendering succeeded and the research note remained unchanged. No live Scientist user configuration was modified. Status remains red from saved evidence and updated remains 2026-10-08T12:58:48+00:00; deployment did not freshen or clear it.
+
+Evidence archived under tmp/broca-state-feed/, including live-state.json, verify_live.py, live-scientist fixture/HTML and local test/artifact logs. Heart ship gate was STALE only (no current-source rehearsal); no software release claimed. Next epic phase: resumable optional-organ provisioning/owner validation, then record-preserving upgrades and real collaborator acceptance. Connection publication prerequisite is complete.
+
+## Original prompt
+
 # Publish Broca's shared organ state feed
 
 Type: feature

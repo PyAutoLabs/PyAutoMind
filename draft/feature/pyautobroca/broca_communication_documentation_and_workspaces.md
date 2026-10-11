@@ -73,4 +73,10 @@ Scientist phase 1 consumes canonical identities and exposes links only. Broca ex
 
 ## Shared Scientist feed prerequisite — 2026-10-11
 
-Broca#14 / PR#15 (`active/broca_published_state_feed.md`) implements the missing shared state.json feed, alongside the existing HTML artifact, as a bounded part of scientist-adoption-pilot. It reports saved collection/evaluation states and informational guides/workspaces inventory; no new measurement or quality verdict. Empty-assistant instances and independently supplied publishing identity/location are supported. 34 tests and consumer integration pass; independent re-review CLEAN. Live endpoint verification follows human merge and the existing Pages deployment. Broader communication upkeep remains separate.
+Broca#14 / PR#15 (`complete/2026/10/broca-state-feed.md`) implements the missing shared state.json feed, alongside the existing HTML artifact, as a bounded part of scientist-adoption-pilot. It reports saved collection/evaluation states and informational guides/workspaces inventory; no new measurement or quality verdict. Empty-assistant instances and independently supplied publishing identity/location are supported. 34 tests and consumer integration pass; independent re-review CLEAN. Live endpoint verification follows human merge and the existing Pages deployment. Broader communication upkeep remains separate.
+
+## Broca feed live acceptance complete — 2026-10-11
+
+Broca#15 merged and issue#14 closed; `complete/2026/10/broca-state-feed.md` records the result. Pages run 38172715636 built/deployed exact merge 0204cd5. The real HTTPS state.json returns 200 and validates; Scientist successfully connected, retried without changes and rendered it using a new synthetic profile with records preserved. Earlier missing-feed and pending-publication statements above are historical and superseded. Existing red evidence and October 8 collection time remain unchanged.
+
+The published-feed/validated-connection prerequisite is complete. Next: resumable optional-organ provisioning and owner-specific setup validation, then record-preserving upgrades and actual collaborator acceptance. No real collaborator access or full activation workflow is implied.
