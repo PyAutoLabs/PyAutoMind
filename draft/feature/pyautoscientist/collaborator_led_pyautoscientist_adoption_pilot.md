@@ -114,4 +114,4 @@ Heart presentation can be scoped independently. Broca dropdowns coordinate with 
 
 ### Navigation polish — 2026-10-11
 
-`active/scientist_board_navigation.md` (Scientist#59) is an additional bounded member of this epic: organ footer below Scientist cards and Scientist first across other boards. Implementation and independent review complete; seven coordinated PRs await human merge, Brain#515 first. Publication and live-board verification remain after merge.
+`complete/2026/10/scientist-board-navigation.md` (Scientist#59) records the merged navigation polish: organ footer below Scientist cards and Scientist first across other boards. Seven coordinated PRs merged after CI and independent CLEAN review. Cross-board publication/live verification remains in `draft/maintenance/pyautoscientist/publish_scientist_board_navigation.md`, under this same epic.

@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1821 records across 9 buckets.
+1822 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -263,6 +263,7 @@ markers; everything below GENERATED is rebuilt.
 - [retired-repo-sidecars](2026/10/retired-repo-sidecars.md) — Aggregate only repositories in a valid current Heart monitoring roster; preserve all caches, configured advers…
 - [runtime-single-jit-median](2026/10/runtime-single-jit-median.md)
 - [sandbox-citation-agents-md](2026/10/sandbox-citation-agents-md.md)
+- [scientist-board-navigation](2026/10/scientist-board-navigation.md)
 - [scientist-cockpit-overview](2026/10/scientist-cockpit-overview.md)
 - [scientist-project-resources](2026/10/scientist-project-resources.md)
 - [scientist-resource-routing](2026/10/scientist-resource-routing.md)

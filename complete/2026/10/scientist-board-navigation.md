@@ -1,3 +1,25 @@
+# Scientist board navigation
+
+Epic: scientist-adoption-pilot
+
+Merged 2026-10-11 following explicit human `$prm`: canonical Scientist-first footer order plus shared organ footers on Scientist, Broca, Eyes, Insight, Pulse and Ears. Scientist footer sits below dashboard cards. Existing records and evidence preserved. Brain merged first; every claimed feature head is an ancestor of origin/main.
+
+- PyAutoBrain: https://github.com/PyAutoLabs/PyAutoBrain/pull/515
+- PyAutoScientist: https://github.com/PyAutoLabs/PyAutoScientist/pull/60
+- PyAutoBroca: https://github.com/PyAutoLabs/PyAutoBroca/pull/6
+- PyAutoEyes: https://github.com/PyAutoLabs/PyAutoEyes/pull/28
+- PyAutoInsight: https://github.com/PyAutoLabs/PyAutoInsight/pull/25
+- PyAutoPulse: https://github.com/PyAutoLabs/PyAutoPulse/pull/50
+- PyAutoEars: https://github.com/PyAutoLabs/PyAutoEars/pull/29
+
+Validation: 932 Python tests,6 Node,60 cross-consumer footer browser cases and6 Scientist interaction/theme cases plus no-JS, strict Sphinx, required organ checks. Independent review CLEAN. Every exact-head CI test/build/matrix job passed. Broca deploy was intentionally skipped on its PR by the main-only condition; build/tests passed. Heart at ship: STALE solely for absent release rehearsal.
+
+Implementation complete. Publication across all15 boards is not claimed: owning main workflows may deploy automatically; remaining dispatch/live verification is recorded in draft/maintenance/pyautoscientist/publish_scientist_board_navigation.md under the same epic. No package release obligation.
+
+Evidence: tmp/scientist-board-navigation/evidence/ (local, untracked), including merge-ci.json and merge-proof.json.
+
+## Original prompt
+
 # Scientist-first board navigation
 
 Type: feature
