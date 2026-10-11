@@ -55,10 +55,17 @@
 - issued: 2026-10-11
 - prompt: active/scientist_instance_profile.md
 - epic: scientist-adoption-pilot
-- status: workspace-dev
+- status: awaiting-merge
 - tier: judge (human /prm)
 - session: Codex; ongoing epic implementation authorized
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/scientist-instance-profile
 - repos:
   - PyAutoBrain: feature/scientist-instance-profile
   - PyAutoScientist: feature/scientist-instance-profile
+
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/516
+- library-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/62
+- merge-order: Brain#516 before Scientist#62 (shared hero API)
+- validation: 165 Python tests, 7 Node tests, strict docs, responsive browser and cache-isolation checks; independent review CLEAN
+- heart: STALE — release validation incomplete: no rehearsal for current source; no RED/YELLOW reasons
+- evidence: .worktrees/scientist-instance-profile/evidence/
