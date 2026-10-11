@@ -55,13 +55,17 @@
 - issued: 2026-10-11
 - prompt: active/scientist_project_resources.md
 - session: Codex; session ID unavailable
-- status: awaiting-input
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/scientist-project-resources
 - repos:
   - PyAutoScientist: feature/scientist-project-resources
 - authorization: James requested routine autonomous first-phase implementation, validation and PR; judge tier, human /prm merge.
-- next: implement configured project relationships and dashboard cards; remaining adoption and Broca phases are separate draft prompts.
 - validation: 38 Python + 6 Node tests; 6 browser viewport/theme cases and no-JS passed; independent review CLEAN.
 - evidence: /home/jammy/Code/PyAutoLabs/.worktrees/scientist-project-resources/evidence/
-- ship-gate: awaiting live acknowledgement of Heart YELLOW — manifest drift: organism-map blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml. Existing Cortex map stale; upstream projects.yaml overlaps local science changes; left untouched.
-- next: after acknowledgement, commit/push and open the prepared PR; human /prm merge. If no acknowledgement, preserve verified worktree and staged diff.
+
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/56
+- commit: 3010f0b
+- heart-ack:
+  - manifest drift: organism-map blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml
+  - authorization: James explicitly replied “I ackwnoeldge” in this session to the named YELLOW shipping acknowledgement.
+- next: human /prm after GitHub checks pass; then minimal-starter task. Remaining adoption and Broca phases stay draft/unclaimed.

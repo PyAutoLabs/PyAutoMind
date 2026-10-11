@@ -36,3 +36,11 @@ Tier: judge — merge mode: human /prm.
 ## Branch survey and authorization
 
 Scientist main and Mind main clean after fetch; Scientist no open PRs or active claim. Prior Scientist cockpit PR #53 and DNA PR #51 merged. Old DNA worktree left untouched. Branch `feature/scientist-project-resources`; isolated worktree inside workspace `.worktrees/scientist-project-resources`. User explicitly requested routine autonomous implementation through validation and PR; merge not authorized.
+
+## Phase-1 handoff — 2026-10-11
+
+Implemented at `3010f0b` on `feature/scientist-project-resources`; PR https://github.com/PyAutoLabs/PyAutoScientist/pull/56 awaits human merge. Six project cards resolve canonical identities, share resources and support assistant-free projects. Public configuration projection preserves owner records; overall instance portability remains deferred.
+
+Validation: 38 Python tests, 6 Node tests, 6 browser viewport/theme cases plus no-JavaScript passed. Independent review CLEAN. Evidence is in `.worktrees/scientist-project-resources/evidence/`. Heart YELLOW exact reason: `manifest drift: organism-map blocks (generated) — 1 mismatch(es) vs PyAutoMind/repos.yaml`; James explicitly acknowledged it (“I ackwnoeldge”). Separate STALE reason: `release validation incomplete: no rehearsal for current source`. Cortex science changes remain untouched.
+
+Next: human /prm checks and merge; existing dashboard publication then renders the cards. Start the recorded minimal-starter task after inspecting the merged foundation. Optional organs, upgrades and real collaborator validation remain separate drafts; Broca contract/pilot work is separately recorded. No collaborator access or project details assumed.
