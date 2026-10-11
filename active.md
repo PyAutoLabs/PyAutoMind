@@ -55,9 +55,13 @@
 - issued: 2026-10-11
 - prompt: active/scientist_local_discovery.md
 - epic: scientist-adoption-pilot
-- status: workspace-dev
+- status: awaiting-merge
 - tier: judge (human /prm)
 - session: Codex; ongoing epic implementation authorized
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/scientist-local-discovery
 - repos:
   - PyAutoBrain: feature/scientist-local-discovery
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/518
+- validation: 30 discovery/installer tests, strict docs, actual seed/profile/project integration; independent review CLEAN at 4db12a8
+- heart: STALE — release validation incomplete: no rehearsal for current source; no RED/YELLOW reasons
+- evidence: .worktrees/scientist-local-discovery/evidence/

@@ -27,3 +27,7 @@ PRs: Brain#516 then Scientist#62. Both merged and Scientist#61 closed. The next 
 ## Minimal local Mind seed — 2026-10-11
 
 `complete/2026/10/scientist-minimal-mind-seed.md` (Mind#498 closed; PR#499 merged) adds a local Mind-only mode to the existing generator: empty records/body map, no automation or satellite family. Remaining next step: explicitly configure canonical identities and validate one minimal local harness with Scientist + Brain + this seed; connect one synthetic existing project and prove fresh-chat resumption. Optional Memory remains separate and no remote access is assumed.
+
+## Workspace-local discovery — 2026-10-11
+
+`active/scientist_local_discovery.md` (Brain#517) integrates registered Brain/Mind skills at the workspace root for a minimal local Claude pilot, with explicit canonical identities and a synthetic no-assistant project walkthrough. CLI integration verifies generated Mind + 40 local skill links + named Scientist + project validation/rendering. Actual fresh-session conversational acceptance remains required before declaring an adopter harness validated. Optional organ activation, upgrades and hosting remain later tasks.

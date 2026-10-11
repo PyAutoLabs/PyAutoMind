@@ -23,3 +23,9 @@ Tests: missing or ambiguous registrations/sources, collision preflight, protecte
 Survey: Brain main clean, no active Brain claim. Existing unrelated worktrees left untouched. Branch feature/scientist-local-discovery; task .worktrees/scientist-local-discovery. Framework changes Brain only; user instance data stays separate.
 
 Routing refinement: Brain source only; Scientist is the epic domain, not a second source claim.
+
+## Implemented; awaiting merge
+
+PR https://github.com/PyAutoLabs/PyAutoBrain/pull/518 at 4db12a8. 30 discovery/installer tests independently pass; strict docs pass. Actual generated Mind + 40 workspace-local skills + named Scientist + project without assistant validates/renders. Independent review CLEAN after fixing workspace-alias relative links. Fresh Heart STALE only absent current-source rehearsal, no RED/YELLOW. Evidence .worktrees/scientist-local-discovery/evidence/. Human /prm.
+
+No Claude model session invoked. Real fresh-session conversational acceptance remains the next checkpoint in the parent, followed by optional organs and upgrades.
