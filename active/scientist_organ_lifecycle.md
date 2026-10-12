@@ -85,3 +85,23 @@ YELLOW reasons; only `release validation incomplete: no rehearsal for current so
 This permits development, not release. Plan awaits explicit approval.
 
 Approved by user: "I approve", 2026-10-12.
+
+## Implementation handoff — 2026-10-12
+
+PR https://github.com/PyAutoLabs/PyAutoScientist/pull/74 at 13a16de on
+feature/scientist-organ-lifecycle, bundle .worktrees/scientist-organ-lifecycle.
+Optional organ_setup entries and paused connection flags preserve old profiles.
+New lifecycle CLI previews/applies setup/pause/resume; setup promotion and resume
+validate identity/feed and retain atomic write/input-change guards. Pending/paused
+feeds are excluded from server/browser collection and cached evidence; owner jobs
+are unaffected. Available catalogue and setup cards use native disclosures.
+Paused Heart reports UNKNOWN. Existing unprofiled behavior is retained.
+
+126 Python + 7 Node tests PASS; four Chromium layouts plus no-JS PASS (network,
+cache, focus, disclosures, overflow); mobile/desktop screenshots inspected. Three
+offline config checks and author diff review PASS. Evidence: bundle pytest.log,
+node.log, browser-evidence/, lifecycle.html and readiness.json. Heart STALE only
+for missing current-source rehearsal. No independent review claimed.
+
+Next: human /prm. Actual independent deployment and owner execution controls remain
+separate; observation pause requires republishing/reloading the Scientist page.

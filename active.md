@@ -55,9 +55,14 @@
 - issued: 2026-10-12
 - prompt: active/scientist_organ_lifecycle.md
 - session: Codex GPT-6; session ID unavailable
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/scientist-organ-lifecycle
 - repos:
   - PyAutoScientist: feature/scientist-organ-lifecycle
 - tier: judge (human /prm)
 - approval: user "I approve", 2026-10-12
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/74
+- commit: 13a16de
+- validation: 126 Python, 7 Node, four browser layouts and no-JS PASS; three offline config checks PASS
+- heart: STALE — release validation incomplete: no rehearsal for current source
+- next: human /prm when CI passes
