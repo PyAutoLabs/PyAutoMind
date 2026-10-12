@@ -6,7 +6,9 @@ Target: PyAutoBroca
 Difficulty: medium
 Autonomy: supervised
 Consequence: judge
-Status: proposed
+Status: active
+Issued: 2026-10-12
+Issue: https://github.com/PyAutoLabs/PyAutoBroca/issues/18
 
 ## Original request
 
@@ -76,3 +78,5 @@ workflow stays unchanged.
 Branch survey: Broca clean main at f6e04b0; no conflicting active claim or linked
 worktree. Proposed branch `feature/scientist-broca-publication`; task bundle under
 `.worktrees/scientist-broca-publication`. Route start_workspace -> ship_workspace.
+
+Plan approved: "yeah I approve, go" (2026-10-12).
