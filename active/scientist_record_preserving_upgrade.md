@@ -87,3 +87,24 @@ Route start_workspace -> ship_workspace. Heart STALE only for missing current-so
 release rehearsal; no RED or YELLOW reasons. Plan awaits explicit approval.
 
 Plan approved by user: "go", 2026-10-12.
+
+## Implementation handoff — 2026-10-12
+
+PR https://github.com/PyAutoLabs/PyAutoScientist/pull/76 at c7e04e0 on
+feature/scientist-record-preserving-upgrade; task bundle under .worktrees/.
+instance_runtime.py implements preview/apply initialize/upgrade/rollback and a
+check/render launcher selecting exact Scientist/Brain revisions. Only the private
+manifest is intentionally updated; candidate validation is offline, rollback uses
+current configuration, and protected records are checked without restoring old data.
+Pairs must be local clean Git roots. No fetch/pull/reset or environment changes.
+
+142 Python + 7 Node PASS; real owner validator rerun after shallow-CI adaptation
+PASS; project/lifecycle checks and author review PASS. Evidence: bundle pytest.log,
+node.log, real-runtime-test.log and readiness.json. Heart STALE only for absent
+current-source release rehearsal. No independent review claimed.
+
+Boundaries: trusted candidate Python is executed; fingerprints detect drift, not
+sandbox or backup it. Protected paths are explicit, Git metadata excluded, symlinks
+refused. Retain both checkout pairs and a known-good launcher for recovery.
+Next: human /prm, then update programme milestones; hosted and collaborator
+acceptance remain unproven and owner-organ/environment upgrades remain separate.

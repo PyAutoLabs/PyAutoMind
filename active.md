@@ -55,9 +55,14 @@
 - issued: 2026-10-12
 - prompt: active/scientist_record_preserving_upgrade.md
 - session: Codex GPT-6; session ID unavailable
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/scientist-record-preserving-upgrade
 - repos:
   - PyAutoScientist: feature/scientist-record-preserving-upgrade
 - tier: judge (human /prm)
 - approval: user "go", 2026-10-12
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/76
+- commit: c7e04e0
+- validation: 142 Python and 7 Node PASS; real owner validator rerun PASS; project/lifecycle offline checks PASS
+- heart: STALE — release validation incomplete: no rehearsal for current source
+- next: human /prm after CI passes
