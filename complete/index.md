@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1841 records across 9 buckets.
+1842 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -275,6 +275,7 @@ markers; everything below GENERATED is rebuilt.
 - [sandbox-citation-agents-md](2026/10/sandbox-citation-agents-md.md)
 - [scientist-available-resources](2026/10/scientist-available-resources.md)
 - [scientist-board-navigation](2026/10/scientist-board-navigation.md)
+- [scientist-broca-publication](2026/10/scientist-broca-publication.md) — Independent static publication bundle with canonical board work links, owner/feed validation, create-only outp…
 - [scientist-broca-setup](2026/10/scientist-broca-setup.md) — Resumable local Broca setup with explicit canonical identity, preview/apply, create-only files, conflict refus…
 - [scientist-cockpit-overview](2026/10/scientist-cockpit-overview.md)
 - [scientist-instance-profile](2026/10/scientist-instance-profile.md)

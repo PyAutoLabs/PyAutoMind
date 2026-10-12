@@ -162,3 +162,17 @@ publication, pause controls or full activation certification is implied.
 Next: independent organ publication/activation and lifecycle presentation; reuse the
 existing validated HTTPS-feed connection helper. Record-preserving upgrades and
 actual collaborator acceptance remain their separate milestones.
+
+## Independent publication preparation merged — 2026-10-12
+
+`complete/2026/10/scientist-broca-publication.md` records Broca#18 / merged PR#19.
+The publication command prepares only HTML/feed/Pages workflow in a new directory,
+with explicit independent identity and validated owner state. 64 local tests and
+all applicable exact-head CI passed. The workflow validates artifact membership
+and destination identity; deployment remains an explicit adopter action.
+
+No new repository or live independent endpoint was created. A destination means
+the adopter-owned repository serving their public board/feed; PyAutoLabs' existing
+host remains available. Select a real hosted pilot destination when appropriate.
+Next implementation can cover remaining activation/pause/needs-attention
+presentation; record-preserving upgrades and collaborator validation remain separate.

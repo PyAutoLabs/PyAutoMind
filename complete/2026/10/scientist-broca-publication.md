@@ -1,3 +1,15 @@
+## scientist-broca-publication
+- issue: https://github.com/PyAutoLabs/PyAutoBroca/issues/18 (closed)
+- completed: 2026-10-12
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoBroca/pull/19 (MERGED)
+- summary: Independent static publication bundle with canonical board work links, owner/feed validation, create-only output and a minimal repository-bound Pages workflow.
+- validation: 64 tests; owner check (4 assistants/18 records), board/feed render and author review passed. Exact-head push tests, PR tests and dashboard build passed. Deployment correctly skipped for PR event.
+- authorization: user approved plan and continuing through stated Heart RED reasons; separate $prm authorized merge and close-out.
+- scope: local publication preparation only; no actual independent deployment. A destination is the adopter-owned GitHub repository serving their board/feed, not a replacement for the existing PyAutoLabs host. Local private setup files stay outside it.
+- next: choose a real pilot destination when an adopter or synthetic hosted pilot is selected; activation/pause presentation, upgrades and collaborator acceptance remain separate.
+
+## Original prompt
+
 # Independent Broca publication bundle
 
 Type: feature
