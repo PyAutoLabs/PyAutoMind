@@ -866,7 +866,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/scientist_organ_lifecycle.md">Explicit optional-organ setup and pause states</a> — <a href="https://github.com/PyAutoLabs/PyAutoScientist/issues/73">issue #73</a> — issued 2026-10-12 — workspace-dev</summary>
+<details><summary>📋 <a href="active/scientist_organ_lifecycle.md">Explicit optional-organ setup and pause states</a> — <a href="https://github.com/PyAutoLabs/PyAutoScientist/issues/73">issue #73</a> — issued 2026-10-12 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoScientist/pull/74">PyAutoScientist#74</a></summary>
 
 ```
 Use the start-dev skill. active/scientist_organ_lifecycle.md
