@@ -866,7 +866,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/scientist_broca_publication.md">Independent Broca publication bundle</a> — <a href="https://github.com/PyAutoLabs/PyAutoBroca/issues/18">issue #18</a> — issued 2026-10-12 — workspace-dev</summary>
+<details><summary>📋 <a href="active/scientist_broca_publication.md">Independent Broca publication bundle</a> — <a href="https://github.com/PyAutoLabs/PyAutoBroca/issues/18">issue #18</a> — issued 2026-10-12 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBroca/pull/19">PyAutoBroca#19</a></summary>
 
 ```
 Use the start-dev skill. active/scientist_broca_publication.md
