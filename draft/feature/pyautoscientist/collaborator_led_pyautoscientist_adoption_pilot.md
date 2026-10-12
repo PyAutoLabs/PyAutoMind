@@ -176,3 +176,18 @@ the adopter-owned repository serving their public board/feed; PyAutoLabs' existi
 host remains available. Select a real hosted pilot destination when appropriate.
 Next implementation can cover remaining activation/pause/needs-attention
 presentation; record-preserving upgrades and collaborator validation remain separate.
+
+## Observation lifecycle merged — 2026-10-12
+
+`complete/2026/10/scientist-organ-lifecycle.md` records Scientist#73 / merged PR#74.
+Available catalogue, setup-incomplete entries, validated connection promotion and
+pause/resume of Scientist observation are implemented. Pending/paused organs make
+no server/browser feed requests; cached evidence cannot revive them. Owner jobs
+remain untouched. 126 Python, 7 Node and five browser cases passed; exact-head CI
+passed. Profile changes require rendering/publishing and reloading the page.
+
+The previously pending observation-lifecycle implementation is complete. Full live
+independent-organ acceptance is still unproven: select an adopter/synthetic hosting
+destination and exercise publication through connection/resume when appropriate.
+Record-preserving upgrades/recovery and actual collaborator acceptance remain their
+separate programme milestones; no collaborator access or live deployment is implied.

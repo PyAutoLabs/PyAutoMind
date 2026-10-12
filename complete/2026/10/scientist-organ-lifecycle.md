@@ -1,3 +1,15 @@
+## scientist-organ-lifecycle
+- issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/73 (closed)
+- completed: 2026-10-12
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/74 (MERGED)
+- summary: Independent profiles distinguish available, setup-incomplete, connected and paused observation. Setup promotion and resume validate identity/feed before atomic writes; pending/paused entries make no feed requests or revive cache as current.
+- validation: 126 Python, 7 Node, four Chromium layouts plus no-JS passed; three offline configuration checks passed. Exact-head Board tests PR run and its sole test job passed. Workflow push trigger is main-only. Author diff review; no independent review claimed.
+- readiness: Heart STALE — release validation incomplete: no rehearsal for current source. No release claimed.
+- limits: pause only affects Scientist observation, not owner jobs/services; visitors need the updated published page. No independent destination deployed.
+- next: Remaining programme work includes a real independently hosted acceptance run, record-preserving upgrades/recovery and collaborator acceptance. Implementation of observation lifecycle is complete.
+
+## Original prompt
+
 # Explicit optional-organ setup and pause states
 
 Type: feature

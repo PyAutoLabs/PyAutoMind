@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1842 records across 9 buckets.
+1843 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -282,6 +282,7 @@ markers; everything below GENERATED is rebuilt.
 - [scientist-local-discovery](2026/10/scientist-local-discovery.md)
 - [scientist-minimal-mind-seed](2026/10/scientist-minimal-mind-seed.md)
 - [scientist-organ-connection](2026/10/scientist-organ-connection.md)
+- [scientist-organ-lifecycle](2026/10/scientist-organ-lifecycle.md) — Independent profiles distinguish available, setup-incomplete, connected and paused observation. Setup promotio…
 - [scientist-overnight-review](2026/10/scientist-overnight-review.md)
 - [scientist-project-resources](2026/10/scientist-project-resources.md)
 - [scientist-resource-routing](2026/10/scientist-resource-routing.md)
