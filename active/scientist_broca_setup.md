@@ -6,7 +6,9 @@ Target: PyAutoBroca
 Difficulty: medium
 Autonomy: supervised
 Consequence: judge
-Status: proposed
+Status: active
+Issued: 2026-10-12
+Issue: https://github.com/PyAutoLabs/PyAutoBroca/issues/16
 
 ## Original request
 
@@ -34,7 +36,7 @@ No remote creation, publishing, schedules, assistant evaluation, Scientist lifec
 UI, upgrades or collaborator access in this slice. Actual activation remains pending
 until the existing public-feed connection gate succeeds.
 
-## Detailed implementation plan awaiting approval
+## Approved implementation plan
 
 - `broca/setup.py` (new): prepare a deterministic file plan; validate identity using
   the supplied canonical map; implement apply/resume with conflict detection and
