@@ -55,7 +55,7 @@
 - issued: 2026-10-12
 - prompt: active/scientist_broca_publication.md
 - session: Codex GPT-6; session ID unavailable
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/scientist-broca-publication
 - repos:
   - PyAutoBroca: feature/scientist-broca-publication
@@ -66,3 +66,7 @@
   - red reasons: `PyAutoFit: 1 commit(s) behind origin`; `PyAutoGalaxy: 1 commit(s) behind origin`; `PyAutoLens: 1 commit(s) behind origin`
   - branch gates: 64 tests, owner check (4 assistants/18 records), board/feed render and author diff review PASS
   - scope: commit/push/PR; no actual deployment, merge or release
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoBroca/pull/19
+- commit: 3c387cc
+- validation: 64 tests; owner check/render; generated workflow guard executed; author review PASS
+- next: human /prm after CI passes; actual independent deployment still needs a destination

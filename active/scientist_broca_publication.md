@@ -80,3 +80,18 @@ worktree. Proposed branch `feature/scientist-broca-publication`; task bundle und
 `.worktrees/scientist-broca-publication`. Route start_workspace -> ship_workspace.
 
 Plan approved: "yeah I approve, go" (2026-10-12).
+
+## Implementation handoff — 2026-10-12
+
+PR https://github.com/PyAutoLabs/PyAutoBroca/pull/19 opened at 3c387cc on
+feature/scientist-broca-publication, under .worktrees/scientist-broca-publication.
+Publication preview/apply creates exactly HTML/feed/workflow, validates owner state,
+refuses unsafe/existing destinations, and uses explicit canonical board work links.
+Generated workflow validates two-file site membership and publishing identity before
+upload, with default-branch deployment guard. Existing live publishing workflow is
+unchanged. 64 tests pass; owner check (4 assistants/18 records), board/feed render
+and author diff review pass. Logs: task bundle pytest.log and readiness.json.
+Task-specific RED authorization and unchanged reasons recorded in four sinks.
+No independent review claimed; no real destination chosen or deployed.
+Next: human /prm, then select independent deployment destination or continue the
+remaining activation-state work. Upgrade and collaborator milestones stay separate.
