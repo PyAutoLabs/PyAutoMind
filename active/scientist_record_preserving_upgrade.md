@@ -6,7 +6,9 @@ Target: PyAutoScientist
 Difficulty: medium
 Autonomy: supervised
 Consequence: judge
-Status: proposed
+Status: active
+Issued: 2026-10-12
+Issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/75
 
 ## Original request
 
@@ -83,3 +85,5 @@ and already contained in main; leave it untouched. Proposed branch:
 `feature/scientist-record-preserving-upgrade`, bundle under `.worktrees/`.
 Route start_workspace -> ship_workspace. Heart STALE only for missing current-source
 release rehearsal; no RED or YELLOW reasons. Plan awaits explicit approval.
+
+Plan approved by user: "go", 2026-10-12.

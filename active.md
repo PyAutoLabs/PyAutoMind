@@ -49,3 +49,15 @@
   - red reasons: `release validation FAILED (stage integrate)` (+ 8 manifest-drift yellow reasons)
   - branch gates passed: tests 1405 passed / 6 skipped; smoke import of edited cells OK; all lint.yml checks locally; independent Opus review FINDINGS (7) fixed → re-review CLEAN
   - scope: commit / push / PR-open only; merge needs a separate human /prm with all checks green; no release
+
+## scientist-record-preserving-upgrade
+- issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/75
+- issued: 2026-10-12
+- prompt: active/scientist_record_preserving_upgrade.md
+- session: Codex GPT-6; session ID unavailable
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/scientist-record-preserving-upgrade
+- repos:
+  - PyAutoScientist: feature/scientist-record-preserving-upgrade
+- tier: judge (human /prm)
+- approval: user "go", 2026-10-12
