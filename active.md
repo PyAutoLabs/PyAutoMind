@@ -55,9 +55,14 @@
 - issued: 2026-10-12
 - prompt: active/scientist_broca_setup.md
 - session: Codex GPT-6; session ID unavailable
-- status: workspace-dev
+- status: awaiting-input
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/scientist-broca-setup
 - repos:
   - PyAutoBroca: feature/scientist-broca-setup
 - tier: judge (human /prm)
 - approval: user approved detailed plan on 2026-10-12 ("ok conitnue")
+- checkpoint: implementation complete; Heart RED blocks Broca commit/push/PR pending live task-specific override
+- validation: 49 tests passed; existing owner check (4 assistants, 18 records) and board/feed render passed; author diff review passed
+- evidence: .worktrees/scientist-broca-setup/pytest.log; readiness.json; pr-body.md
+- red-reasons: PyAutoFit: 1 commit(s) behind origin; PyAutoGalaxy: 1 commit(s) behind origin; PyAutoLens: 1 commit(s) behind origin
+- next: obtain development-only RED override for Broca#16, record all four sinks, commit/push/open PR; human merge remains separate

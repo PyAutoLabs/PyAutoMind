@@ -54,3 +54,20 @@ until the existing public-feed connection gate succeeds.
 Route: start_workspace -> ship_workspace. Proposed branch:
 `feature/scientist-broca-setup`. One implementation PR in Broca; human /prm.
 Heart door on 2026-10-12: STALE (exit 1), planning permitted; ship gate remains due.
+
+## Implementation handoff — 2026-10-12
+
+Implementation is complete in `.worktrees/scientist-broca-setup/PyAutoBroca`,
+branch `feature/scientist-broca-setup`, based on 0204cd5; changes remain uncommitted
+because the refreshed Heart verdict is RED. New setup command validates identity,
+previews/applies empty data, resumes interruptions without replacing files, and
+writes a private fresh-chat handoff. Four initial files; no fabricated receipt or
+resource inventory. Existing Scientist connection remains unchanged.
+
+49 tests pass; owner check validates 4 assistants/18 records; saved board and feed
+render successfully. Author review and diff check pass; no independent review
+claimed. Logs and drafted PR body are in the task bundle parent (`pytest.log`,
+`readiness.json`, `pr-body.md`). Exact RED reasons are recorded in active.md.
+Next: live task-specific development override, four-sink recording, commit/push/PR.
+No merge or publication authority. After merge, continue optional-organ publication
+and lifecycle scope, then upgrades and collaborator acceptance.
