@@ -49,3 +49,15 @@
   - red reasons: `release validation FAILED (stage integrate)` (+ 8 manifest-drift yellow reasons)
   - branch gates passed: tests 1405 passed / 6 skipped; smoke import of edited cells OK; all lint.yml checks locally; independent Opus review FINDINGS (7) fixed → re-review CLEAN
   - scope: commit / push / PR-open only; merge needs a separate human /prm with all checks green; no release
+
+## scientist-organ-lifecycle
+- issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/73
+- issued: 2026-10-12
+- prompt: active/scientist_organ_lifecycle.md
+- session: Codex GPT-6; session ID unavailable
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/scientist-organ-lifecycle
+- repos:
+  - PyAutoScientist: feature/scientist-organ-lifecycle
+- tier: judge (human /prm)
+- approval: user "I approve", 2026-10-12

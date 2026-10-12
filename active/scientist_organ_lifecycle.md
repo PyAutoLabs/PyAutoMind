@@ -6,7 +6,9 @@ Target: PyAutoScientist
 Difficulty: medium
 Autonomy: supervised
 Consequence: judge
-Status: proposed
+Status: active
+Issued: 2026-10-12
+Issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/73
 
 ## Original request
 
@@ -81,3 +83,5 @@ Three clean canonical library checkouts were fast-forwarded to resolve Heart's
 behind-origin reasons. Refreshed Heart at 2026-10-12T14:30:53Z: STALE, no RED or
 YELLOW reasons; only `release validation incomplete: no rehearsal for current source`.
 This permits development, not release. Plan awaits explicit approval.
+
+Approved by user: "I approve", 2026-10-12.
