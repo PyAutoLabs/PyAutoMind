@@ -71,3 +71,12 @@ claimed. Logs and drafted PR body are in the task bundle parent (`pytest.log`,
 Next: live task-specific development override, four-sink recording, commit/push/PR.
 No merge or publication authority. After merge, continue optional-organ publication
 and lifecycle scope, then upgrades and collaborator acceptance.
+
+## PR opened — 2026-10-12
+
+User authorized the task-specific development override: "I authroize, go".
+Recorded in issue comment, PR body, active.md and autonomy_log.md.
+Commit 04660f4 pushed; PR https://github.com/PyAutoLabs/PyAutoBroca/pull/17 is open.
+Earlier uncommitted/awaiting-override statements are superseded. Validation remains
+49 tests plus existing owner check/render PASS. Next: human /prm with required
+checks green; no merge or release authority carried by this development override.
