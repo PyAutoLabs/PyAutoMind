@@ -61,3 +61,8 @@
   - PyAutoBroca: feature/scientist-broca-publication
 - tier: judge (human /prm)
 - approval: "yeah I approve, go"; plan approved 2026-10-12
+- heart-red-override:
+  - authorization: user "conitnue" after named next-task RED request; then "yeah I approve, go" on the concrete plan, 2026-10-12; development through PR-open only
+  - red reasons: `PyAutoFit: 1 commit(s) behind origin`; `PyAutoGalaxy: 1 commit(s) behind origin`; `PyAutoLens: 1 commit(s) behind origin`
+  - branch gates: 64 tests, owner check (4 assistants/18 records), board/feed render and author diff review PASS
+  - scope: commit/push/PR; no actual deployment, merge or release
