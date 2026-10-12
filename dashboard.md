@@ -866,7 +866,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/scientist_record_preserving_upgrade.md">Pin, upgrade and recover an independent Scientist runtime</a> — <a href="https://github.com/PyAutoLabs/PyAutoScientist/issues/75">issue #75</a> — issued 2026-10-12 — workspace-dev</summary>
+<details><summary>📋 <a href="active/scientist_record_preserving_upgrade.md">Pin, upgrade and recover an independent Scientist runtime</a> — <a href="https://github.com/PyAutoLabs/PyAutoScientist/issues/75">issue #75</a> — issued 2026-10-12 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoScientist/pull/76">PyAutoScientist#76</a></summary>
 
 ```
 Use the start-dev skill. active/scientist_record_preserving_upgrade.md
