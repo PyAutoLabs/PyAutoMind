@@ -1,3 +1,17 @@
+## scientist-broca-setup
+- issue: https://github.com/PyAutoLabs/PyAutoBroca/issues/16 (closed)
+- completed: 2026-10-12
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoBroca/pull/17 (MERGED)
+- merge: f6e04b04f567fc227087dc375b27ad2271dc80bb
+- summary: Resumable local Broca setup with explicit canonical identity, preview/apply, create-only files, conflict refusal, owner validation and private fresh-chat handoff.
+- validation: 49 local tests; existing owner check (4 assistants, 18 records); board/feed render; author diff review. Exact-head CI: push tests, PR tests and PR dashboard build passed; deploy intentionally skipped for PR event.
+- authorization: user approved plan, then development-only Heart RED override; separate $prm authorized merge and close-out.
+- Heart RED reasons at ship: PyAutoFit: 1 commit(s) behind origin; PyAutoGalaxy: 1 commit(s) behind origin; PyAutoLens: 1 commit(s) behind origin. This task does not repair Heart.
+- limits: local setup only; publication, activation state controls, upgrades and real collaborator acceptance remain separate. Reuse Scientist's existing HTTPS-feed connection boundary.
+- next: continue optional-organ publication/activation scope, then record-preserving upgrades and collaborator pilot.
+
+## Original prompt
+
 # Resumable local Broca setup for an independent Scientist
 
 Type: feature

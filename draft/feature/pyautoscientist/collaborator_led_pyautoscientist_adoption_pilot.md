@@ -149,3 +149,16 @@ Scientist#71 / PR#72 (`complete/2026/10/scientist-organ-connection.md`) implemen
 Broca#15 merged and issue#14 closed; `complete/2026/10/broca-state-feed.md` records the result. Pages run 38172715636 built/deployed exact merge 0204cd5. The real HTTPS state.json returns 200 and validates; Scientist successfully connected, retried without changes and rendered it using a new synthetic profile with records preserved. Earlier missing-feed and pending-publication statements above are historical and superseded. Existing red evidence and October 8 collection time remain unchanged.
 
 The published-feed/validated-connection prerequisite is complete. Next: resumable optional-organ provisioning and owner-specific setup validation, then record-preserving upgrades and actual collaborator acceptance. No real collaborator access or full activation workflow is implied.
+
+## Resumable local Broca setup merged — 2026-10-12
+
+`complete/2026/10/scientist-broca-setup.md` records Broca#16 / merged PR#17.
+A differently named instance can preview/apply empty local Broca data, resume
+interrupted file creation, refuse conflicting files and validate its owner feed.
+49 tests and all applicable exact-head CI passed. Local setup retains unknown
+evidence honestly and provides a private fresh-chat handoff. No remote provisioning,
+publication, pause controls or full activation certification is implied.
+
+Next: independent organ publication/activation and lifecycle presentation; reuse the
+existing validated HTTPS-feed connection helper. Record-preserving upgrades and
+actual collaborator acceptance remain their separate milestones.
