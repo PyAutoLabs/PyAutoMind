@@ -90,7 +90,7 @@ James authorized implementation of the first coherent phase, with routine decisi
 - `complete/2026/10/scientist-project-resources.md` — phase 1 merged in PyAutoScientist#56; remaining phases stay unclaimed.
 - `scientist_minimal_starter.md` — planned follow-up; remains unissued and unclaimed.
 - `scientist_optional_organ_activation.md` — planned follow-up; remains unissued and unclaimed.
-- `scientist_record_preserving_upgrades.md` — planned follow-up; remains unissued and unclaimed.
+- `complete/2026/10/scientist-record-preserving-upgrades.md` — minimal runtime upgrade milestone completed in Scientist PR#76.
 - `scientist_collaborator_validation.md` — planned follow-up; remains unissued and unclaimed.
 
 Scientist phase 1 consumes canonical identities and exposes links only. Broca expanded communication ownership is agreed intent; inventory/evidence migration is deferred to its contract and pilot tasks. Shared multi-contributor operation remains later.
@@ -129,7 +129,7 @@ Dashboard polish merged: `complete/2026/10/broca-resource-categories.md` covers 
 Sequence from here:
 1. Discovery merged in Scientist#68. Local-discovery Brain#518 merged; complete a fresh-session starter handoff acceptance run.
 2. Prove resumable activation and evidence validation for one optional organ (`scientist_optional_organ_activation.md`), including incomplete versus stale/absent evidence.
-3. Record framework versions and demonstrate an upgrade/rollback preserving configuration and user records (`scientist_record_preserving_upgrades.md`).
+3. Record framework versions and demonstrate an upgrade/rollback preserving configuration and user records (`complete/2026/10/scientist-record-preserving-upgrades.md`).
 4. Run the collaborator acceptance task once their project/access choices are supplied; retain independent ownership. Shared multi-contributor operation stays later.
 
 Nerves' final Markdown icon removal is tracked separately as `complete/2026/10/nerves-markdown-link.md`, PR#201. No unrelated package release is dispatched by these development tasks.
@@ -138,7 +138,7 @@ Nerves' final Markdown icon removal is tracked separately as `complete/2026/10/n
 
 Mind#502 / PR#503 (`complete/2026/10/scientist-starter-acceptance.md`) verifies local skill provenance for a sampled skill, AI-led synthetic project connection with no assistant/organs, and fresh-conversation recovery without losing records. All 532 fixture files were preserved in the confirmation resume; profile/project validation and rendering passed. This bounded local acceptance supersedes the earlier pending diagnostic for these criteria, while pristine installation/full dev workflow and real collaborator validation remain unproven. The detailed report is `docs/scientist-starter-acceptance.md` in merged PR#503.
 
-Next: `scientist_optional_organ_activation.md` — select one useful organ, implement resumable setup with its owner validation, and show it connected only after validation. Then `scientist_record_preserving_upgrades.md`; retain `scientist_collaborator_validation.md` for actual owner choices/access. Reporting PRs Brain#519 and Scientist#70 are merged.
+Next: `scientist_optional_organ_activation.md` — select one useful organ, implement resumable setup with its owner validation, and show it connected only after validation. Then `complete/2026/10/scientist-record-preserving-upgrades.md`; retain `scientist_collaborator_validation.md` for actual owner choices/access. Reporting PRs Brain#519 and Scientist#70 are merged.
 
 ## Optional-organ connection boundary — 2026-10-11
 
@@ -191,3 +191,20 @@ independent-organ acceptance is still unproven: select an adopter/synthetic host
 destination and exercise publication through connection/resume when appropriate.
 Record-preserving upgrades/recovery and actual collaborator acceptance remain their
 separate programme milestones; no collaborator access or live deployment is implied.
+
+## Minimal runtime upgrade/recovery merged — 2026-10-12
+
+`complete/2026/10/scientist-record-preserving-upgrade.md` records Scientist#75 /
+merged PR#76. Private exact-revision Scientist/Brain selection, preview/apply
+upgrade, current-record rollback and a selected-pair launcher are implemented.
+142 Python and 7 Node tests passed, including real owner-validator recovery;
+all applicable exact-head CI passed. Declared protected records survived the
+successful synthetic upgrade/recovery. Fingerprints detect drift, not sandbox
+trusted candidate code or replace backups.
+
+This completes the minimal framework upgrade milestone and retires its next-step
+draft; earlier statements that it is pending are superseded. Environment/package
+and owner-organ upgrades are outside this slice. Remaining programme acceptance:
+independently hosted activation through connection/resume and a real collaborator's
+useful workflow/fresh-chat recovery once project, access and visibility choices
+are supplied. Neither live deployment nor collaborator acceptance is implied.

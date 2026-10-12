@@ -1,3 +1,20 @@
+# Shipped: record-preserving Scientist runtime upgrades
+
+Completed: 2026-10-12
+Issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/75
+PR: https://github.com/PyAutoLabs/PyAutoScientist/pull/76 (MERGED)
+Merge: 9eb3bafd672ed313be8da9548db87bf707625c56
+
+Implemented private exact-revision Scientist/Brain runtime selection with preview/apply initialization, upgrade and rollback, plus a check/render launcher. Validates prepared clean local checkout pairs against existing configuration offline; retains one previous pair and verifies declared protected records. Rollback uses current records, never replaces them with old copies. Includes the starter-linked upgrade/recovery guide.
+
+Validation: 142 Python and 7 Node tests passed, including synthetic preservation/failure cases and real owner-validator upgrade/recovery. Exact-head GitHub Board tests run 38268112457 and its tests job passed; GitHub reported clean mergeability. Feature head c7e04e0c9932e82797d7548f323d61d8d53301d5 is an ancestor of origin/main. Heart at ship was STALE solely for missing current-source release rehearsal; no readiness rerun at merge.
+
+Limits: trusted candidate Python executes; fingerprints detect drift and are not a sandbox or backup. Protection is limited to declared paths. Retained checkout pairs and launcher are needed for recovery. This covers the minimal Scientist + Brain runtime, not environment/package or owner-organ upgrades, arbitrary schema downgrades, hosted rollout, or real collaborator acceptance. Those acceptance milestones remain separate. No independent review claimed.
+
+Local test logs and readiness evidence retained under tmp/scientist-record-preserving-upgrade/.
+
+## Original prompt
+
 # Pin, upgrade and recover an independent Scientist runtime
 
 Type: feature
