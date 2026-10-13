@@ -15,8 +15,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/81
 - issued: 2026-10-13
 - session: Codex
-- status: workspace-dev
+- status: workspace-shipped awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/cockpit-overflow-fix
-- next: Restore reference cockpit overflow behavior; validate and ship.
+- next: Human /prm for Scientist PR #82, then publish prepared PyAutoEmbryo artifacts; CI in progress at handoff.
 - repos:
   - PyAutoScientist: feature/cockpit-overflow-fix
