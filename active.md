@@ -10,3 +10,13 @@
 - next: Review and merge #418; independently validated witness implementation, coefficient tolerances and production collection remain separate pending work.
 - repos:
   - autolens_profiling: feature/hst-mge-pilot-qualification
+
+## starter-organ-navigation
+- issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/77
+- issued: 2026-10-13
+- session: Codex; session ID unavailable
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/starter-organ-navigation
+- next: Implement approved instance navigation; validate and open PR. Judge tier, human merge.
+- repos:
+  - PyAutoScientist: feature/starter-organ-navigation

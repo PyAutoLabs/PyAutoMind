@@ -1,5 +1,7 @@
 # Starter organ navigation
 
+Issued: 2026-10-13
+Issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/77
 Difficulty: medium
 Consequence: judge
 
@@ -19,4 +21,4 @@ Regenerate empty and connected PyAutoEmbryo static demos and tester download aft
 - Reuse Brain registry/icon conventions and existing cockpit navigation appearance; preserve normal Scientist rendering without an instance.
 - Focused tests under tests/: available/setup/connected/paused routing, exact content parity, escaping and no inactive network requests.
 - Browser checks: empty and example-connected profiles, desktop/mobile, keyboard, copy prompts, deep links and Back/Forward. Connected-board tests use local synthetic targets.
-- Plan/worktree approval still pending. Tier judge; source merge by human /prm. No science or collection.
+- Plan approved by human; isolated worktree created. Tier judge; source merge by human /prm. No science or collection.
