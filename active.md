@@ -13,4 +13,4 @@
 - tier: judge (human /prm)
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/414
 - workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/51
-- note: Independent review CLEAN at project 05c5c49 / Pulse a76a769; project CI passed (1424 tests, 6 skipped). Pulse review-receipt update needs fresh checks. Await explicit judge-tier merge command. No production measurements or baseline changes. Broader compile-builder campaign remains active in Pulse.
+- note: Independent review CLEAN at project 05c5c49 / Pulse a76a769; project CI passed (1424 tests, 6 skipped). Pulse final head 185e97b has both jobs green. Await explicit judge-tier merge command. No production measurements or baseline changes. Broader compile-builder campaign remains active in Pulse.
