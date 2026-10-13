@@ -1,8 +1,9 @@
 # Scientist Live Feed
+Issued: 2026-10-13
+Issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/83
 Difficulty: medium
 Consequence: judge
-Status: blocked
-Blocked-by: approval of implementation scope and collection cadence
+Status: approved
 
 Target: @PyAutoScientist only for first implementation; MyScientist adoption later.
 
@@ -45,3 +46,6 @@ PyAutoScientist main is clean; origin/main contains PR82 but local main needs fa
 
 ## Planning gate
 Read-only Heart entry: STALE (release STALE; monitoring RED); entry helper exit1 permits planning. No ship readiness claimed. Implementation-plan approval must settle the reduced first-version coverage and five-minute collector before create-issue/start-workspace. Design preferences already approved above remain approved.
+
+## Implementation approval
+2026-10-13: User approved the presented development-activity scope, five-minute collection and human /prm merge mode with “yeah do it”. Earlier design choices remain approved.
