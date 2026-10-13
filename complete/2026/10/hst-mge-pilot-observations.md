@@ -1,3 +1,19 @@
+# HST/MGE raw pilot measurement tooling shipped
+
+Completed 2026-10-13 following explicit human `/prm` authorization.
+
+- Project PR: https://github.com/PyAutoLabs/autolens_profiling/pull/416 — merged as e4266a1355a860d2274a82722858349cd3521e46.
+- Pulse PR: https://github.com/PyAutoLabs/PyAutoPulse/pull/55 — merged afterwards as 35b52bb7b9c918249de48d0c85236b5296f112d0.
+- Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/415.
+
+Shipped the opt-in fixed-parameter HST/MGE CPU observation runner, isolated cold/seed/warm/runtime processes, separate unrounded phase timings, target-specific persistent-cache evidence, actual-context and clean-source provenance checks, resource caps and partial-failure receipts. Pulse records the bounded implementation and synthetic development validation.
+
+Validation: initial full suite 1452 passed / 6 skipped; final targeted suite 32 passed; Pulse 206 tests passed. Synthetic development fixture completed four distinct workers with matched seed/warm keys and ten runtime samples. Independent review CLEAN. Every CI run and job at the merged heads passed: project lint, Pulse lint and dashboard refresh. Both claimed branch tips are ancestors of origin/main.
+
+No inference or production profiling ran. Observations remain scientifically unaccepted. Independent correctness witness and reviewed tolerances, full resolved solver settings, exact production host/stack/data identity, background-load methodology and explicit collection approval remain pending in the canonical Pulse task: https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/hst_mge_cpu_pilot.md. This closes only the approved raw-runner implementation; it does not close the scientific campaign or authorize collection, baseline promotion or release.
+
+## Original prompt
+
 # HST/MGE pilot observations: bounded project-owned producer
 
 Filed: 2026-10-13
