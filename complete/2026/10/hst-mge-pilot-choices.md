@@ -1,3 +1,34 @@
+# HST/MGE Pulse collection choices prepared
+
+Completed: 2026-10-13
+Issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/58
+PR: https://github.com/PyAutoLabs/PyAutoPulse/pull/59
+Merge: e47c0f727a53c9aa40af6e68b647071cca062256
+
+Shipped the Pulse collection-choice document, linked the existing pilot task,
+updated its campaign/next step and regenerated the board. Candidate FITS files
+match pinned project e4266a13; hashes, primary-header dimensions and plan-only
+resource bounds were verified. Only two canonical next fields changed; the
+all-campaign check-in, measurement timestamps and snapshots remain unchanged.
+
+Validation: 206 Pulse tests, ruff lint/format and offline board checks passed.
+Independent Sol review CLEAN at a4ea984364752e930fccc49d063fab2cbe8a8253,
+with basis-cited dispositions for input identity, builder declarations, guarded
+plan-only behavior, resource arithmetic, cache/load caveats and preserved state.
+Both exact-head workflow runs (lint, Dashboard Refresh) and every job passed.
+Human $prm authorized this merge and close-out; branch ancestry verified.
+
+No compute, witness execution, scientific tolerance/data/hardware decision,
+baseline/default change, campaign freeze or acceptance. The separately owned
+correctness audit autolens_profiling#417/#418 was not edited or merged here.
+Data origin/suitability, production host/stack/full settings, load method and
+independent witness/tolerances remain explicit choices before collection.
+Heart at ship was STALE: release validation incomplete: no rehearsal for current source.
+
+Canonical artifact: https://github.com/PyAutoLabs/PyAutoPulse/blob/e47c0f727a53c9aa40af6e68b647071cca062256/tasks/hst_mge_cpu_pilot_choices.md
+
+## Original prompt
+
 # HST/MGE pilot: prepare Pulse collection choices
 
 Issued: 2026-10-13
