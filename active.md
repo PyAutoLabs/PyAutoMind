@@ -10,3 +10,13 @@
 - next: Review and merge #418; independently validated witness implementation, coefficient tolerances and production collection remain separate pending work.
 - repos:
   - autolens_profiling: feature/hst-mge-pilot-qualification
+
+## starter-cockpit-shell
+- issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/79
+- issued: 2026-10-13
+- session: Codex; session ID unavailable
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/starter-cockpit-shell
+- next: Implement approved cockpit shell and validate; judge tier, human /prm.
+- repos:
+  - PyAutoScientist: feature/starter-cockpit-shell

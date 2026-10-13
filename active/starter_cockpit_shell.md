@@ -1,5 +1,7 @@
 # Match the independent starter to the cockpit shell
 
+Issued: 2026-10-13
+Issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/79
 Difficulty: medium
 Consequence: judge
 
@@ -24,4 +26,4 @@ Add focused coverage in tests/test_instance_navigation.py and tests/navigation_b
 
 Survey: Scientist main is clean at 921d4ef; no active claim. Old unregistered DNA worktree remains untouched. Proposed branch feature/starter-cockpit-shell; proposed worktree .worktrees/starter-cockpit-shell. Live demo: https://pyautolabs.github.io/PyAutoEmbryo/ (publication clone in organs/PyAutoMind/tmp/pyautoembryo-tryout-2026-10-13/PyAutoEmbryo-pages).
 
-Plan approval pending. No source edits yet.
+Plan approved in this session; isolated worktree created.
