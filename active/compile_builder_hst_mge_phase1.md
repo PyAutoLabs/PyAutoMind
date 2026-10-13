@@ -100,3 +100,29 @@ Current autolens_profiling main has only untracked dataset/abell_1201/; preserve
 - Broader builder coverage, gradient/batched paths, output-reader capability work
   and production experiment/baseline choices remain domain work in Pulse. End at
   review handoff; no background follow-up scheduled.
+
+
+## Verified CI and independent review — 2026-10-13
+
+- Project exact-head CI passed at `05c5c49`: 1,424 tests / 6 skipped plus browser,
+  links, smoke, catalogue and generated artifacts. Source:
+  https://github.com/PyAutoLabs/autolens_profiling/actions/runs/38426218793
+- Pulse original head `685e1b8` passed lint and dashboard refresh:
+  https://github.com/PyAutoLabs/PyAutoPulse/actions/runs/38426360330 and
+  https://github.com/PyAutoLabs/PyAutoPulse/actions/runs/38426360116.
+  Later ledger commits record these facts and the independent review; their
+  current-head checks must be judged before merge.
+- Independent reviewer `/root/compile_builder_review` returned CLEAN at project
+  `05c5c49a514db1c3dc2b92d1126cf39d7f4cd68a` and Pulse
+  `a76a7690eeb0e627eb944a602f7d5f9ec1360f09`. Verified 40 focused tests, the real
+  tiny-FITS -> workload -> AOT -> provenance -> output path on CPU within 60s,
+  24 unchanged registry/baseline/historical files, and empty Brain compile dispatch.
+  Temporary verification files removed. No source defects or unresolved findings.
+- Claim dispositions: shared runtime construction, current likelihood/pytree
+  semantics, fail-before-setup guards, output isolation, unchanged historical
+  evidence, disabled global dispatch and unqualified cache warmth are basis-cited
+  to the reviewed implementation and verification. ReviewSurface had no lifted
+  commit-message claims. No production measurements or timing improvement claimed.
+- User said "continue"; review and CI verification completed. Previous explicit
+  merge approval named #410, #411, #412 and Pulse #48, not this new judge-tier pair.
+  Await merge command for #414 then Pulse #51; no background follow-up.
