@@ -15,8 +15,9 @@
 - issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/83
 - issued: 2026-10-13
 - session: Codex
-- status: workspace-dev
+- status: workspace-shipped awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/scientist-live-feed
-- next: Implement approved grouped public development feed; validate and ship, human /prm.
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/84
+- next: Human /prm; source CI in progress. After merge publish Scientist Dashboard and verify activity coverage; no MyScientist rollout.
 - repos:
   - PyAutoScientist: feature/scientist-live-feed

@@ -49,3 +49,16 @@ Read-only Heart entry: STALE (release STALE; monitoring RED); entry helper exit1
 
 ## Implementation approval
 2026-10-13: User approved the presented development-activity scope, five-minute collection and human /prm merge mode with “yeah do it”. Earlier design choices remain approved.
+
+## Shipping handoff — 2026-10-13
+PR: https://github.com/PyAutoLabs/PyAutoScientist/pull/84
+Head: c1eeff1a3926ecc122587950e04ed065827566b7
+Issue: PyAutoScientist#83. Branch feature/scientist-live-feed; clean pushed worktree .worktrees/scientist-live-feed/PyAutoScientist. Canonical Scientist only; MyScientist/Embryo unchanged. Five grouped rows, expanding task history, Show more, stable reading buffer and same-origin minute polling implemented.
+
+Collector supports 50 registered repo identities, verifies current public visibility from owner catalogs, normalizes issue/comment/PR records without exporting raw comments, groups explicit same-repository closing references only, and bounds collection at 120 seconds plus request limits (PAT180/default-token60). Source gaps are explicit. Live initial multi-repo pilot found busy-source budget exhaustion; fixed by retaining partial verified events and reusing normalized PR revisions, without advancing incomplete source cursors. Source catalog pagination cap and issue/comment cap remain explicit coverage limitations. Scientific run progress is outside this PR.
+
+Validation: 162 full Python tests before final mapping regression; 49 final targeted collector/renderer/instance tests (including added regression); 7 existing JS tests; six real-browser viewport/theme cases plus no-JS snapshot; workflow YAML, JS syntax and diff checks. Read-only PyAutoScientist API pilot: 37 tasks, complete source coverage, 37 calls. This is not full-organism production validation. Source CI Board tests run38468322699 in progress at handoff; no CI waiter.
+
+Evidence: tmp/scientist-live-feed/{python-tests.log,final-targeted-tests.log,node-tests.log,heart-readiness.json,pilot-feed.json,pilot-cache.json,preview.html,preview-feed.png,browser/}. Preview uses only the Scientist repository pilot. Heart readiness STALE solely `release validation incomplete: no rehearsal for current source`, no red/yellow reasons; ordinary development ship permitted. No production profiling or science executed.
+
+After human /prm: judge every source CI leg, merge, dispatch Scientist organism_board.yml on main (approved five-minute publication feature), verify its artifact-cache branch and Pages activity.json. Initial backfill may span multiple collections and must show honest gaps. Verify live canonical section placement and no instance rollout, then close issue/lifecycle, regenerate Mind dashboard, remove worktree. No source merge, schedule activation or live publication occurred during implementation.
