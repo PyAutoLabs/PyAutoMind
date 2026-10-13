@@ -1,4 +1,20 @@
 # Pulse Live Feed coverage and collection fairness
+
+Shipped all three approved Pulse steps in PyAutoScientist PR #86: https://github.com/PyAutoLabs/PyAutoScientist/pull/86
+Issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/85
+Merged 2026-10-13 at 36ee0ca553b621fe62f157c6b746f3c4fd21d70c; head 1196bee29d1df25b3f45943a3077b219cc7d1526. Every task branch commit is contained in origin/main.
+
+Added a 12-request per-repository allowance so busy sources yield, explicit profiling repository routes to Pulse, and pinned public Pulse campaign/task collection. Meaningful updates are deduplicated and grouped by campaign; unchanged check-ins do not create events. Live validation found 12 campaign rows. Run evidence requires actual measurement dates and explicit campaign/run association. The inspected snapshot contains 100 undated measurements and 12 dated measurements without explicit association; these remain coverage gaps, not invented feed events. Existing five-minute collection delivery remains best effort.
+
+Validation: Python suite 171 passed before two final regressions; final collector/adapter suite 25 passed; JavaScript suite 7 passed; six browser viewport/theme cases plus no-JS passed. Read-only pinned adapter returned 12 campaigns; integrated production CLI returned 26 Pulse-labelled rows including those campaigns. CI Board tests run 38471290462 and its tests job passed for the exact head. Heart was STALE solely for missing current-source rehearsal, with no red/yellow reasons.
+
+Publication dispatched on merged main: https://github.com/PyAutoLabs/PyAutoScientist/actions/runs/38471616619 . Publication and live verification receipt: tmp/pulse-live-feed/publication.json. Test, browser and collection evidence: tmp/pulse-live-feed/.
+
+Pulse and project repositories remained read-only; MyScientist was unchanged. No inference, production profiling, scientific acceptance or new science collection was performed.
+
+## Original prompt
+
+# Pulse Live Feed coverage and collection fairness
 Issued: 2026-10-13
 Issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/85
 Difficulty: medium
