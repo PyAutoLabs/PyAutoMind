@@ -1,5 +1,6 @@
 # HST/MGE pilot observations: bounded project-owned producer
 
+Filed: 2026-10-13
 Type: feature
 Consequence: judge
 Target: @autolens_profiling
