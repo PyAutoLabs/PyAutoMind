@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 17 |
-| [In flight](#in-flight) | 1 |
+| [In flight](#in-flight) | 2 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 254 |
+| [Backlog](#backlog) | 253 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -857,6 +857,14 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 </details>
 
 ## In flight
+
+<details><summary>📋 <a href="active/hst_mge_pilot_qualification.md">HST/MGE pilot: independent correctness qualification design</a> — issued 2026-10-13</summary>
+
+```
+Use the start-dev skill. active/hst_mge_pilot_qualification.md
+```
+
+</details>
 
 <details><summary>📋 <a href="active/pulse_checkin_2026_10_13_evening.md">Persist the evening profiling check-in</a> — issued 2026-10-13</summary>
 
@@ -1824,7 +1832,7 @@ Use the start-dev skill. draft/feature/autoarray/adapt_linear_default_flip.md
 </details>
 
 <details>
-<summary><b>research</b> — 31</summary>
+<summary><b>research</b> — 30</summary>
 
 <details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon</a> — autofit · large · human-required · high</summary>
 
@@ -2062,14 +2070,6 @@ Use the start-dev skill. draft/research/autofit/search_extensibility_epic_survey
 
 ```
 Use the start-dev skill. draft/research/autofit/search_extensibility_epic_surveys/04_inference_profiling_infra.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/hst_mge_pilot_qualification.md">HST/MGE pilot: independent correctness qualification design</a> — autolens_profiling</summary>
-
-```
-Use the start-dev skill. draft/research/autolens_profiling/hst_mge_pilot_qualification.md
 ```
 
 </details>
@@ -2583,7 +2583,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | Date | Event | Task |
 |------|-------|------|
 | 2026-10-13 | issued | <a href="active/pulse_checkin_2026_10_13_evening.md">Persist the evening profiling check-in</a> |
-| 2026-10-13 | filed | <a href="draft/research/autolens_profiling/hst_mge_pilot_qualification.md">HST/MGE pilot: independent correctness qualification design</a> |
+| 2026-10-13 | issued | <a href="active/hst_mge_pilot_qualification.md">HST/MGE pilot: independent correctness qualification design</a> |
 | 2026-10-09 | filed | <a href="draft/bug/pyautobrain/profiling_compile_drift_point_vs_point.md">Profiling conductor compile drift compares one point against one point</a> |
 | 2026-10-08 | filed | <a href="draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md"><code>JAX_ENABLE_X64=False</code> is overridden to True, so the fp32 inference…</a> |
 | 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
@@ -2690,7 +2690,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-86 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+85 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2735,7 +2735,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/health_fixes/samples_parameter_paths.md`
 - `draft/bug/priors/12_single_source_density_refactor.md`
 - `draft/bug/priors/13_collapse_prior_and_message.md`
-- _… and 46 more_
+- _… and 45 more_
 
 </details>
 
