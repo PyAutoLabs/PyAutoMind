@@ -15,8 +15,9 @@
 - issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/79
 - issued: 2026-10-13
 - session: Codex; session ID unavailable
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/80
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/starter-cockpit-shell
-- next: Implement approved cockpit shell and validate; judge tier, human /prm.
+- next: Human /prm #80, then publish prepared PyAutoEmbryo Pages files. Evidence and publication-candidate.json: organs/PyAutoMind/tmp/starter-cockpit-shell/.
 - repos:
   - PyAutoScientist: feature/starter-cockpit-shell

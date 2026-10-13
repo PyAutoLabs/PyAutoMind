@@ -27,3 +27,15 @@ Add focused coverage in tests/test_instance_navigation.py and tests/navigation_b
 Survey: Scientist main is clean at 921d4ef; no active claim. Old unregistered DNA worktree remains untouched. Proposed branch feature/starter-cockpit-shell; proposed worktree .worktrees/starter-cockpit-shell. Live demo: https://pyautolabs.github.io/PyAutoEmbryo/ (publication clone in organs/PyAutoMind/tmp/pyautoembryo-tryout-2026-10-13/PyAutoEmbryo-pages).
 
 Plan approved in this session; isolated worktree created.
+
+## Implementation handoff — 2026-10-13
+
+- Source PR https://github.com/PyAutoLabs/PyAutoScientist/pull/80, commit `08fdf425edcebb3bb0007760d9c2cbadbd3d7073`.
+- Worktree `.worktrees/starter-cockpit-shell/PyAutoScientist`, branch `feature/starter-cockpit-shell`, clean.
+- Instance shell now has configured repository identity / Cockpit, grey disabled IDLE, horizontal icon scrollbar, board toolbar with Reload / New tab, fixed shell and independently scrolling content. Existing prompts and inactive/paused isolation retained; ordinary Scientist rendering unchanged.
+- 148 Python tests, 7 JavaScript checks, 30 browser cases passed; final focused renderer checks 26 passed. Browser covers five widths/light-dark, visible native scrollbars, real popup destinations, local/connected reload, history/focus/clipboard and no-JS external-link fallback.
+- All logs, screenshots and generated artifacts: `organs/PyAutoMind/tmp/starter-cockpit-shell/`. No independent review claimed.
+- Heart STALE solely `release validation incomplete: no rehearsal for current source`; development shipping allowed, no release-readiness claim.
+- CI in progress when judged. Judge tier requires human /prm before merge.
+- `pages-candidate/` contains updated index/connected/empty pages, README, tester ZIP. `publication-candidate.json` holds hashes/source pin/destination. Not yet published.
+- Next: merge #80 when exact-head CI is green; publish prepared files to PyAutoLabs/PyAutoEmbryo using the existing user-authorized static-only exception, then verify live header, scrollbar, toolbar and ZIP. No science or activation.
