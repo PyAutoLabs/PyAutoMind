@@ -134,8 +134,27 @@ project lint, focused tests, full applicable suite and generated-artifact checks
 Affected source repo: autolens_profiling only. Survey: main with pre-existing
 untracked dataset/abell_1201/ (preserve); no active claim for this repo. Proposed
 branch: feature/hst-mge-pilot-observations, isolated task worktree under .worktrees.
-Pulse is currently claimed by its preparation PR #54; update campaign handoff
-only after that task closes or coordinated claim ownership is recorded.
+Pulse preparation #54 merged and closed 2026-10-13; this task now owns the
+companion Pulse handoff claim.
 
 Tier: judge — merge mode: human /prm. Stop at reviewed implementation PR; no
 production compute, freeze, scientific acceptance or inference is authorized.
+
+
+## Implementation validation — 2026-10-13
+
+Project PR: https://github.com/PyAutoLabs/autolens_profiling/pull/416
+Producer code reviewed CLEAN at b5b8160; generated-only follow-up 7571123.
+Full suite on initial implementation: 1452 passed / 6 skipped; final provenance
+fix: 32 focused tests passed. Small local CPU synthetic 11x11 image / 3x3 PSF,
+fp64, one repetition, 60-second per-worker cap completed four distinct processes
+(cold, seed, matching warm hit, runtime) on b5b8160. Ten raw runtime samples;
+accepted false. No scientific correctness witness or performance claim.
+Ruff, generated checks, browser and smoke passed. Heart STALE only for absent
+release rehearsal, permitting development publication. Pulse: 206 tests and
+offline board check passed. CI/merge remain pending.
+
+Known qualification gaps remain with Pulse: independent witness/tolerances,
+resolved solver-default audit, production host/environment lock/data identity,
+background-load method and explicit collection authorization. No inference,
+production profile, baseline freeze or default/pin change occurred.
