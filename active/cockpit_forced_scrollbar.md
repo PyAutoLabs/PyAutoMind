@@ -1,4 +1,6 @@
 # Remove forced cockpit scrollbar
+Issued: 2026-10-13
+Issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/81
 Difficulty: small
 Consequence: judge
 
