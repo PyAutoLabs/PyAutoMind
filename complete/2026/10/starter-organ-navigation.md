@@ -1,3 +1,20 @@
+## starter-organ-navigation
+- issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/77
+- completed: 2026-10-13
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/78
+
+Added persistent cockpit-style organ navigation to independent Scientist profiles. Scientist opens the overview; configured organs open their boards; inactive and setup-incomplete organs reuse the exact existing Dashboards description/setup or resume prompt, with a copy button. Inactive organs request no feeds; paused observations stay paused.
+
+Source merged as `921d4efac3891f54fd0c1ee9fd80f1608a4b5cc0` after every CI run/job for head `ba97db9881d784ecf01fe8ac974f73a1e34b63a9` passed (one pull_request run, one successful job, no skipped steps). Human /prm authorized merge and close-out.
+
+Published the tested pages and refreshed tester ZIP to https://pyautolabs.github.io/PyAutoEmbryo/ at deployment commit `51bf2e36327ca5694715bb056999d47e540c5646`. HTTP 200 and exact artifact hashes verified for connected/empty pages and ZIP; live desktop/mobile navigation and clipboard checks passed. Existing user-approved static-only publication exception applies; no scientific run or software release.
+
+Validation: 146 Python tests; 7 JavaScript checks; 30 local browser cases across five widths/light-dark, plus no-JS fallback. Live 390/1440px checks passed. Evidence and reproducible publication hashes remain under `organs/PyAutoMind/tmp/starter-organ-navigation/`, outside the removed worktree. Heart at shipping was STALE solely for missing current-source release rehearsal; development shipping permitted.
+
+No remaining work for this navigation change. Independent collaborator acceptance of the starter remains a separate programme step. External boards that prohibit embedding retain an open-in-new-tab link.
+
+## Original prompt
+
 # Starter organ navigation
 
 Issued: 2026-10-13
