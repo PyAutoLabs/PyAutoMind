@@ -59,3 +59,15 @@ approval remain a later human decision. Pulse retains campaign state; this phase
 does not duplicate its campaign or interfere with a concurrent Pulse check-in.
 
 Tier: judge — merge mode: human /prm.
+
+## Shipped design handoff — 2026-10-13
+
+- PR: https://github.com/PyAutoLabs/autolens_profiling/pull/418, head `3d6f83f73b84d81ed708129b09a97b4c873e5d3c`; CI in progress at publication.
+- Worktree: `.worktrees/hst-mge-pilot-qualification/autolens_profiling`, branch `feature/hst-mge-pilot-qualification`.
+- Added `scripts/misc/jax_compile/QUALIFICATION.md` and linked it from `PILOT.md`; no executable, default, measurement or generated timing metadata changes.
+- Audit established the non-negative, diagonally stabilized solve versus the reported unregularized Gaussian data likelihood; documented raw/polished PDIP semantics and independent operator/augmented NNLS design.
+- Recorded `PYAUTO_SMALL_DATASETS` actual-count/provenance limitation as a future guard requirement; no runner fix included.
+- Proposed explicit scalar/image error budgets for review; coefficient tolerances and reference KKT accuracy remain unresolved. No scientific thresholds were accepted and no numerical witness ran.
+- Validation passed: ruff (288 files), README/catalogue with Pulse contract reader/wiki/dashboard checks, 23 pinned-source and local-link checks, and existing MGE import-only smoke. Link/smoke/readiness logs: `tmp/hst-mge-qualification-links.log`, `tmp/hst-mge-qualification-smoke.log`, `tmp/hst-mge-qualification-ship-readiness.json`.
+- Heart readiness STALE only: `release validation incomplete: no rehearsal for current source`; development publication permitted. No release, inference or production profiling.
+- Next: human `/prm`, then separately plan the correctness-owning regression harness and project adapter with explicit synthetic execution caps. Pulse retains production host/stack/data/load/resource/collection choices and scientific acceptance.
