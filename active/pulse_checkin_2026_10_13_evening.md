@@ -1,5 +1,7 @@
 # Persist the evening profiling check-in
 
+Issued: 2026-10-13
+Issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/56
 Type: docs
 Target: PyAutoPulse
 Repos: @PyAutoPulse
