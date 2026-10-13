@@ -12,7 +12,7 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 1 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 253 |
+| [Backlog](#backlog) | 254 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -982,7 +982,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>bug</b> — 72</summary>
+<summary><b>bug</b> — 73</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -1540,6 +1540,14 @@ Use the start-dev skill. draft/bug/pyautoheart/release_integrate_analyze_path_fi
 
 ```
 Use the start-dev skill. draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautoscientist/cockpit_forced_scrollbar.md">Remove forced cockpit scrollbar</a> — pyautoscientist · small</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautoscientist/cockpit_forced_scrollbar.md
 ```
 
 </details>
@@ -2682,7 +2690,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-85 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+86 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2727,7 +2735,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/health_fixes/samples_parameter_paths.md`
 - `draft/bug/priors/12_single_source_density_refactor.md`
 - `draft/bug/priors/13_collapse_prior_and_message.md`
-- _… and 45 more_
+- _… and 46 more_
 
 </details>
 
