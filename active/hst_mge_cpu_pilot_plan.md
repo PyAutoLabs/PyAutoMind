@@ -1,5 +1,7 @@
 # Prepare the HST/MGE CPU pilot contract
 
+Issued: 2026-10-13
+Issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/53
 Type: docs
 Consequence: judge
 Target: @PyAutoPulse
