@@ -4,7 +4,9 @@ Filed: 2026-10-13
 Type: feature
 Consequence: judge
 Target: @autolens_profiling
-Status: draft; detailed implementation plan and review still required
+Issued: 2026-10-13
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/415
+Status: approved implementation
 
 ## Original request
 
