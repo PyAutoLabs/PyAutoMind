@@ -60,3 +60,80 @@ Exact producer/spec/report design; reference node and memory; immutable stack an
 lock; input/configuration hashes; independent witness/tolerances; load method;
 collection window and resource approval. Proposed budget is in Pulse, not an
 execution grant. Return to Pulse after shipping; do not close the scientific task.
+
+## Detailed implementation proposal — 2026-10-13
+
+Pending human approval of the raw-pilot scope. No source edits yet.
+
+Brain feature decision recommends phasing (large, scientific ambiguity). First
+ship the raw observation runner below. Keep scientific witness generation,
+full-campaign baseline integration and production collection as explicit later
+work in Pulse. This is fixed-parameter likelihood profiling, never inference.
+
+### Phase 1: raw observation runner
+
+1. Add `scripts/misc/jax_compile/pilot.py` as the opt-in CLI/orchestrator and
+   `pilot_worker.py` as the child-process implementation. Reuse `current.py`'s
+   HST/fp64 workload builder without changing the existing probe's output format.
+   Validate all inputs before process creation: exact supported objective, dataset
+   files, CPU affinity, x64, process/repetition caps and a new isolated output
+   directory. No shell command interpolation, automatic simulation or submission.
+2. A new run directory owns raw records, stdout/stderr, isolated caches and a
+   manifest. Refuse overwrite and path/symlink escape. Default command is a
+   read-only plan; execution requires an explicit run option. Expose the complete
+   process count and upper time budget in the plan. Enforce per-process timeout,
+   total process budget, sequential execution and fail-stop behavior; retain
+   partial receipts after worker failure. Kill/reap the child process group on
+   timeout or cancellation. No retries and no silent backend fallback.
+3. Cold, seed and warm workers start fresh interpreters with explicit effective
+   CPU/x64/thread/cache settings and fixed affinity before scientific imports.
+   Cold caches must be empty. A seed and its warm worker share a dedicated cache;
+   unrelated pairs do not. Record a seed-to-warm link and compare actual workload,
+   source, software, flags and input hashes; mismatch blocks warm interpretation.
+4. Worker records separate setup, trace-plus-lower, AOT compile, first synchronized
+   execution and process wall time. A separate runtime worker performs three
+   untimed warmups then ten individually synchronized calls. Preserve full raw
+   floating seconds, all output synchronization and actual counts. Do not retain
+   just a rounded mean. Fixed parameters only: no sampler, search or optimization.
+5. Capture JAX persistent-cache diagnostic events during the target executable's
+   compile interval, including the module/key and original diagnostic text. Scope
+   positive hits to that executable and the matching seed. Unknown diagnostics,
+   helper-compilation hits, file counts or faster timing never imply a warm hit.
+   An unsupported installed-JAX evidence format stays unknown with a reason.
+6. Extend run-level provenance in the new envelope: actual host/CPU/OS, RAM,
+   affinity, threads, JAX devices, package versions, clean/dirty Git identities,
+   input/config/source hashes and effective cache settings. Report sampled load
+   averages honestly as raw host observations, never as background load excluding
+   this campaign. Missing independent correctness or validated background-load
+   methodology must be explicit blockers, not inferred from clean CI.
+7. Raw record schema: `profiling-pilot-observation`, version 1, objective identity,
+   observed-at UTC, run/worker/seed IDs, outcome, raw metrics, provenance, cache
+   evidence and qualification blockers. Always `accepted: false`; no
+   `baseline-observation` or `origin: fresh-campaign` claims. A stdlib summary
+   reports median/range/IQR for each like-for-like series, failures and incomplete
+   legs. Refuse incompatible grouping. It neither imports historical rows nor
+   emits baseline qualification, significance or performance-drift verdicts.
+8. Add `scripts/misc/jax_compile/PILOT.md` documenting methods, CLI, failure
+   semantics, incompatibility with legacy posterior pins and all outstanding
+   collection decisions. Link from the compile README. Do not edit catalogue
+   routes, main baseline manifest/readiness, existing measurements or pins.
+
+### Validation and ship
+
+Add `scripts/misc/test/test_jax_compile_pilot.py` with fake workers for orchestration
+and real short subprocess fixtures for process isolation, timeout/reaping, stopped
+partial runs, caps, non-overwrite and mismatch detection. Test cache-event
+qualification against hit/miss/helper/ambiguous fixtures and raw sample collection
+against a deterministic clock/synchronization spy. One tiny synthetic HST-style
+CPU fixture may exercise builder/AOT/provenance within an explicit development
+cap; it is not a production run or independent scientific witness. Use existing
+project lint, focused tests, full applicable suite and generated-artifact checks.
+
+Affected source repo: autolens_profiling only. Survey: main with pre-existing
+untracked dataset/abell_1201/ (preserve); no active claim for this repo. Proposed
+branch: feature/hst-mge-pilot-observations, isolated task worktree under .worktrees.
+Pulse is currently claimed by its preparation PR #54; update campaign handoff
+only after that task closes or coordinated claim ownership is recorded.
+
+Tier: judge — merge mode: human /prm. Stop at reviewed implementation PR; no
+production compute, freeze, scientific acceptance or inference is authorized.
