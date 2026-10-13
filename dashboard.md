@@ -858,7 +858,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/compile_builder_hst_mge_phase1.md">Compile builder phase 1: explicit HST/MGE likelihood construction</a> — issued 2026-10-13</summary>
+<details><summary>📋 <a href="active/compile_builder_hst_mge_phase1.md">Compile builder phase 1: explicit HST/MGE likelihood construction</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/413">issue #413</a> — issued 2026-10-13 — workspace-dev</summary>
 
 ```
 Use the start-dev skill. active/compile_builder_hst_mge_phase1.md
