@@ -1,3 +1,51 @@
+## compile-builder-hst-mge
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/413
+- completed: 2026-10-13
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/414
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/51
+- summary: Shipped one explicit, isolated HST/MGE fp64 jit current-runtime compile workload; broader profiling campaign remains active in Pulse.
+
+## Merged scope
+
+Project #414 merged at `b8b3b23cd1f0aabc2d7d4ce1cd297f7420b14f76`; Pulse #51 at
+`4544365e9b28f837c7331438c8058e9cf275e62a`. All three exact-head jobs passed,
+both branches were proven contained in origin/main, and the human authorized
+merge in this conversation after the explicit two-PR merge question.
+
+Shared dataset/model/analysis construction preserves the runtime cell's model
+and timing boundary. The new imaging-mge-runtime-v1 likelihood/pytree objective
+is explicitly different from the retired flat-vector posterior. It rejects
+unsupported cells, transforms and precision and requires isolated new output.
+Historical results/pins and baseline files are unchanged; global routing remains
+unavailable. Cache file counts remain an unqualified heuristic.
+
+## Verification
+
+Project CI: 1,424 tests passed, 6 skipped; browser, links, smoke, inventory,
+formatting and generated contract checks passed. Pulse final lint and refresh
+jobs passed at `185e97b`. Independent review CLEAN at project `05c5c49` and Pulse
+`a76a769`: 40 focused tests, bounded tiny-FITS CPU end-to-end verification, and
+24 byte-identical baseline/registry/historical files. Temporary verification
+artifacts were removed. Heart was STALE only for missing current-source release
+rehearsal, allowed for development; no release or override was involved.
+
+## Decisions and remaining domain work
+
+The registry's exact hash is pinned by the baseline draft. A text-only reason
+edit initially invalidated that guard, so the registry was restored rather than
+re-freezing the baseline; partial support is documented in the instrument/wiki.
+No production measurement, GPU/RAL submission, pin promotion, scientific
+acceptance or performance conclusion occurred.
+
+Pulse owns the remaining domain work at
+https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/jax_compile_probe_needs_own_cell_builder.md:
+broader cell/transform support, coordinated per-cell routing/evidence identity,
+and a separately authorized production experiment or baseline plan. This record
+completes only the bounded implementation; no new Mind draft duplicates the
+Pulse queue. No background follow-up was scheduled.
+
+## Original prompt
+
 # Compile builder phase 1: explicit HST/MGE likelihood construction
 
 Type: maintenance
