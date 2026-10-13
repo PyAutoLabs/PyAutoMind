@@ -40,3 +40,22 @@ No profiling or witness execution, hardware allocation, freeze, acceptance,
 baseline/default changes or new experiment direction. No project code edits.
 Full profiling operating instructions are retained in the preceding completion
 record complete/2026/10/pulse-checkin-2026-10-13-evening.md.
+
+## Autonomous ship handoff — 2026-10-13
+
+PR: https://github.com/PyAutoLabs/PyAutoPulse/pull/59
+Commit: a4ea984364752e930fccc49d063fab2cbe8a8253.
+Added the Pulse collection-choice document and linked the existing pilot task;
+only two canonical next fields change. Check-in and measurement clocks unchanged.
+Validation: 206 tests, ruff lint/format, offline board validation passed.
+Smoke n/a: organ documentation only, no downstream API/script surface.
+Independent Sol review CLEAN at this commit: verified pinned FITS bytes/hashes,
+headers and model declarations; independently guarded plan-only invocation;
+resource arithmetic, cache/load caveats, link resolution and byte-identical board
+reproduction. Every load-bearing document claim has a cited basis; the review
+surface lifted no commit-message claims. Explicit --repo used because --task
+resolved no diff in the custom .worktrees location.
+Heart STALE: release validation incomplete: no rehearsal for current source.
+Autonomous gate passed; judge tier stops at PR-open for human /prm. No scientific
+choice, compute, witness execution, collection approval or defaults changed.
+The separate correctness audit #417 remains with its own session (now PR #418).

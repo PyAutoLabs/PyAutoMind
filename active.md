@@ -15,8 +15,9 @@
 - issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/58
 - issued: 2026-10-13
 - session: Codex; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/hst-mge-pilot-choices
-- next: Prepare Pulse collection choices under --auto; independent review and PR, no compute or freeze.
+- library-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/59
+- next: Human review/merge of Pulse #59; 206 tests, independent CLEAN, Heart STALE. Review collection choices alongside project #417/#418; no compute/freeze authorized.
 - repos:
   - PyAutoPulse: feature/hst-mge-pilot-choices
