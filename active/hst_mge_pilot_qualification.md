@@ -4,7 +4,10 @@ Filed: 2026-10-13
 Type: research
 Consequence: judge
 Target: @autolens_profiling
-Status: draft; awaiting approval of the bounded plan
+Status: approved; research documentation in progress
+Issued: 2026-10-13
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/417
+Approval: human "I approve, go", 2026-10-13
 
 ## Original request
 
