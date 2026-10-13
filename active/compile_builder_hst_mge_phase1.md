@@ -11,8 +11,10 @@ Difficulty: medium
 Autonomy: supervised
 Consequence: judge
 Priority: high
-Status: draft
+Status: active
 Filed: 2026-10-13
+Issued: 2026-10-13
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/413
 Pulse task: https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/jax_compile_probe_needs_own_cell_builder.md
 Witness: The supported HST/MGE fp64 jit setup is built without importing an executing benchmark; its objective agrees with the shared current runtime-cell objective on a small deterministic test fixture, all unsupported combinations fail before measurement, and a new record cannot enter legacy pin comparisons. Existing pins/results remain unchanged.
 
@@ -66,3 +68,7 @@ Extend cell/transform/precision coverage only after reviewing each model/data co
 ## Planning checkpoint
 
 Current autolens_profiling main has only untracked dataset/abell_1201/; preserve it and implement in an isolated worktree. Mind active.md is empty after timing-audit close-out. Proposed branch feature/compile-builder-hst-mge. Source edits await explicit plan approval under workspace AGENTS.md. No issue or worktree claimed yet.
+
+## Approval and execution
+
+2026-10-13: human approved this bounded implementation plan ("yeah go"). No compute collection authorized. Worktree `.worktrees/compile-builder-hst-mge`, branch `feature/compile-builder-hst-mge`.
