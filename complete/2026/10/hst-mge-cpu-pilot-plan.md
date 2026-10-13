@@ -1,3 +1,18 @@
+# HST/MGE CPU pilot preparation
+
+Merged PyAutoPulse#54 after all CI jobs passed. Issue PyAutoPulse#53 closed.
+
+Added the draft pilot contract, proposed separate compilation/runtime methods,
+resource ceilings and unresolved freeze choices. Updated the campaign and parent
+task, regenerated Pulse board; 206 tests, ruff and offline check passed.
+
+Preparation only: no compute, freeze, baseline/default changes or scientific
+acceptance. Producer implementation remains in the separate Mind draft
+`draft/feature/autolens_profiling/hst_mge_pilot_observations.md` and the scientific
+work remains in Pulse `tasks/hst_mge_cpu_pilot.md`.
+
+## Original prompt
+
 # Prepare the HST/MGE CPU pilot contract
 
 Issued: 2026-10-13

@@ -12,7 +12,7 @@ Status: draft; detailed implementation plan and review still required
 
 Context: prepare the HST/MGE fp64 CPU pilot and identify bounded instrumentation
 work. This prompt records the implementation follow-up, not compute permission.
-Canonical intent: [Pulse pilot](https://github.com/PyAutoLabs/PyAutoPulse/blob/feature/hst-mge-cpu-pilot-plan/tasks/hst_mge_cpu_pilot.md).
+Canonical intent: [Pulse pilot](https://github.com/PyAutoLabs/PyAutoPulse/blob/71c93fc285a081ffb1f0f506694c043a15ad4e22/tasks/hst_mge_cpu_pilot.md).
 Preparation issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/53.
 
 ## Scope to plan through start-dev
@@ -63,7 +63,7 @@ execution grant. Return to Pulse after shipping; do not close the scientific tas
 
 ## Detailed implementation proposal — 2026-10-13
 
-Pending human approval of the raw-pilot scope. No source edits yet.
+Raw-pilot scope approved by the human on 2026-10-13 ("ok continue"). No production compute authorized.
 
 Brain feature decision recommends phasing (large, scientific ambiguity). First
 ship the raw observation runner below. Keep scientific witness generation,
