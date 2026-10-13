@@ -4,6 +4,7 @@ Type: maintenance
 Target: autolens_profiling
 Repos:
 - autolens_profiling
+- PyAutoPulse
 Themes:
 - profiling
 - compile
@@ -11,7 +12,7 @@ Difficulty: medium
 Autonomy: supervised
 Consequence: judge
 Priority: high
-Status: active
+Status: awaiting-merge
 Filed: 2026-10-13
 Issued: 2026-10-13
 Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/413
@@ -72,3 +73,30 @@ Current autolens_profiling main has only untracked dataset/abell_1201/; preserve
 ## Approval and execution
 
 2026-10-13: human approved this bounded implementation plan ("yeah go"). No compute collection authorized. Worktree `.worktrees/compile-builder-hst-mge`, branch `feature/compile-builder-hst-mge`.
+
+
+## Review handoff — 2026-10-13
+
+- Implementation PR: https://github.com/PyAutoLabs/autolens_profiling/pull/414
+  (`05c5c49a514db1c3dc2b92d1126cf39d7f4cd68a`).
+- Pulse ledger PR: https://github.com/PyAutoLabs/PyAutoPulse/pull/51
+  (`685e1b8`). Both remain open; judge tier requires human merge direction.
+- Shared runtime construction, explicit imaging-mge-runtime-v1 identity, pytree
+  input, isolated outputs, and separated compile/execution costs implemented.
+  Legacy consumers fail closed. No production dataset was profiled; no pins,
+  baseline or scientific acceptance changed.
+- Local validation: 19 targeted tests (including tiny CPU compiled/eager parity),
+  full suite 1,378 passed / 6 skipped plus 45 baseline-only failures all passing
+  on rerun after restoring the registry. Pulse 206 tests passed; lint, format,
+  smoke, catalogue/Pulse contracts, generated boards, wiki/README, results layout,
+  timing inventory and wall-submit checks passed. GitHub lint jobs pending.
+- Plan refinement from verification: preserve the route registry byte-for-byte
+  because baseline/campaign.json pins its hash. Partial support is documented in
+  the probe README and campaign journal instead of re-freezing that inventory.
+- Brain compile conductor still produces no dispatch. Heart at the canonical
+  root is STALE solely for "release validation incomplete: no rehearsal for
+  current source", permitted for development. An initial task-root manifest
+  warning was resolved by evaluating the canonical workspace; no waiver used.
+- Broader builder coverage, gradient/batched paths, output-reader capability work
+  and production experiment/baseline choices remain domain work in Pulse. End at
+  review handoff; no background follow-up scheduled.
