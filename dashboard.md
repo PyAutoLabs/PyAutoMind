@@ -10,15 +10,15 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 17 |
-| [In flight](#in-flight) | 0 |
+| [In flight](#in-flight) | 1 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 254 |
+| [Backlog](#backlog) | 253 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 20
+**Highest priority** (filed as `high`) — showing 12 of 19
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -76,14 +76,6 @@ Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_su
 
 </details>
 
-<details><summary>📋 <a href="draft/maintenance/autolens_profiling/compile_builder_hst_mge_phase1.md">Compile builder phase 1: explicit HST/MGE likelihood construction</a> — autolens_profiling · medium · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/maintenance/autolens_profiling/compile_builder_hst_mge_phase1.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> — organs · medium · supervised · high</summary>
 
 ```
@@ -112,6 +104,14 @@ Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speedin
 
 ```
 Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon</a> — autofit · large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md
 ```
 
 </details>
@@ -858,7 +858,13 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-- _(nothing in flight)_
+<details><summary>📋 <a href="active/compile_builder_hst_mge_phase1.md">Compile builder phase 1: explicit HST/MGE likelihood construction</a> — issued 2026-10-13</summary>
+
+```
+Use the start-dev skill. active/compile_builder_hst_mge_phase1.md
+```
+
+</details>
 
 ## Planned
 
@@ -2063,15 +2069,7 @@ Use the start-dev skill. draft/research/autofit/search_extensibility_epic_survey
 </details>
 
 <details>
-<summary><b>maintenance</b> — 22</summary>
-
-<details><summary>📋 <a href="draft/maintenance/autolens_profiling/compile_builder_hst_mge_phase1.md">Compile builder phase 1: explicit HST/MGE likelihood construction</a> — autolens_profiling · medium · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/maintenance/autolens_profiling/compile_builder_hst_mge_phase1.md
-```
-
-</details>
+<summary><b>maintenance</b> — 21</summary>
 
 <details><summary>📋 <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> — organs · medium · supervised · high</summary>
 
@@ -2576,7 +2574,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-13 | filed | <a href="draft/maintenance/autolens_profiling/compile_builder_hst_mge_phase1.md">Compile builder phase 1: explicit HST/MGE likelihood construction</a> |
+| 2026-10-13 | issued | <a href="active/compile_builder_hst_mge_phase1.md">Compile builder phase 1: explicit HST/MGE likelihood construction</a> |
 | 2026-10-09 | filed | <a href="draft/bug/pyautobrain/profiling_compile_drift_point_vs_point.md">Profiling conductor compile drift compares one point against one point</a> |
 | 2026-10-08 | filed | <a href="draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md"><code>JAX_ENABLE_X64=False</code> is overridden to True, so the fp32 inference…</a> |
 | 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
@@ -2733,7 +2731,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-71 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+70 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2800,7 +2798,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/docs/autofit/howtofit_chapter_3_prose_references.md — unknown theme keyword(s): autofit`
 - `draft/docs/howtofit/tutorial_4_runtime_claim.md — unknown theme keyword(s): tutorials`
 - `draft/test/pyautoheart/euclid_pipeline_release_blocking_gate.md — unknown theme keyword(s): euclid`
-- `draft/maintenance/autolens_profiling/compile_builder_hst_mge_phase1.md — unknown theme keyword(s): compile`
 - `draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md — unknown theme keyword(s): euclid, docs`
 - `draft/maintenance/howtofit/minimum_library_version_stale.md — unknown theme keyword(s): version-handshake, tutorials`
 - `draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md — unknown theme keyword(s): jax-grad`
