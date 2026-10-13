@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1856 records across 9 buckets.
+1857 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -285,6 +285,7 @@ markers; everything below GENERATED is rebuilt.
 - [scientist-broca-setup](2026/10/scientist-broca-setup.md) — Resumable local Broca setup with explicit canonical identity, preview/apply, create-only files, conflict refus…
 - [scientist-cockpit-overview](2026/10/scientist-cockpit-overview.md)
 - [scientist-instance-profile](2026/10/scientist-instance-profile.md)
+- [scientist-live-feed](2026/10/scientist-live-feed.md)
 - [scientist-local-discovery](2026/10/scientist-local-discovery.md)
 - [scientist-minimal-mind-seed](2026/10/scientist-minimal-mind-seed.md)
 - [scientist-organ-connection](2026/10/scientist-organ-connection.md)

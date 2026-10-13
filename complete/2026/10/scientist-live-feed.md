@@ -1,3 +1,15 @@
+# Scientist grouped Live Feed
+
+Merged PyAutoScientist PR #84, merge 094ad0002ecf6a7a7dbc33b0fda808027469b2b0, head c1eeff1a3926ecc122587950e04ed065827566b7. Issue #83 closed; branch ancestry proves no unmerged work.
+
+Canonical Scientist gains Live Feed between Projects and Dashboards: five grouped development-task rows, owning board links, event times, expandable history, Show more and stable-reading update buffering. Public development issue/comment/PR evidence is collected at a best-effort five-minute cadence, with one-minute foreground browser checks, bounded request/time budgets and explicit source gaps. A dedicated derived cache branch stores normalized public fields only. MyScientist/Embryo adoption and scientific run progress remain outside this phase.
+
+Validation: full Python suite 162 passed, followed by 49 targeted checks covering the final mapping regression; 7 JS tests; six responsive light/dark Chromium cases and no-JS snapshot; read-only real-data Scientist pilot 37 tasks/37 requests with complete source coverage. CI Board tests run38468322699 and its tests job passed at the shipped head. Heart STALE solely missing release rehearsal, permitted for development. No scientific compute or production profiling ran.
+
+Publication: Scientist Dashboard run https://github.com/PyAutoLabs/PyAutoScientist/actions/runs/38469411015 dispatched after merge. Deployment/live verification recorded in tmp/scientist-live-feed/publication.json; no claim of universal initial source coverage. Live target https://pyautolabs.github.io/PyAutoScientist/ . Human prm authorized the whole close-out. Dashboard regenerated with this record; task worktree held only disposable test/Python caches before cleanup.
+
+## Original prompt
+
 # Scientist Live Feed
 Issued: 2026-10-13
 Issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/83
