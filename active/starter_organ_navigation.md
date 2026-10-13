@@ -22,3 +22,15 @@ Regenerate empty and connected PyAutoEmbryo static demos and tester download aft
 - Focused tests under tests/: available/setup/connected/paused routing, exact content parity, escaping and no inactive network requests.
 - Browser checks: empty and example-connected profiles, desktop/mobile, keyboard, copy prompts, deep links and Back/Forward. Connected-board tests use local synthetic targets.
 - Plan approved by human; isolated worktree created. Tier judge; source merge by human /prm. No science or collection.
+
+## Implementation handoff — 2026-10-13
+
+- Source PR: https://github.com/PyAutoLabs/PyAutoScientist/pull/78; commit `ba97db9881d784ecf01fe8ac974f73a1e34b63a9`.
+- Worktree `.worktrees/starter-organ-navigation/PyAutoScientist`, branch `feature/starter-organ-navigation`, clean.
+- Added instance_navigation.py/.js; integrated shared inactive content into organism_board.py; updated STARTER.md; added renderer and browser regression coverage.
+- 146 Python tests, 7 Node checks, 30 browser cases passed. Browser covers five widths/light-dark, exact clipboard text, zero inactive requests, configured/paused destinations, history/focus and banner clearance; no-JS text checked. Independent review not claimed.
+- Logs/screenshots/generated demos: `organs/PyAutoMind/tmp/starter-organ-navigation/`; Python/Node logs at `organs/PyAutoMind/tmp/starter-organ-navigation-{tests,node}.log`.
+- Heart STALE: `release validation incomplete: no rehearsal for current source`; no red/yellow reasons. Development PR permitted; no release readiness claimed.
+- Source CI was in progress when judged. Judge tier requires human /prm.
+- Generated `pages-candidate/` contains index, connected/empty pages, README and refreshed ZIP. `publication-candidate.json` records hashes and destination checkout. Live site remains at the initial published preview.
+- Next: merge #78 once exact-head CI is green; publish these artifacts to PyAutoLabs/PyAutoEmbryo using the already authorized static-only Pages route, then verify live navigation and ZIP. Existing static publication exception is recorded; do not run science/activate organs.

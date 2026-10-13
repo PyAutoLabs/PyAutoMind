@@ -15,8 +15,9 @@
 - issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/77
 - issued: 2026-10-13
 - session: Codex; session ID unavailable
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/78
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/starter-organ-navigation
-- next: Implement approved instance navigation; validate and open PR. Judge tier, human merge.
+- next: Human /prm #78, then publish prepared PyAutoEmbryo Pages files. Evidence and publication-candidate.json: organs/PyAutoMind/tmp/starter-organ-navigation/.
 - repos:
   - PyAutoScientist: feature/starter-organ-navigation
