@@ -1,3 +1,22 @@
+## starter-cockpit-shell
+- issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/79
+- completed: 2026-10-13
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/80
+
+Independent Scientist previews now use the cockpit three-row shell: instance-owned MyScientist / Cockpit identity, grey disabled IDLE placeholder (awaiting work), horizontally scrolling icon strip, and selected-board Reload / New tab toolbar. The shell stays fixed while board content scrolls. Existing onboarding text and inactive/paused feed isolation are preserved; JavaScript-disabled connected views retain their external link.
+
+Source PR #80 merged as `ee06ba61568dde6696297a06a0454848de3df839` after every exact-head CI run/job/step passed for `08fdf425edcebb3bb0007760d9c2cbadbd3d7073` (one pull_request run and one tests job). Human /prm authorized the complete close-out.
+
+Validation: 148 Python tests, 7 JavaScript checks, 30 browser cases at five widths/light-dark, plus final 26 renderer tests. Browser evidence covers actual new-tab destinations, reloads, native scrollbar, fixed toolbar/content scrolling, keyboard/history/clipboard, inactive network isolation and no-JavaScript fallback. No independent review claimed.
+
+Prepared Pages files and tester ZIP published to PyAutoLabs/PyAutoEmbryo commit `47bc449856432214a60ac0bbed8613d08fd5188c`, under the existing human-approved static-only publication exception. Heart at shipping was STALE solely for missing current-source release rehearsal; no software/scientific release or organ activation.
+
+Evidence and publication receipt: `organs/PyAutoMind/tmp/starter-cockpit-shell/`, outside the disposable task worktree. Independent collaborator acceptance remains a separate programme step.
+
+Live verification passed at 390/1440px: identity/IDLE, native scrollbar, popup destination, reload, home navigation and clipboard; no browser errors. HTTP 200 and exact hashes verified for index, empty preview and ZIP. Live URL: https://pyautolabs.github.io/PyAutoEmbryo/. No remaining work for this shell change.
+
+## Original prompt
+
 # Match the independent starter to the cockpit shell
 
 Issued: 2026-10-13
