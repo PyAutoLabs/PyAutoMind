@@ -15,8 +15,9 @@
 - issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/85
 - issued: 2026-10-13
 - session: Codex
-- status: workspace-dev
+- status: workspace-shipped awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/pulse-live-feed
-- next: Fair collection, profiling routes and Pulse campaign adapter; human /prm.
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/86
+- next: Human /prm, source CI running; publish Scientist after merge and verify Pulse rows/coverage.
 - repos:
   - PyAutoScientist: feature/pulse-live-feed
