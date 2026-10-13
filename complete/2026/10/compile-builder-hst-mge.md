@@ -44,6 +44,16 @@ and a separately authorized production experiment or baseline plan. This record
 completes only the bounded implementation; no new Mind draft duplicates the
 Pulse queue. No background follow-up was scheduled.
 
+## Post-merge ledger receipt
+
+[Pulse #52](https://github.com/PyAutoLabs/PyAutoPulse/pull/52) records the final
+merge receipts, completion link and remaining domain work. It merged after
+both exact-head jobs passed at `6b30e41765722d705d9d77ac1960e41ec1f9b0fd`.
+The original migrated task text remains byte-identical (206 Pulse tests pass).
+Pulse now ingests project commit `b8b3b23c`; its 112 records remain unqualified
+with unknown evidence freshness and no comparisons. No new measurement follows
+from the refreshed producer commit.
+
 ## Original prompt
 
 # Compile builder phase 1: explicit HST/MGE likelihood construction
