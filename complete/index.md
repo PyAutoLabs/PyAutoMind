@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1845 records across 9 buckets.
+1848 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -316,12 +316,15 @@ markers; everything below GENERATED is rebuilt.
 - [streaming-p4-light-profile-identity](2026/10/streaming-p4-light-profile-identity.md)
 - [streaming-p5-cubes-phase-centre](2026/10/streaming-p5-cubes-phase-centre.md)
 - [timing-noise-audit-p1-inventory](2026/10/timing-noise-audit-p1-inventory.md)
+- [timing-noise-audit-p10-headline-completion](2026/10/timing-noise-audit-p10-headline-completion.md)
 - [timing-noise-audit-p2-overhead-verdict](2026/10/timing-noise-audit-p2-overhead-verdict.md)
 - [timing-noise-audit-p3-qualify-drift](2026/10/timing-noise-audit-p3-qualify-drift.md)
 - [timing-noise-audit-p4-ab-rule-semantics](2026/10/timing-noise-audit-p4-ab-rule-semantics.md)
 - [timing-noise-audit-p5-round-bootstrap](2026/10/timing-noise-audit-p5-round-bootstrap.md)
 - [timing-noise-audit-p6-median-headline-gpu-marker](2026/10/timing-noise-audit-p6-median-headline-gpu-marker.md)
 - [timing-noise-audit-p7-warmup-witness-band](2026/10/timing-noise-audit-p7-warmup-witness-band.md)
+- [timing-noise-audit-p8-phase3b-intervals](2026/10/timing-noise-audit-p8-phase3b-intervals.md)
+- [timing-noise-audit-p9-familywise-policy](2026/10/timing-noise-audit-p9-familywise-policy.md)
 - [trim-repo-role-text](2026/10/trim-repo-role-text.md) — root routing table
 - [unit-timing-distinct-baseline](2026/10/unit-timing-distinct-baseline.md) — Select the latest distinct prior unit timing run per repository/Python leg within the current epoch. Preserve …
 - [unregistered-worktree-guard](2026/10/unregistered-worktree-guard.md)
