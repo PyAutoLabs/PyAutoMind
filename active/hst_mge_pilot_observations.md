@@ -158,3 +158,6 @@ Known qualification gaps remain with Pulse: independent witness/tolerances,
 resolved solver-default audit, production host/environment lock/data identity,
 background-load method and explicit collection authorization. No inference,
 production profile, baseline freeze or default/pin change occurred.
+
+Pulse companion: https://github.com/PyAutoLabs/PyAutoPulse/pull/55.
+Final independent review CLEAN: project 7571123 and Pulse 80dca4b; Pulse 3078a2d only adds the project PR link. Both PRs open; lint in progress at handoff.

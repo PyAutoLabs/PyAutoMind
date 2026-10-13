@@ -6,6 +6,7 @@
 - session: Codex; session ID unavailable
 - status: workspace-shipped, awaiting-merge
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/416
+- companion-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/55
 - next: Review and merge producer then Pulse handoff; no production compute, inference or scientific acceptance authorized.
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/hst-mge-pilot-observations
 - repos:
