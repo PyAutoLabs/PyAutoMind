@@ -1,3 +1,13 @@
+# Cockpit icon overflow correction
+
+Merged PyAutoScientist PR #82, commit 769ffdbd893b7637ffb4797f204e86be32263a78; issue #81 closed. Branch ancestry proven merged. Removed the 1160px width cap and forced scrollbar styling; full-width automatic overflow matches the original cockpit. All desktop icons fit without a horizontal scrollbar or hint; narrow screens preserve reference navigation access.
+
+Validation: 26 focused Python tests, 30 browser cases, desktop screenshot review, and all source CI jobs passed. Published validated seven-file PyAutoEmbryo artifact candidate as 4812aed to https://pyautolabs.github.io/PyAutoEmbryo/. Publication receipt and evidence: tmp/cockpit-overflow-fix/. Live verification recorded separately in publication-candidate.json. No inference, production profiling, or scientific collection occurred. Existing static-publication approval and Heart STALE exception apply.
+
+Human prm authorized merge and close-out. No pending library release. Only disposable Python caches existed in task worktree. Dashboard regeneration and worktree cleanup performed by prm.
+
+## Original prompt
+
 # Remove forced cockpit scrollbar
 Issued: 2026-10-13
 Issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/81
