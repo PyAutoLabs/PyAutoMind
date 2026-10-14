@@ -520,6 +520,17 @@ One `##` block per item. Fields:
 - breaks-if-wrong: `searches_minimal/nautilus_sweep.py` and `nautilus_jax_mlp.py` import the deleted module (follow-up `draft/maintenance/autofit_workspace_developer/retire_searches_minimal_nautilus_leftovers.md`); recoverable with `git checkout 06d86ac1 -- searches_minimal/nautilus_profile.py searches_minimal/nautilus_bottleneck_findings.md`
 - archive-ref: n/a — committed deletion in autofit_workspace_developer#30; bytes recoverable from remote history at pre-delete SHA `06d86ac1deed93d3424791e71b47e6c135c7b5f1` (main, 2026-10-14)
 
+## autofit_workspace_developer/searches-minimal-nautilus-leftovers
+- type: file
+- locator: autofit_workspace_developer searches_minimal/nautilus_sweep.py, searches_minimal/nautilus_jax_mlp.py, searches_minimal/output/nautilus_profile_summary.txt
+- confidence: 0.95
+- reason: orphaned by the B4a re-home of `nautilus_profile.py` to autofit_profiling (#30); both scripts imported the deleted module and no CI ran them; the summary was its stale artefact. Human-approved deletion 2026-10-14 (autofit_workspace_developer#32).
+- merged: yes
+- condemned: 2026-10-14
+- sweep-after: n/a (committed deletion; history-only)
+- breaks-if-wrong: a developer wanting the old Nautilus n_live sweep or JAX-MLP timing script; recoverable with `git checkout 009709bc -- searches_minimal/nautilus_sweep.py searches_minimal/nautilus_jax_mlp.py searches_minimal/output/nautilus_profile_summary.txt`; a still-wanted measurement belongs in autofit_profiling as a cell
+- archive-ref: n/a — committed deletion in #32; bytes recoverable from remote history at pre-delete SHA `009709bc6f87a2e56ef0c9e9839a1c686ab77790` (main, 2026-10-14)
+
 ## autolens-profiling/linear-solver-p5-mapper-corpus-large-npz
 - type: branch
 - locator: feature/linear-solver-p5-mapper-corpus (autolens_profiling, tip 70e8a9f)

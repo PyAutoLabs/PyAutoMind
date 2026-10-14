@@ -431,7 +431,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 10 (stage 1: 10, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14
+Count toward 20: 11 (stage 1: 11, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -470,3 +470,4 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-10-08 | inference-browser-polish (PyAutoInsight#18) | glance | 170 tests / Chromium synthetic+actual capture / independent CLEAN / Heart STALE rehearsal gap / witness verified backend-instrument isolation and readable Pulse hierarchy | merged-unchanged | 1 |
 | 2026-10-08 | likelihood-menu-labels (PyAutoInsight#20 / PyAutoPulse#37) | glance | 170/193 tests; Chromium fixtures+captured menus; independent CLEAN; Heart STALE release validation incomplete: no rehearsal for current source; witness explicit labels/order/plain Sersic and evidence disclosure removal | merged-unchanged | 1 |
 | 2026-10-08 | decision-history (PyAutoInsight#22 / PyAutoPulse#39) | glance | 183/206 tests; Chromium and actual captures; independent CLEAN; Heart STALE release validation incomplete: no rehearsal for current source; witness flat cross-organ history and human capture boundaries | merged-unchanged | 1 |
+| 2026-10-14 | retire-nautilus-leftovers (autofit_workspace_developer#32) | glance | tests:n/a smoke:n/a review:fable heart:stale witness:pass | merged-unchanged | 1 |
