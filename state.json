@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-10-14T14:51:42Z",
+  "headline": "RED \u2014 24 picks \u00b7 5 in flight",
+  "updated": "2026-10-14T14:55:00Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,18 +12,6 @@
       "text": "Cortex Projects readability \u2014 phase 1 \u2014 blocked",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/issues/521",
       "prompt": "Use the start-dev skill. active/cortex_projects_readability.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Compact Memory board and one-tap reading queue \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoMemory/pull/131",
-      "prompt": "Use the start-dev skill. active/compact-board-one-tap-reading.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Darken image dropdown text \u2014 workspace-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoEyes/pull/30",
-      "prompt": "Use the start-dev skill. active/image-dropdown-contrast.md"
     },
     {
       "severity": "yellow",
@@ -126,6 +114,18 @@
       "text": "pending release: PyAutoLens PyAutoLens#777 \u2014 search-ext-a0c-downstream",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/777",
       "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoLens PyAutoLens#778 \u2014 search-ext-a1-declare-gate",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/778",
+      "prompt": null
+    },
+    {
+      "severity": "info",
+      "text": "pick: Fix KNN neighbor search for a partial final point block",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md",
+      "prompt": "Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md"
     }
   ]
 }

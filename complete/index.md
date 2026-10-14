@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1864 records across 9 buckets.
+1866 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -155,6 +155,7 @@ markers; everything below GENERATED is rebuilt.
 - [community-feedback](2026/10/community-feedback.md)
 - [community-pages](2026/10/community-pages.md)
 - [compact-dashboard-rows](2026/10/compact-dashboard-rows.md)
+- [compact-memory-board](2026/10/compact-memory-board.md)
 - [compile-builder-hst-mge](2026/10/compile-builder-hst-mge.md) — Shipped one explicit, isolated HST/MGE fp64 jit current-runtime compile workload; broader profiling campaign r…
 - [cortex-find-script-symlink](2026/10/cortex-find-script-symlink.md)
 - [critical-curves-dispatch-audit](2026/10/critical-curves-dispatch-audit.md) — Phase 3a evidence and contract shipped. Research, raw CPU JSON/PNG, frozen measured source and cumulative wiki…
@@ -198,6 +199,7 @@ markers; everything below GENERATED is rebuilt.
 - [hst-mge-cpu-pilot-plan](2026/10/hst-mge-cpu-pilot-plan.md)
 - [hst-mge-pilot-choices](2026/10/hst-mge-pilot-choices.md)
 - [hst-mge-pilot-observations](2026/10/hst-mge-pilot-observations.md)
+- [image-dropdown-contrast](2026/10/image-dropdown-contrast.md)
 - [imshow-origin-lower-overlays](2026/10/imshow-origin-lower-overlays.md)
 - [inference-browser-polish](2026/10/inference-browser-polish.md)
 - [inference-sampler-literature](2026/10/inference-sampler-literature.md)
