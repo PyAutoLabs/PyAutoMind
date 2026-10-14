@@ -9,6 +9,7 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked` /
 
 | date | task | effective level | gates (tests/smoke/review/heart) | outcome |
 |------|------|-----------------|----------------------------------|---------|
+| 2026-10-14 | compact-memory-board (Memory #130 / PR #131) | live human development-only authorization: "I authorize" | 276 tests + make validate + actual board render + author review PASS; downstream smoke n/a (organ presentation); Heart RED: PyAutoFit: CI failure; stale: release validation incomplete: no rehearsal for current source; commit/push/PR only | red-override |
 | 2026-10-14 | image-dropdown-contrast (Eyes #29), resume | live human “I authorize”, development shipping only | 87 tests + ruff + 265 URLs PASS; independent working-tree CLEAN, committed review pending; Heart RED `PyAutoFit: CI failure`; no merge/release | red-override |
 | 2026-10-14 | image-dropdown-contrast (Eyes #29) | supervised; explicit --auto after plan approval | 87 tests + ruff + 265 live image URLs PASS; smoke n/a (organ CSS); committed review surface unavailable before ship; Heart RED: PyAutoFit: CI failure | parked |
 | 2026-10-13 | hst-mge-pilot-choices (Pulse #59) | safe (docs/small; explicit --auto) | 206 tests + ruff/board PASS; smoke n/a (organ prose); independent Sol CLEAN a4ea984; Heart STALE: release validation incomplete: no rehearsal for current source | PR-open; judge tier, human /prm |

@@ -73,11 +73,16 @@
 - issued: 2026-10-14
 - prompt: active/compact-board-one-tap-reading.md
 - session: Codex; session ID unavailable
-- status: awaiting-input
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoMemory/pull/131
+- commit: ac467e2
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/compact-memory-board
 - repos:
   - PyAutoMemory: feature/compact-memory-board
-- next: Layout complete; 276 tests and make validate pass. Await live Heart RED development override or cleared readiness before commit/push/PR. Token management deferred.
-- blocker: Heart RED — PyAutoFit: CI failure
+- next: Human /prm on #131 after required checks pass; token management deferred.
+- heart-red-override:
+  - authorization: Human replied "I authorize" to development-only override for #130; commit/push/PR only, no merge or release.
+  - reason: PyAutoFit: CI failure
+  - evidence: 276 tests, make validate, actual board render and author review passed; downstream smoke not applicable (organ presentation only).
 - heart-stale: release validation incomplete: no rehearsal for current source
 - evidence: .worktrees/compact-memory-board/review/status.md; memory-board.html preview
