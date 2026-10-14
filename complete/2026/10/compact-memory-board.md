@@ -1,3 +1,17 @@
+# Compact Memory board
+
+Merged PyAutoMemory#131 on 2026-10-14 (05e02ec99cd3681a5d1fbf1dd76744f92168cc8b), closing #130.
+
+arXiv inbox now follows check-in; Catch up is always navigable with concise coverage/due dates and a copy button. Pending filings have their own section; metadata moves to the footer. Existing token control relocated without behavior changes.
+
+Validation: 276 tests; make validate; author review; real HTML/Markdown rendering and unique-ID/order checks passed. GitHub head ac467e2: all runs (one validate pull_request run), jobs and steps passed. No downstream API impact. Browser viewport inspection unavailable locally.
+
+Human development-only Heart RED override: "I authorize"; exact RED reason "PyAutoFit: CI failure"; stale "release validation incomplete: no rehearsal for current source". Separate human $prm authorized merge. This does not clear Heart.
+
+Token management deferred by the human and retained in draft/feature/pyautomemory/reading-queue-token-management.md.
+
+## Original prompt
+
 # Compact Memory board and one-tap reading queue
 
 Issued: 2026-10-14
