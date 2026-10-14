@@ -890,7 +890,7 @@ Use the start-dev skill. active/hst_mge_pilot_qualification.md
 
 </details>
 
-<details><summary>📋 <a href="active/image-dropdown-contrast.md">Darken image dropdown text</a> — <a href="https://github.com/PyAutoLabs/PyAutoEyes/issues/29">issue #29</a> — issued 2026-10-14 — workspace-dev</summary>
+<details><summary>📋 <a href="active/image-dropdown-contrast.md">Darken image dropdown text</a> — <a href="https://github.com/PyAutoLabs/PyAutoEyes/issues/29">issue #29</a> — issued 2026-10-14 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoEyes/pull/30">PyAutoEyes#30</a></summary>
 
 ```
 Use the start-dev skill. active/image-dropdown-contrast.md
