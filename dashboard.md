@@ -890,7 +890,7 @@ Use the start-dev skill. active/search_ext_a5_library_run_ctx_migrations.md
 
 </details>
 
-<details><summary>📋 <a href="active/search_ext_b4b_ep_graphical_baseline_port.md"><code>@autofit_profiling</code> B4b: port the EP / graphical-model baselines and the analytic benchmark…</a> — <a href="https://github.com/PyAutoLabs/autofit_profiling/issues/4">issue #4</a> — issued 2026-10-14 — workspace-dev</summary>
+<details><summary>📋 <a href="active/search_ext_b4b_ep_graphical_baseline_port.md"><code>@autofit_profiling</code> B4b: port the EP / graphical-model baselines and the analytic benchmark…</a> — <a href="https://github.com/PyAutoLabs/autofit_profiling/issues/4">issue #4</a> — issued 2026-10-14 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autofit_profiling/pull/5">autofit_profiling#5</a>, <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/61">PyAutoPulse#61</a></summary>
 
 ```
 Use the start-dev skill. active/search_ext_b4b_ep_graphical_baseline_port.md
