@@ -37,4 +37,4 @@ Authority: epic report `draft/research/autofit/search_extensibility_epic_report.
 ## Constraints
 - Serial pytest (`-n auto` is broken on this suite); emulate `unittest-nojax` with the import-hook plugin (`nojax_plug` in the session scratchpad or rebuild it); Sphinx ≤30 warnings.
 - Prior/Message design (#1500) untouched. No consumer repos in this task.
-- Each PR body lists "Companion changes required" for anything outside PyAutoFit (expected: none beyond the A5 consumers task; the developer-tier searches are handled by `search_ext_a4_companions.md`).
+- Each PR body lists "Companion changes required" for anything outside PyAutoFit (expected: none beyond the A5 consumers task; the developer-tier searches were done by `complete/2026/10/search-ext-a4-companions.md`).

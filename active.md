@@ -5,10 +5,14 @@
 - issued: 2026-10-14
 - prompt: active/image-dropdown-contrast.md
 - session: Codex; session ID unavailable; launched --auto
-- status: workspace-dev
+- status: awaiting-input
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/image-dropdown-contrast
 - repos:
   - PyAutoEyes: feature/image-dropdown-contrast
+
+- next: Finish committed review and ship after live Heart RED development override or readiness clears. Local CSS and generated dashboard complete; 87 tests, ruff, live board check (265 images) pass.
+- blocker: Heart RED — PyAutoFit: CI failure
+- heart-stale: release validation incomplete: no rehearsal for current source
 
 ## hst-mge-pilot-qualification
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/417
@@ -20,20 +24,6 @@
 - next: Review and merge #418; independently validated witness implementation, coefficient tolerances and production collection remain separate pending work.
 - repos:
   - autolens_profiling: feature/hst-mge-pilot-qualification
-
-## search-ext-a4-companions
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/520
-- issued: 2026-10-14
-- prompt: active/search_ext_a4_companions.md
-- session: Claude Code CLI (Fable 5.1); session 51fca711; launched --auto
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/search-ext-a4-companions
-- epic: search-extensibility
-- next: Opus worker ships one PR per repo (Brain reference, developer ultranest/pyswarms, workspace_test seeded Dynesty); tier glance — in-turn tiered merge on green if the Witness passes
-- repos:
-  - PyAutoBrain: feature/search-ext-a4-companions
-  - autofit_workspace_developer: feature/search-ext-a4-companions
-  - autofit_workspace_test: feature/search-ext-a4-companions
 
 ## search-ext-a5-library
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1688

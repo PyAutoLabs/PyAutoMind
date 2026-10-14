@@ -9,6 +9,7 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked` /
 
 | date | task | effective level | gates (tests/smoke/review/heart) | outcome |
 |------|------|-----------------|----------------------------------|---------|
+| 2026-10-14 | image-dropdown-contrast (Eyes #29) | supervised; explicit --auto after plan approval | 87 tests + ruff + 265 live image URLs PASS; smoke n/a (organ CSS); committed review surface unavailable before ship; Heart RED: PyAutoFit: CI failure | parked |
 | 2026-10-13 | hst-mge-pilot-choices (Pulse #59) | safe (docs/small; explicit --auto) | 206 tests + ruff/board PASS; smoke n/a (organ prose); independent Sol CLEAN a4ea984; Heart STALE: release validation incomplete: no rehearsal for current source | PR-open; judge tier, human /prm |
 | 2026-10-12 | scientist-broca-publication (Broca#18) | live human task-specific "conitnue", plan "yeah I approve, go" | 64 tests; owner check 4 assistants/18 records; board/feed render and author review PASS; Heart RED `PyAutoFit: 1 commit(s) behind origin`; `PyAutoGalaxy: 1 commit(s) behind origin`; `PyAutoLens: 1 commit(s) behind origin`; development PR only, no merge/release | red-override |
 | 2026-10-12 | scientist-broca-setup (Broca#16) | live human development-only authorization: "I authroize, go" | 49 tests; owner check 4 assistants/18 records; board/feed render; author diff review PASS; Heart RED `PyAutoFit: 1 commit(s) behind origin`; `PyAutoGalaxy: 1 commit(s) behind origin`; `PyAutoLens: 1 commit(s) behind origin`; commit/push/PR only, no merge/release | red-override |
@@ -431,7 +432,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 11 (stage 1: 11, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14
+Count toward 20: 12 (stage 1: 12, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -471,3 +472,4 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-10-08 | likelihood-menu-labels (PyAutoInsight#20 / PyAutoPulse#37) | glance | 170/193 tests; Chromium fixtures+captured menus; independent CLEAN; Heart STALE release validation incomplete: no rehearsal for current source; witness explicit labels/order/plain Sersic and evidence disclosure removal | merged-unchanged | 1 |
 | 2026-10-08 | decision-history (PyAutoInsight#22 / PyAutoPulse#39) | glance | 183/206 tests; Chromium and actual captures; independent CLEAN; Heart STALE release validation incomplete: no rehearsal for current source; witness flat cross-organ history and human capture boundaries | merged-unchanged | 1 |
 | 2026-10-14 | retire-nautilus-leftovers (autofit_workspace_developer#32) | glance | tests:n/a smoke:n/a review:fable heart:stale witness:pass | merged-unchanged | 1 |
+| 2026-10-14 | search-ext-a4-companions (PyAutoBrain#522 autofit_workspace_test#111 autofit_workspace_developer#33) | glance | tests Brain 1258 pass (+CI 3.12/3.13), ws n/a no test dir · smoke awt 15/15 (+CI) · review CLEAN (independent agent) · Heart STALE (no rehearsal) · witness PASS (UltraNest TM1 env ImportError, identical on main) | merged-unchanged | 1 |

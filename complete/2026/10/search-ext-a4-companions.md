@@ -1,3 +1,20 @@
+## search-ext-a4-companions
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/520
+- completed: 2026-10-14
+- epic: search-extensibility (A4 companions)
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/522
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/111
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_developer/pull/33
+
+**Shipped:** tier glance under the human's 2026-10-14 `--auto` launch; in-turn tiered merge by the shipping worker after the Witness passed. PyAutoBrain#522 (9e0ef6c1b, closes #520) → autofit_workspace_test#111 (26877bc69) → autofit_workspace_developer#33 (3df620e0d; no CI in that repo — merged last, fit proof quoted on the PR).
+- Brain `skills/sampler_pipeline/reference.md` Stage 3 now describes the A4 anatomy: subclass `NonLinearSearch`, declare `posterior_kind` + `test_mode_budget`, defaults from `posterior_kind.{WEIGHTED,POINT,CHAIN}`, `samples_cls`, `run(ctx)` + `raw_samples_from`; no `apply_test_mode`/`is_test_mode`.
+- Developer `searches/ultranest/search.py` (WEIGHTED, `SamplesNest`, `nested_initializer_for`, budget max_iters/max_ncalls 1) and `searches/pyswarms/abstract.py` (POINT, `clipper_for`, `initializer_for`, `rng=initializer_rng(self)`, budget iters 1) off the deprecated family bases; imports clean under `-W error::FutureWarning`; identifiers unchanged vs main.
+- workspace_test graphical: `SeededDynestyStatic` deleted, `af.DynestyStatic(seed=)` used; `analytic_gaussian.py` PARITY PASS 41/41 twice.
+- Gate: Brain pytest 1258 pass (+CI 3.12/3.13); awt smoke 15/15 (+CI); review CLEAN (independent subagent, same model family); Heart STALE (no rehearsal for current source); witness PASS except UltraNest at test mode 1, which fails with the environment's numpy-ABI ImportError identically on main.
+- Revert, if needed: `git revert 9e0ef6c1b` (Brain), `git revert 26877bc69` (awt), `git revert 3df620e0d` (dev).
+
+## Original prompt
+
 # `@PyAutoFit` search-extensibility A4 companions: Brain sampler reference, developer-tier searches, workspace_test seeded Dynesty
 
 Type: refactor
