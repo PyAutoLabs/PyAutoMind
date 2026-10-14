@@ -26,10 +26,12 @@
 - issue: https://github.com/PyAutoLabs/autofit_inference/issues/6
 - issued: 2026-10-14
 - session: Claude Code CLI (Fable 5.1); session 51fca711
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/search-ext-b3-postmerge-fixes
 - epic: search-extensibility
-- next: implement review-06 items 1–6 (Opus worker); autofit_inference PR first, then PyAutoInsight PR, human /prm
+- workspace-pr: https://github.com/PyAutoLabs/autofit_inference/pull/7
+- companion-pr: https://github.com/PyAutoLabs/PyAutoInsight/pull/28
+- next: human /prm — merge autofit_inference#7 first, then PyAutoInsight#28; both green 2026-10-14. After #7 merges the Insight `fit` snapshot needs one refresh (ingest reads producer main); the new acceptance test already accepts revision 162644e. Contract stayed inference-summary@1 (additive fields). `@2` freeze proceeds on 17 calibration rows (decision on the PR); the freeze commit itself is B5's first step.
 - repos:
   - autofit_inference: feature/search-ext-b3-postmerge-fixes
   - PyAutoInsight: feature/search-ext-b3-postmerge-fixes
