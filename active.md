@@ -41,10 +41,12 @@
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/2
 - issued: 2026-10-14
 - session: Claude Code CLI (Fable 5.1); session 51fca711
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/search-ext-b4a-breakdown-exporter
 - epic: search-extensibility
-- next: implement B4a (Opus worker): autofit_profiling PR first, then PyAutoPulse PR (merges after Pages deploy), then autofit_workspace_developer deletion PR; human /prm
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/3
+- companion-prs: https://github.com/PyAutoLabs/PyAutoPulse/pull/60 (merge after #3 + Pages live), https://github.com/PyAutoLabs/autofit_workspace_developer/pull/30 (merge after #3; pre-delete SHA 06d86ac1)
+- next: human /prm in order — (1) autofit_profiling#3, wait for pages_dashboard.yml on main and the Pages site (Pages enabled via API, 404 until first deploy; org secret PAT_PYAUTOLABS reach unverified — if the pulse-refresh dispatch is skipped, run Pulse's refresh by hand); (2) on the PyAutoPulse#60 branch run `bin/pyauto-pulse board` online, commit receipts/fit.json + snapshots/fit.json + the four board files, then merge (check --offline fails `fit: no receipt yet` until then, by design); (3) autofit_workspace_developer#30 — make the Gut condemned.md entry at close-out. OPEN DECISION: `searches_minimal/nautilus_sweep.py` and `nautilus_jax_mlp.py` import the deleted module and `output/nautilus_profile_summary.txt` remains; retire them too or keep. Headline B4a finding: Nautilus checkpoint writes are 24.5 % of a full search.fit on gaussian_x1 (bare-sampler anatomy reproduced within ±10 pp, log Z -57.455). Epic 2 not opened.
 - repos:
   - autofit_profiling: feature/search-ext-b4a-breakdown-exporter
   - PyAutoPulse: feature/search-ext-b4a-breakdown-exporter
