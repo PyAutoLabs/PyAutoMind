@@ -1,5 +1,15 @@
 # Active Tasks
 
+## image-dropdown-contrast
+- issue: https://github.com/PyAutoLabs/PyAutoEyes/issues/29
+- issued: 2026-10-14
+- prompt: active/image-dropdown-contrast.md
+- session: Codex; session ID unavailable; launched --auto
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/image-dropdown-contrast
+- repos:
+  - PyAutoEyes: feature/image-dropdown-contrast
+
 ## hst-mge-pilot-qualification
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/417
 - issued: 2026-10-13

@@ -2,6 +2,13 @@
 
 @PyAutoEyes
 
+Issued: 2026-10-14
+Issue: https://github.com/PyAutoLabs/PyAutoEyes/issues/29
+Autonomy: supervised
+Difficulty: small
+
+Plan approved; user authorized `go --auto`. Merge remains human /prm.
+
 ## Original user request
 
 > On the drop down menu where I select an image the font is light on white and thus hard to read all the images, can we make it darker?
