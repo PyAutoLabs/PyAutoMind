@@ -28,10 +28,12 @@
 - issued: 2026-10-14
 - prompt: active/search_ext_b4b_ep_graphical_baseline_port.md
 - session: Claude Code CLI (Fable 5.1); session 51fca711; launched --auto
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/search-ext-b4b-ep-baseline
 - epic: search-extensibility
-- next: Opus worker ports ep/graphical + analytic cell into autofit_profiling (PR 1), reproduces baselines on the B4a host, then Pulse PR 2 after Pages is live; human /prm
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/5
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/61
+- next: human /prm autofit_profiling#5 (decision-taken: host pin = B4a laptop; witness "within 2x" NOT met — all six cells 0.14–0.48x faster, correctness exact, N30 sanity FAILs reproduced; sigma_q95 checked vs 12.15 not 12.18) then PyAutoPulse#61 after Pages is live (receipt/snapshot refresh on its branch first, as B4a). Ship gate: tests 16/16 + ruff + catalogue check; Pulse 207 + check --offline OK; review FINDINGS×2 fixed; Heart STALE acked ("no rehearsal for current source"). Follow-up: retire developer ep/ + graphical/ via Gut after merge
 - repos:
   - autofit_profiling: feature/search-ext-b4b-ep-baseline
   - PyAutoPulse: feature/search-ext-b4b-ep-baseline
