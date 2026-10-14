@@ -12,7 +12,7 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 8 |
-| [Backlog](#backlog) | 257 |
+| [Backlog](#backlog) | 258 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -1038,7 +1038,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>bug</b> — 72</summary>
+<summary><b>bug</b> — 73</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -1612,6 +1612,14 @@ Use the start-dev skill. draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_
 
 ```
 Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautoeyes/image-dropdown-contrast.md">Darken image dropdown text</a> — pyautoeyes</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautoeyes/image-dropdown-contrast.md
 ```
 
 </details>
@@ -2737,11 +2745,12 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 ## Hygiene
 
-18 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
+19 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
 
 <details>
 <summary>Headerless prompts</summary>
 
+- `draft/bug/pyautoeyes/image-dropdown-contrast.md`
 - `draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md`
 - `draft/research/autofit/hpc_campaign_epic_report.md`
 - `draft/research/autofit/hpc_campaign_epic_surveys/carbon.md`
@@ -2763,7 +2772,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-88 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+89 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2808,7 +2817,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md`
 - `draft/bug/health_fixes/release_timeout_policy.md`
 - `draft/bug/health_fixes/samples_parameter_paths.md`
-- _… and 48 more_
+- _… and 49 more_
 
 </details>
 
