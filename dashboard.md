@@ -866,7 +866,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/compact-board-one-tap-reading.md">Compact Memory board and one-tap reading queue</a> — <a href="https://github.com/PyAutoLabs/PyAutoMemory/issues/130">issue #130</a> — issued 2026-10-14 — library-dev</summary>
+<details><summary>📋 <a href="active/compact-board-one-tap-reading.md">Compact Memory board and one-tap reading queue</a> — <a href="https://github.com/PyAutoLabs/PyAutoMemory/issues/130">issue #130</a> — issued 2026-10-14 — awaiting-input</summary>
 
 ```
 Use the start-dev skill. active/compact-board-one-tap-reading.md
