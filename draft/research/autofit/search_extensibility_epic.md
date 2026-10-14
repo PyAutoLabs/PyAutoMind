@@ -171,6 +171,19 @@ Heart warnings and separate refactor release blockers are not cleared by it.
 
 ## Resume (2026-10-08 night — start here)
 
+**2026-10-14 update (Fable session):** the human ruled the 2026.10.11.1 and
+2026.10.12.1 releases that carried #1679/#1680/#1681 deliberate — the review-05
+findings are live bugs in released code, fixed in the next release, not gates.
+Both fix lists below are ISSUED: review 05 → PyAutoFit#1682 (task
+`search-ext-a3-postmerge-fixes`, items 1–7; item 8 stays [later]); review 06 →
+autofit_inference#6 (task `search-ext-b3-postmerge-fixes`, items 1–6; item 7 →
+the B5 prompt, item 8 later). Both run in parallel to PR-open, human `/prm`.
+B3 pilot output (searches 929 MB, references 413 MB) moved into canonical
+`fit/autofit_inference/output/`; `_aborted_b2_partial` dropped; the
+`search-ext-b3-pilot` worktree is removed. Agreed order after both PRs: B4a,
+then A4. Prior/Message design (#1500) is explicitly outside this epic.
+
+
 Both post-merge astra reviews returned FINDINGS. None has been enacted. **The PyAutoFit pending-release PRs (#1679/#1680/#1681) must not ship in a release until the release blockers in the first list are fixed.** Verify each finding against current main before fixing it; earlier astra findings all reproduced. Then do A4 or B4 (the human chooses).
 
 **PyAutoFit, A2/A3/A3b follow-up** (review 05 §3; suggested single task `search-ext-a3-postmerge-fixes`, library):
