@@ -866,7 +866,7 @@ Use the start-dev skill. active/hst_mge_pilot_qualification.md
 
 </details>
 
-<details><summary>📋 <a href="active/search_ext_a4_decompose_seed_family_bases.md"><code>@PyAutoFit</code> A4: decompose <code>NonLinearSearch</code>, search-level seed, delete the family bases</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1684">issue #1684</a> — issued 2026-10-14 — library-dev</summary>
+<details><summary>📋 <a href="active/search_ext_a4_decompose_seed_family_bases.md"><code>@PyAutoFit</code> A4: decompose <code>NonLinearSearch</code>, search-level seed, delete the family bases</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1684">issue #1684</a> — issued 2026-10-14 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1685">PyAutoFit#1685</a>, <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1686">PyAutoFit#1686</a>, <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1687">PyAutoFit#1687</a> — ⏳ pending release: PyAutoFit — ⏳ pending release: PyAutoFit — ⏳ pending release: PyAutoFit</summary>
 
 ```
 Use the start-dev skill. active/search_ext_a4_decompose_seed_family_bases.md
@@ -2821,6 +2821,9 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoFit**
 
+- [PyAutoFit#1685](https://github.com/PyAutoLabs/PyAutoFit/pull/1685) — `active/search_ext_a4_decompose_seed_family_bases.md`
+- [PyAutoFit#1686](https://github.com/PyAutoLabs/PyAutoFit/pull/1686) — `active/search_ext_a4_decompose_seed_family_bases.md`
+- [PyAutoFit#1687](https://github.com/PyAutoLabs/PyAutoFit/pull/1687) — `active/search_ext_a4_decompose_seed_family_bases.md`
 - [PyAutoFit#1667](https://github.com/PyAutoLabs/PyAutoFit/pull/1667) — `complete/2026/10/search-conformance-metadata.md`
 - [PyAutoFit#1673](https://github.com/PyAutoLabs/PyAutoFit/pull/1673) — `complete/2026/10/search-ext-a0a2-backend-conformance.md`
 - [PyAutoFit#1672](https://github.com/PyAutoLabs/PyAutoFit/pull/1672) — `complete/2026/10/search-ext-a0b-hygiene.md`
