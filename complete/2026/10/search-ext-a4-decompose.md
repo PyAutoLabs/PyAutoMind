@@ -1,3 +1,27 @@
+## search-ext-a4-decompose
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1684
+- completed: 2026-10-14
+- epic: search-extensibility (phase A4)
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1685
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1686
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1687
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1685
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1686
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1687
+
+**Shipped:** three stacked PyAutoFit PRs, merged in order by human `/prm` on 2026-10-14 (tier judge): #1685 A4a decompose (8e5487ae9), #1686 A4b seed (5bf057f28), #1687 A4c family bases (df6d218f1). Pre-merge Codex gpt-6-astra adversary review 07 (`draft/research/autofit/search_extensibility_epic_reviews/07_codex_astra_a4_stack_premerge.md`, FINDINGS 4) was enacted on the branches before merge; all four reproduced.
+- A4a: `abstract_search.py` 2102 → 585 lines; `TestModeBypass`, `SearchFactorOptimiser` moved out, `SearchRuntimeSettings`/`paths_from`, paths capabilities; non-lifecycle method groups in `__init__`-less mixins (`execution.py`, `internal_state.py`, `updates.py`, test-mode mixin) because `FitLifecycle` is deferred to A5 (D22). Pool shims and `SneakyPool` kept deprecated until A5. All 15 default identifiers, `hash_list`, `to_dict` and constructor-argument sets byte-identical to main.
+- A4b: search-level `seed` with `SeedSequence` fan-out (initializer on stream 0 from a numpy `Generator`; Emcee/Dynesty backend on stream 1; Nautilus/NSS/NUTS/SMC/MultiStart take the raw seed so existing seeded runs are bit-identical; Zeus initial points only). `seed` enters the identifier via the conditional walk when not None; `search.json` gains `seed` (null by default). Grid children get child streams through a spawn key that is never hashed or serialized. NUTS/SMC sentinel is None with `backend_seed` 42. Human rulings: the MultiStart explicit-seed re-key ACCEPTED (no override); the explicit-seed NUTS/SMC re-key as in report §8.6.
+- A4c: family bases out of the MRO, deprecated thin subclasses warn (`FutureWarning`, stacklevel 3) for one release; per-`posterior_kind` defaults (CHAIN/WEIGHTED/POINT) for plotter, initializer, clipper, auto-correlation settings; SMC uses the weighted plotter and drops `auto_correlation_settings`; chain auto-correlation defaults built at construction (the four strict xfails now pass). Drawer names `clipper` explicitly.
+- Review 07 fixes: (1) old default NUTS/SMC `search.json`/pickles recorded `seed: 42` and would have re-keyed through the aggregator's recompute — a NUTS/SMC seed of 42 now loads as the default None (sampling unchanged; an explicit `seed=42` shares the default identity, documented) and `SearchOutput.id` prefers the saved `.identifier`; (2) Dynesty resolves `rstate` once (`_sampler_kwargs`; a subclass's own `rstate` wins), so `SeededDynestyStatic` in autofit_workspace_test keeps working; (3) `seed.child_seed` gives grid children of Nautilus/NSS/NUTS/SMC/MultiStart distinct backend seeds (standalone seeded runs unchanged; grid cells of default-seeded searches no longer replay identical randomness); (4) Drawer's `clipper` moved after the existing positional slots and SMC takes old positional calls behind a deprecated `*legacy_positional` (conformance signature set for SMC gains it).
+- Follow-up red leg: #1686's initializer change made `test_autofit/interpolator/test_covariance.py::test_single_variable` nondeterministic again (fixture seeded stdlib `random`, which the initializer no longer reads); fixed test-only by patching `seed.seed_sequence` in the fixture; 20/20 deterministic.
+- Tests at merge: full serial suite 3776 passed / 1 skipped / 0 xfailed; nojax emulation 3459 / 180 skipped; Sphinx 30 warnings (limit 30); `docs/_generate_searches.py --check` clean; CI green on unittest 3.12, 3.13, nojax, generated-search-docs, Docs for every PR. autofit + autolens workspace smoke clean on PR 1 and PR 3; `autofit_workspace_test` graphical parity 41/41.
+- Decisions the human may want to revisit: grid children of default-seeded searches now have independent backend randomness; `SearchOutput.id` prefers the persisted identifier for every output.
+- Companion changes (filed as `draft/refactor/autofit/search_ext_a4_companions.md`): PyAutoBrain `skills/sampler_pipeline/reference.md` ~129–136, `autofit_workspace_developer/searches/{ultranest,pyswarms}` onto `NonLinearSearch` + `posterior_kind` + `test_mode_budget`, and (recommended) autofit_workspace_test graphical `SeededDynestyStatic` → `af.DynestyStatic(seed=)`. Exact text in the #1686/#1687 bodies.
+- Traps: GitHub auto-retargets a stacked PR to main when its base PR merges (no manual `--base` needed); `pytest -n auto` remains broken on this suite; the Codex read-only sandbox cannot run the disk-backed suite, so the worker re-ran those gates.
+
+## Original prompt
+
 # `@PyAutoFit` A4: decompose `NonLinearSearch`, search-level seed, delete the family bases
 
 Type: refactor

@@ -169,6 +169,10 @@ preflight, checkpoint finalization, or the inference evidence findings.
 The integration RED is cleared by the ingested wheel run above; remaining
 Heart warnings and separate refactor release blockers are not cleared by it.
 
+### 2026-10-14 later — A4 DONE
+
+A4 merged as three stacked PRs by human `/prm` in order: PyAutoFit#1685 (A4a decompose, 8e5487ae9), #1686 (A4b seed, 5bf057f28), #1687 (A4c family bases, df6d218f1); record `complete/2026/10/search-ext-a4-decompose.md`. Pre-merge Codex gpt-6-astra review `search_extensibility_epic_reviews/07_codex_astra_a4_stack_premerge.md` returned FINDINGS 4, all reproduced and enacted on the branches before merge (old NUTS/SMC seed-42 identity preserved on load + aggregator prefers saved `.identifier`; Dynesty `rstate` resolved once; `seed.child_seed` for grid children; Drawer/SMC positional compatibility). Human rulings: MultiStart explicit-seed re-key accepted. Companions (Brain sampler_pipeline reference, developer ultranest/pyswarms, workspace_test seeded Dynesty) filed at `draft/refactor/autofit/search_ext_a4_companions.md`. Track A remaining: A5. Track B remaining: B4b, B5.
+
 ## Resume (2026-10-08 night — start here)
 
 **2026-10-14 update (Fable session):** the human ruled the 2026.10.11.1 and
