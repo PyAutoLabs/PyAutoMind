@@ -1,3 +1,23 @@
+## search-ext-b3-postmerge-fixes
+- issue: https://github.com/PyAutoLabs/autofit_inference/issues/6
+- completed: 2026-10-14
+- epic: search-extensibility (phase B3c — post-merge fixes for the B3 pilot)
+- workspace-pr: https://github.com/PyAutoLabs/autofit_inference/pull/7
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoInsight/pull/28
+
+**Shipped:** autofit_inference#7 (merged 2026-10-14 as 6df69441b) then PyAutoInsight#28 (merged as 30cf007ce after a conflict repair against the scheduled dashboard refresh), via a human `/prm`; tier judge. Fixes all six findings of the post-merge Codex gpt-6-astra review 06 (`draft/research/autofit/search_extensibility_epic_reviews/06_codex_astra_b3_postmerge.md`). Findings 1–5 reproduced on 900648b and were fixed test-first; finding 6 (the Insight board) had already been fixed by the 2026-10-08 refresh, so only its acceptance check was added.
+- Freeze rule: protocol §7, `wiki/project/state.md`, Insight `campaigns.yaml` and `tasks/gaussian_x3_search_wave1.md` now agree — freeze `@2` from the existing calibration before any scored run, keep the A2+A4 gate on scored wave 2, never restart the pilot. Decision: the freeze proceeds on 17 calibration rows, not 20 (the <20 rule keeps the σ-ratio band and ppc tolerance at `@1`, so `@2` loosens nothing; the 3 missing rows cannot come from the pilot output). The `@2` freeze commit itself is B5's first step.
+- Bootstrap wall-per-success intervals keep zero-success resamples as unbounded; 4 catalogue cells now report a null upper bound (separated DynestyStatic nlive_200 numpy, separated DynestyDynamic default numpy and jax_cpu, blend Nautilus n_live_200 numpy).
+- A failed warm-start provider records its elapsed cost in a `finally`; the consumer never started so its cost is 0 and the attempt cost is the provider's; any other unknown cost blanks the leg's wall estimates with a reason, never 0.
+- Exporter adds `warm_start`, `provider_wall_s`, `consumer_total_s`; `total_s` on warm-start rows is the combined cost with a matching definition (separated seed 0: 73.69 s → 1150.16 s; blend seed 0: 67.55 s → 1233.72 s). Contract stays `inference-summary@1` (Insight REFERENCE.md allows additive fields; `@2` is already the setups contract). Insight board shows the combined total and names the provider's share.
+- A stuck parameter with NaN R-hat/ESS now yields `not_converged` naming the parameter.
+- Insight `fit` snapshot refreshed from producer main 6df69441b (223 records, 35 accepted / 110 rejected / 78 not assessed, unchanged); new `tests/test_fit_acceptance.py` pins receipt and snapshot agreement, producer revision and the 223-record count.
+- Tests: autofit_inference 82 passed (6 new); PyAutoInsight 186 passed (3 new); both repos' lint/format/`check` green.
+- Data: the B3 pilot output (searches 929 MB, references 413 MB) lives in canonical `fit/autofit_inference/output/` (gitignored); the catalogue rebuilds from committed `results/` rows.
+- Carried: review 06 item 7 (wave-2 manifest identity, per-realization references, versioned judging) → the B5 prompt; item 8 (reassessment provenance) later.
+
+## Original prompt
+
 # `@autofit_inference` + `@PyAutoInsight` B3 pilot post-merge fixes (astra review 06)
 
 Type: bug

@@ -174,7 +174,7 @@ Heart warnings and separate refactor release blockers are not cleared by it.
 **2026-10-14 update (Fable session):** the human ruled the 2026.10.11.1 and
 2026.10.12.1 releases that carried #1679/#1680/#1681 deliberate — the review-05
 findings are live bugs in released code, fixed in the next release, not gates.
-Both fix lists below are ISSUED: review 05 → PyAutoFit#1682 (task
+Both fix lists below are DONE (records `complete/2026/10/search-ext-{a3,b3}-postmerge-fixes.md`); B4a DONE the same day (`complete/2026/10/search-ext-b4a-breakdown-exporter.md`, headline: Nautilus checkpoint I/O = 24.5 % of a gaussian_x1 search.fit); A4 issued. Originally: review 05 → PyAutoFit#1682 (task
 `search-ext-a3-postmerge-fixes`, items 1–7; item 8 stays [later]); review 06 →
 autofit_inference#6 (task `search-ext-b3-postmerge-fixes`, items 1–6; item 7 →
 the B5 prompt, item 8 later). Both run in parallel to PR-open, human `/prm`.
@@ -196,7 +196,7 @@ Both post-merge astra reviews returned FINDINGS. None has been enacted. **The Py
 7. [blocker-for-release] Run disk-backed checks in a writable environment: loading pre-release output folders, interruption and resume, and zipped restore.
 8. [later] Consolidate the remaining backend-specific lifecycle paths: Drawer's dill, Nautilus's own pool context, NSS deleting its checkpoint.
 
-**autofit_inference / Insight, B3 follow-up** (review 06 §3; suggested task `search-ext-b3-postmerge-fixes`; all before wave 2 or B5):
+**autofit_inference / Insight, B3 follow-up** (review 06 §3) — DONE 2026-10-14: autofit_inference#7 + PyAutoInsight#28 merged, record `complete/2026/10/search-ext-b3-postmerge-fixes.md`; items 1–6 done, item 7 → the B5 prompt, item 8 later:
 1. [before-wave-2] Fix the contradictory freeze instructions (protocol §7 `:160`, `state.md:62`, Insight `campaigns.yaml:96`). Freeze `@2` before any scored run on the calibration that already exists; do not restart the pilot. Keep the A2+A4 gate for scored wave 2. (P1)
 2. [before-wave-2] The bootstrap wall-per-success intervals throw away zero-success resamples (`build_catalogue.py:129`). Keep them as unbounded and regenerate the 4 affected cells. (P1)
 3. [before-wave-2] A failed warm-start provider loses its elapsed cost (`_runner.py:825,512,873`), and unknown cost is coerced to 0 in `leg_summary`. Persist the provider time in a `finally`.

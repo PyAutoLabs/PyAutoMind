@@ -508,6 +508,17 @@ One `##` block per item. Fields:
 - breaks-if-wrong: a developer wanting the pre-mainline NSS prototype; recoverable with `git checkout 7cb97c6 -- searches/nss` in autofit_workspace_developer
 - archive-ref: n/a — committed deletion in the A0c PR; bytes recoverable from remote history at pre-delete SHA `7cb97c6d4380324beb6fc724e3edd5ad0592b549` (autofit_workspace_developer main, 2026-10-08)
 
+## autofit_workspace_developer/searches-minimal-nautilus-profile
+- type: file
+- locator: autofit_workspace_developer searches_minimal/nautilus_profile.py, searches_minimal/nautilus_bottleneck_findings.md
+- confidence: 0.95
+- reason: re-homed to autofit_profiling as `scripts/gaussian_x1/nautilus/search_fit_breakdown.py` + `wiki/campaigns/search_fit_breakdown.md` (search-extensibility B4a, autofit_profiling#3); the developer-workspace copy would diverge and mislead.
+- merged: yes
+- condemned: 2026-10-14
+- sweep-after: n/a (committed deletion; history-only)
+- breaks-if-wrong: `searches_minimal/nautilus_sweep.py` and `nautilus_jax_mlp.py` import the deleted module (follow-up `draft/maintenance/autofit_workspace_developer/retire_searches_minimal_nautilus_leftovers.md`); recoverable with `git checkout 06d86ac1 -- searches_minimal/nautilus_profile.py searches_minimal/nautilus_bottleneck_findings.md`
+- archive-ref: n/a — committed deletion in autofit_workspace_developer#30; bytes recoverable from remote history at pre-delete SHA `06d86ac1deed93d3424791e71b47e6c135c7b5f1` (main, 2026-10-14)
+
 ## autolens-profiling/linear-solver-p5-mapper-corpus-large-npz
 - type: branch
 - locator: feature/linear-solver-p5-mapper-corpus (autolens_profiling, tip 70e8a9f)

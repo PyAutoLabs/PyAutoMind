@@ -1,3 +1,22 @@
+## search-ext-b4a-breakdown-exporter
+- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/2
+- completed: 2026-10-14
+- epic: search-extensibility (phase B4a — adopts PyAutoPulse task `autofit_profiling_bootstrap`)
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/3
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/60
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_developer/pull/30
+
+**Shipped:** autofit_profiling#3 (merged 2026-10-14 as 007791a6f; Pages live at https://pyautolabs.github.io/autofit_profiling/, `pulse-refresh` dispatch ran and PyAutoPulse refreshed on main), PyAutoPulse#60 (merged as b593ffb55 after the online receipt step on the branch) and autofit_workspace_developer#30 (merged as 009709bc6), via a human `/prm`; tier judge.
+- `scripts/gaussian_x1/nautilus/search_fit_breakdown.py` (`axis: breakdown`) re-homes the developer-workspace Nautilus anatomy with two variants: the bare-sampler reproduction gate (NN training 53.8 %, bound geometry 25.3 %, likelihood 11.6 %, proposal 5.7 %, wall 22.5 s; log Z −57.455, same as the original) and a full `search.fit` (7,501 likelihood calls, wall 28.4 s). Reproduction tolerance ±10 pp per share; the findings page is `wiki/campaigns/search_fit_breakdown.md`.
+- **Headline finding (epic 1):** in a full `search.fit` on the fast gaussian_x1 likelihood, Nautilus checkpoint I/O (103 writes) is 24.5 % of the wall, NN training 43.4 %, bounds 20.4 %, visualisation 4.1 %, likelihood 1.1 %. The ranked table is `wiki/campaigns/search_fit_bottlenecks.md` and the Pulse check-in "2026-10-14 — B4a at PR; epic-1 ranked table" in `tasks/autofit_profiling_bootstrap.md`. Per-run `likelihood_share` came from autofit_inference `dashboard/summary.json` at 637713b (Nautilus numpy median 1.9 %, n=11; JAX CPU ≈0.01 %) — `catalogue/search_catalogue.json` has no `likelihood_share` field. Epic 2 (the EP loop) is NOT opened.
+- Thin `profiling-summary@2` exporter `scripts/misc/tooling/build_catalogue.py` → `dashboard/catalogue.json` (validator: ok; `lint.yml` up-to-date check; 11 tests). Every record is marked unreviewed with no producer revision; a zero checkpoint time on the bare sampler is an "inapplicable" slot. Badge green, "baseline only, not a verdict".
+- Pulse: `registry.yaml` row `fit` (`profiling-summary@2`, 17 records valid), fixture `tests/fixtures/autofit_profiling_v2.json`, `campaigns.yaml` `autofit` → active ("B4a at PR; B4b next"), receipts/snapshots for `fit` citing autofit_profiling 007791a6f; `check --offline` OK, 207 tests.
+- autofit_workspace_developer: `searches_minimal/nautilus_profile.py` and `nautilus_bottleneck_findings.md` deleted (committed deletion; pre-delete SHA 06d86ac1deed93d3424791e71b47e6c135c7b5f1; `condemned.md` entry `autofit_workspace_developer/searches-minimal-nautilus-profile`). Leftover: `searches_minimal/nautilus_sweep.py` and `nautilus_jax_mlp.py` import the deleted module and `output/nautilus_profile_summary.txt` remains — not retired here; filed as `draft/maintenance/autofit_workspace_developer/retire_searches_minimal_nautilus_leftovers.md`.
+- Pages serves `catalogue.json` at the site root (not under `dashboard/`); Pulse ingests from raw.githubusercontent.com at the resolved sha, so this does not matter for the contract.
+- Next: B4b (EP / graphical baseline port) when scheduled; A4 issued 2026-10-14.
+
+## Original prompt
+
 # `@autofit_profiling` B4a: `search.fit` breakdown cell, `profiling-summary@2` exporter, Pulse `fit` row and the epic-1 bottleneck table
 
 Type: feature
