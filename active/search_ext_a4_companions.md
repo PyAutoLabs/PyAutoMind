@@ -17,7 +17,8 @@ Witness: `autofit_workspace_developer/searches/ultranest` and `pyswarms` (`globe
 Review-minutes: 10
 Unattended: ready
 Filed: 2026-10-14
-Blocked-by: none (PyAutoFit#1685/#1686/#1687 merged 2026-10-14; record `complete/2026/10/search-ext-a4-decompose.md`)
+Issued: 2026-10-14
+Unblocked: PyAutoFit#1685/#1686/#1687 merged 2026-10-14 (record `complete/2026/10/search-ext-a4-decompose.md`)
 
 Three external consumers of the family bases / old test-mode hooks that A4 deprecated for one release. Exact replacement text is in the PR bodies of PyAutoFit#1687 ("Companion changes required") and #1686 ("Companion changes required", the Dynesty case).
 
