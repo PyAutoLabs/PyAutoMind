@@ -10,3 +10,15 @@
 - next: Review and merge #418; independently validated witness implementation, coefficient tolerances and production collection remain separate pending work.
 - repos:
   - autolens_profiling: feature/hst-mge-pilot-qualification
+
+## search-ext-a4-decompose
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1684
+- issued: 2026-10-14
+- prompt: active/search_ext_a4_decompose_seed_family_bases.md
+- session: Claude Code CLI (Fable 5.1); session 51fca711
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/search-ext-a4-decompose
+- epic: search-extensibility
+- next: Opus worker implements three stacked PRs in order (A4a decompose → A4b seed → A4c family bases + Brain/developer companions); each to PR-open, human /prm in order
+- repos:
+  - PyAutoFit: feature/search-ext-a4-decompose

@@ -15,6 +15,7 @@ Witness: `abstract_search.py` is ≤600 lines; BFGS at test-mode level 1 runs a 
 Review-minutes: 45
 Unattended: needs-slicing
 Filed: 2026-10-14
+Issued: 2026-10-14
 
 Authority: epic report `draft/research/autofit/search_extensibility_epic_report.md`
 §3.2 (family bases + the nine invariants), §3.3 "Seed (D4)" with its legacy
