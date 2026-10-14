@@ -4,15 +4,9 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-10-14T14:46:20Z",
+  "updated": "2026-10-14T14:51:01Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "red",
-      "text": "Compact Memory board and one-tap reading queue \u2014 awaiting-input",
-      "url": "https://github.com/PyAutoLabs/PyAutoMemory/issues/130",
-      "prompt": "Use the start-dev skill. active/compact-board-one-tap-reading.md"
-    },
     {
       "severity": "red",
       "text": "Cortex Projects readability \u2014 phase 1 \u2014 blocked",
@@ -20,10 +14,10 @@
       "prompt": "Use the start-dev skill. active/cortex_projects_readability.md"
     },
     {
-      "severity": "red",
-      "text": "Darken image dropdown text \u2014 awaiting-input",
-      "url": "https://github.com/PyAutoLabs/PyAutoEyes/issues/29",
-      "prompt": "Use the start-dev skill. active/image-dropdown-contrast.md"
+      "severity": "yellow",
+      "text": "Compact Memory board and one-tap reading queue \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoMemory/pull/131",
+      "prompt": "Use the start-dev skill. active/compact-board-one-tap-reading.md"
     },
     {
       "severity": "yellow",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoLens PyAutoLens#777 \u2014 search-ext-a0c-downstream",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/777",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoLens PyAutoLens#778 \u2014 search-ext-a1-declare-gate",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/778",
       "prompt": null
     }
   ]

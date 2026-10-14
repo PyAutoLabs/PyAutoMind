@@ -866,7 +866,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/compact-board-one-tap-reading.md">Compact Memory board and one-tap reading queue</a> — <a href="https://github.com/PyAutoLabs/PyAutoMemory/issues/130">issue #130</a> — issued 2026-10-14 — awaiting-input</summary>
+<details><summary>📋 <a href="active/compact-board-one-tap-reading.md">Compact Memory board and one-tap reading queue</a> — <a href="https://github.com/PyAutoLabs/PyAutoMemory/issues/130">issue #130</a> — issued 2026-10-14 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMemory/pull/131">PyAutoMemory#131</a></summary>
 
 ```
 Use the start-dev skill. active/compact-board-one-tap-reading.md
@@ -890,7 +890,7 @@ Use the start-dev skill. active/hst_mge_pilot_qualification.md
 
 </details>
 
-<details><summary>📋 <a href="active/image-dropdown-contrast.md">Darken image dropdown text</a> — <a href="https://github.com/PyAutoLabs/PyAutoEyes/issues/29">issue #29</a> — issued 2026-10-14 — awaiting-input</summary>
+<details><summary>📋 <a href="active/image-dropdown-contrast.md">Darken image dropdown text</a> — <a href="https://github.com/PyAutoLabs/PyAutoEyes/issues/29">issue #29</a> — issued 2026-10-14 — workspace-dev</summary>
 
 ```
 Use the start-dev skill. active/image-dropdown-contrast.md
