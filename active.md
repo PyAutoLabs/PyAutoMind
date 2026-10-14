@@ -16,12 +16,20 @@
 - issued: 2026-10-14
 - prompt: active/search_ext_a5_library_run_ctx_migrations.md
 - session: Claude Code CLI (Fable 5.1); session 51fca711; launched --auto
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/search-ext-a5-library
 - epic: search-extensibility
-- next: Opus worker builds four stacked PRs (simple searches → Dynesty/NUTS/SMC → MultiStart → framework close + template) to PR-open under the ship gate; human /prm in order
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1689
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1690
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1691
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1692
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1689
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1690
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1691
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1692
+- next: human /prm in stack order 1689 → 1690 → 1691 → 1692 (stacked; GitHub retargets each base to main as the one below merges); all four full-suite green serially, byte-identical identifiers + seeded samples vs main df6d218f1; after merge+release: A5 consumers task (draft/refactor/autofit/search_ext_a5_consumers.md), BFGS resume follow-up (pre-existing KeyError on interrupted run), pre-existing workspace searches/ script failures (NUTS divergences, MultiStart n_resurrections, NSS log_evidence_error) are separate drafts
 - repos:
-  - PyAutoFit: feature/search-ext-a5-library
+  - PyAutoFit: feature/search-ext-a5-library, feature/search-ext-a5-nest-blackjax, feature/search-ext-a5-multistart, feature/search-ext-a5-framework
 
 ## search-ext-b4b-ep-baseline
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/4
