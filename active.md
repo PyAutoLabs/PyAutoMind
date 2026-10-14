@@ -63,3 +63,14 @@
   - autofit_inference: feature/search-ext-b5a-wave2
   - PyAutoInsight: feature/search-ext-b5a-wave2
   - PyAutoCortex: feature/search-ext-b5a-wave2
+
+## compact-memory-board
+- issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/130
+- issued: 2026-10-14
+- prompt: active/compact-board-one-tap-reading.md
+- session: Codex; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/compact-memory-board
+- repos:
+  - PyAutoMemory: feature/compact-memory-board
+- next: Implement approved layout-only changes; token management deferred.
