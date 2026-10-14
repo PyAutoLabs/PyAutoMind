@@ -5,16 +5,17 @@
 - issued: 2026-10-14
 - prompt: active/image-dropdown-contrast.md
 - session: Codex; session ID unavailable; launched --auto
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoEyes/pull/30
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/image-dropdown-contrast
 - repos:
   - PyAutoEyes: feature/image-dropdown-contrast
 
-- next: Finish committed review and ship after live Heart RED development override or readiness clears. Local CSS and generated dashboard complete; 87 tests, ruff, live board check (265 images) pass.
+- next: Human /prm for PR #30 after required CI passes; commit 0a642a8. No merge authorized.
 - heart-red-override:
   - authorization: Human “I authorize” for development-only shipping of PyAutoEyes #29.
   - reason: PyAutoFit: CI failure
-  - evidence: 87 tests, ruff lint/format, 265 live image URLs pass; independent working-tree review CLEAN; committed review pending.
+  - evidence: 87 tests, ruff lint/format, 265 live image URLs pass; independent committed review CLEAN at 0a642a8.
   - scope: commit, push, PR only; no merge or release.
 - heart-stale: release validation incomplete: no rehearsal for current source
 
