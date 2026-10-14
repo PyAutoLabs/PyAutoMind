@@ -105,3 +105,17 @@
   - PyAutoArray
   - autolens_workspace_test
 - resume: Audit#603 found incorrect internal-edge Sibson weights and near-edge partition failure. Filed separately per explicit user request; strict expected-failure regressions retained in audit. No repair begun or worktree created. Plan algorithmic repair independently.
+
+## cortex-project-readability
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/521
+- filed: 2026-10-14
+- prompt: active/cortex_projects_readability.md
+- status: blocked
+- classification: library (PyAutoBrain renderer + PyAutoCortex generated pages)
+- suggested-branch: feature/cortex-project-readability
+- blocked-by: search-ext-a4-companions (PyAutoBrain); search-ext-b5a-wave2 (PyAutoCortex)
+- approval: User approved both phases in session: "I approve"; no repeat plan approval required. Tier undeclared; human /prm.
+- next: Recheck claims; once clear, start-library and implement approved presentation plan from issue #521. Preserve Cortex local edits. Follow with draft/feature/cortex/output_summary.md for evidence-backed output accounting.
+- affected-repos:
+  - PyAutoBrain
+  - PyAutoCortex
