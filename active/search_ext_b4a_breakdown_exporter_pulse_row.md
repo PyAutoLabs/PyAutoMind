@@ -13,11 +13,12 @@ Status: formalised
 Consequence: judge
 Epic: search-extensibility
 Phase: B4a
-Blocked-by: PRs for `search-ext-a3-postmerge-fixes` (PyAutoFit#1682) and `search-ext-b3-postmerge-fixes` (autofit_inference#6) open — human-agreed order 2026-10-14
+Blocked-by: none — both group-1 PRs open 2026-10-14 (PyAutoFit#1683, autofit_inference#7)
 Witness: `bin/pyauto-pulse check --offline` passes with a `fit` row in `registry.yaml` whose `dashboard/catalogue.json` validates as `profiling-summary@2`; the autofit_profiling Pages board is live and shows the breakdown cell; `scripts/gaussian_x1/nautilus/search_fit_breakdown.py` reproduces the committed Nautilus anatomy shares (NN training, bounds, likelihood) within their stated tolerance on the laptop CPU; epic 1's ranked bottleneck table for one `search.fit` on a fast likelihood is filed as a Pulse campaign entry under `autofit`, with `likelihood_share` fed by the B2/B3 rows.
 Review-minutes: 20
 Unattended: ready
 Filed: 2026-10-14
+Issued: 2026-10-14
 
 Adopts PyAutoPulse `tasks/autofit_profiling_bootstrap.md` (campaign `autofit`,
 status `ready`) as agreed on 2026-10-07; scope per the epic report

@@ -36,3 +36,16 @@
 - repos:
   - autofit_inference: feature/search-ext-b3-postmerge-fixes
   - PyAutoInsight: feature/search-ext-b3-postmerge-fixes
+
+## search-ext-b4a-breakdown-exporter
+- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/2
+- issued: 2026-10-14
+- session: Claude Code CLI (Fable 5.1); session 51fca711
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/search-ext-b4a-breakdown-exporter
+- epic: search-extensibility
+- next: implement B4a (Opus worker): autofit_profiling PR first, then PyAutoPulse PR (merges after Pages deploy), then autofit_workspace_developer deletion PR; human /prm
+- repos:
+  - autofit_profiling: feature/search-ext-b4a-breakdown-exporter
+  - PyAutoPulse: feature/search-ext-b4a-breakdown-exporter
+  - autofit_workspace_developer: feature/search-ext-b4a-breakdown-exporter
