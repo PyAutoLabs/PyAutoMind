@@ -25,7 +25,7 @@
 - pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1685
 - pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1686
 - pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1687
-- next: human /prm in order #1685 → #1686 → #1687 (stacked; #1687 carries Closes #1684). Open call in #1686 body: MultiStart explicit seed re-keys output folders (hash when not None) vs one-line override keeping it unhashed. Companion changes (Brain sampler_pipeline/reference.md ~129-136, developer-tier ultranest + pyswarms searches) listed in #1687 body — file as separate tasks after merge
+- next: human /prm in order #1685 → #1686 → #1687 (stacked; #1687 carries Closes #1684). Human RULED 2026-10-14: MultiStart explicit-seed re-key ACCEPTED (no override). Codex gpt-6-astra adversary review of the whole stack requested by the human, running; findings (if any) enacted before /prm. Companion changes (Brain sampler_pipeline/reference.md ~129-136, developer-tier ultranest + pyswarms searches) listed in #1687 body — file as separate tasks after merge
 - repos:
   - PyAutoFit: feature/search-ext-a4-decompose
   - PyAutoFit: feature/search-ext-a4-seed
