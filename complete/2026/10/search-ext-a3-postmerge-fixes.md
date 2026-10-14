@@ -1,3 +1,24 @@
+## search-ext-a3-postmerge-fixes
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1682
+- completed: 2026-10-14
+- epic: search-extensibility (phase 3c — post-merge fixes for A2/A3/A3b)
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1683
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1683
+
+**Shipped:** PyAutoFit#1683 (merged 2026-10-14 as 8437a3b76 via a human `/prm`; tier judge). Fixes all seven findings of the post-merge Codex gpt-6-astra review 05 (`draft/research/autofit/search_extensibility_epic_reviews/05_codex_astra_a2_a3_a3b_postmerge.md`). Every finding reproduced on main 911fe05e1 and each fix was test-first. The human ruled the 2026.10.11.1/2026.10.12.1 releases that carried the unfixed findings deliberate, so these ship as fixes in the next release.
+- F1: a pre-A2 `Fitness` pickle with `use_jax_jit=False` restores as an eager objective (legacy key maps onto `compile`); a pickle with neither flag restores eager.
+- F3: new `ExecutionSettings` in `preflight.py`, reached through `NonLinearSearch.execution_settings(analysis)`; preflight traces the resolved settings the backend runs (an eager scalar run is not traced; gradient/batched kinds still are). Dynesty's `use_jax_jit` flows through `fitness_overrides`; the `run(ctx)` bridge, Dynesty and MultiStartGradient build their `Fitness` from the same object.
+- F2: the archive finalizes before `.completed` is written; NSS keeps its checkpoint until the result is written. With `PYAUTO_SKIP_FIT_OUTPUT=1` NSS leaves its checkpoint beside `.completed` (a completed folder never resumes).
+- F4: direct `_fit` entry builds its `PoolFactory` from the analysis, so JAX never forks; the same gap was closed in Dynesty's core count, the initializer's `n_cores` and `make_sneaky_pool` (Zeus `make_pool()` unchanged, no analysis in its signature).
+- F5/F6: `FitContext` closes context-created pools on success too (`PoolFactory.close(failed)` is idempotent); `ctx.update` saves the resume state before `perform_update` and never calls `finalize`. `docs/design/run_ctx.md` notes updated.
+- F7: golden BlackJAX diagnostics are pinned by value, reference and ownership; sentinel -999 fails. CSV tolerance stays rtol 1e-12.
+- Witness (item 7, on the PR): a scratchpad worktree at tag 2026.10.7.1 produced Dynesty and Emcee output folders; the new code loaded them via the Aggregator and took the "Fit Already Completed" path with the same max logL; hard kills (`os._exit(9)`) mid-fit resumed and completed under the new code; zipped restore worked for old- and new-era folders.
+- Tests: full suite 3579 passed / 1 skipped / 4 xfailed; `unittest-nojax` emulation 3274 passed / 170 skipped / 2 xfailed; CI green on unittest 3.12, 3.13 and nojax plus Docs. Sphinx 30 warnings (limit 30). `pytest -n auto` is broken on the PyAutoFit suite (address-based parametrize ids in `test_prior_properties.py`, shared output folders) — pre-existing, run serially.
+- Decided at close-out (human question 2026-10-14): `SneakyPool` stays as the pool factory's `sneaky` strategy; the `make_sneaky_pool` search-level shim is legacy and goes when A4/A5 remove the legacy `_fit` surface.
+- Carried: review 05 item 8 (consolidate Drawer dill / Nautilus pool context / NSS checkpoint lifecycle) → later task, tagged in the epic ledger Resume.
+
+## Original prompt
+
 # `@PyAutoFit` search-extensibility A2/A3/A3b post-merge fixes (astra review 05)
 
 Type: bug

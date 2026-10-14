@@ -186,7 +186,7 @@ then A4. Prior/Message design (#1500) is explicitly outside this epic.
 
 Both post-merge astra reviews returned FINDINGS. None has been enacted. **The PyAutoFit pending-release PRs (#1679/#1680/#1681) must not ship in a release until the release blockers in the first list are fixed.** Verify each finding against current main before fixing it; earlier astra findings all reproduced. Then do A4 or B4 (the human chooses).
 
-**PyAutoFit, A2/A3/A3b follow-up** (review 05 §3; suggested single task `search-ext-a3-postmerge-fixes`, library):
+**PyAutoFit, A2/A3/A3b follow-up** (review 05 §3) — DONE 2026-10-14: PyAutoFit#1683 merged, record `complete/2026/10/search-ext-a3-postmerge-fixes.md`; items 1–7 fixed, item 8 still [later]:
 1. [blocker-for-release] Unpickling an old `Fitness` silently enables JIT (`fitness.py:965` `__setstate__`): keep `use_jax_jit=False` eager, and add a pickle-from-A1 regression test. (F1, P1)
 2. [blocker-for-release] Preflight validates the declared config, not the resolved runtime config (`preflight.py:147,181`). It wrongly rejects `use_jax_jit=False` eager likelihoods and the `gradient_mode="reverse"` override. Resolve the execution settings once and share them between preflight and sampling. (F3)
 3. [blocker-for-release] `.completed` is written before the archive finalizes (`abstract_search.py:966,1215`), and NSS deletes its resume state before result processing (`nss/search.py:541`). A failed archive write therefore leaves an unrecoverable "completed" fit. Finalize first and recover on rerun. This predates A2 but is in scope. (F2, P1)

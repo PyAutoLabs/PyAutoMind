@@ -11,18 +11,6 @@
 - repos:
   - autolens_profiling: feature/hst-mge-pilot-qualification
 
-## search-ext-a3-postmerge-fixes
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1682
-- issued: 2026-10-14
-- session: Claude Code CLI (Fable 5.1); session 51fca711
-- status: library-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/search-ext-a3-postmerge-fixes
-- epic: search-extensibility
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1683
-- next: human /prm on PyAutoFit#1683 (pending-release; all 7 review-05 findings reproduced and fixed test-first; full leg 3579 pass, nojax emulation 3274 pass, Sphinx 30/30 warnings; item-7 witness on the PR). Decisions on the PR: ExecutionSettings in preflight.py via NonLinearSearch.execution_settings(analysis); ctx.update saves resume state only; _pools(analysis) fix extended to Dynesty cores, initializer n_cores, make_sneaky_pool. Note: `pytest -n auto` is broken on the suite (address-based parametrize ids) — pre-existing.
-- repos:
-  - PyAutoFit: feature/search-ext-a3-postmerge-fixes
-
 ## search-ext-b3-postmerge-fixes
 - issue: https://github.com/PyAutoLabs/autofit_inference/issues/6
 - issued: 2026-10-14
