@@ -9,6 +9,7 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked` /
 
 | date | task | effective level | gates (tests/smoke/review/heart) | outcome |
 |------|------|-----------------|----------------------------------|---------|
+| 2026-10-14 | image-dropdown-contrast (Eyes #29), resume | live human “I authorize”, development shipping only | 87 tests + ruff + 265 URLs PASS; independent working-tree CLEAN, committed review pending; Heart RED `PyAutoFit: CI failure`; no merge/release | red-override |
 | 2026-10-14 | image-dropdown-contrast (Eyes #29) | supervised; explicit --auto after plan approval | 87 tests + ruff + 265 live image URLs PASS; smoke n/a (organ CSS); committed review surface unavailable before ship; Heart RED: PyAutoFit: CI failure | parked |
 | 2026-10-13 | hst-mge-pilot-choices (Pulse #59) | safe (docs/small; explicit --auto) | 206 tests + ruff/board PASS; smoke n/a (organ prose); independent Sol CLEAN a4ea984; Heart STALE: release validation incomplete: no rehearsal for current source | PR-open; judge tier, human /prm |
 | 2026-10-12 | scientist-broca-publication (Broca#18) | live human task-specific "conitnue", plan "yeah I approve, go" | 64 tests; owner check 4 assistants/18 records; board/feed render and author review PASS; Heart RED `PyAutoFit: 1 commit(s) behind origin`; `PyAutoGalaxy: 1 commit(s) behind origin`; `PyAutoLens: 1 commit(s) behind origin`; development PR only, no merge/release | red-override |

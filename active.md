@@ -5,13 +5,17 @@
 - issued: 2026-10-14
 - prompt: active/image-dropdown-contrast.md
 - session: Codex; session ID unavailable; launched --auto
-- status: awaiting-input
+- status: workspace-dev
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/image-dropdown-contrast
 - repos:
   - PyAutoEyes: feature/image-dropdown-contrast
 
 - next: Finish committed review and ship after live Heart RED development override or readiness clears. Local CSS and generated dashboard complete; 87 tests, ruff, live board check (265 images) pass.
-- blocker: Heart RED — PyAutoFit: CI failure
+- heart-red-override:
+  - authorization: Human “I authorize” for development-only shipping of PyAutoEyes #29.
+  - reason: PyAutoFit: CI failure
+  - evidence: 87 tests, ruff lint/format, 265 live image URLs pass; independent working-tree review CLEAN; committed review pending.
+  - scope: commit, push, PR only; no merge or release.
 - heart-stale: release validation incomplete: no rehearsal for current source
 
 ## hst-mge-pilot-qualification
