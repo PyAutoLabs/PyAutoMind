@@ -12,7 +12,7 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 3 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 253 |
+| [Backlog](#backlog) | 254 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -248,7 +248,7 @@ Use the start-dev skill. draft/feature/autofit/results_library_epic_report.md
 </details>
 
 <details>
-<summary><b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — 3 queued prompt(s), in order</summary>
+<summary><b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — 4 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — ledger: `draft/research/autofit/search_extensibility_epic.md` — filed 2026-10-07; scoped (4 Opus surveys) and independently reviewed (Codex gpt-6-astra, Claude Fable high) the same day; all §5…</summary>
 
@@ -270,6 +270,14 @@ Use the start-dev skill. draft/bug/autofit/search_kwarg_typos_in_workspace_scrip
 
 ```
 Use the start-dev skill. draft/feature/autofit_inference/nss_settings_for_wave2.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autofit_profiling/search_ext_b4a_breakdown_exporter_pulse_row.md"><code>@autofit_profiling</code> B4a: <code>search.fit</code> breakdown cell, <code>profiling-summary@2</code> exporter, Pulse <code>fit</code> row…</a> — autofit_profiling · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/autofit_profiling/search_ext_b4a_breakdown_exporter_pulse_row.md
 ```
 
 </details>
