@@ -18,25 +18,6 @@
 - repos:
   - PyAutoArray: feature/interferometer-numba-route-gate
 
-## profile-database-identifier-fix
-- issue: https://github.com/PyAutoLabs/autofit_workspace_test/issues/113
-- issued: 2026-10-15
-- prompt: active/profile_database_identifier_collapse.md
-- status: PR-open — https://github.com/PyAutoLabs/autofit_workspace_test/pull/114 (awaiting human /prm, authorized)
-- session: Claude Code CLI (Fable 5.1); session 6ffb59e9; --auto 2026-10-15 night
-- worktree: ~/Code/PyAutoLabs-wt/profile-database-identifier-fix
-- repos:
-  - autofit_workspace_test: feature/profile-database-identifier-fix
-- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/114
-- classification: bug (workspace_test only), Consequence judge, Autonomy safe; post-merge fallout of PyAutoFit#1686
-- suggested-branch: feature/profile-database-identifier-fix
-- epic: search-extensibility
-- heart-red-override:
-  - date: 2026-10-15
-  - authorized-by: live human in session 6ffb59e9, message "I authorize, so do it and then prm then give me the release prompt" (fourth grant)
-  - reasons: "Heart: RED — Release RED; monitoring RED · 10/100 · 415 unresolved"; "[red] release validation FAILED (stage integrate)" (this task's failure); "[red] PyAutoHeart/workflows/Release Integrate: failure"; "[red] PyAutoHands/workflows/Python Version Matrix: failure"; "[red] PyAutoArray/Tests: red"; "[red] autofit_workspace_test/Smoke Tests: red"; "[red] autogalaxy_workspace_test/Smoke Tests: red"; "[red] autolens_workspace_test/Smoke Tests: red"; "[red] Release validation: NOT release_ready"; "[red] Worktree drift"
-  - permitted: commit, push, PR-open, and the /prm merge (authorized in the same message)
-
 ## search-ext-b5c-family
 - issue: https://github.com/PyAutoLabs/autofit_inference/issues/14
 - issued: 2026-10-15

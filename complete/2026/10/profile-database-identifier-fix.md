@@ -1,3 +1,10 @@
+**Shipped:** autofit_workspace_test#114 (merged 2026-10-15 as 763d79d1a via a human-authorized `/prm`; tier judge; Heart RED development override, fourth grant of session 6ffb59e9). Post-merge fallout of the search-extensibility epic: PyAutoFit#1686 (A4 seed) made `SearchOutput.id` prefer the persisted `.identifier`, so the `copytree` profiling mocks (only `unique_tag` rewritten) all keyed to the template's database row and `Release Integrate` run 38698294068 failed on `profiling/aggregator/profile_database.py` ("Database ingested 1 fits, expected 5").
+- Fix: `mock_results.stamp_results` unlinks `.identifier` in each stamped copy, so the identifier is recomputed from the rewritten `unique_tag`.
+- Verified locally with fresh mocks (the generator's manifest cache otherwise reuses the stale set): the full profiling grid runs and writes its JSON. CI: smoke 3.12 + 3.13 green on the PR.
+- This was the only `Release Integrate` failure confirmed as caused by the epic; the next integrate run is the proof.
+
+## Original prompt
+
 # `@autofit_workspace_test` profiling mocks collapse to one database row after PyAutoFit#1686
 
 Type: bug
