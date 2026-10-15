@@ -12,7 +12,7 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 3 |
 | [Planned](#planned) | 8 |
-| [Backlog](#backlog) | 261 |
+| [Backlog](#backlog) | 262 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -2447,12 +2447,20 @@ Use the start-dev skill. draft/docs/howtolens/tutorial_correctness_and_howtogala
 </details>
 
 <details>
-<summary><b>refactor</b> — 12</summary>
+<summary><b>refactor</b> — 13</summary>
 
 <details><summary>📋 <a href="draft/refactor/autonerves/config_yaml_parse_cache.md">Cache <code>autonerves</code> config parsing — 308 YAML files parsed per script run</a> — autonerves · medium · safe · medium</summary>
 
 ```
 Use the start-dev skill. draft/refactor/autonerves/config_yaml_parse_cache.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/cortex/science_ral_folder_restructure.md">Science + RAL folder restructure — point live path config…</a> — cortex · medium · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/refactor/cortex/science_ral_folder_restructure.md
 ```
 
 </details>
