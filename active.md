@@ -4,7 +4,10 @@
 - issued: 2026-10-15
 - prompt: active/interferometer_numba_route_gate_should_scale_wit.md
 - session: Claude Code CLI (Fable 5.1); session 3e3dea38; launched --auto
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/632
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/632
+- decision: decide-and-flag at ship — FFT work term = pocketfft cost_guess (factorisation-aware), constants c_fft 7.62e-10 / c_dc 1.77e-09 fitted on 9 paired timings; PR labelled decision-taken
 - worktree: ~/Code/PyAutoLabs-wt/interferometer-numba-route-gate
 - heart-red-override:
   - date: 2026-10-15
