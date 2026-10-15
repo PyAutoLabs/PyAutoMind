@@ -2,7 +2,9 @@
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/419
 - issued: 2026-10-15
 - prompt: active/interferometer_route_gate_phase2_remeasure.md
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/420 (decision-taken; review CLEAN after F1/F2 fix 3237286; Heart RED override; merge via human /prm)
+- follow-up: review F3 — check results/notes/interferometer_likelihood_decision_matrix_2026_09.md for gate-60-as-current wording
 - session: Claude Code CLI (Fable 5.1); session 3e3dea38; launched --auto
 - worktree: ~/Code/PyAutoLabs-wt/interferometer-route-gate-phase2
 - classification: feature (workspace, autolens_profiling), Difficulty small, Autonomy supervised (effective supervised under --auto), Consequence glance; compute: laptop, routing + log-det only, timings not re-measured
