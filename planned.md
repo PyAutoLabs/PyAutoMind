@@ -10,7 +10,6 @@
 - [knn-partial-point-block](#knn-partial-point-block)
 - [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
 - [cortex-project-readability](#cortex-project-readability)
-- [search-ext-a5-capmatrix-cards](#search-ext-a5-capmatrix-cards)
 - [ral-category-paths-phase2](#ral-category-paths-phase2)
 - [adaptsplit-logdet-backend-parity](#adaptsplit-logdet-backend-parity)
 - [interferometer-numba-route-gate](#interferometer-numba-route-gate)
