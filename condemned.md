@@ -58,6 +58,7 @@ a sweep), mirroring the Heart ↔ vitals template. See the decision:
 - [autofit_workspace_developer/searches-nss](#autofit_workspace_developersearches-nss)
 - [autofit_workspace_developer/searches-minimal-nautilus-profile](#autofit_workspace_developersearches-minimal-nautilus-profile)
 - [autofit_workspace_developer/searches-minimal-nautilus-leftovers](#autofit_workspace_developersearches-minimal-nautilus-leftovers)
+- [autofit_workspace_developer/ep-graphical-baselines](#autofit_workspace_developerep-graphical-baselines)
 - [autolens-profiling/linear-solver-p5-mapper-corpus-large-npz](#autolens-profilinglinear-solver-p5-mapper-corpus-large-npz)
 
 <!-- toc:end -->
@@ -531,6 +532,17 @@ One `##` block per item. Fields:
 - sweep-after: n/a (committed deletion; history-only)
 - breaks-if-wrong: a developer wanting the old Nautilus n_live sweep or JAX-MLP timing script; recoverable with `git checkout 009709bc -- searches_minimal/nautilus_sweep.py searches_minimal/nautilus_jax_mlp.py searches_minimal/output/nautilus_profile_summary.txt`; a still-wanted measurement belongs in autofit_profiling as a cell
 - archive-ref: n/a — committed deletion in #32; bytes recoverable from remote history at pre-delete SHA `009709bc6f87a2e56ef0c9e9839a1c686ab77790` (main, 2026-10-14)
+
+## autofit_workspace_developer/ep-graphical-baselines
+- type: file
+- locator: autofit_workspace_developer ep/ (README.md, fit.py, simulator.py, sanity.py, util.py, config/, dataset/, profiles/), graphical/ (same layout); 35 files
+- confidence: 0.95
+- reason: re-homed to autofit_profiling as `scripts/gaussian_1d_ep/{ep,graphical}/baseline.py` with committed results (9 setups, 31 records) and `wiki/campaigns/ep_graphical_baselines.md` (search-extensibility B4b, autofit_profiling#5, merged 2026-10-15); the developer copies would diverge and mislead. Launched under --auto 2026-10-15 (autofit_workspace_developer#34, PR #35), Consequence glance.
+- merged: pending (PR #35)
+- condemned: 2026-10-15
+- sweep-after: n/a (committed deletion; history-only)
+- breaks-if-wrong: a developer wanting the May-2026 EP/graphical scale-up baseline scripts or their cProfile hotspot files; recoverable with `git checkout 3df620e0 -- ep graphical`; `aggregate_profiles.py` at the repo root still loops over the two deleted dirs and is dead (follow-up, out of #34's scope)
+- archive-ref: n/a — committed deletion in #35; bytes recoverable from remote history at pre-delete SHA `3df620e0dc5bed5c1f43a6aaf205dc976d4a43e4` (main, 2026-10-15)
 
 ## autolens-profiling/linear-solver-p5-mapper-corpus-large-npz
 - type: branch

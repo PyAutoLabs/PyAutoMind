@@ -58,7 +58,7 @@
 - issued: 2026-10-15
 - prompt: active/retire_ep_graphical_after_b4b.md
 - session: Claude Code CLI (Fable 5.1); session 6ffb59e9; launched --auto
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge (glance: tiered merge pending — repo has no CI checks)
 - epic: search-extensibility
 - worktree: ~/Code/PyAutoLabs-wt/search-ext-b4b-dev-retire
 - heart-red-override:
@@ -68,3 +68,5 @@
   - permitted: commit, push, PR-open; merge separate
 - repos:
   - autofit_workspace_developer: feature/search-ext-b4b-dev-retire
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_developer/pull/35
+- next: tiered merge (glance) once the human rules on the no-CI-checks case; then /prm close-out; follow-up: delete dead `aggregate_profiles.py` (out of #34 scope)

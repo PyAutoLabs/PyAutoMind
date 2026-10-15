@@ -874,7 +874,7 @@ Use the start-dev skill. active/hst_mge_pilot_qualification.md
 
 </details>
 
-<details><summary>📋 <a href="active/retire_ep_graphical_after_b4b.md"><code>@autofit_workspace_developer</code> retire <code>ep/</code> and <code>graphical/</code> via Gut now that B4b re-homed them…</a> — <a href="https://github.com/PyAutoLabs/autofit_workspace_developer/issues/34">issue #34</a> — issued 2026-10-15 — workspace-dev</summary>
+<details><summary>📋 <a href="active/retire_ep_graphical_after_b4b.md"><code>@autofit_workspace_developer</code> retire <code>ep/</code> and <code>graphical/</code> via Gut now that B4b re-homed them…</a> — <a href="https://github.com/PyAutoLabs/autofit_workspace_developer/issues/34">issue #34</a> — issued 2026-10-15 — workspace-shipped, awaiting-merge (glance: tiered merge pending — repo has no CI checks) — PRs: <a href="https://github.com/PyAutoLabs/autofit_workspace_developer/pull/35">autofit_workspace_developer#35</a></summary>
 
 ```
 Use the start-dev skill. active/retire_ep_graphical_after_b4b.md
