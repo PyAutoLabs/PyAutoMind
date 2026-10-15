@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1887 records across 9 buckets.
+1888 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -275,6 +275,7 @@ markers; everything below GENERATED is rebuilt.
 - [pulse-aris-witness-tables](2026/10/pulse-aris-witness-tables.md)
 - [pulse-campaign-control-room](2026/10/pulse-campaign-control-room.md) — One editable/copyable check-in prompt, 11 campaign rows, 25 open tasks, then detailed measurement evidence. 26…
 - [pulse-checkin-2026-10-13-evening](2026/10/pulse-checkin-2026-10-13-evening.md)
+- [pulse-interferometer-knowledge](2026/10/pulse-interferometer-knowledge.md)
 - [pulse-interferometer-large-mask](2026/10/pulse-interferometer-large-mask.md) — Ledger task `interferometer_large_mask_aris` added to the PyAutoPulse interferometer campaign (linking PyAutoA…
 - [pulse-live-feed](2026/10/pulse-live-feed.md)
 - [pulse-public-links](2026/10/pulse-public-links.md) — The two public-surface one-liners left from the PyAutoPulse organ birth: `.github/profile/README.md` organ tab…

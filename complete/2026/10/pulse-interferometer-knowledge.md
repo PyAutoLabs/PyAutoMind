@@ -1,3 +1,28 @@
+## Summary
+
+Shipped in PyAutoPulse#65 (merge f6967ccc, 2026-10-15). A `## Knowledge` section was added to
+`tasks/interferometer_large_mask_aris.md`, and two decision records were published and indexed
+in `decisions.yaml`: `decisions/adaptsplit-zero-weight-delaunay-only.md` and
+`decisions/interferometer-route-gate-cost-model.md`. The `campaigns.yaml` next-lines were
+refreshed and the board was re-rendered. Anchor issue PyAutoPulse#62 stays open as the
+campaign anchor.
+
+## Ship notes
+
+- Heart RED override: granted by the live human in session 3e3dea38 on 2026-10-15 (late),
+  "Yes, override (Recommended)".
+- Both decision records were explicitly directed by the human: "Yes, record it as my decision".
+- Consequence: notify, so no shadow row. PyAutoPulse is not in the published set, so there is
+  no pending-release.
+
+## Where to pick up
+
+autolens_profiling #420 has merged (33779e46): re-pin the six-cell table at the next Pulse
+check-in. The project-side pointer to these pages is queued by the #420 close-out as the Mind
+draft `draft/docs/autolens_profiling/decision_matrix_note_gate_wording.md`.
+
+## Original prompt
+
 # Interferometer large-mask profiling: write the knowledge section and record two human decisions in PyAutoPulse
 
 Type: docs
