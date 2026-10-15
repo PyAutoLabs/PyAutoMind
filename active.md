@@ -1,3 +1,20 @@
+## reuse-cholesky-factor
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/633
+- issued: 2026-10-15
+- prompt: active/reuse_cholesky_factor_for_solve_and_log_det.md
+- status: library-dev
+- session: Claude Code CLI (Fable 5.1); session 3e3dea38; launched --auto
+- worktree: ~/Code/PyAutoLabs-wt/reuse-cholesky-factor
+- classification: feature (library, PyAutoArray), Difficulty small, Autonomy safe (effective safe under --auto), Consequence glance; campaign PyAutoPulse#62 (interferometer_large_mask_aris)
+- suggested-branch: feature/reuse-cholesky-factor
+- heart-red-override:
+  - date: 2026-10-15
+  - authorized-by: live human in session 3e3dea38, AskUserQuestion 'L1 now under override (Recommended)', 2026-10-15 late
+  - reasons: "Heart: RED — Release RED; monitoring RED · 10/100 · 415 unresolved"; "[red] release validation FAILED (stage integrate)"; "[red] PyAutoHands/workflows/Python Version Matrix: failure"; "[red] PyAutoHeart/workflows/Release Integrate: failure"; "[red] PyAutoMind/workflows/Lifecycle Drift: failure"; "[red] PyAutoArray/Tests: red"; "[red] autofit_workspace_test/Smoke Tests: red"; "[red] autogalaxy_workspace_test/Smoke Tests: red"; "[red] autolens_workspace_test/Smoke Tests: red"; "[red] Release validation: NOT release_ready"; "[red] Worktree drift"; "[red] autolens_inference: red"; "[red] autolens_profiling: red"; "[red] euclid_strong_lens_modeling_pipeline: red" (as listed on PyAutoArray#626)
+  - permitted: commit, push, PR-open; merge separate
+- repos:
+  - PyAutoArray: feature/reuse-cholesky-factor
+
 ## interferometer-route-gate-phase2
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/419
 - issued: 2026-10-15

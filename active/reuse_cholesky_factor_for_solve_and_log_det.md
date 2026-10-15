@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: safe
 Priority: high
 Status: formalised
+Issued: 2026-10-15
 Consequence: glance
 Witness: on the Aris 125x125 interferometer setup (Delaunay + AdaptSplit, use_positive_only_solver=False, numba route) one likelihood call drops by >=15% at 1,405 vertices and >=35% at 2,947 vertices, with reconstruction unchanged to 1e-10 relative and log_det_curvature_reg_matrix_term unchanged to 1e-9
 Review-minutes: 3
