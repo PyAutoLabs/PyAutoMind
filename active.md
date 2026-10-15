@@ -16,7 +16,11 @@
 - issued: 2026-10-15
 - prompt: active/search_ext_b5b2_remainder_and_summary_records.md
 - session: Claude Code CLI (Fable 5.1); session 6ffb59e9; launched --auto
-- status: workspace-dev
+- status: pr-open (supervised --auto; Heart RED dev override) — 409930 pulled + judged (12,750 wave-2 rows, wave 2 closed), inference-summary@3 shards, reliability floor; awaiting human /prm in order autofit_inference#13 → PyAutoCortex#68 → PyAutoInsight#31 (merge #31 right after #13, before the 03:55 UTC Insight cron); then post-merge fit @3 capture + `pyauto-insight check` online + drop registry `migrating_from`
+- workspace-pr: https://github.com/PyAutoLabs/autofit_inference/pull/13
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/68
+- library-pr: https://github.com/PyAutoLabs/PyAutoInsight/pull/31
+- decision-taken: contract is inference-summary@3 (@2 already taken by setups/prepared-problems); per-protocol-per-leg shards (101, max 1.56 MB, 66 MB total); registry `migrating_from`; floor as §8 note + N1; zero-success legs = unreliable
 - epic: search-extensibility
 - worktree: ~/Code/PyAutoLabs-wt/search-ext-b5b2-remainder
 - heart-red-override:
@@ -28,7 +32,7 @@
   - autofit_inference: feature/search-ext-b5b2-remainder
   - PyAutoInsight: feature/search-ext-b5b2-remainder
   - PyAutoCortex: feature/search-ext-b5b2-remainder
-- compute: RAL 409930_[0-19]%20 --partition=ral — wave-2 probe-first remainder (980 runs); 10/20 tasks COMPLETED, 10 RUNNING at 1h19 on 2026-10-15 evening; pulled and judged by this task
+- compute: RAL 409930_[0-19]%20 --partition=ral — all 20 tasks COMPLETED 2026-10-15 16:08–17:38 UTC (wall 1:30); every task pulled (results/ only, 980 rows + 20 byte-identical probe rows); output/ and SLURM logs remain on RAL; no compute running
 
 ## search-ext-kwarg-typos
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1693
