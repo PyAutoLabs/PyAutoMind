@@ -2,7 +2,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/62
 - issued: 2026-10-15
 - prompt: active/interferometer_knowledge_writeup.md
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/65 (ledger only; board check OK, 207 tests; Heart RED override; merge via human /prm)
 - session: Claude Code CLI (Fable 5.1); session 3e3dea38; executed by an Opus worker
 - worktree: ~/Code/PyAutoLabs-wt/pulse-interferometer-knowledge
 - classification: docs (PyAutoPulse ledger), Difficulty small, Autonomy safe, Consequence notify; campaign PyAutoPulse#62 (interferometer_large_mask_aris)
