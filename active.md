@@ -9,14 +9,14 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/624
 - worktree: ~/Code/PyAutoLabs-wt/delaunay-nn-numba
 - phase: 1 of 2 (numba Sibson kernel) shipped as PR #624; phase 2 = routing audit (Aris measurement already shows all meshes on InversionInterferometerSparseNumba; remaining: NaN-weight guard, DelaunayNN routing tests, imaging audit + timing)
-- next: human /prm on PyAutoArray#624, then phase 2 on a fresh branch from main
+- next: human /prm on PyAutoArray#624 (CI green); phase 2 in progress stacked on it (branch feature/delaunay-nn-numba-routing)
 - heart-red-override:
   - date: 2026-10-15
   - authorized-by: live human in session 0b91c774 ("I override, tests will be handled once the epic refactor elsewhere is sorted")
   - reasons: see issue #623 (verbatim reason strings recorded there)
   - permitted: commit, push, PR-open; merge separate
 - repos:
-  - PyAutoArray: feature/delaunay-nn-numba
+  - PyAutoArray: feature/delaunay-nn-numba, feature/delaunay-nn-numba-routing
 
 ## hst-mge-pilot-qualification
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/417
