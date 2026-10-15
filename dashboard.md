@@ -842,7 +842,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/adaptsplit_regularization_log_det_differs_betwee.md">AdaptSplit regularization log-det differs between numba and JAX backends</a> — issued 2026-10-15</summary>
+<details><summary>📋 <a href="active/adaptsplit_regularization_log_det_differs_betwee.md">AdaptSplit regularization log-det differs between numba and JAX backends</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/627">issue #627</a> — issued 2026-10-15 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/631">PyAutoArray#631</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 Use the start-dev skill. active/adaptsplit_regularization_log_det_differs_betwee.md
@@ -2926,6 +2926,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoArray**
 
+- [PyAutoArray#631](https://github.com/PyAutoLabs/PyAutoArray/pull/631) — `active/adaptsplit_regularization_log_det_differs_betwee.md`
 - [PyAutoArray#630](https://github.com/PyAutoLabs/PyAutoArray/pull/630) — `complete/2026/10/interferometer-sparse-data-vector.md`
 
 **PyAutoFit**
