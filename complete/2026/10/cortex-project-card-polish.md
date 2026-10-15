@@ -1,3 +1,13 @@
+Cortex project cards now open with Registered, Local and RAL in consistent accent text, then Current position with an icon-only resume copy button at the right. The explicit registration prefix and registration PR reference are removed from the displayed Current position. Registration uses the explicit prefix or a ledger-opened note; absent dates say not recorded. Source ledgers, copy payloads and state feeds are preserved. Runs split literal semicolon-separated clauses onto readable lines; full wording remains available. Markdown mirrors the metadata order and retains the copyable prompt.
+
+Merged PyAutoBrain#528 (545c69d; merge a21e902f030f9fec15f7bafd1e75aec93fcca601) on 2026-10-15 through human /prm; issue #527 closed. All 1274 local Brain tests passed. Both Python 3.12/3.13 CI jobs passed, including discovery and tenant-firewall steps. Four actual-ledger Chromium checks passed at 390/1280px in light/dark mode (keyboard disclosure/copy, icon geometry, expanded overflow); author visual/diff review passed. Scientific workspace smoke not applicable to a renderer-only change. Development-only Heart RED override recorded verbatim in issue, PR, active registry and autonomy log; merge separately authorized by /prm.
+
+Cortex Dashboard Refresh dispatched at https://github.com/PyAutoLabs/PyAutoCortex/actions/runs/38795269947; Pages run https://github.com/PyAutoLabs/PyAutoCortex/actions/runs/38795298602 succeeded. Live HTML verified the registration date, unfolded locations, removal of the registration PR prose, and 9 accessible icon-only resume buttons. Preview and screenshots remain under tmp/cortex-card-polish/ in the workspace, outside the removable task worktree. Phase-2 output accounting remains separate and unimplemented.
+
+Close-out check: task-scoped lifecycle validation passes. The global check reports an unrelated pre-existing orphan active/hst_mge_pilot_qualification.md (introduced in 37b04992); left unchanged. Reconcile reports no suspects.
+
+## Original prompt
+
 # Cortex project card polish
 
 Targets: @PyAutoBrain

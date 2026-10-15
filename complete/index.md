@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1882 records across 9 buckets.
+1883 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -158,6 +158,7 @@ markers; everything below GENERATED is rebuilt.
 - [compact-memory-board](2026/10/compact-memory-board.md)
 - [compile-builder-hst-mge](2026/10/compile-builder-hst-mge.md) — Shipped one explicit, isolated HST/MGE fp64 jit current-runtime compile workload; broader profiling campaign r…
 - [cortex-find-script-symlink](2026/10/cortex-find-script-symlink.md)
+- [cortex-project-card-polish](2026/10/cortex-project-card-polish.md)
 - [cortex-project-readability](2026/10/cortex-project-readability.md) — Phase 1 of the human-approved Cortex Projects redesign (#521). Brain's Cortex conductor (`agents/conductors/co…
 - [critical-curves-dispatch-audit](2026/10/critical-curves-dispatch-audit.md) — Phase 3a evidence and contract shipped. Research, raw CPU JSON/PNG, frozen measured source and cumulative wiki…
 - [dashboard-checkin-prompts](2026/10/dashboard-checkin-prompts.md) — Thirteen individually approved ongoing-conversation prompts implemented and merged across eleven board owners.…
