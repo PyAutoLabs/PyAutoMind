@@ -5,9 +5,11 @@
 - issued: 2026-10-15
 - prompt: active/make_delaunaynn_fast_on_the_numba_numpy.md
 - session: Claude Code CLI (Opus 5.5); session 0b91c774
-- status: library-dev
+- status: library-shipped, awaiting-merge (phase 1); phase 2 not started
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/624
 - worktree: ~/Code/PyAutoLabs-wt/delaunay-nn-numba
-- phase: 1 of 2 (numba Sibson kernel); phase 2 = routing audit
+- phase: 1 of 2 (numba Sibson kernel) shipped as PR #624; phase 2 = routing audit (Aris measurement already shows all meshes on InversionInterferometerSparseNumba; remaining: NaN-weight guard, DelaunayNN routing tests, imaging audit + timing)
+- next: human /prm on PyAutoArray#624, then phase 2 on a fresh branch from main
 - heart-red-override:
   - date: 2026-10-15
   - authorized-by: live human in session 0b91c774 ("I override, tests will be handled once the epic refactor elsewhere is sorted")
