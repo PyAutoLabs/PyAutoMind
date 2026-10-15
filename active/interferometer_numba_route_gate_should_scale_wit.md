@@ -10,6 +10,7 @@ Autonomy: supervised
 Priority: normal
 Memory: wiki/galaxies/sources/massive-ellipticals.md; wiki/lensing/sources/dark-matter-substructure.md; wiki/galaxies/sources/cosmos-survey.md
 Status: formalised
+Issued: 2026-10-15
 Consequence: glance
 Witness: on both the Aris 125x125 (5,496 px) and 512x512 (91,507 px) masks, the default routing picks the faster of numba direct_conv vs NumPy FFT curvature at every tested vertex count (1.4k-5.7k), asserted by a routing test
 Review-minutes: 3

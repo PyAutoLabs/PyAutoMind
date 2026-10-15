@@ -144,3 +144,26 @@
   - autofit_inference
   - PyAutoCortex
   - PyAutoMemory
+
+## adaptsplit-logdet-backend-parity
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/627
+- filed: 2026-10-15
+- prompt: active/adaptsplit_regularization_log_det_differs_betwee.md
+- classification: library
+- suggested-branch: feature/adaptsplit-logdet-backend-parity
+- blocked-by: interferometer-sparse-data-vector (using PyAutoArray)
+- affected-repos:
+  - PyAutoArray
+- resume: plan on #627; launched --auto (effective supervised, decide-and-flag at ship) with the Heart RED development override recorded on the issue (session 3e3dea38, 2026-10-15). Start with /start_library once the PyAutoArray claim frees; reproduce on the 125x125 cache first (H parity before factorization).
+
+## interferometer-numba-route-gate
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/628
+- filed: 2026-10-15
+- prompt: active/interferometer_numba_route_gate_should_scale_wit.md
+- classification: both
+- suggested-branch: feature/interferometer-numba-route-gate
+- blocked-by: interferometer-sparse-data-vector (using PyAutoArray); runs after adaptsplit-logdet-backend-parity by the human's ordering
+- affected-repos:
+  - PyAutoArray
+  - autolens_profiling
+- resume: plan on #628; launched --auto (effective supervised) with the Heart RED development override recorded on the issue (session 3e3dea38, 2026-10-15). DelaunayNN #624/#625 merged 2026-10-15 so no factory.py conflict. Library phase first, autolens_profiling re-measurement record second.

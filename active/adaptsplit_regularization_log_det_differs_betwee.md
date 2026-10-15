@@ -9,6 +9,7 @@ Autonomy: supervised
 Priority: high
 Memory: reading-queue.md; wiki/lensing/sources/dark-matter-substructure.md; wiki/galaxies/sources/massive-ellipticals.md
 Status: formalised
+Issued: 2026-10-15
 Consequence: glance
 Witness: at identical parameters on the Aris interferometer setup, numba and JAX log_det_regularization_matrix_term agree to <1e-3 (currently 2443.22 vs 2561.98), with a unit test pinning the value on an ill-conditioned AdaptSplit matrix
 Review-minutes: 3

@@ -9,6 +9,7 @@ Autonomy: safe
 Priority: normal
 Memory: wiki/lensing/sources/dark-matter-substructure.md; reading-queue.md; wiki/galaxies/sources/cosmos-survey.md
 Status: formalised
+Issued: 2026-10-15
 Consequence: glance
 Witness: on the Aris 512x512 setup (91,507 masked pixels, 5,746 Delaunay vertices, use_jax=False) peak RSS of one likelihood call drops from 7.2 GB to <= ~3.5 GB with log likelihood unchanged to 1e-8
 Review-minutes: 3
