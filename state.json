@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-10-15T18:05:30Z",
+  "updated": "2026-10-15T18:09:48Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "RAL category paths \u2014 phase 2: repoint the claimed repos, then drop\u2026 \u2014 workspace-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autofit_inference/pull/15",
+      "prompt": "Use the start-dev skill. active/ral_category_paths_phase2.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1695 \u2014 search-ext-kwarg-typos",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1695",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#652 \u2014 search-ext-a0c-downstream",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/652",
       "prompt": null
     }
   ]

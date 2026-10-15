@@ -858,7 +858,7 @@ Use the start-dev skill. active/adaptsplit_regularization_log_det_differs_betwee
 
 </details>
 
-<details><summary>📋 <a href="active/capability_matrix_links_b3_catalogue_cards.md"><code>@PyAutoFit</code> capability matrix: link each search row to its autofit_inference catalogue card</a> — issued 2026-10-15</summary>
+<details><summary>📋 <a href="active/capability_matrix_links_b3_catalogue_cards.md"><code>@PyAutoFit</code> capability matrix: link each search row to its autofit_inference catalogue card</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1694">issue #1694</a> — issued 2026-10-15 — library-dev</summary>
 
 ```
 Use the start-dev skill. active/capability_matrix_links_b3_catalogue_cards.md
@@ -890,7 +890,7 @@ Use the start-dev skill. active/interferometer_numba_route_gate_should_scale_wit
 
 </details>
 
-<details><summary>📋 <a href="active/interferometer_sparse_inversion_compute_data_vec.md">Interferometer sparse inversion: compute data vector without the dense mapping matrix</a> — issued 2026-10-15</summary>
+<details><summary>📋 <a href="active/interferometer_sparse_inversion_compute_data_vec.md">Interferometer sparse inversion: compute data vector without the dense mapping matrix</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/626">issue #626</a> — issued 2026-10-15 — library-dev</summary>
 
 ```
 Use the start-dev skill. active/interferometer_sparse_inversion_compute_data_vec.md
@@ -898,7 +898,7 @@ Use the start-dev skill. active/interferometer_sparse_inversion_compute_data_vec
 
 </details>
 
-<details><summary>📋 <a href="active/ral_category_paths_phase2.md">RAL category paths — phase 2: repoint the claimed repos, then drop…</a> — issued 2026-10-15</summary>
+<details><summary>📋 <a href="active/ral_category_paths_phase2.md">RAL category paths — phase 2: repoint the claimed repos, then drop…</a> — <a href="https://github.com/PyAutoLabs/PyAutoCortex/issues/67">issue #67</a> — issued 2026-10-15 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autofit_inference/pull/15">autofit_inference#15</a>, <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/69">PyAutoCortex#69</a></summary>
 
 ```
 Use the start-dev skill. active/ral_category_paths_phase2.md
