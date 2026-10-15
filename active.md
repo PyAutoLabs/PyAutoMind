@@ -1,24 +1,4 @@
 
-## reuse-cholesky-factor
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/633
-- issued: 2026-10-15
-- prompt: active/reuse_cholesky_factor_for_solve_and_log_det.md
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/634
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/634
-- witness: speed PASS (2,947 −51%; 1,405 −22.4% repeat / −24.3% profile, run 1 −7.7% under load); log det bit-identical; logL ≤1.1e-11 rel; reconstruction 1e-10 clause unattainable at 2,947 (cond 7.7e14), Cholesky measured more accurate than LU — flagged for human; RED override → merge via human /prm
-- session: Claude Code CLI (Fable 5.1); session 3e3dea38; launched --auto
-- worktree: ~/Code/PyAutoLabs-wt/reuse-cholesky-factor
-- classification: feature (library, PyAutoArray), Difficulty small, Autonomy safe (effective safe under --auto), Consequence glance; campaign PyAutoPulse#62 (interferometer_large_mask_aris)
-- suggested-branch: feature/reuse-cholesky-factor
-- heart-red-override:
-  - date: 2026-10-15
-  - authorized-by: live human in session 3e3dea38, AskUserQuestion 'L1 now under override (Recommended)', 2026-10-15 late
-  - reasons: "Heart: RED — Release RED; monitoring RED · 10/100 · 415 unresolved"; "[red] release validation FAILED (stage integrate)"; "[red] PyAutoHands/workflows/Python Version Matrix: failure"; "[red] PyAutoHeart/workflows/Release Integrate: failure"; "[red] PyAutoMind/workflows/Lifecycle Drift: failure"; "[red] PyAutoArray/Tests: red"; "[red] autofit_workspace_test/Smoke Tests: red"; "[red] autogalaxy_workspace_test/Smoke Tests: red"; "[red] autolens_workspace_test/Smoke Tests: red"; "[red] Release validation: NOT release_ready"; "[red] Worktree drift"; "[red] autolens_inference: red"; "[red] autolens_profiling: red"; "[red] euclid_strong_lens_modeling_pipeline: red" (as listed on PyAutoArray#626)
-  - permitted: commit, push, PR-open; merge separate
-- repos:
-  - PyAutoArray: feature/reuse-cholesky-factor
-
 ## search-ext-b5c-family
 - issue: https://github.com/PyAutoLabs/autofit_inference/issues/14
 - issued: 2026-10-15

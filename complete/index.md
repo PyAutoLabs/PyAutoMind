@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1888 records across 9 buckets.
+1890 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -295,6 +295,7 @@ markers; everything below GENERATED is rebuilt.
 - [retire-nautilus-leftovers](2026/10/retire-nautilus-leftovers.md)
 - [retire-nested-claude-md-pointers](2026/10/retire-nested-claude-md-pointers.md)
 - [retired-repo-sidecars](2026/10/retired-repo-sidecars.md) — Aggregate only repositories in a valid current Heart monitoring roster; preserve all caches, configured advers…
+- [reuse-cholesky-factor](2026/10/reuse-cholesky-factor.md)
 - [runtime-single-jit-median](2026/10/runtime-single-jit-median.md)
 - [sandbox-citation-agents-md](2026/10/sandbox-citation-agents-md.md)
 - [scientist-available-resources](2026/10/scientist-available-resources.md)
