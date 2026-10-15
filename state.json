@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
-  "updated": "2026-10-15T19:37:55Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 2 in flight",
+  "updated": "2026-10-15T19:58:14Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "AdaptSplit regularization log-det differs between numba and JAX backends \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/631",
-      "prompt": "Use the start-dev skill. active/adaptsplit_regularization_log_det_differs_betwee.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -27,7 +21,7 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#631 \u2014 AdaptSplit regularization log-det differs between numba and JAX backends",
+      "text": "pending release: PyAutoArray PyAutoArray#631 \u2014 adaptsplit-logdet-backend-parity",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/631",
       "prompt": null
     },
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1690 \u2014 search-ext-a5-library",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1690",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1691 \u2014 search-ext-a5-library",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1691",
       "prompt": null
     }
   ]

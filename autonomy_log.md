@@ -449,7 +449,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 16 (stage 1: 16, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14
+Count toward 20: 17 (stage 1: 17, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -494,3 +494,4 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-10-15 | delaunay-nn-numba (PyAutoArray#624 / PyAutoArray#625) | glance | tests 2026+2031 passed, nojax emulated / smoke 4/4 / review FINDINGS×2 fixed + CLEAN / heart stale+RED (dev override) / witness met (0.57 vs 0.41 s) | merged-unchanged | 1 |
 | 2026-10-15 | interferometer-sparse-data-vector (PyAutoArray#626 / PyAutoArray#630) | glance | tests 2033 pass/4 xfail (downstream n/a, private API) · smoke 92/92 scripts + 4/4 notebooks (autolens, autogalaxy, autolens_test; 15 interferometer) · review CLEAN (independent Opus; claim JAX s8 RSS/logL basis-cited) · Heart RED `release validation FAILED (stage integrate)`; `PyAutoFit: open PR 8d old` (launch reasons on #626) · witness PASS (RSS 7.17→3.14 GB; logL ≤2.5e-11 rel, decision-taken) | merged-unchanged | 1 |
 | 2026-10-15 | search-ext-a5-capmatrix-cards (PyAutoFit#1696) | glance | tests 3817 passed (3 CI unittest legs green) / smoke n/a (docs generator only) / review FINDINGS fixed, 1 low left / heart RED-override / witness 3 of 3 met | merged-unchanged | 1 |
+| 2026-10-15 | adaptsplit-logdet-backend-parity (PyAutoArray#631) | glance | tests PyAutoArray 2039 passed/4 xfailed, PyAutoGalaxy 1357, PyAutoLens 832/1 xfailed; smoke 151/151 (autogalaxy, autolens, autolens_test, euclid, howtolens); independent Opus review CLEAN on f052e381 (first pass FINDINGS: KNNBarycentric region-wide zeros → resolved by human scoping); Heart RED `release validation FAILED (stage integrate)`; commit/push/PR-open only, merge via human /prm · witness PASS (synthetic ill-conditioned AdaptSplit: H parity 3.6e-15, log-dets 2.1e-9 apart, both within 1.7e-9 of a 50-digit reference; Aris not re-run) | merged-unchanged | 1 |
