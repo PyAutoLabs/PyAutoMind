@@ -1,3 +1,12 @@
+- summary: Campaign records now route by information type: inference through Insight, profiling through Pulse, project-owned detailed evidence, Memory pointers and reusable lessons. Replaced Memory's duplicate A5 summary with links to Insight's already-merged wave records and source catalogue/protocol, preserving pinned provenance. Earlier historical benchmark sections were intentionally outside this bounded task.
+- merged: PyAutoBrain#525 (9a708305765a51ec3e6878dc86a1e7f704a700e7) and PyAutoMemory#133 (aa33af1215c89fd6ae8b8ca6f0d863a0253cb48b), 2026-10-15, human /prm.
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/524
+- validation: All GitHub Actions runs and jobs at both PR heads passed: Brain Python 3.12 and 3.13; Memory validate. Local Brain 1264 pass plus 4/4 grouped tests with PYAUTO_MIND unset after one environment-only failure; Memory 276 pass and make validate; firewall, scoped discovery and five source links pass. Author review had no findings.
+- authorization: Live human Heart RED development override "Proceed"; separate human $prm authorized merge and full close-out. No release. Exact Heart reasons retained in the issue and PR bodies.
+- evidence: Local full logs preserved under tmp/memory-domain-routing/validation-logs before worktree cleanup.
+
+## Original prompt
+
 # Route campaign information to Insight and Pulse
 
 Issued: 2026-10-15
