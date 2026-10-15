@@ -24,10 +24,31 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/527
 - issued: 2026-10-15
 - session: Codex; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/528 (545c69d)
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/cortex-project-card-polish
 - repos:
   - PyAutoBrain: feature/cortex-project-card-polish
 - heart-red-override:
   - authorization: "Proceed, I override" (2026-10-15, this task only; human merge required)
-  - exact-reasons: see issue #527; branch validation pending
+  - validation: 1274 Brain tests pass; 4 Chromium cases pass; in-session diff/visual review; scientific smoke n/a (renderer only)
+  - exact-reasons:
+    - release validation FAILED (stage integrate)
+    - PyAutoHands/workflows/Python Version Matrix: failure
+    - PyAutoHeart/workflows/Release Integrate: failure
+    - PyAutoMind/workflows/Lifecycle Drift: failure
+    - PyAutoArray/Tests: red
+    - PyAutoArray/Tests: red
+    - autofit_workspace_test/Smoke Tests: red
+    - autogalaxy_workspace_test/Smoke Tests: red
+    - autolens_workspace_test/Smoke Tests: red
+    - CI wall-clock: 26 gates · slowest PyAutoBrain Nightly Release 63m · 5 hang events
+    - Release readiness: release validation FAILED (stage integrate)
+    - autofit_test: red
+    - Release validation: NOT release_ready — v2026.10.15.1.dev81701 profile=release (2026-10-15T07:04:34+00:00)
+    - validation_report/stages/integrate: fail
+    - PyAutoArray: red
+    - autolens_inference: red
+    - autolens_profiling: red
+    - Worktree drift: 5 orphan / 0 missing / 4 dirty
+    - euclid_strong_lens_modeling_pipeline: red

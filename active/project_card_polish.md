@@ -32,3 +32,7 @@ PyAutoBrain main clean; PyAutoMind main clean after fast-forward. Cortex has an 
 ## Heart RED override
 
 User: "Proceed, I override". Applies to this development task only, not merge or release. Exact gate reasons recorded in the issue and shipping evidence.
+
+## PR ready
+
+https://github.com/PyAutoLabs/PyAutoBrain/pull/528 — 545c69d. Full Brain suite 1274 pass; four real-ledger Chromium cases pass; author diff and visual review. Preview: tmp/cortex-card-polish/preview.html and screenshots under the workspace root. Heart RED override recorded in issue, PR, active registry and autonomy log. Human merge remains required; after merge dispatch Cortex dashboard_refresh.yml and verify the live card metadata and icon controls.
