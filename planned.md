@@ -143,7 +143,7 @@
 - issue: https://github.com/PyAutoLabs/autofit_inference/issues/14
 - filed: 2026-10-15
 - prompt: draft/research/autofit_inference/search_ext_b5c_second_model_family.md
-- status: queued (issued #14 under --auto with the Heart RED development override, not started); blocked-by: ral-category-paths-phase2 (autofit_inference, PyAutoCortex) — launch when that claim is released
+- status: queued (issued #14 under --auto with the Heart RED development override, not started); unblocked 2026-10-15 — ral-category-paths-phase2 closed (complete/2026/10/ral-category-paths-phase2.md), autofit_inference + PyAutoCortex released; ready to launch
 - classification: research (autofit_inference primary, PyAutoInsight; PyAutoCortex ledger lines by the architect), Consequence judge, Autonomy supervised; Feature Agent: split-into-phases — #14 scopes stage 1 (protocol, references, pilot manifest + submit), scoring/freeze/scored wave = B5c-2
 - suggested-branch: feature/search-ext-b5c-family
 - epic: search-extensibility

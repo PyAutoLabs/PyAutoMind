@@ -961,7 +961,7 @@ Use the start-dev skill. draft/feature/autoarray/delaunaynn_wide_row_imaging_ove
 
 </details>
 
-<details><summary>📋 <b>search-ext-b5c-family</b> — <a href="https://github.com/PyAutoLabs/autofit_inference/issues/14">issue #14</a> — filed 2026-10-15 — queued (issued #14 under --auto with the Heart RED development override, not started); blocked-by: ral-category-paths-phase2…</summary>
+<details><summary>📋 <b>search-ext-b5c-family</b> — <a href="https://github.com/PyAutoLabs/autofit_inference/issues/14">issue #14</a> — filed 2026-10-15 — queued (issued #14 under --auto with the Heart RED development override, not started); unblocked 2026-10-15…</summary>
 
 ```
 Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c_second_model_family.md
