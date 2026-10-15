@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1868 records across 9 buckets.
+1869 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -321,6 +321,7 @@ markers; everything below GENERATED is rebuilt.
 - [search-ext-b3-postmerge-fixes](2026/10/search-ext-b3-postmerge-fixes.md)
 - [search-ext-b4a-breakdown-exporter](2026/10/search-ext-b4a-breakdown-exporter.md)
 - [search-ext-b4b-ep-baseline](2026/10/search-ext-b4b-ep-baseline.md) — B4b of search-extensibility. Ported the EP / graphical baselines and the analytic parity cell into autofit_pro…
+- [search-ext-b5a-wave2](2026/10/search-ext-b5a-wave2.md) — B5a of search-extensibility. Froze `gaussian_x3@2` at autofit_inference 72d6faaf before any scored run existed…
 - [setuptools-include-packages](2026/10/setuptools-include-packages.md)
 - [shapelets-smoke-slow-park](2026/10/shapelets-smoke-slow-park.md)
 - [sizing-none-triage-rules](2026/10/sizing-none-triage-rules.md)

@@ -1,3 +1,21 @@
+## search-ext-b5a-wave2
+- issue: https://github.com/PyAutoLabs/autofit_inference/issues/8
+- completed: 2026-10-15
+- epic: search-extensibility
+- workspace-pr: https://github.com/PyAutoLabs/autofit_inference/pull/9
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/63
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoInsight/pull/29
+- summary: B5a of search-extensibility. Froze `gaussian_x3@2` at autofit_inference 72d6faaf before any scored run existed (freeze sha reachable from main; PR merge commit 3463aa190), and built the scored-wave infrastructure: per-wave protocol id, the extended manifest key, attempt accounting, the NSS wave-2 settings, the wall-rates table and the submit scripts (autofit_inference#9). Submitted scored wave 2 on RAL with `--partition=ral` only, against a private PyAutoFit pin df6d218f1 and PyAutoNerves 7f3055b7. ALL 1,629 array tasks had COMPLETED by the morning of 2026-10-15; nothing has been pulled or scored yet. Ledger Now/Runs lines with job ids went in through PyAutoCortex#63 (b9197c372). The Insight `gaussian_x3_search_wave2` task row and the campaign `next` line went in through PyAutoInsight#29 (c99fb9261).
+- decisions: the 13 decide-and-flag items are listed in the PR body of autofit_inference#9.
+- follow-up: pull, judge and publish continue as task B5b (search-ext-b5b), which starts from the compute and next lines below.
+
+### Compute (for B5b)
+
+- compute: RAL `ral` jobs 408244/408245 (references), 408246 (probe), 408346/408347 (reference builds), 408348/408365/408366/408367 (scored arrays, 11,750 runs, %60 throttle); all 1,629 array tasks COMPLETED by 2026-10-15 morning, nothing pulled yet; freeze sha 72d6faaf, PyAutoFit pin df6d218f1 (A4 merge, unreleased) + PyAutoNerves 7f3055b7 in /mnt/ral/jnightin/autofit_inference/.pyauto_pin/ (zeus-mcmc 2.5.4 in .pyauto_pin/site); RAL clone at f0b3eef (f9605cf state.md-only commit not pulled there); dry-run copy /mnt/ral/jnightin/autofit_inference_b5a_dryrun/ can be deleted
+- next: B5b: pull all RAL rows, build the JAX blend realisation-1 reference locally (pilot seeds 0+2 plus RAL seed 1), set probe-first timeouts from probe 408246 and submit the remaining 980 runs of those cells, judge under @2, catalogue, export the wave-2 summary, refresh the Insight snapshot and run `cortex done` on the run lines; carried to B5b: re-judging the pilot's @1 JAX blend rows against the new reference is a reassessment needing an explicit decision; LBFGS on blend numpy still returns +inf at the pin; PRs autofit_inference#9 (merge commit 3463aa190, freeze 72d6faaf reachable from main), PyAutoCortex#63, PyAutoInsight#29 merged 2026-10-15
+
+## Original prompt
+
 # `@autofit_inference` B5a: freeze `gaussian_x3@2`, build the scored-wave infrastructure, submit scored wave 2 on RAL
 
 Type: research
