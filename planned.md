@@ -9,11 +9,11 @@
 - [latent-nan-guard-honest-run](#latent-nan-guard-honest-run)
 - [knn-partial-point-block](#knn-partial-point-block)
 - [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
-- [cortex-project-readability](#cortex-project-readability)
 - [adaptsplit-logdet-backend-parity](#adaptsplit-logdet-backend-parity)
 - [interferometer-numba-route-gate](#interferometer-numba-route-gate)
 - [delaunaynn-wide-row-overhead](#delaunaynn-wide-row-overhead)
 - [pulse-interferometer-large-mask](#pulse-interferometer-large-mask)
+- [search-ext-b5c-family](#search-ext-b5c-family)
 
 <!-- toc:end -->
 
