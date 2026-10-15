@@ -23,5 +23,5 @@ row's `updated`/`next`; re-render `dashboard.md`/`dashboard.html` offline. The t
 patch script were prepared in session 3e3dea38 (scratchpad `pulse_patch/`, temporary) and dry-run
 green (board --offline, check --offline, pytest); the content is also the body of PyAutoPulse#62.
 
-Blocked by the PyAutoPulse claim of `ral-category-paths`; apply on a `feature/pulse-interferometer-large-mask`
-branch once free, or on that task's branch if the human prefers.
+PyAutoPulse is free (the `ral-category-paths` claim was released 2026-10-15); apply on a
+`feature/pulse-interferometer-large-mask` branch.

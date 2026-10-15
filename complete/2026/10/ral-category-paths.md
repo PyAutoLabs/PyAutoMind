@@ -1,3 +1,16 @@
+Phase 1 of the Science + RAL category-layout restructure: repointed the hard-coded RAL paths in the repos that were free, so their temporary old-path symlinks on RAL can be removed.
+
+- Context done earlier the same day outside PRs: laptop `Science/` and RAL `/mnt/ral/jnightin` moved into active/, inference/, profiling/, archive/, complete/ (RAL via human-run `scratch/ral_reorg_20261015.sh`; toys analytic_gaussian, ep_toy_gaussian → active/); laptop symlinks removed; Cortex local_path/mirror repointed (PyAutoCortex#64, #66); 9 local `hpc/sync.conf` HPC_BASE repointed and witnessed with `hpc/sync logs`; 11 unused RAL links removed.
+- autolens_inference#22: SLURM templates use overridable `AP_ROOT=${AP_ROOT:-/mnt/ral/jnightin/inference/autolens_inference}`; 12 submit scripts, hpc/README.md, AGENTS.md, `hpc/sync.conf.example` (`HPC_BASE=/mnt/ral/jnightin/inference`).
+- autofit_profiling#6: same pattern → `/mnt/ral/jnightin/profiling/autofit_profiling`.
+- PyAutoMind#504: `policy/hpc_ral.md` describes the category layout.
+- euclid project (personal repo): 27 untracked submit scripts repointed to `active/euclid` and pushed to RAL (0 old-path hits there). PyAutoPulse: no change (hits are verbatim historical tasks/).
+- Heart RED development override granted by the human for this task (recorded on PyAutoCortex#67).
+
+Remainder (claimed repos: autolens_profiling, autofit_inference, PyAutoCortex ral_root sweep, PyAutoMemory) re-filed as `draft/refactor/cortex/ral_category_paths_phase2.md`; PyAutoCortex#67 stays open for it.
+
+## Original prompt
+
 # Science + RAL folder restructure — point live path config at the new category layout
 
 Type: refactor

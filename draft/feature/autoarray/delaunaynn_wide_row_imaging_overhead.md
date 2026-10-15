@@ -13,7 +13,7 @@ Autonomy: supervised
 Priority: low
 Status: draft
 Issue: https://github.com/PyAutoLabs/PyAutoArray/issues/629
-Pulse: campaign delaunay-nn-cpu (to be created; queued on ral-category-paths)
+Pulse: campaign delaunay-nn-cpu (to be created; PyAutoPulse free since 2026-10-15)
 
 Follow-up from PyAutoArray#623 phase 2 (measured 2026-10-15, laptop, threads=1, load 3-5).
 After the numba Sibson kernel (#624), DelaunayNN on HST-scale imaging is still ~2.7x

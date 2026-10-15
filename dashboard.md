@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 17 |
-| [In flight](#in-flight) | 8 |
+| [In flight](#in-flight) | 7 |
 | [Planned](#planned) | 14 |
-| [Backlog](#backlog) | 264 |
+| [Backlog](#backlog) | 265 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -898,14 +898,6 @@ Use the start-dev skill. active/memory_domain_routing.md
 
 </details>
 
-<details><summary>📋 <a href="active/science_ral_folder_restructure.md">Science + RAL folder restructure — point live path config…</a> — <a href="https://github.com/PyAutoLabs/PyAutoCortex/issues/67">issue #67</a> — issued 2026-10-15 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_inference/pull/22">autolens_inference#22</a>, <a href="https://github.com/PyAutoLabs/autofit_profiling/pull/6">autofit_profiling#6</a>, <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/504">PyAutoMind#504</a></summary>
-
-```
-Use the start-dev skill. active/science_ral_folder_restructure.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/search_ext_b5b2_remainder_and_summary_records.md"><code>@autofit_inference</code> B5b-2: pull and judge the wave-2 remainder, settle the summary-records schema…</a> — <a href="https://github.com/PyAutoLabs/autofit_inference/issues/12">issue #12</a> — issued 2026-10-15 — workspace-dev</summary>
 
 ```
@@ -1004,7 +996,7 @@ Use the start-dev skill. draft/docs/autofit/capability_matrix_links_b3_catalogue
 <details><summary>📋 <b>ral-category-paths-phase2</b> — <a href="https://github.com/PyAutoLabs/PyAutoCortex/issues/67">issue #67</a> — filed 2026-10-15 — blocked</summary>
 
 ```
-Use the start-dev skill. active/science_ral_folder_restructure.md
+Use the start-dev skill. draft/refactor/cortex/ral_category_paths_phase2.md
 ```
 
 </details>
@@ -2559,7 +2551,15 @@ Use the start-dev skill. draft/docs/howtolens/tutorial_correctness_and_howtogala
 </details>
 
 <details>
-<summary><b>refactor</b> — 12</summary>
+<summary><b>refactor</b> — 13</summary>
+
+<details><summary>📋 <a href="draft/refactor/cortex/ral_category_paths_phase2.md">RAL category paths — phase 2: repoint the claimed repos, then drop…</a> — cortex · small · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/refactor/cortex/ral_category_paths_phase2.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/refactor/autonerves/config_yaml_parse_cache.md">Cache <code>autonerves</code> config parsing — 308 YAML files parsed per script run</a> — autonerves · medium · safe · medium</summary>
 
@@ -2782,8 +2782,8 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-15 | filed | <a href="planned.md#adaptsplit-logdet-backend-parity">adaptsplit-logdet-backend-parity</a> |
 | 2026-10-15 | issued | <a href="active/search_ext_b5b2_remainder_and_summary_records.md"><code>@autofit_inference</code> B5b-2: pull and judge the wave-2 remainder…</a> |
 | 2026-10-15 | issued | <a href="active/search_kwarg_typos_in_workspace_scripts.md">Search constructor typos silently ignored in workspace scripts…</a> |
-| 2026-10-15 | issued | <a href="active/science_ral_folder_restructure.md">Science + RAL folder restructure — point live path config…</a> |
 | 2026-10-15 | issued | <a href="active/memory_domain_routing.md">Route campaign information to Insight and Pulse</a> |
+| 2026-10-15 | filed | <a href="draft/refactor/cortex/ral_category_paths_phase2.md">RAL category paths — phase 2: repoint the claimed repos, then drop…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 

@@ -140,7 +140,7 @@
 - status: blocked
 - filed: 2026-10-15
 - issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/67
-- prompt: active/science_ral_folder_restructure.md (phase 2, edits 6-9)
+- prompt: draft/refactor/cortex/ral_category_paths_phase2.md
 - blocked-by: autolens_profiling claimed by hst-mge-pilot-qualification (#418 awaiting merge); autofit_inference + PyAutoCortex claimed by search-ext-b5b2-remainder (RAL wave-2 jobs running)
 - summary: repoint autolens_profiling (+_wt, _corpus), autofit_inference (+ b5a_dryrun) hard-coded RAL paths; Cortex ral_root sweep + register subhalo + euclid → active; PyAutoMemory mention; then the human removes the last RAL old-path links
 - affected-repos:
@@ -178,7 +178,7 @@
 - prompt: draft/feature/autoarray/delaunaynn_wide_row_imaging_overhead.md
 - classification: library (+ PyAutoPulse campaign ledger)
 - suggested-branch: feature/delaunaynn-wide-row-overhead
-- blocked-by: interferometer-sparse-data-vector (using PyAutoArray); ral-category-paths (using PyAutoPulse)
+- blocked-by: interferometer-sparse-data-vector (using PyAutoArray)
 - plan: approved by the human 2026-10-15 (session 0b91c774) — full two-level plan on #629; target ≈2× Delaunay at imaging sub 4; Sibson failed rows keep size ≥ 1 (NaN propagates)
 - pulse: human asked to log + monitor under a PyAutoPulse speed-up campaign — create `delaunay-nn-cpu` in campaigns.yaml with tasks for #623 (complete, PyAutoArray#624/#625, complete/2026/10/delaunay-nn-numba.md) and #629 once PyAutoPulse is free (Library may start first if PyAutoArray frees earlier)
 - heart-red-override:
@@ -196,7 +196,7 @@
 - prompt: draft/docs/pyautopulse/interferometer_large_mask_campaign_ledger.md
 - classification: library (PyAutoPulse ledger + board)
 - suggested-branch: feature/pulse-interferometer-large-mask
-- blocked-by: ral-category-paths (using PyAutoPulse)
+- unblocked: 2026-10-15 — ral-category-paths closed (complete/2026/10/ral-category-paths.md); PyAutoPulse released
 - affected-repos:
   - PyAutoPulse
 - resume: content ready (PyAutoPulse#62 body = tasks/interferometer_large_mask_aris.md; ledger rows in session 3e3dea38 scratchpad pulse_patch/apply.sh, dry-run green). Apply when the PyAutoPulse claim frees, render offline, PR, then link the three PyAutoArray issues' close-outs from the task file.
