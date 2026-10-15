@@ -890,7 +890,7 @@ Use the start-dev skill. active/interferometer_sparse_inversion_compute_data_vec
 
 </details>
 
-<details><summary>📋 <a href="active/search_ext_b5b2_remainder_and_summary_records.md"><code>@autofit_inference</code> B5b-2: pull and judge the wave-2 remainder, settle the summary-records schema…</a> — <a href="https://github.com/PyAutoLabs/autofit_inference/issues/12">issue #12</a> — issued 2026-10-15 — workspace-dev</summary>
+<details><summary>📋 <a href="active/search_ext_b5b2_remainder_and_summary_records.md"><code>@autofit_inference</code> B5b-2: pull and judge the wave-2 remainder, settle the summary-records schema…</a> — <a href="https://github.com/PyAutoLabs/autofit_inference/issues/12">issue #12</a> — issued 2026-10-15 — pr-open (supervised --auto; Heart RED dev override) — 409930 pulled + judged (12,750 wave-2 rows, wave 2 closed)… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/68">PyAutoCortex#68</a>, <a href="https://github.com/PyAutoLabs/PyAutoInsight/pull/31">PyAutoInsight#31</a>, <a href="https://github.com/PyAutoLabs/autofit_inference/pull/13">autofit_inference#13</a></summary>
 
 ```
 Use the start-dev skill. active/search_ext_b5b2_remainder_and_summary_records.md
