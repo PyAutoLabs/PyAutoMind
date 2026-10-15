@@ -12,18 +12,26 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 4 |
 | [Planned](#planned) | 8 |
-| [Backlog](#backlog) | 261 |
+| [Backlog](#backlog) | 263 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 19
+**Highest priority** (filed as `high`) — showing 12 of 20
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
 ```
 Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/reuse_cholesky_factor_for_solve_and_log_det.md">Reuse one Cholesky factor of F+H for the reconstruction solve…</a> — autoarray · small · safe · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autoarray/reuse_cholesky_factor_for_solve_and_log_det.md
 ```
 
 </details>
@@ -108,15 +116,7 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 </details>
 
-<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon</a> — autofit · large · human-required · high</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md
-```
-
-</details>
-
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 109
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 111
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -1595,7 +1595,15 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>feature</b> — 36</summary>
+<summary><b>feature</b> — 38</summary>
+
+<details><summary>📋 <a href="draft/feature/autoarray/reuse_cholesky_factor_for_solve_and_log_det.md">Reuse one Cholesky factor of F+H for the reconstruction solve…</a> — autoarray · small · safe · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autoarray/reuse_cholesky_factor_for_solve_and_log_det.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding against the raw maximum finds…</a> — autoarray · small · supervised · medium</summary>
 
@@ -1673,6 +1681,14 @@ Use the start-dev skill. draft/feature/pyautobrain/brain_board_follow_ups.md
 
 ```
 Use the start-dev skill. draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/direct_conv_symmetric_row_restriction.md">direct_conv curvature kernel: convolve only the rows later-ranked columns need, then mirror</a> — autoarray · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/autoarray/direct_conv_symmetric_row_restriction.md
 ```
 
 </details>
