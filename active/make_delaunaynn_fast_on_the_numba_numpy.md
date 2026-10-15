@@ -9,6 +9,7 @@ Autonomy: supervised
 Priority: normal
 Memory: wiki/galaxies/sources/massive-ellipticals.md; wiki/lensing/sources/dark-matter-substructure.md; reading-queue.md
 Status: formalised
+Issued: 2026-10-15
 Consequence: glance
 Witness: on the Aris interferometer setup (1405 vertices, use_jax=False) DelaunayNN steady log_likelihood_function time <= 2x Delaunay, with numba-vs-reference Sibson parity tests green
 Review-minutes: 3

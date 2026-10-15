@@ -1,5 +1,21 @@
 # Active Tasks
 
+## delaunay-nn-numba
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/623
+- issued: 2026-10-15
+- prompt: active/make_delaunaynn_fast_on_the_numba_numpy.md
+- session: Claude Code CLI (Opus 5.5); session 0b91c774
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/delaunay-nn-numba
+- phase: 1 of 2 (numba Sibson kernel); phase 2 = routing audit
+- heart-red-override:
+  - date: 2026-10-15
+  - authorized-by: live human in session 0b91c774 ("I override, tests will be handled once the epic refactor elsewhere is sorted")
+  - reasons: see issue #623 (verbatim reason strings recorded there)
+  - permitted: commit, push, PR-open; merge separate
+- repos:
+  - PyAutoArray: feature/delaunay-nn-numba
+
 ## hst-mge-pilot-qualification
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/417
 - issued: 2026-10-13
