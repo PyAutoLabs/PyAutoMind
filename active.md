@@ -20,7 +20,12 @@
 - issue: https://github.com/PyAutoLabs/autofit_inference/issues/14
 - issued: 2026-10-15
 - prompt: active/search_ext_b5c_second_model_family.md
-- status: workspace-dev (stage 1: protocol, exact references, pilot manifest + pilot submit; B5c-2 = freeze + scored wave)
+- status: PR-open 2026-10-16 (stage 1 shipped; autofit_inference lint RED — `test_committed_dataset_regenerates_byte_for_byte` last-bit QR float diff on CI numpy/LAPACK, fix = np.allclose rtol 1e-12, then one CI check per PR; pilot RAL 410866 PENDING; B5c-2 = freeze + scored wave, brief in scratchpad progress_b5c.md + complete record to come)
+- workspace-pr: https://github.com/PyAutoLabs/autofit_inference/pull/16
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/70
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoInsight/pull/33
+- compute: RAL 410866_[0-929]%100 `--partition=ral` (excl. euclid-ral-compute-[1-4], no gres, pin df6d218f1), correlated_nd@1 pilot of 930 runs, PENDING at hand-back (est. start 2026-10-16 ~19:30Z), from the PRIVATE copy /mnt/ral/jnightin/inference/autofit_inference_b5c; 409957 failed at import (shared clone switched to main + cli/config removed by another actor 19:24–22:24Z) and was cancelled, no rows
+- decision-taken: pilot 930 runs not ~600–800 (Nautilus exempt from the live-point floor under A1; 110 runs deferred: Emcee/Zeus D≥50, DynestyStatic/NSS D=100); revert = add "Nautilus" to LIVE_POINT_FLOOR_CLASSES in scripts/misc/searches/_correlated_nd.py, plan_correlated_nd.py --write, rebuild catalogue+README
 - session: Claude Code CLI (Fable 5.1); session 6ffb59e9; launched --auto 2026-10-15 night (claim released by ral-category-paths-phase2)
 - worktree: ~/Code/PyAutoLabs-wt/search-ext-b5c-family
 - repos:
