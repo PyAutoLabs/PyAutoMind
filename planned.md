@@ -11,7 +11,6 @@
 - [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
 - [interferometer-numba-route-gate](#interferometer-numba-route-gate)
 - [delaunaynn-wide-row-overhead](#delaunaynn-wide-row-overhead)
-- [search-ext-b5c-family](#search-ext-b5c-family)
 
 <!-- toc:end -->
 
