@@ -1886,6 +1886,7 @@ FIREWALL_ALLOWLIST = {
     # the list.
     "PyAutoBrain/agents/faculties/samplers/_samplers.py": {
         "PyAutoFit",
+        "autofit_inference",
         "autofit_workspace_developer",
         "autofit_workspace_test",
         "autolens_inference",
@@ -1894,6 +1895,7 @@ FIREWALL_ALLOWLIST = {
     },
     "PyAutoBrain/agents/faculties/samplers/samplers.sh": {
         "PyAutoFit",
+        "autofit_inference",
         "autofit_workspace_developer",
         "autofit_workspace_test",
         "autolens_inference",

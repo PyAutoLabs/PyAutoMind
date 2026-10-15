@@ -874,7 +874,7 @@ Use the start-dev skill. active/hst_mge_pilot_qualification.md
 
 </details>
 
-<details><summary>📋 <a href="active/search_ext_a5_consumers.md"><code>@PyAutoFit</code> A5 (consumers): generate rosters, tiers and anchors from the pinned search…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/310">issue #310</a> — issued 2026-10-15 — workspace-dev</summary>
+<details><summary>📋 <a href="active/search_ext_a5_consumers.md"><code>@PyAutoFit</code> A5 (consumers): generate rosters, tiers and anchors from the pinned search…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/310">issue #310</a> — issued 2026-10-15 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/311">PyAutoHands#311</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/523">PyAutoBrain#523</a>, <a href="https://github.com/PyAutoLabs/autofit_workspace/pull/169">autofit_workspace#169</a>, <a href="https://github.com/PyAutoLabs/autofit_assistant/pull/56">autofit_assistant#56</a>, <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/159">autolens_assistant#159</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_assistant/pull/35">autogalaxy_assistant#35</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/590">autolens_workspace#590</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/258">autogalaxy_workspace#258</a>, <a href="https://github.com/PyAutoLabs/PyAutoMemory/pull/132">PyAutoMemory#132</a></summary>
 
 ```
 Use the start-dev skill. active/search_ext_a5_consumers.md

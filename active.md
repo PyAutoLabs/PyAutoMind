@@ -34,7 +34,7 @@
 - issued: 2026-10-15
 - prompt: active/search_ext_a5_consumers.md
 - session: Claude Code CLI (Fable 5.1); session 6ffb59e9; launched --auto
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
 - epic: search-extensibility
 - worktree: ~/Code/PyAutoLabs-wt/search-ext-a5-consumers
 - heart-red-override:
@@ -52,3 +52,13 @@
   - autofit_workspace: feature/search-ext-a5-consumers
   - autolens_workspace: feature/search-ext-a5-consumers
   - autogalaxy_workspace: feature/search-ext-a5-consumers
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/311
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/523
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/169
+- workspace-pr: https://github.com/PyAutoLabs/autofit_assistant/pull/56
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/159
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/35
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/590
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/258
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoMemory/pull/132
+- next: human /prm in order PyAutoHands#311 first (the `search_roster` reusable job goes live at @main after it), then Brain#523 (tenant-firewall leg needs Mind main allowlist entry for autofit_inference in samplers/_samplers.py + samplers.sh — pushed 2026-10-15, re-run the leg), then the 7 consumers; blocks stamped from released autofit 2026.10.12.1 (source checkout reports stale 2026.8.17.1); witness 6/7 — the capability-matrix→B3-card link lives in PyAutoFit docs/_generate_searches.py (follow-up draft); stale al names outside ruled files flagged only (al wiki/core/stack/autofit.md, stack/autolens.md, concepts/non_linear_search.md, skills/al_update_wiki.md, literature); no third review round
