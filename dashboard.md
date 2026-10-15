@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 17 |
-| [In flight](#in-flight) | 5 |
-| [Planned](#planned) | 12 |
-| [Backlog](#backlog) | 264 |
+| [In flight](#in-flight) | 6 |
+| [Planned](#planned) | 11 |
+| [Backlog](#backlog) | 263 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -116,7 +116,7 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 112
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 111
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -874,6 +874,14 @@ Use the start-dev skill. active/hst_mge_pilot_qualification.md
 
 </details>
 
+<details><summary>📋 <a href="active/interferometer_large_mask_campaign_ledger.md">Pulse ledger: log the Aris interferometer large-mask tasks under the interferometer campaign</a> — <a href="https://github.com/PyAutoLabs/PyAutoPulse/issues/62">issue #62</a> — issued 2026-10-15 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/63">PyAutoPulse#63</a></summary>
+
+```
+Use the start-dev skill. active/interferometer_large_mask_campaign_ledger.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/interferometer_sparse_inversion_compute_data_vec.md">Interferometer sparse inversion: compute data vector without the dense mapping matrix</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/626">issue #626</a> — issued 2026-10-15 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/630">PyAutoArray#630</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
@@ -895,7 +903,7 @@ Use the start-dev skill. active/ral_category_paths_phase2.md
 Scoped but not started; some are not yet prompt files. Full detail in [`planned.md`](planned.md).
 
 <details>
-<summary><b>12</b> task(s)</summary>
+<summary><b>11</b> task(s)</summary>
 
 <details><summary>📋 <b>isothermal-ell-sph-oversampling-at-the-cusp</b> — found 2026-08-09 — planned — NOT yet a prompt file; file one via <code>/intake</code> before starting</summary>
 
@@ -973,14 +981,6 @@ Use the start-dev skill. draft/feature/autoarray/interferometer_numba_route_gate
 
 ```
 Use the start-dev skill. draft/feature/autoarray/delaunaynn_wide_row_imaging_overhead.md
-```
-
-</details>
-
-<details><summary>📋 <b>pulse-interferometer-large-mask</b> — <a href="https://github.com/PyAutoLabs/PyAutoPulse/issues/62">issue #62</a> — filed 2026-10-15</summary>
-
-```
-Use the start-dev skill. draft/docs/pyautopulse/interferometer_large_mask_campaign_ledger.md
 ```
 
 </details>
@@ -2378,7 +2378,7 @@ Use the start-dev skill. draft/maintenance/pyautomind/session_start_hook_copies_
 </details>
 
 <details>
-<summary><b>docs</b> — 17</summary>
+<summary><b>docs</b> — 16</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
 
@@ -2424,14 +2424,6 @@ Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richard
 
 ```
 Use the start-dev skill. draft/docs/pyautobrain/rtd_organism_currency.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/pyautopulse/interferometer_large_mask_campaign_ledger.md">Pulse ledger: log the Aris interferometer large-mask tasks under the interferometer campaign</a> — pyautopulse · small · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/docs/pyautopulse/interferometer_large_mask_campaign_ledger.md
 ```
 
 </details>
@@ -2735,12 +2727,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | Date | Event | Task |
 |------|-------|------|
 | 2026-10-15 | filed | <a href="planned.md#search-ext-b5c-family">search-ext-b5c-family</a> |
-| 2026-10-15 | filed | <a href="planned.md#pulse-interferometer-large-mask">pulse-interferometer-large-mask</a> |
 | 2026-10-15 | filed | <a href="planned.md#interferometer-numba-route-gate">interferometer-numba-route-gate</a> |
 | 2026-10-15 | planned | <a href="planned.md#delaunaynn-wide-row-overhead">delaunaynn-wide-row-overhead</a> |
 | 2026-10-15 | filed | <a href="planned.md#adaptsplit-logdet-backend-parity">adaptsplit-logdet-backend-parity</a> |
 | 2026-10-15 | issued | <a href="active/capability_matrix_links_b3_catalogue_cards.md"><code>@PyAutoFit</code> capability matrix: link each search row to its…</a> |
 | 2026-10-15 | issued | <a href="active/ral_category_paths_phase2.md">RAL category paths — phase 2: repoint the claimed repos, then drop…</a> |
+| 2026-10-15 | issued | <a href="active/interferometer_large_mask_campaign_ledger.md">Pulse ledger: log the Aris interferometer large-mask tasks under the…</a> |
 | 2026-10-15 | issued | <a href="active/interferometer_sparse_inversion_compute_data_vec.md">Interferometer sparse inversion: compute data vector without the…</a> |
 | 2026-10-15 | filed | <a href="draft/feature/autoarray/interferometer_numba_route_gate_should_scale_wit.md">Interferometer numba route gate should scale with mask size</a> |
 | 2026-10-15 | filed | <a href="draft/bug/autoarray/adaptsplit_regularization_log_det_differs_betwee.md">AdaptSplit regularization log-det differs between numba and JAX…</a> |

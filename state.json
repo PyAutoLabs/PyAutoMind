@@ -3,10 +3,16 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-10-15T18:14:14Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
+  "updated": "2026-10-15T18:18:20Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Pulse ledger: log the Aris interferometer large-mask tasks under the interferometer campaign \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoPulse/pull/63",
+      "prompt": "Use the start-dev skill. active/interferometer_large_mask_campaign_ledger.md"
+    },
     {
       "severity": "yellow",
       "text": "Interferometer sparse inversion: compute data vector without the dense mapping matrix \u2014 library-shipped, awaiting-merge",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1690 \u2014 search-ext-a5-library",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1690",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1691 \u2014 search-ext-a5-library",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1691",
       "prompt": null
     }
   ]
