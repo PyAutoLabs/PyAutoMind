@@ -34,9 +34,15 @@
 - issued: 2026-10-15
 - prompt: active/search_ext_b5b_pull_judge_publish_wave2.md
 - session: Claude Code CLI (Fable 5.1); session 6ffb59e9; launched --auto
-- status: workspace-dev
+- status: pr-open (supervised --auto; Heart RED dev override); compute-running; awaiting human /prm in order; open question on autofit_inference#10 (wave-2 summary records withheld on size)
 - epic: search-extensibility
 - worktree: ~/Code/PyAutoLabs-wt/search-ext-b5b-score
+- workspace-pr: https://github.com/PyAutoLabs/autofit_inference/pull/11
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/65
+- library-pr: https://github.com/PyAutoLabs/PyAutoInsight/pull/30
+- decision-taken: autofit_inference#11 — wave-2 summary records withheld on size (84 MB export); options on #10
+- compute: RAL 409930_[0-19]%20 --partition=ral — wave-2 probe-first remainder (980 runs, Zeus JAX + NSS 50-step), submitted 2026-10-15; pull + judge in B5b-2, then refresh the Insight fit snapshot from main
+- next: human /prm autofit_inference#11 → PyAutoCortex#65 → PyAutoInsight#30; answer the summary-size question on #10 (recommended: inference-summary@2)
 - heart-red-override:
   - date: 2026-10-15
   - authorized-by: live human in session 6ffb59e9, AskUserQuestion answer 'Yes, override for development (Recommended)'
