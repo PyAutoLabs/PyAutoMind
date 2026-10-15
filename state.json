@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-10-15T13:55:03Z",
+  "updated": "2026-10-15T14:48:26Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "Cortex Projects readability \u2014 phase 1 \u2014 blocked",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/issues/521",
       "prompt": "Use the start-dev skill. active/cortex_projects_readability.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Make DelaunayNN fast on the numba/NumPy path \u2014 library-shipped, awaiting-merge (phase 1); phase 2 not started",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/624",
+      "prompt": "Use the start-dev skill. active/make_delaunaynn_fast_on_the_numba_numpy.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1691 \u2014 search-ext-a5-library",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1691",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1692 \u2014 search-ext-a5-library",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1692",
       "prompt": null
     }
   ]
