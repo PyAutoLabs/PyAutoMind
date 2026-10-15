@@ -1,3 +1,27 @@
+## Summary
+
+Shipped in PyAutoPulse#64 (merge fc092a9a, 2026-10-15). The three Aris large-mask before/after
+witness tables (PyAutoArray #630 sparse data vector, #631 AdaptSplit log-det backend parity,
+#632 numba route-gate cost model) landed under `## Results 2026-10-15` in
+`tasks/interferometer_large_mask_aris.md`, with the Reviewed line updated. The `campaigns.yaml`
+task-row and interferometer campaign-row `next` lines were refreshed, and the board was
+re-rendered. Anchor issue PyAutoPulse#62 stays open as the campaign anchor.
+
+## Ship notes
+
+- Heart RED override: granted by the live human in session 3e3dea38 on 2026-10-15 (late),
+  "Yes, override for both".
+- Consequence: notify, so no shadow row. PyAutoPulse is not in the published set, so there is
+  no pending-release.
+
+## Where to pick up
+
+The autolens_profiling phase-2 record (in flight) will add its table to the same task file,
+`tasks/interferometer_large_mask_aris.md`, through a later Pulse PR. The Aris log-det
+after-measurement is also still in flight.
+
+## Original prompt
+
 # Pulse: record the three Aris large-mask before/after witness tables
 
 Type: docs
