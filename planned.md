@@ -158,7 +158,7 @@
 - blocked-by: interferometer-sparse-data-vector (using PyAutoArray)
 - affected-repos:
   - PyAutoArray
-- resume: plan on #627; launched --auto (effective supervised, decide-and-flag at ship) with the Heart RED development override recorded on the issue (session 3e3dea38, 2026-10-15). Start with /start_library once the PyAutoArray claim frees; reproduce on the 125x125 cache first (H parity before factorization).
+- resume: ROOT CAUSE FOUND 2026-10-15 (amended plan on #627): backends build different H because mapper_util.adaptive_pixel_signals_from counts zero-weight entries; fix there + two tests, leave log-det code alone. Launched --auto (effective supervised) with the Heart RED development override on the issue (session 3e3dea38). /start_library once the PyAutoArray claim frees.
 
 ## interferometer-numba-route-gate
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/628
