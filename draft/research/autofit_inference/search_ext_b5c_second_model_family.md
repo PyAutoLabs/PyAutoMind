@@ -11,6 +11,7 @@ Autonomy: supervised
 Priority: normal
 Status: formalised
 Filed: 2026-10-14
+Issue: https://github.com/PyAutoLabs/autofit_inference/issues/14
 Consequence: judge
 Epic: search-extensibility
 Phase: B5c

@@ -111,20 +111,6 @@
   - autolens_workspace_test
 - resume: Audit#603 found incorrect internal-edge Sibson weights and near-edge partition failure. Filed separately per explicit user request; strict expected-failure regressions retained in audit. No repair begun or worktree created. Plan algorithmic repair independently.
 
-## cortex-project-readability
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/521
-- filed: 2026-10-14
-- prompt: draft/feature/cortex/cortex_projects_readability.md
-- status: queued (issued #521, not started); blocked-by: none — search-ext-b5b2-remainder released PyAutoCortex 2026-10-15; next /start_library on the approved plan in #521
-- classification: library (PyAutoBrain renderer + PyAutoCortex generated pages)
-- suggested-branch: feature/cortex-project-readability
-- blocked-by: none — search-ext-b5b-score released 2026-10-15 (PyAutoCortex free); search-ext-a4-companions released 2026-10-14 (PyAutoBrain free)
-- approval: User approved both phases in session: "I approve"; no repeat plan approval required. Tier undeclared; human /prm.
-- next: Recheck claims; once clear, start-library and implement approved presentation plan from issue #521. Preserve Cortex local edits. Follow with draft/feature/cortex/output_summary.md for evidence-backed output accounting.
-- affected-repos:
-  - PyAutoBrain
-  - PyAutoCortex
-
 ## adaptsplit-logdet-backend-parity
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/627
 - filed: 2026-10-15
@@ -176,3 +162,19 @@
 - affected-repos:
   - PyAutoPulse
 - resume: content ready (PyAutoPulse#62 body = tasks/interferometer_large_mask_aris.md; ledger rows in session 3e3dea38 scratchpad pulse_patch/apply.sh, dry-run green). Apply when the PyAutoPulse claim frees, render offline, PR, then link the three PyAutoArray issues' close-outs from the task file.
+
+## search-ext-b5c-family
+- issue: https://github.com/PyAutoLabs/autofit_inference/issues/14
+- filed: 2026-10-15
+- prompt: draft/research/autofit_inference/search_ext_b5c_second_model_family.md
+- status: queued (issued #14 under --auto with the Heart RED development override, not started); blocked-by: ral-category-paths-phase2 (autofit_inference, PyAutoCortex) — launch when that claim is released
+- classification: research (autofit_inference primary, PyAutoInsight; PyAutoCortex ledger lines by the architect), Consequence judge, Autonomy supervised; Feature Agent: split-into-phases — #14 scopes stage 1 (protocol, references, pilot manifest + submit), scoring/freeze/scored wave = B5c-2
+- suggested-branch: feature/search-ext-b5c-family
+- epic: search-extensibility
+- heart-red-override:
+  - date: 2026-10-15
+  - authorized-by: live human in session 6ffb59e9, AskUserQuestion answer 'Both, override for development (Recommended)' (third grant, night launch)
+  - reasons: "Heart: RED — Release RED; monitoring RED · 10/100 · 415 unresolved"; "[red] release validation FAILED (stage integrate)"; "[red] PyAutoHands/workflows/Python Version Matrix: failure"; "[red] PyAutoHeart/workflows/Release Integrate: failure"; "[red] PyAutoArray/Tests: red"; "[red] autofit_workspace_test/Smoke Tests: red"; "[red] autogalaxy_workspace_test/Smoke Tests: red"; "[red] autolens_workspace_test/Smoke Tests: red"; "[red] Release validation: NOT release_ready"; "[red] Worktree drift"; "[red] autolens_inference: red"; "[red] autolens_profiling: red"; "[red] euclid_strong_lens_modeling_pipeline: red"
+  - permitted: commit, push, PR-open; merge separate
+- next: worktree_create search-ext-b5c-family autofit_inference PyAutoInsight; implement per #14; end at PR-open
+

@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 17 |
-| [In flight](#in-flight) | 6 |
+| [In flight](#in-flight) | 7 |
 | [Planned](#planned) | 12 |
-| [Backlog](#backlog) | 263 |
+| [Backlog](#backlog) | 262 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -858,10 +858,18 @@ Use the start-dev skill. active/adaptsplit_regularization_log_det_differs_betwee
 
 </details>
 
-<details><summary>📋 <a href="active/capability_matrix_links_b3_catalogue_cards.md"><code>@PyAutoFit</code> capability matrix: link each search row to its autofit_inference catalogue card</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1694">issue #1694</a> — issued 2026-10-15 — library-dev</summary>
+<details><summary>📋 <a href="active/capability_matrix_links_b3_catalogue_cards.md"><code>@PyAutoFit</code> capability matrix: link each search row to its autofit_inference catalogue card</a> — issued 2026-10-15</summary>
 
 ```
 Use the start-dev skill. active/capability_matrix_links_b3_catalogue_cards.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/cortex_projects_readability.md">Cortex Projects readability — phase 1</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/521">issue #521</a> — issued 2026-10-14 — library-dev (Brain renderer + tests only; PyAutoCortex claimed by ral-category-paths-phase2 — Cortex pages self-heal from Brain…</summary>
+
+```
+Use the start-dev skill. active/cortex_projects_readability.md
 ```
 
 </details>
@@ -882,7 +890,7 @@ Use the start-dev skill. active/interferometer_numba_route_gate_should_scale_wit
 
 </details>
 
-<details><summary>📋 <a href="active/interferometer_sparse_inversion_compute_data_vec.md">Interferometer sparse inversion: compute data vector without the dense mapping matrix</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/626">issue #626</a> — issued 2026-10-15 — library-dev</summary>
+<details><summary>📋 <a href="active/interferometer_sparse_inversion_compute_data_vec.md">Interferometer sparse inversion: compute data vector without the dense mapping matrix</a> — issued 2026-10-15</summary>
 
 ```
 Use the start-dev skill. active/interferometer_sparse_inversion_compute_data_vec.md
@@ -890,7 +898,7 @@ Use the start-dev skill. active/interferometer_sparse_inversion_compute_data_vec
 
 </details>
 
-<details><summary>📋 <a href="active/ral_category_paths_phase2.md">RAL category paths — phase 2: repoint the claimed repos, then drop…</a> — <a href="https://github.com/PyAutoLabs/PyAutoCortex/issues/67">issue #67</a> — issued 2026-10-15 — workspace-dev</summary>
+<details><summary>📋 <a href="active/ral_category_paths_phase2.md">RAL category paths — phase 2: repoint the claimed repos, then drop…</a> — issued 2026-10-15</summary>
 
 ```
 Use the start-dev skill. active/ral_category_paths_phase2.md
@@ -961,14 +969,6 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 </details>
 
-<details><summary>📋 <b>cortex-project-readability</b> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/521">issue #521</a> — filed 2026-10-14 — queued (issued #521, not started); blocked-by: none — search-ext-b5b2-remainder released PyAutoCortex 2026-10-15; next…</summary>
-
-```
-Use the start-dev skill. draft/feature/cortex/cortex_projects_readability.md
-```
-
-</details>
-
 <details><summary>📋 <b>adaptsplit-logdet-backend-parity</b> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/627">issue #627</a> — filed 2026-10-15</summary>
 
 ```
@@ -997,6 +997,14 @@ Use the start-dev skill. draft/feature/autoarray/delaunaynn_wide_row_imaging_ove
 
 ```
 Use the start-dev skill. draft/docs/pyautopulse/interferometer_large_mask_campaign_ledger.md
+```
+
+</details>
+
+<details><summary>📋 <b>search-ext-b5c-family</b> — <a href="https://github.com/PyAutoLabs/autofit_inference/issues/14">issue #14</a> — filed 2026-10-15 — queued (issued #14 under --auto with the Heart RED development override, not started); blocked-by: ral-category-paths-phase2…</summary>
+
+```
+Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c_second_model_family.md
 ```
 
 </details>
@@ -1651,7 +1659,7 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>feature</b> — 37</summary>
+<summary><b>feature</b> — 36</summary>
 
 <details><summary>📋 <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding against the raw maximum finds…</a> — autoarray · small · supervised · medium</summary>
 
@@ -1913,14 +1921,6 @@ Use the start-dev skill. draft/feature/workspaces/gallery_runner_missing_tiers.m
 
 ```
 Use the start-dev skill. draft/feature/autoarray/adapt_linear_default_flip.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/cortex/cortex_projects_readability.md">Cortex Projects readability — phase 1</a> — cortex</summary>
-
-```
-Use the start-dev skill. draft/feature/cortex/cortex_projects_readability.md
 ```
 
 </details>
@@ -2734,6 +2734,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-15 | filed | <a href="planned.md#search-ext-b5c-family">search-ext-b5c-family</a> |
 | 2026-10-15 | filed | <a href="planned.md#pulse-interferometer-large-mask">pulse-interferometer-large-mask</a> |
 | 2026-10-15 | filed | <a href="planned.md#interferometer-numba-route-gate">interferometer-numba-route-gate</a> |
 | 2026-10-15 | planned | <a href="planned.md#delaunaynn-wide-row-overhead">delaunaynn-wide-row-overhead</a> |
@@ -2743,7 +2744,6 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-15 | issued | <a href="active/interferometer_sparse_inversion_compute_data_vec.md">Interferometer sparse inversion: compute data vector without the…</a> |
 | 2026-10-15 | filed | <a href="active/interferometer_numba_route_gate_should_scale_wit.md">Interferometer numba route gate should scale with mask size</a> |
 | 2026-10-15 | filed | <a href="active/adaptsplit_regularization_log_det_differs_betwee.md">AdaptSplit regularization log-det differs between numba and JAX…</a> |
-| 2026-10-14 | filed | <a href="planned.md#cortex-project-readability">cortex-project-readability</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
@@ -2754,7 +2754,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-14 | filed | <a href="draft/bug/autofit/bfgs_resume_reads_x0_from_scipy_result.md"><code>@PyAutoFit</code> BFGS/LBFGS resume reads <code>["x0"]</code> from the saved scipy…</a> |
 | 2026-10-14 | filed | <a href="draft/feature/cortex/human_readable_projects_dashboard.md">Human-readable Cortex Projects dashboard</a> |
 | 2026-10-14 | filed | <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> |
-| 2026-10-14 | filed | <a href="draft/feature/cortex/cortex_projects_readability.md">Cortex Projects readability — phase 1</a> |
+| 2026-10-14 | issued | <a href="active/cortex_projects_readability.md">Cortex Projects readability — phase 1</a> |
 | 2026-10-13 | issued | <a href="active/hst_mge_pilot_qualification.md">HST/MGE pilot: independent correctness qualification design</a> |
 | 2026-10-09 | filed | <a href="draft/bug/pyautobrain/profiling_compile_drift_point_vs_point.md">Profiling conductor compile drift compares one point against one point</a> |
 | 2026-10-08 | filed | <a href="draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md"><code>JAX_ENABLE_X64=False</code> is overridden to True, so the fp32 inference…</a> |
@@ -2843,7 +2843,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-91 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+90 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2862,7 +2862,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autolens/source_cluster_arc.md`
 - `draft/feature/autolens_jax_joss/autolens_jax_joss_benchmark_repo.md`
 - `draft/feature/autolens_workspace/pointsolver_grid_extent_per_package.md`
-- `draft/feature/cortex/cortex_projects_readability.md`
 - `draft/feature/cortex/human_readable_projects_dashboard.md`
 - `draft/feature/cortex/output_summary.md`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md`
@@ -2888,7 +2887,8 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
 - `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md`
-- _… and 51 more_
+- `draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md`
+- _… and 50 more_
 
 </details>
 
