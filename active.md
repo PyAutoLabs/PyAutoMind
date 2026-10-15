@@ -71,14 +71,14 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/524
 - issued: 2026-10-15
 - prompt: active/memory_domain_routing.md
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - session: Codex
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/memory-domain-routing
 - approval: Accepted ownership plan; live human "Proceed" after exact Heart RED reasons. Development and PR-open only; merge separate.
 - heart-red-override:
   - authorized-by: live human "Proceed", 2026-10-15
   - permitted: development, commit, push, PR-open; no merge/release
-  - validation: pending implementation
+  - validation: Brain 1264 passed plus 4/4 corrected-env grouped tests (one initial environment failure); Memory 276 passed; wiki/firewall/scoped discovery/link checks passed; author review no findings.
   - reasons:
     - [red] release validation FAILED (stage integrate)
     - [red] PyAutoHands/workflows/Python Version Matrix: failure
@@ -102,3 +102,8 @@
 - repos:
   - PyAutoBrain: feature/memory-domain-routing
   - PyAutoMemory: feature/memory-domain-routing
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/525
+- library-pr: https://github.com/PyAutoLabs/PyAutoMemory/pull/133
+- commits: Brain bc3843c; Memory 165be2f
+- next: human /prm both PRs after required checks; no merge authorized.
+- evidence: .worktrees/memory-domain-routing/logs/ (full tests, wiki validation, firewall, readiness, author review)
