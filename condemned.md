@@ -535,13 +535,13 @@ One `##` block per item. Fields:
 
 ## autofit_workspace_developer/ep-graphical-baselines
 - type: file
-- locator: autofit_workspace_developer ep/ (README.md, fit.py, simulator.py, sanity.py, util.py, config/, dataset/, profiles/), graphical/ (same layout); 35 files
+- locator: autofit_workspace_developer ep/ (README.md, fit.py, simulator.py, sanity.py, util.py, config/, dataset/, profiles/), graphical/ (same layout); 35 files — plus root `aggregate_profiles.py` (dead aggregator over the two dirs; PR #36, pre-delete SHA c7289eb737c95e8a66b92042a7e33958fbf2fc90)
 - confidence: 0.95
 - reason: re-homed to autofit_profiling as `scripts/gaussian_1d_ep/{ep,graphical}/baseline.py` with committed results (9 setups, 31 records) and `wiki/campaigns/ep_graphical_baselines.md` (search-extensibility B4b, autofit_profiling#5, merged 2026-10-15); the developer copies would diverge and mislead. Launched under --auto 2026-10-15 (autofit_workspace_developer#34, PR #35), Consequence glance.
 - merged: yes (PR #35, merge commit c7289eb737c95e8a66b92042a7e33958fbf2fc90, 2026-10-15)
 - condemned: 2026-10-15
 - sweep-after: n/a (committed deletion; history-only)
-- breaks-if-wrong: a developer wanting the May-2026 EP/graphical scale-up baseline scripts or their cProfile hotspot files; recoverable with `git checkout 3df620e0 -- ep graphical`; `aggregate_profiles.py` at the repo root still loops over the two deleted dirs and is dead (follow-up, out of #34's scope)
+- breaks-if-wrong: a developer wanting the May-2026 EP/graphical scale-up baseline scripts or their cProfile hotspot files; recoverable with `git checkout 3df620e0 -- ep graphical`; `aggregate_profiles.py` at the repo root looped over the two deleted dirs and is removed in PR #36 (2026-10-15); recoverable with `git checkout c7289eb -- aggregate_profiles.py`
 - archive-ref: n/a — committed deletion in #35; bytes recoverable from remote history at pre-delete SHA `3df620e0dc5bed5c1f43a6aaf205dc976d4a43e4` (main, 2026-10-15)
 
 ## autolens-profiling/linear-solver-p5-mapper-corpus-large-npz

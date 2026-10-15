@@ -4,12 +4,12 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 2 in flight",
-  "updated": "2026-10-15T16:26:32Z",
+  "updated": "2026-10-15T16:29:58Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
       "severity": "red",
-      "text": "Cortex Projects readability \u2014 phase 1 \u2014 blocked",
+      "text": "Cortex Projects readability \u2014 phase 1 \u2014 issued, not started \u2014 unblocked 2026-10-15 (search-ext-b5b-score released PyAutoCortex; search-ext-a4-companions released\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/issues/521",
       "prompt": "Use the start-dev skill. active/cortex_projects_readability.md"
     },
