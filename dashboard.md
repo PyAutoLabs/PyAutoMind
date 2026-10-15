@@ -850,7 +850,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/capability_matrix_links_b3_catalogue_cards.md"><code>@PyAutoFit</code> capability matrix: link each search row to its autofit_inference catalogue card</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1694">issue #1694</a> — issued 2026-10-15 — library-dev</summary>
+<details><summary>📋 <a href="active/capability_matrix_links_b3_catalogue_cards.md"><code>@PyAutoFit</code> capability matrix: link each search row to its autofit_inference catalogue card</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1694">issue #1694</a> — issued 2026-10-15 — pr-open (glance tier; Heart RED override forbids auto-merge — awaiting human /prm) — PyAutoFit#1696 green (Docs 2/2, Tests 3/3)… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1696">PyAutoFit#1696</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 Use the start-dev skill. active/capability_matrix_links_b3_catalogue_cards.md
@@ -2954,6 +2954,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoFit**
 
+- [PyAutoFit#1696](https://github.com/PyAutoLabs/PyAutoFit/pull/1696) — `active/capability_matrix_links_b3_catalogue_cards.md`
 - [PyAutoFit#1667](https://github.com/PyAutoLabs/PyAutoFit/pull/1667) — `complete/2026/10/search-conformance-metadata.md`
 - [PyAutoFit#1673](https://github.com/PyAutoLabs/PyAutoFit/pull/1673) — `complete/2026/10/search-ext-a0a2-backend-conformance.md`
 - [PyAutoFit#1672](https://github.com/PyAutoLabs/PyAutoFit/pull/1672) — `complete/2026/10/search-ext-a0b-hygiene.md`
