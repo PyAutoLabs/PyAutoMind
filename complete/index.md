@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1877 records across 9 buckets.
+1879 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -212,6 +212,7 @@ markers; everything below GENERATED is rebuilt.
 - [insight-organ-birth](2026/10/insight-organ-birth.md)
 - [intake-declared-header-fields](2026/10/intake-declared-header-fields.md)
 - [interferometer-decision-matrix-last-cell](2026/10/interferometer-decision-matrix-last-cell.md)
+- [interferometer-sparse-data-vector](2026/10/interferometer-sparse-data-vector.md) — The sparse-operator interferometer inversion now builds its data vector directly from the mapper's COO triplet…
 - [interferometer-streaming-scaling](2026/10/interferometer-streaming-scaling.md) — CPU streaming scaling cells and evidence shipped, including accumulation to 5e7 visibilities, in-memory failur…
 - [jax-lapack-compatibility-repair](2026/10/jax-lapack-compatibility-repair.md)
 - [likelihood-menu-labels](2026/10/likelihood-menu-labels.md)
@@ -268,6 +269,7 @@ markers; everything below GENERATED is rebuilt.
 - [publish-scientist-board-navigation](2026/10/publish-scientist-board-navigation.md) — Published merged board navigation, resource destinations and presentation polish. All14 other boards link Scie…
 - [pulse-campaign-control-room](2026/10/pulse-campaign-control-room.md) — One editable/copyable check-in prompt, 11 campaign rows, 25 open tasks, then detailed measurement evidence. 26…
 - [pulse-checkin-2026-10-13-evening](2026/10/pulse-checkin-2026-10-13-evening.md)
+- [pulse-interferometer-large-mask](2026/10/pulse-interferometer-large-mask.md) — Ledger task `interferometer_large_mask_aris` added to the PyAutoPulse interferometer campaign (linking PyAutoA…
 - [pulse-live-feed](2026/10/pulse-live-feed.md)
 - [pulse-public-links](2026/10/pulse-public-links.md) — The two public-surface one-liners left from the PyAutoPulse organ birth: `.github/profile/README.md` organ tab…
 - [pulse-refresh-project-identity](2026/10/pulse-refresh-project-identity.md) — Combined producer follow-ups: project badge identifies as autolens_profiling; successful Pages deployment disp…

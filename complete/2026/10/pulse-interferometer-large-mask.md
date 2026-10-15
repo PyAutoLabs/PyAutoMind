@@ -1,3 +1,14 @@
+## pulse-interferometer-large-mask
+- issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/62
+- completed: 2026-10-15
+- library-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/63
+- merge: 24749975a794f60d06534e38ff41f1f23ad3755d
+- summary: Ledger task `interferometer_large_mask_aris` added to the PyAutoPulse interferometer campaign (linking PyAutoArray#626/#630 and the follow-ups #627/#628) and the Pulse board re-rendered. Ledger/docs only — no producer, pin, qualification or Heart readiness change.
+- anchor: PyAutoPulse#62 remains OPEN as the campaign anchor for check-ins (GitHub auto-closed it on merge because the PR body's "Closes #62 is not claimed" sentence matched the closing keyword; reopened at close-out).
+- heart: Heart RED under the same live-human development override as the PyAutoArray Aris tasks (session 3e3dea38; reasons on PyAutoArray#626; permitted commit/push/PR-open, merge separate — merged by human /prm 2026-10-15).
+
+## Original prompt
+
 # Pulse ledger: log the Aris interferometer large-mask tasks under the interferometer campaign
 
 Type: docs

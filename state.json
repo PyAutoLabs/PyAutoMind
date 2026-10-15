@@ -3,22 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-10-15T18:21:12Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
+  "updated": "2026-10-15T18:22:53Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Pulse ledger: log the Aris interferometer large-mask tasks under the interferometer campaign \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoPulse/pull/63",
-      "prompt": "Use the start-dev skill. active/interferometer_large_mask_campaign_ledger.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Interferometer sparse inversion: compute data vector without the dense mapping matrix \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/630",
-      "prompt": "Use the start-dev skill. active/interferometer_sparse_inversion_compute_data_vec.md"
-    },
     {
       "severity": "yellow",
       "text": "RAL category paths \u2014 phase 2: repoint the claimed repos, then drop\u2026 \u2014 workspace-shipped, awaiting-merge",
@@ -39,7 +27,7 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#630 \u2014 Interferometer sparse inversion: compute data vector without the dense mapping matrix",
+      "text": "pending release: PyAutoArray PyAutoArray#630 \u2014 interferometer-sparse-data-vector",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/630",
       "prompt": null
     },
@@ -125,6 +113,18 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1690 \u2014 search-ext-a5-library",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1690",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1691 \u2014 search-ext-a5-library",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1691",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1692 \u2014 search-ext-a5-library",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1692",
       "prompt": null
     }
   ]

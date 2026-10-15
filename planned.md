@@ -116,7 +116,7 @@
 - prompt: draft/bug/autoarray/adaptsplit_regularization_log_det_differs_betwee.md
 - classification: library
 - suggested-branch: feature/adaptsplit-logdet-backend-parity
-- blocked-by: interferometer-sparse-data-vector (using PyAutoArray)
+- blocked-by: none — interferometer-sparse-data-vector merged 2026-10-15 (PyAutoArray free); #628 still runs after #627 by the human's ordering
 - affected-repos:
   - PyAutoArray
 - resume: PATCH READY 2026-10-15 (verified in a scratchpad copy: 3 new tests fail-before/pass-after, inversion suite green; session 3e3dea38 scratchpad patch_627.patch — temporary, the diff is also on the issue). ROOT CAUSE (amended plan on #627): backends build different H because mapper_util.adaptive_pixel_signals_from counts zero-weight entries; fix there + two tests, leave log-det code alone. Launched --auto (effective supervised) with the Heart RED development override on the issue (session 3e3dea38). /start_library once the PyAutoArray claim frees.
@@ -127,7 +127,7 @@
 - prompt: draft/feature/autoarray/interferometer_numba_route_gate_should_scale_wit.md
 - classification: both
 - suggested-branch: feature/interferometer-numba-route-gate
-- blocked-by: interferometer-sparse-data-vector (using PyAutoArray); runs after adaptsplit-logdet-backend-parity by the human's ordering
+- blocked-by: none — interferometer-sparse-data-vector merged 2026-10-15 (PyAutoArray free); #628 still runs after #627 by the human's ordering
 - affected-repos:
   - PyAutoArray
   - autolens_profiling
@@ -139,7 +139,7 @@
 - prompt: draft/feature/autoarray/delaunaynn_wide_row_imaging_overhead.md
 - classification: library (+ PyAutoPulse campaign ledger)
 - suggested-branch: feature/delaunaynn-wide-row-overhead
-- blocked-by: interferometer-sparse-data-vector (using PyAutoArray)
+- blocked-by: none — interferometer-sparse-data-vector merged 2026-10-15 (PyAutoArray free); #627 then #628 take the PyAutoArray claim first by the human's ordering
 - plan: approved by the human 2026-10-15 (session 0b91c774) — full two-level plan on #629; target ≈2× Delaunay at imaging sub 4; Sibson failed rows keep size ≥ 1 (NaN propagates)
 - pulse: human asked to log + monitor under a PyAutoPulse speed-up campaign — create `delaunay-nn-cpu` in campaigns.yaml with tasks for #623 (complete, PyAutoArray#624/#625, complete/2026/10/delaunay-nn-numba.md) and #629 once PyAutoPulse is free (Library may start first if PyAutoArray frees earlier)
 - heart-red-override:

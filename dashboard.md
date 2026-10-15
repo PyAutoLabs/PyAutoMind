@@ -10,7 +10,7 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 17 |
-| [In flight](#in-flight) | 6 |
+| [In flight](#in-flight) | 4 |
 | [Planned](#planned) | 11 |
 | [Backlog](#backlog) | 263 |
 | [Recent](#recent) | 50 |
@@ -870,22 +870,6 @@ Use the start-dev skill. active/cortex_projects_readability.md
 
 ```
 Use the start-dev skill. active/hst_mge_pilot_qualification.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/interferometer_large_mask_campaign_ledger.md">Pulse ledger: log the Aris interferometer large-mask tasks under the interferometer campaign</a> — <a href="https://github.com/PyAutoLabs/PyAutoPulse/issues/62">issue #62</a> — issued 2026-10-15 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/63">PyAutoPulse#63</a></summary>
-
-```
-Use the start-dev skill. active/interferometer_large_mask_campaign_ledger.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/interferometer_sparse_inversion_compute_data_vec.md">Interferometer sparse inversion: compute data vector without the dense mapping matrix</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/626">issue #626</a> — issued 2026-10-15 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/630">PyAutoArray#630</a> — ⏳ pending release: PyAutoArray</summary>
-
-```
-Use the start-dev skill. active/interferometer_sparse_inversion_compute_data_vec.md
 ```
 
 </details>
@@ -2732,17 +2716,15 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-15 | filed | <a href="planned.md#adaptsplit-logdet-backend-parity">adaptsplit-logdet-backend-parity</a> |
 | 2026-10-15 | issued | <a href="active/capability_matrix_links_b3_catalogue_cards.md"><code>@PyAutoFit</code> capability matrix: link each search row to its…</a> |
 | 2026-10-15 | issued | <a href="active/ral_category_paths_phase2.md">RAL category paths — phase 2: repoint the claimed repos, then drop…</a> |
-| 2026-10-15 | issued | <a href="active/interferometer_large_mask_campaign_ledger.md">Pulse ledger: log the Aris interferometer large-mask tasks under the…</a> |
-| 2026-10-15 | issued | <a href="active/interferometer_sparse_inversion_compute_data_vec.md">Interferometer sparse inversion: compute data vector without the…</a> |
 | 2026-10-15 | filed | <a href="draft/feature/autoarray/interferometer_numba_route_gate_should_scale_wit.md">Interferometer numba route gate should scale with mask size</a> |
 | 2026-10-15 | filed | <a href="draft/bug/autoarray/adaptsplit_regularization_log_det_differs_betwee.md">AdaptSplit regularization log-det differs between numba and JAX…</a> |
+| 2026-10-14 | filed | <a href="draft/test/autofit/workspace_searches_scripts_preexisting_failures.md"><code>@autofit_workspace</code> six <code>searches/</code> scripts fail on main at…</a> |
+| 2026-10-14 | filed | <a href="draft/test/autofit/emcee_jax_timing_test_flaky_on_ci.md"><code>@PyAutoFit</code> <code>test_emcee_call_path_runs_at_jitted_speed</code> is a…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-14 | filed | <a href="draft/test/autofit/workspace_searches_scripts_preexisting_failures.md"><code>@autofit_workspace</code> six <code>searches/</code> scripts fail on main at…</a> |
-| 2026-10-14 | filed | <a href="draft/test/autofit/emcee_jax_timing_test_flaky_on_ci.md"><code>@PyAutoFit</code> <code>test_emcee_call_path_runs_at_jitted_speed</code> is a…</a> |
 | 2026-10-14 | filed | <a href="draft/bug/autofit/bfgs_resume_reads_x0_from_scipy_result.md"><code>@PyAutoFit</code> BFGS/LBFGS resume reads <code>["x0"]</code> from the saved scipy…</a> |
 | 2026-10-14 | filed | <a href="draft/feature/cortex/human_readable_projects_dashboard.md">Human-readable Cortex Projects dashboard</a> |
 | 2026-10-14 | filed | <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> |
@@ -2751,13 +2733,13 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-09 | filed | <a href="draft/bug/pyautobrain/profiling_compile_drift_point_vs_point.md">Profiling conductor compile drift compares one point against one point</a> |
 | 2026-10-08 | filed | <a href="draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md"><code>JAX_ENABLE_X64=False</code> is overridden to True, so the fp32 inference…</a> |
 | 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
+| 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
+| 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
-| 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
@@ -2766,13 +2748,13 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
 | 2026-09-29 | filed | <a href="draft/maintenance/pyautomind/session_start_hook_copies_regen.md">Regenerate the 28 drifted <code>.claude/hooks/session-start.sh</code> copies…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
+| 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
+| 2026-09-27 | filed | <a href="draft/bug/autogalaxy/power_law_multipole_m1_singular_at_isothermal_slope.md">PowerLawMultipole with m=1 returns -inf / NaN deflections at slope…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
-| 2026-09-27 | filed | <a href="draft/bug/autogalaxy/power_law_multipole_m1_singular_at_isothermal_slope.md">PowerLawMultipole with m=1 returns -inf / NaN deflections at slope…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
 | 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
@@ -2781,13 +2763,13 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-25 | filed | <a href="draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md">Keep caches off <code>$HOME</code> on HPC — phase 2 remainder: euclid pipeline…</a> |
 | 2026-09-24 | filed | <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> |
 | 2026-09-23 | filed | <a href="draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
+| 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
+| 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
-| 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> |
 | 2026-09-18 | filed | <a href="draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md">The latent smoke's empty-block assertion names one cause…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its…</a> |
@@ -2796,6 +2778,8 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-17 | filed | <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> |
 | 2026-09-17 | filed | <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads…</a> |
+| 2026-09-17 | filed | <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> |
+| 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
 
 </details>
 
@@ -2966,7 +2950,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoArray**
 
-- [PyAutoArray#630](https://github.com/PyAutoLabs/PyAutoArray/pull/630) — `active/interferometer_sparse_inversion_compute_data_vec.md`
+- [PyAutoArray#630](https://github.com/PyAutoLabs/PyAutoArray/pull/630) — `complete/2026/10/interferometer-sparse-data-vector.md`
 
 **PyAutoFit**
 
