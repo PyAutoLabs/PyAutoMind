@@ -65,7 +65,8 @@
 - issued: 2026-10-14
 - prompt: active/cortex_projects_readability.md
 - session: Claude Code CLI (Fable 5.1); session 6ffb59e9; launched --auto 2026-10-15
-- status: library-dev (Brain renderer + tests only; PyAutoCortex claimed by ral-category-paths-phase2 — Cortex pages self-heal from Brain main via Dashboard Refresh, so no Cortex PR is planned; if one is needed it waits for that claim)
+- status: pr-open (awaiting human /prm; tier undeclared) — Brain renderer + tests only; PyAutoCortex pages self-heal from Brain main via Cortex Dashboard Refresh (nightly 03:35 UTC or next Cortex push) — no Cortex PR; CI green at a7a02e88
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/526
 - worktree: ~/Code/PyAutoLabs-wt/cortex-project-readability
 - heart-red-override:
   - date: 2026-10-15
