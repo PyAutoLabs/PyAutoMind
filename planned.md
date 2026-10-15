@@ -130,3 +130,16 @@
 - classification: library (PyAutoFit docs generator), Consequence glance, Autonomy safe
 - suggested-branch: feature/search-ext-a5-capmatrix-cards
 - next: worktree_create search-ext-a5-capmatrix-cards PyAutoFit; implement per #1694; end at PR-open (Heart RED override forbids auto-merge)
+
+## ral-category-paths-phase2
+- status: blocked
+- filed: 2026-10-15
+- issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/67
+- prompt: active/science_ral_folder_restructure.md (phase 2, edits 6-9)
+- blocked-by: autolens_profiling claimed by hst-mge-pilot-qualification (#418 awaiting merge); autofit_inference + PyAutoCortex claimed by search-ext-b5b2-remainder (RAL wave-2 jobs running)
+- summary: repoint autolens_profiling (+_wt, _corpus), autofit_inference (+ b5a_dryrun) hard-coded RAL paths; Cortex ral_root sweep + register subhalo + euclid → active; PyAutoMemory mention; then the human removes the last RAL old-path links
+- affected-repos:
+  - autolens_profiling
+  - autofit_inference
+  - PyAutoCortex
+  - PyAutoMemory

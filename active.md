@@ -1,5 +1,24 @@
 # Active Tasks
 
+## ral-category-paths
+- issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/67
+- issued: 2026-10-15
+- prompt: active/science_ral_folder_restructure.md
+- session: Claude Code CLI (Opus 5.5); session 4b6b15e2
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/ral-category-paths
+- heart-red-override:
+  - date: 2026-10-15
+  - authorized-by: live human in session 4b6b15e2 ("can we sort out the 8 remaining links" after being asked for the override; plan approved with "go")
+  - reasons: "Heart: RED — Release RED; monitoring RED · 10/100 · 415 unresolved"; "[red] release validation FAILED (stage integrate)"; "[red] PyAutoArray/Tests: red"; "[red] autofit/autogalaxy/autolens_workspace_test Smoke Tests: red"; "[red] autolens_inference: red"; "[red] autolens_profiling: red"; "[red] Worktree drift"
+  - permitted: commit, push, PR-open; merge separate
+- next: phase 1 PRs (autolens_inference, autofit_profiling, PyAutoMind policy/hpc_ral.md, PyAutoPulse) + euclid project scripts; phase 2 parked in planned.md (ral-category-paths-phase2)
+- repos:
+  - autolens_inference: feature/ral-category-paths
+  - autofit_profiling: feature/ral-category-paths
+  - PyAutoPulse: feature/ral-category-paths
+  - PyAutoMind: feature/ral-category-paths
+
 ## hst-mge-pilot-qualification
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/417
 - issued: 2026-10-13
