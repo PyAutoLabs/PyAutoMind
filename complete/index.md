@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1866 records across 9 buckets.
+1867 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -314,6 +314,7 @@ markers; everything below GENERATED is rebuilt.
 - [search-ext-a3b-nss-preflight](2026/10/search-ext-a3b-nss-preflight.md)
 - [search-ext-a4-companions](2026/10/search-ext-a4-companions.md)
 - [search-ext-a4-decompose](2026/10/search-ext-a4-decompose.md)
+- [search-ext-a5-library](2026/10/search-ext-a5-library.md) — phase A5 of search-extensibility, merged as four stacked PRs (1689 → 1690 nest/BlackJAX → 1691 MultiStart → 16…
 - [search-ext-b1-registration](2026/10/search-ext-b1-registration.md)
 - [search-ext-b2-harness](2026/10/search-ext-b2-harness.md)
 - [search-ext-b3-pilot](2026/10/search-ext-b3-pilot.md)

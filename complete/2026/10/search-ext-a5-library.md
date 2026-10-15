@@ -1,3 +1,22 @@
+## search-ext-a5-library
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1688
+- completed: 2026-10-15
+- epic: search-extensibility
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1689
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1690
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1691
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1692
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1689
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1690
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1691
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1692
+- summary: phase A5 of search-extensibility, merged as four stacked PRs (1689 → 1690 nest/BlackJAX → 1691 MultiStart → 1692 framework; final merge commit 3f4699b95). All 15 non-linear searches now run on `run(ctx)`; MultiStart migrated to the phased contract; legacy pool shims deleted; the framework is closed, and a new-search template lives at `search/_template/search.py`.
+- decisions (in the PR bodies): Zeus test-mode start points are a class attribute; Zeus and BFGS keep their own dill resume; the Dynesty pool comes only from `PoolFactory`; MultiStart loop state is a dict; the `use_jax_vmap` warning ignores `None`; no `FitLifecycle` abstraction.
+- verification: all four PRs full-suite green serially; identifiers and seeded samples byte-identical against main df6d218f1.
+- follow-ups (filed in Mind): `draft/bug/autofit/bfgs_resume_reads_x0_from_scipy_result.md`, `draft/test/autofit/workspace_searches_scripts_preexisting_failures.md`, `draft/refactor/autofit/search_ext_a5_consumers.md` (now unblocked).
+
+## Original prompt
+
 # `@PyAutoFit` A5 (library): migrate every search onto `run(ctx)`, delete the legacy `_fit`/pool surface, ship the new-search template
 
 Type: refactor
