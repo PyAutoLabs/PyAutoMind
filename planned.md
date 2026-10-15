@@ -15,6 +15,7 @@
 - [adaptsplit-logdet-backend-parity](#adaptsplit-logdet-backend-parity)
 - [interferometer-numba-route-gate](#interferometer-numba-route-gate)
 - [delaunaynn-wide-row-overhead](#delaunaynn-wide-row-overhead)
+- [pulse-interferometer-large-mask](#pulse-interferometer-large-mask)
 
 <!-- toc:end -->
 
