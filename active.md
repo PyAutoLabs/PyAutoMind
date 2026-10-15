@@ -1,5 +1,23 @@
 
 
+## adaptsplit-logdet-backend-parity
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/627
+- issued: 2026-10-15
+- prompt: active/adaptsplit_regularization_log_det_differs_betwee.md
+- session: Claude Code CLI (Fable 5.1); session 3e3dea38; launched --auto
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/631
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/631
+- decision: human chose (b) 'Delaunay only (Recommended by review)' on 2026-10-15 (https://github.com/PyAutoLabs/PyAutoArray/issues/627#issuecomment-6200058449); un-parked
+- worktree: ~/Code/PyAutoLabs-wt/adaptsplit-logdet-backend-parity
+- heart-red-override:
+  - date: 2026-10-15
+  - authorized-by: live human in session 3e3dea38, AskUserQuestion answer 'Yes, override for development (Recommended)' (evening launch, three PyAutoArray Aris prompts)
+  - reasons: "Heart: RED — Release RED; monitoring RED · 10/100 · 415 unresolved"; "[red] release validation FAILED (stage integrate)"; "[red] PyAutoHands/workflows/Python Version Matrix: failure"; "[red] PyAutoHeart/workflows/Release Integrate: failure"; "[red] PyAutoMind/workflows/Lifecycle Drift: failure"; "[red] PyAutoArray/Tests: red"; "[red] autofit_workspace_test/Smoke Tests: red"; "[red] autogalaxy_workspace_test/Smoke Tests: red"; "[red] autolens_workspace_test/Smoke Tests: red"; "[red] Release validation: NOT release_ready"; "[red] Worktree drift"; "[red] autolens_inference: red"; "[red] autolens_profiling: red"; "[red] euclid_strong_lens_modeling_pipeline: red" (as listed on PyAutoArray#626)
+  - permitted: commit, push, PR-open; merge separate
+- repos:
+  - PyAutoArray: feature/adaptsplit-logdet-backend-parity
+
 ## search-ext-b5c-family
 - issue: https://github.com/PyAutoLabs/autofit_inference/issues/14
 - issued: 2026-10-15
@@ -19,36 +37,3 @@
   - authorized-by: live human in session 6ffb59e9, AskUserQuestion answer 'Both, override for development (Recommended)' (third grant, night launch)
   - reasons: "Heart: RED — Release RED; monitoring RED · 10/100 · 415 unresolved"; "[red] release validation FAILED (stage integrate)"; "[red] PyAutoHands/workflows/Python Version Matrix: failure"; "[red] PyAutoHeart/workflows/Release Integrate: failure"; "[red] PyAutoArray/Tests: red"; "[red] autofit_workspace_test/Smoke Tests: red"; "[red] autogalaxy_workspace_test/Smoke Tests: red"; "[red] autolens_workspace_test/Smoke Tests: red"; "[red] Release validation: NOT release_ready"; "[red] Worktree drift"; "[red] autolens_inference: red"; "[red] autolens_profiling: red"; "[red] euclid_strong_lens_modeling_pipeline: red"
   - permitted: commit, push, PR-open; merge separate
-
-## cortex-project-card-polish
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/527
-- issued: 2026-10-15
-- session: Codex; session ID unavailable
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/528 (545c69d)
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/cortex-project-card-polish
-- repos:
-  - PyAutoBrain: feature/cortex-project-card-polish
-- heart-red-override:
-  - authorization: "Proceed, I override" (2026-10-15, this task only; human merge required)
-  - validation: 1274 Brain tests pass; 4 Chromium cases pass; in-session diff/visual review; scientific smoke n/a (renderer only)
-  - exact-reasons:
-    - release validation FAILED (stage integrate)
-    - PyAutoHands/workflows/Python Version Matrix: failure
-    - PyAutoHeart/workflows/Release Integrate: failure
-    - PyAutoMind/workflows/Lifecycle Drift: failure
-    - PyAutoArray/Tests: red
-    - PyAutoArray/Tests: red
-    - autofit_workspace_test/Smoke Tests: red
-    - autogalaxy_workspace_test/Smoke Tests: red
-    - autolens_workspace_test/Smoke Tests: red
-    - CI wall-clock: 26 gates · slowest PyAutoBrain Nightly Release 63m · 5 hang events
-    - Release readiness: release validation FAILED (stage integrate)
-    - autofit_test: red
-    - Release validation: NOT release_ready — v2026.10.15.1.dev81701 profile=release (2026-10-15T07:04:34+00:00)
-    - validation_report/stages/integrate: fail
-    - PyAutoArray: red
-    - autolens_inference: red
-    - autolens_profiling: red
-    - Worktree drift: 5 orphan / 0 missing / 4 dirty
-    - euclid_strong_lens_modeling_pipeline: red
