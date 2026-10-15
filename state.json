@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 3 in flight",
-  "updated": "2026-10-15T16:10:56Z",
+  "headline": "RED \u2014 24 picks \u00b7 2 in flight",
+  "updated": "2026-10-15T16:26:32Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,12 +12,6 @@
       "text": "Cortex Projects readability \u2014 phase 1 \u2014 blocked",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/issues/521",
       "prompt": "Use the start-dev skill. active/cortex_projects_readability.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Make DelaunayNN fast on the numba/NumPy path \u2014 library-shipped, awaiting-merge (phase 1 #624, phase 2 #625 stacked)",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/624",
-      "prompt": "Use the start-dev skill. active/make_delaunaynn_fast_on_the_numba_numpy.md"
     },
     {
       "severity": "yellow",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1692 \u2014 search-ext-a5-library",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1692",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#652 \u2014 search-ext-a0c-downstream",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/652",
       "prompt": null
     }
   ]

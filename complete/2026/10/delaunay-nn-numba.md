@@ -1,3 +1,16 @@
+## Summary
+Made DelaunayNN fast on the numba/NumPy path (PyAutoArray#623), in two phases:
+
+- **#624 — numba Sibson kernel.** The per-query Python loop in the NumPy branch of `sibson_mappings_weights_from_tables` is replaced by a parallel `prange` kernel (module-level `interpolator/_sibson_numba.py`, lazily imported, cross-process cache) that ports `_sibson_single_from_tables` exactly; reference loop kept as fallback. Aris SMA interferometer, threads=1: DelaunayNN 18.1 s → 0.57 s per likelihood at 1405 vertices (Delaunay 0.41 s), 56 s → 12.1 s at 5526 (Delaunay 8.2 s); Sibson step 8.5 s → 13 ms; logL identical. Independent review caught a cross-process numba cache miss and a narrow ImportError probe, both fixed pre-commit.
+- **#625 — routing audit.** No routing change needed: DelaunayNN routes to `InversionInterferometerSparseNumba` and `InversionImagingSparseNumba`; NaN Sibson weights give NaN evidence on every route. Added routing / parity / NaN tests and docstrings.
+
+Witness met (DelaunayNN ≤ 2× Delaunay on Aris 1405, parity green). Shipped and merged under the development-only Heart RED override (human `/prm`).
+
+## Follow-up
+- `draft/feature/autoarray/delaunaynn_wide_row_imaging_overhead.md` — imaging sub-4 DelaunayNN still 2.7× Delaunay (`unique_mappings`, `adaptive_pixel_signals_from` over 32-wide padded rows) + pre-existing size==0 failed-row edge case.
+
+## Original prompt
+
 # Make DelaunayNN fast on the numba/NumPy path
 
 Type: feature

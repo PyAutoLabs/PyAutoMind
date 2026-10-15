@@ -439,7 +439,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 13 (stage 1: 13, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14
+Count toward 20: 14 (stage 1: 14, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -481,3 +481,4 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-10-14 | retire-nautilus-leftovers (autofit_workspace_developer#32) | glance | tests:n/a smoke:n/a review:fable heart:stale witness:pass | merged-unchanged | 1 |
 | 2026-10-14 | search-ext-a4-companions (PyAutoBrain#522 autofit_workspace_test#111 autofit_workspace_developer#33) | glance | tests Brain 1258 pass (+CI 3.12/3.13), ws n/a no test dir · smoke awt 15/15 (+CI) · review CLEAN (independent agent) · Heart STALE (no rehearsal) · witness PASS (UltraNest TM1 env ImportError, identical on main) | merged-unchanged | 1 |
 | 2026-10-15 | search-ext-b4b-dev-retire (autofit_workspace_developer#35) | glance | tests n/a (no suite) / smoke n/a (no CI) / review self-check (deletion) / heart RED red-override / witness PASS | merged-unchanged | 1 |
+| 2026-10-15 | delaunay-nn-numba (PyAutoArray#624 / PyAutoArray#625) | glance | tests 2026+2031 passed, nojax emulated / smoke 4/4 / review FINDINGS×2 fixed + CLEAN / heart stale+RED (dev override) / witness met (0.57 vs 0.41 s) | merged-unchanged | 1 |
