@@ -12,6 +12,8 @@
 - [cortex-project-readability](#cortex-project-readability)
 - [search-ext-a5-capmatrix-cards](#search-ext-a5-capmatrix-cards)
 - [ral-category-paths-phase2](#ral-category-paths-phase2)
+- [adaptsplit-logdet-backend-parity](#adaptsplit-logdet-backend-parity)
+- [interferometer-numba-route-gate](#interferometer-numba-route-gate)
 
 <!-- toc:end -->
 
