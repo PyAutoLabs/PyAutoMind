@@ -858,7 +858,7 @@ Use the start-dev skill. active/capability_matrix_links_b3_catalogue_cards.md
 
 </details>
 
-<details><summary>📋 <a href="active/cortex_projects_readability.md">Cortex Projects readability — phase 1</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/521">issue #521</a> — issued 2026-10-14 — library-dev (Brain renderer + tests only; PyAutoCortex claimed by ral-category-paths-phase2 — Cortex pages self-heal from Brain…</summary>
+<details><summary>📋 <a href="active/cortex_projects_readability.md">Cortex Projects readability — phase 1</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/521">issue #521</a> — issued 2026-10-14 — pr-open (awaiting human /prm; tier undeclared) — Brain renderer + tests only; PyAutoCortex pages self-heal from Brain main via… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/526">PyAutoBrain#526</a></summary>
 
 ```
 Use the start-dev skill. active/cortex_projects_readability.md
