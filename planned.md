@@ -14,6 +14,7 @@
 - [ral-category-paths-phase2](#ral-category-paths-phase2)
 - [adaptsplit-logdet-backend-parity](#adaptsplit-logdet-backend-parity)
 - [interferometer-numba-route-gate](#interferometer-numba-route-gate)
+- [delaunaynn-wide-row-overhead](#delaunaynn-wide-row-overhead)
 
 <!-- toc:end -->
 
@@ -169,3 +170,21 @@
   - PyAutoArray
   - autolens_profiling
 - resume: plan on #628; launched --auto (effective supervised) with the Heart RED development override recorded on the issue (session 3e3dea38, 2026-10-15). DelaunayNN #624/#625 merged 2026-10-15 so no factory.py conflict. Library phase first, autolens_profiling re-measurement record second.
+
+## delaunaynn-wide-row-overhead
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/629
+- planned: 2026-10-15
+- prompt: draft/feature/autoarray/delaunaynn_wide_row_imaging_overhead.md
+- classification: library (+ PyAutoPulse campaign ledger)
+- suggested-branch: feature/delaunaynn-wide-row-overhead
+- blocked-by: interferometer-sparse-data-vector (using PyAutoArray); ral-category-paths (using PyAutoPulse)
+- plan: approved by the human 2026-10-15 (session 0b91c774) — full two-level plan on #629; target ≈2× Delaunay at imaging sub 4; Sibson failed rows keep size ≥ 1 (NaN propagates)
+- pulse: human asked to log + monitor under a PyAutoPulse speed-up campaign — create `delaunay-nn-cpu` in campaigns.yaml with tasks for #623 (complete, PyAutoArray#624/#625, complete/2026/10/delaunay-nn-numba.md) and #629 once PyAutoPulse is free (Library may start first if PyAutoArray frees earlier)
+- heart-red-override:
+  - date: 2026-10-15
+  - authorized-by: live human in session 0b91c774, AskUserQuestion "Yes, override for this task"
+  - reasons: verbatim on #629
+  - permitted: commit, push, PR-open; merge separate
+- affected-repos:
+  - PyAutoArray
+  - PyAutoPulse
