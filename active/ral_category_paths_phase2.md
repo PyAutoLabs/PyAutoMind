@@ -14,6 +14,7 @@ Status: formalised
 Consequence: judge
 Issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/67
 Filed: 2026-10-15
+Issued: 2026-10-15
 Blocked-by: autolens_profiling claimed by hst-mge-pilot-qualification (autolens_profiling#418 awaiting merge); autofit_inference + PyAutoCortex released by search-ext-b5b2-remainder 2026-10-15 (wave 2 closed)
 Witness: `git grep` over the edited repos' live config finds no `/mnt/ral/jnightin/{autolens_profiling,autolens_profiling_wt,autolens_profiling_corpus,autofit_inference,autofit_inference_b5a_dryrun}` path (results/, provenance JSON, captured logs, archive/ exempt); `cortex.py check` OK; every active Cortex row's `ral_root` exists on RAL.
 Review-minutes: 10

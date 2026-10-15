@@ -10,7 +10,6 @@
 - [knn-partial-point-block](#knn-partial-point-block)
 - [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
 - [cortex-project-readability](#cortex-project-readability)
-- [ral-category-paths-phase2](#ral-category-paths-phase2)
 - [adaptsplit-logdet-backend-parity](#adaptsplit-logdet-backend-parity)
 - [interferometer-numba-route-gate](#interferometer-numba-route-gate)
 - [delaunaynn-wide-row-overhead](#delaunaynn-wide-row-overhead)
@@ -125,19 +124,6 @@
 - affected-repos:
   - PyAutoBrain
   - PyAutoCortex
-
-## ral-category-paths-phase2
-- status: blocked
-- filed: 2026-10-15
-- issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/67
-- prompt: draft/refactor/cortex/ral_category_paths_phase2.md
-- blocked-by: autolens_profiling claimed by hst-mge-pilot-qualification (#418 awaiting merge); autofit_inference + PyAutoCortex released by search-ext-b5b2-remainder 2026-10-15 (wave 2 closed)
-- summary: repoint autolens_profiling (+_wt, _corpus), autofit_inference (+ b5a_dryrun) hard-coded RAL paths; Cortex ral_root sweep + register subhalo + euclid → active; PyAutoMemory mention; then the human removes the last RAL old-path links
-- affected-repos:
-  - autolens_profiling
-  - autofit_inference
-  - PyAutoCortex
-  - PyAutoMemory
 
 ## adaptsplit-logdet-backend-parity
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/627

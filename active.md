@@ -1,5 +1,23 @@
 # Active Tasks
 
+## ral-category-paths-phase2
+- issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/67
+- issued: 2026-10-15
+- prompt: active/ral_category_paths_phase2.md
+- session: Claude Code CLI (Opus 5.5); session 4b6b15e2
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/ral-category-paths-phase2
+- heart-red-override:
+  - date: 2026-10-15
+  - authorized-by: live human in session 4b6b15e2 — the override granted for PyAutoCortex#67 (phase 1), carried to this remainder of the same issue on the human's "go"
+  - reasons: unchanged from phase 1 (recorded on PyAutoCortex#67)
+  - permitted: commit, push, PR-open; merge separate
+- next: autofit_inference + PyAutoCortex + PyAutoMemory now; autolens_profiling (+_wt, _corpus) once autolens_profiling#418 (hst-mge-pilot-qualification) merges and releases it
+- repos:
+  - autofit_inference: feature/ral-category-paths-phase2
+  - PyAutoCortex: feature/ral-category-paths-phase2
+  - PyAutoMemory: feature/ral-category-paths-phase2
+
 ## hst-mge-pilot-qualification
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/417
 - issued: 2026-10-13
