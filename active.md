@@ -34,7 +34,9 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1694
 - issued: 2026-10-15
 - prompt: active/capability_matrix_links_b3_catalogue_cards.md
-- status: library-dev
+- status: pr-open (glance tier; Heart RED override forbids auto-merge — awaiting human /prm) — PyAutoFit#1696 green (Docs 2/2, Tests 3/3); Catalogue column links every manifest search to its card at pinned autofit_inference bea1d8746
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1696
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1696
 - session: Claude Code CLI (Fable 5.1); session 6ffb59e9; launched --auto (second Heart RED override grant, recorded on #1694 and autonomy_log)
 - epic: search-extensibility
 - worktree: ~/Code/PyAutoLabs-wt/search-ext-a5-capmatrix-cards
