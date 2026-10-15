@@ -14,7 +14,7 @@
 | [Planned](#planned) | 12 |
 | [Backlog](#backlog) | 262 |
 | [Recent](#recent) | 50 |
-| [Pending release](#pending-release) | 3 |
+| [Pending release](#pending-release) | 4 |
 
 ## Start here
 
@@ -890,7 +890,7 @@ Use the start-dev skill. active/interferometer_numba_route_gate_should_scale_wit
 
 </details>
 
-<details><summary>📋 <a href="active/interferometer_sparse_inversion_compute_data_vec.md">Interferometer sparse inversion: compute data vector without the dense mapping matrix</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/626">issue #626</a> — issued 2026-10-15 — library-dev</summary>
+<details><summary>📋 <a href="active/interferometer_sparse_inversion_compute_data_vec.md">Interferometer sparse inversion: compute data vector without the dense mapping matrix</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/626">issue #626</a> — issued 2026-10-15 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/630">PyAutoArray#630</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 Use the start-dev skill. active/interferometer_sparse_inversion_compute_data_vec.md
@@ -2971,6 +2971,10 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 </details>
 
 ## Pending release
+
+**PyAutoArray**
+
+- [PyAutoArray#630](https://github.com/PyAutoLabs/PyAutoArray/pull/630) — `active/interferometer_sparse_inversion_compute_data_vec.md`
 
 **PyAutoFit**
 
