@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-15T19:04:07Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 2 in flight",
+  "updated": "2026-10-15T19:05:29Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -23,12 +23,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#630 \u2014 interferometer-sparse-data-vector",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/630",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1696 \u2014 `@PyAutoFit` capability matrix: link each search row to its autofit_inference catalogue card",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1696",
       "prompt": null
     },
     {
@@ -101,6 +95,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1687 \u2014 search-ext-a4-decompose",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1687",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1696 \u2014 search-ext-a5-capmatrix-cards",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1696",
       "prompt": null
     },
     {

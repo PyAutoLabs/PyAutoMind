@@ -31,7 +31,7 @@ Tier: undeclared — merge mode: human /prm
 
 ## Phasing decision
 
-Feature Agent recommends separate phases. Phase 1 is the presentation change (steps 1, 3 and 4 as applicable); Phase 2 is output accounting (step 2 plus receipt/collector validation), after identifying reliable metadata. Phase 1 must not depend on collecting metrics. Both remain awaiting human plan approval. Proposed branches: feature/cortex-project-readability and feature/cortex-output-summary.
+Feature Agent recommends separate phases. Phase 1 is the presentation change (steps 1, 3 and 4 as applicable); Phase 2 is output accounting (step 2 plus receipt/collector validation), after identifying reliable metadata. Phase 1 must not depend on collecting metrics. Both remain awaiting human plan approval. Proposed branches: feature/cortex-project-readability and feature/cortex-output-summary. Phase 1 DONE 2026-10-15 (PyAutoBrain#526, record `complete/2026/10/cortex-project-readability.md`); phase 2 remains `draft/feature/cortex/output_summary.md`.
 
 ## Current coordination
 

@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1880 records across 9 buckets.
+1882 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -158,6 +158,7 @@ markers; everything below GENERATED is rebuilt.
 - [compact-memory-board](2026/10/compact-memory-board.md)
 - [compile-builder-hst-mge](2026/10/compile-builder-hst-mge.md) — Shipped one explicit, isolated HST/MGE fp64 jit current-runtime compile workload; broader profiling campaign r…
 - [cortex-find-script-symlink](2026/10/cortex-find-script-symlink.md)
+- [cortex-project-readability](2026/10/cortex-project-readability.md) — Phase 1 of the human-approved Cortex Projects redesign (#521). Brain's Cortex conductor (`agents/conductors/co…
 - [critical-curves-dispatch-audit](2026/10/critical-curves-dispatch-audit.md) — Phase 3a evidence and contract shipped. Research, raw CPU JSON/PNG, frozen measured source and cumulative wiki…
 - [dashboard-checkin-prompts](2026/10/dashboard-checkin-prompts.md) — Thirteen individually approved ongoing-conversation prompts implemented and merged across eleven board owners.…
 - [dashboard-control-labels](2026/10/dashboard-control-labels.md)
@@ -320,6 +321,7 @@ markers; everything below GENERATED is rebuilt.
 - [search-ext-a3b-nss-preflight](2026/10/search-ext-a3b-nss-preflight.md)
 - [search-ext-a4-companions](2026/10/search-ext-a4-companions.md)
 - [search-ext-a4-decompose](2026/10/search-ext-a4-decompose.md)
+- [search-ext-a5-capmatrix-cards](2026/10/search-ext-a5-capmatrix-cards.md) — A5-consumers follow-up closing the one unmet witness item: PyAutoFit `docs/_generate_searches.py` now emits a …
 - [search-ext-a5-consumers](2026/10/search-ext-a5-consumers.md) — A5 consumers of search-extensibility. Every consumer of the PyAutoFit search roster now reads the installed-re…
 - [search-ext-a5-library](2026/10/search-ext-a5-library.md) — phase A5 of search-extensibility, merged as four stacked PRs (1689 → 1690 nest/BlackJAX → 1691 MultiStart → 16…
 - [search-ext-b1-registration](2026/10/search-ext-b1-registration.md)
