@@ -890,7 +890,7 @@ Use the start-dev skill. active/hst_mge_pilot_qualification.md
 
 </details>
 
-<details><summary>📋 <a href="active/make_delaunaynn_fast_on_the_numba_numpy.md">Make DelaunayNN fast on the numba/NumPy path</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/623">issue #623</a> — issued 2026-10-15 — library-shipped, awaiting-merge (phase 1); phase 2 not started — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/624">PyAutoArray#624</a></summary>
+<details><summary>📋 <a href="active/make_delaunaynn_fast_on_the_numba_numpy.md">Make DelaunayNN fast on the numba/NumPy path</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/623">issue #623</a> — issued 2026-10-15 — library-shipped, awaiting-merge (phase 1 #624, phase 2 #625 stacked) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/624">PyAutoArray#624</a>, <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/625">PyAutoArray#625</a></summary>
 
 ```
 Use the start-dev skill. active/make_delaunaynn_fast_on_the_numba_numpy.md
