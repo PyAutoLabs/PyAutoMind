@@ -850,7 +850,7 @@ Use the start-dev skill. active/hst_mge_pilot_qualification.md
 
 </details>
 
-<details><summary>📋 <a href="active/reuse_cholesky_factor_for_solve_and_log_det.md">Reuse one Cholesky factor of F+H for the reconstruction solve…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/633">issue #633</a> — issued 2026-10-15 — library-dev</summary>
+<details><summary>📋 <a href="active/reuse_cholesky_factor_for_solve_and_log_det.md">Reuse one Cholesky factor of F+H for the reconstruction solve…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/633">issue #633</a> — issued 2026-10-15 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/634">PyAutoArray#634</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 Use the start-dev skill. active/reuse_cholesky_factor_for_solve_and_log_det.md
@@ -2918,6 +2918,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoArray**
 
+- [PyAutoArray#634](https://github.com/PyAutoLabs/PyAutoArray/pull/634) — `active/reuse_cholesky_factor_for_solve_and_log_det.md`
 - [PyAutoArray#631](https://github.com/PyAutoLabs/PyAutoArray/pull/631) — `complete/2026/10/adaptsplit-logdet-backend-parity.md`
 - [PyAutoArray#632](https://github.com/PyAutoLabs/PyAutoArray/pull/632) — `complete/2026/10/interferometer-numba-route-gate.md`
 - [PyAutoArray#630](https://github.com/PyAutoLabs/PyAutoArray/pull/630) — `complete/2026/10/interferometer-sparse-data-vector.md`
