@@ -52,12 +52,12 @@ Campaign: https://github.com/PyAutoLabs/PyAutoPulse/issues/62 (task `interferome
 ## Scope merged vs filed
 
 Partial by design: the library phase (PyAutoArray) shipped; the phase-2 workspace record
-(autolens_profiling re-measurement) did NOT ship and was never claimed. It is re-filed as
-`draft/feature/autolens_profiling/interferometer_route_gate_phase2_remeasure.md`.
+(autolens_profiling re-measurement) did NOT ship and was never claimed. It was re-filed as a
+draft and has since shipped: `complete/2026/10/interferometer-route-gate-phase2.md` (shipped 2026-10-15, autolens_profiling#420).
 
 ## Where to pick up
 
-Phase 2: `draft/feature/autolens_profiling/interferometer_route_gate_phase2_remeasure.md` —
+Phase 2: shipped — `complete/2026/10/interferometer-route-gate-phase2.md` (shipped 2026-10-15, autolens_profiling#420) —
 re-measure both Aris masks' routing table with the default cost model and record it in the
 #226 format (the three autolens_profiling scripts that set the gate explicitly keep hard-gate
 meaning). This also covers the campaign's owed Aris after-measurements (PyAutoPulse#62).

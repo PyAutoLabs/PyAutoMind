@@ -216,6 +216,7 @@ markers; everything below GENERATED is rebuilt.
 - [intake-declared-header-fields](2026/10/intake-declared-header-fields.md)
 - [interferometer-decision-matrix-last-cell](2026/10/interferometer-decision-matrix-last-cell.md)
 - [interferometer-numba-route-gate](2026/10/interferometer-numba-route-gate.md)
+- [interferometer-route-gate-phase2](2026/10/interferometer-route-gate-phase2.md)
 - [interferometer-sparse-data-vector](2026/10/interferometer-sparse-data-vector.md) — The sparse-operator interferometer inversion now builds its data vector directly from the mapper's COO triplet…
 - [interferometer-streaming-scaling](2026/10/interferometer-streaming-scaling.md) — CPU streaming scaling cells and evidence shipped, including accumulation to 5e7 visibilities, in-memory failur…
 - [jax-lapack-compatibility-repair](2026/10/jax-lapack-compatibility-repair.md)
