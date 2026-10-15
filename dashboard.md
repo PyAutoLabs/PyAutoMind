@@ -850,7 +850,7 @@ Use the start-dev skill. active/hst_mge_pilot_qualification.md
 
 </details>
 
-<details><summary>📋 <a href="active/interferometer_numba_route_gate_should_scale_wit.md">Interferometer numba route gate should scale with mask size</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/628">issue #628</a> — issued 2026-10-15 — library-dev</summary>
+<details><summary>📋 <a href="active/interferometer_numba_route_gate_should_scale_wit.md">Interferometer numba route gate should scale with mask size</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/628">issue #628</a> — issued 2026-10-15 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/632">PyAutoArray#632</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 Use the start-dev skill. active/interferometer_numba_route_gate_should_scale_wit.md
@@ -2902,6 +2902,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoArray**
 
+- [PyAutoArray#632](https://github.com/PyAutoLabs/PyAutoArray/pull/632) — `active/interferometer_numba_route_gate_should_scale_wit.md`
 - [PyAutoArray#631](https://github.com/PyAutoLabs/PyAutoArray/pull/631) — `complete/2026/10/adaptsplit-logdet-backend-parity.md`
 - [PyAutoArray#630](https://github.com/PyAutoLabs/PyAutoArray/pull/630) — `complete/2026/10/interferometer-sparse-data-vector.md`
 
