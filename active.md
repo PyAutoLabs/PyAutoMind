@@ -4,7 +4,8 @@
 - issued: 2026-10-15
 - prompt: active/adaptsplit_regularization_log_det_differs_betwee.md
 - session: Claude Code CLI (Fable 5.1); session 3e3dea38; launched --auto
-- status: library-dev
+- status: parked — review FINDINGS (KNNBarycentric scope); awaiting human decision (a/b/c) on https://github.com/PyAutoLabs/PyAutoArray/issues/627#issuecomment-6199913182
+- branch-pushed: PyAutoArray feature/adaptsplit-logdet-backend-parity @ d78794e3 (no PR)
 - worktree: ~/Code/PyAutoLabs-wt/adaptsplit-logdet-backend-parity
 - heart-red-override:
   - date: 2026-10-15
