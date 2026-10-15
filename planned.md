@@ -152,17 +152,6 @@
   - PyAutoArray
   - PyAutoPulse
 
-## pulse-interferometer-large-mask
-- issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/62
-- filed: 2026-10-15
-- prompt: draft/docs/pyautopulse/interferometer_large_mask_campaign_ledger.md
-- classification: library (PyAutoPulse ledger + board)
-- suggested-branch: feature/pulse-interferometer-large-mask
-- unblocked: 2026-10-15 — ral-category-paths closed (complete/2026/10/ral-category-paths.md); PyAutoPulse released
-- affected-repos:
-  - PyAutoPulse
-- resume: content ready (PyAutoPulse#62 body = tasks/interferometer_large_mask_aris.md; ledger rows in session 3e3dea38 scratchpad pulse_patch/apply.sh, dry-run green). Apply when the PyAutoPulse claim frees, render offline, PR, then link the three PyAutoArray issues' close-outs from the task file.
-
 ## search-ext-b5c-family
 - issue: https://github.com/PyAutoLabs/autofit_inference/issues/14
 - filed: 2026-10-15

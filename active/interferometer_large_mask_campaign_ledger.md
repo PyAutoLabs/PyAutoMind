@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: safe
 Priority: normal
 Status: formalised
+Issued: 2026-10-15
 Consequence: notify
 Witness: `bin/pyauto-pulse check --offline` OK and `pytest -q tests` green with the new task row rendered on the board
 Review-minutes: 1

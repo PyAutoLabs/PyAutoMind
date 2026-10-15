@@ -75,3 +75,20 @@
 - approval: User approved both phases in session: "I approve"; tier undeclared → human /prm
 - repos:
   - PyAutoBrain: feature/cortex-project-readability
+
+## pulse-interferometer-large-mask
+- issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/62
+- issued: 2026-10-15
+- prompt: active/interferometer_large_mask_campaign_ledger.md
+- session: Claude Code CLI (Fable 5.1); session 3e3dea38; launched --auto
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/63
+- worktree: ~/Code/PyAutoLabs-wt/pulse-interferometer-large-mask
+- heart-red-override:
+  - date: 2026-10-15
+  - authorized-by: live human in session 3e3dea38 (same grant as the three Aris PyAutoArray tasks; ledger-only change)
+  - reasons: as recorded on PyAutoArray#626
+  - permitted: commit, push, PR-open; merge separate
+- next: /prm PyAutoPulse#63; #62 stays open as the campaign anchor
+- repos:
+  - PyAutoPulse: feature/pulse-interferometer-large-mask
