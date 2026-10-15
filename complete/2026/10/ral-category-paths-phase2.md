@@ -1,3 +1,14 @@
+Phase 2 of the RAL category-layout path repoint (PyAutoCortex#67).
+
+- autofit_inference#15: SLURM template uses overridable `AP_ROOT=${AP_ROOT:-/mnt/ral/jnightin/inference/autofit_inference}`; 11 wave-2 submit scripts, the `plan_wave2.py` `RAL_ROOT` generator constant, hpc/README.md, AGENTS.md, activate.sh usage, wiki state and `hpc/sync.conf.example` (`HPC_BASE=/mnt/ral/jnightin/inference`). `_wave2.py` is an exporter producer path, so `dashboard/summary.json` was regenerated after lint caught `test_committed_summary_is_current`.
+- PyAutoCortex#69: every row's `ral_root` mirrors its laptop `local_path` category; `subhalo` registered active with a ledger (decision 61: the non-git exception to 52(a)); `euclid` stays dormant, superseded by euclid_dr1 (euclid_dr1_prelim defunct) per the human; schema comment example `/mnt/ral/jnightin/<category>/<project>`.
+- PyAutoMemory: no change needed (remaining mentions are historical); claim released.
+- Heart RED development override carried from phase 1 (recorded on PyAutoCortex#67).
+
+Remainder (autolens_profiling, blocked on autolens_profiling#418) re-filed as `draft/refactor/cortex/ral_category_paths_autolens_profiling.md`; PyAutoCortex#67 stays open for it.
+
+## Original prompt
+
 # RAL category paths — phase 2: repoint the claimed repos, then drop the last RAL links
 
 Type: refactor

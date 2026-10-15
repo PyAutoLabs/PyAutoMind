@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1879 records across 9 buckets.
+1880 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -280,6 +280,7 @@ markers; everything below GENERATED is rebuilt.
 - [pyautopulse-organ-row](2026/10/pyautopulse-organ-row.md) — Phase 0 of `profiling-organ-birth`: PyAutoPulse (organ key `pulse`, display `Pulse`) registered as the cross-p…
 - [pyautopulse-organ-skeleton](2026/10/pyautopulse-organ-skeleton.md) — Phase 2 of `profiling-organ-birth`: the PyAutoPulse organ skeleton — `registry.yaml` (lens row only; `repo` is…
 - [ral-category-paths](2026/10/ral-category-paths.md)
+- [ral-category-paths-phase2](2026/10/ral-category-paths-phase2.md)
 - [repos-sync-check-root-routing](2026/10/repos-sync-check-root-routing.md)
 - [restore-dashboard-green](2026/10/restore-dashboard-green.md)
 - [retire-claude-md-pointers](2026/10/retire-claude-md-pointers.md)

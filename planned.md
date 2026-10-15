@@ -9,7 +9,6 @@
 - [latent-nan-guard-honest-run](#latent-nan-guard-honest-run)
 - [knn-partial-point-block](#knn-partial-point-block)
 - [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
-- [adaptsplit-logdet-backend-parity](#adaptsplit-logdet-backend-parity)
 - [interferometer-numba-route-gate](#interferometer-numba-route-gate)
 - [delaunaynn-wide-row-overhead](#delaunaynn-wide-row-overhead)
 - [search-ext-b5c-family](#search-ext-b5c-family)
@@ -109,17 +108,6 @@
   - PyAutoArray
   - autolens_workspace_test
 - resume: Audit#603 found incorrect internal-edge Sibson weights and near-edge partition failure. Filed separately per explicit user request; strict expected-failure regressions retained in audit. No repair begun or worktree created. Plan algorithmic repair independently.
-
-## adaptsplit-logdet-backend-parity
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/627
-- filed: 2026-10-15
-- prompt: draft/bug/autoarray/adaptsplit_regularization_log_det_differs_betwee.md
-- classification: library
-- suggested-branch: feature/adaptsplit-logdet-backend-parity
-- blocked-by: none — interferometer-sparse-data-vector merged 2026-10-15 (PyAutoArray free); #628 still runs after #627 by the human's ordering
-- affected-repos:
-  - PyAutoArray
-- resume: PATCH READY 2026-10-15 (verified in a scratchpad copy: 3 new tests fail-before/pass-after, inversion suite green; session 3e3dea38 scratchpad patch_627.patch — temporary, the diff is also on the issue). ROOT CAUSE (amended plan on #627): backends build different H because mapper_util.adaptive_pixel_signals_from counts zero-weight entries; fix there + two tests, leave log-det code alone. Launched --auto (effective supervised) with the Heart RED development override on the issue (session 3e3dea38). /start_library once the PyAutoArray claim frees.
 
 ## interferometer-numba-route-gate
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/628

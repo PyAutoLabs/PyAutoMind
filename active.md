@@ -1,23 +1,18 @@
 
-
-## ral-category-paths-phase2
-- issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/67
+## adaptsplit-logdet-backend-parity
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/627
 - issued: 2026-10-15
-- prompt: active/ral_category_paths_phase2.md
-- session: Claude Code CLI (Opus 5.5); session 4b6b15e2
-- status: workspace-shipped, awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autofit_inference/pull/15
-- workspace-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/69
-- worktree: ~/Code/PyAutoLabs-wt/ral-category-paths-phase2
+- prompt: active/adaptsplit_regularization_log_det_differs_betwee.md
+- session: Claude Code CLI (Fable 5.1); session 3e3dea38; launched --auto
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/adaptsplit-logdet-backend-parity
 - heart-red-override:
   - date: 2026-10-15
-  - authorized-by: live human in session 4b6b15e2 — the override granted for PyAutoCortex#67 (phase 1), carried to this remainder of the same issue on the human's "go"
-  - reasons: unchanged from phase 1 (recorded on PyAutoCortex#67)
+  - authorized-by: live human in session 3e3dea38, AskUserQuestion answer 'Yes, override for development (Recommended)' (evening launch, three PyAutoArray Aris prompts)
+  - reasons: "Heart: RED — Release RED; monitoring RED · 10/100 · 415 unresolved"; "[red] release validation FAILED (stage integrate)"; "[red] PyAutoHands/workflows/Python Version Matrix: failure"; "[red] PyAutoHeart/workflows/Release Integrate: failure"; "[red] PyAutoMind/workflows/Lifecycle Drift: failure"; "[red] PyAutoArray/Tests: red"; "[red] autofit_workspace_test/Smoke Tests: red"; "[red] autogalaxy_workspace_test/Smoke Tests: red"; "[red] autolens_workspace_test/Smoke Tests: red"; "[red] Release validation: NOT release_ready"; "[red] Worktree drift"; "[red] autolens_inference: red"; "[red] autolens_profiling: red"; "[red] euclid_strong_lens_modeling_pipeline: red" (as listed on PyAutoArray#626)
   - permitted: commit, push, PR-open; merge separate
-- next: /prm autofit_inference#15 + PyAutoCortex#69, then human `git pull` in RAL inference/autofit_inference and removes the autofit_inference + autofit_inference_b5a_dryrun links. PyAutoMemory: no change needed (claim released). Remaining: autolens_profiling (+_wt, _corpus) once autolens_profiling#418 (hst-mge-pilot-qualification) merges and releases it
 - repos:
-  - autofit_inference: feature/ral-category-paths-phase2
-  - PyAutoCortex: feature/ral-category-paths-phase2
+  - PyAutoArray: feature/adaptsplit-logdet-backend-parity
 
 ## hst-mge-pilot-qualification
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/417
