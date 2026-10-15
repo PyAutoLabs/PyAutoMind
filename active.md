@@ -57,7 +57,7 @@
 - issued: 2026-10-15
 - prompt: active/search_kwarg_typos_in_workspace_scripts.md
 - session: Claude Code CLI (Fable 5.1); session 6ffb59e9; launched --auto
-- status: pr-open (supervised --auto; Heart RED dev override); awaiting human /prm library-first: PyAutoFit#1695 → autofit_workspace#170 → autofit_workspace_test#112; worker extending the same PRs to the missed copies (cookbooks/search.py, searches/DynestyDynamic.py) before hand-back
+- status: pr-open (supervised --auto; Heart RED dev override); awaiting human /prm library-first: PyAutoFit#1695 → autofit_workspace#170 → autofit_workspace_test#112; scope extended in the same PRs to cookbooks/search.py and searches/DynestyDynamic.py; all CI green at 4c8edf6f / a412d0b2 / 8ced647c
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1695
 - workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/170
 - workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/112
