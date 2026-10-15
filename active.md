@@ -51,10 +51,14 @@
 - issued: 2026-10-14
 - prompt: active/search_ext_b5a_freeze_and_scored_wave2.md
 - session: Claude Code CLI (Fable 5.1); session 51fca711; launched --auto
-- status: library-dev
+- status: workspace-shipped, awaiting-merge (compute complete on RAL, unpulled)
 - worktree: ~/Code/PyAutoLabs-wt/search-ext-b5a-wave2
 - epic: search-extensibility
-- next: Opus worker freezes @2, builds the scored-wave infra (PR 1), submits references + wave 2 on RAL `--partition=ral` against a private pinned PyAutoFit, then Cortex (PR 2) and Insight (PR 3); human /prm; row stays open as compute-running until B5b
+- workspace-pr: https://github.com/PyAutoLabs/autofit_inference/pull/9
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/63
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoInsight/pull/29
+- compute: RAL `ral` jobs 408244/408245 (references), 408246 (probe), 408346/408347 (reference builds), 408348/408365/408366/408367 (scored arrays, 11,750 runs, %60 throttle); all 1,629 array tasks COMPLETED by 2026-10-15 morning, nothing pulled yet; freeze sha 72d6faaf, PyAutoFit pin df6d218f1 (A4 merge, unreleased) + PyAutoNerves 7f3055b7 in /mnt/ral/jnightin/autofit_inference/.pyauto_pin/ (zeus-mcmc 2.5.4 in .pyauto_pin/site); RAL clone at f0b3eef (f9605cf state.md-only commit not pulled there); dry-run copy /mnt/ral/jnightin/autofit_inference_b5a_dryrun/ can be deleted
+- next: human /prm autofit_inference#9 with a MERGE COMMIT (freeze sha 72d6faaf is cited by protocol §7/§11 and state.md and must stay reachable from main), then PyAutoCortex#63 and PyAutoInsight#29; at close-out keep this row open (compute complete, unpulled) rather than closing it; B5b then pulls all RAL rows, builds the JAX blend realisation-1 reference locally (pilot seeds 0+2 plus RAL seed 1), sets probe-first timeouts from probe 408246 and submits the remaining 980 runs of those cells, judges under @2, catalogues, exports the wave-2 summary, refreshes the Insight snapshot and runs `cortex done` on the run lines; carried to B5b: re-judging the pilot's @1 JAX blend rows against the new reference is a reassessment needing an explicit decision; LBFGS on blend numpy still returns +inf at the pin
 - repos:
   - autofit_inference: feature/search-ext-b5a-wave2
   - PyAutoInsight: feature/search-ext-b5a-wave2

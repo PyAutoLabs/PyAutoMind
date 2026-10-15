@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-10-14T16:17:43Z",
+  "updated": "2026-10-15T07:59:19Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -24,6 +24,12 @@
       "text": "`@autofit_profiling` B4b: port the EP / graphical-model baselines and the analytic benchmark\u2026 \u2014 workspace-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/5",
       "prompt": "Use the start-dev skill. active/search_ext_b4b_ep_graphical_baseline_port.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "`@autofit_inference` B5a: freeze `gaussian_x3@2`, build the scored-wave infrastructure, submit scored wave 2\u2026 \u2014 workspace-shipped, awaiting-merge (compute complete on RAL, unpulled)",
+      "url": "https://github.com/PyAutoLabs/autofit_inference/pull/9",
+      "prompt": "Use the start-dev skill. active/search_ext_b5a_freeze_and_scored_wave2.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1685 \u2014 search-ext-a4-decompose",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1685",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1686 \u2014 search-ext-a4-decompose",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1686",
       "prompt": null
     }
   ]
