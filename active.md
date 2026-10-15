@@ -35,7 +35,9 @@
 - issued: 2026-10-15
 - prompt: active/interferometer_sparse_inversion_compute_data_vec.md
 - session: Claude Code CLI (Fable 5.1); session 3e3dea38; launched --auto
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/630
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/630
 - worktree: ~/Code/PyAutoLabs-wt/interferometer-sparse-data-vector
 - heart-red-override:
   - date: 2026-10-15
