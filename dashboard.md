@@ -890,7 +890,7 @@ Use the start-dev skill. active/interferometer_sparse_inversion_compute_data_vec
 
 </details>
 
-<details><summary>📋 <a href="active/science_ral_folder_restructure.md">Science + RAL folder restructure — point live path config…</a> — <a href="https://github.com/PyAutoLabs/PyAutoCortex/issues/67">issue #67</a> — issued 2026-10-15 — workspace-dev</summary>
+<details><summary>📋 <a href="active/science_ral_folder_restructure.md">Science + RAL folder restructure — point live path config…</a> — <a href="https://github.com/PyAutoLabs/PyAutoCortex/issues/67">issue #67</a> — issued 2026-10-15 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_inference/pull/22">autolens_inference#22</a>, <a href="https://github.com/PyAutoLabs/autofit_profiling/pull/6">autofit_profiling#6</a>, <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/504">PyAutoMind#504</a></summary>
 
 ```
 Use the start-dev skill. active/science_ral_folder_restructure.md
