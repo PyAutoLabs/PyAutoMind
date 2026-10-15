@@ -906,7 +906,7 @@ Use the start-dev skill. active/search_ext_b5b2_remainder_and_summary_records.md
 
 </details>
 
-<details><summary>📋 <a href="active/search_kwarg_typos_in_workspace_scripts.md">Search constructor typos silently ignored in workspace scripts (<code>auto_correlations_settings</code>, <code>nlive</code>, <code>dynamic_delta</code>)</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1693">issue #1693</a> — issued 2026-10-15 — library-dev</summary>
+<details><summary>📋 <a href="active/search_kwarg_typos_in_workspace_scripts.md">Search constructor typos silently ignored in workspace scripts (<code>auto_correlations_settings</code>, <code>nlive</code>, <code>dynamic_delta</code>)</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1693">issue #1693</a> — issued 2026-10-15 — pr-open (supervised --auto; Heart RED dev override); awaiting human /prm library-first: PyAutoFit#1695 → autofit_workspace#170 →… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1695">PyAutoFit#1695</a>, <a href="https://github.com/PyAutoLabs/autofit_workspace/pull/170">autofit_workspace#170</a>, <a href="https://github.com/PyAutoLabs/autofit_workspace_test/pull/112">autofit_workspace_test#112</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 Use the start-dev skill. active/search_kwarg_typos_in_workspace_scripts.md
@@ -3006,6 +3006,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoFit**
 
+- [PyAutoFit#1695](https://github.com/PyAutoLabs/PyAutoFit/pull/1695) — `active/search_kwarg_typos_in_workspace_scripts.md`
 - [PyAutoFit#1667](https://github.com/PyAutoLabs/PyAutoFit/pull/1667) — `complete/2026/10/search-conformance-metadata.md`
 - [PyAutoFit#1673](https://github.com/PyAutoLabs/PyAutoFit/pull/1673) — `complete/2026/10/search-ext-a0a2-backend-conformance.md`
 - [PyAutoFit#1672](https://github.com/PyAutoLabs/PyAutoFit/pull/1672) — `complete/2026/10/search-ext-a0b-hygiene.md`
