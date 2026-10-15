@@ -9,7 +9,6 @@
 - [latent-nan-guard-honest-run](#latent-nan-guard-honest-run)
 - [knn-partial-point-block](#knn-partial-point-block)
 - [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
-- [interferometer-numba-route-gate](#interferometer-numba-route-gate)
 - [delaunaynn-wide-row-overhead](#delaunaynn-wide-row-overhead)
 
 <!-- toc:end -->
@@ -107,18 +106,6 @@
   - PyAutoArray
   - autolens_workspace_test
 - resume: Audit#603 found incorrect internal-edge Sibson weights and near-edge partition failure. Filed separately per explicit user request; strict expected-failure regressions retained in audit. No repair begun or worktree created. Plan algorithmic repair independently.
-
-## interferometer-numba-route-gate
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/628
-- filed: 2026-10-15
-- prompt: draft/feature/autoarray/interferometer_numba_route_gate_should_scale_wit.md
-- classification: both
-- suggested-branch: feature/interferometer-numba-route-gate
-- blocked-by: none — adaptsplit-logdet-backend-parity merged 2026-10-15 (PyAutoArray free)
-- affected-repos:
-  - PyAutoArray
-  - autolens_profiling
-- resume: plan on #628; launched --auto (effective supervised) with the Heart RED development override recorded on the issue (session 3e3dea38, 2026-10-15). DelaunayNN #624/#625 merged 2026-10-15 so no factory.py conflict. Library phase first, autolens_profiling re-measurement record second.
 
 ## delaunaynn-wide-row-overhead
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/629
