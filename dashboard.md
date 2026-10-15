@@ -850,7 +850,7 @@ Use the start-dev skill. active/hst_mge_pilot_qualification.md
 
 </details>
 
-<details><summary>📋 <a href="active/interferometer_route_gate_phase2_remeasure.md">Interferometer route gate phase 2: re-measure the Aris routing table…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/419">issue #419</a> — issued 2026-10-15 — workspace-dev</summary>
+<details><summary>📋 <a href="active/interferometer_route_gate_phase2_remeasure.md">Interferometer route gate phase 2: re-measure the Aris routing table…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/419">issue #419</a> — issued 2026-10-15 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/420">autolens_profiling#420</a></summary>
 
 ```
 Use the start-dev skill. active/interferometer_route_gate_phase2_remeasure.md
