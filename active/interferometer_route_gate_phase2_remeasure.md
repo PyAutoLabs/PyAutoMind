@@ -10,6 +10,7 @@ Priority: normal
 Consequence: glance
 Status: formalised
 Issued: 2026-10-15
+Compute: laptop; routing + log-det only; timings not re-measured
 
 - Status: split out of `interferometer-numba-route-gate` at close-out — the library
   phase shipped in `complete/2026/10/interferometer-numba-route-gate.md`
@@ -34,3 +35,9 @@ Note: the three autolens_profiling scripts that set
 `interferometer_numba_nnz_per_source_max` explicitly keep hard-gate meaning — leave them
 unchanged unless the re-measurement is meant to exercise the default (then drop the explicit
 value in the run, not in the committed script).
+
+- The record ALSO carries the campaign's owed Aris log-det after-measurement: for each cell,
+  `log_det_regularization_matrix_term` on numba vs JAX at the same parameter vector on
+  PyAutoArray main ≥ 17caf228 (post-#631), plus the 125×125 figure at the original vector
+  (pre-fix numba 2443.22 vs JAX 2561.98). Timings (s/call) are carried from the prior laptop
+  measurement (PROGRESS4 table), not re-timed — the laptop is shared (load 2–14).

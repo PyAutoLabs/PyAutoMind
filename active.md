@@ -1,3 +1,20 @@
+## interferometer-route-gate-phase2
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/419
+- issued: 2026-10-15
+- prompt: active/interferometer_route_gate_phase2_remeasure.md
+- status: workspace-dev
+- session: Claude Code CLI (Fable 5.1); session 3e3dea38; launched --auto
+- worktree: ~/Code/PyAutoLabs-wt/interferometer-route-gate-phase2
+- classification: feature (workspace, autolens_profiling), Difficulty small, Autonomy supervised (effective supervised under --auto), Consequence glance; compute: laptop, routing + log-det only, timings not re-measured
+- suggested-branch: feature/interferometer-route-gate-phase2
+- heart-red-override:
+  - date: 2026-10-15
+  - authorized-by: live human in session 3e3dea38, AskUserQuestion answer 'Yes, override for both (Recommended)' (compute decision 'Laptop, routing + log-det only')
+  - reasons: "Heart: RED — Release RED; monitoring RED · 10/100 · 415 unresolved"; "[red] release validation FAILED (stage integrate)"; "[red] PyAutoHands/workflows/Python Version Matrix: failure"; "[red] PyAutoHeart/workflows/Release Integrate: failure"; "[red] PyAutoMind/workflows/Lifecycle Drift: failure"; "[red] PyAutoArray/Tests: red"; "[red] autofit_workspace_test/Smoke Tests: red"; "[red] autogalaxy_workspace_test/Smoke Tests: red"; "[red] autolens_workspace_test/Smoke Tests: red"; "[red] Release validation: NOT release_ready"; "[red] Worktree drift"; "[red] autolens_inference: red"; "[red] autolens_profiling: red"; "[red] euclid_strong_lens_modeling_pipeline: red" (verbatim on autolens_profiling#419)
+  - permitted: commit, push, PR-open; merge separate
+- repos:
+  - autolens_profiling: feature/interferometer-route-gate-phase2
+
 ## pulse-aris-witness-tables
 - issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/62
 - issued: 2026-10-15
