@@ -188,3 +188,14 @@
 - affected-repos:
   - PyAutoArray
   - PyAutoPulse
+
+## pulse-interferometer-large-mask
+- issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/62
+- filed: 2026-10-15
+- prompt: draft/docs/pyautopulse/interferometer_large_mask_campaign_ledger.md
+- classification: library (PyAutoPulse ledger + board)
+- suggested-branch: feature/pulse-interferometer-large-mask
+- blocked-by: ral-category-paths (using PyAutoPulse)
+- affected-repos:
+  - PyAutoPulse
+- resume: content ready (PyAutoPulse#62 body = tasks/interferometer_large_mask_aris.md; ledger rows in session 3e3dea38 scratchpad pulse_patch/apply.sh, dry-run green). Apply when the PyAutoPulse claim frees, render offline, PR, then link the three PyAutoArray issues' close-outs from the task file.
