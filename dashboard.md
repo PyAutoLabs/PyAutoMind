@@ -890,7 +890,7 @@ Use the start-dev skill. active/interferometer_sparse_inversion_compute_data_vec
 
 </details>
 
-<details><summary>📋 <a href="active/memory_domain_routing.md">Route campaign information to Insight and Pulse</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/524">issue #524</a> — issued 2026-10-15 — library-dev</summary>
+<details><summary>📋 <a href="active/memory_domain_routing.md">Route campaign information to Insight and Pulse</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/524">issue #524</a> — issued 2026-10-15 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/525">PyAutoBrain#525</a>, <a href="https://github.com/PyAutoLabs/PyAutoMemory/pull/133">PyAutoMemory#133</a></summary>
 
 ```
 Use the start-dev skill. active/memory_domain_routing.md
