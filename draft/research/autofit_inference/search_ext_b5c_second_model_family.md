@@ -14,7 +14,7 @@ Filed: 2026-10-14
 Consequence: judge
 Epic: search-extensibility
 Phase: B5c
-Blocked-by: B5b (wave-2 gaussian_x3 scored and published)
+Blocked-by: B5b-2 (wave-2 remainder judged and the summary-records schema settled; B5b itself DONE 2026-10-15, `complete/2026/10/search-ext-b5b-score.md`)
 Witness: a second toy-likelihood family is committed with its own pre-registered protocol (`<family>@1`), seeded datasets, references per backend with the §6 agreement test, and a wave-1 pilot manifest, before any of its rows exist; the catalogue groups it by task, separately from gaussian_x3, and ranks nothing across families.
 
 ## Why

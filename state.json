@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-10-15T15:53:25Z",
+  "headline": "RED \u2014 24 picks \u00b7 3 in flight",
+  "updated": "2026-10-15T16:04:55Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -18,12 +18,6 @@
       "text": "Make DelaunayNN fast on the numba/NumPy path \u2014 library-shipped, awaiting-merge (phase 1); phase 2 not started",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/624",
       "prompt": "Use the start-dev skill. active/make_delaunaynn_fast_on_the_numba_numpy.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "`@PyAutoFit` A5 (consumers): generate rosters, tiers and anchors from the pinned search\u2026 \u2014 workspace-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoHands/pull/311",
-      "prompt": "Use the start-dev skill. active/search_ext_a5_consumers.md"
     },
     {
       "severity": "yellow",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1691 \u2014 search-ext-a5-library",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1691",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1692 \u2014 search-ext-a5-library",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1692",
       "prompt": null
     }
   ]

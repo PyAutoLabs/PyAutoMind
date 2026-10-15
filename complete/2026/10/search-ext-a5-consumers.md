@@ -1,3 +1,10 @@
+- summary: A5 consumers of search-extensibility. Every consumer of the PyAutoFit search roster now reads the installed-release manifest (autofit 2026.10.12.1) instead of hand-maintained sampler lists, with `<!-- search-manifest@1 autofit <ver> -->` markers on each generated block. PyAutoHands#311 (f8df5f698) adds the `search_roster` reusable job; PyAutoBrain#523 (08bb0338d) regenerates the samplers faculty from the manifest (tenant-firewall allowlist entry for autofit_inference pushed to Mind main first); autofit_workspace#169 (38817254c), autofit_assistant#56 (40e032c66), autolens_assistant#159 (9e481826c), autogalaxy_assistant#35 (4f065e0c1), autolens_workspace#590 (e1ba9ce43), autogalaxy_workspace#258 (2225347c9) and PyAutoMemory#132 (ae6a3f799) carry the regenerated consumer blocks. Merged 2026-10-15 by human /prm in that order. Shipped under the recorded Heart RED development override (commit/push/PR-open only); merge was a separate human act.
+- decisions: the seven rulings are in the prompt and the PR bodies (installed-release manifest is the source of truth; source checkout's stale 2026.8.17.1 stamp is not used; stale `al` names outside the ruled files flagged only, not edited; no third review round).
+- witness: 6/7 — the capability-matrix → B3-catalogue-card link lives in PyAutoFit `docs/_generate_searches.py`, re-filed as `draft/docs/autofit/capability_matrix_links_b3_catalogue_cards.md`.
+- follow-up: `draft/docs/autofit/capability_matrix_links_b3_catalogue_cards.md`; Brain `sampler_pipeline/reference.md` now points at `search/_template/search.py`.
+
+## Original prompt
+
 # `@PyAutoFit` A5 (consumers): generate rosters, tiers and anchors from the pinned search manifest
 
 Type: refactor

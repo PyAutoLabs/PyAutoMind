@@ -114,7 +114,7 @@
 - status: blocked
 - classification: library (PyAutoBrain renderer + PyAutoCortex generated pages)
 - suggested-branch: feature/cortex-project-readability
-- blocked-by: search-ext-b5b-score (PyAutoCortex); search-ext-a4-companions released 2026-10-14 (PyAutoBrain free)
+- blocked-by: none — search-ext-b5b-score released 2026-10-15 (PyAutoCortex free); search-ext-a4-companions released 2026-10-14 (PyAutoBrain free)
 - approval: User approved both phases in session: "I approve"; no repeat plan approval required. Tier undeclared; human /prm.
 - next: Recheck claims; once clear, start-library and implement approved presentation plan from issue #521. Preserve Cortex local edits. Follow with draft/feature/cortex/output_summary.md for evidence-backed output accounting.
 - affected-repos:

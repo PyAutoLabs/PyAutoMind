@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1870 records across 9 buckets.
+1872 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -314,6 +314,7 @@ markers; everything below GENERATED is rebuilt.
 - [search-ext-a3b-nss-preflight](2026/10/search-ext-a3b-nss-preflight.md)
 - [search-ext-a4-companions](2026/10/search-ext-a4-companions.md)
 - [search-ext-a4-decompose](2026/10/search-ext-a4-decompose.md)
+- [search-ext-a5-consumers](2026/10/search-ext-a5-consumers.md) — A5 consumers of search-extensibility. Every consumer of the PyAutoFit search roster now reads the installed-re…
 - [search-ext-a5-library](2026/10/search-ext-a5-library.md) — phase A5 of search-extensibility, merged as four stacked PRs (1689 → 1690 nest/BlackJAX → 1691 MultiStart → 16…
 - [search-ext-b1-registration](2026/10/search-ext-b1-registration.md)
 - [search-ext-b2-harness](2026/10/search-ext-b2-harness.md)
@@ -323,6 +324,7 @@ markers; everything below GENERATED is rebuilt.
 - [search-ext-b4b-dev-retire](2026/10/search-ext-b4b-dev-retire.md) — Retired the developer EP / graphical baselines now that B4b re-homed them. Deleted `ep/` and `graphical/` (35 …
 - [search-ext-b4b-ep-baseline](2026/10/search-ext-b4b-ep-baseline.md) — B4b of search-extensibility. Ported the EP / graphical baselines and the analytic parity cell into autofit_pro…
 - [search-ext-b5a-wave2](2026/10/search-ext-b5a-wave2.md) — B5a of search-extensibility. Froze `gaussian_x3@2` at autofit_inference 72d6faaf before any scored run existed…
+- [search-ext-b5b-score](2026/10/search-ext-b5b-score.md) — B5b of search-extensibility. Pulled scored wave 2 from RAL (12-way parallel tar on the login node; 11,770 rows…
 - [setuptools-include-packages](2026/10/setuptools-include-packages.md)
 - [shapelets-smoke-slow-park](2026/10/shapelets-smoke-slow-park.md)
 - [sizing-none-triage-rules](2026/10/sizing-none-triage-rules.md)
