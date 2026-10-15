@@ -850,7 +850,7 @@ Use the start-dev skill. active/hst_mge_pilot_qualification.md
 
 </details>
 
-<details><summary>📋 <a href="active/interferometer_large_mask_witness_tables.md">Pulse: record the three Aris large-mask before/after witness tables</a> — <a href="https://github.com/PyAutoLabs/PyAutoPulse/issues/62">issue #62</a> — issued 2026-10-15 — library-dev</summary>
+<details><summary>📋 <a href="active/interferometer_large_mask_witness_tables.md">Pulse: record the three Aris large-mask before/after witness tables</a> — <a href="https://github.com/PyAutoLabs/PyAutoPulse/issues/62">issue #62</a> — issued 2026-10-15 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/64">PyAutoPulse#64</a></summary>
 
 ```
 Use the start-dev skill. active/interferometer_large_mask_witness_tables.md
