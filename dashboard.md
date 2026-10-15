@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 17 |
-| [In flight](#in-flight) | 3 |
+| [In flight](#in-flight) | 4 |
 | [Planned](#planned) | 8 |
-| [Backlog](#backlog) | 262 |
+| [Backlog](#backlog) | 261 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -858,6 +858,14 @@ Use the start-dev skill. active/interferometer_large_mask_witness_tables.md
 
 </details>
 
+<details><summary>📋 <a href="active/interferometer_route_gate_phase2_remeasure.md">Interferometer route gate phase 2: re-measure the Aris routing table…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/419">issue #419</a> — issued 2026-10-15 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/interferometer_route_gate_phase2_remeasure.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/search_ext_b5c_second_model_family.md"><code>@autofit_inference</code> B5c: a second model family for the search benchmark</a> — <a href="https://github.com/PyAutoLabs/autofit_inference/issues/14">issue #14</a> — issued 2026-10-15 — workspace-dev (stage 1: protocol, exact references, pilot manifest + pilot submit; B5c-2 = freeze + scored wave)</summary>
 
 ```
@@ -1587,7 +1595,7 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>feature</b> — 37</summary>
+<summary><b>feature</b> — 36</summary>
 
 <details><summary>📋 <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding against the raw maximum finds…</a> — autoarray · small · supervised · medium</summary>
 
@@ -1641,14 +1649,6 @@ Use the start-dev skill. draft/feature/autolens/coolest_pixel_grid_export.md
 
 ```
 Use the start-dev skill. draft/feature/pyautoheart/howto_real_settings_nightly.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens_profiling/interferometer_route_gate_phase2_remeasure.md">Interferometer route gate phase 2: re-measure the Aris routing table…</a> — autolens_profiling · small · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens_profiling/interferometer_route_gate_phase2_remeasure.md
 ```
 
 </details>
@@ -2674,7 +2674,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-15 | issued | <a href="active/search_ext_b5c_second_model_family.md"><code>@autofit_inference</code> B5c: a second model family for the search…</a> |
 | 2026-10-15 | filed | <a href="draft/refactor/cortex/ral_category_paths_autolens_profiling.md">RAL category paths — last repo: autolens_profiling, then drop the…</a> |
 | 2026-10-15 | issued | <a href="active/interferometer_large_mask_witness_tables.md">Pulse: record the three Aris large-mask before/after witness tables</a> |
-| 2026-10-15 | filed | <a href="draft/feature/autolens_profiling/interferometer_route_gate_phase2_remeasure.md">Interferometer route gate phase 2: re-measure the Aris routing table…</a> |
+| 2026-10-15 | issued | <a href="active/interferometer_route_gate_phase2_remeasure.md">Interferometer route gate phase 2: re-measure the Aris routing table…</a> |
 | 2026-10-14 | filed | <a href="draft/test/autofit/workspace_searches_scripts_preexisting_failures.md"><code>@autofit_workspace</code> six <code>searches/</code> scripts fail on main at…</a> |
 | 2026-10-14 | filed | <a href="draft/test/autofit/emcee_jax_timing_test_flaky_on_ci.md"><code>@PyAutoFit</code> <code>test_emcee_call_path_runs_at_jitted_speed</code> is a…</a> |
 | 2026-10-14 | filed | <a href="draft/bug/autofit/bfgs_resume_reads_x0_from_scipy_result.md"><code>@PyAutoFit</code> BFGS/LBFGS resume reads <code>["x0"]</code> from the saved scipy…</a> |
@@ -2779,7 +2779,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-91 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+90 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2797,7 +2797,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autolens/magnification_maps_visualization.md`
 - `draft/feature/autolens/source_cluster_arc.md`
 - `draft/feature/autolens_jax_joss/autolens_jax_joss_benchmark_repo.md`
-- `draft/feature/autolens_profiling/interferometer_route_gate_phase2_remeasure.md`
 - `draft/feature/autolens_workspace/pointsolver_grid_extent_per_package.md`
 - `draft/feature/cortex/human_readable_projects_dashboard.md`
 - `draft/feature/cortex/output_summary.md`
@@ -2824,7 +2823,8 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
 - `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md`
-- _… and 51 more_
+- `draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md`
+- _… and 50 more_
 
 </details>
 
