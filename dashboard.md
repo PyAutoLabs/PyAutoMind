@@ -850,7 +850,7 @@ Use the start-dev skill. active/hst_mge_pilot_qualification.md
 
 </details>
 
-<details><summary>📋 <a href="active/interferometer_knowledge_writeup.md">Interferometer large-mask profiling: write the knowledge section and record two human decisions…</a> — <a href="https://github.com/PyAutoLabs/PyAutoPulse/issues/62">issue #62</a> — issued 2026-10-15 — library-dev</summary>
+<details><summary>📋 <a href="active/interferometer_knowledge_writeup.md">Interferometer large-mask profiling: write the knowledge section and record two human decisions…</a> — <a href="https://github.com/PyAutoLabs/PyAutoPulse/issues/62">issue #62</a> — issued 2026-10-15 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/65">PyAutoPulse#65</a></summary>
 
 ```
 Use the start-dev skill. active/interferometer_knowledge_writeup.md

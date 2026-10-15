@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-10-15T22:52:30Z",
+  "updated": "2026-10-15T22:54:02Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Interferometer large-mask profiling: write the knowledge section and record two human decisions\u2026 \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoPulse/pull/65",
+      "prompt": "Use the start-dev skill. active/interferometer_knowledge_writeup.md"
+    },
     {
       "severity": "yellow",
       "text": "Interferometer route gate phase 2: re-measure the Aris routing table\u2026 \u2014 workspace-shipped, awaiting-merge",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1696 \u2014 search-ext-a5-capmatrix-cards",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1696",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1689 \u2014 search-ext-a5-library",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1689",
       "prompt": null
     }
   ]
