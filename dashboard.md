@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 17 |
-| [In flight](#in-flight) | 4 |
-| [Planned](#planned) | 14 |
-| [Backlog](#backlog) | 265 |
+| [In flight](#in-flight) | 5 |
+| [Planned](#planned) | 13 |
+| [Backlog](#backlog) | 264 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -248,20 +248,12 @@ Use the start-dev skill. draft/feature/autofit/results_library_epic_report.md
 </details>
 
 <details>
-<summary><b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — 3 queued prompt(s), in order</summary>
+<summary><b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — 2 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — ledger: `draft/research/autofit/search_extensibility_epic.md` — filed 2026-10-07; scoped (4 Opus surveys) and independently reviewed (Codex gpt-6-astra, Claude Fable high) the same day; all §5…</summary>
 
 ```
 Continue the 'Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos' epic. Its canonical state lives in draft/research/autofit/search_extensibility_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: two dependency-ordered tracks. Track A (PyAutoFit framework): A0a(i) metadata conformance → A0b hygiene → A0a(ii) backend conformance; A0c repair PRs; A1 declare + gate (after the test-mode bypass) + declarative lazy registry + `run(ctx)` design note; A2 objective factory + fork rule + `run(ctx)` bridge (Drawer, Nautilus proofs); A3 RawSamples adapter + Checkpointer/resume split; A3b NSS onto Fitness + trace preflight + x64; A4 decompose NonLinearSearch + delete family bases (deprecated thin subclasses one release) + search-level seed with the legacy identifier table; A5 per-search migrations + generated consumers. Track B (repos): B1 registration (Mind repos.yaml → repos_sync, Heart excluded, Cortex row, Pulse `fit` @profiling-summary@2, Insight `fit` @inference-summary@1; adopts PyAutoPulse `tasks/autofit_profiling_bootstrap.md`), B2 harness + `gaussian_x3_blend`/`_separated` + pre-registered protocol + per-backend reference posteriors, B3 wave-1 PILOT (ranks nothing) + Insight registration + catalogue, B4a breakdown exporter + Pulse row + epic-1 bottleneck table / B4b EP baseline port, B5 consumers + scored wave 2 (50 seeds, RAL `ral` only, after A2 and A4). Human rulings 2026-10-07: RTD generic example stays DynestyStatic; SMC → weighted/evidence; deprecate `use_jax_jit`/`use_jax_vmap`; in-flight samplers target `run(ctx)` from A2. Start order: A0a(i), A0c and B1 registration first; issue ONE phase at a time through `start_dev`.
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autofit/capability_matrix_links_b3_catalogue_cards.md"><code>@PyAutoFit</code> capability matrix: link each search row to its autofit_inference catalogue card</a> — autofit · low · safe · low</summary>
-
-```
-Use the start-dev skill. draft/docs/autofit/capability_matrix_links_b3_catalogue_cards.md
 ```
 
 </details>
@@ -866,6 +858,14 @@ Use the start-dev skill. active/adaptsplit_regularization_log_det_differs_betwee
 
 </details>
 
+<details><summary>📋 <a href="active/capability_matrix_links_b3_catalogue_cards.md"><code>@PyAutoFit</code> capability matrix: link each search row to its autofit_inference catalogue card</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1694">issue #1694</a> — issued 2026-10-15 — library-dev</summary>
+
+```
+Use the start-dev skill. active/capability_matrix_links_b3_catalogue_cards.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/hst_mge_pilot_qualification.md">HST/MGE pilot: independent correctness qualification design</a> — issued 2026-10-13</summary>
 
 ```
@@ -895,7 +895,7 @@ Use the start-dev skill. active/interferometer_sparse_inversion_compute_data_vec
 Scoped but not started; some are not yet prompt files. Full detail in [`planned.md`](planned.md).
 
 <details>
-<summary><b>14</b> task(s)</summary>
+<summary><b>13</b> task(s)</summary>
 
 <details><summary>📋 <b>isothermal-ell-sph-oversampling-at-the-cusp</b> — found 2026-08-09 — planned — NOT yet a prompt file; file one via <code>/intake</code> before starting</summary>
 
@@ -957,14 +957,6 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ```
 Use the start-dev skill. draft/feature/cortex/cortex_projects_readability.md
-```
-
-</details>
-
-<details><summary>📋 <b>search-ext-a5-capmatrix-cards</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1694">issue #1694</a> — filed 2026-10-15 — queued (issued #1694 under --auto with the Heart RED development override, not started); blocked-by: none…</summary>
-
-```
-Use the start-dev skill. draft/docs/autofit/capability_matrix_links_b3_catalogue_cards.md
 ```
 
 </details>
@@ -2750,12 +2742,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-15 | filed | <a href="planned.md#search-ext-a5-capmatrix-cards">search-ext-a5-capmatrix-cards</a> |
 | 2026-10-15 | filed | <a href="planned.md#ral-category-paths-phase2">ral-category-paths-phase2</a> |
 | 2026-10-15 | filed | <a href="planned.md#pulse-interferometer-large-mask">pulse-interferometer-large-mask</a> |
 | 2026-10-15 | filed | <a href="planned.md#interferometer-numba-route-gate">interferometer-numba-route-gate</a> |
 | 2026-10-15 | planned | <a href="planned.md#delaunaynn-wide-row-overhead">delaunaynn-wide-row-overhead</a> |
 | 2026-10-15 | filed | <a href="planned.md#adaptsplit-logdet-backend-parity">adaptsplit-logdet-backend-parity</a> |
+| 2026-10-15 | issued | <a href="active/capability_matrix_links_b3_catalogue_cards.md"><code>@PyAutoFit</code> capability matrix: link each search row to its…</a> |
 | 2026-10-15 | filed | <a href="draft/refactor/cortex/ral_category_paths_phase2.md">RAL category paths — phase 2: repoint the claimed repos, then drop…</a> |
 | 2026-10-15 | issued | <a href="active/interferometer_sparse_inversion_compute_data_vec.md">Interferometer sparse inversion: compute data vector without the…</a> |
 | 2026-10-15 | filed | <a href="active/interferometer_numba_route_gate_should_scale_wit.md">Interferometer numba route gate should scale with mask size</a> |
