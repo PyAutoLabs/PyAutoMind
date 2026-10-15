@@ -850,7 +850,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/adaptsplit_regularization_log_det_differs_betwee.md">AdaptSplit regularization log-det differs between numba and JAX backends</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/627">issue #627</a> — issued 2026-10-15 — parked — review FINDINGS (KNNBarycentric scope); awaiting human decision (a/b/c) on…</summary>
+<details><summary>📋 <a href="active/adaptsplit_regularization_log_det_differs_betwee.md">AdaptSplit regularization log-det differs between numba and JAX backends</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/627">issue #627</a> — issued 2026-10-15 — library-dev</summary>
 
 ```
 Use the start-dev skill. active/adaptsplit_regularization_log_det_differs_betwee.md
