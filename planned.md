@@ -119,3 +119,12 @@
 - affected-repos:
   - PyAutoBrain
   - PyAutoCortex
+
+## search-ext-a5-capmatrix-cards
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1694
+- filed: 2026-10-15
+- prompt: draft/docs/autofit/capability_matrix_links_b3_catalogue_cards.md
+- status: queued (issued #1694 under --auto with the Heart RED development override, not started); blocked-by: search-ext-kwarg-typos (PyAutoFit) — launch when that claim is released
+- classification: library (PyAutoFit docs generator), Consequence glance, Autonomy safe
+- suggested-branch: feature/search-ext-a5-capmatrix-cards
+- next: worktree_create search-ext-a5-capmatrix-cards PyAutoFit; implement per #1694; end at PR-open (Heart RED override forbids auto-merge)

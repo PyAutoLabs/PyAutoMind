@@ -15,6 +15,7 @@ Witness: `docs/_generate_searches.py` emits, for every manifest search, a link i
 Review-minutes: 10
 Unattended: yes
 Filed: 2026-10-15
+Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1694
 
 ## Request
 

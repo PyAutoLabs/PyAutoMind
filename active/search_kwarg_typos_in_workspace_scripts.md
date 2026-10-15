@@ -16,6 +16,7 @@ Status: formalised
 Consequence: judge
 Witness: running autofit_workspace `scripts/searches/{mcmc,nest}.py` and autofit_workspace_test `scripts/searches/{Emcee,Zeus,Drawer}.py` under `PYAUTO_TEST_MODE=1` against the installed autofit emits no unknown-kwarg WARNING; the two workspace notebooks are regenerated from the scripts; PyAutoFit `test_autofit/graphical/hierarchical/test_optimise.py` passes without the stray kwargs; the Drawer NullPaths workaround is gone.
 Filed: 2026-10-08
+Issued: 2026-10-15
 
 ## Symptom
 

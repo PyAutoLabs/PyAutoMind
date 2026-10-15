@@ -17,6 +17,7 @@ Witness: every row of RAL job 409930 (980 probe-first remainder runs, Zeus JAX +
 Review-minutes: 30
 Unattended: needs-slicing
 Filed: 2026-10-15
+Issued: 2026-10-15
 
 Authority: `complete/2026/10/search-ext-b5b-score.md` (its "Compute (for B5b-2)" block and decisions); autofit_inference#10 Shipped comment and the size-options comment; protocol `wiki/project/protocol_gaussian_x3.md` §7–§11; `PyAutoMind/policy/hpc_ral.md` (CPU arrays `--partition=ral` only; private pin under `/mnt/ral/jnightin/autofit_inference/.pyauto_pin/`, never the shared mirror; never touch another campaign's jobs).
 
