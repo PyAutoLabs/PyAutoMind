@@ -114,7 +114,7 @@
 ## adaptsplit-logdet-backend-parity
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/627
 - filed: 2026-10-15
-- prompt: active/adaptsplit_regularization_log_det_differs_betwee.md
+- prompt: draft/bug/autoarray/adaptsplit_regularization_log_det_differs_betwee.md
 - classification: library
 - suggested-branch: feature/adaptsplit-logdet-backend-parity
 - blocked-by: interferometer-sparse-data-vector (using PyAutoArray)
@@ -125,7 +125,7 @@
 ## interferometer-numba-route-gate
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/628
 - filed: 2026-10-15
-- prompt: active/interferometer_numba_route_gate_should_scale_wit.md
+- prompt: draft/feature/autoarray/interferometer_numba_route_gate_should_scale_wit.md
 - classification: both
 - suggested-branch: feature/interferometer-numba-route-gate
 - blocked-by: interferometer-sparse-data-vector (using PyAutoArray); runs after adaptsplit-logdet-backend-parity by the human's ordering
