@@ -898,7 +898,7 @@ Use the start-dev skill. active/search_ext_a5_consumers.md
 
 </details>
 
-<details><summary>📋 <a href="active/search_ext_b5b_pull_judge_publish_wave2.md"><code>@autofit_inference</code> B5b: pull scored wave 2, judge it under <code>gaussian_x3@2</code>, publish…</a> — <a href="https://github.com/PyAutoLabs/autofit_inference/issues/10">issue #10</a> — issued 2026-10-15 — workspace-dev</summary>
+<details><summary>📋 <a href="active/search_ext_b5b_pull_judge_publish_wave2.md"><code>@autofit_inference</code> B5b: pull scored wave 2, judge it under <code>gaussian_x3@2</code>, publish…</a> — <a href="https://github.com/PyAutoLabs/autofit_inference/issues/10">issue #10</a> — issued 2026-10-15 — pr-open (supervised --auto; Heart RED dev override); compute-running; awaiting human /prm in order; open question on… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/65">PyAutoCortex#65</a>, <a href="https://github.com/PyAutoLabs/PyAutoInsight/pull/30">PyAutoInsight#30</a>, <a href="https://github.com/PyAutoLabs/autofit_inference/pull/11">autofit_inference#11</a></summary>
 
 ```
 Use the start-dev skill. active/search_ext_b5b_pull_judge_publish_wave2.md
