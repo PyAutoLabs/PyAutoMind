@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-10-15T17:14:55Z",
+  "updated": "2026-10-15T17:17:31Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Science + RAL folder restructure \u2014 point live path config\u2026 \u2014 workspace-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autolens_inference/pull/22",
+      "prompt": "Use the start-dev skill. active/science_ral_folder_restructure.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1692 \u2014 search-ext-a5-library",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1692",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#652 \u2014 search-ext-a0c-downstream",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/652",
       "prompt": null
     }
   ]
