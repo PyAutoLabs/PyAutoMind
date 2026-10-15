@@ -1,3 +1,16 @@
+## search-ext-b4b-ep-baseline
+- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/4
+- completed: 2026-10-15
+- epic: search-extensibility
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/5
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/61
+- summary: B4b of search-extensibility. Ported the EP / graphical baselines and the analytic parity cell into autofit_profiling: 9 setups, 31 records, including runtime and memory (`host_peak_rss`) for N3/N10/N30 (autofit_profiling#5, e63a89127). Updated the Pulse `fit` fixture and the autofit campaign, and refreshed the fit receipt and snapshot at autofit_profiling e63a89127 (PyAutoPulse#61, d3e47e340; the main session added 613a270 "fit receipt + snapshot at autofit_profiling e63a89127, merge main" before merge).
+- decisions: the host is pinned to the B4a laptop. The witness "within 2x" was NOT met: all six cells ran 0.14–0.48x the time (faster). Correctness is exact. The existing N30 sanity FAILs reproduce as before. sigma_q95 was checked against 12.15, not 12.18.
+- ship gate: tests 16/16 + ruff + catalogue check; Pulse 207 + `check --offline` OK; review FINDINGS×2 fixed; Heart STALE acknowledged ("no rehearsal for current source").
+- follow-up: retire the developer `ep/` and `graphical/` scripts via Gut. This is now unblocked; no Mind draft has been filed for it yet.
+
+## Original prompt
+
 # `@autofit_profiling` B4b: port the EP / graphical-model baselines and the analytic benchmark, reproduce the committed numbers
 
 Type: feature

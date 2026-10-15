@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-15T12:26:31Z",
+  "headline": "RED \u2014 24 picks \u00b7 3 in flight",
+  "updated": "2026-10-15T12:28:47Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,18 +12,6 @@
       "text": "Cortex Projects readability \u2014 phase 1 \u2014 blocked",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/issues/521",
       "prompt": "Use the start-dev skill. active/cortex_projects_readability.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "`@autofit_profiling` B4b: port the EP / graphical-model baselines and the analytic benchmark\u2026 \u2014 workspace-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/5",
-      "prompt": "Use the start-dev skill. active/search_ext_b4b_ep_graphical_baseline_port.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "`@autofit_inference` B5a: freeze `gaussian_x3@2`, build the scored-wave infrastructure, submit scored wave 2\u2026 \u2014 workspace-shipped, awaiting-merge (compute complete on RAL, unpulled)",
-      "url": "https://github.com/PyAutoLabs/autofit_inference/pull/9",
-      "prompt": "Use the start-dev skill. active/search_ext_b5a_freeze_and_scored_wave2.md"
     },
     {
       "severity": "yellow",
@@ -125,6 +113,18 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1691 \u2014 search-ext-a5-library",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1691",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1692 \u2014 search-ext-a5-library",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1692",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#652 \u2014 search-ext-a0c-downstream",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/652",
       "prompt": null
     }
   ]
