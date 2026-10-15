@@ -1,3 +1,15 @@
+## search-ext-b4b-dev-retire
+- issue: https://github.com/PyAutoLabs/autofit_workspace_developer/issues/34
+- completed: 2026-10-15
+- epic: search-extensibility
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_developer/pull/35
+- summary: Retired the developer EP / graphical baselines now that B4b re-homed them. Deleted `ep/` and `graphical/` (35 files, −1702 lines) from autofit_workspace_developer. The README now points to autofit_profiling `scripts/gaussian_1d_ep` and `wiki/campaigns/ep_graphical_baselines.md`. Merge commit c7289eb737c95e8a66b92042a7e33958fbf2fc90 (tiered merge, glance, launched --auto plus a live human "Yes, merge #35 now").
+- gut: entry `autofit_workspace_developer/ep-graphical-baselines` in `condemned.md`; the bytes can be recovered from pre-delete SHA `3df620e0dc5bed5c1f43a6aaf205dc976d4a43e4` (`git checkout 3df620e0 -- ep graphical`).
+- ship gate: tests n/a (no suite) / smoke n/a (no CI) / review self-check (deletion) / heart RED red-override / witness PASS. Heart RED override in force, development only (commit, push, PR-open; merge authorized separately).
+- follow-up: `aggregate_profiles.py` at the repo root is now dead, because it loops over the two deleted dirs. The human has not decided its fate; no draft filed.
+
+## Original prompt
+
 # `@autofit_workspace_developer` retire `ep/` and `graphical/` via Gut now that B4b re-homed them in autofit_profiling
 
 Type: maintenance

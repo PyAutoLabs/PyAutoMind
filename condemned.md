@@ -538,7 +538,7 @@ One `##` block per item. Fields:
 - locator: autofit_workspace_developer ep/ (README.md, fit.py, simulator.py, sanity.py, util.py, config/, dataset/, profiles/), graphical/ (same layout); 35 files
 - confidence: 0.95
 - reason: re-homed to autofit_profiling as `scripts/gaussian_1d_ep/{ep,graphical}/baseline.py` with committed results (9 setups, 31 records) and `wiki/campaigns/ep_graphical_baselines.md` (search-extensibility B4b, autofit_profiling#5, merged 2026-10-15); the developer copies would diverge and mislead. Launched under --auto 2026-10-15 (autofit_workspace_developer#34, PR #35), Consequence glance.
-- merged: pending (PR #35)
+- merged: yes (PR #35, merge commit c7289eb737c95e8a66b92042a7e33958fbf2fc90, 2026-10-15)
 - condemned: 2026-10-15
 - sweep-after: n/a (committed deletion; history-only)
 - breaks-if-wrong: a developer wanting the May-2026 EP/graphical scale-up baseline scripts or their cProfile hotspot files; recoverable with `git checkout 3df620e0 -- ep graphical`; `aggregate_profiles.py` at the repo root still loops over the two deleted dirs and is dead (follow-up, out of #34's scope)
