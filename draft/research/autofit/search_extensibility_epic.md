@@ -215,3 +215,9 @@ Both post-merge astra reviews returned FINDINGS. None has been enacted. **The Py
 - Draft `draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md`.
 - Draft `draft/feature/autofit_inference/nss_settings_for_wave2.md`.
 - Optional A0a(ii) gap: skips on full-extras CI legs when blackjax/optax are missing.
+
+## Ledger — 2026-10-15 night (Fable 6ffb59e9): scoped work complete
+
+All phases of both tracks are merged: A0a/A0b/A0c, A1, A2, A3, A3b, A4 (+ companions), A5 library (PyAutoFit#1689–#1692) and A5 consumers (9 repos), capability-matrix catalogue cards (PyAutoFit#1696); B1, B2, B3 pilot (+ post-merge fixes), B4a, B4b (+ developer retirement via Gut), B5a (wave-2 freeze + submit), B5b (judge), B5b-2 (remainder; wave 2 CLOSED at 12,750 rows under `gaussian_x3@2`; Insight `fit` on `inference-summary@3` shards; reliability floor as a post-hoc §8 convention). Records under `complete/2026/10/search-ext-*.md`.
+
+Open after this entry: (1) the B5c extension — a second model family (high-D correlated Gaussian + banana), stage 1 issued as autofit_inference#14, stage 2 (freeze + scored wave) to be filed from its hand-back; (2) release — the PyAutoFit changes are `pending-release` (#1669, #1672, #1673, #1675, #1679, #1680, #1681, #1683, #1685, #1686, #1687, #1689–#1692, #1695, #1696) and wait for Heart to clear RED and a human `/review_release`; (3) human sign-off that the Insight contract became `@3` not `@2`.

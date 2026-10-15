@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 17 |
-| [In flight](#in-flight) | 2 |
-| [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 263 |
+| [In flight](#in-flight) | 3 |
+| [Planned](#planned) | 9 |
+| [Backlog](#backlog) | 262 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -248,7 +248,7 @@ Use the start-dev skill. draft/feature/autofit/results_library_epic_report.md
 </details>
 
 <details>
-<summary><b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — 2 queued prompt(s), in order</summary>
+<summary><b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — 1 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — ledger: `draft/research/autofit/search_extensibility_epic.md` — filed 2026-10-07; scoped (4 Opus surveys) and independently reviewed (Codex gpt-6-astra, Claude Fable high) the same day; all §5…</summary>
 
@@ -262,14 +262,6 @@ Continue the 'Search extensibility — a PyAutoFit search framework for many sam
 
 ```
 Use the start-dev skill. draft/research/autofit/search_extensibility_epic.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit_inference/search_ext_b5c_second_model_family.md"><code>@autofit_inference</code> B5c: a second model family for the search benchmark</a> — autofit_inference · large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c_second_model_family.md
 ```
 
 </details>
@@ -850,7 +842,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/adaptsplit_regularization_log_det_differs_betwee.md">AdaptSplit regularization log-det differs between numba and JAX backends</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/627">issue #627</a> — issued 2026-10-15 — library-dev</summary>
+<details><summary>📋 <a href="active/adaptsplit_regularization_log_det_differs_betwee.md">AdaptSplit regularization log-det differs between numba and JAX backends</a> — issued 2026-10-15</summary>
 
 ```
 Use the start-dev skill. active/adaptsplit_regularization_log_det_differs_betwee.md
@@ -866,12 +858,20 @@ Use the start-dev skill. active/hst_mge_pilot_qualification.md
 
 </details>
 
+<details><summary>📋 <a href="active/search_ext_b5c_second_model_family.md"><code>@autofit_inference</code> B5c: a second model family for the search benchmark</a> — <a href="https://github.com/PyAutoLabs/autofit_inference/issues/14">issue #14</a> — issued 2026-10-15 — workspace-dev (stage 1: protocol, exact references, pilot manifest + pilot submit; B5c-2 = freeze + scored wave)</summary>
+
+```
+Use the start-dev skill. active/search_ext_b5c_second_model_family.md
+```
+
+</details>
+
 ## Planned
 
 Scoped but not started; some are not yet prompt files. Full detail in [`planned.md`](planned.md).
 
 <details>
-<summary><b>10</b> task(s)</summary>
+<summary><b>9</b> task(s)</summary>
 
 <details><summary>📋 <b>isothermal-ell-sph-oversampling-at-the-cusp</b> — found 2026-08-09 — planned — NOT yet a prompt file; file one via <code>/intake</code> before starting</summary>
 
@@ -941,14 +941,6 @@ Use the start-dev skill. draft/feature/autoarray/interferometer_numba_route_gate
 
 ```
 Use the start-dev skill. draft/feature/autoarray/delaunaynn_wide_row_imaging_overhead.md
-```
-
-</details>
-
-<details><summary>📋 <b>search-ext-b5c-family</b> — <a href="https://github.com/PyAutoLabs/autofit_inference/issues/14">issue #14</a> — filed 2026-10-15 — queued (issued #14 under --auto with the Heart RED development override, not started); unblocked 2026-10-15…</summary>
-
-```
-Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c_second_model_family.md
 ```
 
 </details>
@@ -2686,9 +2678,9 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-15 | filed | <a href="planned.md#search-ext-b5c-family">search-ext-b5c-family</a> |
 | 2026-10-15 | filed | <a href="planned.md#interferometer-numba-route-gate">interferometer-numba-route-gate</a> |
 | 2026-10-15 | planned | <a href="planned.md#delaunaynn-wide-row-overhead">delaunaynn-wide-row-overhead</a> |
+| 2026-10-15 | issued | <a href="active/search_ext_b5c_second_model_family.md"><code>@autofit_inference</code> B5c: a second model family for the search…</a> |
 | 2026-10-15 | filed | <a href="draft/refactor/cortex/ral_category_paths_autolens_profiling.md">RAL category paths — last repo: autolens_profiling, then drop the…</a> |
 | 2026-10-15 | filed | <a href="draft/feature/autoarray/interferometer_numba_route_gate_should_scale_wit.md">Interferometer numba route gate should scale with mask size</a> |
 | 2026-10-15 | issued | <a href="active/adaptsplit_regularization_log_det_differs_betwee.md">AdaptSplit regularization log-det differs between numba and JAX…</a> |
