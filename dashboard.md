@@ -858,7 +858,7 @@ Use the start-dev skill. active/reuse_cholesky_factor_for_solve_and_log_det.md
 
 </details>
 
-<details><summary>📋 <a href="active/search_ext_b5c_second_model_family.md"><code>@autofit_inference</code> B5c: a second model family for the search benchmark</a> — <a href="https://github.com/PyAutoLabs/autofit_inference/issues/14">issue #14</a> — issued 2026-10-15 — workspace-dev (stage 1: protocol, exact references, pilot manifest + pilot submit; B5c-2 = freeze + scored wave)</summary>
+<details><summary>📋 <a href="active/search_ext_b5c_second_model_family.md"><code>@autofit_inference</code> B5c: a second model family for the search benchmark</a> — <a href="https://github.com/PyAutoLabs/autofit_inference/issues/14">issue #14</a> — issued 2026-10-15 — PR-open 2026-10-16 (stage 1 shipped; autofit_inference lint RED — <code>test_committed_dataset_regenerates_byte_for_byte</code> last-bit QR… — PRs: <a href="https://github.com/PyAutoLabs/autofit_inference/pull/16">autofit_inference#16</a>, <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/70">PyAutoCortex#70</a>, <a href="https://github.com/PyAutoLabs/PyAutoInsight/pull/33">PyAutoInsight#33</a></summary>
 
 ```
 Use the start-dev skill. active/search_ext_b5c_second_model_family.md
