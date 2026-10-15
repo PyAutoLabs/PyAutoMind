@@ -117,7 +117,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/521
 - filed: 2026-10-14
 - prompt: draft/feature/cortex/cortex_projects_readability.md
-- status: queued (issued #521, not started); blocked-by: search-ext-b5b2-remainder (PyAutoCortex) — unblocks when B5b-2 releases the claim; then /start_library on the approved plan
+- status: queued (issued #521, not started); blocked-by: none — search-ext-b5b2-remainder released PyAutoCortex 2026-10-15; next /start_library on the approved plan in #521
 - classification: library (PyAutoBrain renderer + PyAutoCortex generated pages)
 - suggested-branch: feature/cortex-project-readability
 - blocked-by: none — search-ext-b5b-score released 2026-10-15 (PyAutoCortex free); search-ext-a4-companions released 2026-10-14 (PyAutoBrain free)
@@ -131,7 +131,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1694
 - filed: 2026-10-15
 - prompt: draft/docs/autofit/capability_matrix_links_b3_catalogue_cards.md
-- status: queued (issued #1694 under --auto with the Heart RED development override, not started); blocked-by: search-ext-kwarg-typos (PyAutoFit) — launch when that claim is released
+- status: queued (issued #1694 under --auto with the Heart RED development override, not started); blocked-by: none — search-ext-kwarg-typos released PyAutoFit 2026-10-15; launching
 - classification: library (PyAutoFit docs generator), Consequence glance, Autonomy safe
 - suggested-branch: feature/search-ext-a5-capmatrix-cards
 - next: worktree_create search-ext-a5-capmatrix-cards PyAutoFit; implement per #1694; end at PR-open (Heart RED override forbids auto-merge)
@@ -141,7 +141,7 @@
 - filed: 2026-10-15
 - issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/67
 - prompt: draft/refactor/cortex/ral_category_paths_phase2.md
-- blocked-by: autolens_profiling claimed by hst-mge-pilot-qualification (#418 awaiting merge); autofit_inference + PyAutoCortex claimed by search-ext-b5b2-remainder (RAL wave-2 jobs running)
+- blocked-by: autolens_profiling claimed by hst-mge-pilot-qualification (#418 awaiting merge); autofit_inference + PyAutoCortex released by search-ext-b5b2-remainder 2026-10-15 (wave 2 closed)
 - summary: repoint autolens_profiling (+_wt, _corpus), autofit_inference (+ b5a_dryrun) hard-coded RAL paths; Cortex ral_root sweep + register subhalo + euclid → active; PyAutoMemory mention; then the human removes the last RAL old-path links
 - affected-repos:
   - autolens_profiling

@@ -10,7 +10,7 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 17 |
-| [In flight](#in-flight) | 6 |
+| [In flight](#in-flight) | 4 |
 | [Planned](#planned) | 14 |
 | [Backlog](#backlog) | 265 |
 | [Recent](#recent) | 50 |
@@ -890,22 +890,6 @@ Use the start-dev skill. active/interferometer_sparse_inversion_compute_data_vec
 
 </details>
 
-<details><summary>📋 <a href="active/search_ext_b5b2_remainder_and_summary_records.md"><code>@autofit_inference</code> B5b-2: pull and judge the wave-2 remainder, settle the summary-records schema…</a> — <a href="https://github.com/PyAutoLabs/autofit_inference/issues/12">issue #12</a> — issued 2026-10-15 — pr-open (supervised --auto; Heart RED dev override) — 409930 pulled + judged (12,750 wave-2 rows, wave 2 closed)… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/68">PyAutoCortex#68</a>, <a href="https://github.com/PyAutoLabs/PyAutoInsight/pull/31">PyAutoInsight#31</a>, <a href="https://github.com/PyAutoLabs/autofit_inference/pull/13">autofit_inference#13</a></summary>
-
-```
-Use the start-dev skill. active/search_ext_b5b2_remainder_and_summary_records.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/search_kwarg_typos_in_workspace_scripts.md">Search constructor typos silently ignored in workspace scripts (<code>auto_correlations_settings</code>, <code>nlive</code>, <code>dynamic_delta</code>)</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1693">issue #1693</a> — issued 2026-10-15 — pr-open (supervised --auto; Heart RED dev override); awaiting human /prm library-first: PyAutoFit#1695 → autofit_workspace#170 →… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1695">PyAutoFit#1695</a>, <a href="https://github.com/PyAutoLabs/autofit_workspace/pull/170">autofit_workspace#170</a>, <a href="https://github.com/PyAutoLabs/autofit_workspace_test/pull/112">autofit_workspace_test#112</a> — ⏳ pending release: PyAutoFit</summary>
-
-```
-Use the start-dev skill. active/search_kwarg_typos_in_workspace_scripts.md
-```
-
-</details>
-
 ## Planned
 
 Scoped but not started; some are not yet prompt files. Full detail in [`planned.md`](planned.md).
@@ -969,7 +953,7 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 </details>
 
-<details><summary>📋 <b>cortex-project-readability</b> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/521">issue #521</a> — filed 2026-10-14 — queued (issued #521, not started); blocked-by: search-ext-b5b2-remainder (PyAutoCortex) — unblocks when B5b-2 releases the claim…</summary>
+<details><summary>📋 <b>cortex-project-readability</b> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/521">issue #521</a> — filed 2026-10-14 — queued (issued #521, not started); blocked-by: none — search-ext-b5b2-remainder released PyAutoCortex 2026-10-15; next…</summary>
 
 ```
 Use the start-dev skill. draft/feature/cortex/cortex_projects_readability.md
@@ -977,7 +961,7 @@ Use the start-dev skill. draft/feature/cortex/cortex_projects_readability.md
 
 </details>
 
-<details><summary>📋 <b>search-ext-a5-capmatrix-cards</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1694">issue #1694</a> — filed 2026-10-15 — queued (issued #1694 under --auto with the Heart RED development override, not started); blocked-by: search-ext-kwarg-typos…</summary>
+<details><summary>📋 <b>search-ext-a5-capmatrix-cards</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1694">issue #1694</a> — filed 2026-10-15 — queued (issued #1694 under --auto with the Heart RED development override, not started); blocked-by: none…</summary>
 
 ```
 Use the start-dev skill. draft/docs/autofit/capability_matrix_links_b3_catalogue_cards.md
@@ -2772,17 +2756,15 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-15 | filed | <a href="planned.md#interferometer-numba-route-gate">interferometer-numba-route-gate</a> |
 | 2026-10-15 | planned | <a href="planned.md#delaunaynn-wide-row-overhead">delaunaynn-wide-row-overhead</a> |
 | 2026-10-15 | filed | <a href="planned.md#adaptsplit-logdet-backend-parity">adaptsplit-logdet-backend-parity</a> |
-| 2026-10-15 | issued | <a href="active/search_ext_b5b2_remainder_and_summary_records.md"><code>@autofit_inference</code> B5b-2: pull and judge the wave-2 remainder…</a> |
-| 2026-10-15 | issued | <a href="active/search_kwarg_typos_in_workspace_scripts.md">Search constructor typos silently ignored in workspace scripts…</a> |
 | 2026-10-15 | filed | <a href="draft/refactor/cortex/ral_category_paths_phase2.md">RAL category paths — phase 2: repoint the claimed repos, then drop…</a> |
 | 2026-10-15 | issued | <a href="active/interferometer_sparse_inversion_compute_data_vec.md">Interferometer sparse inversion: compute data vector without the…</a> |
+| 2026-10-15 | filed | <a href="active/interferometer_numba_route_gate_should_scale_wit.md">Interferometer numba route gate should scale with mask size</a> |
+| 2026-10-15 | filed | <a href="active/adaptsplit_regularization_log_det_differs_betwee.md">AdaptSplit regularization log-det differs between numba and JAX…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-15 | filed | <a href="active/interferometer_numba_route_gate_should_scale_wit.md">Interferometer numba route gate should scale with mask size</a> |
-| 2026-10-15 | filed | <a href="active/adaptsplit_regularization_log_det_differs_betwee.md">AdaptSplit regularization log-det differs between numba and JAX…</a> |
 | 2026-10-14 | filed | <a href="planned.md#cortex-project-readability">cortex-project-readability</a> |
 | 2026-10-14 | filed | <a href="draft/test/autofit/workspace_searches_scripts_preexisting_failures.md"><code>@autofit_workspace</code> six <code>searches/</code> scripts fail on main at…</a> |
 | 2026-10-14 | filed | <a href="draft/test/autofit/emcee_jax_timing_test_flaky_on_ci.md"><code>@PyAutoFit</code> <code>test_emcee_call_path_runs_at_jitted_speed</code> is a…</a> |
@@ -2791,13 +2773,13 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-14 | filed | <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> |
 | 2026-10-14 | filed | <a href="draft/feature/cortex/cortex_projects_readability.md">Cortex Projects readability — phase 1</a> |
 | 2026-10-13 | issued | <a href="active/hst_mge_pilot_qualification.md">HST/MGE pilot: independent correctness qualification design</a> |
+| 2026-10-09 | filed | <a href="draft/bug/pyautobrain/profiling_compile_drift_point_vs_point.md">Profiling conductor compile drift compares one point against one point</a> |
+| 2026-10-08 | filed | <a href="draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md"><code>JAX_ENABLE_X64=False</code> is overridden to True, so the fp32 inference…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-09 | filed | <a href="draft/bug/pyautobrain/profiling_compile_drift_point_vs_point.md">Profiling conductor compile drift compares one point against one point</a> |
-| 2026-10-08 | filed | <a href="draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md"><code>JAX_ENABLE_X64=False</code> is overridden to True, so the fp32 inference…</a> |
 | 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
 | 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
@@ -2806,13 +2788,13 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
+| 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
+| 2026-09-29 | filed | <a href="draft/maintenance/pyautomind/session_start_hook_copies_regen.md">Regenerate the 28 drifted <code>.claude/hooks/session-start.sh</code> copies…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
-| 2026-09-29 | filed | <a href="draft/maintenance/pyautomind/session_start_hook_copies_regen.md">Regenerate the 28 drifted <code>.claude/hooks/session-start.sh</code> copies…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/power_law_multipole_m1_singular_at_isothermal_slope.md">PowerLawMultipole with m=1 returns -inf / NaN deflections at slope…</a> |
@@ -2821,13 +2803,13 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
 | 2026-09-26 | filed | <a href="draft/refactor/workspaces/abell_1201_local_cleanup.md">Repo cleanup: retire the Abell 1201 worktree and local raw data</a> |
 | 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
+| 2026-09-25 | filed | <a href="draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md">Keep caches off <code>$HOME</code> on HPC — phase 2 remainder: euclid pipeline…</a> |
+| 2026-09-24 | filed | <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-25 | filed | <a href="draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md">Keep caches off <code>$HOME</code> on HPC — phase 2 remainder: euclid pipeline…</a> |
-| 2026-09-24 | filed | <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> |
 | 2026-09-23 | filed | <a href="draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
 | 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
@@ -2836,6 +2818,8 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-18 | filed | <a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
+| 2026-09-17 | filed | <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> |
+| 2026-09-17 | filed | <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> |
 
 </details>
 
@@ -3006,7 +2990,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoFit**
 
-- [PyAutoFit#1695](https://github.com/PyAutoLabs/PyAutoFit/pull/1695) — `active/search_kwarg_typos_in_workspace_scripts.md`
 - [PyAutoFit#1667](https://github.com/PyAutoLabs/PyAutoFit/pull/1667) — `complete/2026/10/search-conformance-metadata.md`
 - [PyAutoFit#1673](https://github.com/PyAutoLabs/PyAutoFit/pull/1673) — `complete/2026/10/search-ext-a0a2-backend-conformance.md`
 - [PyAutoFit#1672](https://github.com/PyAutoLabs/PyAutoFit/pull/1672) — `complete/2026/10/search-ext-a0b-hygiene.md`
@@ -3023,6 +3006,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - [PyAutoFit#1690](https://github.com/PyAutoLabs/PyAutoFit/pull/1690) — `complete/2026/10/search-ext-a5-library.md`
 - [PyAutoFit#1691](https://github.com/PyAutoLabs/PyAutoFit/pull/1691) — `complete/2026/10/search-ext-a5-library.md`
 - [PyAutoFit#1692](https://github.com/PyAutoLabs/PyAutoFit/pull/1692) — `complete/2026/10/search-ext-a5-library.md`
+- [PyAutoFit#1695](https://github.com/PyAutoLabs/PyAutoFit/pull/1695) — `complete/2026/10/search-ext-kwarg-typos.md`
 
 **PyAutoGalaxy**
 
