@@ -1,5 +1,7 @@
 # Route campaign information to Insight and Pulse
 
+Issued: 2026-10-15
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/524
 Type: docs
 Target: brain
 Difficulty: medium

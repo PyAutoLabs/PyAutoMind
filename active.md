@@ -88,3 +88,39 @@
   - permitted: commit, push, PR-open; merge separate
 - repos:
   - PyAutoArray: feature/interferometer-sparse-data-vector
+
+## memory-domain-routing
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/524
+- issued: 2026-10-15
+- prompt: active/memory_domain_routing.md
+- status: library-dev
+- session: Codex
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/memory-domain-routing
+- approval: Accepted ownership plan; live human "Proceed" after exact Heart RED reasons. Development and PR-open only; merge separate.
+- heart-red-override:
+  - authorized-by: live human "Proceed", 2026-10-15
+  - permitted: development, commit, push, PR-open; no merge/release
+  - validation: pending implementation
+  - reasons:
+    - [red] release validation FAILED (stage integrate)
+    - [red] PyAutoHands/workflows/Python Version Matrix: failure
+    - [red] PyAutoHeart/workflows/Release Integrate: failure
+    - [red] PyAutoMind/workflows/Lifecycle Drift: failure
+    - [red] PyAutoArray/Tests: red
+    - [red] PyAutoArray/Tests: red
+    - [red] autofit_workspace_test/Smoke Tests: red
+    - [red] autogalaxy_workspace_test/Smoke Tests: red
+    - [red] autolens_workspace_test/Smoke Tests: red
+    - [red] CI wall-clock: 26 gates · slowest PyAutoBrain Nightly Release 63m · 5 hang events
+    - [red] Release readiness: release validation FAILED (stage integrate)
+    - [red] autofit_test: red
+    - [red] Release validation: NOT release_ready — v2026.10.15.1.dev81701 profile=release (2026-10-15T07:04:34+00:00)
+    - [red] validation_report/stages/integrate: fail
+    - [red] PyAutoArray: red
+    - [red] autolens_inference: red
+    - [red] autolens_profiling: red
+    - [red] Worktree drift: 5 orphan / 0 missing / 4 dirty
+    - [red] euclid_strong_lens_modeling_pipeline: red
+- repos:
+  - PyAutoBrain: feature/memory-domain-routing
+  - PyAutoMemory: feature/memory-domain-routing
