@@ -26,3 +26,8 @@ Fix ideas: iterate only `pix_sizes[i]` entries per row (skip padding) in both, n
 compacted-CSR `np.bincount` for adaptive_pixel_signals. Acceptance: imaging DelaunayNN
 within ~1.5x Delaunay at sub 4 with bit-/1e-12 parity; Delaunay unchanged.
 Timing scripts: session scratchpad `0b91c774.../scratchpad/phase2/imaging_timing.py` (temporary).
+
+Also (from the #625 independent review, pre-existing): `sibson.py` ~L518-555 can in principle emit a failed
+row with `size == 0` whose NaN weights sit only in padding; every route reads the first `size` entries, so
+the evidence comes out finite (and wrong) instead of NaN. Decide whether failed rows should keep `size >= 1`
+so NaN propagates; add cavity-overflow and degenerate cases to the NaN-route tests.
