@@ -25,3 +25,16 @@
   - permitted: commit, push, PR-open; merge separate
 - repos:
   - PyAutoArray: feature/interferometer-sparse-data-vector
+
+## search-ext-a5-capmatrix-cards
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1694
+- issued: 2026-10-15
+- prompt: active/capability_matrix_links_b3_catalogue_cards.md
+- status: library-dev
+- session: Claude Code CLI (Fable 5.1); session 6ffb59e9; launched --auto (second Heart RED override grant, recorded on #1694 and autonomy_log)
+- epic: search-extensibility
+- worktree: ~/Code/PyAutoLabs-wt/search-ext-a5-capmatrix-cards
+- repos:
+  - PyAutoFit: feature/search-ext-a5-capmatrix-cards
+- classification: library (PyAutoFit docs generator), Consequence glance, Autonomy safe
+- suggested-branch: feature/search-ext-a5-capmatrix-cards
