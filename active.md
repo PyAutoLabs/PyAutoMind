@@ -20,7 +20,8 @@
 - issued: 2026-10-15
 - prompt: active/interferometer_large_mask_witness_tables.md
 - session: Claude Code CLI (Fable 5.1); session 3e3dea38; launched --auto
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/64
 - worktree: ~/Code/PyAutoLabs-wt/pulse-aris-witness-tables
 - heart-red-override:
   - date: 2026-10-15
