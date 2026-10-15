@@ -19,3 +19,15 @@
   - authorized-by: live human in session 6ffb59e9, AskUserQuestion answer 'Both, override for development (Recommended)' (third grant, night launch)
   - reasons: "Heart: RED — Release RED; monitoring RED · 10/100 · 415 unresolved"; "[red] release validation FAILED (stage integrate)"; "[red] PyAutoHands/workflows/Python Version Matrix: failure"; "[red] PyAutoHeart/workflows/Release Integrate: failure"; "[red] PyAutoArray/Tests: red"; "[red] autofit_workspace_test/Smoke Tests: red"; "[red] autogalaxy_workspace_test/Smoke Tests: red"; "[red] autolens_workspace_test/Smoke Tests: red"; "[red] Release validation: NOT release_ready"; "[red] Worktree drift"; "[red] autolens_inference: red"; "[red] autolens_profiling: red"; "[red] euclid_strong_lens_modeling_pipeline: red"
   - permitted: commit, push, PR-open; merge separate
+
+## cortex-project-card-polish
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/527
+- issued: 2026-10-15
+- session: Codex; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/cortex-project-card-polish
+- repos:
+  - PyAutoBrain: feature/cortex-project-card-polish
+- heart-red-override:
+  - authorization: "Proceed, I override" (2026-10-15, this task only; human merge required)
+  - exact-reasons: see issue #527; branch validation pending

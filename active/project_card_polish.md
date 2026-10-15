@@ -3,6 +3,8 @@
 Targets: @PyAutoBrain
 Type: feature
 Filed: 2026-10-15
+Issued: 2026-10-15
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/527
 Difficulty: small
 
 ## Original request (verbatim)
