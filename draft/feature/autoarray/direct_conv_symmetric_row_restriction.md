@@ -9,7 +9,7 @@ Autonomy: supervised
 Priority: normal
 Status: formalised
 Consequence: glance
-Witness: on the Aris 512x512 setup (91,507 masked pixels, extent 341², 1,459–5,746 vertices) the numba direct_conv curvature matrix is bit-identical (<=1e-15 relative) and >=1.8x faster at 2,577 vertices on an unloaded core; the #632 route model is recalibrated on the new timings
+Witness: on the Aris 512x512 geometry (extent 341², ~91k masked pixels, 1,428–5,712 vertices) the numba direct_conv curvature matrix reproduces the library's upper triangle exactly (full-matrix difference = the library's own F asymmetry, ~1e-15 relative) and is >=1.6x faster at 2,540 and 5,712 vertices on a quiet core (RAL, ABBA spread <=1.01); the #632 route model is recalibrated on the new timings. Revised 2026-10-16 by the human after RAL 411833 measured 1.76x / 1.74x / 1.66x (PyAutoPulse#62 comment 6213885428); original witness asked >=1.8x at 2,577 and <=1e-15.
 Review-minutes: 3
 Unattended: ready
 
@@ -20,8 +20,8 @@ clipped to the mask's x-range; gather only the upper triangle (CSC layout, 32 vs
 mirror. Exact to 2e-16 (prototype `aris_research/kern.py::kC`, temporary). Work fraction on paper
 0.60x at 125x125, 0.42x at 512x512. Measured: 125x125 1.10x / 0.82x (gather+mirror overhead cancels —
 not worth it there); 512 synthetic (341², 91k px, 1,428 vtx, nnz 274k) 2.5x uncontended (63 → 25 s)
-but only 1.03–1.10x under load 5 — so the gain is 2–2.5x UNCONFIRMED and must be re-measured on a
-quiet core first. If it holds, direct_conv likely beats FFT at 1,459 vertices too (28.3 s FFT), so the
+but only 1.03–1.10x under load 5. Quiet-core re-measure (RAL 411833, 2026-10-16, main e59d5fa9): 1.76x / 1.74x /
+1.66x at S 1,428 / 2,540 / 5,712, library 22–24 s per call — the 2–2.5x was not reproduced. If it holds, direct_conv likely beats FFT at 1,459 vertices too (28.3 s FFT), so the
 #632 cost-model constants need refitting (extent-dependent kernel work). Keep a kill switch; large
 extents only (gate on extent size or let the route model decide). Campaign
 https://github.com/PyAutoLabs/PyAutoPulse/issues/62; related Pulse task
