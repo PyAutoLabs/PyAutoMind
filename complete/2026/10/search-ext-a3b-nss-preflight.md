@@ -3,7 +3,6 @@
 - completed: 2026-10-08
 - epic: search-extensibility (phase A3b)
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1681
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1681
 
 **Shipped:** PyAutoFit#1681 (merged 2026-10-08T20:05:54Z after A2 #1679 and A3 #1680, via a human `/prm`). It was launched with `--auto`, effective autonomy safe, tier judge. The work was implemented in the A2 worktree's manual second checkout `PyAutoFit_a3` and had no worktree or `active.md` row of its own; there was only a `planned.md` row.
 - NSS now samples through `Fitness.objective` (built by `make_fitness`) and runs on `run(ctx)` + `raw_samples_from`, resuming from `NativeFileCheckpointer("nss_checkpoint.pkl")`. Assertions are traced, so NSS no longer raises `TracerBoolConversionError` under `jit`. The resume sanity check runs at the start of the run. `nss_log_likelihood_from` is removed, and `make_fitness` is now the only place that builds a `Fitness`.

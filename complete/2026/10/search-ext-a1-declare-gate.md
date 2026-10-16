@@ -6,9 +6,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/778
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/653
 - library-pr: https://github.com/PyAutoLabs/PyAutoCTI/pull/116
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1675
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/778
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/653
 - merge-commit: PyAutoFit 0dbf258c; PyAutoLens 9e93e4a7; PyAutoGalaxy 48c73c05; PyAutoCTI 2a91ff5d
 
 ### Outcome

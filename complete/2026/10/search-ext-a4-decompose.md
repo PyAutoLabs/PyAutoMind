@@ -5,9 +5,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1685
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1686
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1687
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1685
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1686
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1687
 
 **Shipped:** three stacked PyAutoFit PRs, merged in order by human `/prm` on 2026-10-14 (tier judge): #1685 A4a decompose (8e5487ae9), #1686 A4b seed (5bf057f28), #1687 A4c family bases (df6d218f1). Pre-merge Codex gpt-6-astra adversary review 07 (`draft/research/autofit/search_extensibility_epic_reviews/07_codex_astra_a4_stack_premerge.md`, FINDINGS 4) was enacted on the branches before merge; all four reproduced.
 - A4a: `abstract_search.py` 2102 → 585 lines; `TestModeBypass`, `SearchFactorOptimiser` moved out, `SearchRuntimeSettings`/`paths_from`, paths capabilities; non-lifecycle method groups in `__init__`-less mixins (`execution.py`, `internal_state.py`, `updates.py`, test-mode mixin) because `FitLifecycle` is deferred to A5 (D22). Pool shims and `SneakyPool` kept deprecated until A5. All 15 default identifiers, `hash_list`, `to_dict` and constructor-argument sets byte-identical to main.

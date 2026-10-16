@@ -14,7 +14,7 @@
 | [Planned](#planned) | 8 |
 | [Backlog](#backlog) | 263 |
 | [Recent](#recent) | 50 |
-| [Pending release](#pending-release) | 4 |
+| [Pending release](#pending-release) | 1 |
 
 ## Start here
 
@@ -2908,44 +2908,9 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 ## Pending release
 
-**PyAutoArray**
-
-- [PyAutoArray#631](https://github.com/PyAutoLabs/PyAutoArray/pull/631) — `complete/2026/10/adaptsplit-logdet-backend-parity.md`
-- [PyAutoArray#632](https://github.com/PyAutoLabs/PyAutoArray/pull/632) — `complete/2026/10/interferometer-numba-route-gate.md`
-- [PyAutoArray#630](https://github.com/PyAutoLabs/PyAutoArray/pull/630) — `complete/2026/10/interferometer-sparse-data-vector.md`
-- [PyAutoArray#634](https://github.com/PyAutoLabs/PyAutoArray/pull/634) — `complete/2026/10/reuse-cholesky-factor.md`
-
 **PyAutoFit**
 
 - [PyAutoFit#1698](https://github.com/PyAutoLabs/PyAutoFit/pull/1698) — `complete/2026/10/nautilus-d100-checkpoint-guard.md`
-- [PyAutoFit#1667](https://github.com/PyAutoLabs/PyAutoFit/pull/1667) — `complete/2026/10/search-conformance-metadata.md`
-- [PyAutoFit#1673](https://github.com/PyAutoLabs/PyAutoFit/pull/1673) — `complete/2026/10/search-ext-a0a2-backend-conformance.md`
-- [PyAutoFit#1672](https://github.com/PyAutoLabs/PyAutoFit/pull/1672) — `complete/2026/10/search-ext-a0b-hygiene.md`
-- [PyAutoFit#1669](https://github.com/PyAutoLabs/PyAutoFit/pull/1669) — `complete/2026/10/search-ext-a0c-fit-repair.md`
-- [PyAutoFit#1675](https://github.com/PyAutoLabs/PyAutoFit/pull/1675) — `complete/2026/10/search-ext-a1-declare-gate.md`
-- [PyAutoFit#1679](https://github.com/PyAutoLabs/PyAutoFit/pull/1679) — `complete/2026/10/search-ext-a2-objective-bridge.md`
-- [PyAutoFit#1683](https://github.com/PyAutoLabs/PyAutoFit/pull/1683) — `complete/2026/10/search-ext-a3-postmerge-fixes.md`
-- [PyAutoFit#1680](https://github.com/PyAutoLabs/PyAutoFit/pull/1680) — `complete/2026/10/search-ext-a3-samples-checkpointer.md`
-- [PyAutoFit#1681](https://github.com/PyAutoLabs/PyAutoFit/pull/1681) — `complete/2026/10/search-ext-a3b-nss-preflight.md`
-- [PyAutoFit#1685](https://github.com/PyAutoLabs/PyAutoFit/pull/1685) — `complete/2026/10/search-ext-a4-decompose.md`
-- [PyAutoFit#1686](https://github.com/PyAutoLabs/PyAutoFit/pull/1686) — `complete/2026/10/search-ext-a4-decompose.md`
-- [PyAutoFit#1687](https://github.com/PyAutoLabs/PyAutoFit/pull/1687) — `complete/2026/10/search-ext-a4-decompose.md`
-- [PyAutoFit#1696](https://github.com/PyAutoLabs/PyAutoFit/pull/1696) — `complete/2026/10/search-ext-a5-capmatrix-cards.md`
-- [PyAutoFit#1689](https://github.com/PyAutoLabs/PyAutoFit/pull/1689) — `complete/2026/10/search-ext-a5-library.md`
-- [PyAutoFit#1690](https://github.com/PyAutoLabs/PyAutoFit/pull/1690) — `complete/2026/10/search-ext-a5-library.md`
-- [PyAutoFit#1691](https://github.com/PyAutoLabs/PyAutoFit/pull/1691) — `complete/2026/10/search-ext-a5-library.md`
-- [PyAutoFit#1692](https://github.com/PyAutoLabs/PyAutoFit/pull/1692) — `complete/2026/10/search-ext-a5-library.md`
-- [PyAutoFit#1695](https://github.com/PyAutoLabs/PyAutoFit/pull/1695) — `complete/2026/10/search-ext-kwarg-typos.md`
-
-**PyAutoGalaxy**
-
-- [PyAutoGalaxy#652](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/652) — `complete/2026/10/search-ext-a0c-downstream.md`
-- [PyAutoGalaxy#653](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/653) — `complete/2026/10/search-ext-a1-declare-gate.md`
-
-**PyAutoLens**
-
-- [PyAutoLens#777](https://github.com/PyAutoLabs/PyAutoLens/pull/777) — `complete/2026/10/search-ext-a0c-downstream.md`
-- [PyAutoLens#778](https://github.com/PyAutoLabs/PyAutoLens/pull/778) — `complete/2026/10/search-ext-a1-declare-gate.md`
 
 
 Boards: [organism](https://pyautolabs.github.io/PyAutoScientist/) · [brain](https://pyautolabs.github.io/PyAutoBrain/) · [cortex](https://pyautolabs.github.io/PyAutoCortex/) · [memory](https://pyautolabs.github.io/PyAutoMemory/) · [eyes](https://pyautolabs.github.io/PyAutoEyes/) · [ears](https://pyautolabs.github.io/PyAutoEars/) · [heart](https://pyautolabs.github.io/PyAutoHeart/) · [hands](https://pyautolabs.github.io/PyAutoHands/) · [pulse](https://pyautolabs.github.io/PyAutoPulse/) · [insight](https://pyautolabs.github.io/PyAutoInsight/) · [dna](https://pyautolabs.github.io/PyAutoDNA/) · [nerves](https://pyautolabs.github.io/PyAutoNerves/) · [broca](https://pyautolabs.github.io/PyAutoBroca/) · [gut](https://pyautolabs.github.io/PyAutoGut/)

@@ -3,7 +3,6 @@
 - completed: 2026-10-15
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/630
 - merge: 7cc71238bcb31300ee183902ebfeb52452f40712 (head 8676b6a0)
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/630
 - summary: The sparse-operator interferometer inversion now builds its data vector directly from the mapper's COO triplets, so the likelihood path no longer materialises the dense mapping matrix. New private helpers `_sparse_triplets_slim_from` and `_data_vector_mapper_from`; tests check the sparse data vector against the dense product. Scope merged = scope filed (no partial).
 - witness: numba 5,746-vertex peak RSS 7.17 → 3.14 GB; JAX jit 1,459 vtx 3.65 → 2.60 GB; XLA compile temp at 5,746 vtx 8.95 → 1.86 GB, and JAX at 5,746 vtx now runs at 3.24 GB. Timings not claimed (machine load 2–14).
 - decision-taken: the witness wording "logL unchanged to 1e-8" was read as fp64 precision; measured agreement ≤2.5e-11 relative. Revert: `git revert 8676b6a0`.

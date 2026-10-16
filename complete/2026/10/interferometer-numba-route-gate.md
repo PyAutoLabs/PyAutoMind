@@ -5,7 +5,6 @@ numba-vs-FFT curvature routing now scales with mask size via a two-constant cost
 replacing the fixed 60 nnz/col gate that mis-routed the Aris 512x512 mask (2,577 vertices,
 106 nnz/col → FFT at 44.1 s vs 34.2 s direct_conv).
 
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/632
 
 ## What shipped (PyAutoArray#632, merged 2026-10-15, 17caf228)
 
