@@ -39,7 +39,10 @@
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/312
 - issued: 2026-10-16
 - prompt: active/python_matrix_smoke_bypasses_harness.md
-- status: workspace-dev
+- status: awaiting-input — draft PR #314; full-suite baseline failure and live matrix witness unresolved
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/314
+- validation: targeted 10 passed; independent code review CLEAN; full suite 490 passed / 9 skipped / 1 failed; same timeout failure reproduced on untouched main f27613f
+- next: obtain green full-suite CI and dispatched matrix witness; preserve Hands claim until lifecycle close-out
 - session: Codex Work; session ID unavailable
 - location: /workspace/scratch/fcfb1c6d3e0b/PyAutoHands (clone)
 - authorization: approved four-task batch, “Go” on 2026-10-16; independent step while Heart #298 awaits its witness

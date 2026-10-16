@@ -124,3 +124,32 @@
 - affected-repos:
   - PyAutoArray
   - PyAutoPulse
+
+## grouped-smoke-install
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/300
+- filed: 2026-10-16
+- prompt: active/smoke_install_flat_pip_chain_breaks_local_env_creation.md
+- status: planned — approved batch member, implementation NOT STARTED
+- blocked-by: custom-runner-relevance claims PyAutoHeart (issue #298, draft PR #299)
+- classification: workspace / Heart local-environment infrastructure
+- suggested-branch: feature/grouped-smoke-install
+- authorization: human approved the four-task smoke-reliability batch with “Go” on 2026-10-16; sequential, preserve claims; no release authority
+- plan: two-level implementation scope on #300; resolve paths and use a temporary flat symlink directory for existing installers; validate grouped and flat routes
+- affected-repos:
+  - PyAutoHeart
+- next: resume start-dev after Heart claim clears; no branch or worktree exists
+
+## smoke-sampler-imports
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/313
+- filed: 2026-10-16
+- prompt: active/smoke_profile_cannot_see_a_missing_sampler.md
+- status: planned — approved batch member, implementation NOT STARTED
+- blocked-by: python-matrix-harness claims PyAutoHands (#312 / draft PR #314); custom-runner-relevance claims PyAutoHeart (#298 / draft PR #299)
+- classification: workspace smoke-harness feature
+- suggested-branch: feature/smoke-sampler-imports
+- authorization: human approved the four-task smoke-reliability batch with “Go” on 2026-10-16; sequential, preserve claims; no release authority
+- plan: scope and acceptance on #313; inspect canonical search registry before choosing the import map, validate missing/present BlackJAX tutorial behavior
+- affected-repos:
+  - PyAutoHands
+  - PyAutoHeart
+- next: resume start-dev when claims clear; no branch or worktree exists
