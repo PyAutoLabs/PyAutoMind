@@ -866,7 +866,7 @@ Use the start-dev skill. active/hst_mge_pilot_qualification.md
 
 </details>
 
-<details><summary>📋 <a href="active/profiling_lint_pyautoarray_634_drift.md">autolens_profiling lint red after PyAutoArray#634: re-pin abstract.py anchors, probe the shared-Cholesky route</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/423">issue #423</a> — issued 2026-10-16 — workspace-dev</summary>
+<details><summary>📋 <a href="active/profiling_lint_pyautoarray_634_drift.md">autolens_profiling lint red after PyAutoArray#634: re-pin abstract.py anchors, probe the shared-Cholesky route</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/423">issue #423</a> — issued 2026-10-16 — PR-open 2026-10-16 (Heart RED override; human merge command given for this turn) — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/424">autolens_profiling#424</a></summary>
 
 ```
 Use the start-dev skill. active/profiling_lint_pyautoarray_634_drift.md
