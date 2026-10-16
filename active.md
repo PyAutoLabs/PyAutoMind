@@ -21,9 +21,16 @@
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/423
 - issued: 2026-10-16
 - prompt: active/profiling_lint_pyautoarray_634_drift.md
-- status: workspace-dev
+- status: PR-open 2026-10-16 (Heart RED override; human merge command given for this turn)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/424
 - session: Claude Code CLI (Opus 5.5); session 13efb443
 - worktree: ~/Code/PyAutoLabs-wt/profiling-lint-634-drift
 - repos:
   - autolens_profiling: feature/profiling-lint-634-drift
 - classification: bug (autolens_profiling), Consequence notify, Autonomy safe; blocks PR #422 (decision-matrix-gate-wording, same session; files disjoint); cause PyAutoArray#634
+- heart-red-override:
+  - date: 2026-10-16
+  - authorized-by: live human in session 13efb443, AskUserQuestion answer 'Override, then merge both (Recommended)'
+  - reasons: "PyAutoFit: 1 commit(s) behind origin"; "PyAutoGalaxy: 1 commit(s) behind origin"; "PyAutoLens: 1 commit(s) behind origin"; "release validation incomplete: no rehearsal for current source"
+  - passed: pytest scripts/misc/test/ 1457 passed/0 failed; ruff check + format clean
+  - permitted: commit, push, PR-open; merge on all-green this turn (#424 then #422)
