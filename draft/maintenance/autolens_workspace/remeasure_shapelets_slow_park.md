@@ -11,7 +11,7 @@ Status: formalised
 Consequence: glance
 Witness: `multi_galaxy/features/advanced/shapelets/modeling.py` timed 3× under `run_smoke.py` (profile_smoke) with and without `XLA_FLAGS=--xla_cpu_multi_thread_eigen=false`; the no_run entry is kept only if the median under the flag exceeds the smoke cap, else it is un-parked.
 Filed: 2026-10-16
-Blocked-by: draft/bug/pyautohands/python_matrix_smoke_bypasses_harness.md
+Dependency-resolved: complete/2026/10/python-matrix-harness.md (Hands PR #314 merged; per-script timeout restored)
 
 ## Finding
 
