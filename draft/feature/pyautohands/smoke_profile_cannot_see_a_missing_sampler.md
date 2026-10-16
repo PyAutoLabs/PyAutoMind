@@ -1,5 +1,7 @@
 # Smoke profile cannot see a missing sampler dependency — add an import check over the af.<Search> classes each script constructs
 
+Issued: 2026-10-16
+Issue: https://github.com/PyAutoLabs/PyAutoHands/issues/313
 Type: feature
 Target: PyAutoHands
 Repos:
@@ -8,7 +10,7 @@ Repos:
 Difficulty: small
 Autonomy: safe
 Priority: medium
-Status: formalised
+Status: planned — blocked by existing repository claims
 Consequence: notify
 Witness: with blackjax uninstalled in the smoke environment, the smoke run for HowToFit scripts/chapter_1_introduction/tutorial_6_gradients.py FAILS at PYAUTO_TEST_MODE=2 with a message naming BlackJAXNUTS and blackjax, instead of passing; with blackjax installed it passes as before.
 Review-minutes: 0

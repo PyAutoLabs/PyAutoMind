@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-16T20:14:07Z",
+  "updated": "2026-10-16T20:19:50Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "red",
+      "text": "Python Version Matrix smoke legs bypass run_smoke.py \u2014 no ENV declarations, no\u2026 \u2014 awaiting-input \u2014 draft PR #314; live matrix witness unresolved; updated policy check awaiting CI",
+      "url": "https://github.com/PyAutoLabs/PyAutoHands/pull/314",
+      "prompt": "Use the start-dev skill. active/python_matrix_smoke_bypasses_harness.md"
+    },
     {
       "severity": "red",
       "text": "The reusable smoke workflow's relevance gate skips the `unit` / `slow` pytest\u2026 \u2014 awaiting-input \u2014 draft PR #299; live pipeline witness missing",
@@ -120,12 +126,6 @@
       "text": "pick: Cache `autonerves` config parsing \u2014 308 YAML files parsed per script run",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/autonerves/config_yaml_parse_cache.md",
       "prompt": "Use the start-dev skill. draft/refactor/autonerves/config_yaml_parse_cache.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md",
-      "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md"
     }
   ]
 }
