@@ -866,7 +866,7 @@ Use the start-dev skill. active/hst_mge_pilot_qualification.md
 
 </details>
 
-<details><summary>📋 <a href="active/search_ext_b5c2a_pilot_judge_freeze.md"><code>@autofit_inference</code> B5c-2a: pull and judge the correlated_nd pilot, calibrate, rule…</a> — <a href="https://github.com/PyAutoLabs/autofit_inference/issues/17">issue #17</a> — issued 2026-10-16 — workspace-dev</summary>
+<details><summary>📋 <a href="active/search_ext_b5c2a_pilot_judge_freeze.md"><code>@autofit_inference</code> B5c-2a: pull and judge the correlated_nd pilot, calibrate, rule…</a> — <a href="https://github.com/PyAutoLabs/autofit_inference/issues/17">issue #17</a> — issued 2026-10-16 — PR-open 2026-10-16 (autofit_inference#18, PyAutoCortex#71, PyAutoInsight#34; CI green; correlated_nd@2 frozen in 44c5e77f1fb0… — PRs: <a href="https://github.com/PyAutoLabs/autofit_inference/pull/18">autofit_inference#18</a>, <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/71">PyAutoCortex#71</a>, <a href="https://github.com/PyAutoLabs/PyAutoInsight/pull/34">PyAutoInsight#34</a></summary>
 
 ```
 Use the start-dev skill. active/search_ext_b5c2a_pilot_judge_freeze.md
