@@ -3,7 +3,6 @@
 - completed: 2026-10-15
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/631
 - merge: 0377eeaafec8fc1c4ccd289fbfb7e8c24a32fad3 (head da5f6cef; commits f052e381 fix + da5f6cef test guard)
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/631
 - root-cause: the numba and JAX backends built different AdaptSplit H matrices, not different log-dets. `adaptive_pixel_signals_from` counted zero-weight mapping entries, and scipy and the JAX Delaunay walk pick different triangles for data points lying exactly on a vertex or edge, so the zero-weight entries landed on different pixels. Every log-det factorization agreed to 2e-8 on the same H.
 - fix: new `exclude_zero_weight_mappings` keyword on `adaptive_pixel_signals_from`, driven by an interpolator class attribute: True on InterpolatorDelaunay / InterpolatorDelaunayNN, False on the base interpolator and KNN.
 - decision: the first independent review returned FINDINGS — KNNBarycentric clips negative weights to exactly 0 region-wide, so excluding zero weights there would change whole-region signals and add a discontinuity. The human chose (b) 'Delaunay only (Recommended by review)' on 2026-10-15 (https://github.com/PyAutoLabs/PyAutoArray/issues/627#issuecomment-6200058449); the second review on f052e381 was CLEAN.

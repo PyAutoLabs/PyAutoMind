@@ -3,7 +3,6 @@
 - completed: 2026-10-08
 - epic: search-extensibility (phase A0b)
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1672
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1672
 - merge-commit: PyAutoFit 1d43b668
 
 ### Outcome

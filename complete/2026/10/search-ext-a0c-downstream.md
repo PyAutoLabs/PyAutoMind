@@ -5,8 +5,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/777
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/652
 - library-pr: https://github.com/PyAutoLabs/PyAutoCTI/pull/115
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/777
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/652
 - workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/97
 - workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/86
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/257

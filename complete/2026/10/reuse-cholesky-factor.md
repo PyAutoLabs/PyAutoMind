@@ -3,7 +3,6 @@
 - completed: 2026-10-15
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/634
 - merge: e59d5fa901e54bf3d9931890067bc3447a5c1232 (head 02aa2e48), merged 2026-10-15T23:27:18Z
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/634
 - shipped: one cached `scipy.linalg.cho_factor` of a copy of F+H now serves both `reconstruction` (via `cho_solve`) and `log_det_curvature_reg_matrix_term` (2·Σlog diag). It applies only on NumPy, with the positive-only solver off and `log_det_method` cholesky. Every other configuration keeps the old path, and so does a factorization failure or a non-finite diagonal. Error semantics are unchanged. 10 new tests.
 - not-done: the optional in-place F+H add was skipped, because `curvature_reg_matrix` and `curvature_matrix` are reused elsewhere and an in-place add would corrupt them. Scope merged = scope filed except this optional item.
 - witness: PASS as reworded. solve+log-det went 144.5→50.9 ms at 1,405 vertices and 1,268→373 ms at 2,947. The full likelihood call is −22–24% at 1,405 and −51% at 2,947. The log det is bit-identical and logL agrees to ≤1.1e-11 relative. The reconstruction agrees within conditioning: 1.6e-3 relative at 2,947 vertices, where cond(F+H)=7.7e14, and the new solve is closer to the refined reference than the old LU solve.
