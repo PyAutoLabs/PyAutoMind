@@ -1,29 +1,4 @@
 
-## search-ext-b5c-family
-- issue: https://github.com/PyAutoLabs/autofit_inference/issues/14
-- issued: 2026-10-15
-- prompt: active/search_ext_b5c_second_model_family.md
-- status: PR-open 2026-10-16 (stage 1 shipped; autofit_inference lint RED — `test_committed_dataset_regenerates_byte_for_byte` last-bit QR float diff on CI numpy/LAPACK, fix = np.allclose rtol 1e-12, then one CI check per PR; pilot RAL 410866 PENDING; B5c-2 = freeze + scored wave, brief in scratchpad progress_b5c.md + complete record to come)
-- workspace-pr: https://github.com/PyAutoLabs/autofit_inference/pull/16
-- workspace-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/70
-- workspace-pr: https://github.com/PyAutoLabs/PyAutoInsight/pull/33
-- compute: RAL 410866_[0-929]%100 `--partition=ral` (excl. euclid-ral-compute-[1-4], no gres, pin df6d218f1), correlated_nd@1 pilot of 930 runs, PENDING at hand-back (est. start 2026-10-16 ~19:30Z), from the PRIVATE copy /mnt/ral/jnightin/inference/autofit_inference_b5c; 409957 failed at import (shared clone switched to main + cli/config removed by another actor 19:24–22:24Z) and was cancelled, no rows
-- decision-taken: pilot 930 runs not ~600–800 (Nautilus exempt from the live-point floor under A1; 110 runs deferred: Emcee/Zeus D≥50, DynestyStatic/NSS D=100); revert = add "Nautilus" to LIVE_POINT_FLOOR_CLASSES in scripts/misc/searches/_correlated_nd.py, plan_correlated_nd.py --write, rebuild catalogue+README
-- session: Claude Code CLI (Fable 5.1); session 6ffb59e9; launched --auto 2026-10-15 night (claim released by ral-category-paths-phase2)
-- worktree: ~/Code/PyAutoLabs-wt/search-ext-b5c-family
-- repos:
-  - autofit_inference: feature/search-ext-b5c-family
-  - PyAutoInsight: feature/search-ext-b5c-family
-  - PyAutoCortex: feature/search-ext-b5c-family
-- classification: research (autofit_inference primary, PyAutoInsight; PyAutoCortex ledger lines by the architect), Consequence judge, Autonomy supervised; Feature Agent: split-into-phases — #14 scopes stage 1 (protocol, references, pilot manifest + submit), scoring/freeze/scored wave = B5c-2
-- suggested-branch: feature/search-ext-b5c-family
-- epic: search-extensibility
-- heart-red-override:
-  - date: 2026-10-15
-  - authorized-by: live human in session 6ffb59e9, AskUserQuestion answer 'Both, override for development (Recommended)' (third grant, night launch)
-  - reasons: "Heart: RED — Release RED; monitoring RED · 10/100 · 415 unresolved"; "[red] release validation FAILED (stage integrate)"; "[red] PyAutoHands/workflows/Python Version Matrix: failure"; "[red] PyAutoHeart/workflows/Release Integrate: failure"; "[red] PyAutoArray/Tests: red"; "[red] autofit_workspace_test/Smoke Tests: red"; "[red] autogalaxy_workspace_test/Smoke Tests: red"; "[red] autolens_workspace_test/Smoke Tests: red"; "[red] Release validation: NOT release_ready"; "[red] Worktree drift"; "[red] autolens_inference: red"; "[red] autolens_profiling: red"; "[red] euclid_strong_lens_modeling_pipeline: red"
-  - permitted: commit, push, PR-open; merge separate
-
 ## decision-matrix-gate-wording
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/421
 - issued: 2026-10-16

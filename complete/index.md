@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1890 records across 9 buckets.
+1891 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -342,6 +342,7 @@ markers; everything below GENERATED is rebuilt.
 - [search-ext-b5a-wave2](2026/10/search-ext-b5a-wave2.md) — B5a of search-extensibility. Froze `gaussian_x3@2` at autofit_inference 72d6faaf before any scored run existed…
 - [search-ext-b5b-score](2026/10/search-ext-b5b-score.md) — B5b of search-extensibility. Pulled scored wave 2 from RAL (12-way parallel tar on the login node; 11,770 rows…
 - [search-ext-b5b2-remainder](2026/10/search-ext-b5b2-remainder.md) — B5b-2 of search-extensibility closes scored wave 2. All 20 tasks of RAL 409930 (980 probe-first remainder runs…
+- [search-ext-b5c-family](2026/10/search-ext-b5c-family.md) — B5c stage 1 of search-extensibility — a second toy-likelihood family, `correlated_nd` (correlated Gaussians at…
 - [search-ext-kwarg-typos](2026/10/search-ext-kwarg-typos.md) — Search constructor kwargs that the A0b unknown-kwarg WARNING exposed as silently swallowed are fixed. PyAutoFi…
 - [setuptools-include-packages](2026/10/setuptools-include-packages.md)
 - [shapelets-smoke-slow-park](2026/10/shapelets-smoke-slow-park.md)
