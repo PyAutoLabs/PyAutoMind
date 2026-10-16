@@ -128,7 +128,7 @@
 ## grouped-smoke-install
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/300
 - filed: 2026-10-16
-- prompt: active/smoke_install_flat_pip_chain_breaks_local_env_creation.md
+- prompt: draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md
 - status: planned — approved batch member, implementation NOT STARTED
 - blocked-by: custom-runner-relevance claims PyAutoHeart (issue #298, draft PR #299)
 - classification: workspace / Heart local-environment infrastructure
@@ -142,7 +142,7 @@
 ## smoke-sampler-imports
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/313
 - filed: 2026-10-16
-- prompt: active/smoke_profile_cannot_see_a_missing_sampler.md
+- prompt: draft/feature/pyautohands/smoke_profile_cannot_see_a_missing_sampler.md
 - status: planned — approved batch member, implementation NOT STARTED
 - blocked-by: python-matrix-harness claims PyAutoHands (#312 / draft PR #314); custom-runner-relevance claims PyAutoHeart (#298 / draft PR #299)
 - classification: workspace smoke-harness feature
