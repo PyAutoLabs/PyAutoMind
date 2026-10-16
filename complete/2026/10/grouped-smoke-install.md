@@ -1,3 +1,18 @@
+# Grouped-layout smoke environment installation
+
+Completed: 2026-10-16
+Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/300
+PR: https://github.com/PyAutoLabs/PyAutoHeart/pull/301
+Merge: 3b88159181afa696f92564ed7d758759ecd2fd68
+
+Workspace installers now run against a temporary flat symlink view of the resolved dependency chain. Legacy local package and optional-extra targets use resolved absolute paths. Original checkouts and all workspace installers remain unchanged. Cleanup and existing rebuild rollback preserve failure behavior.
+
+Validation: full suite 1257 passed; targeted30 passed; independent review CLEAN. A new grouped-root AutoLens environment built all local libraries and optional/notebook dependencies, passed preflight and exited0. Existing flat smoke jobs passed both Python legs for fit38968052047, galaxy38961753740, lens38961793140 and CTI37752276460 (October8 baseline, not candidate validation). Exact-head Heart CI38969404218 passed both Python legs before human /prm.
+
+Heart at development: STALE (Release STALE; monitoring RED; old snapshot). No release performed. Validation environment and local checkout retained for reproducibility.
+
+## Original prompt
+
 # Local smoke env creation fails: smoke_install.sh flat pip chain vs the grouped layout
 
 Issued: 2026-10-16

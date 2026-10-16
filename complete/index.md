@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1897 records across 9 buckets.
+1899 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -192,6 +192,7 @@ markers; everything below GENERATED is rebuilt.
 - [eyes-focused-figure-browser](2026/10/eyes-focused-figure-browser.md)
 - [fit-util-masked-division](2026/10/fit-util-masked-division.md)
 - [fork-context-darwin-test](2026/10/fork-context-darwin-test.md)
+- [grouped-smoke-install](2026/10/grouped-smoke-install.md)
 - [heart-dashboard-collectors](2026/10/heart-dashboard-collectors.md)
 - [heart-dashboard-markdown-link-test](2026/10/heart-dashboard-markdown-link-test.md)
 - [heart-fitness-dispatch](2026/10/heart-fitness-dispatch.md)
@@ -353,6 +354,7 @@ markers; everything below GENERATED is rebuilt.
 - [setuptools-include-packages](2026/10/setuptools-include-packages.md)
 - [shapelets-smoke-slow-park](2026/10/shapelets-smoke-slow-park.md)
 - [sizing-none-triage-rules](2026/10/sizing-none-triage-rules.md)
+- [smoke-sampler-imports](2026/10/smoke-sampler-imports.md)
 - [sparse-noise-map-pooling](2026/10/sparse-noise-map-pooling.md)
 - [sparse-terms-oversampled-fine-grids](2026/10/sparse-terms-oversampled-fine-grids.md)
 - [standard-board-banner-and-navigation](2026/10/standard-board-banner-and-navigation.md)

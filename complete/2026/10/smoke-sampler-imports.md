@@ -1,3 +1,18 @@
+# Missing sampler dependency detection in smoke mode
+
+Completed: 2026-10-16
+Issue: https://github.com/PyAutoLabs/PyAutoHands/issues/313
+PR: https://github.com/PyAutoLabs/PyAutoHands/pull/316
+Merge: 7ac11d713391c32321cfb96644c4683ed836c62e
+
+Smoke-mode scripts check declared sampler backend imports in their own interpreter, environment and capped process group, using the public autofit search-manifest@1. Autofit import aliases and current/legacy corner plotting calls are recognized. Existing report machinery records failures; normal execution modes are unchanged. Static detection does not infer dynamic constructor selection or alias reassignment.
+
+Validation: targeted20 passed; independent review CLEAN after correcting corner_cornerpy detection. Actual HowToFit tutorial6 (e9acbbc1) failed0.3s with BlackJAXNUTS/blackjax named when blackjax was absent, then passed14.8s after installing blackjax1.7.1 in the same isolated environment. Local full suite had501passed9skipped1known baseline process-reaping failure; exact-head Hands CI38969557427 passed all3 Python versions before human /prm. Tenant firewall passed.
+
+Heart at development: STALE; no release performed. Validation environment and local checkout retained for reproducibility.
+
+## Original prompt
+
 # Smoke profile cannot see a missing sampler dependency — add an import check over the af.<Search> classes each script constructs
 
 Issued: 2026-10-16
