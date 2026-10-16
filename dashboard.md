@@ -10,15 +10,15 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 17 |
-| [In flight](#in-flight) | 3 |
+| [In flight](#in-flight) | 4 |
 | [Planned](#planned) | 8 |
-| [Backlog](#backlog) | 268 |
+| [Backlog](#backlog) | 267 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 20
+**Highest priority** (filed as `high`) — showing 12 of 19
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -84,14 +84,6 @@ Use the start-dev skill. draft/maintenance/organs/reduce_session_token_load.md
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/pyautohands/python_matrix_smoke_bypasses_harness.md">Python Version Matrix smoke legs bypass run_smoke.py — no ENV declarations, no…</a> — pyautohands · medium · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautohands/python_matrix_smoke_bypasses_harness.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md">Local smoke env creation fails: smoke_install.sh flat pip chain vs the grouped…</a> — pyautoheart · medium · supervised · high</summary>
 
 ```
@@ -112,6 +104,14 @@ Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speedin
 
 ```
 Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon</a> — autofit · large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md
 ```
 
 </details>
@@ -866,7 +866,15 @@ Use the start-dev skill. active/hst_mge_pilot_qualification.md
 
 </details>
 
-<details><summary>📋 <a href="active/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> / <code>slow</code> pytest…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/298">issue #298</a> — issued 2026-10-16 — workspace-dev</summary>
+<details><summary>📋 <a href="active/python_matrix_smoke_bypasses_harness.md">Python Version Matrix smoke legs bypass run_smoke.py — no ENV declarations, no…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/312">issue #312</a> — issued 2026-10-16 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/python_matrix_smoke_bypasses_harness.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> / <code>slow</code> pytest…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/298">issue #298</a> — issued 2026-10-16 — awaiting-input — draft PR #299; live pipeline witness missing — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/299">PyAutoHeart#299</a></summary>
 
 ```
 Use the start-dev skill. active/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md
@@ -998,7 +1006,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>bug</b> — 78</summary>
+<summary><b>bug</b> — 77</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -1044,14 +1052,6 @@ Use the start-dev skill. draft/bug/autoarray/rectangular_mapper_bilinear_row_wei
 
 ```
 Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautohands/python_matrix_smoke_bypasses_harness.md">Python Version Matrix smoke legs bypass run_smoke.py — no ENV declarations, no…</a> — pyautohands · medium · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautohands/python_matrix_smoke_bypasses_harness.md
 ```
 
 </details>
@@ -2723,7 +2723,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-16 | issued | <a href="active/direct_conv_symmetric_row_restriction.md">direct_conv curvature kernel: convolve only the rows later-ranked…</a> |
 | 2026-10-16 | issued | <a href="active/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> /…</a> |
 | 2026-10-16 | filed | <a href="draft/maintenance/autolens_workspace/remeasure_shapelets_slow_park.md">Re-measure the shapelets/modeling.py SLOW park (#586) under the…</a> |
-| 2026-10-16 | filed | <a href="draft/bug/pyautohands/python_matrix_smoke_bypasses_harness.md">Python Version Matrix smoke legs bypass run_smoke.py — no ENV…</a> |
+| 2026-10-16 | issued | <a href="active/python_matrix_smoke_bypasses_harness.md">Python Version Matrix smoke legs bypass run_smoke.py — no ENV…</a> |
 | 2026-10-16 | filed | <a href="draft/bug/pyautoheart/unit_timing_regression_median_baseline.md">Heart unit-timing regression detector: rolling-median baseline and…</a> |
 | 2026-10-16 | filed | <a href="draft/bug/pyautomind/glance_shadow_window_reached.md">Glance shadow window reached 20/20 clean — count line must say…</a> |
 | 2026-10-15 | planned | <a href="planned.md#delaunaynn-wide-row-overhead">delaunaynn-wide-row-overhead</a> |

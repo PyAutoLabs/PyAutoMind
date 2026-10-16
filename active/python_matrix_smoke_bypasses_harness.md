@@ -7,7 +7,8 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: formalised
+Status: issued
+Issued: 2026-10-16
 Consequence: glance
 Witness: A dispatched `Python Version Matrix` run on main completes all legs (3.12/3.13/3.14 × autofit/autogalaxy/autolens) in under 60 min with `guides/misc/witt_wynne.py` passing, and the smoke step invokes `<ws>/.github/scripts/run_smoke.py` (visible in the job log), not a bash `python scripts/$script` loop.
 Filed: 2026-10-16
