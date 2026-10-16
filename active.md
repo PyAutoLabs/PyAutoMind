@@ -41,7 +41,9 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1697
 - issued: 2026-10-16
 - prompt: active/nautilus_d100_live_point_guard_and_hdf5_checkpoint.md
-- status: library-dev
+- status: PR-open 2026-10-16 (PyAutoFit#1698, CI green on all 5 legs; awaiting human /prm)
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1698
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1698
 - session: Claude Code CLI (Fable 5.1); plan approved in-chat 2026-10-16 (present-and-wait); execution delegated to an Opus worker
 - worktree: ~/Code/PyAutoLabs-wt/nautilus-d100-checkpoint-guard
 - repos:
