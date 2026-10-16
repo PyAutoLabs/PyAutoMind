@@ -41,3 +41,14 @@
   - reasons: "PyAutoFit: 1 commit(s) behind origin"; "PyAutoGalaxy: 1 commit(s) behind origin"; "PyAutoLens: 1 commit(s) behind origin"; "release validation incomplete: no rehearsal for current source"
   - passed: check_wiki, build_readme, build_catalogue, build_dashboard, check_results_layout (exit 0); docs-only, no smoke scope
   - permitted: commit, push, PR-open; merge separate
+
+## profiling-lint-634-drift
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/423
+- issued: 2026-10-16
+- prompt: active/profiling_lint_pyautoarray_634_drift.md
+- status: workspace-dev
+- session: Claude Code CLI (Opus 5.5); session 13efb443
+- worktree: ~/Code/PyAutoLabs-wt/profiling-lint-634-drift
+- repos:
+  - autolens_profiling: feature/profiling-lint-634-drift
+- classification: bug (autolens_profiling), Consequence notify, Autonomy safe; blocks PR #422 (decision-matrix-gate-wording, same session; files disjoint); cause PyAutoArray#634
