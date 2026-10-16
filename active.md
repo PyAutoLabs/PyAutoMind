@@ -27,7 +27,7 @@
 - prompt: active/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md
 - status: awaiting-input — draft PR #299; live pipeline witness missing
 - workspace-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/299
-- validation: 1252 Heart tests passed; independent code review CLEAN; live witness unresolved
+- validation: 1252 Heart tests passed; independent code review CLEAN; exact-head Heart Tests run 38960631750 SUCCESS; live witness unresolved
 - next: review draft and obtain pipeline unit/slow witness; preserve Heart claim until lifecycle close-out
 - session: Codex Work; session ID unavailable
 - location: /workspace/scratch/fcfb1c6d3e0b/PyAutoHeart (clone)
@@ -39,10 +39,10 @@
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/312
 - issued: 2026-10-16
 - prompt: active/python_matrix_smoke_bypasses_harness.md
-- status: awaiting-input — draft PR #314; live matrix witness unresolved; updated policy check awaiting CI
+- status: awaiting-input — draft PR #314; live matrix witness unresolved; PR CI green
 - workspace-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/314
-- validation: targeted 10 passed; independent code review CLEAN; local full suite 490 passed / 9 skipped / 1 failed (same timeout failure on untouched main f27613f); remote CI test steps passed all three Python versions (3.12: 491 passed / 9 skipped); tenant firewall test-fixture fix verified locally and independently reviewed
-- next: verify updated CI including tenant firewall, then obtain dispatched matrix witness; preserve Hands claim until lifecycle close-out
+- validation: targeted 10 passed; independent code review CLEAN; local full suite 490 passed / 9 skipped / 1 failed (same timeout failure on untouched main f27613f); remote CI test steps passed all three Python versions (3.12: 491 passed / 9 skipped); tenant firewall test-fixture fix verified locally and independently reviewed; exact-head CI run 38961303466 SUCCESS at 148afbdc9df411b31631e9f82477569815b68f15
+- next: obtain dispatched matrix witness; preserve Hands claim until lifecycle close-out
 - session: Codex Work; session ID unavailable
 - location: /workspace/scratch/fcfb1c6d3e0b/PyAutoHands (clone)
 - authorization: approved four-task batch, “Go” on 2026-10-16; independent step while Heart #298 awaits its witness
