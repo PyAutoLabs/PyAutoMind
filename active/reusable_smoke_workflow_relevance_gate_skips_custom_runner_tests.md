@@ -10,7 +10,8 @@ Themes:
 Difficulty: small
 Autonomy: supervised
 Priority: high
-Status: formalised
+Status: issued
+Issued: 2026-10-16
 Consequence: glance
 Witness: A euclid_strong_lens_modeling_pipeline PR touching only `util.py` or `tests/` shows `unit / smoke` and `slow / smoke` run (not skipped) on both Python legs; every other caller passing `runner:` is audited and listed in the PR; the CI-map doc says a skipped required job on a PR is not green.
 Review-minutes: 3

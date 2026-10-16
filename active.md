@@ -20,3 +20,14 @@
 - next: Review and merge #418; independently validated witness implementation, coefficient tolerances and production collection remain separate pending work.
 - repos:
   - autolens_profiling: feature/hst-mge-pilot-qualification
+
+## custom-runner-relevance
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/298
+- issued: 2026-10-16
+- prompt: active/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md
+- status: workspace-dev
+- session: Codex Work; session ID unavailable
+- location: /workspace/scratch/fcfb1c6d3e0b/PyAutoHeart (clone)
+- authorization: human approved the four-task smoke-reliability batch with “Go” on 2026-10-16; sequential execution; no release authorization
+- repos:
+  - PyAutoHeart: feature/custom-runner-relevance
