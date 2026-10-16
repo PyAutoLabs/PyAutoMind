@@ -1,3 +1,18 @@
+# Python matrix workspace harness
+
+Completed: 2026-10-16
+Issue: https://github.com/PyAutoLabs/PyAutoHands/issues/312
+PR: https://github.com/PyAutoLabs/PyAutoHands/pull/314
+Merge: 0939b50163dc22e8a57a099de67e9b3d093734e7
+
+Smoke jobs now use each workspace installer and run_smoke.py with profile/ENV handling, per-script caps and uploaded reports. Unit installs gate broad optional extras to 3.12 and explicitly install numba and pinned Zeus on every supported version.
+
+Validation: targeted 10 tests passed; independent Sol reviews CLEAN. Local full-suite timeout failure reproduced on untouched main, retained as an environment limitation. Exact-head a016d495 Hands Tests 38964701537 passed all three Python legs. Python Version Matrix 38965105020 passed 15 unit jobs and 9 smoke jobs in under 60 minutes; all three AutoLens logs show run_smoke.py and witt_wynne.py PASS. The earlier four missing-dependency failures are resolved. This is pre-merge branch validation; a post-merge main dispatch was not run.
+
+Heart at ship: STALE; no release performed. Smoke sampler import feature remains a separate planned task, now free of the two implementation claims.
+
+## Original prompt
+
 # Python Version Matrix smoke legs bypass run_smoke.py — no ENV declarations, no profile env, no per-script cap (6h XLA vmap hangs + witt_wynne failure)
 
 Type: bug

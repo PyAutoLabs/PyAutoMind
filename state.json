@@ -2,17 +2,11 @@
   "schema_version": 1,
   "organ": "mind",
   "repo": "PyAutoMind",
-  "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-16T20:40:14Z",
+  "status": "yellow",
+  "headline": "YELLOW \u2014 24 picks \u00b7 2 in flight",
+  "updated": "2026-10-16T21:10:54Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "red",
-      "text": "Python Version Matrix smoke legs bypass run_smoke.py \u2014 no ENV declarations, no\u2026 \u2014 awaiting-input \u2014 draft PR #314; live matrix witness unresolved; PR CI green",
-      "url": "https://github.com/PyAutoLabs/PyAutoHands/pull/314",
-      "prompt": "Use the start-dev skill. active/python_matrix_smoke_bypasses_harness.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -126,6 +120,12 @@
       "text": "pick: Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md",
       "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: The latent smoke's empty-block assertion names one cause unconditionally \u2014 echo\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md",
+      "prompt": "Use the start-dev skill. draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md"
     }
   ]
 }
