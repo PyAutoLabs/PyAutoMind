@@ -23,3 +23,14 @@
   - authorized-by: live human in session 6ffb59e9, AskUserQuestion answer 'Both, override for development (Recommended)' (third grant, night launch)
   - reasons: "Heart: RED — Release RED; monitoring RED · 10/100 · 415 unresolved"; "[red] release validation FAILED (stage integrate)"; "[red] PyAutoHands/workflows/Python Version Matrix: failure"; "[red] PyAutoHeart/workflows/Release Integrate: failure"; "[red] PyAutoArray/Tests: red"; "[red] autofit_workspace_test/Smoke Tests: red"; "[red] autogalaxy_workspace_test/Smoke Tests: red"; "[red] autolens_workspace_test/Smoke Tests: red"; "[red] Release validation: NOT release_ready"; "[red] Worktree drift"; "[red] autolens_inference: red"; "[red] autolens_profiling: red"; "[red] euclid_strong_lens_modeling_pipeline: red"
   - permitted: commit, push, PR-open; merge separate
+
+## decision-matrix-gate-wording
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/421
+- issued: 2026-10-16
+- prompt: active/decision_matrix_note_gate_wording.md
+- status: workspace-dev
+- session: Claude Code CLI (Opus 5.5); session 13efb443
+- worktree: ~/Code/PyAutoLabs-wt/decision-matrix-gate-wording
+- repos:
+  - autolens_profiling: feature/decision-matrix-gate-wording
+- classification: docs (autolens_profiling), Consequence notify, Autonomy safe; follow-up F3 of autolens_profiling#419; campaign PyAutoPulse#62

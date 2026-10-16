@@ -9,6 +9,7 @@ Autonomy: safe
 Priority: normal
 Consequence: notify
 Status: formalised
+Issued: 2026-10-16
 
 Follow-up from `complete/2026/10/interferometer-route-gate-phase2.md` (autolens_profiling#419 /
 PR #420), review finding F3.
