@@ -12,13 +12,13 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 3 |
 | [Planned](#planned) | 8 |
-| [Backlog](#backlog) | 262 |
+| [Backlog](#backlog) | 264 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 19
+**Highest priority** (filed as `high`) — showing 12 of 20
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -76,6 +76,14 @@ Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_su
 
 </details>
 
+<details><summary>📋 <a href="draft/research/autofit_inference/search_ext_b5c2a_rerun.md"><code>@autofit_inference</code> B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug…</a> — autofit_inference · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> — organs · medium · supervised · high</summary>
 
 ```
@@ -108,15 +116,7 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 </details>
 
-<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon</a> — autofit · large · human-required · high</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md
-```
-
-</details>
-
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 109
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 110
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -998,7 +998,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>bug</b> — 74</summary>
+<summary><b>bug</b> — 75</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -1380,6 +1380,14 @@ Use the start-dev skill. draft/bug/workspaces/convolver_blurring_image_warning.m
 
 ```
 Use the start-dev skill. draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/nautilus_d100_live_point_guard_and_hdf5_checkpoint.md"><code>@PyAutoFit</code> Nautilus fails before sampling at D = 100: live-point guard…</a> — autofit · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/autofit/nautilus_d100_live_point_guard_and_hdf5_checkpoint.md
 ```
 
 </details>
@@ -1888,7 +1896,15 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>research</b> — 31</summary>
+<summary><b>research</b> — 32</summary>
+
+<details><summary>📋 <a href="draft/research/autofit_inference/search_ext_b5c2a_rerun.md"><code>@autofit_inference</code> B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug…</a> — autofit_inference · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon</a> — autofit · large · human-required · high</summary>
 
