@@ -866,7 +866,7 @@ Use the start-dev skill. active/hst_mge_pilot_qualification.md
 
 </details>
 
-<details><summary>📋 <a href="active/smoke_install_flat_pip_chain_breaks_local_env_creation.md">Local smoke env creation fails: smoke_install.sh flat pip chain vs the grouped…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/300">issue #300</a> — issued 2026-10-16 — workspace-dev</summary>
+<details><summary>📋 <a href="active/smoke_install_flat_pip_chain_breaks_local_env_creation.md">Local smoke env creation fails: smoke_install.sh flat pip chain vs the grouped…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/300">issue #300</a> — issued 2026-10-16 — workspace-shipped, awaiting-ci — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/301">PyAutoHeart#301</a></summary>
 
 ```
 Use the start-dev skill. active/smoke_install_flat_pip_chain_breaks_local_env_creation.md
@@ -874,7 +874,7 @@ Use the start-dev skill. active/smoke_install_flat_pip_chain_breaks_local_env_cr
 
 </details>
 
-<details><summary>📋 <a href="active/smoke_profile_cannot_see_a_missing_sampler.md">Smoke profile cannot see a missing sampler dependency — add an import…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/313">issue #313</a> — issued 2026-10-16 — workspace-dev</summary>
+<details><summary>📋 <a href="active/smoke_profile_cannot_see_a_missing_sampler.md">Smoke profile cannot see a missing sampler dependency — add an import…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/313">issue #313</a> — issued 2026-10-16 — workspace-shipped, awaiting-ci — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/316">PyAutoHands#316</a></summary>
 
 ```
 Use the start-dev skill. active/smoke_profile_cannot_see_a_missing_sampler.md
