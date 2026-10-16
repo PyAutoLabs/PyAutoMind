@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1893 records across 9 buckets.
+1895 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -236,6 +236,7 @@ markers; everything below GENERATED is rebuilt.
 - [mind-dashboard-simplify](2026/10/mind-dashboard-simplify.md)
 - [mind-dashboard-simplify-2](2026/10/mind-dashboard-simplify-2.md)
 - [minimal-seed-instructions](2026/10/minimal-seed-instructions.md)
+- [nautilus-d100-checkpoint-guard](2026/10/nautilus-d100-checkpoint-guard.md) — Nautilus at D ≥ 91 failed before sampling in the `correlated_nd` pilot (60 d100 rows). Two root causes verifie…
 - [nerves-markdown-link](2026/10/nerves-markdown-link.md)
 - [niek-euclid-style-review](2026/10/niek-euclid-style-review.md)
 - [nnls-memo-scattered-backoff](2026/10/nnls-memo-scattered-backoff.md)
@@ -345,6 +346,7 @@ markers; everything below GENERATED is rebuilt.
 - [search-ext-b5b-score](2026/10/search-ext-b5b-score.md) — B5b of search-extensibility. Pulled scored wave 2 from RAL (12-way parallel tar on the login node; 11,770 rows…
 - [search-ext-b5b2-remainder](2026/10/search-ext-b5b2-remainder.md) — B5b-2 of search-extensibility closes scored wave 2. All 20 tasks of RAL 409930 (980 probe-first remainder runs…
 - [search-ext-b5c-family](2026/10/search-ext-b5c-family.md) — B5c stage 1 of search-extensibility — a second toy-likelihood family, `correlated_nd` (correlated Gaussians at…
+- [search-ext-b5c2a-freeze](2026/10/search-ext-b5c2a-freeze.md) — B5c-2a of search-extensibility. Pulled the 930 `correlated_nd` pilot rows of RAL 410866 (`results/` only, per-…
 - [search-ext-kwarg-typos](2026/10/search-ext-kwarg-typos.md) — Search constructor kwargs that the A0b unknown-kwarg WARNING exposed as silently swallowed are fixed. PyAutoFi…
 - [setuptools-include-packages](2026/10/setuptools-include-packages.md)
 - [shapelets-smoke-slow-park](2026/10/shapelets-smoke-slow-park.md)

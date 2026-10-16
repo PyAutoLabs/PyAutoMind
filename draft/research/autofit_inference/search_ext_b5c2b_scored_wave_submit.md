@@ -11,7 +11,7 @@ Autonomy: supervised
 Priority: normal
 Status: formalised
 Filed: 2026-10-16
-Blocked-by: active/search_ext_b5c2a_pilot_judge_freeze.md, draft/research/autofit_inference/search_ext_b5c2a_rerun.md (clean re-pilot of the 8 Emcee/Zeus cells must land first)
+Blocked-by: draft/research/autofit_inference/search_ext_b5c2a_rerun.md (clean re-pilot of the 8 Emcee/Zeus cells must land first; 2a done — record complete/2026/10/search-ext-b5c2a-freeze.md)
 Consequence: judge
 Epic: search-extensibility
 Phase: B5c-2b
