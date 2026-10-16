@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-16T14:42:17Z",
+  "updated": "2026-10-16T15:38:34Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -41,6 +41,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#634 \u2014 reuse-cholesky-factor",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/634",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1698 \u2014 `@PyAutoFit` Nautilus fails before sampling at D = 100: live-point guard\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1698",
       "prompt": null
     },
     {
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1696 \u2014 search-ext-a5-capmatrix-cards",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1696",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1689 \u2014 search-ext-a5-library",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1689",
       "prompt": null
     }
   ]

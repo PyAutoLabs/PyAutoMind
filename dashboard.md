@@ -866,7 +866,7 @@ Use the start-dev skill. active/hst_mge_pilot_qualification.md
 
 </details>
 
-<details><summary>📋 <a href="active/nautilus_d100_live_point_guard_and_hdf5_checkpoint.md"><code>@PyAutoFit</code> Nautilus fails before sampling at D = 100: live-point guard…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1697">issue #1697</a> — issued 2026-10-16 — library-dev</summary>
+<details><summary>📋 <a href="active/nautilus_d100_live_point_guard_and_hdf5_checkpoint.md"><code>@PyAutoFit</code> Nautilus fails before sampling at D = 100: live-point guard…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1697">issue #1697</a> — issued 2026-10-16 — PR-open 2026-10-16 (PyAutoFit#1698, CI green on all 5 legs; awaiting human /prm) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1698">PyAutoFit#1698</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 Use the start-dev skill. active/nautilus_d100_live_point_guard_and_hdf5_checkpoint.md
@@ -2933,6 +2933,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoFit**
 
+- [PyAutoFit#1698](https://github.com/PyAutoLabs/PyAutoFit/pull/1698) — `active/nautilus_d100_live_point_guard_and_hdf5_checkpoint.md`
 - [PyAutoFit#1667](https://github.com/PyAutoLabs/PyAutoFit/pull/1667) — `complete/2026/10/search-conformance-metadata.md`
 - [PyAutoFit#1673](https://github.com/PyAutoLabs/PyAutoFit/pull/1673) — `complete/2026/10/search-ext-a0a2-backend-conformance.md`
 - [PyAutoFit#1672](https://github.com/PyAutoLabs/PyAutoFit/pull/1672) — `complete/2026/10/search-ext-a0b-hygiene.md`
