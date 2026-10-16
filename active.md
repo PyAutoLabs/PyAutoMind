@@ -25,15 +25,16 @@
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/298
 - issued: 2026-10-16
 - prompt: active/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md
-- status: awaiting-input — draft PR #299; live pipeline witness missing
+- status: workspace-dev — running isolated live pipeline witness for draft PR #299
 - workspace-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/299
 - validation: 1252 Heart tests passed; independent code review CLEAN; exact-head Heart Tests run 38960631750 SUCCESS; live witness unresolved
-- next: review draft and obtain pipeline unit/slow witness; preserve Heart claim until lifecycle close-out
+- next: run draft pipeline PR against a validation-only base pinned to Heart e2f7589c; inspect all four unit/slow Python legs; never merge validation branches into pipeline main
 - session: Codex Work; session ID unavailable
 - location: /workspace/scratch/fcfb1c6d3e0b/PyAutoHeart (clone)
 - authorization: human approved the four-task smoke-reliability batch with “Go” on 2026-10-16; sequential execution; no release authorization
 - repos:
   - PyAutoHeart: feature/custom-runner-relevance
+  - euclid_strong_lens_modeling_pipeline: codex/heart-298-witness (validation only)
 
 ## python-matrix-harness
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/312

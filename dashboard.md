@@ -874,7 +874,7 @@ Use the start-dev skill. active/python_matrix_smoke_bypasses_harness.md
 
 </details>
 
-<details><summary>📋 <a href="active/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> / <code>slow</code> pytest…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/298">issue #298</a> — issued 2026-10-16 — awaiting-input — draft PR #299; live pipeline witness missing — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/299">PyAutoHeart#299</a></summary>
+<details><summary>📋 <a href="active/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md">The reusable smoke workflow's relevance gate skips the <code>unit</code> / <code>slow</code> pytest…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/298">issue #298</a> — issued 2026-10-16 — workspace-dev — running isolated live pipeline witness for draft PR #299 — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/299">PyAutoHeart#299</a></summary>
 
 ```
 Use the start-dev skill. active/reusable_smoke_workflow_relevance_gate_skips_custom_runner_tests.md
