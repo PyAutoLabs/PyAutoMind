@@ -2935,6 +2935,10 @@ def shadow_count_line(rows: "list[list[str]]") -> str:
             f"; earlier rows not counted (the tier-`notify` window, "
             f"closed {SHADOW_REOPENED}, and legacy): {uncounted}"
         )
+    if len(graded) >= SHADOW_TARGET:
+        # Pre-registered size met: the line itself must say a human decision
+        # is due, so the full window cannot be read as quietly still open.
+        line += "; window reached — the pre-registered decision is due"
     return line
 
 

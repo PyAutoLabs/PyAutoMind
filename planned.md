@@ -10,6 +10,8 @@
 - [knn-partial-point-block](#knn-partial-point-block)
 - [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
 - [delaunaynn-wide-row-overhead](#delaunaynn-wide-row-overhead)
+- [grouped-smoke-install](#grouped-smoke-install)
+- [smoke-sampler-imports](#smoke-sampler-imports)
 
 <!-- toc:end -->
 
@@ -124,3 +126,32 @@
 - affected-repos:
   - PyAutoArray
   - PyAutoPulse
+
+## grouped-smoke-install
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/300
+- filed: 2026-10-16
+- prompt: draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md
+- status: planned — approved batch member, implementation NOT STARTED
+- dependency-resolved: complete/2026/10/custom-runner-relevance.md (Heart PR #299 merged)
+- classification: workspace / Heart local-environment infrastructure
+- suggested-branch: feature/grouped-smoke-install
+- authorization: human approved the four-task smoke-reliability batch with “Go” on 2026-10-16; sequential, preserve claims; no release authority
+- plan: two-level implementation scope on #300; resolve paths and use a temporary flat symlink directory for existing installers; validate grouped and flat routes
+- affected-repos:
+  - PyAutoHeart
+- next: resume start-dev; prior Heart claim cleared; no branch or worktree exists
+
+## smoke-sampler-imports
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/313
+- filed: 2026-10-16
+- prompt: draft/feature/pyautohands/smoke_profile_cannot_see_a_missing_sampler.md
+- status: planned — approved batch member, implementation NOT STARTED
+- dependency-resolved: complete/2026/10/python-matrix-harness.md and complete/2026/10/custom-runner-relevance.md (both PRs merged)
+- classification: workspace smoke-harness feature
+- suggested-branch: feature/smoke-sampler-imports
+- authorization: human approved the four-task smoke-reliability batch with “Go” on 2026-10-16; sequential, preserve claims; no release authority
+- plan: scope and acceptance on #313; inspect canonical search registry before choosing the import map, validate missing/present BlackJAX tutorial behavior
+- affected-repos:
+  - PyAutoHands
+  - PyAutoHeart
+- next: resume start-dev; prior claims cleared; no branch or worktree exists

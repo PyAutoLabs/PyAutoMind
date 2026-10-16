@@ -3,7 +3,6 @@
 - completed: 2026-10-14
 - epic: search-extensibility (phase 3c — post-merge fixes for A2/A3/A3b)
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1683
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1683
 
 **Shipped:** PyAutoFit#1683 (merged 2026-10-14 as 8437a3b76 via a human `/prm`; tier judge). Fixes all seven findings of the post-merge Codex gpt-6-astra review 05 (`draft/research/autofit/search_extensibility_epic_reviews/05_codex_astra_a2_a3_a3b_postmerge.md`). Every finding reproduced on main 911fe05e1 and each fix was test-first. The human ruled the 2026.10.11.1/2026.10.12.1 releases that carried the unfixed findings deliberate, so these ship as fixes in the next release.
 - F1: a pre-A2 `Fitness` pickle with `use_jax_jit=False` restores as an eager objective (legacy key maps onto `compile`); a pickle with neither flag restores eager.

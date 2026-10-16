@@ -1,3 +1,18 @@
+# Custom runner relevance gate
+
+Completed: 2026-10-16
+Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/298
+PR: https://github.com/PyAutoLabs/PyAutoHeart/pull/299
+Merge: a166454fe78250a5180df00f9a709807f5e990fd
+
+Custom runners bypass the default smoke scripts-only relevance filter; docs-only skipping and fail-closed diff handling remain intact.
+
+Validation: 1252 local tests; independent Sol review CLEAN; exact-head Heart Tests 38960631750 passed both Python legs. Pipeline PR #111, based on a candidate-pinned validation base, touched tests only: run 38962160696 passed all four unit/slow jobs on 3.12/3.13. The validation PR was closed without merge after evidence was collected; its branches are deliberately unmerged evidence, not implementation waves. Its temporary repository claim is released by this close-out.
+
+Heart at ship: STALE, not a release grant. No release performed. Grouped smoke install remains a separate planned task, now free of this repository claim.
+
+## Original prompt
+
 # The reusable smoke workflow's relevance gate skips the `unit` / `slow` pytest jobs on every pipeline PR that does not touch `scripts/` — three PRs merged with zero tests run
 
 Type: bug
@@ -10,7 +25,8 @@ Themes:
 Difficulty: small
 Autonomy: supervised
 Priority: high
-Status: formalised
+Status: issued
+Issued: 2026-10-16
 Consequence: glance
 Witness: A euclid_strong_lens_modeling_pipeline PR touching only `util.py` or `tests/` shows `unit / smoke` and `slow / smoke` run (not skipped) on both Python legs; every other caller passing `runner:` is audited and listed in the PR; the CI-map doc says a skipped required job on a PR is not green.
 Review-minutes: 3

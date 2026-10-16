@@ -3,7 +3,6 @@
 - completed: 2026-10-08
 - epic: search-extensibility (phase A2)
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1679
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1679
 
 **Shipped:** PyAutoFit#1679 (merged 2026-10-08T19:53:16Z, human `/prm`; launched `--auto`, effective safe, tier judge).
 - `Fitness.objective(kind)` is the one lazily-jitted objective factory (`scalar`, `batched`, `value_and_grad`, `batched_value_and_grad`; per-kind cache; `compile=False` escape hatch). It is ported to every call site except NSS, which A3b takes. Emcee, Zeus, Drawer and the initializer now run jitted under JAX. BFGS/LBFGS on JAX pass `jac=` and stop finite-differencing. Nautilus and SMC take the batched objective, NUTS the scalar log-density.
