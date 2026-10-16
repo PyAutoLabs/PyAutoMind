@@ -850,7 +850,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/direct_conv_symmetric_row_restriction.md">direct_conv curvature kernel: convolve only the rows later-ranked columns need, then mirror</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/635">issue #635</a> — issued 2026-10-16 — library-dev</summary>
+<details><summary>📋 <a href="active/direct_conv_symmetric_row_restriction.md">direct_conv curvature kernel: convolve only the rows later-ranked columns need, then mirror</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/635">issue #635</a> — issued 2026-10-16 — library-dev — PAUSED 2026-10-16 by the human; uncommitted v2 (+v3 in flight: ymin ordering, gate 0.7, human-approved). Resume…</summary>
 
 ```
 Use the start-dev skill. active/direct_conv_symmetric_row_restriction.md
