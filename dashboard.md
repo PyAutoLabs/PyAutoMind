@@ -866,7 +866,7 @@ Use the start-dev skill. active/hst_mge_pilot_qualification.md
 
 </details>
 
-<details><summary>📋 <a href="active/python_matrix_smoke_bypasses_harness.md">Python Version Matrix smoke legs bypass run_smoke.py — no ENV declarations, no…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/312">issue #312</a> — issued 2026-10-16 — awaiting-input — draft PR #314; live matrix witness unresolved; updated policy check awaiting CI — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/314">PyAutoHands#314</a></summary>
+<details><summary>📋 <a href="active/python_matrix_smoke_bypasses_harness.md">Python Version Matrix smoke legs bypass run_smoke.py — no ENV declarations, no…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/312">issue #312</a> — issued 2026-10-16 — awaiting-input — draft PR #314; live matrix witness unresolved; PR CI green — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/314">PyAutoHands#314</a></summary>
 
 ```
 Use the start-dev skill. active/python_matrix_smoke_bypasses_harness.md

@@ -4,12 +4,12 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-16T20:19:50Z",
+  "updated": "2026-10-16T20:20:41Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
       "severity": "red",
-      "text": "Python Version Matrix smoke legs bypass run_smoke.py \u2014 no ENV declarations, no\u2026 \u2014 awaiting-input \u2014 draft PR #314; live matrix witness unresolved; updated policy check awaiting CI",
+      "text": "Python Version Matrix smoke legs bypass run_smoke.py \u2014 no ENV declarations, no\u2026 \u2014 awaiting-input \u2014 draft PR #314; live matrix witness unresolved; PR CI green",
       "url": "https://github.com/PyAutoLabs/PyAutoHands/pull/314",
       "prompt": "Use the start-dev skill. active/python_matrix_smoke_bypasses_harness.md"
     },
