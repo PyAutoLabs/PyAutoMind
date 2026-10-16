@@ -36,3 +36,17 @@
 - repos:
   - PyAutoArray: feature/direct-conv-symmetric
 - classification: feature (PyAutoArray primary; write-up phase autolens_profiling + PyAutoPulse after library), Consequence glance, Autonomy supervised; serial numba only (human: Nautilus-level parallelism); campaign PyAutoPulse#62
+
+## nautilus-d100-checkpoint-guard
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1697
+- issued: 2026-10-16
+- prompt: active/nautilus_d100_live_point_guard_and_hdf5_checkpoint.md
+- status: library-dev
+- session: Claude Code CLI (Fable 5.1); plan approved in-chat 2026-10-16 (present-and-wait); execution delegated to an Opus worker
+- worktree: ~/Code/PyAutoLabs-wt/nautilus-d100-checkpoint-guard
+- repos:
+  - PyAutoFit: fix/nautilus-d100-checkpoint-guard
+- classification: bug (PyAutoFit library; autofit_inference read-only for the witness), Consequence judge, Autonomy supervised; Feature Agent: direct, medium
+- suggested-branch: fix/nautilus-d100-checkpoint-guard
+- epic: search-extensibility
+- heart-at-door: STALE 2026-10-16 (Release STALE; monitoring RED 28/100) — continue per start_dev 0a

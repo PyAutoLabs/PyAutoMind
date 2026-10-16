@@ -4,7 +4,6 @@ Type: bug
 Target: PyAutoFit
 Repos:
 - PyAutoFit
-- autofit_inference
 Difficulty: medium
 Autonomy: supervised
 Priority: normal
