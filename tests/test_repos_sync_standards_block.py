@@ -69,7 +69,7 @@ def test_manifest_ownership_is_boolean_and_includes_dna_and_broca():
 def test_mind_owns_an_exact_generated_block():
     text = (MIND / "AGENTS.md").read_text()
     _, specs = sync.load_manifest(MIND)
-    assert sync.extract_block(text, sync.STANDARDS_BEGIN, sync.STANDARDS_END) == sync.render_standards_policy(POLICY, specs[MIND.name])
+    assert sync.extract_block(text, sync.STANDARDS_BEGIN, sync.STANDARDS_END) == sync.render_standards_policy(POLICY, specs["PyAutoMind"])
 
 
 def test_writer_appends_preserving_original_bytes_and_is_idempotent(tmp_path):
