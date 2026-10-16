@@ -1,3 +1,13 @@
+## Outcome
+Docs follow-up F3 of autolens_profiling#419 / PR #420 (Aris campaign PyAutoPulse#62), shipped in autolens_profiling PR #422 (merge `fd29902b`, 2026-10-16), issue #421.
+
+- `results/notes/interferometer_likelihood_decision_matrix_2026_09.md`: rule 3 and the matrix caption describe the fixed `interferometer_numba_nnz_per_source_max = 60` gate as the then-packaged / 2026-09 gate, superseded by PyAutoArray#632's `null` cost model, and link `interferometer_route_gate_aris_2026_10.md`. The measurements and the "gate-60 route" column are unchanged.
+- `results/notes/interferometer_mesh_cpu_breakdown_2026_09.md`: the same historical marker. This file was not named in the prompt but falls under its done-criterion.
+- `wiki/campaigns/interferometer_likelihood.md`: a link-only `**Pulse knowledge:**` line to the PyAutoPulse task's Knowledge section and its two decision records.
+- First CI run red: library drift from PyAutoArray#634, fixed separately in #423 / PR #424, then the branch was updated from main. Shipped under a Heart RED development override with a separate explicit human merge command.
+
+## Original prompt
+
 # Decision-matrix note: stop describing gate 60 as current; link the Pulse knowledge
 
 Type: docs
