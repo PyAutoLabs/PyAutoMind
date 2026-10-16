@@ -14,7 +14,7 @@
 | [Planned](#planned) | 10 |
 | [Backlog](#backlog) | 267 |
 | [Recent](#recent) | 50 |
-| [Pending release](#pending-release) | 1 |
+| [Pending release](#pending-release) | 0 |
 
 ## Start here
 
@@ -2971,9 +2971,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 ## Pending release
 
-**PyAutoFit**
-
-- [PyAutoFit#1698](https://github.com/PyAutoLabs/PyAutoFit/pull/1698) — `complete/2026/10/nautilus-d100-checkpoint-guard.md`
+_(nothing pending release)_
 
 
 Boards: [organism](https://pyautolabs.github.io/PyAutoScientist/) · [brain](https://pyautolabs.github.io/PyAutoBrain/) · [cortex](https://pyautolabs.github.io/PyAutoCortex/) · [memory](https://pyautolabs.github.io/PyAutoMemory/) · [eyes](https://pyautolabs.github.io/PyAutoEyes/) · [ears](https://pyautolabs.github.io/PyAutoEars/) · [heart](https://pyautolabs.github.io/PyAutoHeart/) · [hands](https://pyautolabs.github.io/PyAutoHands/) · [pulse](https://pyautolabs.github.io/PyAutoPulse/) · [insight](https://pyautolabs.github.io/PyAutoInsight/) · [dna](https://pyautolabs.github.io/PyAutoDNA/) · [nerves](https://pyautolabs.github.io/PyAutoNerves/) · [broca](https://pyautolabs.github.io/PyAutoBroca/) · [gut](https://pyautolabs.github.io/PyAutoGut/)
