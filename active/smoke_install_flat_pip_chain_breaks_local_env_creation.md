@@ -21,7 +21,7 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: planned — prior repository claims cleared; implementation not started
+Status: active
 Consequence: judge
 Witness: on the grouped layout, `pyauto-heart smoke --prepare-only autolens` with the cached env moved aside creates a fresh env and exits 0 (today it fails at `pip install ./PyAutoNerves`); and the reusable Smoke Tests workflow on a flat CI checkout stays green for one workspace per family.
 Review-minutes: 10

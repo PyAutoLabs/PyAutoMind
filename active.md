@@ -20,3 +20,27 @@
 - next: Review and merge #418; independently validated witness implementation, coefficient tolerances and production collection remain separate pending work.
 - repos:
   - autolens_profiling: feature/hst-mge-pilot-qualification
+
+## grouped-smoke-install
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/300
+- issued: 2026-10-16
+- prompt: active/smoke_install_flat_pip_chain_breaks_local_env_creation.md
+- status: workspace-dev
+- session: Codex Work
+- location: /workspace/scratch/fcfb1c6d3e0b/heart-grouped
+- authorization: approved four-task batch; human resumed remaining tasks 2026-10-16
+- heart: STALE — Release STALE; monitoring RED; snapshot 11h old
+- repos:
+  - PyAutoHeart: feature/grouped-smoke-install
+
+## smoke-sampler-imports
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/313
+- issued: 2026-10-16
+- prompt: active/smoke_profile_cannot_see_a_missing_sampler.md
+- status: workspace-dev
+- session: Codex Work
+- location: /workspace/scratch/fcfb1c6d3e0b/hands-sampler
+- authorization: approved four-task batch; human resumed remaining tasks 2026-10-16
+- heart: STALE — Release STALE; monitoring RED; snapshot 11h old
+- repos:
+  - PyAutoHands: feature/smoke-sampler-imports

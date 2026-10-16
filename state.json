@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 2 in flight",
-  "updated": "2026-10-16T21:11:40Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
+  "updated": "2026-10-16T21:21:39Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -69,12 +69,6 @@
     },
     {
       "severity": "info",
-      "text": "pick: Local smoke env creation fails: smoke_install.sh flat pip chain vs the grouped\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md",
-      "prompt": "Use the start-dev skill. draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md"
-    },
-    {
-      "severity": "info",
       "text": "pick: Physical model check when speeding up smoke tests",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md",
       "prompt": "Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md"
@@ -93,15 +87,15 @@
     },
     {
       "severity": "info",
-      "text": "pick: Guard every workspace script against untimed network downloads",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace/no_untimed_network_downloads_check.md",
-      "prompt": "Use the start-dev skill. draft/test/autolens_workspace/no_untimed_network_downloads_check.md"
+      "text": "pick: euclid_dr1: run the positions gate over DR1 and submit the remodel set",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md",
+      "prompt": "Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md"
     },
     {
       "severity": "info",
-      "text": "pick: Smoke profile cannot see a missing sampler dependency \u2014 add an import\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautohands/smoke_profile_cannot_see_a_missing_sampler.md",
-      "prompt": "Use the start-dev skill. draft/feature/pyautohands/smoke_profile_cannot_see_a_missing_sampler.md"
+      "text": "pick: Guard every workspace script against untimed network downloads",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace/no_untimed_network_downloads_check.md",
+      "prompt": "Use the start-dev skill. draft/test/autolens_workspace/no_untimed_network_downloads_check.md"
     },
     {
       "severity": "info",
@@ -126,6 +120,12 @@
       "text": "pick: The latent smoke's empty-block assertion names one cause unconditionally \u2014 echo\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md",
       "prompt": "Use the start-dev skill. draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: RTD organism docs currency: Nerves page, organ-count drift, hands.md rename",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/pyautobrain/rtd_organism_currency.md",
+      "prompt": "Use the start-dev skill. draft/docs/pyautobrain/rtd_organism_currency.md"
     }
   ]
 }

@@ -10,15 +10,15 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 17 |
-| [In flight](#in-flight) | 2 |
-| [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 267 |
+| [In flight](#in-flight) | 4 |
+| [Planned](#planned) | 8 |
+| [Backlog](#backlog) | 265 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 19
+**Highest priority** (filed as `high`) — showing 12 of 18
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -84,14 +84,6 @@ Use the start-dev skill. draft/maintenance/organs/reduce_session_token_load.md
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md">Local smoke env creation fails: smoke_install.sh flat pip chain vs the grouped…</a> — pyautoheart · medium · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md">Physical model check when speeding up smoke tests</a> — workspaces · medium · supervised · high</summary>
 
 ```
@@ -116,20 +108,20 @@ Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 108
+<details><summary>📋 <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> — euclid · large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md
+```
+
+</details>
+
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 106
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
 ```
 Use the start-dev skill. draft/test/autolens_workspace/no_untimed_network_downloads_check.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautohands/smoke_profile_cannot_see_a_missing_sampler.md">Smoke profile cannot see a missing sampler dependency — add an import…</a> — pyautohands · small · safe · medium</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautohands/smoke_profile_cannot_see_a_missing_sampler.md
 ```
 
 </details>
@@ -210,6 +202,14 @@ Use the start-dev skill. draft/feature/pyautobrain/batch_slice.md
 
 ```
 Use the start-dev skill. draft/refactor/pyautofit/remove_eden_packaging_tooling.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/pyautomemory/canonical_key_todo_sweep.md">PyAutoMemory canonical-key TODO sweep</a> — pyautomemory · medium · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/maintenance/pyautomemory/canonical_key_todo_sweep.md
 ```
 
 </details>
@@ -866,12 +866,28 @@ Use the start-dev skill. active/hst_mge_pilot_qualification.md
 
 </details>
 
+<details><summary>📋 <a href="active/smoke_install_flat_pip_chain_breaks_local_env_creation.md">Local smoke env creation fails: smoke_install.sh flat pip chain vs the grouped…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/300">issue #300</a> — issued 2026-10-16 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/smoke_install_flat_pip_chain_breaks_local_env_creation.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/smoke_profile_cannot_see_a_missing_sampler.md">Smoke profile cannot see a missing sampler dependency — add an import…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/313">issue #313</a> — issued 2026-10-16 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/smoke_profile_cannot_see_a_missing_sampler.md
+```
+
+</details>
+
 ## Planned
 
 Scoped but not started; some are not yet prompt files. Full detail in [`planned.md`](planned.md).
 
 <details>
-<summary><b>10</b> task(s)</summary>
+<summary><b>8</b> task(s)</summary>
 
 <details><summary>📋 <b>isothermal-ell-sph-oversampling-at-the-cusp</b> — found 2026-08-09 — planned — NOT yet a prompt file; file one via <code>/intake</code> before starting</summary>
 
@@ -937,22 +953,6 @@ Use the start-dev skill. draft/feature/autoarray/delaunaynn_wide_row_imaging_ove
 
 </details>
 
-<details><summary>📋 <b>grouped-smoke-install</b> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/300">issue #300</a> — filed 2026-10-16 — planned — approved batch member, implementation NOT STARTED</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md
-```
-
-</details>
-
-<details><summary>📋 <b>smoke-sampler-imports</b> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/313">issue #313</a> — filed 2026-10-16 — planned — approved batch member, implementation NOT STARTED</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautohands/smoke_profile_cannot_see_a_missing_sampler.md
-```
-
-</details>
-
 </details>
 
 ## Backlog
@@ -1006,7 +1006,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>bug</b> — 77</summary>
+<summary><b>bug</b> — 76</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -1052,14 +1052,6 @@ Use the start-dev skill. draft/bug/autoarray/rectangular_mapper_bilinear_row_wei
 
 ```
 Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md">Local smoke env creation fails: smoke_install.sh flat pip chain vs the grouped…</a> — pyautoheart · medium · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md
 ```
 
 </details>
@@ -1627,7 +1619,7 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>feature</b> — 36</summary>
+<summary><b>feature</b> — 35</summary>
 
 <details><summary>📋 <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding against the raw maximum finds…</a> — autoarray · small · supervised · medium</summary>
 
@@ -1641,14 +1633,6 @@ Use the start-dev skill. draft/feature/autoarray/source_clumps_robust_scale.md
 
 ```
 Use the start-dev skill. draft/feature/autofit_assistant/data_loading_and_selection_cuts_skill.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautohands/smoke_profile_cannot_see_a_missing_sampler.md">Smoke profile cannot see a missing sampler dependency — add an import…</a> — pyautohands · small · safe · medium</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautohands/smoke_profile_cannot_see_a_missing_sampler.md
 ```
 
 </details>
@@ -2718,23 +2702,21 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-16 | filed | <a href="planned.md#smoke-sampler-imports">smoke-sampler-imports</a> |
 | 2026-10-16 | filed | <a href="draft/bug/pyautomind/repos_sync_test_keys_on_dir_name.md">repos_sync standards-block test keys on the checkout dir name…</a> |
 | 2026-10-16 | filed | <a href="draft/bug/pyautohands/pre_build_blacks_unstaged_slam_pipeline.md">pre_build runs black on slam_pipeline/ for every workspace but stages…</a> |
-| 2026-10-16 | filed | <a href="planned.md#grouped-smoke-install">grouped-smoke-install</a> |
 | 2026-10-16 | issued | <a href="active/direct_conv_symmetric_row_restriction.md">direct_conv curvature kernel: convolve only the rows later-ranked…</a> |
-| 2026-10-16 | filed | <a href="draft/feature/pyautohands/smoke_profile_cannot_see_a_missing_sampler.md">Smoke profile cannot see a missing sampler dependency — add an import…</a> |
+| 2026-10-16 | issued | <a href="active/smoke_profile_cannot_see_a_missing_sampler.md">Smoke profile cannot see a missing sampler dependency — add an import…</a> |
 | 2026-10-16 | filed | <a href="draft/maintenance/autolens_workspace/remeasure_shapelets_slow_park.md">Re-measure the shapelets/modeling.py SLOW park (#586) under the…</a> |
-| 2026-10-16 | filed | <a href="draft/bug/pyautoheart/smoke_install_flat_pip_chain_breaks_local_env_creation.md">Local smoke env creation fails: smoke_install.sh flat pip chain vs…</a> |
+| 2026-10-16 | issued | <a href="active/smoke_install_flat_pip_chain_breaks_local_env_creation.md">Local smoke env creation fails: smoke_install.sh flat pip chain vs…</a> |
 | 2026-10-16 | filed | <a href="draft/bug/pyautoheart/unit_timing_regression_median_baseline.md">Heart unit-timing regression detector: rolling-median baseline and…</a> |
 | 2026-10-16 | filed | <a href="draft/bug/pyautomind/glance_shadow_window_reached.md">Glance shadow window reached 20/20 clean — count line must say…</a> |
+| 2026-10-15 | planned | <a href="planned.md#delaunaynn-wide-row-overhead">delaunaynn-wide-row-overhead</a> |
+| 2026-10-15 | filed | <a href="draft/refactor/cortex/ral_category_paths_autolens_profiling.md">RAL category paths — last repo: autolens_profiling, then drop the…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-15 | planned | <a href="planned.md#delaunaynn-wide-row-overhead">delaunaynn-wide-row-overhead</a> |
-| 2026-10-15 | filed | <a href="draft/refactor/cortex/ral_category_paths_autolens_profiling.md">RAL category paths — last repo: autolens_profiling, then drop the…</a> |
 | 2026-10-14 | filed | <a href="draft/test/autofit/workspace_searches_scripts_preexisting_failures.md"><code>@autofit_workspace</code> six <code>searches/</code> scripts fail on main at…</a> |
 | 2026-10-14 | filed | <a href="draft/test/autofit/emcee_jax_timing_test_flaky_on_ci.md"><code>@PyAutoFit</code> <code>test_emcee_call_path_runs_at_jitted_speed</code> is a…</a> |
 | 2026-10-14 | filed | <a href="draft/bug/autofit/bfgs_resume_reads_x0_from_scipy_result.md"><code>@PyAutoFit</code> BFGS/LBFGS resume reads <code>["x0"]</code> from the saved scipy…</a> |
@@ -2743,13 +2725,13 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-13 | issued | <a href="active/hst_mge_pilot_qualification.md">HST/MGE pilot: independent correctness qualification design</a> |
 | 2026-10-09 | filed | <a href="draft/bug/pyautobrain/profiling_compile_drift_point_vs_point.md">Profiling conductor compile drift compares one point against one point</a> |
 | 2026-10-08 | filed | <a href="draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md"><code>JAX_ENABLE_X64=False</code> is overridden to True, so the fp32 inference…</a> |
+| 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
+| 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
-| 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
 | 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
@@ -2758,13 +2740,13 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
 | 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
 | 2026-09-29 | filed | <a href="draft/maintenance/pyautomind/session_start_hook_copies_regen.md">Regenerate the 28 drifted <code>.claude/hooks/session-start.sh</code> copies…</a> |
+| 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
+| 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
-| 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/power_law_multipole_m1_singular_at_isothermal_slope.md">PowerLawMultipole with m=1 returns -inf / NaN deflections at slope…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
@@ -2773,13 +2755,13 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
 | 2026-09-25 | filed | <a href="draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md">Keep caches off <code>$HOME</code> on HPC — phase 2 remainder: euclid pipeline…</a> |
 | 2026-09-24 | filed | <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> |
+| 2026-09-23 | filed | <a href="draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
+| 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-23 | filed | <a href="draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
-| 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> |
 | 2026-09-18 | filed | <a href="draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md">The latent smoke's empty-block assertion names one cause…</a> |
@@ -2788,6 +2770,8 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> |
 | 2026-09-17 | filed | <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> |
+| 2026-09-17 | filed | <a href="draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads…</a> |
+| 2026-09-17 | filed | <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> |
 
 </details>
 
