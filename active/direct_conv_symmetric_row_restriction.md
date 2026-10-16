@@ -8,6 +8,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: normal
 Status: formalised
+Issued: 2026-10-16
 Consequence: glance
 Witness: on the Aris 512x512 geometry (extent 341², ~91k masked pixels, 1,428–5,712 vertices) the numba direct_conv curvature matrix reproduces the library's upper triangle exactly (full-matrix difference = the library's own F asymmetry, ~1e-15 relative) and is >=1.6x faster at 2,540 and 5,712 vertices on a quiet core (RAL, ABBA spread <=1.01); the #632 route model is recalibrated on the new timings. Revised 2026-10-16 by the human after RAL 411833 measured 1.76x / 1.74x / 1.66x (PyAutoPulse#62 comment 6213885428); original witness asked >=1.8x at 2,577 and <=1e-15.
 Review-minutes: 3
