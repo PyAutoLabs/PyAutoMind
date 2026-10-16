@@ -842,7 +842,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/decision_matrix_note_gate_wording.md">Decision-matrix note: stop describing gate 60 as current; link the Pulse knowledge</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/421">issue #421</a> — issued 2026-10-16 — workspace-dev</summary>
+<details><summary>📋 <a href="active/decision_matrix_note_gate_wording.md">Decision-matrix note: stop describing gate 60 as current; link the Pulse knowledge</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/421">issue #421</a> — issued 2026-10-16 — PR-open 2026-10-16 (Heart RED override → merge via human /prm) — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/422">autolens_profiling#422</a></summary>
 
 ```
 Use the start-dev skill. active/decision_matrix_note_gate_wording.md
