@@ -1,3 +1,15 @@
+## Outcome
+autolens_profiling lint (`pytest scripts/misc/test/`) was red against PyAutoArray main after PyAutoArray#634 (`02aa2e48`, shared Cholesky factor for the positive-negative solve and log det). Fixed in autolens_profiling PR #424 (merge `02705788`, 2026-10-16), issue #423.
+
+- `scripts/misc/likelihood_breakdown/xla_attribution.py`: every abstract.py anchor re-pinned to `02aa2e48` (difflib + AST between `02aa2e48^` and `02aa2e48`, anchored text identical); `LIBRARY_ANCHOR_REVISION` = "PyAutoArray main 02aa2e48 (2026-10-15)". Two whole-function spans (`reconstruction_scatter`, curvature caller) now enclose the NumPy-only #634 branch (never in an XLA trace).
+- `library_solver_injection.positive_negative_probe` counts both route-(c) paths: `lu_solve` (`reconstruction_positive_negative_from`: JAX, and NumPy fallback when the factor is None) and `shared_cholesky` (`scipy.linalg.cho_solve` called directly from `AbstractInversion.reconstruction`); `calls` = sum. `fixed_light_library.py` records which path ran.
+- Validation: 1457 passed / 6 skipped / 0 failed; ruff clean; CI lint green on `2432bdc2`.
+- Shipped under a Heart RED development override (reasons: PyAutoFit/PyAutoGalaxy/PyAutoLens 1 commit behind origin; no rehearsal for current source); the human gave the explicit merge command in the same answer.
+
+Lesson: anchors and probes that pin PyAutoArray internals break on any library PR that edits `abstract.py`; a library PR touching it should run autolens_profiling's `scripts/misc/test/` before merge.
+
+## Original prompt
+
 # autolens_profiling lint red after PyAutoArray#634: re-pin abstract.py anchors, probe the shared-Cholesky route
 
 Type: bug
