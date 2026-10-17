@@ -1,3 +1,11 @@
+## wave1-row-writer-oom-reslice
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/33
+- completed: 2026-10-17
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/34
+- summary: Wave 1 attempt 1 (RAL 412543) lost every Nautilus/Emcee row because run.py keyed max_likelihood_parameters by `dict(zip(result.samples.names, ...))` and PyAutoFit's samples.names is model.all_names (tuples of dotted aliases); keys now go through slam._runner.posterior_path and post-fit diagnostics/serialisation failures are recorded in the row, never lose it. wave.py gained --attempt (_a<N>), --sampler-filter and multi-attempt accounting; NUTS (385 GiB) and SMC (48 GiB) A100 OOM -> deferred in wave 1. GPU submit runs attempt 2 over the 12 Nautilus+Emcee arms (brief said 16; table has 12). Witnessed on the euclid test-mode problem (repro + fixed rows). Follow-ups: memory-feasible NUTS/SMC formulation; prepared.complete_baseline str(tuple) keys.
+
+## Original prompt
+
 # `@autolens_inference` wave 1: experiment row writer crashes on tuple keys after a completed fit; re-slice NUTS/SMC after A100 OOM
 
 Type: bug
