@@ -1,3 +1,14 @@
+## wave1-row-writer-oom-reslice
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/33
+- issued: 2026-10-17
+- prompt: active/wave1_row_writer_tuple_keys_and_gpu_oom_reslice.md
+- session: Claude Code (Opus 5.5 worker for Fable 5.1); https://claude.ai/code/session_015KxQzEhy93XdCA9cRZ8Ry6
+- status: workspace-dev
+- classification: bug (workspace-only, PyAutoInsight hst-imaging-mass-samplers wave 1 attempt 2), Consequence judge, Autonomy supervised; human-authorised 2026-10-17 ("do whatever is needed to sort 3 and get some runs going") incl. merge + attempt-2 GPU submit
+- worktree: ~/Code/PyAutoLabs-wt/wave1-row-writer-oom-reslice
+- repos:
+  - autolens_inference: feature/wave1-row-writer-oom-reslice
+
 
 ## howtofit-runtime-guidance
 - issue: https://github.com/PyAutoLabs/HowToFit/issues/72
