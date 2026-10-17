@@ -80,7 +80,11 @@
 - issued: 2026-10-17
 - prompt: active/point_source_gradient_admission.md
 - session: Claude Code (Opus 5.5 worker under Fable); https://claude.ai/code/session_01QBeyBLN7ntDChx9v1fmt6M
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
+- workspace-prs:
+  - https://github.com/PyAutoLabs/autolens_inference/pull/29
+  - https://github.com/PyAutoLabs/autolens_profiling/pull/432
+- next: human /prm #29 and #432 (judge); human admission decision on the gradient evidence; Pulse next/Knowledge draft handed to the parent session
 - worktree: ~/Code/PyAutoLabs-wt/ps-source-gradient-admission
 - repos:
   - autolens_inference: feature/ps-source-gradient-admission
