@@ -14,6 +14,7 @@ Consequence: notify
 Review-minutes: 5
 Unattended: ready
 Witness: tutorial 4's prose states a runtime that matches a measured run of its 15-parameter DynestyStatic fit.
+Issued: 2026-10-17
 Filed: 2026-09-15
 
 `scripts/chapter_1_introduction/tutorial_4_why_modeling_is_hard.py` says of its

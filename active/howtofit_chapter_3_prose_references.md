@@ -15,6 +15,7 @@ Consequence: notify
 Witness: `grep -rn "HowToFit chapter 3" PyAutoFit/` returns nothing; the two sites now read "the HowToFit advanced chapter" with "tutorial 4" kept.
 Review-minutes: 0
 Unattended: ready
+Issued: 2026-10-17
 Filed: 2026-09-14
 
 Split out of `active/colab_visibility_and_chapter_advanced_rename.md`
