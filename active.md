@@ -1,3 +1,15 @@
+## ral-route-constants-fft-levers
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/429
+- issued: 2026-10-17
+- prompt: active/ral_route_constants_fft_levers.md
+- session: Claude Code (Opus 5.5 worker under Fable, Aris arm phase 2); https://claude.ai/code/session_01QBeyBLN7ntDChx9v1fmt6M
+- status: workspace-dev
+- classification: research (measurement; library change only if part A supports one), Consequence judge, Autonomy supervised; human-authorized RAL A100 + CPU compute 2026-10-17; campaign PyAutoPulse#62
+- worktree: /home/jammy/Code/PyAutoLabs-wt/ral-route-constants-fft-levers
+- claim-note: co-claims autolens_profiling with hst-mge-pilot-qualification (#418, scripts/misc/jax_compile/* only), direct-conv-symmetric (#425 note), interferometer-streaming-memo-after and ps-source-gradient-admission; new files only, disjoint paths
+- repos:
+  - autolens_profiling: feature/ral-route-constants-fft-levers
+
 
 ## interferometer-streaming-memo-after
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/368 (reopened, phase 2 RAL CPU 1e8 + A100 rows); https://github.com/PyAutoLabs/autolens_profiling/issues/426 (fnnls memo after-measurement)
