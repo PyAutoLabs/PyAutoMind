@@ -3,10 +3,11 @@
 - issued: 2026-10-17
 - prompt: active/imaging_production_over_sampling_phase1.md
 - session: Claude Code (Opus 5.5 worker under Fable, imaging over-sampling arm); https://claude.ai/code/session_01QBeyBLN7ntDChx9v1fmt6M
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge (2026-10-17: phase 1 PR open; CPU smoke 8/8 production runs OK; Heart readiness stale, not RED, no override; human /prm)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/431
 - classification: feature (workspace-only, phase 1 of PyAutoPulse task imaging_production_over_sampling), Consequence judge, Autonomy supervised; human-authorised 2026-10-17; CPU smoke only, no compute
 - worktree: /home/jammy/Code/PyAutoLabs-wt/imaging-production-over-sampling
-- claim-note: co-claims autolens_profiling with ral-route-constants-fft-levers, interferometer-streaming-memo-after, direct-conv-symmetric, hst-mge-pilot-qualification and ps-source-gradient-admission; this branch touches _profile_cli.py, _production_config.py, scripts/imaging/delaunay{,_nn}/likelihood_{runtime,breakdown}.py and wiki/campaigns/post_certified_breakdown.md only, disjoint from every co-claim diff
+- claim-note: co-claims autolens_profiling with ral-route-constants-fft-levers, interferometer-streaming-memo-after, direct-conv-symmetric, hst-mge-pilot-qualification and ps-source-gradient-admission; this branch touches _profile_cli.py, _production_config.py, scripts/imaging/delaunay{,_nn}/likelihood_{runtime,breakdown}.py, wiki/campaigns/imaging_over_sampling.md and one wiki/index.md row only, disjoint from every co-claim diff
 - repos:
   - autolens_profiling: feature/imaging-production-over-sampling
 
