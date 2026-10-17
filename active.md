@@ -51,3 +51,21 @@
     release pin, SLURM job id), --export-prepared under both modes, activate.sh library-root
     override for a pinned v2026.10.17.1 checkout, four clean-slate submits (A100 dense/sparse on
     gpu, jax_cpu dense/sparse on ral). No library change, no compute. Judge tier, human /prm.
+
+## ps-source-gradient-admission
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/25
+- issued: 2026-10-17
+- prompt: active/point_source_gradient_admission.md
+- session: Claude Code (Opus 5.5 worker under Fable); https://claude.ai/code/session_01QBeyBLN7ntDChx9v1fmt6M
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/ps-source-gradient-admission
+- repos:
+  - autolens_inference: feature/ps-source-gradient-admission
+  - autolens_profiling: feature/ps-source-gradient-admission
+- companion-issue: https://github.com/PyAutoLabs/autolens_profiling/issues/428
+- note: guard reported co-claims (hst-cleanslate-light-mode on autolens_inference, hst-mge-pilot-qualification on autolens_profiling); proceeding as a human-authorised parallel-array arm on disjoint paths
+- summary: |
+    Pulse point-source-source admission measurement: af.MultiStartAdam (forward gradient_mode via
+    AnalysisPoint) on the L5 source-plane solved model, seeds 0-4, RAL CPU (ral) + A100 (exclusive),
+    same-stack Nautilus control, private released-wheel venv 2026.10.17.1; runtime-cell median rows
+    for #371. Judge tier, human /prm.
