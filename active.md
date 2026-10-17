@@ -15,7 +15,8 @@
 - issued: 2026-10-17
 - prompt: active/hst_mass_samplers_wave1_submits.md
 - session: Claude Code (Fable 5.1); https://claude.ai/code/session_015KxQzEhy93XdCA9cRZ8Ry6
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/28
 - classification: research (workspace-only, PyAutoInsight hst-imaging-mass-samplers phase 3 wave 1), Consequence judge, Autonomy supervised; human-authorised 2026-10-17 incl. merge + GPU wave submit afterok on the phase-2 A100 dense base
 - worktree: ~/Code/PyAutoLabs-wt/hst-mass-samplers-wave1
 - claim-note: co-claims autolens_inference with ps-source-gradient-admission (#25: point_source/, misc/searches/_point_runner.py, point-source submits, check_submits.py, lint.yml); this task adds misc/experiments/wave.py, two mass-sampler submits, hpc/sync --dependency and docs — disjoint paths
