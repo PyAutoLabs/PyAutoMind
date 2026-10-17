@@ -44,3 +44,14 @@
 - repos:
   - autolens_profiling: feature/cluster-pointsolver-robust-settings
 
+
+## smoke-preserve-tracked
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/302
+- issued: 2026-10-17
+- prompt: active/heart_smoke_runner_deletes_the_tracked_output.md
+- session: Codex Work; current chat
+- location: /workspace/scratch/949dc837bafc/heart-smoke
+- status: workspace-dev
+- authorization: User requested four linked dashboard tasks on 2026-10-17; coordinated sequentially; stop at PR review.
+- repos:
+  - PyAutoHeart: feature/smoke-preserve-tracked
