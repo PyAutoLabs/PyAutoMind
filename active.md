@@ -27,11 +27,13 @@
 - issued: 2026-10-17
 - prompt: active/delaunaynn_wide_row_imaging_overhead.md
 - session: Claude Code (Opus 5.5 worker under Fable, DelaunayNN imaging arm); https://claude.ai/code/session_01QBeyBLN7ntDChx9v1fmt6M
-- status: library-dev
+- status: library-shipped, awaiting-merge (2026-10-17: PR #637 open; RAL job 412525 A/B: DelaunayNN sub4 0.569→0.392 s, 2.20× Delaunay (was 3.00×; ~1.5× target not met — remaining cost is Sibson + curvature), sub2 1.75×; logL bit-identical; Heart STALE (no rehearsal), not RED; merge human /prm)
 - classification: feature (library, PyAutoArray), Consequence judge (undeclared) — merge mode human /prm; plan approved 2026-10-15 (session 0b91c774), launch authorised by the human 2026-10-17 incl. RAL CPU acceptance timing; Pulse campaign delaunay-nn-cpu created by the architect (worker does not edit PyAutoPulse)
 - worktree: /home/jammy/Code/PyAutoLabs-wt/delaunaynn-wide-row-overhead
 - claim-note: co-claims PyAutoArray with direct-conv-symmetric (#636, interferometer files + inversion/factory.py + test_interferometer_numba.py); this task edits mappers/mapper_util.py, mappers/mapper_numba_util.py, mesh/interpolator/sibson.py + _sibson_numba.py and their tests only — disjoint paths, branched from main
 - heart-red-override: 2026-10-15 (verbatim on #629); permitted commit, push, PR-open; merge separate
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/637
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/637
 - repos:
   - PyAutoArray: feature/delaunaynn-wide-row-overhead
 
