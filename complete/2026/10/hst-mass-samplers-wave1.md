@@ -1,3 +1,17 @@
+Wave 1 of the HST clean-slate mass-sampler comparison (PyAutoInsight campaign
+`hst-imaging-mass-samplers`, task `hst_mass_samplers_wave1`, phase 3) shipped as
+autolens_inference#28 (issue #27): the arm table `scripts/misc/experiments/wave.py`
+(`cleanslate_2026_10_17_wave1`: `slam_base`/`slam_base_lightfixed` x
+nautilus/emcee/nuts/smc x sampler seeds 0-2 = 24 arms, seed-major, run ids
+`cs1017_<config>_<variant>_<sampler>_s<seed>`), the A100 `jax_gpu` dense and `ral`
+`jax_cpu` dense SLURM arrays pinned to 2026.10.17.1, a `hpc/sync submit --dependency`
+pass-through, `--account` (row / failed / missing) and docs. Witnessed on the euclid
+test-mode cell: both light-mode problems exported, all 24 arms validated through the
+resolver, a wrong problem id refused. The GPU wave is submitted `afterok` on the phase-2
+GPU dense base array; the CPU wave waits for the CPU base rows.
+
+## Original prompt
+
 # `@autolens_inference` HST clean slate, phase 3 wave 1: sampler comparison submits on the frozen mass_total[1] problems
 
 Type: research
