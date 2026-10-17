@@ -12,7 +12,7 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 2 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 260 |
+| [Backlog](#backlog) | 261 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -343,7 +343,7 @@ Use the start-dev skill. draft/maintenance/autolens/point_source_cpu_campaign_ow
 </details>
 
 <details>
-<summary><b>Cluster PointSolver — robustness and performance</b> — 1 queued prompt(s), in order</summary>
+<summary><b>Cluster PointSolver — robustness and performance</b> — 2 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Cluster PointSolver — robustness and performance</b> — ledger: `https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/cluster_pointsolver_speed.md` — Expanded by human agreement 2026-10-01 to own robust analysis settings, numerical correctness and performance. Carries Source &amp;…</summary>
 
@@ -357,6 +357,14 @@ Continue the 'Cluster PointSolver — robustness and performance' epic. Its cano
 
 ```
 Use the start-dev skill. draft/bug/autolens/point_solver_error_bisect_health.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/cluster_pointsolver_robust_settings_p1.md"><code>@autolens_profiling</code> cluster-pointsolver phase 1: cluster-scale robust PointSolver settings…</a> — autolens_profiling · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/research/autolens_profiling/cluster_pointsolver_robust_settings_p1.md
 ```
 
 </details>
