@@ -1,3 +1,23 @@
+# euclid-smoke-release-gate
+
+Completed: 2026-10-17
+Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/305
+PR: https://github.com/PyAutoLabs/PyAutoHeart/pull/309
+
+Pipeline Smoke Tests now gate readiness, and the weekly smoke sweep includes Euclid routing. Release-mode project selection and notebook sweep are unchanged. Readiness failure/success and executed shell routing fixtures passed; prerequisite pipeline smoke run 37627512732 succeeded.
+
+## Verification and merge
+
+User /prm authorized the merge. GitHub confirmed MERGED; git merge-base --is-ancestor proves the shipped head is in origin/main. Only PyAutoHeart has a claimed implementation branch; no sibling implementation remains. Both Python 3.12 and 3.13 jobs passed on the exact shipped head in https://github.com/PyAutoLabs/PyAutoHeart/actions/runs/39057234022, including the tenant firewall. No skipped test legs. Issue closed as completed.
+
+Published Heart at shipping was STALE because source moved since release rehearsal; this development merge does not assert release readiness. Live weekly cloud sweep remains unverified where applicable.
+
+## Close-out notes
+
+Original task worktrees are absent from this session; no worktree or data was deleted.
+
+## Original prompt
+
 # Make the Euclid pipeline's new CI release-blocking and add it to the weekly cloud sweep
 
 Type: test

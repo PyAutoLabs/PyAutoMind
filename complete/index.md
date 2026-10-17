@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1913 records across 9 buckets.
+1917 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -190,6 +190,7 @@ markers; everything below GENERATED is rebuilt.
 - [ecosystem-layers](2026/10/ecosystem-layers.md)
 - [ecosystem-role-docs](2026/10/ecosystem-role-docs.md)
 - [ecosystem-routing-trial](2026/10/ecosystem-routing-trial.md) — Evaluated the role-routing checklist and specified future profiling/inference organ read contracts; no runtime…
+- [euclid-smoke-release-gate](2026/10/euclid-smoke-release-gate.md)
 - [evaluation-grid-cap-field](2026/10/evaluation-grid-cap-field.md)
 - [eyes-focused-figure-browser](2026/10/eyes-focused-figure-browser.md)
 - [fit-util-masked-division](2026/10/fit-util-masked-division.md)
@@ -309,6 +310,7 @@ markers; everything below GENERATED is rebuilt.
 - [ral-route-constants-fft-levers](2026/10/ral-route-constants-fft-levers.md)
 - [repos-sync-check-root-routing](2026/10/repos-sync-check-root-routing.md)
 - [restore-dashboard-green](2026/10/restore-dashboard-green.md)
+- [result-provenance-guards](2026/10/result-provenance-guards.md)
 - [retire-claude-md-pointers](2026/10/retire-claude-md-pointers.md)
 - [retire-nautilus-leftovers](2026/10/retire-nautilus-leftovers.md)
 - [retire-nested-claude-md-pointers](2026/10/retire-nested-claude-md-pointers.md)
@@ -366,6 +368,7 @@ markers; everything below GENERATED is rebuilt.
 - [setuptools-include-packages](2026/10/setuptools-include-packages.md)
 - [shapelets-smoke-slow-park](2026/10/shapelets-smoke-slow-park.md)
 - [sizing-none-triage-rules](2026/10/sizing-none-triage-rules.md)
+- [smoke-preserve-tracked](2026/10/smoke-preserve-tracked.md)
 - [smoke-sampler-imports](2026/10/smoke-sampler-imports.md)
 - [sparse-noise-map-pooling](2026/10/sparse-noise-map-pooling.md)
 - [sparse-terms-oversampled-fine-grids](2026/10/sparse-terms-oversampled-fine-grids.md)
@@ -390,6 +393,7 @@ markers; everything below GENERATED is rebuilt.
 - [timing-noise-audit-p9-familywise-policy](2026/10/timing-noise-audit-p9-familywise-policy.md)
 - [trim-repo-role-text](2026/10/trim-repo-role-text.md) — root routing table
 - [unit-timing-distinct-baseline](2026/10/unit-timing-distinct-baseline.md) — Select the latest distinct prior unit timing run per repository/Python leg within the current epoch. Preserve …
+- [unit-timing-robust-baseline](2026/10/unit-timing-robust-baseline.md)
 - [unregistered-worktree-guard](2026/10/unregistered-worktree-guard.md)
 - [wave1-row-writer-oom-reslice](2026/10/wave1-row-writer-oom-reslice.md) — Wave 1 attempt 1 (RAL 412543) lost every Nautilus/Emcee row because run.py keyed max_likelihood_parameters by …
 - [workspace-freshness-stamp](2026/10/workspace-freshness-stamp.md)
