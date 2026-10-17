@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
-  "updated": "2026-10-17T12:18:54Z",
+  "updated": "2026-10-17T12:20:45Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "direct_conv curvature kernel: convolve only the rows later-ranked columns need, then mirror \u2014 workspace-shipped, awaiting-merge (2026-10-17: v3 shipped; RAL real-data witness PASS 1.49x/1.53x/1.58x, logL round-off; Heart\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/636",
+      "prompt": "Use the start-dev skill. active/direct_conv_symmetric_row_restriction.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -18,6 +24,12 @@
       "text": "human review: the scaling_relation slam parks (imaging un-parked, multi_galaxy kept)",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md",
       "prompt": "Walk me through the completed work described in `draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md` so I can sign it off.\n\n1. Read the prompt: what was asked, and what it claims shipped.\n2. Find the evidence \u2014 the merged PR(s), the commits, the `complete/` record \u2014\n   and read the actual diff, not the description of it.\n3. Report what changed, what it does NOT cover, and anything you would have\n   done differently. Call out behaviour changes and test gaps explicitly.\n\nChange nothing while reviewing. When I sign it off, retire the prompt from the\nPyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date\n<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and\nregenerate the dashboard. If I do not sign it off, file the follow-up with\n`/intake` instead.\n"
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#636 \u2014 direct_conv curvature kernel: convolve only the rows later-ranked columns need, then mirror",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/636",
+      "prompt": null
     },
     {
       "severity": "info",
@@ -114,18 +126,6 @@
       "text": "pick: Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md",
       "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: The latent smoke's empty-block assertion names one cause unconditionally \u2014 echo\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md",
-      "prompt": "Use the start-dev skill. draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: RTD organism docs currency: Nerves page, organ-count drift, hands.md rename",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/pyautobrain/rtd_organism_currency.md",
-      "prompt": "Use the start-dev skill. draft/docs/pyautobrain/rtd_organism_currency.md"
     }
   ]
 }

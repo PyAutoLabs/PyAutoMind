@@ -14,7 +14,7 @@
 | [Planned](#planned) | 8 |
 | [Backlog](#backlog) | 265 |
 | [Recent](#recent) | 50 |
-| [Pending release](#pending-release) | 0 |
+| [Pending release](#pending-release) | 1 |
 
 ## Start here
 
@@ -850,7 +850,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/direct_conv_symmetric_row_restriction.md">direct_conv curvature kernel: convolve only the rows later-ranked columns need, then mirror</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/635">issue #635</a> — issued 2026-10-16 — library-dev — PAUSED 2026-10-16 by the human; uncommitted v2 (+v3 in flight: ymin ordering, gate 0.7, human-approved). Resume…</summary>
+<details><summary>📋 <a href="active/direct_conv_symmetric_row_restriction.md">direct_conv curvature kernel: convolve only the rows later-ranked columns need, then mirror</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/635">issue #635</a> — issued 2026-10-16 — workspace-shipped, awaiting-merge (2026-10-17: v3 shipped; RAL real-data witness PASS 1.49x/1.53x/1.58x, logL round-off; Heart… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/636">PyAutoArray#636</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/425">autolens_profiling#425</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 Use the start-dev skill. active/direct_conv_symmetric_row_restriction.md
@@ -2931,7 +2931,9 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 ## Pending release
 
-_(nothing pending release)_
+**PyAutoArray**
+
+- [PyAutoArray#636](https://github.com/PyAutoLabs/PyAutoArray/pull/636) — `active/direct_conv_symmetric_row_restriction.md`
 
 
 Boards: [organism](https://pyautolabs.github.io/PyAutoScientist/) · [brain](https://pyautolabs.github.io/PyAutoBrain/) · [cortex](https://pyautolabs.github.io/PyAutoCortex/) · [memory](https://pyautolabs.github.io/PyAutoMemory/) · [eyes](https://pyautolabs.github.io/PyAutoEyes/) · [ears](https://pyautolabs.github.io/PyAutoEars/) · [heart](https://pyautolabs.github.io/PyAutoHeart/) · [hands](https://pyautolabs.github.io/PyAutoHands/) · [pulse](https://pyautolabs.github.io/PyAutoPulse/) · [insight](https://pyautolabs.github.io/PyAutoInsight/) · [dna](https://pyautolabs.github.io/PyAutoDNA/) · [nerves](https://pyautolabs.github.io/PyAutoNerves/) · [broca](https://pyautolabs.github.io/PyAutoBroca/) · [gut](https://pyautolabs.github.io/PyAutoGut/)
