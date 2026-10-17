@@ -12,13 +12,13 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 9 |
 | [Planned](#planned) | 8 |
-| [Backlog](#backlog) | 264 |
+| [Backlog](#backlog) | 265 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 18
+**Highest priority** (filed as `high`) — showing 12 of 19
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -76,6 +76,14 @@ Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun
 
 </details>
 
+<details><summary>📋 <a href="draft/research/autolens_inference/hst_mass_samplers_wave1_submits.md"><code>@autolens_inference</code> HST clean slate, phase 3 wave 1: sampler comparison submits…</a> — autolens_inference · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/research/autolens_inference/hst_mass_samplers_wave1_submits.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> — organs · medium · supervised · high</summary>
 
 ```
@@ -104,14 +112,6 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ```
 Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> — euclid · large · human-required · high</summary>
-
-```
-Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md
 ```
 
 </details>
@@ -1936,12 +1936,20 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>research</b> — 32</summary>
+<summary><b>research</b> — 33</summary>
 
 <details><summary>📋 <a href="draft/research/autofit_inference/search_ext_b5c2a_rerun.md"><code>@autofit_inference</code> B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug…</a> — autofit_inference · medium · supervised · high</summary>
 
 ```
 Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_inference/hst_mass_samplers_wave1_submits.md"><code>@autolens_inference</code> HST clean slate, phase 3 wave 1: sampler comparison submits…</a> — autolens_inference · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/research/autolens_inference/hst_mass_samplers_wave1_submits.md
 ```
 
 </details>
