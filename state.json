@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 10 in flight",
-  "updated": "2026-10-17T13:25:18Z",
+  "updated": "2026-10-17T13:40:04Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "direct_conv curvature kernel: convolve only the rows later-ranked columns need, then mirror \u2014 workspace-shipped, awaiting-merge (2026-10-17: v3 shipped; RAL real-data witness PASS 1.49x/1.53x/1.58x, logL round-off; Heart\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/636",
       "prompt": "Use the start-dev skill. active/direct_conv_symmetric_row_restriction.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "`@autolens_inference` HST clean slate, phase 3 wave 1: sampler comparison submits\u2026 \u2014 workspace-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autolens_inference/pull/28",
+      "prompt": "Use the start-dev skill. active/hst_mass_samplers_wave1_submits.md"
     },
     {
       "severity": "yellow",
@@ -120,12 +126,6 @@
       "text": "pick: Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md",
       "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md",
-      "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md"
     }
   ]
 }

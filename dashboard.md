@@ -866,7 +866,7 @@ Use the start-dev skill. active/direct_conv_symmetric_row_restriction.md
 
 </details>
 
-<details><summary>📋 <a href="active/hst_mass_samplers_wave1_submits.md"><code>@autolens_inference</code> HST clean slate, phase 3 wave 1: sampler comparison submits…</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/27">issue #27</a> — issued 2026-10-17 — workspace-dev</summary>
+<details><summary>📋 <a href="active/hst_mass_samplers_wave1_submits.md"><code>@autolens_inference</code> HST clean slate, phase 3 wave 1: sampler comparison submits…</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/27">issue #27</a> — issued 2026-10-17 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_inference/pull/28">autolens_inference#28</a></summary>
 
 ```
 Use the start-dev skill. active/hst_mass_samplers_wave1_submits.md
