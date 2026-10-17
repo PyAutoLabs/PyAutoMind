@@ -1,3 +1,15 @@
+## imaging-production-over-sampling
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/430
+- issued: 2026-10-17
+- prompt: active/imaging_production_over_sampling_phase1.md
+- session: Claude Code (Opus 5.5 worker under Fable, imaging over-sampling arm); https://claude.ai/code/session_01QBeyBLN7ntDChx9v1fmt6M
+- status: workspace-dev
+- classification: feature (workspace-only, phase 1 of PyAutoPulse task imaging_production_over_sampling), Consequence judge, Autonomy supervised; human-authorised 2026-10-17; CPU smoke only, no compute
+- worktree: /home/jammy/Code/PyAutoLabs-wt/imaging-production-over-sampling
+- claim-note: co-claims autolens_profiling with ral-route-constants-fft-levers, interferometer-streaming-memo-after, direct-conv-symmetric, hst-mge-pilot-qualification and ps-source-gradient-admission; this branch touches _profile_cli.py, _production_config.py, scripts/imaging/delaunay{,_nn}/likelihood_{runtime,breakdown}.py and wiki/campaigns/post_certified_breakdown.md only, disjoint from every co-claim diff
+- repos:
+  - autolens_profiling: feature/imaging-production-over-sampling
+
 ## delaunaynn-wide-row-overhead
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/629
 - issued: 2026-10-17
