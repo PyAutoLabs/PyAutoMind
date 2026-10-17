@@ -12,18 +12,26 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 1 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 264 |
+| [Backlog](#backlog) | 265 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 18
+**Highest priority** (filed as `high`) — showing 12 of 19
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
 ```
 Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens_inference/hst_cleanslate_numba_cpu_shared_source_lp.md"><code>@autolens_inference</code> HST clean slate: numba_cpu base legs that share the jax_cpu source_lp[1]</a> — autolens_inference · small · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens_inference/hst_cleanslate_numba_cpu_shared_source_lp.md
 ```
 
 </details>
@@ -104,14 +112,6 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ```
 Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> — euclid · large · human-required · high</summary>
-
-```
-Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md
 ```
 
 </details>
@@ -1587,7 +1587,15 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>feature</b> — 34</summary>
+<summary><b>feature</b> — 35</summary>
+
+<details><summary>📋 <a href="draft/feature/autolens_inference/hst_cleanslate_numba_cpu_shared_source_lp.md"><code>@autolens_inference</code> HST clean slate: numba_cpu base legs that share the jax_cpu source_lp[1]</a> — autolens_inference · small · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens_inference/hst_cleanslate_numba_cpu_shared_source_lp.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding against the raw maximum finds…</a> — autoarray · small · supervised · medium</summary>
 
