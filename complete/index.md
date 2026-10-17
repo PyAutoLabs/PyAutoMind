@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1910 records across 9 buckets.
+1912 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -205,6 +205,7 @@ markers; everything below GENERATED is rebuilt.
 - [heart-publication-coverage](2026/10/heart-publication-coverage.md)
 - [heart-score-resusitate](2026/10/heart-score-resusitate.md)
 - [heart-test-workspace-resource-dropdowns](2026/10/heart-test-workspace-resource-dropdowns.md)
+- [howtofit-advanced-references](2026/10/howtofit-advanced-references.md)
 - [hst-cleanslate-light-mode](2026/10/hst-cleanslate-light-mode.md)
 - [hst-cleanslate-numba-shared-lp](2026/10/hst-cleanslate-numba-shared-lp.md)
 - [hst-mass-samplers-wave1](2026/10/hst-mass-samplers-wave1.md)
@@ -390,6 +391,7 @@ markers; everything below GENERATED is rebuilt.
 - [trim-repo-role-text](2026/10/trim-repo-role-text.md) — root routing table
 - [unit-timing-distinct-baseline](2026/10/unit-timing-distinct-baseline.md) — Select the latest distinct prior unit timing run per repository/Python leg within the current epoch. Preserve …
 - [unregistered-worktree-guard](2026/10/unregistered-worktree-guard.md)
+- [workspace-freshness-stamp](2026/10/workspace-freshness-stamp.md)
 - [workspace-version-warning-outside-workspace](2026/10/workspace-version-warning-outside-workspace.md)
 - [worktree-sh-root-activate-clobber](2026/10/worktree-sh-root-activate-clobber.md)
 

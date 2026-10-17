@@ -1,3 +1,18 @@
+# HowToFit advanced-chapter references
+
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1699
+- pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1700
+- merged: 2026-10-17
+- merge: 99d714c71d1eed3d17d718607da430be384af5f2
+
+Updated the two stale chapter-3 references in PyAutoFit docstrings to the advanced chapter, retaining tutorial 4. No runtime changes.
+
+Validation: exact-head Actions passed all five jobs: generated-search-docs, docs-build, unit tests on Python 3.12/3.13 and no-JAX. Local serial suite had 3698 passes and 115 skips; all 19 missing-dependency failures passed after installing declared Nautilus/Zeus dependencies. Parallel test collection has existing address-dependent IDs, so local validation used serial execution.
+
+Human `Prm` authorized the merge; freeze clear, no review objections, unchanged authored head. Git ancestry proved head 73008021aecc1b90d9b6428116eccf38234e8570 is on origin/main. Issue closed as completed. No release performed. Flat checkout retained; no task worktree existed.
+
+## Original prompt
+
 # PyAutoFit — two stale "HowToFit chapter 3" references after the chapter_advanced rename
 
 Type: docs
