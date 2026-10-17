@@ -128,7 +128,7 @@ They are small, independent and worth fixing whether or not the epic proceeds:
   re-file it.
 - `draft/bug/autofit/add_assertion_name_silently_dropped.md`
 - `draft/bug/autofit/direct_instance_tuples_double_counts_constants.md`
-- `draft/bug/autofit/model_function_cannot_resolve_config_priors.md`
+- `complete/2026/10/function-config-priors.md`
 
 ## Provenance
 

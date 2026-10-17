@@ -1,3 +1,22 @@
+## function-config-priors
+- completed: 2026-10-17
+- constraint: Human confirmed 2026-10-17 that existing model/search unique IDs and output-folder names must not change; baseline hashes and exact output paths checked across all four branches.
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1702
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1705
+- head: c0fa0b6ee5500d69f3ba9d6dde598dbe1b59f157
+- validation: Full serial suite: 3706 passed, 121 skipped, 1 xfailed; model subtree 204 passed. Configured/explicit function priors, frozen evaluation, missing-config errors, and class initializer behavior covered.
+- identifier-evidence: Free/fixed/mixed model hashes, search IDs and output paths equal unmodified main 99d714c71; no identifier code changed.
+- merge: debd95de69c0c65ed834a16eb75eb86bdbf83426
+- authorization: Human /prm in this chat, 2026-10-17.
+- merge-proof: Remote PR head is an ancestor of origin/main in unshallowed PyAutoFit; zero unmerged commits. GitHub confirms MERGED.
+- ci: All head workflows and jobs completed successfully; Python 3.12, 3.13 and no-JAX test legs passed. Applicable docs and generated-search-docs passed. No review objections.
+- freeze: pyauto-heart freeze --show returned not frozen. Readiness remains STALE; no release-readiness claim.
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1705
+- release-link-repair: GitHub pending-release label verified; restored the missing Mind link during close-out.
+- shadow-row: Awaiting human answer required by prm closeout.md 3b; no action classification guessed.
+
+## Original prompt
+
 # af.Model(function) cannot resolve config priors
 
 Issued: 2026-10-17
