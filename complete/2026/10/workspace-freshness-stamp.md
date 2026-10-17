@@ -1,3 +1,18 @@
+# Workspace freshness uses a release stamp
+
+- issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/202
+- pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/203
+- merged: 2026-10-17
+- merge: f116f70077e442db19a2a152f5ee78d57294c504
+
+Separated freshness from the compatibility floor. Minimum library versions still enforce compatibility; only workspace_version or legacy version.txt supplies freshness evidence. Floor-only workspaces no longer generate false staleness warnings.
+
+Validation: 252 local tests passed, 1 skipped; exact-head Actions passed Python 3.12, 3.13 and no-JAX jobs. HowToFit 2026.10.17.1 tracked version configuration emitted no warning with its matching library version. Regression coverage includes stale, matching, malformed and missing stamps, the 30-day boundary, source precedence and below-floor errors.
+
+Human `Prm` authorized merge; freeze clear; no review objections; unchanged authored head dcd76eb42f00402047be79d7abb3d6401fc0df93 proved ancestral to origin/main. Issue closed as completed. This is merged source, not a published package release. Flat checkout retained; no task worktree existed.
+
+## Original prompt
+
 # The workspace staleness warning keys off a value documented never to move
 
 Type: maintenance

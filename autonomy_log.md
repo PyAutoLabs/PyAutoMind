@@ -457,7 +457,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 23 (stage 1: 23, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — the pre-registered decision is due
+Count toward 20: 24 (stage 1: 24, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — the pre-registered decision is due
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -509,3 +509,4 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-10-16 | custom-runner-relevance (PyAutoHeart#299) | glance | tests PASS / smoke live pipeline 4 jobs PASS / review CLEAN / heart STALE / witness PASS | merged-unchanged | 1 |
 | 2026-10-16 | python-matrix-harness (PyAutoHands#314) | glance | tests CI PASS / smoke 9 legs PASS / review CLEAN / heart STALE / witness branch PASS; main dispatch not run | merged-unchanged | 1 |
 | 2026-10-17 | direct-conv-symmetric (PyAutoArray#636 / autolens_profiling#425) | glance | tests PyAutoArray 2086 passed/4 xfailed (21 new), PyAutoGalaxy 1357, PyAutoLens 832/1 xfailed · smoke 165/165 (autocti envs not built, local GSL) · review independent CLEAN on v2 (600-trial fuzz; v3 = ordering/default/docstrings only) · heart STALE (no rehearsal; no override) · witness PASS vs PR gate ≥1.3× on real Aris data (1.49×/1.53×/1.58×, logL to round-off; prompt asked ≥1.6× synthetic, met 1.83–1.90× synthetic) | merged-unchanged | 1 |
+| 2026-10-17 | workspace-freshness-stamp (PyAutoNerves#203) | glance | tests GREEN / smoke release-config witness PASS / review human Prm / heart STALE / witness PASS | merged-unchanged | 1 |

@@ -2,34 +2,22 @@
   "schema_version": 1,
   "organ": "mind",
   "repo": "PyAutoMind",
-  "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-10-17T17:47:54Z",
+  "status": "red",
+  "headline": "RED \u2014 24 picks \u00b7 3 in flight",
+  "updated": "2026-10-17T17:54:47Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
-      "severity": "yellow",
-      "text": "PyAutoFit \u2014 two stale \"HowToFit chapter 3\" references after the chapter_advanced rename \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1700",
-      "prompt": "Use the start-dev skill. active/howtofit_chapter_3_prose_references.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "The workspace staleness warning keys off a value documented never to move \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoNerves/pull/203",
-      "prompt": "Use the start-dev skill. active/minimum_library_version_stale.md"
+      "severity": "red",
+      "text": "HowToFit tutorial 5 (EP) never shares the centre it says it shares \u2014 workspace-shipped, blocked-CI",
+      "url": "https://github.com/PyAutoLabs/HowToFit/pull/75",
+      "prompt": "Use the start-dev skill. active/tutorial_5_ep_shared_centre_never_assigned.md"
     },
     {
       "severity": "yellow",
       "text": "HowToFit tutorial 4 promises \"under a minute\" and takes six \u2014 workspace-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/HowToFit/pull/74",
       "prompt": "Use the start-dev skill. active/tutorial_4_runtime_claim.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "HowToFit tutorial 5 (EP) never shares the centre it says it shares \u2014 workspace-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/HowToFit/pull/75",
-      "prompt": "Use the start-dev skill. active/tutorial_5_ep_shared_centre_never_assigned.md"
     },
     {
       "severity": "yellow",
@@ -126,6 +114,18 @@
       "text": "pick: euclid_dr1: run the positions gate over DR1 and submit the remodel set",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md",
       "prompt": "Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Guard every workspace script against untimed network downloads",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace/no_untimed_network_downloads_check.md",
+      "prompt": "Use the start-dev skill. draft/test/autolens_workspace/no_untimed_network_downloads_check.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Cache `autonerves` config parsing \u2014 308 YAML files parsed per script run",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/autonerves/config_yaml_parse_cache.md",
+      "prompt": "Use the start-dev skill. draft/refactor/autonerves/config_yaml_parse_cache.md"
     }
   ]
 }
