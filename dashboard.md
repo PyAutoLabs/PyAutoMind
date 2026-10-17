@@ -10,7 +10,7 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 17 |
-| [In flight](#in-flight) | 3 |
+| [In flight](#in-flight) | 5 |
 | [Planned](#planned) | 8 |
 | [Backlog](#backlog) | 265 |
 | [Recent](#recent) | 50 |
@@ -870,6 +870,22 @@ Use the start-dev skill. active/hst_mass_lens_light_mode_clean_slate.md
 
 ```
 Use the start-dev skill. active/hst_mge_pilot_qualification.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/interferometer_nnls_memo_after_measurement.md">fnnls warm-start memo after-measurement on the #332 ALMA cells (2026.10.17.1)</a></summary>
+
+```
+Use the start-dev skill. active/interferometer_nnls_memo_after_measurement.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/interferometer_streaming_ral_a100_rows.md">Interferometer streaming scaling: 1e8 RAL CPU row + A100 rows (2026.10.17.1)</a></summary>
+
+```
+Use the start-dev skill. active/interferometer_streaming_ral_a100_rows.md
 ```
 
 </details>
