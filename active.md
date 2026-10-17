@@ -74,23 +74,6 @@
 - repos:
   - autolens_profiling: feature/hst-mge-pilot-qualification
 
-## hst-cleanslate-light-mode
-- issue: https://github.com/PyAutoLabs/autolens_inference/issues/24
-- issued: 2026-10-17
-- session: Claude Code (Fable 5.1); https://claude.ai/code/session_015KxQzEhy93XdCA9cRZ8Ry6
-- status: workspace-shipped, awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/26
-- next: human /prm of #26 (judge tier); expect a trivial dashboard/*.json conflict with #23 (regenerate). Phase 2 (create pin dir on RAL, submit) is separately authorised.
-- worktree: ~/Code/PyAutoLabs-wt/hst-cleanslate-light-mode
-- repos:
-  - autolens_inference: feature/hst-cleanslate-light-mode
-- summary: |
-    Phase 1 of Insight campaign hst-imaging-mass-samplers (clean slate, 2026-10-17): lens-light
-    mode as a run variant (linear | fixed | both), schema v3 row provenance (library revisions,
-    release pin, SLURM job id), --export-prepared under both modes, activate.sh library-root
-    override for a pinned v2026.10.17.1 checkout, four clean-slate submits (A100 dense/sparse on
-    gpu, jax_cpu dense/sparse on ral). No library change, no compute. Judge tier, human /prm.
-
 ## ps-source-gradient-admission
 - issue: https://github.com/PyAutoLabs/autolens_inference/issues/25
 - issued: 2026-10-17

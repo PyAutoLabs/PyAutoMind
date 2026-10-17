@@ -1,3 +1,33 @@
+## hst-cleanslate-light-mode
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/24
+- completed: 2026-10-17
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/26
+- campaign: PyAutoInsight `hst-imaging-mass-samplers`, task `hst_mass_base_light_modes` (https://github.com/PyAutoLabs/PyAutoInsight/blob/main/tasks/hst_mass_base_light_modes.md)
+
+Phase 1 of the HST imaging clean slate (2026-10-17), merged as autolens_inference#26 (31dcd0d). No library change and no compute: nothing was submitted.
+
+### What merged
+- **Lens-light mode as a run variant:** `--lens-light {linear,fixed,both}` (default `linear`, existing invocations unchanged). `fixed` builds `mass_total[1]` with the lens light as ordinary profiles carrying the intensities solved in the light[1] fit; the driver refuses a fixed model that still holds a linear profile. `both` runs stages 1-4 once, then the mass stage linear and fixed, one row per variant (`slam_base` / `slam_base_lightfixed`). Only the mass stage's path_prefix carries the light variant.
+- **Schema v3 provenance:** rows carry `lens_light_mode`, `results_tag`, `library_revisions`, `release_pin` (`PYAUTO_RELEASE_PIN`) and `slurm_job_id`; v1/v2 rows read as `linear` with null provenance.
+- **Dual-mode export:** `--export-prepared` works under both modes (`<dir>/<variant>/` for `both`); the light mode enters the problem id, the setup id stays `imaging/rectangular/<instrument>`. README slam table gains a `Light` column; summary/catalogue accept v3.
+- **activate.sh pin override:** `BASE=${PYAUTO_LIB_BASE:-$SHARED_BASE}`; hpc/README.md documents the 2026.10.17.1 pin directory (shared mirror never pulled).
+- **Four clean-slate submits with --export-prepared:** `hpc/batch_gpu/submit_hst_cleanslate_jax_gpu_{dense,sparse}` (gpu, 1 GPU) and `hpc/batch_cpu/submit_hst_cleanslate_jax_cpu_{dense,sparse}` (ral only), `--array=0-1 --lens-light both`, pinned, WALL-BASIS probe-first; the export follow-up landed as 2e97df3.
+- **Pre-existing bug fixed on main:** the `nautilus.py` / `emcee.py` sampler leaves under `scripts/imaging/{rectangular,delaunay}/` shadowed the `nautilus` package (`ImportError: cannot import name 'Sampler'`), killing every `baseline_slam.py` run at its first `search.fit`; all ten imaging leaves now drop their own directory from `sys.path`.
+
+### Witness
+`PYAUTO_TEST_MODE=1 baseline_slam.py --instrument euclid --backend jax_cpu --inversion dense --seed 0 --lens-light both --export-prepared ...` exited 0 from one process: two schema-3 complete rows (linear, fixed), distinct mass_total[1] fits (log Z -35863864.06 vs -35866204.89 in test mode), both prepared manifests verified against the installed library revisions and bound to `imaging/rectangular/euclid` (40 linear profiles in the linear mass model, 0 in the fixed). Witness outputs were deleted, not committed. CI on #26: lint green; 138 tests passed.
+
+### Decide-and-flag choices
+- Fresh output root `output/cleanslate_2026_10_17` (separate PyAutoFit root, so the 2026-09-24 `output/slam/` trees are never resumed).
+- `--results-tag cleanslate_2026_10_17` so clean-slate rows land under `<config_name>__cleanslate_2026_10_17/` and do not collide with the #23 rows.
+- Target id unchanged rule: `hst/slam5_slam_base_lightfixed/seed0`.
+- `library_revisions` is best-effort in SLaM rows (null + note on a dirty checkout); the prepared export still refuses.
+
+### Next
+Phase 2 (create the 2026.10.17.1 pin directory on RAL and submit the four clean-slate arrays) is separately authorised. Merged alongside autolens_inference#23 (the 2026-09-24 re-run rows, now superseded history) and PyAutoInsight#35 (check-in opening the campaign).
+
+## Original prompt
+
 # `@autolens_inference` HST clean slate, phase 1: lens-light mode as a run variant, pinned-release submits, row provenance
 
 Type: feature
