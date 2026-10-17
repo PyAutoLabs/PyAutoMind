@@ -1,3 +1,38 @@
+The clean-slate numba_cpu base legs for PyAutoInsight campaign `hst-imaging-mass-samplers` (task `hst_mass_base_light_modes`) shipped as autolens_inference#32 (issue #31), merge commit b91ce9c. No library change.
+
+The human decided on 2026-10-17 (Insight chat) that these legs "spawn off" the jax_cpu `source_lp[1]`, wait for it in-job, and are submitted now.
+
+### What merged
+- `--stages-from <config>:source_lp` on the SLaM runner. The shared stage's PyAutoFit `path_prefix` names the other config, at the same output root, variant and seed, so its completed fit is loaded rather than refitted. Only `source_lp` may be shared, a run may not share from its own config, and both configs must run at the same precision.
+- Refusal: exit 3, nothing fitted, no row written. Two tests trigger it: no `.completed` identifier directory (checked before the dataset loads), or this run's own model and search identifier not being the completed one (checked before `search.fit`).
+- Rows:
+  - The shared stage entry carries `shared_from_config`, `fitted_backend`, the matching `use_jax` and `shared_stage_note`. It keeps the loaded fit's wall and evals, sets `total_wall_s` to null and records `shared_load_s`.
+  - The payload gains `stages_from`, `chain_wall_s` (the sum of the fitted stages only) and `chain_wall_excludes`.
+  - Per-stage `use_jax` is recorded on every stage.
+  - The README shows "shared from `<config>`" and a "Chain walls" view; the summary exporter carries the fields.
+- `_runner.py --stage-complete <seed_dir>` and `hpc/wait_for_stage.sh` (5 min polls, 8 h cap, exit 4 on timeout).
+- `hpc/batch_cpu/submit_hst_cleanslate_numba_cpu_{dense,sparse}`:
+  - `ral` only, 8 CPUs, 48 GB / 64 GB, `--array=0-1`, `--lens-light both`.
+  - Pinned to 2026.10.17.1, with the clean-slate output root, results tag and `--export-prepared`.
+  - `--stages-from hpc_a100_jax_cpu_dense_fp64:source_lp`, with the in-job wait.
+  - WALL-BASIS probe-first.
+
+### Witness
+On the euclid test-mode cell:
+- A jax_cpu `--stages source_lp` run, then a numba_cpu `--lens-light both --stages-from local_jax_cpu_dense_fp64:source_lp --export-prepared` run. The numba run loaded identifier `e4ff1fa3…` (no new search), fitted stages 2-5 and both mass stages, wrote two complete rows and exported two prepared problems with `use_jax: false`.
+- The shared stage is marked in both rows, and `chain_wall_s` equals the sum of the fitted stages.
+- Both refusal paths exit 3; a `source_pix_1` share exits 2.
+- CI lint green; 177 tests passed.
+
+### Decide-and-flag choices
+- An identifier-exact check in addition to the `.completed` test.
+- Both numba legs share the jax_cpu dense stage, because `source_lp[1]` has no inversion.
+- The wait lives in `hpc/wait_for_stage.sh` (a poll, not a wall-gate cell), with a 120 s settle.
+- The shared stage's `total_wall_s` is null.
+- `chain_wall_s` is a row-level field only; the summary's pipeline parents still never sum stage clocks.
+
+## Original prompt
+
 # `@autolens_inference` HST clean slate: numba_cpu base legs that share the jax_cpu source_lp[1]
 
 Type: feature
