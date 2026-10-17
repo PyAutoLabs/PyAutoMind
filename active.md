@@ -3,7 +3,9 @@
 - issued: 2026-10-17
 - prompt: active/point_source_image_plane_gpu_admission.md
 - session: Claude Code (Opus 5.5 worker under Fable); https://claude.ai/code/session_01QBeyBLN7ntDChx9v1fmt6M
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/434
+- next: human /prm #434 (judge); human admission decision on the job-412519 evidence; Pulse next/Knowledge draft handed to the parent session
 - worktree: ~/Code/PyAutoLabs-wt/point-source-image-gpu-admission
 - repos:
   - autolens_profiling: feature/point-source-image-gpu-admission
