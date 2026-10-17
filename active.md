@@ -1,3 +1,16 @@
+## delaunaynn-wide-row-overhead
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/629
+- issued: 2026-10-17
+- prompt: active/delaunaynn_wide_row_imaging_overhead.md
+- session: Claude Code (Opus 5.5 worker under Fable, DelaunayNN imaging arm); https://claude.ai/code/session_01QBeyBLN7ntDChx9v1fmt6M
+- status: library-dev
+- classification: feature (library, PyAutoArray), Consequence judge (undeclared) — merge mode human /prm; plan approved 2026-10-15 (session 0b91c774), launch authorised by the human 2026-10-17 incl. RAL CPU acceptance timing; Pulse campaign delaunay-nn-cpu created by the architect (worker does not edit PyAutoPulse)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/delaunaynn-wide-row-overhead
+- claim-note: co-claims PyAutoArray with direct-conv-symmetric (#636, interferometer files + inversion/factory.py + test_interferometer_numba.py); this task edits mappers/mapper_util.py, mappers/mapper_numba_util.py, mesh/interpolator/sibson.py + _sibson_numba.py and their tests only — disjoint paths, branched from main
+- heart-red-override: 2026-10-15 (verbatim on #629); permitted commit, push, PR-open; merge separate
+- repos:
+  - PyAutoArray: feature/delaunaynn-wide-row-overhead
+
 ## ral-route-constants-fft-levers
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/429
 - issued: 2026-10-17

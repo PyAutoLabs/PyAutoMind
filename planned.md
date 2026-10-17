@@ -10,7 +10,6 @@
 - [latent-nan-guard-honest-run](#latent-nan-guard-honest-run)
 - [knn-partial-point-block](#knn-partial-point-block)
 - [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
-- [delaunaynn-wide-row-overhead](#delaunaynn-wide-row-overhead)
 
 <!-- toc:end -->
 
@@ -118,23 +117,4 @@
   - PyAutoArray
   - autolens_workspace_test
 - resume: Audit#603 found incorrect internal-edge Sibson weights and near-edge partition failure. Filed separately per explicit user request; strict expected-failure regressions retained in audit. No repair begun or worktree created. Plan algorithmic repair independently.
-
-## delaunaynn-wide-row-overhead
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/629
-- planned: 2026-10-15
-- prompt: draft/feature/autoarray/delaunaynn_wide_row_imaging_overhead.md
-- classification: library (+ PyAutoPulse campaign ledger)
-- suggested-branch: feature/delaunaynn-wide-row-overhead
-- blocked-by: none — interferometer-numba-route-gate merged 2026-10-15 (PyAutoArray free)
-- plan: approved by the human 2026-10-15 (session 0b91c774) — full two-level plan on #629; target ≈2× Delaunay at imaging sub 4; Sibson failed rows keep size ≥ 1 (NaN propagates)
-- pulse: human asked to log + monitor under a PyAutoPulse speed-up campaign — create `delaunay-nn-cpu` in campaigns.yaml with tasks for #623 (complete, PyAutoArray#624/#625, complete/2026/10/delaunay-nn-numba.md) and #629 once PyAutoPulse is free (Library may start first if PyAutoArray frees earlier)
-- heart-red-override:
-  - date: 2026-10-15
-  - authorized-by: live human in session 0b91c774, AskUserQuestion "Yes, override for this task"
-  - reasons: verbatim on #629
-  - permitted: commit, push, PR-open; merge separate
-- affected-repos:
-  - PyAutoArray
-  - PyAutoPulse
-
 
