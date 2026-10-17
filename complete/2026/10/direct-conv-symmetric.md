@@ -1,3 +1,28 @@
+Symmetric row-restricted `direct_conv` interferometer curvature kernel (PyAutoArray#635),
+lever L2 of the PyAutoPulse campaign `interferometer_large_mask_aris`
+(https://github.com/PyAutoLabs/PyAutoPulse/issues/62). Merged 2026-10-17, library first:
+
+- **Library** — https://github.com/PyAutoLabs/PyAutoArray/pull/636 (MERGED): new serial-numba
+  `curvature_direct_conv_symmetric` (columns ranked by ascending `ymin`, row-restricted
+  convolution, ranked-CSC gather + mirror; every entry bit-identical to `curvature_direct_conv`),
+  routed when the work fraction f ≤ `interferometer_direct_conv_symmetric_max_work_fraction`
+  (default 0.7; 0 disables); the route cost model scales `t_dc` by min(1, κf), κ = 1.32;
+  non-finite mapping weights fall back to the full kernel. Parallel path unchanged.
+- **Write-up** — https://github.com/PyAutoLabs/autolens_profiling/pull/425 (MERGED):
+  `results/notes/interferometer_direct_conv_symmetric_2026_10.md` (decision rule, tall-column
+  insight, RAL real-data Aris SPT2319-55 witness 1.49×/1.53×/1.58× at 1,459/2,577/5,746
+  vertices with log L to round-off, FFT-arm caveat ~1.02× over the previous default at 1,459)
+  and the `interferometer_likelihood` campaign journal entry.
+
+Human decisions: 2026-10-16 (on #635) rank by `ymin` and raise the gate 0.5 → 0.7;
+2026-10-17 interferometer CPU work is closed — the remaining L2 scratch (scripts, patches,
+logs, result JSON copies) was archived out of the worktree; RAL copies and the PRs hold the
+evidence.
+
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/636
+
+## Original prompt
+
 # direct_conv curvature kernel: convolve only the rows later-ranked columns need, then mirror
 
 Type: feature

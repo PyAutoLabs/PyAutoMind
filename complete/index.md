@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1901 records across 9 buckets.
+1905 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -176,6 +176,8 @@ markers; everything below GENERATED is rebuilt.
 - [decision-history](2026/10/decision-history.md)
 - [decision-matrix-gate-wording](2026/10/decision-matrix-gate-wording.md)
 - [delaunay-nn-numba](2026/10/delaunay-nn-numba.md)
+- [delaunaynn-wide-row-overhead](2026/10/delaunaynn-wide-row-overhead.md)
+- [direct-conv-symmetric](2026/10/direct-conv-symmetric.md)
 - [dna-cockpit-registration](2026/10/dna-cockpit-registration.md)
 - [drawer-nullpaths-timer-fix](2026/10/drawer-nullpaths-timer-fix.md)
 - [drop-legacy-claude-md-patterns](2026/10/drop-legacy-claude-md-patterns.md)
@@ -209,6 +211,7 @@ markers; everything below GENERATED is rebuilt.
 - [hst-mge-pilot-choices](2026/10/hst-mge-pilot-choices.md)
 - [hst-mge-pilot-observations](2026/10/hst-mge-pilot-observations.md)
 - [image-dropdown-contrast](2026/10/image-dropdown-contrast.md)
+- [imaging-production-over-sampling](2026/10/imaging-production-over-sampling.md)
 - [imshow-origin-lower-overlays](2026/10/imshow-origin-lower-overlays.md)
 - [inference-browser-polish](2026/10/inference-browser-polish.md)
 - [inference-sampler-literature](2026/10/inference-sampler-literature.md)
@@ -279,6 +282,7 @@ markers; everything below GENERATED is rebuilt.
 - [profiling-setup-redesign](2026/10/profiling-setup-redesign.md)
 - [profiling-setup-wiki](2026/10/profiling-setup-wiki.md)
 - [profiling-summary-v1](2026/10/profiling-summary-v1.md) — PyAutoPulse phase 1 — `build_dashboard.py` gains a fourth output, `dashboard/summary.json`, the `profiling-sum…
+- [ps-source-gradient-admission](2026/10/ps-source-gradient-admission.md)
 - [publish-scientist-board-navigation](2026/10/publish-scientist-board-navigation.md) — Published merged board navigation, resource destinations and presentation polish. All14 other boards link Scie…
 - [pulse-aris-witness-tables](2026/10/pulse-aris-witness-tables.md)
 - [pulse-campaign-control-room](2026/10/pulse-campaign-control-room.md) — One editable/copyable check-in prompt, 11 campaign rows, 25 open tasks, then detailed measurement evidence. 26…

@@ -3,34 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 9 in flight",
-  "updated": "2026-10-17T14:08:47Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
+  "updated": "2026-10-17T16:32:07Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Speed up unique_mappings and adaptive_pixel_signals for wide DelaunayNN rows (imaging) \u2014 library-shipped, awaiting-merge (2026-10-17: PR #637 open; RAL job 412525 A/B: DelaunayNN sub4 0.569\u21920.392 s, 2.20\u00d7 Delaunay (was\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/637",
-      "prompt": "Use the start-dev skill. active/delaunaynn_wide_row_imaging_overhead.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "direct_conv curvature kernel: convolve only the rows later-ranked columns need, then mirror \u2014 workspace-shipped, awaiting-merge (2026-10-17: v3 shipped; RAL real-data witness PASS 1.49x/1.53x/1.58x, logL round-off; Heart\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/636",
-      "prompt": "Use the start-dev skill. active/direct_conv_symmetric_row_restriction.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Imaging production over-sampling presets \u2014 phase 1 (workspace-only) \u2014 workspace-shipped, awaiting-merge (2026-10-17: phase 1 PR open; CPU smoke 8/8 production runs OK; Heart readiness stale, not RED\u2026",
-      "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/431",
-      "prompt": "Use the start-dev skill. active/imaging_production_over_sampling_phase1.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Point-source source-plane gradient-search admission measurement (MultiStartAdam, 2026.10.17.1) \u2014 workspace-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autolens_inference/issues/25",
-      "prompt": "Use the start-dev skill. active/point_source_gradient_admission.md"
-    },
     {
       "severity": "yellow",
       "text": "Point-source image-plane A100 admission measurement on released 2026.10.17.1 \u2014 workspace-shipped, awaiting-merge",
@@ -57,13 +33,13 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#637 \u2014 Speed up unique_mappings and adaptive_pixel_signals for wide DelaunayNN rows (imaging)",
+      "text": "pending release: PyAutoArray PyAutoArray#637 \u2014 delaunaynn-wide-row-overhead",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/637",
       "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#636 \u2014 direct_conv curvature kernel: convolve only the rows later-ranked columns need, then mirror",
+      "text": "pending release: PyAutoArray PyAutoArray#636 \u2014 direct-conv-symmetric",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/636",
       "prompt": null
     },
@@ -126,6 +102,30 @@
       "text": "pick: Fix Sibson interpolation at internal edges",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit/hpc_campaign_epic.md",
+      "prompt": "Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: euclid_dr1: run the positions gate over DR1 and submit the remodel set",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md",
+      "prompt": "Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Guard every workspace script against untimed network downloads",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace/no_untimed_network_downloads_check.md",
+      "prompt": "Use the start-dev skill. draft/test/autolens_workspace/no_untimed_network_downloads_check.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Cache `autonerves` config parsing \u2014 308 YAML files parsed per script run",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/autonerves/config_yaml_parse_cache.md",
+      "prompt": "Use the start-dev skill. draft/refactor/autonerves/config_yaml_parse_cache.md"
     }
   ]
 }

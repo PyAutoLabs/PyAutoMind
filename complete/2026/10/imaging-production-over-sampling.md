@@ -1,3 +1,21 @@
+Phase 1 of the PyAutoPulse `imaging` task `imaging_production_over_sampling` (issue
+autolens_profiling#430). Merged 2026-10-17 as
+https://github.com/PyAutoLabs/autolens_profiling/pull/431 (MERGED), workspace-only:
+
+- `--over-sampling {flat1,production}` (default `flat1`, historic rows reproduce) for the four
+  JAX Delaunay-family imaging cells (`delaunay` / `delaunay_nn` × `likelihood_runtime` /
+  `likelihood_breakdown`); production presets resolved by `--instrument`: euclid
+  `EUCLID_VIS_PIX`, hst `HST_SOURCE_PIX_2`, with file:line provenance in `_production_config.py`.
+- Production rows record their over-sampling configuration and land under `os_production/`.
+- CPU functional smoke only: 8/8 production runs exit 0; no rows recorded, no A100 jobs.
+
+Only phase 1 shipped; later phases of the Pulse task (production rows, A100 timing) remain
+with the Pulse task. Findings left open in the PR: the HST flat-1 `adapt_split` pin already
+drifts on main (29155.000174 vs pinned 29140.296); the numba cells' production threshold reads
+the S/N-capped adapt image, so it under-samples relative to production.
+
+## Original prompt
+
 # Imaging production over-sampling presets — phase 1 (workspace-only)
 
 Type: feature

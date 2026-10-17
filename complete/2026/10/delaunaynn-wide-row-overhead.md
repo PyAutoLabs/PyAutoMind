@@ -1,3 +1,26 @@
+DelaunayNN wide-row imaging overhead (PyAutoArray#629), DelaunayNN imaging arm of the
+PyAutoPulse campaign `delaunay-nn-cpu`. Merged 2026-10-17 as
+https://github.com/PyAutoLabs/PyAutoArray/pull/637 (MERGED):
+
+- `adaptive_pixel_signals_from` (NumPy path) now sums only the live `pix_sizes[i]` entries of
+  the 32-wide Sibson tables via a numba kernel (`adaptive_pixel_signal_sums_from`, bincount
+  fallback), bit-identical to the padded scatter; JAX branch unchanged.
+- `data_slim_to_pixelization_unique_from` resets only the touched `pix_check` entries and the
+  mapper no longer copies the wide tables; outputs bit-identical.
+- Sibson failed rows (overflow/degenerate) keep size ≥ 1 with a NaN weight (reference, numba,
+  JAX), so a failed row now yields NaN evidence instead of a finite, wrong one.
+
+RAL A/B (job 412525, `ral` exclusive, 1 thread): DelaunayNN sub 4 0.569 → 0.392 s
+(2.20× Delaunay, was 3.00×), sub 2 0.235 → 0.189 s (1.75×, was 2.10×); adaptive signals
+158 → 6.5 ms; logL bit-identical on every case. The prompt's ~1.5× acceptance line is **not
+met**: the remainder is the Sibson interpolation itself (~41% of the call) and curvature over
+wider unique-mapping rows, outside this scope. Human decision 2026-10-17: further DelaunayNN
+speed-up is filed as research, not continued here.
+
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/637
+
+## Original prompt
+
 # Speed up unique_mappings and adaptive_pixel_signals for wide DelaunayNN rows (imaging)
 
 Type: feature
