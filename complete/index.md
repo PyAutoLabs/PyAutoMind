@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1908 records across 9 buckets.
+1909 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -210,6 +210,7 @@ markers; everything below GENERATED is rebuilt.
 - [hst-mge-cpu-pilot-plan](2026/10/hst-mge-cpu-pilot-plan.md)
 - [hst-mge-pilot-choices](2026/10/hst-mge-pilot-choices.md)
 - [hst-mge-pilot-observations](2026/10/hst-mge-pilot-observations.md)
+- [hst-mge-pilot-qualification](2026/10/hst-mge-pilot-qualification.md)
 - [image-dropdown-contrast](2026/10/image-dropdown-contrast.md)
 - [imaging-production-over-sampling](2026/10/imaging-production-over-sampling.md)
 - [imshow-origin-lower-overlays](2026/10/imshow-origin-lower-overlays.md)

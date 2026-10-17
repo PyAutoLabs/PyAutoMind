@@ -1,3 +1,10 @@
+## Summary
+Design-only phase (autolens_profiling#418, issue #417; Codex session, shipped 2026-10-13, merged 2026-10-17 under human `/prm` after an independent review with verdict FINDINGS, none blocking). Adds `scripts/misc/jax_compile/QUALIFICATION.md` and a pointer in `PILOT.md`: derives what the HST/MGE CPU pilot computes (no positions term, two unregularized 20-Gaussian bases → the normalized Gaussian data log-likelihood; the 1e-3 stabilizing diagonal changes coefficients, adds no likelihood term), records the PDIP raw-plus-polish controls, proposes an independent witness (independently built imaging operator + `scipy.optimize.nnls`, first as a synthetic harness in autolens_workspace_test with a project adapter), lists every identity to capture, gives candidate tolerances marked unaccepted, and closes with an open-decisions table. No contradiction with the #416 runner; nothing executed, no threshold accepted, no compute authorized.
+
+Review findings carried as the next bounded step (not fixed here): background-load method missing; the 1e-8 relative image L2 budget is likely unattainable against the packaged solver's inactive-column flux allowance, so synthetic-harness calibration must be allowed to revise tolerances; the correctness-process feasibility Pulse requested before finalizing the 32-process / 16 CPU-hour budget is deferred. Pulse: campaign `setup-baseline`, tasks `hst_mge_cpu_pilot` / `hst_mge_cpu_pilot_choices` (status needs-decision until the human selects data/host/stack).
+
+## Original prompt
+
 # HST/MGE pilot: independent correctness qualification design
 
 Filed: 2026-10-13

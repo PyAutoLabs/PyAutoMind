@@ -11,7 +11,7 @@ Status: formalised
 Consequence: judge
 Issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/67
 Filed: 2026-10-15
-Blocked-by: autolens_profiling claimed by hst-mge-pilot-qualification (autolens_profiling#418 awaiting merge)
+Blocked-by: none — the autolens_profiling claim by hst-mge-pilot-qualification cleared (autolens_profiling#418 merged 2026-10-17; record complete/2026/10/hst-mge-pilot-qualification.md)
 Witness: `git grep` over autolens_profiling live config finds no `/mnt/ral/jnightin/{autolens_profiling,autolens_profiling_wt,autolens_profiling_corpus}` path (results/, provenance JSON, captured logs, archive/ exempt); any committed generated summary/check in the repo still passes (`--check` tools, lint tests).
 Review-minutes: 10
 
