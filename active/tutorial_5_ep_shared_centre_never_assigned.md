@@ -15,6 +15,7 @@ Consequence: glance
 Witness: `af.ModelPlotter(factor_graph.global_prior_model).figure()` for tutorial 5 shows one shared `centre` (the blue `shared` badge), the EP state figure shows every dataset factor updating with no `STALE FACTORS` line, the headless run exits 0 and the notebook is regenerated.
 Review-minutes: 3
 Unattended: ready
+Issued: 2026-10-17
 Filed: 2026-09-13
 
 Found 2026-09-13 while rolling the model figure into

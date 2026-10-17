@@ -16,6 +16,7 @@ Consequence: glance
 Review-minutes: 3
 Unattended: ready
 Witness: a fresh clone of a release-tagged workspace with the matching released library emits no workspace-version UserWarning.
+Issued: 2026-10-17
 Filed: 2026-09-15
 Revised: 2026-09-15 — the first version of this prompt proposed bumping HowToFit's floor. That is wrong; see below.
 
