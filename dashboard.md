@@ -906,7 +906,7 @@ Use the start-dev skill. active/point_source_gradient_admission.md
 
 </details>
 
-<details><summary>📋 <a href="active/point_source_image_plane_gpu_admission.md">Point-source image-plane A100 admission measurement on released 2026.10.17.1</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/427">issue #427</a> — issued 2026-10-17 — workspace-dev</summary>
+<details><summary>📋 <a href="active/point_source_image_plane_gpu_admission.md">Point-source image-plane A100 admission measurement on released 2026.10.17.1</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/427">issue #427</a> — issued 2026-10-17 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/434">autolens_profiling#434</a></summary>
 
 ```
 Use the start-dev skill. active/point_source_image_plane_gpu_admission.md

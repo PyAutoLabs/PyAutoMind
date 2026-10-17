@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 9 in flight",
-  "updated": "2026-10-17T14:01:23Z",
+  "updated": "2026-10-17T14:08:47Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -30,6 +30,12 @@
       "text": "Point-source source-plane gradient-search admission measurement (MultiStartAdam, 2026.10.17.1) \u2014 workspace-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autolens_inference/issues/25",
       "prompt": "Use the start-dev skill. active/point_source_gradient_admission.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Point-source image-plane A100 admission measurement on released 2026.10.17.1 \u2014 workspace-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/434",
+      "prompt": "Use the start-dev skill. active/point_source_image_plane_gpu_admission.md"
     },
     {
       "severity": "yellow",
@@ -120,12 +126,6 @@
       "text": "pick: Fix Sibson interpolation at internal edges",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit/hpc_campaign_epic.md",
-      "prompt": "Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md"
     }
   ]
 }
