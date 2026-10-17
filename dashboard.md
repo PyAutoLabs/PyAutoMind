@@ -874,7 +874,7 @@ Use the start-dev skill. active/hst_mge_pilot_qualification.md
 
 </details>
 
-<details><summary>📋 <a href="active/imaging_production_over_sampling_phase1.md">Imaging production over-sampling presets — phase 1 (workspace-only)</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/430">issue #430</a> — issued 2026-10-17 — workspace-dev</summary>
+<details><summary>📋 <a href="active/imaging_production_over_sampling_phase1.md">Imaging production over-sampling presets — phase 1 (workspace-only)</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/430">issue #430</a> — issued 2026-10-17 — workspace-shipped, awaiting-merge (2026-10-17: phase 1 PR open; CPU smoke 8/8 production runs OK; Heart readiness stale, not RED… — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/431">autolens_profiling#431</a></summary>
 
 ```
 Use the start-dev skill. active/imaging_production_over_sampling_phase1.md
