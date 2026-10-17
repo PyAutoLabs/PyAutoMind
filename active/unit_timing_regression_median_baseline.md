@@ -19,3 +19,6 @@ The 3.56× "regression" compares against a single fast-runner sample: the NSS te
 ## Proposed fix
 
 Baseline = rolling median over the last N comparable runs (not latest/fastest single run), and normalise each test by a run-speed factor (e.g. median ratio across the suite, or a fixed reference test) before applying the unchanged 1.5×/3× thresholds. This is a detector correctness fix, not a threshold change.
+
+Issued: 2026-10-17
+Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/304

@@ -8,7 +8,8 @@ Repos:
 Difficulty: small
 Autonomy: safe
 Priority: medium
-Status: formalised
+Status: active
+Issued: 2026-10-17
 Consequence: glance
 Witness: after the fix, running the smoke wipe against a workspace whose output/ holds a tracked .gitignore leaves `git status --short` empty; before the fix it shows ` D output/.gitignore`.
 Review-minutes: 3

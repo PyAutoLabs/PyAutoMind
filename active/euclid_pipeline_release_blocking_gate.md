@@ -33,3 +33,6 @@ kept out of that PR because they live in a different repo:
 
 Acceptance: `pyauto-heart readiness` reflects a euclid smoke red; the weekly sweep run lists
 euclid; no change to any other repo's gating.
+
+Issued: 2026-10-17
+Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/305

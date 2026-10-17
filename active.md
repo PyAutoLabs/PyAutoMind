@@ -44,3 +44,75 @@
 - repos:
   - autolens_profiling: feature/cluster-pointsolver-robust-settings
 
+
+## smoke-preserve-tracked
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/302
+- issued: 2026-10-17
+- prompt: active/heart_smoke_runner_deletes_the_tracked_output.md
+- session: Codex Work; current chat
+- location: /workspace/scratch/949dc837bafc/heart-smoke
+- status: workspace-shipped, awaiting-merge
+- authorization: User requested four linked dashboard tasks on 2026-10-17; coordinated sequentially; stop at PR review.
+- repos:
+  - PyAutoHeart: feature/smoke-preserve-tracked
+
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/306
+- head: 76fde191cfd5199b367e85b7f3e0927cbe692d4c
+- validation: 1,259 Heart tests passed; final clean-git fixture passed in 32 focused tests.
+- ci: Heart Tests running on this head at last check 2026-10-17.
+- heart: Published 2026-10-17T09:00:24Z STALE; release validation stale: source moved since rehearsal (PyAutoFit, PyAutoGalaxy, PyAutoLens).
+- next: Human /prm after CI. Live weekly sweep unverified for workflow changes.
+
+## result-provenance-guards
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/303
+- issued: 2026-10-17
+- prompt: active/release_integrate_analyze_path_filter_and_workspace_lint.md
+- session: Codex Work; current chat
+- location: /workspace/scratch/949dc837bafc/heart-results
+- status: workspace-shipped, awaiting-merge
+- authorization: User requested four linked dashboard tasks; coordinated sequentially by this session; stop at PR review.
+- repos:
+  - PyAutoHeart: feature/result-provenance-guards
+
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/307
+- head: 99a089fb2d5f7432042c50eb74ac7534626fc2e4
+- validation: Full CI-environment suite: 1,265 pass and one local-fixture failure; fixture corrected, all 55 affected tests pass. Tenant firewall passes.
+- ci: Heart Tests running on this head at last check 2026-10-17.
+- heart: Published 2026-10-17T09:00:24Z STALE; release validation stale: source moved since rehearsal (PyAutoFit, PyAutoGalaxy, PyAutoLens).
+- next: Human /prm after CI. Live weekly sweep unverified for workflow changes.
+
+## unit-timing-robust-baseline
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/304
+- issued: 2026-10-17
+- prompt: active/unit_timing_regression_median_baseline.md
+- session: Codex Work; current chat
+- location: /workspace/scratch/949dc837bafc/heart-timing
+- status: workspace-shipped, awaiting-merge
+- authorization: User requested four linked dashboard tasks; coordinated sequentially by this session; stop at PR review.
+- repos:
+  - PyAutoHeart: feature/unit-timing-robust-baseline
+
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/308
+- head: 09e0284c55169f8786e2de475e32f52cf5026f57
+- validation: 1,259 tests and tenant firewall pass. Oct16 replay clears NSS/3.12 EP false flags; synthetic isolated 4x slowdown remains red.
+- ci: Heart Tests running on this head at last check 2026-10-17.
+- heart: Published 2026-10-17T09:00:24Z STALE; release validation stale: source moved since rehearsal (PyAutoFit, PyAutoGalaxy, PyAutoLens).
+- next: Human /prm after CI. Live weekly sweep unverified for workflow changes.
+
+## euclid-smoke-release-gate
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/305
+- issued: 2026-10-17
+- prompt: active/euclid_pipeline_release_blocking_gate.md
+- session: Codex Work; current chat
+- location: /workspace/scratch/949dc837bafc/heart-euclid
+- status: workspace-shipped, awaiting-merge
+- authorization: User requested four linked dashboard tasks; coordinated sequentially by this session; stop at PR review.
+- repos:
+  - PyAutoHeart: feature/euclid-smoke-release-gate
+
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/309
+- head: 4891a53c5c8e787066e63b8021f3a7dde6a1aff9
+- validation: 1,260 tests and tenant firewall pass; updated workflow test passes (21 tests). Main Euclid smoke prerequisite run37627512732 success.
+- ci: Heart Tests running on this head at last check 2026-10-17.
+- heart: Published 2026-10-17T09:00:24Z STALE; release validation stale: source moved since rehearsal (PyAutoFit, PyAutoGalaxy, PyAutoLens).
+- next: Human /prm after CI. Live weekly sweep unverified for workflow changes.
