@@ -1,4 +1,16 @@
 
+## interferometer-streaming-memo-after
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/368 (reopened, phase 2 RAL CPU 1e8 + A100 rows); https://github.com/PyAutoLabs/autolens_profiling/issues/426 (fnnls memo after-measurement)
+- issued: 2026-10-17
+- session: Claude Code (Opus worker, arm 4 of 4; https://claude.ai/code/session_01QBeyBLN7ntDChx9v1fmt6M)
+- status: workspace-dev
+- classification: research (measurement only), Consequence judge, Autonomy supervised; human-authorized RAL compute 2026-10-17
+- prompts: active/interferometer_streaming_ral_a100_rows.md, active/interferometer_nnls_memo_after_measurement.md
+- worktree: /home/jammy/Code/PyAutoLabs-wt/interferometer-streaming-memo-after
+- claim-note: overlaps hst-mge-pilot-qualification (#418 shipped, files scripts/misc/jax_compile/*.md only; no file overlap)
+- repos:
+  - autolens_profiling: feature/interferometer-streaming-memo-after
+
 ## direct-conv-symmetric
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/635
 - issued: 2026-10-16
