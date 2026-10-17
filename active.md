@@ -56,7 +56,11 @@
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/368 (reopened, phase 2 RAL CPU 1e8 + A100 rows); https://github.com/PyAutoLabs/autolens_profiling/issues/426 (fnnls memo after-measurement)
 - issued: 2026-10-17
 - session: Claude Code (Opus worker, arm 4 of 4; https://claude.ai/code/session_01QBeyBLN7ntDChx9v1fmt6M)
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge (human /prm; Consequence judge)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/435
+- heart-at-ship: STALE — "release validation incomplete: no rehearsal for current source" (no override)
+- ral: jobs 412522 (CPU), 412523 (A100), 412526 (memo); private libs /mnt/ral/jnightin/profiling/PyAuto_2026.10.17.1_interf_meas; RAL wt /mnt/ral/jnightin/profiling/autolens_profiling_wt/interferometer-streaming-memo-after
+- next: /prm #435, then close #368 and #426; Pulse next/Knowledge drafts are with the architect
 - classification: research (measurement only), Consequence judge, Autonomy supervised; human-authorized RAL compute 2026-10-17
 - prompts: active/interferometer_streaming_ral_a100_rows.md, active/interferometer_nnls_memo_after_measurement.md
 - worktree: /home/jammy/Code/PyAutoLabs-wt/interferometer-streaming-memo-after
