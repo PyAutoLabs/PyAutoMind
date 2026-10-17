@@ -3,12 +3,16 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/635
 - issued: 2026-10-16
 - prompt: active/direct_conv_symmetric_row_restriction.md
-- status: library-dev — PAUSED 2026-10-16 by the human; uncommitted v2 (+v3 in flight: ymin ordering, gate 0.7, human-approved). Resume from the checkpoint comment https://github.com/PyAutoLabs/PyAutoArray/issues/635#issuecomment-6219325769 ; next = RAL real-data witness (staged /mnt/ral/jnightin/scratch/aris_l2_20261016), ship, then write-up phase (autolens_profiling note + Pulse Knowledge/decision)
-- session: Claude Code CLI (Opus 5.5); session 13efb443
+- status: workspace-shipped, awaiting-merge (2026-10-17: v3 shipped; RAL real-data witness PASS 1.49x/1.53x/1.58x, logL round-off; Heart STALE (no override); merge library-first: PyAutoArray#636 then autolens_profiling#425; Pulse Knowledge (h) + decision direct-conv-symmetric-gate drafted for the architect to persist)
+- session: Claude Code CLI (Opus 5.5); session 13efb443, resumed 2026-10-17 by the Aris L2 worker (session 01QBeyBLN7ntDChx9v1fmt6M)
 - worktree: ~/Code/PyAutoLabs-wt/direct-conv-symmetric (scripts/patches/logs in l2_scratch/, outside git)
 - repos:
   - PyAutoArray: feature/direct-conv-symmetric
+  - autolens_profiling: feature/direct-conv-symmetric
 - classification: feature (PyAutoArray primary; write-up phase autolens_profiling + PyAutoPulse after library), Consequence glance, Autonomy supervised; serial numba only (human: Nautilus-level parallelism); campaign PyAutoPulse#62
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/636
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/636
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/425
 
 ## hst-mge-pilot-qualification
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/417
