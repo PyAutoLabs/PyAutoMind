@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 17 |
-| [In flight](#in-flight) | 8 |
-| [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 265 |
+| [In flight](#in-flight) | 9 |
+| [Planned](#planned) | 8 |
+| [Backlog](#backlog) | 264 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -850,6 +850,14 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
+<details><summary>📋 <a href="active/delaunaynn_wide_row_imaging_overhead.md">Speed up unique_mappings and adaptive_pixel_signals for wide DelaunayNN rows (imaging)</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/629">issue #629</a> — issued 2026-10-17 — library-dev</summary>
+
+```
+Use the start-dev skill. active/delaunaynn_wide_row_imaging_overhead.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/direct_conv_symmetric_row_restriction.md">direct_conv curvature kernel: convolve only the rows later-ranked columns need, then mirror</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/635">issue #635</a> — issued 2026-10-16 — workspace-shipped, awaiting-merge (2026-10-17: v3 shipped; RAL real-data witness PASS 1.49x/1.53x/1.58x, logL round-off; Heart… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/636">PyAutoArray#636</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/425">autolens_profiling#425</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
@@ -919,7 +927,7 @@ Use the start-dev skill. active/ral_route_constants_fft_levers.md
 Scoped but not started; some are not yet prompt files. Full detail in [`planned.md`](planned.md).
 
 <details>
-<summary><b>9</b> task(s)</summary>
+<summary><b>8</b> task(s)</summary>
 
 <details><summary>📋 <b>point-source-image-gpu-admission</b> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/427">issue #427</a> — planned 2026-10-17</summary>
 
@@ -981,14 +989,6 @@ Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_parti
 
 ```
 Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md
-```
-
-</details>
-
-<details><summary>📋 <b>delaunaynn-wide-row-overhead</b> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/629">issue #629</a> — planned 2026-10-15</summary>
-
-```
-Use the start-dev skill. draft/feature/autoarray/delaunaynn_wide_row_imaging_overhead.md
 ```
 
 </details>
@@ -1659,7 +1659,7 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>feature</b> — 35</summary>
+<summary><b>feature</b> — 34</summary>
 
 <details><summary>📋 <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding against the raw maximum finds…</a> — autoarray · small · supervised · medium</summary>
 
@@ -1873,14 +1873,6 @@ Use the start-dev skill. draft/feature/jax_substructure/5_prng_key_vmap_noise.md
 
 ```
 Use the start-dev skill. draft/feature/jax_substructure/6_deflection_equivalence_test.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autoarray/delaunaynn_wide_row_imaging_overhead.md">Speed up unique_mappings and adaptive_pixel_signals for wide DelaunayNN rows (imaging)</a> — autoarray · small · supervised · low</summary>
-
-```
-Use the start-dev skill. draft/feature/autoarray/delaunaynn_wide_row_imaging_overhead.md
 ```
 
 </details>
@@ -2744,6 +2736,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 |------|-------|------|
 | 2026-10-17 | planned | <a href="planned.md#point-source-image-gpu-admission">point-source-image-gpu-admission</a> |
 | 2026-10-17 | issued | <a href="active/hst_mass_lens_light_mode_clean_slate.md"><code>@autolens_inference</code> HST clean slate, phase 1: lens-light mode as a…</a> |
+| 2026-10-17 | issued | <a href="active/delaunaynn_wide_row_imaging_overhead.md">Speed up unique_mappings and adaptive_pixel_signals for wide…</a> |
 | 2026-10-17 | issued | <a href="active/ral_route_constants_fft_levers.md">RAL route-gate constants and A100 FFT size levers (interferometer)</a> |
 | 2026-10-17 | issued | <a href="active/point_source_gradient_admission.md">Point-source source-plane gradient-search admission measurement…</a> |
 | 2026-10-17 | issued | <a href="active/point_source_image_plane_gpu_admission.md">Point-source image-plane A100 admission measurement on released…</a> |
@@ -2751,14 +2744,13 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-16 | filed | <a href="draft/bug/pyautohands/pre_build_blacks_unstaged_slam_pipeline.md">pre_build runs black on slam_pipeline/ for every workspace but stages…</a> |
 | 2026-10-16 | issued | <a href="active/direct_conv_symmetric_row_restriction.md">direct_conv curvature kernel: convolve only the rows later-ranked…</a> |
 | 2026-10-16 | filed | <a href="draft/maintenance/autolens_workspace/remeasure_shapelets_slow_park.md">Re-measure the shapelets/modeling.py SLOW park (#586) under the…</a> |
-| 2026-10-16 | filed | <a href="draft/bug/pyautoheart/unit_timing_regression_median_baseline.md">Heart unit-timing regression detector: rolling-median baseline and…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-16 | filed | <a href="draft/bug/pyautoheart/unit_timing_regression_median_baseline.md">Heart unit-timing regression detector: rolling-median baseline and…</a> |
 | 2026-10-16 | filed | <a href="draft/bug/pyautomind/glance_shadow_window_reached.md">Glance shadow window reached 20/20 clean — count line must say…</a> |
-| 2026-10-15 | planned | <a href="planned.md#delaunaynn-wide-row-overhead">delaunaynn-wide-row-overhead</a> |
 | 2026-10-15 | filed | <a href="draft/refactor/cortex/ral_category_paths_autolens_profiling.md">RAL category paths — last repo: autolens_profiling, then drop the…</a> |
 | 2026-10-14 | filed | <a href="draft/test/autofit/workspace_searches_scripts_preexisting_failures.md"><code>@autofit_workspace</code> six <code>searches/</code> scripts fail on main at…</a> |
 | 2026-10-14 | filed | <a href="draft/test/autofit/emcee_jax_timing_test_flaky_on_ci.md"><code>@PyAutoFit</code> <code>test_emcee_call_path_runs_at_jitted_speed</code> is a…</a> |
@@ -2851,13 +2843,12 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-90 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+89 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
 
 - `draft/feature/autoarray/adapt_linear_default_flip.md`
-- `draft/feature/autoarray/delaunaynn_wide_row_imaging_overhead.md`
 - `draft/feature/autoarray/rectangular_multi_submesh.md`
 - `draft/feature/autofit/model_figures_epic.md`
 - `draft/feature/autofit/results_library_epic_report.md`
@@ -2896,17 +2887,17 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
 - `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md`
 - `draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md`
-- _… and 50 more_
+- `draft/bug/health_fixes/release_timeout_policy.md`
+- _… and 49 more_
 
 </details>
 
-69 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+68 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
 
 - `draft/feature/autoarray/adapt_linear_default_flip.md — unknown theme keyword(s): inference`
-- `draft/feature/autoarray/delaunaynn_wide_row_imaging_overhead.md — unknown theme keyword(s): imaging, delaunay-nn`
 - `draft/feature/autoarray/edge_zeroed_log_det_cholesky_reuse.md — unknown theme keyword(s): inversion`
 - `draft/feature/autoarray/interferometer_chunked_transform_mapping_matrix.md — unknown theme keyword(s): jax-gpu, vram`
 - `draft/feature/autoarray/interferometer_curvature_preload_phase1.md — unknown theme keyword(s): inversion, likelihood-profiling`
