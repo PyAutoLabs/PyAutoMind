@@ -13,7 +13,7 @@
 - freeze: pyauto-heart freeze --show returned not frozen. Readiness remains STALE; no release-readiness claim.
 - pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1706
 - release-link-repair: GitHub pending-release label verified; restored the missing Mind link during close-out.
-- shadow-row: Awaiting human answer required by prm closeout.md 3b; no action classification guessed.
+- shadow-row: Human confirmed merged-unchanged in this chat on 2026-10-17; stage-1 glance row appended to autonomy_log.md.
 
 ## Original prompt
 
