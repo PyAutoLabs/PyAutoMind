@@ -850,7 +850,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the chapter_advanced rename</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1699">issue #1699</a> — issued 2026-10-17 — development</summary>
+<details><summary>📋 <a href="active/howtofit_chapter_3_prose_references.md">PyAutoFit — two stale "HowToFit chapter 3" references after the chapter_advanced rename</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1699">issue #1699</a> — issued 2026-10-17 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1700">PyAutoFit#1700</a></summary>
 
 ```
 Use the start-dev skill. active/howtofit_chapter_3_prose_references.md
@@ -866,7 +866,7 @@ Use the start-dev skill. active/hst_cleanslate_numba_cpu_shared_source_lp.md
 
 </details>
 
-<details><summary>📋 <a href="active/minimum_library_version_stale.md">The workspace staleness warning keys off a value documented never to move</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/202">issue #202</a> — issued 2026-10-17 — development</summary>
+<details><summary>📋 <a href="active/minimum_library_version_stale.md">The workspace staleness warning keys off a value documented never to move</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/202">issue #202</a> — issued 2026-10-17 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/203">PyAutoNerves#203</a></summary>
 
 ```
 Use the start-dev skill. active/minimum_library_version_stale.md
@@ -874,7 +874,7 @@ Use the start-dev skill. active/minimum_library_version_stale.md
 
 </details>
 
-<details><summary>📋 <a href="active/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> — <a href="https://github.com/PyAutoLabs/HowToFit/issues/72">issue #72</a> — issued 2026-10-17 — development</summary>
+<details><summary>📋 <a href="active/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> — <a href="https://github.com/PyAutoLabs/HowToFit/issues/72">issue #72</a> — issued 2026-10-17 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/HowToFit/pull/74">HowToFit#74</a></summary>
 
 ```
 Use the start-dev skill. active/tutorial_4_runtime_claim.md
@@ -882,7 +882,7 @@ Use the start-dev skill. active/tutorial_4_runtime_claim.md
 
 </details>
 
-<details><summary>📋 <a href="active/tutorial_5_ep_shared_centre_never_assigned.md">HowToFit tutorial 5 (EP) never shares the centre it says it shares</a> — <a href="https://github.com/PyAutoLabs/HowToFit/issues/73">issue #73</a> — issued 2026-10-17 — development</summary>
+<details><summary>📋 <a href="active/tutorial_5_ep_shared_centre_never_assigned.md">HowToFit tutorial 5 (EP) never shares the centre it says it shares</a> — <a href="https://github.com/PyAutoLabs/HowToFit/issues/73">issue #73</a> — issued 2026-10-17 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/HowToFit/pull/75">HowToFit#75</a></summary>
 
 ```
 Use the start-dev skill. active/tutorial_5_ep_shared_centre_never_assigned.md
