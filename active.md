@@ -53,7 +53,9 @@
 - issue: https://github.com/PyAutoLabs/autolens_inference/issues/24
 - issued: 2026-10-17
 - session: Claude Code (Fable 5.1); https://claude.ai/code/session_015KxQzEhy93XdCA9cRZ8Ry6
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/26
+- next: human /prm of #26 (judge tier); expect a trivial dashboard/*.json conflict with #23 (regenerate). Phase 2 (create pin dir on RAL, submit) is separately authorised.
 - worktree: ~/Code/PyAutoLabs-wt/hst-cleanslate-light-mode
 - repos:
   - autolens_inference: feature/hst-cleanslate-light-mode
