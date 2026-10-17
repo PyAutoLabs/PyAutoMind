@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 2 in flight",
-  "updated": "2026-10-17T11:30:07Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
+  "updated": "2026-10-17T12:18:54Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -63,12 +63,6 @@
     },
     {
       "severity": "info",
-      "text": "pick: `@autolens_inference` HST clean slate, phase 1: lens-light mode as a run variant\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autolens_inference/hst_mass_lens_light_mode_clean_slate.md",
-      "prompt": "Use the start-dev skill. draft/feature/autolens_inference/hst_mass_lens_light_mode_clean_slate.md"
-    },
-    {
-      "severity": "info",
       "text": "pick: Reduce the organism's per-session and per-task token load by half",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/organs/reduce_session_token_load.md",
       "prompt": "Use the start-dev skill. draft/maintenance/organs/reduce_session_token_load.md"
@@ -90,6 +84,12 @@
       "text": "pick: HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit/hpc_campaign_epic.md",
       "prompt": "Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: euclid_dr1: run the positions gate over DR1 and submit the remodel set",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md",
+      "prompt": "Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md"
     },
     {
       "severity": "info",
