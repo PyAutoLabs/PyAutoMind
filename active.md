@@ -10,6 +10,21 @@
 - repos:
   - autolens_profiling: feature/imaging-production-over-sampling
 
+## hst-mass-samplers-wave1
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/27
+- issued: 2026-10-17
+- prompt: active/hst_mass_samplers_wave1_submits.md
+- session: Claude Code (Fable 5.1); https://claude.ai/code/session_015KxQzEhy93XdCA9cRZ8Ry6
+- status: workspace-dev
+- classification: research (workspace-only, PyAutoInsight hst-imaging-mass-samplers phase 3 wave 1), Consequence judge, Autonomy supervised; human-authorised 2026-10-17 incl. merge + GPU wave submit afterok on the phase-2 A100 dense base
+- worktree: ~/Code/PyAutoLabs-wt/hst-mass-samplers-wave1
+- claim-note: co-claims autolens_inference with ps-source-gradient-admission (#25: point_source/, misc/searches/_point_runner.py, point-source submits, check_submits.py, lint.yml); this task adds misc/experiments/wave.py, two mass-sampler submits, hpc/sync --dependency and docs — disjoint paths
+- repos:
+  - autolens_inference: feature/hst-mass-samplers-wave1
+- summary: |
+    Wave-1 arm table (2 light modes x nautilus/emcee/nuts/smc x seeds 0-2 = 24 arms), A100 + ral submits,
+    hpc/sync --dependency pass-through, accounting helper; GPU wave submitted afterok on the phase-2 base.
+
 ## delaunaynn-wide-row-overhead
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/629
 - issued: 2026-10-17

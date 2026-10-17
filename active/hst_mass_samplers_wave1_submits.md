@@ -9,7 +9,9 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
+Issued: 2026-10-17
+Issue: https://github.com/PyAutoLabs/autolens_inference/issues/27
 Consequence: judge
 Witness: the wave-1 GPU submit resolves a prepared manifest's `id` at run time and runs `scripts/misc/experiments/run.py` for every (sampler, seed) arm with `--validate-only` succeeding against a locally exported euclid test-mode problem under both light modes; `check_submits.py --check` passes; the manifest/accounting helper lists every expected arm as row, failed or missing; CI green.
 Review-minutes: 25
