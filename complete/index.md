@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1905 records across 9 buckets.
+1908 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -226,6 +226,7 @@ markers; everything below GENERATED is rebuilt.
 - [interferometer-numba-route-gate](2026/10/interferometer-numba-route-gate.md)
 - [interferometer-route-gate-phase2](2026/10/interferometer-route-gate-phase2.md)
 - [interferometer-sparse-data-vector](2026/10/interferometer-sparse-data-vector.md) — The sparse-operator interferometer inversion now builds its data vector directly from the mapper's COO triplet…
+- [interferometer-streaming-memo-after](2026/10/interferometer-streaming-memo-after.md)
 - [interferometer-streaming-scaling](2026/10/interferometer-streaming-scaling.md) — CPU streaming scaling cells and evidence shipped, including accumulation to 5e7 visibilities, in-memory failur…
 - [jax-lapack-compatibility-repair](2026/10/jax-lapack-compatibility-repair.md)
 - [likelihood-menu-labels](2026/10/likelihood-menu-labels.md)
@@ -258,6 +259,7 @@ markers; everything below GENERATED is rebuilt.
 - [point-image-pair-all-forward-grad-nan](2026/10/point-image-pair-all-forward-grad-nan.md)
 - [point-solver-duplicate-policy](2026/10/point-solver-duplicate-policy.md)
 - [point-solver-image-accuracy](2026/10/point-solver-image-accuracy.md)
+- [point-source-image-gpu-admission](2026/10/point-source-image-gpu-admission.md)
 - [point-source-search-nautilus-leaf](2026/10/point-source-search-nautilus-leaf.md)
 - [point-source-wiki-reconcile](2026/10/point-source-wiki-reconcile.md)
 - [pointsolver-extent-sanity-check](2026/10/pointsolver-extent-sanity-check.md)
@@ -301,6 +303,7 @@ markers; everything below GENERATED is rebuilt.
 - [python-matrix-harness](2026/10/python-matrix-harness.md)
 - [ral-category-paths](2026/10/ral-category-paths.md)
 - [ral-category-paths-phase2](2026/10/ral-category-paths-phase2.md)
+- [ral-route-constants-fft-levers](2026/10/ral-route-constants-fft-levers.md)
 - [repos-sync-check-root-routing](2026/10/repos-sync-check-root-routing.md)
 - [restore-dashboard-green](2026/10/restore-dashboard-green.md)
 - [retire-claude-md-pointers](2026/10/retire-claude-md-pointers.md)
