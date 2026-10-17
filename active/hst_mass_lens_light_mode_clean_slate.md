@@ -9,7 +9,9 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
+Issued: 2026-10-17
+Issue: https://github.com/PyAutoLabs/autolens_inference/issues/24
 Consequence: judge
 Witness: a euclid-cell `PYAUTO_TEST_MODE=1` chain with `--lens-light both` writes two complete rows (`slam_base` and `slam_base_lightfixed`) from one process, each carrying the five library revisions and the job id, with the fixed-light mass stage model holding no linear light profiles; `--export-prepared` produces a verified manifest for each light mode; all four new submits pass `check_submits.py --check`; `activate.sh` honours a library-root override; CI green.
 Review-minutes: 30
