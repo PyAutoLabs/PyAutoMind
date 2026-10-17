@@ -1,5 +1,6 @@
 # af.Model.from_json writes zero-free-parameter components back as instances
 
+Issued: 2026-10-17
 Type: bug
 Target: PyAutoFit
 Repos:
