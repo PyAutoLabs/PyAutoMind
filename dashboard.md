@@ -850,7 +850,7 @@ Use the start-dev skill. active/cluster_pointsolver_robust_settings_p1.md
 
 </details>
 
-<details><summary>📋 <a href="active/model_from_json_drops_zero_free_parameter_components.md">af.Model.from_json writes zero-free-parameter components back as instances</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1704">issue #1704</a> — issued 2026-10-17 — library-dev</summary>
+<details><summary>📋 <a href="active/model_from_json_drops_zero_free_parameter_components.md">af.Model.from_json writes zero-free-parameter components back as instances</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1704">issue #1704</a> — issued 2026-10-17 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1708">PyAutoFit#1708</a></summary>
 
 ```
 Use the start-dev skill. active/model_from_json_drops_zero_free_parameter_components.md
@@ -858,7 +858,7 @@ Use the start-dev skill. active/model_from_json_drops_zero_free_parameter_compon
 
 </details>
 
-<details><summary>📋 <a href="active/model_function_cannot_resolve_config_priors.md">af.Model(function) cannot resolve config priors</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1702">issue #1702</a> — issued 2026-10-17 — library-dev</summary>
+<details><summary>📋 <a href="active/model_function_cannot_resolve_config_priors.md">af.Model(function) cannot resolve config priors</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1702">issue #1702</a> — issued 2026-10-17 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1705">PyAutoFit#1705</a></summary>
 
 ```
 Use the start-dev skill. active/model_function_cannot_resolve_config_priors.md
@@ -866,7 +866,7 @@ Use the start-dev skill. active/model_function_cannot_resolve_config_priors.md
 
 </details>
 
-<details><summary>📋 <a href="active/pyautofit_prior_model_summary_header_prints_wron.md">PyAutoFit prior-model summary header prints wrong range labels for grouped priors</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1703">issue #1703</a> — issued 2026-10-17 — library-dev</summary>
+<details><summary>📋 <a href="active/pyautofit_prior_model_summary_header_prints_wron.md">PyAutoFit prior-model summary header prints wrong range labels for grouped priors</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1703">issue #1703</a> — issued 2026-10-17 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1706">PyAutoFit#1706</a></summary>
 
 ```
 Use the start-dev skill. active/pyautofit_prior_model_summary_header_prints_wron.md
@@ -890,7 +890,7 @@ Use the start-dev skill. active/tutorial_5_ep_shared_centre_never_assigned.md
 
 </details>
 
-<details><summary>📋 <a href="active/xdist_collection_ids_unstable_in_test_prior.md">xdist collection ids unstable in test_prior_properties</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1701">issue #1701</a> — issued 2026-10-17 — library-dev</summary>
+<details><summary>📋 <a href="active/xdist_collection_ids_unstable_in_test_prior.md">xdist collection ids unstable in test_prior_properties</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1701">issue #1701</a> — issued 2026-10-17 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1707">PyAutoFit#1707</a></summary>
 
 ```
 Use the start-dev skill. active/xdist_collection_ids_unstable_in_test_prior.md
