@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-10-17T19:52:57Z",
+  "headline": "RED \u2014 24 picks \u00b7 3 in flight",
+  "updated": "2026-10-17T20:03:44Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -15,33 +15,9 @@
     },
     {
       "severity": "yellow",
-      "text": "af.Model.from_json writes zero-free-parameter components back as instances \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1708",
-      "prompt": "Use the start-dev skill. active/model_from_json_drops_zero_free_parameter_components.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "af.Model(function) cannot resolve config priors \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1705",
-      "prompt": "Use the start-dev skill. active/model_function_cannot_resolve_config_priors.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "PyAutoFit prior-model summary header prints wrong range labels for grouped priors \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1706",
-      "prompt": "Use the start-dev skill. active/pyautofit_prior_model_summary_header_prints_wron.md"
-    },
-    {
-      "severity": "yellow",
       "text": "HowToFit tutorial 4 promises \"under a minute\" and takes six \u2014 workspace-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/HowToFit/pull/74",
       "prompt": "Use the start-dev skill. active/tutorial_4_runtime_claim.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "xdist collection ids unstable in test_prior_properties \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1707",
-      "prompt": "Use the start-dev skill. active/xdist_collection_ids_unstable_in_test_prior.md"
     },
     {
       "severity": "yellow",
@@ -65,6 +41,30 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#636 \u2014 direct-conv-symmetric",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/636",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1708 \u2014 fixed-model-json",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1708",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1705 \u2014 function-config-priors",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1705",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1707 \u2014 prior-stable-test-ids",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1707",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1706 \u2014 prior-summary-ranges",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1706",
       "prompt": null
     },
     {

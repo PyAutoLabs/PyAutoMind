@@ -1,3 +1,24 @@
+## fixed-model-json
+- completed: 2026-10-17
+- constraint: Human confirmed 2026-10-17 that existing model/search unique IDs and output-folder names must not change; baseline hashes and exact output paths checked across all four branches.
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1704
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1708
+- head: b4b9e2e0af657ebacbb63394f96d6499361bc951
+- validation: Final full serial suite 3704 passed, 120 skipped, 1 xfailed; affected model/graph/aggregator tests 305 passed. Initial five from_instance regressions repaired; legacy instance JSON behavior retained.
+- identifier-evidence: Free/fixed/mixed baseline model hashes, search IDs and exact output paths unchanged; converted-instance JSON and hash also unchanged. JSON roundtrip preserves original persistent identifiers.
+- witness-detail: GraphSpec comparison excludes process-local obj_id/prior_id counters (pre-existing JSON limitation); all semantic graph fields compared. No identifier algorithm edits.
+- merge: 48f1c31beaa7e0c50978646ee14e19511119c4cc
+- authorization: Human /prm in this chat, 2026-10-17.
+- merge-proof: Remote PR head is an ancestor of origin/main in unshallowed PyAutoFit; zero unmerged commits. GitHub confirms MERGED.
+- ci: All head workflows and jobs completed successfully; Python 3.12, 3.13 and no-JAX test legs passed. Applicable docs and generated-search-docs passed. No review objections.
+- freeze: pyauto-heart freeze --show returned not frozen. Readiness remains STALE; no release-readiness claim.
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1708
+- release-link-repair: GitHub pending-release label verified; restored the missing Mind link during close-out.
+- shadow-row: Awaiting human answer required by prm closeout.md 3b; no action classification guessed.
+- release-follow-up: Remove the lens cookbook reload warning after this library fix is released.
+
+## Original prompt
+
 # af.Model.from_json writes zero-free-parameter components back as instances
 
 Issued: 2026-10-17

@@ -25,6 +25,6 @@ Measured 2026-09-11 on clean main e331e33: 'python -m pytest test_autofit/graphi
 
 Fix: give every EP test that writes output its own tmp_path-rooted output directory (a conftest fixture pointing the conf output path at tmp_path, or a unique_tag per test), so the suite is parallel-safe.
 
-Related: draft/bug/autofit/xdist_collection_ids_unstable_in_test_prior.md covers the other xdist breakage (collection-id mismatch in test_prior_properties), a separate cause.
+Related: complete/2026/10/prior-stable-test-ids.md covers the other xdist breakage (collection-id mismatch in test_prior_properties), a separate cause.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-09-11 from user-intake -->

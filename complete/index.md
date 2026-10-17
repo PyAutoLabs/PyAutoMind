@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1917 records across 9 buckets.
+1921 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -194,7 +194,9 @@ markers; everything below GENERATED is rebuilt.
 - [evaluation-grid-cap-field](2026/10/evaluation-grid-cap-field.md)
 - [eyes-focused-figure-browser](2026/10/eyes-focused-figure-browser.md)
 - [fit-util-masked-division](2026/10/fit-util-masked-division.md)
+- [fixed-model-json](2026/10/fixed-model-json.md)
 - [fork-context-darwin-test](2026/10/fork-context-darwin-test.md)
+- [function-config-priors](2026/10/function-config-priors.md)
 - [grouped-smoke-install](2026/10/grouped-smoke-install.md)
 - [heart-dashboard-collectors](2026/10/heart-dashboard-collectors.md)
 - [heart-dashboard-markdown-link-test](2026/10/heart-dashboard-markdown-link-test.md)
@@ -267,6 +269,8 @@ markers; everything below GENERATED is rebuilt.
 - [point-source-search-nautilus-leaf](2026/10/point-source-search-nautilus-leaf.md)
 - [point-source-wiki-reconcile](2026/10/point-source-wiki-reconcile.md)
 - [pointsolver-extent-sanity-check](2026/10/pointsolver-extent-sanity-check.md)
+- [prior-stable-test-ids](2026/10/prior-stable-test-ids.md)
+- [prior-summary-ranges](2026/10/prior-summary-ranges.md)
 - [profile-database-identifier-fix](2026/10/profile-database-identifier-fix.md)
 - [profiling-baseline-campaign](2026/10/profiling-baseline-campaign.md)
 - [profiling-baseline-readiness](2026/10/profiling-baseline-readiness.md)
