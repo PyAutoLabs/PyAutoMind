@@ -33,3 +33,14 @@
   - HowToFit: feature/howtofit-ep-shared-centre
 
 - ci-blocker: HowToFit run 39055282617; both 3.12 and 3.13 fail tutorial_6_gradients.py because nautilus is absent. Logs captured in PR #75 comment. Navigator and Tutorials Complete pass.
+## cluster-pointsolver-robust-settings
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/436
+- issued: 2026-10-17
+- prompt: active/cluster_pointsolver_robust_settings_p1.md
+- session: Claude Code (Fable 5.1); https://claude.ai/code/session_01MJFczsaH2vYuhFWLneD7F5
+- status: workspace-dev
+- classification: research (autolens_profiling only; Pulse campaign cluster-pointsolver phase 1), Consequence judge, Autonomy supervised; plan approved in chat 2026-10-17; compute per-job human authorization; no laptop timing
+- worktree: ~/Code/PyAutoLabs-wt/cluster-pointsolver-robust-settings
+- repos:
+  - autolens_profiling: feature/cluster-pointsolver-robust-settings
+
