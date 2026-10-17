@@ -55,3 +55,36 @@
 - authorization: User requested four linked dashboard tasks on 2026-10-17; coordinated sequentially; stop at PR review.
 - repos:
   - PyAutoHeart: feature/smoke-preserve-tracked
+
+## result-provenance-guards
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/303
+- issued: 2026-10-17
+- prompt: active/release_integrate_analyze_path_filter_and_workspace_lint.md
+- session: Codex Work; current chat
+- location: /workspace/scratch/949dc837bafc/heart-results
+- status: workspace-dev
+- authorization: User requested four linked dashboard tasks; coordinated sequentially by this session; stop at PR review.
+- repos:
+  - PyAutoHeart: feature/result-provenance-guards
+
+## unit-timing-robust-baseline
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/304
+- issued: 2026-10-17
+- prompt: active/unit_timing_regression_median_baseline.md
+- session: Codex Work; current chat
+- location: /workspace/scratch/949dc837bafc/heart-timing
+- status: workspace-dev
+- authorization: User requested four linked dashboard tasks; coordinated sequentially by this session; stop at PR review.
+- repos:
+  - PyAutoHeart: feature/unit-timing-robust-baseline
+
+## euclid-smoke-release-gate
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/305
+- issued: 2026-10-17
+- prompt: active/euclid_pipeline_release_blocking_gate.md
+- session: Codex Work; current chat
+- location: /workspace/scratch/949dc837bafc/heart-euclid
+- status: workspace-dev
+- authorization: User requested four linked dashboard tasks; coordinated sequentially by this session; stop at PR review.
+- repos:
+  - PyAutoHeart: feature/euclid-smoke-release-gate
