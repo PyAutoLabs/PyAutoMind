@@ -1,3 +1,25 @@
+# smoke-preserve-tracked
+
+Completed: 2026-10-17
+Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/302
+PR: https://github.com/PyAutoLabs/PyAutoHeart/pull/306
+
+Smoke cleanup preserves tracked output files and ancestors, does not follow symlinks, and fails closed if the git index cannot be read. Real-git regression confirms a clean working tree after wiping generated output.
+
+## Verification and merge
+
+User /prm authorized the merge. GitHub confirmed MERGED; git merge-base --is-ancestor proves the shipped head is in origin/main. Only PyAutoHeart has a claimed implementation branch; no sibling implementation remains. Both Python 3.12 and 3.13 jobs passed on the exact shipped head in https://github.com/PyAutoLabs/PyAutoHeart/actions/runs/39057215449, including the tenant firewall. No skipped test legs. Issue closed as completed.
+
+Published Heart at shipping was STALE because source moved since release rehearsal; this development merge does not assert release readiness. Live weekly cloud sweep remains unverified where applicable.
+
+## Close-out notes
+
+Original task worktrees are absent from this session; no worktree or data was deleted.
+
+Review-log classification remains unconfirmed: the human-action question was unanswered. The merged heads match the shipped heads; no shadow row or human confirmation is invented.
+
+## Original prompt
+
 # Heart smoke runner deletes the tracked output/.gitignore when wiping output/
 
 Type: bug

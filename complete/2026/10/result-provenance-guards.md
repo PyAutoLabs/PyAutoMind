@@ -1,3 +1,25 @@
+# result-provenance-guards
+
+Completed: 2026-10-17
+Issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/303
+PR: https://github.com/PyAutoLabs/PyAutoHeart/pull/307
+
+Collectors reject foreign result shards with diagnostics; analyze fails closed before aggregation. The reusable smoke workflow rejects tracked validation output. Tests cover traversal, sibling prefixes, symlink escapes, invalid counts, and tracked versus untracked reports.
+
+## Verification and merge
+
+User /prm authorized the merge. GitHub confirmed MERGED; git merge-base --is-ancestor proves the shipped head is in origin/main. Only PyAutoHeart has a claimed implementation branch; no sibling implementation remains. Both Python 3.12 and 3.13 jobs passed on the exact shipped head in https://github.com/PyAutoLabs/PyAutoHeart/actions/runs/39057220045, including the tenant firewall. No skipped test legs. Issue closed as completed.
+
+Published Heart at shipping was STALE because source moved since release rehearsal; this development merge does not assert release readiness. Live weekly cloud sweep remains unverified where applicable.
+
+## Close-out notes
+
+Original task worktrees are absent from this session; no worktree or data was deleted.
+
+Review-log classification remains unconfirmed: the human-action question was unanswered. The merged heads match the shipped heads; no shadow row or human confirmation is invented.
+
+## Original prompt
+
 # release-integrate: analyze-side foreign-path filter and a workspace-repo lint for tracked result files
 
 Type: bug
