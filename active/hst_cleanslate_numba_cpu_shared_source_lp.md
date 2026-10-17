@@ -9,7 +9,9 @@ Repos:
 Difficulty: small
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
+Issued: 2026-10-17
+Issue: https://github.com/PyAutoLabs/autolens_inference/issues/31
 Consequence: judge
 Witness: on the euclid cell in test mode, a `jax_cpu` chain run with `--stages source_lp` followed by a `numba_cpu` chain with `--stages-from local_jax_cpu_dense_fp64:source_lp` completes all five stages, its row marks `source_lp[1]` as `shared_from_config: local_jax_cpu_dense_fp64` with that stage's wall excluded from the chain wall field, the numba stages report `use_jax: false`, the mass stages under `--lens-light both` export both prepared problems; a `--stages-from` pointing at an incomplete stage exits 3 without fitting; the two new submits pass `check_submits.py --check`; CI green.
 Review-minutes: 20
