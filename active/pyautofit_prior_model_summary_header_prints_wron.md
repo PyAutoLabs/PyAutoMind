@@ -1,5 +1,6 @@
 # PyAutoFit prior-model summary header prints wrong range labels for grouped priors
 
+Issued: 2026-10-17
 Type: bug
 Target: PyAutoFit
 Repos:

@@ -44,3 +44,51 @@
 - worktree: ~/Code/PyAutoLabs-wt/cluster-pointsolver-robust-settings
 - repos:
   - autolens_profiling: feature/cluster-pointsolver-robust-settings
+
+## prior-stable-test-ids
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1701
+- issued: 2026-10-17
+- prompt: active/xdist_collection_ids_unstable_in_test_prior.md
+- status: library-dev
+- session: Codex Work; current chat (session ID unavailable)
+- worktree: /workspace/scratch/211f457a3795-wt/prior-stable-test-ids
+- authorization: User requested four linked dashboard tasks; sequential coordinated model/prior fixes on isolated branches; stop at PR review, no merge or release.
+- heart: STALE; published feed unreachable, local reports missing.
+- repos:
+  - PyAutoFit: feature/prior-stable-test-ids
+
+## function-config-priors
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1702
+- issued: 2026-10-17
+- prompt: active/model_function_cannot_resolve_config_priors.md
+- status: library-dev
+- session: Codex Work; current chat (session ID unavailable)
+- worktree: /workspace/scratch/211f457a3795-wt/function-config-priors
+- authorization: User requested four linked dashboard tasks; sequential coordinated model/prior fixes on isolated branches; stop at PR review, no merge or release.
+- heart: STALE; published feed unreachable, local reports missing.
+- repos:
+  - PyAutoFit: feature/function-config-priors
+
+## prior-summary-ranges
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1703
+- issued: 2026-10-17
+- prompt: active/pyautofit_prior_model_summary_header_prints_wron.md
+- status: library-dev
+- session: Codex Work; current chat (session ID unavailable)
+- worktree: /workspace/scratch/211f457a3795-wt/prior-summary-ranges
+- authorization: User requested four linked dashboard tasks; sequential coordinated model/prior fixes on isolated branches; stop at PR review, no merge or release.
+- heart: STALE; published feed unreachable, local reports missing.
+- repos:
+  - PyAutoFit: feature/prior-summary-ranges
+
+## fixed-model-json
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1704
+- issued: 2026-10-17
+- prompt: active/model_from_json_drops_zero_free_parameter_components.md
+- status: library-dev
+- session: Codex Work; current chat (session ID unavailable)
+- worktree: /workspace/scratch/211f457a3795-wt/fixed-model-json
+- authorization: User requested four linked dashboard tasks; sequential coordinated model/prior fixes on isolated branches; stop at PR review, no merge or release.
+- heart: STALE; published feed unreachable, local reports missing.
+- repos:
+  - PyAutoFit: feature/fixed-model-json

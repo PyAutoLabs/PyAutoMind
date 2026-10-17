@@ -1,5 +1,6 @@
 # xdist collection ids unstable in test_prior_properties
 
+Issued: 2026-10-17
 Type: bug
 Target: PyAutoFit
 Repos:

@@ -1,5 +1,6 @@
 # af.Model(function) cannot resolve config priors
 
+Issued: 2026-10-17
 Type: bug
 Target: PyAutoFit
 Repos:
