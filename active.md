@@ -1,3 +1,14 @@
+## point-source-image-gpu-admission
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/427
+- issued: 2026-10-17
+- prompt: active/point_source_image_plane_gpu_admission.md
+- session: Claude Code (Opus 5.5 worker under Fable); https://claude.ai/code/session_01QBeyBLN7ntDChx9v1fmt6M
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/point-source-image-gpu-admission
+- repos:
+  - autolens_profiling: feature/point-source-image-gpu-admission
+- note: guard reported co-claims on autolens_profiling (hst-mge-pilot-qualification and the other parallel-array arms); proceeding as a human-authorised parallel-array arm on disjoint paths (results/breakdown/point_source_image, wiki point_source_gpu_breakdown, new submit). A100 job 412519 done.
+
 ## imaging-production-over-sampling
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/430
 - issued: 2026-10-17
