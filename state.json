@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 9 in flight",
-  "updated": "2026-10-17T13:48:20Z",
+  "updated": "2026-10-17T13:49:04Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -18,6 +18,12 @@
       "text": "Imaging production over-sampling presets \u2014 phase 1 (workspace-only) \u2014 workspace-shipped, awaiting-merge (2026-10-17: phase 1 PR open; CPU smoke 8/8 production runs OK; Heart readiness stale, not RED\u2026",
       "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/431",
       "prompt": "Use the start-dev skill. active/imaging_production_over_sampling_phase1.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Point-source source-plane gradient-search admission measurement (MultiStartAdam, 2026.10.17.1) \u2014 workspace-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autolens_inference/issues/25",
+      "prompt": "Use the start-dev skill. active/point_source_gradient_admission.md"
     },
     {
       "severity": "yellow",
@@ -120,12 +126,6 @@
       "text": "pick: Cache `autonerves` config parsing \u2014 308 YAML files parsed per script run",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/autonerves/config_yaml_parse_cache.md",
       "prompt": "Use the start-dev skill. draft/refactor/autonerves/config_yaml_parse_cache.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md",
-      "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md"
     }
   ]
 }

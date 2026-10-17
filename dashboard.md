@@ -898,7 +898,7 @@ Use the start-dev skill. active/interferometer_streaming_ral_a100_rows.md
 
 </details>
 
-<details><summary>📋 <a href="active/point_source_gradient_admission.md">Point-source source-plane gradient-search admission measurement (MultiStartAdam, 2026.10.17.1)</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/25">issue #25</a> — issued 2026-10-17 — workspace-dev</summary>
+<details><summary>📋 <a href="active/point_source_gradient_admission.md">Point-source source-plane gradient-search admission measurement (MultiStartAdam, 2026.10.17.1)</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/25">issue #25</a> — issued 2026-10-17 — workspace-shipped, awaiting-merge</summary>
 
 ```
 Use the start-dev skill. active/point_source_gradient_admission.md
