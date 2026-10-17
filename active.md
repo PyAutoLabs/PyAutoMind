@@ -29,13 +29,13 @@
 - issued: 2026-10-17
 - prompt: active/ral_route_constants_fft_levers.md
 - session: Claude Code (Opus 5.5 worker under Fable, Aris arm phase 2); https://claude.ai/code/session_01QBeyBLN7ntDChx9v1fmt6M
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge (2026-10-17: A100 witness job 412515; pruned FFT saves 19.4/22.1/29.7% of F at alma/alma_high/jvla, F rel <= 1.7e-15, FoM unchanged; jvla coarser pixel scale fails 0.5-nat bar (+1,310..+2,757 nats). Part A dropped: CPU lane closed by the human 2026-10-17, no CPU jobs. Heart STALE (no override). Judge tier, human /prm)
 - classification: research (measurement; library change only if part A supports one), Consequence judge, Autonomy supervised; human-authorized RAL A100 + CPU compute 2026-10-17; campaign PyAutoPulse#62
 - worktree: /home/jammy/Code/PyAutoLabs-wt/ral-route-constants-fft-levers
 - claim-note: co-claims autolens_profiling with hst-mge-pilot-qualification (#418, scripts/misc/jax_compile/* only), direct-conv-symmetric (#425 note), interferometer-streaming-memo-after and ps-source-gradient-admission; new files only, disjoint paths
 - repos:
   - autolens_profiling: feature/ral-route-constants-fft-levers
-
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/433
 
 ## interferometer-streaming-memo-after
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/368 (reopened, phase 2 RAL CPU 1e8 + A100 rows); https://github.com/PyAutoLabs/autolens_profiling/issues/426 (fnnls memo after-measurement)
