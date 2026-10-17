@@ -2,6 +2,7 @@
 
 **Contents**
 
+- [point-source-image-gpu-admission](#point-source-image-gpu-admission)
 - [isothermal-ell-sph-oversampling-at-the-cusp](#isothermal-ell-sph-oversampling-at-the-cusp)
 - [remote-mcp-deployment-tiers](#remote-mcp-deployment-tiers)
 - [samples-parameter-paths](#samples-parameter-paths)
@@ -12,6 +13,17 @@
 - [delaunaynn-wide-row-overhead](#delaunaynn-wide-row-overhead)
 
 <!-- toc:end -->
+
+## point-source-image-gpu-admission
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/427
+- planned: 2026-10-17
+- filed: 2026-10-17
+- classification: workspace (autolens_profiling; research, Consequence judge)
+- suggested-branch: feature/point-source-image-gpu-admission
+- blocked-by: hst-mge-pilot-qualification (using autolens_profiling; PR #418 open)
+- note: human-authorised A100 admission measurement (2026-10-17) runs in RAL scratch meanwhile (no repo edit); commit/PR once the claim clears. Prompt active/point_source_image_plane_gpu_admission.md; campaign PyAutoPulse point-source-image-gpu.
+- affected-repos:
+  - autolens_profiling
 
 ## isothermal-ell-sph-oversampling-at-the-cusp
 - status: planned — NOT yet a prompt file; file one via `/intake` before starting
