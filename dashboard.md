@@ -914,7 +914,7 @@ Use the start-dev skill. active/point_source_image_plane_gpu_admission.md
 
 </details>
 
-<details><summary>📋 <a href="active/ral_route_constants_fft_levers.md">RAL route-gate constants and A100 FFT size levers (interferometer)</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/429">issue #429</a> — issued 2026-10-17 — workspace-dev</summary>
+<details><summary>📋 <a href="active/ral_route_constants_fft_levers.md">RAL route-gate constants and A100 FFT size levers (interferometer)</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/429">issue #429</a> — issued 2026-10-17 — workspace-shipped, awaiting-merge (2026-10-17: A100 witness job 412515; pruned FFT saves 19.4/22.1/29.7% of F at… — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/433">autolens_profiling#433</a></summary>
 
 ```
 Use the start-dev skill. active/ral_route_constants_fft_levers.md

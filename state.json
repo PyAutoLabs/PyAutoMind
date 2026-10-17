@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 9 in flight",
-  "updated": "2026-10-17T13:49:04Z",
+  "updated": "2026-10-17T13:52:11Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -24,6 +24,12 @@
       "text": "Point-source source-plane gradient-search admission measurement (MultiStartAdam, 2026.10.17.1) \u2014 workspace-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autolens_inference/issues/25",
       "prompt": "Use the start-dev skill. active/point_source_gradient_admission.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "RAL route-gate constants and A100 FFT size levers (interferometer) \u2014 workspace-shipped, awaiting-merge (2026-10-17: A100 witness job 412515; pruned FFT saves 19.4/22.1/29.7% of F at\u2026",
+      "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/433",
+      "prompt": "Use the start-dev skill. active/ral_route_constants_fft_levers.md"
     },
     {
       "severity": "yellow",
@@ -120,12 +126,6 @@
       "text": "pick: Guard every workspace script against untimed network downloads",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace/no_untimed_network_downloads_check.md",
       "prompt": "Use the start-dev skill. draft/test/autolens_workspace/no_untimed_network_downloads_check.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Cache `autonerves` config parsing \u2014 308 YAML files parsed per script run",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/autonerves/config_yaml_parse_cache.md",
-      "prompt": "Use the start-dev skill. draft/refactor/autonerves/config_yaml_parse_cache.md"
     }
   ]
 }
