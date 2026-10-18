@@ -21,7 +21,7 @@ User request (verbatim, inference chat 2026-10-18): "can we make it so locally t
 is not cleanslate / experiments / experimental sources etc but just the new structure
 which doesnt need a cleanslate folder?" and, on the proposed tree, "yes that is what i
 mean albeit I think it should go output/autolens/imaging..   i guess 1 is fine so we
-would wait".
+would wait", then "Augolens does not replace slam."
 
 ## Context
 
@@ -48,14 +48,17 @@ and `hpc/README.md` / `scripts/imaging/slam/README.md`.
    mirror):
    ```
    output/
-     autolens/imaging/hst/<variant>/<config>/seed_<n>/<stage>/   # was cleanslate_2026_10_17/slam/imaging/...
-     prepared/<variant>/...                                        # was prepared/cleanslate_2026_10_17/...
-     experiments/<arm>/
-     experiment_sources/<arm>/
+     autolens/
+       slam/imaging/hst/<variant>/<config>/seed_<n>/<stage>/   # was cleanslate_2026_10_17/slam/imaging/...
+       prepared/<variant>/...                                    # was prepared/cleanslate_2026_10_17/...
+       experiments/<arm>/
+       experiment_sources/<arm>/
    ```
-   The human wrote `output/autolens/imaging..` for the base chains. Confirm with the
-   human in the plan whether `autolens` replaces the `slam` level only under `output/`
-   or whether `results/slam/...` and the README `slam` table follow it.
+   Human clarification 2026-10-18 (verbatim): "Augolens does not replace slam." So
+   `autolens` is a new level directly under `output/` and the existing `slam/...` tree
+   sits beneath it. Assumption to confirm in the plan: `prepared`, `experiments` and
+   `experiment_sources` also move under `output/autolens/`; `results/slam/...` and the
+   README `slam` table are unchanged.
 2. Drop `--output-dir`/`--results-tag`/`--export-prepared` dated values from the
    clean-slate submits and the runner defaults; the clean-slate rows become the plain
    `<config_name>` rows (there are no competing plain rows left: the superseded 2026-09-24
