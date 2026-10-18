@@ -44,3 +44,15 @@
 - worktree: ~/Code/PyAutoLabs-wt/cluster-pointsolver-robust-settings
 - repos:
   - autolens_profiling: feature/cluster-pointsolver-robust-settings
+
+## ral-category-paths-autolens-profiling
+- issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/67
+- issued: 2026-10-18
+- prompt: active/ral_category_paths_autolens_profiling.md
+- session: Claude Code (Opus 5.5)
+- status: workspace-dev
+- classification: refactor (autolens_profiling only), Consequence judge, Autonomy supervised; plan approved in chat 2026-10-18; human Heart-RED override 2026-10-18 recorded on #67
+- parallel-worktree: human-approved 2026-10-18 beside cluster-pointsolver-robust-settings (disjoint files: 29 path files vs that branch's 9)
+- worktree: ~/Code/PyAutoLabs-wt/ral-category-paths-autolens-profiling
+- repos:
+  - autolens_profiling: feature/ral-category-paths-autolens-profiling
