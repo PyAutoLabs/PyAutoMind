@@ -21,7 +21,7 @@ User request (verbatim, inference chat 2026-10-18): "can we make it so locally t
 is not cleanslate / experiments / experimental sources etc but just the new structure
 which doesnt need a cleanslate folder?" and, on the proposed tree, "yes that is what i
 mean albeit I think it should go output/autolens/imaging..   i guess 1 is fine so we
-would wait", then "Augolens does not replace slam." and "It should be autolens/imaging/slam not the other way".
+would wait", then "Augolens does not replace slam." "It should be autolens/imaging/slam not the other way" and "I think hst before slam makes sense too the search type and setup is the inner component".
 
 ## Context
 
@@ -49,15 +49,18 @@ and `hpc/README.md` / `scripts/imaging/slam/README.md`.
    ```
    output/
      autolens/
-       imaging/slam/hst/<variant>/<config>/seed_<n>/<stage>/   # was cleanslate_2026_10_17/slam/imaging/...
+       imaging/hst/slam/<variant>/<config>/seed_<n>/<stage>/   # was cleanslate_2026_10_17/slam/imaging/hst/...
        prepared/<variant>/...                                    # was prepared/cleanslate_2026_10_17/...
        experiments/<arm>/
        experiment_sources/<arm>/
    ```
    Human clarification 2026-10-18 (verbatim): "Augolens does not replace slam." Then
-   (verbatim): "It should be autolens/imaging/slam not the other way". So `autolens` is
-   a new level directly under `output/`, and beneath it the dataset class comes before
-   the pipeline: `imaging/slam/hst/...`, swapping today's `slam/imaging/hst/...` order. Assumption to confirm in the plan: `prepared`, `experiments` and
+   (verbatim): "It should be autolens/imaging/slam not the other way". Then
+   (verbatim): "I think hst before slam makes sense too the search type and setup is the
+   inner component". So `autolens` is a new level directly under `output/`; beneath it
+   the order is dataset class, instrument, then pipeline: `imaging/hst/slam/...`. The
+   search type and its setup (`slam/<variant>/<config>`) are the innermost component,
+   replacing today's `slam/imaging/hst/...` order. Assumption to confirm in the plan: `prepared`, `experiments` and
    `experiment_sources` also move under `output/autolens/`; `results/slam/...` and the
    README `slam` table are unchanged.
 2. Drop `--output-dir`/`--results-tag`/`--export-prepared` dated values from the
