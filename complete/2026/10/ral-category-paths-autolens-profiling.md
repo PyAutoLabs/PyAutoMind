@@ -1,3 +1,16 @@
+## Summary
+Last repo of the RAL category-layout move (PyAutoCortex#67). autolens_profiling#437 (merge 173ab272) repoints every live hard-coded `/mnt/ral/jnightin/autolens_profiling{,_wt,_corpus}` to `/mnt/ral/jnightin/profiling/…`: 84 files, path-only (91 lines changed). SLURM templates use an overridable `AP_ROOT=${AP_ROOT:-/mnt/ral/jnightin/profiling/autolens_profiling}`. `hpc/sync.conf.example` now has `HPC_BASE=/mnt/ral/jnightin/profiling`, and the `LOCAL_PULL_ROOT` default, which pointed at the missing `Science/inference_programme`, now points at `Science/profiling/autolens_profiling`.
+
+Scope note: the prompt estimated ~77 files and a narrow grep found 29. The real count is 84, because a comment containing `…autolens_profiling:` is repeated in ~50 submit scripts; use a loose grep for path moves.
+
+Validation: Witness grep empty outside results/ and archive/; lint.yml steps local PASS; pytest 1457 passed, 6 skipped; CI lint green. Shipped under a human Heart-RED development override (recorded on #67, the PR, active.md and autonomy_log). Merged on a separate human `/prm` command.
+
+Ran in a parallel worktree beside cluster-pointsolver-robust-settings (#436), human-approved; the files are disjoint.
+
+After merge (2026-10-18, this session): RAL `profiling/autolens_profiling` ff 9ad12abd → 173ab272 (326 commits; 16 byte-identical untracked fixed_light_trace results moved to `scratch/ap_aside_20261018/`), then the root links autolens_profiling, autolens_profiling_wt and autolens_profiling_corpus removed; only `euclid_dr1` remains. PyAutoCortex#67 closed.
+
+## Original prompt
+
 # RAL category paths — last repo: autolens_profiling, then drop the last RAL links
 
 Type: refactor
