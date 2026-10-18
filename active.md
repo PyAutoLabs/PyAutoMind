@@ -50,7 +50,12 @@
 - issued: 2026-10-18
 - prompt: active/ral_category_paths_autolens_profiling.md
 - session: Claude Code (Opus 5.5)
-- status: workspace-dev
+- status: awaiting-merge
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/437
+- heart-red-override:
+  - authorization: human, live chat 2026-10-18, "I authorize override" (this task, Cortex#67); development shipping only, merge = separate human /prm
+  - red-reasons: PyAutoFit: CI failure — https://api.github.com/repos/PyAutoLabs/PyAutoFit/actions/runs/39111874604; PyAutoFit: PyAutoFit: CI failure; PyAutoFit/Tests: failure; PyAutoFit/workflows/Tests: failure; PyAutoArray/Tests: red; PyAutoArray/Tests: red; PyAutoFit/Tests: red; PyAutoFit/Tests: red; PyAutoFit/Tests: red; PyAutoFit/Tests: red; autofit_workspace_test/Smoke Tests: red; autogalaxy_workspace_test/Smoke Tests: red; autolens_workspace_test/Smoke Tests: red; CI wall-clock: 27 gates · slowest PyAutoBrain Nightly Release 90m · 9 hang events; PyAutoFit: PyAutoFit: CI failure; PyAutoArray: red; autolens_inference: red; autolens_profiling: red; Worktree drift: 5 orphan / 0 missing / 4 dirty; euclid_strong_lens_modeling_pipeline: red
+  - passed-gates: Witness empty; bash -n + py_compile; lint.yml steps local PASS; pytest 1457 passed 6 skipped; author diff review path-only; smoke n/a
 - classification: refactor (autolens_profiling only), Consequence judge, Autonomy supervised; plan approved in chat 2026-10-18; human Heart-RED override 2026-10-18 recorded on #67
 - parallel-worktree: human-approved 2026-10-18 beside cluster-pointsolver-robust-settings (disjoint files: 29 path files vs that branch's 9)
 - worktree: ~/Code/PyAutoLabs-wt/ral-category-paths-autolens-profiling
