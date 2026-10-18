@@ -671,3 +671,17 @@ autolens_workspace_test#343 (ebb9c866, 2026-10-04). Issue #645 closed via /prm.
 Record: complete/2026/10/evaluation-grid-cap-field.md. No later phase issued;
 seed/path coverage remains the next single-issue candidate, and the separate
 masked-caustic prompt is still open.
+
+## New child filed: cluster fit visualizer — 2026-10-18
+
+Filed from the Pulse `cluster-pointsolver` chat (autolens_profiling#436 pilot running as RAL job
+412567). `draft/feature/autolens/cluster_fit_visualizer_cluster_wide_model_fit.md` is a new child
+of this arc (Epic cluster-strong-lensing), NOT phase 8: phase 8 remains magnification maps only.
+It depends only on shipped phase 3. Scope: a cluster-aware model-fit visualizer (cluster-wide
+model-vs-observed positions figure, per-plane critical curves, per-system zooms with cluster-scale
+defaults) reusing `autolens/cluster/plot/cluster_plots.py` and absorbing the unfiled
+PyAutoLens#577 follow-ups. Paired Eyes surface:
+`draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md`.
+The campaign's oracle-verification figure stays in autolens_profiling (measurement artefact).
+Human note 2026-10-18: galaxy-scale visualization defaults "will look awful on cluster scales";
+expect bespoke figures or updated tool defaults. No phase issued by this note.

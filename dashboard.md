@@ -12,13 +12,13 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 3 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 252 |
+| [Backlog](#backlog) | 254 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 2 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 18
+**Highest priority** (filed as `high`) — showing 12 of 19
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -108,10 +108,10 @@ Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md
 
 </details>
 
-<details><summary>📋 <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> — euclid · large · human-required · high</summary>
+<details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
 
 ```
-Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md
+Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md
 ```
 
 </details>
@@ -531,7 +531,7 @@ Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens
 </details>
 
 <details>
-<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 12 queued prompt(s), in order</summary>
+<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 13 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Cluster strong lensing — Source &amp; Cluster arc</b> — ledger: `draft/feature/autolens/source_cluster_arc.md` — In progress — 1a–1d, phase 3a audit (profiling#364, workspace_test#341) and phase 3b field-preserving cap fix (Galaxy#646…</summary>
 
@@ -625,6 +625,14 @@ Use the start-dev skill. draft/docs/howtolens/cluster_pixelized_source.md
 
 ```
 Use the start-dev skill. draft/feature/autolens/cluster_curves_engine_dispatch.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/cluster_fit_visualizer_cluster_wide_model_fit.md">Cluster fit visualizer: cluster-wide model-fit figures at cluster scale</a> — autolens · large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens/cluster_fit_visualizer_cluster_wide_model_fit.md
 ```
 
 </details>
@@ -1531,7 +1539,15 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>feature</b> — 34</summary>
+<summary><b>feature</b> — 35</summary>
+
+<details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding against the raw maximum finds…</a> — autoarray · small · supervised · medium</summary>
 
