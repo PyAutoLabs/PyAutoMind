@@ -858,7 +858,7 @@ Use the start-dev skill. active/cluster_pointsolver_robust_settings_p1.md
 
 </details>
 
-<details><summary>📋 <a href="active/ral_category_paths_autolens_profiling.md">RAL category paths — last repo: autolens_profiling, then drop the last RAL…</a> — <a href="https://github.com/PyAutoLabs/PyAutoCortex/issues/67">issue #67</a> — issued 2026-10-18 — workspace-dev</summary>
+<details><summary>📋 <a href="active/ral_category_paths_autolens_profiling.md">RAL category paths — last repo: autolens_profiling, then drop the last RAL…</a> — <a href="https://github.com/PyAutoLabs/PyAutoCortex/issues/67">issue #67</a> — issued 2026-10-18 — awaiting-merge</summary>
 
 ```
 Use the start-dev skill. active/ral_category_paths_autolens_profiling.md
