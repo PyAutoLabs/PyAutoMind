@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 17 |
-| [In flight](#in-flight) | 3 |
+| [In flight](#in-flight) | 4 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 254 |
+| [Backlog](#backlog) | 253 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 2 |
 
@@ -854,6 +854,14 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ```
 Use the start-dev skill. active/cluster_pointsolver_robust_settings_p1.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/ral_category_paths_autolens_profiling.md">RAL category paths — last repo: autolens_profiling, then drop the last RAL…</a> — <a href="https://github.com/PyAutoLabs/PyAutoCortex/issues/67">issue #67</a> — issued 2026-10-18 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/ral_category_paths_autolens_profiling.md
 ```
 
 </details>
@@ -2375,15 +2383,7 @@ Use the start-dev skill. draft/docs/howtolens/tutorial_correctness_and_howtogala
 </details>
 
 <details>
-<summary><b>refactor</b> — 13</summary>
-
-<details><summary>📋 <a href="draft/refactor/cortex/ral_category_paths_autolens_profiling.md">RAL category paths — last repo: autolens_profiling, then drop the last RAL…</a> — cortex · small · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/refactor/cortex/ral_category_paths_autolens_profiling.md
-```
-
-</details>
+<summary><b>refactor</b> — 12</summary>
 
 <details><summary>📋 <a href="draft/refactor/autonerves/config_yaml_parse_cache.md">Cache <code>autonerves</code> config parsing — 308 YAML files parsed per script run</a> — autonerves · medium · safe · medium</summary>
 
@@ -2598,6 +2598,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-18 | issued | <a href="active/ral_category_paths_autolens_profiling.md">RAL category paths — last repo: autolens_profiling, then drop the…</a> |
 | 2026-10-17 | issued | <a href="active/cluster_pointsolver_robust_settings_p1.md"><code>@autolens_profiling</code> cluster-pointsolver phase 1: cluster-scale…</a> |
 | 2026-10-17 | issued | <a href="active/tutorial_5_ep_shared_centre_never_assigned.md">HowToFit tutorial 5 (EP) never shares the centre it says it shares</a> |
 | 2026-10-17 | issued | <a href="active/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> |
@@ -2605,7 +2606,6 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-16 | filed | <a href="draft/bug/pyautohands/pre_build_blacks_unstaged_slam_pipeline.md">pre_build runs black on slam_pipeline/ for every workspace but stages…</a> |
 | 2026-10-16 | filed | <a href="draft/maintenance/autolens_workspace/remeasure_shapelets_slow_park.md">Re-measure the shapelets/modeling.py SLOW park (#586) under the…</a> |
 | 2026-10-16 | filed | <a href="draft/bug/pyautomind/glance_shadow_window_reached.md">Glance shadow window reached 20/20 clean — count line must say…</a> |
-| 2026-10-15 | filed | <a href="draft/refactor/cortex/ral_category_paths_autolens_profiling.md">RAL category paths — last repo: autolens_profiling, then drop the…</a> |
 | 2026-10-14 | filed | <a href="draft/test/autofit/workspace_searches_scripts_preexisting_failures.md"><code>@autofit_workspace</code> six <code>searches/</code> scripts fail on main at…</a> |
 | 2026-10-14 | filed | <a href="draft/test/autofit/emcee_jax_timing_test_flaky_on_ci.md"><code>@PyAutoFit</code> <code>test_emcee_call_path_runs_at_jitted_speed</code> is a…</a> |
 
