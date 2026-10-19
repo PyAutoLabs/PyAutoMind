@@ -50,9 +50,14 @@
 - issued: 2026-10-19
 - prompt: active/flatten_cleanslate_output_layout.md
 - session: Claude Code (Opus 5.5)
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/flatten-cleanslate-output-layout
 - heart: RED — dev-only human override 2026-10-19 (library/workspace CI + dev-box drift; autolens_inference main CI green)
-- next: code change in PR (no merge); data move + row/manifest rewrite only after RAL arrays 412541 + 412565 COMPLETE
+- next: human /prm PR#36; data move + row/manifest rewrite only after RAL arrays 412541 + 412565 COMPLETE
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/36
+- heart-red-override:
+  - authorized: 2026-10-19 live human, "Yes, push + open PR" (start_dev: "Override, check first"); push + PR-open only
+  - gates: pytest 192 passed; ruff + build_readme/export_inference_summary/check_submits --check pass; author review
+  - red: Heart RED (20 reasons: library/workspace CI, CI wall-clock, dev-box drift) verbatim on issue #35 + PR #36
 - repos:
   - autolens_inference: feature/flatten-cleanslate-output-layout
