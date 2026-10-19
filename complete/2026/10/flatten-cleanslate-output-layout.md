@@ -1,3 +1,17 @@
+## flatten-cleanslate-output-layout
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/35
+- completed: 2026-10-19
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/36
+
+- Merged 2026-10-19T15:53:33Z (merge c3ca4de). Flattened the clean-slate run tree from `output/cleanslate_2026_10_17/slam/imaging/hst/...` to `output/autolens/imaging/hst/slam/<variant>/<config>/seed_<n>/`. The six clean-slate submits drop the dated `--output-dir`/`--results-tag`/`--export-prepared` values.
+- Archived 12 superseded 2026-09-24 SLaM HST rows under `results/archive/2026-09-24_superseded_by_cleanslate/`. `WAVE_ID`/`RUN_PREFIX` (`cs1017`) are unchanged.
+- Code only. `scripts/misc/flatten_cleanslate.py` (dry-run by default, `--apply` to act) moves the data and rewrites row paths, prepared manifests and `.cortex/pull.json`. **Migration is pending:** the main session runs it on RAL and then on the laptop mirror after the current results pull completes. No new clean-slate submit should go out before then.
+- The human cancelled RAL arrays 412541 and 412565 at 2026-10-19 15:51Z, before the migration.
+- Heart was RED. The human gave a dev-only override for push and PR-open. Gates: pytest 192 passed; ruff and the build_readme / export_inference_summary / check_submits `--check` runs passed.
+- PyAutoInsight appears in the prompt's Repos, but the active.md row claimed only autolens_inference.
+
+## Original prompt
+
 # Flatten the clean-slate output layout: drop the dated `cleanslate_2026_10_17` level
 
 Type: refactor

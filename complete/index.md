@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1922 records across 9 buckets.
+1923 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -195,6 +195,7 @@ markers; everything below GENERATED is rebuilt.
 - [eyes-focused-figure-browser](2026/10/eyes-focused-figure-browser.md)
 - [fit-util-masked-division](2026/10/fit-util-masked-division.md)
 - [fixed-model-json](2026/10/fixed-model-json.md)
+- [flatten-cleanslate-output-layout](2026/10/flatten-cleanslate-output-layout.md)
 - [fork-context-darwin-test](2026/10/fork-context-darwin-test.md)
 - [function-config-priors](2026/10/function-config-priors.md)
 - [grouped-smoke-install](2026/10/grouped-smoke-install.md)
