@@ -858,7 +858,7 @@ Use the start-dev skill. active/cluster_pointsolver_robust_settings_p1.md
 
 </details>
 
-<details><summary>📋 <a href="active/numba_ral_slam_redo.md">Redo the numba sparse SLaM base runs on RAL with the right…</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/38">issue #38</a> — issued 2026-10-19 — workspace-dev</summary>
+<details><summary>📋 <a href="active/numba_ral_slam_redo.md">Redo the numba sparse SLaM base runs on RAL with the right…</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/38">issue #38</a> — issued 2026-10-19 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_inference/pull/39">autolens_inference#39</a></summary>
 
 ```
 Use the start-dev skill. active/numba_ral_slam_redo.md
