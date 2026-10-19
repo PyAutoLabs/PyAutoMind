@@ -44,3 +44,15 @@
 - worktree: ~/Code/PyAutoLabs-wt/cluster-pointsolver-robust-settings
 - repos:
   - autolens_profiling: feature/cluster-pointsolver-robust-settings
+
+## numba-ral-slam-redo
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/38
+- issued: 2026-10-19
+- prompt: active/numba_ral_slam_redo.md
+- session: Claude Code (Opus 5.5), laptop CLI
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/numba-ral-slam-redo/
+- heart: RED (PyAutoFit CI, unrelated); development-only override invoked by human 2026-10-19
+- next: implement per issue plan → ship_workspace → human /prm → RAL rename + submit
+- repos:
+  - autolens_inference: feature/numba-ral-slam-redo
