@@ -44,3 +44,15 @@
 - worktree: ~/Code/PyAutoLabs-wt/cluster-pointsolver-robust-settings
 - repos:
   - autolens_profiling: feature/cluster-pointsolver-robust-settings
+
+## flatten-cleanslate-output-layout
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/35
+- issued: 2026-10-19
+- prompt: active/flatten_cleanslate_output_layout.md
+- session: Claude Code (Opus 5.5)
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/flatten-cleanslate-output-layout
+- heart: RED — dev-only human override 2026-10-19 (library/workspace CI + dev-box drift; autolens_inference main CI green)
+- next: code change in PR (no merge); data move + row/manifest rewrite only after RAL arrays 412541 + 412565 COMPLETE
+- repos:
+  - autolens_inference: feature/flatten-cleanslate-output-layout

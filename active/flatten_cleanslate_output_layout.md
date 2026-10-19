@@ -11,7 +11,9 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: normal
-Status: draft
+Status: active
+Issued: 2026-10-19
+Issue: https://github.com/PyAutoLabs/autolens_inference/issues/35
 Filed: 2026-10-18
 Blocked-until: RAL arrays 412539, 412541 and 412565 (jax_cpu dense, jax_cpu sparse, numba_cpu sparse) have finished; they write into the dated tree.
 
