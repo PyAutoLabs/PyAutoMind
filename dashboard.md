@@ -858,7 +858,7 @@ Use the start-dev skill. active/cluster_pointsolver_robust_settings_p1.md
 
 </details>
 
-<details><summary>📋 <a href="active/flatten_cleanslate_output_layout.md">Flatten the clean-slate output layout: drop the dated <code>cleanslate_2026_10_17</code> level</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/35">issue #35</a> — issued 2026-10-19 — workspace-dev</summary>
+<details><summary>📋 <a href="active/flatten_cleanslate_output_layout.md">Flatten the clean-slate output layout: drop the dated <code>cleanslate_2026_10_17</code> level</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/35">issue #35</a> — issued 2026-10-19 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_inference/pull/36">autolens_inference#36</a></summary>
 
 ```
 Use the start-dev skill. active/flatten_cleanslate_output_layout.md
