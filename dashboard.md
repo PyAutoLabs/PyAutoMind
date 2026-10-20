@@ -12,7 +12,7 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 5 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 256 |
+| [Backlog](#backlog) | 258 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 2 |
 
@@ -116,7 +116,7 @@ Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visua
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 97
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 98
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -1840,7 +1840,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>research</b> — 32</summary>
+<summary><b>research</b> — 34</summary>
 
 <details><summary>📋 <a href="draft/research/autofit_inference/search_ext_b5c2a_rerun.md"><code>@autofit_inference</code> B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug…</a> — autofit_inference · medium · supervised · high</summary>
 
@@ -1914,10 +1914,26 @@ Use the start-dev skill. draft/research/libraries/intel_macos_support_policy.md
 
 </details>
 
+<details><summary>📋 <a href="draft/research/pyautoinsight/slim_inference_repo_outputs_optional_zip_content.md">Slim inference-repo outputs: optional zip contents, visualize config, samples weights</a> — pyautoinsight · medium · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/research/pyautoinsight/slim_inference_repo_outputs_optional_zip_content.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md">Checkerboard PSF-mismatch residual diagnostic — research + document + ingest papers</a> — pyautomemory · medium · safe · normal</summary>
 
 ```
 Use the start-dev skill. draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_inference/prepared_problems_without_pickles_export_as_fits.md">Prepared problems without pickles: export as .fits + metadata</a> — autolens_inference · too-large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/research/autolens_inference/prepared_problems_without_pickles_export_as_fits.md
 ```
 
 </details>
