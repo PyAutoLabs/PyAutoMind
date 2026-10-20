@@ -858,7 +858,7 @@ Use the start-dev skill. active/cluster_pointsolver_robust_settings_p1.md
 
 </details>
 
-<details><summary>📋 <a href="active/cosmos_web_ring_guided_walkthrough_p1_notebook.md">COSMOS-Web Ring walkthrough — phase 1: image-first Colab notebook, no inference</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/160">issue #160</a> — issued 2026-10-20 — workspace-shipped, awaiting-merge</summary>
+<details><summary>📋 <a href="active/cosmos_web_ring_guided_walkthrough_p1_notebook.md">COSMOS-Web Ring walkthrough — phase 1: image-first Colab notebook, no inference</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/160">issue #160</a> — issued 2026-10-20 — workspace-shipped, awaiting-merge (7 commits incl. maintainer copy-edit; F150W/F444W; Explore The Model)</summary>
 
 ```
 Use the start-dev skill. active/cosmos_web_ring_guided_walkthrough_p1_notebook.md
