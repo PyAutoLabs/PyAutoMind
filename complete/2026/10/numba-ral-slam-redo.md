@@ -1,3 +1,20 @@
+Redid the numba sparse SLaM base legs on RAL with BLAS/OpenMP pools pinned to 1 thread, renamed
+`_lightfixed` -> `_light_fixed` across results, output and prepared manifests (RAL + laptop), and
+added the standard SLaM Delaunay chain (`slam_delaunay` + `slam_delaunay_light_fixed`, Hilbert
+1250, AdaptSplit), then the A100 jax_gpu dense + sparse Delaunay submits.
+
+- autolens_inference#39 (817835c): thread caps, `hpc_ral_numba_cpu_sparse_fp64`, `_light_fixed`,
+  `slam_delaunay`, `rename_light_fixed.py` (rename + `--aside`).
+- autolens_inference#40 (71bfd57): `submit_hst_cleanslate_jax_gpu_{dense,sparse}_delaunay`.
+- Runs: rect numba sparse 412622 complete both seeds (~2.6 h sampler wall/seed vs ~day before;
+  light_fixed mass stage CLEAN, so the 10-18 fixed-light divergence is JAX-sparse-only);
+  Delaunay 412624_1 complete, 412624_0 lost to a shared-stage `search_internal/` rmtree race,
+  rerun 412649; GPU Delaunay 412657 (dense) + 412659 (sparse, after:+15) submitted 2026-10-20.
+- Rename verified idempotent on RAL and laptop; old numba A100 legs set aside (RAL 12 / laptop 10
+  moves, nothing deleted).
+
+## Original prompt
+
 # Redo the numba sparse SLaM base runs on RAL with the right thread setup
 
 Issued: 2026-10-19

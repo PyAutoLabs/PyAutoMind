@@ -45,24 +45,6 @@
 - repos:
   - autolens_profiling: feature/cluster-pointsolver-robust-settings
 
-## numba-ral-slam-redo
-- issue: https://github.com/PyAutoLabs/autolens_inference/issues/38
-- issued: 2026-10-19
-- prompt: active/numba_ral_slam_redo.md
-- session: Claude Code (Opus 5.5), laptop CLI
-- status: workspace-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/numba-ral-slam-redo/
-- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/39
-- head: 7a64746
-- heart-red-override:
-  - authorization: "authorize the Heart override for autolens_inference#38: commit, push, open the PR" (live human, 2026-10-19)
-  - reasons: Heart RED (PyAutoFit CI failure run 39111874604; PyAutoFit/Tests: failure); readiness stale — release validation incomplete: no rehearsal for current source
-  - gates: pytest 202 passed; ruff clean; check_submits 25/25; export --check OK; diff reviewed
-- heart: RED (PyAutoFit CI, unrelated); development-only override invoked by human 2026-10-19
-- next: human /prm #39 → RAL ff → rename_light_fixed (RAL then laptop) → sync pull → --aside → submit 2 ral arrays → probe source_pix[1] rate
-- repos:
-  - autolens_inference: feature/numba-ral-slam-redo
-
 ## cosmos-web-ring-notebook
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/160
 - issued: 2026-10-20

@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-10-20T16:44:47Z",
+  "headline": "RED \u2014 24 picks \u00b7 4 in flight",
+  "updated": "2026-10-20T17:07:08Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -18,12 +18,6 @@
       "text": "COSMOS-Web Ring walkthrough \u2014 phase 1: image-first Colab notebook, no inference \u2014 workspace-shipped, awaiting-merge (7 commits incl. maintainer copy-edit; F150W/F444W; Explore The Model)",
       "url": "https://github.com/PyAutoLabs/autolens_assistant/issues/160",
       "prompt": "Use the start-dev skill. active/cosmos_web_ring_guided_walkthrough_p1_notebook.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Redo the numba sparse SLaM base runs on RAL with the right\u2026 \u2014 workspace-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autolens_inference/pull/39",
-      "prompt": "Use the start-dev skill. active/numba_ral_slam_redo.md"
     },
     {
       "severity": "yellow",
@@ -126,6 +120,12 @@
       "text": "pick: Reduce the organism's per-session and per-task token load by half",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/organs/reduce_session_token_load.md",
       "prompt": "Use the start-dev skill. draft/maintenance/organs/reduce_session_token_load.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Physical model check when speeding up smoke tests",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md",
+      "prompt": "Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md"
     }
   ]
 }
