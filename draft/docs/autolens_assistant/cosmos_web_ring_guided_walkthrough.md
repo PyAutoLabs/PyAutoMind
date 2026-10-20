@@ -114,3 +114,27 @@ Phases: `_p1_notebook.md`, `_p2_greeting.md`, `_p3_front_doors.md` (this file is
 (pushed to main that morning) is rejected ("rubbish") and is removed in phase 1. The JWST-style
 PNG `strong_lens_schematic.png` is the only schematic, everywhere (notebook, greeting, README,
 HowToLens, website); the rays→ring link is carried by prose.
+
+## Phase 1 outcome (2026-10-20, PR autolens_assistant#161, awaiting /prm)
+
+Shipped with design changes made during the maintainer's copy-edit pass — **phases 2 and 3
+must follow the shipped notebook, not the original plan**:
+- Bands: the live colour comparison is **F150W/F444W** (not F277W); the published-model figure
+  is `docs/images/mercier2024_lens_model_f150w_f444w.png` (F150W above F444W).
+- **"Good Versus Not-Great" is replaced by "Explore The Model"**: the reader edits
+  `einstein_radius_offset` (arcsec) and `lens_light_scale`, sees original/changed rows of model
+  image, light-subtracted image and residuals; the Sérsic "bad model" comparison is gone from
+  the notebook (its tracer stays in `results/sersic_source/` as an artefact). The greeting skill
+  (phase 2) should mirror this: load the good model, show its fit, then offer "change the mass /
+  the lens light and look at the residuals", not a Sérsic bad fit.
+- No "For the scientist" asides anywhere; "**🤖 Ask Gemini:**" lines bold with emoji; the
+  notebook is "a guided tour", with the agent offered as an alternative ("If you prefer…"), not
+  "two routes". Phase 3 README/first_prompts/website text should use the same framing.
+- The Picture opens with `cosmos_web_ring_rgb_labelled.png` (colour ring + arrows); the
+  three-panel `cosmos_web_ring_dataset.png` stays under Four Colours and Preparing The Data.
+- Section images: schematic → labelled RGB → three-panel → three-panel → Mercier F150W/F444W →
+  good-model panels → explore figure → Einstein-radius figure → RGB.
+
+Deferred follow-ups (file as small prompts when convenient): regenerate
+`cosmos_web_ring_dataset.png` with F150W/F444W panels (and the 2.1" mask); drop the
+over-sampling panels from displayed subplots; `first_prompts.md` GPU-fit sentence (phase 3).

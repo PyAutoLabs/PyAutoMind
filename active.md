@@ -68,7 +68,7 @@
 - issued: 2026-10-20
 - prompt: active/cosmos_web_ring_guided_walkthrough_p1_notebook.md
 - session: Claude Code (Fable 5.1), laptop CLI; session ID unavailable
-- status: workspace-shipped, awaiting-merge
+- status: workspace-shipped, awaiting-merge (7 commits incl. maintainer copy-edit; F150W/F444W; Explore The Model)
 - prs:
   - autolens_assistant: https://github.com/PyAutoLabs/autolens_assistant/pull/161
 - worktree: ~/Code/PyAutoLabs-wt/cosmos-web-ring-notebook

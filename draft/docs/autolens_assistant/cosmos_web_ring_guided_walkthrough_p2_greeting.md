@@ -11,9 +11,11 @@ Depends on phase 1 (vendored images, committed tracers, notebook sections).
    wslview / explorer.exe) **with no Python**, gives the rays→ring bridge and the two-sentence
    explanation, and asks the one background question. Step 3 routes every audience through the
    notebook's sections using shipped figures (arrows image for Preparing The Data; Mercier+24
-   figure for What A Lens Model Looks Like) and ends at Good Versus Not-Great by **evaluating**
-   the committed ansofi and Sérsic tracers (seconds), reporting θ_E and the mass from the
-   evaluated tracer. Full inference (`MultiStartProdigy`) only on explicit request, with the
+   figure for What A Lens Model Looks Like) and ends at **Explore The Model** (see the epic's "Phase 1 outcome"): **evaluate** the
+   committed ansofi tracer (seconds), show its fit, report θ_E and the mass from it, then offer
+   to change the mass (Einstein-radius offset) or the lens light (scale) and look at the
+   residuals, mirroring the shipped notebook's controls — no Sérsic "bad fit". Use F150W/F444W
+   when talking colours, and the F150W/F444W Mercier figure. Full inference (`MultiStartProdigy`) only on explicit request, with the
    time cost stated first; the priors paragraph moves into that branch.
 2. **`skills/_style.md`:** add the rule "show an existing figure before writing code; when
    code must plot, open the PNG for the user, don't just quote a path"; sweep `al_*` skills
