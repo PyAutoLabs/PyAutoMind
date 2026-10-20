@@ -100,3 +100,12 @@ file + a caption) and (b) in HowToLens tutorial 2 in place of the region-blocked
 Executed notebook renders every section with an image before its code; CI green with the
 new output-stripped comparison; greeting benchmark passes with the no-search route; HowToLens
 tutorial 2 shows the vendored schematic.
+
+## Approval record (2026-10-20)
+
+Human approved the plan, the three-phase split below and authorized the **Heart RED
+override (development only)** for this docs work. Added scope: the opening experience must be
+**the same in every spot** — jamesnightingale.net, README, `docs/setup/first_prompts.md`, the
+Colab notebook header and the greeting skill all carry the identical starting prompt and the
+same image sequence (schematic → RGB → …), so a visitor from any door gets one polished story.
+Phases: `_p1_notebook.md`, `_p2_greeting.md`, `_p3_front_doors.md` (this file is the umbrella).
