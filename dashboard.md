@@ -12,7 +12,7 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 4 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 254 |
+| [Backlog](#backlog) | 257 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 2 |
 
@@ -2266,7 +2266,7 @@ Use the start-dev skill. draft/maintenance/pyautomind/session_start_hook_copies_
 </details>
 
 <details>
-<summary><b>docs</b> — 15</summary>
+<summary><b>docs</b> — 18</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
 
@@ -2368,6 +2368,30 @@ Use the start-dev skill. draft/docs/workspaces/assistants_regime_extension.md
 
 ```
 Use the start-dev skill. draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough_p1_notebook.md">COSMOS-Web Ring walkthrough — phase 1: image-first Colab notebook, no inference</a> — autolens_assistant</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough_p1_notebook.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough_p2_greeting.md">COSMOS-Web Ring walkthrough — phase 2: image-first greeting skill + assistant-wide rule</a> — autolens_assistant</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough_p2_greeting.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough_p3_front_doors.md">COSMOS-Web Ring walkthrough — phase 3: HowToLens schematic + one opening story…</a> — autolens_assistant</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough_p3_front_doors.md
 ```
 
 </details>
@@ -2689,12 +2713,15 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 ## Hygiene
 
-19 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
+22 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
 
 <details>
 <summary>Headerless prompts</summary>
 
 - `draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough.md`
+- `draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough_p1_notebook.md`
+- `draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough_p2_greeting.md`
+- `draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough_p3_front_doors.md`
 - `draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md`
 - `draft/research/autofit/hpc_campaign_epic_report.md`
 - `draft/research/autofit/hpc_campaign_epic_surveys/carbon.md`
@@ -2716,7 +2743,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-90 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+93 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2761,7 +2788,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md`
 - `draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md`
 - `draft/bug/health_fixes/release_timeout_policy.md`
-- _… and 50 more_
+- _… and 53 more_
 
 </details>
 
