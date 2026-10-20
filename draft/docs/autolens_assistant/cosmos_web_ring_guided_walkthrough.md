@@ -109,3 +109,8 @@ override (development only)** for this docs work. Added scope: the opening exper
 Colab notebook header and the greeting skill all carry the identical starting prompt and the
 same image sequence (schematic → RGB → …), so a visitor from any door gets one polished story.
 Phases: `_p1_notebook.md`, `_p2_greeting.md`, `_p3_front_doors.md` (this file is the umbrella).
+
+**Schematic decision 2026-10-20 (human):** the SVG `docs/images/strong_gravitational_lensing_schematic.svg`
+(pushed to main that morning) is rejected ("rubbish") and is removed in phase 1. The JWST-style
+PNG `strong_lens_schematic.png` is the only schematic, everywhere (notebook, greeting, README,
+HowToLens, website); the rays→ring link is carried by prose.
