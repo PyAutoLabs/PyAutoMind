@@ -1,6 +1,7 @@
 # COSMOS-Web Ring walkthrough — phase 1: image-first Colab notebook, no inference
 
 **Work type:** docs · **Target:** `lens/autolens_assistant` · **Consequence:** judge
+Issued: 2026-10-20 · Issue: https://github.com/PyAutoLabs/autolens_assistant/issues/160
 **Epic:** [`cosmos_web_ring_guided_walkthrough.md`](cosmos_web_ring_guided_walkthrough.md)
 (read it first: verbatim request, review findings, schematic usage rule, approval + Heart RED
 override recorded 2026-10-20).

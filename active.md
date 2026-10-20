@@ -62,3 +62,14 @@
 - next: human /prm #39 → RAL ff → rename_light_fixed (RAL then laptop) → sync pull → --aside → submit 2 ral arrays → probe source_pix[1] rate
 - repos:
   - autolens_inference: feature/numba-ral-slam-redo
+
+## cosmos-web-ring-notebook
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/160
+- issued: 2026-10-20
+- prompt: active/cosmos_web_ring_guided_walkthrough_p1_notebook.md
+- session: Claude Code (Fable 5.1), laptop CLI; session ID unavailable
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/cosmos-web-ring-notebook
+- heart-override: Heart RED override (development only) authorized by human 2026-10-20
+- repos:
+  - autolens_assistant: feature/cosmos-web-ring-notebook
