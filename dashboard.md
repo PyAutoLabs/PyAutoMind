@@ -874,7 +874,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/point_source_image_overlay.md">Point-source positions overlaid on a dataset image (+ PyAutoEyes)</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/779">issue #779</a> — issued 2026-10-21 — library-shipped, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/780">PyAutoLens#780</a></summary>
+<details><summary>📋 <a href="active/point_source_image_overlay.md">Point-source positions overlaid on a dataset image (+ PyAutoEyes)</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/779">issue #779</a> — issued 2026-10-21 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/780">PyAutoLens#780</a></summary>
 
 ```
 Use the start-dev skill. active/point_source_image_overlay.md
