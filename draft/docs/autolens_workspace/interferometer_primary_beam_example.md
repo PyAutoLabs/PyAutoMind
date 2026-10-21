@@ -8,7 +8,7 @@ Repos:
 Difficulty: small
 Autonomy: safe
 Priority: medium
-Parent: active/interferometer_primary_beam.md
+Parent: complete/2026/10/interferometer-primary-beam.md
 Status: formalised
 Consequence: glance
 Witness: the new interferometer advanced example script runs end to end under the workspace smoke harness and shows a simulated dataset with a Gaussian primary beam fitted with and without the beam

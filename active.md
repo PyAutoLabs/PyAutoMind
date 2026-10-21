@@ -67,19 +67,16 @@
 - community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
 - prompt: active/matrix_free_interferometer_inversion.md
 
-## interferometer-primary-beam
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/640
+## matrix-free-interferometer-phase1
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/642
 - issued: 2026-10-21
 - user-facing: true
-- community: https://github.com/PyAutoLabs/.github/discussions/35 (@HRSAstro)
-- prompt: active/interferometer_primary_beam.md
+- community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
+- parent: https://github.com/PyAutoLabs/PyAutoArray/issues/638 (active/matrix_free_interferometer_inversion.md)
+- prompt: active/matrix_free_interferometer_phase1.md
 - session: Claude Code (Fable 5.1), laptop CLI
-- status: library-shipped, awaiting-merge (glance → auto-merge on green if Witness passes; workspace example/docs as a follow-up prompt)
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/644
-- prs:
-  - PyAutoArray: https://github.com/PyAutoLabs/PyAutoArray/pull/644
-- heart-ack: YELLOW acknowledged by human 2026-10-21 — manifest drift (1 mismatch); release validation stale: source moved since rehearsal (PyAutoArray)
-- classification: feature (PyAutoArray library; PyAutoGalaxy verify-only), Consequence glance, Autonomy supervised; plan approved in chat 2026-10-21 (P=0 warning, no floor); merge mode auto-merge on green if Witness passes
-- worktree: ~/Code/PyAutoLabs-wt/interferometer-primary-beam
+- status: library-dev
+- classification: feature (PyAutoArray library only), Consequence glance, Autonomy supervised; plan approved in chat 2026-10-21; merge mode auto-merge on green if Witness passes
+- worktree: ~/Code/PyAutoLabs-wt/matrix-free-interferometer-phase1
 - repos:
-  - PyAutoArray: feature/interferometer-primary-beam
+  - PyAutoArray: feature/matrix-free-interferometer-phase1

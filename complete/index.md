@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1935 records across 9 buckets.
+1936 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -237,6 +237,7 @@ markers; everything below GENERATED is rebuilt.
 - [intake-declared-header-fields](2026/10/intake-declared-header-fields.md)
 - [interferometer-decision-matrix-last-cell](2026/10/interferometer-decision-matrix-last-cell.md)
 - [interferometer-numba-route-gate](2026/10/interferometer-numba-route-gate.md)
+- [interferometer-primary-beam](2026/10/interferometer-primary-beam.md)
 - [interferometer-route-gate-phase2](2026/10/interferometer-route-gate-phase2.md)
 - [interferometer-sparse-data-vector](2026/10/interferometer-sparse-data-vector.md) — The sparse-operator interferometer inversion now builds its data vector directly from the mapper's COO triplet…
 - [interferometer-streaming-memo-after](2026/10/interferometer-streaming-memo-after.md)

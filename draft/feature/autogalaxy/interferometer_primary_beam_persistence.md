@@ -7,7 +7,7 @@ Repos:
 Difficulty: small
 Autonomy: safe
 Priority: medium
-Parent: active/interferometer_primary_beam.md
+Parent: complete/2026/10/interferometer-primary-beam.md
 Status: formalised
 Consequence: glance
 Witness: a test asserting an Interferometer with a primary beam saved by AnalysisInterferometer and rebuilt by the aggregator carries an identical primary_beam_slim

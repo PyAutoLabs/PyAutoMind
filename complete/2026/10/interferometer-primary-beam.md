@@ -1,3 +1,37 @@
+## interferometer-primary-beam
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/640
+- completed: 2026-10-21
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/644 (merge ea8a55f7)
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/644
+- community: https://github.com/PyAutoLabs/.github/discussions/35 (@HRSAstro) — PR-open reply posted 2026-10-21; release update owed
+- summary: |
+    Community proposal (hub #35): optional primary beam P for interferometer fitting. Five commits
+    7901c6df, 942da156, 5ab76916, fb880e02, 8c73a9fb on `feature/interferometer-primary-beam`
+    (13 source files, 6 test files, +1696/-16). P lives on `Interferometer` (Array2D on the
+    real-space mask; `from_fits(primary_beam_path=)`, `from_sparse_terms(primary_beam=)`,
+    `from_stream`), is applied on the slim grid in both transformers' forward transforms
+    (`with_primary_beam` shallow copy; `image_from` stays the un-beamed adjoint so dirty
+    image, dirty beam and w-tilde kernel are unchanged), and is carried on
+    `InterferometerSparseOperator.primary_beam_slim` and folded into the mapper triplet weights
+    (`mapper_util.sparse_triplets_from(slim_weights=)`) and linear-function blocks so
+    F' = Mᵀ P W̃ P M, D' = Mᵀ P D̃. Simulator accepts P. New `aa.primary_beam_gaussian_from`
+    (FWHM 1.13 λ/D). P=0 warns, no floor (human decision). Deviation: the numba sparse route
+    would have ignored P, so the factory takes it only when P is None or all ones
+    (`primary_beam_is_trivial`) and the numba class raises otherwise; a precomputed
+    sparse_operator is re-created with P attached. Tests: 2136 passed / 4 xfailed (PyAutoArray),
+    141 passed (PyAutoGalaxy interferometer + operate on the branch), no-JAX import hook clean.
+    CI 3 legs green, CLEAN, not frozen; glance auto-merge.
+- witness: |
+    MET — (i) P=None and P=ones bit-for-bit (np.array_equal) on numpy and under jit for
+    transformer outputs, sparse and mapping curvature and data vectors, reconstruction,
+    fast_chi_squared and mapped images; (ii) non-trivial P on the 7×7 Delaunay fixture: sparse
+    curvature == Lᵀ diag(P) W̃ diag(P) L and data vector == Lᵀ diag(P) D̃ to 1e-10 for one
+    mapper, func list + mapper, two mappers, func list + two mappers, func list only. All in CI.
+- heart-ack: "YELLOW acknowledged by human 2026-10-21 — manifest drift (1 mismatch); release validation stale: source moved since rehearsal (PyAutoArray)"
+- follow-ups: draft/docs/autolens_workspace/interferometer_primary_beam_example.md; draft/feature/autogalaxy/interferometer_primary_beam_persistence.md (also: forced numba route with a beam falls back quietly; P=0 warning repeats per rebuild; `primary_beam_fwhm_arcsec_from` not exported via aa.util).
+
+## Original prompt
+
 # Primary beam correction for interferometer datasets, transformers and the sparse w-tilde inversion
 
 Type: feature
