@@ -90,7 +90,11 @@
 - parent: https://github.com/PyAutoLabs/PyAutoArray/issues/638 (active/matrix_free_interferometer_inversion.md)
 - prompt: active/matrix_free_interferometer_phase4.md
 - session: Claude Code (Fable 5.1), laptop CLI
-- status: library-dev
+- status: library-shipped, awaiting-merge (glance → auto-merge on green if Witness passes)
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/652
+- prs:
+  - PyAutoArray: https://github.com/PyAutoLabs/PyAutoArray/pull/652
+- heart-ack: YELLOW acknowledged by human 2026-10-21 — manifest drift (1 mismatch); release validation stale: source moved since rehearsal (PyAutoArray)
 - classification: feature (PyAutoArray library only), Consequence glance, Autonomy supervised; plan approved in chat 2026-10-21; merge mode auto-merge on green if Witness passes
 - worktree: ~/Code/PyAutoLabs-wt/matrix-free-interferometer-phase4
 - repos:
