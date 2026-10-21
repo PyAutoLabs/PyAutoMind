@@ -85,7 +85,14 @@
 - issued: 2026-10-21
 - prompt: active/point_image_fit_filename.md
 - session: Claude Code (Opus 5.5), laptop CLI
-- status: library-dev
+- status: workspace-shipped, awaiting-merge (judge tier → human /prm, library first; then Eyes dashboard_refresh)
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/782
+- prs:
+  - PyAutoLens: https://github.com/PyAutoLabs/PyAutoLens/pull/782
+  - autolens_workspace: https://github.com/PyAutoLabs/autolens_workspace/pull/592
+  - autolens_visualization: https://github.com/PyAutoLabs/autolens_visualization/pull/7
+- release-gate: PyAutoLens
+- heart-ack: YELLOW (manifest drift 1 mismatch; release validation stale since PyAutoArray moved) acknowledged by human 2026-10-21
 - classification: feature follow-up to PyAutoLens#779 (PyAutoLens → autolens_workspace → autolens_visualization → Eyes refresh), Consequence judge, Autonomy human-required; plan approved in chat 2026-10-21; merge mode human /prm
 - worktree: ~/Code/PyAutoLabs-wt/point-image-fit-filename
 - repos:
