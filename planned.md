@@ -9,6 +9,7 @@
 - [latent-nan-guard-honest-run](#latent-nan-guard-honest-run)
 - [knn-partial-point-block](#knn-partial-point-block)
 - [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
+- [matrix-free-interferometer-phase1](#matrix-free-interferometer-phase1)
 
 <!-- toc:end -->
 
@@ -105,3 +106,16 @@
   - PyAutoArray
   - autolens_workspace_test
 - resume: Audit#603 found incorrect internal-edge Sibson weights and near-edge partition failure. Filed separately per explicit user request; strict expected-failure regressions retained in audit. No repair begun or worktree created. Plan algorithmic repair independently.
+
+## matrix-free-interferometer-phase1
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/642
+- filed: 2026-10-21
+- user-facing: true
+- community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
+- parent: https://github.com/PyAutoLabs/PyAutoArray/issues/638 (active/matrix_free_interferometer_inversion.md)
+- prompt: active/matrix_free_interferometer_phase1.md
+- status: blocked — PyAutoArray claimed by interferometer-primary-beam (#640); start via /start_library once #640 merges and its claim is released
+- classification: feature (PyAutoArray library only), Consequence glance, Autonomy supervised; plan approved in chat 2026-10-21; merge mode auto-merge on green if Witness passes
+- branch: feature/matrix-free-interferometer-phase1
+- affected-repos:
+  - PyAutoArray

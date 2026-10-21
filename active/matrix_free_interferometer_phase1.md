@@ -15,6 +15,7 @@ Witness: a parity test asserting (i) the matrix-free F·v agrees with the dense 
 Review-minutes: 5
 Unattended: ready
 Filed: 2026-10-21
+Issued: 2026-10-21
 
 ## Why
 
