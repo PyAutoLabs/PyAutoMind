@@ -19,7 +19,7 @@
     JAX backends); subprocess no-JAX test covers the triplets and both helpers. Narrower than filed: the full
     InversionImagingSparse still needs JAX (operator + curvature methods import it unconditionally) — follow-up.
 - heart-ack: "YELLOW acknowledged by human 2026-10-21 — manifest drift (1 mismatch); release validation stale: source moved since rehearsal (PyAutoArray)"
-- follow-ups: lazy JAX imports in ImagingSparseOperator.from_noise_map_and_psf and imaging curvature_matrix_* methods (file as a small prompt); interferometer _sparse_triplets_curvature_from left unmasked (util drops out-of-range columns).
+- follow-ups: RESOLVED 2026-10-21 as no-change — `ImagingSparseOperator` is the JAX implementation by design (lax.fori_loop / dynamic_update_slice FFT batches; `Imaging.apply_sparse_operator` docstring says so) and the NumPy/CPU alternative is the separately named `apply_sparse_operator_cpu` → `SparseLinAlgImagingNumba` / `InversionImagingSparseNumba`; the #649 numpy branches in the two helpers are the only numpy-reachable code. No prompt filed. interferometer _sparse_triplets_curvature_from left unmasked (util drops out-of-range columns).
 
 ## Original prompt
 

@@ -9,6 +9,7 @@
 - [latent-nan-guard-honest-run](#latent-nan-guard-honest-run)
 - [knn-partial-point-block](#knn-partial-point-block)
 - [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
+- [interferometer-primary-beam-persistence-mirror](#interferometer-primary-beam-persistence-mirror)
 
 <!-- toc:end -->
 
@@ -105,3 +106,11 @@
   - PyAutoArray
   - autolens_workspace_test
 - resume: Audit#603 found incorrect internal-edge Sibson weights and near-edge partition failure. Filed separately per explicit user request; strict expected-failure regressions retained in audit. No repair begun or worktree created. Plan algorithmic repair independently.
+
+## interferometer-primary-beam-persistence-mirror
+- filed: 2026-10-21
+- prompt: draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md
+- status: blocked — PyAutoLens claimed by point-dataset-positions-panel (was point-critical-curve-grid); run /start_dev when the claim clears (docstring line + one round-trip test, no source change)
+- parent: complete/2026/10/interferometer-primary-beam-persistence.md
+- affected-repos:
+  - PyAutoLens
