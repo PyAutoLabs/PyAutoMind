@@ -1,3 +1,31 @@
+## matrix-free-interferometer-phase3
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/647
+- completed: 2026-10-21
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/651 (merge 625e1196)
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/651
+- parent: https://github.com/PyAutoLabs/PyAutoArray/issues/638 (active/matrix_free_interferometer_inversion.md)
+- community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
+- summary: |
+    Phase 3 of #638. Commits 9feb4f3e, 5d6bbb9d on `feature/matrix-free-interferometer-phase3` (2 files,
+    +591/-9): `log_det_preconditioner_from` (exact, sparse LU), `log_det_curvature_reg_via_slq_from`
+    (ln det P + SLQ of ln det P⁻¹(F+H), probes ~ N(0, P⁻¹), full reorthogonalisation, fixed seed 20221,
+    steps capped at n), `log_evidence_matrix_free_from` (fit_util conventions, optional exact log-det
+    substitution; R passed as √coefficient·R₀, verified against H). FINDING: SLQ accuracy depends on how
+    well the Powell preconditioner matches F+H — 0.10–0.14% (mean 0.21%, worst 0.56% over 30 seeds) on a
+    data-dominated case (500 long-baseline vis, eigenvalues ~[0.6, 1.6]), but 14–40% on the prior-dominated
+    tiny fixture (eigenvalues ~[0.01, 63]); tests use the data-dominated case (new uv_scale on the test
+    helper); human confirmed the merge in chat knowing this. Regime dependence → phase-5 profiling question.
+    Worktree: inversion 1061 passed / 4 xfailed. CI 3 legs green; glance auto-merge.
+- witness: |
+    MET on the data-dominated small rectangular case — ln det P vs slogdet 2.8e-14; SLQ within 0.5% at 10
+    probes / 40 steps, deterministic for the fixed seed, 2-probe error larger; evidence with the dense ln det
+    substituted equals fit_util.log_evidence_from exactly (0.0), total within SLQ tolerance (ln Z bias
+    −0.11 to −0.16 nats on ln Z ≈ −1500). NOT met on the prior-dominated 40-visibility fixture (14–40%).
+- heart-ack: "YELLOW acknowledged by human 2026-10-21 — manifest drift (1 mismatch); release validation stale: source moved since rehearsal (PyAutoArray)"
+- phase-5 questions: SLQ error vs preconditioner quality on real data; FFT preconditioner from the gridded uv weight density (contributor's alternative for unweighted priors) as a fallback for prior-dominated regimes; seed/probe-count policy.
+
+## Original prompt
+
 # Matrix-free interferometer inversion, phase 3: log-evidence via exact sparse log-det + stochastic Lanczos quadrature
 
 Type: feature

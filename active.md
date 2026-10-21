@@ -67,24 +67,6 @@
 - community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
 - prompt: active/matrix_free_interferometer_inversion.md
 
-## matrix-free-interferometer-phase3
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/647
-- issued: 2026-10-21
-- user-facing: true
-- community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
-- parent: https://github.com/PyAutoLabs/PyAutoArray/issues/638 (active/matrix_free_interferometer_inversion.md)
-- prompt: active/matrix_free_interferometer_phase3.md
-- session: Claude Code (Fable 5.1), laptop CLI
-- status: library-shipped, awaiting-merge (glance → auto-merge on green if Witness passes)
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/651
-- prs:
-  - PyAutoArray: https://github.com/PyAutoLabs/PyAutoArray/pull/651
-- heart-ack: YELLOW acknowledged by human 2026-10-21 — manifest drift (1 mismatch); release validation stale: source moved since rehearsal (PyAutoArray)
-- classification: feature (PyAutoArray library only), Consequence glance, Autonomy supervised; plan approved in chat 2026-10-21; merge mode auto-merge on green if Witness passes
-- worktree: ~/Code/PyAutoLabs-wt/matrix-free-interferometer-phase3
-- repos:
-  - PyAutoArray: feature/matrix-free-interferometer-phase3
-
 ## point-dataset-positions-panel
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/785
 - issued: 2026-10-21
@@ -95,3 +77,17 @@
 - repos:
   - PyAutoLens: feature/point-dataset-positions-panel
   - autolens_visualization: feature/point-dataset-positions-panel
+
+## matrix-free-interferometer-phase4
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/648
+- issued: 2026-10-21
+- user-facing: true
+- community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
+- parent: https://github.com/PyAutoLabs/PyAutoArray/issues/638 (active/matrix_free_interferometer_inversion.md)
+- prompt: active/matrix_free_interferometer_phase4.md
+- session: Claude Code (Fable 5.1), laptop CLI
+- status: library-dev
+- classification: feature (PyAutoArray library only), Consequence glance, Autonomy supervised; plan approved in chat 2026-10-21; merge mode auto-merge on green if Witness passes
+- worktree: ~/Code/PyAutoLabs-wt/matrix-free-interferometer-phase4
+- repos:
+  - PyAutoArray: feature/matrix-free-interferometer-phase4
