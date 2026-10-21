@@ -82,3 +82,14 @@
 - repos:
   - PyAutoFit: fix/corner-anesthetic-duplicate-labels
 - later-phase-repos (claimed when the phase starts): PyAutoGalaxy; autolens_workspace, autofit_workspace, autogalaxy_workspace, HowToGalaxy, HowToLens
+
+## eyes-alphabetical-domains
+- issue: https://github.com/PyAutoLabs/PyAutoEyes/issues/32
+- issued: 2026-10-21
+- prompt: active/eyes_alphabetical_domains.md
+- session: Claude Code (Opus 5.5), laptop CLI; session ID unavailable
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/eyes-alphabetical-domains
+- heart-override: Heart RED override (development only) authorized by human 2026-10-21 ("Approve + override")
+- repos:
+  - PyAutoEyes: feature/eyes-alphabetical-domains
