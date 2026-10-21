@@ -77,3 +77,15 @@
 - worktree: ~/Code/PyAutoLabs-wt/imaging-sparse-triplets-masking
 - repos:
   - PyAutoArray: feature/imaging-sparse-triplets-masking
+
+## point-critical-curve-grid
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/783
+- issued: 2026-10-21
+- prompt: active/point_critical_curve_grid_clipped.md
+- session: Claude Code (Opus 5.5), laptop CLI
+- status: library-dev
+- classification: bug (PyAutoLens → autolens_visualization re-render → Eyes refresh), Consequence judge, Autonomy human-required; plan approved in chat 2026-10-21; merge mode human /prm
+- worktree: ~/Code/PyAutoLabs-wt/point-critical-curve-grid
+- repos:
+  - PyAutoLens: feature/point-critical-curve-grid
+  - autolens_visualization: feature/point-critical-curve-grid
