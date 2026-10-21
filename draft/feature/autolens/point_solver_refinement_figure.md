@@ -90,3 +90,16 @@ Still open with the human:
 - **Extent:** the same fixed full extent on all four panels, with no insets or zooms. Sub-pixel kept triangles on the final panel are drawn as a centroid ▲ marker.
 - **Rejected alternatives:** the per-image inset rows were judged information overload, and the simplified-triangle variant E was not chosen.
 - **Prototype:** `variant_f_coarse.png` (teaching) and `variant_f.png` (real solver), in the scratch prototype folder.
+
+## Human addition: teaching animation (2026-10-21)
+
+The teaching figure also gets an **animation in exactly the same style**: one panel at a time, playing steps 0 → 1 → 2 → final in sequence.
+
+Implementation intent:
+- One shared per-panel draw function used by both the 2×2 still and the animation, so the two cannot drift apart.
+- Output via `matplotlib.animation` with `PillowWriter` as a looping GIF, so there is no ffmpeg dependency. The final frame is held longer.
+- An API option alongside the still, e.g. `aplt.plot_point_solver(..., animate=True)`.
+
+Phase 3 places the GIF next to the still in HowToLens tutorial 4 and the workspace `point_source/fit.py` placeholder.
+
+The prototype is `variant_f_coarse.gif` in the scratch prototype folder.
