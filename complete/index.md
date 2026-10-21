@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1929 records across 9 buckets.
+1930 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -147,6 +147,7 @@ markers; everything below GENERATED is rebuilt.
 - [broca-resource-categories](2026/10/broca-resource-categories.md) — Broca categories Workspaces/How To/Documentation and assistant deduplication with stable links; Hands shortcut…
 - [broca-resource-indent](2026/10/broca-resource-indent.md) — Broca resource rows visibly indented beneath categories, with a subtle guide. Nerves HTML GREEN/count summary …
 - [broca-state-feed](2026/10/broca-state-feed.md)
+- [ci-timing-superseded-main-cancels](2026/10/ci-timing-superseded-main-cancels.md)
 - [closed-thread-followups](2026/10/closed-thread-followups.md) — New external comments after closure or an accepted answer return a thread to Community review without requirin…
 - [cloud-board-validation-evidence](2026/10/cloud-board-validation-evidence.md)
 - [cloud-test-run-card](2026/10/cloud-test-run-card.md)
