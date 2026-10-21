@@ -66,3 +66,15 @@
 - user-facing: true
 - community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
 - prompt: active/matrix_free_interferometer_inversion.md
+
+## point-fit-source-plane-panel
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/789
+- issued: 2026-10-21
+- prompt: active/point_fit_source_plane_panel.md
+- session: Claude Code (Opus subagent); session ID unavailable
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/point-fit-source-plane-panel
+- repos:
+  - PyAutoArray: feature/point-fit-source-plane-panel
+  - PyAutoLens: feature/point-fit-source-plane-panel
+  - autolens_visualization: feature/point-fit-source-plane-panel

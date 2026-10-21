@@ -1,6 +1,7 @@
 # Point-source fit: source-plane panel showing how closely the positions trace
 
 Consequence: judge
+Issued: 2026-10-21
 Autonomy: human-required
 builds-on: complete/2026/10/point-dataset-positions-panel.md (shipped 2026-10-21; shares the fit_point_plots.py styling: markers, σ legend, titles, solver extent)
 
