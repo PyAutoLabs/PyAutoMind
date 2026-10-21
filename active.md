@@ -78,3 +78,5 @@
 - repos:
   - PyAutoLens: feature/cluster-point-figures
   - autolens_visualization: feature/cluster-point-figures
+  - autolens_workspace: feature/cluster-point-figures
+  - autolens_workspace_test: feature/cluster-point-figures
