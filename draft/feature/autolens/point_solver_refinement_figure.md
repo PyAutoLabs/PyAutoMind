@@ -82,3 +82,11 @@ Still open with the human:
 - cluster row/image capping
 - visualizer output: config-toggled, off by default, best-fit only, with the JAX `MAX_CONTAINING_SIZE` warning
 - retiring `point/visualise.py` and fixing `tree_flatten` in the same PR
+
+## Human decision: figure layout (2026-10-21, after variants D/E)
+
+- **Layout:** a 2×2 `point_solver.png` showing steps 0, 1, 2 and the **final** step; the steps in between are skipped.
+- **Style:** exactly `variant_d_coarse.png`'s top-row panels (tested grey, kept blue, kept-then-rejected hatched muted blue, neighbours orange, up-sampled green, critical curve, observed circles, solved red ✕, plus the step-0 numbering and the `magnification_threshold` annotation).
+- **Extent:** the same fixed full extent on all four panels, with no insets or zooms. Sub-pixel kept triangles on the final panel are drawn as a centroid ▲ marker.
+- **Rejected alternatives:** the per-image inset rows were judged information overload, and the simplified-triangle variant E was not chosen.
+- **Prototype:** `variant_f_coarse.png` (teaching) and `variant_f.png` (real solver), in the scratch prototype folder.
