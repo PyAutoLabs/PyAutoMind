@@ -119,7 +119,7 @@ Round-2 prototypes: `per_image_prototype/*/{dataset_v2,fit_v2,fit_per_image_v2}.
   - The shared range is computed where all sources are visible; a lone source uses its own range. Many sources → one file per source.
 - `image_with_points.png` and `fit_image_with_points.png`: every source, the same symbols, `k·i` labels kept, NO legends.
 - Mixture fits (PairAll classes): the legend shows `−2 ln L = …` instead of `χ² = …`.
-- Source-plane fits rank by the fit's OWN per-image χ (not jacobian). The weighting default is the separate intake (`draft/bug/autolens/fitpositionssource_default_magnification_weighti.md`).
+- Source-plane fits rank by the fit's OWN per-image χ (not jacobian). The weighting default changed to jacobian in PyAutoLens#792 (record `complete/2026/10/positions-source-jacobian-default.md`, pending release).
 - Darker and thicker critical curves and caustics everywhere, including the library SP panel and its inset.
 
 **Also in scope:**
@@ -141,7 +141,7 @@ Scope:
    Decide the defaults, e.g. `fit_per_image` on and cheap ones on. Wire each one through `PlotterPoint` / `VisualizerPoint` so the files are written during a real `search.fit`, including the cross-dataset (all sources) figures at the level where every source is visible.
 2. **Verify in a real modelling run** (test mode / a short search on the point_source and cluster examples) that every configured PNG lands in the output folder. Don't rely on the viz producers alone.
 3. **autolens_workspace `config/visualize/plots.yaml`** is already stale: `fit_point_dataset: {}` lacks `image_with_points`, `fit_image_with_points` and `subplot_point_solver` (#786/#788/#790). Mirror the library keys plus this task's.
-   - NOTE: autolens_workspace is currently claimed by positions-source-jacobian-default. Either do it after that task closes, or hand it to that task's workspace PR.
+   - NOTE: positions-source-jacobian-default closed 2026-10-21 (autolens_workspace#593 merged); autolens_workspace is free.
    - Also check autolens_workspace_test, HowToLens and autolens_assistant configs for point keys.
 4. **autolens_visualization `config/visualize/plots.yaml`:** turn on every figure, and make sure the producers' outputs go into `gallery/viz_manifest.yaml` (PNG only; GIFs are tracked alongside).
 5. **After the viz PR merges,** dispatch PyAutoEyes `dashboard_refresh.yml` and confirm the new figures appear on the dashboard.

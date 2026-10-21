@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 18 |
-| [In flight](#in-flight) | 7 |
+| [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 274 |
+| [Backlog](#backlog) | 276 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -911,14 +911,6 @@ Use the start-dev skill. active/cosmos_web_ring_guided_walkthrough_p1_notebook.m
 
 </details>
 
-<details><summary>📋 <a href="active/fitpositionssource_default_magnification_weighti.md">FitPositionsSource default "magnification" weighting mis-maps near-critical noise: check against Gravity.jl, consider defaulting…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/791">issue #791</a> — issued 2026-10-21 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/792">PyAutoLens#792</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/593">autolens_workspace#593</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/346">autolens_workspace_test#346</a> — ⏳ pending release: PyAutoLens</summary>
-
-```
-Use the start-dev skill. active/fitpositionssource_default_magnification_weighti.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/matrix_free_interferometer_inversion.md">Matrix-free interferometer inversion for very large rectangular meshes…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/638">issue #638</a> — issued 2026-10-21</summary>
 
 ```
@@ -1075,7 +1067,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>bug</b> — 70</summary>
+<summary><b>bug</b> — 71</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -1249,6 +1241,14 @@ Use the start-dev skill. draft/bug/autoarray/interferometer_log_evidence_large_r
 
 ```
 Use the start-dev skill. draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md">Cluster likelihood scripts: image-plane manual check disagrees with the library; point_0 truth…</a> — autolens_workspace · medium · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md
 ```
 
 </details>
@@ -2266,6 +2266,179 @@ Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_
 </details>
 
 <details>
+<summary><b>docs</b> — 21</summary>
+
+<details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens/split_lensing_regimes.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/preloads_advanced_workspace_guide.md">Advanced workspace guide: <code>Preloads</code> (PyAutoArray)</a> — workspaces · too-large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/docs/workspaces/preloads_advanced_workspace_guide.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/interferometer_primary_beam_example.md">Interferometer primary beam: workspace example and docs</a> — autolens_workspace · small · safe · medium</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens_workspace/interferometer_primary_beam_example.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/corner_plot_config_keys_pr1709_phase3.md">Workspace config + docs for corner-plot labels and latent plots…</a> — workspaces · small · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/docs/workspaces/corner_plot_config_keys_pr1709_phase3.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md">Adapt image is the S/N map: fix the prose and assess…</a> — autogalaxy · large · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a> — autolens_workspace · small · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a> — autolens_workspace · small · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md rename</a> — pyautobrain · small · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/docs/pyautobrain/rtd_organism_currency.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a> — autocti · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/docs/autocti/api_rst_rewrite.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> — autolens · medium · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens/plot_rst_missing_exports.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/demo_subplot_ellipse_errors.md">Demo <code>subplot_ellipse_errors</code> from a real ellipse model-fit</a> — workspaces · large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/docs/workspaces/demo_subplot_ellipse_errors.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_profiling/positions_source_jacobian_default_rerun_note.md">Note in autolens_profiling that plain source-plane lane values predate the jacobian default</a> — autolens_profiling · small · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens_profiling/positions_source_jacobian_default_rerun_note.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md">cluster/mass_parameterizations*.py promise model.info prints (and figures) they never make</a> — autolens_workspace · small · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter counts do not match…</a> — workspaces · small · safe · low</summary>
+
+```
+Use the start-dev skill. draft/docs/workspaces/model_bullet_parameter_count_drift.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/assistants_regime_extension.md">Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)</a> — workspaces · medium · safe · low</summary>
+
+```
+Use the start-dev skill. draft/docs/workspaces/assistants_regime_extension.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens/point_solver_figure_workspace_placement.md">Point-source phase 3: place and describe the PointSolver figure across the workspace</a> — autolens · human-required</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens/point_solver_figure_workspace_placement.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough.md">COSMOS-Web Ring: image-first guided walkthrough (notebook + greeting skill)</a> — autolens_assistant</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough_p2_greeting.md">COSMOS-Web Ring walkthrough — phase 2: image-first greeting skill + assistant-wide rule</a> — autolens_assistant</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough_p2_greeting.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough_p3_front_doors.md">COSMOS-Web Ring walkthrough — phase 3: HowToLens schematic + one opening story…</a> — autolens_assistant</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough_p3_front_doors.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md">Phase 2 — drop the hand-written quick-update sentence from the workspace scripts</a> — autolens_workspace</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md">Track and fix correctness issues in the HowToLens tutorials as they…</a> — howtolens</summary>
+
+```
+Use the start-dev skill. draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md
+```
+
+</details>
+
+</details>
+
+<details>
 <summary><b>maintenance</b> — 21</summary>
 
 <details><summary>📋 <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> — organs · medium · supervised · high</summary>
@@ -2432,171 +2605,6 @@ Use the start-dev skill. draft/maintenance/euclid/skip_fit_output_no_longer_gate
 
 ```
 Use the start-dev skill. draft/maintenance/pyautomind/session_start_hook_copies_regen.md
-```
-
-</details>
-
-</details>
-
-<details>
-<summary><b>docs</b> — 20</summary>
-
-<details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/docs/autolens/split_lensing_regimes.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/preloads_advanced_workspace_guide.md">Advanced workspace guide: <code>Preloads</code> (PyAutoArray)</a> — workspaces · too-large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/docs/workspaces/preloads_advanced_workspace_guide.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/interferometer_primary_beam_example.md">Interferometer primary beam: workspace example and docs</a> — autolens_workspace · small · safe · medium</summary>
-
-```
-Use the start-dev skill. draft/docs/autolens_workspace/interferometer_primary_beam_example.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/corner_plot_config_keys_pr1709_phase3.md">Workspace config + docs for corner-plot labels and latent plots…</a> — workspaces · small · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/docs/workspaces/corner_plot_config_keys_pr1709_phase3.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md">Adapt image is the S/N map: fix the prose and assess…</a> — autogalaxy · large · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a> — autolens_workspace · small · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a> — autolens_workspace · small · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md rename</a> — pyautobrain · small · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/docs/pyautobrain/rtd_organism_currency.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a> — autocti · medium · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/docs/autocti/api_rst_rewrite.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> — autolens · medium · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/docs/autolens/plot_rst_missing_exports.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/demo_subplot_ellipse_errors.md">Demo <code>subplot_ellipse_errors</code> from a real ellipse model-fit</a> — workspaces · large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/docs/workspaces/demo_subplot_ellipse_errors.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md">cluster/mass_parameterizations*.py promise model.info prints (and figures) they never make</a> — autolens_workspace · small · supervised · low</summary>
-
-```
-Use the start-dev skill. draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter counts do not match…</a> — workspaces · small · safe · low</summary>
-
-```
-Use the start-dev skill. draft/docs/workspaces/model_bullet_parameter_count_drift.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/assistants_regime_extension.md">Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)</a> — workspaces · medium · safe · low</summary>
-
-```
-Use the start-dev skill. draft/docs/workspaces/assistants_regime_extension.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens/point_solver_figure_workspace_placement.md">Point-source phase 3: place and describe the PointSolver figure across the workspace</a> — autolens · human-required</summary>
-
-```
-Use the start-dev skill. draft/docs/autolens/point_solver_figure_workspace_placement.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough.md">COSMOS-Web Ring: image-first guided walkthrough (notebook + greeting skill)</a> — autolens_assistant</summary>
-
-```
-Use the start-dev skill. draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough_p2_greeting.md">COSMOS-Web Ring walkthrough — phase 2: image-first greeting skill + assistant-wide rule</a> — autolens_assistant</summary>
-
-```
-Use the start-dev skill. draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough_p2_greeting.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough_p3_front_doors.md">COSMOS-Web Ring walkthrough — phase 3: HowToLens schematic + one opening story…</a> — autolens_assistant</summary>
-
-```
-Use the start-dev skill. draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough_p3_front_doors.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md">Phase 2 — drop the hand-written quick-update sentence from the workspace scripts</a> — autolens_workspace</summary>
-
-```
-Use the start-dev skill. draft/docs/autolens_workspace/sampler_cli_output_workspace_sweep.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md">Track and fix correctness issues in the HowToLens tutorials as they…</a> — howtolens</summary>
-
-```
-Use the start-dev skill. draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md
 ```
 
 </details>
@@ -2824,16 +2832,17 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-21 | filed | <a href="draft/docs/workspaces/corner_plot_config_keys_pr1709_phase3.md">Workspace config + docs for corner-plot labels and latent plots…</a> |
 | 2026-10-21 | filed | <a href="draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md">PyAutoLens mirror of the interferometer primary-beam persistence…</a> |
 | 2026-10-21 | filed | <a href="draft/feature/autogalaxy/latent_parameter_declarations_pr1709_phase2.md">PyAutoGalaxy latent-parameter declarations (phase 2 of community PR…</a> |
+| 2026-10-21 | filed | <a href="draft/docs/autolens_profiling/positions_source_jacobian_default_rerun_note.md">Note in autolens_profiling that plain source-plane lane values…</a> |
 | 2026-10-21 | filed | <a href="draft/research/autolens_profiling/matrix_free_interferometer_phase5.md">Matrix-free interferometer inversion, phase 5: wiring, profiling note…</a> |
 | 2026-10-21 | issued | <a href="active/matrix_free_interferometer_inversion.md">Matrix-free interferometer inversion for very large rectangular…</a> |
 | 2026-10-21 | filed | <a href="draft/docs/autolens_workspace/interferometer_primary_beam_example.md">Interferometer primary beam: workspace example and docs</a> |
-| 2026-10-21 | issued | <a href="active/fitpositionssource_default_magnification_weighti.md">FitPositionsSource default "magnification" weighting mis-maps…</a> |
 | 2026-10-21 | issued | <a href="active/cluster_point_figures_dedicated_pass.md">Cluster-scale point-source figures: dedicated pass</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-21 | filed | <a href="draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md">Cluster likelihood scripts: image-plane manual check disagrees with…</a> |
 | 2026-10-20 | issued | <a href="active/cosmos_web_ring_guided_walkthrough_p1_notebook.md">COSMOS-Web Ring walkthrough — phase 1: image-first Colab notebook, no…</a> |
 | 2026-10-17 | issued | <a href="active/cluster_pointsolver_robust_settings_p1.md"><code>@autolens_profiling</code> cluster-pointsolver phase 1: cluster-scale…</a> |
 | 2026-10-17 | issued | <a href="active/tutorial_5_ep_shared_centre_never_assigned.md">HowToFit tutorial 5 (EP) never shares the centre it says it shares</a> |
@@ -2843,12 +2852,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-16 | filed | <a href="draft/maintenance/autolens_workspace/remeasure_shapelets_slow_park.md">Re-measure the shapelets/modeling.py SLOW park (#586) under the…</a> |
 | 2026-10-16 | filed | <a href="draft/bug/pyautomind/glance_shadow_window_reached.md">Glance shadow window reached 20/20 clean — count line must say…</a> |
 | 2026-10-14 | filed | <a href="draft/test/autofit/workspace_searches_scripts_preexisting_failures.md"><code>@autofit_workspace</code> six <code>searches/</code> scripts fail on main at…</a> |
-| 2026-10-14 | filed | <a href="draft/test/autofit/emcee_jax_timing_test_flaky_on_ci.md"><code>@PyAutoFit</code> <code>test_emcee_call_path_runs_at_jitted_speed</code> is a…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-14 | filed | <a href="draft/test/autofit/emcee_jax_timing_test_flaky_on_ci.md"><code>@PyAutoFit</code> <code>test_emcee_call_path_runs_at_jitted_speed</code> is a…</a> |
 | 2026-10-14 | filed | <a href="draft/bug/autofit/bfgs_resume_reads_x0_from_scipy_result.md"><code>@PyAutoFit</code> BFGS/LBFGS resume reads <code>["x0"]</code> from the saved scipy…</a> |
 | 2026-10-14 | filed | <a href="draft/feature/cortex/human_readable_projects_dashboard.md">Human-readable Cortex Projects dashboard</a> |
 | 2026-10-14 | filed | <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> |
@@ -2858,12 +2867,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
 | 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
-| 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
@@ -2873,12 +2882,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/power_law_multipole_m1_singular_at_isothermal_slope.md">PowerLawMultipole with m=1 returns -inf / NaN deflections at slope…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently…</a> |
-| 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
 | 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
 | 2026-09-26 | filed | <a href="draft/refactor/workspaces/abell_1201_local_cleanup.md">Repo cleanup: retire the Abell 1201 worktree and local raw data</a> |
 | 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
@@ -2888,7 +2897,6 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> |
-| 2026-09-18 | filed | <a href="draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md">The latent smoke's empty-block assertion names one cause…</a> |
 
 </details>
 
@@ -2936,7 +2944,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-103 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+105 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2981,7 +2989,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autolens/point_fit_critical_curves_ignore_source_redshift.md`
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
 - `draft/bug/autolens/point_source_plot_script_residual_shape_mismatch.md`
-- _… and 63 more_
+- _… and 65 more_
 
 </details>
 
@@ -3084,13 +3092,13 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoLens**
 
-- [PyAutoLens#792](https://github.com/PyAutoLabs/PyAutoLens/pull/792) — `active/fitpositionssource_default_magnification_weighti.md`
 - [PyAutoLens#784](https://github.com/PyAutoLabs/PyAutoLens/pull/784) — `complete/2026/10/point-critical-curve-grid.md`
 - [PyAutoLens#786](https://github.com/PyAutoLabs/PyAutoLens/pull/786) — `complete/2026/10/point-dataset-positions-panel.md`
 - [PyAutoLens#790](https://github.com/PyAutoLabs/PyAutoLens/pull/790) — `complete/2026/10/point-fit-source-plane-panel.md`
 - [PyAutoLens#782](https://github.com/PyAutoLabs/PyAutoLens/pull/782) — `complete/2026/10/point-image-fit-filename.md`
 - [PyAutoLens#788](https://github.com/PyAutoLabs/PyAutoLens/pull/788) — `complete/2026/10/point-solver-refinement-figure.md`
 - [PyAutoLens#780](https://github.com/PyAutoLabs/PyAutoLens/pull/780) — `complete/2026/10/point-source-image-overlay.md`
+- [PyAutoLens#792](https://github.com/PyAutoLabs/PyAutoLens/pull/792) — `complete/2026/10/positions-source-jacobian-default.md`
 
 
 Boards: [organism](https://pyautolabs.github.io/PyAutoScientist/) · [brain](https://pyautolabs.github.io/PyAutoBrain/) · [cortex](https://pyautolabs.github.io/PyAutoCortex/) · [memory](https://pyautolabs.github.io/PyAutoMemory/) · [eyes](https://pyautolabs.github.io/PyAutoEyes/) · [ears](https://pyautolabs.github.io/PyAutoEars/) · [heart](https://pyautolabs.github.io/PyAutoHeart/) · [hands](https://pyautolabs.github.io/PyAutoHands/) · [pulse](https://pyautolabs.github.io/PyAutoPulse/) · [insight](https://pyautolabs.github.io/PyAutoInsight/) · [dna](https://pyautolabs.github.io/PyAutoDNA/) · [nerves](https://pyautolabs.github.io/PyAutoNerves/) · [broca](https://pyautolabs.github.io/PyAutoBroca/) · [gut](https://pyautolabs.github.io/PyAutoGut/)

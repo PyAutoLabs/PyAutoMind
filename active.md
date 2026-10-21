@@ -67,23 +67,6 @@
 - community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
 - prompt: active/matrix_free_interferometer_inversion.md
 
-## positions-source-jacobian-default
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/791
-- issued: 2026-10-21
-- prompt: active/fitpositionssource_default_magnification_weighti.md
-- session: Claude Code CLI (Opus 5.5), laptop
-- status: workspace-shipped, awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/593
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/346
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/792
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/792
-- worktree: ~/Code/PyAutoLabs-wt/positions-source-jacobian-default
-- repos:
-  - autolens_workspace: feature/positions-source-jacobian-default
-  - autolens_workspace_test: feature/positions-source-jacobian-default
-- released: PyAutoLens (feature/positions-source-jacobian-default @ bdb44a87c merged via #792; claim released 2026-10-21 on human instruction so cluster-point-figures can start)
-- next: library PR #792 MERGED 2026-10-21 (4f5baf9b, pending-release; CI 4/4 green) → /start_workspace for autolens_workspace + autolens_workspace_test (explain the default, fix the Lenstool example (forme -1 → image-plane), re-measure source_plane.py literals) → profiling note once cluster-pointsolver-robust-settings releases autolens_profiling
-
 ## cluster-point-figures
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/793
 - issued: 2026-10-21

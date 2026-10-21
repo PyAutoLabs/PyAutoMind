@@ -1,3 +1,30 @@
+## positions-source-jacobian-default
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/791
+- completed: 2026-10-21
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/792
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/593
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/346
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/792
+
+- **Library:** `al.FitPositionsSource` now defaults to `weighting = "jacobian"`, with Bᵢ = Aᵢ⁻ᵀΘᵢAᵢ⁻¹ (Gravity.jl, Lombardi 2024 Eq. 46; the Solved class is Eq. 58). `"magnification"` (Jullo 2007 Eq. 10, scalar μ²/σ²) is kept as an opt-in. Its normalisation was changed from the 1-D, μ-dependent Σ log(2πσ²/μ²) to the model-independent Σ log((2π)²σ⁴), i.e. Eq. 46 with B ≈ μ²Θ.
+- **Human decisions:**
+  - Two weightings × two centres. There is no plain-barycentre option, because Solved already gives the optimal centre and a Lenstool-only reproduction was not wanted.
+  - `jacobian` is the default because it is the more robust statistic.
+- **Lenstool check:** Lenstool 8.10.1 `o_chi.c`, read from a personal mirror, not the official repo.
+  - Lenstool's default is image-plane (`forme -1`).
+  - `forme 8/13` is the tensor form and equals our jacobian.
+  - Its scalar modes weight by |μ|, not μ².
+  - Our old `"magnification"` matched the paper's Eq. 10 but no Lenstool code path.
+  - The Mahler SMACS0723 input is `forme -1`, so the workspace Lenstool example now uses `FitPositionsImagePairRepeat`.
+- **Workspace:** the full explanation of the default lives in the new "Source-plane weighting" section of `guides/point_source_pairing.py`. The `cluster/likelihood_function.py` walkthrough was rewritten to the jacobian form.
+- **Workspace_test:** `source_plane.py` was re-pinned from −331481.26 to −104.67. The change is fully accounted for: the normalisation contributes +2.11, and χ² dropped from 662,993 to 244 (one image has μ ≈ 82).
+- **Re-filed:**
+  - `draft/docs/autolens_profiling/positions_source_jacobian_default_rerun_note.md` (the profiling scope, deferred because of the claim conflict);
+  - `draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md` (two pre-existing script problems).
+- **Mind traps:** prompt_sync_push hit non-fast-forward pushes repeatedly. A plain `pull --rebase` on a clean tree fixed each one.
+
+## Original prompt
+
 # FitPositionsSource default "magnification" weighting mis-maps near-critical noise: check against Gravity.jl, consider defaulting…
 
 Type: bug
