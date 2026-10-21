@@ -126,3 +126,22 @@ Round-2 prototypes: `per_image_prototype/*/{dataset_v2,fit_v2,fit_per_image_v2}.
 - Curves, μ and solves must use the FULL tracer.
 - The PairAll legend-placement fix.
 - A cluster imaging simulator plus a tracked FITS in autolens_visualization.
+
+## Human addition (2026-10-21): config + modelling output + Eyes
+
+> make sure all this visualization work is also sorted in terms of config files so theyoutput in lens model fits and it all updates the PyAutoEyes dashboard
+
+Scope:
+1. **PyAutoLens `autolens/config/visualize/plots.yaml`.** Add an entry (with a comment, matching the existing style) for every figure this task adds or changes:
+   - unified `dataset.png`;
+   - global `fit.png`;
+   - `fit_per_image.png`;
+   - multi-source `image_with_points.png` / `fit_image_with_points.png`.
+   Decide the defaults, e.g. `fit_per_image` on and cheap ones on. Wire each one through `PlotterPoint` / `VisualizerPoint` so the files are written during a real `search.fit`, including the cross-dataset (all sources) figures at the level where every source is visible.
+2. **Verify in a real modelling run** (test mode / a short search on the point_source and cluster examples) that every configured PNG lands in the output folder. Don't rely on the viz producers alone.
+3. **autolens_workspace `config/visualize/plots.yaml`** is already stale: `fit_point_dataset: {}` lacks `image_with_points`, `fit_image_with_points` and `subplot_point_solver` (#786/#788/#790). Mirror the library keys plus this task's.
+   - NOTE: autolens_workspace is currently claimed by positions-source-jacobian-default. Either do it after that task closes, or hand it to that task's workspace PR.
+   - Also check autolens_workspace_test, HowToLens and autolens_assistant configs for point keys.
+4. **autolens_visualization `config/visualize/plots.yaml`:** turn on every figure, and make sure the producers' outputs go into `gallery/viz_manifest.yaml` (PNG only; GIFs are tracked alongside).
+5. **After the viz PR merges,** dispatch PyAutoEyes `dashboard_refresh.yml` and confirm the new figures appear on the dashboard.
+   - Done 2026-10-21 for #786/#788/#790: run 39666522545 green; the point_solver and source-plane figures are listed.
