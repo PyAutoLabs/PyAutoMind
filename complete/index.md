@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1943 records across 9 buckets.
+1944 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -255,6 +255,7 @@ markers; everything below GENERATED is rebuilt.
 - [matrix-free-interferometer-phase1](2026/10/matrix-free-interferometer-phase1.md)
 - [matrix-free-interferometer-phase2](2026/10/matrix-free-interferometer-phase2.md)
 - [matrix-free-interferometer-phase3](2026/10/matrix-free-interferometer-phase3.md)
+- [matrix-free-interferometer-phase4](2026/10/matrix-free-interferometer-phase4.md)
 - [matrix-zeus-smoke-install](2026/10/matrix-zeus-smoke-install.md)
 - [memory-board-header-contract](2026/10/memory-board-header-contract.md)
 - [memory-cockpit-catch-up](2026/10/memory-cockpit-catch-up.md) — Lensing-specific catch-up freshness drives the HTML/Markdown banner and cockpit feed. Structured cutoff, age, …
