@@ -93,7 +93,10 @@
 - issued: 2026-10-21
 - prompt: active/heart_ci_timing_concurrency_cancels_as_kills.md
 - session: Claude Code CLI (Opus 5.5); session 343c1fc1-4d32-42cc-a8f5-e26cf0332168
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/313
+- validation: test_ci_timing 43 passed, full suite 1281 passed; scratch collector 8 → 2 hang events (2 kept: PR runs cancelled after PR close, no successor — separate decision)
+- next: human /prm #313; then re-run heart/checks/ci_timing.sh + tick
 - worktree: ~/Code/PyAutoLabs-wt/ci-timing-superseded-main-cancels
 - heart-red-override: "Heart: RED — Release RED; monitoring RED · 14/100 · 464 unresolved (updated 23h ago)"; live human "Override and proceed" 2026-10-21 (health session, covering the three health-fix bugs incl. this one) — development shipping only (commit, push, PR); merge needs separate /prm with all checks green; no release; reasons verbatim on the issue
 - repos:
