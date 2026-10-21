@@ -72,7 +72,11 @@
 - issued: 2026-10-21
 - prompt: active/imaging_sparse_triplets_unmasked_and_jax_import.md
 - session: Claude Code (Fable 5.1), laptop CLI
-- status: library-dev
+- status: library-shipped, awaiting-merge (glance → auto-merge on green if Witness passes)
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/649
+- prs:
+  - PyAutoArray: https://github.com/PyAutoLabs/PyAutoArray/pull/649
+- heart-ack: YELLOW acknowledged by human 2026-10-21 — manifest drift (1 mismatch); release validation stale: source moved since rehearsal (PyAutoArray)
 - classification: bug (PyAutoArray library only), Consequence glance, Autonomy safe; plan approved in chat 2026-10-21; merge mode auto-merge on green if Witness passes
 - worktree: ~/Code/PyAutoLabs-wt/imaging-sparse-triplets-masking
 - repos:
@@ -103,7 +107,11 @@
 - parent: complete/2026/10/interferometer-primary-beam.md
 - prompt: active/interferometer_primary_beam_persistence.md
 - session: Claude Code (Fable 5.1), laptop CLI
-- status: library-dev
+- status: library-shipped, awaiting-merge (glance → auto-merge on green if Witness passes)
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/655
+- prs:
+  - PyAutoGalaxy: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/655
+- heart-ack: YELLOW acknowledged by human 2026-10-21 — manifest drift (1 mismatch); release validation stale: source moved since rehearsal (PyAutoArray)
 - classification: feature (PyAutoGalaxy library; PyAutoLens docstring + mirror test DEFERRED to a follow-up — PyAutoLens claimed by point-critical-curve-grid), Consequence glance, Autonomy safe; plan approved in chat 2026-10-21; merge mode auto-merge on green if Witness passes
 - worktree: ~/Code/PyAutoLabs-wt/interferometer-primary-beam-persistence
 - repos:
