@@ -874,7 +874,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/matrix_free_interferometer_phase2.md">Matrix-free interferometer inversion, phase 2: sparse Matérn (SPDE) precision regularization + Powell…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/646">issue #646</a> — issued 2026-10-21 — library-dev</summary>
+<details><summary>📋 <a href="active/matrix_free_interferometer_phase2.md">Matrix-free interferometer inversion, phase 2: sparse Matérn (SPDE) precision regularization + Powell…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/646">issue #646</a> — issued 2026-10-21 — library-shipped, awaiting-merge (glance → auto-merge on green if Witness passes) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/650">PyAutoArray#650</a></summary>
 
 ```
 Use the start-dev skill. active/matrix_free_interferometer_phase2.md
