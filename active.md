@@ -72,8 +72,14 @@
 - issued: 2026-10-21
 - prompt: active/point_source_image_overlay.md
 - session: Claude Code (Opus 5.5), laptop CLI
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge (judge tier → human /prm, library first)
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/780
+- prs:
+  - PyAutoLens: https://github.com/PyAutoLabs/PyAutoLens/pull/780
+  - autolens_workspace: https://github.com/PyAutoLabs/autolens_workspace/pull/591
+  - autolens_visualization: https://github.com/PyAutoLabs/autolens_visualization/pull/6
+- release-gate: PyAutoLens
+- next: after viz PR #6 merges, re-render the PyAutoEyes board (step 9) so image_with_points.png appears; follow-up: critical curve renders as 4 disconnected arcs (pre-existing)
 - classification: feature (PyAutoLens library → autolens_workspace → autolens_visualization → PyAutoEyes board re-render), Consequence judge, Autonomy human-required; plan approved in chat 2026-10-21; merge mode human /prm
 - heart-override: Heart RED override (development only) authorized by human 2026-10-21
 - worktree: ~/Code/PyAutoLabs-wt/point-source-image-overlay
