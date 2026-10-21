@@ -72,7 +72,14 @@
 - issued: 2026-10-21
 - prompt: active/point_fit_source_plane_panel.md
 - session: Claude Code (Opus subagent); session ID unavailable
-- status: library-dev
+- status: library-shipped, workspace-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/653
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/790
+- workspace-pr: https://github.com/PyAutoLabs/autolens_visualization/pull/13
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/653
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/790
+- heart: YELLOW (pre-existing, human-acknowledged): manifest drift: workspace checkouts — 1 mismatch vs PyAutoMind/repos.yaml; release validation stale: source moved since rehearsal (PyAutoArray)
+- next: human /prm in order PyAutoArray#653 → PyAutoLens#790 → autolens_visualization#13 (viz lint red until libs merge; re-run)
 - worktree: ~/Code/PyAutoLabs-wt/point-fit-source-plane-panel
 - repos:
   - PyAutoArray: feature/point-fit-source-plane-panel
