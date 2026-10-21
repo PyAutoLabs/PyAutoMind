@@ -74,7 +74,11 @@
 - community: https://github.com/PyAutoLabs/.github/discussions/35 (@HRSAstro)
 - prompt: active/interferometer_primary_beam.md
 - session: Claude Code (Fable 5.1), laptop CLI
-- status: library-dev
+- status: library-shipped, awaiting-merge (glance → auto-merge on green if Witness passes; workspace example/docs as a follow-up prompt)
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/644
+- prs:
+  - PyAutoArray: https://github.com/PyAutoLabs/PyAutoArray/pull/644
+- heart-ack: YELLOW acknowledged by human 2026-10-21 — manifest drift (1 mismatch); release validation stale: source moved since rehearsal (PyAutoArray)
 - classification: feature (PyAutoArray library; PyAutoGalaxy verify-only), Consequence glance, Autonomy supervised; plan approved in chat 2026-10-21 (P=0 warning, no floor); merge mode auto-merge on green if Witness passes
 - worktree: ~/Code/PyAutoLabs-wt/interferometer-primary-beam
 - repos:
