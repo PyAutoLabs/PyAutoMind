@@ -88,8 +88,14 @@
 - issued: 2026-10-21
 - prompt: active/eyes_alphabetical_domains.md
 - session: Claude Code (Opus 5.5), laptop CLI; session ID unavailable
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge (human /prm)
+- prs:
+  - PyAutoEyes: https://github.com/PyAutoLabs/PyAutoEyes/pull/33
 - worktree: ~/Code/PyAutoLabs-wt/eyes-alphabetical-domains
+- heart-red-override:
+  - authorization: "Approve + override" (2026-10-21, live)
+  - reasons: Heart: RED — Release RED; monitoring RED · 14/100 · 464 unresolved (updated 23h ago); list unchanged from autolens_visualization#4
+  - gates: ruff clean, pytest 88 passed, pyauto-eyes check OK; no merge/release
 - heart-override: Heart RED override (development only) authorized by human 2026-10-21 ("Approve + override")
 - repos:
   - PyAutoEyes: feature/eyes-alphabetical-domains
