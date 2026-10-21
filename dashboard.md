@@ -903,7 +903,7 @@ Use the start-dev skill. active/cosmos_web_ring_guided_walkthrough_p1_notebook.m
 
 </details>
 
-<details><summary>📋 <a href="active/fitpositionssource_default_magnification_weighti.md">FitPositionsSource default "magnification" weighting mis-maps near-critical noise: check against Gravity.jl, consider defaulting…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/791">issue #791</a> — issued 2026-10-21 — library-dev</summary>
+<details><summary>📋 <a href="active/fitpositionssource_default_magnification_weighti.md">FitPositionsSource default "magnification" weighting mis-maps near-critical noise: check against Gravity.jl, consider defaulting…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/791">issue #791</a> — issued 2026-10-21 — library-shipped, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/792">PyAutoLens#792</a> — ⏳ pending release: PyAutoLens</summary>
 
 ```
 Use the start-dev skill. active/fitpositionssource_default_magnification_weighti.md
@@ -3092,6 +3092,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoLens**
 
+- [PyAutoLens#792](https://github.com/PyAutoLabs/PyAutoLens/pull/792) — `active/fitpositionssource_default_magnification_weighti.md`
 - [PyAutoLens#784](https://github.com/PyAutoLabs/PyAutoLens/pull/784) — `complete/2026/10/point-critical-curve-grid.md`
 - [PyAutoLens#786](https://github.com/PyAutoLabs/PyAutoLens/pull/786) — `complete/2026/10/point-dataset-positions-panel.md`
 - [PyAutoLens#790](https://github.com/PyAutoLabs/PyAutoLens/pull/790) — `complete/2026/10/point-fit-source-plane-panel.md`
