@@ -866,7 +866,7 @@ Use the start-dev skill. active/cosmos_web_ring_guided_walkthrough_p1_notebook.m
 
 </details>
 
-<details><summary>📋 <a href="active/finish_community_pr_pyautofit_1709.md">Finish community PR PyAutoFit#1709…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1710">issue #1710</a> — issued 2026-10-21 — library-dev</summary>
+<details><summary>📋 <a href="active/finish_community_pr_pyautofit_1709.md">Finish community PR PyAutoFit#1709…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1710">issue #1710</a> — issued 2026-10-21 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1709">PyAutoFit#1709</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 Use the start-dev skill. active/finish_community_pr_pyautofit_1709.md
@@ -2902,6 +2902,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoFit**
 
+- [PyAutoFit#1709](https://github.com/PyAutoLabs/PyAutoFit/pull/1709) — `active/finish_community_pr_pyautofit_1709.md`
 - [PyAutoFit#1708](https://github.com/PyAutoLabs/PyAutoFit/pull/1708) — `complete/2026/10/fixed-model-json.md`
 - [PyAutoFit#1705](https://github.com/PyAutoLabs/PyAutoFit/pull/1705) — `complete/2026/10/function-config-priors.md`
 - [PyAutoFit#1707](https://github.com/PyAutoLabs/PyAutoFit/pull/1707) — `complete/2026/10/prior-stable-test-ids.md`
