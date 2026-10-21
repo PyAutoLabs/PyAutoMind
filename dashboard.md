@@ -10,15 +10,15 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 17 |
-| [In flight](#in-flight) | 4 |
+| [In flight](#in-flight) | 5 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 259 |
+| [Backlog](#backlog) | 258 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 2 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 20
+**Highest priority** (filed as `high`) — showing 12 of 19
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -866,6 +866,14 @@ Use the start-dev skill. active/cosmos_web_ring_guided_walkthrough_p1_notebook.m
 
 </details>
 
+<details><summary>📋 <a href="active/matrix_free_interferometer_inversion.md">Matrix-free interferometer inversion for very large rectangular meshes…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/638">issue #638</a> — issued 2026-10-21</summary>
+
+```
+Use the start-dev skill. active/matrix_free_interferometer_inversion.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> — <a href="https://github.com/PyAutoLabs/HowToFit/issues/72">issue #72</a> — issued 2026-10-17 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/HowToFit/pull/74">HowToFit#74</a></summary>
 
 ```
@@ -1547,20 +1555,12 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>feature</b> — 36</summary>
+<summary><b>feature</b> — 35</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
 
 ```
 Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autoarray/matrix_free_interferometer_inversion.md">Matrix-free interferometer inversion for very large rectangular meshes…</a> — autoarray · too-large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/feature/autoarray/matrix_free_interferometer_inversion.md
 ```
 
 </details>
@@ -2646,6 +2646,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-21 | issued | <a href="active/matrix_free_interferometer_inversion.md">Matrix-free interferometer inversion for very large rectangular…</a> |
 | 2026-10-20 | issued | <a href="active/cosmos_web_ring_guided_walkthrough_p1_notebook.md">COSMOS-Web Ring walkthrough — phase 1: image-first Colab notebook, no…</a> |
 | 2026-10-17 | issued | <a href="active/cluster_pointsolver_robust_settings_p1.md"><code>@autolens_profiling</code> cluster-pointsolver phase 1: cluster-scale…</a> |
 | 2026-10-17 | issued | <a href="active/tutorial_5_ep_shared_centre_never_assigned.md">HowToFit tutorial 5 (EP) never shares the centre it says it shares</a> |
@@ -2655,12 +2656,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-16 | filed | <a href="draft/maintenance/autolens_workspace/remeasure_shapelets_slow_park.md">Re-measure the shapelets/modeling.py SLOW park (#586) under the…</a> |
 | 2026-10-16 | filed | <a href="draft/bug/pyautomind/glance_shadow_window_reached.md">Glance shadow window reached 20/20 clean — count line must say…</a> |
 | 2026-10-14 | filed | <a href="draft/test/autofit/workspace_searches_scripts_preexisting_failures.md"><code>@autofit_workspace</code> six <code>searches/</code> scripts fail on main at…</a> |
-| 2026-10-14 | filed | <a href="draft/test/autofit/emcee_jax_timing_test_flaky_on_ci.md"><code>@PyAutoFit</code> <code>test_emcee_call_path_runs_at_jitted_speed</code> is a…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-14 | filed | <a href="draft/test/autofit/emcee_jax_timing_test_flaky_on_ci.md"><code>@PyAutoFit</code> <code>test_emcee_call_path_runs_at_jitted_speed</code> is a…</a> |
 | 2026-10-14 | filed | <a href="draft/bug/autofit/bfgs_resume_reads_x0_from_scipy_result.md"><code>@PyAutoFit</code> BFGS/LBFGS resume reads <code>["x0"]</code> from the saved scipy…</a> |
 | 2026-10-14 | filed | <a href="draft/feature/cortex/human_readable_projects_dashboard.md">Human-readable Cortex Projects dashboard</a> |
 | 2026-10-14 | filed | <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> |
@@ -2670,12 +2671,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
 | 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
-| 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
@@ -2685,12 +2686,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/power_law_multipole_m1_singular_at_isothermal_slope.md">PowerLawMultipole with m=1 returns -inf / NaN deflections at slope…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently…</a> |
-| 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
 | 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
 | 2026-09-26 | filed | <a href="draft/refactor/workspaces/abell_1201_local_cleanup.md">Repo cleanup: retire the Abell 1201 worktree and local raw data</a> |
 | 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
@@ -2700,12 +2701,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> |
-| 2026-09-18 | filed | <a href="draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md">The latent smoke's empty-block assertion names one cause…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-18 | filed | <a href="draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md">The latent smoke's empty-block assertion names one cause…</a> |
 | 2026-09-18 | filed | <a href="draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md">vmap(jit) likelihood recompiles once per distinct Nautilus batch…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import…</a> |
@@ -2715,7 +2716,6 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-17 | filed | <a href="draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the…</a> |
 | 2026-09-17 | filed | <a href="draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in…</a> |
 | 2026-09-17 | filed | <a href="draft/refactor/autofit/ep_analysis_level_compile_cache.md">EP: cache the compiled JAX likelihood on the Analysis across factor…</a> |
-| 2026-09-17 | filed | <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes…</a> |
 
 </details>
 

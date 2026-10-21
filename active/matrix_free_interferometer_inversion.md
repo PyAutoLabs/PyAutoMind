@@ -10,6 +10,9 @@ Repos:
 Difficulty: too-large
 Autonomy: supervised
 Priority: high
+Issued: 2026-10-21
+user-facing: true
+Community: https://github.com/PyAutoLabs/.github/discussions/39
 Memory: wiki/galaxies/sources/massive-ellipticals.md; wiki/lensing/sources/dark-matter-substructure.md; reading-queue.md
 Status: formalised
 Consequence: glance
