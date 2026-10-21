@@ -67,20 +67,13 @@
 - community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
 - prompt: active/matrix_free_interferometer_inversion.md
 
-## matrix-free-interferometer-phase1
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/642
+## imaging-sparse-triplets-masking
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/643
 - issued: 2026-10-21
-- user-facing: true
-- community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
-- parent: https://github.com/PyAutoLabs/PyAutoArray/issues/638 (active/matrix_free_interferometer_inversion.md)
-- prompt: active/matrix_free_interferometer_phase1.md
+- prompt: active/imaging_sparse_triplets_unmasked_and_jax_import.md
 - session: Claude Code (Fable 5.1), laptop CLI
-- status: library-shipped, awaiting-merge (glance → auto-merge on green if Witness passes)
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/645
-- prs:
-  - PyAutoArray: https://github.com/PyAutoLabs/PyAutoArray/pull/645
-- heart-ack: YELLOW acknowledged by human 2026-10-21 — manifest drift (1 mismatch); release validation stale: source moved since rehearsal (PyAutoArray)
-- classification: feature (PyAutoArray library only), Consequence glance, Autonomy supervised; plan approved in chat 2026-10-21; merge mode auto-merge on green if Witness passes
-- worktree: ~/Code/PyAutoLabs-wt/matrix-free-interferometer-phase1
+- status: library-dev
+- classification: bug (PyAutoArray library only), Consequence glance, Autonomy safe; plan approved in chat 2026-10-21; merge mode auto-merge on green if Witness passes
+- worktree: ~/Code/PyAutoLabs-wt/imaging-sparse-triplets-masking
 - repos:
-  - PyAutoArray: feature/matrix-free-interferometer-phase1
+  - PyAutoArray: feature/imaging-sparse-triplets-masking

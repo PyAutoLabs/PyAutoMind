@@ -1,3 +1,30 @@
+## matrix-free-interferometer-phase1
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/642
+- completed: 2026-10-21
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/645 (merge 034a616f)
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/645
+- parent: https://github.com/PyAutoLabs/PyAutoArray/issues/638 (active/matrix_free_interferometer_inversion.md)
+- community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro) — PR-open reply posted 2026-10-21; release update owed
+- summary: |
+    Phase 1 of the matrix-free interferometer inversion epic (#638, hub #39). One commit 58510cbf
+    on `feature/matrix-free-interferometer-phase1`: new numpy/scipy module
+    `inversion_interferometer_matrix_free_util.py` with `sparse_mapping_matrix_from`,
+    `MatrixFreeDataOperator` (`from_inversion`, `wtilde_image_from` on the 2× padded extent
+    grid via scipy.fft, `curvature_matvec` = Mᵀ W̃ M s, `data_vector` = Mᵀ d̃, `kappa0`),
+    `powell_preconditioner_from` (P = κ₀ MᵀM + H, sparse LU) and `reconstruction_via_pcg_from`
+    (scipy cg). No fit wiring, no Settings, no JAX; autoarray regularization matrices already carry
+    their coefficient so H is any existing matrix converted to sparse. 10 tests incl. a subprocess
+    nojax test. Worktree: inversion suite 1032 passed / 4 xfailed; nojax emulation 10 passed.
+    CI 3 legs green, CLEAN, not frozen; glance auto-merge.
+- witness: |
+    MET — M == mapper.mapping_matrix exactly (rectangular + Delaunay); curvature_matvec vs
+    curvature_matrix @ v 1.8e-15 / 2.2e-16 (two coefficients), data_vector 2.6e-16 (target 1e-12);
+    PCG vs unconstrained sparse-path reconstruction 3.6e-11 / 7.2e-10 (target 1e-8). All in CI.
+- heart-ack: "YELLOW acknowledged by human 2026-10-21 — manifest drift (1 mismatch); release validation stale: source moved since rehearsal (PyAutoArray)"
+- phase-2 questions: CG under jit (fixed iterations vs while_loop, reverse-mode), static-nnz padded triplets, LU replacement for the preconditioner (host callback / banded Cholesky / cheaper preconditioner), λ as a separate argument vs folded into H, single-mapper only (block operators for linear light profiles / several mappers).
+
+## Original prompt
+
 # Matrix-free interferometer inversion, phase 1: operator data term + PCG parity (numpy-first)
 
 Type: feature
