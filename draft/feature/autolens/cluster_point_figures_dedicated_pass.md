@@ -47,3 +47,20 @@ The Fit Positions legend auto-placement for FitPositionsImagePairAll lands mid-p
 - **Residual ranking strip:** a sorted dot plot of Δ/σ for every image, coloured by source and labelled `point_k · i`. It goes at the top of `fit_per_image.png` when there are few sources, or in `fit_residual_ranking.png` for clusters.
 - **Cluster scaling:** above ~10 sources, `fit_per_image/` becomes one file per source; the ranking strip is the index.
 - **Also:** PairAll legend placement in the emptiest corner (from #790).
+
+## Human decisions (2026-10-21, after per-image prototype round 1)
+
+- **`dataset.png`:** ONE function/concept, evolved from the left panel of the current point_source `fit.png`: black filled dots, σ in legend, arcsec ticks, solver extent. Never any critical curves on a dataset figure. Multiple sources get colour + marker shape, with `k·i` labels.
+- **Global `fit.png`:** residual arrows (quiver), one shared exaggeration factor with a scale key, per-source own-redshift curves in the source's colour. More than 8 sources: colour by redshift with a colourbar and label identity. Solver-grid extent. The synthetic many-source formatting needs tidying.
+- **`fit_per_image.png`:** the per-image zoom panels are DROPPED, because without image-plane context they carry too little information. One row per source, three panels:
+  1. that source's residual ranking;
+  2. an image-plane panel zoomed to that source's images, with residual arrows sharing one factor across rows;
+  3. the source-plane panel.
+  The ranking axis is linear Δ/σ (per-image χ for source-plane fits), with ONE shared range across rows, clipped at a robust max and off-scale values printed. Panels 1 and 2 are linked by image numbers. Many sources → one file per source.
+- **Source-plane fits:** the per-image presentation uses that fit's own source-plane χ (fit-class pairing).
+
+**Findings from round 1, for the build:**
+- Per-plane curves via a single deflection-field evaluation plus contouring of λt=0 / λr=0 take 0.2 s (2 planes) and 1.8 s (24 planes), versus ~17 s per plane per curve type with LensCalc. They agree to within 0.05″ median.
+- Curves, μ and solves must use the FULL multi-source tracer, because deflections are normalised to the last plane.
+
+Round-2 prototypes: `per_image_prototype/*/{dataset_v2,fit_v2,fit_per_image_v2}.png`.
