@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-10-21T12:47:48Z",
+  "updated": "2026-10-21T13:00:55Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -18,6 +18,12 @@
       "text": "COSMOS-Web Ring walkthrough \u2014 phase 1: image-first Colab notebook, no inference \u2014 workspace-shipped, awaiting-merge (7 commits incl. maintainer copy-edit; F150W/F444W; Explore The Model)",
       "url": "https://github.com/PyAutoLabs/autolens_assistant/pull/161",
       "prompt": "Use the start-dev skill. active/cosmos_web_ring_guided_walkthrough_p1_notebook.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Point-source positions panels: extent, markers, noise and titles \u2014 workspace-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/786",
+      "prompt": "Use the start-dev skill. active/point_dataset_positions_panel.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#655 \u2014 interferometer-primary-beam-persistence",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/655",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#784 \u2014 What shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/784",
       "prompt": null
     }
   ]

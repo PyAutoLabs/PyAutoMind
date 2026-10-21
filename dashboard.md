@@ -882,7 +882,7 @@ Use the start-dev skill. active/matrix_free_interferometer_phase4.md
 
 </details>
 
-<details><summary>📋 <a href="active/point_dataset_positions_panel.md">Point-source positions panels: extent, markers, noise and titles</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/785">issue #785</a> — issued 2026-10-21 — library-dev</summary>
+<details><summary>📋 <a href="active/point_dataset_positions_panel.md">Point-source positions panels: extent, markers, noise and titles</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/785">issue #785</a> — issued 2026-10-21 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/786">PyAutoLens#786</a>, <a href="https://github.com/PyAutoLabs/autolens_visualization/pull/11">autolens_visualization#11</a></summary>
 
 ```
 Use the start-dev skill. active/point_dataset_positions_panel.md
