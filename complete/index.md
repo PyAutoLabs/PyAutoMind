@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1925 records across 9 buckets.
+1926 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -192,6 +192,7 @@ markers; everything below GENERATED is rebuilt.
 - [ecosystem-routing-trial](2026/10/ecosystem-routing-trial.md) — Evaluated the role-routing checklist and specified future profiling/inference organ read contracts; no runtime…
 - [euclid-smoke-release-gate](2026/10/euclid-smoke-release-gate.md)
 - [evaluation-grid-cap-field](2026/10/evaluation-grid-cap-field.md)
+- [eyes-alphabetical-domains](2026/10/eyes-alphabetical-domains.md)
 - [eyes-focused-figure-browser](2026/10/eyes-focused-figure-browser.md)
 - [fit-util-masked-division](2026/10/fit-util-masked-division.md)
 - [fixed-model-json](2026/10/fixed-model-json.md)

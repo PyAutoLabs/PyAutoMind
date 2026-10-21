@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-10-21T09:18:48Z",
+  "headline": "RED \u2014 24 picks \u00b7 6 in flight",
+  "updated": "2026-10-21T09:25:45Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -18,12 +18,6 @@
       "text": "COSMOS-Web Ring walkthrough \u2014 phase 1: image-first Colab notebook, no inference \u2014 workspace-shipped, awaiting-merge (7 commits incl. maintainer copy-edit; F150W/F444W; Explore The Model)",
       "url": "https://github.com/PyAutoLabs/autolens_assistant/issues/160",
       "prompt": "Use the start-dev skill. active/cosmos_web_ring_guided_walkthrough_p1_notebook.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "PyAutoEyes board: domains in alphabetical order (mirror the _visualization scripts/ folders) \u2014 workspace-shipped, awaiting-merge (human /prm)",
-      "url": "https://github.com/PyAutoLabs/PyAutoEyes/issues/32",
-      "prompt": "Use the start-dev skill. active/eyes_alphabetical_domains.md"
     },
     {
       "severity": "yellow",
@@ -126,6 +120,12 @@
       "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Sparse mapped reconstructed image on the interferometer sparse inversion path\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autoarray/sparse_mapped_reconstructed_image.md",
+      "prompt": "Use the start-dev skill. draft/feature/autoarray/sparse_mapped_reconstructed_image.md"
     }
   ]
 }

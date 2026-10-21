@@ -1,3 +1,12 @@
+## Outcome
+The PyAutoEyes board lists every instance's domains alphabetically, so it mirrors the `<lib>_visualization` repos' `scripts/` folders exactly. This replaces the hand-written `DOMAIN_ORDER` added by viz-all-dataset-types.
+
+## Decisions
+- Human call 2026-10-21: "mirror the _visualization repo scripts foldr fully". The order applies to all instances (lens, galaxy, fit, cti).
+- Shipped under the Heart RED development override (recorded on #32, PR #33, autonomy_log).
+
+## Original prompt
+
 # PyAutoEyes board: domains in alphabetical order (mirror the _visualization scripts/ folders)
 
 Type: feature
