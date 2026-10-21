@@ -100,3 +100,13 @@
 - worktree: ~/Code/PyAutoLabs-wt/sparse-mapped-reconstructed-image
 - repos:
   - PyAutoArray: feature/sparse-mapped-reconstructed-image
+
+## ci-timing-abandoned-pr-cancels
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/314
+- issued: 2026-10-21
+- prompt: active/heart_ci_timing_abandoned_pr_cancels.md
+- session: Claude Code CLI (Opus 5.5); session 343c1fc1-4d32-42cc-a8f5-e26cf0332168
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/ci-timing-abandoned-pr-cancels
+- repos:
+  - PyAutoHeart: feature/ci-timing-abandoned-pr-cancels
