@@ -882,7 +882,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/matrix_free_interferometer_phase1.md">Matrix-free interferometer inversion, phase 1: operator data term + PCG parity (numpy-first)</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/642">issue #642</a> — issued 2026-10-21 — library-dev</summary>
+<details><summary>📋 <a href="active/matrix_free_interferometer_phase1.md">Matrix-free interferometer inversion, phase 1: operator data term + PCG parity (numpy-first)</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/642">issue #642</a> — issued 2026-10-21 — library-shipped, awaiting-merge (glance → auto-merge on green if Witness passes) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/645">PyAutoArray#645</a></summary>
 
 ```
 Use the start-dev skill. active/matrix_free_interferometer_phase1.md
