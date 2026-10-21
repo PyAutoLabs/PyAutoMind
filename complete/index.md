@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1927 records across 9 buckets.
+1929 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -190,6 +190,7 @@ markers; everything below GENERATED is rebuilt.
 - [ecosystem-layers](2026/10/ecosystem-layers.md)
 - [ecosystem-role-docs](2026/10/ecosystem-role-docs.md)
 - [ecosystem-routing-trial](2026/10/ecosystem-routing-trial.md) — Evaluated the role-routing checklist and specified future profiling/inference organ read contracts; no runtime…
+- [euclid-smoke-ordered-shard](2026/10/euclid-smoke-ordered-shard.md)
 - [euclid-smoke-release-gate](2026/10/euclid-smoke-release-gate.md)
 - [evaluation-grid-cap-field](2026/10/evaluation-grid-cap-field.md)
 - [eyes-alphabetical-domains](2026/10/eyes-alphabetical-domains.md)
@@ -244,6 +245,7 @@ markers; everything below GENERATED is rebuilt.
 - [linear-solver-p4a-jacobi-a100-divergence](2026/10/linear-solver-p4a-jacobi-a100-divergence.md)
 - [linear-solver-p5-mapper-corpus](2026/10/linear-solver-p5-mapper-corpus.md)
 - [lint-lychee-exclude-blob](2026/10/lint-lychee-exclude-blob.md) — Corrective: lychee in both organs' `lint.yml` now excludes `^https://github\.com/.*/blob/`. GitHub answers non…
+- [matrix-zeus-smoke-install](2026/10/matrix-zeus-smoke-install.md)
 - [memory-board-header-contract](2026/10/memory-board-header-contract.md)
 - [memory-cockpit-catch-up](2026/10/memory-cockpit-catch-up.md) — Lensing-specific catch-up freshness drives the HTML/Markdown banner and cockpit feed. Structured cutoff, age, …
 - [memory-digest-state](2026/10/memory-digest-state.md)

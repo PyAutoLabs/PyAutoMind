@@ -1,3 +1,15 @@
+## Summary
+Workspace-validation smoke sharded the Euclid pipeline per `scripts/<subdir>/`, so its only job was `scripts/tools`: `diagnose_latent.py` ran without the fits it replays and failed (cloud#39224774724, the release-readiness YELLOW reason), and the rest of the pipeline was never smoked. `autohands/script_matrix.py` gained an explicit caller-owned `--ordered PROJECT` opt-in that emits one entry carrying the ordered `smoke_tests.txt`; `workspace-validation.yml` passes `--ordered euclid` in smoke mode and runs such an entry via `run_python.py <name> . --list smoke_tests.txt`.
+
+## PRs
+- PyAutoLabs/PyAutoHands#318 (merged first)
+- PyAutoLabs/PyAutoHeart#312
+
+## Validation
+Hands 534 passed, Heart 1277 passed; matrix byte-identical without the flag; euclid ordered list 9/9 PASS locally through the new path. Shipped under a human Heart RED development override (2026-10-21). Real Workspace Smoke dispatch still to run.
+
+## Original prompt
+
 # Euclid smoke: `scripts/tools` shard runs without the fits it replays
 
 Type: bug

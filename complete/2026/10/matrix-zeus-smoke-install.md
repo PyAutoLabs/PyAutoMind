@@ -1,3 +1,14 @@
+## Summary
+Hands' Python Version Matrix 3.13/3.14 autofit_workspace smoke legs failed (run 39223656300) because the Hands smoke dependency preflight requires zeus for `searches/mcmc.py`, while the bootstrap installs PyAutoFit without `[optional]` off 3.12. `.github/scripts/smoke_install.sh` now installs `zeus-mcmc==2.5.4` (the `[optional]` pin) on 3.13+.
+
+## PRs
+- PyAutoLabs/autofit_workspace#173
+
+## Validation
+zeus 2.5.4 imports on 3.13.13/3.14.4; 3.13 venv per bootstrap passes `smoke_dependencies.py scripts/searches/mcmc.py` (TEST_MODE=2). Shipped under a human Heart RED development override (2026-10-21). Matrix dispatch still to run.
+
+## Original prompt
+
 # Hands Python Version Matrix: autofit_workspace mcmc.py needs `zeus` on 3.13/3.14
 
 Type: bug

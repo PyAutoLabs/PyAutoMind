@@ -113,6 +113,6 @@
 - prompt: draft/bug/health_fixes/heart_ci_timing_concurrency_cancels_as_kills.md
 - classification: library
 - suggested-branch: feature/ci-timing-superseded-main-cancels
-- blocked-by: euclid-smoke-ordered-shard (using PyAutoHeart)
+- unblocked: 2026-10-21 — euclid-smoke-ordered-shard merged (PyAutoHeart#312); PyAutoHeart claim released, ready for /start_library
 - affected-repos:
   - PyAutoHeart
