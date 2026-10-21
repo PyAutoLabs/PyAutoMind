@@ -890,7 +890,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/point_critical_curve_grid_clipped.md">Point-source critical curves render as disconnected arcs</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/783">issue #783</a> — issued 2026-10-21 — library-dev</summary>
+<details><summary>📋 <a href="active/point_critical_curve_grid_clipped.md">Point-source critical curves render as disconnected arcs</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/783">issue #783</a> — issued 2026-10-21 — library-shipped, awaiting-merge (judge tier → human /prm, library first; then Eyes dashboard_refresh) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/784">PyAutoLens#784</a></summary>
 
 ```
 Use the start-dev skill. active/point_critical_curve_grid_clipped.md
