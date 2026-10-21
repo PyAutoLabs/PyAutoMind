@@ -227,8 +227,11 @@ explicit side, think hard about where this separation is for different likelihoo
 
 ## Status
 
-- 2026-10-21: filed by the Fable 5.1 xhigh architect session with the report and five surveys. NOT STARTED: no phase issued; rulings R1–R11 open. Next: the orchestrating session reads "How to orchestrate", collects the rulings, files the phase-0A prompt and `/start_dev`s it (Pulse PR #68 first).
+- 2026-10-21: filed by the Fable 5.1 xhigh architect session with the report and five surveys. NOT STARTED: no phase issued; rulings R1–R11 open.
+- 2026-10-21 (later): phase 0 IN PLANNING — 0A prompt filed and planned via `/start_dev`; awaiting plan approval (see Ledger). Next: approve → create_issue → start_library on PyAutoPulse → Opus worker implements → ship_library; then file 0B.
 
 ## Ledger
 
 (append one dated entry per phase: issues, PRs, Mind records, ruling changes)
+
+- 2026-10-21 (phase 0 opened, Fable 5.1 medium orchestrator): sub-issue 0A prompt filed at `draft/feature/pyautopulse/likelihood_lifecycle_p0_pulse_contract.md` (`Epic: likelihood-lifecycle`, `Phase: 0`) assuming rulings R1, R2, R3, R7 as recommended and R4/R5 as validator enumerations only; `/start_dev` run to the plan; plan awaits human approval (the approval also confirms those rulings). Pulse PR #68 still open — 0A branches from main and rebases after it. 0B–0E prompts are filed one at a time once 0A ships.
