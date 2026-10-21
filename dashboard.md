@@ -903,7 +903,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/point_fit_source_plane_panel.md">Point-source fit: source-plane panel showing how closely the positions trace</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/789">issue #789</a> — issued 2026-10-21 — library-dev</summary>
+<details><summary>📋 <a href="active/point_fit_source_plane_panel.md">Point-source fit: source-plane panel showing how closely the positions trace</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/789">issue #789</a> — issued 2026-10-21 — library-shipped, workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/653">PyAutoArray#653</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/790">PyAutoLens#790</a>, <a href="https://github.com/PyAutoLabs/autolens_visualization/pull/13">autolens_visualization#13</a> — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoLens</summary>
 
 ```
 Use the start-dev skill. active/point_fit_source_plane_panel.md
@@ -3043,6 +3043,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoArray**
 
+- [PyAutoArray#653](https://github.com/PyAutoLabs/PyAutoArray/pull/653) — `active/point_fit_source_plane_panel.md`
 - [PyAutoArray#637](https://github.com/PyAutoLabs/PyAutoArray/pull/637) — `complete/2026/10/delaunaynn-wide-row-overhead.md`
 - [PyAutoArray#636](https://github.com/PyAutoLabs/PyAutoArray/pull/636) — `complete/2026/10/direct-conv-symmetric.md`
 - [PyAutoArray#649](https://github.com/PyAutoLabs/PyAutoArray/pull/649) — `complete/2026/10/imaging-sparse-triplets-masking.md`
@@ -3067,6 +3068,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoLens**
 
+- [PyAutoLens#790](https://github.com/PyAutoLabs/PyAutoLens/pull/790) — `active/point_fit_source_plane_panel.md`
 - [PyAutoLens#784](https://github.com/PyAutoLabs/PyAutoLens/pull/784) — `complete/2026/10/point-critical-curve-grid.md`
 - [PyAutoLens#786](https://github.com/PyAutoLabs/PyAutoLens/pull/786) — `complete/2026/10/point-dataset-positions-panel.md`
 - [PyAutoLens#782](https://github.com/PyAutoLabs/PyAutoLens/pull/782) — `complete/2026/10/point-image-fit-filename.md`

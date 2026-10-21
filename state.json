@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-10-21T15:27:51Z",
+  "updated": "2026-10-21T16:04:02Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -18,6 +18,12 @@
       "text": "COSMOS-Web Ring walkthrough \u2014 phase 1: image-first Colab notebook, no inference \u2014 workspace-shipped, awaiting-merge (7 commits incl. maintainer copy-edit; F150W/F444W; Explore The Model)",
       "url": "https://github.com/PyAutoLabs/autolens_assistant/pull/161",
       "prompt": "Use the start-dev skill. active/cosmos_web_ring_guided_walkthrough_p1_notebook.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Point-source fit: source-plane panel showing how closely the positions trace \u2014 library-shipped, workspace-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/653",
+      "prompt": "Use the start-dev skill. active/point_fit_source_plane_panel.md"
     },
     {
       "severity": "yellow",
@@ -36,6 +42,12 @@
       "text": "human review: the scaling_relation slam parks (imaging un-parked, multi_galaxy kept)",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md",
       "prompt": "Walk me through the completed work described in `draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md` so I can sign it off.\n\n1. Read the prompt: what was asked, and what it claims shipped.\n2. Find the evidence \u2014 the merged PR(s), the commits, the `complete/` record \u2014\n   and read the actual diff, not the description of it.\n3. Report what changed, what it does NOT cover, and anything you would have\n   done differently. Call out behaviour changes and test gaps explicitly.\n\nChange nothing while reviewing. When I sign it off, retire the prompt from the\nPyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date\n<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and\nregenerate the dashboard. If I do not sign it off, file the follow-up with\n`/intake` instead.\n"
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#653 \u2014 Point-source fit: source-plane panel showing how closely the positions trace",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/653",
+      "prompt": null
     },
     {
       "severity": "yellow",
@@ -113,18 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1707 \u2014 prior-stable-test-ids",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1707",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1706 \u2014 prior-summary-ranges",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1706",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#655 \u2014 interferometer-primary-beam-persistence",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/655",
       "prompt": null
     }
   ]
