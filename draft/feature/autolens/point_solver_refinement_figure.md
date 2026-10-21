@@ -103,3 +103,14 @@ Implementation intent:
 Phase 3 places the GIF next to the still in HowToLens tutorial 4 and the workspace `point_source/fit.py` placeholder.
 
 The prototype is `variant_f_coarse.gif` in the scratch prototype folder.
+
+## Prototype producer preserved (2026-10-21)
+
+The scratch producer is at `/mnt/c/Users/Jammy/Science/scratch/eyes/autolens/point_solver_prototype/producer/`. Run `python variant_f.py coarse|real [gif]`.
+- Its `draw_panel(ax, i, step)` is shared by the 2×2 PNG and the GIF.
+- `common.py` loads the viz true model.
+- Use it as the reference implementation for phase 2.
+
+`variant_f_coarse.gif` is 0.14 MB: 4 frames at 1.25 s each, with the final frame held for 3.75 s.
+
+On the real grid, steps 1, 2 and final look identical (sub-pixel triangles). The proposed diagnostic is therefore two panels (step 0 and final), pending the human's answer.
