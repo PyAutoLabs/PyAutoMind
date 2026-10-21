@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1933 records across 9 buckets.
+1934 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -270,6 +270,7 @@ markers; everything below GENERATED is rebuilt.
 - [over-sample-snr-helper](2026/10/over-sample-snr-helper.md)
 - [padded-single-image-recovery](2026/10/padded-single-image-recovery.md)
 - [point-audits-wheel-provenance](2026/10/point-audits-wheel-provenance.md) — Point-solver audits now work with installed wheels, preserve checkout provenance, fingerprint installed packag…
+- [point-image-fit-filename](2026/10/point-image-fit-filename.md)
 - [point-image-pair-all-forward-grad-nan](2026/10/point-image-pair-all-forward-grad-nan.md)
 - [point-solver-duplicate-policy](2026/10/point-solver-duplicate-policy.md)
 - [point-solver-image-accuracy](2026/10/point-solver-image-accuracy.md)

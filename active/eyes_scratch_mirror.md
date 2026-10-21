@@ -36,3 +36,5 @@ Follow-up: "go, mirror the dashboard so its eyes/autolens/<dataset_type>"
 autolens_visualization is claimed by `point-image-fit-filename` (PR #7, also edits
 `_viz_cli.py`). Phase 1 = autogalaxy/autofit/autocti_visualization + Brain `eyes.md`
 now. Phase 2 = autolens_visualization, same change, after #7 merges via /prm.
+
+Update 2026-10-21: autolens_visualization#7 MERGED and `point-image-fit-filename` closed (claim released) → phase 2 is unblocked; rebase onto the new `_viz_cli.py` (`extra_pngs` keep-list).
