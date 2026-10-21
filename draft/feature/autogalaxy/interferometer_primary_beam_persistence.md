@@ -4,6 +4,7 @@ Type: feature
 Target: PyAutoGalaxy
 Repos:
 - PyAutoGalaxy
+- PyAutoLens
 Difficulty: small
 Autonomy: safe
 Priority: medium
@@ -14,8 +15,14 @@ Witness: a test asserting an Interferometer with a primary beam saved by Analysi
 Review-minutes: 3
 Unattended: ready
 Filed: 2026-10-21
-Blocked-by: https://github.com/PyAutoLabs/PyAutoArray/pull/644 merged
 
-## What
+## What (survey of main 2026-10-21, PyAutoArray at 034a616f incl. #644/#645)
 
-Follow-up of PyAutoArray#644: `autogalaxy/interferometer/model/analysis.py` `interferometer_hdu_list_from` / save_attributes and `autogalaxy/aggregator/interferometer/interferometer.py` rebuild must save and reload `primary_beam` so an aggregator-rebuilt fit reproduces the beamed likelihood. Also consider raising rather than quietly falling back when `interferometer_route="numba"` is forced with a non-trivial beam, and de-duplicating the P=0 warning across dataset rebuilds (PyAutoArray side, small).
+The beam is saved nowhere today. `interferometer_hdu_list_from` (`autogalaxy/interferometer/model/analysis.py:76-218`) writes one FITS: in-memory branch HDUs MASK, DATA, NOISE_MAP, UV_WAVELENGTHS (:117-126); array-free branch MASK, NUFFT_PRECISION_OPERATOR, DIRTY_IMAGE, DIRTY_BEAM, SPARSE_TERMS_SCALARS (:129-217). `save_attributes` (:400-455) writes `image/dataset.fits` and `transformer_class`. The aggregator `_interferometer_from` (`autogalaxy/aggregator/interferometer/interferometer.py:161-235`) rebuilds via `from_sparse_terms` (:206-213) or `aa.Interferometer(...)` (:215-231); `_hdu()` falls back to legacy positional indices, so a new HDU must be detected with `_has_hdu`. PyAutoLens reuses both functions (no source change). `FitInterferometer` passes the dataset's transformer and sparse_operator to `DatasetInterface`, so passing `primary_beam=` back into the constructor is sufficient.
+
+1. `analysis.py`: helper `_primary_beam_native_from(dataset)` → None or the float64 native array (masked pixels 0) of `primary_beam_slim` on `real_space_mask`; append it as a trailing `PRIMARY_BEAM` HDU in both branches (legacy indices 0-3 unchanged); docstrings.
+2. `aggregator/interferometer/interferometer.py`: `_primary_beam_from(hdu_list)` via `_has_hdu`; pass `primary_beam=` into `from_sparse_terms` and `aa.Interferometer`; docstrings.
+3. Tests in `test_autogalaxy/interferometer/model/test_analysis_interferometer.py` (extend the round-trip patterns at :148, :172-255, :258-285 with a Gaussian beam spanning ~0.3-1 on `interferometer_7`): (a) in-memory beamed round trip — PRIMARY_BEAM present, `primary_beam_slim` and `transformer.primary_beam_slim` identical, `FitInterferometer.log_likelihood` equal (rel 1e-10) for light-profile and pixelization galaxies, and different from the beamless fit; (b) array-free beamed round trip via `from_stream(primary_beam=)` — `sparse_operator.primary_beam_slim` identical, log_evidence / figure_of_merit equal; (c) beamless writes no PRIMARY_BEAM HDU, HDU count pinned at 4, reload gives `primary_beam is None`; (d) old outputs without the HDU still load with `primary_beam=None` for both layouts.
+4. PyAutoLens: docstring line at `autolens/interferometer/model/analysis.py:336-339` and a mirror beamed round-trip test next to `test_autolens/interferometer/model/test_analysis_interferometer.py:220` (optional, do it).
+
+Not in scope: the pre-existing gap that an in-memory dataset with `apply_sparse_operator` comes back without the operator (likelihood still matches via the beamed transformer); the forced-numba fallback and repeated P=0 warning (PyAutoArray side, separate small prompt if wanted).
