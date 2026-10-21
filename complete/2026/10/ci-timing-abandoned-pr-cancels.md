@@ -1,3 +1,14 @@
+## Summary
+The last two red `suspect_cancelled` ci_timing rows were workspace-test Smoke Tests PR runs cancelled ~20 s after their PRs closed unmerged, with no successor; GitHub empties `pull_requests` on close, so the collector could not see why. `ci_timing.sh` now fetches one best-effort page of closed PRs per repo; `classify_cancelled` marks a non-superseded PR-event cancel as **abandoned** (benign, counted in a new additive per-gate `abandoned` key) when a closed PR on its branch has `created_at ≤ closed_at ≤ updated_at + SUPERSEDE_SLACK_S`. No threshold/weight/slack changes.
+
+## PRs
+- PyAutoLabs/PyAutoHeart#315
+
+## Validation
+57 targeted + 1295 full-suite tests passed; tenant firewall OK locally; live scratch collector 2 → 0 events. Heart YELLOW acknowledged by the human (recorded after PR-open; ship-time ask was missed).
+
+## Original prompt
+
 # Heart ci_timing: PR runs cancelled when their PR closes are flagged as kill suspects
 
 Type: bug
