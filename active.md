@@ -80,3 +80,15 @@
 - worktree: ~/Code/PyAutoLabs-wt/matrix-free-interferometer-phase1
 - repos:
   - PyAutoArray: feature/matrix-free-interferometer-phase1
+
+## eyes-scratch-mirror-lens
+- issue: https://github.com/PyAutoLabs/autolens_visualization/issues/8
+- issued: 2026-10-21
+- prompt: active/eyes_scratch_mirror_lens.md
+- session: Claude Code (Opus 5.5 subagent), laptop CLI; session ID unavailable
+- status: workspace-dev
+- classification: feature (phase 2 of eyes-scratch-mirror), Consequence judge, Autonomy human-required; plan approved in chat 2026-10-21; human /prm
+- worktree: ~/Code/PyAutoLabs-wt/eyes-scratch-mirror-lens
+- repos:
+  - autolens_visualization: feature/eyes-scratch-mirror-lens
+  - PyAutoBrain: feature/eyes-scratch-mirror-lens

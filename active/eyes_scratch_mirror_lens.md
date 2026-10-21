@@ -2,6 +2,7 @@
 
 Consequence: judge
 Autonomy: human-required
+Issued: 2026-10-21
 blocked-by: https://github.com/PyAutoLabs/autolens_visualization/pull/7 (task point-image-fit-filename; that PR also edits `_viz_cli.py`)
 
 @autolens_visualization
