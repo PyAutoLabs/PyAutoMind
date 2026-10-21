@@ -63,3 +63,22 @@ Prototypes are in `/mnt/c/Users/Jammy/Science/scratch/eyes/autolens/point_solver
 - A: all steps zoomed on one image. Steps 1-5 look identical (the refinement is self-similar), so drop it.
 - B: steps 0/1/3/5 for one image, with a source-plane row of the traced triangles and the source star at the cusp. The research worker and the session judged it the teaching form.
 - C: a step-0 overview with numbered images and the rejected centre annotated, plus zoom panels per image at steps 1, middle and last. Recommended as the default diagnostic `point_solver.png`.
+
+## Human design direction (2026-10-21, after seeing A/B/C)
+
+The human prefers the old `visualise(step)` style, a fixed-axes panel showing every image, because it shows the triangles shrinking. A/B/C lose that because their axes rescale.
+
+Direction:
+- **Panel 0** is the variant-C overview: numbered images, and the centre triangle annotated as rejected by `magnification_threshold`.
+- **Later panels** show every image at a fixed extent.
+- **Zooms** happen only when a zoom is unavoidable, and are explicit: a dashed box on the previous panel and "zoom ×k" in the title, held fixed across the steps that follow.
+- **Colours.** Kept-then-rejected (μ < threshold) triangles get a colour paired with the kept colour on every panel.
+- **Teaching mode** may use a coarse grid; the diagnostic uses the real solver.
+- **Fixes.** Correct the (y,x) transposition; no axis labels.
+
+Variant D (real grid and coarse grid) is being prototyped into the same scratch folder.
+
+Still open with the human:
+- cluster row/image capping
+- visualizer output: config-toggled, off by default, best-fit only, with the JAX `MAX_CONTAINING_SIZE` warning
+- retiring `point/visualise.py` and fixing `tree_flatten` in the same PR
