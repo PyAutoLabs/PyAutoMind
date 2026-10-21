@@ -35,3 +35,31 @@ It serves two purposes:
 - **API placement.** Something like `aplt.plot_point_solver(solver, tracer, source_plane_coordinate)`, plus a config-toggled visualizer output during modelling (off by default, since it is costly). Retire or wrap `point/visualise.py`.
 - **JAX path.** Decide whether the JAX solver path exposes the same steps, or the figure is numpy-only.
 - **Re-render.** Producers in autolens_visualization for point_source_image_chi_squared and cluster.
+
+## Research findings (2026-10-21, read-only prototype)
+
+Prototypes are in `/mnt/c/Users/Jammy/Science/scratch/eyes/autolens/point_solver_prototype/variant_{a,b,c}.png`. The scripts are in the session scratchpad; they are not tracked, so re-derive them from this section.
+
+**Lost image.** It was never committed anywhere. There are two display-only ancestors:
+- autolens_workspace `scripts/guides/mappings.py:309-338` `__Solver Refinement Steps__` (#525, 2026-09-03), which plots only the kept-triangle means.
+- PyAutoLens `point/visualise.py` (2024). Its only caller was removed in e8db9e276. It has a bug: it plots `triangle[:,0]` as x, so every plot is transposed.
+
+**API.** `solver.steps(tracer=..., shape=Point(*beta))` works today with no library change. Each `Step` holds:
+- `initial_triangles`
+- `plane_triangles` (undocumented; the source-plane copy)
+- `filtered_triangles`
+- `neighbourhood`
+- `up_sampled`
+
+`n_steps = ceil(log2(scale/pixel_scale_precision))`. That gives 6 steps for the 0.05″ grid at 0.001. The counts are 23,283 tested at step 0, then 80 per step, with 5 kept: four images plus the lens-centre triangle that `magnification_threshold` rejects.
+
+**Cost.** Collecting the steps with NumPy takes 0.15 s; rendering takes about 3 s, mostly the critical curves.
+
+**JAX.** Steps work eagerly but come back NaN-padded (`MAX_CONTAINING_SIZE=20`). Inside jit they are hidden behind `implicit_diff`. So the figure is NumPy-only, re-solving with `xp=np` at the instance being visualised.
+
+**Latent bug.** `Step.tree_flatten` returns 5 children for 6 fields (it omits `plane_triangles`), so `tree_unflatten` raises TypeError. It is harmless today.
+
+**Variants.**
+- A: all steps zoomed on one image. Steps 1-5 look identical (the refinement is self-similar), so drop it.
+- B: steps 0/1/3/5 for one image, with a source-plane row of the traced triangles and the source star at the cusp. The research worker and the session judged it the teaching form.
+- C: a step-0 overview with numbered images and the rejected centre annotated, plus zoom panels per image at steps 1, middle and last. Recommended as the default diagnostic `point_solver.png`.
