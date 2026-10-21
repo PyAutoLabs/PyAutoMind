@@ -18,7 +18,7 @@ Witness: a results note under autolens_profiling/results/notes/ with a dense-vs-
 Review-minutes: 20
 Unattended: needs-slicing
 Filed: 2026-10-21
-Blocked-by: phases 1-4 of PyAutoArray#638 released
+Blocked-by: none for the profiling leg (runs against checkouts; phases 1-4 on main) — only the workspace example waits for the release. Part of the human's PyAutoPulse profiling programme (anchor Pulse#62); not to be started before that programme.
 
 ## What
 
