@@ -1,3 +1,36 @@
+Shipped the source-plane fit panel for point-source fits, with each panel matched to its Fit class.
+
+**Fit classes**
+
+| Fit class | Panel content |
+|---|---|
+| Image-plane χ² (ImagePair, PairRepeat, PairAll, and the Solved variants) | Context only: traced positions numbered 1..N, model source centre, own-plane caustic and inset. No noise footprints and no χ². |
+| Source-plane χ², magnification weighting | σ/\|μ\| circles (primary), plus a dashed A·σ "propagated noise (reference)" ellipse. |
+| Source-plane χ², jacobian weighting | A·σ ellipses. |
+
+- Centre markers: ★ free centre; ◆ solved β* (also used for the image-plane Solved fits, with "Model (from solved β*)" on the Fit Positions panel).
+- One χ² (the fit's own) appears in the legend. Legend-only fit-type cues; no subtitles.
+- PairAll residual lines are dashed and labelled "Residual (nearest, soft pairing)".
+
+**Layout and code**
+- `subplot_fit` is 1×2, or 1×3 with fluxes.
+- New `autolens/point/plot/source_plane_panel.py`. Label placement is shared in `positions_panel.py` (with `point_solver_plots.py`).
+- PyAutoArray `_round_ticks` now uses adaptive precision.
+- Tests: test_autoarray 2184 passed; test_autolens point 277 passed.
+
+Merged 2026-10-21 via a human /prm (judge tier), order #653 → #790 → #13.
+
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/653
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/790
+
+**Known follow-ups**
+- PairAll legend auto-placement can cover the mass centre: the longer "Residual (nearest, soft pairing)" label pushes it mid-panel (seen in the scratch render; no tracked PNG uses PairAll). Place the legend in the emptiest corner, as the source-plane panel does. Fold this into the cluster figures pass.
+- The image-plane critical curves of multi-plane points are still drawn from the last plane: `draft/bug/autolens/point_fit_critical_curves_ignore_source_redshift.md`.
+- The FitPositionsSource default weighting: `draft/bug/autolens/fitpositionssource_default_magnification_weighti.md`.
+- The workspace `point_source/plot.py` crash with 5 model images vs 4 observed: `draft/bug/autolens/point_source_plot_script_residual_shape_mismatch.md`.
+
+## Original prompt
+
 # Point-source fit: source-plane panel showing how closely the positions trace
 
 Consequence: judge

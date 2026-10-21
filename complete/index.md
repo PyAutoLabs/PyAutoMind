@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1946 records across 9 buckets.
+1947 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -281,6 +281,7 @@ markers; everything below GENERATED is rebuilt.
 - [point-audits-wheel-provenance](2026/10/point-audits-wheel-provenance.md) — Point-solver audits now work with installed wheels, preserve checkout provenance, fingerprint installed packag…
 - [point-critical-curve-grid](2026/10/point-critical-curve-grid.md)
 - [point-dataset-positions-panel](2026/10/point-dataset-positions-panel.md)
+- [point-fit-source-plane-panel](2026/10/point-fit-source-plane-panel.md)
 - [point-image-fit-filename](2026/10/point-image-fit-filename.md)
 - [point-image-pair-all-forward-grad-nan](2026/10/point-image-pair-all-forward-grad-nan.md)
 - [point-solver-duplicate-policy](2026/10/point-solver-duplicate-policy.md)

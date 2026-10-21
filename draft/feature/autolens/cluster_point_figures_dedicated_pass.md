@@ -20,3 +20,7 @@ builds-on: complete/2026/10/point-solver-refinement-figure.md (PyAutoLens#788 / 
 ## Intent
 
 Survey every cluster point-source figure (`dataset.png`, `fit.png`, `point_solver.png`, and the cluster-wide figures) with the human via /eyes. Decide the cluster-specific conventions: per-image zoom insets, labelling of many images, per-plane curves, and extent. Then run /start_dev for the agreed changes.
+
+## Also fold in (2026-10-21)
+
+The Fit Positions legend auto-placement for FitPositionsImagePairAll lands mid-panel over the mass centre, because of the longer "Residual (nearest, soft pairing)" label. Place it in the emptiest corner, like the source-plane panel. See `complete/2026/10/point-fit-source-plane-panel.md`.
