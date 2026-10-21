@@ -10,6 +10,7 @@
 - [knn-partial-point-block](#knn-partial-point-block)
 - [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
 - [interferometer-primary-beam-persistence-mirror](#interferometer-primary-beam-persistence-mirror)
+- [likelihood-lifecycle-p0-profiling](#likelihood-lifecycle-p0-profiling)
 
 <!-- toc:end -->
 
