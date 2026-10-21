@@ -72,10 +72,15 @@
 - issued: 2026-10-21
 - prompt: active/cluster_point_figures_dedicated_pass.md
 - session: Claude Code (Opus 5.5 subagent); https://claude.ai/code/session_019Y6tDwGThyc8UowuncXw88
-- status: workspace-dev (checkpoint 2026-10-21 night; all 4 branches pushed)
-- heads: PyAutoLens 30360d261 (PR #794 open, pending-release); autolens_visualization 1989ce1; autolens_workspace e61cb2fd; autolens_workspace_test ae9c9c2 (no workspace PRs yet)
+- status: workspace-shipped, awaiting-merge
+- heads: PyAutoLens 30360d261; autolens_visualization bd11a9a; autolens_workspace e61cb2fd; autolens_workspace_test ae9c9c2
+- prs:
+  - PyAutoLens: https://github.com/PyAutoLabs/PyAutoLens/pull/794
+  - autolens_visualization: https://github.com/PyAutoLabs/autolens_visualization/pull/14
+  - autolens_workspace: https://github.com/PyAutoLabs/autolens_workspace/pull/594
+  - autolens_workspace_test: https://github.com/PyAutoLabs/autolens_workspace_test/pull/347
 - verified: test_autolens 925 passed; real search.fit test-mode: point_source (image/ dataset_point, image_with_points, fit, fit_per_image, fit_image_with_points) and 2-source cluster FactorGraph (top-level all-sources set + analyses/analysis_i set); ws point_source/modeling.py writes same set; ws_test point_source/visualization{,_jit} PASS; viz gallery_run point_source_* + cluster ok + --check clean
-- next: open 3 workspace PRs (viz, ws, ws_test; Upstream PR #794) via /ship_workspace, PR-open only; human /prm library first; then Eyes dashboard_refresh after viz merge
+- next: human /prm in order #794 -> viz#14 (rerun lint after #794) / ws#594 / ws_test#347; then dispatch PyAutoEyes dashboard_refresh.yml; close absorbed draft/bug/autolens/point_fit_critical_curves_ignore_source_redshift.md
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/794
 - worktree: ~/Code/PyAutoLabs-wt/cluster-point-figures
 - absorbs: draft/bug/autolens/point_fit_critical_curves_ignore_source_redshift.md (close with this task)
