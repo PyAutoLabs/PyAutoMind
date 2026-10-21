@@ -1,0 +1,38 @@
+# Eyes scratch mirror — on-the-fly figure inspection
+
+Consequence: judge
+Autonomy: human-required
+Issued: 2026-10-21
+
+@autolens_visualization @autogalaxy_visualization @autofit_visualization @autocti_visualization @PyAutoBrain
+
+## Request (verbatim, 2026-10-21)
+
+> For PYAutoEyes work, I often have to wait for a complete loop of image fix to
+> dashboard update to provide feedback, but when im actively working on images it
+> needs to be more on-the-fly (e.g. before PRs, CI). Can we make it so such work
+> puts images for inspection in Science/scratch/eyes/dataset_type as we go.
+
+Follow-up: "go, mirror the dashboard so its eyes/autolens/<dataset_type>"
+
+## Approved plan
+
+- Opt-in env var `PYAUTO_EYES_SCRATCH` (human sets it to
+  `/mnt/c/Users/Jammy/Science/scratch/eyes`); unset = no-op, so CI and other
+  machines are unaffected and no Windows path is committed.
+- Layout mirrors the PyAutoEyes dashboard: `$PYAUTO_EYES_SCRATCH/<lib>/<dataset_type>/`
+  (`autolens/imaging`, `autogalaxy/ellipse`, `autofit/samples`, `autocti/imaging_ci`, …),
+  where `<dataset_type>` = the producer domain `scripts/<domain>/`.
+- Each `<lib>_visualization/_viz_cli.py` gains a mirror helper + entry point
+  `python _viz_cli.py scratch [domain ...]`: replaces the scratch domain folder
+  with the current PNGs (no stale figures), prints the path.
+- `gallery/gallery_run.sh` calls it after each successful producer, so a
+  worktree run of one domain lands figures in scratch immediately.
+- Brain `skills/eyes/eyes.md` gains an "active image work" mode: after each fix,
+  re-render that domain, mirror, tell the human the scratch path.
+
+## Split (human decision 2026-10-21)
+
+autolens_visualization is claimed by `point-image-fit-filename` (PR #7, also edits
+`_viz_cli.py`). Phase 1 = autogalaxy/autofit/autocti_visualization + Brain `eyes.md`
+now. Phase 2 = autolens_visualization, same change, after #7 merges via /prm.

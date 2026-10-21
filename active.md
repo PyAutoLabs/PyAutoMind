@@ -99,3 +99,17 @@
   - PyAutoLens: feature/point-image-fit-filename
   - autolens_workspace: feature/point-image-fit-filename
   - autolens_visualization: feature/point-image-fit-filename
+
+## eyes-scratch-mirror
+- issue: https://github.com/PyAutoLabs/autogalaxy_visualization/issues/4
+- issued: 2026-10-21
+- prompt: active/eyes_scratch_mirror.md
+- session: Claude Code (Opus 5.5 subagent), laptop CLI
+- status: workspace-dev
+- classification: feature, phase 1 (autogalaxy/autofit/autocti_visualization + Brain eyes.md); phase 2 = autolens_visualization after autolens_visualization#7 merges; Consequence judge, Autonomy human-required; plan approved in chat 2026-10-21; merge mode human /prm
+- worktree: ~/Code/PyAutoLabs-wt/eyes-scratch-mirror
+- repos:
+  - autogalaxy_visualization: feature/eyes-scratch-mirror
+  - autofit_visualization: feature/eyes-scratch-mirror
+  - autocti_visualization: feature/eyes-scratch-mirror
+  - PyAutoBrain: feature/eyes-scratch-mirror
