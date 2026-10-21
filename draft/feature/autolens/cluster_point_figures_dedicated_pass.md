@@ -64,3 +64,16 @@ The Fit Positions legend auto-placement for FitPositionsImagePairAll lands mid-p
 - Curves, μ and solves must use the FULL multi-source tracer, because deflections are normalised to the last plane.
 
 Round-2 prototypes: `per_image_prototype/*/{dataset_v2,fit_v2,fit_per_image_v2}.png`.
+
+## Human feedback round 2 → round 3 (2026-10-21)
+
+- **`fit_per_image`:** liked. All 3 panels square and the same aspect. Ticks styled like other PyAutoLens figures. Redshift in the row titles. (Session addition: source-plane dots use the same per-image colours as panels 1–2.)
+- **Global `fit`:** still hard to see the data, the pairing and the model. Make the observed position, the model position and the pairing clearly readable; the 200 mas key arrow is barely visible. Variants are in round 3.
+- **NEW:** a cluster image-with-points analogue (imaging data plus all sources' positions) and a fit version.
+- **Unify symbols** between single-source `dataset.png` and multi-source `dataset_v2`: one function and one visual language. Single source stays the black-dot look.
+- **Agreed answers from round 2:**
+  - The shared ranking range is computed where all sources are visible (the same place as the global fit); a lone source uses its own range.
+  - Accept per-panel arrow keys.
+  - Colours mean image within rows and source globally.
+  - "Residual / σ" label is OK.
+  - The merged dataset figure is titled "Dataset Positions".
