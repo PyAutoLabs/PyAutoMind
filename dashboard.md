@@ -12,7 +12,7 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 7 |
 | [Planned](#planned) | 8 |
-| [Backlog](#backlog) | 264 |
+| [Backlog](#backlog) | 266 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -1579,7 +1579,7 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>feature</b> — 38</summary>
+<summary><b>feature</b> — 39</summary>
 
 <details><summary>📋 <a href="draft/feature/autoarray/matrix_free_interferometer_phase4.md">Matrix-free interferometer inversion, phase 4: positivity via primal-dual interior point with active-set…</a> — autoarray · large · supervised · high</summary>
 
@@ -1857,6 +1857,14 @@ Use the start-dev skill. draft/feature/autoarray/adapt_linear_default_flip.md
 
 ```
 Use the start-dev skill. draft/feature/autolens/point_fit_source_plane_panel.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/point_solver_refinement_figure.md">Point-source phase 2: PointSolver refinement figure</a> — autolens · human-required</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens/point_solver_refinement_figure.md
 ```
 
 </details>
@@ -2346,7 +2354,7 @@ Use the start-dev skill. draft/maintenance/pyautomind/session_start_hook_copies_
 </details>
 
 <details>
-<summary><b>docs</b> — 19</summary>
+<summary><b>docs</b> — 20</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens/split_lensing_regimes.md">Split lensing regimes: multi_galaxy / group / cluster (epic plan)</a> — autolens · too-large · supervised · high</summary>
 
@@ -2456,6 +2464,14 @@ Use the start-dev skill. draft/docs/workspaces/model_bullet_parameter_count_drif
 
 ```
 Use the start-dev skill. draft/docs/workspaces/assistants_regime_extension.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens/point_solver_figure_workspace_placement.md">Point-source phase 3: place and describe the PointSolver figure across the workspace</a> — autolens · human-required</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens/point_solver_figure_workspace_placement.md
 ```
 
 </details>
@@ -2830,7 +2846,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-95 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+97 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2847,6 +2863,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autolens/cluster_curves_engine_dispatch.md`
 - `draft/feature/autolens/magnification_maps_visualization.md`
 - `draft/feature/autolens/point_fit_source_plane_panel.md`
+- `draft/feature/autolens/point_solver_refinement_figure.md`
 - `draft/feature/autolens/source_cluster_arc.md`
 - `draft/feature/autolens_jax_joss/autolens_jax_joss_benchmark_repo.md`
 - `draft/feature/autolens_workspace/pointsolver_grid_extent_per_package.md`
@@ -2874,8 +2891,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md`
 - `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
-- `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md`
-- _… and 55 more_
+- _… and 57 more_
 
 </details>
 
