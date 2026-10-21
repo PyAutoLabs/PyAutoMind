@@ -82,3 +82,14 @@
 - repos:
   - autolens_inference: feature/likelihood-lifecycle-p0-inference
   - PyAutoPulse: feature/likelihood-lifecycle-p0-inference
+
+## positions-source-jacobian-default
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/791
+- issued: 2026-10-21
+- prompt: active/fitpositionssource_default_magnification_weighti.md
+- session: Claude Code CLI (Opus 5.5), laptop
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/positions-source-jacobian-default
+- repos:
+  - PyAutoLens: feature/positions-source-jacobian-default
+- next: library PR (jacobian default + magnification normalisation) → workspace (autolens_workspace + autolens_workspace_test, explain the default) → profiling note once cluster-pointsolver-robust-settings releases autolens_profiling
