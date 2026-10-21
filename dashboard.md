@@ -874,7 +874,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/matrix_free_interferometer_phase3.md">Matrix-free interferometer inversion, phase 3: log-evidence via exact sparse log-det + stochastic…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/647">issue #647</a> — issued 2026-10-21 — library-dev</summary>
+<details><summary>📋 <a href="active/matrix_free_interferometer_phase3.md">Matrix-free interferometer inversion, phase 3: log-evidence via exact sparse log-det + stochastic…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/647">issue #647</a> — issued 2026-10-21 — library-shipped, awaiting-merge (glance → auto-merge on green if Witness passes) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/651">PyAutoArray#651</a></summary>
 
 ```
 Use the start-dev skill. active/matrix_free_interferometer_phase3.md

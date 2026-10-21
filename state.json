@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-10-21T12:39:23Z",
+  "updated": "2026-10-21T12:39:57Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -18,6 +18,12 @@
       "text": "COSMOS-Web Ring walkthrough \u2014 phase 1: image-first Colab notebook, no inference \u2014 workspace-shipped, awaiting-merge (7 commits incl. maintainer copy-edit; F150W/F444W; Explore The Model)",
       "url": "https://github.com/PyAutoLabs/autolens_assistant/pull/161",
       "prompt": "Use the start-dev skill. active/cosmos_web_ring_guided_walkthrough_p1_notebook.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Matrix-free interferometer inversion, phase 3: log-evidence via exact sparse log-det + stochastic\u2026 \u2014 library-shipped, awaiting-merge (glance \u2192 auto-merge on green if Witness passes)",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/651",
+      "prompt": "Use the start-dev skill. active/matrix_free_interferometer_phase3.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoLens PyAutoLens#784 \u2014 What shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/784",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#782 \u2014 What shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/782",
       "prompt": null
     }
   ]
