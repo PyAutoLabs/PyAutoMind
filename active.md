@@ -95,7 +95,11 @@
 - community: https://github.com/PyAutoLabs/.github/discussions/40 (@HRSAstro)
 - prompt: active/sparse_mapped_reconstructed_image.md
 - session: Claude Code (Fable 5.1), laptop CLI
-- status: library-dev
+- status: library-shipped, awaiting-merge (glance → auto-merge on green if Witness passes)
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/641
+- prs:
+  - PyAutoArray: https://github.com/PyAutoLabs/PyAutoArray/pull/641
+- heart-ack: YELLOW acknowledged by human 2026-10-21 — manifest drift (1 mismatch); test run status unknown; release validation incomplete (no rehearsal)
 - classification: feature (PyAutoArray library; PyAutoGalaxy verify-only), Consequence glance, Autonomy safe; plan approved in chat 2026-10-21; merge mode auto-merge on green if Witness passes
 - worktree: ~/Code/PyAutoLabs-wt/sparse-mapped-reconstructed-image
 - repos:
