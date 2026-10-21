@@ -866,7 +866,7 @@ Use the start-dev skill. active/cosmos_web_ring_guided_walkthrough_p1_notebook.m
 
 </details>
 
-<details><summary>📋 <a href="active/eyes_scratch_mirror.md">Eyes scratch mirror — on-the-fly figure inspection</a> — <a href="https://github.com/PyAutoLabs/autogalaxy_visualization/issues/4">issue #4</a> — issued 2026-10-21 — workspace-dev</summary>
+<details><summary>📋 <a href="active/eyes_scratch_mirror.md">Eyes scratch mirror — on-the-fly figure inspection</a> — <a href="https://github.com/PyAutoLabs/autogalaxy_visualization/issues/4">issue #4</a> — issued 2026-10-21 — workspace-shipped, awaiting-merge (judge tier → human /prm; Brain PR is docs-only, any order)</summary>
 
 ```
 Use the start-dev skill. active/eyes_scratch_mirror.md
