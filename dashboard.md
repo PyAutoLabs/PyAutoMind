@@ -12,7 +12,7 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 8 |
-| [Backlog](#backlog) | 263 |
+| [Backlog](#backlog) | 264 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -1571,7 +1571,7 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>feature</b> — 37</summary>
+<summary><b>feature</b> — 38</summary>
 
 <details><summary>📋 <a href="draft/feature/autoarray/matrix_free_interferometer_phase4.md">Matrix-free interferometer inversion, phase 4: positivity via primal-dual interior point with active-set…</a> — autoarray · large · supervised · high</summary>
 
@@ -1841,6 +1841,14 @@ Use the start-dev skill. draft/feature/workspaces/gallery_runner_missing_tiers.m
 
 ```
 Use the start-dev skill. draft/feature/autoarray/adapt_linear_default_flip.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/point_fit_source_plane_panel.md">Point-source fit: source-plane panel showing how closely the positions trace</a> — autolens · human-required</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens/point_fit_source_plane_panel.md
 ```
 
 </details>
@@ -2814,7 +2822,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-94 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+95 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2830,6 +2838,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autolens/area_magnification_leggos.md`
 - `draft/feature/autolens/cluster_curves_engine_dispatch.md`
 - `draft/feature/autolens/magnification_maps_visualization.md`
+- `draft/feature/autolens/point_fit_source_plane_panel.md`
 - `draft/feature/autolens/source_cluster_arc.md`
 - `draft/feature/autolens_jax_joss/autolens_jax_joss_benchmark_repo.md`
 - `draft/feature/autolens_workspace/pointsolver_grid_extent_per_package.md`
@@ -2858,8 +2867,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
 - `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md`
-- `draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md`
-- _… and 54 more_
+- _… and 55 more_
 
 </details>
 
