@@ -1,3 +1,28 @@
+## imaging-sparse-triplets-masking
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/643
+- completed: 2026-10-21
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/649 (merge 33435592)
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/649
+- summary: |
+    Side finding of #639/#641. Three commits 9b52fac5, 3e53e0aa, dd268224 on
+    `feature/imaging-sparse-triplets-masking`: `mapper_util.sparse_triplets_from(pix_sizes_for_sub=)`
+    masks invalid stencil entries (slot >= pix_sizes or cols < 0) on numpy and JAX; `Mapper.sparse_triplets_data`
+    / `sparse_triplets_curvature` pass it; interferometer `_sparse_triplets_slim_from` uses the shared masking
+    (local block removed; 24 arrays identical before/after); the two imaging scatter-add helpers dispatch on xp
+    (numpy bincount, JAX segment_sum, JAX imported only on that branch); four imaging call sites pass xp.
+    Defect confirmed LATENT: Delaunay/DelaunayNN unused slots hold -1 with weight exactly 0; rectangular/KNN
+    emit none. Masking is a prerequisite for the numpy bincount branch (raises on -1). Worktree: inversion
+    1037 passed / 4 xfailed; dataset/imaging 36 passed; nojax emulation 23 passed / 10 skipped. CI 3 legs green.
+- witness: |
+    MET — mapper_util test zeroes a -1 index and an unused non-zero-weight slot on numpy and JAX; imaging sparse
+    data_vector / curvature / mapped reconstruction match the dense mapping inversion on such a mapper (numpy +
+    JAX backends); subprocess no-JAX test covers the triplets and both helpers. Narrower than filed: the full
+    InversionImagingSparse still needs JAX (operator + curvature methods import it unconditionally) — follow-up.
+- heart-ack: "YELLOW acknowledged by human 2026-10-21 — manifest drift (1 mismatch); release validation stale: source moved since rehearsal (PyAutoArray)"
+- follow-ups: lazy JAX imports in ImagingSparseOperator.from_noise_map_and_psf and imaging curvature_matrix_* methods (file as a small prompt); interferometer _sparse_triplets_curvature_from left unmasked (util drops out-of-range columns).
+
+## Original prompt
+
 # Imaging sparse inversion: unmasked mapper triplets in the reconstructed-image path and an unconditional JAX import
 
 Type: bug
