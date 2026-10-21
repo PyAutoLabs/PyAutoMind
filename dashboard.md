@@ -895,7 +895,7 @@ Use the start-dev skill. active/cosmos_web_ring_guided_walkthrough_p1_notebook.m
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p0_pulse_contract.md">Likelihood lifecycle phase 0A: <code>profiling-summary@3</code> (class/status), <code>walltime-validation@1</code>, <code>designation</code> decisions and Class-first Pulse…</a> — <a href="https://github.com/PyAutoLabs/PyAutoPulse/issues/69">issue #69</a> — issued 2026-10-21 — library-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p0_pulse_contract.md">Likelihood lifecycle phase 0A: <code>profiling-summary@3</code> (class/status), <code>walltime-validation@1</code>, <code>designation</code> decisions and Class-first Pulse…</a> — <a href="https://github.com/PyAutoLabs/PyAutoPulse/issues/69">issue #69</a> — issued 2026-10-21 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/70">PyAutoPulse#70</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p0_pulse_contract.md
