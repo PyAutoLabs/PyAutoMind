@@ -14,6 +14,14 @@
 
 <!-- toc:end -->
 
+## cluster-point-figures
+- filed: 2026-10-21
+- prompt: draft/feature/autolens/cluster_point_figures_dedicated_pass.md
+- status: blocked — PyAutoLens claimed by positions-source-jacobian-default (PyAutoLens#791; its diff edits autolens/point/plot/source_plane_panel.py + test, which this task also changes, and flips FitPositionsSource to jacobian weighting, which changes this task's source-plane ranking). Design FULLY APPROVED 2026-10-21 (v4 prototypes); run /start_dev when that claim clears — no re-approval needed.
+- affected-repos:
+  - PyAutoLens
+  - autolens_visualization
+
 ## isothermal-ell-sph-oversampling-at-the-cusp
 - status: planned — NOT yet a prompt file; file one via `/intake` before starting
 - found: 2026-08-09, while pinning B10 of the @rhayes777 audit (`complete/2026/08/autogalaxy-profile-validation-guards.md`)
