@@ -866,7 +866,7 @@ Use the start-dev skill. active/cosmos_web_ring_guided_walkthrough_p1_notebook.m
 
 </details>
 
-<details><summary>📋 <a href="active/eyes_alphabetical_domains.md">PyAutoEyes board: domains in alphabetical order (mirror the _visualization scripts/ folders)</a> — <a href="https://github.com/PyAutoLabs/PyAutoEyes/issues/32">issue #32</a> — issued 2026-10-21 — workspace-dev</summary>
+<details><summary>📋 <a href="active/eyes_alphabetical_domains.md">PyAutoEyes board: domains in alphabetical order (mirror the _visualization scripts/ folders)</a> — <a href="https://github.com/PyAutoLabs/PyAutoEyes/issues/32">issue #32</a> — issued 2026-10-21 — workspace-shipped, awaiting-merge (human /prm)</summary>
 
 ```
 Use the start-dev skill. active/eyes_alphabetical_domains.md
