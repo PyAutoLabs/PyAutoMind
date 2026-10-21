@@ -911,7 +911,7 @@ Use the start-dev skill. active/cosmos_web_ring_guided_walkthrough_p1_notebook.m
 
 </details>
 
-<details><summary>📋 <a href="active/fitpositionssource_default_magnification_weighti.md">FitPositionsSource default "magnification" weighting mis-maps near-critical noise: check against Gravity.jl, consider defaulting…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/791">issue #791</a> — issued 2026-10-21 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/792">PyAutoLens#792</a> — ⏳ pending release: PyAutoLens</summary>
+<details><summary>📋 <a href="active/fitpositionssource_default_magnification_weighti.md">FitPositionsSource default "magnification" weighting mis-maps near-critical noise: check against Gravity.jl, consider defaulting…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/791">issue #791</a> — issued 2026-10-21 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/792">PyAutoLens#792</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/593">autolens_workspace#593</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/346">autolens_workspace_test#346</a> — ⏳ pending release: PyAutoLens</summary>
 
 ```
 Use the start-dev skill. active/fitpositionssource_default_magnification_weighti.md
