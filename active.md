@@ -82,3 +82,17 @@
 - repos:
   - PyAutoFit: fix/corner-anesthetic-duplicate-labels
 - later-phase-repos (claimed when the phase starts): PyAutoGalaxy; autolens_workspace, autofit_workspace, autogalaxy_workspace, HowToGalaxy, HowToLens
+
+## point-source-image-overlay
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/779
+- issued: 2026-10-21
+- prompt: active/point_source_image_overlay.md
+- session: Claude Code (Opus 5.5), laptop CLI
+- status: library-dev
+- classification: feature (PyAutoLens library → autolens_workspace → autolens_visualization → PyAutoEyes board re-render), Consequence judge, Autonomy human-required; plan approved in chat 2026-10-21; merge mode human /prm
+- heart-override: Heart RED override (development only) authorized by human 2026-10-21
+- worktree: ~/Code/PyAutoLabs-wt/point-source-image-overlay
+- repos:
+  - PyAutoLens: feature/point-source-image-overlay
+  - autolens_workspace: feature/point-source-image-overlay
+  - autolens_visualization: feature/point-source-image-overlay
