@@ -12,7 +12,7 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 7 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 265 |
+| [Backlog](#backlog) | 266 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -1022,7 +1022,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>bug</b> — 68</summary>
+<summary><b>bug</b> — 69</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -1556,6 +1556,14 @@ Use the start-dev skill. draft/bug/pyautomind/repos_sync_test_keys_on_dir_name.m
 
 ```
 Use the start-dev skill. draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens/point_fit_critical_curves_ignore_source_redshift.md">Point fit panels: critical curves ignore the point's source redshift (multi-plane)</a> — autolens · human-required</summary>
+
+```
+Use the start-dev skill. draft/bug/autolens/point_fit_critical_curves_ignore_source_redshift.md
 ```
 
 </details>
@@ -2830,7 +2838,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-97 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+98 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2874,8 +2882,8 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
 - `draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md`
 - `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
-- `draft/bug/autolens/point_solver_error_bisect_health.md`
-- _… and 57 more_
+- `draft/bug/autolens/point_fit_critical_curves_ignore_source_redshift.md`
+- _… and 58 more_
 
 </details>
 
