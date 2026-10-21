@@ -887,7 +887,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/cluster_point_figures_dedicated_pass.md">Cluster-scale point-source figures: dedicated pass</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/793">issue #793</a> — issued 2026-10-21 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/794">PyAutoLens#794</a></summary>
+<details><summary>📋 <a href="active/cluster_point_figures_dedicated_pass.md">Cluster-scale point-source figures: dedicated pass</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/793">issue #793</a> — issued 2026-10-21 — workspace-dev (checkpoint 2026-10-21 night; all 4 branches pushed) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/794">PyAutoLens#794</a></summary>
 
 ```
 Use the start-dev skill. active/cluster_point_figures_dedicated_pass.md
