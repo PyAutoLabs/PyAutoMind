@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-10-21T10:50:16Z",
+  "headline": "RED \u2014 24 picks \u00b7 7 in flight",
+  "updated": "2026-10-21T10:50:36Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "red",
-      "text": "Matrix-free interferometer inversion, phase 1: operator data term + PCG parity (numpy-first) \u2014 blocked \u2014 PyAutoArray claimed by interferometer-primary-beam (#640); start via /start_library once #640 merges and its claim is\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/issues/642",
-      "prompt": "Use the start-dev skill. active/matrix_free_interferometer_phase1.md"
-    },
     {
       "severity": "red",
       "text": "HowToFit tutorial 5 (EP) never shares the centre it says it shares \u2014 workspace-shipped, blocked-CI",
@@ -126,6 +120,12 @@
       "text": "pick: `@PyAutoArray` rectangular mesh mapper: mirrored row weights + round-off-dependent cell assignment",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
+      "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
     }
   ]
 }

@@ -10,15 +10,15 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 17 |
-| [In flight](#in-flight) | 8 |
+| [In flight](#in-flight) | 7 |
 | [Planned](#planned) | 8 |
-| [Backlog](#backlog) | 261 |
+| [Backlog](#backlog) | 262 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 19
+**Highest priority** (filed as `high`) — showing 12 of 20
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -100,6 +100,14 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 </details>
 
+<details><summary>📋 <a href="draft/feature/autoarray/matrix_free_interferometer_phase1.md">Matrix-free interferometer inversion, phase 1: operator data term + PCG parity (numpy-first)</a> — autoarray · large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autoarray/matrix_free_interferometer_phase1.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic.md">HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon</a> — autofit · large · human-required · high</summary>
 
 ```
@@ -108,15 +116,7 @@ Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md
-```
-
-</details>
-
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 99
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 100
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -882,14 +882,6 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/matrix_free_interferometer_phase1.md">Matrix-free interferometer inversion, phase 1: operator data term + PCG parity (numpy-first)</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/642">issue #642</a> — filed 2026-10-21 — blocked — PyAutoArray claimed by interferometer-primary-beam (#640); start via /start_library once #640 merges and its claim is…</summary>
-
-```
-Use the start-dev skill. active/matrix_free_interferometer_phase1.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/point_image_fit_filename.md">Separate dataset-only and fit point-image figures</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/781">issue #781</a> — issued 2026-10-21 — library-dev</summary>
 
 ```
@@ -980,7 +972,7 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 <details><summary>📋 <b>matrix-free-interferometer-phase1</b> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/642">issue #642</a> — filed 2026-10-21 — blocked — PyAutoArray claimed by interferometer-primary-beam (#640); start via /start_library once #640 merges and its claim is…</summary>
 
 ```
-Use the start-dev skill. active/matrix_free_interferometer_phase1.md
+Use the start-dev skill. draft/feature/autoarray/matrix_free_interferometer_phase1.md
 ```
 
 </details>
@@ -1595,7 +1587,15 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>feature</b> — 36</summary>
+<summary><b>feature</b> — 37</summary>
+
+<details><summary>📋 <a href="draft/feature/autoarray/matrix_free_interferometer_phase1.md">Matrix-free interferometer inversion, phase 1: operator data term + PCG parity (numpy-first)</a> — autoarray · large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autoarray/matrix_free_interferometer_phase1.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
 
@@ -2707,7 +2707,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-21 | issued | <a href="active/point_image_fit_filename.md">Separate dataset-only and fit point-image figures</a> |
 | 2026-10-21 | filed | <a href="draft/feature/autogalaxy/latent_parameter_declarations_pr1709_phase2.md">PyAutoGalaxy latent-parameter declarations (phase 2 of community PR…</a> |
 | 2026-10-21 | issued | <a href="active/interferometer_primary_beam.md">Primary beam correction for interferometer datasets, transformers and…</a> |
-| 2026-10-21 | filed | <a href="active/matrix_free_interferometer_phase1.md">Matrix-free interferometer inversion, phase 1: operator data term +…</a> |
+| 2026-10-21 | filed | <a href="draft/feature/autoarray/matrix_free_interferometer_phase1.md">Matrix-free interferometer inversion, phase 1: operator data term +…</a> |
 | 2026-10-21 | issued | <a href="active/matrix_free_interferometer_inversion.md">Matrix-free interferometer inversion for very large rectangular…</a> |
 | 2026-10-21 | filed | <a href="draft/bug/autoarray/imaging_sparse_triplets_unmasked_and_jax_import.md">Imaging sparse inversion: unmasked mapper triplets in the…</a> |
 | 2026-10-20 | issued | <a href="active/cosmos_web_ring_guided_walkthrough_p1_notebook.md">COSMOS-Web Ring walkthrough — phase 1: image-first Colab notebook, no…</a> |
