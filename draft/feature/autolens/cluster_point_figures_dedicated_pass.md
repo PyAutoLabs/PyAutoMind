@@ -2,7 +2,7 @@
 
 Consequence: judge
 Autonomy: human-required
-builds-on: point-solver-refinement-figure (PyAutoLens#788 / autolens_visualization#12) and complete/2026/10/point-dataset-positions-panel.md
+builds-on: complete/2026/10/point-solver-refinement-figure.md (PyAutoLens#788 / autolens_visualization#12) and complete/2026/10/point-dataset-positions-panel.md
 
 @PyAutoLens @autolens_visualization
 

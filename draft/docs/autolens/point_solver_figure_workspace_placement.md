@@ -2,7 +2,7 @@
 
 Consequence: judge
 Autonomy: human-required
-blocked-by: draft/feature/autolens/point_solver_refinement_figure.md (phase 2; the figure and API must exist and be released first)
+blocked-by: PyAutoLens release containing PyAutoLens#788 (phase 2 merged 2026-10-21, record complete/2026/10/point-solver-refinement-figure.md; pending-release — workspace scripts call aplt.plot_point_solver)
 
 @HowToLens @autolens_workspace @autolens_workspace_test
 

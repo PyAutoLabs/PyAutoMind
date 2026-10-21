@@ -1,3 +1,37 @@
+Shipped phase 2 of the point-source figures: the PointSolver refinement figure.
+
+**Figures**
+- **Still:** `aplt.plot_point_solver(solver, tracer, source_plane_coordinate, ...)` draws a 2×2 of steps 0, 1, 2 and final, in the approved `variant_f_coarse` style:
+  - tested grey, kept blue, kept-then-rejected hatched, neighbours orange, up-sampled green
+  - the step-0 image numbering and `magnification_threshold` note
+  - a centroid ▲ for sub-pixel triangles
+  - arc-second ticks and no axis-label text
+- **Teaching GIF:** `animate=True` uses the same `draw_point_solver_panel` and writes a Pillow GIF (4 frames, final frame held).
+- **Visualizer output:** `PlotterPoint.point_solver`, behind `fit_point_dataset: subplot_point_solver` (default false). It re-solves with NumPy for the best fit only and warns when a step keeps ≥16 of the JAX `MAX_CONTAINING_SIZE` of 20.
+
+**Also in this PR**
+- `Step.tree_flatten` fixed.
+- `point/visualise.py` removed.
+- Thinner model ✕ in the phase-1 Fit Positions panel.
+- Cluster labels: each number is adjacent to its own image; several rejected candidates get one corner label with an arrow to each. Dense tilings are drawn as a shade.
+
+**autolens_visualization**
+- Real-solver `point_solver.png` for point_source_image_chi_squared and cluster.
+- Teaching still and GIF in `point_source_image_chi_squared/images/visualization/teaching/`. The GIF is tracked but kept out of the PNG-only manifest.
+- The Eyes mirror now copies GIFs too.
+
+Merged 2026-10-21 via a human /prm (judge tier), library first. The full test_autolens suite passes (873).
+
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/788
+
+**Follow-ups**
+- `draft/docs/autolens/point_solver_figure_workspace_placement.md` (phase 3)
+- `draft/feature/autolens/cluster_point_figures_dedicated_pass.md`
+- `draft/feature/autolens/point_fit_source_plane_panel.md`
+- `draft/bug/autolens/point_fit_critical_curves_ignore_source_redshift.md`
+
+## Original prompt
+
 # Point-source phase 2: PointSolver refinement figure
 
 Consequence: judge
