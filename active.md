@@ -80,3 +80,14 @@
 - worktree: ~/Code/PyAutoLabs-wt/matrix-free-interferometer-phase3
 - repos:
   - PyAutoArray: feature/matrix-free-interferometer-phase3
+
+## point-dataset-positions-panel
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/785
+- issued: 2026-10-21
+- prompt: active/point_dataset_positions_panel.md
+- session: Claude Code (Opus subagent); local CLI
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/point-dataset-positions-panel
+- repos:
+  - PyAutoLens: feature/point-dataset-positions-panel
+  - autolens_visualization: feature/point-dataset-positions-panel
