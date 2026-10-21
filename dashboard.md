@@ -890,7 +890,7 @@ Use the start-dev skill. active/point_source_image_overlay.md
 
 </details>
 
-<details><summary>📋 <a href="active/sparse_mapped_reconstructed_image.md">Sparse mapped reconstructed image on the interferometer sparse inversion path…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/639">issue #639</a> — issued 2026-10-21 — library-dev</summary>
+<details><summary>📋 <a href="active/sparse_mapped_reconstructed_image.md">Sparse mapped reconstructed image on the interferometer sparse inversion path…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/639">issue #639</a> — issued 2026-10-21 — library-shipped, awaiting-merge (glance → auto-merge on green if Witness passes) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/641">PyAutoArray#641</a></summary>
 
 ```
 Use the start-dev skill. active/sparse_mapped_reconstructed_image.md

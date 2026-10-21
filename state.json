@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-10-21T10:36:21Z",
+  "updated": "2026-10-21T10:37:02Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -30,6 +30,12 @@
       "text": "Point-source positions overlaid on a dataset image (+ PyAutoEyes) \u2014 workspace-shipped, awaiting-merge (judge tier \u2192 human /prm, library first)",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/780",
       "prompt": "Use the start-dev skill. active/point_source_image_overlay.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Sparse mapped reconstructed image on the interferometer sparse inversion path\u2026 \u2014 library-shipped, awaiting-merge (glance \u2192 auto-merge on green if Witness passes)",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/641",
+      "prompt": "Use the start-dev skill. active/sparse_mapped_reconstructed_image.md"
     },
     {
       "severity": "yellow",
@@ -120,12 +126,6 @@
       "text": "pick: arXiv's Fastly edge refuses `urllib.request` outright \u2014 retrying a 406 only delays\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md",
       "prompt": "Use the start-dev skill. draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: `@PyAutoArray` rectangular mesh mapper: mirrored row weights + round-off-dependent cell assignment",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md",
-      "prompt": "Use the start-dev skill. draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md"
     }
   ]
 }
