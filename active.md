@@ -89,3 +89,17 @@
 - repos:
   - PyAutoLens: feature/point-critical-curve-grid
   - autolens_visualization: feature/point-critical-curve-grid
+
+## interferometer-primary-beam-persistence
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/654
+- issued: 2026-10-21
+- user-facing: true
+- community: https://github.com/PyAutoLabs/.github/discussions/35 (@HRSAstro)
+- parent: complete/2026/10/interferometer-primary-beam.md
+- prompt: active/interferometer_primary_beam_persistence.md
+- session: Claude Code (Fable 5.1), laptop CLI
+- status: library-dev
+- classification: feature (PyAutoGalaxy library; PyAutoLens docstring + mirror test DEFERRED to a follow-up — PyAutoLens claimed by point-critical-curve-grid), Consequence glance, Autonomy safe; plan approved in chat 2026-10-21; merge mode auto-merge on green if Witness passes
+- worktree: ~/Code/PyAutoLabs-wt/interferometer-primary-beam-persistence
+- repos:
+  - PyAutoGalaxy: feature/interferometer-primary-beam-persistence

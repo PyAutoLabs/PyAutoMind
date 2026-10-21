@@ -15,6 +15,7 @@ Witness: a test asserting an Interferometer with a primary beam saved by Analysi
 Review-minutes: 3
 Unattended: ready
 Filed: 2026-10-21
+Issued: 2026-10-21
 
 ## What (survey of main 2026-10-21, PyAutoArray at 034a616f incl. #644/#645)
 

@@ -15,6 +15,7 @@ Witness: tests asserting (i) the new regularization's dense matrix equals coeffi
 Review-minutes: 6
 Unattended: ready
 Filed: 2026-10-21
+Issued: 2026-10-21
 
 ## Why
 
