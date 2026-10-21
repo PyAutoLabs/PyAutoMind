@@ -10,6 +10,7 @@
 - [knn-partial-point-block](#knn-partial-point-block)
 - [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
 - [matrix-free-interferometer-phase1](#matrix-free-interferometer-phase1)
+- [imaging-sparse-triplets-masking](#imaging-sparse-triplets-masking)
 
 <!-- toc:end -->
 
@@ -117,5 +118,15 @@
 - status: blocked — PyAutoArray claimed by interferometer-primary-beam (#640); start via /start_library once #640 merges and its claim is released
 - classification: feature (PyAutoArray library only), Consequence glance, Autonomy supervised; plan approved in chat 2026-10-21; merge mode auto-merge on green if Witness passes
 - branch: feature/matrix-free-interferometer-phase1
+- affected-repos:
+  - PyAutoArray
+
+## imaging-sparse-triplets-masking
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/643
+- filed: 2026-10-21
+- prompt: draft/bug/autoarray/imaging_sparse_triplets_unmasked_and_jax_import.md (moves to active/ when unblocked)
+- status: blocked — PyAutoArray claimed by interferometer-primary-beam (#640), then matrix-free-interferometer-phase1 (#642) queued ahead; start via /start_library in sequence
+- classification: bug (PyAutoArray library only), Consequence glance, Autonomy safe; plan approved in chat 2026-10-21; merge mode auto-merge on green if Witness passes
+- branch: feature/imaging-sparse-triplets-masking
 - affected-repos:
   - PyAutoArray
