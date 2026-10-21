@@ -12,13 +12,13 @@
 | [Epics](#epics) | 18 |
 | [In flight](#in-flight) | 5 |
 | [Planned](#planned) | 8 |
-| [Backlog](#backlog) | 274 |
+| [Backlog](#backlog) | 275 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 19
+**Highest priority** (filed as `high`) — showing 12 of 20
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -1043,7 +1043,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>bug</b> — 69</summary>
+<summary><b>bug</b> — 70</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -1105,6 +1105,14 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ```
 Use the start-dev skill. draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens/fitpositionssource_default_magnification_weighti.md">FitPositionsSource default "magnification" weighting mis-maps near-critical noise: check against Gravity.jl, consider defaulting…</a> — autolens · too-large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/bug/autolens/fitpositionssource_default_magnification_weighti.md
 ```
 
 </details>
@@ -2912,7 +2920,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-104 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+105 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2956,8 +2964,8 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
 - `draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md`
 - `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
-- `draft/bug/autolens/point_fit_critical_curves_ignore_source_redshift.md`
-- _… and 64 more_
+- `draft/bug/autolens/fitpositionssource_default_magnification_weighti.md`
+- _… and 65 more_
 
 </details>
 
