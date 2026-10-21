@@ -866,7 +866,7 @@ Use the start-dev skill. active/cosmos_web_ring_guided_walkthrough_p1_notebook.m
 
 </details>
 
-<details><summary>📋 <a href="active/euclid_smoke_tools_shard_order.md">Euclid smoke: <code>scripts/tools</code> shard runs without the fits it replays</a> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/317">issue #317</a> — issued 2026-10-21 — library-dev</summary>
+<details><summary>📋 <a href="active/euclid_smoke_tools_shard_order.md">Euclid smoke: <code>scripts/tools</code> shard runs without the fits it replays</a> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/317">issue #317</a> — issued 2026-10-21 — library-shipped, awaiting-merge (merge Hands#318 BEFORE Heart#312) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/318">PyAutoHands#318</a>, <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/312">PyAutoHeart#312</a></summary>
 
 ```
 Use the start-dev skill. active/euclid_smoke_tools_shard_order.md
@@ -874,7 +874,7 @@ Use the start-dev skill. active/euclid_smoke_tools_shard_order.md
 
 </details>
 
-<details><summary>📋 <a href="active/hands_matrix_zeus_missing_py313.md">Hands Python Version Matrix: autofit_workspace mcmc.py needs <code>zeus</code> on 3.13/3.14</a> — <a href="https://github.com/PyAutoLabs/autofit_workspace/issues/172">issue #172</a> — issued 2026-10-21 — workspace-dev</summary>
+<details><summary>📋 <a href="active/hands_matrix_zeus_missing_py313.md">Hands Python Version Matrix: autofit_workspace mcmc.py needs <code>zeus</code> on 3.13/3.14</a> — <a href="https://github.com/PyAutoLabs/autofit_workspace/issues/172">issue #172</a> — issued 2026-10-21 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autofit_workspace/pull/173">autofit_workspace#173</a></summary>
 
 ```
 Use the start-dev skill. active/hands_matrix_zeus_missing_py313.md

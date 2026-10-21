@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-10-21T09:45:35Z",
+  "updated": "2026-10-21T09:56:06Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -18,6 +18,18 @@
       "text": "COSMOS-Web Ring walkthrough \u2014 phase 1: image-first Colab notebook, no inference \u2014 workspace-shipped, awaiting-merge (7 commits incl. maintainer copy-edit; F150W/F444W; Explore The Model)",
       "url": "https://github.com/PyAutoLabs/autolens_assistant/pull/161",
       "prompt": "Use the start-dev skill. active/cosmos_web_ring_guided_walkthrough_p1_notebook.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Euclid smoke: `scripts/tools` shard runs without the fits it replays \u2014 library-shipped, awaiting-merge (merge Hands#318 BEFORE Heart#312)",
+      "url": "https://github.com/PyAutoLabs/PyAutoHands/pull/318",
+      "prompt": "Use the start-dev skill. active/euclid_smoke_tools_shard_order.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Hands Python Version Matrix: autofit_workspace mcmc.py needs `zeus` on 3.13/3.14 \u2014 workspace-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autofit_workspace/pull/173",
+      "prompt": "Use the start-dev skill. active/hands_matrix_zeus_missing_py313.md"
     },
     {
       "severity": "yellow",
@@ -114,18 +126,6 @@
       "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Sparse mapped reconstructed image on the interferometer sparse inversion path\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autoarray/sparse_mapped_reconstructed_image.md",
-      "prompt": "Use the start-dev skill. draft/feature/autoarray/sparse_mapped_reconstructed_image.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
-      "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
     }
   ]
 }
