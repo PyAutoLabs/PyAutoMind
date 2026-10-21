@@ -92,3 +92,37 @@ Round-2 prototypes: `per_image_prototype/*/{dataset_v2,fit_v2,fit_per_image_v2}.
   - source 0 black on white panels and white on images;
   - library title/tick font sizes for the many-source case;
   - σ on per-source legend entries (no generic grey entry).
+
+## FINAL design approval (human, 2026-10-21, after round 4)
+
+"Images are good so I'm happy to start dev and do the task."
+
+**Reference.** The v4 prototypes in `/mnt/c/Users/Jammy/Science/scratch/eyes/autolens/per_image_prototype/` are the approved look. The producer is `producer/figures_v4.py` and `run_v4.py`, with helpers from earlier rounds. Main files use the true model; `*_v4_perturbed.png` are demos only.
+
+**Decisions:**
+- `dataset.png` is one unified function: black ● for source 0, then colour + shape; `k·i` labels; no curves.
+- Global `fit.png`:
+  - red ✕ at the true model positions, with true-length residual lines (solid hard / dashed soft);
+  - NO exaggerated arrows or keys;
+  - per-source own-z curves, darker and thicker;
+  - σ on the per-source legend entries (2–8 sources);
+  - colour-by-z with a colourbar beyond 8 sources;
+  - a smaller ✕ beyond 8 sources;
+  - the solver extent.
+- `fit_per_image.png`:
+  - one row per source: "Residuals / IP / SP (point_k, z = …)";
+  - square, equal-size panels with library ticks and fonts;
+  - NO legends;
+  - the ranking has σ values printed right of the dots, no x axis, unlabelled 1σ/3σ lines, a linear shared range clipped at a robust max, and off-scale ▸ values;
+  - per-image colours shared across all three panels.
+  - The shared range is computed where all sources are visible; a lone source uses its own range. Many sources → one file per source.
+- `image_with_points.png` and `fit_image_with_points.png`: every source, the same symbols, `k·i` labels kept, NO legends.
+- Mixture fits (PairAll classes): the legend shows `−2 ln L = …` instead of `χ² = …`.
+- Source-plane fits rank by the fit's OWN per-image χ (not jacobian). The weighting default is the separate intake (`draft/bug/autolens/fitpositionssource_default_magnification_weighti.md`).
+- Darker and thicker critical curves and caustics everywhere, including the library SP panel and its inset.
+
+**Also in scope:**
+- Per-source critical curves at their own redshift (absorbs `draft/bug/autolens/point_fit_critical_curves_ignore_source_redshift.md`), via the fast single-deflection-field contour method.
+- Curves, μ and solves must use the FULL tracer.
+- The PairAll legend-placement fix.
+- A cluster imaging simulator plus a tracked FITS in autolens_visualization.
