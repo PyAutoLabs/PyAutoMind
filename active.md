@@ -72,7 +72,7 @@
 - issued: 2026-10-21
 - prompt: active/point_source_image_overlay.md
 - session: Claude Code (Opus 5.5), laptop CLI
-- status: library-shipped, workspace-pending
+- status: workspace-dev
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/780
 - classification: feature (PyAutoLens library → autolens_workspace → autolens_visualization → PyAutoEyes board re-render), Consequence judge, Autonomy human-required; plan approved in chat 2026-10-21; merge mode human /prm
 - heart-override: Heart RED override (development only) authorized by human 2026-10-21
