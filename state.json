@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-10-21T10:03:16Z",
+  "updated": "2026-10-21T10:09:36Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -18,6 +18,12 @@
       "text": "COSMOS-Web Ring walkthrough \u2014 phase 1: image-first Colab notebook, no inference \u2014 workspace-shipped, awaiting-merge (7 commits incl. maintainer copy-edit; F150W/F444W; Explore The Model)",
       "url": "https://github.com/PyAutoLabs/autolens_assistant/pull/161",
       "prompt": "Use the start-dev skill. active/cosmos_web_ring_guided_walkthrough_p1_notebook.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Heart ci_timing flags superseded (concurrency-cancelled) runs as kill-timer reds \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoHeart/pull/313",
+      "prompt": "Use the start-dev skill. active/heart_ci_timing_concurrency_cancels_as_kills.md"
     },
     {
       "severity": "yellow",
@@ -120,12 +126,6 @@
       "text": "pick: `@PyAutoArray` rectangular mesh mapper: mirrored row weights + round-off-dependent cell assignment",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
-      "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
     }
   ]
 }
