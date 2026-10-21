@@ -12,13 +12,13 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 5 |
 | [Planned](#planned) | 7 |
-| [Backlog](#backlog) | 258 |
+| [Backlog](#backlog) | 260 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 2 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 19
+**Highest priority** (filed as `high`) — showing 12 of 21
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -68,6 +68,14 @@ Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_su
 
 </details>
 
+<details><summary>📋 <a href="draft/feature/autoarray/sparse_mapped_reconstructed_image.md">Sparse mapped reconstructed image on the interferometer sparse inversion path…</a> — autoarray · medium · safe · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autoarray/sparse_mapped_reconstructed_image.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/research/autofit_inference/search_ext_b5c2a_rerun.md"><code>@autofit_inference</code> B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug…</a> — autofit_inference · medium · supervised · high</summary>
 
 ```
@@ -108,15 +116,7 @@ Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md
-```
-
-</details>
-
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 98
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 99
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -1555,12 +1555,28 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>feature</b> — 35</summary>
+<summary><b>feature</b> — 37</summary>
+
+<details><summary>📋 <a href="draft/feature/autoarray/sparse_mapped_reconstructed_image.md">Sparse mapped reconstructed image on the interferometer sparse inversion path…</a> — autoarray · medium · safe · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autoarray/sparse_mapped_reconstructed_image.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
 
 ```
 Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autofit/finish_community_pr_pyautofit_1709.md">Finish community PR PyAutoFit#1709…</a> — autofit · too-large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autofit/finish_community_pr_pyautofit_1709.md
 ```
 
 </details>

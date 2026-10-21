@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-10-21T07:36:16Z",
+  "updated": "2026-10-21T07:45:11Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -111,6 +111,12 @@
     },
     {
       "severity": "info",
+      "text": "pick: Sparse mapped reconstructed image on the interferometer sparse inversion path\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autoarray/sparse_mapped_reconstructed_image.md",
+      "prompt": "Use the start-dev skill. draft/feature/autoarray/sparse_mapped_reconstructed_image.md"
+    },
+    {
+      "severity": "info",
       "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
       "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
@@ -120,12 +126,6 @@
       "text": "pick: Reduce the organism's per-session and per-task token load by half",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/organs/reduce_session_token_load.md",
       "prompt": "Use the start-dev skill. draft/maintenance/organs/reduce_session_token_load.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Physical model check when speeding up smoke tests",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md",
-      "prompt": "Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md"
     }
   ]
 }
