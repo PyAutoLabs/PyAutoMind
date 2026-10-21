@@ -66,3 +66,15 @@
 - user-facing: true
 - community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
 - prompt: active/matrix_free_interferometer_inversion.md
+
+## likelihood-lifecycle-p0-inference
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/41
+- issued: 2026-10-21
+- prompt: active/likelihood_lifecycle_p0_inference.md
+- session: Claude Code (Fable 5.1); session ID unavailable
+- status: workspace-dev
+- classification: feature (autolens_inference project repo + PyAutoPulse registry row; likelihood-lifecycle epic phase 0, sub-issue 0C), Consequence judge, Autonomy supervised; plan approved in chat 2026-10-21 (confirms R8); four PRs in order: rows → move-only → exporter → Pulse registry row; no new runs
+- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p0-inference
+- repos:
+  - autolens_inference: feature/likelihood-lifecycle-p0-inference
+  - PyAutoPulse: feature/likelihood-lifecycle-p0-inference

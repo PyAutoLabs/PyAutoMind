@@ -21,6 +21,8 @@ Epic: likelihood-lifecycle
 Phase: 0
 Parent: draft/research/autolens_profiling/likelihood_lifecycle_epic.md
 Filed: 2026-10-21
+Issued: 2026-10-21
+Issue: https://github.com/PyAutoLabs/autolens_inference/issues/41
 
 Phase 0 sub-issue 0C of the `likelihood-lifecycle` epic (ledger `draft/research/autolens_profiling/likelihood_lifecycle_epic.md`; report §3.2, §3.7, §4 phase 0; survey `likelihood_lifecycle_epic_surveys/01_profiling_inference_layout.md` §2, §5). Depends on 0A only (PyAutoPulse#70 merged 2026-10-21 defines `walltime-validation@1`: records keyed by likelihood, instrument, setup_id, host_class, model_variant, sampler, seed with `wall_s`, `likelihood_evals`, `implied_ms_per_eval`, `reference_runtime_record_id`, `predicted_ms_per_eval`, `ratio_measured_over_predicted`, `cores`, `parallel_efficiency`, `release_pin`, `slurm_job_id`, `max_log_likelihood`, `parity_status`; all producer-computed). 0B (autolens_profiling) is queued behind the cluster-pointsolver claim; 0C does not wait for it — `reference_runtime_record_id` points at the Pulse `lens` v2 record ids that exist today and is re-pointed when the `lens` pin moves to @3.
 
