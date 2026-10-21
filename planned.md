@@ -9,6 +9,7 @@
 - [latent-nan-guard-honest-run](#latent-nan-guard-honest-run)
 - [knn-partial-point-block](#knn-partial-point-block)
 - [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
+- [interferometer-primary-beam](#interferometer-primary-beam)
 
 <!-- toc:end -->
 
@@ -105,3 +106,15 @@
   - PyAutoArray
   - autolens_workspace_test
 - resume: Audit#603 found incorrect internal-edge Sibson weights and near-edge partition failure. Filed separately per explicit user request; strict expected-failure regressions retained in audit. No repair begun or worktree created. Plan algorithmic repair independently.
+
+## interferometer-primary-beam
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/640
+- filed: 2026-10-21
+- user-facing: true
+- community: https://github.com/PyAutoLabs/.github/discussions/35 (@HRSAstro)
+- prompt: active/interferometer_primary_beam.md
+- status: blocked — PyAutoArray claimed by sparse-mapped-reconstructed-image (#639); start via /start_library once #639 merges and its claim is released
+- classification: feature (PyAutoArray library; PyAutoGalaxy verify-only), Consequence glance, Autonomy supervised; plan approved in chat 2026-10-21 (P=0 warning, no floor); merge mode auto-merge on green if Witness passes
+- branch: feature/interferometer-primary-beam
+- affected-repos:
+  - PyAutoArray

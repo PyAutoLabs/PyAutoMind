@@ -15,6 +15,7 @@ Witness: tests asserting (i) primary_beam=None and primary_beam=ones leave trans
 Review-minutes: 8
 Unattended: ready
 Filed: 2026-10-21
+Issued: 2026-10-21
 user-facing: true
 
 ## Why
@@ -31,8 +32,9 @@ Community proposal by @HRSAstro (Ideas & Proposals, 2026-10-07, accepted 2026-10
 6. `inversion/inversion/interferometer/sparse.py`: read `P = getattr(self.dataset.sparse_operator, "primary_beam_slim", None)` (works for PyAutoGalaxy's DatasetInterface); pass as `slim_weights` in `_sparse_triplets_slim_from` and `_sparse_triplets_curvature_from`; scale linear-func mapping matrices by `P[:, None]` in the data vector (~123) and mixed blocks (~443-445). Model visibilities via `transformer.visibilities_from` pick P up automatically; `mapped_reconstructed_data_dict` stays the un-beamed true-sky image.
 7. `fit/fit_interferometer.py`: apply P in `dirty_model_image_natural_from` (~52).
 8. `dataset/interferometer/simulator.py`: `primary_beam=None` arg, add to the pytree `no_flatten` list, `with_primary_beam` on the built transformer, forward P to the returned Interferometer.
-9. Dense path: `operated_mapping_matrix_override` docstring states P is the caller's job.
-10. PyAutoGalaxy: no fitting changes (DatasetInterface receives the dataset's transformer and sparse_operator). Follow-up prompt: persist P in `analysis.py` save_attributes and the aggregator rebuild.
+9. P = 0 pixels: emit a `warnings.warn` from the dataset when any unmasked P value is 0 (curvature rank-deficient for mesh pixels mapping only there; regularisation absorbs it); no floor is applied.
+10. Dense path: `operated_mapping_matrix_override` docstring states P is the caller's job.
+11. PyAutoGalaxy: no fitting changes (DatasetInterface receives the dataset's transformer and sparse_operator). Follow-up prompt: persist P in `analysis.py` save_attributes and the aggregator rebuild.
 
 ## Tests
 
