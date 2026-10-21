@@ -72,10 +72,12 @@
 - issued: 2026-10-21
 - prompt: active/fitpositionssource_default_magnification_weighti.md
 - session: Claude Code CLI (Opus 5.5), laptop
-- status: library-shipped, workspace-pending
+- status: workspace-dev
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/792
 - pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/792
 - worktree: ~/Code/PyAutoLabs-wt/positions-source-jacobian-default
 - repos:
   - PyAutoLens: feature/positions-source-jacobian-default
+  - autolens_workspace: feature/positions-source-jacobian-default
+  - autolens_workspace_test: feature/positions-source-jacobian-default
 - next: library PR #792 MERGED 2026-10-21 (4f5baf9b, pending-release; CI 4/4 green) → /start_workspace for autolens_workspace + autolens_workspace_test (explain the default, fix the Lenstool example (forme -1 → image-plane), re-measure source_plane.py literals) → profiling note once cluster-pointsolver-robust-settings releases autolens_profiling
