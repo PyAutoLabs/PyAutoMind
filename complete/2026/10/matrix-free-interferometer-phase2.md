@@ -1,3 +1,27 @@
+## matrix-free-interferometer-phase2
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/646
+- completed: 2026-10-21
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/650 (merge aea99b72)
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/650
+- parent: https://github.com/PyAutoLabs/PyAutoArray/issues/638 (active/matrix_free_interferometer_inversion.md)
+- community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
+- summary: |
+    Phase 2 of #638. Commits 3e0f0672, 4169b1e3 on `feature/matrix-free-interferometer-phase2` (4 files,
+    +830/-2): new `aa.reg.MaternSparse(coefficient, scale, nu=1.0, weights=None)` — SPDE Matérn precision
+    for rectangular meshes, ν = 1: H = coefficient·c·W⁻¹L²W⁻¹, L = κ²I − ∇² (5-point, per-axis pixel
+    scales, reflecting edges), κ = √(2ν)/scale, c = eᵀL⁻²e (centre variance 1). Sparse H + factor R (for
+    phase-3 probes), dense drop-in, exact log-det via sparse LU of L, sᵀHs; Delaunay and ν ≠ 1 raise.
+    Mesh ordering verified row-major from top-left (k = i·nx + j). Lesson: the brief's c formula was
+    inverted; the centre-variance test caught it (4e-4) — keep that test. Worktree: inversion 1053 passed /
+    4 xfailed. CI 3 legs green; glance auto-merge. No priors config (phase 5).
+- witness: |
+    MET — hand-built 4×3 H equals the class's sparse H exactly; SPD; log-det vs slogdet 2.5e-14 (target 1e-10,
+    also 7×8 and weighted); PCG with sparse H vs dense-path InversionInterferometerSparse with the same
+    MaternSparse: 9.0e-12 / 3.6e-11 (target 1e-8); Delaunay raises. All in CI.
+- heart-ack: "YELLOW acknowledged by human 2026-10-21 — manifest drift (1 mismatch); release validation stale: source moved since rehearsal (PyAutoArray)"
+
+## Original prompt
+
 # Matrix-free interferometer inversion, phase 2: sparse Matérn (SPDE) precision regularization + Powell preconditioner on it
 
 Type: feature
