@@ -79,3 +79,16 @@
 - worktree: ~/Code/PyAutoLabs-wt/interferometer-primary-beam
 - repos:
   - PyAutoArray: feature/interferometer-primary-beam
+
+## point-image-fit-filename
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/781
+- issued: 2026-10-21
+- prompt: active/point_image_fit_filename.md
+- session: Claude Code (Opus 5.5), laptop CLI
+- status: library-dev
+- classification: feature follow-up to PyAutoLens#779 (PyAutoLens → autolens_workspace → autolens_visualization → Eyes refresh), Consequence judge, Autonomy human-required; plan approved in chat 2026-10-21; merge mode human /prm
+- worktree: ~/Code/PyAutoLabs-wt/point-image-fit-filename
+- repos:
+  - PyAutoLens: feature/point-image-fit-filename
+  - autolens_workspace: feature/point-image-fit-filename
+  - autolens_visualization: feature/point-image-fit-filename
