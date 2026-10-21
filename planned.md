@@ -113,7 +113,7 @@
 - user-facing: true
 - community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
 - parent: https://github.com/PyAutoLabs/PyAutoArray/issues/638 (active/matrix_free_interferometer_inversion.md)
-- prompt: active/matrix_free_interferometer_phase1.md
+- prompt: draft/feature/autoarray/matrix_free_interferometer_phase1.md (moves to active/ when unblocked)
 - status: blocked — PyAutoArray claimed by interferometer-primary-beam (#640); start via /start_library once #640 merges and its claim is released
 - classification: feature (PyAutoArray library only), Consequence glance, Autonomy supervised; plan approved in chat 2026-10-21; merge mode auto-merge on green if Witness passes
 - branch: feature/matrix-free-interferometer-phase1
