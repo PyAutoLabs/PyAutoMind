@@ -874,7 +874,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/matrix_free_interferometer_phase4.md">Matrix-free interferometer inversion, phase 4: positivity via primal-dual interior point with active-set…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/648">issue #648</a> — issued 2026-10-21 — library-dev</summary>
+<details><summary>📋 <a href="active/matrix_free_interferometer_phase4.md">Matrix-free interferometer inversion, phase 4: positivity via primal-dual interior point with active-set…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/648">issue #648</a> — issued 2026-10-21 — library-shipped, awaiting-merge (glance → auto-merge on green if Witness passes) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/652">PyAutoArray#652</a></summary>
 
 ```
 Use the start-dev skill. active/matrix_free_interferometer_phase4.md
