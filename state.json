@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-10-21T09:29:31Z",
+  "updated": "2026-10-21T09:34:18Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -16,7 +16,7 @@
     {
       "severity": "yellow",
       "text": "COSMOS-Web Ring walkthrough \u2014 phase 1: image-first Colab notebook, no inference \u2014 workspace-shipped, awaiting-merge (7 commits incl. maintainer copy-edit; F150W/F444W; Explore The Model)",
-      "url": "https://github.com/PyAutoLabs/autolens_assistant/issues/160",
+      "url": "https://github.com/PyAutoLabs/autolens_assistant/pull/161",
       "prompt": "Use the start-dev skill. active/cosmos_web_ring_guided_walkthrough_p1_notebook.md"
     },
     {
