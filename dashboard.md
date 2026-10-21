@@ -850,7 +850,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/all_dataset_types.md">Visualize every PyAutoLens dataset type (dataset.png + fit.png) in autolens_visualization + PyAutoEyes</a> — <a href="https://github.com/PyAutoLabs/autolens_visualization/issues/4">issue #4</a> — issued 2026-10-21 — workspace-dev</summary>
+<details><summary>📋 <a href="active/all_dataset_types.md">Visualize every PyAutoLens dataset type (dataset.png + fit.png) in autolens_visualization + PyAutoEyes</a> — <a href="https://github.com/PyAutoLabs/autolens_visualization/issues/4">issue #4</a> — issued 2026-10-21 — workspace-shipped, awaiting-merge (human /prm; vis #5 first, then Eyes #31)</summary>
 
 ```
 Use the start-dev skill. active/all_dataset_types.md
