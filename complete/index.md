@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1924 records across 9 buckets.
+1925 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -402,6 +402,7 @@ markers; everything below GENERATED is rebuilt.
 - [unit-timing-distinct-baseline](2026/10/unit-timing-distinct-baseline.md) — Select the latest distinct prior unit timing run per repository/Python leg within the current epoch. Preserve …
 - [unit-timing-robust-baseline](2026/10/unit-timing-robust-baseline.md)
 - [unregistered-worktree-guard](2026/10/unregistered-worktree-guard.md)
+- [viz-all-dataset-types](2026/10/viz-all-dataset-types.md)
 - [wave1-row-writer-oom-reslice](2026/10/wave1-row-writer-oom-reslice.md) — Wave 1 attempt 1 (RAL 412543) lost every Nautilus/Emcee row because run.py keyed max_likelihood_parameters by …
 - [workspace-freshness-stamp](2026/10/workspace-freshness-stamp.md)
 - [workspace-version-warning-outside-workspace](2026/10/workspace-version-warning-outside-workspace.md)

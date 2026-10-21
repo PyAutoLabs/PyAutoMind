@@ -1,3 +1,27 @@
+## Outcome
+autolens_visualization and PyAutoEyes now cover every PyAutoLens dataset type. There is one `scripts/<domain>/visualization.py` per dataset type, each writing only `dataset.png` + `fit.png`:
+- imaging and interferometer (unchanged)
+- interferometer_datacube (per channel)
+- point_source_image_chi_squared and point_source_source_chi_squared (shared dataset)
+- multi_galaxy and group
+- cluster (one pair per source plane)
+- multi_dataset (one pair per band)
+- weak
+
+Datasets are small, seeded simulations under `dataset/`. Each simulator and its producer share the same model from `true_models/`.
+
+The PyAutoEyes board orders the lens domains canonically, with one browser per domain.
+
+## Decisions
+- Variants get their own top-level folder rather than an extra producer inside the parent domain. Human call 2026-10-21 ("it feels strange having a one off nested folder"). This trades a little symmetry with autolens_workspace for one producer per folder.
+- The cluster producer calls PlotterPoint directly. VisualizerPoint's critical-curve step cost ~100 s and is unused by the two subplots (byte-identical output).
+- Shipped under the Heart RED development override (recorded on issue #4, both PRs and autonomy_log).
+
+## Follow-up
+Bespoke point-source, cluster and weak visualizations, driven by the human through the Eyes dashboard.
+
+## Original prompt
+
 # Visualize every PyAutoLens dataset type (dataset.png + fit.png) in autolens_visualization + PyAutoEyes
 
 Type: feature
