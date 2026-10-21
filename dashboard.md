@@ -866,7 +866,7 @@ Use the start-dev skill. active/cosmos_web_ring_guided_walkthrough_p1_notebook.m
 
 </details>
 
-<details><summary>📋 <a href="active/imaging_sparse_triplets_unmasked_and_jax_import.md">Imaging sparse inversion: unmasked mapper triplets in the reconstructed-image path…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/643">issue #643</a> — issued 2026-10-21 — library-dev</summary>
+<details><summary>📋 <a href="active/imaging_sparse_triplets_unmasked_and_jax_import.md">Imaging sparse inversion: unmasked mapper triplets in the reconstructed-image path…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/643">issue #643</a> — issued 2026-10-21 — library-shipped, awaiting-merge (glance → auto-merge on green if Witness passes) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/649">PyAutoArray#649</a></summary>
 
 ```
 Use the start-dev skill. active/imaging_sparse_triplets_unmasked_and_jax_import.md
@@ -874,7 +874,7 @@ Use the start-dev skill. active/imaging_sparse_triplets_unmasked_and_jax_import.
 
 </details>
 
-<details><summary>📋 <a href="active/interferometer_primary_beam_persistence.md">Persist the interferometer primary beam through analysis save and aggregator rebuild</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/654">issue #654</a> — issued 2026-10-21 — library-dev</summary>
+<details><summary>📋 <a href="active/interferometer_primary_beam_persistence.md">Persist the interferometer primary beam through analysis save and aggregator rebuild</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/654">issue #654</a> — issued 2026-10-21 — library-shipped, awaiting-merge (glance → auto-merge on green if Witness passes) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/655">PyAutoGalaxy#655</a></summary>
 
 ```
 Use the start-dev skill. active/interferometer_primary_beam_persistence.md
