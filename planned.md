@@ -114,3 +114,14 @@
 - parent: complete/2026/10/interferometer-primary-beam-persistence.md
 - affected-repos:
   - PyAutoLens
+
+## likelihood-lifecycle-p0-profiling
+- issue: none yet — `/start_dev draft/feature/autolens_profiling/likelihood_lifecycle_p0_profiling.md` files it when the claim clears
+- planned: 2026-10-21
+- prompt: draft/feature/autolens_profiling/likelihood_lifecycle_p0_profiling.md
+- classification: workspace (autolens_profiling project repo; one-line PyAutoPulse registry re-pin follows the builder)
+- suggested-branch: feature/likelihood-lifecycle-p0-profiling
+- blocked-by: cluster-pointsolver-robust-settings (using autolens_profiling; 5 unmerged commits, no PR, RAL sweeps live 2026-10-21; the move-only PR also must not land under live RAL jobs on a RAL checkout)
+- affected-repos:
+  - autolens_profiling
+  - PyAutoPulse
