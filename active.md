@@ -66,3 +66,15 @@
 - user-facing: true
 - community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
 - prompt: active/matrix_free_interferometer_inversion.md
+
+## point-solver-refinement-figure
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/787
+- issued: 2026-10-21
+- prompt: active/point_solver_refinement_figure.md
+- session: Claude Code (Opus 5.5 worker under Fable), laptop CLI; session ID unavailable
+- status: library-dev
+- classification: feature (PyAutoLens library first, then autolens_visualization), Consequence judge, Autonomy human-required; design approved in chat 2026-10-21 over several rounds
+- worktree: ~/Code/PyAutoLabs-wt/point-solver-refinement-figure
+- repos:
+  - PyAutoLens: feature/point-solver-refinement-figure
+  - autolens_visualization: feature/point-solver-refinement-figure
