@@ -101,3 +101,16 @@
 - heart-red-override: "Heart: RED — Release RED; monitoring RED · 14/100 · 464 unresolved (updated 23h ago)"; live human "Override and proceed" 2026-10-21 (health session, covering the three health-fix bugs incl. this one) — development shipping only (commit, push, PR); merge needs separate /prm with all checks green; no release; reasons verbatim on the issue
 - repos:
   - PyAutoHeart: feature/ci-timing-superseded-main-cancels
+
+## sparse-mapped-reconstructed-image
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/639
+- issued: 2026-10-21
+- user-facing: true
+- community: https://github.com/PyAutoLabs/.github/discussions/40 (@HRSAstro)
+- prompt: active/sparse_mapped_reconstructed_image.md
+- session: Claude Code (Fable 5.1), laptop CLI
+- status: library-dev
+- classification: feature (PyAutoArray library; PyAutoGalaxy verify-only), Consequence glance, Autonomy safe; plan approved in chat 2026-10-21; merge mode auto-merge on green if Witness passes
+- worktree: ~/Code/PyAutoLabs-wt/sparse-mapped-reconstructed-image
+- repos:
+  - PyAutoArray: feature/sparse-mapped-reconstructed-image

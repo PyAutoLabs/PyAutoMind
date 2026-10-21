@@ -9,6 +9,7 @@ Repos:
 Difficulty: medium
 Autonomy: safe
 Priority: high
+Issued: 2026-10-21
 Memory: reading-queue.md; wiki/lensing/sources/dark-matter-substructure.md; wiki/galaxies/sources/cosmos-survey.md
 Status: formalised
 Consequence: glance
