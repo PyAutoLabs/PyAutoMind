@@ -81,3 +81,15 @@
   - autolens_workspace_test: feature/positions-source-jacobian-default
 - released: PyAutoLens (feature/positions-source-jacobian-default @ bdb44a87c merged via #792; claim released 2026-10-21 on human instruction so cluster-point-figures can start)
 - next: library PR #792 MERGED 2026-10-21 (4f5baf9b, pending-release; CI 4/4 green) → /start_workspace for autolens_workspace + autolens_workspace_test (explain the default, fix the Lenstool example (forme -1 → image-plane), re-measure source_plane.py literals) → profiling note once cluster-pointsolver-robust-settings releases autolens_profiling
+
+## cluster-point-figures
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/793
+- issued: 2026-10-21
+- prompt: active/cluster_point_figures_dedicated_pass.md
+- session: Claude Code (Opus 5.5 subagent); https://claude.ai/code/session_019Y6tDwGThyc8UowuncXw88
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/cluster-point-figures
+- absorbs: draft/bug/autolens/point_fit_critical_curves_ignore_source_redshift.md (close with this task)
+- repos:
+  - PyAutoLens: feature/cluster-point-figures
+  - autolens_visualization: feature/cluster-point-figures
