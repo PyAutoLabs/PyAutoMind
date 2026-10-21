@@ -14,7 +14,7 @@
 | [Planned](#planned) | 8 |
 | [Backlog](#backlog) | 262 |
 | [Recent](#recent) | 50 |
-| [Pending release](#pending-release) | 2 |
+| [Pending release](#pending-release) | 3 |
 
 ## Start here
 
@@ -890,7 +890,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/point_source_image_overlay.md">Point-source positions overlaid on a dataset image (+ PyAutoEyes)</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/779">issue #779</a> — issued 2026-10-21 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/780">PyAutoLens#780</a></summary>
+<details><summary>📋 <a href="active/point_source_image_overlay.md">Point-source positions overlaid on a dataset image (+ PyAutoEyes)</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/779">issue #779</a> — issued 2026-10-21 — workspace-shipped, awaiting-merge (judge tier → human /prm, library first) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/780">PyAutoLens#780</a> — ⏸ waiting on PyAutoLens's release</summary>
 
 ```
 Use the start-dev skill. active/point_source_image_overlay.md
@@ -2956,6 +2956,10 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - [PyAutoFit#1705](https://github.com/PyAutoLabs/PyAutoFit/pull/1705) — `complete/2026/10/function-config-priors.md`
 - [PyAutoFit#1707](https://github.com/PyAutoLabs/PyAutoFit/pull/1707) — `complete/2026/10/prior-stable-test-ids.md`
 - [PyAutoFit#1706](https://github.com/PyAutoLabs/PyAutoFit/pull/1706) — `complete/2026/10/prior-summary-ranges.md`
+
+**PyAutoLens**
+
+- ⏸ waiting: [Point-source positions overlaid on a dataset image (+ PyAutoEyes)](active/point_source_image_overlay.md)
 
 
 Boards: [organism](https://pyautolabs.github.io/PyAutoScientist/) · [brain](https://pyautolabs.github.io/PyAutoBrain/) · [cortex](https://pyautolabs.github.io/PyAutoCortex/) · [memory](https://pyautolabs.github.io/PyAutoMemory/) · [eyes](https://pyautolabs.github.io/PyAutoEyes/) · [ears](https://pyautolabs.github.io/PyAutoEars/) · [heart](https://pyautolabs.github.io/PyAutoHeart/) · [hands](https://pyautolabs.github.io/PyAutoHands/) · [pulse](https://pyautolabs.github.io/PyAutoPulse/) · [insight](https://pyautolabs.github.io/PyAutoInsight/) · [dna](https://pyautolabs.github.io/PyAutoDNA/) · [nerves](https://pyautolabs.github.io/PyAutoNerves/) · [broca](https://pyautolabs.github.io/PyAutoBroca/) · [gut](https://pyautolabs.github.io/PyAutoGut/)
