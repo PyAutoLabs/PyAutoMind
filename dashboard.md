@@ -882,7 +882,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/point_image_fit_filename.md">Separate dataset-only and fit point-image figures</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/781">issue #781</a> — issued 2026-10-21 — library-dev</summary>
+<details><summary>📋 <a href="active/point_image_fit_filename.md">Separate dataset-only and fit point-image figures</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/781">issue #781</a> — issued 2026-10-21 — workspace-shipped, awaiting-merge (judge tier → human /prm, library first; then Eyes dashboard_refresh) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/782">PyAutoLens#782</a> — ⏸ waiting on PyAutoLens's release</summary>
 
 ```
 Use the start-dev skill. active/point_image_fit_filename.md
@@ -2960,6 +2960,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 **PyAutoLens**
 
 - [PyAutoLens#780](https://github.com/PyAutoLabs/PyAutoLens/pull/780) — `complete/2026/10/point-source-image-overlay.md`
+- ⏸ waiting: [Separate dataset-only and fit point-image figures](active/point_image_fit_filename.md)
 
 
 Boards: [organism](https://pyautolabs.github.io/PyAutoScientist/) · [brain](https://pyautolabs.github.io/PyAutoBrain/) · [cortex](https://pyautolabs.github.io/PyAutoCortex/) · [memory](https://pyautolabs.github.io/PyAutoMemory/) · [eyes](https://pyautolabs.github.io/PyAutoEyes/) · [ears](https://pyautolabs.github.io/PyAutoEars/) · [heart](https://pyautolabs.github.io/PyAutoHeart/) · [hands](https://pyautolabs.github.io/PyAutoHands/) · [pulse](https://pyautolabs.github.io/PyAutoPulse/) · [insight](https://pyautolabs.github.io/PyAutoInsight/) · [dna](https://pyautolabs.github.io/PyAutoDNA/) · [nerves](https://pyautolabs.github.io/PyAutoNerves/) · [broca](https://pyautolabs.github.io/PyAutoBroca/) · [gut](https://pyautolabs.github.io/PyAutoGut/)
