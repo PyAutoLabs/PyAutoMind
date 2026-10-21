@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-10-21T11:22:16Z",
+  "updated": "2026-10-21T11:23:57Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -24,6 +24,12 @@
       "text": "Eyes scratch mirror \u2014 on-the-fly figure inspection \u2014 workspace-shipped, awaiting-merge (judge tier \u2192 human /prm; Brain PR is docs-only, any order)",
       "url": "https://github.com/PyAutoLabs/autogalaxy_visualization/issues/4",
       "prompt": "Use the start-dev skill. active/eyes_scratch_mirror.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Primary beam correction for interferometer datasets, transformers and the sparse w-tilde inversion \u2014 library-shipped, awaiting-merge (glance \u2192 auto-merge on green if Witness passes; workspace example/docs as a follow-up prompt)",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/644",
+      "prompt": "Use the start-dev skill. active/interferometer_primary_beam.md"
     },
     {
       "severity": "yellow",
@@ -120,12 +126,6 @@
       "text": "pick: SED chain waveband fit can spin forever in Nautilus exploration\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md",
       "prompt": "Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: arXiv's Fastly edge refuses `urllib.request` outright \u2014 retrying a 406 only delays\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md",
-      "prompt": "Use the start-dev skill. draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md"
     }
   ]
 }

@@ -874,7 +874,7 @@ Use the start-dev skill. active/eyes_scratch_mirror.md
 
 </details>
 
-<details><summary>📋 <a href="active/interferometer_primary_beam.md">Primary beam correction for interferometer datasets, transformers and the sparse w-tilde inversion</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/640">issue #640</a> — issued 2026-10-21 — library-dev</summary>
+<details><summary>📋 <a href="active/interferometer_primary_beam.md">Primary beam correction for interferometer datasets, transformers and the sparse w-tilde inversion</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/640">issue #640</a> — issued 2026-10-21 — library-shipped, awaiting-merge (glance → auto-merge on green if Witness passes; workspace example/docs as a follow-up prompt) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/644">PyAutoArray#644</a></summary>
 
 ```
 Use the start-dev skill. active/interferometer_primary_beam.md
