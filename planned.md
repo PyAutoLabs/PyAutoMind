@@ -106,3 +106,12 @@
   - autolens_workspace_test
 - resume: Audit#603 found incorrect internal-edge Sibson weights and near-edge partition failure. Filed separately per explicit user request; strict expected-failure regressions retained in audit. No repair begun or worktree created. Plan algorithmic repair independently.
 
+## ci-timing-superseded-main-cancels
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/311
+- planned: 2026-10-21
+- prompt: draft/bug/health_fixes/heart_ci_timing_concurrency_cancels_as_kills.md
+- classification: library
+- suggested-branch: feature/ci-timing-superseded-main-cancels
+- blocked-by: euclid-smoke-ordered-shard (using PyAutoHeart)
+- affected-repos:
+  - PyAutoHeart

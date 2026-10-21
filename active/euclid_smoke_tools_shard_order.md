@@ -10,6 +10,7 @@ Autonomy: supervised
 Priority: high
 Status: formalised
 Filed: 2026-10-21
+Issued: 2026-10-21
 
 ## Context
 

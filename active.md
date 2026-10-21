@@ -81,3 +81,26 @@
   - PyAutoLens: feature/point-source-image-overlay
   - autolens_workspace: feature/point-source-image-overlay
   - autolens_visualization: feature/point-source-image-overlay
+
+## euclid-smoke-ordered-shard
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/317
+- issued: 2026-10-21
+- prompt: active/euclid_smoke_tools_shard_order.md
+- session: Claude Code CLI (Opus 5.5); session 343c1fc1-4d32-42cc-a8f5-e26cf0332168
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/euclid-smoke-ordered-shard
+- heart-red-override: "Heart: RED — Release RED; monitoring RED · 14/100 · 464 unresolved (updated 23h ago)"; live human "Override and proceed" 2026-10-21 (health session) — development shipping only (commit, push, PR); merge needs separate /prm with all checks green; no release; reasons verbatim on the issue
+- repos:
+  - PyAutoHands: feature/euclid-smoke-ordered-shard
+  - PyAutoHeart: feature/euclid-smoke-ordered-shard
+
+## matrix-zeus-smoke-install
+- issue: https://github.com/PyAutoLabs/autofit_workspace/issues/172
+- issued: 2026-10-21
+- prompt: active/hands_matrix_zeus_missing_py313.md
+- session: Claude Code CLI (Opus 5.5); session 343c1fc1-4d32-42cc-a8f5-e26cf0332168
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/matrix-zeus-smoke-install
+- heart-red-override: "Heart: RED — Release RED; monitoring RED · 14/100 · 464 unresolved (updated 23h ago)"; live human "Override and proceed" 2026-10-21 (health session) — development shipping only (commit, push, PR); merge needs separate /prm with all checks green; no release; reasons verbatim on the issue
+- repos:
+  - autofit_workspace: feature/matrix-zeus-smoke-install
