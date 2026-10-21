@@ -87,3 +87,14 @@
   - PyAutoLens: feature/point-source-image-overlay
   - autolens_workspace: feature/point-source-image-overlay
   - autolens_visualization: feature/point-source-image-overlay
+
+## ci-timing-superseded-main-cancels
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/311
+- issued: 2026-10-21
+- prompt: active/heart_ci_timing_concurrency_cancels_as_kills.md
+- session: Claude Code CLI (Opus 5.5); session 343c1fc1-4d32-42cc-a8f5-e26cf0332168
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/ci-timing-superseded-main-cancels
+- heart-red-override: "Heart: RED — Release RED; monitoring RED · 14/100 · 464 unresolved (updated 23h ago)"; live human "Override and proceed" 2026-10-21 (health session, covering the three health-fix bugs incl. this one) — development shipping only (commit, push, PR); merge needs separate /prm with all checks green; no release; reasons verbatim on the issue
+- repos:
+  - PyAutoHeart: feature/ci-timing-superseded-main-cancels
