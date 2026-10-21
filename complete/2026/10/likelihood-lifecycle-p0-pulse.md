@@ -1,3 +1,17 @@
+## likelihood-lifecycle-p0-pulse
+- issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/69
+- completed: 2026-10-21
+- library-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/70
+- epic: likelihood-lifecycle (phase 0, sub-issue 0A of 0A–0E)
+
+- Summary: PyAutoPulse reads `profiling-summary@3` — every record declares `likelihood`, `setup`/`setup_id`, `host_class`, `model_variant`, `measurement`, `class` (optimal/secondary/experimental) and `status` (current/superseded/archived); validator refuses a second `current` per key, `optimal` without a `decision_id`, laptop/local-GPU `current` rows and `archived` records inside `records[]`; `walltime-validation@1` full-fit evidence axis (producer autolens_inference); `designation` decision kind; Class-first current-only setup browser with History toggle and Coverage panel; REFERENCE/README v1-is-live drift fixed. v2 instances unchanged. 296 tests (207 before).
+- Contract shape (0B/0C must emit): v3 records carry `metric`/`unit`/`values` (not v2's `measurement: {metric: value}`); v3 has no `setups[]`/`selections[]` — per-record setup plus `planned_cells`; `archive_record_count` required; `decision_id` resolves against any `decisions.yaml` entry until phase 3 writes designations. Flagged on the PR as decisions on the approved plan; merged by human /prm.
+- Rulings confirmed by plan approval: R1 vocabulary/`setup_id` grammar, R2 label-only history cut, R3 provisional designations, R7 host_class is provenance; R4/R5 as validator enumerations only. Open: R6, R8–R11.
+- Traps: Brain Feature Agent reads any `Blocked-by:` header (even "none") as a gate — omit it when unblocked. Heart was YELLOW at ship for unrelated reasons (workspace manifest drift; PyAutoArray release validation stale). Pulse PR #68 was open throughout; no drift on main, no rebase needed.
+- Next: file `likelihood_lifecycle_p0_profiling.md` (0B autolens_profiling: commit nothing new first; move-only PR from `catalogue/migration_day_zero.json`; then the v3 catalogue builder and `lens` registry pin → @3), then 0C, 0D, 0E.
+
+## Original prompt
+
 # Likelihood lifecycle phase 0A: `profiling-summary@3` (class/status), `walltime-validation@1`, `designation` decisions and Class-first Pulse board
 
 Type: feature
