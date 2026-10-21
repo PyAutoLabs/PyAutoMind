@@ -19,6 +19,8 @@ Epic: likelihood-lifecycle
 Phase: 0
 Parent: draft/research/autolens_profiling/likelihood_lifecycle_epic.md
 Filed: 2026-10-21
+Issued: 2026-10-21
+Issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/69
 Note: Pulse PR #68 (docs/receipts) is open and unmerged on 2026-10-21; branch from main and rebase after it merges — not a gate.
 
 Phase 0 of the `likelihood-lifecycle` epic (ledger: `draft/research/autolens_profiling/likelihood_lifecycle_epic.md`; bodies and architecture: `likelihood_lifecycle_epic_report.md` §3.1, §3.2, §3.6, §3.8, §4 phase 0; evidence: `likelihood_lifecycle_epic_surveys/02_pulse_insight_contracts.md`). Phase 0 is the spine and has five sub-issues, one per repo, issued in order: **0A PyAutoPulse (this prompt)** → 0B autolens_profiling → 0C autolens_inference → 0D PyAutoInsight → 0E PyAutoBrain. Each later sub-issue is filed as its own prompt (`likelihood_lifecycle_p0_<target>.md`, `Phase: 0`) once 0A is shipped, because 0B's catalogue builder and 0C's exporter emit the contract this issue defines. Library first: Pulse is the contract owner, so it goes first.

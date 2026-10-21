@@ -66,3 +66,14 @@
 - user-facing: true
 - community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
 - prompt: active/matrix_free_interferometer_inversion.md
+
+## likelihood-lifecycle-p0-pulse
+- issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/69
+- issued: 2026-10-21
+- prompt: active/likelihood_lifecycle_p0_pulse_contract.md
+- session: Claude Code (Fable 5.1); session ID unavailable
+- status: library-dev
+- classification: feature (PyAutoPulse only; likelihood-lifecycle epic phase 0, sub-issue 0A), Consequence judge, Autonomy supervised; plan approved in chat 2026-10-21 (approval confirms rulings R1/R2/R3/R7; R4/R5 as validator enumerations)
+- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p0-pulse
+- repos:
+  - PyAutoPulse: feature/likelihood-lifecycle-p0-pulse
