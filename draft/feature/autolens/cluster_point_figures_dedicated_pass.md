@@ -77,3 +77,18 @@ Round-2 prototypes: `per_image_prototype/*/{dataset_v2,fit_v2,fit_per_image_v2}.
   - Colours mean image within rows and source globally.
   - "Residual / σ" label is OK.
   - The merged dataset figure is titled "Dataset Positions".
+
+## Human feedback round 3 → round 4 (2026-10-21)
+
+- **Curves:** critical curves and caustics are too faint everywhere; draw them darker and/or thicker.
+- **`fit_per_image` titles:** too long with the redshift. Use "IP (point_k, z = …)" and "SP (point_k, z = …)".
+- **Global fit:** REMOVE the exaggerated residual arrows and the ×F / "200 mas offset" key. Keep the red ✕ at the true model positions with true-length residual lines to the data; judge the fit by eye. The same applies to the `fit_per_image` IP panel.
+- **Global fit `_with_points` variant** over the imaging, with identical symbols.
+- **Session-agreed:**
+  - variant (a) base;
+  - smaller ✕ beyond 8 sources;
+  - add a cluster imaging simulator plus a tracked FITS to autolens_visualization;
+  - accept per-panel scales;
+  - source 0 black on white panels and white on images;
+  - library title/tick font sizes for the many-source case;
+  - σ on per-source legend entries (no generic grey entry).
