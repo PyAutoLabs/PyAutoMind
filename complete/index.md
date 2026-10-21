@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1934 records across 9 buckets.
+1935 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -197,6 +197,7 @@ markers; everything below GENERATED is rebuilt.
 - [evaluation-grid-cap-field](2026/10/evaluation-grid-cap-field.md)
 - [eyes-alphabetical-domains](2026/10/eyes-alphabetical-domains.md)
 - [eyes-focused-figure-browser](2026/10/eyes-focused-figure-browser.md)
+- [eyes-scratch-mirror](2026/10/eyes-scratch-mirror.md)
 - [finish-pr-1709-corner-plots](2026/10/finish-pr-1709-corner-plots.md) — Community PR by @samlange04 (proposal .github#38) merged as d3a772129. Maintainer commit f9377f3f6 was pushed …
 - [fit-util-masked-division](2026/10/fit-util-masked-division.md)
 - [fixed-model-json](2026/10/fixed-model-json.md)

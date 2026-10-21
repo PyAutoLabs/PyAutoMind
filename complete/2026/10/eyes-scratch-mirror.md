@@ -1,3 +1,13 @@
+Shipped phase 1 of the Eyes scratch mirror. It is opt-in through `PYAUTO_EYES_SCRATCH`, and while active image work is under way it copies rendered figures to `$PYAUTO_EYES_SCRATCH/<lib>/<dataset_type>/`. The folder layout follows the PyAutoEyes dashboard.
+
+- autogalaxy/autofit/autocti_visualization `_viz_cli.py`: adds `mirror_to_scratch()` and the `python _viz_cli.py scratch [domain ...]` entry point. Each mirror replaces the domain folder, skips `misc`, and does nothing when the variable is unset. `gallery/gallery_run.sh` mirrors each producer that succeeds, and a failed mirror never fails the run. Adds hermetic tests in `scripts/misc/test/test_eyes_scratch.py`.
+- PyAutoBrain `skills/eyes/eyes.md`: adds the "Active image work (on-the-fly)" section.
+- Merged 2026-10-21 via a human /prm (judge tier). Every CI leg was green.
+
+Scope recorded is what merged. The autolens_visualization part (phase 2) was re-filed as `draft/feature/autolens_visualization/eyes_scratch_mirror_lens.md`, blocked by autolens_visualization#7 (task point-image-fit-filename).
+
+## Original prompt
+
 # Eyes scratch mirror — on-the-fly figure inspection
 
 Consequence: judge
