@@ -72,7 +72,8 @@
 - issued: 2026-10-21
 - prompt: active/cluster_point_figures_dedicated_pass.md
 - session: Claude Code (Opus 5.5 subagent); https://claude.ai/code/session_019Y6tDwGThyc8UowuncXw88
-- status: library-dev
+- status: workspace-dev
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/794
 - worktree: ~/Code/PyAutoLabs-wt/cluster-point-figures
 - absorbs: draft/bug/autolens/point_fit_critical_curves_ignore_source_redshift.md (close with this task)
 - repos:
