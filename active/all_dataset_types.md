@@ -10,6 +10,8 @@ Autonomy: human-required
 Priority: normal
 Status: formalised
 Consequence: judge
+Issued: 2026-10-21
+Issue: https://github.com/PyAutoLabs/autolens_visualization/issues/4
 
 ## Original request (verbatim)
 

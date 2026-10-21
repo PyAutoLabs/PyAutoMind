@@ -64,3 +64,15 @@
 - user-facing: true
 - community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
 - prompt: active/matrix_free_interferometer_inversion.md
+
+## viz-all-dataset-types
+- issue: https://github.com/PyAutoLabs/autolens_visualization/issues/4
+- issued: 2026-10-21
+- prompt: active/all_dataset_types.md
+- session: Claude Code (Opus 5.5), laptop CLI; session ID unavailable
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/viz-all-dataset-types
+- heart-override: Heart RED override (development only) authorized by human 2026-10-21
+- repos:
+  - autolens_visualization: feature/viz-all-dataset-types
+  - PyAutoEyes: feature/viz-all-dataset-types
