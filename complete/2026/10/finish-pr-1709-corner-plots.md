@@ -1,3 +1,28 @@
+## finish-pr-1709-corner-plots
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1710
+- completed: 2026-10-21
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1709
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1709
+- scope recorded: phase 1 (PyAutoFit) only. Phases 2 and 3 re-filed as `draft/feature/autogalaxy/latent_parameter_declarations_pr1709_phase2.md` and `draft/docs/workspaces/corner_plot_config_keys_pr1709_phase3.md`
+- summary: Community PR by @samlange04 (proposal .github#38) merged as d3a772129. Maintainer commit f9377f3f6 was pushed onto the contributor's branch instead of another review round. It resolves review findings 1–8:
+  - per-component plots follow corner_anesthetic when unconfigured;
+  - a raising latent conversion is logged, and the latent plots are skipped in test mode;
+  - new output.yaml latent_model_parameters switch;
+  - unique, consistently cut deep-path superscripts (superscripts_from_component_paths);
+  - shared priors converted for every holder (_prior_holders);
+  - Periodic latents recentred for plots only (latent.csv keeps the conversion range);
+  - "model_root" group when a component is named model;
+  - component paths frozen-cached.
+- validation: test_autofit 3881 passed; 13 new or changed tests fail on bf43aa623; smoke 165/165 (autocti envs not built locally, missing GSL); independent review (same model family, stage 1) found no code defects; exact-head CI 3.12/3.13/no-JAX/docs green.
+- heart: readiness STALE, monitoring feed RED. Development-only override ("do 2, Override and proceed"); merge by the human's separate /prm with all checks green.
+- traps:
+  - Pushing to a fork PR triggers only pull_request runs, never push runs.
+  - The auto-mode classifier denied `gh pr merge`; the human merged with `! gh pr merge`.
+  - Mind's prompt_sync_push stages everything (`git add -A`) and would have swept an unrelated local policy/hpc_ral.md edit, so task files were committed explicitly.
+- decision to revisit: latent.results summaries of an angle straddling its branch cut are split, because latent.csv is no longer recentred (documented in output.yaml).
+
+## Original prompt
+
 # Finish community PR PyAutoFit#1709…
 
 Type: feature

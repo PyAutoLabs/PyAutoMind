@@ -67,24 +67,6 @@
 - community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
 - prompt: active/matrix_free_interferometer_inversion.md
 
-## finish-pr-1709-corner-plots
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1710
-- issued: 2026-10-21
-- prompt: active/finish_community_pr_pyautofit_1709.md
-- session: Claude Code CLI; session 635ba1c3-21d9-457e-8b3a-289a97f0ada2
-- status: library-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/finish-pr-1709-corner-plots
-- phase: 1/3 (PyAutoFit, push onto samlange04:fix/corner-anesthetic-duplicate-labels → merge #1709); 2 PyAutoGalaxy latent declarations; 3 workspaces after release
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1709
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1709
-- head: f9377f3f6fe56237cdb62d52e93ee34e44cef565
-- validation: test_autofit 3881 passed; smoke 165/165 (autocti envs not built locally: no GSL); independent review no code defects (docstring fixed); witness tests (i)-(iv) fail on bf43aa623
-- next: human /prm once CI is green on f9377f3f6; phase 2 PyAutoGalaxy (contributor PR after release); phase 3 workspaces after release
-- heart-red-override: "Heart: RED — Release RED; monitoring RED · 14/100 · 464 unresolved (updated 22h ago); live human 'do 2, Override and proceed' 2026-10-21 (start_dev, this session) — development shipping only (commit, push, PR work); merge needs separate /prm with all checks green; no release; exact RED reasons verbatim on issue #1710; recorded on the issue, PR, active.md, autonomy_log.md"
-- repos:
-  - PyAutoFit: fix/corner-anesthetic-duplicate-labels
-- later-phase-repos (claimed when the phase starts): PyAutoGalaxy; autolens_workspace, autofit_workspace, autogalaxy_workspace, HowToGalaxy, HowToLens
-
 ## point-source-image-overlay
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/779
 - issued: 2026-10-21

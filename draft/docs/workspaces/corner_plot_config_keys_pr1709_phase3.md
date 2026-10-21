@@ -1,0 +1,28 @@
+# Workspace config + docs for corner-plot labels and latent plots (phase 3 of PyAutoFit#1709)
+
+Type: docs
+Target: workspaces
+Repos:
+- autofit_workspace
+- autogalaxy_workspace
+- autolens_workspace
+- HowToGalaxy
+- HowToLens
+Difficulty: small
+Autonomy: supervised
+Priority: medium
+Status: formalised
+Consequence: glance
+Blocked-by: release of PyAutoFit#1709 (workspace smoke CI installs the released library)
+Filed: 2026-10-21
+
+Remainder of `complete/2026/10/finish-pr-1709-corner-plots.md`. The library defaults cover the missing keys, so nothing breaks meanwhile.
+
+- `config/visualize/plots_search.yaml` `nest:` add `corner_anesthetic_components`, `corner_anesthetic_latent` (false),
+  `corner_anesthetic_latent_components`, with the library's comments.
+- `config/output.yaml` add `latent_model_parameters: true`.
+- `config/notation.yaml` `superscript:` comments: it now applies only to priors directly on an unnamed `Model`;
+  named components are labelled by their path (`lens.bulge`, `source.pix.reg`).
+- Contributor branches `feature/corner-plot-labels` on autofit/autogalaxy/autolens_workspace, HowToLens and HowToGalaxy may
+  already carry these; land theirs if so.
+- Release note: corner-plot labels change from class abbreviations to component paths (user-visible).
