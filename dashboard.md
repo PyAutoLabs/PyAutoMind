@@ -903,7 +903,7 @@ Use the start-dev skill. active/cosmos_web_ring_guided_walkthrough_p1_notebook.m
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p0_inference.md">Likelihood lifecycle phase 0C: autolens_inference committed clean-slate rows, mirrored tree, <code>walltime-validation@1</code> exporter…</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/41">issue #41</a> — issued 2026-10-21 — workspace-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p0_inference.md">Likelihood lifecycle phase 0C: autolens_inference committed clean-slate rows, mirrored tree, <code>walltime-validation@1</code> exporter…</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/41">issue #41</a> — issued 2026-10-21 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_inference/pull/42">autolens_inference#42</a>, <a href="https://github.com/PyAutoLabs/autolens_inference/pull/43">autolens_inference#43</a>, <a href="https://github.com/PyAutoLabs/autolens_inference/pull/44">autolens_inference#44</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p0_inference.md
