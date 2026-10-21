@@ -874,7 +874,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/point_solver_refinement_figure.md">Point-source phase 2: PointSolver refinement figure</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/787">issue #787</a> — issued 2026-10-21 — library-dev</summary>
+<details><summary>📋 <a href="active/point_solver_refinement_figure.md">Point-source phase 2: PointSolver refinement figure</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/787">issue #787</a> — issued 2026-10-21 — workspace-shipped, awaiting-merge (library PR #788 + viz PR #12; human /prm, library first) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/788">PyAutoLens#788</a>, <a href="https://github.com/PyAutoLabs/autolens_visualization/pull/12">autolens_visualization#12</a> — ⏳ pending release: PyAutoLens</summary>
 
 ```
 Use the start-dev skill. active/point_solver_refinement_figure.md
@@ -2985,6 +2985,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoLens**
 
+- [PyAutoLens#788](https://github.com/PyAutoLabs/PyAutoLens/pull/788) — `active/point_solver_refinement_figure.md`
 - [PyAutoLens#784](https://github.com/PyAutoLabs/PyAutoLens/pull/784) — `complete/2026/10/point-critical-curve-grid.md`
 - [PyAutoLens#786](https://github.com/PyAutoLabs/PyAutoLens/pull/786) — `complete/2026/10/point-dataset-positions-panel.md`
 - [PyAutoLens#782](https://github.com/PyAutoLabs/PyAutoLens/pull/782) — `complete/2026/10/point-image-fit-filename.md`
