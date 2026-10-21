@@ -70,9 +70,16 @@
 - issued: 2026-10-21
 - prompt: active/all_dataset_types.md
 - session: Claude Code (Opus 5.5), laptop CLI; session ID unavailable
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge (human /prm; vis #5 first, then Eyes #31)
+- prs:
+  - autolens_visualization: https://github.com/PyAutoLabs/autolens_visualization/pull/5
+  - PyAutoEyes: https://github.com/PyAutoLabs/PyAutoEyes/pull/31
 - worktree: ~/Code/PyAutoLabs-wt/viz-all-dataset-types
 - heart-override: Heart RED override (development only) authorized by human 2026-10-21
+- heart-red-override:
+  - authorization: start_dev "I authorize override"; ship gate answer "Authorize, open PRs" (2026-10-21, live)
+  - reasons: readiness stale — release validation incomplete: no rehearsal for current source; feed RED 14/100 (PyAutoFit/PyAutoArray tests, Hands py matrix, Heart smoke, Mind spawn drift, *_workspace_test smoke, workspace validation 1f, euclid/test_run/autolens_inference/autolens_profiling red, worktree drift) — verbatim on autolens_visualization#4
+  - gates: vis gallery_run --all + ruff + gallery --check + 15 pytest; Eyes ruff + 91 pytest + pyauto-eyes check OK; no merge/release
 - repos:
   - autolens_visualization: feature/viz-all-dataset-types
   - PyAutoEyes: feature/viz-all-dataset-types
