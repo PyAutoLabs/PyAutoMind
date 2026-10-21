@@ -14,7 +14,7 @@ Witness: a beamed array-free save_attributes → aggregator round trip in test_a
 Review-minutes: 1
 Unattended: ready
 Filed: 2026-10-21
-Blocked-by: PyAutoLens claim (point-critical-curve-grid, then point-dataset-positions-panel) released
+Unblocked: 2026-10-21 — PyAutoLens claim released (complete/2026/10/point-dataset-positions-panel.md)
 
 ## What
 

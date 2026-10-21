@@ -2,7 +2,7 @@
 
 Consequence: judge
 Autonomy: human-required
-blocked-by: draft/feature/autolens/point_dataset_positions_panel.md (shares the fit_point_plots.py styling: markers, σ legend, titles, solver extent)
+builds-on: complete/2026/10/point-dataset-positions-panel.md (shipped 2026-10-21; shares the fit_point_plots.py styling: markers, σ legend, titles, solver extent)
 
 @PyAutoLens @autolens_visualization
 

@@ -1,3 +1,30 @@
+Shipped the point-source positions panels (phase 1 of the point-source figures work).
+
+- **Positions panels:**
+  - extent set by the PointSolver grid; the fallback contains every position
+  - no x/y axis labels
+  - large markers, a true-radius noise circle and σ in the legend
+  - titles `Dataset Positions (point_0)` / `Fit Positions (point_0)`
+- **Fit Positions panel also shows:**
+  - the mass centres
+  - critical curves (`critical_curve_grid_from(solver=)` grows to cover the solver grid, so no broken arcs)
+  - observed→model residual lines, paired per fit class
+  - unmatched model images
+- **Code:** new `autolens/point/plot/positions_panel.py`. `solver=` is threaded through the plotter and visualizer. 12 new tests; the full suite gives 859 passed.
+- **Re-render:** autolens_visualization re-rendered the point_source_* and cluster figures.
+
+Merged 2026-10-21 via a human /prm (judge tier), library first.
+
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/786
+
+Follow-ups:
+- `draft/feature/autolens/point_solver_refinement_figure.md` (phase 2)
+- `draft/docs/autolens/point_solver_figure_workspace_placement.md` (phase 3)
+- `draft/feature/autolens/point_fit_source_plane_panel.md`
+- `draft/bug/autolens/point_fit_critical_curves_ignore_source_redshift.md`
+
+## Original prompt
+
 # Point-source positions panels: extent, markers, noise and titles
 
 Consequence: judge

@@ -110,7 +110,7 @@
 ## interferometer-primary-beam-persistence-mirror
 - filed: 2026-10-21
 - prompt: draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md
-- status: blocked — PyAutoLens claimed by point-dataset-positions-panel (was point-critical-curve-grid); run /start_dev when the claim clears (docstring line + one round-trip test, no source change)
+- status: ready — PyAutoLens claim released 2026-10-21 (point-dataset-positions-panel shipped, complete/2026/10/point-dataset-positions-panel.md); run /start_dev (docstring line + one round-trip test, no source change)
 - parent: complete/2026/10/interferometer-primary-beam-persistence.md
 - affected-repos:
   - PyAutoLens

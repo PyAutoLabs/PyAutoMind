@@ -2,7 +2,7 @@
 
 Consequence: judge
 Autonomy: human-required
-blocked-by: active/point_dataset_positions_panel.md (phase 1; shares styling and the solver threading)
+builds-on: complete/2026/10/point-dataset-positions-panel.md (phase 1 shipped 2026-10-21; shares styling and the solver threading)
 
 @PyAutoLens @autolens_visualization
 
@@ -125,3 +125,7 @@ Still to confirm at /start_dev:
 - cluster image capping
 - default-off toggle, best-fit only, and the JAX `MAX_CONTAINING_SIZE` warning
 - retiring `point/visualise.py` and fixing `Step.tree_flatten`
+
+## Carry-over from phase 1 (approved in chat 2026-10-21)
+
+Thin the model ✕ in the Fit Positions panel (`positions_panel.py`), using a thinner line and smaller marker, so the observed dot stays visible under it when the fit is exact. Re-render the point_source_* and cluster figures.
