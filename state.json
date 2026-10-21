@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-10-21T12:05:44Z",
+  "headline": "RED \u2014 24 picks \u00b7 7 in flight",
+  "updated": "2026-10-21T12:09:27Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -24,12 +24,6 @@
       "text": "Imaging sparse inversion: unmasked mapper triplets in the reconstructed-image path\u2026 \u2014 library-shipped, awaiting-merge (glance \u2192 auto-merge on green if Witness passes)",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/649",
       "prompt": "Use the start-dev skill. active/imaging_sparse_triplets_unmasked_and_jax_import.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Persist the interferometer primary beam through analysis save and aggregator rebuild \u2014 library-shipped, awaiting-merge (glance \u2192 auto-merge on green if Witness passes)",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/655",
-      "prompt": "Use the start-dev skill. active/interferometer_primary_beam_persistence.md"
     },
     {
       "severity": "yellow",
@@ -113,6 +107,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1706 \u2014 prior-summary-ranges",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1706",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#655 \u2014 interferometer-primary-beam-persistence",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/655",
       "prompt": null
     },
     {

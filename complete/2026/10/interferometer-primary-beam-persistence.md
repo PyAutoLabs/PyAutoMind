@@ -1,3 +1,29 @@
+## interferometer-primary-beam-persistence
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/654
+- completed: 2026-10-21
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/655 (merge e00b5e7d)
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/655
+- parent: complete/2026/10/interferometer-primary-beam.md
+- community: https://github.com/PyAutoLabs/.github/discussions/35 (@HRSAstro)
+- summary: |
+    Follow-up of PyAutoArray#644. One commit f7f6d79e on `feature/interferometer-primary-beam-persistence`
+    (3 files, +343/-4): `interferometer_hdu_list_from` appends the beam as a trailing `PRIMARY_BEAM`
+    HDU in both layouts (legacy positions unchanged; beamless files byte-identical); the aggregator's
+    `_interferometer_from` detects it by name (`_has_hdu`) and passes `primary_beam=` into
+    `from_sparse_terms` and `aa.Interferometer`. Five new round-trip tests (in-memory, array-free,
+    beamless layout pinned at 4 HDUs, old outputs without the HDU, control that disabling the reload
+    fails). Worktree: test_autogalaxy 1362 passed. CI: docs-build + unittest 3.12/3.13/nojax green
+    on both runs; CLEAN; not frozen; glance auto-merge.
+- witness: |
+    MET — beamed datasets saved by AnalysisInterferometer and rebuilt by the aggregator carry an
+    identical primary_beam_slim (dataset, transformer, sparse operator) and identical log_likelihood /
+    log_evidence / figure_of_merit (rel 1e-10), differing from the beamless fit; beamless and legacy
+    outputs load unchanged. All in CI.
+- heart-ack: "YELLOW acknowledged by human 2026-10-21 — manifest drift (1 mismatch); release validation stale: source moved since rehearsal (PyAutoArray)"
+- deferred: PyAutoLens docstring (autolens/interferometer/model/analysis.py:336-339) + mirror test next to test_autolens/interferometer/model/test_analysis_interferometer.py:220 — PyAutoLens claimed by point-critical-curve-grid at the time; file as a small prompt when free. Pre-existing gap (not this task): an in-memory dataset saved after apply_sparse_operator is rebuilt without the operator.
+
+## Original prompt
+
 # Persist the interferometer primary beam through analysis save and aggregator rebuild
 
 Type: feature

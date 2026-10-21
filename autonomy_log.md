@@ -466,7 +466,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 32 (stage 1: 32, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — the pre-registered decision is due
+Count toward 20: 33 (stage 1: 33, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — the pre-registered decision is due
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -527,3 +527,4 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-10-21 | sparse-mapped-reconstructed-image (PyAutoArray#641) | glance | tests 1052+77 passed (worktree) + CI 3 legs green / smoke n/a (internal, no workspace impact) / review in-session diff review / heart YELLOW acked / witness parity tests green | merged-unchanged | 1 |
 | 2026-10-21 | interferometer-primary-beam (PyAutoArray#644) | glance | tests 2136+141 passed (worktree) + CI 3 legs green / smoke n/a (additive API; workspace example filed as follow-up) / review in-session diff review / heart YELLOW acked / witness bit-identity + brute-force parity green | merged-unchanged | 1 |
 | 2026-10-21 | matrix-free-interferometer-phase1 (PyAutoArray#645) | glance | tests 1032 passed (worktree) + CI 3 legs green / smoke n/a (internal utilities) / review in-session diff review / heart YELLOW acked / witness parity 1e-15 and 1e-10 green | merged-unchanged | 1 |
+| 2026-10-21 | interferometer-primary-beam-persistence (PyAutoGalaxy#655) | glance | tests 1362 passed (worktree) + CI 4 legs green / smoke n/a (persistence only) / review in-session diff review / heart YELLOW acked / witness round-trip tests green | merged-unchanged | 1 |
