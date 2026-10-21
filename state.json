@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-10-21T19:25:34Z",
+  "headline": "RED \u2014 24 picks \u00b7 6 in flight",
+  "updated": "2026-10-21T19:28:22Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -18,12 +18,6 @@
       "text": "COSMOS-Web Ring walkthrough \u2014 phase 1: image-first Colab notebook, no inference \u2014 workspace-shipped, awaiting-merge (7 commits incl. maintainer copy-edit; F150W/F444W; Explore The Model)",
       "url": "https://github.com/PyAutoLabs/autolens_assistant/pull/161",
       "prompt": "Use the start-dev skill. active/cosmos_web_ring_guided_walkthrough_p1_notebook.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Likelihood lifecycle phase 0C: autolens_inference committed clean-slate rows, mirrored tree, `walltime-validation@1` exporter\u2026 \u2014 workspace-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autolens_inference/pull/42",
-      "prompt": "Use the start-dev skill. active/likelihood_lifecycle_p0_inference.md"
     },
     {
       "severity": "yellow",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1707 \u2014 prior-stable-test-ids",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1707",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1706 \u2014 prior-summary-ranges",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1706",
       "prompt": null
     }
   ]

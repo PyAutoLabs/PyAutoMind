@@ -1,3 +1,21 @@
+## likelihood-lifecycle-p0-inference
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/41
+- completed: 2026-10-21
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/42
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/43
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/44
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/71
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/74
+- epic: likelihood-lifecycle (phase 0, sub-issue 0C of 0A–0E)
+
+- Summary: autolens_inference committed its clean-slate rows (63 files: 40 SLaM rows, 7 prepared manifests, the 2026-10-19 archive; README "No pipeline runs yet" retired), moved to the mirrored tree (`scripts/<dataset_type>/<variant>/{validation,samplers}/`, `results/<dataset_type>/<variant>/<instrument>/validation/<model_variant>/<setup_id>/seed_<n>/`, samplers under `…/samplers/<model_variant>/<sampler>/explicit/<setup_id>/seed_<n>/`, `archive/YYYY/MM/<dated>/`; map `catalogue/migration_2026_10.json`; mirror test), and exports lifecycle fields (`setup_mode` explicit everywhere, `setup_resolved`, `setup_id`, `host_class`, `model_variant`, `likelihood`) plus `dashboard/walltime_validation.json` as `walltime-validation@1` (56 records). PyAutoPulse#71 registers it as instance `lens-walltime` (receipt at bdc8b2d, board shows the wall-time table). PyAutoCortex#74 notes the path move on the project ledger.
+- Findings for the epic: 0 of 56 walltime records match a Pulse lens@2 runtime record (lens@2 HST record ids never state dense/sparse; only Delaunay-1500 A100 exists), so `predicted_ms_per_eval`/`ratio_measured_over_predicted` stay null until 0B re-pins `lens` to @3 with per-record `setup_id` (the exporter reads a committed extract `catalogue/pulse_lens_runtime_reference.json`, refreshed with `--refresh-pulse-reference`). `parity_status` is a declared `PARITY_RULINGS` table in the exporter — single ruling: 2026-10-18 jax_gpu_sparse_fp64 light_fixed mass_total[1] divergence → 2 `diverged` rows; nothing `match`. Stage folded into `sampler` as `nautilus:<stage>` plus a `stage` field (Pulse key has no stage). SLaM jax_cpu rows keep `hpc_a100` (host null; limitation). Left out, counted in limitations: 6 `--stages-from` stages, 33 light_fixed stages identical to default, the empty Delaunay seed-0 row, archived rows.
+- Rulings confirmed by plan approval: R8 sampler folder form. Heart YELLOW at ship (workspace manifest drift; PyAutoArray release validation stale), unrelated.
+- Traps: Cortex PR CI needs the dashboard rendered ON the branch (`pyauto-brain cortex dashboard --apply --cortex <worktree>`) committed with the note; the node browser check needs playwright installed in the worktree (CI covers it). Stacked PRs retarget to main automatically as each base merges.
+- Next: 0B (`planned.md` `likelihood-lifecycle-p0-profiling`, blocked by cluster-pointsolver's autolens_profiling claim) → re-point the walltime references; 0D PyAutoInsight (accept the additive fields, render `setup_resolved`, doc drift); 0E Brain lifecycle template.
+
+## Original prompt
+
 # Likelihood lifecycle phase 0C: autolens_inference committed clean-slate rows, mirrored tree, `walltime-validation@1` exporter and Pulse registry row
 
 Type: feature
