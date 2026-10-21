@@ -866,7 +866,7 @@ Use the start-dev skill. active/cosmos_web_ring_guided_walkthrough_p1_notebook.m
 
 </details>
 
-<details><summary>📋 <a href="active/eyes_scratch_mirror_lens.md">Eyes scratch mirror: phase 2 (autolens_visualization)</a> — <a href="https://github.com/PyAutoLabs/autolens_visualization/issues/8">issue #8</a> — issued 2026-10-21 — workspace-dev</summary>
+<details><summary>📋 <a href="active/eyes_scratch_mirror_lens.md">Eyes scratch mirror: phase 2 (autolens_visualization)</a> — <a href="https://github.com/PyAutoLabs/autolens_visualization/issues/8">issue #8</a> — issued 2026-10-21 — awaiting-merge</summary>
 
 ```
 Use the start-dev skill. active/eyes_scratch_mirror_lens.md
