@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-10-21T09:34:35Z",
+  "updated": "2026-10-21T09:35:26Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -99,6 +99,12 @@
     },
     {
       "severity": "info",
+      "text": "pick: Euclid smoke: `scripts/tools` shard runs without the fits it replays",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/health_fixes/euclid_smoke_tools_shard_order.md",
+      "prompt": "Use the start-dev skill. draft/bug/health_fixes/euclid_smoke_tools_shard_order.md"
+    },
+    {
+      "severity": "info",
       "text": "pick: arXiv's Fastly edge refuses `urllib.request` outright \u2014 retrying a 406 only delays\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md",
       "prompt": "Use the start-dev skill. draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md"
@@ -120,12 +126,6 @@
       "text": "pick: Sparse mapped reconstructed image on the interferometer sparse inversion path\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autoarray/sparse_mapped_reconstructed_image.md",
       "prompt": "Use the start-dev skill. draft/feature/autoarray/sparse_mapped_reconstructed_image.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
-      "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
     }
   ]
 }
