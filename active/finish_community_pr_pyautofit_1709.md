@@ -13,6 +13,8 @@ Autonomy: supervised
 Priority: high
 Memory: wiki/galaxies/sources/massive-ellipticals.md; reading-queue.md; wiki/lensing/sources/dark-matter-substructure.md
 Status: formalised
+Issued: 2026-10-21
+Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1710
 Consequence: glance
 Witness: PyAutoFit PR #1709 CI green with new tests for (i) `corner_anesthetic: false` and the components key absent writes no per-component plots, (ii) a raising latent conversion logs instead of propagating from the final visualize, (iii) a power law's ell_comps linked into a multipole still yields the mass's axis_ratio/angle latents, (iv) deep-path labels stay unique
 Review-minutes: 3

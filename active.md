@@ -76,3 +76,20 @@
 - repos:
   - autolens_visualization: feature/viz-all-dataset-types
   - PyAutoEyes: feature/viz-all-dataset-types
+
+## finish-pr-1709-corner-plots
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1710
+- issued: 2026-10-21
+- prompt: active/finish_community_pr_pyautofit_1709.md
+- session: Claude Code CLI; session 635ba1c3-21d9-457e-8b3a-289a97f0ada2
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/finish-pr-1709-corner-plots
+- phase: 1/3 (PyAutoFit, push onto samlange04:fix/corner-anesthetic-duplicate-labels → merge #1709); 2 PyAutoGalaxy latent declarations; 3 workspaces after release
+- community-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1709
+- heart-red-override: "Heart: RED — Release RED; monitoring RED · 14/100 · 464 unresolved (updated 22h ago); live human 'do 2, Override and proceed' 2026-10-21 (start_dev, this session) — development shipping only (commit, push, PR work); merge needs separate /prm with all checks green; no release; exact RED reasons verbatim on issue #1710; recorded on the issue, PR, active.md, autonomy_log.md"
+- repos:
+  - PyAutoFit: fix/corner-anesthetic-duplicate-labels
+  - PyAutoGalaxy: feature/finish-pr-1709-corner-plots
+  - autolens_workspace: feature/finish-pr-1709-corner-plots
+  - HowToGalaxy: feature/finish-pr-1709-corner-plots
+  - HowToLens: feature/finish-pr-1709-corner-plots
