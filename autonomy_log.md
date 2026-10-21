@@ -466,7 +466,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 29 (stage 1: 29, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — the pre-registered decision is due
+Count toward 20: 30 (stage 1: 30, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — the pre-registered decision is due
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -524,3 +524,4 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-10-17 | prior-stable-test-ids (PyAutoFit#1707) | glance | tests full serial suite and exact-head CI Python 3.12/3.13/no-JAX PASS / smoke model/search IDs and exact output paths unchanged against baseline / review no GitHub objections; human /prm (no independent review claimed) / heart STALE; freeze clear / witness collection IDs PASS (170 property tests on 4 workers); whole-suite parallel execution remains blocked by separately tracked shared-output races | merged-unchanged | 1 |
 | 2026-10-17 | fixed-model-json (PyAutoFit#1708) | glance | tests full serial suite and exact-head CI Python 3.12/3.13/no-JAX PASS / smoke model/search IDs and exact output paths unchanged against baseline / review no GitHub objections; human /prm (no independent review claimed) / heart STALE; freeze clear / witness semantic GraphSpec and exact persistent identifiers PASS; process-local counters excluded as documented | merged-unchanged | 1 |
 | 2026-10-21 | finish-pr-1709-corner-plots (PyAutoFit#1709) | glance | tests full suite 3881 PASS and exact-head CI Python 3.12/3.13/no-JAX/docs PASS / smoke 165/165 across 6 workspaces (autocti envs not built: no GSL) / review independent same-family agent, no code defects, docstring fixed / heart STALE, feed RED, dev-only override; freeze clear / witness (i)-(iv) PASS, fail on bf43aa623 | merged-unchanged | 1 |
+| 2026-10-21 | sparse-mapped-reconstructed-image (PyAutoArray#641) | glance | tests 1052+77 passed (worktree) + CI 3 legs green / smoke n/a (internal, no workspace impact) / review in-session diff review / heart YELLOW acked / witness parity tests green | merged-unchanged | 1 |

@@ -67,19 +67,15 @@
 - community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
 - prompt: active/matrix_free_interferometer_inversion.md
 
-## sparse-mapped-reconstructed-image
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/639
+## interferometer-primary-beam
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/640
 - issued: 2026-10-21
 - user-facing: true
-- community: https://github.com/PyAutoLabs/.github/discussions/40 (@HRSAstro)
-- prompt: active/sparse_mapped_reconstructed_image.md
+- community: https://github.com/PyAutoLabs/.github/discussions/35 (@HRSAstro)
+- prompt: active/interferometer_primary_beam.md
 - session: Claude Code (Fable 5.1), laptop CLI
-- status: library-shipped, awaiting-merge (glance → auto-merge on green if Witness passes)
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/641
-- prs:
-  - PyAutoArray: https://github.com/PyAutoLabs/PyAutoArray/pull/641
-- heart-ack: YELLOW acknowledged by human 2026-10-21 — manifest drift (1 mismatch); test run status unknown; release validation incomplete (no rehearsal)
-- classification: feature (PyAutoArray library; PyAutoGalaxy verify-only), Consequence glance, Autonomy safe; plan approved in chat 2026-10-21; merge mode auto-merge on green if Witness passes
-- worktree: ~/Code/PyAutoLabs-wt/sparse-mapped-reconstructed-image
+- status: library-dev
+- classification: feature (PyAutoArray library; PyAutoGalaxy verify-only), Consequence glance, Autonomy supervised; plan approved in chat 2026-10-21 (P=0 warning, no floor); merge mode auto-merge on green if Witness passes
+- worktree: ~/Code/PyAutoLabs-wt/interferometer-primary-beam
 - repos:
-  - PyAutoArray: feature/sparse-mapped-reconstructed-image
+  - PyAutoArray: feature/interferometer-primary-beam

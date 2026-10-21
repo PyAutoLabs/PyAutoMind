@@ -1,3 +1,33 @@
+## sparse-mapped-reconstructed-image
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/639
+- completed: 2026-10-21
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/641 (merge 7ecc6ef3)
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/641
+- community: https://github.com/PyAutoLabs/.github/discussions/40 (@HRSAstro) — contributor update owed at merge (draft approved in chat) and again at release
+- summary: |
+    Community proposal (hub #40, @HRSAstro): after 2026.10.18.1 made the sparse interferometer
+    `data_vector` sparse, the inherited `mapped_reconstructed_data_dict` still built the dense
+    image-pixels × mesh-pixels mapping matrix L for fit outputs (2.7 GB on a 384² unmasked grid
+    with a 48² mesh). One commit 422f60a9 on `feature/sparse-mapped-reconstructed-image`:
+    `InversionInterferometerSparse.mapped_reconstructed_data_dict` override + helper
+    `_mapped_reconstructed_data_mapper_from` (scatter-add of `vals * s[cols]` over the slim
+    triplets from `_sparse_triplets_slim_from`; numpy `bincount`, JAX `.at[rows].add`);
+    linear-function objects keep the dense product; the numba subclass inherits it;
+    `mapped_reconstructed_operated_data_dict` unchanged. Tests: sparse-vs-dense parity on
+    numpy (1e-10) and under `jax.jit` (1e-12) for Rectangular, Delaunay, sub_size 2, two
+    mappers, mapper + linear funcs in both orders. Worktree runs: inversion + dataset
+    interferometer suites 1052 passed / 4 xfailed; PyAutoGalaxy interferometer 77 passed.
+    CI: unittest 3.12, 3.13, nojax all green; mergeStateStatus CLEAN; not frozen.
+- witness: |
+    MET — the parity tests asserting the sparse `mapped_reconstructed_data_dict` equals the
+    dense `mapping_matrix @ reconstruction` on numpy and under jit, Rectangular and Delaunay,
+    sub-size > 1, two mappers and mapper-plus-linear-functions, ran green in all three CI legs.
+- heart-ack: "YELLOW acknowledged by human 2026-10-21 — manifest drift (1 mismatch); test run status unknown; release validation incomplete (no rehearsal)"
+- side-finding: imaging `inversion/imaging/sparse.py` `_mapped_reconstructed_data_dict_from` uses unmasked `Mapper.sparse_triplets_curvature` (no slot/negative-index zeroing) and `inversion_imaging_util.mapped_reconstructed_operated_data_via_sparse_operator_from` imports JAX unconditionally — follow-up issue to file.
+- follow-ups: interferometer-primary-beam (#640, planned.md, now unblocked) → matrix-free phase 1 (draft, #638 parent); contributor replies on hub #40 at release.
+
+## Original prompt
+
 # Sparse mapped reconstructed image on the interferometer sparse inversion path…
 
 Type: feature
