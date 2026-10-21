@@ -72,7 +72,9 @@
 - issued: 2026-10-21
 - prompt: active/fitpositionssource_default_magnification_weighti.md
 - session: Claude Code CLI (Opus 5.5), laptop
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/593
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/346
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/792
 - pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/792
 - worktree: ~/Code/PyAutoLabs-wt/positions-source-jacobian-default
