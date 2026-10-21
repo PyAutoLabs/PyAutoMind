@@ -67,23 +67,6 @@
 - community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
 - prompt: active/matrix_free_interferometer_inversion.md
 
-## point-critical-curve-grid
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/783
-- issued: 2026-10-21
-- prompt: active/point_critical_curve_grid_clipped.md
-- session: Claude Code (Opus 5.5), laptop CLI
-- status: library-shipped, awaiting-merge (judge tier → human /prm, library first; then Eyes dashboard_refresh)
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/784
-- prs:
-  - PyAutoLens: https://github.com/PyAutoLabs/PyAutoLens/pull/784
-  - autolens_visualization: https://github.com/PyAutoLabs/autolens_visualization/pull/10
-- heart-ack: YELLOW (manifest drift 1 mismatch; release validation stale since PyAutoArray moved) acknowledged by human 2026-10-21
-- classification: bug (PyAutoLens → autolens_visualization re-render → Eyes refresh), Consequence judge, Autonomy human-required; plan approved in chat 2026-10-21; merge mode human /prm
-- worktree: ~/Code/PyAutoLabs-wt/point-critical-curve-grid
-- repos:
-  - PyAutoLens: feature/point-critical-curve-grid
-  - autolens_visualization: feature/point-critical-curve-grid
-
 ## matrix-free-interferometer-phase2
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/646
 - issued: 2026-10-21
