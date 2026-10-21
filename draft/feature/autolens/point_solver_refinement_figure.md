@@ -114,3 +114,14 @@ The scratch producer is at `/mnt/c/Users/Jammy/Science/scratch/eyes/autolens/poi
 `variant_f_coarse.gif` is 0.14 MB: 4 frames at 1.25 s each, with the final frame held for 3.75 s.
 
 On the real grid, steps 1, 2 and final look identical (sub-pixel triangles). The proposed diagnostic is therefore two panels (step 0 and final), pending the human's answer.
+
+## Human decisions (2026-10-21, final design round)
+
+- **Teaching figure:** `variant_f_coarse.png` is approved, along with the GIF in the same style.
+- **Modelling output (option C):** the visualizer saves the same 2×2 (steps 0, 1, 2, final) using the model's real solver, accepting that on fine grids steps 1, 2 and final look alike. Config-toggled.
+- **Axes:** show arc-second coordinate tick labels in the standard PyAutoLens style (e.g. `1.9"`, as in the phase-1 positions panels), produced with the library's own tick/extent machinery rather than raw matplotlib ticks. There are still no `x (")` / `y (")` axis-label text, consistent with phase 1. This applies to the still and to every GIF frame.
+
+Still to confirm at /start_dev:
+- cluster image capping
+- default-off toggle, best-fit only, and the JAX `MAX_CONTAINING_SIZE` warning
+- retiring `point/visualise.py` and fixing `Step.tree_flatten`
