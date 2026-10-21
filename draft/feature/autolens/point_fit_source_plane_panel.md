@@ -52,3 +52,17 @@ How tightly the traced positions bunch around the source centre is the quantity 
 **Related.** The default-weighting question is filed separately as `draft/bug/autolens/fitpositionssource_default_magnification_weighti.md` (check against Gravity.jl).
 
 **Side note (uninvestigated).** At truth, the image-pair point_source model solves 5 images for 4 observed.
+
+## Human approval (2026-10-21)
+
+Points 1–6 and all of the recommendations above are APPROVED.
+
+**Additional binding principle: pair each figure to its Fit class.**
+- **Image-plane χ² fits** (FitPositionsImagePair / PairRepeat / PairAll / …): the source-plane panel is context only (traced positions, model source ★, caustic, inset). Draw nothing that looks like a χ²: no noise circles or ellipses, no χ² box. Subtitle e.g. "Image-plane χ² — traced positions for context".
+- **Source-plane χ² fits:** clearly indicate WHICH source-plane χ².
+  - The subtitle names it, e.g. "Source-plane χ² (magnification weighting)" or "(jacobian weighting)".
+  - The footprint the χ² actually uses is primary: the σ/|μ| circle for magnification, the A·σ ellipse for jacobian.
+  - Under magnification weighting, the A·σ ellipse is also shown, faint or dashed, as "propagated noise (reference)" (approved point 1).
+  - Free-centre and solved-β* (FitPositionsSourceSolved) fits use visibly different centre markers (★ vs ◆), with legend text naming them.
+  - The χ² box appears only on source-plane fits.
+- Enumerate every positions Fit class in autolens/point/fit/positions/ and map each to one of these presentations, covered by tests.
