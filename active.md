@@ -106,7 +106,14 @@
 - issued: 2026-10-21
 - prompt: active/heart_ci_timing_abandoned_pr_cancels.md
 - session: Claude Code CLI (Opus 5.5); session 343c1fc1-4d32-42cc-a8f5-e26cf0332168
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/315
+- heart-ack:
+  - manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml
+  - test run status unknown
+  - release validation incomplete: no rehearsal for current source
+- validation: targeted 57 passed, full 1295 passed, tenant firewall OK, scratch collector 2 → 0 events
+- next: human /prm #315
 - worktree: ~/Code/PyAutoLabs-wt/ci-timing-abandoned-pr-cancels
 - repos:
   - PyAutoHeart: feature/ci-timing-abandoned-pr-cancels
