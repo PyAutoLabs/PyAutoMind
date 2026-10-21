@@ -15,6 +15,7 @@ Witness: tests asserting on a small rectangular-mesh interferometer case that th
 Review-minutes: 6
 Unattended: ready
 Filed: 2026-10-21
+Issued: 2026-10-21
 
 ## Why
 

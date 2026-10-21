@@ -15,6 +15,7 @@ Witness: tests asserting (i) ln det P from the sparse LU equals numpy slogdet of
 Review-minutes: 6
 Unattended: ready
 Filed: 2026-10-21
+Issued: 2026-10-21
 
 ## Why
 

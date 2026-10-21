@@ -10,6 +10,8 @@
 - [knn-partial-point-block](#knn-partial-point-block)
 - [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
 - [matrix-free-interferometer-phase2](#matrix-free-interferometer-phase2)
+- [matrix-free-interferometer-phase3](#matrix-free-interferometer-phase3)
+- [matrix-free-interferometer-phase4](#matrix-free-interferometer-phase4)
 
 <!-- toc:end -->
 
@@ -117,5 +119,31 @@
 - status: blocked — PyAutoArray claimed by imaging-sparse-triplets-masking (#643); start via /start_library once #643 merges
 - classification: feature (PyAutoArray library only), Consequence glance, Autonomy supervised; plan approved in chat 2026-10-21; merge mode auto-merge on green if Witness passes
 - branch: feature/matrix-free-interferometer-phase2
+- affected-repos:
+  - PyAutoArray
+
+## matrix-free-interferometer-phase3
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/647
+- filed: 2026-10-21
+- user-facing: true
+- community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
+- parent: https://github.com/PyAutoLabs/PyAutoArray/issues/638 (active/matrix_free_interferometer_inversion.md)
+- prompt: draft/feature/autoarray/matrix_free_interferometer_phase3.md (moves to active/ when unblocked)
+- status: blocked — PyAutoArray queue: after matrix-free-interferometer-phase2 (#646)
+- classification: feature (PyAutoArray library only), Consequence glance, Autonomy supervised; plan approved in chat 2026-10-21; merge mode auto-merge on green if Witness passes
+- branch: feature/matrix-free-interferometer-phase3
+- affected-repos:
+  - PyAutoArray
+
+## matrix-free-interferometer-phase4
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/648
+- filed: 2026-10-21
+- user-facing: true
+- community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
+- parent: https://github.com/PyAutoLabs/PyAutoArray/issues/638 (active/matrix_free_interferometer_inversion.md)
+- prompt: draft/feature/autoarray/matrix_free_interferometer_phase4.md (moves to active/ when unblocked)
+- status: blocked — PyAutoArray queue: after matrix-free-interferometer-phase3 (#647)
+- classification: feature (PyAutoArray library only), Consequence glance, Autonomy supervised; plan approved in chat 2026-10-21; merge mode auto-merge on green if Witness passes
+- branch: feature/matrix-free-interferometer-phase4
 - affected-repos:
   - PyAutoArray

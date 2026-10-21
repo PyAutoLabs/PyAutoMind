@@ -1,0 +1,28 @@
+# Matrix-free interferometer inversion, phase 5: wiring, profiling note (Pulse) and workspace example
+
+Type: research
+Target: autolens_profiling
+Repos:
+- PyAutoArray
+- PyAutoGalaxy
+- autolens_profiling
+- autolens_workspace
+Difficulty: large
+Autonomy: supervised
+Priority: medium
+Parent: active/matrix_free_interferometer_inversion.md
+Community: https://github.com/PyAutoLabs/.github/discussions/39
+Status: formalised
+Consequence: judge
+Witness: a results note under autolens_profiling/results/notes/ with a dense-vs-matrix-free table (time, peak memory, evidence difference) at 50², 64², 128², 192² on one synthetic and one real interferometer dataset, ingested by PyAutoPulse, plus a workspace example running under the smoke harness
+Review-minutes: 20
+Unattended: needs-slicing
+Filed: 2026-10-21
+Blocked-by: phases 1-4 of PyAutoArray#638 released
+
+## What
+
+1. Wiring: an `InversionInterferometerMatrixFree` class (or `Settings` option) for rectangular meshes using the phase 1-4 utilities, selectable from PyAutoGalaxy `FitInterferometer`; dense interface attributes documented as unavailable.
+2. Profiling campaign in autolens_profiling (laptop CPU + RAL `ral` partition CPU legs; A100 only if a JAX leg exists by then): dense sparse-path vs matrix-free (unconstrained and positive) at 50², 64², 128², 192²; record time, peak RSS, evidence difference; note with decision rules for the assistant ([[AssistantReadsProfiling]]); summary in the Pulse `profiling-summary` contract.
+3. Workspace: `interferometer/advanced/matrix_free.py` example + docs.
+4. Thread update with the table; this is the human's lead-in to the full PyAutoPulse profiling programme.
