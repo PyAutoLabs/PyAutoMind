@@ -26,3 +26,29 @@ How tightly the traced positions bunch around the source centre is the quantity 
 - **Multiple planes.** For multi-plane and cluster fits, either one panel per source plane or only the point's own plane.
 - **Figure placement.** In `fit.png` for both image and source chi-squared, or a separate `fit_source_plane.png` toggled by config.
 - **Re-render set.** point_source_image_chi_squared, point_source_source_chi_squared and cluster in autolens_visualization.
+
+## Prototype findings + recommended defaults (2026-10-21; NOT yet approved — confirm at /start_dev)
+
+**Prototypes.** `/mnt/c/Users/Jammy/Science/scratch/eyes/autolens/source_plane_prototype/` (19 PNGs; producer in `producer/`). The best views are `S3_fit_mockup_image_chi_perturbed_RE.png` and `S3_fit_mockup_source_chi_truth.png`.
+
+**Recommended design.** `fit.png` gets a second panel, "Fit Source Plane (point_0)", for every positions fit (image- and source-χ²):
+- **Zoom:** the traced observed positions plus the model source centre, with a 30% margin.
+- **Inset:** the full caustic in the emptiest corner, with a box marking the zoom.
+- **Traced positions:** numbered black dots.
+- **Model source centre:** red ★.
+- **Noise ellipse:** an orange A·σ ellipse on every traced point (the honest propagated noise).
+- **Noise circle:** the σ/|μ| purple circle as well, but only when the fit uses `weighting="magnification"`.
+- **χ² box:** the fit's χ², plus the Jacobian χ².
+
+**Other recommendations:**
+- Move the source-χ² "Model (source plane)" ✕ off the image-plane panel into this one.
+- Number images 1–N to match the PointSolver figure (the prototype used 0–N−1).
+- No model-image markers for image-χ² fits (they all land on the ★).
+- Absolute arcsec ticks, with an `apply_extent` precision fix: at mas zoom its 2-sig-fig rounding collapses all ticks to one value ("1.2″" ×3 on cluster point_1).
+- Cluster inset frames only the tangential caustic.
+- With fluxes, `fit.png` becomes 1×3.
+- Multi-plane: the point's own plane (`LensCalc.from_tracer(..., plane_j=fit.plane_index)` works today for caustics). This pairs with the critical-curve redshift bug and the cluster pass.
+
+**Related.** The default-weighting question is filed separately as `draft/bug/autolens/fitpositionssource_default_magnification_weighti.md` (check against Gravity.jl).
+
+**Side note (uninvestigated).** At truth, the image-pair point_source model solves 5 images for 4 observed.
