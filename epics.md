@@ -24,6 +24,12 @@ members out of the pick lists and work-type sections and shows them only
 grouped, phase-ordered, under their epic — worked in order through the
 epic, never picked standalone.
 
+## likelihood-lifecycle
+- title: Likelihood lifecycle — optimal setups baked into PyAutoLens (`setup="auto"`), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood
+- ledger: draft/research/autolens_profiling/likelihood_lifecycle_epic.md
+- status: filed 2026-10-21 by the Fable xhigh architect session (report + five surveys alongside the ledger); NOT STARTED — no phase issued; human rulings R1–R11 open
+- notes: nine phases, one at a time, library first, one issue per repo per phase. 0 spine (vocabulary; `profiling-summary@3` with producer-declared `class` optimal/secondary/experimental and `status` current/superseded/archived; `walltime-validation@1` Pulse axis; Pulse first selector = Class, current-only default; `results/` and `wiki/campaigns/` mirror `scripts/` with `archive/YYYY/MM/` in both project repos; Insight `setup_mode: auto`; lifecycle template) → 1 figures (Eyes already covers all ten dataset types since autolens_visualization#5; human sign-off + fit.png kept per profiling cell) → 2 profiling campaigns per dataset type under Optimal/Secondary setups (human "complete" gate) → 3 day zero freeze on a released tag + designation decisions + close Pulse `setup-baseline` → 4 inference wall-time validation on RAL → Pulse → 5 `setup="auto"` in Nerves/Array/Galaxy/Lens/Fit with banner, `setup.json`, run-time estimate, workspace/assistant/science-project updates → 6 `value_and_grad` breakdowns (adopts Pulse `gradient_cost_probe`) → 7 Insight sampler campaign under auto (adopts `hst-imaging-mass-samplers`) → 8 `pyauto-brain profiling lifecycle` verb (dogfood: matrix_free_interferometer_phase5). Boundaries: optimal is always a Pulse decision record, never inferred; one `current` per key by the day-zero rule, never by date; auto never touches model, sampler or HPC request. Upstream of hpc-campaign phase 4; results-library untouched. Evidence: draft/research/autolens_profiling/likelihood_lifecycle_epic_report.md.
+
 ## results-library
 - title: Results library — PyAutoFit infrastructure to index, complete, export, package and reconcile thousands of finished results (follow-up to hpc-campaign; Euclid DR1 is the pilot)
 - ledger: draft/feature/autofit/results_library_epic.md

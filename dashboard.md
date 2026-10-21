@@ -9,10 +9,10 @@
 | Where | Count |
 |-------|------:|
 | [Start here](#start-here) | 24 |
-| [Epics](#epics) | 17 |
+| [Epics](#epics) | 18 |
 | [In flight](#in-flight) | 5 |
 | [Planned](#planned) | 8 |
-| [Backlog](#backlog) | 267 |
+| [Backlog](#backlog) | 274 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -217,6 +217,35 @@ Use the start-dev skill. draft/maintenance/pyautomemory/canonical_key_todo_sweep
 ## Epics
 
 Long-running multi-phase programmes. Each epic's 📋 prompt has the assistant read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
+
+<details>
+<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 2 queued prompt(s), in order</summary>
+
+<details><summary>📋 <b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — ledger: `draft/research/autolens_profiling/likelihood_lifecycle_epic.md` — filed 2026-10-21 by the Fable xhigh architect session (report + five surveys alongside the ledger); NOT STARTED — no phase…</summary>
+
+```
+Continue the 'Likelihood lifecycle — optimal setups baked into PyAutoLens (`setup="auto"`), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood' epic. Its canonical state lives in draft/research/autolens_profiling/likelihood_lifecycle_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: nine phases, one at a time, library first, one issue per repo per phase. 0 spine (vocabulary; `profiling-summary@3` with producer-declared `class` optimal/secondary/experimental and `status` current/superseded/archived; `walltime-validation@1` Pulse axis; Pulse first selector = Class, current-only default; `results/` and `wiki/campaigns/` mirror `scripts/` with `archive/YYYY/MM/` in both project repos; Insight `setup_mode: auto`; lifecycle template) → 1 figures (Eyes already covers all ten dataset types since autolens_visualization#5; human sign-off + fit.png kept per profiling cell) → 2 profiling campaigns per dataset type under Optimal/Secondary setups (human "complete" gate) → 3 day zero freeze on a released tag + designation decisions + close Pulse `setup-baseline` → 4 inference wall-time validation on RAL → Pulse → 5 `setup="auto"` in Nerves/Array/Galaxy/Lens/Fit with banner, `setup.json`, run-time estimate, workspace/assistant/science-project updates → 6 `value_and_grad` breakdowns (adopts Pulse `gradient_cost_probe`) → 7 Insight sampler campaign under auto (adopts `hst-imaging-mass-samplers`) → 8 `pyauto-brain profiling lifecycle` verb (dogfood: matrix_free_interferometer_phase5). Boundaries: optimal is always a Pulse decision record, never inferred; one `current` per key by the day-zero rule, never by date; auto never touches model, sampler or HPC request. Upstream of hpc-campaign phase 4; results-library untouched. Evidence: draft/research/autolens_profiling/likelihood_lifecycle_epic_report.md.
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/likelihood_lifecycle_epic.md">Likelihood lifecycle epic: optimal setups baked into PyAutoLens, Pulse/Insight day zero…</a> — autolens_profiling · too-large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_epic.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/likelihood_lifecycle_epic_report.md">Likelihood lifecycle epic — research report and phased plan</a> — autolens_profiling · too-large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_epic_report.md
+```
+
+</details>
+
+</details>
 
 <details>
 <summary><b>Results library — PyAutoFit infrastructure to index, complete, export, package and reconcile thousands of finished results (follow-up to hpc-campaign; Euclid DR1 is the pilot)</b> — 2 queued prompt(s), in order</summary>
@@ -1888,7 +1917,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>research</b> — 35</summary>
+<summary><b>research</b> — 40</summary>
 
 <details><summary>📋 <a href="draft/research/autofit_inference/search_ext_b5c2a_rerun.md"><code>@autofit_inference</code> B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug…</a> — autofit_inference · medium · supervised · high</summary>
 
@@ -2166,6 +2195,46 @@ Use the start-dev skill. draft/research/autofit/search_extensibility_epic_survey
 
 ```
 Use the start-dev skill. draft/research/autofit/search_extensibility_epic_surveys/04_inference_profiling_infra.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/01_profiling_inference_layout.md">Survey 01 — autolens_profiling and autolens_inference layout census (2026-10-21, Explore worker, read-only)</a> — autolens_profiling</summary>
+
+```
+Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/01_profiling_inference_layout.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/02_pulse_insight_contracts.md">Survey 02 — PyAutoPulse and PyAutoInsight data model, contracts, dashboards, boundaries…</a> — autolens_profiling</summary>
+
+```
+Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/02_pulse_insight_contracts.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/03_eyes_viz_coverage.md">Survey 03 — PyAutoEyes and autolens_visualization coverage per dataset type…</a> — autolens_profiling</summary>
+
+```
+Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/03_eyes_viz_coverage.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/04_setup_knobs_source.md">Survey 04 — Compute-setup knobs in PyAutoLens: what an "auto / optimal…</a> — autolens_profiling</summary>
+
+```
+Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/04_setup_knobs_source.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/05_brain_conductors_epic_format.md">Survey 05 — Mind epic format, Brain intake/conductors, overlapping epics and tasks…</a> — autolens_profiling</summary>
+
+```
+Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/05_brain_conductors_epic_format.md
 ```
 
 </details>
@@ -2809,7 +2878,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 ## Hygiene
 
-21 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
+26 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
 
 <details>
 <summary>Headerless prompts</summary>
@@ -2835,10 +2904,15 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/research/autofit/search_extensibility_epic_surveys/02_jax_interface.md`
 - `draft/research/autofit/search_extensibility_epic_surveys/03_search_docs.md`
 - `draft/research/autofit/search_extensibility_epic_surveys/04_inference_profiling_infra.md`
+- `draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/01_profiling_inference_layout.md`
+- `draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/02_pulse_insight_contracts.md`
+- `draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/03_eyes_viz_coverage.md`
+- `draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/04_setup_knobs_source.md`
+- `draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/05_brain_conductors_epic_format.md`
 
 </details>
 
-98 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+104 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2883,7 +2957,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md`
 - `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
 - `draft/bug/autolens/point_fit_critical_curves_ignore_source_redshift.md`
-- _… and 58 more_
+- _… and 64 more_
 
 </details>
 
