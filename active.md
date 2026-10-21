@@ -33,6 +33,7 @@
   - HowToFit: feature/howtofit-ep-shared-centre
 
 - ci-blocker: HowToFit run 39055282617; both 3.12 and 3.13 fail tutorial_6_gradients.py because nautilus is absent. Logs captured in PR #75 comment. Navigator and Tutorials Complete pass.
+
 ## cluster-pointsolver-robust-settings
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/436
 - issued: 2026-10-17
@@ -53,6 +54,7 @@
 - status: workspace-shipped, awaiting-merge (7 commits incl. maintainer copy-edit; F150W/F444W; Explore The Model)
 - prs:
   - autolens_assistant: https://github.com/PyAutoLabs/autolens_assistant/pull/161
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/161
 - worktree: ~/Code/PyAutoLabs-wt/cosmos-web-ring-notebook
 - heart-override: Heart RED override (development only) authorized by human 2026-10-20
 - repos:
