@@ -46,6 +46,18 @@
 - repos:
   - autolens_profiling: feature/cluster-pointsolver-robust-settings
 
+## point-plots-yaml-keys
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/98
+- issued: 2026-10-22
+- prompt: active/point_plots_yaml_keys_howtolens_assistant.md
+- session: Claude Code (Opus 5.5), laptop CLI
+- status: workspace-dev
+- classification: docs/config (workspace only), Consequence glance, Autonomy safe-capped; plan approved in chat 2026-10-22; library half PyAutoLens#794 MERGED
+- worktree: ~/Code/PyAutoLabs-wt/point-plots-yaml-keys
+- split 2026-10-22: autolens_assistant half blocked by cosmos-web-ring-notebook claim → planned.md `point-plots-yaml-keys-assistant`
+- repos:
+  - HowToLens: feature/point-plots-yaml-keys
+
 ## cosmos-web-ring-notebook
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/160
 - issued: 2026-10-20

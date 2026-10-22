@@ -2,6 +2,7 @@
 
 Consequence: glance
 Autonomy: safe-capped
+Issued: 2026-10-22
 builds-on: complete/2026/10/cluster-point-figures.md (PyAutoLens#794; autolens_workspace#594 and autolens_workspace_test#347 already mirrored)
 
 @HowToLens @autolens_assistant
