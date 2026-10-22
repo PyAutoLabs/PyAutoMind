@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-10-22T20:13:35Z",
+  "headline": "RED \u2014 24 picks \u00b7 5 in flight",
+  "updated": "2026-10-22T20:21:38Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,12 +12,6 @@
       "text": "HowToFit tutorial 5 (EP) never shares the centre it says it shares \u2014 workspace-shipped, blocked-CI",
       "url": "https://github.com/PyAutoLabs/HowToFit/pull/75",
       "prompt": "Use the start-dev skill. active/tutorial_5_ep_shared_centre_never_assigned.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "`@autolens_profiling` cluster-pointsolver phase 1: cluster-scale robust PointSolver settings\u2026 \u2014 workspace-shipped, awaiting-merge (human /prm; Consequence judge \u2192 no tiered merge; decision 2026-10-22 (human, chat): DEFERRED\u2026",
-      "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/438",
-      "prompt": "Use the start-dev skill. active/cluster_pointsolver_robust_settings_p1.md"
     },
     {
       "severity": "yellow",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1705 \u2014 function-config-priors",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1705",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1707 \u2014 prior-stable-test-ids",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1707",
       "prompt": null
     }
   ]
