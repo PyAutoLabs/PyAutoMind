@@ -51,12 +51,16 @@
 - issued: 2026-10-22
 - prompt: active/cluster_point_solver_refinement_readability.md
 - session: Claude Code (Opus 5.5), laptop CLI
-- status: library-dev
+- status: library-shipped, awaiting-merge (human /prm, library first; viz lint re-run after #796 merges, then Eyes dashboard_refresh)
 - classification: feature (PyAutoLens plot API + autolens_visualization re-render), Consequence judge, Autonomy human-required; plan approved in chat 2026-10-22
 - worktree: ~/Code/PyAutoLabs-wt/cluster-point-solver-readability
 - repos:
   - PyAutoLens: feature/cluster-point-solver-readability
   - autolens_visualization: feature/cluster-point-solver-readability
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/796
+- prs:
+  - PyAutoLens: https://github.com/PyAutoLabs/PyAutoLens/pull/796
+  - autolens_visualization: https://github.com/PyAutoLabs/autolens_visualization/pull/15
 
 ## point-plots-yaml-keys
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/98
