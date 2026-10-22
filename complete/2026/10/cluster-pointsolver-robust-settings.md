@@ -1,3 +1,20 @@
+## cluster-pointsolver-robust-settings
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/436
+- completed: 2026-10-22
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/438
+
+- Merged as `c8c9abb3` (2026-10-22); research only (autolens_profiling), Consequence judge, human `/prm`. Pulse campaign `cluster-pointsolver` phase 1.
+- Deliverables: `scripts/cluster/image_plane/{robust_settings_sweep,_oracle,_judge,_datasets,_memory,oracle_figure,solver_figure}.py` (+ RAL submit scripts, 14 tests); datasets `simple` (13 components, 3 planes, 2 sources, truth gate) and A2744 synthetic prior-median 191-component model (labelled, not a fitted cluster); ledger `results/notes/cluster_pointsolver_campaign.md`; wiki `wiki/campaigns/cluster_pointsolver.md`; sweep JSON/PNG + 12 figures under `results/breakdown/cluster/`; dashboard/catalogue re-rendered.
+- Ground truth: independent oracle (dense multi-plane residual sampling + Newton polish, roots certified < 1e-10″ residual / 1e-6″ stability); calibrated 6/6 at 2.84e-8″ on RAL (1.96e-8″ laptop).
+- Result (`simple`, 101 draws, RAL job 412572, CPU fp64, Xeon 8490H): NO setting admissible. Production-extent rows cover 306/306 prior roots, miss 2–6 of 300 stress roots; every miss is a close high-|μ| pair 0.33–0.76″ apart (draws 53/73 tangential, draw 81 radial — missed by every start). Initial scale 0.5″/0.7″ miss 2 at 0.78×/0.75× control speed; production 1.0″ misses 5 (5.29 ms warmed two-source solve); 2.0″ misses 6 (1.30×). Precision 0.01/0.001, MAX_CONTAINING_SIZE 20/40/60 and backend (NumPy/JIT/vmap) change nothing → misses come from the starting grid, not the JAX path. Uncapped containing count ≤ 7 (cap 20 never binds). Eager JAX unusable (row wall over cap). Truth-bbox extents miss 49–63 stress roots. Peak RSS 4.3 GB, live arrays small (retained executables).
+- Decision (human, 2026-10-22, chat): DEFERRED — production default stays 1.0″; re-decide after the starting-grid draft and the A2744 pull; 0.5″ is the working answer if forced. No default changed anywhere.
+- Checked: the `FitPositionsSource` jacobian-weighting default change (PyAutoLens bdb44a87c) cannot touch this sweep — no sweep script uses `FitPositions*` or a chi-squared. The new cluster `point_solver.png` visualizer (b1754a7ec) is used by `solver_figure.py` (oracle roots as observed circles; a miss = circle without a solved cross).
+- Traps: API-gate hook RecursionError on `autolens.plot` → grep-grounded + `PYAUTO_SKIP_API_GATE=1`; `build_catalogue --check` STALE arises from any new cluster setup JSON → full re-render from a clean worktree; `catalogue/script_routes.json` takes no row (legacy aliases only); Heart YELLOW at ship (manifest drift, PyAutoArray rehearsal stale — unrelated), acknowledged by the human at `/prm`.
+- Follow-ups: (1) A2744 pilot leg job 412573 (256 GB, 6 h) completed on RAL but NOT pulled — jump host `finan` refused the SSH key 2026-10-22; pull `.out`/JSON/memory_trace and attribute the RSS growth (row-1 live: peak 22 GB, RSS 8.3 GB, live arrays ~0); no resubmission without human go. (2) Pulse PR: paste the Knowledge block from the ledger appendix into `tasks/cluster_pointsolver_speed.md`, `campaigns.yaml` next/updated, check-in, board. (3) Starting-grid / close-member-image question: `draft/research/autolens_profiling/cluster_pointsolver_starting_grid_close_member_image.md`. (4) The human's upcoming Pulse profiling programme may revisit the goal.
+- Claim released: `planned.md` `likelihood-lifecycle-p0-profiling` is unblocked.
+
+## Original prompt
+
 # `@autolens_profiling` cluster-pointsolver phase 1: cluster-scale robust PointSolver settings (independent ground truth, CPU fp64 on RAL `ral`)
 
 Type: research

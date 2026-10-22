@@ -34,25 +34,6 @@
 
 - ci-blocker: HowToFit run 39055282617; both 3.12 and 3.13 fail tutorial_6_gradients.py because nautilus is absent. Logs captured in PR #75 comment. Navigator and Tutorials Complete pass.
 
-## cluster-pointsolver-robust-settings
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/436
-- issued: 2026-10-17
-- prompt: active/cluster_pointsolver_robust_settings_p1.md
-- session: Claude Code (Fable 5.1); https://claude.ai/code/session_01MJFczsaH2vYuhFWLneD7F5
-- status: workspace-shipped, awaiting-merge (human /prm; Consequence judge → no tiered merge; decision 2026-10-22 (human, chat): DEFERRED — default stays 1.0″ until the starting-grid draft + A2744 pull; no default changed)
-- classification: research (autolens_profiling only; Pulse campaign cluster-pointsolver phase 1), Consequence judge, Autonomy supervised; plan approved in chat 2026-10-17; compute per-job human authorization; no laptop timing
-- decision 2026-10-17 (human, chat): A2744 rows use a labelled synthetic prior-median 191-component model (no Bergamini+23 best fit exists in the workspace); the independent oracle supplies ground truth; representativeness caveat stated in the note
-- worktree: ~/Code/PyAutoLabs-wt/cluster-pointsolver-robust-settings
-- repos:
-  - autolens_profiling: feature/cluster-pointsolver-robust-settings
-- prs:
-  - autolens_profiling: https://github.com/PyAutoLabs/autolens_profiling/pull/438
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/438
-- heart-ack: YELLOW 2026-10-22 (manifest drift 1 workspace checkout; release validation stale PyAutoArray) — unrelated to this repo; human to acknowledge at /prm
-- follow-up: A2744 pilot leg job 412573 NOT pulled (RAL login unavailable 2026-10-22) — pull JSON/.out/memory trace + RSS attribution; no resubmission without human authorization
-- follow-up: starting-grid question → draft/research/autolens_profiling/cluster_pointsolver_starting_grid_close_member_image.md; Pulse PR (campaigns.yaml, check-in, Knowledge block from the ledger appendix, board) after merge
-- claim releases at /prm → planned.md `likelihood-lifecycle-p0-profiling` (queued behind this autolens_profiling claim) can start
-
 ## point-plots-yaml-keys
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/98
 - issued: 2026-10-22

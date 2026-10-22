@@ -10,7 +10,7 @@ Priority: medium
 Status: draft
 Consequence: judge
 Epic: cluster-pointsolver-speed
-Related: active/cluster_pointsolver_robust_settings_p1.md (autolens_profiling#436). Fold this into that phase's sweep if it is still open, otherwise run it as a follow-up row set.
+Related: `complete/2026/10/cluster-pointsolver-robust-settings.md` (autolens_profiling#436, merged #438 2026-10-22; decision deferred pending this question). Phase 1 is closed, so run this as a follow-up row set on its `robust_settings_sweep.py` harness.
 Origin: complete/2026/10/cluster-point-solver-readability.md (PyAutoLens#795/#796)
 Filed: 2026-10-22
 

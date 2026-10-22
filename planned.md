@@ -123,7 +123,7 @@
 - prompt: draft/feature/autolens_profiling/likelihood_lifecycle_p0_profiling.md
 - classification: workspace (autolens_profiling project repo; one-line PyAutoPulse registry re-pin follows the builder)
 - suggested-branch: feature/likelihood-lifecycle-p0-profiling
-- blocked-by: cluster-pointsolver-robust-settings (using autolens_profiling; 5 unmerged commits, no PR, RAL sweeps live 2026-10-21; the move-only PR also must not land under live RAL jobs on a RAL checkout)
+- unblocked: 2026-10-22 — cluster-pointsolver-robust-settings merged (autolens_profiling#438, `complete/2026/10/cluster-pointsolver-robust-settings.md`); the autolens_profiling claim is released. Still never land the move-only PR under live RAL jobs on a RAL checkout.
 - affected-repos:
   - autolens_profiling
   - PyAutoPulse

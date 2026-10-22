@@ -42,4 +42,4 @@ Re-measuring anything (phase 3); designation decisions (phase 3); `fit.png` rend
 
 ## Blocked-by (operational, not a header gate)
 
-autolens_profiling is claimed by `cluster-pointsolver-robust-settings` (issue #436, branch `feature/cluster-pointsolver-robust-settings`, 5 unmerged commits, RAL sweeps live on 2026-10-21). The move-only PR cannot land under that branch or under live RAL jobs on a RAL checkout; start after that task ships (or the human releases the claim) — `/start_dev` registers this in `planned.md` until then.
+(Resolved 2026-10-22: that task merged as autolens_profiling#438 and the claim is released.) autolens_profiling was claimed by `cluster-pointsolver-robust-settings` (issue #436, branch `feature/cluster-pointsolver-robust-settings`, 5 unmerged commits, RAL sweeps live on 2026-10-21). The move-only PR cannot land under that branch or under live RAL jobs on a RAL checkout; start after that task ships (or the human releases the claim) — `/start_dev` registers this in `planned.md` until then.
