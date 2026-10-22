@@ -903,7 +903,7 @@ Use the start-dev skill. active/cosmos_web_ring_guided_walkthrough_p1_notebook.m
 
 </details>
 
-<details><summary>📋 <a href="active/howto_smoke_313_zeus.md">HowTo smoke (3.13) red: <code>tutorial_searches.py</code> cannot import <code>zeus</code></a> — <a href="https://github.com/PyAutoLabs/HowToGalaxy/issues/88">issue #88</a> — issued 2026-10-22 — workspace-dev</summary>
+<details><summary>📋 <a href="active/howto_smoke_313_zeus.md">HowTo smoke (3.13) red: <code>tutorial_searches.py</code> cannot import <code>zeus</code></a> — <a href="https://github.com/PyAutoLabs/HowToGalaxy/issues/88">issue #88</a> — issued 2026-10-22 — workspace-shipped, awaiting-merge (human /prm) — PRs: <a href="https://github.com/PyAutoLabs/HowToGalaxy/pull/89">HowToGalaxy#89</a></summary>
 
 ```
 Use the start-dev skill. active/howto_smoke_313_zeus.md
