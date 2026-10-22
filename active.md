@@ -34,22 +34,6 @@
 
 - ci-blocker: HowToFit run 39055282617; both 3.12 and 3.13 fail tutorial_6_gradients.py because nautilus is absent. Logs captured in PR #75 comment. Navigator and Tutorials Complete pass.
 
-## point-plots-yaml-keys
-- issue: https://github.com/PyAutoLabs/HowToLens/issues/98
-- issued: 2026-10-22
-- prompt: active/point_plots_yaml_keys_howtolens_assistant.md
-- session: Claude Code (Opus 5.5), laptop CLI
-- status: workspace-shipped, awaiting-merge (human /prm; glance but no Witness: line → no tiered merge)
-- classification: docs/config (workspace only), Consequence glance, Autonomy safe-capped; plan approved in chat 2026-10-22; library half PyAutoLens#794 MERGED
-- worktree: ~/Code/PyAutoLabs-wt/point-plots-yaml-keys
-- split 2026-10-22: autolens_assistant half blocked by cosmos-web-ring-notebook claim → planned.md `point-plots-yaml-keys-assistant`
-- prs:
-  - HowToLens: https://github.com/PyAutoLabs/HowToLens/pull/99
-- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/99
-- heart-ack: YELLOW 2026-10-22 (manifest drift 1 workspace checkout; release validation stale PyAutoArray)
-- repos:
-  - HowToLens: feature/point-plots-yaml-keys
-
 ## cosmos-web-ring-notebook
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/160
 - issued: 2026-10-20
@@ -70,17 +54,3 @@
 - user-facing: true
 - community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
 - prompt: active/matrix_free_interferometer_inversion.md
-
-## howto-smoke-313-zeus
-- issue: https://github.com/PyAutoLabs/HowToGalaxy/issues/88
-- issued: 2026-10-22
-- prompt: active/howto_smoke_313_zeus.md
-- session: Claude Code (Opus 5.5), laptop CLI, https://claude.ai/code/session_01Va8pghu3LsTM42Z2UYoJQb
-- status: workspace-shipped, awaiting-merge (human /prm)
-- classification: bug (CI installer, workspace only), Consequence judge, Autonomy supervised; plan approved in chat 2026-10-22; HowToLens half rides HowToLens#99 (b63072f, point-plots-yaml-keys claim)
-- worktree: ~/Code/PyAutoLabs-wt/howto-smoke-313-zeus
-- repos:
-  - HowToGalaxy: feature/howto-smoke-313-zeus
-- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/89
-- prs:
-  - HowToGalaxy: https://github.com/PyAutoLabs/HowToGalaxy/pull/89

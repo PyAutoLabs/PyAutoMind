@@ -132,5 +132,5 @@
 - status: blocked — autolens_assistant claimed by `cosmos-web-ring-notebook` (PR #161 awaiting /prm)
 - filed: 2026-10-22
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/98
-- parent: the `point-plots-yaml-keys` active.md task (HowToLens half); no separate prompt file
+- parent: complete/2026/10/point-plots-yaml-keys.md (HowToLens half merged 2026-10-22, HowToLens#99); no separate prompt file
 - scope: same `point_dataset` / `fit_point_dataset` block edit in `autolens_assistant/config/visualize/plots.yaml` as HowToLens; ship on its own branch `feature/point-plots-yaml-keys` once the claim clears

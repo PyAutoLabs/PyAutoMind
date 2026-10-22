@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1954 records across 9 buckets.
+1956 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -219,6 +219,7 @@ markers; everything below GENERATED is rebuilt.
 - [heart-publication-coverage](2026/10/heart-publication-coverage.md)
 - [heart-score-resusitate](2026/10/heart-score-resusitate.md)
 - [heart-test-workspace-resource-dropdowns](2026/10/heart-test-workspace-resource-dropdowns.md)
+- [howto-smoke-313-zeus](2026/10/howto-smoke-313-zeus.md)
 - [howtofit-advanced-references](2026/10/howtofit-advanced-references.md)
 - [hst-cleanslate-light-mode](2026/10/hst-cleanslate-light-mode.md)
 - [hst-cleanslate-numba-shared-lp](2026/10/hst-cleanslate-numba-shared-lp.md)
@@ -290,6 +291,7 @@ markers; everything below GENERATED is rebuilt.
 - [point-fit-source-plane-panel](2026/10/point-fit-source-plane-panel.md)
 - [point-image-fit-filename](2026/10/point-image-fit-filename.md)
 - [point-image-pair-all-forward-grad-nan](2026/10/point-image-pair-all-forward-grad-nan.md)
+- [point-plots-yaml-keys](2026/10/point-plots-yaml-keys.md)
 - [point-solver-duplicate-policy](2026/10/point-solver-duplicate-policy.md)
 - [point-solver-image-accuracy](2026/10/point-solver-image-accuracy.md)
 - [point-solver-refinement-figure](2026/10/point-solver-refinement-figure.md)

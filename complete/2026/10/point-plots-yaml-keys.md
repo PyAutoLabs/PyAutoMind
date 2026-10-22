@@ -1,3 +1,13 @@
+## Outcome
+HowToLens `config/visualize/plots.yaml` now carries the PyAutoLens #794 point-visualization keys (`point_dataset` / `fit_point_dataset`). HowToLens#99 merged 2026-10-22 with all CI legs green.
+
+The branch also carried b63072f, the 3.13 smoke installer fix (`zeus-mcmc==2.5.4`), because this task held the HowToLens claim. That fix belongs to the `howto-smoke-313-zeus` task (complete/2026/10/howto-smoke-313-zeus.md). HowToGalaxy's half shipped as HowToGalaxy#89.
+
+## Remaining
+The autolens_assistant half (same block edit) is still in planned.md as `point-plots-yaml-keys-assistant`, blocked by the cosmos-web-ring-notebook claim.
+
+## Original prompt
+
 # Mirror PyAutoLens point visualization keys into HowToLens + autolens_assistant plots.yaml
 
 Consequence: glance

@@ -466,7 +466,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 37 (stage 1: 37, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — the pre-registered decision is due
+Count toward 20: 38 (stage 1: 38, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — the pre-registered decision is due
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -532,3 +532,4 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-10-21 | matrix-free-interferometer-phase2 (PyAutoArray#650) | glance | tests 1053 passed (worktree) + CI 3 legs green / smoke n/a (utilities) / review in-session diff review / heart YELLOW acked / witness exact H + log-det 1e-14 + PCG 1e-11 green | merged-unchanged | 1 |
 | 2026-10-21 | matrix-free-interferometer-phase3 (PyAutoArray#651) | glance | tests 1061 passed (worktree) + CI 3 legs green / smoke n/a (utilities) / review in-session diff review + human confirmed accuracy finding / heart YELLOW acked / witness met on data-dominated case | merged-unchanged | 1 |
 | 2026-10-21 | matrix-free-interferometer-phase4 (PyAutoArray#652) | glance | tests 1067 passed (worktree) + CI 3 legs green / smoke n/a (utilities) / review in-session diff review / heart YELLOW acked / witness NNLS support exact + parity 1e-10 green | merged-unchanged | 1 |
+| 2026-10-22 | point-plots-yaml-keys (HowToLens#99) | glance | tests n/a (config) + CI 3 runs green / smoke 3.12+3.13 green (after b63072f) / review in-session diff review / heart YELLOW acked / witness none | merged-unchanged | 1 |
