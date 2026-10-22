@@ -1,3 +1,11 @@
+Fixed by the cluster point-figures pass (`complete/2026/10/cluster-point-figures.md`, PyAutoLens#794). Each point dataset's critical curves and caustics are now computed at that dataset's own source plane, using `point_sources.curves_for_planes` on the FULL tracer. They are drawn in `fit.png`, `fit_per_image.png`, `fit_image_with_points.png` and the tracer figures. This was checked against `LensCalc` on a 3-plane lens in `test_multi_source_plots.py`.
+
+Merged 2026-10-22 via a human /prm alongside the absorbing task.
+
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/794
+
+## Original prompt
+
 # Point fit panels: critical curves ignore the point's source redshift (multi-plane)
 
 Consequence: judge

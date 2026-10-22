@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1950 records across 9 buckets.
+1952 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -152,6 +152,7 @@ markers; everything below GENERATED is rebuilt.
 - [closed-thread-followups](2026/10/closed-thread-followups.md) — New external comments after closure or an accepted answer return a thread to Community review without requirin…
 - [cloud-board-validation-evidence](2026/10/cloud-board-validation-evidence.md)
 - [cloud-test-run-card](2026/10/cloud-test-run-card.md)
+- [cluster-point-figures](2026/10/cluster-point-figures.md)
 - [cockpit-actionable-state](2026/10/cockpit-actionable-state.md) — Additive v1 state/action/safety/decision metadata with overnight workflow evidence; cockpit reason/action rend…
 - [cockpit-overflow-fix](2026/10/cockpit-overflow-fix.md)
 - [community-board-readability](2026/10/community-board-readability.md)
@@ -283,6 +284,7 @@ markers; everything below GENERATED is rebuilt.
 - [point-audits-wheel-provenance](2026/10/point-audits-wheel-provenance.md) — Point-solver audits now work with installed wheels, preserve checkout provenance, fingerprint installed packag…
 - [point-critical-curve-grid](2026/10/point-critical-curve-grid.md)
 - [point-dataset-positions-panel](2026/10/point-dataset-positions-panel.md)
+- [point-fit-critical-curves-ignore-source-redshift](2026/10/point-fit-critical-curves-ignore-source-redshift.md)
 - [point-fit-source-plane-panel](2026/10/point-fit-source-plane-panel.md)
 - [point-image-fit-filename](2026/10/point-image-fit-filename.md)
 - [point-image-pair-all-forward-grad-nan](2026/10/point-image-pair-all-forward-grad-nan.md)

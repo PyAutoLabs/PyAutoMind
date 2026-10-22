@@ -1,3 +1,39 @@
+Shipped the cluster-scale (multi-source) point-source figures from the approved v4 prototypes. There is one visual language for one or many sources. Each source's critical curves are drawn at its own redshift. Every figure is in `plots.yaml` and is written during a real `search.fit`, including the all-sources figures of a factor-graph (cluster) fit.
+
+**Figures**
+- `dataset_point.png` "Dataset Positions": source 0 is a black ●; further sources get colour + marker shape (colour by redshift with a colourbar beyond 8); `i` / `k·i` labels; no curves.
+- `fit.png` "Fit Positions":
+  - red ✕ at the true model positions, with true-length residual lines (solid hard / dashed soft pairing);
+  - per-source own-redshift curves; σ on the legend entries for 2–8 sources;
+  - `−2 ln L` for PairAll;
+  - legend in the emptiest corner (one source) or outside the panel (several).
+  - The source-plane panel moved to `fit_per_image.png`.
+- `fit_per_image.png` (new): one row per source, "Residuals / IP / SP (point_k, z = …)":
+  - square panels and no legends;
+  - a shared linear ranking range with off-scale ▸ values;
+  - one file per source beyond 8.
+- `image_with_points.png` / `fit_image_with_points.png`: every source in the same symbols, with `k·i` labels.
+- Critical curves and caustics are darker and thicker everywhere.
+
+**Code**
+- New `autolens.point.plot.point_sources` and `multi_source_plots`.
+- `curves_for_planes` evaluates the FULL tracer's deflection field once and contours λt/λr = 0. This replaces the ~2 min/dataset LensCalc path on the 15-galaxy cluster.
+- `PlotterPoint` / `VisualizerPoint` gain the combined figures.
+- New `plots.yaml` keys, all on by default.
+- Tests: test_autolens 925 passed (14 new). Real `search.fit` test-mode runs on point_source and on a 2-source cluster FactorGraph wrote every configured PNG.
+
+Absorbs `draft/bug/autolens/point_fit_critical_curves_ignore_source_redshift.md` (record `complete/2026/10/point-fit-critical-curves-ignore-source-redshift.md`).
+
+Merged 2026-10-22 via a human /prm (judge tier), in library-first order: PyAutoLens#794 → autolens_visualization#14 (lint green on rerun against the merged library main) / autolens_workspace#594 / autolens_workspace_test#347. Issue PyAutoLens#793 closed. PyAutoEyes `dashboard_refresh.yml` dispatched (run 39752061558).
+
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/794
+
+**Not shipped (re-filed)**
+- Cluster `point_solver.png` refinement-panel readability, and labelling for >10 images on the solver figure: `draft/feature/autolens/cluster_point_solver_refinement_readability.md`.
+- HowToLens and autolens_assistant `plots.yaml` point keys are still stale: `draft/docs/autolens/point_plots_yaml_keys_howtolens_assistant.md`.
+
+## Original prompt
+
 # Cluster-scale point-source figures: dedicated pass
 
 Consequence: judge
