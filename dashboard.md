@@ -887,7 +887,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/cluster_point_solver_refinement_readability.md">Cluster point_solver.png: readable refinement panels and many-image labels</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/795">issue #795</a> — issued 2026-10-22 — library-dev</summary>
+<details><summary>📋 <a href="active/cluster_point_solver_refinement_readability.md">Cluster point_solver.png: readable refinement panels and many-image labels</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/795">issue #795</a> — issued 2026-10-22 — library-shipped, awaiting-merge (human /prm, library first; viz lint re-run after #796 merges, then Eyes dashboard_refresh) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/796">PyAutoLens#796</a></summary>
 
 ```
 Use the start-dev skill. active/cluster_point_solver_refinement_readability.md

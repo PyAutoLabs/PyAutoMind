@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-10-22T11:53:15Z",
+  "updated": "2026-10-22T19:09:06Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "HowToFit tutorial 5 (EP) never shares the centre it says it shares \u2014 workspace-shipped, blocked-CI",
       "url": "https://github.com/PyAutoLabs/HowToFit/pull/75",
       "prompt": "Use the start-dev skill. active/tutorial_5_ep_shared_centre_never_assigned.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Cluster point_solver.png: readable refinement panels and many-image labels \u2014 library-shipped, awaiting-merge (human /prm, library first; viz lint re-run after #796 merges, then Eyes dashboard_refresh)",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/796",
+      "prompt": "Use the start-dev skill. active/cluster_point_solver_refinement_readability.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1705 \u2014 function-config-priors",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1705",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1707 \u2014 prior-stable-test-ids",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1707",
       "prompt": null
     }
   ]
