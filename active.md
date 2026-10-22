@@ -39,7 +39,7 @@
 - issued: 2026-10-17
 - prompt: active/cluster_pointsolver_robust_settings_p1.md
 - session: Claude Code (Fable 5.1); https://claude.ai/code/session_01MJFczsaH2vYuhFWLneD7F5
-- status: workspace-shipped, awaiting-merge (human /prm; Consequence judge → no tiered merge; verdict INTERPRETATION-PENDING: human decides the ledger's decision table, no default changed)
+- status: workspace-shipped, awaiting-merge (human /prm; Consequence judge → no tiered merge; decision 2026-10-22 (human, chat): DEFERRED — default stays 1.0″ until the starting-grid draft + A2744 pull; no default changed)
 - classification: research (autolens_profiling only; Pulse campaign cluster-pointsolver phase 1), Consequence judge, Autonomy supervised; plan approved in chat 2026-10-17; compute per-job human authorization; no laptop timing
 - decision 2026-10-17 (human, chat): A2744 rows use a labelled synthetic prior-median 191-component model (no Bergamini+23 best fit exists in the workspace); the independent oracle supplies ground truth; representativeness caveat stated in the note
 - worktree: ~/Code/PyAutoLabs-wt/cluster-pointsolver-robust-settings
