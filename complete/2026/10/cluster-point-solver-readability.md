@@ -1,3 +1,18 @@
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/796
+
+## Outcome
+Cluster-scale `point_solver.png` is now readable (PyAutoLens#795). Each panel spans its source's own images and rejected candidates, with round ticks. When the solver's step-0 triangles are too small to draw, the figure re-solves on a coarse display grid of pixel scale min(span/10, closest separation/1.6). It uses that grid only if it recovers the real solve's images, and otherwise draws the solver's own steps. Rejected candidates are labelled r1, r2, and own-plane critical curves come via `curves_for_planes` in the #794 style. The modelling solver is unchanged.
+
+- PyAutoLens#796: merged 2026-10-22, pending release. test_autolens: 936 passed, 1 xfailed.
+- autolens_visualization#15: re-render of the cluster and point_source figures. Cluster point_1 uses the approved coarse look; point_0 stays fine-grained because of its 0.39″ image pair.
+- Shipped under Heart YELLOW (manifest drift, stale PyAutoArray rehearsal), acknowledged by the human.
+
+## Follow-ups
+- Unverified: a starting grid coarser than ~0.37″ appears to lose point_0 image 3, which sits 0.39″ from a member core. The workspace cluster example's 1.0″ modelling grid may therefore miss it in validation. This belongs to the cluster-PointSolver robust-settings campaign in autolens_profiling, not this task.
+- Dispatch the Eyes dashboard_refresh.yml so the board shows the new figures.
+
+## Original prompt
+
 # Cluster point_solver.png: readable refinement panels and many-image labels
 
 Consequence: judge
