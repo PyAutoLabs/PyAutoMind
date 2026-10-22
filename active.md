@@ -76,8 +76,11 @@
 - issued: 2026-10-22
 - prompt: active/howto_smoke_313_zeus.md
 - session: Claude Code (Opus 5.5), laptop CLI, https://claude.ai/code/session_01Va8pghu3LsTM42Z2UYoJQb
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge (human /prm)
 - classification: bug (CI installer, workspace only), Consequence judge, Autonomy supervised; plan approved in chat 2026-10-22; HowToLens half rides HowToLens#99 (b63072f, point-plots-yaml-keys claim)
 - worktree: ~/Code/PyAutoLabs-wt/howto-smoke-313-zeus
 - repos:
   - HowToGalaxy: feature/howto-smoke-313-zeus
+- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/89
+- prs:
+  - HowToGalaxy: https://github.com/PyAutoLabs/HowToGalaxy/pull/89
