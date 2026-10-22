@@ -12,7 +12,7 @@
 | [Epics](#epics) | 18 |
 | [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 277 |
+| [Backlog](#backlog) | 278 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -116,7 +116,7 @@ Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 100
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 101
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -895,7 +895,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/cluster_pointsolver_robust_settings_p1.md"><code>@autolens_profiling</code> cluster-pointsolver phase 1: cluster-scale robust PointSolver settings…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/436">issue #436</a> — issued 2026-10-17 — workspace-dev</summary>
+<details><summary>📋 <a href="active/cluster_pointsolver_robust_settings_p1.md"><code>@autolens_profiling</code> cluster-pointsolver phase 1: cluster-scale robust PointSolver settings…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/436">issue #436</a> — issued 2026-10-17 — workspace-shipped, awaiting-merge (human /prm; Consequence judge → no tiered merge; verdict INTERPRETATION-PENDING: human decides… — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/438">autolens_profiling#438</a></summary>
 
 ```
 Use the start-dev skill. active/cluster_pointsolver_robust_settings_p1.md
@@ -1957,7 +1957,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>research</b> — 40</summary>
+<summary><b>research</b> — 41</summary>
 
 <details><summary>📋 <a href="draft/research/autofit_inference/search_ext_b5c2a_rerun.md"><code>@autofit_inference</code> B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug…</a> — autofit_inference · medium · supervised · high</summary>
 
@@ -1995,6 +1995,14 @@ Use the start-dev skill. draft/research/autoarray/delaunay_research.md
 
 ```
 Use the start-dev skill. draft/research/autoarray/delaunay_callback_persistent_cache_miss.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/howtolens/browser_native_pyodide_jupyterlite_howtolens_alo.md">Browser-native (Pyodide / JupyterLite) HowToLens alongside Colab</a> — howtolens · medium · safe · medium</summary>
+
+```
+Use the start-dev skill. draft/research/howtolens/browser_native_pyodide_jupyterlite_howtolens_alo.md
 ```
 
 </details>
