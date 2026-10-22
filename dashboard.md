@@ -12,7 +12,7 @@
 | [Epics](#epics) | 18 |
 | [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 275 |
+| [Backlog](#backlog) | 276 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -380,7 +380,7 @@ Use the start-dev skill. draft/maintenance/autolens/point_source_cpu_campaign_ow
 </details>
 
 <details>
-<summary><b>Cluster PointSolver — robustness and performance</b> — 1 queued prompt(s), in order</summary>
+<summary><b>Cluster PointSolver — robustness and performance</b> — 2 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Cluster PointSolver — robustness and performance</b> — ledger: `https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/cluster_pointsolver_speed.md` — Expanded by human agreement 2026-10-01 to own robust analysis settings, numerical correctness and performance. Carries Source &amp;…</summary>
 
@@ -394,6 +394,14 @@ Continue the 'Cluster PointSolver — robustness and performance' epic. Its cano
 
 ```
 Use the start-dev skill. draft/bug/autolens/point_solver_error_bisect_health.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/cluster_pointsolver_starting_grid_close_member_image.md"><code>@autolens_profiling</code> cluster PointSolver: does the workspace's 1.0″ starting grid lose an image…</a> — autolens_profiling · small · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/research/autolens_profiling/cluster_pointsolver_starting_grid_close_member_image.md
 ```
 
 </details>
@@ -2944,7 +2952,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-104 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+105 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2989,7 +2997,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
 - `draft/bug/autolens/point_source_plot_script_residual_shape_mismatch.md`
 - `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md`
-- _… and 64 more_
+- _… and 65 more_
 
 </details>
 
