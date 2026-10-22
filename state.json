@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-10-22T20:09:04Z",
+  "updated": "2026-10-22T20:13:35Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -15,7 +15,7 @@
     },
     {
       "severity": "yellow",
-      "text": "`@autolens_profiling` cluster-pointsolver phase 1: cluster-scale robust PointSolver settings\u2026 \u2014 workspace-shipped, awaiting-merge (human /prm; Consequence judge \u2192 no tiered merge; verdict INTERPRETATION-PENDING: human decides\u2026",
+      "text": "`@autolens_profiling` cluster-pointsolver phase 1: cluster-scale robust PointSolver settings\u2026 \u2014 workspace-shipped, awaiting-merge (human /prm; Consequence judge \u2192 no tiered merge; decision 2026-10-22 (human, chat): DEFERRED\u2026",
       "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/438",
       "prompt": "Use the start-dev skill. active/cluster_pointsolver_robust_settings_p1.md"
     },

@@ -895,7 +895,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/cluster_pointsolver_robust_settings_p1.md"><code>@autolens_profiling</code> cluster-pointsolver phase 1: cluster-scale robust PointSolver settings…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/436">issue #436</a> — issued 2026-10-17 — workspace-shipped, awaiting-merge (human /prm; Consequence judge → no tiered merge; verdict INTERPRETATION-PENDING: human decides… — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/438">autolens_profiling#438</a></summary>
+<details><summary>📋 <a href="active/cluster_pointsolver_robust_settings_p1.md"><code>@autolens_profiling</code> cluster-pointsolver phase 1: cluster-scale robust PointSolver settings…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/436">issue #436</a> — issued 2026-10-17 — workspace-shipped, awaiting-merge (human /prm; Consequence judge → no tiered merge; decision 2026-10-22 (human, chat): DEFERRED… — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/438">autolens_profiling#438</a></summary>
 
 ```
 Use the start-dev skill. active/cluster_pointsolver_robust_settings_p1.md
