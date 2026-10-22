@@ -51,10 +51,14 @@
 - issued: 2026-10-22
 - prompt: active/point_plots_yaml_keys_howtolens_assistant.md
 - session: Claude Code (Opus 5.5), laptop CLI
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge (human /prm; glance but no Witness: line → no tiered merge)
 - classification: docs/config (workspace only), Consequence glance, Autonomy safe-capped; plan approved in chat 2026-10-22; library half PyAutoLens#794 MERGED
 - worktree: ~/Code/PyAutoLabs-wt/point-plots-yaml-keys
 - split 2026-10-22: autolens_assistant half blocked by cosmos-web-ring-notebook claim → planned.md `point-plots-yaml-keys-assistant`
+- prs:
+  - HowToLens: https://github.com/PyAutoLabs/HowToLens/pull/99
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/99
+- heart-ack: YELLOW 2026-10-22 (manifest drift 1 workspace checkout; release validation stale PyAutoArray)
 - repos:
   - HowToLens: feature/point-plots-yaml-keys
 
