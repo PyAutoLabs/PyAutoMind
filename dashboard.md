@@ -10,15 +10,15 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 18 |
-| [In flight](#in-flight) | 5 |
+| [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 278 |
+| [Backlog](#backlog) | 277 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 20
+**Highest priority** (filed as `high`) — showing 12 of 19
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -40,14 +40,6 @@ Use the start-dev skill. draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_
 
 ```
 Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/howtolens/smoke_313_zeus_missing.md">HowToLens smoke (3.13) red: <code>tutorial_searches.py</code> cannot import <code>zeus</code></a> — howtolens · small · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/howtolens/smoke_313_zeus_missing.md
 ```
 
 </details>
@@ -112,6 +104,14 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ```
 Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md
 ```
 
 </details>
@@ -903,6 +903,14 @@ Use the start-dev skill. active/cosmos_web_ring_guided_walkthrough_p1_notebook.m
 
 </details>
 
+<details><summary>📋 <a href="active/howto_smoke_313_zeus.md">HowTo smoke (3.13) red: <code>tutorial_searches.py</code> cannot import <code>zeus</code></a> — <a href="https://github.com/PyAutoLabs/HowToGalaxy/issues/88">issue #88</a> — issued 2026-10-22 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/howto_smoke_313_zeus.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/matrix_free_interferometer_inversion.md">Matrix-free interferometer inversion for very large rectangular meshes…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/638">issue #638</a> — issued 2026-10-21</summary>
 
 ```
@@ -1075,7 +1083,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>bug</b> — 71</summary>
+<summary><b>bug</b> — 70</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -1097,14 +1105,6 @@ Use the start-dev skill. draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_
 
 ```
 Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/howtolens/smoke_313_zeus_missing.md">HowToLens smoke (3.13) red: <code>tutorial_searches.py</code> cannot import <code>zeus</code></a> — howtolens · small · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/howtolens/smoke_313_zeus_missing.md
 ```
 
 </details>
@@ -2845,7 +2845,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 |------|-------|------|
 | 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
 | 2026-10-22 | issued | <a href="active/point_plots_yaml_keys_howtolens_assistant.md">Mirror PyAutoLens point visualization keys into HowToLens +…</a> |
-| 2026-10-22 | filed | <a href="draft/bug/howtolens/smoke_313_zeus_missing.md">HowToLens smoke (3.13) red: <code>tutorial_searches.py</code> cannot import…</a> |
+| 2026-10-22 | issued | <a href="active/howto_smoke_313_zeus.md">HowTo smoke (3.13) red: <code>tutorial_searches.py</code> cannot import <code>zeus</code></a> |
 | 2026-10-21 | planned | <a href="planned.md#likelihood-lifecycle-p0-profiling">likelihood-lifecycle-p0-profiling</a> |
 | 2026-10-21 | filed | <a href="planned.md#interferometer-primary-beam-persistence-mirror">interferometer-primary-beam-persistence-mirror</a> |
 | 2026-10-21 | filed | <a href="draft/docs/workspaces/corner_plot_config_keys_pr1709_phase3.md">Workspace config + docs for corner-plot labels and latent plots…</a> |
@@ -2960,7 +2960,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-106 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+105 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3005,7 +3005,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
 - `draft/bug/autolens/point_source_plot_script_residual_shape_mismatch.md`
 - `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md`
-- _… and 66 more_
+- _… and 65 more_
 
 </details>
 
