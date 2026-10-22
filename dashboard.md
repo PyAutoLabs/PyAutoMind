@@ -911,7 +911,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/point_plots_yaml_keys_howtolens_assistant.md">Mirror PyAutoLens point visualization keys into HowToLens + autolens_assistant plots.yaml</a> — <a href="https://github.com/PyAutoLabs/HowToLens/issues/98">issue #98</a> — issued 2026-10-22 — workspace-dev</summary>
+<details><summary>📋 <a href="active/point_plots_yaml_keys_howtolens_assistant.md">Mirror PyAutoLens point visualization keys into HowToLens + autolens_assistant plots.yaml</a> — <a href="https://github.com/PyAutoLabs/HowToLens/issues/98">issue #98</a> — issued 2026-10-22 — workspace-shipped, awaiting-merge (human /prm; glance but no Witness: line → no tiered merge) — PRs: <a href="https://github.com/PyAutoLabs/HowToLens/pull/99">HowToLens#99</a></summary>
 
 ```
 Use the start-dev skill. active/point_plots_yaml_keys_howtolens_assistant.md
