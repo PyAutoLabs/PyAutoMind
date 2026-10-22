@@ -1,29 +1,29 @@
-# HowToLens smoke (3.13) red: `tutorial_searches.py` cannot import `zeus`
+# HowTo smoke (3.13) red: `tutorial_searches.py` cannot import `zeus`
 
 Type: bug
-Target: HowToLens
+Target: HowToGalaxy
 Repos:
-- HowToLens
+- HowToGalaxy
 Difficulty: small
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
 Consequence: judge
 Filed: 2026-10-22
-Blocks: HowToLens#99 (point-plots-yaml-keys, which changes only `config/visualize/plots.yaml`)
+Issued: 2026-10-22
+Issue: https://github.com/PyAutoLabs/HowToGalaxy/issues/88
 
 ## Original request (verbatim)
 
-"doing it in anothr chat just wrap up the prs" (the /prm wrap-up hit this red leg; the human chose a re-run, which failed the same way)
+"yeah fix it" / "yes do both go"
 
-## Evidence
+## Cause (diagnosed 2026-10-22)
 
-- PR HowToLens#99, head f44030be, run 39754010580. The `smoke / smoke (3.13)` job failed on the first attempt and again on a `--failed` re-run (2026-10-22 20:04Z):
-  `scripts/chapter_optional/tutorial_searches.py ... FAIL RuntimeError: ...: Zeus requires importable module zeus: No module named 'zeus'`
-- The `smoke (3.12)` leg passes. Its install log shows `zeus-mcmc==2.5.4` being collected (from autogalaxy dev). PyAutoFit `pyproject.toml:88` pins `zeus-mcmc==2.5.4`.
-- The 3.13 leg restores a cached environment (key `pyauto-jax-Linux-py3.13-jaxlib0.11.2-e1-…`). The cached env, or the 3.13 install path, appears to lack zeus.
-- HowToLens main smoke was last green 2026-10-18. No HowToLens main run since, so main is probably red too.
+PyAutoHands bfb4887 (2026-10-16) added a smoke dependency preflight. At `PYAUTO_TEST_MODE=2` it imports the backend of every search a script constructs. The HowToLens and HowToGalaxy 3.13 smoke legs deliberately install no `[optional]` extras. As a result, `chapter_optional/tutorial_searches.py` (`af.Zeus`) fails with `Zeus requires importable module zeus: No module named 'zeus'`. This was not a cache problem.
 
-## Ask
+autofit_workspace fixed the same failure in 3a23985 (2026-10-21) by adding `pip install zeus-mcmc==2.5.4` to the 3.13 branch of `.github/scripts/smoke_install.sh`. autolens_workspace and autogalaxy_workspace are unaffected: their `smoke_tests.txt` subsets skip their Zeus scripts.
 
-Find why zeus is not importable on the 3.13 smoke leg. Candidates: a stale or shared cache epoch, an optional-dependency extra not installed on 3.13, or zeus-mcmc failing to import on 3.13. Fix it at the source (cache key or epoch, or the install step). Do not skip the tutorial. Then re-run HowToLens#99's smoke and `/prm` it. Check whether other workspaces with a 3.13 leg share the cache and have the same gap.
+## Fix
+
+- **HowToLens:** committed b63072f on the `point-plots-yaml-keys` branch (PR HowToLens#99), because that task claims HowToLens. This also unblocks #99 and later #100.
+- **HowToGalaxy:** the same one-line installer fix, on its own branch and PR (this task).
