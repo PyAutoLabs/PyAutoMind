@@ -49,7 +49,7 @@
 - status: library-shipped, awaiting-merge
 - library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/316
 - library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/322
-- validation: Heart PR run 39963598101 minted a real pyautolabs-bot token and dry-run pushed to all five release libraries (push=true ×5). Hands pytest green on 3.12/3.13/3.14. Heart pytest red on the tenant firewall (literal repo names) — fix in progress on the branch.
+- validation: Heart PR run 39964652005 minted a real pyautolabs-bot token (scope from config/repos.yaml) and dry-run pushed to all five release libraries (push=true ×5). All checks green on #316 (token check, pytest 3.12/3.13) and #322 (pytest 3.12/3.13/3.14); tenant firewall fixed in e691928.
 - heart: YELLOW acknowledged by the human 2026-10-23 (manifest drift on one workspace checkout; PyAutoLens release validation stale) — unrelated.
 - next: merge order Heart #316 first (its token check then runs on main), then Hands #322 when no release run is live; human /prm. Phase 1b (PyPI trusted publishing) waits on the human's PyPI login (defunct 2FA email; support ticket route).
 - worktree: ~/Code/PyAutoLabs-wt/github-token-p1-hands-app
