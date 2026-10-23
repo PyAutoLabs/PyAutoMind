@@ -1,3 +1,18 @@
+# HowToFit tutorial 5: shared EP centre + real width-regression factor
+
+HowToFit#73 → PR #75 (merge `be3c7ab77`, 2026-10-23).
+
+## What shipped
+- Tutorial 5 (`expectation_propagation`) now assigns one shared `centre` prior to every dataset's Gaussian. That prior was previously never assigned.
+- The placeholder `LinearRegressionAnalysis` (it returned `-1`) is replaced by a normalized Gaussian likelihood: FWHM_i ~ Normal(m·i + c, 5 px), priors m ~ N(0, 5) and c ~ N(23.5, 10). The tutorial describes this explicitly as a teaching assumption. The human approved it at /prm on 2026-10-23.
+- Smoke epilogue (`.github/scripts/smoke_install.sh`) installs BlackJAX and, from `c005661`, `nautilus-sampler==1.0.5` for `tutorial_6_gradients.py`.
+
+## Validation
+- Shipping session (Codex): real sampling passes with the shared centre across 3 datasets; every dataset and regression factor updated 5/5 sweeps, with no stale factors; 19 smoke scripts passed; notebook and catalogue regenerated.
+- CI at merge: smoke on 3.12 and 3.13, Navigator and Tutorials Complete all passed.
+
+## Original prompt
+
 # HowToFit tutorial 5 (EP) never shares the centre it says it shares
 
 Type: bug

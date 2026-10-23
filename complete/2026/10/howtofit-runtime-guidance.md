@@ -1,3 +1,12 @@
+# HowToFit tutorial 4: realistic runtime guidance
+
+HowToFit#72 → PR #74 (merge `03946b65c`, 2026-10-23).
+
+## What shipped
+Tutorial 4's runtime claim was rewritten to match a measured run of its 15-parameter DynestyStatic fit. The diff is prose only, and the notebook was regenerated. Before merging, main was merged in to pick up #75's smoke epilogue (BlackJAX + Nautilus). CI then passed: smoke on 3.12 and 3.13, Navigator and Tutorials Complete.
+
+## Original prompt
+
 # HowToFit tutorial 4 promises "under a minute" and takes six
 
 Type: docs

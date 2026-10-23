@@ -2,23 +2,11 @@
   "schema_version": 1,
   "organ": "mind",
   "repo": "PyAutoMind",
-  "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-23T22:23:22Z",
+  "status": "yellow",
+  "headline": "YELLOW \u2014 24 picks \u00b7 2 in flight",
+  "updated": "2026-10-23T22:24:43Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "red",
-      "text": "HowToFit tutorial 5 (EP) never shares the centre it says it shares \u2014 workspace-shipped, blocked-CI",
-      "url": "https://github.com/PyAutoLabs/HowToFit/pull/75",
-      "prompt": "Use the start-dev skill. active/tutorial_5_ep_shared_centre_never_assigned.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "HowToFit tutorial 4 promises \"under a minute\" and takes six \u2014 workspace-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/HowToFit/pull/74",
-      "prompt": "Use the start-dev skill. active/tutorial_4_runtime_claim.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -126,6 +114,18 @@
       "text": "pick: Guard every workspace script against untimed network downloads",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace/no_untimed_network_downloads_check.md",
       "prompt": "Use the start-dev skill. draft/test/autolens_workspace/no_untimed_network_downloads_check.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Cache `autonerves` config parsing \u2014 308 YAML files parsed per script run",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/autonerves/config_yaml_parse_cache.md",
+      "prompt": "Use the start-dev skill. draft/refactor/autonerves/config_yaml_parse_cache.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md",
+      "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md"
     }
   ]
 }
