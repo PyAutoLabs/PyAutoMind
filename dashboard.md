@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 17 |
-| [In flight](#in-flight) | 6 |
-| [Planned](#planned) | 11 |
-| [Backlog](#backlog) | 283 |
+| [In flight](#in-flight) | 7 |
+| [Planned](#planned) | 10 |
+| [Backlog](#backlog) | 282 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -219,7 +219,7 @@ Use the start-dev skill. draft/maintenance/pyautomemory/canonical_key_todo_sweep
 Long-running multi-phase programmes. Each epic's 📋 prompt has the assistant read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
 
 <details>
-<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 4 queued prompt(s), in order</summary>
+<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 3 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — ledger: `draft/research/autolens_profiling/likelihood_lifecycle_epic.md` — phase 0 IN PROGRESS — 0A (PyAutoPulse contract) MERGED 2026-10-21 (PyAutoPulse#70, record…</summary>
 
@@ -233,14 +233,6 @@ Continue the 'Likelihood lifecycle — optimal setups baked into PyAutoLens (`se
 
 ```
 Use the start-dev skill. draft/feature/autolens_profiling/likelihood_lifecycle_p0_profiling.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautobrain/likelihood_lifecycle_p0_brain.md">Likelihood lifecycle phase 0E: PyAutoBrain lifecycle prompt template (<code>skills/profiling/lifecycle.md</code>), profiling conductor grid…</a> — pyautobrain · medium · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautobrain/likelihood_lifecycle_p0_brain.md
 ```
 
 </details>
@@ -903,6 +895,14 @@ Use the start-dev skill. active/github_token_phase2b_owner_wide_writers_app_toke
 
 </details>
 
+<details><summary>📋 <a href="active/likelihood_lifecycle_p0_brain.md">Likelihood lifecycle phase 0E: PyAutoBrain lifecycle prompt template (<code>skills/profiling/lifecycle.md</code>), profiling conductor grid…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/535">issue #535</a> — issued 2026-10-23 — library-dev</summary>
+
+```
+Use the start-dev skill. active/likelihood_lifecycle_p0_brain.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/matrix_free_interferometer_inversion.md">Matrix-free interferometer inversion for very large rectangular meshes…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/638">issue #638</a> — issued 2026-10-21</summary>
 
 ```
@@ -940,7 +940,7 @@ Use the start-dev skill. active/tutorial_5_ep_shared_centre_never_assigned.md
 Scoped but not started; some are not yet prompt files. Full detail in [`planned.md`](planned.md).
 
 <details>
-<summary><b>11</b> task(s)</summary>
+<summary><b>10</b> task(s)</summary>
 
 <details><summary>📋 <b>isothermal-ell-sph-oversampling-at-the-cusp</b> — found 2026-08-09 — planned — NOT yet a prompt file; file one via <code>/intake</code> before starting</summary>
 
@@ -1018,14 +1018,6 @@ Use the start-dev skill. draft/feature/autolens_profiling/likelihood_lifecycle_p
 
 ```
 Use the route skill. start the planned PyAutoMind task point-plots-yaml-keys-assistant — its record is in planned.md
-```
-
-</details>
-
-<details><summary>📋 <b>likelihood-lifecycle-p0-brain</b> — planned 2026-10-23</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautobrain/likelihood_lifecycle_p0_brain.md
 ```
 
 </details>
@@ -2891,10 +2883,10 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-23 | planned | <a href="planned.md#likelihood-lifecycle-p0-brain">likelihood-lifecycle-p0-brain</a> |
 | 2026-10-23 | filed | <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred…</a> |
 | 2026-10-23 | issued | <a href="active/cluster_pointsolver_starting_grid_close_member_image.md"><code>@autolens_profiling</code> cluster PointSolver: does the workspace's 1.0″…</a> |
 | 2026-10-23 | issued | <a href="active/nan_in_ep_evidence_accumulation_invalid_value.md">NaN in EP evidence accumulation: <code>invalid value encountered in add</code>…</a> |
+| 2026-10-23 | issued | <a href="active/likelihood_lifecycle_p0_brain.md">Likelihood lifecycle phase 0E: PyAutoBrain lifecycle prompt template…</a> |
 | 2026-10-23 | issued | <a href="active/github_token_phase2b_owner_wide_writers_app_token.md">GitHub token consolidation phase 2b: owner-wide writers…</a> |
 | 2026-10-23 | filed | <a href="draft/docs/pyautohands/colab_custom_instructions_assistant_context.md">Carry assistant context into every Colab notebook via Gemini Custom…</a> |
 | 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |

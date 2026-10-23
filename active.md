@@ -81,3 +81,19 @@
   - PyAutoBrain: feature/github-token-p2b-writers-app
   - PyAutoGut: feature/github-token-p2b-writers-app
   - PyAutoMind: feature/github-token-p2b-writers-app
+
+## likelihood-lifecycle-p0-brain
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/535
+- issued: 2026-10-23
+- prompt: active/likelihood_lifecycle_p0_brain.md
+- epic: likelihood-lifecycle (phase 0, sub-issue 0E; ledger draft/research/autolens_profiling/likelihood_lifecycle_epic.md)
+- session: Claude Code CLI (Fable 5.1 orchestrator, Opus worker)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p0-brain
+- classification: library (PyAutoBrain only; Feature Agent library workflow, direct)
+- tier: judge — human /prm
+- authorization: human "I authorize you to go" 2026-10-23 — claim-guard override: PyAutoBrain also claimed by github-token-p2b-writers-app (#534); separate branches, different files; rebase if #534 lands first. Heart STALE at the door (continue).
+- next: Opus worker implements (a)–(d) → ship_library → human /prm; then 0B when the autolens_profiling starting-grid claim clears
+- repos:
+  - PyAutoBrain: feature/likelihood-lifecycle-p0-brain
+

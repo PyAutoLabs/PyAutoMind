@@ -20,6 +20,8 @@ Epic: likelihood-lifecycle
 Phase: 0
 Parent: draft/research/autolens_profiling/likelihood_lifecycle_epic.md
 Filed: 2026-10-23
+Issued: 2026-10-23
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/535
 
 Phase 0 sub-issue 0E of the `likelihood-lifecycle` epic (ledger `draft/research/autolens_profiling/likelihood_lifecycle_epic.md`; report §3.1 vocabulary, §3.7 layouts, §3.8 dashboards, §3.9 lifecycle sequence, §4 phase 0 "0E PyAutoBrain", phase 8 "lifecycle verb"; survey `likelihood_lifecycle_epic_surveys/05_brain_conductors_epic_format.md` §4). Depends on 0A (PyAutoPulse#70: `profiling-summary@3` shape — per-record `likelihood`, `instrument`, `regime`, `setup` + `setup_id`, `host_class`, `model_variant`, `measurement`, `class`, `status`, `planned_cells` with `class`) and 0C/0D (autolens_inference mirrored tree; Insight lifecycle fields). **Does not depend on 0B**: autolens_profiling's `results/` is not yet mirrored (0B is queued behind the cluster-pointsolver starting-grid claim), so the conductor's new-tree reader is proven on a fixture here and on the live tree when 0B lands. Nothing in this issue edits autolens_profiling, autolens_inference, Pulse or Insight.
 
