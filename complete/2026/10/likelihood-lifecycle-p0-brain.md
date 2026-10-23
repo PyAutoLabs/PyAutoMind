@@ -1,3 +1,16 @@
+## likelihood-lifecycle-p0-brain
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/535
+- completed: 2026-10-23
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/536
+- epic: likelihood-lifecycle (phase 0, sub-issue 0E of 0A–0E)
+
+- Summary: PyAutoBrain#536 (185a370, merged a64b7990) — (a) `skills/profiling/lifecycle.md`: the report §3.9 L0–L7 sequence as eight Mind prompt blocks with full headers (`Epic: lifecycle-<dataset_type>-<variant>`, integer phases 0–7, placeholders `<dataset_type>`, `<variant>`, `<instrument>`, `<regime>`, `<trigger>`), linked from the profiling skill and conductor AGENTS.md; `tests/test_profiling_lifecycle_template.py` renders imaging/delaunay and checks every header through intake's own `census()`. (b) Profiling conductor: on a published `profiling-summary@3` catalogue, `campaign` reports a per-likelihood × class × measurement coverage grid (current / stale / superseded / missing), parses `setup_id` by the R1 grammar (`SetupIdError` on violation, in the catalogue or results-tree folder names), never counts `local_*` host classes as current (R7), reports class as declared (R3), routes CPU cells to `--partition=ral` and A100 cells to `gpu --gres`; v2/absent catalogue byte-identical (live dry-run sha256 be73b898… before = after; 22 cells / 23 done / 4 unusable / 17 missing; tier a100, compile axis and text outputs identical). (c) Samplers faculty mature tier reads `autolens_inference/scripts/<dataset_type>/<variant>/samplers/` (3 point_source + 8 imaging cells live), `validation/` leaves in their own tier, autofit_inference unchanged. (d) Pulse/Insight read prose: current+optimal default, `walltime-validation@1` is Pulse's (`lens-walltime`), Insight sampler records `setup_mode: auto`, optimal is always a Pulse designation. pytest 1268 → 1282; ruff unchanged.
+- Human rulings: claim-guard override 2026-10-23 ("I authorize you to go") — shipped on PyAutoBrain alongside `github-token-p2b-writers-app` (#534) on a separate branch, no `.github/` or token files touched. Heart STALE at the door, YELLOW at ship (workspace manifest drift; PyAutoLens release validation stale), unrelated.
+- Deviations / follow-ups: the @3 contract has no catalogue-level `release_pin`, so "stale" is judged against the envelope pin if present else the newest record pin (candidate Pulse follow-up); on v3 `--tier` is echoed but cells route by `host_class`; template `Blocked-by:` names the prior phase and is swapped for `Repo#N` at filing. Live witness on autolens_profiling lands when 0B mirrors `results/` and re-pins `lens` to @3 — until then the grid is proven on the tmp_path fixture and Pulse's v3 fixture.
+- Next: phase 0 has only 0B left (`planned.md likelihood-lifecycle-p0-profiling`, queued behind the cluster-pointsolver starting-grid claim on autolens_profiling); phase 1 (figures) is independent of 0 and may be filed next; phase 8 renders `lifecycle.md` as the `pyauto-brain profiling lifecycle` verb.
+
+## Original prompt
+
 # Likelihood lifecycle phase 0E: PyAutoBrain lifecycle prompt template (`skills/profiling/lifecycle.md`), profiling conductor grid on the mirrored tree and `setup_id`/`host_class`/class/status grammar, samplers faculty paths, Pulse/Insight read prose
 
 Type: feature

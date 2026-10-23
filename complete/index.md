@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1965 records across 9 buckets.
+1966 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -256,6 +256,7 @@ markers; everything below GENERATED is rebuilt.
 - [interferometer-streaming-memo-after](2026/10/interferometer-streaming-memo-after.md)
 - [interferometer-streaming-scaling](2026/10/interferometer-streaming-scaling.md) — CPU streaming scaling cells and evidence shipped, including accumulation to 5e7 visibilities, in-memory failur…
 - [jax-lapack-compatibility-repair](2026/10/jax-lapack-compatibility-repair.md)
+- [likelihood-lifecycle-p0-brain](2026/10/likelihood-lifecycle-p0-brain.md)
 - [likelihood-lifecycle-p0-inference](2026/10/likelihood-lifecycle-p0-inference.md)
 - [likelihood-lifecycle-p0-insight](2026/10/likelihood-lifecycle-p0-insight.md)
 - [likelihood-lifecycle-p0-pulse](2026/10/likelihood-lifecycle-p0-pulse.md)
