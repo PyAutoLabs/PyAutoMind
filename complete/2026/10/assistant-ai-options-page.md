@@ -1,3 +1,23 @@
+## What shipped (2026-10-23)
+
+One PyAutoLabs-level page, `PyAutoScientist/AI_OPTIONS.md`, now describes every AI route for the science assistants: Claude Code and Codex (recommended, paid), GitHub Copilot CLI and OpenCode (free, documented not benchmarked), troubleshooting, Colab notebooks as the "see the code" route, and Claude.ai / ChatGPT chat with the GitHub connector at the bottom. Every quota is dated October 2026 with sources.
+
+autogalaxy_assistant, autofit_assistant and autocti_assistant READMEs are shorter: one paragraph, the link, the clone snippet and the starting prompt. Each gained an `AI_OPTIONS.md` stub beside `AI_POLICY.md` (same pattern) and lost `.gemini/settings.json`, the chat archives, the OpenCode setup pages and (autofit) the Colab + Gemini notebook and script. `AGENTS.md`, `llms.txt`, `modes/maintainer.md` and `skills/start-new-project.md` no longer mention Gemini CLI or chat support; the "other harness" sentence names Copilot CLI and OpenCode. `llms.txt` itself stays everywhere: it is the agent routing front door, not chat legacy. pyautolabs.github.io's "Ask an AI assistant" card and the three workspace READMEs point at the page.
+
+## Not shipped here (re-filed)
+
+The autolens_assistant leg (README three-step block, Colab badge move, deletion of `docs/setup/opencode_cli.md`, `docs/evaluation/agent_evaluation.md`, `docs/archive/`, `.gemini/settings.json`) was blocked by the cosmos-web-ring-notebook claim (autolens_assistant#161) and is re-filed as `draft/docs/autolens_assistant/ai_options_page_autolens_leg.md`.
+
+## Decisions and learnings
+
+- Gemini CLI's free tier ended 2026-06-18; the `.gemini/settings.json` stubs pointed at a retired product.
+- Free pick is two routes, not one (human, 2026-10-23): Copilot CLI (many have it via Education / institutions) and OpenCode (everyone else).
+- Heart was YELLOW at ship (manifest drift mismatch; stale PyAutoLens release rehearsal), unrelated to docs; recorded on each PR.
+- autogalaxy_assistant#36 went red on `wiki-currency` because PyAutoArray 2026.10.22.1 was released after the assistant's audit baseline was pinned; the 2026.10.23.1 release regen on main fixed it and a re-run went green. Lesson: an assistant docs PR opened across a stack release reads red on version drift until the release's baseline commit lands; re-run, do not re-pin by hand.
+- The Colab question (can Colab's Gemini leverage the assistant repo?) is answered by Colab Custom Instructions (2026-04-08, stored in the notebook); follow-up `draft/docs/pyautohands/colab_custom_instructions_assistant_context.md` is gated on a human Colab test.
+
+## Original prompt
+
 # One PyAutoLabs-level "AI options" page for every assistant; simplify the assistant READMEs; retire chat/OpenCode/Gemini legacy
 
 Type: docs
