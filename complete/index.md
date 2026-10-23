@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1970 records across 9 buckets.
+1971 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -218,6 +218,7 @@ markers; everything below GENERATED is rebuilt.
 - [github-token-p2a-readers-app](2026/10/github-token-p2a-readers-app.md) — Phase 2a of the GitHub token consolidation (parent prompt `github_token_and_secret_setup_full_review`; phase 1…
 - [github-token-p2b-writers-app](2026/10/github-token-p2b-writers-app.md) — Phase 2b of the GitHub token consolidation (parent prompt `github_token_and_secret_setup_full_review`; phase 1…
 - [github-token-p3-dispatchers-app](2026/10/github-token-p3-dispatchers-app.md) — Phase 3 of the GitHub token consolidation (parent prompt `github_token_and_secret_setup_full_review`; phases 1…
+- [github-token-p4-retire-pat-mentions](2026/10/github-token-p4-retire-pat-mentions.md) — Phase 4 of the GitHub token consolidation (parent prompt `github_token_and_secret_setup_full_review`; phase 3 …
 - [grouped-smoke-install](2026/10/grouped-smoke-install.md)
 - [heart-dashboard-collectors](2026/10/heart-dashboard-collectors.md)
 - [heart-dashboard-markdown-link-test](2026/10/heart-dashboard-markdown-link-test.md)

@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-10-23T20:23:16Z",
+  "headline": "RED \u2014 24 picks \u00b7 5 in flight",
+  "updated": "2026-10-23T20:40:36Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,12 +12,6 @@
       "text": "HowToFit tutorial 5 (EP) never shares the centre it says it shares \u2014 workspace-shipped, blocked-CI",
       "url": "https://github.com/PyAutoLabs/HowToFit/pull/75",
       "prompt": "Use the start-dev skill. active/tutorial_5_ep_shared_centre_never_assigned.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "GitHub token consolidation phase 4: retire every remaining PAT_PYAUTOLABS mention \u2014 workspace-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/pull/511",
-      "prompt": "Use the start-dev skill. active/github_token_phase4_retire_pat_mentions.md"
     },
     {
       "severity": "yellow",
@@ -126,6 +120,12 @@
       "text": "pick: HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit/hpc_campaign_epic.md",
       "prompt": "Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Guard every workspace script against untimed network downloads",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace/no_untimed_network_downloads_check.md",
+      "prompt": "Use the start-dev skill. draft/test/autolens_workspace/no_untimed_network_downloads_check.md"
     }
   ]
 }
