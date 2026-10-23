@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 18 |
-| [In flight](#in-flight) | 5 |
-| [Planned](#planned) | 11 |
-| [Backlog](#backlog) | 280 |
+| [In flight](#in-flight) | 6 |
+| [Planned](#planned) | 10 |
+| [Backlog](#backlog) | 279 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -576,7 +576,7 @@ Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens
 </details>
 
 <details>
-<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 14 queued prompt(s), in order</summary>
+<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 13 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Cluster strong lensing — Source &amp; Cluster arc</b> — ledger: `draft/feature/autolens/source_cluster_arc.md` — In progress — 1a–1d, phase 3a audit (profiling#364, workspace_test#341) and phase 3b field-preserving cap fix (Galaxy#646…</summary>
 
@@ -662,14 +662,6 @@ Use the start-dev skill. draft/feature/workspaces/cluster_pixelized_analysisfact
 
 ```
 Use the start-dev skill. draft/docs/howtolens/cluster_pixelized_source.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/point_magnification_workspace_docs.md">Magnification at a point: document it in every source_science.py and the guides</a> — autolens_workspace · medium · safe · high</summary>
-
-```
-Use the start-dev skill. draft/docs/autolens_workspace/point_magnification_workspace_docs.md
 ```
 
 </details>
@@ -927,6 +919,14 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
+<details><summary>📋 <a href="active/point_magnification_workspace_docs.md">Magnification at a point: document it in every source_science.py and the guides</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/596">issue #596</a> — issued 2026-10-23 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/point_magnification_workspace_docs.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> — <a href="https://github.com/PyAutoLabs/HowToFit/issues/72">issue #72</a> — issued 2026-10-17 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/HowToFit/pull/74">HowToFit#74</a></summary>
 
 ```
@@ -948,7 +948,7 @@ Use the start-dev skill. active/tutorial_5_ep_shared_centre_never_assigned.md
 Scoped but not started; some are not yet prompt files. Full detail in [`planned.md`](planned.md).
 
 <details>
-<summary><b>11</b> task(s)</summary>
+<summary><b>10</b> task(s)</summary>
 
 <details><summary>📋 <b>isothermal-ell-sph-oversampling-at-the-cusp</b> — found 2026-08-09 — planned — NOT yet a prompt file; file one via <code>/intake</code> before starting</summary>
 
@@ -1026,14 +1026,6 @@ Use the start-dev skill. draft/feature/autolens_profiling/likelihood_lifecycle_p
 
 ```
 Use the route skill. start the planned PyAutoMind task point-plots-yaml-keys-assistant — its record is in planned.md
-```
-
-</details>
-
-<details><summary>📋 <b>point-magnification-workspace-docs</b> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/596">issue #596</a> — planned 2026-10-23</summary>
-
-```
-Use the start-dev skill. draft/docs/autolens_workspace/point_magnification_workspace_docs.md
 ```
 
 </details>
@@ -2867,8 +2859,8 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-23 | planned | <a href="planned.md#point-magnification-workspace-docs">point-magnification-workspace-docs</a> |
 | 2026-10-23 | issued | <a href="active/assistant_ai_options_unified_page.md">One PyAutoLabs-level "AI options" page for every assistant; simplify…</a> |
+| 2026-10-23 | issued | <a href="active/point_magnification_workspace_docs.md">Magnification at a point: document it in every source_science.py and…</a> |
 | 2026-10-23 | filed | <a href="draft/docs/pyautohands/colab_custom_instructions_assistant_context.md">Carry assistant context into every Colab notebook via Gemini Custom…</a> |
 | 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
 | 2026-10-21 | planned | <a href="planned.md#likelihood-lifecycle-p0-profiling">likelihood-lifecycle-p0-profiling</a> |
