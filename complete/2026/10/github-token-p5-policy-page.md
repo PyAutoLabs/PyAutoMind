@@ -1,3 +1,17 @@
+- summary: Phase 5, the last phase of the GitHub token consolidation (parent prompt `github_token_and_secret_setup_full_review`, retired the same day into complete/2026/10/github-token-consolidation-epic.md). Added `policy/github_tokens.md`, the authoritative CI-credential page:
+  - the rule (the `pyautolabs-bot` App is the only cross-repo identity; own-repo work stays on `github.token`) and the four forbidden patterns;
+  - the mint snippet;
+  - the live inventory (10 credential names, owners, rotation) and the table of App mints;
+  - the App's permissions and administration, rotation steps, and the new-repo checklist (nothing to do);
+  - "adding a credential" and the Owed list.
+  The page is instance-specific, so `scripts/spawn.py` drops it from the fresh-org templates beside `policy/hpc_ral.md` (spawn_spec row 8 + `test_instance_github_tokens_policy_page_is_dropped`).
+- evidence: Mind suite 704 passed. PR CI: `privacy` (full pytest) green; `drift` skipped on PRs by design (`if: github.event_name != 'pull_request'`), not a test leg. Witness checked independently by the session: the set of live org secrets, org variables and repo secrets across all non-archived repos equals the set of credential names on the page. The only page-only names are the PyAutoBrain repo variables `NIGHTLY_RELEASES` / `NIGHTLY_LAST_WINDOW_END`, which the page labels as non-credentials. Tiered merge (glance), merged-unchanged.
+- findings: Heart `lib-tests` / `smoke-tests` post to Slack only for callers holding a repo `SLACK_WEBHOOK_URL`; 10 callers post nothing (PyAutoReduce, HowToFit, HowToGalaxy, HowToLens, autofit_workspace, autofit_workspace_test, autogalaxy_workspace_test, autolens_workspace_test, autocti_workspace_test, euclid_strong_lens_modeling_pipeline).
+- deferred: the human's org settings (restrict classic PATs, keep fine-grained approval; one org-level `SLACK_WEBHOOK_URL`, then delete the 9 repo copies); phase 1b PyPI trusted publishing; the headless RAL/Colab PAT state; the autocti_visualization phase-3 proof (draft/bug/autocti_visualization/render_fails_no_module_autonerves.md). All are listed under the page's Owed.
+- heart: YELLOW acknowledged by the human 2026-10-23 (manifest drift on one workspace checkout; PyAutoLens release validation stale), unrelated.
+
+## Original prompt
+
 # GitHub token consolidation phase 5: the policy page `policy/github_tokens.md`
 
 Type: docs

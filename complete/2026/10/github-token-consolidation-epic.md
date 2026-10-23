@@ -1,3 +1,22 @@
+- summary: The GitHub token and secret consolidation epic, complete 2026-10-23. Before: 16 secret names, 26 consuming workflows and 4 auth mechanisms, with 19 workflows in 13 repos riding the person-owned `PAT_PYAUTOLABS`. After: one org-owned GitHub App `pyautolabs-bot` (org-level `APP_CLIENT_ID` / `APP_PRIVATE_KEY`) minting a narrow per-job token for every cross-repo workflow; the personal PATs revoked; `PAT_PYAUTOLABS` and 7 dead secrets deleted. The policy is `policy/github_tokens.md`.
+- phases:
+  - 0, human (App created and installed, dead secrets deleted, password manager set up);
+  - 1, Hands release (complete/2026/10/github-token-p1-hands-app.md);
+  - 2a, readers (complete/2026/10/github-token-p2a-readers-app.md);
+  - 2b, writers (complete/2026/10/github-token-p2b-writers-app.md);
+  - 3, dashboard dispatchers (complete/2026/10/github-token-p3-dispatchers-app.md);
+  - 4, PAT secret deleted and its mentions retired (complete/2026/10/github-token-p4-retire-pat-mentions.md);
+  - 5, the policy page (complete/2026/10/github-token-p5-policy-page.md).
+- surveys: the epic's three surveys moved to complete/2026/10/github-token-consolidation-epic_surveys/ (01 inventory, 02 best practice, 03 target design + phases). Phase records that cite `draft/release/pyautohands/..._surveys/` refer to this folder.
+- deferred:
+  - phase 1b, PyPI trusted publishing (blocked on the maintainer's PyPI login; `PYPI` / `TEST_PYPI` twine tokens stay until then);
+  - the human's org settings (restrict classic PATs, keep fine-grained approval; one org-level `SLACK_WEBHOOK_URL`);
+  - the headless RAL/Colab PAT state;
+  - the autocti_visualization phase-3 proof.
+  All are listed under Owed in `policy/github_tokens.md`.
+
+## Original prompt
+
 # GitHub token and secret setup: full review and consolidation
 
 Type: release

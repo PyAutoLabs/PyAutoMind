@@ -467,7 +467,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 43 (stage 1: 43, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — the pre-registered decision is due
+Count toward 20: 44 (stage 1: 44, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — the pre-registered decision is due
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -539,3 +539,4 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-10-23 | ep-zero-success-factors (PyAutoFit#1712 / autofit_workspace_test#115) | glance | tests 3561 pass / smoke PARITY 49-49 / review n-a (human-approved plan, not --auto) / heart YELLOW-ack / witness pass | merged-unchanged | 1 |
 | 2026-10-23 | ep-evidence-nonfinite (PyAutoFit#1714 / autofit_workspace_test#116) | glance | tests 3890 pass serial / smoke PARITY 53-53 / review n-a (human-approved plan, not --auto) / heart YELLOW-ack / witness pass | merged-unchanged | 1 |
 | 2026-10-23 | github-token-p4-retire-pat-mentions (PyAutoMind#511 / PyAutoHands#323 / autolens_visualization#18 / autogalaxy_visualization#7 / autofit_visualization#6 / autocti_visualization#6) | glance | tests 703 pass + CI green / smoke n-a (docs only) / review n-a (human-approved plan, not --auto) / heart YELLOW-ack / witness FAIL as worded (negative guard + history) → human /prm | merged-unchanged | 1 |
+| 2026-10-23 | github-token-p5-policy-page (PyAutoMind#513) | glance | tests 704 pass + privacy green / smoke n-a (docs) / review n-a (human-approved plan, not --auto) / heart YELLOW-ack / witness PASS (live⇔page names, spawn DROP test) | merged-unchanged | 1 |
