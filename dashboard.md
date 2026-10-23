@@ -9,7 +9,7 @@
 | Where | Count |
 |-------|------:|
 | [Start here](#start-here) | 24 |
-| [Epics](#epics) | 18 |
+| [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 4 |
 | [Planned](#planned) | 10 |
 | [Backlog](#backlog) | 283 |
@@ -331,14 +331,6 @@ Use the start-dev skill. draft/feature/pyautoears/community_organ_birth.md
 ```
 
 </details>
-
-</details>
-
-<details><summary>📋 <b>PyAutoPulse — the cross-project dashboard layer above the <code>&lt;lib&gt;_profiling</code> project repos: instance registry, <code>profiling-summary</code> read contract, organ board, cockpit transition</b> — ledger: `complete/2026/10/pyautopulse-brain-board-cockpit.md` — filed 2026-10-02; name decided 2026-10-02 (PyAutoPulse, key <code>pulse</code>); phase 1 COMPLETE 2026-10-02 (autolens_profiling#359 closed…</summary>
-
-```
-Continue the 'PyAutoPulse — the cross-project dashboard layer above the `<lib>_profiling` project repos: instance registry, `profiling-summary` read contract, organ board, cockpit transition' epic. Its canonical state lives in complete/2026/10/pyautopulse-brain-board-cockpit.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: human request 2026-10-02 to begin the organ filed from the 2026-10-01 intake; design authority is `PyAutoBrain/docs/research/profiling_inference_organs.md` (Brain #444, read contracts and acceptance cases) on `ecosystem_levels.md` (Brain #440, roles not hierarchy) — do not re-derive either. Same layering as PyAutoEyes over `<lib>_visualization` (precedent `complete/2026/09/pyautoeyes-organ-decision.md`): project repos own producers, results, drift policy and their own Pages page; the organ owns the registry, the versioned read contract, ingest receipts and the cross-project board; the Brain's profiling conductor is the only judge. Phases under `draft/feature/`: 0 name + organ row + boundaries (`pyautomind/profiling_organ_p0_name_row_and_boundaries.md`, human-gated: fresh `gh repo create PyAutoLabs/PyAutoPulse`, org-profile row; name decided by the human 2026-10-02 — PyAutoPulse, organ key `pulse`; an earlier repo of that name became PyAutoHeart, so this is a fresh create), 1 `profiling-summary` v1 exporter in autolens_profiling (done: `complete/2026/10/profiling-summary-v1.md`, PR autolens_profiling#360), 2 organ skeleton — registry, reader, receipts, board, workflows (`pyautopulse/profiling_organ_p2_skeleton_registry_reader_board.md`), 3 Brain board strip + cockpit identity transition (`pyautopulse/profiling_organ_p3_brain_board_cockpit_transition.md`; supersedes `pyautobrain/register_profiling_dashboard_on_brain_board.md` unless that ships first), 4 second real `<lib>_profiling` adopter — no prompt until a real producer exists (spec: never manufacture empty siblings; a fixture is phase 2). Repoint the ledger to `PyAutoPulse/dashboard.md` once phase 2 lands. Issue ONE phase at a time. The inference organ is PyAutoInsight; its birth and registration shipped 2026-10-04. Campaign coordination and pending inference tasks now live in that organ, with Cortex retaining scientific authority.
-```
 
 </details>
 
