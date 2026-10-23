@@ -74,7 +74,14 @@
 - issued: 2026-10-23
 - prompt: active/github_token_phase4_retire_pat_mentions.md
 - session: Claude Code CLI (Opus 5.5); current chat
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/511
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/323
+- workspace-pr: https://github.com/PyAutoLabs/autolens_visualization/pull/18
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_visualization/pull/7
+- workspace-pr: https://github.com/PyAutoLabs/autofit_visualization/pull/6
+- workspace-pr: https://github.com/PyAutoLabs/autocti_visualization/pull/6
+- witness: FAILS as worded in Mind (historical lines + negative guard test) → human /prm, no tiered merge
 - worktree: ~/Code/PyAutoLabs-wt/github-token-p4-retire-pat-mentions
 - repos:
   - PyAutoMind: feature/github-token-p4-retire-pat-mentions
