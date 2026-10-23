@@ -40,3 +40,15 @@
 - user-facing: true
 - community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
 - prompt: active/matrix_free_interferometer_inversion.md
+
+## github-token-p1-hands-app
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/321
+- issued: 2026-10-23
+- prompt: active/github_token_phase1_hands_release_app_token.md
+- session: Claude Code CLI (Fable 5.1); session c837f591
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/github-token-p1-hands-app
+- authorization: human approved plan 2026-10-23; judge tier, human /prm; no live release from this task
+- repos:
+  - PyAutoHands: feature/github-token-p1-hands-app
+  - PyAutoHeart: feature/github-token-p1-hands-app

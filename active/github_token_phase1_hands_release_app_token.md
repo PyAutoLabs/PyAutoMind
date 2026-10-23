@@ -13,6 +13,7 @@ Parent: draft/release/pyautohands/github_token_and_secret_setup_full_review.md (
 Witness: a release.yml with zero `secrets.PAT_PYAUTOLABS`, zero `secrets[matrix.project.pat]`, zero URL-embedded tokens and zero `TWINE_PASSWORD`; a Heart read-only check that mints an App token and proves `git push --dry-run` to all five release libraries; a dry-run release dispatch green
 Review-minutes: 30
 Unattended: never
+Issued: 2026-10-23
 
 Phase 0 is DONE on GitHub (2026-10-23): org App `pyautolabs-bot` installed on all
 repos (actions/contents/issues/pull_requests/workflows write, metadata read),
