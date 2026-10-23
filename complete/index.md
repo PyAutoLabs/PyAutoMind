@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1967 records across 9 buckets.
+1968 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -198,6 +198,7 @@ markers; everything below GENERATED is rebuilt.
 - [ecosystem-layers](2026/10/ecosystem-layers.md)
 - [ecosystem-role-docs](2026/10/ecosystem-role-docs.md)
 - [ecosystem-routing-trial](2026/10/ecosystem-routing-trial.md) — Evaluated the role-routing checklist and specified future profiling/inference organ read contracts; no runtime…
+- [ep-evidence-nonfinite](2026/10/ep-evidence-nonfinite.md)
 - [ep-zero-success-factors](2026/10/ep-zero-success-factors.md)
 - [euclid-smoke-ordered-shard](2026/10/euclid-smoke-ordered-shard.md)
 - [euclid-smoke-release-gate](2026/10/euclid-smoke-release-gate.md)

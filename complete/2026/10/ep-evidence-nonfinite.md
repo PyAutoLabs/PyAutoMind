@@ -1,3 +1,19 @@
+Second finding of the analytic_gaussian wave-1 ruling R-20260910-04 (graphical-ep campaign; ledger PyAutoInsight `tasks/ep_campaign_state_2026-10-23.md`): seeds 25 and 172 emitted `RuntimeWarning: invalid value encountered in add` from `EPMeanField.log_evidence` and wrote NaN into `ep_history.csv`.
+
+**Diagnosis.** Reproduces on main under the default mode projection only (not moments). On sweep 4 (step 39 on seed 25, step 40 on seed 172) one HierarchicalFactor member sends the scatter `sigma` an accepted `TruncatedNormalMessage` with mean −7374.18 and sigma 384.36 on [0, 100], its support ~19 sigma into the tail. `TruncatedNormalMessage.log_partition` computes `log(Φ(b) − Φ(a))` directly, which underflows to −inf (true log Z ≈ −187.93 via `log_ndtr`); the variable's evidence is +inf, every adjacent factor term −inf, the sum NaN. Posterior rows bit-identical to the committed sidecars; `evidence_tol` is None so stopping is KL-only; the readout, its plot and the factor log line were the only casualties.
+
+**Shipped (reporting only).** PyAutoFit#1714: `log_evidence` detects non-finite terms before summing, names them once per fit (weakly keyed on the factor graph) in a logger warning and in `ep_diagnostics.results` (`evidence_nonfinite:` line), returns an explicit NaN with no numpy warnings; `EPHistory.evidence_divergence` returns inf on a NaN; new read-only `EPMeanField.nonfinite_evidence_terms`. No message arithmetic, projection or optimiser changes. 7 new tests (6 red before), graphical suite 329 passed, full suite serial 3890 passed. autofit_workspace_test#116: seed-0 EP legs assert no `ep_mean_field` RuntimeWarning and finite evidence; new seed-25 mode-projection leg (3 s) asserts the term is named; PARITY 53/53 in 2m05s.
+
+**New scope filed (human decision, message maths).** `draft/bug/autofit/truncated_normal_log_partition_tail_underflow.md` — tail-stable `log_partition` via `log_ndtr`, plus the question whether a message centred ~19 sigma outside its support should be accepted by the mode projection. Also filed from this PR's CI: `draft/bug/autofit/start_points_test_unseeded_identical_figures_of_merit_flake.md` (nojax leg flaked once on an unrelated unseeded test; re-run green on the human's call).
+
+**Gate at ship.** Heart YELLOW (manifest drift 1 mismatch; PyAutoLens release validation stale), the same reasons the human acknowledged earlier on 2026-10-23; witness passed (seeds 25/172 under `-W error::RuntimeWarning` exit 0 with the term named).
+
+**Remaining in the epic.** `ep_moments_loggaussian_transformed_scatter.md` (small; overlaps priors-tracker #1498/#1331), `ep_lbfgs_jax.md`, the tail-underflow prompt above, and the four human-gated RAL reruns.
+
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1714
+
+## Original prompt
+
 # NaN in EP evidence accumulation: `invalid value encountered in add` in ep_mean_field.py on analytic_gaussian seeds 25 and 172
 
 Type: bug

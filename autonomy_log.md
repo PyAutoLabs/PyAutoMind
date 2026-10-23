@@ -467,7 +467,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 41 (stage 1: 41, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — the pre-registered decision is due
+Count toward 20: 42 (stage 1: 42, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — the pre-registered decision is due
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -537,3 +537,4 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-10-23 | assistant-ai-options-page (PyAutoScientist#88 / autogalaxy_assistant#36 / autofit_assistant#57 / autocti_assistant#36 / pyautolabs.github.io#37 / autolens_workspace#597 / autogalaxy_workspace#260 / autofit_workspace#175) | glance | tests:n/a smoke:skipped-by-path-filter review:fable-diff heart:yellow-unrelated witness:none | merged-unchanged | 1 |
 | 2026-10-23 | point-magnification-workspace-docs (autolens_workspace#598) | glance | tests n/a (15/15 scripts run) / smoke 43/43 / review CLEAN independent / Heart YELLOW 85 within ack / witness PASS | merged-unchanged | 1 |
 | 2026-10-23 | ep-zero-success-factors (PyAutoFit#1712 / autofit_workspace_test#115) | glance | tests 3561 pass / smoke PARITY 49-49 / review n-a (human-approved plan, not --auto) / heart YELLOW-ack / witness pass | merged-unchanged | 1 |
+| 2026-10-23 | ep-evidence-nonfinite (PyAutoFit#1714 / autofit_workspace_test#116) | glance | tests 3890 pass serial / smoke PARITY 53-53 / review n-a (human-approved plan, not --auto) / heart YELLOW-ack / witness pass | merged-unchanged | 1 |
