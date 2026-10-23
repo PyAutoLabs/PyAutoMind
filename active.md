@@ -50,10 +50,10 @@
 - prompt: active/likelihood_lifecycle_p0_profiling.md
 - epic: likelihood-lifecycle
 - merged: https://github.com/PyAutoLabs/autolens_profiling/pull/444 (PR 1 of 6, migration map) → aeef2756, 2026-10-23
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/446 (PR 2 of 6, move-only, DRAFT, 45b1cfcc)
-- next: #441 lint timed out (15-min smoke, likely runner) → human rerun + /prm 441; then rebuild PR 2 on fresh main (regen map → apply → cherry-pick c07b5c7e/45b1cfcc) → un-draft → human /prm; PR 3 size rule: Delaunay 1250, rectangular 35²=1225
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/447 (PR 2 of 6, move-only, rebuilt after #441, 24caaeb2; #446 closed superseded)
+- next: human /prm #447; then PR 3 catalogue builder (@3; size rule Delaunay 1250 / rectangular 35²=1225; adapt remaining old-layout writers; drop results_layout.py shim)
 - repos:
-  - autolens_profiling: feature/likelihood-lifecycle-p0-profiling-move
+  - autolens_profiling: feature/likelihood-lifecycle-p0-profiling-move-v2
   - PyAutoPulse: feature/likelihood-lifecycle-p0-profiling (registry re-pin, after builder merges)
 
 ## autocti-viz-render-from-mains
