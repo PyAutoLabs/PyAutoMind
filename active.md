@@ -73,11 +73,14 @@
 - prompt: active/likelihood_lifecycle_p0_brain.md
 - epic: likelihood-lifecycle (phase 0, sub-issue 0E; ledger draft/research/autolens_profiling/likelihood_lifecycle_epic.md)
 - session: Claude Code CLI (Fable 5.1 orchestrator, Opus worker)
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p0-brain
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/536
 - classification: library (PyAutoBrain only; Feature Agent library workflow, direct)
 - tier: judge — human /prm
+- validation: live `pyauto-brain profiling campaign --json` byte-identical before/after (sha be73b898…, 22/23/4/17); pytest 1268 → 1282 (conductor 48→56, samplers 17→20, template 3 new); ruff unchanged; CI pytest 3.12/3.13 in progress at ship
+- heart: YELLOW at ship (workspace manifest drift; PyAutoLens release validation stale) — unrelated
 - authorization: human "I authorize you to go" 2026-10-23 — claim-guard override: PyAutoBrain also claimed by github-token-p2b-writers-app (#534); separate branches, different files; rebase if #534 lands first. Heart STALE at the door (continue).
-- next: Opus worker implements (a)–(d) → ship_library → human /prm; then 0B when the autolens_profiling starting-grid claim clears
+- next: human /prm PyAutoBrain#536 (no workspace impact, Brain not in the published set → no pending-release); then 0B when the autolens_profiling starting-grid claim clears
 - repos:
   - PyAutoBrain: feature/likelihood-lifecycle-p0-brain
