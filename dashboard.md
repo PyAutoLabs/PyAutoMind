@@ -14,7 +14,7 @@
 | [Planned](#planned) | 10 |
 | [Backlog](#backlog) | 283 |
 | [Recent](#recent) | 50 |
-| [Pending release](#pending-release) | 0 |
+| [Pending release](#pending-release) | 1 |
 
 ## Start here
 
@@ -903,7 +903,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/point_magnification_workspace_docs.md">Magnification at a point: document it in every source_science.py and the guides</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/596">issue #596</a> — issued 2026-10-23 — workspace-dev</summary>
+<details><summary>📋 <a href="active/point_magnification_workspace_docs.md">Magnification at a point: document it in every source_science.py and the guides</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/596">issue #596</a> — issued 2026-10-23 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/798">PyAutoLens#798</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/598">autolens_workspace#598</a> — ⏸ waiting on PyAutoLens's release</summary>
 
 ```
 Use the start-dev skill. active/point_magnification_workspace_docs.md
@@ -3116,7 +3116,9 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 ## Pending release
 
-_(nothing pending release)_
+**PyAutoLens**
+
+- ⏸ waiting: [Magnification at a point: document it in every source_science.py and the guides](active/point_magnification_workspace_docs.md)
 
 
 Boards: [organism](https://pyautolabs.github.io/PyAutoScientist/) · [brain](https://pyautolabs.github.io/PyAutoBrain/) · [cortex](https://pyautolabs.github.io/PyAutoCortex/) · [memory](https://pyautolabs.github.io/PyAutoMemory/) · [eyes](https://pyautolabs.github.io/PyAutoEyes/) · [ears](https://pyautolabs.github.io/PyAutoEars/) · [heart](https://pyautolabs.github.io/PyAutoHeart/) · [hands](https://pyautolabs.github.io/PyAutoHands/) · [pulse](https://pyautolabs.github.io/PyAutoPulse/) · [insight](https://pyautolabs.github.io/PyAutoInsight/) · [dna](https://pyautolabs.github.io/PyAutoDNA/) · [nerves](https://pyautolabs.github.io/PyAutoNerves/) · [broca](https://pyautolabs.github.io/PyAutoBroca/) · [gut](https://pyautolabs.github.io/PyAutoGut/)
