@@ -53,3 +53,16 @@
 - authorization: plan approved by the human in chat 2026-10-23 ("go"); research only, no library/workspace edits; laptop CPU fp64 sweep OK, any RAL leg and any A2744 compute need explicit human authorization in chat.
 - repos:
   - autolens_profiling: feature/cluster-pointsolver-starting-grid
+
+## ep-evidence-nonfinite
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1713
+- issued: 2026-10-23
+- prompt: active/nan_in_ep_evidence_accumulation_invalid_value.md
+- epic: graphical-ep (ledger PyAutoInsight tasks/ep_campaign.md + tasks/ep_campaign_state_2026-10-23.md)
+- session: Claude Code CLI (Fable 5.1); session e889c72e
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/ep-evidence-nonfinite
+- tier: glance — auto-merge on green if the Witness passes
+- repos:
+  - PyAutoFit: feature/ep-evidence-nonfinite
+  - autofit_workspace_test: feature/ep-evidence-nonfinite
