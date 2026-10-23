@@ -69,12 +69,13 @@
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/162
 - issued: 2026-10-23
 - session: claude-code (local CLI, Opus 5.5)
-- status: workspace-dev
+- status: ready-to-ship
 - worktree: ~/Code/PyAutoLabs-wt/assistant-readmes-human-style
 - prompt: active/assistant_readmes_human_style.md
-- next: autolens README done; autogalaxy/autofit/autocti restyle in progress; then /ship_workspace (4 PRs, human /prm)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/163, https://github.com/PyAutoLabs/autogalaxy_assistant/pull/37, https://github.com/PyAutoLabs/autofit_assistant/pull/58, https://github.com/PyAutoLabs/autocti_assistant/pull/37
+- next: human AI-review of the prose, then /prm (judge tier); Brain style guide PyAutoBrain#538 merges independently
 - repos:
-  - autolens_assistant: docs/readme-human-readable
-  - autogalaxy_assistant: docs/readme-human-readable
-  - autofit_assistant: docs/readme-human-readable
-  - autocti_assistant: docs/readme-human-readable
+  - autolens_assistant: feature/assistant-readmes-human-style
+  - autogalaxy_assistant: feature/assistant-readmes-human-style
+  - autofit_assistant: feature/assistant-readmes-human-style
+  - autocti_assistant: feature/assistant-readmes-human-style
