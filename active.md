@@ -45,7 +45,10 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/799
 - issued: 2026-10-23
 - session: claude-code (local CLI)
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/800
+- decision: opt-in residual_threshold (default None); recommended k=10; turning it on by default is a human call at /prm
+- heart-ack: YELLOW acknowledged 2026-10-23 (manifest drift 1 mismatch; PyAutoLens release validation stale)
 - worktree: ~/Code/PyAutoLabs-wt/point-solver-spurious-core
 - prompt: active/point_solver_spurious_core_candidates.md
 - epic: cluster-pointsolver-speed
