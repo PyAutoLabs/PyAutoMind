@@ -89,3 +89,17 @@
 - repos:
   - autolens_profiling: feature/likelihood-lifecycle-p0-profiling
   - PyAutoPulse: feature/likelihood-lifecycle-p0-profiling (registry re-pin, after builder merges)
+
+## assistant-readmes-human-style
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/162
+- issued: 2026-10-23
+- session: claude-code (local CLI, Opus 5.5)
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/assistant-readmes-human-style
+- prompt: active/assistant_readmes_human_style.md
+- next: autolens README done; autogalaxy/autofit/autocti restyle in progress; then /ship_workspace (4 PRs, human /prm)
+- repos:
+  - autolens_assistant: docs/readme-human-readable
+  - autogalaxy_assistant: docs/readme-human-readable
+  - autofit_assistant: docs/readme-human-readable
+  - autocti_assistant: docs/readme-human-readable
