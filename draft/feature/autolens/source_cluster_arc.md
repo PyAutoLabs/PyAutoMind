@@ -733,3 +733,6 @@ and `release validation incomplete: no rehearsal for current source`. Stopped fo
 acknowledgement; next: push, PR (judge tier, human /prm), smoke_test, then file phase 5b
 (source_science.py both tiers + guides/lens_calc.py + guides/advanced/multi_plane.py +
 point-source results guide).
+
+Human acknowledged both YELLOW reasons and authorized /prm on green, then phase 5b under --auto
+(2026-10-23). PR https://github.com/PyAutoLabs/PyAutoLens/pull/798 @6cb5eed0f, pending-release.
