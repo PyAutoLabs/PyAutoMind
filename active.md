@@ -53,3 +53,16 @@
 - repos:
   - PyAutoFit: feature/ep-zero-success-factors
   - autofit_workspace_test: feature/ep-zero-success-factors
+
+## cluster-pointsolver-starting-grid
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/439
+- issued: 2026-10-23
+- prompt: active/cluster_pointsolver_starting_grid_close_member_image.md
+- epic: cluster-pointsolver-speed (ledger PyAutoPulse tasks/cluster_pointsolver_speed.md; Pulse PR #72 check-in)
+- session: Claude Code CLI (Fable 5.1)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/cluster-pointsolver-starting-grid
+- tier: judge — merge mode: human /prm
+- authorization: plan approved by the human in chat 2026-10-23 ("go"); research only, no library/workspace edits; laptop CPU fp64 sweep OK, any RAL leg and any A2744 compute need explicit human authorization in chat.
+- repos:
+  - autolens_profiling: feature/cluster-pointsolver-starting-grid

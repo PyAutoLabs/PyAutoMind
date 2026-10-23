@@ -7,12 +7,14 @@ Repos:
 Difficulty: small
 Autonomy: supervised
 Priority: medium
-Status: draft
+Status: issued
 Consequence: judge
 Epic: cluster-pointsolver-speed
 Related: `complete/2026/10/cluster-pointsolver-robust-settings.md` (autolens_profiling#436, merged #438 2026-10-22; decision deferred pending this question). Phase 1 is closed, so run this as a follow-up row set on its `robust_settings_sweep.py` harness. A2744 pilot pulled 2026-10-23: job 412573 FAILED after 16 diagnostic rows; on A2744 the 1.0″ grid misses 2/69 roots vs 0.5″ 3 and 0.7″ 5 — the opposite ordering to `simple`.
 Origin: complete/2026/10/cluster-point-solver-readability.md (PyAutoLens#795/#796)
 Filed: 2026-10-22
+Issued: 2026-10-23
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/439
 
 ## Original request (verbatim)
 
