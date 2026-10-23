@@ -120,7 +120,7 @@ GITHUB_FILES = {
     ".github/workflows/arxiv_interests.yml": (
         "name: interests\non:\n  schedule:\n    - cron: \"30 2 * * 1-5\"\n"
         "jobs:\n  i:\n    runs-on: ubuntu-latest\n    steps:\n"
-        "      - env:\n          PAT: ${{ secrets.PAT_PYAUTOLABS }}\n"
+        "      - env:\n          APP_KEY: ${{ secrets.APP_PRIVATE_KEY }}\n"
         "        run: echo x\n"
     ),
     ".github/scripts/arxiv_interests.py": "CATEGORIES = ('astro-ph.CO',)\n",

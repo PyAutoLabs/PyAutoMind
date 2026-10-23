@@ -157,9 +157,10 @@ MIND_RULES = [
     # Ordered before the .github/scripts DROP and each other; first match wins.
     (".github/workflows/lifecycle_drift.yml", "KEEP"),  # 9a: self-contained
     # 9b: DROP (revised in #125). The self-heal makes this workflow depend on
-    # secrets.PAT_PYAUTOLABS and on published *-template repos; a fresh org has
-    # neither, so every path in it is unrunnable there and the secret reference
-    # alone breaks rule 9's no-configured-secret condition.
+    # the org App credential (vars.APP_CLIENT_ID / secrets.APP_PRIVATE_KEY) and
+    # on published *-template repos; a fresh org has neither, so every path in
+    # it is unrunnable there and the secret reference alone breaks rule 9's
+    # no-configured-secret condition.
     (".github/workflows/spawn_drift.yml", "DROP"),
     # 9c — instance automation: sibling repo lists, organ-specific workflow
     # names, org secrets, strong-lensing vocabulary. Every one of the 13 failing
@@ -177,7 +178,7 @@ MIND_RULES = [
     (".github/workflows/morning_health.yml", "DROP"),
     (".github/workflows/arxiv_papers.yml", "DROP"),
     # rule 9c, same as its sibling above: scheduled, needs the papers
-    # webhook-less cross-repo PAT, and pushes to another org repo.
+    # webhook-less cross-repo App token, and pushes to another org repo.
     (".github/workflows/arxiv_interests.yml", "DROP"),
     # 9c also: the tenant-firewall gate checks out three sibling organ repos by
     # name (PyAutoBrain/PyAutoHeart/PyAutoHands). A fresh org has none of them,
@@ -185,9 +186,10 @@ MIND_RULES = [
     # the same failure mode as dashboard_refresh.yml.
     (".github/workflows/firewall_gate.yml", "DROP"),
     # 9c also: the SessionStart-hook propagator. It clones every sibling repo
-    # in the manifest with secrets.PAT_PYAUTOLABS and pushes bot commits into
-    # them by name — firewall_gate.yml's org-coupled shape, multiplied by
-    # thirty, plus rule 9's no-configured-secret condition. A fresh org has no
+    # in the manifest with an org App token (vars.APP_CLIENT_ID /
+    # secrets.APP_PRIVATE_KEY) and pushes bot commits into them by name —
+    # firewall_gate.yml's org-coupled shape, multiplied by thirty, plus rule
+    # 9's no-configured-secret condition. A fresh org has no
     # siblings to propagate into and no such secret to do it with.
     (".github/workflows/session_hook_propagate.yml", "DROP"),
     # Same rule 9c: sibling pushes require an org token and an adopted manifest.
