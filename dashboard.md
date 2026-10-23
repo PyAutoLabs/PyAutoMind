@@ -871,7 +871,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/github_token_phase3_dashboard_dispatchers_app_token.md">GitHub token consolidation phase 3: the seven dashboard dispatchers on the App</a> — <a href="https://github.com/PyAutoLabs/autolens_visualization/issues/16">issue #16</a> — issued 2026-10-23 — workspace-dev</summary>
+<details><summary>📋 <a href="active/github_token_phase3_dashboard_dispatchers_app_token.md">GitHub token consolidation phase 3: the seven dashboard dispatchers on the App</a> — <a href="https://github.com/PyAutoLabs/autolens_visualization/issues/16">issue #16</a> — issued 2026-10-23 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_visualization/pull/17">autolens_visualization#17</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_visualization/pull/6">autogalaxy_visualization#6</a>, <a href="https://github.com/PyAutoLabs/autofit_visualization/pull/5">autofit_visualization#5</a>, <a href="https://github.com/PyAutoLabs/autocti_visualization/pull/5">autocti_visualization#5</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/443">autolens_profiling#443</a>, <a href="https://github.com/PyAutoLabs/autofit_profiling/pull/7">autofit_profiling#7</a>, <a href="https://github.com/PyAutoLabs/autolens_inference/pull/46">autolens_inference#46</a></summary>
 
 ```
 Use the start-dev skill. active/github_token_phase3_dashboard_dispatchers_app_token.md
