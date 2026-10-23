@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 17 |
-| [In flight](#in-flight) | 5 |
+| [In flight](#in-flight) | 4 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 281 |
+| [Backlog](#backlog) | 282 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 2 |
 
@@ -887,14 +887,6 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/render_fails_no_module_autonerves.md">autocti_visualization render.yml fails: No module named 'autonerves' under the released stack</a> — <a href="https://github.com/PyAutoLabs/autocti_visualization/issues/7">issue #7</a> — issued 2026-10-23 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autocti_visualization/pull/8">autocti_visualization#8</a></summary>
-
-```
-Use the start-dev skill. active/render_fails_no_module_autonerves.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/tutorial_4_runtime_claim.md">HowToFit tutorial 4 promises "under a minute" and takes six</a> — <a href="https://github.com/PyAutoLabs/HowToFit/issues/72">issue #72</a> — issued 2026-10-17 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/HowToFit/pull/74">HowToFit#74</a></summary>
 
 ```
@@ -1043,7 +1035,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>bug</b> — 73</summary>
+<summary><b>bug</b> — 74</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -1593,6 +1585,14 @@ Use the start-dev skill. draft/bug/autoarray/reconstruction_noise_map_truncated_
 
 ```
 Use the start-dev skill. draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md">autocti_visualization manifest <code>rendered_with:</code> shows stale source-checkout versions in mains mode</a> — autocti_visualization · easy · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md
 ```
 
 </details>
@@ -2853,7 +2853,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 |------|-------|------|
 | 2026-10-23 | filed | <a href="draft/bug/autofit/start_points_test_unseeded_identical_figures_of_merit_flake.md">test_start_points.py draws unseeded start points and flakes on…</a> |
 | 2026-10-23 | filed | <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred…</a> |
-| 2026-10-23 | issued | <a href="active/render_fails_no_module_autonerves.md">autocti_visualization render.yml fails: No module named 'autonerves'…</a> |
+| 2026-10-23 | filed | <a href="draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md">autocti_visualization manifest <code>rendered_with:</code> shows stale…</a> |
 | 2026-10-23 | filed | <a href="draft/bug/autolens_profiling/stale_auto_simulated_cluster_dataset.md"><code>@autolens_profiling</code> stale auto-simulated <code>dataset/cluster/simple</code>…</a> |
 | 2026-10-23 | filed | <a href="draft/bug/autogalaxy/mass_sheet_deflections_fail_under_jax.md"><code>@PyAutoGalaxy</code> MassSheet deflections fail under JAX (ArrayIrregular…</a> |
 | 2026-10-23 | issued | <a href="active/likelihood_lifecycle_p0_profiling.md">Likelihood lifecycle phase 0B: autolens_profiling mirrored tree…</a> |
@@ -2968,7 +2968,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-108 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+109 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3010,10 +3010,10 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md`
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
+- `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`
 - `draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md`
 - `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
-- `draft/bug/autolens/point_solver_error_bisect_health.md`
-- _… and 68 more_
+- _… and 69 more_
 
 </details>
 

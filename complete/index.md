@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1978 records across 10 buckets.
+1979 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -132,6 +132,7 @@ markers; everything below GENERATED is rebuilt.
 - [assistant-ai-options-page](2026/10/assistant-ai-options-page.md) — 2026-10-23
 - [assistant-feedback-distribution](2026/10/assistant-feedback-distribution.md)
 - [assistant-readmes-human-style](2026/10/assistant-readmes-human-style.md)
+- [autocti-viz-render-from-mains](2026/10/autocti-viz-render-from-mains.md) — `autocti_visualization/.github/workflows/render.yml` could never pass. It installed `autocti[optional]` from P…
 - [benchmark-forward-model-consistency](2026/10/benchmark-forward-model-consistency.md) — Added the frozen imaging/point-source/interferometer consistency card, physical conversions, source-centre-awa…
 - [benchmark-positions-inference](2026/10/benchmark-positions-inference.md)
 - [board-navigation-core](2026/10/board-navigation-core.md)

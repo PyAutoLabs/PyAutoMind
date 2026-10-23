@@ -1,3 +1,18 @@
+- summary: `autocti_visualization/.github/workflows/render.yml` could never pass. It installed `autocti[optional]` from PyPI, whose newest release is `2024.11.13.2` (autocti is not on the Hands release train), and that predates `autonerves`, which the producers import. Human decision 2026-10-23: render from the mains.
+  - Default (blank version) now checks out the PyAutoNerves/Fit/Array/CTI mains into gitignored `_libs/` and installs them as `lint.yml` does.
+  - An explicit `autocti_version` or a `pyautocti-release` dispatch keeps the PyPI install.
+  - A "Report where the stack came from" step was added, and the bot commit names the library SHAs.
+  - `AGENTS.md` Testing / Eyes contracts and `.gitignore` were updated.
+- evidence: PR lint green. Post-merge render 40032877406 on main passed every step, the first green render since the repo was born:
+  - bot commit c4a9752 `re-render gallery with PyAutoCTI main@2a91ff5` (Nerves f116f70, Fit 919ebd4, Array d99ec2b);
+  - App mint, then `eyes-refresh`;
+  - PyAutoEyes Dashboard Refresh 40033172516 success.
+  This also closes the GitHub-token phase 3 proof for this repo, so phase 3 is 7/7 proven.
+- follow-up: the manifest's `rendered_with:` still shows the source checkout's stale stamps (`autocti: 2024.11.13.2`, `autoarray`/`autofit: 2026.8.17.1`), which PyAutoEyes displays. See draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md.
+- heart: YELLOW acknowledged by the human 2026-10-23 (manifest drift on one workspace checkout; PyAutoLens release validation stale), unrelated.
+
+## Original prompt
+
 # autocti_visualization render.yml fails: No module named 'autonerves' under the released stack
 
 Type: bug
