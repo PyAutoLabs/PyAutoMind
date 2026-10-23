@@ -20,9 +20,9 @@ autolens_profiling#439 measured the workspace cluster example's `PointSolver` gr
 ## Deliverables
 
 1. Keep the 100×100 @ 1.0″ solver. After the best-fit solve, match each observed image to a solved image within a few σ of the positional noise.
-2. For every unmatched observed image, re-solve on a small fine grid around it (e.g. `PointSolver.for_limits_and_scale`, ±1″ at 0.05″) and report what was recovered; drop any solved candidate whose source-plane residual exceeds the solver tolerance.
+2. For every unmatched observed image, re-solve on a small fine grid around it (e.g. `PointSolver.for_limits_and_scale`, ±1″ at 0.05″) and report what was recovered. (Candidates with a source-plane residual above 10 × precision are already dropped by the solver default, `residual_threshold`, from PyAutoLens#800.)
 3. Print/record the per-source match table in the example's output; mirror in the `cluster/` notebook via the usual generation.
 
 ## Out of scope
 
-Library changes (the spurious-core-candidate question is `draft/feature/autolens/point_solver_spurious_core_candidates.md`); changing the modelling grid default.
+Library changes (the spurious-core candidates are SHIPPED, on by default: PyAutoLens#800, record `complete/2026/10/point-solver-spurious-core.md`; this check no longer needs its own residual drop); changing the modelling grid default.

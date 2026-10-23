@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-10-23T21:19:54Z",
+  "headline": "RED \u2014 24 picks \u00b7 5 in flight",
+  "updated": "2026-10-23T21:24:36Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,12 +12,6 @@
       "text": "HowToFit tutorial 5 (EP) never shares the centre it says it shares \u2014 workspace-shipped, blocked-CI",
       "url": "https://github.com/PyAutoLabs/HowToFit/pull/75",
       "prompt": "Use the start-dev skill. active/tutorial_5_ep_shared_centre_never_assigned.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "`@PyAutoLens` PointSolver: spurious candidates exactly on `r_core = 0` dPIE member cores \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/800",
-      "prompt": "Use the start-dev skill. active/point_solver_spurious_core_candidates.md"
     },
     {
       "severity": "yellow",
@@ -47,6 +41,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1712 \u2014 ep-zero-success-factors",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1712",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoLens PyAutoLens#800 \u2014 What shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/800",
       "prompt": null
     },
     {
