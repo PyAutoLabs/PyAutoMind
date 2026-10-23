@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-10-23T15:13:15Z",
+  "updated": "2026-10-23T15:13:40Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -15,7 +15,7 @@
     },
     {
       "severity": "yellow",
-      "text": "NaN in EP evidence accumulation: `invalid value encountered in add` in ep_mean_field.py\u2026 \u2014 library-shipped, workspace-pending",
+      "text": "NaN in EP evidence accumulation: `invalid value encountered in add` in ep_mean_field.py\u2026 \u2014 workspace-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1714",
       "prompt": "Use the start-dev skill. active/nan_in_ep_evidence_accumulation_invalid_value.md"
     },
