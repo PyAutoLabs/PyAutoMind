@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1964 records across 9 buckets.
+1965 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -156,6 +156,7 @@ markers; everything below GENERATED is rebuilt.
 - [cluster-point-figures](2026/10/cluster-point-figures.md)
 - [cluster-point-solver-readability](2026/10/cluster-point-solver-readability.md)
 - [cluster-pointsolver-robust-settings](2026/10/cluster-pointsolver-robust-settings.md)
+- [cluster-pointsolver-starting-grid](2026/10/cluster-pointsolver-starting-grid.md)
 - [cockpit-actionable-state](2026/10/cockpit-actionable-state.md) — Additive v1 state/action/safety/decision metadata with overnight workflow evidence; cockpit reason/action rend…
 - [cockpit-overflow-fix](2026/10/cockpit-overflow-fix.md)
 - [community-board-readability](2026/10/community-board-readability.md)

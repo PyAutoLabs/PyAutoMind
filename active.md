@@ -41,21 +41,6 @@
 - community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
 - prompt: active/matrix_free_interferometer_inversion.md
 
-## cluster-pointsolver-starting-grid
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/439
-- issued: 2026-10-23
-- prompt: active/cluster_pointsolver_starting_grid_close_member_image.md
-- epic: cluster-pointsolver-speed (ledger PyAutoPulse tasks/cluster_pointsolver_speed.md; Pulse PR #72 check-in)
-- session: Claude Code CLI (Fable 5.1)
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/440
-- heart-at-ship: YELLOW (manifest drift: workspace checkouts 1 mismatch; release validation stale: PyAutoLens) — unrelated, human acknowledges at /prm
-- worktree: ~/Code/PyAutoLabs-wt/cluster-pointsolver-starting-grid
-- tier: judge — merge mode: human /prm
-- authorization: plan approved by the human in chat 2026-10-23 ("go"); research only, no library/workspace edits; laptop CPU fp64 sweep OK, any RAL leg and any A2744 compute need explicit human authorization in chat.
-- repos:
-  - autolens_profiling: feature/cluster-pointsolver-starting-grid
-
 ## ep-evidence-nonfinite
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1713
 - issued: 2026-10-23
@@ -96,4 +81,3 @@
 - next: Opus worker implements (a)–(d) → ship_library → human /prm; then 0B when the autolens_profiling starting-grid claim clears
 - repos:
   - PyAutoBrain: feature/likelihood-lifecycle-p0-brain
-
