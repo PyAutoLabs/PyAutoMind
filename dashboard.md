@@ -895,7 +895,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/github_token_phase1_hands_release_app_token.md">GitHub token consolidation phase 1: Hands release path on the pyautolabs-bot App</a> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/321">issue #321</a> — issued 2026-10-23 — library-dev</summary>
+<details><summary>📋 <a href="active/github_token_phase1_hands_release_app_token.md">GitHub token consolidation phase 1: Hands release path on the pyautolabs-bot App</a> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/321">issue #321</a> — issued 2026-10-23 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/316">PyAutoHeart#316</a>, <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/322">PyAutoHands#322</a></summary>
 
 ```
 Use the start-dev skill. active/github_token_phase1_hands_release_app_token.md
