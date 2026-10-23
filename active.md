@@ -60,7 +60,7 @@
 - issued: 2026-10-23
 - prompt: active/assistant_ai_options_unified_page.md
 - session: Claude Code (Fable 5.1), laptop CLI; session ID unavailable
-- status: workspace-shipped, awaiting-merge (8 docs PRs; merge PyAutoScientist#88 first; Heart YELLOW at ship, unrelated reasons recorded on PRs; decision-taken, human /prm)
+- status: awaiting-merge, 6/8 MERGED 2026-10-23 (Scientist#88, autofit_assistant#57, autocti_assistant#36, ws#597/#260/#175); OPEN: autogalaxy_assistant#36 (wiki-currency RED: baseline pinned autoarray 2026.10.18.1, PyPI now 2026.10.22.1 — needs baseline re-pin on main, not this PR), site#37 (no CI configured, human merge call)
 - worktree: ~/Code/PyAutoLabs-wt/assistant-ai-options-page
 - prs:
   - PyAutoScientist: https://github.com/PyAutoLabs/PyAutoScientist/pull/88
