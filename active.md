@@ -59,7 +59,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/797
 - issued: 2026-10-23
 - session: Claude Code CLI (Fable 5.1), session bac93ca4
-- status: library-dev
+- status: library-dev (committed locally, awaiting Heart YELLOW ack before push/PR)
 - worktree: ~/Code/PyAutoLabs-wt/point-magnification-signed-surface
 - repos:
   - PyAutoLens: feature/point-magnification-signed-surface

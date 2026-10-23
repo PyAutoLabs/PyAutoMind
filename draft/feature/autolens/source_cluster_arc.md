@@ -720,3 +720,16 @@ expect bespoke figures or updated tool defaults. No phase issued by this note.
 Phase 5a issued as PyAutoLens#797 (2026-10-23) after human approval; prompt moved to
 `active/point_magnification_signed_surface.md`; claim registered in active.md on
 `feature/point-magnification-signed-surface`. Entering start_library; execution delegated to Opus.
+
+## Phase 5a implemented, awaiting Heart YELLOW acknowledgement — 2026-10-23
+
+Opus worker implemented PyAutoLens#797 in the task worktree; Fable reviewed the diff, moved a
+misplaced docstring paragraph, and restored `dataset.py` to base plus the docstring edit after
+black reformatted it. Committed locally on `feature/point-magnification-signed-surface` (not
+pushed). Full suite 941 passed / 1 xfailed; focused point tests 308 passed / 1 xfailed; black
+clean on changed files. No workspace consumer of the accessor (ship option iii). Heart YELLOW:
+`manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml`
+and `release validation incomplete: no rehearsal for current source`. Stopped for the human's
+acknowledgement; next: push, PR (judge tier, human /prm), smoke_test, then file phase 5b
+(source_science.py both tiers + guides/lens_calc.py + guides/advanced/multi_plane.py +
+point-source results guide).
