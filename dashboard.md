@@ -12,7 +12,7 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 280 |
+| [Backlog](#backlog) | 282 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -372,7 +372,7 @@ Use the start-dev skill. draft/maintenance/autolens/point_source_cpu_campaign_ow
 </details>
 
 <details>
-<summary><b>Cluster PointSolver — robustness and performance</b> — 1 queued prompt(s), in order</summary>
+<summary><b>Cluster PointSolver — robustness and performance</b> — 3 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Cluster PointSolver — robustness and performance</b> — ledger: `https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/cluster_pointsolver_speed.md` — Phase 1 (cluster-scale robust settings, autolens_profiling#436 → #438 <code>c8c9abb3</code>) MERGED 2026-10-22, record…</summary>
 
@@ -386,6 +386,22 @@ Continue the 'Cluster PointSolver — robustness and performance' epic. Its cano
 
 ```
 Use the start-dev skill. draft/bug/autolens/point_solver_error_bisect_health.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/point_solver_spurious_core_candidates.md"><code>@PyAutoLens</code> PointSolver: spurious candidates exactly on <code>r_core = 0</code> dPIE member cores</a> — autolens · small · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens/point_solver_spurious_core_candidates.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens_workspace/cluster_point_solver_validation_check.md"><code>@autolens_workspace</code> cluster example: validate the best-fit PointSolver images against the observed positions</a> — autolens_workspace · small · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens_workspace/cluster_point_solver_validation_check.md
 ```
 
 </details>
@@ -863,7 +879,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/cluster_pointsolver_starting_grid_close_member_image.md"><code>@autolens_profiling</code> cluster PointSolver: does the workspace's 1.0″ starting grid lose an image…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/439">issue #439</a> — issued 2026-10-23 — library-dev</summary>
+<details><summary>📋 <a href="active/cluster_pointsolver_starting_grid_close_member_image.md"><code>@autolens_profiling</code> cluster PointSolver: does the workspace's 1.0″ starting grid lose an image…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/439">issue #439</a> — issued 2026-10-23 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/440">autolens_profiling#440</a></summary>
 
 ```
 Use the start-dev skill. active/cluster_pointsolver_starting_grid_close_member_image.md
@@ -2979,7 +2995,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-109 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+111 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2995,8 +3011,10 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autolens/area_magnification_leggos.md`
 - `draft/feature/autolens/cluster_curves_engine_dispatch.md`
 - `draft/feature/autolens/magnification_maps_visualization.md`
+- `draft/feature/autolens/point_solver_spurious_core_candidates.md`
 - `draft/feature/autolens/source_cluster_arc.md`
 - `draft/feature/autolens_jax_joss/autolens_jax_joss_benchmark_repo.md`
+- `draft/feature/autolens_workspace/cluster_point_solver_validation_check.md`
 - `draft/feature/autolens_workspace/pointsolver_grid_extent_per_package.md`
 - `draft/feature/cortex/human_readable_projects_dashboard.md`
 - `draft/feature/cortex/output_summary.md`
@@ -3022,9 +3040,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md`
 - `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
-- `draft/bug/autolens/point_source_plot_script_residual_shape_mismatch.md`
-- `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md`
-- _… and 69 more_
+- _… and 71 more_
 
 </details>
 
