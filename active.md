@@ -64,7 +64,7 @@
 - prompt: active/likelihood_lifecycle_p0_profiling.md
 - epic: likelihood-lifecycle
 - merged: https://github.com/PyAutoLabs/autolens_profiling/pull/444 (PR 1 of 6, migration map) → aeef2756, 2026-10-23
-- next: PR 2 move-only on a fresh branch from main (regenerate the map first if #441 merged; never under live RAL jobs on a RAL checkout); open human question: production nN per light_fixed mesh (before PR 3)
+- next: PR 2 move-only on a fresh branch from main (regenerate the map first if #441 merged; never under live RAL jobs on a RAL checkout); PR 3 size rule decided: Delaunay 1250, rectangular 35²=1225 (see ledger)
 - repos:
   - autolens_profiling: feature/likelihood-lifecycle-p0-profiling
   - PyAutoPulse: feature/likelihood-lifecycle-p0-profiling (registry re-pin, after builder merges)
