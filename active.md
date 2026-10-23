@@ -60,8 +60,8 @@
 - worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p0-profiling
 - prompt: active/likelihood_lifecycle_p0_profiling.md
 - epic: likelihood-lifecycle
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/444 (PR 1 of 6, migration map, c9ffd9ee)
-- next: human review of map + /prm #444 (rebase + rerun build_migration_map after #441 merges); then PR 2 move-only (never under live RAL jobs on a RAL checkout)
+- merged: https://github.com/PyAutoLabs/autolens_profiling/pull/444 (PR 1 of 6, migration map) → aeef2756, 2026-10-23
+- next: PR 2 move-only on a fresh branch from main (regenerate the map first if #441 merged; never under live RAL jobs on a RAL checkout); open human question: production nN per light_fixed mesh (before PR 3)
 - repos:
   - autolens_profiling: feature/likelihood-lifecycle-p0-profiling
   - PyAutoPulse: feature/likelihood-lifecycle-p0-profiling (registry re-pin, after builder merges)
