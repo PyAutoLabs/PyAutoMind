@@ -12,6 +12,7 @@
 - [interferometer-primary-beam-persistence-mirror](#interferometer-primary-beam-persistence-mirror)
 - [likelihood-lifecycle-p0-profiling](#likelihood-lifecycle-p0-profiling)
 - [point-plots-yaml-keys-assistant](#point-plots-yaml-keys-assistant)
+- [point-magnification-workspace-docs](#point-magnification-workspace-docs)
 
 <!-- toc:end -->
 
