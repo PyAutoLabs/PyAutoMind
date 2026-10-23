@@ -871,7 +871,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/github_token_phase4_retire_pat_mentions.md">GitHub token consolidation phase 4: retire every remaining PAT_PYAUTOLABS mention</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/510">issue #510</a> — issued 2026-10-23 — workspace-dev</summary>
+<details><summary>📋 <a href="active/github_token_phase4_retire_pat_mentions.md">GitHub token consolidation phase 4: retire every remaining PAT_PYAUTOLABS mention</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/510">issue #510</a> — issued 2026-10-23 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/511">PyAutoMind#511</a>, <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/323">PyAutoHands#323</a>, <a href="https://github.com/PyAutoLabs/autolens_visualization/pull/18">autolens_visualization#18</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_visualization/pull/7">autogalaxy_visualization#7</a>, <a href="https://github.com/PyAutoLabs/autofit_visualization/pull/6">autofit_visualization#6</a>, <a href="https://github.com/PyAutoLabs/autocti_visualization/pull/6">autocti_visualization#6</a></summary>
 
 ```
 Use the start-dev skill. active/github_token_phase4_retire_pat_mentions.md
