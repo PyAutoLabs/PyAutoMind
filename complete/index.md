@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1969 records across 9 buckets.
+1970 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -125,6 +125,7 @@ markers; everything below GENERATED is rebuilt.
 - [adaptsplit-logdet-backend-parity](2026/10/adaptsplit-logdet-backend-parity.md)
 - [assistant-ai-options-page](2026/10/assistant-ai-options-page.md) — 2026-10-23
 - [assistant-feedback-distribution](2026/10/assistant-feedback-distribution.md)
+- [assistant-readmes-human-style](2026/10/assistant-readmes-human-style.md)
 - [benchmark-forward-model-consistency](2026/10/benchmark-forward-model-consistency.md) — Added the frozen imaging/point-source/interferometer consistency card, physical conversions, source-centre-awa…
 - [benchmark-positions-inference](2026/10/benchmark-positions-inference.md)
 - [board-navigation-core](2026/10/board-navigation-core.md)

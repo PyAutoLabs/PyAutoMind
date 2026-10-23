@@ -19,6 +19,12 @@ PyAutoScientist#87 (record `complete/2026/10/assistant-ai-options-page.md`) ship
 
 ## Scope (mirror the merged autogalaxy_assistant#36 diff)
 
+> **Update 2026-10-23:** the README bullet below is DONE — autolens_assistant#163 (record
+> `complete/2026/10/assistant-readmes-human-style.md`) rewrote the README, linked the shared AI options page and
+> moved Colab to a one-line pointer. Remaining scope: the `AI_OPTIONS.md` stub, the legacy deletions and the
+> AGENTS.md / llms.txt wording.
+
+
 - README: replace the "Choose Claude Code or Codex …" three-step block, the "If you cannot use either agent, OpenCode …" line and the "Experimental alternatives" section with the shared one-paragraph block + link + clone snippet + starting prompt. Move the Colab badge paragraph out of the getting-started block into the "Using PyAutoLens Assistant" learning context (keep `docs/colab/`).
 - Add `AI_OPTIONS.md` stub beside `AI_POLICY.md`.
 - Delete `docs/setup/opencode_cli.md`, `docs/evaluation/agent_evaluation.md`, `docs/archive/`, `.gemini/settings.json`; fold anything still unique in `docs/setup/{claude_code,codex_cli,troubleshooting,first_prompts}.md` into the shared page or keep `first_prompts.md` only.

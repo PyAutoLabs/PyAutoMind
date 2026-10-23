@@ -1,3 +1,17 @@
+The four science-assistant READMEs were rewritten for a human arriving cold, and the style was codified in PyAutoBrain.
+
+- autolens_assistant#163: README rewritten to the maintainer's spec (short Getting Started, one-line Colab pointer, strong-lens schematic, Teacher Mode subsection, advanced prompts in docs/advanced_examples.md, Scientific Context before Science Project, Conversational Assistants, Benchmarks near the end, AI-agent note collapsed at the bottom); plain-English Claude Code and Codex setup pages.
+- autogalaxy_assistant#37: restyled; roadmap moved to docs/whats_available.md.
+- autofit_assistant#58: restyled (465 → 228 lines); API tour → docs/tour.md, own-project steps → docs/your_own_project.md.
+- autocti_assistant#37: restyled; Teacher Mode and collapsed agent note added.
+- PyAutoBrain#538: skills/WRITING_STYLE.md (house style for people-facing pages), linked from /docs and the review faculty rubric. Root workspace AGENTS.md (untracked, local) gained an on-demand pointer.
+
+Heart was STALE at ship (Release STALE; PyAutoHands release workflow failure; manifest_drift workspace checkouts red); the maintainer approved shipping. Tier judge, human /prm.
+
+Follow-ups: draft/feature/pyautobrain/docs_conductor.md (dedicated Documentation conductor); draft/docs/autolens_assistant/ai_options_page_autolens_leg.md still holds the legacy deletions (opencode_cli.md, docs/archive/, .gemini/, agent_evaluation.md, AGENTS.md wording) — its README part is now done. Pre-existing test failures seen: autolens forward-model truth version pin; autofit hard_sne_cosmology README-parity; autocti benchmarks/prompts and test_mcp_tools.
+
+## Original prompt
+
 # Human-readable READMEs across the four science assistants
 
 Type: docs
