@@ -57,3 +57,16 @@
 - repos:
   - PyAutoHands: feature/github-token-p1-hands-app
   - PyAutoHeart: feature/github-token-p1-hands-app
+
+## ep-zero-success-factors
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1711
+- issued: 2026-10-23
+- prompt: active/ep_factors_end_the_run_with_zero.md
+- epic: graphical-ep (ledger PyAutoInsight tasks/ep_campaign.md)
+- session: Claude Code CLI (Fable 5.1); session e889c72e
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/ep-zero-success-factors
+- tier: glance — auto-merge on green if the Witness passes
+- repos:
+  - PyAutoFit: feature/ep-zero-success-factors
+  - autofit_workspace_test: feature/ep-zero-success-factors
