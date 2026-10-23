@@ -1,3 +1,17 @@
+## likelihood-lifecycle-p0-insight
+- issue: https://github.com/PyAutoLabs/PyAutoInsight/issues/39
+- completed: 2026-10-23
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/45
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoInsight/pull/40
+- epic: likelihood-lifecycle (phase 0, sub-issue 0D of 0A–0E)
+
+- Summary: Infrastructure only — no runs, no new result rows, no judgement of results (the human: every Insight result is rerun later under Optimal setups, phases 4 and 7). autolens_inference#45 (merged 5bdae73) fixes the 0C regression that had left PyAutoInsight's `lens` receipt `invalid` since bdc8b2d: `inference_catalogue.py` now publishes prepared-problem `baseline_record_id`/artifact `record_id` translated through `catalogue/migration_2026_10.json` at export time (manifests untouched), and withholds any record `problem_id` that names an unemitted prepared problem (15 rows, `problem_id_reason` names the id); new stdlib test `scripts/misc/test/test_catalogue_references_resolve.py`; artefacts re-exported; Insight validator 0 errors (was 57 = 36 artifact + 6 baseline + 15 problem); pytest 218. PyAutoInsight#40 (merged f2b38228) adds `summary.lifecycle_errors` in the shared per-record loop of `summary.validate` (v1/v2/v3): `setup_mode` ∈ {auto, explicit} with named refusal, `setup_resolved {backend, device, operator, precision, transformer, threads}`, `host_class`, `model_variant`, `likelihood {dataset_type, variant}` — declarations only, nothing cross-checked against Pulse, nothing feeds acceptance; `setup_browser.py` renders a `Setup: <mode> · <backend>/<device>/<operator>/<precision> · <host_class> · <model_variant>` line; fixture `experiment-cold` carries `setup_mode: auto`; REFERENCE/README/CHECKIN drift fixed (live pins `lens` @2 / `fit` @3, two live producers, `walltime-validation@1` routed to Pulse `lens-walltime`); pytest 204 → 219. No `inference-summary` version bump (Insight never refused the keys).
+- Witness MET: autolens_inference's `Publish inference summary` run dispatched the Insight refresh (b3e8e1d1); `receipts/lens.json` on Insight main = `outcome: ok` at 5bdae73a, 284 records, no errors.
+- Gotchas: #40 `lint` (`pyauto-insight check --offline`) reads the COMMITTED `receipts/lens.json`, so it stays red on any Insight PR until the producer fix lands on main and the refresh rewrites the receipt — merge the producer PR first, then merge origin/main into the Insight branch (new head, fresh green CI). 7th `prepared/` dir (`prepared-fe6fe94…`, jax_cpu sparse light_fixed seed 0) correctly stays in `coverage.excluded`: its baseline row was never committed. Heart YELLOW at ship (workspace manifest drift; PyAutoLens release validation stale), unrelated.
+- Next: 0E PyAutoBrain lifecycle template + conductor grid; 0B autolens_profiling stays queued (`planned.md likelihood-lifecycle-p0-profiling`) until the cluster-pointsolver starting-grid claim clears; `predicted_ms_per_eval`/`reference_runtime_record_id` fill only after 0B re-pins `lens` to @3.
+
+## Original prompt
+
 # Likelihood lifecycle phase 0D: PyAutoInsight additive lifecycle fields (`setup_mode: auto`), `setup_resolved` as provenance, doc drift after 0C, and the autolens_inference prepared-problem reference fix that returns the `lens` receipt to ok
 
 Type: feature
