@@ -57,3 +57,14 @@
   - autofit_profiling: feature/github-token-p3-dispatchers-app
   - autolens_inference: feature/github-token-p3-dispatchers-app
 - heart: STALE at the door (release validation stale; monitoring RED) — unrelated organ/library state
+
+## point-solver-spurious-core
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/799
+- issued: 2026-10-23
+- session: claude-code (local CLI)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/point-solver-spurious-core
+- prompt: active/point_solver_spurious_core_candidates.md
+- epic: cluster-pointsolver-speed
+- repos:
+  - PyAutoLens: feature/point-solver-spurious-core

@@ -8,11 +8,13 @@ Repos:
 Difficulty: small
 Autonomy: supervised
 Priority: medium
-Status: draft
+Status: active
 Consequence: judge
 Epic: cluster-pointsolver-speed
 Related: autolens_profiling#439 (PR #440), `results/notes/cluster_pointsolver_campaign.md`
 Filed: 2026-10-23
+Issued: 2026-10-23
+Issue: https://github.com/PyAutoLabs/PyAutoLens/issues/799
 
 ## Why
 
