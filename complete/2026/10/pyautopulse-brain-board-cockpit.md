@@ -8,6 +8,7 @@
 - deviations: autolens_profiling `build_state()` identity change split to `draft/feature/autolens_profiling/cockpit_feed_project_identity.md` (blocked on task evaluation-grid-cap-field's claim); hub README bullet added; no `sw.js` cache bump (caching unchanged).
 - traps: the Brain tenant-firewall CI step rejects a real instance name (`autolens_profiling`) in a test fixture — organ tests must use neutral names (`alpha_profiling`), as the Eyes fixture does; fixed on the branch (54a8008) before merge.
 - follow-ups: hub `index.html` link to the Pulse board (Eyes has one); autolens_profiling cockpit-feed identity (filed, blocked); `pulse-refresh` dispatch sender in autolens_profiling; `.github` org-profile Pulse row (human); phase 4 waits for a real second `_profiling` producer.
+- close-out 2026-10-23: phase 4 fulfilled 2026-10-14 by search-extensibility B4a (autofit_profiling → Pulse instance `fit`, PyAutoPulse#60, no reader change; record `search-ext-b4a-breakdown-exporter.md`); epic `profiling-organ-birth` marked COMPLETE and retired from `epics.md`.
 
 ## Original prompt
 
