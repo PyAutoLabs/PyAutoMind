@@ -54,27 +54,6 @@
 - repos:
   - autolens_profiling: feature/cluster-pointsolver-starting-grid
 
-## github-token-p2a-readers-app
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/531
-- issued: 2026-10-23
-- prompt: active/github_token_phase2a_readers_dispatchers_app_token.md
-- session: Claude Code CLI (Fable 5.1); session c837f591
-- status: library-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/github-token-p2a-readers-app
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/532
-- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/317
-- library-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/89
-- library-pr: https://github.com/PyAutoLabs/PyAutoMemory/pull/141
-- validation: all CI green on all four (none of the checks exercise the edited workflows). App installation verified with variables=write 2026-10-23 (Brain merge gate satisfied). Post-merge proof owed: dispatch Brain nightly dry_run, Heart heart-health, Scientist organism_board; Memory on next real filing.
-- heart: YELLOW acknowledged by the human 2026-10-23 (manifest drift on one workspace checkout; PyAutoLens release validation stale) — unrelated.
-- next: human /prm over all four; then post-merge dispatches; then 2b.
-- authorization: human approved the 2a/2b split and plan 2026-10-23; judge tier, human /prm
-- repos:
-  - PyAutoBrain: feature/github-token-p2a-readers-app
-  - PyAutoHeart: feature/github-token-p2a-readers-app
-  - PyAutoScientist: feature/github-token-p2a-readers-app
-  - PyAutoMemory: feature/github-token-p2a-readers-app
-
 ## likelihood-lifecycle-p0-insight
 - issue: https://github.com/PyAutoLabs/PyAutoInsight/issues/39
 - issued: 2026-10-23

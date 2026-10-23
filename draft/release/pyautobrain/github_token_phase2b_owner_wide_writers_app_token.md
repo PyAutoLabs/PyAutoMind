@@ -7,7 +7,7 @@ Repos:
 - PyAutoMind
 - PyAutoGut
 Difficulty: hard
-Blocked-by: github-token-p2a-readers-app (shares PyAutoBrain)
+Unblocked: 2026-10-23 (2a merged — complete/2026/10/github-token-p2a-readers-app.md)
 Autonomy: supervised
 Priority: high
 Status: formalised
