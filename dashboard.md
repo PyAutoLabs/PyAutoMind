@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 17 |
-| [In flight](#in-flight) | 4 |
+| [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 283 |
+| [Backlog](#backlog) | 281 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 2 |
 
@@ -871,6 +871,14 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
+<details><summary>📋 <a href="active/github_tokens_policy_headless_resolved.md">policy/github_tokens.md: record that RAL and Colab need no headless token</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/514">issue #514</a> — issued 2026-10-23 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/github_tokens_policy_headless_resolved.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/likelihood_lifecycle_p0_profiling.md">Likelihood lifecycle phase 0B: autolens_profiling mirrored tree, day-zero migration map, <code>profiling-summary@3</code> catalogue…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/442">issue #442</a> — issued 2026-10-23 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/446">autolens_profiling#446</a></summary>
 
 ```
@@ -883,6 +891,14 @@ Use the start-dev skill. active/likelihood_lifecycle_p0_profiling.md
 
 ```
 Use the start-dev skill. active/matrix_free_interferometer_inversion.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/render_fails_no_module_autonerves.md">autocti_visualization render.yml fails: No module named 'autonerves' under the released stack</a> — <a href="https://github.com/PyAutoLabs/autocti_visualization/issues/7">issue #7</a> — issued 2026-10-23 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/render_fails_no_module_autonerves.md
 ```
 
 </details>
@@ -1035,7 +1051,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>bug</b> — 74</summary>
+<summary><b>bug</b> — 73</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -1241,14 +1257,6 @@ Use the start-dev skill. draft/bug/autofit/visualization_warmup_swallowed_except
 
 ```
 Use the start-dev skill. draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autocti_visualization/render_fails_no_module_autonerves.md">autocti_visualization render.yml fails: No module named 'autonerves' under the released stack</a> — autocti_visualization · easy · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/bug/autocti_visualization/render_fails_no_module_autonerves.md
 ```
 
 </details>
@@ -2274,7 +2282,7 @@ Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_
 </details>
 
 <details>
-<summary><b>docs</b> — 24</summary>
+<summary><b>docs</b> — 23</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -2376,14 +2384,6 @@ Use the start-dev skill. draft/docs/autolens/plot_rst_missing_exports.md
 
 ```
 Use the start-dev skill. draft/docs/workspaces/demo_subplot_ellipse_errors.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/pyautomind/github_tokens_policy_headless_resolved.md">policy/github_tokens.md: record that RAL and Colab need no headless token</a> — pyautomind · easy · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/docs/pyautomind/github_tokens_policy_headless_resolved.md
 ```
 
 </details>
@@ -2860,9 +2860,9 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | Date | Event | Task |
 |------|-------|------|
 | 2026-10-23 | filed | <a href="draft/bug/autofit/start_points_test_unseeded_identical_figures_of_merit_flake.md">test_start_points.py draws unseeded start points and flakes on…</a> |
-| 2026-10-23 | filed | <a href="draft/docs/pyautomind/github_tokens_policy_headless_resolved.md">policy/github_tokens.md: record that RAL and Colab need no headless…</a> |
+| 2026-10-23 | issued | <a href="active/github_tokens_policy_headless_resolved.md">policy/github_tokens.md: record that RAL and Colab need no headless…</a> |
 | 2026-10-23 | filed | <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred…</a> |
-| 2026-10-23 | filed | <a href="draft/bug/autocti_visualization/render_fails_no_module_autonerves.md">autocti_visualization render.yml fails: No module named 'autonerves'…</a> |
+| 2026-10-23 | issued | <a href="active/render_fails_no_module_autonerves.md">autocti_visualization render.yml fails: No module named 'autonerves'…</a> |
 | 2026-10-23 | filed | <a href="draft/bug/autolens_profiling/stale_auto_simulated_cluster_dataset.md"><code>@autolens_profiling</code> stale auto-simulated <code>dataset/cluster/simple</code>…</a> |
 | 2026-10-23 | filed | <a href="draft/bug/autogalaxy/mass_sheet_deflections_fail_under_jax.md"><code>@PyAutoGalaxy</code> MassSheet deflections fail under JAX (ArrayIrregular…</a> |
 | 2026-10-23 | issued | <a href="active/likelihood_lifecycle_p0_profiling.md">Likelihood lifecycle phase 0B: autolens_profiling mirrored tree…</a> |
@@ -2976,7 +2976,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-109 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+108 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3018,10 +3018,10 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md`
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
-- `draft/bug/autocti_visualization/render_fails_no_module_autonerves.md`
 - `draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md`
 - `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
-- _… and 69 more_
+- `draft/bug/autolens/point_solver_error_bisect_health.md`
+- _… and 68 more_
 
 </details>
 
