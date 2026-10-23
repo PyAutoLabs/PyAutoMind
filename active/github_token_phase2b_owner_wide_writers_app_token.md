@@ -16,6 +16,7 @@ Parent: draft/release/pyautohands/github_token_and_secret_setup_full_review.md (
 Witness: `grep -rl PAT_PYAUTOLABS .github/workflows` is empty in all six repos; no `|| github.token` / `|| secrets.GITHUB_TOKEN` fallback on any cross-repo credential; one green dispatch of each migrated workflow that can run without side effects
 Review-minutes: 30
 Unattended: never
+Issued: 2026-10-23
 
 Phase 1 proved the App (Heart#316, Hands#322). Move every organ cross-repo
 writer off `PAT_PYAUTOLABS` onto per-job `actions/create-github-app-token@v3`

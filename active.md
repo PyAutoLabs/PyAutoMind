@@ -66,3 +66,16 @@
 - repos:
   - PyAutoFit: feature/ep-evidence-nonfinite
   - autofit_workspace_test: feature/ep-evidence-nonfinite
+
+## github-token-p2b-writers-app
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/534
+- issued: 2026-10-23
+- prompt: active/github_token_phase2b_owner_wide_writers_app_token.md
+- session: Claude Code CLI (Fable 5.1); session c837f591
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/github-token-p2b-writers-app
+- authorization: human approved 2b as one task 2026-10-23 and pre-acknowledged Heart YELLOW (manifest drift on one workspace checkout; PyAutoLens release validation stale) for its ship; judge tier, human /prm
+- repos:
+  - PyAutoBrain: feature/github-token-p2b-writers-app
+  - PyAutoGut: feature/github-token-p2b-writers-app
+  - PyAutoMind: feature/github-token-p2b-writers-app
