@@ -764,3 +764,14 @@ assistant-ai-options-page (branch had no commits; note left on its row). 5b prom
 planned → active (ws#596), worktree feature/point-magnification-workspace-docs. Effective
 autonomy safe, tier glance: ships through the four-leg autonomous gate, auto-merges on green if
 the Witness passes; PR pending-release until PyAutoLens#798 is released.
+
+## Phase 5b PR open — 2026-10-23
+
+autolens_workspace PR https://github.com/PyAutoLabs/autolens_workspace/pull/598 @51b9a898 (ws#596).
+Four-leg gate: tests n/a (15/15 edited scripts run clean); smoke curated autolens 43/43; independent
+Fable review CLEAN (Opus-authored branch; four claims basis-cited); Heart YELLOW 85 within ack —
+the new reason `release validation stale: source moved since rehearsal (PyAutoLens)` acknowledged by
+the human at PR-open. Witness PASS. Calibration row appended to autonomy_log.md. Glance tier →
+in-turn CI watch then /prm merge + close-out. Release-gate: PyAutoLens#798 unreleased (the two
+point_source scripts use its accessors). Review side-finding for a later one-liner: PyAutoGalaxy
+`lens_calc.py` docstring of `magnification_2d_via_hessian_from` says `abs(...)` but returns signed.
