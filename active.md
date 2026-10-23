@@ -46,7 +46,6 @@
 - issued: 2026-10-23
 - prompt: active/github_token_phase3_dashboard_dispatchers_app_token.md
 - session: Claude Code CLI (Opus 5.5); current chat
-- status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/github-token-p3-dispatchers-app
 - repos:
   - autolens_visualization: feature/github-token-p3-dispatchers-app
@@ -56,7 +55,16 @@
   - autolens_profiling: feature/github-token-p3-dispatchers-app
   - autofit_profiling: feature/github-token-p3-dispatchers-app
   - autolens_inference: feature/github-token-p3-dispatchers-app
-- heart: STALE at the door (release validation stale; monitoring RED) — unrelated organ/library state
+- status: workspace-shipped, awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_visualization/pull/17
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_visualization/pull/6
+- workspace-pr: https://github.com/PyAutoLabs/autofit_visualization/pull/5
+- workspace-pr: https://github.com/PyAutoLabs/autocti_visualization/pull/5
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/443
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/7
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/46
+- heart-ack: YELLOW acknowledged by the human 2026-10-23 — manifest drift (1 workspace checkout vs repos.yaml); release validation stale (PyAutoLens)
+- proof-owed: after merge, one dispatch per repo (render.yml ×4, pages_dashboard.yml ×2; inference-summary.yml self-triggers on merge) + organ refresh run visible
 
 ## point-solver-spurious-core
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/799
