@@ -53,6 +53,11 @@ on:
         type: boolean
         required: false
         default: false
+      dry_run:
+        description: "Prove the PyAutoMemory push credential only (ls-remote + push --dry-run): no fetch, no Claude, no Slack, no commit."
+        type: boolean
+        required: false
+        default: false
 
 permissions:
   contents: read
@@ -63,6 +68,7 @@ permissions:
 
 jobs:
   arxiv-papers:
+    if: ${{ inputs.dry_run != true }}
     runs-on: ubuntu-latest
     steps:
       # claude-code-action runs `git config` in the workspace at startup and
@@ -510,32 +516,45 @@ jobs:
       # inbox is a convenience on top of it, and a cross-repo auth or push
       # failure here must never cost the morning's post.
       #
-      # PAT_PYAUTOLABS, not GITHUB_TOKEN: the job token is scoped to this repo
-      # and cannot write to PyAutoMemory. The format, the window and the sweep
-      # all live in PyAutoMemory's scripts/inbox_actions.py — this step only
-      # supplies the papers, so the line format is never re-expressed here.
+      # A pyautolabs-bot App token, not GITHUB_TOKEN: the job token is scoped
+      # to this repo and cannot write to PyAutoMemory. Minted here, after the
+      # Slack POST, scoped to PyAutoMemory with contents write only. The
+      # format, the window and the sweep all live in PyAutoMemory's
+      # scripts/inbox_actions.py — this step only supplies the papers, so the
+      # line format is never re-expressed here.
+      - name: Mint App token (PyAutoMemory, contents write)
+        if: ${{ steps.fetch.outcome == 'success' }}
+        id: app_token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.APP_CLIENT_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          owner: PyAutoLabs
+          repositories: PyAutoMemory
+          permission-contents: write
+
       - name: File the survivors into the PyAutoMemory arXiv inbox
         # Do not stamp a source-outage day as successfully digested. A stale
         # Memory stamp remains the independent evidence that no source data was
         # ingested, while Slack carries the explicit human-facing warning.
         if: ${{ steps.fetch.outcome == 'success' }}
         env:
-          PAT: ${{ secrets.PAT_PYAUTOLABS }}
+          GH_TOKEN: ${{ steps.app_token.outputs.token }}
         run: |
           set -euo pipefail
           if [ ! -s arxiv_survivors.json ]; then
             echo "::warning::arxiv_survivors.json missing after curation/fallback, so nothing was filed into the Memory inbox. The Slack digest above is unaffected."
             exit 0
           fi
-          if [ -z "${PAT:-}" ]; then
-            echo "::warning::PAT_PYAUTOLABS not set — cannot write to PyAutoMemory. The Slack digest above is unaffected."
-            exit 0
-          fi
 
           uk_date=$(python3 -c "import json;print(json.load(open('arxiv_papers.json'))['uk_date'])")
 
+          # gh as git's credential helper for github.com (reads GH_TOKEN); the
+          # clone lives outside the workspace checkout, so neither checkout's
+          # nor claude-code-action's credentials reach it.
+          gh auth setup-git
           git clone --depth 1 \
-            "https://x-access-token:${PAT}@github.com/PyAutoLabs/PyAutoMemory.git" \
+            "https://github.com/PyAutoLabs/PyAutoMemory.git" \
             /tmp/memory
           cp arxiv_survivors.json /tmp/memory/
           cd /tmp/memory
@@ -556,8 +575,8 @@ jobs:
             echo "inbox unchanged — nothing to commit."
             exit 0
           fi
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name  "pyautolabs-bot[bot]"
+          git config user.email "346909844+pyautolabs-bot[bot]@users.noreply.github.com"
           git add arxiv-inbox.md
           git commit -m "inbox: ${added}, ${swept}, ${stamped} (arXiv digest ${uk_date})"
           # The retry is for a concurrent-push race — the knowledge board and the
@@ -569,7 +588,7 @@ jobs:
             if git push 2>/tmp/inbox_push.err; then exit 0; fi
             cat /tmp/inbox_push.err
             if grep -qiE 'denied|403|authentication failed' /tmp/inbox_push.err; then
-              echo "::error::PAT_PYAUTOLABS cannot write to PyAutoLabs/PyAutoMemory (push denied). It is scoped to the *-template repos that spawn_drift.yml writes; the inbox is the first thing to need Contents: read-and-write on PyAutoMemory itself. Today's papers were NOT filed, so the board shows an empty inbox. After granting the scope, re-file them with a workflow_dispatch carrying lookback_hours=168 (the lookback is submission-anchored, so a 24h sweep can miss a paper announced today but submitted days ago)."
+              echo "::error::the pyautolabs-bot App token cannot write to PyAutoLabs/PyAutoMemory (push denied) — check the App's installation still covers PyAutoMemory with Contents write. Today's papers were NOT filed, so the board shows an empty inbox. After fixing it, re-file them with a workflow_dispatch carrying lookback_hours=168 (the lookback is submission-anchored, so a 24h sweep can miss a paper announced today but submitted days ago)."
               exit 1
             fi
             git pull --rebase origin main || break
@@ -585,3 +604,31 @@ jobs:
         run: |
           echo "::error::arXiv source fetch failed after retries; the Slack outage heartbeat was sent."
           exit 1
+
+  # dry_run: prove the Memory push credential and nothing else — no fetch, no
+  # Claude, no Slack, no commit. Mints the same token as the filing step and
+  # runs `git ls-remote` + `git push --dry-run` of main (the ref the filing
+  # pushes; up to date, so no pack is sent and no ref moves).
+  memory-push-probe:
+    if: ${{ inputs.dry_run == true }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mint App token (PyAutoMemory, contents write)
+        id: app_token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.APP_CLIENT_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          owner: PyAutoLabs
+          repositories: PyAutoMemory
+          permission-contents: write
+      - name: ls-remote + push --dry-run PyAutoMemory main
+        env:
+          GH_TOKEN: ${{ steps.app_token.outputs.token }}
+        run: |
+          set -euo pipefail
+          gh auth setup-git
+          git clone --depth 1 https://github.com/PyAutoLabs/PyAutoMemory.git /tmp/memory
+          git -C /tmp/memory ls-remote --heads origin main
+          git -C /tmp/memory push --dry-run origin HEAD:refs/heads/main
+          echo "PyAutoMemory push credential proven (dry run; nothing pushed)." >> "$GITHUB_STEP_SUMMARY"

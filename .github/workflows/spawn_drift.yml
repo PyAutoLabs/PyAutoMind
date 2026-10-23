@@ -6,6 +6,13 @@ name: Spawn Drift
 # generated view, drift-checked). On drift, re-run spawn --write and force-
 # sync the templates (the one sanctioned force-push — they are generated
 # views; see docs/pyautobrain/spawn_spec.md).
+#
+# Auth: the reads are public clones (no credential). The self-heal mints a
+# one-hour `pyautolabs-bot` App token scoped to the two *-template repos with
+# contents + pull-requests write, handed to git by `gh auth setup-git`.
+# A `dry_run` dispatch runs the check, mints the same token and runs
+# `git ls-remote` + `git push --dry-run` of the proposal branch on both
+# templates (no pack sent, no ref moved), then stops before any PR is opened.
 
 on:
   schedule:
@@ -23,6 +30,11 @@ on:
   # secrets, no writes).
   pull_request:
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Check drift and prove the template push credential; open or refresh no PR"
+        type: boolean
+        default: false
 
 # One sync at a time: the proposal branch is shared, so concurrent runs would
 # be last-writer-wins on a force-push. Queue rather than cancel — a cancelled
@@ -66,9 +78,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the live repos + published templates
+        # All four are public: plain clones, no credential.
         run: |
           for r in PyAutoMind PyAutoMemory PyAutoMind-template PyAutoMemory-template; do
-            git clone --depth 1 "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/PyAutoLabs/$r" "$r"
+            git clone --depth 1 "https://github.com/PyAutoLabs/$r" "$r"
           done
       - name: Regenerate + diff
         id: diff
@@ -94,18 +107,50 @@ jobs:
       # are force-synced generated views, so an automated push would be a
       # force-push to a published `main`. #118 — a leak that sat public for
       # eight days — is the argument for a human seeing what gets published.
+      # GITHUB_TOKEN is scoped to PyAutoMind; writing to the template repos
+      # takes an App token scoped to exactly those two.
+      - name: Mint App token (*-template repos — push the branch, open the PR)
+        if: steps.diff.outputs.code == '1' || inputs.dry_run
+        id: app_token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.APP_CLIENT_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          owner: PyAutoLabs
+          repositories: PyAutoMind-template,PyAutoMemory-template
+          permission-contents: write
+          permission-pull-requests: write
+
+      - name: Prove the template push credential (dry run)
+        if: inputs.dry_run
+        env:
+          GH_TOKEN: ${{ steps.app_token.outputs.token }}
+          BRANCH: spawn/auto-sync
+        run: |
+          set -euo pipefail
+          gh auth setup-git
+          for name in PyAutoMind-template PyAutoMemory-template; do
+            # The self-heal's own push (`push -f origin $BRANCH`), with
+            # --dry-run: the write handshake happens, no pack is sent.
+            git -C "published/$name" ls-remote --heads origin main >/dev/null
+            git -C "published/$name" push --dry-run -f origin "HEAD:refs/heads/$BRANCH"
+            gh pr list --repo "PyAutoLabs/$name" --head "$BRANCH" --state open --json number --jq length >/dev/null
+            echo "$name: ls-remote + push --dry-run + PR read ok"
+          done
+          echo "Dry run: drift exit code ${{ steps.diff.outputs.code }}; no PR opened or refreshed." >> "$GITHUB_STEP_SUMMARY"
+
       - name: Propose the sync PR
         if: steps.diff.outputs.code == '1'
         env:
-          # GITHUB_TOKEN is scoped to PyAutoMind; writing to the template repos
-          # needs the org-wide PAT (same one nightly-release.yml uses).
-          GH_TOKEN: ${{ secrets.PAT_PYAUTOLABS }}
+          GH_TOKEN: ${{ steps.app_token.outputs.token }}
           BRANCH: spawn/auto-sync
+          DRY_RUN: ${{ inputs.dry_run == true }}
         run: |
-          if [ -z "${GH_TOKEN:-}" ]; then
-            echo "::error::PAT_PYAUTOLABS is not set on this repo. The self-heal cannot open a PR on the template repos without a token that can write to them; GITHUB_TOKEN is scoped to PyAutoMind only."
-            exit 1
+          if [ "$DRY_RUN" = "true" ]; then
+            echo "dry run — the credential was proven above; no PR is opened or refreshed."
+            exit 0
           fi
+          gh auth setup-git
           python3 PyAutoMind/scripts/spawn.py --root "$PWD" --write regenerated
 
           MIND_SHA=$(git -C PyAutoMind rev-parse --short HEAD)
@@ -129,16 +174,16 @@ jobs:
             fi
             echo "== $name: drifted, preparing $BRANCH"
             work="work/$name"
-            git clone -q "https://x-access-token:${GH_TOKEN}@github.com/PyAutoLabs/$name" "$work" || {
-              echo "::error::cannot clone $name with PAT_PYAUTOLABS — check the token grants write to it"; exit 1; }
+            git clone -q "https://github.com/PyAutoLabs/$name" "$work" || {
+              echo "::error::cannot clone $name"; exit 1; }
 
             # Replace content wholesale; the template IS the generated tree.
             ( cd "$work" && find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} + )
             cp -a "regenerated/$name/." "$work/"
 
             cd "$TOP/$work"
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git config user.name "pyautolabs-bot[bot]"
+            git config user.email "346909844+pyautolabs-bot[bot]@users.noreply.github.com"
             git checkout -q -B "$BRANCH"
             git add -A
             if git diff --cached --quiet; then
@@ -171,7 +216,7 @@ jobs:
               gh pr create --repo "PyAutoLabs/$name" --base main --head "$BRANCH" \
                 --title "spawn: sync this generated view with PyAutoMind" \
                 --body-file "$body" \
-                || { echo "::error::could not open the PR on $name - check PAT_PYAUTOLABS grants write there"; exit 1; }
+                || { echo "::error::could not open the PR on $name - check the pyautolabs-bot App is installed there with pull-requests write"; exit 1; }
               echo "   opened a new PR"
             fi
             cd "$TOP"
