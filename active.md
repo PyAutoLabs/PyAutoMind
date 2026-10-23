@@ -50,7 +50,8 @@
 - prompt: active/likelihood_lifecycle_p0_profiling.md
 - epic: likelihood-lifecycle
 - merged: https://github.com/PyAutoLabs/autolens_profiling/pull/444 (PR 1 of 6, migration map) → aeef2756, 2026-10-23
-- next: PR 2 move-only on a fresh branch from main (regenerate the map first if #441 merged; never under live RAL jobs on a RAL checkout); PR 3 size rule decided: Delaunay 1250, rectangular 35²=1225 (see ledger)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/446 (PR 2 of 6, move-only, DRAFT, 45b1cfcc)
+- next: #441 lint timed out (15-min smoke, likely runner) → human rerun + /prm 441; then rebuild PR 2 on fresh main (regen map → apply → cherry-pick c07b5c7e/45b1cfcc) → un-draft → human /prm; PR 3 size rule: Delaunay 1250, rectangular 35²=1225
 - repos:
-  - autolens_profiling: feature/likelihood-lifecycle-p0-profiling
+  - autolens_profiling: feature/likelihood-lifecycle-p0-profiling-move
   - PyAutoPulse: feature/likelihood-lifecycle-p0-profiling (registry re-pin, after builder merges)
