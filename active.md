@@ -60,8 +60,17 @@
 - issued: 2026-10-23
 - prompt: active/assistant_ai_options_unified_page.md
 - session: Claude Code (Fable 5.1), laptop CLI; session ID unavailable
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge (8 docs PRs; merge PyAutoScientist#88 first; Heart YELLOW at ship, unrelated reasons recorded on PRs; decision-taken, human /prm)
 - worktree: ~/Code/PyAutoLabs-wt/assistant-ai-options-page
+- prs:
+  - PyAutoScientist: https://github.com/PyAutoLabs/PyAutoScientist/pull/88
+  - autogalaxy_assistant: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/36
+  - autofit_assistant: https://github.com/PyAutoLabs/autofit_assistant/pull/57
+  - autocti_assistant: https://github.com/PyAutoLabs/autocti_assistant/pull/36
+  - pyautolabs.github.io: https://github.com/PyAutoLabs/pyautolabs.github.io/pull/37
+  - autolens_workspace: https://github.com/PyAutoLabs/autolens_workspace/pull/597
+  - autogalaxy_workspace: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/260
+  - autofit_workspace: https://github.com/PyAutoLabs/autofit_workspace/pull/175
 - deferred: autolens_assistant edits wait for cosmos-web-ring-notebook (PR autolens_assistant#161) to merge; add its claim then
 - note: autolens_workspace claim released 2026-10-23 by human direction (no commits on its branch) so point-magnification-workspace-docs (5b) could start; re-claim if edits are needed
 - repos:
