@@ -12,6 +12,7 @@
 - [interferometer-primary-beam-persistence-mirror](#interferometer-primary-beam-persistence-mirror)
 - [likelihood-lifecycle-p0-profiling](#likelihood-lifecycle-p0-profiling)
 - [point-plots-yaml-keys-assistant](#point-plots-yaml-keys-assistant)
+- [likelihood-lifecycle-p0-brain](#likelihood-lifecycle-p0-brain)
 
 <!-- toc:end -->
 
@@ -134,3 +135,15 @@
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/98
 - parent: complete/2026/10/point-plots-yaml-keys.md (HowToLens half merged 2026-10-22, HowToLens#99); no separate prompt file
 - scope: same `point_dataset` / `fit_point_dataset` block edit in `autolens_assistant/config/visualize/plots.yaml` as HowToLens; ship on its own branch `feature/point-plots-yaml-keys` once the claim clears
+
+## likelihood-lifecycle-p0-brain
+- issue: none yet — `/start_dev draft/feature/pyautobrain/likelihood_lifecycle_p0_brain.md` files it when the claim clears
+- planned: 2026-10-23
+- prompt: draft/feature/pyautobrain/likelihood_lifecycle_p0_brain.md
+- classification: library (PyAutoBrain only; Feature Agent: library workflow, medium declared / large derived, direct)
+- suggested-branch: feature/likelihood-lifecycle-p0-brain
+- blocked-by: github-token-p2b-writers-app (using PyAutoBrain; PyAutoBrain#534, library-dev, no PR yet)
+- epic: likelihood-lifecycle (phase 0, sub-issue 0E; ledger draft/research/autolens_profiling/likelihood_lifecycle_epic.md). Does NOT wait on 0B: the conductor's mirrored-tree reader is proven on a fixture; live-tree witness lands with 0B.
+- affected-repos:
+  - PyAutoBrain
+
