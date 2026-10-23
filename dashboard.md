@@ -871,7 +871,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/assistant_readmes_human_style.md">Human-readable READMEs across the four science assistants</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/162">issue #162</a> — issued 2026-10-23 — workspace-dev</summary>
+<details><summary>📋 <a href="active/assistant_readmes_human_style.md">Human-readable READMEs across the four science assistants</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/162">issue #162</a> — issued 2026-10-23 — ready-to-ship — PRs: <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/163">autolens_assistant#163</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_assistant/pull/37">autogalaxy_assistant#37</a>, <a href="https://github.com/PyAutoLabs/autofit_assistant/pull/58">autofit_assistant#58</a>, <a href="https://github.com/PyAutoLabs/autocti_assistant/pull/37">autocti_assistant#37</a></summary>
 
 ```
 Use the start-dev skill. active/assistant_readmes_human_style.md
