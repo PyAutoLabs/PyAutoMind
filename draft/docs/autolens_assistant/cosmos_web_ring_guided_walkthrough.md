@@ -117,6 +117,8 @@ HowToLens, website); the rays→ring link is carried by prose.
 
 ## Phase 1 outcome (2026-10-20, PR autolens_assistant#161, awaiting /prm)
 
+**Merged 2026-10-23** via human /prm (autolens_assistant#161; record `complete/2026/10/cosmos-web-ring-notebook.md`). Phase 1 DONE; next is `_p2_greeting.md`.
+
 Shipped with design changes made during the maintainer's copy-edit pass — **phases 2 and 3
 must follow the shipped notebook, not the original plan**:
 - Bands: the live colour comparison is **F150W/F444W** (not F277W); the published-model figure

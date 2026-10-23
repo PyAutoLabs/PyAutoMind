@@ -34,20 +34,6 @@
 
 - ci-blocker: HowToFit run 39055282617; both 3.12 and 3.13 fail tutorial_6_gradients.py because nautilus is absent. Logs captured in PR #75 comment. Navigator and Tutorials Complete pass.
 
-## cosmos-web-ring-notebook
-- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/160
-- issued: 2026-10-20
-- prompt: active/cosmos_web_ring_guided_walkthrough_p1_notebook.md
-- session: Claude Code (Fable 5.1), laptop CLI; session ID unavailable
-- status: workspace-shipped, awaiting-merge (7 commits incl. maintainer copy-edit; F150W/F444W; Explore The Model)
-- prs:
-  - autolens_assistant: https://github.com/PyAutoLabs/autolens_assistant/pull/161
-- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/161
-- worktree: ~/Code/PyAutoLabs-wt/cosmos-web-ring-notebook
-- heart-override: Heart RED override (development only) authorized by human 2026-10-20
-- repos:
-  - autolens_assistant: feature/cosmos-web-ring-notebook
-
 ## matrix-free-interferometer-inversion
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/638
 - issued: 2026-10-21

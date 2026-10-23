@@ -1,3 +1,17 @@
+## What shipped (merged 2026-10-23)
+
+autolens_assistant#161 (issue #160): phase 1 of the COSMOS-Web Ring guided walkthrough. `docs/colab/cosmos_web_ring_colab.{py,ipynb}` is an image-first, executed Colab notebook with no inference: the JWST F150W/F444W imaging, the vendored lensing schematic and Mercier et al. 2024 figures, the good lens model with "Explore The Model" controls, and "Ask Gemini" questions per section. Seven commits including a maintainer copy-edit; the Sérsic bad-fit comparison and the SVG schematic were rejected during review. Shipped 2026-10-20 under the Heart RED development override recorded on the task row; merged on an explicit human /prm.
+
+## Epic state
+
+Phase 1 of `cosmos_web_ring_guided_walkthrough.md` is done. Remaining: phase 2 (greeting mirrors the notebook) and phase 3 (HowToLens / website).
+
+## Note
+
+The autolens_assistant claim this task held blocked the autolens leg of PyAutoScientist#87 (AI options page); that leg is re-filed as `draft/docs/autolens_assistant/ai_options_page_autolens_leg.md` and can start now.
+
+## Original prompt
+
 # COSMOS-Web Ring walkthrough — phase 1: image-first Colab notebook, no inference
 
 **Work type:** docs · **Target:** `lens/autolens_assistant` · **Consequence:** judge

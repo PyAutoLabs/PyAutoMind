@@ -10,7 +10,8 @@ Difficulty: small
 Autonomy: supervised
 Priority: medium
 Filed: 2026-10-23
-Status: draft (blocked on a human Colab test)
+Status: formalised
+Blocked-by: human Colab test (see Gate) — do not start_dev until it passes
 Consequence: glance
 
 @pyautohands @autolens_assistant @autofit_assistant

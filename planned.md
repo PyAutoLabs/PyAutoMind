@@ -129,7 +129,7 @@
   - PyAutoPulse
 
 ## point-plots-yaml-keys-assistant
-- status: blocked — autolens_assistant claimed by `cosmos-web-ring-notebook` (PR #161 awaiting /prm)
+- status: unblocked 2026-10-23 — cosmos-web-ring-notebook merged (autolens_assistant#161, `complete/2026/10/cosmos-web-ring-notebook.md`); autolens_assistant free (sibling waiting on the same repo: `draft/docs/autolens_assistant/ai_options_page_autolens_leg.md`)
 - filed: 2026-10-22
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/98
 - parent: complete/2026/10/point-plots-yaml-keys.md (HowToLens half merged 2026-10-22, HowToLens#99); no separate prompt file
