@@ -895,7 +895,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/assistant_ai_options_unified_page.md">One PyAutoLabs-level "AI options" page for every assistant; simplify the assistant READMEs…</a> — <a href="https://github.com/PyAutoLabs/PyAutoScientist/issues/87">issue #87</a> — issued 2026-10-23 — workspace-dev</summary>
+<details><summary>📋 <a href="active/assistant_ai_options_unified_page.md">One PyAutoLabs-level "AI options" page for every assistant; simplify the assistant READMEs…</a> — <a href="https://github.com/PyAutoLabs/PyAutoScientist/issues/87">issue #87</a> — issued 2026-10-23 — workspace-shipped, awaiting-merge (8 docs PRs; merge PyAutoScientist#88 first; Heart YELLOW at ship, unrelated reasons recorded…</summary>
 
 ```
 Use the start-dev skill. active/assistant_ai_options_unified_page.md

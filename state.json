@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-10-23T11:20:43Z",
+  "updated": "2026-10-23T11:51:30Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "HowToFit tutorial 5 (EP) never shares the centre it says it shares \u2014 workspace-shipped, blocked-CI",
       "url": "https://github.com/PyAutoLabs/HowToFit/pull/75",
       "prompt": "Use the start-dev skill. active/tutorial_5_ep_shared_centre_never_assigned.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "One PyAutoLabs-level \"AI options\" page for every assistant; simplify the assistant READMEs\u2026 \u2014 workspace-shipped, awaiting-merge (8 docs PRs; merge PyAutoScientist#88 first; Heart YELLOW at ship, unrelated reasons recorded\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoScientist/issues/87",
+      "prompt": "Use the start-dev skill. active/assistant_ai_options_unified_page.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1707 \u2014 prior-stable-test-ids",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1707",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1706 \u2014 prior-summary-ranges",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1706",
       "prompt": null
     }
   ]
