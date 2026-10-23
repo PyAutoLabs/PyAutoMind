@@ -563,6 +563,14 @@ def test_instance_hpc_policy_page_is_dropped_but_policy_is_kept():
     )[1] == "KEEP"
 
 
+def test_instance_github_tokens_policy_page_is_dropped():
+    """`policy/github_tokens.md` names this instance's GitHub App, its secrets
+    and the repos consuming them; it must never ship in a template."""
+    assert spawn.match_rule(
+        Path("policy/github_tokens.md"), spawn.MIND_RULES
+    )[1] == "DROP"
+
+
 def test_memory_skills_are_kept_verbatim(tmp_path):
     """Spec Memory rule 1c (PyAutoMind#484): the Memory's own agent skills are
     generic organism skills, KEPT verbatim like the Mind's `skills/**` — never

@@ -145,6 +145,10 @@ MIND_RULES = [
     # and partitions, moved out of the unversioned root AGENTS.md
     # (PyAutoMind#482). The rest of policy/ is org-agnostic safety text.
     ("policy/hpc_ral.md", "DROP"),
+    # `policy/github_tokens.md` is instance-specific for the same reason: it
+    # names this org's App (pyautolabs-bot), its secrets and the repos that
+    # consume them. A fresh org writes its own inventory.
+    ("policy/github_tokens.md", "DROP"),
     ("skills/*", "KEEP"),
     ("policy/*", "KEEP"),
     # .github is decided PER FILE by the spec's fresh-repo invariant (rule 9):
