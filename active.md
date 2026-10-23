@@ -46,12 +46,16 @@
 - issued: 2026-10-23
 - prompt: active/point_magnification_workspace_docs.md
 - session: Claude Code CLI (Fable 5.1), session bac93ca4; launched --auto (human: "prm and then auto mode do all of phase 5"; "start 5b now")
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/point-magnification-workspace-docs
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/598
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/798 (merged, unreleased)
+- release-gate: PyAutoLens
 - tier: glance (declared); effective autonomy safe (docs, medium)
 - heart-ack:
   - manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml
   - release validation incomplete: no rehearsal for current source
+  - release validation stale: source moved since rehearsal (PyAutoLens)  (acknowledged at PR-open, 2026-10-23)
 - repos:
   - autolens_workspace: feature/point-magnification-workspace-docs
 - epic: cluster-strong-lensing (phase 5b)
