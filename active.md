@@ -87,11 +87,15 @@
 - prompt: active/likelihood_lifecycle_p0_insight.md
 - epic: likelihood-lifecycle (phase 0, sub-issue 0D; ledger draft/research/autolens_profiling/likelihood_lifecycle_epic.md)
 - session: Claude Code CLI (Fable 5.1 orchestrator, Opus workers)
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p0-insight
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/45
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoInsight/pull/40
 - classification: workspace (PyAutoInsight reader + autolens_inference exporter fix; infrastructure only, no runs)
 - tier: judge — human /prm
-- next: start_workspace → PR 1 autolens_inference exporter reference fix → PR 2 PyAutoInsight fields/render/docs → ship_workspace; rebase after PyAutoInsight#38 and autolens_inference#30 if they land first
+- validation: Insight validator 0 errors on re-exported catalogue (was 57); autolens_inference pytest 218, Insight pytest 219, ruff clean both; #45 lint green; #40 lint red ONLY on the committed invalid lens receipt (pre-existing on main)
+- heart: YELLOW at ship (workspace manifest drift; PyAutoLens release validation stale) — unrelated
+- next: human /prm — merge autolens_inference#45 FIRST, then PyAutoInsight#40 (re-run lint after the Insight refresh rewrites receipts/lens.json to ok = witness); then 0E Brain lifecycle template
 - repos:
   - PyAutoInsight: feature/likelihood-lifecycle-p0-insight
   - autolens_inference: feature/likelihood-lifecycle-p0-insight
