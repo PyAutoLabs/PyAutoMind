@@ -41,24 +41,6 @@
 - community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
 - prompt: active/matrix_free_interferometer_inversion.md
 
-## ep-zero-success-factors
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1711
-- issued: 2026-10-23
-- prompt: active/ep_factors_end_the_run_with_zero.md
-- epic: graphical-ep (ledger PyAutoInsight tasks/ep_campaign.md)
-- session: Claude Code CLI (Fable 5.1); session e889c72e
-- status: workspace-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1712
-- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/115
-- side-prs: PyAutoInsight#38 (ledger reconciliation, companion state file; byte-pinned ep_campaign.md re-pin is the human's call), PyAutoCortex#75 (criterion 6 amendment)
-- owed-human: apply scratchpad ensemble_seed_1711.diff in /mnt/c/Users/Jammy/Science/active/analytic_gaussian (any_factor_never_succeeded counts SUCCESS+NO_CHANGE)
-- heart-ack: manifest drift (1 workspace checkout mismatch); PyAutoLens release validation stale — acknowledged 2026-10-23
-- worktree: ~/Code/PyAutoLabs-wt/ep-zero-success-factors
-- tier: glance — auto-merge on green if the Witness passes
-- repos:
-  - PyAutoFit: feature/ep-zero-success-factors
-  - autofit_workspace_test: feature/ep-zero-success-factors
-
 ## cluster-pointsolver-starting-grid
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/439
 - issued: 2026-10-23

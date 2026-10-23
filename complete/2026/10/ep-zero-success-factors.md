@@ -1,3 +1,21 @@
+Phase of the graphical-ep EP campaign (PyAutoInsight `tasks/ep_campaign.md`), the first finding of the analytic_gaussian wave-1 ruling R-20260910-04: 19/400 seed-legs ended with a factor that never recorded a SUCCESS update.
+
+**Diagnosis (two findings, two causes).** The NO_CHANGE-only PriorFactor (leg A seed 140 and 12 leg-B seeds) is a converged update: the factor's Laplace optimiser met its gradient tolerance at the start point (`iter=0`, posterior mean of mu within 2e-3 of the prior mean), the projection was accepted and the message updated (N(50, 22.4) → N(49.9994, 10.0)), and the posterior matches the closed form to a = 5e-5, b = 2e-5. The library's STALE tracking never flagged it; the conflation lived in the ensemble witness's criterion 6 (SUCCESS-only count). The BAD_PROJECTION-only HierarchicalFactor (6 leg-B seeds) is the #1405 Laplace-on-scatter state, cured by `LaplaceOptimiser(projection="moments")` (#1656): seeds 29 and 71 re-run under moments give HierarchicalFactor SUCCESS 28 and 23, no STALE.
+
+**Shipped.** PyAutoFit#1712 (merge abb8bfacb): `optimise_quasi_newton` reports a zero-iteration successful convergence as `updated=True` (flag stays NO_CHANGE), docstrings on `StatusFlag.NO_CHANGE` and the EP stale tracking, two tests in `test_factor_failure_recovery.py` (one red→green). No EP update maths, projection or Laplace numerics changed; repro numerics bit-identical. autofit_workspace_test#115 (merge 97cb781): seed-140 leg A EP-only leg in `scripts/graphical/analytic_gaussian.py` (closed-form parity rows incl. widths, flag health, STALE absent; +2 s; passes against released PyAutoFit too). PyAutoCortex#75 (open, human merge): criterion 6 amended to count SUCCESS or NO_CHANGE as a completed update. PyAutoInsight#38 (open, human merge): ledger reconciliation as companion file `tasks/ep_campaign_state_2026-10-23.md` (the byte-pinned `ep_campaign.md` re-pin is the human's call).
+
+**Witness.** Science sidecar criterion satisfied by the amendment branch of the Witness line (criterion 6 amended with the reason) plus the workspace regression; `ensemble_seed.py:160 any_factor_never_succeeded` change (count SUCCESS+NO_CHANGE) handed to the human as a diff — science checkout is outside the workspace.
+
+**Gate at ship.** tests 3561 passed / 1 skipped / 1 xfailed (`test_autofit`), smoke `analytic_gaussian.py` PARITY 49/49 in 158 s, Heart YELLOW (manifest drift 1 mismatch; PyAutoLens release validation stale) acknowledged by the human, witness passed. CI: PyAutoFit docs/generated-search-docs/unittest 3.12/3.13/nojax all success; autofit_workspace_test smoke 3.12/3.13 success.
+
+**Side finding (unfiled).** Seed 29 leg B under moments still misses the sigma cell (a 0.225 / b 0.416 vs 0.15 / 0.25) while sigma stays inside [q05, q95].
+
+**Remaining in the epic.** `draft/bug/autofit/nan_in_ep_evidence_accumulation_invalid_value.md` (medium), `draft/bug/autofit/ep_moments_loggaussian_transformed_scatter.md` (small, overlaps #1498/#1331), `draft/feature/autofit/ep_lbfgs_jax.md`; the four Cortex RAL reruns are human-gated.
+
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1712
+
+## Original prompt
+
 # EP factors end the run with zero SUCCESS updates on the exactly-Gaussian leg A of analytic_gaussian (seed 140) and on 18/200 leg-B seeds
 
 Type: bug
