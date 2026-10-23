@@ -47,7 +47,9 @@
 - prompt: active/ep_factors_end_the_run_with_zero.md
 - epic: graphical-ep (ledger PyAutoInsight tasks/ep_campaign.md)
 - session: Claude Code CLI (Fable 5.1); session e889c72e
-- status: library-dev
+- status: library-shipped, workspace-pending
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1712
+- heart-ack: manifest drift (1 workspace checkout mismatch); PyAutoLens release validation stale — acknowledged 2026-10-23
 - worktree: ~/Code/PyAutoLabs-wt/ep-zero-success-factors
 - tier: glance — auto-merge on green if the Witness passes
 - repos:
