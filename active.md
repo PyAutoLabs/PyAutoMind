@@ -68,3 +68,14 @@
 - repos:
   - autolens_profiling: feature/likelihood-lifecycle-p0-profiling
   - PyAutoPulse: feature/likelihood-lifecycle-p0-profiling (registry re-pin, after builder merges)
+
+## github-token-p5-policy-page
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/512
+- issued: 2026-10-23
+- prompt: active/github_token_phase5_policy_page.md
+- session: Claude Code CLI (Opus 5.5); current chat
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/github-token-p5-policy-page
+- repos:
+  - PyAutoMind: feature/github-token-p5-policy-page
+- heart-ack: YELLOW acknowledged by the human 2026-10-23 — manifest drift (1 workspace checkout vs repos.yaml); release validation stale (PyAutoLens)
