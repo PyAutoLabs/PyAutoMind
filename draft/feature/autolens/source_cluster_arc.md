@@ -685,3 +685,30 @@ PyAutoLens#577 follow-ups. Paired Eyes surface:
 The campaign's oracle-verification figure stays in autolens_profiling (measurement artefact).
 Human note 2026-10-18: galaxy-scale visualization defaults "will look awful on cluster scales";
 expect bespoke figures or updated tool defaults. No phase issued by this note.
+
+## Reconciliation and phase 5a plan — 2026-10-23
+
+- Last completed phase: 3b (merged 2026-10-04; `complete/2026/10/evaluation-grid-cap-field.md`).
+  Nothing in flight: no active.md row, no open arc issue/PR in PyAutoLens, PyAutoArray,
+  PyAutoGalaxy, autolens_workspace, autolens_workspace_test, autolens_profiling or HowToLens
+  (workspace_test#106, PyAutoArray#377, profiling#128 are unrelated). No DECISIONS/RESULTS
+  file beside this ledger. Phase 11 stays dropped (R-20260907-05).
+- Phase 3 remainder (`draft/feature/autolens/cluster_curves_engine_dispatch.md`: cluster plots
+  honor the configured engine; its `Phase: 3a` label and archived-parent path are stale and
+  need relabelling to 3c before issue) is DEFERRED, not dropped: phase 3a found the
+  `zero_contour` engine's automatic seeds miss cluster components, so routing cluster plots to
+  that engine is entangled with seed-coverage robustness, which the human has moved to separate
+  issues (2026-10-23: optimisation, profiling and robustness are separate; not this arc's focus).
+- Next step chosen: **phase 5** (magnification at a point). It has no intra-arc gate, is
+  high priority, is pure magnification science, and phases 6–8 depend on it. Brain Feature
+  Agent: feature/autolens, library workflow, declared large / derived too-large →
+  split-into-phases. Sliced into 5a (library, PyAutoLens only) and 5b (workspace
+  `source_science.py` docs + multi-plane example, after 5a is pending-release).
+- Filed `draft/feature/autolens/point_magnification_signed_surface.md` (phase 5a): signed
+  per-image magnification accessor with the unsigned default unchanged, `ResultPoint`
+  magnification accessors, multi-plane `plane_j` witness and parity witness. The parent's
+  stale `Tracer.magnification_2d_from` claim is already gone from source; recorded, no edit.
+- Heart at the door: GREEN (release GREEN; monitoring RED on dirty canonical checkouts and
+  worktree drift). Conflict guard clear for PyAutoLens; main clean at `b273f9c7d`.
+  Proposed branch `feature/point-magnification-signed-surface`. Plan awaits human approval;
+  no issue, worktree or source edit yet; no later phase queued.
