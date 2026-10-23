@@ -10,13 +10,15 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
+Issued: 2026-10-23
 Consequence: judge
 Review-minutes: 10
 Unattended: ready
 Epic: cluster-strong-lensing
 Phase: 5a
 Parent: draft/feature/autolens/point_magnification_api.md
+Issue: https://github.com/PyAutoLabs/PyAutoLens/issues/797
 Filed: 2026-10-23
 
 ## Original user request (verbatim, from the phase-5 parent)
@@ -79,7 +81,10 @@ Validation: focused `test_autolens/point/` (fit, fluxes, separations, result) an
 multi-plane solver tests; full PyAutoLens suite before ship; black. Workspace point-source
 smoke (`autolens_workspace_test` point_source scripts) must be unchanged numerically.
 
-Out of scope here: the eleven `source_science.py` scripts (phase 5b), posterior-draw
+Out of scope here, owned by phase 5b (human direction 2026-10-23: users must find this in
+autolens_workspace): the eleven `source_science.py` scripts, plus a guide pass in
+`guides/lens_calc.py` (mu at arbitrary (y,x) via the Hessian), `guides/advanced/multi_plane.py`
+(per-source `plane_j`) and the point-source results surface in `guides/results/`; also (phase 5b), posterior-draw
 errors (phase 7), maps (phase 8), any forward PointSolver repair (transferred to
 `cluster-pointsolver-speed`), optimisation/profiling/robustness work (separate issues).
 

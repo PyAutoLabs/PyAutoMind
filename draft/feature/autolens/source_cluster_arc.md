@@ -712,3 +712,11 @@ expect bespoke figures or updated tool defaults. No phase issued by this note.
   worktree drift). Conflict guard clear for PyAutoLens; main clean at `b273f9c7d`.
   Proposed branch `feature/point-magnification-signed-surface`. Plan awaits human approval;
   no issue, worktree or source edit yet; no later phase queued.
+- Human approved the 5a plan 2026-10-23 ("sounds good") and directed that the feature be
+  documented in autolens_workspace for users: `source_science.py` AND a guide. Phase 5b scope
+  therefore = source_science.py (both tiers) + `guides/lens_calc.py` + `guides/advanced/multi_plane.py`
+  + point-source `guides/results/` surface. Recorded in the 5a prompt; 5b prompt filed after 5a ships.
+
+Phase 5a issued as PyAutoLens#797 (2026-10-23) after human approval; prompt moved to
+`active/point_magnification_signed_surface.md`; claim registered in active.md on
+`feature/point-magnification-signed-surface`. Entering start_library; execution delegated to Opus.
