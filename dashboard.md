@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 17 |
-| [In flight](#in-flight) | 7 |
+| [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 283 |
+| [Backlog](#backlog) | 284 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -879,14 +879,6 @@ Use the start-dev skill. active/assistant_readmes_human_style.md
 
 </details>
 
-<details><summary>📋 <a href="active/github_token_phase3_dashboard_dispatchers_app_token.md">GitHub token consolidation phase 3: the seven dashboard dispatchers on the App</a> — <a href="https://github.com/PyAutoLabs/autolens_visualization/issues/16">issue #16</a> — issued 2026-10-23 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_visualization/pull/17">autolens_visualization#17</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_visualization/pull/6">autogalaxy_visualization#6</a>, <a href="https://github.com/PyAutoLabs/autofit_visualization/pull/5">autofit_visualization#5</a>, <a href="https://github.com/PyAutoLabs/autocti_visualization/pull/5">autocti_visualization#5</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/443">autolens_profiling#443</a>, <a href="https://github.com/PyAutoLabs/autofit_profiling/pull/7">autofit_profiling#7</a>, <a href="https://github.com/PyAutoLabs/autolens_inference/pull/46">autolens_inference#46</a></summary>
-
-```
-Use the start-dev skill. active/github_token_phase3_dashboard_dispatchers_app_token.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/likelihood_lifecycle_p0_profiling.md">Likelihood lifecycle phase 0B: autolens_profiling mirrored tree, day-zero migration map, <code>profiling-summary@3</code> catalogue…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/442">issue #442</a> — issued 2026-10-23 — workspace-dev</summary>
 
 ```
@@ -1059,7 +1051,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>bug</b> — 71</summary>
+<summary><b>bug</b> — 72</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -1265,6 +1257,14 @@ Use the start-dev skill. draft/bug/autofit/visualization_warmup_swallowed_except
 
 ```
 Use the start-dev skill. draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autocti_visualization/render_fails_no_module_autonerves.md">autocti_visualization render.yml fails: No module named 'autonerves' under the released stack</a> — autocti_visualization · easy · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/bug/autocti_visualization/render_fails_no_module_autonerves.md
 ```
 
 </details>
@@ -2885,10 +2885,10 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 |------|-------|------|
 | 2026-10-23 | filed | <a href="draft/bug/autofit/start_points_test_unseeded_identical_figures_of_merit_flake.md">test_start_points.py draws unseeded start points and flakes on…</a> |
 | 2026-10-23 | filed | <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred…</a> |
+| 2026-10-23 | filed | <a href="draft/bug/autocti_visualization/render_fails_no_module_autonerves.md">autocti_visualization render.yml fails: No module named 'autonerves'…</a> |
 | 2026-10-23 | issued | <a href="active/point_solver_spurious_core_candidates.md"><code>@PyAutoLens</code> PointSolver: spurious candidates exactly on `r_core =…</a> |
 | 2026-10-23 | issued | <a href="active/likelihood_lifecycle_p0_profiling.md">Likelihood lifecycle phase 0B: autolens_profiling mirrored tree…</a> |
 | 2026-10-23 | issued | <a href="active/assistant_readmes_human_style.md">Human-readable READMEs across the four science assistants</a> |
-| 2026-10-23 | issued | <a href="active/github_token_phase3_dashboard_dispatchers_app_token.md">GitHub token consolidation phase 3: the seven dashboard dispatchers…</a> |
 | 2026-10-23 | filed | <a href="draft/docs/pyautohands/colab_custom_instructions_assistant_context.md">Carry assistant context into every Colab notebook via Gemini Custom…</a> |
 | 2026-10-23 | filed | <a href="draft/feature/pyautobrain/docs_conductor.md">A dedicated Documentation conductor in PyAutoBrain</a> |
 | 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
@@ -3003,7 +3003,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-111 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+112 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3045,10 +3045,10 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md`
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
+- `draft/bug/autocti_visualization/render_fails_no_module_autonerves.md`
 - `draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md`
 - `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
-- `draft/bug/autolens/point_solver_error_bisect_health.md`
-- _… and 71 more_
+- _… and 72 more_
 
 </details>
 

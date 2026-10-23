@@ -1,3 +1,12 @@
+- summary: Phase 3 of the GitHub token consolidation (parent prompt `github_token_and_secret_setup_full_review`; phases 1/2a/2b = complete/2026/10/github-token-p1-hands-app.md, -p2a-readers-app.md, -p2b-writers-app.md). The seven producer→organ refresh steps, the last `PAT_PYAUTOLABS` readers, moved to a per-step `actions/create-github-app-token@v3` mint (`vars.APP_CLIENT_ID` / `secrets.APP_PRIVATE_KEY`, org-level visibility all; `owner: PyAutoLabs`, `repositories: <organ>`, `permission-contents: write`): four `*_visualization/render.yml` → PyAutoEyes, two `*_profiling/pages_dashboard.yml` → PyAutoPulse, `autolens_inference/inference-summary.yml` → PyAutoInsight. The missing-credential warn-and-skip (`exit 0`) is gone in the six that had it; inference's redundant `::error::` guard was dropped. `autofit_inference` has no such step and was left alone.
+- evidence: PR CI (lint) green on all seven. Post-merge proofs, each with mint + dispatch steps successful and an organ-side refresh run: inference-summary 39996518155 (self-triggered on merge) → Insight; render 39996554052 / 39996558589 / 39996563032 → 3 Eyes eyes-refresh runs; pages_dashboard 39996571172 / 39996574531 → 2 Pulse pulse-refresh runs. Org-wide code search: no workflow reads `PAT_PYAUTOLABS` (a stale index hit on autolens_profiling, where main has 0; one prose line in `PyAutoHands/docs/nightly_release_design.md`).
+- unproven: autocti_visualization's Eyes leg. Render 39996567008 failed before the mint step (`ModuleNotFoundError: No module named 'autonerves'` under the released PyPI stack; the 09-29 render also failed). The diff is identical to the three proven viz repos. Follow-up: draft/bug/autocti_visualization/render_fails_no_module_autonerves.md.
+- traps: `gh pr create` fails in a worktree whose remote is a `git@github.com` alias gh doesn't recognise; pass `--repo`. `gh search code` lags merges, so verify hits against main contents.
+- deferred: phase 4 (delete `PAT_PYAUTOLABS` + three personal fine-grained PATs, org PAT policy, Hands design-doc line); phase 5 policy page `PyAutoMind/policy/github_tokens.md`; phase 1b PyPI trusted publishing (blocked on the human's PyPI login).
+- heart: YELLOW acknowledged by the human 2026-10-23 (manifest drift on one workspace checkout; PyAutoLens release validation stale), unrelated.
+
+## Original prompt
+
 # GitHub token consolidation phase 3: the seven dashboard dispatchers on the App
 
 Type: release
