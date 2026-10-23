@@ -12,13 +12,13 @@
 | [Epics](#epics) | 18 |
 | [In flight](#in-flight) | 4 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 277 |
+| [Backlog](#backlog) | 278 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 19
+**Highest priority** (filed as `high`) — showing 12 of 20
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -2790,7 +2790,15 @@ Use the start-dev skill. draft/test/autolens_workspace_test/mge_group_dataset_wi
 </details>
 
 <details>
-<summary><b>release</b> — 2</summary>
+<summary><b>release</b> — 3</summary>
+
+<details><summary>📋 <a href="draft/release/pyautohands/github_token_and_secret_setup_full_review.md">GitHub token and secret setup: full review and consolidation</a> — pyautohands · too-large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/release/pyautohands/github_token_and_secret_setup_full_review.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/release/autocti/cti_release_train_wiring.md">CTI release-train wiring — first modern autocti release</a> — autocti · medium · human-required · normal</summary>
 
