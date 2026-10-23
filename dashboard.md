@@ -887,7 +887,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/github_token_phase2b_owner_wide_writers_app_token.md">GitHub token consolidation phase 2b: owner-wide writers…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/534">issue #534</a> — issued 2026-10-23 — library-dev</summary>
+<details><summary>📋 <a href="active/github_token_phase2b_owner_wide_writers_app_token.md">GitHub token consolidation phase 2b: owner-wide writers…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/534">issue #534</a> — issued 2026-10-23 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/537">PyAutoBrain#537</a>, <a href="https://github.com/PyAutoLabs/PyAutoGut/pull/31">PyAutoGut#31</a>, <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/509">PyAutoMind#509</a></summary>
 
 ```
 Use the start-dev skill. active/github_token_phase2b_owner_wide_writers_app_token.md
