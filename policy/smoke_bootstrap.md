@@ -46,9 +46,13 @@ and all target installations pass the drift check.
 After coordinating the claims, review a change setting the flag to `true`.
 The merge triggers `smoke_bootstrap_propagate.yml`; future source/generator or
 manifest changes trigger the same workflow. It pushes only the generated shim
-change into each repository's default branch using `PAT_PYAUTOLABS`. Failed
-clones, generation, commits or pushes fail the job. Partial delivery is reported
-per target and is safe to retry. No force push is used.
+change into each repository's default branch with a one-hour token minted from
+the org's `pyautolabs-bot` GitHub App (contents write on every installed repo,
+so a newly born target needs no token step; commits are authored as
+`pyautolabs-bot[bot]`). Failed clones, generation, commits or pushes fail the
+job. Partial delivery is reported per target and is safe to retry. No force
+push is used. A `dry_run` dispatch also runs `git push --dry-run` against every
+target's default branch, proving the credential without pushing.
 
 Enabled local writes use either the narrow CLI's `--write`, or:
 

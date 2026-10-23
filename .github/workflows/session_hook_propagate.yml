@@ -57,6 +57,14 @@ name: Propagate the canonical hooks
 # `session_hook: false` (not a target either). None needs it today: PyAutoMind
 # carries no CLAUDE.md, and euclid_assistant — the one `session_hook: false`
 # repo — was hand-cleaned (a39e35c).
+#
+# AUTH. The job mints a one-hour token from the org's `pyautolabs-bot` GitHub
+# App, owner-wide with contents write — the App is installed on every repo, so
+# a repo added to the manifest tomorrow needs no token step. Minted right
+# before the clone/push loop; git reaches it through `gh auth setup-git`, so no
+# clone carries a credential in its remote URL. Commits are authored as
+# pyautolabs-bot[bot]. A dry run commits locally and `git push --dry-run`s
+# every clone (no pack sent, no ref moved), proving the credential per repo.
 
 on:
   push:
@@ -123,12 +131,20 @@ jobs:
           print("targets=" + " ".join(out))
           PY
 
+      - name: Mint App token (every installed repo — commit the hooks)
+        # This repo's GITHUB_TOKEN reaches only this repo; writing a commit to
+        # thirty siblings needs owner-wide contents write.
+        id: app_token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.APP_CLIENT_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          owner: PyAutoLabs
+          permission-contents: write
+
       - name: Regenerate the hook in every in-scope repo and push what changed
         env:
-          # This repo's GITHUB_TOKEN reaches only this repo; writing a commit to
-          # thirty siblings needs the org-wide PAT (spawn_drift.yml and
-          # arxiv_papers.yml use the same secret).
-          PAT: ${{ secrets.PAT_PYAUTOLABS }}
+          GH_TOKEN: ${{ steps.app_token.outputs.token }}
           DRY_RUN: ${{ inputs.dry_run }}
           # The CLAUDE.md pointer removal is a human-dispatched wave only (see
           # the header): a push to main never deletes anything.
@@ -136,10 +152,8 @@ jobs:
         run: |
           set -uo pipefail
 
-          if [ -z "${PAT:-}" ]; then
-            echo "::error::PAT_PYAUTOLABS is not set on this repo. The hook cannot be propagated to the sibling repos without a token that can write to them; GITHUB_TOKEN is scoped to PyAutoMind only."
-            exit 1
-          fi
+          # gh as git's credential helper for github.com (reads GH_TOKEN).
+          gh auth setup-git || { echo "::error::could not install the App credential for git"; exit 1; }
 
           targets='${{ steps.targets.outputs.targets }}'
           if [ -z "$targets" ]; then
@@ -158,7 +172,7 @@ jobs:
           for entry in $targets; do
             name="${entry%%=*}"; slug="${entry#*=}"
             if git clone --quiet --depth 1 \
-                 "https://x-access-token:${PAT}@github.com/${slug}.git" "tree/$name"; then
+                 "https://github.com/${slug}.git" "tree/$name"; then
               cloned="$cloned $entry"
             else
               echo "::warning::clone failed for $slug — skipping"
@@ -170,8 +184,7 @@ jobs:
           # directly rather than through the CLI: the full `--write` would also
           # rewrite the OTHER generated AGENTS.md blocks in every clone (changes this
           # job deliberately does not commit) and then run every drift check
-          # against a half-workspace, whose origin leg would print the clones'
-          # credentialed remotes and whose exit status would have to be ignored.
+          # against a half-workspace, whose exit status would have to be ignored.
           # `set -e` is deliberately off in this step (a single repo failing
           # must not abandon the other twenty-nine), so the generator's exit
           # status is checked by hand. Without this, a crash here leaves every
@@ -220,8 +233,8 @@ jobs:
             repo="tree/$name"
             echo "::group::$slug"
 
-            git -C "$repo" config user.name "github-actions[bot]"
-            git -C "$repo" config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git -C "$repo" config user.name "pyautolabs-bot[bot]"
+            git -C "$repo" config user.email "346909844+pyautolabs-bot[bot]@users.noreply.github.com"
 
             for rel in .claude/hooks/session-start.sh .claude/hooks/end-at-deliverable.sh .claude/settings.json .codex/hooks.json AGENTS.md; do
               [ -e "$repo/$rel" ] && git -C "$repo" add -- "$rel"
@@ -254,24 +267,34 @@ jobs:
             if git -C "$repo" diff --cached --quiet; then
               echo "already current"
               current="$current $slug"
+              # A dry run still proves this repo would accept the push: an
+              # up-to-date `push --dry-run` needs the write handshake.
+              if [ "$dry" -eq 1 ] && ! git -C "$repo" push --dry-run --quiet origin HEAD; then
+                echo "::warning::the App token cannot push to $slug"
+                failed="$failed $slug(push-dry-run)"
+              fi
               rm -rf "$repo"; echo "::endgroup::"; continue
             fi
 
             git -C "$repo" --no-pager diff --cached --stat
-            if [ "$dry" -eq 1 ]; then
-              pushed="$pushed $slug(would-push)"
-              rm -rf "$repo"; echo "::endgroup::"; continue
-            fi
-
             git -C "$repo" commit --quiet \
               -m "session: propagate the canonical hooks and where-to-file block, retire the CLAUDE.md pointer (repos_sync)"
+            if [ "$dry" -eq 1 ]; then
+              # The real ref, the real fast-forward — but no pack is sent.
+              if git -C "$repo" push --dry-run --quiet origin HEAD; then
+                pushed="$pushed $slug(would-push)"
+              else
+                echo "::warning::the App token cannot push to $slug"
+                failed="$failed $slug(push-dry-run)"
+              fi
+              rm -rf "$repo"; echo "::endgroup::"; continue
+            fi
             if git -C "$repo" push --quiet origin HEAD; then
               pushed="$pushed $slug"
             else
               echo "::warning::push failed for $slug"
               failed="$failed $slug(push)"
             fi
-            # The clone carries a credentialed remote; do not leave it lying about.
             rm -rf "$repo"
             echo "::endgroup::"
           done

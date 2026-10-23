@@ -1,5 +1,14 @@
 name: Propagate the canonical smoke bootstrap
 
+# Auth: a one-hour `pyautolabs-bot` GitHub App token, owner-wide with contents
+# write (the App is installed on every repo, so a newly born target needs no
+# token step), minted right before the clone/push work and handed to git by
+# `gh auth setup-git`; the propagator clones plain URLs. Commits are authored
+# as pyautolabs-bot[bot] through GIT_AUTHOR_*/GIT_COMMITTER_* (which override
+# the script's own `git config`). A dry run also `git push --dry-run`s every
+# target's default branch — no pack sent, no ref moved — proving the
+# credential per repo.
+
 on:
   push:
     branches: [main]
@@ -47,17 +56,51 @@ jobs:
       - name: Explain held rollout
         if: steps.rollout.outputs.enabled != 'true'
         run: echo 'Rollout held in repos.yaml; no consumer pushes permitted.' >> "$GITHUB_STEP_SUMMARY"
+      - name: Mint App token (every installed repo — commit the shim)
+        if: steps.rollout.outputs.enabled == 'true' || github.event_name == 'workflow_dispatch'
+        id: app_token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.APP_CLIENT_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          owner: PyAutoLabs
+          permission-contents: write
       - name: Generate and propagate
         if: steps.rollout.outputs.enabled == 'true' || github.event_name == 'workflow_dispatch'
         env:
-          GH_TOKEN: ${{ secrets.PAT_PYAUTOLABS }}
+          GH_TOKEN: ${{ steps.app_token.outputs.token }}
           DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
+          GIT_AUTHOR_NAME: pyautolabs-bot[bot]
+          GIT_AUTHOR_EMAIL: 346909844+pyautolabs-bot[bot]@users.noreply.github.com
+          GIT_COMMITTER_NAME: pyautolabs-bot[bot]
+          GIT_COMMITTER_EMAIL: 346909844+pyautolabs-bot[bot]@users.noreply.github.com
         run: |
           set -euo pipefail
-          if [ "$DRY_RUN" != true ]; then
-            test -n "$GH_TOKEN" || { echo 'Missing PAT_PYAUTOLABS'; exit 1; }
-            gh auth setup-git
-          fi
+          gh auth setup-git
           args=()
           [ "$DRY_RUN" != true ] || args+=(--dry-run)
           python3 scripts/propagate_smoke_bootstrap.py "${args[@]}"
+      - name: Prove the push credential per target (dry run)
+        if: github.event_name == 'workflow_dispatch' && inputs.dry_run
+        env:
+          GH_TOKEN: ${{ steps.app_token.outputs.token }}
+        run: |
+          set -uo pipefail
+          slugs=$(python3 -c "import sys, yaml; sys.path.insert(0, 'scripts'); import smoke_bootstrap_sync as s; print(' '.join(spec['github'] for _, spec in s.targets(yaml.safe_load(open('repos.yaml'))['repos'])))")
+          [ -n "$slugs" ] || { echo "::error::no smoke bootstrap targets"; exit 1; }
+          work=$(mktemp -d)
+          bad=""
+          for slug in $slugs; do
+            # The propagator's own push: `push origin HEAD` from a depth-1
+            # clone. An up-to-date --dry-run still needs the write handshake.
+            if git clone --quiet --depth 1 "https://github.com/${slug}.git" "$work/x" \
+               && git -C "$work/x" push --dry-run --quiet origin HEAD; then
+              echo "$slug: push --dry-run ok"
+            else
+              echo "::error::the App token cannot push to $slug"
+              bad="$bad $slug"
+            fi
+            rm -rf "$work/x"
+          done
+          rm -rf "$work"
+          [ -z "$bad" ] || exit 1

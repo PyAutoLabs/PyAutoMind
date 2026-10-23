@@ -374,7 +374,7 @@ def test_propagation_workflow_parses_and_carries_its_two_load_bearing_names():
     """Not a fixture: the real workflow file.
 
     It must parse (a YAML error here is a workflow that never runs, and nothing
-    else in this repo would notice), reach the siblings with the org-wide PAT
+    else in this repo would notice), reach the siblings with the org App token
     (this repo's GITHUB_TOKEN cannot write to them), and derive its targets from
     the same `session_hook` manifest key the check above honours — a hard-coded
     repo list would drift from repos.yaml the first time a repo is added.
@@ -386,7 +386,9 @@ def test_propagation_workflow_parses_and_carries_its_two_load_bearing_names():
     assert workflow.exists(), f"{workflow.name} is missing"
     text = workflow.read_text()
     spec = yaml.safe_load(text)
-    assert "PAT_PYAUTOLABS" in text
+    # The org App token (owner-wide contents write), not a PAT.
+    assert "actions/create-github-app-token@v3" in text
+    assert "PAT_PYAUTOLABS" not in text
     assert "session_hook" in text
     # `on:` is YAML 1.1's boolean True — the key is not the string "on".
     triggers = spec[True]

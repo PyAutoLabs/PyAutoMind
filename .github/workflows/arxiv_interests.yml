@@ -54,6 +54,11 @@ on:
         description: "Rolling look-back window (hours) instead of the announcement band — for a manual test-fire or a backfill (e.g. 168 to sweep a week). Blank = the normal announcement band."
         required: false
         default: ""
+      dry_run:
+        description: "Prove the PyAutoMemory push credential only (ls-remote + push --dry-run): no fetch, no Claude, no Slack, no commit."
+        type: boolean
+        required: false
+        default: false
 
 permissions:
   contents: read
@@ -63,6 +68,7 @@ permissions:
 
 jobs:
   arxiv-interests:
+    if: ${{ inputs.dry_run != true }}
     runs-on: ubuntu-latest
     steps:
       # claude-code-action runs `git config` in the workspace at startup and
@@ -220,28 +226,39 @@ jobs:
       # the strong-lensing inbox carries (PyAutoMemory#58); a quiet day is a
       # one-line commit, not silence.
       #
-      # PAT_PYAUTOLABS, not GITHUB_TOKEN: the job token is scoped to this repo
-      # and cannot write to PyAutoMemory. The line format, the batch cap and
-      # the transitions all live in PyAutoMemory's scripts/interests_actions.py
-      # — this step only supplies the papers.
+      # A pyautolabs-bot App token, not GITHUB_TOKEN: the job token is scoped
+      # to this repo and cannot write to PyAutoMemory. Scoped to PyAutoMemory
+      # with contents write only. The line format, the batch cap and the
+      # transitions all live in PyAutoMemory's scripts/interests_actions.py —
+      # this step only supplies the papers.
+      - name: Mint App token (PyAutoMemory, contents write)
+        id: app_token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.APP_CLIENT_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          owner: PyAutoLabs
+          repositories: PyAutoMemory
+          permission-contents: write
+
       - name: File the picks into the PyAutoMemory interests list
         env:
-          PAT: ${{ secrets.PAT_PYAUTOLABS }}
+          GH_TOKEN: ${{ steps.app_token.outputs.token }}
         run: |
           set -euo pipefail
           if [ ! -s arxiv_interest_picks.json ]; then
             echo "::error::arxiv_interest_picks.json missing — the Claude step did not write it (check for an expired CLAUDE_CODE_OAUTH_TOKEN). Every path, empty days included, writes this file, so this is a real failure and today's papers were NOT filed."
             exit 1
           fi
-          if [ -z "${PAT:-}" ]; then
-            echo "::error::PAT_PYAUTOLABS not set — cannot write to PyAutoMemory. Today's interests batch was NOT filed."
-            exit 1
-          fi
 
           uk_date=$(python3 -c "import json;print(json.load(open('arxiv_interest_candidates.json'))['uk_date'])")
 
+          # gh as git's credential helper for github.com (reads GH_TOKEN); the
+          # clone lives outside the workspace checkout, so neither checkout's
+          # nor claude-code-action's credentials reach it.
+          gh auth setup-git
           git clone --depth 1 \
-            "https://x-access-token:${PAT}@github.com/PyAutoLabs/PyAutoMemory.git" \
+            "https://github.com/PyAutoLabs/PyAutoMemory.git" \
             /tmp/memory
           cp arxiv_interest_picks.json /tmp/memory/
           cd /tmp/memory
@@ -275,8 +292,8 @@ jobs:
             echo "interests list unchanged — nothing to commit."
             exit 0
           fi
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name  "pyautolabs-bot[bot]"
+          git config user.email "346909844+pyautolabs-bot[bot]@users.noreply.github.com"
           git add arxiv-interests.md
           git commit -m "interests: ${added}, ${swept}, ${stamped} (arXiv digest ${uk_date})"
           # A rejected push is worth a rebase and another go — the board and the
@@ -289,10 +306,38 @@ jobs:
             if git push 2>/tmp/interests_push.err; then exit 0; fi
             cat /tmp/interests_push.err
             if grep -qiE 'denied|403|authentication failed' /tmp/interests_push.err; then
-              echo "::error::PAT_PYAUTOLABS cannot write to PyAutoLabs/PyAutoMemory (push denied) — the same scope the strong-lensing inbox needs. Today's batch was NOT filed, so the board shows yesterday's day at the top. After granting the scope, re-file with a workflow_dispatch carrying lookback_hours=168."
+              echo "::error::the pyautolabs-bot App token cannot write to PyAutoLabs/PyAutoMemory (push denied) — the same scope the strong-lensing inbox needs. Today's batch was NOT filed, so the board shows yesterday's day at the top. After fixing the App's installation, re-file with a workflow_dispatch carrying lookback_hours=168."
               exit 1
             fi
             git pull --rebase origin main || break
           done
           echo "::error::could not push the interests commit after 3 attempts — today's batch was NOT filed. Re-file with a workflow_dispatch carrying lookback_hours=168 once the cause is fixed."
           exit 1
+
+  # dry_run: prove the Memory push credential and nothing else — no fetch, no
+  # Claude, no Slack, no commit. Mints the same token as the filing step and
+  # runs `git ls-remote` + `git push --dry-run` of main (the ref the filing
+  # pushes; up to date, so no pack is sent and no ref moves).
+  memory-push-probe:
+    if: ${{ inputs.dry_run == true }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mint App token (PyAutoMemory, contents write)
+        id: app_token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.APP_CLIENT_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          owner: PyAutoLabs
+          repositories: PyAutoMemory
+          permission-contents: write
+      - name: ls-remote + push --dry-run PyAutoMemory main
+        env:
+          GH_TOKEN: ${{ steps.app_token.outputs.token }}
+        run: |
+          set -euo pipefail
+          gh auth setup-git
+          git clone --depth 1 https://github.com/PyAutoLabs/PyAutoMemory.git /tmp/memory
+          git -C /tmp/memory ls-remote --heads origin main
+          git -C /tmp/memory push --dry-run origin HEAD:refs/heads/main
+          echo "PyAutoMemory push credential proven (dry run; nothing pushed)." >> "$GITHUB_STEP_SUMMARY"
