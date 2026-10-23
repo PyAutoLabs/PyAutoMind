@@ -55,3 +55,25 @@
 - repos:
   - autolens_profiling: feature/likelihood-lifecycle-p0-profiling-move
   - PyAutoPulse: feature/likelihood-lifecycle-p0-profiling (registry re-pin, after builder merges)
+
+## autocti-viz-render-from-mains
+- issue: https://github.com/PyAutoLabs/autocti_visualization/issues/7
+- issued: 2026-10-23
+- prompt: active/render_fails_no_module_autonerves.md
+- session: Claude Code CLI (Opus 5.5); current chat
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/autocti-viz-render-from-mains
+- repos:
+  - autocti_visualization: feature/autocti-viz-render-from-mains
+- heart-ack: YELLOW acknowledged by the human 2026-10-23 — manifest drift (1 workspace checkout vs repos.yaml); release validation stale (PyAutoLens)
+
+## github-tokens-headless-resolved
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/514
+- issued: 2026-10-23
+- prompt: active/github_tokens_policy_headless_resolved.md
+- session: Claude Code CLI (Opus 5.5); current chat
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/github-tokens-headless-resolved
+- repos:
+  - PyAutoMind: feature/github-tokens-headless-resolved
+- heart-ack: YELLOW acknowledged by the human 2026-10-23 — manifest drift (1 workspace checkout vs repos.yaml); release validation stale (PyAutoLens)

@@ -10,6 +10,7 @@ Priority: medium
 Status: formalised
 Consequence: judge
 Filed: 2026-10-23
+Issued: 2026-10-23
 
 `render.yml` on main (run 39996567008, 2026-10-23, dispatched as the GitHub-token
 phase 3 proof) fails in "Render figures + rebuild GALLERY.md": both producers

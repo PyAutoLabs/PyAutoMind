@@ -13,6 +13,7 @@ Witness: `grep -n -i "unknown" policy/github_tokens.md` has no hit about the hea
 Review-minutes: 3
 Unattended: never
 Filed: 2026-10-23
+Issued: 2026-10-23
 
 The page (phase 5, complete/2026/10/github-token-p5-policy-page.md) records the
 headless RAL/Colab fine-grained PAT as "state unknown since the 2026-10-23
