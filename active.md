@@ -68,3 +68,20 @@
 - repos:
   - autolens_profiling: feature/likelihood-lifecycle-p0-profiling
   - PyAutoPulse: feature/likelihood-lifecycle-p0-profiling (registry re-pin, after builder merges)
+
+## github-token-p4-retire-pat-mentions
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/510
+- issued: 2026-10-23
+- prompt: active/github_token_phase4_retire_pat_mentions.md
+- session: Claude Code CLI (Opus 5.5); current chat
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/github-token-p4-retire-pat-mentions
+- repos:
+  - PyAutoMind: feature/github-token-p4-retire-pat-mentions
+  - PyAutoHands: feature/github-token-p4-retire-pat-mentions
+  - autolens_visualization: feature/github-token-p4-retire-pat-mentions
+  - autogalaxy_visualization: feature/github-token-p4-retire-pat-mentions
+  - autofit_visualization: feature/github-token-p4-retire-pat-mentions
+  - autocti_visualization: feature/github-token-p4-retire-pat-mentions
+- heart-ack: YELLOW acknowledged by the human 2026-10-23 — manifest drift (1 workspace checkout vs repos.yaml); release validation stale (PyAutoLens)
+- owed-human: org PAT policy (restrict classic, keep fine-grained approval); org-level SLACK_WEBHOOK_URL (visibility all) then delete 9 repo copies
