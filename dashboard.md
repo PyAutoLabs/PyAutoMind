@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 17 |
-| [In flight](#in-flight) | 5 |
-| [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 283 |
+| [In flight](#in-flight) | 6 |
+| [Planned](#planned) | 9 |
+| [Backlog](#backlog) | 282 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -219,20 +219,12 @@ Use the start-dev skill. draft/maintenance/pyautomemory/canonical_key_todo_sweep
 Long-running multi-phase programmes. Each epic's 📋 prompt has the assistant read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
 
 <details>
-<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 3 queued prompt(s), in order</summary>
+<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 2 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — ledger: `draft/research/autolens_profiling/likelihood_lifecycle_epic.md` — phase 0 IN PROGRESS — 0A (PyAutoPulse contract) MERGED 2026-10-21 (PyAutoPulse#70, record…</summary>
 
 ```
 Continue the 'Likelihood lifecycle — optimal setups baked into PyAutoLens (`setup="auto"`), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood' epic. Its canonical state lives in draft/research/autolens_profiling/likelihood_lifecycle_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: nine phases, one at a time, library first, one issue per repo per phase. 0 spine (vocabulary; `profiling-summary@3` with producer-declared `class` optimal/secondary/experimental and `status` current/superseded/archived; `walltime-validation@1` Pulse axis; Pulse first selector = Class, current-only default; `results/` and `wiki/campaigns/` mirror `scripts/` with `archive/YYYY/MM/` in both project repos; Insight `setup_mode: auto`; lifecycle template) → 1 figures (Eyes already covers all ten dataset types since autolens_visualization#5; human sign-off + fit.png kept per profiling cell) → 2 profiling campaigns per dataset type under Optimal/Secondary setups (human "complete" gate) → 3 day zero freeze on a released tag + designation decisions + close Pulse `setup-baseline` → 4 inference wall-time validation on RAL → Pulse → 5 `setup="auto"` in Nerves/Array/Galaxy/Lens/Fit with banner, `setup.json`, run-time estimate, workspace/assistant/science-project updates → 6 `value_and_grad` breakdowns (adopts Pulse `gradient_cost_probe`) → 7 Insight sampler campaign under auto (adopts `hst-imaging-mass-samplers`) → 8 `pyauto-brain profiling lifecycle` verb (dogfood: matrix_free_interferometer_phase5). Boundaries: optimal is always a Pulse decision record, never inferred; one `current` per key by the day-zero rule, never by date; auto never touches model, sampler or HPC request. Upstream of hpc-campaign phase 4; results-library untouched. Evidence: draft/research/autolens_profiling/likelihood_lifecycle_epic_report.md.
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens_profiling/likelihood_lifecycle_p0_profiling.md">Likelihood lifecycle phase 0B: autolens_profiling mirrored tree, day-zero migration map, <code>profiling-summary@3</code> catalogue…</a> — autolens_profiling · large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens_profiling/likelihood_lifecycle_p0_profiling.md
 ```
 
 </details>
@@ -887,6 +879,14 @@ Use the start-dev skill. active/github_token_phase3_dashboard_dispatchers_app_to
 
 </details>
 
+<details><summary>📋 <a href="active/likelihood_lifecycle_p0_profiling.md">Likelihood lifecycle phase 0B: autolens_profiling mirrored tree, day-zero migration map, <code>profiling-summary@3</code> catalogue…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/442">issue #442</a> — issued 2026-10-23 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/likelihood_lifecycle_p0_profiling.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/matrix_free_interferometer_inversion.md">Matrix-free interferometer inversion for very large rectangular meshes…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/638">issue #638</a> — issued 2026-10-21</summary>
 
 ```
@@ -924,7 +924,7 @@ Use the start-dev skill. active/tutorial_5_ep_shared_centre_never_assigned.md
 Scoped but not started; some are not yet prompt files. Full detail in [`planned.md`](planned.md).
 
 <details>
-<summary><b>10</b> task(s)</summary>
+<summary><b>9</b> task(s)</summary>
 
 <details><summary>📋 <b>isothermal-ell-sph-oversampling-at-the-cusp</b> — found 2026-08-09 — planned — NOT yet a prompt file; file one via <code>/intake</code> before starting</summary>
 
@@ -986,14 +986,6 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ```
 Use the start-dev skill. draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md
-```
-
-</details>
-
-<details><summary>📋 <b>likelihood-lifecycle-p0-profiling</b> — planned 2026-10-21</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens_profiling/likelihood_lifecycle_p0_profiling.md
 ```
 
 </details>
@@ -2878,10 +2870,10 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-23 | filed | <a href="draft/bug/autofit/start_points_test_unseeded_identical_figures_of_merit_flake.md">test_start_points.py draws unseeded start points and flakes on…</a> |
 | 2026-10-23 | filed | <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred…</a> |
 | 2026-10-23 | issued | <a href="active/point_solver_spurious_core_candidates.md"><code>@PyAutoLens</code> PointSolver: spurious candidates exactly on `r_core =…</a> |
+| 2026-10-23 | issued | <a href="active/likelihood_lifecycle_p0_profiling.md">Likelihood lifecycle phase 0B: autolens_profiling mirrored tree…</a> |
 | 2026-10-23 | issued | <a href="active/github_token_phase3_dashboard_dispatchers_app_token.md">GitHub token consolidation phase 3: the seven dashboard dispatchers…</a> |
 | 2026-10-23 | filed | <a href="draft/docs/pyautohands/colab_custom_instructions_assistant_context.md">Carry assistant context into every Colab notebook via Gemini Custom…</a> |
 | 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
-| 2026-10-21 | planned | <a href="planned.md#likelihood-lifecycle-p0-profiling">likelihood-lifecycle-p0-profiling</a> |
 | 2026-10-21 | filed | <a href="planned.md#interferometer-primary-beam-persistence-mirror">interferometer-primary-beam-persistence-mirror</a> |
 | 2026-10-21 | filed | <a href="draft/docs/workspaces/corner_plot_config_keys_pr1709_phase3.md">Workspace config + docs for corner-plot labels and latent plots…</a> |
 | 2026-10-21 | filed | <a href="draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md">PyAutoLens mirror of the interferometer primary-beam persistence…</a> |
