@@ -40,3 +40,20 @@
 - user-facing: true
 - community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
 - prompt: active/matrix_free_interferometer_inversion.md
+
+## github-token-p3-dispatchers-app
+- issue: https://github.com/PyAutoLabs/autolens_visualization/issues/16
+- issued: 2026-10-23
+- prompt: active/github_token_phase3_dashboard_dispatchers_app_token.md
+- session: Claude Code CLI (Opus 5.5); current chat
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/github-token-p3-dispatchers-app
+- repos:
+  - autolens_visualization: feature/github-token-p3-dispatchers-app
+  - autogalaxy_visualization: feature/github-token-p3-dispatchers-app
+  - autofit_visualization: feature/github-token-p3-dispatchers-app
+  - autocti_visualization: feature/github-token-p3-dispatchers-app
+  - autolens_profiling: feature/github-token-p3-dispatchers-app
+  - autofit_profiling: feature/github-token-p3-dispatchers-app
+  - autolens_inference: feature/github-token-p3-dispatchers-app
+- heart: STALE at the door (release validation stale; monitoring RED) — unrelated organ/library state
