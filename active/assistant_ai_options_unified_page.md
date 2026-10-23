@@ -13,6 +13,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: high
 Filed: 2026-10-23
+Issued: 2026-10-23
 Status: formalised
 Consequence: glance
 

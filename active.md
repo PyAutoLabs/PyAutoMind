@@ -64,3 +64,21 @@
 - repos:
   - PyAutoLens: feature/point-magnification-signed-surface
 - epic: cluster-strong-lensing (phase 5a)
+
+## assistant-ai-options-page
+- issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/87
+- issued: 2026-10-23
+- prompt: active/assistant_ai_options_unified_page.md
+- session: Claude Code (Fable 5.1), laptop CLI; session ID unavailable
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/assistant-ai-options-page
+- deferred: autolens_assistant edits wait for cosmos-web-ring-notebook (PR autolens_assistant#161) to merge; add its claim then
+- repos:
+  - PyAutoScientist: feature/assistant-ai-options-page
+  - autogalaxy_assistant: feature/assistant-ai-options-page
+  - autofit_assistant: feature/assistant-ai-options-page
+  - autocti_assistant: feature/assistant-ai-options-page
+  - pyautolabs.github.io: feature/assistant-ai-options-page
+  - autolens_workspace: feature/assistant-ai-options-page
+  - autogalaxy_workspace: feature/assistant-ai-options-page
+  - autofit_workspace: feature/assistant-ai-options-page
