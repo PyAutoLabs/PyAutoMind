@@ -41,10 +41,15 @@ sends:
 
 each with `client_payload.version` set to the released version, via
 `gh api repos/<owner>/<repo>/dispatches -f event_type=<event> -f client_payload[version]=<v>`
-using `GH_TOKEN: ${{ secrets.PAT_PYAUTOLABS }}` (a `GITHUB_TOKEN` dispatch never
-triggers downstream workflows). Skip cleanly when the secret is empty, and do not
-fail the release if a dispatch fails. Keep the event names in step with PyAutoEyes
-`registry.yaml` `dispatch_event`.
+using a `pyautolabs-bot` App token minted just before the step (a `GITHUB_TOKEN`
+dispatch never triggers downstream workflows), as `release.yml` already does for
+its other cross-repo steps: `actions/create-github-app-token@v3` with
+`client-id: ${{ vars.APP_CLIENT_ID }}`, `private-key: ${{ secrets.APP_PRIVATE_KEY }}`,
+`owner: PyAutoLabs`, `repositories: autolens_visualization,autogalaxy_visualization`,
+`permission-contents: write`. The mint is the credential guard (a missing
+credential fails it; no silent skip), but a failed dispatch must not fail the
+release. Keep the event names in step with PyAutoEyes `registry.yaml`
+`dispatch_event`.
 
-Human prerequisite: `PAT_PYAUTOLABS` must include both visualization repos (a
-newborn repo missing from its list 403s the dispatch).
+Candidates for the same step: `autofit_visualization` and `autocti_visualization`
+`render.yml` also listen for `pyautofit-release` / `pyautocti-release`.
