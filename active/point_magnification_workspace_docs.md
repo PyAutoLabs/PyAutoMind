@@ -10,7 +10,8 @@ Themes:
 Difficulty: medium
 Autonomy: safe
 Priority: high
-Status: planned
+Status: active
+Issued: 2026-10-23
 Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/596
 Consequence: glance
 Witness: Every one of the eleven `scripts/*/source_science.py` (imaging, group, multi_galaxy, interferometer and their multi_gaussian_expansion / pixelization feature variants) carries a `__Magnification At A Point__` section that calls `al.LensCalc.from_tracer(tracer=tracer).magnification_2d_via_hessian_from(grid=al.Grid2DIrregular([...]))` at chosen (y,x) coordinates and prints the result; `guides/lens_calc.py` has a `__Magnification At A Point__` section after `__Hessian__`; `point_source/fit.py` prints `fit.positions.signed_magnifications_at_positions` and `fit.positions.magnifications_at_positions`; every edited script runs clean under `PYAUTO_SMALL_DATASETS` (or its existing smoke mode) and `notebooks/` are regenerated for the edited scripts.

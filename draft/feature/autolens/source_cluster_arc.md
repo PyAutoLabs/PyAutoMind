@@ -756,3 +756,11 @@ claimed by `assistant-ai-options-page` (PyAutoScientist#87; its workspace branch
 yet), so 5b is registered in planned.md as blocked, not started. Human --auto authorization for
 phase 5 is recorded on the planned row; when the claim is released, run /start_dev on the prompt
 with --auto (effective safe, tier glance) → start_workspace → ship_workspace. No source edits.
+
+## Phase 5b started under --auto — 2026-10-23
+
+Human: "start 5b now i doubt theres much clash" → autolens_workspace claim released from
+assistant-ai-options-page (branch had no commits; note left on its row). 5b promoted
+planned → active (ws#596), worktree feature/point-magnification-workspace-docs. Effective
+autonomy safe, tier glance: ships through the four-leg autonomous gate, auto-merges on green if
+the Witness passes; PR pending-release until PyAutoLens#798 is released.

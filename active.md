@@ -63,12 +63,27 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/assistant-ai-options-page
 - deferred: autolens_assistant edits wait for cosmos-web-ring-notebook (PR autolens_assistant#161) to merge; add its claim then
+- note: autolens_workspace claim released 2026-10-23 by human direction (no commits on its branch) so point-magnification-workspace-docs (5b) could start; re-claim if edits are needed
 - repos:
   - PyAutoScientist: feature/assistant-ai-options-page
   - autogalaxy_assistant: feature/assistant-ai-options-page
   - autofit_assistant: feature/assistant-ai-options-page
   - autocti_assistant: feature/assistant-ai-options-page
   - pyautolabs.github.io: feature/assistant-ai-options-page
-  - autolens_workspace: feature/assistant-ai-options-page
   - autogalaxy_workspace: feature/assistant-ai-options-page
   - autofit_workspace: feature/assistant-ai-options-page
+
+## point-magnification-workspace-docs
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/596
+- issued: 2026-10-23
+- prompt: active/point_magnification_workspace_docs.md
+- session: Claude Code CLI (Fable 5.1), session bac93ca4; launched --auto (human: "prm and then auto mode do all of phase 5"; "start 5b now")
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/point-magnification-workspace-docs
+- tier: glance (declared); effective autonomy safe (docs, medium)
+- heart-ack:
+  - manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml
+  - release validation incomplete: no rehearsal for current source
+- repos:
+  - autolens_workspace: feature/point-magnification-workspace-docs
+- epic: cluster-strong-lensing (phase 5b)
