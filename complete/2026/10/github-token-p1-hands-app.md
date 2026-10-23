@@ -1,3 +1,16 @@
+## github-token-p1-hands-app
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/321
+- completed: 2026-10-23
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/316
+- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/322
+- summary: Phase 1 of the GitHub token consolidation. Hands `release.yml` no longer reads `PAT_PYAUTOLABS`: nine per-job `actions/create-github-app-token@v3` mints (scoped to the repos and permissions each job needs, the tag-push token minted immediately before use) replace it; every URL-embedded credential is gone (the #319 class: git clears URL userinfo on any redirect); git auth goes through `gh auth setup-git` or `actions/checkout` `token:`; bot commits/tags are authored as `pyautolabs-bot[bot]`. PyPI/TestPyPI uploads stay on the `PYPI`/`TEST_PYPI` tokens with the trusted-publishing switch as a commented `TODO(token-phase-1b)` block in `release.yml` and `publish_tombstone.yml`. PyAutoHeart gained `token_push_check.yml` (daily, dispatch, and on PRs that touch it) + `heart/checks/token_push.py`: mints an App token and `git push --dry-run`s each release library, commits `state/token_push.json` on main; readiness reports a refused push as RED and a missing/>48 h sidecar as STALE.
+- evidence: Heart PR run 39964652005 minted a real App token (scope from `config/repos.yaml`) and pushed dry-run to all five libraries, push=true ×5. Hands pytest 3.12/3.13/3.14 green; Heart pytest 3.12/3.13 green (1307 local).
+- traps: Heart's tenant firewall rejects literal org/repo names in organ code — owner from `config/repos.yaml` via `dashboard._repo_owners()`, libraries from `readiness.load_release_gate_names()`; the workflow's `repositories:` input is emitted by `python -m heart.checks.token_push --print-repos`. A branch-only workflow cannot be `workflow_dispatch`ed (404 until on main) — the `pull_request` path-filtered trigger is what proves a token check before merge. Hands `rehearsal=true` still uploads to TestPyPI and skips every App leg, so it proves nothing about tag auth; first live proof is the next release. Brain `repo_settings.yml` needs Administration permission the App deliberately lacks (phase 2: retire, run locally).
+- deferred: phase 1b PyPI trusted publishing (blocked on the human's PyPI login — new-device email goes to a defunct address); phases 2–5 in `draft/release/pyautohands/github_token_and_secret_setup_full_review_surveys/03_target_design_and_phases.md`.
+- heart: YELLOW acknowledged by the human 2026-10-23 (manifest drift on one workspace checkout; PyAutoLens release validation stale) — unrelated.
+
+## Original prompt
+
 # GitHub token consolidation phase 1: Hands release path on the pyautolabs-bot App
 
 Type: release

@@ -41,23 +41,6 @@
 - community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
 - prompt: active/matrix_free_interferometer_inversion.md
 
-## github-token-p1-hands-app
-- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/321
-- issued: 2026-10-23
-- prompt: active/github_token_phase1_hands_release_app_token.md
-- session: Claude Code CLI (Fable 5.1); session c837f591
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/316
-- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/322
-- validation: Heart PR run 39964652005 minted a real pyautolabs-bot token (scope from config/repos.yaml) and dry-run pushed to all five release libraries (push=true ×5). All checks green on #316 (token check, pytest 3.12/3.13) and #322 (pytest 3.12/3.13/3.14); tenant firewall fixed in e691928.
-- heart: YELLOW acknowledged by the human 2026-10-23 (manifest drift on one workspace checkout; PyAutoLens release validation stale) — unrelated.
-- next: merge order Heart #316 first (its token check then runs on main), then Hands #322 when no release run is live; human /prm. Phase 1b (PyPI trusted publishing) waits on the human's PyPI login (defunct 2FA email; support ticket route).
-- worktree: ~/Code/PyAutoLabs-wt/github-token-p1-hands-app
-- authorization: human approved plan 2026-10-23; judge tier, human /prm; no live release from this task
-- repos:
-  - PyAutoHands: feature/github-token-p1-hands-app
-  - PyAutoHeart: feature/github-token-p1-hands-app
-
 ## ep-zero-success-factors
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1711
 - issued: 2026-10-23
