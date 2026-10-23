@@ -47,7 +47,10 @@
 - prompt: active/nan_in_ep_evidence_accumulation_invalid_value.md
 - epic: graphical-ep (ledger PyAutoInsight tasks/ep_campaign.md + tasks/ep_campaign_state_2026-10-23.md)
 - session: Claude Code CLI (Fable 5.1); session e889c72e
-- status: library-dev
+- status: library-shipped, workspace-pending
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1714
+- heart-ack: manifest drift (1 workspace checkout mismatch); PyAutoLens release validation stale — same reasons acknowledged 2026-10-23 for #1712
+- new-scope: draft/bug/autofit/truncated_normal_log_partition_tail_underflow.md (message maths, judge)
 - worktree: ~/Code/PyAutoLabs-wt/ep-evidence-nonfinite
 - tier: glance — auto-merge on green if the Witness passes
 - repos:
