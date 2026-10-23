@@ -12,7 +12,7 @@
 | [Epics](#epics) | 18 |
 | [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 278 |
+| [Backlog](#backlog) | 279 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -576,7 +576,7 @@ Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens
 </details>
 
 <details>
-<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 13 queued prompt(s), in order</summary>
+<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 14 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Cluster strong lensing — Source &amp; Cluster arc</b> — ledger: `draft/feature/autolens/source_cluster_arc.md` — In progress — 1a–1d, phase 3a audit (profiling#364, workspace_test#341) and phase 3b field-preserving cap fix (Galaxy#646…</summary>
 
@@ -662,6 +662,14 @@ Use the start-dev skill. draft/feature/workspaces/cluster_pixelized_analysisfact
 
 ```
 Use the start-dev skill. draft/docs/howtolens/cluster_pixelized_source.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/point_magnification_workspace_docs.md">Magnification at a point: document it in every source_science.py and the guides</a> — autolens_workspace · medium · safe · high</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens_workspace/point_magnification_workspace_docs.md
 ```
 
 </details>
