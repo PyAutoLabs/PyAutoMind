@@ -1,3 +1,35 @@
+Source & Cluster arc phase 5b (epic `cluster-strong-lensing`). autolens_workspace#598 merged as
+`0f8b4db5a` on 2026-10-23 under the glance tier (explicit `--auto`, human: "prm and then auto
+mode do all of phase 5" / "start 5b now"), closing issue #596.
+
+Shipped: a `__Magnification At A Point__` section in all eleven `scripts/*/source_science.py`
+(signed `mu = 1/det(A)` via `al.LensCalc.from_tracer(tracer).magnification_2d_via_hessian_from`
+at hand-chosen coordinates on the arcs, sign = image parity, distinct from the flux-ratio / area
+magnification; group variants compare against `tracer_main_only`, multi_galaxy pixelization
+against `tracer_lens_0_only`, the two pixelization variants also evaluate at `positions.json`);
+the same section in `guides/lens_calc.py`; a `plane_j` cross-reference paragraph in
+`guides/advanced/multi_plane.py`; `point_source/fit.py` and `modeling.py` print the per-image
+signed/unsigned accessors from PyAutoLens#798. 15 notebooks regenerated; navigator catalogue
+refreshed. No forward PointSolver call added; no library edits.
+
+Gate: tests n/a (workspace; 15/15 edited scripts run clean in smoke mode); smoke curated
+autolens list 43/43; independent review CLEAN (Fable reviewer, Opus-authored branch; four
+lifted claims basis-cited; one black nit fixed pre-PR); Heart YELLOW 85 within the human's
+acknowledgement (manifest drift 1 mismatch; release validation stale: source moved since
+rehearsal (PyAutoLens), acked at PR-open); Witness PASS. CI: size guard, navigator (4 jobs),
+smoke 3.12/3.13 all green at 51b9a898.
+
+Release gate: the two `point_source/` scripts need PyAutoLens#798, merged but unreleased
+(pending-release carried on `complete/2026/10/point-magnification-signed-surface.md`).
+Side-finding for a later one-liner (not filed): PyAutoGalaxy `lens_calc.py` docstring of
+`magnification_2d_via_hessian_from` says `abs(...)` but the implementation returns the signed value.
+
+Phase 5 of the arc is complete (5a + 5b). Next arc candidates: phase 4 (mesh magnification
+correctness tests), phase 6 (LEGGOS area magnification; gates 3, 5 — phase 3 remainder
+deferred), or the deferred phase-3 engine-dispatch slice. One at a time.
+
+## Original prompt
+
 # Magnification at a point: document it in every source_science.py and the guides
 
 Type: docs

@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1959 records across 9 buckets.
+1960 records across 9 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -294,6 +294,7 @@ markers; everything below GENERATED is rebuilt.
 - [point-image-fit-filename](2026/10/point-image-fit-filename.md)
 - [point-image-pair-all-forward-grad-nan](2026/10/point-image-pair-all-forward-grad-nan.md)
 - [point-magnification-signed-surface](2026/10/point-magnification-signed-surface.md)
+- [point-magnification-workspace-docs](2026/10/point-magnification-workspace-docs.md)
 - [point-plots-yaml-keys](2026/10/point-plots-yaml-keys.md)
 - [point-solver-duplicate-policy](2026/10/point-solver-duplicate-policy.md)
 - [point-solver-image-accuracy](2026/10/point-solver-image-accuracy.md)

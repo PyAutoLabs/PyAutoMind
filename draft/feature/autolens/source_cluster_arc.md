@@ -775,3 +775,14 @@ the human at PR-open. Witness PASS. Calibration row appended to autonomy_log.md.
 in-turn CI watch then /prm merge + close-out. Release-gate: PyAutoLens#798 unreleased (the two
 point_source scripts use its accessors). Review side-finding for a later one-liner: PyAutoGalaxy
 `lens_calc.py` docstring of `magnification_2d_via_hessian_from` says `abs(...)` but returns signed.
+
+## Phase 5b merged; phase 5 complete — 2026-10-23
+
+autolens_workspace#598 merged as `0f8b4db5a` under the glance tier after all CI green (size guard,
+navigator ×4, smoke 3.12/3.13 at 51b9a898). Issue #596 closed. Record
+`complete/2026/10/point-magnification-workspace-docs.md`; shadow row appended (merged-unchanged,
+stage 1). Release gate: PyAutoLens#798 unreleased (two point_source scripts). Phase 5 (5a + 5b)
+COMPLETE. No later phase issued. Next candidates, one at a time: phase 4 (mesh magnification
+correctness tests), phase 6 (LEGGOS area magnification; nominal gates 3 and 5 — phase 3 remainder
+deferred, needs a human call on whether 6 may proceed on marching-squares only), or the deferred
+phase-3 engine-dispatch slice. Phase 11 stays dropped.
