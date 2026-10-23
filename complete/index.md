@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1974 records across 9 buckets.
+1977 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -118,6 +118,12 @@ markers; everything below GENERATED is rebuilt.
 <!-- CURATED:END -->
 
 <!-- GENERATED:START — edit records, not this block; regenerate with `lifecycle.py index --apply` -->
+
+## 2026/10/github-token-consolidation-epic_surveys
+
+- [01_inventory](2026/10/github-token-consolidation-epic_surveys/01_inventory.md) — read-only, 2026-10-23
+- [02_best_practice](2026/10/github-token-consolidation-epic_surveys/02_best_practice.md) — 2026-10-23
+- [03_target_design_and_phases](2026/10/github-token-consolidation-epic_surveys/03_target_design_and_phases.md) — proposed 2026-10-23, awaiting human approval
 
 ## 2026/10
 
