@@ -21,6 +21,8 @@ Epic: likelihood-lifecycle
 Phase: 0
 Parent: draft/research/autolens_profiling/likelihood_lifecycle_epic.md
 Filed: 2026-10-23
+Issued: 2026-10-23
+Issue: https://github.com/PyAutoLabs/PyAutoInsight/issues/39
 
 Phase 0 sub-issue 0D of the `likelihood-lifecycle` epic (ledger `draft/research/autolens_profiling/likelihood_lifecycle_epic.md`; report §3.2 "`inference-summary` (Insight; additive)", §3.8 "Insight: unchanged structure; the setup page shows `setup_resolved` as provenance", §4 phase 0 "0D PyAutoInsight"). Depends on 0A (PyAutoPulse#70, merged 2026-10-21) and 0C (autolens_inference#42→#43→#44, PyAutoPulse#71, PyAutoCortex#74, merged 2026-10-21; record `complete/2026/10/likelihood-lifecycle-p0-inference.md`). 0B (autolens_profiling) is NOT a dependency and is not touched here: autolens_profiling is claimed by the cluster-pointsolver starting-grid work in another session.
 

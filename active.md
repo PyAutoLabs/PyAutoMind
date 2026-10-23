@@ -80,3 +80,18 @@
   - PyAutoHeart: feature/github-token-p2a-readers-app
   - PyAutoScientist: feature/github-token-p2a-readers-app
   - PyAutoMemory: feature/github-token-p2a-readers-app
+
+## likelihood-lifecycle-p0-insight
+- issue: https://github.com/PyAutoLabs/PyAutoInsight/issues/39
+- issued: 2026-10-23
+- prompt: active/likelihood_lifecycle_p0_insight.md
+- epic: likelihood-lifecycle (phase 0, sub-issue 0D; ledger draft/research/autolens_profiling/likelihood_lifecycle_epic.md)
+- session: Claude Code CLI (Fable 5.1 orchestrator, Opus workers)
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/likelihood-lifecycle-p0-insight
+- classification: workspace (PyAutoInsight reader + autolens_inference exporter fix; infrastructure only, no runs)
+- tier: judge — human /prm
+- next: start_workspace → PR 1 autolens_inference exporter reference fix → PR 2 PyAutoInsight fields/render/docs → ship_workspace; rebase after PyAutoInsight#38 and autolens_inference#30 if they land first
+- repos:
+  - PyAutoInsight: feature/likelihood-lifecycle-p0-insight
+  - autolens_inference: feature/likelihood-lifecycle-p0-insight
