@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-10-23T18:35:58Z",
+  "updated": "2026-10-23T18:36:42Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "HowToFit tutorial 5 (EP) never shares the centre it says it shares \u2014 workspace-shipped, blocked-CI",
       "url": "https://github.com/PyAutoLabs/HowToFit/pull/75",
       "prompt": "Use the start-dev skill. active/tutorial_5_ep_shared_centre_never_assigned.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "`@PyAutoLens` PointSolver: spurious candidates exactly on `r_core = 0` dPIE member cores \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/800",
+      "prompt": "Use the start-dev skill. active/point_solver_spurious_core_candidates.md"
     },
     {
       "severity": "yellow",
@@ -120,12 +126,6 @@
       "text": "pick: Guard every workspace script against untimed network downloads",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace/no_untimed_network_downloads_check.md",
       "prompt": "Use the start-dev skill. draft/test/autolens_workspace/no_untimed_network_downloads_check.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Cache `autonerves` config parsing \u2014 308 YAML files parsed per script run",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/autonerves/config_yaml_parse_cache.md",
-      "prompt": "Use the start-dev skill. draft/refactor/autonerves/config_yaml_parse_cache.md"
     }
   ]
 }

@@ -887,7 +887,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/point_solver_spurious_core_candidates.md"><code>@PyAutoLens</code> PointSolver: spurious candidates exactly on <code>r_core = 0</code> dPIE member cores</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/799">issue #799</a> — issued 2026-10-23 — library-dev</summary>
+<details><summary>📋 <a href="active/point_solver_spurious_core_candidates.md"><code>@PyAutoLens</code> PointSolver: spurious candidates exactly on <code>r_core = 0</code> dPIE member cores</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/799">issue #799</a> — issued 2026-10-23 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/800">PyAutoLens#800</a></summary>
 
 ```
 Use the start-dev skill. active/point_solver_spurious_core_candidates.md
