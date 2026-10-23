@@ -879,7 +879,7 @@ Use the start-dev skill. active/cluster_pointsolver_starting_grid_close_member_i
 
 </details>
 
-<details><summary>📋 <a href="active/github_token_phase2a_readers_dispatchers_app_token.md">GitHub token consolidation phase 2a: organ readers and dispatchers…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/531">issue #531</a> — issued 2026-10-23 — library-dev</summary>
+<details><summary>📋 <a href="active/github_token_phase2a_readers_dispatchers_app_token.md">GitHub token consolidation phase 2a: organ readers and dispatchers…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/531">issue #531</a> — issued 2026-10-23 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/532">PyAutoBrain#532</a>, <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/317">PyAutoHeart#317</a>, <a href="https://github.com/PyAutoLabs/PyAutoScientist/pull/89">PyAutoScientist#89</a>, <a href="https://github.com/PyAutoLabs/PyAutoMemory/pull/141">PyAutoMemory#141</a></summary>
 
 ```
 Use the start-dev skill. active/github_token_phase2a_readers_dispatchers_app_token.md
