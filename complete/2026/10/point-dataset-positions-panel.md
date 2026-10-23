@@ -15,7 +15,6 @@ Shipped the point-source positions panels (phase 1 of the point-source figures w
 
 Merged 2026-10-21 via a human /prm (judge tier), library first.
 
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/786
 
 Follow-ups:
 - `draft/feature/autolens/point_solver_refinement_figure.md` (phase 2)

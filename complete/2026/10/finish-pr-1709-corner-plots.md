@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1710
 - completed: 2026-10-21
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1709
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1709
 - scope recorded: phase 1 (PyAutoFit) only. Phases 2 and 3 re-filed as `draft/feature/autogalaxy/latent_parameter_declarations_pr1709_phase2.md` and `draft/docs/workspaces/corner_plot_config_keys_pr1709_phase3.md`
 - summary: Community PR by @samlange04 (proposal .github#38) merged as d3a772129. Maintainer commit f9377f3f6 was pushed onto the contributor's branch instead of another review round. It resolves review findings 1–8:
   - per-component plots follow corner_anesthetic when unconfigured;

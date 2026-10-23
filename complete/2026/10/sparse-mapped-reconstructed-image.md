@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/639
 - completed: 2026-10-21
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/641 (merge 7ecc6ef3)
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/641
 - community: https://github.com/PyAutoLabs/.github/discussions/40 (@HRSAstro) — contributor update owed at merge (draft approved in chat) and again at release
 - summary: |
     Community proposal (hub #40, @HRSAstro): after 2026.10.18.1 made the sparse interferometer

@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/648
 - completed: 2026-10-21
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/652 (merge 086c7278)
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/652
 - parent: https://github.com/PyAutoLabs/PyAutoArray/issues/638 (active/matrix_free_interferometer_inversion.md)
 - community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
 - summary: |

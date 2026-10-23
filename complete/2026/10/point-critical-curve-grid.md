@@ -1,6 +1,5 @@
 Critical-curve grids for point-source and weak-lensing visualization (PyAutoLens#783). Follow-up to complete/2026/10/point-source-image-overlay.md and point-image-fit-filename.md.
 
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/784
 
 ## What shipped
 - **PyAutoLens#784:**

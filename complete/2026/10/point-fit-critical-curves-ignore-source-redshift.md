@@ -2,7 +2,6 @@ Fixed by the cluster point-figures pass (`complete/2026/10/cluster-point-figures
 
 Merged 2026-10-22 via a human /prm alongside the absorbing task.
 
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/794
 
 ## Original prompt
 

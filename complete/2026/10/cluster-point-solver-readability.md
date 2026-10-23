@@ -1,4 +1,3 @@
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/796
 
 ## Outcome
 Cluster-scale `point_solver.png` is now readable (PyAutoLens#795). Each panel spans its source's own images and rejected candidates, with round ticks. When the solver's step-0 triangles are too small to draw, the figure re-solves on a coarse display grid of pixel scale min(span/10, closest separation/1.6). It uses that grid only if it recovers the real solve's images, and otherwise draws the solver's own steps. Rejected candidates are labelled r1, r2, and own-plane critical curves come via `curves_for_planes` in the #794 style. The modelling solver is unchanged.

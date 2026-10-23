@@ -4,7 +4,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/792
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/593
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/346
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/792
 
 - **Library:** `al.FitPositionsSource` now defaults to `weighting = "jacobian"`, with Bᵢ = Aᵢ⁻ᵀΘᵢAᵢ⁻¹ (Gravity.jl, Lombardi 2024 Eq. 46; the Solved class is Eq. 58). `"magnification"` (Jullo 2007 Eq. 10, scalar μ²/σ²) is kept as an opt-in. Its normalisation was changed from the 1-D, μ-dependent Σ log(2πσ²/μ²) to the model-independent Σ log((2π)²σ⁴), i.e. Eq. 46 with B ≈ μ²Θ.
 - **Human decisions:**

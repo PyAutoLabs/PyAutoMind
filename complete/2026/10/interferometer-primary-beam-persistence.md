@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/654
 - completed: 2026-10-21
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/655 (merge e00b5e7d)
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/655
 - parent: complete/2026/10/interferometer-primary-beam.md
 - community: https://github.com/PyAutoLabs/.github/discussions/35 (@HRSAstro)
 - summary: |

@@ -22,7 +22,6 @@ Shipped phase 2 of the point-source figures: the PointSolver refinement figure.
 
 Merged 2026-10-21 via a human /prm (judge tier), library first. The full test_autolens suite passes (873).
 
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/788
 
 **Follow-ups**
 - `draft/docs/autolens/point_solver_figure_workspace_placement.md` (phase 3)

@@ -20,8 +20,6 @@ Shipped the source-plane fit panel for point-source fits, with each panel matche
 
 Merged 2026-10-21 via a human /prm (judge tier), order #653 → #790 → #13.
 
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/653
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/790
 
 **Known follow-ups**
 - PairAll legend auto-placement can cover the mass centre: the longer "Residual (nearest, soft pairing)" label pushes it mid-panel (seen in the scratch render; no tracked PNG uses PairAll). Place the legend in the emptiest corner, as the source-plane panel does. Fold this into the cluster figures pass.

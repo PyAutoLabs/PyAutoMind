@@ -1,6 +1,5 @@
 Keep a dataset-only point-image figure; the after-fit figure becomes `fit_image_with_points.png` (PyAutoLens#781). Follow-up to complete/2026/10/point-source-image-overlay.md.
 
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/782
 
 ## What shipped
 - **PyAutoLens#782:**

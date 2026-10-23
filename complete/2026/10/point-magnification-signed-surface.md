@@ -25,7 +25,6 @@ Workspace documentation is phase 5b: `draft/docs/autolens_workspace/point_magnif
 (source_science.py both tiers, guides/lens_calc.py, guides/advanced/multi_plane.py cross-ref,
 point_source/fit.py), launched under `--auto` per human direction 2026-10-23.
 
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/798
 
 ## Original prompt
 

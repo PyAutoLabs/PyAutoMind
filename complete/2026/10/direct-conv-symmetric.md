@@ -19,7 +19,6 @@ Human decisions: 2026-10-16 (on #635) rank by `ymin` and raise the gate 0.5 → 
 logs, result JSON copies) was archived out of the worktree; RAL copies and the PRs hold the
 evidence.
 
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/636
 
 ## Original prompt
 

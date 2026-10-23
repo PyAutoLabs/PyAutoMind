@@ -26,7 +26,6 @@ Absorbs `draft/bug/autolens/point_fit_critical_curves_ignore_source_redshift.md`
 
 Merged 2026-10-22 via a human /prm (judge tier), in library-first order: PyAutoLens#794 → autolens_visualization#14 (lint green on rerun against the merged library main) / autolens_workspace#594 / autolens_workspace_test#347. Issue PyAutoLens#793 closed. PyAutoEyes `dashboard_refresh.yml` dispatched (run 39752061558).
 
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/794
 
 **Not shipped (re-filed)**
 - Cluster `point_solver.png` refinement-panel readability, and labelling for >10 images on the solver figure: `draft/feature/autolens/cluster_point_solver_refinement_readability.md`.

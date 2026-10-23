@@ -14,7 +14,7 @@
 | [Planned](#planned) | 10 |
 | [Backlog](#backlog) | 283 |
 | [Recent](#recent) | 50 |
-| [Pending release](#pending-release) | 4 |
+| [Pending release](#pending-release) | 0 |
 
 ## Start here
 
@@ -3124,44 +3124,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 ## Pending release
 
-**PyAutoArray**
-
-- [PyAutoArray#637](https://github.com/PyAutoLabs/PyAutoArray/pull/637) — `complete/2026/10/delaunaynn-wide-row-overhead.md`
-- [PyAutoArray#636](https://github.com/PyAutoLabs/PyAutoArray/pull/636) — `complete/2026/10/direct-conv-symmetric.md`
-- [PyAutoArray#649](https://github.com/PyAutoLabs/PyAutoArray/pull/649) — `complete/2026/10/imaging-sparse-triplets-masking.md`
-- [PyAutoArray#644](https://github.com/PyAutoLabs/PyAutoArray/pull/644) — `complete/2026/10/interferometer-primary-beam.md`
-- [PyAutoArray#645](https://github.com/PyAutoLabs/PyAutoArray/pull/645) — `complete/2026/10/matrix-free-interferometer-phase1.md`
-- [PyAutoArray#650](https://github.com/PyAutoLabs/PyAutoArray/pull/650) — `complete/2026/10/matrix-free-interferometer-phase2.md`
-- [PyAutoArray#651](https://github.com/PyAutoLabs/PyAutoArray/pull/651) — `complete/2026/10/matrix-free-interferometer-phase3.md`
-- [PyAutoArray#652](https://github.com/PyAutoLabs/PyAutoArray/pull/652) — `complete/2026/10/matrix-free-interferometer-phase4.md`
-- [PyAutoArray#653](https://github.com/PyAutoLabs/PyAutoArray/pull/653) — `complete/2026/10/point-fit-source-plane-panel.md`
-- [PyAutoArray#641](https://github.com/PyAutoLabs/PyAutoArray/pull/641) — `complete/2026/10/sparse-mapped-reconstructed-image.md`
-
-**PyAutoFit**
-
-- [PyAutoFit#1709](https://github.com/PyAutoLabs/PyAutoFit/pull/1709) — `complete/2026/10/finish-pr-1709-corner-plots.md`
-- [PyAutoFit#1708](https://github.com/PyAutoLabs/PyAutoFit/pull/1708) — `complete/2026/10/fixed-model-json.md`
-- [PyAutoFit#1705](https://github.com/PyAutoLabs/PyAutoFit/pull/1705) — `complete/2026/10/function-config-priors.md`
-- [PyAutoFit#1707](https://github.com/PyAutoLabs/PyAutoFit/pull/1707) — `complete/2026/10/prior-stable-test-ids.md`
-- [PyAutoFit#1706](https://github.com/PyAutoLabs/PyAutoFit/pull/1706) — `complete/2026/10/prior-summary-ranges.md`
-
-**PyAutoGalaxy**
-
-- [PyAutoGalaxy#655](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/655) — `complete/2026/10/interferometer-primary-beam-persistence.md`
-
-**PyAutoLens**
-
-- [PyAutoLens#794](https://github.com/PyAutoLabs/PyAutoLens/pull/794) — `complete/2026/10/cluster-point-figures.md`
-- [PyAutoLens#796](https://github.com/PyAutoLabs/PyAutoLens/pull/796) — `complete/2026/10/cluster-point-solver-readability.md`
-- [PyAutoLens#784](https://github.com/PyAutoLabs/PyAutoLens/pull/784) — `complete/2026/10/point-critical-curve-grid.md`
-- [PyAutoLens#786](https://github.com/PyAutoLabs/PyAutoLens/pull/786) — `complete/2026/10/point-dataset-positions-panel.md`
-- [PyAutoLens#794](https://github.com/PyAutoLabs/PyAutoLens/pull/794) — `complete/2026/10/point-fit-critical-curves-ignore-source-redshift.md`
-- [PyAutoLens#790](https://github.com/PyAutoLabs/PyAutoLens/pull/790) — `complete/2026/10/point-fit-source-plane-panel.md`
-- [PyAutoLens#782](https://github.com/PyAutoLabs/PyAutoLens/pull/782) — `complete/2026/10/point-image-fit-filename.md`
-- [PyAutoLens#798](https://github.com/PyAutoLabs/PyAutoLens/pull/798) — `complete/2026/10/point-magnification-signed-surface.md`
-- [PyAutoLens#788](https://github.com/PyAutoLabs/PyAutoLens/pull/788) — `complete/2026/10/point-solver-refinement-figure.md`
-- [PyAutoLens#780](https://github.com/PyAutoLabs/PyAutoLens/pull/780) — `complete/2026/10/point-source-image-overlay.md`
-- [PyAutoLens#792](https://github.com/PyAutoLabs/PyAutoLens/pull/792) — `complete/2026/10/positions-source-jacobian-default.md`
+_(nothing pending release)_
 
 
 Boards: [organism](https://pyautolabs.github.io/PyAutoScientist/) · [brain](https://pyautolabs.github.io/PyAutoBrain/) · [cortex](https://pyautolabs.github.io/PyAutoCortex/) · [memory](https://pyautolabs.github.io/PyAutoMemory/) · [eyes](https://pyautolabs.github.io/PyAutoEyes/) · [ears](https://pyautolabs.github.io/PyAutoEars/) · [heart](https://pyautolabs.github.io/PyAutoHeart/) · [hands](https://pyautolabs.github.io/PyAutoHands/) · [pulse](https://pyautolabs.github.io/PyAutoPulse/) · [insight](https://pyautolabs.github.io/PyAutoInsight/) · [dna](https://pyautolabs.github.io/PyAutoDNA/) · [nerves](https://pyautolabs.github.io/PyAutoNerves/) · [broca](https://pyautolabs.github.io/PyAutoBroca/) · [gut](https://pyautolabs.github.io/PyAutoGut/)

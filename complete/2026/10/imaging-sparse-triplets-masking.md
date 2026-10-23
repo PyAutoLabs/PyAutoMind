@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/643
 - completed: 2026-10-21
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/649 (merge 33435592)
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/649
 - summary: |
     Side finding of #639/#641. Three commits 9b52fac5, 3e53e0aa, dd268224 on
     `feature/imaging-sparse-triplets-masking`: `mapper_util.sparse_triplets_from(pix_sizes_for_sub=)`

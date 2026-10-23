@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/640
 - completed: 2026-10-21
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/644 (merge ea8a55f7)
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/644
 - community: https://github.com/PyAutoLabs/.github/discussions/35 (@HRSAstro) — PR-open reply posted 2026-10-21; release update owed
 - summary: |
     Community proposal (hub #35): optional primary beam P for interferometer fitting. Five commits

@@ -17,7 +17,6 @@ met**: the remainder is the Sibson interpolation itself (~41% of the call) and c
 wider unique-mapping rows, outside this scope. Human decision 2026-10-17: further DelaunayNN
 speed-up is filed as research, not continued here.
 
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/637
 
 ## Original prompt
 

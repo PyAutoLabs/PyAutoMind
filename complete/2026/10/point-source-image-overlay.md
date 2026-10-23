@@ -1,6 +1,5 @@
 Point-source positions overlaid on a dataset image, and shown on PyAutoEyes (PyAutoLens#779).
 
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/780
 
 ## What shipped
 - **PyAutoLens#780:**

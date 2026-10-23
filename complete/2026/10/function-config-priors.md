@@ -11,7 +11,6 @@
 - merge-proof: Remote PR head is an ancestor of origin/main in unshallowed PyAutoFit; zero unmerged commits. GitHub confirms MERGED.
 - ci: All head workflows and jobs completed successfully; Python 3.12, 3.13 and no-JAX test legs passed. Applicable docs and generated-search-docs passed. No review objections.
 - freeze: pyauto-heart freeze --show returned not frozen. Readiness remains STALE; no release-readiness claim.
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1705
 - release-link-repair: GitHub pending-release label verified; restored the missing Mind link during close-out.
 - shadow-row: Human confirmed merged-unchanged in this chat on 2026-10-17; stage-1 glance row appended to autonomy_log.md.
 
