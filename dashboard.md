@@ -12,13 +12,13 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 5 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 281 |
+| [Backlog](#backlog) | 283 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 21
+**Highest priority** (filed as `high`) — showing 12 of 22
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -219,7 +219,7 @@ Use the start-dev skill. draft/maintenance/pyautomemory/canonical_key_todo_sweep
 Long-running multi-phase programmes. Each epic's 📋 prompt has the assistant read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
 
 <details>
-<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 3 queued prompt(s), in order</summary>
+<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 4 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — ledger: `draft/research/autolens_profiling/likelihood_lifecycle_epic.md` — phase 0 IN PROGRESS — 0A (PyAutoPulse contract) MERGED 2026-10-21 (PyAutoPulse#70, record…</summary>
 
@@ -233,6 +233,14 @@ Continue the 'Likelihood lifecycle — optimal setups baked into PyAutoLens (`se
 
 ```
 Use the start-dev skill. draft/feature/autolens_profiling/likelihood_lifecycle_p0_profiling.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoinsight/likelihood_lifecycle_p0_insight.md">Likelihood lifecycle phase 0D: PyAutoInsight additive lifecycle fields (<code>setup_mode: auto</code>), <code>setup_resolved</code>…</a> — pyautoinsight · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautoinsight/likelihood_lifecycle_p0_insight.md
 ```
 
 </details>
@@ -2790,12 +2798,20 @@ Use the start-dev skill. draft/test/autolens_workspace_test/mge_group_dataset_wi
 </details>
 
 <details>
-<summary><b>release</b> — 6</summary>
+<summary><b>release</b> — 7</summary>
 
 <details><summary>📋 <a href="draft/release/pyautohands/github_token_and_secret_setup_full_review.md">GitHub token and secret setup: full review and consolidation</a> — pyautohands · too-large · supervised · high</summary>
 
 ```
 Use the start-dev skill. draft/release/pyautohands/github_token_and_secret_setup_full_review.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/release/pyautobrain/github_token_phase2_organ_workflows_app_token.md">GitHub token consolidation phase 2: organ cross-repo workflows on the pyautolabs-bot App</a> — pyautobrain · hard · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/release/pyautobrain/github_token_phase2_organ_workflows_app_token.md
 ```
 
 </details>
