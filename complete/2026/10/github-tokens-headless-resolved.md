@@ -1,3 +1,8 @@
+- summary: Follow-up to the GitHub token consolidation (complete/2026/10/github-token-consolidation-epic.md). `policy/github_tokens.md` had recorded the headless RAL/Colab PAT as "state unknown". The page now records that no headless token exists or is needed, gives the rule if one ever is (one fine-grained PAT owned by the maintainer, kept in the password manager, recorded on the page), drops that Owed item, and points the autocti proof item at autocti_visualization#7.
+- evidence: read-only probe of RAL (`euclid_jump`), 2026-10-23: no `credential.helper`, no `~/.git-credentials`, no `gh`, no token env vars. Its SSH keys are not registered with GitHub (`Permission denied (publickey)`). Every checkout under `/mnt/ral/jnightin` has an anonymous HTTPS remote on a public repo. The probe added github.com to RAL's `known_hosts` (benign). Colab: `autonerves/setup_colab.py` clones only the six public workspace/HowTo repos. Mind suite 704 passed; PR CI `privacy` green (`drift` PR-skipped); witness passed; tiered merge.
+
+## Original prompt
+
 # policy/github_tokens.md: record that RAL and Colab need no headless token
 
 Type: docs
