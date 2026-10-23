@@ -911,7 +911,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/nan_in_ep_evidence_accumulation_invalid_value.md">NaN in EP evidence accumulation: <code>invalid value encountered in add</code> in ep_mean_field.py…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1713">issue #1713</a> — issued 2026-10-23 — library-dev</summary>
+<details><summary>📋 <a href="active/nan_in_ep_evidence_accumulation_invalid_value.md">NaN in EP evidence accumulation: <code>invalid value encountered in add</code> in ep_mean_field.py…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1713">issue #1713</a> — issued 2026-10-23 — library-shipped, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1714">PyAutoFit#1714</a></summary>
 
 ```
 Use the start-dev skill. active/nan_in_ep_evidence_accumulation_invalid_value.md
