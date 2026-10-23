@@ -12,7 +12,7 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 282 |
+| [Backlog](#backlog) | 283 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -409,7 +409,7 @@ Use the start-dev skill. draft/feature/autolens_workspace/cluster_point_solver_v
 </details>
 
 <details>
-<summary><b>Expectation propagation (EP) campaign</b> — 2 queued prompt(s), in order</summary>
+<summary><b>Expectation propagation (EP) campaign</b> — 3 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Expectation propagation (EP) campaign</b> — ledger: `https://github.com/PyAutoLabs/PyAutoInsight/blob/main/tasks/ep_campaign.md`</summary>
 
@@ -431,6 +431,14 @@ Use the start-dev skill. draft/feature/autofit/ep_lbfgs_jax.md
 
 ```
 Use the start-dev skill. draft/bug/autofit/ep_moments_loggaussian_transformed_scatter.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/truncated_normal_log_partition_tail_underflow.md">TruncatedNormalMessage.log_partition underflows to -inf when the support lies far in one tail…</a> — autofit · small · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/autofit/truncated_normal_log_partition_tail_underflow.md
 ```
 
 </details>
