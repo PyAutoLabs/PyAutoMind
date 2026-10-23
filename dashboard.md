@@ -879,7 +879,7 @@ Use the start-dev skill. active/cluster_pointsolver_starting_grid_close_member_i
 
 </details>
 
-<details><summary>📋 <a href="active/ep_factors_end_the_run_with_zero.md">EP factors end the run with zero SUCCESS updates on the exactly-Gaussian…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1711">issue #1711</a> — issued 2026-10-23 — library-shipped, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1712">PyAutoFit#1712</a></summary>
+<details><summary>📋 <a href="active/ep_factors_end_the_run_with_zero.md">EP factors end the run with zero SUCCESS updates on the exactly-Gaussian…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1711">issue #1711</a> — issued 2026-10-23 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1712">PyAutoFit#1712</a>, <a href="https://github.com/PyAutoLabs/autofit_workspace_test/pull/115">autofit_workspace_test#115</a></summary>
 
 ```
 Use the start-dev skill. active/ep_factors_end_the_run_with_zero.md

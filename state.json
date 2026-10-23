@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-10-23T14:24:55Z",
+  "updated": "2026-10-23T14:26:34Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -15,7 +15,7 @@
     },
     {
       "severity": "yellow",
-      "text": "EP factors end the run with zero SUCCESS updates on the exactly-Gaussian\u2026 \u2014 library-shipped, workspace-pending",
+      "text": "EP factors end the run with zero SUCCESS updates on the exactly-Gaussian\u2026 \u2014 workspace-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1712",
       "prompt": "Use the start-dev skill. active/ep_factors_end_the_run_with_zero.md"
     },
