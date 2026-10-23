@@ -747,3 +747,12 @@ Human direction 2026-10-23: "prm and then auto mode do all of phase 5" → phase
 (`draft/docs/autolens_workspace/point_magnification_workspace_docs.md`, Difficulty medium,
 Autonomy safe, Consequence glance with Witness) is launched next under `--auto`. No other phase
 queued; phase 3 remainder stays deferred; phase 11 stays dropped.
+
+## Phase 5b queued (claim conflict) — 2026-10-23
+
+Issued as https://github.com/PyAutoLabs/autolens_workspace/issues/596; Brain Feature Agent: docs/autolens_workspace,
+workspace workflow, direct (declared medium). Heart GREEN. Conflict guard: autolens_workspace is
+claimed by `assistant-ai-options-page` (PyAutoScientist#87; its workspace branch has no commits
+yet), so 5b is registered in planned.md as blocked, not started. Human --auto authorization for
+phase 5 is recorded on the planned row; when the claim is released, run /start_dev on the prompt
+with --auto (effective safe, tier glance) → start_workspace → ship_workspace. No source edits.
