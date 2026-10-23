@@ -12,7 +12,7 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 2 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 282 |
+| [Backlog](#backlog) | 283 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 2 |
 
@@ -364,7 +364,7 @@ Use the start-dev skill. draft/maintenance/autolens/point_source_cpu_campaign_ow
 </details>
 
 <details>
-<summary><b>Cluster PointSolver — robustness and performance</b> — 2 queued prompt(s), in order</summary>
+<summary><b>Cluster PointSolver — robustness and performance</b> — 3 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Cluster PointSolver — robustness and performance</b> — ledger: `https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/cluster_pointsolver_speed.md` — Phase 1 (cluster-scale robust settings, autolens_profiling#436 → #438 <code>c8c9abb3</code>) MERGED 2026-10-22, record…</summary>
 
@@ -378,6 +378,14 @@ Continue the 'Cluster PointSolver — robustness and performance' epic. Its cano
 
 ```
 Use the start-dev skill. draft/bug/autolens/point_solver_error_bisect_health.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/point_solver_residual_filter_newton_distance.md"><code>@PyAutoLens</code> PointSolver residual filter: add a Newton-distance condition (fix low-threshold central-image loss)</a> — autolens · small · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens/point_solver_residual_filter_newton_distance.md
 ```
 
 </details>
@@ -2952,7 +2960,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-109 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+110 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2968,6 +2976,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autolens/area_magnification_leggos.md`
 - `draft/feature/autolens/cluster_curves_engine_dispatch.md`
 - `draft/feature/autolens/magnification_maps_visualization.md`
+- `draft/feature/autolens/point_solver_residual_filter_newton_distance.md`
 - `draft/feature/autolens/source_cluster_arc.md`
 - `draft/feature/autolens_jax_joss/autolens_jax_joss_benchmark_repo.md`
 - `draft/feature/autolens_workspace/cluster_point_solver_validation_check.md`
@@ -2996,12 +3005,11 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
 - `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`
 - `draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md`
-- `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
-- _… and 69 more_
+- _… and 70 more_
 
 </details>
 
-65 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+66 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3017,6 +3025,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autofit/results_library_epic_report.md — unknown theme keyword(s): results, euclid`
 - `draft/feature/autolens/cluster_curves_engine_dispatch.md — unknown theme keyword(s): critical-curves`
 - `draft/feature/autolens/coolest_pixel_grid_export.md — unknown theme keyword(s): coolest, interop, euclid`
+- `draft/feature/autolens/point_solver_residual_filter_newton_distance.md — unknown theme keyword(s): jax`
 - `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md — unknown theme keyword(s): euclid, catalogue`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md — unknown theme keyword(s): euclid`
 - `draft/feature/euclid/single_process_cpu_route_jax_vis_lp_numba_vis_pix.md — unknown theme keyword(s): euclid, jax, hpc`
