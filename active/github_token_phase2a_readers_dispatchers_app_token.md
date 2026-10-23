@@ -16,6 +16,7 @@ Parent: draft/release/pyautohands/github_token_and_secret_setup_full_review.md (
 Witness: `grep -rl PAT_PYAUTOLABS .github/workflows` empty in Brain (except branch_sweep_all/branch_archive, 2b), Heart, Scientist, Memory; no `|| github.token` / `|| secrets.GITHUB_TOKEN` fallback on any cross-repo credential; `repo_settings.yml` gone; one green run of each migrated workflow in a side-effect-free mode
 Review-minutes: 20
 Unattended: never
+Issued: 2026-10-23
 
 Phase 1 proved the App (Heart#316, Hands#322). Move the organ workflows that
 READ across repos, DISPATCH, or OPEN A PR off `PAT_PYAUTOLABS` / never-created

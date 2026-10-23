@@ -66,3 +66,17 @@
 - authorization: plan approved by the human in chat 2026-10-23 ("go"); research only, no library/workspace edits; laptop CPU fp64 sweep OK, any RAL leg and any A2744 compute need explicit human authorization in chat.
 - repos:
   - autolens_profiling: feature/cluster-pointsolver-starting-grid
+
+## github-token-p2a-readers-app
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/531
+- issued: 2026-10-23
+- prompt: active/github_token_phase2a_readers_dispatchers_app_token.md
+- session: Claude Code CLI (Fable 5.1); session c837f591
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/github-token-p2a-readers-app
+- authorization: human approved the 2a/2b split and plan 2026-10-23; judge tier, human /prm
+- repos:
+  - PyAutoBrain: feature/github-token-p2a-readers-app
+  - PyAutoHeart: feature/github-token-p2a-readers-app
+  - PyAutoScientist: feature/github-token-p2a-readers-app
+  - PyAutoMemory: feature/github-token-p2a-readers-app
