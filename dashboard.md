@@ -895,7 +895,7 @@ Use the start-dev skill. active/github_token_phase2a_readers_dispatchers_app_tok
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p0_insight.md">Likelihood lifecycle phase 0D: PyAutoInsight additive lifecycle fields (<code>setup_mode: auto</code>), <code>setup_resolved</code>…</a> — <a href="https://github.com/PyAutoLabs/PyAutoInsight/issues/39">issue #39</a> — issued 2026-10-23 — workspace-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p0_insight.md">Likelihood lifecycle phase 0D: PyAutoInsight additive lifecycle fields (<code>setup_mode: auto</code>), <code>setup_resolved</code>…</a> — <a href="https://github.com/PyAutoLabs/PyAutoInsight/issues/39">issue #39</a> — issued 2026-10-23 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_inference/pull/45">autolens_inference#45</a>, <a href="https://github.com/PyAutoLabs/PyAutoInsight/pull/40">PyAutoInsight#40</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p0_insight.md
