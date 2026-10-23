@@ -20,6 +20,8 @@ Epic: likelihood-lifecycle
 Phase: 0
 Parent: draft/research/autolens_profiling/likelihood_lifecycle_epic.md
 Filed: 2026-10-21
+Issued: 2026-10-23
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/442
 
 Phase 0 sub-issue 0B of the `likelihood-lifecycle` epic (ledger `draft/research/autolens_profiling/likelihood_lifecycle_epic.md`; report §3.1, §3.6, §3.7, §4 phase 0; survey `likelihood_lifecycle_epic_surveys/01_profiling_inference_layout.md`). 0A (PyAutoPulse#70, merged 2026-10-21) defined the contract this issue emits: v3 records carry `likelihood`, `instrument`, `regime`, per-record `setup` + `setup_id`, `host_class`, `model_variant`, `measurement`, `metric`/`unit`/`values`, `class`, `status`, `superseded_by`, `day_zero`, `figures[]`, `decision_id`, `release_pin`, `measured_at`; there are no `setups[]`/`selections[]` — `planned_cells` (with `class`) replace selections; `archive_record_count` is required (PyAutoPulse REFERENCE.md "`profiling-summary` v3").
 

@@ -10,7 +10,6 @@
 - [knn-partial-point-block](#knn-partial-point-block)
 - [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
 - [interferometer-primary-beam-persistence-mirror](#interferometer-primary-beam-persistence-mirror)
-- [likelihood-lifecycle-p0-profiling](#likelihood-lifecycle-p0-profiling)
 - [point-plots-yaml-keys-assistant](#point-plots-yaml-keys-assistant)
 
 <!-- toc:end -->
@@ -116,17 +115,6 @@
 - parent: complete/2026/10/interferometer-primary-beam-persistence.md
 - affected-repos:
   - PyAutoLens
-
-## likelihood-lifecycle-p0-profiling
-- issue: none yet — `/start_dev draft/feature/autolens_profiling/likelihood_lifecycle_p0_profiling.md` files it when the claim clears
-- planned: 2026-10-21
-- prompt: draft/feature/autolens_profiling/likelihood_lifecycle_p0_profiling.md
-- classification: workspace (autolens_profiling project repo; one-line PyAutoPulse registry re-pin follows the builder)
-- suggested-branch: feature/likelihood-lifecycle-p0-profiling
-- unblocked: 2026-10-22 — cluster-pointsolver-robust-settings merged (autolens_profiling#438, `complete/2026/10/cluster-pointsolver-robust-settings.md`); the autolens_profiling claim is released. Still never land the move-only PR under live RAL jobs on a RAL checkout.
-- affected-repos:
-  - autolens_profiling
-  - PyAutoPulse
 
 ## point-plots-yaml-keys-assistant
 - status: unblocked 2026-10-23 — cosmos-web-ring-notebook merged (autolens_assistant#161, `complete/2026/10/cosmos-web-ring-notebook.md`); autolens_assistant free (sibling waiting on the same repo: `draft/docs/autolens_assistant/ai_options_page_autolens_leg.md`)

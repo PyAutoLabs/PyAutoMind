@@ -68,3 +68,16 @@
 - epic: cluster-pointsolver-speed
 - repos:
   - PyAutoLens: feature/point-solver-spurious-core
+
+## likelihood-lifecycle-p0-profiling
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/442
+- issued: 2026-10-23
+- session: claude-code (local CLI, Opus 5.5)
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p0-profiling
+- prompt: active/likelihood_lifecycle_p0_profiling.md
+- epic: likelihood-lifecycle
+- next: PR 1 migration map (no moves); move-only PR waits for autolens_profiling#441 merge + no live RAL jobs on a RAL checkout
+- repos:
+  - autolens_profiling: feature/likelihood-lifecycle-p0-profiling
+  - PyAutoPulse: feature/likelihood-lifecycle-p0-profiling (registry re-pin, after builder merges)
