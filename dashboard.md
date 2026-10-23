@@ -12,13 +12,13 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 5 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 283 |
+| [Backlog](#backlog) | 284 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 22
+**Highest priority** (filed as `high`) — showing 12 of 23
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -2798,7 +2798,7 @@ Use the start-dev skill. draft/test/autolens_workspace_test/mge_group_dataset_wi
 </details>
 
 <details>
-<summary><b>release</b> — 7</summary>
+<summary><b>release</b> — 8</summary>
 
 <details><summary>📋 <a href="draft/release/pyautohands/github_token_and_secret_setup_full_review.md">GitHub token and secret setup: full review and consolidation</a> — pyautohands · too-large · supervised · high</summary>
 
@@ -2808,10 +2808,18 @@ Use the start-dev skill. draft/release/pyautohands/github_token_and_secret_setup
 
 </details>
 
-<details><summary>📋 <a href="draft/release/pyautobrain/github_token_phase2_organ_workflows_app_token.md">GitHub token consolidation phase 2: organ cross-repo workflows on the pyautolabs-bot App</a> — pyautobrain · hard · supervised · high</summary>
+<details><summary>📋 <a href="draft/release/pyautobrain/github_token_phase2a_readers_dispatchers_app_token.md">GitHub token consolidation phase 2a: organ readers and dispatchers…</a> — pyautobrain · hard · supervised · high</summary>
 
 ```
-Use the start-dev skill. draft/release/pyautobrain/github_token_phase2_organ_workflows_app_token.md
+Use the start-dev skill. draft/release/pyautobrain/github_token_phase2a_readers_dispatchers_app_token.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/release/pyautobrain/github_token_phase2b_owner_wide_writers_app_token.md">GitHub token consolidation phase 2b: owner-wide writers…</a> — pyautobrain · hard · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/release/pyautobrain/github_token_phase2b_owner_wide_writers_app_token.md
 ```
 
 </details>
