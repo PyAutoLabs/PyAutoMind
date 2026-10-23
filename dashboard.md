@@ -12,13 +12,13 @@
 | [Epics](#epics) | 18 |
 | [In flight](#in-flight) | 3 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 283 |
+| [Backlog](#backlog) | 284 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 21
+**Highest priority** (filed as `high`) — showing 12 of 22
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -2798,12 +2798,20 @@ Use the start-dev skill. draft/test/autolens_workspace_test/mge_group_dataset_wi
 </details>
 
 <details>
-<summary><b>release</b> — 6</summary>
+<summary><b>release</b> — 7</summary>
 
 <details><summary>📋 <a href="draft/release/pyautohands/github_token_and_secret_setup_full_review.md">GitHub token and secret setup: full review and consolidation</a> — pyautohands · too-large · supervised · high</summary>
 
 ```
 Use the start-dev skill. draft/release/pyautohands/github_token_and_secret_setup_full_review.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/release/pyautohands/github_token_phase1_hands_release_app_token.md">GitHub token consolidation phase 1: Hands release path on the pyautolabs-bot App</a> — pyautohands · hard · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/release/pyautohands/github_token_phase1_hands_release_app_token.md
 ```
 
 </details>
