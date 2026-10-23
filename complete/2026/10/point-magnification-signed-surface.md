@@ -1,3 +1,34 @@
+Source & Cluster arc phase 5a (epic `cluster-strong-lensing`). PyAutoLens#798 merged as
+`f791ac77d` on 2026-10-23, closing issue #797.
+
+Shipped: `AbstractFitPoint.signed_magnifications_at_positions` (Hessian magnification at each
+observed image position, sign = image parity); `magnifications_at_positions` is now exactly
+`abs()` of it so flux fitting, magnification weighting and the source-plane panel are
+numerically unchanged. `ResultPoint.signed_magnifications_at_positions` /
+`magnifications_at_positions` read from the max-likelihood `FitPointDataset`'s first present
+component fit (positions → flux → time delays; an unpaired dataset raises `AttributeError`).
+Docstrings in the point fit module and `PointDataset` state where magnification at a point
+lives and point to `LensCalc.magnification_2d_via_hessian_from` for arbitrary (y,x).
+
+Tests: parity witness (SIE, supplied positions, NumPy and JAX, mixed signs), multi-plane
+witness (three planes, point source in the middle plane; equals `LensCalc.from_tracer(...,
+plane_j=1)` and differs from the final-plane value), `ResultPoint` accessor tests. No forward
+PointSolver call anywhere (solver boundary approved 2026-10-01).
+
+Evidence: full `pytest test_autolens` 941 passed / 1 xfailed; focused point tests 308 / 1
+xfailed; black clean on changed files; autolens_workspace_test smoke 37/37 against the branch;
+CI docs + unittest 3.12/3.13/nojax green. Heart YELLOW at ship (manifest drift 1 mismatch; no
+release rehearsal), acknowledged by the human, who authorized /prm on green.
+
+The parent prompt's stale `Tracer.magnification_2d_from` claim was already gone from source.
+Workspace documentation is phase 5b: `draft/docs/autolens_workspace/point_magnification_workspace_docs.md`
+(source_science.py both tiers, guides/lens_calc.py, guides/advanced/multi_plane.py cross-ref,
+point_source/fit.py), launched under `--auto` per human direction 2026-10-23.
+
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/798
+
+## Original prompt
+
 # Point magnification: signed per-image magnifications on the point fit/Result surface + multi-plane witness
 
 Type: feature

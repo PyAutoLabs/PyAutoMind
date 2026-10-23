@@ -55,20 +55,6 @@
 - community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
 - prompt: active/matrix_free_interferometer_inversion.md
 
-## point-magnification-signed-surface
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/797
-- issued: 2026-10-23
-- session: Claude Code CLI (Fable 5.1), session bac93ca4
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/798
-- heart-ack:
-  - manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml
-  - release validation incomplete: no rehearsal for current source
-- worktree: ~/Code/PyAutoLabs-wt/point-magnification-signed-surface
-- repos:
-  - PyAutoLens: feature/point-magnification-signed-surface
-- epic: cluster-strong-lensing (phase 5a)
-
 ## assistant-ai-options-page
 - issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/87
 - issued: 2026-10-23

@@ -736,3 +736,14 @@ point-source results guide).
 
 Human acknowledged both YELLOW reasons and authorized /prm on green, then phase 5b under --auto
 (2026-10-23). PR https://github.com/PyAutoLabs/PyAutoLens/pull/798 @6cb5eed0f, pending-release.
+
+## Phase 5a merged — 2026-10-23
+
+PyAutoLens#798 merged as `f791ac77d` after all CI jobs passed (docs, unittest 3.12/3.13/nojax)
+and autolens_workspace_test smoke 37/37 against the branch. Issue #797 closed via /prm.
+Record: `complete/2026/10/point-magnification-signed-surface.md` (pending-release PyAutoLens#798).
+The 5a prompt now lives in that record; the filed/active paths above are historical.
+Human direction 2026-10-23: "prm and then auto mode do all of phase 5" → phase 5b
+(`draft/docs/autolens_workspace/point_magnification_workspace_docs.md`, Difficulty medium,
+Autonomy safe, Consequence glance with Witness) is launched next under `--auto`. No other phase
+queued; phase 3 remainder stays deferred; phase 11 stays dropped.
