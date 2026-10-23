@@ -48,9 +48,12 @@ Commits made with it are authored as `pyautolabs-bot[bot]` /
 (nightly-release switch and cursor), not credentials.
 
 Local: the laptop `gh` uses OAuth (`~/.config/gh/hosts.yml`); git goes over SSH
-or gh's credential helper. Headless hosts (RAL, Colab) get at most one
-fine-grained PAT, owned by the maintainer and kept in the password manager; its
-state is unknown since the 2026-10-23 revocation (Owed).
+or gh's credential helper. Headless hosts need no token (checked 2026-10-23):
+RAL has no GitHub credential and its checkouts are anonymous HTTPS clones of
+public repos (results come back by the laptop's pull, never a git push), and the
+Colab bootstrap (`autonerves/setup_colab.py`) clones only public workspaces. If
+one ever needs a private repo or a push, it gets one fine-grained PAT, owned by
+the maintainer, kept in the password manager and recorded here.
 
 ### App mints
 
@@ -116,11 +119,9 @@ secret. A new secret or permission updates this page in the same PR.
   secret (visibility `all`), then delete the nine repo copies.
 - **Phase 1b, PyPI trusted publishing:** retires `PYPI` / `TEST_PYPI`; blocked
   on the maintainer's PyPI login.
-- **Headless RAL/Colab PAT:** state unknown since the 2026-10-23 revocation;
-  confirm whether one is needed and record it here.
 - **autocti_visualization proof:** phase 3's `render` → PyAutoEyes dispatch is
   unproven there because the render fails on a missing `autonerves`
-  (`draft/bug/autocti_visualization/render_fails_no_module_autonerves.md`).
+  (PyAutoLabs/autocti_visualization#7).
 
 History: the GitHub token and secret setup review epic
 (`github_token_and_secret_setup_full_review`), phases
