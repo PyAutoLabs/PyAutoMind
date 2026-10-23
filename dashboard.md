@@ -887,7 +887,7 @@ Use the start-dev skill. active/github_token_phase2b_owner_wide_writers_app_toke
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p0_brain.md">Likelihood lifecycle phase 0E: PyAutoBrain lifecycle prompt template (<code>skills/profiling/lifecycle.md</code>), profiling conductor grid…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/535">issue #535</a> — issued 2026-10-23 — library-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p0_brain.md">Likelihood lifecycle phase 0E: PyAutoBrain lifecycle prompt template (<code>skills/profiling/lifecycle.md</code>), profiling conductor grid…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/535">issue #535</a> — issued 2026-10-23 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/536">PyAutoBrain#536</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p0_brain.md
