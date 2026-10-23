@@ -794,3 +794,5 @@ Review side-finding fixed: PyAutoGalaxy PR https://github.com/PyAutoLabs/PyAutoG
 human "do the quick thing" authorized ship + merge on green). PyAutoLens 2026.10.23.1 was released
 at 12:11Z today and contains #798 (`f791ac77d`), so the 5a pending-release obligation is satisfied
 by that release; clearing the key is /review_release's act, not recorded here.
+
+Galaxy#657 merged 2026-10-23 (docstring only); pending-release PyAutoGalaxy until its next release.
