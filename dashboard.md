@@ -879,7 +879,7 @@ Use the start-dev skill. active/assistant_readmes_human_style.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p0_profiling.md">Likelihood lifecycle phase 0B: autolens_profiling mirrored tree, day-zero migration map, <code>profiling-summary@3</code> catalogue…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/442">issue #442</a> — issued 2026-10-23 — workspace-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p0_profiling.md">Likelihood lifecycle phase 0B: autolens_profiling mirrored tree, day-zero migration map, <code>profiling-summary@3</code> catalogue…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/442">issue #442</a> — issued 2026-10-23 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/444">autolens_profiling#444</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p0_profiling.md
