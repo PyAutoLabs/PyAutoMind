@@ -786,3 +786,11 @@ COMPLETE. No later phase issued. Next candidates, one at a time: phase 4 (mesh m
 correctness tests), phase 6 (LEGGOS area magnification; nominal gates 3 and 5 — phase 3 remainder
 deferred, needs a human call on whether 6 may proceed on marching-squares only), or the deferred
 phase-3 engine-dispatch slice. Phase 11 stays dropped.
+
+## Wrap-up — 2026-10-23
+
+Review side-finding fixed: PyAutoGalaxy PR https://github.com/PyAutoLabs/PyAutoGalaxy/pull/657
+(docstring-only; `magnification_2d_via_hessian_from` documents signed 1/det(A); pending-release;
+human "do the quick thing" authorized ship + merge on green). PyAutoLens 2026.10.23.1 was released
+at 12:11Z today and contains #798 (`f791ac77d`), so the 5a pending-release obligation is satisfied
+by that release; clearing the key is /review_release's act, not recorded here.
