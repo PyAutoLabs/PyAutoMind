@@ -1,21 +1,4 @@
 
-## tutorial-documentation-style
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/539
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/540
-- issued: 2026-10-24
-- session: Codex (local CLI; session ID unavailable)
-- status: library-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/tutorial-documentation-style
-- prompt: active/tutorial_documentation_style_resource.md
-- repos:
-  - PyAutoBrain: feature/tutorial-documentation-style
-- heart-red-override:
-  - authorized: 2026-10-24 — live human “I authorize”
-  - red: `PyAutoLens: 2 commit(s) behind origin`
-  - gates: 4 targeted tests + 1263 broader Brain tests PASS; PyAutoBrain discovery, agent surface and diff checks PASS; smoke n/a (Brain docs/skill wiring); in-session diff/link/single-source review CLEAN
-  - authorization: https://github.com/PyAutoLabs/PyAutoBrain/issues/539#issuecomment-6384318621
-  - scope: commit/push/PR-open only; no merge/release/check bypass; this branch does not repair Heart
-
 ## matrix-free-interferometer-inversion
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/638
 - issued: 2026-10-21

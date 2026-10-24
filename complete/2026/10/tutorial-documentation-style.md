@@ -1,3 +1,37 @@
+## tutorial-documentation-style
+
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/539
+- completed: 2026-10-24
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/540
+- commit: e72ff5022b87d403c247886c4d2015b6bc698430
+- merge: 168e84ccb8dc29819699c6f8c51f1126f7f1d9df
+
+Added a canonical PyAutoBrain writing guide for scientific Python scripts,
+notebooks, worked examples and HowTo lessons. The existing `WRITING_STYLE.md`
+remains authoritative for GitHub READMEs, setup pages and general Read the Docs
+prose; `/docs` now selects either guide or both according to the material.
+
+The tutorial guide records the approved COSMOS-Web Ring tone, the
+`__Contents__` / `"""__Section__"""` source structure, concise repeated
+docstrings in advanced tutorial sequences, the distinction between loading,
+evaluating and fitting, reproducible experiments, organism-wide scientific and
+provenance safeguards, iterative block approval and the universal
+`**🤖 Ask AI:**` convention. The review faculty and focused contract tests
+enforce the single-source split.
+
+Validation: 4 targeted tests passed; 1,263 broader PyAutoBrain tests passed;
+PyAutoBrain project discovery, generated agent-surface and diff checks passed;
+the committed ReviewSurface was CLEAN. GitHub Brain Tests passed on Python 3.12
+and 3.13 at the exact PR head.
+
+The branch shipped under the live human development-only Heart RED override for
+the exact reason `PyAutoLens: 2 commit(s) behind origin`, recorded on the issue,
+PR, active registry and autonomy log. The later human `/prm` separately
+authorised merge after green required checks. No release or rehearsal was
+performed, and this documentation branch did not claim to repair Heart.
+
+## Original prompt
+
 # Reusable style resource for scientific Python tutorials
 
 Issued: 2026-10-24
