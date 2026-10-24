@@ -1,3 +1,27 @@
+Phase 0B of the likelihood-lifecycle epic, delivered as seven PRs (2026-10-23 → 2026-10-24). autolens_profiling's `results/` now mirrors `scripts/`. Its catalogue emits `profiling-summary@3`, which carries a class, a status and a current/superseded lifecycle. Pulse reads lens at @3. A coverage matrix lists which planned cells are current, stale or missing.
+
+## Merged
+- autolens_profiling#444 — day-zero migration map (aeef2756). Human §3.7 rulings: optional `<model_variant>` segment; `<cell>/scans/` and `<cell>/experiments/` (never current); CPU-on-RAL-GPU-node → `hpc_ral_cpu`; sparse interferometer W~ → `_wtilde`. Size standard: Delaunay 1250, rectangular 35² = 1225.
+- autolens_profiling#447 — move-only PR into the mirrored tree plus `archive/` (0c6be19b). Lint fixes: ruff and lychee both exclude `archive/`, because archived notes keep their exact contents.
+- autolens_profiling#448 — `profiling-summary@3` catalogue builder (81183fd8). 126 current, 319 superseded, archive 99, 246 planned cells. R3: provisional Optimal → `class: secondary` + `provisional_optimal: true`. R7: no `local_*` row is current. Size fallback for 112 current cells. Human ruling: undated rows take their file's first-commit date, precomputed in `catalogue/measured_at_first_commit.json` because CI checks out shallow.
+- PyAutoLabs/PyAutoPulse#74 — lens moved to `profiling-summary@3`, receipt refetched (5f3ec2c8).
+- autolens_profiling#449 — PR 3b, split out by human ruling: trends keyed on the v3 identity with `catalogue/series_id_map.json` (no history lost), writers into the mirrored tree through `sweep_layout.py`, `results_layout.py` deleted, write-destination guard test (572d32f2). The independent review's blocking writer/reader collision was fixed before shipping.
+- autolens_profiling#450 — `scripts/misc/` tests grouped into `<group>/test/` (renames only, same 1554 tests), a README per group (73b9385b).
+- autolens_profiling#451 — `coverage_matrix.py` → `dashboard/coverage.*` (of 246 planned: 2 current, 6 stale, 238 missing), and the `parity.json` convention → `measurement: parity` records (9bc9eb31).
+
+PRs 3b, 5 and 6 shipped from one explicit human `--auto` run: stacked, each reviewed CLEAN by an independent reviewer, Heart YELLOW within the launch acknowledgement, then merged by a human `/prm`.
+
+## Witness
+Met. The mirror test passes. `build_catalogue --check` is current at @3, with one current record per key. `pyauto-pulse check` accepts lens at @3. The coverage matrix lists current, superseded, missing and stale cells.
+
+## Follow-ups (not filed)
+- Real-run verification of the re-pointed writers listed in #449 (sweep default root, size_sweep/fixed_light/gradient_mode readers, fixed_light witnesses, vmap probe). This needs a human go per RAL batch.
+- `coverage_matrix.py`: exclude `measurement == "parity"` from `current_records_unplanned`. Have `catalogue_lifecycle.py` read `catalogue/provisional_designations.json`.
+- The write guard doesn't follow a results root passed as a default argument.
+- Local branch `feature/likelihood-lifecycle-p0-profiling-move` (the superseded #446 head) is left for the branch sweep or Gut.
+
+## Original prompt
+
 # Likelihood lifecycle phase 0B: autolens_profiling mirrored tree, day-zero migration map, `profiling-summary@3` catalogue builder, misc grouping, coverage matrix, parity convention
 
 Type: feature
