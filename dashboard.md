@@ -12,7 +12,7 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 2 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 289 |
+| [Backlog](#backlog) | 290 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -219,7 +219,7 @@ Use the start-dev skill. draft/maintenance/pyautomemory/canonical_key_todo_sweep
 Long-running multi-phase programmes. Each epic's 📋 prompt has the assistant read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
 
 <details>
-<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 8 queued prompt(s), in order</summary>
+<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 9 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — ledger: `draft/research/autolens_profiling/likelihood_lifecycle_epic.md` — PHASE 0 COMPLETE 2026-10-24 — 0A PyAutoPulse#70; 0B autolens_profiling#444/#447/#448/#449/#450/#451 + PyAutoPulse#74 (lens at…</summary>
 
@@ -273,6 +273,14 @@ Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_
 
 ```
 Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_p2g_weak_campaign.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autolens_profiling/legacy_numba_presets_deviate_from_production.md">Legacy numba "production" presets in autolens_profiling deviate from the real production pipeline</a> — autolens_profiling · small · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/bug/autolens_profiling/legacy_numba_presets_deviate_from_production.md
 ```
 
 </details>
@@ -927,7 +935,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p2a_imaging_campaign.md">Likelihood lifecycle phase 2a: profiling campaign — imaging/{mge, rectangular, delaunay, delaunay_nn}…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/456">issue #456</a> — issued 2026-10-24 — workspace-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p2a_imaging_campaign.md">Likelihood lifecycle phase 2a: profiling campaign — imaging/{mge, rectangular, delaunay, delaunay_nn}…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/456">issue #456</a> — issued 2026-10-24 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/457">autolens_profiling#457</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p2a_imaging_campaign.md
