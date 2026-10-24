@@ -26,7 +26,9 @@
 - issue: https://github.com/PyAutoLabs/ECLIPSE_lens_catalogue/issues/1
 - issued: 2026-10-24
 - session: Claude Code CLI (Fable 5.1), session de58e403
-- status: workspace-dev
+- status: pr-open
 - worktree: ~/Code/PyAutoLabs/lens/ECLIPSE_lens_catalogue
 - repos:
   - ECLIPSE_lens_catalogue: feature/eclipse-catalogue-site
+- prs:
+  - https://github.com/PyAutoLabs/ECLIPSE_lens_catalogue/pull/2
