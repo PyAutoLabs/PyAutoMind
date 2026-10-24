@@ -1,3 +1,31 @@
+# ECLIPSE catalogue website: private prototype on ten DR1 lenses
+
+Issue ECLIPSE_lens_catalogue#1. Merged 2026-10-24 via /prm. Repo created this day: `PyAutoLabs/ECLIPSE_lens_catalogue` (private, `lens/ECLIPSE_lens_catalogue`, in `repos.yaml`).
+
+## What shipped
+- **ECLIPSE_lens_catalogue#2** (`0e7e2e1`, 7 commits): the COWLS catalogue site design rebuilt for the Euclid per-lens bundle.
+  - `docs/`: gallery paginated at 100 rows with filter/sort/view/page in the URL and only the current page in the DOM; grade and inspection filters; name/tile search; `lens.html?lens=<tile>` fetching its own JSON with summary, mass/Sérsic tables (1σ), per-band fluxes + AB magnitudes, captioned figures, downloads; `about.html` documenting the 24 results files and the dataset folder; `papers.json` empty; landing/citation slots marked as human placeholders.
+  - Every file URL derives from the single `storage_base` in `docs/data/config.json`.
+  - `scripts/pull_lenses.sh` (RAL rsync of results + dataset per tile), `scripts/build_site_data.py` (config, slim `index.json`, one JSON per lens, 200 px thumbnails cropped from the left panel of `rgb.png`, `--synthetic N`), `scripts/sync_storage.sh` (rclone → R2), `scripts/check_links.py`, people-first README with the Cloudflare human-step checklist.
+  - Preview mode: the ten lenses' files are committed at `docs/data_files/<tile>/` with `storage_base = data_files`, so the Cloudflare Pages Access policy covers the data. Replaced by R2 behind a custom domain at launch prep.
+
+## Hosting decisions (human, 2026-10-24)
+- GitHub Pages/raw cannot carry DR1 (~95 GB full tier, 15,071 lenses; the COWLS repo is already 9.3 GB). Site → Cloudflare Pages (deploys from the private repo, no bandwidth cap); per-lens files → Cloudflare R2 behind a custom domain (r2.dev is rate-limited); Cloudflare Access (Zero Trust Free) gates both until launch; Zenodo later for archival zips + DOI (100 files per record). Free tier for wiring; human pays (~$1.50/month at 100 GB) before public launch; domain purchase deferred.
+- Human set up: R2 subscription, bucket `eclipse-lens-catalogue`, account API token (rclone remote `r2`, credentials in Bitwarden), Pages project `eclipse-lens-catalogue` (output dir `docs`, no build), Access application on `eclipse-lens-catalogue.pages.dev` + wildcard with an email policy. Preview verified working by the human.
+
+## Validation
+- Local preview with real data: gallery, lens, about, papers pages at 1200/400 px, no broken images; `check_links.py` 10 lenses, 403 files, 0 missing; synthetic 15,000-row gallery renders in 40–100 ms.
+- Merge gate: the Cloudflare Pages deployment check (the repo has no test workflows) green; PR MERGEABLE/CLEAN. Heart YELLOW at start_dev (release yellow, monitoring red).
+
+## Follow-ups (not blocking)
+- Buy a domain → attach `data.` to the bucket and the site to Pages → delete `docs/data_files/`, rebuild `--storage-base https://data.<domain>`, sync `data/`.
+- Pages caps a deployment at 20,000 files: per-lens JSON (or thumbnails) move to R2 at 15k lenses.
+- Full DR1 upload from RAL via rclone once the v5 catalogue tree lands; swap `ECLIPSE_RAL_RESULTS` to it.
+- About-page grade/score/inspection-consensus wording inferred from column names: human to check. Upstream quirk: some 1σ bounds equal the median exactly.
+- Before public: $10 billing alert, one rate-limiting rule on the data hostname, remove the Access policy, Euclid Consortium data-rights sign-off.
+
+## Original prompt
+
 # ECLIPSE catalogue website: private prototype on ten DR1 lenses, COWLS design, Cloudflare Pages + R2
 
 Type: feature
