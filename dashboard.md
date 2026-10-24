@@ -895,7 +895,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/tutorial_documentation_style_resource.md">Reusable style resource for scientific Python tutorials</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/539">issue #539</a> — issued 2026-10-24 — library-dev</summary>
+<details><summary>📋 <a href="active/tutorial_documentation_style_resource.md">Reusable style resource for scientific Python tutorials</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/539">issue #539</a> — issued 2026-10-24 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/540">PyAutoBrain#540</a></summary>
 
 ```
 Use the start-dev skill. active/tutorial_documentation_style_resource.md
