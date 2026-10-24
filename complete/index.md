@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1984 records across 10 buckets.
+1985 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -278,6 +278,7 @@ markers; everything below GENERATED is rebuilt.
 - [likelihood-lifecycle-p0-insight](2026/10/likelihood-lifecycle-p0-insight.md)
 - [likelihood-lifecycle-p0-profiling](2026/10/likelihood-lifecycle-p0-profiling.md)
 - [likelihood-lifecycle-p0-pulse](2026/10/likelihood-lifecycle-p0-pulse.md)
+- [likelihood-lifecycle-p1b-profiling-figures](2026/10/likelihood-lifecycle-p1b-profiling-figures.md)
 - [likelihood-menu-labels](2026/10/likelihood-menu-labels.md)
 - [linear-solver-p3a-a100-parity](2026/10/linear-solver-p3a-a100-parity.md)
 - [linear-solver-p3b-gpu-timing](2026/10/linear-solver-p3b-gpu-timing.md)

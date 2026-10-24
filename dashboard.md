@@ -895,10 +895,10 @@ Use the start-dev skill. active/finufft_cpu_nufft_backend.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p1b_profiling_figures.md">Likelihood lifecycle phase 1B: profiling CLI renders and keeps <code>fit.png</code> per cell…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/452">issue #452</a> — issued 2026-10-24 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/453">autolens_profiling#453</a></summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p1_followups.md">Likelihood lifecycle follow-ups after phases 0B and 1B: point-source --output-path, cluster source-plane…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/454">issue #454</a> — issued 2026-10-24 — workspace-dev</summary>
 
 ```
-Use the start-dev skill. active/likelihood_lifecycle_p1b_profiling_figures.md
+Use the start-dev skill. active/likelihood_lifecycle_p1_followups.md
 ```
 
 </details>
@@ -2859,7 +2859,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-24 | issued | <a href="active/likelihood_lifecycle_p1b_profiling_figures.md">Likelihood lifecycle phase 1B: profiling CLI renders and keeps…</a> |
+| 2026-10-24 | issued | <a href="active/likelihood_lifecycle_p1_followups.md">Likelihood lifecycle follow-ups after phases 0B and 1B: point-source…</a> |
 | 2026-10-24 | issued | <a href="active/eclipse_catalogue_website.md">ECLIPSE catalogue website: private prototype on ten DR1 lenses, COWLS…</a> |
 | 2026-10-24 | issued | <a href="active/finufft_cpu_nufft_backend.md">Consequence: judge</a> |
 | 2026-10-23 | filed | <a href="draft/bug/autofit/start_points_test_unseeded_identical_figures_of_merit_flake.md">test_start_points.py draws unseeded start points and flakes on…</a> |

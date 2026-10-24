@@ -1,3 +1,18 @@
+Phase 1B of the likelihood-lifecycle epic: every profiling cell renders and keeps a `fit.png` beside its row, using the same plotter as the autolens_visualization producers, and the catalogue lists it in `figures[]` (Pulse v3 `{kind, path, sha256}`). Phase 2 campaign cells now all carry a figure.
+
+## Merged
+- autolens_profiling#453 (4cd33f39): `_profile_cli.render_fit_png` and `fit_png_cell`, `--no-fit-png`, skipped under smoke. Wired into 15 cells: 10 runtime scripts, the 3 numba runtime variants and 2 cluster breakdowns. Plotters (all with `quick_update=True`): imaging and interferometer/datacube `subplot_fit`, point source `PlotterPoint.fit_point`, cluster `fit_point_combined`. A figure always belongs to the row beside it (stale figures are removed), and figures are drawn only in mirrored-tree cells. `sweep.py` `row_completed_since`: a timeout during the render keeps a finished row (detected by `pinned_drift`). Inspection step added to `skills/profile_likelihood` and `wiki/campaigns/_template.md`.
+
+Independent review: FINDINGS (stale figure, flat `--output-dir` overwrite, temp debris and timeout, missing plotter tests) → fixed → CLEAN. `subplot_fit_quick`, named in the epic report, does not exist. Profiling figures show the fixed profiled instance (prior medians), so residual patterns are expected.
+
+## Witness
+Met. The laptop CPU run of imaging/mge/hst wrote `fit.png` in its cell; the reviewer showed `figures[]` emission and Pulse v3 validity end to end; `build_catalogue --check --validate-with ../PyAutoPulse` is current.
+
+## Follow-ups
+Carried into autolens_profiling#454 (lifecycle follow-ups): the point-source scripts ignore `--output-path`; the cluster source-plane decomposition assert; an AST test for pinned-check order. 1A (human `/eyes` sign-off) runs separately.
+
+## Original prompt
+
 # Likelihood lifecycle phase 1B: profiling CLI renders and keeps `fit.png` per cell, `figures[]` in the v3 catalogue, fit-figure inspection step in the profiling skill and campaign template
 
 Type: feature
