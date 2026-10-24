@@ -12,7 +12,7 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 2 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 284 |
+| [Backlog](#backlog) | 285 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 2 |
 
@@ -372,7 +372,7 @@ Use the start-dev skill. draft/maintenance/autolens/point_source_cpu_campaign_ow
 </details>
 
 <details>
-<summary><b>Cluster PointSolver — robustness and performance</b> — 3 queued prompt(s), in order</summary>
+<summary><b>Cluster PointSolver — robustness and performance</b> — 4 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Cluster PointSolver — robustness and performance</b> — ledger: `https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/cluster_pointsolver_speed.md` — Phase 1 (cluster-scale robust settings, autolens_profiling#436 → #438 <code>c8c9abb3</code>) MERGED 2026-10-22, record…</summary>
 
@@ -390,10 +390,10 @@ Use the start-dev skill. draft/bug/autolens/point_solver_error_bisect_health.md
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/autolens/point_solver_residual_filter_newton_distance.md"><code>@PyAutoLens</code> PointSolver residual filter: add a Newton-distance condition (fix low-threshold central-image loss)</a> — autolens · small · supervised · medium</summary>
+<details><summary>📋 <a href="draft/docs/autolens_workspace/point_solver_guide.md"><code>@autolens_workspace</code> guides/point_solver: a human-facing guide to the PointSolver's oracle, use and limitations</a> — autolens_workspace · medium · supervised · medium</summary>
 
 ```
-Use the start-dev skill. draft/feature/autolens/point_solver_residual_filter_newton_distance.md
+Use the start-dev skill. draft/docs/autolens_workspace/point_solver_guide.md
 ```
 
 </details>
@@ -402,6 +402,14 @@ Use the start-dev skill. draft/feature/autolens/point_solver_residual_filter_new
 
 ```
 Use the start-dev skill. draft/feature/autolens_workspace/cluster_point_solver_validation_check.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens/point_solver_root_refinement.md"><code>@PyAutoLens</code> PointSolver: replace post-hoc candidate filters with root refinement (research)</a> — autolens · large · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/research/autolens/point_solver_root_refinement.md
 ```
 
 </details>
@@ -887,7 +895,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p0_profiling.md">Likelihood lifecycle phase 0B: autolens_profiling mirrored tree, day-zero migration map, <code>profiling-summary@3</code> catalogue…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/442">issue #442</a> — issued 2026-10-23 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/448">autolens_profiling#448</a>, <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/74">PyAutoPulse#74</a></summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p0_profiling.md">Likelihood lifecycle phase 0B: autolens_profiling mirrored tree, day-zero migration map, <code>profiling-summary@3</code> catalogue…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/442">issue #442</a> — issued 2026-10-23 — workspace-dev</summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p0_profiling.md
@@ -2968,7 +2976,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-110 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+111 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2984,7 +2992,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autolens/area_magnification_leggos.md`
 - `draft/feature/autolens/cluster_curves_engine_dispatch.md`
 - `draft/feature/autolens/magnification_maps_visualization.md`
-- `draft/feature/autolens/point_solver_residual_filter_newton_distance.md`
 - `draft/feature/autolens/source_cluster_arc.md`
 - `draft/feature/autolens_jax_joss/autolens_jax_joss_benchmark_repo.md`
 - `draft/feature/autolens_workspace/cluster_point_solver_validation_check.md`
@@ -3013,7 +3020,8 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
 - `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`
 - `draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md`
-- _… and 70 more_
+- `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
+- _… and 71 more_
 
 </details>
 
@@ -3033,7 +3041,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autofit/results_library_epic_report.md — unknown theme keyword(s): results, euclid`
 - `draft/feature/autolens/cluster_curves_engine_dispatch.md — unknown theme keyword(s): critical-curves`
 - `draft/feature/autolens/coolest_pixel_grid_export.md — unknown theme keyword(s): coolest, interop, euclid`
-- `draft/feature/autolens/point_solver_residual_filter_newton_distance.md — unknown theme keyword(s): jax`
 - `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md — unknown theme keyword(s): euclid, catalogue`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md — unknown theme keyword(s): euclid`
 - `draft/feature/euclid/single_process_cpu_route_jax_vis_lp_numba_vis_pix.md — unknown theme keyword(s): euclid, jax, hpc`
@@ -3085,6 +3092,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md — unknown theme keyword(s): jax-grad`
 - `draft/research/autofit/hpc_campaign_epic.md — unknown theme keyword(s): hpc, euclid, carbon`
 - `draft/research/autofit/search_extensibility_epic.md — unknown theme keyword(s): searches, jax, documentation, inference`
+- `draft/research/autolens/point_solver_root_refinement.md — unknown theme keyword(s): jax`
 - `draft/research/autolens_assistant/free_agent_harness_evaluation.md — unknown theme keyword(s): assistant, support-policy`
 - `draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md — unknown theme keyword(s): euclid, hpc`
 - `draft/triage/autolens/jit_fit_from_is_vacuous.md — unknown theme keyword(s): testing, jax`
