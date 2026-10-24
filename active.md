@@ -15,8 +15,8 @@
 - prompt: active/likelihood_lifecycle_p0_profiling.md
 - epic: likelihood-lifecycle
 - merged: https://github.com/PyAutoLabs/autolens_profiling/pull/444 (PR 1 of 6, migration map) → aeef2756, 2026-10-23
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/447 (PR 2 of 6, move-only, rebuilt after #441, head 0cce1ba8; #446 closed superseded)
-- next: RESUME 2026-10-24 — #447 lint was red on ruff format (newer CI ruff formats md code blocks in a moved archive note) → fixed 0cce1ba8 (archive/ added to ruff extend-exclude), lint rerun in progress at wrap-up; human /prm #447 when green; then PR 3 catalogue builder (@3; size rule Delaunay 1250 / rectangular 35²=1225; adapt remaining old-layout writers; drop results_layout.py shim)
+- merged: https://github.com/PyAutoLabs/autolens_profiling/pull/447 (PR 2 of 6, move-only) → 0c6be19b, 2026-10-24
+- next: PR 3 catalogue builder IN PROGRESS 2026-10-24 on feature/likelihood-lifecycle-p0-profiling-builder (@3; size rule Delaunay 1250 / rectangular 35²=1225; old-layout writers → new tree; drop results_layout.py shim; mirror test) → /ship_workspace → human /prm; then Pulse lens re-pin @3
 - repos:
-  - autolens_profiling: feature/likelihood-lifecycle-p0-profiling-move-v2
+  - autolens_profiling: feature/likelihood-lifecycle-p0-profiling-builder
   - PyAutoPulse: feature/likelihood-lifecycle-p0-profiling (registry re-pin, after builder merges)
