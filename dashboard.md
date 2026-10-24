@@ -895,7 +895,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/point_solver_guide.md"><code>@autolens_workspace</code> guides/point_solver: a human-facing guide to the PointSolver's oracle, use and limitations</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/599">issue #599</a> — issued 2026-10-24 — library-dev</summary>
+<details><summary>📋 <a href="active/point_solver_guide.md"><code>@autolens_workspace</code> guides/point_solver: a human-facing guide to the PointSolver's oracle, use and limitations</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/599">issue #599</a> — issued 2026-10-24 — shipped, awaiting /prm (order: PyAutoLens#801 → ws#600 → ws#601 → HowToLens#101) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/801">PyAutoLens#801</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/600">autolens_workspace#600</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/601">autolens_workspace#601</a>, <a href="https://github.com/PyAutoLabs/HowToLens/pull/101">HowToLens#101</a></summary>
 
 ```
 Use the start-dev skill. active/point_solver_guide.md
