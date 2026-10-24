@@ -10,7 +10,7 @@
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/442
 - issued: 2026-10-23
 - session: claude-code (local CLI, Opus 5.5)
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p0-profiling
 - prompt: active/likelihood_lifecycle_p0_profiling.md
 - epic: likelihood-lifecycle
@@ -18,9 +18,12 @@
 - merged: https://github.com/PyAutoLabs/autolens_profiling/pull/447 (PR 2 of 6, move-only) → 0c6be19b, 2026-10-24
 - merged: https://github.com/PyAutoLabs/autolens_profiling/pull/448 (PR 3 of 6, catalogue builder @3) → 81183fd8, 2026-10-24
 - merged: https://github.com/PyAutoLabs/PyAutoPulse/pull/74 (PR 4, lens re-pin @3, receipt refetched; pulse check OK) → 5f3ec2c8, 2026-10-24
-- next: AUTO RUN 2026-10-24 (human --auto, Heart YELLOW ack'd: manifest drift + PyAutoLens release validation stale): stacked PRs 3b (legacy layout; draft folded in) → 5 misc grouping → 6 coverage+parity, each to PR-open; merges human /prm in order
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/449 (PR 3b legacy layout; review CLEAN after fixes)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/450 (PR 5 misc grouping, stacked on #449; review CLEAN)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/451 (PR 6 coverage+parity, stacked on #450; review CLEAN; LAST 0B PR)
+- next: human /prm 449 → 450 → 451 IN ORDER (stacked; base main); after 451 merges the task is complete → full close-out (record, issue close, worktrees -misc/-coverage removed); phase 0 then done
 - repos:
-  - autolens_profiling: (detached at main; next PR branches fresh)
+  - autolens_profiling: feature/likelihood-lifecycle-p0-profiling-legacy (+ worktrees likelihood-lifecycle-p0-profiling-misc, -coverage for stacked -misc / -coverage)
 
 ## eclipse-catalogue-site
 - issue: https://github.com/PyAutoLabs/ECLIPSE_lens_catalogue/issues/1

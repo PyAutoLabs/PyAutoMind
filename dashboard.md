@@ -887,7 +887,7 @@ Use the start-dev skill. active/eclipse_catalogue_website.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p0_profiling.md">Likelihood lifecycle phase 0B: autolens_profiling mirrored tree, day-zero migration map, <code>profiling-summary@3</code> catalogue…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/442">issue #442</a> — issued 2026-10-23 — workspace-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p0_profiling.md">Likelihood lifecycle phase 0B: autolens_profiling mirrored tree, day-zero migration map, <code>profiling-summary@3</code> catalogue…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/442">issue #442</a> — issued 2026-10-23 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/449">autolens_profiling#449</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/450">autolens_profiling#450</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/451">autolens_profiling#451</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p0_profiling.md
