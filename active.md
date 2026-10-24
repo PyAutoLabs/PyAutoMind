@@ -18,7 +18,7 @@
 - merged: https://github.com/PyAutoLabs/autolens_profiling/pull/447 (PR 2 of 6, move-only) → 0c6be19b, 2026-10-24
 - merged: https://github.com/PyAutoLabs/autolens_profiling/pull/448 (PR 3 of 6, catalogue builder @3) → 81183fd8, 2026-10-24
 - merged: https://github.com/PyAutoLabs/PyAutoPulse/pull/74 (PR 4, lens re-pin @3, receipt refetched; pulse check OK) → 5f3ec2c8, 2026-10-24
-- next: PR 3b (draft/feature/autolens_profiling/likelihood_lifecycle_p0_profiling_3b_legacy_layout.md: trend re-key, legacy writers, drop results_layout.py) → PR 5 misc grouping → PR 6 coverage matrix + parity; branch each fresh from main in the worktree
+- next: AUTO RUN 2026-10-24 (human --auto, Heart YELLOW ack'd: manifest drift + PyAutoLens release validation stale): stacked PRs 3b (legacy layout; draft folded in) → 5 misc grouping → 6 coverage+parity, each to PR-open; merges human /prm in order
 - repos:
   - autolens_profiling: (detached at main; next PR branches fresh)
 
