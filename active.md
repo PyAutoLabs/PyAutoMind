@@ -21,3 +21,17 @@
 - next: PR 3b (draft/feature/autolens_profiling/likelihood_lifecycle_p0_profiling_3b_legacy_layout.md: trend re-key, legacy writers, drop results_layout.py) → PR 5 misc grouping → PR 6 coverage matrix + parity; branch each fresh from main in the worktree
 - repos:
   - autolens_profiling: (detached at main; next PR branches fresh)
+
+## point-solver-guide
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/599
+- issued: 2026-10-24
+- session: claude-code (local CLI, Opus 5.5)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/point-solver-guide
+- prompt: active/point_solver_guide.md
+- epic: cluster-pointsolver-speed
+- repos:
+  - PyAutoLens: feature/point-solver-guide
+  - autolens_workspace: feature/point-solver-guide-move, feature/point-solver-guide
+- summary: |
+    3 PRs in order: (1) the PyAutoLens residual_threshold docstring fix; (2) a workspace move-only PR, point_source_pairing.py → guides/point_solver/pairing.py; (3) the new guide guides/point_solver/limitations.py plus a notebook (oracle, usage, assumptions, limitations). Judge tier, human /prm. Research follow-up filed as draft/research/autolens/point_solver_root_refinement.md.

@@ -1,6 +1,6 @@
-# `@PyAutoLens` PointSolver residual filter: add a Newton-distance condition (fix low-threshold central-image loss)
+# `@PyAutoLens` PointSolver: replace post-hoc candidate filters with root refinement (research)
 
-Type: feature
+Type: research
 Target: autolens
 Repos:
 - @PyAutoLens
@@ -8,42 +8,38 @@ Themes:
 - cluster
 - point-source
 - jax
-Difficulty: small
+Difficulty: large
 Autonomy: supervised
-Priority: medium
+Priority: low
 Status: formalised
 Consequence: judge
 Epic: cluster-pointsolver-speed
-Related: PyAutoLens#799/#800 (record `complete/2026/10/point-solver-spurious-core.md`)
-Filed: 2026-10-23
+Related: PyAutoLens#799/#800 (record `complete/2026/10/point-solver-spurious-core.md`); doc guide `draft/docs/autolens_workspace/point_solver_guide.md`
+Filed: 2026-10-23 (as a Newton-distance filter feature); re-scoped to research 2026-10-24
 
 ## Why
 
-PyAutoLens#800 made `residual_threshold=10.0` the default: reject a candidate when |β(θ̂) − β| > 10 × `pixel_scale_precision`. A read-only adversarial check (2026-10-23, scripts in the session scratchpad `residual_sanity/`) found:
+PyAutoLens#800 rejects candidates whose source-plane residual exceeds 10 × `pixel_scale_precision`. A sanity check on 2026-10-23 found three weaknesses. It drops true demagnified central images when `magnification_threshold=0.01`. Those images have |μ| of 0.013–0.016, so the default 0.1 drops them anyway, which is right for modelling because they are never observed. This only matters below a threshold of about 0.02. It is weak at coarse precision (0.005 to 0.01). And the triangle search finds only 38–43 of 324 true images near zero-core members, before any filter runs.
 
-- **False rejection.** With `magnification_threshold=0.01`, the demagnified central images of a small-core (0.02″), very elliptical `IsothermalCore` sit at 11.07× and 11.18× precision (σ_max of A ≈ 20–24). The default drops them: 2 distinct true images of 67 found. Others sit just under the cut (9.6×, 9.4×). The 11 workspace callers using 0.01 all have singular main lenses, so they are not exposed today.
-- **Weak at coarse precision.** The spurious residual is fixed at about the member's Einstein radius b, so the cut only works while b > 10 × precision. At precision 0.005 (the Euclid pipeline's setting) the margin is 1.33×; at 0.01 the spurious point survives. One near-member spurious point (6×, |μ| 0.20) also survived on a fine 0.02″ grid.
-- **Wrong docstring.** The #800 docstring says the linearised |A⁻¹r| would accept the core point. Measured, it is 1280h there (σ_min ≈ 0.033), so it rejects it strongly.
-- **Rule comparison** on 219 candidates (209 true, 10 spurious), with h the final triangle edge:
-  - Newton distance |A⁻¹r| separates cleanly: true ≤ 2.74h, spurious 23h–1670h.
-  - The lost central images have |A⁻¹r| of 0.31–0.35h.
-  - "residual > 10×precision **and** |A⁻¹r| > 4h" rejects 0/209 true candidates and removes the same 5 spurious ones as the current rule.
-  - "|A⁻¹r| > 4h and residual > 1×precision" removes 10/10 spurious with 0 true rejected, but is untested at |μ| > ~350.
-- `autolens_workspace_test/scripts/point_source/solver/error_audit.py` (threshold 0) already changes output under #800: the singular-centre candidate is dropped, so counts go 5/7 → 4/6.
+The follow-up proposal was to reject only when residual > 10×precision AND |A⁻¹r| > 4h. Two adversarial reviews on 2026-10-24 (Claude and Codex `gpt-6-astra`) recommended against it:
 
-## Deliverables
+- **Steep cusps and point masses defeat the Newton distance.** At a PowerLaw centre with slope 2.3/2.6, |A⁻¹r| ≈ 1.9h/0.96h while the residual is 600–100000×precision. The AND rule would keep candidates that #800 removes, and only `magnification_threshold` would catch them. A point mass gives 0.33h.
+- **Near-caustic true images reach |A⁻¹r| of 4.2h, 5.6h and 14.8h** (|μ| 3.5e3–1e5). Only the residual leg keeps them.
+- **The 4h cut is fitted to the data.** The affine bound is h/√3, and h/precision varies between 1 and 2. In the evidence, "true" meant polishing converged within 3h, which is circular.
 
-1. Add the Newton-distance condition. A comes from `LensCalc.hessian_from` (the components `magnification_2d_via_hessian_from` already uses), measured at the solved plane. h is the final triangle edge `scale / 2**(n_steps - 1)`, not `pixel_scale_precision`.
-   - Keep it a static-shape NaN mask inside the custom-JVP primal: eager/JIT/vmap, gradients unchanged.
-   - Decide, with evidence, between the AND-rule and the stronger variant. The stronger variant needs a high-|μ| (≥ 1000) near-caustic check before adoption.
-2. Correct the docstring.
-3. Regressions:
-   - the low-threshold central-image case is kept;
-   - the minimal-fixture spurious core point is still removed (and at precision 0.005, plus the 0.01 case if the stronger variant is chosen);
-   - true images near a fold/cusp at high |μ| are kept.
-4. Note the `error_audit.py` count change in the PR.
-5. Any change to the threshold's meaning or default is a human decision at review.
+Each condition covers a failure the other has, so stacking tuned thresholds is the wrong direction.
+
+## Questions
+
+1. **Root refinement.** Take triangle candidates as seeds, run a damped or trust-region Newton step on a fixed iteration budget, accept on convergence (residual at round-off, final correction small), deduplicate, and return the refined positions. Does this remove spurious singular-centre points without any threshold on profile class? What does it change in returned positions, likelihoods and implicit-diff gradients? A worked example is the oracle in `autolens_profiling/scripts/cluster/image_plane/_oracle.py`.
+2. **Singularity-aware subdivision.** Refine around singular profile centres (zero-core dPIE, point mass, steep power law) during the search. Does it fix both the spurious points and the near-member completeness gap (38–43/324)?
+3. **Constraints.** JAX: static shapes, padded candidates, vmap, a custom-JVP primal. Cost per solve. Cusp triplets about 7e-4″ apart.
+
+## Evidence to build first
+
+- An independent root census (the oracle) over: zero-core dPIE, steep PL, point mass, NFW, cored profiles across a range of core size / h, fold and cusp crossings, grid translations, and multi-plane.
+- Probes from the review session (scratchpad `probe/caustic.py`, `probe/pl_centre.py`, plus the earlier `residual_sanity/`) as starting points.
 
 ## Out of scope
 
-The triangle search's own completeness near zero-core members: it finds only 38–43 of 324 forward-built images within 0.03″ of a member, before any filter. File that separately if pursued.
+Shipping any new default. Any outcome goes back to the human as a design decision.
