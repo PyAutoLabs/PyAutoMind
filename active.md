@@ -1,3 +1,16 @@
+## finufft-cpu-nufft-backend
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/654
+- issued: 2026-10-24
+- session: claude-code (local CLI, Opus 5.5)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/finufft-cpu-nufft-backend
+- prompt: active/finufft_cpu_nufft_backend.md
+- user-facing: true
+- next: phase 1 implement (PyAutoArray finufft backend + PyAutoFit SIGSEGV-after-JAX exception) → ship_library; phase 2 = Aris SLaM E2E on RAL + Slack handoff
+- repos:
+  - PyAutoArray: feature/finufft-cpu-nufft-backend
+  - PyAutoFit: feature/finufft-cpu-nufft-backend
+
 
 ## matrix-free-interferometer-inversion
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/638
