@@ -14,18 +14,17 @@
   - PyAutoArray: feature/finufft-cpu-nufft-backend
   - PyAutoFit: feature/finufft-cpu-nufft-backend
 
-## likelihood-lifecycle-p1-followups
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/454
+## likelihood-lifecycle-p2a-imaging-campaign
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/456
 - issued: 2026-10-24
 - session: claude-code (local CLI, Opus 5.5)
-- status: workspace-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p1-followups
-- prompt: active/likelihood_lifecycle_p1_followups.md
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p2a-imaging-campaign
+- prompt: active/likelihood_lifecycle_p2a_imaging_campaign.md
 - epic: likelihood-lifecycle
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/455 (review CLEAN)
-- next: human /prm 455 → close-out; then start queued 2a (planned.md likelihood-lifecycle-p2a-imaging-campaign, issue #456, plan approved)
+- next: PR A (standard size + parity.json writer + submits; Opus worker → independent review → ship) → batch 0 timing (human go) → batch 1 (human go) → PR B
 - repos:
-  - autolens_profiling: feature/likelihood-lifecycle-p1-followups
+  - autolens_profiling: feature/likelihood-lifecycle-p2a-imaging-campaign
 
 ## matrix-free-interferometer-inversion
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/638

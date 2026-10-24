@@ -18,6 +18,7 @@ Epic: likelihood-lifecycle
 Phase: 2
 Parent: draft/research/autolens_profiling/likelihood_lifecycle_epic.md
 Filed: 2026-10-24
+Issued: 2026-10-24
 Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/456
 
 Phase 2 sub-issue 2a of the `likelihood-lifecycle` epic (report §4 "Phase 2"; ledger "Phase 2" card). Depends on phase 0 (complete) and phase 1B (merged, autolens_profiling#453); start after autolens_profiling#455 (follow-ups) merges. Scope: imaging/{mge, rectangular, delaunay, delaunay_nn} (106 planned cells).

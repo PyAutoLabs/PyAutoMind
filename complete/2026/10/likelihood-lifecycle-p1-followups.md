@@ -1,3 +1,21 @@
+Follow-ups after likelihood-lifecycle phases 0B and 1B, merged as one PR so phase 2 starts from a clean base.
+
+## Merged
+- autolens_profiling#455 (47895f9a), six items:
+  1. The point-source runtime scripts place their row through `resolve_output_paths` and honour `--output-path`.
+  2. The cluster/source_plane breakdown is re-derived to match PyAutoLens bdb44a87c (2026-10-21): `FitPositionsSource` now uses the Jacobian precision tensor and a model-independent noise term. **The committed cluster/source_plane rows measure the old likelihood, so phase 2e re-measures them.**
+  3. `coverage_matrix` excludes parity from the unplanned count.
+  4. `catalogue_lifecycle` reads `catalogue/provisional_designations.json`.
+  5. The write guard catches default-argument results roots.
+  6. An AST test checks the `record_pinned_check` order.
+- CI was red once on a host-dependent test assert (a GitHub runner's hostname maps to no host class). With the human's OK, the test now pins a laptop hostname. Independent review: CLEAN.
+
+## Follow-ups (not filed)
+- Flags that mean nothing for a point-source likelihood (`--sparse`, `--source-pixels`, …) now change point-source placement, as they do for every other cell. The point-source `--vmap-probe` JSON follows only `--output-dir`.
+- The cluster cell's dataset auto-simulation writes `results/misc/simulators/cluster_summary_v*` into the repo.
+
+## Original prompt
+
 # Likelihood lifecycle follow-ups after phases 0B and 1B: point-source --output-path, cluster source-plane assert, coverage/parity, single §3.3 source, guard default-arg roots, pinned-check order test
 
 Type: feature
