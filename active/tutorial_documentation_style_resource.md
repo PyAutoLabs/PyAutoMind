@@ -1,5 +1,7 @@
 # Reusable style resource for scientific Python tutorials
 
+Issued: 2026-10-24
+
 Create a canonical, callable @PyAutoBrain resource for editing Python script and
 notebook documentation in the style established by the first AI COSMOS Ring
 example. Decide whether this should extend the existing `/docs` entry point,
