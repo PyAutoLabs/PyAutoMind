@@ -163,3 +163,42 @@ def test_apply_deletes_exactly_the_planned_lines(tmp_path):
 def test_release_version_strips_the_v_prefix():
     assert lifecycle.resolve_release_version("v1.2.3") == "1.2.3"
     assert lifecycle.resolve_release_version("1.2.3") == "1.2.3"
+
+
+def test_remove_labels_uses_rest_and_tolerates_an_absent_label(monkeypatch, capsys):
+    # The release PAT lacks read:org, which `gh pr edit` (GraphQL) needs; the
+    # REST label DELETE does not. A 404 means the label is already gone.
+    fake_plan = type("P", (), {"released": [], "gates": [], "unknown": [],
+                               "labels": [("ExampleOrg", "Gadgets", 12),
+                                          ("ExampleOrg", "Widgets", 34)]})()
+    monkeypatch.setattr(lifecycle, "resolve_release_version", lambda v: v)
+    monkeypatch.setattr(lifecycle, "plan_clear_released", lambda root, v: fake_plan)
+    calls = []
+
+    def gh(args):
+        calls.append(args)
+        if "Widgets" in args[-1]:
+            return 1, "", "gh: Label does not exist (HTTP 404)"
+        return 0, "", ""
+    monkeypatch.setattr(lifecycle, "_gh", gh)
+    args = type("A", (), {"version": "1.2.3", "apply": False,
+                          "remove_labels": True, "no_dashboard": True})()
+    assert lifecycle.cmd_clear_released(args) == 0
+    assert calls == [
+        ["api", "-X", "DELETE",
+         "repos/ExampleOrg/Gadgets/issues/12/labels/pending-release"],
+        ["api", "-X", "DELETE",
+         "repos/ExampleOrg/Widgets/issues/34/labels/pending-release"],
+    ]
+    assert "labels dropped: 2/2" in capsys.readouterr().out
+
+
+def test_remove_labels_fails_on_a_real_error(monkeypatch):
+    fake_plan = type("P", (), {"released": [], "gates": [], "unknown": [],
+                               "labels": [("ExampleOrg", "Gadgets", 12)]})()
+    monkeypatch.setattr(lifecycle, "resolve_release_version", lambda v: v)
+    monkeypatch.setattr(lifecycle, "plan_clear_released", lambda root, v: fake_plan)
+    monkeypatch.setattr(lifecycle, "_gh", lambda a: (1, "", "HTTP 403 Forbidden"))
+    args = type("A", (), {"version": "1.2.3", "apply": False,
+                          "remove_labels": True, "no_dashboard": True})()
+    assert lifecycle.cmd_clear_released(args) == 1
