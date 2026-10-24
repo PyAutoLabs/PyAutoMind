@@ -895,7 +895,7 @@ Use the start-dev skill. active/finufft_cpu_nufft_backend.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p1b_profiling_figures.md">Likelihood lifecycle phase 1B: profiling CLI renders and keeps <code>fit.png</code> per cell…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/452">issue #452</a> — issued 2026-10-24 — workspace-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p1b_profiling_figures.md">Likelihood lifecycle phase 1B: profiling CLI renders and keeps <code>fit.png</code> per cell…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/452">issue #452</a> — issued 2026-10-24 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/453">autolens_profiling#453</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p1b_profiling_figures.md

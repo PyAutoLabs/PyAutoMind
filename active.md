@@ -16,11 +16,12 @@
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/452
 - issued: 2026-10-24
 - session: claude-code (local CLI, Opus 5.5)
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p1b-profiling-figures
 - prompt: active/likelihood_lifecycle_p1b_profiling_figures.md
 - epic: likelihood-lifecycle
-- next: start_workspace → Opus worker implements → independent review → /ship_workspace → human /prm; then phase 2
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/453 (review FINDINGS → fixed → CLEAN)
+- next: human /prm 453 → close-out; then phase 2 (profiling campaigns; one issue per dataset type, measurement list = dashboard/coverage.md)
 - repos:
   - autolens_profiling: feature/likelihood-lifecycle-p1b-profiling-figures
 
