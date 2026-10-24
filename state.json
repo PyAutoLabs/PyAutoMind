@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
-  "updated": "2026-10-24T15:29:34Z",
+  "updated": "2026-10-24T15:32:23Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Consequence: judge \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/655",
+      "prompt": "Use the start-dev skill. active/finufft_cpu_nufft_backend.md"
+    },
     {
       "severity": "yellow",
       "text": "Likelihood lifecycle follow-ups after phases 0B and 1B: point-source --output-path, cluster source-plane\u2026 \u2014 workspace-shipped, awaiting-merge",
@@ -120,12 +126,6 @@
       "text": "pick: HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit/hpc_campaign_epic.md",
       "prompt": "Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Guard every workspace script against untimed network downloads",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace/no_untimed_network_downloads_check.md",
-      "prompt": "Use the start-dev skill. draft/test/autolens_workspace/no_untimed_network_downloads_check.md"
     }
   ]
 }

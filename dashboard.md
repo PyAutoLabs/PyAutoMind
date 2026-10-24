@@ -935,7 +935,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/finufft_cpu_nufft_backend.md">Consequence: judge</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/654">issue #654</a> — issued 2026-10-24 — library-dev</summary>
+<details><summary>📋 <a href="active/finufft_cpu_nufft_backend.md">Consequence: judge</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/654">issue #654</a> — issued 2026-10-24 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/655">PyAutoArray#655</a>, <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1715">PyAutoFit#1715</a></summary>
 
 ```
 Use the start-dev skill. active/finufft_cpu_nufft_backend.md
