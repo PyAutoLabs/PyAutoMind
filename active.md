@@ -26,12 +26,18 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/599
 - issued: 2026-10-24
 - session: claude-code (local CLI, Opus 5.5)
-- status: library-dev
+- status: shipped, awaiting /prm (order: PyAutoLens#801 → ws#600 → ws#601 → HowToLens#101)
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/801
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/600, https://github.com/PyAutoLabs/autolens_workspace/pull/601, https://github.com/PyAutoLabs/HowToLens/pull/101
 - worktree: ~/Code/PyAutoLabs-wt/point-solver-guide
 - prompt: active/point_solver_guide.md
 - epic: cluster-pointsolver-speed
 - repos:
   - PyAutoLens: feature/point-solver-guide
   - autolens_workspace: feature/point-solver-guide-move, feature/point-solver-guide
+  - HowToLens: feature/point-solver-guide
+- heart-ack:
+  - manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml
+  - release validation stale: source moved since rehearsal (PyAutoLens)
 - summary: |
     3 PRs in order: (1) the PyAutoLens residual_threshold docstring fix; (2) a workspace move-only PR, point_source_pairing.py → guides/point_solver/pairing.py; (3) the new guide guides/point_solver/limitations.py plus a notebook (oracle, usage, assumptions, limitations). Judge tier, human /prm. Research follow-up filed as draft/research/autolens/point_solver_root_refinement.md.
