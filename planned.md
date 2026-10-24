@@ -11,6 +11,7 @@
 - [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
 - [interferometer-primary-beam-persistence-mirror](#interferometer-primary-beam-persistence-mirror)
 - [point-plots-yaml-keys-assistant](#point-plots-yaml-keys-assistant)
+- [likelihood-lifecycle-p2a-imaging-campaign](#likelihood-lifecycle-p2a-imaging-campaign)
 
 <!-- toc:end -->
 
