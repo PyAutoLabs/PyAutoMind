@@ -12,7 +12,7 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 3 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 283 |
+| [Backlog](#backlog) | 290 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 2 |
 
@@ -219,12 +219,68 @@ Use the start-dev skill. draft/maintenance/pyautomemory/canonical_key_todo_sweep
 Long-running multi-phase programmes. Each epic's 📋 prompt has the assistant read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
 
 <details>
-<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 2 queued prompt(s), in order</summary>
+<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 9 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — ledger: `draft/research/autolens_profiling/likelihood_lifecycle_epic.md` — PHASE 0 COMPLETE 2026-10-24 — 0A PyAutoPulse#70; 0B autolens_profiling#444/#447/#448/#449/#450/#451 + PyAutoPulse#74 (lens at…</summary>
 
 ```
 Continue the 'Likelihood lifecycle — optimal setups baked into PyAutoLens (`setup="auto"`), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood' epic. Its canonical state lives in draft/research/autolens_profiling/likelihood_lifecycle_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: nine phases, one at a time, library first, one issue per repo per phase. 0 spine (vocabulary; `profiling-summary@3` with producer-declared `class` optimal/secondary/experimental and `status` current/superseded/archived; `walltime-validation@1` Pulse axis; Pulse first selector = Class, current-only default; `results/` and `wiki/campaigns/` mirror `scripts/` with `archive/YYYY/MM/` in both project repos; Insight `setup_mode: auto`; lifecycle template) → 1 figures (Eyes already covers all ten dataset types since autolens_visualization#5; human sign-off + fit.png kept per profiling cell) → 2 profiling campaigns per dataset type under Optimal/Secondary setups (human "complete" gate) → 3 day zero freeze on a released tag + designation decisions + close Pulse `setup-baseline` → 4 inference wall-time validation on RAL → Pulse → 5 `setup="auto"` in Nerves/Array/Galaxy/Lens/Fit with banner, `setup.json`, run-time estimate, workspace/assistant/science-project updates → 6 `value_and_grad` breakdowns (adopts Pulse `gradient_cost_probe`) → 7 Insight sampler campaign under auto (adopts `hst-imaging-mass-samplers`) → 8 `pyauto-brain profiling lifecycle` verb (dogfood: matrix_free_interferometer_phase5). Boundaries: optimal is always a Pulse decision record, never inferred; one `current` per key by the day-zero rule, never by date; auto never touches model, sampler or HPC request. Upstream of hpc-campaign phase 4; results-library untouched. Evidence: draft/research/autolens_profiling/likelihood_lifecycle_epic_report.md.
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/likelihood_lifecycle_p2a_imaging_campaign.md">Likelihood lifecycle phase 2a: profiling campaign — imaging/{mge, rectangular, delaunay, delaunay_nn}…</a> — autolens_profiling · large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_p2a_imaging_campaign.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/likelihood_lifecycle_p2b_interferometer_campaign.md">Likelihood lifecycle phase 2b: profiling campaign — interferometer/{mge, rectangular, delaunay}…</a> — autolens_profiling · large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_p2b_interferometer_campaign.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/likelihood_lifecycle_p2c_point_source_campaign.md">Likelihood lifecycle phase 2c: profiling campaign — point_source_image/image_plane and point_source_source/source_plane…</a> — autolens_profiling · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_p2c_point_source_campaign.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/likelihood_lifecycle_p2d_multi_galaxy_group_campaign.md">Likelihood lifecycle phase 2d: profiling campaign — multi_galaxy and group: **new** profiling…</a> — autolens_profiling · large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_p2d_multi_galaxy_group_campaign.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/likelihood_lifecycle_p2e_cluster_campaign.md">Likelihood lifecycle phase 2e: profiling campaign — cluster/image_plane and cluster/source_plane…</a> — autolens_profiling · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_p2e_cluster_campaign.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/likelihood_lifecycle_p2f_multi_dataset_datacube_campaign.md">Likelihood lifecycle phase 2f: profiling campaign — multi_dataset and datacube/delaunay…</a> — autolens_profiling · large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_p2f_multi_dataset_datacube_campaign.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/likelihood_lifecycle_p2g_weak_campaign.md">Likelihood lifecycle phase 2g: profiling campaign — weak lensing: **new** profiling scripts…</a> — autolens_profiling · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_p2g_weak_campaign.md
 ```
 
 </details>
@@ -887,7 +943,7 @@ Use the start-dev skill. active/finufft_cpu_nufft_backend.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p1_followups.md">Likelihood lifecycle follow-ups after phases 0B and 1B: point-source --output-path, cluster source-plane…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/454">issue #454</a> — issued 2026-10-24 — workspace-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p1_followups.md">Likelihood lifecycle follow-ups after phases 0B and 1B: point-source --output-path, cluster source-plane…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/454">issue #454</a> — issued 2026-10-24 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/455">autolens_profiling#455</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p1_followups.md
