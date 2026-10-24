@@ -21,3 +21,12 @@
 - next: AUTO RUN 2026-10-24 (human --auto, Heart YELLOW ack'd: manifest drift + PyAutoLens release validation stale): stacked PRs 3b (legacy layout; draft folded in) → 5 misc grouping → 6 coverage+parity, each to PR-open; merges human /prm in order
 - repos:
   - autolens_profiling: (detached at main; next PR branches fresh)
+
+## eclipse-catalogue-site
+- issue: https://github.com/PyAutoLabs/ECLIPSE_lens_catalogue/issues/1
+- issued: 2026-10-24
+- session: Claude Code CLI (Fable 5.1), session de58e403
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs/lens/ECLIPSE_lens_catalogue
+- repos:
+  - ECLIPSE_lens_catalogue: feature/eclipse-catalogue-site
