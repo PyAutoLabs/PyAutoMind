@@ -43,3 +43,8 @@ Size: the 2026-10-17 imaging results are at Delaunay 1500 / rectangular 39², no
 - **Batch 1 (human go):** all 106 cells from a private RAL checkout at the pinned tag.
 - **PR B:** commit the rows, regenerate the catalogue and coverage, write the campaign wiki page (pre-registered rule: every cell current with parity `match`; any divergence blocks that setup), refetch Pulse, and adopt and close Pulse `hst_mge_cpu_pilot`.
 - Tier: judge, merge by human `/prm`. Starts after autolens_profiling#455 merges.
+
+## Rulings during PR A review (human, 2026-10-24)
+- **N1, align JAX to production:** under `--standard-size`, every pixelized JAX cell (rectangular, delaunay, delaunay_nn) uses the same production model as the numba cells of that likelihood × instrument: mesh (Delaunay 1250 + 30 edge; rectangular 35²), MGE, adapt weights, regularisation, and the HST preset borrowed for jwst/ao. Optimal and secondary then measure the same likelihood.
+- **(c), parity reference:** JAX sparse cells use the independent eager NumPy dense-mapping reference, the same as the numba cells.
+- **Fixes:** the delaunay_nn numba witness is not_applicable; batch 1 writes to a scratch tree and PR B copies complete rows; RAL `--mem` is sized per instrument.
