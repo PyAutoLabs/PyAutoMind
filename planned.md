@@ -122,3 +122,12 @@
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/98
 - parent: complete/2026/10/point-plots-yaml-keys.md (HowToLens half merged 2026-10-22, HowToLens#99); no separate prompt file
 - scope: same `point_dataset` / `fit_point_dataset` block edit in `autolens_assistant/config/visualize/plots.yaml` as HowToLens; ship on its own branch `feature/point-plots-yaml-keys` once the claim clears
+
+## likelihood-lifecycle-p2a-imaging-campaign
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/456
+- filed: 2026-10-24
+- prompt: draft/research/autolens_profiling/likelihood_lifecycle_p2a_imaging_campaign.md
+- status: planned — plan + rulings human-approved 2026-10-24 (tag 2026.10.23.1; Delaunay 1250+30 edge = standard); QUEUED behind likelihood-lifecycle-p1-followups (autolens_profiling claim, PR #455 awaiting human /prm). Resume: after #455 merges + close-out → move prompt to active/, register active.md, worktree_create likelihood-lifecycle-p2a-imaging-campaign autolens_profiling → Opus worker PR A
+- epic: likelihood-lifecycle
+- affected-repos:
+  - autolens_profiling

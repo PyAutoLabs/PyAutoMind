@@ -18,6 +18,7 @@ Epic: likelihood-lifecycle
 Phase: 2
 Parent: draft/research/autolens_profiling/likelihood_lifecycle_epic.md
 Filed: 2026-10-24
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/456
 
 Phase 2 sub-issue 2a of the `likelihood-lifecycle` epic (report §4 "Phase 2"; ledger "Phase 2" card). Depends on phase 0 (complete) and phase 1B (merged, autolens_profiling#453); start after autolens_profiling#455 (follow-ups) merges. Scope: imaging/{mge, rectangular, delaunay, delaunay_nn} (106 planned cells).
 
@@ -29,3 +30,15 @@ Size: the 2026-10-17 imaging results are at Delaunay 1500 / rectangular 39², no
 - Every cell lands as `current`, carrying runtime and breakdown, provenance, `fit.png` (phase 1B renders it automatically) and a `parity.json` against a reference log-likelihood. Prior rows on the key become `superseded` through the catalogue builder.
 - A campaign page at the mirrored wiki path (`wiki/campaigns/<dataset_type>/<variant>/`) records the rule and the expected verdict before the runs, then the result.
 - Pulse receipt refetched after merge. Phase 2 ends only on the human's "campaigns complete" confirmation (the gate for phase 3).
+
+## Plan approved 2026-10-24 (human), with rulings
+- **Pinned tag: 2026.10.23.1** (the latest PyPI release), shared by every phase-2 sub-issue. Rows on other likelihoods go stale and are re-measured in 2b–2g.
+- **Standard Delaunay = 1250 Hilbert + 30 edge (1280 recorded).** Rows record `source_pixels_requested: 1250` beside the actual count, and the size rule matches on the requested count. Rectangular = 35².
+- **PR A (code, laptop):**
+  - `--source-pixels` in the 3 JAX runtime scripts (hard-coded 1500 / 39² today) and the numba scripts (presets; jwst/ao have none); a `--standard-size` flag.
+  - A `parity.json` writer: an in-process eager NumPy reference on the same inputs and size, absolute tolerance 1e-4·|ref| (1e-3 mixed).
+  - New submits: a RAL CPU array on `--partition=ral` for the 44 CPU cells, plus one `--gres=gpu:1` A100 job per instrument. The 18 `jax_cpu_sparse`@`hpc_a100` cells run inside those GPU jobs. Each submit gets a WALL-BASIS block.
+- **Batch 0 (human go):** one short timing arm per new submit kind, to set `--time` from measurement.
+- **Batch 1 (human go):** all 106 cells from a private RAL checkout at the pinned tag.
+- **PR B:** commit the rows, regenerate the catalogue and coverage, write the campaign wiki page (pre-registered rule: every cell current with parity `match`; any divergence blocks that setup), refetch Pulse, and adopt and close Pulse `hst_mge_cpu_pilot`.
+- Tier: judge, merge by human `/prm`. Starts after autolens_profiling#455 merges.

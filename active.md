@@ -23,7 +23,7 @@
 - prompt: active/likelihood_lifecycle_p1_followups.md
 - epic: likelihood-lifecycle
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/455 (review CLEAN)
-- next: human /prm 455 → close-out; phase 2 sub-issues filed (draft/research/autolens_profiling/likelihood_lifecycle_p2*_campaign.md), 2a imaging start_dev in planning
+- next: human /prm 455 → close-out; then start queued 2a (planned.md likelihood-lifecycle-p2a-imaging-campaign, issue #456, plan approved)
 - repos:
   - autolens_profiling: feature/likelihood-lifecycle-p1-followups
 
