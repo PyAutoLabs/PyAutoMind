@@ -1,9 +1,10 @@
 
 ## tutorial-documentation-style
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/539
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/540
 - issued: 2026-10-24
 - session: Codex (local CLI; session ID unavailable)
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/tutorial-documentation-style
 - prompt: active/tutorial_documentation_style_resource.md
 - repos:
