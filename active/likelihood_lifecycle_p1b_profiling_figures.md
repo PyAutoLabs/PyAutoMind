@@ -19,6 +19,8 @@ Epic: likelihood-lifecycle
 Phase: 1
 Parent: draft/research/autolens_profiling/likelihood_lifecycle_epic.md
 Filed: 2026-10-24
+Issued: 2026-10-24
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/452
 
 Phase 1 sub-issue 1B of the `likelihood-lifecycle` epic (ledger `draft/research/autolens_profiling/likelihood_lifecycle_epic.md`; report §4 "Phase 1"). Phase 0 is complete (2026-10-24). Phase 2 requires every campaign cell to carry `fit.png`, so 1B lands before phase 2. 1A (the `/eyes` review loop over the ten autolens_visualization `fit.png`, human sign-off) runs separately when the human has time and does not block 1B.
 

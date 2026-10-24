@@ -12,6 +12,18 @@
   - PyAutoFit: feature/finufft-cpu-nufft-backend
 
 
+## likelihood-lifecycle-p1b-profiling-figures
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/452
+- issued: 2026-10-24
+- session: claude-code (local CLI, Opus 5.5)
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p1b-profiling-figures
+- prompt: active/likelihood_lifecycle_p1b_profiling_figures.md
+- epic: likelihood-lifecycle
+- next: start_workspace → Opus worker implements → independent review → /ship_workspace → human /prm; then phase 2
+- repos:
+  - autolens_profiling: feature/likelihood-lifecycle-p1b-profiling-figures
+
 ## matrix-free-interferometer-inversion
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/638
 - issued: 2026-10-21
