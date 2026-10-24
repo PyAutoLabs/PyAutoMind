@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
-  "updated": "2026-10-24T15:46:15Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 2 in flight",
+  "updated": "2026-10-24T16:59:12Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Consequence: judge \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/655",
-      "prompt": "Use the start-dev skill. active/finufft_cpu_nufft_backend.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -27,6 +21,12 @@
     },
     {
       "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#655 \u2014 What shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/655",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1714 \u2014 ep-evidence-nonfinite",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1714",
       "prompt": null
@@ -35,6 +35,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1712 \u2014 ep-zero-success-factors",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1712",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1715 \u2014 What shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1715",
       "prompt": null
     },
     {
@@ -120,12 +126,6 @@
       "text": "pick: HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit/hpc_campaign_epic.md",
       "prompt": "Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Guard every workspace script against untimed network downloads",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace/no_untimed_network_downloads_check.md",
-      "prompt": "Use the start-dev skill. draft/test/autolens_workspace/no_untimed_network_downloads_check.md"
     }
   ]
 }
