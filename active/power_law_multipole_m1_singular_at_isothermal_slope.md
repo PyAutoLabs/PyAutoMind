@@ -48,3 +48,7 @@ User authorized selecting and implementing four related tasks. Scope: Reject sin
 - Workspace regression PR: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/130 (draft). Direct script passes with JAX 0.11.2 on this branch and fails against unmodified main; smoke-list entry added. Full workspace CI pending library availability.
 - JAX log: `/workspace/scratch/e0d55f00a4c5/evidence/multipole-isothermal-guard-jax.log`.
 - Chosen prompt option: reject concrete m=1, slope=2. Chu et al. 2013 equations 5/8/9 require a distinct logarithmic potential; not added. Literal singular construction also rejects during JIT tracing. Free/traced slopes must exclude 2; no tracer runtime assertion added, consistent with existing constructor guards.
+
+## PRM progress 2026-10-25
+
+Library #665 merged after all Actions jobs passed and freeze gate was clear. Companion #130 was green, but merging sibling #128 caused an append conflict in smoke_tests.txt. Resolved with a two-parent merge preserving all entries; current head `14bff78a9e6e45804a90d859f9768392f1336bfd`. Fresh CI run 40240716788 is in progress. No substantive regression-script edits. Task remains active until this companion merges; library pending-release retained.

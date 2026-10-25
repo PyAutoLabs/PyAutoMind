@@ -1,3 +1,17 @@
+# SersicCoreSph mass-to-light ratio
+
+- completed: 2026-10-25
+- PRs: PyAutoGalaxy#664
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/664
+
+Appended mass_to_light_ratio=1.0 and restored its matching prior. Scaling/model-prior tests pass; full suite 1360 passed, 6 skipped; PyAutoLens Tracer smoke passed.
+
+All exact-head Actions runs and jobs passed: Python 3.12/3.13, no-JAX and docs; companion workspace smoke 3.12/3.13 where applicable. No test job skipped. Heart freeze clear. Human authorized `/prm on all`; merged unchanged from the published, tested tree. Remote head ancestry in main verified; local commit trees equal merged remote trees. No independent-review claim.
+
+Routine local pytest outputs are reproducible test products, not user analysis data. Worktree cleanup follows lifecycle close. Library change awaits the next published release.
+
+## Original prompt
+
 # SersicCoreSph has no mass_to_light_ratio argument
 
 Type: bug
