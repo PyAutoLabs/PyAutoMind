@@ -21,7 +21,7 @@
 - session: codex health/hygiene cleanup
 - location: /workspace/scratch/f77499d15f98 (session clones)
 - prompt: active/pre_release_docs_config.md
-- next: HowToFit PR #76 and autogalaxy_workspace PR #262 opened after local validation; human requested prm, requires every exact-head CI run/leg green. AutoFit six config mirrors remain locally preserved and blocked on two notebook checks; keep task open and claims intact.
+- next: HowToFit #76 MERGED bfca6a40420004b489b7ba257c415687b09249c2 after all 8/8 exact-head jobs passed. AutoGalaxy #262 7/8 passed; Python 3.12 smoke running, no failure reported. AutoFit six config mirrors blocked on two notebook checks. Keep issue open, preserve all unmerged work; next human prm judges remaining PR.
 - repos:
   - HowToFit: feature/pre-release-docs-config
   - autofit_workspace: feature/pre-release-docs-config
