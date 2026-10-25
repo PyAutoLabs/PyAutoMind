@@ -471,7 +471,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 46 (stage 1: 46, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — the pre-registered decision is due
+Count toward 20: 49 (stage 1: 49, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — the pre-registered decision is due
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -546,3 +546,6 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-10-23 | github-token-p5-policy-page (PyAutoMind#513) | glance | tests 704 pass + privacy green / smoke n-a (docs) / review n-a (human-approved plan, not --auto) / heart YELLOW-ack / witness PASS (live⇔page names, spawn DROP test) | merged-unchanged | 1 |
 | 2026-10-23 | github-tokens-headless-resolved (PyAutoMind#515) | glance | tests 704 pass + privacy green / smoke n-a (docs) / review n-a (human-approved plan, not --auto) / heart YELLOW-ack / witness PASS | merged-unchanged | 1 |
 | 2026-10-23 | howtofit-ep-shared-centre (HowToFit#75) | glance | tests n-a (tutorial) + CI smoke 3.12/3.13 green / smoke 19 pass (shipping session) / review n-a (human Go 10-17, not --auto) / heart STALE-ack / witness reported by shipping session (shared centre, 5/5 factors, no stale), not re-run at /prm | merged-unchanged | 1 |
+| 2026-10-25 | assertion-repr (PyAutoFit#1720) | glance | tests green / smoke not run (disclosed) / review human prm / heart STALE, not frozen / witness passed | merged-unchanged | 1 |
+| 2026-10-25 | assertion-names (PyAutoFit#1721) | glance | tests green / smoke not run (disclosed) / review human prm / heart STALE, not frozen / witness passed | merged-unchanged | 1 |
+| 2026-10-25 | fixed-instance-tuples (PyAutoFit#1722) | glance | tests green / smoke not run (disclosed) / review human prm / heart STALE, not frozen / witness passed | merged-unchanged | 1 |

@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1988 records across 10 buckets.
+1992 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -129,6 +129,8 @@ markers; everything below GENERATED is rebuilt.
 
 - [absorb-claude-notes-agents-md](2026/10/absorb-claude-notes-agents-md.md)
 - [adaptsplit-logdet-backend-parity](2026/10/adaptsplit-logdet-backend-parity.md)
+- [assertion-names](2026/10/assertion-names.md)
+- [assertion-repr](2026/10/assertion-repr.md)
 - [assistant-ai-options-page](2026/10/assistant-ai-options-page.md) — 2026-10-23
 - [assistant-feedback-distribution](2026/10/assistant-feedback-distribution.md)
 - [assistant-readmes-human-style](2026/10/assistant-readmes-human-style.md)
@@ -219,6 +221,7 @@ markers; everything below GENERATED is rebuilt.
 - [finish-pr-1709-corner-plots](2026/10/finish-pr-1709-corner-plots.md) — Community PR by @samlange04 (proposal .github#38) merged as d3a772129. Maintainer commit f9377f3f6 was pushed …
 - [finufft-cpu-nufft-backend](2026/10/finufft-cpu-nufft-backend.md) — PyAutoArray#654
 - [fit-util-masked-division](2026/10/fit-util-masked-division.md)
+- [fixed-instance-tuples](2026/10/fixed-instance-tuples.md)
 - [fixed-model-json](2026/10/fixed-model-json.md)
 - [flatten-cleanslate-output-layout](2026/10/flatten-cleanslate-output-layout.md)
 - [fork-context-darwin-test](2026/10/fork-context-darwin-test.md)
@@ -436,6 +439,7 @@ markers; everything below GENERATED is rebuilt.
 - [search-ext-b5c-family](2026/10/search-ext-b5c-family.md) — B5c stage 1 of search-extensibility — a second toy-likelihood family, `correlated_nd` (correlated Gaussians at…
 - [search-ext-b5c2a-freeze](2026/10/search-ext-b5c2a-freeze.md) — B5c-2a of search-extensibility. Pulled the 930 `correlated_nd` pilot rows of RAL 410866 (`results/` only, per-…
 - [search-ext-kwarg-typos](2026/10/search-ext-kwarg-typos.md) — Search constructor kwargs that the A0b unknown-kwarg WARNING exposed as silently swallowed are fixed. PyAutoFi…
+- [seed-start-point-tests](2026/10/seed-start-point-tests.md)
 - [setuptools-include-packages](2026/10/setuptools-include-packages.md)
 - [shapelets-smoke-slow-park](2026/10/shapelets-smoke-slow-park.md)
 - [sizing-none-triage-rules](2026/10/sizing-none-triage-rules.md)

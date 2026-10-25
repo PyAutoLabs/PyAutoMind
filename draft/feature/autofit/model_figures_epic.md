@@ -121,13 +121,11 @@ too, exactly as the 2026-05 task had to.
 ## Sibling bug prompts (standalone, NOT epic members)
 
 Four PyAutoFit defects were found by execution while researching this design.
-They are small, independent and worth fixing whether or not the epic proceeds:
+All four are now shipped independently of the epic:
 
-- `draft/bug/autofit/assertion_repr_recurses_forever.md` — **already filed
-  2026-09-10** (`CompoundPrior.__repr__` → `str(self)` → `__repr__` → …). Do not
-  re-file it.
-- `draft/bug/autofit/add_assertion_name_silently_dropped.md`
-- `draft/bug/autofit/direct_instance_tuples_double_counts_constants.md`
+- `complete/2026/10/assertion-repr.md` — PyAutoFit#1720, merged 2026-10-25.
+- `complete/2026/10/assertion-names.md` — PyAutoFit#1721, merged 2026-10-25.
+- `complete/2026/10/fixed-instance-tuples.md` — PyAutoFit#1722, merged 2026-10-25.
 - `complete/2026/10/function-config-priors.md`
 
 ## Provenance
