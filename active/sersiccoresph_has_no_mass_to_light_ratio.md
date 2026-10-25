@@ -21,3 +21,13 @@ Issued: 2026-10-25
 
 ## Execution 2026-10-25
 User authorized selecting and implementing four related tasks. Scope: Restore SersicCoreSph mass-to-light ratio. Separate branch and PR; no merge authorization. Related group executes serially with non-overlapping source edits.
+
+## Implementation evidence (2026-10-25)
+
+- Library PR: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/664 at `0fee6daf0e299539d43bdfa185200b76436ef2a3`; published Git tree equals the tested local tree.
+- Full library suite: `python3 -m pytest -q -n auto test_autogalaxy`, 1360 passed, 6 skipped; Python 3.12, released 2026.10.25.1 dependencies.
+- Log: `/workspace/scratch/e0d55f00a4c5/evidence/sersic-core-sph-ml-suite.log`.
+- Heart readiness GREEN, score 100, no reasons; evidence timestamp 2026-10-25T20:54:46Z.
+- GitHub Tests and Docs for the exact PR head were running at the final check; no CI success or merge claimed.
+- Merge mode: human `/prm`; no merge, close-out or release authorized/performed.
+- Appended optional mass_to_light_ratio=1.0 preserves positional/default calls; af.Model gains restored LogUniform prior. Tests cover zero, fractional and doubled convergence/deflections. MGE deflections use 1e-6 relative tolerance (observed fractional-rounding error 3.3e-8), analytic convergence 1e-12. Downstream PyAutoLens Tracer compatibility smoke passed.

@@ -935,7 +935,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/jax_power_law_deflections_exact_unit_vector_transform.md">Give the JAX PowerLaw deflections branch the same exact unit-vector transform…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/659">issue #659</a> — issued 2026-10-25 — library-dev</summary>
+<details><summary>📋 <a href="active/jax_power_law_deflections_exact_unit_vector_transform.md">Give the JAX PowerLaw deflections branch the same exact unit-vector transform…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/659">issue #659</a> — issued 2026-10-25 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/663">PyAutoGalaxy#663</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/129">autogalaxy_workspace_test#129</a></summary>
 
 ```
 Use the start-dev skill. active/jax_power_law_deflections_exact_unit_vector_transform.md
@@ -951,7 +951,7 @@ Use the start-dev skill. active/likelihood_lifecycle_p2x_throughput_view.md
 
 </details>
 
-<details><summary>📋 <a href="active/mass_sheet_deflections_fail_under_jax.md"><code>@PyAutoGalaxy</code> MassSheet deflections fail under JAX (ArrayIrregular into <code>xp.multiply</code>)</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/658">issue #658</a> — issued 2026-10-25 — library-dev</summary>
+<details><summary>📋 <a href="active/mass_sheet_deflections_fail_under_jax.md"><code>@PyAutoGalaxy</code> MassSheet deflections fail under JAX (ArrayIrregular into <code>xp.multiply</code>)</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/658">issue #658</a> — issued 2026-10-25 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/662">PyAutoGalaxy#662</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/128">autogalaxy_workspace_test#128</a></summary>
 
 ```
 Use the start-dev skill. active/mass_sheet_deflections_fail_under_jax.md
@@ -967,7 +967,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/power_law_multipole_m1_singular_at_isothermal_slope.md">PowerLawMultipole with m=1 returns -inf / NaN deflections at slope exactly 2…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/661">issue #661</a> — issued 2026-10-25 — library-dev</summary>
+<details><summary>📋 <a href="active/power_law_multipole_m1_singular_at_isothermal_slope.md">PowerLawMultipole with m=1 returns -inf / NaN deflections at slope exactly 2…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/661">issue #661</a> — issued 2026-10-25 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/665">PyAutoGalaxy#665</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/130">autogalaxy_workspace_test#130</a></summary>
 
 ```
 Use the start-dev skill. active/power_law_multipole_m1_singular_at_isothermal_slope.md
@@ -975,7 +975,7 @@ Use the start-dev skill. active/power_law_multipole_m1_singular_at_isothermal_sl
 
 </details>
 
-<details><summary>📋 <a href="active/sersiccoresph_has_no_mass_to_light_ratio.md">SersicCoreSph has no mass_to_light_ratio argument</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/660">issue #660</a> — issued 2026-10-25 — library-dev</summary>
+<details><summary>📋 <a href="active/sersiccoresph_has_no_mass_to_light_ratio.md">SersicCoreSph has no mass_to_light_ratio argument</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/660">issue #660</a> — issued 2026-10-25 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/664">PyAutoGalaxy#664</a></summary>
 
 ```
 Use the start-dev skill. active/sersiccoresph_has_no_mass_to_light_ratio.md
