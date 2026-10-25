@@ -8,7 +8,8 @@
 - prompt: active/likelihood_lifecycle_p2a_imaging_campaign.md
 - epic: likelihood-lifecycle
 - merged: https://github.com/PyAutoLabs/autolens_profiling/pull/457 (PR A: standard-size production cells + parity.json + submits; review CLEAN after 3 rounds)
-- next: BATCH 0 SUBMITTED 2026-10-25 from private RAL checkout /mnt/ral/jnightin/profiling/autolens_profiling_p2a (main e1f52f47; libs /mnt/ral/jnightin/profiling/PyAuto_2026.10.23.1, all 5 verified at tag; pin guard passed in both arrays): ral CPU array 412877 (14, %8) + A100 gres array 412884 (20, %2), --time 12h each leg-set. NEXT: when done, read output/p2a_logs/walls.tsv + sacct MaxRSS in that checkout → set batch 1 --time/--mem from measured walls → human go for batch 1 → PR B. Never touch euclid_dr1 jobs or the shared mirror.
+- next: BATCH 0 DONE 2026-10-25 (412877 ral CPU + 412884 A100, private RAL checkout /mnt/ral/jnightin/profiling/autolens_profiling_p2a @ e1f52f47): 20/34 ok; 12 breakdown failures = 4 script bugs fixed in PR #458 (awaiting human /prm); A100 task 2 (delaunay ao jax_gpu_dense breakdown) GPU OOM → HUMAN RULING: record as limitation, no rerun. Legs take 1–33 min (not 14000 s). NEXT: human /prm 458 → git pull the private RAL checkout to new main → resubmit only failed legs: hpc/batch_cpu sbatch --array=0,4,8,10 submit_campaign_p2a_imaging_batch0_ral_cpu_fp64; hpc/batch_gpu sbatch --array=0,4,6,10,12,14,16,18 submit_campaign_p2a_imaging_batch0_a100_fp64 → walls.tsv + sacct MaxRSS → batch 1 --time/--mem → human go → PR B.
+- workspace-pr: autolens_profiling https://github.com/PyAutoLabs/autolens_profiling/pull/458 (p2a breakdown fixes, branch feature/likelihood-lifecycle-p2a-breakdown-fixes)
 - repos:
   - autolens_profiling: feature/likelihood-lifecycle-p2a-imaging-campaign
 
