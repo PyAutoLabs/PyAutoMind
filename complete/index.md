@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1996 records across 10 buckets.
+1997 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -170,6 +170,7 @@ markers; everything below GENERATED is rebuilt.
 - [cluster-pointsolver-starting-grid](2026/10/cluster-pointsolver-starting-grid.md)
 - [cockpit-actionable-state](2026/10/cockpit-actionable-state.md) — Additive v1 state/action/safety/decision metadata with overnight workflow evidence; cockpit reason/action rend…
 - [cockpit-overflow-fix](2026/10/cockpit-overflow-fix.md)
+- [colab-finufft-bootstrap](2026/10/colab-finufft-bootstrap.md)
 - [community-board-readability](2026/10/community-board-readability.md)
 - [community-feedback](2026/10/community-feedback.md)
 - [community-pages](2026/10/community-pages.md)
