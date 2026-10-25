@@ -18,6 +18,7 @@ Epic: likelihood-lifecycle
 Phase: 2
 Parent: draft/research/autolens_profiling/likelihood_lifecycle_epic.md
 Filed: 2026-10-25
+Issued: 2026-10-25
 
 Pulse half of the human's 2026-10-25 ruling: numba CPU runs one process per core under Nautilus multiprocessing, so CPU vs GPU must be compared as node throughput. Depends on `complete/2026/10/likelihood-lifecycle-p2x-node-throughput.md (merged autolens_profiling#463)`, the producer task that declares `projected_node_throughput`.
 
