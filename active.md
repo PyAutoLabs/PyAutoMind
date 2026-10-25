@@ -21,13 +21,15 @@
 - prompt: active/likelihood_lifecycle_p2a_imaging_campaign.md
 - epic: likelihood-lifecycle
 - merged: https://github.com/PyAutoLabs/autolens_profiling/pull/457 (PR A: standard-size production cells + parity.json + submits; review CLEAN after 3 rounds)
-- next: 2026-10-25 BATCH 1 COMPLETE 104/106 (2 known ao gpu-dense breakdown OOMs). PR B #461 OPEN (53 cells/104 rows copied, 13 superseded → history/, parity 53/53 match, coverage 2/6/238 → 104/7/135 current/stale/missing; tooling: release_pin from library_revisions via catalogue/release_revisions.json + history-aware series map; wiki/campaigns/imaging/likelihood_lifecycle_p2a.md). NEXT: human /prm 461 → Pulse: refetch lens receipt + adopt/close hst_mge_cpu_pilot (PyAutoPulse PR; human to confirm 'adopt' = supersede pilot question with the 2a mge/hst jax_cpu_dense cell) → close 2a (issue #456, record, worktree) → 2b.
+- next: 2026-10-25 BATCH 1 COMPLETE 104/106 (2 known ao gpu-dense breakdown OOMs). PR B #461 OPEN (53 cells/104 rows copied, 13 superseded → history/, parity 53/53 match, coverage 2/6/238 → 104/7/135 current/stale/missing; tooling: release_pin from library_revisions via catalogue/release_revisions.json + history-aware series map; wiki/campaigns/imaging/likelihood_lifecycle_p2a.md). HUMAN 10-25 confirmed 'adopt' = supersede pilot → PyAutoPulse#75 OPEN (beab2d6; hst_mge_cpu_pilot status superseded; board rendered offline). NEXT: human /prm 461 FIRST → on the Pulse#75 branch run `pyauto-pulse board` ONLINE (lens receipt refetch) + check, commit → /prm 75 (merge main in if scheduled refresh conflicts) → close autolens_profiling#415 → close 2a (issue #456, record, worktree; restore task-root PyAutoPulse symlink) → 2b.
 - workspace-pr: autolens_profiling https://github.com/PyAutoLabs/autolens_profiling/pull/458 (MERGED 7679f564; p2a breakdown fixes, branch feature/likelihood-lifecycle-p2a-breakdown-fixes)
 - workspace-pr: autolens_profiling https://github.com/PyAutoLabs/autolens_profiling/pull/460 (MERGED 86c287d1; batch-1 measured walls)
 - workspace-pr: autolens_profiling https://github.com/PyAutoLabs/autolens_profiling/pull/459 (MERGED 510b9556; W~ triplets guard test)
 - workspace-pr: autolens_profiling https://github.com/PyAutoLabs/autolens_profiling/pull/461 (PR B: batch 1 rows + regen + wiki)
+- workspace-pr: PyAutoPulse https://github.com/PyAutoLabs/PyAutoPulse/pull/75 (hst_mge_cpu_pilot superseded; refetch lens receipt after #461)
 - repos:
   - autolens_profiling: feature/likelihood-lifecycle-p2a-imaging-campaign
+  - PyAutoPulse: feature/likelihood-lifecycle-p2a-pulse-adopt
 
 ## matrix-free-interferometer-inversion
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/638
