@@ -943,7 +943,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p2x_same_host_projection.md">Likelihood lifecycle phase 2x follow-up: project each row only onto the host…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/464">issue #464</a> — issued 2026-10-25 — workspace-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p2x_same_host_projection.md">Likelihood lifecycle phase 2x follow-up: project each row only onto the host…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/464">issue #464</a> — issued 2026-10-25 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/465">autolens_profiling#465</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p2x_same_host_projection.md
