@@ -12,7 +12,7 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 290 |
+| [Backlog](#backlog) | 286 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -116,7 +116,7 @@ Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 102
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 98
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -1115,7 +1115,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>bug</b> — 74</summary>
+<summary><b>bug</b> — 70</summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -1357,34 +1357,10 @@ Use the start-dev skill. draft/bug/autoarray/galaxy_duplicate_pytree_registratio
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autofit/add_assertion_name_silently_dropped.md">add_assertion name is silently dropped</a> — autofit · small · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/bug/autofit/add_assertion_name_silently_dropped.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autofit/assertion_repr_recurses_forever.md">Assertion repr recurses forever</a> — autofit · small · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/bug/autofit/assertion_repr_recurses_forever.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip autofit.jax.register_model</a> — autofit · small · safe · normal</summary>
 
 ```
 Use the start-dev skill. draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autofit/direct_instance_tuples_double_counts_constants.md">direct_instance_tuples double-counts Constants</a> — autofit · small · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/bug/autofit/direct_instance_tuples_double_counts_constants.md
 ```
 
 </details>
@@ -1409,14 +1385,6 @@ Use the start-dev skill. draft/bug/autofit/nautilus_ep_default_optimiser_reads_u
 
 ```
 Use the start-dev skill. draft/bug/autofit/stale_enable_pytrees_register_model_advice_in.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autofit/start_points_test_unseeded_identical_figures_of_merit_flake.md">test_start_points.py draws unseeded start points and flakes on IDENTICAL_FIGURES_OF_MERIT (nojax leg, PyAutoFit#1714)</a> — autofit · small · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/bug/autofit/start_points_test_unseeded_identical_figures_of_merit_flake.md
 ```
 
 </details>
@@ -2936,17 +2904,16 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-25 | issued | <a href="active/add_assertion_name_silently_dropped.md">add_assertion name is silently dropped</a> |
 | 2026-10-25 | issued | <a href="active/assertion_repr_recurses_forever.md">Assertion repr recurses forever</a> |
 | 2026-10-24 | issued | <a href="active/likelihood_lifecycle_p2a_imaging_campaign.md">Likelihood lifecycle phase 2a: profiling campaign — imaging/{mge…</a> |
-| 2026-10-23 | filed | <a href="draft/bug/autofit/start_points_test_unseeded_identical_figures_of_merit_flake.md">test_start_points.py draws unseeded start points and flakes on…</a> |
 | 2026-10-23 | filed | <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred…</a> |
 | 2026-10-23 | filed | <a href="draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md">autocti_visualization manifest <code>rendered_with:</code> shows stale…</a> |
 | 2026-10-23 | filed | <a href="draft/bug/autolens_profiling/stale_auto_simulated_cluster_dataset.md"><code>@autolens_profiling</code> stale auto-simulated <code>dataset/cluster/simple</code>…</a> |
 | 2026-10-23 | filed | <a href="draft/bug/autogalaxy/mass_sheet_deflections_fail_under_jax.md"><code>@PyAutoGalaxy</code> MassSheet deflections fail under JAX (ArrayIrregular…</a> |
+| 2026-10-23 | filed | <a href="draft/docs/pyautohands/colab_custom_instructions_assistant_context.md">Carry assistant context into every Colab notebook via Gemini Custom…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-23 | filed | <a href="draft/docs/pyautohands/colab_custom_instructions_assistant_context.md">Carry assistant context into every Colab notebook via Gemini Custom…</a> |
 | 2026-10-23 | filed | <a href="draft/feature/pyautobrain/docs_conductor.md">A dedicated Documentation conductor in PyAutoBrain</a> |
 | 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
 | 2026-10-21 | filed | <a href="planned.md#interferometer-primary-beam-persistence-mirror">interferometer-primary-beam-persistence-mirror</a> |
@@ -2956,12 +2923,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-21 | filed | <a href="draft/docs/autolens_profiling/positions_source_jacobian_default_rerun_note.md">Note in autolens_profiling that plain source-plane lane values…</a> |
 | 2026-10-21 | filed | <a href="draft/research/autolens_profiling/matrix_free_interferometer_phase5.md">Matrix-free interferometer inversion, phase 5: wiring, profiling note…</a> |
 | 2026-10-21 | issued | <a href="active/matrix_free_interferometer_inversion.md">Matrix-free interferometer inversion for very large rectangular…</a> |
+| 2026-10-21 | filed | <a href="draft/docs/autolens_workspace/interferometer_primary_beam_example.md">Interferometer primary beam: workspace example and docs</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-21 | filed | <a href="draft/docs/autolens_workspace/interferometer_primary_beam_example.md">Interferometer primary beam: workspace example and docs</a> |
 | 2026-10-21 | filed | <a href="draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md">Cluster likelihood scripts: image-plane manual check disagrees with…</a> |
 | 2026-10-16 | filed | <a href="draft/bug/pyautomind/repos_sync_test_keys_on_dir_name.md">repos_sync standards-block test keys on the checkout dir name…</a> |
 | 2026-10-16 | filed | <a href="draft/bug/pyautohands/pre_build_blacks_unstaged_slam_pipeline.md">pre_build runs black on slam_pipeline/ for every workspace but stages…</a> |
@@ -2971,12 +2938,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-14 | filed | <a href="draft/test/autofit/emcee_jax_timing_test_flaky_on_ci.md"><code>@PyAutoFit</code> <code>test_emcee_call_path_runs_at_jitted_speed</code> is a…</a> |
 | 2026-10-14 | filed | <a href="draft/bug/autofit/bfgs_resume_reads_x0_from_scipy_result.md"><code>@PyAutoFit</code> BFGS/LBFGS resume reads <code>["x0"]</code> from the saved scipy…</a> |
 | 2026-10-14 | filed | <a href="draft/feature/cortex/human_readable_projects_dashboard.md">Human-readable Cortex Projects dashboard</a> |
+| 2026-10-14 | filed | <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-14 | filed | <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> |
 | 2026-10-09 | filed | <a href="draft/bug/pyautobrain/profiling_compile_drift_point_vs_point.md">Profiling conductor compile drift compares one point against one point</a> |
 | 2026-10-08 | filed | <a href="draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md"><code>JAX_ENABLE_X64=False</code> is overridden to True, so the fp32 inference…</a> |
 | 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
@@ -2986,12 +2953,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
+| 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
 | 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
 | 2026-09-29 | filed | <a href="draft/maintenance/pyautomind/session_start_hook_copies_regen.md">Regenerate the 28 drifted <code>.claude/hooks/session-start.sh</code> copies…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
@@ -3001,6 +2968,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
 | 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
 | 2026-09-26 | filed | <a href="draft/refactor/workspaces/abell_1201_local_cleanup.md">Repo cleanup: retire the Abell 1201 worktree and local raw data</a> |
+| 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
 
 </details>
 
@@ -3097,7 +3065,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-66 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+65 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3131,7 +3099,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md — unknown theme keyword(s): jax`
 - `draft/bug/autofit/mcmc_thin_zero_and_check_size_short_chain.md — unknown theme keyword(s): mcmc, test-mode, robustness`
 - `draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md — unknown theme keyword(s): nautilus`
-- `draft/bug/autofit/start_points_test_unseeded_identical_figures_of_merit_flake.md — unknown theme keyword(s): ci`
 - `draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md — unknown theme keyword(s): jax, nautilus`
 - `draft/bug/autogalaxy/aggregator_reload_drops_sparse_operator.md — unknown theme keyword(s): sparse-operator, aggregator`
 - `draft/bug/autogalaxy/database_paths_dataset_fits_not_registered.md — unknown theme keyword(s): aggregator, database`
