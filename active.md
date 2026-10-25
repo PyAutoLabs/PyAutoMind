@@ -29,9 +29,10 @@
 - prompt: active/likelihood_lifecycle_p2a_imaging_campaign.md
 - epic: likelihood-lifecycle
 - merged: https://github.com/PyAutoLabs/autolens_profiling/pull/457 (PR A: standard-size production cells + parity.json + submits; review CLEAN after 3 rounds)
-- next: 2026-10-25 BATCH 0 COMPLETE: 32/34 legs (reruns 412911/412915 clean; 2 ao jax_gpu_dense breakdowns = A100 OOM limitation, human ruling; rect ao one found on rerun). #459 guard-test MERGED 510b9556. Batch-1 walls PR #460 OPEN (ac566251+931b11be; RAL arrays 1h, mem ao 64 / others 32; A100 3h, hst 3.5h). NEXT: human /prm 460 → ff private RAL checkout /mnt/ral/jnightin/profiling/autolens_profiling_p2a (nohup; slow FS) → HUMAN GO → submit 4 RAL arrays (hpc/batch_cpu/submit_campaign_p2a_imaging_ral_cpu_<inst>_fp64) + 4 A100 jobs (hpc/batch_gpu/submit_campaign_p2a_imaging_a100_<inst>_fp64) → PR B.
+- next: 2026-10-25 BATCH 1 COMPLETE 16:04 UTC (#460 merged 86c287d1; jobs ral CPU 412923-6 + A100 412927/412943-5 from private RAL checkout /mnt/ral/jnightin/profiling/autolens_profiling_p2a): 104/106 legs, only the 2 known ao jax_gpu_dense breakdown OOMs failed (human ruling: limitation); none killed at --time; outputs rsynced to worktree output/p2a_batch1 + p2a_logs. PR B IN PROGRESS (Opus worker) on feature/likelihood-lifecycle-p2a-imaging-results: history moves → copy complete rows → catalogue/dashboard/coverage regen → wiki page. Then Pulse refetch + adopt/close hst_mge_cpu_pilot → human /prm → close 2a.
 - workspace-pr: autolens_profiling https://github.com/PyAutoLabs/autolens_profiling/pull/458 (MERGED 7679f564; p2a breakdown fixes, branch feature/likelihood-lifecycle-p2a-breakdown-fixes)
-- workspace-pr: autolens_profiling https://github.com/PyAutoLabs/autolens_profiling/pull/460 (batch-1 measured walls)
+- workspace-pr: autolens_profiling https://github.com/PyAutoLabs/autolens_profiling/pull/460 (MERGED 86c287d1; batch-1 measured walls)
+- workspace-pr: autolens_profiling https://github.com/PyAutoLabs/autolens_profiling/pull/459 (MERGED 510b9556; W~ triplets guard test)
 - repos:
   - autolens_profiling: feature/likelihood-lifecycle-p2a-imaging-campaign
 
