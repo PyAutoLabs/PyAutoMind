@@ -21,7 +21,7 @@
 - session: codex health/hygiene cleanup
 - location: /workspace/scratch/f77499d15f98 (session clones)
 - prompt: active/pre_release_docs_config.md
-- next: HowToFit #76 and AutoGalaxy #262 MERGED, each after all 8/8 exact-head jobs passed. Only AutoFit six config mirrors remain unshipped: compatible-runtime validation of two notebooks required. Preserve local patch, keep issue open; no release/rehearsal.
+- next: HowToFit #76 and AutoGalaxy #262 merged. Explicitly authorized validation-only AutoFit draft PR #176 obtains missing notebook smoke evidence through existing CI. Keep draft/unmerged until every required exact-head job and notebook check passes; no tests waived.
 - repos:
   - autofit_workspace: feature/pre-release-docs-config
 
@@ -33,6 +33,8 @@
 - workspace-pr: autogalaxy_workspace https://github.com/PyAutoLabs/autogalaxy_workspace/pull/262
 - merged: HowToFit https://github.com/PyAutoLabs/HowToFit/pull/76 @ bfca6a40420004b489b7ba257c415687b09249c2
 - merged: autogalaxy_workspace https://github.com/PyAutoLabs/autogalaxy_workspace/pull/262 @ c40228890eabd6eaad599fea3f849026d2cf711d
+- workspace-pr: autofit_workspace https://github.com/PyAutoLabs/autofit_workspace/pull/176 (DRAFT; validation only)
+- validation-exception: 2026-10-25 live user "Yeah do it" to explicit validation-only draft PR request. Commit/push/draft permitted despite missing local notebook runtime; merge/release prohibited until required evidence passes.
 
 ## matrix-free-interferometer-inversion
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/638

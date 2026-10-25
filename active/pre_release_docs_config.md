@@ -55,3 +55,7 @@ User: "Prm but make their cu fully pass?". HowToFit #76: every exact-head workfl
 ## AutoGalaxy merge receipt — 2026-10-25
 
 User: "Prm I am good for you to do it". AutoGalaxy #262 confirmed merged at c40228890eabd6eaad599fea3f849026d2cf711d, source head 801a8cef57467b0371bebb9a9d0242ba753cfd4c. All three workflows completed successfully; eight jobs passed, including both Python smoke legs, all navigator checks and size guard. Clean merge state before merge. Both published PRs now merged: five doc repairs and 19 config mirrors delivered. Released their active repo claims; retained the AutoFit claim and recoverable six-leaf config patch. Task/issue remains open because AutoFit notebook runtime evidence is unavailable. No test changes, waiver, source cleanup or release.
+
+## AutoFit validation-only draft — 2026-10-25
+
+Explicit human "Yeah do it" to the validation-only exception. AutoFit draft PR #176, head 4778b42a1f0ce4616cd72f456e2af70a19d28852, contains exactly six additions across three config files; no scripts/notebooks/workflows modified. Existing CI is the compatible runtime for missing notebook smoke evidence. Local eight script smoke checks and effective config invariants passed. Draft/unmerged until exact-head required runs and both notebook checks pass. No test waiver, release or rehearsal; same Heart RED reasons remain.
