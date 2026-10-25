@@ -3,34 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-10-25T21:50:54Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
+  "updated": "2026-10-25T22:34:14Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Give the JAX PowerLaw deflections branch the same exact unit-vector transform\u2026 \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/663",
-      "prompt": "Use the start-dev skill. active/jax_power_law_deflections_exact_unit_vector_transform.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "`@PyAutoGalaxy` MassSheet deflections fail under JAX (ArrayIrregular into `xp.multiply`) \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/662",
-      "prompt": "Use the start-dev skill. active/mass_sheet_deflections_fail_under_jax.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "PowerLawMultipole with m=1 returns -inf / NaN deflections at slope exactly 2\u2026 \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/665",
-      "prompt": "Use the start-dev skill. active/power_law_multipole_m1_singular_at_isothermal_slope.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "SersicCoreSph has no mass_to_light_ratio argument \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/664",
-      "prompt": "Use the start-dev skill. active/sersiccoresph_has_no_mass_to_light_ratio.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -113,6 +89,30 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1723 \u2014 Outcome",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1723",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#663 \u2014 Give the JAX PowerLaw deflections branch the same exact unit-vector transform\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/663",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#665 \u2014 PowerLawMultipole with m=1 returns -inf / NaN deflections at slope exactly 2\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/665",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#662 \u2014 mass-sheet-jax",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/662",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#664 \u2014 sersic-core-sph-ml",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/664",
       "prompt": null
     },
     {

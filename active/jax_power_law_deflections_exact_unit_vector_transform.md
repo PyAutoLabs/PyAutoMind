@@ -69,3 +69,7 @@ User authorized selecting and implementing four related tasks. Scope: Align Powe
 - Workspace regression PR: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/129 (draft). Direct script passes with JAX 0.11.2 on this branch and fails against unmodified main; smoke-list entry added. Full workspace CI pending library availability.
 - JAX log: `/workspace/scratch/e0d55f00a4c5/evidence/power-law-jax-axis-jax.log`.
 - Exact axial zero components restored. Nonzero components retain series rounding differences (maximum seen 1.25e-12); no claim of full bitwise identity. Focused parity uses rtol=1e-10 and atol=0. Centre jacrev is finite. Local CPU 10000-point JIT medians: old 696.8 us, new 354.1 us (single process timing, not a portable speed claim). Existing autolens workspace tolerance retained; its removal is optional in the prompt and was not validated here.
+
+## PRM progress 2026-10-25
+
+Library #663 merged after all Actions jobs passed and freeze gate was clear. Companion #129 was green, but merging sibling #128 caused an append conflict in smoke_tests.txt. Resolved with a two-parent merge preserving all entries; current head `cd96d90dbf305c8d8fc9ad0fe1cbe94d60388109`. Fresh CI run 40240713169 is in progress. No substantive regression-script edits. Task remains active until this companion merges; library pending-release retained.

@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2001 records across 10 buckets.
+2003 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -298,6 +298,7 @@ markers; everything below GENERATED is rebuilt.
 - [linear-solver-p4a-jacobi-a100-divergence](2026/10/linear-solver-p4a-jacobi-a100-divergence.md)
 - [linear-solver-p5-mapper-corpus](2026/10/linear-solver-p5-mapper-corpus.md)
 - [lint-lychee-exclude-blob](2026/10/lint-lychee-exclude-blob.md) — Corrective: lychee in both organs' `lint.yml` now excludes `^https://github\.com/.*/blob/`. GitHub answers non…
+- [mass-sheet-jax](2026/10/mass-sheet-jax.md)
 - [matrix-free-interferometer-phase1](2026/10/matrix-free-interferometer-phase1.md)
 - [matrix-free-interferometer-phase2](2026/10/matrix-free-interferometer-phase2.md)
 - [matrix-free-interferometer-phase3](2026/10/matrix-free-interferometer-phase3.md)
@@ -449,6 +450,7 @@ markers; everything below GENERATED is rebuilt.
 - [search-ext-b5c2a-freeze](2026/10/search-ext-b5c2a-freeze.md) — B5c-2a of search-extensibility. Pulled the 930 `correlated_nd` pilot rows of RAL 410866 (`results/` only, per-…
 - [search-ext-kwarg-typos](2026/10/search-ext-kwarg-typos.md) — Search constructor kwargs that the A0b unknown-kwarg WARNING exposed as silently swallowed are fixed. PyAutoFi…
 - [seed-start-point-tests](2026/10/seed-start-point-tests.md)
+- [sersic-core-sph-ml](2026/10/sersic-core-sph-ml.md)
 - [setuptools-include-packages](2026/10/setuptools-include-packages.md)
 - [shapelets-smoke-slow-park](2026/10/shapelets-smoke-slow-park.md)
 - [sizing-none-triage-rules](2026/10/sizing-none-triage-rules.md)
