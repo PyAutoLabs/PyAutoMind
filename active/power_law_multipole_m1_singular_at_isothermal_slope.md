@@ -31,3 +31,8 @@ Decide between (a) implementing the m=1, γ=2 limiting form (finite, likely with
 (b) refusing m=1 at slope 2 with a clear error (and in the model, when slope is a free parameter,
 documenting the singular point). Check the literature form used for the other m (see the
 multipole docstring's reference) before choosing.
+
+Issued: 2026-10-25
+
+## Execution 2026-10-25
+User authorized selecting and implementing four related tasks. Scope: Reject singular isothermal dipole multipoles. Separate branch and PR; no merge authorization. Related group executes serially with non-overlapping source edits.
