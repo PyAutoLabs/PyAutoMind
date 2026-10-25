@@ -5,7 +5,7 @@
 - session: codex health/hygiene cleanup
 - location: /workspace/scratch/f77499d15f98 (session clones)
 - prompt: active/pre_release_docs_config.md
-- next: local patch prepared and AST/prose/config/notebook generation verified; 41 script smoke checks passed. AutoFit two-notebook smoke blocked before cell execution by host ZMQ ip_resolver Operation not permitted; obtain compatible-runtime validation, then specific task Heart RED development authorization. Preserve three local source branches; no source commits, PRs, merges or releases. See issue #261 checkpoint.
+- next: local patch prepared and AST/prose/config/notebook generation verified; 41 script smoke checks passed. User approved continuing 2026-10-25. AutoFit two-notebook smoke blocked before cell execution: both TCP and IPC socket startup denied by host; compatible-runtime handoff recorded in task prompt. Required evidence precedes source shipping. Preserve three local source branches; no source commits, PRs, merges or releases. See issue #261 checkpoint.
 - repos:
   - HowToFit: feature/pre-release-docs-config
   - autofit_workspace: feature/pre-release-docs-config
