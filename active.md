@@ -21,10 +21,11 @@
 - prompt: active/likelihood_lifecycle_p2a_imaging_campaign.md
 - epic: likelihood-lifecycle
 - merged: https://github.com/PyAutoLabs/autolens_profiling/pull/457 (PR A: standard-size production cells + parity.json + submits; review CLEAN after 3 rounds)
-- next: 2026-10-25 BATCH 1 COMPLETE 16:04 UTC (#460 merged 86c287d1; jobs ral CPU 412923-6 + A100 412927/412943-5 from private RAL checkout /mnt/ral/jnightin/profiling/autolens_profiling_p2a): 104/106 legs, only the 2 known ao jax_gpu_dense breakdown OOMs failed (human ruling: limitation); none killed at --time; outputs rsynced to worktree output/p2a_batch1 + p2a_logs. PR B IN PROGRESS (Opus worker) on feature/likelihood-lifecycle-p2a-imaging-results: history moves → copy complete rows → catalogue/dashboard/coverage regen → wiki page. Then Pulse refetch + adopt/close hst_mge_cpu_pilot → human /prm → close 2a.
+- next: 2026-10-25 BATCH 1 COMPLETE 104/106 (2 known ao gpu-dense breakdown OOMs). PR B #461 OPEN (53 cells/104 rows copied, 13 superseded → history/, parity 53/53 match, coverage 2/6/238 → 104/7/135 current/stale/missing; tooling: release_pin from library_revisions via catalogue/release_revisions.json + history-aware series map; wiki/campaigns/imaging/likelihood_lifecycle_p2a.md). NEXT: human /prm 461 → Pulse: refetch lens receipt + adopt/close hst_mge_cpu_pilot (PyAutoPulse PR; human to confirm 'adopt' = supersede pilot question with the 2a mge/hst jax_cpu_dense cell) → close 2a (issue #456, record, worktree) → 2b.
 - workspace-pr: autolens_profiling https://github.com/PyAutoLabs/autolens_profiling/pull/458 (MERGED 7679f564; p2a breakdown fixes, branch feature/likelihood-lifecycle-p2a-breakdown-fixes)
 - workspace-pr: autolens_profiling https://github.com/PyAutoLabs/autolens_profiling/pull/460 (MERGED 86c287d1; batch-1 measured walls)
 - workspace-pr: autolens_profiling https://github.com/PyAutoLabs/autolens_profiling/pull/459 (MERGED 510b9556; W~ triplets guard test)
+- workspace-pr: autolens_profiling https://github.com/PyAutoLabs/autolens_profiling/pull/461 (PR B: batch 1 rows + regen + wiki)
 - repos:
   - autolens_profiling: feature/likelihood-lifecycle-p2a-imaging-campaign
 
