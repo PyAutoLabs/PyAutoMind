@@ -19,3 +19,9 @@ Filed: 2026-10-16
 ## Fix direction
 
 Make the black set and the stage set the same: either stage `slam_pipeline` wherever black ran on it, or skip black on directories that will not be staged. Don't stage anything outside what the run produced (#126 leak class).
+
+## Verified continuation — 2026-10-25 health session
+
+Resume existing PR https://github.com/PyAutoLabs/PyAutoHands/pull/315, branch fix/pre-build-black-only-staged-dirs, head 0123d9b66cb4e4cb9c598494031817247b49c2f7. Do not create a duplicate task/PR. All three Python CI legs (3.12/3.13/3.14) failed the tenant-firewall step; Python 3.12 log reports 492 passed, 9 skipped before that step. Exact firewall mismatch: tests/test_pre_build_staging.py line 240 introduces instance fact autolens_workspace_developer in an unlisted file. Replace the explanatory docstring name with generic slam=false workspace wording, preserving the witness and firewall. Correct the invalid Python escape in the shell stub without changing its generated shell text.
+
+A two-line patch is recoverably prepared in the health session checkout and report. Targeted 11 tests passed earlier. Full local suite has a process-reaping assertion that also fails on untouched head in this host (pgrep gives a PID not visible in /proc; ps fails lookup self). Do not waive the assertion or claim a source leak from that evidence; use supported-runner exact-head CI to decide. Check current claims and branch, preserve edits, run firewall plus full Python matrix, then human prm. No release or rehearsal.
