@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
-  "updated": "2026-10-25T22:47:33Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 1 in flight",
+  "updated": "2026-10-25T23:08:21Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -93,20 +93,20 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#663 \u2014 Give the JAX PowerLaw deflections branch the same exact unit-vector transform\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/663",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#662 \u2014 mass-sheet-jax",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/662",
       "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#665 \u2014 PowerLawMultipole with m=1 returns -inf / NaN deflections at slope exactly 2\u2026",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#665 \u2014 Shipped scope and limits",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/665",
       "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#662 \u2014 mass-sheet-jax",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/662",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#663 \u2014 Shipped scope and limits",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/663",
       "prompt": null
     },
     {

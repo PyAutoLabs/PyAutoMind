@@ -1,3 +1,24 @@
+# power-law-jax-axis
+
+Closed 2026-10-25 through explicit human /prm.
+
+- Library: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/663 — MERGED.
+- Workspace: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/129 — MERGED at reviewed head `cd96d90dbf305c8d8fc9ad0fe1cbe94d60388109`.
+- Issue: PyAutoGalaxy#659 closed completed.
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/663
+
+## Shipped scope and limits
+
+Exact axial zero components restored using the exact unit-vector transform; NumPy pins unchanged. Nonzero components retain series rounding differences (up to 1.25e-12 observed), so full bitwise identity was not established. Focused parity uses rtol=1e-10, atol=0; centre jacrev is finite. Optional AutoLens tolerance removal was not validated and remains unchanged. Local full suite: 1356 passed, 6 skipped. Single-process 10000-point CPU JIT medians old 696.8 us/new 354.1 us; no portable performance claim.
+
+## Evidence
+
+Library exact-head Tests and Docs passed before its previous merge. Workspace run https://github.com/PyAutoLabs/autogalaxy_workspace_test/actions/runs/40240713169: all 3 jobs passed (changes, smoke Python 3.12 and 3.13); no skipped test leg. All runs for the current head enumerated. Prior smoke-list conflict resolved without substantive regression-script changes. Git ancestry verifies every published task head is on origin/main. Heart readiness GREEN at shipping; freeze clear at library merge. NumPy/eager JAX/JIT regression passes on implementation and fails against baseline. No independent-model adversary was run.
+
+Earlier implementation/status entries in the original prompt below are historical; the merge receipts above supersede them.
+
+## Original prompt
+
 # Give the JAX PowerLaw deflections branch the same exact unit-vector transform as the numpy branch (#598)
 
 Type: bug

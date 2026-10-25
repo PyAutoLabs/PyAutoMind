@@ -480,7 +480,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 55 (stage 1: 55, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — the pre-registered decision is due
+Count toward 20: 57 (stage 1: 57, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — the pre-registered decision is due
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -564,3 +564,5 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-10-25 | emcee-jax-dispatch-guard (PyAutoFit#1729) | glance | tests Focused JAX dispatch tests: 3 passed, 1 skipped (opt-in profiling) and all head CI jobs PASS / smoke task witnesses recorded; no downstream workspace smoke claimed / review author only; human Prm / heart RED development override; freeze clear / witness regressions PASS | merged-unchanged | 1 |
 | 2026-10-25 | mass-sheet-jax (PyAutoGalaxy#662 / autogalaxy_workspace_test#128) | glance | tests:PASS/smoke:PASS/review:human-prm/heart:GREEN/witness:PASS | merged-unchanged | 1 |
 | 2026-10-25 | sersic-core-sph-ml (PyAutoGalaxy#664) | glance | tests:PASS/smoke:PASS/review:human-prm/heart:GREEN/witness:PASS | merged-unchanged | 1 |
+| 2026-10-25 | power-law-jax-axis (PyAutoGalaxy#663 / autogalaxy_workspace_test#129) | glance | tests:PASS/smoke:PASS/review:human-prm/heart:GREEN/witness:PASS | merged-unchanged | 1 |
+| 2026-10-25 | multipole-isothermal-guard (PyAutoGalaxy#665 / autogalaxy_workspace_test#130) | glance | tests:PASS/smoke:PASS/review:human-prm/heart:GREEN/witness:PASS | merged-unchanged | 1 |

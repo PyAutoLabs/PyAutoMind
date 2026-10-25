@@ -1,3 +1,24 @@
+# multipole-isothermal-guard
+
+Closed 2026-10-25 through explicit human /prm.
+
+- Library: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/665 — MERGED.
+- Workspace: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/130 — MERGED at reviewed head `14bff78a9e6e45804a90d859f9768392f1336bfd`.
+- Issue: PyAutoGalaxy#661 closed completed.
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/665
+
+## Shipped scope and limits
+
+Reject concrete m=1, slope=2 at construction with ModelParameterException, including literal construction during JIT tracing. Free/traced slopes must exclude 2; no runtime tracer assertion. The logarithmic dipole solution was not implemented. Local full suite: 1363 passed, 6 skipped.
+
+## Evidence
+
+Library exact-head Tests and Docs passed before its previous merge. Workspace run https://github.com/PyAutoLabs/autogalaxy_workspace_test/actions/runs/40240716788: all 3 jobs passed (changes, smoke Python 3.12 and 3.13); no skipped test leg. All runs for the current head enumerated. Prior smoke-list conflict resolved without substantive regression-script changes. Git ancestry verifies every published task head is on origin/main. Heart readiness GREEN at shipping; freeze clear at library merge. NumPy/eager JAX/JIT regression passes on implementation and fails against baseline. No independent-model adversary was run.
+
+Earlier implementation/status entries in the original prompt below are historical; the merge receipts above supersede them.
+
+## Original prompt
+
 # PowerLawMultipole with m=1 returns -inf / NaN deflections at slope exactly 2 (isothermal)
 
 Type: bug
