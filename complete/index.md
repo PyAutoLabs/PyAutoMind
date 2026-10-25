@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2004 records across 10 buckets.
+2006 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -315,6 +315,7 @@ markers; everything below GENERATED is rebuilt.
 - [mind-dashboard-simplify](2026/10/mind-dashboard-simplify.md)
 - [mind-dashboard-simplify-2](2026/10/mind-dashboard-simplify-2.md)
 - [minimal-seed-instructions](2026/10/minimal-seed-instructions.md)
+- [multipole-isothermal-guard](2026/10/multipole-isothermal-guard.md)
 - [nautilus-d100-checkpoint-guard](2026/10/nautilus-d100-checkpoint-guard.md) — Nautilus at D ≥ 91 failed before sampling in the `correlated_nd` pilot (60 d100 rows). Two root causes verifie…
 - [nerves-markdown-link](2026/10/nerves-markdown-link.md)
 - [niek-euclid-style-review](2026/10/niek-euclid-style-review.md)
@@ -348,6 +349,7 @@ markers; everything below GENERATED is rebuilt.
 - [point-source-wiki-reconcile](2026/10/point-source-wiki-reconcile.md)
 - [pointsolver-extent-sanity-check](2026/10/pointsolver-extent-sanity-check.md)
 - [positions-source-jacobian-default](2026/10/positions-source-jacobian-default.md)
+- [power-law-jax-axis](2026/10/power-law-jax-axis.md)
 - [pre-release-docs-config](2026/10/pre-release-docs-config.md)
 - [prior-stable-test-ids](2026/10/prior-stable-test-ids.md)
 - [prior-summary-ranges](2026/10/prior-summary-ranges.md)
