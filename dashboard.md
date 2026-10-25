@@ -935,7 +935,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/bfgs_resume_reads_x0_from_scipy_result.md"><code>@PyAutoFit</code> BFGS/LBFGS resume reads <code>["x0"]</code> from the saved scipy result and cannot…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1724">issue #1724</a> — issued 2026-10-25 — library-dev</summary>
+<details><summary>📋 <a href="active/bfgs_resume_reads_x0_from_scipy_result.md"><code>@PyAutoFit</code> BFGS/LBFGS resume reads <code>["x0"]</code> from the saved scipy result and cannot…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1724">issue #1724</a> — issued 2026-10-25 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1731">PyAutoFit#1731</a></summary>
 
 ```
 Use the start-dev skill. active/bfgs_resume_reads_x0_from_scipy_result.md
@@ -943,7 +943,7 @@ Use the start-dev skill. active/bfgs_resume_reads_x0_from_scipy_result.md
 
 </details>
 
-<details><summary>📋 <a href="active/emcee_jax_timing_test_flaky_on_ci.md"><code>@PyAutoFit</code> <code>test_emcee_call_path_runs_at_jitted_speed</code> is a wall-clock ratio assertion that flakes on shared CI…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1727">issue #1727</a> — issued 2026-10-25 — library-dev</summary>
+<details><summary>📋 <a href="active/emcee_jax_timing_test_flaky_on_ci.md"><code>@PyAutoFit</code> <code>test_emcee_call_path_runs_at_jitted_speed</code> is a wall-clock ratio assertion that flakes on shared CI…</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1727">issue #1727</a> — issued 2026-10-25 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1729">PyAutoFit#1729</a></summary>
 
 ```
 Use the start-dev skill. active/emcee_jax_timing_test_flaky_on_ci.md
@@ -951,7 +951,7 @@ Use the start-dev skill. active/emcee_jax_timing_test_flaky_on_ci.md
 
 </details>
 
-<details><summary>📋 <a href="active/ep_test_suite_is_not_xdist_safe.md">EP test suite is not xdist-safe: tests share one on-disk output directory</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1726">issue #1726</a> — issued 2026-10-25 — library-dev</summary>
+<details><summary>📋 <a href="active/ep_test_suite_is_not_xdist_safe.md">EP test suite is not xdist-safe: tests share one on-disk output directory</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1726">issue #1726</a> — issued 2026-10-25 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1728">PyAutoFit#1728</a></summary>
 
 ```
 Use the start-dev skill. active/ep_test_suite_is_not_xdist_safe.md
@@ -975,7 +975,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/mcmc_thin_zero_and_check_size_short_chain.md">Emcee/Zeus: thin can be 0, and check_size blows up on short chains</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1725">issue #1725</a> — issued 2026-10-25 — library-dev</summary>
+<details><summary>📋 <a href="active/mcmc_thin_zero_and_check_size_short_chain.md">Emcee/Zeus: thin can be 0, and check_size blows up on short chains</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1725">issue #1725</a> — issued 2026-10-25 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1730">PyAutoFit#1730</a></summary>
 
 ```
 Use the start-dev skill. active/mcmc_thin_zero_and_check_size_short_chain.md

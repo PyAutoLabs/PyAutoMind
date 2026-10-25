@@ -4,9 +4,33 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-10-25T14:58:19Z",
+  "updated": "2026-10-25T15:14:32Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "`@PyAutoFit` BFGS/LBFGS resume reads `[\"x0\"]` from the saved scipy result and cannot\u2026 \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1731",
+      "prompt": "Use the start-dev skill. active/bfgs_resume_reads_x0_from_scipy_result.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "`@PyAutoFit` `test_emcee_call_path_runs_at_jitted_speed` is a wall-clock ratio assertion that flakes on shared CI\u2026 \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1729",
+      "prompt": "Use the start-dev skill. active/emcee_jax_timing_test_flaky_on_ci.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "EP test suite is not xdist-safe: tests share one on-disk output directory \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1728",
+      "prompt": "Use the start-dev skill. active/ep_test_suite_is_not_xdist_safe.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Emcee/Zeus: thin can be 0, and check_size blows up on short chains \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1730",
+      "prompt": "Use the start-dev skill. active/mcmc_thin_zero_and_check_size_short_chain.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -102,30 +126,6 @@
       "text": "pick: SED chain waveband fit can spin forever in Nautilus exploration\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md",
       "prompt": "Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: arXiv's Fastly edge refuses `urllib.request` outright \u2014 retrying a 406 only delays\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md",
-      "prompt": "Use the start-dev skill. draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: `@PyAutoArray` rectangular mesh mapper: mirrored row weights + round-off-dependent cell assignment",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md",
-      "prompt": "Use the start-dev skill. draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
-      "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
-      "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
     }
   ]
 }
