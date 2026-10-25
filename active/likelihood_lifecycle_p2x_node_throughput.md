@@ -18,6 +18,7 @@ Epic: likelihood-lifecycle
 Phase: 2
 Parent: draft/research/autolens_profiling/likelihood_lifecycle_epic.md
 Filed: 2026-10-25
+Issued: 2026-10-25
 
 Phase 2 sub-task 2x of the `likelihood-lifecycle` epic. **Run it before 2b**, so 2b–2g rows carry these fields from the start. Human approval 2026-10-25 ("Yes do all that I approve").
 
