@@ -119,7 +119,10 @@
 ## point-plots-yaml-keys-assistant
 - status: unblocked 2026-10-23 — cosmos-web-ring-notebook merged (autolens_assistant#161, `complete/2026/10/cosmos-web-ring-notebook.md`); autolens_assistant free (sibling waiting on the same repo: `draft/docs/autolens_assistant/ai_options_page_autolens_leg.md`)
 - filed: 2026-10-22
-- issue: https://github.com/PyAutoLabs/HowToLens/issues/98
+- parent-issue: https://github.com/PyAutoLabs/HowToLens/issues/98 (closed after the HowToLens half; not this task’s tracking issue)
+- prompt: draft/docs/autolens_assistant/point_plots_yaml_keys.md
+- tracking: file a separate autolens_assistant issue at start-dev; this remaining work is not complete
+- release-gate: verify the PyAutoLens#794 release before shipping, as required by the original prompt
 - parent: complete/2026/10/point-plots-yaml-keys.md (HowToLens half merged 2026-10-22, HowToLens#99); no separate prompt file
 - scope: same `point_dataset` / `fit_point_dataset` block edit in `autolens_assistant/config/visualize/plots.yaml` as HowToLens; ship on its own branch `feature/point-plots-yaml-keys` once the claim clears
 
