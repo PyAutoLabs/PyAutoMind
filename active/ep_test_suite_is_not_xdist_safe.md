@@ -1,5 +1,6 @@
 # EP test suite is not xdist-safe: tests share one on-disk output directory
 
+Issued: 2026-10-25
 Type: bug
 Target: PyAutoFit
 Repos:
@@ -7,7 +8,7 @@ Repos:
 Difficulty: small
 Autonomy: safe
 Priority: medium
-Status: formalised
+Status: active
 Consequence: glance
 Witness: 'python -m pytest test_autofit/graphical -q -n auto' passes with the same count as the serial run (279 on main e331e33, 281 after PyAutoFit#1608).
 Review-minutes: 3

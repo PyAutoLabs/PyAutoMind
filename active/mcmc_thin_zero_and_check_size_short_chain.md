@@ -1,5 +1,6 @@
 # Emcee/Zeus: thin can be 0, and check_size blows up on short chains
 
+Issued: 2026-10-25
 Type: bug
 Target: PyAutoFit
 Repos:
@@ -11,7 +12,7 @@ Themes:
 Difficulty: small
 Autonomy: supervised
 Priority: normal
-Status: formalised
+Status: active
 Consequence: glance
 Witness: `thin` is `max(1, int(max(times) / 2))` in both `emcee/search.py` and `zeus/search.py`, pinned by a unit test on a chain whose largest auto-correlation time is below 2 (`thin == 1`, no `ValueError`); Emcee guards `auto_correlations_from` on chains shorter than `check_size` the way Zeus does, so `af.Emcee(nsteps=10)` under `PYAUTO_TEST_MODE=1` completes; and the #1628 regression tests drop their `AutoCorrelationsSettings(check_size=5, ...)` workaround.
 Review-minutes: 3

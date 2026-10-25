@@ -1,5 +1,6 @@
 # `@PyAutoFit` `test_emcee_call_path_runs_at_jitted_speed` is a wall-clock ratio assertion that flakes on shared CI runners
 
+Issued: 2026-10-25
 Type: test
 Target: autofit
 Repos:
@@ -7,7 +8,7 @@ Repos:
 Difficulty: trivial
 Autonomy: safe
 Priority: normal
-Status: formalised
+Status: active
 Consequence: glance
 Witness: the test no longer asserts a wall-clock ratio between the wrapped call path and the raw jitted function on CI; it asserts structurally that the Emcee call path dispatches to the compiled objective (e.g. the wrapper calls the jitted callable exactly once per evaluation with no Python-side re-tracing), with the timing comparison kept only under an opt-in env flag for local profiling.
 Filed: 2026-10-14
