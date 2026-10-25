@@ -1,3 +1,14 @@
+Pulse half of likelihood-lifecycle phase 2x. PyAutoPulse#77 merged db5e7c02 on human /prm ('Ship and prm', Heart YELLOW acknowledged after release 2026.10.25.1).
+
+- profiling-summary@3 validates resources and projected_node_throughput (additive, optional; malformed blocks are refused; no cross-machine hosts; Pulse never recomputes).
+- Setup browser View selector (per call, the default, or per node); dashed amber 'projected' badge with an accessible tooltip (η + source, bound_by + worker caps, per-call basis, what isn't modelled); board column 'Node throughput (projected)'.
+- New knowledge/cpu_parallel_vs_gpu_batched.md: 7 decision rules (formula, memory cap, W~ sharing after fork unknown until phase 4, η 1.0 declared, n_batch ceiling, fork rules, RAL hosts, 2a worked examples). knowledge/ is new; decisions/ stays human-decision-only.
+- Lens refetched at autolens_profiling 29caed89: 626 resources blocks; 78 throughput blocks (50 projected).
+
+Note: no class:optimal lens rows yet (phase 3), so the default Class filter shows few per-node values. NEXT: phase 2b interferometer.
+
+## Original prompt
+
 # Likelihood lifecycle phase 2x (Pulse): per-call vs per-node-throughput view, and a research page on comparing CPU-parallel and GPU-batched setups
 
 Type: feature
