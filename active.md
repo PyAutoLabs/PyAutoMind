@@ -1,3 +1,16 @@
+## pre-release-docs-config
+- issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/261
+- issued: 2026-10-25
+- status: workspace-dev
+- session: codex health/hygiene cleanup
+- location: /workspace/scratch/f77499d15f98 (session clones)
+- prompt: active/pre_release_docs_config.md
+- next: implement five documentation boundary repairs and 25 config mirrors; verify AST, prose, effective config, generated notebooks and smoke. No source shipping/merge/release authorization under Heart RED yet.
+- repos:
+  - HowToFit: feature/pre-release-docs-config
+  - autofit_workspace: feature/pre-release-docs-config
+  - autogalaxy_workspace: feature/pre-release-docs-config
+
 
 ## likelihood-lifecycle-p2a-imaging-campaign
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/456
