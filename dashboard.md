@@ -935,7 +935,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/colab_finufft_bootstrap.md">Install finufft in Array-based Colab bootstraps</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/204">issue #204</a> — issued 2026-10-25 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/205">PyAutoNerves#205</a> — ⏳ pending release: PyAutoNerves</summary>
+<details><summary>📋 <a href="active/colab_finufft_bootstrap.md">Install finufft in Array-based Colab bootstraps</a> — issued 2026-10-25</summary>
 
 ```
 Use the start-dev skill. active/colab_finufft_bootstrap.md
@@ -3108,7 +3108,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoNerves**
 
-- [PyAutoNerves#205](https://github.com/PyAutoLabs/PyAutoNerves/pull/205) — `active/colab_finufft_bootstrap.md`
+- [PyAutoNerves#205](https://github.com/PyAutoLabs/PyAutoNerves/pull/205) — `complete/2026/10/colab-finufft-bootstrap.md`
 
 
 Boards: [organism](https://pyautolabs.github.io/PyAutoScientist/) · [brain](https://pyautolabs.github.io/PyAutoBrain/) · [cortex](https://pyautolabs.github.io/PyAutoCortex/) · [memory](https://pyautolabs.github.io/PyAutoMemory/) · [eyes](https://pyautolabs.github.io/PyAutoEyes/) · [ears](https://pyautolabs.github.io/PyAutoEars/) · [heart](https://pyautolabs.github.io/PyAutoHeart/) · [hands](https://pyautolabs.github.io/PyAutoHands/) · [pulse](https://pyautolabs.github.io/PyAutoPulse/) · [insight](https://pyautolabs.github.io/PyAutoInsight/) · [dna](https://pyautolabs.github.io/PyAutoDNA/) · [nerves](https://pyautolabs.github.io/PyAutoNerves/) · [broca](https://pyautolabs.github.io/PyAutoBroca/) · [gut](https://pyautolabs.github.io/PyAutoGut/)
