@@ -25,42 +25,62 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1716
 - issued: 2026-10-25
 - session: ChatGPT Work Codex (session ID unavailable)
-- status: library-dev
+- status: draft-pr, validation-in-progress
 - prompt: active/assertion_repr_recurses_forever.md
 - worktree: /workspace/scratch/c07c1c24c298/worktrees/assertion-repr
 - coordination: four-task group explicitly requested 2026-10-25; independent PRs, shared validation, human merge
 - repos:
   - PyAutoFit: feature/assertion-repr
 
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1720
+- validation: focused regressions passed; serial full-suite validation underway after reproduced xdist baseline collisions
+- blocked-by: downstream smoke workspaces absent; draft PR is not cleared for merge
+- next: finish unit validation, run downstream smoke, human /prm when required checks are green
+
 ## assertion-names
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1717
 - issued: 2026-10-25
 - session: ChatGPT Work Codex (session ID unavailable)
-- status: library-dev
+- status: draft-pr, validation-in-progress
 - prompt: active/add_assertion_name_silently_dropped.md
 - worktree: /workspace/scratch/c07c1c24c298/worktrees/assertion-names
 - coordination: four-task group explicitly requested 2026-10-25; independent PRs, shared validation, human merge
 - repos:
   - PyAutoFit: feature/assertion-names
 
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1721
+- validation: focused regressions passed; serial full-suite validation underway after reproduced xdist baseline collisions
+- blocked-by: downstream smoke workspaces absent; draft PR is not cleared for merge
+- next: finish unit validation, run downstream smoke, human /prm when required checks are green
+
 ## fixed-instance-tuples
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1718
 - issued: 2026-10-25
 - session: ChatGPT Work Codex (session ID unavailable)
-- status: library-dev
+- status: draft-pr, validation-in-progress
 - prompt: active/direct_instance_tuples_double_counts_constants.md
 - worktree: /workspace/scratch/c07c1c24c298/worktrees/fixed-instance-tuples
 - coordination: four-task group explicitly requested 2026-10-25; independent PRs, shared validation, human merge
 - repos:
   - PyAutoFit: feature/fixed-instance-tuples
 
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1722
+- validation: focused regressions passed; serial full-suite validation underway after reproduced xdist baseline collisions
+- blocked-by: downstream smoke workspaces absent; draft PR is not cleared for merge
+- next: finish unit validation, run downstream smoke, human /prm when required checks are green
+
 ## seed-start-point-tests
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1719
 - issued: 2026-10-25
 - session: ChatGPT Work Codex (session ID unavailable)
-- status: library-dev
+- status: draft-pr, validation-in-progress
 - prompt: active/start_points_test_unseeded_identical_figures_of_merit_flake.md
 - worktree: /workspace/scratch/c07c1c24c298/worktrees/seed-start-point-tests
 - coordination: four-task group explicitly requested 2026-10-25; independent PRs, shared validation, human merge
 - repos:
   - PyAutoFit: feature/seed-start-point-tests
+
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1723
+- validation: focused regressions passed; serial full-suite validation underway after reproduced xdist baseline collisions
+- blocked-by: downstream smoke workspaces absent; draft PR is not cleared for merge
+- next: finish unit validation, run downstream smoke, human /prm when required checks are green
