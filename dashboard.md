@@ -935,7 +935,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/add_assertion_name_silently_dropped.md">add_assertion name is silently dropped</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1717">issue #1717</a> — issued 2026-10-25 — library-dev</summary>
+<details><summary>📋 <a href="active/add_assertion_name_silently_dropped.md">add_assertion name is silently dropped</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1717">issue #1717</a> — issued 2026-10-25 — draft-pr, validation-in-progress — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1721">PyAutoFit#1721</a></summary>
 
 ```
 Use the start-dev skill. active/add_assertion_name_silently_dropped.md
@@ -943,7 +943,7 @@ Use the start-dev skill. active/add_assertion_name_silently_dropped.md
 
 </details>
 
-<details><summary>📋 <a href="active/assertion_repr_recurses_forever.md">Assertion repr recurses forever</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1716">issue #1716</a> — issued 2026-10-25 — library-dev</summary>
+<details><summary>📋 <a href="active/assertion_repr_recurses_forever.md">Assertion repr recurses forever</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1716">issue #1716</a> — issued 2026-10-25 — draft-pr, validation-in-progress — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1720">PyAutoFit#1720</a></summary>
 
 ```
 Use the start-dev skill. active/assertion_repr_recurses_forever.md
@@ -951,7 +951,7 @@ Use the start-dev skill. active/assertion_repr_recurses_forever.md
 
 </details>
 
-<details><summary>📋 <a href="active/direct_instance_tuples_double_counts_constants.md">direct_instance_tuples double-counts Constants</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1718">issue #1718</a> — issued 2026-10-25 — library-dev</summary>
+<details><summary>📋 <a href="active/direct_instance_tuples_double_counts_constants.md">direct_instance_tuples double-counts Constants</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1718">issue #1718</a> — issued 2026-10-25 — draft-pr, validation-in-progress — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1722">PyAutoFit#1722</a></summary>
 
 ```
 Use the start-dev skill. active/direct_instance_tuples_double_counts_constants.md
@@ -975,7 +975,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/start_points_test_unseeded_identical_figures_of_merit_flake.md">test_start_points.py draws unseeded start points and flakes on IDENTICAL_FIGURES_OF_MERIT (nojax leg, PyAutoFit#1714)</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1719">issue #1719</a> — issued 2026-10-25 — library-dev</summary>
+<details><summary>📋 <a href="active/start_points_test_unseeded_identical_figures_of_merit_flake.md">test_start_points.py draws unseeded start points and flakes on IDENTICAL_FIGURES_OF_MERIT (nojax leg, PyAutoFit#1714)</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1719">issue #1719</a> — issued 2026-10-25 — draft-pr, validation-in-progress — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1723">PyAutoFit#1723</a></summary>
 
 ```
 Use the start-dev skill. active/start_points_test_unseeded_identical_figures_of_merit_flake.md
