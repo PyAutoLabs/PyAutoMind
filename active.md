@@ -3,11 +3,12 @@
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/464
 - issued: 2026-10-25
 - session: claude-code (local CLI, Opus 5.5)
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p2x-same-host
 - prompt: active/likelihood_lifecycle_p2x_same_host_projection.md
 - epic: likelihood-lifecycle
-- next: implement → PR → human /prm. Then Pulse view + 2b (each needs its own RED override while Heart is RED).
+- next: PR #465 OPEN (ef6e6014/362a28c7/7b11cba3). NEXT: lint green → HUMAN /prm → close #464. Then Pulse view + 2b (each needs its own RED override while Heart is RED).
+- workspace-pr: autolens_profiling https://github.com/PyAutoLabs/autolens_profiling/pull/465
 - heart-red-override:
   - authorized: 2026-10-25, live human selected "2x same-host fix" (AskUserQuestion: which tasks to authorise under RED)
   - reasons: install verification FAILED (testpypi; checks F) · release validation FAILED (stage integrate) · Release Integrate failure · (rest as on autolens_profiling#462)
