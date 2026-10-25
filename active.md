@@ -3,12 +3,22 @@
 - issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/204
 - issued: 2026-10-25
 - session: codex health review
-- status: awaiting-input
+- status: library-shipped, awaiting-merge
 - prompt: active/colab_finufft_bootstrap.md
 - location: /workspace/scratch/f77499d15f98/PyAutoNerves (session clone)
-- next: local correction validated (258 passed, 1 skipped; CPU NUFFT parity 7 passed); await named-issue corrective-PR authorization for Heart RED `install verification FAILED (testpypi; checks F)` before source commit/push/PR. No release or merge authorized.
 - repos:
   - PyAutoNerves: feature/colab-finufft-bootstrap
+
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/205
+- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/205
+- corrective-red:
+  - reason: install verification FAILED (testpypi; checks F)
+  - authorization: https://github.com/PyAutoLabs/PyAutoNerves/issues/204#issuecomment-6399922959
+  - scope: human "I approve"; commit, push and one corrective PR only; no merge/release/rehearsal
+  - mapping: missing finufft under --no-deps -> issue 204 -> Array-based bootstrap package list plus six-project witness
+  - tests: Nerves 258 passed/1 existing skip; CPU NUFFT parity 7 passed; author diff review; CI pending
+  - validation: after separate human merge, fresh wheels and verify_install/integration must reconcile the original Heart IDs
+- next: PR 205 open at 90bd238356203233ab766976306865999a247ad6; human /prm after required CI. Heart remains RED; integration reason remains open.
 
 ## likelihood-lifecycle-p2a-imaging-campaign
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/456
