@@ -935,7 +935,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p2a_imaging_campaign.md">Likelihood lifecycle phase 2a: profiling campaign — imaging/{mge, rectangular, delaunay, delaunay_nn}…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/456">issue #456</a> — issued 2026-10-24 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/458">autolens_profiling#458</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/460">autolens_profiling#460</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/459">autolens_profiling#459</a></summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p2a_imaging_campaign.md">Likelihood lifecycle phase 2a: profiling campaign — imaging/{mge, rectangular, delaunay, delaunay_nn}…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/456">issue #456</a> — issued 2026-10-24 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/458">autolens_profiling#458</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/460">autolens_profiling#460</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/459">autolens_profiling#459</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/461">autolens_profiling#461</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p2a_imaging_campaign.md
