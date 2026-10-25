@@ -8,8 +8,8 @@
 - prompt: active/likelihood_lifecycle_p2a_imaging_campaign.md
 - epic: likelihood-lifecycle
 - merged: https://github.com/PyAutoLabs/autolens_profiling/pull/457 (PR A: standard-size production cells + parity.json + submits; review CLEAN after 3 rounds)
-- next: BATCH 0 DONE 2026-10-25 (412877 ral CPU + 412884 A100, private RAL checkout /mnt/ral/jnightin/profiling/autolens_profiling_p2a @ e1f52f47): 20/34 ok; 12 breakdown failures = 4 script bugs fixed in PR #458 (awaiting human /prm); A100 task 2 (delaunay ao jax_gpu_dense breakdown) GPU OOM → HUMAN RULING: record as limitation, no rerun. Legs take 1–33 min (not 14000 s). NEXT: human /prm 458 → git pull the private RAL checkout to new main → resubmit only failed legs: hpc/batch_cpu sbatch --array=0,4,8,10 submit_campaign_p2a_imaging_batch0_ral_cpu_fp64; hpc/batch_gpu sbatch --array=0,4,6,10,12,14,16,18 submit_campaign_p2a_imaging_batch0_a100_fp64 → walls.tsv + sacct MaxRSS → batch 1 --time/--mem → human go → PR B.
-- workspace-pr: autolens_profiling https://github.com/PyAutoLabs/autolens_profiling/pull/458 (p2a breakdown fixes, branch feature/likelihood-lifecycle-p2a-breakdown-fixes)
+- next: 2026-10-25 #458 MERGED 7679f564 (human /prm); private RAL checkout ff'd to 7679f564; RERUN of the 12 failed batch-0 legs SUBMITTED: CPU 412911 (--array=0,4,8,10) + A100 412915 (--array=0,4,6,10,12,14,16,18%2). A100 task 2 (delaunay ao jax_gpu_dense breakdown) OOM = recorded limitation (human ruling), not rerun. Follow-up pix_sizes check on 3 interferometer/datacube scripts: NO BUG (curvature triplets unmasked by design, as in the library); guard-test-only commit acd83363 on local branch feature/likelihood-lifecycle-p2a-pix-sizes-followup, unpushed pending human choice. NEXT: rerun done → walls.tsv + sacct MaxRSS → batch 1 --time/--mem → human go → PR B.
+- workspace-pr: autolens_profiling https://github.com/PyAutoLabs/autolens_profiling/pull/458 (MERGED 7679f564; p2a breakdown fixes, branch feature/likelihood-lifecycle-p2a-breakdown-fixes)
 - repos:
   - autolens_profiling: feature/likelihood-lifecycle-p2a-imaging-campaign
 
