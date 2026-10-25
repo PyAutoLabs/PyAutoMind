@@ -1,5 +1,6 @@
 # `@PyAutoFit` BFGS/LBFGS resume reads `["x0"]` from the saved scipy result and cannot resume an interrupted run
 
+Issued: 2026-10-25
 Type: bug
 Target: autofit
 Repos:
@@ -7,7 +8,7 @@ Repos:
 Difficulty: low
 Autonomy: safe
 Priority: normal
-Status: formalised
+Status: active
 Consequence: glance
 Witness: an Emcee-style interrupt/resume test for BFGS and LBFGS (run with a small `maxiter`, kill after the first checkpoint, re-run the same `search.fit`) completes without `KeyError` and reaches the same optimum as an uninterrupted run; a resume with `total_iterations >= maxiter` leaves `search_internal` populated so `Samples` build.
 Filed: 2026-10-14

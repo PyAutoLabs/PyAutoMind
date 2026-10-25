@@ -20,3 +20,63 @@
 - user-facing: true
 - community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
 - prompt: active/matrix_free_interferometer_inversion.md
+
+## bfgs-checkpoint-resume
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1724
+- issued: 2026-10-25
+- session: ChatGPT Work; session ID unavailable
+- status: library-dev
+- prompt: active/bfgs_resume_reads_x0_from_scipy_result.md
+- worktree: /workspace/scratch/31f19494df78-wt/bfgs-checkpoint-resume
+- coordination: user requested four grouped tasks; isolated branches, sequential implementation in this session
+- heart-red-override:
+  - authorization: "Yes I authorise" after disclosed RED reasons; development and PR-open only; no merge/release
+  - reasons: install verification FAILED (testpypi; checks F); release validation FAILED (stage integrate); PyAutoHeart/workflows/Release Integrate: failure; manifest_drift/checks/workspace checkouts (manifest ↔ disk): red; Release readiness: release validation FAILED (stage integrate); Release readiness: install verification FAILED (testpypi; checks F); PyAutoArray/test_autoarray/inversion/inversion/interferometer/test_interferometer.py::test__interferometer_sparse_operator__mapped_reconstructed_data_dict_matc…; Unit-test timing: 1 test regressions (>3× baseline), 11 slow (>1.5×); Release validation: NOT release_ready — v2026.10.25.1.dev83701 profile=release (2026-10-25T07:21:05+00:00); validation_report/stages/integrate: fail; verify_install FAILED: verify_install FAILED; F: colab gate: finufft (declared by autoarray, absent on Colab, imported); Install verification: FAILED (testpypi; F) (2026-10-25T07:42:48.134987+00:00); verify_install: red; PyAutoBrain: red; PyAutoLens: red; autolens_profiling: red; Worktree drift: 1 orphan / 0 missing / 3 dirty
+  - validation: pending; will record measured tests at PR-open
+- repos:
+  - PyAutoFit: feature/bfgs-checkpoint-resume
+
+## mcmc-short-chain-guards
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1725
+- issued: 2026-10-25
+- session: ChatGPT Work; session ID unavailable
+- status: library-dev
+- prompt: active/mcmc_thin_zero_and_check_size_short_chain.md
+- worktree: /workspace/scratch/31f19494df78-wt/mcmc-short-chain-guards
+- coordination: user requested four grouped tasks; isolated branches, sequential implementation in this session
+- heart-red-override:
+  - authorization: "Yes I authorise" after disclosed RED reasons; development and PR-open only; no merge/release
+  - reasons: install verification FAILED (testpypi; checks F); release validation FAILED (stage integrate); PyAutoHeart/workflows/Release Integrate: failure; manifest_drift/checks/workspace checkouts (manifest ↔ disk): red; Release readiness: release validation FAILED (stage integrate); Release readiness: install verification FAILED (testpypi; checks F); PyAutoArray/test_autoarray/inversion/inversion/interferometer/test_interferometer.py::test__interferometer_sparse_operator__mapped_reconstructed_data_dict_matc…; Unit-test timing: 1 test regressions (>3× baseline), 11 slow (>1.5×); Release validation: NOT release_ready — v2026.10.25.1.dev83701 profile=release (2026-10-25T07:21:05+00:00); validation_report/stages/integrate: fail; verify_install FAILED: verify_install FAILED; F: colab gate: finufft (declared by autoarray, absent on Colab, imported); Install verification: FAILED (testpypi; F) (2026-10-25T07:42:48.134987+00:00); verify_install: red; PyAutoBrain: red; PyAutoLens: red; autolens_profiling: red; Worktree drift: 1 orphan / 0 missing / 3 dirty
+  - validation: pending; will record measured tests at PR-open
+- repos:
+  - PyAutoFit: feature/mcmc-short-chain-guards
+
+## ep-test-output-isolation
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1726
+- issued: 2026-10-25
+- session: ChatGPT Work; session ID unavailable
+- status: library-dev
+- prompt: active/ep_test_suite_is_not_xdist_safe.md
+- worktree: /workspace/scratch/31f19494df78-wt/ep-test-output-isolation
+- coordination: user requested four grouped tasks; isolated branches, sequential implementation in this session
+- heart-red-override:
+  - authorization: "Yes I authorise" after disclosed RED reasons; development and PR-open only; no merge/release
+  - reasons: install verification FAILED (testpypi; checks F); release validation FAILED (stage integrate); PyAutoHeart/workflows/Release Integrate: failure; manifest_drift/checks/workspace checkouts (manifest ↔ disk): red; Release readiness: release validation FAILED (stage integrate); Release readiness: install verification FAILED (testpypi; checks F); PyAutoArray/test_autoarray/inversion/inversion/interferometer/test_interferometer.py::test__interferometer_sparse_operator__mapped_reconstructed_data_dict_matc…; Unit-test timing: 1 test regressions (>3× baseline), 11 slow (>1.5×); Release validation: NOT release_ready — v2026.10.25.1.dev83701 profile=release (2026-10-25T07:21:05+00:00); validation_report/stages/integrate: fail; verify_install FAILED: verify_install FAILED; F: colab gate: finufft (declared by autoarray, absent on Colab, imported); Install verification: FAILED (testpypi; F) (2026-10-25T07:42:48.134987+00:00); verify_install: red; PyAutoBrain: red; PyAutoLens: red; autolens_profiling: red; Worktree drift: 1 orphan / 0 missing / 3 dirty
+  - validation: pending; will record measured tests at PR-open
+- repos:
+  - PyAutoFit: feature/ep-test-output-isolation
+
+## emcee-jax-dispatch-guard
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1727
+- issued: 2026-10-25
+- session: ChatGPT Work; session ID unavailable
+- status: library-dev
+- prompt: active/emcee_jax_timing_test_flaky_on_ci.md
+- worktree: /workspace/scratch/31f19494df78-wt/emcee-jax-dispatch-guard
+- coordination: user requested four grouped tasks; isolated branches, sequential implementation in this session
+- heart-red-override:
+  - authorization: "Yes I authorise" after disclosed RED reasons; development and PR-open only; no merge/release
+  - reasons: install verification FAILED (testpypi; checks F); release validation FAILED (stage integrate); PyAutoHeart/workflows/Release Integrate: failure; manifest_drift/checks/workspace checkouts (manifest ↔ disk): red; Release readiness: release validation FAILED (stage integrate); Release readiness: install verification FAILED (testpypi; checks F); PyAutoArray/test_autoarray/inversion/inversion/interferometer/test_interferometer.py::test__interferometer_sparse_operator__mapped_reconstructed_data_dict_matc…; Unit-test timing: 1 test regressions (>3× baseline), 11 slow (>1.5×); Release validation: NOT release_ready — v2026.10.25.1.dev83701 profile=release (2026-10-25T07:21:05+00:00); validation_report/stages/integrate: fail; verify_install FAILED: verify_install FAILED; F: colab gate: finufft (declared by autoarray, absent on Colab, imported); Install verification: FAILED (testpypi; F) (2026-10-25T07:42:48.134987+00:00); verify_install: red; PyAutoBrain: red; PyAutoLens: red; autolens_profiling: red; Worktree drift: 1 orphan / 0 missing / 3 dirty
+  - validation: pending; will record measured tests at PR-open
+- repos:
+  - PyAutoFit: feature/emcee-jax-dispatch-guard
