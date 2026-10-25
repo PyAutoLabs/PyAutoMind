@@ -12,7 +12,7 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 3 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 281 |
+| [Backlog](#backlog) | 282 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -1925,7 +1925,7 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>research</b> — 41</summary>
+<summary><b>research</b> — 42</summary>
 
 <details><summary>📋 <a href="draft/research/autofit_inference/search_ext_b5c2a_rerun.md"><code>@autofit_inference</code> B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug…</a> — autofit_inference · medium · supervised · high</summary>
 
@@ -2251,6 +2251,14 @@ Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_
 
 ```
 Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/05_brain_conductors_epic_format.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/p2b_interferometer_survey_2026_10_25.md">Likelihood lifecycle 2b — interferometer campaign: survey and draft plan</a> — autolens_profiling</summary>
+
+```
+Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/p2b_interferometer_survey_2026_10_25.md
 ```
 
 </details>
@@ -2918,7 +2926,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 ## Hygiene
 
-26 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
+27 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
 
 <details>
 <summary>Headerless prompts</summary>
@@ -2949,10 +2957,11 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/03_eyes_viz_coverage.md`
 - `draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/04_setup_knobs_source.md`
 - `draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/05_brain_conductors_epic_format.md`
+- `draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/p2b_interferometer_survey_2026_10_25.md`
 
 </details>
 
-113 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+114 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2997,7 +3006,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`
 - `draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md`
 - `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
-- _… and 73 more_
+- _… and 74 more_
 
 </details>
 
