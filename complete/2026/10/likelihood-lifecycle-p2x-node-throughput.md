@@ -1,3 +1,17 @@
+Phase 2x of the likelihood-lifecycle epic. It follows the human's 2026-10-25 ruling: numba CPU runs one process per core under Nautilus multiprocessing, so CPU and GPU are compared as node throughput. That throughput is projected, not run.
+
+- PR autolens_profiling#463, merged 101df14a under a Heart RED development override (live human "I authorise work on red and prm"; four records written; lint attempt 1 cancelled by a slow apt mirror, attempt 2 green; merged on a fresh human /prm).
+- Rows record `cpus_per_eval` and `peak_rss_gb` (25 writers, all dataset types).
+- 2a backfill in `catalogue/peak_rss_backfill.json`: 37 exact per-leg, 60 job-level upper bound, 7 none.
+- `catalogue/reference_hosts.json`: ral 236c/921GB, gpu 124c/885GB/4×A100, laptop 8c/32GB.
+- `projected_node_throughput` on v3 records: η = 1.0 declared; Nautilus n_batch and memory bandwidth not modelled. Fields are additive to profiling-summary@3.
+- Projected per node: hst Delaunay numba ral ≈248/s vs 4×A100 ≈114/s; ao Delaunay numba ≈4.6/s (memory-bound, 40 workers) vs ≈10.9/s.
+- Open choices for the human: CPU rows are projected onto hosts they weren't measured on (flagged `per_call_measured_on_host: false`); MaxRSS varies between runs (ao JAX CPU 37.6 vs 19.5 GB).
+
+NEXT: Pulse view task `draft/feature/pyautopulse/likelihood_lifecycle_p2x_throughput_view.md`, then 2b.
+
+## Original prompt
+
 # Likelihood lifecycle phase 2x: record cores-per-call and peak memory on every profiling row, and project per-node throughput in the catalogue
 
 Type: feature
