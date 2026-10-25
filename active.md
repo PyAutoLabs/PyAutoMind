@@ -17,15 +17,22 @@
 ## pre-release-docs-config
 - issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/261
 - issued: 2026-10-25
-- status: blocked
+- status: workspace-dev
 - session: codex health/hygiene cleanup
 - location: /workspace/scratch/f77499d15f98 (session clones)
 - prompt: active/pre_release_docs_config.md
-- next: local patch prepared and AST/prose/config/notebook generation verified; 41 script smoke checks passed. User approved continuing 2026-10-25. AutoFit two-notebook smoke blocked before cell execution: both TCP and IPC socket startup denied by host; compatible-runtime handoff recorded in task prompt. Required evidence precedes source shipping. Preserve three local source branches; no source commits, PRs, merges or releases. See issue #261 checkpoint.
+- next: HowToFit PR #76 and autogalaxy_workspace PR #262 opened after local validation; human requested prm, requires every exact-head CI run/leg green. AutoFit six config mirrors remain locally preserved and blocked on two notebook checks; keep task open and claims intact.
 - repos:
   - HowToFit: feature/pre-release-docs-config
   - autofit_workspace: feature/pre-release-docs-config
   - autogalaxy_workspace: feature/pre-release-docs-config
+
+- heart-red-override:
+  - authorized: 2026-10-25, live human, "Ok do final bits and inprovememtns  and then prm what weve done"; prior "Ok continue i approve" retained for this task #261.
+  - reasons: install verification FAILED (testpypi; checks F) · release validation FAILED (stage integrate)
+  - scope: commit/push/PR for independently validated HowToFit and autogalaxy_workspace branches; current-turn merge only if every required CI leg passes. AutoFit remains blocked pending notebook validation. No release/rehearsal; this patch does not fix Heart.
+- workspace-pr: HowToFit https://github.com/PyAutoLabs/HowToFit/pull/76
+- workspace-pr: autogalaxy_workspace https://github.com/PyAutoLabs/autogalaxy_workspace/pull/262
 
 ## matrix-free-interferometer-inversion
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/638
