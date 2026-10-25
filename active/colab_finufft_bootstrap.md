@@ -60,3 +60,12 @@ Local proposal: /workspace/scratch/f77499d15f98/PyAutoNerves,
 branch feature/colab-finufft-bootstrap. Source changes remain uncommitted.
 The general health-work authorization is retained; the named-issue corrective
 shipping authorization required by AUTONOMY.md has not yet been requested.
+
+## Approved corrective PR
+
+On 2026-10-25 James replied "I approve" to the named-issue corrective-PR request.
+Authorization: https://github.com/PyAutoLabs/PyAutoNerves/issues/204#issuecomment-6399922959
+PR: https://github.com/PyAutoLabs/PyAutoNerves/pull/205
+Commit: 90bd238356203233ab766976306865999a247ad6
+Exact RED: `install verification FAILED (testpypi; checks F)`.
+Commit/push/one PR authorized; no merge/release/rehearsal. Prior awaiting-authorization notes above are historical.
