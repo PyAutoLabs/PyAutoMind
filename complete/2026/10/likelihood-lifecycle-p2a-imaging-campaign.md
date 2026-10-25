@@ -1,3 +1,19 @@
+Phase 2a of the likelihood-lifecycle epic profiled every imaging likelihood (mge, rectangular, delaunay, delaunay_nn) at the standard production size on tag 2026.10.23.1, across RAL CPU and A100 setups, and committed the rows with parity witnesses.
+
+- **PR A #457:** standard-size cells matching production subhalo_validation (Delaunay 1250 Hilbert + 30 edge, rectangular `RectangularBilinearAdaptImage` 35², over-sampling cut on the uncapped S/N map), parity.json (eager NumPy dense reference), generated submits with a tag/import guard.
+- **Batch 0** (timing arm; RAL 412877 + 412884; reruns 412911 + 412915): 32/34. Four breakdown-script bugs fixed in **#458**. The ao `jax_gpu_dense` breakdowns (delaunay and rectangular) run out of A100 memory on the 384,753×1,280 fp64 blurred mapping matrix; HUMAN RULING: recorded limitation, not rerun.
+- **#459:** guard test only. The suspected pix_sizes omission in the interferometer/datacube scripts was a false alarm; the library leaves those curvature triplets unmasked too.
+- **#460:** batch-1 `--time`/`--mem` from measured walls and MaxRSS (1.25× + 15 min, 32 GB floor).
+- **Batch 1** (RAL 412923–412926 + A100 412927, 412943–412945): 104/106, the 2 limitations.
+- **PR B #461:** 104 rows (53 cells), 13 superseded rows → history/, parity 53/53 match. Coverage across 246 planned went from 2/6/238 to 104/7/135 (current/stale/missing). New catalogue/release_revisions.json: tag source checkouts stamp 2026.8.17.1, so release_pin comes from an exact library-SHA match. Wiki page `wiki/campaigns/imaging/likelihood_lifecycle_p2a.md`.
+- **PyAutoPulse#75:** lens receipt 679 records at eef5edfe; `hst_mge_cpu_pilot` superseded by the 2a mge/hst CPU cell (human 2026-10-25); autolens_profiling#415 closed.
+
+Per-call evidence: `jax_gpu_dense@a100` is fastest per call everywhere (ao: mge 19 ms, rectangular 311 ms, delaunay 367 ms; numba CPU 8.7–10 s). OPEN for phase 3, raised by the human: numba CPU runs one process per core under Nautilus multiprocessing, so designations must compare node throughput, not single-call latency. Follow-up being planned.
+
+Private RAL checkouts kept for 2b–2g: /mnt/ral/jnightin/profiling/PyAuto_2026.10.23.1 (libraries) and /mnt/ral/jnightin/profiling/autolens_profiling_p2a.
+
+## Original prompt
+
 # Likelihood lifecycle phase 2a: profiling campaign — imaging/{mge, rectangular, delaunay, delaunay_nn} (106 planned cells)
 
 Type: research
