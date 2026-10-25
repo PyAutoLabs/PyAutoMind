@@ -1,0 +1,44 @@
+# Likelihood lifecycle phase 2x (Pulse): per-call vs per-node-throughput view, and a research page on comparing CPU-parallel and GPU-batched setups
+
+Type: feature
+Target: PyAutoPulse
+Repos:
+- PyAutoPulse
+Themes:
+- profiling
+Difficulty: medium
+Autonomy: supervised
+Priority: normal
+Status: formalised
+Consequence: judge
+Witness: the Pulse board and setup browser offer a per-call / per-node-throughput switch; projected values render visibly distinct and show their efficiency basis; `pyauto-pulse check` passes on the refetched lens receipt; the knowledge page is linked from the board
+Review-minutes: 25
+Unattended: never
+Epic: likelihood-lifecycle
+Phase: 2
+Parent: draft/research/autolens_profiling/likelihood_lifecycle_epic.md
+Filed: 2026-10-25
+
+Pulse half of the human's 2026-10-25 ruling: numba CPU runs one process per core under Nautilus multiprocessing, so CPU vs GPU must be compared as node throughput. Depends on `draft/feature/autolens_profiling/likelihood_lifecycle_p2x_node_throughput.md`, the producer task that declares `projected_node_throughput`.
+
+## Boundary
+
+The producer declares, Pulse validates and displays, and the Brain's profiling conductor judges. Pulse computes no projection itself and issues no verdict.
+
+## Scope
+
+1. **Validate the producer's new fields.**
+   - Fields: `cpus_per_eval`, `peak_rss_gb`, `projected_node_throughput` with `basis`, `parallel_efficiency`, its source and `bound_by`.
+   - These are additive to `profiling-summary@3`, unless the producer task found that a version bump is needed.
+2. **Board and setup browser:** a per-call / per-node switch.
+   - Projected values carry a "projected" badge or hatching, plus a tooltip giving η and its source and the bounding limit.
+   - Measured values from phase 4 replace the badge when they arrive.
+   - The default view stays per-call until phase 4 measures η, so projections never headline.
+3. **Knowledge page:** "Comparing CPU-parallel and GPU-batched setups", which the autolens_assistant reads as decision rules. It covers:
+   - the formula;
+   - the memory cap per worker (ao ~25 GB) and whether the W~ operator is shared after fork (copy-on-write);
+   - parallel efficiency, declared until measured;
+   - the Nautilus batch ceiling;
+   - the JAX fork rule;
+   - the RAL reference hosts;
+   - the 2a worked examples (hst and ao Delaunay).

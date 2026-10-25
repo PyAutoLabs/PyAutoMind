@@ -289,3 +289,14 @@ Per dataset type under `setup_mode: auto`: Nautilus control, gradient samplers (
 ## 7. Resume note
 
 Start with the ledger's "How to orchestrate" section, then phase 0A. Do not re-run the surveys; they are current as of 2026-10-21 and cited by section above. Every phase prompt names its witness from §4 and its human gate from the ledger.
+
+## Amendment 2026-10-25: node throughput (human-approved)
+
+**Ruling:** numba CPU setups run one serial process per core under Nautilus multiprocessing, so CPU and GPU are compared as **throughput per node, or per hardware budget**, never by per-call latency alone. Phase 2 projects this; it does not run multi-worker jobs. The phase structure is unchanged. These are the changes:
+
+- **Phase 2 (new sub-task 2x, before 2b):** rows record `cpus_per_eval` and `peak_rss_gb`. The catalogue projects `projected_node_throughput` per declared reference host (RAL ral node 236 cores / 921 GB; RAL gpu node 124 cores / 885 GB / 4×A100; laptop), with a declared parallel efficiency η (1.0 upper bound until measured). Prompts: `draft/feature/autolens_profiling/likelihood_lifecycle_p2x_node_throughput.md` (producer, plus a 2a backfill from sacct) and `draft/feature/pyautopulse/likelihood_lifecycle_p2x_throughput_view.md` (Pulse view and research page).
+- **Phase 3 (designation):** keep separate Optimal GPU and Optimal CPU designations, but pre-register the comparison rule before reading the data: rank by projected throughput on the named hardware budget, and show per-call latency only as secondary evidence. Designations made before phase 4 carry `basis: projected` and are revisited when η is measured.
+- **Phase 4 (wall-time validation):** extend the planned 1/2/4/8/16/32 cores sweep on `ral` to 64 and 128 workers, and add a memory-limited ao case. Measure whether the W~ operator is shared between workers after fork, and the Nautilus `n_batch` ceiling. Feed the measured η per (setup, host) back to the producer, replacing the declared η.
+- **Phase 5 (`setup="auto"`):** the rule table and `number_of_cores="auto"` choose by throughput. The worker count is capped at min(cores / cpus_per_eval, available memory / peak_rss), so auto never forks more ao workers than memory allows. When a GPU and many cores are both present, the choice follows projected (later measured) throughput, not device type.
+- **Communication:** no summary, wiki page or dashboard headlines a "GPU is N× faster" figure from latency alone (2a example: hst Delaunay A100 is 27× faster per call, but a ral node projects to about 9× the A100's throughput at η = 1).
+
