@@ -30,3 +30,8 @@ TypeError: multiply requires ndarray or scalar arguments, got <class 'autoarray.
 
 1. Pass the raw array (e.g. `grid_radii.array`). Audit other `_cartesian_grid_via_radial_from` callers for the same pattern.
 2. Unit test of eager-NumPy vs `xp=jnp` vs `jax.jit` parity for `MassSheet` deflections.
+
+Issued: 2026-10-25
+
+## Execution 2026-10-25
+User authorized selecting and implementing four related tasks. Scope: Fix MassSheet JAX deflections. Separate branch and PR; no merge authorization. Related group executes serially with non-overlapping source edits.

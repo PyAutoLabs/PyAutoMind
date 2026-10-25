@@ -52,3 +52,8 @@ branch, so on-axis deflections are exactly `0` on both paths.
 - Existing deflection pins unchanged (the numpy path must not move at all).
 - Optional once landed: the `atol=1e-12` on the `mp.PowerLaw` calls in
   `profiles_jit.py` could be dropped again — but only with a green run to prove it.
+
+Issued: 2026-10-25
+
+## Execution 2026-10-25
+User authorized selecting and implementing four related tasks. Scope: Align PowerLaw JAX unit-vector transform. Separate branch and PR; no merge authorization. Related group executes serially with non-overlapping source edits.
