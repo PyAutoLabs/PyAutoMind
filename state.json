@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-10-25T14:40:08Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 2 in flight",
+  "updated": "2026-10-25T14:47:44Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -27,6 +27,18 @@
     },
     {
       "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1721 \u2014 Outcome",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1721",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1720 \u2014 Outcome",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1720",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1714 \u2014 ep-evidence-nonfinite",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1714",
       "prompt": null
@@ -41,6 +53,18 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1715 \u2014 What shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1715",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1722 \u2014 Outcome",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1722",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1723 \u2014 Outcome",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1723",
       "prompt": null
     },
     {
@@ -102,30 +126,6 @@
       "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
       "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Reduce the organism's per-session and per-task token load by half",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/organs/reduce_session_token_load.md",
-      "prompt": "Use the start-dev skill. draft/maintenance/organs/reduce_session_token_load.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Physical model check when speeding up smoke tests",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md",
-      "prompt": "Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Fix Sibson interpolation at internal edges",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md",
-      "prompt": "Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit/hpc_campaign_epic.md",
-      "prompt": "Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md"
     }
   ]
 }
