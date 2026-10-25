@@ -2,11 +2,17 @@
   "schema_version": 1,
   "organ": "mind",
   "repo": "PyAutoMind",
-  "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 2 in flight",
-  "updated": "2026-10-25T15:30:40Z",
+  "status": "red",
+  "headline": "RED \u2014 24 picks \u00b7 3 in flight",
+  "updated": "2026-10-25T15:57:34Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "red",
+      "text": "Install finufft in Array-based Colab bootstraps \u2014 awaiting-input",
+      "url": "https://github.com/PyAutoLabs/PyAutoNerves/issues/204",
+      "prompt": "Use the start-dev skill. active/colab_finufft_bootstrap.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -120,12 +126,6 @@
       "text": "pick: test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md",
       "prompt": "Use the start-dev skill. draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: SED chain waveband fit can spin forever in Nautilus exploration\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md",
-      "prompt": "Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md"
     }
   ]
 }

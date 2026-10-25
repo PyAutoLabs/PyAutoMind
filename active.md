@@ -1,4 +1,15 @@
 
+## colab-finufft-bootstrap
+- issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/204
+- issued: 2026-10-25
+- session: codex health review
+- status: awaiting-input
+- prompt: active/colab_finufft_bootstrap.md
+- location: /workspace/scratch/f77499d15f98/PyAutoNerves (session clone)
+- next: local correction validated (258 passed, 1 skipped; CPU NUFFT parity 7 passed); await named-issue corrective-PR authorization for Heart RED `install verification FAILED (testpypi; checks F)` before source commit/push/PR. No release or merge authorized.
+- repos:
+  - PyAutoNerves: feature/colab-finufft-bootstrap
+
 ## likelihood-lifecycle-p2a-imaging-campaign
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/456
 - issued: 2026-10-24
