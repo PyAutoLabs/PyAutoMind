@@ -15,28 +15,6 @@
 - repos:
   - autolens_profiling: feature/likelihood-lifecycle-p2x-node-throughput
 
-## pre-release-docs-config
-- issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/261
-- issued: 2026-10-25
-- status: blocked
-- session: codex health/hygiene cleanup
-- location: /workspace/scratch/f77499d15f98 (session clones)
-- prompt: active/pre_release_docs_config.md
-- next: HowToFit #76 and AutoGalaxy #262 merged. Explicitly authorized validation-only AutoFit draft PR #176 obtains missing notebook smoke evidence through existing CI. Keep draft/unmerged until every required exact-head job and notebook check passes; no tests waived.
-- repos:
-  - autofit_workspace: feature/pre-release-docs-config
-
-- heart-red-override:
-  - authorized: 2026-10-25, live human, "Ok do final bits and inprovememtns  and then prm what weve done"; prior "Ok continue i approve" retained for this task #261.
-  - reasons: install verification FAILED (testpypi; checks F) · release validation FAILED (stage integrate)
-  - scope: commit/push/PR for independently validated HowToFit and autogalaxy_workspace branches; current-turn merge only if every required CI leg passes. AutoFit remains blocked pending notebook validation. No release/rehearsal; this patch does not fix Heart.
-- workspace-pr: HowToFit https://github.com/PyAutoLabs/HowToFit/pull/76
-- workspace-pr: autogalaxy_workspace https://github.com/PyAutoLabs/autogalaxy_workspace/pull/262
-- merged: HowToFit https://github.com/PyAutoLabs/HowToFit/pull/76 @ bfca6a40420004b489b7ba257c415687b09249c2
-- merged: autogalaxy_workspace https://github.com/PyAutoLabs/autogalaxy_workspace/pull/262 @ c40228890eabd6eaad599fea3f849026d2cf711d
-- workspace-pr: autofit_workspace https://github.com/PyAutoLabs/autofit_workspace/pull/176 (DRAFT; validation only)
-- validation-exception: 2026-10-25 live user "Yeah do it" to explicit validation-only draft PR request. Commit/push/draft permitted despite missing local notebook runtime; merge/release prohibited until required evidence passes.
-
 ## matrix-free-interferometer-inversion
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/638
 - issued: 2026-10-21

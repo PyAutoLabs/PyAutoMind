@@ -1,3 +1,30 @@
+# Pre-release documentation and configuration consistency — completed
+
+Completed: 2026-10-25
+Issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/261
+
+## Delivered
+
+Five adjacent documentation boundaries repaired and 25 absent configuration leaves mirrored. All prose, executable AST, generated notebook code cells, existing YAML overrides and effective merged configuration preserved. Notebook generation used PyAutoHands main; catalogues unchanged.
+
+## Merge receipts
+
+- HowToFit #76: bfca6a40420004b489b7ba257c415687b09249c2; source 59e22b669f8f67f9d8d2c15613683760c3cc7e0d. Three documentation repairs, regenerated tutorial notebook. Eight exact-head CI jobs passed.
+- autogalaxy_workspace #262: c40228890eabd6eaad599fea3f849026d2cf711d; source 801a8cef57467b0371bebb9a9d0242ba753cfd4c. Two documentation repairs and 19 config leaves. Eight exact-head CI jobs passed.
+- autofit_workspace #176: ffe6dc8baea1a88d740f5e71ac0b09728eed7276; source 4778b42a1f0ce4616cd72f456e2af70a19d28852. Six config leaves. Seven exact-head CI jobs passed, including both notebook smoke entries on Python 3.12 and 3.13. Notebook timings 5.2/4.5s and 6.1/5.3s respectively.
+
+## Validation and authorization
+
+41 local script smoke checks passed. Local Jupyter was blocked by host socket permissions; explicit human "Yeah do it" authorized a validation-only draft to obtain notebook evidence through existing CI. No bypass or test changes; all required evidence passed before final human `Prm` and merge. Each merge confirmed through API. Author diff review only; no independent review claimed.
+
+Development shipping used recorded task-specific human approval under Heart RED. Exact reasons: install verification FAILED (testpypi; checks F); release validation FAILED (stage integrate). This work does not clear those blockers. No release or rehearsal; workspace repos have no PyPI pending-release obligation.
+
+## Remaining outside this task
+
+Heart monitoring remains incomplete; authoritative refresh/release validation, dev-box drift and the separate CI timing execution-coverage bug remain outstanding. Eight AutoLens doc boundaries and one config gap were excluded due to another active claim. Do not infer all health findings resolved from this completed hygiene batch. Session clones retained; no data products or user edits deleted.
+
+## Original prompt
+
 # Pre-release documentation and configuration consistency
 
 Type: refactor

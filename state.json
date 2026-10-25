@@ -2,17 +2,11 @@
   "schema_version": 1,
   "organ": "mind",
   "repo": "PyAutoMind",
-  "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 3 in flight",
-  "updated": "2026-10-25T17:25:47Z",
+  "status": "yellow",
+  "headline": "YELLOW \u2014 24 picks \u00b7 2 in flight",
+  "updated": "2026-10-25T17:26:23Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "red",
-      "text": "Pre-release documentation and configuration consistency \u2014 blocked",
-      "url": "https://github.com/PyAutoLabs/HowToFit/pull/76",
-      "prompt": "Use the start-dev skill. active/pre_release_docs_config.md"
-    },
     {
       "severity": "yellow",
       "text": "Likelihood lifecycle phase 2x: record cores-per-call and peak memory on every profiling\u2026 \u2014 workspace-shipped, awaiting-merge",
@@ -126,6 +120,12 @@
       "text": "pick: Fix KNN neighbor search for a partial final point block",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_assistant/ai_options_page_autolens_leg.md",
+      "prompt": "Use the start-dev skill. draft/docs/autolens_assistant/ai_options_page_autolens_leg.md"
     }
   ]
 }
