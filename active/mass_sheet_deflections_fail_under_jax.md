@@ -35,3 +35,14 @@ Issued: 2026-10-25
 
 ## Execution 2026-10-25
 User authorized selecting and implementing four related tasks. Scope: Fix MassSheet JAX deflections. Separate branch and PR; no merge authorization. Related group executes serially with non-overlapping source edits.
+
+## Implementation evidence (2026-10-25)
+
+- Library PR: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/662 at `36ec41b232d827f5342831f4d62939a9e7b4b64f`; published Git tree equals the tested local tree.
+- Full library suite: `python3 -m pytest -q -n auto test_autogalaxy`, 1356 passed, 6 skipped; Python 3.12, released 2026.10.25.1 dependencies.
+- Log: `/workspace/scratch/e0d55f00a4c5/evidence/mass-sheet-jax-suite.log`.
+- Heart readiness GREEN, score 100, no reasons; evidence timestamp 2026-10-25T20:54:46Z.
+- GitHub Tests and Docs for the exact PR head were running at the final check; no CI success or merge claimed.
+- Merge mode: human `/prm`; no merge, close-out or release authorized/performed.
+- Workspace regression PR: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/128 (draft). Direct script passes with JAX 0.11.2 on this branch and fails against unmodified main; smoke-list entry added. Full workspace CI pending library availability.
+- JAX log: `/workspace/scratch/e0d55f00a4c5/evidence/mass-sheet-jax-jax.log`.

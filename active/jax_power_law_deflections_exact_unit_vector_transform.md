@@ -57,3 +57,15 @@ Issued: 2026-10-25
 
 ## Execution 2026-10-25
 User authorized selecting and implementing four related tasks. Scope: Align PowerLaw JAX unit-vector transform. Separate branch and PR; no merge authorization. Related group executes serially with non-overlapping source edits.
+
+## Implementation evidence (2026-10-25)
+
+- Library PR: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/663 at `499827fe23c5804351d936823d1b01e7917527a4`; published Git tree equals the tested local tree.
+- Full library suite: `python3 -m pytest -q -n auto test_autogalaxy`, 1356 passed, 6 skipped; Python 3.12, released 2026.10.25.1 dependencies.
+- Log: `/workspace/scratch/e0d55f00a4c5/evidence/power-law-jax-axis-suite.log`.
+- Heart readiness GREEN, score 100, no reasons; evidence timestamp 2026-10-25T20:54:46Z.
+- GitHub Tests and Docs for the exact PR head were running at the final check; no CI success or merge claimed.
+- Merge mode: human `/prm`; no merge, close-out or release authorized/performed.
+- Workspace regression PR: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/129 (draft). Direct script passes with JAX 0.11.2 on this branch and fails against unmodified main; smoke-list entry added. Full workspace CI pending library availability.
+- JAX log: `/workspace/scratch/e0d55f00a4c5/evidence/power-law-jax-axis-jax.log`.
+- Exact axial zero components restored. Nonzero components retain series rounding differences (maximum seen 1.25e-12); no claim of full bitwise identity. Focused parity uses rtol=1e-10 and atol=0. Centre jacrev is finite. Local CPU 10000-point JIT medians: old 696.8 us, new 354.1 us (single process timing, not a portable speed claim). Existing autolens workspace tolerance retained; its removal is optional in the prompt and was not validated here.
