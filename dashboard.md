@@ -943,7 +943,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p2x_node_throughput.md">Likelihood lifecycle phase 2x: record cores-per-call and peak memory on every profiling…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/462">issue #462</a> — issued 2026-10-25 — workspace-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p2x_node_throughput.md">Likelihood lifecycle phase 2x: record cores-per-call and peak memory on every profiling…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/462">issue #462</a> — issued 2026-10-25 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/463">autolens_profiling#463</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p2x_node_throughput.md
