@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-1992 records across 10 buckets.
+1996 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -137,6 +137,7 @@ markers; everything below GENERATED is rebuilt.
 - [autocti-viz-render-from-mains](2026/10/autocti-viz-render-from-mains.md) — `autocti_visualization/.github/workflows/render.yml` could never pass. It installed `autocti[optional]` from P…
 - [benchmark-forward-model-consistency](2026/10/benchmark-forward-model-consistency.md) — Added the frozen imaging/point-source/interferometer consistency card, physical conversions, source-centre-awa…
 - [benchmark-positions-inference](2026/10/benchmark-positions-inference.md)
+- [bfgs-checkpoint-resume](2026/10/bfgs-checkpoint-resume.md)
 - [board-navigation-core](2026/10/board-navigation-core.md)
 - [board-navigation-ears](2026/10/board-navigation-ears.md)
 - [board-navigation-eyes](2026/10/board-navigation-eyes.md)
@@ -209,7 +210,9 @@ markers; everything below GENERATED is rebuilt.
 - [ecosystem-layers](2026/10/ecosystem-layers.md)
 - [ecosystem-role-docs](2026/10/ecosystem-role-docs.md)
 - [ecosystem-routing-trial](2026/10/ecosystem-routing-trial.md) — Evaluated the role-routing checklist and specified future profiling/inference organ read contracts; no runtime…
+- [emcee-jax-dispatch-guard](2026/10/emcee-jax-dispatch-guard.md)
 - [ep-evidence-nonfinite](2026/10/ep-evidence-nonfinite.md)
+- [ep-test-output-isolation](2026/10/ep-test-output-isolation.md)
 - [ep-zero-success-factors](2026/10/ep-zero-success-factors.md)
 - [euclid-smoke-ordered-shard](2026/10/euclid-smoke-ordered-shard.md)
 - [euclid-smoke-release-gate](2026/10/euclid-smoke-release-gate.md)
@@ -296,6 +299,7 @@ markers; everything below GENERATED is rebuilt.
 - [matrix-free-interferometer-phase3](2026/10/matrix-free-interferometer-phase3.md)
 - [matrix-free-interferometer-phase4](2026/10/matrix-free-interferometer-phase4.md)
 - [matrix-zeus-smoke-install](2026/10/matrix-zeus-smoke-install.md)
+- [mcmc-short-chain-guards](2026/10/mcmc-short-chain-guards.md)
 - [memory-board-header-contract](2026/10/memory-board-header-contract.md)
 - [memory-cockpit-catch-up](2026/10/memory-cockpit-catch-up.md) — Lensing-specific catch-up freshness drives the HTML/Markdown banner and cockpit feed. Structured cutoff, age, …
 - [memory-digest-state](2026/10/memory-digest-state.md)

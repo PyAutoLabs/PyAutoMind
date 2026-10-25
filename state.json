@@ -3,34 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-10-25T15:14:32Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 2 in flight",
+  "updated": "2026-10-25T15:30:40Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "`@PyAutoFit` BFGS/LBFGS resume reads `[\"x0\"]` from the saved scipy result and cannot\u2026 \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1731",
-      "prompt": "Use the start-dev skill. active/bfgs_resume_reads_x0_from_scipy_result.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "`@PyAutoFit` `test_emcee_call_path_runs_at_jitted_speed` is a wall-clock ratio assertion that flakes on shared CI\u2026 \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1729",
-      "prompt": "Use the start-dev skill. active/emcee_jax_timing_test_flaky_on_ci.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "EP test suite is not xdist-safe: tests share one on-disk output directory \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1728",
-      "prompt": "Use the start-dev skill. active/ep_test_suite_is_not_xdist_safe.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Emcee/Zeus: thin can be 0, and check_size blows up on short chains \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1730",
-      "prompt": "Use the start-dev skill. active/mcmc_thin_zero_and_check_size_short_chain.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -63,8 +39,26 @@
     },
     {
       "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1731 \u2014 Outcome and validation",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1731",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1729 \u2014 Outcome and validation",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1729",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1714 \u2014 ep-evidence-nonfinite",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1714",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1728 \u2014 Outcome and validation",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1728",
       "prompt": null
     },
     {
@@ -83,6 +77,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1722 \u2014 Outcome",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1722",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1730 \u2014 Outcome and validation",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1730",
       "prompt": null
     },
     {

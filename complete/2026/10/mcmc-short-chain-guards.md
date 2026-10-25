@@ -1,3 +1,27 @@
+# mcmc-short-chain-guards
+
+- completed: 2026-10-25
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1725
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1730
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1730
+- head: 6830c2ee1b1df53dcce96784186c1cd04f31d535
+- merge-commit: 5f770987f2642fdb3a0b83830c3707657282df97
+- authorization: human "Yes I authorise" for development after disclosed RED; subsequent human "Prm" for merge and closeout. No release authorized or performed.
+
+## Outcome and validation
+
+Full library suite: 3922 passed, 1 skipped, 1 xfailed (Python 3.12.14). Focused MCMC tests: 14 passed, including real Emcee/Zeus reduced fits with default check_size=100. Additional real Emcee smoke: 10 walkers, 50 steps, test mode disabled, samples built and previous_times=None. Six new regression cases fail on unchanged main (zero thin and empty previous chain), while ordinary thinning remains unchanged. Author diff review passed.
+
+Every workflow and job at the published head passed, including Python 3.12, Python 3.13 and no-JAX, plus docs where applicable. Freeze clear. Source and output identifier logic unchanged during PRM. Author review only; no independent adversary claimed. Published head is an ancestor of origin/main. Local authored commit has an identical tree to the API-published head (different commit metadata); no implementation changes between shipping and merge.
+
+## Closeout
+
+Issue closed as completed. Lifecycle close folds the original prompt, removes the active claim and refreshes the index. Dashboard regenerated with the records. Pending-release key repaired from the verified GitHub label before closeout and carried forward. All four worktrees and their local feature branches removed after verifying identical published trees and merged ancestry. Stage-1 shadow row appended from observed unchanged heads; count after the four closeouts: 53/20. Mind ledger branch will land through the repository ledger automation.
+
+Original Heart RED disclosure retained (not cleared by this task): install verification FAILED (testpypi; checks F); release validation FAILED (stage integrate); PyAutoHeart/workflows/Release Integrate: failure; manifest_drift/checks/workspace checkouts (manifest ↔ disk): red; Release readiness: release validation FAILED (stage integrate); Release readiness: install verification FAILED (testpypi; checks F); PyAutoArray/test_autoarray/inversion/inversion/interferometer/test_interferometer.py::test__interferometer_sparse_operator__mapped_reconstructed_data_dict_matc…; Unit-test timing: 1 test regressions (>3× baseline), 11 slow (>1.5×); Release validation: NOT release_ready — v2026.10.25.1.dev83701 profile=release (2026-10-25T07:21:05+00:00); validation_report/stages/integrate: fail; verify_install FAILED: verify_install FAILED; F: colab gate: finufft (declared by autoarray, absent on Colab, imported); Install verification: FAILED (testpypi; F) (2026-10-25T07:42:48.134987+00:00); verify_install: red; PyAutoBrain: red; PyAutoLens: red; autolens_profiling: red; Worktree drift: 1 orphan / 0 missing / 3 dirty.
+
+## Original prompt
+
 # Emcee/Zeus: thin can be 0, and check_size blows up on short chains
 
 Issued: 2026-10-25
