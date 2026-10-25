@@ -475,7 +475,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 49 (stage 1: 49, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — the pre-registered decision is due
+Count toward 20: 53 (stage 1: 53, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — the pre-registered decision is due
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -553,3 +553,7 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-10-25 | assertion-repr (PyAutoFit#1720) | glance | tests green / smoke not run (disclosed) / review human prm / heart STALE, not frozen / witness passed | merged-unchanged | 1 |
 | 2026-10-25 | assertion-names (PyAutoFit#1721) | glance | tests green / smoke not run (disclosed) / review human prm / heart STALE, not frozen / witness passed | merged-unchanged | 1 |
 | 2026-10-25 | fixed-instance-tuples (PyAutoFit#1722) | glance | tests green / smoke not run (disclosed) / review human prm / heart STALE, not frozen / witness passed | merged-unchanged | 1 |
+| 2026-10-25 | bfgs-checkpoint-resume (PyAutoFit#1731) | glance | tests Full library suite: 3919 passed, 1 skipped, 1 xfailed (Python 3.12.14) and all head CI jobs PASS / smoke task witnesses recorded; no downstream workspace smoke claimed / review author only; human Prm / heart RED development override; freeze clear / witness regressions PASS | merged-unchanged | 1 |
+| 2026-10-25 | mcmc-short-chain-guards (PyAutoFit#1730) | glance | tests Full library suite: 3922 passed, 1 skipped, 1 xfailed (Python 3.12.14) and all head CI jobs PASS / smoke task witnesses recorded; no downstream workspace smoke claimed / review author only; human Prm / heart RED development override; freeze clear / witness regressions PASS | merged-unchanged | 1 |
+| 2026-10-25 | ep-test-output-isolation (PyAutoFit#1728) | glance | tests Full library suite: 3913 passed, 1 skipped, 1 xfailed and all head CI jobs PASS / smoke task witnesses recorded; no downstream workspace smoke claimed / review author only; human Prm / heart RED development override; freeze clear / witness regressions PASS | merged-unchanged | 1 |
+| 2026-10-25 | emcee-jax-dispatch-guard (PyAutoFit#1729) | glance | tests Focused JAX dispatch tests: 3 passed, 1 skipped (opt-in profiling) and all head CI jobs PASS / smoke task witnesses recorded; no downstream workspace smoke claimed / review author only; human Prm / heart RED development override; freeze clear / witness regressions PASS | merged-unchanged | 1 |
