@@ -959,7 +959,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/pre_release_docs_config.md">Pre-release documentation and configuration consistency</a> — <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/issues/261">issue #261</a> — issued 2026-10-25 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/HowToFit/pull/76">HowToFit#76</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/262">autogalaxy_workspace#262</a></summary>
+<details><summary>📋 <a href="active/pre_release_docs_config.md">Pre-release documentation and configuration consistency</a> — <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/issues/261">issue #261</a> — issued 2026-10-25 — blocked — PRs: <a href="https://github.com/PyAutoLabs/HowToFit/pull/76">HowToFit#76</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/262">autogalaxy_workspace#262</a></summary>
 
 ```
 Use the start-dev skill. active/pre_release_docs_config.md

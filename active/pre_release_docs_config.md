@@ -51,3 +51,7 @@ Live user: "Ok do final bits and inprovememtns  and then prm what weve done". In
 ## Partial merge receipt — 2026-10-25
 
 User: "Prm but make their cu fully pass?". HowToFit #76: every exact-head workflow completed successfully, all eight jobs passed including Python 3.12 and 3.13 smoke; clean merge state. Merged and confirmed via API at bfca6a40420004b489b7ba257c415687b09249c2 (source head 59e22b669f8f67f9d8d2c15613683760c3cc7e0d). AutoGalaxy #262: 7/8 jobs passed, only Python 3.12 smoke running; no red check, no rerun or speculative source fix. Required MCP prm stop on pending. Task not complete: AutoGalaxy unmerged and AutoFit notebook evidence missing. No release, test waiver, cleanup or background action.
+
+## AutoGalaxy merge receipt — 2026-10-25
+
+User: "Prm I am good for you to do it". AutoGalaxy #262 confirmed merged at c40228890eabd6eaad599fea3f849026d2cf711d, source head 801a8cef57467b0371bebb9a9d0242ba753cfd4c. All three workflows completed successfully; eight jobs passed, including both Python smoke legs, all navigator checks and size guard. Clean merge state before merge. Both published PRs now merged: five doc repairs and 19 config mirrors delivered. Released their active repo claims; retained the AutoFit claim and recoverable six-leaf config patch. Task/issue remains open because AutoFit notebook runtime evidence is unavailable. No test changes, waiver, source cleanup or release.
