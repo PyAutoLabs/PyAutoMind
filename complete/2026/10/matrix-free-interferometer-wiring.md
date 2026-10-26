@@ -1,3 +1,20 @@
+## matrix-free-interferometer-wiring
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/657
+- completed: 2026-10-26
+- parent: matrix-free-interferometer-inversion (PyAutoArray#638, phase 5a)
+- community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/658
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/670
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/658
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/670
+- summary: `aa.InversionInterferometerMatrixFree` (subclass of `InversionInterferometerSparse`) selectable via `Settings(interferometer_route="matrix_free")`; factory dispatch before the numba gate, no silent fallback; dense attributes raise `InversionException`; inversion plotter skips the noise map on the route. PyAutoGalaxy `FitInterferometer` reaches it through Settings with no source change (tests only). Parity vs FFT route: reconstruction ~1e-11, SLQ ln det 0.10% of dense, evidence within 0.09–0.14 nats of a 0.55 tolerance.
+- decisions: over-sampling and primary beam SUPPORTED (prompt listed them unsupported; sparse triplets already fold them in); positive-only + `use_edge_zeroed_pixels=True` RAISES, so packaged defaults need `use_edge_zeroed_pixels=False` (5c example must say so); only `MaternSparse` accepted; mesh must be `RectangularUniform`.
+- heart-red-override: live human 2026-10-26 ("I approve of the overrider", "approve" on the plan); development shipping + a separate human `/prm` merge; exact RED reasons and gates on issue #657 and in autonomy_log.md (red-override row). No release.
+- traps: Galaxy CI (`lib-tests.yml`) clones dependency libraries on the matching branch name, so a stacked same-name branch tests green before the upstream merges; Mind commit hook wants an explicit file list under a dirty shared checkout.
+- next: 5b profiling note + 5c workspace example in `draft/research/autolens_profiling/matrix_free_interferometer_phase5.md`, after the release carrying #658; uncertainty maps / multiple mappers / linear light profiles / JAX out of scope.
+
+## Original prompt
+
 # Matrix-free interferometer inversion, phase 5a: make it selectable from a fit
 
 Type: feature

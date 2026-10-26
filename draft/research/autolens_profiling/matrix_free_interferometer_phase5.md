@@ -22,7 +22,7 @@ Blocked-by: none for the profiling leg (runs against checkouts; phases 1-4 on ma
 
 ## What
 
-1. Wiring: SPLIT OUT 2026-10-26 as phase 5a — `draft/feature/autoarray/matrix_free_interferometer_wiring_5a.md` (an `InversionInterferometerMatrixFree` class behind `Settings(interferometer_route="matrix_free")`). 5b = item 2 below, 5c = item 3; both depend on 5a.
+1. Wiring: DONE 2026-10-26 as phase 5a — `complete/2026/10/matrix-free-interferometer-wiring.md` (PyAutoArray#657 → #658 + Galaxy#670, pending release; an `InversionInterferometerMatrixFree` class behind `Settings(interferometer_route="matrix_free")`). 5b = item 2 below, 5c = item 3; both depend on 5a.
 2. Profiling campaign in autolens_profiling (laptop CPU + RAL `ral` partition CPU legs; A100 only if a JAX leg exists by then): dense sparse-path vs matrix-free (unconstrained and positive) at 50², 64², 128², 192²; record time, peak RSS, evidence difference; note with decision rules for the assistant ([[AssistantReadsProfiling]]); summary in the Pulse `profiling-summary` contract.
 3. Workspace: `interferometer/advanced/matrix_free.py` example + docs.
 4. Thread update with the table; this is the human's lead-in to the full PyAutoPulse profiling programme.

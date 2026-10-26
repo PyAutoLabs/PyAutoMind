@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2018 records across 10 buckets.
+2019 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -310,6 +310,7 @@ markers; everything below GENERATED is rebuilt.
 - [matrix-free-interferometer-phase2](2026/10/matrix-free-interferometer-phase2.md)
 - [matrix-free-interferometer-phase3](2026/10/matrix-free-interferometer-phase3.md)
 - [matrix-free-interferometer-phase4](2026/10/matrix-free-interferometer-phase4.md)
+- [matrix-free-interferometer-wiring](2026/10/matrix-free-interferometer-wiring.md) — `aa.InversionInterferometerMatrixFree` (subclass of `InversionInterferometerSparse`) selectable via `Settings(…
 - [matrix-zeus-smoke-install](2026/10/matrix-zeus-smoke-install.md)
 - [mcmc-short-chain-guards](2026/10/mcmc-short-chain-guards.md)
 - [memory-board-header-contract](2026/10/memory-board-header-contract.md)

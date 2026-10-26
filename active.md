@@ -6,28 +6,6 @@
 - community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
 - prompt: active/matrix_free_interferometer_inversion.md
 
-## matrix-free-interferometer-wiring
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/657
-- issued: 2026-10-26
-- parent: matrix-free-interferometer-inversion (PyAutoArray#638, phase 5a)
-- community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
-- prompt: active/matrix_free_interferometer_wiring_5a.md
-- session: Claude Code CLI (Fable 5.1); session ID unavailable
-- status: library-shipped, awaiting-merge (stacked: PyAutoArray#658 first, then PyAutoGalaxy#670)
-- heart-red-override:
-  - authorized: live human 2026-10-26 "I approve of the overrider" (launch) + "approve" on the plan naming PyAutoArray#657; development shipping only, no release, merge by separate human /prm
-  - red: release validation FAILED (stage integrate); PyAutoHeart/workflows/Release Integrate: failure; PyAutoHeart/workflows/Workspace Smoke: failure; manifest_drift/checks/workspace checkouts (manifest ↔ disk): red; Release readiness: release validation FAILED (stage integrate); autolens: red; Workspace validation: NOT ready — 1429p / 1f / 125s @ cloud#40294511523; test_run: red; Release validation: NOT release_ready — v? profile=? (2026-10-26T07:48:52+00:00); validation_report/stages/integrate: fail; PyAutoBrain: red; PyAutoLens: red; autolens_profiling: red; Worktree drift: 1 orphan / 0 missing / 3 dirty
-  - gates: PyAutoArray full suite 2212 passed/4 xfailed; PyAutoGalaxy full suite 1391 passed; black; targeted smoke autolens_workspace_test interferometer/model_fit.py exit 0
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/658
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/670
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/658
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/670
-- decisions: over-sampling + primary beam supported (prompt listed them unsupported; parity ~1e-11); positive-only + use_edge_zeroed_pixels raises (packaged defaults need use_edge_zeroed_pixels=False); MaternSparse only
-- worktree: ~/Code/PyAutoLabs-wt/matrix-free-interferometer-wiring
-- repos:
-  - PyAutoArray: feature/matrix-free-interferometer-wiring
-  - PyAutoGalaxy: feature/matrix-free-interferometer-wiring
-
 ## corner-plot-workspace-config
 - issue: https://github.com/PyAutoLabs/autofit_workspace/issues/177
 - issued: 2026-10-26

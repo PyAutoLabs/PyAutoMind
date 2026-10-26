@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-10-26T17:26:51Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
+  "updated": "2026-10-26T17:30:07Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,12 +12,6 @@
       "text": "Carry assistant context into every Colab notebook via Gemini Custom Instructions \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/541",
       "prompt": "Use the start-dev skill. active/colab_custom_instructions_assistant_context.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Matrix-free interferometer inversion, phase 5a: make it selectable from a fit \u2014 library-shipped, awaiting-merge (stacked: PyAutoArray#658 first, then PyAutoGalaxy#670)",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/658",
-      "prompt": "Use the start-dev skill. active/matrix_free_interferometer_wiring_5a.md"
     },
     {
       "severity": "yellow",
@@ -33,12 +27,6 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#658 \u2014 Matrix-free interferometer inversion, phase 5a: make it selectable from a fit",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/658",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#656 \u2014 config-leaf-comments",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/656",
       "prompt": null
@@ -47,6 +35,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#655 \u2014 What shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/655",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#658 \u2014 matrix-free-interferometer-wiring",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/658",
       "prompt": null
     },
     {
@@ -123,8 +117,14 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#670 \u2014 Matrix-free interferometer inversion, phase 5a: make it selectable from a fit",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/670",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#667 \u2014 config-leaf-comments",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/667",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#656 \u2014 Outcome and authority",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656",
       "prompt": null
     }
   ]
