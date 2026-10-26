@@ -61,18 +61,19 @@
 - issued: 2026-10-26
 - prompt: active/colab_custom_instructions_assistant_context.md
 - session: Claude Code CLI; session ID unavailable
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/541, https://github.com/PyAutoLabs/autolens_assistant/pull/165, https://github.com/PyAutoLabs/PyAutoHands/pull/325
+- status: phase-2-pending
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/541, https://github.com/PyAutoLabs/autolens_assistant/pull/165, https://github.com/PyAutoLabs/PyAutoHands/pull/325 (phase 1, ALL MERGED 2026-10-26 by human)
 - heart-red-override:
   authorization: live human 2026-10-26 "prm, I authorize shop on RED"
   reasons: release validation FAILED (stage integrate); PyAutoHeart/workflows/Release Integrate: failure; PyAutoHeart/workflows/Workspace Smoke: failure; manifest_drift/checks/workspace checkouts (manifest ↔ disk): red; Release readiness: release validation FAILED (stage integrate); autolens: red; Workspace validation: NOT ready — 1429p / 1f / 125s @ cloud#40294511523; test_run: red; Release validation: NOT release_ready — v? profile=? (2026-10-26T07:48:52+00:00); validation_report/stages/integrate: fail; PyAutoBrain: red; PyAutoLens: red; autolens_profiling: red; Worktree drift: 1 orphan / 0 missing / 3 dirty
   gates: Hands 558 tests; assistant 14 colab tests + check; Brain 64 clone tests; independent review no blockers (4 fixed)
-- worktree: ~/Code/PyAutoLabs-wt/colab-gemini-instructions
+- worktree: ~/Code/PyAutoLabs-wt/colab-gemini-instructions (phase-1 branches merged; worktree_remove refuses while the task is active — recreate per phase, remove at completion)
 - repos:
-  - PyAutoHands: feature/colab-gemini-instructions
-  - autolens_assistant: feature/colab-gemini-instructions
-  - PyAutoBrain: feature/colab-gemini-instructions
 - summary: |
+    PHASE 1 MERGED 2026-10-26 (Brain#541, autolens_assistant#165, Hands#325); human verified Colab
+    upload, size (52k) and GitHub-badge routes. Workspace notebooks get instructions at next release.
+    NEXT phase 2: autogalaxy_assistant + autofit_assistant colab/contexts.yaml, then set release.yml
+    assistant: for galaxy/fit/HowToGalaxy/HowToFit. Then phase 3 CTI (Hands CLI), phase 4 upkeep skills.
     Phase 1 of 4 (+ Brain clone-boundary `colab/*` mixed — assistant PR declares Brain-ref) (Hands injector + CLI, release checkout, autolens_assistant colab/contexts.yaml + cosmos
     notebook). Human-approved 2026-10-26: 20k-char cap, human /prm (glance overridden), Heart RED
     dev-only override. Phase 2 galaxy + fit mappings, phase 3 CTI via CLI. Human gate before merge:
