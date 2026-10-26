@@ -34,6 +34,11 @@ the DR1 catalogue has ~2 weeks of prep left (release target ~2026-11-09).
 - Target end state for DR1 v1.0 (not a later v1.1): every figure north-up, east-left with a correct N/E compass and
   sky-frame axis labels; sky-frame columns throughout; FITS/WCS consistent; COOLEST-consistent conventions;
   documented in one guide. Everything is regenerated from the stored fit results.
+- END POINT = CONSISTENCY with COOLEST, lenstronomy and herculens: a reader can take any DR1 orientation quantity
+  into those codes without guessing. Consistency is achieved by catalogue-level additions (sky-frame and
+  code-convention columns, documented conversions, re-rendered figures), NOT by changing PyAutoArray / PyAutoGalaxy
+  / PyAutoLens rotation or coordinate conventions. No library source change to how FITS are loaded, how angles or
+  ell_comps are defined, or how (y, x) map to pixels.
 - Planned for the strongest model (Fable architect, Opus execution), as a multi-phase epic: survey -> design ->
   RAL re-render campaign -> rebuild -> verify -> release. The full-tier packaging run waits on this (re-rendered
   PNGs supersede the current ones).
@@ -78,11 +83,25 @@ wcs.csv) must be monitored carefully:
 3. Check that release model FITS (model.fits, pre_psf.fits, source reconstructions) carry WCS headers consistent with
    their pixel order (a copied WCS on an unflipped array would be mislabelled).
 4. Scan all cutout WCS headers for rotation or parity outliers.
+5. Research lenstronomy and herculens conventions from their source and docs (cite file:line / doc URL): pixel ->
+   angle mapping (lenstronomy's transform_pix2angle / ra_at_xy_0, whether +x is west or east, whether they flip FITS
+   rows), position-angle origin and direction, e1/e2 and gamma1/gamma2 definitions, centre conventions; herculens
+   (follows lenstronomy closely - confirm where it differs). Also re-read the COOLEST standard's own axis/angle
+   definitions. Produce one conversion table: PyAutoLens native frame (+y south, +x west for DR1) -> sky
+   (PA east of north, RA/Dec, east/north offsets) -> COOLEST -> lenstronomy -> herculens, with a round-trip test on
+   a simulated lens for each (research-only scripts; no library edits).
+6. Positions frame: RESOLVED 2026-10-26 from the code. positions.json = peaks of segmentation/source_flux.fits read
+   with fits.getdata (no row flip), pixel_to_arcsec y = (ny/2 - 0.5 - row) * ps (positions_finder.py:477), the same
+   as al.Imaging.from_fits (no row flip, util.py:1098); segmentation matches VIS. All fit inputs share one frame, so
+   no fit is invalid. Still overlay positions on a few asymmetric lenses as the Witness. Fix the finder docstring
+   "(y up, x right)" wording (true on screen, +y is south on the sky).
 
 ## Phase 2 — euclid_dr1 work (after phase 1 is signed off)
 - CSV snapshot builder (scripts/tools/csv_snapshot/): ADD sky-frame columns (PA east of north for lens light, mass,
   shear, source; east/north offsets) next to the fitted values, from stored results only; document both frames in
-  master_columns.csv. Required before the PUBLIC release so every orientation number in the paper appears verbatim
+  master_columns.csv. Where the phase-1 table shows lenstronomy/herculens/COOLEST conventions differ from the sky
+  frame, add their columns too (or a documented one-line conversion each), so the catalogue is directly usable in
+  all three. Required before the PUBLIC release so every orientation number in the paper appears verbatim
   in the catalogue. Existing columns unchanged.
 - Docs: one paragraph in README / KNOWN_ISSUES / the website about page: FITS, RA/Dec and sky-frame columns are
   standard; per-lens diagnostic PNGs are in the native pipeline frame (north down, east left).
@@ -97,19 +116,21 @@ wcs.csv) must be monitored carefully:
 - Not in scope: pixel-flipping existing PNGs (text and ticks invert) - re-render instead.
 
 ## Phase 3 — library-wide (PyAutoArray / PyAutoGalaxy / PyAutoLens / HowToLens, all users)
-- Decide the convention: row flip at FITS load so +y = north, or keep the current frame and make it explicit.
-- Sky-frame conversion utilities for oriented quantities (PA east of north; e1/e2; gamma_1/gamma_2; centres to RA/Dec
+- KEEP the current conventions (no row flip at load, angles and ell_comps unchanged, (y, x) mapping unchanged):
+  no source change to rotations or coordinate conventions. Make the frame explicit instead.
+- Additive only: sky-frame conversion utilities for oriented quantities (PA east of north; e1/e2; gamma_1/gamma_2; centres to RA/Dec
   via the dataset WCS), with sign tests on a simulated lens through a real WCS.
 - Optional N/E compass overlay on visualizer figures when a WCS is known; consistent axis labelling.
 - Document the convention in workspace / HowToLens docs.
-- Backwards compatible or an explicit opt-in switch: existing fits and result files (including files/wcs.json)
-  stay valid and unchanged.
+- Backwards compatible and additive: existing fits and result files (including files/wcs.json) stay valid and
+  unchanged; any north-up plotting is a display option, never a change to the data or model frame.
 - COOLEST interop (PyAutoGalaxy autogalaxy/interop/coolest/conventions.py, PyAutoLens autolens/interop/coolest.py)
   ASSUMES PyAutoGalaxy +y is north: phi_coolest_from() returns angle - 90 as "East-of-North" and
   center_from_centre() only reorders (y, x) -> (x, y) with "y increasing upwards". For data loaded like DR1
   (+y = south) a COOLEST export would carry mirrored PAs/centres. Verify against the COOLEST standard's own
-  axis definitions, and make the COOLEST conversions and the new sky-frame utilities share ONE convention
-  implementation (one source of truth, tested together).
+  axis definitions. Do NOT change the COOLEST conversion maths in this task; document the assumption, and if it is
+  wrong for unflipped data, provide the correction as an additive wrapper/argument (or file a separate prompt),
+  tested together with the sky-frame utilities.
 - Timing: the DR1 re-render needs the north-up plotting path within the 2-week window. Land the minimal library
   pieces it needs first (orientation-aware plotting + sky-frame conversion utilities), or, if the library design
   cannot land in time, implement the flip in the euclid_dr1 re-render scripts and port it to the library after;
@@ -126,8 +147,10 @@ coordinates and orientation. It must fully explain:
 - The explicit mapping from north/south/east/west to pixel and arcsec units, for data loaded as-is and for data
   loaded under whatever convention phase 3 adopts, with a worked example on a simulated lens through a real WCS.
 - Converting results to the sky frame: PA east of north, centres to RA/Dec, using the phase-3 utilities.
-- COOLEST: link to the COOLEST standard (https://github.com/aymgal/COOLEST) and to the PyAutoLens/PyAutoGalaxy
-  COOLEST interop, showing that the guide, the utilities and the COOLEST export agree on one example.
+- COOLEST, lenstronomy and herculens: link to the COOLEST standard (https://github.com/aymgal/COOLEST), the
+  PyAutoLens/PyAutoGalaxy COOLEST interop and the lenstronomy / herculens convention docs; include the phase-1
+  conversion table and show on one example that the guide, the utilities, the COOLEST export and the
+  lenstronomy/herculens conventions agree.
 - Placement: follow the workspace's guides/ conventions (consult the Workspace Agent for target folder, sibling
   to mirror and format; scripts with notebooks generated as usual). Link it from the workspace README / docs index.
 
