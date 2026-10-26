@@ -7,7 +7,9 @@ Repos:
 Difficulty: small
 Autonomy: safe
 Priority: low
-Status: formalised
+Status: issued
+Issued: 2026-10-26
+Issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/666
 Consequence: glance
 Witness: Either `config/priors/light/linear_operated/sersic.yaml` exists mirroring `linear/sersic.yaml`, or the folder README states the MRO fallback is intended; in both cases `test_autogalaxy/test_priors_config.py` encodes the chosen rule and passes.
 Review-minutes: 3
