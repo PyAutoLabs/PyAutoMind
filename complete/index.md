@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2013 records across 10 buckets.
+2014 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -355,6 +355,7 @@ markers; everything below GENERATED is rebuilt.
 - [pointsolver-extent-sanity-check](2026/10/pointsolver-extent-sanity-check.md)
 - [positions-source-jacobian-default](2026/10/positions-source-jacobian-default.md)
 - [power-law-jax-axis](2026/10/power-law-jax-axis.md)
+- [pr-backlog-independent-merges](2026/10/pr-backlog-independent-merges.md)
 - [pre-release-docs-config](2026/10/pre-release-docs-config.md)
 - [prior-stable-test-ids](2026/10/prior-stable-test-ids.md)
 - [prior-summary-ranges](2026/10/prior-summary-ranges.md)
