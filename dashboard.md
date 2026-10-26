@@ -943,7 +943,7 @@ Use the start-dev skill. active/config_key_mirror_drift.md
 
 </details>
 
-<details><summary>📋 <a href="active/config_yaml_keys_missing_their_one_line.md">Config yaml keys missing their one-line explanatory comment</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1732">issue #1732</a> — issued 2026-10-26 — approved, setup in progress</summary>
+<details><summary>📋 <a href="active/config_yaml_keys_missing_their_one_line.md">Config yaml keys missing their one-line explanatory comment</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1732">issue #1732</a> — issued 2026-10-26 — library-dev</summary>
 
 ```
 Use the start-dev skill. active/config_yaml_keys_missing_their_one_line.md
@@ -975,7 +975,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/sync_remaining_workspace_config_priors_copies.md">Sync remaining workspace config/priors copies</a> — <a href="https://github.com/PyAutoLabs/HowToGalaxy/issues/90">issue #90</a> — issued 2026-10-26 — approved, setup in progress</summary>
+<details><summary>📋 <a href="active/sync_remaining_workspace_config_priors_copies.md">Sync remaining workspace config/priors copies</a> — <a href="https://github.com/PyAutoLabs/HowToGalaxy/issues/90">issue #90</a> — issued 2026-10-26 — workspace-dev</summary>
 
 ```
 Use the start-dev skill. active/sync_remaining_workspace_config_priors_copies.md
