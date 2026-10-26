@@ -1,3 +1,32 @@
+## Outcome
+
+Phase 3 of PyAutoFit#1709 shipped: workspace config keys (`plots_search.yaml` anesthetic corner/latent keys, `output.yaml` `latent_model_parameters`, `notation.yaml` superscript comments) and docs/notebooks for component-path corner-plot labels and latent plots, landed through the contributor's five `feature/corner-plot-labels` PRs with history preserved.
+
+- autofit_workspace#174 merged c3b2617 (2026-10-26, earlier session)
+- autogalaxy_workspace#259 merged fdb22fe
+- autolens_workspace#595 merged dd9c54e (includes prerequisite autolens_workspace#603)
+- HowToGalaxy#87 merged 286e6be
+- HowToLens#100 merged d8fd454
+
+## Release
+
+Production release **2026.10.26.1** (all five libraries) via Brain → Heart → Hands from clean isolated checkouts (`.worktrees/pr-backlog-release-clean`): PyAutoHands run 40393465852 success. PyAutoGalaxy tag → d44a83db, descends from #656 (e92eea8); published wheel content checked.
+
+## Validation evidence
+
+- Heart release validation GREEN 100: TestPyPI rehearsal PyAutoHands 40381369582 (2026.10.26.1.dev84201) + release-fidelity integration PyAutoHeart 40383459925 (732 passed / 0 failed / 85 skipped); library SHAs unchanged rehearsal → integrate → release. Earlier rehearsal 40363490490 was superseded (Array/Galaxy mains moved after it started).
+- Heart Workspace Smoke 40381428052 green (clears the cloud group/slam.py failure after #603).
+- Four Galaxy-dependent PRs: Smoke + Navigator CI re-run after publication on unchanged heads against the released library source — all legs green; test-merges into post-pre-build mains conflict-free with valid notebooks.
+- Earlier task evidence: 152 fresh smoke checks, 20 notebook parity checks, six reviewed full-data pages (see prompt history below).
+
+Release note: corner-plot labels change from class abbreviations to component paths (user-visible).
+
+## Retained
+
+Task worktree `.worktrees/corner-plot-workspace-config` (validation copies, logs, modeling checkpoints, untracked Lens `dataset.fits`) retained at the human's direction; not removed.
+
+## Original prompt
+
 # Workspace config + docs for corner-plot labels and latent plots (phase 3 of PyAutoFit#1709)
 
 Issued: 2026-10-26

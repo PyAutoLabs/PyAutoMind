@@ -492,7 +492,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 62 (stage 1: 62, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — the pre-registered decision is due
+Count toward 20: 63 (stage 1: 63, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — the pre-registered decision is due
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -583,3 +583,4 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-10-26 | workspace-prior-copies (HowToGalaxy#91 / autogalaxy_workspace_test#131 / autolens_assistant#164 / autogalaxy_assistant#38 / autocti_assistant#38) | glance | tests 496 YAML and 30 model checks pass / smoke 75 pass / review independent CLEAN / Heart YELLOW acknowledged / witness obsolete #618 entries removed and numeric priors preserved | merged-unchanged | 1 |
 | 2026-10-26 | latent-profile-declarations (PyAutoGalaxy#656) | glance | tests2335+1xfail/smoke172/reviewCLEAN/heartYELLOW-ack/witnessPASS/CI4of4 | merged-unchanged | 1 |
 | 2026-10-26 | pre-build-black-only-staged-dirs (PyAutoHands#315) | glance | tests 511 passed + CI 3/3; smoke n/a; diff+AST reviewed; Heart RED authorized; witness firewall and staging tests pass | merged-unchanged | 1 |
+| 2026-10-26 | corner-plot-workspace-config (autogalaxy_workspace#259 / autolens_workspace#595 / HowToGalaxy#87 / HowToLens#100 / autofit_workspace#174) | glance | tests n/a (workspace) / smoke 152 fresh + PR CI re-run on released source all green / review independent CLEAN / heart release GREEN 100 / witness none | merged-unchanged | 1 |
