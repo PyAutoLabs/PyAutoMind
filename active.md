@@ -86,3 +86,18 @@
   - authorized: live human 2026-10-26 "Authorize development override" for both CI fixes and release-blocker development; no release through RED.
   - red: release validation FAILED (stage integrate); PyAutoHeart/workflows/Release Integrate: failure; PyAutoHeart/workflows/Workspace Smoke: failure; manifest_drift/checks/workspace checkouts (manifest ↔ disk): red; Release readiness: release validation FAILED (stage integrate); autolens: red; Workspace validation: NOT ready — 1429p / 1f / 125s @ cloud#40294511523; test_run: red; Release validation: NOT release_ready — v? profile=? (2026-10-26T07:48:52+00:00); validation_report/stages/integrate: fail; PyAutoBrain: red; PyAutoLens: red; autolens_profiling: red; Worktree drift: 1 orphan / 0 missing / 3 dirty
   - gates: local validation passed; exact-head CI checked before merge
+
+## isolate-validation-artifacts
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/319
+- issued: 2026-10-26
+- prompt: active/isolate_validation_artifacts.md
+- session: Codex; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/isolate-validation-artifacts
+- repos:
+  - PyAutoHeart: feature/isolate-validation-artifacts
+- approval: Explicit human approved addressing release blockers and green in-turn merges, excluding Pulse.
+- heart-red-override:
+  - authorized: live human "Authorize development override" for release-blocker development; no release through RED
+  - red: release validation FAILED (stage integrate); PyAutoHeart/workflows/Release Integrate: failure; PyAutoHeart/workflows/Workspace Smoke: failure; manifest_drift/checks/workspace checkouts (manifest ↔ disk): red; Release readiness: release validation FAILED (stage integrate); autolens: red; Workspace validation: NOT ready — 1429p / 1f / 125s @ cloud#40294511523; test_run: red; Release validation: NOT release_ready — v? profile=? (2026-10-26T07:48:52+00:00); validation_report/stages/integrate: fail; PyAutoBrain: red; PyAutoLens: red; autolens_profiling: red; Worktree drift: 1 orphan / 0 missing / 3 dirty
+  - gates: pending targeted tests, artifact replay and CI
