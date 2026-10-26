@@ -43,24 +43,17 @@
 - continuation-approval: 2026-10-26 human authorized all non-Pulse backlog resolution and Heart RED development override for release-blocker fixes; green in-turn merges only, no release through RED.
 - smoke-prerequisite: Config-only fix/group-slam-smoke-real-sampling from main; same task coordinates this alongside contributor PR595 to avoid release-gate circularity.
 
-## isolate-validation-artifacts
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/319
-- issued: 2026-10-26
-- prompt: active/isolate_validation_artifacts.md
-- session: Codex; session ID unavailable
-- status: library-dev
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/isolate-validation-artifacts
-- repos:
-  - PyAutoHeart: feature/isolate-validation-artifacts
-- approval: Explicit human approved addressing release blockers and green in-turn merges, excluding Pulse.
+- prerequisite-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/603
+- prerequisite-worktree: /home/jammy/Code/PyAutoLabs/.worktrees/corner-plot-workspace-config/autolens_workspace-smoke-fix
 - heart-red-override:
-  - authorized: live human "Authorize development override" for release-blocker development; no release through RED
+  - authorized: live human 2026-10-26 "Authorize development override" for release-blocker development; green in-turn merges already authorized, no release through RED
   - red: release validation FAILED (stage integrate); PyAutoHeart/workflows/Release Integrate: failure; PyAutoHeart/workflows/Workspace Smoke: failure; manifest_drift/checks/workspace checkouts (manifest ↔ disk): red; Release readiness: release validation FAILED (stage integrate); autolens: red; Workspace validation: NOT ready — 1429p / 1f / 125s @ cloud#40294511523; test_run: red; Release validation: NOT release_ready — v? profile=? (2026-10-26T07:48:52+00:00); validation_report/stages/integrate: fail; PyAutoBrain: red; PyAutoLens: red; autolens_profiling: red; Worktree drift: 1 orphan / 0 missing / 3 dirty
-  - gates: pending targeted tests, artifact replay and CI
+  - gates: group SLaM targeted Heart smoke64.7s; strict profile validation0 errors/warnings; CI prerequisite pending
 
 ## colab-gemini-instructions
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/324
 - issued: 2026-10-26
+- prompt: active/colab_custom_instructions_assistant_context.md
 - session: Claude Code CLI; session ID unavailable
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/colab-gemini-instructions

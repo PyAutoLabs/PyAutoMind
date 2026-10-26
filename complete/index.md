@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2017 records across 10 buckets.
+2018 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -282,6 +282,7 @@ markers; everything below GENERATED is rebuilt.
 - [interferometer-sparse-data-vector](2026/10/interferometer-sparse-data-vector.md) — The sparse-operator interferometer inversion now builds its data vector directly from the mapper's COO triplet…
 - [interferometer-streaming-memo-after](2026/10/interferometer-streaming-memo-after.md)
 - [interferometer-streaming-scaling](2026/10/interferometer-streaming-scaling.md) — CPU streaming scaling cells and evidence shipped, including accumulation to 5e7 visibilities, in-memory failur…
+- [isolate-validation-artifacts](2026/10/isolate-validation-artifacts.md)
 - [jax-lapack-compatibility-repair](2026/10/jax-lapack-compatibility-repair.md)
 - [latent-profile-declarations](2026/10/latent-profile-declarations.md)
 - [likelihood-lifecycle-p0-brain](2026/10/likelihood-lifecycle-p0-brain.md)
