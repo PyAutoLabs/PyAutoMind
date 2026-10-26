@@ -12,7 +12,7 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 5 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 274 |
+| [Backlog](#backlog) | 275 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -1925,7 +1925,7 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>research</b> — 42</summary>
+<summary><b>research</b> — 43</summary>
 
 <details><summary>📋 <a href="draft/research/autofit_inference/search_ext_b5c2a_rerun.md"><code>@autofit_inference</code> B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug…</a> — autofit_inference · medium · supervised · high</summary>
 
@@ -2027,6 +2027,14 @@ Use the start-dev skill. draft/research/pyautoinsight/slim_inference_repo_output
 
 ```
 Use the start-dev skill. draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens/sky_orientation_pyautolens_frame_is_a_north.md">Sky orientation: PyAutoLens frame is a north-down mirror of the sky…</a> — autolens · too-large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/research/autolens/sky_orientation_pyautolens_frame_is_a_north.md
 ```
 
 </details>
