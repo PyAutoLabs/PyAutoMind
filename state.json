@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-10-26T17:24:51Z",
+  "updated": "2026-10-26T17:26:51Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Carry assistant context into every Colab notebook via Gemini Custom Instructions \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/541",
+      "prompt": "Use the start-dev skill. active/colab_custom_instructions_assistant_context.md"
+    },
     {
       "severity": "yellow",
       "text": "Matrix-free interferometer inversion, phase 5a: make it selectable from a fit \u2014 library-shipped, awaiting-merge (stacked: PyAutoArray#658 first, then PyAutoGalaxy#670)",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#670 \u2014 Matrix-free interferometer inversion, phase 5a: make it selectable from a fit",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/670",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#667 \u2014 config-leaf-comments",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/667",
       "prompt": null
     }
   ]
