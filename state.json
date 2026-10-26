@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
-  "updated": "2026-10-26T12:21:57Z",
+  "updated": "2026-10-26T13:07:35Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Likelihood lifecycle 2a follow-up: pin 2026.10.25.1 re-stamp, 12-core estimate, ao GPU breakdown\u2026 \u2014 workspace-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/467",
+      "prompt": "Use the start-dev skill. active/likelihood_lifecycle_p2a_pin_restamp_12core.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#668 \u2014 linear-operated-sersic-priors",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/668",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#662 \u2014 mass-sheet-jax",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/662",
       "prompt": null
     }
   ]

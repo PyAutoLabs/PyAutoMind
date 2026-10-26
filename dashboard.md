@@ -951,7 +951,7 @@ Use the start-dev skill. active/corner_plot_config_keys_pr1709_phase3.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p2a_pin_restamp_12core.md">Likelihood lifecycle 2a follow-up: pin 2026.10.25.1 re-stamp, 12-core estimate, ao GPU breakdown…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/466">issue #466</a> — issued 2026-10-26 — workspace-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p2a_pin_restamp_12core.md">Likelihood lifecycle 2a follow-up: pin 2026.10.25.1 re-stamp, 12-core estimate, ao GPU breakdown…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/466">issue #466</a> — issued 2026-10-26 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/467">autolens_profiling#467</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p2a_pin_restamp_12core.md
