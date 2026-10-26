@@ -959,7 +959,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/pulse_timings_dashboard_redesign.md">Pulse dashboard redesign: Profiling Timings and Inference Timings</a> — <a href="https://github.com/PyAutoLabs/PyAutoPulse/issues/78">issue #78</a> — issued 2026-10-26 — workspace-dev</summary>
+<details><summary>📋 <a href="active/pulse_timings_dashboard_redesign.md">Pulse dashboard redesign: Profiling Timings and Inference Timings</a> — <a href="https://github.com/PyAutoLabs/PyAutoPulse/issues/78">issue #78</a> — issued 2026-10-26 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/79">PyAutoPulse#79</a></summary>
 
 ```
 Use the start-dev skill. active/pulse_timings_dashboard_redesign.md
