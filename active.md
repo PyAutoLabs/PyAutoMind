@@ -79,3 +79,16 @@
     notebook). Human-approved 2026-10-26: 20k-char cap, human /prm (glance overridden), Heart RED
     dev-only override. Phase 2 galaxy + fit mappings, phase 3 CTI via CLI. Human gate before merge:
     open cosmos notebook via Colab GitHub URL on the PR branch.
+
+## rectangular-28sq-profiling-rows
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/468
+- issued: 2026-10-26
+- session: Claude Code (Opus 5.5); session ID unavailable
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/rectangular-28sq-profiling-rows
+- repos:
+  - autolens_profiling: feature/rectangular-28sq-profiling-rows
+  - autolens_inference: feature/rectangular-28sq-profiling-rows
+- prompt: active/rectangular_28sq_profiling_rows.md
+- epic: likelihood-lifecycle
+- heart-red-override: authorized by live human 2026-10-26 "I approve of the override" (this task incl. RAL jobs); reasons + gates recorded at ship
