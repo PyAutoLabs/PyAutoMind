@@ -50,7 +50,7 @@
 - issued: 2026-10-26
 - prompt: active/sync_remaining_workspace_config_priors_copies.md
 - session: Codex; session ID unavailable
-- status: config validation passed; workspace smoke running
+- status: four PRs open; Galaxy test-workspace smoke running
 - approval: Five-task configuration scope approved; same-session shared-repository edits are sequential; human merge only.
 - affected-repos:
   - HowToGalaxy
@@ -66,6 +66,12 @@
   - autogalaxy_assistant: feature/workspace-prior-copies
   - autocti_assistant: feature/workspace-prior-copies
 - validation: 496 YAML files pass strict parsing; 54 changed mappings match intended corrections; 30 model checks pass. Independent evidence: .worktrees/workspace-prior-copies/logs/prior-validation.md.
+
+- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/91
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/164
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/38
+- workspace-pr: https://github.com/PyAutoLabs/autocti_assistant/pull/38
+- smoke: HowToGalaxy 39/39 scripts passed; autogalaxy_workspace_test pending.
 
 ## workspace-config-key-drift
 - issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/263
