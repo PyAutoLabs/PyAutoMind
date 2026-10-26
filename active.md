@@ -44,7 +44,7 @@
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/466
 - issued: 2026-10-26
 - session: Claude Code (Opus 5.5); session ID unavailable
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p2a-restamp-12core
 - repos:
   - autolens_profiling: feature/likelihood-lifecycle-p2a-restamp-12core
@@ -52,3 +52,9 @@
 - epic: likelihood-lifecycle
 - compute-go: human 2026-10-26 ('go') for the 2-task ao A100 breakdown rerun after the memory fix
 - progress: branch pushed 65b17065 (3 commits: carry-forward + 12-core, OOM fix, regen); RAL private autolens_profiling_p2a on the branch; ao rerun SUBMITTED 413033 (--array=2,16 of batch0 a100 script, pin 2026.10.23.1 then carried forward) → output/p2a_batch0
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/467
+- heart-red-override:
+  - authorized: live human 2026-10-26 "I authorize you to work and overrude heart red" (this task + inference exporter task)
+  - red: release validation FAILED (stage integrate); Release Integrate failure; Workspace Smoke failure; manifest_drift workspace checkouts red; autolens red; Workspace validation NOT ready 1429p/1f/125s @ cloud#40294511523; test_run red; NOT release_ready (2026-10-26T07:48:52Z); PyAutoBrain red; PyAutoLens red; autolens_profiling red; Worktree drift 1 orphan/3 dirty
+  - gates: lint.yml --checks, ruff, pytest 1785/6 skipped, 12 smoke OK, independent review 2 rounds (fixed, Pulse pair 191/9 = main)
+  - merge: needs fresh human /prm + green CI; no release
