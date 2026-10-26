@@ -38,3 +38,12 @@ Heart RED override: live human 2026-10-26 "I authorize you to work and overrude 
   `reference_runtime_record_id`/`predicted_ms_per_eval` from the same match; update limitations.
 - Pulse validator must accept the additive fields (else stop and report; no Pulse edit here).
 - Tests + regenerate dashboard/walltime_validation.json + lint.
+
+## Human rulings after the build (2026-10-26)
+- "only use that column for all hardware, we the implied likelihood time which then accounts for things like nautilus
+  overheads. Feels like this is robust and general so dont use the search.summary log likelihood evaluation time"
+  → all search.summary capture/backfill/fields REMOVED from this PR; implied s/eval (wall ÷ evals) is the one
+  per-eval measure. Witness amended: records carry implied_s_per_eval and the @3 profiling match (no search.summary).
+- Rectangular 28² vs 35² size mismatch → separate task draft/feature/autolens_profiling/rectangular_28sq_profiling_rows.md.
+- Review fixes: parametric stages (inversion_applies false) get no profiling match; exact-size tie-break; PyAutoPulse
+  checkout in CI so the walltime-validation@1 contract test runs.

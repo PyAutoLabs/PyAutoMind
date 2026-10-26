@@ -36,7 +36,7 @@ Filed: 2026-10-26
   matched profiling record id; Pulse resolves it to the page URL.
 - Inference table: only `nautilus:mass_total[1]` rows, Sampler shown as `nautilus`, no note about the filter.
 
-- HUMAN 2026-10-26 (after the exporter survey): the inference table shows **implied s/eval only** (wall ÷ evals,
+- HUMAN 2026-10-26 (after the exporter survey; reaffirmed: "only use that column for all hardware ... dont use the search.summary log likelihood evaluation time"): the inference table shows **implied s/eval only** on all hardware (wall ÷ evals,
   in s, 5 DP) — NEITHER search.summary column (search.summary "Log Likelihood Function Evaluation Time" is one
   un-warmed call incl. JAX compile, ~12 s on GPU; "Time Per Sample" duplicates implied s/eval). This supersedes the
   earlier "replace Predicted/Measured-predicted/Parallel-efficiency with two search.summary columns" line.
