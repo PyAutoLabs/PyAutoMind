@@ -58,3 +58,14 @@
   - red: release validation FAILED (stage integrate); Release Integrate failure; Workspace Smoke failure; manifest_drift workspace checkouts red; autolens red; Workspace validation NOT ready 1429p/1f/125s @ cloud#40294511523; test_run red; NOT release_ready (2026-10-26T07:48:52Z); PyAutoBrain red; PyAutoLens red; autolens_profiling red; Worktree drift 1 orphan/3 dirty
   - gates: lint.yml --checks, ruff, pytest 1785/6 skipped, 12 smoke OK, independent review 2 rounds (fixed, Pulse pair 191/9 = main)
   - merge: needs fresh human /prm + green CI; no release
+
+## likelihood-lifecycle-p2a-inference-timings
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/47
+- issued: 2026-10-26
+- session: Claude Code (Opus 5.5); session ID unavailable
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p2a-inference-timings
+- repos:
+  - autolens_inference: feature/likelihood-lifecycle-p2a-inference-timings
+- prompt: active/likelihood_lifecycle_p2a_inference_timings.md
+- epic: likelihood-lifecycle
