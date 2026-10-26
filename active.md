@@ -80,8 +80,9 @@
 - repos:
   - PyAutoHands: feature/colab-gemini-instructions
   - autolens_assistant: feature/colab-gemini-instructions
+  - PyAutoBrain: feature/colab-gemini-instructions
 - summary: |
-    Phase 1 of 3 (Hands injector + CLI, release checkout, autolens_assistant colab/contexts.yaml + cosmos
+    Phase 1 of 4 (+ Brain clone-boundary `colab/*` mixed — assistant PR declares Brain-ref) (Hands injector + CLI, release checkout, autolens_assistant colab/contexts.yaml + cosmos
     notebook). Human-approved 2026-10-26: 20k-char cap, human /prm (glance overridden), Heart RED
     dev-only override. Phase 2 galaxy + fit mappings, phase 3 CTI via CLI. Human gate before merge:
     open cosmos notebook via Colab GitHub URL on the PR branch.
