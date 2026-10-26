@@ -1642,16 +1642,16 @@ def cmd_clear_released(args) -> int:
         print(f"    - {path}:{lineno}  release-gate: {lib}")
     for url in plan.unknown:
         print(f"  ? GitHub could not say whether {url} is released — left in place")
+    # REST, not `gh pr edit`: the GraphQL path queries `login`, which needs
+    # read:org — a scope the release workflow's PAT lacks (0/28 dropped on
+    # 2026.10.16.1).
     cmds = [
         [
             "gh",
-            "pr",
-            "edit",
-            str(n),
-            "--repo",
-            f"{o}/{r}",
-            "--remove-label",
-            "pending-release",
+            "api",
+            "-X",
+            "DELETE",
+            f"repos/{o}/{r}/issues/{n}/labels/pending-release",
         ]
         for o, r, n in plan.labels
     ]
@@ -1670,8 +1670,9 @@ def cmd_clear_released(args) -> int:
     if args.remove_labels:
         failed = 0
         for c in cmds:
-            code, _, err = _gh(c[1:])
-            if code != 0:
+            code, out, err = _gh(c[1:])
+            # 404 = the label is already gone, so a rerun stays green
+            if code != 0 and "HTTP 404" not in out + err:
                 failed += 1
                 print(f"  ! {' '.join(c)}: {err.strip()}")
         print(f"  labels dropped: {len(cmds) - failed}/{len(cmds)}")
@@ -3523,7 +3524,7 @@ def main() -> int:
         "--remove-labels",
         action="store_true",
         dest="remove_labels",
-        help="run the `gh pr edit --remove-label pending-release` "
+        help="run the `gh api -X DELETE .../labels/pending-release` "
         "calls (a GitHub write; default: print them)",
     )
     cr.add_argument(
