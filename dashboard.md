@@ -943,7 +943,7 @@ Use the start-dev skill. active/config_key_mirror_drift.md
 
 </details>
 
-<details><summary>📋 <a href="active/config_yaml_keys_missing_their_one_line.md">Config yaml keys missing their one-line explanatory comment</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1732">issue #1732</a> — issued 2026-10-26 — library validation running; draft exception requested</summary>
+<details><summary>📋 <a href="active/config_yaml_keys_missing_their_one_line.md">Config yaml keys missing their one-line explanatory comment</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1732">issue #1732</a> — issued 2026-10-26 — library draft PR open; remaining library validation and workspace setup — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1733">PyAutoFit#1733</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 Use the start-dev skill. active/config_yaml_keys_missing_their_one_line.md
@@ -3071,6 +3071,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoFit**
 
+- [PyAutoFit#1733](https://github.com/PyAutoLabs/PyAutoFit/pull/1733) — `active/config_yaml_keys_missing_their_one_line.md`
 - [PyAutoFit#1721](https://github.com/PyAutoLabs/PyAutoFit/pull/1721) — `complete/2026/10/assertion-names.md`
 - [PyAutoFit#1720](https://github.com/PyAutoLabs/PyAutoFit/pull/1720) — `complete/2026/10/assertion-repr.md`
 - [PyAutoFit#1731](https://github.com/PyAutoLabs/PyAutoFit/pull/1731) — `complete/2026/10/bfgs-checkpoint-resume.md`

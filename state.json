@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-10-26T09:50:17Z",
+  "updated": "2026-10-26T09:55:05Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -23,6 +23,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#655 \u2014 What shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/655",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1733 \u2014 Config yaml keys missing their one-line explanatory comment",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1733",
       "prompt": null
     },
     {
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoLens PyAutoLens#801 \u2014 What shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/801",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#800 \u2014 What shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/800",
       "prompt": null
     }
   ]
