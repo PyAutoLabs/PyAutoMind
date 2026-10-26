@@ -28,7 +28,7 @@
   - HowToGalaxy: feature/corner-plot-labels (samlange04 fork)
   - HowToLens: feature/corner-plot-labels (samlange04 fork)
 - validation: 152 fresh smoke checks passed (146 scripts + 6 notebooks); 20 notebook parity checks and independent source/config review CLEAN; six rendered pages reviewed CLEAN (Galaxy imaging/interferometer/ellipse, Lens imaging/interferometer/point_source). Group source/notebook smoke-tested; group Markdown deliberately not regenerated under accepted scope.
-- blocked-by: Publication of PyAutoGalaxy containing #656 before Galaxy-dependent workspace shipping; final human merge decision and current-head CI gates. No further modeling required.
+- blocked-by: Publication of PyAutoGalaxy containing #656 before Galaxy-dependent workspace shipping; current-head CI gates for remaining PRs. Fit #174 merged 2026-10-26 under explicit human authorization. No further modeling required.
 - library-completion: complete/2026/10/latent-profile-declarations.md
 - release-gate: PyAutoGalaxy
 - workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/174
@@ -56,3 +56,33 @@
   - red: release validation FAILED (stage integrate); Release Integrate failure; Workspace Smoke failure; manifest_drift workspace checkouts red; autolens red; Workspace validation NOT ready 1429p/1f/125s @ cloud#40294511523; test_run red; NOT release_ready (2026-10-26T07:48:52Z); PyAutoBrain red; PyAutoLens red; autolens_profiling red; Worktree drift 1 orphan/3 dirty
   - gates: ruff, pytest 363, Playwright browser test, check --offline, independent review 3 rounds (fixed)
   - merge: needs fresh human /prm + green CI; no release
+
+## pre-build-black-only-staged-dirs
+- issue: https://github.com/PyAutoLabs/PyAutoHands/pull/315
+- issued: 2026-10-26
+- prompt: active/pre_build_blacks_unstaged_slam_pipeline.md
+- session: Codex; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/pre-build-black-only-staged-dirs
+- repos:
+  - PyAutoHands: fix/pre-build-black-only-staged-dirs
+- approval: Human approved backlog resolution and green in-turn merges, excluding Pulse #79.
+- heart-red-override:
+  - authorized: live human 2026-10-26 "Authorize development override" for both CI fixes and release-blocker development; no release through RED.
+  - red: release validation FAILED (stage integrate); PyAutoHeart/workflows/Release Integrate: failure; PyAutoHeart/workflows/Workspace Smoke: failure; manifest_drift/checks/workspace checkouts (manifest ↔ disk): red; Release readiness: release validation FAILED (stage integrate); autolens: red; Workspace validation: NOT ready — 1429p / 1f / 125s @ cloud#40294511523; test_run: red; Release validation: NOT release_ready — v? profile=? (2026-10-26T07:48:52+00:00); validation_report/stages/integrate: fail; PyAutoBrain: red; PyAutoLens: red; autolens_profiling: red; Worktree drift: 1 orphan / 0 missing / 3 dirty
+  - gates: pending targeted validation and current-head CI
+
+## standalone-memory-template-ci
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/516
+- issued: 2026-10-26
+- prompt: active/standalone_memory_template_ci.md
+- session: Codex; session ID unavailable
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/standalone-memory-template-ci
+- repos:
+  - PyAutoMind: feature/standalone-memory-template-ci
+- approval: Human approved backlog resolution and green in-turn merges, excluding Pulse #79.
+- heart-red-override:
+  - authorized: live human 2026-10-26 "Authorize development override" for both CI fixes and release-blocker development; no release through RED.
+  - red: release validation FAILED (stage integrate); PyAutoHeart/workflows/Release Integrate: failure; PyAutoHeart/workflows/Workspace Smoke: failure; manifest_drift/checks/workspace checkouts (manifest ↔ disk): red; Release readiness: release validation FAILED (stage integrate); autolens: red; Workspace validation: NOT ready — 1429p / 1f / 125s @ cloud#40294511523; test_run: red; Release validation: NOT release_ready — v? profile=? (2026-10-26T07:48:52+00:00); validation_report/stages/integrate: fail; PyAutoBrain: red; PyAutoLens: red; autolens_profiling: red; Worktree drift: 1 orphan / 0 missing / 3 dirty
+  - gates: pending targeted validation and current-head CI

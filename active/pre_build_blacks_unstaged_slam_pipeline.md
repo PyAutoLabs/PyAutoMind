@@ -1,5 +1,6 @@
 # pre_build runs black on slam_pipeline/ for every workspace but stages it only for autolens_workspace — leaves a dirty canonical checkout each release
 
+Issued: 2026-10-26
 Type: bug
 Target: pyautohands
 Repos:
