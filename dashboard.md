@@ -927,7 +927,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/colab_custom_instructions_assistant_context.md">Carry assistant context into every Colab notebook via Gemini Custom Instructions</a> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/324">issue #324</a> — issued 2026-10-26 — library-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/541">PyAutoBrain#541</a>, <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/165">autolens_assistant#165</a>, <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/325">PyAutoHands#325</a></summary>
+<details><summary>📋 <a href="active/colab_custom_instructions_assistant_context.md">Carry assistant context into every Colab notebook via Gemini Custom Instructions</a> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/324">issue #324</a> — issued 2026-10-26 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/541">PyAutoBrain#541</a>, <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/165">autolens_assistant#165</a>, <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/325">PyAutoHands#325</a>, <a href="https://github.com/PyAutoLabs/autofit_assistant/pull/59">autofit_assistant#59</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_assistant/pull/39">autogalaxy_assistant#39</a>, <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/326">PyAutoHands#326</a></summary>
 
 ```
 Use the start-dev skill. active/colab_custom_instructions_assistant_context.md
