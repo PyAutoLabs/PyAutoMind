@@ -18,7 +18,7 @@ Filed: 2026-10-26
 ## Human rulings (2026-10-26, chat)
 - Per-call / per-node toggle: DROP it from the profiling table. Add one bold column "Est. 12-core s" =
   per-call runtime ÷ 6, for **numba CPU rows only** (— elsewhere). The value is producer-emitted by
-  autolens_profiling (Pulse computes nothing; emitted by draft/feature/autolens_profiling/likelihood_lifecycle_p2a_pin_restamp_12core.md). The projected node throughput moves to each setup's detail page.
+  autolens_profiling (Pulse computes nothing; emitted since autolens_profiling#467, record complete/2026/10/likelihood-lifecycle-p2a-restamp-12core.md). The projected node throughput moves to each setup's detail page.
 - Profiling table columns: Dataset type | Model | Instrument | Regime | Setup | Hardware class | Model variant |
   Runtime s (bold, 5 DP, no "(single_jit_median)") | Est. 12-core s | Class | › (opens detail page).
   Status, Decision and Evidence move to the detail page.
