@@ -26,6 +26,27 @@ Consequence: glance
 - Colab added per-notebook **Custom Instructions** on 2026-04-08: "stored directly within your notebook", "when you share your notebook ... those instructions travel with it" (https://blog.google/innovation-and-ai/technology/developers-tools/colab-updates/). The `.ipynb` metadata key is undocumented.
 - Every generated notebook already passes through `PyAutoHands/autohands/build_util.py::inject_colab_setup`, so a metadata write there covers all workspaces and HowTo repos at the next release.
 
+## Finding (2026-10-26): metadata key recovered without the UI
+
+Human's first Colab attempt found no "Custom Instructions" input. Google's own Learn Mode
+example notebooks (linked from the colab-updates blog post; Drive ids
+1Tes-C6WNL99HKx4Ghg9ckGYSWRLxn-CA and 1Y39sN0zqWvFDY3o6EPu1J0BcTiqPUhp4) carry the key:
+
+```json
+"metadata": {"colab": {
+  "selectedAiContext": "<uuid>",            // or the built-in "learn_mode"
+  "aiContexts": {"<uuid>": {"id": "<uuid>", "name": "Pirate Mode", "context": "Talk like a pirate"}}
+}}
+```
+
+So `inject_colab_setup` can write the instructions directly; the UI is not needed to author them.
+The gate is now: does Colab apply a hand-written `aiContexts` entry (a) on File > Upload and
+(b) via a GitHub badge? Test notebook built in session scratch (colab_ci_test.ipynb, "zebra" probe).
+The UI control is a toggle/selector in the Gemini chat box, not a settings page.
+
+**Gate (a) PASSED 2026-10-26** (human): uploaded colab_ci_test.ipynb, Gemini replied with "zebra" —
+Colab honours a hand-written `aiContexts` entry. Remaining: (b) GitHub-badge route.
+
 ## Gate (human, ~5 min)
 
 1. Open any notebook in Colab, add a Custom Instruction (e.g. `PYAUTO_TEST please mention the word zebra in every reply`), save to the notebook, confirm a reply says zebra.

@@ -44,10 +44,15 @@
 - issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/78
 - issued: 2026-10-26
 - session: Claude Code (Opus 5.5); session ID unavailable
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/pulse-timings-redesign
 - repos:
   - PyAutoPulse: feature/pulse-timings-redesign
 - prompt: active/pulse_timings_dashboard_redesign.md
 - epic: likelihood-lifecycle
-- heart-red-override: authorized by live human 2026-10-26 "I authroize" (this task); reasons + gates recorded at ship
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/79
+- heart-red-override:
+  - authorized: live human 2026-10-26 "I authroize" (this task)
+  - red: release validation FAILED (stage integrate); Release Integrate failure; Workspace Smoke failure; manifest_drift workspace checkouts red; autolens red; Workspace validation NOT ready 1429p/1f/125s @ cloud#40294511523; test_run red; NOT release_ready (2026-10-26T07:48:52Z); PyAutoBrain red; PyAutoLens red; autolens_profiling red; Worktree drift 1 orphan/3 dirty
+  - gates: ruff, pytest 363, Playwright browser test, check --offline, independent review 3 rounds (fixed)
+  - merge: needs fresh human /prm + green CI; no release
