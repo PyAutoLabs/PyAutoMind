@@ -61,7 +61,7 @@
 - issued: 2026-10-26
 - prompt: active/colab_custom_instructions_assistant_context.md
 - session: Claude Code CLI; session ID unavailable
-- status: phase-3-pending
+- status: library-dev
 - library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/541, https://github.com/PyAutoLabs/autolens_assistant/pull/165, https://github.com/PyAutoLabs/PyAutoHands/pull/325 (phase 1, ALL MERGED 2026-10-26 by human)
 - library-pr: https://github.com/PyAutoLabs/autofit_assistant/pull/59, https://github.com/PyAutoLabs/autogalaxy_assistant/pull/39, https://github.com/PyAutoLabs/PyAutoHands/pull/326 (phase 2, ALL MERGED 2026-10-26 by human)
 - heart-red-override:
@@ -74,7 +74,14 @@
   gates: Hands 567 tests + firewall; fit 12 + check; galaxy 12 + check; independent review CLEAN (3 minors fixed)
 - worktree: ~/Code/PyAutoLabs-wt/colab-gemini-instructions (phase-1 branches merged; worktree_remove refuses while the task is active — recreate per phase, remove at completion)
 - repos:
+  - autocti_assistant: feature/colab-gemini-phase3
+  - autocti_workspace: feature/colab-gemini-phase3
+  - autolens_assistant: feature/colab-gemini-phase4
+  - autofit_assistant: feature/colab-gemini-phase4
+  - autogalaxy_assistant: feature/colab-gemini-phase4
 - summary: |
+    Phases 3+4 running together (human 10-26 "do both auto mode"; --auto parks on Heart RED, so run
+    supervised under the task's dev override, single ship ask at the end).
     PHASE 2 MERGED 2026-10-26 (autofit_assistant#59, autogalaxy_assistant#39, Hands#326): fit 20k cap,
     galaxy cap 36000 (ag skills 21-32k; trim follow-up draft/refactor/autogalaxy_assistant/). NEXT phase 3:
     autocti_assistant colab/contexts.yaml + autocti_workspace notebooks via `autohands gemini_context apply`.
