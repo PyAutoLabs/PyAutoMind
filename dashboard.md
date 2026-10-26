@@ -959,7 +959,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/rectangular_28sq_profiling_rows.md">Profile rectangular imaging at 28² (the production preset) so inference rows link…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/468">issue #468</a> — issued 2026-10-26 — workspace-dev</summary>
+<details><summary>📋 <a href="active/rectangular_28sq_profiling_rows.md">Profile rectangular imaging at 28² (the production preset) so inference rows link…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/468">issue #468</a> — issued 2026-10-26 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/80">PyAutoPulse#80</a></summary>
 
 ```
 Use the start-dev skill. active/rectangular_28sq_profiling_rows.md
