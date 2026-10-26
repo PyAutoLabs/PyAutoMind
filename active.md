@@ -49,6 +49,7 @@
 - prompt: active/likelihood_lifecycle_p2a_pin_restamp_12core.md
 - epic: likelihood-lifecycle
 - compute-go: human 2026-10-26 ('go') for the 2-task ao A100 breakdown rerun after the memory fix
+- progress: branch pushed 65b17065 (3 commits: carry-forward + 12-core, OOM fix, regen); RAL private autolens_profiling_p2a on the branch; ao rerun SUBMITTED 413033 (--array=2,16 of batch0 a100 script, pin 2026.10.23.1 then carried forward) → output/p2a_batch0
 
 ## latent-profile-declarations
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/669
