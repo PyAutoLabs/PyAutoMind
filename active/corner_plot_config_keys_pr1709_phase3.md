@@ -54,3 +54,11 @@ Evidence root: `.worktrees/corner-plot-workspace-config/logs/continuation/` — 
 ## Retry approval — 2026-10-26
 
 User: "ok do that" — explicitly approves retrying the interrupted renders, completing remaining validation and updating the five existing PRs. No release or workspace merge authorized. Lens config-comment corrections now preserve parsed values; normal Lens imaging resumed from its checkpoint.
+
+## Validation milestone — 2026-10-26
+
+All fresh isolated smoke checks passed: Fit 10, Galaxy 16, Lens 44, HowToLens 50, HowToGalaxy 32 (146 scripts + 6 notebooks). Source/config review and independently regenerated parity for all 20 notebooks are CLEAN. Galaxy imaging/interferometer/ellipse completed on full data and passed independent artifact review; the approved interferometer checkpoint retry succeeded.
+
+Published existing-PR updates: Fit #174 `aaed07d7377e7374be0433775c3b3adb16598339`; Galaxy #259 `dc1082a953772c0e8bedd244f7f62d0cb0110a58`; HowToLens #100 `1f0b479f683f8e226456d647c40339591f95c182`; HowToGalaxy #87 `c190915` (full SHA available in repo). Fit/Galaxy/HowToLens current-head CI all passed; HowToGalaxy unchanged fork workflows approved to run. No merge/release.
+
+Lens imaging's normal fit completed; explicit notebook plots remain active. Remaining Lens pages execute in the separate, existing `validation-continuation/autolens_workspace` copy after archiving smoke datasets/output. Modeling scripts and simulators match the actual worktree by SHA; full-data, non-test execution still required. Copy only reviewed generated artifacts back after render completion.

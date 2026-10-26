@@ -11,7 +11,7 @@
 - issued: 2026-10-26
 - prompt: active/corner_plot_config_keys_pr1709_phase3.md
 - session: Codex; session ID unavailable
-- status: workspace-dev; pre-release preparation resumed with human-approved checkpoint retry; shipping remains release-gated
+- status: workspace-dev; all 152 fresh smoke checks pass; four PRs updated; Lens executed pages and final artifact review in progress
 - approval: Five-task configuration scope approved; same-session shared-repository edits are sequential; human merge only. Human approved finishing executed examples, Markdown and PR validation against merged Galaxy on 2026-10-26; no publication or workspace merge authorized.
 - affected-repos:
   - autofit_workspace
@@ -27,8 +27,8 @@
   - autolens_workspace: feature/corner-plot-labels (samlange04 fork)
   - HowToGalaxy: feature/corner-plot-labels (samlange04 fork)
   - HowToLens: feature/corner-plot-labels (samlange04 fork)
-- validation: Existing contributor branches retained; 20 notebooks regenerated. Continuation: real Fit latent cookbook and Galaxy imaging Markdown passed; Fit 10 and Galaxy 16 fresh smoke checks passed in isolated copies. Fourteen Python prose edits preserve executable AST. Final artifact review and remaining three smoke suites incomplete.
-- blocked-by: Galaxy interferometer renderer exited 143 (SIGTERM) during latent-output processing; sender unknown, no Python traceback. Human approved checkpoint retry on 2026-10-26. Remaining executed Markdown/review and published PyAutoGalaxy release containing #656 still required.
+- validation: Fresh isolated smoke: 146 scripts + 6 notebooks passed. Independent source/config and 20-notebook parity review CLEAN; Galaxy three-page artifact review CLEAN. Fit normal latent cookbook passed. Lens full renders still in progress.
+- blocked-by: Published PyAutoGalaxy release containing #656 for shipping; Lens executed pages and artifact review still required before final PR update. Approved Galaxy checkpoint retry succeeded.
 - library-completion: complete/2026/10/latent-profile-declarations.md
 - release-gate: PyAutoGalaxy
 - workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/174
@@ -37,27 +37,8 @@
 - workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/87
 - workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/100
 - coordination: Galaxy/Lens contributor branches now include the comment-mirror branches with notation conflicts resolved; all pre-merge corner YAML values preserved. Prerequisites autogalaxy_workspace#264 and autolens_workspace#602 merged on 2026-10-26; completed comment task: complete/2026/10/config-leaf-comments.md.
-- smoke: 152 checks passed across five contributor workspaces; evidence in .worktrees/corner-plot-workspace-config/logs/smoke-summary.json.
+- smoke: 152 fresh checks passed against continuation scripts/config; logs/continuation/smoke-validation-summary.json and smoke-validation-equivalence.json in the claimed worktree.
 - ci: Fork workflow approvals issued for Fit/HowToGalaxy/HowToLens after verifying workflow files unchanged; inspect current CI at human merge time.
-
-## likelihood-lifecycle-p2a-restamp-12core
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/466
-- issued: 2026-10-26
-- session: Claude Code (Opus 5.5); session ID unavailable
-- status: workspace-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p2a-restamp-12core
-- repos:
-  - autolens_profiling: feature/likelihood-lifecycle-p2a-restamp-12core
-- prompt: active/likelihood_lifecycle_p2a_pin_restamp_12core.md
-- epic: likelihood-lifecycle
-- compute-go: human 2026-10-26 ('go') for the 2-task ao A100 breakdown rerun after the memory fix
-- progress: branch pushed 65b17065 (3 commits: carry-forward + 12-core, OOM fix, regen); RAL private autolens_profiling_p2a on the branch; ao rerun SUBMITTED 413033 (--array=2,16 of batch0 a100 script, pin 2026.10.23.1 then carried forward) → output/p2a_batch0
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/467
-- heart-red-override:
-  - authorized: live human 2026-10-26 "I authorize you to work and overrude heart red" (this task + inference exporter task)
-  - red: release validation FAILED (stage integrate); Release Integrate failure; Workspace Smoke failure; manifest_drift workspace checkouts red; autolens red; Workspace validation NOT ready 1429p/1f/125s @ cloud#40294511523; test_run red; NOT release_ready (2026-10-26T07:48:52Z); PyAutoBrain red; PyAutoLens red; autolens_profiling red; Worktree drift 1 orphan/3 dirty
-  - gates: lint.yml --checks, ruff, pytest 1785/6 skipped, 12 smoke OK, independent review 2 rounds (fixed, Pulse pair 191/9 = main)
-  - merge: needs fresh human /prm + green CI; no release
 
 ## likelihood-lifecycle-p2a-inference-timings
 - issue: https://github.com/PyAutoLabs/autolens_inference/issues/47
