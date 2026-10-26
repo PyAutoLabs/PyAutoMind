@@ -975,7 +975,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/sync_remaining_workspace_config_priors_copies.md">Sync remaining workspace config/priors copies</a> — <a href="https://github.com/PyAutoLabs/HowToGalaxy/issues/90">issue #90</a> — issued 2026-10-26 — config validation passed; workspace smoke running</summary>
+<details><summary>📋 <a href="active/sync_remaining_workspace_config_priors_copies.md">Sync remaining workspace config/priors copies</a> — <a href="https://github.com/PyAutoLabs/HowToGalaxy/issues/90">issue #90</a> — issued 2026-10-26 — four PRs open; Galaxy test-workspace smoke running — PRs: <a href="https://github.com/PyAutoLabs/HowToGalaxy/pull/91">HowToGalaxy#91</a>, <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/164">autolens_assistant#164</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_assistant/pull/38">autogalaxy_assistant#38</a>, <a href="https://github.com/PyAutoLabs/autocti_assistant/pull/38">autocti_assistant#38</a></summary>
 
 ```
 Use the start-dev skill. active/sync_remaining_workspace_config_priors_copies.md
