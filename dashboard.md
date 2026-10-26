@@ -935,7 +935,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/config_key_mirror_drift.md">Mirror drifted library config keys into the workspace configs</a> — <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/issues/263">issue #263</a> — issued 2026-10-26 — approved, setup in progress</summary>
+<details><summary>📋 <a href="active/config_key_mirror_drift.md">Mirror drifted library config keys into the workspace configs</a> — <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/issues/263">issue #263</a> — issued 2026-10-26 — workspace-dev</summary>
 
 ```
 Use the start-dev skill. active/config_key_mirror_drift.md
