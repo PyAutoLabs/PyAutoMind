@@ -91,3 +91,12 @@ Current-head CI and a human merge decision remain gates. Galaxy-dependent worksp
 All modeling/smoke processes stopped. Preserve the claimed worktrees, isolated validation copies and checkpoints until shipping/cleanup is separately authorized. Existing untracked Lens `dataset.fits` left untouched. Final evidence: task worktree `logs/continuation/{final-heads.json,smoke-validation-summary.json,readiness-wrapup.json,ci/,review/,lens/}`.
 
 Process lesson: configuration/label/prose tasks should use focused semantics, notebook parity, smoke and representative visual checks. Do not expand them into fresh scientific inference across every example without a specific acceptance need and explicit cost agreement.
+
+
+## Authorized backlog continuation — 2026-10-26
+
+User request: "ok do all that, but note that Pulse we are working on so ignore". User also authorized the surfaced Heart RED development override for CI repairs and release-blocker development. In-turn green merges are authorized; no release through RED.
+
+Fit workspace #174 merged c3b261752ea507b9d99e090b6461c9b4b92e4858. Four Galaxy-dependent PRs remain release-gated. A separate minimal prerequisite PR in autolens_workspace will set PYAUTO_TEST_MODE=1 for only scripts/group/slam.py in config/build/profile_smoke.yaml: the script requires fitted luminosity, and mode2 produced UniformPrior(0,0). The exact mode1 candidate passed canonical isolated Heart smoke in64.7s using fresh reduced data. No scientific prior, timeout, selection, dataset scale or assertion changes. Deliver this config-only prerequisite from origin/main before recovery validation; do not merge the broader community PR prematurely. Preserve contributor history and all existing output/data including untracked dataset.fits.
+
+Validation evidence: .worktrees/pr-closeout-group-smoke-diagnostic/mode1.log and its autolens_workspace/test-results/. The prior release script run passed140.79s but predates Galaxy#656; fresh release validation still required.

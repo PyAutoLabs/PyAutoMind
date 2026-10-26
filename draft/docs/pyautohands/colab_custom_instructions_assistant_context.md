@@ -6,12 +6,13 @@ Repos:
 - PyAutoHands
 - autolens_assistant
 - autofit_assistant
-Difficulty: small
+- autogalaxy_assistant
+Difficulty: medium
 Autonomy: supervised
 Priority: medium
 Filed: 2026-10-23
 Status: formalised
-Blocked-by: human Colab test (see Gate) — do not start_dev until it passes
+Blocked-by: none (upload + size gates passed 2026-10-26; GitHub-route gate verified on the PR branch)
 Consequence: glance
 
 @pyautohands @autolens_assistant @autofit_assistant
@@ -54,13 +55,34 @@ Colab honours a hand-written `aiContexts` entry. Remaining: (b) GitHub-badge rou
 3. Push a copy to a scratch branch and open it via a Colab badge; confirm the instruction still applies (GitHub route).
 4. Optional: after the setup cell runs, ask Gemini whether it can see a file in the cloned workspace.
 
-## Scope (if the gate passes)
+**Size gate PASSED 2026-10-26** (human): 2,254-word (18.7k chars) and 6,349-word (52.4k chars) contexts
+both honoured, end-of-text probe word returned → Colab accepts large instructions.
 
-- `inject_colab_setup` writes the Custom Instructions metadata with a short per-project block: what the assistant is + repo URL, the safety invariants in a few lines, "the reader is in notebook <path> of <project>; explain and help adapt it; do not claim to have run code". No skills embedded.
-- The block text lives in PyAutoNerves or Hands beside `COLAB_SETUP_MARKDOWN`, one per project in `COLAB_PROJECTS`.
-- autolens_assistant `docs/colab/cosmos_web_ring_colab.ipynb` gets the same metadata (hand-written notebook, not generated).
-- Fallback if the key is private or stripped on the GitHub route: a generated markdown cell with the same block and a "paste this into Gemini" line.
+## Scope (human-approved 2026-10-26, supersedes the short-block plan)
+
+- **Skills stay in the assistants** (single source). Generated `.ipynb` metadata carries a release-time
+  snapshot; workspace `.py` scripts and skill files are untouched.
+- Each assistant owns `colab/contexts.yaml`: workspace/HowTo path glob → ordered skill list (most specific
+  wins, default entry), plus a Colab preface ("written for a coding agent with the repo; in Colab ignore
+  repo-file/hook/terminal steps") and the core rules (stay with the notebook's API, real-data gate for
+  lens/galaxy, never claim code ran, one focused question, point to the assistant for heavy work).
+  The assistant's CI checks every mapped skill exists.
+- Hands `build_util` assembles preface + rules + mapped skills and writes `metadata.colab.aiContexts` /
+  `selectedAiContext` (deterministic uuid5 per project, idempotent), for every generated notebook incl.
+  prose-only ones. **Cap 20k chars per notebook** (human choice): over-cap fails generation naming the
+  mapping entry — never truncates. Missing assistant mapping fails loudly.
+- `release.yml` generate job adds a read-only checkout of the matching assistant; local `generate.py`
+  resolves it via Brain's repo-path resolver or an explicit argument/env var.
+- autolens_assistant `docs/colab/cosmos_web_ring_colab.ipynb` gets the cosmos greeting skill the same way
+  (build step + metadata-only patch of the committed notebook, no re-execution).
+- Phase 1: Hands + autolens_assistant (gate (b) = human opens the cosmos notebook via a Colab GitHub URL
+  on the PR branch). Phase 2: autogalaxy_assistant + autofit_assistant mappings.
+- Merge: human /prm (declared glance overridden by the human-gate need). Heart RED: human dev-only
+  override 2026-10-26.
+- Follow-up after release: AI_OPTIONS.md "Colab notebooks and the assistant" paragraph.
 
 ## Done when
 
-- Regenerated notebooks carry the instructions; opening one via a README badge yields a Gemini that knows the assistant; AI_OPTIONS.md "Colab notebooks and the assistant" paragraph updated to say so.
+- Regenerated notebooks carry folder-matched assistant skills (≤20k chars) as active Gemini instructions;
+  the cosmos notebook opened via a GitHub Colab URL yields a Gemini that follows them; phase 2 mappings
+  merged for galaxy and fit.

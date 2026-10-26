@@ -11,7 +11,7 @@
 - issued: 2026-10-26
 - prompt: active/corner_plot_config_keys_pr1709_phase3.md
 - session: Codex; session ID unavailable
-- status: awaiting-merge; implementation and accepted validation complete; five existing PRs updated; Galaxy-dependent shipping release-gated
+- status: release-blocker-repair; Fit #174 merged; four Galaxy-dependent PRs await publication; bounded smoke-profile prerequisite in progress
 - approval: Original five-task scope and contributor history preserved; human merge only. On 2026-10-26 human accepted focused checks plus six representative rendered pages, explicitly stopping further full modeling; group Markdown regeneration is waived for this task. Latest request: "yes, finis the PRs and wrap up this epic task". No release or merge authorized.
 - affected-repos:
   - autofit_workspace
@@ -40,20 +40,8 @@
 - smoke: 152 fresh checks passed against continuation scripts/config; logs/continuation/smoke-validation-summary.json and smoke-validation-equivalence.json in the claimed worktree.
 - ci: Current-head audit: Fit 7/7, Galaxy 8/8, HowToGalaxy 8/8, HowToLens 8/8 jobs passed; Lens new-head CI still running at wrap-up audit. Evidence logs/continuation/ci/.
 
-## standalone-memory-template-ci
-- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/516
-- issued: 2026-10-26
-- prompt: active/standalone_memory_template_ci.md
-- session: Codex; session ID unavailable
-- status: library-dev
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/standalone-memory-template-ci
-- repos:
-  - PyAutoMind: feature/standalone-memory-template-ci
-- approval: Human approved backlog resolution and green in-turn merges, excluding Pulse #79.
-- heart-red-override:
-  - authorized: live human 2026-10-26 "Authorize development override" for both CI fixes and release-blocker development; no release through RED.
-  - red: release validation FAILED (stage integrate); PyAutoHeart/workflows/Release Integrate: failure; PyAutoHeart/workflows/Workspace Smoke: failure; manifest_drift/checks/workspace checkouts (manifest ↔ disk): red; Release readiness: release validation FAILED (stage integrate); autolens: red; Workspace validation: NOT ready — 1429p / 1f / 125s @ cloud#40294511523; test_run: red; Release validation: NOT release_ready — v? profile=? (2026-10-26T07:48:52+00:00); validation_report/stages/integrate: fail; PyAutoBrain: red; PyAutoLens: red; autolens_profiling: red; Worktree drift: 1 orphan / 0 missing / 3 dirty
-  - gates: local validation passed; exact-head CI checked before merge
+- continuation-approval: 2026-10-26 human authorized all non-Pulse backlog resolution and Heart RED development override for release-blocker fixes; green in-turn merges only, no release through RED.
+- smoke-prerequisite: Config-only fix/group-slam-smoke-real-sampling from main; same task coordinates this alongside contributor PR595 to avoid release-gate circularity.
 
 ## isolate-validation-artifacts
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/319
