@@ -23,7 +23,7 @@
 - issued: 2026-10-26
 - prompt: active/config_yaml_keys_missing_their_one_line.md
 - session: Codex; session ID unavailable
-- status: library validation running; draft exception requested
+- status: library draft PR open; remaining library validation and workspace setup
 - approval: Five-task configuration scope approved; same-session shared-repository edits are sequential; human merge only.
 - affected-repos:
   - PyAutoFit
@@ -38,7 +38,12 @@
   - PyAutoArray: feature/config-leaf-comments
   - PyAutoGalaxy: feature/config-leaf-comments
   - PyAutoLens: feature/config-leaf-comments
-- validation: 277 comments added; 125 YAML values unchanged; checker reports zero missing comments; 4 focused tests pass. Baseline Zeus logging failure reproduced on pristine main; draft-PR exception pending human reply.
+  - autogalaxy_workspace: feature/config-leaf-comments
+  - autolens_workspace: feature/config-leaf-comments
+- validation: 277 comments added; 125 YAML values unchanged; checker reports zero missing comments; 4 focused tests pass. Full serial Fit suite passed 3932 tests; isolated Zeus failure is order-sensitive and reproduced on pristine main. Human approved draft PRs with the baseline behavior documented; merge blocked.
+
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1733
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1733
 
 ## workspace-prior-copies
 - issue: https://github.com/PyAutoLabs/HowToGalaxy/issues/90
