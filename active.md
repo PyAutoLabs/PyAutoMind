@@ -11,19 +11,22 @@
 - issued: 2026-10-26
 - prompt: active/linear_operated_sersic_has_no_prior_yaml.md
 - session: Codex; session ID unavailable
-- status: library validated; downstream smoke running
+- status: PR open; awaiting human review and merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/linear-operated-sersic-priors
 - approval: Five-task configuration scope approved in this session; merge remains human.
 - repos:
   - PyAutoGalaxy: feature/linear-operated-sersic-priors
 - validation: Full Galaxy suite: 1374 passed; documented MRO prior inheritance and added regression test. Evidence: .worktrees/linear-operated-sersic-priors/logs/galaxy-suite.log.
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/668
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/668
+- smoke: 172 checks passed across eight workspaces; initial Git/GSL setup failures resolved; logs in .worktrees/config-validation/logs/.
 
 ## config-leaf-comments
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1732
 - issued: 2026-10-26
 - prompt: active/config_yaml_keys_missing_their_one_line.md
 - session: Codex; session ID unavailable
-- status: four library drafts open; workspace mirrors validated; smoke running
+- status: four library drafts and Galaxy workspace draft open; Lens workspace smoke running
 - approval: Five-task configuration scope approved; same-session shared-repository edits are sequential; human merge only.
 - affected-repos:
   - PyAutoFit
@@ -51,13 +54,15 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/802
 - pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/802
 - workspace-validation: 323 comments added; all 168 YAML values unchanged; checker zero; independent review CLEAN; branch smoke running.
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/264
+- smoke: Library downstream 172 passed; Galaxy comment workspace 14 scripts + 2 notebooks passed.
 
 ## workspace-prior-copies
 - issue: https://github.com/PyAutoLabs/HowToGalaxy/issues/90
 - issued: 2026-10-26
 - prompt: active/sync_remaining_workspace_config_priors_copies.md
 - session: Codex; session ID unavailable
-- status: four PRs open; Galaxy test-workspace smoke running
+- status: five PRs open; awaiting human review and merge
 - approval: Five-task configuration scope approved; same-session shared-repository edits are sequential; human merge only.
 - affected-repos:
   - HowToGalaxy
@@ -78,7 +83,8 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/164
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/38
 - workspace-pr: https://github.com/PyAutoLabs/autocti_assistant/pull/38
-- smoke: HowToGalaxy 39/39 scripts passed; autogalaxy_workspace_test pending.
+- smoke: HowToGalaxy 32 executed scripts passed (39 discovered); autogalaxy_workspace_test 43 passed.
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/131
 
 ## workspace-config-key-drift
 - issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/263
@@ -103,7 +109,7 @@
 - issued: 2026-10-26
 - prompt: active/corner_plot_config_keys_pr1709_phase3.md
 - session: Codex; session ID unavailable
-- status: existing PRs updated; smoke running; latent examples gated on Galaxy #656
+- status: existing PRs updated; tutorial smoke running; latent examples gated on Galaxy #656
 - approval: Five-task configuration scope approved; same-session shared-repository edits are sequential; human merge only.
 - affected-repos:
   - autofit_workspace
@@ -126,3 +132,4 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/595
 - workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/87
 - workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/100
+- coordination: Galaxy/Lens contributor branches now include the comment-mirror branches with notation conflicts resolved; all pre-merge corner YAML values preserved. Merge comment workspace PRs first.
