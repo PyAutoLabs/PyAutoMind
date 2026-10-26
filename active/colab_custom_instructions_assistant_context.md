@@ -86,6 +86,13 @@ both honoured, end-of-text probe word returned → Colab accepts large instructi
 - Phase 1: Hands + autolens_assistant (gate (b) = human opens the cosmos notebook via a Colab GitHub URL
   on the PR branch). Phase 2: autogalaxy_assistant + autofit_assistant mappings.
   Phase 3: autocti_assistant mapping + autocti_workspace notebooks via the Hands CLI.
+  Phase 4 (human 2026-10-26: "skill building assistant maintenance ... tools or features which link
+  assistant skills to workspace ... routinely ... refresh and AI scan"): a maintainer skill in each
+  assistant (`al_/ag_/af_/ac_refresh_colab_contexts`) that AI-scans the workspace folder tree against
+  the skill catalogue, proposes `colab/contexts.yaml` updates when skills or folders change, and opens a
+  PR; plus a deterministic coverage report (folders with only the default match, dead skill refs,
+  per-notebook size vs cap) the skill and Broca both read. Broca records linkage freshness as upkeep
+  evidence (see draft/feature/pyautobroca/broca_communication_pilot.md) — Broca never runs the scan.
 - Merge: human /prm (declared glance overridden by the human-gate need). Heart RED: human dev-only
   override 2026-10-26.
 - Follow-up after release: AI_OPTIONS.md "Colab notebooks and the assistant" paragraph.

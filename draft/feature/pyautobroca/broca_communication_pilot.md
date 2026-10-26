@@ -17,3 +17,18 @@ Next: inspect current owners and split cross-repository rollout into bounded PRs
 ## Filed presentation slice — 2026-10-11
 
 `complete/2026/10/broca-communication-resource-dropdowns.md` captures resource-specific dropdowns for docs, HowTo tutorials, workspaces and assistants, with useful evidence and Scientist deep links. Treat it as the presentation slice of this pilot; do not duplicate its implementation when planning inventory/evidence ingestion.
+
+
+## Addition (human, 2026-10-26): skill ↔ workspace linkage evidence
+
+PyAutoHands#324 links assistant skills into workspace notebooks via each assistant's
+`colab/contexts.yaml` (folder glob → skills, embedded as Colab Gemini instructions at release). Human:
+"make sure that our skill building assistant maintenance ... knows to also have tools or features which
+link assistant skills to workspace ... routinely ... a refresh and AI scan."
+
+Broca's share (evidence only, refresh reads committed files, never runs models): per assistant, ingest
+the deterministic coverage report from #324 phase 4 — workspace folders matched only by `default`,
+mapped skills that no longer exist, max per-notebook context size vs the 20k cap, and staleness
+(mapping commit older than the newest skill or workspace-folder change) — and show a "refresh needed"
+action pointing at the assistant's `*_refresh_colab_contexts` maintainer skill. The AI scan itself
+lives in each assistant.
