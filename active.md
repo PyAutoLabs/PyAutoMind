@@ -61,9 +61,9 @@
 - issued: 2026-10-26
 - prompt: active/colab_custom_instructions_assistant_context.md
 - session: Claude Code CLI; session ID unavailable
-- status: library-shipped, awaiting-merge
+- status: phase-3-pending
 - library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/541, https://github.com/PyAutoLabs/autolens_assistant/pull/165, https://github.com/PyAutoLabs/PyAutoHands/pull/325 (phase 1, ALL MERGED 2026-10-26 by human)
-- library-pr: https://github.com/PyAutoLabs/autofit_assistant/pull/59, https://github.com/PyAutoLabs/autogalaxy_assistant/pull/39, https://github.com/PyAutoLabs/PyAutoHands/pull/326 (phase 2; merge assistants first, Hands last)
+- library-pr: https://github.com/PyAutoLabs/autofit_assistant/pull/59, https://github.com/PyAutoLabs/autogalaxy_assistant/pull/39, https://github.com/PyAutoLabs/PyAutoHands/pull/326 (phase 2, ALL MERGED 2026-10-26 by human)
 - heart-red-override:
   authorization: live human 2026-10-26 "prm, I authorize shop on RED"
   reasons: release validation FAILED (stage integrate); PyAutoHeart/workflows/Release Integrate: failure; PyAutoHeart/workflows/Workspace Smoke: failure; manifest_drift/checks/workspace checkouts (manifest ↔ disk): red; Release readiness: release validation FAILED (stage integrate); autolens: red; Workspace validation: NOT ready — 1429p / 1f / 125s @ cloud#40294511523; test_run: red; Release validation: NOT release_ready — v? profile=? (2026-10-26T07:48:52+00:00); validation_report/stages/integrate: fail; PyAutoBrain: red; PyAutoLens: red; autolens_profiling: red; Worktree drift: 1 orphan / 0 missing / 3 dirty
@@ -74,10 +74,10 @@
   gates: Hands 567 tests + firewall; fit 12 + check; galaxy 12 + check; independent review CLEAN (3 minors fixed)
 - worktree: ~/Code/PyAutoLabs-wt/colab-gemini-instructions (phase-1 branches merged; worktree_remove refuses while the task is active — recreate per phase, remove at completion)
 - repos:
-  - autogalaxy_assistant: feature/colab-gemini-phase2
-  - autofit_assistant: feature/colab-gemini-phase2
-  - PyAutoHands: feature/colab-gemini-phase2
 - summary: |
+    PHASE 2 MERGED 2026-10-26 (autofit_assistant#59, autogalaxy_assistant#39, Hands#326): fit 20k cap,
+    galaxy cap 36000 (ag skills 21-32k; trim follow-up draft/refactor/autogalaxy_assistant/). NEXT phase 3:
+    autocti_assistant colab/contexts.yaml + autocti_workspace notebooks via `autohands gemini_context apply`.
     PHASE 1 MERGED 2026-10-26 (Brain#541, autolens_assistant#165, Hands#325); human verified Colab
     upload, size (52k) and GitHub-badge routes. Workspace notebooks get instructions at next release.
     NEXT phase 2: autogalaxy_assistant + autofit_assistant colab/contexts.yaml, then set release.yml
