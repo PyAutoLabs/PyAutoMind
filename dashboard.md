@@ -959,7 +959,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/matrix_free_interferometer_wiring_5a.md">Matrix-free interferometer inversion, phase 5a: make it selectable from a fit</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/657">issue #657</a> — issued 2026-10-26 — library-dev</summary>
+<details><summary>📋 <a href="active/matrix_free_interferometer_wiring_5a.md">Matrix-free interferometer inversion, phase 5a: make it selectable from a fit</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/657">issue #657</a> — issued 2026-10-26 — library-shipped, awaiting-merge (stacked: PyAutoArray#658 first, then PyAutoGalaxy#670) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/658">PyAutoArray#658</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/670">PyAutoGalaxy#670</a> — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 Use the start-dev skill. active/matrix_free_interferometer_wiring_5a.md
@@ -3035,6 +3035,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoArray**
 
+- [PyAutoArray#658](https://github.com/PyAutoLabs/PyAutoArray/pull/658) — `active/matrix_free_interferometer_wiring_5a.md`
 - [PyAutoArray#656](https://github.com/PyAutoLabs/PyAutoArray/pull/656) — `complete/2026/10/config-leaf-comments.md`
 - [PyAutoArray#655](https://github.com/PyAutoLabs/PyAutoArray/pull/655) — `complete/2026/10/finufft-cpu-nufft-backend.md`
 
@@ -3055,6 +3056,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#670](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/670) — `active/matrix_free_interferometer_wiring_5a.md`
 - [PyAutoGalaxy#667](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/667) — `complete/2026/10/config-leaf-comments.md`
 - [PyAutoGalaxy#656](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656) — `complete/2026/10/latent-profile-declarations.md`
 - [PyAutoGalaxy#668](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/668) — `complete/2026/10/linear-operated-sersic-priors.md`
