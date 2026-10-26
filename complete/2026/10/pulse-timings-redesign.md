@@ -1,3 +1,27 @@
+- issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/78
+- completed: 2026-10-26
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/79 (merge 65a31ce5, head 8665a7a)
+- heart: shipped under the live-human Heart RED development override 2026-10-26 ("I authroize"); merged on the human's explicit permission ("Do this and then I give permission to prm") with every CI run green
+- summary: |
+    "Profiling Results" → Profiling Timings + Inference Timings, each per project (PyAutoFit / PyAutoLens; PyAutoFit
+    inference → Insight pointer). Profiling (v3) table runtime-only: Dataset type | Model | Instrument | Source size |
+    Setup (precision + na dropped) | Hardware class | Lens light | Runtime (s) = producer vmap per-call | Est. 12 CPU (s)
+    (numba only) | Class | ›; green tally above History; Extra Information link; default Class All; deterministic order;
+    constant categorical columns hidden with an "All rows: …" caption (dynamic on filter/History); two-line headers with
+    italic units. Per-row detail pages inside dashboard.html (?view=setup|run, Insight pattern) restore the old setup view
+    (runtime values incl. single_jit, labelled breakdown + collapsed raw keys, compile, memory, parity, projected node
+    throughput, status/decision, evidence, history; superseded pages tie siblings only by run_id or same dir + same date).
+    Inference: nautilus:mass_total[1] rows only, Profiling runtime (s) links to the profiling detail page (no size badge;
+    pixel counts on the run page), Wall 1 DP, Implied time (s / eval) 5 DP; old note + 6 columns removed; run detail pages.
+    walltime.py validates the additive join fields (stays @1). dashboard.html 1.72 MB.
+- witness: |
+    MET — published board shows both sections, the human's column layout and per-row detail pages; pytest 365, Playwright
+    browser test, pyauto-pulse check --offline, CI lint + Dashboard Refresh green. Independent review 3 rounds (5
+    non-blocking findings fixed). Human previewed locally and requested 2 rounds of changes before merge.
+- follow-ups: draft/feature/autolens_profiling/rectangular_28sq_profiling_rows.md; 2b interferometer (draft/research/autolens_profiling/likelihood_lifecycle_p2b_interferometer_campaign.md)
+
+## Original prompt
+
 # Pulse dashboard redesign: Profiling Timings and Inference Timings
 
 Type: feature

@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-10-26T16:39:56Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
+  "updated": "2026-10-26T16:40:39Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,12 +12,6 @@
       "text": "Workspace config + docs for corner-plot labels and latent plots\u2026 \u2014 awaiting-merge; implementation and accepted validation complete; five existing PRs updated; Galaxy-dependent shipping\u2026",
       "url": "https://github.com/PyAutoLabs/autofit_workspace/pull/174",
       "prompt": "Use the start-dev skill. active/corner_plot_config_keys_pr1709_phase3.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Pulse dashboard redesign: Profiling Timings and Inference Timings \u2014 workspace-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoPulse/pull/79",
-      "prompt": "Use the start-dev skill. active/pulse_timings_dashboard_redesign.md"
     },
     {
       "severity": "yellow",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#656 \u2014 Outcome and authority",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#668 \u2014 linear-operated-sersic-priors",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/668",
       "prompt": null
     }
   ]

@@ -40,23 +40,6 @@
 - smoke: 152 fresh checks passed against continuation scripts/config; logs/continuation/smoke-validation-summary.json and smoke-validation-equivalence.json in the claimed worktree.
 - ci: Current-head audit: Fit 7/7, Galaxy 8/8, HowToGalaxy 8/8, HowToLens 8/8 jobs passed; Lens new-head CI still running at wrap-up audit. Evidence logs/continuation/ci/.
 
-## pulse-timings-redesign
-- issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/78
-- issued: 2026-10-26
-- session: Claude Code (Opus 5.5); session ID unavailable
-- status: workspace-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/pulse-timings-redesign
-- repos:
-  - PyAutoPulse: feature/pulse-timings-redesign
-- prompt: active/pulse_timings_dashboard_redesign.md
-- epic: likelihood-lifecycle
-- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/79
-- heart-red-override:
-  - authorized: live human 2026-10-26 "I authroize" (this task)
-  - red: release validation FAILED (stage integrate); Release Integrate failure; Workspace Smoke failure; manifest_drift workspace checkouts red; autolens red; Workspace validation NOT ready 1429p/1f/125s @ cloud#40294511523; test_run red; NOT release_ready (2026-10-26T07:48:52Z); PyAutoBrain red; PyAutoLens red; autolens_profiling red; Worktree drift 1 orphan/3 dirty
-  - gates: ruff, pytest 363, Playwright browser test, check --offline, independent review 3 rounds (fixed)
-  - merge: needs fresh human /prm + green CI; no release
-
 ## pre-build-black-only-staged-dirs
 - issue: https://github.com/PyAutoLabs/PyAutoHands/pull/315
 - issued: 2026-10-26
