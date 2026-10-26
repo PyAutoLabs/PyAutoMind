@@ -9,6 +9,9 @@ Repos:
 - PyAutoGalaxy
 - PyAutoLens
 - HowToLens
+- HowToGalaxy
+- autolens_workspace
+- autogalaxy_workspace
 Themes:
 - euclid
 Difficulty: too-large
@@ -16,7 +19,7 @@ Autonomy: supervised
 Priority: high
 Status: formalised
 Consequence: judge
-Witness: (1) on at least five real DR1 lenses, positions.json overlaid on the VIS image lands on the multiple images, and the catalogue's sky-frame position angle (east of north) of the lens light, lens mass and external shear matches the orientation measured on the north-up FITS through its WCS, with sky-frame centres agreeing with the stored RA/Dec to within a pixel; (2) a simulated lens with known north-up PA, written to FITS with a CD1_1<0/CD2_2>0 WCS, fitted and converted, recovers its PA east of north and RA/Dec centre; (3) every existing WCS-bearing JSON/CSV in the release is byte-identical before and after, or its diff is listed and human-approved.
+Witness: (1) on at least five real DR1 lenses, positions.json overlaid on the VIS image lands on the multiple images, and the catalogue's sky-frame position angle (east of north) of the lens light, lens mass and external shear matches the orientation measured on the north-up FITS through its WCS, with sky-frame centres agreeing with the stored RA/Dec to within a pixel; (2) a simulated lens with known north-up PA, written to FITS with a CD1_1<0/CD2_2>0 WCS, fitted and converted, recovers its PA east of north and RA/Dec centre; (3) every existing WCS-bearing JSON/CSV in the release is byte-identical before and after, or its diff is listed and human-approved; (4) the workspace WCS guide runs end to end in both autolens_workspace and autogalaxy_workspace and its worked example (a simulated lens through a real WCS) prints the same PA east of north and RA/Dec as the library conversion utilities and the COOLEST export.
 Review-minutes: 25
 Unattended: needs-slicing
 
@@ -83,5 +86,36 @@ wcs.csv) must be monitored carefully:
 - Document the convention in workspace / HowToLens docs.
 - Backwards compatible or an explicit opt-in switch: existing fits and result files (including files/wcs.json)
   stay valid and unchanged.
+- COOLEST interop (PyAutoGalaxy autogalaxy/interop/coolest/conventions.py, PyAutoLens autolens/interop/coolest.py)
+  ASSUMES PyAutoGalaxy +y is north: phi_coolest_from() returns angle - 90 as "East-of-North" and
+  center_from_centre() only reorders (y, x) -> (x, y) with "y increasing upwards". For data loaded like DR1
+  (+y = south) a COOLEST export would carry mirrored PAs/centres. Verify against the COOLEST standard's own
+  axis definitions, and make the COOLEST conversions and the new sky-frame utilities share ONE convention
+  implementation (one source of truth, tested together).
 - Follow-on: once it lands, re-render the DR1 bulk per-lens PNGs north-up as catalogue v1.1 (visualisation only,
   from stored results, no refits), under the JSON hard rule above.
+
+## Phase 4 — the go-to reader guide (autolens_workspace AND autogalaxy_workspace)
+One guide per workspace (mirrored content, lens vs galaxy examples), the single resource a reader needs on
+coordinates and orientation. It must fully explain:
+- WCS basics: what a FITS WCS is, CRPIX/CRVAL/CD matrix, the sign of CD1_1/CD2_2, rotation and parity, how to
+  read the orientation of any cutout, and how pixel (row, column) maps to (RA, Dec).
+- PyAutoLens / PyAutoGalaxy conventions: (y, x) ordering, arcsec grid centred on the image, which way +y and +x
+  point relative to FITS rows and columns, the imshow origin config and what it does and does not change, angle
+  definitions (counter-clockwise from +x), ell_comps and shear components.
+- The explicit mapping from north/south/east/west to pixel and arcsec units, for data loaded as-is and for data
+  loaded under whatever convention phase 3 adopts, with a worked example on a simulated lens through a real WCS.
+- Converting results to the sky frame: PA east of north, centres to RA/Dec, using the phase-3 utilities.
+- COOLEST: link to the COOLEST standard (https://github.com/aymgal/COOLEST) and to the PyAutoLens/PyAutoGalaxy
+  COOLEST interop, showing that the guide, the utilities and the COOLEST export agree on one example.
+- Placement: follow the workspace's guides/ conventions (consult the Workspace Agent for target folder, sibling
+  to mirror and format; scripts with notebooks generated as usual). Link it from the workspace README / docs index.
+
+## Phase 5 — HowToLens / HowToGalaxy follow-up and a scan for other places
+- HowToLens (and HowToGalaxy) mention these conventions EARLY (the first chapter that loads or plots imaging):
+  a short paragraph on (y, x), which way north points, and a link to the workspace guide.
+- Scan for other suitable places and add a short pointer to the guide where readers meet coordinates: data
+  loading / preparation examples, positions and point-source examples, plotting and visualization docs, results /
+  aggregator examples that report centres or angles, the COOLEST interop docs, and the assistant skills/wiki
+  (autolens_assistant, autogalaxy_assistant). Report the scan as a list (file, why, proposed one-line pointer)
+  for human approval before editing.
