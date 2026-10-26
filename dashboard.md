@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 17 |
-| [In flight](#in-flight) | 3 |
+| [In flight](#in-flight) | 4 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 276 |
+| [Backlog](#backlog) | 275 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -942,6 +942,14 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 </details>
 
 ## In flight
+
+<details><summary>📋 <a href="active/colab_custom_instructions_assistant_context.md">Carry assistant context into every Colab notebook via Gemini Custom Instructions</a> — issued 2026-10-26</summary>
+
+```
+Use the start-dev skill. active/colab_custom_instructions_assistant_context.md
+```
+
+</details>
 
 <details><summary>📋 <a href="active/corner_plot_config_keys_pr1709_phase3.md">Workspace config + docs for corner-plot labels and latent plots…</a> — <a href="https://github.com/PyAutoLabs/autofit_workspace/issues/177">issue #177</a> — issued 2026-10-26 — release-blocker-repair; Fit #174 merged; four Galaxy-dependent PRs await publication; bounded smoke-profile prerequisite in… — PRs: <a href="https://github.com/PyAutoLabs/autofit_workspace/pull/174">autofit_workspace#174</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/259">autogalaxy_workspace#259</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/595">autolens_workspace#595</a>, <a href="https://github.com/PyAutoLabs/HowToGalaxy/pull/87">HowToGalaxy#87</a>, <a href="https://github.com/PyAutoLabs/HowToLens/pull/100">HowToLens#100</a> — ⏸ waiting on PyAutoGalaxy's release</summary>
 
@@ -2258,7 +2266,7 @@ Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_
 </details>
 
 <details>
-<summary><b>docs</b> — 23</summary>
+<summary><b>docs</b> — 22</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -2288,14 +2296,6 @@ Use the start-dev skill. draft/docs/workspaces/preloads_advanced_workspace_guide
 
 ```
 Use the start-dev skill. draft/docs/autolens_workspace/interferometer_primary_beam_example.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/pyautohands/colab_custom_instructions_assistant_context.md">Carry assistant context into every Colab notebook via Gemini Custom Instructions</a> — pyautohands · medium · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/docs/pyautohands/colab_custom_instructions_assistant_context.md
 ```
 
 </details>
@@ -2797,12 +2797,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 |------|-------|------|
 | 2026-10-26 | issued | <a href="active/corner_plot_config_keys_pr1709_phase3.md">Workspace config + docs for corner-plot labels and latent plots…</a> |
 | 2026-10-26 | issued | <a href="active/isolate_validation_artifacts.md">Preserve artifact directories during workspace validation</a> |
+| 2026-10-26 | issued | <a href="active/colab_custom_instructions_assistant_context.md">Carry assistant context into every Colab notebook via Gemini Custom…</a> |
 | 2026-10-25 | filed | <a href="draft/bug/health_fixes/heart_health_rerun_stale_push.md">Heart Health rerun cannot publish after main advances</a> |
 | 2026-10-25 | filed | <a href="draft/bug/health_fixes/ci_timing_execution_coverage.md">CI timing must compare equivalent executed job coverage</a> |
 | 2026-10-23 | filed | <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred…</a> |
 | 2026-10-23 | filed | <a href="draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md">autocti_visualization manifest <code>rendered_with:</code> shows stale…</a> |
 | 2026-10-23 | filed | <a href="draft/bug/autolens_profiling/stale_auto_simulated_cluster_dataset.md"><code>@autolens_profiling</code> stale auto-simulated <code>dataset/cluster/simple</code>…</a> |
-| 2026-10-23 | filed | <a href="draft/docs/pyautohands/colab_custom_instructions_assistant_context.md">Carry assistant context into every Colab notebook via Gemini Custom…</a> |
 | 2026-10-23 | filed | <a href="draft/feature/pyautobrain/docs_conductor.md">A dedicated Documentation conductor in PyAutoBrain</a> |
 | 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
 
@@ -2913,7 +2913,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-112 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+111 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2958,7 +2958,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md`
 - `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
-- _… and 72 more_
+- _… and 71 more_
 
 </details>
 
