@@ -935,7 +935,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/config_key_mirror_drift.md">Mirror drifted library config keys into the workspace configs</a> — <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/issues/263">issue #263</a> — issued 2026-10-26 — workspace-dev</summary>
+<details><summary>📋 <a href="active/config_key_mirror_drift.md">Mirror drifted library config keys into the workspace configs</a> — <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/issues/263">issue #263</a> — issued 2026-10-26 — verified already implemented, awaiting human close-out</summary>
 
 ```
 Use the start-dev skill. active/config_key_mirror_drift.md
@@ -951,7 +951,7 @@ Use the start-dev skill. active/config_yaml_keys_missing_their_one_line.md
 
 </details>
 
-<details><summary>📋 <a href="active/corner_plot_config_keys_pr1709_phase3.md">Workspace config + docs for corner-plot labels and latent plots…</a> — <a href="https://github.com/PyAutoLabs/autofit_workspace/issues/177">issue #177</a> — issued 2026-10-26 — approved, setup in progress</summary>
+<details><summary>📋 <a href="active/corner_plot_config_keys_pr1709_phase3.md">Workspace config + docs for corner-plot labels and latent plots…</a> — <a href="https://github.com/PyAutoLabs/autofit_workspace/issues/177">issue #177</a> — issued 2026-10-26 — workspace-dev (existing contributor PRs)</summary>
 
 ```
 Use the start-dev skill. active/corner_plot_config_keys_pr1709_phase3.md
