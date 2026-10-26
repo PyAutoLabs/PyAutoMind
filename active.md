@@ -22,7 +22,7 @@
 - issued: 2026-10-26
 - prompt: active/config_yaml_keys_missing_their_one_line.md
 - session: Codex; session ID unavailable
-- status: approved, setup in progress
+- status: library-dev
 - approval: Five-task configuration scope approved; same-session shared-repository edits are sequential; human merge only.
 - affected-repos:
   - PyAutoFit
@@ -31,13 +31,19 @@
   - PyAutoLens
   - autolens_workspace
   - autogalaxy_workspace
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/config-leaf-comments
+- repos:
+  - PyAutoFit: feature/config-leaf-comments
+  - PyAutoArray: feature/config-leaf-comments
+  - PyAutoGalaxy: feature/config-leaf-comments
+  - PyAutoLens: feature/config-leaf-comments
 
 ## workspace-prior-copies
 - issue: https://github.com/PyAutoLabs/HowToGalaxy/issues/90
 - issued: 2026-10-26
 - prompt: active/sync_remaining_workspace_config_priors_copies.md
 - session: Codex; session ID unavailable
-- status: approved, setup in progress
+- status: workspace-dev
 - approval: Five-task configuration scope approved; same-session shared-repository edits are sequential; human merge only.
 - affected-repos:
   - HowToGalaxy
@@ -45,6 +51,13 @@
   - autolens_assistant
   - autogalaxy_assistant
   - autocti_assistant
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/workspace-prior-copies
+- repos:
+  - HowToGalaxy: feature/workspace-prior-copies
+  - autogalaxy_workspace_test: feature/workspace-prior-copies
+  - autolens_assistant: feature/workspace-prior-copies
+  - autogalaxy_assistant: feature/workspace-prior-copies
+  - autocti_assistant: feature/workspace-prior-copies
 
 ## workspace-config-key-drift
 - issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/263
