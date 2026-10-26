@@ -48,6 +48,11 @@ Decide and implement a principled sky-orientation story:
   documented, opt-in switch.
 
 ## Deferred euclid_dr1 leg (catalogue building + docs, later, no changes now)
+- Now filed separately as draft/research/euclid/euclid_dr1_catalogue_sky_frame_orientation_north.md (catalogue sky-frame
+  columns, docs, paper figures north-up with a standard compass, website). The bullets below are kept for context.
+- Paper consistency: the DR1 paper will be in the standard sky frame; catalogue orientation numbers match it via the
+  sky-frame columns, and only the bulk per-lens PNGs stay native-frame (documented). Once this library fix lands,
+  re-render those PNGs north-up as catalogue v1.1 (visualisation only, from stored results, no refits).
 - Add sky-frame PA columns (east of north) to the CSV snapshot builder from stored results (no refits), after
   verifying signs on real lenses.
 - One paragraph in README / KNOWN_ISSUES / ECLIPSE website about page stating the pipeline frame.

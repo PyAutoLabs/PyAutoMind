@@ -12,13 +12,13 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 5 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 275 |
+| [Backlog](#backlog) | 276 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 20
+**Highest priority** (filed as `high`) — showing 12 of 21
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -1925,7 +1925,7 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>research</b> — 43</summary>
+<summary><b>research</b> — 44</summary>
 
 <details><summary>📋 <a href="draft/research/autofit_inference/search_ext_b5c2a_rerun.md"><code>@autofit_inference</code> B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug…</a> — autofit_inference · medium · supervised · high</summary>
 
@@ -1955,6 +1955,14 @@ Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel
 
 ```
 Use the start-dev skill. draft/research/autoarray/delaunay_research.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/euclid/euclid_dr1_catalogue_sky_frame_orientation_north.md">euclid_dr1 catalogue: sky-frame orientation (north/east) for the catalogue, paper and website</a> — euclid · too-large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/research/euclid/euclid_dr1_catalogue_sky_frame_orientation_north.md
 ```
 
 </details>
@@ -2978,7 +2986,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-61 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+62 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3042,6 +3050,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/research/autofit/search_extensibility_epic.md — unknown theme keyword(s): searches, jax, documentation, inference`
 - `draft/research/autolens/point_solver_root_refinement.md — unknown theme keyword(s): jax`
 - `draft/research/autolens_assistant/free_agent_harness_evaluation.md — unknown theme keyword(s): assistant, support-policy`
+- `draft/research/euclid/euclid_dr1_catalogue_sky_frame_orientation_north.md — unknown theme keyword(s): euclid`
 - `draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md — unknown theme keyword(s): euclid, hpc`
 - `draft/triage/autolens/jit_fit_from_is_vacuous.md — unknown theme keyword(s): testing, jax`
 
