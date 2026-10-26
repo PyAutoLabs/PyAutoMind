@@ -126,3 +126,14 @@
 - parent: complete/2026/10/point-plots-yaml-keys.md (HowToLens half merged 2026-10-22, HowToLens#99); no separate prompt file
 - scope: same `point_dataset` / `fit_point_dataset` block edit in `autolens_assistant/config/visualize/plots.yaml` as HowToLens; ship on its own branch `feature/point-plots-yaml-keys` once the claim clears
 
+
+## likelihood-lifecycle-p2b-interferometer
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/469
+- planned: 2026-10-26
+- classification: workspace
+- suggested-branch: feature/likelihood-lifecycle-p2b-interferometer
+- blocked-by: rectangular-28sq-profiling-rows (using autolens_profiling; both edit _production_config.py)
+- prompt: active/likelihood_lifecycle_p2b_interferometer_campaign.md
+- heart-red-override: live human 2026-10-26 "Yes, authorise for 2b" (PRs + planned RAL batches)
+- affected-repos:
+  - autolens_profiling
