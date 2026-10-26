@@ -50,3 +50,7 @@ Approved intent remains: finish examples, generated Markdown and PR validation a
 - Resume: resolve retry decision; correct remaining Lens comments between renders; resume Galaxy interferometer and Lens imaging, then remaining four curated pages; run remaining three smoke suites; complete independent artifact review; update existing five contributor PRs and current-head CI evidence. Keep `release-gate: PyAutoGalaxy`.
 
 Evidence root: `.worktrees/corner-plot-workspace-config/logs/continuation/` — `provenance.json`, `prose-code-proof.json`, `smoke-validation-summary.json`, `smoke-validation-equivalence.json`, `galaxy/imaging-evidence.json`, `galaxy/interferometer-interrupted.json`, renderer logs and `review/preliminary-review.md`. Workspace changes remain local in the existing claimed worktrees.
+
+## Retry approval — 2026-10-26
+
+User: "ok do that" — explicitly approves retrying the interrupted renders, completing remaining validation and updating the five existing PRs. No release or workspace merge authorized. Lens config-comment corrections now preserve parsed values; normal Lens imaging resumed from its checkpoint.
