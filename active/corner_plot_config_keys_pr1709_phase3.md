@@ -100,3 +100,14 @@ User request: "ok do all that, but note that Pulse we are working on so ignore".
 Fit workspace #174 merged c3b261752ea507b9d99e090b6461c9b4b92e4858. Four Galaxy-dependent PRs remain release-gated. A separate minimal prerequisite PR in autolens_workspace will set PYAUTO_TEST_MODE=1 for only scripts/group/slam.py in config/build/profile_smoke.yaml: the script requires fitted luminosity, and mode2 produced UniformPrior(0,0). The exact mode1 candidate passed canonical isolated Heart smoke in64.7s using fresh reduced data. No scientific prior, timeout, selection, dataset scale or assertion changes. Deliver this config-only prerequisite from origin/main before recovery validation; do not merge the broader community PR prematurely. Preserve contributor history and all existing output/data including untracked dataset.fits.
 
 Validation evidence: .worktrees/pr-closeout-group-smoke-diagnostic/mode1.log and its autolens_workspace/test-results/. The prior release script run passed140.79s but predates Galaxy#656; fresh release validation still required.
+
+
+## Release deferred by human — 2026-10-26
+
+User deferred production on 2026-10-26: "lets not do a gated production release, lets do that in a bit once I have other AI tasks finish". No production release or full integration will be dispatched in this session. Own library freeze cleared so parallel tasks can finish.
+
+Completed: original non-Pulse PRs Fit workspace174, Memory140, inference30, Mind505, Hands315, Mind-template4 and Memory-template3 merged. Necessary corrective PRs Mind517, Heart320 and Lens workspace603 merged with passing CI. Pulse79 was merged by another session; this session did not act on it.
+
+Remaining release-gated community PRs: Galaxy workspace259, Lens workspace595, HowToGalaxy87, HowToLens100. Galaxy656 must be published before merging these. Lens595 now365c8311be8e6fdefc47947ba903f0ef08bd228b includes merged prerequisite603. All task data preserved.
+
+Already-started TestPyPI-only run40363490490 remains in progress, version2026.10.26.1.dev84101. Five builds/uploads succeeded; install jobs ongoing at handoff. No completed rehearsal artifact/source verification or release-clearance claim. No waiter or scheduled continuation armed. Later release must recheck source pins, obtain fresh full validation and Heart verdict after other tasks finish; source may move now freeze is cleared. Clean prebuild clones retained at .worktrees/pr-backlog-release-clean, evidence at .worktrees/pr-backlog-evidence/recovery and heart319.

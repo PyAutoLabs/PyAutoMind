@@ -25,7 +25,7 @@
 - issued: 2026-10-26
 - prompt: active/corner_plot_config_keys_pr1709_phase3.md
 - session: Codex; session ID unavailable
-- status: release-blocker-repair; Fit #174 merged; four Galaxy-dependent PRs await publication; bounded smoke-profile prerequisite in progress
+- status: awaiting-release; production and full recovery integration deferred by human until other AI tasks finish; four community PRs remain open
 - approval: Original five-task scope and contributor history preserved; human merge only. On 2026-10-26 human accepted focused checks plus six representative rendered pages, explicitly stopping further full modeling; group Markdown regeneration is waived for this task. Latest request: "yes, finis the PRs and wrap up this epic task". No release or merge authorized.
 - affected-repos:
   - autofit_workspace
@@ -58,11 +58,17 @@
 - smoke-prerequisite: Config-only fix/group-slam-smoke-real-sampling from main; same task coordinates this alongside contributor PR595 to avoid release-gate circularity.
 
 - prerequisite-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/603
-- prerequisite-worktree: /home/jammy/Code/PyAutoLabs/.worktrees/corner-plot-workspace-config/autolens_workspace-smoke-fix
+- prerequisite-result: PR603 merged f3c94aff4f0c5ed78e5c87ae6a8c4d5e849c653e; all8 CI jobs passed; clean prerequisite worktree removed; contributor PR595 includes merged main at365c8311be8e6fdefc47947ba903f0ef08bd228b.
+- recovery-approval: Live human 2026-10-26 "Authorize recovery validation; continue through gated release" explicitly permits post-fix TestPyPI rehearsal and full integration while RED; production publication remains gated on the fresh verdict.
+- recovery-run: https://github.com/PyAutoLabs/PyAutoHands/actions/runs/40363490490 (TestPyPI only); source pins .worktrees/pr-backlog-evidence/recovery/commit_shas.json include Galaxy656.
+- recovery-freeze: Cleared at human release deferral; later source freshness must be rechecked.
 - heart-red-override:
   - authorized: live human 2026-10-26 "Authorize development override" for release-blocker development; green in-turn merges already authorized, no release through RED
   - red: release validation FAILED (stage integrate); PyAutoHeart/workflows/Release Integrate: failure; PyAutoHeart/workflows/Workspace Smoke: failure; manifest_drift/checks/workspace checkouts (manifest ↔ disk): red; Release readiness: release validation FAILED (stage integrate); autolens: red; Workspace validation: NOT ready — 1429p / 1f / 125s @ cloud#40294511523; test_run: red; Release validation: NOT release_ready — v? profile=? (2026-10-26T07:48:52+00:00); validation_report/stages/integrate: fail; PyAutoBrain: red; PyAutoLens: red; autolens_profiling: red; Worktree drift: 1 orphan / 0 missing / 3 dirty
-  - gates: group SLaM targeted Heart smoke64.7s; strict profile validation0 errors/warnings; CI prerequisite pending
+  - gates: group SLaM targeted Heart smoke64.7s; strict profile validation0 errors/warnings; prerequisite CI8/8 passed; broader community PR595 release-gated
+
+- latest-direction: Human: "lets not do a gated production release, lets do that in a bit once I have other AI tasks finish". No production/full integration dispatched; TestPyPI-only run40363490490 remains in progress, no completed validation claim or waiter.
+- continuation: Recheck all current source pins and PR CI after other tasks finish, complete recovery validation and gated production release, then merge four Galaxy-dependent PRs; preserve all data worktrees until then.
 
 ## colab-gemini-instructions
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/324
