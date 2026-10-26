@@ -49,3 +49,15 @@
 - prompt: active/likelihood_lifecycle_p2a_pin_restamp_12core.md
 - epic: likelihood-lifecycle
 - compute-go: human 2026-10-26 ('go') for the 2-task ao A100 breakdown rerun after the memory fix
+
+## latent-profile-declarations
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/669
+- issued: 2026-10-26
+- prompt: active/latent_parameter_declarations_pr1709_phase2.md
+- session: Codex; session ID unavailable
+- status: library-dev
+- approval: Human approved completion scope and merge on green after tests, independent review, CI and Heart gates; no release authorized.
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/latent-profile-declarations
+- repos:
+  - PyAutoGalaxy: feature/latent-parameters (samlange04 fork)
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656

@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 17 |
-| [In flight](#in-flight) | 3 |
+| [In flight](#in-flight) | 4 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 278 |
+| [Backlog](#backlog) | 277 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -951,6 +951,14 @@ Use the start-dev skill. active/corner_plot_config_keys_pr1709_phase3.md
 
 </details>
 
+<details><summary>📋 <a href="active/latent_parameter_declarations_pr1709_phase2.md">PyAutoGalaxy latent-parameter declarations (phase 2 of community PR PyAutoFit#1709)</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/669">issue #669</a> — issued 2026-10-26 — library-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656">PyAutoGalaxy#656</a></summary>
+
+```
+Use the start-dev skill. active/latent_parameter_declarations_pr1709_phase2.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/likelihood_lifecycle_p2a_pin_restamp_12core.md">Likelihood lifecycle 2a follow-up: pin 2026.10.25.1 re-stamp, 12-core estimate, ao GPU breakdown…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/466">issue #466</a> — issued 2026-10-26 — workspace-dev</summary>
 
 ```
@@ -1099,7 +1107,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 38</summary>
+<summary><b>feature</b> — 37</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
 
@@ -1137,14 +1145,6 @@ Use the start-dev skill. draft/feature/autofit/prior_exit_sampler_coverage.md
 
 ```
 Use the start-dev skill. draft/feature/autofit/search_seed_reproducibility.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autogalaxy/latent_parameter_declarations_pr1709_phase2.md">PyAutoGalaxy latent-parameter declarations (phase 2 of community PR PyAutoFit#1709)</a> — autogalaxy · medium · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/feature/autogalaxy/latent_parameter_declarations_pr1709_phase2.md
 ```
 
 </details>
@@ -2812,6 +2812,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | Date | Event | Task |
 |------|-------|------|
 | 2026-10-26 | issued | <a href="active/corner_plot_config_keys_pr1709_phase3.md">Workspace config + docs for corner-plot labels and latent plots…</a> |
+| 2026-10-26 | issued | <a href="active/latent_parameter_declarations_pr1709_phase2.md">PyAutoGalaxy latent-parameter declarations (phase 2 of community PR…</a> |
 | 2026-10-26 | issued | <a href="active/likelihood_lifecycle_p2a_pin_restamp_12core.md">Likelihood lifecycle 2a follow-up: pin 2026.10.25.1 re-stamp, 12-core…</a> |
 | 2026-10-25 | filed | <a href="draft/bug/health_fixes/heart_health_rerun_stale_push.md">Heart Health rerun cannot publish after main advances</a> |
 | 2026-10-25 | filed | <a href="draft/bug/health_fixes/ci_timing_execution_coverage.md">CI timing must compare equivalent executed job coverage</a> |
@@ -2820,15 +2821,14 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-23 | filed | <a href="draft/bug/autolens_profiling/stale_auto_simulated_cluster_dataset.md"><code>@autolens_profiling</code> stale auto-simulated <code>dataset/cluster/simple</code>…</a> |
 | 2026-10-23 | filed | <a href="draft/docs/pyautohands/colab_custom_instructions_assistant_context.md">Carry assistant context into every Colab notebook via Gemini Custom…</a> |
 | 2026-10-23 | filed | <a href="draft/feature/pyautobrain/docs_conductor.md">A dedicated Documentation conductor in PyAutoBrain</a> |
-| 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
 | 2026-10-21 | filed | <a href="planned.md#interferometer-primary-beam-persistence-mirror">interferometer-primary-beam-persistence-mirror</a> |
 | 2026-10-21 | filed | <a href="draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md">PyAutoLens mirror of the interferometer primary-beam persistence…</a> |
-| 2026-10-21 | filed | <a href="draft/feature/autogalaxy/latent_parameter_declarations_pr1709_phase2.md">PyAutoGalaxy latent-parameter declarations (phase 2 of community PR…</a> |
 | 2026-10-21 | filed | <a href="draft/docs/autolens_profiling/positions_source_jacobian_default_rerun_note.md">Note in autolens_profiling that plain source-plane lane values…</a> |
 | 2026-10-21 | filed | <a href="draft/research/autolens_profiling/matrix_free_interferometer_phase5.md">Matrix-free interferometer inversion, phase 5: wiring, profiling note…</a> |
 | 2026-10-21 | issued | <a href="active/matrix_free_interferometer_inversion.md">Matrix-free interferometer inversion for very large rectangular…</a> |
@@ -2929,7 +2929,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-113 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+112 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2940,7 +2940,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autofit/results_library_epic_report.md`
 - `draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md`
 - `draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md`
-- `draft/feature/autogalaxy/latent_parameter_declarations_pr1709_phase2.md`
 - `draft/feature/autogalaxy/piemass_potential.md`
 - `draft/feature/autolens/area_magnification_leggos.md`
 - `draft/feature/autolens/cluster_curves_engine_dispatch.md`
@@ -2974,7 +2973,8 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`
 - `draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md`
 - `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
-- _… and 73 more_
+- `draft/bug/autolens/point_solver_error_bisect_health.md`
+- _… and 72 more_
 
 </details>
 

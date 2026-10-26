@@ -7,7 +7,9 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: medium
-Status: formalised
+Status: library-dev
+Issued: 2026-10-26
+Issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/669
 Consequence: glance
 Release-evidence: PyAutoFit 2026.10.23.1 is published/non-yanked and contains #1709; prerequisite cleared (verified in this session).
 Existing-PR: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656
@@ -46,7 +48,9 @@ Verified review findings:
 - Scaled and light-profile multipole conversion behavior needs direct coverage,
   beyond the existing class-declaration assertions.
 
-### Proposed completion plan (approval requested; no source edits yet)
+### Approved completion plan
+
+Human approved completion and merge on green on 2026-10-26.
 
 1. Register this existing task via start_dev/create_issue; attach a claimed
    PyAutoGalaxy worktree under `.worktrees/latent-profile-declarations`, using
