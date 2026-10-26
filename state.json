@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
-  "updated": "2026-10-26T14:37:33Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 2 in flight",
+  "updated": "2026-10-26T14:40:41Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Inference wall-time records: search.summary per-eval times and a profiling @3 join \u2014 workspace-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autolens_inference/pull/48",
-      "prompt": "Use the start-dev skill. active/likelihood_lifecycle_p2a_inference_timings.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#668 \u2014 linear-operated-sersic-priors",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/668",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#662 \u2014 mass-sheet-jax",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/662",
       "prompt": null
     }
   ]

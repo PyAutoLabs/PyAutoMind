@@ -1,3 +1,24 @@
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/47
+- completed: 2026-10-26
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/48 (merge b0527c50, head f04f9a4)
+- heart: shipped under the live-human Heart RED development override 2026-10-26 ("I authorize you to work and overrude heart red"); merged by a separate human /prm with CI green
+- summary: |
+    implied_s_per_eval (wall ÷ likelihood evals, incl. sampler overhead) is the one per-eval number on all hardware
+    (HUMAN: "dont use the search.summary log likelihood evaluation time" — the search.summary capture/backfill built
+    first on the branch was removed; final diff has none). Exact profiling @3 join (likelihood, instrument, setup_id,
+    host_class, model_variant; current first, then exact source-pixel size, then newest) → profiling_record_id,
+    profiling_per_call_s, profiling_status, profiling_source_pixels, source_pixels, size_match,
+    profiling_unmatched_reason. 32/56 matched (mass_total[1] 8/19); unmatched 10 jax_cpu_dense_fp64 + 7 light_fixed
+    (no profiling record) + 7 parametric stages (inversion_applies false, never paired). size_match 4 true (Delaunay
+    1250) / 28 false (rect 28² = 784 vs 35² = 1225). Lens @3 reference re-captured (78 runtime records). lint.yml now
+    checks out PyAutoPulse so the walltime-validation@1 contract test runs in CI.
+- witness: |
+    MET (amended scope) — records carry implied_s_per_eval and the @3 profiling match; Pulse walltime.validate []; CI
+    222 passed, contract test running. Independent review 2 rounds (1 high finding fixed; CLEAN).
+- follow-ups: draft/feature/autolens_profiling/rectangular_28sq_profiling_rows.md; draft/feature/pyautopulse/pulse_timings_dashboard_redesign.md (PR 3)
+
+## Original prompt
+
 # Inference wall-time records: search.summary per-eval times and a profiling @3 join
 
 Type: feature
