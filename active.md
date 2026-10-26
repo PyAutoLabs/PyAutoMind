@@ -57,3 +57,18 @@
   - authorized: live human "Authorize development override" for release-blocker development; no release through RED
   - red: release validation FAILED (stage integrate); PyAutoHeart/workflows/Release Integrate: failure; PyAutoHeart/workflows/Workspace Smoke: failure; manifest_drift/checks/workspace checkouts (manifest ↔ disk): red; Release readiness: release validation FAILED (stage integrate); autolens: red; Workspace validation: NOT ready — 1429p / 1f / 125s @ cloud#40294511523; test_run: red; Release validation: NOT release_ready — v? profile=? (2026-10-26T07:48:52+00:00); validation_report/stages/integrate: fail; PyAutoBrain: red; PyAutoLens: red; autolens_profiling: red; Worktree drift: 1 orphan / 0 missing / 3 dirty
   - gates: pending targeted tests, artifact replay and CI
+
+## colab-gemini-instructions
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/324
+- issued: 2026-10-26
+- session: Claude Code CLI; session ID unavailable
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/colab-gemini-instructions
+- repos:
+  - PyAutoHands: feature/colab-gemini-instructions
+  - autolens_assistant: feature/colab-gemini-instructions
+- summary: |
+    Phase 1 of 3 (Hands injector + CLI, release checkout, autolens_assistant colab/contexts.yaml + cosmos
+    notebook). Human-approved 2026-10-26: 20k-char cap, human /prm (glance overridden), Heart RED
+    dev-only override. Phase 2 galaxy + fit mappings, phase 3 CTI via CLI. Human gate before merge:
+    open cosmos notebook via Colab GitHub URL on the PR branch.
