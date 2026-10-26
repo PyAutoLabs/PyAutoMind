@@ -1,3 +1,12 @@
+## workspace-config-key-drift
+- issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/263
+- completed: 2026-10-26
+- summary: Verified already implemented on main: 14 notation values and both requested test keys match, all three isolated config loads and label rendering pass. Existing commits include autogalaxy_workspace 801a8ce and autofit_workspace 4778b42. No source changes or new PR were needed. All three task branches are ancestors of main with zero unmerged commits. Closed under human /prm authorization; no new merge is represented by a shadow row.
+- close-out: Human invoked /prm; every applicable CI run/job was green and all claimed branch tips are contained in main.
+- cleanup-approval: Human approved deletion of completed-task worktrees and outputs.
+
+## Original prompt
+
 # Mirror drifted library config keys into the workspace configs
 
 Issued: 2026-10-26

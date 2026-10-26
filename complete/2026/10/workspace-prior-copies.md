@@ -1,3 +1,18 @@
+## workspace-prior-copies
+- issue: https://github.com/PyAutoLabs/HowToGalaxy/issues/90
+- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/91
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/164
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/38
+- workspace-pr: https://github.com/PyAutoLabs/autocti_assistant/pull/38
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/131
+- completed: 2026-10-26
+- summary: Applied remaining Galaxy #618 config-copy corrections across six roots in five repositories. Independent audit: 496 YAML files parse without duplicate keys, 54 mappings match intended transformations, six scatter moves preserve values, 30 model checks pass. HowToGalaxy: 32 executed scripts passed (39 discovered); Galaxy test workspace: 43 passed. Two identical pre-existing radius_break duplicates were removed without changing values. Euclid copies were untouched.
+- close-out: Human invoked /prm; every applicable CI run/job was green and all claimed branch tips are contained in main.
+- cleanup-approval: Human approved deletion of completed-task worktrees and outputs.
+- human-review: Merged unchanged, confirmed explicitly in this session.
+
+## Original prompt
+
 # Sync remaining workspace config/priors copies
 
 Issued: 2026-10-26

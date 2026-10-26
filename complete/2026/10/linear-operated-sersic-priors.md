@@ -1,3 +1,15 @@
+## linear-operated-sersic-priors
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/666
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/668
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/668
+- completed: 2026-10-26
+- summary: Documented intended MRO inheritance for linear-operated Sersic, with regression coverage of all six priors, median instance construction and fixed intensity. Full Galaxy suite: 1374 passed; downstream smoke: 172 passed.
+- close-out: Human invoked /prm; every applicable CI run/job was green and all claimed branch tips are contained in main.
+- cleanup-approval: Human approved deletion of completed-task worktrees and outputs.
+- human-review: Merged unchanged, confirmed explicitly in this session.
+
+## Original prompt
+
 # linear_operated Sersic has no prior yaml file
 
 Type: maintenance

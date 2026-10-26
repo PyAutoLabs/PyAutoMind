@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-10-26T10:25:45Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
+  "updated": "2026-10-26T10:34:26Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -21,7 +21,7 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#656 \u2014 Config yaml keys missing their one-line explanatory comment",
+      "text": "pending release: PyAutoArray PyAutoArray#656 \u2014 config-leaf-comments",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/656",
       "prompt": null
     },
@@ -29,12 +29,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#655 \u2014 What shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/655",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1733 \u2014 Config yaml keys missing their one-line explanatory comment",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1733",
       "prompt": null
     },
     {
@@ -53,6 +47,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1731 \u2014 Outcome and validation",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1731",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1733 \u2014 config-leaf-comments",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1733",
       "prompt": null
     },
     {
@@ -105,13 +105,13 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#667 \u2014 Config yaml keys missing their one-line explanatory comment",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#667 \u2014 config-leaf-comments",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/667",
       "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#668 \u2014 linear_operated Sersic has no prior yaml file",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#668 \u2014 linear-operated-sersic-priors",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/668",
       "prompt": null
     },

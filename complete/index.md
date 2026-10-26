@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2006 records across 10 buckets.
+2010 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -177,6 +177,7 @@ markers; everything below GENERATED is rebuilt.
 - [compact-dashboard-rows](2026/10/compact-dashboard-rows.md)
 - [compact-memory-board](2026/10/compact-memory-board.md)
 - [compile-builder-hst-mge](2026/10/compile-builder-hst-mge.md) — Shipped one explicit, isolated HST/MGE fp64 jit current-runtime compile workload; broader profiling campaign r…
+- [config-leaf-comments](2026/10/config-leaf-comments.md) — Added 600 configuration comments and a standalone non-prior leaf-comment checker with focused regression tests…
 - [cortex-find-script-symlink](2026/10/cortex-find-script-symlink.md)
 - [cortex-project-card-polish](2026/10/cortex-project-card-polish.md)
 - [cortex-project-readability](2026/10/cortex-project-readability.md) — Phase 1 of the human-approved Cortex Projects redesign (#521). Brain's Cortex conductor (`agents/conductors/co…
@@ -294,6 +295,7 @@ markers; everything below GENERATED is rebuilt.
 - [likelihood-lifecycle-p2x-pulse-view](2026/10/likelihood-lifecycle-p2x-pulse-view.md)
 - [likelihood-lifecycle-p2x-same-host](2026/10/likelihood-lifecycle-p2x-same-host.md)
 - [likelihood-menu-labels](2026/10/likelihood-menu-labels.md)
+- [linear-operated-sersic-priors](2026/10/linear-operated-sersic-priors.md) — Documented intended MRO inheritance for linear-operated Sersic, with regression coverage of all six priors, me…
 - [linear-solver-p3a-a100-parity](2026/10/linear-solver-p3a-a100-parity.md)
 - [linear-solver-p3b-gpu-timing](2026/10/linear-solver-p3b-gpu-timing.md)
 - [linear-solver-p4a-jacobi-a100-divergence](2026/10/linear-solver-p4a-jacobi-a100-divergence.md)
@@ -488,7 +490,9 @@ markers; everything below GENERATED is rebuilt.
 - [unregistered-worktree-guard](2026/10/unregistered-worktree-guard.md)
 - [viz-all-dataset-types](2026/10/viz-all-dataset-types.md)
 - [wave1-row-writer-oom-reslice](2026/10/wave1-row-writer-oom-reslice.md) — Wave 1 attempt 1 (RAL 412543) lost every Nautilus/Emcee row because run.py keyed max_likelihood_parameters by …
+- [workspace-config-key-drift](2026/10/workspace-config-key-drift.md) — Verified already implemented on main: 14 notation values and both requested test keys match, all three isolate…
 - [workspace-freshness-stamp](2026/10/workspace-freshness-stamp.md)
+- [workspace-prior-copies](2026/10/workspace-prior-copies.md) — Applied remaining Galaxy #618 config-copy corrections across six roots in five repositories. Independent audit…
 - [workspace-version-warning-outside-workspace](2026/10/workspace-version-warning-outside-workspace.md)
 - [worktree-sh-root-activate-clobber](2026/10/worktree-sh-root-activate-clobber.md)
 
