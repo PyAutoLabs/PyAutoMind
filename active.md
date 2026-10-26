@@ -96,4 +96,4 @@
 - epic: likelihood-lifecycle
 - heart-red-override: authorized by live human 2026-10-26 "I approve of the override" (this task incl. RAL jobs); reasons + gates recorded at ship
 - scope-add: HUMAN 2026-10-26 chose "Yes, small Pulse PR first" (option text: "Same RED override extended to it. Ships before the profiling rows.") — PyAutoPulse one-current-per-key adds regime
-- library-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/80 (regime in @3 one-current key; merge FIRST; red-override extended, independent review CLEAN)
+- library-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/80 MERGED 2026-10-26 5474e3cb via human /prm (regime in @3 one-current key)
