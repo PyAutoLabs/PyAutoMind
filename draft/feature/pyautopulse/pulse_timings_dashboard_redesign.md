@@ -36,6 +36,14 @@ Filed: 2026-10-26
   matched profiling record id; Pulse resolves it to the page URL.
 - Inference table: only `nautilus:mass_total[1]` rows, Sampler shown as `nautilus`, no note about the filter.
 
+- HUMAN 2026-10-26 (after the exporter survey): the inference table shows **implied s/eval only** (wall ÷ evals,
+  in s, 5 DP) — NEITHER search.summary column (search.summary "Log Likelihood Function Evaluation Time" is one
+  un-warmed call incl. JAX compile, ~12 s on GPU; "Time Per Sample" duplicates implied s/eval). This supersedes the
+  earlier "replace Predicted/Measured-predicted/Parallel-efficiency with two search.summary columns" line.
+- HUMAN 2026-10-26: rectangular inference runs use 28² (784 px) vs profiling standard 35²: show the Profiling runtime
+  with a size-differs marker until a 28² profiling row exists (draft/feature/autolens_profiling/rectangular_28sq_profiling_rows.md).
+  Parametric stages (no inversion) get no profiling link.
+
 ## Order
 autolens_profiling producer (12-core field) and autolens_inference exporter (search.summary fields) first,
 then the PyAutoPulse renderer. Code map: `pulse/setup_browser.py` `_render_lifecycle` (v3 table, counts text,
