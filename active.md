@@ -16,3 +16,58 @@
 - approval: Five-task configuration scope approved in this session; merge remains human.
 - repos:
   - PyAutoGalaxy: feature/linear-operated-sersic-priors
+
+## config-leaf-comments
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1732
+- issued: 2026-10-26
+- prompt: active/config_yaml_keys_missing_their_one_line.md
+- session: Codex; session ID unavailable
+- status: approved, setup in progress
+- approval: Five-task configuration scope approved; same-session shared-repository edits are sequential; human merge only.
+- affected-repos:
+  - PyAutoFit
+  - PyAutoArray
+  - PyAutoGalaxy
+  - PyAutoLens
+  - autolens_workspace
+  - autogalaxy_workspace
+
+## workspace-prior-copies
+- issue: https://github.com/PyAutoLabs/HowToGalaxy/issues/90
+- issued: 2026-10-26
+- prompt: active/sync_remaining_workspace_config_priors_copies.md
+- session: Codex; session ID unavailable
+- status: approved, setup in progress
+- approval: Five-task configuration scope approved; same-session shared-repository edits are sequential; human merge only.
+- affected-repos:
+  - HowToGalaxy
+  - autogalaxy_workspace_test
+  - autolens_assistant
+  - autogalaxy_assistant
+  - autocti_assistant
+
+## workspace-config-key-drift
+- issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/263
+- issued: 2026-10-26
+- prompt: active/config_key_mirror_drift.md
+- session: Codex; session ID unavailable
+- status: approved, setup in progress
+- approval: Five-task configuration scope approved; same-session shared-repository edits are sequential; human merge only.
+- affected-repos:
+  - autofit_workspace
+  - autogalaxy_workspace
+  - autolens_workspace
+
+## corner-plot-workspace-config
+- issue: https://github.com/PyAutoLabs/autofit_workspace/issues/177
+- issued: 2026-10-26
+- prompt: active/corner_plot_config_keys_pr1709_phase3.md
+- session: Codex; session ID unavailable
+- status: approved, setup in progress
+- approval: Five-task configuration scope approved; same-session shared-repository edits are sequential; human merge only.
+- affected-repos:
+  - autofit_workspace
+  - autogalaxy_workspace
+  - autolens_workspace
+  - HowToGalaxy
+  - HowToLens

@@ -1,5 +1,7 @@
 # Mirror drifted library config keys into the workspace configs
 
+Issued: 2026-10-26
+Issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/263
 Type: maintenance
 Target: autogalaxy_workspace
 Repos:
@@ -12,7 +14,7 @@ Themes:
 Difficulty: small
 Autonomy: safe
 Priority: normal
-Status: formalised
+Status: issued
 Consequence: glance
 Witness: A re-run of the `/hygiene config` recursive key-path diff reports only the omissions this prompt names as deliberate (`logging.total_files_open`, and the two REFUTED keys that are library-side dead entries); all three workspaces load under `PYAUTO_SKIP_WORKSPACE_VERSION_CHECK=1` with no config-key error, and a plot using one of the mirrored notation labels renders it.
 Review-minutes: 3

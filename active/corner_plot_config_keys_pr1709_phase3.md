@@ -1,5 +1,7 @@
 # Workspace config + docs for corner-plot labels and latent plots (phase 3 of PyAutoFit#1709)
 
+Issued: 2026-10-26
+Issue: https://github.com/PyAutoLabs/autofit_workspace/issues/177
 Type: docs
 Target: workspaces
 Repos:
@@ -11,7 +13,7 @@ Repos:
 Difficulty: small
 Autonomy: supervised
 Priority: medium
-Status: formalised
+Status: issued
 Consequence: glance
 Blocked-by: release of PyAutoFit#1709 (workspace smoke CI installs the released library)
 Filed: 2026-10-21

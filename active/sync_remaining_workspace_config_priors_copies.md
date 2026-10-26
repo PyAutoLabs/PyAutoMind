@@ -1,5 +1,7 @@
 # Sync remaining workspace config/priors copies
 
+Issued: 2026-10-26
+Issue: https://github.com/PyAutoLabs/HowToGalaxy/issues/90
 Type: maintenance
 Target: workspaces
 Repos:
@@ -11,7 +13,7 @@ Repos:
 Difficulty: small
 Autonomy: safe
 Priority: medium
-Status: formalised
+Status: issued
 Consequence: glance
 Witness: A diff of every listed `config/priors` copy (HowToGalaxy, both autogalaxy_workspace_test copies, the three assistants) against the packaged PyAutoGalaxy `config/priors` shows none of the #618 dead rows (the `ersic` typo, `NFWTruncatedMCRScatterLudlowSph`, the orphan `chameleon.yaml`/`eff.yaml`, `PointSourceChi`, `SersicCoreSph.mass_to_light_ratio`, linear-operated `Gaussian.intensity`, Voronoi in `mesh/README.md`), each repo's `general.yaml`/`plots_search.yaml` carries the replacements for the readerless keys, and the euclid pipeline copy is untouched.
 Review-minutes: 3

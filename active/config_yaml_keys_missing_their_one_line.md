@@ -1,5 +1,7 @@
 # Config yaml keys missing their one-line explanatory comment
 
+Issued: 2026-10-26
+Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1732
 Type: maintenance
 Target: autofit
 Repos:
@@ -12,7 +14,7 @@ Repos:
 Difficulty: medium
 Autonomy: safe
 Priority: low
-Status: formalised
+Status: issued
 Consequence: glance
 Witness: the uncommented-leaf-key check reports 0 across every library config/ folder (excluding priors/) after the sweep, and reports a non-zero count when run against main before it.
 Review-minutes: 3
