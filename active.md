@@ -104,6 +104,8 @@
 - repos:
   - autolens_profiling: feature/rectangular-28sq-profiling-rows
   - autolens_inference: feature/rectangular-28sq-profiling-rows
+  - PyAutoPulse: feature/rectangular-28sq-profiling-rows
 - prompt: active/rectangular_28sq_profiling_rows.md
 - epic: likelihood-lifecycle
 - heart-red-override: authorized by live human 2026-10-26 "I approve of the override" (this task incl. RAL jobs); reasons + gates recorded at ship
+- scope-add: HUMAN 2026-10-26 chose "Yes, small Pulse PR first" (option text: "Same RED override extended to it. Ships before the profiling rows.") — PyAutoPulse one-current-per-key adds regime

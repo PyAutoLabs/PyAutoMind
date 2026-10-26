@@ -32,3 +32,6 @@ Delaunay needs nothing: runs use 1250 = profiling standard.
 4. autolens_inference: refresh catalogue/pulse_lens_runtime_reference.json so the exact-size tie-break picks the 784 rows (size_match true for default rectangular runs).
 Out of scope: jax_cpu_dense (no profiling setup), light_fixed (no profiling cells at any size).
 Heart RED override: live human 2026-10-26 "I approve of the override" for this task (incl. its RAL jobs).
+
+## Scope addition (2026-10-26)
+PyAutoPulse rejects a second current record differing only by regime (key = likelihood, instrument, setup_id, host_class, model_variant, measurement). HUMAN chose "Yes, small Pulse PR first": PyAutoPulse key adds regime; validator test + REFERENCE; RED override extended to it; order Pulse PR → profiling rows → inference join refresh.
