@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
-  "updated": "2026-10-26T15:02:08Z",
+  "updated": "2026-10-26T16:01:09Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Workspace config + docs for corner-plot labels and latent plots\u2026 \u2014 awaiting-merge; implementation and accepted validation complete; five existing PRs updated; Galaxy-dependent shipping\u2026",
+      "url": "https://github.com/PyAutoLabs/autofit_workspace/pull/174",
+      "prompt": "Use the start-dev skill. active/corner_plot_config_keys_pr1709_phase3.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#668 \u2014 linear-operated-sersic-priors",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/668",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#662 \u2014 mass-sheet-jax",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/662",
       "prompt": null
     }
   ]

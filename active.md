@@ -11,8 +11,8 @@
 - issued: 2026-10-26
 - prompt: active/corner_plot_config_keys_pr1709_phase3.md
 - session: Codex; session ID unavailable
-- status: workspace-dev; all 152 fresh smoke checks pass; four PRs updated; Lens executed pages and final artifact review in progress
-- approval: Five-task configuration scope approved; same-session shared-repository edits are sequential; human merge only. Human approved finishing executed examples, Markdown and PR validation against merged Galaxy on 2026-10-26; no publication or workspace merge authorized.
+- status: awaiting-merge; implementation and accepted validation complete; five existing PRs updated; Galaxy-dependent shipping release-gated
+- approval: Original five-task scope and contributor history preserved; human merge only. On 2026-10-26 human accepted focused checks plus six representative rendered pages, explicitly stopping further full modeling; group Markdown regeneration is waived for this task. Latest request: "yes, finis the PRs and wrap up this epic task". No release or merge authorized.
 - affected-repos:
   - autofit_workspace
   - autogalaxy_workspace
@@ -27,8 +27,8 @@
   - autolens_workspace: feature/corner-plot-labels (samlange04 fork)
   - HowToGalaxy: feature/corner-plot-labels (samlange04 fork)
   - HowToLens: feature/corner-plot-labels (samlange04 fork)
-- validation: Fresh isolated smoke: 146 scripts + 6 notebooks passed. Independent source/config and 20-notebook parity review CLEAN; Galaxy three-page artifact review CLEAN. Fit normal latent cookbook passed. Lens full renders still in progress.
-- blocked-by: Published PyAutoGalaxy release containing #656 for shipping; Lens executed pages and artifact review still required before final PR update. Approved Galaxy checkpoint retry succeeded.
+- validation: 152 fresh smoke checks passed (146 scripts + 6 notebooks); 20 notebook parity checks and independent source/config review CLEAN; six rendered pages reviewed CLEAN (Galaxy imaging/interferometer/ellipse, Lens imaging/interferometer/point_source). Group source/notebook smoke-tested; group Markdown deliberately not regenerated under accepted scope.
+- blocked-by: Publication of PyAutoGalaxy containing #656 before Galaxy-dependent workspace shipping; final human merge decision and current-head CI gates. No further modeling required.
 - library-completion: complete/2026/10/latent-profile-declarations.md
 - release-gate: PyAutoGalaxy
 - workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/174
@@ -36,9 +36,9 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/595
 - workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/87
 - workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/100
-- coordination: Galaxy/Lens contributor branches now include the comment-mirror branches with notation conflicts resolved; all pre-merge corner YAML values preserved. Prerequisites autogalaxy_workspace#264 and autolens_workspace#602 merged on 2026-10-26; completed comment task: complete/2026/10/config-leaf-comments.md.
+- coordination: Five contributor branches updated by normal pushes, preserving history; comment prerequisites Galaxy #264/Lens #602 incorporated. No release, merge, issue close, claim removal or worktree cleanup. All render/smoke processes stopped; checkpoints retained.
 - smoke: 152 fresh checks passed against continuation scripts/config; logs/continuation/smoke-validation-summary.json and smoke-validation-equivalence.json in the claimed worktree.
-- ci: Fork workflow approvals issued for Fit/HowToGalaxy/HowToLens after verifying workflow files unchanged; inspect current CI at human merge time.
+- ci: Current-head audit: Fit 7/7, Galaxy 8/8, HowToGalaxy 8/8, HowToLens 8/8 jobs passed; Lens new-head CI still running at wrap-up audit. Evidence logs/continuation/ci/.
 
 ## pulse-timings-redesign
 - issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/78

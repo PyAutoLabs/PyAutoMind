@@ -13,9 +13,9 @@ Repos:
 Difficulty: small
 Autonomy: supervised
 Priority: medium
-Status: issued
+Status: awaiting-merge
 Consequence: glance
-Blocked-by: Published PyAutoGalaxy release containing merged #656; profile latent-output examples and executed Markdown validation remain.
+Blocked-by: Published PyAutoGalaxy release containing merged #656, current-head CI and human merge decision. Accepted implementation/validation scope is complete.
 Library-completion: complete/2026/10/latent-profile-declarations.md
 Release-evidence: PyAutoFit 2026.10.23.1 is published/non-yanked and includes #1709 (verified 2026-10-26).
 Filed: 2026-10-21
@@ -62,3 +62,32 @@ All fresh isolated smoke checks passed: Fit 10, Galaxy 16, Lens 44, HowToLens 50
 Published existing-PR updates: Fit #174 `aaed07d7377e7374be0433775c3b3adb16598339`; Galaxy #259 `dc1082a953772c0e8bedd244f7f62d0cb0110a58`; HowToLens #100 `1f0b479f683f8e226456d647c40339591f95c182`; HowToGalaxy #87 `c190915` (full SHA available in repo). Fit/Galaxy/HowToLens current-head CI all passed; HowToGalaxy unchanged fork workflows approved to run. No merge/release.
 
 Lens imaging's normal fit completed; explicit notebook plots remain active. Remaining Lens pages execute in the separate, existing `validation-continuation/autolens_workspace` copy after archiving smoke datasets/output. Modeling scripts and simulators match the actual worktree by SHA; full-data, non-test execution still required. Copy only reviewed generated artifacts back after render completion.
+
+## Final development wrap-up — 2026-10-26
+
+User questioned the cost of full modeling runs, accepted focused validation instead, then requested (verbatim): "yes, finis the PRs and wrap up this epic task". This supersedes the earlier requirement to freshly render every affected modeling page. No further full modeling is required. It does not authorize release or merge.
+
+### Completed and reviewed
+
+- All five existing contributor PRs updated by normal pushes; no history rewrite. Canonical script changes, generated notebooks and reviewed output artifacts are committed.
+- Fresh isolated Heart smoke passed 146 scripts + 6 notebooks. All 20 changed notebooks independently regenerated and checked. Source/config review CLEAN; final prose-only qualification preserves executable AST and configuration values, so smoke evidence remains applicable.
+- Six representative full-data pages executed and independently reviewed CLEAN: Galaxy imaging, interferometer and ellipse; Lens imaging, interferometer and point-source. Lens has 10/8/6 valid figure references respectively and 9,898/2,739/1,848 saved posterior rows. Copied artifacts verified against reviewer SHA256 manifests. Fit latent cookbook also completed normally. These are execution checks, not scientific convergence claims.
+- Superscript wording now acknowledges profiles within the same named path can share a label. Correct latent CSV/summary paths and plot-only angle recentering documented; all original effective settings preserved.
+- Group full run stopped intentionally (SIGINT, exit130) at the human's direction. Checkpoint preserved, no completion claim. Group source/notebook included and smoke-tested; `markdown/group/modeling.md` remains the prior artifact and is explicitly excluded from fresh rendered-output claims. This is an accepted validation limitation, not pending modeling work.
+- Fresh Heart remains YELLOW/no RED: existing cloud `autolens scripts/group/slam.py` failure, generated smoke-bootstrap drift, aged Hands/Mind PRs, and missing release rehearsal. No release-readiness claim.
+
+### Final PR heads
+
+- https://github.com/PyAutoLabs/autofit_workspace/pull/174 — `aaed07d7377e7374be0433775c3b3adb16598339`
+- https://github.com/PyAutoLabs/autogalaxy_workspace/pull/259 — `dc1082a953772c0e8bedd244f7f62d0cb0110a58`
+- https://github.com/PyAutoLabs/autolens_workspace/pull/595 — `83c4aaf295334659593a70bcea2c69cf7c45811f`
+- https://github.com/PyAutoLabs/HowToGalaxy/pull/87 — `1236e75f5f1c456573feedb21b50b0ef8a716a95`
+- https://github.com/PyAutoLabs/HowToLens/pull/100 — `09b3b6b342a1d13f192f7a4d57253a60c6cc9fc7`
+
+### Remaining shipping steps
+
+Current-head CI and a human merge decision remain gates. Galaxy-dependent workspaces additionally wait for a published Galaxy release containing #656. Keep the task active as awaiting-merge, with `release-gate: PyAutoGalaxy`; do not mark shipped or close the issue. No release performed.
+
+All modeling/smoke processes stopped. Preserve the claimed worktrees, isolated validation copies and checkpoints until shipping/cleanup is separately authorized. Existing untracked Lens `dataset.fits` left untouched. Final evidence: task worktree `logs/continuation/{final-heads.json,smoke-validation-summary.json,readiness-wrapup.json,ci/,review/,lens/}`.
+
+Process lesson: configuration/label/prose tasks should use focused semantics, notebook parity, smoke and representative visual checks. Do not expand them into fresh scientific inference across every example without a specific acceptance need and explicit cost agreement.
