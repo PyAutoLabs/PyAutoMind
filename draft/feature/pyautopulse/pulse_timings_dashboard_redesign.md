@@ -18,7 +18,7 @@ Filed: 2026-10-26
 ## Human rulings (2026-10-26, chat)
 - Per-call / per-node toggle: DROP it from the profiling table. Add one bold column "Est. 12-core s" =
   per-call runtime ÷ 6, for **numba CPU rows only** (— elsewhere). The value is producer-emitted by
-  autolens_profiling (Pulse computes nothing). The projected node throughput moves to each setup's detail page.
+  autolens_profiling (Pulse computes nothing; emitted by draft/feature/autolens_profiling/likelihood_lifecycle_p2a_pin_restamp_12core.md). The projected node throughput moves to each setup's detail page.
 - Profiling table columns: Dataset type | Model | Instrument | Regime | Setup | Hardware class | Model variant |
   Runtime s (bold, 5 DP, no "(single_jit_median)") | Est. 12-core s | Class | › (opens detail page).
   Status, Decision and Evidence move to the detail page.
@@ -31,6 +31,9 @@ Filed: 2026-10-26
   likelihood/instrument/setup/hardware/model variant, producer-joined) sits right after Model variant, before the
   sampler columns. Today 0/56 rows match a profiling record (predicted_ms_per_eval null), so the join needs fixing
   in the exporter against profiling @3.
+  Each row's Profiling runtime value is a LINK to that profiling setup's detail page (the same page the profiling
+  table's › opens), so the inference ↔ profiling link is explicit (human 2026-10-26). The exporter emits the
+  matched profiling record id; Pulse resolves it to the page URL.
 - Inference table: only `nautilus:mass_total[1]` rows, Sampler shown as `nautilus`, no note about the filter.
 
 ## Order
