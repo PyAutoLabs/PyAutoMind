@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-10-26T10:07:39Z",
+  "updated": "2026-10-26T10:18:21Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -111,6 +111,12 @@
     },
     {
       "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#668 \u2014 linear_operated Sersic has no prior yaml file",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/668",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#662 \u2014 mass-sheet-jax",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/662",
       "prompt": null
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#665 \u2014 Shipped scope and limits",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/665",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#663 \u2014 Shipped scope and limits",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/663",
       "prompt": null
     }
   ]

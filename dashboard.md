@@ -943,7 +943,7 @@ Use the start-dev skill. active/config_key_mirror_drift.md
 
 </details>
 
-<details><summary>📋 <a href="active/config_yaml_keys_missing_their_one_line.md">Config yaml keys missing their one-line explanatory comment</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1732">issue #1732</a> — issued 2026-10-26 — four library drafts open; workspace mirrors validated; smoke running — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1733">PyAutoFit#1733</a>, <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/656">PyAutoArray#656</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/667">PyAutoGalaxy#667</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/802">PyAutoLens#802</a> — ⏳ pending release: PyAutoFit — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoLens</summary>
+<details><summary>📋 <a href="active/config_yaml_keys_missing_their_one_line.md">Config yaml keys missing their one-line explanatory comment</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1732">issue #1732</a> — issued 2026-10-26 — four library drafts and Galaxy workspace draft open; Lens workspace smoke running — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1733">PyAutoFit#1733</a>, <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/656">PyAutoArray#656</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/667">PyAutoGalaxy#667</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/802">PyAutoLens#802</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/264">autogalaxy_workspace#264</a> — ⏳ pending release: PyAutoFit — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoLens</summary>
 
 ```
 Use the start-dev skill. active/config_yaml_keys_missing_their_one_line.md
@@ -951,7 +951,7 @@ Use the start-dev skill. active/config_yaml_keys_missing_their_one_line.md
 
 </details>
 
-<details><summary>📋 <a href="active/corner_plot_config_keys_pr1709_phase3.md">Workspace config + docs for corner-plot labels and latent plots…</a> — <a href="https://github.com/PyAutoLabs/autofit_workspace/issues/177">issue #177</a> — issued 2026-10-26 — existing PRs updated; smoke running; latent examples gated on Galaxy #656 — PRs: <a href="https://github.com/PyAutoLabs/autofit_workspace/pull/174">autofit_workspace#174</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/259">autogalaxy_workspace#259</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/595">autolens_workspace#595</a>, <a href="https://github.com/PyAutoLabs/HowToGalaxy/pull/87">HowToGalaxy#87</a>, <a href="https://github.com/PyAutoLabs/HowToLens/pull/100">HowToLens#100</a></summary>
+<details><summary>📋 <a href="active/corner_plot_config_keys_pr1709_phase3.md">Workspace config + docs for corner-plot labels and latent plots…</a> — <a href="https://github.com/PyAutoLabs/autofit_workspace/issues/177">issue #177</a> — issued 2026-10-26 — existing PRs updated; tutorial smoke running; latent examples gated on Galaxy #656 — PRs: <a href="https://github.com/PyAutoLabs/autofit_workspace/pull/174">autofit_workspace#174</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/259">autogalaxy_workspace#259</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/595">autolens_workspace#595</a>, <a href="https://github.com/PyAutoLabs/HowToGalaxy/pull/87">HowToGalaxy#87</a>, <a href="https://github.com/PyAutoLabs/HowToLens/pull/100">HowToLens#100</a></summary>
 
 ```
 Use the start-dev skill. active/corner_plot_config_keys_pr1709_phase3.md
@@ -959,7 +959,7 @@ Use the start-dev skill. active/corner_plot_config_keys_pr1709_phase3.md
 
 </details>
 
-<details><summary>📋 <a href="active/linear_operated_sersic_has_no_prior_yaml.md">linear_operated Sersic has no prior yaml file</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/666">issue #666</a> — issued 2026-10-26 — library validated; downstream smoke running</summary>
+<details><summary>📋 <a href="active/linear_operated_sersic_has_no_prior_yaml.md">linear_operated Sersic has no prior yaml file</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/666">issue #666</a> — issued 2026-10-26 — PR open; awaiting human review and merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/668">PyAutoGalaxy#668</a> — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 Use the start-dev skill. active/linear_operated_sersic_has_no_prior_yaml.md
@@ -975,7 +975,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/sync_remaining_workspace_config_priors_copies.md">Sync remaining workspace config/priors copies</a> — <a href="https://github.com/PyAutoLabs/HowToGalaxy/issues/90">issue #90</a> — issued 2026-10-26 — four PRs open; Galaxy test-workspace smoke running — PRs: <a href="https://github.com/PyAutoLabs/HowToGalaxy/pull/91">HowToGalaxy#91</a>, <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/164">autolens_assistant#164</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_assistant/pull/38">autogalaxy_assistant#38</a>, <a href="https://github.com/PyAutoLabs/autocti_assistant/pull/38">autocti_assistant#38</a></summary>
+<details><summary>📋 <a href="active/sync_remaining_workspace_config_priors_copies.md">Sync remaining workspace config/priors copies</a> — <a href="https://github.com/PyAutoLabs/HowToGalaxy/issues/90">issue #90</a> — issued 2026-10-26 — five PRs open; awaiting human review and merge — PRs: <a href="https://github.com/PyAutoLabs/HowToGalaxy/pull/91">HowToGalaxy#91</a>, <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/164">autolens_assistant#164</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_assistant/pull/38">autogalaxy_assistant#38</a>, <a href="https://github.com/PyAutoLabs/autocti_assistant/pull/38">autocti_assistant#38</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/131">autogalaxy_workspace_test#131</a></summary>
 
 ```
 Use the start-dev skill. active/sync_remaining_workspace_config_priors_copies.md
@@ -3088,6 +3088,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 **PyAutoGalaxy**
 
 - [PyAutoGalaxy#667](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/667) — `active/config_yaml_keys_missing_their_one_line.md`
+- [PyAutoGalaxy#668](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/668) — `active/linear_operated_sersic_has_no_prior_yaml.md`
 - [PyAutoGalaxy#662](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/662) — `complete/2026/10/mass-sheet-jax.md`
 - [PyAutoGalaxy#665](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/665) — `complete/2026/10/multipole-isothermal-guard.md`
 - [PyAutoGalaxy#663](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/663) — `complete/2026/10/power-law-jax-axis.md`
