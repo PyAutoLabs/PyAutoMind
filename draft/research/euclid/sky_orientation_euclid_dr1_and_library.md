@@ -23,7 +23,20 @@ Witness: (1) on at least five real DR1 lenses, positions.json overlaid on the VI
 Review-minutes: 25
 Unattended: needs-slicing
 
-Found 2026-10-26 while packaging the Euclid DR1 release. Human wants this done THIS WEEK (week of 2026-10-26).
+Found 2026-10-26 while packaging the Euclid DR1 release. Human wants this STARTED THIS WEEK (week of 2026-10-26);
+the DR1 catalogue has ~2 weeks of prep left (release target ~2026-11-09).
+
+## SCOPE MANDATE (human, 2026-10-26): make DR1 as standard as possible, no refits
+- Do NOT rerun any lens model (no new non-linear searches). Everything else is allowed.
+- Large-scale RAL runs ARE allowed and expected (CPU on `ral` only, never `gpu`): re-render every per-lens PNG,
+  rewrite derived products, rebuild the catalogue and release tiers, whatever makes the DR1 products the best
+  possible, most standardised format.
+- Target end state for DR1 v1.0 (not a later v1.1): every figure north-up, east-left with a correct N/E compass and
+  sky-frame axis labels; sky-frame columns throughout; FITS/WCS consistent; COOLEST-consistent conventions;
+  documented in one guide. Everything is regenerated from the stored fit results.
+- Planned for the strongest model (Fable architect, Opus execution), as a multi-phase epic: survey -> design ->
+  RAL re-render campaign -> rebuild -> verify -> release. The full-tier packaging run waits on this (re-rendered
+  PNGs supersede the current ones).
 Replaces the two separate prompts filed earlier the same day (sky_orientation_pyautolens_frame_is_a_north,
 euclid_dr1_catalogue_sky_frame_orientation_north). Order: euclid_dr1 legs first (they feed the paper and the
 public catalogue), library-wide fix after.
@@ -50,7 +63,8 @@ wcs.csv) must be monitored carefully:
   mirrored frame. Lensing is parity invariant: scalar quantities (Einstein radii, q, Sersic n, radii, fluxes,
   magnifications, evidences) are unaffected; oriented quantities (centres/offsets, PAs and e2, shear angle and
   gamma_2, source-plane positions) differ from the sky frame by a fixed sign flip. NO lens model is rerun.
-- rgb.jpg cutouts were flipped 2026-09-20 (preprocess/flip_rgb.py) to match the pipeline frame (north down too).
+- rgb.jpg cutouts were flipped 2026-09-20 (preprocess/flip_rgb.py) to match the pipeline frame (north down too);
+  the delivered originals are kept as rgb_raw.jpg (north-up, matching the FITS) - use them for the north-up products.
 - scripts/tools/build_wcs_package.py says "+y is NOT north"; its wording "+y points along increasing FITS row"
   contradicts its own conclusion and needs correcting (docstring only).
 - Under imshow_origin: lower the displayed y axis and the reported model y disagree in sign, so switching the display
@@ -74,9 +88,13 @@ wcs.csv) must be monitored carefully:
   standard; per-lens diagnostic PNGs are in the native pipeline frame (north down, east left).
 - Paper (euclid_dr1/paper): image figures north-up east-left (flip image + overlays together, sky-frame axis labels
   or none) with a standard N/E compass; PAs east of north from the new columns; one Methods sentence.
-- Website (lens/ECLIPSE_lens_catalogue): north-up thumbnails/colour previews from the FITS; a correct N/E compass
-  overlay on the native-frame pipeline figures.
-- Not in scope: pixel-flipping pipeline PNGs (text and ticks invert).
+- RAL re-render campaign (in scope for DR1 v1.0): regenerate EVERY per-lens PNG (vis_lp, vis_pix, Sersic, SED,
+  inspect/RGB panels) north-up east-left from the stored results, image and overlays flipped together, sky-frame
+  axis labels, N/E compass. Visualisation only: load stored results, never search. Chunked arrays on `ral`, with
+  a pilot on ~50 lenses reviewed by the human before the full run; then merge -> CSV snapshot -> package all tiers.
+- Website (lens/ECLIPSE_lens_catalogue): thumbnails and previews from the re-rendered north-up products; the
+  figures need no compass overlay once they carry their own.
+- Not in scope: pixel-flipping existing PNGs (text and ticks invert) - re-render instead.
 
 ## Phase 3 — library-wide (PyAutoArray / PyAutoGalaxy / PyAutoLens / HowToLens, all users)
 - Decide the convention: row flip at FITS load so +y = north, or keep the current frame and make it explicit.
@@ -92,8 +110,10 @@ wcs.csv) must be monitored carefully:
   (+y = south) a COOLEST export would carry mirrored PAs/centres. Verify against the COOLEST standard's own
   axis definitions, and make the COOLEST conversions and the new sky-frame utilities share ONE convention
   implementation (one source of truth, tested together).
-- Follow-on: once it lands, re-render the DR1 bulk per-lens PNGs north-up as catalogue v1.1 (visualisation only,
-  from stored results, no refits), under the JSON hard rule above.
+- Timing: the DR1 re-render needs the north-up plotting path within the 2-week window. Land the minimal library
+  pieces it needs first (orientation-aware plotting + sky-frame conversion utilities), or, if the library design
+  cannot land in time, implement the flip in the euclid_dr1 re-render scripts and port it to the library after;
+  decide this in the design phase. Either way, under the JSON hard rule above.
 
 ## Phase 4 — the go-to reader guide (autolens_workspace AND autogalaxy_workspace)
 One guide per workspace (mirrored content, lens vs galaxy examples), the single resource a reader needs on
