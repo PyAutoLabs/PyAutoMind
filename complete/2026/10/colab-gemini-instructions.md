@@ -1,3 +1,36 @@
+## What shipped (2026-10-26)
+
+Colab's Gemini sidebar cannot read a repository, but Colab stores per-notebook Gemini instructions in notebook metadata (`metadata.colab.aiContexts` + `selectedAiContext`; key recovered from Google's Learn Mode example notebooks, undocumented). Every PyAuto workspace and HowTo notebook now carries its folder's assistant skills plus that assistant's safety rules as the active Gemini instruction, so a Colab user gets the assistant's knowledge with zero setup.
+
+- **PyAutoHands** (#325, #326): `build_util` assembles preface + rules + mapped skill text from each assistant's `colab/contexts.yaml` and stamps every generated notebook (deterministic uuid5 id per project, idempotent, metadata-only, validated before the `notebooks/` rmtree); `autohands gemini_context {apply,report}`; release.yml checks out the matching assistant for autolens_workspace, HowToLens, autofit_workspace, HowToFit, autogalaxy_workspace, HowToGalaxy; per-assistant `cap:` (default 20,000, ceiling 50,000). Repo names live in `autohands/config/workspaces.yaml` `colab_gemini:` (tenant firewall).
+- **Assistants**: `colab/contexts.yaml` (folder glob → skills, first match wins, never_map) + `autoassistant/colab_contexts.py` check/apply + CI `colab-contexts.yml` in autolens (#165), autofit (#59), autogalaxy (#39, cap 36000), autocti (#39); upkeep skill `{al,af,ag,ac}_refresh_colab_contexts` (#166, #60, #40, #39): check + Hands coverage report, AI scan, minimal mapping edits, PR.
+- **autocti_workspace** (#38): 79 notebooks stamped once with `apply` (CTI is outside the Hands release generate) + README re-apply note.
+- **PyAutoBrain** (#541): clone boundary classifies assistant `colab/*` as mixed.
+- autolens_assistant COSMOS-Web Ring notebook stamped (live now); generated workspace notebooks pick it up at the next release.
+
+## Human-verified in Colab (2026-10-26)
+
+Hand-written metadata honoured on upload ("zebra" probe); 18.7k- and 52.4k-char contexts honoured; GitHub-URL route (cosmos notebook from the PR branch) honoured.
+
+## Decisions and learnings
+
+- Skills stay single-sourced in the assistants; notebooks carry a release-time snapshot. Users see only a named, toggleable instruction in the Gemini chat box.
+- 20k default cap (human); autogalaxy at 36k because ag_* skills are 21–32k each (~3× their autolens twins) — trim follow-up `draft/refactor/autogalaxy_assistant/trim_ag_skills_for_colab_cap.md`.
+- Merge order rule: an assistant's mapping must be on main before Hands enables `assistant:` for its workspace in release.yml.
+- Hands organ code may not name satellite repos/owners (tenant-firewall CI leg) — config only.
+- Agent `gh pr merge` is classifier-blocked: the human merged every PR; GitHub 504s split two merge chains (re-check each PR).
+- Heart RED throughout (release integrate / workspace smoke / drift, unrelated): human development overrides per phase, recorded in the four sinks; `--auto` was requested for phases 3+4 but parks on RED, so they ran supervised.
+- Broca: the Hands `report` is the upkeep evidence; Broca ingestion stays in `draft/feature/pyautobroca/broca_communication_pilot.md`.
+
+## Follow-ups (not shipped)
+
+- Full CTI-on-Colab (setup cell, arctic install, Nerves `_PROJECTS`, release matrix).
+- autocti_assistant AGENTS.md real-data invariant: lensing wording + dead link `skills/ac_prepare_imaging_data.md`; autocti_workspace AGENTS.md says notebooks regenerate at release (they don't).
+- autofit_assistant clone profile misses `AI_OPTIONS.md` (pre-existing).
+- AI_OPTIONS.md "Colab notebooks and the assistant" paragraph after the next release.
+
+## Original prompt
+
 # Carry assistant context into every Colab notebook via Gemini Custom Instructions
 
 Type: docs
