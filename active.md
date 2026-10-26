@@ -39,3 +39,15 @@
 - coordination: Galaxy/Lens contributor branches now include the comment-mirror branches with notation conflicts resolved; all pre-merge corner YAML values preserved. Prerequisites autogalaxy_workspace#264 and autolens_workspace#602 merged on 2026-10-26; completed comment task: complete/2026/10/config-leaf-comments.md.
 - smoke: 152 fresh checks passed against continuation scripts/config; logs/continuation/smoke-validation-summary.json and smoke-validation-equivalence.json in the claimed worktree.
 - ci: Fork workflow approvals issued for Fit/HowToGalaxy/HowToLens after verifying workflow files unchanged; inspect current CI at human merge time.
+
+## pulse-timings-redesign
+- issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/78
+- issued: 2026-10-26
+- session: Claude Code (Opus 5.5); session ID unavailable
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/pulse-timings-redesign
+- repos:
+  - PyAutoPulse: feature/pulse-timings-redesign
+- prompt: active/pulse_timings_dashboard_redesign.md
+- epic: likelihood-lifecycle
+- heart-red-override: authorized by live human 2026-10-26 "I authroize" (this task); reasons + gates recorded at ship

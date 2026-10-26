@@ -14,6 +14,8 @@ Status: formalised
 Consequence: judge
 Witness: the published Pulse board has separate Profiling Timings and Inference Timings sections, each opening per-project (PyAutoFit / PyAutoLens) tables with the human's column layout; every table row opens a dedicated detail page (profiling rows restore the old per-setup page with the full breakdown); `pyauto-pulse check` and pytest pass
 Filed: 2026-10-26
+Issued: 2026-10-26
+Issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/78
 
 ## Human rulings (2026-10-26, chat)
 - Per-call / per-node toggle: DROP it from the profiling table. Add one bold column "Est. 12-core s" =
@@ -43,6 +45,11 @@ Filed: 2026-10-26
 - HUMAN 2026-10-26: rectangular inference runs use 28² (784 px) vs profiling standard 35²: show the Profiling runtime
   with a size-differs marker until a 28² profiling row exists (draft/feature/autolens_profiling/rectangular_28sq_profiling_rows.md).
   Parametric stages (no inversion) get no profiling link.
+
+- HUMAN 2026-10-26 (plan review): setup labels drop precision only (jax_gpu_sparse, numba_cpu_sparse); default
+  Class filter = All (no optimal designations until phase 3); every table shows the producer's vmap per-call
+  (projected_node_throughput.per_call_s) as Runtime s; single_jit_median stays on the detail page.
+- Heart RED override for this task: live human 2026-10-26 "I authroize" (in reply to the explicit ask naming this task).
 
 ## Order
 autolens_profiling producer (12-core field) and autolens_inference exporter (search.summary fields) first,
