@@ -943,7 +943,7 @@ Use the start-dev skill. active/config_key_mirror_drift.md
 
 </details>
 
-<details><summary>📋 <a href="active/config_yaml_keys_missing_their_one_line.md">Config yaml keys missing their one-line explanatory comment</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1732">issue #1732</a> — issued 2026-10-26 — library-dev</summary>
+<details><summary>📋 <a href="active/config_yaml_keys_missing_their_one_line.md">Config yaml keys missing their one-line explanatory comment</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1732">issue #1732</a> — issued 2026-10-26 — library validation running; draft exception requested</summary>
 
 ```
 Use the start-dev skill. active/config_yaml_keys_missing_their_one_line.md
@@ -951,7 +951,7 @@ Use the start-dev skill. active/config_yaml_keys_missing_their_one_line.md
 
 </details>
 
-<details><summary>📋 <a href="active/corner_plot_config_keys_pr1709_phase3.md">Workspace config + docs for corner-plot labels and latent plots…</a> — <a href="https://github.com/PyAutoLabs/autofit_workspace/issues/177">issue #177</a> — issued 2026-10-26 — workspace-dev (existing contributor PRs)</summary>
+<details><summary>📋 <a href="active/corner_plot_config_keys_pr1709_phase3.md">Workspace config + docs for corner-plot labels and latent plots…</a> — <a href="https://github.com/PyAutoLabs/autofit_workspace/issues/177">issue #177</a> — issued 2026-10-26 — workspace validation running; latent examples gated on Galaxy #656</summary>
 
 ```
 Use the start-dev skill. active/corner_plot_config_keys_pr1709_phase3.md
@@ -959,7 +959,7 @@ Use the start-dev skill. active/corner_plot_config_keys_pr1709_phase3.md
 
 </details>
 
-<details><summary>📋 <a href="active/linear_operated_sersic_has_no_prior_yaml.md">linear_operated Sersic has no prior yaml file</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/666">issue #666</a> — issued 2026-10-26 — library-dev</summary>
+<details><summary>📋 <a href="active/linear_operated_sersic_has_no_prior_yaml.md">linear_operated Sersic has no prior yaml file</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/666">issue #666</a> — issued 2026-10-26 — library validated; downstream smoke running</summary>
 
 ```
 Use the start-dev skill. active/linear_operated_sersic_has_no_prior_yaml.md
@@ -975,7 +975,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/sync_remaining_workspace_config_priors_copies.md">Sync remaining workspace config/priors copies</a> — <a href="https://github.com/PyAutoLabs/HowToGalaxy/issues/90">issue #90</a> — issued 2026-10-26 — workspace-dev</summary>
+<details><summary>📋 <a href="active/sync_remaining_workspace_config_priors_copies.md">Sync remaining workspace config/priors copies</a> — <a href="https://github.com/PyAutoLabs/HowToGalaxy/issues/90">issue #90</a> — issued 2026-10-26 — config validation passed; workspace smoke running</summary>
 
 ```
 Use the start-dev skill. active/sync_remaining_workspace_config_priors_copies.md
