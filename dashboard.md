@@ -14,7 +14,7 @@
 | [Planned](#planned) | 9 |
 | [Backlog](#backlog) | 277 |
 | [Recent](#recent) | 50 |
-| [Pending release](#pending-release) | 6 |
+| [Pending release](#pending-release) | 5 |
 
 ## Start here
 
@@ -943,7 +943,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/corner_plot_config_keys_pr1709_phase3.md">Workspace config + docs for corner-plot labels and latent plots…</a> — <a href="https://github.com/PyAutoLabs/autofit_workspace/issues/177">issue #177</a> — issued 2026-10-26 — five existing PRs updated; Galaxy #656 merged; awaiting Galaxy publication and executed latent-output Markdown validation — PRs: <a href="https://github.com/PyAutoLabs/autofit_workspace/pull/174">autofit_workspace#174</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/259">autogalaxy_workspace#259</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/595">autolens_workspace#595</a>, <a href="https://github.com/PyAutoLabs/HowToGalaxy/pull/87">HowToGalaxy#87</a>, <a href="https://github.com/PyAutoLabs/HowToLens/pull/100">HowToLens#100</a> — ⏸ waiting on PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656's release</summary>
+<details><summary>📋 <a href="active/corner_plot_config_keys_pr1709_phase3.md">Workspace config + docs for corner-plot labels and latent plots…</a> — <a href="https://github.com/PyAutoLabs/autofit_workspace/issues/177">issue #177</a> — issued 2026-10-26 — workspace-dev; preparing executed outputs against merged Galaxy #656; shipping remains release-gated — PRs: <a href="https://github.com/PyAutoLabs/autofit_workspace/pull/174">autofit_workspace#174</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/259">autogalaxy_workspace#259</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/595">autolens_workspace#595</a>, <a href="https://github.com/PyAutoLabs/HowToGalaxy/pull/87">HowToGalaxy#87</a>, <a href="https://github.com/PyAutoLabs/HowToLens/pull/100">HowToLens#100</a> — ⏸ waiting on PyAutoGalaxy's release</summary>
 
 ```
 Use the start-dev skill. active/corner_plot_config_keys_pr1709_phase3.md
@@ -3070,9 +3070,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - [PyAutoGalaxy#665](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/665) — `complete/2026/10/multipole-isothermal-guard.md`
 - [PyAutoGalaxy#663](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/663) — `complete/2026/10/power-law-jax-axis.md`
 - [PyAutoGalaxy#664](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/664) — `complete/2026/10/sersic-core-sph-ml.md`
-
-**PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656**
-
 - ⏸ waiting: [Workspace config + docs for corner-plot labels and latent plots…](active/corner_plot_config_keys_pr1709_phase3.md)
 
 **PyAutoLens**

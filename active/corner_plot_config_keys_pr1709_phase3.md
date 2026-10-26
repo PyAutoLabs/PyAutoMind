@@ -30,3 +30,9 @@ Remainder of `complete/2026/10/finish-pr-1709-corner-plots.md`. The library defa
 - Contributor branches `feature/corner-plot-labels` on autofit/autogalaxy/autolens_workspace, HowToLens and HowToGalaxy may
   already carry these; land theirs if so.
 - Release note: corner-plot labels change from class abbreviations to component paths (user-visible).
+
+## Approved continuation — 2026-10-26
+
+User request (verbatim): "ok do that" — approving completion of the remaining development and validation against merged Galaxy code, leaving shipping gated on publication.
+
+Resume the five existing contributor branches. Verify their prose against current output paths, plot-only periodic recentering and actual component labels; make only necessary corrections. Regenerate changed notebooks using Hands, execute the affected curated Markdown examples with real sampling or verified completed real-run caches, inspect the latent output/figures, and refresh focused/smoke/review/PR evidence. Preserve all original claims and human merge authority; do not publish or merge these workspace PRs. Record any genuine execution blockers with evidence rather than calling smoke-generated output scientific validation.

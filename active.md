@@ -11,8 +11,8 @@
 - issued: 2026-10-26
 - prompt: active/corner_plot_config_keys_pr1709_phase3.md
 - session: Codex; session ID unavailable
-- status: five existing PRs updated; Galaxy #656 merged; awaiting Galaxy publication and executed latent-output Markdown validation
-- approval: Five-task configuration scope approved; same-session shared-repository edits are sequential; human merge only.
+- status: workspace-dev; preparing executed outputs against merged Galaxy #656; shipping remains release-gated
+- approval: Five-task configuration scope approved; same-session shared-repository edits are sequential; human merge only. Human approved finishing executed examples, Markdown and PR validation against merged Galaxy on 2026-10-26; no publication or workspace merge authorized.
 - affected-repos:
   - autofit_workspace
   - autogalaxy_workspace
@@ -30,7 +30,7 @@
 - validation: Existing contributor branches retained; 20 notebooks regenerated; all five config/superscript checks pass. PyAutoFit release gate cleared; Galaxy #656 merged; executed latent-output Markdown validation remains pending.
 - blocked-by: Published PyAutoGalaxy release containing merged #656; executed latent-output Markdown validation still required.
 - library-completion: complete/2026/10/latent-profile-declarations.md
-- release-gate: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656
+- release-gate: PyAutoGalaxy
 - workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/174
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/259
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/595
