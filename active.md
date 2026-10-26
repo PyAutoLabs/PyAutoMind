@@ -26,7 +26,7 @@
 - issued: 2026-10-26
 - prompt: active/config_yaml_keys_missing_their_one_line.md
 - session: Codex; session ID unavailable
-- status: four library drafts and Galaxy workspace draft open; Lens workspace smoke running
+- status: six draft PRs open; validated; awaiting human review and merge
 - approval: Five-task configuration scope approved; same-session shared-repository edits are sequential; human merge only.
 - affected-repos:
   - PyAutoFit
@@ -53,9 +53,11 @@
 - pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/667
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/802
 - pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/802
-- workspace-validation: 323 comments added; all 168 YAML values unchanged; checker zero; independent review CLEAN; branch smoke running.
+- workspace-validation: 323 comments added; all 168 YAML values unchanged; checker zero; independent review CLEAN; Galaxy 14 scripts + 2 notebooks and Lens 42 scripts + 2 notebooks passed.
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/264
-- smoke: Library downstream 172 passed; Galaxy comment workspace 14 scripts + 2 notebooks passed.
+- smoke: Library downstream 172 passed; both comment workspace branches passed 60 checks.
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/602
+- merge-order: Four library PRs first, then the two workspace comment PRs; corner-plot PRs include these workspace branches.
 
 ## workspace-prior-copies
 - issue: https://github.com/PyAutoLabs/HowToGalaxy/issues/90
@@ -109,7 +111,7 @@
 - issued: 2026-10-26
 - prompt: active/corner_plot_config_keys_pr1709_phase3.md
 - session: Codex; session ID unavailable
-- status: existing PRs updated; tutorial smoke running; latent examples gated on Galaxy #656
+- status: five existing PRs updated; smoke passed; latent examples and executed Markdown gated on Galaxy #656
 - approval: Five-task configuration scope approved; same-session shared-repository edits are sequential; human merge only.
 - affected-repos:
   - autofit_workspace
@@ -132,4 +134,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/595
 - workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/87
 - workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/100
-- coordination: Galaxy/Lens contributor branches now include the comment-mirror branches with notation conflicts resolved; all pre-merge corner YAML values preserved. Merge comment workspace PRs first.
+- coordination: Galaxy/Lens contributor branches now include the comment-mirror branches with notation conflicts resolved; all pre-merge corner YAML values preserved. Merge autogalaxy_workspace#264 and autolens_workspace#602 first.
+- smoke: 152 checks passed across five contributor workspaces; evidence in .worktrees/corner-plot-workspace-config/logs/smoke-summary.json.
+- ci: Fork workflow approvals issued for Fit/HowToGalaxy/HowToLens after verifying workflow files unchanged; inspect current CI at human merge time.
