@@ -6,6 +6,20 @@
 - community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
 - prompt: active/matrix_free_interferometer_inversion.md
 
+## matrix-free-interferometer-wiring
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/657
+- issued: 2026-10-26
+- parent: matrix-free-interferometer-inversion (PyAutoArray#638, phase 5a)
+- community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
+- prompt: active/matrix_free_interferometer_wiring_5a.md
+- session: Claude Code CLI (Fable 5.1); session ID unavailable
+- status: library-dev
+- heart-override: human approved "Human override for Heart RED (development only)" 2026-10-26 (RED = release integrate, workspace smoke, worktree drift)
+- worktree: ~/Code/PyAutoLabs-wt/matrix-free-interferometer-wiring
+- repos:
+  - PyAutoArray: feature/matrix-free-interferometer-wiring
+  - PyAutoGalaxy: feature/matrix-free-interferometer-wiring
+
 ## corner-plot-workspace-config
 - issue: https://github.com/PyAutoLabs/autofit_workspace/issues/177
 - issued: 2026-10-26
