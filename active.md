@@ -64,7 +64,8 @@
 - issued: 2026-10-26
 - prompt: active/config_key_mirror_drift.md
 - session: Codex; session ID unavailable
-- status: workspace-dev
+- status: verified already implemented, awaiting human close-out
+- evidence: 14 notation values match; both test keys present; 3 config loads and label render passed. Existing commits autogalaxy_workspace 801a8ce and autofit_workspace 4778b42. No source edits.
 - approval: Five-task configuration scope approved; same-session shared-repository edits are sequential; human merge only.
 - affected-repos:
   - autofit_workspace
@@ -81,7 +82,7 @@
 - issued: 2026-10-26
 - prompt: active/corner_plot_config_keys_pr1709_phase3.md
 - session: Codex; session ID unavailable
-- status: approved, setup in progress
+- status: workspace-dev (existing contributor PRs)
 - approval: Five-task configuration scope approved; same-session shared-repository edits are sequential; human merge only.
 - affected-repos:
   - autofit_workspace
@@ -89,3 +90,11 @@
   - autolens_workspace
   - HowToGalaxy
   - HowToLens
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/corner-plot-workspace-config
+- release-evidence: PyAutoFit 2026.10.23.1 published, non-yanked; contains #1709.
+- repos:
+  - autofit_workspace: feature/corner-plot-labels (samlange04 fork)
+  - autogalaxy_workspace: feature/corner-plot-labels (samlange04 fork)
+  - autolens_workspace: feature/corner-plot-labels (samlange04 fork)
+  - HowToGalaxy: feature/corner-plot-labels (samlange04 fork)
+  - HowToLens: feature/corner-plot-labels (samlange04 fork)
