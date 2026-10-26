@@ -12,7 +12,7 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 4 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 276 |
+| [Backlog](#backlog) | 275 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -1917,7 +1917,7 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>research</b> — 44</summary>
+<summary><b>research</b> — 43</summary>
 
 <details><summary>📋 <a href="draft/research/autofit_inference/search_ext_b5c2a_rerun.md"><code>@autofit_inference</code> B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug…</a> — autofit_inference · medium · supervised · high</summary>
 
@@ -1951,10 +1951,10 @@ Use the start-dev skill. draft/research/autoarray/delaunay_research.md
 
 </details>
 
-<details><summary>📋 <a href="draft/research/euclid/euclid_dr1_catalogue_sky_frame_orientation_north.md">euclid_dr1 catalogue: sky-frame orientation (north/east) for the catalogue, paper and website</a> — euclid · too-large · supervised · high</summary>
+<details><summary>📋 <a href="draft/research/euclid/sky_orientation_euclid_dr1_and_library.md">Sky orientation (north/east): euclid_dr1 catalogue, paper and website, plus the PyAutoLens library-wide…</a> — euclid · too-large · supervised · high</summary>
 
 ```
-Use the start-dev skill. draft/research/euclid/euclid_dr1_catalogue_sky_frame_orientation_north.md
+Use the start-dev skill. draft/research/euclid/sky_orientation_euclid_dr1_and_library.md
 ```
 
 </details>
@@ -2027,14 +2027,6 @@ Use the start-dev skill. draft/research/pyautoinsight/slim_inference_repo_output
 
 ```
 Use the start-dev skill. draft/research/pyautomemory/checkerboard_psf_mismatch_residual_diagnostic.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens/sky_orientation_pyautolens_frame_is_a_north.md">Sky orientation: PyAutoLens frame is a north-down mirror of the sky…</a> — autolens · too-large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/research/autolens/sky_orientation_pyautolens_frame_is_a_north.md
 ```
 
 </details>
@@ -3042,8 +3034,8 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/research/autofit/search_extensibility_epic.md — unknown theme keyword(s): searches, jax, documentation, inference`
 - `draft/research/autolens/point_solver_root_refinement.md — unknown theme keyword(s): jax`
 - `draft/research/autolens_assistant/free_agent_harness_evaluation.md — unknown theme keyword(s): assistant, support-policy`
-- `draft/research/euclid/euclid_dr1_catalogue_sky_frame_orientation_north.md — unknown theme keyword(s): euclid`
 - `draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md — unknown theme keyword(s): euclid, hpc`
+- `draft/research/euclid/sky_orientation_euclid_dr1_and_library.md — unknown theme keyword(s): euclid`
 - `draft/triage/autolens/jit_fit_from_is_vacuous.md — unknown theme keyword(s): testing, jax`
 
 </details>
