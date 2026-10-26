@@ -12,13 +12,13 @@
 | [Epics](#epics) | 17 |
 | [In flight](#in-flight) | 3 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 276 |
+| [Backlog](#backlog) | 275 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 21
+**Highest priority** (filed as `high`) — showing 12 of 20
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -1099,20 +1099,12 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 38</summary>
+<summary><b>feature</b> — 37</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
 
 ```
 Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autoarray/matrix_free_interferometer_wiring_5a.md">Matrix-free interferometer inversion, phase 5a: make it selectable from a fit</a> — autoarray · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/feature/autoarray/matrix_free_interferometer_wiring_5a.md
 ```
 
 </details>
@@ -1975,7 +1967,7 @@ Use the start-dev skill. draft/research/howtolens/browser_native_pyodide_jupyter
 
 </details>
 
-<details><summary>📋 <a href="draft/research/autolens_profiling/matrix_free_interferometer_phase5.md">Matrix-free interferometer inversion, phase 5b/5c: profiling note (Pulse) and workspace example</a> — autolens_profiling · large · supervised · medium</summary>
+<details><summary>📋 <a href="draft/research/autolens_profiling/matrix_free_interferometer_phase5.md">Matrix-free interferometer inversion, phase 5: wiring, profiling note (Pulse) and workspace example</a> — autolens_profiling · large · supervised · medium</summary>
 
 ```
 Use the start-dev skill. draft/research/autolens_profiling/matrix_free_interferometer_phase5.md
@@ -2812,7 +2804,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 |------|-------|------|
 | 2026-10-21 | filed | <a href="draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md">PyAutoLens mirror of the interferometer primary-beam persistence…</a> |
 | 2026-10-21 | filed | <a href="draft/docs/autolens_profiling/positions_source_jacobian_default_rerun_note.md">Note in autolens_profiling that plain source-plane lane values…</a> |
-| 2026-10-21 | filed | <a href="draft/research/autolens_profiling/matrix_free_interferometer_phase5.md">Matrix-free interferometer inversion, phase 5b/5c: profiling note…</a> |
+| 2026-10-21 | filed | <a href="draft/research/autolens_profiling/matrix_free_interferometer_phase5.md">Matrix-free interferometer inversion, phase 5: wiring, profiling note…</a> |
 | 2026-10-21 | issued | <a href="active/matrix_free_interferometer_inversion.md">Matrix-free interferometer inversion for very large rectangular…</a> |
 | 2026-10-21 | filed | <a href="draft/docs/autolens_workspace/interferometer_primary_beam_example.md">Interferometer primary beam: workspace example and docs</a> |
 | 2026-10-21 | filed | <a href="draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md">Cluster likelihood scripts: image-plane manual check disagrees with…</a> |
@@ -2913,13 +2905,12 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-112 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+111 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
 
 - `draft/feature/autoarray/adapt_linear_default_flip.md`
-- `draft/feature/autoarray/matrix_free_interferometer_wiring_5a.md`
 - `draft/feature/autoarray/rectangular_multi_submesh.md`
 - `draft/feature/autofit/model_figures_epic.md`
 - `draft/feature/autofit/results_library_epic_report.md`
@@ -2958,7 +2949,8 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`
 - `draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md`
 - `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
-- _… and 72 more_
+- `draft/bug/autolens/point_solver_error_bisect_health.md`
+- _… and 71 more_
 
 </details>
 
