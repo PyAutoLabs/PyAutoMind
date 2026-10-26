@@ -11,18 +11,19 @@
 - issued: 2026-10-26
 - prompt: active/linear_operated_sersic_has_no_prior_yaml.md
 - session: Codex; session ID unavailable
-- status: library-dev
+- status: library validated; downstream smoke running
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/linear-operated-sersic-priors
 - approval: Five-task configuration scope approved in this session; merge remains human.
 - repos:
   - PyAutoGalaxy: feature/linear-operated-sersic-priors
+- validation: Full Galaxy suite: 1374 passed; documented MRO prior inheritance and added regression test. Evidence: .worktrees/linear-operated-sersic-priors/logs/galaxy-suite.log.
 
 ## config-leaf-comments
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1732
 - issued: 2026-10-26
 - prompt: active/config_yaml_keys_missing_their_one_line.md
 - session: Codex; session ID unavailable
-- status: library-dev
+- status: library validation running; draft exception requested
 - approval: Five-task configuration scope approved; same-session shared-repository edits are sequential; human merge only.
 - affected-repos:
   - PyAutoFit
@@ -37,13 +38,14 @@
   - PyAutoArray: feature/config-leaf-comments
   - PyAutoGalaxy: feature/config-leaf-comments
   - PyAutoLens: feature/config-leaf-comments
+- validation: 277 comments added; 125 YAML values unchanged; checker reports zero missing comments; 4 focused tests pass. Baseline Zeus logging failure reproduced on pristine main; draft-PR exception pending human reply.
 
 ## workspace-prior-copies
 - issue: https://github.com/PyAutoLabs/HowToGalaxy/issues/90
 - issued: 2026-10-26
 - prompt: active/sync_remaining_workspace_config_priors_copies.md
 - session: Codex; session ID unavailable
-- status: workspace-dev
+- status: config validation passed; workspace smoke running
 - approval: Five-task configuration scope approved; same-session shared-repository edits are sequential; human merge only.
 - affected-repos:
   - HowToGalaxy
@@ -58,6 +60,7 @@
   - autolens_assistant: feature/workspace-prior-copies
   - autogalaxy_assistant: feature/workspace-prior-copies
   - autocti_assistant: feature/workspace-prior-copies
+- validation: 496 YAML files pass strict parsing; 54 changed mappings match intended corrections; 30 model checks pass. Independent evidence: .worktrees/workspace-prior-copies/logs/prior-validation.md.
 
 ## workspace-config-key-drift
 - issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/263
@@ -82,7 +85,7 @@
 - issued: 2026-10-26
 - prompt: active/corner_plot_config_keys_pr1709_phase3.md
 - session: Codex; session ID unavailable
-- status: workspace-dev (existing contributor PRs)
+- status: workspace validation running; latent examples gated on Galaxy #656
 - approval: Five-task configuration scope approved; same-session shared-repository edits are sequential; human merge only.
 - affected-repos:
   - autofit_workspace
@@ -98,3 +101,5 @@
   - autolens_workspace: feature/corner-plot-labels (samlange04 fork)
   - HowToGalaxy: feature/corner-plot-labels (samlange04 fork)
   - HowToLens: feature/corner-plot-labels (samlange04 fork)
+- validation: Existing contributor branches retained; 20 notebooks regenerated; all five config/superscript checks pass. PyAutoFit release gate cleared; executed latent-output Markdown remains pending PyAutoGalaxy#656.
+- blocked-by: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656

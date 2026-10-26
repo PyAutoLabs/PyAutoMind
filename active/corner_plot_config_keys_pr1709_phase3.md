@@ -15,7 +15,8 @@ Autonomy: supervised
 Priority: medium
 Status: issued
 Consequence: glance
-Blocked-by: release of PyAutoFit#1709 (workspace smoke CI installs the released library)
+Blocked-by: PyAutoGalaxy#656 for profile latent-output examples and executed Markdown
+Release-evidence: PyAutoFit 2026.10.23.1 is published/non-yanked and includes #1709 (verified 2026-10-26).
 Filed: 2026-10-21
 
 Remainder of `complete/2026/10/finish-pr-1709-corner-plots.md`. The library defaults cover the missing keys, so nothing breaks meanwhile.
