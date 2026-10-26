@@ -61,9 +61,10 @@
 - issued: 2026-10-26
 - prompt: active/colab_custom_instructions_assistant_context.md
 - session: Claude Code CLI; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/541, https://github.com/PyAutoLabs/autolens_assistant/pull/165, https://github.com/PyAutoLabs/PyAutoHands/pull/325 (phase 1, ALL MERGED 2026-10-26 by human)
 - library-pr: https://github.com/PyAutoLabs/autofit_assistant/pull/59, https://github.com/PyAutoLabs/autogalaxy_assistant/pull/39, https://github.com/PyAutoLabs/PyAutoHands/pull/326 (phase 2, ALL MERGED 2026-10-26 by human)
+- library-pr: https://github.com/PyAutoLabs/autocti_assistant/pull/39, https://github.com/PyAutoLabs/autocti_workspace/pull/38, https://github.com/PyAutoLabs/autolens_assistant/pull/166, https://github.com/PyAutoLabs/autofit_assistant/pull/60, https://github.com/PyAutoLabs/autogalaxy_assistant/pull/40 (phases 3+4; cti assistant before cti workspace)
 - heart-red-override:
   authorization: live human 2026-10-26 "prm, I authorize shop on RED"
   reasons: release validation FAILED (stage integrate); PyAutoHeart/workflows/Release Integrate: failure; PyAutoHeart/workflows/Workspace Smoke: failure; manifest_drift/checks/workspace checkouts (manifest ↔ disk): red; Release readiness: release validation FAILED (stage integrate); autolens: red; Workspace validation: NOT ready — 1429p / 1f / 125s @ cloud#40294511523; test_run: red; Release validation: NOT release_ready — v? profile=? (2026-10-26T07:48:52+00:00); validation_report/stages/integrate: fail; PyAutoBrain: red; PyAutoLens: red; autolens_profiling: red; Worktree drift: 1 orphan / 0 missing / 3 dirty
@@ -72,6 +73,10 @@
   authorization: live human 2026-10-26 "yeah I approve go" (phase 2)
   reasons: release validation FAILED (stage integrate); PyAutoHeart/workflows/Release Integrate: failure; PyAutoHeart/workflows/Workspace Smoke: failure; manifest_drift/checks/workspace checkouts (manifest ↔ disk): red; Release readiness: release validation FAILED (stage integrate); autolens: red; Workspace validation: NOT ready — 1429p / 1f / 125s @ cloud#40294511523; test_run: red; Release validation: NOT release_ready — v? profile=? (2026-10-26T07:48:52+00:00); validation_report/stages/integrate: fail; PyAutoBrain: red; PyAutoLens: red; autolens_profiling: red; Worktree drift: 1 orphan / 0 missing / 3 dirty
   gates: Hands 567 tests + firewall; fit 12 + check; galaxy 12 + check; independent review CLEAN (3 minors fixed)
+- heart-red-override:
+  authorization: live human 2026-10-26 "yes, I authorize, prm" (phases 3+4)
+  reasons: release validation FAILED (stage integrate); PyAutoHeart/workflows/Release Integrate: failure; PyAutoHeart/workflows/Workspace Smoke: failure; manifest_drift/checks/workspace checkouts (manifest ↔ disk): red; Release readiness: release validation FAILED (stage integrate); autolens: red; Workspace validation: NOT ready — 1429p / 1f / 125s @ cloud#40294511523; test_run: red; Release validation: NOT release_ready — v? profile=? (2026-10-26T07:48:52+00:00); validation_report/stages/integrate: fail; PyAutoBrain: red; PyAutoLens: red; autolens_profiling: red; Worktree drift: 1 orphan / 0 missing / 3 dirty
+  gates: four assistants check + tests; wiki-currency; cti workspace metadata-only; independent review no blockers (4 fixed)
 - worktree: ~/Code/PyAutoLabs-wt/colab-gemini-instructions (phase-1 branches merged; worktree_remove refuses while the task is active — recreate per phase, remove at completion)
 - repos:
   - autocti_assistant: feature/colab-gemini-phase3
