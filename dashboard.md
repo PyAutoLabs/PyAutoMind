@@ -943,7 +943,7 @@ Use the start-dev skill. active/config_key_mirror_drift.md
 
 </details>
 
-<details><summary>📋 <a href="active/config_yaml_keys_missing_their_one_line.md">Config yaml keys missing their one-line explanatory comment</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1732">issue #1732</a> — issued 2026-10-26 — library draft PR open; remaining library validation and workspace setup — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1733">PyAutoFit#1733</a>, <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/656">PyAutoArray#656</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/667">PyAutoGalaxy#667</a> — ⏳ pending release: PyAutoFit — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoGalaxy</summary>
+<details><summary>📋 <a href="active/config_yaml_keys_missing_their_one_line.md">Config yaml keys missing their one-line explanatory comment</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1732">issue #1732</a> — issued 2026-10-26 — four library drafts open; workspace mirrors validated; smoke running — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1733">PyAutoFit#1733</a>, <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/656">PyAutoArray#656</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/667">PyAutoGalaxy#667</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/802">PyAutoLens#802</a> — ⏳ pending release: PyAutoFit — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoLens</summary>
 
 ```
 Use the start-dev skill. active/config_yaml_keys_missing_their_one_line.md
@@ -3095,6 +3095,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoLens**
 
+- [PyAutoLens#802](https://github.com/PyAutoLabs/PyAutoLens/pull/802) — `active/config_yaml_keys_missing_their_one_line.md`
 - [PyAutoLens#801](https://github.com/PyAutoLabs/PyAutoLens/pull/801) — `complete/2026/10/point-solver-guide.md`
 - [PyAutoLens#800](https://github.com/PyAutoLabs/PyAutoLens/pull/800) — `complete/2026/10/point-solver-spurious-core.md`
 
