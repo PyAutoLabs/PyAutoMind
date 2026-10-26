@@ -1,3 +1,15 @@
+# pre_build formats only staged directories
+
+Shipped https://github.com/PyAutoLabs/PyAutoHands/pull/315 on 2026-10-26, merge f8f8d43547203b88c3aae25fa5bda3a234185a55; head eddb69d011c68b84f345ee5de2cee7e094ef4039.
+
+The existing fix restricts slam_pipeline formatting to workspaces where it is staged. This continuation replaced an instance-specific test docstring with generic wording and corrected Python escaping while preserving generated shell text. No assertions or production behavior were weakened.
+
+Validation: 511 full tests, 11 targeted tests, tenant firewall, AST equivalence and diff checks passed. Current-head GitHub CI all three Python versions (3.12,3.13,3.14) passed run40360735939. Human authorized backlog resolution and in-turn green merges, excluding Pulse; development RED override recorded in PR, registry and autonomy log. No release performed and Heart not declared healthy.
+
+Existing PR served as tracking issue; no duplicate issue created. Original prompt incorporated by lifecycle close. Original declared consequence glance; continuation has no substantive behavior change. Worktree cleanup follows ancestry and ignored-data audit.
+
+## Original prompt
+
 # pre_build runs black on slam_pipeline/ for every workspace but stages it only for autolens_workspace — leaves a dirty canonical checkout each release
 
 Issued: 2026-10-26

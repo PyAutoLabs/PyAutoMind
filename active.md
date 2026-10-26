@@ -40,21 +40,6 @@
 - smoke: 152 fresh checks passed against continuation scripts/config; logs/continuation/smoke-validation-summary.json and smoke-validation-equivalence.json in the claimed worktree.
 - ci: Current-head audit: Fit 7/7, Galaxy 8/8, HowToGalaxy 8/8, HowToLens 8/8 jobs passed; Lens new-head CI still running at wrap-up audit. Evidence logs/continuation/ci/.
 
-## pre-build-black-only-staged-dirs
-- issue: https://github.com/PyAutoLabs/PyAutoHands/pull/315
-- issued: 2026-10-26
-- prompt: active/pre_build_blacks_unstaged_slam_pipeline.md
-- session: Codex; session ID unavailable
-- status: library-dev
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/pre-build-black-only-staged-dirs
-- repos:
-  - PyAutoHands: fix/pre-build-black-only-staged-dirs
-- approval: Human approved backlog resolution and green in-turn merges, excluding Pulse #79.
-- heart-red-override:
-  - authorized: live human 2026-10-26 "Authorize development override" for both CI fixes and release-blocker development; no release through RED.
-  - red: release validation FAILED (stage integrate); PyAutoHeart/workflows/Release Integrate: failure; PyAutoHeart/workflows/Workspace Smoke: failure; manifest_drift/checks/workspace checkouts (manifest ↔ disk): red; Release readiness: release validation FAILED (stage integrate); autolens: red; Workspace validation: NOT ready — 1429p / 1f / 125s @ cloud#40294511523; test_run: red; Release validation: NOT release_ready — v? profile=? (2026-10-26T07:48:52+00:00); validation_report/stages/integrate: fail; PyAutoBrain: red; PyAutoLens: red; autolens_profiling: red; Worktree drift: 1 orphan / 0 missing / 3 dirty
-  - gates: local validation passed; exact-head CI checked before merge
-
 ## standalone-memory-template-ci
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/516
 - issued: 2026-10-26
