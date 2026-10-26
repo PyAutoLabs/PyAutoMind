@@ -305,6 +305,51 @@ def test_memory_github_is_also_fail_closed(tmp_path):
     assert (out / ".github" / "workflows" / "validate.yml").exists()
 
 
+def test_memory_validation_is_standalone_even_when_live_ci_needs_brain(tmp_path):
+    """The live board suite must not impose a sibling on a fresh template."""
+    mem = tmp_path / "PyAutoMemory"
+    files = dict(MINIMAL_MEMORY)
+    files[".github/workflows/validate.yml"] = """\
+name: validate
+on: [push, pull_request]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: YOURORG/PyAutoBrain
+          path: PyAutoBrain
+      - run: make validate
+      - run: make test
+"""
+    _fake_repo(mem, files)
+    out = tmp_path / "out"
+    assert spawn.generate_memory(mem, out) == []
+    text = (out / ".github/workflows/validate.yml").read_text()
+    workflow = yaml.safe_load(text)
+    triggers = workflow.get("on", workflow.get(True))
+    assert set(triggers) == {"push", "pull_request"}
+    assert workflow["permissions"] == {"contents": "read"}
+    assert "secrets." not in text
+    steps = workflow["jobs"]["validate"]["steps"]
+    checkouts = [s for s in steps if s.get("uses", "").startswith("actions/checkout@")]
+    assert len(checkouts) == 1
+    assert "repository" not in checkouts[0].get("with", {})
+    commands = [s["run"] for s in steps if "run" in s]
+    assert "make validate" in commands
+    assert "python scripts/validate_wikilinks.py --list" in commands
+    test_cmd = next(s["run"] for s in steps if s.get("name") == "Content validator tests")
+    assert test_cmd.split() == [
+        "python", "-m", "pytest", "-q",
+        "tests/test_validate_literature_citations.py",
+        "tests/test_validate_structure.py",
+        "tests/test_validate_wikilinks.py",
+    ]
+    assert "make test" not in commands
+
+
 def test_spawn_stamps_the_templates_complete_index(tmp_path):
     """spawn must run the GENERATED tree's own lifecycle.py, not the live one."""
     mind = tmp_path / "PyAutoMind"
