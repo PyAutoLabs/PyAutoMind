@@ -943,7 +943,7 @@ Use the start-dev skill. active/config_key_mirror_drift.md
 
 </details>
 
-<details><summary>📋 <a href="active/config_yaml_keys_missing_their_one_line.md">Config yaml keys missing their one-line explanatory comment</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1732">issue #1732</a> — issued 2026-10-26 — library draft PR open; remaining library validation and workspace setup — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1733">PyAutoFit#1733</a> — ⏳ pending release: PyAutoFit</summary>
+<details><summary>📋 <a href="active/config_yaml_keys_missing_their_one_line.md">Config yaml keys missing their one-line explanatory comment</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1732">issue #1732</a> — issued 2026-10-26 — library draft PR open; remaining library validation and workspace setup — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1733">PyAutoFit#1733</a>, <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/656">PyAutoArray#656</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/667">PyAutoGalaxy#667</a> — ⏳ pending release: PyAutoFit — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 Use the start-dev skill. active/config_yaml_keys_missing_their_one_line.md
@@ -951,7 +951,7 @@ Use the start-dev skill. active/config_yaml_keys_missing_their_one_line.md
 
 </details>
 
-<details><summary>📋 <a href="active/corner_plot_config_keys_pr1709_phase3.md">Workspace config + docs for corner-plot labels and latent plots…</a> — <a href="https://github.com/PyAutoLabs/autofit_workspace/issues/177">issue #177</a> — issued 2026-10-26 — workspace validation running; latent examples gated on Galaxy #656</summary>
+<details><summary>📋 <a href="active/corner_plot_config_keys_pr1709_phase3.md">Workspace config + docs for corner-plot labels and latent plots…</a> — <a href="https://github.com/PyAutoLabs/autofit_workspace/issues/177">issue #177</a> — issued 2026-10-26 — existing PRs updated; smoke running; latent examples gated on Galaxy #656 — PRs: <a href="https://github.com/PyAutoLabs/autofit_workspace/pull/174">autofit_workspace#174</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/259">autogalaxy_workspace#259</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/595">autolens_workspace#595</a>, <a href="https://github.com/PyAutoLabs/HowToGalaxy/pull/87">HowToGalaxy#87</a>, <a href="https://github.com/PyAutoLabs/HowToLens/pull/100">HowToLens#100</a></summary>
 
 ```
 Use the start-dev skill. active/corner_plot_config_keys_pr1709_phase3.md
@@ -3067,6 +3067,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoArray**
 
+- [PyAutoArray#656](https://github.com/PyAutoLabs/PyAutoArray/pull/656) — `active/config_yaml_keys_missing_their_one_line.md`
 - [PyAutoArray#655](https://github.com/PyAutoLabs/PyAutoArray/pull/655) — `complete/2026/10/finufft-cpu-nufft-backend.md`
 
 **PyAutoFit**
@@ -3086,6 +3087,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#667](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/667) — `active/config_yaml_keys_missing_their_one_line.md`
 - [PyAutoGalaxy#662](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/662) — `complete/2026/10/mass-sheet-jax.md`
 - [PyAutoGalaxy#665](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/665) — `complete/2026/10/multipole-isothermal-guard.md`
 - [PyAutoGalaxy#663](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/663) — `complete/2026/10/power-law-jax-axis.md`
