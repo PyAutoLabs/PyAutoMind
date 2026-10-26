@@ -480,7 +480,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 60 (stage 1: 60, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — the pre-registered decision is due
+Count toward 20: 61 (stage 1: 61, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — the pre-registered decision is due
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -569,3 +569,4 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-10-26 | linear-operated-sersic-priors (PyAutoGalaxy#668) | glance | tests 1374 pass / smoke 172 pass / review in-session / Heart YELLOW acknowledged / witness README and regression test pass | merged-unchanged | 1 |
 | 2026-10-26 | config-leaf-comments (PyAutoFit#1733 / PyAutoArray#656 / PyAutoGalaxy#667 / PyAutoLens#802 / autogalaxy_workspace#264 / autolens_workspace#602) | glance | tests 8448 pass / smoke 172 downstream and 60 workspace pass / review workspace independent CLEAN / Heart YELLOW acknowledged / witness 277-to-0 library and 323-to-0 workspace comments | merged-unchanged | 1 |
 | 2026-10-26 | workspace-prior-copies (HowToGalaxy#91 / autogalaxy_workspace_test#131 / autolens_assistant#164 / autogalaxy_assistant#38 / autocti_assistant#38) | glance | tests 496 YAML and 30 model checks pass / smoke 75 pass / review independent CLEAN / Heart YELLOW acknowledged / witness obsolete #618 entries removed and numeric priors preserved | merged-unchanged | 1 |
+| 2026-10-26 | latent-profile-declarations (PyAutoGalaxy#656) | glance | tests2335+1xfail/smoke172/reviewCLEAN/heartYELLOW-ack/witnessPASS/CI4of4 | merged-unchanged | 1 |

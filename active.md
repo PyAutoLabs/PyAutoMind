@@ -11,7 +11,7 @@
 - issued: 2026-10-26
 - prompt: active/corner_plot_config_keys_pr1709_phase3.md
 - session: Codex; session ID unavailable
-- status: five existing PRs updated; smoke passed; latent examples and executed Markdown gated on Galaxy #656
+- status: five existing PRs updated; Galaxy #656 merged; awaiting Galaxy publication and executed latent-output Markdown validation
 - approval: Five-task configuration scope approved; same-session shared-repository edits are sequential; human merge only.
 - affected-repos:
   - autofit_workspace
@@ -27,8 +27,10 @@
   - autolens_workspace: feature/corner-plot-labels (samlange04 fork)
   - HowToGalaxy: feature/corner-plot-labels (samlange04 fork)
   - HowToLens: feature/corner-plot-labels (samlange04 fork)
-- validation: Existing contributor branches retained; 20 notebooks regenerated; all five config/superscript checks pass. PyAutoFit release gate cleared; executed latent-output Markdown remains pending PyAutoGalaxy#656.
-- blocked-by: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656
+- validation: Existing contributor branches retained; 20 notebooks regenerated; all five config/superscript checks pass. PyAutoFit release gate cleared; Galaxy #656 merged; executed latent-output Markdown validation remains pending.
+- blocked-by: Published PyAutoGalaxy release containing merged #656; executed latent-output Markdown validation still required.
+- library-completion: complete/2026/10/latent-profile-declarations.md
+- release-gate: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656
 - workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/174
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/259
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/595
@@ -50,20 +52,3 @@
 - epic: likelihood-lifecycle
 - compute-go: human 2026-10-26 ('go') for the 2-task ao A100 breakdown rerun after the memory fix
 - progress: branch pushed 65b17065 (3 commits: carry-forward + 12-core, OOM fix, regen); RAL private autolens_profiling_p2a on the branch; ao rerun SUBMITTED 413033 (--array=2,16 of batch0 a100 script, pin 2026.10.23.1 then carried forward) → output/p2a_batch0
-
-## latent-profile-declarations
-- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/669
-- issued: 2026-10-26
-- prompt: active/latent_parameter_declarations_pr1709_phase2.md
-- session: Codex; session ID unavailable
-- status: library-shipped, awaiting CI then approved merge-on-green
-- approval: Human approved completion scope and merge on green after tests, independent review, CI and Heart gates; no release authorized.
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/latent-profile-declarations
-- repos:
-  - PyAutoGalaxy: feature/latent-parameters (samlange04 fork)
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656
-- validation: Galaxy1383 passed; Lens952 passed plus1 existing xfail; eight-workspace smoke172 passed; independent review CLEAN; synthetic400-row latent CSV/corner witness passed; config comments complete.
-- head: 6c0fac8f
-- heart: YELLOW 2026-10-26T11:33:17Z; same acknowledged unrelated warnings, no RED reasons.
-- review-findings-resolved: Light cosine/sine phase convention, independent m3/m4 free modes, dependency floor autofit>=2026.10.23.1.

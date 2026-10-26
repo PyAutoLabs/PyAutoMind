@@ -15,7 +15,8 @@ Autonomy: supervised
 Priority: medium
 Status: issued
 Consequence: glance
-Blocked-by: PyAutoGalaxy#656 for profile latent-output examples and executed Markdown
+Blocked-by: Published PyAutoGalaxy release containing merged #656; profile latent-output examples and executed Markdown validation remain.
+Library-completion: complete/2026/10/latent-profile-declarations.md
 Release-evidence: PyAutoFit 2026.10.23.1 is published/non-yanked and includes #1709 (verified 2026-10-26).
 Filed: 2026-10-21
 
