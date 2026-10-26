@@ -137,3 +137,15 @@
 - coordination: Galaxy/Lens contributor branches now include the comment-mirror branches with notation conflicts resolved; all pre-merge corner YAML values preserved. Merge autogalaxy_workspace#264 and autolens_workspace#602 first.
 - smoke: 152 checks passed across five contributor workspaces; evidence in .worktrees/corner-plot-workspace-config/logs/smoke-summary.json.
 - ci: Fork workflow approvals issued for Fit/HowToGalaxy/HowToLens after verifying workflow files unchanged; inspect current CI at human merge time.
+
+## likelihood-lifecycle-p2a-restamp-12core
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/466
+- issued: 2026-10-26
+- session: Claude Code (Opus 5.5); session ID unavailable
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p2a-restamp-12core
+- repos:
+  - autolens_profiling: feature/likelihood-lifecycle-p2a-restamp-12core
+- prompt: active/likelihood_lifecycle_p2a_pin_restamp_12core.md
+- epic: likelihood-lifecycle
+- compute-go: human 2026-10-26 ('go') for the 2-task ao A100 breakdown rerun after the memory fix

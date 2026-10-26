@@ -13,6 +13,8 @@ Status: formalised
 Consequence: judge
 Witness: build_catalogue --check passes with every 2a imaging record at release_pin 2026.10.25.1 carrying its measured pin/SHAs as provenance and no row turned stale; numba CPU records carry the producer-emitted 12-core estimate (per-call ÷ 6); the two ao jax_gpu_dense breakdown cells (delaunay, rectangular) are current from a RAL A100 rerun, or recorded as limitations with measured memory numbers if they still do not fit
 Filed: 2026-10-26
+Issued: 2026-10-26
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/466
 
 ## Human rulings (2026-10-26, chat)
 - Update library pins to 2026.10.25.1: phase 2b onward measures on it, and the 104 2a rows are RE-STAMPED
