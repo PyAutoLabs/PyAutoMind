@@ -23,7 +23,7 @@
 - issued: 2026-10-26
 - prompt: active/config_yaml_keys_missing_their_one_line.md
 - session: Codex; session ID unavailable
-- status: library draft PR open; remaining library validation and workspace setup
+- status: four library drafts open; workspace mirrors validated; smoke running
 - approval: Five-task configuration scope approved; same-session shared-repository edits are sequential; human merge only.
 - affected-repos:
   - PyAutoFit
@@ -48,6 +48,9 @@
 - pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/656
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/667
 - pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/667
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/802
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/802
+- workspace-validation: 323 comments added; all 168 YAML values unchanged; checker zero; independent review CLEAN; branch smoke running.
 
 ## workspace-prior-copies
 - issue: https://github.com/PyAutoLabs/HowToGalaxy/issues/90
