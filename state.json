@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-26T10:46:09Z",
+  "updated": "2026-10-26T11:35:58Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "PyAutoGalaxy latent-parameter declarations (phase 2 of community PR PyAutoFit#1709) \u2014 library-shipped, awaiting CI then approved merge-on-green",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656",
+      "prompt": "Use the start-dev skill. active/latent_parameter_declarations_pr1709_phase2.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -105,6 +111,12 @@
     },
     {
       "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#656 \u2014 PyAutoGalaxy latent-parameter declarations (phase 2 of community PR PyAutoFit#1709)",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#667 \u2014 config-leaf-comments",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/667",
       "prompt": null
@@ -113,18 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#668 \u2014 linear-operated-sersic-priors",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/668",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#662 \u2014 mass-sheet-jax",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/662",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#665 \u2014 Shipped scope and limits",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/665",
       "prompt": null
     }
   ]

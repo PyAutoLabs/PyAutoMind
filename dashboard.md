@@ -951,7 +951,7 @@ Use the start-dev skill. active/corner_plot_config_keys_pr1709_phase3.md
 
 </details>
 
-<details><summary>📋 <a href="active/latent_parameter_declarations_pr1709_phase2.md">PyAutoGalaxy latent-parameter declarations (phase 2 of community PR PyAutoFit#1709)</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/669">issue #669</a> — issued 2026-10-26 — library-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656">PyAutoGalaxy#656</a></summary>
+<details><summary>📋 <a href="active/latent_parameter_declarations_pr1709_phase2.md">PyAutoGalaxy latent-parameter declarations (phase 2 of community PR PyAutoFit#1709)</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/669">issue #669</a> — issued 2026-10-26 — library-shipped, awaiting CI then approved merge-on-green — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656">PyAutoGalaxy#656</a> — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 Use the start-dev skill. active/latent_parameter_declarations_pr1709_phase2.md
@@ -3071,6 +3071,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#656](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656) — `active/latent_parameter_declarations_pr1709_phase2.md`
 - [PyAutoGalaxy#667](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/667) — `complete/2026/10/config-leaf-comments.md`
 - [PyAutoGalaxy#668](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/668) — `complete/2026/10/linear-operated-sersic-priors.md`
 - [PyAutoGalaxy#662](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/662) — `complete/2026/10/mass-sheet-jax.md`
