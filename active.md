@@ -64,12 +64,17 @@
 - issued: 2026-10-26
 - prompt: active/config_key_mirror_drift.md
 - session: Codex; session ID unavailable
-- status: approved, setup in progress
+- status: workspace-dev
 - approval: Five-task configuration scope approved; same-session shared-repository edits are sequential; human merge only.
 - affected-repos:
   - autofit_workspace
   - autogalaxy_workspace
   - autolens_workspace
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/workspace-config-key-drift
+- repos:
+  - autofit_workspace: feature/workspace-config-key-drift
+  - autogalaxy_workspace: feature/workspace-config-key-drift
+  - autolens_workspace: feature/workspace-config-key-drift
 
 ## corner-plot-workspace-config
 - issue: https://github.com/PyAutoLabs/autofit_workspace/issues/177
