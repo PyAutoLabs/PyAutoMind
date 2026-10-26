@@ -44,6 +44,10 @@
 
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1733
 - pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1733
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/656
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/656
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/667
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/667
 
 ## workspace-prior-copies
 - issue: https://github.com/PyAutoLabs/HowToGalaxy/issues/90
@@ -96,7 +100,7 @@
 - issued: 2026-10-26
 - prompt: active/corner_plot_config_keys_pr1709_phase3.md
 - session: Codex; session ID unavailable
-- status: workspace validation running; latent examples gated on Galaxy #656
+- status: existing PRs updated; smoke running; latent examples gated on Galaxy #656
 - approval: Five-task configuration scope approved; same-session shared-repository edits are sequential; human merge only.
 - affected-repos:
   - autofit_workspace
@@ -114,3 +118,8 @@
   - HowToLens: feature/corner-plot-labels (samlange04 fork)
 - validation: Existing contributor branches retained; 20 notebooks regenerated; all five config/superscript checks pass. PyAutoFit release gate cleared; executed latent-output Markdown remains pending PyAutoGalaxy#656.
 - blocked-by: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/174
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/259
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/595
+- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/87
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/100
