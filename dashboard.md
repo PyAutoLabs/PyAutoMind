@@ -959,7 +959,7 @@ Use the start-dev skill. active/corner_plot_config_keys_pr1709_phase3.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p2a_inference_timings.md">Inference wall-time records: search.summary per-eval times and a profiling @3 join</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/47">issue #47</a> — issued 2026-10-26 — workspace-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p2a_inference_timings.md">Inference wall-time records: search.summary per-eval times and a profiling @3 join</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/47">issue #47</a> — issued 2026-10-26 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_inference/pull/48">autolens_inference#48</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p2a_inference_timings.md
