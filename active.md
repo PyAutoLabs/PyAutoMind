@@ -11,7 +11,7 @@
 - issued: 2026-10-26
 - prompt: active/corner_plot_config_keys_pr1709_phase3.md
 - session: Codex; session ID unavailable
-- status: workspace-dev; preparing executed outputs against merged Galaxy #656; shipping remains release-gated
+- status: workspace-dev; pre-release preparation interrupted by Galaxy renderer SIGTERM; retry approval pending; shipping remains release-gated
 - approval: Five-task configuration scope approved; same-session shared-repository edits are sequential; human merge only. Human approved finishing executed examples, Markdown and PR validation against merged Galaxy on 2026-10-26; no publication or workspace merge authorized.
 - affected-repos:
   - autofit_workspace
@@ -27,8 +27,8 @@
   - autolens_workspace: feature/corner-plot-labels (samlange04 fork)
   - HowToGalaxy: feature/corner-plot-labels (samlange04 fork)
   - HowToLens: feature/corner-plot-labels (samlange04 fork)
-- validation: Existing contributor branches retained; 20 notebooks regenerated; all five config/superscript checks pass. PyAutoFit release gate cleared; Galaxy #656 merged; executed latent-output Markdown validation remains pending.
-- blocked-by: Published PyAutoGalaxy release containing merged #656; executed latent-output Markdown validation still required.
+- validation: Existing contributor branches retained; 20 notebooks regenerated. Continuation: real Fit latent cookbook and Galaxy imaging Markdown passed; Fit 10 and Galaxy 16 fresh smoke checks passed in isolated copies. Fourteen Python prose edits preserve executable AST. Final artifact review and remaining three smoke suites incomplete.
+- blocked-by: Galaxy interferometer renderer exited 143 (SIGTERM) during latent-output processing; sender unknown, no Python traceback. Retry approval requested. Remaining executed Markdown/review and published PyAutoGalaxy release containing #656 still required.
 - library-completion: complete/2026/10/latent-profile-declarations.md
 - release-gate: PyAutoGalaxy
 - workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/174
