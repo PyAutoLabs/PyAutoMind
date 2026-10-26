@@ -61,7 +61,7 @@
 - issued: 2026-10-26
 - prompt: active/colab_custom_instructions_assistant_context.md
 - session: Claude Code CLI; session ID unavailable
-- status: phase-2-pending
+- status: library-dev
 - library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/541, https://github.com/PyAutoLabs/autolens_assistant/pull/165, https://github.com/PyAutoLabs/PyAutoHands/pull/325 (phase 1, ALL MERGED 2026-10-26 by human)
 - heart-red-override:
   authorization: live human 2026-10-26 "prm, I authorize shop on RED"
@@ -69,6 +69,9 @@
   gates: Hands 558 tests; assistant 14 colab tests + check; Brain 64 clone tests; independent review no blockers (4 fixed)
 - worktree: ~/Code/PyAutoLabs-wt/colab-gemini-instructions (phase-1 branches merged; worktree_remove refuses while the task is active — recreate per phase, remove at completion)
 - repos:
+  - autogalaxy_assistant: feature/colab-gemini-phase2
+  - autofit_assistant: feature/colab-gemini-phase2
+  - PyAutoHands: feature/colab-gemini-phase2
 - summary: |
     PHASE 1 MERGED 2026-10-26 (Brain#541, autolens_assistant#165, Hands#325); human verified Colab
     upload, size (52k) and GitHub-badge routes. Workspace notebooks get instructions at next release.
