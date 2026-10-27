@@ -35,3 +35,5 @@
 - epic: likelihood-lifecycle
 - heart-red-override: live human 2026-10-26 "Yes, authorise for 2b" (PRs + planned RAL batches)
 - batch-go: HUMAN 2026-10-27 "do the next tasks to the point interferometry is hopefully running" = go for batch 0
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/471 OPEN 2026-10-27 (PR A, dff89226; Heart GREEN; judge → human /prm)
+- batch0: chained on RAL 2026-10-27 (scratch/p2b_batch0_submit.log; CPU 0-13 + refs 0-1 on ral, A100 0-9%2) from branch head dff89226
