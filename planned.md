@@ -134,7 +134,7 @@
 - classification: workspace
 - suggested-branch: feature/likelihood-lifecycle-p2b-interferometer
 - blocked-by: rectangular-28sq-profiling-rows (using autolens_profiling; both edit _production_config.py)
-- prompt: active/likelihood_lifecycle_p2b_interferometer_campaign.md
+- prompt: draft/research/autolens_profiling/likelihood_lifecycle_p2b_interferometer_campaign.md
 - heart-red-override: live human 2026-10-26 "Yes, authorise for 2b" (PRs + planned RAL batches)
 - affected-repos:
   - autolens_profiling
