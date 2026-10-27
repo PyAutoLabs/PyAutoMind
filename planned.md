@@ -11,7 +11,6 @@
 - [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
 - [interferometer-primary-beam-persistence-mirror](#interferometer-primary-beam-persistence-mirror)
 - [point-plots-yaml-keys-assistant](#point-plots-yaml-keys-assistant)
-- [likelihood-lifecycle-p2b-interferometer](#likelihood-lifecycle-p2b-interferometer)
 
 <!-- toc:end -->
 
@@ -126,15 +125,3 @@
 - release-gate: verify the PyAutoLens#794 release before shipping, as required by the original prompt
 - parent: complete/2026/10/point-plots-yaml-keys.md (HowToLens half merged 2026-10-22, HowToLens#99); no separate prompt file
 - scope: same `point_dataset` / `fit_point_dataset` block edit in `autolens_assistant/config/visualize/plots.yaml` as HowToLens; ship on its own branch `feature/point-plots-yaml-keys` once the claim clears
-
-
-## likelihood-lifecycle-p2b-interferometer
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/469
-- planned: 2026-10-26
-- classification: workspace
-- suggested-branch: feature/likelihood-lifecycle-p2b-interferometer
-- blocked-by: rectangular-28sq-profiling-rows (using autolens_profiling; both edit _production_config.py)
-- prompt: draft/research/autolens_profiling/likelihood_lifecycle_p2b_interferometer_campaign.md
-- heart-red-override: live human 2026-10-26 "Yes, authorise for 2b" (PRs + planned RAL batches)
-- affected-repos:
-  - autolens_profiling
