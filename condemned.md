@@ -60,6 +60,7 @@ a sweep), mirroring the Heart ↔ vitals template. See the decision:
 - [autofit_workspace_developer/searches-minimal-nautilus-leftovers](#autofit_workspace_developersearches-minimal-nautilus-leftovers)
 - [autofit_workspace_developer/ep-graphical-baselines](#autofit_workspace_developerep-graphical-baselines)
 - [autolens-profiling/linear-solver-p5-mapper-corpus-large-npz](#autolens-profilinglinear-solver-p5-mapper-corpus-large-npz)
+- [pyautobrain/board-one-click-update](#pyautobrainboard-one-click-update)
 
 <!-- toc:end -->
 
@@ -554,3 +555,14 @@ One `##` block per item. Fields:
 - sweep-after: 2026-11-07
 - breaks-if-wrong: nothing science-side (every measurement row is on main via #401 and the corpus files exist out of git with verified hashes); the only unique content is the original commit 3273726's provenance SHA cited in the phase-5 ledger/PR text. Recoverable via `pyauto-gut recover autolens-profiling-linear-solver-p5-mapper-corpus-large-npz` until voided. Voiding is the point: it sheds the ~160 MB of corpus objects from the autolens_profiling remote.
 - archive-ref: refs/heads/archive/condemned/autolens-profiling-linear-solver-p5-mapper-corpus-large-npz on autolens_profiling origin (70e8a9f)
+
+## pyautobrain/board-one-click-update
+- type: branch
+- locator: feature/board-one-click-update (PyAutoBrain, tip 092e88a; worktree .worktrees/board-one-click-update removed)
+- confidence: 1.0
+- reason: one-click authenticated board update prototype (PyAutoBrain#504), untouched since 2026-10-08, never pushed, no registered task; human 2026-10-27 "drop the board one click thing". Untracked `board_update/` files committed as a WIP before archiving.
+- merged: no
+- condemned: 2026-10-27
+- sweep-after: 2026-11-26
+- breaks-if-wrong: loses the `board_update/` Flask prototype (app.py, targets.py, Dockerfile, template, css/js); recoverable via `pyauto-gut recover pyautobrain-board-one-click-update` until voided.
+- archive-ref: refs/heads/archive/condemned/pyautobrain-board-one-click-update on PyAutoBrain origin (092e88a)
