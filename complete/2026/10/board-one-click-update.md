@@ -1,3 +1,12 @@
+# board-one-click-update — DROPPED (not shipped)
+
+- outcome: dropped by the human on 2026-10-27 ("drop the board one click thing") during a /health review; no PR was ever opened.
+- last work: 2026-10-08 (Codex CLI); the `board_update/` Flask prototype was never committed or pushed, and the task had been parked since 2026-10-08 awaiting a hosting preference.
+- preserved: the prototype was committed as a WIP (092e88a) and archived via PyAutoGut at `refs/heads/archive/condemned/pyautobrain-board-one-click-update` on PyAutoBrain origin; catalogued in `condemned.md` (sweep-after 2026-11-26). Recover with `pyauto-gut recover pyautobrain-board-one-click-update`.
+- cleaned: worktree `.worktrees/board-one-click-update/PyAutoBrain` removed, local branch deleted, PyAutoBrain#504 closed as not planned.
+
+## Original prompt
+
 # One-click board Update
 
 Issued: 2026-10-08

@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2021 records across 10 buckets.
+2022 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -151,6 +151,7 @@ markers; everything below GENERATED is rebuilt.
 - [board-navigation-pulse](2026/10/board-navigation-pulse.md)
 - [board-navigation-scientist](2026/10/board-navigation-scientist.md)
 - [board-navigation-shared-consumers](2026/10/board-navigation-shared-consumers.md)
+- [board-one-click-update](2026/10/board-one-click-update.md) — not shipped
 - [brain-dashboard-scope](2026/10/brain-dashboard-scope.md)
 - [broca-cockpit](2026/10/broca-cockpit.md)
 - [broca-communication-resource-dropdowns](2026/10/broca-communication-resource-dropdowns.md)
