@@ -23,6 +23,62 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/80 MERGED 2026-10-26 5474e3cb via human /prm (regime in @3 one-current key)
 - pr: https://github.com/PyAutoLabs/autolens_profiling/pull/470 MERGED 2026-10-27 a1a4ccf1 via human /prm (rect28 rows, RAL 413044/413046 8/8); task stays open — NEXT autolens_inference size_match leg (branch has no commits yet); witness gap jax_cpu_dense + light_fixed unmeasured
 
+## likelihood-lifecycle-p2d-galaxy-group
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/473
+- issued: 2026-10-28
+- session: Claude Code (Opus 5.5); session ID unavailable
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p2d-galaxy-group
+- repos:
+  - autolens_profiling: feature/likelihood-lifecycle-p2d-galaxy-group
+- prompt: active/likelihood_lifecycle_p2d_multi_galaxy_group_campaign.md
+- epic: likelihood-lifecycle
+- autonomy: --auto (supervised → decide-and-flag; ends at a DRAFT PR for human review)
+- parallel-claim: HUMAN 2026-10-28 "also do the work to set up the other dataset types" — parallel worktree stacked on #471 (80bbb028)
+- batch-go: NONE — human: "leave this as something I then review before we do RAL runs"
+
+## likelihood-lifecycle-p2e-cluster
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/474
+- issued: 2026-10-28
+- session: Claude Code (Opus 5.5); session ID unavailable
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p2e-cluster
+- repos:
+  - autolens_profiling: feature/likelihood-lifecycle-p2e-cluster
+- prompt: active/likelihood_lifecycle_p2e_cluster_campaign.md
+- epic: likelihood-lifecycle
+- autonomy: --auto (supervised → decide-and-flag; ends at a DRAFT PR for human review)
+- parallel-claim: HUMAN 2026-10-28 "also do the work to set up the other dataset types" — parallel worktree stacked on #471 (80bbb028)
+- batch-go: NONE — human: "leave this as something I then review before we do RAL runs"
+
+## likelihood-lifecycle-p2f-dataset-datacube
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/475
+- issued: 2026-10-28
+- session: Claude Code (Opus 5.5); session ID unavailable
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p2f-dataset-datacube
+- repos:
+  - autolens_profiling: feature/likelihood-lifecycle-p2f-dataset-datacube
+- prompt: active/likelihood_lifecycle_p2f_multi_dataset_datacube_campaign.md
+- epic: likelihood-lifecycle
+- autonomy: --auto (supervised → decide-and-flag; ends at a DRAFT PR for human review)
+- parallel-claim: HUMAN 2026-10-28 "also do the work to set up the other dataset types" — parallel worktree stacked on #471 (80bbb028)
+- batch-go: NONE — human: "leave this as something I then review before we do RAL runs"
+
+## likelihood-lifecycle-p2g-weak
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/476
+- issued: 2026-10-28
+- session: Claude Code (Opus 5.5); session ID unavailable
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p2g-weak
+- repos:
+  - autolens_profiling: feature/likelihood-lifecycle-p2g-weak
+- prompt: active/likelihood_lifecycle_p2g_weak_campaign.md
+- epic: likelihood-lifecycle
+- autonomy: --auto (supervised → decide-and-flag; ends at a DRAFT PR for human review)
+- parallel-claim: HUMAN 2026-10-28 "also do the work to set up the other dataset types" — parallel worktree stacked on #471 (80bbb028)
+- batch-go: NONE — human: "leave this as something I then review before we do RAL runs"
+
 ## likelihood-lifecycle-p2c-point-source
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/472
 - issued: 2026-10-28

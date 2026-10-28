@@ -1,4 +1,4 @@
-# Likelihood lifecycle phase 2g: profiling campaign — weak lensing: **new** profiling scripts and planned cells
+# Likelihood lifecycle phase 2d: profiling campaign — multi_galaxy and group: **new** profiling scripts (runtime and breakdown) and their planned cells (`regime: standard` only)
 
 Type: research
 Target: autolens_profiling
@@ -6,7 +6,7 @@ Repos:
 - autolens_profiling
 Themes:
 - profiling
-Difficulty: medium
+Difficulty: large
 Autonomy: supervised
 Priority: high
 Status: formalised
@@ -18,10 +18,11 @@ Epic: likelihood-lifecycle
 Phase: 2
 Parent: draft/research/autolens_profiling/likelihood_lifecycle_epic.md
 Filed: 2026-10-24
+Issued: 2026-10-28
 
-Phase 2 sub-issue 2g of the `likelihood-lifecycle` epic (report §4 "Phase 2"; ledger "Phase 2" card). Depends on phase 0 (complete) and phase 1B (merged, autolens_profiling#453); start after autolens_profiling#455 (follow-ups) merges. Scope: weak lensing: **new** profiling scripts and planned cells.
+Phase 2 sub-issue 2d of the `likelihood-lifecycle` epic (report §4 "Phase 2"; ledger "Phase 2" card). Depends on phase 0 (complete) and phase 1B (merged, autolens_profiling#453); start after autolens_profiling#455 (follow-ups) merges. Scope: multi_galaxy and group: **new** profiling scripts (runtime and breakdown) and their planned cells (`regime: standard` only).
 
-The only dataset type with no image-plane fit; design the runtime and breakdown cells first (judgment fork → human).
+Scripts mirror the autolens_visualization producers and the workspace simulators; add the planned cells to `catalogue/registry.json`, and the §3.3 rows if missing (judgment fork → human).
 
 ## Rules (every phase-2 sub-issue; epic ledger "Phase 2" card)
 - The coverage matrix (`python scripts/misc/tooling/coverage_matrix.py` → `dashboard/coverage.md`) names this campaign's missing and stale cells; those cells are the work list.

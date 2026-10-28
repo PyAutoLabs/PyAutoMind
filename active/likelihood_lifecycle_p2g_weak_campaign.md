@@ -1,4 +1,4 @@
-# Likelihood lifecycle phase 2e: profiling campaign — cluster/image_plane and cluster/source_plane (4+ planned cells, `regime: standard`)
+# Likelihood lifecycle phase 2g: profiling campaign — weak lensing: **new** profiling scripts and planned cells
 
 Type: research
 Target: autolens_profiling
@@ -18,10 +18,11 @@ Epic: likelihood-lifecycle
 Phase: 2
 Parent: draft/research/autolens_profiling/likelihood_lifecycle_epic.md
 Filed: 2026-10-24
+Issued: 2026-10-28
 
-Phase 2 sub-issue 2e of the `likelihood-lifecycle` epic (report §4 "Phase 2"; ledger "Phase 2" card). Depends on phase 0 (complete) and phase 1B (merged, autolens_profiling#453); start after autolens_profiling#455 (follow-ups) merges. Scope: cluster/image_plane and cluster/source_plane (4+ planned cells, `regime: standard`).
+Phase 2 sub-issue 2g of the `likelihood-lifecycle` epic (report §4 "Phase 2"; ledger "Phase 2" card). Depends on phase 0 (complete) and phase 1B (merged, autolens_profiling#453); start after autolens_profiling#455 (follow-ups) merges. Scope: weak lensing: **new** profiling scripts and planned cells.
 
-**Re-measure cluster/source_plane:** the committed rows predate PyAutoLens bdb44a87c (2026-10-21, `FitPositionsSource` now uses the Jacobian precision tensor and a model-independent noise term); the breakdown script was re-derived in autolens_profiling#455.
+The only dataset type with no image-plane fit; design the runtime and breakdown cells first (judgment fork → human).
 
 ## Rules (every phase-2 sub-issue; epic ledger "Phase 2" card)
 - The coverage matrix (`python scripts/misc/tooling/coverage_matrix.py` → `dashboard/coverage.md`) names this campaign's missing and stale cells; those cells are the work list.
