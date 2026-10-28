@@ -60,3 +60,18 @@
     1 skipped / 1 xfailed; twins 39 passed under -n 4; Heart STALE, environment reasons only). Also
     fixed the order-dependent global-RNG test (first `import jax` draws from NumPy's global RNG).
     No workspace impact (new API only). Stops at PR-open (Consequence: judge) → human /prm.
+
+## gnfw-convergence-fast
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/677
+- issued: 2026-10-28
+- session: Claude Code remote (web) session_016nhQ8NtZ6QtuqxKKAnhhdg
+- location: remote session clone /home/user/pyautogalaxy on feature/gnfw-convergence-fast (from origin/main 7701202); no task worktree
+- status: library-dev
+- epic: lenstwin (follow-up to phases 2–3; not a numbered phase)
+- prompt: active/gnfw_convergence_fast.md
+- repos:
+  - PyAutoGalaxy: feature/gnfw-convergence-fast
+- summary: |
+    Human asked 2026-10-28 to speed up gNFW. `gNFW.convergence_func` does one scipy `quad` per point;
+    tabulate the line-of-sight integral on a log η grid per call and spline in log–log
+    (prototype ~400× faster, ~1e-5 rel. at 20 nodes/decade). Consequence: judge (human /prm).
