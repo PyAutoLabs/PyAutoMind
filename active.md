@@ -66,6 +66,7 @@
 - autonomy: --auto launched by human 2026-10-28; effective supervised → decide-and-flag, ends at PR-open; judge → human /prm
 
 ## compact-colab-setup
+- checkpoint: local generator + 15 scripts implemented; 581 tests pass; Heart RED blocks shipping; full consumer regeneration and assistant adaptation pending
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/327
 - issued: 2026-10-28
 - session: Codex (session ID unavailable)

@@ -69,3 +69,14 @@ Advanced: “Set up Google Colab as in [the introductory notebook].”
 Substitute each project’s name and actual introductory link. Cell title: “Set up Google Colab”. HTML support itself is future work, not part of this change.
 
 Branch survey: PyAutoHands, autolens_workspace, autogalaxy_workspace, autofit_workspace, HowToFit, HowToGalaxy, HowToLens, autolens_assistant all on main, clean; no conflicting active claims. Proposed branch feature/compact-colab-setup.
+
+## Implementation checkpoint — 2026-10-28
+
+- User explicitly approved the wording including “locally or in HTML”; intro and advanced tiers retained.
+- Worktree: `/home/jammy/Code/PyAutoLabs/.worktrees/compact-colab-setup`, branch `feature/compact-colab-setup` in PyAutoHands, autolens_workspace, autogalaxy_workspace and autolens_assistant. No task code committed or pushed yet.
+- Implemented locally: compact shared generator, maintained handwritten-cell expansion, option preservation, visible science tails, introductory/advanced copy; 15 Lens/Galaxy source setup sections reduced to import+call.
+- Validation: PyAutoHands 581 tests passed (181.99s), including 25 setup tests; 25 setup tests rerun after final introductory-link correction. Six real introductory notebook previews generated and idempotency checked. Both real local setup imports/calls pass. Science AST unchanged in all 15 changed scripts; size guards and diff whitespace checks pass.
+- Logs: worktree `logs/hands-tests.log`, `logs/readiness.json`. Previews: `/mnt/c/Users/Jammy/Science/scratch/compact_colab_setup_2026-10-28` (Windows `C:\Users\Jammy\Science\scratch\compact_colab_setup_2026-10-28`). Hosted Colab installation/rendering not tested.
+- Refreshed Heart RED blocks shipping: `PyAutoArray: 4 uncommitted source change(s)`; `PyAutoGalaxy: 9 commit(s) behind origin`; `PyAutoLens: 7 commit(s) behind origin`; additional stale reason `release validation stale: source moved since rehearsal (PyAutoGalaxy, PyAutoLens)`. No override granted.
+- Remaining: resolve/recheck Heart before shipping; finish assistant notebook path (its stdlib-only `autoassistant/to_notebook.py` is independent of Hands); regenerate and validate committed notebooks/markdown across all six project families in claimed worktrees; required workspace smoke; generator PR first, consumer PRs via ship-workspace. Assistant checkout still unchanged. Fit intro is `notebooks/overview/overview_1_the_basics.ipynb`, not root start_here.
+- No merge or release authorized. HTML support remains future work.
