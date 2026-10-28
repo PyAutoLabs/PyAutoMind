@@ -44,7 +44,8 @@
 - issued: 2026-10-28
 - session: Claude Code remote (web) session_016nhQ8MoEbXHfUW3wiH58VY
 - location: remote session clones /home/user/pyautogalaxy and /home/user/pyautolens on feature/lenstwin-p0-twins-core (from origin/main a108092 / a8eb094); no task worktree
-- status: library-dev
+- status: library-dev (0A library-shipped, awaiting-merge; 0B in progress)
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/672
 - epic: lenstwin (phase 0; ledger draft/feature/autolens/lenstwin_epic.md)
 - prompt: active/lenstwin_p0_twins_core.md
 - repos:
@@ -59,3 +60,5 @@
     same-named PyAutoGalaxy branch. Rulings R1/R2 taken; R3–R8 untouched. Consequence: judge
     (human /prm). Next: /start_library lenstwin-p0-twins-core, 0A first; implementation on the
     execution tier (Opus), plan and judgment in the main session.
+    2026-10-28: 0A shipped to PyAutoGalaxy#672 (pending-release; 1390 passed / 7 skipped;
+    Heart STALE, environment reasons only). 0B implementation running in the PyAutoLens clone.
