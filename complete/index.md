@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2022 records across 10 buckets.
+2023 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -308,6 +308,7 @@ markers; everything below GENERATED is rebuilt.
 - [linear-solver-p4a-jacobi-a100-divergence](2026/10/linear-solver-p4a-jacobi-a100-divergence.md)
 - [linear-solver-p5-mapper-corpus](2026/10/linear-solver-p5-mapper-corpus.md)
 - [lint-lychee-exclude-blob](2026/10/lint-lychee-exclude-blob.md) — Corrective: lychee in both organs' `lint.yml` now excludes `^https://github\.com/.*/blob/`. GitHub answers non…
+- [mass-integral-scalar-radius](2026/10/mass-integral-scalar-radius.md) — `MassProfile.mass_integral` wrapped the Python float `scipy.integrate.quad` feeds it as a
 - [mass-sheet-jax](2026/10/mass-sheet-jax.md)
 - [matrix-free-interferometer-phase1](2026/10/matrix-free-interferometer-phase1.md)
 - [matrix-free-interferometer-phase2](2026/10/matrix-free-interferometer-phase2.md)

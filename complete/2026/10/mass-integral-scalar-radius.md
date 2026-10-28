@@ -1,3 +1,33 @@
+## mass-integral-scalar-radius
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/673
+- completed: 2026-10-28
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/674
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/674
+- summary: `MassProfile.mass_integral` wrapped the Python float `scipy.integrate.quad` feeds it as a
+  0-d `aa.ArrayIrregular`, which most `convergence_func` implementations (written for 1D radius
+  arrays) mis-handle. ~30 of the 62 constructible `ag.mp` classes failed through
+  `mass_angular_within_circle_from` — NFW family TypeError (length-1 complex64 array), gNFW family
+  IndexError (`.shape[0]`), truncated NFW / Sersic / Exponential / DevVaucouleurs / cored
+  power-law & isothermal / dPIE AttributeError (autoarray copying a bare float) — and with it the
+  Einstein radius. One general fix in the integrand: a length-1 radius array in, a float out.
+  No `convergence_func` body changed; no API change.
+- tests: NFWSph(kappa_s=0.2, scale_radius=5.0) against the analytic projected mass
+  4π κ_s r_s² h(R/r_s) (Bartelmann 1996) at R = 1 and R = 8 and against the #672 grid oracle;
+  gNFWSph(inner_slope=1) against the closed form; parametrised regression over NFWSph,
+  NFWTruncatedSph, SersicSph, PowerLawCoreSph, IsothermalCoreSph, dPIEMassSph against the grid
+  oracle (agreement ~1e-6). Full suite 1399 passed / 7 skipped; CI green (3.12, 3.13, nojax, docs).
+- traps: `aa.ArrayIrregular(0.5).array` is a bare Python float, not a 0-d ndarray — any
+  `ArrayIrregular` arithmetic on it raises in autoarray's `__copy__`. `coord_func_g` promotes a
+  bare scalar to complex64 (float32 output) — avoid scalar inputs there. The gNFW grid oracle
+  takes >2 min (per-point quad in `convergence_2d_from`); test it analytically instead.
+- notes: Heart board unreachable from the web container; readiness read from a read-only
+  PyAutoHeart clone (STALE, environment reasons only, no RED/YELLOW); freeze clear at merge.
+  Bug Agent: severity high, runtime-error, fix locus library source. PyAutoGalaxy claim
+  coordinated with lenstwin-p0-twins-core (its #672 leg already merged). Consequence: judge,
+  human /prm.
+
+## Original prompt
+
 # `mass_angular_within_circle_from` raises on NFW (and ~30 other profiles): the radial integrand feeds a 0-d radius to `convergence_func`
 
 Type: bug

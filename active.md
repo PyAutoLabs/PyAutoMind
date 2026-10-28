@@ -70,30 +70,3 @@
     PyAutoLens#804 NOT merged: unittest-nojax red with the 7 pre-existing point/test_dataset.py
     failures (pytest 9 nested approx; unpinned pytest; main's last run predates pytest 9.2);
     standing-down comment posted; fix queued as its own task. Re-run /prm once #804 is green.
-
-## mass-integral-scalar-radius
-- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/673
-- issued: 2026-10-28
-- session: Claude Code remote (web) session_016nhQ8MxQFE5Bk2jQsfWLAP
-- location: remote session clone /home/user/pyautogalaxy on feature/mass-integral-scalar-radius (from origin/main b072e4d); no task worktree
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/674
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/674
-- repos:
-  - PyAutoGalaxy: feature/mass-integral-scalar-radius
-- prompt: active/mass_integral_scalar_radius_nfw_typeerror.md
-- summary: |
-    Bug filed and issued 2026-10-28 via /start_dev (Bug Agent: severity=high, runtime-error,
-    fix locus library source, workflow library; Heart GREY/unreachable at the door).
-    `mass_integral` fed a 0-d radius to `convergence_func`; ~30 `ag.mp` classes failed through
-    `mass_angular_within_circle_from` (NFW TypeError, gNFW IndexError, tNFW/Sersic/cored/dPIE
-    AttributeError). One general fix in `mass_integral` (length-1 radius array, float coercion) plus
-    regression tests against the NFW closed form and the #672 grid oracle. Consequence: judge
-    (human /prm). PyAutoGalaxy claim coordinated with lenstwin-p0-twins-core, whose PyAutoGalaxy
-    leg (#672) is merged.
-    2026-10-28: fix + tests committed f539aca and pushed to PyAutoGalaxy feature/mass-integral-scalar-radius
-    (full suite 1399 passed / 7 skipped, pytest 9.2 -n auto).
-    /ship_library 2026-10-28: PyAutoGalaxy#674 opened (pending-release; Heart STALE from the
-    PyAutoHeart checkout, environment reasons only, no RED/YELLOW; vitals board unreachable here).
-    API Changes: none, internal — workspace impact option (iii); smoke test not runnable in this
-    container. Consequence: judge → stop at PR-open; human /prm merges and closes out.
