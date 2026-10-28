@@ -54,7 +54,7 @@ Epic slug `lenstwin`. Library first in every phase. One issue per repo per phase
 - `EinsteinRadiusAperture` (tracer-level θ_E via `LensCalc`), `transform.ReplaceTotalMassWithStellarPlusDark(galaxy, light, budget, dark_cls, fixed, keep_shear=True)`, its record, `al.twins.compare` (convergence and deflection differences, M(<R) profiles, critical curves, Δχ²_image) and `compare_to_data` (Δχ²_data), a plotter.
 - Witness: the phase-3 witness in the header. Size: large. Compute: none.
 
-### Phase 4 — First identifiability experiment, local then RAL (a `Science/active` project) — depends on 3; compute go per batch
+### Phase 4 — First identifiability experiment, local then RAL (a `Science/active` project) — depends on 3; compute go per batch; prompt draft/research/autolens/lenstwin_p4_identifiability.md (filed 2026-10-28, blocked on release + Science access)
 - `experiments/stellar_dark_identifiability/`: config, `simulate.py`, `fit.py` (same profile family: `lmp_linear` MGE at fixed solved intensities with one free M/L, `NFWSph` free κ_s and r_s tied to the light centre, shear free, MGE source), `recover.py` (truth-vs-posterior table per seed), then the `gNFWSph` free-slope configuration; `PYAUTO_TEST_MODE=1` smoke locally; one RAL CPU array on `--partition=ral` with an explicit human go; Cortex `run`/`done`; the human logs the result and lesson.
 - Witness: the phase-4 witness in the header, plus the posterior width on `inner_slope` reported for the gNFW run. Size: large. Compute: moderate (one array).
 
@@ -106,6 +106,7 @@ R1 **RULED 2026-10-28: accepted** — `autolens/twins/` exported as `al.twins`; 
 - 2026-10-28 — phase 3 COMPLETE: PyAutoLens#806 merged on the human's `/prm` (merge b29ffcc; CI green on 9541c87 on every leg; freeze clear). #805 closed as completed; record `complete/2026/10/lenstwin-p3-stellar-dark.md` with `pending-release: PyAutoLens@…/pull/806`. gNFW convergence speed-up filed as PyAutoGalaxy#677 (task `gnfw-convergence-fast`). Library phases 0, 2, 3 are now all merged and pending release; phase 4 needs a release carrying them (human `/review_release`) and a compute go.
 - 2026-10-28 — follow-up: gNFW convergence speed-up shipped as PyAutoGalaxy#678 (`pending-release`, for #677): tabulated line-of-sight integral + log–log spline, shared stable integrand; 100k points 12.6 s → 0.02 s, gNFW aperture mass 29.6 s → 0.04 s. Waits on human `/prm`. Removes the coarse-settings trap for gNFW twins in phases 2–4.
 - 2026-10-28 — gNFW speed-up COMPLETE: PyAutoGalaxy#678 merged on the human's `/prm` (merge d52d5fa; CI green on acfc61a); #677 closed; record `complete/2026/10/gnfw-convergence-fast.md` (pending-release). gNFW twins no longer need coarse aperture settings.
+- 2026-10-28 — phase 4 prompt filed: `draft/research/autolens/lenstwin_p4_identifiability.md` (research, human-required). Blocked on: a release carrying phases 0/2/3 + gNFW speed-up (latest PyAutoLens release 2026.10.26.1 predates them; human `/review_release`), the human naming the `Science/active` project, first fit and fixed r_s (kpc), a session with the Science checkout (not reachable from remote sessions), and a compute go for the RAL array. Not issued.
 
 ## Original request (2026-10-28; condensed from the brief, section numbering kept — the full text is in the filing session)
 
