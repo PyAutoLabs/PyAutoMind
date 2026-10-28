@@ -798,3 +798,4 @@ by that release; clearing the key is /review_release's act, not recorded here.
 Galaxy#657 merged 2026-10-23 (docstring only); pending-release PyAutoGalaxy until its next release.
 
 2026-10-28 — phase-3a subtask `cluster-curves-engine-dispatch` issued as PyAutoLens#807 (cluster plots honour the configured critical-curve engine); in library-dev.
+2026-10-28 — `cluster-curves-engine-dispatch` shipped as PyAutoLens#808 (pending-release); awaiting human /prm. Limit for the remaining phase-3 scope: `zero_contour` seeds only from LensCalc's ±3" coarse scan, so cluster-scale curves outside it are not drawn.

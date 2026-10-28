@@ -43,7 +43,9 @@
 - issued: 2026-10-28
 - session: Claude Code remote (web) session_016nhQ8NtZ6QtuqxKKAnhhdg
 - location: remote session clone /home/user/pyautolens on feature/cluster-curves-engine-dispatch (from origin/main b29ffcc); no task worktree
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/808
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/808
 - epic: cluster-strong-lensing (phase 3a subtask; ledger draft/feature/autolens/source_cluster_arc.md)
 - prompt: active/cluster_curves_engine_dispatch.md
 - repos:
@@ -53,3 +55,7 @@
     plot_critical_curves / plot_caustics honour general.critical_curves_method via PyAutoGalaxy's
     _critical_curves_method() (marching_squares default; zero_contour via LensCalc *_via_zero_contour_from).
     Consequence: judge (human /prm).
+    2026-10-28: shipped to PyAutoLens#808 (pending-release; head a0666e7; full suite 979 passed /
+    1 skipped / 1 xfailed). Known limit documented: zero_contour seeds from a ±3" scan, so
+    cluster-scale curves outside it are not drawn (remaining phase-3 scope). Workspace smoke not run
+    (autolens_workspace not in session). Stops at PR-open → human /prm.
