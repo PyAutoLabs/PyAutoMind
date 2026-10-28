@@ -12,7 +12,7 @@
 | [Epics](#epics) | 18 |
 | [In flight](#in-flight) | 3 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 279 |
+| [Backlog](#backlog) | 280 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -296,12 +296,20 @@ Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_
 </details>
 
 <details>
-<summary><b>LensTwin — observation-anchored digital twins of fitted strong lenses: <code>al.twins</code> in PyAutoLens, mass-normalisation primitives in PyAutoGalaxy, the <code>Science/twins</code> Cortex project, and the first stellar-plus-dark-matter identifiability experiment (ERC dark-matter cores vs cusps)</b> — 2 queued prompt(s), in order</summary>
+<summary><b>LensTwin — observation-anchored digital twins of fitted strong lenses: <code>al.twins</code> in PyAutoLens, mass-normalisation primitives in PyAutoGalaxy, used from ordinary <code>Science/active</code> projects, and the first stellar-plus-dark-matter identifiability experiment (ERC dark-matter cores vs cusps)</b> — 3 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>LensTwin — observation-anchored digital twins of fitted strong lenses: <code>al.twins</code> in PyAutoLens, mass-normalisation primitives in PyAutoGalaxy, the <code>Science/twins</code> Cortex project, and the first stellar-plus-dark-matter identifiability experiment (ERC dark-matter cores vs cusps)</b> — ledger: `draft/feature/autolens/lenstwin_epic.md` — filed 2026-10-28 from the LensTwin brief; R1–R2 RULED 2026-10-28 (al.twins; observed noise map by default). PHASE 0 COMPLETE…</summary>
+<details><summary>📋 <b>LensTwin — observation-anchored digital twins of fitted strong lenses: <code>al.twins</code> in PyAutoLens, mass-normalisation primitives in PyAutoGalaxy, used from ordinary <code>Science/active</code> projects, and the first stellar-plus-dark-matter identifiability experiment (ERC dark-matter cores vs cusps)</b> — ledger: `draft/feature/autolens/lenstwin_epic.md` — filed 2026-10-28 from the LensTwin brief; R1–R2 RULED 2026-10-28 (al.twins; observed noise map by default). PHASE 0 COMPLETE…</summary>
 
 ```
-Continue the 'LensTwin — observation-anchored digital twins of fitted strong lenses: `al.twins` in PyAutoLens, mass-normalisation primitives in PyAutoGalaxy, the `Science/twins` Cortex project, and the first stellar-plus-dark-matter identifiability experiment (ERC dark-matter cores vs cusps)' epic. Its canonical state lives in draft/feature/autolens/lenstwin_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: report `draft/feature/autolens/lenstwin_epic_report.md`; surveys `lenstwin_epic_surveys/`; science half is a PyAutoCortex row (`twins`) born in phase 1, never a Mind repo; workspace and assistant phases wait for the validated workflow (phase 4).
+Continue the 'LensTwin — observation-anchored digital twins of fitted strong lenses: `al.twins` in PyAutoLens, mass-normalisation primitives in PyAutoGalaxy, used from ordinary `Science/active` projects, and the first stellar-plus-dark-matter identifiability experiment (ERC dark-matter cores vs cusps)' epic. Its canonical state lives in draft/feature/autolens/lenstwin_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: report `draft/feature/autolens/lenstwin_epic_report.md`; surveys `lenstwin_epic_surveys/`; science use lives in ordinary `Science/active` projects (no `twins` Cortex row or folder; ruled 2026-10-28); workspace and assistant phases wait for the validated workflow (phase 4).
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autogalaxy/lenstwin_p2_mass_budget.md">LensTwin phase 2: mass-normalisation mathematics — <code>MassBudget</code>, <code>CircularAperture</code> and the M/L…</a> — autogalaxy · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autogalaxy/lenstwin_p2_mass_budget.md
 ```
 
 </details>
