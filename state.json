@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-28T13:27:09Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
+  "updated": "2026-10-28T13:37:59Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "LensTwin phase 0: `autolens/twins/` core (reference model, baseline twin, seeded simulation, provenance)\u2026 \u2014 library-shipped, awaiting-merge (0A merged 2026-10-28; 0B red on a pre-existing pytest-9 failure)",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/672",
-      "prompt": "Use the start-dev skill. active/lenstwin_p0_twins_core.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -117,14 +111,20 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#672 \u2014 LensTwin phase 0: `autolens/twins/` core (reference model, baseline twin, seeded simulation, provenance)\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/672",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#667 \u2014 config-leaf-comments",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/667",
       "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#667 \u2014 config-leaf-comments",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/667",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#656 \u2014 Outcome and authority",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#672 \u2014 lenstwin-p0-twins-core",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/672",
       "prompt": null
     }
   ]
