@@ -43,7 +43,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/803
 - issued: 2026-10-28
 - session: Claude Code remote (web) session_016nhQ8MoEbXHfUW3wiH58VY
-- location: github-api-only (session clones /home/user/pyautogalaxy and /home/user/pyautolens at origin/main; no task worktree)
+- location: remote session clones /home/user/pyautogalaxy and /home/user/pyautolens on feature/lenstwin-p0-twins-core (from origin/main a108092 / a8eb094); no task worktree
 - status: library-dev
 - epic: lenstwin (phase 0; ledger draft/feature/autolens/lenstwin_epic.md)
 - prompt: active/lenstwin_p0_twins_core.md
