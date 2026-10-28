@@ -61,9 +61,10 @@ exposes to the exporter. No lensing science changes are in scope.
   declared grid, robust and lazy aggregator reads, incremental exports,
   chunk/merge of exports, packaging and distribution, identity and provenance,
   diff and parity.
-- **Phase 0 here is identical to hpc-campaign phase 0 issue #A**
-  (`hpc-campaign/0-integrity`). Whichever epic issues it first, the other
-  records it done and does not re-issue it.
+- **Phase 0 is owned here and shared with hpc-campaign** (ruling F1,
+  2026-10-28): one PyAutoFit issue, two PRs (0a artefact integrity, 0b honest
+  reads). hpc-campaign records its phase 0 #A as issued here and does not
+  re-issue it. The `fit()` failure record moved to hpc-campaign phase 1.
 - Each epic may consume the other's artefacts. When hpc-campaign's
   `status.json` exists, the phase 1 index reads it as its status source. When
   it does not, the index classifies from disk.
@@ -83,41 +84,57 @@ ships on its own behind the ordinary `start_dev` → `ship_library` /
 
 ### Phase 0 — Integrity and honesty primitives (PyAutoFit) — no dependencies
 
-Same scope as hpc-campaign phase 0 issue #A (see Boundary).
+Shared-with: hpc-campaign
 
-- **Atomic result zip.** `zip_directory` (`@PyAutoFit/autofit/tools/util.py`
-  :76-84) writes `<path>.zip.tmp`, then `os.replace`. PNG and FITS members are
-  `ZIP_STORED` (they are incompressible and about 95% of a result's bytes);
+One PyAutoFit issue, two PRs in sequence (review §D.1, ruling F1). The `fit()`
+failure record is not part of this phase: moved to hpc-campaign phase 1.
+Line references below are from 2026-10-07; the search-extensibility A-series
+(`FitContext`/`run(ctx)`, `Checkpointer` + `internal_state.py`, `open_atomic`,
+archive-before-`.completed`, paths capability flags; released 2026.10.26.1)
+moved them — hook those, not the old lines.
+
+**PR 0a — artefact integrity**
+
+- **Atomic result zip.** `zip_directory` (`@PyAutoFit/autofit/tools/util.py`)
+  writes `<path>.zip.tmp`, then `os.replace`. `.png`, `.fits` and `.hdf5`
+  members are `ZIP_STORED` (incompressible, about 95% of a result's bytes);
   text stays DEFLATED.
+- **`restore()` is non-destructive**
+  (`@PyAutoFit/autofit/non_linear/paths/abstract.py`): extract to a temp dir and
+  swap; never delete the zip unless the caller owns the result (`remove_files`
+  and this search's identifier). A `BadZipFile` is quarantined as
+  `<hash>.zip.corrupt_<utc>`, not left to fail every rerun. A read-only
+  `open_result()` reads without restoring.
 - **`is_complete` for a zipped result** checks `.completed` inside the zip
-  plus `zipfile.testzip()` (`@PyAutoFit/autofit/non_linear/paths/directory.py`
-  :202-207).
-- **`restore()` never deletes the zip before extraction has succeeded**
-  (`@PyAutoFit/autofit/non_linear/paths/abstract.py`:484-506). A `BadZipFile`
-  is quarantined (renamed `<hash>.zip.corrupt_<utc>`), not left to fail every
-  rerun.
-- **Checkpoint validity probe before resume**
-  (`@PyAutoFit/autofit/non_linear/search/nest/nautilus/search.py`:315-318,
-  dynesty equivalent). Open with h5py and catch `OSError`, `ValueError`,
+  plus `zipfile.testzip()`, cached (`@PyAutoFit/autofit/non_linear/paths/directory.py`).
+- **Checkpoint validity probe before resume** in `Checkpointer.load`, for
+  Nautilus and dynesty. Open with h5py and catch `OSError`, `ValueError`,
   `RuntimeError` and `KeyError`. On failure, or on a sampler exception
   (`LinAlgError`), move `search_internal/` aside to
   `search_internal.failed_<utc>/` and start fresh with a logged warning.
+- **Timer moves to `files/`** behind the `has_timer` paths capability.
+- Tests: a killed-mid-zip fixture resumes; two processes restore one zip
+  concurrently; truncated-HDF5 and poisoned-checkpoint fixtures start fresh
+  with the old state moved aside.
+
+**PR 0b — honest reads**
+
 - **`Aggregator.from_directory(..., on_error="skip"|"raise")`**
-  (`@PyAutoFit/autofit/aggregator/aggregator.py`:280-285). Bad results are
-  collected in `agg.errors` (path and exception) instead of one `BadZipFile`
-  aborting the walk. An **empty** aggregator logs a loud warning naming the
-  searched path and filters.
+  (`@PyAutoFit/autofit/aggregator/aggregator.py`). Bad results are collected in
+  `agg.errors` (path and exception) instead of one `BadZipFile` aborting the
+  walk. An **empty** aggregator logs a loud warning naming the searched path
+  and filters. Reporting moves from `print` to `logging`.
 - **AggregateCSV strict by default**
   (`@PyAutoFit/autofit/aggregator/summary/aggregate_csv/__init__.py`).
-  `strict=True` already exists but is opt-in (`:19`). Make it the default, so
-  an unknown column path raises and never writes `None`. The header becomes
-  the union of all rows (today it is the first row, `:113-123`). `save()`
+  `strict=True` becomes the default, so an unknown column path raises and
+  never writes `None`. The header becomes the union of all rows (today the
+  first row). Atomic save. Labels join by key, not row index. `save()`
   reports blank columns.
 - **Regression tests for `row.py`** sigma-1, sigma-3 and max_lh using an
   asymmetric latent PDF fixture. The bugs were fixed in PyAutoFit#1598; this
   adds the non-vacuous tests (report P11).
 - Fix the inverted `post_fit_output` docstring
-  (`@PyAutoFit/autofit/non_linear/search/abstract_search.py`:1128).
+  (`@PyAutoFit/autofit/non_linear/search/abstract_search.py`).
 
 Retires: report P1, P2, P11 (residual), P12 (partly), P13 (bad zip abort).
 Gaps (report §4): 6, 7 (zip), 8, 17.
@@ -125,14 +142,22 @@ Done: a killed-mid-zip fixture resumes cleanly; a truncated-HDF5 and a
 poisoned-checkpoint fixture both start fresh with the old state moved aside;
 a tree with one corrupt zip aggregates with `agg.errors` of length 1; an
 unknown CSV column raises; `autolens_workspace_test` smoke green.
-Depends on: nothing.
+Depends on: nothing. hpc-campaign phase 1 merges after PR 0a (both touch
+`abstract_search.py`).
 
 ### Phase 1 — Results index, status classes, identity and lazy reads (PyAutoFit) — depends on 0
 
-- **Incremental index** `.autofit_index.sqlite` (or `.jsonl`, see open
-  questions) per output root. The fit updates it on completion, and
-  `python -m autofit.results index <root>` builds it for legacy trees, keyed
-  on (zip path, size, mtime) so only new or changed results are opened.
+- **Incremental index** `.autofit_index/` per output root (ruling F2):
+  per-result JSON records are the truth (rsync-friendly); a local SQLite
+  cache is built by `python -m autofit.results index <root>` and is always
+  rebuildable, never truth on NFS. The CLI is the writer; the fit writes only
+  `status.json` and `dataset_identity.json`. Keyed on (zip path, size, mtime)
+  so only new or changed results are opened.
+- **State vocabulary imported, never redefined**: state classes come from
+  `autofit/non_linear/status/states.py` (hpc-campaign phase 1). If that lags,
+  this phase defines the enum and hpc-campaign adopts it; one owner either way.
+- **Reads `status.json` when present** (hpc-campaign phase 1) as the status
+  source; classifies from disk when absent.
 - **One record per result**: dataset name and path, `unique_tag`, search name,
   identifier hash, state class, `completed_at`, products present (samples,
   latent, `image/`, `files/*`), library versions, and a schema stamp. State
@@ -140,8 +165,10 @@ Depends on: nothing.
   `corrupt_zip`, `failed`, `superseded`, `never_started` (the last needs the
   phase 2 grid).
 - **`dataset_identity.json`** written at fit start: user-supplied `object_id`
-  (and optional external ids), input file paths, SHA256 of each input, and
-  cutout centre where the dataset exposes one. Duplicates and wrong-input
+  (and optional external ids), input file paths, SHA256 of each input (on by
+  default with a config off switch, ruling F10), and cutout centre where the
+  dataset exposes one. Lives in `autofit/non_linear/status/identity.py`, in
+  the same `FitContext` hook family as the status writer. Duplicates and wrong-input
   fits become detectable by join (report P5).
 - **Sibling-hash policy**: `agg.latest_per(key=("unique_tag", "name"),
   by="completed_at")`, replacing the two mtime-based "latest zip" rules in
@@ -172,6 +199,9 @@ Depends on: phase 0.
 
 - **Declare the expected library**: datasets × searches (and per-product
   requirements) in `library.yaml` or by API (`af.ResultsLibrary(expected=...)`).
+  `library.yaml: from_campaign: <campaign.yaml>` derives the grid from the
+  hpc-campaign manifest, so the campaign file is the single declaration of
+  what is expected; this epic never keeps a second manifest.
 - **Completeness report**: expected / done / missing / incomplete, with
   **per-product** completeness. A zip that exists is not complete if
   `image/`, the latent summary or a named product such as `model.fits` is
@@ -242,7 +272,7 @@ change with the other two byte-identical, `verify` catches an injected empty
 member; the parity tool on two reruns of a fixture reports scatter, not FAIL.
 Depends on: phase 3.
 
-### Phase 5 — Organism integration and the DR1 v1.1 pilot (autolens_assistant, pipeline, Cortex, hpc/sync) — depends on 2, 3, 4
+### Phase 5 — Organism integration and the DR1 census witness (autolens_assistant, pipeline, Cortex, hpc/sync) — depends on 2, 3, 4
 
 - **autolens_assistant**: skill and wiki page "build and ship a results
   library" (declare → index → completeness → export → package → verify →
@@ -253,14 +283,18 @@ Depends on: phase 3.
 - **hpc/sync**: pull the index and `inspect/` only; never the whole `output/`.
 - **PyAutoCortex**: the ledger records the library index hash and counts for
   each release.
-- **Witness: DR1 v1.1** — the A+B top1000 refit merged in, dataset and
-  segmentation inside the parts, duplicates and wrong-cutout fits caught by
-  the identity join before release.
+- **Witness: read-only census of the DR1 v1.0 standardised release (v5 tree)**
+  on the 500-lens collaborator sample (ruling F8: 500 datasets, DR1 is fine):
+  index, state classes and completeness against the manifest, reproducing the
+  known excluded tiles, plus `package verify` on the 500-lens sample package.
+  The DR1 release itself keeps its current tooling. ("DR1 v1.1" is retired; it
+  existed only in this ledger.)
 
 Retires: report P20, P22, P23 (CRLF), P25, P26, P32.
-Done: DR1 v1.1 built from the library API with a completeness report of zero
-unexplained gaps, a verified package, and the Cortex ledger line carrying
-the index hash.
+Done: the 500-lens DR1 census reports zero unexplained gaps (every exclusion
+reproduced with a reason), `package verify` passes on the 500-lens sample, and
+the Cortex ledger line carries the index hash. Pipeline legs wait until DR1
+v1.0 has shipped.
 Depends on: phases 2, 3 and 4.
 
 ## Non-library lessons
@@ -276,30 +310,25 @@ backoff; record state durably before a hand-off claims it; never run
 producers silently against an empty tree; commit fixes before release; a
 subagent never submits on a relayed "continue".
 
-## Open questions for the human
+## Rulings (human, 2026-10-28)
 
-1. **SQLite or JSONL for the index?** SQLite gives real queries but is unsafe
-   for concurrent writers on NFS. JSONL with one writer per root is safe and
-   rsync-friendly. A possible split: per-result JSON written by the fit, plus
-   a SQLite cache built by the CLI.
-2. **Who writes the index: the fit, or only the CLI?** Fit-side writes keep it
-   live but add NFS writes at 15k concurrency (hpc-campaign risk 2).
-   CLI-only is simpler and fits "post-run".
-3. **Phase 0 home.** Issue it under hpc-campaign (its phase 0 #A) or here?
-   The scope is identical; only one issue should exist.
-4. **Is DR1 v1.1 the pilot?** If v1.1 must ship before phases 2-4 land, it
-   goes through the ported scripts and the pilot moves to the next release.
-5. **PNG rendering for libraries.** `image/` is about 95% of every zip and the
-   catalogue copies it again (about 100 GB for 14,905 lenses). Should library
-   runs keep FITS and render PNGs on demand at package time? This changes
-   what a finished fit contains, so it needs a ruling before phase 4.
-6. **`dataset_identity.json` scope.** Is a user-supplied `object_id` enough,
-   or should PyAutoFit hash every input file at fit start (cost on NFS)?
+Replaces the open questions. Review: `Workspace/Science/scratch/pyautolens_ii_campaign_results_scoping_2026-10-28/REVIEW.md` §F.
+Human's words, verbatim: "F1 your recommendations, F2 ok, F3 yes, 4. yes do the 50 task thing, F5 ok, F6 ok, F7 ok, F8 ok as long as its 500 datasets i dont mind us using dr1 but whatever seems easiest, F9 ok F10 ok F11 ok F12 should be Claude and codex. F4a yes, F4b yes"
+
+- **F1 (Phase 0 home):** owned here, PRs 0a/0b; failure record → hpc-campaign phase 1.
+- **F2 (index store and writer):** per-result JSON sidecars as truth + local SQLite cache built by the CLI; the fit writes only `status.json` (+ identity).
+- **F7 (PNG render-on-demand):** deferred until after the paper; keep PNGs, STORED.
+- **F8 (pilot witness):** DR1 v1.1 retired; read-only census of DR1 v1.0 (v5 tree) on the 500-lens sample + `package verify`; DR1 release keeps its tooling.
+- **F10 (`dataset_identity.json` scope):** `object_id` + sha256 of every input at fit start, default on, config off switch.
+- **F11:** two concurrent PyAutoFit worktrees allowed, each plan stating review §D.4 file ownership.
 
 ## How to start
 
-Issue phase 0 via `/start_dev` as a **single PyAutoFit issue**, after
-checking whether hpc-campaign has already issued its phase 0 #A (if so,
-record it done here and start at phase 1). Issue one phase at a time, never
+Issue phase 0 via `/start_dev` as a **single PyAutoFit issue** with two PRs
+(0a then 0b); prompt `draft/feature/autofit/results_library_p0_integrity.md`. Issue one phase at a time, never
 the whole map. Library first in every phase. Workspace and organism repos
 follow only after the library PR merges.
+
+## Ledger
+
+- 2026-10-28 — STARTED, concurrent with hpc-campaign (human decision). Final scoping review `Workspace/Science/scratch/pyautolens_ii_campaign_results_scoping_2026-10-28/REVIEW.md` adopted; human ruled F1–F12 (see Rulings). Amended: Phase 0 owned here and split into PR 0a (artefact integrity) and PR 0b (honest reads), `Shared-with: hpc-campaign`, failure record moved to hpc-campaign phase 1; phase 1 imports `states.py`, reads `status.json`, index = JSON truth + SQLite cache (F2); phase 2 `library.yaml: from_campaign:`; phase 5 witness = 500-lens DR1 v1.0 census + `package verify` (F8). Next: phase 0 via `/start_dev`.

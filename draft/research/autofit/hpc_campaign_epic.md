@@ -16,7 +16,8 @@ Themes:
 Difficulty: large
 Autonomy: human-required
 Priority: high
-Status: draft
+Status: campaign map — phases route through /start_dev one at a time; this file is never issued itself
+Epic: hpc-campaign
 Filed: 2026-09-27
 
 Research report and phased epic plan: `hpc_campaign_epic_report.md` alongside this file (written 2026-09-27 by the Fable architect session; no code edited).
@@ -47,6 +48,62 @@ must enforce this rule, not merely document it:
   that requests no `gres/gpu`, unless the exemption's three conditions are checked and met
   at submit time. `site.yaml` should mark `gpu` as GPU-only so the planner never packs CPU
   tasks there.
+
+## Phases (amended 2026-10-28)
+
+Maps report §5 to the order set by the final scoping review
+(`Workspace/Science/scratch/pyautolens_ii_campaign_results_scoping_2026-10-28/REVIEW.md`
+§C–§D). Library first; one issue per repo per phase; run concurrently with
+results-library (human decision, 2026-10-28). PyAutoFit hooks are the
+search-extensibility A-series (`FitContext`/`run(ctx)`, `Checkpointer`,
+`open_atomic`), not the 09-27 line references.
+
+0. **Integrity primitives (report #A)** — issued as **results-library phase 0**
+   (one PyAutoFit issue, PRs 0a/0b; issue number recorded below when filed).
+   Not re-issued here. The `fit()` failure record moved to phase 1.
+1. **Status record** — PyAutoFit `autofit/non_linear/status/`: per-fit
+   `status.json` + `status.jsonl` (≤2 KB, tmp-then-rename, beside the zip),
+   `progress()` protocol, resource probe (cgroup `memory.peak` → `getrusage`;
+   NVML), SIGUSR1/SIGTERM → checkpoint flush, **failure record** on exception,
+   **`states.py`** (run states, failure classes, product names; imported by
+   results-library). PyAutoNerves `site.yaml` layer + `Config.push_site(name)`,
+   example `site/ral.yaml` with `unverified: true` markers (`gpu` marked
+   GPU-only). autofit_workspace docs. Merges after results-library PR 0a.
+2. **Campaign core** — PyAutoFit `autofit/campaign/`: `campaign.yaml`,
+   `Scheduler` protocol, `FakeScheduler`, `LocalScheduler`, `SlurmScheduler`
+   (batched sacct/squeue/sinfo, sbatch with `aftercorr`, `--mem-per-cpu`,
+   `--signal=B:USR1@600`), collector → `digest.json`/`digest.md` (≤2 KB),
+   triage, propose-only `resubmit --class`, disk forecast, **partition lint**
+   (refuses `gpu` in a CPU job's partition list unless the three timing-leg
+   conditions hold) and **retrospective mode from a sacct dump**.
+3. **Evidence + plan + pilot** (was report phase 4) — readers for
+   `profiling-summary@3`, `walltime-validation@1`, `inference-summary@2` by
+   path/URL with **evidence grades** (measured-current / provisional /
+   superseded / estimated / unsupported); `campaign plan` and `campaign pilot`.
+   Never designates `optimal`.
+4. **Carbon + report** (was report phase 5; parallel with 3) — Green-Algorithms
+   model, usage + allocation bases, ranges from site bounds, optional NESO
+   fetch; `campaign report`. Nerves carbon keys.
+5. **Organism integration** (was report phase 3) — fold pipeline `hpc/sync`
+   drift into the assistant template first, then template v2 + sync verbs +
+   skill; Cortex `sync-runs` under decision 62; Brain conductor + governance
+   hook; pipeline adoption only after DR1 v1.0 ships.
+6. **Generalisation** — other workspaces, PBS on demand. Low priority.
+
+## Rulings (human, 2026-10-28)
+
+Human's words, verbatim: "F1 your recommendations, F2 ok, F3 yes, 4. yes do the 50 task thing, F5 ok, F6 ok, F7 ok, F8 ok as long as its 500 datasets i dont mind us using dr1 but whatever seems easiest, F9 ok F10 ok F11 ok F12 should be Claude and codex. F4a yes, F4b yes"
+
+- **F3 (Cortex decision 62):** yes — `cortex sync-runs --digest` may flip `open→running` and call `done finished/failed` with counts; `result`/`lesson` stay human; two states kept.
+- **F4 (witness campaign):** yes to both — (a) one read-only `sacct --parsable2` dump of the DR1 campaign is authorised; (b) the 50-task sky-orientation re-render pilot under a read-only collector, from a private venv checkout, is authorised. No new modelling runs; never the shared venv; `ral` only.
+- **F5 (escalation):** propose-only (timeout → p95+25 %, OOM → peak×1.5); the human approves every resubmit.
+- **F6 (RAL site constants):** ranges until the human confirms CPU model, building/PUE and A100 form factor; CI central = South England regional, national and DESNZ as bounds.
+- **F12 (governance hook):** **Claude and Codex** harnesses (not Claude only); prose for other agents; AUTONOMY.md says so.
+- Shared: F1 (phase 0 owned by results-library), F9 (paper claim tiers per review §E.1/E.3), F11 (two concurrent PyAutoFit worktrees with §D.4 ownership).
+
+## Ledger
+
+- 2026-10-28 — STARTED, concurrent with results-library (human decision). Final scoping review adopted; human ruled F1–F12 (above). Phases amended (above): phase 0 issued as results-library phase 0; failure record + `states.py` + Nerves `site.yaml` in phase 1; partition lint + retrospective sacct mode in phase 2; evidence/plan ahead of organism integration. Next: phase 1 via `/start_dev`, merging after results-library PR 0a.
 
 ## Original request (verbatim)
 
