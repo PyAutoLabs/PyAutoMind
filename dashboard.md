@@ -956,7 +956,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/lenstwin_p3_stellar_dark_transform.md">LensTwin phase 3: first transformation <code>ReplaceTotalMassWithStellarPlusDark</code>, the Einstein-radius aperture, and twin diagnostics…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/805">issue #805</a> — issued 2026-10-28 — library-dev</summary>
+<details><summary>📋 <a href="active/lenstwin_p3_stellar_dark_transform.md">LensTwin phase 3: first transformation <code>ReplaceTotalMassWithStellarPlusDark</code>, the Einstein-radius aperture, and twin diagnostics…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/805">issue #805</a> — issued 2026-10-28 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/806">PyAutoLens#806</a> — ⏳ pending release: PyAutoLens</summary>
 
 ```
 Use the start-dev skill. active/lenstwin_p3_stellar_dark_transform.md
@@ -3118,6 +3118,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoLens**
 
+- [PyAutoLens#806](https://github.com/PyAutoLabs/PyAutoLens/pull/806) — `active/lenstwin_p3_stellar_dark_transform.md`
 - [PyAutoLens#802](https://github.com/PyAutoLabs/PyAutoLens/pull/802) — `complete/2026/10/config-leaf-comments.md`
 - [PyAutoLens#804](https://github.com/PyAutoLabs/PyAutoLens/pull/804) — `complete/2026/10/lenstwin-p0-twins-core.md`
 - [PyAutoLens#801](https://github.com/PyAutoLabs/PyAutoLens/pull/801) — `complete/2026/10/point-solver-guide.md`

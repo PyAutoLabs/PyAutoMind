@@ -43,7 +43,9 @@
 - issued: 2026-10-28
 - session: Claude Code remote (web) session_016nhQ8NtZ6QtuqxKKAnhhdg
 - location: remote session clone /home/user/pyautolens on feature/lenstwin-p3-stellar-dark (from origin/main 9a85d32); no task worktree
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/806
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/806
 - epic: lenstwin (phase 3; ledger draft/feature/autolens/lenstwin_epic.md)
 - prompt: active/lenstwin_p3_stellar_dark_transform.md
 - repos:
@@ -54,3 +56,7 @@
     `al.twins.compare` / `compare_to_data` + `aplt.subplot_twin_comparison`). R3/R4/R6 ruled.
     Feature Agent suggested splitting; kept one issue/PR per the epic's one-issue-per-repo-per-phase
     rule (0B was the same size). Consequence: judge (human /prm). Implementation on Opus workers.
+    2026-10-28: shipped to PyAutoLens#806 (pending-release; head 9541c87; full suite 973 passed /
+    1 skipped / 1 xfailed; twins 39 passed under -n 4; Heart STALE, environment reasons only). Also
+    fixed the order-dependent global-RNG test (first `import jax` draws from NumPy's global RNG).
+    No workspace impact (new API only). Stops at PR-open (Consequence: judge) → human /prm.
