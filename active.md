@@ -70,3 +70,5 @@
     PyAutoLens#804 NOT merged: unittest-nojax red with the 7 pre-existing point/test_dataset.py
     failures (pytest 9 nested approx; unpinned pytest; main's last run predates pytest 9.2);
     standing-down comment posted; fix queued as its own task. Re-run /prm once #804 is green.
+    2026-10-28 later: the fix exists as 2b063ca on unmerged branch ccr-b1080ef2-0tcwow (no PR);
+    cherry-picked onto the 0B branch as 1d430dc and pushed; CI re-running. Re-run /prm when green.
