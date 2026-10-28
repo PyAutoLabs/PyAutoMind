@@ -145,3 +145,25 @@
   - HowToFit: feature/compact-colab-setup
   - HowToGalaxy: feature/compact-colab-setup
   - HowToLens: feature/compact-colab-setup
+
+## results-library-p0-integrity
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1734
+- issued: 2026-10-28
+- epic: results-library (phase 0, shared with hpc-campaign)
+- session: Claude Code CLI (Opus 5.5) session_016nhQ8N4RdvbZz9cstLYtNF
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/results-library-p0-integrity
+- repos:
+  - PyAutoFit: feature/results-library-p0-integrity
+
+## hpc-campaign-p1-status-record
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1735
+- issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/206
+- issued: 2026-10-28
+- epic: hpc-campaign (phase 1; merges after results-library PR 0a)
+- session: Claude Code CLI (Opus 5.5) session_016nhQ8N4RdvbZz9cstLYtNF
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/hpc-campaign-p1-status-record
+- repos:
+  - PyAutoFit: feature/hpc-campaign-p1-status-record
+  - PyAutoNerves: feature/hpc-campaign-p1-status-record

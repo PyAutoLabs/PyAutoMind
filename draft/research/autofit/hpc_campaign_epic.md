@@ -104,6 +104,7 @@ Human's words, verbatim: "F1 your recommendations, F2 ok, F3 yes, 4. yes do the 
 ## Ledger
 
 - 2026-10-28 — STARTED, concurrent with results-library (human decision). Final scoping review adopted; human ruled F1–F12 (above). Phases amended (above): phase 0 issued as results-library phase 0; failure record + `states.py` + Nerves `site.yaml` in phase 1; partition lint + retrospective sacct mode in phase 2; evidence/plan ahead of organism integration. Next: phase 1 via `/start_dev`, merging after results-library PR 0a.
+- 2026-10-28 — phase 0 #A issued as results-library phase 0: PyAutoFit#1734. Phase 1 ISSUED: PyAutoFit#1735 + PyAutoNerves#206 (task `hpc-campaign-p1-status-record`, branch `feature/hpc-campaign-p1-status-record`); merges after PR 0a; autofit_workspace docs leg deferred (repo claimed by `compact-colab-setup`).
 
 ## Original request (verbatim)
 

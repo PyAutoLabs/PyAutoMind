@@ -332,3 +332,4 @@ follow only after the library PR merges.
 ## Ledger
 
 - 2026-10-28 — STARTED, concurrent with hpc-campaign (human decision). Final scoping review `Workspace/Science/scratch/pyautolens_ii_campaign_results_scoping_2026-10-28/REVIEW.md` adopted; human ruled F1–F12 (see Rulings). Amended: Phase 0 owned here and split into PR 0a (artefact integrity) and PR 0b (honest reads), `Shared-with: hpc-campaign`, failure record moved to hpc-campaign phase 1; phase 1 imports `states.py`, reads `status.json`, index = JSON truth + SQLite cache (F2); phase 2 `library.yaml: from_campaign:`; phase 5 witness = 500-lens DR1 v1.0 census + `package verify` (F8). Next: phase 0 via `/start_dev`.
+- 2026-10-28 — phase 0 ISSUED: PyAutoFit#1734 (task `results-library-p0-integrity`, branch `feature/results-library-p0-integrity`; PRs 0a then 0b). hpc-campaign phase 1 issued in parallel (PyAutoFit#1735, PyAutoNerves#206), merging after PR 0a.
