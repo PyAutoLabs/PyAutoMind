@@ -118,3 +118,17 @@ User: “I authorize you to continue despite RED”. Exact reasons retained:
 This authorizes development shipping only; no readiness promotion, merge, release or CI bypass. The initial Hands CI failure was the tenant firewall; fixed in a405d14, local full suite and firewall pass. Fresh CI remains subject to review before merge.
 
 Additional inventory cleanup: autogalaxy_assistant environment guide still taught the duplicated bootstrap. Its isolated branch claim was surveyed with no conflict; the documentation-only correction is included in the all-project rollout.
+
+## Partial merge — human /prm
+
+- PyAutoHands: MERGED — https://github.com/PyAutoLabs/PyAutoHands/pull/328
+- autofit_workspace: OPEN — https://github.com/PyAutoLabs/autofit_workspace/pull/178
+- autogalaxy_workspace: MERGED — https://github.com/PyAutoLabs/autogalaxy_workspace/pull/265
+- HowToFit: OPEN — https://github.com/PyAutoLabs/HowToFit/pull/77
+- HowToGalaxy: OPEN — https://github.com/PyAutoLabs/HowToGalaxy/pull/92
+- autolens_assistant: MERGED — https://github.com/PyAutoLabs/autolens_assistant/pull/167
+- HowToLens: OPEN — https://github.com/PyAutoLabs/HowToLens/pull/102
+- autolens_workspace: MERGED — https://github.com/PyAutoLabs/autolens_workspace/pull/604
+- autogalaxy_assistant: MERGED — https://github.com/PyAutoLabs/autogalaxy_assistant/pull/41
+
+Every run/job for each current head was checked. Five fully green PRs merged in dependency order. Four remain open because their `smoke / smoke` job was skipped by the shared workflow change filter for generated-notebook-only changes; skipped is not a passing test result. Their local smoke suites passed during development. No failed jobs. Issue and Mind task remain open; worktree and claims retained. No release.

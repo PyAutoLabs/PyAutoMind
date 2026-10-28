@@ -128,7 +128,7 @@
   - reason: PyAutoGalaxy: 9 commit(s) behind origin
   - reason: PyAutoLens: 7 commit(s) behind origin
   - reason: release validation stale: source moved since rehearsal (PyAutoGalaxy, PyAutoLens)
-- checkpoint: all nine PRs open; generator 584 tests and tenant firewall pass; all six workspace smoke suites pass; independent review CLEAN; human merge pending
+- checkpoint: /prm merged Hands328, Galaxy265, Lens604, LensAssistant167, GalaxyAssistant41; Fit178 and HowToFit77/HowToGalaxy92/HowToLens102 remain open with intentionally skipped CI smoke jobs; local smoke passed; issue and claims retained
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/327
 - issued: 2026-10-28
 - library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/328
