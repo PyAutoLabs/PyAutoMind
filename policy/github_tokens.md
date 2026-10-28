@@ -41,7 +41,7 @@ Commits made with it are authored as `pyautolabs-bot[bot]` /
 | `PYAUTO_UPDATE_WEBHOOK_URL` | PyAutoMind repo secret | Mind `morning_health`, `morning_status` | maintainer | webhook rotation |
 | `PYAUTO_RELEASE_WEBHOOK_URL` | PyAutoBrain, PyAutoHands repo secrets | Brain `nightly-release`; Hands `release` | maintainer | webhook rotation, update both repos |
 | `HEART_NTFY_URL` | PyAutoHeart repo secret | Heart `heart-health` | maintainer | new ntfy topic, update secret |
-| `SLACK_WEBHOOK_URL` | repo secret ×9: PyAutoArray, PyAutoCTI, PyAutoFit, PyAutoGalaxy, PyAutoLens, PyAutoNerves, autocti_workspace, autogalaxy_workspace, autolens_workspace | Heart reusable `lib-tests` / `smoke-tests` failure notify, via the caller's `secrets: inherit` | maintainer | webhook rotation; consolidate (Owed) |
+| `SLACK_WEBHOOK_URL` | org secret, visibility `all` (Slack `#builds`, channel `C03S98FEDK2`) | Heart reusable `lib-tests` / `smoke-tests` failure notify, via the caller's `secrets: inherit` | maintainer | webhook rotation (below) |
 | `github.token` | per run | own-repo work: boards, Heart `url-check` and own-repo `heart-health` steps, Pulse/Insight `lint`, viz `render` and profiling `profile` checkouts | GitHub | automatic |
 
 `NIGHTLY_RELEASES` / `NIGHTLY_LAST_WINDOW_END` are PyAutoBrain repo variables
@@ -91,8 +91,8 @@ it on the installation.
   `token_push_check`, or Brain `branch_sweep_all` in audit mode) → delete the
   old key in App settings.
 - **Webhook URLs** (`PYAUTO_*_WEBHOOK_URL`, `SLACK_WEBHOOK_URL`, `HEART_NTFY_URL`):
-  regenerate at the provider, update every repo in the inventory row, delete
-  the old hook.
+  regenerate at the provider, update the secret where the inventory row says
+  it lives (org or repo), delete the old hook.
 - **PyPI** (`PYPI`, `TEST_PYPI`): new project-scoped token on PyPI / TestPyPI,
   update the Hands secret, revoke the old one. Until trusted publishing lands.
 
@@ -111,17 +111,8 @@ secret. A new secret or permission updates this page in the same PR.
 
 - **Org settings (org owner):** restrict classic PATs; keep fine-grained PAT
   approval on.
-- **One org-level `SLACK_WEBHOOK_URL`:** `secrets: inherit` passes only the
-  caller's secrets, so callers without a repo copy post nothing on failure:
-  PyAutoReduce, HowToFit, HowToGalaxy, HowToLens, autofit_workspace,
-  autofit_workspace_test, autogalaxy_workspace_test, autolens_workspace_test,
-  autocti_workspace_test, euclid_strong_lens_modeling_pipeline. Add the org
-  secret (visibility `all`), then delete the nine repo copies.
 - **Phase 1b, PyPI trusted publishing:** retires `PYPI` / `TEST_PYPI`; blocked
   on the maintainer's PyPI login.
-- **autocti_visualization proof:** phase 3's `render` → PyAutoEyes dispatch is
-  unproven there because the render fails on a missing `autonerves`
-  (PyAutoLabs/autocti_visualization#7).
 
 History: the GitHub token and secret setup review epic
 (`github_token_and_secret_setup_full_review`), phases
