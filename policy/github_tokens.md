@@ -35,7 +35,7 @@ Commits made with it are authored as `pyautolabs-bot[bot]` /
 |---|---|---|---|---|
 | `APP_PRIVATE_KEY` | org secret, visibility `all` | every App mint (table below) | org owner | App key rotation (below) |
 | `APP_CLIENT_ID` | org variable, visibility `all` | every App mint | org owner | changes only if the App is recreated |
-| `PYPI`, `TEST_PYPI` | PyAutoHands repo secrets | Hands `release`, `publish_tombstone` (twine) | maintainer | regenerate on PyPI; retire at trusted publishing (Owed) |
+| `PYPI`, `TEST_PYPI` | PyAutoHands repo secrets | Hands `release`, `publish_tombstone` (twine) | maintainer | regenerate on PyPI; trusted publishing (commented OIDC steps in Hands `release.yml`) would retire them, not scheduled |
 | `CLAUDE_CODE_OAUTH_TOKEN` | PyAutoMind, PyAutoMemory repo secrets | Mind `arxiv_papers`, `arxiv_interests`, `morning_status`; Memory `queue_filing` | maintainer | `claude setup-token`, update both repos |
 | `PYAUTO_PAPERS_WEBHOOK_URL` | PyAutoMind repo secret | Mind `arxiv_papers` | maintainer | webhook rotation (below) |
 | `PYAUTO_UPDATE_WEBHOOK_URL` | PyAutoMind repo secret | Mind `morning_health`, `morning_status` | maintainer | webhook rotation |
@@ -109,11 +109,6 @@ secret, add it here in the same PR.
 
 Prefer an App permission (or a wider `repositories:` on one mint) over a new
 secret. A new secret or permission updates this page in the same PR.
-
-### Owed
-
-- **Phase 1b, PyPI trusted publishing:** retires `PYPI` / `TEST_PYPI`; blocked
-  on the maintainer's PyPI login.
 
 History: the GitHub token and secret setup review epic
 (`github_token_and_secret_setup_full_review`), phases
