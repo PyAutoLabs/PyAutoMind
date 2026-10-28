@@ -23,7 +23,7 @@
   it. `IsothermalCore` first call ~288 s (numba compile) — avoid in fixtures. The selector warns via
   `logging`, not `warnings` (use caplog). Test config lacks `critical_curves_method` (KeyError →
   marching_squares).
-- notes: Feature Agent's top pick, chosen by the human as the next task 2026-10-28. Consequence:
+- notes: CORRECTION — the cluster epic ledger had marked this prompt DEFERRED (entangled with zero_contour seed-coverage robustness, separated by the human 2026-10-23; label stale, should be 3c); it was issued and merged without reading the ledger. Default behaviour unchanged; revert-or-keep is the human's call (see ledger 2026-10-28 correction). Feature Agent's top pick, chosen by the human as the next task 2026-10-28. Consequence:
   judge — merged on the human's /prm (freeze clear). Opus worker implementation; review, PR wording
   in the main session. Heart STALE, environment reasons only.
 
