@@ -66,6 +66,12 @@
 - autonomy: --auto launched by human 2026-10-28; effective supervised → decide-and-flag, ends at PR-open; judge → human /prm
 
 ## compact-colab-setup
+- heart-red-override:
+  - authorization: "I authorize you to continue despite RED" (2026-10-28; development only, no merge/release)
+  - reason: PyAutoArray: 4 uncommitted source change(s)
+  - reason: PyAutoGalaxy: 9 commit(s) behind origin
+  - reason: PyAutoLens: 7 commit(s) behind origin
+  - reason: release validation stale: source moved since rehearsal (PyAutoGalaxy, PyAutoLens)
 - checkpoint: local generator + 15 scripts implemented; 581 tests pass; Heart RED blocks shipping; full consumer regeneration and assistant adaptation pending
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/327
 - issued: 2026-10-28
@@ -77,3 +83,7 @@
   - autolens_workspace: feature/compact-colab-setup
   - autogalaxy_workspace: feature/compact-colab-setup
   - autolens_assistant: feature/compact-colab-setup
+  - autofit_workspace: feature/compact-colab-setup
+  - HowToFit: feature/compact-colab-setup
+  - HowToGalaxy: feature/compact-colab-setup
+  - HowToLens: feature/compact-colab-setup
