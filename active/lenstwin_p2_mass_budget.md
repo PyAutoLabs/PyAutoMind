@@ -17,8 +17,9 @@ Unattended: never
 Epic: lenstwin
 Phase: 2
 Parent: draft/feature/autolens/lenstwin_epic.md
-Blocked-by: rulings R3 (reference aperture and mass convention) and R4 (first halo, fixed r_s) in the epic ledger — `/start_dev` only after both are ruled
 Filed: 2026-10-28
+Issued: 2026-10-28
+Issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/675
 
 Phase 2 of the `lenstwin` epic (ledger `draft/feature/autolens/lenstwin_epic.md`; report `lenstwin_epic_report.md` §2.3 "Mass normalisation", §3 "Phase 2"). Depends on phase 0A, merged as PyAutoGalaxy#672: `mass_angular_within_circle_via_grid_from` (`autogalaxy/operate/lens_calc.py:1945`) is the one aperture-mass definition every component shares, and `Basis.mass_basis_from(mass_to_light_ratio)` (`autogalaxy/profiles/basis.py:279`) turns the solved light basis into a mass basis. Library only; no transformation and no tracer-level aperture here (both are phase 3, PyAutoLens).
 
@@ -39,7 +40,7 @@ Placement (implementer chooses and says so in the PR): beside `mass_angular_with
 
 Circular-Gaussian closed form for Υ (1e-4); NFWSph κ_s solve hits target mass (1e-4) and is monotonic; gNFWSph with `inner_slope=1` agrees with NFWSph; 50/50 budget on an `Isothermal` reference inside its own θ_E reproduces M_ref = π θ_E² (convergence units) to 1e-4 with stellar + dark summing back; fractions not summing to 1 raise; two-galaxy budget raises `NotImplementedError`; no-bracket κ_s raises. NumPy only; keep the gNFW case analytic or small-grid (per-point `quad` in gNFW `convergence_2d_from` is slow — see complete/2026/10/mass-integral-scalar-radius.md traps).
 
-## Rulings this phase needs (epic ledger; recommendations in report §4)
+## Rulings (taken 2026-10-28, accepted as recommended)
 
 - **R3** aperture = circle of radius θ_E,parent (tracer-level, via `LensCalc`) centred on the replaced galaxy's mass centre; M_ref = replaced component(s)' projected mass inside it by grid integration; shear and other galaxies untouched. Phase 2 implements only the circular aperture and the budget; the θ_E aperture is phase 3.
 - **R4** first halo `NFWSph` centred on the light with a fixed physical r_s (c(M) as a later parameter).
