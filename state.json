@@ -4,12 +4,12 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-28T11:59:41Z",
+  "updated": "2026-10-28T12:09:34Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
       "severity": "yellow",
-      "text": "LensTwin phase 0: `autolens/twins/` core (reference model, baseline twin, seeded simulation, provenance)\u2026 \u2014 library-dev (0A library-shipped, awaiting-merge; 0B in progress)",
+      "text": "LensTwin phase 0: `autolens/twins/` core (reference model, baseline twin, seeded simulation, provenance)\u2026 \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/672",
       "prompt": "Use the start-dev skill. active/lenstwin_p0_twins_core.md"
     },
