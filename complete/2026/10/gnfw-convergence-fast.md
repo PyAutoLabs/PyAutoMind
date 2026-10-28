@@ -1,3 +1,32 @@
+## gnfw-convergence-fast
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/677
+- completed: 2026-10-28
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/678
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/678
+- epic: lenstwin (follow-up to phases 2–3; not a numbered phase)
+- summary: `gNFW.convergence_func` no longer calls `quad` once per radius in a Python loop (merge
+  d52d5fa). For 1D NumPy inputs with ≥ max(100, n_nodes) finite positive radii the line-of-sight
+  integral I(η) is tabulated on a log-spaced η grid (20 nodes/decade, 0.05-decade padding, quad at
+  epsrel 1e-10, epsabs 0) and interpolated by a cubic spline in (log η, log I); the closed-form
+  prefactor is unchanged. Table nodes and the per-radius path share a stable integrand
+  (`_convergence_integral_from`: y = sin t, breakpoints η, 10η, …), so results do not depend on
+  input size. 100k points 12.6 s → 0.02 s; default-settings CircularAperture gNFW mass 29.6 s →
+  0.04 s; single-radius calls 2.5× faster. New class constants on `AbstractgNFW`; no public API
+  change. Zero/negative/non-finite radii, 2D rows and non-NumPy xp keep the original path.
+- tests: test_gnfw.py 20 passed (tabulated vs stable reference ≤ 2e-6 for γ ∈ {0,…,2.5}, η
+  1e-5..1e3; per-radius vs tabulated; NaN/0/inf unchanged; elliptical grid). Full suite 1431 passed
+  / 7 skipped; no existing expected value moved. CI green on acfc61a (3.12, 3.13, nojax, docs).
+- traps: the old naive integrand (1 − √(1 − y²)) is wrong by up to 100% for η < 1e-6 with γ ≤ 1
+  (cancellation) — values at typical η (1e-3..10) shift ≤ 1.5e-7 toward the reference. `quad`'s
+  default epsabs 1.49e-8 stops after one pass at large η where I ~ 1e-7 (≈1e-5 relative error):
+  use epsabs=0. Grid tests comparing with point evaluation need over_sample_size=1.
+- notes: Requested by the human 2026-10-28 ("speed up gNFW quickly") after lenstwin phases 2–3 hit
+  the slow path. Consequence: judge — merged on the human's /prm (freeze clear). Opus worker
+  implementation; first version kept the naive integrand on the small-input path, sent back so
+  both paths agree. Heart STALE, environment reasons only.
+
+## Original prompt
+
 # Speed up gNFW convergence: tabulate the line-of-sight integral once per call and interpolate, instead of one `quad` per grid point
 
 Type: feature
