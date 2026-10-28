@@ -43,7 +43,9 @@
 - issued: 2026-10-28
 - session: Claude Code remote (web) session_016nhQ8NtZ6QtuqxKKAnhhdg
 - location: remote session clone /home/user/pyautogalaxy on feature/lenstwin-p2-mass-budget (from origin/main 9908c85); no task worktree
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/676
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/676
 - epic: lenstwin (phase 2; ledger draft/feature/autolens/lenstwin_epic.md)
 - prompt: active/lenstwin_p2_mass_budget.md
 - repos:
@@ -53,3 +55,7 @@
     (`MassBudget`, `CircularAperture`, M/L and κ_s solvers, convention docs page). Rulings R3/R4
     taken 2026-10-28. Consequence: judge (human /prm). Implementation on the execution tier (Opus),
     plan and judgment in the main session.
+    2026-10-28: shipped to PyAutoGalaxy#676 (pending-release; head abcb81b; suite 1417 passed /
+    7 skipped; 18 new tests; Sphinx warnings unchanged; Heart STALE, environment reasons only). New
+    module autogalaxy/operate/mass_budget.py; κ_s and Υ solved exactly (linear), no root finder.
+    No workspace impact (new API only). Stops at PR-open (Consequence: judge) → human /prm.
