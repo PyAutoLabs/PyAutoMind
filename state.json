@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-10-28T15:45:05Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
+  "updated": "2026-10-28T15:53:24Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "LensTwin phase 3: first transformation `ReplaceTotalMassWithStellarPlusDark`, the Einstein-radius aperture, and twin diagnostics\u2026 \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/806",
-      "prompt": "Use the start-dev skill. active/lenstwin_p3_stellar_dark_transform.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#656 \u2014 Outcome and authority",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#672 \u2014 lenstwin-p0-twins-core",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/672",
       "prompt": null
     }
   ]

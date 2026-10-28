@@ -38,29 +38,6 @@
 - pr: https://github.com/PyAutoLabs/autolens_profiling/pull/471 OPEN 2026-10-27 (PR A, dff89226; Heart GREEN; judge → human /prm)
 - batch0: chained on RAL 2026-10-27 (scratch/p2b_batch0_submit.log; CPU 0-13 + refs 0-1 on ral, A100 0-9%2) from branch head dff89226
 
-## lenstwin-p3-stellar-dark
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/805
-- issued: 2026-10-28
-- session: Claude Code remote (web) session_016nhQ8NtZ6QtuqxKKAnhhdg
-- location: remote session clone /home/user/pyautolens on feature/lenstwin-p3-stellar-dark (from origin/main 9a85d32); no task worktree
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/806
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/806
-- epic: lenstwin (phase 3; ledger draft/feature/autolens/lenstwin_epic.md)
-- prompt: active/lenstwin_p3_stellar_dark_transform.md
-- repos:
-  - PyAutoLens: feature/lenstwin-p3-stellar-dark
-- summary: |
-    Phase 3 of lenstwin issued 2026-10-28 via /start_dev → /create_issue: PyAutoLens#805
-    (3A Einstein-radius aperture + `transform.ReplaceTotalMassWithStellarPlusDark`; 3B
-    `al.twins.compare` / `compare_to_data` + `aplt.subplot_twin_comparison`). R3/R4/R6 ruled.
-    Feature Agent suggested splitting; kept one issue/PR per the epic's one-issue-per-repo-per-phase
-    rule (0B was the same size). Consequence: judge (human /prm). Implementation on Opus workers.
-    2026-10-28: shipped to PyAutoLens#806 (pending-release; head 9541c87; full suite 973 passed /
-    1 skipped / 1 xfailed; twins 39 passed under -n 4; Heart STALE, environment reasons only). Also
-    fixed the order-dependent global-RNG test (first `import jax` draws from NumPy's global RNG).
-    No workspace impact (new API only). Stops at PR-open (Consequence: judge) → human /prm.
-
 ## gnfw-convergence-fast
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/677
 - issued: 2026-10-28

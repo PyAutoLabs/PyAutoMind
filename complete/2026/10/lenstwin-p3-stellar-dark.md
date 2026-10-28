@@ -1,3 +1,41 @@
+## lenstwin-p3-stellar-dark
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/805
+- completed: 2026-10-28
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/806
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/806
+- epic: lenstwin (phase 3; ledger draft/feature/autolens/lenstwin_epic.md)
+- summary: Phase 3 of the lenstwin epic (merge b29ffcc). 3A: `al.twins.einstein_radius_aperture_from`
+  (tracer-level θ_E via `LensCalc`, returns an `ag.CircularAperture` centred on the replaced galaxy)
+  and `al.twins.transform.ReplaceTotalMassWithStellarPlusDark(galaxy, light, *, scale_radius_kpc,
+  f_dark=0.5, budget=None, dark_cls=None→NFWSph, keep_shear=True, aperture_settings=None, …,
+  **dark_fixed)` — removes the galaxy's total-mass profiles, re-expresses the MGE light basis as
+  `lmp.Gaussian` in place (light bit-identical, not double-counted), adds the dark halo on the light
+  centre, split solved by `ag.MassBudget`; r_s in kpc converted with the setup cosmology; shear
+  kept and excluded from M_ref; non-mutating. Record: requested, procedure (convention text, derived
+  numbers, θ_E parent/twin, r_s kpc/arcsec, cosmology, aperture geometry), changed, side_effects,
+  preserved = ["projected mass of <galaxy> inside theta_E,parent"]; flat truth via
+  `TransformationRecord.truth` and `twin.json["truth"]`. Galaxies addressed by model name
+  (`af.ModelInstance` keys), `galaxy_<i>` for list-built tracers, or reference role. 3B:
+  `al.twins.compare` → `TwinComparison` (convergence/deflection differences, M(<R), critical curves,
+  θ_E both, Δχ²_image), `al.twins.compare_to_data` (Δχ²_data via two FitImaging; parametric sources
+  only), `aplt.subplot_twin_comparison` (2×3, R6). Public API grew; nothing removed.
+- tests: test_stellar_dark.py (13) + test_compare.py (7); twins 39 passed under -n 4; full suite
+  973 passed / 1 skipped / 1 xfailed; CI green on 9541c87 (3.12, 3.13, nojax, docs).
+- traps: the first `import jax` in a process draws 13 numbers from NumPy's global RNG
+  (jax/_src/clusters/k8s_cluster.py, evaluated at import), reached lazily via autoarray
+  `AbstractNDArray.__getitem__`; the phase-0 global-RNG test now warms the route first. The 0.5 ±
+  1e-3 witness is measured on the same aperture/grid as the solve (holds by construction); the
+  independent check is `compare`'s M(<θ_E) parent = twin. Coarse aperture sub-sizes give ~1%
+  M_ref error from the SIE cusp; `compare` uses the defaults. gNFW integration was slow (one `quad`
+  per point) — follow-up PyAutoGalaxy#677. A misspelt `**dark_fixed` keyword surfaces as a
+  TypeError from the dark constructor. The PNG test sets `autoarray.plot.utils._FAST_PLOTS=False`.
+- notes: Consequence: judge — merged on the human's /prm in this session (freeze clear). R3/R4/R6
+  ruled 2026-10-28. Heart STALE for environment reasons only. Implementation by an Opus
+  execution-tier worker; plan, review, PR wording in the main session. Next: phase 4 needs a release
+  carrying phases 0, 2, 3 (human /review_release) and a compute go.
+
+## Original prompt
+
 # LensTwin phase 3: first transformation `ReplaceTotalMassWithStellarPlusDark`, the Einstein-radius aperture, and twin diagnostics with a library plotter (PyAutoLens)
 
 Type: feature
