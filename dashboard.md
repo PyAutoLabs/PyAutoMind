@@ -956,7 +956,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/lenstwin_p0_twins_core.md">LensTwin phase 0: <code>autolens/twins/</code> core (reference model, baseline twin, seeded simulation, provenance)…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/671">issue #671</a> — issued 2026-10-28 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/672">PyAutoGalaxy#672</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/804">PyAutoLens#804</a></summary>
+<details><summary>📋 <a href="active/lenstwin_p0_twins_core.md">LensTwin phase 0: <code>autolens/twins/</code> core (reference model, baseline twin, seeded simulation, provenance)…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/671">issue #671</a> — issued 2026-10-28 — library-shipped, awaiting-merge (0A merged 2026-10-28; 0B red on a pre-existing pytest-9 failure) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/672">PyAutoGalaxy#672</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/804">PyAutoLens#804</a> — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 Use the start-dev skill. active/lenstwin_p0_twins_core.md
@@ -3104,6 +3104,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#672](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/672) — `active/lenstwin_p0_twins_core.md`
 - [PyAutoGalaxy#667](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/667) — `complete/2026/10/config-leaf-comments.md`
 - [PyAutoGalaxy#656](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656) — `complete/2026/10/latent-profile-declarations.md`
 - [PyAutoGalaxy#668](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/668) — `complete/2026/10/linear-operated-sersic-priors.md`

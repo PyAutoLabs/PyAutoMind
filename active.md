@@ -44,9 +44,10 @@
 - issued: 2026-10-28
 - session: Claude Code remote (web) session_016nhQ8MoEbXHfUW3wiH58VY
 - location: remote session clones /home/user/pyautogalaxy and /home/user/pyautolens on feature/lenstwin-p0-twins-core (from origin/main a108092 / a8eb094); no task worktree
-- status: library-shipped, awaiting-merge
+- status: library-shipped, awaiting-merge (0A merged 2026-10-28; 0B red on a pre-existing pytest-9 failure)
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/672
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/804
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/672
 - epic: lenstwin (phase 0; ledger draft/feature/autolens/lenstwin_epic.md)
 - prompt: active/lenstwin_p0_twins_core.md
 - repos:
@@ -65,3 +66,7 @@
     Heart STALE, environment reasons only). 0B shipped to PyAutoLens#804 (pending-release; 946 passed,
     7 pre-existing point/test_dataset.py failures under pytest 9.2, identical on the clean branch).
     Both PRs stop at PR-open (Consequence: judge); merge order 0A then 0B via human /prm.
+    /prm 2026-10-28: PyAutoGalaxy#672 MERGED (b072e4d; Tests + Docs green on b81951a; not frozen).
+    PyAutoLens#804 NOT merged: unittest-nojax red with the 7 pre-existing point/test_dataset.py
+    failures (pytest 9 nested approx; unpinned pytest; main's last run predates pytest 9.2);
+    standing-down comment posted; fix queued as its own task. Re-run /prm once #804 is green.
