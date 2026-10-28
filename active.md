@@ -76,7 +76,9 @@
 - issued: 2026-10-28
 - session: Claude Code remote (web) session_016nhQ8MxQFE5Bk2jQsfWLAP
 - location: remote session clone /home/user/pyautogalaxy on feature/mass-integral-scalar-radius (from origin/main b072e4d); no task worktree
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/674
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/674
 - repos:
   - PyAutoGalaxy: feature/mass-integral-scalar-radius
 - prompt: active/mass_integral_scalar_radius_nfw_typeerror.md
@@ -90,5 +92,8 @@
     (human /prm). PyAutoGalaxy claim coordinated with lenstwin-p0-twins-core, whose PyAutoGalaxy
     leg (#672) is merged.
     2026-10-28: fix + tests committed f539aca and pushed to PyAutoGalaxy feature/mass-integral-scalar-radius
-    (full suite 1399 passed / 7 skipped, pytest 9.2 -n auto). No PR opened yet — next: /ship_library
-    (or open the PR by hand) then human /prm.
+    (full suite 1399 passed / 7 skipped, pytest 9.2 -n auto).
+    /ship_library 2026-10-28: PyAutoGalaxy#674 opened (pending-release; Heart STALE from the
+    PyAutoHeart checkout, environment reasons only, no RED/YELLOW; vitals board unreachable here).
+    API Changes: none, internal — workspace impact option (iii); smoke test not runnable in this
+    container. Consequence: judge → stop at PR-open; human /prm merges and closes out.
