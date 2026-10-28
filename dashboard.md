@@ -948,7 +948,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/cluster_curves_engine_dispatch.md">Cluster plots honor the configured critical-curve engine</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/807">issue #807</a> — issued 2026-10-28 — library-dev</summary>
+<details><summary>📋 <a href="active/cluster_curves_engine_dispatch.md">Cluster plots honor the configured critical-curve engine</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/807">issue #807</a> — issued 2026-10-28 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/808">PyAutoLens#808</a> — ⏳ pending release: PyAutoLens</summary>
 
 ```
 Use the start-dev skill. active/cluster_curves_engine_dispatch.md
@@ -3110,6 +3110,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoLens**
 
+- [PyAutoLens#808](https://github.com/PyAutoLabs/PyAutoLens/pull/808) — `active/cluster_curves_engine_dispatch.md`
 - [PyAutoLens#802](https://github.com/PyAutoLabs/PyAutoLens/pull/802) — `complete/2026/10/config-leaf-comments.md`
 - [PyAutoLens#804](https://github.com/PyAutoLabs/PyAutoLens/pull/804) — `complete/2026/10/lenstwin-p0-twins-core.md`
 - [PyAutoLens#806](https://github.com/PyAutoLabs/PyAutoLens/pull/806) — `complete/2026/10/lenstwin-p3-stellar-dark.md`

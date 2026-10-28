@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-28T16:51:34Z",
+  "updated": "2026-10-28T17:06:30Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Cluster plots honor the configured critical-curve engine \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/808",
+      "prompt": "Use the start-dev skill. active/cluster_curves_engine_dispatch.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#678 \u2014 gnfw-convergence-fast",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/678",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#656 \u2014 Outcome and authority",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656",
       "prompt": null
     }
   ]
