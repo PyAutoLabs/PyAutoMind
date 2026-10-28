@@ -43,7 +43,9 @@
 - issued: 2026-10-28
 - session: Claude Code remote (web) session_016nhQ8NtZ6QtuqxKKAnhhdg
 - location: remote session clone /home/user/pyautogalaxy on feature/gnfw-convergence-fast (from origin/main 7701202); no task worktree
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/678
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/678
 - epic: lenstwin (follow-up to phases 2–3; not a numbered phase)
 - prompt: active/gnfw_convergence_fast.md
 - repos:
@@ -52,3 +54,6 @@
     Human asked 2026-10-28 to speed up gNFW. `gNFW.convergence_func` does one scipy `quad` per point;
     tabulate the line-of-sight integral on a log η grid per call and spline in log–log
     (prototype ~400× faster, ~1e-5 rel. at 20 nodes/decade). Consequence: judge (human /prm).
+    2026-10-28: shipped to PyAutoGalaxy#678 (pending-release; head acfc61a; suite 1431 passed /
+    7 skipped). 100k pts 12.6 s → 0.02 s; aperture mass 29.6 s → 0.04 s; both paths share a stable
+    integrand (old naive form wrong up to 100% at η<1e-6). Stops at PR-open → human /prm.
