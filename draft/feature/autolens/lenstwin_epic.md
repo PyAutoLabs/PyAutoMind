@@ -37,7 +37,7 @@ Three invariants: a reference model is immutable and one reference has many twin
 
 Epic slug `lenstwin`. Library first in every phase. One issue per repo per phase; each ships on its own behind `start_dev` → `ship_library` / `ship_workspace`. Phase prompts are filed lazily, one per phase, with `Epic: lenstwin` and an integer `Phase:`; sub-issues lettered in the body. Issue one phase at a time, never the whole map. Detailed bodies: report §3.
 
-### Phase 0 — `autolens/twins/` core and the two PyAutoGalaxy primitives (PyAutoGalaxy, PyAutoLens) — no dependencies; needs rulings R1, R2
+### Phase 0 — `autolens/twins/` core and the two PyAutoGalaxy primitives (PyAutoGalaxy, PyAutoLens) — no dependencies; R1 and R2 ruled 2026-10-28, ready for `/start_dev`
 - 0A PyAutoGalaxy: grid-integrated projected mass inside a circular aperture for any object with `convergence_2d_from` (profile, `Basis`, galaxy, galaxies), tested against `mass_angular_within_circle_from` for `Isothermal` and `NFWSph` and the Gaussian closed form; instance-level `Basis` of `lp.Gaussian` → `Basis` of `lmp.Gaussian` at a given M/L, tested against the field copying of `chaining_util.mass_light_dark_basis_from`.
 - 0B PyAutoLens: `al.twins.{ObservationSetup, ReferenceModel, Twin, SimulatedTwin, TransformationRecord, transform.Identity}`; `ReferenceModel.from_fit_directory` reusing `al.from_json` + the `ImagingAgg` reload recipe; `Twin.baseline / apply / with_setup / simulate(seed, noise="observed"|"poisson")`; `SimulatedTwin.output_to / from_directory` with `twin.json` provenance (reference pointer, versions, records, seed, simulator settings); `dictable` round trips; `from . import twins` in `autolens/__init__.py`; `docs/api/twins.rst`. Tests on the 7x7 fixtures and a `data_temp` fit directory.
 - Prompt: `draft/feature/autolens/lenstwin_p0_twins_core.md` (filed 2026-10-28 with this ledger).
@@ -72,7 +72,7 @@ Cored halo, subhalo injection, line-of-sight halos (`LOSSampler`), M/L gradient 
 
 ## Human rulings needed before phase 0 (recommendations in report §4)
 
-R1 package and object names (`al.twins`; recommend accept). R2 default twin noise: Gaussian from the observed noise map, Poisson route when exposure time and sky are supplied (recommend observed). R3 reference aperture and mass convention: circle of radius θ_E,parent from the tracer-level critical curve, centred on the replaced galaxy, M_ref = the replaced component's projected mass inside it by grid integration, shear and other galaxies untouched (recommend accept). R4 first halo: `NFWSph` centred on the light with a fixed physical r_s; c(M) as a later parameter (recommend fixed r_s). R5 first real lens: the first Euclid fit the human supplies, `cosmos_web_ring` as the public stand-in (recommend whichever exists first). R6 diagnostics plotter in the library (recommend yes). R7 multi-galaxy normalisation deferred to phase 5 (recommend yes). R8 Euclid data and reference models stay in the private `Science/twins`; only public data in workspace and assistant (recommend accept).
+R1 **RULED 2026-10-28: accepted** — `autolens/twins/` exported as `al.twins`; objects `ObservationSetup`, `ReferenceModel`, `Twin`, `SimulatedTwin`, `TransformationRecord`; PyAutoGalaxy gets primitives only, no `twins` package. R2 **RULED 2026-10-28: observed noise map by default** — a twin draws Gaussian noise with its seed from the parent's noise map on the PSF-convolved image; the Poisson route (`noise="poisson"`) is available only when `exposure_time` and `background_sky_level` are set on the setup. R3 reference aperture and mass convention: circle of radius θ_E,parent from the tracer-level critical curve, centred on the replaced galaxy, M_ref = the replaced component's projected mass inside it by grid integration, shear and other galaxies untouched (recommend accept). R4 first halo: `NFWSph` centred on the light with a fixed physical r_s; c(M) as a later parameter (recommend fixed r_s). R5 first real lens: the first Euclid fit the human supplies, `cosmos_web_ring` as the public stand-in (recommend whichever exists first). R6 diagnostics plotter in the library (recommend yes). R7 multi-galaxy normalisation deferred to phase 5 (recommend yes). R8 Euclid data and reference models stay in the private `Science/twins`; only public data in workspace and assistant (recommend accept).
 
 ## How to orchestrate (for the session that runs this)
 
@@ -91,7 +91,8 @@ R1 package and object names (`al.twins`; recommend accept). R2 default twin nois
 
 ## Ledger
 
-- 2026-10-28 — filed. Surveys 01–02, report, this ledger and the phase-0 prompt written from read-only clones at release 2026.10.26.1. No issue opened. Awaiting rulings R1–R2 before phase 0 is issued (R3–R8 before their phases).
+- 2026-10-28 — filed. Surveys 01–02, report, this ledger and the phase-0 prompt written from read-only clones at release 2026.10.26.1. No issue opened.
+- 2026-10-28 — human ruled R1 (accept `al.twins` and the object names) and R2 (observed noise map by default, Poisson only with exposure time and sky). Phase 0 is ready to issue via `/start_dev draft/feature/autolens/lenstwin_p0_twins_core.md`; R3–R8 remain open until their phases.
 
 ## Original request (2026-10-28; condensed from the brief, section numbering kept — the full text is in the filing session)
 

@@ -20,7 +20,7 @@ Phase: 0
 Parent: draft/feature/autolens/lenstwin_epic.md
 Filed: 2026-10-28
 
-Phase 0 of the `lenstwin` epic (ledger `lenstwin_epic.md`; report `lenstwin_epic_report.md` §2 architecture, §3 "Phase 0" body; surveys `lenstwin_epic_surveys/01` §2–§6). Needs rulings R1 (package and names) and R2 (default twin noise) from the ledger before `/start_dev`. Library first: 0A (PyAutoGalaxy) merges before 0B (PyAutoLens); 0B may develop against 0A's same-named branch. One issue per repo.
+Phase 0 of the `lenstwin` epic (ledger `lenstwin_epic.md`; report `lenstwin_epic_report.md` §2 architecture, §3 "Phase 0" body; surveys `lenstwin_epic_surveys/01` §2–§6). Rulings R1 (package and names: accepted as written here) and R2 (default twin noise: the observed noise map; Poisson only when exposure time and sky are set) were taken by the human on 2026-10-28, so this prompt is ready for `/start_dev`. Library first: 0A (PyAutoGalaxy) merges before 0B (PyAutoLens); 0B may develop against 0A's same-named branch. One issue per repo.
 
 ## 0A — PyAutoGalaxy primitives
 
