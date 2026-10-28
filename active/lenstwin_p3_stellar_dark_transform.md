@@ -18,6 +18,8 @@ Epic: lenstwin
 Phase: 3
 Parent: draft/feature/autolens/lenstwin_epic.md
 Filed: 2026-10-28
+Issued: 2026-10-28
+Issue: https://github.com/PyAutoLabs/PyAutoLens/issues/805
 
 Phase 3 of the `lenstwin` epic (ledger `draft/feature/autolens/lenstwin_epic.md`; report `lenstwin_epic_report.md` §2.2 objects, §2.3 mass normalisation, §2.4 diagnostics, §3 "Phase 3"). Depends on phase 0B (`al.twins`, PyAutoLens#804) and phase 2 (`ag.MassBudget`, `ag.CircularAperture`, `ag.mass_to_light_ratio_for_mass_from`, `ag.kappa_s_for_mass_from`, PyAutoGalaxy#676, record `complete/2026/10/lenstwin-p2-mass-budget.md`), both merged to `main`. Rulings taken: R3 and R4 (2026-10-28, convention page `PyAutoGalaxy/docs/api/mass_budget.rst`), R6 (2026-10-28: the diagnostics plotter lives in the library, following the `aplt` conventions). No `Science/twins` project (ruled 2026-10-28): keep the API driven by this transformation, not speculative callers.
 
