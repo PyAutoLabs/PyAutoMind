@@ -956,7 +956,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/lenstwin_p0_twins_core.md">LensTwin phase 0: <code>autolens/twins/</code> core (reference model, baseline twin, seeded simulation, provenance)…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/671">issue #671</a> — issued 2026-10-28 — library-dev</summary>
+<details><summary>📋 <a href="active/lenstwin_p0_twins_core.md">LensTwin phase 0: <code>autolens/twins/</code> core (reference model, baseline twin, seeded simulation, provenance)…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/671">issue #671</a> — issued 2026-10-28 — library-dev (0A library-shipped, awaiting-merge; 0B in progress) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/672">PyAutoGalaxy#672</a></summary>
 
 ```
 Use the start-dev skill. active/lenstwin_p0_twins_core.md

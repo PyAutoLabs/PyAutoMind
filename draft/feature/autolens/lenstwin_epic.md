@@ -94,6 +94,7 @@ R1 **RULED 2026-10-28: accepted** — `autolens/twins/` exported as `al.twins`; 
 - 2026-10-28 — filed. Surveys 01–02, report, this ledger and the phase-0 prompt written from read-only clones at release 2026.10.26.1. No issue opened.
 - 2026-10-28 — human ruled R1 (accept `al.twins` and the object names) and R2 (observed noise map by default, Poisson only with exposure time and sky). Phase 0 is ready to issue via `/start_dev draft/feature/autolens/lenstwin_p0_twins_core.md`; R3–R8 remain open until their phases.
 - 2026-10-28 — phase 0 issued via `/start_dev`: 0A PyAutoGalaxy#671 (aperture mass by grid integration; `Basis.mass_basis_from`), 0B PyAutoLens#803 (`autolens/twins/` core). Branch `feature/lenstwin-p0-twins-core` in both repos; prompt moved to `active/lenstwin_p0_twins_core.md` with a "Verified at issue time" section (SimulatorImaging/Imaging/as_model signatures read from PyAutoArray and PyAutoFit `main`). Feature Agent derived too-large vs declared large; declared wins, the 0A/0B split is the phasing. Heart STALE at the door (feed blocked by network policy). No implementation yet; next `/start_library`, 0A first.
+- 2026-10-28 — 0A shipped: PyAutoGalaxy#672 open (`pending-release`), suite 1390 passed / 7 skipped, Heart STALE (environment reasons). Worker found `NFWSph.mass_angular_within_circle_from` raises on `main` (length-1 array into `quad`); noted in the PR, not fixed. 0B in progress.
 
 ## Original request (2026-10-28; condensed from the brief, section numbering kept — the full text is in the filing session)
 
