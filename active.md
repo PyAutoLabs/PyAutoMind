@@ -128,19 +128,27 @@
   - reason: PyAutoGalaxy: 9 commit(s) behind origin
   - reason: PyAutoLens: 7 commit(s) behind origin
   - reason: release validation stale: source moved since rehearsal (PyAutoGalaxy, PyAutoLens)
-- checkpoint: Hands PR328 (584 tests pass), Fit workspace PR178 (8 scripts + 2 notebooks pass); six families regenerated; remaining smokes and assistant pinned-runtime validation underway
+- checkpoint: all nine PRs open; generator 584 tests and tenant firewall pass; all six workspace smoke suites pass; independent review CLEAN; human merge pending
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/327
 - issued: 2026-10-28
 - library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/328
 - workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/178
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/265
+- workspace-pr: https://github.com/PyAutoLabs/HowToFit/pull/77
+- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/92
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/167
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/102
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/604
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/41
 - session: Codex (session ID unavailable)
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/compact-colab-setup
 - repos:
   - PyAutoHands: feature/compact-colab-setup
   - autolens_workspace: feature/compact-colab-setup
   - autogalaxy_workspace: feature/compact-colab-setup
   - autolens_assistant: feature/compact-colab-setup
+  - autogalaxy_assistant: feature/compact-colab-setup
   - autofit_workspace: feature/compact-colab-setup
   - HowToFit: feature/compact-colab-setup
   - HowToGalaxy: feature/compact-colab-setup

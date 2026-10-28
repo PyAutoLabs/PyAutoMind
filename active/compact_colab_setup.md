@@ -80,3 +80,41 @@ Branch survey: PyAutoHands, autolens_workspace, autogalaxy_workspace, autofit_wo
 - Refreshed Heart RED blocks shipping: `PyAutoArray: 4 uncommitted source change(s)`; `PyAutoGalaxy: 9 commit(s) behind origin`; `PyAutoLens: 7 commit(s) behind origin`; additional stale reason `release validation stale: source moved since rehearsal (PyAutoGalaxy, PyAutoLens)`. No override granted.
 - Remaining: resolve/recheck Heart before shipping; finish assistant notebook path (its stdlib-only `autoassistant/to_notebook.py` is independent of Hands); regenerate and validate committed notebooks/markdown across all six project families in claimed worktrees; required workspace smoke; generator PR first, consumer PRs via ship-workspace. Assistant checkout still unchanged. Fit intro is `notebooks/overview/overview_1_the_basics.ipynb`, not root start_here.
 - No merge or release authorized. HTML support remains future work.
+
+## Final development checkpoint — 2026-10-28
+
+This checkpoint supersedes the earlier blocked/in-progress checkpoint above.
+
+Implemented the compact Colab setup rollout. Introductory notebooks use the approved two-sentence explanation (including “locally or in HTML”); advanced examples link back. Installation behavior and CPU/GPU options are preserved. HTML support itself remains future work.
+
+## Pull requests
+- [PyAutoHands](https://github.com/PyAutoLabs/PyAutoHands/pull/328)
+- [autofit_workspace](https://github.com/PyAutoLabs/autofit_workspace/pull/178)
+- [autogalaxy_workspace](https://github.com/PyAutoLabs/autogalaxy_workspace/pull/265)
+- [HowToFit](https://github.com/PyAutoLabs/HowToFit/pull/77)
+- [HowToGalaxy](https://github.com/PyAutoLabs/HowToGalaxy/pull/92)
+- [autolens_assistant](https://github.com/PyAutoLabs/autolens_assistant/pull/167)
+- [HowToLens](https://github.com/PyAutoLabs/HowToLens/pull/102)
+- [autolens_workspace](https://github.com/PyAutoLabs/autolens_workspace/pull/604)
+- [autogalaxy_assistant](https://github.com/PyAutoLabs/autogalaxy_assistant/pull/41)
+
+Merge PyAutoHands first, then consumers; the Galaxy assistant guide also follows the Galaxy workspace. No merges or releases performed.
+
+## Validation
+- Shared generator: 584 tests pass, including 28 focused setup tests; tenant-firewall check passes after moving project metadata into configuration.
+- All six families regenerated: 633 notebooks, 632 compact setup cells and one prose-only notebook. Scientific cell sources unchanged; setup normalization idempotent. Assistant adds one generated compact notebook with existing execution outputs preserved.
+- Workspace smoke: Lens 42 scripts + 2 notebooks; Galaxy 14 + 2; Fit 8 + 2; HowToFit 19 scripts; HowToGalaxy 32; HowToLens 50 — all pass.
+- Lens assistant: 11 focused tests pass; isolated pinned-runtime benchmark module 12 pass. Full suite: 263 pass, 1 skip, 1 xfail, with one interpreter-path assertion subsequently passing in the canonical-path preflight rerun (4 pass).
+- Galaxy assistant: Colab context mapping/cap check and documentation diff review pass.
+- Independent generator review finding fixed and rechecked CLEAN. Fresh-Colab behavior tested with simulation; hosted Colab installation/UI not exercised.
+
+## Heart development override
+User: “I authorize you to continue despite RED”. Exact reasons retained:
+- PyAutoArray: 4 uncommitted source change(s)
+- PyAutoGalaxy: 9 commit(s) behind origin
+- PyAutoLens: 7 commit(s) behind origin
+- release validation stale: source moved since rehearsal (PyAutoGalaxy, PyAutoLens)
+
+This authorizes development shipping only; no readiness promotion, merge, release or CI bypass. The initial Hands CI failure was the tenant firewall; fixed in a405d14, local full suite and firewall pass. Fresh CI remains subject to review before merge.
+
+Additional inventory cleanup: autogalaxy_assistant environment guide still taught the duplicated bootstrap. Its isolated branch claim was surveyed with no conflict; the documentation-only correction is included in the all-project rollout.
