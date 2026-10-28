@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-28T15:53:24Z",
+  "updated": "2026-10-28T15:56:59Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Speed up gNFW convergence: tabulate the line-of-sight integral once per call\u2026 \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/678",
+      "prompt": "Use the start-dev skill. active/gnfw_convergence_fast.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -111,20 +117,14 @@
     },
     {
       "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#678 \u2014 Speed up gNFW convergence: tabulate the line-of-sight integral once per call\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/678",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#667 \u2014 config-leaf-comments",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/667",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#656 \u2014 Outcome and authority",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#672 \u2014 lenstwin-p0-twins-core",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/672",
       "prompt": null
     }
   ]
