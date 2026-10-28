@@ -37,7 +37,7 @@ Three invariants: a reference model is immutable and one reference has many twin
 
 Epic slug `lenstwin`. Library first in every phase. One issue per repo per phase; each ships on its own behind `start_dev` → `ship_library` / `ship_workspace`. Phase prompts are filed lazily, one per phase, with `Epic: lenstwin` and an integer `Phase:`; sub-issues lettered in the body. Issue one phase at a time, never the whole map. Detailed bodies: report §3.
 
-### Phase 0 — `autolens/twins/` core and the two PyAutoGalaxy primitives (PyAutoGalaxy, PyAutoLens) — no dependencies; R1 and R2 ruled 2026-10-28, ready for `/start_dev`
+### Phase 0 — `autolens/twins/` core and the two PyAutoGalaxy primitives (PyAutoGalaxy, PyAutoLens) — no dependencies; R1 and R2 ruled 2026-10-28; ISSUED 2026-10-28 (0A PyAutoGalaxy#671, 0B PyAutoLens#803)
 - 0A PyAutoGalaxy: grid-integrated projected mass inside a circular aperture for any object with `convergence_2d_from` (profile, `Basis`, galaxy, galaxies), tested against `mass_angular_within_circle_from` for `Isothermal` and `NFWSph` and the Gaussian closed form; instance-level `Basis` of `lp.Gaussian` → `Basis` of `lmp.Gaussian` at a given M/L, tested against the field copying of `chaining_util.mass_light_dark_basis_from`.
 - 0B PyAutoLens: `al.twins.{ObservationSetup, ReferenceModel, Twin, SimulatedTwin, TransformationRecord, transform.Identity}`; `ReferenceModel.from_fit_directory` reusing `al.from_json` + the `ImagingAgg` reload recipe; `Twin.baseline / apply / with_setup / simulate(seed, noise="observed"|"poisson")`; `SimulatedTwin.output_to / from_directory` with `twin.json` provenance (reference pointer, versions, records, seed, simulator settings); `dictable` round trips; `from . import twins` in `autolens/__init__.py`; `docs/api/twins.rst`. Tests on the 7x7 fixtures and a `data_temp` fit directory.
 - Prompt: `draft/feature/autolens/lenstwin_p0_twins_core.md` (filed 2026-10-28 with this ledger).
@@ -93,6 +93,7 @@ R1 **RULED 2026-10-28: accepted** — `autolens/twins/` exported as `al.twins`; 
 
 - 2026-10-28 — filed. Surveys 01–02, report, this ledger and the phase-0 prompt written from read-only clones at release 2026.10.26.1. No issue opened.
 - 2026-10-28 — human ruled R1 (accept `al.twins` and the object names) and R2 (observed noise map by default, Poisson only with exposure time and sky). Phase 0 is ready to issue via `/start_dev draft/feature/autolens/lenstwin_p0_twins_core.md`; R3–R8 remain open until their phases.
+- 2026-10-28 — phase 0 issued via `/start_dev`: 0A PyAutoGalaxy#671 (aperture mass by grid integration; `Basis.mass_basis_from`), 0B PyAutoLens#803 (`autolens/twins/` core). Branch `feature/lenstwin-p0-twins-core` in both repos; prompt moved to `active/lenstwin_p0_twins_core.md` with a "Verified at issue time" section (SimulatorImaging/Imaging/as_model signatures read from PyAutoArray and PyAutoFit `main`). Feature Agent derived too-large vs declared large; declared wins, the 0A/0B split is the phasing. Heart STALE at the door (feed blocked by network policy). No implementation yet; next `/start_library`, 0A first.
 
 ## Original request (2026-10-28; condensed from the brief, section numbering kept — the full text is in the filing session)
 
