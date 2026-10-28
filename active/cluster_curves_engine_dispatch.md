@@ -10,7 +10,9 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: formalised
+Issued: 2026-10-28
+Issue: https://github.com/PyAutoLabs/PyAutoLens/issues/807
 Consequence: judge
 Epic: cluster-strong-lensing
 Phase: 3a

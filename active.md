@@ -37,3 +37,19 @@
 - batch-go: HUMAN 2026-10-27 "do the next tasks to the point interferometry is hopefully running" = go for batch 0
 - pr: https://github.com/PyAutoLabs/autolens_profiling/pull/471 OPEN 2026-10-27 (PR A, dff89226; Heart GREEN; judge → human /prm)
 - batch0: chained on RAL 2026-10-27 (scratch/p2b_batch0_submit.log; CPU 0-13 + refs 0-1 on ral, A100 0-9%2) from branch head dff89226
+
+## cluster-curves-engine-dispatch
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/807
+- issued: 2026-10-28
+- session: Claude Code remote (web) session_016nhQ8NtZ6QtuqxKKAnhhdg
+- location: remote session clone /home/user/pyautolens on feature/cluster-curves-engine-dispatch (from origin/main b29ffcc); no task worktree
+- status: library-dev
+- epic: cluster-strong-lensing (phase 3a subtask; ledger draft/feature/autolens/source_cluster_arc.md)
+- prompt: active/cluster_curves_engine_dispatch.md
+- repos:
+  - PyAutoLens: feature/cluster-curves-engine-dispatch
+- summary: |
+    Feature Agent's top pick 2026-10-28 (human chose it as the next task). Cluster plots'
+    plot_critical_curves / plot_caustics honour general.critical_curves_method via PyAutoGalaxy's
+    _critical_curves_method() (marching_squares default; zero_contour via LensCalc *_via_zero_contour_from).
+    Consequence: judge (human /prm).
