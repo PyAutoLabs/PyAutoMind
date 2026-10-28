@@ -37,3 +37,16 @@
 - batch-go: HUMAN 2026-10-27 "do the next tasks to the point interferometry is hopefully running" = go for batch 0
 - pr: https://github.com/PyAutoLabs/autolens_profiling/pull/471 OPEN 2026-10-27 (PR A, dff89226; Heart GREEN; judge → human /prm)
 - batch0: chained on RAL 2026-10-27 (scratch/p2b_batch0_submit.log; CPU 0-13 + refs 0-1 on ral, A100 0-9%2) from branch head dff89226
+
+## mesh-magnification-areas
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/659
+- issued: 2026-10-28
+- session: Claude Code (Opus 5.5); https://claude.ai/code/session_016nhQ8NkVvJhhqNSibeGcBQ
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/mesh-magnification-areas
+- repos:
+  - PyAutoArray: feature/mesh-magnification-areas
+  - autolens_workspace_test: feature/mesh-magnification-areas
+- prompt: active/mesh_magnification_areas.md
+- epic: cluster-strong-lensing (Source & Cluster arc phase 4a)
+- autonomy: --auto launched by human 2026-10-28; effective supervised → decide-and-flag, ends at PR-open; judge → human /prm
