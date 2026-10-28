@@ -1,6 +1,8 @@
 # Make Colab setup unobtrusive across projects
 
 Type: refactor
+Issued: 2026-10-28
+Issue: https://github.com/PyAutoLabs/PyAutoHands/issues/327
 Target: PyAutoHands
 Difficulty: medium
 Consequence: judge

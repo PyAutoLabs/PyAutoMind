@@ -50,3 +50,15 @@
 - prompt: active/mesh_magnification_areas.md
 - epic: cluster-strong-lensing (Source & Cluster arc phase 4a)
 - autonomy: --auto launched by human 2026-10-28; effective supervised → decide-and-flag, ends at PR-open; judge → human /prm
+
+## compact-colab-setup
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/327
+- issued: 2026-10-28
+- session: Codex (session ID unavailable)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/compact-colab-setup
+- repos:
+  - PyAutoHands: feature/compact-colab-setup
+  - autolens_workspace: feature/compact-colab-setup
+  - autogalaxy_workspace: feature/compact-colab-setup
+  - autolens_assistant: feature/compact-colab-setup
