@@ -55,6 +55,9 @@ Colab bootstrap (`autonerves/setup_colab.py`) clones only public workspaces. If
 one ever needs a private repo or a push, it gets one fine-grained PAT, owned by
 the maintainer, kept in the password manager and recorded here.
 
+Org PAT policy (set 2026-10-28): classic PATs are restricted; fine-grained
+PATs need org-owner approval.
+
 ### App mints
 
 | Workflow | `repositories:` | Permissions |
@@ -109,8 +112,6 @@ secret. A new secret or permission updates this page in the same PR.
 
 ### Owed
 
-- **Org settings (org owner):** restrict classic PATs; keep fine-grained PAT
-  approval on.
 - **Phase 1b, PyPI trusted publishing:** retires `PYPI` / `TEST_PYPI`; blocked
   on the maintainer's PyPI login.
 
