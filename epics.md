@@ -33,7 +33,7 @@ epic, never picked standalone.
 ## lenstwin
 - title: LensTwin — observation-anchored digital twins of fitted strong lenses: `al.twins` in PyAutoLens, mass-normalisation primitives in PyAutoGalaxy, the `Science/twins` Cortex project, and the first stellar-plus-dark-matter identifiability experiment (ERC dark-matter cores vs cusps)
 - ledger: draft/feature/autolens/lenstwin_epic.md
-- status: filed 2026-10-28 from the LensTwin brief; surveys, report and the phase-0 prompt (`draft/feature/autolens/lenstwin_p0_twins_core.md`) written; NOT STARTED — awaiting rulings R1–R2, no phase issued yet
+- status: filed 2026-10-28 from the LensTwin brief; surveys, report and the phase-0 prompt (`draft/feature/autolens/lenstwin_p0_twins_core.md`) written; R1–R2 RULED 2026-10-28 (al.twins; observed noise map by default); NOT STARTED — phase 0 ready for /start_dev, no issue opened yet
 - notes: report `draft/feature/autolens/lenstwin_epic_report.md`; surveys `lenstwin_epic_surveys/`; science half is a PyAutoCortex row (`twins`) born in phase 1, never a Mind repo; workspace and assistant phases wait for the validated workflow (phase 4).
 
 ## results-library
