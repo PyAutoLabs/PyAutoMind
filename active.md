@@ -23,6 +23,20 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/80 MERGED 2026-10-26 5474e3cb via human /prm (regime in @3 one-current key)
 - pr: https://github.com/PyAutoLabs/autolens_profiling/pull/470 MERGED 2026-10-27 a1a4ccf1 via human /prm (rect28 rows, RAL 413044/413046 8/8); task stays open — NEXT autolens_inference size_match leg (branch has no commits yet); witness gap jax_cpu_dense + light_fixed unmeasured
 
+## likelihood-lifecycle-p2c-point-source
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/472
+- issued: 2026-10-28
+- session: Claude Code (Opus 5.5); session ID unavailable
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p2c-point-source
+- repos:
+  - autolens_profiling: feature/likelihood-lifecycle-p2c-point-source
+- prompt: active/likelihood_lifecycle_p2c_point_source_campaign.md
+- epic: likelihood-lifecycle
+- autonomy: --auto (supervised → decide-and-flag, ends at PR-open; judge → human /prm)
+- parallel-claim: HUMAN 2026-10-28 "yeah do it, run in auto mode" — parallel worktree beside 2b, stacked on #471 (80bbb028); disjoint files except regenerated catalogue/coverage
+- batch-go: HUMAN 2026-10-28 "yeah do it" = go for the 2c RAL batch (ral CPU + A100); never touch 2b 413161/413191
+
 ## likelihood-lifecycle-p2b-interferometer
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/469
 - issued: 2026-10-26
