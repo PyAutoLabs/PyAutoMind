@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2027 records across 10 buckets.
+2028 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -165,6 +165,7 @@ markers; everything below GENERATED is rebuilt.
 - [closed-thread-followups](2026/10/closed-thread-followups.md) — New external comments after closure or an accepted answer return a thread to Community review without requirin…
 - [cloud-board-validation-evidence](2026/10/cloud-board-validation-evidence.md)
 - [cloud-test-run-card](2026/10/cloud-test-run-card.md)
+- [cluster-curves-engine-dispatch](2026/10/cluster-curves-engine-dispatch.md) — Cluster `plot_critical_curves` / `plot_caustics` (`autolens/cluster/plot/cluster_plots.py`)
 - [cluster-point-figures](2026/10/cluster-point-figures.md)
 - [cluster-point-solver-readability](2026/10/cluster-point-solver-readability.md)
 - [cluster-pointsolver-robust-settings](2026/10/cluster-pointsolver-robust-settings.md)
