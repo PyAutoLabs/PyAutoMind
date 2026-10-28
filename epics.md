@@ -33,7 +33,7 @@ epic, never picked standalone.
 ## lenstwin
 - title: LensTwin — observation-anchored digital twins of fitted strong lenses: `al.twins` in PyAutoLens, mass-normalisation primitives in PyAutoGalaxy, the `Science/twins` Cortex project, and the first stellar-plus-dark-matter identifiability experiment (ERC dark-matter cores vs cusps)
 - ledger: draft/feature/autolens/lenstwin_epic.md
-- status: filed 2026-10-28 from the LensTwin brief; surveys and report written; R1–R2 RULED 2026-10-28 (al.twins; observed noise map by default). PHASE 0 ISSUED 2026-10-28 — 0A PyAutoGalaxy#671 (aperture mass by grid integration, `Basis.mass_basis_from`), 0B PyAutoLens#803 (`autolens/twins/` core), task `lenstwin-p0-twins-core`, branch `feature/lenstwin-p0-twins-core`. PHASE 0: 0A PyAutoGalaxy#672 MERGED 2026-10-28 (pending-release); 0B PyAutoLens#804 open, CI red on a pre-existing pytest-9 `point/test_dataset.py` failure (fix queued separately), re-run /prm when green. NEXT: phase 1 (`Science/twins` birth) after a release carries phase 0; needs R5. R3–R8 open until their phases
+- status: filed 2026-10-28 from the LensTwin brief; R1–R2 RULED 2026-10-28 (al.twins; observed noise map by default). PHASE 0 COMPLETE 2026-10-28 — 0A PyAutoGalaxy#672 and 0B PyAutoLens#804 MERGED (both pending-release; record complete/2026/10/lenstwin-p0-twins-core.md). NEXT: phase 1 (`Science/twins` birth) — needs R5 and a release carrying phase 0 (human `/review_release` first). R3–R8 open until their phases
 - notes: report `draft/feature/autolens/lenstwin_epic_report.md`; surveys `lenstwin_epic_surveys/`; science half is a PyAutoCortex row (`twins`) born in phase 1, never a Mind repo; workspace and assistant phases wait for the validated workflow (phase 4).
 
 ## results-library

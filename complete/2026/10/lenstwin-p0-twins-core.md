@@ -1,3 +1,45 @@
+## lenstwin-p0-twins-core
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/671
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/803
+- completed: 2026-10-28
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/672
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/804
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/672
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/804
+- epic: lenstwin (phase 0; ledger draft/feature/autolens/lenstwin_epic.md)
+- summary: Phase 0 of the lenstwin epic, library first. 0A PyAutoGalaxy#672 (merge b072e4d):
+  projected mass inside a circular aperture by grid integration for any object with
+  `convergence_2d_from` (profile, `Basis`, `Galaxy`, `Galaxies`), and `Basis.mass_basis_from`
+  (light-Gaussian basis → `lmp.Gaussian` basis at a shared mass-to-light ratio). 0B
+  PyAutoLens#804 (merge 9a85d32): the `autolens/twins/` subpackage exported as `al.twins` —
+  `ObservationSetup`, immutable `ReferenceModel` (tracer with solved intensities, setup,
+  provenance with SHA-256 hashes and library versions), value-like `Twin`
+  (`baseline`/`apply`/`with_setup`/`simulate(seed, noise=...)`), `SimulatedTwin`
+  (`output_to`/`from_directory`/`resimulate` bit-identical, `twin.json`),
+  `TransformationRecord`, `transform.Identity`. Rulings R1 (names, placement) and R2 (observed
+  noise map by default; Poisson only with exposure time and sky) honoured. Public API grew in
+  both repos; nothing removed.
+- tests: 0A suite 1390 passed / 7 skipped; CI green on b81951a. 0B `test_autolens/twins/` 19
+  tests (seed determinism and sensitivity, output → reload → resimulate bit-identity,
+  dict round trips, aggregator-equivalent ingest, immutability, global RNG untouched); CI green
+  on 1d430dc on every leg (unittest 3.12, 3.13, nojax; docs-build).
+- traps: `SimulatorImaging.via_image_from` always draws a Poisson sample from NumPy's global
+  random state (even with Poisson noise off) and raises on negative pixels, so the "observed"
+  route convolves directly with `tracer.blurred_image_2d_from` and draws Gaussian noise with
+  `numpy.random.default_rng(seed)`; `SimulatedTwin.simulator["route"]` records it. PyAutoFit's
+  dictable parser bypasses a class's own `from_dict` and drops `None` entries; FITS-loaded
+  arrays carry an `aa.Header` that does not round-trip, so `ObservationSetup` stores header-free
+  copies. pytest 9.2 rejects nested structures in `pytest.approx`: 0B carried a cherry-pick of
+  2b063ca (from unmerged branch `ccr-b1080ef2-0tcwow`) fixing 7 `point/test_dataset.py` tests,
+  so that fix is now on PyAutoLens `main`.
+- notes: Consequence: judge — both merges human (/prm; #804 merged by the human after CI went
+  green). Heart STALE for environment reasons only throughout; not frozen. Implementation by an
+  Opus execution-tier worker; plan, judgment and PR wording in the main session. No task
+  worktree (remote session clones). Next: phase 1 `Science/twins` birth, after a release carries
+  phase 0 (human `/review_release`) and ruling R5.
+
+## Original prompt
+
 # LensTwin phase 0: `autolens/twins/` core (reference model, baseline twin, seeded simulation, provenance) and the two PyAutoGalaxy primitives it needs
 
 Type: feature
