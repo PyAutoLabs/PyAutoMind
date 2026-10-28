@@ -1,3 +1,34 @@
+## cluster-curves-engine-dispatch
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/807
+- completed: 2026-10-28
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/808
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/808
+- epic: cluster-strong-lensing (phase 3a subtask; ledger draft/feature/autolens/source_cluster_arc.md)
+- summary: Cluster `plot_critical_curves` / `plot_caustics` (`autolens/cluster/plot/cluster_plots.py`)
+  now read `general.critical_curves_method` once per call through PyAutoGalaxy's
+  `autogalaxy.util.plot_utils._critical_curves_method()` (shared unknown-value and
+  missing-`jax_zero_contour` fallbacks) and route each source plane's tangential/radial critical
+  curves and caustics via `_CURVE_ROUTINES` / `_curve_list_from`: `marching_squares` (default,
+  unchanged) → `*_list_from(grid=grid)`; `zero_contour` → `*_list_via_zero_contour_from()` with
+  defaults, as the other plots do. Multi-plane LensCalc per plane, colours, labels, radial option
+  and source-plane mapping preserved. No public API change (merge 1faa99a).
+- tests: 6 new in test_autolens/cluster/plot/test_cluster_plots.py (two-source-plane PowerLaw
+  fixture: per-plane routing for both engines, distinct plane geometry, default radial option,
+  missing-dependency fallback with logged warning). Full suite 979 passed / 1 skipped / 1 xfailed;
+  CI green on a0666e7. Workspace cluster visualisation smoke not run (autolens_workspace not in the
+  remote session).
+- traps: `zero_contour` takes no grid and seeds from `LensCalc._init_guess_from_coarse_grid`'s
+  25×25 scan over ±3", so cluster-scale curves outside it are not drawn (silently `[]`) — remaining
+  phase-3 scope. A real jax_zero_contour trace takes ~5–8 s per curve on the fixture, so tests stub
+  it. `IsothermalCore` first call ~288 s (numba compile) — avoid in fixtures. The selector warns via
+  `logging`, not `warnings` (use caplog). Test config lacks `critical_curves_method` (KeyError →
+  marching_squares).
+- notes: Feature Agent's top pick, chosen by the human as the next task 2026-10-28. Consequence:
+  judge — merged on the human's /prm (freeze clear). Opus worker implementation; review, PR wording
+  in the main session. Heart STALE, environment reasons only.
+
+## Original prompt
+
 # Cluster plots honor the configured critical-curve engine
 
 Type: feature
