@@ -39,6 +39,7 @@
 
 ## likelihood-lifecycle-p2e-cluster
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/474
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/478 DRAFT (2bf2f53a) — D1–D6 await human
 - issued: 2026-10-28
 - session: Claude Code (Opus 5.5); session ID unavailable
 - status: workspace-dev
@@ -67,6 +68,7 @@
 
 ## likelihood-lifecycle-p2g-weak
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/476
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/477 DRAFT (7f7e7e8f) — D1–D10 await human
 - issued: 2026-10-28
 - session: Claude Code (Opus 5.5); session ID unavailable
 - status: workspace-dev
@@ -92,6 +94,7 @@
 - autonomy: --auto (supervised → decide-and-flag, ends at PR-open; judge → human /prm)
 - parallel-claim: HUMAN 2026-10-28 "yeah do it, run in auto mode" — parallel worktree beside 2b, stacked on #471 (80bbb028); disjoint files except regenerated catalogue/coverage
 - batch-go: HUMAN 2026-10-28 "yeah do it" = go for the 2c RAL batch (ral CPU + A100); never touch 2b 413161/413191
+- batch0: submit launched detached 2026-10-28 from 2f98e01a (RAL scratch/p2c_submit.sh → p2c_submit.log, marker P2CSUBMITDONE); checkout profiling/autolens_profiling_p2c
 
 ## likelihood-lifecycle-p2b-interferometer
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/469
