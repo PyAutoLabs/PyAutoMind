@@ -9,10 +9,10 @@
 | Where | Count |
 |-------|------:|
 | [Start here](#start-here) | 24 |
-| [Epics](#epics) | 17 |
+| [Epics](#epics) | 18 |
 | [In flight](#in-flight) | 3 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 275 |
+| [Backlog](#backlog) | 280 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -289,6 +289,43 @@ Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_
 
 ```
 Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_epic_report.md
+```
+
+</details>
+
+</details>
+
+<details>
+<summary><b>LensTwin — observation-anchored digital twins of fitted strong lenses: <code>al.twins</code> in PyAutoLens, mass-normalisation primitives in PyAutoGalaxy, the <code>Science/twins</code> Cortex project, and the first stellar-plus-dark-matter identifiability experiment (ERC dark-matter cores vs cusps)</b> — 3 queued prompt(s), in order</summary>
+
+<details><summary>📋 <b>LensTwin — observation-anchored digital twins of fitted strong lenses: <code>al.twins</code> in PyAutoLens, mass-normalisation primitives in PyAutoGalaxy, the <code>Science/twins</code> Cortex project, and the first stellar-plus-dark-matter identifiability experiment (ERC dark-matter cores vs cusps)</b> — ledger: `draft/feature/autolens/lenstwin_epic.md` — filed 2026-10-28 from the LensTwin brief; surveys, report and the phase-0 prompt…</summary>
+
+```
+Continue the 'LensTwin — observation-anchored digital twins of fitted strong lenses: `al.twins` in PyAutoLens, mass-normalisation primitives in PyAutoGalaxy, the `Science/twins` Cortex project, and the first stellar-plus-dark-matter identifiability experiment (ERC dark-matter cores vs cusps)' epic. Its canonical state lives in draft/feature/autolens/lenstwin_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: report `draft/feature/autolens/lenstwin_epic_report.md`; surveys `lenstwin_epic_surveys/`; science half is a PyAutoCortex row (`twins`) born in phase 1, never a Mind repo; workspace and assistant phases wait for the validated workflow (phase 4).
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/lenstwin_p0_twins_core.md">LensTwin phase 0: <code>autolens/twins/</code> core (reference model, baseline twin, seeded simulation, provenance)…</a> — autolens · large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens/lenstwin_p0_twins_core.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/lenstwin_epic.md">LensTwin epic: observation-anchored digital twins of fitted strong lenses — <code>al.twins</code>…</a> — autolens · too-large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens/lenstwin_epic.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/lenstwin_epic_report.md">LensTwin epic — research report, architecture and detailed phase bodies</a> — autolens · too-large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens/lenstwin_epic_report.md
 ```
 
 </details>
@@ -1083,7 +1120,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 37</summary>
+<summary><b>feature</b> — 39</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
 
@@ -1353,6 +1390,22 @@ Use the start-dev skill. draft/feature/workspaces/gallery_runner_missing_tiers.m
 
 ```
 Use the start-dev skill. draft/feature/autoarray/adapt_linear_default_flip.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/lenstwin_epic_surveys/01_pyautolens_pyautogalaxy.md">LensTwin survey 01 — PyAutoLens and PyAutoGalaxy (read-only, 2026-10-28)</a> — autolens</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens/lenstwin_epic_surveys/01_pyautolens_pyautogalaxy.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/lenstwin_epic_surveys/02_assistant_workspace.md">LensTwin survey 02 — autolens_assistant and autolens_workspace (read-only, 2026-10-28)</a> — autolens</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens/lenstwin_epic_surveys/02_assistant_workspace.md
 ```
 
 </details>
@@ -2870,11 +2923,13 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 ## Hygiene
 
-27 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
+29 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
 
 <details>
 <summary>Headerless prompts</summary>
 
+- `draft/feature/autolens/lenstwin_epic_surveys/01_pyautolens_pyautogalaxy.md`
+- `draft/feature/autolens/lenstwin_epic_surveys/02_assistant_workspace.md`
 - `draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough.md`
 - `draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough_p2_greeting.md`
 - `draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough_p3_front_doors.md`
@@ -2905,7 +2960,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-112 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+115 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2919,6 +2974,9 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autogalaxy/piemass_potential.md`
 - `draft/feature/autolens/area_magnification_leggos.md`
 - `draft/feature/autolens/cluster_curves_engine_dispatch.md`
+- `draft/feature/autolens/lenstwin_epic_report.md`
+- `draft/feature/autolens/lenstwin_epic_surveys/01_pyautolens_pyautogalaxy.md`
+- `draft/feature/autolens/lenstwin_epic_surveys/02_assistant_workspace.md`
 - `draft/feature/autolens/magnification_maps_visualization.md`
 - `draft/feature/autolens/source_cluster_arc.md`
 - `draft/feature/autolens_jax_joss/autolens_jax_joss_benchmark_repo.md`
@@ -2947,10 +3005,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md`
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
 - `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`
-- `draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md`
-- `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
-- `draft/bug/autolens/point_solver_error_bisect_health.md`
-- _… and 72 more_
+- _… and 75 more_
 
 </details>
 
