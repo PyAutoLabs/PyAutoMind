@@ -1,3 +1,38 @@
+## lenstwin-p2-mass-budget
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/675
+- completed: 2026-10-28
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/676
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/676
+- epic: lenstwin (phase 2; ledger draft/feature/autolens/lenstwin_epic.md)
+- summary: Phase 2 of the lenstwin epic: the mass-normalisation mathematics, in new module
+  `autogalaxy/operate/mass_budget.py` (merge 7701202). `ag.CircularAperture(radius, centre, …)`
+  measures projected mass by the 0A grid integrator (its sub-grid settings are plain attributes);
+  `Aperture` is the protocol phase 3's Einstein-radius aperture implements in PyAutoLens.
+  `ag.mass_to_light_ratio_for_mass_from` and `ag.kappa_s_for_mass_from` solve Υ and κ_s exactly as
+  mass / mass-at-unit (both convergences linear in the parameter; no root finder).
+  `ag.MassBudget(aperture, fractions).solve(...)` returns the stellar `Basis` of `lmp.Gaussian`,
+  the dark profile (`NFWSph`, or `gNFWSph` with `inner_slope` via `**fixed`) and a `derived` dict
+  (aperture radius and centre, M_ref, M_light at Υ=1, Υ, r_s, κ_s, f_dark, fixed). Multi-galaxy
+  budgets raise `NotImplementedError` (R7). Convention page `docs/api/mass_budget.rst` states R3
+  and R4 as ruled 2026-10-28. Public API grew; nothing removed.
+- tests: `test_autogalaxy/operate/test_mass_budget.py` (18, 1.7 s): Gaussian closed form for Υ
+  (1e-4); NFWSph κ_s target (1e-4), linearity (1e-10), quad and closed-form agreement (1e-3);
+  gNFWSph(inner_slope=1) = NFWSph (1e-4); 50/50 budget on IsothermalSph inside θ_E reproduces
+  π θ_E² (~5e-5 on 88×88 at 0.025"); validation errors. Full suite 1417 passed / 7 skipped; CI
+  green on abcb81b (3.12, 3.13, nojax, docs).
+- traps: the isothermal centre cusp limits grid accuracy (~2e-4 at 0.05" with default sub-sizes;
+  `sub_size_centre=128` on 0.025" reaches 5e-5). gNFW convergence does one `quad` per point, so
+  callers must pass coarse aperture sub-sizes for gNFW. `lmp.Gaussian` floors axis ratio at
+  0.9999, ~8e-5 off the circular closed form at large R/σ. r_s is in arcsec; kpc conversion is
+  phase 3. The comment near `test_autogalaxy/operate/test_lens_calc.py:41` saying
+  `NFWSph.mass_angular_within_circle_from` fails is stale since #674.
+- notes: Consequence: judge — human /prm (merged in this session on the human's /prm command;
+  freeze clear). Heart STALE for environment reasons only. Implementation by an Opus
+  execution-tier worker; plan, review, PR wording in the main session. No task worktree (remote
+  clone). Next: phase 3 (PyAutoLens), needs ruling R6.
+
+## Original prompt
+
 # LensTwin phase 2: mass-normalisation mathematics — `MassBudget`, `CircularAperture` and the M/L and κ_s solvers (PyAutoGalaxy)
 
 Type: feature

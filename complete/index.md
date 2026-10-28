@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2024 records across 10 buckets.
+2025 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -289,6 +289,7 @@ markers; everything below GENERATED is rebuilt.
 - [jax-lapack-compatibility-repair](2026/10/jax-lapack-compatibility-repair.md)
 - [latent-profile-declarations](2026/10/latent-profile-declarations.md)
 - [lenstwin-p0-twins-core](2026/10/lenstwin-p0-twins-core.md) — Phase 0 of the lenstwin epic, library first. 0A PyAutoGalaxy#672 (merge b072e4d):
+- [lenstwin-p2-mass-budget](2026/10/lenstwin-p2-mass-budget.md) — Phase 2 of the lenstwin epic: the mass-normalisation mathematics, in new module
 - [likelihood-lifecycle-p0-brain](2026/10/likelihood-lifecycle-p0-brain.md)
 - [likelihood-lifecycle-p0-inference](2026/10/likelihood-lifecycle-p0-inference.md)
 - [likelihood-lifecycle-p0-insight](2026/10/likelihood-lifecycle-p0-insight.md)
