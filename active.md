@@ -128,11 +128,13 @@
   - reason: PyAutoGalaxy: 9 commit(s) behind origin
   - reason: PyAutoLens: 7 commit(s) behind origin
   - reason: release validation stale: source moved since rehearsal (PyAutoGalaxy, PyAutoLens)
-- checkpoint: local generator + 15 scripts implemented; 581 tests pass; Heart RED blocks shipping; full consumer regeneration and assistant adaptation pending
+- checkpoint: Hands PR328 (584 tests pass), Fit workspace PR178 (8 scripts + 2 notebooks pass); six families regenerated; remaining smokes and assistant pinned-runtime validation underway
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/327
 - issued: 2026-10-28
+- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/328
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/178
 - session: Codex (session ID unavailable)
-- status: library-dev
+- status: workspace-dev
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/compact-colab-setup
 - repos:
   - PyAutoHands: feature/compact-colab-setup
