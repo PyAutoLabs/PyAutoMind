@@ -37,3 +37,25 @@
 - batch-go: HUMAN 2026-10-27 "do the next tasks to the point interferometry is hopefully running" = go for batch 0
 - pr: https://github.com/PyAutoLabs/autolens_profiling/pull/471 OPEN 2026-10-27 (PR A, dff89226; Heart GREEN; judge → human /prm)
 - batch0: chained on RAL 2026-10-27 (scratch/p2b_batch0_submit.log; CPU 0-13 + refs 0-1 on ral, A100 0-9%2) from branch head dff89226
+
+## lenstwin-p0-twins-core
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/671
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/803
+- issued: 2026-10-28
+- session: Claude Code remote (web) session_016nhQ8MoEbXHfUW3wiH58VY
+- location: github-api-only (session clones /home/user/pyautogalaxy and /home/user/pyautolens at origin/main; no task worktree)
+- status: library-dev
+- epic: lenstwin (phase 0; ledger draft/feature/autolens/lenstwin_epic.md)
+- prompt: active/lenstwin_p0_twins_core.md
+- repos:
+  - PyAutoGalaxy: feature/lenstwin-p0-twins-core
+  - PyAutoLens: feature/lenstwin-p0-twins-core
+- summary: |
+    Phase 0 of lenstwin issued 2026-10-28 via /start_dev → /create_issue: 0A PyAutoGalaxy#671
+    (grid-integrated aperture mass for any convergence object; Basis.mass_basis_from) and
+    0B PyAutoLens#803 (autolens/twins/: ObservationSetup, ReferenceModel, Twin, SimulatedTwin,
+    TransformationRecord, transform.Identity; seeded simulation, observed noise map by default;
+    twin.json provenance). Library first: 0A merges before 0B; 0B may develop against the
+    same-named PyAutoGalaxy branch. Rulings R1/R2 taken; R3–R8 untouched. Consequence: judge
+    (human /prm). Next: /start_library lenstwin-p0-twins-core, 0A first; implementation on the
+    execution tier (Opus), plan and judgment in the main session.
