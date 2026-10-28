@@ -44,8 +44,9 @@
 - issued: 2026-10-28
 - session: Claude Code remote (web) session_016nhQ8MoEbXHfUW3wiH58VY
 - location: remote session clones /home/user/pyautogalaxy and /home/user/pyautolens on feature/lenstwin-p0-twins-core (from origin/main a108092 / a8eb094); no task worktree
-- status: library-dev (0A library-shipped, awaiting-merge; 0B in progress)
+- status: library-shipped, awaiting-merge
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/672
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/804
 - epic: lenstwin (phase 0; ledger draft/feature/autolens/lenstwin_epic.md)
 - prompt: active/lenstwin_p0_twins_core.md
 - repos:
@@ -61,4 +62,6 @@
     (human /prm). Next: /start_library lenstwin-p0-twins-core, 0A first; implementation on the
     execution tier (Opus), plan and judgment in the main session.
     2026-10-28: 0A shipped to PyAutoGalaxy#672 (pending-release; 1390 passed / 7 skipped;
-    Heart STALE, environment reasons only). 0B implementation running in the PyAutoLens clone.
+    Heart STALE, environment reasons only). 0B shipped to PyAutoLens#804 (pending-release; 946 passed,
+    7 pre-existing point/test_dataset.py failures under pytest 9.2, identical on the clean branch).
+    Both PRs stop at PR-open (Consequence: judge); merge order 0A then 0B via human /prm.
