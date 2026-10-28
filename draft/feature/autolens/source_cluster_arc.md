@@ -796,3 +796,5 @@ at 12:11Z today and contains #798 (`f791ac77d`), so the 5a pending-release oblig
 by that release; clearing the key is /review_release's act, not recorded here.
 
 Galaxy#657 merged 2026-10-23 (docstring only); pending-release PyAutoGalaxy until its next release.
+
+2026-10-28 — phase-3a subtask `cluster-curves-engine-dispatch` issued as PyAutoLens#807 (cluster plots honour the configured critical-curve engine); in library-dev.
