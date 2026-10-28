@@ -972,7 +972,7 @@ Use the start-dev skill. active/likelihood_lifecycle_p2b_interferometer_campaign
 
 </details>
 
-<details><summary>📋 <a href="active/mass_integral_scalar_radius_nfw_typeerror.md"><code>mass_angular_within_circle_from</code> raises on NFW (and ~30 other profiles): the radial integrand feeds…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/673">issue #673</a> — issued 2026-10-28 — library-dev</summary>
+<details><summary>📋 <a href="active/mass_integral_scalar_radius_nfw_typeerror.md"><code>mass_angular_within_circle_from</code> raises on NFW (and ~30 other profiles): the radial integrand feeds…</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/673">issue #673</a> — issued 2026-10-28 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/674">PyAutoGalaxy#674</a> — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 Use the start-dev skill. active/mass_integral_scalar_radius_nfw_typeerror.md
@@ -3113,6 +3113,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 **PyAutoGalaxy**
 
 - [PyAutoGalaxy#672](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/672) — `active/lenstwin_p0_twins_core.md`
+- [PyAutoGalaxy#674](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/674) — `active/mass_integral_scalar_radius_nfw_typeerror.md`
 - [PyAutoGalaxy#667](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/667) — `complete/2026/10/config-leaf-comments.md`
 - [PyAutoGalaxy#656](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656) — `complete/2026/10/latent-profile-declarations.md`
 - [PyAutoGalaxy#668](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/668) — `complete/2026/10/linear-operated-sersic-priors.md`
