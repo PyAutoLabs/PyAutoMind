@@ -1049,7 +1049,7 @@ Use the start-dev skill. active/results_library_p0_integrity.md
 
 </details>
 
-<details><summary>📋 <a href="active/science_project_management.md">Cortex as the Science project manager: drift check and project birth</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/543">issue #543</a> — issued 2026-10-29 — library-dev</summary>
+<details><summary>📋 <a href="active/science_project_management.md">Cortex as the Science project manager: drift check and project birth</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/543">issue #543</a> — issued 2026-10-29 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/544">PyAutoBrain#544</a>, <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/78">PyAutoCortex#78</a></summary>
 
 ```
 Use the start-dev skill. active/science_project_management.md
