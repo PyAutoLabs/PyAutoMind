@@ -109,7 +109,7 @@
 - epic: likelihood-lifecycle
 - heart-red-override: live human 2026-10-26 "Yes, authorise for 2b" (PRs + planned RAL batches)
 - batch-go: HUMAN 2026-10-27 "do the next tasks to the point interferometry is hopefully running" = go for batch 0
-- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/471 OPEN 2026-10-27 (PR A, dff89226; Heart GREEN; judge → human /prm)
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/471 MERGED 2026-10-29 5e30a537 on the human's explicit "merge them if possible" (CI green, CLEAN); task stays open for PR B (#483 DRAFT)
 - batch0: chained on RAL 2026-10-27 (scratch/p2b_batch0_submit.log; CPU 0-13 + refs 0-1 on ral, A100 0-9%2) from branch head dff89226
 - pr-b: https://github.com/PyAutoLabs/autolens_profiling/pull/483 DRAFT 2026-10-29 (af93f46f; branch feature/likelihood-lifecycle-p2b-results, base the p2b branch; batch 1 72/73 legs, 60/60 cells current, 30/30 parity match; matrix-free alma 192x192 TIMEOUT recorded missing per human ruling 2026-10-29; worktree ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p2b-results; human review → /prm after #471)
 
