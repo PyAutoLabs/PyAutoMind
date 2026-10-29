@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2040 records across 10 buckets.
+2041 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -339,6 +339,7 @@ markers; everything below GENERATED is rebuilt.
 - [memory-domain-routing](2026/10/memory-domain-routing.md) — Campaign records now route by information type: inference through Insight, profiling through Pulse, project-ow…
 - [mesh-geometry-transformed-areas](2026/10/mesh-geometry-transformed-areas.md)
 - [mesh-interpolator-numerics-audit](2026/10/mesh-interpolator-numerics-audit.md)
+- [mesh-magnification-areas](2026/10/mesh-magnification-areas.md)
 - [mind-dashboard-simplify](2026/10/mind-dashboard-simplify.md)
 - [mind-dashboard-simplify-2](2026/10/mind-dashboard-simplify-2.md)
 - [minimal-seed-instructions](2026/10/minimal-seed-instructions.md)

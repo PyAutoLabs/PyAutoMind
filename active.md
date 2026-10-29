@@ -6,19 +6,6 @@
 - community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
 - prompt: active/matrix_free_interferometer_inversion.md
 
-## mesh-magnification-areas
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/659
-- issued: 2026-10-28
-- session: Claude Code (Opus 5.5); https://claude.ai/code/session_016nhQ8NkVvJhhqNSibeGcBQ
-- status: pr-open (PyAutoArray#664, autolens_workspace_test#348; merge Array first) — awaiting human /prm
-- worktree: ~/Code/PyAutoLabs-wt/mesh-magnification-areas
-- repos:
-  - PyAutoArray: feature/mesh-magnification-areas
-  - autolens_workspace_test: feature/mesh-magnification-areas
-- prompt: active/mesh_magnification_areas.md
-- epic: cluster-strong-lensing (Source & Cluster arc phase 4a)
-- autonomy: --auto launched by human 2026-10-28; effective supervised → decide-and-flag, ends at PR-open; judge → human /prm
-
 ## results-library-p0-integrity
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1734
 - issued: 2026-10-28
