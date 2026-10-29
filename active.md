@@ -55,7 +55,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/810
 - issued: 2026-10-29
 - session: Claude Code (laptop)
-- status: library-dev
+- status: library-shipped (DRAFT, HOLD)
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/811
 - worktree: ~/Code/PyAutoLabs-wt/lenstwin-p4a-twin-fit-model
 - repos:
   - PyAutoLens: feature/lenstwin-p4a-twin-fit-model
