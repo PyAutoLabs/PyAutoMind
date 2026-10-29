@@ -172,7 +172,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/543
 - issued: 2026-10-29
 - session: Claude Code (Opus 5.5); session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/cortex-science-drift
 - repos:
   - PyAutoBrain: feature/cortex-science-drift
@@ -180,3 +180,8 @@
 - prompt: active/science_project_management.md
 - depends-on: PyAutoLabs/PyAutoCortex#77 (Workspace/Science local_path fixes)
 - next-phase: cortex birth (new-project command) — own issue after this ships
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/544 OPEN 2026-10-29 (drift verb + tests); companion https://github.com/PyAutoLabs/PyAutoCortex/pull/78 OPEN (docs, decision 62) — land PyAutoCortex#77 first; tier judge → human /prm
+- heart-red-override:
+  - authorized: live human 2026-10-29 "I authorize" (PyAutoBrain#543), development ship only; no merge/release/CI bypass
+  - red-reasons: PyAutoArray: 4 uncommitted source change(s); PyAutoGalaxy: 9 commit(s) behind origin; PyAutoLens: 7 commit(s) behind origin; release validation incomplete: no rehearsal for current source; release push credential check stale (pyautolabs-bot, 49h old)
+  - gates: Brain cortex conductor tests 71 passed; Cortex check OK + 65 tests; no new ruff findings; smoke n/a; independent review FINDINGS, all addressed
