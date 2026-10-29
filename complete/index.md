@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2037 records across 10 buckets.
+2038 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -423,6 +423,7 @@ markers; everything below GENERATED is rebuilt.
 - [ral-category-paths-autolens-profiling](2026/10/ral-category-paths-autolens-profiling.md)
 - [ral-category-paths-phase2](2026/10/ral-category-paths-phase2.md)
 - [ral-route-constants-fft-levers](2026/10/ral-route-constants-fft-levers.md)
+- [rectangular-28sq-profiling-rows](2026/10/rectangular-28sq-profiling-rows.md)
 - [repos-sync-check-root-routing](2026/10/repos-sync-check-root-routing.md)
 - [restore-dashboard-green](2026/10/restore-dashboard-green.md)
 - [result-provenance-guards](2026/10/result-provenance-guards.md)

@@ -6,23 +6,6 @@
 - community: https://github.com/PyAutoLabs/.github/discussions/39 (@HRSAstro)
 - prompt: active/matrix_free_interferometer_inversion.md
 
-## rectangular-28sq-profiling-rows
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/468
-- issued: 2026-10-26
-- session: Claude Code (Opus 5.5); session ID unavailable
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/rectangular-28sq-profiling-rows
-- repos:
-  - autolens_inference: feature/rectangular-28sq-profiling-rows
-- released-claims: autolens_profiling (#470 merged a1a4ccf1), PyAutoPulse (#80 merged 5474e3cb) — branches kept in the worktree until close-out
-- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/49 OPEN, ready for /prm 2026-10-29 (head 4de9065, lint green, MERGEABLE+CLEAN; size_match 32/0; jax_cpu_dense + light_fixed gap declared out of scope in PR body per approved plan)
-- prompt: active/rectangular_28sq_profiling_rows.md
-- epic: likelihood-lifecycle
-- heart-red-override: authorized by live human 2026-10-26 "I approve of the override" (this task incl. RAL jobs); reasons + gates recorded at ship
-- scope-add: HUMAN 2026-10-26 chose "Yes, small Pulse PR first" (option text: "Same RED override extended to it. Ships before the profiling rows.") — PyAutoPulse one-current-per-key adds regime
-- library-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/80 MERGED 2026-10-26 5474e3cb via human /prm (regime in @3 one-current key)
-- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/470 MERGED 2026-10-27 a1a4ccf1 via human /prm (rect28 rows, RAL 413044/413046 8/8); task stays open until workspace-pr #49 merges via human /prm; witness gap jax_cpu_dense + light_fixed unmeasured (no profiling setup/cells; plan's declared out-of-scope, recorded in #49)
-
 ## mesh-magnification-areas
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/659
 - issued: 2026-10-28
