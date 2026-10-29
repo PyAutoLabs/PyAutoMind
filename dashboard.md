@@ -12,7 +12,7 @@
 | [Epics](#epics) | 19 |
 | [In flight](#in-flight) | 3 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 281 |
+| [Backlog](#backlog) | 282 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -674,7 +674,7 @@ Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens
 </details>
 
 <details>
-<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 13 queued prompt(s), in order</summary>
+<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 14 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Cluster strong lensing — Source &amp; Cluster arc</b> — ledger: `draft/feature/autolens/source_cluster_arc.md` — In progress — 1a–1d, phase 3a audit (profiling#364, workspace_test#341) and phase 3b field-preserving cap fix (Galaxy#646…</summary>
 
@@ -768,6 +768,14 @@ Use the start-dev skill. draft/docs/howtolens/cluster_pixelized_source.md
 
 ```
 Use the start-dev skill. draft/bug/autoarray/rectangular_adaptive_zeroed_ring_guard_row_mismatch.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/pixelization_source_science_py_document_mesh_mag.md">Pixelization source_science.py: document mesh magnification areas properly…</a> — autolens_workspace · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens_workspace/pixelization_source_science_py_document_mesh_mag.md
 ```
 
 </details>
