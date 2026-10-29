@@ -98,3 +98,15 @@
 - repos:
   - ECLIPSE_lens_catalogue: feature/r2-pages-function-access
 - tier: judge — merge mode: human /prm
+
+## files-experiment-scripts-cleanup
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/662
+- issued: 2026-10-29
+- session: Claude Code (Opus 5.5) desktop
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/files-experiment-scripts-cleanup
+- repos:
+  - PyAutoArray: feature/files-experiment-scripts-cleanup
+- prompt: active/files_experiment_scripts_import_a_removed_module.md
+- tier: glance — auto-merge on green if Witness passes (plan approved by human 2026-10-29)
+- coordination: Human authorized concurrent work 2026-10-29 alongside mesh-magnification-areas and cosmos-web-ring-intro-visuals; PyAutoArray change limited to deleting files/ (neither branch touches files/).

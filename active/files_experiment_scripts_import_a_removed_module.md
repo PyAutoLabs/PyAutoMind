@@ -10,6 +10,7 @@ Priority: low
 Status: formalised
 Consequence: glance
 Witness: every script under `PyAutoArray/files/` either imports successfully against the installed stack, or is gone; `git grep -c rectangular_spline` returns 0.
+Issued: 2026-10-29
 Review-minutes: 3
 Unattended: ready
 
