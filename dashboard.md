@@ -1009,7 +1009,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/mesh_magnification_exact_quadrature_areas.md">Mesh magnification: exact-quadrature areas for KNN meshes (phase 4b)</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/665">issue #665</a> — issued 2026-10-29 — library-dev</summary>
+<details><summary>📋 <a href="active/mesh_magnification_exact_quadrature_areas.md">Mesh magnification: exact-quadrature areas for KNN meshes (phase 4b)</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/665">issue #665</a> — issued 2026-10-29 — pr-open (PyAutoArray#666, autolens_workspace_test#349; merge Array first) — awaiting human /prm — ⏳ pending release: PyAutoArray</summary>
 
 ```
 Use the start-dev skill. active/mesh_magnification_exact_quadrature_areas.md
@@ -3111,6 +3111,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoArray**
 
+- [PyAutoArray#666](https://github.com/PyAutoLabs/PyAutoArray/pull/666) — `active/mesh_magnification_exact_quadrature_areas.md`
 - [PyAutoArray#664](https://github.com/PyAutoLabs/PyAutoArray/pull/664) — `complete/2026/10/mesh-magnification-areas.md`
 
 **PyAutoFit**
