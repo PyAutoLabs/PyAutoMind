@@ -1,4 +1,4 @@
-# Mesh magnification: exact-quadrature areas for adaptive rectangular and KNN meshes (phase 4b)
+# Mesh magnification: exact-quadrature areas for KNN meshes (phase 4b)
 
 Type: feature
 Target: autoarray
@@ -30,6 +30,17 @@ Filed: 2026-10-28
 NOTE: this renumbers the old parent's "4b" (library flux-ratio magnification promotion) — that and the
 source_science recovery sweep become 4c/4d when issued.
 
+## Scope change (2026-10-29)
+
+Human 2026-10-29 chose "Fix adaptive rect first": the adaptive rectangular exact hat quadrature
+(work item 1 below) was folded INTO 4a (PyAutoArray#659, `adaptive_rectangular_hat_areas_from`)
+before its PRs opened. Measured after: lensed BilinearAdaptImage +14.43% -> -0.57%, RTUAdaptImage
++8.56% -> +0.08%; identity BilinearAdaptDensity +11.23% -> -0.34%; tolerances tightened to 1%
+(RTUAdaptDensity lensed stays -1.82%, unchanged by the areas). Open item from it: on a strongly
+distorted toy (radial a=0.3, BilinearAdaptImage) the bbox-domain hat areas sit +6.5% / +13% vs the
+traced-region quadrature (domain mismatch, separable interpolant extends into untraced bbox corners);
+the lensed simulator check is unaffected. 4b is now items 2-4 (KNN / KNNBarycentric) only.
+
 ## Measured bias at 4a (PyAutoArray#659; tolerances in 4a document these)
 
 | mesh | unit μ_id−1 | integ. lensed | integ. identity |
@@ -43,7 +54,7 @@ source_science recovery sweep become 4c/4d when issued.
 
 ## Work
 
-1. Adaptive rectangular (mesh_geometry/rectangular.py): replace node-midpoint CDF-transformed cell areas
+1. DONE IN 4a (see scope change). Adaptive rectangular (mesh_geometry/rectangular.py): replace node-midpoint CDF-transformed cell areas
    with the exact per-axis quadrature of each node's bilinear hat through the CDF,
    q(i) = ∫ hat_i(U(x)) dx, outer-product per axis. A 4a scratch prototype
    (/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/2aa32082-3125-4533-a9ef-6b0e392688b6/scratchpad/measure.py,
