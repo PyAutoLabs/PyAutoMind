@@ -145,3 +145,12 @@
 - repos:
   - PyAutoFit: feature/hpc-campaign-p1-status-record
   - PyAutoNerves: feature/hpc-campaign-p1-status-record
+
+## cosmos-web-ring-intro-visuals
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/168
+- issued: 2026-10-29
+- session: Codex
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/cosmos-web-ring-intro-visuals
+- repos:
+  - autolens_assistant: feature/cosmos-web-ring-intro-visuals

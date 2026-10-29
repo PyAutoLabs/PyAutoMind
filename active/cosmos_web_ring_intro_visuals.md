@@ -3,6 +3,8 @@
 Type: feature
 Target: autolens_assistant
 Consequence: judge
+Issued: 2026-10-29
+Issue: https://github.com/PyAutoLabs/autolens_assistant/issues/168
 
 Primary: @autolens_assistant. Assistant-specific presentation; retain existing library/workspace diagnostic defaults.
 
@@ -18,7 +20,7 @@ having a less information dense image for new users using the AI assistant.
 
 Basically, my feeling is that for autolens assistant users the cosmos web ring example is their entry point to PYAutoLens, and its quite under whelming how basic the cosmos web ring in built autolens visualization looks, and that its got panels that confuse a reader. So I think we should make them clear and better and perhaps include a task or feature which prompts them to customize and change visualization with a suggest for now. Do this task and then have me run and inspect the paired Colab Notebook so I can see how the assistant structure of conversation and images look.
 
-## Proposed plan — awaiting approval
+## Approved plan
 
 1. Build a consistent assistant introduction plot: a readable 2x2 grid with Image, Noise map, Signal-to-noise map and PSF. Preserve model over-sampling internally but omit its panels from this presentation.
 2. Compare brightness stretches and perceptually ordered color maps on the actual F444W data, choosing limits that reveal both the central lens and the ring. Keep negative/noise pixels well-defined, excluded regions distinct and colorbars truthful. Carry the chosen presentation through the notebook's introductory band comparison.
@@ -44,4 +46,4 @@ Tier: judge — merge mode: human /prm.
 
 The existing `cosmos_web_ring_guided_walkthrough_p2_greeting.md` backlog task owns the broader no-search greeting redesign and benchmark changes; this task does not absorb that scope. Preserve its future work and note the visual recipe dependency when shipping.
 
-No implementation edits or new issue yet; explicit plan approval required by workspace AGENTS.md.
+User explicitly approved this plan on 2026-10-29. Single assistant presentation task; no public library API change. Brain keyword sizing overestimated scope by treating references to existing library APIs as proposed changes.
