@@ -47,3 +47,14 @@ Tier: judge — merge mode: human /prm.
 The existing `cosmos_web_ring_guided_walkthrough_p2_greeting.md` backlog task owns the broader no-search greeting redesign and benchmark changes; this task does not absorb that scope. Preserve its future work and note the visual recipe dependency when shipping.
 
 User explicitly approved this plan on 2026-10-29. Single assistant presentation task; no public library API change. Brain keyword sizing overestimated scope by treating references to existing library APIs as proposed changes.
+
+## Implementation checkpoint — 2026-10-29
+
+- Approved scope implemented in `.worktrees/cosmos-web-ring-intro-visuals/autolens_assistant`, branch `feature/cosmos-web-ring-intro-visuals`, based on 7e1b80f; source changes not yet committed.
+- Assistant-owned `autoassistant/intro_plots.py` supplies four panels, asinh brightness stretch (0.01), truthful colorbars and explicit excluded-pixel display. The converter embeds this helper into standalone Colab and folds its setup cell.
+- Greeting, preparation and style guidance updated; notebook adds editable colormap/contrast and a Gemini prompt. Generated figures/notebook rebuilt and executed with Python 3.12 + packaged PyAutoLens 2026.10.26.1. Existing numerical preparation preserved.
+- Validation: 24 focused tests passed, 1 existing expected failure; all notebook cells executed; API gate passes; Gemini contexts 70 + default pass cap check. Fit score 3717.19 matches recorded reference. Logs: task root `validation.log`, `notebook-build.log`, `api-check.log`, `readiness.json`.
+- Build uses a snapshot of merged PyAutoHands 16dec73 because the canonical checkout predates the compact-Colab generator. No Hands source modified.
+- Human review bundle: `/mnt/c/Users/Jammy/Workspace/Science/scratch/cosmos_web_ring_intro_visuals/` (`comparison.html`, `walkthrough.html`, portable `cosmos_web_ring_colab.ipynb` with embedded illustrations). Hosted Colab/Gemini remains untested.
+- Ship gate RED: PyAutoArray: 4 uncommitted source change(s); PyAutoGalaxy: 9 commit(s) behind origin; PyAutoLens: 7 commit(s) behind origin. Additional stale reasons: release validation incomplete: no rehearsal for current source; release push credential check stale (pyautolabs-bot, 49h old).
+- Asked the human for a development-only override for issue #168 after surfacing exact reasons and passing evidence. Await response before commit/push/PR. No merge or release authorized. If authorized, record the override in all four sinks; publish branch and create/attach PR; provide the hosted Colab link (make new static illustration URLs accessible at the branch/immutable commit).
