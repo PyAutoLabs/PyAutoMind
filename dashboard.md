@@ -953,7 +953,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/cortex_birth.md">Cortex birth: scaffold, seed and register a Science project in one step</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/545">issue #545</a> — issued 2026-10-29 — library-dev</summary>
+<details><summary>📋 <a href="active/cortex_birth.md">Cortex birth: scaffold, seed and register a Science project in one step</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/545">issue #545</a> — issued 2026-10-29 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/546">PyAutoBrain#546</a>, <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/79">PyAutoCortex#79</a></summary>
 
 ```
 Use the start-dev skill. active/cortex_birth.md
