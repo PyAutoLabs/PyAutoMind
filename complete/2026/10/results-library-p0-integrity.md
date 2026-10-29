@@ -1,3 +1,36 @@
+## results-library-p0-integrity
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1734
+- completed: 2026-10-29
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1736
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1737
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/112
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1736
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1737
+- epic: results-library (phase 0, shared with hpc-campaign as its phase 0 #A; ledger draft/feature/autofit/results_library_epic.md)
+- summary: Phase 0 of results-library in two PRs. **0a artefact integrity (#1736):** `zip_directory`
+  writes a temp file then `os.replace` (zip complete or absent; png/fits/hdf5 ZIP_STORED);
+  non-destructive `restore()` (temp-sibling extract + rename, deletes only an owned zip, `BadZipFile` →
+  `<hash>.zip.corrupt_<utc>` and continue as not complete); read-only `open_result()`; zip-aware cached
+  `is_complete`; Nautilus/dynesty checkpoint probe → `search_internal.failed_<utc>/` and start fresh;
+  Timer under `files/`, atomic. **0b honest reads (#1737):** `from_directory(on_error="skip"|"raise")` +
+  `agg.errors` (BadZipFile/EOFError/zlib.error); empty-aggregator warning; aggregator print → logging;
+  `AggregateCSV(strict=True)` default, union header, atomic save, blank-column report, key-joined labels;
+  `Row` sigma/max_lh regression tests; `post_fit_output` docstring fix. **Downstream:** human ruled option
+  (a) 2026-10-29 — euclid pipeline #112 passes `strict=False` explicitly in all 17 `AggregateCSV` calls
+  (works on released and new PyAutoFit), merged before #1737.
+- tests: 0a suite 3,953 passed, smoke autofit+autolens_test 47/47; 0b suite 3,969 passed, smoke
+  autofit+autolens_test+euclid 56/56; euclid `tests/` 352/352 against 0b (was 351 + 1 failed); CI green
+  on all legs (euclid `smoke / smoke` skipped by Heart's change filter — only catalogue/ and workflow/
+  touched; unit + slow legs green).
+- traps: never run two PyAutoFit suites in parallel — `test_aggregate_csv.py` writes a fixed
+  `/tmp/summary.csv`. The euclid smoke list does not run the catalogue scripts; the euclid `tests/`
+  suite is what catches AggregateCSV behaviour changes. A stacked PR's base must be retargeted to
+  main by hand when the base branch is not deleted.
+- next: results-library phase 1 (results index, status classes, `dataset_identity.json`, imports
+  `autofit.non_linear.status.states`).
+
+## Original prompt
+
 # Results library phase 0: artefact integrity and honest reads in PyAutoFit (shared with hpc-campaign) — one issue, PR 0a then PR 0b
 
 Type: feature

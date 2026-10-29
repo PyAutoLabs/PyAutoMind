@@ -1,3 +1,31 @@
+## hpc-campaign-p1-status-record
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1735
+- issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/206
+- completed: 2026-10-29
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1738
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/207
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/179
+- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/207
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1738
+- epic: hpc-campaign (phase 1; ledger draft/research/autofit/hpc_campaign_epic.md)
+- summary: Per-fit status record in new `autofit/non_linear/status/`: `states.py` (RunState,
+  FailureClass, Product — the shared vocabulary), atomic `<output_path>.status.json` (≤2 KB, cadence
+  `hpc.status_interval_s` 60), append-only `.status.jsonl` (resumed fit = attempt 2), failure record
+  (`failed` + failure_class + `.traceback.txt`, exception re-raised), SIGUSR1 → checkpoint flush +
+  `timeout_pending`, SIGTERM same then exit 143; `progress()` for Nautilus/Dynesty/Emcee/BFGS/LBFGS;
+  `hpc.status: false` writes nothing. PyAutoNerves site layer: `site.yaml` schema with ranges and
+  `unverified`, `Config.push_site`, shipped `site/ral.yaml` (`gpu` gpu_only; `Site.check_cpu_job`
+  rejects gpu, ral,gpu, gpu,ral). autofit_workspace: cookbook `search.py` Status Record / Batch Job
+  Time Limits / Turning It Off + `general.yaml` keys.
+- tests: Fit suite green; merge result main+#1736+#1738 3,976 passed; Nerves 280 passed; smoke
+  autofit+autolens_test 47/47 on the combined worktree; CI green on all legs of all three PRs.
+- traps: the docs' `exec python ...` advice (so a `--signal=B:USR1` reaches the fit) is untested on a
+  real Slurm job. autofit_workspace was merged once #1738 merged (library-first gate), before release.
+- next: hpc-campaign phase 2 (campaign core + Slurm/Local/Fake adapters + collector + partition lint +
+  retrospective sacct mode).
+
+## Original prompt
+
 # HPC campaign phase 1: per-fit status record, failure record, shared state vocabulary (PyAutoFit) and site config (PyAutoNerves)
 
 Type: feature

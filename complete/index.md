@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2043 records across 10 buckets.
+2045 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -264,6 +264,7 @@ markers; everything below GENERATED is rebuilt.
 - [howtofit-advanced-references](2026/10/howtofit-advanced-references.md)
 - [howtofit-ep-shared-centre](2026/10/howtofit-ep-shared-centre.md)
 - [howtofit-runtime-guidance](2026/10/howtofit-runtime-guidance.md)
+- [hpc-campaign-p1-status-record](2026/10/hpc-campaign-p1-status-record.md) — Per-fit status record in new `autofit/non_linear/status/`: `states.py` (RunState,
 - [hst-cleanslate-light-mode](2026/10/hst-cleanslate-light-mode.md)
 - [hst-cleanslate-numba-shared-lp](2026/10/hst-cleanslate-numba-shared-lp.md)
 - [hst-mass-samplers-wave1](2026/10/hst-mass-samplers-wave1.md)
@@ -432,6 +433,7 @@ markers; everything below GENERATED is rebuilt.
 - [repos-sync-check-root-routing](2026/10/repos-sync-check-root-routing.md)
 - [restore-dashboard-green](2026/10/restore-dashboard-green.md)
 - [result-provenance-guards](2026/10/result-provenance-guards.md)
+- [results-library-p0-integrity](2026/10/results-library-p0-integrity.md) — Phase 0 of results-library in two PRs. **0a artefact integrity (#1736):** `zip_directory`
 - [retire-claude-md-pointers](2026/10/retire-claude-md-pointers.md)
 - [retire-nautilus-leftovers](2026/10/retire-nautilus-leftovers.md)
 - [retire-nested-claude-md-pointers](2026/10/retire-nested-claude-md-pointers.md)
