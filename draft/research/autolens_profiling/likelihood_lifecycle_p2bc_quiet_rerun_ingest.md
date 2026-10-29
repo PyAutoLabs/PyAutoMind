@@ -30,14 +30,16 @@ Human 2026-10-29 "do the reruns now": the published 2b batch-1 RAL CPU legs and 
 
 | Campaign | RAL job | Array | Legs | Branch (pushed, **no PR**) | RAL checkout → output |
 |---|---|---|---|---|---|
-| 2c solved CPU runtime | 413267 | `[0-1%2]` | 2 | `feature/likelihood-lifecycle-p2c-quiet-rerun` eb8b3237 | `/mnt/ral/jnightin/profiling/autolens_profiling_p2c_rerun` → `output/p2c_quiet/` |
-| 2b sma | 413268 | `[0-13%2]` | 14 | `feature/likelihood-lifecycle-p2b-quiet-rerun` bd0dca1d | `/mnt/ral/jnightin/profiling/autolens_profiling_p2b_rerun` → `output/p2b_quiet/` |
-| 2b alma | 413269 | `%2` | (see submit log) | same | same |
-| 2b alma_high | 413270 | `%2` | (see submit log) | same | same |
-| 2b jvla | 413271 | `[0-7%2]` | 8 | same | same |
+| 2c solved CPU runtime | 413319 (was 413267) | `[0-1%2]` 1:00:00 | 2 | `feature/likelihood-lifecycle-p2c-quiet-rerun` f99c70ed (was eb8b3237) | `/mnt/ral/jnightin/profiling/autolens_profiling_p2c_rerun` → `output/p2c_quiet/` |
+| 2b sma | 413320 (was 413268) | `[0-13%2]` 1:00:00 | 14 | `feature/likelihood-lifecycle-p2b-quiet-rerun` 7c682ccb (was bd0dca1d) | `/mnt/ral/jnightin/profiling/autolens_profiling_p2b_rerun` → `output/p2b_quiet/` |
+| 2b alma | 413321 (was 413269) | `[0-7%2]` 1:00:00 | 8 | same | same |
+| 2b alma_high | 413322 (was 413270) | `[0-7%2]` 1:00:00 | 8 | same | same |
+| 2b jvla | 413323 (was 413271) | `[0-7%2]` 4:00:00 | 8 | same | same |
 
 - All chained `afterany` (2c first, then 2b sma → alma → alma_high → jvla), `--exclusive`, at most 2 nodes at once. 38 2b legs + 2 2c legs.
-- Submit log: `/mnt/ral/jnightin/scratch/p2_quiet_rerun_submit.log`.
+- Submit log: `/mnt/ral/jnightin/scratch/p2_quiet_rerun_submit.log` (first submission 413267-413271, held JobHeldUser, never started; CANCELLED 2026-10-29 20:38 GMT).
+- RESUBMITTED 2026-10-29 20:38 GMT on the jax 0.11.2 venv with the XLA:CPU workaround (human option "All JAX CPU legs"): both branches merged main fe81b1f4 (#486: `--xla_cpu_multi_thread_eigen=false` appended to XLA_FLAGS on every JAX_PLATFORMS=cpu leg, recorded in `device.xla_flags`) and re-rendered their quiet submits. Script `/mnt/ral/jnightin/scratch/p2_quiet_rerun_resubmit_jax0112.sh`, log `p2_quiet_rerun_resubmit_jax0112.log` (marker P2QUIETRESUBMITDONE). Guards that ran: venv reads jax/jaxlib 0.11.2, both HEADs == SHAs, clean trees, pin 2026.10.25.1, every quiet submit has the flag + `--exclusive` + quiet gate + `%2`, datasets present, no quiet output, each held array PENDING JobHeldUser before the scancel. Same afterany chain 413319 -> 413320 -> 413321 -> 413322 -> 413323.
+- ENV CHANGE: RAL venv `/mnt/ral/jnightin/PyAuto/PyAuto` upgraded jax/jaxlib/jax-cuda12-{plugin,pjrt} 0.10.2 -> 0.11.2 (human 2026-10-29; log `scratch/jax0112_upgrade.log`; freezes `scratch/pyauto_venv_freeze_{before,after}_jax0112_20261029.txt`). The quiet rows are therefore NOT like-for-like with the published 2b/2c rows they replace (those were jax 0.10.2, no flag): this changes two things at once (load and jax/flag); the ingest must say so and the human rules whether they replace or sit alongside (phase-3 Q7).
 - Local worktrees: `~/Code/PyAutoLabs-wt/likelihood-lifecycle-p2b-quiet-rerun`, `~/Code/PyAutoLabs-wt/likelihood-lifecycle-p2c-quiet-rerun` (kept at close-out; do not remove until the ingest PRs merge).
 
 ## How to tell a row is quiet
@@ -47,7 +49,7 @@ Human 2026-10-29 "do the reruns now": the published 2b batch-1 RAL CPU legs and 
 
 ## What to do
 
-1. Wait for 413267–413271 to finish (`sacct`); never touch another campaign's jobs.
+1. Wait for 413319–413323 to finish (`sacct`); never touch another campaign's jobs.
 2. Review first: both rerun branches change the shared `scripts/misc/campaigns/_common.py` (quiet-node gate, `--exclusive` option). Open them as PRs with that change called out; `imaging_p2a.py --check`, `interferometer_p2b.py --check` and the other campaign `--check`s must stay byte-identical or the diffs explained.
 3. Pull `output/p2{b,c}_quiet/`; classify every leg quiet / not quiet as above.
 4. Ingest the quiet rows as **follow-up PRs** (one per campaign is fine): replace the published RAL CPU rows (prior rows → `history/` via the catalogue builder), keep parity `match`, regenerate catalogue / coverage / dashboard, update the 2b and 2c campaign pages' verdict if a number moves, refetch the Pulse receipt.
