@@ -10,7 +10,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/659
 - issued: 2026-10-28
 - session: Claude Code (Opus 5.5); https://claude.ai/code/session_016nhQ8NkVvJhhqNSibeGcBQ
-- status: library-dev
+- status: pr-open (PyAutoArray#664, autolens_workspace_test#348; merge Array first) — awaiting human /prm
 - worktree: ~/Code/PyAutoLabs-wt/mesh-magnification-areas
 - repos:
   - PyAutoArray: feature/mesh-magnification-areas
