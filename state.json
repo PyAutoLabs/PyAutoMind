@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 13 in flight",
-  "updated": "2026-10-29T12:25:26Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 12 in flight",
+  "updated": "2026-10-29T12:55:13Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Cortex as the Science project manager: drift check and project birth \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/544",
-      "prompt": "Use the start-dev skill. active/science_project_management.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -125,6 +119,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#678 \u2014 gnfw-convergence-fast",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/678",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#656 \u2014 Outcome and authority",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656",
       "prompt": null
     }
   ]

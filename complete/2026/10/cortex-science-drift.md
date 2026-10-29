@@ -1,3 +1,31 @@
+## Outcome
+
+Phase 1 of making the Cortex the Science project manager shipped on 2026-10-29. The new read-only `pyauto-brain cortex drift [--science-root PATH] [--json]` verb compares the laptop Science tree (`<root>/<category>/<project>`, root derived from the rows' `local_path`s) with `projects.yaml`.
+
+- **Errors:** unregistered `active/` or `development/` folders; vanished `local_path`s; category vs status; a derived root that no longer exists while other rows' folders do.
+- **Warnings:** unregistered `complete/` or `archive/` storage folders; `ral_root` in a different category.
+- `census` and `checkin` print a one-line summary. `census()` stays drift-free, so the CI-rendered board is machine-independent.
+- Paths compare after `realpath`, so the `~/Science/Science` launch symlink matches.
+- Schema decision 62 records `development/` as a Science category.
+
+Shipped with PyAutoCortex#77: `local_path`s moved to Workspace/Science; `subhalo`, `cowls` and `cowls_ansofi` retired.
+
+Real tree on merged main: 0 errors, 11 warnings (four development projects and `euclid` with RAL under `active/`, `euclid_dr1` top-level on RAL, five unregistered storage folders). The pre-fix register gave 12 errors and exit 1: this is the incident the verb exists for.
+
+## Review
+
+Independent review FINDINGS, all addressed before PR: symlinked root, `checkin --dry-run` line, messages. Stated limit, tested: detecting the laptop needs some row's folder to exist (the repo-backed rows provide it).
+
+## Heart
+
+Shipped under a live-human development-only Heart RED override ("I authorize"). RED reasons concerned PyAutoArray, PyAutoGalaxy, PyAutoLens and release validation, not these repos. Merged by the human's explicit "Merge, then Phase 2". PyAutoCortex#78 had no CI (docs paths unwatched) and was merged on an explicit human yes.
+
+## Remainder
+
+Phase 2 (`cortex birth`) re-filed as `draft/feature/cortex/cortex_birth.md`.
+
+## Original prompt
+
 # Cortex as the Science project manager: drift check and project birth
 
 Type: feature

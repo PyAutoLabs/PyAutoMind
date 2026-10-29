@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2029 records across 10 buckets.
+2030 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -186,6 +186,7 @@ markers; everything below GENERATED is rebuilt.
 - [cortex-find-script-symlink](2026/10/cortex-find-script-symlink.md)
 - [cortex-project-card-polish](2026/10/cortex-project-card-polish.md)
 - [cortex-project-readability](2026/10/cortex-project-readability.md) — Phase 1 of the human-approved Cortex Projects redesign (#521). Brain's Cortex conductor (`agents/conductors/co…
+- [cortex-science-drift](2026/10/cortex-science-drift.md)
 - [cosmos-web-ring-notebook](2026/10/cosmos-web-ring-notebook.md) — merged 2026-10-23
 - [critical-curves-dispatch-audit](2026/10/critical-curves-dispatch-audit.md) — Phase 3a evidence and contract shipped. Research, raw CPU JSON/PNG, frozen measured source and cumulative wiki…
 - [custom-runner-relevance](2026/10/custom-runner-relevance.md)
