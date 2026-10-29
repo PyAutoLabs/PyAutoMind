@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2030 records across 10 buckets.
+2031 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -183,6 +183,7 @@ markers; everything below GENERATED is rebuilt.
 - [compile-builder-hst-mge](2026/10/compile-builder-hst-mge.md) — Shipped one explicit, isolated HST/MGE fp64 jit current-runtime compile workload; broader profiling campaign r…
 - [config-leaf-comments](2026/10/config-leaf-comments.md) — Added 600 configuration comments and a standalone non-prior leaf-comment checker with focused regression tests…
 - [corner-plot-workspace-config](2026/10/corner-plot-workspace-config.md)
+- [cortex-birth](2026/10/cortex-birth.md)
 - [cortex-find-script-symlink](2026/10/cortex-find-script-symlink.md)
 - [cortex-project-card-polish](2026/10/cortex-project-card-polish.md)
 - [cortex-project-readability](2026/10/cortex-project-readability.md) — Phase 1 of the human-approved Cortex Projects redesign (#521). Brain's Cortex conductor (`agents/conductors/co…

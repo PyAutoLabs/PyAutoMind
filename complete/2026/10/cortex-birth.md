@@ -1,3 +1,30 @@
+## Outcome
+
+Phase 2 of making the Cortex the Science project manager shipped on 2026-10-29.
+
+- `scripts/cortex.py birth` (PyAutoCortex#79) appends one validated row and opens its ledger. The read-back compares every field, and `projects.yaml` is restored on any failure.
+- `pyauto-brain cortex birth` (PyAutoBrain#546) derives the row from a project folder that the domain assistant's `start-new-project` scaffolded: remote, `ral_root`, `hpc/sync` verbs and ledger. It cuts `claude/birth-<key>`, writes through `cortex.py`, and pushes only if the classifier calls it a birth. Any failure leaves `main` clean.
+- The `/cortex` skill gained "Start a new project".
+
+Human decision: RAL mirrors the laptop. PyAutoCortex#80 records the moves to RAL `development/` (four projects) and `complete/` (euclid), registers the storage folders as retired, repoints `concr`, and fixes `euclid_dr1`'s `ral_root`. `cortex drift` on main: none.
+
+## Review
+
+Independent review FINDINGS, all fixed and tested:
+- a failed commit left `main` dirty with exit 0;
+- exit codes did not match the docs;
+- a backslash was silently treated as a YAML escape;
+- `help` was counted as a sync verb;
+- the summary limit was not checked in the dry run.
+
+CI caught tenant-firewall instance names in the tests; replaced with neutral names.
+
+## Heart
+
+Shipped under a live-human development-only Heart RED override ("I authorize development only heart override"). The RED reasons concerned the lensing libraries and release validation. Merged on the human's "do the merges".
+
+## Original prompt
+
 # Cortex birth: scaffold, seed and register a Science project in one step
 
 Type: feature
