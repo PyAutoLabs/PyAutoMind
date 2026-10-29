@@ -14,6 +14,8 @@ Priority: high
 Status: formalised
 Consequence: judge
 Filed: 2026-10-29
+Issued: 2026-10-29
+Issue: https://github.com/PyAutoLabs/ECLIPSE_lens_catalogue/issues/4
 
 ## Original request (human, 2026-10-29)
 

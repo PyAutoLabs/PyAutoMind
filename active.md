@@ -83,6 +83,7 @@
 
 ## likelihood-lifecycle-p2c-point-source
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/472
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/480 DRAFT (PR B, 2bca9d15; base p2b branch) — 15/15 legs, 10/10 cells current, parity all match; runtime cell plain vs solved + GPU-on-ral planner gap await human
 - issued: 2026-10-28
 - session: Claude Code (Opus 5.5); session ID unavailable
 - status: workspace-dev
@@ -110,6 +111,7 @@
 - batch-go: HUMAN 2026-10-27 "do the next tasks to the point interferometry is hopefully running" = go for batch 0
 - pr: https://github.com/PyAutoLabs/autolens_profiling/pull/471 OPEN 2026-10-27 (PR A, dff89226; Heart GREEN; judge → human /prm)
 - batch0: chained on RAL 2026-10-27 (scratch/p2b_batch0_submit.log; CPU 0-13 + refs 0-1 on ral, A100 0-9%2) from branch head dff89226
+- pr-b: https://github.com/PyAutoLabs/autolens_profiling/pull/483 DRAFT 2026-10-29 (af93f46f; branch feature/likelihood-lifecycle-p2b-results, base the p2b branch; batch 1 72/73 legs, 60/60 cells current, 30/30 parity match; matrix-free alma 192x192 TIMEOUT recorded missing per human ruling 2026-10-29; worktree ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p2b-results; human review → /prm after #471)
 
 ## mesh-magnification-areas
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/659
@@ -177,3 +179,12 @@
 
 - merge-checkpoint: 2026-10-29 human authorized merge; Array#661, Galaxy#679, Lens#809 merged after all 11 CI jobs passed and freeze clear. Assistant#169 remains open: wiki-currency symbol audit fails against released 2026.10.26.1, which lacks subplot_imaging_dataset_intro. Retain task/worktree until release and green assistant CI; no release or failed-check bypass.
 
+## r2-pages-function-access
+- issue: https://github.com/PyAutoLabs/ECLIPSE_lens_catalogue/issues/4
+- issued: 2026-10-29
+- session: claude-code desktop (WSL), ~/Science session
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/r2-pages-function-access
+- repos:
+  - ECLIPSE_lens_catalogue: feature/r2-pages-function-access
+- tier: judge — merge mode: human /prm
