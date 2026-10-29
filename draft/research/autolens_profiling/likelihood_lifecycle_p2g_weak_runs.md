@@ -19,6 +19,7 @@ Phase: 2
 Parent: draft/research/autolens_profiling/likelihood_lifecycle_epic.md
 Filed: 2026-10-29
 
+- batch0: NOT SUBMITTED (2026-10-29). Decisions adopted: human "ok can we do all that now then" adopted every drafted option (2g D1-D4, D6-D10; D9 = batch-0 rows are the campaign rows, no batch 1; D5 settled by #481); recorded docs-only in autolens_profiling#485 (open, human /prm). The batch-0 go was given but HELD: the RAL venv /mnt/ral/jnightin/PyAuto/PyAuto (activated by every submit, CPU and A100) carries jax/jaxlib 0.10.2, which the pin 2026.10.25.1's PyAutoNerves excludes (Heart#274), so rows would not match the pin's dependency floor (human's call). The human then said not to start anything new on RAL that evening. Prepared but unused: detached checkout /mnt/ral/jnightin/profiling/autolens_profiling_p2dg @ main 32c0becd (log /mnt/ral/jnightin/scratch/p2dg_checkout.log); guarded submit script draft (not on RAL) in the session scratchpad.
 - Status: split out of `likelihood-lifecycle-p2g-weak` at close-out 2026-10-29 — the campaign setup shipped (autolens_profiling#477), recorded in `complete/2026/10/likelihood-lifecycle-p2g-weak.md`; this is what remains. No RAL batch has run.
 - Shipped setup: `scripts/misc/simulators/weak.py`, `likelihood_breakdown/weak_standard.py`, `scripts/weak/isothermal/likelihood_{runtime,breakdown}.py`, registry cell `weak/isothermal/simple`, `scripts/misc/campaigns/weak_p2g.py` + `submit_campaign_p2g_*`; page `wiki/campaigns/weak/likelihood_lifecycle_p2g.md`.
 

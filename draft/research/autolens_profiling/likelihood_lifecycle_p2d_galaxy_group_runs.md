@@ -19,6 +19,7 @@ Phase: 2
 Parent: draft/research/autolens_profiling/likelihood_lifecycle_epic.md
 Filed: 2026-10-29
 
+- batch0: NOT SUBMITTED (2026-10-29). Decisions adopted: human "ok can we do all that now then" adopted every drafted option (2d D1-D11; D12 already decided); recorded docs-only in autolens_profiling#485 (open, human /prm). The batch-0 go was given but HELD: the RAL venv /mnt/ral/jnightin/PyAuto/PyAuto (activated by every submit, CPU and A100) carries jax/jaxlib 0.10.2, which the pin 2026.10.25.1's PyAutoNerves excludes (Heart#274), so rows would not match the pin's dependency floor (human's call). The human then said not to start anything new on RAL that evening. Prepared but unused: detached checkout /mnt/ral/jnightin/profiling/autolens_profiling_p2dg @ main 32c0becd (log /mnt/ral/jnightin/scratch/p2dg_checkout.log); guarded submit script draft (not on RAL) in the session scratchpad.
 - Status: split out of `likelihood-lifecycle-p2d-galaxy-group` at close-out 2026-10-29 — the campaign setup shipped (autolens_profiling#484, PyAutoPulse#81), recorded in `complete/2026/10/likelihood-lifecycle-p2d-galaxy-group.md`; this is what remains. No RAL batch has run.
 - Shipped setup: `cell_builders/galaxy_group.py`, `likelihood_breakdown/galaxy_group_standard.py`, 20 cell scripts under `scripts/{multi_galaxy,group}/{mge,rectangular,delaunay}/`, 48 planned cells (20 `hpc_ral_cpu`, 28 `hpc_a100`), `scripts/misc/campaigns/multi_galaxy_group_p2d.py` + `submit_campaign_p2d_*`, pages `wiki/campaigns/{multi_galaxy,group}/likelihood_lifecycle_p2d.md`.
 
