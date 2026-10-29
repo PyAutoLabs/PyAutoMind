@@ -1033,7 +1033,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/mesh_magnification_areas.md">Mesh magnification areas — per-mesh correctness tests + integration sanity check…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/659">issue #659</a> — issued 2026-10-28 — library-dev</summary>
+<details><summary>📋 <a href="active/mesh_magnification_areas.md">Mesh magnification areas — per-mesh correctness tests + integration sanity check…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/659">issue #659</a> — issued 2026-10-28 — pr-open (PyAutoArray#664, autolens_workspace_test#348; merge Array first) — awaiting human /prm</summary>
 
 ```
 Use the start-dev skill. active/mesh_magnification_areas.md
