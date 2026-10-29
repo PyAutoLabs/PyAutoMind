@@ -162,3 +162,16 @@
   - reason: PyAutoGalaxy: 9 commit(s) behind origin
   - reason: PyAutoLens: 7 commit(s) behind origin
   - validation: 24 tests pass, 1 existing xfail; full notebook execution; API gate and Gemini contexts pass; author visual/diff review
+
+## cortex-science-drift
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/543
+- issued: 2026-10-29
+- session: Claude Code (Opus 5.5); session ID unavailable
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/cortex-science-drift
+- repos:
+  - PyAutoBrain: feature/cortex-science-drift
+  - PyAutoCortex: feature/cortex-science-drift
+- prompt: active/science_project_management.md
+- depends-on: PyAutoLabs/PyAutoCortex#77 (Workspace/Science local_path fixes)
+- next-phase: cortex birth (new-project command) — own issue after this ships
