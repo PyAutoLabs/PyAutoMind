@@ -19,6 +19,8 @@ Phase: 4b
 Parent: draft/test/workspaces/mesh_magnification_correctness.md
 Arc: draft/feature/autolens/source_cluster_arc.md
 Filed: 2026-10-28
+Issued: 2026-10-29
+Issue: https://github.com/PyAutoLabs/PyAutoArray/issues/665
 
 ## Human rulings (2026-10-28, verbatim answers to the 4a flagged decisions)
 
