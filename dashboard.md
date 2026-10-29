@@ -14,7 +14,7 @@
 | [Planned](#planned) | 9 |
 | [Backlog](#backlog) | 281 |
 | [Recent](#recent) | 50 |
-| [Pending release](#pending-release) | 5 |
+| [Pending release](#pending-release) | 0 |
 
 ## Start here
 
@@ -3133,54 +3133,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 ## Pending release
 
-**PyAutoArray**
-
-- [PyAutoArray#656](https://github.com/PyAutoLabs/PyAutoArray/pull/656) — `complete/2026/10/config-leaf-comments.md`
-- [PyAutoArray#655](https://github.com/PyAutoLabs/PyAutoArray/pull/655) — `complete/2026/10/finufft-cpu-nufft-backend.md`
-- [PyAutoArray#658](https://github.com/PyAutoLabs/PyAutoArray/pull/658) — `complete/2026/10/matrix-free-interferometer-wiring.md`
-
-**PyAutoFit**
-
-- [PyAutoFit#1721](https://github.com/PyAutoLabs/PyAutoFit/pull/1721) — `complete/2026/10/assertion-names.md`
-- [PyAutoFit#1720](https://github.com/PyAutoLabs/PyAutoFit/pull/1720) — `complete/2026/10/assertion-repr.md`
-- [PyAutoFit#1731](https://github.com/PyAutoLabs/PyAutoFit/pull/1731) — `complete/2026/10/bfgs-checkpoint-resume.md`
-- [PyAutoFit#1733](https://github.com/PyAutoLabs/PyAutoFit/pull/1733) — `complete/2026/10/config-leaf-comments.md`
-- [PyAutoFit#1729](https://github.com/PyAutoLabs/PyAutoFit/pull/1729) — `complete/2026/10/emcee-jax-dispatch-guard.md`
-- [PyAutoFit#1714](https://github.com/PyAutoLabs/PyAutoFit/pull/1714) — `complete/2026/10/ep-evidence-nonfinite.md`
-- [PyAutoFit#1728](https://github.com/PyAutoLabs/PyAutoFit/pull/1728) — `complete/2026/10/ep-test-output-isolation.md`
-- [PyAutoFit#1712](https://github.com/PyAutoLabs/PyAutoFit/pull/1712) — `complete/2026/10/ep-zero-success-factors.md`
-- [PyAutoFit#1715](https://github.com/PyAutoLabs/PyAutoFit/pull/1715) — `complete/2026/10/finufft-cpu-nufft-backend.md`
-- [PyAutoFit#1722](https://github.com/PyAutoLabs/PyAutoFit/pull/1722) — `complete/2026/10/fixed-instance-tuples.md`
-- [PyAutoFit#1730](https://github.com/PyAutoLabs/PyAutoFit/pull/1730) — `complete/2026/10/mcmc-short-chain-guards.md`
-- [PyAutoFit#1723](https://github.com/PyAutoLabs/PyAutoFit/pull/1723) — `complete/2026/10/seed-start-point-tests.md`
-
-**PyAutoGalaxy**
-
-- [PyAutoGalaxy#667](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/667) — `complete/2026/10/config-leaf-comments.md`
-- [PyAutoGalaxy#678](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/678) — `complete/2026/10/gnfw-convergence-fast.md`
-- [PyAutoGalaxy#656](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656) — `complete/2026/10/latent-profile-declarations.md`
-- [PyAutoGalaxy#672](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/672) — `complete/2026/10/lenstwin-p0-twins-core.md`
-- [PyAutoGalaxy#676](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/676) — `complete/2026/10/lenstwin-p2-mass-budget.md`
-- [PyAutoGalaxy#668](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/668) — `complete/2026/10/linear-operated-sersic-priors.md`
-- [PyAutoGalaxy#674](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/674) — `complete/2026/10/mass-integral-scalar-radius.md`
-- [PyAutoGalaxy#662](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/662) — `complete/2026/10/mass-sheet-jax.md`
-- [PyAutoGalaxy#670](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/670) — `complete/2026/10/matrix-free-interferometer-wiring.md`
-- [PyAutoGalaxy#665](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/665) — `complete/2026/10/multipole-isothermal-guard.md`
-- [PyAutoGalaxy#663](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/663) — `complete/2026/10/power-law-jax-axis.md`
-- [PyAutoGalaxy#664](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/664) — `complete/2026/10/sersic-core-sph-ml.md`
-
-**PyAutoLens**
-
-- [PyAutoLens#808](https://github.com/PyAutoLabs/PyAutoLens/pull/808) — `complete/2026/10/cluster-curves-engine-dispatch.md`
-- [PyAutoLens#802](https://github.com/PyAutoLabs/PyAutoLens/pull/802) — `complete/2026/10/config-leaf-comments.md`
-- [PyAutoLens#804](https://github.com/PyAutoLabs/PyAutoLens/pull/804) — `complete/2026/10/lenstwin-p0-twins-core.md`
-- [PyAutoLens#806](https://github.com/PyAutoLabs/PyAutoLens/pull/806) — `complete/2026/10/lenstwin-p3-stellar-dark.md`
-- [PyAutoLens#801](https://github.com/PyAutoLabs/PyAutoLens/pull/801) — `complete/2026/10/point-solver-guide.md`
-- [PyAutoLens#800](https://github.com/PyAutoLabs/PyAutoLens/pull/800) — `complete/2026/10/point-solver-spurious-core.md`
-
-**PyAutoNerves**
-
-- [PyAutoNerves#205](https://github.com/PyAutoLabs/PyAutoNerves/pull/205) — `complete/2026/10/colab-finufft-bootstrap.md`
+_(nothing pending release)_
 
 
 Boards: [organism](https://pyautolabs.github.io/PyAutoScientist/) · [brain](https://pyautolabs.github.io/PyAutoBrain/) · [cortex](https://pyautolabs.github.io/PyAutoCortex/) · [memory](https://pyautolabs.github.io/PyAutoMemory/) · [eyes](https://pyautolabs.github.io/PyAutoEyes/) · [ears](https://pyautolabs.github.io/PyAutoEars/) · [heart](https://pyautolabs.github.io/PyAutoHeart/) · [hands](https://pyautolabs.github.io/PyAutoHands/) · [pulse](https://pyautolabs.github.io/PyAutoPulse/) · [insight](https://pyautolabs.github.io/PyAutoInsight/) · [dna](https://pyautolabs.github.io/PyAutoDNA/) · [nerves](https://pyautolabs.github.io/PyAutoNerves/) · [broca](https://pyautolabs.github.io/PyAutoBroca/) · [gut](https://pyautolabs.github.io/PyAutoGut/)

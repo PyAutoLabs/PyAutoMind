@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/805
 - completed: 2026-10-28
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/806
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/806
 - epic: lenstwin (phase 3; ledger draft/feature/autolens/lenstwin_epic.md)
 - summary: Phase 3 of the lenstwin epic (merge b29ffcc). 3A: `al.twins.einstein_radius_aperture_from`
   (tracer-level θ_E via `LensCalc`, returns an `ag.CircularAperture` centred on the replaced galaxy)

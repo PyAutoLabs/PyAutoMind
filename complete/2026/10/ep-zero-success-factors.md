@@ -12,7 +12,6 @@ Phase of the graphical-ep EP campaign (PyAutoInsight `tasks/ep_campaign.md`), th
 
 **Remaining in the epic.** `draft/bug/autofit/nan_in_ep_evidence_accumulation_invalid_value.md` (medium), `draft/bug/autofit/ep_moments_loggaussian_transformed_scatter.md` (small, overlaps #1498/#1331), `draft/feature/autofit/ep_lbfgs_jax.md`; the four Cortex RAL reruns are human-gated.
 
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1712
 
 ## Original prompt
 

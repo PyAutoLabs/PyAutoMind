@@ -2,7 +2,6 @@
 
 - completed: 2026-10-25
 - PRs: PyAutoGalaxy#664
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/664
 
 Appended mass_to_light_ratio=1.0 and restored its matching prior. Scaling/model-prior tests pass; full suite 1360 passed, 6 skipped; PyAutoLens Tracer smoke passed.
 

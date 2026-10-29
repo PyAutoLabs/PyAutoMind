@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/677
 - completed: 2026-10-28
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/678
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/678
 - epic: lenstwin (follow-up to phases 2–3; not a numbered phase)
 - summary: `gNFW.convergence_func` no longer calls `quad` once per radius in a Python loop (merge
   d52d5fa). For 1D NumPy inputs with ≥ max(100, n_nodes) finite positive radii the line-of-sight

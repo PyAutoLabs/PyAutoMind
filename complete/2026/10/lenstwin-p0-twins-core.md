@@ -4,8 +4,6 @@
 - completed: 2026-10-28
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/672
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/804
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/672
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/804
 - epic: lenstwin (phase 0; ledger draft/feature/autolens/lenstwin_epic.md)
 - summary: Phase 0 of the lenstwin epic, library first. 0A PyAutoGalaxy#672 (merge b072e4d):
   projected mass inside a circular aperture by grid integration for any object with

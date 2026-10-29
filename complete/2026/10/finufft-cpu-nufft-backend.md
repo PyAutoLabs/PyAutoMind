@@ -1,7 +1,5 @@
 # finufft as the CPU NUFFT backend + likelihood warm-up before forking (PyAutoArray#654)
 
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/655
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1715
 
 ## What shipped
 - **PyAutoArray#655** (`0f12fac7`): `TransformerNUFFT` (forward, adjoint, mapping-matrix transform) and the NUFFT precision-operator / sparse-terms builders use finufft on the NumPy path; nufftax only on JAX branches. `use_jax` now selects the operator builder backend. finufft is a platform-marked core dependency (Linux/Windows x86_64, macOS arm64; Intel macOS `<2.5`) with a nufftax fallback + one-time warning. Type-1 runs single-threaded (bitwise-reproducible dirty image / operator; multithreaded spread order is non-deterministic). Forked children pinned to one finufft thread (libgomp fork deadlock).

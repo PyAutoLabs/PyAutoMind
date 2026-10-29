@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/675
 - completed: 2026-10-28
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/676
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/676
 - epic: lenstwin (phase 2; ledger draft/feature/autolens/lenstwin_epic.md)
 - summary: Phase 2 of the lenstwin epic: the mass-normalisation mathematics, in new module
   `autogalaxy/operate/mass_budget.py` (merge 7701202). `ag.CircularAperture(radius, centre, …)`

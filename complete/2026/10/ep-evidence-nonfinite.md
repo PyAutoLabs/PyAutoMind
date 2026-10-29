@@ -10,7 +10,6 @@ Second finding of the analytic_gaussian wave-1 ruling R-20260910-04 (graphical-e
 
 **Remaining in the epic.** `ep_moments_loggaussian_transformed_scatter.md` (small; overlaps priors-tracker #1498/#1331), `ep_lbfgs_jax.md`, the tail-underflow prompt above, and the four human-gated RAL reruns.
 
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1714
 
 ## Original prompt
 

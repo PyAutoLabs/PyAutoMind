@@ -1,6 +1,5 @@
 # PointSolver: reject spurious candidates on r_core = 0 member cores (default on)
 
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/800
 
 Issue PyAutoLens#799 → PR #800 (merge `67e9f1ff3`, 2026-10-23). Epic `cluster-pointsolver-speed`; Pulse ledger PR PyAutoPulse#73 (`3aeeeae07`).
 

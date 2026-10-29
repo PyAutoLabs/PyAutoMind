@@ -3,7 +3,6 @@
 Completed: 2026-10-26
 Tracking issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/669 (closed)
 PR: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656 (merged)
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/656
 
 ## Outcome and authority
 

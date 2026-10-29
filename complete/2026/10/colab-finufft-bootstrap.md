@@ -2,7 +2,6 @@
 
 - issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/204
 - library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/205
-- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/205
 - merged: 2026-10-25, ec8b5c1e5f17ac03ac5246b5fbc322624a6cd3f6
 - authorization: Human “I approve” for corrective PR, then “Prm I authorize” for merge and close-out.
 - corrective-red: install verification FAILED (testpypi; checks F)

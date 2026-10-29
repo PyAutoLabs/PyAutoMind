@@ -5,7 +5,6 @@ Closed 2026-10-25 through explicit human /prm.
 - Library: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/663 — MERGED.
 - Workspace: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/129 — MERGED at reviewed head `cd96d90dbf305c8d8fc9ad0fe1cbe94d60388109`.
 - Issue: PyAutoGalaxy#659 closed completed.
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/663
 
 ## Shipped scope and limits
 

@@ -3,7 +3,6 @@
 - completed: 2026-10-25
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1727
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1729
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1729
 - head: ffa70b0d9712e2796ee841b5806d9f9b69179936
 - merge-commit: 8cb533a605f556d85012d5eb7ed8d4f3c2a4dcf6
 - authorization: human "Yes I authorise" for development after disclosed RED; subsequent human "Prm" for merge and closeout. No release authorized or performed.

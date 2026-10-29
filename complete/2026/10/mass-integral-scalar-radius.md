@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/673
 - completed: 2026-10-28
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/674
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/674
 - summary: `MassProfile.mass_integral` wrapped the Python float `scipy.integrate.quad` feeds it as a
   0-d `aa.ArrayIrregular`, which most `convergence_func` implementations (written for 1D radius
   arrays) mis-handle. ~30 of the 62 constructible `ag.mp` classes failed through

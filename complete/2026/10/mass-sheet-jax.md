@@ -2,7 +2,6 @@
 
 - completed: 2026-10-25
 - PRs: PyAutoGalaxy#662; autogalaxy_workspace_test#128
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/662
 
 Unwrapped radial array before the Cartesian transform. NumPy/eager JAX/JIT/vmap and derivative regression passes; baseline fails. Full suite 1356 passed, 6 skipped.
 

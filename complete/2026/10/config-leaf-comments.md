@@ -1,13 +1,9 @@
 ## config-leaf-comments
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1732
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1733
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1733
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/656
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/656
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/667
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/667
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/802
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/802
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/264
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/602
 - completed: 2026-10-26

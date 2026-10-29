@@ -4,7 +4,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1718
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1722
 - merge-commit: eda10ad1c4c5024b34aa35d4b4cdcfce992421fe
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1722
 - authorization: human /prm on 2026-10-25; merged unchanged at the checked head
 - validation: every head workflow/job passed (Python 3.12, Python 3.13, no-JAX; applicable docs); combined serial suite 3913 passed, 1 skipped, 1 xfailed; four branches merge cleanly; model identifier parity passed
 - limitation: downstream workspace smoke was not run; the gap was disclosed before the human merge command and remains recorded, not reported as a pass

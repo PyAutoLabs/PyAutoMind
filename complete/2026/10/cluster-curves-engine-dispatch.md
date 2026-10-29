@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/807
 - completed: 2026-10-28
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/808
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/808
 - epic: cluster-strong-lensing (phase 3a subtask; ledger draft/feature/autolens/source_cluster_arc.md)
 - summary: Cluster `plot_critical_curves` / `plot_caustics` (`autolens/cluster/plot/cluster_plots.py`)
   now read `general.critical_curves_method` once per call through PyAutoGalaxy's

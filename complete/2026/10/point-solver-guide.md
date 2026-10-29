@@ -1,6 +1,5 @@
 # PointSolver guide: oracle, usage, assumptions and limitations
 
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/801
 
 Issue autolens_workspace#599. Merged 2026-10-24 via /prm. Epic `cluster-pointsolver-speed`.
 
