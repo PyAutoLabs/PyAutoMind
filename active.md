@@ -41,34 +41,6 @@
   - PyAutoFit: feature/hpc-campaign-p1-status-record
   - PyAutoNerves: feature/hpc-campaign-p1-status-record
 
-## cosmos-web-ring-intro-visuals
-- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/168
-- issued: 2026-10-29
-- session: Codex
-- status: library-merged, workspace-pending-release
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/661
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/679
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/809
-- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/169
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/cosmos-web-ring-intro-visuals
-- repos:
-  - autolens_assistant: feature/cosmos-web-ring-intro-visuals
-  - PyAutoArray: feature/cosmos-web-ring-intro-visuals
-  - PyAutoGalaxy: feature/cosmos-web-ring-intro-visuals
-  - PyAutoLens: feature/cosmos-web-ring-intro-visuals
-
-- heart-red-override:
-  - authorization: "Authorize development-only shipping for #168" (2026-10-29; no merge/release)
-  - reason: PyAutoArray: 4 uncommitted source change(s)
-  - reason: PyAutoGalaxy: 9 commit(s) behind origin
-  - reason: PyAutoLens: 7 commit(s) behind origin
-  - validation: Array 2155 passed/69 skipped/4 xfailed; Galaxy 1442 passed/6 skipped; Lens 998 passed/1 xfailed; 58 plotting checks and 24 notebook/greeting checks passed; all 10 notebook cells executed; API audit clean; author visual/diff review. Frozen historical assistant reference module needs its separate September wheels (9 setup errors on current runtime).
-
-- coordination: Human authorized "Allow concurrent plotting work" alongside mesh-magnification-areas; PyAutoArray changes limited to plotting code and tests in a separate worktree.
-
-
-- merge-checkpoint: 2026-10-29 human authorized merge; Array#661, Galaxy#679, Lens#809 merged after all 11 CI jobs passed and freeze clear. Assistant#169 remains open: wiki-currency symbol audit fails against released 2026.10.26.1, which lacks subplot_imaging_dataset_intro. Retain task/worktree until release and green assistant CI; no release or failed-check bypass.
-
 ## r2-pages-function-access
 - issue: https://github.com/PyAutoLabs/ECLIPSE_lens_catalogue/issues/4
 - issued: 2026-10-29
@@ -88,4 +60,4 @@
 - repos:
   - PyAutoLens: feature/lenstwin-p4a-twin-fit-model
 - tier: judge — merge mode: human /prm; HOLD — human 2026-10-29: draft PR, nothing merges until the human lifts it
-- coordination: PyAutoLens also claimed by cosmos-web-ring-intro-visuals (Lens #809 merged; claim held for assistant#169); human approved concurrent work 2026-10-29
+- coordination: PyAutoLens also claimed by cosmos-web-ring-intro-visuals (Lens #809 merged; claim held for assistant#169); human approved concurrent work 2026-10-29 — claim RELEASED 2026-10-29 (task closed, assistant#169 merged)

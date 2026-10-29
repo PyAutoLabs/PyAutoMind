@@ -1,3 +1,13 @@
+## Outcome
+
+Clearer COSMOS-Web introductions using source-library plotting. The library plotting landed in PyAutoArray#661 (`subplot_imaging_dataset_intro`, a four-panel imaging plot with shared stretch), PyAutoGalaxy#679 and PyAutoLens#809. The assistant side (autolens_assistant#169, merged 402dabbf) adds the COSMOS-Web Ring Colab notebook (`docs/colab/cosmos_web_ring_colab.ipynb`/`.py`), its figure script, five intro images, a notebook test, and updates to the greeting and prepare-imaging skills.
+
+- Library PRs merged 2026-10-29 after all 11 CI jobs passed (freeze clear), under the human's merge authorization. They shipped in release 2026.10.29.1, so no pending-release obligation remains.
+- #169 had been red on wiki-currency against 2026.10.26.1, which lacked `subplot_imaging_dataset_intro`. After the release, the branch was updated from main, which carried the release's re-pinned API baseline (65bfb4f6). Fresh CI was then green on boundary, colab-contexts and wiki-currency, and it merged via a human-typed /prm.
+- Implemented by a Codex session; close-out by the Claude health/release session.
+
+## Original prompt
+
 # Clear COSMOS-Web Ring figures for assistant newcomers
 
 Type: feature
