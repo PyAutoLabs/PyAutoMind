@@ -49,9 +49,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/661
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/679
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/809
-- release-gate: PyAutoArray
-- release-gate: PyAutoGalaxy
-- release-gate: PyAutoLens
 - workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/169
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/cosmos-web-ring-intro-visuals
 - repos:
