@@ -1,3 +1,33 @@
+# Compact Colab setup across projects
+
+Completed: 2026-10-29
+Issue: https://github.com/PyAutoLabs/PyAutoHands/issues/327 (closed)
+
+## Shipped
+
+The shared generator and all eight consumers now use compact Colab setup cells, with introductory explanation and advanced links. CPU/GPU options, local no-install behavior and scientific cell sources are preserved. HTML support remains future work.
+
+All nine PRs are merged:
+- PyAutoHands: https://github.com/PyAutoLabs/PyAutoHands/pull/328
+- autolens_workspace: https://github.com/PyAutoLabs/autolens_workspace/pull/604
+- autogalaxy_workspace: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/265
+- autolens_assistant: https://github.com/PyAutoLabs/autolens_assistant/pull/167
+- autogalaxy_assistant: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/41
+- autofit_workspace: https://github.com/PyAutoLabs/autofit_workspace/pull/178
+- HowToFit: https://github.com/PyAutoLabs/HowToFit/pull/77
+- HowToGalaxy: https://github.com/PyAutoLabs/HowToGalaxy/pull/92
+- HowToLens: https://github.com/PyAutoLabs/HowToLens/pull/102
+
+## Evidence and cleanup
+
+On 2026-10-29, GitHub confirmed every PR merged; each of the nine local task HEADs matched its PR head and had zero commits outside freshly fetched origin/main. All task worktrees were clean. The issue was already closed. This supersedes the historical partial-merge checkpoint folded below.
+
+Prior development evidence: 584 generator tests; 633 notebooks regenerated with unchanged science cells; all six family smoke suites passed; assistant focused tests and pinned-runtime checks passed. Hosted Colab installation/UI was not exercised. No new release or merge was performed during cleanup.
+
+Human authorized completed-task cleanup and explicitly chose "Delete task data with worktree". Release all nine claims and remove the completed task worktrees and local feature/compact-colab-setup branches. Preserve unrelated Mind edits. Remote branch lifecycle remains with GitHub and the repository sweeper.
+
+## Original prompt
+
 # Make Colab setup unobtrusive across projects
 
 Type: refactor

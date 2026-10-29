@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2028 records across 10 buckets.
+2029 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -177,6 +177,7 @@ markers; everything below GENERATED is rebuilt.
 - [community-board-readability](2026/10/community-board-readability.md)
 - [community-feedback](2026/10/community-feedback.md)
 - [community-pages](2026/10/community-pages.md)
+- [compact-colab-setup](2026/10/compact-colab-setup.md)
 - [compact-dashboard-rows](2026/10/compact-dashboard-rows.md)
 - [compact-memory-board](2026/10/compact-memory-board.md)
 - [compile-builder-hst-mge](2026/10/compile-builder-hst-mge.md) — Shipped one explicit, isolated HST/MGE fp64 jit current-runtime compile workload; broader profiling campaign r…
