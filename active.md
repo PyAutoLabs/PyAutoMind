@@ -174,3 +174,14 @@
 
 - coordination: Human authorized "Allow concurrent plotting work" alongside mesh-magnification-areas; PyAutoArray changes limited to plotting code and tests in a separate worktree.
 
+
+## cortex-birth
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/545
+- issued: 2026-10-29
+- session: Claude Code (Opus 5.5); session ID unavailable
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/cortex-birth
+- repos:
+  - PyAutoBrain: feature/cortex-birth
+  - PyAutoCortex: feature/cortex-birth
+- prompt: active/cortex_birth.md
