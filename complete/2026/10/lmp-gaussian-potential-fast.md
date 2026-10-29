@@ -1,3 +1,13 @@
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/680
+- completed: 2026-10-29
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/681
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/681
+- summary: Merge 7efb52a. `lmp.Gaussian.potential_2d_from` (and GaussianGradient, every MGE stellar Basis) decomposed one Gaussian into 100 and was WRONG as well as slow (finite-difference gradient ≠ deflections, sign errors when elliptical). Now psi = ∫0^1 alpha(t r)·r dt over MGEDecomposer's 20-node Gauss-Legendre rule using the shared in-frame analytic deflection `_deflections_in_frame_from`. ∇psi = alpha to 1e-8, lap psi = 2 kappa; 40-member basis on 100x100 ~2.4 s (was >10 min stall in fit visualisation); JAX = NumPy to 5e-15.
+- tests: 4 new in test_gaussian.py; full suite 1448 passed; CI green on f3cdf6ff (3.12, 3.13, nojax, docs).
+- follow-up: draft/bug/autogalaxy/chameleon_potential_inconsistent_with_deflections.md (Chameleon potential ~60% inconsistent with deflections); euclid_dr1/twins/config visualisation overlay can be removed once #681 is in the RAL environment.
+
+## Original prompt
+
 # Fit visualisation stalls on the potential of an `lmp.Gaussian` basis (subplot_tracer, tracer.fits)
 
 Type: feature

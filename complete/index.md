@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2041 records across 10 buckets.
+2043 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -298,6 +298,7 @@ markers; everything below GENERATED is rebuilt.
 - [lenstwin-p0-twins-core](2026/10/lenstwin-p0-twins-core.md) — Phase 0 of the lenstwin epic, library first. 0A PyAutoGalaxy#672 (merge b072e4d):
 - [lenstwin-p2-mass-budget](2026/10/lenstwin-p2-mass-budget.md) — Phase 2 of the lenstwin epic: the mass-normalisation mathematics, in new module
 - [lenstwin-p3-stellar-dark](2026/10/lenstwin-p3-stellar-dark.md) — Phase 3 of the lenstwin epic (merge b29ffcc). 3A: `al.twins.einstein_radius_aperture_from`
+- [lenstwin-p4a-twin-fit-model](2026/10/lenstwin-p4a-twin-fit-model.md) — Merge bf18d5c (human lifted the draft HOLD 2026-10-29). `al.twins.stellar_dark_model_from(twin, galaxy=None, *…
 - [likelihood-lifecycle-p0-brain](2026/10/likelihood-lifecycle-p0-brain.md)
 - [likelihood-lifecycle-p0-inference](2026/10/likelihood-lifecycle-p0-inference.md)
 - [likelihood-lifecycle-p0-insight](2026/10/likelihood-lifecycle-p0-insight.md)
@@ -324,6 +325,7 @@ markers; everything below GENERATED is rebuilt.
 - [linear-solver-p4a-jacobi-a100-divergence](2026/10/linear-solver-p4a-jacobi-a100-divergence.md)
 - [linear-solver-p5-mapper-corpus](2026/10/linear-solver-p5-mapper-corpus.md)
 - [lint-lychee-exclude-blob](2026/10/lint-lychee-exclude-blob.md) — Corrective: lychee in both organs' `lint.yml` now excludes `^https://github\.com/.*/blob/`. GitHub answers non…
+- [lmp-gaussian-potential-fast](2026/10/lmp-gaussian-potential-fast.md) — Merge 7efb52a. `lmp.Gaussian.potential_2d_from` (and GaussianGradient, every MGE stellar Basis) decomposed one…
 - [mass-integral-scalar-radius](2026/10/mass-integral-scalar-radius.md) — `MassProfile.mass_integral` wrapped the Python float `scipy.integrate.quad` feeds it as a
 - [mass-sheet-jax](2026/10/mass-sheet-jax.md)
 - [matrix-free-interferometer-phase1](2026/10/matrix-free-interferometer-phase1.md)
