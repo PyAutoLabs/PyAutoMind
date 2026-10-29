@@ -92,3 +92,9 @@ Used Brain's docs workflow and TUTORIAL_WRITING_STYLE.md. Human approved the pro
 Assistant commits 920ebc6 and 3583697 pushed to PR169. Regenerated canonical notebook executes 9/9 cells without errors. All 24 notebook/greeting/context checks pass; updated former static-image and four-band assertions to the requested structure. Source-library code unchanged. Heart reasons unchanged; existing development-only authorization applies. No merge/release.
 
 Latest human review: scratch/cosmos_web_ring_intro_visuals/library_walkthrough_streamlined.html and cosmos_web_ring_streamlined_review.ipynb (under the usual Windows Science scratch folder). These contain approved prose, not the earlier wording draft. The Colab review pins the same library commits; normal assistant adoption remains release-gated.
+
+## Partial merge checkpoint — 2026-10-29
+
+Human: “ok merge and whatnot, ill review once its in main”. Applied /prm: every run/job at each head enumerated; library CI 11/11 success, no freeze. Merged and confirmed Array#661 d59c6dde2ece975420bd83e68fb3d55f7b6b2e7a; Galaxy#679 f8ae3a8ce9d1306178e28e4be1f1c0f57ea9f32b; Lens#809 a2320aa86f09dda32dd85fd9001faee576954170.
+
+Assistant#169 head3583697 remains OPEN/UNSTABLE: boundary and colab-contexts succeed; wiki-currency fails Run wiki-currency checks, Symbol audit (--scope all), missing/broken:1 on released2026.10.26.1. Local introspection confirms that released stack lacks subplot_imaging_dataset_intro. Logs and downloaded report preserved under task-root merge-audit/. No source changes, CI reruns, release, or assistant merge attempted in the merge phase. All source PRs retain pending-release. Task, issue, worktree and branches remain pending assistant adoption. Next requires matched library release, green assistant CI, and a fresh /prm command.

@@ -150,7 +150,7 @@
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/168
 - issued: 2026-10-29
 - session: Codex
-- status: library-shipped, workspace-pending-release
+- status: library-merged, workspace-pending-release
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/661
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/679
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/809
@@ -174,6 +174,8 @@
 
 - coordination: Human authorized "Allow concurrent plotting work" alongside mesh-magnification-areas; PyAutoArray changes limited to plotting code and tests in a separate worktree.
 
+
+- merge-checkpoint: 2026-10-29 human authorized merge; Array#661, Galaxy#679, Lens#809 merged after all 11 CI jobs passed and freeze clear. Assistant#169 remains open: wiki-currency symbol audit fails against released 2026.10.26.1, which lacks subplot_imaging_dataset_intro. Retain task/worktree until release and green assistant CI; no release or failed-check bypass.
 
 ## cortex-birth
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/545
