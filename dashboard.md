@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 19 |
-| [In flight](#in-flight) | 6 |
+| [In flight](#in-flight) | 7 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 282 |
+| [Backlog](#backlog) | 280 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -304,7 +304,7 @@ Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_
 </details>
 
 <details>
-<summary><b>LensTwin — observation-anchored digital twins of fitted strong lenses: <code>al.twins</code> in PyAutoLens, mass-normalisation primitives in PyAutoGalaxy, used from ordinary <code>Science/active</code> projects, and the first stellar-plus-dark-matter identifiability experiment (ERC dark-matter cores vs cusps)</b> — 4 queued prompt(s), in order</summary>
+<summary><b>LensTwin — observation-anchored digital twins of fitted strong lenses: <code>al.twins</code> in PyAutoLens, mass-normalisation primitives in PyAutoGalaxy, used from ordinary <code>Science/active</code> projects, and the first stellar-plus-dark-matter identifiability experiment (ERC dark-matter cores vs cusps)</b> — 3 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>LensTwin — observation-anchored digital twins of fitted strong lenses: <code>al.twins</code> in PyAutoLens, mass-normalisation primitives in PyAutoGalaxy, used from ordinary <code>Science/active</code> projects, and the first stellar-plus-dark-matter identifiability experiment (ERC dark-matter cores vs cusps)</b> — ledger: `draft/feature/autolens/lenstwin_epic.md` — filed 2026-10-28 from the LensTwin brief; R1–R2 RULED 2026-10-28 (al.twins; observed noise map by default). PHASE 0 COMPLETE…</summary>
 
@@ -318,14 +318,6 @@ Continue the 'LensTwin — observation-anchored digital twins of fitted strong l
 
 ```
 Use the start-dev skill. draft/research/autolens/lenstwin_p4_identifiability.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens/lenstwin_stellar_dark_keep_shear_massfield.md">LensTwin: <code>ReplaceTotalMassWithStellarPlusDark(keep_shear=False)</code> ignores shear held in a <code>MassField</code></a> — autolens · small · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/bug/autolens/lenstwin_stellar_dark_keep_shear_massfield.md
 ```
 
 </details>
@@ -1049,6 +1041,14 @@ Use the start-dev skill. active/results_library_p0_integrity.md
 
 </details>
 
+<details><summary>📋 <a href="active/tracer_plot_potential_slow_lmp_gaussian_basis.md">Fit visualisation stalls on the potential of an <code>lmp.Gaussian</code> basis (subplot_tracer, tracer.fits)</a> — issued 2026-10-29</summary>
+
+```
+Use the start-dev skill. active/tracer_plot_potential_slow_lmp_gaussian_basis.md
+```
+
+</details>
+
 ## Planned
 
 Scoped but not started; some are not yet prompt files. Full detail in [`planned.md`](planned.md).
@@ -1181,7 +1181,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 40</summary>
+<summary><b>feature</b> — 39</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
 
@@ -1227,14 +1227,6 @@ Use the start-dev skill. draft/feature/autofit/search_seed_reproducibility.md
 
 ```
 Use the start-dev skill. draft/feature/autolens/coolest_pixel_grid_export.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens/tracer_plot_potential_slow_lmp_gaussian_basis.md">Fit visualisation stalls on the potential of an <code>lmp.Gaussian</code> basis (subplot_tracer, tracer.fits)</a> — autolens · medium · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens/tracer_plot_potential_slow_lmp_gaussian_basis.md
 ```
 
 </details>
@@ -2895,7 +2887,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 |------|-------|------|
 | 2026-10-29 | issued | <a href="active/mesh_magnification_exact_quadrature_areas.md">Mesh magnification: exact-quadrature areas for KNN meshes (phase 4b)</a> |
 | 2026-10-29 | issued | <a href="active/lenstwin_p4a_twin_fit_model_and_recovery.md">LensTwin phase 4a: build the inference model from a twin…</a> |
-| 2026-10-29 | filed | <a href="draft/feature/autolens/tracer_plot_potential_slow_lmp_gaussian_basis.md">Fit visualisation stalls on the potential of an <code>lmp.Gaussian</code> basis…</a> |
+| 2026-10-29 | issued | <a href="active/tracer_plot_potential_slow_lmp_gaussian_basis.md">Fit visualisation stalls on the potential of an <code>lmp.Gaussian</code> basis…</a> |
 | 2026-10-29 | issued | <a href="active/r2_pages_function_access.md">ECLIPSE site: serve R2 lens files through a Pages Function behind…</a> |
 | 2026-10-28 | issued | <a href="active/results_library_p0_integrity.md">Results library phase 0: artefact integrity and honest reads in…</a> |
 | 2026-10-28 | issued | <a href="active/hpc_campaign_p1_status_record.md">HPC campaign phase 1: per-fit status record, failure record, shared…</a> |
