@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2038 records across 10 buckets.
+2039 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -230,6 +230,7 @@ markers; everything below GENERATED is rebuilt.
 - [eyes-focused-figure-browser](2026/10/eyes-focused-figure-browser.md)
 - [eyes-scratch-mirror](2026/10/eyes-scratch-mirror.md)
 - [eyes-scratch-mirror-lens](2026/10/eyes-scratch-mirror-lens.md)
+- [files-experiment-scripts-cleanup](2026/10/files-experiment-scripts-cleanup.md)
 - [finish-pr-1709-corner-plots](2026/10/finish-pr-1709-corner-plots.md) — Community PR by @samlange04 (proposal .github#38) merged as d3a772129. Maintainer commit f9377f3f6 was pushed …
 - [finufft-cpu-nufft-backend](2026/10/finufft-cpu-nufft-backend.md) — PyAutoArray#654
 - [fit-util-masked-division](2026/10/fit-util-masked-division.md)

@@ -1,3 +1,15 @@
+## Outcome
+
+Deleted all six files under `PyAutoArray/files/` (`cdf_audit.md`, `ghost_peak.png`, `ghost_peak_experiment.py`, `ghost_peak_findings.md`, `pca_rotation.png`, `pca_rotation_experiment.py`; 1157 deletions). The two experiment scripts imported the removed `autoarray.inversion.mesh.interpolator.rectangular_spline`; the notes and plots were referenced only by each other. Human decision 2026-10-29: delete rather than keep as a historical record.
+
+- Witness: `files/` gone; `git grep -c rectangular_spline` returns 0.
+- CI: unittest 3.12 / 3.13 / nojax all green.
+- Context: someone had run `git rm files/` directly on canonical PyAutoArray main (staged 2026-10-28 18:03), which made Heart red (dirty canonical, blocked ff-pull). The health session unstaged it on canonical, fast-forwarded main, and redid the deletion on the feature branch.
+- Ran concurrently with mesh-magnification-areas and cosmos-web-ring-intro-visuals under human authorization; neither branch touched `files/`.
+- No library code changed, so there is no pending-release obligation.
+
+## Original prompt
+
 # `files/*_experiment.py` import a module that no longer exists — decide whether to keep them
 
 Type: maintenance
