@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2031 records across 10 buckets.
+2037 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -306,6 +306,12 @@ markers; everything below GENERATED is rebuilt.
 - [likelihood-lifecycle-p2a-imaging-campaign](2026/10/likelihood-lifecycle-p2a-imaging-campaign.md)
 - [likelihood-lifecycle-p2a-inference-timings](2026/10/likelihood-lifecycle-p2a-inference-timings.md)
 - [likelihood-lifecycle-p2a-restamp-12core](2026/10/likelihood-lifecycle-p2a-restamp-12core.md)
+- [likelihood-lifecycle-p2b-interferometer](2026/10/likelihood-lifecycle-p2b-interferometer.md) — complete
+- [likelihood-lifecycle-p2c-point-source](2026/10/likelihood-lifecycle-p2c-point-source.md) — complete
+- [likelihood-lifecycle-p2d-galaxy-group](2026/10/likelihood-lifecycle-p2d-galaxy-group.md) — RAL not run
+- [likelihood-lifecycle-p2e-cluster](2026/10/likelihood-lifecycle-p2e-cluster.md) — RAL not run
+- [likelihood-lifecycle-p2f-dataset-datacube](2026/10/likelihood-lifecycle-p2f-dataset-datacube.md) — RAL not run
+- [likelihood-lifecycle-p2g-weak](2026/10/likelihood-lifecycle-p2g-weak.md) — RAL not run
 - [likelihood-lifecycle-p2x-node-throughput](2026/10/likelihood-lifecycle-p2x-node-throughput.md)
 - [likelihood-lifecycle-p2x-pulse-view](2026/10/likelihood-lifecycle-p2x-pulse-view.md)
 - [likelihood-lifecycle-p2x-same-host](2026/10/likelihood-lifecycle-p2x-same-host.md)

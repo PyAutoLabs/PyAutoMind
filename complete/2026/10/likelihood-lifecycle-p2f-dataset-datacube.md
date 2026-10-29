@@ -1,3 +1,27 @@
+# Likelihood lifecycle phase 2f: multi_dataset + datacube — campaign setup shipped (RAL not run)
+
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/475 (closed 2026-10-29)
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/479 MERGED 2026-10-29 a36f4818 (human /prm)
+- batch-go: NONE — human: "leave this as something I then review before we do RAL runs"
+- remainder: draft/research/autolens_profiling/likelihood_lifecycle_p2f_dataset_datacube_runs.md
+- merged: 2026-10-29
+
+## Shipped — scope: campaign setup only
+
+Recorded as **campaign setup shipped**. No RAL batch ran; the batch-0 go, RAL batches and PR B are re-filed as the remainder draft.
+
+- `scripts/misc/likelihood_breakdown/datacube_standard.py` (2b's interferometer standard cell in 34 channels, `FactorGraphModel` of `AnalysisInterferometer(shared_preloads=True)`; JAX W~/dense runtime, numba runtime, lead-channel breakdown projected to the cube, cube parity reference derived from 2b's chunked dense reference, finalise pass).
+- `scripts/misc/likelihood_breakdown/multi_dataset_standard.py` (2a's hst Delaunay cell in 2 datasets; JAX/numba runtime, breakdown, parity = sum of 2a's dense reference per dataset).
+- Datacube cell scripts gain `--standard-size`; new datacube numba runtime/breakdown and `parity_reference.py`; new multi_dataset runtime/breakdown (JAX + numba). Routes registered.
+- `multi_dataset_datacube_p2f.py` + tests + `submit_campaign_p2f_*` (batch 0 runnable with declared guesses; batch 1 refuses while provisional). `_common.py` unchanged.
+- D1 (draft) applied as its own commit in `catalogue/provisional_designations.json`: dense datacube NUFFT at sma only, 40 → 32 planned cells (RAL 18, A100 14).
+- Wiki: `wiki/campaigns/{datacube,multi_dataset}/likelihood_lifecycle_p2f.md`.
+- Laptop smokes (datacube sma at 4 channels; multi_dataset hst numba) wrote rows with parity `match`; the datacube JAX dense breakdown did not complete on the laptop (swap).
+
+Open at close-out: D1–D9 (in the remainder draft).
+
+## Original prompt
+
 # Likelihood lifecycle phase 2f: profiling campaign — multi_dataset and datacube/delaunay (40 planned cells)
 
 Type: research
