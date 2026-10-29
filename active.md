@@ -150,7 +150,15 @@
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/168
 - issued: 2026-10-29
 - session: Codex
-- status: workspace-dev
+- status: awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/169
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/cosmos-web-ring-intro-visuals
 - repos:
   - autolens_assistant: feature/cosmos-web-ring-intro-visuals
+
+- heart-red-override:
+  - authorization: "Authorize development-only shipping for #168" (2026-10-29; no merge/release)
+  - reason: PyAutoArray: 4 uncommitted source change(s)
+  - reason: PyAutoGalaxy: 9 commit(s) behind origin
+  - reason: PyAutoLens: 7 commit(s) behind origin
+  - validation: 24 tests pass, 1 existing xfail; full notebook execution; API gate and Gemini contexts pass; author visual/diff review

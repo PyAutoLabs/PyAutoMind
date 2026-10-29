@@ -58,3 +58,11 @@ User explicitly approved this plan on 2026-10-29. Single assistant presentation 
 - Human review bundle: `/mnt/c/Users/Jammy/Workspace/Science/scratch/cosmos_web_ring_intro_visuals/` (`comparison.html`, `walkthrough.html`, portable `cosmos_web_ring_colab.ipynb` with embedded illustrations). Hosted Colab/Gemini remains untested.
 - Ship gate RED: PyAutoArray: 4 uncommitted source change(s); PyAutoGalaxy: 9 commit(s) behind origin; PyAutoLens: 7 commit(s) behind origin. Additional stale reasons: release validation incomplete: no rehearsal for current source; release push credential check stale (pyautolabs-bot, 49h old).
 - Asked the human for a development-only override for issue #168 after surfacing exact reasons and passing evidence. Await response before commit/push/PR. No merge or release authorized. If authorized, record the override in all four sinks; publish branch and create/attach PR; provide the hosted Colab link (make new static illustration URLs accessible at the branch/immutable commit).
+
+## Published checkpoint — 2026-10-29
+
+- Human authorized development-only shipping: "Authorize development-only shipping for #168". Recorded on issue, PR, active registry and autonomy log. No merge/release authorization.
+- PR: https://github.com/PyAutoLabs/autolens_assistant/pull/169; head ad6dce151e52f20e094f3a5846e132bd49580a91. Worktree clean; branch pushed.
+- New static images are pinned to immutable commit 96e49bac7edd75670067d0e077184c2480a56637 so pre-merge Colab can show them. The notebook was regenerated and executed after pinning; validation again 24 passed, 1 existing expected failure (`publish-validation.log`, `publish-notebook-build.log`).
+- Run/review: https://colab.research.google.com/github/PyAutoLabs/autolens_assistant/blob/ad6dce151e52f20e094f3a5846e132bd49580a91/docs/colab/cosmos_web_ring_colab.ipynb
+- Next: human inspects hosted Colab and Gemini flow, then requests any refinements or /prm.
