@@ -82,3 +82,13 @@ Implement the intro compositor in PyAutoArray using the existing plot_array, lay
 - Static revised images published in assistant commit deba4e4, pinned in notebook source. Normal notebook remains release-based. A separate scratch review notebook installs exact feature commits and embeds local illustrations for Colab upload. Hosted Colab/Gemini validation remains human work.
 - Human preview: /mnt/c/Users/Jammy/Workspace/Science/scratch/cosmos_web_ring_intro_visuals/library_comparison.html; review notebook cosmos_web_ring_library_review.ipynb in the same folder.
 - Logs under task root: PyAutoArray-final-suite.log, PyAutoGalaxy-suite.log, PyAutoLens-suite.log, library-focused-tests.log, library-assistant-focused.log, library-assistant-tests.log, library-api-audit.log, library-colab-final.log, library-readiness.json. Heart reasons unchanged; existing task-specific development-only override retained and updated in all four sinks.
+
+## Notebook simplification follow-up — 2026-10-29
+
+Human request: “I think the subplot image displays twice in the notebook? Remove \"Make the image your own\"I thjink its a distraction. Make text explaining what data, noise map, signal to noise, psf are clearer (using PyAutoBrain docs agent for notebook styl;e). Its no longer four colors, we only show 2 colors.”
+
+Used Brain's docs workflow and TUTORIAL_WRITING_STYLE.md. Human approved the proposed panel explanations and two-band introduction with “Use this wording”. Removed the customization section/output and static copies of the band/prepared figures; changed the heading/contents to Two Colours, One Ring. Applied approved explanations and the guide's Ask AI labels. Compact setup presentation retained.
+
+Assistant commits 920ebc6 and 3583697 pushed to PR169. Regenerated canonical notebook executes 9/9 cells without errors. All 24 notebook/greeting/context checks pass; updated former static-image and four-band assertions to the requested structure. Source-library code unchanged. Heart reasons unchanged; existing development-only authorization applies. No merge/release.
+
+Latest human review: scratch/cosmos_web_ring_intro_visuals/library_walkthrough_streamlined.html and cosmos_web_ring_streamlined_review.ipynb (under the usual Windows Science scratch folder). These contain approved prose, not the earlier wording draft. The Colab review pins the same library commits; normal assistant adoption remains release-gated.
