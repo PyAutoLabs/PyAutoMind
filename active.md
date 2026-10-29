@@ -79,7 +79,9 @@
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/680
 - issued: 2026-10-29
 - session: Claude Code (laptop)
-- status: library-dev
+- status: library-shipped
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/681
+- finding: old lmp.Gaussian potential was WRONG (grad psi != alpha), not just slow; fixed in #681. Chameleon potential also inconsistent → draft/bug/autogalaxy/chameleon_potential_inconsistent_with_deflections.md
 - worktree: ~/Code/PyAutoLabs-wt/lmp-gaussian-potential-fast
 - repos:
   - PyAutoGalaxy: feature/lmp-gaussian-potential-fast
