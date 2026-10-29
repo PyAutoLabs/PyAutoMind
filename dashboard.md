@@ -10,15 +10,15 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 19 |
-| [In flight](#in-flight) | 12 |
+| [In flight](#in-flight) | 13 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 277 |
+| [Backlog](#backlog) | 276 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 21
+**Highest priority** (filed as `high`) — showing 12 of 20
 
 <details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
 
@@ -84,14 +84,6 @@ Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/cortex/cortex_birth.md">Cortex birth: scaffold, seed and register a Science project in one step</a> — cortex · medium · human-required · high</summary>
-
-```
-Use the start-dev skill. draft/feature/cortex/cortex_birth.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> — organs · medium · supervised · high</summary>
 
 ```
@@ -112,6 +104,14 @@ Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speedin
 
 ```
 Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md
 ```
 
 </details>
@@ -953,6 +953,14 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
+<details><summary>📋 <a href="active/cortex_birth.md">Cortex birth: scaffold, seed and register a Science project in one step</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/545">issue #545</a> — issued 2026-10-29 — library-dev</summary>
+
+```
+Use the start-dev skill. active/cortex_birth.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/cosmos_web_ring_intro_visuals.md">Clear COSMOS-Web Ring figures for assistant newcomers</a> — issued 2026-10-29</summary>
 
 ```
@@ -1181,15 +1189,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 40</summary>
-
-<details><summary>📋 <a href="draft/feature/cortex/cortex_birth.md">Cortex birth: scaffold, seed and register a Science project in one step</a> — cortex · medium · human-required · high</summary>
-
-```
-Use the start-dev skill. draft/feature/cortex/cortex_birth.md
-```
-
-</details>
+<summary><b>feature</b> — 39</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
 
@@ -2901,7 +2901,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-29 | filed | <a href="draft/feature/cortex/cortex_birth.md">Cortex birth: scaffold, seed and register a Science project in one…</a> |
+| 2026-10-29 | issued | <a href="active/cortex_birth.md">Cortex birth: scaffold, seed and register a Science project in one…</a> |
 | 2026-10-29 | issued | <a href="active/cosmos_web_ring_intro_visuals.md">Clear COSMOS-Web Ring figures for assistant newcomers</a> |
 | 2026-10-28 | issued | <a href="active/results_library_p0_integrity.md">Results library phase 0: artefact integrity and honest reads in…</a> |
 | 2026-10-28 | issued | <a href="active/mesh_magnification_areas.md">Mesh magnification areas — per-mesh correctness tests + integration…</a> |
@@ -3021,7 +3021,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-117 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+116 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3043,7 +3043,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autolens_jax_joss/autolens_jax_joss_benchmark_repo.md`
 - `draft/feature/autolens_workspace/cluster_point_solver_validation_check.md`
 - `draft/feature/autolens_workspace/pointsolver_grid_extent_per_package.md`
-- `draft/feature/cortex/cortex_birth.md`
 - `draft/feature/cortex/human_readable_projects_dashboard.md`
 - `draft/feature/cortex/output_summary.md`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md`
@@ -3066,11 +3065,12 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_adaptive_zeroed_ring_guard_row_mismatch.md`
 - `draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md`
-- _… and 77 more_
+- `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
+- _… and 76 more_
 
 </details>
 
-62 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+61 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3085,7 +3085,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autofit/results_library_epic.md — unknown theme keyword(s): hpc, euclid, results, aggregator`
 - `draft/feature/autofit/results_library_epic_report.md — unknown theme keyword(s): results, euclid`
 - `draft/feature/autolens/coolest_pixel_grid_export.md — unknown theme keyword(s): coolest, interop, euclid`
-- `draft/feature/cortex/cortex_birth.md — unknown theme keyword(s): science, cortex`
 - `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md — unknown theme keyword(s): euclid, catalogue`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md — unknown theme keyword(s): euclid`
 - `draft/feature/euclid/single_process_cpu_route_jax_vis_lp_numba_vis_pix.md — unknown theme keyword(s): euclid, jax, hpc`
