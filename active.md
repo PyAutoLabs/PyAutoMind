@@ -150,7 +150,13 @@
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/168
 - issued: 2026-10-29
 - session: Codex
-- status: library-dev
+- status: library-shipped, workspace-pending-release
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/661
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/679
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/809
+- release-gate: PyAutoArray
+- release-gate: PyAutoGalaxy
+- release-gate: PyAutoLens
 - workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/169
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/cosmos-web-ring-intro-visuals
 - repos:
@@ -164,7 +170,7 @@
   - reason: PyAutoArray: 4 uncommitted source change(s)
   - reason: PyAutoGalaxy: 9 commit(s) behind origin
   - reason: PyAutoLens: 7 commit(s) behind origin
-  - validation: 24 tests pass, 1 existing xfail; full notebook execution; API gate and Gemini contexts pass; author visual/diff review
+  - validation: Array 2155 passed/69 skipped/4 xfailed; Galaxy 1442 passed/6 skipped; Lens 998 passed/1 xfailed; 58 plotting checks and 24 notebook/greeting checks passed; all 10 notebook cells executed; API audit clean; author visual/diff review. Frozen historical assistant reference module needs its separate September wheels (9 setup errors on current runtime).
 
 - coordination: Human authorized "Allow concurrent plotting work" alongside mesh-magnification-areas; PyAutoArray changes limited to plotting code and tests in a separate worktree.
 
