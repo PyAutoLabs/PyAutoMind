@@ -60,6 +60,18 @@ pixel", not the quadrature weights of the interpolated source; it does not say w
 accurate, nor how the mesh route compares with the 1000x1000 interpolation-grid route above it; it does not
 point at the PyAutoLens `magnification` latent that computes the same quantity during a fit.
 
+## Style (human, 2026-10-29: "make sure it also knows to use autobrain docs style for python scripts")
+
+All prose added or rewritten in these scripts follows the PyAutoBrain docs style for Python scripts:
+- `PyAutoBrain/skills/TUTORIAL_WRITING_STYLE.md`: voice, British English, concrete descriptions, define
+  each term at first use, no hype or jargon. Reference example: the COSMOS-Web Ring guided tour (October 2026).
+- Script format: the workspace contents + `"""__Section__"""` docstring structure. Top-level docstrings become
+  notebook markdown cells (PyAutoHands generation), so the docstrings are the product. Plan placement and the
+  format checklist through the Workspace Agent (`/workspace`) before editing, and keep the contents list at the
+  top of each script in step with any renamed or added section.
+- Do not paste PR numbers or measurement tables into user prose. Say what the areas are and how accurate
+  they are in plain words; the PyAutoArray#664/#665 references belong in commit and PR text.
+
 ## Work
 
 1. In all four scripts, rewrite the magnification-via-mesh docs: what `areas_for_magnification` is (integral of
