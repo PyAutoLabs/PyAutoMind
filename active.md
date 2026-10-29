@@ -179,9 +179,15 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/545
 - issued: 2026-10-29
 - session: Claude Code (Opus 5.5); session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/cortex-birth
 - repos:
   - PyAutoBrain: feature/cortex-birth
   - PyAutoCortex: feature/cortex-birth
 - prompt: active/cortex_birth.md
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/546 OPEN 2026-10-29; companion https://github.com/PyAutoLabs/PyAutoCortex/pull/79 OPEN (merge first) — tier judge → human /prm
+- heart-red-override:
+  - authorized: live human 2026-10-29 "I authorize development only heart override" (PyAutoBrain#545); development ship only; no merge/release/CI bypass
+  - red-reasons: PyAutoArray: 4 uncommitted source change(s); PyAutoGalaxy: 9 commit(s) behind origin; PyAutoLens: 7 commit(s) behind origin; release validation incomplete: no rehearsal for current source; release push credential check stale (pyautolabs-bot, 49h old)
+  - gates: Brain cortex conductor tests 80 passed (3 skip vs Cortex main); Cortex 70 tests + check OK; smoke n/a; independent review FINDINGS, all addressed
+- open-question: development/ births' ral_root (RAL development/ vs active/) — asked on #545
