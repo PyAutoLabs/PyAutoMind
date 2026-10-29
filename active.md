@@ -9,7 +9,8 @@
   - PyAutoArray: feature/mesh-magnification-knn-areas
   - autolens_workspace_test: feature/mesh-magnification-knn-areas
 - prompt: active/mesh_magnification_exact_quadrature_areas.md
-- epic: cluster-strong-lensing (Source & Cluster arc phase 4b); also closes PyAutoArray#609 (planned knn-partial-point-block)
+- epic: cluster-strong-lensing (Source & Cluster arc phase 4b)
+- scope: 2026-10-29 human split #609 back out (its fix breaks the KNN+AdaptSplit gradient check); this task = exact KNN areas only
 - autonomy: human approved plan 2026-10-29 ("Yeah do it go"); judge → human /prm
 
 ## matrix-free-interferometer-inversion

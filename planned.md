@@ -94,6 +94,7 @@
 - affected-repos:
   - PyAutoArray
   - autolens_workspace_test
+- finding-2026-10-29: fix breaks KNN+AdaptSplit gradient check (jax_grad/knn.py); split out of arc 4b (#665) by human; patch on #609; investigate mechanism first (see prompt).
 - resume: Audit#603 discovered deterministic partial-final-block neighbor corruption; filed separately per explicit user request. No implementation begun or worktree created. Audit retains strict expected-failure witness citing609. Schedule repair independently and promote regression after fix.
 
 ## sibson-internal-edge-continuity
