@@ -81,3 +81,14 @@
 - repos:
   - ECLIPSE_lens_catalogue: feature/r2-pages-function-access
 - tier: judge — merge mode: human /prm
+
+## lenstwin-p4a-twin-fit-model
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/810
+- issued: 2026-10-29
+- session: Claude Code (laptop)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/lenstwin-p4a-twin-fit-model
+- repos:
+  - PyAutoLens: feature/lenstwin-p4a-twin-fit-model
+- tier: judge — merge mode: human /prm; HOLD — human 2026-10-29: draft PR, nothing merges until the human lifts it
+- coordination: PyAutoLens also claimed by cosmos-web-ring-intro-visuals (Lens #809 merged; claim held for assistant#169); human approved concurrent work 2026-10-29
