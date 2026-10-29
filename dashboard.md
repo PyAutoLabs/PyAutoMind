@@ -20,14 +20,6 @@
 
 **Highest priority** (filed as `high`) — showing 12 of 20
 
-<details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
 ```
@@ -56,6 +48,14 @@ Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_foreve
 
 ```
 Use the start-dev skill. draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md
 ```
 
 </details>
@@ -1468,14 +1468,6 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 <details>
 <summary><b>bug</b> — 65</summary>
 
-<details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · small · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
 ```
@@ -1496,6 +1488,14 @@ Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_foreve
 
 ```
 Use the start-dev skill. draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md
 ```
 
 </details>
