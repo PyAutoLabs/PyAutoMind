@@ -772,7 +772,7 @@ Use the start-dev skill. draft/bug/autoarray/rectangular_adaptive_zeroed_ring_gu
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/autoarray/mesh_magnification_exact_quadrature_areas.md">Mesh magnification: exact-quadrature areas for adaptive rectangular and KNN meshes (phase 4b)</a> — autoarray · medium · supervised · high</summary>
+<details><summary>📋 <a href="draft/feature/autoarray/mesh_magnification_exact_quadrature_areas.md">Mesh magnification: exact-quadrature areas for KNN meshes (phase 4b)</a> — autoarray · medium · supervised · high</summary>
 
 ```
 Use the start-dev skill. draft/feature/autoarray/mesh_magnification_exact_quadrature_areas.md
