@@ -66,3 +66,9 @@ User explicitly approved this plan on 2026-10-29. Single assistant presentation 
 - New static images are pinned to immutable commit 96e49bac7edd75670067d0e077184c2480a56637 so pre-merge Colab can show them. The notebook was regenerated and executed after pinning; validation again 24 passed, 1 existing expected failure (`publish-validation.log`, `publish-notebook-build.log`).
 - Run/review: https://colab.research.google.com/github/PyAutoLabs/autolens_assistant/blob/ad6dce151e52f20e094f3a5846e132bd49580a91/docs/colab/cosmos_web_ring_colab.ipynb
 - Next: human inspects hosted Colab and Gemini flow, then requests any refinements or /prm.
+
+## Approved library revision
+
+Human requested the configured PyAutoLens colormap, ticks, titles and fonts, and accepted `subplot_imaging_dataset_intro`. Customization moves into source, with four panels and a source-revealing stretch; remove the assistant-only renderer and embedding. Human authorized "Allow concurrent plotting work" alongside mesh-magnification-areas (#659), limited to plotting code/tests in PyAutoArray.
+
+Implement the intro compositor in PyAutoArray using the existing plot_array, layout, formatting and save helpers. Add an optional asinh `stretch` to the shared renderer/norm builder, forward it through the PyAutoGalaxy wrapper, and expose the intro compositor through Galaxy/Lens plotting namespaces. Defaults inherit configured colormap; only the intro chooses an asinh stretch. Preserve existing diagnostic subplots. Add config/style, normalization and four-panel tests; run relevant library suites and notebook smoke. Library-first PRs; assistant adoption depends on library availability (no silent fallback to duplicated plotting code).
