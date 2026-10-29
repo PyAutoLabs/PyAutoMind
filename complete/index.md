@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2045 records across 10 buckets.
+2046 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -343,6 +343,7 @@ markers; everything below GENERATED is rebuilt.
 - [mesh-geometry-transformed-areas](2026/10/mesh-geometry-transformed-areas.md)
 - [mesh-interpolator-numerics-audit](2026/10/mesh-interpolator-numerics-audit.md)
 - [mesh-magnification-areas](2026/10/mesh-magnification-areas.md)
+- [mesh-magnification-knn-areas](2026/10/mesh-magnification-knn-areas.md)
 - [mind-dashboard-simplify](2026/10/mind-dashboard-simplify.md)
 - [mind-dashboard-simplify-2](2026/10/mind-dashboard-simplify-2.md)
 - [minimal-seed-instructions](2026/10/minimal-seed-instructions.md)

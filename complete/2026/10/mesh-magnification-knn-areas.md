@@ -1,3 +1,27 @@
+Source & Cluster arc phase 4b — exact magnification areas for the kNN meshes.
+
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/666
+
+## Shipped
+- PyAutoArray#666 (merge `e71feafd`, closes #665): new `MeshGeometryKNearestNeighbor`, built by the kNN interpolators.
+  - `areas_for_magnification` = each vertex's interpolation weights integrated over the convex hull: midpoint quadrature on a 256² grid masked to the hull, rescaled to the hull area.
+  - Host-side and cached on first access, so fits never pay for it.
+- autolens_workspace_test#349 (merge `5a41b981`): KNN tolerances in `imaging/mesh_magnification.py` tightened to 1%.
+
+## Measured
+- Unit identity μ−1: KNN 1.6e-2 → 1.3e-5; KNNBarycentric 4.4e-2 → 1.8e-3.
+- Simulator truth (lensed / identity): KNN +6.10/−5.11% → −0.23/−0.12%; KNNBarycentric −1.71/−3.57% → −0.40/−0.14%.
+- Every mesh is now within 1% except RTUAdaptDensity lensed (−1.82%, reconstruction-limited). DelaunayNN is the only mesh still on approximate (dual) areas, within 0.5%.
+
+## Scope change
+- PyAutoArray#609 (kNN partial-block neighbour search) was prototyped here and then split back out by human ruling. Its fix breaks the KNN + AdaptSplit gradient check (`jax_grad/knn.py`); the patch and finding are on #609, and the prompt is re-sized to medium/judge.
+
+## Follow-ups
+- Phase 4e docs: `draft/docs/autolens_workspace/pixelization_source_science_py_document_mesh_mag.md` (before phase 6).
+- #609 investigation.
+
+## Original prompt
+
 # Mesh magnification: exact-quadrature areas for KNN meshes (phase 4b)
 
 Type: feature
