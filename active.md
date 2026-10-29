@@ -68,8 +68,19 @@
 - session: Claude Code (laptop)
 - status: library-shipped (DRAFT, HOLD)
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/811
+- note: keep_shear MassField fix folded into #811 (commit 49c365504; draft prompt removed)
 - worktree: ~/Code/PyAutoLabs-wt/lenstwin-p4a-twin-fit-model
 - repos:
   - PyAutoLens: feature/lenstwin-p4a-twin-fit-model
 - tier: judge — merge mode: human /prm; HOLD — human 2026-10-29: draft PR, nothing merges until the human lifts it
 - coordination: PyAutoLens also claimed by cosmos-web-ring-intro-visuals (Lens #809 merged; claim held for assistant#169); human approved concurrent work 2026-10-29 — claim RELEASED 2026-10-29 (task closed, assistant#169 merged)
+
+## lmp-gaussian-potential-fast
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/680
+- issued: 2026-10-29
+- session: Claude Code (laptop)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/lmp-gaussian-potential-fast
+- repos:
+  - PyAutoGalaxy: feature/lmp-gaussian-potential-fast
+- tier: judge — merge mode: human /prm
