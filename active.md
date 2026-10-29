@@ -3,7 +3,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/665
 - issued: 2026-10-29
 - session: Claude Code (Opus 5.5)
-- status: library-dev
+- status: pr-open (PyAutoArray#666, autolens_workspace_test#349; merge Array first) — awaiting human /prm
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/666
 - worktree: ~/Code/PyAutoLabs-wt/mesh-magnification-knn-areas
 - repos:
   - PyAutoArray: feature/mesh-magnification-knn-areas
