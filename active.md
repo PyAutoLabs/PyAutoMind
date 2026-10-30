@@ -33,19 +33,14 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1744 (stacked on #1743)
 - heart-ack: STALE (release validation stale: source moved since rehearsal) — human 2026-10-30
 
-## hpc-campaign-p2-campaign-core
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1740
+## source-science-area-magnification
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/607
 - issued: 2026-10-30
-- session: claude-code desktop (WSL), PyAutoLabs session (background fork)
-- status: library-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/hpc-campaign-p2-campaign-core
+- session: claude-code desktop (WSL), PyAutoLabs session
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/source-science-area-magnification
 - repos:
-  - PyAutoFit: feature/hpc-campaign-p2-campaign-core
-  - PyAutoFit: feature/hpc-campaign-p2b-collector-retro
-- prompt: active/hpc_campaign_p2_campaign_core.md
-- epic: hpc-campaign (phase 2)
-- concurrency: ruling F11 — shares PyAutoFit with results-library-p1-index; owns autofit/campaign/ only
-- tier: judge — merge mode: human /prm
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1741
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1742 (stacked on #1741)
-- heart-ack: STALE (release validation stale: source moved since rehearsal) — human 2026-10-30
+  - autolens_workspace: feature/source-science-area-magnification
+- prompt: active/source_science_area_magnification.md
+- epic: cluster-strong-lensing (phase 6c)
+- tier: judge — human authorized merge on green 2026-10-30
