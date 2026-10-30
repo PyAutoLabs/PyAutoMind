@@ -12,6 +12,8 @@ Autonomy: supervised
 Priority: high
 Consequence: judge
 Filed: 2026-10-30
+Issued: 2026-10-30
+Issue: https://github.com/PyAutoLabs/PyAutoArray/issues/667
 Witness: for every adaptive rectangular mesh, `mapper.source_plane_mesh_grid` equals the source-plane positions at which the mapper's interpolant takes each reconstruction value (node i's basis function peaks there); `griddata` of the reconstruction on those positions integrates to `sum(reconstruction * areas_for_magnification)` within a few percent; the reconstruction CSV writes those positions; RectangularUniform and Delaunay-family output is unchanged.
 
 ## Original request (human, 2026-10-30)
@@ -46,6 +48,12 @@ resolution.
 - Every workspace `source_science.py` / CSV-loading example that interpolates with `griddata` on those positions
   (interpolated source, zoom, errors, S/N masking, interpolation-route magnification), plus anything downstream
   that reads the CSV.
+- `autoarray/inversion/inversion/abstract.py` ~L1640 `max_pixel_centre`: the brightest source pixel's position is
+  taken from `mapper.source_plane_mesh_grid`, so it is wrong for adaptive meshes. PyAutoLens
+  `autolens/analysis/result.py` ~L566 uses it for **automatic position updating** (brightest source pixel →
+  PointSolver → image-plane multiple-image positions → SLaM positions likelihood). Quantify how far the reported
+  brightest-pixel centre moves on a realistic fit, and say in the PR whether past SLaM runs with adaptive
+  rectangular meshes were materially affected.
 - Plots are fine: `autoarray/plot/inversion.py` uses `mesh_geometry.edges_transformed`.
 - Check before changing `interpolator.mesh_grid` itself: the rectangular interpolator passes it to its mesh geometry
   (`interpolator/rectangular.py` ~L759), and preloads / `to_inversion` code paths touch `source_plane_mesh_grid`.

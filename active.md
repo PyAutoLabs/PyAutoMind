@@ -53,3 +53,15 @@
 - epic: hpc-campaign (phase 2)
 - concurrency: ruling F11 — shares PyAutoFit with results-library-p1-index; owns autofit/campaign/ only
 - tier: judge — merge mode: human /prm
+
+## adaptive-rect-mesh-node-positions
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/667
+- issued: 2026-10-30
+- session: claude-code desktop (WSL), PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/adaptive-rect-mesh-node-positions
+- repos:
+  - PyAutoArray: feature/adaptive-rect-mesh-node-positions
+- prompt: active/adaptive_rectangular_mesh_grid_is_uniform_overlay.md
+- epic: cluster-strong-lensing (phase 4e blocker; unblocks pixelization-mesh-mag-docs / autolens_workspace#605)
+- tier: judge — merge mode: human /prm
