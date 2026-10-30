@@ -12,7 +12,7 @@
 | [Epics](#epics) | 19 |
 | [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 279 |
+| [Backlog](#backlog) | 280 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -666,7 +666,7 @@ Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens
 </details>
 
 <details>
-<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 13 queued prompt(s), in order</summary>
+<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 14 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Cluster strong lensing — Source &amp; Cluster arc</b> — ledger: `draft/feature/autolens/source_cluster_arc.md` — In progress — 1a–1d, phase 3a audit (profiling#364, workspace_test#341) and phase 3b field-preserving cap fix (Galaxy#646…</summary>
 
@@ -776,6 +776,14 @@ Use the start-dev skill. draft/feature/autolens/cluster_fit_visualizer_cluster_w
 
 ```
 Use the start-dev skill. draft/feature/autolens/source_cluster_arc.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_inference/kernel_regularization_distances_adaptive_rectangular.md">Kernel regularization on adaptive rectangular meshes: stretched-lattice vs true source-plane distances</a> — autolens_inference · large · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/research/autolens_inference/kernel_regularization_distances_adaptive_rectangular.md
 ```
 
 </details>
@@ -3038,7 +3046,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-61 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+62 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3101,6 +3109,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/research/autofit/search_extensibility_epic.md — unknown theme keyword(s): searches, jax, documentation, inference`
 - `draft/research/autolens/point_solver_root_refinement.md — unknown theme keyword(s): jax`
 - `draft/research/autolens_assistant/free_agent_harness_evaluation.md — unknown theme keyword(s): assistant, support-policy`
+- `draft/research/autolens_inference/kernel_regularization_distances_adaptive_rectangular.md — unknown theme keyword(s): regularization`
 - `draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md — unknown theme keyword(s): euclid, hpc`
 - `draft/research/euclid/sky_orientation_euclid_dr1_and_library.md — unknown theme keyword(s): euclid`
 - `draft/triage/autolens/jit_fit_from_is_vacuous.md — unknown theme keyword(s): testing, jax`
