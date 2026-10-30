@@ -3,7 +3,9 @@
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/682
 - issued: 2026-10-30
 - session: claude-code desktop (WSL), PyAutoLabs session
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/683
+- heart-ack: release validation stale: source moved since rehearsal (human ack 2026-10-30)
 - worktree: ~/Code/PyAutoLabs-wt/chameleon-analytic-potential
 - repos:
   - PyAutoGalaxy: feature/chameleon-analytic-potential
