@@ -1,3 +1,38 @@
+# Likelihood lifecycle phase 2g: weak lensing — batch 0 run, rows committed (campaign complete)
+
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/476 (closed 2026-10-29 at setup)
+- pr-merged: https://github.com/PyAutoLabs/autolens_profiling/pull/487 MERGED 2026-10-30 6203903c (human /prm) — 2d-2g walls from batch 0
+- pr-merged: https://github.com/PyAutoLabs/autolens_profiling/pull/488 MERGED 2026-10-30 883d7f60 (human /prm) — 2g rows
+- pr-merged: https://github.com/PyAutoLabs/PyAutoPulse/pull/82 MERGED 2026-10-30 f9381255 (human /prm) — likelihood-lifecycle campaign row
+- setup-record: complete/2026/10/likelihood-lifecycle-p2g-weak.md
+- merged: 2026-10-30
+
+## Shipped
+
+Batch 0 ran 2026-10-29 (RAL array 413293, A100 job 413297) from the detached checkout
+`/mnt/ral/jnightin/profiling/autolens_profiling_p2dg` (main ad103340), private 2026.10.25.1
+libraries, jax/jaxlib 0.11.2 with the eigen flag on CPU legs. Under D9 its rows are the
+campaign's rows (no batch 1). All 6 legs exit 0; every parity witness `match` (|Δ log L|
+1.4e-10 to 2.1e-10 at |log L| ~ 85); every row quiet (loadavg_at_import ≤ 1.9); every row
+records the five tag HEADs.
+
+#488 copied the 6 rows into `results/weak/isothermal/simple/` and regenerated catalogue,
+dashboard (committed stamp), coverage (176 -> 182 current of 272, 0 stale), setup wiki, series
+map and READMEs. Witness met: the weak cells are 6/6 current with fit.png, provenance and
+parity.json; `build_catalogue --check --validate-with ../PyAutoPulse` current; the campaign page
+records the rule (met) and verdict.
+
+Headline (steady median per single JIT call / per point at vmap 32): `jax_cpu_dense_fp64@hpc_ral_cpu`
+0.189 / 0.040 ms; `jax_cpu_dense_fp64@hpc_a100` 0.315 / 0.057 ms; `jax_gpu_dense_fp64@hpc_a100`
+0.199 / 0.0089 ms. CPU 3-10x cheaper than the laptop-based expectation; the GPU single call is
+not launch-bound (beats its host's CPU) and wins per point at batch 32.
+
+Human decisions in this session (2026-10-30): loaded RAL nodes accepted ("ignore loaded node
+stuff for now"); the 2d driver keeps the eigen flag off GPU legs. Class designations stay
+phase 3's.
+
+## Original prompt
+
 # Likelihood lifecycle phase 2g: weak lensing — decisions, RAL batches and PR B
 
 Type: research

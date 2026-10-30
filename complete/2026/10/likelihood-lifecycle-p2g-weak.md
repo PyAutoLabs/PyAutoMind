@@ -5,7 +5,7 @@
 - pr-merged: https://github.com/PyAutoLabs/autolens_profiling/pull/477 MERGED 2026-10-29 864202d7 (human /prm)
 - planner-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/481 MERGED 2026-10-29 (settles D5)
 - batch-go: NONE — human: "leave this as something I then review before we do RAL runs"
-- remainder: draft/research/autolens_profiling/likelihood_lifecycle_p2g_weak_runs.md
+- remainder: draft/research/autolens_profiling/likelihood_lifecycle_p2g_weak_runs.md (closed 2026-10-30: complete/2026/10/likelihood-lifecycle-p2g-weak-runs.md)
 - merged: 2026-10-29
 
 ## Shipped — scope: campaign setup only
