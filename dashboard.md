@@ -961,7 +961,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/hpc_campaign_p3_plan_evidence.md">Issued: 2026-10-30</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1745">issue #1745</a> — issued 2026-10-30 — library-dev</summary>
+<details><summary>📋 <a href="active/hpc_campaign_p3_plan_evidence.md">Issued: 2026-10-30</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1745">issue #1745</a> — issued 2026-10-30 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1747">PyAutoFit#1747</a></summary>
 
 ```
 Use the start-dev skill. active/hpc_campaign_p3_plan_evidence.md
@@ -969,7 +969,7 @@ Use the start-dev skill. active/hpc_campaign_p3_plan_evidence.md
 
 </details>
 
-<details><summary>📋 <a href="active/hpc_campaign_p4_carbon_report.md">Issued: 2026-10-30</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1746">issue #1746</a> — issued 2026-10-30 — library-dev</summary>
+<details><summary>📋 <a href="active/hpc_campaign_p4_carbon_report.md">Issued: 2026-10-30</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1746">issue #1746</a> — issued 2026-10-30 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1748">PyAutoFit#1748</a>, <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/209">PyAutoNerves#209</a></summary>
 
 ```
 Use the start-dev skill. active/hpc_campaign_p4_carbon_report.md
