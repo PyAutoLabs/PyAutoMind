@@ -993,7 +993,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/area_magnification_lenscalc.md">Area magnification on LensCalc (LEGGOS Eq</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/684">issue #684</a> — issued 2026-10-30 — library-dev</summary>
+<details><summary>📋 <a href="active/area_magnification_lenscalc.md">Area magnification on LensCalc (LEGGOS Eq</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/684">issue #684</a> — issued 2026-10-30 — library-shipped, awaiting-merge (PR open 2026-10-30) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/685">PyAutoGalaxy#685</a> — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 Use the start-dev skill. active/area_magnification_lenscalc.md
@@ -3124,6 +3124,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#685](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/685) — `active/area_magnification_lenscalc.md`
 - [PyAutoGalaxy#683](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/683) — `complete/2026/10/chameleon-analytic-potential.md`
 - [PyAutoGalaxy#681](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/681) — `complete/2026/10/lmp-gaussian-potential-fast.md`
 
