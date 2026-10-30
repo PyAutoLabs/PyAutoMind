@@ -4,12 +4,12 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-10-30T11:43:46Z",
+  "updated": "2026-10-30T11:44:07Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
       "severity": "red",
-      "text": "Pixelization source_science.py: document mesh magnification areas properly\u2026 \u2014 blocked \u2014 awaiting library fix PyAutoArray#668 (adaptive-rect-mesh-node-positions) (human 2026-10-30: library first); WIP commit\u2026",
+      "text": "Pixelization source_science.py: document mesh magnification areas properly\u2026 \u2014 workspace-dev (unblocked 2026-10-30: PyAutoArray#668 merged, pending release); WIP commit 7c30f74f local, findings on #605",
       "url": "https://github.com/PyAutoLabs/autolens_workspace/issues/605",
       "prompt": "Use the start-dev skill. active/pixelization_source_science_py_document_mesh_mag.md"
     },

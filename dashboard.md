@@ -1009,7 +1009,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/pixelization_source_science_py_document_mesh_mag.md">Pixelization source_science.py: document mesh magnification areas properly…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/605">issue #605</a> — issued 2026-10-30 — blocked — awaiting library fix PyAutoArray#668 (adaptive-rect-mesh-node-positions) (human 2026-10-30: library first); WIP commit…</summary>
+<details><summary>📋 <a href="active/pixelization_source_science_py_document_mesh_mag.md">Pixelization source_science.py: document mesh magnification areas properly…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/605">issue #605</a> — issued 2026-10-30 — workspace-dev (unblocked 2026-10-30: PyAutoArray#668 merged, pending release); WIP commit 7c30f74f local, findings on #605</summary>
 
 ```
 Use the start-dev skill. active/pixelization_source_science_py_document_mesh_mag.md
