@@ -12,7 +12,7 @@
 | [Epics](#epics) | 19 |
 | [In flight](#in-flight) | 3 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 281 |
+| [Backlog](#backlog) | 283 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -341,12 +341,20 @@ Use the start-dev skill. draft/feature/autolens/lenstwin_epic_report.md
 </details>
 
 <details>
-<summary><b>HPC campaign — run large PyAutoFit modelling campaigns efficiently, token-cheaply and low-carbon: per-fit status records, declarative <code>campaign.yaml</code> with Slurm/Local/Fake adapters, evidence-graded planning, carbon reporting</b> — 1 queued prompt(s), in order</summary>
+<summary><b>HPC campaign — run large PyAutoFit modelling campaigns efficiently, token-cheaply and low-carbon: per-fit status records, declarative <code>campaign.yaml</code> with Slurm/Local/Fake adapters, evidence-graded planning, carbon reporting</b> — 2 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>HPC campaign — run large PyAutoFit modelling campaigns efficiently, token-cheaply and low-carbon: per-fit status records, declarative <code>campaign.yaml</code> with Slurm/Local/Fake adapters, evidence-graded planning, carbon reporting</b> — ledger: `draft/research/autofit/hpc_campaign_epic.md` — STARTED 2026-10-28 — concurrent with results-library; phase 0 shared, owned by results-library. Rulings F1–F12 recorded in the…</summary>
 
 ```
 Continue the 'HPC campaign — run large PyAutoFit modelling campaigns efficiently, token-cheaply and low-carbon: per-fit status records, declarative `campaign.yaml` with Slurm/Local/Fake adapters, evidence-graded planning, carbon reporting' epic. Its canonical state lives in draft/research/autofit/hpc_campaign_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: amended phase map (2026-10-28): 0 → issued as results-library phase 0; 1 status record + failure record + `states.py` + Nerves `site.yaml` (merges after results-library PR 0a); 2 campaign core + Slurm/Local/Fake adapters + collector + partition lint + retrospective mode from a sacct dump; 3 evidence readers (Pulse/Insight JSON with evidence grades) + `plan` + `pilot`; 4 carbon + report (parallel with 3); 5 organism integration (assistant template v2 + sync verbs + skill, Cortex `sync-runs` under decision 62, Brain conductor + governance hook, pipeline adoption after DR1 v1.0); 6 generalisation. Hard constraint: never CPU arrays on RAL `gpu`. Report: draft/research/autofit/hpc_campaign_epic_report.md; surveys hpc_campaign_epic_surveys/; scoping review Workspace/Science/scratch/pyautolens_ii_campaign_results_scoping_2026-10-28/REVIEW.md.
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_p2_campaign_core.md">Epic: hpc-campaign</a> — autofit · human-required</summary>
+
+```
+Use the start-dev skill. draft/research/autofit/hpc_campaign_p2_campaign_core.md
 ```
 
 </details>
@@ -362,12 +370,20 @@ Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md
 </details>
 
 <details>
-<summary><b>Results library — PyAutoFit infrastructure to index, complete, export, package and reconcile thousands of finished results (follow-up to hpc-campaign; Euclid DR1 is the pilot)</b> — 2 queued prompt(s), in order</summary>
+<summary><b>Results library — PyAutoFit infrastructure to index, complete, export, package and reconcile thousands of finished results (follow-up to hpc-campaign; Euclid DR1 is the pilot)</b> — 3 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Results library — PyAutoFit infrastructure to index, complete, export, package and reconcile thousands of finished results (follow-up to hpc-campaign; Euclid DR1 is the pilot)</b> — ledger: `draft/feature/autofit/results_library_epic.md` — STARTED 2026-10-28 — concurrent with hpc-campaign; phase 0 shared, owned by results-library. Rulings F1–F12 recorded in the…</summary>
 
 ```
 Continue the 'Results library — PyAutoFit infrastructure to index, complete, export, package and reconcile thousands of finished results (follow-up to hpc-campaign; Euclid DR1 is the pilot)' epic. Its canonical state lives in draft/feature/autofit/results_library_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: six phases, library first, one at a time. 0 integrity and honesty primitives (atomic STORED-media zips, in-zip `.completed` check, checkpoint probe + quarantine, `from_directory(on_error=)` with `agg.errors`, strict AggregateCSV by default with union header); 1 results index + status classes + `dataset_identity.json` + `agg.latest_per` + lazy zip-member reads + `python -m autofit.results {index,status,count}`; 2 completeness over a declared grid (per-product, `.missing.csv`) + `Aggregator.enrich`; 3 incremental honest exports (cached rows, row-or-reason, `columns.json`, plain-JSON view) + scheduler-agnostic chunk/merge; 4 `af.export.package` (size-capped parts, manifest, SHA256SUMS, verify, provenance README) + library diff/parity + run-to-run scatter helper; 5 assistant skill, pipeline scripts shrink, hpc/sync index pull, Cortex index hash, 500-lens DR1 v1.0 census as witness. Boundary: hpc-campaign owns run time (status.json, failure records, `states.py`, resources, Slurm, carbon); this epic owns post-run and phase 0 (PRs 0a integrity, 0b honest reads), shared with hpc-campaign. Does not block draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md. First step: phase 0 via `start_dev` as a single PyAutoFit issue. Evidence and lessons: draft/feature/autofit/results_library_epic_report.md.
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autofit/results_library_p1_index.md">Epic: results-library</a> — autofit · human-required</summary>
+
+```
+Use the start-dev skill. draft/feature/autofit/results_library_p1_index.md
 ```
 
 </details>
