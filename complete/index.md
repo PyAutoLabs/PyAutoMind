@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2054 records across 10 buckets.
+2055 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -504,6 +504,7 @@ markers; everything below GENERATED is rebuilt.
 - [sizing-none-triage-rules](2026/10/sizing-none-triage-rules.md)
 - [smoke-preserve-tracked](2026/10/smoke-preserve-tracked.md)
 - [smoke-sampler-imports](2026/10/smoke-sampler-imports.md)
+- [source-science-area-magnification](2026/10/source-science-area-magnification.md) — arc phase 6c
 - [sparse-mapped-reconstructed-image](2026/10/sparse-mapped-reconstructed-image.md)
 - [sparse-noise-map-pooling](2026/10/sparse-noise-map-pooling.md)
 - [sparse-terms-oversampled-fine-grids](2026/10/sparse-terms-oversampled-fine-grids.md)

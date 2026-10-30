@@ -823,6 +823,6 @@ regularizations kept on the lattice explicitly (human ruling); end-to-end study 
 
 Phase 6 sliced (human "do phase 6"): 6a LensCalc area magnification (PyAutoGalaxy#684 → #685 MERGED 2026-10-30,
 pending release; record `complete/2026/10/area-magnification-lenscalc.md`) → 6b MERGED 2026-10-30
-(autolens_workspace_test#352, record `complete/2026/10/area-magnification-validation.md`; fix PyAutoGalaxy#687) → 6c source_science docs
-→ 6d autolens_assistant LEGGOS II ingest.
+(autolens_workspace_test#352, record `complete/2026/10/area-magnification-validation.md`; fix PyAutoGalaxy#687) → 6c MERGED 2026-10-30 (autolens_workspace#608, record
+`complete/2026/10/source-science-area-magnification.md`) → 6d autolens_assistant LEGGOS II ingest.
 
