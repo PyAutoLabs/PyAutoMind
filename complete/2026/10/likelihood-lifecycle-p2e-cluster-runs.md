@@ -1,3 +1,22 @@
+# Likelihood lifecycle phase 2e: cluster — batch 0 + batch 1 run, 10 rows committed (campaign complete)
+
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/474 (closed 2026-10-29 at setup)
+- pr-merged: https://github.com/PyAutoLabs/autolens_profiling/pull/487 MERGED 2026-10-30 6203903c (human /prm) — walls from batch 0, 2d driver GPU-flag fix
+- pr-merged: https://github.com/PyAutoLabs/autolens_profiling/pull/490 MERGED 2026-10-30 a91fad39 (human /prm) — PR B
+- merged: 2026-10-30
+
+## Shipped
+
+Batch 0 (RAL 413273, A100 413295; 4 image-plane legs, exit 0, 2/2 match) set the walls (#487).
+Batch 1 (RAL 413447, A100 job 413455, 2026-10-30) all exit 0; PR B #490 copied the 10 rows (4 image
+plane, 6 source plane) into `results/cluster/`: 5/5 witnesses match, coverage 230 -> 240.
+
+Verdict: rule met on both pages. Image plane: A100 2.32 ms vs RAL CPU 5.71 ms per call, solved and
+plain headlines the same order, ~105 s lower+compile per pipeline. Source plane: 0.51-0.82 ms, one
+order below the image plane (not two); the A100 node's CPU beats its GPU per single call.
+
+## Original prompt
+
 # Likelihood lifecycle phase 2e: cluster — decisions, RAL batches and PR B
 
 Type: research

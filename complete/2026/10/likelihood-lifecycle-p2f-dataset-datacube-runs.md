@@ -1,3 +1,24 @@
+# Likelihood lifecycle phase 2f: multi_dataset + datacube — batch 0 + batch 1 run, 32 rows committed (campaign complete)
+
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/475 (closed 2026-10-29 at setup)
+- pr-merged: https://github.com/PyAutoLabs/autolens_profiling/pull/487 MERGED 2026-10-30 6203903c (human /prm) — walls from batch 0, 2d driver GPU-flag fix
+- pr-merged: https://github.com/PyAutoLabs/autolens_profiling/pull/491 MERGED 2026-10-30 ec8fb5e9 (human /prm) — PR B
+- merged: 2026-10-30
+
+## Shipped
+
+Batch 0 (RAL 413274, references 413292, A100 413296; all exit 0) set the walls (#487). Batch 1 (RAL
+413448-413452 incl. the alma/alma_high references, A100 413456-413459, 2026-10-30) all exit 0; PR B
+#491 copied the 32 rows (22 datacube, 10 multi_dataset) into `results/`, re-rendered
+`results/datacube/delaunay/sma/comparison.{json,png}`: 16/16 witnesses match (worst 2.3e-11
+relative), coverage 240 -> 272 of 272, 0 stale, 0 missing — phase 2 coverage complete.
+
+Verdict: rule met on both pages. Datacube: a 34-channel cube costs 0.05-0.74x 34 single channels;
+W~ cheaper than dense at sma; NumPy FFT route picked at alma_high. multi_dataset: 2a's setup
+ranking; 1.8-3.0x 2a's hst cell rather than 2x.
+
+## Original prompt
+
 # Likelihood lifecycle phase 2f: multi_dataset + datacube — decisions, RAL batches and PR B
 
 Type: research

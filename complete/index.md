@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2055 records across 10 buckets.
+2058 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -319,8 +319,11 @@ markers; everything below GENERATED is rebuilt.
 - [likelihood-lifecycle-p2b-interferometer](2026/10/likelihood-lifecycle-p2b-interferometer.md) — complete
 - [likelihood-lifecycle-p2c-point-source](2026/10/likelihood-lifecycle-p2c-point-source.md) — complete
 - [likelihood-lifecycle-p2d-galaxy-group](2026/10/likelihood-lifecycle-p2d-galaxy-group.md) — RAL not run
+- [likelihood-lifecycle-p2d-galaxy-group-runs](2026/10/likelihood-lifecycle-p2d-galaxy-group-runs.md) — campaign complete
 - [likelihood-lifecycle-p2e-cluster](2026/10/likelihood-lifecycle-p2e-cluster.md) — RAL not run
+- [likelihood-lifecycle-p2e-cluster-runs](2026/10/likelihood-lifecycle-p2e-cluster-runs.md) — campaign complete
 - [likelihood-lifecycle-p2f-dataset-datacube](2026/10/likelihood-lifecycle-p2f-dataset-datacube.md) — RAL not run
+- [likelihood-lifecycle-p2f-dataset-datacube-runs](2026/10/likelihood-lifecycle-p2f-dataset-datacube-runs.md) — campaign complete
 - [likelihood-lifecycle-p2g-weak](2026/10/likelihood-lifecycle-p2g-weak.md) — RAL not run
 - [likelihood-lifecycle-p2g-weak-runs](2026/10/likelihood-lifecycle-p2g-weak-runs.md) — campaign complete
 - [likelihood-lifecycle-p2x-node-throughput](2026/10/likelihood-lifecycle-p2x-node-throughput.md)

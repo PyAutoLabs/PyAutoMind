@@ -85,7 +85,7 @@ R1 **RULED 2026-10-28: accepted** — `autolens/twins/` exported as `al.twins`; 
 
 ## Adopted and adjacent work
 
-- Adjacent, untouched: `draft/feature/workspaces/group_subhalo_sensitivity.md` (sensitivity mapping on group lenses: a later LensTwin transformation could absorb its injection step, not now); `draft/research/autolens_profiling/likelihood_lifecycle_p2d_galaxy_group_runs.md` (2d setup shipped 2026-10-29, complete/2026/10/likelihood-lifecycle-p2d-galaxy-group.md) (profiling of multi-galaxy likelihoods, informs phase 5 fit cost); `results-library` and `hpc-campaign` epics (post-run indexing and run-time status for phase 4+ outputs); PyAutoMemory `wiki/lensing/concepts/bulge-halo-decomposition.md` (the science background the convention page cites).
+- Adjacent, untouched: `draft/feature/workspaces/group_subhalo_sensitivity.md` (sensitivity mapping on group lenses: a later LensTwin transformation could absorb its injection step, not now); 2d multi_galaxy + group profiling (complete 2026-10-30, complete/2026/10/likelihood-lifecycle-p2d-galaxy-group-runs.md) (profiling of multi-galaxy likelihoods, informs phase 5 fit cost); `results-library` and `hpc-campaign` epics (post-run indexing and run-time status for phase 4+ outputs); PyAutoMemory `wiki/lensing/concepts/bulge-halo-decomposition.md` (the science background the convention page cites).
 - Nothing adopted: no existing prompt covers twins, simulate-from-fit or instance-level mass normalisation.
 
 ## Ledger

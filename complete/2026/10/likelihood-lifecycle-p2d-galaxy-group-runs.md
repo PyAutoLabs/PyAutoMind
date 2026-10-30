@@ -1,3 +1,27 @@
+# Likelihood lifecycle phase 2d: multi_galaxy + group — batch 0 + batch 1 run, 48 rows committed (campaign complete)
+
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/473 (closed 2026-10-29 at setup)
+- pr-merged: https://github.com/PyAutoLabs/autolens_profiling/pull/487 MERGED 2026-10-30 6203903c (human /prm) — walls from batch 0, 2d driver GPU-flag fix
+- pr-merged: https://github.com/PyAutoLabs/autolens_profiling/pull/489 MERGED 2026-10-30 e6942fe3 (human /prm) — PR B
+- merged: 2026-10-30
+
+## Shipped
+
+Batch 0 (RAL 413272, A100 413294, 2026-10-29; 24 group legs, all exit 0, 12/12 witnesses match) set
+batch 1's walls (#487). Batch 1 (RAL 413445/413446, A100 413453/413454, 2026-10-30, from the RAL
+checkout autolens_profiling_p2dg at 830314e9) all exit 0; PR B #489 copied the 48 rows into
+`results/{multi_galaxy,group}/`: 24/24 witnesses match, coverage 182 -> 230 of 272, 0 stale.
+
+Verdict: rule met. `jax_gpu_dense_fp64@hpc_a100` fastest per call (MGE ~7 ms; pixelized 38-56 ms);
+`numba_cpu_sparse_fp64` the RAL CPU pixelized route (0.80-1.10 s vs JAX CPU 3.7-6.0 s). The
+expectation "group slower than multi_galaxy for every setup" fails for the numba pixelized cells.
+Fit figure note: multi_galaxy MGE shows a ~14 sigma ring residual at iid draw 0 (parametric source).
+
+Human decisions this session (2026-10-30): loaded RAL nodes accepted (no quiet gate); the 2d driver
+keeps the eigen flag off GPU legs (#487); wait for RAL and ship one complete PR B per campaign.
+
+## Original prompt
+
 # Likelihood lifecycle phase 2d: multi_galaxy + group — decisions, RAL batches and PR B
 
 Type: research
