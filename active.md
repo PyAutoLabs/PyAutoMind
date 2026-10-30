@@ -35,7 +35,7 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/605
 - issued: 2026-10-30
 - session: claude-code desktop (WSL), PyAutoLabs session
-- status: workspace-dev
+- status: blocked — awaiting library fix draft/bug/autoarray/adaptive_rectangular_mesh_grid_is_uniform_overlay.md (human 2026-10-30: library first); WIP commit 7c30f74f local, findings on #605
 - worktree: ~/Code/PyAutoLabs-wt/pixelization-mesh-mag-docs
 - repos:
   - autolens_workspace: feature/pixelization-mesh-mag-docs
