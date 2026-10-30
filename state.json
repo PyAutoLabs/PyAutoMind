@@ -4,14 +4,20 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-10-30T11:10:01Z",
+  "updated": "2026-10-30T11:33:49Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
       "severity": "red",
-      "text": "Pixelization source_science.py: document mesh magnification areas properly\u2026 \u2014 blocked \u2014 awaiting library fix draft/bug/autoarray/adaptive_rectangular_mesh_grid_is_uniform_overlay.md (human 2026-10-30\u2026",
+      "text": "Pixelization source_science.py: document mesh magnification areas properly\u2026 \u2014 blocked \u2014 awaiting library fix PyAutoArray#668 (adaptive-rect-mesh-node-positions) (human 2026-10-30: library first); WIP commit\u2026",
       "url": "https://github.com/PyAutoLabs/autolens_workspace/issues/605",
       "prompt": "Use the start-dev skill. active/pixelization_source_science_py_document_mesh_mag.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Adaptive rectangular meshes report a uniform overlay as their source-plane node positions \u2014 library-shipped, awaiting-merge (PR open 2026-10-30; Heart STALE acked by human)",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/668",
+      "prompt": "Use the start-dev skill. active/adaptive_rectangular_mesh_grid_is_uniform_overlay.md"
     },
     {
       "severity": "yellow",
@@ -120,12 +126,6 @@
       "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
-      "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
     }
   ]
 }

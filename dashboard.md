@@ -993,7 +993,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/adaptive_rectangular_mesh_grid_is_uniform_overlay.md">Adaptive rectangular meshes report a uniform overlay as their source-plane node positions</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/667">issue #667</a> — issued 2026-10-30 — library-dev</summary>
+<details><summary>📋 <a href="active/adaptive_rectangular_mesh_grid_is_uniform_overlay.md">Adaptive rectangular meshes report a uniform overlay as their source-plane node positions</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/667">issue #667</a> — issued 2026-10-30 — library-shipped, awaiting-merge (PR open 2026-10-30; Heart STALE acked by human) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/668">PyAutoArray#668</a></summary>
 
 ```
 Use the start-dev skill. active/adaptive_rectangular_mesh_grid_is_uniform_overlay.md
@@ -1017,7 +1017,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/pixelization_source_science_py_document_mesh_mag.md">Pixelization source_science.py: document mesh magnification areas properly…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/605">issue #605</a> — issued 2026-10-30 — blocked — awaiting library fix draft/bug/autoarray/adaptive_rectangular_mesh_grid_is_uniform_overlay.md (human 2026-10-30…</summary>
+<details><summary>📋 <a href="active/pixelization_source_science_py_document_mesh_mag.md">Pixelization source_science.py: document mesh magnification areas properly…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/605">issue #605</a> — issued 2026-10-30 — blocked — awaiting library fix PyAutoArray#668 (adaptive-rect-mesh-node-positions) (human 2026-10-30: library first); WIP commit…</summary>
 
 ```
 Use the start-dev skill. active/pixelization_source_science_py_document_mesh_mag.md
