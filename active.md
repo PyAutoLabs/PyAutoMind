@@ -20,7 +20,10 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/605
 - issued: 2026-10-30
 - session: claude-code desktop (WSL), PyAutoLabs session
-- status: workspace-dev (unblocked 2026-10-30: PyAutoArray#668 merged, pending release); WIP commit 7c30f74f local, findings on #605
+- status: workspace-shipped, awaiting-merge (PR open 2026-10-30)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/606
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/668
+- release-gate: PyAutoArray
 - worktree: ~/Code/PyAutoLabs-wt/pixelization-mesh-mag-docs
 - repos:
   - autolens_workspace: feature/pixelization-mesh-mag-docs
