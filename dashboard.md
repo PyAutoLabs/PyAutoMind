@@ -3125,6 +3125,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 **PyAutoGalaxy**
 
 - [PyAutoGalaxy#685](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/685) — `complete/2026/10/area-magnification-lenscalc.md`
+- [PyAutoGalaxy#687](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/687) — `complete/2026/10/area-magnification-subpixel-area.md`
 - [PyAutoGalaxy#683](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/683) — `complete/2026/10/chameleon-analytic-potential.md`
 - [PyAutoGalaxy#681](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/681) — `complete/2026/10/lmp-gaussian-potential-fast.md`
 

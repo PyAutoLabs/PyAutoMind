@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-10-30T13:33:00Z",
+  "updated": "2026-10-30T13:33:29Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -81,6 +81,12 @@
     },
     {
       "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#687 \u2014 area-magnification-subpixel-area",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/687",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#683 \u2014 chameleon-analytic-potential",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/683",
       "prompt": null
@@ -120,12 +126,6 @@
       "text": "pick: SED chain waveband fit can spin forever in Nautilus exploration\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md",
       "prompt": "Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: arXiv's Fastly edge refuses `urllib.request` outright \u2014 retrying a 406 only delays\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md",
-      "prompt": "Use the start-dev skill. draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md"
     }
   ]
 }
