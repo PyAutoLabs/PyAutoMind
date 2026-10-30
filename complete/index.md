@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2060 records across 10 buckets.
+2062 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -272,6 +272,8 @@ markers; everything below GENERATED is rebuilt.
 - [howtofit-runtime-guidance](2026/10/howtofit-runtime-guidance.md)
 - [hpc-campaign-p1-status-record](2026/10/hpc-campaign-p1-status-record.md) — Per-fit status record in new `autofit/non_linear/status/`: `states.py` (RunState,
 - [hpc-campaign-p2-campaign-core](2026/10/hpc-campaign-p2-campaign-core.md) — New `autofit/campaign/` (stdlib + PyYAML, no Slurm at import). **2a (#1741):** `campaign.yaml`
+- [hpc-campaign-p3-plan-evidence](2026/10/hpc-campaign-p3-plan-evidence.md) — `autofit/campaign/evidence.py` (readers for profiling-summary@3, walltime-validation@1,
+- [hpc-campaign-p4-carbon-report](2026/10/hpc-campaign-p4-carbon-report.md) — `autofit/campaign/carbon.py` — Green Algorithms estimate, four cases (low / central usage basis /
 - [hst-cleanslate-light-mode](2026/10/hst-cleanslate-light-mode.md)
 - [hst-cleanslate-numba-shared-lp](2026/10/hst-cleanslate-numba-shared-lp.md)
 - [hst-mass-samplers-wave1](2026/10/hst-mass-samplers-wave1.md)
