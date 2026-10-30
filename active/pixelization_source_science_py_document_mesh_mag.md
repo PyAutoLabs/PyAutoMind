@@ -13,6 +13,8 @@ Consequence: judge
 Witness: grep finds no `mesh_areas` in the four pixelization source_science.py scripts, each states the areas are the pixels' basis-function integrals and which mesh is approximate, and all four run clean in smoke.
 Review-minutes: 20
 Unattended: ready
+Issued: 2026-10-30
+Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/605
 
 # Pixelization source_science.py: document mesh magnification areas properly (arc phase 4 docs, before phase 6)
 
