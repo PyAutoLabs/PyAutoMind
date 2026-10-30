@@ -62,3 +62,16 @@
 - concurrency: ruling F11 — shares PyAutoFit with hpc-campaign-p3-plan-evidence (rebases onto p3 for __main__.py) and results-library-p1-index (shipped, awaiting /prm)
 - heart-red-override: authorized live by the human 2026-10-30 ("Override, proceed") for hpc-campaign phases 3 + 4; RED reasons quoted on PyAutoFit#1746
 - tier: judge — merge mode: human /prm
+
+## magnification-latent-raw-flux
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/812
+- issued: 2026-10-30
+- session: claude-code desktop (WSL), PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/magnification-latent-raw-flux
+- repos:
+  - PyAutoLens: feature/magnification-latent-raw-flux
+  - autolens_workspace: feature/magnification-latent-raw-flux
+- prompt: active/magnification_latent_raw_flux.md
+- epic: cluster-strong-lensing (phase 7a)
+- tier: judge
