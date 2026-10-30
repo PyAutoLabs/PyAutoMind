@@ -811,3 +811,17 @@ Galaxy#657 merged 2026-10-23 (docstring only); pending-release PyAutoGalaxy unti
 2026-10-29 — Filed phase 4e docs prompt `draft/docs/autolens_workspace/pixelization_source_science_py_document_mesh_mag.md` (pixelization source_science.py magnification docs after 4a/4b). Human: must land BEFORE phase 6; phase 6 not tonight.
 2026-10-29 — Phase 4b PRs OPEN: PyAutoArray#666 (exact kNN areas; closes #665) + autolens_workspace_test#349 (merge after). Suites green (Array 2251, Galaxy 1452, Lens 1015, nojax 278). Awaiting human /prm. Next: 4e docs prompt, then phase 6 (not tonight).
 2026-10-29 — Phase 4b MERGED + CLOSED via /prm: PyAutoArray#666 (`e71feafd`, pending release) + autolens_workspace_test#349 (`5a41b981`); #665 closed; record `complete/2026/10/mesh-magnification-knn-areas.md`. Phase 4 remaining: 4c (library flux-ratio μ), 4d (source_science recovery sweep), 4e docs (filed, before phase 6). #609 open separately.
+
+## Phase 4e shipped; phase 6 started — 2026-10-30
+
+4e docs merged (autolens_workspace#606, record `complete/2026/10/pixelization-mesh-mag-docs.md`). Smoke against
+simulator truth exposed wrong answers: imaging extra galaxy not scaled out, interferometer over-regularised, and a
+library bug — adaptive rectangular `source_plane_mesh_grid` was the uniform overlay, not the pixel centres (fixed
+PyAutoArray#668, record `complete/2026/10/adaptive-rect-mesh-node-positions.md`, pending release). Kernel
+regularizations kept on the lattice explicitly (human ruling); end-to-end study filed
+`draft/research/autolens_inference/kernel_regularization_distances_adaptive_rectangular.md`.
+
+Phase 6 sliced (human "do phase 6"): 6a LensCalc area magnification (PyAutoGalaxy#684,
+`active/area_magnification_lenscalc.md`) → 6b workspace_test validation vs simulated truth → 6c source_science docs
+→ 6d autolens_assistant LEGGOS II ingest.
+

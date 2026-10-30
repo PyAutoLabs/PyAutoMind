@@ -16,21 +16,6 @@
   - ECLIPSE_lens_catalogue: feature/r2-pages-function-access
 - tier: judge — merge mode: human /prm
 
-## pixelization-mesh-mag-docs
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/605
-- issued: 2026-10-30
-- session: claude-code desktop (WSL), PyAutoLabs session
-- status: workspace-shipped, awaiting-merge (PR open 2026-10-30)
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/606
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/668
-- release-gate: PyAutoArray
-- worktree: ~/Code/PyAutoLabs-wt/pixelization-mesh-mag-docs
-- repos:
-  - autolens_workspace: feature/pixelization-mesh-mag-docs
-- prompt: active/pixelization_source_science_py_document_mesh_mag.md
-- epic: cluster-strong-lensing (phase 4e)
-- tier: judge — merge mode: human /prm (merge with/after release carrying PyAutoArray#664/#666)
-
 ## results-library-p1-index
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1739
 - issued: 2026-10-30

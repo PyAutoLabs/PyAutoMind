@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2049 records across 10 buckets.
+2050 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -363,6 +363,7 @@ markers; everything below GENERATED is rebuilt.
 - [organ-resource-dropdowns](2026/10/organ-resource-dropdowns.md) — Four Heart test-workspace dropdowns and 18 Broca communication-resource dropdowns, connected by Scientist stab…
 - [over-sample-snr-helper](2026/10/over-sample-snr-helper.md)
 - [padded-single-image-recovery](2026/10/padded-single-image-recovery.md)
+- [pixelization-mesh-mag-docs](2026/10/pixelization-mesh-mag-docs.md) — arc 4e
 - [point-audits-wheel-provenance](2026/10/point-audits-wheel-provenance.md) — Point-solver audits now work with installed wheels, preserve checkout provenance, fingerprint installed packag…
 - [point-critical-curve-grid](2026/10/point-critical-curve-grid.md)
 - [point-dataset-positions-panel](2026/10/point-dataset-positions-panel.md)

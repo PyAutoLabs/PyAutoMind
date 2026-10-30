@@ -15,7 +15,7 @@ Autonomy: supervised
 Priority: normal
 Status: formalised
 
-> 2026-10-29: child 4a SHIPPED (record `complete/2026/10/mesh-magnification-areas.md`) — rectangular + Delaunay/NN areas exact and tested. 4b SHIPPED 2026-10-29 (record `complete/2026/10/mesh-magnification-knn-areas.md`, kNN exact areas). Remaining children: 4e docs (`draft/docs/autolens_workspace/pixelization_source_science_py_document_mesh_mag.md`), 4c library flux-ratio μ, 4d source_science recovery sweep.
+> 2026-10-29: child 4a SHIPPED (record `complete/2026/10/mesh-magnification-areas.md`) — rectangular + Delaunay/NN areas exact and tested. 4b SHIPPED 2026-10-29 (record `complete/2026/10/mesh-magnification-knn-areas.md`, kNN exact areas). 4e docs SHIPPED 2026-10-30 (record `complete/2026/10/pixelization-mesh-mag-docs.md`, after PyAutoArray#668 true pixel centres). Remaining children: 4c library flux-ratio μ, 4d source_science recovery sweep.
 Consequence: judge
 Review-minutes: 25
 Unattended: needs-slicing

@@ -1,3 +1,24 @@
+# Pixelization source_science: mesh magnification documented and checked against truth (arc 4e)
+
+Issue autolens_workspace#605 → PR autolens_workspace#606 merged 2026-10-30 (`65efb65e`). Epic `cluster-strong-lensing`,
+phase 4e (docs before phase 6). Library prerequisite PyAutoArray#668 (adaptive-rect true pixel centres, record
+`complete/2026/10/adaptive-rect-mesh-node-positions.md`); text also describes PyAutoArray#664/#666. All three pending
+release — human authorized merging the workspace before the release.
+
+Shipped in the four pixelization source_science scripts (imaging, interferometer, group, multi_galaxy):
+`__Magnification via Mesh__` rewritten (areas = basis-function integrals; per-mesh computation; accuracy; mesh vs
+interpolation route; `magnification` latent), new `__True Magnification__` from `tracer.json`, imaging extra-galaxy
+noise scaling, interferometer coefficient 0.1, `griddata(fill_value=0.0)` for reconstruction interpolation. Human
+prose rule: describe the calculation as it stands, no fix/history wording.
+
+Full-size results (truth / mesh / interpolation): imaging 34.91 / 31.63 / 33.22; interferometer 7.16 / 7.62 / 11.82;
+group 20.51 / 20.00 / 20.34; multi_galaxy 25.58 / 22.70 / 24.10. Before: imaging mesh 16.6, interpolation 7.2;
+interferometer mesh 4.5; group/multi interpolation NaN. CI smoke 3.12/3.13 + navigator + size-guard green.
+
+Spun out: research `draft/research/autolens_inference/kernel_regularization_distances_adaptive_rectangular.md`.
+
+## Original prompt
+
 # Pixelization source_science.py: document mesh magnification areas properly…
 
 Type: docs
