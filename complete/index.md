@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2064 records across 10 buckets.
+2065 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -274,6 +274,7 @@ markers; everything below GENERATED is rebuilt.
 - [hpc-campaign-p2-campaign-core](2026/10/hpc-campaign-p2-campaign-core.md) — New `autofit/campaign/` (stdlib + PyYAML, no Slurm at import). **2a (#1741):** `campaign.yaml`
 - [hpc-campaign-p3-plan-evidence](2026/10/hpc-campaign-p3-plan-evidence.md) — `autofit/campaign/evidence.py` (readers for profiling-summary@3, walltime-validation@1,
 - [hpc-campaign-p4-carbon-report](2026/10/hpc-campaign-p4-carbon-report.md) — `autofit/campaign/carbon.py` — Green Algorithms estimate, four cases (low / central usage basis /
+- [hpc-campaign-p5b-cortex](2026/10/hpc-campaign-p5b-cortex.md) — `cortex sync-runs <project> --digest <path> [--dry-run]` — run lines open→running (with a `run` log entry)
 - [hst-cleanslate-light-mode](2026/10/hst-cleanslate-light-mode.md)
 - [hst-cleanslate-numba-shared-lp](2026/10/hst-cleanslate-numba-shared-lp.md)
 - [hst-mass-samplers-wave1](2026/10/hst-mass-samplers-wave1.md)

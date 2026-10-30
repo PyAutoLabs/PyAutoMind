@@ -114,6 +114,7 @@ Human's words, verbatim: "F1 your recommendations, F2 ok, F3 yes, 4. yes do the 
 - 2026-10-30 — PHASES 3 + 4 COMPLETE (human /prm, Heart RED dev override): PyAutoFit#1747 (merge 70ab26c45), #1748 (a7798cb99, retargeted to main after #1747), PyAutoNerves#209 (68cbac376), all pending-release. Issues #1745, #1746, Nerves#208 closed; records complete/2026/10/hpc-campaign-p3-plan-evidence.md + hpc-campaign-p4-carbon-report.md. Open human ruling: CI high bound (base spread vs regional p95). NEXT: phase 5 (organism integration) via `/start_dev`.
 - 2026-10-30 — HUMAN RULING (CI high bound): keep the spread across grid bases (F6) — "spread across grid bases"; regional p95 stays unused. Human asked to start phase 5 next.
 - 2026-10-30 — PHASE 5 STARTED (Heart RED dev override, human "Override + approve"): 5a autolens_assistant#172 built (step 0 b999e8d + v2 067c40b, unpushed, unreviewed); 5b PyAutoCortex#82 built (1bc7ef7, decision 64) but review FINDINGS open (HIGH premature done on pending array slices); 5c PyAutoBrain#547 lane stalled, not started; 5d pipeline adoption deferred until DR1 v1.0. Session wrapped up at human request; resume points on each issue and in active.md.
+- 2026-10-30 — 5b COMPLETE (human /prm): PyAutoCortex#83 merged (decision 64), #82 closed, record complete/2026/10/hpc-campaign-p5b-cortex.md. 5a built (unpushed; independent review was in flight at wrap-up — read its result on resume or rerun it), 5c not started (restart lane). Session wrapped at human request.
 
 ## Original request (verbatim)
 
