@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 19 |
-| [In flight](#in-flight) | 5 |
+| [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 281 |
+| [Backlog](#backlog) | 280 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -993,6 +993,14 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
+<details><summary>📋 <a href="active/chameleon_potential_inconsistent_with_deflections.md"><code>mp.Chameleon.potential_2d_from</code> is inconsistent with its deflections (~60%)</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/682">issue #682</a> — issued 2026-10-30 — library-dev</summary>
+
+```
+Use the start-dev skill. active/chameleon_potential_inconsistent_with_deflections.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/hpc_campaign_p2_campaign_core.md">Issued: 2026-10-30</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1740">issue #1740</a> — issued 2026-10-30 — library-dev</summary>
 
 ```
@@ -1482,7 +1490,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 65</summary>
+<summary><b>bug</b> — 64</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1552,14 +1560,6 @@ Use the start-dev skill. draft/bug/autofit/investigate_euclid_einstein_radius_la
 
 ```
 Use the start-dev skill. draft/bug/health_fixes/samples_parameter_paths.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autogalaxy/chameleon_potential_inconsistent_with_deflections.md"><code>mp.Chameleon.potential_2d_from</code> is inconsistent with its deflections (~60%)</a> — autogalaxy · small · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/bug/autogalaxy/chameleon_potential_inconsistent_with_deflections.md
 ```
 
 </details>
@@ -2877,10 +2877,10 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-30 | issued | <a href="active/chameleon_potential_inconsistent_with_deflections.md"><code>mp.Chameleon.potential_2d_from</code> is inconsistent with its deflections…</a> |
 | 2026-10-30 | issued | <a href="active/pixelization_source_science_py_document_mesh_mag.md">Pixelization source_science.py: document mesh magnification areas…</a> |
 | 2026-10-30 | issued | <a href="active/hpc_campaign_p2_campaign_core.md">Issued: 2026-10-30</a> |
 | 2026-10-30 | issued | <a href="active/results_library_p1_index.md">Issued: 2026-10-30</a> |
-| 2026-10-29 | filed | <a href="draft/bug/autogalaxy/chameleon_potential_inconsistent_with_deflections.md"><code>mp.Chameleon.potential_2d_from</code> is inconsistent with its deflections…</a> |
 | 2026-10-29 | issued | <a href="active/r2_pages_function_access.md">ECLIPSE site: serve R2 lens files through a Pages Function behind…</a> |
 | 2026-10-26 | filed | <a href="draft/refactor/autogalaxy_assistant/trim_ag_skills_for_colab_cap.md">Trim autogalaxy_assistant skills toward their autolens size</a> |
 | 2026-10-25 | filed | <a href="draft/bug/health_fixes/heart_health_rerun_stale_push.md">Heart Health rerun cannot publish after main advances</a> |
