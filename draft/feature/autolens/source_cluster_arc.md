@@ -828,3 +828,19 @@ pending release; record `complete/2026/10/area-magnification-lenscalc.md`) → 6
 `complete/2026/10/leggos-ii-literature-ingest.md`). **Phase 6 COMPLETE** (record `complete/2026/10/area-magnification-leggos.md`).
 Next arc candidates: phase 7 (posterior-draw magnification errors; gates 5, 6 now met) or phase 8 (magnification maps; gates 3-7).
 
+## Phase 7 started — 2026-10-30 (paused by human, resume later)
+
+Sliced: **7a** magnification latent from raw fluxes (no magzero), default OFF, documented only in latent.yaml + the
+results guide (human ruling: latents are explained in results only, not in every workspace) — PyAutoLens#813 +
+autolens_workspace#609 OPEN, CI pending, await human /prm (task `magnification-latent-raw-flux`, worktree kept).
+**7b** posterior-draw errors in all 11 source_science.py — human chose "add a quick fit to each" (9 of 11 have no
+fit today). NOT STARTED in the repo: blocked on the autolens_workspace claim until #609 merges.
+
+7b prototype (imaging `simple__no_lens_light`, script + outputs in
+`/mnt/c/Users/Jammy/Workspace/Science/scratch/arc_phase7b_prototype_2026-10-30/`): a Nautilus n_live=100 fit WITHOUT a
+positions likelihood took 693 s and converged to a wrong mode (θE 0.28″ vs 1.6″, source R_eff 0.002″) — the quick fit
+in each script MUST use `PositionsLH` (positions.json, threshold 0.3, use_jax=True) as the pixelization
+source_science fit does. Draw loop (fit_from per draw → source μ on a 300² grid, point μ at 3 positions, area μ per
+image with a fixed arc mask) cost ~3 s/draw, 100 draws ~5 min. The re-run with positions was stopped at wrap-up.
+NEXT: /prm 7a → re-run prototype with positions (check recovery + σ_μ/μ vs LEGGOS 0.03-0.09) → 7b plan per script.
+
