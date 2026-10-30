@@ -56,3 +56,15 @@
 - epic: hpc-campaign (phase 2)
 - concurrency: ruling F11 — shares PyAutoFit with results-library-p1-index; owns autofit/campaign/ only
 - tier: judge — merge mode: human /prm
+
+## area-magnification-lenscalc
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/684
+- issued: 2026-10-30
+- session: claude-code desktop (WSL), PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/area-magnification-lenscalc
+- repos:
+  - PyAutoGalaxy: feature/area-magnification-lenscalc
+- prompt: active/area_magnification_lenscalc.md
+- epic: cluster-strong-lensing (phase 6a)
+- tier: judge — merge mode: human /prm
