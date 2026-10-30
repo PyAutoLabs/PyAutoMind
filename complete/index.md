@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2062 records across 10 buckets.
+2063 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -450,6 +450,7 @@ markers; everything below GENERATED is rebuilt.
 - [restore-dashboard-green](2026/10/restore-dashboard-green.md)
 - [result-provenance-guards](2026/10/result-provenance-guards.md)
 - [results-library-p0-integrity](2026/10/results-library-p0-integrity.md) — Phase 0 of results-library in two PRs. **0a artefact integrity (#1736):** `zip_directory`
+- [results-library-p1-index](2026/10/results-library-p1-index.md) — **1a (#1743):** `ResultState` in the shared status vocabulary; `autofit/results/` — ResultsIndex (per-result
 - [retire-claude-md-pointers](2026/10/retire-claude-md-pointers.md)
 - [retire-nautilus-leftovers](2026/10/retire-nautilus-leftovers.md)
 - [retire-nested-claude-md-pointers](2026/10/retire-nested-claude-md-pointers.md)

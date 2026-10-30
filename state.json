@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
-  "updated": "2026-10-30T15:36:07Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
+  "updated": "2026-10-30T15:46:27Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,12 +12,6 @@
       "text": "Magnification latent from raw fluxes (no magzero), opt-in, documented only in results\u2026 \u2014 library-shipped, awaiting-merge (PRs open 2026-10-30; human /prm)",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/813",
       "prompt": "Use the start-dev skill. active/magnification_latent_raw_flux.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Issued: 2026-10-30 \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1743",
-      "prompt": "Use the start-dev skill. active/results_library_p1_index.md"
     },
     {
       "severity": "yellow",
@@ -93,6 +87,18 @@
     },
     {
       "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1743 \u2014 results-library-p1-index",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1743",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1744 \u2014 results-library-p1-index",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1744",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#685 \u2014 area-magnification-lenscalc",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/685",
       "prompt": null
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoLens PyAutoLens#813 \u2014 Magnification latent from raw fluxes (no magzero), opt-in, documented only in results\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/813",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#811 \u2014 lenstwin-p4a-twin-fit-model",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/811",
       "prompt": null
     }
   ]

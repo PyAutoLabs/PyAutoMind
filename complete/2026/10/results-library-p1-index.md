@@ -1,3 +1,28 @@
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1739
+- completed: 2026-10-30
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1743
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1744
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1743
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1744
+- epic: results-library (phase 1; ledger draft/feature/autofit/results_library_epic.md)
+- summary: **1a (#1743):** `ResultState` in the shared status vocabulary; `autofit/results/` — ResultsIndex (per-result
+  JSON records as truth, incremental on a stat fingerprint, `--index-dir` for read-only trees, superseded siblings
+  by (path_prefix, unique_tag, name)), classify() (status record → zip/folder `.completed` + CRC → checkpoint probe;
+  I/O errors are unreadable, never corrupt), ResultsCache (local SQLite), CLI `python -m autofit.results
+  {index,status,count}`; `dataset_identity.json` at fit start via `Analysis.dataset_identity()` (object id, inputs
+  + SHA256, centre, library versions; config switches); `Aggregator.latest_per`; `SearchOutput.completed_at`.
+  **1b (#1744):** ZipMember (pathlib-like, holds no open file), `SearchOutput.from_zip`, `open_member`,
+  `value(name, kind=)`, `Aggregator.from_index` — zero extraction.
+- witness: W1 — laptop DR1 mirror (partial): 338 results, 325 completed, 13 superseded, 0 corrupt, 0 location
+  mismatches; Workspace/Science/scratch/results_library_p1_w1/. W1 caught the ENOMEM-as-corrupt bug.
+- tests: 15k synthetic index 37 s / re-index 6.7 s; full suites 4,010 / 4,015 (conformance file set + 600-line
+  guard fixed); smoke 6 workspaces 167/0; CI all green. #1744 retargeted to main after #1743.
+- decisions flagged: latest_per key (path_prefix, unique_tag, name); never_started covers no-checkpoint folders;
+  versions recorded in dataset_identity.json.
+- follow-up: PyAutoArray/PyAutoLens `dataset_identity()` hook (real input paths + cutout centre).
+
+## Original prompt
+
 Issued: 2026-10-30
 Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1739
 Epic: results-library
