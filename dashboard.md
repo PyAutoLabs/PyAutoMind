@@ -1017,7 +1017,7 @@ Use the start-dev skill. active/results_library_p1_index.md
 
 </details>
 
-<details><summary>📋 <a href="active/source_science_area_magnification.md">Source science: area magnification and source-plane area of each lensed image…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/607">issue #607</a> — issued 2026-10-30 — workspace-dev</summary>
+<details><summary>📋 <a href="active/source_science_area_magnification.md">Source science: area magnification and source-plane area of each lensed image…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/607">issue #607</a> — issued 2026-10-30 — workspace-shipped, awaiting-merge (PR open 2026-10-30) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/687">PyAutoGalaxy#687</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/608">autolens_workspace#608</a> — ⏸ waiting on PyAutoGalaxy's release</summary>
 
 ```
 Use the start-dev skill. active/source_science_area_magnification.md
@@ -3122,6 +3122,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - [PyAutoGalaxy#687](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/687) — `complete/2026/10/area-magnification-subpixel-area.md`
 - [PyAutoGalaxy#683](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/683) — `complete/2026/10/chameleon-analytic-potential.md`
 - [PyAutoGalaxy#681](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/681) — `complete/2026/10/lmp-gaussian-potential-fast.md`
+- ⏸ waiting: [Source science: area magnification and source-plane area of each lensed image…](active/source_science_area_magnification.md)
 
 **PyAutoLens**
 
