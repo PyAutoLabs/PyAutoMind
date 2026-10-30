@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-10-30T09:20:19Z",
+  "updated": "2026-10-30T09:46:26Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "`mp.Chameleon.potential_2d_from` is inconsistent with its deflections (~60%) \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/683",
+      "prompt": "Use the start-dev skill. active/chameleon_potential_inconsistent_with_deflections.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -120,12 +126,6 @@
       "text": "pick: Reduce the organism's per-session and per-task token load by half",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/organs/reduce_session_token_load.md",
       "prompt": "Use the start-dev skill. draft/maintenance/organs/reduce_session_token_load.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Physical model check when speeding up smoke tests",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md",
-      "prompt": "Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md"
     }
   ]
 }
