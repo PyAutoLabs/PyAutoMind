@@ -37,7 +37,10 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/607
 - issued: 2026-10-30
 - session: claude-code desktop (WSL), PyAutoLabs session
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge (PR open 2026-10-30)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/608
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/687
+- release-gate: PyAutoGalaxy
 - worktree: ~/Code/PyAutoLabs-wt/source-science-area-magnification
 - repos:
   - autolens_workspace: feature/source-science-area-magnification
