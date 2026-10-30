@@ -1,3 +1,25 @@
+# LEGGOS area magnification on LensCalc (arc phase 6a)
+
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/685
+
+Issue PyAutoGalaxy#684 → PR PyAutoGalaxy#685 merged 2026-10-30. Epic `cluster-strong-lensing`, phase 6a (parent
+`draft/feature/autolens/area_magnification_leggos.md`).
+
+Added `LensCalc.source_plane_area_from(mask, sub_size=4)` (A_src = Σ A_pix,i/|μ_i|, LEGGOS Eq. 7, links to source
+size), `area_magnification_from(mask, sub_size=4)` (μ_area = A_img/A_src, Eq. 6, one image per mask),
+`image_masks_from(mask)` (split by parity + connected regions; touching same-parity images not separated) and
+`area_magnification_list_from(mask, sub_size=4)`. Hessian μ at sub-pixel centres; NumPy only.
+
+Tests: analytic SIS annulus μ_area −4.7e-4, A_src −1.5e-4; sub_size convergence second order (3.9e-4 → 5.7e-6);
+parity split across the Einstein ring (outer ring −6e-4 vs analytic); double-counting trap. PyAutoGalaxy 1466 passed,
+PyAutoLens 1015 passed / 1 xfailed; CI docs + 3.12/3.13/nojax green. Heart STALE (release validation) acknowledged;
+human authorized ship + merge.
+
+Next slices: 6b autolens_workspace_test validation vs simulated truth (uniform-disk source, resolution + segmentation
+controls), 6c source_science docs, 6d autolens_assistant LEGGOS II ingest.
+
+## Original prompt
+
 # Area magnification on LensCalc (LEGGOS Eq. 6-7): per-pixel inversion over an image-plane mask
 
 Type: feature

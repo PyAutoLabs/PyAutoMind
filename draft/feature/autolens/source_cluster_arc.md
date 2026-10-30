@@ -821,7 +821,7 @@ PyAutoArray#668, record `complete/2026/10/adaptive-rect-mesh-node-positions.md`,
 regularizations kept on the lattice explicitly (human ruling); end-to-end study filed
 `draft/research/autolens_inference/kernel_regularization_distances_adaptive_rectangular.md`.
 
-Phase 6 sliced (human "do phase 6"): 6a LensCalc area magnification (PyAutoGalaxy#684,
-`active/area_magnification_lenscalc.md`) → 6b workspace_test validation vs simulated truth → 6c source_science docs
+Phase 6 sliced (human "do phase 6"): 6a LensCalc area magnification (PyAutoGalaxy#684 → #685 MERGED 2026-10-30,
+pending release; record `complete/2026/10/area-magnification-lenscalc.md`) → 6b workspace_test validation vs simulated truth → 6c source_science docs
 → 6d autolens_assistant LEGGOS II ingest.
 
