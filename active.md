@@ -44,3 +44,33 @@
 - prompt: active/leggos_ii_literature_ingest.md
 - epic: cluster-strong-lensing (phase 6d)
 - tier: judge — human said "go" (continue phase 6; prior slices merged on green)
+
+## hpc-campaign-p3-plan-evidence
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1745
+- issued: 2026-10-30
+- session: claude-code desktop (WSL), PyAutoLabs session (background fork)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/hpc-campaign-p3-plan-evidence
+- repos:
+  - PyAutoFit: feature/hpc-campaign-p3-plan-evidence
+- prompt: active/hpc_campaign_p3_plan_evidence.md
+- epic: hpc-campaign (phase 3)
+- concurrency: ruling F11 — shares PyAutoFit with hpc-campaign-p4-carbon-report (disjoint campaign/ files; __main__.py shared, p3 merges first) and results-library-p1-index (shipped, awaiting /prm; disjoint results/ + aggregator/)
+- heart-red-override: authorized live by the human 2026-10-30 ("Override, proceed") for hpc-campaign phases 3 + 4; RED reasons quoted on PyAutoFit#1745; development only, merge via /prm
+- tier: judge — merge mode: human /prm
+
+## hpc-campaign-p4-carbon-report
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1746
+- issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/208
+- issued: 2026-10-30
+- session: claude-code desktop (WSL), PyAutoLabs session (background fork)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/hpc-campaign-p4-carbon-report
+- repos:
+  - PyAutoFit: feature/hpc-campaign-p4-carbon-report
+  - PyAutoNerves: feature/hpc-campaign-p4-carbon-report
+- prompt: active/hpc_campaign_p4_carbon_report.md
+- epic: hpc-campaign (phase 4)
+- concurrency: ruling F11 — shares PyAutoFit with hpc-campaign-p3-plan-evidence (rebases onto p3 for __main__.py) and results-library-p1-index (shipped, awaiting /prm)
+- heart-red-override: authorized live by the human 2026-10-30 ("Override, proceed") for hpc-campaign phases 3 + 4; RED reasons quoted on PyAutoFit#1746
+- tier: judge — merge mode: human /prm
