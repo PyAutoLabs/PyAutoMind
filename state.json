@@ -2,11 +2,17 @@
   "schema_version": 1,
   "organ": "mind",
   "repo": "PyAutoMind",
-  "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-10-30T10:07:25Z",
+  "status": "red",
+  "headline": "RED \u2014 24 picks \u00b7 6 in flight",
+  "updated": "2026-10-30T10:10:33Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "red",
+      "text": "Pixelization source_science.py: document mesh magnification areas properly\u2026 \u2014 blocked \u2014 awaiting library fix draft/bug/autoarray/adaptive_rectangular_mesh_grid_is_uniform_overlay.md (human 2026-10-30\u2026",
+      "url": "https://github.com/PyAutoLabs/autolens_workspace/issues/605",
+      "prompt": "Use the start-dev skill. active/pixelization_source_science_py_document_mesh_mag.md"
+    },
     {
       "severity": "yellow",
       "text": "`mp.Chameleon.potential_2d_from` is inconsistent with its deflections (~60%) \u2014 library-shipped, awaiting-merge (workspace PR also open; /prm library first)",
@@ -120,12 +126,6 @@
       "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
       "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Reduce the organism's per-session and per-task token load by half",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/organs/reduce_session_token_load.md",
-      "prompt": "Use the start-dev skill. draft/maintenance/organs/reduce_session_token_load.md"
     }
   ]
 }

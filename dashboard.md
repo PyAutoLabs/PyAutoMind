@@ -12,7 +12,7 @@
 | [Epics](#epics) | 19 |
 | [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 280 |
+| [Backlog](#backlog) | 281 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -674,7 +674,7 @@ Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens
 </details>
 
 <details>
-<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 13 queued prompt(s), in order</summary>
+<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 14 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Cluster strong lensing — Source &amp; Cluster arc</b> — ledger: `draft/feature/autolens/source_cluster_arc.md` — In progress — 1a–1d, phase 3a audit (profiling#364, workspace_test#341) and phase 3b field-preserving cap fix (Galaxy#646…</summary>
 
@@ -760,6 +760,14 @@ Use the start-dev skill. draft/feature/workspaces/cluster_pixelized_analysisfact
 
 ```
 Use the start-dev skill. draft/docs/howtolens/cluster_pixelized_source.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autoarray/adaptive_rectangular_mesh_grid_is_uniform_overlay.md">Adaptive rectangular meshes report a uniform overlay as their source-plane node positions</a> — autoarray · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/bug/autoarray/adaptive_rectangular_mesh_grid_is_uniform_overlay.md
 ```
 
 </details>
@@ -1017,7 +1025,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/pixelization_source_science_py_document_mesh_mag.md">Pixelization source_science.py: document mesh magnification areas properly…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/605">issue #605</a> — issued 2026-10-30 — workspace-dev</summary>
+<details><summary>📋 <a href="active/pixelization_source_science_py_document_mesh_mag.md">Pixelization source_science.py: document mesh magnification areas properly…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/605">issue #605</a> — issued 2026-10-30 — blocked — awaiting library fix draft/bug/autoarray/adaptive_rectangular_mesh_grid_is_uniform_overlay.md (human 2026-10-30…</summary>
 
 ```
 Use the start-dev skill. active/pixelization_source_science_py_document_mesh_mag.md
