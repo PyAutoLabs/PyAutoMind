@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2053 records across 10 buckets.
+2054 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -270,6 +270,7 @@ markers; everything below GENERATED is rebuilt.
 - [howtofit-ep-shared-centre](2026/10/howtofit-ep-shared-centre.md)
 - [howtofit-runtime-guidance](2026/10/howtofit-runtime-guidance.md)
 - [hpc-campaign-p1-status-record](2026/10/hpc-campaign-p1-status-record.md) — Per-fit status record in new `autofit/non_linear/status/`: `states.py` (RunState,
+- [hpc-campaign-p2-campaign-core](2026/10/hpc-campaign-p2-campaign-core.md) — New `autofit/campaign/` (stdlib + PyYAML, no Slurm at import). **2a (#1741):** `campaign.yaml`
 - [hst-cleanslate-light-mode](2026/10/hst-cleanslate-light-mode.md)
 - [hst-cleanslate-numba-shared-lp](2026/10/hst-cleanslate-numba-shared-lp.md)
 - [hst-mass-samplers-wave1](2026/10/hst-mass-samplers-wave1.md)

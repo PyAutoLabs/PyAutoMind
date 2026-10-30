@@ -27,7 +27,7 @@
   - PyAutoFit: feature/results-library-p1b-lazy-reads
 - prompt: active/results_library_p1_index.md
 - epic: results-library (phase 1)
-- concurrency: ruling F11 — shares PyAutoFit with hpc-campaign-p2-campaign-core; owns autofit/results/, aggregator/, status/identity.py, ResultState in states.py, identity hook
+- concurrency: ruling F11 — shared PyAutoFit with hpc-campaign-p2-campaign-core (merged 2026-10-30); owns autofit/results/, aggregator/, status/identity.py, ResultState in states.py, identity hook
 - tier: judge — merge mode: human /prm
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1743
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1744 (stacked on #1743)

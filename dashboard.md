@@ -993,14 +993,6 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/hpc_campaign_p2_campaign_core.md">Issued: 2026-10-30</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1740">issue #1740</a> — issued 2026-10-30 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1741">PyAutoFit#1741</a>, <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1742">PyAutoFit#1742</a></summary>
-
-```
-Use the start-dev skill. active/hpc_campaign_p2_campaign_core.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/matrix_free_interferometer_inversion.md">Matrix-free interferometer inversion for very large rectangular meshes…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/638">issue #638</a> — issued 2026-10-21</summary>
 
 ```
@@ -1021,6 +1013,14 @@ Use the start-dev skill. active/r2_pages_function_access.md
 
 ```
 Use the start-dev skill. active/results_library_p1_index.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/source_science_area_magnification.md">Source science: area magnification and source-plane area of each lensed image…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/607">issue #607</a> — issued 2026-10-30 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/source_science_area_magnification.md
 ```
 
 </details>
@@ -2861,7 +2861,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-30 | issued | <a href="active/hpc_campaign_p2_campaign_core.md">Issued: 2026-10-30</a> |
+| 2026-10-30 | issued | <a href="active/source_science_area_magnification.md">Source science: area magnification and source-plane area of each…</a> |
 | 2026-10-30 | issued | <a href="active/results_library_p1_index.md">Issued: 2026-10-30</a> |
 | 2026-10-29 | issued | <a href="active/r2_pages_function_access.md">ECLIPSE site: serve R2 lens files through a Pages Function behind…</a> |
 | 2026-10-26 | filed | <a href="draft/refactor/autogalaxy_assistant/trim_ag_skills_for_colab_cap.md">Trim autogalaxy_assistant skills toward their autolens size</a> |
@@ -3111,6 +3111,8 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 **PyAutoFit**
 
 - [PyAutoFit#1738](https://github.com/PyAutoLabs/PyAutoFit/pull/1738) — `complete/2026/10/hpc-campaign-p1-status-record.md`
+- [PyAutoFit#1741](https://github.com/PyAutoLabs/PyAutoFit/pull/1741) — `complete/2026/10/hpc-campaign-p2-campaign-core.md`
+- [PyAutoFit#1742](https://github.com/PyAutoLabs/PyAutoFit/pull/1742) — `complete/2026/10/hpc-campaign-p2-campaign-core.md`
 - [PyAutoFit#1736](https://github.com/PyAutoLabs/PyAutoFit/pull/1736) — `complete/2026/10/results-library-p0-integrity.md`
 - [PyAutoFit#1737](https://github.com/PyAutoLabs/PyAutoFit/pull/1737) — `complete/2026/10/results-library-p0-integrity.md`
 
