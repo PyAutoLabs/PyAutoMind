@@ -1,3 +1,14 @@
+# LEGGOS II (Abedi 2026) in the autolens_assistant literature wiki (arc phase 6d)
+
+Issue autolens_assistant#170 → PR autolens_assistant#171 merged 2026-10-30. Epic `cluster-strong-lensing`, phase 6d.
+Canonical BibTeX `Abedi2026` (arXiv:2606.20804, doi 10.48550/arXiv.2606.20804, submitted ApJ), claim-support section
+in `wiki/literature/sources/cluster-lensing.md` (Eq. 6-7 area magnification, centroid-pixel map-value clump
+magnification, critical-curve segmentation per posterior model, 300-draw posterior errors, SDSSJ1110+6459 context),
+"Arc magnifications" bullet on `concepts/cluster-lensing.md`, log row. Claims verified against the arXiv HTML full
+text. validate-citations passes; CI wiki-currency / clone-boundary / colab-contexts green.
+
+## Original prompt
+
 # autolens_assistant: ingest LEGGOS II (area magnification method) into the literature wiki (arc phase 6d)
 
 Type: docs

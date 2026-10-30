@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2058 records across 10 buckets.
+2060 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -130,6 +130,7 @@ markers; everything below GENERATED is rebuilt.
 - [absorb-claude-notes-agents-md](2026/10/absorb-claude-notes-agents-md.md)
 - [adaptive-rect-mesh-node-positions](2026/10/adaptive-rect-mesh-node-positions.md)
 - [adaptsplit-logdet-backend-parity](2026/10/adaptsplit-logdet-backend-parity.md)
+- [area-magnification-leggos](2026/10/area-magnification-leggos.md)
 - [area-magnification-lenscalc](2026/10/area-magnification-lenscalc.md) — arc phase 6a
 - [area-magnification-subpixel-area](2026/10/area-magnification-subpixel-area.md) — arc 6a follow-up
 - [area-magnification-validation](2026/10/area-magnification-validation.md) — arc phase 6b
@@ -302,6 +303,7 @@ markers; everything below GENERATED is rebuilt.
 - [isolate-validation-artifacts](2026/10/isolate-validation-artifacts.md)
 - [jax-lapack-compatibility-repair](2026/10/jax-lapack-compatibility-repair.md)
 - [latent-profile-declarations](2026/10/latent-profile-declarations.md)
+- [leggos-ii-literature-ingest](2026/10/leggos-ii-literature-ingest.md) — Abedi 2026) in the autolens_assistant literature wiki (arc phase 6d
 - [lenstwin-p0-twins-core](2026/10/lenstwin-p0-twins-core.md) — Phase 0 of the lenstwin epic, library first. 0A PyAutoGalaxy#672 (merge b072e4d):
 - [lenstwin-p2-mass-budget](2026/10/lenstwin-p2-mass-budget.md) — Phase 2 of the lenstwin epic: the mass-normalisation mathematics, in new module
 - [lenstwin-p3-stellar-dark](2026/10/lenstwin-p3-stellar-dark.md) — Phase 3 of the lenstwin epic (merge b29ffcc). 3A: `al.twins.einstein_radius_aperture_from`

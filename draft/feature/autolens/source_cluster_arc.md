@@ -80,7 +80,7 @@ No next-phase issue is opened by this reorganisation.
    recovery across every mesh variant (rectangular/delaunay/delaunay_nn/knn).
 5. `draft/feature/autolens/point_magnification_api.md` — μ at a point, documented in
    source_science + point package; parity decision; multi-plane.
-6. `draft/feature/autolens/area_magnification_leggos.md` — LEGGOS Eq. 6-7 pixel-
+6. **SHIPPED 2026-10-30** (record `complete/2026/10/area-magnification-leggos.md`; was `draft/feature/autolens/area_magnification_leggos.md`) — LEGGOS Eq. 6-7 pixel-
    inversion area μ as primary; wiki ingest. Forward ShapeSolver work transferred.
    Gates: 3, 5.
 7. `draft/feature/autolens/magnification_errors_posterior_draws.md` — standalone
@@ -824,5 +824,7 @@ regularizations kept on the lattice explicitly (human ruling); end-to-end study 
 Phase 6 sliced (human "do phase 6"): 6a LensCalc area magnification (PyAutoGalaxy#684 → #685 MERGED 2026-10-30,
 pending release; record `complete/2026/10/area-magnification-lenscalc.md`) → 6b MERGED 2026-10-30
 (autolens_workspace_test#352, record `complete/2026/10/area-magnification-validation.md`; fix PyAutoGalaxy#687) → 6c MERGED 2026-10-30 (autolens_workspace#608, record
-`complete/2026/10/source-science-area-magnification.md`) → 6d autolens_assistant LEGGOS II ingest.
+`complete/2026/10/source-science-area-magnification.md`) → 6d MERGED 2026-10-30 (autolens_assistant#171, record
+`complete/2026/10/leggos-ii-literature-ingest.md`). **Phase 6 COMPLETE** (record `complete/2026/10/area-magnification-leggos.md`).
+Next arc candidates: phase 7 (posterior-draw magnification errors; gates 5, 6 now met) or phase 8 (magnification maps; gates 3-7).
 

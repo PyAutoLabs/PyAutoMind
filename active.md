@@ -33,18 +33,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1744 (stacked on #1743)
 - heart-ack: STALE (release validation stale: source moved since rehearsal) — human 2026-10-30
 
-## leggos-ii-literature-ingest
-- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/170
-- issued: 2026-10-30
-- session: claude-code desktop (WSL), PyAutoLabs session
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/leggos-ii-literature-ingest
-- repos:
-  - autolens_assistant: feature/leggos-ii-literature-ingest
-- prompt: active/leggos_ii_literature_ingest.md
-- epic: cluster-strong-lensing (phase 6d)
-- tier: judge — human said "go" (continue phase 6; prior slices merged on green)
-
 ## hpc-campaign-p3-plan-evidence
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1745
 - issued: 2026-10-30

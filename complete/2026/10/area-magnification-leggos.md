@@ -1,3 +1,20 @@
+# Arc phase 6 complete: LEGGOS-style area magnification
+
+Epic `cluster-strong-lensing` phase 6 (parent prompt `area_magnification_leggos.md`), human "do phase 6" 2026-10-30,
+shipped in four slices plus one fix, all merged 2026-10-30:
+- 6a PyAutoGalaxy#685 — `LensCalc.source_plane_area_from` / `area_magnification_from` / `image_masks_from` /
+  `area_magnification_list_from` (record `complete/2026/10/area-magnification-lenscalc.md`)
+- fix PyAutoGalaxy#687 — sub-pixel area follows generated sub-pixels (record `area-magnification-subpixel-area.md`)
+- 6b autolens_workspace_test#352 — validation vs forward-traced truth in smoke (record `area-magnification-validation.md`)
+- 6c autolens_workspace#608 — `__Area Magnification__` in the four source_science scripts (record
+  `source-science-area-magnification.md`)
+- 6d autolens_assistant#171 — LEGGOS II literature ingest (record `leggos-ii-literature-ingest.md`)
+
+Library PRs pending release. Out of scope as approved 2026-10-01: forward ShapeSolver (cluster-pointsolver-speed).
+Not done here (later arc phases): posterior-draw magnification errors (phase 7), magnification maps (phase 8).
+
+## Original prompt
+
 # Area magnification (LEGGOS-style): per-pixel inversion sum as primary
 
 Type: feature
