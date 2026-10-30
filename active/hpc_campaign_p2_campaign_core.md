@@ -1,3 +1,5 @@
+Issued: 2026-10-30
+Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1740
 Epic: hpc-campaign
 Phase: 2
 Blocked-by: phase 1 (COMPLETE 2026-10-29)

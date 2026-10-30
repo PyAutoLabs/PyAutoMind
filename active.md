@@ -27,3 +27,29 @@
 - prompt: active/pixelization_source_science_py_document_mesh_mag.md
 - epic: cluster-strong-lensing (phase 4e)
 - tier: judge — merge mode: human /prm (merge with/after release carrying PyAutoArray#664/#666)
+
+## results-library-p1-index
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1739
+- issued: 2026-10-30
+- session: claude-code desktop (WSL), PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/results-library-p1-index
+- repos:
+  - PyAutoFit: feature/results-library-p1-index
+- prompt: active/results_library_p1_index.md
+- epic: results-library (phase 1)
+- concurrency: ruling F11 — shares PyAutoFit with hpc-campaign-p2-campaign-core; owns autofit/results/, aggregator/, status/identity.py, ResultState in states.py, identity hook
+- tier: judge — merge mode: human /prm
+
+## hpc-campaign-p2-campaign-core
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1740
+- issued: 2026-10-30
+- session: claude-code desktop (WSL), PyAutoLabs session (background fork)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/hpc-campaign-p2-campaign-core
+- repos:
+  - PyAutoFit: feature/hpc-campaign-p2-campaign-core
+- prompt: active/hpc_campaign_p2_campaign_core.md
+- epic: hpc-campaign (phase 2)
+- concurrency: ruling F11 — shares PyAutoFit with results-library-p1-index; owns autofit/campaign/ only
+- tier: judge — merge mode: human /prm

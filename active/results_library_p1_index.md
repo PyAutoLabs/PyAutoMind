@@ -1,3 +1,5 @@
+Issued: 2026-10-30
+Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1739
 Epic: results-library
 Phase: 1
 Blocked-by: phase 0 (COMPLETE 2026-10-29)
