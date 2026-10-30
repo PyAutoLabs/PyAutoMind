@@ -1001,7 +1001,7 @@ Use the start-dev skill. active/area_magnification_validation.md
 
 </details>
 
-<details><summary>📋 <a href="active/hpc_campaign_p2_campaign_core.md">Issued: 2026-10-30</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1740">issue #1740</a> — issued 2026-10-30 — library-dev</summary>
+<details><summary>📋 <a href="active/hpc_campaign_p2_campaign_core.md">Issued: 2026-10-30</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1740">issue #1740</a> — issued 2026-10-30 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1741">PyAutoFit#1741</a>, <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1742">PyAutoFit#1742</a></summary>
 
 ```
 Use the start-dev skill. active/hpc_campaign_p2_campaign_core.md
@@ -1025,7 +1025,7 @@ Use the start-dev skill. active/r2_pages_function_access.md
 
 </details>
 
-<details><summary>📋 <a href="active/results_library_p1_index.md">Issued: 2026-10-30</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1739">issue #1739</a> — issued 2026-10-30 — library-dev</summary>
+<details><summary>📋 <a href="active/results_library_p1_index.md">Issued: 2026-10-30</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1739">issue #1739</a> — issued 2026-10-30 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1743">PyAutoFit#1743</a>, <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1744">PyAutoFit#1744</a></summary>
 
 ```
 Use the start-dev skill. active/results_library_p1_index.md
