@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2051 records across 10 buckets.
+2052 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -131,6 +131,7 @@ markers; everything below GENERATED is rebuilt.
 - [adaptive-rect-mesh-node-positions](2026/10/adaptive-rect-mesh-node-positions.md)
 - [adaptsplit-logdet-backend-parity](2026/10/adaptsplit-logdet-backend-parity.md)
 - [area-magnification-lenscalc](2026/10/area-magnification-lenscalc.md) — arc phase 6a
+- [area-magnification-subpixel-area](2026/10/area-magnification-subpixel-area.md) — arc 6a follow-up
 - [assertion-names](2026/10/assertion-names.md)
 - [assertion-repr](2026/10/assertion-repr.md)
 - [assistant-ai-options-page](2026/10/assistant-ai-options-page.md) — 2026-10-23
