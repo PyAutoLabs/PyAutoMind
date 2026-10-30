@@ -993,7 +993,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/area_magnification_validation.md">Area magnification validated against forward-traced truth (arc phase 6b)</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/351">issue #351</a> — issued 2026-10-30 — workspace-dev</summary>
+<details><summary>📋 <a href="active/area_magnification_validation.md">Area magnification validated against forward-traced truth (arc phase 6b)</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/351">issue #351</a> — issued 2026-10-30 — workspace-shipped, awaiting-merge (PR open 2026-10-30) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/687">PyAutoGalaxy#687</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/352">autolens_workspace_test#352</a></summary>
 
 ```
 Use the start-dev skill. active/area_magnification_validation.md
