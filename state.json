@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-10-30T15:24:50Z",
+  "updated": "2026-10-30T15:28:24Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -18,6 +18,12 @@
       "text": "Issued: 2026-10-30 \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1748",
       "prompt": "Use the start-dev skill. active/hpc_campaign_p4_carbon_report.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Magnification latent from raw fluxes (no magzero), opt-in, documented only in results\u2026 \u2014 library-shipped, awaiting-merge (PRs open 2026-10-30; human /prm)",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/813",
+      "prompt": "Use the start-dev skill. active/magnification_latent_raw_flux.md"
     },
     {
       "severity": "yellow",
@@ -111,21 +117,15 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#811 \u2014 lenstwin-p4a-twin-fit-model",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/811",
+      "text": "pending release: PyAutoLens PyAutoLens#813 \u2014 Magnification latent from raw fluxes (no magzero), opt-in, documented only in results\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/813",
       "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoNerves PyAutoNerves#207 \u2014 hpc-campaign-p1-status-record",
-      "url": "https://github.com/PyAutoLabs/PyAutoNerves/pull/207",
+      "text": "pending release: PyAutoLens PyAutoLens#811 \u2014 lenstwin-p4a-twin-fit-model",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/811",
       "prompt": null
-    },
-    {
-      "severity": "info",
-      "text": "pick: autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_assistant/ai_options_page_autolens_leg.md",
-      "prompt": "Use the start-dev skill. draft/docs/autolens_assistant/ai_options_page_autolens_leg.md"
     }
   ]
 }

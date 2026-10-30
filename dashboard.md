@@ -977,7 +977,7 @@ Use the start-dev skill. active/hpc_campaign_p4_carbon_report.md
 
 </details>
 
-<details><summary>📋 <a href="active/magnification_latent_raw_flux.md">Magnification latent from raw fluxes (no magzero), opt-in, documented only in results…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/812">issue #812</a> — issued 2026-10-30 — library-dev</summary>
+<details><summary>📋 <a href="active/magnification_latent_raw_flux.md">Magnification latent from raw fluxes (no magzero), opt-in, documented only in results…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/812">issue #812</a> — issued 2026-10-30 — library-shipped, awaiting-merge (PRs open 2026-10-30; human /prm) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/813">PyAutoLens#813</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/609">autolens_workspace#609</a> — ⏳ pending release: PyAutoLens</summary>
 
 ```
 Use the start-dev skill. active/magnification_latent_raw_flux.md
@@ -3109,6 +3109,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoLens**
 
+- [PyAutoLens#813](https://github.com/PyAutoLabs/PyAutoLens/pull/813) — `active/magnification_latent_raw_flux.md`
 - [PyAutoLens#811](https://github.com/PyAutoLabs/PyAutoLens/pull/811) — `complete/2026/10/lenstwin-p4a-twin-fit-model.md`
 
 **PyAutoNerves**
