@@ -1009,7 +1009,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/pixelization_source_science_py_document_mesh_mag.md">Pixelization source_science.py: document mesh magnification areas properly…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/605">issue #605</a> — issued 2026-10-30 — workspace-dev (unblocked 2026-10-30: PyAutoArray#668 merged, pending release); WIP commit 7c30f74f local, findings on #605</summary>
+<details><summary>📋 <a href="active/pixelization_source_science_py_document_mesh_mag.md">Pixelization source_science.py: document mesh magnification areas properly…</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/605">issue #605</a> — issued 2026-10-30 — workspace-shipped, awaiting-merge (PR open 2026-10-30) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/668">PyAutoArray#668</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/606">autolens_workspace#606</a> — ⏸ waiting on PyAutoArray's release</summary>
 
 ```
 Use the start-dev skill. active/pixelization_source_science_py_document_mesh_mag.md
@@ -3115,6 +3115,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - [PyAutoArray#668](https://github.com/PyAutoLabs/PyAutoArray/pull/668) — `complete/2026/10/adaptive-rect-mesh-node-positions.md`
 - [PyAutoArray#664](https://github.com/PyAutoLabs/PyAutoArray/pull/664) — `complete/2026/10/mesh-magnification-areas.md`
 - [PyAutoArray#666](https://github.com/PyAutoLabs/PyAutoArray/pull/666) — `complete/2026/10/mesh-magnification-knn-areas.md`
+- ⏸ waiting: [Pixelization source_science.py: document mesh magnification areas properly…](active/pixelization_source_science_py_document_mesh_mag.md)
 
 **PyAutoFit**
 
