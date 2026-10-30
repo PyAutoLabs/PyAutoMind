@@ -16,22 +16,6 @@
   - ECLIPSE_lens_catalogue: feature/r2-pages-function-access
 - tier: judge — merge mode: human /prm
 
-## magnification-latent-raw-flux
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/812
-- issued: 2026-10-30
-- session: claude-code desktop (WSL), PyAutoLabs session
-- status: library MERGED 2026-10-30 (PyAutoLens#813, pending release); workspace-pr #609 green, awaiting human merge (agent merge denied by permission classifier)
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/813
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/609
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/813
-- worktree: ~/Code/PyAutoLabs-wt/magnification-latent-raw-flux
-- repos:
-  - PyAutoLens: feature/magnification-latent-raw-flux
-  - autolens_workspace: feature/magnification-latent-raw-flux
-- prompt: active/magnification_latent_raw_flux.md
-- epic: cluster-strong-lensing (phase 7a)
-- tier: judge
-
 ## hpc-campaign-p5a-assistant
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/172
 - issued: 2026-10-30

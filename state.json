@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-10-30T16:32:30Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
+  "updated": "2026-10-30T16:35:08Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -117,14 +117,14 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#813 \u2014 Magnification latent from raw fluxes (no magzero), opt-in, documented only in results\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/813",
+      "text": "pending release: PyAutoLens PyAutoLens#811 \u2014 lenstwin-p4a-twin-fit-model",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/811",
       "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#811 \u2014 lenstwin-p4a-twin-fit-model",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/811",
+      "text": "pending release: PyAutoLens PyAutoLens#813 \u2014 magnification-latent-raw-flux",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/813",
       "prompt": null
     }
   ]

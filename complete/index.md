@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2063 records across 10 buckets.
+2064 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -341,6 +341,7 @@ markers; everything below GENERATED is rebuilt.
 - [linear-solver-p5-mapper-corpus](2026/10/linear-solver-p5-mapper-corpus.md)
 - [lint-lychee-exclude-blob](2026/10/lint-lychee-exclude-blob.md) — Corrective: lychee in both organs' `lint.yml` now excludes `^https://github\.com/.*/blob/`. GitHub answers non…
 - [lmp-gaussian-potential-fast](2026/10/lmp-gaussian-potential-fast.md) — Merge 7efb52a. `lmp.Gaussian.potential_2d_from` (and GaussianGradient, every MGE stellar Basis) decomposed one…
+- [magnification-latent-raw-flux](2026/10/magnification-latent-raw-flux.md) — arc phase 7a
 - [mass-integral-scalar-radius](2026/10/mass-integral-scalar-radius.md) — `MassProfile.mass_integral` wrapped the Python float `scipy.integrate.quad` feeds it as a
 - [mass-sheet-jax](2026/10/mass-sheet-jax.md)
 - [matrix-free-interferometer-phase1](2026/10/matrix-free-interferometer-phase1.md)
