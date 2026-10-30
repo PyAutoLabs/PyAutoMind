@@ -41,3 +41,15 @@
 - epic: hpc-campaign (phase 2)
 - concurrency: ruling F11 — shares PyAutoFit with results-library-p1-index; owns autofit/campaign/ only
 - tier: judge — merge mode: human /prm
+
+## area-magnification-validation
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/351
+- issued: 2026-10-30
+- session: claude-code desktop (WSL), PyAutoLabs session
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/area-magnification-validation
+- repos:
+  - autolens_workspace_test: feature/area-magnification-validation
+- prompt: active/area_magnification_validation.md
+- epic: cluster-strong-lensing (phase 6b)
+- tier: judge — human authorized merge on green 2026-10-30
