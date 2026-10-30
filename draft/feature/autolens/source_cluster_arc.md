@@ -843,4 +843,8 @@ in each script MUST use `PositionsLH` (positions.json, threshold 0.3, use_jax=Tr
 source_science fit does. Draw loop (fit_from per draw → source μ on a 300² grid, point μ at 3 positions, area μ per
 image with a fixed arc mask) cost ~3 s/draw, 100 draws ~5 min. The re-run with positions was stopped at wrap-up.
 NEXT: /prm 7a → re-run prototype with positions (check recovery + σ_μ/μ vs LEGGOS 0.03-0.09) → 7b plan per script.
+Update 2026-10-30 evening: 7a CLOSED (PyAutoLens#813 + autolens_workspace#609 merged; record
+`complete/2026/10/magnification-latent-raw-flux.md`; ws claim freed). Prototype re-run WITH PositionsLH launched
+detached → `.../arc_phase7b_prototype_2026-10-30/run2_with_positions.log` (was mid-sampling at wrap-up). NEXT: read
+that log → file + plan 7b (quick PositionsLH fit + draw loop in all 11 source_science.py).
 
