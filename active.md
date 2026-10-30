@@ -31,3 +31,42 @@
 - prompt: active/magnification_latent_raw_flux.md
 - epic: cluster-strong-lensing (phase 7a)
 - tier: judge
+
+## hpc-campaign-p5a-assistant
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/172
+- issued: 2026-10-30
+- session: claude-code desktop (WSL), PyAutoLabs session (background fork)
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/hpc-campaign-p5a-assistant
+- repos:
+  - autolens_assistant: feature/hpc-campaign-p5a-assistant
+- prompt: active/hpc_campaign_p5a_assistant.md
+- epic: hpc-campaign (phase 5)
+- heart-red-override: authorized live by the human 2026-10-30 ("Override + approve") for hpc-campaign phase 5; RED reasons quoted on the issue; development only, merge via /prm
+- tier: judge — merge mode: human /prm
+
+## hpc-campaign-p5b-cortex
+- issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/82
+- issued: 2026-10-30
+- session: claude-code desktop (WSL), PyAutoLabs session (background fork)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/hpc-campaign-p5b-cortex
+- repos:
+  - PyAutoCortex: feature/hpc-campaign-p5b-cortex
+- prompt: active/hpc_campaign_p5b_cortex.md
+- epic: hpc-campaign (phase 5)
+- heart-red-override: authorized live by the human 2026-10-30 ("Override + approve") for hpc-campaign phase 5; RED reasons quoted on the issue; development only, merge via /prm
+- tier: judge — merge mode: human /prm
+
+## hpc-campaign-p5c-brain
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/547
+- issued: 2026-10-30
+- session: claude-code desktop (WSL), PyAutoLabs session (background fork)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/hpc-campaign-p5c-brain
+- repos:
+  - PyAutoBrain: feature/hpc-campaign-p5c-brain
+- prompt: active/hpc_campaign_p5c_brain.md
+- epic: hpc-campaign (phase 5)
+- heart-red-override: authorized live by the human 2026-10-30 ("Override + approve") for hpc-campaign phase 5; RED reasons quoted on the issue; development only, merge via /prm
+- tier: judge — merge mode: human /prm
