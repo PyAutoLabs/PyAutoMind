@@ -61,3 +61,14 @@
 - prompt: active/area_magnification_validation.md
 - epic: cluster-strong-lensing (phase 6b)
 - tier: judge — human authorized merge on green 2026-10-30
+
+## area-magnification-subpixel-area
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/686
+- issued: 2026-10-30
+- session: claude-code desktop (WSL), PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/area-magnification-subpixel-area
+- repos:
+  - PyAutoGalaxy: feature/area-magnification-subpixel-area
+- epic: cluster-strong-lensing (phase 6a follow-up, blocks 6b smoke)
+- tier: judge — human authorized merge on green 2026-10-30
