@@ -54,7 +54,9 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/351
 - issued: 2026-10-30
 - session: claude-code desktop (WSL), PyAutoLabs session
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge (PR open 2026-10-30)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/352
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/687
 - worktree: ~/Code/PyAutoLabs-wt/area-magnification-validation
 - repos:
   - autolens_workspace_test: feature/area-magnification-validation
