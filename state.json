@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-10-30T10:10:33Z",
+  "headline": "RED \u2014 24 picks \u00b7 5 in flight",
+  "updated": "2026-10-30T10:17:18Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,12 +12,6 @@
       "text": "Pixelization source_science.py: document mesh magnification areas properly\u2026 \u2014 blocked \u2014 awaiting library fix draft/bug/autoarray/adaptive_rectangular_mesh_grid_is_uniform_overlay.md (human 2026-10-30\u2026",
       "url": "https://github.com/PyAutoLabs/autolens_workspace/issues/605",
       "prompt": "Use the start-dev skill. active/pixelization_source_science_py_document_mesh_mag.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "`mp.Chameleon.potential_2d_from` is inconsistent with its deflections (~60%) \u2014 library-shipped, awaiting-merge (workspace PR also open; /prm library first)",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/683",
-      "prompt": "Use the start-dev skill. active/chameleon_potential_inconsistent_with_deflections.md"
     },
     {
       "severity": "yellow",
@@ -59,6 +53,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1737 \u2014 results-library-p0-integrity",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1737",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#683 \u2014 chameleon-analytic-potential",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/683",
       "prompt": null
     },
     {
