@@ -4,12 +4,12 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-10-30T09:46:26Z",
+  "updated": "2026-10-30T10:07:25Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
       "severity": "yellow",
-      "text": "`mp.Chameleon.potential_2d_from` is inconsistent with its deflections (~60%) \u2014 library-shipped, awaiting-merge",
+      "text": "`mp.Chameleon.potential_2d_from` is inconsistent with its deflections (~60%) \u2014 library-shipped, awaiting-merge (workspace PR also open; /prm library first)",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/683",
       "prompt": "Use the start-dev skill. active/chameleon_potential_inconsistent_with_deflections.md"
     },

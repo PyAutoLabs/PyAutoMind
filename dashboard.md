@@ -993,7 +993,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/chameleon_potential_inconsistent_with_deflections.md"><code>mp.Chameleon.potential_2d_from</code> is inconsistent with its deflections (~60%)</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/682">issue #682</a> — issued 2026-10-30 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/683">PyAutoGalaxy#683</a></summary>
+<details><summary>📋 <a href="active/chameleon_potential_inconsistent_with_deflections.md"><code>mp.Chameleon.potential_2d_from</code> is inconsistent with its deflections (~60%)</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/682">issue #682</a> — issued 2026-10-30 — library-shipped, awaiting-merge (workspace PR also open; /prm library first) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/683">PyAutoGalaxy#683</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/350">autolens_workspace_test#350</a></summary>
 
 ```
 Use the start-dev skill. active/chameleon_potential_inconsistent_with_deflections.md
