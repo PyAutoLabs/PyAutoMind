@@ -985,7 +985,7 @@ Use the start-dev skill. active/hpc_campaign_p5c_brain.md
 
 </details>
 
-<details><summary>📋 <a href="active/magnification_latent_raw_flux.md">Magnification latent from raw fluxes (no magzero), opt-in, documented only in results…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/812">issue #812</a> — issued 2026-10-30 — library-shipped, awaiting-merge (PRs open 2026-10-30; human /prm) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/813">PyAutoLens#813</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/609">autolens_workspace#609</a> — ⏳ pending release: PyAutoLens</summary>
+<details><summary>📋 <a href="active/magnification_latent_raw_flux.md">Magnification latent from raw fluxes (no magzero), opt-in, documented only in results…</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/812">issue #812</a> — issued 2026-10-30 — library MERGED 2026-10-30 (PyAutoLens#813, pending release); workspace-pr #609 green, awaiting human merge (agent merge denied by… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/813">PyAutoLens#813</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/609">autolens_workspace#609</a> — ⏳ pending release: PyAutoLens</summary>
 
 ```
 Use the start-dev skill. active/magnification_latent_raw_flux.md
