@@ -75,6 +75,33 @@ wcs.csv) must be monitored carefully:
 - Under imshow_origin: lower the displayed y axis and the reported model y disagree in sign, so switching the display
   alone swaps one confusion for another.
 
+## Decisions and evidence (human, 2026-10-30)
+- ORIENTATION CHECKED on 10 random catalogue lenses against the human's north-up RGB set
+  (`PyAutoLabs/scratch/jpegs_uniform_AB.zip`, 15,073 JPEGs named `EUCL-DR1-L<id>.jpg`, 100x100; covers all 15,071
+  included A+B catalogue lenses plus 2 extra IDs). Shown row 0 at the top, they are NORTH UP, EAST LEFT, with no left-right
+  mirror: identical layout to `rgb_raw.jpg` (5 tiles; corr 0.70-0.95, stretch differs) and to the VIS FITS drawn with
+  origin=lower; the VIS array drawn the pipeline way (origin=upper) is their vertical flip (corr 0.91-0.99, all 10).
+  Every sampled WCS has CD1_1 = -0.1"/px, CD2_2 = +0.1"/px, no rotation. The per-tile `<tile>.png` in the dataset is a
+  greyscale VIS preview in the pipeline frame (north DOWN), not an RGB.
+- One by-eye check of a pipeline `subplot_fit_lp.png` (L002962) agrees: +y ticks rise upward on screen while +y = south on
+  the sky, +x = west. The facts above stand.
+- RGB COVERAGE: locally only 9,476 / 15,034 dr1_sep1 tiles have `rgb.jpg` (9,472 `rgb_raw.jpg`; 4 tiles have a flipped
+  `rgb.jpg` but no `rgb_raw.jpg` marker, so a flip_rgb.py rerun would flip those back); ~5,560 tiles have no RGB.
+- AGREED: for DR1 v1.0 the native frame stays as fitted (+y = south, +x = west, documented as such); north-positive values
+  are delivered through the phase-2 sky-frame catalogue columns. No library convention change before release.
+- AGREED: north-up RGBs with the orientation above are the reference for every DR1 user-facing product. The human says the
+  RGBs are already in `dataset/euclid_dr1` on RAL (`/mnt/ral/jnightin/active/euclid_dr1/dataset/`, possibly PNGs):
+  use those, after checking each one's orientation against VIS by correlation (the phase-1 orientation check). They feed
+  the north-up re-rendered RGB panels, the release tiers and the Cloudflare ECLIPSE website (lens/ECLIPSE_lens_catalogue)
+  thumbnails/previews.
+- AGREED: the old rgb-flip bug draft (draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md) is superseded by this task.
+- OPEN, after DR1: whether the library should flip rows at load so +y = north
+  (draft/research/libraries/plus_y_north_at_fits_load.md). Out of scope here.
+- Fit PNG re-render requirement (phase 2) restated: flip the image arrays AND negate y on every overlay (critical curves,
+  caustics, positions, centres, mask), source-plane panels too, sky-frame axis labels and an N/E compass. Never pixel-flip
+  an existing PNG, and never switch only imshow_origin (labels and model y would disagree).
+- AGREED: start phase 1 (approved 2026-10-30; not yet started, next step is /start_dev on this prompt).
+
 ## Phase 1 — euclid_dr1 research (gates everything)
 1. FIRST: confirm every external input to the fits was in the pixel frame. How was positions.json made (pixel
    picks or RA/Dec -> arcsec with +y north)? Overlay positions on asymmetric lenses. Same for any angle/position

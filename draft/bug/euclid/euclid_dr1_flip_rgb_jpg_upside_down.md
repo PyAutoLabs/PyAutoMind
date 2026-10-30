@@ -1,5 +1,10 @@
 # euclid_dr1: every dataset rgb.jpg is upside down relative to the VIS FITS — flip them all, locally and on RAL
 
+> **SUPERSEDED 2026-10-30 (human).** The flip ran on 2026-09-20 (`preprocess/flip_rgb.py`, originals kept as
+> `rgb_raw.jpg`). User-facing RGBs are now north-up products under
+> `draft/research/euclid/sky_orientation_euclid_dr1_and_library.md`. Do not start this task. Leftover: 4 local tiles
+> have a flipped `rgb.jpg` but no `rgb_raw.jpg` marker, so a rerun would flip them back.
+
 Type: bug
 Target: euclid
 Repos:
