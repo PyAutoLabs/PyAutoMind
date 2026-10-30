@@ -320,6 +320,15 @@ Caveats (all regimes): C2; C4.
 
 26 proposals (Appendix A): 25 with a proposed optimal, 1 hold. None overturns a §3.3 **optimal** on measured evidence. The departures are three dropped secondaries that cannot run (dense interferometer above sma ×2 likelihoods; GPU on a GPU-less host) and §3.3 branches that were never measured (interferometer DFT, GPU streaming at n_vis ≥ 1e7, every laptop cell).
 
+## Human rulings (2026-10-30, chat, after the "campaigns complete" gate)
+
+- **Q1 + Q3 — adopted as recommended:** rank by projected calls/s per node within each hardware class, per call as secondary evidence; record a designation only where setups separate beyond the recorded spread (or the arm-to-arm noise), otherwise keep the §3.3 provisional label with no decision.
+- **Q2 — A100s only:** `gpu_a100` designations are GPU setups; the node's CPU stays a measured secondary where it exists. No node-CPU rows are added.
+- **Q7 — re-measure the 2a–2c JAX rows:** day zero is one environment (jax/jaxlib 0.11.2, `--xla_cpu_multi_thread_eigen=false` on CPU legs). Every 2a/2b/2c JAX row (CPU and GPU) is re-measured; numba rows are carried. The 2b/2c quiet reruns (RAL 413319–413323, on 0.11.2 with the flag) already cover the 2b/2c RAL CPU legs; the remainder is every 2a JAX leg and the 2b/2c A100 JAX legs.
+- **Q8 — freeze on 2026.10.25.1:** every row is on it; no carry.
+- **Q9 — settled by the human's 2026-10-30 ruling on loaded RAL nodes** ("ignore loaded node stuff for now"): the 2a RAL CPU rows are accepted.
+- Q4, Q5, Q6, Q10, Q11: the recommended handling in this file stands unless the human says otherwise ((a) `basis: projected` in the decision prose; designate interferometer by `standard` with an instrument-keyed rule unless the producer emits n_vis regimes; laptop undesignated; untested branches named in the rule; GPU-class secondaries GPU-only per Q2).
+
 ## Questions for the human
 
 - **Q1 — Axis.** The report amendment (2026-10-25) pre-registered per-node projected throughput within each hardware class, with per call as secondary evidence. Confirm it for the records. It decides four proposals: interferometer pixelized alma_high and jvla on RAL (numba per node, JAX CPU per call), euclid Delaunay imaging on RAL (per-call tie), and the source-plane A100 node (per-call tie, CPU cores 3.7× per node).
