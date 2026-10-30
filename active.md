@@ -1,4 +1,15 @@
 
+## chameleon-analytic-potential
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/682
+- issued: 2026-10-30
+- session: claude-code desktop (WSL), PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/chameleon-analytic-potential
+- repos:
+  - PyAutoGalaxy: feature/chameleon-analytic-potential
+- prompt: active/chameleon_potential_inconsistent_with_deflections.md
+- tier: judge — merge mode: human /prm
+
 ## matrix-free-interferometer-inversion
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/638
 - issued: 2026-10-21
