@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2048 records across 10 buckets.
+2049 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -128,6 +128,7 @@ markers; everything below GENERATED is rebuilt.
 ## 2026/10
 
 - [absorb-claude-notes-agents-md](2026/10/absorb-claude-notes-agents-md.md)
+- [adaptive-rect-mesh-node-positions](2026/10/adaptive-rect-mesh-node-positions.md)
 - [adaptsplit-logdet-backend-parity](2026/10/adaptsplit-logdet-backend-parity.md)
 - [assertion-names](2026/10/assertion-names.md)
 - [assertion-repr](2026/10/assertion-repr.md)

@@ -20,7 +20,7 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/605
 - issued: 2026-10-30
 - session: claude-code desktop (WSL), PyAutoLabs session
-- status: blocked — awaiting library fix PyAutoArray#668 (adaptive-rect-mesh-node-positions) (human 2026-10-30: library first); WIP commit 7c30f74f local, findings on #605
+- status: workspace-dev (unblocked 2026-10-30: PyAutoArray#668 merged, pending release); WIP commit 7c30f74f local, findings on #605
 - worktree: ~/Code/PyAutoLabs-wt/pixelization-mesh-mag-docs
 - repos:
   - autolens_workspace: feature/pixelization-mesh-mag-docs
@@ -52,17 +52,4 @@
 - prompt: active/hpc_campaign_p2_campaign_core.md
 - epic: hpc-campaign (phase 2)
 - concurrency: ruling F11 — shares PyAutoFit with results-library-p1-index; owns autofit/campaign/ only
-- tier: judge — merge mode: human /prm
-
-## adaptive-rect-mesh-node-positions
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/667
-- issued: 2026-10-30
-- session: claude-code desktop (WSL), PyAutoLabs session
-- status: library-shipped, awaiting-merge (PR open 2026-10-30; Heart STALE acked by human)
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/668
-- worktree: ~/Code/PyAutoLabs-wt/adaptive-rect-mesh-node-positions
-- repos:
-  - PyAutoArray: feature/adaptive-rect-mesh-node-positions
-- prompt: active/adaptive_rectangular_mesh_grid_is_uniform_overlay.md
-- epic: cluster-strong-lensing (phase 4e blocker; unblocks pixelization-mesh-mag-docs / autolens_workspace#605)
 - tier: judge — merge mode: human /prm

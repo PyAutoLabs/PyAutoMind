@@ -1,3 +1,28 @@
+# Adaptive rectangular meshes report their true pixel centres
+
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/668
+
+Issue PyAutoArray#667 → PR PyAutoArray#668 merged 2026-10-30 (`8ce5baeb`). Epic `cluster-strong-lensing`, arc
+phase 4e blocker (autolens_workspace#605 resumes on top).
+
+For the four adaptive rectangular meshes `mapper.source_plane_mesh_grid` was the uniform overlay the interpolator is
+built from, not where the interpolant takes each reconstruction value (the CDF lattice mapped back through the
+inverse CDF). Fixed: `adaptive_rectangular_node_centres_from`, `MeshGeometryRectangular.node_centres`,
+`InterpolatorRectangular.source_plane_mesh_grid`. Downstream now correct: reconstruction CSV y/x, `max_pixel_centre`
+(PyAutoLens position updating; centred-source shift 0.07″ → 0.027″ from truth), `Mapper.extent_from`, PyAutoLens
+potential correction, workspace interpolation.
+
+Kernel regularizations + MaternSparse kept on the lattice explicitly (`regularization_mesh_grid`,
+`regularization_mesh_grid_from` with duck-typed fallback; no likelihood change). Human ruling after a tuned
+comparison on one lens (lattice evidence higher by 111 Matern / 347 Gaussian; true distances ~1 pt better on mu).
+End-to-end study filed: `draft/research/autolens_inference/kernel_regularization_distances_adaptive_rectangular.md`.
+
+Tests: PyAutoArray 2264 passed; PyAutoGalaxy 1452; PyAutoLens 1015 (DpsiLinearObj duck typing → fallback);
+CI 3/3 legs green incl. nojax; workspace_test mesh_magnification unchanged. Heart STALE (release validation)
+acknowledged by the human at ship.
+
+## Original prompt
+
 # Adaptive rectangular meshes report a uniform overlay as their source-plane node positions
 
 Type: bug
