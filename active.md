@@ -20,7 +20,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/812
 - issued: 2026-10-30
 - session: claude-code desktop (WSL), PyAutoLabs session
-- status: library-shipped, awaiting-merge (PRs open 2026-10-30; human /prm)
+- status: library MERGED 2026-10-30 (PyAutoLens#813, pending release); workspace-pr #609 green, awaiting human merge (agent merge denied by permission classifier)
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/813
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/609
 - pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/813
