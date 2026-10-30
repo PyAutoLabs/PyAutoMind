@@ -44,6 +44,7 @@
 - epic: hpc-campaign (phase 5)
 - heart-red-override: authorized live by the human 2026-10-30 ("Override + approve") for hpc-campaign phase 5; RED reasons quoted on the issue; development only, merge via /prm
 - tier: judge — merge mode: human /prm
+- resume: 2026-10-30 wrap-up — step 0 b999e8d (feature/hpc-campaign-p5a-assistant) + v2 067c40b (feature/hpc-campaign-p5a-v2, stacked) committed locally, unpushed; 30 tests; NEXT independent review → PRs
 
 ## hpc-campaign-p5b-cortex
 - issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/82
@@ -57,6 +58,7 @@
 - epic: hpc-campaign (phase 5)
 - heart-red-override: authorized live by the human 2026-10-30 ("Override + approve") for hpc-campaign phase 5; RED reasons quoted on the issue; development only, merge via /prm
 - tier: judge — merge mode: human /prm
+- resume: 2026-10-30 wrap-up — 1bc7ef7 committed locally, unpushed; review FINDINGS (HIGH pending array slices → premature done; MEDIUM partial writes; LOW log order) recorded on Cortex#82; NEXT fix → re-review → PR
 
 ## hpc-campaign-p5c-brain
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/547
@@ -70,3 +72,4 @@
 - epic: hpc-campaign (phase 5)
 - heart-red-override: authorized live by the human 2026-10-30 ("Override + approve") for hpc-campaign phase 5; RED reasons quoted on the issue; development only, merge via /prm
 - tier: judge — merge mode: human /prm
+- resume: 2026-10-30 wrap-up — lane stalled with no output (worktree clean); NEXT restart lane against the concrete interfaces on Brain#547
