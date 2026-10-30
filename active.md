@@ -46,7 +46,9 @@
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/684
 - issued: 2026-10-30
 - session: claude-code desktop (WSL), PyAutoLabs session
-- status: library-dev
+- status: library-shipped, awaiting-merge (PR open 2026-10-30)
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/685
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/685
 - worktree: ~/Code/PyAutoLabs-wt/area-magnification-lenscalc
 - repos:
   - PyAutoGalaxy: feature/area-magnification-lenscalc
