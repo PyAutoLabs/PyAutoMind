@@ -28,3 +28,15 @@ Continuing the explicitly approved HowToLens development in this session; the hu
 
 
 Checkpoint: approved section applied, including fluxes/time delays and workspace pointers; generating notebook/Markdown and validating.
+
+## Applied and validated — 2026-10-31
+- Added approved PointDataset section with positions, fluxes, delays and uncertainties; illustrative values labelled, units and order explained.
+- Point-source workspace link added; interferometer pointer retained; weak workspace link added beside Chapter 4 reference.
+- Notebook, executed Markdown/16 figures and catalogue regenerated.
+- Official Heart smoke: 49 passed, 0 failed. Full notebook execution, dataset consistency, notebook parity, contents, figure references, navigator, 38 tutorial completion checks and whitespace checks pass.
+- Commit: 9c06246c84807733072e0c6c66132a5f3baa7cdc
+- PR: https://github.com/PyAutoLabs/HowToLens/pull/110
+- Current exact Heart reason: `release validation FAILED (stage integrate)`; existing development-only approval applies, no release or failed-check bypass.
+- Review copy: /mnt/c/Users/Jammy/Workspace/Science/scratch/howtolens_point_data_2026-10-31/tutorial_5_data.ipynb.
+- Logs: scratch/tutorial5_dataset_check.log, scratch/tutorial5_render.log, scratch/tutorial5_heart_smoke.log.
+- Next: human /prm after required GitHub checks pass. PR #108 merged and its worktree cleaned up; canonical HowToLens main fast-forwarded to ebb5b43.

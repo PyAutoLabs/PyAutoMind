@@ -83,11 +83,13 @@
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/109
 - issued: 2026-10-31
 - session: Codex chat 01a191e7-652b-7620-a3ca-9e78dadd948e
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howtolens-point-data
 - repos:
   - HowToLens: feature/howtolens-point-data
 - prompt: active/tutorial_5_point_data.md
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/110
+- commit: 9c06246
 - heart-red-override: continuing approved HowToLens development under the session override and explicit instruction to apply/check Tutorial 5; `release validation FAILED (stage integrate)`; no release/test bypass
 - tier: judge — merge mode: human /prm
-- resume: approved point dataset section applied; run notebook/render and full smoke checks
+- resume: all requested additions applied, notebook/render regenerated, official smoke 49 passed; human /prm after required CI passes
