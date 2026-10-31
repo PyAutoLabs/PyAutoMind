@@ -977,7 +977,7 @@ Use the start-dev skill. active/hpc_campaign_p5a_assistant.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p3_designation_records.md">Likelihood lifecycle phase 3: record the 39 day-zero designations in PyAutoPulse</a> — <a href="https://github.com/PyAutoLabs/PyAutoPulse/issues/83">issue #83</a> — issued 2026-10-31 — workspace-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p3_designation_records.md">Likelihood lifecycle phase 3: record the 39 day-zero designations in PyAutoPulse</a> — <a href="https://github.com/PyAutoLabs/PyAutoPulse/issues/83">issue #83</a> — issued 2026-10-31 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/84">PyAutoPulse#84</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p3_designation_records.md
