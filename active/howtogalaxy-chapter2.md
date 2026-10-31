@@ -1,6 +1,8 @@
 # HowToGalaxy Chapter 2 restructure
 
 Target: @HowToGalaxy
+Issue: https://github.com/PyAutoLabs/HowToGalaxy/issues/94
+Issued: 2026-10-31
 Type: docs
 Consequence: judge
 

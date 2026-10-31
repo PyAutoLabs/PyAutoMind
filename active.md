@@ -90,3 +90,13 @@
 - prompt: active/likelihood_lifecycle_p3_designation_records.md
 - heart-override: RED overridden by the human 2026-10-31 (AskUserQuestion "Override + create issue")
 - tier: judge — merge mode: human /prm
+
+## howtogalaxy-chapter2
+- issue: https://github.com/PyAutoLabs/HowToGalaxy/issues/94
+- issued: 2026-10-31
+- session: Codex; session ID unavailable
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howtogalaxy-chapter2
+- repos:
+  - HowToGalaxy: feature/howtogalaxy-chapter2
+- approval: approved chapter restructure, independent Galaxy adaptation and explicit Heart RED development override in current chat
