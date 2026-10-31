@@ -77,3 +77,15 @@
 - state 2026-10-31: 61/63 cells + 5 experiments committed (dc2d64a7). HELD: 2b A100 jvla jax_gpu_sparse_fp64_wtilde x2 → RAL 413669_2/_5 (p2dg) finalises witnesses.
 - FINDING: JAX CPU slower on 0.11.2 + eigen flag (ral imaging median 1.46x; GPU unchanged) → re-check cpu_many_core designation proposals in step 4.
 - resume: sacct 413669 → tar-pull p2dg output/p2b_batch1/results/interferometer/*/jvla/jax_gpu_sparse_fp64_wtilde → python3 output/ingest_rows.py output/pin.json <root> --apply (narrow root; never re-run on already-ingested dirs) → commit → regenerate → 2b/2c journals → gh pr ready (after #494 merges: retarget main, regenerate).
+
+## magnification-errors-source-science
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/610
+- issued: 2026-10-31
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/magnification-errors-source-science
+- repos:
+  - autolens_workspace: feature/magnification-errors-source-science
+- prompt: active/magnification_errors_source_science.md
+- epic: cluster-strong-lensing (phase 7b)
+- heart-red-override: authorized live by the human 2026-10-31 ("override heart red, go ahead with 7b"); RED reasons quoted on the issue; development only
+- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary

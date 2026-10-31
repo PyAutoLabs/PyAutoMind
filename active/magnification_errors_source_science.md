@@ -12,6 +12,8 @@ Autonomy: supervised
 Priority: normal
 Consequence: glance
 Filed: 2026-10-31
+Issued: 2026-10-31
+Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/610
 Witness: All 11 `source_science.py` scripts (imaging, interferometer, group, multi_galaxy × top-level / multi_gaussian_expansion / pixelization) have a `__Magnification Errors__` section that fits the dataset (Nautilus, `PositionsLH`, `use_jax=True`; the pixelization scripts reuse their existing fit), draws N samples from `result.samples`, and prints median + 16/84 percentile intervals for source μ, point μ at the multiple images and area μ per image, with N and measured runtime in the prose; the draw loop takes the source redshift and maps it to `plane_j`; every changed script runs clean locally in full mode (fit recovers the simulated truth) and under PYAUTO_SMALL_DATASETS.
 
 ## Original request (human)
