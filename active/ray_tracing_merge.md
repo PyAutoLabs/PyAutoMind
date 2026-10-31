@@ -6,8 +6,12 @@
 - Log: .worktrees/howtolens-ray-tracing-merge/scratch/tutorial_2_runtime.log (workspace-relative).
 - Tutorial 2 notebook regenerated and validated with PyAutoHands; catalogue rebuilt.
 - Preview: /mnt/c/Users/Jammy/Workspace/Science/scratch/howtolens_ray_tracing_merge_2026-10-31/tutorial_2_four_galaxies.png
-- Tutorial 3 and 5 sources remain unchanged pending remaining block review. Do not remove Tutorial 5 yet.
-- Next review: deflection integral, potential, numerical derivative comparison, Hessian/Jacobian and shear. Preserve single tracer and reviewed distances/convergence framing.
+- Tutorial 3 approved portion now applied through shear, including setup, distances/reduced deflections and convergence. Uses one spherical isothermal tracer and default Planck15 cosmology; Units and multiple galaxies stay in Tutorial 2.
+- Difference diagnostic approved with 2D vector-difference magnitude plus median: 3.133506423218471e-05 arcsec. All 62500 values finite; actual run passed. Explicit colour-bar units correct the brightness default for convergence, deflections, potential and difference map.
+- Log: .worktrees/howtolens-ray-tracing-merge/scratch/tutorial_3_approved_runtime.log; notebook/catalogue regenerated, navigation and whitespace checks passed.
+- Preview: /mnt/c/Users/Jammy/Workspace/Science/scratch/howtolens_ray_tracing_merge_2026-10-31/tutorial_3_deflection_difference.png
+- Tutorial 3 is intentionally incomplete while review proceeds. Tutorial 5 remains unchanged as the source for remaining sections; do not remove it yet.
+- Next review: magnification, eigenvalues, critical curves, caustics and shallow-profile experiment. Einstein radius, time delays and conclusion follow. Preserve single tracer and intuitive explanations.
 
 Type: docs
 Target: @HowToLens
