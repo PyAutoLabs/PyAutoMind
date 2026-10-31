@@ -98,12 +98,14 @@
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/105
 - issued: 2026-10-31
 - session: Codex chat 01a191e7-652b-7620-a3ca-9e78dadd948e
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howtolens-ray-tracing-merge
 - repos:
   - HowToLens: feature/howtolens-ray-tracing-merge
 - prompt: active/ray_tracing_merge.md
-- heart-red-override: user approved development on Heart RED for this task; exact reasons in issue 105
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/106
+- commit: 3cf2463
+- heart-red-override: human said “I approve development on heart red”; current exact reason `release validation FAILED (stage integrate)`; development commit/push/PR only, no release or failed-check bypass
 - tier: judge — merge mode: human /prm
-- resume: apply approved Tutorial 2 Units and multi-galaxy blocks; continue Tutorial 3 five-block review, using one tracer
+- resume: all approved changes and renumbering complete; official smoke 49 passed, 0 failed; human /prm after required PR checks pass
 
