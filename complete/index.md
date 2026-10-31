@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2077 records across 10 buckets.
+2078 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -274,6 +274,7 @@ markers; everything below GENERATED is rebuilt.
 - [howtofit-advanced-references](2026/10/howtofit-advanced-references.md)
 - [howtofit-ep-shared-centre](2026/10/howtofit-ep-shared-centre.md)
 - [howtofit-runtime-guidance](2026/10/howtofit-runtime-guidance.md)
+- [howtogalaxy-chapter2](2026/10/howtogalaxy-chapter2.md) — Implemented the full approved Galaxy Chapter 2 restructure: six teaching lessons plus summary, optional search…
 - [howtolens-point-data](2026/10/howtolens-point-data.md)
 - [howtolens-point-sources](2026/10/howtolens-point-sources.md)
 - [howtolens-ray-tracing-merge](2026/10/howtolens-ray-tracing-merge.md)
