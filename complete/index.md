@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2078 records across 10 buckets.
+2079 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -346,6 +346,7 @@ markers; everything below GENERATED is rebuilt.
 - [likelihood-lifecycle-p2x-same-host](2026/10/likelihood-lifecycle-p2x-same-host.md)
 - [likelihood-lifecycle-p3-designation-records](2026/10/likelihood-lifecycle-p3-designation-records.md)
 - [likelihood-lifecycle-p3-jax-rows](2026/10/likelihood-lifecycle-p3-jax-rows.md)
+- [likelihood-lifecycle-p3-producer-designations](2026/10/likelihood-lifecycle-p3-producer-designations.md)
 - [likelihood-menu-labels](2026/10/likelihood-menu-labels.md)
 - [linear-operated-sersic-priors](2026/10/linear-operated-sersic-priors.md) — Documented intended MRO inheritance for linear-operated Sersic, with regression coverage of all six priors, me…
 - [linear-solver-p3a-a100-parity](2026/10/linear-solver-p3a-a100-parity.md)
