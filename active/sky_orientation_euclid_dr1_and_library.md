@@ -18,6 +18,7 @@ Difficulty: too-large
 Autonomy: supervised
 Priority: high
 Status: formalised
+Issued: 2026-10-31
 Consequence: judge
 Witness: (1) on at least five real DR1 lenses, positions.json overlaid on the VIS image lands on the multiple images, and the catalogue's sky-frame position angle (east of north) of the lens light, lens mass and external shear matches the orientation measured on the north-up FITS through its WCS, with sky-frame centres agreeing with the stored RA/Dec to within a pixel; (2) a simulated lens with known north-up PA, written to FITS with a CD1_1<0/CD2_2>0 WCS, fitted and converted, recovers its PA east of north and RA/Dec centre; (3) every existing WCS-bearing JSON/CSV in the release is byte-identical before and after, or its diff is listed and human-approved; (4) the workspace WCS guide runs end to end in both autolens_workspace and autogalaxy_workspace and its worked example (a simulated lens through a real WCS) prints the same PA east of north and RA/Dec as the library conversion utilities and the COOLEST export.
 Review-minutes: 25

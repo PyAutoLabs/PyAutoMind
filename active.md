@@ -43,3 +43,16 @@
 - heart-red-override: authorized live by the human 2026-10-30 ("Override + approve") for hpc-campaign phase 5; RED reasons quoted on the issue; development only, merge via /prm
 - tier: judge — merge mode: human /prm
 - resume: 2026-10-30 wrap-up — lane stalled with no output (worktree clean); NEXT restart lane against the concrete interfaces on Brain#547
+
+## sky-orientation-dr1-p1
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/113
+- issued: 2026-10-31
+- session: claude-code desktop (WSL), PyAutoLabs session
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/sky-orientation-dr1-p1
+- repos:
+  - euclid_strong_lens_modeling_pipeline: feature/sky-orientation-dr1-p1
+- prompt: active/sky_orientation_euclid_dr1_and_library.md
+- epic: sky-orientation (phase 1 of 5)
+- heart-red-override: authorized live by the human 2026-10-31 ("I override for work on RED"); RED reasons quoted on the issue; development only, merge via /prm
+- tier: judge — merge mode: human /prm
