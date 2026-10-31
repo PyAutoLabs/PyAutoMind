@@ -16,21 +16,6 @@
   - ECLIPSE_lens_catalogue: feature/r2-pages-function-access
 - tier: judge — merge mode: human /prm
 
-## campaign-task-records-wait-loop
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1749
-- issued: 2026-10-31
-- session: claude-code desktop (WSL), PyAutoLabs session
-- status: library-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/campaign-task-records-wait-loop
-- repos:
-  - PyAutoFit: feature/campaign-task-records-wait-loop
-- prompt: active/campaign_task_records_and_wait_loop.md
-- epic: hpc-campaign (phase 5a follow-up)
-- heart-red-override: extended live by the human 2026-10-31 ("yes extend the override, go ahead"); RED reasons quoted on the issue; development only, merge via /prm
-- tier: judge — merge mode: human /prm
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1750
-- resume: 2026-10-31 — PR open; full suite 4170 passed; independent review CLEAN; NEXT human /prm; after release, rerun autolens_assistant#174 wiki-currency then /prm it
-
 ## hpc-campaign-p5a-assistant
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/172
 - issued: 2026-10-30
@@ -46,18 +31,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/173 (MERGED 2026-10-31)
 - workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/174
 - resume: 2026-10-31 — #173 merged; #174 (feature/hpc-campaign-p5a-v2, retargeted to main) green on boundary + colab, RED on wiki-currency only because it audits RELEASED PyAutoFit, which lacks autofit.campaign (pending-release) — /prm #174 after the next PyAutoFit release (rerun wiki-currency first); then close out p5a
-
-## ag-results-quick-fit-tags
-- issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/266
-- session: claude-code desktop (session 03dd203b)
-- status: awaiting-merge
-- pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/267
-- worktree: ~/Code/PyAutoLabs-wt/ag-results-quick-fit-tags
-- repos:
-  - autogalaxy_workspace: feature/ag-results-quick-fit-tags
-- corrective-red:
-  - reason: "release validation FAILED (stage integrate)"
-  - authorization: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/266#issuecomment-6542894772
 
 ## likelihood-lifecycle-p2bc-quiet-ingest
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/493
