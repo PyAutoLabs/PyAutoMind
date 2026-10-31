@@ -10,7 +10,7 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 19 |
-| [In flight](#in-flight) | 6 |
+| [In flight](#in-flight) | 5 |
 | [Planned](#planned) | 9 |
 | [Backlog](#backlog) | 277 |
 | [Recent](#recent) | 50 |
@@ -989,14 +989,6 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 ```
 Use the start-dev skill. active/r2_pages_function_access.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/results_quick_fit_unique_tags.md">Bug: autogalaxy results guides write latent-less fits beside _quick_fit's, csv_make KeyError</a></summary>
-
-```
-Use the start-dev skill. active/results_quick_fit_unique_tags.md
 ```
 
 </details>

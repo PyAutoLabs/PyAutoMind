@@ -47,18 +47,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/174
 - resume: 2026-10-31 — #173 merged; #174 (feature/hpc-campaign-p5a-v2, retargeted to main) green on boundary + colab, RED on wiki-currency only because it audits RELEASED PyAutoFit, which lacks autofit.campaign (pending-release) — /prm #174 after the next PyAutoFit release (rerun wiki-currency first); then close out p5a
 
-## ag-results-quick-fit-tags
-- issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/266
-- session: claude-code desktop (session 03dd203b)
-- status: awaiting-merge
-- pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/267
-- worktree: ~/Code/PyAutoLabs-wt/ag-results-quick-fit-tags
-- repos:
-  - autogalaxy_workspace: feature/ag-results-quick-fit-tags
-- corrective-red:
-  - reason: "release validation FAILED (stage integrate)"
-  - authorization: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/266#issuecomment-6542894772
-
 ## likelihood-lifecycle-p2bc-quiet-ingest
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/493
 - issued: 2026-10-31
