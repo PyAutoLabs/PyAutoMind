@@ -11,7 +11,11 @@
 - Log: .worktrees/howtolens-ray-tracing-merge/scratch/tutorial_3_approved_runtime.log; notebook/catalogue regenerated, navigation and whitespace checks passed.
 - Preview: /mnt/c/Users/Jammy/Workspace/Science/scratch/howtolens_ray_tracing_merge_2026-10-31/tutorial_3_deflection_difference.png
 - Tutorial 3 is intentionally incomplete while review proceeds. Tutorial 5 remains unchanged as the source for remaining sections; do not remove it yet.
-- Next review: magnification, eigenvalues, critical curves, caustics and shallow-profile experiment. Einstein radius, time delays and conclusion follow. Preserve single tracer and intuitive explanations.
+- Magnification, eigenvalues, critical curves, caustics and explicit shallow-profile experiment approved and applied. Restores original spherical isothermal tracer afterwards. Experiment asks reader to rerun the two preceding plotting cells, per approved text.
+- Curve methods now use pixel_scale=grid.pixel_scale: default resampling created a spurious central radial contour for SIS; retaining 250x250 / 0.02 sampling removes it. Verified SIS one tangential/no radial; slope-1.8 one tangential/one radial, radial critical radius 0.21413 arcsec and radial caustic radius 0.85599 arcsec.
+- Log: .worktrees/howtolens-ray-tracing-merge/scratch/tutorial_3_curves_runtime.log. Notebook regenerated; navigation/banner/whitespace checks pass.
+- Four curve/caustic previews saved beside earlier preview, named tutorial_3_{isothermal,power_law}_{critical_curves,caustics}.png.
+- Next review: final five blocks for Einstein radius, closed forms, enclosed mass, time delays and wrap-up. Time-delay surface must use fixed source position: existing LensCalc fermat method substitutes a different ray-traced beta at each theta, so proposed plot should evaluate the formula directly.
 
 Type: docs
 Target: @HowToLens
