@@ -79,17 +79,15 @@
 - heart-red-override: authorized live by the human 2026-10-31 ("override heart red, go ahead with 7b"); RED reasons quoted on the issue; development only
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
 
-## howtolens-point-sources
-- issue: https://github.com/PyAutoLabs/HowToLens/issues/107
+## howtolens-point-data
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/109
 - issued: 2026-10-31
 - session: Codex chat 01a191e7-652b-7620-a3ca-9e78dadd948e
-- status: awaiting-merge
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howtolens-point-sources
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howtolens-point-data
 - repos:
-  - HowToLens: feature/howtolens-point-sources
-- prompt: active/tutorial_4_point_sources.md
-- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/108
-- commit: 2843ea7
-- heart-red-override: human explicitly approved development on Heart RED for Tutorial 4; current exact reason `release validation FAILED (stage integrate)` recorded on issue #107; no release or failed-check bypass
+  - HowToLens: feature/howtolens-point-data
+- prompt: active/tutorial_5_point_data.md
+- heart-red-override: continuing approved HowToLens development under the session override and explicit instruction to apply/check Tutorial 5; `release validation FAILED (stage integrate)`; no release/test bypass
 - tier: judge — merge mode: human /prm
-- resume: approved rewrite applied, notebook/render regenerated, all 49 smoke scripts passed; human /prm after CI passes
+- resume: approved point dataset section applied; run notebook/render and full smoke checks

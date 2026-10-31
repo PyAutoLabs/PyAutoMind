@@ -1001,10 +1001,10 @@ Use the start-dev skill. active/sky_orientation_euclid_dr1_and_library.md
 
 </details>
 
-<details><summary>📋 <a href="active/tutorial_4_point_sources.md">Review Tutorial 4: point sources</a> — <a href="https://github.com/PyAutoLabs/HowToLens/issues/107">issue #107</a> — issued 2026-10-31 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/HowToLens/pull/108">HowToLens#108</a></summary>
+<details><summary>📋 <a href="active/tutorial_5_point_data.md">Tutorial 5 point-source data</a> — <a href="https://github.com/PyAutoLabs/HowToLens/issues/109">issue #109</a> — issued 2026-10-31 — workspace-dev</summary>
 
 ```
-Use the start-dev skill. active/tutorial_4_point_sources.md
+Use the start-dev skill. active/tutorial_5_point_data.md
 ```
 
 </details>
@@ -2853,8 +2853,8 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-31 | issued | <a href="active/tutorial_5_point_data.md">Tutorial 5 point-source data</a> |
 | 2026-10-31 | issued | <a href="active/sky_orientation_euclid_dr1_and_library.md">Sky orientation (north/east): euclid_dr1 catalogue, paper and…</a> |
-| 2026-10-31 | issued | <a href="active/tutorial_4_point_sources.md">Review Tutorial 4: point sources</a> |
 | 2026-10-31 | issued | <a href="active/magnification_errors_source_science.md">Magnification errors from posterior draws in every source_science.py…</a> |
 | 2026-10-31 | issued | <a href="active/likelihood_lifecycle_p3_jax_rows.md">Likelihood lifecycle phase 3 step 1b: commit the 2a-2c JAX re-measure…</a> |
 | 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |

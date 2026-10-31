@@ -1,3 +1,15 @@
+# Tutorial 4 point sources
+
+Merged https://github.com/PyAutoLabs/HowToLens/pull/108 on 2026-10-31 as ebb5b435886a6483689efcbda47f64c21e422ba0. Issue #107 closed.
+
+All fifteen approved blocks applied, with iterative triangle explanation, workspace guide link, corrected point-source science and combined image-property output. Notebook, executed Markdown and catalogue regenerated.
+
+All eight CI jobs passed including Python 3.12 and 3.13 smoke. Local smoke 49/49, actual solver/plots, notebook parity, navigator and tutorial completion checks passed.
+
+Human authorized merge via prm. No release performed. Worktree cleanup awaits the human's decision about generated datasets/output. Tutorial 5 point-data addition is separate follow-on work.
+
+## Original prompt
+
 # Review Tutorial 4: point sources
 
 Type: docs
@@ -34,3 +46,5 @@ All fifteen blocks approved, including the brief triangle explanation and worksp
 - Review copies: /mnt/c/Users/Jammy/Workspace/Science/scratch/howtolens_point_sources_2026-10-31/.
 - Logs: scratch/tutorial4_runtime.log, scratch/tutorial4_render.log, scratch/tutorial4_heart_smoke.log.
 - Next: human /prm after required PR checks pass; no merge authority this turn.
+
+Close-out reference sweep: the point-solver figure-placement and grid-extent drafts still refer to the Tutorial 4 source as separate future work; neither is completed by this prose rewrite.
