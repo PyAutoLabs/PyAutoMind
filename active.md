@@ -92,3 +92,16 @@
 - epic: cluster-strong-lensing (phase 7b)
 - heart-red-override: authorized live by the human 2026-10-31 ("override heart red, go ahead with 7b"); RED reasons quoted on the issue; development only
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
+## howtolens-ray-tracing-merge
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/105
+- issued: 2026-10-31
+- session: Codex chat 01a191e7-652b-7620-a3ca-9e78dadd948e
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howtolens-ray-tracing-merge
+- repos:
+  - HowToLens: feature/howtolens-ray-tracing-merge
+- prompt: active/ray_tracing_merge.md
+- heart-red-override: user approved development on Heart RED for this task; exact reasons in issue 105
+- tier: judge — merge mode: human /prm
+- resume: apply approved Tutorial 2 Units and multi-galaxy blocks; continue Tutorial 3 five-block review, using one tracer
+
