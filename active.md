@@ -75,3 +75,15 @@
 - epic: sky-orientation (phase 2: 2.0 land v5 branch → 2a catalogue fix → 2b–2e)
 - heart-red-override: extended live by the human 2026-10-31 to phase 2 ("Yes, extend it"); development only, merge via /prm
 - tier: judge — merge mode: human /prm
+
+## likelihood-lifecycle-p3-jax-rows
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/495
+- issued: 2026-10-31
+- session: claude-code desktop (WSL), ~/Science session
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p3-jax-rows
+- repos:
+  - autolens_profiling: feature/likelihood-lifecycle-p3-jax-rows (stacked on feature/likelihood-lifecycle-p2bc-quiet-ingest, human 2026-10-31)
+- prompt: active/likelihood_lifecycle_p3_jax_rows.md
+- heart-override: RED overridden by the human 2026-10-31 (release validation integrate failure)
+- tier: judge — merge mode: human /prm
