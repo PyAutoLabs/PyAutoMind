@@ -1,3 +1,15 @@
+# HowToLens ray-tracing consolidation
+
+Merged https://github.com/PyAutoLabs/HowToLens/pull/106 on 2026-10-31 as e807cf9000b38814b94ab70bd799dbc5128436eb. Issue #105 closed.
+
+Tutorial 2 now includes units and multiple galaxies; Tutorial 3 combines intuitive ray tracing with optional mathematics. Retired the separate formalism tutorial and renumbered Data, Fitting and Summary to 5–7. Updated notebooks, rendered pages, figures and navigation.
+
+Human approved prose in five-block batches and explicitly authorized merge via prm. All eight CI jobs passed, including both Python 3.12 and 3.13 smoke legs. Local full smoke: 49 passed, zero failed. Generated notebook parity and actual rendered lessons validated.
+
+Heart RED development override remains development-only; no release performed. Worktree retained pending the human's decision about generated datasets/output.
+
+## Original prompt
+
 # Rebalance HowToLens ray tracing
 
 ## Completed review and implementation — 2026-10-31
