@@ -55,11 +55,11 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/sky-orientation-p2
 - repos:
-  - euclid_strong_lens_modeling_pipeline: feature/land-v5-catalogue
+  - euclid_strong_lens_modeling_pipeline: feature/sky-orientation-p2a
 - prompt: active/sky_orientation_euclid_dr1_and_library.md
 - epic: sky-orientation (phase 2: 2.0 land v5 branch → 2a catalogue fix → 2b–2e)
 - heart-red-override: extended live by the human 2026-10-31 to phase 2 ("Yes, extend it"); development only, merge via /prm
-- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/116 (2.0 land v5 branch; awaiting /prm)
+- merged: euclid#116 (2.0 land v5 branch) 2026-10-31 → NEXT 2a catalogue frame fix (branch feature/sky-orientation-p2a off main, not yet created)
 - tier: judge — merge mode: human /prm
 
 ## likelihood-lifecycle-p3-jax-rows
