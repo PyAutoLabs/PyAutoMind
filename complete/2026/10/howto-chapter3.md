@@ -2,6 +2,7 @@
 
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/111
 - completed: 2026-10-31
+- cleanup: user authorized removal; completed worktree and local feature branches removed; review copies preserved
 - workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/112
 - workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/95
 - summary: Merged the reviewed Chapter3 checkpoint in both HowTos; preserved the remaining Lens adaptive work as a separate follow-up.
