@@ -30,20 +30,6 @@
 - tier: judge — merge mode: human /prm
 - resume: 2026-10-30 wrap-up — step 0 b999e8d (feature/hpc-campaign-p5a-assistant) + v2 067c40b (feature/hpc-campaign-p5a-v2, stacked) committed locally, unpushed; 30 tests; NEXT independent review → PRs
 
-## hpc-campaign-p5c-brain
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/547
-- issued: 2026-10-30
-- session: claude-code desktop (WSL), PyAutoLabs session (background fork)
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/hpc-campaign-p5c-brain
-- repos:
-  - PyAutoBrain: feature/hpc-campaign-p5c-brain
-- prompt: active/hpc_campaign_p5c_brain.md
-- epic: hpc-campaign (phase 5)
-- heart-red-override: authorized live by the human 2026-10-30 ("Override + approve") for hpc-campaign phase 5; RED reasons quoted on the issue; development only, merge via /prm
-- tier: judge — merge mode: human /prm
-- resume: 2026-10-30 wrap-up — lane stalled with no output (worktree clean); NEXT restart lane against the concrete interfaces on Brain#547
-
 ## sky-orientation-dr1-p1
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/113
 - issued: 2026-10-31
@@ -67,3 +53,15 @@
 - corrective-red:
   - reason: "release validation FAILED (stage integrate)"
   - authorization: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/266#issuecomment-6542894772
+
+## likelihood-lifecycle-p2bc-quiet-ingest
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/493
+- issued: 2026-10-31
+- session: claude-code desktop (WSL), ~/Science session
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p2bc-quiet-ingest
+- repos:
+  - autolens_profiling: feature/likelihood-lifecycle-p2bc-quiet-ingest
+- prompt: active/likelihood_lifecycle_p2bc_quiet_rerun_ingest.md
+- heart-override: RED overridden by the human 2026-10-31 (release validation integrate failure; autogalaxy + autolens_profiling red; 1 dirty worktree)
+- tier: judge — merge mode: human /prm

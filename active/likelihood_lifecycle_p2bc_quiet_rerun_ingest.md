@@ -18,6 +18,8 @@ Epic: likelihood-lifecycle
 Phase: 2
 Parent: draft/research/autolens_profiling/likelihood_lifecycle_epic.md
 Filed: 2026-10-29
+Issued: 2026-10-31
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/493
 
 - Status: split out of `likelihood-lifecycle-p2b-interferometer` and `likelihood-lifecycle-p2c-point-source` at close-out 2026-10-29. Both campaigns shipped and are recorded in `complete/2026/10/likelihood-lifecycle-p2b-interferometer.md` (autolens_profiling#471, #483, #481) and `complete/2026/10/likelihood-lifecycle-p2c-point-source.md` (#480, #481); this is what remains: the quiet-node reruns queued on RAL the same day.
 - Blocked-by: the RAL jobs below finishing.
