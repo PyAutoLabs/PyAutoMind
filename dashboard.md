@@ -12,7 +12,7 @@
 | [Epics](#epics) | 19 |
 | [In flight](#in-flight) | 7 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 276 |
+| [Backlog](#backlog) | 277 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -634,7 +634,7 @@ Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens
 </details>
 
 <details>
-<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 13 queued prompt(s), in order</summary>
+<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 14 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Cluster strong lensing — Source &amp; Cluster arc</b> — ledger: `draft/feature/autolens/source_cluster_arc.md` — In progress — 1a–1d, phase 3a audit (profiling#364, workspace_test#341) and phase 3b field-preserving cap fix (Galaxy#646…</summary>
 
@@ -736,6 +736,14 @@ Use the start-dev skill. draft/feature/autolens/cluster_fit_visualizer_cluster_w
 
 ```
 Use the start-dev skill. draft/feature/autolens/source_cluster_arc.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens_workspace/magnification_errors_source_science.md">Magnification errors from posterior draws in every source_science.py (arc phase 7b)</a> — autolens_workspace · large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens_workspace/magnification_errors_source_science.md
 ```
 
 </details>
