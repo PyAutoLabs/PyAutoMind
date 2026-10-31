@@ -358,6 +358,13 @@ CODEX_HOOK_DEFINITIONS = {
         ),
         "statusMessage": "Checking shared PyAutoMind commit safety",
     },
+    "scheduler-action-guard": {
+        "matcher": "Bash",
+        "command": (
+            'python3 "$(git rev-parse --show-toplevel)/bin/scheduler_action_guard.py"'
+        ),
+        "statusMessage": "Checking for raw scheduler actions",
+    },
     "pyauto-api-gate": {
         "matcher": "Bash",
         "command": (
