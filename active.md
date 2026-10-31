@@ -77,7 +77,7 @@
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/111
 - issued: 2026-10-31
 - session: Codex chat 01a19297-ff24-7bb0-87ce-437076a9d0a9
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howto-chapter3
 - repos:
   - HowToLens: feature/howto-chapter3
@@ -86,3 +86,11 @@
 - approval: approved blocks and both Chapter 3 adaptations; explicit Heart RED implementation/validation override
 - conflict-exception: human authorized separate Chapter 3 worktree alongside howtogalaxy-chapter2; no Chapter 2 edits
 - tier: judge — merge mode: human /prm
+- heart-red-override:
+  - authorization: "Open both PRs despite Heart RED" (live human, 2026-10-31; development shipping only)
+  - reasons: "PyAutoFit: 2 commit(s) behind origin"; "release validation FAILED (stage integrate)"
+  - passed-gates: Lens smoke 44/44; Galaxy smoke 29/29; notebook generation, schema/code parsing, completeness, navigation, search-memory lint, catalogue reproducibility, whitespace and independent review
+  - evidence: https://github.com/PyAutoLabs/HowToLens/issues/111#issuecomment-6546499778
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/112
+- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/95
+- next: human /prm after required CI; adaptive Lens continuation remains pending five-block review

@@ -115,3 +115,23 @@ Resume start_dev with this checkpoint and the originating chat. Do not repeat ap
 User authorized: "Yes go ahead and implement the approved changes in both HowToLens and HowToGalaxy, run the checks and get both PRs up." Explicit Heart development permission: "Proceed with implementation and validation despite Heart RED". Concurrent Galaxy claim exception: "Allow separate Chapter 3 worktree". Current chat ID: 01a19297-ff24-7bb0-87ce-437076a9d0a9. Exact approved assistant drafts recovered to `.worktrees/howto-chapter3/review/draft_*.md`.
 
 Worktree: `/home/jammy/Code/PyAutoLabs/.worktrees/howto-chapter3`; both tutorial repos on `feature/howto-chapter3`. Only approved/reviewed material being implemented; adaptive Delaunay tail remains pending separate review. Python3.12 validation environment in worktree review/venv; activation imports local libraries. No merge authorized by current implementation request.
+
+## Implementation checkpoint — source and notebooks ready
+
+Approved HowToLens lessons 1–4 and HowToGalaxy lessons 1–3 are implemented on `feature/howto-chapter3` in the task worktrees. Both exact MGE introductions now appear in the first lesson and chapter README as well as the extensionless introduction file. Chapter 2 scripts and notebooks are unchanged. Lens adaptive lessons 8/11/12 are retained with necessary reference updates; their consolidation and final Delaunay fit remain pending five-block review. Only Maresca Figure 1 is included.
+
+Validation completed: seven revised lessons pass targeted capped smoke, including chained-fit likelihood evaluation with samplers bypassed; Hands generated 45 Lens and 30 Galaxy notebooks successfully; notebook schema, tutorial completeness, navigation, search-memory lint, catalogue reproducibility and whitespace checks pass. Independent review findings (missing visible intros, terminal headings, typo) are resolved. Full repository smoke is running through Heart isolated environments; HowToGalaxy uses Heart's API with an explicit workspace specification because the CLI registry lacks that key. No full search-convergence claim is made.
+
+Exact-head working changes are staged, not committed or pushed yet. PR body drafts and validation logs are under `.worktrees/howto-chapter3/review/`. Human-readable notebooks/checkpoint: `C:\Users\Jammy\Workspace\Science\scratch\chapter_3_implementation_2026-10-31`. Heart currently reports RED: `release validation FAILED (stage integrate)`. User's RED override covers implementation and validation; finish all branch checks before the ship gate.
+
+## PR-open checkpoint — 2026-10-31
+
+- HowToLens PR: https://github.com/PyAutoLabs/HowToLens/pull/112 — `cc6b8277df021c052e57f6d9d7887f866fd9774f`.
+- HowToGalaxy PR: https://github.com/PyAutoLabs/HowToGalaxy/pull/95 — `a4f27b7354a6595b8df30533c14a8477502daf5a`.
+- Full Heart-prepared isolated repository smoke: Lens **44 passed / 0 failed**, Galaxy **29 passed / 0 failed** (Python 3.12). Exact reports in each task worktree's `test-results/`.
+- Extra full-size Galaxy regularization lesson: **39 reconstructions pass** across three meshes. Smoke search chains evaluate likelihoods with sampling bypassed; no convergence claim.
+- Notebook generation **45 Lens / 30 Galaxy pass**, retaining only in-scope Chapter 3 changes. Schema/code parsing, tutorial completeness, navigation, catalogue reproducibility, search-memory lint, whitespace and independent review pass.
+- Live ship override: **“Open both PRs despite Heart RED”**. Exact current RED reasons: **“PyAutoFit: 2 commit(s) behind origin”**; **“release validation FAILED (stage integrate)”**. Recorded on issue #111, both PR bodies, active.md and autonomy_log.md. No merge/release authorized.
+- Both source worktrees clean after commits/pushes. Chapter 2 source/notebooks untouched. Separate Galaxy Chapter 3 worktree exception remains valid; regenerate shared catalogues after integrating the Chapter 2 branch.
+
+Next: human `/prm` judges required GitHub CI and merges this approved checkpoint. Continue the remaining Lens adaptive/Delaunay/Hilbert/Split material and final fit through five-block review; existing adaptive lessons retain their numbering until then. No scheduled CI watcher.
