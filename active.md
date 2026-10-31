@@ -100,3 +100,17 @@
 - repos:
   - HowToGalaxy: feature/howtogalaxy-chapter2
 - approval: approved chapter restructure, independent Galaxy adaptation and explicit Heart RED development override in current chat
+
+## howto-chapter3
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/111
+- issued: 2026-10-31
+- session: Codex chat 01a19297-ff24-7bb0-87ce-437076a9d0a9
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howto-chapter3
+- repos:
+  - HowToLens: feature/howto-chapter3
+  - HowToGalaxy: feature/howto-chapter3
+- prompt: active/chapter_3_pixelizations_restructure_checkpoint.md
+- approval: approved blocks and both Chapter 3 adaptations; explicit Heart RED implementation/validation override
+- conflict-exception: human authorized separate Chapter 3 worktree alongside howtogalaxy-chapter2; no Chapter 2 edits
+- tier: judge — merge mode: human /prm

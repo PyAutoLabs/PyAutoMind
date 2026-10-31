@@ -3,7 +3,9 @@
 Date: 2026-10-31
 Targets: @HowToLens @HowToGalaxy (Chapter 3 only)
 Type: docs
-Status: approved design and chat drafts; implementation NOT started
+Status: workspace-dev — implementing approved blocks
+Issue: https://github.com/PyAutoLabs/HowToLens/issues/111
+Issued: 2026-10-31
 Consequence: judge — merge mode: human /prm
 
 ## Actual state
@@ -107,3 +109,9 @@ MGE and other analytic profiles remain useful for describing and measuring smoot
 ## Next action
 
 Resume start_dev with this checkpoint and the originating chat. Do not repeat approval of accepted structure/prose. Recheck Heart and repo claims, register the task through the standard Mind issue workflow, create workspace worktrees, and apply the approved chapter introductions and reviewed lesson blocks. Draft/review remaining adaptive and final-fit content in batches of five. Validate actual figures/searches, required smoke and links, regenerate notebooks/catalogues, then open the reviewable PRs. Only then can /prm judge CI and merge; no merge was possible at this checkpoint.
+
+## Implementation resumed — 2026-10-31
+
+User authorized: "Yes go ahead and implement the approved changes in both HowToLens and HowToGalaxy, run the checks and get both PRs up." Explicit Heart development permission: "Proceed with implementation and validation despite Heart RED". Concurrent Galaxy claim exception: "Allow separate Chapter 3 worktree". Current chat ID: 01a19297-ff24-7bb0-87ce-437076a9d0a9. Exact approved assistant drafts recovered to `.worktrees/howto-chapter3/review/draft_*.md`.
+
+Worktree: `/home/jammy/Code/PyAutoLabs/.worktrees/howto-chapter3`; both tutorial repos on `feature/howto-chapter3`. Only approved/reviewed material being implemented; adaptive Delaunay tail remains pending separate review. Python3.12 validation environment in worktree review/venv; activation imports local libraries. No merge authorized by current implementation request.
