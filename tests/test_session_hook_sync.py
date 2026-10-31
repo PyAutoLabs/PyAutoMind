@@ -630,10 +630,12 @@ def gate_steps():
 # Either decision enables the one skipping step; only neither runs every leg.
 SKIP_IF = ("steps.hookpr.outputs.hook_pr == 'true' || "
            "steps.hookpr.outputs.filing_pr == 'true' || "
-           "steps.hookpr.outputs.map_pr == 'true'")
+           "steps.hookpr.outputs.map_pr == 'true' || "
+           "steps.codexpr.outputs.codex_pr == 'true'")
 FULL_IF = ("steps.hookpr.outputs.hook_pr != 'true' && "
            "steps.hookpr.outputs.filing_pr != 'true' && "
-           "steps.hookpr.outputs.map_pr != 'true'")
+           "steps.hookpr.outputs.map_pr != 'true' && "
+           "steps.codexpr.outputs.codex_pr != 'true'")
 
 
 def test_the_skip_is_reachable_only_from_a_pull_request():
@@ -805,7 +807,41 @@ def test_the_gate_skips_the_map_leg_by_its_printed_label():
     run = _skip_step()["run"]
     assert f'--skip "{repos_sync.MAP_BLOCKS}"' in run, run
     assert "repos.yaml" in run
-    assert run.count("ON push TO main this leg is never skipped") == 3
+    assert run.count("ON push TO main this leg is never skipped") == 4
+
+
+# --------------------------------------------------------------------------
+# The gate's Codex-adapter PR path (PyAutoMind#520) — same shape, own step
+# --------------------------------------------------------------------------
+
+def test_the_gate_skips_the_codex_leg_by_its_printed_label():
+    """A renamed leg must break here rather than silently stop being skipped."""
+    run = _skip_step()["run"]
+    assert f'--skip "{repos_sync.CODEX_HOOKS}"' in run, run
+    assert 'if [ "$CODEX_PR" = "true" ]' in run
+
+
+def test_the_codex_decision_is_pr_only_and_renders_both_trees():
+    """The decision compares rendered adapters, base against head — never a
+    guess from which files changed — and runs only on a pull request."""
+    step = next(step for step in gate_steps() if step.get("id") == "codexpr")
+    assert step["if"] == "github.event_name == 'pull_request'"
+    assert step["run"].count("scripts/codex_hooks_render.py") == 2
+    assert 'origin/${BASE_REF}' in step["run"]
+    assert "codex_pr=true" in step["run"] and "codex_pr=false" in step["run"]
+
+
+def test_the_gate_still_asserts_the_codex_adapters_render():
+    """The compensating control for the Codex skip runs the generator's tests
+    and refuses a render error, before the skipping drift check."""
+    step = next(step for step in gate_steps()
+                if step.get("if") == "steps.codexpr.outputs.codex_pr == 'true'"
+                and "pytest" in (step.get("run") or ""))
+    assert "tests/test_codex_hook_sync.py" in step["run"]
+    assert "codex_head.json" in step["run"]
+    steps = gate_steps()
+    decision = next(s for s in steps if s.get("id") == "codexpr")
+    assert steps.index(decision) < steps.index(step) < steps.index(_skip_step())
 
 
 def test_the_gate_still_asserts_the_manifest_renders_the_map():

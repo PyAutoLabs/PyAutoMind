@@ -48,6 +48,16 @@ name: Tenant Firewall Gate
 # — and drops the `organism-map blocks (generated)` leg with the same loud
 # banner. Independent of the other two decisions; graded on push to main.
 #
+# The Codex adapters are the fourth (PyAutoMind#520): a PR that changes what
+# an opted-in repo's `.codex/hooks.json` should say (a new hook definition, a
+# repo opting in) cannot make the copies on the cloned mains match — they are
+# written by session_hook_propagate.yml after merge. The decision renders every
+# repo's adapter from the PR's base tree and from its head
+# (`scripts/codex_hooks_render.py`) and sets `codex_pr` only when they differ,
+# so a repos.yaml edit that leaves the adapters alone still grades them. It
+# asserts what the PR controls — the generator's hermetic tests — and drops the
+# `generated Codex hooks` leg with the same loud banner; graded on push to main.
+#
 # All three organs are checked out. PyAutoHands was omitted at first — its
 # firewall clear waited behind the version-stamp task that claimed the repo
 # (PyAutoHands#235) — and joined once that leg landed as PyAutoHands#237,
@@ -58,6 +68,7 @@ on:
     branches: [main]
     paths:
       - "scripts/repos_sync.py"
+      - "scripts/codex_hooks_render.py"
       - "policy/session_start_hook.sh"
       - "policy/end_at_deliverable_hook.sh"
       - "policy/where_to_file.md"
@@ -69,6 +80,7 @@ on:
   pull_request:
     paths:
       - "scripts/repos_sync.py"
+      - "scripts/codex_hooks_render.py"
       - "policy/session_start_hook.sh"
       - "policy/end_at_deliverable_hook.sh"
       - "policy/where_to_file.md"
@@ -168,6 +180,28 @@ jobs:
             echo "map_pr=false" >> "$GITHUB_OUTPUT"
           fi
 
+      # Independent of the three decisions above (PyAutoMind#520): does this PR
+      # change what any repo's .codex/hooks.json should say? Rendered from the
+      # base tree and the head tree, never guessed from which files changed —
+      # a repos.yaml edit that leaves every adapter alone still grades them.
+      - name: Codex-adapter PR?
+        id: codexpr
+        if: github.event_name == 'pull_request'
+        env:
+          BASE_REF: ${{ github.base_ref }}
+        run: |
+          mkdir -p codex_base
+          git -C PyAutoMind archive "origin/${BASE_REF}" scripts repos.yaml | tar -x -C codex_base
+          python3 PyAutoMind/scripts/codex_hooks_render.py --mind codex_base > codex_base.json
+          python3 PyAutoMind/scripts/codex_hooks_render.py --mind PyAutoMind > codex_head.json
+          if cmp -s codex_base.json codex_head.json; then
+            echo "codex_pr=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "Codex adapters this PR changes:"
+            diff codex_base.json codex_head.json | sed -n 's/^> *"\([^"]*\)": .*/  \1/p'
+            echo "codex_pr=true" >> "$GITHUB_OUTPUT"
+          fi
+
       # The compensating control, and it runs FIRST so it is never shadowed by
       # the leg below: PyAutoMind is the one repo the propagation workflow
       # never writes to, so its own installed copies are exactly what this PR
@@ -198,6 +232,16 @@ jobs:
           python3 -m pytest PyAutoMind/tests/test_repos_sync_organism_map.py -q \
             -k "renders_from_the_manifest"
 
+      # The compensating control for the Codex adapters: the installed copies
+      # are written after merge, so what this PR controls is that the generator
+      # renders them — every opted-in repo, deterministically — and its tests pass.
+      - name: Assert the Codex adapters render (copies are written after merge)
+        if: steps.codexpr.outputs.codex_pr == 'true'
+        run: |
+          pip install pytest
+          python3 -m pytest PyAutoMind/tests/test_codex_hook_sync.py -q
+          ! grep -q '"error: ' codex_head.json
+
       # The shared-standards rollout (#474) is complete: all 46 registered
       # repos carry the generated block on main (PyAutoArray#614 and
       # euclid_strong_lens_modeling_pipeline#110 were the last). This step
@@ -212,11 +256,12 @@ jobs:
             --only "shared-standards blocks (generated)" --repo PyAutoMind
 
       - name: Drift check (canonical-hook, where-to-file or repos.yaml PR — unmeetable legs skipped)
-        if: steps.hookpr.outputs.hook_pr == 'true' || steps.hookpr.outputs.filing_pr == 'true' || steps.hookpr.outputs.map_pr == 'true'
+        if: steps.hookpr.outputs.hook_pr == 'true' || steps.hookpr.outputs.filing_pr == 'true' || steps.hookpr.outputs.map_pr == 'true' || steps.codexpr.outputs.codex_pr == 'true'
         env:
           HOOK_PR: ${{ steps.hookpr.outputs.hook_pr }}
           FILING_PR: ${{ steps.hookpr.outputs.filing_pr }}
           MAP_PR: ${{ steps.hookpr.outputs.map_pr }}
+          CODEX_PR: ${{ steps.codexpr.outputs.codex_pr }}
         run: |
           skip=()
           if [ "$HOOK_PR" = "true" ]; then
@@ -267,11 +312,26 @@ jobs:
             echo "=============================================================="
             skip+=(--skip "organism-map blocks (generated)")
           fi
+          if [ "$CODEX_PR" = "true" ]; then
+            echo "=============================================================="
+            echo "SKIPPED LEG: 'generated Codex hooks'"
+            echo "WHY: this PR changes what an opted-in repo's .codex/hooks.json"
+            echo "  should say (base and head trees render differently). The"
+            echo "  sibling organs are checked out at their mains, so their"
+            echo "  adapters are stale BY CONSTRUCTION until"
+            echo "  .github/workflows/session_hook_propagate.yml writes them on the"
+            echo "  push to main after this PR merges."
+            echo "STILL ENFORCED: the generator renders every opted-in adapter"
+            echo "  without error and its tests pass (asserted in the step above)."
+            echo "ON push TO main this leg is never skipped."
+            echo "=============================================================="
+            skip+=(--skip "generated Codex hooks")
+          fi
           python3 PyAutoMind/scripts/repos_sync.py --check \
             --root "$GITHUB_WORKSPACE" "${skip[@]}"
 
       # Every leg, the shared-standards leg included, graded on the cloned mains.
       - name: Drift check (all legs — absent repos are skipped)
-        if: steps.hookpr.outputs.hook_pr != 'true' && steps.hookpr.outputs.filing_pr != 'true' && steps.hookpr.outputs.map_pr != 'true'
+        if: steps.hookpr.outputs.hook_pr != 'true' && steps.hookpr.outputs.filing_pr != 'true' && steps.hookpr.outputs.map_pr != 'true' && steps.codexpr.outputs.codex_pr != 'true'
         run: |
           python3 PyAutoMind/scripts/repos_sync.py --check --root "$GITHUB_WORKSPACE"
