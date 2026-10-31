@@ -62,3 +62,16 @@
   - reasons: release validation FAILED (stage integrate)
   - validation: source/notebook/catalogue checks passed; runtime smoke HowToLens 48 passed / 2 failed, HowToGalaxy 31 passed / 1 failed. Shipping stopped on plotting wrapper errors.
   - scope: development shipping plus current-turn merge on green required checks; no release or CI bypass.
+
+## sky-orientation-p2
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/115
+- issued: 2026-10-31
+- session: claude-code desktop (WSL), PyAutoLabs session
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/sky-orientation-p2
+- repos:
+  - euclid_strong_lens_modeling_pipeline: feature/land-v5-catalogue
+- prompt: active/sky_orientation_euclid_dr1_and_library.md
+- epic: sky-orientation (phase 2: 2.0 land v5 branch → 2a catalogue fix → 2b–2e)
+- heart-red-override: extended live by the human 2026-10-31 to phase 2 ("Yes, extend it"); development only, merge via /prm
+- tier: judge — merge mode: human /prm
