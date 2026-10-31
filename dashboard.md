@@ -1001,7 +1001,7 @@ Use the start-dev skill. active/r2_pages_function_access.md
 
 </details>
 
-<details><summary>📋 <a href="active/ray_tracing_merge.md">Rebalance HowToLens ray tracing</a> — <a href="https://github.com/PyAutoLabs/HowToLens/issues/105">issue #105</a> — issued 2026-10-31 — workspace-dev</summary>
+<details><summary>📋 <a href="active/ray_tracing_merge.md">Rebalance HowToLens ray tracing</a> — <a href="https://github.com/PyAutoLabs/HowToLens/issues/105">issue #105</a> — issued 2026-10-31 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/HowToLens/pull/106">HowToLens#106</a></summary>
 
 ```
 Use the start-dev skill. active/ray_tracing_merge.md

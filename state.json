@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-10-31T14:52:06Z",
+  "updated": "2026-10-31T15:32:19Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Rebalance HowToLens ray tracing \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/HowToLens/pull/106",
+      "prompt": "Use the start-dev skill. active/ray_tracing_merge.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#683 \u2014 chameleon-analytic-potential",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/683",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#681 \u2014 lmp-gaussian-potential-fast",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/681",
       "prompt": null
     }
   ]
