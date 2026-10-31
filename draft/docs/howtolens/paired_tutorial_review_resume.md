@@ -1,6 +1,36 @@
 # Resume: paired HowToLens / HowToGalaxy tutorial review
 
-Saved: 2026-10-30. Status: paused at the user's request to wrap up; source edits are uncommitted.
+Saved: 2026-10-31. Status: approved source work complete through Lens Tutorial 2; shipping blocked; edits are uncommitted.
+
+## Shipping retry — 2026-10-31 (current status)
+
+- Human explicitly authorized `/prm` and Heart RED override: “I approve you to prm and override heart RED”. Exact Heart reason: `release validation FAILED (stage integrate)`.
+- Tracking issue now exists: https://github.com/PyAutoLabs/HowToLens/issues/103; task record `active/howto_paired_review_ship.md`; both worktrees claimed under `howto-paired-review`.
+- Isolated Python 3.12 environments successfully built through Heart using CI install recipes. Reuse `scratch/ship/heart/smoke-envs/{howtolens,howtogalaxy}/py3.12` under workspace root. HowToGalaxy required explicit WorkspaceSpec through Heart functions because its CLI key is missing.
+- Five changed notebooks regenerated with Hands functions; both catalogues regenerated. Notebook structural validation and code/source parity pass. Navigator path/banner checks pass.
+- Full runtime results: HowToLens 48 passed / 2 failed; HowToGalaxy 31 passed / 1 failed. Both Tutorial 1 scripts pass. Failure details: Tutorial 0 in BOTH courses passes unsupported `figsize` to public `aplt.plot_array`; Lens Tutorial 2 passes unsupported `extent` to `aplt.plot_grid`, whose wrapper also lacks `indexes`.
+- Root cause: reviewed low-level autoarray.plot signatures differ from public autogalaxy.util.plot_utils wrappers exported by aplt. Underlying functions support these options. Fix proposal: size Tutorial 0 through explicit Matplotlib axes; use autoarray.plot.plot_grid for Tutorial 2 zoom/mappings. No library changes needed.
+- Per ship workflow, stopped on failed smoke without modifying source to evade the gate. No tutorial commits, pushes, PRs or merges. Generated work remains uncommitted alongside accepted scripts.
+- Logs: `.worktrees/howto-paired-review/scratch/ship/{lens-smoke,galaxy-smoke,generation}.log`; structured results in each tutorial repo's `test-results/`. Review bundle now includes notebooks/catalogues, updated patches and `VALIDATION.md`.
+- NEXT: correct plotting calls, regenerate the affected notebooks, rerun applicable validation, ship both repos and invoke `/prm` with green checks. Tutorial 3–5 human rewrite remains pending and outside this phase. Current-turn merge authority expires at turn end; do not arm automation.
+
+## Latest checkpoint — 2026-10-31 (supersedes the resume point below)
+
+- Human requested `/prm all our work` before making larger changes to Tutorials 3, 4 and 5. Scope to ship: HowToLens Tutorials 0–2 and HowToGalaxy Tutorials 0–1 only.
+- HowToLens Tutorial 2 source review is complete and all approved edits are applied. Both schematic and COSMOS-Web Ring image are included. Early prose uses “lensed image”; avoid PSF/unblurred terminology until introduced.
+- Deflection magnitude for IsothermalSph is constant away from the centre. Reduced-deflection discussion is explicitly deferred to Tutorial 3 (not yet written).
+- Tutorial 2 now has an unheaded central-source-plane zoom before Mappings. Mappings follows Ray Tracing Grids, with three groups of five fixed slim indexes, shared colours and full default extents; prose invites zooming with `extent`. Tracer grid access stays near the end without duplicate plots. Wrap-up and contents updated.
+- Tutorial 3 first five blocks were proposed in chat but NEVER approved or applied. Tutorials 3–5 remain untouched; human plans broader edits before resuming review.
+- `/prm` did not ship or merge: no commits, pushes, PRs or issue registration. Five source scripts remain uncommitted in the existing feature/howto-paired-review worktrees.
+- Fresh Heart readiness at 2026-10-31T12:13:10 UTC: RED; exact sole red reason: `release validation FAILED (stage integrate)`. Earlier permission to develop is not evidence of passing ship gates.
+- Syntax checks pass for all five modified scripts; git diff --check passes in both repos. Tutorial 2 contents match headings in order; control-character check passed.
+- Full runtime/smoke validation is missing. Shell Python 3.10 cannot run current stack. Available Python 3.12 cannot load system NumPy C extensions and lacks JAX/dill. No environment packages were installed.
+- Notebook/catalogue generation has not run: PyAutoHands requires `ipynb-py-convert`, absent from PATH. Do not claim notebooks are current.
+- Mappings preview used analytic SIS + NumPy/Matplotlib, matching plotted marker colours/sizes; all 15 displacements checked at 1.6 arcseconds. It is not PyAutoLens runtime evidence. Human accepted preview.
+- Review bundle (source copies + binary-capable patches): `/mnt/c/Users/Jammy/Workspace/Science/scratch/howto_paired_review_ship_2026-10-31/`. Authoritative edits remain in worktrees.
+- Next shipping step: supply supported runtime and notebook converter; regenerate using Hands, run required validation, resolve current Heart gate, then ship both repos and re-run `/prm` on green checks. Preserve earlier approvals and uncommitted edits; do not clean worktrees.
+
+
 
 ## Intent and review contract
 Review the courses together, following HowToLens order and pairing corresponding HowToGalaxy material by topic. One integrated review of prose, code, comments and factual accuracy; exploit shared structure without imposing lensing material on Galaxy. Show the full proposed text and associated code for FIVE coherent blocks at a time in chat, then apply after approval. Do not return to whole-tutorial batches or require clicking files to read proposals.
