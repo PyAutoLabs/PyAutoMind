@@ -48,22 +48,6 @@
 - run: RAL 413687 sky_frame_bundle MODE=dry over inspect/dr1_catalogue_v5 (private code /mnt/ral/jnightin/active/euclid_dr1_p2c_code @910e5c8; submitted via scratch hpc/sync copy) → NEXT read dry report, MODE=live, re-package; then re-render pilot (~50, human review), 2b docs
 - tier: judge — merge mode: human /prm
 
-## likelihood-lifecycle-p3-jax-rows
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/495
-- issued: 2026-10-31
-- session: claude-code desktop (WSL), ~/Science session
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p3-jax-rows
-- repos:
-  - autolens_profiling: feature/likelihood-lifecycle-p3-jax-rows (was stacked on #494; retargeted to main after #494 merged)
-- prompt: active/likelihood_lifecycle_p3_jax_rows.md
-- heart-override: RED overridden by the human 2026-10-31 (release validation integrate failure)
-- tier: judge — merge mode: human /prm
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/496 (READY, base main, CI lint pass on c218a428, MERGEABLE/CLEAN 2026-10-31 16:26)
-- state 2026-10-31: all 63 cells + 5 experiments in; #494 merged first, #496 retargeted to main and regenerated; full suite 1920 passed locally.
-- FINDING: JAX CPU slower on 0.11.2 + eigen flag (ral imaging median 1.46x; GPU unchanged) → re-check cpu_many_core designation proposals in step 4.
-- next: human /prm on #496 (Heart RED: merge needs an explicit /prm in the same turn).
-
 ## magnification-errors-source-science
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/610
 - issued: 2026-10-31
@@ -78,20 +62,6 @@
 - epic: cluster-strong-lensing (phase 7b)
 - heart-red-override: authorized live by the human 2026-10-31 ("override heart red, go ahead with 7b"); RED reasons quoted on the issue; development only
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
-
-## likelihood-lifecycle-p3-designation-records
-- issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/83
-- issued: 2026-10-31
-- session: claude-code desktop (WSL), ~/Science session
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p3-designation-records
-- repos:
-  - PyAutoPulse: feature/likelihood-lifecycle-p3-designation-records
-- prompt: active/likelihood_lifecycle_p3_designation_records.md
-- heart-override: RED overridden by the human 2026-10-31 (AskUserQuestion "Override + create issue")
-- tier: judge — merge mode: human /prm
-- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/84
-- state 2026-10-31: 39 records + index rows (aab2177); pyauto-pulse check OK, 370 tests; evidence pinned to autolens_profiling c218a428 (#496 head). Merge with/after #496.
 
 ## howtogalaxy-chapter2
 - issue: https://github.com/PyAutoLabs/HowToGalaxy/issues/94

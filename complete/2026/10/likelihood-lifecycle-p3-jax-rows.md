@@ -1,3 +1,13 @@
+Likelihood lifecycle phase 3: the 2a–2c JAX re-measure rows committed on the day-zero environment.
+
+- Merged: https://github.com/PyAutoLabs/autolens_profiling/pull/496 (`9e033fd6`, 2026-10-31, human merge command after /prm prep). Issue https://github.com/PyAutoLabs/autolens_profiling/issues/495 closed. Heart RED development override invoked by the human 2026-10-31. Stacked on #494 and retargeted to main after it merged.
+- Rows: 63/63 cells plus 5 `plain_runtime` experiments on jax/jaxlib 0.11.2, `--xla_cpu_multi_thread_eigen=false` on CPU legs, tag 2026.10.25.1 (from p2dg at 8860c50c). Sources: 2a RAL 413614-413617, A100 413618-413621; 2b A100 413622-413625 (witnesses finalised by the reference array 413669); 2c A100 413626; 2c RAL CPU breakdowns and experiments 413683. The last is a gap found 2026-10-31: the quiet rerun covered only the runtime legs. Every witness `match`.
+- History: 2a rows to `history/2026.10.23.1_2026-10-25/`, 2b/2c rows to `history/2026.10.25.1_2026-10-28/`. `catalogue/peak_rss_backfill.json` rekeyed 86 entries to their history paths (test updated). The registry's production-cell reference follows the cell by design.
+- Findings: GPU unchanged on 0.11.2 (0.92–1.05×). A100-node JAX CPU 1.09×; ral imaging JAX CPU 1.46× median (1.04–1.58). The eigen flag and the version are not separated; a flag on/off pair on one quiet node would separate them.
+- Follow-on: the designations recorded on these rows, PyAutoPulse#84 (complete/2026/10/likelihood-lifecycle-p3-designation-records.md).
+
+## Original prompt
+
 # Likelihood lifecycle phase 3 step 1b: commit the 2a-2c JAX re-measure rows (jax 0.11.2 day zero)
 
 Type: research
