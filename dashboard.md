@@ -961,7 +961,7 @@ Use the start-dev skill. active/hpc_campaign_p5a_assistant.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p3_jax_rows.md">Likelihood lifecycle phase 3 step 1b: commit the 2a-2c JAX re-measure rows…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/495">issue #495</a> — issued 2026-10-31 — workspace-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p3_jax_rows.md">Likelihood lifecycle phase 3 step 1b: commit the 2a-2c JAX re-measure rows…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/495">issue #495</a> — issued 2026-10-31 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/496">autolens_profiling#496</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p3_jax_rows.md
