@@ -38,8 +38,8 @@ The generator scripts are `designate.py` and `appendix_b.py` (session scratch, r
   1. `interferometer/delaunay` `cpu_many_core`, jvla: the old **HOLD (25 %) now separates.** Numba is 1.22 against JAX 0.564 calls/s/node (2.17×). The quiet rerun sped numba up (0.87×) and jax 0.11.2 plus the eigen flag slowed JAX CPU W~ down (1.50×).
   2. `point_source_source/source_plane` `gpu_a100`: the old draft proposed the node CPU (`jax_cpu_na_fp64`). Under Q2 it is `jax_gpu_na_fp64`. This follows the ruling, not new data.
   3. The interferometer ids are now `…-standard-…` instead of the n_vis bins (Q5). The optimal setup is the same in every old bin.
-- **Unchanged:** every 2a and 2c proposal keeps its optimal setup.
-- **The JAX CPU slowdown flips nothing.** Every CPU group with a numba setup was already numba, by 2.2–35× per node. JAX-only CPU groups (MGE, point source, cluster, weak) are uncontested.
+- **Unchanged:** every other 2a, 2b and 2c proposal keeps its optimal setup.
+- **The JAX CPU slowdown flips nothing.** Every CPU group with a numba setup was already numba, by 2.2–50× per node (min interferometer/delaunay jvla 2.17×, max group/delaunay euclid 49.6×). JAX-only CPU groups (MGE, point source, cluster, weak) are uncontested.
 - **New groups (2d–2g):**
   - group, multi_galaxy and multi_dataset follow imaging: numba on CPU, `jax_gpu_dense_fp64` on the A100, all separated.
   - datacube on CPU: numba W~, separated.
