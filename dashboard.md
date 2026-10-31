@@ -961,7 +961,7 @@ Use the start-dev skill. active/hpc_campaign_p5a_assistant.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p3_producer_designations.md">Likelihood lifecycle phase 3, day-zero write 1/4: autolens_profiling reads the Pulse designations</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/497">issue #497</a> — issued 2026-10-31 — workspace-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p3_producer_designations.md">Likelihood lifecycle phase 3, day-zero write 1/4: autolens_profiling reads the Pulse designations</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/497">issue #497</a> — issued 2026-10-31 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/498">autolens_profiling#498</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p3_producer_designations.md
