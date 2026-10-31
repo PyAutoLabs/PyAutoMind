@@ -16,6 +16,19 @@
   - ECLIPSE_lens_catalogue: feature/r2-pages-function-access
 - tier: judge — merge mode: human /prm
 
+## campaign-task-records-wait-loop
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1749
+- issued: 2026-10-31
+- session: claude-code desktop (WSL), PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/campaign-task-records-wait-loop
+- repos:
+  - PyAutoFit: feature/campaign-task-records-wait-loop
+- prompt: active/campaign_task_records_and_wait_loop.md
+- epic: hpc-campaign (phase 5a follow-up)
+- heart-red-override: extended live by the human 2026-10-31 ("yes extend the override, go ahead"); RED reasons quoted on the issue; development only, merge via /prm
+- tier: judge — merge mode: human /prm
+
 ## hpc-campaign-p5a-assistant
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/172
 - issued: 2026-10-30
@@ -28,7 +41,9 @@
 - epic: hpc-campaign (phase 5)
 - heart-red-override: authorized live by the human 2026-10-30 ("Override + approve") for hpc-campaign phase 5; RED reasons quoted on the issue; development only, merge via /prm
 - tier: judge — merge mode: human /prm
-- resume: 2026-10-30 wrap-up — step 0 b999e8d (feature/hpc-campaign-p5a-assistant) + v2 067c40b (feature/hpc-campaign-p5a-v2, stacked) committed locally, unpushed; 30 tests; NEXT independent review → PRs
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/173 (MERGED 2026-10-31)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/174
+- resume: 2026-10-31 — #173 merged; #174 (feature/hpc-campaign-p5a-v2, retargeted to main) green on boundary + colab, RED on wiki-currency only because it audits RELEASED PyAutoFit, which lacks autofit.campaign (pending-release) — /prm #174 after the next PyAutoFit release (rerun wiki-currency first); then close out p5a
 
 ## sky-orientation-dr1-p1
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/113
