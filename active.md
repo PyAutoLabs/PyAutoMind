@@ -60,7 +60,8 @@
 - epic: sky-orientation (phase 2: 2.0 land v5 branch → 2a catalogue fix → 2b–2e)
 - heart-red-override: extended live by the human 2026-10-31 to phase 2 ("Yes, extend it"); development only, merge via /prm
 - merged: euclid#116 (2.0 land v5 branch) 2026-10-31
-- merged: euclid#117 (2a catalogue frame fix) 2026-10-31 → NEXT 2c RAL bundle run (stages 1b + 3b over dr1_sep1) + north-up re-render pilot (~50 lenses, human review), then 2b docs
+- merged: euclid#117 (2a catalogue frame fix) 2026-10-31
+- run: RAL 413687 sky_frame_bundle MODE=dry over inspect/dr1_catalogue_v5 (private code /mnt/ral/jnightin/active/euclid_dr1_p2c_code @910e5c8; submitted via scratch hpc/sync copy) → NEXT read dry report, MODE=live, re-package; then re-render pilot (~50, human review), 2b docs
 - tier: judge — merge mode: human /prm
 
 ## likelihood-lifecycle-p3-jax-rows
