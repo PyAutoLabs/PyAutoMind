@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2073 records across 10 buckets.
+2074 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -273,6 +273,7 @@ markers; everything below GENERATED is rebuilt.
 - [howtofit-advanced-references](2026/10/howtofit-advanced-references.md)
 - [howtofit-ep-shared-centre](2026/10/howtofit-ep-shared-centre.md)
 - [howtofit-runtime-guidance](2026/10/howtofit-runtime-guidance.md)
+- [howtolens-point-data](2026/10/howtolens-point-data.md)
 - [howtolens-point-sources](2026/10/howtolens-point-sources.md)
 - [howtolens-ray-tracing-merge](2026/10/howtolens-ray-tracing-merge.md)
 - [hpc-campaign-p1-status-record](2026/10/hpc-campaign-p1-status-record.md) — Per-fit status record in new `autofit/non_linear/status/`: `states.py` (RunState,

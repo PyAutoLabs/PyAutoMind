@@ -1,5 +1,17 @@
 # Tutorial 5 point-source data
 
+Merged https://github.com/PyAutoLabs/HowToLens/pull/110 on 2026-10-31 as e2fc282eba2c608139996e4c0395ce7d1c3f1798. Issue #109 closed.
+
+Added the approved PointDataset section with positions, fluxes, time delays and uncertainties. Explained illustrative values, units and image ordering; linked to point-source and weak-lensing workspace examples. Notebook, executed Markdown and catalogue regenerated.
+
+All eight CI jobs passed, including Python 3.12 and 3.13 smoke. Local full smoke 49/49, full notebook execution, dataset consistency, notebook parity, navigator and tutorial-completion checks passed.
+
+Human authorized merge via prm. No release performed. Worktree retained pending the human's cleanup choice for generated datasets/output. Review copies remain in Science/scratch/howtolens_point_data_2026-10-31.
+
+## Original prompt
+
+# Tutorial 5 point-source data
+
 Type: docs
 Target: @HowToLens
 Consequence: judge
