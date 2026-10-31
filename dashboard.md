@@ -1009,7 +1009,7 @@ Use the start-dev skill. active/ray_tracing_merge.md
 
 </details>
 
-<details><summary>📋 <a href="active/sky_orientation_euclid_dr1_and_library.md">Sky orientation (north/east): euclid_dr1 catalogue, paper and website, plus the PyAutoLens library-wide…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/115">issue #115</a> — issued 2026-10-31 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/117">euclid_strong_lens_modeling_pipeline#117</a></summary>
+<details><summary>📋 <a href="active/sky_orientation_euclid_dr1_and_library.md">Sky orientation (north/east): euclid_dr1 catalogue, paper and website, plus the PyAutoLens library-wide…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/115">issue #115</a> — issued 2026-10-31 — workspace-dev</summary>
 
 ```
 Use the start-dev skill. active/sky_orientation_euclid_dr1_and_library.md
