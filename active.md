@@ -87,7 +87,7 @@
 - repos:
   - autolens_workspace: feature/magnification-errors-source-science
   - PyAutoFit: feature/magnification-errors-source-science
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1751 (judge, human /prm; pending-release)
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1751 (MERGED 2026-10-31 e9d3c6a2 via human /prm; pending-release)
 - pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1751
 - prompt: active/magnification_errors_source_science.md
 - epic: cluster-strong-lensing (phase 7b)
