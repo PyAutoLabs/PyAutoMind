@@ -814,7 +814,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: jax_cpu_na_fp64
   secondary: []
   evidence: [lifecycle/86d6277f36e3c8ec1d2f, lifecycle/0533eec58c25ebd8637b]
-  rule: A cluster-scale point-source dataset fitted in the image plane on a many-core CPU node with no GPU uses jax_cpu_na_fp64.
+  rule: 'A cluster-scale point-source dataset fitted in the image plane on a many-core CPU node with no GPU uses jax_cpu_na_fp64.'
   supersedes: null
 # separation: uncontested
 - id: cluster-image-plane-standard-gpu-a100
@@ -828,7 +828,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: jax_gpu_na_fp64
   secondary: []
   evidence: [lifecycle/d92190013ae10eaa21f6, lifecycle/7e5edbcfcccee90b11b5]
-  rule: A cluster-scale point-source dataset fitted in the image plane on an A100 node uses jax_gpu_na_fp64.
+  rule: 'A cluster-scale point-source dataset fitted in the image plane on an A100 node uses jax_gpu_na_fp64.'
   supersedes: null
 # separation: uncontested
 - id: cluster-source-plane-standard-cpu-many-core
@@ -842,7 +842,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: jax_cpu_na_fp64
   secondary: []
   evidence: [lifecycle/004001caf29a727421e0, lifecycle/8909566077ecf0ba922a]
-  rule: A cluster-scale point-source dataset fitted in the source plane on a many-core CPU node with no GPU uses jax_cpu_na_fp64.
+  rule: 'A cluster-scale point-source dataset fitted in the source plane on a many-core CPU node with no GPU uses jax_cpu_na_fp64.'
   supersedes: null
 # separation: uncontested
 - id: cluster-source-plane-standard-gpu-a100
@@ -856,7 +856,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: jax_gpu_na_fp64
   secondary: []
   evidence: [lifecycle/02df871c3e8378b505ca, lifecycle/34d551d02bba3ac253a1]
-  rule: A cluster-scale point-source dataset fitted in the source plane on an A100 node uses jax_gpu_na_fp64.
+  rule: 'A cluster-scale point-source dataset fitted in the source plane on an A100 node uses jax_gpu_na_fp64.'
   supersedes: null
 # separation: separated
 - id: datacube-delaunay-standard-cpu-many-core
@@ -870,7 +870,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: numba_cpu_sparse_fp64_wtilde
   secondary: [jax_cpu_sparse_fp64_wtilde]
   evidence: [lifecycle/8e374ab509e7626573da, lifecycle/b767269193c94e381a30, lifecycle/5800a501664b981824d4, lifecycle/821bc78b048e1ae58e0a, lifecycle/6669e2835516e93361f1, lifecycle/3339ddf063b8cf824048, lifecycle/3ea56488a996d6f0ffd1, lifecycle/ffa08d2b2e0136acbb7d, lifecycle/84cc85952546c05eabe2, lifecycle/803151df21c7de55861a, lifecycle/649dfad640b1afce5631, lifecycle/8f9413a9807f794ae36e, lifecycle/5b411896dcf5b1cc5853, lifecycle/cdcbd9feaefdff4aba33]
-  rule: A datacube (interferometer channels fitted together) with a Delaunay pixelized source on a many-core CPU node with no GPU uses numba_cpu_sparse_fp64_wtilde, one serial likelihood per core (workers capped by node memory over peak RSS), falling back to jax_cpu_sparse_fp64_wtilde.
+  rule: 'A datacube (interferometer channels fitted together) with a Delaunay pixelized source on a many-core CPU node with no GPU uses numba_cpu_sparse_fp64_wtilde, one serial likelihood per core (workers capped by node memory over peak RSS), falling back to jax_cpu_sparse_fp64_wtilde.'
   supersedes: null
 # separation: does not separate  — HOLD: does not separate; do not record as written
 - id: datacube-delaunay-standard-gpu-a100
@@ -884,7 +884,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: jax_gpu_sparse_fp64_wtilde
   secondary: [jax_gpu_dense_fp64_nufft]
   evidence: [lifecycle/c3ed1c5a8847d28eb792, lifecycle/7c22bd05b2e6a332c05f, lifecycle/5ddc372d7a91e6f979a8, lifecycle/9779431a4492758cb70b, lifecycle/b62555fd25c854bfdf3d, lifecycle/bb703db94dff9a1c1ff7, lifecycle/5a76ad3529beab044b72, lifecycle/2dd892f07fead03714bf]
-  rule: A datacube (interferometer channels fitted together) with a Delaunay pixelized source on an A100 node uses jax_gpu_sparse_fp64_wtilde, falling back to jax_gpu_dense_fp64_nufft.
+  rule: 'A datacube (interferometer channels fitted together) with a Delaunay pixelized source on an A100 node uses jax_gpu_sparse_fp64_wtilde, falling back to jax_gpu_dense_fp64_nufft.'
   supersedes: null
 # separation: separated
 - id: group-delaunay-standard-cpu-many-core
@@ -898,7 +898,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: numba_cpu_sparse_fp64
   secondary: [jax_cpu_sparse_fp64]
   evidence: [lifecycle/f4474b23fc3ee5d4b43f, lifecycle/3312f41b04546c2ef2b6, lifecycle/22696238c7226a6971dd, lifecycle/15ff2e809477e969c467]
-  rule: A group-scale imaging dataset with a Delaunay pixelized source on a many-core CPU node with no GPU uses numba_cpu_sparse_fp64, one serial likelihood per core (workers capped by node memory over peak RSS), falling back to jax_cpu_sparse_fp64.
+  rule: 'A group-scale imaging dataset with a Delaunay pixelized source on a many-core CPU node with no GPU uses numba_cpu_sparse_fp64, one serial likelihood per core (workers capped by node memory over peak RSS), falling back to jax_cpu_sparse_fp64.'
   supersedes: null
 # separation: separated
 - id: group-delaunay-standard-gpu-a100
@@ -912,7 +912,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: jax_gpu_dense_fp64
   secondary: [jax_gpu_sparse_fp64]
   evidence: [lifecycle/826e517e5786c2398767, lifecycle/4d43ba6e6f51755c0a00, lifecycle/af408d3bf87b7b904f2d, lifecycle/a99fbbd0cb8f8eaedcc4]
-  rule: A group-scale imaging dataset with a Delaunay pixelized source on an A100 node uses jax_gpu_dense_fp64, falling back to jax_gpu_sparse_fp64.
+  rule: 'A group-scale imaging dataset with a Delaunay pixelized source on an A100 node uses jax_gpu_dense_fp64, falling back to jax_gpu_sparse_fp64.'
   supersedes: null
 # separation: uncontested
 - id: group-mge-standard-cpu-many-core
@@ -926,7 +926,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: jax_cpu_dense_fp64
   secondary: []
   evidence: [lifecycle/eb438402eb57e940aa63, lifecycle/5637649f49871e13e428]
-  rule: A group-scale imaging dataset with a parametric (MGE) source on a many-core CPU node with no GPU uses jax_cpu_dense_fp64.
+  rule: 'A group-scale imaging dataset with a parametric (MGE) source on a many-core CPU node with no GPU uses jax_cpu_dense_fp64.'
   supersedes: null
 # separation: uncontested
 - id: group-mge-standard-gpu-a100
@@ -940,7 +940,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: jax_gpu_dense_fp64
   secondary: []
   evidence: [lifecycle/c631285eca889fc2c2c4, lifecycle/883d959ca124d30992b1]
-  rule: A group-scale imaging dataset with a parametric (MGE) source on an A100 node uses jax_gpu_dense_fp64.
+  rule: 'A group-scale imaging dataset with a parametric (MGE) source on an A100 node uses jax_gpu_dense_fp64.'
   supersedes: null
 # separation: separated
 - id: group-rectangular-standard-cpu-many-core
@@ -954,7 +954,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: numba_cpu_sparse_fp64
   secondary: [jax_cpu_sparse_fp64]
   evidence: [lifecycle/acba8d20547d37e8f89c, lifecycle/6e8c2db0c3afbfa0112f, lifecycle/a393fa2e139fd0560564, lifecycle/d1eb8e9cc712b7a123b0]
-  rule: A group-scale imaging dataset with a rectangular pixelized source on a many-core CPU node with no GPU uses numba_cpu_sparse_fp64, one serial likelihood per core (workers capped by node memory over peak RSS), falling back to jax_cpu_sparse_fp64.
+  rule: 'A group-scale imaging dataset with a rectangular pixelized source on a many-core CPU node with no GPU uses numba_cpu_sparse_fp64, one serial likelihood per core (workers capped by node memory over peak RSS), falling back to jax_cpu_sparse_fp64.'
   supersedes: null
 # separation: separated
 - id: group-rectangular-standard-gpu-a100
@@ -968,7 +968,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: jax_gpu_dense_fp64
   secondary: [jax_gpu_sparse_fp64]
   evidence: [lifecycle/506bcbce87ad6c020945, lifecycle/e69558ac3425ca0f7c32, lifecycle/34335ddd284ac5077dc2, lifecycle/1fd3b971b77882c2ec7f]
-  rule: A group-scale imaging dataset with a rectangular pixelized source on an A100 node uses jax_gpu_dense_fp64, falling back to jax_gpu_sparse_fp64.
+  rule: 'A group-scale imaging dataset with a rectangular pixelized source on an A100 node uses jax_gpu_dense_fp64, falling back to jax_gpu_sparse_fp64.'
   supersedes: null
 # separation: separated
 - id: imaging-delaunay-standard-cpu-many-core
@@ -982,7 +982,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: numba_cpu_sparse_fp64
   secondary: [jax_cpu_sparse_fp64]
   evidence: [lifecycle/e08b7a6ff7b9daea8790, lifecycle/e77729fc4ba5d235e1b0, lifecycle/1f22a4a5fcd73276ec53, lifecycle/572824ce3cc75acae94b, lifecycle/b202eb6f7da58a38882f, lifecycle/095071358666d6efbc20, lifecycle/5556ca430bc180c2d536, lifecycle/99cf9f43e4608fb548ea, lifecycle/06a9dad80c65ecd81c6c, lifecycle/51b8245cf58b86533327, lifecycle/321ec1f6f2a5955a9a20, lifecycle/3c0e90f2b30d48843af2, lifecycle/b5b87c504713b9831857, lifecycle/489bebc145a525eab14d, lifecycle/d93b4dad29e8a0f77987, lifecycle/e3b1cad17937b4c1f9dc]
-  rule: Any imaging dataset with a Delaunay pixelized source on a many-core CPU node with no GPU uses numba_cpu_sparse_fp64, one serial likelihood per core (workers capped by node memory over peak RSS).
+  rule: 'Any imaging dataset with a Delaunay pixelized source on a many-core CPU node with no GPU uses numba_cpu_sparse_fp64, one serial likelihood per core (workers capped by node memory over peak RSS).'
   supersedes: null
 # separation: separated
 - id: imaging-delaunay-standard-gpu-a100
@@ -996,7 +996,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: jax_gpu_dense_fp64
   secondary: [jax_gpu_sparse_fp64]
   evidence: [lifecycle/fa028d54604cd08d3555, lifecycle/9b34de15d3aca2deb34c, lifecycle/99d7c3c7623e3d43d059, lifecycle/93f7eea188801e17127a, lifecycle/c07af59a8d393975dd28, lifecycle/f706db5c42869fee8ea5, lifecycle/371f67d50254479493ee, lifecycle/b72ae27c889b5f309c7d, lifecycle/73c19173fcc983318b61, lifecycle/dbb5a42b977bbac7679e, lifecycle/12c678df16e04f4f9011, lifecycle/720a326dbad29c263006, lifecycle/12348bea7be2ca70cffb, lifecycle/ff61f1cb7a87d8382b9a, lifecycle/d34ebb3d52e02dfb8b16, lifecycle/5f300473b328b24bac66]
-  rule: Any imaging dataset with a Delaunay pixelized source on an A100 node uses jax_gpu_dense_fp64, falling back to jax_gpu_sparse_fp64.
+  rule: 'Any imaging dataset with a Delaunay pixelized source on an A100 node uses jax_gpu_dense_fp64, falling back to jax_gpu_sparse_fp64.'
   supersedes: null
 # separation: separated
 - id: imaging-delaunay-nn-standard-cpu-many-core
@@ -1010,7 +1010,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: numba_cpu_sparse_fp64
   secondary: [jax_cpu_sparse_fp64]
   evidence: [lifecycle/1ae46b0872f10459a7c4, lifecycle/2e8ae296db66eeaf44a7, lifecycle/05dde64a0eb7fdd0c4a1, lifecycle/22e86297033ff62cf19e]
-  rule: Any imaging dataset with a Delaunay natural-neighbour source on a many-core CPU node with no GPU uses numba_cpu_sparse_fp64, one serial likelihood per core.
+  rule: 'Any imaging dataset with a Delaunay natural-neighbour source on a many-core CPU node with no GPU uses numba_cpu_sparse_fp64, one serial likelihood per core.'
   supersedes: null
 # separation: separated
 - id: imaging-delaunay-nn-standard-gpu-a100
@@ -1024,7 +1024,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: jax_gpu_dense_fp64
   secondary: [jax_gpu_sparse_fp64]
   evidence: [lifecycle/c661098ad46c65fa59b2, lifecycle/2461a4934062a3be2dc9, lifecycle/70bcae3ab1c4777651f0, lifecycle/5082531d009e61e07a7d]
-  rule: Any imaging dataset with a Delaunay natural-neighbour source on an A100 node uses jax_gpu_dense_fp64.
+  rule: 'Any imaging dataset with a Delaunay natural-neighbour source on an A100 node uses jax_gpu_dense_fp64.'
   supersedes: null
 # separation: uncontested
 - id: imaging-mge-standard-cpu-many-core
@@ -1038,7 +1038,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: jax_cpu_dense_fp64
   secondary: []
   evidence: [lifecycle/3216ffc143645fb46c72, lifecycle/a37560173314cc078894, lifecycle/190ebc582d9aba9aaa9c, lifecycle/acf067a34aa2005d1b11, lifecycle/54979849c807d452c510, lifecycle/d2aece86956eba227ada, lifecycle/4baa9bc04c8d24a713b6, lifecycle/2cf94e6d7d8231a57c92]
-  rule: Any imaging dataset fitted with a parametric (MGE) source on a many-core CPU node with no GPU uses jax_cpu_dense_fp64.
+  rule: 'Any imaging dataset fitted with a parametric (MGE) source on a many-core CPU node with no GPU uses jax_cpu_dense_fp64.'
   supersedes: null
 # separation: uncontested
 - id: imaging-mge-standard-gpu-a100
@@ -1052,7 +1052,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: jax_gpu_dense_fp64
   secondary: []
   evidence: [lifecycle/4b514c4262172f610fee, lifecycle/eb44c9d7e6987735cdd1, lifecycle/770dce7d7db7a1fc3b53, lifecycle/2d7064bb66242f2ca6cc, lifecycle/8a475e9abd97a8c4a1c0, lifecycle/4e93e744f3e1295b3c8d, lifecycle/0756e600e86d7ae6a462, lifecycle/a58929ead49f62c064da]
-  rule: Any imaging dataset fitted with a parametric (MGE) source on an A100 node uses jax_gpu_dense_fp64.
+  rule: 'Any imaging dataset fitted with a parametric (MGE) source on an A100 node uses jax_gpu_dense_fp64.'
   supersedes: null
 # separation: separated
 - id: imaging-rectangular-standard-cpu-many-core
@@ -1066,7 +1066,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: numba_cpu_sparse_fp64
   secondary: [jax_cpu_sparse_fp64]
   evidence: [lifecycle/d7020017fca2249bf32b, lifecycle/e44433f6b0bb6fbb1519, lifecycle/403420f8debaaa38956c, lifecycle/a721c437cf9355984ca5, lifecycle/4c53e409a27040f5d6a4, lifecycle/39a0a9b81376f2be8446, lifecycle/6060fdcfa2e5a4a0c168, lifecycle/ae663292d53c60a65c62, lifecycle/2b5e34f509175fd4d030, lifecycle/ee2df565d3603ba2bbd3, lifecycle/b62534053c00fb102bf4, lifecycle/9e90c7a031fd6370f9af, lifecycle/9bb2e30e94491253641b, lifecycle/dd67472c35e8ed230b03, lifecycle/304ac75d242dcbc2c22f, lifecycle/0de8cf81e718d21ee2aa]
-  rule: Any imaging dataset with a rectangular pixelized source on a many-core CPU node with no GPU uses numba_cpu_sparse_fp64, one serial likelihood per core (workers capped by node memory over peak RSS).
+  rule: 'Any imaging dataset with a rectangular pixelized source on a many-core CPU node with no GPU uses numba_cpu_sparse_fp64, one serial likelihood per core (workers capped by node memory over peak RSS).'
   supersedes: null
 # separation: separated
 - id: imaging-rectangular-standard-gpu-a100
@@ -1080,7 +1080,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: jax_gpu_dense_fp64
   secondary: [jax_gpu_sparse_fp64]
   evidence: [lifecycle/d570569f32c953038fde, lifecycle/32ca51df82e1724685ab, lifecycle/46db4990a22e25aee123, lifecycle/67787bf45d6bb0b3aa42, lifecycle/456f7d65babc5524183a, lifecycle/a429326f9f33ea12e6b8, lifecycle/bc5ed323618c58fc7682, lifecycle/688c98aeb69ac24ea6f3, lifecycle/42f6a707360ce63b8150, lifecycle/9bbfceb21916e4329a0a, lifecycle/cc3f3365b6ac65388a93, lifecycle/27f711205e5a76c127cb, lifecycle/ec69a200557ea8212e5e, lifecycle/76d01fc60350dd469eed, lifecycle/bdffd9d6d157b3b66435, lifecycle/df1e242101ab32dea573]
-  rule: Any imaging dataset with a rectangular pixelized source on an A100 node uses jax_gpu_dense_fp64, falling back to jax_gpu_sparse_fp64.
+  rule: 'Any imaging dataset with a rectangular pixelized source on an A100 node uses jax_gpu_dense_fp64, falling back to jax_gpu_sparse_fp64.'
   supersedes: null
 # separation: separated
 - id: interferometer-delaunay-standard-cpu-many-core
@@ -1094,7 +1094,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: numba_cpu_sparse_fp64_wtilde
   secondary: [jax_cpu_sparse_fp64_wtilde]
   evidence: [lifecycle/60747d6f7a1867da50c9, lifecycle/72fa1f4145e1b837daad, lifecycle/5e9d64046821795b4651, lifecycle/52f7465981114aecc98d, lifecycle/d54c6814c51c381564cf, lifecycle/ebd642f6c596e964cea9, lifecycle/bfe464d85eab437c56be, lifecycle/2790184b43d78bf4da78, lifecycle/757d2c2d7167cdef0457, lifecycle/b9bd70be62ec18cf0a02, lifecycle/e63a97d451e1633c91aa, lifecycle/bb2f3d9734b53f7fca77, lifecycle/284efdc05b70e06e060a, lifecycle/56f48185c11f75209119, lifecycle/00838694b2c3c955a644, lifecycle/a152a69dfb443926581d, lifecycle/b2d01ef74bf71e49d774, lifecycle/ea2702adb920859138bf]
-  rule: Any interferometer dataset with a Delaunay pixelized source on a many-core CPU node with no GPU uses numba_cpu_sparse_fp64_wtilde, one serial likelihood per core (workers capped by node memory over peak RSS), falling back to jax_cpu_sparse_fp64_wtilde. Untested: CPU streaming and the MGE DFT route.
+  rule: 'Any interferometer dataset with a Delaunay pixelized source on a many-core CPU node with no GPU uses numba_cpu_sparse_fp64_wtilde, one serial likelihood per core (workers capped by node memory over peak RSS), falling back to jax_cpu_sparse_fp64_wtilde. Untested: CPU streaming and the MGE DFT route.'
   supersedes: null
 # separation: separated
 - id: interferometer-delaunay-standard-gpu-a100
@@ -1108,7 +1108,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: jax_gpu_sparse_fp64_wtilde
   secondary: [jax_gpu_dense_fp64_nufft]
   evidence: [lifecycle/8dada4df3a4ed30d1721, lifecycle/3604b6b6097ea2ead0a3, lifecycle/ba12584bdfe8c2e16f30, lifecycle/d1bef0d03e8078e165cf, lifecycle/3c33efbabefe647c901b, lifecycle/20d0956c95b461dbae98, lifecycle/ff5c53947f845ee5f2d8, lifecycle/7babc936c9e3d3d61400, lifecycle/742eaf1292ed737e591e, lifecycle/f0257d6c38e984e02a27]
-  rule: Any interferometer dataset with a Delaunay pixelized source on an A100 node uses jax_gpu_sparse_fp64_wtilde, falling back to jax_gpu_dense_fp64_nufft. Untested: the GPU streaming route (measured up to jvla, 2.5e7 visibilities, on W~ sparse).
+  rule: 'Any interferometer dataset with a Delaunay pixelized source on an A100 node uses jax_gpu_sparse_fp64_wtilde, falling back to jax_gpu_dense_fp64_nufft. Untested: the GPU streaming route (measured up to jvla, 2.5e7 visibilities, on W~ sparse).'
   supersedes: null
 # separation: uncontested
 - id: interferometer-mge-standard-cpu-many-core
@@ -1122,7 +1122,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: jax_cpu_dense_fp64_nufft
   secondary: []
   evidence: [lifecycle/02e5496a9c9da3407d87, lifecycle/9a3e014c9053e1d98114]
-  rule: Any interferometer dataset with a parametric (MGE) source on a many-core CPU node with no GPU uses jax_cpu_dense_fp64_nufft. Untested: CPU streaming and the MGE DFT route.
+  rule: 'Any interferometer dataset with a parametric (MGE) source on a many-core CPU node with no GPU uses jax_cpu_dense_fp64_nufft. Untested: CPU streaming and the MGE DFT route.'
   supersedes: null
 # separation: uncontested
 - id: interferometer-mge-standard-gpu-a100
@@ -1136,7 +1136,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: jax_gpu_dense_fp64_nufft
   secondary: []
   evidence: [lifecycle/4c9e3b4239cc98b8a7ff, lifecycle/6cfb178c7acab8b84e63]
-  rule: Any interferometer dataset with a parametric (MGE) source on an A100 node uses jax_gpu_dense_fp64_nufft. Untested: the GPU streaming route (measured up to jvla, 2.5e7 visibilities, on W~ sparse).
+  rule: 'Any interferometer dataset with a parametric (MGE) source on an A100 node uses jax_gpu_dense_fp64_nufft. Untested: the GPU streaming route (measured up to jvla, 2.5e7 visibilities, on W~ sparse).'
   supersedes: null
 # separation: separated
 - id: interferometer-rectangular-standard-cpu-many-core
@@ -1150,7 +1150,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: numba_cpu_sparse_fp64_wtilde
   secondary: [jax_cpu_sparse_fp64_wtilde]
   evidence: [lifecycle/41fd14e1f19bad947f24, lifecycle/5772383ee5a1c474afff, lifecycle/4663f221c8c3ce49b76f, lifecycle/85d104c103a554b56afa, lifecycle/fe0f252f68dcc26d7d13, lifecycle/7f44ae97f7ce3ccc7864, lifecycle/d79f1b94f4b03452d745, lifecycle/af1beefd41024500ad13, lifecycle/99c70939e335d08c4cff, lifecycle/8aeeeff35ca0d5d5b855, lifecycle/15aded078686cdf03ff5, lifecycle/598903fd79ec17f4328f, lifecycle/0cec032ed12d6d948802, lifecycle/ad305d23a04bd7700b82, lifecycle/29d350ddd936276d4121, lifecycle/f90468fb8090019a8659, lifecycle/0e27b1175ce084dff51e, lifecycle/f8de59681124b4e117d2]
-  rule: Any interferometer dataset with a rectangular pixelized source on a many-core CPU node with no GPU uses numba_cpu_sparse_fp64_wtilde, one serial likelihood per core (workers capped by node memory over peak RSS), falling back to jax_cpu_sparse_fp64_wtilde. Untested: CPU streaming and the MGE DFT route.
+  rule: 'Any interferometer dataset with a rectangular pixelized source on a many-core CPU node with no GPU uses numba_cpu_sparse_fp64_wtilde, one serial likelihood per core (workers capped by node memory over peak RSS), falling back to jax_cpu_sparse_fp64_wtilde. Untested: CPU streaming and the MGE DFT route.'
   supersedes: null
 # separation: separated
 - id: interferometer-rectangular-standard-gpu-a100
@@ -1164,7 +1164,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: jax_gpu_sparse_fp64_wtilde
   secondary: [jax_gpu_dense_fp64_nufft]
   evidence: [lifecycle/fe32c3ee13ad9afc455c, lifecycle/94c8f316ca657a6536ad, lifecycle/2ab9504c46bb8170ba54, lifecycle/1aafc8c30c529ae51479, lifecycle/220d076d8421130e83cf, lifecycle/7aad4d80e0298f32687c, lifecycle/e44acbf15a2387706fa1, lifecycle/18947283f540e425ae11, lifecycle/a39d6114339d546f6bd6, lifecycle/e98a8f4000e25e6d9f35]
-  rule: Any interferometer dataset with a rectangular pixelized source on an A100 node uses jax_gpu_sparse_fp64_wtilde, falling back to jax_gpu_dense_fp64_nufft. Untested: the GPU streaming route (measured up to jvla, 2.5e7 visibilities, on W~ sparse).
+  rule: 'Any interferometer dataset with a rectangular pixelized source on an A100 node uses jax_gpu_sparse_fp64_wtilde, falling back to jax_gpu_dense_fp64_nufft. Untested: the GPU streaming route (measured up to jvla, 2.5e7 visibilities, on W~ sparse).'
   supersedes: null
 # separation: separated
 - id: multi-dataset-delaunay-standard-cpu-many-core
@@ -1178,7 +1178,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: numba_cpu_sparse_fp64
   secondary: [jax_cpu_sparse_fp64]
   evidence: [lifecycle/f1dc379c56f5c2c7f32d, lifecycle/41ebc7e42114bbb5173a, lifecycle/f57f23fc63823bcdf1bc, lifecycle/d0be4a7b3506be7b53e9]
-  rule: A multi-dataset imaging fit (several datasets fitted together) with a Delaunay pixelized source on a many-core CPU node with no GPU uses numba_cpu_sparse_fp64, one serial likelihood per core (workers capped by node memory over peak RSS), falling back to jax_cpu_sparse_fp64.
+  rule: 'A multi-dataset imaging fit (several datasets fitted together) with a Delaunay pixelized source on a many-core CPU node with no GPU uses numba_cpu_sparse_fp64, one serial likelihood per core (workers capped by node memory over peak RSS), falling back to jax_cpu_sparse_fp64.'
   supersedes: null
 # separation: separated
 - id: multi-dataset-delaunay-standard-gpu-a100
@@ -1192,7 +1192,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: jax_gpu_dense_fp64
   secondary: [jax_gpu_sparse_fp64]
   evidence: [lifecycle/b5dea27fcaf8b14ec9bb, lifecycle/0a0078bdc1dee2e7f555, lifecycle/b14372bc431d168fa7ff, lifecycle/74d94bd622ecce0679fe]
-  rule: A multi-dataset imaging fit (several datasets fitted together) with a Delaunay pixelized source on an A100 node uses jax_gpu_dense_fp64, falling back to jax_gpu_sparse_fp64.
+  rule: 'A multi-dataset imaging fit (several datasets fitted together) with a Delaunay pixelized source on an A100 node uses jax_gpu_dense_fp64, falling back to jax_gpu_sparse_fp64.'
   supersedes: null
 # separation: separated
 - id: multi-galaxy-delaunay-standard-cpu-many-core
@@ -1206,7 +1206,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: numba_cpu_sparse_fp64
   secondary: [jax_cpu_sparse_fp64]
   evidence: [lifecycle/d3102456687aef830651, lifecycle/844f80aec856dd9e86ff, lifecycle/fc2096cb1c848e64b674, lifecycle/ba7ba9f1625678852fd7]
-  rule: A multi-galaxy imaging dataset with a Delaunay pixelized source on a many-core CPU node with no GPU uses numba_cpu_sparse_fp64, one serial likelihood per core (workers capped by node memory over peak RSS), falling back to jax_cpu_sparse_fp64.
+  rule: 'A multi-galaxy imaging dataset with a Delaunay pixelized source on a many-core CPU node with no GPU uses numba_cpu_sparse_fp64, one serial likelihood per core (workers capped by node memory over peak RSS), falling back to jax_cpu_sparse_fp64.'
   supersedes: null
 # separation: separated
 - id: multi-galaxy-delaunay-standard-gpu-a100
@@ -1220,7 +1220,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: jax_gpu_dense_fp64
   secondary: [jax_gpu_sparse_fp64]
   evidence: [lifecycle/5a510cca4fff0c0d5b58, lifecycle/dfd272620e2836754417, lifecycle/ec0a8fbc9c4e2d8b587e, lifecycle/633b3471528047682453]
-  rule: A multi-galaxy imaging dataset with a Delaunay pixelized source on an A100 node uses jax_gpu_dense_fp64, falling back to jax_gpu_sparse_fp64.
+  rule: 'A multi-galaxy imaging dataset with a Delaunay pixelized source on an A100 node uses jax_gpu_dense_fp64, falling back to jax_gpu_sparse_fp64.'
   supersedes: null
 # separation: uncontested
 - id: multi-galaxy-mge-standard-cpu-many-core
@@ -1234,7 +1234,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: jax_cpu_dense_fp64
   secondary: []
   evidence: [lifecycle/2ee75bc51ab781c2df4e, lifecycle/9edfaee55c6a1193e6f4]
-  rule: A multi-galaxy imaging dataset with a parametric (MGE) source on a many-core CPU node with no GPU uses jax_cpu_dense_fp64.
+  rule: 'A multi-galaxy imaging dataset with a parametric (MGE) source on a many-core CPU node with no GPU uses jax_cpu_dense_fp64.'
   supersedes: null
 # separation: uncontested
 - id: multi-galaxy-mge-standard-gpu-a100
@@ -1248,7 +1248,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: jax_gpu_dense_fp64
   secondary: []
   evidence: [lifecycle/ad7e6ff9cd88a460649a, lifecycle/9068d8507411cfbcf803]
-  rule: A multi-galaxy imaging dataset with a parametric (MGE) source on an A100 node uses jax_gpu_dense_fp64.
+  rule: 'A multi-galaxy imaging dataset with a parametric (MGE) source on an A100 node uses jax_gpu_dense_fp64.'
   supersedes: null
 # separation: separated
 - id: multi-galaxy-rectangular-standard-cpu-many-core
@@ -1262,7 +1262,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: numba_cpu_sparse_fp64
   secondary: [jax_cpu_sparse_fp64]
   evidence: [lifecycle/51f5d0ecf49223f09154, lifecycle/d7185e051ab18a8d35e1, lifecycle/a3ef052bb150d3365992, lifecycle/b7ba7f751e33237bf6a3]
-  rule: A multi-galaxy imaging dataset with a rectangular pixelized source on a many-core CPU node with no GPU uses numba_cpu_sparse_fp64, one serial likelihood per core (workers capped by node memory over peak RSS), falling back to jax_cpu_sparse_fp64.
+  rule: 'A multi-galaxy imaging dataset with a rectangular pixelized source on a many-core CPU node with no GPU uses numba_cpu_sparse_fp64, one serial likelihood per core (workers capped by node memory over peak RSS), falling back to jax_cpu_sparse_fp64.'
   supersedes: null
 # separation: separated
 - id: multi-galaxy-rectangular-standard-gpu-a100
@@ -1276,7 +1276,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: jax_gpu_dense_fp64
   secondary: [jax_gpu_sparse_fp64]
   evidence: [lifecycle/6d59cdcd3eb1e4abf967, lifecycle/e291f6a166388b23e52f, lifecycle/f6d5339ad2b2bd8b790b, lifecycle/dd733151c3847dd9349f]
-  rule: A multi-galaxy imaging dataset with a rectangular pixelized source on an A100 node uses jax_gpu_dense_fp64, falling back to jax_gpu_sparse_fp64.
+  rule: 'A multi-galaxy imaging dataset with a rectangular pixelized source on an A100 node uses jax_gpu_dense_fp64, falling back to jax_gpu_sparse_fp64.'
   supersedes: null
 # separation: uncontested
 - id: point-source-image-image-plane-standard-cpu-many-core
@@ -1290,7 +1290,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: jax_cpu_na_fp64
   secondary: []
   evidence: [lifecycle/6cbf08c848ae6cdb820f, lifecycle/a884951a80a697791744]
-  rule: A galaxy-scale point-source dataset fitted in the image plane on a many-core CPU node with no GPU uses jax_cpu_na_fp64.
+  rule: 'A galaxy-scale point-source dataset fitted in the image plane on a many-core CPU node with no GPU uses jax_cpu_na_fp64.'
   supersedes: null
 # separation: uncontested
 - id: point-source-image-image-plane-standard-gpu-a100
@@ -1304,7 +1304,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: jax_gpu_na_fp64
   secondary: []
   evidence: [lifecycle/6282556b81be530f7bce, lifecycle/f4dfadf54484b22e9f69]
-  rule: A galaxy-scale point-source dataset fitted in the image plane on an A100 node uses jax_gpu_na_fp64.
+  rule: 'A galaxy-scale point-source dataset fitted in the image plane on an A100 node uses jax_gpu_na_fp64.'
   supersedes: null
 # separation: uncontested
 - id: point-source-source-source-plane-standard-cpu-many-core
@@ -1318,7 +1318,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: jax_cpu_na_fp64
   secondary: []
   evidence: [lifecycle/61082dc032d7280b3bd1, lifecycle/fa18efad842f4cc9fa73]
-  rule: A galaxy-scale point-source dataset fitted in the source plane on a many-core CPU node with no GPU uses jax_cpu_na_fp64.
+  rule: 'A galaxy-scale point-source dataset fitted in the source plane on a many-core CPU node with no GPU uses jax_cpu_na_fp64.'
   supersedes: null
 # separation: uncontested  — CHANGED from 2026-10-29 (was jax_cpu_na_fp64)
 - id: point-source-source-source-plane-standard-gpu-a100
@@ -1332,7 +1332,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: jax_gpu_na_fp64
   secondary: []
   evidence: [lifecycle/fcb319f0f24b8cc9fd37, lifecycle/403a31905c1445a750ba]
-  rule: A galaxy-scale point-source dataset fitted in the source plane on an A100 node uses jax_gpu_na_fp64.
+  rule: 'A galaxy-scale point-source dataset fitted in the source plane on an A100 node uses jax_gpu_na_fp64.'
   supersedes: null
 # separation: uncontested
 - id: weak-isothermal-standard-cpu-many-core
@@ -1346,7 +1346,7 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: jax_cpu_dense_fp64
   secondary: []
   evidence: [lifecycle/03601d3a29aca4f5c389, lifecycle/7f6973aafe0b068ba1ab]
-  rule: A weak-lensing shear dataset with an isothermal lens on a many-core CPU node with no GPU uses jax_cpu_dense_fp64.
+  rule: 'A weak-lensing shear dataset with an isothermal lens on a many-core CPU node with no GPU uses jax_cpu_dense_fp64.'
   supersedes: null
 # separation: uncontested
 - id: weak-isothermal-standard-gpu-a100
@@ -1360,6 +1360,6 @@ Generated from `dashboard/catalogue.json` at autolens_profiling 32c0becd. Each e
   optimal: jax_gpu_dense_fp64
   secondary: []
   evidence: [lifecycle/fbd315b1a0e03f308c76, lifecycle/bfd2db209cd80e6a6354]
-  rule: A weak-lensing shear dataset with an isothermal lens on an A100 node uses jax_gpu_dense_fp64.
+  rule: 'A weak-lensing shear dataset with an isothermal lens on an A100 node uses jax_gpu_dense_fp64.'
   supersedes: null
 ```
