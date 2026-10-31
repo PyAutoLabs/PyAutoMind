@@ -67,11 +67,17 @@
 - issue: https://github.com/PyAutoLabs/HowToGalaxy/issues/94
 - issued: 2026-10-31
 - session: Codex; session ID unavailable
-- status: workspace-dev
+- status: awaiting-ci
+- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/96
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howtogalaxy-chapter2
 - repos:
   - HowToGalaxy: feature/howtogalaxy-chapter2
 - approval: approved chapter restructure, independent Galaxy adaptation and explicit Heart RED development override in current chat
+- heart-red-override:
+  - authorisation: "Yes, proceed with the full HowToGalaxy implementation despite Heart RED, validate it and get the PR up. Do prm if the required checks and shipping gates pass."
+  - exact-red-reasons: "PyAutoFit: 2 commit(s) behind origin"; "release validation FAILED (stage integrate)" (2026-10-31T17:02:52.103664+00:00)
+  - passed-gates: 31/31 scripts smoke; 32/32 notebook generation; 25 tutorial completeness; navigator/catalogue/search-memory/whitespace; independent review; full-size CPU JAX likelihood/gradient/batch finite
+  - scope: development shipping only; current-turn prm conditional on all required checks, no release or failed-check bypass
 
 ## howto-chapter3
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/111
