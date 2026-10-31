@@ -953,7 +953,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/chapter_3_pixelizations_restructure_checkpoint.md">Chapter 3 pixelizations restructure — checkpoint</a> — <a href="https://github.com/PyAutoLabs/HowToLens/issues/111">issue #111</a> — issued 2026-10-31 — workspace-dev</summary>
+<details><summary>📋 <a href="active/chapter_3_pixelizations_restructure_checkpoint.md">Chapter 3 pixelizations restructure — checkpoint</a> — <a href="https://github.com/PyAutoLabs/HowToLens/issues/111">issue #111</a> — issued 2026-10-31 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/HowToLens/pull/112">HowToLens#112</a>, <a href="https://github.com/PyAutoLabs/HowToGalaxy/pull/95">HowToGalaxy#95</a></summary>
 
 ```
 Use the start-dev skill. active/chapter_3_pixelizations_restructure_checkpoint.md
