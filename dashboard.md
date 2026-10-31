@@ -977,7 +977,7 @@ Use the start-dev skill. active/likelihood_lifecycle_p3_jax_rows.md
 
 </details>
 
-<details><summary>📋 <a href="active/magnification_errors_source_science.md">Magnification errors from posterior draws in every source_science.py (arc phase 7b)</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/610">issue #610</a> — issued 2026-10-31 — workspace-dev</summary>
+<details><summary>📋 <a href="active/magnification_errors_source_science.md">Magnification errors from posterior draws in every source_science.py (arc phase 7b)</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/610">issue #610</a> — issued 2026-10-31 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1751">PyAutoFit#1751</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 Use the start-dev skill. active/magnification_errors_source_science.md
@@ -3102,6 +3102,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoFit**
 
+- [PyAutoFit#1751](https://github.com/PyAutoLabs/PyAutoFit/pull/1751) — `active/magnification_errors_source_science.md`
 - [PyAutoFit#1750](https://github.com/PyAutoLabs/PyAutoFit/pull/1750) — `complete/2026/10/campaign-task-records-wait-loop.md`
 - [PyAutoFit#1738](https://github.com/PyAutoLabs/PyAutoFit/pull/1738) — `complete/2026/10/hpc-campaign-p1-status-record.md`
 - [PyAutoFit#1741](https://github.com/PyAutoLabs/PyAutoFit/pull/1741) — `complete/2026/10/hpc-campaign-p2-campaign-core.md`
