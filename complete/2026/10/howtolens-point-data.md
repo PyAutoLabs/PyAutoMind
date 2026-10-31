@@ -6,7 +6,7 @@ Added the approved PointDataset section with positions, fluxes, time delays and 
 
 All eight CI jobs passed, including Python 3.12 and 3.13 smoke. Local full smoke 49/49, full notebook execution, dataset consistency, notebook parity, navigator and tutorial-completion checks passed.
 
-Human authorized merge via prm. No release performed. Worktree retained pending the human's cleanup choice for generated datasets/output. Review copies remain in Science/scratch/howtolens_point_data_2026-10-31.
+Human authorized merge via prm. No release performed. Human approved cleanup; the merged worktree, its generated datasets/output and the proven-merged local feature branch were removed on 2026-10-31. Canonical HowToLens main was fast-forwarded to the merge commit. Review copies remain in Science/scratch/howtolens_point_data_2026-10-31.
 
 ## Original prompt
 
