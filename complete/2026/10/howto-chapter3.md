@@ -1,3 +1,29 @@
+# Chapter 3 reviewed pixelization lessons — merged checkpoint
+
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/111
+- completed: 2026-10-31
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/112
+- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/95
+- summary: Merged the reviewed Chapter3 checkpoint in both HowTos; preserved the remaining Lens adaptive work as a separate follow-up.
+
+## Shipped — 2026-10-31
+
+Both approved Chapter 3 PRs are merged:
+- https://github.com/PyAutoLabs/HowToLens/pull/112 — merge `5249e06ae2383ba4f56004c38d7aee37a364a878`.
+- https://github.com/PyAutoLabs/HowToGalaxy/pull/95 — merge `06876fe8e6fd71ee3946485ed56dd1f3a27f834e`.
+
+Every workflow and job on both heads passed: 3 workflows / 8 jobs per PR, including Python 3.12 and 3.13 smoke. Local smoke: Lens44/44, Galaxy29/29. Notebook generation and independent review passed. Chapter2 is unchanged.
+
+This closes the reviewed checkpoint: Lens lessons1–4 and Galaxy lessons1–3, detailed MGE introductions, mapping/inversion explanations, regularization, chained fits and Maresca Figure1. The existing Lens adaptive tail is retained; Delaunay/Hilbert/Split consolidation and the final Delaunay fit remain a separate five-block-review follow-up, recorded in Mind. Heart RED is not cleared by these merges.
+
+## Resume checkpoint
+
+Approved prose and code are now in main. Do not repeat review of the merged lessons or modify Chapter2. Continue the remaining Lens adaptive sequence in five-block reviews with actual Python code, using current Delaunay, Hilbert image mesh and Split regularization, with phenomenological explanations and a final Delaunay fit. See `draft/docs/howto/chapter_3_adaptive_continuation.md`.
+
+The generated notebooks, original review drafts and checkpoint are preserved at `C:\Users\Jammy\Workspace\Science\scratch\chapter_3_implementation_2026-10-31`. Full search convergence is not claimed by sampler-bypass smoke. The separate Galaxy Chapter2 branch should integrate these changes and regenerate shared catalogues.
+
+## Original prompt
+
 # Chapter 3 pixelizations restructure — checkpoint
 
 Date: 2026-10-31

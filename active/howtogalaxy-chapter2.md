@@ -23,7 +23,7 @@ Detailed review checkpoint: /mnt/c/Users/Jammy/Workspace/Science/scratch/howto_c
 
 ## Branch survey
 HowToGalaxy main clean at ead53e6; task branch feature/howtogalaxy-chapter2.
-Other chat has separate howto-chapter3 worktree; avoid its sources, regenerate only this branch.
+Chapter3 merged separately in HowToGalaxy#95 (06876fe); checkpoint: complete/2026/10/howto-chapter3.md. Integrate current main and regenerate shared catalogues while keeping Chapter3 content intact.
 Worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howtogalaxy-chapter2/HowToGalaxy
 
 ## Validation plan
