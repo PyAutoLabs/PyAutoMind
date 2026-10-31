@@ -55,14 +55,14 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p3-jax-rows
 - repos:
-  - autolens_profiling: feature/likelihood-lifecycle-p3-jax-rows (stacked on feature/likelihood-lifecycle-p2bc-quiet-ingest, human 2026-10-31)
+  - autolens_profiling: feature/likelihood-lifecycle-p3-jax-rows (was stacked on #494; retargeted to main after #494 merged)
 - prompt: active/likelihood_lifecycle_p3_jax_rows.md
 - heart-override: RED overridden by the human 2026-10-31 (release validation integrate failure)
 - tier: judge — merge mode: human /prm
-- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/496 (DRAFT, base feature/likelihood-lifecycle-p2bc-quiet-ingest)
-- state 2026-10-31: 61/63 cells + 5 experiments committed (dc2d64a7). HELD: 2b A100 jvla jax_gpu_sparse_fp64_wtilde x2 → RAL 413669_2/_5 (p2dg) finalises witnesses.
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/496 (READY, base main, CI lint pass on c218a428, MERGEABLE/CLEAN 2026-10-31 16:26)
+- state 2026-10-31: all 63 cells + 5 experiments in; #494 merged first, #496 retargeted to main and regenerated; full suite 1920 passed locally.
 - FINDING: JAX CPU slower on 0.11.2 + eigen flag (ral imaging median 1.46x; GPU unchanged) → re-check cpu_many_core designation proposals in step 4.
-- resume: sacct 413669 → tar-pull p2dg output/p2b_batch1/results/interferometer/*/jvla/jax_gpu_sparse_fp64_wtilde → python3 output/ingest_rows.py output/pin.json <root> --apply (narrow root; never re-run on already-ingested dirs) → commit → regenerate → 2b/2c journals → gh pr ready (after #494 merges: retarget main, regenerate).
+- next: human /prm on #496 (Heart RED: merge needs an explicit /prm in the same turn).
 
 ## magnification-errors-source-science
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/610

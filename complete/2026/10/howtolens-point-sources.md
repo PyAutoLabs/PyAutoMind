@@ -6,7 +6,7 @@ All fifteen approved blocks applied, with iterative triangle explanation, worksp
 
 All eight CI jobs passed including Python 3.12 and 3.13 smoke. Local smoke 49/49, actual solver/plots, notebook parity, navigator and tutorial completion checks passed.
 
-Human authorized merge via prm. No release performed. Worktree cleanup awaits the human's decision about generated datasets/output. Tutorial 5 point-data addition is separate follow-on work.
+Human authorized merge via prm. No release performed. Human approved deleting the worktree and generated data; the merged worktree and proven-merged local feature branch were removed on 2026-10-31. Review copies remain in Science/scratch. Tutorial 5 point-data addition is separate follow-on work.
 
 ## Original prompt
 
