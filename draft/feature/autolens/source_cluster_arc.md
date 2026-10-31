@@ -848,3 +848,14 @@ Update 2026-10-30 evening: 7a CLOSED (PyAutoLens#813 + autolens_workspace#609 me
 detached → `.../arc_phase7b_prototype_2026-10-30/run2_with_positions.log` (was mid-sampling at wrap-up). NEXT: read
 that log → file + plan 7b (quick PositionsLH fit + draw loop in all 11 source_science.py).
 
+Update 2026-10-31: both earlier prototype runs were INVALID — the canonical workspace
+`dataset/imaging/simple__no_lens_light` on disk is the 16×16 PYAUTO_SMALL_DATASETS simulation with placeholder
+positions [(1,0),(0,1)] (the prototype loaded FITS directly, bypassing `should_simulate`, which does regenerate in
+full mode). Run 2 (θE 0.56″) discarded. Run 3 on a fresh full 100×100 simulation (`.../run3/`, log
+`run3_full_dataset.log`): Nautilus n_live=100 + PositionsLH(0.3) + use_jax, laptop CPU, **fit 1265 s (~21 min)**;
+recovery clean (θE 1.601 vs 1.6, shear 0.052/0.052 vs 0.05, R_eff 0.096 vs 0.1, n 1.07 vs 1.0). 100 draws 285 s
+(2.85 s/draw). σ_μ/|μ|: source-plane μ 36.0 ±0.7%; point μ at 3 images ±1.5–1.8% (one negative parity); area μ per
+image ±0.7–4%. Below LEGGOS 0.03–0.09 — expected: high-S/N simulated data, 13-parameter SIE+shear+Sérsic model
+(LEGGOS: real cluster, complex mass models); explain in 7b prose. Arc mask at 10% of max fragments into 26
+"images" at 0.1″ → 7b scripts should define images by segmentation of the multiple images, not a raw threshold.
+Cost note for 7b: ~21 min quick fit ×11 scripts is heavier than the ~11 min estimate.
