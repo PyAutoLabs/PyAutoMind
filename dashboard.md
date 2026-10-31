@@ -1001,7 +1001,7 @@ Use the start-dev skill. active/sky_orientation_euclid_dr1_and_library.md
 
 </details>
 
-<details><summary>📋 <a href="active/tutorial_5_point_data.md">Tutorial 5 point-source data</a> — <a href="https://github.com/PyAutoLabs/HowToLens/issues/109">issue #109</a> — issued 2026-10-31 — workspace-dev</summary>
+<details><summary>📋 <a href="active/tutorial_5_point_data.md">Tutorial 5 point-source data</a> — <a href="https://github.com/PyAutoLabs/HowToLens/issues/109">issue #109</a> — issued 2026-10-31 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/HowToLens/pull/110">HowToLens#110</a></summary>
 
 ```
 Use the start-dev skill. active/tutorial_5_point_data.md
