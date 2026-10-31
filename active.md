@@ -78,3 +78,15 @@
 - epic: cluster-strong-lensing (phase 7b)
 - heart-red-override: authorized live by the human 2026-10-31 ("override heart red, go ahead with 7b"); RED reasons quoted on the issue; development only
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
+
+## likelihood-lifecycle-p3-designation-records
+- issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/83
+- issued: 2026-10-31
+- session: claude-code desktop (WSL), ~/Science session
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p3-designation-records
+- repos:
+  - PyAutoPulse: feature/likelihood-lifecycle-p3-designation-records
+- prompt: active/likelihood_lifecycle_p3_designation_records.md
+- heart-override: RED overridden by the human 2026-10-31 (AskUserQuestion "Override + create issue")
+- tier: judge — merge mode: human /prm
