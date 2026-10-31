@@ -90,6 +90,8 @@
 - prompt: active/likelihood_lifecycle_p3_designation_records.md
 - heart-override: RED overridden by the human 2026-10-31 (AskUserQuestion "Override + create issue")
 - tier: judge — merge mode: human /prm
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/84
+- state 2026-10-31: 39 records + index rows (aab2177); pyauto-pulse check OK, 370 tests; evidence pinned to autolens_profiling c218a428 (#496 head). Merge with/after #496.
 
 ## howtogalaxy-chapter2
 - issue: https://github.com/PyAutoLabs/HowToGalaxy/issues/94
