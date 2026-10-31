@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2068 records across 10 buckets.
+2069 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -166,6 +166,7 @@ markers; everything below GENERATED is rebuilt.
 - [broca-resource-categories](2026/10/broca-resource-categories.md) — Broca categories Workspaces/How To/Documentation and assistant deduplication with stable links; Hands shortcut…
 - [broca-resource-indent](2026/10/broca-resource-indent.md) — Broca resource rows visibly indented beneath categories, with a subtle guide. Nerves HTML GREEN/count summary …
 - [broca-state-feed](2026/10/broca-state-feed.md)
+- [campaign-task-records-wait-loop](2026/10/campaign-task-records-wait-loop.md)
 - [chameleon-analytic-potential](2026/10/chameleon-analytic-potential.md) — Merge 9b18db7 (+ ws_test c260ca4). The `mp.Chameleon` deflections were right (div alpha = 2 kappa); the potent…
 - [ci-timing-abandoned-pr-cancels](2026/10/ci-timing-abandoned-pr-cancels.md)
 - [ci-timing-superseded-main-cancels](2026/10/ci-timing-superseded-main-cancels.md)

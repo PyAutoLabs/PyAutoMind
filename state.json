@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-10-31T12:19:40Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 4 in flight",
+  "updated": "2026-10-31T12:22:35Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Issued: 2026-10-31 \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1750",
-      "prompt": "Use the start-dev skill. active/campaign_task_records_and_wait_loop.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -41,6 +35,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#666 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/666",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1750 \u2014 What shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1750",
       "prompt": null
     },
     {

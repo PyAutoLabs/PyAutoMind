@@ -16,21 +16,6 @@
   - ECLIPSE_lens_catalogue: feature/r2-pages-function-access
 - tier: judge — merge mode: human /prm
 
-## campaign-task-records-wait-loop
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1749
-- issued: 2026-10-31
-- session: claude-code desktop (WSL), PyAutoLabs session
-- status: library-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/campaign-task-records-wait-loop
-- repos:
-  - PyAutoFit: feature/campaign-task-records-wait-loop
-- prompt: active/campaign_task_records_and_wait_loop.md
-- epic: hpc-campaign (phase 5a follow-up)
-- heart-red-override: extended live by the human 2026-10-31 ("yes extend the override, go ahead"); RED reasons quoted on the issue; development only, merge via /prm
-- tier: judge — merge mode: human /prm
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1750
-- resume: 2026-10-31 — PR open; full suite 4170 passed; independent review CLEAN; NEXT human /prm; after release, rerun autolens_assistant#174 wiki-currency then /prm it
-
 ## hpc-campaign-p5a-assistant
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/172
 - issued: 2026-10-30
