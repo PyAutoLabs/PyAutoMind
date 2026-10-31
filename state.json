@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-10-31T12:12:56Z",
+  "updated": "2026-10-31T12:14:04Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Issued: 2026-10-31 \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1750",
+      "prompt": "Use the start-dev skill. active/campaign_task_records_and_wait_loop.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoLens PyAutoLens#811 \u2014 lenstwin-p4a-twin-fit-model",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/811",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#813 \u2014 magnification-latent-raw-flux",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/813",
       "prompt": null
     }
   ]

@@ -953,7 +953,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/campaign_task_records_and_wait_loop.md">Issued: 2026-10-31</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1749">issue #1749</a> — issued 2026-10-31 — library-dev</summary>
+<details><summary>📋 <a href="active/campaign_task_records_and_wait_loop.md">Issued: 2026-10-31</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1749">issue #1749</a> — issued 2026-10-31 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1750">PyAutoFit#1750</a></summary>
 
 ```
 Use the start-dev skill. active/campaign_task_records_and_wait_loop.md
