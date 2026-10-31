@@ -48,7 +48,8 @@
 ## ag-results-quick-fit-tags
 - issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/266
 - session: claude-code desktop (session 03dd203b)
-- status: workspace-dev
+- status: awaiting-merge
+- pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/267
 - worktree: ~/Code/PyAutoLabs-wt/ag-results-quick-fit-tags
 - repos:
   - autogalaxy_workspace: feature/ag-results-quick-fit-tags
