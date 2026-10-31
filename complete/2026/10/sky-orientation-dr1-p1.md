@@ -1,3 +1,36 @@
+Phase 1 of the sky-orientation epic (euclid_dr1): read-only research into which frame the DR1 products are in and how to convert them. Merged as PyAutoLabs/euclid_strong_lens_modeling_pipeline#114; issue #113. Shipped under the human's Heart RED development override (2026-10-31).
+
+## What shipped
+- `scripts/research/sky_orientation/`: `conversions.py` (native→sky for any CD matrix), `witness_real.py`, `positions_overlay.py`, `wcs_scan.py` and `conventions_check.py`.
+- `tests/test_sky_orientation.py`: simulated-lens witness plus sign-rule and round-trip tests.
+- `docs/sky_orientation/phase1.md` (findings) and `conventions.md` (COOLEST / lenstronomy / herculens table, with citations).
+- `positions_finder.py`: docstring only (+y is south on the sky).
+
+## Findings
+- The DR1 fits are in the cutout FITS frame with no row flip: +y is south and +x is west. All inputs share that frame, so no fit is invalid.
+- To convert to the sky: east = -x, north = -y, and the PA east of north is (90 - phi) mod 180.
+- Evidence:
+  - 113 local lenses: centres within 0.009" of `wcs.json`; mass PA median 0.8° from the pixel route (the control rule gives 38°); shear exact.
+  - Simulated FITS: recovers PA to < 0.5°.
+  - WCS scan: 15,032 / 15,032 cutouts identical. Tile102012389... has no local cutout FITS.
+- The `wcs.json` RA/Dec are correct.
+- The pipeline's `coolest.json` is MIRRORED (phi = -PA, center_y sign). Our COOLEST export assumes +y is north.
+- The result FITS carry no WCS.
+
+## Human decisions (2026-10-31)
+1. Regenerate `coolest.json` in phase 2. This is an approved JSON change and follows the full snapshot/diff/version/CHANGELOG procedure.
+2. Add a WCS to the release model FITS.
+3. The cutouts being regenerated after the fits is judged fine.
+4. Fix the `build_wcs_package.py` docstring (on the `ral-path-v5-catalogue` branch) when possible.
+
+## Remainder
+Phases 2–5 are re-filed as `draft/research/euclid/sky_orientation_euclid_dr1_and_library.md`, with phase 1 marked done and pointing here.
+
+## Loose end
+The RAL `rgb_north_up` tar extraction was relaunched on 2026-10-31 (the old sha file had a wrong `../` path). Verify `dataset/rgb_north_up_extract.log` ends `EXTRACT_DONE`, then spot-check orientation against VIS.
+
+## Original prompt
+
 # Sky orientation (north/east): euclid_dr1 catalogue, paper and website, plus the PyAutoLens library-wide fix
 
 Type: research
