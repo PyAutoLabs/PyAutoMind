@@ -48,24 +48,6 @@
 - in flight (RAL): 413675 refs in autolens_profiling_p2b_rerun (alma _0/_3 refs written; false 'no row' fixed by mkdir output/p2b_batch1); finalise 413682 afterany:413675 (log /mnt/ral/jnightin/scratch/p2b_quiet_finalise.<jobid>.out, marker P2BQUIETFINALISEDONE). Also 413669 = phase-3 2b A100 refs in autolens_profiling_p2dg (step 3).
 - resume: sacct 413682 → re-pull output/p2b_quiet into output/quiet_logs/ (tar over ssh) → python3 output/quiet_logs/ingest_quiet.py output/quiet_logs/pin.json --apply (script in PR #494 body logic: parity match, fit.png, final write, pinned revisions; history/2026.10.25.1_2026-10-28) → commit → regenerate (build_catalogue, build_setup_wiki, coverage_matrix, build_dashboard w/ PYAUTO_BRAIN, build_readme) → commit → update 2b journal → gh pr ready → /ship_workspace.
 
-## howto-paired-review
-- issue: https://github.com/PyAutoLabs/HowToLens/issues/103
-- issued: 2026-10-31
-- prompt: active/howto_paired_review_ship.md
-- status: awaiting-merge
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howto-paired-review
-- repos:
-  - HowToLens: feature/howto-paired-review
-  - HowToGalaxy: feature/howto-paired-review
-- heart-red-override:
-  - authorization: Human “Fix those plotting errors, rerun the tests and then prm everything. I approve the fixes and the Heart RED override.” (2026-10-31).
-  - reasons: release validation FAILED (stage integrate)
-  - validation: Galaxy full smoke 32 passed; Lens full smoke 49 passed plus corrected Tutorial 2 retest passed. Notebook/catalogue/path checks and actual mapping render passed. Final GitHub smoke required before merge.
-  - scope: development shipping plus current-turn merge on green required checks; no release or CI bypass.
-
-- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/93
-- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/104
-
 ## sky-orientation-p2
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/115
 - issued: 2026-10-31

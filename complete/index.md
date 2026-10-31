@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2069 records across 10 buckets.
+2070 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -268,6 +268,7 @@ markers; everything below GENERATED is rebuilt.
 - [heart-publication-coverage](2026/10/heart-publication-coverage.md)
 - [heart-score-resusitate](2026/10/heart-score-resusitate.md)
 - [heart-test-workspace-resource-dropdowns](2026/10/heart-test-workspace-resource-dropdowns.md)
+- [howto-paired-review](2026/10/howto-paired-review.md) — Human-reviewed HowToLens Tutorials 0–2 and HowToGalaxy Tutorials 0–1, including canonical scripts, generated n…
 - [howto-smoke-313-zeus](2026/10/howto-smoke-313-zeus.md)
 - [howtofit-advanced-references](2026/10/howtofit-advanced-references.md)
 - [howtofit-ep-shared-centre](2026/10/howtofit-ep-shared-centre.md)

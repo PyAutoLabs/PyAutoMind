@@ -1,3 +1,5 @@
+Progress (2026-10-31): the introductory review phase is merged — HowToLens Tutorials 0–2 (PR #104) and HowToGalaxy Tutorials 0–1 (PR #93). See complete/2026/10/howto-paired-review.md and paired_tutorial_review_resume.md. The findings below are retained as provenance; the broader course review continues after the human's planned rewrite of Lens Tutorials 3–5. Library docstring findings remain outside this shipped phase.
+
 Track and fix correctness issues in the HowToLens tutorials as they are found during student use, and use the equivalent HowToGalaxy material as a cross-check so shared explanations do not drift.
 
 Primary target: @HowToLens
