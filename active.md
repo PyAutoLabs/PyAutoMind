@@ -56,3 +56,14 @@
 - epic: sky-orientation (phase 1 of 5)
 - heart-red-override: authorized live by the human 2026-10-31 ("I override for work on RED"); RED reasons quoted on the issue; development only, merge via /prm
 - tier: judge — merge mode: human /prm
+
+## ag-results-quick-fit-tags
+- issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/266
+- session: claude-code desktop (session 03dd203b)
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/ag-results-quick-fit-tags
+- repos:
+  - autogalaxy_workspace: feature/ag-results-quick-fit-tags
+- corrective-red:
+  - reason: "release validation FAILED (stage integrate)"
+  - authorization: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/266#issuecomment-6542894772
