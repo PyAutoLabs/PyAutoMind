@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2071 records across 10 buckets.
+2072 records across 10 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -327,6 +327,7 @@ markers; everything below GENERATED is rebuilt.
 - [likelihood-lifecycle-p2a-inference-timings](2026/10/likelihood-lifecycle-p2a-inference-timings.md)
 - [likelihood-lifecycle-p2a-restamp-12core](2026/10/likelihood-lifecycle-p2a-restamp-12core.md)
 - [likelihood-lifecycle-p2b-interferometer](2026/10/likelihood-lifecycle-p2b-interferometer.md) — complete
+- [likelihood-lifecycle-p2bc-quiet-ingest](2026/10/likelihood-lifecycle-p2bc-quiet-ingest.md)
 - [likelihood-lifecycle-p2c-point-source](2026/10/likelihood-lifecycle-p2c-point-source.md) — complete
 - [likelihood-lifecycle-p2d-galaxy-group](2026/10/likelihood-lifecycle-p2d-galaxy-group.md) — RAL not run
 - [likelihood-lifecycle-p2d-galaxy-group-runs](2026/10/likelihood-lifecycle-p2d-galaxy-group-runs.md) — campaign complete

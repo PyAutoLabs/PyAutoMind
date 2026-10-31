@@ -32,22 +32,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/174
 - resume: 2026-10-31 — #173 merged; #174 (feature/hpc-campaign-p5a-v2, retargeted to main) green on boundary + colab, RED on wiki-currency only because it audits RELEASED PyAutoFit, which lacks autofit.campaign (pending-release) — /prm #174 after the next PyAutoFit release (rerun wiki-currency first); then close out p5a
 
-## likelihood-lifecycle-p2bc-quiet-ingest
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/493
-- issued: 2026-10-31
-- session: claude-code desktop (WSL), ~/Science session
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p2bc-quiet-ingest
-- repos:
-  - autolens_profiling: feature/likelihood-lifecycle-p2bc-quiet-ingest
-- prompt: active/likelihood_lifecycle_p2bc_quiet_rerun_ingest.md
-- heart-override: RED overridden by the human 2026-10-31 (release validation integrate failure; autogalaxy + autolens_profiling red; 1 dirty worktree)
-- tier: judge — merge mode: human /prm
-- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/494 (DRAFT)
-- state 2026-10-31: 9/21 quiet cells ingested (7 sma 2b + 2 2c), regenerated, pushed (ad17175b). 12 cells above sma HELD: witnesses not_assessed.
-- in flight (RAL): 413675 refs in autolens_profiling_p2b_rerun (alma _0/_3 refs written; false 'no row' fixed by mkdir output/p2b_batch1); finalise 413682 afterany:413675 (log /mnt/ral/jnightin/scratch/p2b_quiet_finalise.<jobid>.out, marker P2BQUIETFINALISEDONE). Also 413669 = phase-3 2b A100 refs in autolens_profiling_p2dg (step 3).
-- resume: sacct 413682 → re-pull output/p2b_quiet into output/quiet_logs/ (tar over ssh) → python3 output/quiet_logs/ingest_quiet.py output/quiet_logs/pin.json --apply (script in PR #494 body logic: parity match, fit.png, final write, pinned revisions; history/2026.10.25.1_2026-10-28) → commit → regenerate (build_catalogue, build_setup_wiki, coverage_matrix, build_dashboard w/ PYAUTO_BRAIN, build_readme) → commit → update 2b journal → gh pr ready → /ship_workspace.
-
 ## sky-orientation-p2
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/115
 - issued: 2026-10-31

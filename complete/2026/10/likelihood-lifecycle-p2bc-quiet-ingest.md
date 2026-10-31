@@ -1,3 +1,14 @@
+Likelihood lifecycle phase-2 follow-up: the 2b/2c quiet-node RAL CPU reruns ingested as current.
+
+- Merged: https://github.com/PyAutoLabs/autolens_profiling/pull/494 (`6d308490`, 2026-10-31, human `/prm`). Issue https://github.com/PyAutoLabs/autolens_profiling/issues/493 closed. Heart RED development override invoked by the human 2026-10-31.
+- Rows: 21/21 cells, i.e. 38 2b RAL CPU legs and 2 2c solved runtime legs (RAL 413319-413323, `--exclusive`, quiet gate; all on euclid-ral-compute-10-3 at load 0.9-1.9; jax/jaxlib 0.11.2 + `--xla_cpu_multi_thread_eigen=false`). Every witness `match`. Prior rows are in `history/2026.10.25.1_2026-10-28/`. They replace the published rows per the human's Q7 ruling, so load and the jax environment changed together.
+- Above sma, the references were recomputed in the rerun checkout (RAL 413675), because the parity cache keys on the autolens_profiling commit. Finalise 413682 replaced 413676: that `afterok` could never be satisfied after a false "no row", because the wrapper's existence check goes through a missing `output/p2b_batch1/..`.
+- Also merged: the shared `_common.py` quiet-node gate and `--exclusive` (all 7 generator `--check`s unchanged); a timing-noise inventory row for `test_quiet_rerun_time_is_batch1_elapsed_plus_the_quiet_wait`; the sma sweep comparisons re-aggregated (CI round-trip test); `catalogue/series_id_map.json` regenerated.
+- Findings for phase 3: JAX CPU on 0.11.2 with the eigen flag is slower in places. Rectangular sma dense NUFFT is 1.54×, and delaunay jvla W~ is 1.50×, which narrows JAX's per-call lead over numba at jvla from 2.1× to 1.24×. Numba sped up 0.50-0.99× above sma.
+- Follow-on: autolens_profiling#495 / PR #496 (phase-3 JAX rows), stacked on this PR.
+
+## Original prompt
+
 # Likelihood lifecycle phase 2b/2c: ingest the quiet-node RAL CPU reruns (follow-up PRs)
 
 Type: research
