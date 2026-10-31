@@ -78,3 +78,16 @@
 - epic: cluster-strong-lensing (phase 7b)
 - heart-red-override: authorized live by the human 2026-10-31 ("override heart red, go ahead with 7b"); RED reasons quoted on the issue; development only
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
+
+## howtolens-point-sources
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/107
+- issued: 2026-10-31
+- session: Codex chat 01a191e7-652b-7620-a3ca-9e78dadd948e
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howtolens-point-sources
+- repos:
+  - HowToLens: feature/howtolens-point-sources
+- prompt: active/tutorial_4_point_sources.md
+- heart-red-override: human explicitly approved development on Heart RED for Tutorial 4; exact reasons recorded on issue #107; no release or failed-check bypass
+- tier: judge — merge mode: human /prm
+- resume: all fifteen blocks approved and applied; regenerate outputs and run validation

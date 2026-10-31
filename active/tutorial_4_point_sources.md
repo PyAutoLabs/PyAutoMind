@@ -17,3 +17,8 @@ First batch: introduction, compact-source setup, compact-source image, point-sou
 ## Heart RED development override
 Human explicitly approved development on Heart RED for Tutorial 4. Development only; no release or failed-check bypass.
 Reported reasons: release validation FAILED (stage integrate); PyAutoHeart/workflows/Release Integrate: failure; Release readiness: release validation FAILED (stage integrate); autogalaxy: red; Release validation: NOT release_ready — v2026.10.31.1.dev85201 profile=release (2026-10-31T08:04:07+00:00); validation_report/stages/integrate: fail; autolens_profiling: red; Worktree drift: 0 orphan / 0 missing / 1 dirty.
+
+Issue: https://github.com/PyAutoLabs/HowToLens/issues/107
+Issued: 2026-10-31
+
+All fifteen blocks approved, including the brief triangle explanation and workspace guide link. User authorized applying the changes and running checks. Worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howtolens-point-sources/HowToLens; branch feature/howtolens-point-sources.
