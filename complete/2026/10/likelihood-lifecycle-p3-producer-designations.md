@@ -1,3 +1,15 @@
+Likelihood lifecycle phase 3, day-zero write 1/4: autolens_profiling classes its records from the PyAutoPulse designations.
+
+- Merged: https://github.com/PyAutoLabs/autolens_profiling/pull/498 (`8c40e7d`, 2026-10-31, human /prm; CI lint green on head `3b32642`). Issue https://github.com/PyAutoLabs/autolens_profiling/issues/497 closed. Heart RED development override invoked by the human 2026-10-31 ("Override + create issue").
+- Human rulings 2026-10-31 (AskUserQuestion): setups measured on a designated key but not named by its designation → `experimental`; `local_*` hosts and `source_pixels_<n>` regimes inherit the role as `secondary` with an `undesignated_regime_or_host` limitation and no `decision_id`; a synced JSON mirror (`catalogue/pulse_designations.json`) rather than reading PyAutoPulse directly.
+- Mirror: `build_catalogue.py --sync-designations ../PyAutoPulse` writes the 39 `kind: designation` rows; `--check --validate-with ../PyAutoPulse` fails on drift and resolves every `decision_id` via `pulse.ingest.unresolved_decisions`.
+- Result (`dashboard/catalogue.json`, 1,548 records): 536 `class: optimal` (283 current) across all 39 decision_ids; 368 named secondary with a decision_id; 199 experimental; 445 secondary without one (inherited, or the held group). Every designation has a current optimal record; all 230 evidence ids present.
+- Hold: datacube/delaunay `hpc_a100` stays provisional (24 records, `secondary` + `provisional_optimal: true`) via `catalogue/designation_holds.json`, which also keeps the planning metadata from the retired file (GPU hosts, regime-only routes, the R1(a) dense-NUFFT-at-sma rule).
+- `catalogue/provisional_designations.json` deleted; planned cells derive from designations + hold: 272 → 232 (148 optimal, 84 secondary), all current. Frozen phase-2 campaign tests now assert each manifest ⊇ the designated cells, every extra being a setup its designation dropped.
+- Next: day-zero write 2/4 — `day_zero` stamp on the frozen rows and the Pulse `day_zero` snapshot.
+
+## Original prompt
+
 # Likelihood lifecycle phase 3, day-zero write 1/4: autolens_profiling reads the Pulse designations
 
 Type: research
