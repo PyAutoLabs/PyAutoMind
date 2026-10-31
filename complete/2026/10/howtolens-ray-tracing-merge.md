@@ -6,7 +6,7 @@ Tutorial 2 now includes units and multiple galaxies; Tutorial 3 combines intuiti
 
 Human approved prose in five-block batches and explicitly authorized merge via prm. All eight CI jobs passed, including both Python 3.12 and 3.13 smoke legs. Local full smoke: 49 passed, zero failed. Generated notebook parity and actual rendered lessons validated.
 
-Heart RED development override remains development-only; no release performed. Worktree retained pending the human's decision about generated datasets/output.
+Heart RED development override remains development-only; no release performed. Human approved deleting the worktree and generated data. Removed the task worktree (including datasets/output) and the proven-merged local feature branch on 2026-10-31. Human review copies in Science/scratch remain available.
 
 ## Original prompt
 
