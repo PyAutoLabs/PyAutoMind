@@ -52,16 +52,19 @@
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/103
 - issued: 2026-10-31
 - prompt: active/howto_paired_review_ship.md
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howto-paired-review
 - repos:
   - HowToLens: feature/howto-paired-review
   - HowToGalaxy: feature/howto-paired-review
 - heart-red-override:
-  - authorization: Human “I approve you to prm and override heart RED” (2026-10-31).
+  - authorization: Human “Fix those plotting errors, rerun the tests and then prm everything. I approve the fixes and the Heart RED override.” (2026-10-31).
   - reasons: release validation FAILED (stage integrate)
-  - validation: source/notebook/catalogue checks passed; runtime smoke HowToLens 48 passed / 2 failed, HowToGalaxy 31 passed / 1 failed. Shipping stopped on plotting wrapper errors.
+  - validation: Galaxy full smoke 32 passed; Lens full smoke 49 passed plus corrected Tutorial 2 retest passed. Notebook/catalogue/path checks and actual mapping render passed. Final GitHub smoke required before merge.
   - scope: development shipping plus current-turn merge on green required checks; no release or CI bypass.
+
+- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/93
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/104
 
 ## sky-orientation-p2
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/115

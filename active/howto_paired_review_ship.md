@@ -82,3 +82,11 @@ TypeError: plot_array() got an unexpected keyword argument 'figsize'
 Diagnosis: public autolens.plot/autogalaxy.plot wrappers do not expose the underlying autoarray.plot figsize/extent/indexes options. Tutorial 0 can size an explicit Matplotlib axes; Tutorial 2 can call autoarray.plot.plot_grid for extent/index groups. No library change is required. Corrections are not applied during the failed ship run.
 
 No tutorial commit, push, PR or merge. Both worktrees remain intact. Tutorials 3–5 remain untouched.
+
+## Authorized corrections — 2026-10-31
+
+Human: “Fix those plotting errors, rerun the tests and then prm everything. I approve the fixes and the Heart RED override.”
+
+Both Tutorial 0 scripts now size a Matplotlib figure explicitly and pass `ax` to `aplt.plot_array`. HowToLens Tutorial 2 imports `autoarray.plot as aaplt` for extent/indexes-enabled grid plots. Smoke profile preserves that lesson's 101x101 teaching grid; the full-grid mapping retest passed. The actual runtime mapping/zoom figures were rendered and visually inspected. Generated notebooks are structurally valid and code-equivalent to source (excluding standard setup injection). Full suite reruns are finishing before PR-open.
+
+PRs: https://github.com/PyAutoLabs/HowToLens/pull/104 (14b6a08) and https://github.com/PyAutoLabs/HowToGalaxy/pull/93 (489d7ae). Local corrected-script evidence passed; final-head CI pending.

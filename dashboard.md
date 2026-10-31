@@ -953,7 +953,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/howto_paired_review_ship.md">Ship paired introductory tutorial review</a> — <a href="https://github.com/PyAutoLabs/HowToLens/issues/103">issue #103</a> — issued 2026-10-31 — workspace-dev</summary>
+<details><summary>📋 <a href="active/howto_paired_review_ship.md">Ship paired introductory tutorial review</a> — <a href="https://github.com/PyAutoLabs/HowToLens/issues/103">issue #103</a> — issued 2026-10-31 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/HowToGalaxy/pull/93">HowToGalaxy#93</a>, <a href="https://github.com/PyAutoLabs/HowToLens/pull/104">HowToLens#104</a></summary>
 
 ```
 Use the start-dev skill. active/howto_paired_review_ship.md
