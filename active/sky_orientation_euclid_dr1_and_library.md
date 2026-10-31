@@ -103,6 +103,15 @@ wcs.csv) must be monitored carefully:
   an existing PNG, and never switch only imshow_origin (labels and model y would disagree).
 - AGREED: start phase 1 (approved 2026-10-30; not yet started, next step is /start_dev on this prompt).
 
+## Phase 1 result + decisions (2026-10-31, euclid#113)
+- Phase 1 shipped (docs/sky_orientation/phase1.md + conventions.md in the euclid repo). Frame confirmed; PA east of
+  north = (90 - phi) mod 180; wcs.json RA/Dec correct; pipeline coolest.json MIRRORED (phi = -PA, center_y sign);
+  result FITS carry no WCS; 15,032/15,032 cutout WCS identical (Tile102012389... has no local cutout FITS).
+- HUMAN 2026-10-31: (1) REGENERATE coolest.json in phase 2 (approved JSON change: snapshot, diff, validate,
+  version bump, CHANGELOG; coolest.json only, every other JSON byte-identical); (2) ADD a WCS to the release model
+  FITS; (3) cutouts regenerated after the fits judged fine; (4) fix the build_wcs_package.py docstring (on
+  ral-path-v5-catalogue) when possible.
+
 ## Phase 1 — euclid_dr1 research (gates everything)
 1. FIRST: confirm every external input to the fits was in the pixel frame. How was positions.json made (pixel
    picks or RA/Dec -> arcsec with +y north)? Overlay positions on asymmetric lenses. Same for any angle/position
