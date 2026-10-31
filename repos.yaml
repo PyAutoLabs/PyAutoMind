@@ -109,7 +109,7 @@ repos:
     organ: Brain
     role: "Reasoning/orchestration layer; how work is decomposed and routed; the specialist agents."
     public_role: "Works out *how*: classifies, plans and routes work through specialist reasoning and coding agents."
-    codex_hooks: [mind-commit-guard, end-at-deliverable]
+    codex_hooks: [mind-commit-guard, scheduler-action-guard, end-at-deliverable]
   PyAutoBroca:
     board_owner: true
     path: organs/PyAutoBroca

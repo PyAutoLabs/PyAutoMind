@@ -115,3 +115,22 @@ def test_live_manifest_opts_in_exactly_the_phase_two_repos():
         "PyAutoMind", "PyAutoBrain", "autofit_assistant",
         "autogalaxy_assistant", "autolens_assistant", "autocti_assistant",
     }
+
+
+def test_render_helper_renders_the_opted_in_repos_of_a_tree():
+    """`codex_hooks_render.py` is what the firewall gate diffs between a PR's base
+    and head; it renders through the tree's own generator and manifest."""
+    import subprocess
+
+    mind = Path(__file__).resolve().parents[1]
+    out = subprocess.run(
+        [sys.executable, str(mind / "scripts" / "codex_hooks_render.py"), "--mind", str(mind)],
+        capture_output=True, text=True, check=True,
+    ).stdout
+    rendered = json.loads(out)
+    _, repos = repos_sync.load_manifest(mind)
+    opted_in = sorted(name for name, spec in repos.items() if repos_sync.codex_hook_names(spec))
+    assert sorted(rendered) == opted_in
+    assert all(not text.startswith("error: ") for text in rendered.values())
+    assert rendered["PyAutoBrain"] == repos_sync.render_codex_hooks(repos["PyAutoBrain"])
+    assert "scheduler_action_guard.py" in rendered["PyAutoBrain"]
