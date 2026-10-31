@@ -62,3 +62,16 @@
 - epic: cluster-strong-lensing (phase 7b)
 - heart-red-override: authorized live by the human 2026-10-31 ("override heart red, go ahead with 7b"); RED reasons quoted on the issue; development only
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
+
+## likelihood-lifecycle-p3-producer-designations
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/497
+- issued: 2026-10-31
+- session: claude-code remote (cloud), session_016nhQ8Q82zpcg2VRk8i7QvL
+- location: cloud container clone /home/user/autolens_profiling
+- status: workspace-dev
+- repos:
+  - autolens_profiling: claude/awesome-rubin-ejb234
+- prompt: active/likelihood_lifecycle_p3_producer_designations.md
+- epic: likelihood-lifecycle (phase 3, day-zero write 1/4)
+- heart-red-override: authorized by the human 2026-10-31 ("Override + create issue") for day-zero write 1/4; development only, merge via /prm
+- tier: judge — merge mode: human /prm
