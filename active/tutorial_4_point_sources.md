@@ -22,3 +22,15 @@ Issue: https://github.com/PyAutoLabs/HowToLens/issues/107
 Issued: 2026-10-31
 
 All fifteen blocks approved, including the brief triangle explanation and workspace guide link. User authorized applying the changes and running checks. Worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howtolens-point-sources/HowToLens; branch feature/howtolens-point-sources.
+
+## Applied and validated — 2026-10-31
+- All fifteen approved blocks applied; numerical example retained, combined image-property printout added.
+- Notebook and executed Markdown/figures regenerated, catalogue and Colab links updated.
+- Actual tutorial execution: four images, finite magnifications/delays, maximum source-plane residual 0.0005011 arcsec.
+- Official Heart smoke: 49 passed, zero failures (Python 3.12); notebook format/source parity, navigator, contents, 38 tutorial completion checks and whitespace checks pass.
+- Commit: 2843ea7785412ec3293c7b344cdeb72472c2abe0
+- PR: https://github.com/PyAutoLabs/HowToLens/pull/108
+- Current exact Heart RED reason: `release validation FAILED (stage integrate)`. Existing human development-only override applies. No release or failed-check bypass.
+- Review copies: /mnt/c/Users/Jammy/Workspace/Science/scratch/howtolens_point_sources_2026-10-31/.
+- Logs: scratch/tutorial4_runtime.log, scratch/tutorial4_render.log, scratch/tutorial4_heart_smoke.log.
+- Next: human /prm after required PR checks pass; no merge authority this turn.
