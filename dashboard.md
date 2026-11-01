@@ -993,7 +993,7 @@ Use the start-dev skill. active/r2_pages_function_access.md
 
 </details>
 
-<details><summary>📋 <a href="active/simulate_if_needed_workspace_sweep.md">Sweep workspaces onto al.util.dataset.simulate_if_needed (one PR per repo)</a> — <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/issues/268">issue #268</a> — issued 2026-11-01 — workspace-dev</summary>
+<details><summary>📋 <a href="active/simulate_if_needed_workspace_sweep.md">Sweep workspaces onto al.util.dataset.simulate_if_needed (one PR per repo)</a> — <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/issues/268">issue #268</a> — issued 2026-11-01 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/269">autogalaxy_workspace#269</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/353">autolens_workspace_test#353</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/132">autogalaxy_workspace_test#132</a></summary>
 
 ```
 Use the start-dev skill. active/simulate_if_needed_workspace_sweep.md
