@@ -99,3 +99,5 @@
 - epic: likelihood-lifecycle (phase 3, day-zero write 3/4)
 - heart-red-override: authorized by the human 2026-11-01 ("Override + create issue") for day-zero write 3/4; development only, merge via /prm
 - tier: judge — merge mode: human /prm
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/502
+- resume: 2026-11-01 — PR #502 open (c67f21c); awaiting CI and the human's /prm. Then day-zero write 4/4 (setup-baseline close + runtime_estimates export).
