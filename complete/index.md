@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2079 records across 10 buckets.
+2080 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -118,6 +118,10 @@ markers; everything below GENERATED is rebuilt.
 <!-- CURATED:END -->
 
 <!-- GENERATED:START — edit records, not this block; regenerate with `lifecycle.py index --apply` -->
+
+## 2026/11
+
+- [likelihood-lifecycle-p3-day-zero-stamp](2026/11/likelihood-lifecycle-p3-day-zero-stamp.md)
 
 ## 2026/10/github-token-consolidation-epic_surveys
 
