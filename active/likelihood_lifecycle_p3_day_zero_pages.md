@@ -10,6 +10,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: high
 Status: issued
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/501
 Consequence: judge
 Witness: build_day_zero_pages.py --check passes in CI; 20 wiki/campaigns/<dataset_type>/<variant>/day_zero.md pages, one per designated likelihood, each with the rule per hardware class in dataset-property terms linking its Pulse designation record(s) (all 39 linked), the stamped day-zero evidence, and the untested branches; datacube/delaunay A100 named as held; wiki/day_zero.md indexes them; check_wiki --check passes
 Review-minutes: 30
