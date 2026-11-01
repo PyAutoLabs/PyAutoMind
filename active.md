@@ -98,10 +98,12 @@
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/119
 - issued: 2026-11-01
 - session: Codex desktop, current chat
-- status: workspace-dev
+- status: awaiting-input
 - worktree: /home/jammy/Code/PyAutoLabs-wt/howto-prose-format
 - prompt: active/howto_prose_format.md
 - repos:
   - HowToLens: feature/howto-prose-format
   - HowToGalaxy: feature/howto-prose-format
 - merge-authorization: User requested PR, prm, merge and local pull in this session.
+- resume: Source formatting complete in task worktree; 14 scripts preserve executable AST and paragraph words. Joined 46 adjacent narrative boundaries. PyAutoHands generation passed Lens 44/44 and Galaxy 29/29; notebook cell checks, navigator, completeness and search-memory checks passed. No PR yet.
+- blocker: Fresh Heart RED at 2026-11-01T16:53:05Z: PyAutoArray, PyAutoGalaxy and PyAutoLens each 2 commits behind origin. Canonical checkouts clean on main. Shipping paused per ship_workspace; no source commits or merge performed.

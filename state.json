@@ -2,11 +2,17 @@
   "schema_version": 1,
   "organ": "mind",
   "repo": "PyAutoMind",
-  "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-11-01T16:51:28Z",
+  "status": "red",
+  "headline": "RED \u2014 24 picks \u00b7 8 in flight",
+  "updated": "2026-11-01T16:53:53Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "red",
+      "text": "Repair tutorial prose formatting \u2014 awaiting-input",
+      "url": "https://github.com/PyAutoLabs/HowToLens/issues/119",
+      "prompt": "Use the start-dev skill. active/howto_prose_format.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#687 \u2014 area-magnification-subpixel-area",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/687",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#683 \u2014 chameleon-analytic-potential",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/683",
       "prompt": null
     }
   ]
