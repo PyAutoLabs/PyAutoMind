@@ -100,3 +100,6 @@
 - epic: likelihood-lifecycle (phase 3, day-zero write 4/4)
 - heart-red-override: authorized by the human 2026-11-01 ("Override + create issue") for day-zero write 4/4; development only, merge via /prm
 - tier: judge — merge mode: human /prm (each PR)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/504
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/86
+- resume: 2026-11-01 — #504 (b511854) and PyAutoPulse#86 (42d1075) open; awaiting CI and the human's /prm, #504 first. Deviation: the draft manifest lives in baseline/superseded/ (archive/ is scanned as evidence).
