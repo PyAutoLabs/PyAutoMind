@@ -1,3 +1,14 @@
+Likelihood lifecycle phase 3, day-zero write 4/4: setup-baseline closed by day zero (R10), coverage confirmed, runtime_estimates exported. Phase 3's day-zero write is complete.
+
+- Merged: https://github.com/PyAutoLabs/autolens_profiling/pull/504 (`709c8d0`, 2026-11-01, human /prm; lint green on `b511854`) and https://github.com/PyAutoLabs/PyAutoPulse/pull/86 (`6c18f9e`, 2026-11-01, human /prm; lint + refresh green on `42d1075`). Issue https://github.com/PyAutoLabs/autolens_profiling/issues/503 closed. Heart RED development override invoked by the human 2026-11-01.
+- Human rulings 2026-11-01 (AskUserQuestion): retire `baseline_readiness.py` and its tests; export `catalogue/runtime_estimates.yaml` (stdlib YAML).
+- Deviation from the issue text: the 1,044-slot draft manifest and its readiness contract live in `baseline/superseded/`, not `archive/2026/11/` (the catalogue registry scans `archive/**/*.json` as evidence).
+- autolens_profiling: `baseline/campaign.json` = the `setup-baseline-closure` manifest (superseded by day zero 2026.10.25.1; Pulse snapshot at `60d5a96` from `e4811a2`; counts; each of the six unknowns answered). `export_runtime_estimates.py --pulse ../PyAutoPulse` verifies the snapshot's records_sha256 and writes 116 cells (71 optimal, 41 secondary, 4 held provisional; all 39 decision_ids) with ms per eval, resources, workers and projected calls/s per node, parallel efficiency 1.0 declared; CI `--check`. Coverage witness test: 0 of 148 optimal planned cells not measured. Wiki ledger, index row, timing-audit P10 row and results-destinations test updated.
+- PyAutoPulse: `setup-baseline` campaign and `setup_baseline_campaign` task → complete with a closure table; board re-rendered offline; `check --offline` OK; the control-room escape test now probes the first open campaign.
+- Next (epic): phase 4 (inference wall-time validation on RAL; needs compute) and phase 6 (gradient, may run alongside 4–5); phase 5E consumes catalogue/runtime_estimates.yaml.
+
+## Original prompt
+
 # Likelihood lifecycle phase 3, day-zero write 4/4: close setup-baseline, confirm coverage, runtime_estimates export
 
 Type: research
