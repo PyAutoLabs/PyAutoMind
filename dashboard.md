@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 19 |
-| [In flight](#in-flight) | 7 |
+| [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 280 |
+| [Backlog](#backlog) | 281 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -985,14 +985,6 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/one_line_auto_simulate_helper_al_util.md">One-line auto-simulate helper: al.util.dataset.simulate_if_needed</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/669">issue #669</a> — issued 2026-11-01 — library-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/670">PyAutoArray#670</a>, <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/329">PyAutoHands#329</a></summary>
-
-```
-Use the start-dev skill. active/one_line_auto_simulate_helper_al_util.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/r2_pages_function_access.md">ECLIPSE site: serve R2 lens files through a Pages Function behind Cloudflare…</a> — issued 2026-10-29</summary>
 
 ```
@@ -1141,7 +1133,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 39</summary>
+<summary><b>feature</b> — 40</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
 
@@ -1331,6 +1323,14 @@ Use the start-dev skill. draft/feature/autolens_workspace/oversampled_psf_datase
 
 ```
 Use the start-dev skill. draft/feature/workspaces/restore_multiple_sources_lensing_of_lens.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/workspaces/simulate_if_needed_workspace_sweep.md">Sweep workspaces onto al.util.dataset.simulate_if_needed (one PR per repo)</a> — workspaces · large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/workspaces/simulate_if_needed_workspace_sweep.md
 ```
 
 </details>
@@ -2885,7 +2885,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-01 | issued | <a href="active/one_line_auto_simulate_helper_al_util.md">One-line auto-simulate helper: al.util.dataset.simulate_if_needed</a> |
+| 2026-11-01 | filed | <a href="draft/feature/workspaces/simulate_if_needed_workspace_sweep.md">Sweep workspaces onto al.util.dataset.simulate_if_needed (one PR per…</a> |
 | 2026-11-01 | issued | <a href="active/likelihood_lifecycle_p6c_gradient_runs.md">Likelihood lifecycle phase 6c: run the gradient campaign on RAL…</a> |
 | 2026-10-31 | issued | <a href="active/sky_orientation_euclid_dr1_and_library.md">Sky orientation (north/east): euclid_dr1 catalogue, paper and…</a> |
 | 2026-10-31 | issued | <a href="active/magnification_errors_source_science.md">Magnification errors from posterior draws in every source_science.py…</a> |
@@ -3132,6 +3132,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - [PyAutoArray#668](https://github.com/PyAutoLabs/PyAutoArray/pull/668) — `complete/2026/10/adaptive-rect-mesh-node-positions.md`
 - [PyAutoArray#664](https://github.com/PyAutoLabs/PyAutoArray/pull/664) — `complete/2026/10/mesh-magnification-areas.md`
 - [PyAutoArray#666](https://github.com/PyAutoLabs/PyAutoArray/pull/666) — `complete/2026/10/mesh-magnification-knn-areas.md`
+- [PyAutoArray#670](https://github.com/PyAutoLabs/PyAutoArray/pull/670) — `complete/2026/11/one-line-auto-simulate-helper.md`
 
 **PyAutoFit**
 
