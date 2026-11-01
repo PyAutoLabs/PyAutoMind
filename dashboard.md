@@ -12,7 +12,7 @@
 | [Epics](#epics) | 19 |
 | [In flight](#in-flight) | 7 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 278 |
+| [Backlog](#backlog) | 279 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -2316,7 +2316,7 @@ Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_
 </details>
 
 <details>
-<summary><b>docs</b> — 25</summary>
+<summary><b>docs</b> — 26</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -2402,6 +2402,14 @@ Use the start-dev skill. draft/docs/autolens/plot_rst_missing_exports.md
 
 ```
 Use the start-dev skill. draft/docs/workspaces/demo_subplot_ellipse_errors.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/howtolens/howto_series_ship_stored_fit_results_so.md">HowTo series: ship stored fit results so notebooks run without sampling waits</a> — howtolens · too-large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/docs/howtolens/howto_series_ship_stored_fit_results_so.md
 ```
 
 </details>
