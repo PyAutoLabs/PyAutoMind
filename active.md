@@ -62,3 +62,16 @@
 - epic: cluster-strong-lensing (phase 7b)
 - heart-red-override: authorized live by the human 2026-10-31 ("override heart red, go ahead with 7b"); RED reasons quoted on the issue; development only
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
+
+## likelihood-lifecycle-p6c-gradient-walls
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/509
+- issued: 2026-11-01
+- session: claude-code desktop (WSL), ~/Science session
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p6c-gradient-walls
+- repos:
+  - autolens_profiling: feature/likelihood-lifecycle-p6c-gradient-walls
+- prompt: active/likelihood_lifecycle_p6c_gradient_runs.md
+- epic: likelihood-lifecycle (phase 6c)
+- compute: RAL submit checkout /mnt/ral/jnightin/profiling/autolens_profiling_p2dg @ 97cdc88; human go per batch (batch 0 probe: go given 2026-11-01)
+- tier: judge — merge mode: human /prm

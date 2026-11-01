@@ -10,7 +10,9 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: issued
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/509
+Issued: 2026-11-01
 Consequence: judge
 Witness: every one of the 74 gradient legs has run (exit, wall vs --time recorded) and wrote a gradient.json that passes gradient_witness.py --check, or its failure (non-finite / FD fail / OOM) is recorded as a result; timeouts resubmitted with raised walls; gradient_p6.py carries measured-wall WALL-BASIS rows from output/p6_gradient_logs/walls.tsv
 Review-minutes: 30
