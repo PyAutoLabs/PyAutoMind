@@ -9,3 +9,6 @@ Original requests:
 > Dont format tings eithout code between them like this triple-quote / blank / triple-quote / **Parameter Space**, iw ill break notebook generation and is not the standard style
 
 The user clarified the formatting plan in the same session; existing PR/merge/local-update authorization persists. No science wording changes.
+
+Issued: 2026-11-01
+Issue: https://github.com/PyAutoLabs/HowToLens/issues/119

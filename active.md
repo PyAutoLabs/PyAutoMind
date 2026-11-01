@@ -93,3 +93,15 @@
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/132
 - resume: 2026-11-01 — 3 sweep PRs open (193 blocks; guard counts unchanged; smoke sample green where the env allows). Merge after the PyAutoArray release; then sweep blocked-repos as their claims release
 - blocked-repos: autolens_workspace (held by magnification-errors-source-science), HowToLens + HowToGalaxy (held by howto-chapter2-format), euclid_strong_lens_modeling_pipeline (sky-orientation-p2), autolens_profiling (likelihood-lifecycle-p6c-gradient-walls) — sweep each once its claim is released
+
+## howto-prose-format
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/119
+- issued: 2026-11-01
+- session: Codex desktop, current chat
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/howto-prose-format
+- prompt: active/howto_prose_format.md
+- repos:
+  - HowToLens: feature/howto-prose-format
+  - HowToGalaxy: feature/howto-prose-format
+- merge-authorization: User requested PR, prm, merge and local pull in this session.
