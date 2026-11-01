@@ -111,7 +111,7 @@
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/119
 - issued: 2026-11-01
 - session: Codex desktop, current chat
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs-wt/howto-prose-format
 - prompt: active/howto_prose_format.md
 - repos:
@@ -119,3 +119,5 @@
   - HowToGalaxy: feature/howto-prose-format
 - merge-authorization: User requested PR, prm, merge and local pull in this session.
 - resume: User authorized audit-based recovery. Restore missing runtime/plot/evidence outputs and compactness demonstration within existing tutorials; repair Galaxy notebook prose loss. Fresh Heart STALE 2026-11-01T18:43:28Z (release rehearsal absent only), after clean library fast-forwards. Existing formatter changes preserved.
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/122
+- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/100
