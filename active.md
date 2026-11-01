@@ -100,6 +100,9 @@
   - autolens_workspace: claude/pyautoarray-simulate-helper-yuqd16
   - HowToLens: claude/pyautoarray-simulate-helper-yuqd16
   - HowToGalaxy: claude/pyautoarray-simulate-helper-yuqd16
+  - autocti_workspace: claude/pyautoarray-simulate-helper-yuqd16
+  - euclid_strong_lens_modeling_pipeline: claude/pyautoarray-simulate-helper-yuqd16
+  - PyAutoBrain: claude/pyautoarray-simulate-helper-yuqd16
 - prompt: active/simulate_if_needed_workspace_sweep.md
 - tier: glance — merge mode: human /prm, after the PyAutoArray release carrying PyAutoArray#670
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/269
@@ -108,6 +111,9 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/612
 - workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/120
 - workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/99
-- resume: 2026-11-01 — 6 sweep PRs open (493 blocks; guard counts unchanged; smoke samples green where the env allows). Merge after the PyAutoArray release; euclid + autolens_profiling remain blocked
-- blocked-repos: euclid_strong_lens_modeling_pipeline (sky-orientation-p2), autolens_profiling (likelihood-lifecycle-p6c-gradient-walls) — sweep each once its claim is released
-- shared-claims: autolens_workspace (also magnification-errors-source-science), HowToLens + HowToGalaxy (also howto-chapter2-format) — swept on human instruction 2026-11-01 despite the claims; neither task's branch was on the remote, overlap noted in each PR
+- workspace-pr: https://github.com/PyAutoLabs/autocti_workspace/pull/39
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/118
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/549
+- resume: 2026-11-01 — sweep complete: 7 workspace sweep PRs (536 blocks) + euclid#118 (invariant token) + PyAutoBrain#549 (hygiene lever). Workspace sweep PRs merge after the PyAutoArray release; euclid#118 and Brain#549 can merge any time. No rewrite needed: autofit_workspace (intentional raw guards), autolens_workspace_developer + autolens_profiling (non-standard: extra argv/cwd)
+- blocked-repos: none
+- shared-claims: autolens_workspace (also magnification-errors-source-science), HowToLens + HowToGalaxy (also howto-chapter2-format) , euclid_strong_lens_modeling_pipeline (also sky-orientation-p2) — swept on human instruction 2026-11-01 despite the claims; neither task's branch was on the remote, overlap noted in each PR
