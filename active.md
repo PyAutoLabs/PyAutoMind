@@ -76,6 +76,6 @@
 - epic: likelihood-lifecycle (phase 3, day-zero write 2/4)
 - heart-red-override: authorized by the human 2026-11-01 ("Override + create issue") for day-zero write 2/4; development only, merge via /prm
 - tier: judge — merge mode: human /prm (each PR)
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/500
-- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/85 (draft)
-- resume: 2026-11-01 — #500 (stamp, 0ecee87) open awaiting /prm; then freeze `bin/pyauto-pulse freeze --instance lens --label day_zero --commit <autolens_profiling main sha>` in PyAutoPulse, commit snapshots/day_zero/lens.json to #85, mark ready, /prm #85.
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/500 (MERGED 2026-11-01, e4811a2)
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/85
+- resume: 2026-11-01 — autolens_profiling#500 MERGED e4811a2 (human /prm). Frozen snapshots/day_zero/lens.json from e4811a2 (480 records, 116 cells, 39 decisions) on PyAutoPulse#85 (fccedc2, ready for review); awaiting CI and the human's /prm on #85, then close the task.
