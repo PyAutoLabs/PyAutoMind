@@ -961,7 +961,7 @@ Use the start-dev skill. active/hpc_campaign_p5a_assistant.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p3_setup_baseline_close.md">Likelihood lifecycle phase 3, day-zero write 4/4: close setup-baseline, confirm coverage, runtime_estimates…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/503">issue #503</a> — issued 2026-11-01 — workspace-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p3_setup_baseline_close.md">Likelihood lifecycle phase 3, day-zero write 4/4: close setup-baseline, confirm coverage, runtime_estimates…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/503">issue #503</a> — issued 2026-11-01 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/504">autolens_profiling#504</a>, <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/86">PyAutoPulse#86</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p3_setup_baseline_close.md
