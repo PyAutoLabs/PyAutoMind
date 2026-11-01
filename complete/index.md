@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2089 records across 11 buckets.
+2090 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -131,6 +131,7 @@ markers; everything below GENERATED is rebuilt.
 - [likelihood-lifecycle-p6a-gradient-harness](2026/11/likelihood-lifecycle-p6a-gradient-harness.md)
 - [likelihood-lifecycle-p6b-gradient-scripts](2026/11/likelihood-lifecycle-p6b-gradient-scripts.md)
 - [one-line-auto-simulate-helper](2026/11/one-line-auto-simulate-helper.md)
+- [simulate-if-needed-workspace-sweep](2026/11/simulate-if-needed-workspace-sweep.md)
 
 ## 2026/10/github-token-consolidation-epic_surveys
 
