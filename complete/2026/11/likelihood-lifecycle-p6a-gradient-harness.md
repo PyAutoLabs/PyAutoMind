@@ -1,3 +1,12 @@
+Likelihood lifecycle phase 6a: the gradient harness, gradient.json ingestion and the imaging/mge pilot.
+
+- Merged: https://github.com/PyAutoLabs/autolens_profiling/pull/506 (`a319e83`, 2026-11-01, human /prm; lint green on `29b753e`). Issue https://github.com/PyAutoLabs/autolens_profiling/issues/505 closed. Heart RED development override invoked by the human 2026-11-01.
+- Human rulings 2026-11-01 (AskUserQuestion): cells = JAX optimal + JAX CPU secondary of numba-optimal + held datacube A100 (74); whole-likelihood depth; FD rule 3 seeded directions, h and h/2 Richardson, rel <= 1e-4; hazard > 4x or FD fail. Then, at /prm: "make gradients also day zeros" — a gradient record never decides a cell's day_zero stamp but carries it when measured on 2026.10.25.1 in a stamped cell with an FD pass (`29b753e`).
+- Shipped: `scripts/misc/tooling/gradient_witness.py` (convention, rules, --check in CI); `scripts/misc/gradient/harness.py`; build_catalogue `measurement: gradient` records (Pulse-valid; gradient block; hazard limitation); `scripts/imaging/mge/gradient_breakdown.py` pilot (CI smoke); timing-audit row C13.
+- Next: 6b (#507, PR #508), 6c compute, 6d ingest + hazards.
+
+## Original prompt
+
 # Likelihood lifecycle phase 6a: gradient harness, catalogue ingestion and the imaging/mge pilot
 
 Type: research
