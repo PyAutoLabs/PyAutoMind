@@ -1,3 +1,13 @@
+Likelihood lifecycle phase 3, day-zero write 2/4: the day_zero baseline is stamped and Pulse holds a frozen day_zero snapshot.
+
+- Merged: https://github.com/PyAutoLabs/autolens_profiling/pull/500 (`e4811a2`, 2026-11-01, human /prm; lint green on `0ecee87`) and https://github.com/PyAutoLabs/PyAutoPulse/pull/85 (`60d5a96`, 2026-11-01, human /prm; lint + dashboard refresh green on `fccedc2`). Issue https://github.com/PyAutoLabs/autolens_profiling/issues/499 closed. Heart RED development override invoked by the human 2026-11-01.
+- Human rulings 2026-11-01 (AskUserQuestion): stamp the tag only (`2026.10.25.1`); include the held datacube/delaunay A100 group; the Pulse snapshot is the stamped records + planned_cells + a manifest, not a full copy.
+- autolens_profiling: `catalogue/day_zero.json` (schema day-zero v1: tag, §3.6 rule, frozen against `8c40e7d` and the Pulse designations `bcaf6b86`). build_catalogue stamps every current record of a cell that is optimal/secondary, standard regime, on a reference host, on the tag, with a parity match and a fit figure; validate_lifecycle refuses a stamp off the rule. 480 records over 116 cells; all 39 designations have a stamped current optimal; 20 held rows included; nothing re-measured.
+- PyAutoPulse: `pulse/freeze.py` + `pyauto-pulse freeze --instance K --label day_zero --commit <sha>` (stamped records + planned_cells + manifest; never rewritten); `check` verifies frozen snapshots offline; v3 rule: day_zero only on a current record. `snapshots/day_zero/lens.json` frozen from autolens_profiling `e4811a2`: 480 records, 116 cells, 39 decision_ids resolved.
+- Next: day-zero write 3/4 — `wiki/campaigns/<dataset_type>/<variant>/day_zero.md` rule pages.
+
+## Original prompt
+
 # Likelihood lifecycle phase 3, day-zero write 2/4: stamp day_zero and freeze the Pulse day_zero snapshot
 
 Type: research
