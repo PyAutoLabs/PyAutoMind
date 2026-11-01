@@ -14,7 +14,7 @@
 | [Planned](#planned) | 9 |
 | [Backlog](#backlog) | 280 |
 | [Recent](#recent) | 50 |
-| [Pending release](#pending-release) | 5 |
+| [Pending release](#pending-release) | 0 |
 
 ## Start here
 
@@ -969,7 +969,7 @@ Use the start-dev skill. active/likelihood_lifecycle_p6c_gradient_runs.md
 
 </details>
 
-<details><summary>📋 <a href="active/magnification_errors_source_science.md">Magnification errors from posterior draws in every source_science.py (arc phase 7b)</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/610">issue #610</a> — issued 2026-10-31 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1751">PyAutoFit#1751</a> — ⏳ pending release: PyAutoFit</summary>
+<details><summary>📋 <a href="active/magnification_errors_source_science.md">Magnification errors from posterior draws in every source_science.py (arc phase 7b)</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/610">issue #610</a> — issued 2026-10-31 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1751">PyAutoFit#1751</a></summary>
 
 ```
 Use the start-dev skill. active/magnification_errors_source_science.md
@@ -3119,43 +3119,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 ## Pending release
 
-**PyAutoArray**
-
-- [PyAutoArray#668](https://github.com/PyAutoLabs/PyAutoArray/pull/668) — `complete/2026/10/adaptive-rect-mesh-node-positions.md`
-- [PyAutoArray#664](https://github.com/PyAutoLabs/PyAutoArray/pull/664) — `complete/2026/10/mesh-magnification-areas.md`
-- [PyAutoArray#666](https://github.com/PyAutoLabs/PyAutoArray/pull/666) — `complete/2026/10/mesh-magnification-knn-areas.md`
-- [PyAutoArray#670](https://github.com/PyAutoLabs/PyAutoArray/pull/670) — `complete/2026/11/one-line-auto-simulate-helper.md`
-
-**PyAutoFit**
-
-- [PyAutoFit#1751](https://github.com/PyAutoLabs/PyAutoFit/pull/1751) — `active/magnification_errors_source_science.md`
-- [PyAutoFit#1750](https://github.com/PyAutoLabs/PyAutoFit/pull/1750) — `complete/2026/10/campaign-task-records-wait-loop.md`
-- [PyAutoFit#1738](https://github.com/PyAutoLabs/PyAutoFit/pull/1738) — `complete/2026/10/hpc-campaign-p1-status-record.md`
-- [PyAutoFit#1741](https://github.com/PyAutoLabs/PyAutoFit/pull/1741) — `complete/2026/10/hpc-campaign-p2-campaign-core.md`
-- [PyAutoFit#1742](https://github.com/PyAutoLabs/PyAutoFit/pull/1742) — `complete/2026/10/hpc-campaign-p2-campaign-core.md`
-- [PyAutoFit#1747](https://github.com/PyAutoLabs/PyAutoFit/pull/1747) — `complete/2026/10/hpc-campaign-p3-plan-evidence.md`
-- [PyAutoFit#1748](https://github.com/PyAutoLabs/PyAutoFit/pull/1748) — `complete/2026/10/hpc-campaign-p4-carbon-report.md`
-- [PyAutoFit#1736](https://github.com/PyAutoLabs/PyAutoFit/pull/1736) — `complete/2026/10/results-library-p0-integrity.md`
-- [PyAutoFit#1737](https://github.com/PyAutoLabs/PyAutoFit/pull/1737) — `complete/2026/10/results-library-p0-integrity.md`
-- [PyAutoFit#1743](https://github.com/PyAutoLabs/PyAutoFit/pull/1743) — `complete/2026/10/results-library-p1-index.md`
-- [PyAutoFit#1744](https://github.com/PyAutoLabs/PyAutoFit/pull/1744) — `complete/2026/10/results-library-p1-index.md`
-
-**PyAutoGalaxy**
-
-- [PyAutoGalaxy#685](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/685) — `complete/2026/10/area-magnification-lenscalc.md`
-- [PyAutoGalaxy#687](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/687) — `complete/2026/10/area-magnification-subpixel-area.md`
-- [PyAutoGalaxy#683](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/683) — `complete/2026/10/chameleon-analytic-potential.md`
-- [PyAutoGalaxy#681](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/681) — `complete/2026/10/lmp-gaussian-potential-fast.md`
-
-**PyAutoLens**
-
-- [PyAutoLens#811](https://github.com/PyAutoLabs/PyAutoLens/pull/811) — `complete/2026/10/lenstwin-p4a-twin-fit-model.md`
-- [PyAutoLens#813](https://github.com/PyAutoLabs/PyAutoLens/pull/813) — `complete/2026/10/magnification-latent-raw-flux.md`
-
-**PyAutoNerves**
-
-- [PyAutoNerves#207](https://github.com/PyAutoLabs/PyAutoNerves/pull/207) — `complete/2026/10/hpc-campaign-p1-status-record.md`
-- [PyAutoNerves#209](https://github.com/PyAutoLabs/PyAutoNerves/pull/209) — `complete/2026/10/hpc-campaign-p4-carbon-report.md`
+_(nothing pending release)_
 
 
 Boards: [organism](https://pyautolabs.github.io/PyAutoScientist/) · [brain](https://pyautolabs.github.io/PyAutoBrain/) · [cortex](https://pyautolabs.github.io/PyAutoCortex/) · [memory](https://pyautolabs.github.io/PyAutoMemory/) · [eyes](https://pyautolabs.github.io/PyAutoEyes/) · [ears](https://pyautolabs.github.io/PyAutoEars/) · [heart](https://pyautolabs.github.io/PyAutoHeart/) · [hands](https://pyautolabs.github.io/PyAutoHands/) · [pulse](https://pyautolabs.github.io/PyAutoPulse/) · [insight](https://pyautolabs.github.io/PyAutoInsight/) · [dna](https://pyautolabs.github.io/PyAutoDNA/) · [nerves](https://pyautolabs.github.io/PyAutoNerves/) · [broca](https://pyautolabs.github.io/PyAutoBroca/) · [gut](https://pyautolabs.github.io/PyAutoGut/)

@@ -3,8 +3,6 @@
 - completed: 2026-10-30
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1748
 - library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/209
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1748
-- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/209
 - epic: hpc-campaign (phase 4; ledger draft/research/autofit/hpc_campaign_epic.md)
 - summary: `autofit/campaign/carbon.py` — Green Algorithms estimate, four cases (low / central usage basis /
   allocation u=1 / high), ranges from site low/high, CI bounds = spread across bases (F6), successful vs

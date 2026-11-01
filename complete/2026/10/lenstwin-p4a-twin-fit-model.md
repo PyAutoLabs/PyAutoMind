@@ -1,7 +1,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/810
 - completed: 2026-10-29
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/811
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/811
 - epic: lenstwin (phase 4a; ledger draft/feature/autolens/lenstwin_epic.md)
 - summary: Merge bf18d5c (human lifted the draft HOLD 2026-10-29). `al.twins.stellar_dark_model_from(twin, galaxy=None, *, source_model, free_scale_radius=True, free_inner_slope=None, free_shear=True, priors=None)` builds the no-misspecification af.Collection from the last ReplaceTotalMassWithStellarPlusDark record (lmp.Gaussian basis, fixed geometry + intensities, one tied M/L; dark on the light centre, free kappa_s/scale_radius, gNFW inner_slope; MassField shear layout as DR1; other galaxies fixed). `truth_paths_from`, `DEFAULT_PRIORS` (never truth-derived), `recovery_table_from(samples, truth, sigma=3)` → RecoveryTable (all_inside, to_csv). Also fixed `keep_shear=False` for shear held inside a MassField field (49c365504).
 - tests: twins 56 passed; full suite 1013 passed / 1 xfailed; CI green on 49c365504 (3.12, 3.13, nojax, docs).

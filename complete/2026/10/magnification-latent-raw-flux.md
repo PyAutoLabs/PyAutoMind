@@ -1,6 +1,5 @@
 # Magnification latent from raw fluxes, no magzero (arc phase 7a)
 
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/813
 
 Issue PyAutoLens#812 → PyAutoLens#813 + autolens_workspace#609 merged 2026-10-30. Epic `cluster-strong-lensing`, phase 7a.
 `magnification` latent = `total_lensed_source_flux / total_source_flux` (was the µJy ratio, NaN without `magzero`);

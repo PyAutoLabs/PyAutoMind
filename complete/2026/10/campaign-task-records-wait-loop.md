@@ -2,7 +2,6 @@
 
 Merged 2026-10-31: PyAutoFit#1750 (issue PyAutoFit#1749). hpc-campaign phase 5a follow-up. Tier judge, human /prm, under the Heart RED development override the human extended on 2026-10-31.
 
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1750
 
 ## What shipped
 - `autofit/results/index.py`: `CAMPAIGN_TASKS_DIRNAME = ".campaign_tasks"` is added to `_SKIP_DIRS`, so the pending/failed task records the assistant template's `hpc/batch_cpu/stage` writes are no longer phantom results. The campaign collector (`scan_status`) walks for them itself.

@@ -3,7 +3,6 @@
 - completed: 2026-11-01
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/670
 - library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/329
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/670
 
 - Scope shipped: phases 1–2 only. Phase 3 (workspace sweep) re-filed as `draft/feature/workspaces/simulate_if_needed_workspace_sweep.md`, which waits for the PyAutoArray release carrying #670.
 - PyAutoArray#670 (merge `c7da8b0f`): `simulate_if_needed(dataset_path, simulator)` in `autoarray/util/dataset_util.py`. Subprocess (`sys.executable`, `check=True`), not runpy; str or Path; returns whether the simulator ran. `should_simulate` docstring example points at it. Tests mock `subprocess.run`; `test_autoarray/util` 148 passed; CI 3/3 legs green.

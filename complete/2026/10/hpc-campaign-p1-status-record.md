@@ -5,8 +5,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1738
 - library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/207
 - workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/179
-- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/207
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1738
 - epic: hpc-campaign (phase 1; ledger draft/research/autofit/hpc_campaign_epic.md)
 - summary: Per-fit status record in new `autofit/non_linear/status/`: `states.py` (RunState,
   FailureClass, Product — the shared vocabulary), atomic `<output_path>.status.json` (≤2 KB, cadence
