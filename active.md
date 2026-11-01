@@ -86,3 +86,17 @@
 - repos:
   - HowToLens: feature/howto-chapter2-format
   - HowToGalaxy: feature/howto-chapter2-format
+
+## simulate-if-needed-workspace-sweep
+- issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/268
+- issued: 2026-11-01
+- session: claude-code remote (cloud), https://claude.ai/code/session_016nhQ8NyQo2s3YUk8eUrrB3
+- location: cloud session clones (no local task worktree)
+- status: workspace-dev
+- repos:
+  - autogalaxy_workspace: claude/pyautoarray-simulate-helper-yuqd16
+  - autolens_workspace_test: claude/pyautoarray-simulate-helper-yuqd16
+  - autogalaxy_workspace_test: claude/pyautoarray-simulate-helper-yuqd16
+- prompt: active/simulate_if_needed_workspace_sweep.md
+- tier: glance — merge mode: human /prm, after the PyAutoArray release carrying PyAutoArray#670
+- blocked-repos: autolens_workspace (held by magnification-errors-source-science), HowToLens + HowToGalaxy (held by howto-chapter2-format), euclid_strong_lens_modeling_pipeline (sky-orientation-p2), autolens_profiling (likelihood-lifecycle-p6c-gradient-walls) — sweep each once its claim is released
