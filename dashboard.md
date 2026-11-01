@@ -961,7 +961,7 @@ Use the start-dev skill. active/hpc_campaign_p5a_assistant.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p3_day_zero_stamp.md">Likelihood lifecycle phase 3, day-zero write 2/4: stamp day_zero and freeze…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/499">issue #499</a> — issued 2026-11-01 — workspace-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p3_day_zero_stamp.md">Likelihood lifecycle phase 3, day-zero write 2/4: stamp day_zero and freeze…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/499">issue #499</a> — issued 2026-11-01 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/500">autolens_profiling#500</a>, <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/85">PyAutoPulse#85</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p3_day_zero_stamp.md
