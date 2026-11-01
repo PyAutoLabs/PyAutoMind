@@ -1,6 +1,5 @@
 Source & Cluster arc phase 4a — mesh magnification areas: per-mesh correctness tests plus an integration check against simulator truth, with two library fixes.
 
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/664
 
 ## Shipped
 - PyAutoArray#664 (merge `7fb38053`, closes #659):

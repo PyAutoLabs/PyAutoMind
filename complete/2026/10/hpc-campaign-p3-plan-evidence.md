@@ -1,7 +1,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1745
 - completed: 2026-10-30
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1747
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1747
 - epic: hpc-campaign (phase 3; ledger draft/research/autofit/hpc_campaign_epic.md)
 - summary: `autofit/campaign/evidence.py` (readers for profiling-summary@3, walltime-validation@1,
   inference-summary@2 by path/URL; opaque stage keys under `evidence:`; grades measured-current / provisional /

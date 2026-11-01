@@ -2,8 +2,6 @@
 - completed: 2026-10-30
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1743
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1744
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1743
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1744
 - epic: results-library (phase 1; ledger draft/feature/autofit/results_library_epic.md)
 - summary: **1a (#1743):** `ResultState` in the shared status vocabulary; `autofit/results/` — ResultsIndex (per-result
   JSON records as truth, incremental on a stat fingerprint, `--index-dir` for read-only trees, superseded siblings

@@ -2,8 +2,6 @@
 - completed: 2026-10-30
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1741
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1742
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1741
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1742
 - epic: hpc-campaign (phase 2; ledger draft/research/autofit/hpc_campaign_epic.md)
 - summary: New `autofit/campaign/` (stdlib + PyYAML, no Slurm at import). **2a (#1741):** `campaign.yaml`
   loader/validator (stages, manifest chunks ≤ site max_array_size, --mem-per-cpu, aftercorr deps, success

@@ -1,6 +1,5 @@
 Source & Cluster arc phase 4b — exact magnification areas for the kNN meshes.
 
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/666
 
 ## Shipped
 - PyAutoArray#666 (merge `e71feafd`, closes #665): new `MeshGeometryKNearestNeighbor`, built by the kNN interpolators.
