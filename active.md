@@ -99,4 +99,8 @@
   - autogalaxy_workspace_test: claude/pyautoarray-simulate-helper-yuqd16
 - prompt: active/simulate_if_needed_workspace_sweep.md
 - tier: glance — merge mode: human /prm, after the PyAutoArray release carrying PyAutoArray#670
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/269
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/353
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/132
+- resume: 2026-11-01 — 3 sweep PRs open (193 blocks; guard counts unchanged; smoke sample green where the env allows). Merge after the PyAutoArray release; then sweep blocked-repos as their claims release
 - blocked-repos: autolens_workspace (held by magnification-errors-source-science), HowToLens + HowToGalaxy (held by howto-chapter2-format), euclid_strong_lens_modeling_pipeline (sky-orientation-p2), autolens_profiling (likelihood-lifecycle-p6c-gradient-walls) — sweep each once its claim is released
