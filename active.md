@@ -63,21 +63,6 @@
 - heart-red-override: authorized live by the human 2026-10-31 ("override heart red, go ahead with 7b"); RED reasons quoted on the issue; development only
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
 
-## likelihood-lifecycle-p6a-gradient-harness
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/505
-- issued: 2026-11-01
-- session: claude-code remote (cloud), session_016nhQ8Q82zpcg2VRk8i7QvL
-- location: cloud container clone /home/user/autolens_profiling
-- status: workspace-dev
-- repos:
-  - autolens_profiling: claude/awesome-rubin-ejb234
-- prompt: active/likelihood_lifecycle_p6a_gradient_harness.md
-- epic: likelihood-lifecycle (phase 6a)
-- heart-red-override: authorized by the human 2026-11-01 ("Override + create issue") for phase 6a; development only, merge via /prm
-- tier: judge — merge mode: human /prm
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/506
-- resume: 2026-11-01 — PR #506 open (ab2aacb); awaiting CI and the human's /prm. Then 6b (gradient_breakdown.py for the other 19 likelihoods + gradient_p6.py campaign generator).
-
 ## likelihood-lifecycle-p6b-gradient-scripts
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/507
 - issued: 2026-11-01
@@ -85,8 +70,10 @@
 - location: cloud container clone /home/user/autolens_profiling
 - status: workspace-dev
 - repos:
-  - autolens_profiling: claude/awesome-rubin-ejb234 (local commits; pushed after #506 merges)
+  - autolens_profiling: claude/awesome-rubin-ejb234
 - prompt: active/likelihood_lifecycle_p6b_gradient_scripts.md
 - epic: likelihood-lifecycle (phase 6b)
 - heart-red-override: authorized by the human 2026-11-01 ("Override + create issue") for phase 6b; development only, merge via /prm
 - tier: judge — merge mode: human /prm
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/508
+- resume: 2026-11-01 — #506 merged (6a); 6b rebased and opened as PR #508 (4385ce6); awaiting CI and the human's /prm. Then 6c: run the 14 gradient_p6 submits (human go; RAL-capable session).
