@@ -16,6 +16,8 @@ Autonomy: supervised
 Priority: normal
 Memory: wiki/lensing/sources/dark-matter-substructure.md; reading-queue.md; wiki/galaxies/sources/massive-ellipticals.md
 Status: formalised
+Issued: 2026-11-01
+Issue: https://github.com/PyAutoLabs/PyAutoArray/issues/669
 Consequence: glance
 Witness: after the sweep, `grep -rn "subprocess.run" --include=*.py` next to `should_simulate` returns zero hits in every workspace, and `check_dataset_allowlist` reports the same number of guarded call sites before and after.
 Review-minutes: 3

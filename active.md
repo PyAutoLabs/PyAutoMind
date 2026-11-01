@@ -75,3 +75,18 @@
 - epic: likelihood-lifecycle (phase 6c)
 - compute: RAL submit checkout /mnt/ral/jnightin/profiling/autolens_profiling_p2dg @ 97cdc88; human go per batch (batch 0 probe: go given 2026-11-01)
 - tier: judge — merge mode: human /prm
+
+## one-line-auto-simulate-helper
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/669
+- issued: 2026-11-01
+- session: claude-code remote (cloud), https://claude.ai/code/session_016nhQ8NyQo2s3YUk8eUrrB3
+- location: cloud session clones (no local task worktree)
+- status: library-dev
+- repos:
+  - PyAutoArray: claude/pyautoarray-simulate-helper-yuqd16
+  - PyAutoHands: claude/pyautoarray-simulate-helper-yuqd16
+- prompt: active/one_line_auto_simulate_helper_al_util.md
+- tier: glance — merge mode: human /prm (phases 1–2; Witness only applies after the phase 3 sweep)
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/670
+- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/329
+- resume: 2026-11-01 — phases 1 (PyAutoArray helper) and 2 (PyAutoHands guard) done, PRs open for human /prm; phase 3 (workspace sweep, one PR per repo) waits for the PyAutoArray release
