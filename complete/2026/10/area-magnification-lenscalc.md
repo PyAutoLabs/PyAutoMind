@@ -1,6 +1,5 @@
 # LEGGOS area magnification on LensCalc (arc phase 6a)
 
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/685
 
 Issue PyAutoGalaxy#684 → PR PyAutoGalaxy#685 merged 2026-10-30. Epic `cluster-strong-lensing`, phase 6a (parent
 `draft/feature/autolens/area_magnification_leggos.md`).

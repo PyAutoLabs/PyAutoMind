@@ -1,6 +1,5 @@
 # Adaptive rectangular meshes report their true pixel centres
 
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/668
 
 Issue PyAutoArray#667 → PR PyAutoArray#668 merged 2026-10-30 (`8ce5baeb`). Epic `cluster-strong-lensing`, arc
 phase 4e blocker (autolens_workspace#605 resumes on top).

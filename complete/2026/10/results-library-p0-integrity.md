@@ -4,8 +4,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1736
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1737
 - workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/112
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1736
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1737
 - epic: results-library (phase 0, shared with hpc-campaign as its phase 0 #A; ledger draft/feature/autofit/results_library_epic.md)
 - summary: Phase 0 of results-library in two PRs. **0a artefact integrity (#1736):** `zip_directory`
   writes a temp file then `os.replace` (zip complete or absent; png/fits/hdf5 ZIP_STORED);

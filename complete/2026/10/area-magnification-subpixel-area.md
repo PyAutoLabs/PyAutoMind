@@ -1,6 +1,5 @@
 # Area magnification sub-pixel area follows the generated sub-pixels (arc 6a follow-up)
 
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/687
 
 Issue PyAutoGalaxy#686 → PR PyAutoGalaxy#687 merged 2026-10-30. Found by arc phase 6b smoke: `LensCalc`
 `source_plane_area_from` assumed `sub_size**2` sub-pixels per pixel, but `Grid2D.from_mask` caps over-sampling to 2
