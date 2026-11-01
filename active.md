@@ -126,8 +126,10 @@
 - issued: 2026-11-01
 - session: claude-code remote (cloud), https://claude.ai/code/session_016nhQ8QAki1rcqoS951ubcu
 - location: cloud session clone (no local task worktree)
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - repos:
   - PyAutoHeart: feature/heart-rehearsal-clock-skew
 - prompt: active/cloud_validation_rehearsal_clock_skew.md
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
+- heart-ack: STALE acknowledged live by the human 2026-11-01 ("Acknowledge, ship"): "release validation incomplete: no rehearsal for current source" — the reason this fix addresses
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/322
