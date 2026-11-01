@@ -11,6 +11,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: high
 Status: issued
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/505
 Consequence: judge
 Witness: scripts/imaging/mge/gradient_breakdown.py runs on CPU in CI and writes results/imaging/mge/<instrument>/jax_cpu_dense_fp64/<host>/gradient.json with forward and value_and_grad per call (single and vmap), grad compile time, grad_over_forward and the pre-registered FD check; build_catalogue turns a gradient.json into a measurement: gradient record (Pulse-valid) carrying the FD status and a hazard flag when grad/forward > 4 or FD fails; tests cover the harness, the FD rule and ingestion
 Review-minutes: 30

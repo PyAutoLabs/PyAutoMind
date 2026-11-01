@@ -86,3 +86,16 @@
 - approval: approved blocks and both Chapter 3 adaptations; explicit Heart RED implementation/validation override
 - conflict-exception: human authorized separate Chapter 3 worktree alongside howtogalaxy-chapter2; no Chapter 2 edits
 - tier: judge — merge mode: human /prm
+
+## likelihood-lifecycle-p6a-gradient-harness
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/505
+- issued: 2026-11-01
+- session: claude-code remote (cloud), session_016nhQ8Q82zpcg2VRk8i7QvL
+- location: cloud container clone /home/user/autolens_profiling
+- status: workspace-dev
+- repos:
+  - autolens_profiling: claude/awesome-rubin-ejb234
+- prompt: active/likelihood_lifecycle_p6a_gradient_harness.md
+- epic: likelihood-lifecycle (phase 6a)
+- heart-red-override: authorized by the human 2026-11-01 ("Override + create issue") for phase 6a; development only, merge via /prm
+- tier: judge — merge mode: human /prm
