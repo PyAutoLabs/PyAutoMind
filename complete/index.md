@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2084 records across 11 buckets.
+2085 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -121,6 +121,7 @@ markers; everything below GENERATED is rebuilt.
 
 ## 2026/11
 
+- [howtolens-chapter2](2026/11/howtolens-chapter2.md) — Applied approved tutorials 1–4, optional Prodigy introduction, notebook generation and navigation. Later Chapt…
 - [likelihood-lifecycle-p3-day-zero-pages](2026/11/likelihood-lifecycle-p3-day-zero-pages.md)
 - [likelihood-lifecycle-p3-day-zero-stamp](2026/11/likelihood-lifecycle-p3-day-zero-stamp.md)
 - [likelihood-lifecycle-p3-setup-baseline-close](2026/11/likelihood-lifecycle-p3-setup-baseline-close.md)
