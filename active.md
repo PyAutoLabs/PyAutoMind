@@ -76,17 +76,6 @@
 - compute: RAL submit checkout /mnt/ral/jnightin/profiling/autolens_profiling_p2dg @ 97cdc88; human go per batch (batch 0 probe: go given 2026-11-01)
 - tier: judge — merge mode: human /prm
 
-## howto-chapter2-format
-- issue: https://github.com/PyAutoLabs/HowToLens/issues/116
-- issued: 2026-11-01
-- prompt: active/howto-chapter2-format.md
-- session: codex 01a197a6-fbee-7b52-94d9-c5f72b126a44
-- status: workspace-dev
-- worktree: /home/jammy/Code/PyAutoLabs-wt/howto-chapter2-format
-- repos:
-  - HowToLens: feature/howto-chapter2-format
-  - HowToGalaxy: feature/howto-chapter2-format
-
 ## simulate-if-needed-workspace-sweep
 - issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/268
 - issued: 2026-11-01
