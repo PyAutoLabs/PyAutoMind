@@ -10,7 +10,8 @@ Themes:
 Difficulty: easy
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: active
+Issued: 2026-11-01
 Consequence: glance
 Witness: a `heart/checks/cloud_validation.collect()` test with injected `fetch`/`get_artifact` reproduces run 41290559836's timestamps (`created_at` 09:50:55Z, `updated_at` 09:09:27Z) against an integrate starting 09:09:36Z: it matches the rehearsal (`rehearsal_matched: true`) and the report is not stamped later than the integrate start; a rehearsal whose jobs genuinely completed after the integrate started is still rejected.
 Review-minutes: 10

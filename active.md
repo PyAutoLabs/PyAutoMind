@@ -120,3 +120,14 @@
 - merge-authorization: User requested PR, prm, merge and local pull in this session.
 - resume: Source formatting complete in task worktree; 14 scripts preserve executable AST and paragraph words. Joined 46 adjacent narrative boundaries. PyAutoHands generation passed Lens 44/44 and Galaxy 29/29; notebook cell checks, navigator, completeness and search-memory checks passed. No PR yet.
 - blocker: Fresh Heart RED at 2026-11-01T16:53:05Z: PyAutoArray, PyAutoGalaxy and PyAutoLens each 2 commits behind origin. Canonical checkouts clean on main. Shipping paused per ship_workspace; no source commits or merge performed.
+
+## cloud-validation-rehearsal-clock-skew
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/321
+- issued: 2026-11-01
+- session: claude-code remote (cloud), https://claude.ai/code/session_016nhQ8QAki1rcqoS951ubcu
+- location: cloud session clone (no local task worktree)
+- status: library-dev
+- repos:
+  - PyAutoHeart: feature/heart-rehearsal-clock-skew
+- prompt: active/cloud_validation_rehearsal_clock_skew.md
+- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
