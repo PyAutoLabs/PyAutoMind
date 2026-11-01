@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-11-01T15:48:38Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
+  "updated": "2026-11-01T16:01:43Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -35,6 +35,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#666 \u2014 Shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/666",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#670 \u2014 one-line-auto-simulate-helper",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/670",
       "prompt": null
     },
     {
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#683 \u2014 chameleon-analytic-potential",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/683",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#681 \u2014 lmp-gaussian-potential-fast",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/681",
       "prompt": null
     }
   ]

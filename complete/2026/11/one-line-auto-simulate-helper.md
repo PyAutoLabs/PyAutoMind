@@ -1,3 +1,19 @@
+## one-line-auto-simulate-helper
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/669
+- completed: 2026-11-01
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/670
+- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/329
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/670
+
+- Scope shipped: phases 1–2 only. Phase 3 (workspace sweep) re-filed as `draft/feature/workspaces/simulate_if_needed_workspace_sweep.md`, which waits for the PyAutoArray release carrying #670.
+- PyAutoArray#670 (merge `c7da8b0f`): `simulate_if_needed(dataset_path, simulator)` in `autoarray/util/dataset_util.py`. Subprocess (`sys.executable`, `check=True`), not runpy; str or Path; returns whether the simulator ran. `should_simulate` docstring example points at it. Tests mock `subprocess.run`; `test_autoarray/util` 148 passed; CI 3/3 legs green.
+- PyAutoHands#329 (merge `70f87b47`): `check_dataset_allowlist` leg 2 matches `DELETING_CALLS = ("should_simulate", "simulate_if_needed")`, taking the first positional argument or the `dataset_path=` keyword. 4 new tests; CI 3/3 legs green.
+- Trap: PyAutoHands CI runs the tenant-firewall check (`repos_sync.py --check --only "tenant firewall (organ code)"`). Naming a library repo (`PyAutoArray`) in an organ code comment fails it, even though all tests pass. Run it locally before pushing organ code.
+- Process note: the PRs were opened directly from the cloud session rather than via `/ship_library`. The `pending-release` label and Mind link on #670 were added at `/prm` close-out.
+- Unverified: `al.`/`ag.util.dataset` re-export of the helper was assumed from the existing `al.util.dataset.should_simulate` usage, not checked in PyAutoGalaxy/PyAutoLens. Check it in the phase 3 sweep.
+
+## Original prompt
+
 # One-line auto-simulate helper: al.util.dataset.simulate_if_needed
 
 Type: feature
