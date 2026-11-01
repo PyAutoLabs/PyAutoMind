@@ -22,6 +22,8 @@ Review-minutes: 3
 Unattended: needs-slicing
 Blocked-by: PyAutoArray release carrying https://github.com/PyAutoLabs/PyAutoArray/pull/670 (pending-release)
 Filed: 2026-11-01
+Issued: 2026-11-01
+Issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/268
 
 - Status: split out of `one-line-auto-simulate-helper` at close-out. Phases 1–2 shipped in `complete/2026/11/one-line-auto-simulate-helper.md` (PyAutoArray#670, PyAutoHands#329); this is phase 3, what remains.
 

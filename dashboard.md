@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 19 |
-| [In flight](#in-flight) | 7 |
+| [In flight](#in-flight) | 8 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 281 |
+| [Backlog](#backlog) | 280 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -1001,6 +1001,14 @@ Use the start-dev skill. active/r2_pages_function_access.md
 
 </details>
 
+<details><summary>📋 <a href="active/simulate_if_needed_workspace_sweep.md">Sweep workspaces onto al.util.dataset.simulate_if_needed (one PR per repo)</a> — <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/issues/268">issue #268</a> — issued 2026-11-01 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/simulate_if_needed_workspace_sweep.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/sky_orientation_euclid_dr1_and_library.md">Sky orientation (north/east): euclid_dr1 catalogue, paper and website, plus the PyAutoLens library-wide…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/115">issue #115</a> — issued 2026-10-31 — workspace-dev</summary>
 
 ```
@@ -1141,7 +1149,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 40</summary>
+<summary><b>feature</b> — 39</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
 
@@ -1331,14 +1339,6 @@ Use the start-dev skill. draft/feature/autolens_workspace/oversampled_psf_datase
 
 ```
 Use the start-dev skill. draft/feature/workspaces/restore_multiple_sources_lensing_of_lens.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/workspaces/simulate_if_needed_workspace_sweep.md">Sweep workspaces onto al.util.dataset.simulate_if_needed (one PR per repo)</a> — workspaces · large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/workspaces/simulate_if_needed_workspace_sweep.md
 ```
 
 </details>
@@ -2893,7 +2893,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-01 | filed | <a href="draft/feature/workspaces/simulate_if_needed_workspace_sweep.md">Sweep workspaces onto al.util.dataset.simulate_if_needed (one PR per…</a> |
+| 2026-11-01 | issued | <a href="active/simulate_if_needed_workspace_sweep.md">Sweep workspaces onto al.util.dataset.simulate_if_needed (one PR per…</a> |
 | 2026-11-01 | issued | <a href="active/likelihood_lifecycle_p6c_gradient_runs.md">Likelihood lifecycle phase 6c: run the gradient campaign on RAL…</a> |
 | 2026-11-01 | issued | <a href="active/howto-chapter2-format.md">Chapter 2 contents and formatting repair</a> |
 | 2026-10-31 | issued | <a href="active/sky_orientation_euclid_dr1_and_library.md">Sky orientation (north/east): euclid_dr1 catalogue, paper and…</a> |
