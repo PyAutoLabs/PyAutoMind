@@ -11,6 +11,7 @@ Difficulty: medium
 Autonomy: supervised
 Priority: high
 Status: issued
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/503
 Consequence: judge
 Witness: autolens_profiling baseline/campaign.json is the closed setup-baseline manifest superseded by day zero (old 1,044-slot draft archived; baseline_readiness.py retired); catalogue/runtime_estimates.yaml is exported from PyAutoPulse snapshots/day_zero/lens.json with a CI --check; a test asserts no optimal planned cell is not_measured; PyAutoPulse campaigns.yaml marks the setup-baseline campaign and task complete and the board shows no not_measured Optimal cell
 Review-minutes: 30

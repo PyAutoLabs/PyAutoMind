@@ -86,3 +86,17 @@
 - approval: approved blocks and both Chapter 3 adaptations; explicit Heart RED implementation/validation override
 - conflict-exception: human authorized separate Chapter 3 worktree alongside howtogalaxy-chapter2; no Chapter 2 edits
 - tier: judge — merge mode: human /prm
+
+## likelihood-lifecycle-p3-setup-baseline-close
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/503
+- issued: 2026-11-01
+- session: claude-code remote (cloud), session_016nhQ8Q82zpcg2VRk8i7QvL
+- location: cloud container clones /home/user/autolens_profiling, /home/user/pyautopulse
+- status: workspace-dev
+- repos:
+  - autolens_profiling: claude/awesome-rubin-ejb234
+  - PyAutoPulse: claude/awesome-rubin-ejb234
+- prompt: active/likelihood_lifecycle_p3_setup_baseline_close.md
+- epic: likelihood-lifecycle (phase 3, day-zero write 4/4)
+- heart-red-override: authorized by the human 2026-11-01 ("Override + create issue") for day-zero write 4/4; development only, merge via /prm
+- tier: judge — merge mode: human /prm (each PR)
