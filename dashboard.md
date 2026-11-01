@@ -961,7 +961,7 @@ Use the start-dev skill. active/hpc_campaign_p5a_assistant.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p6a_gradient_harness.md">Likelihood lifecycle phase 6a: gradient harness, catalogue ingestion and the imaging/mge pilot</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/505">issue #505</a> — issued 2026-11-01 — workspace-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p6a_gradient_harness.md">Likelihood lifecycle phase 6a: gradient harness, catalogue ingestion and the imaging/mge pilot</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/505">issue #505</a> — issued 2026-11-01 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/506">autolens_profiling#506</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p6a_gradient_harness.md
