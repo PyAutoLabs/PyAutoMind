@@ -12,7 +12,7 @@
 | [Epics](#epics) | 19 |
 | [In flight](#in-flight) | 7 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 279 |
+| [Backlog](#backlog) | 280 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 5 |
 
@@ -1141,7 +1141,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 39</summary>
+<summary><b>feature</b> — 40</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
 
@@ -1331,6 +1331,14 @@ Use the start-dev skill. draft/feature/autolens_workspace/oversampled_psf_datase
 
 ```
 Use the start-dev skill. draft/feature/workspaces/restore_multiple_sources_lensing_of_lens.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/one_line_auto_simulate_helper_al_util.md">One-line auto-simulate helper: al.util.dataset.simulate_if_needed</a> — autoarray · too-large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/autoarray/one_line_auto_simulate_helper_al_util.md
 ```
 
 </details>
