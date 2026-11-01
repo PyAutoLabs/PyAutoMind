@@ -99,3 +99,5 @@
 - epic: likelihood-lifecycle (phase 6a)
 - heart-red-override: authorized by the human 2026-11-01 ("Override + create issue") for phase 6a; development only, merge via /prm
 - tier: judge — merge mode: human /prm
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/506
+- resume: 2026-11-01 — PR #506 open (ab2aacb); awaiting CI and the human's /prm. Then 6b (gradient_breakdown.py for the other 19 likelihoods + gradient_p6.py campaign generator).
