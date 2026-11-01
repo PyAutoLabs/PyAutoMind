@@ -1,3 +1,14 @@
+## cloud-validation-rehearsal-clock-skew
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/321
+- completed: 2026-11-01
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/322
+- Found in a `/health` dashboard review. The board was STALE ("release validation incomplete: no rehearsal for current source") although integrate 41291876649 passed for v2026.11.1.1.dev85301. Cause: GitHub reported PyAutoHands rehearsal run 41290559836's `created_at` (09:50:55Z) an hour after its own `updated_at` (09:09:27Z) on US DST-end day, and `collect()`'s `created > integrate start` prefilter dropped it.
+- Fix: `_effective_created(run)` = min(created_at, updated_at); used for the prefilter and for the report timestamp. Identity checks and `matching_rehearsal`'s `produced <= start` guard unchanged.
+- Trap: GitHub run and job `started_at`/`created_at` can be skewed relative to `updated_at`/`completed_at`; order runs by completion stamps.
+- The live verdict clears only once a Heart Health tick re-collects. This merge does not itself refresh the board.
+
+## Original prompt
+
 # Cloud validation discards a matching rehearsal when GitHub reports a skewed run `created_at`
 
 Type: bug
