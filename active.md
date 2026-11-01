@@ -75,3 +75,14 @@
 - epic: likelihood-lifecycle (phase 6c)
 - compute: RAL submit checkout /mnt/ral/jnightin/profiling/autolens_profiling_p2dg @ 97cdc88; human go per batch (batch 0 probe: go given 2026-11-01)
 - tier: judge — merge mode: human /prm
+
+## howtolens-chapter2
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/113
+- issued: 2026-11-01
+- prompt: active/howtolens-chapter2.md
+- session: codex 01a197a6-fbee-7b52-94d9-c5f72b126a44
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/howtolens-chapter2
+- repos:
+  - HowToLens: feature/howtolens-chapter2
+- tier: judge — current chat authorizes PR and merge on green

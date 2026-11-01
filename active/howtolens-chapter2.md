@@ -1,3 +1,6 @@
+Issue: https://github.com/PyAutoLabs/HowToLens/issues/113
+Issued: 2026-11-01
+
 ## Overview
 Implement the human-reviewed HowToLens Chapter 2 tutorials 1–4 from the 2026-10-31 review. HowToGalaxy Chapter 2 and both Chapter 3 checkpoints are already merged.
 
