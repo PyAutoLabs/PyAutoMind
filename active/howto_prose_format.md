@@ -12,3 +12,8 @@ The user clarified the formatting plan in the same session; existing PR/merge/lo
 
 Issued: 2026-11-01
 Issue: https://github.com/PyAutoLabs/HowToLens/issues/119
+
+Recovery scope authorized 2026-11-01:
+> re add code when missing based onthe audit let me know when things are recovered
+
+Recover saved runtime comparison, missing overlays and weights plots, measured evidence comparisons and working Hilbert-driven mesh adaptation, plus compactness example inside existing tutorial8. Repair12 lost Galaxy notebook prose lines. Preserve intentional prose-only sections; no new lesson. Validate actual outputs and both notebook text/code preservation.
