@@ -1,3 +1,33 @@
+Arc phase 7b: every `source_science.py` script (imaging, interferometer, multi_galaxy, group × top-level /
+multi_gaussian_expansion / pixelization; 11 scripts) ends with a `__Magnification Errors__` section — a quick
+Nautilus fit with `PositionsLH`, 100 draws from the posterior, median and 68% interval of the source, point and area
+magnifications, as LEGGOS II report theirs.
+
+Shipped:
+- autolens_workspace#613 (`c0ea84c7`) — the 11 scripts, isothermal quick fits for the pixelization scripts,
+  `interferometer/simulator.py` high-resolution section writes `simple_high_resolution` (it overwrote `simple`),
+  regenerated navigator catalogue.
+- PyAutoFit#1751 (`e9d3c6a2`) — `draw_randomly_via_pdf` normalises sample weights; released in 2026.11.1.1.
+
+Results (full runs vs simulated truth):
+- imaging: fit ~10 min, ~2 s/draw, errors 1–2%, truth within or just outside the intervals.
+- imaging pixelization (isothermal): mesh μ 30.6 ± 1% vs truth 34.9 (the true model's mesh μ is 30.9, so the −12%
+  offset is the mesh reconstruction); point μ ~13% low. PowerLaw quick fit: slope ~2.2, μ ~40% low.
+- interferometer: fit ~9 min, 1.3 s/draw; area μ within 1% of truth; source μ 7.85 vs 7.26 (+8%, outside errors).
+- Prose states the errors are statistical only (human ruling 2026-11-02).
+
+Scope change (human, 2026-11-02): "end to end runs ... testing overkill" — the multi_galaxy, group and
+interferometer pixelization full runs were stopped/not run (multi_galaxy still exploring after ~9 h). Those 7 scripts
+describe how to read the errors without measured numbers; all 11 pass smoke locally and in CI.
+
+Follow-ups filed (Mind 3a220445):
+- draft/bug/autogalaxy/area_magnification_critical_curve_fragments.md
+- draft/docs/autolens_workspace/source_science_multi_galaxy_group_quick_fits_slow.md
+
+Full-run outputs and logs: Science/scratch/arc_phase7b_full_runs_2026-11-02/.
+
+## Original prompt
+
 # Magnification errors from posterior draws in every source_science.py (arc phase 7b)
 
 Type: feature

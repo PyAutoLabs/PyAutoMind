@@ -19,7 +19,7 @@ Unattended: no
 
 > yes go ahead and file both
 
-(Found in arc phase 7b, autolens_workspace branch feature/magnification-errors-source-science.)
+(Found in arc phase 7b; record complete/2026/11/magnification-errors-source-science.md, merged in autolens_workspace#613.)
 
 ## Problem
 

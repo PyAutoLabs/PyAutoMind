@@ -505,7 +505,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 67 (stage 1: 67, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — the pre-registered decision is due
+Count toward 20: 68 (stage 1: 68, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — the pre-registered decision is due
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -601,3 +601,4 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-11-01 | one-line-auto-simulate-helper (PyAutoArray#670 / PyAutoHands#329) | glance | tests PyAutoArray util 148 passed + CI 3/3 legs, PyAutoHands CI 3/3 legs (569 passed); smoke n/a (no workspace change); review none (no independent review); heart GREY unreachable; witness n/a (applies after phase 3 sweep) | merged-unchanged | 1 |
 | 2026-11-01 | cloud-validation-rehearsal-clock-skew (PyAutoHeart#322) | glance | tests 1313 passed + CI 2/2 legs; smoke n/a (Heart infrastructure); review none (no independent review); heart STALE ack'd (the reason fixed); witness PASS (run 41290559836 regression test) | merged-unchanged | 1 |
 | 2026-11-01 | simulate-if-needed-workspace-sweep (autolens_workspace#612 / autogalaxy_workspace#269 / autolens_workspace_test#353 / autocti_workspace#39 / autogalaxy_workspace_test#132 / HowToLens#120 / HowToGalaxy#99 / euclid_strong_lens_modeling_pipeline#118 / PyAutoBrain#549) | glance | CI green all 9 PRs (euclid smoke leg skipped by path filter on a test-only change; unit legs green); static: black-exact + compile + size guard; guard call-site counts unchanged; local smoke samples green where env allowed; review none; heart GREY unreachable; witness PASS | merged-unchanged | 1 |
+| 2026-11-02 | magnification-errors-source-science (autolens_workspace#613 / PyAutoFit#1751) | glance | tests CI 8/8 legs (navigator 4, smoke 3.12+3.13, size-guard); smoke 11/11 local; review none (no independent review); heart STALE ack'd (task under human RED override 2026-10-31); witness PARTIAL (full-mode truth check 4/11, rest waived by human 2026-11-02) | merged-unchanged | 1 |

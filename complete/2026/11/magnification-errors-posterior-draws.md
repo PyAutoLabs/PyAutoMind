@@ -1,3 +1,13 @@
+Arc phase 7 (magnification errors from posterior draws) COMPLETE, in two slices:
+- 7a: magnification latent from raw fluxes, no magzero, default off (PyAutoLens#813, autolens_workspace#609) —
+  record complete/2026/10/magnification-latent-raw-flux.md.
+- 7b: magnification errors section in all 11 source_science.py scripts (autolens_workspace#613, PyAutoFit#1751) —
+  record complete/2026/11/magnification-errors-source-science.md.
+Follow-ups: draft/bug/autogalaxy/area_magnification_critical_curve_fragments.md,
+draft/docs/autolens_workspace/source_science_multi_galaxy_group_quick_fits_slow.md.
+
+## Original prompt
+
 # Magnification errors via posterior draws, standalone in source_science
 
 Type: feature

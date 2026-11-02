@@ -83,7 +83,7 @@ No next-phase issue is opened by this reorganisation.
 6. **SHIPPED 2026-10-30** (record `complete/2026/10/area-magnification-leggos.md`; was `draft/feature/autolens/area_magnification_leggos.md`) — LEGGOS Eq. 6-7 pixel-
    inversion area μ as primary; wiki ingest. Forward ShapeSolver work transferred.
    Gates: 3, 5.
-7. `draft/feature/autolens/magnification_errors_posterior_draws.md` — standalone
+7. **SHIPPED 2026-11-02** (record `complete/2026/11/magnification-errors-posterior-draws.md`; 7a + 7b; was `draft/feature/autolens/magnification_errors_posterior_draws.md`) — standalone
    posterior-draw errors in source_science; latent decision. Gates: 5, 6.
 8. `draft/feature/autolens/magnification_maps_visualization.md` — image-plane contour
    maps, source-plane mesh maps, Fig-4 uncertainty map, pretty pass. Gates: 3-7.
@@ -859,3 +859,15 @@ image ±0.7–4%. Below LEGGOS 0.03–0.09 — expected: high-S/N simulated data
 (LEGGOS: real cluster, complex mass models); explain in 7b prose. Arc mask at 10% of max fragments into 26
 "images" at 0.1″ → 7b scripts should define images by segmentation of the multiple images, not a raw threshold.
 Cost note for 7b: ~21 min quick fit ×11 scripts is heavier than the ~11 min estimate.
+
+## Phase 7 complete — 2026-11-02
+
+7b merged: autolens_workspace#613 (`c0ea84c7`; record `complete/2026/11/magnification-errors-source-science.md`),
+with PyAutoFit#1751 (released 2026.11.1.1). All 11 `source_science.py` scripts carry `__Magnification Errors__`
+(quick PositionsLH fit + 100 posterior draws). Human 2026-11-02: end-to-end full runs judged testing overkill — only
+imaging, imaging MGE, imaging pixelization and interferometer were run in full (numbers quoted); the other 7 scripts
+describe how to read the errors without measured values; errors stated as statistical only. Full-run outputs and logs:
+`Science/scratch/arc_phase7b_full_runs_2026-11-02/`. Phase 7 parent closed → `complete/2026/11/magnification-errors-posterior-draws.md`.
+Follow-ups filed: `draft/bug/autogalaxy/area_magnification_critical_curve_fragments.md` (image_masks_from keeps
+critical-curve parity islands as images), `draft/docs/autolens_workspace/source_science_multi_galaxy_group_quick_fits_slow.md`.
+NEXT: human pick — phase 8 (`magnification_maps_visualization.md`) or one of the follow-ups.
