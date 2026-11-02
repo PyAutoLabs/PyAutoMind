@@ -80,5 +80,6 @@
   - autolens_profiling: feature/gradient-correctness-sweep
 - prompt: active/gradient_correctness_sweep.md
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/518 (items 10, 11 + sweep note; judge, human /prm)
-- phase: order approved 2026-11-02; done 10, 11 (PR #518), 12 (retired), 1 (re-filed narrower into draft/bug/autogalaxy/wrong_jax_gradient_on_mge_likelihoods_fd.md); NEXT item 2 (CPU vs GPU Delaunay)
+- phase: order approved 2026-11-02; done 10, 11 (PR #518), 12 (retired), 1 (re-filed narrower into draft/bug/autogalaxy/wrong_jax_gradient_on_mge_likelihoods_fd.md); item 2 IN PROGRESS
+- compute-tracking: RAL 413991 (item 2, group/delaunay/euclid CPU, legs A sparse@main / B dense@main / C sparse@tag 2026.10.25.1; partition ral; human go 2026-11-02). RAL worktree /mnt/ral/jnightin/autolens_profiling_wt/gradient-correctness-sweep (9d2ee2d3), private libs /mnt/ral/jnightin/PyAuto_wt/gradient-correctness-sweep; rows under output/p517_item2/<leg>/
 - tier: judge — merge mode: human /prm
