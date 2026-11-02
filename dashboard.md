@@ -1009,7 +1009,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p4a_validation_tooling.md">Likelihood lifecycle phase 4a: inference wall-time validation tooling…</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/51">issue #51</a> — issued 2026-11-02 — workspace-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p4a_validation_tooling.md">Likelihood lifecycle phase 4a: inference wall-time validation tooling…</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/51">issue #51</a> — issued 2026-11-02 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/autolens_inference/pull/52">autolens_inference#52</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p4a_validation_tooling.md
