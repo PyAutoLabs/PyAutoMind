@@ -92,6 +92,7 @@
 - issued: 2026-11-02
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
 - status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/gradient-correctness-sweep
 - repos:
   - autolens_profiling: feature/gradient-correctness-sweep
 - prompt: active/gradient_correctness_sweep.md
