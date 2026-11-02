@@ -62,22 +62,6 @@
 - heart-red-override: authorized live by the human 2026-10-31 ("override heart red, go ahead with 7b"); RED reasons quoted on the issue; development only
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
 
-## likelihood-lifecycle-p6c-gradient-walls
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/509
-- issued: 2026-11-01
-- session: claude-code desktop (WSL), ~/Science session
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p6c-gradient-walls
-- repos:
-  - autolens_profiling: feature/likelihood-lifecycle-p6c-gradient-walls
-  - autolens_profiling: feature/likelihood-lifecycle-p6c-v2-walls
-- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/511 (v2 walls; MERGED 2026-11-02 1cdf84bf via human /prm)
-- compute-pending: RAL 413890 (imaging CPU legs 0,4 at 512 GB, human go 2026-11-02)
-- prompt: active/likelihood_lifecycle_p6c_gradient_runs.md
-- epic: likelihood-lifecycle (phase 6c)
-- compute: RAL submit checkout /mnt/ral/jnightin/profiling/autolens_profiling_p2dg @ 97cdc88; human go per batch (batch 0 probe: go given 2026-11-01)
-- tier: judge — merge mode: human /prm
-
 ## results-library-p2-completeness
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1752
 - issued: 2026-11-02
@@ -103,7 +87,7 @@
 - worktree: ~/Code/PyAutoLabs-wt/rectangular-gradient-rtu-sparse
 - repos:
   - PyAutoArray: feature/rectangular-gradient-rtu-sparse
-- witness-harness: autolens_profiling read-only via p6c worktree (claimed by likelihood-lifecycle-p6c-gradient-walls; human ruled PyAutoArray-only 2026-11-02)
+- witness-harness: autolens_profiling read-only via ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p6c-gradient-walls (6c closed 2026-11-02; that worktree is kept for this harness — do not switch its branch; autolens_profiling is now claimed by likelihood-lifecycle-p6d-gradient-ingest in its own worktree; human ruled PyAutoArray-only 2026-11-02)
 - prompt: active/rectangular_fiducial_gradient_wrong_rtu_and_cpu_sparse.md
 - tier: judge — merge mode: human /prm
 
@@ -127,8 +111,9 @@
 - worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p6d-gradient-ingest
 - repos:
   - PyAutoPulse: feature/likelihood-lifecycle-p6d-gradient-ingest
+  - autolens_profiling: feature/likelihood-lifecycle-p6d-gradient-ingest
 - library-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/87 (freeze --measurement; MERGED 2026-11-02 6d9a8a8d via human /prm)
-- pending-claim: autolens_profiling (feature/likelihood-lifecycle-p6d-gradient-ingest) once likelihood-lifecycle-p6c-gradient-walls closes (RAL 413890_0 + walls follow-up)
+- carried-from-6c: RAL 413890_0 (imaging/delaunay/ao CPU, 512 GB) record + wall + imaging RAL CPU memory value (6c closed 2026-11-02)
 - prompt: active/likelihood_lifecycle_p6d_gradient_ingest.md
 - epic: likelihood-lifecycle (phase 6d)
 - tier: judge — merge mode: human /prm

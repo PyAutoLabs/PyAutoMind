@@ -1,3 +1,14 @@
+## likelihood-lifecycle-p6c-gradient-walls
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/509
+- completed: 2026-11-02
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/510 (witness v2 FD step sweep, d7b70a3f)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/511 (measured v2 walls, 1cdf84bf)
+- Campaign: v1 RAL 413707–413722; FD step diagnostic 413781 (mechanisms A–E); v2 RAL 413791–413830, 72/74 witness-valid; 512 GB rerun RAL 413890: delaunay_nn/hst CPU valid (~338 GiB, grad/forward 4.09x); imaging/delaunay/ao CPU still running at close — its record, wall and the imaging RAL CPU memory value move to 6d (autolens_profiling#512).
+- Side runs: RTU vs Bilinear (413867–413870) → wrong-gradient bug filed (draft/bug/autoarray/rectangular_fiducial_gradient_wrong_rtu_and_cpu_sparse.md, now active as rectangular-gradient-rtu-sparse); Delaunay/Hilbert probe 413876 → complete/2026/11/likelihood-lifecycle-p6-delaunay-hilbert-roughness.md (human accepted: intrinsic).
+- Closed early by the human ("yes do 1 and 2", 2026-11-02) with the one slow leg moved to 6d. The worktree ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p6c-gradient-walls is kept: task rectangular-gradient-rtu-sparse reads its autolens_profiling checkout as a witness harness.
+
+## Original prompt
+
 # Likelihood lifecycle phase 6c: run the gradient campaign on RAL (74 legs, 14 submits)
 
 Type: research
