@@ -1001,7 +1001,7 @@ Use the start-dev skill. active/rectangular_fiducial_gradient_wrong_rtu_and_cpu_
 
 </details>
 
-<details><summary>📋 <a href="active/results_library_p2_completeness.md">Issued: 2026-11-02</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1752">issue #1752</a> — issued 2026-11-02 — library-dev</summary>
+<details><summary>📋 <a href="active/results_library_p2_completeness.md">Issued: 2026-11-02</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1752">issue #1752</a> — issued 2026-11-02 — library-shipped, awaiting-merge (judge → human /prm: Fit#1753 first, then release, then ws#180) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1753">PyAutoFit#1753</a>, <a href="https://github.com/PyAutoLabs/autofit_workspace/pull/180">autofit_workspace#180</a></summary>
 
 ```
 Use the start-dev skill. active/results_library_p2_completeness.md
