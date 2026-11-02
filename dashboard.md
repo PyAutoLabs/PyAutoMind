@@ -1017,7 +1017,7 @@ Use the start-dev skill. active/chapter2-explanations.md
 
 </details>
 
-<details><summary>📋 <a href="active/gradient_correctness_sweep.md">Gradient-correctness sweep: triage and investigate every open JAX-gradient bug and hazard…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/517">issue #517</a> — issued 2026-11-02 — workspace-dev</summary>
+<details><summary>📋 <a href="active/gradient_correctness_sweep.md">Gradient-correctness sweep: triage and investigate every open JAX-gradient bug and hazard…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/517">issue #517</a> — issued 2026-11-02 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/518">autolens_profiling#518</a></summary>
 
 ```
 Use the start-dev skill. active/gradient_correctness_sweep.md
