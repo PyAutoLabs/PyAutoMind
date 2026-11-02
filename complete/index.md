@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2090 records across 11 buckets.
+2091 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -128,6 +128,7 @@ markers; everything below GENERATED is rebuilt.
 - [likelihood-lifecycle-p3-day-zero-pages](2026/11/likelihood-lifecycle-p3-day-zero-pages.md)
 - [likelihood-lifecycle-p3-day-zero-stamp](2026/11/likelihood-lifecycle-p3-day-zero-stamp.md)
 - [likelihood-lifecycle-p3-setup-baseline-close](2026/11/likelihood-lifecycle-p3-setup-baseline-close.md)
+- [likelihood-lifecycle-p6-delaunay-hilbert-roughness](2026/11/likelihood-lifecycle-p6-delaunay-hilbert-roughness.md)
 - [likelihood-lifecycle-p6a-gradient-harness](2026/11/likelihood-lifecycle-p6a-gradient-harness.md)
 - [likelihood-lifecycle-p6b-gradient-scripts](2026/11/likelihood-lifecycle-p6b-gradient-scripts.md)
 - [one-line-auto-simulate-helper](2026/11/one-line-auto-simulate-helper.md)
