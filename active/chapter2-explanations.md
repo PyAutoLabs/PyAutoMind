@@ -32,3 +32,15 @@ Tier: judge — merge mode: human /prm. No merge authorized.
 Edit scripts/chapter_2_lens_modeling/tutorial_1_non_linear_search.py, tutorial_2_practicalities.py and tutorial_3_why_modeling_is_hard.py only, plus generated counterparts/catalogue. Preserve the approved text from this chat, add More Dimensions to Contents, and remove inconsistent Analysis and wrap-up references. No changes to Tutorial 4 or later lessons. Existing chapter2_continuation.md still owns the later five-block reviews.
 Branch: feature/howtolens-ch2-explanations
 Worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howtolens-ch2-explanations/HowToLens
+
+## Approved-block checkpoint — 2026-11-02
+- Canonical worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howtolens-ch2-explanations/HowToLens
+- Branch: feature/howtolens-ch2-explanations; local commit: 7c67510.
+- All five approved blocks applied; removed inconsistent linear-profile mentions in Analysis and Tutorial 3 wrap-up.
+- Changed three Chapter 2 sources, three regenerated notebooks, llms-full.txt and workspace_index.json.
+- Source syntax, generated LaTeX preservation, profile sequencing, navigation and whitespace checks passed.
+- Official Python 3.12 repository smoke passed all 43 runnable scripts (exit 0); configured exclusions retained. Smoke skips sampling and is not convergence evidence.
+- Validation logs: worktree .task-logs/{generate,navigator,smoke}.log.
+- Review notebooks: /mnt/c/Users/Jammy/Workspace/Science/scratch/howtolens_ch2_explanations_2026-11-02/.
+- Local checkpoint only; no HowToLens push, PR or merge performed.
+- Next content review: chapter2_continuation.md, Tutorial 5 Data and Likelihoods, five full blocks at a time. Later prose remains unapproved.
