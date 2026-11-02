@@ -78,6 +78,10 @@
 - worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p4c-runners
 - repos:
   - autolens_inference: feature/likelihood-lifecycle-p4c-runners (4c-0 tooling)
+  - autolens_inference: feature/likelihood-lifecycle-p4c1 (4c-1 imaging/interferometer/datacube; worktree autolens_inference_4c1)
+  - autolens_inference: feature/likelihood-lifecycle-p4c2 (4c-2 group/multi_galaxy/multi_dataset; worktree autolens_inference_4c2)
+  - autolens_inference: feature/likelihood-lifecycle-p4c3 (4c-3 point/cluster/weak; worktree autolens_inference_4c3)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/55 (4c-0 tooling; judge, human /prm)
 - compute-tracking: 4b RAL 413924 (A100 Delaunay, running), 413911 / 413913 (ral cores sweep, queued behind euclid pilots)
 - prompt: active/likelihood_lifecycle_p4c_runners.md
 - epic: likelihood-lifecycle (phase 4c)
