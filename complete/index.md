@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2101 records across 11 buckets.
+2102 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -142,6 +142,7 @@ markers; everything below GENERATED is rebuilt.
 - [results-library-p2-completeness](2026/11/results-library-p2-completeness.md) — `autofit/results/library.py` ResultsLibrary (grid / library.yaml / from_campaign — campaign expectations
 - [results-library-p3-exports](2026/11/results-library-p3-exports.md) — AggregateCSV.save(cache=, shard=, expected=, sort_by=, on_error=, columns_json=): row cache
 - [results-library-p4-package](2026/11/results-library-p4-package.md) — new `autofit/export/` (`af.export`): package() — size-capped / exactly-N part zips with objects whole,
+- [results-library-p5b-cortex](2026/11/results-library-p5b-cortex.md) — phase 5b; ledger draft/feature/autofit/results_library_epic.md
 - [simulate-if-needed-workspace-sweep](2026/11/simulate-if-needed-workspace-sweep.md)
 
 ## 2026/10/github-token-consolidation-epic_surveys

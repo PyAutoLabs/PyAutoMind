@@ -61,20 +61,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/177
 - heart-ack: STALE 'release validation incomplete: no rehearsal for current source' (human 2026-11-02)
 
-## results-library-p5b-cortex
-- issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/84
-- issued: 2026-11-02
-- session: claude-code desktop (Opus 5.5)
-- status: library-shipped, awaiting-merge (judge → human /prm; decision 65 needs ruling)
-- worktree: ~/Code/PyAutoLabs-wt/results-library-p5b-cortex
-- repos:
-  - PyAutoCortex: feature/results-library-p5b-cortex
-- prompt: active/results_library_p5b_cortex.md
-- epic: results-library (phase 5b)
-- tier: judge — merge mode: human /prm
-- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/85
-- heart-ack: STALE 'release validation incomplete: no rehearsal for current source' (human 2026-11-02)
-
 ## howtolens-ch2-explanations
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/123
 - issued: 2026-11-02
