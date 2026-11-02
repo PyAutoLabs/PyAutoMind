@@ -12,7 +12,7 @@
 | [Epics](#epics) | 19 |
 | [In flight](#in-flight) | 9 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 285 |
+| [Backlog](#backlog) | 287 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
 
@@ -674,7 +674,7 @@ Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens
 </details>
 
 <details>
-<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 13 queued prompt(s), in order</summary>
+<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 15 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Cluster strong lensing — Source &amp; Cluster arc</b> — ledger: `draft/feature/autolens/source_cluster_arc.md` — In progress — 1a–1d, phase 3a audit (profiling#364, workspace_test#341) and phase 3b field-preserving cap fix (Galaxy#646…</summary>
 
@@ -760,6 +760,22 @@ Use the start-dev skill. draft/docs/howtolens/cluster_pixelized_source.md
 
 ```
 Use the start-dev skill. draft/bug/autoarray/rectangular_adaptive_zeroed_ring_guard_row_mismatch.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autogalaxy/area_magnification_critical_curve_fragments.md">Area magnification splits lensed images into one- and two-pixel fragments near critical…</a> — autogalaxy · small · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/bug/autogalaxy/area_magnification_critical_curve_fragments.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/source_science_multi_galaxy_group_quick_fits_slow.md">multi_galaxy and group source_science "quick fits" take many hours</a> — autolens_workspace · small · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens_workspace/source_science_multi_galaxy_group_quick_fits_slow.md
 ```
 
 </details>
@@ -3063,7 +3079,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-124 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+126 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3108,7 +3124,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md`
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
 - `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`
-- _… and 84 more_
+- _… and 86 more_
 
 </details>
 
