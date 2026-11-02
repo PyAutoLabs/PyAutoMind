@@ -77,7 +77,7 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p4c-runners
 - repos:
-  - autolens_inference: feature/likelihood-lifecycle-p4c0-tooling
+  - autolens_inference: feature/likelihood-lifecycle-p4c-runners (4c-0 tooling)
 - compute-tracking: 4b RAL 413924 (A100 Delaunay, running), 413911 / 413913 (ral cores sweep, queued behind euclid pilots)
 - prompt: active/likelihood_lifecycle_p4c_runners.md
 - epic: likelihood-lifecycle (phase 4c)
