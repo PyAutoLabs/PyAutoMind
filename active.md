@@ -72,7 +72,9 @@
   - autolens_inference: feature/likelihood-lifecycle-p4a-validation-tooling
 - prompt: active/likelihood_lifecycle_p4a_validation_tooling.md
 - epic: likelihood-lifecycle (phase 4a)
-- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/52 (judge, human /prm)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/52 (MERGED 2026-11-02 94ffa86c via human /prm)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/53 (Optimal-only scope + Delaunay numba seed 0; judge, human /prm)
+  - autolens_inference: feature/likelihood-lifecycle-p4a-scope-optimal
 - tier: judge — merge mode: human /prm
 
 ## results-library-p4-package
