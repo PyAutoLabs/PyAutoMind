@@ -16,6 +16,7 @@ Witness: on imaging/rectangular/hst fiducial (39x39, no --standard-size) value_a
 Review-minutes: 10
 Unattended: never
 Filed: 2026-11-02
+Issued: 2026-11-02
 
 Found during likelihood-lifecycle phase 6c (autolens_profiling#509), RTU vs Bilinear side run. Libraries at tag 2026.10.25.1. Human: "yes" (file it), 2026-11-02.
 

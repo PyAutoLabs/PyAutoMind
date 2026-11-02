@@ -90,3 +90,15 @@
 - prompt: active/results_library_p2_completeness.md
 - epic: results-library (phase 2)
 - tier: judge — merge mode: human /prm
+
+## rectangular-gradient-rtu-sparse
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/671
+- issued: 2026-11-02
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/rectangular-gradient-rtu-sparse
+- repos:
+  - PyAutoArray: feature/rectangular-gradient-rtu-sparse
+- witness-harness: autolens_profiling read-only via p6c worktree (claimed by likelihood-lifecycle-p6c-gradient-walls; human ruled PyAutoArray-only 2026-11-02)
+- prompt: active/rectangular_fiducial_gradient_wrong_rtu_and_cpu_sparse.md
+- tier: judge — merge mode: human /prm
