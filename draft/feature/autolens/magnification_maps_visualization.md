@@ -60,3 +60,8 @@ Work:
    where it earns its place; "make them pretty" acceptance pass via /eyes at the end.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-08-19 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/483da28c-8c96-4c83-ad87-a43448ca2164/scratchpad/source_cluster_phases/phase08_magnification_maps_visualization.md -->
+
+## Sliced 2026-11-02 (human approved; re-audit after phases 4–7)
+
+8a `magnification_maps_8a_image_plane.md` → 8b `magnification_maps_8b_source_plane.md` →
+8c `magnification_maps_8c_uncertainty.md` → 8d `magnification_maps_8d_wiring_pretty.md`. One at a time via /start_dev.
