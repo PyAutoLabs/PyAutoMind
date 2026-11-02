@@ -124,3 +124,15 @@
 - prompt: active/likelihood_lifecycle_p6d_gradient_ingest.md
 - epic: likelihood-lifecycle (phase 6d)
 - tier: judge — merge mode: human /prm
+
+## likelihood-lifecycle-p4a-validation-tooling
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/51
+- issued: 2026-11-02
+- session: claude-code desktop (WSL), ~/Science session
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p4a-validation-tooling
+- repos:
+  - autolens_inference: feature/likelihood-lifecycle-p4a-validation-tooling
+- prompt: active/likelihood_lifecycle_p4a_validation_tooling.md
+- epic: likelihood-lifecycle (phase 4a)
+- tier: judge — merge mode: human /prm
