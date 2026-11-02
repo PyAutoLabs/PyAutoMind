@@ -48,3 +48,15 @@ Worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howtolens-ch2-explanations/HowT
 ## Tutorial 5 review continuation — 2026-11-02
 User approved the revised general introduction and circular-mask blocks 1–5 with "ok thats good proceed". Applied these to the existing tutorial_6_masking_and_positions.py path; final renumbering remains deferred. Title now Tutorial 5: Data and Likelihoods. Uses lens_sersic and one 3-arcsec circular mask; annulus appears only in images/chapter_2/circular_vs_annular.png, copied from the approved full-resolution preview. Removed the superseded mask-choice Discussion. No annular-mask Python remains in the lesson.
 This is an uncommitted intermediate draft: old downstream model/positions sections still await review and are not yet consistent with the new dataset. Do not call the whole lesson validated. Syntax, figure path and whitespace passed; regeneration and execution deferred until dependent sections approved. Next review: blocks 6–10 covering lens-light model, Analysis, baseline fit/results and positions motivation/selection. No unreviewed prose authorized.
+
+## Tutorial 5 completed checkpoint — 2026-11-02
+Supersedes the intermediate draft note above. All 20 blocks approved, including the final same-model-composition-API wording, and applied. Commit 327080e on feature/howtolens-ch2-explanations (local only; includes earlier 7c67510).
+- Existing tutorial_6_masking_and_positions.py filename retained pending consecutive renumbering; title is Tutorial 5: Data and Likelihoods.
+- One positions-constrained fit uses lens_sersic, linear lens/source profiles, isothermal mass and shear. Four checked coordinates trace within 0.000725 arcsec under true simulator model; broad 1.0 arcsec threshold explained. Fast positions-check cost stated without claiming guaranteed convergence.
+- Circular-only reader code; annular comparison is tracked images/chapter_2/circular_vs_annular.png. Noise-scaling example uses lens_extra_galaxy and explicitly distinguishes discarded light information from gravitational deflection.
+- Interferometer, point, weak and multi-dataset summaries culminate in shared af.Model / af.Collection / search.fit API.
+- Official changed-lesson smoke passed (15.6s). Full-resolution execution passed, shape 100x100, 345 scaled pixels inside circle, other retained noise unchanged. Sampling bypass/reused test output means no convergence claim.
+- Canonical notebook generation 44/44 passed. Navigation, contents, figure path, LaTeX, single-fit structure and whitespace passed.
+- Logs: worktree .task-logs/{positions,smoke-tutorial5,full-tutorial5,navigator-tutorial5,generate-tutorial5}.log.
+- Review notebook/source/figure bundle: /mnt/c/Users/Jammy/Workspace/Science/scratch/howtolens_ch2_explanations_2026-11-02/tutorial5/.
+- Next: review Tutorial 6 Search Chaining in five coherent prose/code blocks. Remaining optional speed/historical prior passing, summary and consecutive numbering/navigation still pending. No PR or merge performed.
