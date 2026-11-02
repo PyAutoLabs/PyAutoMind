@@ -86,3 +86,14 @@
 - prompt: active/likelihood_lifecycle_p4c_runners.md
 - epic: likelihood-lifecycle (phase 4c)
 - tier: judge — merge mode: human /prm
+
+## gradient-correctness-sweep
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/517
+- issued: 2026-11-02
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: workspace-dev
+- repos:
+  - autolens_profiling: feature/gradient-correctness-sweep
+- prompt: active/gradient_correctness_sweep.md
+- phase: 0 triage (no code) — table → human approves order; sub-fixes get their own start_dev
+- tier: judge — merge mode: human /prm

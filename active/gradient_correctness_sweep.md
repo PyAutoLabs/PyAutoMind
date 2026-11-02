@@ -18,6 +18,8 @@ Witness: every item below ends with a recorded verdict — fixed (merged PR + au
 Review-minutes: 30
 Unattended: never
 Filed: 2026-11-02
+Issued: 2026-11-02
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/517
 
 Human request (2026-11-02): "find all gradient related issues that investigate bugs or things like this and give me a prompt to have a single chat to investigate them all."
 
