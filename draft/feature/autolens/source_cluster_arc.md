@@ -887,4 +887,11 @@ autolens_workspace#615; record `complete/2026/11/magnification-maps-source-plane
 + mesh / square-pixel source-plane maps; mesh map in all four pixelization source_science scripts. Witness: mesh mu vs
 area-averaged traced truth 1.2% / 3.9% (rectangular / Delaunay). Follow-up filed:
 `draft/research/autoarray/delaunaynn_per_pixel_magnification_off_by_9.md`.
-NEXT: 8c LEGGOS Fig-4 uncertainty map (`draft/feature/autolens/magnification_maps_8c_uncertainty.md`).
+NEXT (superseded by the 8c entry below): 8c LEGGOS Fig-4 uncertainty map.
+
+## 8c merged — 2026-11-02
+
+8c merged via human /prm: PyAutoGalaxy#693 → PyAutoLens#817 (pending release) → autolens_workspace#616; record
+`complete/2026/11/magnification-maps-uncertainty.md`. Per-pixel fractional magnification error over posterior draws
+(LEGGOS Fig. 4) in all 11 source_science scripts. Witness: 0.23% (|mu| 1-3) → 8.8% (on the critical curve).
+NEXT: 8d fit-subplot wiring + pretty pass (`draft/feature/autolens/magnification_maps_8d_wiring_pretty.md`).

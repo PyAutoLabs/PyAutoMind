@@ -1,3 +1,23 @@
+Arc phase 8c: the magnification uncertainty map of LEGGOS II figure 4. `magnification_fractional_error_2d_from`
+(half the 16-84 percentile range of |mu| over posterior draws / best-fit |mu|, per pixel) and
+`plot_magnification_uncertainty_2d` (that map, colour range capped at the 95th percentile, best-fit constant-mu contours
+and critical curves on top). Workspace: all 11 source_science.py scripts (human scope) store each draw's
+magnification map in the 7b draw loop and plot the map in a new `__Magnification Uncertainty Map__` section.
+
+Shipped (merged 2026-11-02, human /prm):
+- PyAutoGalaxy#693 (`f397c6b2`) — test_autogalaxy 1475 passed
+- PyAutoLens#817 (`03ab1f82`) — 1021 passed
+- autolens_workspace#616 (`6720e3d1`) — all 11 scripts smoke clean; catalogue regenerated
+
+Witness (full imaging/source_science.py run, 100 draws, 1.84 s/draw): median sigma/|mu| 0.23% (|mu| 1-3), 0.50%
+(3-10), 2.0% (10-30), 8.8% (>30, on the critical curve); consistent with the run's scalar errors (0.9-1.9%). Figure +
+log: Science/scratch/arc_phase8c_uncertainty_map_2026-11-02/.
+
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/693
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/817
+
+## Original prompt
+
 # Magnification maps 8c: LEGGOS Fig-4 fractional magnification uncertainty map
 
 Type: feature

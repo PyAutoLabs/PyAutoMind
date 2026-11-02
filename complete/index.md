@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2105 records across 11 buckets.
+2106 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -140,6 +140,7 @@ markers; everything below GENERATED is rebuilt.
 - [magnification-errors-source-science](2026/11/magnification-errors-source-science.md)
 - [magnification-maps-image-plane](2026/11/magnification-maps-image-plane.md)
 - [magnification-maps-source-plane](2026/11/magnification-maps-source-plane.md)
+- [magnification-maps-uncertainty](2026/11/magnification-maps-uncertainty.md)
 - [one-line-auto-simulate-helper](2026/11/one-line-auto-simulate-helper.md)
 - [rectangular-gradient-rtu-sparse](2026/11/rectangular-gradient-rtu-sparse.md) — the filed symptom (|g| ~2e9 on the imaging/rectangular/hst fiducial, RTU all backends, Bilinear CPU sparse) sp…
 - [results-library-p2-completeness](2026/11/results-library-p2-completeness.md) — `autofit/results/library.py` ResultsLibrary (grid / library.yaml / from_campaign — campaign expectations
