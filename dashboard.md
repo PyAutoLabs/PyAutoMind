@@ -1001,7 +1001,7 @@ Use the start-dev skill. active/hpc_campaign_p5a_assistant.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p6d_gradient_ingest.md">Likelihood lifecycle phase 6d: ingest the gradient witnesses, freeze day_zero_gradient, file hazards…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/512">issue #512</a> — issued 2026-11-02 — library-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/87">PyAutoPulse#87</a></summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p6d_gradient_ingest.md">Likelihood lifecycle phase 6d: ingest the gradient witnesses, freeze day_zero_gradient, file hazards…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/512">issue #512</a> — issued 2026-11-02 — library-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/87">PyAutoPulse#87</a>, <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/88">PyAutoPulse#88</a>, <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/513">autolens_profiling#513</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p6d_gradient_ingest.md
