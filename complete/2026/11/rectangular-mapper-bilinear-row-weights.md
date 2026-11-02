@@ -1,3 +1,14 @@
+## rectangular-mapper-bilinear-row-weights
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/517
+- completed: 2026-11-02
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/490
+- summary:
+  - **Retired as already-fixed** by the gradient-correctness sweep (autolens_profiling#517, item 12). The draft was never started; the fix had landed separately.
+  - Fixing commit: PyAutoArray 72fb01d1 (2026-08-26), PR #490 "fix: correct mirrored row weights + round-off-dependent cells in rectangular mapper".
+  - Verified on PyAutoArray `main` 2026-11-02: `autoarray/inversion/mesh/interpolator/rectangular.py` brackets with `ix_up = ix_down + 1` (never `ceil`), and `t_row` / `t_col` are measured from the `down` node, with `ix_up` carrying `t_row` (comments at lines 723-766 cite autolens_workspace_test#279).
+
+## Original prompt
+
 # `@PyAutoArray` rectangular mesh mapper: mirrored row weights + round-off-dependent cell assignment
 
 Type: bug
