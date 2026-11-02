@@ -44,3 +44,7 @@ Worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howtolens-ch2-explanations/HowT
 - Review notebooks: /mnt/c/Users/Jammy/Workspace/Science/scratch/howtolens_ch2_explanations_2026-11-02/.
 - Local checkpoint only; no HowToLens push, PR or merge performed.
 - Next content review: chapter2_continuation.md, Tutorial 5 Data and Likelihoods, five full blocks at a time. Later prose remains unapproved.
+
+## Tutorial 5 review continuation — 2026-11-02
+User approved the revised general introduction and circular-mask blocks 1–5 with "ok thats good proceed". Applied these to the existing tutorial_6_masking_and_positions.py path; final renumbering remains deferred. Title now Tutorial 5: Data and Likelihoods. Uses lens_sersic and one 3-arcsec circular mask; annulus appears only in images/chapter_2/circular_vs_annular.png, copied from the approved full-resolution preview. Removed the superseded mask-choice Discussion. No annular-mask Python remains in the lesson.
+This is an uncommitted intermediate draft: old downstream model/positions sections still await review and are not yet consistent with the new dataset. Do not call the whole lesson validated. Syntax, figure path and whitespace passed; regeneration and execution deferred until dependent sections approved. Next review: blocks 6–10 covering lens-light model, Analysis, baseline fit/results and positions motivation/selection. No unreviewed prose authorized.
