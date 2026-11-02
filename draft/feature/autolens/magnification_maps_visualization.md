@@ -63,5 +63,5 @@ Work:
 
 ## Sliced 2026-11-02 (human approved; re-audit after phases 4–7)
 
-8a SHIPPED 2026-11-02 (record `complete/2026/11/magnification-maps-image-plane.md`; Galaxy#690, Lens#815, ws#614) → 8b `magnification_maps_8b_source_plane.md` →
+8a SHIPPED 2026-11-02 (record `complete/2026/11/magnification-maps-image-plane.md`; Galaxy#690, Lens#815, ws#614) → 8b SHIPPED 2026-11-02 (record `complete/2026/11/magnification-maps-source-plane.md`; Array#674, Galaxy#691, Lens#816, ws#615) →
 8c `magnification_maps_8c_uncertainty.md` → 8d `magnification_maps_8d_wiring_pretty.md`. One at a time via /start_dev.

@@ -878,4 +878,13 @@ Phase 8 re-audited after phases 4–7 and sliced 8a → 8d (`magnification_maps_
 /prm: PyAutoGalaxy#690 → PyAutoLens#815 (both pending release) → autolens_workspace#614;
 `aplt.plot_magnification_2d` (log10 |mu|, constant-mu contours, critical curves); record
 `complete/2026/11/magnification-maps-image-plane.md`. PyAutoArray `contour_levels` dropped (repo was claimed).
-NEXT: 8b source-plane magnification per mesh pixel (`draft/feature/autolens/magnification_maps_8b_source_plane.md`).
+NEXT (superseded by the 8b entry below): 8b source-plane magnification per mesh pixel.
+
+## 8b merged — 2026-11-02
+
+8b merged via human /prm: PyAutoArray#674 → PyAutoGalaxy#691 → PyAutoLens#816 (all pending release) →
+autolens_workspace#615; record `complete/2026/11/magnification-maps-source-plane.md`. `Mapper.mesh_magnification`
++ mesh / square-pixel source-plane maps; mesh map in all four pixelization source_science scripts. Witness: mesh mu vs
+area-averaged traced truth 1.2% / 3.9% (rectangular / Delaunay). Follow-up filed:
+`draft/research/autoarray/delaunaynn_per_pixel_magnification_off_by_9.md`.
+NEXT: 8c LEGGOS Fig-4 uncertainty map (`draft/feature/autolens/magnification_maps_8c_uncertainty.md`).

@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-11-02T15:37:41Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 7 in flight",
+  "updated": "2026-11-02T15:46:25Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Magnification maps 8b: source-plane magnification per mesh pixel \u2014 library-shipped, awaiting-merge (judge \u2192 human /prm: Array#674 \u2192 Galaxy#691 \u2192 Lens#816 \u2192 ws#615)",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/674",
-      "prompt": "Use the start-dev skill. active/magnification_maps_8b_source_plane.md"
-    },
     {
       "severity": "yellow",
       "text": "Issued: 2026-11-02 \u2014 workspace-shipped, awaiting-merge (judge \u2192 human /prm; wiki-currency waits on a PyAutoFit release)",
@@ -33,7 +27,7 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#674 \u2014 Magnification maps 8b: source-plane magnification per mesh pixel",
+      "text": "pending release: PyAutoArray PyAutoArray#674 \u2014 magnification-maps-source-plane",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/674",
       "prompt": null
     },
@@ -63,26 +57,26 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#691 \u2014 Magnification maps 8b: source-plane magnification per mesh pixel",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/691",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#690 \u2014 magnification-maps-image-plane",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/690",
       "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#816 \u2014 Magnification maps 8b: source-plane magnification per mesh pixel",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/816",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#691 \u2014 magnification-maps-source-plane",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/691",
       "prompt": null
     },
     {
       "severity": "yellow",
       "text": "pending release: PyAutoLens PyAutoLens#815 \u2014 magnification-maps-image-plane",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/815",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoLens PyAutoLens#816 \u2014 magnification-maps-source-plane",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/816",
       "prompt": null
     },
     {
@@ -126,6 +120,12 @@
       "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
+      "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
     }
   ]
 }

@@ -1,3 +1,28 @@
+Arc phase 8b: source-plane magnification maps — how much the lens magnifies each region of the source, summed over
+all of its images. `Mapper.mesh_magnification` (image-plane area mapped to each mesh pixel / its
+`areas_for_magnification`; `data_pixel_area_for_pix_from` implemented, was a stub), plotted on the mesh by
+`plot_magnification_source_plane`; `LensCalc.source_plane_magnification_from` + `plot_magnification_source_plane_grid`
+for parametric/MGE sources on square pixels. Workspace: mesh map in all four pixelization source_science scripts
+(human scope add), square-pixel map in imaging/source_science.py. Also fixed 8a's colour bar showing the config
+brightness unit.
+
+Shipped (merged 2026-11-02, human /prm "prm when green"):
+- PyAutoArray#674 (`c012fa69`) — test_autoarray 2287 passed; identity-lens tests per mesh
+- PyAutoGalaxy#691 (`1800a4eb`) — 1473 passed; SIS analytic 2 theta_E / beta within 1%
+- PyAutoLens#816 (`70b317bd`) — 1020 passed
+- autolens_workspace#615 (`238666e0`) — five scripts smoke clean; catalogue regenerated
+
+Witness: mesh mu vs forward-traced square-pixel truth (true mass, simulated lens), averaged over each mesh pixel's
+area: median per-pixel agreement 1.2% (RectangularBilinearAdaptDensity), 3.9% (Delaunay); median ratio 0.99.
+Follow-up filed: draft/research/autoarray/delaunaynn_per_pixel_magnification_off_by_9.md (DelaunayNN 9% per-pixel on
+the identity lens). Open for 8d: mesh maps use a log colour scale on mu, the others plot log10 mu values.
+
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/674
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/691
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/816
+
+## Original prompt
+
 # Magnification maps 8b: source-plane magnification per mesh pixel
 
 Type: feature
