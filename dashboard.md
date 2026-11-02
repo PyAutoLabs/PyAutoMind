@@ -12,13 +12,13 @@
 | [Epics](#epics) | 19 |
 | [In flight](#in-flight) | 9 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 290 |
+| [Backlog](#backlog) | 289 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 19
+**Highest priority** (filed as `high`) — showing 12 of 18
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -56,14 +56,6 @@ Use the start-dev skill. draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urll
 
 ```
 Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md"><code>@PyAutoArray</code> rectangular mesh mapper: mirrored row weights + round-off-dependent cell assignment</a> — autoarray · medium · human-required · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md
 ```
 
 </details>
@@ -112,6 +104,14 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ```
 Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> — euclid · large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md
 ```
 
 </details>
@@ -1213,7 +1213,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>bug</b> — 66</summary>
+<summary><b>bug</b> — 65</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1243,14 +1243,6 @@ Use the start-dev skill. draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urll
 
 ```
 Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md"><code>@PyAutoArray</code> rectangular mesh mapper: mirrored row weights + round-off-dependent cell assignment</a> — autoarray · medium · human-required · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md
 ```
 
 </details>
@@ -3103,7 +3095,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-126 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+125 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3145,10 +3137,10 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/workspaces/model_figures_6_rollout.md`
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_adaptive_zeroed_ring_guard_row_mismatch.md`
-- `draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md`
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
 - `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`
-- _… and 86 more_
+- `draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md`
+- _… and 85 more_
 
 </details>
 
