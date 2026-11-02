@@ -1049,7 +1049,7 @@ Use the start-dev skill. active/results_library_p2_completeness.md
 
 </details>
 
-<details><summary>📋 <a href="active/results_library_p3_exports.md">Issued: 2026-11-02</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1754">issue #1754</a> — issued 2026-11-02 — library-dev</summary>
+<details><summary>📋 <a href="active/results_library_p3_exports.md">Issued: 2026-11-02</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1754">issue #1754</a> — issued 2026-11-02 — library-shipped, awaiting-merge (judge → human /prm AFTER Fit#1753; retarget #1755 to main first) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1755">PyAutoFit#1755</a></summary>
 
 ```
 Use the start-dev skill. active/results_library_p3_exports.md
