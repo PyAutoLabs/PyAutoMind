@@ -229,7 +229,7 @@ Continue the 'Likelihood lifecycle — optimal setups baked into PyAutoLens (`se
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autogalaxy/wrong_jax_gradient_on_mge_likelihoods_fd.md">Wrong JAX gradient on MGE likelihoods: FD plateaus off the autodiff value…</a> — autogalaxy · medium · supervised · high</summary>
+<details><summary>📋 <a href="draft/bug/autogalaxy/wrong_jax_gradient_on_mge_likelihoods_fd.md">Wrong JAX gradient (and value) at near-round <code>ell_comps</code>: the MGE prior median…</a> — autogalaxy · medium · supervised · high</summary>
 
 ```
 Use the start-dev skill. draft/bug/autogalaxy/wrong_jax_gradient_on_mge_likelihoods_fd.md
