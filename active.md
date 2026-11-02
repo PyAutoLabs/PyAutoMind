@@ -91,3 +91,15 @@
 - prompt: active/likelihood_lifecycle_p4a_validation_tooling.md
 - epic: likelihood-lifecycle (phase 4a)
 - tier: judge — merge mode: human /prm
+
+## results-library-p4-package
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1756
+- issued: 2026-11-02
+- session: claude-code desktop (Opus 5.5)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/results-library-p4-package
+- repos:
+  - PyAutoFit: feature/results-library-p4-package
+- prompt: active/results_library_p4_package.md
+- epic: results-library (phase 4)
+- tier: judge — merge mode: human /prm
