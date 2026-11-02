@@ -1025,7 +1025,7 @@ Use the start-dev skill. active/gradient_correctness_sweep.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p4c_runners.md">Likelihood lifecycle phase 4c: Nautilus validation runners for the 19 remaining likelihoods</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/54">issue #54</a> — issued 2026-11-02 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/autolens_inference/pull/55">autolens_inference#55</a></summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p4c_runners.md">Likelihood lifecycle phase 4c: Nautilus validation runners for the 19 remaining likelihoods</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/54">issue #54</a> — issued 2026-11-02 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/autolens_inference/pull/55">autolens_inference#55</a>, <a href="https://github.com/PyAutoLabs/autolens_inference/pull/56">autolens_inference#56</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p4c_runners.md
