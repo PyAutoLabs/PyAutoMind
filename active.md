@@ -1,4 +1,18 @@
 
+## magnification-maps-uncertainty
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/692
+- issued: 2026-11-02
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/magnification-maps-uncertainty
+- repos:
+  - PyAutoGalaxy: feature/magnification-maps-uncertainty
+  - PyAutoLens: feature/magnification-maps-uncertainty
+  - autolens_workspace: feature/magnification-maps-uncertainty
+- prompt: active/magnification_maps_8c_uncertainty.md
+- epic: cluster-strong-lensing (phase 8c)
+- tier: judge — merge mode: human /prm (PyAutoGalaxy → PyAutoLens → autolens_workspace)
+
 ## matrix-free-interferometer-inversion
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/638
 - issued: 2026-10-21
