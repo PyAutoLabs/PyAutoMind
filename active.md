@@ -98,3 +98,14 @@
 - prompt: active/gradient_correctness_sweep.md
 - phase: 0 triage (no code) — table → human approves order; sub-fixes get their own start_dev
 - tier: judge — merge mode: human /prm
+
+## latest-per-test-tie
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1758
+- issued: 2026-11-02
+- session: claude-code desktop (Opus 5.5)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/latest-per-test-tie
+- repos:
+  - PyAutoFit: feature/latest-per-test-tie
+- prompt: active/latest_per_test_tie.md
+- tier: judge — merge mode: human /prm
