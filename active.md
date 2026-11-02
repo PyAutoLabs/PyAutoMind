@@ -106,3 +106,15 @@
 - witness-harness: autolens_profiling read-only via p6c worktree (claimed by likelihood-lifecycle-p6c-gradient-walls; human ruled PyAutoArray-only 2026-11-02)
 - prompt: active/rectangular_fiducial_gradient_wrong_rtu_and_cpu_sparse.md
 - tier: judge — merge mode: human /prm
+
+## results-library-p3-exports
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1754
+- issued: 2026-11-02
+- session: claude-code desktop (Opus 5.5)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/results-library-p3-exports
+- repos:
+  - PyAutoFit: feature/results-library-p3-exports (stacked on feature/results-library-p2-completeness; concurrent with results-library-p2-completeness per ruling F11)
+- prompt: active/results_library_p3_exports.md
+- epic: results-library (phase 3)
+- tier: judge — merge mode: human /prm
