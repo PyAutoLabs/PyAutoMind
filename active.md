@@ -70,6 +70,9 @@
 - worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p6c-gradient-walls
 - repos:
   - autolens_profiling: feature/likelihood-lifecycle-p6c-gradient-walls
+  - autolens_profiling: feature/likelihood-lifecycle-p6c-v2-walls
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/511 (v2 walls; judge, human /prm)
+- compute-pending: RAL 413890 (imaging CPU legs 0,4 at 512 GB, human go 2026-11-02)
 - prompt: active/likelihood_lifecycle_p6c_gradient_runs.md
 - epic: likelihood-lifecycle (phase 6c)
 - compute: RAL submit checkout /mnt/ral/jnightin/profiling/autolens_profiling_p2dg @ 97cdc88; human go per batch (batch 0 probe: go given 2026-11-01)
