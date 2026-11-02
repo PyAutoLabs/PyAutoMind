@@ -1,3 +1,14 @@
+## likelihood-lifecycle-p4a-validation-tooling
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/51
+- completed: 2026-11-02
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/52 (validation_p4 generator, parallel_efficiency, adopted-pin note, day-zero Pulse reference, pin docs; 94ffa86c)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/53 (Optimal setups only; Delaunay numba seed 0; 9bafc6bc)
+- Human rulings 2026-11-02: day zero may span versions (56 2026.10.17.1 rows adopted); one reference instrument per likelihood; Optimal setups only (no Secondary legs); Delaunay numba default legs added.
+- 4b compute (tracked in the epic ledger): A100 Delaunay legs RAL 413924 running (copied 2026.10.17.1 source_lp[1] loads on the day-zero libraries); ral cores-sweep legs 413911 (8) / 413913 (2) queued behind euclid pilots (est. 2026-11-05).
+- Lessons: the RAL login node cannot complete a large git checkout over NFS — fetch on the login node, merge in a ral compute-node job (compute nodes cannot resolve github.com). The ral partition can be fully memory-allocated by euclid pilot jobs even when CPUs look idle (check AllocMem).
+
+## Original prompt
+
 # Likelihood lifecycle phase 4a: inference wall-time validation tooling (submit generator, efficiency, day-zero reference)
 
 Type: research

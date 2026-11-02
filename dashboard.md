@@ -1041,10 +1041,10 @@ Use the start-dev skill. active/gradient_campaign_impact_of_border_tie_and_centr
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p4a_validation_tooling.md">Likelihood lifecycle phase 4a: inference wall-time validation tooling…</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/51">issue #51</a> — issued 2026-11-02 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/autolens_inference/pull/52">autolens_inference#52</a>, <a href="https://github.com/PyAutoLabs/autolens_inference/pull/53">autolens_inference#53</a></summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p4c_runners.md">Likelihood lifecycle phase 4c: Nautilus validation runners for the 19 remaining likelihoods</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/54">issue #54</a> — issued 2026-11-02 — workspace-dev</summary>
 
 ```
-Use the start-dev skill. active/likelihood_lifecycle_p4a_validation_tooling.md
+Use the start-dev skill. active/likelihood_lifecycle_p4c_runners.md
 ```
 
 </details>
@@ -2965,7 +2965,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-02 | issued | <a href="active/likelihood_lifecycle_p4a_validation_tooling.md">Likelihood lifecycle phase 4a: inference wall-time validation tooling…</a> |
+| 2026-11-02 | issued | <a href="active/likelihood_lifecycle_p4c_runners.md">Likelihood lifecycle phase 4c: Nautilus validation runners for the 19…</a> |
 | 2026-11-02 | issued | <a href="active/results_library_p5a_assistant.md">Issued: 2026-11-02</a> |
 | 2026-11-02 | filed | <a href="draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md">Imaging sparse-operator path gives a very different log L from dense…</a> |
 | 2026-11-02 | issued | <a href="active/chapter2-explanations.md">Chapter 2 parameter-space explanations and profile sequencing</a> |

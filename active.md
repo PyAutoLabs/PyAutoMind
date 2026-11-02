@@ -32,21 +32,6 @@
 - run: RAL 413687 sky_frame_bundle MODE=dry over inspect/dr1_catalogue_v5 (private code /mnt/ral/jnightin/active/euclid_dr1_p2c_code @910e5c8; submitted via scratch hpc/sync copy) → NEXT read dry report, MODE=live, re-package; then re-render pilot (~50, human review), 2b docs
 - tier: judge — merge mode: human /prm
 
-## likelihood-lifecycle-p4a-validation-tooling
-- issue: https://github.com/PyAutoLabs/autolens_inference/issues/51
-- issued: 2026-11-02
-- session: claude-code desktop (WSL), ~/Science session
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p4a-validation-tooling
-- repos:
-  - autolens_inference: feature/likelihood-lifecycle-p4a-validation-tooling
-- prompt: active/likelihood_lifecycle_p4a_validation_tooling.md
-- epic: likelihood-lifecycle (phase 4a)
-- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/52 (MERGED 2026-11-02 94ffa86c via human /prm)
-- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/53 (Optimal-only scope + Delaunay numba seed 0; MERGED 2026-11-02 9bafc6bc via human /prm)
-  - autolens_inference: feature/likelihood-lifecycle-p4a-scope-optimal
-- tier: judge — merge mode: human /prm
-
 ## results-library-p5a-assistant
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/176
 - issued: 2026-11-02
@@ -83,4 +68,17 @@
 - prompt: active/gradient_campaign_impact_of_border_tie_and_centre_singularity.md
 - origin: human request during PyAutoArray#671 (record complete/2026/11/rectangular-gradient-rtu-sparse.md)
 - compute: any RAL leg needs an explicit human go; private checkout, partition ral
+- tier: judge — merge mode: human /prm
+
+## likelihood-lifecycle-p4c-runners
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/54
+- issued: 2026-11-02
+- session: claude-code desktop (WSL), ~/Science session
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p4c-runners
+- repos:
+  - autolens_inference: feature/likelihood-lifecycle-p4c0-tooling
+- compute-tracking: 4b RAL 413924 (A100 Delaunay, running), 413911 / 413913 (ral cores sweep, queued behind euclid pilots)
+- prompt: active/likelihood_lifecycle_p4c_runners.md
+- epic: likelihood-lifecycle (phase 4c)
 - tier: judge — merge mode: human /prm
