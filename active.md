@@ -115,8 +115,11 @@
 - worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p6d-gradient-ingest
 - repos:
   - PyAutoPulse: feature/likelihood-lifecycle-p6d-gradient-ingest
+  - PyAutoPulse: feature/likelihood-lifecycle-p6d-freeze-gradient
   - autolens_profiling: feature/likelihood-lifecycle-p6d-gradient-ingest
 - library-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/87 (freeze --measurement; MERGED 2026-11-02 6d9a8a8d via human /prm)
+- library-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/88 (freeze day_zero_gradient at autolens_profiling 433bd778; judge, human /prm; merge before #513 lint re-run)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/513 (ingest 73 gradient witnesses; judge, human /prm)
 - carried-from-6c: RAL 413890_0 (imaging/delaunay/ao CPU, 512 GB) record + wall + imaging RAL CPU memory value (6c closed 2026-11-02)
 - prompt: active/likelihood_lifecycle_p6d_gradient_ingest.md
 - epic: likelihood-lifecycle (phase 6d)
