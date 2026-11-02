@@ -70,26 +70,6 @@
   - HowToLens: feature/howtolens-ch2-explanations
 - approval: five prose/code blocks approved 2026-11-02; no merge authority
 
-## likelihood-lifecycle-p4c-runners
-- issue: https://github.com/PyAutoLabs/autolens_inference/issues/54
-- issued: 2026-11-02
-- session: claude-code desktop (WSL), ~/Science session
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p4c-runners
-- repos:
-  - autolens_inference: feature/likelihood-lifecycle-p4c-runners (4c-0 tooling)
-  - autolens_inference: feature/likelihood-lifecycle-p4c1 (4c-1 imaging/interferometer/datacube; worktree autolens_inference_4c1)
-  - autolens_inference: feature/likelihood-lifecycle-p4c2 (4c-2 group/multi_galaxy/multi_dataset; worktree autolens_inference_4c2)
-  - autolens_inference: feature/likelihood-lifecycle-p4c3 (4c-3 point/cluster/weak; worktree autolens_inference_4c3)
-- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/55 (4c-0 tooling; MERGED 2026-11-02 20d297dd via human /prm)
-- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/56 (4c-1 runners; judge, human /prm)
-- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/57 (4c-3 runners; stacked on #56, retarget to main after; judge, human /prm)
-- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/58 (4c-2 runners; stacked on #57; judge, human /prm)
-- compute-tracking: 4b RAL 413924 (A100 Delaunay, running), 413911 / 413913 (ral cores sweep, queued behind euclid pilots)
-- prompt: active/likelihood_lifecycle_p4c_runners.md
-- epic: likelihood-lifecycle (phase 4c)
-- tier: judge — merge mode: human /prm
-
 ## gradient-correctness-sweep
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/517
 - issued: 2026-11-02

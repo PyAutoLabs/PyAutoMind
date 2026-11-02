@@ -1,3 +1,17 @@
+## likelihood-lifecycle-p4c-runners
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/54
+- completed: 2026-11-02
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/55 (4c-0 tooling, 20d297dd)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/56 (4c-1 imaging mge/delaunay_nn, interferometer ×3, datacube; ba27f95b)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/57 (4c-3 point ×2, cluster ×2, weak; 4186c045)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/58 (4c-2 group ×3, multi_galaxy ×3, multi_dataset; a24e993c)
+- Every one of the 20 catalogue likelihoods now has a validation runner (one reference instrument, Optimal setups only; human rulings 2026-11-02: workspace pipeline + profiled preset; 4c-0 first then families in parallel). validation_p4 emits 70 submits, all check_submits-clean; 470 tests. No compute.
+- Departures recorded on each PR (interferometer/mge closed MGE-style; positive-only solver kept on; search priors on point/cluster/weak; cluster profiled parameterisation; workspace lens-light MGE sizes on group/multi_galaxy; multi_dataset uniform over-sampling).
+- Follow-ups: PyAutoLens weak plotter fails under JAX (ArrayImpl has no grid); trim the 5-day containment --time on 4c-1 legs at the compute go.
+- Lessons: three families built in parallel each generalised the shared generator their own way; rebasing them onto one another and adopting the first-merged hooks kept one mechanism per concern. Run the exporter after every commit (dashboard freshness records the source revision). After a WSL restart, ssh/git need SSH_AUTH_SOCK pointed at the human-started agent.
+
+## Original prompt
+
 # Likelihood lifecycle phase 4c: Nautilus validation runners for the 19 remaining likelihoods
 
 Type: research
