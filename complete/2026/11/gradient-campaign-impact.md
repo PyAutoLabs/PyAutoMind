@@ -1,3 +1,16 @@
+## gradient-campaign-impact
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/515
+- completed: 2026-11-02
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/516
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/89
+- summary: human-requested assessment of whether the two PyAutoArray#671 defects affected the likelihood-lifecycle phase-6 gradient campaign. Answer: no. None of the 73 results/**/gradient.json verdicts changes and day_zero_gradient stands. Every pixelized cell is --standard-size and evaluated at iid draw 0 of the seeded production sequence (imaging mass centre (0.00085, -0.00035)"), so there are no exact border ties and no grid point on the centre. The cells really evaluated at the prior medians are non-pixelized (imaging MGE also holds the mass fixed). Control: interferometer/rectangular/sma re-run with PyAutoArray before vs after #672 gave a bit-identical gradient (2.4e-16) and reproduced the stored record.
+- method: #672 leaves values unchanged, so the stored FD stays valid; the stored autodiff was compared with the stored central FD at h=1e-8/1e-7/1e-6 across all cells (Science/scratch/gradient_campaign_impact_2026-11-02/small_step_check.py; A/B harness ab_cell.sh + ab_compare.py).
+- traps: every standard driver except galaxy_group_standard records "point": "prior_medians" while evaluating at iid draw 0 (a mislabel that made #671 look like a campaign risk); the interferometer --standard-size cell exits early into likelihood_breakdown/interferometer_standard.run_jax, so the runtime script's own prior-medians block is NOT the evaluated point; gradient_breakdown --output-path writes gradient.json beside the path (A/B sides must be moved apart); a local sma run writes untracked results/misc/simulators/ artefacts.
+- follow-ups filed: draft/bug/autolens_profiling/gradient_json_point_label_standard_cells.md, draft/research/autolens_profiling/unexplained_gradient_gaps_cpu_sparse_delaunay_and_mge.md.
+- heart: shipped on STALE ("release validation incomplete: no rehearsal for current source"), human-acknowledged.
+
+## Original prompt
+
 # Assess how PyAutoArray#671's two gradient defects affected the likelihood-lifecycle / PyAutoPulse gradient campaign verdicts
 
 Type: research
