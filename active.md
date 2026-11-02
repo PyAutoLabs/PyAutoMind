@@ -98,5 +98,6 @@
 - repos:
   - autolens_profiling: feature/gradient-correctness-sweep
 - prompt: active/gradient_correctness_sweep.md
-- phase: 0 triage (no code) — table → human approves order; sub-fixes get their own start_dev
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/518 (items 10, 11 + sweep note; judge, human /prm)
+- phase: order approved 2026-11-02; done 10, 11 (PR #518), 12 (retired), 1 (re-filed narrower into draft/bug/autogalaxy/wrong_jax_gradient_on_mge_likelihoods_fd.md); NEXT item 2 (CPU vs GPU Delaunay)
 - tier: judge — merge mode: human /prm
