@@ -10,15 +10,15 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 19 |
-| [In flight](#in-flight) | 7 |
+| [In flight](#in-flight) | 8 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 281 |
+| [Backlog](#backlog) | 280 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 20
+**Highest priority** (filed as `high`) — showing 12 of 19
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -56,14 +56,6 @@ Use the start-dev skill. draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urll
 
 ```
 Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/rectangular_fiducial_gradient_wrong_rtu_and_cpu_sparse.md">Wrong JAX gradient through the rectangular source mesh: RTU (all backends)…</a> — autoarray · medium · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autoarray/rectangular_fiducial_gradient_wrong_rtu_and_cpu_sparse.md
 ```
 
 </details>
@@ -112,6 +104,14 @@ Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speedin
 
 ```
 Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md
 ```
 
 </details>
@@ -993,6 +993,14 @@ Use the start-dev skill. active/r2_pages_function_access.md
 
 </details>
 
+<details><summary>📋 <a href="active/rectangular_fiducial_gradient_wrong_rtu_and_cpu_sparse.md">Wrong JAX gradient through the rectangular source mesh: RTU (all backends)…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/671">issue #671</a> — issued 2026-11-02 — library-dev</summary>
+
+```
+Use the start-dev skill. active/rectangular_fiducial_gradient_wrong_rtu_and_cpu_sparse.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/results_library_p2_completeness.md">Issued: 2026-11-02</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1752">issue #1752</a> — issued 2026-11-02 — library-dev</summary>
 
 ```
@@ -1458,7 +1466,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 65</summary>
+<summary><b>bug</b> — 64</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1488,14 +1496,6 @@ Use the start-dev skill. draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urll
 
 ```
 Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/rectangular_fiducial_gradient_wrong_rtu_and_cpu_sparse.md">Wrong JAX gradient through the rectangular source mesh: RTU (all backends)…</a> — autoarray · medium · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autoarray/rectangular_fiducial_gradient_wrong_rtu_and_cpu_sparse.md
 ```
 
 </details>
@@ -2893,7 +2893,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-02 | filed | <a href="draft/bug/autoarray/rectangular_fiducial_gradient_wrong_rtu_and_cpu_sparse.md">Wrong JAX gradient through the rectangular source mesh: RTU (all…</a> |
+| 2026-11-02 | issued | <a href="active/rectangular_fiducial_gradient_wrong_rtu_and_cpu_sparse.md">Wrong JAX gradient through the rectangular source mesh: RTU (all…</a> |
 | 2026-11-02 | issued | <a href="active/results_library_p2_completeness.md">Issued: 2026-11-02</a> |
 | 2026-11-01 | issued | <a href="active/likelihood_lifecycle_p6c_gradient_runs.md">Likelihood lifecycle phase 6c: run the gradient campaign on RAL…</a> |
 | 2026-10-31 | issued | <a href="active/sky_orientation_euclid_dr1_and_library.md">Sky orientation (north/east): euclid_dr1 catalogue, paper and…</a> |
