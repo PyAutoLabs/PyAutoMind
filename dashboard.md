@@ -1009,7 +1009,7 @@ Use the start-dev skill. active/likelihood_lifecycle_p6c_gradient_runs.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p6d_gradient_ingest.md">Likelihood lifecycle phase 6d: ingest the gradient witnesses, freeze day_zero_gradient, file hazards…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/512">issue #512</a> — issued 2026-11-02 — library-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p6d_gradient_ingest.md">Likelihood lifecycle phase 6d: ingest the gradient witnesses, freeze day_zero_gradient, file hazards…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/512">issue #512</a> — issued 2026-11-02 — library-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoPulse/pull/87">PyAutoPulse#87</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p6d_gradient_ingest.md
