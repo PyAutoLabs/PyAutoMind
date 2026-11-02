@@ -10,7 +10,7 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 19 |
-| [In flight](#in-flight) | 7 |
+| [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 9 |
 | [Backlog](#backlog) | 289 |
 | [Recent](#recent) | 50 |
@@ -1061,14 +1061,6 @@ Use the start-dev skill. active/r2_pages_function_access.md
 
 ```
 Use the start-dev skill. active/rectangular_fiducial_gradient_wrong_rtu_and_cpu_sparse.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/results_library_p4_package.md">Issued: 2026-11-02</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1756">issue #1756</a> — issued 2026-11-02 — library-shipped, awaiting-merge (judge → human /prm) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1757">PyAutoFit#1757</a> — ⏳ pending release: PyAutoFit</summary>
-
-```
-Use the start-dev skill. active/results_library_p4_package.md
 ```
 
 </details>
@@ -2960,19 +2952,18 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-02 | issued | <a href="active/rectangular_fiducial_gradient_wrong_rtu_and_cpu_sparse.md">Wrong JAX gradient through the rectangular source mesh: RTU (all…</a> |
 | 2026-11-02 | issued | <a href="active/magnification_maps_8a_image_plane.md">Magnification maps 8a: image-plane log\|mu\| map with constant-mu…</a> |
 | 2026-11-02 | issued | <a href="active/likelihood_lifecycle_p4a_validation_tooling.md">Likelihood lifecycle phase 4a: inference wall-time validation tooling…</a> |
-| 2026-11-02 | issued | <a href="active/results_library_p4_package.md">Issued: 2026-11-02</a> |
 | 2026-10-31 | issued | <a href="active/sky_orientation_euclid_dr1_and_library.md">Sky orientation (north/east): euclid_dr1 catalogue, paper and…</a> |
 | 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
 | 2026-10-29 | issued | <a href="active/r2_pages_function_access.md">ECLIPSE site: serve R2 lens files through a Pages Function behind…</a> |
 | 2026-10-26 | filed | <a href="draft/refactor/autogalaxy_assistant/trim_ag_skills_for_colab_cap.md">Trim autogalaxy_assistant skills toward their autolens size</a> |
 | 2026-10-25 | filed | <a href="draft/bug/health_fixes/heart_health_rerun_stale_push.md">Heart Health rerun cannot publish after main advances</a> |
 | 2026-10-25 | filed | <a href="draft/bug/health_fixes/ci_timing_execution_coverage.md">CI timing must compare equivalent executed job coverage</a> |
+| 2026-10-23 | filed | <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-23 | filed | <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred…</a> |
 | 2026-10-23 | filed | <a href="draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md">autocti_visualization manifest <code>rendered_with:</code> shows stale…</a> |
 | 2026-10-23 | filed | <a href="draft/bug/autolens_profiling/stale_auto_simulated_cluster_dataset.md"><code>@autolens_profiling</code> stale auto-simulated <code>dataset/cluster/simple</code>…</a> |
 | 2026-10-23 | filed | <a href="draft/feature/pyautobrain/docs_conductor.md">A dedicated Documentation conductor in PyAutoBrain</a> |
@@ -2982,12 +2973,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-21 | filed | <a href="draft/docs/autolens_profiling/positions_source_jacobian_default_rerun_note.md">Note in autolens_profiling that plain source-plane lane values…</a> |
 | 2026-10-21 | filed | <a href="draft/research/autolens_profiling/matrix_free_interferometer_phase5.md">Matrix-free interferometer inversion, phase 5b: profiling note…</a> |
 | 2026-10-21 | issued | <a href="active/matrix_free_interferometer_inversion.md">Matrix-free interferometer inversion for very large rectangular…</a> |
+| 2026-10-21 | filed | <a href="draft/docs/autolens_workspace/interferometer_primary_beam_example.md">Interferometer primary beam: workspace example and docs</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-21 | filed | <a href="draft/docs/autolens_workspace/interferometer_primary_beam_example.md">Interferometer primary beam: workspace example and docs</a> |
 | 2026-10-21 | filed | <a href="draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md">Cluster likelihood scripts: image-plane manual check disagrees with…</a> |
 | 2026-10-16 | filed | <a href="draft/bug/pyautomind/repos_sync_test_keys_on_dir_name.md">repos_sync standards-block test keys on the checkout dir name…</a> |
 | 2026-10-16 | filed | <a href="draft/maintenance/autolens_workspace/remeasure_shapelets_slow_park.md">Re-measure the shapelets/modeling.py SLOW park (#586) under the…</a> |
@@ -2997,12 +2988,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-14 | filed | <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> |
 | 2026-10-09 | filed | <a href="draft/bug/pyautobrain/profiling_compile_drift_point_vs_point.md">Profiling conductor compile drift compares one point against one point</a> |
 | 2026-10-08 | filed | <a href="draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md"><code>JAX_ENABLE_X64=False</code> is overridden to True, so the fp32 inference…</a> |
+| 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
 | 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
@@ -3012,12 +3003,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
 | 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
 | 2026-09-29 | filed | <a href="draft/maintenance/pyautomind/session_start_hook_copies_regen.md">Regenerate the 28 drifted <code>.claude/hooks/session-start.sh</code> copies…</a> |
+| 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
 | 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
@@ -3027,6 +3018,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-24 | filed | <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> |
 | 2026-09-23 | filed | <a href="draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
 | 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
+| 2026-09-18 | filed | <a href="draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md">arXiv's Fastly edge refuses <code>urllib.request</code> outright — retrying a…</a> |
 
 </details>
 
@@ -3201,9 +3193,9 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoFit**
 
-- [PyAutoFit#1757](https://github.com/PyAutoLabs/PyAutoFit/pull/1757) — `active/results_library_p4_package.md`
 - [PyAutoFit#1753](https://github.com/PyAutoLabs/PyAutoFit/pull/1753) — `complete/2026/11/results-library-p2-completeness.md`
 - [PyAutoFit#1755](https://github.com/PyAutoLabs/PyAutoFit/pull/1755) — `complete/2026/11/results-library-p3-exports.md`
+- [PyAutoFit#1757](https://github.com/PyAutoLabs/PyAutoFit/pull/1757) — `complete/2026/11/results-library-p4-package.md`
 
 
 Boards: [organism](https://pyautolabs.github.io/PyAutoScientist/) · [brain](https://pyautolabs.github.io/PyAutoBrain/) · [cortex](https://pyautolabs.github.io/PyAutoCortex/) · [memory](https://pyautolabs.github.io/PyAutoMemory/) · [eyes](https://pyautolabs.github.io/PyAutoEyes/) · [ears](https://pyautolabs.github.io/PyAutoEars/) · [heart](https://pyautolabs.github.io/PyAutoHeart/) · [hands](https://pyautolabs.github.io/PyAutoHands/) · [pulse](https://pyautolabs.github.io/PyAutoPulse/) · [insight](https://pyautolabs.github.io/PyAutoInsight/) · [dna](https://pyautolabs.github.io/PyAutoDNA/) · [nerves](https://pyautolabs.github.io/PyAutoNerves/) · [broca](https://pyautolabs.github.io/PyAutoBroca/) · [gut](https://pyautolabs.github.io/PyAutoGut/)

@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-11-02T13:48:28Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
+  "updated": "2026-11-02T13:49:28Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Issued: 2026-11-02 \u2014 library-shipped, awaiting-merge (judge \u2192 human /prm)",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1757",
-      "prompt": "Use the start-dev skill. active/results_library_p4_package.md"
-    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -27,12 +21,6 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1757 \u2014 Issued: 2026-11-02",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1757",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1753 \u2014 results-library-p2-completeness",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1753",
       "prompt": null
@@ -41,6 +29,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1755 \u2014 results-library-p3-exports",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1755",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1757 \u2014 results-library-p4-package",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1757",
       "prompt": null
     },
     {
@@ -126,6 +120,12 @@
       "text": "pick: Cache `autonerves` config parsing \u2014 308 YAML files parsed per script run",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/autonerves/config_yaml_parse_cache.md",
       "prompt": "Use the start-dev skill. draft/refactor/autonerves/config_yaml_parse_cache.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md",
+      "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md"
     }
   ]
 }
