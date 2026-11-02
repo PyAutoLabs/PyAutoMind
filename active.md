@@ -32,22 +32,6 @@
 - run: RAL 413687 sky_frame_bundle MODE=dry over inspect/dr1_catalogue_v5 (private code /mnt/ral/jnightin/active/euclid_dr1_p2c_code @910e5c8; submitted via scratch hpc/sync copy) → NEXT read dry report, MODE=live, re-package; then re-render pilot (~50, human review), 2b docs
 - tier: judge — merge mode: human /prm
 
-## magnification-errors-source-science
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/610
-- issued: 2026-10-31
-- status: awaiting-merge (judge: Heart-RED-override ship → human /prm)
-- pr: https://github.com/PyAutoLabs/autolens_workspace/pull/613
-- heart-ack: STALE 'release validation incomplete: no rehearsal for current source' acknowledged live by the human 2026-11-02
-- worktree: ~/Code/PyAutoLabs-wt/magnification-errors-source-science
-- repos:
-  - autolens_workspace: feature/magnification-errors-source-science
-- released-claims: PyAutoFit (2026-11-02 by results-library-p2-completeness session — #1751 merged + released in 2026.11.1.1; wt PyAutoFit is detached on main)
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1751 (MERGED 2026-10-31 e9d3c6a2 via human /prm; pending-release)
-- prompt: active/magnification_errors_source_science.md
-- epic: cluster-strong-lensing (phase 7b)
-- heart-red-override: authorized live by the human 2026-10-31 ("override heart red, go ahead with 7b"); RED reasons quoted on the issue; development only
-- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
-
 ## rectangular-gradient-rtu-sparse
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/671
 - issued: 2026-11-02
@@ -73,7 +57,7 @@
 - prompt: active/likelihood_lifecycle_p4a_validation_tooling.md
 - epic: likelihood-lifecycle (phase 4a)
 - workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/52 (MERGED 2026-11-02 94ffa86c via human /prm)
-- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/53 (Optimal-only scope + Delaunay numba seed 0; judge, human /prm)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/53 (Optimal-only scope + Delaunay numba seed 0; MERGED 2026-11-02 9bafc6bc via human /prm)
   - autolens_inference: feature/likelihood-lifecycle-p4a-scope-optimal
 - tier: judge — merge mode: human /prm
 
