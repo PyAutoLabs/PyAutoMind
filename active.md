@@ -1,4 +1,18 @@
 
+## magnification-maps-wiring
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/818
+- issued: 2026-11-02
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/magnification-maps-wiring
+- repos:
+  - PyAutoArray: feature/magnification-maps-wiring
+  - PyAutoGalaxy: feature/magnification-maps-wiring
+  - PyAutoLens: feature/magnification-maps-wiring
+- prompt: active/magnification_maps_8d_wiring_pretty.md
+- epic: cluster-strong-lensing (phase 8d)
+- tier: judge — merge mode: human /prm (PyAutoArray → PyAutoGalaxy → PyAutoLens)
+
 ## matrix-free-interferometer-inversion
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/638
 - issued: 2026-10-21
