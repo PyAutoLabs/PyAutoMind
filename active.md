@@ -55,7 +55,7 @@
 - worktree: ~/Code/PyAutoLabs-wt/magnification-errors-source-science
 - repos:
   - autolens_workspace: feature/magnification-errors-source-science
-  - PyAutoFit: feature/magnification-errors-source-science
+- released-claims: PyAutoFit (2026-11-02 by results-library-p2-completeness session — #1751 merged + released in 2026.11.1.1; wt PyAutoFit is detached on main)
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1751 (MERGED 2026-10-31 e9d3c6a2 via human /prm; pending-release)
 - prompt: active/magnification_errors_source_science.md
 - epic: cluster-strong-lensing (phase 7b)
@@ -73,4 +73,17 @@
 - prompt: active/likelihood_lifecycle_p6c_gradient_runs.md
 - epic: likelihood-lifecycle (phase 6c)
 - compute: RAL submit checkout /mnt/ral/jnightin/profiling/autolens_profiling_p2dg @ 97cdc88; human go per batch (batch 0 probe: go given 2026-11-01)
+- tier: judge — merge mode: human /prm
+
+## results-library-p2-completeness
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1752
+- issued: 2026-11-02
+- session: claude-code desktop (Opus 5.5)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/results-library-p2-completeness
+- repos:
+  - PyAutoFit: feature/results-library-p2-completeness
+  - autofit_workspace: feature/results-library-p2-completeness
+- prompt: active/results_library_p2_completeness.md
+- epic: results-library (phase 2)
 - tier: judge — merge mode: human /prm

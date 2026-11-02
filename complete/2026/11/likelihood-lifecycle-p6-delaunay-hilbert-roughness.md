@@ -1,3 +1,13 @@
+## likelihood-lifecycle-p6-delaunay-hilbert-roughness
+- completed: 2026-11-02
+- compute: RAL 413876 (14 A100 configs, all rc=0); side project, not ingested into Pulse.
+- Write-up: ~/Science/Science/scratch/delaunay_hilbert_2026-11-01/README.md (table + summary.txt, raw probe.json).
+- Finding (agent reading): no Hilbert setting (500/2500 px, weight_power 1/6, floor 0/1e-3, no edge pixels) gives an FD plateau on imaging/delaunay/hst or delaunay_nn/hst. Baseline narrow (±1e-4) roughness 0.027, strong adapt 0.34, 2500 px 0.11. More pixels raise the flip rate (0.20 -> 0.5 of intervals). Log L jumps coincide with triangle flips above chance (0.5–1.0 vs 0.15–0.64). ConstantSplit (fixed coefficient) was the only Delaunay config with 2/3 agreement.
+- Human ruling 2026-11-02: "I accept them, no follow up."
+- Spin-off: draft/bug/autoarray/rectangular_fiducial_gradient_wrong_rtu_and_cpu_sparse.md (RTU / CPU-sparse Bilinear fiducial gradient wrong; human: file it).
+
+## Original prompt
+
 # Likelihood lifecycle phase 6 follow-up: Delaunay roughness vs Hilbert image-mesh adaption
 
 Type: research
