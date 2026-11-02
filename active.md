@@ -118,3 +118,16 @@
 - prompt: active/results_library_p3_exports.md
 - epic: results-library (phase 3)
 - tier: judge — merge mode: human /prm
+
+## likelihood-lifecycle-p6d-gradient-ingest
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/512
+- issued: 2026-11-02
+- session: claude-code desktop (WSL), ~/Science session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p6d-gradient-ingest
+- repos:
+  - PyAutoPulse: feature/likelihood-lifecycle-p6d-gradient-ingest
+- pending-claim: autolens_profiling (feature/likelihood-lifecycle-p6d-gradient-ingest) once likelihood-lifecycle-p6c-gradient-walls closes (RAL 413890_0 + walls follow-up)
+- prompt: active/likelihood_lifecycle_p6d_gradient_ingest.md
+- epic: likelihood-lifecycle (phase 6d)
+- tier: judge — merge mode: human /prm

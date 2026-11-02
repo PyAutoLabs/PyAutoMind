@@ -11,7 +11,9 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: formalised
+Status: issued
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/512
+Issued: 2026-11-02
 Consequence: judge
 Witness: every Optimal setup's gradient leg (74) has a current mirrored gradient.json under results/ read by build_catalogue as a measurement gradient record with an FD verdict; the 10 FD-pass records carry day_zero 2026.10.25.1; Pulse snapshots/day_zero_gradient/lens.json holds exactly those gradient records (runtime day_zero untouched); every non-pass verdict and every grad/forward > 4x is covered by a hazard prompt filed by mechanism; the epic's phase-6 witness is restated
 Review-minutes: 20
