@@ -101,3 +101,13 @@
 - prompt: active/results_library_p5b_cortex.md
 - epic: results-library (phase 5b)
 - tier: judge — merge mode: human /prm
+
+## howtolens-ch2-explanations
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/123
+- issued: 2026-11-02
+- session: Codex 01a19c86-3bab-7183-a1e1-a04ff3e80c7f
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howtolens-ch2-explanations
+- repos:
+  - HowToLens: feature/howtolens-ch2-explanations
+- approval: five prose/code blocks approved 2026-11-02; no merge authority
