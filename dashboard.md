@@ -1041,7 +1041,7 @@ Use the start-dev skill. active/likelihood_lifecycle_p4a_validation_tooling.md
 
 </details>
 
-<details><summary>📋 <a href="active/magnification_maps_8b_source_plane.md">Magnification maps 8b: source-plane magnification per mesh pixel</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/673">issue #673</a> — issued 2026-11-02 — library-dev</summary>
+<details><summary>📋 <a href="active/magnification_maps_8b_source_plane.md">Magnification maps 8b: source-plane magnification per mesh pixel</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/673">issue #673</a> — issued 2026-11-02 — library-shipped, awaiting-merge (judge → human /prm: Array#674 → Galaxy#691 → Lens#816 → ws#615) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/674">PyAutoArray#674</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/691">PyAutoGalaxy#691</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/816">PyAutoLens#816</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/615">autolens_workspace#615</a> — ⏳ pending release: PyAutoArray — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoLens</summary>
 
 ```
 Use the start-dev skill. active/magnification_maps_8b_source_plane.md
@@ -3210,6 +3210,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoArray**
 
+- [PyAutoArray#674](https://github.com/PyAutoLabs/PyAutoArray/pull/674) — `active/magnification_maps_8b_source_plane.md`
 - [PyAutoArray#672](https://github.com/PyAutoLabs/PyAutoArray/pull/672) — `complete/2026/11/rectangular-gradient-rtu-sparse.md`
 
 **PyAutoFit**
@@ -3220,10 +3221,12 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#691](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/691) — `active/magnification_maps_8b_source_plane.md`
 - [PyAutoGalaxy#690](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/690) — `complete/2026/11/magnification-maps-image-plane.md`
 
 **PyAutoLens**
 
+- [PyAutoLens#816](https://github.com/PyAutoLabs/PyAutoLens/pull/816) — `active/magnification_maps_8b_source_plane.md`
 - [PyAutoLens#815](https://github.com/PyAutoLabs/PyAutoLens/pull/815) — `complete/2026/11/magnification-maps-image-plane.md`
 
 
