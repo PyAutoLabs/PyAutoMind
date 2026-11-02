@@ -1033,7 +1033,7 @@ Use the start-dev skill. active/likelihood_lifecycle_p4c_runners.md
 
 </details>
 
-<details><summary>📋 <a href="active/magnification_maps_8c_uncertainty.md">Magnification maps 8c: LEGGOS Fig-4 fractional magnification uncertainty map</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/692">issue #692</a> — issued 2026-11-02 — library-dev</summary>
+<details><summary>📋 <a href="active/magnification_maps_8c_uncertainty.md">Magnification maps 8c: LEGGOS Fig-4 fractional magnification uncertainty map</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/692">issue #692</a> — issued 2026-11-02 — library-shipped, awaiting-merge (judge → human /prm: Galaxy#693 → Lens#817 → ws#616) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/693">PyAutoGalaxy#693</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/817">PyAutoLens#817</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/616">autolens_workspace#616</a> — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoLens</summary>
 
 ```
 Use the start-dev skill. active/magnification_maps_8c_uncertainty.md
@@ -3229,11 +3229,13 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#693](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/693) — `active/magnification_maps_8c_uncertainty.md`
 - [PyAutoGalaxy#690](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/690) — `complete/2026/11/magnification-maps-image-plane.md`
 - [PyAutoGalaxy#691](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/691) — `complete/2026/11/magnification-maps-source-plane.md`
 
 **PyAutoLens**
 
+- [PyAutoLens#817](https://github.com/PyAutoLabs/PyAutoLens/pull/817) — `active/magnification_maps_8c_uncertainty.md`
 - [PyAutoLens#815](https://github.com/PyAutoLabs/PyAutoLens/pull/815) — `complete/2026/11/magnification-maps-image-plane.md`
 - [PyAutoLens#816](https://github.com/PyAutoLabs/PyAutoLens/pull/816) — `complete/2026/11/magnification-maps-source-plane.md`
 
