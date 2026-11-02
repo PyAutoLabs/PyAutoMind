@@ -11,3 +11,6 @@ Later scope includes optional speed/historical prior passing, summary and final 
 Original detailed design checkpoint: C:\Users\Jammy\Workspace\Science\scratch\howto_chapter2_review_2026-10-31\RESUME.txt (its old implementation status is superseded by PR #115).
 Updated checkpoint: /mnt/c/Users/Jammy/Documents/Codex/2026-11-01/can-x20/outputs/chapter2-checkpoint.txt
 Original review chat: 01a1921a-9586-7c13-837d-8a7b2e1a3f37. Current ship chat: 01a197a6-fbee-7b52-94d9-c5f72b126a44.
+
+## Final checkpoint — 2026-11-02
+Chapter 2 content, historical consistency and final navigation are complete locally at 8362371 on feature/howtolens-ch2-explanations. See active/chapter2-explanations.md for the canonical completion record, validation and review bundle. Main lessons are now 1–6 plus tutorial_7_summary.py; speed and historical prior passing are optional. All 10 scoped smoke scripts passed; generation 43 passed. No remaining prose review requested. No HowToLens push, PR or merge performed.
