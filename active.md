@@ -103,9 +103,11 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1758
 - issued: 2026-11-02
 - session: claude-code desktop (Opus 5.5)
-- status: library-dev
+- status: library-shipped, awaiting-merge (judge → human /prm; then `release validate`)
 - worktree: ~/Code/PyAutoLabs-wt/latest-per-test-tie
 - repos:
   - PyAutoFit: feature/latest-per-test-tie
 - prompt: active/latest_per_test_tie.md
 - tier: judge — merge mode: human /prm
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1759
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1759
