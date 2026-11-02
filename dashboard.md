@@ -10,15 +10,15 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 19 |
-| [In flight](#in-flight) | 8 |
+| [In flight](#in-flight) | 7 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 289 |
+| [Backlog](#backlog) | 291 |
 | [Recent](#recent) | 50 |
-| [Pending release](#pending-release) | 3 |
+| [Pending release](#pending-release) | 4 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 19
+**Highest priority** (filed as `high`) — showing 12 of 20
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -84,6 +84,14 @@ Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun
 
 </details>
 
+<details><summary>📋 <a href="draft/research/autolens_profiling/gradient_campaign_impact_of_border_tie_and_centre_singularity.md">Assess how PyAutoArray#671's two gradient defects affected the likelihood-lifecycle / PyAutoPulse gradient…</a> — autolens_profiling · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/research/autolens_profiling/gradient_campaign_impact_of_border_tie_and_centre_singularity.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> — organs · medium · supervised · high</summary>
 
 ```
@@ -104,14 +112,6 @@ Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speedin
 
 ```
 Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md
 ```
 
 </details>
@@ -1057,14 +1057,6 @@ Use the start-dev skill. active/r2_pages_function_access.md
 
 </details>
 
-<details><summary>📋 <a href="active/rectangular_fiducial_gradient_wrong_rtu_and_cpu_sparse.md">Wrong JAX gradient through the rectangular source mesh: RTU (all backends)…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/671">issue #671</a> — issued 2026-11-02 — library-shipped, awaiting /prm — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/672">PyAutoArray#672</a></summary>
-
-```
-Use the start-dev skill. active/rectangular_fiducial_gradient_wrong_rtu_and_cpu_sparse.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/results_library_p5a_assistant.md">Issued: 2026-11-02</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/176">issue #176</a> — issued 2026-11-02 — workspace-shipped, awaiting-merge (judge → human /prm; wiki-currency waits on a PyAutoFit release) — PRs: <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/177">autolens_assistant#177</a></summary>
 
 ```
@@ -1538,7 +1530,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 64</summary>
+<summary><b>bug</b> — 65</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1696,6 +1688,14 @@ Use the start-dev skill. draft/bug/autoarray/interferometer_log_evidence_large_r
 
 ```
 Use the start-dev skill. draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md">Imaging sparse-operator path gives a very different log L from dense…</a> — autoarray · medium · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md
 ```
 
 </details>
@@ -2055,12 +2055,20 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>research</b> — 42</summary>
+<summary><b>research</b> — 43</summary>
 
 <details><summary>📋 <a href="draft/research/autofit_inference/search_ext_b5c2a_rerun.md"><code>@autofit_inference</code> B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug…</a> — autofit_inference · medium · supervised · high</summary>
 
 ```
 Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_profiling/gradient_campaign_impact_of_border_tie_and_centre_singularity.md">Assess how PyAutoArray#671's two gradient defects affected the likelihood-lifecycle / PyAutoPulse gradient…</a> — autolens_profiling · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/research/autolens_profiling/gradient_campaign_impact_of_border_tie_and_centre_singularity.md
 ```
 
 </details>
@@ -2965,21 +2973,22 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-02 | issued | <a href="active/rectangular_fiducial_gradient_wrong_rtu_and_cpu_sparse.md">Wrong JAX gradient through the rectangular source mesh: RTU (all…</a> |
 | 2026-11-02 | issued | <a href="active/likelihood_lifecycle_p4a_validation_tooling.md">Likelihood lifecycle phase 4a: inference wall-time validation tooling…</a> |
 | 2026-11-02 | issued | <a href="active/results_library_p5a_assistant.md">Issued: 2026-11-02</a> |
 | 2026-11-02 | issued | <a href="active/results_library_p5b_cortex.md">Issued: 2026-11-02</a> |
+| 2026-11-02 | filed | <a href="draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md">Imaging sparse-operator path gives a very different log L from dense…</a> |
 | 2026-11-02 | issued | <a href="active/chapter2-explanations.md">Chapter 2 parameter-space explanations and profile sequencing</a> |
+| 2026-11-02 | filed | <a href="draft/research/autolens_profiling/gradient_campaign_impact_of_border_tie_and_centre_singularity.md">Assess how PyAutoArray#671's two gradient defects affected the…</a> |
 | 2026-10-31 | issued | <a href="active/sky_orientation_euclid_dr1_and_library.md">Sky orientation (north/east): euclid_dr1 catalogue, paper and…</a> |
 | 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
 | 2026-10-29 | issued | <a href="active/r2_pages_function_access.md">ECLIPSE site: serve R2 lens files through a Pages Function behind…</a> |
 | 2026-10-26 | filed | <a href="draft/refactor/autogalaxy_assistant/trim_ag_skills_for_colab_cap.md">Trim autogalaxy_assistant skills toward their autolens size</a> |
-| 2026-10-25 | filed | <a href="draft/bug/health_fixes/heart_health_rerun_stale_push.md">Heart Health rerun cannot publish after main advances</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-25 | filed | <a href="draft/bug/health_fixes/heart_health_rerun_stale_push.md">Heart Health rerun cannot publish after main advances</a> |
 | 2026-10-25 | filed | <a href="draft/bug/health_fixes/ci_timing_execution_coverage.md">CI timing must compare equivalent executed job coverage</a> |
 | 2026-10-23 | filed | <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred…</a> |
 | 2026-10-23 | filed | <a href="draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md">autocti_visualization manifest <code>rendered_with:</code> shows stale…</a> |
@@ -2989,12 +2998,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-21 | filed | <a href="planned.md#interferometer-primary-beam-persistence-mirror">interferometer-primary-beam-persistence-mirror</a> |
 | 2026-10-21 | filed | <a href="draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md">PyAutoLens mirror of the interferometer primary-beam persistence…</a> |
 | 2026-10-21 | filed | <a href="draft/docs/autolens_profiling/positions_source_jacobian_default_rerun_note.md">Note in autolens_profiling that plain source-plane lane values…</a> |
-| 2026-10-21 | filed | <a href="draft/research/autolens_profiling/matrix_free_interferometer_phase5.md">Matrix-free interferometer inversion, phase 5b: profiling note…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-21 | filed | <a href="draft/research/autolens_profiling/matrix_free_interferometer_phase5.md">Matrix-free interferometer inversion, phase 5b: profiling note…</a> |
 | 2026-10-21 | issued | <a href="active/matrix_free_interferometer_inversion.md">Matrix-free interferometer inversion for very large rectangular…</a> |
 | 2026-10-21 | filed | <a href="draft/docs/autolens_workspace/interferometer_primary_beam_example.md">Interferometer primary beam: workspace example and docs</a> |
 | 2026-10-21 | filed | <a href="draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md">Cluster likelihood scripts: image-plane manual check disagrees with…</a> |
@@ -3004,12 +3013,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-14 | filed | <a href="draft/test/autofit/workspace_searches_scripts_preexisting_failures.md"><code>@autofit_workspace</code> six <code>searches/</code> scripts fail on main at…</a> |
 | 2026-10-14 | filed | <a href="draft/feature/cortex/human_readable_projects_dashboard.md">Human-readable Cortex Projects dashboard</a> |
 | 2026-10-14 | filed | <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> |
-| 2026-10-09 | filed | <a href="draft/bug/pyautobrain/profiling_compile_drift_point_vs_point.md">Profiling conductor compile drift compares one point against one point</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-09 | filed | <a href="draft/bug/pyautobrain/profiling_compile_drift_point_vs_point.md">Profiling conductor compile drift compares one point against one point</a> |
 | 2026-10-08 | filed | <a href="draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md"><code>JAX_ENABLE_X64=False</code> is overridden to True, so the fp32 inference…</a> |
 | 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
@@ -3019,12 +3028,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
-| 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
 | 2026-09-29 | filed | <a href="draft/maintenance/pyautomind/session_start_hook_copies_regen.md">Regenerate the 28 drifted <code>.claude/hooks/session-start.sh</code> copies…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
@@ -3034,7 +3043,6 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
 | 2026-09-25 | filed | <a href="draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md">Keep caches off <code>$HOME</code> on HPC — phase 2 remainder: euclid pipeline…</a> |
 | 2026-09-24 | filed | <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> |
-| 2026-09-23 | filed | <a href="draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
 
 </details>
 
@@ -3136,7 +3144,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-61 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+62 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3165,6 +3173,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md — unknown theme keyword(s): simulation, robustness`
 - `draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md — unknown theme keyword(s): inversion, sparse-operator, correctness`
 - `draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md — unknown theme keyword(s): sparse-operator`
+- `draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md — unknown theme keyword(s): source-reconstruction`
 - `draft/bug/autocti_visualization/render_yml_blocked_until_pyautocti_release.md — unknown theme keyword(s): infrastructure`
 - `draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md — unknown theme keyword(s): jax`
 - `draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md — unknown theme keyword(s): nautilus`
@@ -3206,6 +3215,10 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 </details>
 
 ## Pending release
+
+**PyAutoArray**
+
+- [PyAutoArray#672](https://github.com/PyAutoLabs/PyAutoArray/pull/672) — `complete/2026/11/rectangular-gradient-rtu-sparse.md`
 
 **PyAutoFit**
 
