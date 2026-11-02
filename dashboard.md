@@ -1025,7 +1025,7 @@ Use the start-dev skill. active/likelihood_lifecycle_p6d_gradient_ingest.md
 
 </details>
 
-<details><summary>📋 <a href="active/magnification_errors_source_science.md">Magnification errors from posterior draws in every source_science.py (arc phase 7b)</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/610">issue #610</a> — issued 2026-10-31 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1751">PyAutoFit#1751</a></summary>
+<details><summary>📋 <a href="active/magnification_errors_source_science.md">Magnification errors from posterior draws in every source_science.py (arc phase 7b)</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/610">issue #610</a> — issued 2026-10-31 — awaiting-merge (judge: Heart-RED-override ship → human /prm) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1751">PyAutoFit#1751</a></summary>
 
 ```
 Use the start-dev skill. active/magnification_errors_source_science.md
