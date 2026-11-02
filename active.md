@@ -82,7 +82,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1752
 - issued: 2026-11-02
 - session: claude-code desktop (Opus 5.5)
-- status: library-dev
+- status: library-shipped, awaiting-merge (judge → human /prm: Fit#1753 first, then release, then ws#180)
 - worktree: ~/Code/PyAutoLabs-wt/results-library-p2-completeness
 - repos:
   - PyAutoFit: feature/results-library-p2-completeness
@@ -90,6 +90,10 @@
 - prompt: active/results_library_p2_completeness.md
 - epic: results-library (phase 2)
 - tier: judge — merge mode: human /prm
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1753 (pending-release)
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/180 (merge after Fit#1753 + release)
+- heart-ack: STALE 'release validation incomplete: no rehearsal for current source' (human 2026-11-02)
+- witness: W1b done — Workspace/Science/scratch/results_library_p2_w1b/
 
 ## rectangular-gradient-rtu-sparse
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/671
