@@ -60,3 +60,13 @@ Supersedes the intermediate draft note above. All 20 blocks approved, including 
 - Logs: worktree .task-logs/{positions,smoke-tutorial5,full-tutorial5,navigator-tutorial5,generate-tutorial5}.log.
 - Review notebook/source/figure bundle: /mnt/c/Users/Jammy/Workspace/Science/scratch/howtolens_ch2_explanations_2026-11-02/tutorial5/.
 - Next: review Tutorial 6 Search Chaining in five coherent prose/code blocks. Remaining optional speed/historical prior passing, summary and consecutive numbering/navigation still pending. No PR or merge performed.
+
+## Tutorial 6 completed checkpoint — 2026-11-02
+All 15 Search Chaining blocks approved and implemented, including Prodigy speed/no-posterior-errors explanation, slower Nautilus uncertainty exploration, and the unusually small second-model parameter count. Local commit 359af1f on feature/howtolens-ch2-explanations follows 327080e and 7c67510; not pushed/PR'd/merged.
+- Legacy tutorial_9_search_chaining.py path retained until final numbering. MGE helper builds 30 lens + 15 source Gaussians; 15-parameter isothermal+shear first model; 48-start/300-step/batch4 Prodigy with JAX and no positions constraint.
+- result_1.instance fixes lens-light geometry while retaining linear intensities. Fresh source priors and PowerLaw+shear give 12 non-linear parameters. Automatic positions factor=3, minimum_threshold=0.2; Nautilus n_live=200/n_batch=50. Conditional uncertainty, result inspection and SLaM signpost included.
+- Official changed-lesson smoke passed 21.1s. Canonical generation 44/44 passed; navigation, contents, two-search structure and whitespace passed.
+- Controlled full-resolution NumPy evaluation (not convergence): 100x100 data, parameter counts 15/12, all 45 intensities solved linearly, fixed geometry retained, real automatic positions returned 4 finite coordinates, threshold 0.2; no synthetic fallback.
+- Logs: worktree .task-logs/{smoke-chaining,generate-chaining,navigator-chaining,validate-chaining}.log; controlled validation driver .task-logs/validate_chaining.py. No full JAX optimisation or posterior-convergence claim.
+- Review copy: /mnt/c/Users/Jammy/Workspace/Science/scratch/howtolens_ch2_explanations_2026-11-02/tutorial6/.
+- Remaining: review optional speed/historical prior-passing material and summary; perform approved consecutive numbering/navigation cleanup after content review. Do not repeat approved tutorials 1–6.

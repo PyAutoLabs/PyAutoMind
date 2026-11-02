@@ -2,7 +2,7 @@
 
 Completed checkpoint: complete/2026/11/howtolens-chapter2.md; PR https://github.com/PyAutoLabs/HowToLens/pull/115 merged approved lessons 1–4 on 2026-11-01. Do not repeat their review. Galaxy Chapter 2 already merged in PR #96; both Chapter 3 checkpoints merged.
 
-Tutorial 5 Data and Likelihoods is now reviewed, implemented and validated locally in feature/howtolens-ch2-explanations at 327080e. See active/chapter2-explanations.md for the canonical checkpoint and worktree. Continue the user's five-coherent-block prose-and-code review at Tutorial 6 Search Chaining. Plan approval is not approval of unreviewed Lens prose.
+Tutorial 5 Data and Likelihoods is now reviewed, implemented and validated locally in feature/howtolens-ch2-explanations at 327080e. See active/chapter2-explanations.md for the canonical checkpoint and worktree. Tutorial 6 Search Chaining is also approved, implemented and validated locally at 359af1f on the same branch. Continue the five-coherent-block review with optional speed/historical prior passing and the summary, then final consecutive numbering/navigation. Plan approval is not approval of unreviewed Lens prose.
 
 Approved structure intent: data/masks/positions/contaminant noise scaling, concise interferometer/point/weak data reminders, prose-only multi-dataset signpost; component-based Prodigy-to-Nautilus chaining, fixing fitted lens-light geometry with .instance while solving intensities and acknowledging conditional uncertainty, auto positions and a SLaM signpost. Validate current APIs; no full convergence claims from smoke.
 
