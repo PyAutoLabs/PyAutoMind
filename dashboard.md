@@ -10,15 +10,15 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 19 |
-| [In flight](#in-flight) | 7 |
+| [In flight](#in-flight) | 8 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 291 |
+| [Backlog](#backlog) | 290 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 20
+**Highest priority** (filed as `high`) — showing 12 of 19
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -108,10 +108,10 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 </details>
 
-<details><summary>📋 <a href="draft/research/autolens_profiling/gradient_correctness_sweep.md">Gradient-correctness sweep: triage and investigate every open JAX-gradient bug and hazard…</a> — autolens_profiling · large · supervised · high</summary>
+<details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
 
 ```
-Use the start-dev skill. draft/research/autolens_profiling/gradient_correctness_sweep.md
+Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md
 ```
 
 </details>
@@ -1013,6 +1013,14 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ```
 Use the start-dev skill. active/chapter2-explanations.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/gradient_correctness_sweep.md">Gradient-correctness sweep: triage and investigate every open JAX-gradient bug and hazard…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/517">issue #517</a> — issued 2026-11-02 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/gradient_correctness_sweep.md
 ```
 
 </details>
@@ -2047,20 +2055,12 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>research</b> — 44</summary>
+<summary><b>research</b> — 43</summary>
 
 <details><summary>📋 <a href="draft/research/autofit_inference/search_ext_b5c2a_rerun.md"><code>@autofit_inference</code> B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug…</a> — autofit_inference · medium · supervised · high</summary>
 
 ```
 Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/gradient_correctness_sweep.md">Gradient-correctness sweep: triage and investigate every open JAX-gradient bug and hazard…</a> — autolens_profiling · large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/research/autolens_profiling/gradient_correctness_sweep.md
 ```
 
 </details>
@@ -2979,7 +2979,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-02 | issued | <a href="active/likelihood_lifecycle_p4c_runners.md">Likelihood lifecycle phase 4c: Nautilus validation runners for the 19…</a> |
 | 2026-11-02 | issued | <a href="active/results_library_p5a_assistant.md">Issued: 2026-11-02</a> |
 | 2026-11-02 | filed | <a href="draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md">Imaging sparse-operator path gives a very different log L from dense…</a> |
-| 2026-11-02 | filed | <a href="draft/research/autolens_profiling/gradient_correctness_sweep.md">Gradient-correctness sweep: triage and investigate every open…</a> |
+| 2026-11-02 | issued | <a href="active/gradient_correctness_sweep.md">Gradient-correctness sweep: triage and investigate every open…</a> |
 | 2026-11-02 | issued | <a href="active/chapter2-explanations.md">Chapter 2 parameter-space explanations and profile sequencing</a> |
 | 2026-10-31 | issued | <a href="active/sky_orientation_euclid_dr1_and_library.md">Sky orientation (north/east): euclid_dr1 catalogue, paper and…</a> |
 | 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
