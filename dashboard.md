@@ -1073,7 +1073,7 @@ Use the start-dev skill. active/rectangular_fiducial_gradient_wrong_rtu_and_cpu_
 
 </details>
 
-<details><summary>📋 <a href="active/results_library_p5a_assistant.md">Issued: 2026-11-02</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/176">issue #176</a> — issued 2026-11-02 — workspace-dev</summary>
+<details><summary>📋 <a href="active/results_library_p5a_assistant.md">Issued: 2026-11-02</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/176">issue #176</a> — issued 2026-11-02 — workspace-shipped, awaiting-merge (judge → human /prm; wiki-currency waits on a PyAutoFit release) — PRs: <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/177">autolens_assistant#177</a></summary>
 
 ```
 Use the start-dev skill. active/results_library_p5a_assistant.md
@@ -1081,7 +1081,7 @@ Use the start-dev skill. active/results_library_p5a_assistant.md
 
 </details>
 
-<details><summary>📋 <a href="active/results_library_p5b_cortex.md">Issued: 2026-11-02</a> — <a href="https://github.com/PyAutoLabs/PyAutoCortex/issues/84">issue #84</a> — issued 2026-11-02 — library-dev</summary>
+<details><summary>📋 <a href="active/results_library_p5b_cortex.md">Issued: 2026-11-02</a> — <a href="https://github.com/PyAutoLabs/PyAutoCortex/issues/84">issue #84</a> — issued 2026-11-02 — library-shipped, awaiting-merge (judge → human /prm; decision 65 needs ruling) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/85">PyAutoCortex#85</a></summary>
 
 ```
 Use the start-dev skill. active/results_library_p5b_cortex.md
