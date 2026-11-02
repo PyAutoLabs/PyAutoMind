@@ -77,3 +77,27 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/53 (Optimal-only scope + Delaunay numba seed 0; MERGED 2026-11-02 9bafc6bc via human /prm)
   - autolens_inference: feature/likelihood-lifecycle-p4a-scope-optimal
 - tier: judge — merge mode: human /prm
+
+## results-library-p5a-assistant
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/176
+- issued: 2026-11-02
+- session: claude-code desktop (Opus 5.5)
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/results-library-p5a-assistant
+- repos:
+  - autolens_assistant: feature/results-library-p5a-assistant
+- prompt: active/results_library_p5a_assistant.md
+- epic: results-library (phase 5a)
+- tier: judge — merge mode: human /prm
+
+## results-library-p5b-cortex
+- issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/84
+- issued: 2026-11-02
+- session: claude-code desktop (Opus 5.5)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/results-library-p5b-cortex
+- repos:
+  - PyAutoCortex: feature/results-library-p5b-cortex
+- prompt: active/results_library_p5b_cortex.md
+- epic: results-library (phase 5b)
+- tier: judge — merge mode: human /prm
