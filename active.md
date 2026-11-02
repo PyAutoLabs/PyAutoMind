@@ -3,7 +3,15 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/673
 - issued: 2026-11-02
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: library-dev
+- status: library-shipped, awaiting-merge (judge → human /prm: Array#674 → Galaxy#691 → Lens#816 → ws#615)
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/674
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/691
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/816
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/615
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/674
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/691
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/816
+- heart-ack: STALE 'release validation incomplete: no rehearsal for current source' acknowledged live by the human 2026-11-02
 - worktree: ~/Code/PyAutoLabs-wt/magnification-maps-source-plane
 - repos:
   - PyAutoArray: feature/magnification-maps-source-plane
