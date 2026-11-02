@@ -14,7 +14,7 @@
 | [Planned](#planned) | 9 |
 | [Backlog](#backlog) | 289 |
 | [Recent](#recent) | 50 |
-| [Pending release](#pending-release) | 1 |
+| [Pending release](#pending-release) | 3 |
 
 ## Start here
 
@@ -1041,7 +1041,7 @@ Use the start-dev skill. active/likelihood_lifecycle_p4a_validation_tooling.md
 
 </details>
 
-<details><summary>📋 <a href="active/magnification_maps_8a_image_plane.md">Magnification maps 8a: image-plane log|mu| map with constant-mu contours and critical curves</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/689">issue #689</a> — issued 2026-11-02 — library-dev</summary>
+<details><summary>📋 <a href="active/magnification_maps_8a_image_plane.md">Magnification maps 8a: image-plane log|mu| map with constant-mu contours and critical curves</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/689">issue #689</a> — issued 2026-11-02 — library-shipped, awaiting-merge (judge → human /prm: Galaxy#690 → Lens#815 → ws#614) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/690">PyAutoGalaxy#690</a>, <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/815">PyAutoLens#815</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/614">autolens_workspace#614</a> — ⏳ pending release: PyAutoGalaxy — ⏳ pending release: PyAutoLens</summary>
 
 ```
 Use the start-dev skill. active/magnification_maps_8a_image_plane.md
@@ -3220,6 +3220,14 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - [PyAutoFit#1753](https://github.com/PyAutoLabs/PyAutoFit/pull/1753) — `complete/2026/11/results-library-p2-completeness.md`
 - [PyAutoFit#1755](https://github.com/PyAutoLabs/PyAutoFit/pull/1755) — `complete/2026/11/results-library-p3-exports.md`
 - [PyAutoFit#1757](https://github.com/PyAutoLabs/PyAutoFit/pull/1757) — `complete/2026/11/results-library-p4-package.md`
+
+**PyAutoGalaxy**
+
+- [PyAutoGalaxy#690](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/690) — `active/magnification_maps_8a_image_plane.md`
+
+**PyAutoLens**
+
+- [PyAutoLens#815](https://github.com/PyAutoLabs/PyAutoLens/pull/815) — `active/magnification_maps_8a_image_plane.md`
 
 
 Boards: [organism](https://pyautolabs.github.io/PyAutoScientist/) · [brain](https://pyautolabs.github.io/PyAutoBrain/) · [cortex](https://pyautolabs.github.io/PyAutoCortex/) · [memory](https://pyautolabs.github.io/PyAutoMemory/) · [eyes](https://pyautolabs.github.io/PyAutoEyes/) · [ears](https://pyautolabs.github.io/PyAutoEars/) · [heart](https://pyautolabs.github.io/PyAutoHeart/) · [hands](https://pyautolabs.github.io/PyAutoHands/) · [pulse](https://pyautolabs.github.io/PyAutoPulse/) · [insight](https://pyautolabs.github.io/PyAutoInsight/) · [dna](https://pyautolabs.github.io/PyAutoDNA/) · [nerves](https://pyautolabs.github.io/PyAutoNerves/) · [broca](https://pyautolabs.github.io/PyAutoBroca/) · [gut](https://pyautolabs.github.io/PyAutoGut/)

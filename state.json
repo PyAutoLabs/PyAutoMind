@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 9 in flight",
-  "updated": "2026-11-02T14:02:23Z",
+  "updated": "2026-11-02T14:06:43Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Magnification maps 8a: image-plane log|mu| map with constant-mu contours and critical curves \u2014 library-shipped, awaiting-merge (judge \u2192 human /prm: Galaxy#690 \u2192 Lens#815 \u2192 ws#614)",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/690",
+      "prompt": "Use the start-dev skill. active/magnification_maps_8a_image_plane.md"
+    },
     {
       "severity": "yellow",
       "text": "Wrong JAX gradient through the rectangular source mesh: RTU (all backends)\u2026 \u2014 library-shipped, awaiting /prm",
@@ -41,6 +47,18 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1757 \u2014 results-library-p4-package",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1757",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#690 \u2014 Magnification maps 8a: image-plane log|mu| map with constant-mu contours and critical curves",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/690",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoLens PyAutoLens#815 \u2014 Magnification maps 8a: image-plane log|mu| map with constant-mu contours and critical curves",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/815",
       "prompt": null
     },
     {
@@ -108,24 +126,6 @@
       "text": "pick: Fix Sibson interpolation at internal edges",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md",
-      "prompt": "Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Guard every workspace script against untimed network downloads",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace/no_untimed_network_downloads_check.md",
-      "prompt": "Use the start-dev skill. draft/test/autolens_workspace/no_untimed_network_downloads_check.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Cache `autonerves` config parsing \u2014 308 YAML files parsed per script run",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/autonerves/config_yaml_parse_cache.md",
-      "prompt": "Use the start-dev skill. draft/refactor/autonerves/config_yaml_parse_cache.md"
     }
   ]
 }
