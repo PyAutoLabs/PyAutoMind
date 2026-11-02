@@ -62,24 +62,6 @@
 - diagnosis: 1e9 = Isothermal 1e-8 core x mass centre exactly on an odd-grid (141x141, os_pix=1) source point at prior medians — not a mesh bug (posted #671, #509); re-scoped by human 2026-11-02 to the 2–5% autodiff-vs-FD error with MGE-60 lens light
 - follow-up (human 2026-11-02): when active work is done, ASSESS whether this issue (centre-on-grid singularity and/or the few-% MGE gradient error) has impacted the PyAutoPulse / likelihood-lifecycle gradient campaign in general — which gradient.json verdicts are affected
 
-## likelihood-lifecycle-p6d-gradient-ingest
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/512
-- issued: 2026-11-02
-- session: claude-code desktop (WSL), ~/Science session
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p6d-gradient-ingest
-- repos:
-  - PyAutoPulse: feature/likelihood-lifecycle-p6d-gradient-ingest
-  - PyAutoPulse: feature/likelihood-lifecycle-p6d-freeze-gradient
-  - autolens_profiling: feature/likelihood-lifecycle-p6d-gradient-ingest
-- library-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/87 (freeze --measurement; MERGED 2026-11-02 6d9a8a8d via human /prm)
-- library-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/88 (freeze day_zero_gradient at autolens_profiling 433bd778; judge, human /prm; merge before #513 lint re-run)
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/513 (ingest 73 gradient witnesses; judge, human /prm)
-- carried-from-6c: RAL 413890_0 (imaging/delaunay/ao CPU, 512 GB) record + wall + imaging RAL CPU memory value (6c closed 2026-11-02)
-- prompt: active/likelihood_lifecycle_p6d_gradient_ingest.md
-- epic: likelihood-lifecycle (phase 6d)
-- tier: judge — merge mode: human /prm
-
 ## likelihood-lifecycle-p4a-validation-tooling
 - issue: https://github.com/PyAutoLabs/autolens_inference/issues/51
 - issued: 2026-11-02
@@ -90,6 +72,7 @@
   - autolens_inference: feature/likelihood-lifecycle-p4a-validation-tooling
 - prompt: active/likelihood_lifecycle_p4a_validation_tooling.md
 - epic: likelihood-lifecycle (phase 4a)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/52 (judge, human /prm)
 - tier: judge — merge mode: human /prm
 
 ## results-library-p4-package

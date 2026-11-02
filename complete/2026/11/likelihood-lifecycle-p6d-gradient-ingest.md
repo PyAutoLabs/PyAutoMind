@@ -1,3 +1,17 @@
+## likelihood-lifecycle-p6d-gradient-ingest
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/512
+- completed: 2026-11-02
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/513 (ingest 73 gradient witnesses, 24ebd94e)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/514 (512 GB rerun walls; delaunay/ao OOM recorded, 0278253a)
+- organ-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/87 (freeze --measurement, 6d9a8a8d)
+- organ-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/88 (freeze day_zero_gradient at 433bd778, a6695b5d)
+- 73 current gradient records; 10 FD pass carry day_zero 2026.10.25.1 and are frozen in PyAutoPulse snapshots/day_zero_gradient/lens.json (runtime day_zero untouched); 63 fail by mechanism → hazards filed (B draft/bug/autogalaxy/wrong_jax_gradient_on_mge_likelihoods_fd.md, C/D/E draft/research/autolens_profiling/…, cost draft/feature/autolens_profiling/gradient_cost_hazard_on_ral_cpu_value.md).
+- imaging/delaunay/ao RAL CPU: OOM at 64/192/512 GB at ~2h40 each time — recorded as a result (human ruling 2026-11-02, "Record OOM as result").
+- Phase-6 witness restated by the human 2026-11-02 and met: phase 6 complete.
+- Lesson: build_dashboard's plain write re-stamps every shard; render with the committed stamp (`build(root, generated=_existing_stamp(out), revision=_existing_revision(out))`) when only data changed. Day-zero page links to a Pulse snapshot that a later PR creates fail lychee until that PR merges — merge the Pulse PR first, then re-run lint.
+
+## Original prompt
+
 # Likelihood lifecycle phase 6d: ingest the gradient witnesses, freeze day_zero_gradient, file hazards by mechanism
 
 Type: research

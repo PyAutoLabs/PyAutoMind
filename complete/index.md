@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2095 records across 11 buckets.
+2096 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -133,6 +133,7 @@ markers; everything below GENERATED is rebuilt.
 - [likelihood-lifecycle-p6a-gradient-harness](2026/11/likelihood-lifecycle-p6a-gradient-harness.md)
 - [likelihood-lifecycle-p6b-gradient-scripts](2026/11/likelihood-lifecycle-p6b-gradient-scripts.md)
 - [likelihood-lifecycle-p6c-gradient-walls](2026/11/likelihood-lifecycle-p6c-gradient-walls.md)
+- [likelihood-lifecycle-p6d-gradient-ingest](2026/11/likelihood-lifecycle-p6d-gradient-ingest.md)
 - [one-line-auto-simulate-helper](2026/11/one-line-auto-simulate-helper.md)
 - [results-library-p2-completeness](2026/11/results-library-p2-completeness.md) — `autofit/results/library.py` ResultsLibrary (grid / library.yaml / from_campaign — campaign expectations
 - [results-library-p3-exports](2026/11/results-library-p3-exports.md) — AggregateCSV.save(cache=, shard=, expected=, sort_by=, on_error=, columns_json=): row cache
