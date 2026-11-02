@@ -1,24 +1,4 @@
 
-## magnification-maps-image-plane
-- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/689
-- issued: 2026-11-02
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: library-shipped, awaiting-merge (judge → human /prm: Galaxy#690 → Lens#815 → ws#614)
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/690
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/815
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/614
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/690
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/815
-- heart-ack: STALE 'release validation incomplete: no rehearsal for current source' acknowledged live by the human 2026-11-02
-- worktree: ~/Code/PyAutoLabs-wt/magnification-maps-image-plane
-- repos:
-  - PyAutoGalaxy: feature/magnification-maps-image-plane
-  - PyAutoLens: feature/magnification-maps-image-plane
-  - autolens_workspace: feature/magnification-maps-image-plane
-- prompt: active/magnification_maps_8a_image_plane.md
-- epic: cluster-strong-lensing (phase 8a)
-- tier: judge — merge mode: human /prm (PyAutoGalaxy → PyAutoLens → autolens_workspace)
-
 ## matrix-free-interferometer-inversion
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/638
 - issued: 2026-10-21

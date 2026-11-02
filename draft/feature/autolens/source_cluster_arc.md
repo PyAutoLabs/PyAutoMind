@@ -871,3 +871,11 @@ describe how to read the errors without measured values; errors stated as statis
 Follow-ups filed: `draft/bug/autogalaxy/area_magnification_critical_curve_fragments.md` (image_masks_from keeps
 critical-curve parity islands as images), `draft/docs/autolens_workspace/source_science_multi_galaxy_group_quick_fits_slow.md`.
 NEXT: human pick — phase 8 (`magnification_maps_visualization.md`) or one of the follow-ups.
+
+## Phase 8 sliced; 8a merged — 2026-11-02
+
+Phase 8 re-audited after phases 4–7 and sliced 8a → 8d (`magnification_maps_8{a,b,c,d}_*.md`). 8a merged via human
+/prm: PyAutoGalaxy#690 → PyAutoLens#815 (both pending release) → autolens_workspace#614;
+`aplt.plot_magnification_2d` (log10 |mu|, constant-mu contours, critical curves); record
+`complete/2026/11/magnification-maps-image-plane.md`. PyAutoArray `contour_levels` dropped (repo was claimed).
+NEXT: 8b source-plane magnification per mesh pixel (`draft/feature/autolens/magnification_maps_8b_source_plane.md`).

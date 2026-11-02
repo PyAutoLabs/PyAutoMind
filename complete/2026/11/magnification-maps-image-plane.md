@@ -1,3 +1,23 @@
+Arc phase 8a: image-plane magnification map. `plot_magnification_2d(mass_obj, grid, ...)` plots log10 |mu| for any
+mass object (Galaxy, Galaxies, Tracer) with a 1st/99th-percentile colour range, labelled contours of constant |mu|
+(default 2, 5, 10, 20, 50, 100; out-of-range levels skipped) and an optional critical-curve overlay, as in LEGGOS II
+figure 4. Exported as `aplt.plot_magnification_2d`; shown in `imaging/source_science.py` (`__Magnification Map__`) and
+`guides/lens_calc.py`.
+
+Shipped (merged 2026-11-02, human /prm "prm when green"):
+- PyAutoGalaxy#690 (`467a5ed7`) — function + tests (test_autogalaxy 1469 passed)
+- PyAutoLens#815 (`ef7f5733`) — aplt export + two/three-plane tracer tests (test_autolens 1018 passed, 1 xfailed)
+- autolens_workspace#614 (`6567940d`) — scripts + navigator catalogue
+
+Scope note: the planned PyAutoArray `contour_levels` option was dropped (repo claimed by
+rectangular-gradient-rtu-sparse); the contours are drawn on the axes `plot_array` already accepts.
+For a multi-plane tracer the map is the magnification of a source in the last plane (no plane_j option yet).
+
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/690
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/815
+
+## Original prompt
+
 # Magnification maps 8a: image-plane log|mu| map with constant-mu contours and critical curves
 
 Type: feature
