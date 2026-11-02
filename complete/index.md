@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2092 records across 11 buckets.
+2095 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -125,6 +125,7 @@ markers; everything below GENERATED is rebuilt.
 - [howto-chapter2-format](2026/11/howto-chapter2-format.md) — Restored descriptive contents for Lens lessons 1–4 and complete ordered contents for Galaxy lessons 1–6, corre…
 - [howto-prose-format](2026/11/howto-prose-format.md)
 - [howtolens-chapter2](2026/11/howtolens-chapter2.md) — Applied approved tutorials 1–4, optional Prodigy introduction, notebook generation and navigation. Later Chapt…
+- [hpc-campaign-p5a-assistant](2026/11/hpc-campaign-p5a-assistant.md) — phase 5a; ledger draft/research/autofit/hpc_campaign_epic.md
 - [likelihood-lifecycle-p3-day-zero-pages](2026/11/likelihood-lifecycle-p3-day-zero-pages.md)
 - [likelihood-lifecycle-p3-day-zero-stamp](2026/11/likelihood-lifecycle-p3-day-zero-stamp.md)
 - [likelihood-lifecycle-p3-setup-baseline-close](2026/11/likelihood-lifecycle-p3-setup-baseline-close.md)
@@ -133,6 +134,8 @@ markers; everything below GENERATED is rebuilt.
 - [likelihood-lifecycle-p6b-gradient-scripts](2026/11/likelihood-lifecycle-p6b-gradient-scripts.md)
 - [likelihood-lifecycle-p6c-gradient-walls](2026/11/likelihood-lifecycle-p6c-gradient-walls.md)
 - [one-line-auto-simulate-helper](2026/11/one-line-auto-simulate-helper.md)
+- [results-library-p2-completeness](2026/11/results-library-p2-completeness.md) — `autofit/results/library.py` ResultsLibrary (grid / library.yaml / from_campaign — campaign expectations
+- [results-library-p3-exports](2026/11/results-library-p3-exports.md) — AggregateCSV.save(cache=, shard=, expected=, sort_by=, on_error=, columns_json=): row cache
 - [simulate-if-needed-workspace-sweep](2026/11/simulate-if-needed-workspace-sweep.md)
 
 ## 2026/10/github-token-consolidation-epic_surveys

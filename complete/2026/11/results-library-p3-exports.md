@@ -1,3 +1,24 @@
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1755
+- epic: results-library (phase 3; ledger draft/feature/autofit/results_library_epic.md)
+- summary: AggregateCSV.save(cache=, shard=, expected=, sort_by=, on_error=, columns_json=): row cache
+  `<csv>.rows.jsonl` (row_fingerprint over zip / every file under files/ + .identifier; spec digest incl. closures,
+  defaults, helper functions, hash-seed stable; rows stored as CSV text so cached == fresh); header from the column
+  specs (same in every shard); on_error="row" error rows + expected= reason rows with dataset/search;
+  `<name>.columns.json`; add_variable(unit=, prior_edge=) (log space for log priors); merge_csv / af.merge_csv /
+  `python -m autofit.results merge` (header agreement, key dedup, deterministic sort); SearchOutput.plain + plain();
+  AggregateFITS.output_to_folder atomic + skip_errors. Stacked on #1753, retargeted to main before merge.
+- witness: W1c — 113 DR1 vis_pix zips read in place: first export 76 s, refresh 11 s all cached, edited column →
+  recompute, kill -9 leaves CSV + cache byte-identical, cached == fresh, 4 parallel shards merge == serial;
+  Workspace/Science/scratch/results_library_p3_w1c/.
+- tests: test_exports.py 21 (10 review regressions); full suite serial 4,226 passed; independent review 6 bugs + 3
+  minor fixed (header-from-rows broke shard merges; unresolved-path sharding duplicated expected rows behind symlinks;
+  in-place rewrites + captured values missed by the cache; cached ≠ fresh text; compound_dict plain()).
+- decisions flagged: CSV-only caching (not FITS); merge == serial needs the same sort_by; dict-returning computed
+  columns with shard-varying keys still refuse to merge; on_error default stays "raise".
+- follow-up: the "15k fixture" witness is 150 synthetic + 113 real; phase 4 (package + parity) next.
+
+## Original prompt
+
 Issued: 2026-11-02
 Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1754
 Epic: results-library

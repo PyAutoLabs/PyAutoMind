@@ -1,3 +1,24 @@
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1753
+- epic: results-library (phase 2; ledger draft/feature/autofit/results_library_epic.md)
+- summary: `autofit/results/library.py` ResultsLibrary (grid / library.yaml / from_campaign — campaign expectations
+  match the zip at success.zip_complete exactly, as collector.check_success); `completeness.py` check() →
+  CompletenessReport (done/missing/incomplete/failed/duplicate + reasons, per-product gaps, unexpected results,
+  atomic `<name>.missing.csv`); `enrich.py` + Aggregator.enrich (atomic add of files/<name> to zip AND folder copies,
+  skip existing, per-result errors); `shard.py` (stable i/N); tools/util.write_zip_member; CLI `check` / `enrich`;
+  `af.ResultsLibrary`. autofit_workspace#180: scripts/features/results_library.py guide (+ notebook, navigator).
+- witness: W1b — DR1 laptop mirror: consensus-100 manifest 0/200 (wrong tree surfaced as 226 unexpected); 113 mirror
+  objects 226/226 done incl. files/coolest.json; `_v5` naming drift surfaced as 13 missing ↔ 13 unexpected pairs;
+  Workspace/Science/scratch/results_library_p2_w1b/.
+- tests: test_autofit/results 58 (22 new); full suite serial 4,204 passed; independent review 8 findings fixed
+  (from_index enrich skipped the folder copy — a rerun's re-zip would drop the product; campaign matching looser than
+  check_success; short manifest line crash; superseded at exact location; CLI exit codes; string products; shard skew).
+- decisions flagged: guide at scripts/features/; multi-root libraries need index_dir at declaration; concurrent
+  enrich passes on the same results unsupported (documented); force_pickle_overwrite deprecated in docstring only.
+- traps: `pytest -n 8` collides on shared /tmp paths (serial only); `autohands generate autofit` needs
+  ipynb-py-convert (~/venv/PyAuto/bin) and deletes notebooks/ when it fails.
+
+## Original prompt
+
 Issued: 2026-11-02
 Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1752
 Epic: results-library

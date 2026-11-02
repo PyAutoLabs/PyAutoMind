@@ -1,3 +1,12 @@
+- epic: hpc-campaign (phase 5a; ledger draft/research/autofit/hpc_campaign_epic.md)
+- summary: autolens_assistant#173 (step-0 sync of drifted template) + #174 (assistant template v2: hpc campaign /
+  sync verbs, `act submit` campaign/pilot start (logged), read-only `pilot` verb, sync pulls the campaign's tasks.js).
+  #174 waited on a PyAutoFit release: wiki-currency audits the RELEASED autofit, which gained autofit.campaign in
+  2026.11.1.1; rerun green 2026-11-02, merged via /prm.
+- review: two rounds (independent reader) fixed before #173/#174 opened.
+
+## Original prompt
+
 Issued: 2026-10-30
 Epic: hpc-campaign
 Issue: https://github.com/PyAutoLabs/autolens_assistant/issues/172

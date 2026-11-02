@@ -16,22 +16,6 @@
   - ECLIPSE_lens_catalogue: feature/r2-pages-function-access
 - tier: judge — merge mode: human /prm
 
-## hpc-campaign-p5a-assistant
-- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/172
-- issued: 2026-10-30
-- session: claude-code desktop (WSL), PyAutoLabs session (background fork)
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/hpc-campaign-p5a-assistant
-- repos:
-  - autolens_assistant: feature/hpc-campaign-p5a-assistant
-- prompt: active/hpc_campaign_p5a_assistant.md
-- epic: hpc-campaign (phase 5)
-- heart-red-override: authorized live by the human 2026-10-30 ("Override + approve") for hpc-campaign phase 5; RED reasons quoted on the issue; development only, merge via /prm
-- tier: judge — merge mode: human /prm
-- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/173 (MERGED 2026-10-31)
-- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/174
-- resume: 2026-10-31 — #173 merged; #174 (feature/hpc-campaign-p5a-v2, retargeted to main) green on boundary + colab, RED on wiki-currency only because it audits RELEASED PyAutoFit, which lacks autofit.campaign (pending-release) — /prm #174 after the next PyAutoFit release (rerun wiki-currency first); then close out p5a
-
 ## sky-orientation-p2
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/115
 - issued: 2026-10-31
@@ -62,23 +46,6 @@
 - heart-red-override: authorized live by the human 2026-10-31 ("override heart red, go ahead with 7b"); RED reasons quoted on the issue; development only
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
 
-## results-library-p2-completeness
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1752
-- issued: 2026-11-02
-- session: claude-code desktop (Opus 5.5)
-- status: library-shipped, awaiting-merge (judge → human /prm: Fit#1753 first, then release, then ws#180)
-- worktree: ~/Code/PyAutoLabs-wt/results-library-p2-completeness
-- repos:
-  - PyAutoFit: feature/results-library-p2-completeness
-  - autofit_workspace: feature/results-library-p2-completeness
-- prompt: active/results_library_p2_completeness.md
-- epic: results-library (phase 2)
-- tier: judge — merge mode: human /prm
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1753 (pending-release)
-- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/180 (merge after Fit#1753 + release)
-- heart-ack: STALE 'release validation incomplete: no rehearsal for current source' (human 2026-11-02)
-- witness: W1b done — Workspace/Science/scratch/results_library_p2_w1b/
-
 ## rectangular-gradient-rtu-sparse
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/671
 - issued: 2026-11-02
@@ -90,22 +57,6 @@
 - witness-harness: autolens_profiling read-only via ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p6c-gradient-walls (6c closed 2026-11-02; that worktree is kept for this harness — do not switch its branch; autolens_profiling is now claimed by likelihood-lifecycle-p6d-gradient-ingest in its own worktree; human ruled PyAutoArray-only 2026-11-02)
 - prompt: active/rectangular_fiducial_gradient_wrong_rtu_and_cpu_sparse.md
 - tier: judge — merge mode: human /prm
-
-## results-library-p3-exports
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1754
-- issued: 2026-11-02
-- session: claude-code desktop (Opus 5.5)
-- status: library-shipped, awaiting-merge (judge → human /prm AFTER Fit#1753; retarget #1755 to main first)
-- worktree: ~/Code/PyAutoLabs-wt/results-library-p3-exports
-- repos:
-  - PyAutoFit: feature/results-library-p3-exports (stacked on feature/results-library-p2-completeness; concurrent with results-library-p2-completeness per ruling F11)
-- prompt: active/results_library_p3_exports.md
-- epic: results-library (phase 3)
-- tier: judge — merge mode: human /prm
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1755 (pending-release, base = feature/results-library-p2-completeness)
-- heart-ack: STALE 'release validation incomplete: no rehearsal for current source' (human 2026-11-02)
-- witness: W1c done — Workspace/Science/scratch/results_library_p3_w1c/
-- workspace: none (additive API; adoption is phase 5)
 
 ## likelihood-lifecycle-p6d-gradient-ingest
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/512
