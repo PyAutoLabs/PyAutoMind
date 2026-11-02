@@ -1025,7 +1025,7 @@ Use the start-dev skill. active/gradient_correctness_sweep.md
 
 </details>
 
-<details><summary>📋 <a href="active/latest_per_test_tie.md">Issued: 2026-11-02</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1758">issue #1758</a> — issued 2026-11-02 — library-dev</summary>
+<details><summary>📋 <a href="active/latest_per_test_tie.md">Issued: 2026-11-02</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1758">issue #1758</a> — issued 2026-11-02 — library-shipped, awaiting-merge (judge → human /prm; then <code>release validate</code>) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1759">PyAutoFit#1759</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 Use the start-dev skill. active/latest_per_test_tie.md
@@ -3223,6 +3223,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoFit**
 
+- [PyAutoFit#1759](https://github.com/PyAutoLabs/PyAutoFit/pull/1759) — `active/latest_per_test_tie.md`
 - [PyAutoFit#1753](https://github.com/PyAutoLabs/PyAutoFit/pull/1753) — `complete/2026/11/results-library-p2-completeness.md`
 - [PyAutoFit#1755](https://github.com/PyAutoLabs/PyAutoFit/pull/1755) — `complete/2026/11/results-library-p3-exports.md`
 - [PyAutoFit#1757](https://github.com/PyAutoLabs/PyAutoFit/pull/1757) — `complete/2026/11/results-library-p4-package.md`
