@@ -81,10 +81,15 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1756
 - issued: 2026-11-02
 - session: claude-code desktop (Opus 5.5)
-- status: library-dev
+- status: library-shipped, awaiting-merge (judge → human /prm)
 - worktree: ~/Code/PyAutoLabs-wt/results-library-p4-package
 - repos:
   - PyAutoFit: feature/results-library-p4-package
 - prompt: active/results_library_p4_package.md
 - epic: results-library (phase 4)
 - tier: judge — merge mode: human /prm
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1757
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1757
+- heart-ack: STALE 'release validation incomplete: no rehearsal for current source' (human 2026-11-02)
+- witness: W1d done — Workspace/Science/scratch/results_library_p4_w1d/
+- workspace: none (additive module; adoption is phase 5)
