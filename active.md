@@ -84,6 +84,7 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/55 (4c-0 tooling; MERGED 2026-11-02 20d297dd via human /prm)
 - workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/56 (4c-1 runners; judge, human /prm)
 - workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/57 (4c-3 runners; stacked on #56, retarget to main after; judge, human /prm)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/58 (4c-2 runners; stacked on #57; judge, human /prm)
 - compute-tracking: 4b RAL 413924 (A100 Delaunay, running), 413911 / 413913 (ral cores sweep, queued behind euclid pilots)
 - prompt: active/likelihood_lifecycle_p4c_runners.md
 - epic: likelihood-lifecycle (phase 4c)
