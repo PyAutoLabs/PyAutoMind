@@ -12,7 +12,7 @@
 | [Epics](#epics) | 19 |
 | [In flight](#in-flight) | 8 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 289 |
+| [Backlog](#backlog) | 290 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -674,7 +674,7 @@ Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens
 </details>
 
 <details>
-<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 16 queued prompt(s), in order</summary>
+<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 17 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Cluster strong lensing — Source &amp; Cluster arc</b> — ledger: `draft/feature/autolens/source_cluster_arc.md` — In progress — 1a–1d, phase 3a audit (profiling#364, workspace_test#341) and phase 3b field-preserving cap fix (Galaxy#646…</summary>
 
@@ -800,6 +800,14 @@ Use the start-dev skill. draft/feature/autolens/magnification_maps_8d_wiring_pre
 
 ```
 Use the start-dev skill. draft/feature/autolens/source_cluster_arc.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autoarray/delaunaynn_per_pixel_magnification_off_by_9.md">DelaunayNN: per-pixel magnification off by ~9% on an identity lens — areas…</a> — autoarray · medium · safe · medium</summary>
+
+```
+Use the start-dev skill. draft/research/autoarray/delaunaynn_per_pixel_magnification_off_by_9.md
 ```
 
 </details>
