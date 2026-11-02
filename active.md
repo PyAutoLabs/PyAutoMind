@@ -85,3 +85,17 @@
 - repos:
   - HowToLens: feature/howtolens-ch2-explanations
 - approval: five prose/code blocks approved 2026-11-02; no merge authority
+
+## gradient-campaign-impact
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/515
+- issued: 2026-11-02
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/gradient-campaign-impact
+- repos:
+  - autolens_profiling: feature/gradient-campaign-impact
+  - PyAutoPulse: feature/gradient-campaign-impact
+- prompt: active/gradient_campaign_impact_of_border_tie_and_centre_singularity.md
+- origin: human request during PyAutoArray#671 (record complete/2026/11/rectangular-gradient-rtu-sparse.md)
+- compute: any RAL leg needs an explicit human go; private checkout, partition ral
+- tier: judge — merge mode: human /prm

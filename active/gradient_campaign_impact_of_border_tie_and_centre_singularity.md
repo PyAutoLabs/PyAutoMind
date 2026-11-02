@@ -15,6 +15,7 @@ Witness: a table over every campaign `gradient.json` (v2 standard legs RAL 41379
 Review-minutes: 10
 Unattended: never
 Filed: 2026-11-02
+Issued: 2026-11-02
 
 Human request (2026-11-02, during PyAutoArray#671): "when active work on this task is done we need to assess if this issue has impacted the PyAutoPulse gradient campaign in general."
 
