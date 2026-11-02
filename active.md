@@ -59,6 +59,8 @@
 - witness-harness: autolens_profiling read-only via ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p6c-gradient-walls (6c closed 2026-11-02; that worktree is kept for this harness — do not switch its branch; autolens_profiling is now claimed by likelihood-lifecycle-p6d-gradient-ingest in its own worktree; human ruled PyAutoArray-only 2026-11-02)
 - prompt: active/rectangular_fiducial_gradient_wrong_rtu_and_cpu_sparse.md
 - tier: judge — merge mode: human /prm
+- diagnosis: 1e9 = Isothermal 1e-8 core x mass centre exactly on an odd-grid (141x141, os_pix=1) source point at prior medians — not a mesh bug (posted #671, #509); re-scoped by human 2026-11-02 to the 2–5% autodiff-vs-FD error with MGE-60 lens light
+- follow-up (human 2026-11-02): when active work is done, ASSESS whether this issue (centre-on-grid singularity and/or the few-% MGE gradient error) has impacted the PyAutoPulse / likelihood-lifecycle gradient campaign in general — which gradient.json verdicts are affected
 
 ## likelihood-lifecycle-p6d-gradient-ingest
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/512
