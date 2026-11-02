@@ -74,8 +74,12 @@
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/515
 - issued: 2026-11-02
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: workspace-dev
+- status: workspace-shipped, awaiting /prm
 - worktree: ~/Code/PyAutoLabs-wt/gradient-campaign-impact
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/516
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/89
+- result: no campaign verdict affected by PyAutoArray#671 (summary on #515); follow-ups filed: draft/bug/autolens_profiling/gradient_json_point_label_standard_cells.md, draft/research/autolens_profiling/unexplained_gradient_gaps_cpu_sparse_delaunay_and_mge.md
+- heart-ack: STALE "release validation incomplete: no rehearsal for current source" — acknowledged by human at ship 2026-11-02
 - repos:
   - autolens_profiling: feature/gradient-campaign-impact
   - PyAutoPulse: feature/gradient-campaign-impact
