@@ -1049,7 +1049,7 @@ Use the start-dev skill. active/rectangular_fiducial_gradient_wrong_rtu_and_cpu_
 
 </details>
 
-<details><summary>📋 <a href="active/results_library_p4_package.md">Issued: 2026-11-02</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1756">issue #1756</a> — issued 2026-11-02 — library-dev</summary>
+<details><summary>📋 <a href="active/results_library_p4_package.md">Issued: 2026-11-02</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1756">issue #1756</a> — issued 2026-11-02 — library-shipped, awaiting-merge (judge → human /prm) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1757">PyAutoFit#1757</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 Use the start-dev skill. active/results_library_p4_package.md
@@ -3185,6 +3185,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoFit**
 
+- [PyAutoFit#1757](https://github.com/PyAutoLabs/PyAutoFit/pull/1757) — `active/results_library_p4_package.md`
 - [PyAutoFit#1753](https://github.com/PyAutoLabs/PyAutoFit/pull/1753) — `complete/2026/11/results-library-p2-completeness.md`
 - [PyAutoFit#1755](https://github.com/PyAutoLabs/PyAutoFit/pull/1755) — `complete/2026/11/results-library-p3-exports.md`
 
