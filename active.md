@@ -127,6 +127,7 @@
 - worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p6d-gradient-ingest
 - repos:
   - PyAutoPulse: feature/likelihood-lifecycle-p6d-gradient-ingest
+- library-pr: https://github.com/PyAutoLabs/PyAutoPulse/pull/87 (freeze --measurement; MERGED 2026-11-02 6d9a8a8d via human /prm)
 - pending-claim: autolens_profiling (feature/likelihood-lifecycle-p6d-gradient-ingest) once likelihood-lifecycle-p6c-gradient-walls closes (RAL 413890_0 + walls follow-up)
 - prompt: active/likelihood_lifecycle_p6d_gradient_ingest.md
 - epic: likelihood-lifecycle (phase 6d)
