@@ -1057,7 +1057,7 @@ Use the start-dev skill. active/r2_pages_function_access.md
 
 </details>
 
-<details><summary>📋 <a href="active/rectangular_fiducial_gradient_wrong_rtu_and_cpu_sparse.md">Wrong JAX gradient through the rectangular source mesh: RTU (all backends)…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/671">issue #671</a> — issued 2026-11-02 — library-dev</summary>
+<details><summary>📋 <a href="active/rectangular_fiducial_gradient_wrong_rtu_and_cpu_sparse.md">Wrong JAX gradient through the rectangular source mesh: RTU (all backends)…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/671">issue #671</a> — issued 2026-11-02 — library-shipped, awaiting /prm — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/672">PyAutoArray#672</a></summary>
 
 ```
 Use the start-dev skill. active/rectangular_fiducial_gradient_wrong_rtu_and_cpu_sparse.md
