@@ -10,15 +10,15 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 19 |
-| [In flight](#in-flight) | 7 |
+| [In flight](#in-flight) | 8 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 290 |
+| [Backlog](#backlog) | 289 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 20
+**Highest priority** (filed as `high`) — showing 12 of 19
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -84,14 +84,6 @@ Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun
 
 </details>
 
-<details><summary>📋 <a href="draft/research/autolens_profiling/gradient_campaign_impact_of_border_tie_and_centre_singularity.md">Assess how PyAutoArray#671's two gradient defects affected the likelihood-lifecycle / PyAutoPulse gradient…</a> — autolens_profiling · medium · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/research/autolens_profiling/gradient_campaign_impact_of_border_tie_and_centre_singularity.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> — organs · medium · supervised · high</summary>
 
 ```
@@ -112,6 +104,14 @@ Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speedin
 
 ```
 Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md
 ```
 
 </details>
@@ -1021,6 +1021,14 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ```
 Use the start-dev skill. active/chapter2-explanations.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/gradient_campaign_impact_of_border_tie_and_centre_singularity.md">Assess how PyAutoArray#671's two gradient defects affected the likelihood-lifecycle / PyAutoPulse gradient…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/515">issue #515</a> — issued 2026-11-02 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/gradient_campaign_impact_of_border_tie_and_centre_singularity.md
 ```
 
 </details>
@@ -2047,20 +2055,12 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>research</b> — 43</summary>
+<summary><b>research</b> — 42</summary>
 
 <details><summary>📋 <a href="draft/research/autofit_inference/search_ext_b5c2a_rerun.md"><code>@autofit_inference</code> B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug…</a> — autofit_inference · medium · supervised · high</summary>
 
 ```
 Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/gradient_campaign_impact_of_border_tie_and_centre_singularity.md">Assess how PyAutoArray#671's two gradient defects affected the likelihood-lifecycle / PyAutoPulse gradient…</a> — autolens_profiling · medium · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/research/autolens_profiling/gradient_campaign_impact_of_border_tie_and_centre_singularity.md
 ```
 
 </details>
@@ -2970,7 +2970,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-02 | issued | <a href="active/results_library_p5a_assistant.md">Issued: 2026-11-02</a> |
 | 2026-11-02 | filed | <a href="draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md">Imaging sparse-operator path gives a very different log L from dense…</a> |
 | 2026-11-02 | issued | <a href="active/chapter2-explanations.md">Chapter 2 parameter-space explanations and profile sequencing</a> |
-| 2026-11-02 | filed | <a href="draft/research/autolens_profiling/gradient_campaign_impact_of_border_tie_and_centre_singularity.md">Assess how PyAutoArray#671's two gradient defects affected the…</a> |
+| 2026-11-02 | issued | <a href="active/gradient_campaign_impact_of_border_tie_and_centre_singularity.md">Assess how PyAutoArray#671's two gradient defects affected the…</a> |
 | 2026-10-31 | issued | <a href="active/sky_orientation_euclid_dr1_and_library.md">Sky orientation (north/east): euclid_dr1 catalogue, paper and…</a> |
 | 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
 | 2026-10-29 | issued | <a href="active/r2_pages_function_access.md">ECLIPSE site: serve R2 lens files through a Pages Function behind…</a> |

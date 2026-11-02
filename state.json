@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-11-02T14:52:02Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
+  "updated": "2026-11-02T15:33:05Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -111,12 +111,6 @@
     },
     {
       "severity": "info",
-      "text": "pick: Assess how PyAutoArray#671's two gradient defects affected the likelihood-lifecycle / PyAutoPulse gradient\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autolens_profiling/gradient_campaign_impact_of_border_tie_and_centre_singularity.md",
-      "prompt": "Use the start-dev skill. draft/research/autolens_profiling/gradient_campaign_impact_of_border_tie_and_centre_singularity.md"
-    },
-    {
-      "severity": "info",
       "text": "pick: Reduce the organism's per-session and per-task token load by half",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/organs/reduce_session_token_load.md",
       "prompt": "Use the start-dev skill. draft/maintenance/organs/reduce_session_token_load.md"
@@ -126,6 +120,12 @@
       "text": "pick: Physical model check when speeding up smoke tests",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md",
       "prompt": "Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Fix Sibson interpolation at internal edges",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md",
+      "prompt": "Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md"
     }
   ]
 }
