@@ -50,8 +50,11 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/671
 - issued: 2026-11-02
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: library-dev
+- status: library-shipped, awaiting /prm
 - worktree: ~/Code/PyAutoLabs-wt/rectangular-gradient-rtu-sparse
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/672 (pending-release; judge, human /prm)
+- root-cause: border relocator max(|y'|) tie gradient unstable under jit (fixed in #672); 1e9 HST = Isothermal core at grid-point centre (profiling-side, #509)
+- heart-ack: STALE "release validation incomplete: no rehearsal for current source" — acknowledged by human at ship 2026-11-02
 - repos:
   - PyAutoArray: feature/rectangular-gradient-rtu-sparse
 - witness-harness: autolens_profiling read-only via ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p6c-gradient-walls (6c closed 2026-11-02; that worktree is kept for this harness — do not switch its branch; autolens_profiling is now claimed by likelihood-lifecycle-p6d-gradient-ingest in its own worktree; human ruled PyAutoArray-only 2026-11-02)
