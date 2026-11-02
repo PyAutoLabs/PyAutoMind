@@ -71,7 +71,7 @@
 - repos:
   - autolens_profiling: feature/likelihood-lifecycle-p6c-gradient-walls
   - autolens_profiling: feature/likelihood-lifecycle-p6c-v2-walls
-- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/511 (v2 walls; judge, human /prm)
+- pr: https://github.com/PyAutoLabs/autolens_profiling/pull/511 (v2 walls; MERGED 2026-11-02 1cdf84bf via human /prm)
 - compute-pending: RAL 413890 (imaging CPU legs 0,4 at 512 GB, human go 2026-11-02)
 - prompt: active/likelihood_lifecycle_p6c_gradient_runs.md
 - epic: likelihood-lifecycle (phase 6c)
