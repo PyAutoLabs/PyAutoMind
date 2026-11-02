@@ -1,4 +1,19 @@
 
+## magnification-maps-source-plane
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/673
+- issued: 2026-11-02
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/magnification-maps-source-plane
+- repos:
+  - PyAutoArray: feature/magnification-maps-source-plane
+  - PyAutoGalaxy: feature/magnification-maps-source-plane
+  - PyAutoLens: feature/magnification-maps-source-plane
+  - autolens_workspace: feature/magnification-maps-source-plane
+- prompt: active/magnification_maps_8b_source_plane.md
+- epic: cluster-strong-lensing (phase 8b)
+- tier: judge — merge mode: human /prm (PyAutoArray → PyAutoGalaxy → PyAutoLens → autolens_workspace)
+
 ## matrix-free-interferometer-inversion
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/638
 - issued: 2026-10-21
