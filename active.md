@@ -35,7 +35,9 @@
 ## magnification-errors-source-science
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/610
 - issued: 2026-10-31
-- status: workspace-dev
+- status: awaiting-merge (judge: Heart-RED-override ship → human /prm)
+- pr: https://github.com/PyAutoLabs/autolens_workspace/pull/613
+- heart-ack: STALE 'release validation incomplete: no rehearsal for current source' acknowledged live by the human 2026-11-02
 - worktree: ~/Code/PyAutoLabs-wt/magnification-errors-source-science
 - repos:
   - autolens_workspace: feature/magnification-errors-source-science
