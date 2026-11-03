@@ -200,6 +200,8 @@ only while a brief is open (`policy/shift_watcher.md`).
   - token-budget: <n>                # tokens the shift may spend, all sessions
   - max-workers: 2                   # optional: concurrent workers (default 2)
   - max-sessions: 6                  # optional: sessions this shift, all told (default 6)
+  - worker-mode: auto                # optional: auto (default) | dontAsk | acceptEdits — never bypassPermissions
+  - sandbox: no                      # yes = a test shift; real workers need it until phase 3c
   - ral-allowance:                   # only when lanes includes ral; phase 5 consumes it
     - packets: 2
     - partition: ral
@@ -216,6 +218,13 @@ brief does not cover is **never** dipped.
 `PyAutoBrain/agents/conductors/batch/_orchestrator.py`): at a cap it stops
 spawning and records the refusal. Omitted, they default to 2 and 6; a value that
 is not a whole number refuses the brief.
+
+`worker-mode:` is the permission mode real workers run in (phase 3b). `auto` is
+the default the human chose on 2026-11-03: a worker that still needs a person
+shows `blocked` in `claude agents --json`, and after 15 minutes the watcher
+parks it for the digest instead of leaving it waiting. `bypassPermissions` is
+refused. `sandbox: yes` marks a test shift; until the one-Mind-writer path
+(phase 3c) lands, it is the only kind of brief a real worker may run under.
 
 **Calibration rule.** A new brief is not accepted while the previous record
 lacks `review-minutes-actual:`. The planned figure is a seed; the 2026-08-31
