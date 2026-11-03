@@ -290,3 +290,7 @@ work per human review-minute above the shadow-shift baseline.
   `complete/2026/11/autonomous-orchestrators-p3a.md`): STOP-first watcher tick, exclusive-create
   leases, crash re-dispatch once per shift, usage caps, fake workers; AUTONOMY "The watcher's network
   surface — 2026-11-03". The timer is not installed (human act). Next: 3b, unblocked.
+- 2026-11-03 — **Shadow-window ruling (human):** grant `glance` narrowed after a spot audit
+  (`draft/feature/pyautobrain/glance_tier_ruling_shadow_window.md`); **unattended `glance` merges
+  get a separate stage-2 sub-window** (first 10 need the independent different-model adversary
+  leg). Phase 4 must not auto-merge unattended before that sub-window exists.
