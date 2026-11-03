@@ -1038,7 +1038,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/autonomous_orchestrators_p3c_mind_writer.md">Autonomous orchestrators phase 3c: one Mind writer per shift — ledger lines…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/559">issue #559</a> — issued 2026-11-03 — library-dev</summary>
+<details><summary>📋 <a href="active/autonomous_orchestrators_p3c_mind_writer.md">Autonomous orchestrators phase 3c: one Mind writer per shift — ledger lines…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/559">issue #559</a> — issued 2026-11-03 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/526">PyAutoMind#526</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/560">PyAutoBrain#560</a></summary>
 
 ```
 Use the start-dev skill. active/autonomous_orchestrators_p3c_mind_writer.md
