@@ -37,13 +37,13 @@
 - status: workspace-dev
 - worktree: ~/Code/PyAutoLabs-wt/sky-orientation-p2
 - repos:
-  - euclid_strong_lens_modeling_pipeline: (no branch; next sub-phase 2c)
+  - euclid_strong_lens_modeling_pipeline: (no branch; next sub-phase 2d re-render pilot)
 - prompt: active/sky_orientation_euclid_dr1_and_library.md
 - epic: sky-orientation (phase 2: 2.0 land v5 branch → 2a catalogue fix → 2b–2e)
 - heart-red-override: extended live by the human 2026-10-31 to phase 2 ("Yes, extend it"); development only, merge via /prm
 - merged: euclid#116 (2.0 land v5 branch) 2026-10-31
 - merged: euclid#117 (2a catalogue frame fix) 2026-10-31
-- run: RAL 413687 sky_frame_bundle MODE=dry over inspect/dr1_catalogue_v5 (private code /mnt/ral/jnightin/active/euclid_dr1_p2c_code @910e5c8; submitted via scratch hpc/sync copy) → NEXT read dry report, MODE=live, re-package; then re-render pilot (~50, human review), 2b docs
+- run: 2c DONE — 413892 live bundle (29,929 coolest regenerated, WCS on 74,772 FITS, 0 errors); re-package 414041 → inspect/dr1_catalogue_v5_release_skyframe (20 parts, 88.24 GB, verified); JSON hard-rule diff vs 10-29 PASSED (inspect/json_diff_skyframe_vs_20261029.txt); 414110 relink rebuilds docs with project-relative snapshot.json paths (2026-11-03). R2 upload deferred to the very end (human 2026-11-03). NEXT 2d north-up re-render pilot (~50, human review), 2b docs
 - tier: judge — merge mode: human /prm
 
 ## results-library-p5a-assistant
