@@ -274,3 +274,10 @@ work per human review-minute above the shadow-shift baseline.
 6. Shadow shifts first in the pilot (recommended, two shifts).
 
 <!-- formalised by the Intake (Conception) Agent on 2026-11-03 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/b15ff817-f0d9-4ab3-b23f-735fcbb990f5/scratchpad/autonomous_orchestrators_epic.md; reviewed and restructured 2026-11-03 (design review session) -->
+
+## Progress
+
+- 2026-11-03 — **phase 1 COMPLETE** (PyAutoMind#522, PyAutoBrain#552; record
+  `complete/2026/11/autonomous-orchestrators-p1.md`). `policy/end_at_deliverable.md` left
+  byte-identical; the watcher exemption is `policy/shift_watcher.md`, and its one-line pointer
+  rides with the next stanza refresh. Next: phase 2.

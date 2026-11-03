@@ -1,3 +1,13 @@
+- epic: autonomous-orchestrators (phase 1 of 7; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md)
+- summary: doctrine and formats only. PyAutoMind#522: new policy/shift_watcher.md (deterministic non-LLM watcher is the one exemption to end_at_deliverable; no Claude tool, arms nothing, no dispatch without an open brief, STOP file checked first); batches/AGENTS.md "Shift brief (2026-11-03)" with fenced example brief + digest + proof-packet format + calibration rule; REFERENCE.md documents Lane: any | local-dev | ral | gpu | wsl-data. PyAutoBrain#552: AUTONOMY.md "Shift briefs and unattended `glance` — 2026-11-03" (shift brief = launch; unattended glance merges with five guards; one Mind writer per shift; drafts-only decomposition; push-notification test), Consumers + hard-invariant entries, batch skill/conductor brief rule (brief --check / dispatch / digest marked planned), 5 doctrine tests.
+- deviation (approved): policy/end_at_deliverable.md left byte-identical — repos_sync stamps it into 50 repos; the one-line pointer to shift_watcher.md rides with the next routine stanza refresh.
+- witness: hook payloads ScheduleWakeup/CronCreate/RemoteTrigger run/send_later exit 2, RemoteTrigger list exit 0; Revert condition 6 → 11; repos_sync --check green (canonical --root); pytest Mind 711 / Brain 1409; lifecycle drift pre-existing (active/chapter2-explanations.md).
+- traps: from a task worktree repos_sync --check reports COWLS_COSMOS_Web_Lens_Survey undeclared (worktree_create flattens lens/ to the root) — run it with --root ~/Code/PyAutoLabs; with the worktree activate.sh PYAUTO_ROOT/MIND/BRAIN set, test_repos_sync_root_default and test_grouped_organ_consumers each fail one test on main too — unset them for a clean suite.
+- next: phase 2 draft/feature/pyautobrain/autonomous_orchestrators_p2_lane_schema_census.md.
+- heart: YELLOW at start (monitoring RED reasons), judge tier, human /prm.
+
+## Original prompt
+
 # Autonomous orchestrators phase 1: policy amendments and the shift brief, digest, proof-packet and push formats
 
 Type: feature
