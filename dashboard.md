@@ -1054,7 +1054,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/autonomous_orchestrators_p3a_watcher_core.md">Autonomous orchestrators phase 3a: watcher core — brief gate, kill switch, leases…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/555">issue #555</a> — issued 2026-11-03 — library-dev</summary>
+<details><summary>📋 <a href="active/autonomous_orchestrators_p3a_watcher_core.md">Autonomous orchestrators phase 3a: watcher core — brief gate, kill switch, leases…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/555">issue #555</a> — issued 2026-11-03 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/524">PyAutoMind#524</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/556">PyAutoBrain#556</a></summary>
 
 ```
 Use the start-dev skill. active/autonomous_orchestrators_p3a_watcher_core.md
