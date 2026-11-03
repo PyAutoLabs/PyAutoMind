@@ -198,6 +198,8 @@ only while a brief is open (`policy/shift_watcher.md`).
   - lanes: any local-dev ral         # any subset of: any local-dev ral gpu wsl-data
   - merge-cap: 3                     # unattended glance merges this shift, at most
   - token-budget: <n>                # tokens the shift may spend, all sessions
+  - max-workers: 2                   # optional: concurrent workers (default 2)
+  - max-sessions: 6                  # optional: sessions this shift, all told (default 6)
   - ral-allowance:                   # only when lanes includes ral; phase 5 consumes it
     - packets: 2
     - partition: ral
@@ -209,6 +211,11 @@ only while a brief is open (`policy/shift_watcher.md`).
 batch constraint; `scoped` — only prompts matching the `scoped:` epics, tags or
 tiers. `exclude:` removes prompt paths or epics from either dip. Backlog the
 brief does not cover is **never** dipped.
+
+`max-workers:` and `max-sessions:` are the watcher's usage caps (phase 3a,
+`PyAutoBrain/agents/conductors/batch/_orchestrator.py`): at a cap it stops
+spawning and records the refusal. Omitted, they default to 2 and 6; a value that
+is not a whole number refuses the brief.
 
 **Calibration rule.** A new brief is not accepted while the previous record
 lacks `review-minutes-actual:`. The planned figure is a seed; the 2026-08-31
