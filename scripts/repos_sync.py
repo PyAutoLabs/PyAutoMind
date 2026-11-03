@@ -129,6 +129,8 @@ import os
 import re
 import subprocess
 import sys
+from collections.abc import Callable
+from dataclasses import dataclass
 from pathlib import Path
 
 import smoke_bootstrap_sync as smoke_sync
@@ -996,191 +998,159 @@ def check_labels(root, repos):
 
 
 # --------------------------------------------------------------------------
-# Generated-block drift (the organism map is written into each organ)
+# Generated marker blocks: one declaration per surface, driving check + --write
 # --------------------------------------------------------------------------
 #
-# The organism-map block is generated into any organ that opts in via the map
-# markers. In practice that is PyAutoBrain, which is loaded in every session
-# (web, mobile/code, local), so its auto-loaded AGENTS.md carries the map into
-# every session's context — one copy, no per-organ duplication. Wherever a copy
-# exists it must not drift from the manifest, so — mirroring how the command
-# surface is checked by install.sh --check-agents-surface — this verifies each
-# present map block still equals what system_map() generates. A block that was
-# hand-edited, or left stale after a repos.yaml change without a --write, is
-# reported as drift.
+# Every block below is text generated from one source (repos.yaml or a
+# policy/*.md file) into N on-disk copies between a marker pair. Each surface
+# is ONE `GeneratedBlock` declaration — its check-leg label, its markers,
+# where its copies live, what fills them, and how a copy that is missing its
+# markers is treated — and that declaration is what both the drift check
+# (`check_block`) grades and `--write` (`write_blocks`) fills. Adding a
+# generated surface is one more entry in GENERATED_BLOCKS plus its leg in
+# main()'s check registry (which fixes the printed order).
+#
+# The shared contract: an absent file is skipped by both sides (a partial/web
+# checkout won't carry every repo), and a present block must equal the
+# generator byte-for-byte — a hand-edited block, or one left stale after a
+# repos.yaml/policy change without a --write, is drift. What differs per
+# surface is a copy that is present WITHOUT its markers:
+#
+# * opt-in (`missing=None`, no `anchor`) — skipped: the repo has not added
+#   the markers yet (organism map, history, remote-session);
+# * required (`missing=<problem>`) — reported, and for `required=True` a hard
+#   --write error: the root routing table and WORKFLOW.md owner map must stay
+#   generated (they once went two organs and a role line stale while every
+#   check printed OK); a front-door README must carry the organ table (so a new
+#   organ can never silently drop out of the public front door);
+# * self-installing (`anchor=<block>`) — reported, never silently absent, and
+#   --write inserts the markers itself under the anchor block. The
+#   end-at-deliverable rule was already written down and still broken twice,
+#   and a collaborator's agent filing a user report as a repo issue happens in
+#   exactly the repos a rollout forgot, so waiting for each repo to opt in is
+#   how the long tail stays unprotected. A repo carrying neither pair is left
+#   alone (there is no non-arbitrary place to put the block) and named instead.
+
+STALE_HINT = "run `python3 PyAutoMind/scripts/repos_sync.py --write`"
 
 
-def check_map_blocks(root, repos, smap):
-    problems = []
-    for name, repo in repos.items():
-        if repo["category"] != "organ":
-            continue
-        agents = repo_checkout(root, name) / "AGENTS.md"
-        if not agents.exists():
-            continue  # not checked out, or an organ without its own AGENTS.md
-        text = agents.read_text()
-        if MAP_BEGIN not in text or MAP_END not in text:
-            continue  # opt-in: an organ that has not added the map markers
-        if extract_block(text, MAP_BEGIN, MAP_END) != smap:
-            problems.append(
-                f"'{name}': organism-map block is stale — run "
-                f"`python3 PyAutoMind/scripts/repos_sync.py --write`"
-            )
-    return problems
+@dataclass(frozen=True)
+class BlockInputs:
+    """What the generated blocks render from: the manifest, the organism map
+    rendered from it, and the canonical policy texts. A caller grading or
+    writing one block need only supply what that block reads."""
+
+    repos: dict
+    categories: dict | None = None
+    smap: str | None = None
+    hpol: str | None = None
+    remote: str | None = None
+    deliverable: str | None = None
+    filing: str | None = None
 
 
-# The two `required=True` targets of --write — the workspace-root AGENTS.md
-# routing table and PyAutoBrain/skills/WORKFLOW.md's owner map — had no check
-# leg, so a repos.yaml change without a --write left the root table stale
-# (missing two organs, stale role text) while check mode still printed OK.
-# Same contract as the write: an absent file is skipped (partial/web checkouts
-# carry neither), a present file without its markers is a problem (write would
-# hard-fail on it), and a present block must equal the generator byte-for-byte.
+@dataclass(frozen=True)
+class GeneratedBlock:
+    """One generated marker-block surface (see the section comment)."""
+
+    label: str  # the check leg's printed label (Heart parses it — never rename)
+    begin: str
+    end: str
+    render: Callable  # (BlockInputs, key) -> the exact text between the markers
+    stale: str  # "<who>: <stale> — run ... --write"
+    # Which copies exist, as keys in check/write order (default: every repo),
+    # where a key's copy lives (default: that repo's AGENTS.md), and how a
+    # problem names it (default: the quoted repo name).
+    keys: Callable = lambda repos: list(repos)
+    locate: Callable = lambda root, key: repo_checkout(root, key) / "AGENTS.md"
+    who: Callable = lambda root, key: f"'{key}'"
+    missing: str | None = None  # problem for a markerless copy; None = opt-in
+    anchor: "GeneratedBlock | None" = None  # self-install under this block
+    noun: str = ""  # "no <noun> block", "after the <noun> block"
+    required: bool = False  # --write hard-fails on a markerless copy
+    # Consecutive blocks sharing a group are written in one repo-major pass
+    # (every block of the group into one repo before the next repo).
+    write_group: str | None = None
 
 
-def _check_required_block(root, path, label, expected):
-    if not path.exists():
-        return []  # partial/web checkout: write skips it too
-    shown = path.relative_to(root).as_posix() if path.is_relative_to(root) else path
-    text = path.read_text()
-    if MARK_BEGIN not in text or MARK_END not in text:
-        return [f"{shown}: no {MARK_BEGIN} / {MARK_END} block for the {label}"]
-    if extract_block(text, MARK_BEGIN, MARK_END) != expected:
-        return [
-            f"{shown}: {label} block is stale — run "
-            f"`python3 PyAutoMind/scripts/repos_sync.py --write`"
-        ]
-    return []
+def _shown(root, path):
+    return path.relative_to(root).as_posix() if path.is_relative_to(root) else path
 
 
-def check_routing_table(root, categories, repos):
-    return _check_required_block(
-        Path(root),
-        Path(root) / "AGENTS.md",
-        "routing table",
-        routing_table(categories, repos),
-    )
+ROUTING_TABLE = GeneratedBlock(
+    label="root AGENTS.md routing table (generated)",
+    begin=MARK_BEGIN,
+    end=MARK_END,
+    render=lambda inputs, _key: routing_table(inputs.categories, inputs.repos),
+    stale="routing table block is stale",
+    keys=lambda repos: ["AGENTS.md"],
+    locate=lambda root, _key: Path(root) / "AGENTS.md",
+    who=lambda root, _key: _shown(Path(root), Path(root) / "AGENTS.md"),
+    missing=f"no {MARK_BEGIN} / {MARK_END} block for the routing table",
+    required=True,
+)
 
+OWNER_MAP = GeneratedBlock(
+    label="WORKFLOW.md owner map (generated)",
+    begin=MARK_BEGIN,
+    end=MARK_END,
+    render=lambda inputs, _key: owner_map(inputs.categories, inputs.repos),
+    stale="owner map block is stale",
+    keys=lambda repos: ["skills/WORKFLOW.md"],
+    locate=lambda root, key: bootstrap_checkout(root, "PyAutoBrain") / key,
+    who=lambda root, key: _shown(
+        Path(root), bootstrap_checkout(root, "PyAutoBrain") / key
+    ),
+    missing=f"no {MARK_BEGIN} / {MARK_END} block for the owner map",
+    required=True,
+)
 
-def check_owner_map(root, categories, repos):
-    return _check_required_block(
-        Path(root),
-        bootstrap_checkout(root, "PyAutoBrain") / "skills/WORKFLOW.md",
-        "owner map",
-        owner_map(categories, repos),
-    )
+# Opt-in per organ. In practice PyAutoBrain carries it: its AGENTS.md is
+# auto-loaded in every session (web, mobile/code, local), so one copy carries
+# the map into every session's context with no per-organ duplication.
+ORGANISM_MAP = GeneratedBlock(
+    label=MAP_BLOCKS,
+    begin=MAP_BEGIN,
+    end=MAP_END,
+    render=lambda inputs, _key: inputs.smap,
+    stale="organism-map block is stale",
+    keys=lambda repos: [n for n, r in repos.items() if r["category"] == "organ"],
+)
 
+# Universal and opt-in: single source (policy/never_rewrite_history.md) + this
+# leg is what lets the safety text live inline in every repo without drifting.
+HISTORY_BLOCK = GeneratedBlock(
+    label="never-rewrite-history blocks (generated)",
+    begin=HISTORY_BEGIN,
+    end=HISTORY_END,
+    render=lambda inputs, _key: inputs.hpol,
+    stale="never-rewrite-history block is stale",
+    noun="history",
+    write_group="policy",
+)
 
-def check_history_blocks(root, repos, hpol):
-    """Every AGENTS.md that opts into the repos_sync:history markers must carry
-    the canonical policy verbatim. Single source (policy/never_rewrite_history.md)
-    + this check is what lets the safety text live inline in every repo without
-    drifting."""
-    problems = []
-    for name in repos:
-        agents = repo_checkout(root, name) / "AGENTS.md"
-        if not agents.exists():
-            continue
-        text = agents.read_text()
-        if HISTORY_BEGIN not in text or HISTORY_END not in text:
-            continue  # opt-in: repo hasn't added the history markers yet
-        if extract_block(text, HISTORY_BEGIN, HISTORY_END) != hpol:
-            problems.append(
-                f"'{name}': never-rewrite-history block is stale — run "
-                f"`python3 PyAutoMind/scripts/repos_sync.py --write`"
-            )
-    return problems
+# Opt-in, not mandatory, so a repo without the markers is skipped rather than
+# failing a session (or a CI leg) that cannot see it — the honest state of this
+# rollout; see the module comment on REMOTE_SESSIONS_FILE.
+REMOTE_BLOCK = GeneratedBlock(
+    label="remote-session blocks (generated)",
+    begin=REMOTE_BEGIN,
+    end=REMOTE_END,
+    render=lambda inputs, _key: inputs.remote,
+    stale="remote-session block is stale",
+    write_group="policy",
+)
 
-
-def check_remote_blocks(root, repos, remote):
-    """Same contract as the history block: opt in with the markers, and the copy
-    must then be the canonical text verbatim.
-
-    Opt-in, not mandatory, so a repo that has not added the markers is skipped
-    rather than failing a session (or a CI leg) that cannot see it. That is also
-    the honest state of this rollout — see the module comment on
-    REMOTE_SESSIONS_FILE."""
-    problems = []
-    for name in repos:
-        agents = repo_checkout(root, name) / "AGENTS.md"
-        if not agents.exists():
-            continue
-        text = agents.read_text()
-        if REMOTE_BEGIN not in text or REMOTE_END not in text:
-            continue  # opt-in: repo hasn't added the remote-session markers yet
-        if extract_block(text, REMOTE_BEGIN, REMOTE_END) != remote:
-            problems.append(
-                f"'{name}': remote-session block is stale — run "
-                f"`python3 PyAutoMind/scripts/repos_sync.py --write`"
-            )
-    return problems
-
-
-def check_deliverable_blocks(root, repos, policy):
-    """Same one-source contract as the history block, but NOT opt-in silence.
-
-    The other blocks skip a repo that has not added their markers, because a
-    repo can reasonably not carry them yet. This one is a safety rule that was
-    already written down somewhere and still broken twice, so a repo missing it
-    is the failure mode, not a pending nicety — a missing block is reported
-    rather than skipped, and the report says which of the two states it is in:
-
-    * the history markers are there and the deliverable markers are not —
-      `--write` inserts the block itself, so the fix is to run it;
-    * neither marker pair is present — the repo carries no generated policy at
-      all, and a human has to place the markers before --write can fill them.
-    """
-    problems = []
-    for name in repos:
-        agents = repo_checkout(root, name) / "AGENTS.md"
-        if not agents.exists():
-            continue  # not checked out here
-        text = agents.read_text()
-        if DELIVERABLE_BEGIN in text and DELIVERABLE_END in text:
-            if extract_block(text, DELIVERABLE_BEGIN, DELIVERABLE_END) != policy:
-                problems.append(
-                    f"'{name}': end-at-deliverable block is stale — run "
-                    f"`python3 PyAutoMind/scripts/repos_sync.py --write`"
-                )
-        elif HISTORY_BEGIN in text and HISTORY_END in text:
-            problems.append(
-                f"'{name}': no deliverable block — run "
-                f"`python3 PyAutoMind/scripts/repos_sync.py --write` "
-                f"(it inserts one after the history block)"
-            )
-        else:
-            problems.append(
-                f"'{name}': no deliverable block — add the markers "
-                f"({DELIVERABLE_BEGIN} / {DELIVERABLE_END}) to its AGENTS.md, "
-                f"then run `python3 PyAutoMind/scripts/repos_sync.py --write`"
-            )
-    return problems
-
-
-def insert_deliverable_markers(root, repos):
-    """Place the deliverable markers under the history block where they are
-    missing, so `--write` can fill them on the same run.
-
-    Only a repo that already carries the history markers is touched: that pair
-    proves the file has a generated-policy section and pins where the new block
-    belongs. A repo with neither pair is left alone (there is no non-arbitrary
-    place to put it) and named by `check_deliverable_blocks` instead."""
-    for name in repos:
-        agents = repo_checkout(root, name) / "AGENTS.md"
-        if not agents.exists():
-            continue
-        text = agents.read_text()
-        if DELIVERABLE_BEGIN in text or DELIVERABLE_END in text:
-            continue
-        if HISTORY_END not in text:
-            continue  # no anchor — reported by the check, not guessed at here
-        text = text.replace(
-            HISTORY_END,
-            f"{HISTORY_END}\n\n{DELIVERABLE_BEGIN}\n{DELIVERABLE_END}",
-            1,
-        )
-        agents.write_text(text)
-        print(f"inserted deliverable markers: {agents}")
+DELIVERABLE_BLOCK = GeneratedBlock(
+    label="end-at-deliverable blocks (generated)",
+    begin=DELIVERABLE_BEGIN,
+    end=DELIVERABLE_END,
+    render=lambda inputs, _key: inputs.deliverable,
+    stale="end-at-deliverable block is stale",
+    anchor=HISTORY_BLOCK,
+    noun="deliverable",
+    write_group="policy",
+)
 
 
 def filing_block_excluded(repo_spec):
@@ -1191,70 +1161,160 @@ def filing_block_excluded(repo_spec):
     return isinstance(repo_spec, dict) and repo_spec.get("filing_block") is False
 
 
-def check_filing_blocks(root, repos, policy):
-    """The where-to-file block: one source, N copies, and — like the
-    deliverable block — a repo missing it is reported, not skipped.
+# Self-installs one step further down: under the deliverable block.
+FILING_BLOCK = GeneratedBlock(
+    label=FILING_BLOCKS,
+    begin=FILING_BEGIN,
+    end=FILING_END,
+    render=lambda inputs, _key: inputs.filing,
+    stale="where-to-file block is stale",
+    keys=lambda repos: [
+        n for n, spec in repos.items() if not filing_block_excluded(spec)
+    ],
+    anchor=DELIVERABLE_BLOCK,
+    noun="where-to-file",
+)
 
-    A collaborator's agent that files a user report as a repo issue is the
-    failure mode, and it happens in exactly the repos a rollout forgot. The
-    report says which of three states the repo is in:
+# The front-door READMEs; soft-skipped when the sibling repo is not checked
+# out (the hub's prose blurb is presence-checked separately: check_hub_blurb).
+PUBLIC_TABLES = GeneratedBlock(
+    label="public front-door organ tables (generated)",
+    begin=ORGANS_BEGIN,
+    end=ORGANS_END,
+    render=lambda inputs, rel: organ_public_table(
+        inputs.repos, bold=dict(PUBLIC_TABLE_TARGETS)[rel]
+    ),
+    stale="organ table stale",
+    keys=lambda repos: [rel for rel, _bold in PUBLIC_TABLE_TARGETS],
+    locate=lambda root, rel: public_target(Path(root), rel),
+    who=lambda root, rel: rel,
+    missing="no repos_sync:organs marker block (add the markers, then run --write)",
+)
 
-    * the filing markers are there — the copy must be the canonical text;
-    * the deliverable markers are there and the filing markers are not —
-      `--write` inserts the block itself, so the fix is to run it;
-    * neither — a human has to place the markers before --write can fill them.
-    """
+# Write order; main() lists the same blocks in its check registry.
+GENERATED_BLOCKS = (
+    ROUTING_TABLE,
+    OWNER_MAP,
+    ORGANISM_MAP,
+    HISTORY_BLOCK,
+    REMOTE_BLOCK,
+    DELIVERABLE_BLOCK,
+    FILING_BLOCK,
+    PUBLIC_TABLES,
+)
+
+
+def check_block(block, root, inputs):
+    """Grade every present copy of `block` against its render."""
     problems = []
-    for name, spec in repos.items():
-        if filing_block_excluded(spec):
-            continue  # recorded manifest exclusion
-        agents = repo_checkout(root, name) / "AGENTS.md"
-        if not agents.exists():
-            continue  # not checked out here
-        text = agents.read_text()
-        if FILING_BEGIN in text and FILING_END in text:
-            if extract_block(text, FILING_BEGIN, FILING_END) != policy:
-                problems.append(
-                    f"'{name}': where-to-file block is stale — run "
-                    f"`python3 PyAutoMind/scripts/repos_sync.py --write`"
-                )
-        elif DELIVERABLE_BEGIN in text and DELIVERABLE_END in text:
+    for key in block.keys(inputs.repos):
+        path = block.locate(root, key)
+        if not path.exists():
+            continue  # not checked out here: --write skips it too
+        text = path.read_text()
+        who = block.who(root, key)
+        if block.begin in text and block.end in text:
+            if extract_block(text, block.begin, block.end) != block.render(
+                inputs, key
+            ):
+                problems.append(f"{who}: {block.stale} — {STALE_HINT}")
+        elif block.missing is not None:
+            problems.append(f"{who}: {block.missing}")
+        elif block.anchor is None:
+            continue  # opt-in: this copy has not added the markers yet
+        elif block.anchor.begin in text and block.anchor.end in text:
             problems.append(
-                f"'{name}': no where-to-file block — run "
-                f"`python3 PyAutoMind/scripts/repos_sync.py --write` "
-                f"(it inserts one after the deliverable block)"
+                f"{who}: no {block.noun} block — {STALE_HINT} "
+                f"(it inserts one after the {block.anchor.noun} block)"
             )
         else:
             problems.append(
-                f"'{name}': no where-to-file block — add the markers "
-                f"({FILING_BEGIN} / {FILING_END}) to its AGENTS.md, "
-                f"then run `python3 PyAutoMind/scripts/repos_sync.py --write`"
+                f"{who}: no {block.noun} block — add the markers "
+                f"({block.begin} / {block.end}) to its AGENTS.md, "
+                f"then {STALE_HINT}"
             )
     return problems
 
 
-def insert_filing_markers(root, repos):
-    """Place the filing markers under the deliverable block where they are
-    missing, so the same run can fill them. A repo without the deliverable
-    markers is left alone and named by `check_filing_blocks` instead."""
-    for name, spec in repos.items():
-        if filing_block_excluded(spec):
-            continue
-        agents = repo_checkout(root, name) / "AGENTS.md"
+def insert_block_markers(root, repos, block):
+    """Place `block`'s empty marker pair under its anchor block where it is
+    missing, so the same --write run can fill it. Only a copy that already
+    carries the anchor's end marker is touched: that marker proves the file has
+    a generated-policy section and pins where the new block belongs."""
+    for key in block.keys(repos):
+        agents = block.locate(root, key)
         if not agents.exists():
             continue
         text = agents.read_text()
-        if FILING_BEGIN in text or FILING_END in text:
+        if block.begin in text or block.end in text:
             continue
-        if DELIVERABLE_END not in text:
+        if block.anchor.end not in text:
             continue  # no anchor — reported by the check, not guessed at here
         text = text.replace(
-            DELIVERABLE_END,
-            f"{DELIVERABLE_END}\n\n{FILING_BEGIN}\n{FILING_END}",
+            block.anchor.end,
+            f"{block.anchor.end}\n\n{block.begin}\n{block.end}",
             1,
         )
         agents.write_text(text)
-        print(f"inserted where-to-file markers: {agents}")
+        print(f"inserted {block.noun} markers: {agents}")
+
+
+def write_blocks(root, blocks, inputs):
+    """Fill every copy of `blocks`, in order. A run of consecutive blocks
+    sharing a `write_group` is one repo-major pass; a self-installing block's
+    markers are inserted at the start of its pass."""
+    passes = []
+    for block in blocks:
+        if passes and block.write_group and block.write_group == passes[-1][0]:
+            passes[-1][1].append(block)
+        else:
+            passes.append((block.write_group, [block]))
+    for _group, members in passes:
+        for block in members:
+            if block.anchor is not None:
+                insert_block_markers(root, inputs.repos, block)
+        rows = {}
+        for block in members:
+            for key in block.keys(inputs.repos):
+                rows.setdefault(key, []).append(block)
+        for key, row in rows.items():
+            for block in row:
+                write_block(
+                    block.locate(root, key),
+                    block.render(inputs, key),
+                    block.begin,
+                    block.end,
+                    required=block.required,
+                )
+
+
+# The single-surface entry points the tests and the propagation workflow call.
+
+
+def check_routing_table(root, categories, repos):
+    return check_block(ROUTING_TABLE, root, BlockInputs(repos, categories))
+
+
+def check_owner_map(root, categories, repos):
+    return check_block(OWNER_MAP, root, BlockInputs(repos, categories))
+
+
+def check_remote_blocks(root, repos, remote):
+    return check_block(REMOTE_BLOCK, root, BlockInputs(repos, remote=remote))
+
+
+def check_deliverable_blocks(root, repos, policy):
+    return check_block(
+        DELIVERABLE_BLOCK, root, BlockInputs(repos, deliverable=policy)
+    )
+
+
+def insert_deliverable_markers(root, repos):
+    insert_block_markers(root, repos, DELIVERABLE_BLOCK)
+
+
+def check_filing_blocks(root, repos, policy):
+    return check_block(FILING_BLOCK, root, BlockInputs(repos, filing=policy))
 
 
 def write_filing_blocks(root, repos, policy):
@@ -1262,17 +1322,7 @@ def write_filing_blocks(root, repos, policy):
     and write nothing else. The narrow entry point the propagation workflow
     calls: a full `--write` would also regenerate the organism-map and other
     AGENTS.md blocks, which that job deliberately never commits."""
-    insert_filing_markers(root, repos)
-    for name, spec in repos.items():
-        if filing_block_excluded(spec):
-            continue
-        write_block(
-            repo_checkout(root, name) / "AGENTS.md",
-            policy,
-            FILING_BEGIN,
-            FILING_END,
-            required=False,
-        )
+    write_blocks(root, [FILING_BLOCK], BlockInputs(repos, filing=policy))
 
 
 def load_standards_policy(mind_root):
@@ -1405,31 +1455,6 @@ def standards_coverage(root, repos):
     seen = [name for name in repos if repo_checkout(root, name).is_dir()]
     absent = [name for name in repos if name not in seen]
     return len(seen), len(repos), absent
-
-
-def check_public_tables(root, repos):
-    """Every front-door README's generated organ table must match the body map
-    (so a new organ can never silently drop out of the public front door).
-    Soft-skips a target that is not checked out."""
-    problems = []
-    for rel, bold in PUBLIC_TABLE_TARGETS:
-        path = public_target(root, rel)
-        if not path.exists():
-            continue
-        text = path.read_text()
-        if ORGANS_BEGIN not in text or ORGANS_END not in text:
-            problems.append(
-                f"{rel}: no repos_sync:organs marker block "
-                "(add the markers, then run --write)"
-            )
-        elif extract_block(text, ORGANS_BEGIN, ORGANS_END) != organ_public_table(
-            repos, bold=bold
-        ):
-            problems.append(
-                f"{rel}: organ table stale — run "
-                "`python3 PyAutoMind/scripts/repos_sync.py --write`"
-            )
-    return problems
 
 
 def check_hub_blurb(root, repos):
@@ -2919,13 +2944,23 @@ def main():
     categories, repos = load_manifest(mind_root)
     unmapped = load_unmapped_checkouts(mind_root)
 
-    smap = system_map(categories, repos)
-    hpol = load_history_policy(mind_root)
-    remote = load_remote_sessions(mind_root)
-    deliverable = load_deliverable_policy(mind_root)
-    filing = load_filing_policy(mind_root)
+    inputs = BlockInputs(
+        repos,
+        categories,
+        smap=system_map(categories, repos),
+        hpol=load_history_policy(mind_root),
+        remote=load_remote_sessions(mind_root),
+        deliverable=load_deliverable_policy(mind_root),
+        filing=load_filing_policy(mind_root),
+    )
     hook_text = load_session_hook(mind_root)
     deliverable_hook_text = load_deliverable_hook(mind_root)
+
+    def block_legs(*blocks):
+        return {
+            block.label: (lambda block=block: check_block(block, root, inputs))
+            for block in blocks
+        }
 
     # Lazy (label -> thunk) so --only pays for exactly the selected legs.
     checks = {
@@ -2944,29 +2979,18 @@ def main():
         "local checkout origins": lambda: check_origins(root, repos),
         CHECKOUTS: lambda: check_checkouts(root, repos, unmapped, marker),
         "tenant firewall (organ code)": lambda: check_tenant_firewall(root, repos),
-        "root AGENTS.md routing table (generated)": lambda: check_routing_table(
-            root, categories, repos
-        ),
-        "WORKFLOW.md owner map (generated)": lambda: check_owner_map(
-            root, categories, repos
-        ),
-        MAP_BLOCKS: lambda: check_map_blocks(root, repos, smap),
-        "never-rewrite-history blocks (generated)": lambda: check_history_blocks(
-            root, repos, hpol
-        ),
-        "remote-session blocks (generated)": lambda: check_remote_blocks(
-            root, repos, remote
-        ),
-        "end-at-deliverable blocks (generated)": lambda: check_deliverable_blocks(
-            root, repos, deliverable
+        **block_legs(
+            ROUTING_TABLE,
+            OWNER_MAP,
+            ORGANISM_MAP,
+            HISTORY_BLOCK,
+            REMOTE_BLOCK,
+            DELIVERABLE_BLOCK,
         ),
         STANDARDS_BLOCKS: lambda: check_standards_blocks(
             root, standards_repos, standards
         ),
-        FILING_BLOCKS: lambda: check_filing_blocks(root, repos, filing),
-        "public front-door organ tables (generated)": lambda: check_public_tables(
-            root, repos
-        ),
+        **block_legs(FILING_BLOCK, PUBLIC_TABLES),
         "hub organism blurb (organs present)": lambda: check_hub_blurb(root, repos),
         "CLAUDE.md → AGENTS.md pointers": lambda: check_claude_md_pointers(root, repos),
         SESSION_HOOKS: lambda: check_session_hooks(
@@ -3048,64 +3072,11 @@ def main():
         # to the parent of a checkout, which is how --write reaches a root that
         # has none yet, and every later call takes the marker instead.
         write_root_marker(root, marker)
-        write_block(root / "AGENTS.md", routing_table(categories, repos), required=True)
-        write_block(
-            bootstrap_checkout(root, "PyAutoBrain") / "skills/WORKFLOW.md",
-            owner_map(categories, repos),
-            required=True,
-        )
-        for name, repo in repos.items():
-            if repo["category"] != "organ":
-                continue
-            write_block(
-                repo_checkout(root, name) / "AGENTS.md",
-                smap,
-                MAP_BEGIN,
-                MAP_END,
-                required=False,
-            )
-        # The history policy is universal — written into every repo (not just
-        # organs) that has added the markers.
-        #
-        # The deliverable policy is universal AND self-installing: a repo that
-        # already carries the history block gets the markers placed under it
-        # here, so the block lands without thirty hand-edits. (The rule it
-        # carries was broken twice by sessions reasoning past prose; waiting for
-        # each repo to opt in is how the long tail stays unprotected.)
-        insert_deliverable_markers(root, repos)
-        for name in repos:
-            write_block(
-                repo_checkout(root, name) / "AGENTS.md",
-                hpol,
-                HISTORY_BEGIN,
-                HISTORY_END,
-                required=False,
-            )
-            write_block(
-                repo_checkout(root, name) / "AGENTS.md",
-                remote,
-                REMOTE_BEGIN,
-                REMOTE_END,
-                required=False,
-            )
-            write_block(
-                repo_checkout(root, name) / "AGENTS.md",
-                deliverable,
-                DELIVERABLE_BEGIN,
-                DELIVERABLE_END,
-                required=False,
-            )
-        # The where-to-file block self-installs the same way, one step further
-        # down: under the deliverable block that the loop above just filled.
-        write_filing_blocks(root, repos, filing)
-        for rel, bold in PUBLIC_TABLE_TARGETS:
-            write_block(
-                public_target(root, rel),
-                organ_public_table(repos, bold=bold),
-                ORGANS_BEGIN,
-                ORGANS_END,
-                required=False,
-            )
+        # Every generated marker block, in GENERATED_BLOCKS order. The history,
+        # remote-session and deliverable blocks are universal (every repo that
+        # has the markers, not just organs); the deliverable and where-to-file
+        # blocks also self-install their markers — see GeneratedBlock.
+        write_blocks(root, GENERATED_BLOCKS, inputs)
         remove_claude_md_pointers(root, repos)
         write_session_hooks(root, repos, hook_text, deliverable_hook_text)
     if write_enabled and not smoke_only_write and not standards_only_write:
