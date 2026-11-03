@@ -1,3 +1,10 @@
+- summary: most of the fix was already on main (0c3e2dc, 772d725: ArxivAPIError, retry ladder, api_failed, return 1). The live bug: arxiv_refs.yml piped the script through tee without pipefail, so the exit code was discarded and an outage still showed green. Now pipefail + recorded status, partial progress still validated/committed, then the job fails with ::error::. Script: injectable sleep, ParseError → ArxivAPIError, HTTPException transient, `unattempted` stat.
+- history check: nothing was NOTE-marked in the 2026-09-14..18 outage window (only NOTE commits: 1bd7d38, 86ea9fd 08-25; 778e3e4 08-27).
+- pr: PyAutoMemory#143; issue PyAutoMemory#142.
+- witness: PASS — injected HTTPError(429) → api_failed, never unmatched, never NOTE-marked (fails on pre-fix source); 286 passed; make validate OK; CI validate green.
+
+## Original prompt
+
 # `arxiv_refs.py` swallows every API error, so an arXiv outage resolves nothing and still reports green
 
 Type: bug

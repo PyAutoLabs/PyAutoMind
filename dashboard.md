@@ -10,7 +10,7 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 20 |
-| [In flight](#in-flight) | 14 |
+| [In flight](#in-flight) | 9 |
 | [Planned](#planned) | 9 |
 | [Backlog](#backlog) | 286 |
 | [Recent](#recent) | 50 |
@@ -1038,26 +1038,10 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves nothing…</a> — <a href="https://github.com/PyAutoLabs/PyAutoMemory/issues/142">issue #142</a> — issued 2026-11-03 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMemory/pull/143">PyAutoMemory#143</a></summary>
-
-```
-Use the start-dev skill. active/arxiv_refs_swallows_every_api_error_silently.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/autonomous_orchestrators_p3c_mind_writer.md">Autonomous orchestrators phase 3c: one Mind writer per shift — ledger lines…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/559">issue #559</a> — issued 2026-11-03 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/526">PyAutoMind#526</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/560">PyAutoBrain#560</a></summary>
 
 ```
 Use the start-dev skill. active/autonomous_orchestrators_p3c_mind_writer.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/board_without_gh_phase2_legs.md">Board phase 2: the remaining four legs onto the seam</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/562">issue #562</a> — issued 2026-11-03 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/564">PyAutoBrain#564</a></summary>
-
-```
-Use the start-dev skill. active/board_without_gh_phase2_legs.md
 ```
 
 </details>
@@ -1078,14 +1062,6 @@ Use the start-dev skill. active/gradient_correctness_sweep.md
 
 </details>
 
-<details><summary>📋 <a href="active/intake_classify_file_drops_declared_epic_phase.md">intake classify --file injects an unrelated Memory: line on organ-targeted prompts</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/561">issue #561</a> — issued 2026-11-03 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/564">PyAutoBrain#564</a></summary>
-
-```
-Use the start-dev skill. active/intake_classify_file_drops_declared_epic_phase.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/magnification_maps_8d_wiring_pretty.md">Magnification maps 8d: wire into fit subplots and make them pretty</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/818">issue #818</a> — issued 2026-11-02 — library-dev</summary>
 
 ```
@@ -1098,14 +1074,6 @@ Use the start-dev skill. active/magnification_maps_8d_wiring_pretty.md
 
 ```
 Use the start-dev skill. active/matrix_free_interferometer_inversion.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/project_discovery_argparse_ordering.md">install.sh --check/--write-project-discovery rejects repo names (argparse ordering)</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/565">issue #565</a> — issued 2026-11-03 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/564">PyAutoBrain#564</a></summary>
-
-```
-Use the start-dev skill. active/project_discovery_argparse_ordering.md
 ```
 
 </details>
@@ -1130,14 +1098,6 @@ Use the start-dev skill. active/repos_sync_check_dedup.md
 
 ```
 Use the start-dev skill. active/results_library_p5a_assistant.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md rename</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/563">issue #563</a> — issued 2026-11-03 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/564">PyAutoBrain#564</a></summary>
-
-```
-Use the start-dev skill. active/rtd_organism_currency.md
 ```
 
 </details>
@@ -3004,76 +2964,76 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-03 | issued | <a href="active/intake_classify_file_drops_declared_epic_phase.md">intake classify --file injects an unrelated Memory: line on…</a> |
-| 2026-11-03 | issued | <a href="active/project_discovery_argparse_ordering.md">install.sh --check/--write-project-discovery rejects repo names…</a> |
-| 2026-11-03 | issued | <a href="active/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves…</a> |
 | 2026-11-03 | filed | <a href="draft/feature/pyautobrain/glance_tier_ruling_shadow_window.md">Record the <code>glance</code> Shadow-window ruling in AUTONOMY.md — grant…</a> |
-| 2026-11-03 | issued | <a href="active/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md…</a> |
 | 2026-11-03 | issued | <a href="active/repos_sync_check_dedup.md">Deduplicate repos_sync.py's check/write pairs</a> |
-| 2026-11-03 | issued | <a href="active/board_without_gh_phase2_legs.md">Board phase 2: the remaining four legs onto the seam</a> |
 | 2026-11-03 | issued | <a href="active/autonomous_orchestrators_p3c_mind_writer.md">Autonomous orchestrators phase 3c: one Mind writer per shift — ledger…</a> |
 | 2026-11-02 | filed | <a href="draft/research/autolens_profiling/unexplained_gradient_gaps_cpu_sparse_delaunay_and_mge.md">Unexplained autodiff-vs-FD gaps in the phase-6 gradient records…</a> |
 | 2026-11-02 | filed | <a href="draft/bug/autolens_profiling/gradient_json_point_label_standard_cells.md">Standard-size gradient cells record <code>"point": "prior_medians"</code> while…</a> |
-
-<details><summary>… 10 more (40 left)</summary>
-
-| Date | Event | Task |
-|------|-------|------|
 | 2026-11-02 | issued | <a href="active/magnification_maps_8d_wiring_pretty.md">Magnification maps 8d: wire into fit subplots and make them pretty</a> |
 | 2026-11-02 | issued | <a href="active/results_library_p5a_assistant.md">Issued: 2026-11-02</a> |
 | 2026-11-02 | filed | <a href="draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md">Imaging sparse-operator path gives a very different log L from dense…</a> |
 | 2026-11-02 | issued | <a href="active/gradient_correctness_sweep.md">Gradient-correctness sweep: triage and investigate every open…</a> |
 | 2026-11-02 | issued | <a href="active/chapter2-explanations.md">Chapter 2 parameter-space explanations and profile sequencing</a> |
+
+<details><summary>… 10 more (40 left)</summary>
+
+| Date | Event | Task |
+|------|-------|------|
 | 2026-10-31 | issued | <a href="active/sky_orientation_euclid_dr1_and_library.md">Sky orientation (north/east): euclid_dr1 catalogue, paper and…</a> |
 | 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
 | 2026-10-29 | issued | <a href="active/r2_pages_function_access.md">ECLIPSE site: serve R2 lens files through a Pages Function behind…</a> |
 | 2026-10-26 | filed | <a href="draft/refactor/autogalaxy_assistant/trim_ag_skills_for_colab_cap.md">Trim autogalaxy_assistant skills toward their autolens size</a> |
 | 2026-10-25 | filed | <a href="draft/bug/health_fixes/heart_health_rerun_stale_push.md">Heart Health rerun cannot publish after main advances</a> |
-
-<details><summary>… 10 more (30 left)</summary>
-
-| Date | Event | Task |
-|------|-------|------|
 | 2026-10-25 | filed | <a href="draft/bug/health_fixes/ci_timing_execution_coverage.md">CI timing must compare equivalent executed job coverage</a> |
 | 2026-10-23 | filed | <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred…</a> |
 | 2026-10-23 | filed | <a href="draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md">autocti_visualization manifest <code>rendered_with:</code> shows stale…</a> |
 | 2026-10-23 | filed | <a href="draft/bug/autolens_profiling/stale_auto_simulated_cluster_dataset.md"><code>@autolens_profiling</code> stale auto-simulated <code>dataset/cluster/simple</code>…</a> |
 | 2026-10-23 | filed | <a href="draft/feature/pyautobrain/docs_conductor.md">A dedicated Documentation conductor in PyAutoBrain</a> |
+
+<details><summary>… 10 more (30 left)</summary>
+
+| Date | Event | Task |
+|------|-------|------|
 | 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
 | 2026-10-21 | filed | <a href="planned.md#interferometer-primary-beam-persistence-mirror">interferometer-primary-beam-persistence-mirror</a> |
 | 2026-10-21 | filed | <a href="draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md">PyAutoLens mirror of the interferometer primary-beam persistence…</a> |
 | 2026-10-21 | filed | <a href="draft/docs/autolens_profiling/positions_source_jacobian_default_rerun_note.md">Note in autolens_profiling that plain source-plane lane values…</a> |
 | 2026-10-21 | filed | <a href="draft/research/autolens_profiling/matrix_free_interferometer_phase5.md">Matrix-free interferometer inversion, phase 5b: profiling note…</a> |
-
-<details><summary>… 10 more (20 left)</summary>
-
-| Date | Event | Task |
-|------|-------|------|
 | 2026-10-21 | issued | <a href="active/matrix_free_interferometer_inversion.md">Matrix-free interferometer inversion for very large rectangular…</a> |
 | 2026-10-21 | filed | <a href="draft/docs/autolens_workspace/interferometer_primary_beam_example.md">Interferometer primary beam: workspace example and docs</a> |
 | 2026-10-21 | filed | <a href="draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md">Cluster likelihood scripts: image-plane manual check disagrees with…</a> |
 | 2026-10-16 | filed | <a href="draft/maintenance/autolens_workspace/remeasure_shapelets_slow_park.md">Re-measure the shapelets/modeling.py SLOW park (#586) under the…</a> |
 | 2026-10-14 | filed | <a href="draft/test/autofit/workspace_searches_scripts_preexisting_failures.md"><code>@autofit_workspace</code> six <code>searches/</code> scripts fail on main at…</a> |
+
+<details><summary>… 10 more (20 left)</summary>
+
+| Date | Event | Task |
+|------|-------|------|
 | 2026-10-14 | filed | <a href="draft/feature/cortex/human_readable_projects_dashboard.md">Human-readable Cortex Projects dashboard</a> |
 | 2026-10-14 | filed | <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> |
 | 2026-10-09 | filed | <a href="draft/bug/pyautobrain/profiling_compile_drift_point_vs_point.md">Profiling conductor compile drift compares one point against one point</a> |
 | 2026-10-08 | filed | <a href="draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md"><code>JAX_ENABLE_X64=False</code> is overridden to True, so the fp32 inference…</a> |
 | 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
-
-<details><summary>… 10 more (10 left)</summary>
-
-| Date | Event | Task |
-|------|-------|------|
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
 | 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
+
+<details><summary>… 10 more (10 left)</summary>
+
+| Date | Event | Task |
+|------|-------|------|
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
 | 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
 | 2026-09-29 | filed | <a href="draft/maintenance/pyautomind/session_start_hook_copies_regen.md">Regenerate the 28 drifted <code>.claude/hooks/session-start.sh</code> copies…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
+| 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
+| 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
+| 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
+| 2026-09-26 | filed | <a href="draft/refactor/workspaces/abell_1201_local_cleanup.md">Repo cleanup: retire the Abell 1201 worktree and local raw data</a> |
+| 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
 
 </details>
 

@@ -1,3 +1,10 @@
+- summary: board phase 2. Three of the four legs the prompt named (versions, community, resume) had been retired from `collect()` in 41ec5c5 after filing, so no script needed its own seam. Upkeep, the last GitHub leg, gets `open_issues_endpoint(org)` — both its `gh api` path (dev-box path unchanged) and its `--github-data` key. Contract (board/AGENTS.md) and gatherer skill (skills/board/board.md, which still asked for retired overnight runs) updated.
+- decision: human 2026-11-03 accepts upkeep reading "open-issue count unavailable" in a remote session (no org-wide issue search on the MCP surface).
+- pr: PyAutoBrain#564; issue PyAutoBrain#562.
+- witness: PASS — fixture tests: injected data → zero unread legs; injected null → "upkeep: open-issue count unavailable", never 0.
+
+## Original prompt
+
 # Board phase 2: the remaining four legs onto the seam
 
 Type: feature

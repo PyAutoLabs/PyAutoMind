@@ -3,39 +3,15 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 14 in flight",
-  "updated": "2026-11-03T19:13:12Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 9 in flight",
+  "updated": "2026-11-03T19:27:19Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "`arxiv_refs.py` swallows every API error, so an arXiv outage resolves nothing\u2026 \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoMemory/pull/143",
-      "prompt": "Use the start-dev skill. active/arxiv_refs_swallows_every_api_error_silently.md"
-    },
     {
       "severity": "yellow",
       "text": "Autonomous orchestrators phase 3c: one Mind writer per shift \u2014 ledger lines\u2026 \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/pull/526",
       "prompt": "Use the start-dev skill. active/autonomous_orchestrators_p3c_mind_writer.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Board phase 2: the remaining four legs onto the seam \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/564",
-      "prompt": "Use the start-dev skill. active/board_without_gh_phase2_legs.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "intake classify --file injects an unrelated Memory: line on organ-targeted prompts \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/564",
-      "prompt": "Use the start-dev skill. active/intake_classify_file_drops_declared_epic_phase.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "install.sh --check/--write-project-discovery rejects repo names (argparse ordering) \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/564",
-      "prompt": "Use the start-dev skill. active/project_discovery_argparse_ordering.md"
     },
     {
       "severity": "yellow",
@@ -48,12 +24,6 @@
       "text": "Issued: 2026-11-02 \u2014 workspace-shipped, awaiting-merge (judge \u2192 human /prm; wiki-currency waits on a PyAutoFit release)",
       "url": "https://github.com/PyAutoLabs/autolens_assistant/pull/177",
       "prompt": "Use the start-dev skill. active/results_library_p5a_assistant.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "RTD organism docs currency: Nerves page, organ-count drift, hands.md rename \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/564",
-      "prompt": "Use the start-dev skill. active/rtd_organism_currency.md"
     },
     {
       "severity": "yellow",
@@ -126,6 +96,36 @@
       "text": "pending release: PyAutoLens PyAutoLens#815 \u2014 magnification-maps-image-plane",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/815",
       "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoLens PyAutoLens#816 \u2014 magnification-maps-source-plane",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/816",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoLens PyAutoLens#817 \u2014 magnification-maps-uncertainty",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/817",
+      "prompt": null
+    },
+    {
+      "severity": "info",
+      "text": "pick: autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_assistant/ai_options_page_autolens_leg.md",
+      "prompt": "Use the start-dev skill. draft/docs/autolens_assistant/ai_options_page_autolens_leg.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md",
+      "prompt": "Use the start-dev skill. draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: SED chain waveband fit can spin forever in Nautilus exploration\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md",
+      "prompt": "Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md"
     }
   ]
 }

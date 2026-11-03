@@ -1,3 +1,9 @@
+- summary: `bin/project_discovery.py` used parse_args(); install.sh passes `--root` before the repo names, so the nargs='*' positional was already bound and every named check/write errored ("unrecognized arguments"). Now parse_intermixed_args(). Filed and fixed at the human's request 2026-11-03.
+- pr: PyAutoBrain#564; issue PyAutoBrain#565.
+- witness: PASS — tests/test_skill_install.py 10 failed (main) → 22 passed.
+
+## Original prompt
+
 # install.sh --check/--write-project-discovery rejects repo names (argparse ordering)
 
 Type: bug

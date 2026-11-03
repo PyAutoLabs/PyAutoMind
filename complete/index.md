@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2115 records across 11 buckets.
+2120 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -121,10 +121,12 @@ markers; everything below GENERATED is rebuilt.
 
 ## 2026/11
 
+- [arxiv-refs-api-errors](2026/11/arxiv-refs-api-errors.md) — most of the fix was already on main (0c3e2dc, 772d725: ArxivAPIError, retry ladder, api_failed, return 1). The…
 - [autonomous-orchestrators-p1](2026/11/autonomous-orchestrators-p1.md) — phase 1 of 7; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [autonomous-orchestrators-p2](2026/11/autonomous-orchestrators-p2.md) — phase 2 of 7; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [autonomous-orchestrators-p3a](2026/11/autonomous-orchestrators-p3a.md) — phase 3a of 3a–3d; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [autonomous-orchestrators-p3b](2026/11/autonomous-orchestrators-p3b.md) — phase 3b of 3a–3d; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
+- [board-phase2-legs](2026/11/board-phase2-legs.md) — board phase 2. Three of the four legs the prompt named (versions, community, resume) had been retired from `co…
 - [cloud-validation-rehearsal-clock-skew](2026/11/cloud-validation-rehearsal-clock-skew.md)
 - [glance-shadow-window-reached](2026/11/glance-shadow-window-reached.md) — code half already fixed on main — 679b1319f makes `shadow_count_line()` emit "window reached — the pre-registe…
 - [gradient-campaign-impact](2026/11/gradient-campaign-impact.md) — human-requested assessment of whether the two PyAutoArray#671 defects affected the likelihood-lifecycle phase-…
@@ -132,6 +134,7 @@ markers; everything below GENERATED is rebuilt.
 - [howto-prose-format](2026/11/howto-prose-format.md)
 - [howtolens-chapter2](2026/11/howtolens-chapter2.md) — Applied approved tutorials 1–4, optional Prodigy introduction, notebook generation and navigation. Later Chapt…
 - [hpc-campaign-p5a-assistant](2026/11/hpc-campaign-p5a-assistant.md) — phase 5a; ledger draft/research/autofit/hpc_campaign_epic.md
+- [intake-organ-memory-gate](2026/11/intake-organ-memory-gate.md) — intake no longer writes a `Memory:` line on organ-targeted prompts. `_cites_memory()` gates on ORGANISM_REPOS …
 - [latest-per-test-tie](2026/11/latest-per-test-tie.md) — test_autofit/results/test_identity.py::test_latest_per_keeps_the_latest_sibling flaked (main red at 963ff296a,
 - [likelihood-lifecycle-p3-day-zero-pages](2026/11/likelihood-lifecycle-p3-day-zero-pages.md)
 - [likelihood-lifecycle-p3-day-zero-stamp](2026/11/likelihood-lifecycle-p3-day-zero-stamp.md)
@@ -149,6 +152,7 @@ markers; everything below GENERATED is rebuilt.
 - [magnification-maps-source-plane](2026/11/magnification-maps-source-plane.md)
 - [magnification-maps-uncertainty](2026/11/magnification-maps-uncertainty.md)
 - [one-line-auto-simulate-helper](2026/11/one-line-auto-simulate-helper.md)
+- [project-discovery-argparse-ordering](2026/11/project-discovery-argparse-ordering.md) — `bin/project_discovery.py` used parse_args(); install.sh passes `--root` before the repo names, so the nargs='…
 - [rectangular-gradient-rtu-sparse](2026/11/rectangular-gradient-rtu-sparse.md) — the filed symptom (|g| ~2e9 on the imaging/rectangular/hst fiducial, RTU all backends, Bilinear CPU sparse) sp…
 - [rectangular-mapper-bilinear-row-weights](2026/11/rectangular-mapper-bilinear-row-weights.md) — - **Retired as already-fixed** by the gradient-correctness sweep (autolens_profiling#517, item 12). The draft …
 - [repos-sync-test-keys-on-dir-name](2026/11/repos-sync-test-keys-on-dir-name.md) — already fixed on main before this prompt was picked up — 679b1319f ("test: Mind suite green on main — shadow l…
@@ -156,6 +160,7 @@ markers; everything below GENERATED is rebuilt.
 - [results-library-p3-exports](2026/11/results-library-p3-exports.md) — AggregateCSV.save(cache=, shard=, expected=, sort_by=, on_error=, columns_json=): row cache
 - [results-library-p4-package](2026/11/results-library-p4-package.md) — new `autofit/export/` (`af.export`): package() — size-capped / exactly-N part zips with objects whole,
 - [results-library-p5b-cortex](2026/11/results-library-p5b-cortex.md) — phase 5b; ledger draft/feature/autofit/results_library_epic.md
+- [rtd-organism-currency](2026/11/rtd-organism-currency.md) — RTD organism docs current with the 14 `category: organ` repos: new organs/nerves.md, dna.md, broca.md; hard-co…
 - [simulate-if-needed-workspace-sweep](2026/11/simulate-if-needed-workspace-sweep.md)
 
 ## 2026/10/github-token-consolidation-epic_surveys
