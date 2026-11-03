@@ -1046,7 +1046,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/autonomous_orchestrators_p3b_dispatch.md">Autonomous orchestrators phase 3b: real dispatch — session template, <code>claude --bg</code> workers…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/557">issue #557</a> — issued 2026-11-03 — library-dev</summary>
+<details><summary>📋 <a href="active/autonomous_orchestrators_p3b_dispatch.md">Autonomous orchestrators phase 3b: real dispatch — session template, <code>claude --bg</code> workers…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/557">issue #557</a> — issued 2026-11-03 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/525">PyAutoMind#525</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/558">PyAutoBrain#558</a></summary>
 
 ```
 Use the start-dev skill. active/autonomous_orchestrators_p3b_dispatch.md
