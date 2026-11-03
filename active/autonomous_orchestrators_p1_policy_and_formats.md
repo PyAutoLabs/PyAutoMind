@@ -15,6 +15,7 @@ Status: formalised
 Epic: autonomous-orchestrators
 Phase: 1
 Filed: 2026-11-03
+Issued: 2026-11-03
 Consequence: judge
 Witness: prose only, no code — (a) `bash PyAutoMind/policy/end_at_deliverable_hook.sh` fed a PreToolUse payload for each of ScheduleWakeup, CronCreate, RemoteTrigger run and send_later still exits 2 with the policy line, and the read-only RemoteTrigger list payload exits 0; (b) `grep -c "Revert condition" PyAutoBrain/AUTONOMY.md` rises by exactly the number of new sections and each new H2/H3 carries a 2026-11 date; (c) `python3 PyAutoMind/scripts/lifecycle.py check`, `python3 PyAutoMind/scripts/repos_sync.py --check` and `pytest PyAutoBrain/tests -q` green on both branches; (d) `batches/AGENTS.md` contains a fenced example brief and a fenced example digest that the phase-2 validator will be written against
 Review-minutes: 20
