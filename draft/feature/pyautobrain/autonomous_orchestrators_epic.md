@@ -294,3 +294,8 @@ work per human review-minute above the shadow-shift baseline.
   (`draft/feature/pyautobrain/glance_tier_ruling_shadow_window.md`); **unattended `glance` merges
   get a separate stage-2 sub-window** (first 10 need the independent different-model adversary
   leg). Phase 4 must not auto-merge unattended before that sub-window exists.
+- 2026-11-03 — **phase 3b COMPLETE** (PyAutoMind#525, PyAutoBrain#558; record
+  `complete/2026/11/autonomous-orchestrators-p3b.md`): real `claude --bg` workers from one session
+  template, `claude agents --json` liveness, blocked → parked after 15 min, transcript token budget;
+  worker mode `auto` (human). Real dispatch is `sandbox: yes` only until 3c. CLI facts (2.1.316):
+  `--bg` ignores `--session-id`, state word `working`, untrusted folders refused fast. Next: 3c.

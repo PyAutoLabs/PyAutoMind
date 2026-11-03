@@ -1,3 +1,12 @@
+- epic: autonomous-orchestrators (phase 3b of 3a–3d; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md)
+- summary: real shift workers on the 3a watcher core. PyAutoBrain#558: agents/conductors/batch/worker_template.md (the one worker prompt: /start_dev <path> --auto, brief path, end at deliverable, never commit to Mind, write <lease>/<task>.done); _orchestrator.py session_command (`claude --bg --name shift:<task> --permission-mode <mode> <prompt>`, never bare), RealSpawner parsing the printed `backgrounded · <id> · <name>` id, AgentsView over `claude agents --json --all` (working → heartbeat; blocked → parked after STALL_GRACE_S 15 min, never killed or re-dispatched; done + marker → released; done without → crashed, re-dispatched once), transcript_tokens (input + output + cache creation from the local transcript named by sessionId) and the brief token-budget refusal; real dispatch fenced to `sandbox: yes` until 3c. _brief.py worker-mode (default auto — human decision 2026-11-03; bypassPermissions refused) and sandbox. PyAutoMind#525 documents both keys.
+- witness: 17 dispatch tests (fake claude + fake agents view), 16 watcher tests; live sandbox worker: states working → done, 26,510 tokens, `claude logs` rc 0, removed; full suites Brain 1473 (+1 opt-in live) / Mind 712; CI green first time.
+- traps (CLI 2.1.316): `claude --bg` ignores --session-id (track the printed short id; full sessionId from `claude agents --json`); the live state word is `working`; --bg refuses an untrusted folder at once (exit 1, "Workspace not trusted") — task worktrees under the -wt root are untrusted, so workers launch from the workspace root; an empty "reply DONE" worker costs ~26k tokens (the startup context).
+- next: 3c one Mind writer — lifts the sandbox fence.
+- heart: YELLOW, reason set acknowledged by the human at ship; judge tier, human /prm.
+
+## Original prompt
+
 # Autonomous orchestrators phase 3b: real dispatch — session template, `claude --bg` workers, liveness, token budget
 
 Type: feature

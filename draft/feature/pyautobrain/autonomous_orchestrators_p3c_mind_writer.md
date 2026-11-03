@@ -12,7 +12,6 @@ Status: formalised
 Filed: 2026-11-03
 Epic: autonomous-orchestrators
 Phase: 3
-Blocked-by: draft/feature/pyautobrain/autonomous_orchestrators_p3b_dispatch.md
 Consequence: judge
 Witness: with a tmp bare-remote Mind: two fake workers each drop a claim and a close-out ledger file in their lease directories, the orchestrator commits both from a temporary worktree cherry-picked onto origin/main, the canonical checkout's `git status` is unchanged throughout, a concurrent unrelated commit on the remote is rebased over (never `reset --hard`, never force), and a worker attempting a direct Mind commit is refused by the worker contract; `pytest PyAutoBrain/tests -q` and PyAutoMind tests green
 Review-minutes: 20
