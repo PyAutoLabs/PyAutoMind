@@ -16,6 +16,7 @@ Witness: `docs/organs/` has a page for every organ ORGANISM.md names (Nerves inc
 Review-minutes: 0
 Unattended: ready
 Filed: 2026-08-19 (backfilled from git)
+Issued: 2026-11-03
 
 Found by the 2026-08-19 readability census (#237). The RTD narrative
 (@PyAutoBrain/docs/, published at pyautoscientist.readthedocs.io) has drifted

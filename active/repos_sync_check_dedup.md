@@ -16,6 +16,7 @@ Witness: `repos_sync.py` has one declaration per generated surface driving both 
 Review-minutes: 0
 Unattended: ready
 Filed: 2026-08-19 (backfilled from git)
+Issued: 2026-11-03
 
 Found by the 2026-08-19 readability-pass census (#248). Behaviour-preserving
 refactor of @PyAutoMind/scripts/repos_sync.py (940 lines, no dead functions):

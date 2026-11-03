@@ -101,3 +101,58 @@
 - epic: autonomous-orchestrators (phase 3c of 3a–3d)
 - decision: lift the 3b sandbox fence on real dispatch (human, 2026-11-03)
 - tier: judge — merge mode: human /prm (PyAutoMind first, then PyAutoBrain)
+
+## intake-organ-memory-gate
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/561
+- issued: 2026-11-03
+- session: claude-code remote (organs session)
+- status: library-shipped, awaiting-merge
+- repos:
+  - PyAutoBrain: ccr-7e6b22c0-04av9i
+- prompt: active/intake_classify_file_drops_declared_epic_phase.md
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/564
+- tier: glance — merge mode: human /prm (shares a branch/PR with board-phase2-legs and rtd-organism-currency)
+
+## board-phase2-legs
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/562
+- issued: 2026-11-03
+- session: claude-code remote (organs session)
+- status: library-shipped, awaiting-merge
+- repos:
+  - PyAutoBrain: ccr-7e6b22c0-04av9i
+- prompt: active/board_without_gh_phase2_legs.md
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/564
+- tier: notify — merge mode: human /prm (shared Brain PR)
+
+## rtd-organism-currency
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/563
+- issued: 2026-11-03
+- session: claude-code remote (organs session)
+- status: library-shipped, awaiting-merge
+- repos:
+  - PyAutoBrain: ccr-7e6b22c0-04av9i
+- prompt: active/rtd_organism_currency.md
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/564
+- tier: notify — merge mode: human /prm (shared Brain PR)
+- open-decisions: build.md→hands.md rename; Broca missing from ORGANISM.md organ table; ORGANISM.md "Five capabilities" count
+
+## arxiv-refs-api-errors
+- issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/142
+- issued: 2026-11-03
+- session: claude-code remote (organs session)
+- status: library-shipped, awaiting-merge
+- repos:
+  - PyAutoMemory: ccr-7e6b22c0-04av9i
+- prompt: active/arxiv_refs_swallows_every_api_error_silently.md
+- library-pr: https://github.com/PyAutoLabs/PyAutoMemory/pull/143
+- tier: glance — merge mode: human /prm
+
+## repos-sync-check-dedup
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/527
+- issued: 2026-11-03
+- session: claude-code remote (organs session)
+- status: library-shipped, awaiting-merge
+- repos:
+  - PyAutoMind: ccr-7e6b22c0-04av9i
+- prompt: active/repos_sync_check_dedup.md
+- tier: notify — merge mode: human /prm

@@ -16,6 +16,7 @@ Witness: A remote render with `--github-data` reports zero unread legs across ve
 Review-minutes: 0
 Unattended: ready
 Filed: 2026-08-27
+Issued: 2026-11-03
 Parent: complete/archive/epics/board_without_gh.md (umbrella archived 2026-09-17; this prompt carries its headline criterion)
 After: complete/2026/08/board-github-data-seam.md (phase 1 shipped 2026-08-27, PyAutoBrain#303 — this is unblocked)
 

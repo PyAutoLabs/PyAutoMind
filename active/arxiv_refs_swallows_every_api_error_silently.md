@@ -15,6 +15,7 @@ Consequence: glance
 Witness: a test driving `resolve_title()` with an injected `query` raising `HTTPError(429)` asserts the run is *reported* as an API failure rather than as "no unique match" — it fails on current source (the bare `except Exception` returns `None`, indistinguishable from a genuine non-match) and passes after the fix. The backfill's stats gain a distinct counter, and a run whose lookups all failed on transport exits non-zero rather than logging "N ref-less, 0 resolved".
 Review-minutes: 4
 Filed: 2026-09-18
+Issued: 2026-11-03
 
 Found while diagnosing the PyAutoMind digest outage
 (`complete/2026/09/arxiv-digest-api-retry.md`, PyAutoMind#410). This is
