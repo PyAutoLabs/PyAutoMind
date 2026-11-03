@@ -1,11 +1,11 @@
-# Autonomous orchestrators phase 3: orchestrator runtime — watcher, leases, dispatch safety, kill switch, usage guard, digest
+# Autonomous orchestrators phase 3a: watcher core — brief gate, kill switch, leases, caps, fake workers, network-surface doctrine
 
 Type: feature
 Target: PyAutoBrain
 Repos:
 - PyAutoBrain
 - PyAutoMind
-Difficulty: large
+Difficulty: medium
 Autonomy: human-required
 Priority: high
 Status: formalised
@@ -13,8 +13,8 @@ Filed: 2026-11-03
 Epic: autonomous-orchestrators
 Phase: 3
 Consequence: judge
-Witness: a dry shift with fake workers (`PYAUTO_ORCHESTRATOR_FAKE=1`, tmp state dir, tmp Mind): (a) two overlapping watcher ticks dispatch exactly one worker per lease; (b) a killed worker's lease expires and the task is re-dispatched exactly once per shift, the crash counted in the digest; (c) a `STOP` file in the slot directory makes the next tick a no-op before it reads anything else; (d) the concurrent-worker / sessions-per-shift / token-budget caps refuse the N+1th spawn and the digest says why; (e) no open brief, or a brief past `review-at:`, dispatches nothing; (f) `batch digest` output passes the phase-2 brief/digest schema and is posted once as a comment on a sandbox issue (a second run posts nothing); (g) only the orchestrator path commits to Mind, from a temporary worktree, with workers' ledger lines read from the lease directory; `pytest PyAutoBrain/tests -q` and PyAutoMind tests green
-Review-minutes: 30
+Witness: a dry shift with fake workers (`PYAUTO_ORCHESTRATOR_FAKE=1`, tmp state dir, tmp Mind): (a) two overlapping watcher ticks dispatch exactly one worker per lease; (b) a killed worker's lease expires and the task is re-dispatched exactly once per shift, the crash recorded in the slot's counters; (c) a `STOP` file in the slot directory makes the next tick a no-op before it reads anything else; (d) the concurrent-worker and sessions-per-shift caps refuse the N+1th spawn and the tick log says why; (e) no open brief, or a brief past `review-at:`, dispatches nothing; AUTONOMY.md carries a dated network-surface section for the watcher (revert condition count +1) pinned by a doctrine test; `pytest PyAutoBrain/tests -q` green
+Review-minutes: 20
 Unattended: never
 Lane: local-dev
 
@@ -27,7 +27,19 @@ to end_at_deliverable; no Claude tool, arms nothing inside a session, no dispatc
 brief, STOP checked first). Phase 2 shipped `batch brief --check` / `plan --brief`
 (agents/conductors/batch/_brief.py) — build on it.
 
-## Deliverables
+## Slicing (human decision 2026-11-03)
+
+Phase 3 is sliced into four ordered judge-tier tasks: **3a (this prompt)** watcher core;
+3b real dispatch (`autonomous_orchestrators_p3b_dispatch.md`); 3c one Mind writer
+(`autonomous_orchestrators_p3c_mind_writer.md`); 3d digest + delivery
+(`autonomous_orchestrators_p3d_digest.md`). 3a owns deliverables 1, 2 and the caps half of 4
+below, in **fake-worker mode only**, plus the AUTONOMY.md network-surface edit: the Brain's hard
+invariant ("any further network surface is a new decision") must name the watcher's opt-in,
+laptop-only reads (`gh pr checks`, `claude agents --json`) and the one per-shift issue comment
+(posted in 3d) before any of it ships. Deliverables 3, the token half of 4, 5 and 6 belong to
+3b–3d.
+
+## Deliverables (whole phase; see Slicing for 3a's share)
 
 1. **The watcher** — a stdlib, non-LLM script (e.g. `PyAutoBrain/bin/orchestrator_watch.py`)
    run by a systemd user timer under WSL. Each tick, in order: `STOP` in the slot directory →
