@@ -285,4 +285,4 @@ work per human review-minute above the shadow-shift baseline.
   `complete/2026/11/autonomous-orchestrators-p2.md`). `Lane: ral|gpu|wsl-data`, `batch brief --check`,
   `batch plan --brief`, intake header pass-through + lane inference, census lane histogram. The
   merge-cap rule is refined: refused only when every named task is `judge` **and** `backlog: none`.
-  Next: phase 3 — file its prompt.
+  Next: phase 3 — prompt filed 2026-11-03: `draft/feature/pyautobrain/autonomous_orchestrators_p3_runtime.md`.

@@ -49,3 +49,5 @@ autonomous-orchestrators phase 2 (PyAutoBrain#554, record
 gate `_with_memory` so organ-targeted prompts get no `Memory:` line.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-11-03 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/da64305f-c750-425e-b845-c95ca4a765c8/scratchpad/intake_header_bug.md -->
+
+Reproduced again 2026-11-03 filing `draft/feature/pyautobrain/autonomous_orchestrators_p3_runtime.md`: `Memory: wiki/galaxies/sources/massive-ellipticals.md; reading-queue.md; wiki/lensing/sources/dark-matter-substructure.md` on a PyAutoBrain-targeted prompt; hand-removed. (The declared headers survived, confirming the phase-2 half.)
