@@ -991,6 +991,20 @@ def test_the_agents_page_is_not_a_batch_record(tmp_path):
     assert lifecycle.batch_records(tmp_path) == []
 
 
+def test_shift_brief_examples_are_not_batch_records(tmp_path):
+    """`batches/examples/` holds validator fixtures (`batch brief --check`):
+    nothing in it was dispatched, so a member path there that resolves nowhere
+    is not drift, and a missing `review-minutes-actual:` is not a warning."""
+    examples = tmp_path / "batches" / "examples"
+    examples.mkdir(parents=True)
+    (examples / "shift_brief_example.md").write_text(
+        "# Batch 2026-11-04 am\n- review: batches/reviews/x.md\n- members:\n"
+        + MEMBER + "\n")
+    assert lifecycle.batch_records(tmp_path) == []
+    assert lifecycle.batch_member_problems(tmp_path) == []
+    assert lifecycle.batch_record_warnings(tmp_path) == []
+
+
 def test_a_closed_record_with_no_measured_review_cost_warns(tmp_path):
     """`review-minutes-actual:` is "the only calibration there is" — without it
     the budget every batch is planned against never improves."""
