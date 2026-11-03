@@ -155,4 +155,5 @@
 - repos:
   - PyAutoMind: ccr-7e6b22c0-04av9i
 - prompt: active/repos_sync_check_dedup.md
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/528
 - tier: notify — merge mode: human /prm
