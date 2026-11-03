@@ -144,4 +144,4 @@ epic, never picked standalone.
 ## autonomous-orchestrators
 - title: Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended `glance` merges under guards; drafts-only goal decomposition
 - ledger: draft/feature/pyautobrain/autonomous_orchestrators_epic.md
-- status: FILED 2026-11-03, NOT STARTED — next: phase 1 (policy amendments + shift-brief/digest/proof-packet/push formats + `Needs:` header)
+- status: FILED 2026-11-03, NOT STARTED; design-reviewed 2026-11-03 (7 phases, `Needs:` folded into `Lane:` values, witnesses per phase, 6 decisions open for the human in the ledger) — next: phase 1 (policy prose + brief/digest/proof-packet/push formats) via /start_dev, then phase 2 (Lane values + brief validator + census)

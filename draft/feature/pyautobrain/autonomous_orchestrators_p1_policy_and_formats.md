@@ -16,60 +16,88 @@ Epic: autonomous-orchestrators
 Phase: 1
 Filed: 2026-11-03
 Consequence: judge
-Witness: Brain and Mind test suites pass; the batch-record schema test accepts a sample shift brief (goals, named tasks, backlog policy, review-minutes, review-at, lanes) and rejects one missing `review-at`; intake parses a `Needs:` header into the census; `end_at_deliverable_hook.sh` still blocks timers for ordinary sessions
+Witness: prose only, no code — (a) `bash PyAutoMind/policy/end_at_deliverable_hook.sh` fed a PreToolUse payload for each of ScheduleWakeup, CronCreate, RemoteTrigger run and send_later still exits 2 with the policy line, and the read-only RemoteTrigger list payload exits 0; (b) `grep -c "Revert condition" PyAutoBrain/AUTONOMY.md` rises by exactly the number of new sections and each new H2/H3 carries a 2026-11 date; (c) `python3 PyAutoMind/scripts/lifecycle.py check`, `python3 PyAutoMind/scripts/repos_sync.py --check` and `pytest PyAutoBrain/tests -q` green on both branches; (d) `batches/AGENTS.md` contains a fenced example brief and a fenced example digest that the phase-2 validator will be written against
 Review-minutes: 20
 Unattended: never
+Lane: any
 
-Parent: draft/feature/pyautobrain/autonomous_orchestrators_epic.md. Read the epic file's
-"Human decisions (2026-11-03)" and "Design principles" sections first. They are the spec,
-and they are human rulings, not proposals.
+Parent: draft/feature/pyautobrain/autonomous_orchestrators_epic.md. Read the epic's "Human
+decisions (2026-11-03)", "Lane, not Needs", "Design principles" and "External facts" first.
+They are the spec, and the decisions are human rulings, not proposals. This phase writes
+**doctrine and formats only**; every line of code moved to phase 2
+(`autonomous_orchestrators_p2_lane_schema_census.md`).
 
 ## Deliverables
 
-1. **`PyAutoMind/policy/end_at_deliverable.md` (+ hook if needed).** Keep the rule for every
-   Claude session. Add the single exemption: the deterministic watcher (a non-LLM script,
-   built in phase 2) is the only thing that keeps time and starts sessions. Orchestrator and
-   worker Claude sessions still never arm timers. Keep the 08-31 and 09-03 history as the
-   reason.
-2. **`PyAutoBrain/AUTONOMY.md`:**
-   - **Shift brief = launch.** A human-written brief grants dispatch for its scope until
-     `review-at`. This replaces "never dispatch on a schedule" inside that grant only.
-   - **Unattended `glance` merges between check-ins**, with the guards:
-     - an independent-session witness;
-     - a pause on Heart RED or an unmatched YELLOW;
-     - a per-shift merge cap;
-     - the shadow window continues;
-     - never `judge`-tier work or a release.
-   - **Goal decomposition files drafts only.**
-   - **The push-notification test.** Does waiting until `review-at` cause harm or waste the
-     shift? Which classes qualify, and a budget of about 1 per shift.
-3. **`PyAutoBrain/skills/batch/batch.md` + `agents/conductors/batch/AGENTS.md`:**
-   - backlog dips under the brief's policy replace "never substitute your own picks";
-   - the digest separates brief work from backlog picks, with a one-line reason per pick.
-4. **`PyAutoMind/batches/AGENTS.md` schema.** Extend the batch record into the shift brief:
-   - ordered primary goals;
-   - named tasks;
-   - the backlog policy (none / fill-idle / scoped + exclusions);
-   - review-minutes, `review-at` and lanes;
-   - the merge cap.
-
-   Add the **digest** format: per task a one-screen proof packet (before/after numbers or a
-   figure, the witness output, what was not checked), plus tokens used, review minutes
-   planned vs actual, merges, reverts, pushes and drafts filed.
-5. **`Needs: ral | gpu | wsl-data | none` prompt header.** Document it in REFERENCE.md beside
-   `Consequence:`/`Witness:`, and make intake and census parse it. Intake should propose a
-   value when the text mentions RAL, GPU or `/mnt/c`. Document the planned "RAL test packet"
-   handoff (the Science orchestrator is the single RAL gateway). Only the field and the
-   documentation land here; the handoff itself is phase 4.
+1. **`PyAutoMind/policy/end_at_deliverable.md` (prose; the hook is untouched).** Keep the
+   rule for every Claude session verbatim. Add one paragraph: the deterministic watcher
+   (a non-LLM script, phase 3) is the only thing that keeps time and starts sessions; it is
+   not a session, calls no Claude tool and arms nothing inside a session; orchestrator and
+   worker sessions still never arm timers and the hook keeps blocking them. Keep the 08-31
+   and 09-03 history as the reason. Name the kill switch (a `STOP` file the watcher checks
+   first) so the exemption has an off switch in the same paragraph that grants it.
+2. **`PyAutoBrain/AUTONOMY.md`** — one dated section, "Shift briefs and unattended
+   `glance` — 2026-11", each sub-rule with its *Revert condition*:
+   - **Shift brief = launch.** A human-written brief with `review-at:` grants dispatch for
+     its scope until `review-at:`; this is the launch act "What a batch launch is" requires,
+     and it replaces "never dispatch on a schedule" inside that grant only. A watcher tick
+     with no open brief dispatches nothing.
+   - **Unattended `glance` merges between check-ins**, extending "Merge authority follows
+     Consequence" (2026-10-02) from the in-turn wait to a watcher-started close-out, with
+     every guard from the epic: independent-session witness; pause on Heart RED or an
+     unmatched YELLOW; the brief's per-shift merge cap; the Shadow window keeps appending;
+     never `judge`, never `decision-taken`, never a release.
+   - **One Mind writer per shift.** Only the orchestrator commits to PyAutoMind during a
+     shift, from a temporary worktree; workers write ledger lines into the lease directory
+     for it to commit. Cite the 09-30, 10-07 and prompt_sync_push losses as the reason.
+   - **Goal decomposition files drafts only**, with proposed `Witness:`, `Consequence:`
+     and `Lane:`, bulk-approved at check-in.
+   - **The push-notification test** — does waiting until `review-at:` cause harm or waste
+     the shift? — the four qualifying classes, the budget of about one per shift, and the
+     rule that a second push is itself a digest finding.
+   Add the new section to the "Consumers" list and keep "Skills must link here rather than
+   copying the tables".
+3. **`PyAutoBrain/skills/batch/batch.md` + `agents/conductors/batch/AGENTS.md`:** the
+   backlog dip under the brief's policy replaces "do not silently substitute your own
+   picks" (the brief *is* the human's composition: named tasks first, then the dip policy);
+   the digest separates brief work from backlog picks with a one-line reason per pick; the
+   member-session contract gains "spawned from the orchestrator's session template, never
+   bare". Describe `batch brief` / `dispatch` / `digest` as the verbs phases 2–3 add, marked
+   *planned* so the page does not claim code that does not exist.
+4. **`PyAutoMind/batches/AGENTS.md` schema.** Extend the batch record into the **shift
+   brief** (same file, same folder, same ledger-merge rules), with a fenced example:
+   - `brief:` block — ordered primary goals; named tasks (prompt paths); the backlog policy
+     (`none` | `fill-idle` | `scoped:` epics/tags/tiers + `exclude:`); `review-minutes:`,
+     `review-at:`, `lanes:` (any subset of `any local-dev ral gpu wsl-data`), `merge-cap:`,
+     `token-budget:` and, when RAL is allowed, a `ral-allowance:` (packets, partition,
+     CPU-hours) that phase 5 consumes;
+   - the existing `heart-ack:` and `expected-effects:` keep their meaning;
+   - a `review-minutes-actual:` of the **previous** shift is required before a new brief
+     is accepted (the calibration rule the 08-31 record never closed);
+   - the **digest** section, appended at collect: brief work vs backlog picks, one proof
+     packet per task, then the shift counters (merges, `glance` auto-merges, reverts,
+     pushes, drafts filed, packets sent, workers crashed, tokens, review-minutes planned);
+   - the **proof packet** format: one screen — the claim, before/after numbers or a figure
+     path, the witness command and its output, what was not checked, the one-command
+     revert;
+   - **delivery:** the digest is also posted once as a comment on the shift's PyAutoMind
+     issue (`issue:` key); the HTML packet becomes opt-in (`packet: yes`).
+5. **`PyAutoMind/REFERENCE.md`:** document `Lane:` in the optional header beside
+   `Consequence:`/`Witness:` (it is undocumented today) with the values `any | local-dev |
+   ral | gpu | wsl-data`, each of the last three implying `local-dev`, and the planned
+   "RAL test packet" handoff in one sentence (the Science orchestrator is the single RAL
+   gateway; phase 5). Spell `none` as `any`.
 
 ## Out of scope
 
-The watcher, dispatch, leases and kill switch (phase 2), any orchestrator runtime, and the
-RAL submission path.
+Any code: `LANE_VALUES`, `_lane_ok`, intake pass-through, census, the brief validator
+(phase 2); the watcher, leases, kill switch and usage guard (phase 3); the pilot (phase 4);
+the RAL submission path (phase 5).
 
 ## Review
 
-One PR per repo, read together by the human. These rewrite the autonomy contract, so never
-auto-merge.
+One PR per repo (PyAutoMind, PyAutoBrain), read together by the human. These rewrite the
+autonomy contract, so never auto-merge; the witness makes the read a diff of prose with
+every machine check already green.
 
-<!-- formalised by the Intake (Conception) Agent on 2026-11-03 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/b15ff817-f0d9-4ab3-b23f-735fcbb990f5/scratchpad/autonomous_orchestrators_p1.md -->
+<!-- formalised by the Intake (Conception) Agent on 2026-11-03 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/b15ff817-f0d9-4ab3-b23f-735fcbb990f5/scratchpad/autonomous_orchestrators_p1.md; revised 2026-11-03 (design review: split to prose-only, code moved to phase 2) -->
