@@ -286,3 +286,7 @@ work per human review-minute above the shadow-shift baseline.
   `batch plan --brief`, intake header pass-through + lane inference, census lane histogram. The
   merge-cap rule is refined: refused only when every named task is `judge` **and** `backlog: none`.
   Next: phase 3 — prompt filed 2026-11-03 and sliced 3a (watcher core) → 3b (dispatch) → 3c (Mind writer) → 3d (digest), chained by Blocked-by; next 3a.
+- 2026-11-03 — **phase 3a COMPLETE** (PyAutoMind#524, PyAutoBrain#556; record
+  `complete/2026/11/autonomous-orchestrators-p3a.md`): STOP-first watcher tick, exclusive-create
+  leases, crash re-dispatch once per shift, usage caps, fake workers; AUTONOMY "The watcher's network
+  surface — 2026-11-03". The timer is not installed (human act). Next: 3b, unblocked.

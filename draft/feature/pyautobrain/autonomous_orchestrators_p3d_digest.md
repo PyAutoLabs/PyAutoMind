@@ -19,7 +19,7 @@ Review-minutes: 20
 Unattended: never
 Lane: local-dev
 
-Parent: draft/feature/pyautobrain/autonomous_orchestrators_epic.md; slice of phase 3 (see `autonomous_orchestrators_p3a_watcher_core.md`, "Slicing").
+Parent: draft/feature/pyautobrain/autonomous_orchestrators_epic.md; slice of phase 3 (slicing: `complete/2026/11/autonomous-orchestrators-p3a.md`, prompt section "Slicing"; 3a shipped as PyAutoBrain#556).
 
 Closes phase 3. The network surface for the comment is the one AUTONOMY.md names in 3a. The HTML packet stays opt-in (`packet: yes`).
 

@@ -19,7 +19,7 @@ Review-minutes: 20
 Unattended: never
 Lane: local-dev
 
-Parent: draft/feature/pyautobrain/autonomous_orchestrators_epic.md; slice of phase 3 (see `autonomous_orchestrators_p3a_watcher_core.md`, "Slicing").
+Parent: draft/feature/pyautobrain/autonomous_orchestrators_epic.md; slice of phase 3 (slicing: `complete/2026/11/autonomous-orchestrators-p3a.md`, prompt section "Slicing"; 3a shipped as PyAutoBrain#556).
 
 Implements AUTONOMY.md "One Mind writer per shift — 2026-11-03". Reuse the temp-worktree + cherry-pick pattern the /prm close-out already uses under a dirty shared Mind; the dashboard self-heal bot is the only other mover of main and the orchestrator rebases over it.
 

@@ -1,3 +1,12 @@
+- epic: autonomous-orchestrators (phase 3a of 3a–3d; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md)
+- summary: the shift watcher's core, fake workers only. PyAutoBrain#556: agents/conductors/batch/_orchestrator.py — tick() reads STOP first, then requires an open brief (brief --check ok, review-at not passed), takes a tick lock by exclusive create, reaps leases (.done → released; exited without it → dead after a grace, counted, task re-dispatched at most once per shift, then abandoned), plans inside the brief, enforces max-workers / max-sessions, and claims each task with an exclusive-create lease before spawning. State under $PYAUTO_ORCHESTRATOR_HOME or pyauto_wt_root()/.orchestrator (no path in organ code). FakeSpawner stubs; RealSpawner refuses until 3b. bin/orchestrator_watch.py + bin/systemd/pyauto-orchestrator.{service,timer} templates — installing them is the human's act. AUTONOMY.md "The watcher's network surface — 2026-11-03" (read-only gh pr checks + claude agents --json, one issue comment per shift; opt-in, laptop-only, never a write) as the third named exception of the network invariant. PyAutoMind#524: brief caps documented.
+- witness: 16/16 watcher tests (clause (a) races four real tick processes), doctrine 14/14, revert conditions 11 → 12, tenant firewall OK against the task worktree, full suites Brain 1456 / Mind 712; CI green first time.
+- notes: watcher detail lives in agents/conductors/batch/AGENTS.md "The watcher" — the batch skill is a known over-budget skill (268 vs main 263 lines; report-only check).
+- next: 3b real `claude --bg` dispatch — decide the worker permission mode with the human at plan time (a --bg worker that hits a prompt stalls silently).
+- heart: YELLOW, reason set acknowledged by the human at ship; judge tier, human /prm.
+
+## Original prompt
+
 # Autonomous orchestrators phase 3a: watcher core — brief gate, kill switch, leases, caps, fake workers, network-surface doctrine
 
 Type: feature
