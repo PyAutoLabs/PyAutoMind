@@ -140,3 +140,8 @@ epic, never picked standalone.
 - ledger: draft/feature/pyautoscientist/collaborator_led_pyautoscientist_adoption_pilot.md
 - status: In progress — project cards and organ-linked resource routing merged and published (Scientist PRs #56 and #58); remaining members unissued.
 - notes: Heart test-workspace dropdowns and Broca docs/HowTo/workspace/assistant dropdowns are explicit members. Continue one bounded task at a time; preserve the Broca ownership-contract dependency. Starter, optional organs with grey available-to-add resources, upgrades preserving user records and collaborator validation remain in this epic. No collaborator details assumed; shared multi-contributor operation is later.
+
+## autonomous-orchestrators
+- title: Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended `glance` merges under guards; drafts-only goal decomposition
+- ledger: draft/feature/pyautobrain/autonomous_orchestrators_epic.md
+- status: FILED 2026-11-03, NOT STARTED — next: phase 1 (policy amendments + shift-brief/digest/proof-packet/push formats + `Needs:` header)
