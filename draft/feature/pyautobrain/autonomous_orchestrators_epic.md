@@ -281,3 +281,8 @@ work per human review-minute above the shadow-shift baseline.
   `complete/2026/11/autonomous-orchestrators-p1.md`). `policy/end_at_deliverable.md` left
   byte-identical; the watcher exemption is `policy/shift_watcher.md`, and its one-line pointer
   rides with the next stanza refresh. Next: phase 2.
+- 2026-11-03 — **phase 2 COMPLETE** (PyAutoMind#523, PyAutoBrain#554; glance auto-merge; record
+  `complete/2026/11/autonomous-orchestrators-p2.md`). `Lane: ral|gpu|wsl-data`, `batch brief --check`,
+  `batch plan --brief`, intake header pass-through + lane inference, census lane histogram. The
+  merge-cap rule is refined: refused only when every named task is `judge` **and** `backlog: none`.
+  Next: phase 3 — file its prompt.

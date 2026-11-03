@@ -1,4 +1,4 @@
-# intake classify --file drops declared Epic:/Phase:/Filed:/Lane: headers and injects an unrelated Memory: line
+# intake classify --file injects an unrelated Memory: line on organ-targeted prompts
 
 Type: bug
 Target: PyAutoBrain
@@ -10,7 +10,7 @@ Priority: normal
 Status: formalised
 Filed: 2026-11-03
 Consequence: glance
-Witness: a new test feeds `analyse()` a prompt-shaped input declaring `Epic: x`, `Phase: 3`, `Filed: 2026-11-03`, `Blocked-by: PyAutoFit#1`, `Lane: local-dev` and asserts every one survives into `decision["header"]` verbatim and in the documented key order; a second test asserts `_with_memory` adds no `Memory:` line when the prompt's `Target:` is an organ repo (PyAutoBrain, PyAutoMind, PyAutoCortex, PyAutoHeart, PyAutoHands, PyAutoNerves, PyAutoEyes, PyAutoPulse, PyAutoInsight, PyAutoMemory, PyAutoBroca, PyAutoGut, PyAutoDNA, PyAutoScientist, PyAutoEars); `pytest PyAutoBrain/tests -q` green
+Witness: a new test asserts `_with_memory` adds no `Memory:` line when the prompt's `Target:` is an organ repo (PyAutoBrain, PyAutoMind, PyAutoCortex, PyAutoHeart, PyAutoHands, PyAutoNerves, PyAutoEyes, PyAutoPulse, PyAutoInsight, PyAutoMemory, PyAutoBroca, PyAutoGut, PyAutoDNA, PyAutoScientist, PyAutoEars) and still adds one for a library target with digest hits; `pytest PyAutoBrain/tests -q` green
 Review-minutes: 3
 Unattended: ready
 Lane: any
@@ -41,5 +41,11 @@ through `_render_header` (after `Priority:`, before `Consequence:`, in `_HEADER_
 order), and gate `_with_memory` as above. Phase 2 of the autonomous-orchestrators epic
 (`draft/feature/pyautobrain/autonomous_orchestrators_p2_lane_schema_census.md`) names the
 same pass-through; whichever lands first closes the other.
+
+**Re-scoped 2026-11-03 (human-approved):** item 1, the header pass-through, shipped in
+autonomous-orchestrators phase 2 (PyAutoBrain#554, record
+`complete/2026/11/autonomous-orchestrators-p2.md`; its test
+`test_declared_optional_headers_survive_apply_unchanged`). This prompt is now **item 2 only**:
+gate `_with_memory` so organ-targeted prompts get no `Memory:` line.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-11-03 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/da64305f-c750-425e-b845-c95ca4a765c8/scratchpad/intake_header_bug.md -->

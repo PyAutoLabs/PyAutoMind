@@ -1,3 +1,14 @@
+- epic: autonomous-orchestrators (phase 2 of 7; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md)
+- summary: the organism now parses what phase 1 wrote. Sizing: LANE_VALUES any|local-dev|ral|gpu|wsl-data + lane_is_local (invalid → lane_invalid, read as any). Batch planner: _lane_ok via lane_is_local, lane_counts ("Ready by lane"), other-lane line names resources. New _brief.py: `batch brief --check <file>` (errors name the key; exit 0/1) and `batch plan --brief <file>` (named tasks outrank the queue, dip only what the policy covers, brief review-minutes is the budget). Intake: declared Filed/Epic/Phase/Blocked-by/Closes-when pass through after Status:, Lane: after Unattended:; lane inference RAL/SLURM/sbatch/squeue/euclid_jump → ral, CUDA/laptop GPU → gpu, /mnt/c / Workspace/Science → wsl-data. Census: by_lane, `By lane:` line, dashboard Backlog "Lanes:" line, unknown-Lane hygiene flag. Mind: batches/examples/shift_brief_example.md fixture + lifecycle test that examples/ is never a record.
+- decisions (human-approved plan): merge-cap > 0 refused only when every named task is judge AND backlog: none (a dip may still pick glance work); unresolved named tasks warn, never refuse.
+- witness: 28/28 clause tests (a)–(e); brief --check OK on the shipped example; census lane total 289 = prompt count; full suites Brain 1437 / Mind 712.
+- traps: the Brain CI tenant firewall rejects satellite repo names / owner in NEW organ files (tests included) — first CI run red on both legs; run `repos_sync.py --check --only "tenant firewall (organ code)" --root <worktree>`, not `--root ~/Code/PyAutoLabs` (that checks the canonical Brain). Fixed in f3fc8fc without growing FIREWALL_ALLOWLIST.
+- follow-up: draft/bug/pyautobrain/intake_classify_file_drops_declared_epic_phase.md re-scoped to its Memory:-gating half (header half shipped here).
+- heart: YELLOW, reason set acknowledged by the human at ship; glance tiered merge.
+- next: phase 3 (watcher, dispatch safety, digest) — prompt not yet filed.
+
+## Original prompt
+
 # Autonomous orchestrators phase 2: `Lane:` resource values, the shift-brief validator, intake pass-through and census
 
 Type: feature
