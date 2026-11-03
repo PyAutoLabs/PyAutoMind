@@ -15,6 +15,7 @@ Status: formalised
 Epic: autonomous-orchestrators
 Phase: 2
 Filed: 2026-11-03
+Issued: 2026-11-03
 Consequence: glance
 Witness: `pytest PyAutoBrain/tests -q` green with new tests that (a) parse `Lane: ral`, `gpu`, `wsl-data` and keep `any`/`local-dev`, and reject `Lane: any | local-dev`; (b) assert `_lane_ok("ral","web-github")` is False and `_lane_ok("ral","local-dev")` True for all three new values; (c) `batch brief --check` accepts `PyAutoMind/batches/examples/shift_brief_example.md` and refuses the same file with `review-at:` removed, with `lanes: cloud` and with a `merge-cap:` above 0 for a brief whose named tasks are all `judge`; (d) `intake classify` on a text naming RAL proposes `Lane: ral` and a declared `Epic:`/`Phase:`/`Filed:`/`Lane:` survives `--apply` unchanged; (e) `intake census` prints a lane histogram whose total equals the prompt count
 Review-minutes: 5
