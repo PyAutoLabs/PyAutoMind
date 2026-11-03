@@ -1,0 +1,32 @@
+# Batch 2026-11-04 am
+- dispatched: 2026-11-04T08:30Z
+- review-at: 2026-11-04T11:30Z      # stated by the human; the grant expires here
+- shift: morning
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/1   # the digest is posted here once
+- packet: yes
+- heart-ack:
+  - Release YELLOW; monitoring RED
+- expected-effects:
+  - example-member: merges into PyAutoArray and may stale release validation
+- brief:
+  - goals:
+    - 1. land the next cluster-strong-lensing slice
+    - 2. clear review-ready glance PRs on PyAutoArray
+  - tasks:
+    - draft/feature/autolens/example_named_task.md
+  - backlog: scoped
+  - scoped:
+    - epics: cluster-strong-lensing, autonomous-orchestrators
+    - tags: jax-gradient
+    - tiers: notify, glance
+  - exclude:
+    - draft/feature/autofit/example_excluded_task.md
+    - epics: euclid-dr1
+  - review-minutes: 45
+  - lanes: any local-dev ral
+  - merge-cap: 3
+  - token-budget: 2000000
+  - ral-allowance:
+    - packets: 2
+    - partition: ral
+    - cpu-hours: 64
