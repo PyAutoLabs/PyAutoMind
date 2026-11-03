@@ -78,7 +78,7 @@ nothing to Slack. It converts an instant failure into a slow one.
 4. Re-check `scripts/backfill_arxiv_refs.py` and `scripts/arxiv_refs.py` in
    **PyAutoMemory**, which use `urllib.request` against the same endpoint. They
    have stayed green only because they swallow every exception
-   (`draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md`) —
+   (shipped 2026-11-03, `complete/2026/11/arxiv-refs-api-errors.md`) —
    so they may already be resolving nothing, silently, for this same reason.
 5. If the fingerprint hypothesis is confirmed, consider whether arXiv's API
    terms expect a declared client; a contact-bearing UA plus a mainstream HTTP

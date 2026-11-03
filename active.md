@@ -101,3 +101,14 @@
 - epic: autonomous-orchestrators (phase 3c of 3a–3d)
 - decision: lift the 3b sandbox fence on real dispatch (human, 2026-11-03)
 - tier: judge — merge mode: human /prm (PyAutoMind first, then PyAutoBrain)
+
+## repos-sync-check-dedup
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/527
+- issued: 2026-11-03
+- session: claude-code remote (organs session)
+- status: library-shipped, awaiting-merge
+- repos:
+  - PyAutoMind: ccr-7e6b22c0-04av9i
+- prompt: active/repos_sync_check_dedup.md
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/528
+- tier: notify — merge mode: human /prm

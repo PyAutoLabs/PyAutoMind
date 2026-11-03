@@ -1,3 +1,10 @@
+- summary: intake no longer writes a `Memory:` line on organ-targeted prompts. `_cites_memory()` gates on ORGANISM_REPOS (`category: organ`) and, by human decision 2026-11-03, any body-map repo whose `path` sits under `organs/` (the PyAutoScientist landing repo); both read from repos.yaml, so no repo name enters organ code (tenant firewall). `write_prompt` skips the Memory query for those targets. Item 1 of the original prompt (header pass-through) had already shipped in PyAutoBrain#554.
+- pr: PyAutoBrain#564 (shared with board-phase2-legs, rtd-organism-currency, project-discovery-argparse-ordering — one PR by human decision); issue PyAutoBrain#561.
+- witness: PASS — test_organ_target_gets_no_memory_line (fails on the pre-fix `_intake.py`) + test_library_target_with_hits_still_gets_memory_line; Brain suite 1477 passed; CI pytest 3.12 + 3.13 + docs-build green.
+- trap: the first test version named a library repo literally and tripped the tenant firewall; the test now reads the library from repos.yaml.
+
+## Original prompt
+
 # intake classify --file injects an unrelated Memory: line on organ-targeted prompts
 
 Type: bug
@@ -9,6 +16,7 @@ Autonomy: supervised
 Priority: normal
 Status: formalised
 Filed: 2026-11-03
+Issued: 2026-11-03
 Consequence: glance
 Witness: a new test asserts `_with_memory` adds no `Memory:` line when the prompt's `Target:` is an organ repo (PyAutoBrain, PyAutoMind, PyAutoCortex, PyAutoHeart, PyAutoHands, PyAutoNerves, PyAutoEyes, PyAutoPulse, PyAutoInsight, PyAutoMemory, PyAutoBroca, PyAutoGut, PyAutoDNA, PyAutoScientist, PyAutoEars) and still adds one for a library target with digest hits; `pytest PyAutoBrain/tests -q` green
 Review-minutes: 3

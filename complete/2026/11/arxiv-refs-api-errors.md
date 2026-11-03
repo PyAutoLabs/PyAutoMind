@@ -1,3 +1,10 @@
+- summary: most of the fix was already on main (0c3e2dc, 772d725: ArxivAPIError, retry ladder, api_failed, return 1). The live bug: arxiv_refs.yml piped the script through tee without pipefail, so the exit code was discarded and an outage still showed green. Now pipefail + recorded status, partial progress still validated/committed, then the job fails with ::error::. Script: injectable sleep, ParseError → ArxivAPIError, HTTPException transient, `unattempted` stat.
+- history check: nothing was NOTE-marked in the 2026-09-14..18 outage window (only NOTE commits: 1bd7d38, 86ea9fd 08-25; 778e3e4 08-27).
+- pr: PyAutoMemory#143; issue PyAutoMemory#142.
+- witness: PASS — injected HTTPError(429) → api_failed, never unmatched, never NOTE-marked (fails on pre-fix source); 286 passed; make validate OK; CI validate green.
+
+## Original prompt
+
 # `arxiv_refs.py` swallows every API error, so an arXiv outage resolves nothing and still reports green
 
 Type: bug
@@ -15,6 +22,7 @@ Consequence: glance
 Witness: a test driving `resolve_title()` with an injected `query` raising `HTTPError(429)` asserts the run is *reported* as an API failure rather than as "no unique match" — it fails on current source (the bare `except Exception` returns `None`, indistinguishable from a genuine non-match) and passes after the fix. The backfill's stats gain a distinct counter, and a run whose lookups all failed on transport exits non-zero rather than logging "N ref-less, 0 resolved".
 Review-minutes: 4
 Filed: 2026-09-18
+Issued: 2026-11-03
 
 Found while diagnosing the PyAutoMind digest outage
 (`complete/2026/09/arxiv-digest-api-retry.md`, PyAutoMind#410). This is

@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 20 |
-| [In flight](#in-flight) | 8 |
+| [In flight](#in-flight) | 9 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 293 |
+| [Backlog](#backlog) | 286 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -116,7 +116,7 @@ Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visua
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 92
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 88
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -158,22 +158,6 @@ Use the start-dev skill. draft/test/autolens_workspace_test/latent_smoke_asserti
 
 </details>
 
-<details><summary>📋 <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md rename</a> — pyautobrain · small · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/docs/pyautobrain/rtd_organism_currency.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautobrain/board_without_gh_phase2_legs.md">Board phase 2: the remaining four legs onto the seam</a> — pyautobrain · small · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautobrain/board_without_gh_phase2_legs.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/research/pyautohands/git_docs.md">Use readthedocs or migrate to GitHub docs</a> — pyautohands · small · supervised · normal</summary>
 
 ```
@@ -210,6 +194,22 @@ Use the start-dev skill. draft/refactor/pyautofit/remove_eden_packaging_tooling.
 
 ```
 Use the start-dev skill. draft/maintenance/pyautomemory/canonical_key_todo_sweep.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/demo_subplot_ellipse_errors.md">Demo <code>subplot_ellipse_errors</code> from a real ellipse model-fit</a> — workspaces · large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/docs/workspaces/demo_subplot_ellipse_errors.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md">cluster/mass_parameterizations*.py promise model.info prints (and figures) they never make</a> — autolens_workspace · small · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md
 ```
 
 </details>
@@ -1086,6 +1086,14 @@ Use the start-dev skill. active/r2_pages_function_access.md
 
 </details>
 
+<details><summary>📋 <a href="active/repos_sync_check_dedup.md">Deduplicate repos_sync.py's check/write pairs</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/527">issue #527</a> — issued 2026-11-03 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/528">PyAutoMind#528</a></summary>
+
+```
+Use the start-dev skill. active/repos_sync_check_dedup.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/results_library_p5a_assistant.md">Issued: 2026-11-02</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/176">issue #176</a> — issued 2026-11-02 — workspace-shipped, awaiting-merge (judge → human /prm; wiki-currency waits on a PyAutoFit release) — PRs: <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/177">autolens_assistant#177</a></summary>
 
 ```
@@ -1185,7 +1193,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 282 · local-dev 9
+Lanes: any 275 · local-dev 9
 
 <a id="human-review"></a>
 <details>
@@ -1236,7 +1244,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 40</summary>
+<summary><b>feature</b> — 39</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautobrain/glance_tier_ruling_shadow_window.md">Record the <code>glance</code> Shadow-window ruling in AUTONOMY.md — grant narrowed, after…</a> — pyautobrain · small · human-required · high</summary>
 
@@ -1306,14 +1314,6 @@ Use the start-dev skill. draft/feature/pyautobrain/docs_conductor.md
 
 ```
 Use the start-dev skill. draft/feature/pyautoheart/howto_real_settings_nightly.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautobrain/board_without_gh_phase2_legs.md">Board phase 2: the remaining four legs onto the seam</a> — pyautobrain · small · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautobrain/board_without_gh_phase2_legs.md
 ```
 
 </details>
@@ -1561,7 +1561,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 66</summary>
+<summary><b>bug</b> — 62</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1683,14 +1683,6 @@ Use the start-dev skill. draft/bug/pyautobrain/profiling_compile_drift_point_vs_
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md"><code>arxiv_refs.py</code> swallows every API error, so an arXiv outage resolves nothing…</a> — pyautomemory · small · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md">Adaptive Delaunay mesh places two mesh pixels 0.001" apart — a degenerate…</a> — autoarray · medium · supervised · medium</summary>
 
 ```
@@ -1763,14 +1755,6 @@ Use the start-dev skill. draft/bug/autolens_profiling/gradient_json_point_label_
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/pyautomind/glance_shadow_window_reached.md">Glance shadow window reached 20/20 clean — count line must say "reached"…</a> — pyautomind · easy · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautomind/glance_shadow_window_reached.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import autogalaxy before jax</a> — workspaces · easy · supervised · medium</summary>
 
 ```
@@ -1839,14 +1823,6 @@ Use the start-dev skill. draft/bug/autolens_workspace/slam_simultaneous_subhalo_
 
 ```
 Use the start-dev skill. draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautobrain/intake_classify_file_drops_declared_epic_phase.md">intake classify --file injects an unrelated Memory: line on organ-targeted prompts</a> — pyautobrain · small · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautobrain/intake_classify_file_drops_declared_epic_phase.md
 ```
 
 </details>
@@ -2055,14 +2031,6 @@ Use the start-dev skill. draft/bug/pyautolens/point_source_json_datasets_record_
 
 ```
 Use the start-dev skill. draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautomind/repos_sync_test_keys_on_dir_name.md">repos_sync standards-block test keys on the checkout dir name…</a> — pyautomind · easy · safe-capped · low</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautomind/repos_sync_test_keys_on_dir_name.md
 ```
 
 </details>
@@ -2443,7 +2411,7 @@ Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_
 </details>
 
 <details>
-<summary><b>docs</b> — 27</summary>
+<summary><b>docs</b> — 26</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -2497,14 +2465,6 @@ Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sig
 
 ```
 Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md rename</a> — pyautobrain · small · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/docs/pyautobrain/rtd_organism_currency.md
 ```
 
 </details>
@@ -2797,7 +2757,7 @@ Use the start-dev skill. draft/maintenance/pyautomind/session_start_hook_copies_
 </details>
 
 <details>
-<summary><b>refactor</b> — 13</summary>
+<summary><b>refactor</b> — 12</summary>
 
 <details><summary>📋 <a href="draft/refactor/autonerves/config_yaml_parse_cache.md">Cache <code>autonerves</code> config parsing — 308 YAML files parsed per script run</a> — autonerves · medium · safe · medium</summary>
 
@@ -2883,14 +2843,6 @@ Use the start-dev skill. draft/refactor/autogalaxy_assistant/trim_ag_skills_for_
 
 ```
 Use the start-dev skill. draft/refactor/autolens/witt_wynne_solver_library_home.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/refactor/pyautomind/repos_sync_check_dedup.md">Deduplicate repos_sync.py's check/write pairs</a> — pyautomind · medium · supervised · low</summary>
-
-```
-Use the start-dev skill. draft/refactor/pyautomind/repos_sync_check_dedup.md
 ```
 
 </details>
@@ -3012,8 +2964,8 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-03 | filed | <a href="draft/bug/pyautobrain/intake_classify_file_drops_declared_epic_phase.md">intake classify --file injects an unrelated Memory: line on…</a> |
 | 2026-11-03 | filed | <a href="draft/feature/pyautobrain/glance_tier_ruling_shadow_window.md">Record the <code>glance</code> Shadow-window ruling in AUTONOMY.md — grant…</a> |
+| 2026-11-03 | issued | <a href="active/repos_sync_check_dedup.md">Deduplicate repos_sync.py's check/write pairs</a> |
 | 2026-11-03 | issued | <a href="active/autonomous_orchestrators_p3c_mind_writer.md">Autonomous orchestrators phase 3c: one Mind writer per shift — ledger…</a> |
 | 2026-11-02 | filed | <a href="draft/research/autolens_profiling/unexplained_gradient_gaps_cpu_sparse_delaunay_and_mge.md">Unexplained autodiff-vs-FD gaps in the phase-6 gradient records…</a> |
 | 2026-11-02 | filed | <a href="draft/bug/autolens_profiling/gradient_json_point_label_standard_cells.md">Standard-size gradient cells record <code>"point": "prior_medians"</code> while…</a> |
@@ -3050,15 +3002,13 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-21 | issued | <a href="active/matrix_free_interferometer_inversion.md">Matrix-free interferometer inversion for very large rectangular…</a> |
 | 2026-10-21 | filed | <a href="draft/docs/autolens_workspace/interferometer_primary_beam_example.md">Interferometer primary beam: workspace example and docs</a> |
 | 2026-10-21 | filed | <a href="draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md">Cluster likelihood scripts: image-plane manual check disagrees with…</a> |
-| 2026-10-16 | filed | <a href="draft/bug/pyautomind/repos_sync_test_keys_on_dir_name.md">repos_sync standards-block test keys on the checkout dir name…</a> |
 | 2026-10-16 | filed | <a href="draft/maintenance/autolens_workspace/remeasure_shapelets_slow_park.md">Re-measure the shapelets/modeling.py SLOW park (#586) under the…</a> |
+| 2026-10-14 | filed | <a href="draft/test/autofit/workspace_searches_scripts_preexisting_failures.md"><code>@autofit_workspace</code> six <code>searches/</code> scripts fail on main at…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-16 | filed | <a href="draft/bug/pyautomind/glance_shadow_window_reached.md">Glance shadow window reached 20/20 clean — count line must say…</a> |
-| 2026-10-14 | filed | <a href="draft/test/autofit/workspace_searches_scripts_preexisting_failures.md"><code>@autofit_workspace</code> six <code>searches/</code> scripts fail on main at…</a> |
 | 2026-10-14 | filed | <a href="draft/feature/cortex/human_readable_projects_dashboard.md">Human-readable Cortex Projects dashboard</a> |
 | 2026-10-14 | filed | <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> |
 | 2026-10-09 | filed | <a href="draft/bug/pyautobrain/profiling_compile_drift_point_vs_point.md">Profiling conductor compile drift compares one point against one point</a> |
@@ -3067,13 +3017,13 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
 | 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
+| 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
+| 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
-| 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
 | 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
@@ -3082,6 +3032,8 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
 | 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
+| 2026-09-26 | filed | <a href="draft/refactor/workspaces/abell_1201_local_cleanup.md">Repo cleanup: retire the Abell 1201 worktree and local raw data</a> |
+| 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
 
 </details>
 
@@ -3183,7 +3135,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-63 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+62 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3236,7 +3188,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md — unknown theme keyword(s): euclid`
 - `draft/bug/pyautobrain/profiling_compile_drift_point_vs_point.md — unknown theme keyword(s): measurement-tools`
 - `draft/bug/pyautoheart/ral_venv_dependency_floor_drift.md — unknown theme keyword(s): hpc, dependencies, reproducibility`
-- `draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md — unknown theme keyword(s): ci, robustness`
 - `draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md — unknown theme keyword(s): ci, robustness`
 - `draft/refactor/autofit/ep_analysis_level_compile_cache.md — unknown theme keyword(s): jax`
 - `draft/refactor/autolens/cache_readers_fall_back_to_zip_member.md — unknown theme keyword(s): aggregator, paths`

@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-11-03T17:56:31Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 9 in flight",
+  "updated": "2026-11-03T19:27:19Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "Autonomous orchestrators phase 3c: one Mind writer per shift \u2014 ledger lines\u2026 \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/pull/526",
       "prompt": "Use the start-dev skill. active/autonomous_orchestrators_p3c_mind_writer.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Deduplicate repos_sync.py's check/write pairs \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/pull/528",
+      "prompt": "Use the start-dev skill. active/repos_sync_check_dedup.md"
     },
     {
       "severity": "yellow",
@@ -120,12 +126,6 @@
       "text": "pick: SED chain waveband fit can spin forever in Nautilus exploration\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md",
       "prompt": "Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Record the `glance` Shadow-window ruling in AUTONOMY.md \u2014 grant narrowed, after\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautobrain/glance_tier_ruling_shadow_window.md",
-      "prompt": "Use the start-dev skill. draft/feature/pyautobrain/glance_tier_ruling_shadow_window.md"
     }
   ]
 }

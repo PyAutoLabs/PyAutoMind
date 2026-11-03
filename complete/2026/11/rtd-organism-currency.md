@@ -1,3 +1,10 @@
+- summary: RTD organism docs current with the 14 `category: organ` repos: new organs/nerves.md, dna.md, broca.md; hard-coded organ counts removed (index, concepts/organism, board-orchestration). Human decisions 2026-11-03: organs/build → organs/hands (build.html kept as a meta-refresh redirect via html_extra_path); Broca added to ORGANISM.md's organ table; ORGANISM.md "Five capabilities" reworded. nerves.md added to the PyAutoConf rename guard's deliberate set.
+- pr: PyAutoBrain#564; issue PyAutoBrain#563.
+- witness: PASS — Sphinx warnings 0 → 0 (local + CI docs-build); no stale count phrasings in docs/.
+- follow-up: the DNA/Broca pages link to hand-derived GitHub anchors in ORGANISM.md; Sphinx does not check them — worth one click.
+
+## Original prompt
+
 # RTD organism docs currency: Nerves page, organ-count drift, hands.md rename
 
 Type: docs
@@ -16,6 +23,7 @@ Witness: `docs/organs/` has a page for every organ ORGANISM.md names (Nerves inc
 Review-minutes: 0
 Unattended: ready
 Filed: 2026-08-19 (backfilled from git)
+Issued: 2026-11-03
 
 Found by the 2026-08-19 readability census (#237). The RTD narrative
 (@PyAutoBrain/docs/, published at pyautoscientist.readthedocs.io) has drifted
