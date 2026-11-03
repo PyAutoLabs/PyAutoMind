@@ -89,7 +89,9 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/559
 - issued: 2026-11-03
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/526
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/560
 - worktree: ~/Code/PyAutoLabs-wt/autonomous-orchestrators-p3c
 - repos:
   - PyAutoBrain: feature/autonomous-orchestrators-p3c
