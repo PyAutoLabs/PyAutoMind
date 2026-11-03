@@ -330,6 +330,7 @@ Free-form markdown. Strong conventions:
   Status: draft
   Consequence: glance       # notify | glance | judge — how much review it needs
   Witness: ids bit-identical, 62 -> 9.7 ms   # what makes it checkable in minutes
+  Lane: any                 # any | local-dev | ral | gpu | wsl-data; the last three imply local-dev
   Review-minutes: 3         # a seed, not a measurement
   Unattended: ready         # ready | needs-slicing | never
   Filed: 2026-07-09         # optional; the day the prompt was written
@@ -496,6 +497,14 @@ faculty at conception and all overridable by declaring them:
   **compaction rule** — a task that would need context compaction to finish is
   too big to run unattended — so a single-repo `large` task is still `ready`
   while a `large` one across four repos is not.
+- **`Lane:`** `any` | `local-dev` | `ral` | `gpu` | `wsl-data` — not a cost but
+  a resource: where the work can run at all. `any` runs anywhere, a cloud
+  session included; `local-dev` needs the laptop; `ral`, `gpu` and `wsl-data`
+  each **imply `local-dev`** and refine it (RAL test runs, the laptop GPU, data
+  under `/mnt/c`). Write `any`, never `none`. A `ral` task never submits on its
+  own: the Science orchestrator is the single RAL gateway, and a dev worker
+  hands it a **RAL test packet** (what to run, at which commit, the pass/fail
+  rule) — planned for phase 5 of the autonomous-orchestrators epic.
 
 Measured over the 153 backlog prompts the day this shipped: **151 grade `judge`,
 because three carry a witness.** Given one, the same backlog grades 33 `notify` /

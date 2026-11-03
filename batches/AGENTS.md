@@ -155,3 +155,114 @@ wrote here at dispatch. A run classifying a new reason as its sibling's doing on
 its own authority is an autonomous acknowledgement, which the hard invariants
 forbid (`AUTONOMY.md`, "Leg 4 under a batch launch", 2026-08-31 amendment). No
 line, no match, the run parks.
+
+## Shift brief (2026-11-03)
+
+A **shift brief** is a batch record with a `brief:` block. It is the same file in
+the same folder, under the same ledger-merge rules; every key above keeps its
+meaning, `heart-ack:` and `expected-effects:` included. What changes is who
+picks the work: the human writes the brief, and **writing it with `review-at:` is
+the dispatch** (`PyAutoBrain/AUTONOMY.md`, "Shift briefs and unattended
+`glance`" — 2026-11-03). The grant covers the named tasks plus the brief's
+backlog policy, until `review-at:`. The deterministic watcher that starts
+sessions under it is the one exemption to `policy/end_at_deliverable.md`, and
+only while a brief is open (`policy/shift_watcher.md`).
+
+```markdown
+# Batch 2026-11-04 am
+- dispatched: 2026-11-04T08:30Z
+- review-at: 2026-11-04T11:30Z      # stated by the human; the grant expires here
+- shift: morning
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/<n>   # the digest is posted here once
+- packet: yes                       # optional; the HTML packet is opt-in under a brief
+- heart-ack:
+  - <reason line>
+- expected-effects:
+  - <member>: <what it may legitimately change>
+- brief:
+  - goals:                          # in order; the first outranks the rest
+    - 1. land the next cluster-strong-lensing slice
+    - 2. clear review-ready glance PRs on PyAutoArray
+  - tasks:                          # named prompt paths, done first, in this order
+    - draft/feature/autolens/<name>.md
+    - draft/bug/autoarray/<name>.md
+  - backlog: scoped                 # none | fill-idle | scoped
+  - scoped:                         # only with backlog: scoped
+    - epics: cluster-strong-lensing, autonomous-orchestrators
+    - tags: jax-gradient
+    - tiers: notify, glance
+  - exclude:
+    - draft/feature/autofit/<name>.md
+    - epics: euclid-dr1
+  - review-minutes: 45
+  - lanes: any local-dev ral         # any subset of: any local-dev ral gpu wsl-data
+  - merge-cap: 3                     # unattended glance merges this shift, at most
+  - token-budget: <n>                # tokens the shift may spend, all sessions
+  - ral-allowance:                   # only when lanes includes ral; phase 5 consumes it
+    - packets: 2
+    - partition: ral
+    - cpu-hours: 64
+```
+
+`backlog:` decides what happens once the named tasks are done or blocked:
+`none` — nothing more; `fill-idle` — the planner's own ranking, under every
+batch constraint; `scoped` — only prompts matching the `scoped:` epics, tags or
+tiers. `exclude:` removes prompt paths or epics from either dip. Backlog the
+brief does not cover is **never** dipped.
+
+**Calibration rule.** A new brief is not accepted while the previous record
+lacks `review-minutes-actual:`. The planned figure is a seed; the 2026-08-31
+record never closed it, and an estimate nobody measures never improves.
+
+`batches/examples/` (phase 2) holds validator fixtures. It is **not** a record:
+nothing in it was dispatched, and `lifecycle.py` does not read it as one.
+
+### Digest
+
+Appended to the record at collect, under a `## Digest` heading, and **posted
+once** as a comment on the shift's `issue:`. The record plus that comment is
+the review surface; the HTML packet is written only when `packet: yes`.
+
+```markdown
+## Digest
+
+### Brief work
+- <slug> — PyAutoLens#<n> — HEALTHY — glance, auto-merged (1/3)
+- <slug> — parked: awaiting-input (question on the issue)
+
+### Backlog picks
+- <slug> — PyAutoArray#<n> — HEALTHY — why: scoped epic cluster-strong-lensing, next phase, notify
+- <slug> — draft filed — why: decomposed from goal 2; needs bulk approval
+
+### Proof packets
+<one proof packet per task, in the order above>
+
+### Counters
+- merges: 2
+- glance-auto-merges: 1
+- reverts: 0
+- pushes: 0
+- drafts-filed: 1
+- packets-sent: 0
+- workers-crashed: 0
+- tokens: <n> of <token-budget>
+- review-minutes-planned: 45
+```
+
+Brief work and backlog picks stay separate, and **every backlog pick carries a
+one-line reason** — the brief's rule it was picked under. A pick the human
+cannot trace to the brief is a finding.
+
+### Proof packet
+
+One screen per task — if it does not fit, the task was too big:
+
+```markdown
+#### <slug> — <PR url>
+- claim: <one sentence — what is now true>
+- before/after: <numbers, or a figure path>
+- witness: `<the Witness: command>`
+    <its output, trimmed to the lines that decide it>
+- not checked: <what this packet does not show>
+- revert: `<one command>`
+```
