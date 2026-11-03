@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2113 records across 11 buckets.
+2115 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -126,6 +126,7 @@ markers; everything below GENERATED is rebuilt.
 - [autonomous-orchestrators-p3a](2026/11/autonomous-orchestrators-p3a.md) — phase 3a of 3a–3d; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [autonomous-orchestrators-p3b](2026/11/autonomous-orchestrators-p3b.md) — phase 3b of 3a–3d; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [cloud-validation-rehearsal-clock-skew](2026/11/cloud-validation-rehearsal-clock-skew.md)
+- [glance-shadow-window-reached](2026/11/glance-shadow-window-reached.md) — code half already fixed on main — 679b1319f makes `shadow_count_line()` emit "window reached — the pre-registe…
 - [gradient-campaign-impact](2026/11/gradient-campaign-impact.md) — human-requested assessment of whether the two PyAutoArray#671 defects affected the likelihood-lifecycle phase-…
 - [howto-chapter2-format](2026/11/howto-chapter2-format.md) — Restored descriptive contents for Lens lessons 1–4 and complete ordered contents for Galaxy lessons 1–6, corre…
 - [howto-prose-format](2026/11/howto-prose-format.md)
@@ -150,6 +151,7 @@ markers; everything below GENERATED is rebuilt.
 - [one-line-auto-simulate-helper](2026/11/one-line-auto-simulate-helper.md)
 - [rectangular-gradient-rtu-sparse](2026/11/rectangular-gradient-rtu-sparse.md) — the filed symptom (|g| ~2e9 on the imaging/rectangular/hst fiducial, RTU all backends, Bilinear CPU sparse) sp…
 - [rectangular-mapper-bilinear-row-weights](2026/11/rectangular-mapper-bilinear-row-weights.md) — - **Retired as already-fixed** by the gradient-correctness sweep (autolens_profiling#517, item 12). The draft …
+- [repos-sync-test-keys-on-dir-name](2026/11/repos-sync-test-keys-on-dir-name.md) — already fixed on main before this prompt was picked up — 679b1319f ("test: Mind suite green on main — shadow l…
 - [results-library-p2-completeness](2026/11/results-library-p2-completeness.md) — `autofit/results/library.py` ResultsLibrary (grid / library.yaml / from_campaign — campaign expectations
 - [results-library-p3-exports](2026/11/results-library-p3-exports.md) — AggregateCSV.save(cache=, shard=, expected=, sort_by=, on_error=, columns_json=): row cache
 - [results-library-p4-package](2026/11/results-library-p4-package.md) — new `autofit/export/` (`af.export`): package() — size-capped / exactly-N part zips with objects whole,

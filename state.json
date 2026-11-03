@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 13 in flight",
-  "updated": "2026-11-03T18:39:40Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 14 in flight",
+  "updated": "2026-11-03T19:13:12Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -30,6 +30,12 @@
       "text": "intake classify --file injects an unrelated Memory: line on organ-targeted prompts \u2014 library-shipped, awaiting-merge",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/564",
       "prompt": "Use the start-dev skill. active/intake_classify_file_drops_declared_epic_phase.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "install.sh --check/--write-project-discovery rejects repo names (argparse ordering) \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/564",
+      "prompt": "Use the start-dev skill. active/project_discovery_argparse_ordering.md"
     },
     {
       "severity": "yellow",
@@ -119,12 +125,6 @@
       "severity": "yellow",
       "text": "pending release: PyAutoLens PyAutoLens#815 \u2014 magnification-maps-image-plane",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/815",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#816 \u2014 magnification-maps-source-plane",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/816",
       "prompt": null
     }
   ]

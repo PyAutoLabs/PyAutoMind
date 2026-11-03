@@ -1,3 +1,9 @@
+- summary: code half already fixed on main — 679b1319f makes `shadow_count_line()` emit "window reached — the pre-registered decision is due" (autonomy_log.md now reads 69/20, window reached); `tests/test_autonomy_log_shadow.py` passes. The human doctrine call this prompt asked for moved to `draft/feature/pyautobrain/glance_tier_ruling_shadow_window.md` (human-required, high). Closed as stale-done/superseded at the human's request (2026-11-03, organs batch session).
+- witness: `pytest tests/test_autonomy_log_shadow.py` green on main.
+- pr: none (fixed by 679b1319f on main).
+
+## Original prompt
+
 # Glance shadow window reached 20/20 clean — count line must say "reached"; record the glance confirmation decision
 
 Type: bug

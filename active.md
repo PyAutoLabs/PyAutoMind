@@ -111,6 +111,7 @@
   - PyAutoBrain: ccr-7e6b22c0-04av9i
 - prompt: active/intake_classify_file_drops_declared_epic_phase.md
 - library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/564
+- decision-2026-11-03: human — repos under organs/ (PyAutoScientist) are gated too; shipped ba38413
 - tier: glance — merge mode: human /prm (shares a branch/PR with board-phase2-legs and rtd-organism-currency)
 
 ## board-phase2-legs
@@ -122,6 +123,7 @@
   - PyAutoBrain: ccr-7e6b22c0-04av9i
 - prompt: active/board_without_gh_phase2_legs.md
 - library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/564
+- decision-2026-11-03: human accepts upkeep reading 'open-issue count unavailable' remotely (no org-wide issue search in the MCP surface)
 - tier: notify — merge mode: human /prm (shared Brain PR)
 
 ## rtd-organism-currency
@@ -134,7 +136,7 @@
 - prompt: active/rtd_organism_currency.md
 - library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/564
 - tier: notify — merge mode: human /prm (shared Brain PR)
-- open-decisions: build.md→hands.md rename; Broca missing from ORGANISM.md organ table; ORGANISM.md "Five capabilities" count
+- decision-2026-11-03: human — rename build.md→hands.md (done, with build.html redirect), add Broca to ORGANISM.md table (done), fix the 'Five capabilities' count (done); 1aa2ed4
 
 ## arxiv-refs-api-errors
 - issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/142
@@ -157,3 +159,14 @@
 - prompt: active/repos_sync_check_dedup.md
 - library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/528
 - tier: notify — merge mode: human /prm
+
+## project-discovery-argparse-ordering
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/565
+- issued: 2026-11-03
+- session: claude-code remote (organs session)
+- status: library-shipped, awaiting-merge
+- repos:
+  - PyAutoBrain: ccr-7e6b22c0-04av9i
+- prompt: active/project_discovery_argparse_ordering.md
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/564
+- tier: glance — merge mode: human /prm (shared Brain PR, human decision 2026-11-03: one PR)
