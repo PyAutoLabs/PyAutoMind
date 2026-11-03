@@ -26,6 +26,8 @@
   - lanes: any local-dev ral
   - merge-cap: 3
   - token-budget: 2000000
+  - max-workers: 2
+  - max-sessions: 6
   - ral-allowance:
     - packets: 2
     - partition: ral
