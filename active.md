@@ -84,3 +84,16 @@
 - resume: (1) `sacct -j 413991` → when done pull output/p517_item2/{A_sparse_main,B_dense_main,C_sparse_tag}/…/gradient.json + .log from the RAL worktree into Science/scratch/gradient_correctness_sweep_2026-11-02/ral_item2/ and run small_step_check on them (A vs C = library effect incl #672; A vs B = sparse path vs CPU backend); (2) then items 3, 5 (local, seconds), 6, 13, 8/9/7 per the approved order in wiki/research/gradient_correctness_sweep.md
 - compute-tracking: RAL 413991 (item 2, group/delaunay/euclid CPU, legs A sparse@main / B dense@main / C sparse@tag 2026.10.25.1; partition ral; human go 2026-11-02). RAL worktree /mnt/ral/jnightin/autolens_profiling_wt/gradient-correctness-sweep (9d2ee2d3), private libs /mnt/ral/jnightin/PyAuto_wt/gradient-correctness-sweep; rows under output/p517_item2/<leg>/
 - tier: judge — merge mode: human /prm
+
+## autonomous-orchestrators-p3a
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/555
+- issued: 2026-11-03
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/autonomous-orchestrators-p3a
+- repos:
+  - PyAutoBrain: feature/autonomous-orchestrators-p3a
+  - PyAutoMind: feature/autonomous-orchestrators-p3a
+- prompt: active/autonomous_orchestrators_p3a_watcher_core.md
+- epic: autonomous-orchestrators (phase 3a of 3a–3d)
+- tier: judge — merge mode: human /prm (PyAutoMind first, then PyAutoBrain)
