@@ -307,3 +307,7 @@ work per human review-minute above the shadow-shift baseline.
   `complete/2026/11/glance-tier-ruling.md`): audit 8/8 `ok`; `glance` granted, narrowed (non-PASS witness →
   human `/prm`); stage-2 sub-window table open in `autonomy_log.md`. Phase 4 unattended merges still
   need the shadow-row verb to write into that table.
+- 2026-11-04 — **phase 3d COMPLETE — phase 3 COMPLETE** (PyAutoMind#531, PyAutoBrain#569; record
+  `complete/2026/11/autonomous-orchestrators-p3d.md`): the shift digest, written into the record
+  through the one Mind writer and posted once (marker before the post). Next: phase 4 Dev pilot —
+  prompt not yet filed; it must route unattended merges into the stage-2 sub-window table.
