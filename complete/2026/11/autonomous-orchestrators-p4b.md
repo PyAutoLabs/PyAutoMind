@@ -1,3 +1,13 @@
+- epic: autonomous-orchestrators (phase 4b of 4a–4c; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md)
+- summary: unattended `glance` close-out. PyAutoBrain#573: a glance worker under a brief ends at PR-open; `_orchestrator._closeouts` reaps `<task>.closeout` verdicts, then for each PR a worker named checks recorded tier glance, `gh pr checks` green (pending waits, red refused), merges + in-flight close-outs < merge-cap, not shadow, and starts ONE close-out session (`closeout_template.md`, `claude --bg --name shift-close:<task> --model opus`) that runs the Witness itself, reviews adversarially, checks the decision-taken label + Heart, and runs /prm or refuses. Merged → glance_auto_merges +1, PR merged, one stage-2 row via the new `table-append` Mind writer op; every refusal final and digested. AUTONOMY.md "Stage-2 adversary amendment — 2026-11-04". PyAutoMind#533: `lifecycle.py shadow-row --stage2`, autonomy_log stage-2 amendment note, batches/AGENTS.md "merge-cap in practice".
+- decisions (human 2026-11-04): close-out on Opus 5.5 (same model as workers; Fable expensive, Sonnet weak) → amendment: same-model adversary allowed when a fresh independent session runs the witness; any stage-2 row reverted/substantive restores the different-model requirement. Label + Heart checked by the close-out session, not the watcher (network surface unchanged).
+- witness: tests/test_orchestrator_closeout.py 13 passed (controls: never-twice removed → 4 fail; tier guard removed → 1 fails), incl. real-git one stage-2 row on Mind main; doctrine 23 (4 new); Mind stage-2 4 new; Brain 1538 (+2 pre-existing test_prompt_budget failures); Mind 716; tenant firewall OK. NOT exercised: a real close-out session merging a real PR — 4c's job.
+- merge: both PRs merged by the human in the GitHub UI ~11:46Z after the API merge path returned GitHub errors again.
+- next: 4c pilot run — needs the human to fill review-minutes-actual on batches/2026-08-31-pm.md (calibration rule refuses new briefs) and install the timer.
+- heart: YELLOW (autofit_test MultiStartResumeNaNCounters.py timeout; no release rehearsal) acknowledged by the human at ship; judge tier.
+
+## Original prompt
+
 # Autonomous orchestrators phase 4b: unattended `glance` close-out + stage-2 Shadow rows
 
 Type: feature

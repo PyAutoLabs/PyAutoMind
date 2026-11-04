@@ -12,7 +12,6 @@ Status: formalised
 Filed: 2026-11-04
 Epic: autonomous-orchestrators
 Phase: 4
-Blocked-by: active/autonomous_orchestrators_p4b_unattended_closeout.md
 Consequence: judge
 Witness: `PyAutoMind/batches/pilot.md` holds ≥ 6 shift rows, the 2 shadow baseline rows included, each with `review-minutes-actual` filled; a write-up evaluates the epic's "Success measures (pilot)" against them (planned vs actual minutes within 25 % by the sixth shift, revert/corrective-PR rate vs the calibration log, verified work per review-minute vs the shadow baseline); it records whether `claude --bg` workers are attachable and whether they appear in the desktop app's session list, and whether Claude Code Projects is available in the UI
 Review-minutes: 60

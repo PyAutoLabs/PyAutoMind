@@ -318,3 +318,7 @@ work per human review-minute above the shadow-shift baseline.
 - 2026-11-04 — **phase 4a COMPLETE** (PyAutoMind#532, PyAutoBrain#571; record
   `complete/2026/11/autonomous-orchestrators-p4a.md`): `shadow: yes` shifts propose without spawning;
   `batches/pilot/pilot.md` gains one row per shift. Next: 4b, unblocked.
+- 2026-11-04 — **phase 4b COMPLETE** (PyAutoMind#533, PyAutoBrain#573; record
+  `complete/2026/11/autonomous-orchestrators-p4b.md`): unattended `glance` close-out by one independent
+  Opus close-out session; stage-2 rows via `table-append`; AUTONOMY "Stage-2 adversary amendment —
+  2026-11-04" (same model allowed). Next: 4c, the pilot run.

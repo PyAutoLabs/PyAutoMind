@@ -76,23 +76,6 @@
 - compute-tracking: RAL 413991 (item 2, group/delaunay/euclid CPU, legs A sparse@main / B dense@main / C sparse@tag 2026.10.25.1; partition ral; human go 2026-11-02). RAL worktree /mnt/ral/jnightin/autolens_profiling_wt/gradient-correctness-sweep (9d2ee2d3), private libs /mnt/ral/jnightin/PyAuto_wt/gradient-correctness-sweep; rows under output/p517_item2/<leg>/
 - tier: judge — merge mode: human /prm
 
-## autonomous-orchestrators-p4b
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/572
-- issued: 2026-11-04
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/533
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/573
-- heart-ack: YELLOW — workspace validation 1 timeout (autofit_test MultiStartResumeNaNCounters.py); release validation incomplete (no rehearsal) — human 2026-11-04
-- worktree: ~/Code/PyAutoLabs-wt/autonomous-orchestrators-p4b
-- repos:
-  - PyAutoBrain: feature/autonomous-orchestrators-p4b
-  - PyAutoMind: feature/autonomous-orchestrators-p4b
-- prompt: active/autonomous_orchestrators_p4b_unattended_closeout.md
-- epic: autonomous-orchestrators (phase 4b of 4a–4c)
-- decision: close-out session on Opus 5.5 (same model as workers); ruling amended — stage-2 adversary may be same-model when a fresh independent session runs the witness; label + Heart checked by the close-out session, not the watcher (human, 2026-11-04)
-- tier: judge — merge mode: human /prm
-
 ## howtolens-ch3-approved
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/125
 - issued: 2026-11-04
