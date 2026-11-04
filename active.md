@@ -1,3 +1,18 @@
+## workspace-hygiene-sweep-1104
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/620
+- issued: 2026-11-04
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/workspace-hygiene-sweep-1104
+- repos:
+  - autolens_workspace: feature/workspace-hygiene-sweep-1104
+  - autofit_workspace: feature/workspace-hygiene-sweep-1104
+  - HowToLens: feature/workspace-hygiene-sweep-1104
+  - HowToGalaxy: feature/workspace-hygiene-sweep-1104
+  - autoreduce_workspace: feature/workspace-hygiene-sweep-1104
+- prompt: active/workspace_hygiene_sweep_1104.md
+- tier: judge — merge mode: human /prm
+
 
 ## magnification-maps-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/818
