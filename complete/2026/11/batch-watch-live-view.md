@@ -1,3 +1,11 @@
+- epic: autonomous-orchestrators (pilot 4c follow-up; issue PyAutoBrain#575)
+- summary: `pyauto-brain batch watch --record <brief> [--once] [--interval N]` (PyAutoBrain#576, new `_watch.py`): a live, read-only terminal view of a running shift. It shows SHADOW/LIVE, time left until review-at, STOP and digest.posted; each task's state, pick reason, PR + CI health and re-dispatch count; budgets (live workers / max-workers, sessions / max-sessions, tokens, merges / merge-cap, crashes); and the last 5 ticks. Task wording is shared with the digest via the new `_digest.task_state` (`_line` delegates to it, so digest output is unchanged), plus live-only states that only a held lease shows. Reads only the watcher's own surface: one `claude agents --json` per refresh, only when live with real leases; `gh pr checks` cached per interval (minimum 30 s).
+- witness: PASS. `--once` on the real shadow slot 2026-11-05-am mid-shift (6 proposed picks with reasons, budgets, ticks) plus the live fixture (running / blocked / PR RUNNING / close-out running / merged unattended / parked / crashed), both pasted in the PR. tests/test_batch_watch.py 8 passed (byte-identical slot after --once; no slot created by looking; digest/watch wording parity); existing digest/shadow/close-out tests unchanged; Brain 1548 passed, 1 skipped; tenant firewall OK.
+- note: run from a task worktree, the default state home resolves under that worktree's own `-wt` root (same as `batch digest`), so pass `--home ~/Code/PyAutoLabs-wt/.orchestrator` there; from the canonical checkout the default is right.
+- heart: YELLOW (workspace smoke / autofit_test reds, validation timeout, other sessions' dirty checkouts) acknowledged by the human at ship; glance tier, in-turn merge.
+
+## Original prompt
+
 # `batch watch`: a live terminal view of a running shift
 
 Type: feature

@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2122 records across 11 buckets.
+2123 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -129,6 +129,7 @@ markers; everything below GENERATED is rebuilt.
 - [autonomous-orchestrators-p3d](2026/11/autonomous-orchestrators-p3d.md) — phase 3d of 3a–3d — closes phase 3; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [autonomous-orchestrators-p4a](2026/11/autonomous-orchestrators-p4a.md) — phase 4a of 4a–4c; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [autonomous-orchestrators-p4b](2026/11/autonomous-orchestrators-p4b.md) — phase 4b of 4a–4c; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
+- [batch-watch-live-view](2026/11/batch-watch-live-view.md) — pilot 4c follow-up; issue PyAutoBrain#575
 - [chapter2-continuation](2026/11/chapter2-continuation.md) — All continuation scope merged: Tutorials 5 and 6, optional speed and runnable model_centred prior passing, sum…
 - [cloud-validation-rehearsal-clock-skew](2026/11/cloud-validation-rehearsal-clock-skew.md)
 - [glance-tier-ruling](2026/11/glance-tier-ruling.md) — prerequisite for phase 4 unattended merges; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
