@@ -2,6 +2,7 @@
 
 **Contents**
 
+- [cti-release-train-wiring](#cti-release-train-wiring)
 - [isothermal-ell-sph-oversampling-at-the-cusp](#isothermal-ell-sph-oversampling-at-the-cusp)
 - [remote-mcp-deployment-tiers](#remote-mcp-deployment-tiers)
 - [samples-parameter-paths](#samples-parameter-paths)
@@ -13,6 +14,24 @@
 - [point-plots-yaml-keys-assistant](#point-plots-yaml-keys-assistant)
 
 <!-- toc:end -->
+
+## cti-release-train-wiring
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/332
+- planned: 2026-11-04
+- classification: both (organs: PyAutoNerves library + PyAutoHands/PyAutoBrain/PyAutoHeart/PyAutoMind; workspace: autocti_workspace)
+- suggested-branch: feature/cti-release-train-wiring
+- blocked-by: generate-converter-preflight (using PyAutoHands; PR PyAutoHands#331 green+CLEAN, awaits human /prm; it touches generate.py + build_util.py, which this task also edits)
+- affected-repos:
+  - PyAutoNerves
+  - PyAutoHands
+  - PyAutoBrain
+  - PyAutoHeart
+  - PyAutoMind
+  - autocti_workspace
+- prompt: active/cti_release_train_wiring.md
+- epic: cti-upkeep (phase 1)
+- tier: judge — merge mode: human /prm
+- plan: APPROVED by human 2026-11-04 incl. TestPyPI rehearsal from the Hands branch before any merge; rulings: Colab arcticpy = run Heart install_arcticpy.sh (single pin home); human confirmed the PYPI token covers autocti
 
 ## isothermal-ell-sph-oversampling-at-the-cusp
 - status: planned — NOT yet a prompt file; file one via `/intake` before starting

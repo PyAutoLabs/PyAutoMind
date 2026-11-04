@@ -19,6 +19,7 @@ Unattended: never
 Epic: cti-upkeep
 Phase: 1
 Filed: 2026-07-17 (backfilled from git)
+Issued: 2026-11-04
 
 Follow-up to the CTI resurrection epic (Phases 0-5; workspace_test + Heart
 polling shipped 2026-07-17). Wire autocti into the release train and produce
