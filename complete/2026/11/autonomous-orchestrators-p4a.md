@@ -1,3 +1,13 @@
+- epic: autonomous-orchestrators (phase 4a of 4a–4c; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md)
+- summary: shadow shifts + the pilot ledger. PyAutoBrain#571: `shadow: yes` (`_brief.is_shadow`, checked yes|no) makes `_tick_locked` run the plan and `_propose` record proposals (prompt, tier, pick reason, `proposed: true`) up to max-sessions — no lease, no worker, no session counted; the digest marks them `proposed (shadow)` and asks no packet; `finish_shift` appends one `batches/pilot/pilot.md` row (`_digest.pilot_row`; human cells `?`) in the digest's Mind commit, and now returns at once when `digest.posted` exists (a second call used to re-append the digest). PyAutoMind#532: `batches/pilot/pilot.md` (header + who writes what) and the `shadow:` key in batches/AGENTS.md.
+- decision: ledger at batches/pilot/pilot.md, not batches/pilot.md — every batches/*.md is read as a record (human, 2026-11-04).
+- witness: tests/test_orchestrator_shadow.py 9 passed (control: shadow branch off → 6 fail), incl. real-git exactly-one pilot row on Mind main; 3d digest tests 23 unchanged; Brain 1521 (+2 pre-existing test_prompt_budget failures, same on main); Mind 712; tenant firewall OK.
+- merge: Mind#532 by /prm; Brain#571 by the human in the GitHub UI 2026-11-04T10:04Z after the API merge path returned repeated GitHub server errors (GraphQL "Something went wrong", 502, REST "merge already in progress").
+- next: 4b unattended glance close-out + stage-2 Shadow rows.
+- heart: YELLOW (autofit_test MultiStartResumeNaNCounters.py timeout; no release rehearsal) acknowledged by the human at ship; judge tier.
+
+## Original prompt
+
 # Autonomous orchestrators phase 4a: shadow shifts + the pilot ledger (`batches/pilot.md`)
 
 Type: feature

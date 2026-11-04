@@ -315,3 +315,6 @@ work per human review-minute above the shadow-shift baseline.
   close-out + stage-2 Shadow rows) → 4c (the pilot run, ≥ 6 shifts), chained by Blocked-by; prompts
   `draft/feature/pyautobrain/autonomous_orchestrators_p4{a_shadow_shifts,b_unattended_closeout,c_pilot_run}.md`
   (agent proposal, human approved filing). Next: 4a.
+- 2026-11-04 — **phase 4a COMPLETE** (PyAutoMind#532, PyAutoBrain#571; record
+  `complete/2026/11/autonomous-orchestrators-p4a.md`): `shadow: yes` shifts propose without spawning;
+  `batches/pilot/pilot.md` gains one row per shift. Next: 4b, unblocked.
