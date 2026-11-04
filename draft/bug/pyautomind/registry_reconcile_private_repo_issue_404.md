@@ -1,7 +1,7 @@
 # Mind Registry Reconcile red daily: workflow token cannot read a private-repo issue
 
 Type: bug
-Target: organs
+Target: pyautomind
 Repos:
 - PyAutoMind
 Difficulty: small

@@ -1,7 +1,7 @@
 # hygiene tidy recommends deleting branches of live, claimed tasks
 
 Type: bug
-Target: organs
+Target: pyautobrain
 Repos:
 - PyAutoBrain
 Difficulty: small

@@ -1,7 +1,7 @@
 # clean_slate.sh --packaging silently finds nothing on the grouped repo layout
 
 Type: bug
-Target: organs
+Target: pyautobrain
 Repos:
 - PyAutoBrain
 Difficulty: small
