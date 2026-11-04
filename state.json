@@ -3,22 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 9 in flight",
-  "updated": "2026-11-04T21:25:47Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 7 in flight",
+  "updated": "2026-11-04T21:43:22Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "autohands generate: missing ipynb-py-convert deletes start_here.ipynb and leaves temp.py \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoHands/issues/330",
-      "prompt": "Use the start-dev skill. active/generate_missing_converter_deletes_start_here.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "hygiene extras crashes on Python 3.10 (no tomllib) \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/issues/581",
-      "prompt": "Use the start-dev skill. active/hygiene_extras_tomllib_py310.md"
-    },
     {
       "severity": "yellow",
       "text": "Issued: 2026-11-02 \u2014 workspace-shipped, awaiting-merge (judge \u2192 human /prm; wiki-currency waits on a PyAutoFit release)",
@@ -126,6 +114,18 @@
       "text": "pick: Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md",
       "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md",
+      "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: The latent smoke's empty-block assertion names one cause unconditionally \u2014 echo\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md",
+      "prompt": "Use the start-dev skill. draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md"
     }
   ]
 }

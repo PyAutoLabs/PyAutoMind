@@ -1,3 +1,12 @@
+`autohands generate` deleted the tracked root `start_here*.ipynb` before shelling out to `ipynb-py-convert`, so a
+missing converter (absent from ~/venv/PyAuto313) failed mid-run with start_here.ipynb deleted and temp.py stranded
+(hit 3 workspaces 2026-11-04). Fixed in PyAutoHands#331 (merged 2026-11-04): converter preflight right after the
+unknown-project guard ("Nothing was modified"), plus a non-fatal warning when the assistant checkout that stamps
+Colab Gemini context is behind origin/main (local refs only). Regression test fails on the old generate.py.
+Not done: ipynb-py-convert is still not installed in ~/venv/PyAuto313 (environment, not code) — the guard now says so.
+
+## Original prompt
+
 # autohands generate: missing ipynb-py-convert deletes start_here.ipynb and leaves temp.py
 
 Type: bug

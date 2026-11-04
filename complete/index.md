@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2130 records across 11 buckets.
+2132 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -134,6 +134,7 @@ markers; everything below GENERATED is rebuilt.
 - [chapter2-continuation](2026/11/chapter2-continuation.md) — All continuation scope merged: Tutorials 5 and 6, optional speed and runnable model_centred prior passing, sum…
 - [cloud-validation-rehearsal-clock-skew](2026/11/cloud-validation-rehearsal-clock-skew.md)
 - [cti-likelihood-pins](2026/11/cti-likelihood-pins.md) — cti-upkeep phase 0b
+- [generate-converter-preflight](2026/11/generate-converter-preflight.md)
 - [glance-tier-ruling](2026/11/glance-tier-ruling.md) — prerequisite for phase 4 unattended merges; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [gradient-campaign-impact](2026/11/gradient-campaign-impact.md) — human-requested assessment of whether the two PyAutoArray#671 defects affected the likelihood-lifecycle phase-…
 - [howto-chapter2-format](2026/11/howto-chapter2-format.md) — Restored descriptive contents for Lens lessons 1–4 and complete ordered contents for Galaxy lessons 1–6, corre…
@@ -143,6 +144,7 @@ markers; everything below GENERATED is rebuilt.
 - [howtolens-ch3-approved](2026/11/howtolens-ch3-approved.md) — Implemented all 66 approved Chapter 3 prose blocks, restored Fit Problems and introductory positivity/mapping-…
 - [howtolens-chapter2](2026/11/howtolens-chapter2.md) — Applied approved tutorials 1–4, optional Prodigy introduction, notebook generation and navigation. Later Chapt…
 - [hpc-campaign-p5a-assistant](2026/11/hpc-campaign-p5a-assistant.md) — phase 5a; ledger draft/research/autofit/hpc_campaign_epic.md
+- [hygiene-extras-tomllib](2026/11/hygiene-extras-tomllib.md)
 - [latest-per-test-tie](2026/11/latest-per-test-tie.md) — test_autofit/results/test_identity.py::test_latest_per_keeps_the_latest_sibling flaked (main red at 963ff296a,
 - [likelihood-lifecycle-p3-day-zero-pages](2026/11/likelihood-lifecycle-p3-day-zero-pages.md)
 - [likelihood-lifecycle-p3-day-zero-stamp](2026/11/likelihood-lifecycle-p3-day-zero-stamp.md)
