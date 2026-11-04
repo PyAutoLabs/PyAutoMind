@@ -1,3 +1,16 @@
+## howtogalaxy-ch3-parity
+- issue: https://github.com/PyAutoLabs/HowToGalaxy/issues/101
+- completed: 2026-11-04
+- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/102
+- merge: 2d873b8af0a97f3ac5ddd26f8d09c51ba2153468
+- summary: Ported the approved HowToLens Chapter 3 teaching improvements to directly observed galaxies: Goldilocks/log-evidence selection, mapping support and positivity, Fit Problems, and a combined Adaptive Reconstruction lesson. Preserved the original combined MGE/pixelization model-fit executable flow as Tutorial 5. Regenerated notebooks and navigation.
+- validation: All eight GitHub jobs passed on 5d98c61, including Python 3.12 and 3.13 smoke; all 30 local executable smoke scripts passed. Independent review CLEAN with claim dispositions. Notebook schema/narrative parity/contents, API, strict declarations, navigation/catalogue determinism and terminal-completeness checks passed.
+- limits: Full-size 1/3/4/5 passed. Full-size Tutorial 2 was terminated with SIGTERM/143 during its inherited fine-mesh comparison after the revised evidence section completed; its complete capped smoke passes. Nonlinear samplers use test mode 2, so posterior convergence is not validated.
+- review-bundle: /mnt/c/Users/Jammy/Workspace/Science/scratch/howtogalaxy_chapter3_2026-11-04/index.html
+- merge-authority: Explicit human prm; no release or CI override. Heart at shipping was YELLOW for the previously acknowledged AutoFit workspace timeout, with a stale release-rehearsal gap.
+
+## Original prompt
+
 # Bring HowToGalaxy Chapter 3 up to the approved HowToLens teaching standard
 
 Type: docs
