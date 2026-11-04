@@ -1,3 +1,17 @@
+# MultiStartResumeNaNCounters uses a normal update cadence (2 → 100)
+
+The Heart release finding `release:361c87850b823009` came from `autofit_workspace_test/scripts/searches/MultiStartResumeNaNCounters.py` timing out at the 300 s Workspace Smoke cap. Its runtime crept from 164 s (10-16) to 225 s (10-26) and then hit the cap (run 41432188469, 11-02).
+
+The cause was the script's `iterations_per_full_update=2`. That forced about 200 full updates per child search, each writing the samples and summary and rendering 9 PNGs. The human ruled that 2 is an unrealistic value chosen only to force a mid-run checkpoint: fix the script, not the library. The proposed MultiStart `checkpoint_interval` library change was dropped.
+
+At cadence 100 the script passes locally in 46 s. It kills the search at step 100 with both NaN counters non-zero, and the resumed run matches the uninterrupted one exactly (142 steps; 403 value-NaN, 9 grad-NaN lane-steps). Cadence 50 was also measured: it passes in 54 s but has grad-NaN 0 at the kill.
+
+- Issue: https://github.com/PyAutoLabs/autofit_workspace_test/issues/117
+- PR: https://github.com/PyAutoLabs/autofit_workspace_test/pull/118 (merged 400dba8, tier judge, human /prm)
+- Follow-up done in the same session: Workspace Smoke dispatched to clear the Heart finding.
+
+## Original prompt
+
 # MultiStartResumeNaNCounters.py creeps past the 300s smoke cap (per-update plotting cost)
 
 Type: bug
