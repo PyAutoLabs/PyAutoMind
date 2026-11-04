@@ -16,19 +16,6 @@
 - tier: judge — merge mode: human /prm (Nerves → Hands/Brain/Heart/Mind → autocti_workspace)
 - plan: APPROVED 2026-11-04 incl. TestPyPI rehearsal from the Hands branch before any merge; Colab arcticpy = run Heart install_arcticpy.sh; human confirmed PYPI token covers autocti
 
-## hygiene-refs-false-positives
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/583
-- issued: 2026-11-04
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/hygiene-refs-false-positives
-- repos:
-  - PyAutoBrain: feature/hygiene-refs-false-positives
-- prompt: active/hygiene_refs_false_positives_cross_repo_and_runtime.md
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/584
-- tier: glance — merge mode: human /prm
-
-
 ## magnification-maps-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/818
 - issued: 2026-11-02

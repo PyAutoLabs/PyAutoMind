@@ -520,7 +520,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 74 (stage 1: 74, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
+Count toward 20: 75 (stage 1: 75, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -623,6 +623,7 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-11-04 | cti-likelihood-pins (autocti_workspace_test#25) | glance | tests n/a (workspace) / smoke 5/5 local + CI 3.12+3.13 / review none / heart GREEN / witness PASS | merged-unchanged | 1 |
 | 2026-11-04 | generate-converter-preflight (PyAutoHands#331) | glance | tests 587p (4 pre-existing tombstone fails on main) / smoke n/a (Hands organ) / review none / heart STALE / witness PASS | merged-unchanged | 1 |
 | 2026-11-04 | hygiene-extras-tomllib (PyAutoBrain#582) | glance | tests 86p hygiene / smoke n/a (Brain organ) / review none / heart STALE / witness PASS | merged-unchanged | 1 |
+| 2026-11-04 | hygiene-refs-false-positives (PyAutoBrain#584) | glance | tests 88p hygiene / smoke n/a (Brain organ) / review none / heart STALE / witness PASS | merged-unchanged | 1 |
 
 ## Unattended `glance` sub-window (stage 2) — opened 2026-11-04
 

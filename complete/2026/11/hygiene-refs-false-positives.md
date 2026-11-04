@@ -1,3 +1,11 @@
+`pyauto-brain hygiene refs` reported 16 false positives out of 19 in the 2026-11-04 sweep. Fixed in PyAutoBrain#584
+(merged 2026-11-04): a reference dead in its own repo is retried in the HowTo course's companion workspace (derived by
+the HowTo<Name> -> auto<name>_workspace convention, so the tenant firewall stays clean) and in any sibling named on the
+same line; `files`, `cache`, `cache_root`, `work` join RUNTIME_DIRECTORIES; `notebooks` is unresolvable where the
+checkout does not commit it. A path dead everywhere is still a finding. Live scan 16 → 0; 88 hygiene tests pass.
+
+## Original prompt
+
 # hygiene refs: 16/19 findings are false positives (sibling-repo and runtime paths)
 
 Type: bug
