@@ -104,10 +104,14 @@
 - issue: https://github.com/PyAutoLabs/HowToGalaxy/issues/101
 - issued: 2026-11-04
 - prompt: active/howtogalaxy-ch3-parity.md
-- status: workspace-dev
+- status: awaiting-merge
 - session: Codex, autonomous continuation of HowToLens Chapter 3 work
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howtogalaxy-ch3-parity
 - repos:
   - HowToGalaxy: feature/howtogalaxy-ch3-parity
 - approval: autonomous adaptation, regeneration, validation and open PR; human merge
 - heart-ack: same-conversation acknowledgement of workspace validation not passing (0 failed, 1 timeout, cloud#41432188469: autofit_test scripts/searches/MultiStartResumeNaNCounters.py); recheck reason set at shipping
+
+- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/102
+- validation: 30/30 canonical smoke; 30 notebook schemas/parity, contents/navigation/API/profile/catalogue checks; independent review CLEAN at 5d98c61. Full-size 1/3/4/5 pass; full-size 2 incomplete during inherited fine-mesh scan, capped 2 passes.
+- next: human /prm after CI; judge tier, decision-taken; no auto-merge or scheduled watcher

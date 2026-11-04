@@ -24,3 +24,17 @@ Audit current Chapter 3 against HowToLens PR #126. Transfer applicable evidence/
 ## Worktree
 /home/jammy/Code/PyAutoLabs/.worktrees/howtogalaxy-ch3-parity/HowToGalaxy
 Branch: feature/howtogalaxy-ch3-parity (base b6e4d2a).
+
+## PR-open handoff — 2026-11-04
+PR: https://github.com/PyAutoLabs/HowToGalaxy/pull/102
+Commit: 5d98c61491cd7f03486731a855089e1b11d87d06
+Status: awaiting human merge; judge tier, decision-taken. No scheduled monitoring.
+
+Applied the Goldilocks/log-evidence explanation, mapping support and positivity, Fit Problems and one adaptive lesson. Original Model Fit is Tutorial 5 with its executable AST preserved. All 30 canonical smoke scripts pass; 30 generated notebooks validate, all five Chapter 3 contents match, narrative parity/API/navigation/search-memory/strict declarations/catalogue determinism/completeness pass. Independent review CLEAN with claim dispositions.
+
+Full-size Tutorials 1, 3, 4 and 5 pass. New 3/4 captured 21/37 figures, with all coefficient scans evaluated. Full-size Tutorial 2 was terminated (SIGTERM/143, no Python traceback) during the inherited fine-mesh resolution comparison after the revised evidence section completed; capped Tutorial 2 passes completely. Nonlinear searches use mode 2 and do not establish convergence.
+
+Heart at shipping: YELLOW only for the same-conversation acknowledged AutoFit workspace timeout (cloud#41432188469, MultiStartResumeNaNCounters.py); current release rehearsal absent is a STALE gap. Canonical manifest check clean. Heart smoke does not register howtogalaxy, so its repository-owned CI runner ran in the isolated task venv with declared optional dependencies.
+
+Review bundle: /mnt/c/Users/Jammy/Workspace/Science/scratch/howtogalaxy_chapter3_2026-11-04/index.html
+Logs, validation report and independent review: task bundle review/; smoke JSON/Markdown: HowToGalaxy/test-results/.
