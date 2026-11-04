@@ -28,7 +28,7 @@
   - PyAutoHeart
   - PyAutoMind
   - autocti_workspace
-- prompt: active/cti_release_train_wiring.md
+- prompt: draft/release/autocti/cti_release_train_wiring.md (moves to active/ when the task starts)
 - epic: cti-upkeep (phase 1)
 - tier: judge — merge mode: human /prm
 - plan: APPROVED by human 2026-11-04 incl. TestPyPI rehearsal from the Hands branch before any merge; rulings: Colab arcticpy = run Heart install_arcticpy.sh (single pin home); human confirmed the PYPI token covers autocti

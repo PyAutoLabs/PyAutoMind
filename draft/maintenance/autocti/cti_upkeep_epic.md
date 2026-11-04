@@ -103,7 +103,7 @@ Library first; one issue per repo per phase; each phase routes through
    library PR or the phase 2 arcticpy bump. Lands before any library or
    arcticpy change (human, 2026-11-04).
 1. **Release-train wiring + first modern release** (member:
-   `active/cti_release_train_wiring.md`, PyAutoHands#332, human-required). Hands
+   `draft/release/autocti/cti_release_train_wiring.md`, PyAutoHands#332, human-required). Hands
    `LIB_PROJECTS` += PyAutoCTI; `release.yml` library checkouts, release notes,
    Slack and aggregate maps; `python_matrix.yml` unit + smoke legs;
    `pre_build.sh` `WORKSPACE_SPECS` rows for autocti_workspace (generate) and
@@ -216,7 +216,7 @@ Library first; one issue per repo per phase; each phase routes through
 ## Members
 
 - Phase 0: 0b DONE 2026-11-04 — `complete/2026/11/cti-likelihood-pins.md` (autocti_workspace_test#25)
-- Phase 1: `active/cti_release_train_wiring.md` — ISSUED 2026-11-04 PyAutoHands#332, plan approved; QUEUED in planned.md blocked-by generate-converter-preflight (PyAutoHands#331)
+- Phase 1: `draft/release/autocti/cti_release_train_wiring.md` — ISSUED 2026-11-04 PyAutoHands#332, plan approved; QUEUED in planned.md blocked-by generate-converter-preflight (PyAutoHands#331)
 - Phase 3: `draft/bug/autocti_workspace/dataset_1d_results_database_examples_drift.md`
 - Phase 5: `draft/bug/autocti_visualization/render_yml_blocked_until_pyautocti_release.md`,
   `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`,
