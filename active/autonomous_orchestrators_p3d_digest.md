@@ -10,6 +10,7 @@ Autonomy: human-required
 Priority: high
 Status: formalised
 Filed: 2026-11-03
+Issued: 2026-11-04
 Epic: autonomous-orchestrators
 Phase: 3
 Consequence: judge
