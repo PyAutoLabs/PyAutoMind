@@ -90,7 +90,7 @@
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/127
 - issued: 2026-11-04
 - prompt: active/tutorial-link-sweep.md
-- status: documentation exception approved; three additional worktrees validating; five existing PRs green
+- status: all eight PRs open, awaiting human /prm; seven green, PyAutoLens docs PR CI running at final snapshot
 - session: Codex; autonomous approved ecosystem docs sweep
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/tutorial-link-sweep
 - repos:
@@ -111,7 +111,14 @@
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/271
 - workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/128
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/617
-- validation: 570 notebook source/schema/inventory/context parity; 52-repo /1192-link overlaid audit clean; Galaxy assistant 84 tests; Lens smoke 44/44; independent review CLEAN
-- proposal-test-limit: Lens assistant full suite: 107 passed / 1 skipped then unchanged old-wheel fixture error; separate compatible subset294pass/2skip/1xfail
+- validation: 570 notebook source/schema/inventory/context parity; 52-repo / 1192-link audit clean across eight actual worktrees; Galaxy assistant 84 tests; Lens smoke 44/44; independent review CLEAN
+- proposal-test-limit: resolved in the required pinned 2026.9.27.2 environment; full assistant suite passes without fixture or version-guard changes
 - review-bundle: /mnt/c/Users/Jammy/Workspace/Science/scratch/tutorial_link_sweep_2026-11-04/index.html
 - completion: keep umbrella issue 127 open until all eight PRs handled; three remaining patches now applied only in isolated documentation worktrees; no automatic merge
+
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/694
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/819
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/178
+- merge-order: assistant #43 before Galaxy course #103 / workspace #271; assistant #178 before Lens course #128 / workspace #617; library docs #694 / #819 independent (no API dependency)
+- final-checks: Galaxy library 1465 passed / 1 skipped; Lens library 1021 passed / 1 xfailed; Lens assistant 305 passed / 3 skipped / 1 xfailed; docs builds and independent review CLEAN; 1192 course URLs resolve across 52 repos / 8 real worktrees
+- heart-final: STALE only, release validation incomplete: no rehearsal for current source
