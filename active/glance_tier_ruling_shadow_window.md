@@ -9,6 +9,7 @@ Difficulty: small
 Autonomy: human-required
 Priority: high
 Status: formalised
+Issued: 2026-11-04
 Filed: 2026-11-03
 Closes-when: the human returns verdicts on /mnt/c/Users/Jammy/Workspace/Science/scratch/shadow_window_audit_2026-11-03/audit.md
 Consequence: judge
