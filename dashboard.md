@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 21 |
-| [In flight](#in-flight) | 7 |
+| [In flight](#in-flight) | 8 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 300 |
+| [Backlog](#backlog) | 299 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -23,7 +23,7 @@
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 20
+**Highest priority** (filed as `high`) — showing 12 of 19
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -89,14 +89,6 @@ Use the start-dev skill. draft/maintenance/organs/reduce_session_token_load.md
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/pyautobrain/nightly_app_token_expires_during_stage3_watch.md">Nightly release driver dies at the 60-minute mark: the single App token…</a> — pyautobrain · medium · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautobrain/nightly_app_token_expires_during_stage3_watch.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md">Physical model check when speeding up smoke tests</a> — workspaces · medium · supervised · high</summary>
 
 ```
@@ -117,6 +109,14 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ```
 Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> — euclid · large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md
 ```
 
 </details>
@@ -1120,6 +1120,14 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
+<details><summary>📋 <a href="active/nightly_app_token_expires_during_stage3_watch.md">Nightly release driver dies at the 60-minute mark: the single App token…</a> — issued 2026-11-04</summary>
+
+```
+Use the start-dev skill. active/nightly_app_token_expires_during_stage3_watch.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/r2_pages_function_access.md">ECLIPSE site: serve R2 lens files through a Pages Function behind Cloudflare…</a> — issued 2026-10-29</summary>
 
 ```
@@ -1227,7 +1235,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 289 · local-dev 9
+Lanes: any 288 · local-dev 9
 
 <a id="human-review"></a>
 <details>
@@ -1278,7 +1286,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>bug</b> — 70</summary>
+<summary><b>bug</b> — 69</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1316,14 +1324,6 @@ Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_parti
 
 ```
 Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautobrain/nightly_app_token_expires_during_stage3_watch.md">Nightly release driver dies at the 60-minute mark: the single App token…</a> — pyautobrain · medium · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautobrain/nightly_app_token_expires_during_stage3_watch.md
 ```
 
 </details>
@@ -3080,7 +3080,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 |------|-------|------|
 | 2026-11-04 | filed | <a href="draft/bug/pyautobrain/hygiene_tidy_recommends_deleting_claimed_branches.md">hygiene tidy recommends deleting branches of live, claimed tasks</a> |
 | 2026-11-04 | filed | <a href="draft/bug/pyautobrain/clean_slate_packaging_grouped_layout.md">clean_slate.sh --packaging silently finds nothing on the grouped repo…</a> |
-| 2026-11-04 | filed | <a href="draft/bug/pyautobrain/nightly_app_token_expires_during_stage3_watch.md">Nightly release driver dies at the 60-minute mark: the single App…</a> |
+| 2026-11-04 | issued | <a href="active/nightly_app_token_expires_during_stage3_watch.md">Nightly release driver dies at the 60-minute mark: the single App…</a> |
 | 2026-11-04 | filed | <a href="draft/bug/pyautomind/registry_reconcile_private_repo_issue_404.md">Mind Registry Reconcile red daily: workflow token cannot read a…</a> |
 | 2026-11-04 | issued | <a href="active/autonomous_orchestrators_p4c_pilot_run.md">Autonomous orchestrators phase 4c: run the Dev orchestrator pilot…</a> |
 | 2026-11-03 | filed | <a href="draft/bug/pyautobrain/intake_classify_file_drops_declared_epic_phase.md">intake classify --file injects an unrelated Memory: line on…</a> |
@@ -3249,7 +3249,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-66 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+65 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3300,7 +3300,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md — unknown theme keyword(s): euclid, jax, latent`
 - `draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md — unknown theme keyword(s): euclid, hpc, catalogue`
 - `draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md — unknown theme keyword(s): euclid`
-- `draft/bug/pyautobrain/nightly_app_token_expires_during_stage3_watch.md — unknown theme keyword(s): release-validation, ci`
 - `draft/bug/pyautobrain/profiling_compile_drift_point_vs_point.md — unknown theme keyword(s): measurement-tools`
 - `draft/bug/pyautoheart/ral_venv_dependency_floor_drift.md — unknown theme keyword(s): hpc, dependencies, reproducibility`
 - `draft/bug/pyautomemory/arxiv_refs_swallows_every_api_error_silently.md — unknown theme keyword(s): ci, robustness`
