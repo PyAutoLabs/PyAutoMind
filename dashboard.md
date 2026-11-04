@@ -1120,7 +1120,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/optdeps_guard_and_latex_escapes.md">autolens_workspace: nufftax skip guard + raw docstrings for damaged LaTeX</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/618">issue #618</a> — issued 2026-11-04 — workspace-dev</summary>
+<details><summary>📋 <a href="active/optdeps_guard_and_latex_escapes.md">autolens_workspace: nufftax skip guard + raw docstrings for damaged LaTeX</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/618">issue #618</a> — issued 2026-11-04 — awaiting-merge</summary>
 
 ```
 Use the start-dev skill. active/optdeps_guard_and_latex_escapes.md

@@ -89,7 +89,9 @@
 ## alw-optdeps-escapes
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/618
 - issued: 2026-11-04
-- status: workspace-dev
+- status: awaiting-merge
+- pr: https://github.com/PyAutoLabs/autolens_workspace/pull/619
+- validation: smoke 44/44, targeted 3/3, pytest 3/3, missing-backend skip, notebook parity, hygiene and independent CLEAN review; Heart STALE (release rehearsal only)
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/alw-optdeps-escapes
 - repos:
   - autolens_workspace: feature/alw-optdeps-escapes

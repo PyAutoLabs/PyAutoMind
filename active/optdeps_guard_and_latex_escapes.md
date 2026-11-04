@@ -7,7 +7,7 @@ Repos:
 Difficulty: small
 Autonomy: supervised
 Priority: high
-Status: active
+Status: awaiting-merge
 Issued: 2026-11-04
 Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/618
 Consequence: judge
@@ -23,3 +23,6 @@ Regenerate the affected notebooks; never hand-edit `.ipynb` files.
 Validation: `pyauto-brain hygiene optdeps` and `hygiene escapes` report clean for autolens_workspace; the three scripts run under the smoke profile, and the datacube script skips cleanly with `nufftax` hidden.
 
 Unblocked 2026-11-04: the tutorial sweep and autolens_workspace#617 are merged; see `complete/2026/11/tutorial-link-sweep.md`. Start through start_dev, rechecking current claims. The two fixes above remain outstanding.
+
+PR: https://github.com/PyAutoLabs/autolens_workspace/pull/619
+Validated 2026-11-04: curated smoke 44/44, targeted scripts 3/3, pytest 3/3, missing-backend guard, notebook parity, hygiene and independent CLEAN review. Heart STALE solely for absent current-source release rehearsal. Awaiting human /prm.
