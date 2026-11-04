@@ -1,3 +1,14 @@
+## hygiene-extras-tomllib
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/581
+- issued: 2026-11-04
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/hygiene-extras-tomllib
+- repos:
+  - PyAutoBrain: feature/hygiene-extras-tomllib
+- prompt: active/hygiene_extras_tomllib_py310.md
+- tier: glance — merge mode: human /prm
+
 ## generate-converter-preflight
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/330
 - issued: 2026-11-04
