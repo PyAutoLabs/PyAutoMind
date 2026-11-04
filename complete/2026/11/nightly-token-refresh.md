@@ -6,7 +6,7 @@
 - Tests: 10 new (`tests/test_gh_app_token.py`, `tests/test_nightly_await.py`, fake-`gh` lean-PATH pattern); full Brain suite 1558 passed, 1 skipped on both CI legs.
 - Trap: the tenant firewall reds a NEW organ file that names the owner (`PyAutoLabs`) — even in tests. The owner is an input (`APP_OWNER`) set in the workflow beside the mint step's `owner:`; tests use a neutral owner.
 - Decision: the token request names the Variables permission `actions_variables` (the installation's own name, e0f88ca). Unverified against the API until the Witness runs; a 422 from the mint would show it.
-- Witness NOT yet run (needs a merged main): one manual `nightly-release.yml` dispatch with `dry_run=true` reaching `step 5 — readiness gate` with no `HTTP 401`. The nightly stays paused (`NIGHTLY_RELEASES=false`, set 2026-11-04 18:00 UTC by the human) until that passes; re-arm = set it `true`. The first green night releases the whole window since the 2026-10-22 anchor, as designed.
+- Witness PASSED 2026-11-04: manual `nightly-release.yml` dispatch `dry_run=true` on main (run 41889750490, 18:42→19:55 UTC): token refreshed at 19:27, Stage 3 watched to completion at 19:54, 0 × `HTTP 401`, step 5 reached, Heart GREEN 100 (release-ci), dry-run complete. The mint accepted `actions_variables`. The nightly stays paused (`NIGHTLY_RELEASES=false`) until the human re-arms it; the first green night releases the whole window since the 2026-10-22 anchor, as designed.
 
 ## Original prompt
 
