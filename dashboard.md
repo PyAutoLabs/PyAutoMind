@@ -1144,7 +1144,7 @@ Use the start-dev skill. active/sky_orientation_euclid_dr1_and_library.md
 
 </details>
 
-<details><summary>📋 <a href="active/tutorial-link-sweep.md">Align ecosystem documentation with the current HowToLens and HowToGalaxy courses</a> — <a href="https://github.com/PyAutoLabs/HowToLens/issues/127">issue #127</a> — issued 2026-11-04 — workspace-dev</summary>
+<details><summary>📋 <a href="active/tutorial-link-sweep.md">Align ecosystem documentation with the current HowToLens and HowToGalaxy courses</a> — <a href="https://github.com/PyAutoLabs/HowToLens/issues/127">issue #127</a> — issued 2026-11-04 — awaiting-merge for Galaxy PRs; Lens drafts blocked by canonical assistant claim; claimed-library docs queued — PRs: <a href="https://github.com/PyAutoLabs/autogalaxy_assistant/pull/43">autogalaxy_assistant#43</a>, <a href="https://github.com/PyAutoLabs/HowToGalaxy/pull/103">HowToGalaxy#103</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/271">autogalaxy_workspace#271</a>, <a href="https://github.com/PyAutoLabs/HowToLens/pull/128">HowToLens#128</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/617">autolens_workspace#617</a></summary>
 
 ```
 Use the start-dev skill. active/tutorial-link-sweep.md
@@ -1231,7 +1231,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 </details>
 
-<details><summary>📋 <b>tutorial-link-sweep-claimed</b> — <a href="https://github.com/PyAutoLabs/HowToLens/issues/127">issue #127</a> — filed 2026-11-04 — blocked by existing repo claims; proposal patches prepared by tutorial-link-sweep</summary>
+<details><summary>📋 <b>tutorial-link-sweep-claimed</b> — <a href="https://github.com/PyAutoLabs/HowToLens/issues/127">issue #127</a> — filed 2026-11-04 — blocked by existing repo claims; all three patches independently reviewed and ready; coordinated on PyAutoLens#818 and…</summary>
 
 ```
 Use the start-dev skill. active/tutorial-link-sweep.md
