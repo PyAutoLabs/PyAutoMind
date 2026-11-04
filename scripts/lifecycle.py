@@ -126,6 +126,10 @@ SHADOW_REOPENED = "2026-10-02"
 # Rows dated before this are the pre-`/prm` history: listed, never counted as
 # "the first row `/prm` appended".
 SHADOW_PRM_EPOCH = "2026-09-07"
+# The human ruled on the full window (PyAutoBrain AUTONOMY.md "The `glance`
+# Shadow-window ruling — 2026-11-04"); the count line cites it instead of
+# calling the decision due.
+SHADOW_RULED = "2026-11-04"
 SHADOW_COUNT_PREFIX = f"Count toward {SHADOW_TARGET}:"
 SHADOW_COUNT_ANCHOR = "One row per tier-`glance` candidate"
 
@@ -2936,9 +2940,12 @@ def shadow_count_line(rows: "list[list[str]]") -> str:
             f"closed {SHADOW_REOPENED}, and legacy): {uncounted}"
         )
     if len(graded) >= SHADOW_TARGET:
-        # Pre-registered size met: the line itself must say a human decision
-        # is due, so the full window cannot be read as quietly still open.
-        line += "; window reached — the pre-registered decision is due"
+        # Pre-registered size met: the line itself must say whether the human
+        # decision is still due, so a full window is never read as quietly open.
+        line += (
+            f"; window reached — ruled {SHADOW_RULED}: `{SHADOW_TIER}` granted, "
+            "narrowed (unattended merges count in the stage-2 sub-window below)"
+        )
     return line
 
 
