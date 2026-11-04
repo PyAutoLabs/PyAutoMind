@@ -311,3 +311,7 @@ work per human review-minute above the shadow-shift baseline.
   `complete/2026/11/autonomous-orchestrators-p3d.md`): the shift digest, written into the record
   through the one Mind writer and posted once (marker before the post). Next: phase 4 Dev pilot —
   prompt not yet filed; it must route unattended merges into the stage-2 sub-window table.
+- 2026-11-04 — **phase 4 SLICED** 4a (shadow shifts + `batches/pilot.md`) → 4b (unattended `glance`
+  close-out + stage-2 Shadow rows) → 4c (the pilot run, ≥ 6 shifts), chained by Blocked-by; prompts
+  `draft/feature/pyautobrain/autonomous_orchestrators_p4{a_shadow_shifts,b_unattended_closeout,c_pilot_run}.md`
+  (agent proposal, human approved filing). Next: 4a.
