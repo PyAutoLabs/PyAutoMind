@@ -132,6 +132,10 @@ SHADOW_PRM_EPOCH = "2026-09-07"
 SHADOW_RULED = "2026-11-04"
 SHADOW_COUNT_PREFIX = f"Count toward {SHADOW_TARGET}:"
 SHADOW_COUNT_ANCHOR = "One row per tier-`glance` candidate"
+# The unattended (watcher-started) sub-window the 2026-11-04 ruling opened. Its
+# rows are written by the shift watcher through the one Mind writer; this
+# heading is the anchor both it and `shadow-row --stage2` insert under.
+STAGE2_HEADING = "## Unattended `glance` sub-window (stage 2)"
 
 H2_RE = re.compile(r"^##\s+(.+?)\s*$")
 
@@ -2992,6 +2996,34 @@ def shadow_apply(text: str, row: str) -> str:
     return "\n".join(lines) + "\n"
 
 
+def _stage2_span(lines: "list[str]") -> "tuple[int, int]":
+    start = next((i for i, ln in enumerate(lines) if ln.startswith(STAGE2_HEADING)), None)
+    if start is None:
+        raise ValueError(f"no {STAGE2_HEADING!r} heading in the ledger")
+    end = next((j for j in range(start + 1, len(lines)) if lines[j].startswith("## ")),
+               len(lines))
+    return start, end
+
+
+def stage2_rows(text: str) -> "list[list[str]]":
+    """The data rows of the stage-2 table (header and separator skipped)."""
+    lines = text.splitlines()
+    start, end = _stage2_span(lines)
+    table = [ln for ln in lines[start:end] if ln.startswith("|")]
+    return [_md_cells(ln) for ln in table[2:]]
+
+
+def stage2_apply(text: str, row: str) -> str:
+    """Append `row` under the stage-2 table, leaving whatever follows in place."""
+    lines = text.splitlines()
+    start, end = _stage2_span(lines)
+    rows = [i for i in range(start, end) if lines[i].startswith("|")]
+    if len(rows) < 2:
+        raise ValueError(f"no table under {STAGE2_HEADING!r}")
+    lines.insert(rows[-1] + 1, row)
+    return "\n".join(lines) + "\n"
+
+
 def cmd_shadow_row(args) -> int:
     """Append one tier-`glance` row to the shadow window (the close-out hook).
 
@@ -3006,6 +3038,26 @@ def cmd_shadow_row(args) -> int:
     text = log.read_text(encoding="utf-8")
 
     date = args.date or _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%d")
+    if getattr(args, "stage2", False):
+        if not getattr(args, "brief", None):
+            print("shadow-row: --stage2 needs --brief <slot>", file=sys.stderr)
+            return 2
+        row = "| " + " | ".join(
+            _shadow_cell(c) for c in (date, args.task, args.brief, args.gate, args.action)
+        ) + " |"
+        try:
+            updated = stage2_apply(text, row)
+        except ValueError as exc:
+            print(f"shadow-row: {exc}", file=sys.stderr)
+            return 2
+        print(row)
+        print(f"stage-2 rows: {len(stage2_rows(updated))} (the first 10 decide the sub-rule)")
+        if not args.apply:
+            print("shadow-row: dry run — nothing written (use --apply)")
+            return 0
+        log.write_text(updated, encoding="utf-8")
+        print(f"shadow-row: appended to the stage-2 table in {log}")
+        return 0
     row = (
         "| "
         + " | ".join(
@@ -3459,6 +3511,14 @@ def main() -> int:
         help="1 = four-leg gate + witness; 2 = plus the "
         "independent-model adversary leg",
     )
+    sr.add_argument(
+        "--stage2",
+        action="store_true",
+        help="write to the unattended stage-2 sub-window table instead "
+        "(columns: date, task, brief, gate, human action); --tier and --stage "
+        "are ignored",
+    )
+    sr.add_argument("--brief", help="--stage2: the shift's brief slot")
     sr.add_argument(
         "--apply", action="store_true", help="write the row (default: dry run)"
     )
