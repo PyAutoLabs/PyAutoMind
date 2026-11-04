@@ -107,9 +107,12 @@
 - issue: https://github.com/PyAutoLabs/autofit_workspace_test/issues/117
 - issued: 2026-11-04
 - prompt: active/multistart_resume_nan_counters_timeout.md
-- status: workspace-dev
+- status: awaiting-merge
 - session: claude-code desktop (WSL), /health dashboard review session
 - worktree: ~/Code/PyAutoLabs-wt/multistart-resume-cadence
 - repos:
   - autofit_workspace_test: feature/multistart-resume-cadence
 - tier: judge — merge mode: human /prm
+- pr: https://github.com/PyAutoLabs/autofit_workspace_test/pull/118
+- heart-ack: same-conversation acknowledgement (human approved this fix) of: workspace validation not passing (0 failed, 1 timeout, cloud#41432188469: autofit_test scripts/searches/MultiStartResumeNaNCounters.py); release validation incomplete: no rehearsal for current source
+- after-merge: dispatch PyAutoHeart workspace-smoke.yml (weekly cron is Mon 03:00) then heart tick+publish to clear release:361c87850b823009
