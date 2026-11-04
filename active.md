@@ -85,3 +85,20 @@
 - epic: autonomous-orchestrators (phase 4c of 4a–4c)
 - pre-check: open shadow tick on system python3.10, minimal env — 6 notify proposals, 0 spawns (2026-11-04)
 - tier: judge — merge mode: human /prm
+
+## tutorial-link-sweep
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/127
+- issued: 2026-11-04
+- prompt: active/tutorial-link-sweep.md
+- status: workspace-dev
+- session: Codex; autonomous approved ecosystem docs sweep
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/tutorial-link-sweep
+- repos:
+  - autogalaxy_assistant: feature/tutorial-link-sweep
+  - HowToGalaxy: feature/tutorial-link-sweep
+  - HowToLens: feature/tutorial-link-sweep
+  - autogalaxy_workspace: feature/tutorial-link-sweep
+  - autolens_workspace: feature/tutorial-link-sweep
+- approval: autonomous source fixes, notebook regeneration, checks and open PRs; judge, human /prm
+- deferred-owners: PyAutoLens/PyAutoGalaxy (magnification-maps-wiring); autolens_assistant (results-library-p5a-assistant, PR177); prepare proposals without touching claims
+- heart-ack: same-conversation acknowledged AutoFit workspace timeout; fresh shipping reason set required
