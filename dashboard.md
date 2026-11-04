@@ -1046,7 +1046,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/autonomous_orchestrators_p4a_shadow_shifts.md">Autonomous orchestrators phase 4a: shadow shifts + the pilot ledger (<code>batches/pilot.md</code>)</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/570">issue #570</a> — issued 2026-11-04 — library-dev</summary>
+<details><summary>📋 <a href="active/autonomous_orchestrators_p4a_shadow_shifts.md">Autonomous orchestrators phase 4a: shadow shifts + the pilot ledger (<code>batches/pilot.md</code>)</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/570">issue #570</a> — issued 2026-11-04 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/532">PyAutoMind#532</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/571">PyAutoBrain#571</a></summary>
 
 ```
 Use the start-dev skill. active/autonomous_orchestrators_p4a_shadow_shifts.md
