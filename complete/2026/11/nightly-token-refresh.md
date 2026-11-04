@@ -1,3 +1,15 @@
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/577
+- completed: 2026-11-04
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/578
+- Found in the 2026-11-04 release check-in: every scheduled nightly from 10-24 to 11-04 stopped at the 60-minute mark with `HTTP 401: Bad credentials` inside the Stage 3 `gh run watch`, paging "Stage 3 failed" over Heart integrate runs that had passed. Cause: 6f5f95e (2026-10-23) moved the driver from a PAT to one App installation token (60-minute life) for a 1.5–4.5 h job. The policy page already said "mint it right before a long loop, not at the top of the job".
+- Fix (PyAutoBrain only, no PAT, same four permissions): `bin/gh_app_token.py` mints a fresh installation token (stdlib + `openssl`; prints only the token); `agents/conductors/release/_nightly_lib.sh` adds `refresh_gh_token` (re-mint at 45 min; no-op without App credentials) and `await_run` (poll, refresh as it goes, return 4 after five failed reads); `nightly.sh` refreshes before every dispatch, download, read and the anchor write, and a lost watch pages as a driver error (exit 1), never a stage failure; `nightly-release.yml` passes `APP_CLIENT_ID`/`APP_PRIVATE_KEY`/`APP_OWNER` to the driver step for re-minting only.
+- Tests: 10 new (`tests/test_gh_app_token.py`, `tests/test_nightly_await.py`, fake-`gh` lean-PATH pattern); full Brain suite 1558 passed, 1 skipped on both CI legs.
+- Trap: the tenant firewall reds a NEW organ file that names the owner (`PyAutoLabs`) — even in tests. The owner is an input (`APP_OWNER`) set in the workflow beside the mint step's `owner:`; tests use a neutral owner.
+- Decision: the token request names the Variables permission `actions_variables` (the installation's own name, e0f88ca). Unverified against the API until the Witness runs; a 422 from the mint would show it.
+- Witness NOT yet run (needs a merged main): one manual `nightly-release.yml` dispatch with `dry_run=true` reaching `step 5 — readiness gate` with no `HTTP 401`. The nightly stays paused (`NIGHTLY_RELEASES=false`, set 2026-11-04 18:00 UTC by the human) until that passes; re-arm = set it `true`. The first green night releases the whole window since the 2026-10-22 anchor, as designed.
+
+## Original prompt
+
 # Nightly release driver dies at the 60-minute mark: the single App token expires during the Stage 3 `gh run watch`, and the 401 is paged as "Stage 3 failed"
 
 Type: bug
