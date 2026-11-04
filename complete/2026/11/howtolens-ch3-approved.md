@@ -8,6 +8,10 @@
 ### Validation and lessons
 Canonical local smoke covered all 41 runnable scripts. Search stages used sampler bypass with actual likelihood evaluation; convergence was not tested. Memory-conscious scans retain scalar evidence and preferred fits, and Hilbert adapt images preserve Array2D interfaces. Full-size teaching experiments are required for the compact-source evidence scans: declare ENV: full_datasets in developer-only __Env__ docstrings. Strict CI rejects equivalent profile overrides; run validate_env_profiles.py --strict-declarations locally. Notebook generation strips the developer-only declarations.
 
+### Cleanup
+
+Human authorized deletion after merge. Removed the task worktree, generated datasets/test outputs and local feature branch; the separate scratch review bundle remains.
+
 ### Review bundle
 Preserved notebooks, HTML previews, executed figures and reports: C:\Users\Jammy\Workspace\Science\scratch\howtolens_chapter3_2026-11-04. Detailed early-content and independent fidelity audits are included. No library edits or pending-release obligations.
 
