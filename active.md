@@ -90,7 +90,10 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/566
 - issued: 2026-11-04
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/529
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/567
+- heart-ack: YELLOW — workspace validation 1 timeout (autofit_test scripts/searches/MultiStartResumeNaNCounters.py, cloud#41432188469); release validation incomplete (no rehearsal for current source) — human 2026-11-04
 - worktree: ~/Code/PyAutoLabs-wt/glance-tier-ruling
 - repos:
   - PyAutoBrain: feature/glance-tier-ruling
