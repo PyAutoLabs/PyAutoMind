@@ -1,0 +1,23 @@
+# autolens_workspace: nufftax skip guard + raw docstrings for damaged LaTeX
+
+Type: refactor
+Target: autolens_workspace
+Repos:
+- autolens_workspace
+Difficulty: small
+Autonomy: supervised
+Priority: high
+Status: formalised
+Consequence: judge
+Filed: 2026-11-04 (pre-rehearsal /hygiene sweep; human: "go with the recommendation")
+
+Two hygiene findings in @autolens_workspace, bundled because they touch the same repo and are each a few lines:
+
+1. **optdeps.** `@autolens_workspace/scripts/interferometer/features/datacube/modeling_array_free.py` is smoke-listed and builds a `TransformerNUFFT` (needs `nufftax`) with no `importlib.util.find_spec("nufftax")` skip guard. A CI or release matrix leg without the optional extras fails on it. Add the standard guard, mirroring `@autolens_workspace/scripts/interferometer/modeling.py` (around line 81: print "Skipping ..." then `sys.exit(0)`).
+2. **escapes.** `@autolens_workspace/scripts/cluster/likelihood_function.py` (`\m` near line 554) and `@autolens_workspace/scripts/group/likelihood_function.py` (`\c` near line 36, plus one SILENT `\t`/`\f` corruption that raises no warning) have LaTeX broken by Python string escapes. The fix is an `r` prefix on the enclosing docstring. Do NOT double the backslashes, which would leak into the rendered notebook prose. Get the exact list from `pyauto-brain hygiene escapes`.
+
+Regenerate the affected notebooks; never hand-edit `.ipynb` files.
+
+Validation: `pyauto-brain hygiene optdeps` and `hygiene escapes` report clean for autolens_workspace; the three scripts run under the smoke profile, and the datacube script skips cleanly with `nufftax` hidden.
+
+Blocked: autolens_workspace is claimed by Codex task `tutorial-link-sweep` (PR autolens_workspace#617 regenerates `notebooks/cluster/likelihood_function.ipynb` too). Start after that claim releases.

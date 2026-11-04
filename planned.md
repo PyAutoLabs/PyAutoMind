@@ -127,3 +127,11 @@
 - parent: complete/2026/10/point-plots-yaml-keys.md (HowToLens half merged 2026-10-22, HowToLens#99); no separate prompt file
 - scope: same `point_dataset` / `fit_point_dataset` block edit in `autolens_assistant/config/visualize/plots.yaml` as HowToLens; ship on its own branch `feature/point-plots-yaml-keys` once the claim clears
 
+## alw-optdeps-escapes
+- filed: 2026-11-04
+- prompt: draft/refactor/autolens_workspace/optdeps_guard_and_latex_escapes.md
+- status: blocked by existing repo claim; human-approved (pre-rehearsal hygiene sweep); start_dev once the claim releases
+- blocked-by: tutorial-link-sweep (autolens_workspace, open PR autolens_workspace#617 touches notebooks/cluster/likelihood_function.ipynb)
+- scope: nufftax skip guard on interferometer/features/datacube/modeling_array_free.py + r-prefix docstrings in cluster/ and group/ likelihood_function.py
+- repos:
+  - autolens_workspace: feature/alw-optdeps-escapes
