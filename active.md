@@ -65,11 +65,17 @@
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/123
 - issued: 2026-11-02
 - session: Codex 01a19c86-3bab-7183-a1e1-a04ff3e80c7f
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howtolens-ch2-explanations
 - repos:
   - HowToLens: feature/howtolens-ch2-explanations
 - approval: five prose/code blocks approved 2026-11-02; no merge authority
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/124
+- heart-ack: YELLOW acknowledged 2026-11-04: "yes go ahead, push chapter 2 and open the PR despite those warnings"
+  - workspace validation not passing (0 failed, 1 timeout, cloud#41432188469: autofit_test scripts/searches/MultiStartResumeNaNCounters.py)
+  - release validation incomplete: no rehearsal for current source
+- validation: full Heart-managed HowToLens smoke 42 passed; generation 43 passed; controlled prior transfer and full-resolution checks passed
+- head: 1ad71f3f9cd57d281f3680458a40b6d11d035822; no merge authority
 
 ## gradient-correctness-sweep
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/517
