@@ -11,7 +11,7 @@
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 21 |
 | [In flight](#in-flight) | 9 |
-| [Planned](#planned) | 9 |
+| [Planned](#planned) | 10 |
 | [Backlog](#backlog) | 295 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
@@ -1096,7 +1096,7 @@ Use the start-dev skill. active/gradient_correctness_sweep.md
 
 </details>
 
-<details><summary>📋 <a href="active/hygiene_refs_false_positives_cross_repo_and_runtime.md">hygiene refs: 16/19 findings are false positives (sibling-repo and runtime paths)</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/583">issue #583</a> — issued 2026-11-04 — awaiting-merge</summary>
+<details><summary>📋 <a href="active/hygiene_refs_false_positives_cross_repo_and_runtime.md">hygiene refs: 16/19 findings are false positives (sibling-repo and runtime paths)</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/583">issue #583</a> — issued 2026-11-04 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/584">PyAutoBrain#584</a></summary>
 
 ```
 Use the start-dev skill. active/hygiene_refs_false_positives_cross_repo_and_runtime.md
@@ -1149,7 +1149,7 @@ Use the start-dev skill. active/sky_orientation_euclid_dr1_and_library.md
 Scoped but not started; some are not yet prompt files. Full detail in [`planned.md`](planned.md).
 
 <details>
-<summary><b>9</b> task(s)</summary>
+<summary><b>10</b> task(s)</summary>
 
 <details><summary>📋 <b>isothermal-ell-sph-oversampling-at-the-cusp</b> — found 2026-08-09 — planned — NOT yet a prompt file; file one via <code>/intake</code> before starting</summary>
 
@@ -1219,6 +1219,14 @@ Use the start-dev skill. draft/feature/autolens/interferometer_primary_beam_pers
 
 ```
 Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
+```
+
+</details>
+
+<details><summary>📋 <b>registry-reconcile-app-token</b> — planned — human said "do next tasks" 2026-11-04; blocked only by the repo claim</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautomind/registry_reconcile_private_repo_issue_404.md
 ```
 
 </details>
