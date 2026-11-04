@@ -201,7 +201,7 @@ only while a brief is open (`policy/shift_watcher.md`).
   - max-workers: 2                   # optional: concurrent workers (default 2)
   - max-sessions: 6                  # optional: sessions this shift, all told (default 6)
   - worker-mode: auto                # optional: auto (default) | dontAsk | acceptEdits — never bypassPermissions
-  - sandbox: no                      # yes = a test shift; real workers need it until phase 3c
+  - sandbox: no                      # optional: yes marks a test shift
   - ral-allowance:                   # only when lanes includes ral; phase 5 consumes it
     - packets: 2
     - partition: ral
@@ -223,8 +223,9 @@ is not a whole number refuses the brief.
 the default the human chose on 2026-11-03: a worker that still needs a person
 shows `blocked` in `claude agents --json`, and after 15 minutes the watcher
 parks it for the digest instead of leaving it waiting. `bypassPermissions` is
-refused. `sandbox: yes` marks a test shift; until the one-Mind-writer path
-(phase 3c) lands, it is the only kind of brief a real worker may run under.
+refused. `sandbox: yes` marks a test shift. (Until phase 3c it was the only
+brief a real worker could run under; the one-Mind-writer path lifted that — the
+workers' Mind changes now reach `main` only through the orchestrator.)
 
 **Calibration rule.** A new brief is not accepted while the previous record
 lacks `review-minutes-actual:`. The planned figure is a seed; the 2026-08-31
