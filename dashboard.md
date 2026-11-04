@@ -1059,7 +1059,7 @@ Use the start-dev skill. active/gradient_correctness_sweep.md
 
 </details>
 
-<details><summary>📋 <a href="active/howtogalaxy-ch3-parity.md">Bring HowToGalaxy Chapter 3 up to the approved HowToLens teaching standard</a> — <a href="https://github.com/PyAutoLabs/HowToGalaxy/issues/101">issue #101</a> — issued 2026-11-04 — workspace-dev</summary>
+<details><summary>📋 <a href="active/howtogalaxy-ch3-parity.md">Bring HowToGalaxy Chapter 3 up to the approved HowToLens teaching standard</a> — <a href="https://github.com/PyAutoLabs/HowToGalaxy/issues/101">issue #101</a> — issued 2026-11-04 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/HowToGalaxy/pull/102">HowToGalaxy#102</a></summary>
 
 ```
 Use the start-dev skill. active/howtogalaxy-ch3-parity.md
