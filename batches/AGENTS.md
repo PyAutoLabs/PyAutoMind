@@ -223,6 +223,15 @@ pilot opens with two shadow shifts as its baseline. At `review-at:` every shift,
 shadow or live, appends one row to `batches/pilot/pilot.md` (the pilot ledger;
 its own header says which cells are the human's to fill at check-in).
 
+**`merge-cap:` in practice (phase 4b).** A `glance` worker ends at PR-open; once
+its CI is green the watcher starts one independent close-out session (same
+model, fresh context — `PyAutoBrain/AUTONOMY.md` "Stage-2 adversary amendment —
+2026-11-04") that runs the witness, checks the label and Heart, and merges or
+refuses. Merges plus close-outs in flight never exceed `merge-cap:`; a PR past
+the cap, with red CI, or refused by its close-out waits for the human's `/prm`
+and the digest says why. Each unattended merge adds one row to
+`autonomy_log.md` "Unattended `glance` sub-window (stage 2)".
+
 `max-workers:` and `max-sessions:` are the watcher's usage caps (phase 3a,
 `PyAutoBrain/agents/conductors/batch/_orchestrator.py`): at a cap it stops
 spawning and records the refusal. Omitted, they default to 2 and 6; a value that

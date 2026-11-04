@@ -625,6 +625,14 @@ adversary leg actually run**; the sub-rule is confirmed or refused on those 10 b
 the same pre-registered decision rule, and a `reverted` row demotes `glance` at
 once. Same `human action` vocabulary and the same meaning of *substantive* as above.
 
+**Amended 2026-11-04** (`PyAutoBrain/AUTONOMY.md` "Stage-2 adversary amendment —
+2026-11-04"): the adversary leg may be the same model as the author when it is
+the watcher's fresh, independent close-out session, which runs the witness
+itself. Any row here `reverted` or amended to `merged-after-substantive-change`
+restores the different-model requirement. Rows are written by the watcher
+through the one Mind writer; by hand, `lifecycle.py shadow-row --stage2 --brief
+<slot> …`.
+
 | date | task | brief | gate (tests/smoke/review/heart/witness/adversary) | human action |
 |------|------|-------|----------------------------------------------------|--------------|
 
