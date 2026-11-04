@@ -164,9 +164,9 @@ markers; everything below GENERATED is rebuilt.
 - [one-line-auto-simulate-helper](2026/11/one-line-auto-simulate-helper.md)
 - [rectangular-gradient-rtu-sparse](2026/11/rectangular-gradient-rtu-sparse.md) — the filed symptom (|g| ~2e9 on the imaging/rectangular/hst fiducial, RTU all backends, Bilinear CPU sparse) sp…
 - [rectangular-mapper-bilinear-row-weights](2026/11/rectangular-mapper-bilinear-row-weights.md) — - **Retired as already-fixed** by the gradient-correctness sweep (autolens_profiling#517, item 12). The draft …
-- [results-library-p2-completeness](2026/11/results-library-p2-completeness.md) — `autofit/results/library.py` ResultsLibrary (grid / library.yaml / from_campaign — campaign expectations
-- [results-library-p3-exports](2026/11/results-library-p3-exports.md) — AggregateCSV.save(cache=, shard=, expected=, sort_by=, on_error=, columns_json=): row cache
-- [results-library-p4-package](2026/11/results-library-p4-package.md) — new `autofit/export/` (`af.export`): package() — size-capped / exactly-N part zips with objects whole,
+- [results-library-p2-completeness](2026/11/results-library-p2-completeness.md) — phase 2; ledger draft/feature/autofit/results_library_epic.md
+- [results-library-p3-exports](2026/11/results-library-p3-exports.md) — phase 3; ledger draft/feature/autofit/results_library_epic.md
+- [results-library-p4-package](2026/11/results-library-p4-package.md) — phase 4; ledger draft/feature/autofit/results_library_epic.md
 - [results-library-p5b-cortex](2026/11/results-library-p5b-cortex.md) — phase 5b; ledger draft/feature/autofit/results_library_epic.md
 - [shift-digest-readable-picks](2026/11/shift-digest-readable-picks.md) — pilot 4c follow-up; issue PyAutoBrain#579
 - [simulate-if-needed-workspace-sweep](2026/11/simulate-if-needed-workspace-sweep.md)
