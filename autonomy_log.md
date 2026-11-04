@@ -500,12 +500,23 @@ substantive, or to `reverted` if it was backed out. `glance` is **confirmed at
 20 clean rows**; **any `reverted` row demotes `glance` back to a human
 `/prm`** at once, by dated doctrine edit citing the row.
 
+**RULED 2026-11-04 — `glance` granted, narrowed.** At 69 counted rows (all
+stage-1 `merged-unchanged`) the human spot-audited 8 rows across every risk class
+and marked all 8 `ok` (`Science/scratch/shadow_window_audit_2026-11-03/audit.md`).
+Dated doctrine edit: `PyAutoBrain/AUTONOMY.md` "The `glance` Shadow-window ruling
+— 2026-11-04". The narrowing: a `Witness:` that did not PASS (none, n/a, partial,
+waived) is a human `/prm`. Rows keep appending here for in-turn merges, and a
+`reverted` row still demotes `glance`. Row `fixed-model-json` (PyAutoFit#1708)
+stays counted: the human did not recall typing that `/prm`. Unattended
+(watcher-started) merges count in their own table, "Unattended `glance`
+sub-window", below this one.
+
 The `notify` history (opened 2026-08-30, re-opened 2026-09-03, fed from `/prm`
 close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 69 (stage 1: 69, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — the pre-registered decision is due
+Count toward 20: 69 (stage 1: 69, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -603,3 +614,17 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-11-01 | simulate-if-needed-workspace-sweep (autolens_workspace#612 / autogalaxy_workspace#269 / autolens_workspace_test#353 / autocti_workspace#39 / autogalaxy_workspace_test#132 / HowToLens#120 / HowToGalaxy#99 / euclid_strong_lens_modeling_pipeline#118 / PyAutoBrain#549) | glance | CI green all 9 PRs (euclid smoke leg skipped by path filter on a test-only change; unit legs green); static: black-exact + compile + size guard; guard call-site counts unchanged; local smoke samples green where env allowed; review none; heart GREY unreachable; witness PASS | merged-unchanged | 1 |
 | 2026-11-02 | magnification-errors-source-science (autolens_workspace#613 / PyAutoFit#1751) | glance | tests CI 8/8 legs (navigator 4, smoke 3.12+3.13, size-guard); smoke 11/11 local; review none (no independent review); heart STALE ack'd (task under human RED override 2026-10-31); witness PARTIAL (full-mode truth check 4/11, rest waived by human 2026-11-02) | merged-unchanged | 1 |
 | 2026-11-03 | autonomous-orchestrators-p2 (PyAutoMind#523 / PyAutoBrain#554) | glance | tests Brain 1437 + Mind 712 local, CI 2/2 legs Brain (2nd run; 1st red on tenant firewall, fixed f3fc8fc) + Mind 2 runs (drift skipped by design); smoke n/a (organs); review none (no independent review); heart YELLOW ack'd by human; witness PASS (28/28 clause tests) | merged-unchanged | 1 |
+
+## Unattended `glance` sub-window (stage 2) — opened 2026-11-04
+
+Opened by the 2026-11-04 ruling (`PyAutoBrain/AUTONOMY.md` "The `glance`
+Shadow-window ruling — 2026-11-04"). One row per `glance` merge the **watcher**
+started under a shift brief ("Unattended `glance` merges"), never pooled with the
+stage-1 rows above. **Each of the first 10 needs the independent different-model
+adversary leg actually run**; the sub-rule is confirmed or refused on those 10 by
+the same pre-registered decision rule, and a `reverted` row demotes `glance` at
+once. Same `human action` vocabulary and the same meaning of *substantive* as above.
+
+| date | task | brief | gate (tests/smoke/review/heart/witness/adversary) | human action |
+|------|------|-------|----------------------------------------------------|--------------|
+
