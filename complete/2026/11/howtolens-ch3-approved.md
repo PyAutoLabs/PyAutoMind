@@ -1,3 +1,18 @@
+## howtolens-ch3-approved
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/125
+- completed: 2026-11-04
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/126
+- merge: 96bf47765c69acc7fabc5edd8e5fb1b13e70887a
+- summary: Implemented all 66 approved Chapter 3 prose blocks, restored Fit Problems and introductory positivity/mapping-support content, consolidated old adaptive tutorials into Tutorial 6, embedded Maresca Figure 1, and regenerated notebooks/catalogues. Six full-size numerical runs and all eight GitHub CI jobs passed, including Python 3.12/3.13 smoke. Explicit human ship/prm authorization; Heart YELLOW warning for unrelated AutoFit timeout acknowledged.
+
+### Validation and lessons
+Canonical local smoke covered all 41 runnable scripts. Search stages used sampler bypass with actual likelihood evaluation; convergence was not tested. Memory-conscious scans retain scalar evidence and preferred fits, and Hilbert adapt images preserve Array2D interfaces. Full-size teaching experiments are required for the compact-source evidence scans: declare ENV: full_datasets in developer-only __Env__ docstrings. Strict CI rejects equivalent profile overrides; run validate_env_profiles.py --strict-declarations locally. Notebook generation strips the developer-only declarations.
+
+### Review bundle
+Preserved notebooks, HTML previews, executed figures and reports: C:\Users\Jammy\Workspace\Science\scratch\howtolens_chapter3_2026-11-04. Detailed early-content and independent fidelity audits are included. No library edits or pending-release obligations.
+
+## Original prompt
+
 # HowToLens Chapter 3 approved implementation
 
 Type: docs
@@ -39,3 +54,7 @@ Human explicitly requested ship then /prm and acknowledged Heart YELLOW: `worksp
 ## PR CI blocked — 2026-11-04
 
 PR #126 Python 3.13 smoke fails at strict env-profile validation: the two full-data overrides must be expressed as in-file __Env__ docstring declarations. Local numerical smoke passed but did not include this strict CI gate. Failure log retained at review/pr126-python313-failure.log. /prm stopped without merging or retrying. Next repair: replace profile overrides with __Env__ full_datasets declarations in tutorials 5/6, regenerate notebooks and validate strict profiles before resuming ship/prm.
+
+## CI declaration repair — 2026-11-04
+
+Human approved the exact declaration fix, regeneration, rerun checks, push and /prm after green CI. Commit 61eec78 published to PR #126. Strict profile validation passes; both changed smoke scripts pass (131.1s,139.8s); regenerated notebooks and catalogues unchanged because developer-only declarations are stripped. Awaiting fresh CI on 61eec7837f99249e85e3a009c6fe722887783d63.
