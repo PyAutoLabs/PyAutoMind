@@ -1,4 +1,3 @@
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1755
 - epic: results-library (phase 3; ledger draft/feature/autofit/results_library_epic.md)
 - summary: AggregateCSV.save(cache=, shard=, expected=, sort_by=, on_error=, columns_json=): row cache
   `<csv>.rows.jsonl` (row_fingerprint over zip / every file under files/ + .identifier; spec digest incl. closures,

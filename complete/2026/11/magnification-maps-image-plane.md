@@ -13,8 +13,6 @@ Scope note: the planned PyAutoArray `contour_levels` option was dropped (repo cl
 rectangular-gradient-rtu-sparse); the contours are drawn on the axes `plot_array` already accepts.
 For a multi-plane tracer the map is the magnification of a source in the last plane (no plane_j option yet).
 
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/690
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/815
 
 ## Original prompt
 

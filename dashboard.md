@@ -14,7 +14,7 @@
 | [Planned](#planned) | 9 |
 | [Backlog](#backlog) | 297 |
 | [Recent](#recent) | 50 |
-| [Pending release](#pending-release) | 4 |
+| [Pending release](#pending-release) | 0 |
 
 > **Batch 2026-11-05-am — 0 in progress · 0 awaiting review**
 >
@@ -3307,29 +3307,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 ## Pending release
 
-**PyAutoArray**
-
-- [PyAutoArray#674](https://github.com/PyAutoLabs/PyAutoArray/pull/674) — `complete/2026/11/magnification-maps-source-plane.md`
-- [PyAutoArray#672](https://github.com/PyAutoLabs/PyAutoArray/pull/672) — `complete/2026/11/rectangular-gradient-rtu-sparse.md`
-
-**PyAutoFit**
-
-- [PyAutoFit#1759](https://github.com/PyAutoLabs/PyAutoFit/pull/1759) — `complete/2026/11/latest-per-test-tie.md`
-- [PyAutoFit#1753](https://github.com/PyAutoLabs/PyAutoFit/pull/1753) — `complete/2026/11/results-library-p2-completeness.md`
-- [PyAutoFit#1755](https://github.com/PyAutoLabs/PyAutoFit/pull/1755) — `complete/2026/11/results-library-p3-exports.md`
-- [PyAutoFit#1757](https://github.com/PyAutoLabs/PyAutoFit/pull/1757) — `complete/2026/11/results-library-p4-package.md`
-
-**PyAutoGalaxy**
-
-- [PyAutoGalaxy#690](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/690) — `complete/2026/11/magnification-maps-image-plane.md`
-- [PyAutoGalaxy#691](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/691) — `complete/2026/11/magnification-maps-source-plane.md`
-- [PyAutoGalaxy#693](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/693) — `complete/2026/11/magnification-maps-uncertainty.md`
-
-**PyAutoLens**
-
-- [PyAutoLens#815](https://github.com/PyAutoLabs/PyAutoLens/pull/815) — `complete/2026/11/magnification-maps-image-plane.md`
-- [PyAutoLens#816](https://github.com/PyAutoLabs/PyAutoLens/pull/816) — `complete/2026/11/magnification-maps-source-plane.md`
-- [PyAutoLens#817](https://github.com/PyAutoLabs/PyAutoLens/pull/817) — `complete/2026/11/magnification-maps-uncertainty.md`
+_(nothing pending release)_
 
 
 Boards: [organism](https://pyautolabs.github.io/PyAutoScientist/) · [brain](https://pyautolabs.github.io/PyAutoBrain/) · [cortex](https://pyautolabs.github.io/PyAutoCortex/) · [memory](https://pyautolabs.github.io/PyAutoMemory/) · [eyes](https://pyautolabs.github.io/PyAutoEyes/) · [ears](https://pyautolabs.github.io/PyAutoEars/) · [heart](https://pyautolabs.github.io/PyAutoHeart/) · [hands](https://pyautolabs.github.io/PyAutoHands/) · [pulse](https://pyautolabs.github.io/PyAutoPulse/) · [insight](https://pyautolabs.github.io/PyAutoInsight/) · [dna](https://pyautolabs.github.io/PyAutoDNA/) · [nerves](https://pyautolabs.github.io/PyAutoNerves/) · [broca](https://pyautolabs.github.io/PyAutoBroca/) · [gut](https://pyautolabs.github.io/PyAutoGut/)

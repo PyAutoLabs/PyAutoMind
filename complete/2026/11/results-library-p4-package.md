@@ -1,4 +1,3 @@
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1757
 - epic: results-library (phase 4; ledger draft/feature/autofit/results_library_epic.md)
 - summary: new `autofit/export/` (`af.export`): package() — size-capped / exactly-N part zips with objects whole,
   tables.zip, parts_manifest.csv, package.json, SHA256SUMS, README + KNOWN_ISSUES with provenance (git revs,

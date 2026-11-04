@@ -1,4 +1,3 @@
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1753
 - epic: results-library (phase 2; ledger draft/feature/autofit/results_library_epic.md)
 - summary: `autofit/results/library.py` ResultsLibrary (grid / library.yaml / from_campaign — campaign expectations
   match the zip at success.zip_complete exactly, as collector.check_success); `completeness.py` check() →

@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-11-04T21:17:17Z",
+  "updated": "2026-11-04T21:17:49Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -24,78 +24,6 @@
       "text": "human review: the scaling_relation slam parks (imaging un-parked, multi_galaxy kept)",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md",
       "prompt": "Walk me through the completed work described in `draft/human_review/autolens_workspace/scaling_relation_slam_parks_review.md` so I can sign it off.\n\n1. Read the prompt: what was asked, and what it claims shipped.\n2. Find the evidence \u2014 the merged PR(s), the commits, the `complete/` record \u2014\n   and read the actual diff, not the description of it.\n3. Report what changed, what it does NOT cover, and anything you would have\n   done differently. Call out behaviour changes and test gaps explicitly.\n\nChange nothing while reviewing. When I sign it off, retire the prompt from the\nPyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date\n<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and\nregenerate the dashboard. If I do not sign it off, file the follow-up with\n`/intake` instead.\n"
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#674 \u2014 magnification-maps-source-plane",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/674",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#672 \u2014 rectangular-gradient-rtu-sparse",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/672",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1759 \u2014 latest-per-test-tie",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1759",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1753 \u2014 results-library-p2-completeness",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1753",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1755 \u2014 results-library-p3-exports",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1755",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoFit PyAutoFit#1757 \u2014 results-library-p4-package",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1757",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#690 \u2014 magnification-maps-image-plane",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/690",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#691 \u2014 magnification-maps-source-plane",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/691",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#693 \u2014 magnification-maps-uncertainty",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/693",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#815 \u2014 magnification-maps-image-plane",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/815",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#816 \u2014 magnification-maps-source-plane",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/816",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#817 \u2014 magnification-maps-uncertainty",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/817",
-      "prompt": null
     },
     {
       "severity": "info",
@@ -126,6 +54,78 @@
       "text": "pick: Fix KNN neighbor search for a partial final point block",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
+      "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
+      "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Reduce the organism's per-session and per-task token load by half",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/organs/reduce_session_token_load.md",
+      "prompt": "Use the start-dev skill. draft/maintenance/organs/reduce_session_token_load.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Physical model check when speeding up smoke tests",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md",
+      "prompt": "Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Fix Sibson interpolation at internal edges",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md",
+      "prompt": "Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md",
+      "prompt": "Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: euclid_dr1: run the positions gate over DR1 and submit the remodel set",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md",
+      "prompt": "Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Guard every workspace script against untimed network downloads",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace/no_untimed_network_downloads_check.md",
+      "prompt": "Use the start-dev skill. draft/test/autolens_workspace/no_untimed_network_downloads_check.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Cache `autonerves` config parsing \u2014 308 YAML files parsed per script run",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/autonerves/config_yaml_parse_cache.md",
+      "prompt": "Use the start-dev skill. draft/refactor/autonerves/config_yaml_parse_cache.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md",
+      "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md",
+      "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: The latent smoke's empty-block assertion names one cause unconditionally \u2014 echo\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md",
+      "prompt": "Use the start-dev skill. draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md"
     }
   ]
 }

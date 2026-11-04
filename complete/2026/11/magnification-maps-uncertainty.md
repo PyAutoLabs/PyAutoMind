@@ -13,8 +13,6 @@ Witness (full imaging/source_science.py run, 100 draws, 1.84 s/draw): median sig
 (3-10), 2.0% (10-30), 8.8% (>30, on the critical curve); consistent with the run's scalar errors (0.9-1.9%). Figure +
 log: Science/scratch/arc_phase8c_uncertainty_map_2026-11-02/.
 
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/693
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/817
 
 ## Original prompt
 

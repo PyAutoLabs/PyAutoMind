@@ -17,9 +17,6 @@ area: median per-pixel agreement 1.2% (RectangularBilinearAdaptDensity), 3.9% (D
 Follow-up filed: draft/research/autoarray/delaunaynn_per_pixel_magnification_off_by_9.md (DelaunayNN 9% per-pixel on
 the identity lens). Open for 8d: mesh maps use a log colour scale on mu, the others plot log10 mu values.
 
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/674
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/691
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/816
 
 ## Original prompt
 
