@@ -2,11 +2,13 @@
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/330
 - issued: 2026-11-04
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: library-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/generate-converter-preflight
 - repos:
   - PyAutoHands: feature/generate-converter-preflight
 - prompt: active/generate_missing_converter_deletes_start_here.md
+- prs:
+  - https://github.com/PyAutoLabs/PyAutoHands/pull/331
 - tier: glance — merge mode: human /prm
 
 
