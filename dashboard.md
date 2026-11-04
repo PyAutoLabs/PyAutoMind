@@ -16,6 +16,11 @@
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
+> **Batch 2026-11-05-am — 0 in progress · 0 awaiting review**
+>
+>
+> _Nothing to review yet._
+
 ## Start here
 
 **Highest priority** (filed as `high`) — showing 12 of 18
