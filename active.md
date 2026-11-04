@@ -2,7 +2,9 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/577
 - issued: 2026-11-04
 - session: Claude Code desktop (laptop), release chat 2026-11-04
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/578
+- merge: human /prm (judge tier); Witness = dry_run=true nightly dispatch past 60 min, then re-arm NIGHTLY_RELEASES=true
 - worktree: ~/Code/PyAutoLabs-wt/nightly-token-refresh
 - repos:
   - PyAutoBrain: feature/nightly-token-refresh
