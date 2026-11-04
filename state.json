@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-11-04T08:16:53Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 7 in flight",
+  "updated": "2026-11-04T08:17:38Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Autonomous orchestrators phase 3c: one Mind writer per shift \u2014 ledger lines\u2026 \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/pull/526",
-      "prompt": "Use the start-dev skill. active/autonomous_orchestrators_p3c_mind_writer.md"
-    },
     {
       "severity": "yellow",
       "text": "Issued: 2026-11-02 \u2014 workspace-shipped, awaiting-merge (judge \u2192 human /prm; wiki-currency waits on a PyAutoFit release)",
@@ -126,6 +120,12 @@
       "text": "pick: Record the `glance` Shadow-window ruling in AUTONOMY.md \u2014 grant narrowed, after\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautobrain/glance_tier_ruling_shadow_window.md",
       "prompt": "Use the start-dev skill. draft/feature/pyautobrain/glance_tier_ruling_shadow_window.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: arXiv's Fastly edge refuses `urllib.request` outright \u2014 retrying a 406 only delays\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md",
+      "prompt": "Use the start-dev skill. draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md"
     }
   ]
 }

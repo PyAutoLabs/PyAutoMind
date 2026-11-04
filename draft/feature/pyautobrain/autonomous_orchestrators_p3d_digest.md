@@ -12,7 +12,6 @@ Status: formalised
 Filed: 2026-11-03
 Epic: autonomous-orchestrators
 Phase: 3
-Blocked-by: draft/feature/pyautobrain/autonomous_orchestrators_p3c_mind_writer.md
 Consequence: judge
 Witness: `batch digest` appends a `## Digest` to a fake shift's brief record matching `PyAutoMind/batches/AGENTS.md` (brief work vs backlog picks each with a one-line reason, one proof packet per task, every counter), `batch brief --check` gains a digest check that accepts it and refuses one missing a counter or a pick reason, and the digest is posted exactly once as a comment on a sandbox issue (a second run posts nothing); `pytest PyAutoBrain/tests -q` green
 Review-minutes: 20

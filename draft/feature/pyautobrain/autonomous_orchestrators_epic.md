@@ -299,3 +299,7 @@ work per human review-minute above the shadow-shift baseline.
   template, `claude agents --json` liveness, blocked → parked after 15 min, transcript token budget;
   worker mode `auto` (human). Real dispatch is `sandbox: yes` only until 3c. CLI facts (2.1.316):
   `--bg` ignores `--session-id`, state word `working`, untrusted folders refused fast. Next: 3c.
+- 2026-11-04 — **phase 3c COMPLETE** (PyAutoMind#526, PyAutoBrain#560; human /prm; record
+  `complete/2026/11/autonomous-orchestrators-p3c.md`): one Mind writer — worker ledger ops in
+  `<slot>/ledger/`, committed by the orchestrator from a temporary worktree on `origin/main`, worker
+  pre-commit hook refuses direct Mind commits; the 3b sandbox fence is lifted. Next: 3d (digest), unblocked.
