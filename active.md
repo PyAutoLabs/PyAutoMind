@@ -20,11 +20,13 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/583
 - issued: 2026-11-04
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: library-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/hygiene-refs-false-positives
 - repos:
   - PyAutoBrain: feature/hygiene-refs-false-positives
 - prompt: active/hygiene_refs_false_positives_cross_repo_and_runtime.md
+- prs:
+  - https://github.com/PyAutoLabs/PyAutoBrain/pull/584
 - tier: glance — merge mode: human /prm
 
 
