@@ -86,3 +86,15 @@
 - pre-check: open shadow tick on system python3.10, minimal env — 6 notify proposals, 0 spawns (2026-11-04)
 - tier: judge — merge mode: human /prm
 
+
+## howtogalaxy-ch3-parity
+- issue: https://github.com/PyAutoLabs/HowToGalaxy/issues/101
+- issued: 2026-11-04
+- prompt: active/howtogalaxy-ch3-parity.md
+- status: workspace-dev
+- session: Codex, autonomous continuation of HowToLens Chapter 3 work
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howtogalaxy-ch3-parity
+- repos:
+  - HowToGalaxy: feature/howtogalaxy-ch3-parity
+- approval: autonomous adaptation, regeneration, validation and open PR; human merge
+- heart-ack: same-conversation acknowledgement of workspace validation not passing (0 failed, 1 timeout, cloud#41432188469: autofit_test scripts/searches/MultiStartResumeNaNCounters.py); recheck reason set at shipping
