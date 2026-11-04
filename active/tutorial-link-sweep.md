@@ -49,4 +49,4 @@ Validation: regenerated 570 notebooks (Lens 42, Galaxy 31, Lens workspace 361, G
 
 Review and reproducibility artifacts: /home/jammy/Code/PyAutoLabs/.worktrees/tutorial-link-sweep/review/. Human review bundle: /mnt/c/Users/Jammy/Workspace/Science/scratch/tutorial_link_sweep_2026-11-04/. Three patches are in review/proposals and copied to the human bundle. Lens assistant patch includes canonical COSMOS notebook metadata regeneration (17 files). Runtime environments/data remain in the task bundle; no cleanup until all queued work is resolved. Notebook generation uses canonical Hands conversion/injection with its unrelated autofit-project rewrite disabled in a task-local wrapper. No generator source changed.
 
-Merge remains human `/prm`; CI checked once and retained in review/ci-snapshot.json. No scheduled polling or automatic merge armed.
+Merge remains human `/prm`; CI snapshots retained in review/ci-snapshot.json. Final snapshot: assistant43, HowToGalaxy103, Galaxy workspace271 and HowToLens128 green; Lens workspace617 has six passing checks and two smoke jobs running. Both Lens PRs remain draft. No scheduled polling or automatic merge armed.
