@@ -2,7 +2,7 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/620
 - issued: 2026-11-04
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/workspace-hygiene-sweep-1104
 - repos:
   - autolens_workspace: feature/workspace-hygiene-sweep-1104
@@ -11,6 +11,12 @@
   - HowToGalaxy: feature/workspace-hygiene-sweep-1104
   - autoreduce_workspace: feature/workspace-hygiene-sweep-1104
 - prompt: active/workspace_hygiene_sweep_1104.md
+- prs:
+  - https://github.com/PyAutoLabs/autolens_workspace/pull/621
+  - https://github.com/PyAutoLabs/autofit_workspace/pull/181
+  - https://github.com/PyAutoLabs/HowToLens/pull/129
+  - https://github.com/PyAutoLabs/HowToGalaxy/pull/104
+  - https://github.com/PyAutoLabs/autoreduce_workspace/pull/6
 - tier: judge — merge mode: human /prm
 
 
