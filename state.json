@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-11-04T15:01:37Z",
+  "updated": "2026-11-04T15:05:34Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -105,6 +105,12 @@
     },
     {
       "severity": "info",
+      "text": "pick: autolens_workspace: nufftax skip guard + raw docstrings for damaged LaTeX",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/autolens_workspace/optdeps_guard_and_latex_escapes.md",
+      "prompt": "Use the start-dev skill. draft/refactor/autolens_workspace/optdeps_guard_and_latex_escapes.md"
+    },
+    {
+      "severity": "info",
       "text": "pick: test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md",
       "prompt": "Use the start-dev skill. draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md"
@@ -120,12 +126,6 @@
       "text": "pick: arXiv's Fastly edge refuses `urllib.request` outright \u2014 retrying a 406 only delays\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md",
       "prompt": "Use the start-dev skill. draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Fix KNN neighbor search for a partial final point block",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md",
-      "prompt": "Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md"
     }
   ]
 }
