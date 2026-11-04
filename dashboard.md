@@ -1067,7 +1067,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/multistart_resume_nan_counters_timeout.md">MultiStartResumeNaNCounters.py creeps past the 300s smoke cap (per-update plotting cost)</a> — <a href="https://github.com/PyAutoLabs/autofit_workspace_test/issues/117">issue #117</a> — issued 2026-11-04 — workspace-dev</summary>
+<details><summary>📋 <a href="active/multistart_resume_nan_counters_timeout.md">MultiStartResumeNaNCounters.py creeps past the 300s smoke cap (per-update plotting cost)</a> — <a href="https://github.com/PyAutoLabs/autofit_workspace_test/issues/117">issue #117</a> — issued 2026-11-04 — awaiting-merge</summary>
 
 ```
 Use the start-dev skill. active/multistart_resume_nan_counters_timeout.md
