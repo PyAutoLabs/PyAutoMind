@@ -202,6 +202,7 @@ only while a brief is open (`policy/shift_watcher.md`).
   - max-sessions: 6                  # optional: sessions this shift, all told (default 6)
   - worker-mode: auto                # optional: auto (default) | dontAsk | acceptEdits — never bypassPermissions
   - sandbox: no                      # optional: yes marks a test shift
+  - shadow: no                       # optional: yes plans and digests, spawns nothing
   - ral-allowance:                   # only when lanes includes ral; phase 5 consumes it
     - packets: 2
     - partition: ral
@@ -213,6 +214,14 @@ only while a brief is open (`policy/shift_watcher.md`).
 batch constraint; `scoped` — only prompts matching the `scoped:` epics, tags or
 tiers. `exclude:` removes prompt paths or epics from either dip. Backlog the
 brief does not cover is **never** dipped.
+
+`shadow: yes` (phase 4a) makes the shift a **shadow shift**: the watcher plans
+inside the brief exactly as a live shift would and records each proposal —
+prompt, tier, pick reason — but takes no lease and starts no worker, up to
+`max-sessions:` proposals. Its digest lists them as `proposed (shadow)`. The
+pilot opens with two shadow shifts as its baseline. At `review-at:` every shift,
+shadow or live, appends one row to `batches/pilot/pilot.md` (the pilot ledger;
+its own header says which cells are the human's to fill at check-in).
 
 `max-workers:` and `max-sessions:` are the watcher's usage caps (phase 3a,
 `PyAutoBrain/agents/conductors/batch/_orchestrator.py`): at a cap it stops
