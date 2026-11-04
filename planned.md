@@ -11,7 +11,6 @@
 - [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
 - [interferometer-primary-beam-persistence-mirror](#interferometer-primary-beam-persistence-mirror)
 - [point-plots-yaml-keys-assistant](#point-plots-yaml-keys-assistant)
-- [tutorial-link-sweep-claimed](#tutorial-link-sweep-claimed)
 
 <!-- toc:end -->
 
@@ -128,14 +127,3 @@
 - parent: complete/2026/10/point-plots-yaml-keys.md (HowToLens half merged 2026-10-22, HowToLens#99); no separate prompt file
 - scope: same `point_dataset` / `fit_point_dataset` block edit in `autolens_assistant/config/visualize/plots.yaml` as HowToLens; ship on its own branch `feature/point-plots-yaml-keys` once the claim clears
 
-## tutorial-link-sweep-claimed
-- issue: https://github.com/PyAutoLabs/HowToLens/issues/127
-- filed: 2026-11-04
-- prompt: active/tutorial-link-sweep.md
-- status: blocked by existing repo claims; all three patches independently reviewed and ready; coordinated on PyAutoLens#818 and autolens_assistant#177; apply after claim release
-- blocked-by: magnification-maps-wiring (PyAutoLens/PyAutoGalaxy), results-library-p5a-assistant (autolens_assistant, open PR177)
-- scope: current tutorial indexes/links and assistant Colab routing only; no API changes
-- repos:
-  - PyAutoLens: feature/tutorial-link-sweep
-  - PyAutoGalaxy: feature/tutorial-link-sweep
-  - autolens_assistant: feature/tutorial-link-sweep

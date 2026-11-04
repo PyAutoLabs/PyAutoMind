@@ -50,3 +50,9 @@ Validation: regenerated 570 notebooks (Lens 42, Galaxy 31, Lens workspace 361, G
 Review and reproducibility artifacts: /home/jammy/Code/PyAutoLabs/.worktrees/tutorial-link-sweep/review/. Human review bundle: /mnt/c/Users/Jammy/Workspace/Science/scratch/tutorial_link_sweep_2026-11-04/. Three patches are in review/proposals and copied to the human bundle. Lens assistant patch includes canonical COSMOS notebook metadata regeneration (17 files). Runtime environments/data remain in the task bundle; no cleanup until all queued work is resolved. Notebook generation uses canonical Hands conversion/injection with its unrelated autofit-project rewrite disabled in a task-local wrapper. No generator source changed.
 
 Merge remains human `/prm`; CI snapshots retained in review/ci-snapshot.json. Final snapshot: assistant43, HowToGalaxy103, Galaxy workspace271 and HowToLens128 green; Lens workspace617 has six passing checks and two smoke jobs running. Both Lens PRs remain draft. No scheduled polling or automatic merge armed.
+
+## Explicit documentation-only claim exception, 2026-11-04
+
+User: "Yes, go ahead with separate documentation-only worktrees for all three, preserve the existing claims and changes, run the checks and get the PRs up."
+
+Created real worktrees for PyAutoLens, PyAutoGalaxy and autolens_assistant inside the existing task bundle on feature/tutorial-link-sweep. Applied the reviewed six-page library patches and 17-file assistant patch including generated metadata. Original task claims and worktrees remain intact. This is a narrow human exception to the repository-wide conflict guard, not release or merge authorization. Full checks and independent review are running on these actual worktrees. All five existing PRs are green.
