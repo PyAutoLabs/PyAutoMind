@@ -31,3 +31,11 @@ Validation: all six full-size scripts pass (actual inversion scans and plots); 4
 Human review bundle: /mnt/c/Users/Jammy/Workspace/Science/scratch/howtolens_chapter3_2026-11-04/index.html
 Detailed audit and validation: task bundle review/implementation_report.md and review/science_results.md.
 No PR, branch push or merge performed. Deliverable is the committed local implementation and review bundle; awaiting human review/shipping direction.
+
+## Shipping authorized — 2026-11-04
+
+Human explicitly requested ship then /prm and acknowledged Heart YELLOW: `workspace validation not passing (0 failed, 1 timeout, cloud#41432188469: autofit_test scripts/searches/MultiStartResumeNaNCounters.py)`. Branch published, PR https://github.com/PyAutoLabs/HowToLens/pull/126; all required GitHub checks must pass before merge.
+
+## PR CI blocked — 2026-11-04
+
+PR #126 Python 3.13 smoke fails at strict env-profile validation: the two full-data overrides must be expressed as in-file __Env__ docstring declarations. Local numerical smoke passed but did not include this strict CI gate. Failure log retained at review/pr126-python313-failure.log. /prm stopped without merging or retrying. Next repair: replace profile overrides with __Env__ full_datasets declarations in tutorials 5/6, regenerate notebooks and validate strict profiles before resuming ship/prm.

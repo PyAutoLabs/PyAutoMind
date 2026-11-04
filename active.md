@@ -81,8 +81,10 @@
 - issued: 2026-11-04
 - prompt: active/howtolens-ch3-approved.md
 - session: Codex 01a1a5a6-2da3-79e0-9b7b-ae8072a3ea02
-- status: workspace-dev
+- status: ci-blocked
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howtolens-ch3-approved
 - repos:
   - HowToLens: feature/howtolens-ch3-approved
-- approval: blocks 1–66 and implementation, regeneration, audit and checks approved; no merge authority
+- approval: approved implementation; explicit ship then /prm authorization and Heart YELLOW reason acknowledgement on 2026-11-04
+
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/126
