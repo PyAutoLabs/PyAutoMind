@@ -1096,7 +1096,7 @@ Use the start-dev skill. active/gradient_correctness_sweep.md
 
 </details>
 
-<details><summary>📋 <a href="active/hygiene_refs_false_positives_cross_repo_and_runtime.md">hygiene refs: 16/19 findings are false positives (sibling-repo and runtime paths)</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/583">issue #583</a> — issued 2026-11-04 — library-dev</summary>
+<details><summary>📋 <a href="active/hygiene_refs_false_positives_cross_repo_and_runtime.md">hygiene refs: 16/19 findings are false positives (sibling-repo and runtime paths)</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/583">issue #583</a> — issued 2026-11-04 — awaiting-merge</summary>
 
 ```
 Use the start-dev skill. active/hygiene_refs_false_positives_cross_repo_and_runtime.md
