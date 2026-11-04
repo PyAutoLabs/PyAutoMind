@@ -221,7 +221,9 @@ prompt, tier, pick reason — but takes no lease and starts no worker, up to
 `max-sessions:` proposals. Its digest lists them as `proposed (shadow)`. The
 pilot opens with two shadow shifts as its baseline. At `review-at:` every shift,
 shadow or live, appends one row to `batches/pilot/pilot.md` (the pilot ledger;
-its own header says which cells are the human's to fill at check-in).
+its own header says which cells are the human's to fill at check-in; in a
+shadow row they measure the human's own review time and merges in the window,
+the baseline).
 
 **`merge-cap:` in practice (phase 4b).** A `glance` worker ends at PR-open; once
 its CI is green the watcher starts one independent close-out session (same
@@ -262,11 +264,11 @@ the review surface; the HTML packet is written only when `packet: yes`.
 ## Digest
 
 ### Brief work
-- <slug> — PyAutoLens#<n> — HEALTHY — glance, auto-merged (1/3)
-- <slug> — parked: awaiting-input (question on the issue)
+- [<prompt title>](<link to the prompt>) (`<slug>`; small · PyAutoLens) — PyAutoLens#<n> — HEALTHY — glance
+- [<prompt title>](<link>) (`<slug>`; medium · PyAutoArray) — parked: awaiting-input (blocked on a person)
 
 ### Backlog picks
-- <slug> — PyAutoArray#<n> — HEALTHY — why: scoped epic cluster-strong-lensing, next phase, notify
+- [<prompt title>](<link>) (`<slug>`; small · PyAutoArray) — PyAutoArray#<n> — HEALTHY — notify — why: scoped epic cluster-strong-lensing · not in queue.md · ~3 review-min · priority normal · epic cluster-strong-lensing phase 8
 - <slug> — draft filed — why: decomposed from goal 2; needs bulk approval
 
 ### Proof packets
@@ -285,7 +287,10 @@ the review surface; the HTML packet is written only when `packet: yes`.
 ```
 
 Brief work and backlog picks stay separate, and **every backlog pick carries a
-one-line reason** — the brief's rule it was picked under. A pick the human
+one-line reason**: the brief's rule it was picked under, then the planner's
+ranking (queue.md position, or review-minutes and priority, then the path).
+Picks are named by their prompt's title, linked, with the slug in backticks. A
+shadow digest prints its counters as one line, since every one is 0. A pick the human
 cannot trace to the brief is a finding.
 
 **Where each part comes from (phase 3d).** The watcher writes the digest at the

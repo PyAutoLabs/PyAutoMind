@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2128 records across 11 buckets.
+2129 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -167,6 +167,7 @@ markers; everything below GENERATED is rebuilt.
 - [results-library-p3-exports](2026/11/results-library-p3-exports.md) — AggregateCSV.save(cache=, shard=, expected=, sort_by=, on_error=, columns_json=): row cache
 - [results-library-p4-package](2026/11/results-library-p4-package.md) — new `autofit/export/` (`af.export`): package() — size-capped / exactly-N part zips with objects whole,
 - [results-library-p5b-cortex](2026/11/results-library-p5b-cortex.md) — phase 5b; ledger draft/feature/autofit/results_library_epic.md
+- [shift-digest-readable-picks](2026/11/shift-digest-readable-picks.md) — pilot 4c follow-up; issue PyAutoBrain#579
 - [simulate-if-needed-workspace-sweep](2026/11/simulate-if-needed-workspace-sweep.md)
 - [tutorial-link-sweep](2026/11/tutorial-link-sweep.md)
 - [workspace-hygiene-sweep-1104](2026/11/workspace-hygiene-sweep-1104.md)

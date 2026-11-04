@@ -1,3 +1,12 @@
+- epic: autonomous-orchestrators (pilot 4c follow-up; issue PyAutoBrain#579)
+- summary: PyAutoBrain#580. Digest picks are named `[title](Mind blob link) (`slug`; size · repos)` via `_orchestrator.pick_record` (shared by dispatch and shadow) and `_digest.label`. `why:` = brief admission rule + `_brief.rank_note` (queue.md #k, or "not in queue.md · ~N review-min · priority P", plus epic phase). A shadow digest's counters print as one line (`_digest.SHADOW_COUNTERS`). A shadow pilot row leaves `merges` as `?` (the human's own merges in the window = the epic's baseline). Mind docs (pilot.md header, batches/AGENTS.md) updated in this close-out commit.
+- trigger: shadow shift 1 check-in (human, 2026-11-04): the digest had "no content" (6 bare slugs, `why: scoped tier notify`), and "how am i meant to know how long the review takes if the shadow cant do anything". Shift 1's row was corrected to 5 human review-min / 11 merges / 6 overrules.
+- finding surfaced by the new why: every notify prompt grades ~0 review-min, so cheapest-first ranks all notify work above glance, and ties fall to the path, so shift 1's picks were alphabetical. queue.md (empty of prompts) is the human's lever.
+- witness: PASS. Shift-2 brief rendered on the real backlog (2 titled, linked named tasks; one-line counters); shift 1 re-rendered with rank notes; Brain 1564 passed; tenant firewall OK; the old shift-1 record still validates.
+- heart: GREEN (release); glance tier, in-turn merge.
+
+## Original prompt
+
 # Shift digest: readable picks, and a shadow row that measures the human's baseline
 
 Type: feature

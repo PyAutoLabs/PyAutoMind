@@ -14,6 +14,13 @@ review really took — also the record's `review-minutes-actual:`) and
 `overrules` (orchestrator picks or proposals the human would not have made).
 Every other cell is the digest's counter of the same name.
 
+**Shadow rows measure the human, not the orchestrator** (corrected
+2026-11-04 after shift 1, PyAutoBrain#579). A shadow shift merges nothing, so
+its `review-minutes-actual` is the minutes the human spent reviewing **their
+own** work in the window (PRs, `/prm`, results; not the digest), and its
+`merges` (also `?`) is the human's own merges in the window. That is the
+baseline the live rows are measured against.
+
 The target metric is verified merges (plus accepted drafts and packets) per
 `review-minutes-actual`, against the shadow rows as the baseline.
 
