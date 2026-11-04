@@ -58,3 +58,12 @@ Prefer a library fix. Candidates (decide, don't do all):
   (`autofit_test, searches` shard), with the same equality assertion still meaningful
   (non-zero NaN counters at kill, resumed == reference).
 - Then refresh Heart (tick + publish) and confirm `release:361c87850b823009` clears.
+
+## 2026-11-04 — human re-scope: the cadence of 2 is the defect (script-only fix)
+
+Human: "the actual problem is the script shouldn't be using a value of 2 … can we have the
+intended behaviour and test run for a normal value." Measured locally (PyAutoFit main dbf05d793):
+`iterations_per_full_update=100` → PASS 34.5s, killed at step 100 with value-NaN 201 / grad-NaN 1
+(both non-zero), resumed == uninterrupted (142 steps, 403/9). 50 → PASS 53.7s but grad-NaN 0 at the
+kill. Fix = script change 2 → 100; the library `checkpoint_interval` idea (candidate 1) is DROPPED
+as unnecessary. Issue: https://github.com/PyAutoLabs/autofit_workspace_test/issues/117

@@ -102,3 +102,14 @@
 - approval: autonomous source fixes, notebook regeneration, checks and open PRs; judge, human /prm
 - deferred-owners: PyAutoLens/PyAutoGalaxy (magnification-maps-wiring); autolens_assistant (results-library-p5a-assistant, PR177); prepare proposals without touching claims
 - heart-ack: same-conversation acknowledged AutoFit workspace timeout; fresh shipping reason set required
+
+## multistart-resume-cadence
+- issue: https://github.com/PyAutoLabs/autofit_workspace_test/issues/117
+- issued: 2026-11-04
+- prompt: active/multistart_resume_nan_counters_timeout.md
+- status: workspace-dev
+- session: claude-code desktop (WSL), /health dashboard review session
+- worktree: ~/Code/PyAutoLabs-wt/multistart-resume-cadence
+- repos:
+  - autofit_workspace_test: feature/multistart-resume-cadence
+- tier: judge — merge mode: human /prm
