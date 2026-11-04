@@ -179,26 +179,28 @@ Library first; one issue per repo per phase; each phase routes through
    stack spec committed, Heart README/REFERENCE say "six libraries" where they
    say five; completion record and this ledger's `status:` → COMPLETE.
 
-## Decisions (human; recorded here when ruled)
+## Decisions (human, ruled 2026-11-04)
 
-- R1 **arcticpy distribution**: wait for an upstream `2.7` on PyPI (preferred:
-  one source of truth, Richard Massey's package), or publish PyAutoLabs-built
-  wheels under a distinct name as a stopgap? Open.
-- R2 **lazy arcticpy import** in `autocti/__init__.py` so the package imports
-  without the C++ build (docs, Eyes, assistant, Colab-lite), with clocking
-  raising a clear error — or keep the hard import? Open.
-- R3 **autocti_workspace_test `legacy/`** (Euclid VIS `euclid/`, `tvac/`,
-  `temporal/`, `validation/`, cosmics — 139 files): archive in place, move to a
-  private heritage repo, or retire via Gut? Open.
-- R4 **Python 3.14** for CTI: match the five libraries' matrix now, or defer
-  until arcticpy builds there? Open (arcticpy 2.6 builds on cp313 locally;
-  3.14 untested).
-- R5 **autocti_profiling** repo birth (phase 4) — human creates the org repo;
-  name and public/private? Open.
-- R6 Does CTI join the **nightly** release driver as a sixth lockstep library
-  from phase 1, or ship by human-authorised release only until phase 3 lands?
-  Open (recommendation: lockstep from phase 1, Heart `release_gate: true` at
-  the same time, so nothing drifts again).
+- R1 **arcticpy distribution — RULED: fix upstream.** Phase 2a prepares the
+  packaging fix as a PR to `jkeger/arctic` (modern `numpy` range, Cython 3,
+  declared build requires, version bump, wheels if feasible); the human
+  contacts Richard Massey to cut and publish the new PyPI release. No
+  PyAutoLabs-published wheels or renamed fork.
+- R2 **lazy arcticpy import — RULED: do it if it works.** Phase 2c makes
+  `import autocti` succeed without arcticpy, with clocking raising a clear
+  error naming the install recipe; drop it only if the test suite or the
+  factor-graph path cannot be kept clean that way, and record why.
+- R3 **workspace_test `legacy/` — RULED: retire via Gut** (phase 3b; the 139
+  Euclid VIS heritage files leave the tree as a recoverable Gut ref through
+  the transit window, never a plain delete).
+- R4 **Python 3.14 — RULED: defer.** CTI stays on the 3.12/3.13 legs until
+  arcticpy builds on 3.14; no 3.14 classifier or matrix leg in this epic.
+- R5 **autocti_profiling — RULED: public repo**, created by the human or by the
+  session under `PyAutoLabs/` (explicit authorisation for this one repo; the
+  no-org-repo-creation default otherwise stands). Name `autocti_profiling`.
+- R6 **lockstep nightly — RULED: recommendation adopted.** CTI joins the
+  nightly release driver as the sixth lockstep library from phase 1, with
+  Heart `release_gate: true` in the same phase.
 
 ## Boundaries
 
@@ -228,3 +230,6 @@ Library first; one issue per repo per phase; each phase routes through
 - 2026-11-04 — human: add numerical likelihood test values to the test
   workspace early, as the other projects have; filed as phase 0b member
   (no dependency on rulings — can `/start_dev` now).
+- 2026-11-04 — human ruled R1–R6 (fix arcticpy upstream + Massey release;
+  lazy import if it works; legacy/ via Gut; 3.14 deferred; public
+  autocti_profiling; lockstep from phase 1). Phase 1 un-blocked.
