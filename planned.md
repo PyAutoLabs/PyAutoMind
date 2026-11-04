@@ -11,6 +11,7 @@
 - [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
 - [interferometer-primary-beam-persistence-mirror](#interferometer-primary-beam-persistence-mirror)
 - [point-plots-yaml-keys-assistant](#point-plots-yaml-keys-assistant)
+- [registry-reconcile-app-token](#registry-reconcile-app-token)
 
 <!-- toc:end -->
 
@@ -126,4 +127,14 @@
 - release-gate: verify the PyAutoLens#794 release before shipping, as required by the original prompt
 - parent: complete/2026/10/point-plots-yaml-keys.md (HowToLens half merged 2026-10-22, HowToLens#99); no separate prompt file
 - scope: same `point_dataset` / `fit_point_dataset` block edit in `autolens_assistant/config/visualize/plots.yaml` as HowToLens; ship on its own branch `feature/point-plots-yaml-keys` once the claim clears
+
+## registry-reconcile-app-token
+- prompt: draft/bug/pyautomind/registry_reconcile_private_repo_issue_404.md
+- status: planned — human said "do next tasks" 2026-11-04; blocked only by the repo claim
+- blocked-by: PyAutoMind claimed by `cti-release-train-wiring` (start_dev when it releases)
+- branch: feature/registry-reconcile-app-token
+- decision: option (a) per policy/github_tokens.md — cross-repo Actions work mints the org App token; option (b) (classify unreadable as "unverifiable") is the warn-and-skip that policy forbids
+- summary: in .github/workflows/registry_reconcile.yml replace `GH_TOKEN: ${{ github.token }}` with an `actions/create-github-app-token@v3` step (client-id vars.APP_CLIENT_ID, private-key secrets.APP_PRIVATE_KEY, owner PyAutoLabs, no `repositories:` = owner-wide read, permission-issues: read, permission-pull-requests: read), minted right before the run step; verify by workflow_dispatch that `lifecycle.py issues` reads ECLIPSE_lens_catalogue#4 and the run goes green. Never drop the r2-pages-function-access row.
+- affected-repos:
+  - PyAutoMind
 
