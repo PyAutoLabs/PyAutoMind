@@ -7,7 +7,7 @@
 - validation: All 8 GitHub checks succeeded on 0503e3b, including Python 3.12/3.13 smoke, tutorial completeness and four navigator checks. Local full Heart smoke 42 passed; notebook generation 43 passed; controlled full-resolution/model-transfer checks passed. Smoke does not establish search convergence.
 - heart: YELLOW warnings at shipping explicitly acknowledged by user; merge explicitly requested after green CI. No release performed.
 - review-bundle: /mnt/c/Users/Jammy/Workspace/Science/scratch/howtolens_ch2_explanations_2026-11-02/final_chapter/
-- cleanup: Worktree retained pending user's decision on generated data (dataset 1.1 MB, output 3.5 MB, validation logs 560 KB).
+- cleanup: User authorised removal of the worktree and generated data. Removed howtolens-ch2-explanations with worktree_remove and deleted the merged local feature branch. Science/scratch review bundle retained.
 
 The tutorial-completeness CI required recognised closing section markers in Tutorials 6 and 7; added those markers and regenerated notebooks before merging. Prior passing remains supported via model_centred, with posterior-median centres, configured widths and truncated Gaussian priors. The optional lesson is runnable; historical refers to its role in earlier modelling workflows.
 
