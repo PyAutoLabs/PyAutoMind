@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-11-04T14:09:08Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 9 in flight",
+  "updated": "2026-11-04T14:09:32Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -117,15 +117,15 @@
     },
     {
       "severity": "info",
-      "text": "pick: MultiStartResumeNaNCounters.py creeps past the 300s smoke cap (per-update plotting cost)",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/health_fixes/multistart_resume_nan_counters_timeout.md",
-      "prompt": "Use the start-dev skill. draft/bug/health_fixes/multistart_resume_nan_counters_timeout.md"
-    },
-    {
-      "severity": "info",
       "text": "pick: arXiv's Fastly edge refuses `urllib.request` outright \u2014 retrying a 406 only delays\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md",
       "prompt": "Use the start-dev skill. draft/bug/pyautomind/arxiv_edge_refuses_the_stdlib_urllib_client.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Fix KNN neighbor search for a partial final point block",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md",
+      "prompt": "Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md"
     }
   ]
 }
