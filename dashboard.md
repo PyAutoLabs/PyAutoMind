@@ -1088,7 +1088,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/generate_missing_converter_deletes_start_here.md">autohands generate: missing ipynb-py-convert deletes start_here.ipynb and leaves temp.py</a> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/330">issue #330</a> — issued 2026-11-04 — library-dev</summary>
+<details><summary>📋 <a href="active/generate_missing_converter_deletes_start_here.md">autohands generate: missing ipynb-py-convert deletes start_here.ipynb and leaves temp.py</a> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/330">issue #330</a> — issued 2026-11-04 — awaiting-merge</summary>
 
 ```
 Use the start-dev skill. active/generate_missing_converter_deletes_start_here.md

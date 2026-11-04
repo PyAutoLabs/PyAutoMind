@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-11-04T21:17:49Z",
+  "updated": "2026-11-04T21:22:37Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "autohands generate: missing ipynb-py-convert deletes start_here.ipynb and leaves temp.py \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoHands/issues/330",
+      "prompt": "Use the start-dev skill. active/generate_missing_converter_deletes_start_here.md"
+    },
     {
       "severity": "yellow",
       "text": "Issued: 2026-11-02 \u2014 workspace-shipped, awaiting-merge (judge \u2192 human /prm; wiki-currency waits on a PyAutoFit release)",
@@ -120,12 +126,6 @@
       "text": "pick: Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md",
       "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: The latent smoke's empty-block assertion names one cause unconditionally \u2014 echo\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md",
-      "prompt": "Use the start-dev skill. draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md"
     }
   ]
 }
