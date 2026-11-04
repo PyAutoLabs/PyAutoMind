@@ -20,6 +20,7 @@ Unattended: ready
 Epic: cti-upkeep
 Phase: 0
 Filed: 2026-11-04
+Issued: 2026-11-04
 
 ## Why
 
