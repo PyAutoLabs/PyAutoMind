@@ -1,3 +1,20 @@
+# Optional dependency guard and likelihood LaTeX fixes
+
+Completed: 2026-11-04
+Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/618
+PR: https://github.com/PyAutoLabs/autolens_workspace/pull/619
+Merge: 22d2cb56d8f969bfafc3c71795bfea4b7bf46c82
+
+The array-free datacube example now skips cleanly with installation guidance when nufftax is absent, before mask creation or dataset simulation. Raw narrative strings preserve LaTeX in the group and cluster likelihood guides; mixed doubled escapes were normalized within the affected strings. All three notebooks were regenerated (the cluster notebook remained identical), with navigation refreshed. Scientific executable code in both likelihood guides is unchanged.
+
+Validation: all 3 CI runs / 8 jobs passed, including Python 3.12 and 3.13 smoke. Local curated smoke 42 scripts + 2 notebooks, targeted scripts 3/3, pytest 3/3, absent-backend exit 0 before mask/simulation, clean escapes/optdeps scans, notebook executable parity, navigation/size/whitespace checks and independent CLEAN review. Heart at ship was STALE solely for absent current-source release rehearsal.
+
+Human /prm authorized the merge. Every claimed branch is contained in origin/main; issue closed. No remaining scope or release obligations.
+
+Review bundle preserved: /mnt/c/Users/Jammy/Workspace/Science/scratch/alw_optdeps_escapes_2026-11-04/index.html
+
+## Original prompt
+
 # autolens_workspace: nufftax skip guard + raw docstrings for damaged LaTeX
 
 Type: refactor
