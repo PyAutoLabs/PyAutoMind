@@ -94,8 +94,14 @@ Library first; one issue per repo per phase; each phase routes through
 
 0. **Census + rulings (research, small, this session's report is the draft).**
    Re-verify the report against live state on the day the epic opens, then
-   collect the rulings in §Decisions below. No code. Output: rulings recorded
-   in this ledger; phase 1 prompt un-blocked.
+   collect the rulings in §Decisions below. Output: rulings recorded in this
+   ledger; phase 1 prompt un-blocked. **0b (code, first to ship): numerical
+   log-likelihood pins in autocti_workspace_test** (member:
+   `draft/test/autocti_workspace_test/likelihood_value_pins.md`) — the lens and
+   galaxy test workspaces pin absolute `log_likelihood` literals per likelihood
+   function; CTI has none, so nothing would notice a value change from a
+   library PR or the phase 2 arcticpy bump. Lands before any library or
+   arcticpy change (human, 2026-11-04).
 1. **Release-train wiring + first modern release** (member:
    `draft/release/autocti/cti_release_train_wiring.md`, human-required). Hands
    `LIB_PROJECTS` += PyAutoCTI; `release.yml` library checkouts, release notes,
@@ -207,6 +213,7 @@ Library first; one issue per repo per phase; each phase routes through
 
 ## Members
 
+- Phase 0: `draft/test/autocti_workspace_test/likelihood_value_pins.md` (0b, ships first)
 - Phase 1: `draft/release/autocti/cti_release_train_wiring.md`
 - Phase 3: `draft/bug/autocti_workspace/dataset_1d_results_database_examples_drift.md`
 - Phase 5: `draft/bug/autocti_visualization/render_yml_blocked_until_pyautocti_release.md`,
@@ -218,3 +225,6 @@ Library first; one issue per repo per phase; each phase routes through
 
 - 2026-11-04 — filed from the human's request; survey in the report; rulings
   R1–R6 open. First step: `/start_dev` on the phase 1 member after R1/R6.
+- 2026-11-04 — human: add numerical likelihood test values to the test
+  workspace early, as the other projects have; filed as phase 0b member
+  (no dependency on rulings — can `/start_dev` now).
