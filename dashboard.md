@@ -1030,7 +1030,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/autonomous_orchestrators_p3d_digest.md">Autonomous orchestrators phase 3d: <code>batch digest</code> — digest + proof packets, digest…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/568">issue #568</a> — issued 2026-11-04 — library-dev</summary>
+<details><summary>📋 <a href="active/autonomous_orchestrators_p3d_digest.md">Autonomous orchestrators phase 3d: <code>batch digest</code> — digest + proof packets, digest…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/568">issue #568</a> — issued 2026-11-04 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/531">PyAutoMind#531</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/569">PyAutoBrain#569</a></summary>
 
 ```
 Use the start-dev skill. active/autonomous_orchestrators_p3d_digest.md
