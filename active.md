@@ -89,3 +89,14 @@
 - epic: autonomous-orchestrators (phase 4b of 4a–4c)
 - decision: close-out session on Opus 5.5 (same model as workers); ruling amended — stage-2 adversary may be same-model when a fresh independent session runs the witness; label + Heart checked by the close-out session, not the watcher (human, 2026-11-04)
 - tier: judge — merge mode: human /prm
+
+## howtolens-ch3-approved
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/125
+- issued: 2026-11-04
+- prompt: active/howtolens-ch3-approved.md
+- session: Codex 01a1a5a6-2da3-79e0-9b7b-ae8072a3ea02
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/howtolens-ch3-approved
+- repos:
+  - HowToLens: feature/howtolens-ch3-approved
+- approval: blocks 1–66 and implementation, regeneration, audit and checks approved; no merge authority
