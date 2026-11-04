@@ -1,3 +1,14 @@
+## generate-converter-preflight
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/330
+- issued: 2026-11-04
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/generate-converter-preflight
+- repos:
+  - PyAutoHands: feature/generate-converter-preflight
+- prompt: active/generate_missing_converter_deletes_start_here.md
+- tier: glance — merge mode: human /prm
+
 
 ## magnification-maps-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/818
