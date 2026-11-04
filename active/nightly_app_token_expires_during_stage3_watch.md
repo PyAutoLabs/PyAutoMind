@@ -10,13 +10,15 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: formalised
+Status: active
 Consequence: judge
 Witness: a manually dispatched `nightly-release.yml` run (`dry_run=true`) reaches step 5 (the readiness gate) with Stage 2 and Stage 3 both completed and no `HTTP 401` anywhere in its log, more than 60 minutes after the token mint; and a driver test shows a `gh run watch` that fails while the watched run's conclusion is `success` is classified `driver-error` (exit 1, paged as a credential failure), never `blocked` (exit 2, "Stage 3 failed").
 Lane: any
 Review-minutes: 10
 Unattended: never
 Filed: 2026-11-04
+Issued: 2026-11-04
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/577
 
 ## Observed
 
