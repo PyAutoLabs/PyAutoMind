@@ -1,3 +1,18 @@
+## HowToLens Chapter 2
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/123
+- completed: 2026-11-04
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/124
+- merge-commit: a7bd32c0fd6e4e420efcaab496c932cc1d1396ad
+- summary: Completed the approved Chapter 2 rewrite, including explicit parameter-space explanations, delayed linear-profile introduction, circular-mask rationale, positions penalties, dataset/likelihood separation, Prodigy/Nautilus search chaining, optional runtime and runnable model_centred prior passing, summary, numbering and navigation.
+- validation: All 8 GitHub checks succeeded on 0503e3b, including Python 3.12/3.13 smoke, tutorial completeness and four navigator checks. Local full Heart smoke 42 passed; notebook generation 43 passed; controlled full-resolution/model-transfer checks passed. Smoke does not establish search convergence.
+- heart: YELLOW warnings at shipping explicitly acknowledged by user; merge explicitly requested after green CI. No release performed.
+- review-bundle: /mnt/c/Users/Jammy/Workspace/Science/scratch/howtolens_ch2_explanations_2026-11-02/final_chapter/
+- cleanup: Worktree retained pending user's decision on generated data (dataset 1.1 MB, output 3.5 MB, validation logs 560 KB).
+
+The tutorial-completeness CI required recognised closing section markers in Tutorials 6 and 7; added those markers and regenerated notebooks before merging. Prior passing remains supported via model_centred, with posterior-median centres, configured widths and truncated Gaussian priors. The optional lesson is runnable; historical refers to its role in earlier modelling workflows.
+
+## Original prompt
+
 # Chapter 2 parameter-space explanations and profile sequencing
 
 Target: @HowToLens

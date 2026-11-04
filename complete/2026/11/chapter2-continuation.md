@@ -1,3 +1,11 @@
+## Chapter 2 continuation
+- completed: 2026-11-04
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/124
+- summary: All continuation scope merged: Tutorials 5 and 6, optional speed and runnable model_centred prior passing, summary, final numbering and navigation.
+- canonical-record: complete/2026/11/howtolens-ch2-explanations.md
+
+## Original prompt
+
 # HowToLens Chapter 2 — remaining review and restructure
 
 Completed checkpoint: complete/2026/11/howtolens-chapter2.md; PR https://github.com/PyAutoLabs/HowToLens/pull/115 merged approved lessons 1–4 on 2026-11-01. Do not repeat their review. Galaxy Chapter 2 already merged in PR #96; both Chapter 3 checkpoints merged.
