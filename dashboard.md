@@ -1038,7 +1038,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/autonomous_orchestrators_p4b_unattended_closeout.md">Autonomous orchestrators phase 4b: unattended <code>glance</code> close-out + stage-2 Shadow rows</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/572">issue #572</a> — issued 2026-11-04 — library-dev</summary>
+<details><summary>📋 <a href="active/autonomous_orchestrators_p4b_unattended_closeout.md">Autonomous orchestrators phase 4b: unattended <code>glance</code> close-out + stage-2 Shadow rows</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/572">issue #572</a> — issued 2026-11-04 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/533">PyAutoMind#533</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/573">PyAutoBrain#573</a></summary>
 
 ```
 Use the start-dev skill. active/autonomous_orchestrators_p4b_unattended_closeout.md
