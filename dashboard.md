@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 21 |
-| [In flight](#in-flight) | 8 |
-| [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 296 |
+| [In flight](#in-flight) | 9 |
+| [Planned](#planned) | 9 |
+| [Backlog](#backlog) | 295 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
 
@@ -224,20 +224,12 @@ Use the start-dev skill. draft/maintenance/pyautomemory/canonical_key_todo_sweep
 Long-running multi-phase programmes. Each epic's 📋 prompt has the assistant read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
 
 <details>
-<summary><b>CTI upkeep parity — release-train wiring and first modern <code>autocti</code> release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), <code>autocti_profiling</code> + Pulse <code>cti</code> row, figures/assistant/docs currency, hygiene</b> — 5 queued prompt(s), in order</summary>
+<summary><b>CTI upkeep parity — release-train wiring and first modern <code>autocti</code> release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), <code>autocti_profiling</code> + Pulse <code>cti</code> row, figures/assistant/docs currency, hygiene</b> — 4 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>CTI upkeep parity — release-train wiring and first modern <code>autocti</code> release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), <code>autocti_profiling</code> + Pulse <code>cti</code> row, figures/assistant/docs currency, hygiene</b> — ledger: `draft/maintenance/autocti/cti_upkeep_epic.md` — FILED 2026-11-04 — survey in draft/maintenance/autocti/cti_upkeep_epic_report.md; R1–R6 RULED 2026-11-04 (arcticpy fixed upstream…</summary>
 
 ```
 Continue the 'CTI upkeep parity — release-train wiring and first modern `autocti` release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), `autocti_profiling` + Pulse `cti` row, figures/assistant/docs currency, hygiene' epic. Its canonical state lives in draft/maintenance/autocti/cti_upkeep_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: seven phases, library first, one issue per repo per phase, one at a time: 0 census + rulings + 0b log-likelihood value pins in autocti_workspace_test (DONE 2026-11-04) → 1 release-train wiring + first modern release (Hands LIB_PROJECTS/release.yml/python_matrix/pre_build/COLAB_PROJECTS, Nerves setup_colab autocti with arcticpy pre-install, Heart release_gate true + integrate/validation/docs-build rows, wiki-currency + pyautocti-release dispatch) → 2 arcticpy modernisation (upstream jkeger/arctic packaging PR + 2.7 release; Heart pin bump; DNA spec; install docs; lazy-import ruling) → 3 integration parity (smoke_tests.txt 3→representative, workspace_test rebuild + legacy/ ruling, docs.yml, 3.14) → 4 autocti_profiling birth + Pulse day zero → 5 autocti_visualization PyPI mode + Eyes sign-off, assistant version/PENDING/wiki-currency, docs/api rewrite → 6 hygiene + close. Members: likelihood_value_pins (p0b, DONE → complete/2026/11/cti-likelihood-pins.md), cti_release_train_wiring (p1), dataset_1d_results_database_examples_drift (p3), the two autocti_visualization bugs + api_rst_rewrite (p5). Boundaries: upkeep only, no CTI science; arcticpy pin stays in Heart install_arcticpy.sh only; never hand-dispatch release.yml.
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/release/autocti/cti_release_train_wiring.md">CTI release-train wiring — first modern autocti release</a> — autocti · medium · human-required · normal</summary>
-
-```
-Use the start-dev skill. draft/release/autocti/cti_release_train_wiring.md
 ```
 
 </details>
@@ -1088,6 +1080,14 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
+<details><summary>📋 <a href="active/cti_release_train_wiring.md">CTI release-train wiring — first modern autocti release</a> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/332">issue #332</a> — issued 2026-11-04 — library-dev</summary>
+
+```
+Use the start-dev skill. active/cti_release_train_wiring.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/gradient_correctness_sweep.md">Gradient-correctness sweep: triage and investigate every open JAX-gradient bug and hazard…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/517">issue #517</a> — issued 2026-11-02 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/518">autolens_profiling#518</a></summary>
 
 ```
@@ -1149,15 +1149,7 @@ Use the start-dev skill. active/sky_orientation_euclid_dr1_and_library.md
 Scoped but not started; some are not yet prompt files. Full detail in [`planned.md`](planned.md).
 
 <details>
-<summary><b>10</b> task(s)</summary>
-
-<details><summary>📋 <b>cti-release-train-wiring</b> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/332">issue #332</a> — planned 2026-11-04</summary>
-
-```
-Use the start-dev skill. draft/release/autocti/cti_release_train_wiring.md
-```
-
-</details>
+<summary><b>9</b> task(s)</summary>
 
 <details><summary>📋 <b>isothermal-ell-sph-oversampling-at-the-cusp</b> — found 2026-08-09 — planned — NOT yet a prompt file; file one via <code>/intake</code> before starting</summary>
 
@@ -1235,7 +1227,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 286 · local-dev 8
+Lanes: any 285 · local-dev 8
 
 <a id="human-review"></a>
 <details>
@@ -3064,9 +3056,9 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 |------|-------|------|
 | 2026-11-04 | filed | <a href="draft/bug/pyautobrain/hygiene_tidy_recommends_deleting_claimed_branches.md">hygiene tidy recommends deleting branches of live, claimed tasks</a> |
 | 2026-11-04 | issued | <a href="active/hygiene_refs_false_positives_cross_repo_and_runtime.md">hygiene refs: 16/19 findings are false positives (sibling-repo and…</a> |
-| 2026-11-04 | planned | <a href="planned.md#cti-release-train-wiring">cti-release-train-wiring</a> |
 | 2026-11-04 | filed | <a href="draft/bug/pyautobrain/clean_slate_packaging_grouped_layout.md">clean_slate.sh --packaging silently finds nothing on the grouped repo…</a> |
 | 2026-11-04 | filed | <a href="draft/bug/pyautomind/registry_reconcile_private_repo_issue_404.md">Mind Registry Reconcile red daily: workflow token cannot read a…</a> |
+| 2026-11-04 | issued | <a href="active/cti_release_train_wiring.md">CTI release-train wiring — first modern autocti release</a> |
 | 2026-11-04 | issued | <a href="active/autonomous_orchestrators_p4c_pilot_run.md">Autonomous orchestrators phase 4c: run the Dev orchestrator pilot…</a> |
 | 2026-11-03 | filed | <a href="draft/bug/pyautobrain/intake_classify_file_drops_declared_epic_phase.md">intake classify --file injects an unrelated Memory: line on…</a> |
 | 2026-11-02 | filed | <a href="draft/research/autolens_profiling/unexplained_gradient_gaps_cpu_sparse_delaunay_and_mge.md">Unexplained autodiff-vs-FD gaps in the phase-6 gradient records…</a> |
@@ -3184,7 +3176,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-128 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+127 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3229,7 +3221,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/rectangular_adaptive_zeroed_ring_guard_row_mismatch.md`
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
 - `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`
-- _… and 88 more_
+- _… and 87 more_
 
 </details>
 

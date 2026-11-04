@@ -1,3 +1,21 @@
+## cti-release-train-wiring
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/332
+- issued: 2026-11-04
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/cti-release-train-wiring
+- repos:
+  - PyAutoNerves: feature/cti-release-train-wiring
+  - PyAutoHands: feature/cti-release-train-wiring
+  - PyAutoBrain: feature/cti-release-train-wiring
+  - PyAutoHeart: feature/cti-release-train-wiring
+  - PyAutoMind: feature/cti-release-train-wiring
+  - autocti_workspace: feature/cti-release-train-wiring
+- prompt: active/cti_release_train_wiring.md
+- epic: cti-upkeep (phase 1)
+- tier: judge — merge mode: human /prm (Nerves → Hands/Brain/Heart/Mind → autocti_workspace)
+- plan: APPROVED 2026-11-04 incl. TestPyPI rehearsal from the Hands branch before any merge; Colab arcticpy = run Heart install_arcticpy.sh; human confirmed PYPI token covers autocti
+
 ## hygiene-refs-false-positives
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/583
 - issued: 2026-11-04
