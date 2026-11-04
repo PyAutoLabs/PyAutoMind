@@ -31,3 +31,22 @@ Suggested phases: (1) canonical teaching links, topic descriptions and Colab rou
 
 ## Approved steering
 User explicitly approved autonomous source fixes, regeneration and ecosystem checks, stressing that correct .py sources can coexist with stale notebooks. Compare source, generated notebook and injected assistant guidance separately.
+
+## 2026-11-04 implementation and PR handoff
+
+Five PRs are open:
+- https://github.com/PyAutoLabs/autogalaxy_assistant/pull/43
+- https://github.com/PyAutoLabs/HowToGalaxy/pull/103
+- https://github.com/PyAutoLabs/autogalaxy_workspace/pull/271
+- https://github.com/PyAutoLabs/HowToLens/pull/128
+- https://github.com/PyAutoLabs/autolens_workspace/pull/617
+
+Galaxy assistant 43 is the canonical dependency for Galaxy course 103 / workspace 271. Both Lens consumer PRs are drafts until the queued assistant source patch is applied through its own claim-safe PR. PyAutoLens/PyAutoGalaxy documentation patches remain queued behind magnification-maps-wiring; autolens_assistant behind results-library-p5a-assistant/PR177. Coordination comments posted; claims and their checkouts remain untouched. Do not close umbrella issue 127 or remove this worktree on partial merges.
+
+Validation: regenerated 570 notebooks (Lens 42, Galaxy 31, Lens workspace 361, Galaxy workspace 136). Schema, exact source narrative/executable parity, inventory, assistant-context assembly, navigator and deterministic catalogue checks pass. Regen restored existing Python source changes absent from 13 Lens notebooks; executable source scripts unchanged. Lens canonical smoke: 42 scripts + 2 notebooks passes. Galaxy assistant full suite: 84 passed; API audit: 221 symbols / 0 missing. Lens assistant proposal focused tests: 5 passed; full suite: 107 passed / 1 skipped then unchanged fixture requiring 2026.9.27.2 wheel rather than local source 9999.0.0.dev0; supplementary suite excluding that fixture: 294 passed / 2 skipped / 1 xfailed. This is not a full-suite pass. Independent review CLEAN. Both six-page library proposals build under isolated Sphinx/MyST -W (not complete library autodoc builds).
+
+52-repository audit: 1,192 unique course URLs, 0 missing active destinations in the combined five-worktree/three-proposal view. This does not mean queued patches are applied/published. Current-course navigation uses main; 3 publication/test pins remain deliberate. Fresh Heart YELLOW reason unchanged from acknowledgment: `workspace validation not passing (0 failed, 1 timeout, cloud#41432188469: autofit_test scripts/searches/MultiStartResumeNaNCounters.py)`; stale `release validation incomplete: no rehearsal for current source`.
+
+Review and reproducibility artifacts: /home/jammy/Code/PyAutoLabs/.worktrees/tutorial-link-sweep/review/. Human review bundle: /mnt/c/Users/Jammy/Workspace/Science/scratch/tutorial_link_sweep_2026-11-04/. Three patches are in review/proposals and copied to the human bundle. Lens assistant patch includes canonical COSMOS notebook metadata regeneration (17 files). Runtime environments/data remain in the task bundle; no cleanup until all queued work is resolved. Notebook generation uses canonical Hands conversion/injection with its unrelated autofit-project rewrite disabled in a task-local wrapper. No generator source changed.
+
+Merge remains human `/prm`; CI checked once and retained in review/ci-snapshot.json. No scheduled polling or automatic merge armed.

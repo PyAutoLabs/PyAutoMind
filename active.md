@@ -90,7 +90,7 @@
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/127
 - issued: 2026-11-04
 - prompt: active/tutorial-link-sweep.md
-- status: workspace-dev
+- status: awaiting-merge for Galaxy PRs; Lens drafts blocked by canonical assistant claim; claimed-library docs queued
 - session: Codex; autonomous approved ecosystem docs sweep
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/tutorial-link-sweep
 - repos:
@@ -102,3 +102,13 @@
 - approval: autonomous source fixes, notebook regeneration, checks and open PRs; judge, human /prm
 - deferred-owners: PyAutoLens/PyAutoGalaxy (magnification-maps-wiring); autolens_assistant (results-library-p5a-assistant, PR177); prepare proposals without touching claims
 - heart-ack: same-conversation acknowledged AutoFit workspace timeout; fresh shipping reason set required
+
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/43
+- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/103
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/271
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/128
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/617
+- validation: 570 notebook source/schema/inventory/context parity; 52-repo /1192-link overlaid audit clean; Galaxy assistant 84 tests; Lens smoke 44/44; independent review CLEAN
+- proposal-test-limit: Lens assistant full suite: 107 passed / 1 skipped then unchanged old-wheel fixture error; separate compatible subset294pass/2skip/1xfail
+- review-bundle: /mnt/c/Users/Jammy/Workspace/Science/scratch/tutorial_link_sweep_2026-11-04/index.html
+- completion: keep umbrella issue 127 open after partial merges; three claimed-owner proposals remain unapplied; no automatic merge

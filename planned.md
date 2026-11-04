@@ -132,7 +132,7 @@
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/127
 - filed: 2026-11-04
 - prompt: active/tutorial-link-sweep.md
-- status: blocked by existing repo claims; proposal patches prepared by tutorial-link-sweep
+- status: blocked by existing repo claims; all three patches independently reviewed and ready; coordinated on PyAutoLens#818 and autolens_assistant#177; apply after claim release
 - blocked-by: magnification-maps-wiring (PyAutoLens/PyAutoGalaxy), results-library-p5a-assistant (autolens_assistant, open PR177)
 - scope: current tutorial indexes/links and assistant Colab routing only; no API changes
 - repos:
