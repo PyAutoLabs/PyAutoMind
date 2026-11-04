@@ -12,7 +12,7 @@
 | [Epics](#epics) | 21 |
 | [In flight](#in-flight) | 8 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 297 |
+| [Backlog](#backlog) | 299 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -1144,7 +1144,7 @@ Use the start-dev skill. active/sky_orientation_euclid_dr1_and_library.md
 
 </details>
 
-<details><summary>📋 <a href="active/workspace_hygiene_sweep_1104.md">Workspace hygiene sweep (refs, config, docstrings) — 2026-11-04</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/620">issue #620</a> — issued 2026-11-04 — workspace-dev</summary>
+<details><summary>📋 <a href="active/workspace_hygiene_sweep_1104.md">Workspace hygiene sweep (refs, config, docstrings) — 2026-11-04</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/620">issue #620</a> — issued 2026-11-04 — awaiting-merge</summary>
 
 ```
 Use the start-dev skill. active/workspace_hygiene_sweep_1104.md
@@ -1235,7 +1235,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 286 · local-dev 9
+Lanes: any 288 · local-dev 9
 
 <a id="human-review"></a>
 <details>
@@ -1286,7 +1286,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>bug</b> — 67</summary>
+<summary><b>bug</b> — 69</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1820,6 +1820,22 @@ Use the start-dev skill. draft/bug/autolens/point_source_plot_script_residual_sh
 
 ```
 Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautobrain/hygiene_refs_false_positives_cross_repo_and_runtime.md">hygiene refs: 16/19 findings are false positives (sibling-repo and runtime paths)</a> — pyautobrain</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautobrain/hygiene_refs_false_positives_cross_repo_and_runtime.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautohands/generate_missing_converter_deletes_start_here.md">autohands generate: missing ipynb-py-convert deletes start_here.ipynb and leaves temp.py</a> — pyautohands</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautohands/generate_missing_converter_deletes_start_here.md
 ```
 
 </details>
@@ -3184,7 +3200,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-128 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+130 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3229,7 +3245,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/rectangular_adaptive_zeroed_ring_guard_row_mismatch.md`
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
 - `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`
-- _… and 88 more_
+- _… and 90 more_
 
 </details>
 
