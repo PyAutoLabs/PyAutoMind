@@ -291,7 +291,7 @@ work per human review-minute above the shadow-shift baseline.
   leases, crash re-dispatch once per shift, usage caps, fake workers; AUTONOMY "The watcher's network
   surface — 2026-11-03". The timer is not installed (human act). Next: 3b, unblocked.
 - 2026-11-03 — **Shadow-window ruling (human):** grant `glance` narrowed after a spot audit
-  (`draft/feature/pyautobrain/glance_tier_ruling_shadow_window.md`); **unattended `glance` merges
+  (recorded `complete/2026/11/glance-tier-ruling.md`); **unattended `glance` merges
   get a separate stage-2 sub-window** (first 10 need the independent different-model adversary
   leg). Phase 4 must not auto-merge unattended before that sub-window exists.
 - 2026-11-03 — **phase 3b COMPLETE** (PyAutoMind#525, PyAutoBrain#558; record
@@ -303,3 +303,7 @@ work per human review-minute above the shadow-shift baseline.
   `complete/2026/11/autonomous-orchestrators-p3c.md`): one Mind writer — worker ledger ops in
   `<slot>/ledger/`, committed by the orchestrator from a temporary worktree on `origin/main`, worker
   pre-commit hook refuses direct Mind commits; the 3b sandbox fence is lifted. Next: 3d (digest), unblocked.
+- 2026-11-04 — **Shadow-window ruling RECORDED** (PyAutoMind#529, PyAutoBrain#567; record
+  `complete/2026/11/glance-tier-ruling.md`): audit 8/8 `ok`; `glance` granted, narrowed (non-PASS witness →
+  human `/prm`); stage-2 sub-window table open in `autonomy_log.md`. Phase 4 unattended merges still
+  need the shadow-row verb to write into that table.

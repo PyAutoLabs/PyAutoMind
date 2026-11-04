@@ -1,3 +1,13 @@
+- epic: autonomous-orchestrators (prerequisite for phase 4 unattended merges; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md)
+- summary: the human's ruling on the tier-`glance` Shadow window. Spot audit (Science/scratch/shadow_window_audit_2026-11-03/audit.md) returned 8/8 `ok` at 69 counted rows (all stage-1 merged-unchanged). PyAutoBrain#567: AUTONOMY.md "The `glance` Shadow-window ruling — 2026-11-04" — glance confirmed for in-turn auto-merge, narrowed: a Witness that did not PASS (none, n/a, partial, waived) is a human /prm; the tier-drift narrowing (public API / default / return value → judge) NOT adopted (conditional on a `minded` row; none); unattended (watcher) merges open a stage-2 sub-window whose first 10 each need the different-model adversary leg; revert condition unchanged; 5 doctrine tests. PyAutoMind#529: autonomy_log.md Shadow header states the ruling, new H2 "Unattended `glance` sub-window (stage 2)" with an empty table; lifecycle.py SHADOW_RULED makes the count line cite the ruling instead of "decision is due".
+- ledger: row fixed-model-json (PyAutoFit#1708) stays counted — the human did not recall typing that /prm.
+- witness: doctrine tests 19/19, the 5 new ones red against the unedited AUTONOMY.md; Mind suite 712 passed; Brain 1489 passed + 2 pre-existing test_prompt_budget failures (also red on main).
+- ci at merge: Brain pytest 3.12/3.13 green; Mind Lifecycle Drift RED on main's pre-existing drift (active/chapter2-explanations.md, HowToLens#123, has no active.md row) — merged on the human's explicit decision 2026-11-04.
+- follow-up: lifecycle shadow-row does not yet route unattended merges into the stage-2 table — phase 4 work.
+- heart: YELLOW (workspace-validation timeout autofit_test MultiStartResumeNaNCounters.py; no release rehearsal) acknowledged by the human at ship; judge tier, human /prm.
+
+## Original prompt
+
 # Record the `glance` Shadow-window ruling in AUTONOMY.md — grant narrowed, after the spot audit
 
 Type: feature
