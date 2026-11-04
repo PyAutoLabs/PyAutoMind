@@ -1046,7 +1046,7 @@ Use the start-dev skill. active/chapter2-explanations.md
 
 </details>
 
-<details><summary>📋 <a href="active/glance_tier_ruling_shadow_window.md">Record the <code>glance</code> Shadow-window ruling in AUTONOMY.md — grant narrowed, after…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/566">issue #566</a> — issued 2026-11-04 — library-dev</summary>
+<details><summary>📋 <a href="active/glance_tier_ruling_shadow_window.md">Record the <code>glance</code> Shadow-window ruling in AUTONOMY.md — grant narrowed, after…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/566">issue #566</a> — issued 2026-11-04 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/529">PyAutoMind#529</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/567">PyAutoBrain#567</a></summary>
 
 ```
 Use the start-dev skill. active/glance_tier_ruling_shadow_window.md
