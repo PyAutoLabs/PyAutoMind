@@ -1,3 +1,39 @@
+# cti-likelihood-pins: pin CTI log-likelihood values (cti-upkeep phase 0b)
+
+- issue: https://github.com/PyAutoLabs/autocti_workspace_test/issues/24 (closed)
+- pr: https://github.com/PyAutoLabs/autocti_workspace_test/pull/25 (merged 2026-11-04, 72970e7)
+- epic: cti-upkeep, phase 0b
+- tier: glance (auto-merged on green after the Witness passed)
+
+## What shipped
+
+- `scripts/dataset_1d/likelihood/pins.py`: `AnalysisDataset1D.log_likelihood_function` summed over
+  two injection levels (100, 5000), for 1 and 2 trap species, at the truth model and an offset
+  model (density x1.2, release timescale x0.8). 4 literals.
+- `scripts/imaging_ci/likelihood/pins.py`: `AnalysisImagingCI.log_likelihood_function` with
+  parallel-only, serial-only and parallel+serial clocking on a 30x30 layout, at the same two
+  models. 6 literals.
+- All 10 values are pinned at rtol=1e-8 with the comment
+  `# pinned 2026-11-04: autocti main@2a91ff5d, arcticpy 2.6`.
+- Both scripts are in `smoke_tests.txt`, and the re-pin rule is in `autocti_workspace_test/AGENTS.md`.
+
+## Evidence
+
+- Local `run_smoke.py`: 5/5 pass; each pin script takes about 2.4 s.
+- CI `Smoke Tests` on 3.12 and 3.13: both pin scripts PASS (about 1.8 s each).
+- Control test: a 1 % change to the offset density fails both scripts
+  (1D: -18070.24 vs -16244.66; 2D: -2144.82 vs -1804.17).
+
+## Notes for later phases
+
+- The simulators do accept `noise_seed`; the prompt said they did not. The pins still use no noise,
+  so they test CTI code and not PyAutoArray's random number generation.
+- At the truth model the values are the noise normalization only (the same across species and
+  directions). The offset values are the ones that test arctic clocking. Phase 2 (arcticpy bump)
+  is expected to move every offset literal; re-pin them all in one PR as AGENTS.md says.
+
+## Original prompt
+
 # autocti_workspace_test: pin numerical log-likelihood values for the CTI likelihood functions
 
 Type: test

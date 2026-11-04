@@ -1,16 +1,4 @@
 
-## cti-likelihood-pins
-- issue: https://github.com/PyAutoLabs/autocti_workspace_test/issues/24
-- issued: 2026-11-04
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/cti-likelihood-pins
-- repos:
-  - autocti_workspace_test: feature/cti-likelihood-pins
-- prompt: active/likelihood_value_pins.md
-- epic: cti-upkeep (phase 0b)
-- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
-
 ## magnification-maps-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/818
 - issued: 2026-11-02

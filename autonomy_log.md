@@ -520,7 +520,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 71 (stage 1: 71, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
+Count toward 20: 72 (stage 1: 72, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -620,6 +620,7 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-11-03 | autonomous-orchestrators-p2 (PyAutoMind#523 / PyAutoBrain#554) | glance | tests Brain 1437 + Mind 712 local, CI 2/2 legs Brain (2nd run; 1st red on tenant firewall, fixed f3fc8fc) + Mind 2 runs (drift skipped by design); smoke n/a (organs); review none (no independent review); heart YELLOW ack'd by human; witness PASS (28/28 clause tests) | merged-unchanged | 1 |
 | 2026-11-04 | batch-watch-live-view (PyAutoBrain#576) | glance | tests 1548p / smoke n/a (Brain organ) / review none / heart YELLOW human-ack / witness PASS | merged-unchanged | 1 |
 | 2026-11-04 | shift-digest-readable-picks (PyAutoBrain#580) | glance | tests 1564p / smoke n/a (Brain organ) / review none / heart GREEN / witness PASS | merged-unchanged | 1 |
+| 2026-11-04 | cti-likelihood-pins (autocti_workspace_test#25) | glance | tests n/a (workspace) / smoke 5/5 local + CI 3.12+3.13 / review none / heart GREEN / witness PASS | merged-unchanged | 1 |
 
 ## Unattended `glance` sub-window (stage 2) — opened 2026-11-04
 

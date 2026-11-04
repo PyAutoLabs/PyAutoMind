@@ -96,8 +96,8 @@ Library first; one issue per repo per phase; each phase routes through
    Re-verify the report against live state on the day the epic opens, then
    collect the rulings in §Decisions below. Output: rulings recorded in this
    ledger; phase 1 prompt un-blocked. **0b (code, first to ship): numerical
-   log-likelihood pins in autocti_workspace_test** (member:
-   `draft/test/autocti_workspace_test/likelihood_value_pins.md`) — the lens and
+   log-likelihood pins in autocti_workspace_test** (DONE 2026-11-04,
+   autocti_workspace_test#25; record `complete/2026/11/cti-likelihood-pins.md`) — the lens and
    galaxy test workspaces pin absolute `log_likelihood` literals per likelihood
    function; CTI has none, so nothing would notice a value change from a
    library PR or the phase 2 arcticpy bump. Lands before any library or
@@ -215,7 +215,7 @@ Library first; one issue per repo per phase; each phase routes through
 
 ## Members
 
-- Phase 0: `draft/test/autocti_workspace_test/likelihood_value_pins.md` (0b, ships first)
+- Phase 0: 0b DONE 2026-11-04 — `complete/2026/11/cti-likelihood-pins.md` (autocti_workspace_test#25)
 - Phase 1: `draft/release/autocti/cti_release_train_wiring.md`
 - Phase 3: `draft/bug/autocti_workspace/dataset_1d_results_database_examples_drift.md`
 - Phase 5: `draft/bug/autocti_visualization/render_yml_blocked_until_pyautocti_release.md`,
