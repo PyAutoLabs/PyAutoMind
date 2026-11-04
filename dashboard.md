@@ -1104,7 +1104,7 @@ Use the start-dev skill. active/gradient_correctness_sweep.md
 
 </details>
 
-<details><summary>📋 <a href="active/hygiene_extras_tomllib_py310.md">hygiene extras crashes on Python 3.10 (no tomllib)</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/581">issue #581</a> — issued 2026-11-04 — library-dev</summary>
+<details><summary>📋 <a href="active/hygiene_extras_tomllib_py310.md">hygiene extras crashes on Python 3.10 (no tomllib)</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/581">issue #581</a> — issued 2026-11-04 — awaiting-merge</summary>
 
 ```
 Use the start-dev skill. active/hygiene_extras_tomllib_py310.md
