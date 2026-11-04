@@ -20,4 +20,4 @@ Regenerate the affected notebooks; never hand-edit `.ipynb` files.
 
 Validation: `pyauto-brain hygiene optdeps` and `hygiene escapes` report clean for autolens_workspace; the three scripts run under the smoke profile, and the datacube script skips cleanly with `nufftax` hidden.
 
-Blocked: autolens_workspace is claimed by Codex task `tutorial-link-sweep` (PR autolens_workspace#617 regenerates `notebooks/cluster/likelihood_function.ipynb` too). Start after that claim releases.
+Unblocked 2026-11-04: the tutorial sweep and autolens_workspace#617 are merged; see `complete/2026/11/tutorial-link-sweep.md`. Start through start_dev, rechecking current claims. The two fixes above remain outstanding.

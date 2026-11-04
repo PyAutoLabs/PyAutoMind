@@ -1,3 +1,44 @@
+# Ecosystem tutorial links and generated guidance — merged
+
+All eight PRs merged on 2026-11-04 under the human's `/prm` authorization. Checked every workflow run and matrix job at each exact feature head: 22 runs / 46 jobs passed, all PRs CLEAN, Heart library freeze clear. Git ancestry confirms every claimed feature branch is contained in origin/main.
+
+| Repository / PR | Merge commit |
+|---|---|
+| [PyAutoGalaxy](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/694) | `cccd8ea9a0a46caef7c1922b7ed5cd2a10dd3e91` |
+| [PyAutoLens](https://github.com/PyAutoLabs/PyAutoLens/pull/819) | `1e925fb558ce63431bbc24815b0ee09a6c76899d` |
+| [autogalaxy_assistant](https://github.com/PyAutoLabs/autogalaxy_assistant/pull/43) | `3db66df3fbcd8d8a85e27a5d2c044977195014a0` |
+| [autolens_assistant](https://github.com/PyAutoLabs/autolens_assistant/pull/178) | `c693bbdb1c0f43ca03af4817c89f0d77da4b54a9` |
+| [HowToGalaxy](https://github.com/PyAutoLabs/HowToGalaxy/pull/103) | `b0bec1dbf2b6d438e8bb5de1cd5b17b4d527320a` |
+| [autogalaxy_workspace](https://github.com/PyAutoLabs/autogalaxy_workspace/pull/271) | `b999c66619866d58753089874fe2316fb2ded178` |
+| [HowToLens](https://github.com/PyAutoLabs/HowToLens/pull/128) | `caea218293bd26e16aaec2f567bb2c07f4ee3dc6` |
+| [autolens_workspace](https://github.com/PyAutoLabs/autolens_workspace/pull/617) | `a1184c808a442c675670c9acc82348502b5ee81d` |
+
+## Delivered
+
+Aligned library course indexes, assistant teaching citations and topic routing, course navigation and workspace references with the updated HowToLens / HowToGalaxy syllabus. Restored Fit Problems discovery and the combined adaptive reconstruction progression. Current-course navigation follows main; publication/test references retain their deliberate historical pins.
+
+Regenerated 570 notebooks and verified narrative/executable-source parity, inventory, schema and assistant-context provenance. This restored existing Python-source changes absent from 13 Lens notebooks. The final source audit covers 52 ecosystem repositories, eight actual worktrees and 1,192 course URLs, with no unresolved active destinations. This is a source-target audit, not a live HTTP/anchor availability crawl.
+
+## Validation
+
+- PyAutoGalaxy full suite: 1,465 passed, 1 skipped.
+- PyAutoLens full suite: 1,021 passed, 1 expected failure.
+- Lens assistant full suite: 305 passed, 3 skipped, 1 expected failure, using the exact isolated 2026.9.27.2 wheel environment required by its existing fixture. No fixture/version-guard bypasses. Earlier source-stack fixture error resolved.
+- Galaxy assistant full suite: 84 passed; API audit: 221 symbols, none missing.
+- Lens canonical smoke: 42 scripts and 2 notebooks passed; includes regenerated interferometer simulator. Other prose/metadata-only changes have documented smoke n/a applicability.
+- Both edited six-page library documentation sets build with Sphinx/MyST -W; focused context tests, reproducible regeneration, navigation/catalogue and whitespace checks pass.
+- Independent review CLEAN. Final shipping Heart STALE solely for missing release rehearsal; no release performed. Both library PRs retain their pending-release labels.
+
+## Coordination and close-out
+
+The user explicitly authorized separate documentation-only worktrees overlapping repository claims. The magnification-maps-wiring and results-library-p5a-assistant claims, branches and worktrees remain untouched. Their committed file sets do not overlap these documentation patches. Libraries merged first, assistants before their consumers. No outstanding tutorial-sweep implementation remains.
+
+The separate alw-optdeps-escapes task is now unblocked; its optional-dependency guard and raw-docstring fixes were not part of this sweep. The hygiene tidy live-branch bug remains independently filed; this merge does not fix it.
+
+User explicitly approved removal of the task worktree, its test environments, generated datasets and fit outputs. Cleanup follows ledger completion. Preserve the separate review bundle at /mnt/c/Users/Jammy/Workspace/Science/scratch/tutorial_link_sweep_2026-11-04/ (Windows: C:\Users\Jammy\Workspace\Science\scratch\tutorial_link_sweep_2026-11-04). Merge receipts, validation logs and the review report are retained there. No scheduled waiter or automatic merge remains armed.
+
+## Original prompt
+
 # Align ecosystem documentation with the current HowToLens and HowToGalaxy courses
 
 Type: docs
