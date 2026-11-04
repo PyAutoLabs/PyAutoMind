@@ -12,7 +12,7 @@
 | [Epics](#epics) | 21 |
 | [In flight](#in-flight) | 7 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 295 |
+| [Backlog](#backlog) | 297 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -121,7 +121,7 @@ Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 90
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 92
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -1227,7 +1227,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 284 · local-dev 9
+Lanes: any 286 · local-dev 9
 
 <a id="human-review"></a>
 <details>
@@ -1819,7 +1819,7 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>feature</b> — 39</summary>
+<summary><b>feature</b> — 40</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
 
@@ -2081,6 +2081,14 @@ Use the start-dev skill. draft/feature/pyautohands/release_board_run_logs_enrich
 
 ```
 Use the start-dev skill. draft/feature/workspaces/gallery_runner_missing_tiers.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoscientist/animated_logos_for_pyautogalaxy_and_pyautofit.md">Animated logos for PyAutoGalaxy and PyAutoFit</a> — pyautoscientist · medium · safe · low</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautoscientist/animated_logos_for_pyautogalaxy_and_pyautofit.md
 ```
 
 </details>
@@ -2485,7 +2493,7 @@ Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_
 </details>
 
 <details>
-<summary><b>docs</b> — 24</summary>
+<summary><b>docs</b> — 25</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -2603,6 +2611,14 @@ Use the start-dev skill. draft/docs/workspaces/model_bullet_parameter_count_drif
 
 ```
 Use the start-dev skill. draft/docs/workspaces/assistants_regime_extension.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/fred_again_lyric_at_the_bottom_of.md">Fred Again lyric at the bottom of every PyAutoLabs repo README</a> — workspaces · medium · safe · low</summary>
+
+```
+Use the start-dev skill. draft/docs/workspaces/fred_again_lyric_at_the_bottom_of.md
 ```
 
 </details>
