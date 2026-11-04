@@ -7,8 +7,9 @@ Repos:
 Difficulty: small
 Autonomy: supervised
 Priority: medium
-Status: draft
+Status: formalised
 Filed: 2026-11-04
+Issued: 2026-11-04
 Epic: autonomous-orchestrators
 Consequence: glance
 Witness: `pyauto-brain batch watch <brief>` run against a live slot directory shows every task's state, picked-reason, PR/CI health and the shift's budgets, and refreshes in place; a `--once` mode prints one snapshot that the tests assert on; it makes no write anywhere and no GitHub call beyond `gh pr checks`

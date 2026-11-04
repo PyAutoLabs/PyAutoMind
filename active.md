@@ -87,6 +87,19 @@
 - tier: judge — merge mode: human /prm
 
 
+## batch-watch-live-view
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/575
+- issued: 2026-11-04
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/batch-watch-live-view
+- repos:
+  - PyAutoBrain: feature/batch-watch-live-view
+- prompt: active/batch_watch_live_view.md
+- epic: autonomous-orchestrators (pilot 4c follow-up)
+- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary (non-PASS Witness → human /prm)
+
+
 ## howtogalaxy-ch3-parity
 - issue: https://github.com/PyAutoLabs/HowToGalaxy/issues/101
 - issued: 2026-11-04
