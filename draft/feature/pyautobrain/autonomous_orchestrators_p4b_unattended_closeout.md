@@ -12,7 +12,7 @@ Status: formalised
 Filed: 2026-11-04
 Epic: autonomous-orchestrators
 Phase: 4
-Blocked-by: draft/feature/pyautobrain/autonomous_orchestrators_p4a_shadow_shifts.md
+Blocked-by: active/autonomous_orchestrators_p4a_shadow_shifts.md
 Consequence: judge
 Witness: with fake PRs and fake sessions, a declared-`glance` PR whose CI landed green and whose guards all hold gets exactly one close-out session dispatched and exactly one row in `autonomy_log.md` "Unattended `glance` sub-window (stage 2)"; each guard failing on its own (witness not run by an independent session, Heart RED, merge-cap reached, tier not `glance`, `decision-taken` label, no different-model adversary leg during the first 10) dispatches nothing and the digest names the reason; the `glance-auto-merges` counter moves only on a real merge; `pytest PyAutoBrain/tests -q` and PyAutoMind tests green
 Review-minutes: 25
