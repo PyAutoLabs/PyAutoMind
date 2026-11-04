@@ -16,6 +16,8 @@ Status: formalised
 Consequence: judge
 Review-minutes: 20
 Unattended: never
+Epic: cti-upkeep
+Phase: 1
 Filed: 2026-07-17 (backfilled from git)
 
 Follow-up to the CTI resurrection epic (Phases 0-5; workspace_test + Heart

@@ -16,7 +16,8 @@ Lane: local-dev
 Status: draft
 Consequence: judge
 Witness: `gh workflow run render -R PyAutoLabs/autocti_visualization` completes green and its last step logs "Dispatched eyes-refresh to PyAutoLabs/PyAutoEyes"
-Epic: pyautoeyes-birth
+Epic: cti-upkeep
+Phase: 5
 Filed: 2026-09-29
 
 ## Task

@@ -9,6 +9,8 @@ Autonomy: supervised
 Priority: low
 Status: draft
 Consequence: judge
+Epic: cti-upkeep
+Phase: 5
 Filed: 2026-10-23
 
 Since autocti_visualization#8, `render.yml` renders from the library mains by

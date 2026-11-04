@@ -9,10 +9,10 @@
 | Where | Count |
 |-------|------:|
 | [Start here](#start-here) | 24 |
-| [Epics](#epics) | 20 |
+| [Epics](#epics) | 21 |
 | [In flight](#in-flight) | 9 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 289 |
+| [Backlog](#backlog) | 291 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -23,7 +23,7 @@
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 18
+**Highest priority** (filed as `high`) — showing 12 of 19
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -121,7 +121,7 @@ Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 92
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 90
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -222,6 +222,59 @@ Use the start-dev skill. draft/maintenance/pyautomemory/canonical_key_todo_sweep
 ## Epics
 
 Long-running multi-phase programmes. Each epic's 📋 prompt has the assistant read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
+
+<details>
+<summary><b>CTI upkeep parity — release-train wiring and first modern <code>autocti</code> release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), <code>autocti_profiling</code> + Pulse <code>cti</code> row, figures/assistant/docs currency, hygiene</b> — 5 queued prompt(s), in order</summary>
+
+<details><summary>📋 <b>CTI upkeep parity — release-train wiring and first modern <code>autocti</code> release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), <code>autocti_profiling</code> + Pulse <code>cti</code> row, figures/assistant/docs currency, hygiene</b> — ledger: `draft/maintenance/autocti/cti_upkeep_epic.md` — FILED 2026-11-04 — survey in draft/maintenance/autocti/cti_upkeep_epic_report.md; rulings R1–R6 open; NEXT: rule R1/R6, then…</summary>
+
+```
+Continue the 'CTI upkeep parity — release-train wiring and first modern `autocti` release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), `autocti_profiling` + Pulse `cti` row, figures/assistant/docs currency, hygiene' epic. Its canonical state lives in draft/maintenance/autocti/cti_upkeep_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: seven phases, library first, one issue per repo per phase, one at a time: 0 census + rulings → 1 release-train wiring + first modern release (Hands LIB_PROJECTS/release.yml/python_matrix/pre_build/COLAB_PROJECTS, Nerves setup_colab autocti with arcticpy pre-install, Heart release_gate true + integrate/validation/docs-build rows, wiki-currency + pyautocti-release dispatch) → 2 arcticpy modernisation (upstream jkeger/arctic packaging PR + 2.7 release; Heart pin bump; DNA spec; install docs; lazy-import ruling) → 3 integration parity (smoke_tests.txt 3→representative, workspace_test rebuild + legacy/ ruling, docs.yml, 3.14) → 4 autocti_profiling birth + Pulse day zero → 5 autocti_visualization PyPI mode + Eyes sign-off, assistant version/PENDING/wiki-currency, docs/api rewrite → 6 hygiene + close. Members: cti_release_train_wiring (p1), dataset_1d_results_database_examples_drift (p3), the two autocti_visualization bugs + api_rst_rewrite (p5). Boundaries: upkeep only, no CTI science; arcticpy pin stays in Heart install_arcticpy.sh only; never hand-dispatch release.yml.
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/release/autocti/cti_release_train_wiring.md">CTI release-train wiring — first modern autocti release</a> — autocti · medium · human-required · normal</summary>
+
+```
+Use the start-dev skill. draft/release/autocti/cti_release_train_wiring.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autocti_workspace/dataset_1d_results_database_examples_drift.md">autocti_workspace: the dataset_1d results/database example scripts have drifted</a> — autocti_workspace · large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/autocti_workspace/dataset_1d_results_database_examples_drift.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md">autocti_visualization manifest <code>rendered_with:</code> shows stale source-checkout versions in mains mode</a> — autocti_visualization · easy · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autocti_visualization/render_yml_blocked_until_pyautocti_release.md">autocti_visualization render.yml fails on the released stack until PyAutoCTI releases</a> — autocti_visualization · small · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/autocti_visualization/render_yml_blocked_until_pyautocti_release.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a> — autocti · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/docs/autocti/api_rst_rewrite.md
+```
+
+</details>
+
+</details>
 
 <details>
 <summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 9 queued prompt(s), in order</summary>
@@ -976,7 +1029,7 @@ Use the start-dev skill. draft/feature/autofit/certified_solver_batched_guard_c2
 </details>
 
 <details>
-<summary><b>pyautoeyes-birth</b> — 5 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+<summary><b>pyautoeyes-birth</b> — 4 queued prompt(s) — ⚠️ not in `epics.md`</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautoeyes/multi_galaxy_gallery.md">autolens_visualization: multi-galaxy gallery — producer and dataset</a> — pyautoeyes · medium · supervised · normal</summary>
 
@@ -990,14 +1043,6 @@ Use the start-dev skill. draft/feature/pyautoeyes/multi_galaxy_gallery.md
 
 ```
 Use the start-dev skill. draft/feature/pyautoeyes/group_cluster_gallery.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autocti_visualization/render_yml_blocked_until_pyautocti_release.md">autocti_visualization render.yml fails on the released stack until PyAutoCTI releases</a> — autocti_visualization · small · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/bug/autocti_visualization/render_yml_blocked_until_pyautocti_release.md
 ```
 
 </details>
@@ -1198,7 +1243,7 @@ Use the start-dev skill. active/tutorial-link-sweep.md
 
 ## Backlog
 
-Lanes: any 279 · local-dev 8
+Lanes: any 281 · local-dev 8
 
 <a id="human-review"></a>
 <details>
@@ -1249,7 +1294,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>bug</b> — 66</summary>
+<summary><b>bug</b> — 64</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1627,14 +1672,6 @@ Use the start-dev skill. draft/bug/priors/15_transformed_message_logpdf_jacobian
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autocti_workspace/dataset_1d_results_database_examples_drift.md">autocti_workspace: the dataset_1d results/database example scripts have drifted</a> — autocti_workspace · large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/bug/autocti_workspace/dataset_1d_results_database_examples_drift.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/bug/autofit/multistartgradient_searches_ignore_iterations_pe.md">MultiStartGradient searches ignore iterations_per_quick_update and live_visual_update while announcing the cadence…</a> — autofit · large · supervised · normal</summary>
 
 ```
@@ -1735,14 +1772,6 @@ Use the start-dev skill. draft/bug/autoarray/reconstruction_noise_map_truncated_
 
 ```
 Use the start-dev skill. draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md">autocti_visualization manifest <code>rendered_with:</code> shows stale source-checkout versions in mains mode</a> — autocti_visualization · easy · supervised · low</summary>
-
-```
-Use the start-dev skill. draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md
 ```
 
 </details>
@@ -2448,7 +2477,7 @@ Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_
 </details>
 
 <details>
-<summary><b>docs</b> — 25</summary>
+<summary><b>docs</b> — 24</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -2510,14 +2539,6 @@ Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richard
 
 ```
 Use the start-dev skill. draft/docs/pyautobrain/rtd_organism_currency.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autocti/api_rst_rewrite.md">Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead</a> — autocti · medium · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/docs/autocti/api_rst_rewrite.md
 ```
 
 </details>
@@ -2653,12 +2674,20 @@ Use the start-dev skill. draft/docs/howtolens/tutorial_correctness_and_howtogala
 </details>
 
 <details>
-<summary><b>maintenance</b> — 16</summary>
+<summary><b>maintenance</b> — 18</summary>
 
 <details><summary>📋 <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> — organs · medium · supervised · high</summary>
 
 ```
 Use the start-dev skill. draft/maintenance/organs/reduce_session_token_load.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autocti/cti_upkeep_epic.md">CTI upkeep parity — bring PyAutoCTI and its satellites to the same…</a> — autocti · too-large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/maintenance/autocti/cti_upkeep_epic.md
 ```
 
 </details>
@@ -2779,6 +2808,14 @@ Use the start-dev skill. draft/maintenance/euclid/skip_fit_output_no_longer_gate
 
 ```
 Use the start-dev skill. draft/maintenance/pyautomind/session_start_hook_copies_regen.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autocti/cti_upkeep_epic_report.md">CTI upkeep parity — survey report (2026-11-04)</a> — autocti</summary>
+
+```
+Use the start-dev skill. draft/maintenance/autocti/cti_upkeep_epic_report.md
 ```
 
 </details>
@@ -2964,15 +3001,7 @@ Use the start-dev skill. draft/test/autolens_workspace_test/mge_group_dataset_wi
 </details>
 
 <details>
-<summary><b>release</b> — 2</summary>
-
-<details><summary>📋 <a href="draft/release/autocti/cti_release_train_wiring.md">CTI release-train wiring — first modern autocti release</a> — autocti · medium · human-required · normal</summary>
-
-```
-Use the start-dev skill. draft/release/autocti/cti_release_train_wiring.md
-```
-
-</details>
+<summary><b>release</b> — 1</summary>
 
 <details><summary>📋 <a href="draft/release/pyautoreduce/pyautoreduce_release_induction.md">Induct PyAutoReduce into the PyAutoHands release machinery (date versioning)</a> — pyautoreduce · medium · safe · normal</summary>
 
@@ -3024,14 +3053,13 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-25 | filed | <a href="draft/bug/health_fixes/heart_health_rerun_stale_push.md">Heart Health rerun cannot publish after main advances</a> |
 | 2026-10-25 | filed | <a href="draft/bug/health_fixes/ci_timing_execution_coverage.md">CI timing must compare equivalent executed job coverage</a> |
 | 2026-10-23 | filed | <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred…</a> |
-| 2026-10-23 | filed | <a href="draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md">autocti_visualization manifest <code>rendered_with:</code> shows stale…</a> |
 | 2026-10-23 | filed | <a href="draft/bug/autolens_profiling/stale_auto_simulated_cluster_dataset.md"><code>@autolens_profiling</code> stale auto-simulated <code>dataset/cluster/simple</code>…</a> |
+| 2026-10-23 | filed | <a href="draft/feature/pyautobrain/docs_conductor.md">A dedicated Documentation conductor in PyAutoBrain</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-23 | filed | <a href="draft/feature/pyautobrain/docs_conductor.md">A dedicated Documentation conductor in PyAutoBrain</a> |
 | 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
 | 2026-10-21 | filed | <a href="planned.md#interferometer-primary-beam-persistence-mirror">interferometer-primary-beam-persistence-mirror</a> |
 | 2026-10-21 | filed | <a href="draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md">PyAutoLens mirror of the interferometer primary-beam persistence…</a> |
@@ -3041,12 +3069,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-21 | filed | <a href="draft/docs/autolens_workspace/interferometer_primary_beam_example.md">Interferometer primary beam: workspace example and docs</a> |
 | 2026-10-21 | filed | <a href="draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md">Cluster likelihood scripts: image-plane manual check disagrees with…</a> |
 | 2026-10-16 | filed | <a href="draft/bug/pyautomind/repos_sync_test_keys_on_dir_name.md">repos_sync standards-block test keys on the checkout dir name…</a> |
+| 2026-10-16 | filed | <a href="draft/maintenance/autolens_workspace/remeasure_shapelets_slow_park.md">Re-measure the shapelets/modeling.py SLOW park (#586) under the…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-16 | filed | <a href="draft/maintenance/autolens_workspace/remeasure_shapelets_slow_park.md">Re-measure the shapelets/modeling.py SLOW park (#586) under the…</a> |
 | 2026-10-16 | filed | <a href="draft/bug/pyautomind/glance_shadow_window_reached.md">Glance shadow window reached 20/20 clean — count line must say…</a> |
 | 2026-10-14 | filed | <a href="draft/test/autofit/workspace_searches_scripts_preexisting_failures.md"><code>@autofit_workspace</code> six <code>searches/</code> scripts fail on main at…</a> |
 | 2026-10-14 | filed | <a href="draft/feature/cortex/human_readable_projects_dashboard.md">Human-readable Cortex Projects dashboard</a> |
@@ -3056,12 +3084,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
 | 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
+| 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
@@ -3071,6 +3099,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
+| 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
 
 </details>
 
@@ -3084,7 +3113,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 ## Hygiene
 
-30 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
+31 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
 
 <details>
 <summary>Headerless prompts</summary>
@@ -3096,6 +3125,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough_p3_front_doors.md`
 - `draft/docs/howtolens/paired_tutorial_review_resume.md`
 - `draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md`
+- `draft/maintenance/autocti/cti_upkeep_epic_report.md`
 - `draft/research/autofit/hpc_campaign_epic_report.md`
 - `draft/research/autofit/hpc_campaign_epic_surveys/carbon.md`
 - `draft/research/autofit/hpc_campaign_epic_surveys/codebase.md`
@@ -3122,7 +3152,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-124 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+125 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3167,11 +3197,11 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/rectangular_adaptive_zeroed_ring_guard_row_mismatch.md`
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
 - `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`
-- _… and 84 more_
+- _… and 85 more_
 
 </details>
 
-63 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+64 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3230,6 +3260,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/refactor/autolens/cache_readers_fall_back_to_zip_member.md — unknown theme keyword(s): aggregator, paths`
 - `draft/refactor/autolens/witt_wynne_solver_library_home.md — unknown theme keyword(s): euclid`
 - `draft/refactor/autonerves/config_yaml_parse_cache.md — unknown theme keyword(s): performance, ci`
+- `draft/maintenance/autocti/cti_upkeep_epic.md — unknown theme keyword(s): infrastructure`
 - `draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md — unknown theme keyword(s): euclid, docs`
 - `draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md — unknown theme keyword(s): jax-grad`
 - `draft/research/autofit/hpc_campaign_epic.md — unknown theme keyword(s): hpc, euclid, carbon`

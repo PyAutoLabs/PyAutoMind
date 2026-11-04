@@ -16,6 +16,8 @@ Consequence: glance
 Witness: `scripts/dataset_1d/advanced/database/examples/samples.py` and `scripts/dataset_1d/results/examples/samples.py` run end-to-end against the installed autocti (FactorGraphModel instance structure, live plot API), and a minimal smoke workflow runs them in CI.
 Review-minutes: 3
 Unattended: ready
+Epic: cti-upkeep
+Phase: 3
 Filed: 2026-08-19 (backfilled from git)
 
 <!-- re-homed from draft/triage/ to draft/bug/autocti_workspace/ at the witness-campaign close-out, 2026-09-17: two concrete sites, a bug not a triage -->
