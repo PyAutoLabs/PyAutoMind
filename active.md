@@ -1,3 +1,14 @@
+## hygiene-refs-false-positives
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/583
+- issued: 2026-11-04
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/hygiene-refs-false-positives
+- repos:
+  - PyAutoBrain: feature/hygiene-refs-false-positives
+- prompt: active/hygiene_refs_false_positives_cross_repo_and_runtime.md
+- tier: glance — merge mode: human /prm
+
 
 ## magnification-maps-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/818
