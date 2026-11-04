@@ -1576,26 +1576,18 @@ Use the start-dev skill. draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp3
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/organs/clean_slate_packaging_grouped_layout.md">clean_slate.sh --packaging silently finds nothing on the grouped repo layout</a> — organs · small · supervised · normal</summary>
+<details><summary>📋 <a href="draft/bug/pyautobrain/clean_slate_packaging_grouped_layout.md">clean_slate.sh --packaging silently finds nothing on the grouped repo layout</a> — pyautobrain · small · supervised · normal</summary>
 
 ```
-Use the start-dev skill. draft/bug/organs/clean_slate_packaging_grouped_layout.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/organs/hygiene_tidy_recommends_deleting_claimed_branches.md">hygiene tidy recommends deleting branches of live, claimed tasks</a> — organs · small · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/bug/organs/hygiene_tidy_recommends_deleting_claimed_branches.md
+Use the start-dev skill. draft/bug/pyautobrain/clean_slate_packaging_grouped_layout.md
 ```
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/organs/registry_reconcile_private_repo_issue_404.md">Mind Registry Reconcile red daily: workflow token cannot read a private-repo issue</a> — organs · small · supervised · normal</summary>
+<details><summary>📋 <a href="draft/bug/pyautobrain/hygiene_tidy_recommends_deleting_claimed_branches.md">hygiene tidy recommends deleting branches of live, claimed tasks</a> — pyautobrain · small · supervised · normal</summary>
 
 ```
-Use the start-dev skill. draft/bug/organs/registry_reconcile_private_repo_issue_404.md
+Use the start-dev skill. draft/bug/pyautobrain/hygiene_tidy_recommends_deleting_claimed_branches.md
 ```
 
 </details>
@@ -1604,6 +1596,14 @@ Use the start-dev skill. draft/bug/organs/registry_reconcile_private_repo_issue_
 
 ```
 Use the start-dev skill. draft/bug/pyautobrain/intake_classify_file_drops_declared_epic_phase.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautomind/registry_reconcile_private_repo_issue_404.md">Mind Registry Reconcile red daily: workflow token cannot read a private-repo issue</a> — pyautomind · small · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautomind/registry_reconcile_private_repo_issue_404.md
 ```
 
 </details>
@@ -3062,11 +3062,11 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-04 | filed | <a href="draft/bug/organs/hygiene_tidy_recommends_deleting_claimed_branches.md">hygiene tidy recommends deleting branches of live, claimed tasks</a> |
-| 2026-11-04 | filed | <a href="draft/bug/organs/clean_slate_packaging_grouped_layout.md">clean_slate.sh --packaging silently finds nothing on the grouped repo…</a> |
+| 2026-11-04 | filed | <a href="draft/bug/pyautobrain/hygiene_tidy_recommends_deleting_claimed_branches.md">hygiene tidy recommends deleting branches of live, claimed tasks</a> |
+| 2026-11-04 | filed | <a href="draft/bug/pyautobrain/clean_slate_packaging_grouped_layout.md">clean_slate.sh --packaging silently finds nothing on the grouped repo…</a> |
 | 2026-11-04 | filed | <a href="draft/refactor/autolens_workspace/optdeps_guard_and_latex_escapes.md">autolens_workspace: nufftax skip guard + raw docstrings for damaged…</a> |
 | 2026-11-04 | filed | <a href="planned.md#alw-optdeps-escapes">alw-optdeps-escapes</a> |
-| 2026-11-04 | filed | <a href="draft/bug/organs/registry_reconcile_private_repo_issue_404.md">Mind Registry Reconcile red daily: workflow token cannot read a…</a> |
+| 2026-11-04 | filed | <a href="draft/bug/pyautomind/registry_reconcile_private_repo_issue_404.md">Mind Registry Reconcile red daily: workflow token cannot read a…</a> |
 | 2026-11-04 | issued | <a href="active/autonomous_orchestrators_p4c_pilot_run.md">Autonomous orchestrators phase 4c: run the Dev orchestrator pilot…</a> |
 | 2026-11-04 | issued | <a href="active/tutorial-link-sweep.md">Align ecosystem documentation with the current HowToLens and…</a> |
 | 2026-11-03 | filed | <a href="draft/bug/pyautobrain/intake_classify_file_drops_declared_epic_phase.md">intake classify --file injects an unrelated Memory: line on…</a> |
