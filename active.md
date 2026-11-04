@@ -25,8 +25,7 @@
 - repos:
   - PyAutoBrain: feature/hygiene-refs-false-positives
 - prompt: active/hygiene_refs_false_positives_cross_repo_and_runtime.md
-- prs:
-  - https://github.com/PyAutoLabs/PyAutoBrain/pull/584
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/584
 - tier: glance — merge mode: human /prm
 
 
