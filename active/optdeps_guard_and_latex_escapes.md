@@ -7,7 +7,9 @@ Repos:
 Difficulty: small
 Autonomy: supervised
 Priority: high
-Status: formalised
+Status: active
+Issued: 2026-11-04
+Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/618
 Consequence: judge
 Filed: 2026-11-04 (pre-rehearsal /hygiene sweep; human: "go with the recommendation")
 

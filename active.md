@@ -85,3 +85,14 @@
 - epic: autonomous-orchestrators (phase 4c of 4a–4c)
 - pre-check: open shadow tick on system python3.10, minimal env — 6 notify proposals, 0 spawns (2026-11-04)
 - tier: judge — merge mode: human /prm
+
+## alw-optdeps-escapes
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/618
+- issued: 2026-11-04
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/alw-optdeps-escapes
+- repos:
+  - autolens_workspace: feature/alw-optdeps-escapes
+- prompt: active/optdeps_guard_and_latex_escapes.md
+- tier: judge — merge mode: human /prm
+- authorization: user explicitly requested autonomous fixes, checks and PR on 2026-11-04

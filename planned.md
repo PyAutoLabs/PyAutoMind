@@ -11,7 +11,6 @@
 - [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
 - [interferometer-primary-beam-persistence-mirror](#interferometer-primary-beam-persistence-mirror)
 - [point-plots-yaml-keys-assistant](#point-plots-yaml-keys-assistant)
-- [alw-optdeps-escapes](#alw-optdeps-escapes)
 
 <!-- toc:end -->
 
@@ -128,11 +127,3 @@
 - parent: complete/2026/10/point-plots-yaml-keys.md (HowToLens half merged 2026-10-22, HowToLens#99); no separate prompt file
 - scope: same `point_dataset` / `fit_point_dataset` block edit in `autolens_assistant/config/visualize/plots.yaml` as HowToLens; ship on its own branch `feature/point-plots-yaml-keys` once the claim clears
 
-## alw-optdeps-escapes
-- filed: 2026-11-04
-- prompt: draft/refactor/autolens_workspace/optdeps_guard_and_latex_escapes.md
-- status: ready for start_dev; human-approved pre-rehearsal hygiene sweep; tutorial sweep merged 2026-11-04
-- unblocked-by: complete/2026/11/tutorial-link-sweep.md (autolens_workspace#617 merged)
-- scope: nufftax skip guard on interferometer/features/datacube/modeling_array_free.py + r-prefix docstrings in cluster/ and group/ likelihood_function.py
-- repos:
-  - autolens_workspace: feature/alw-optdeps-escapes
