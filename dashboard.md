@@ -1112,7 +1112,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/arcticpy_lazy_import.md">autocti: <code>import autocti</code> works without arcticpy (lazy arcticpy import)</a> — <a href="https://github.com/PyAutoLabs/PyAutoCTI/issues/117">issue #117</a> — issued 2026-11-05 — library-dev</summary>
+<details><summary>📋 <a href="active/arcticpy_lazy_import.md">autocti: <code>import autocti</code> works without arcticpy (lazy arcticpy import)</a> — <a href="https://github.com/PyAutoLabs/PyAutoCTI/issues/117">issue #117</a> — issued 2026-11-05 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoCTI/pull/118">PyAutoCTI#118</a></summary>
 
 ```
 Use the start-dev skill. active/arcticpy_lazy_import.md

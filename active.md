@@ -3,7 +3,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/117
 - issued: 2026-11-05
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoCTI/pull/118
 - worktree: ~/Code/PyAutoLabs-wt/arcticpy-lazy-import
 - repos:
   - PyAutoCTI: feature/arcticpy-lazy-import
@@ -11,6 +12,7 @@
 - epic: cti-upkeep (phase 2c)
 - tier: judge — merge mode: human /prm
 - plan: APPROVED 2026-11-05
+- shipped: 2026-11-05 — optional_import placeholders (TYPE_CHECKING broke af.Model hint evaluation); test_autocti 275 serial; 0b pins OK; smoke 3/3; workspace impact none
 
 ## magnification-maps-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/818
