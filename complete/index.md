@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2175 records across 11 buckets.
+2179 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -134,11 +134,13 @@ markers; everything below GENERATED is rebuilt.
 - [autonomous-orchestrators-p3d](2026/11/autonomous-orchestrators-p3d.md) — phase 3d of 3a–3d — closes phase 3; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [autonomous-orchestrators-p4a](2026/11/autonomous-orchestrators-p4a.md) — phase 4a of 4a–4c; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [autonomous-orchestrators-p4b](2026/11/autonomous-orchestrators-p4b.md) — phase 4b of 4a–4c; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
+- [batch-slice](2026/11/batch-slice.md)
 - [batch-watch-live-view](2026/11/batch-watch-live-view.md) — pilot 4c follow-up; issue PyAutoBrain#575
 - [board-without-gh-phase2-legs](2026/11/board-without-gh-phase2-legs.md) — already shipped, closed as a stale draft. PyAutoBrain 15317af (merged via #564, 2026-11-03) "phase 2 — the rem…
 - [bootstrap-test-root-skip](2026/11/bootstrap-test-root-skip.md) — fixed in commit 748f8c0bb (this PR). `test_the_hook_survives_an_unwritable_tools_dir` probes `os.access(bin, W…
 - [brain-hygiene-cleanup-bugs](2026/11/brain-hygiene-cleanup-bugs.md)
 - [chapter2-continuation](2026/11/chapter2-continuation.md) — All continuation scope merged: Tutorials 5 and 6, optional speed and runnable model_centred prior passing, sum…
+- [close-out-guard](2026/11/close-out-guard.md)
 - [cloud-validation-rehearsal-clock-skew](2026/11/cloud-validation-rehearsal-clock-skew.md)
 - [compile-drift-single-sample](2026/11/compile-drift-single-sample.md) — shipped in PyAutoBrain#588 (merge e822697, 2026-11-05), commit ed0782c. Decision: option (a), taken by the age…
 - [cortex-projects-dashboard-parent](2026/11/cortex-projects-dashboard-parent.md) — parent closed. Phase 1, the presentation change, shipped in PyAutoBrain#526 (merge 92de427, 2026-10-15; record…
@@ -147,6 +149,7 @@ markers; everything below GENERATED is rebuilt.
 - [cti-likelihood-pins](2026/11/cti-likelihood-pins.md) — cti-upkeep phase 0b
 - [cti-release-train-wiring](2026/11/cti-release-train-wiring.md)
 - [cti-smoke-breadth](2026/11/cti-smoke-breadth.md)
+- [docs-conductor](2026/11/docs-conductor.md)
 - [dr1-rgb-flip-superseded](2026/11/dr1-rgb-flip-superseded.md) — superseded by the human 2026-10-30 (the draft's own banner); `complete/2026/10/sky-orientation-dr1-p1.md` reco…
 - [ell-comps-disk-constraint-dup](2026/11/ell-comps-disk-constraint-dup.md) — already shipped before it was filed — PyAutoFit#1538 (96dad519) + PyAutoGalaxy#589 (merge 0fbe863d, 2026-08-28…
 - [eyes-group-cluster-gallery](2026/11/eyes-group-cluster-gallery.md) — superseded by human decision — autolens_visualization#5 and #14, record `complete/2026/10/viz-all-dataset-type…
@@ -166,6 +169,7 @@ markers; everything below GENERATED is rebuilt.
 - [hpc-campaign-p5a-assistant](2026/11/hpc-campaign-p5a-assistant.md) — phase 5a; ledger draft/research/autofit/hpc_campaign_epic.md
 - [hygiene-extras-tomllib](2026/11/hygiene-extras-tomllib.md)
 - [hygiene-refs-false-positives](2026/11/hygiene-refs-false-positives.md)
+- [intake-memory-citation-floor](2026/11/intake-memory-citation-floor.md)
 - [intake-memory-line-organ-targets](2026/11/intake-memory-line-organ-targets.md) — already shipped — closed as stale draft. The `_with_memory` gate in `agents/conductors/intake/_intake.py` land…
 - [jax-joss-benchmark-repo](2026/11/jax-joss-benchmark-repo.md) — already shipped — PyAutoLabs/autolens_jax_joss: 9c66b020 (birth, 10 benchmark scripts), 64204f69 (A100 sweep o…
 - [latest-per-test-tie](2026/11/latest-per-test-tie.md) — test_autofit/results/test_identity.py::test_latest_per_keeps_the_latest_sibling flaked (main red at 963ff296a,

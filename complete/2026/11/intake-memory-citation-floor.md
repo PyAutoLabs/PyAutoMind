@@ -1,3 +1,14 @@
+## What shipped
+PyAutoBrain#591 (commit 2df373d): intake's `Memory:` line now requires *distinctive* query terms (whole-word on ≤5% of Memory pages, idf-weighted) summing to min(9.0, 0.15 × distinct terms); navigation pages (index, log, AGENTS, README, reading-queue) are never cited. Calibrated over all 276 drafts against the live 158-page digest: 67 drafts keep a line, all on methods/concepts pages. Witness tests `test_vocabulary_only_overlap_gets_no_memory_line`, `test_distinctive_terms_still_get_memory_line`, `test_navigation_pages_are_never_cited`.
+
+## What the filed scope missed
+Trade-off accepted by the human 2026-11-05: a one-line subhalo idea and the vmap/nautilus recompile bug lose arguably-right citations.
+
+## Follow-ups
+Per-domain floor tuning, if lost citations matter in practice.
+
+## Original prompt
+
 # Intake injects `Memory:` citations that match on vocabulary only — add…
 
 Type: bug

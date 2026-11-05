@@ -1,3 +1,11 @@
+## What shipped
+PyAutoBrain#591 (commit 017e9b9): `pyauto-brain batch slice <prompt> [--slices FILE] [--apply]`. The cut is declared (a `## Slices`/`## Phases` section or a plan file), never invented; sizing's `judge_slices` enforces the seam rules (each child sizes `Unattended: ready`, carries its own Witness or is refused as "a smaller judge task, not a slice", 2–4 children, no forward/self dependency; mixed lib/workspace is a warning). `--apply` writes children beside the parent plus an `epics.md` entry, never touching the parent. `/intake` prints an `Offer:` on needs-slicing. batch/AGENTS.md "Not built yet" removed. 14 tests in `tests/test_batch_slice.py`.
+
+## Follow-ups
+The verb is not in the batch AGENTS.md "Running" block; child difficulty comes from sizing the rendered child unless the slice declares it.
+
+## Original prompt
+
 # `batch slice` — the decomposition pass for `needs-slicing` prompts
 
 Type: feature
