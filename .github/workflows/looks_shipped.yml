@@ -1,0 +1,108 @@
+name: Looks Shipped
+
+# The close-out guard (PyAutoBrain `intake looks-shipped`): flag open drafts
+# with STRONG evidence their work already shipped — a Witness test now defined
+# in its target repo, a commit on an organism main naming the draft since it
+# was filed, a complete/ record whose `## Original prompt` duplicates it.
+#
+# Why it exists: a 2026-11-05 queue check-in picked five tasks and found four
+# already shipped; the full sweep then closed 27 (PyAutoMind#539). Every one had
+# bypassed /prm — fixed directly on main, merged by a session that skipped the
+# close-out, or re-filed as a duplicate — so nothing ever reconciled them.
+#
+# It only FLAGS. The result lands in looks_shipped.json and the dashboard's
+# "Looks shipped — confirm" section (and state.json); the batch planner holds
+# flagged drafts back until a human closes them (confirm) or lists them in
+# looks_shipped_dismissed.md (dismiss). Nothing under draft/ is ever written.
+#
+# Instance automation, NOT shipped into the fresh-slate template (spawn spec
+# rule 9c): it runs on a schedule and clones sibling organism repos by name,
+# neither of which a freshly-spawned repo can satisfy — registry_reconcile.yml's
+# shape, with dashboard_refresh.yml's self-healing commit.
+
+on:
+  schedule:
+    - cron: "41 6 * * *"   # daily 06:41 UTC — odd minute, after registry_reconcile 06:23; do not round (#396)
+  workflow_dispatch:
+
+# contents: write for the result commit on main; actions: write re-dispatches
+# pages_dashboard.yml (the commit is made with GITHUB_TOKEN, which never
+# triggers other workflows — dashboard_refresh.yml's 2026-08-21 lesson).
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  looks-shipped:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: PyAutoMind
+          # Full history: the Mind's own commits are one evidence leg, and a
+          # draft with no `Filed:` header is dated by the commit that added it.
+          fetch-depth: 0
+      # The detector lives with the intake conductor, not here — the Mind holds
+      # the state, the Brain reasons over it (ORGANISM.md).
+      - uses: actions/checkout@v4
+        with:
+          repository: PyAutoLabs/PyAutoBrain
+          path: PyAutoBrain
+      # The evidence lives in the sibling repos, private ones included, so this
+      # mints the org App token (policy/github_tokens.md): owner-wide,
+      # read-only, minted right before use — as registry_reconcile.yml does.
+      - uses: actions/create-github-app-token@v3
+        id: app
+        with:
+          client-id: ${{ vars.APP_CLIENT_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          owner: PyAutoLabs
+          permission-contents: read
+      - name: clone the organism's repos as siblings (history, no large blobs)
+        env:
+          GH_TOKEN: ${{ steps.app.outputs.token }}
+          GIT_LFS_SKIP_SMUDGE: "1"
+        run: |
+          # repos.yaml is the single source of repo identity. One failed clone
+          # (a renamed or access-limited repo) costs that repo's evidence only;
+          # the detector skips absent checkouts silently.
+          for slug in $(sed -n 's/^    github: *\([^ #]*\).*/\1/p' PyAutoMind/repos.yaml | sort -u); do
+            name="${slug##*/}"
+            case "$name" in PyAutoMind|PyAutoBrain) continue ;; esac
+            git clone --quiet --single-branch --filter=blob:limit=1m \
+              "https://x-access-token:${GH_TOKEN}@github.com/${slug}.git" "$name" \
+              || echo "::warning::could not clone ${slug} — its evidence is skipped tonight"
+          done
+      - name: detect, and commit the result on main
+        working-directory: PyAutoMind
+        run: |
+          BRAIN=../PyAutoBrain/agents/conductors/intake/_intake.py
+          # Same shape as dashboard_refresh.yml's self-heal: each attempt
+          # rebuilds on the current tip of main, so a concurrent push needs no
+          # rebase, and the GITHUB_TOKEN push cannot loop. A night with no new
+          # evidence writes nothing and commits nothing (`--apply` rewrites the
+          # file only when a flag changed).
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard FETCH_HEAD
+            python3 "$BRAIN" --mind . --apply looks-shipped --root ..
+            python3 "$BRAIN" --mind . --apply dashboard
+            if [ -z "$(git status --porcelain -- looks_shipped.json dashboard.md dashboard.html state.json)" ]; then
+              echo "no change in the looks-shipped flags"
+              exit 0
+            fi
+            git add looks_shipped.json dashboard.md dashboard.html
+            if [ -f state.json ]; then git add state.json; fi
+            git commit -m "mind: refresh looks-shipped flags"
+            if git push origin HEAD:main; then
+              echo "committed on attempt ${attempt}"
+              GH_TOKEN="${{ github.token }}" gh workflow run pages_dashboard.yml --ref main \
+                || echo "::warning::could not dispatch pages_dashboard.yml — the Pages page will lag until its next trigger"
+              exit 0
+            fi
+            echo "push rejected (attempt ${attempt}) — retrying on the new tip of main"
+          done
+          echo "::error::could not push the looks-shipped flags after 3 attempts"
+          exit 1

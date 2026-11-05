@@ -140,6 +140,12 @@ MIND_RULES = [
     # dropped pages_dashboard.yml. DROP for the same reason as dashboard.html:
     # nothing shipped reads it until a fresh org regenerates the dashboard.
     ("state.json", "DROP"),
+    # The close-out guard's output and its dismissal list (PyAutoBrain
+    # `intake looks-shipped`): flags about THIS instance's drafts and a human's
+    # judgements on them — instance state, like active/. The reader treats an
+    # absent file as "nothing flagged / nothing dismissed".
+    ("looks_shipped.json", "DROP"),
+    ("looks_shipped_dismissed.md", "DROP"),
     # `policy/hpc_ral.md` is the one instance page under policy/ (first match
     # wins, so it precedes policy/*): this organism's cluster, SSH aliases, user
     # and partitions, moved out of the unversioned root AGENTS.md
@@ -178,6 +184,11 @@ MIND_RULES = [
     # issue/PR state across the org. A fresh org has neither the schedule
     # tolerance (rule 9's no-unattended-trigger condition) nor the siblings.
     (".github/workflows/registry_reconcile.yml", "DROP"),
+    # 9c also: the close-out guard. Scheduled, clones every sibling repo in the
+    # body map with the org App token, and checks out PyAutoLabs/PyAutoBrain
+    # for the detector — registry_reconcile.yml's and dashboard_refresh.yml's
+    # failure modes together.
+    (".github/workflows/looks_shipped.yml", "DROP"),
     (".github/workflows/morning_status.yml", "DROP"),
     (".github/workflows/morning_health.yml", "DROP"),
     (".github/workflows/arxiv_papers.yml", "DROP"),

@@ -1034,7 +1034,15 @@ This longer walkthrough is loaded when a Mind operation needs its detail;
   `/prm`'s close-out (it sweeps the shipped prompt's folder and regenerates the
   page in the same commit); across the whole backlog it is
   `pyauto-brain intake reconcile` plus the refresh payload on the dashboard
-  itself.
+  itself. For work that shipped **outside** `/prm` (fixed on main, merged by a
+  session that skipped the close-out, re-filed as a duplicate), the daily
+  `looks_shipped.yml` runs the close-out guard (`intake looks-shipped`) and
+  writes `looks_shipped.json`: drafts with strong evidence — a Witness test now
+  defined, a commit naming the draft, a `complete/` record duplicating it. They
+  render under the dashboard's **Looks shipped — confirm** section and the
+  batch planner holds them back until a human closes the draft (confirm) or
+  adds a bullet to `looks_shipped_dismissed.md` (dismiss). It only flags;
+  nothing under `draft/` is written.
   `parked.md` holds tasks that were started or scoped but are not currently
   in flight (e.g. work parked in a stash, orphan worktrees); move back to
   `active.md` (or `planned.md` if re-scoping) when resuming.
