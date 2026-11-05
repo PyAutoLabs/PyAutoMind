@@ -221,7 +221,7 @@ Library first; one issue per repo per phase; each phase routes through
   2b `draft/maintenance/pyautoheart/arcticpy_pin_bump_after_upstream_release.md` (blocked by the upstream release);
   2c DONE 2026-11-05 `complete/2026/11/arcticpy-lazy-import.md` (PyAutoCTI#118 merged) and
   `draft/docs/autocti/installation_docs_arcticpy_recipe.md` (blocked by 2b)
-- Phase 3 (started 2026-11-05 while 2b waits on upstream): 3a `active/autocti_workspace_smoke_breadth.md` (autocti_workspace#43, IN DEV); DONE 2026-11-05 `complete/2026/11/cti-fits-fit-output-dir.md` (PyAutoCTI#120 + autocti_workspace#41; FAST_PLOTS back to 1); dataset_1d results/database drift DONE 2026-11-05 `complete/2026/11/cti-database-examples-drift.md` (PyAutoCTI#122 + autocti_workspace#42; new follow-up `draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md`)
+- Phase 3 (started 2026-11-05 while 2b waits on upstream): follow-up `draft/bug/autocti_workspace/five_failing_scripts_triage_20261105.md`; 3a `active/autocti_workspace_smoke_breadth.md` (autocti_workspace#43, IN DEV); DONE 2026-11-05 `complete/2026/11/cti-fits-fit-output-dir.md` (PyAutoCTI#120 + autocti_workspace#41; FAST_PLOTS back to 1); dataset_1d results/database drift DONE 2026-11-05 `complete/2026/11/cti-database-examples-drift.md` (PyAutoCTI#122 + autocti_workspace#42; new follow-up `draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md`)
 - Phase 5: `draft/bug/autocti_visualization/render_yml_blocked_until_pyautocti_release.md`,
   `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`,
   `draft/docs/autocti/api_rst_rewrite.md`
