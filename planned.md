@@ -133,7 +133,7 @@
 ## registry-reconcile-app-token
 - prompt: draft/bug/pyautomind/registry_reconcile_private_repo_issue_404.md
 - status: planned — human said "do next tasks" 2026-11-04; blocked only by the repo claim
-- blocked-by: PyAutoMind claimed by `cti-release-train-wiring` (start_dev when it releases)
+- blocked-by: none — `cti-release-train-wiring` released the PyAutoMind claim 2026-11-05 (closed via /prm); ready for start_dev
 - branch: feature/registry-reconcile-app-token
 - decision: option (a) per policy/github_tokens.md — cross-repo Actions work mints the org App token; option (b) (classify unreadable as "unverifiable") is the warn-and-skip that policy forbids
 - summary: in .github/workflows/registry_reconcile.yml replace `GH_TOKEN: ${{ github.token }}` with an `actions/create-github-app-token@v3` step (client-id vars.APP_CLIENT_ID, private-key secrets.APP_PRIVATE_KEY, owner PyAutoLabs, no `repositories:` = owner-wide read, permission-issues: read, permission-pull-requests: read), minted right before the run step; verify by workflow_dispatch that `lifecycle.py issues` reads ECLIPSE_lens_catalogue#4 and the run goes green. Never drop the r2-pages-function-access row.
@@ -143,7 +143,7 @@
 ## clean-slate-grouped-layout
 - prompt: draft/bug/pyautobrain/clean_slate_packaging_grouped_layout.md
 - status: planned — human said "continue" 2026-11-05; blocked only by the repo claim
-- blocked-by: PyAutoBrain claimed by `cti-release-train-wiring` (paused with unpushed WIP; start_dev when it releases)
+- blocked-by: none — `cti-release-train-wiring` released the PyAutoBrain claim 2026-11-05 (closed via /prm); ready for start_dev
 - branch: feature/clean-slate-grouped-layout
 - summary: clean_slate.sh enumerates `*/` at the root and misses every grouped checkout (all scopes) — iterate the shared repo resolver; diagnosis in prompt
 - affected-repos:
@@ -152,7 +152,7 @@
 ## tidy-skip-claimed-branches
 - prompt: draft/bug/pyautobrain/hygiene_tidy_recommends_deleting_claimed_branches.md
 - status: planned — human said "continue" 2026-11-05; blocked only by the repo claim
-- blocked-by: PyAutoBrain claimed by `cti-release-train-wiring` (paused with unpushed WIP; start_dev when it releases)
+- blocked-by: none — `cti-release-train-wiring` released the PyAutoBrain claim 2026-11-05 (closed via /prm); ready for start_dev
 - branch: feature/tidy-skip-claimed-branches
 - summary: hygiene tidy skips only the canonical HEAD branch — also skip worktree-held and active.md-claimed branches; diagnosis in prompt
 - affected-repos:

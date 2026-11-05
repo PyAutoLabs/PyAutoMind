@@ -51,7 +51,7 @@ PyAutoCTI (`heart/readiness.py load_release_gate_names`).
   PyAutoEyes dashboard row `PyAutoCTI | 135 | 2024.11.13.2 | Current`;
   autocti_visualization `render.yml` renders from mains since #8;
   autocti_assistant `version.txt` = `2026.7.9.1`, `PENDING.md` 390 lines.
-- Existing prompt for this: `draft/release/autocti/cti_release_train_wiring.md`
+- Existing prompt for this: `draft/release/autocti/cti_release_train_wiring.md` (shipped 2026-11-05 → `complete/2026/11/cti-release-train-wiring.md`)
   (filed 2026-07-17, formalised, human-required, medium) — now phase 1.
 
 ## 3. arcticpy
@@ -153,7 +153,7 @@ Open bug member: `draft/bug/autocti_workspace/dataset_1d_results_database_exampl
 
 1. Rule R1 and R6 (arcticpy distribution; lockstep nightly) — they shape
    phase 1's Nerves/Colab step and Heart's gate flip.
-2. `/start_dev` on `draft/release/autocti/cti_release_train_wiring.md` as
+2. (DONE 2026-11-05, `complete/2026/11/cti-release-train-wiring.md`) `/start_dev` on `draft/release/autocti/cti_release_train_wiring.md` as
    phase 1 (human-required; TestPyPI rehearsal). Everything in §2 clears with
    the first release.
 3. Open the upstream `jkeger/arctic` packaging PR (phase 2a) in parallel — it

@@ -41,7 +41,7 @@ The CTI resurrection epic (PyAutoCTI#82, phases 0–5, all merged 2026-07-17;
 records `complete/2026/07/cti-resurrection-phase{0..5}.md`) made PyAutoCTI
 importable, test-green and workspace-validated on the modern stack. It stopped
 one step short of the ecosystem: the release-train wiring was deferred as
-`draft/release/autocti/cti_release_train_wiring.md` and never issued. Four
+`draft/release/autocti/cti_release_train_wiring.md` and never issued (issued and shipped 2026-11-05 as phase 1). Four
 months on, every other upkeep surface still treats CTI as a special case:
 
 - **Not released.** PyPI `autocti` is `2024.11.13.2` (last tag 2024-11-13); the
@@ -103,7 +103,7 @@ Library first; one issue per repo per phase; each phase routes through
    library PR or the phase 2 arcticpy bump. Lands before any library or
    arcticpy change (human, 2026-11-04).
 1. **Release-train wiring + first modern release** (member:
-   `active/cti_release_train_wiring.md`, PyAutoHands#332, human-required). Hands
+   `complete/2026/11/cti-release-train-wiring.md`, PyAutoHands#332, human-required; DONE 2026-11-05). Hands
    `LIB_PROJECTS` += PyAutoCTI; `release.yml` library checkouts, release notes,
    Slack and aggregate maps; `python_matrix.yml` unit + smoke legs;
    `pre_build.sh` `WORKSPACE_SPECS` rows for autocti_workspace (generate) and
@@ -216,7 +216,7 @@ Library first; one issue per repo per phase; each phase routes through
 ## Members
 
 - Phase 0: 0b DONE 2026-11-04 — `complete/2026/11/cti-likelihood-pins.md` (autocti_workspace_test#25)
-- Phase 1: `active/cti_release_train_wiring.md` — PyAutoHands#332, IN DEV 2026-11-04
+- Phase 1: DONE 2026-11-05 — `complete/2026/11/cti-release-train-wiring.md` (PyAutoHands#332; Nerves#210, Hands#333, Brain#585, Heart#323, Mind#535, autocti_workspace#40; TestPyPI rehearsal run 42011123173 passed, 6 wheels). Scope deferred to p3/5: Heart workspace-validation/release-integrate rows, run_all, docs-build mapping. New phase-3 member: `draft/bug/autocti/fits_fit_missing_output_dir_under_fast_plots.md`. First modern autocti PyPI release rides the next lockstep release.
 - Phase 3: `draft/bug/autocti_workspace/dataset_1d_results_database_examples_drift.md`
 - Phase 5: `draft/bug/autocti_visualization/render_yml_blocked_until_pyautocti_release.md`,
   `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`,

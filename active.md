@@ -1,24 +1,3 @@
-## cti-release-train-wiring
-- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/332
-- issued: 2026-11-04
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: pr-open
-- worktree: ~/Code/PyAutoLabs-wt/cti-release-train-wiring
-- repos:
-  - PyAutoNerves: feature/cti-release-train-wiring
-  - PyAutoHands: feature/cti-release-train-wiring
-  - PyAutoBrain: feature/cti-release-train-wiring
-  - PyAutoHeart: feature/cti-release-train-wiring
-  - PyAutoMind: feature/cti-release-train-wiring
-  - autocti_workspace: feature/cti-release-train-wiring
-- prompt: active/cti_release_train_wiring.md
-- epic: cti-upkeep (phase 1)
-- tier: judge — merge mode: human /prm (Nerves → Hands/Brain/Heart/Mind → autocti_workspace)
-- plan: APPROVED 2026-11-04 incl. TestPyPI rehearsal from the Hands branch before any merge; Colab arcticpy = run Heart install_arcticpy.sh; human confirmed PYPI token covers autocti
-- prs: PyAutoNerves#210, PyAutoHands#333, PyAutoBrain#585, PyAutoHeart#323, PyAutoMind#535, autocti_workspace#40 (all opened 2026-11-05, judge)
-- scope-change (record in PRs + ledger): Heart workspace-validation / release-integrate rows, run_all entries and docs-build mapping DEFERRED to phase 3/5 — workspace-validation runs ALL 118 untriaged autocti scripts and gates release mode; docs-build is inert without a PyAutoCTI docs.yml caller. pyautocti-release viz dispatch skipped: nothing sends pyautolens-release either (pre-existing gap).
-- progress 2026-11-05: resume steps 1–4 DONE (firewall allowlist; autocti notebooks regenerated 79/79 Colab, 0 Finish.; profile_release.yaml with PYAUTO_FAST_PLOTS=0 — FAST_PLOTS=1 hits autocti fits_fit missing-dir bug, filed draft/bug/autocti/fits_fit_missing_output_dir_under_fast_plots.md (epic phase 3); release smoke 3/3 PASS via run_python; generate notaproject refuses, howtolens zero diff; suites Nerves 292 / Heart 1313 / Hands 589 (+4 tombstone fail on main) / Brain 1568 (+1 env leak, passes without activate.sh)). Step 5 DONE: rehearsal run 42011123173 (Hands 92ec5f4) — all 6 wheels on TestPyPI 2026.11.5.1.dev86501, Heart ingest rehearse:pass; readiness RED only on local checkouts (Nerves on branch, Fit/Galaxy/Lens 2 behind) — clears on merge/pull. First run 42008346668 passed but rehearsal.json listed 5 packages → fixed ac3c75d/92ec5f4.
-- resume-next: (6) human /prm in order Nerves#210 → Hands#333/Brain#585/Heart#323/Mind#535 → autocti_workspace#40.
 
 ## magnification-maps-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/818
