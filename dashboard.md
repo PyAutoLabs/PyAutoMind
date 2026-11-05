@@ -12,7 +12,7 @@
 | [Epics](#epics) | 21 |
 | [In flight](#in-flight) | 9 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 295 |
+| [Backlog](#backlog) | 297 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 2 |
 
@@ -1243,7 +1243,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 285 · local-dev 8
+Lanes: any 287 · local-dev 8
 
 <a id="human-review"></a>
 <details>
@@ -1294,7 +1294,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>bug</b> — 65</summary>
+<summary><b>bug</b> — 66</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1356,6 +1356,14 @@ Use the start-dev skill. draft/bug/autofit/investigate_euclid_einstein_radius_la
 
 ```
 Use the start-dev skill. draft/bug/health_fixes/samples_parameter_paths.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md">Filed: 2026-11-05 (found by the autolens_profiling#519 worker-route witness)</a> — autoarray · small · medium</summary>
+
+```
+Use the start-dev skill. draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md
 ```
 
 </details>
@@ -1819,7 +1827,7 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>feature</b> — 40</summary>
+<summary><b>feature</b> — 41</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
 
@@ -1841,6 +1849,14 @@ Use the start-dev skill. draft/feature/autoarray/source_clumps_robust_scale.md
 
 ```
 Use the start-dev skill. draft/feature/autofit_assistant/data_loading_and_selection_cuts_skill.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md">Filed: 2026-11-05 (phase 2 of autolens_profiling#519; Pulse task <code>PyAutoPulse/tasks/numba_num_threads_pin_and_delaunay_nn_remeasure.md</code> steps 2-4)</a> — autolens_profiling · small · medium</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md
 ```
 
 </details>
@@ -3057,18 +3073,20 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-05 | filed | <a href="draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md">autofit: Samples.with_paths / without_paths break on factor-graph…</a> |
 | 2026-11-05 | issued | <a href="active/dataset_1d_results_database_examples_drift.md">autocti_workspace: the dataset_1d results/database example scripts…</a> |
 | 2026-11-05 | issued | <a href="active/numba_num_threads_pin_delaunay_nn.md">Filed: 2026-11-05…</a> |
+| 2026-11-05 | filed | <a href="draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md">Filed: 2026-11-05 (phase 2 of autolens_profiling#519; Pulse task…</a> |
+| 2026-11-05 | filed | <a href="draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md">Filed: 2026-11-05 (found by the autolens_profiling#519 worker-route…</a> |
 | 2026-11-04 | issued | <a href="active/autonomous_orchestrators_p4c_pilot_run.md">Autonomous orchestrators phase 4c: run the Dev orchestrator pilot…</a> |
 | 2026-11-03 | filed | <a href="draft/bug/pyautobrain/intake_classify_file_drops_declared_epic_phase.md">intake classify --file injects an unrelated Memory: line on…</a> |
 | 2026-11-02 | filed | <a href="draft/research/autolens_profiling/unexplained_gradient_gaps_cpu_sparse_delaunay_and_mge.md">Unexplained autodiff-vs-FD gaps in the phase-6 gradient records…</a> |
 | 2026-11-02 | filed | <a href="draft/bug/autolens_profiling/gradient_json_point_label_standard_cells.md">Standard-size gradient cells record <code>"point": "prior_medians"</code> while…</a> |
 | 2026-11-02 | issued | <a href="active/magnification_maps_8d_wiring_pretty.md">Magnification maps 8d: wire into fit subplots and make them pretty</a> |
-| 2026-11-02 | issued | <a href="active/results_library_p5a_assistant.md">Issued: 2026-11-02</a> |
-| 2026-11-02 | filed | <a href="draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md">Imaging sparse-operator path gives a very different log L from dense…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-02 | issued | <a href="active/results_library_p5a_assistant.md">Issued: 2026-11-02</a> |
+| 2026-11-02 | filed | <a href="draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md">Imaging sparse-operator path gives a very different log L from dense…</a> |
 | 2026-11-02 | issued | <a href="active/gradient_correctness_sweep.md">Gradient-correctness sweep: triage and investigate every open…</a> |
 | 2026-10-31 | issued | <a href="active/sky_orientation_euclid_dr1_and_library.md">Sky orientation (north/east): euclid_dr1 catalogue, paper and…</a> |
 | 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
@@ -3077,13 +3095,13 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-25 | filed | <a href="draft/bug/health_fixes/heart_health_rerun_stale_push.md">Heart Health rerun cannot publish after main advances</a> |
 | 2026-10-25 | filed | <a href="draft/bug/health_fixes/ci_timing_execution_coverage.md">CI timing must compare equivalent executed job coverage</a> |
 | 2026-10-23 | filed | <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred…</a> |
-| 2026-10-23 | filed | <a href="draft/bug/autolens_profiling/stale_auto_simulated_cluster_dataset.md"><code>@autolens_profiling</code> stale auto-simulated <code>dataset/cluster/simple</code>…</a> |
-| 2026-10-23 | filed | <a href="draft/feature/pyautobrain/docs_conductor.md">A dedicated Documentation conductor in PyAutoBrain</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-23 | filed | <a href="draft/bug/autolens_profiling/stale_auto_simulated_cluster_dataset.md"><code>@autolens_profiling</code> stale auto-simulated <code>dataset/cluster/simple</code>…</a> |
+| 2026-10-23 | filed | <a href="draft/feature/pyautobrain/docs_conductor.md">A dedicated Documentation conductor in PyAutoBrain</a> |
 | 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
 | 2026-10-21 | filed | <a href="planned.md#interferometer-primary-beam-persistence-mirror">interferometer-primary-beam-persistence-mirror</a> |
 | 2026-10-21 | filed | <a href="draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md">PyAutoLens mirror of the interferometer primary-beam persistence…</a> |
@@ -3092,13 +3110,13 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-21 | issued | <a href="active/matrix_free_interferometer_inversion.md">Matrix-free interferometer inversion for very large rectangular…</a> |
 | 2026-10-21 | filed | <a href="draft/docs/autolens_workspace/interferometer_primary_beam_example.md">Interferometer primary beam: workspace example and docs</a> |
 | 2026-10-21 | filed | <a href="draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md">Cluster likelihood scripts: image-plane manual check disagrees with…</a> |
-| 2026-10-16 | filed | <a href="draft/bug/pyautomind/repos_sync_test_keys_on_dir_name.md">repos_sync standards-block test keys on the checkout dir name…</a> |
-| 2026-10-16 | filed | <a href="draft/maintenance/autolens_workspace/remeasure_shapelets_slow_park.md">Re-measure the shapelets/modeling.py SLOW park (#586) under the…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-16 | filed | <a href="draft/bug/pyautomind/repos_sync_test_keys_on_dir_name.md">repos_sync standards-block test keys on the checkout dir name…</a> |
+| 2026-10-16 | filed | <a href="draft/maintenance/autolens_workspace/remeasure_shapelets_slow_park.md">Re-measure the shapelets/modeling.py SLOW park (#586) under the…</a> |
 | 2026-10-16 | filed | <a href="draft/bug/pyautomind/glance_shadow_window_reached.md">Glance shadow window reached 20/20 clean — count line must say…</a> |
 | 2026-10-14 | filed | <a href="draft/test/autofit/workspace_searches_scripts_preexisting_failures.md"><code>@autofit_workspace</code> six <code>searches/</code> scripts fail on main at…</a> |
 | 2026-10-14 | filed | <a href="draft/feature/cortex/human_readable_projects_dashboard.md">Human-readable Cortex Projects dashboard</a> |
@@ -3107,13 +3125,13 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-08 | filed | <a href="draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md"><code>JAX_ENABLE_X64=False</code> is overridden to True, so the fp32 inference…</a> |
 | 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
-| 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
-| 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
+| 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
@@ -3122,8 +3140,6 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-29 | filed | <a href="draft/maintenance/pyautomind/session_start_hook_copies_regen.md">Regenerate the 28 drifted <code>.claude/hooks/session-start.sh</code> copies…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
-| 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
-| 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
 
 </details>
 
@@ -3176,7 +3192,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-126 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+128 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3194,6 +3210,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autolens/magnification_maps_visualization.md`
 - `draft/feature/autolens/source_cluster_arc.md`
 - `draft/feature/autolens_jax_joss/autolens_jax_joss_benchmark_repo.md`
+- `draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md`
 - `draft/feature/autolens_profiling/gradient_cost_hazard_on_ral_cpu_value.md`
 - `draft/feature/autolens_workspace/cluster_point_solver_validation_check.md`
 - `draft/feature/autolens_workspace/pointsolver_grid_extent_per_package.md`
@@ -3219,13 +3236,12 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/workspaces/model_figures_6_rollout.md`
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_adaptive_zeroed_ring_guard_row_mismatch.md`
-- `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
-- `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`
-- _… and 86 more_
+- `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md`
+- _… and 88 more_
 
 </details>
 
-68 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+69 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3252,6 +3268,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md — unknown theme keyword(s): jax`
 - `draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md — unknown theme keyword(s): inversion, jax`
 - `draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md — unknown theme keyword(s): jax`
+- `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md — unknown theme keyword(s): performance, delaunay`
 - `draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md — unknown theme keyword(s): simulation, robustness`
 - `draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md — unknown theme keyword(s): inversion, sparse-operator, correctness`
 - `draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md — unknown theme keyword(s): sparse-operator`
