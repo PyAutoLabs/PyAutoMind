@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2174 records across 11 buckets.
+2175 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -146,6 +146,7 @@ markers; everything below GENERATED is rebuilt.
 - [cti-fits-fit-output-dir](2026/11/cti-fits-fit-output-dir.md)
 - [cti-likelihood-pins](2026/11/cti-likelihood-pins.md) — cti-upkeep phase 0b
 - [cti-release-train-wiring](2026/11/cti-release-train-wiring.md)
+- [cti-smoke-breadth](2026/11/cti-smoke-breadth.md)
 - [dr1-rgb-flip-superseded](2026/11/dr1-rgb-flip-superseded.md) — superseded by the human 2026-10-30 (the draft's own banner); `complete/2026/10/sky-orientation-dr1-p1.md` reco…
 - [ell-comps-disk-constraint-dup](2026/11/ell-comps-disk-constraint-dup.md) — already shipped before it was filed — PyAutoFit#1538 (96dad519) + PyAutoGalaxy#589 (merge 0fbe863d, 2026-08-28…
 - [eyes-group-cluster-gallery](2026/11/eyes-group-cluster-gallery.md) — superseded by human decision — autolens_visualization#5 and #14, record `complete/2026/10/viz-all-dataset-type…
