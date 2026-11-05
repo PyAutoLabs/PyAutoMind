@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2136 records across 11 buckets.
+2137 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -166,6 +166,7 @@ markers; everything below GENERATED is rebuilt.
 - [magnification-maps-uncertainty](2026/11/magnification-maps-uncertainty.md)
 - [multistart-resume-cadence](2026/11/multistart-resume-cadence.md) — 2 → 100
 - [nightly-token-refresh](2026/11/nightly-token-refresh.md)
+- [numba-fork-safe-threading](2026/11/numba-fork-safe-threading.md)
 - [one-line-auto-simulate-helper](2026/11/one-line-auto-simulate-helper.md)
 - [rectangular-gradient-rtu-sparse](2026/11/rectangular-gradient-rtu-sparse.md) — the filed symptom (|g| ~2e9 on the imaging/rectangular/hst fiducial, RTU all backends, Bilinear CPU sparse) sp…
 - [rectangular-mapper-bilinear-row-weights](2026/11/rectangular-mapper-bilinear-row-weights.md) — - **Retired as already-fixed** by the gradient-correctness sweep (autolens_profiling#517, item 12). The draft …
