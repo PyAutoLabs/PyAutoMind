@@ -520,7 +520,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 76 (stage 1: 76, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
+Count toward 20: 77 (stage 1: 77, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -625,6 +625,7 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-11-04 | hygiene-extras-tomllib (PyAutoBrain#582) | glance | tests 86p hygiene / smoke n/a (Brain organ) / review none / heart STALE / witness PASS | merged-unchanged | 1 |
 | 2026-11-04 | hygiene-refs-false-positives (PyAutoBrain#584) | glance | tests 88p hygiene / smoke n/a (Brain organ) / review none / heart STALE / witness PASS | merged-unchanged | 1 |
 | 2026-11-05 | numba-fork-safe-threading (PyAutoArray#677) | glance | tests pass (2295) / smoke pass (laptop 2-core Nautilus DelaunayNN) / review self-only (no independent leg) / heart STALE (release validation stale) / witness pass (RAL 414189) | merged-unchanged | 1 |
+| 2026-11-05 | cti-fits-fit-output-dir (PyAutoCTI#120 / autocti_workspace#41) | glance | tests 277p serial + CI unittest 3.12/3.13/nojax / smoke 3/3 release profile FAST_PLOTS=1 + CI smoke 3.12/3.13 / review CLEAN (independent separate-model subagent) / heart STALE (release validation stale) / witness PASS | merged-unchanged | 1 |
 
 ## Unattended `glance` sub-window (stage 2) — opened 2026-11-04
 

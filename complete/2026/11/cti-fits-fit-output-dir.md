@@ -1,3 +1,24 @@
+## cti-fits-fit-output-dir
+- issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/119
+- completed: 2026-11-05
+- library-pr: https://github.com/PyAutoLabs/PyAutoCTI/pull/120
+- workspace-pr: https://github.com/PyAutoLabs/autocti_workspace/pull/41
+
+Merged 2026-11-05 by glance-tier auto-merge (plan approved by the human): PyAutoCTI#120 (1cd2f0d0), then autocti_workspace#41. Issue #119 closed. cti-upkeep phase 3.
+
+Both autocti FITS writers (`dataset_1d/plot/fit_plots.py`, `charge_injection/plot/fit_ci_plots.py`) now `mkdir(parents=True, exist_ok=True)` before writing `fit.fits`. Under `PYAUTO_FAST_PLOTS=1`, `subplot_save` returns before creating the plotter subfolder, so every visualized fit used to crash with FileNotFoundError. The autocti_workspace release profile is back to `PYAUTO_FAST_PLOTS: "1"`.
+
+Evidence:
+- 2 new tests, both failing on main (control).
+- `test_autocti` 277 passed (serial).
+- Witness PASS: 3/3 release smoke scripts with FAST_PLOTS=1 (about 10s / 9s / 26s, down from 46s / 34s / 98s).
+- Independent review (separate-model subagent): CLEAN. The only two `writeto` calls outside instruments/ are both covered.
+- CI green on both PRs.
+
+PyAutoCTI#120 carries the GitHub `pending-release` label.
+
+## Original prompt
+
 # autocti: fits_fit writes fit.fits into a directory nothing creates when PYAUTO_FAST_PLOTS=1
 
 Type: bug
