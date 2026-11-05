@@ -1,3 +1,26 @@
+## cti-smoke-breadth
+- issue: https://github.com/PyAutoLabs/autocti_workspace/issues/43
+- completed: 2026-11-05
+- workspace-pr: https://github.com/PyAutoLabs/autocti_workspace/pull/44
+
+Merged autocti_workspace#44 (a92e5245) on 2026-11-05 by glance-tier auto-merge (plan approved by the human). Issue #43 closed. cti-upkeep phase 3a.
+
+`smoke_tests.txt` grows from 6 to 36 scripts, grouped by area (overview, dataset_1d, imaging_ci, plot) and dependency-ordered (simulator → fit → database → plot). AGENTS.md "Smoke tests (CI)" now describes the representative set, what is left out and why, and the timings; the smoke_tests.yml header comment matches.
+
+Triage of all 79 scripts (profile_smoke):
+- 74 pass once dependency-ordered.
+- 5 are genuinely broken, filed as `draft/bug/autocti_workspace/five_failing_scripts_triage_20261105.md`.
+- `non_uniform_cosmic_rays` (~200–430 s, called by overview_4) keeps both of those out of smoke.
+
+Evidence:
+- Fresh clone, 36/36 under profile_smoke (213 s) and profile_release (317 s, the release gate).
+- CI smoke legs 6 min (3.12) / 5 min (3.13), all 7 jobs green.
+- Independent review (separate model): CLEAN. It checked every producer→consumer dependency and spot-ran the database and plot chains.
+
+Note: Heart sets no explicit smoke budget; the yardstick used was the autolens smoke leg (6–7 min).
+
+## Original prompt
+
 # autocti_workspace: representative smoke coverage (cti-upkeep 3a)
 
 Type: maintenance
