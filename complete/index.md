@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2144 records across 11 buckets.
+2145 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -154,6 +154,7 @@ markers; everything below GENERATED is rebuilt.
 - [hpc-campaign-p5a-assistant](2026/11/hpc-campaign-p5a-assistant.md) — phase 5a; ledger draft/research/autofit/hpc_campaign_epic.md
 - [hygiene-extras-tomllib](2026/11/hygiene-extras-tomllib.md)
 - [hygiene-refs-false-positives](2026/11/hygiene-refs-false-positives.md)
+- [intake-memory-line-organ-targets](2026/11/intake-memory-line-organ-targets.md) — already shipped — closed as stale draft. The `_with_memory` gate in `agents/conductors/intake/_intake.py` land…
 - [latest-per-test-tie](2026/11/latest-per-test-tie.md) — test_autofit/results/test_identity.py::test_latest_per_keeps_the_latest_sibling flaked (main red at 963ff296a,
 - [likelihood-lifecycle-p3-day-zero-pages](2026/11/likelihood-lifecycle-p3-day-zero-pages.md)
 - [likelihood-lifecycle-p3-day-zero-stamp](2026/11/likelihood-lifecycle-p3-day-zero-stamp.md)

@@ -1,3 +1,9 @@
+- summary: already shipped — closed as stale draft. The `_with_memory` gate in `agents/conductors/intake/_intake.py` landed in PyAutoBrain 557f8e0 and ba38413: organ targets get no `Memory:` line. The organ set comes from `PyAutoMind/repos.yaml` (`_sizing.ORGANISM_REPOS` = `category: organ`, plus `_intake._ORGANS_DIR_REPOS` for repos under `organs/`, which covers PyAutoScientist). `Target:` is normalised by `_sizing.normalise_repo` (case, leading `@`, path suffix).
+- witness: PyAutoBrain branch `ccr-f98d2a4d-92r7rv` commit 906b5dd adds `test_organ_target_spellings_get_no_memory_line` (organ spellings `pyautobrain`, `@PyAutoBrain`, `PYAUTOMIND`, `@PyAutoBrain/agents`, PyAutoScientist get no line; a library target still gets one); tests/test_intake_memory.py 8 passed; Brain suite 1576 passed, 1 skipped (2026-11-05). The test-only commit is unmerged and needs a PR.
+- found by: queue check-in 2026-11-05.
+
+## Original prompt
+
 # intake classify --file injects an unrelated Memory: line on organ-targeted prompts
 
 Type: bug
