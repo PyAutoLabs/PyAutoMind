@@ -1,3 +1,11 @@
+- summary: superseded by a different fix — closed. Commit 4d8290555 (2026-09-20, "fix: fall back to curl when arXiv rejects urllib with 406") keeps urllib but retries any 406 once through `curl` (already on the runner) before the back-off ladder, rather than moving `_get()` to `requests`. The 406 retry from #412 is kept, so prompt items 2–3 are covered by a dependency-free route. Item 4 (PyAutoMemory) shipped separately in PyAutoMemory#143 (record `arxiv-refs-api-errors`).
+- evidence: `arxiv_papers.yml` scheduled runs 2026-10-29..11-05 all green. Of the two failures in the last 10 runs, 2026-10-27 was a pyautolabs-bot token 403 pushing to PyAutoMemory (not arXiv), and 2026-10-28 was HTTP 429 on all six attempts from the shared runner egress (rate-limiting, not the 406 fingerprint block).
+- witness: the cache-busted urllib-vs-requests live probe (prompt item 1) was NOT run; this close rests on the run history above, not on a fingerprint measurement.
+- follow-up candidate (not filed): on a 429 day, `--livecheck` spends a full ~6 min ladder before the fetch step spends another, doubling load on a throttled egress. Worth filing only if 429 days recur.
+- found by: queue check-in 2026-11-05.
+
+## Original prompt
+
 # arXiv's Fastly edge refuses `urllib.request` outright — retrying a 406 only delays the failure
 
 Type: bug

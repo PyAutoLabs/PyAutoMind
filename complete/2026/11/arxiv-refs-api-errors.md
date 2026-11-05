@@ -1,3 +1,11 @@
+- summary: already shipped — closed as stale draft. PyAutoMemory#143 (merged 2026-11-03, merge 1f22de7; commits 0c3e2dc, 625b583): `resolve_title()` raises `ArxivAPIError` on transport/parse failure so `None` means only "arXiv answered, no unique match"; `_api_query()` has a back-off ladder shaped like Mind's `_get()` (406/429/5xx, Retry-After capped) plus the curl-on-406 fallback; `backfill_arxiv_refs.py` gains `api_failed`/`unattempted` counters, stops at the first API failure and exits 1 (stricter than "when transport failure dominates"); `arxiv_refs.yml` writes an "arXiv API failure" step-summary banner and goes red; `--mark-unresolved` never NOTE-marks after a transport failure.
+- witness: `test_witness_a_429_is_an_api_failure_not_a_non_match` in tests/test_arxiv_refs.py — fails on the pre-0c3e2dc source, passes now; Memory suite 286 passed, test_arxiv_refs.py 38 passed, `make validate` passes (2026-11-05).
+- history check: 2026-09-13..20 touched reading-queue.md/arxiv-inbox.md in 575978a and b3233c6 only; neither added a NOTE line — nothing was mis-marked during the outage.
+- not done: client not switched to `requests` (curl fallback makes it unnecessary).
+- found by: queue check-in 2026-11-05.
+
+## Original prompt
+
 # `arxiv_refs.py` swallows every API error, so an arXiv outage resolves nothing and still reports green
 
 Type: bug

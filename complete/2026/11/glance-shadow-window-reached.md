@@ -1,3 +1,9 @@
+- summary: already shipped — closed as stale draft. Item 1 (code): commit 679b1319f (2026-10-16) made `shadow_count_line()` append "window reached" once graded rows ≥ SHADOW_TARGET; it now also cites the ruling (SHADOW_RULED). Item 2 (human doctrine call): the human ruled 2026-11-04 — `glance` granted, narrowed; rows keep accumulating, with unattended merges in a stage-2 sub-window (record `complete/2026/11/glance-tier-ruling.md`, PyAutoBrain#567, PyAutoMind#529).
+- witness: `tests/test_autonomy_log_shadow.py` passes on main; autonomy_log.md count line reads "…window reached — ruled 2026-11-04: `glance` granted, narrowed…" (2026-11-05).
+- found by: queue check-in 2026-11-05.
+
+## Original prompt
+
 # Glance shadow window reached 20/20 clean — count line must say "reached"; record the glance confirmation decision
 
 Type: bug

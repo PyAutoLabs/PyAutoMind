@@ -7,14 +7,14 @@ Repos:
 Themes:
 - mind-workflow
 - hygiene
-Difficulty: medium
+Difficulty: large
 Autonomy: supervised
 Priority: low
 Status: formalised
 Consequence: notify
 Witness: `repos_sync.py` has one declaration per generated surface driving both `check` and `--write`; every CLI flag's output is byte-identical before and after (captured in a test); `tests/test_repos_sync_hygiene_coverage.py` and the firewall_gate.yml legs pass.
 Review-minutes: 0
-Unattended: ready
+Unattended: never
 Filed: 2026-08-19 (backfilled from git)
 
 Found by the 2026-08-19 readability-pass census (#248). Behaviour-preserving
@@ -31,3 +31,19 @@ surface means one new declaration instead of a new function plus a new call
 site. All existing CLI flags and outputs stay byte-identical;
 `tests/test_repos_sync_hygiene_coverage.py` and the firewall_gate.yml legs are
 the safety net.
+
+## Re-sized 2026-11-05 (queue check-in) — needs a human design call before start
+
+The premise has moved: `scripts/repos_sync.py` is now 3204 lines (was 940), with
+23 check legs. The `--write` leg is no longer a set of uniform `write_block`
+pairs: it carries mode gates (`codex_only_write`, `smoke_only_write`,
+`standards_only_write`, the held smoke rollout), self-installing marker
+insertion (`insert_deliverable_markers`, `write_filing_blocks`) whose ordering
+matters, and standards pre-validation that must run before any writer. A
+one-`Check`-dataclass collapse therefore has to model write ordering and
+mode-exclusive writers — a design fork, not a mechanical dedup.
+
+Options for the human: (a) narrow to the uniform subset only — the five
+`AGENTS.md` marker blocks (map/history/remote/deliverable/filing) plus public
+tables — as one declaration table, leaving special writers explicit; (b) keep
+the full refactor, re-sized large, phased; (c) park it. Recommendation: (a).

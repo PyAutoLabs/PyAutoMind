@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2140 records across 11 buckets.
+2144 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -123,6 +123,8 @@ markers; everything below GENERATED is rebuilt.
 
 - [alw-optdeps-escapes](2026/11/alw-optdeps-escapes.md)
 - [arcticpy-lazy-import](2026/11/arcticpy-lazy-import.md)
+- [arxiv-edge-refuses-stdlib-urllib](2026/11/arxiv-edge-refuses-stdlib-urllib.md) — superseded by a different fix — closed. Commit 4d8290555 (2026-09-20, "fix: fall back to curl when arXiv rejec…
+- [arxiv-refs-api-errors](2026/11/arxiv-refs-api-errors.md) — already shipped — closed as stale draft. PyAutoMemory#143 (merged 2026-11-03, merge 1f22de7; commits 0c3e2dc, …
 - [autonomous-orchestrators-p1](2026/11/autonomous-orchestrators-p1.md) — phase 1 of 7; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [autonomous-orchestrators-p2](2026/11/autonomous-orchestrators-p2.md) — phase 2 of 7; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [autonomous-orchestrators-p3a](2026/11/autonomous-orchestrators-p3a.md) — phase 3a of 3a–3d; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
@@ -140,6 +142,7 @@ markers; everything below GENERATED is rebuilt.
 - [cti-likelihood-pins](2026/11/cti-likelihood-pins.md) — cti-upkeep phase 0b
 - [cti-release-train-wiring](2026/11/cti-release-train-wiring.md)
 - [generate-converter-preflight](2026/11/generate-converter-preflight.md)
+- [glance-shadow-window-reached](2026/11/glance-shadow-window-reached.md) — already shipped — closed as stale draft. Item 1 (code): commit 679b1319f (2026-10-16) made `shadow_count_line(…
 - [glance-tier-ruling](2026/11/glance-tier-ruling.md) — prerequisite for phase 4 unattended merges; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [gradient-campaign-impact](2026/11/gradient-campaign-impact.md) — human-requested assessment of whether the two PyAutoArray#671 defects affected the likelihood-lifecycle phase-…
 - [howto-chapter2-format](2026/11/howto-chapter2-format.md) — Restored descriptive contents for Lens lessons 1–4 and complete ordered contents for Galaxy lessons 1–6, corre…
@@ -174,6 +177,7 @@ markers; everything below GENERATED is rebuilt.
 - [rectangular-gradient-rtu-sparse](2026/11/rectangular-gradient-rtu-sparse.md) — the filed symptom (|g| ~2e9 on the imaging/rectangular/hst fiducial, RTU all backends, Bilinear CPU sparse) sp…
 - [rectangular-mapper-bilinear-row-weights](2026/11/rectangular-mapper-bilinear-row-weights.md) — - **Retired as already-fixed** by the gradient-correctness sweep (autolens_profiling#517, item 12). The draft …
 - [registry-reconcile-app-token](2026/11/registry-reconcile-app-token.md)
+- [repos-sync-test-keys-on-dir-name](2026/11/repos-sync-test-keys-on-dir-name.md) — already shipped — closed as stale draft. Commit 679b1319f (2026-10-16, "test: Mind suite green on main — shado…
 - [results-library-p2-completeness](2026/11/results-library-p2-completeness.md) — phase 2; ledger draft/feature/autofit/results_library_epic.md
 - [results-library-p3-exports](2026/11/results-library-p3-exports.md) — phase 3; ledger draft/feature/autofit/results_library_epic.md
 - [results-library-p4-package](2026/11/results-library-p4-package.md) — phase 4; ledger draft/feature/autofit/results_library_epic.md
