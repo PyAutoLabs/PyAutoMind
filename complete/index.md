@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2167 records across 11 buckets.
+2169 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -139,6 +139,7 @@ markers; everything below GENERATED is rebuilt.
 - [brain-hygiene-cleanup-bugs](2026/11/brain-hygiene-cleanup-bugs.md)
 - [chapter2-continuation](2026/11/chapter2-continuation.md) — All continuation scope merged: Tutorials 5 and 6, optional speed and runnable model_centred prior passing, sum…
 - [cloud-validation-rehearsal-clock-skew](2026/11/cloud-validation-rehearsal-clock-skew.md)
+- [compile-drift-single-sample](2026/11/compile-drift-single-sample.md) — shipped in PyAutoBrain#588 (merge e822697, 2026-11-05), commit ed0782c. Decision: option (a), taken by the age…
 - [cortex-projects-dashboard-parent](2026/11/cortex-projects-dashboard-parent.md) — parent closed. Phase 1, the presentation change, shipped in PyAutoBrain#526 (merge 92de427, 2026-10-15; record…
 - [cti-database-examples-drift](2026/11/cti-database-examples-drift.md)
 - [cti-fits-fit-output-dir](2026/11/cti-fits-fit-output-dir.md)
@@ -195,6 +196,7 @@ markers; everything below GENERATED is rebuilt.
 - [rectangular-gradient-rtu-sparse](2026/11/rectangular-gradient-rtu-sparse.md) — the filed symptom (|g| ~2e9 on the imaging/rectangular/hst fiducial, RTU all backends, Bilinear CPU sparse) sp…
 - [rectangular-mapper-bilinear-row-weights](2026/11/rectangular-mapper-bilinear-row-weights.md) — - **Retired as already-fixed** by the gradient-correctness sweep (autolens_profiling#517, item 12). The draft …
 - [registry-reconcile-app-token](2026/11/registry-reconcile-app-token.md)
+- [repos-sync-optin-block](2026/11/repos-sync-optin-block.md) — shipped in PyAutoMind#539 (commit dc471e1d6), narrowed scope: option (a) of the 2026-11-05 re-size, chosen by …
 - [repos-sync-test-keys-on-dir-name](2026/11/repos-sync-test-keys-on-dir-name.md) — already shipped — closed as stale draft. Commit 679b1319f (2026-10-16, "test: Mind suite green on main — shado…
 - [results-library-p2-completeness](2026/11/results-library-p2-completeness.md) — phase 2; ledger draft/feature/autofit/results_library_epic.md
 - [results-library-p3-exports](2026/11/results-library-p3-exports.md) — phase 3; ledger draft/feature/autofit/results_library_epic.md

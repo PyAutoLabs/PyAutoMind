@@ -1,3 +1,9 @@
+- summary: shipped in PyAutoMind#539 (commit dc471e1d6), narrowed scope: option (a) of the 2026-11-05 re-size, chosen by the human. A single `OptInBlock` dataclass (`noun`, `begin`, `end`, `organs_only`) drives both the drift check and `--write` for the three opt-in AGENTS.md blocks: map, history and remote. `check_map_blocks` / `check_history_blocks` / `check_remote_blocks` stay as thin wrappers. The deliverable, filing and standards blocks, the hooks and the mode-gated writers stay explicit, because their contracts differ.
+- witness: byte-identical before/after for `--check` on the live workspace, `--write` on a scratch copy of the workspace, the follow-up `--check`, and the files `--write` produced. New `tests/test_repos_sync_opt_in_blocks.py` pins the shared contract per block. Mind suite 725 passed; 1 failure that also fails without this change (`test_the_hook_survives_an_unwritable_tools_dir`, root in the container).
+- not done: the full one-declaration-per-surface collapse (option b). Re-file it only if a new generated surface makes it worth it.
+
+## Original prompt
+
 # Deduplicate repos_sync.py's check/write pairs
 
 Type: refactor
