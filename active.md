@@ -1,4 +1,18 @@
 
+## cti-database-examples-drift
+- issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/121
+- issued: 2026-11-05
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/cti-database-examples-drift
+- repos:
+  - PyAutoCTI: feature/cti-database-examples-drift
+  - autocti_workspace: feature/cti-database-examples-drift
+- prompt: active/dataset_1d_results_database_examples_drift.md
+- epic: cti-upkeep (phase 3)
+- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary (PyAutoCTI → autocti_workspace)
+- plan: APPROVED 2026-11-05 (CTIAgg: list per dataset for factor-graph fits, single CTI otherwise)
+
 ## magnification-maps-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/818
 - issued: 2026-11-02

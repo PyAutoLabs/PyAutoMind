@@ -18,6 +18,7 @@ Review-minutes: 3
 Unattended: ready
 Epic: cti-upkeep
 Phase: 3
+Issued: 2026-11-05
 Filed: 2026-08-19 (backfilled from git)
 
 <!-- re-homed from draft/triage/ to draft/bug/autocti_workspace/ at the witness-campaign close-out, 2026-09-17: two concrete sites, a bug not a triage -->
