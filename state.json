@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 9 in flight",
-  "updated": "2026-11-05T21:26:42Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
+  "updated": "2026-11-05T21:32:46Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Filed: 2026-11-05\u2026 \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/520",
-      "prompt": "Use the start-dev skill. active/numba_num_threads_pin_delaunay_nn.md"
-    },
     {
       "severity": "yellow",
       "text": "Issued: 2026-11-02 \u2014 workspace-shipped, awaiting-merge (judge \u2192 human /prm; wiki-currency waits on a PyAutoFit release)",
@@ -126,6 +120,12 @@
       "text": "pick: Cache `autonerves` config parsing \u2014 308 YAML files parsed per script run",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/autonerves/config_yaml_parse_cache.md",
       "prompt": "Use the start-dev skill. draft/refactor/autonerves/config_yaml_parse_cache.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md",
+      "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md"
     }
   ]
 }

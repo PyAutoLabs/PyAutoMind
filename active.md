@@ -91,7 +91,6 @@
 - epic: autonomous-orchestrators (pilot 4c follow-up)
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary (non-PASS Witness → human /prm)
 
-
 ## autonomous-orchestrators-p4c
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/574
 - issued: 2026-11-04
@@ -101,23 +100,3 @@
 - epic: autonomous-orchestrators (phase 4c of 4a–4c)
 - pre-check: open shadow tick on system python3.10, minimal env — 6 notify proposals, 0 spawns (2026-11-04)
 - tier: judge — merge mode: human /prm
-
-## numba-num-threads-pin-delaunay-nn
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/519
-- issued: 2026-11-05
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/numba-num-threads-pin-delaunay-nn
-- repos:
-  - autolens_profiling: feature/numba-num-threads-pin-delaunay-nn
-- prompt: active/numba_num_threads_pin_delaunay_nn.md
-- source: PyAutoPulse task tasks/numba_num_threads_pin_and_delaunay_nn_remeasure.md (PyAutoPulse#90), phase 1 (pin); phase 2 (RAL re-measure after the release carrying PyAutoArray#677) to be filed as a draft
-- claim-override: HUMAN 2026-11-05 overrode gradient-correctness-sweep's autolens_profiling claim ("override the claim, start now — different files"); #517 is paused on RAL 413991 and touches different files
-- design: cell-local pin (human 2026-11-05) in scripts/imaging/delaunay/likelihood_{runtime,breakdown}_numba.py --mesh-class delaunay_nn; force the Nautilus worker route (patch numba_util.parallel_kernel_allowed -> False, so the serial Sibson build runs) + NUMBA_NUM_THREADS=1 backstop; record the route; laptop witness compares in-process patch vs a real multiprocessing fork child
-- tier: judge — merge mode: human /prm
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/520 OPEN (judge: human /prm)
-- resume: 2026-11-05 /prm found PR #520 lint RED (run 42077296932, step "Setup catalogue and independent Pulse contract validation"): `build_catalogue.py --check` → "catalogue: STALE (1 changed/missing, 0 obsolete shards)" — the new results/misc/delaunay_nn/worker_route_witness_desktop_h143s82.json needs its catalogue shard. Fix: in the worktree run `python scripts/misc/tooling/build_catalogue.py` (with ../PyAutoPulse), commit the regenerated catalogue, push, then /prm. Session wrapped by the human before the fix.
-- heart-ack: STALE "release validation stale: source moved since rehearsal (PyAutoNerves)" — human ack 2026-11-05 at ship
-- witness: worker_route_witness.py PASS — patched/worker 1.024 [90% CI 1.000-1.033]; serial/prange@1 1.248 [1.226-1.294]
-- follow-ups filed (Mind f4a8fc04): draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md (phase 2, gated on release + human go); draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md
-
