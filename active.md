@@ -2,22 +2,24 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/586
 - issued: 2026-11-05
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: library-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/brain-hygiene-cleanup-bugs
 - repos:
   - PyAutoBrain: feature/brain-hygiene-cleanup-bugs
 - prompt: active/clean_slate_packaging_grouped_layout.md
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/587
 - tier: judge — merge mode: human /prm
 
 ## registry-reconcile-app-token
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/537
 - issued: 2026-11-05
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: library-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/registry-reconcile-app-token
 - repos:
   - PyAutoMind: feature/registry-reconcile-app-token
 - prompt: active/registry_reconcile_private_repo_issue_404.md
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/538
 - tier: judge — merge mode: human /prm
 
 ## magnification-maps-wiring
