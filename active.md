@@ -108,6 +108,7 @@
 - location: claude.ai cloud session (ephemeral container; work lives on the pushed branch)
 - status: library-dev — implemented + tests green on branch, not merged
 - prompt: active/intake_injects_memory_citations_that_match_on.md
+- decision: human 2026-11-05 accepted the floor's trade-off (one-line subhalo idea and vmap/nautilus bug lose their citations)
 - repos:
   - PyAutoBrain: claude/pyautomind-queue-management-vdiv9c
 - tier: judge — merge mode: human /prm
