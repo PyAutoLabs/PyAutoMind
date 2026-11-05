@@ -221,7 +221,7 @@ Library first; one issue per repo per phase; each phase routes through
   2b `draft/maintenance/pyautoheart/arcticpy_pin_bump_after_upstream_release.md` (blocked by the upstream release);
   2c DONE 2026-11-05 `complete/2026/11/arcticpy-lazy-import.md` (PyAutoCTI#118 merged) and
   `draft/docs/autocti/installation_docs_arcticpy_recipe.md` (blocked by 2b)
-- Phase 3: `draft/bug/autocti_workspace/dataset_1d_results_database_examples_drift.md`
+- Phase 3 (started 2026-11-05 while 2b waits on upstream): `active/fits_fit_missing_output_dir_under_fast_plots.md` (PyAutoCTI#119, IN DEV); `draft/bug/autocti_workspace/dataset_1d_results_database_examples_drift.md`
 - Phase 5: `draft/bug/autocti_visualization/render_yml_blocked_until_pyautocti_release.md`,
   `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`,
   `draft/docs/autocti/api_rst_rewrite.md`

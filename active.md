@@ -1,4 +1,18 @@
 
+## cti-fits-fit-output-dir
+- issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/119
+- issued: 2026-11-05
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/cti-fits-fit-output-dir
+- repos:
+  - PyAutoCTI: feature/cti-fits-fit-output-dir
+  - autocti_workspace: feature/cti-fits-fit-output-dir
+- prompt: active/fits_fit_missing_output_dir_under_fast_plots.md
+- epic: cti-upkeep (phase 3)
+- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary (PyAutoCTI → autocti_workspace)
+- plan: APPROVED 2026-11-05
+
 ## magnification-maps-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/818
 - issued: 2026-11-02
