@@ -1,4 +1,17 @@
 
+## cti-smoke-breadth
+- issue: https://github.com/PyAutoLabs/autocti_workspace/issues/43
+- issued: 2026-11-05
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/cti-smoke-breadth
+- repos:
+  - autocti_workspace: feature/cti-smoke-breadth
+- prompt: active/autocti_workspace_smoke_breadth.md
+- epic: cti-upkeep (phase 3a)
+- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
+- plan: APPROVED 2026-11-05 (~35 entries; 5 broken scripts filed separately)
+
 ## magnification-maps-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/818
 - issued: 2026-11-02
