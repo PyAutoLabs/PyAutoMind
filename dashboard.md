@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 21 |
-| [In flight](#in-flight) | 7 |
-| [Planned](#planned) | 12 |
-| [Backlog](#backlog) | 300 |
+| [In flight](#in-flight) | 10 |
+| [Planned](#planned) | 9 |
+| [Backlog](#backlog) | 297 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -1120,10 +1120,26 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
+<details><summary>📋 <a href="active/clean_slate_packaging_grouped_layout.md">clean_slate.sh --packaging silently finds nothing on the grouped repo layout</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/586">issue #586</a> — issued 2026-11-05 — library-dev</summary>
+
+```
+Use the start-dev skill. active/clean_slate_packaging_grouped_layout.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/gradient_correctness_sweep.md">Gradient-correctness sweep: triage and investigate every open JAX-gradient bug and hazard…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/517">issue #517</a> — issued 2026-11-02 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/518">autolens_profiling#518</a></summary>
 
 ```
 Use the start-dev skill. active/gradient_correctness_sweep.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/hygiene_tidy_recommends_deleting_claimed_branches.md">hygiene tidy recommends deleting branches of live, claimed tasks</a> — issued 2026-11-04</summary>
+
+```
+Use the start-dev skill. active/hygiene_tidy_recommends_deleting_claimed_branches.md
 ```
 
 </details>
@@ -1152,6 +1168,14 @@ Use the start-dev skill. active/r2_pages_function_access.md
 
 </details>
 
+<details><summary>📋 <a href="active/registry_reconcile_private_repo_issue_404.md">Mind Registry Reconcile red daily: workflow token cannot read a private-repo issue</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/537">issue #537</a> — issued 2026-11-05 — library-dev</summary>
+
+```
+Use the start-dev skill. active/registry_reconcile_private_repo_issue_404.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/results_library_p5a_assistant.md">Issued: 2026-11-02</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/176">issue #176</a> — issued 2026-11-02 — workspace-shipped, awaiting-merge (judge → human /prm; wiki-currency waits on a PyAutoFit release) — PRs: <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/177">autolens_assistant#177</a></summary>
 
 ```
@@ -1173,7 +1197,7 @@ Use the start-dev skill. active/sky_orientation_euclid_dr1_and_library.md
 Scoped but not started; some are not yet prompt files. Full detail in [`planned.md`](planned.md).
 
 <details>
-<summary><b>12</b> task(s)</summary>
+<summary><b>9</b> task(s)</summary>
 
 <details><summary>📋 <b>isothermal-ell-sph-oversampling-at-the-cusp</b> — found 2026-08-09 — planned — NOT yet a prompt file; file one via <code>/intake</code> before starting</summary>
 
@@ -1247,35 +1271,11 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 </details>
 
-<details><summary>📋 <b>registry-reconcile-app-token</b> — planned — human said "do next tasks" 2026-11-04; blocked only by the repo claim</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautomind/registry_reconcile_private_repo_issue_404.md
-```
-
-</details>
-
-<details><summary>📋 <b>clean-slate-grouped-layout</b> — planned — human said "continue" 2026-11-05; blocked only by the repo claim</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautobrain/clean_slate_packaging_grouped_layout.md
-```
-
-</details>
-
-<details><summary>📋 <b>tidy-skip-claimed-branches</b> — planned — human said "continue" 2026-11-05; blocked only by the repo claim</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautobrain/hygiene_tidy_recommends_deleting_claimed_branches.md
-```
-
-</details>
-
 </details>
 
 ## Backlog
 
-Lanes: any 290 · local-dev 8
+Lanes: any 287 · local-dev 8
 
 <a id="human-review"></a>
 <details>
@@ -1326,7 +1326,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>bug</b> — 67</summary>
+<summary><b>bug</b> — 64</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1608,34 +1608,10 @@ Use the start-dev skill. draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp3
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/pyautobrain/clean_slate_packaging_grouped_layout.md">clean_slate.sh --packaging silently finds nothing on the grouped repo layout</a> — pyautobrain · small · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautobrain/clean_slate_packaging_grouped_layout.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautobrain/hygiene_tidy_recommends_deleting_claimed_branches.md">hygiene tidy recommends deleting branches of live, claimed tasks</a> — pyautobrain · small · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautobrain/hygiene_tidy_recommends_deleting_claimed_branches.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/bug/pyautobrain/intake_classify_file_drops_declared_epic_phase.md">intake classify --file injects an unrelated Memory: line on organ-targeted prompts</a> — pyautobrain · small · supervised · normal</summary>
 
 ```
 Use the start-dev skill. draft/bug/pyautobrain/intake_classify_file_drops_declared_epic_phase.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautomind/registry_reconcile_private_repo_issue_404.md">Mind Registry Reconcile red daily: workflow token cannot read a private-repo issue</a> — pyautomind · small · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautomind/registry_reconcile_private_repo_issue_404.md
 ```
 
 </details>
@@ -3102,9 +3078,9 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-04 | filed | <a href="draft/bug/pyautobrain/hygiene_tidy_recommends_deleting_claimed_branches.md">hygiene tidy recommends deleting branches of live, claimed tasks</a> |
-| 2026-11-04 | filed | <a href="draft/bug/pyautobrain/clean_slate_packaging_grouped_layout.md">clean_slate.sh --packaging silently finds nothing on the grouped repo…</a> |
-| 2026-11-04 | filed | <a href="draft/bug/pyautomind/registry_reconcile_private_repo_issue_404.md">Mind Registry Reconcile red daily: workflow token cannot read a…</a> |
+| 2026-11-05 | issued | <a href="active/clean_slate_packaging_grouped_layout.md">clean_slate.sh --packaging silently finds nothing on the grouped repo…</a> |
+| 2026-11-05 | issued | <a href="active/registry_reconcile_private_repo_issue_404.md">Mind Registry Reconcile red daily: workflow token cannot read a…</a> |
+| 2026-11-04 | issued | <a href="active/hygiene_tidy_recommends_deleting_claimed_branches.md">hygiene tidy recommends deleting branches of live, claimed tasks</a> |
 | 2026-11-04 | issued | <a href="active/autonomous_orchestrators_p4c_pilot_run.md">Autonomous orchestrators phase 4c: run the Dev orchestrator pilot…</a> |
 | 2026-11-03 | filed | <a href="draft/bug/pyautobrain/intake_classify_file_drops_declared_epic_phase.md">intake classify --file injects an unrelated Memory: line on…</a> |
 | 2026-11-02 | filed | <a href="draft/research/autolens_profiling/unexplained_gradient_gaps_cpu_sparse_delaunay_and_mge.md">Unexplained autodiff-vs-FD gaps in the phase-6 gradient records…</a> |
@@ -3224,7 +3200,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-130 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+127 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3269,7 +3245,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_adaptive_zeroed_ring_guard_row_mismatch.md`
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
-- _… and 90 more_
+- _… and 87 more_
 
 </details>
 
