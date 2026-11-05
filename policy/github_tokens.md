@@ -73,6 +73,7 @@ PATs need org-owner approval.
 | Mind `arxiv_papers`, `arxiv_interests` | PyAutoMemory | contents write |
 | Mind `session_hook_propagate`, `smoke_bootstrap_propagate` | owner-wide | contents write |
 | Mind `spawn_drift` | PyAutoMind-template, PyAutoMemory-template | contents write, pull-requests write |
+| Mind `registry_reconcile` | owner-wide | issues read, pull-requests read (registry rows point at private repos) |
 | Scientist `organism_board` | owner-wide | issues, pull-requests, metadata read |
 | four `*_visualization` `render` | PyAutoEyes | contents write (`repository_dispatch`) |
 | `autolens_profiling`, `autofit_profiling` `pages_dashboard` | PyAutoPulse | contents write (`repository_dispatch`) |
