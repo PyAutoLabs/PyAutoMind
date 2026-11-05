@@ -101,3 +101,16 @@
 - epic: autonomous-orchestrators (phase 4c of 4a–4c)
 - pre-check: open shadow tick on system python3.10, minimal env — 6 notify proposals, 0 spawns (2026-11-04)
 - tier: judge — merge mode: human /prm
+
+## numba-fork-safe-threading
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/676
+- issued: 2026-11-05
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/numba-fork-safe-threading
+- repos:
+  - PyAutoArray: feature/numba-fork-safe-threading
+- prompt: active/numba_parallel_kernels_gnu_openmp_kill_forked_search_workers.md
+- claim-override: human 2026-11-05 "Run in parallel" alongside magnification-maps-wiring (no overlapping files; that task edits autoarray/plot/array.py only)
+- unblocks: likelihood-lifecycle phase 4 delaunay_nn CPU validation leg (RAL 414150)
+- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary

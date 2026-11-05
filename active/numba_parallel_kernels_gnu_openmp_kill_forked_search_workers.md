@@ -10,7 +10,7 @@ Themes:
 Difficulty: small
 Autonomy: supervised
 Priority: high
-Status: formalised
+Status: active
 Consequence: glance
 Witness: A PyAutoArray unit test runs the Sibson numba kernel (and the parallel direct_conv kernel) in the parent, then calls it from a fork-context multiprocessing pool, and gets the parent's result back within a timeout (today the default threading layer kills the children: TimeoutError); forked children run the kernel on one numba thread; and the RAL rerun of autolens_inference imaging/delaunay_nn/hst numba_cpu_sparse (job 414150's submit) gets past source_pix[1].
 Review-minutes: 3
