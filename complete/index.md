@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2137 records across 11 buckets.
+2138 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -122,6 +122,7 @@ markers; everything below GENERATED is rebuilt.
 ## 2026/11
 
 - [alw-optdeps-escapes](2026/11/alw-optdeps-escapes.md)
+- [arcticpy-lazy-import](2026/11/arcticpy-lazy-import.md)
 - [autonomous-orchestrators-p1](2026/11/autonomous-orchestrators-p1.md) — phase 1 of 7; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [autonomous-orchestrators-p2](2026/11/autonomous-orchestrators-p2.md) — phase 2 of 7; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [autonomous-orchestrators-p3a](2026/11/autonomous-orchestrators-p3a.md) — phase 3a of 3a–3d; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md

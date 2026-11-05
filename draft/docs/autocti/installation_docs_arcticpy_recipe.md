@@ -21,6 +21,6 @@ Phase: 2c
 Blocked-by: draft/maintenance/pyautoheart/arcticpy_pin_bump_after_upstream_release.md (the recipe text depends on whether upstream ships wheels)
 
 Follows the PyAutoBrain `skills/WRITING_STYLE.md` rules: human-first, a short
-start, no jargon. If the lazy import (draft/feature/autocti/arcticpy_lazy_import.md)
+start, no jargon. If the lazy import (shipped 2026-11-05, complete/2026/11/arcticpy-lazy-import.md)
 has shipped, say that `import autocti` works without arcticpy and that clocking
 needs it.

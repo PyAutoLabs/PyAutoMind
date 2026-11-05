@@ -1,3 +1,31 @@
+## arcticpy-lazy-import
+- issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/117
+- completed: 2026-11-05
+- library-pr: https://github.com/PyAutoLabs/PyAutoCTI/pull/118
+
+Merged PyAutoCTI#118 (d36f307c) into main 2026-11-05 via human-typed /prm. Issue #117 closed. cti-upkeep phase 2c, ruling R2.
+
+`import autocti` now works without arcticpy:
+- `autocti/_arcticpy.py` provides `arcticpy()`, an accessor whose ImportError names the PyAutoHeart `install_arcticpy.sh` recipe, and `optional_import()`, which returns the real objects or, without arcticpy, placeholder classes that raise that error when called.
+- The nine re-exports (`ac.TrapInstantCapture`, `ac.CCDPhase`, `ac.ROE`, ...) resolve through a PEP 562 `__getattr__`.
+- clocker/, model/ and ou_sim_ci.py use `optional_import`.
+
+With arcticpy installed, every name is the same object as before.
+
+Design note: the approved plan's `TYPE_CHECKING` imports broke `af.Model`, because PyAutoFit evaluates constructor type hints at runtime. The placeholders are real classes, so those hints still resolve.
+
+Evidence:
+- The 4 new tests in `test_autocti/test_lazy_arcticpy.py` hide arcticpy with `sys.modules` and all fail on unchanged main.
+- `test_autocti` gives 275 passed serially. Under `-n 8` the acs FITS tests collide, and they do the same on main.
+- The 0b likelihood pins (10 literals) still match at rtol 1e-8, and the smoke scripts pass 3/3.
+- CI: unittest 3.12 / 3.13 / nojax green.
+
+Workspace impact: none.
+
+PyAutoCTI is not yet in the pending-release published set; the merged PR carries the GitHub `pending-release` label, which release.yml's clear_pending_release_labels now covers.
+
+## Original prompt
+
 # autocti: `import autocti` works without arcticpy (lazy arcticpy import)
 
 Type: feature
