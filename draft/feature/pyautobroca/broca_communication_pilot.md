@@ -32,3 +32,10 @@ mapped skills that no longer exist, max per-notebook context size vs the 20k cap
 (mapping commit older than the newest skill or workspace-folder change) — and show a "refresh needed"
 action pointing at the assistant's `*_refresh_colab_contexts` maintainer skill. The AI scan itself
 lives in each assistant.
+
+## Re-scoped 2026-11-05 — what is left (draft-queue sweep)
+
+- **Done:** Presentation slice: record `complete/2026/10/broca-communication-resource-dropdowns.md` (PyAutoHeart#295, PyAutoBroca#7, PyAutoScientist#66).
+- **Remaining:** Evidence ingestion.
+
+_Evidence from the 2026-11-05 read-only sweep (Mind ledger + GitHub search); remaining items are the live scope of this prompt._

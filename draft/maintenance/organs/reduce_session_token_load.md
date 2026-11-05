@@ -66,3 +66,10 @@ Every session pays the first number before it does anything; every task pays
 the second twice (start and close) and writes the third once. At ~100 tasks
 a week the September record volume alone was ~1,800 agent-written lines a
 day that the memory faculty greps by title.
+
+## Re-scoped 2026-11-05 — what is left (draft-queue sweep)
+
+- **Done:** `scripts/token_load.py` and the Mind instruction slimming (d01f8f484); `complete/2026/09/codex-context-efficiency.md`.
+- **Remaining:** The ≤6k target: AGENTS.md across Mind/Brain/Cortex/Memory still totals ~11.9k tokens, Cortex grew to ~5.4k; completion-record work not done.
+
+_Evidence from the 2026-11-05 read-only sweep (Mind ledger + GitHub search); remaining items are the live scope of this prompt._

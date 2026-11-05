@@ -39,3 +39,10 @@ Phase 4 of the `lenstwin` epic (ledger `draft/feature/autolens/lenstwin_epic.md`
 - Seed count and Nautilus settings for the RAL array.
 
 Out of scope: multi-galaxy budgets (phase 5, R7), misspecified fits (later), workspace/assistant (phase 6).
+
+## Re-scoped 2026-11-05 — what is left (draft-queue sweep)
+
+- **Done:** 4a: PyAutoLens#811 (bf18d5c) + PyAutoGalaxy#681, record `complete/2026/10/lenstwin-p4a-twin-fit-model.md`; RAL array 413331 submitted 2026-10-29.
+- **Remaining:** Pull 413331's results (still open in Cortex) and run recover.py.
+
+_Evidence from the 2026-11-05 read-only sweep (Mind ledger + GitHub search); remaining items are the live scope of this prompt._

@@ -118,3 +118,10 @@ FITS, even if by a one-off script that is not promoted to permanent infrastructu
 - The retroactive-update question has an explicit recommendation, whichever way it falls.
 - Magnification maps in the FITS product should carry phase 6b's trust caveat if that
   phase found the estimates unreliable.
+
+## Re-scoped 2026-11-05 — what is left (draft-queue sweep)
+
+- **Done:** Mass FITS and the retroactive-update verdict: pipeline PR #81 + PyAutoFit#1633, record `complete/2026/09/catalogue-mass-maps-fits.md`.
+- **Remaining:** The COOLEST per-lens .csv and the magnification plane.
+
+_Evidence from the 2026-11-05 read-only sweep (Mind ledger + GitHub search); remaining items are the live scope of this prompt._

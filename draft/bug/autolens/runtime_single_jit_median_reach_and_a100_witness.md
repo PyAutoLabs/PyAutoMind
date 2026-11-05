@@ -31,3 +31,10 @@ Contract: PyAutoPulse `tasks/runtime_cell_single_jit_gpu_warmup.md`.
    beside the unchanged `full_pipeline_single_jit`. Do not re-base committed rows.
 
 Do step 2 only once step 1 confirms the median removes the post-compile transient.
+
+## Re-scoped 2026-11-05 — what is left (draft-queue sweep)
+
+- **Done:** Step 2 "Reach": autolens_profiling#408 (2026-10-09, record `complete/2026/10/timing-noise-audit-p6-median-headline-gpu-marker.md`) — 11 runtime cells write `_median_ms/_p10/_p90`.
+- **Remaining:** Step 1 only: the A100 witness — no committed row carries a median yet (per that record).
+
+_Evidence from the 2026-11-05 read-only sweep (Mind ledger + GitHub search); remaining items are the live scope of this prompt._

@@ -71,7 +71,7 @@ Human request (2026-11-02): "find all gradient related issues that investigate b
 
 ### C. Bookkeeping, tests and corrections
 
-10. **`gradient.json` `point` mislabel.** Source: `draft/bug/autolens_profiling/gradient_json_point_label_standard_cells.md` (glance; a quick win, do it early).
+10. **`gradient.json` `point` mislabel.** Source: `draft/bug/autolens_profiling/gradient_json_point_label_standard_cells.md` (glance; a quick win, do it early). **Shipped** in autolens_profiling#518 (9d2ee2d3d, 2026-11-02); draft closed 2026-11-05 as `complete/2026/11/gradient-json-point-label.md`.
 11. **Correct the #515 research note.** In autolens_profiling `wiki/research/gradient_campaign_impact_border_tie.md`, the table row for `point_source_image/image_plane` and `cluster/image_plane` says *autodiff* is exactly zero. It is the **FD** that is zero and autodiff that is nonzero (mechanism E). Fix that row and link item 9.
 12. **Verify the rectangular mapper row-weights bug is fixed.** Source: `draft/bug/autoarray/rectangular_mapper_bilinear_row_weights.md` (filed 2026-08-26, Status: draft). The code in `autoarray/inversion/mesh/interpolator/rectangular.py` now carries comments saying the mirrored row weights and the `ceil` bracketing were fixed (autolens_workspace_test#279). Verify, then retire it with the fixing commit.
 13. **Critical-curve / caustic `jit` / `grad` parity test.** Source: `draft/test/autolens_workspace_test/jax_zero_contour.md` (notify).

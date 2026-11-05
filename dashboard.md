@@ -12,7 +12,7 @@
 | [Epics](#epics) | 21 |
 | [In flight](#in-flight) | 8 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 288 |
+| [Backlog](#backlog) | 241 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 2 |
 
@@ -121,7 +121,7 @@ Use the start-dev skill. draft/research/autoarray/delaunay_research.md
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 88
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 80
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -224,7 +224,7 @@ Use the start-dev skill. draft/docs/autolens_workspace/cluster_mass_parameteriza
 Long-running multi-phase programmes. Each epic's 📋 prompt has the assistant read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
 
 <details>
-<summary><b>CTI upkeep parity — release-train wiring and first modern <code>autocti</code> release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), <code>autocti_profiling</code> + Pulse <code>cti</code> row, figures/assistant/docs currency, hygiene</b> — 6 queued prompt(s), in order</summary>
+<summary><b>CTI upkeep parity — release-train wiring and first modern <code>autocti</code> release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), <code>autocti_profiling</code> + Pulse <code>cti</code> row, figures/assistant/docs currency, hygiene</b> — 5 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>CTI upkeep parity — release-train wiring and first modern <code>autocti</code> release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), <code>autocti_profiling</code> + Pulse <code>cti</code> row, figures/assistant/docs currency, hygiene</b> — ledger: `draft/maintenance/autocti/cti_upkeep_epic.md` — FILED 2026-11-04 — survey in draft/maintenance/autocti/cti_upkeep_epic_report.md; R1–R6 RULED 2026-11-04 (arcticpy fixed upstream…</summary>
 
@@ -238,14 +238,6 @@ Continue the 'CTI upkeep parity — release-train wiring and first modern `autoc
 
 ```
 Use the start-dev skill. draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autocti_visualization/render_yml_blocked_until_pyautocti_release.md">autocti_visualization render.yml fails on the released stack until PyAutoCTI releases</a> — autocti_visualization · small · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/bug/autocti_visualization/render_yml_blocked_until_pyautocti_release.md
 ```
 
 </details>
@@ -285,7 +277,7 @@ Use the start-dev skill. draft/release/arcticpy/upstream_packaging_pr.md
 </details>
 
 <details>
-<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 9 queued prompt(s), in order</summary>
+<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 7 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — ledger: `draft/research/autolens_profiling/likelihood_lifecycle_epic.md` — PHASE 0 COMPLETE 2026-10-24 — 0A PyAutoPulse#70; 0B autolens_profiling#444/#447/#448/#449/#450/#451 + PyAutoPulse#74 (lens at…</summary>
 
@@ -351,26 +343,10 @@ Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_
 
 </details>
 
-<details><summary>📋 <a href="draft/research/autolens_profiling/likelihood_lifecycle_epic_report.md">Likelihood lifecycle epic — research report and phased plan</a> — autolens_profiling · too-large · human-required · high</summary>
-
-```
-Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_epic_report.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/likelihood_lifecycle_p3_designation_proposals.md">Likelihood lifecycle phase 3: designation proposals for the completed campaigns…</a> — autolens_profiling · large · human-required · high</summary>
-
-```
-Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_p3_designation_proposals.md
-```
-
-</details>
-
 </details>
 
 <details>
-<summary><b>LensTwin — observation-anchored digital twins of fitted strong lenses: <code>al.twins</code> in PyAutoLens, mass-normalisation primitives in PyAutoGalaxy, used from ordinary <code>Science/active</code> projects, and the first stellar-plus-dark-matter identifiability experiment (ERC dark-matter cores vs cusps)</b> — 3 queued prompt(s), in order</summary>
+<summary><b>LensTwin — observation-anchored digital twins of fitted strong lenses: <code>al.twins</code> in PyAutoLens, mass-normalisation primitives in PyAutoGalaxy, used from ordinary <code>Science/active</code> projects, and the first stellar-plus-dark-matter identifiability experiment (ERC dark-matter cores vs cusps)</b> — 2 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>LensTwin — observation-anchored digital twins of fitted strong lenses: <code>al.twins</code> in PyAutoLens, mass-normalisation primitives in PyAutoGalaxy, used from ordinary <code>Science/active</code> projects, and the first stellar-plus-dark-matter identifiability experiment (ERC dark-matter cores vs cusps)</b> — ledger: `draft/feature/autolens/lenstwin_epic.md` — filed 2026-10-28 from the LensTwin brief; R1–R2 RULED 2026-10-28 (al.twins; observed noise map by default). PHASE 0 COMPLETE…</summary>
 
@@ -392,14 +368,6 @@ Use the start-dev skill. draft/research/autolens/lenstwin_p4_identifiability.md
 
 ```
 Use the start-dev skill. draft/feature/autolens/lenstwin_epic.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens/lenstwin_epic_report.md">LensTwin epic — research report, architecture and detailed phase bodies</a> — autolens · too-large · human-required · high</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens/lenstwin_epic_report.md
 ```
 
 </details>
@@ -428,7 +396,7 @@ Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md
 </details>
 
 <details>
-<summary><b>Results library — PyAutoFit infrastructure to index, complete, export, package and reconcile thousands of finished results (follow-up to hpc-campaign; Euclid DR1 is the pilot)</b> — 2 queued prompt(s), in order</summary>
+<summary><b>Results library — PyAutoFit infrastructure to index, complete, export, package and reconcile thousands of finished results (follow-up to hpc-campaign; Euclid DR1 is the pilot)</b> — 1 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Results library — PyAutoFit infrastructure to index, complete, export, package and reconcile thousands of finished results (follow-up to hpc-campaign; Euclid DR1 is the pilot)</b> — ledger: `draft/feature/autofit/results_library_epic.md` — STARTED 2026-10-28 — concurrent with hpc-campaign; phase 0 shared, owned by results-library. Rulings F1–F12 recorded in the…</summary>
 
@@ -442,14 +410,6 @@ Continue the 'Results library — PyAutoFit infrastructure to index, complete, e
 
 ```
 Use the start-dev skill. draft/feature/autofit/results_library_epic.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autofit/results_library_epic_report.md">Results library epic — lessons from building the Euclid DR1 catalogue</a> — autofit · too-large · human-required · high</summary>
-
-```
-Use the start-dev skill. draft/feature/autofit/results_library_epic_report.md
 ```
 
 </details>
@@ -740,7 +700,7 @@ Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens
 </details>
 
 <details>
-<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 15 queued prompt(s), in order</summary>
+<summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 14 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Cluster strong lensing — Source &amp; Cluster arc</b> — ledger: `draft/feature/autolens/source_cluster_arc.md` — In progress — 1a–1d, phase 3a audit (profiling#364, workspace_test#341) and phase 3b field-preserving cap fix (Galaxy#646…</summary>
 
@@ -762,14 +722,6 @@ Use the start-dev skill. draft/refactor/autogalaxy/critical_curves_dispatch_clus
 
 ```
 Use the start-dev skill. draft/test/workspaces/mesh_magnification_correctness.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens/point_magnification_api.md">Magnification at a point: surface the existing API in source_science + point…</a> — autolens · large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens/point_magnification_api.md
 ```
 
 </details>
@@ -873,7 +825,7 @@ Use the start-dev skill. draft/research/autolens_inference/kernel_regularization
 </details>
 
 <details>
-<summary><b>Scientist adoption pilot — project resources, clear organ destinations and a growing independent Scientist</b> — 7 queued prompt(s), in order</summary>
+<summary><b>Scientist adoption pilot — project resources, clear organ destinations and a growing independent Scientist</b> — 6 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Scientist adoption pilot — project resources, clear organ destinations and a growing independent Scientist</b> — ledger: `draft/feature/pyautoscientist/collaborator_led_pyautoscientist_adoption_pilot.md` — In progress — project cards and organ-linked resource routing merged and published (Scientist PRs #56 and #58); remaining members…</summary>
 
@@ -923,14 +875,6 @@ Use the start-dev skill. draft/feature/pyautoscientist/scientist_collaborator_va
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautoscientist/scientist_minimal_starter.md">Minimal independent Scientist starter</a> — pyautoscientist · medium · supervised</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautoscientist/scientist_minimal_starter.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/feature/pyautoscientist/scientist_optional_organ_activation.md">Progressive optional organ activation</a> — pyautoscientist · medium · supervised</summary>
 
 ```
@@ -963,7 +907,7 @@ Use the start-dev skill. draft/feature/pyautobrain/autonomous_orchestrators_epic
 </details>
 
 <details>
-<summary><b>interferometer-likelihood-campaign</b> — 6 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+<summary><b>interferometer-likelihood-campaign</b> — 5 queued prompt(s) — ⚠️ not in `epics.md`</summary>
 
 <details><summary>📋 <a href="draft/bug/pyautoheart/ral_venv_dependency_floor_drift.md">RAL PyAuto venv: third-party packages below the library floors…</a> — pyautoheart · easy · supervised · medium</summary>
 
@@ -1005,14 +949,6 @@ Use the start-dev skill. draft/feature/autoarray/interferometer_direct_conv_pran
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/autoarray/interferometer_numba_gate_retune_70.md">Retune the interferometer numba gate 60 → 70 (in-situ crossover, autolens_profiling#332)</a> — autoarray · small · supervised · low</summary>
-
-```
-Use the start-dev skill. draft/feature/autoarray/interferometer_numba_gate_retune_70.md
-```
-
-</details>
-
 </details>
 
 <details>
@@ -1037,23 +973,7 @@ Use the start-dev skill. draft/feature/autofit/certified_solver_batched_guard_c2
 </details>
 
 <details>
-<summary><b>pyautoeyes-birth</b> — 4 queued prompt(s) — ⚠️ not in `epics.md`</summary>
-
-<details><summary>📋 <a href="draft/feature/pyautoeyes/multi_galaxy_gallery.md">autolens_visualization: multi-galaxy gallery — producer and dataset</a> — pyautoeyes · medium · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautoeyes/multi_galaxy_gallery.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautoeyes/group_cluster_gallery.md">autolens_visualization: group and cluster galleries (point-source + extended)</a> — pyautoeyes · large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautoeyes/group_cluster_gallery.md
-```
-
-</details>
+<summary><b>pyautoeyes-birth</b> — 2 queued prompt(s) — ⚠️ not in `epics.md`</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautohands/release_fires_visualization_dispatch.md">Hands release.yml fires the visualization re-render dispatches</a> — pyautohands · small · supervised · normal</summary>
 
@@ -1235,7 +1155,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 278 · local-dev 8
+Lanes: any 233 · local-dev 6
 
 <a id="human-review"></a>
 <details>
@@ -1286,324 +1206,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 39</summary>
-
-<details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding against the raw maximum finds…</a> — autoarray · small · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/feature/autoarray/source_clumps_robust_scale.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autofit_assistant/data_loading_and_selection_cuts_skill.md">autofit_assistant: a skill that owns loading the user's data and its selection…</a> — autofit_assistant · small · safe · medium</summary>
-
-```
-Use the start-dev skill. draft/feature/autofit_assistant/data_loading_and_selection_cuts_skill.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md">Filed: 2026-11-05 (phase 2 of autolens_profiling#519; Pulse task <code>PyAutoPulse/tasks/numba_num_threads_pin_and_delaunay_nn_remeasure.md</code> steps 2-4)</a> — autolens_profiling · small · medium</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit after Prodigy</a> — autofit · medium · safe · medium</summary>
-
-```
-Use the start-dev skill. draft/feature/autofit/prior_exit_sampler_coverage.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autofit/search_seed_reproducibility.md">Give PyAutoFit searches a <code>seed</code> — today no search can be made…</a> — autofit · medium · safe · medium</summary>
-
-```
-Use the start-dev skill. draft/feature/autofit/search_seed_reproducibility.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens/coolest_pixel_grid_export.md">COOLEST: export MGE lens light and pixelized sources as pixel grids</a> — autolens · medium · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens/coolest_pixel_grid_export.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautobrain/docs_conductor.md">A dedicated Documentation conductor in PyAutoBrain</a> — pyautobrain · medium · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautobrain/docs_conductor.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautoheart/howto_real_settings_nightly.md">Nightly run of one HowTo tutorial per chapter at real settings</a> — pyautoheart · medium · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautoheart/howto_real_settings_nightly.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautobrain/brain_board_follow_ups.md">Brain board follow-ups: what real mornings surface</a> — pyautobrain · small · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautobrain/brain_board_follow_ups.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> — pyautohands · small · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autoarray/multiwavelength_inversion.md">Can create a list of InversionMatrix objects for each dataset</a> — autoarray · medium · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/autoarray/multiwavelength_inversion.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md">A joint unit-disk constraint (or reparameterisation) for <code>ell_comps</code></a> — autogalaxy · medium · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md">Tune cluster-scale JOSS benchmarks toward their 5-minute targets</a> — autolens_workspace · medium · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a vis_lp-only appendix…</a> — euclid · medium · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautobrain/batch_slice.md"><code>batch slice</code> — the decomposition pass for <code>needs-slicing</code> prompts</a> — pyautobrain · medium · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautobrain/batch_slice.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/workspaces/group_los_halos.md">The imaging <code>features/advanced/los_halos</code> example needs improving and padding out before</a> — workspaces · medium · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/workspaces/group_los_halos.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/workspaces/group_subhalo_sensitivity.md">The imaging <code>features/advanced/subhalo/sensitivity</code> example needs improving and padding out before</a> — workspaces · medium · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/workspaces/group_subhalo_sensitivity.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autofit/ep_analytic_updates.md">EP analytic updates — implement the four planned work packages</a> — autofit · large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/autofit/ep_analytic_updates.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autofit/skip_the_likelihood_for_assertion_violating_samp.md">Skip the likelihood for assertion-violating samples on the JAX path</a> — autofit · large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/autofit/skip_the_likelihood_for_assertion_violating_samp.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md">Remote-MCP deployment tiers (2 + 3) for the results-inspector server</a> — autofit_assistant · large · human-required · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens/multi_plane_time_delays.md">Multi-plane time delays</a> — autolens · large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens/multi_plane_time_delays.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens_workspace/oversampled_psf_dataset_adoption.md">Adopt oversampled PSFs in the start-here dataset chain (option a)</a> — autolens_workspace · large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens_workspace/oversampled_psf_dataset_adoption.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/workspaces/restore_multiple_sources_lensing_of_lens.md">Restore lensing-of-lens in the multiple_sources workspace example</a> — workspaces · large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/workspaces/restore_multiple_sources_lensing_of_lens.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autoarray/rectangular_multi_submesh.md">Follow-up to <code>rectangular_adapt_cdf.md</code> (issue #322) and Path A</a> — autoarray · too-large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/autoarray/rectangular_multi_submesh.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autogalaxy/piemass_potential.md"><code>PIEMass.potential_2d_from</code>: implement the missing lensing potential</a> — autogalaxy · too-large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/autogalaxy/piemass_potential.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens_jax_joss/autolens_jax_joss_benchmark_repo.md">autolens_jax_joss benchmark repo + real-data start_here pairing</a> — autolens_jax_joss · too-large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens_jax_joss/autolens_jax_joss_benchmark_repo.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/jax_substructure/5_prng_key_vmap_noise.md">Context: PyAutoLens issue #542 follow-up (Gap 1, deferred during the</a> — jax_substructure · too-large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/jax_substructure/5_prng_key_vmap_noise.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/jax_substructure/6_deflection_equivalence_test.md">Context: PyAutoLens issue #542 follow-up (Gap 2, deferred during the</a> — jax_substructure · too-large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/jax_substructure/6_deflection_equivalence_test.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autogalaxy/dpie_sigma0_parameterization.md">dPIE: optional central-dispersion (sigma_0) parameterization</a> — autogalaxy · small · supervised · low</summary>
-
-```
-Use the start-dev skill. draft/feature/autogalaxy/dpie_sigma0_parameterization.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md">PyAutoLens mirror of the interferometer primary-beam persistence (docstring + round-trip test)</a> — autolens · small · safe · low</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautohands/release_board_run_logs_enrichment.md">Release board: local run_logs enrichment</a> — pyautohands · small · supervised · low</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautohands/release_board_run_logs_enrichment.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/workspaces/gallery_runner_missing_tiers.md">Gallery runner: add visualization_upper + decide the modeling_visualization_jit tier</a> — workspaces · small · safe · low</summary>
-
-```
-Use the start-dev skill. draft/feature/workspaces/gallery_runner_missing_tiers.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautoscientist/animated_logos_for_pyautogalaxy_and_pyautofit.md">Animated logos for PyAutoGalaxy and PyAutoFit</a> — pyautoscientist · medium · safe · low</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautoscientist/animated_logos_for_pyautogalaxy_and_pyautofit.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autoarray/adapt_linear_default_flip.md">Deferred: make the <code>*Power</code> adapt classes the defaults (breaking)</a> — autoarray · large · human-required · low</summary>
-
-```
-Use the start-dev skill. draft/feature/autoarray/adapt_linear_default_flip.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens/lenstwin_epic_surveys/01_pyautolens_pyautogalaxy.md">LensTwin survey 01 — PyAutoLens and PyAutoGalaxy (read-only, 2026-10-28)</a> — autolens</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens/lenstwin_epic_surveys/01_pyautolens_pyautogalaxy.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autolens/lenstwin_epic_surveys/02_assistant_workspace.md">LensTwin survey 02 — autolens_assistant and autolens_workspace (read-only, 2026-10-28)</a> — autolens</summary>
-
-```
-Use the start-dev skill. draft/feature/autolens/lenstwin_epic_surveys/02_assistant_workspace.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> — cortex</summary>
-
-```
-Use the start-dev skill. draft/feature/cortex/output_summary.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautomemory/reading-queue-token-management.md">Simplify reading-queue token management</a> — pyautomemory</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-management.md
-```
-
-</details>
-
-</details>
-
-<details>
-<summary><b>bug</b> — 61</summary>
+<summary><b>bug</b> — 54</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1701,14 +1304,6 @@ Use the start-dev skill. draft/bug/autolens_workspace/sensitivity_slam_source_pi
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md">Bundle stages 1/5/6 read OUTPUT_DIR, but the SED chain writes sersic_lens_model…</a> — euclid · small · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md"><code>vis_lp</code> passes <code>batch_size=50</code> to <code>af.Nautilus</code>, which has no such parameter</a> — euclid · small · supervised · medium</summary>
 
 ```
@@ -1789,14 +1384,6 @@ Use the start-dev skill. draft/bug/autoarray/simulator_imaging_poisson_drawn_bef
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autolens_profiling/gradient_json_point_label_standard_cells.md">Standard-size gradient cells record <code>"point": "prior_medians"</code> while evaluating at iid draw 0</a> — autolens_profiling · easy · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/bug/autolens_profiling/gradient_json_point_label_standard_cells.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import autogalaxy before jax</a> — workspaces · easy · supervised · medium</summary>
 
 ```
@@ -1817,14 +1404,6 @@ Use the start-dev skill. draft/bug/autoarray/galaxy_duplicate_pytree_registratio
 
 ```
 Use the start-dev skill. draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md">Nautilus as an EP default_optimiser crashes on PriorFactors (reads analysis._use_jax unguarded)</a> — autofit · small · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md
 ```
 
 </details>
@@ -1933,14 +1512,6 @@ Use the start-dev skill. draft/bug/autolens_workspace_test/multi_dataset_jax_lik
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autonerves/pyautonerves_emits_a_false_workspace_is_stale.md">PyAutoNerves emits a false "workspace is stale, git pull" warning…</a> — autonerves · medium · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/bug/autonerves/pyautonerves_emits_a_false_workspace_is_stale.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/bug/health_fixes/ci_timing_execution_coverage.md">CI timing must compare equivalent executed job coverage</a> — health_fixes · medium · supervised · normal</summary>
 
 ```
@@ -1961,14 +1532,6 @@ Use the start-dev skill. draft/bug/health_fixes/heart_health_rerun_stale_push.md
 
 ```
 Use the start-dev skill. draft/bug/priors/15_transformed_message_logpdf_jacobian.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autofit/multistartgradient_searches_ignore_iterations_pe.md">MultiStartGradient searches ignore iterations_per_quick_update and live_visual_update while announcing the cadence…</a> — autofit · large · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/bug/autofit/multistartgradient_searches_ignore_iterations_pe.md
 ```
 
 </details>
@@ -2009,14 +1572,6 @@ Use the start-dev skill. draft/bug/priors/14_replace_transform_stack_with_biject
 
 ```
 Use the start-dev skill. draft/bug/priors/z_features.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autonerves/nautilus_sampler_pin_drifts_from_pyautofit.md">Colab pins <code>nautilus-sampler==1.0.4</code> while PyAutoFit declares <code>1.0.5</code></a> — autonerves · trivial · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/bug/autonerves/nautilus_sampler_pin_drifts_from_pyautofit.md
 ```
 
 </details>
@@ -2085,10 +1640,279 @@ Use the start-dev skill. draft/bug/autolens/point_source_plot_script_residual_sh
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md">euclid_dr1: every dataset rgb.jpg is upside down relative to the VIS FITS…</a> — euclid · supervised</summary>
+</details>
+
+<details>
+<summary><b>feature</b> — 34</summary>
+
+<details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
 
 ```
-Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
+Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/source_clumps_robust_scale.md"><code>Inversion.source_clumps_from</code> needs a robust scale — thresholding against the raw maximum finds…</a> — autoarray · small · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/feature/autoarray/source_clumps_robust_scale.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autofit_assistant/data_loading_and_selection_cuts_skill.md">autofit_assistant: a skill that owns loading the user's data and its selection…</a> — autofit_assistant · small · safe · medium</summary>
+
+```
+Use the start-dev skill. draft/feature/autofit_assistant/data_loading_and_selection_cuts_skill.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md">Filed: 2026-11-05 (phase 2 of autolens_profiling#519; Pulse task <code>PyAutoPulse/tasks/numba_num_threads_pin_and_delaunay_nn_remeasure.md</code> steps 2-4)</a> — autolens_profiling · small · medium</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit after Prodigy</a> — autofit · medium · safe · medium</summary>
+
+```
+Use the start-dev skill. draft/feature/autofit/prior_exit_sampler_coverage.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/coolest_pixel_grid_export.md">COOLEST: export MGE lens light and pixelized sources as pixel grids</a> — autolens · medium · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens/coolest_pixel_grid_export.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/docs_conductor.md">A dedicated Documentation conductor in PyAutoBrain</a> — pyautobrain · medium · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/docs_conductor.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoheart/howto_real_settings_nightly.md">Nightly run of one HowTo tutorial per chapter at real settings</a> — pyautoheart · medium · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautoheart/howto_real_settings_nightly.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/brain_board_follow_ups.md">Brain board follow-ups: what real mornings surface</a> — pyautobrain · small · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/brain_board_follow_ups.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> — pyautohands · small · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/multiwavelength_inversion.md">Can create a list of InversionMatrix objects for each dataset</a> — autoarray · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/autoarray/multiwavelength_inversion.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md">Tune cluster-scale JOSS benchmarks toward their 5-minute targets</a> — autolens_workspace · medium · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens_workspace/joss_cluster_benchmark_tuning.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a vis_lp-only appendix…</a> — euclid · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/batch_slice.md"><code>batch slice</code> — the decomposition pass for <code>needs-slicing</code> prompts</a> — pyautobrain · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/batch_slice.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/workspaces/group_los_halos.md">The imaging <code>features/advanced/los_halos</code> example needs improving and padding out before</a> — workspaces · medium · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/workspaces/group_los_halos.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/workspaces/group_subhalo_sensitivity.md">The imaging <code>features/advanced/subhalo/sensitivity</code> example needs improving and padding out before</a> — workspaces · medium · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/workspaces/group_subhalo_sensitivity.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autofit/ep_analytic_updates.md">EP analytic updates — implement the four planned work packages</a> — autofit · large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/autofit/ep_analytic_updates.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autofit/skip_the_likelihood_for_assertion_violating_samp.md">Skip the likelihood for assertion-violating samples on the JAX path</a> — autofit · large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/autofit/skip_the_likelihood_for_assertion_violating_samp.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md">Remote-MCP deployment tiers (2 + 3) for the results-inspector server</a> — autofit_assistant · large · human-required · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/multi_plane_time_delays.md">Multi-plane time delays</a> — autolens · large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens/multi_plane_time_delays.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens_workspace/oversampled_psf_dataset_adoption.md">Adopt oversampled PSFs in the start-here dataset chain (option a)</a> — autolens_workspace · large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens_workspace/oversampled_psf_dataset_adoption.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/workspaces/restore_multiple_sources_lensing_of_lens.md">Restore lensing-of-lens in the multiple_sources workspace example</a> — workspaces · large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/workspaces/restore_multiple_sources_lensing_of_lens.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/rectangular_multi_submesh.md">Follow-up to <code>rectangular_adapt_cdf.md</code> (issue #322) and Path A</a> — autoarray · too-large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/autoarray/rectangular_multi_submesh.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autogalaxy/piemass_potential.md"><code>PIEMass.potential_2d_from</code>: implement the missing lensing potential</a> — autogalaxy · too-large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/autogalaxy/piemass_potential.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/jax_substructure/5_prng_key_vmap_noise.md">Context: PyAutoLens issue #542 follow-up (Gap 1, deferred during the</a> — jax_substructure · too-large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/jax_substructure/5_prng_key_vmap_noise.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/jax_substructure/6_deflection_equivalence_test.md">Context: PyAutoLens issue #542 follow-up (Gap 2, deferred during the</a> — jax_substructure · too-large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/jax_substructure/6_deflection_equivalence_test.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autogalaxy/dpie_sigma0_parameterization.md">dPIE: optional central-dispersion (sigma_0) parameterization</a> — autogalaxy · small · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/feature/autogalaxy/dpie_sigma0_parameterization.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md">PyAutoLens mirror of the interferometer primary-beam persistence (docstring + round-trip test)</a> — autolens · small · safe · low</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautohands/release_board_run_logs_enrichment.md">Release board: local run_logs enrichment</a> — pyautohands · small · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautohands/release_board_run_logs_enrichment.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/workspaces/gallery_runner_missing_tiers.md">Gallery runner: add visualization_upper + decide the modeling_visualization_jit tier</a> — workspaces · small · safe · low</summary>
+
+```
+Use the start-dev skill. draft/feature/workspaces/gallery_runner_missing_tiers.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoscientist/animated_logos_for_pyautogalaxy_and_pyautofit.md">Animated logos for PyAutoGalaxy and PyAutoFit</a> — pyautoscientist · medium · safe · low</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautoscientist/animated_logos_for_pyautogalaxy_and_pyautofit.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/adapt_linear_default_flip.md">Deferred: make the <code>*Power</code> adapt classes the defaults (breaking)</a> — autoarray · large · human-required · low</summary>
+
+```
+Use the start-dev skill. draft/feature/autoarray/adapt_linear_default_flip.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> — cortex</summary>
+
+```
+Use the start-dev skill. draft/feature/cortex/output_summary.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautomemory/reading-queue-token-management.md">Simplify reading-queue token management</a> — pyautomemory</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-management.md
 ```
 
 </details>
@@ -2096,7 +1920,7 @@ Use the start-dev skill. draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md
 </details>
 
 <details>
-<summary><b>research</b> — 43</summary>
+<summary><b>research</b> — 20</summary>
 
 <details><summary>📋 <a href="draft/research/autofit_inference/search_ext_b5c2a_rerun.md"><code>@autofit_inference</code> B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug…</a> — autofit_inference · medium · supervised · high</summary>
 
@@ -2254,190 +2078,6 @@ Use the start-dev skill. draft/research/pyautoreduce/legacy_flux_scale_parity.md
 
 ```
 Use the start-dev skill. draft/research/autoarray/delaunay_interpolator_pure_callback_vmap_memory.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_report.md">HPC campaign epic — research report and phased plan</a> — autofit</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/hpc_campaign_epic_report.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_surveys/carbon.md">Energy and CO2e for PyAuto HPC campaigns: methods, inputs, worked estimate</a> — autofit</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/hpc_campaign_epic_surveys/carbon.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_surveys/codebase.md">HPC campaign epic: what the codebase already has</a> — autofit</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/hpc_campaign_epic_surveys/codebase.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_surveys/euclid_hpc.md">euclid_dr1 HPC glue + Slurm mechanics — research report</a> — autofit</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/hpc_campaign_epic_surveys/euclid_hpc.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/hpc_campaign_epic_surveys/prior_art.md">Prior art: status, right-sizing and failure triage for large HPC fit campaigns</a> — autofit</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/hpc_campaign_epic_surveys/prior_art.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/search_extensibility_epic_report.md">Search extensibility epic: research report and phased plan</a> — autofit</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/search_extensibility_epic_report.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/search_extensibility_epic_reviews/01_codex_gpt6_astra.md">**§1 Verdict**</a> — autofit</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/search_extensibility_epic_reviews/01_codex_gpt6_astra.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/search_extensibility_epic_reviews/02_claude_fable_high.md">Independent review — search extensibility epic report (Fable, high effort)</a> — autofit</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/search_extensibility_epic_reviews/02_claude_fable_high.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/search_extensibility_epic_reviews/03_codex_astra_b2_pr3.md">Codex gpt-6-astra adversary review — B2 (autofit_inference#3), 2026-10-08</a> — autofit</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/search_extensibility_epic_reviews/03_codex_astra_b2_pr3.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/search_extensibility_epic_reviews/04_codex_astra_a1_pr1675.md">Codex gpt-6-astra adversary review — A1 (PyAutoFit#1675), 2026-10-08</a> — autofit</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/search_extensibility_epic_reviews/04_codex_astra_a1_pr1675.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/search_extensibility_epic_reviews/05_codex_astra_a2_a3_a3b_postmerge.md">Codex gpt-6-astra adversary review — A2/A3/A3b (PyAutoFit#1679/#1680/#1681), post-merge, 2026-10-08</a> — autofit</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/search_extensibility_epic_reviews/05_codex_astra_a2_a3_a3b_postmerge.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/search_extensibility_epic_reviews/06_codex_astra_b3_postmerge.md">Codex gpt-6-astra adversary review — B3 (autofit_inference#5, PyAutoInsight#23, PyAutoCortex#61), post-merge, 2026-10-08</a> — autofit</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/search_extensibility_epic_reviews/06_codex_astra_b3_postmerge.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/search_extensibility_epic_reviews/07_codex_astra_a4_stack_premerge.md">Codex gpt-6-astra adversary review — A4 stack (PyAutoFit#1685 → #1686 → #1687)…</a> — autofit</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/search_extensibility_epic_reviews/07_codex_astra_a4_stack_premerge.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/search_extensibility_epic_surveys/01_search_architecture.md">01 — PyAutoFit non-linear search architecture audit</a> — autofit</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/search_extensibility_epic_surveys/01_search_architecture.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/search_extensibility_epic_surveys/02_jax_interface.md">02 — JAX interface across PyAutoFit non-linear searches (read-only audit)</a> — autofit</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/search_extensibility_epic_surveys/02_jax_interface.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/search_extensibility_epic_surveys/03_search_docs.md">03 — How non-linear searches are documented across PyAuto, and how…</a> — autofit</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/search_extensibility_epic_surveys/03_search_docs.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autofit/search_extensibility_epic_surveys/04_inference_profiling_infra.md">04 — Inference and profiling infrastructure survey for <code>autofit_inference</code> and <code>autofit_profiling</code></a> — autofit</summary>
-
-```
-Use the start-dev skill. draft/research/autofit/search_extensibility_epic_surveys/04_inference_profiling_infra.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/01_profiling_inference_layout.md">Survey 01 — autolens_profiling and autolens_inference layout census (2026-10-21, Explore worker, read-only)</a> — autolens_profiling</summary>
-
-```
-Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/01_profiling_inference_layout.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/02_pulse_insight_contracts.md">Survey 02 — PyAutoPulse and PyAutoInsight data model, contracts, dashboards, boundaries…</a> — autolens_profiling</summary>
-
-```
-Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/02_pulse_insight_contracts.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/03_eyes_viz_coverage.md">Survey 03 — PyAutoEyes and autolens_visualization coverage per dataset type…</a> — autolens_profiling</summary>
-
-```
-Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/03_eyes_viz_coverage.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/04_setup_knobs_source.md">Survey 04 — Compute-setup knobs in PyAutoLens: what an "auto / optimal…</a> — autolens_profiling</summary>
-
-```
-Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/04_setup_knobs_source.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/05_brain_conductors_epic_format.md">Survey 05 — Mind epic format, Brain intake/conductors, overlapping epics and tasks…</a> — autolens_profiling</summary>
-
-```
-Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/05_brain_conductors_epic_format.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/p2b_interferometer_survey_2026_10_25.md">Likelihood lifecycle 2b — interferometer campaign: survey and draft plan</a> — autolens_profiling</summary>
-
-```
-Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/p2b_interferometer_survey_2026_10_25.md
 ```
 
 </details>
@@ -2642,7 +2282,7 @@ Use the start-dev skill. draft/docs/howtolens/tutorial_correctness_and_howtogala
 </details>
 
 <details>
-<summary><b>maintenance</b> — 17</summary>
+<summary><b>maintenance</b> — 15</summary>
 
 <details><summary>📋 <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> — organs · medium · supervised · high</summary>
 
@@ -2656,14 +2296,6 @@ Use the start-dev skill. draft/maintenance/organs/reduce_session_token_load.md
 
 ```
 Use the start-dev skill. draft/maintenance/autocti/cti_upkeep_epic.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md">Keep caches off <code>$HOME</code> on HPC — phase 2 remainder: euclid pipeline…</a> — workspaces · small · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md
 ```
 
 </details>
@@ -2768,14 +2400,6 @@ Use the start-dev skill. draft/maintenance/autolens_workspace/remeasure_shapelet
 
 ```
 Use the start-dev skill. draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/autocti/cti_upkeep_epic_report.md">CTI upkeep parity — survey report (2026-11-04)</a> — autocti</summary>
-
-```
-Use the start-dev skill. draft/maintenance/autocti/cti_upkeep_epic_report.md
 ```
 
 </details>
@@ -2996,16 +2620,15 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-05 | filed | <a href="draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md">Filed: 2026-11-05 (found by the autolens_profiling#519 worker-route…</a> |
 | 2026-11-04 | issued | <a href="active/autonomous_orchestrators_p4c_pilot_run.md">Autonomous orchestrators phase 4c: run the Dev orchestrator pilot…</a> |
 | 2026-11-02 | filed | <a href="draft/research/autolens_profiling/unexplained_gradient_gaps_cpu_sparse_delaunay_and_mge.md">Unexplained autodiff-vs-FD gaps in the phase-6 gradient records…</a> |
-| 2026-11-02 | filed | <a href="draft/bug/autolens_profiling/gradient_json_point_label_standard_cells.md">Standard-size gradient cells record <code>"point": "prior_medians"</code> while…</a> |
 | 2026-11-02 | issued | <a href="active/magnification_maps_8d_wiring_pretty.md">Magnification maps 8d: wire into fit subplots and make them pretty</a> |
 | 2026-11-02 | issued | <a href="active/results_library_p5a_assistant.md">Issued: 2026-11-02</a> |
 | 2026-11-02 | filed | <a href="draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md">Imaging sparse-operator path gives a very different log L from dense…</a> |
+| 2026-11-02 | issued | <a href="active/gradient_correctness_sweep.md">Gradient-correctness sweep: triage and investigate every open…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-02 | issued | <a href="active/gradient_correctness_sweep.md">Gradient-correctness sweep: triage and investigate every open…</a> |
 | 2026-10-31 | issued | <a href="active/sky_orientation_euclid_dr1_and_library.md">Sky orientation (north/east): euclid_dr1 catalogue, paper and…</a> |
 | 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
 | 2026-10-29 | issued | <a href="active/r2_pages_function_access.md">ECLIPSE site: serve R2 lens files through a Pages Function behind…</a> |
@@ -3015,12 +2638,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-23 | filed | <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred…</a> |
 | 2026-10-23 | filed | <a href="draft/bug/autolens_profiling/stale_auto_simulated_cluster_dataset.md"><code>@autolens_profiling</code> stale auto-simulated <code>dataset/cluster/simple</code>…</a> |
 | 2026-10-23 | filed | <a href="draft/feature/pyautobrain/docs_conductor.md">A dedicated Documentation conductor in PyAutoBrain</a> |
+| 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
 | 2026-10-21 | filed | <a href="planned.md#interferometer-primary-beam-persistence-mirror">interferometer-primary-beam-persistence-mirror</a> |
 | 2026-10-21 | filed | <a href="draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md">PyAutoLens mirror of the interferometer primary-beam persistence…</a> |
 | 2026-10-21 | filed | <a href="draft/docs/autolens_profiling/positions_source_jacobian_default_rerun_note.md">Note in autolens_profiling that plain source-plane lane values…</a> |
@@ -3030,12 +2653,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-21 | filed | <a href="draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md">Cluster likelihood scripts: image-plane manual check disagrees with…</a> |
 | 2026-10-16 | filed | <a href="draft/maintenance/autolens_workspace/remeasure_shapelets_slow_park.md">Re-measure the shapelets/modeling.py SLOW park (#586) under the…</a> |
 | 2026-10-14 | filed | <a href="draft/test/autofit/workspace_searches_scripts_preexisting_failures.md"><code>@autofit_workspace</code> six <code>searches/</code> scripts fail on main at…</a> |
+| 2026-10-14 | filed | <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-14 | filed | <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> |
 | 2026-10-09 | filed | <a href="draft/bug/pyautobrain/profiling_compile_drift_point_vs_point.md">Profiling conductor compile drift compares one point against one point</a> |
 | 2026-10-08 | filed | <a href="draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md"><code>JAX_ENABLE_X64=False</code> is overridden to True, so the fp32 inference…</a> |
 | 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
@@ -3045,12 +2668,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
+| 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
 | 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
@@ -3058,8 +2681,9 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
 | 2026-09-26 | filed | <a href="draft/refactor/workspaces/abell_1201_local_cleanup.md">Repo cleanup: retire the Abell 1201 worktree and local raw data</a> |
 | 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
-| 2026-09-25 | filed | <a href="draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md">Keep caches off <code>$HOME</code> on HPC — phase 2 remainder: euclid pipeline…</a> |
 | 2026-09-24 | filed | <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> |
+| 2026-09-23 | filed | <a href="draft/bug/autolens_workspace_test/multi_dataset_jax_likelihood_delaunay_wrong_likelihood.md">multi_dataset/jax_likelihood/delaunay.py asserts the wrong likelihood…</a> |
+| 2026-09-18 | filed | <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter…</a> |
 
 </details>
 
@@ -3073,46 +2697,20 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 ## Hygiene
 
-31 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
+5 prompt(s) without a metadata header — they show no facets above. Re-home or re-run intake on them when touched.
 
 <details>
 <summary>Headerless prompts</summary>
 
-- `draft/feature/autolens/lenstwin_epic_surveys/01_pyautolens_pyautogalaxy.md`
-- `draft/feature/autolens/lenstwin_epic_surveys/02_assistant_workspace.md`
 - `draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough.md`
 - `draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough_p2_greeting.md`
 - `draft/docs/autolens_assistant/cosmos_web_ring_guided_walkthrough_p3_front_doors.md`
 - `draft/docs/howtolens/paired_tutorial_review_resume.md`
 - `draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md`
-- `draft/maintenance/autocti/cti_upkeep_epic_report.md`
-- `draft/research/autofit/hpc_campaign_epic_report.md`
-- `draft/research/autofit/hpc_campaign_epic_surveys/carbon.md`
-- `draft/research/autofit/hpc_campaign_epic_surveys/codebase.md`
-- `draft/research/autofit/hpc_campaign_epic_surveys/euclid_hpc.md`
-- `draft/research/autofit/hpc_campaign_epic_surveys/prior_art.md`
-- `draft/research/autofit/search_extensibility_epic_report.md`
-- `draft/research/autofit/search_extensibility_epic_reviews/01_codex_gpt6_astra.md`
-- `draft/research/autofit/search_extensibility_epic_reviews/02_claude_fable_high.md`
-- `draft/research/autofit/search_extensibility_epic_reviews/03_codex_astra_b2_pr3.md`
-- `draft/research/autofit/search_extensibility_epic_reviews/04_codex_astra_a1_pr1675.md`
-- `draft/research/autofit/search_extensibility_epic_reviews/05_codex_astra_a2_a3_a3b_postmerge.md`
-- `draft/research/autofit/search_extensibility_epic_reviews/06_codex_astra_b3_postmerge.md`
-- `draft/research/autofit/search_extensibility_epic_reviews/07_codex_astra_a4_stack_premerge.md`
-- `draft/research/autofit/search_extensibility_epic_surveys/01_search_architecture.md`
-- `draft/research/autofit/search_extensibility_epic_surveys/02_jax_interface.md`
-- `draft/research/autofit/search_extensibility_epic_surveys/03_search_docs.md`
-- `draft/research/autofit/search_extensibility_epic_surveys/04_inference_profiling_infra.md`
-- `draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/01_profiling_inference_layout.md`
-- `draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/02_pulse_insight_contracts.md`
-- `draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/03_eyes_viz_coverage.md`
-- `draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/04_setup_knobs_source.md`
-- `draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/05_brain_conductors_epic_format.md`
-- `draft/research/autolens_profiling/likelihood_lifecycle_epic_surveys/p2b_interferometer_survey_2026_10_25.md`
 
 </details>
 
-127 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+92 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3120,16 +2718,10 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autoarray/adapt_linear_default_flip.md`
 - `draft/feature/autoarray/rectangular_multi_submesh.md`
 - `draft/feature/autofit/model_figures_epic.md`
-- `draft/feature/autofit/results_library_epic_report.md`
 - `draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md`
-- `draft/feature/autogalaxy/ell_comps_joint_disk_constraint.md`
 - `draft/feature/autogalaxy/piemass_potential.md`
-- `draft/feature/autolens/lenstwin_epic_report.md`
-- `draft/feature/autolens/lenstwin_epic_surveys/01_pyautolens_pyautogalaxy.md`
-- `draft/feature/autolens/lenstwin_epic_surveys/02_assistant_workspace.md`
 - `draft/feature/autolens/magnification_maps_visualization.md`
 - `draft/feature/autolens/source_cluster_arc.md`
-- `draft/feature/autolens_jax_joss/autolens_jax_joss_benchmark_repo.md`
 - `draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md`
 - `draft/feature/autolens_profiling/gradient_cost_hazard_on_ral_cpu_value.md`
 - `draft/feature/autolens_workspace/cluster_point_solver_validation_check.md`
@@ -3144,24 +2736,30 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/pyautobroca/broca_communication_documentation_and_workspaces.md`
 - `draft/feature/pyautobroca/broca_communication_pilot.md`
 - `draft/feature/pyautoears/community_organ_birth.md`
-- `draft/feature/pyautoeyes/group_cluster_gallery.md`
-- `draft/feature/pyautoeyes/multi_galaxy_gallery.md`
 - `draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md`
 - `draft/feature/pyautomemory/reading-queue-token-management.md`
 - `draft/feature/pyautoscientist/collaborator_led_pyautoscientist_adoption_pilot.md`
 - `draft/feature/pyautoscientist/scientist_collaborator_validation.md`
-- `draft/feature/pyautoscientist/scientist_minimal_starter.md`
 - `draft/feature/pyautoscientist/scientist_optional_organ_activation.md`
 - `draft/feature/workspaces/model_figures_6_rollout.md`
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_adaptive_zeroed_ring_guard_row_mismatch.md`
 - `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md`
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
-- _… and 87 more_
+- `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`
+- `draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md`
+- `draft/bug/autogalaxy/area_magnification_critical_curve_fragments.md`
+- `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
+- `draft/bug/autogalaxy/wrong_jax_gradient_on_mge_likelihoods_fd.md`
+- `draft/bug/autolens/point_solver_error_bisect_health.md`
+- `draft/bug/autolens/point_source_plot_script_residual_shape_mismatch.md`
+- `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md`
+- `draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md`
+- _… and 52 more_
 
 </details>
 
-67 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+61 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3170,11 +2768,9 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autoarray/edge_zeroed_log_det_cholesky_reuse.md — unknown theme keyword(s): inversion`
 - `draft/feature/autoarray/interferometer_chunked_transform_mapping_matrix.md — unknown theme keyword(s): jax-gpu, vram`
 - `draft/feature/autoarray/interferometer_curvature_preload_phase1.md — unknown theme keyword(s): inversion, likelihood-profiling`
-- `draft/feature/autoarray/interferometer_numba_gate_retune_70.md — unknown theme keyword(s): config`
 - `draft/feature/autoarray/source_clumps_robust_scale.md — unknown theme keyword(s): source-reconstruction`
 - `draft/feature/autofit/certified_solver_batched_guard_c2.md — unknown theme keyword(s): inversion`
 - `draft/feature/autofit/results_library_epic.md — unknown theme keyword(s): hpc, euclid, results, aggregator`
-- `draft/feature/autofit/results_library_epic_report.md — unknown theme keyword(s): results, euclid`
 - `draft/feature/autolens/coolest_pixel_grid_export.md — unknown theme keyword(s): coolest, interop, euclid`
 - `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md — unknown theme keyword(s): euclid, catalogue`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md — unknown theme keyword(s): euclid`
@@ -3193,9 +2789,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md — unknown theme keyword(s): inversion, sparse-operator, correctness`
 - `draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md — unknown theme keyword(s): sparse-operator`
 - `draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md — unknown theme keyword(s): source-reconstruction`
-- `draft/bug/autocti_visualization/render_yml_blocked_until_pyautocti_release.md — unknown theme keyword(s): infrastructure`
 - `draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md — unknown theme keyword(s): jax`
-- `draft/bug/autofit/nautilus_ep_default_optimiser_reads_use_jax_unguarded.md — unknown theme keyword(s): nautilus`
 - `draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md — unknown theme keyword(s): samples, factor-graph`
 - `draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md — unknown theme keyword(s): jax, nautilus`
 - `draft/bug/autogalaxy/aggregator_reload_drops_sparse_operator.md — unknown theme keyword(s): sparse-operator, aggregator`
@@ -3207,9 +2801,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md — unknown theme keyword(s): jax`
 - `draft/bug/autolens_profiling/stale_auto_simulated_cluster_dataset.md — unknown theme keyword(s): datasets`
 - `draft/bug/autolens_workspace/start_here_multistart_compile_time.md — unknown theme keyword(s): jax, compile-time, first-contact`
-- `draft/bug/euclid/bundle_sersic_products_read_output_dir_not_sed_output_dir.md — unknown theme keyword(s): euclid, catalogue`
 - `draft/bug/euclid/drawer_pix_initializer_exception_flake.md — unknown theme keyword(s): euclid, ci, source-reconstruction`
-- `draft/bug/euclid/euclid_dr1_flip_rgb_jpg_upside_down.md — unknown theme keyword(s): euclid, hpc`
 - `draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md — unknown theme keyword(s): euclid, jax, hpc`
 - `draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md — unknown theme keyword(s): euclid, jax, latent`
 - `draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md — unknown theme keyword(s): euclid, hpc, catalogue`

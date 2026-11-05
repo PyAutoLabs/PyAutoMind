@@ -123,3 +123,10 @@ text. Canonical wording: `complete/2026/09/model-figures-rollout-lens.md`.
 Any **tutorial prose** written or revised in this rollout stays Opus-or-above
 per the tutorial-prose split in `PyAutoBrain/skills/WORKFLOW.md`. The figure
 call itself is mechanical and delegates normally.
+
+## Re-scoped 2026-11-05 — what is left (draft-queue sweep)
+
+- **Done:** (a) PyAutoFit#1621, autofit_workspace#154, HowToFit#52; (b) record `complete/2026/09/model-figures-rollout-lens.md`; (c) partly.
+- **Remaining:** (c) the HowToGalaxy leg (untouched); (d) and (e) in full.
+
+_Evidence from the 2026-11-05 read-only sweep (Mind ledger + GitHub search); remaining items are the live scope of this prompt._

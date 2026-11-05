@@ -249,3 +249,10 @@ phase: phase4 assistant distribution of /feedback. Phases5–6 remain unissued.
 Production witness: Ears board run37137496430 succeeded; published snapshot
 generated 2026-10-03T16:37:04.144623+00:00 contains 13 conversations. Discussion
 hub receipt is complete. Only euclid_assistant remains unavailable.
+
+## Re-scoped 2026-11-05 — what is left (draft-queue sweep)
+
+- **Done:** Bootstrap and feedback slices: records `complete/2026/10/ears-bootstrap.md`, `community-feedback.md` (both say the programme is not complete).
+- **Remaining:** The remaining programme items those records list as open.
+
+_Evidence from the 2026-11-05 read-only sweep (Mind ledger + GitHub search); remaining items are the live scope of this prompt._

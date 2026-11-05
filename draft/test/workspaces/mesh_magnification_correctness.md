@@ -88,3 +88,10 @@ The Delaunay defect the same audit *did* establish was fixed separately —
 PR #525 merged 2026-09-05): `areas_for_magnification` now returns barycentric dual areas.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-08-19 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/483da28c-8c96-4c83-ad87-a43448ca2164/scratchpad/source_cluster_phases/phase04_mesh_magnification_correctness.md -->
+
+## Re-scoped 2026-11-05 — what is left (draft-queue sweep)
+
+- **Done:** 4a/4b/4e: records `complete/2026/10/mesh-magnification-areas.md`, `mesh-magnification-knn-areas.md`, `pixelization-mesh-mag-docs.md`.
+- **Remaining:** 4c flux-ratio μ and 4d recovery sweep.
+
+_Evidence from the 2026-11-05 read-only sweep (Mind ledger + GitHub search); remaining items are the live scope of this prompt._

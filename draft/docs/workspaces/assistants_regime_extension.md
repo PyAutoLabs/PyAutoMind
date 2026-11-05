@@ -79,3 +79,10 @@ cluster_regime_narrative, autogalaxy packages. The workspace/docs core
 shipped 2026-07-25 (autolens_workspace#346 + companions), so the
 autolens_assistant leg is now unblocked; the autogalaxy-side leg still
 waits on the autogalaxy packages.
+
+## Re-scoped 2026-11-05 — what is left (draft-queue sweep)
+
+- **Done:** autolens leg: autolens_assistant#91.
+- **Remaining:** The autogalaxy_assistant leg (no multi_galaxy in its wiki/).
+
+_Evidence from the 2026-11-05 read-only sweep (Mind ledger + GitHub search); remaining items are the live scope of this prompt._
