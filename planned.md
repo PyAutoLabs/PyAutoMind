@@ -12,6 +12,8 @@
 - [interferometer-primary-beam-persistence-mirror](#interferometer-primary-beam-persistence-mirror)
 - [point-plots-yaml-keys-assistant](#point-plots-yaml-keys-assistant)
 - [registry-reconcile-app-token](#registry-reconcile-app-token)
+- [tidy-skip-claimed-branches](#tidy-skip-claimed-branches)
+- [clean-slate-grouped-layout](#clean-slate-grouped-layout)
 
 <!-- toc:end -->
 
@@ -137,4 +139,22 @@
 - summary: in .github/workflows/registry_reconcile.yml replace `GH_TOKEN: ${{ github.token }}` with an `actions/create-github-app-token@v3` step (client-id vars.APP_CLIENT_ID, private-key secrets.APP_PRIVATE_KEY, owner PyAutoLabs, no `repositories:` = owner-wide read, permission-issues: read, permission-pull-requests: read), minted right before the run step; verify by workflow_dispatch that `lifecycle.py issues` reads ECLIPSE_lens_catalogue#4 and the run goes green. Never drop the r2-pages-function-access row.
 - affected-repos:
   - PyAutoMind
+
+## clean-slate-grouped-layout
+- prompt: draft/bug/pyautobrain/clean_slate_packaging_grouped_layout.md
+- status: planned — human said "continue" 2026-11-05; blocked only by the repo claim
+- blocked-by: PyAutoBrain claimed by `cti-release-train-wiring` (paused with unpushed WIP; start_dev when it releases)
+- branch: feature/clean-slate-grouped-layout
+- summary: clean_slate.sh enumerates `*/` at the root and misses every grouped checkout (all scopes) — iterate the shared repo resolver; diagnosis in prompt
+- affected-repos:
+  - PyAutoBrain
+
+## tidy-skip-claimed-branches
+- prompt: draft/bug/pyautobrain/hygiene_tidy_recommends_deleting_claimed_branches.md
+- status: planned — human said "continue" 2026-11-05; blocked only by the repo claim
+- blocked-by: PyAutoBrain claimed by `cti-release-train-wiring` (paused with unpushed WIP; start_dev when it releases)
+- branch: feature/tidy-skip-claimed-branches
+- summary: hygiene tidy skips only the canonical HEAD branch — also skip worktree-held and active.md-claimed branches; diagnosis in prompt
+- affected-repos:
+  - PyAutoBrain
 
