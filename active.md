@@ -102,3 +102,17 @@
 - epic: autonomous-orchestrators (phase 4c of 4a–4c)
 - pre-check: open shadow tick on system python3.10, minimal env — 6 notify proposals, 0 spawns (2026-11-04)
 - tier: judge — merge mode: human /prm
+
+## numba-num-threads-pin-delaunay-nn
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/519
+- issued: 2026-11-05
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/numba-num-threads-pin-delaunay-nn
+- repos:
+  - autolens_profiling: feature/numba-num-threads-pin-delaunay-nn
+- prompt: active/numba_num_threads_pin_delaunay_nn.md
+- source: PyAutoPulse task tasks/numba_num_threads_pin_and_delaunay_nn_remeasure.md (PyAutoPulse#90), phase 1 (pin); phase 2 (RAL re-measure after the release carrying PyAutoArray#677) to be filed as a draft
+- claim-override: HUMAN 2026-11-05 overrode gradient-correctness-sweep's autolens_profiling claim ("override the claim, start now — different files"); #517 is paused on RAL 413991 and touches different files
+- design: cell-local pin (human 2026-11-05) in scripts/imaging/delaunay/likelihood_{runtime,breakdown}_numba.py --mesh-class delaunay_nn; force the Nautilus worker route (patch numba_util.parallel_kernel_allowed -> False, so the serial Sibson build runs) + NUMBA_NUM_THREADS=1 backstop; record the route; laptop witness compares in-process patch vs a real multiprocessing fork child
+- tier: judge — merge mode: human /prm
