@@ -12,8 +12,8 @@
 - [interferometer-primary-beam-persistence-mirror](#interferometer-primary-beam-persistence-mirror)
 - [point-plots-yaml-keys-assistant](#point-plots-yaml-keys-assistant)
 - [registry-reconcile-app-token](#registry-reconcile-app-token)
-- [tidy-skip-claimed-branches](#tidy-skip-claimed-branches)
 - [clean-slate-grouped-layout](#clean-slate-grouped-layout)
+- [tidy-skip-claimed-branches](#tidy-skip-claimed-branches)
 
 <!-- toc:end -->
 
