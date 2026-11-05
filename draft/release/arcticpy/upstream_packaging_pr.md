@@ -44,7 +44,9 @@ release.
 Opening a PR on a third-party repository is outward-facing, so it needs explicit
 human approval before it is sent.
 
-## Prepared 2026-11-05 (NOT sent; awaiting human go-ahead to fork + open)
+## OPENED 2026-11-05: https://github.com/jkeger/arctic/pull/73 (fork Jammy2211/arctic, human-approved). Next: human sends NOTE_TO_MASSEY.md, then waits for the upstream merge and the 2.7 PyPI release, which unblocks 2b.
+
+### Prep notes
 
 - Local clone `~/Code/PyAutoLabs-wt/arcticpy-upstream-packaging/arctic`, branch
   `packaging-modern-numpy-cython3`, commit 53534d0 (pyproject.toml + 2 lines of setup.py, CRLF kept).

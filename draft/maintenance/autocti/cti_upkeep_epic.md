@@ -217,7 +217,7 @@ Library first; one issue per repo per phase; each phase routes through
 
 - Phase 0: 0b DONE 2026-11-04 — `complete/2026/11/cti-likelihood-pins.md` (autocti_workspace_test#25)
 - Phase 1: DONE 2026-11-05 — `complete/2026/11/cti-release-train-wiring.md` (PyAutoHands#332; Nerves#210, Hands#333, Brain#585, Heart#323, Mind#535, autocti_workspace#40; TestPyPI rehearsal run 42011123173 passed, 6 wheels). Scope deferred to p3/5: Heart workspace-validation/release-integrate rows, run_all, docs-build mapping. New phase-3 member: `draft/bug/autocti/fits_fit_missing_output_dir_under_fast_plots.md`. First modern autocti PyPI release rides the next lockstep release.
-- Phase 2 (filed 2026-11-05): 2a `draft/release/arcticpy/upstream_packaging_pr.md` (outward-facing, human go-ahead needed);
+- Phase 2 (filed 2026-11-05): 2a `draft/release/arcticpy/upstream_packaging_pr.md` (PR jkeger/arctic#73 OPEN 2026-11-05; human asks Massey for 2.7);
   2b `draft/maintenance/pyautoheart/arcticpy_pin_bump_after_upstream_release.md` (blocked by the upstream release);
   2c `active/arcticpy_lazy_import.md` (PyAutoCTI#117, IN DEV 2026-11-05) and
   `draft/docs/autocti/installation_docs_arcticpy_recipe.md` (blocked by 2b)
