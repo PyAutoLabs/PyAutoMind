@@ -91,7 +91,6 @@
 - epic: autonomous-orchestrators (pilot 4c follow-up)
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary (non-PASS Witness → human /prm)
 
-
 ## autonomous-orchestrators-p4c
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/574
 - issued: 2026-11-04

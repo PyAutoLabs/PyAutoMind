@@ -129,3 +129,10 @@ paragraph; the assessment report is attached to the issue with a recommendation.
 Where it came from: autolens_workspace#521 / PR #522 review, 2026-09-02.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-09-02 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/16f51d23-06be-4ec5-8b46-e9540276c31e/scratchpad/intake_adapt_image_is_snr_map.md -->
+
+## Re-scoped 2026-11-05 — what is left (draft-queue sweep)
+
+- **Done:** Library docstrings: PyAutoGalaxy#644 (merged 2026-10-02).
+- **Remaining:** Workspace prose still saying "estimate of the": autolens_workspace `slam_start_here.py`, `multi_galaxy/.../adaptive.py`, subhalo `slam_source_pixelized.py`.
+
+_Evidence from the 2026-11-05 read-only sweep (Mind ledger + GitHub search); remaining items are the live scope of this prompt._

@@ -54,3 +54,10 @@ What to measure (dense `"fft"` route vs `"matrix_free"`, unconstrained and posit
 Diagnostics on the inversion: `inversion.operator` (sparse `M`, `curvature_matvec`), `regularization_matrix_sparse`, `positive_result`. The dense route cannot run above ~100²; a matrix-free-only row there is expected, not a failure.
 
 Decision rule the note should produce for the assistant: the mesh size (and visibility count) above which `matrix_free` beats `fft` on time and memory, and whether the SLQ evidence error is below the sampler's resolution there. Workspace example (5c) is **dropped until this verdict**; the Settings docs in `autoarray/settings.py` are the only user-facing text.
+
+## Re-scoped 2026-11-05 — what is left (draft-queue sweep)
+
+- **Done:** 5a: record `complete/2026/10/matrix-free-interferometer-wiring.md`. 5b measurements ran as RAL 413191 inside p2b: autolens_profiling#483 (merged 2026-10-29), 6 of 7 matrix-free rows (35² on 4 instruments + alma 64²/128²); alma 192² timed out and was dropped by human ruling (record `likelihood-lifecycle-p2b-interferometer.md`).
+- **Remaining:** A 5b results note with a verdict / decision rules, and the real-dataset table. 5c stays dropped.
+
+_Evidence from the 2026-11-05 read-only sweep (Mind ledger + GitHub search); remaining items are the live scope of this prompt._

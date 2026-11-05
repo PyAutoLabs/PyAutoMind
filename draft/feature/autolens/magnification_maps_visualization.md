@@ -65,3 +65,10 @@ Work:
 
 8a SHIPPED 2026-11-02 (record `complete/2026/11/magnification-maps-image-plane.md`; Galaxy#690, Lens#815, ws#614) → 8b SHIPPED 2026-11-02 (record `complete/2026/11/magnification-maps-source-plane.md`; Array#674, Galaxy#691, Lens#816, ws#615) →
 8c SHIPPED 2026-11-02 (record `complete/2026/11/magnification-maps-uncertainty.md`; Galaxy#693, Lens#817, ws#616) → 8d `magnification_maps_8d_wiring_pretty.md`. One at a time via /start_dev.
+
+## Re-scoped 2026-11-05 — what is left (draft-queue sweep)
+
+- **Done:** 8a (PyAutoGalaxy#690, PyAutoLens#815, autolens_workspace#614), 8b (PyAutoArray#674, PyAutoGalaxy#691, PyAutoLens#816), 8c (PyAutoGalaxy#693, PyAutoLens#817, autolens_workspace#616).
+- **Remaining:** 8d (wiring + "pretty" pass) only, already issued as `active/magnification_maps_8d_wiring_pretty.md`. Close this draft when 8d ships.
+
+_Evidence from the 2026-11-05 read-only sweep (Mind ledger + GitHub search); remaining items are the live scope of this prompt._

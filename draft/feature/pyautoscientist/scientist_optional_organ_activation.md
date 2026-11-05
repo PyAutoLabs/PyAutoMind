@@ -81,3 +81,10 @@ independent-organ acceptance is still unproven: select an adopter/synthetic host
 destination and exercise publication through connection/resume when appropriate.
 Record-preserving upgrades/recovery and actual collaborator acceptance remain their
 separate programme milestones; no collaborator access or live deployment is implied.
+
+## Re-scoped 2026-11-05 — what is left (draft-queue sweep)
+
+- **Done:** Discovery, setup and publication slices: PyAutoScientist#68, PyAutoBroca#17, #19.
+- **Remaining:** Actual activation, upgrade and rollback.
+
+_Evidence from the 2026-11-05 read-only sweep (Mind ledger + GitHub search); remaining items are the live scope of this prompt._

@@ -56,3 +56,10 @@ cluster scale; the Eyes review loop is where that gets caught and routed back as
   cluster figures after its next render; the human reviews them through `/eyes`.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-10-18 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/9383279d-b99b-40f7-90a8-9bab7d97d964/scratchpad/intake_eyes_cluster_group.md -->
+
+## Re-scoped 2026-11-05 — what is left (draft-queue sweep)
+
+- **Done:** Cluster producers and cluster point figures render: autolens_visualization#5, #14, #15 (merged 2026-10-21/22).
+- **Remaining:** The A2744 zooms and the `viz_manifest` cluster rows the Witness names — nothing else. This is a high-priority dashboard pick; size it against this remainder, not the original scope.
+
+_Evidence from the 2026-11-05 read-only sweep (Mind ledger + GitHub search); remaining items are the live scope of this prompt._

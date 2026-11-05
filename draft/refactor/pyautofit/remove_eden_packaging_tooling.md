@@ -67,3 +67,10 @@ tooling is orphaned.
 - Ship library-first per the workflow; no downstream workspace impact expected.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-07-13 from user-intake; re-homed triage/ -> refactor/pyautofit/ and Target corrected PyAutoConf -> PyAutoFit by hand (classifier low-confidence) -->
+
+## Re-scoped 2026-11-05 — what is left (draft-queue sweep)
+
+- **Done:** The eden module is gone from PyAutoFit.
+- **Remaining:** Delete `eden.yaml` from PyAutoFit main.
+
+_Evidence from the 2026-11-05 read-only sweep (Mind ledger + GitHub search); remaining items are the live scope of this prompt._

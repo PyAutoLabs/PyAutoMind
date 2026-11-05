@@ -80,3 +80,10 @@ visualizer, so model-fit output never uses it.
   at cluster scale.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-10-18 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/9383279d-b99b-40f7-90a8-9bab7d97d964/scratchpad/intake_cluster_fit_visualizer.md -->
+
+## Re-scoped 2026-11-05 — what is left (draft-queue sweep)
+
+- **Done:** Multi-source cluster fit.png and fit_per_image.png written in a real search.fit: PyAutoLens#794, record `complete/2026/10/cluster-point-figures.md`.
+- **Remaining:** The Witness's `cluster_fit_overlay.png`; the defaults audit; Include2D. (Per-system zooms were dropped by design.)
+
+_Evidence from the 2026-11-05 read-only sweep (Mind ledger + GitHub search); remaining items are the live scope of this prompt._

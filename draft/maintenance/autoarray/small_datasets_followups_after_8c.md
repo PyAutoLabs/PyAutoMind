@@ -27,3 +27,10 @@ both gated on releases that do not exist yet:
    cap in PyAutoArray#529 resolves to the same `(16, 16)` and makes them redundant. Revert
    the four guards (and regenerate the notebooks) once the PyAutoArray release with the cap
    is what the HowTo smoke gates install.
+
+## Re-scoped 2026-11-05 — what is left (draft-queue sweep)
+
+- **Done:** PyAutoArray floor bumped to `autonerves>2026.10.4.1`.
+- **Remaining:** Revert the HowToLens ch3 tutorial_1/2 mesh_shape guards; verify/remove the #529 fallback.
+
+_Evidence from the 2026-11-05 read-only sweep (Mind ledger + GitHub search); remaining items are the live scope of this prompt._

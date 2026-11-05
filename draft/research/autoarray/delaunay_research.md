@@ -466,3 +466,10 @@ Phase 2 (B):
   closed 2026-05-11)
 
 <!-- formalised retroactively by the Intake (Conception) Agent on 2026-07-08 -->
+
+## Re-scoped 2026-11-05 — what is left (draft-queue sweep)
+
+- **Done:** kNN option failed (PyAutoArray#317/#318); option A built and shelved (`complete/archive/shelved/delaunay_jax_find_simplex_split.md`); frozen-tables gradient shipped (`complete/2026/07/delaunay-frozen-tables-gradient.md`).
+- **Remaining:** Option B (batched callback) only — consider re-scoping to that or closing.
+
+_Evidence from the 2026-11-05 read-only sweep (Mind ledger + GitHub search); remaining items are the live scope of this prompt._

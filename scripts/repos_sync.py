@@ -129,6 +129,7 @@ import os
 import re
 import subprocess
 import sys
+from dataclasses import dataclass
 from pathlib import Path
 
 import smoke_bootstrap_sync as smoke_sync
@@ -1010,23 +1011,58 @@ def check_labels(root, repos):
 # reported as drift.
 
 
+# The opt-in AGENTS.md blocks: one declaration per generated surface drives
+# both the drift check and the --write leg. Opt-in means a repo that has not
+# added the markers is skipped (never a problem), an absent AGENTS.md is
+# skipped, and a present block must equal the generator byte-for-byte. The
+# deliverable and filing blocks are NOT here: they self-install and report a
+# missing block, so their contract differs.
+@dataclass(frozen=True)
+class OptInBlock:
+    noun: str  # as the stale message names it: "'<repo>': <noun> block is stale"
+    begin: str
+    end: str
+    organs_only: bool = False
+
+    def targets(self, root, repos):
+        for name, repo in repos.items():
+            if self.organs_only and repo["category"] != "organ":
+                continue
+            yield name, repo_checkout(root, name) / "AGENTS.md"
+
+    def check(self, root, repos, expected):
+        problems = []
+        for name, agents in self.targets(root, repos):
+            if not agents.exists():
+                continue  # not checked out, or no AGENTS.md of its own
+            text = agents.read_text()
+            if self.begin not in text or self.end not in text:
+                continue  # opt-in: the repo has not added these markers yet
+            if extract_block(text, self.begin, self.end) != expected:
+                problems.append(
+                    f"'{name}': {self.noun} block is stale — run "
+                    f"`python3 PyAutoMind/scripts/repos_sync.py --write`"
+                )
+        return problems
+
+    def write(self, path, content):
+        write_block(path, content, self.begin, self.end, required=False)
+
+
+MAP_BLOCK = OptInBlock("organism-map", MAP_BEGIN, MAP_END, organs_only=True)
+# The history policy is universal — written into every repo (not just organs)
+# that has added the markers. Single source (policy/never_rewrite_history.md)
+# + this check is what lets the safety text live inline in every repo without
+# drifting.
+HISTORY_BLOCK = OptInBlock("never-rewrite-history", HISTORY_BEGIN, HISTORY_END)
+# Same contract as the history block. Opt-in, not mandatory, so a repo that has
+# not added the markers is skipped rather than failing a session (or a CI leg)
+# that cannot see it — see the module comment on REMOTE_SESSIONS_FILE.
+REMOTE_BLOCK = OptInBlock("remote-session", REMOTE_BEGIN, REMOTE_END)
+
+
 def check_map_blocks(root, repos, smap):
-    problems = []
-    for name, repo in repos.items():
-        if repo["category"] != "organ":
-            continue
-        agents = repo_checkout(root, name) / "AGENTS.md"
-        if not agents.exists():
-            continue  # not checked out, or an organ without its own AGENTS.md
-        text = agents.read_text()
-        if MAP_BEGIN not in text or MAP_END not in text:
-            continue  # opt-in: an organ that has not added the map markers
-        if extract_block(text, MAP_BEGIN, MAP_END) != smap:
-            problems.append(
-                f"'{name}': organism-map block is stale — run "
-                f"`python3 PyAutoMind/scripts/repos_sync.py --write`"
-            )
-    return problems
+    return MAP_BLOCK.check(root, repos, smap)
 
 
 # The two `required=True` targets of --write — the workspace-root AGENTS.md
@@ -1072,48 +1108,11 @@ def check_owner_map(root, categories, repos):
 
 
 def check_history_blocks(root, repos, hpol):
-    """Every AGENTS.md that opts into the repos_sync:history markers must carry
-    the canonical policy verbatim. Single source (policy/never_rewrite_history.md)
-    + this check is what lets the safety text live inline in every repo without
-    drifting."""
-    problems = []
-    for name in repos:
-        agents = repo_checkout(root, name) / "AGENTS.md"
-        if not agents.exists():
-            continue
-        text = agents.read_text()
-        if HISTORY_BEGIN not in text or HISTORY_END not in text:
-            continue  # opt-in: repo hasn't added the history markers yet
-        if extract_block(text, HISTORY_BEGIN, HISTORY_END) != hpol:
-            problems.append(
-                f"'{name}': never-rewrite-history block is stale — run "
-                f"`python3 PyAutoMind/scripts/repos_sync.py --write`"
-            )
-    return problems
+    return HISTORY_BLOCK.check(root, repos, hpol)
 
 
 def check_remote_blocks(root, repos, remote):
-    """Same contract as the history block: opt in with the markers, and the copy
-    must then be the canonical text verbatim.
-
-    Opt-in, not mandatory, so a repo that has not added the markers is skipped
-    rather than failing a session (or a CI leg) that cannot see it. That is also
-    the honest state of this rollout — see the module comment on
-    REMOTE_SESSIONS_FILE."""
-    problems = []
-    for name in repos:
-        agents = repo_checkout(root, name) / "AGENTS.md"
-        if not agents.exists():
-            continue
-        text = agents.read_text()
-        if REMOTE_BEGIN not in text or REMOTE_END not in text:
-            continue  # opt-in: repo hasn't added the remote-session markers yet
-        if extract_block(text, REMOTE_BEGIN, REMOTE_END) != remote:
-            problems.append(
-                f"'{name}': remote-session block is stale — run "
-                f"`python3 PyAutoMind/scripts/repos_sync.py --write`"
-            )
-    return problems
+    return REMOTE_BLOCK.check(root, repos, remote)
 
 
 def check_deliverable_blocks(root, repos, policy):
@@ -3068,16 +3067,8 @@ def main():
             owner_map(categories, repos),
             required=True,
         )
-        for name, repo in repos.items():
-            if repo["category"] != "organ":
-                continue
-            write_block(
-                repo_checkout(root, name) / "AGENTS.md",
-                smap,
-                MAP_BEGIN,
-                MAP_END,
-                required=False,
-            )
+        for _, agents in MAP_BLOCK.targets(root, repos):
+            MAP_BLOCK.write(agents, smap)
         # The history policy is universal — written into every repo (not just
         # organs) that has added the markers.
         #
@@ -3088,22 +3079,11 @@ def main():
         # each repo to opt in is how the long tail stays unprotected.)
         insert_deliverable_markers(root, repos)
         for name in repos:
+            agents = repo_checkout(root, name) / "AGENTS.md"
+            HISTORY_BLOCK.write(agents, hpol)
+            REMOTE_BLOCK.write(agents, remote)
             write_block(
-                repo_checkout(root, name) / "AGENTS.md",
-                hpol,
-                HISTORY_BEGIN,
-                HISTORY_END,
-                required=False,
-            )
-            write_block(
-                repo_checkout(root, name) / "AGENTS.md",
-                remote,
-                REMOTE_BEGIN,
-                REMOTE_END,
-                required=False,
-            )
-            write_block(
-                repo_checkout(root, name) / "AGENTS.md",
+                agents,
                 deliverable,
                 DELIVERABLE_BEGIN,
                 DELIVERABLE_END,

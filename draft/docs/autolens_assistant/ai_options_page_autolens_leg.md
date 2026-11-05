@@ -34,3 +34,10 @@ PyAutoScientist#87 (record `complete/2026/10/assistant-ai-options-page.md`) ship
 ## Done when
 
 README shorter and linking to the shared page; listed legacy gone; wiki-currency and boundary CI green.
+
+## Re-scoped 2026-11-05 — what is left (draft-queue sweep)
+
+- **Done:** README rewrite: autolens_assistant#163 (record `complete/2026/10/assistant-readmes-human-style.md`).
+- **Remaining:** The legacy deletions (`opencode_cli` refs, `docs/archive/*`) and the AI_OPTIONS.md stub.
+
+_Evidence from the 2026-11-05 read-only sweep (Mind ledger + GitHub search); remaining items are the live scope of this prompt._

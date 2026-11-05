@@ -26,3 +26,10 @@ Depends on phases 1–2.
 
 HowToLens tutorial 2 shows the vendored schematic; README/first_prompts open with it; website
 hand-off file written; PRs open (HowToLens, autolens_assistant).
+
+## Re-scoped 2026-11-05 — what is left (draft-queue sweep)
+
+- **Done:** HowToLens `tutorial_2_ray_tracing.py` now uses strong_lens_schematic.png (imgur link gone); autolens_assistant README opens with the schematic.
+- **Remaining:** The website hand-off (`docs/archive/website_cosmos_web_ring_section.md` 404s) and a re-check of first_prompts.md.
+
+_Evidence from the 2026-11-05 read-only sweep (Mind ledger + GitHub search); remaining items are the live scope of this prompt._

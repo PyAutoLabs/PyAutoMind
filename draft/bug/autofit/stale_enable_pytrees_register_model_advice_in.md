@@ -17,3 +17,10 @@ Unattended: ready
 autofit/non_linear/search/mcmc/blackjax/nuts/search.py:270 and autofit/non_linear/search/mcmc/blackjax/smc/search.py:328 tell users to call enable_pytrees() / register_model(model), and the workspace script scripts/searches/mcmc.py lines 244-247 and 283-286 do the same in prose and code. Neither function is exposed on the af namespace and Fitness.__init__ (autofit/non_linear/fitness.py:261-265) already calls them internally; scripts/searches/mle.py:232-235 in the same workspace says the opposite. NUTS was verified to run without them on 2026-09-10. Fix the two error strings and the mcmc.py prose (the workspace half lands in autofit_workspace).
 
 <!-- formalised by the Intake (Conception) Agent on 2026-09-10 from user-intake -->
+
+## Re-scoped 2026-11-05 — what is left (draft-queue sweep)
+
+- **Done:** Library advice removed: PyAutoFit now has `enable_pytrees` only in jax/pytrees.py, jax/__init__.py and fitness.py, not in the blackjax nuts/smc searches (commit not pinned).
+- **Remaining:** autofit_workspace `scripts/searches/mcmc.py` (and its notebook) still teaches `enable_pytrees()` / `register_model` — fix the workspace leg.
+
+_Evidence from the 2026-11-05 read-only sweep (Mind ledger + GitHub search); remaining items are the live scope of this prompt._

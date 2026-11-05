@@ -77,3 +77,10 @@ This is the next Source & Cluster arc step after extraction of its old phase-1
 remainder and phase-2 profiling into cluster-pointsolver-speed. No blanket
 PointSolver-health gate applies. Re-audit the historical findings against current
 source and slice this too-large prompt through start_dev before issuing one task.
+
+## Re-scoped 2026-11-05 — what is left (draft-queue sweep)
+
+- **Done:** 3a audit (autolens_profiling#364), 3b cap fix (PyAutoGalaxy#646), cluster dispatch (PyAutoLens#808); records in complete/2026/10/.
+- **Remaining:** The rest of phase 3 the ledger deferred: seed-coverage robustness and engine dedupe.
+
+_Evidence from the 2026-11-05 read-only sweep (Mind ledger + GitHub search); remaining items are the live scope of this prompt._

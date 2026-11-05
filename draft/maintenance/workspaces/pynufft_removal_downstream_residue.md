@@ -205,3 +205,10 @@ agent, so this routed through the Feature Agent; recorded as a follow-up.
    data plus a differing `SMALLDAT` header stamp.
 3. **@autolens_workspace_developer has no test CI** (one Copilot workflow),
    which is why the phase-1 break rotted unnoticed and why #129 merged unchecked.
+
+## Re-scoped 2026-11-05 — what is left (draft-queue sweep)
+
+- **Done:** Phases 1–3: `complete/2026/08/pynufft-removal-residue-phase-{1,2,3}.md`.
+- **Remaining:** autogalaxy_workspace markdown only: `pynufft` still in `markdown/interferometer/simulator.md` and `start_here.md`.
+
+_Evidence from the 2026-11-05 read-only sweep (Mind ledger + GitHub search); remaining items are the live scope of this prompt._
