@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2134 records across 11 buckets.
+2136 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -131,6 +131,7 @@ markers; everything below GENERATED is rebuilt.
 - [autonomous-orchestrators-p4a](2026/11/autonomous-orchestrators-p4a.md) — phase 4a of 4a–4c; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [autonomous-orchestrators-p4b](2026/11/autonomous-orchestrators-p4b.md) — phase 4b of 4a–4c; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [batch-watch-live-view](2026/11/batch-watch-live-view.md) — pilot 4c follow-up; issue PyAutoBrain#575
+- [brain-hygiene-cleanup-bugs](2026/11/brain-hygiene-cleanup-bugs.md)
 - [chapter2-continuation](2026/11/chapter2-continuation.md) — All continuation scope merged: Tutorials 5 and 6, optional speed and runnable model_centred prior passing, sum…
 - [cloud-validation-rehearsal-clock-skew](2026/11/cloud-validation-rehearsal-clock-skew.md)
 - [cti-likelihood-pins](2026/11/cti-likelihood-pins.md) — cti-upkeep phase 0b
@@ -168,6 +169,7 @@ markers; everything below GENERATED is rebuilt.
 - [one-line-auto-simulate-helper](2026/11/one-line-auto-simulate-helper.md)
 - [rectangular-gradient-rtu-sparse](2026/11/rectangular-gradient-rtu-sparse.md) — the filed symptom (|g| ~2e9 on the imaging/rectangular/hst fiducial, RTU all backends, Bilinear CPU sparse) sp…
 - [rectangular-mapper-bilinear-row-weights](2026/11/rectangular-mapper-bilinear-row-weights.md) — - **Retired as already-fixed** by the gradient-correctness sweep (autolens_profiling#517, item 12). The draft …
+- [registry-reconcile-app-token](2026/11/registry-reconcile-app-token.md)
 - [results-library-p2-completeness](2026/11/results-library-p2-completeness.md) — phase 2; ledger draft/feature/autofit/results_library_epic.md
 - [results-library-p3-exports](2026/11/results-library-p3-exports.md) — phase 3; ledger draft/feature/autofit/results_library_epic.md
 - [results-library-p4-package](2026/11/results-library-p4-package.md) — phase 4; ledger draft/feature/autofit/results_library_epic.md

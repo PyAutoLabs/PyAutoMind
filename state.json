@@ -3,22 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 10 in flight",
-  "updated": "2026-11-05T12:33:49Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
+  "updated": "2026-11-05T12:34:17Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "clean_slate.sh --packaging silently finds nothing on the grouped repo layout \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/587",
-      "prompt": "Use the start-dev skill. active/clean_slate_packaging_grouped_layout.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Mind Registry Reconcile red daily: workflow token cannot read a private-repo issue \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/pull/538",
-      "prompt": "Use the start-dev skill. active/registry_reconcile_private_repo_issue_404.md"
-    },
     {
       "severity": "yellow",
       "text": "Issued: 2026-11-02 \u2014 workspace-shipped, awaiting-merge (judge \u2192 human /prm; wiki-currency waits on a PyAutoFit release)",
@@ -126,6 +114,18 @@
       "text": "pick: Cache `autonerves` config parsing \u2014 308 YAML files parsed per script run",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/autonerves/config_yaml_parse_cache.md",
       "prompt": "Use the start-dev skill. draft/refactor/autonerves/config_yaml_parse_cache.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md",
+      "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md",
+      "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md"
     }
   ]
 }

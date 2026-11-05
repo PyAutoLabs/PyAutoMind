@@ -1,3 +1,13 @@
+Two hygiene remedies that disagreed with the scan recommending them, fixed in PyAutoBrain#587 (merged 2026-11-05):
+- `clean_slate.sh` enumerated `*/` at the workspace root and saw none of the grouped checkouts (every scope a silent
+  no-op); it now iterates the shared resolver (`pyauto_repo_list`), matches name-keyed lists on the basename, and exits 1
+  when nothing resolves.
+- `hygiene tidy` spared only the canonical HEAD, so zero-commit task branches in their own worktrees read merged=yes and
+  were recommended for straight delete; it now skips worktree-held and active.md-claimed branches. Live tidy 25 → 15.
+4 regression tests (each fails on the old code); 142 related tests pass; tenant firewall OK.
+
+## Original prompt
+
 # clean_slate.sh --packaging silently finds nothing on the grouped repo layout
 
 Type: bug
