@@ -7,7 +7,6 @@
 - repos:
   - PyAutoBrain: feature/brain-hygiene-cleanup-bugs
 - prompt: active/clean_slate_packaging_grouped_layout.md
-- prompt: active/hygiene_tidy_recommends_deleting_claimed_branches.md
 - tier: judge — merge mode: human /prm
 
 ## registry-reconcile-app-token
