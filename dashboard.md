@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 21 |
-| [In flight](#in-flight) | 8 |
+| [In flight](#in-flight) | 9 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 298 |
+| [Backlog](#backlog) | 297 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -23,15 +23,7 @@
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 20
-
-<details><summary>📋 <a href="draft/bug/autoarray/numba_parallel_kernels_gnu_openmp_kill_forked_search_workers.md">numba <code>parallel=True</code> kernels (Sibson, direct_conv) pick the GNU OpenMP threading layer…</a> — autoarray · small · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autoarray/numba_parallel_kernels_gnu_openmp_kill_forked_search_workers.md
-```
-
-</details>
+**Highest priority** (filed as `high`) — showing 12 of 19
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -121,7 +113,15 @@ Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visua
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 93
+<details><summary>📋 <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> — euclid · large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md
+```
+
+</details>
+
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 92
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -1152,6 +1152,14 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
+<details><summary>📋 <a href="active/numba_parallel_kernels_gnu_openmp_kill_forked_search_workers.md">numba <code>parallel=True</code> kernels (Sibson, direct_conv) pick the GNU OpenMP threading layer…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/676">issue #676</a> — issued 2026-11-05 — library-dev</summary>
+
+```
+Use the start-dev skill. active/numba_parallel_kernels_gnu_openmp_kill_forked_search_workers.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/r2_pages_function_access.md">ECLIPSE site: serve R2 lens files through a Pages Function behind Cloudflare…</a> — issued 2026-10-29</summary>
 
 ```
@@ -1259,7 +1267,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 288 · local-dev 8
+Lanes: any 287 · local-dev 8
 
 <a id="human-review"></a>
 <details>
@@ -1310,15 +1318,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>bug</b> — 65</summary>
-
-<details><summary>📋 <a href="draft/bug/autoarray/numba_parallel_kernels_gnu_openmp_kill_forked_search_workers.md">numba <code>parallel=True</code> kernels (Sibson, direct_conv) pick the GNU OpenMP threading layer…</a> — autoarray · small · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autoarray/numba_parallel_kernels_gnu_openmp_kill_forked_search_workers.md
-```
-
-</details>
+<summary><b>bug</b> — 64</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -3070,7 +3070,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-05 | filed | <a href="draft/bug/autoarray/numba_parallel_kernels_gnu_openmp_kill_forked_search_workers.md">numba <code>parallel=True</code> kernels (Sibson, direct_conv) pick the GNU…</a> |
+| 2026-11-05 | issued | <a href="active/numba_parallel_kernels_gnu_openmp_kill_forked_search_workers.md">numba <code>parallel=True</code> kernels (Sibson, direct_conv) pick the GNU…</a> |
 | 2026-11-05 | issued | <a href="active/arcticpy_lazy_import.md">autocti: <code>import autocti</code> works without arcticpy (lazy arcticpy…</a> |
 | 2026-11-04 | issued | <a href="active/autonomous_orchestrators_p4c_pilot_run.md">Autonomous orchestrators phase 4c: run the Dev orchestrator pilot…</a> |
 | 2026-11-03 | filed | <a href="draft/bug/pyautobrain/intake_classify_file_drops_declared_epic_phase.md">intake classify --file injects an unrelated Memory: line on…</a> |
@@ -3241,7 +3241,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-69 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+68 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3269,7 +3269,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md — unknown theme keyword(s): jax`
 - `draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md — unknown theme keyword(s): inversion, jax`
 - `draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md — unknown theme keyword(s): jax`
-- `draft/bug/autoarray/numba_parallel_kernels_gnu_openmp_kill_forked_search_workers.md — unknown theme keyword(s): source-reconstruction, performance`
 - `draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md — unknown theme keyword(s): simulation, robustness`
 - `draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md — unknown theme keyword(s): inversion, sparse-operator, correctness`
 - `draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md — unknown theme keyword(s): sparse-operator`

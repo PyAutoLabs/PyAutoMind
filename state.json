@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-11-05T12:51:21Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 9 in flight",
+  "updated": "2026-11-05T12:53:51Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -36,12 +36,6 @@
       "text": "pending release: PyAutoNerves PyAutoNerves#210 \u2014 cti-release-train-wiring",
       "url": "https://github.com/PyAutoLabs/PyAutoNerves/pull/210",
       "prompt": null
-    },
-    {
-      "severity": "info",
-      "text": "pick: numba `parallel=True` kernels (Sibson, direct_conv) pick the GNU OpenMP threading layer\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/numba_parallel_kernels_gnu_openmp_kill_forked_search_workers.md",
-      "prompt": "Use the start-dev skill. draft/bug/autoarray/numba_parallel_kernels_gnu_openmp_kill_forked_search_workers.md"
     },
     {
       "severity": "info",
@@ -108,6 +102,12 @@
       "text": "pick: Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md",
       "prompt": "Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: euclid_dr1: run the positions gate over DR1 and submit the remodel set",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md",
+      "prompt": "Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md"
     },
     {
       "severity": "info",
