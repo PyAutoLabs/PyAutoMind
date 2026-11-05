@@ -282,7 +282,7 @@ def resolve_conflicts(cwd=None) -> tuple[list[str], list[str]]:
             _git("checkout", "--ours", "--", path, cwd=root)
             _git("add", "--", path, cwd=root)
             resolved.append(
-                f"{path} (render: main's copy, regenerated after the merge)"
+                f"{path} (render: regenerated after the merge)"
             )
         elif path in ENTRY_MERGED_FILES:
             stages = [_git("show", f":{n}:{path}", cwd=root) for n in (1, 2, 3)]
