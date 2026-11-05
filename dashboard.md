@@ -12,7 +12,7 @@
 | [Epics](#epics) | 21 |
 | [In flight](#in-flight) | 8 |
 | [Planned](#planned) | 12 |
-| [Backlog](#backlog) | 295 |
+| [Backlog](#backlog) | 296 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
 
@@ -224,12 +224,20 @@ Use the start-dev skill. draft/maintenance/pyautomemory/canonical_key_todo_sweep
 Long-running multi-phase programmes. Each epic's 📋 prompt has the assistant read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
 
 <details>
-<summary><b>CTI upkeep parity — release-train wiring and first modern <code>autocti</code> release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), <code>autocti_profiling</code> + Pulse <code>cti</code> row, figures/assistant/docs currency, hygiene</b> — 4 queued prompt(s), in order</summary>
+<summary><b>CTI upkeep parity — release-train wiring and first modern <code>autocti</code> release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), <code>autocti_profiling</code> + Pulse <code>cti</code> row, figures/assistant/docs currency, hygiene</b> — 5 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>CTI upkeep parity — release-train wiring and first modern <code>autocti</code> release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), <code>autocti_profiling</code> + Pulse <code>cti</code> row, figures/assistant/docs currency, hygiene</b> — ledger: `draft/maintenance/autocti/cti_upkeep_epic.md` — FILED 2026-11-04 — survey in draft/maintenance/autocti/cti_upkeep_epic_report.md; R1–R6 RULED 2026-11-04 (arcticpy fixed upstream…</summary>
 
 ```
 Continue the 'CTI upkeep parity — release-train wiring and first modern `autocti` release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), `autocti_profiling` + Pulse `cti` row, figures/assistant/docs currency, hygiene' epic. Its canonical state lives in draft/maintenance/autocti/cti_upkeep_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: seven phases, library first, one issue per repo per phase, one at a time: 0 census + rulings + 0b log-likelihood value pins in autocti_workspace_test (DONE 2026-11-04) → 1 release-train wiring + first modern release (Hands LIB_PROJECTS/release.yml/python_matrix/pre_build/COLAB_PROJECTS, Nerves setup_colab autocti with arcticpy pre-install, Heart release_gate true + integrate/validation/docs-build rows, wiki-currency + pyautocti-release dispatch) → 2 arcticpy modernisation (upstream jkeger/arctic packaging PR + 2.7 release; Heart pin bump; DNA spec; install docs; lazy-import ruling) → 3 integration parity (smoke_tests.txt 3→representative, workspace_test rebuild + legacy/ ruling, docs.yml, 3.14) → 4 autocti_profiling birth + Pulse day zero → 5 autocti_visualization PyPI mode + Eyes sign-off, assistant version/PENDING/wiki-currency, docs/api rewrite → 6 hygiene + close. Members: likelihood_value_pins (p0b, DONE → complete/2026/11/cti-likelihood-pins.md), cti_release_train_wiring (p1), dataset_1d_results_database_examples_drift (p3), the two autocti_visualization bugs + api_rst_rewrite (p5). Boundaries: upkeep only, no CTI science; arcticpy pin stays in Heart install_arcticpy.sh only; never hand-dispatch release.yml.
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autocti/fits_fit_missing_output_dir_under_fast_plots.md">autocti: fits_fit writes fit.fits into a directory nothing creates when PYAUTO_FAST_PLOTS=1</a> — autocti · small · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/autocti/fits_fit_missing_output_dir_under_fast_plots.md
 ```
 
 </details>
@@ -1243,7 +1251,7 @@ Use the start-dev skill. draft/bug/pyautobrain/hygiene_tidy_recommends_deleting_
 
 ## Backlog
 
-Lanes: any 285 · local-dev 8
+Lanes: any 286 · local-dev 8
 
 <a id="human-review"></a>
 <details>
