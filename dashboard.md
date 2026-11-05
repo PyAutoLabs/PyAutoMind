@@ -1080,7 +1080,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/cti_release_train_wiring.md">CTI release-train wiring — first modern autocti release</a> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/332">issue #332</a> — issued 2026-11-04 — library-dev</summary>
+<details><summary>📋 <a href="active/cti_release_train_wiring.md">CTI release-train wiring — first modern autocti release</a> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/332">issue #332</a> — issued 2026-11-04 — pr-open</summary>
 
 ```
 Use the start-dev skill. active/cti_release_train_wiring.md
