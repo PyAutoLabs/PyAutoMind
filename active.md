@@ -101,3 +101,15 @@
 - epic: autonomous-orchestrators (phase 4c of 4a–4c)
 - pre-check: open shadow tick on system python3.10, minimal env — 6 notify proposals, 0 spawns (2026-11-04)
 - tier: judge — merge mode: human /prm
+
+## likelihood-lifecycle-p4e-ingest
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/59
+- issued: 2026-11-05
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p4e-ingest
+- repos:
+  - autolens_inference: feature/likelihood-lifecycle-p4e-ingest
+- prompt: active/likelihood_lifecycle_p4e_ingest.md
+- epic: likelihood-lifecycle (phase 4e)
+- tier: judge — merge mode: human /prm; PR waits for the remaining phase-4 legs (human 2026-11-05)

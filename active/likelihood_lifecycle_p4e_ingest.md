@@ -10,7 +10,9 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: formalised
+Status: issued
+Issue: https://github.com/PyAutoLabs/autolens_inference/issues/59
+Issued: 2026-11-05
 Consequence: judge
 Witness: autolens_inference main carries the phase-4 validation rows for every completed GPU and CPU leg (413924, 413966–413982, 414141–414189, 414362), excluding 414150's failed delaunay_nn rows. dashboard/walltime_validation.json gives every Optimal setup that has a row its ratio_measured_over_predicted, and the rectangular/hst numba cores sweep its parallel_efficiency curve (1/2/4/8/16/32). The 414189 rows (pin 2026.10.25.1 + PyAutoArray#677) are marked as such in the exporter's limitations. A backend-parity table at mass_total[1] (max log L per setup per likelihood) is laid out for human rulings, with no parity verdict computed. Lint and tests are green, and the Pulse lens-walltime instance refreshes after merge.
 Review-minutes: 20
