@@ -1,3 +1,8 @@
+- summary: fixed in commit 748f8c0bb (this PR). `test_the_hook_survives_an_unwritable_tools_dir` probes `os.access(bin, W_OK)` after the chmod and skips with "cannot make a directory unwritable here (running as root?)" when root ignores the mode bits. As a normal user it still drives the failure path.
+- witness: in this cloud container (root), `pytest tests/test_session_bootstrap.py -rs` reports 1 skipped with that reason. Mind suite 728 passed, 1 skipped.
+
+## Original prompt
+
 # `test_the_hook_survives_an_unwritable_tools_dir` fails when the suite runs as root
 
 Type: bug

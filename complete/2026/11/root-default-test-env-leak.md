@@ -1,3 +1,8 @@
+- summary: fixed in commit 748f8c0bb (this PR). The module's autouse `forget_the_resolver` fixture now deletes `PYAUTO_ROOT` and `PYAUTO_ROOT_REASON` via monkeypatch. `test_an_explicit_override_is_never_second_guessed` still sets its own value.
+- witness: `PYAUTO_ROOT=/home/user pytest tests/test_repos_sync_root_default.py` passes. The full suite gives 728 passed, 1 skipped, with and without the variable exported.
+
+## Original prompt
+
 # `test_repos_sync_root_default` inherits an exported `PYAUTO_ROOT` and fails
 
 Type: bug

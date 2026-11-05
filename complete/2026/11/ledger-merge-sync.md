@@ -1,3 +1,9 @@
+- summary: shipped in commit 748f8c0bb (this PR). `scripts/ledger_merge.py sync [--base origin/main] [--root]` / `sync_with_base()` does what `mind_ledger_merge.yml` does, for branches it never touches. It refuses a dirty tree; runs `git merge --no-commit --no-ff <base>`; uses `resolve_conflicts` (registries merge by entry, renders conflict-free); stops as `blocked` with the merge in progress on anything the grammar cannot settle; otherwise re-renders `complete/index.md` (`lifecycle.py index --apply`) and the dashboard (the Brain renderer from `$PYAUTO_BRAIN` or a sibling/organs `PyAutoBrain`, else a NOT-regenerated note) on the merged tree; and stages them for the caller to commit. Documented in REFERENCE.md "How the ledger lands".
+- witness: 3 new tests in tests/test_ledger_merge.py: ready + entry merge + injected re-render + MERGE_HEAD staged; up-to-date no-op and dirty-tree refusal; a non-ledger conflict blocked before rendering. 31 passed in that file.
+- not done: extending the auto-merge workflow to `ccr-*` session branches. That is a policy decision for the human.
+
+## Original prompt
+
 # `ledger_merge.py sync`: bring a non-`claude/**` Mind branch up to date with main…
 
 Type: feature
