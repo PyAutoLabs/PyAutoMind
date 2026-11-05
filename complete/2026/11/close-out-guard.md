@@ -1,3 +1,14 @@
+## What shipped
+PyAutoBrain#591 (commit 147609a) + PyAutoMind#541: `pyauto-brain intake looks-shipped` / `reconcile --strong` flags drafts with strong evidence of shipping — a Witness-named test/function added or changed after `Filed:` in a target repo; a ship-claiming commit (or cached merged-PR body) naming the draft; a completion record whose `## Original prompt` near-duplicates it. Flags only; `--apply` writes `looks_shipped.json`; dismissals live in `looks_shipped_dismissed.md`. Dashboard "Looks shipped — confirm" section + state.json items; `batch plan` rejects flagged drafts. Daily `.github/workflows/looks_shipped.yml` (06:41 UTC). Real run: 0/271 today; 5/295 (all genuinely shipped) on the pre-sweep Mind. 10 tests.
+
+## What the filed scope missed
+Recall is low by design (4 of the 2026-11-05 sweep's 27); the merge-time hook (Ask item 4) was not built.
+
+## Follow-ups
+Check the workflow's first run (private / `Jammy2211/*` clones may fail under the org token); optional `--pr-cache` builder where API access exists; merge-time warning hook.
+
+## Original prompt
+
 # Close-out guard: catch shipped work whose Mind draft was never closed, whatever…
 
 Type: feature

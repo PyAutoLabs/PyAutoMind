@@ -1,3 +1,14 @@
+## What shipped
+PyAutoBrain#591 (commits 0a27dbc, 49b663a): `agents/conductors/docs/` — `pyauto-brain docs <request>` returns a DocsDecision (surface readme/setup/rtd/tutorial/agent, target repo and category from `PyAutoMind/repos.yaml`, WRITING_STYLE.md template, material to move, siblings in step by category; tutorials deferred to the Workspace conductor with a register hint). `docs audit <file>` scores a page read-only (16 checks, mechanical vs heuristic labelled; PyAutoBrain README 65/100). `/docs` routes through it; registry, board and the Brain command table list it. 18 tests.
+
+## What the filed scope missed
+CI's tenant firewall rejected the first cut's built-in repo table; fixed in 49b663a by deriving everything from the body map (so `euclid_assistant` now joins the assistant README siblings) and using invented names in tests.
+
+## Follow-ups
+Run `bin/install.sh --write-agents-surface` across organs (command tables). Audit is Markdown-only; thresholds are uncalibrated judgement calls.
+
+## Original prompt
+
 # A dedicated Documentation conductor in PyAutoBrain
 
 Type: feature

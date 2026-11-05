@@ -520,7 +520,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 80 (stage 1: 80, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
+Count toward 20: 81 (stage 1: 81, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -629,6 +629,7 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-11-05 | cti-database-examples-drift (PyAutoCTI#122 / autocti_workspace#42) | glance | tests 279p serial + CI unittest 3.12/3.13/nojax / smoke 6/6 profile_smoke+profile_release + CI smoke 3.12/3.13 / review FINDINGS 3 LOW (1 fixed, 2 judged; independent separate-model subagent) / heart STALE (release validation stale) / witness PASS | merged-unchanged | 1 |
 | 2026-11-05 | shift-opens-at-dispatched (PyAutoBrain#590) | glance | tests 1575p + control / smoke n/a (Brain organ) / review none / heart STALE human-ack / witness PASS | merged-unchanged | 1 |
 | 2026-11-05 | cti-smoke-breadth (autocti_workspace#44) | glance | tests n/a (workspace list + docs) / smoke 36/36 fresh clone profile_smoke 213s + profile_release 317s + CI smoke 3.12/3.13 6/5 min / review CLEAN (independent separate-model subagent) / heart STALE (release validation stale) / witness PASS | merged-unchanged | 1 |
+| 2026-11-05 | intake-memory-citation-floor (PyAutoBrain#591) | glance | tests 1625p (local) + CI 3.12/3.13 green / smoke n/a (Brain organ) / review none / heart not consulted / witness PASS | merged-unchanged | 1 |
 
 ## Unattended `glance` sub-window (stage 2) — opened 2026-11-04
 

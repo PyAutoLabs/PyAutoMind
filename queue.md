@@ -93,7 +93,7 @@ what replaced it; `batch plan` ignores them.
 
 ### batch collect
 - shipped-as: PyAutoBrain#332 → PR#333, complete/2026/09/batch-collect.md (2026-09-02)
-- note: `pyauto-brain batch collect` shipped; the phase's remaining verb is re-filed as draft/feature/pyautobrain/batch_slice.md
+- note: `pyauto-brain batch collect` shipped; the phase's remaining verb is re-filed as draft/feature/pyautobrain/batch_slice.md, since shipped (PyAutoBrain#591 → complete/2026/11/batch-slice.md)
 
 ### Euclid Lane: recut
 - shipped-as: superseded by cortex-birth phase 5 (2026-09-02)
