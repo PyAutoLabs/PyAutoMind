@@ -1120,7 +1120,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/numba_num_threads_pin_delaunay_nn.md">Filed: 2026-11-05…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/519">issue #519</a> — issued 2026-11-05 — workspace-dev</summary>
+<details><summary>📋 <a href="active/numba_num_threads_pin_delaunay_nn.md">Filed: 2026-11-05…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/519">issue #519</a> — issued 2026-11-05 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/520">autolens_profiling#520</a></summary>
 
 ```
 Use the start-dev skill. active/numba_num_threads_pin_delaunay_nn.md
