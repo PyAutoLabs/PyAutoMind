@@ -27,3 +27,4 @@ The target metric is verified merges (plus accepted drafts and packets) per
 | slot | mode | review-minutes-planned | review-minutes-actual | merges | glance-auto-merges | reverts | overrules | pushes | drafts-filed | tokens | workers-crashed |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 2026-11-05-am | shadow | 30 | 5 | 11 | 0 | 0 | 6 | 0 | 0 | 0 | 0 |
+| 2026-11-05-pm | shadow | 20 | ? | ? | 0 | 0 | ? | 0 | 0 | 0 | 0 |
