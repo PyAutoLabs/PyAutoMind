@@ -93,7 +93,7 @@
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/519
 - issued: 2026-11-05
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/numba-num-threads-pin-delaunay-nn
 - repos:
   - autolens_profiling: feature/numba-num-threads-pin-delaunay-nn
@@ -102,3 +102,8 @@
 - claim-override: HUMAN 2026-11-05 overrode gradient-correctness-sweep's autolens_profiling claim ("override the claim, start now — different files"); #517 is paused on RAL 413991 and touches different files
 - design: cell-local pin (human 2026-11-05) in scripts/imaging/delaunay/likelihood_{runtime,breakdown}_numba.py --mesh-class delaunay_nn; force the Nautilus worker route (patch numba_util.parallel_kernel_allowed -> False, so the serial Sibson build runs) + NUMBA_NUM_THREADS=1 backstop; record the route; laptop witness compares in-process patch vs a real multiprocessing fork child
 - tier: judge — merge mode: human /prm
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/520 OPEN (judge: human /prm)
+- heart-ack: STALE "release validation stale: source moved since rehearsal (PyAutoNerves)" — human ack 2026-11-05 at ship
+- witness: worker_route_witness.py PASS — patched/worker 1.024 [90% CI 1.000-1.033]; serial/prange@1 1.248 [1.226-1.294]
+- follow-ups filed (Mind f4a8fc04): draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md (phase 2, gated on release + human go); draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md
+
