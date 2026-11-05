@@ -43,3 +43,20 @@ release.
 
 Opening a PR on a third-party repository is outward-facing, so it needs explicit
 human approval before it is sent.
+
+## Prepared 2026-11-05 (NOT sent; awaiting human go-ahead to fork + open)
+
+- Local clone `~/Code/PyAutoLabs-wt/arcticpy-upstream-packaging/arctic`, branch
+  `packaging-modern-numpy-cython3`, commit 53534d0 (pyproject.toml + 2 lines of setup.py, CRLF kept).
+- Drafts beside it: `PR_BODY.md` (the PR text) and `NOTE_TO_MASSEY.md` (release request).
+- Found while testing, now fixed in the same commit:
+  - `matplotlib` and `scipy` are imported by `import arcticpy` but undeclared.
+  - `setup.py` links only `gsl`; it needs `gslcblas` and `library_dirs`. Only Debian's system libgsl links without them.
+- Evidence (Linux, Python 3.13, GSL 2.7.1 from source):
+  - the isolated wheel and sdist both build
+  - a fresh venv (numpy 2.5.4) passes `pip check`
+  - upstream `pytest test/` gives 7 passed
+- Not tested: macOS, Windows, numpy 1.x at runtime.
+- To open: `gh repo fork jkeger/arctic --clone=false`, push the branch to the fork, then
+  `gh pr create -R jkeger/arctic --head Jammy2211:packaging-modern-numpy-cython3 --body-file PR_BODY.md`.
+  After that, the human sends the note to Richard Massey.
