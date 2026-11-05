@@ -38,6 +38,7 @@
 - worktree: ~/Code/PyAutoLabs-wt/sky-orientation-p2
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/sky-orientation-p2d (2d re-render pilot, started 2026-11-05)
+- 2d-pilot: 2026-11-05 RAL 414200+414205 → inspect/north_up_pilot_20261105_v2 (50 lenses, 431/431 fits pass witness; 1 sersic load_error). Review page Science/scratch/sky_orientation_dr1/north_up_pilot_20261105_v2/review/index.html — AWAITING human by-eye review; branch local (c4f1247), no PR yet
 - prompt: active/sky_orientation_euclid_dr1_and_library.md
 - epic: sky-orientation (phase 2: 2.0 land v5 branch → 2a catalogue fix → 2b–2e)
 - heart-red-override: extended live by the human 2026-10-31 to phase 2 ("Yes, extend it"); development only, merge via /prm
