@@ -400,3 +400,59 @@ def test_workflow_namespaces_use_same_ledger_gate(tmp_path, namespace):
                             cwd=repo, capture_output=True, text=True)
     assert denied.returncode == 1
     assert "scripts/change.py" in denied.stdout
+
+
+# --------------------------------------------------------------------------- #
+# sync: the local twin of the workflow's merge, for branches it never touches
+# --------------------------------------------------------------------------- #
+def _fake_render(calls):
+    def render(root):
+        calls.append(root)
+        (root / "dashboard.md").write_text("render merged\n")
+        _git(root, "add", "dashboard.md")
+        return ["dashboard: regenerated"]
+    return render
+
+
+def test_sync_merges_main_settles_the_ledger_and_rerenders(tmp_path):
+    repo = _ledger_repo(tmp_path)
+    _git(repo, "checkout", "-q", "claude/x")       # a session branch, behind main
+    calls = []
+    status, lines = ledger_merge.sync_with_base("main", repo, render=_fake_render(calls))
+    assert status == "ready", lines
+    assert calls == [repo], "renders are regenerated on the merged tree"
+    assert any(line.startswith("resolved: active.md") for line in lines)
+    # the branch closed b, main issued c: both survive the entry merge
+    assert (repo / "active.md").read_text() == PRE + _entry("a") + _entry("c").rstrip("\n") + "\n"
+    assert (repo / "dashboard.md").read_text() == "render merged\n"
+    assert _git(repo, "diff", "--name-only", "--diff-filter=U").stdout == ""
+    assert (repo / ".git" / "MERGE_HEAD").exists(), "left staged for the caller to commit"
+
+
+def test_sync_is_a_no_op_when_up_to_date_and_refuses_a_dirty_tree(tmp_path):
+    repo = _ledger_repo(tmp_path)
+    calls = []
+    assert ledger_merge.sync_with_base("main", repo, render=_fake_render(calls))[0] == "up-to-date"
+    assert calls == []
+    _git(repo, "checkout", "-q", "claude/x")
+    (repo / "active.md").write_text("uncommitted\n")
+    status, _ = ledger_merge.sync_with_base("main", repo, render=_fake_render(calls))
+    assert status == "dirty" and calls == []
+    assert not (repo / ".git" / "MERGE_HEAD").exists()
+
+
+def test_sync_stops_before_rendering_when_a_conflict_needs_a_human(tmp_path):
+    repo = _ledger_repo(tmp_path)
+    _git(repo, "checkout", "-q", "claude/x")
+    (repo / "notes.txt").write_text("branch\n")
+    _git(repo, "add", "notes.txt")
+    _git(repo, "commit", "-qm", "branch notes")
+    _git(repo, "checkout", "-q", "main")
+    (repo / "notes.txt").write_text("main\n")
+    _git(repo, "add", "notes.txt")
+    _git(repo, "commit", "-qm", "main notes")
+    _git(repo, "checkout", "-q", "claude/x")
+    calls = []
+    status, lines = ledger_merge.sync_with_base("main", repo, render=_fake_render(calls))
+    assert status == "blocked" and calls == []
+    assert "unresolved: notes.txt" in lines

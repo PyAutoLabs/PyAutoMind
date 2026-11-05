@@ -45,8 +45,13 @@ def workspace_root_reason():
 
 
 @pytest.fixture(autouse=True)
-def forget_the_resolver():
-    """Each test brings its own stub; the import cache must not leak."""
+def forget_the_resolver(monkeypatch):
+    """Each test brings its own stub; the import cache must not leak — and
+    neither may the caller's environment. An exported PYAUTO_ROOT (which the
+    Brain CLI exports for its own children) is "the operator's word" to
+    workspace_root, so a test that does not set it must not inherit it."""
+    monkeypatch.delenv("PYAUTO_ROOT", raising=False)
+    monkeypatch.delenv("PYAUTO_ROOT_REASON", raising=False)
     before = list(sys.path)
     repos_sync._RESOLVER.clear()
     sys.modules.pop("_pyauto_root", None)

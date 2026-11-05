@@ -54,6 +54,7 @@ from __future__ import annotations
 
 import argparse
 import fnmatch
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -300,6 +301,88 @@ def resolve_conflicts(cwd=None) -> tuple[list[str], list[str]]:
     return resolved, unresolved
 
 
+def _brain_renderer(root: Path):
+    """The Brain dashboard renderer beside this Mind, or None. The renderer is
+    the Brain's (the organ boundary), so a Mind-only checkout cannot regenerate
+    the dashboard — `dashboard_refresh.yml` heals it on main instead."""
+    candidates = []
+    if os.environ.get("PYAUTO_BRAIN"):
+        candidates.append(Path(os.environ["PYAUTO_BRAIN"]))
+    candidates += [root.parent / "PyAutoBrain", root.parent / "organs" / "PyAutoBrain"]
+    for brain in candidates:
+        script = brain / "agents" / "conductors" / "intake" / "_intake.py"
+        if script.is_file():
+            return script
+    return None
+
+
+def regenerate_renders(root: Path) -> list[str]:
+    """Re-render every GENERATED_FILES path on the (merged) tree and stage them.
+    Returns one line per render: regenerated, or skipped with the reason."""
+    report = []
+    index = subprocess.run(
+        [sys.executable, str(root / "scripts" / "lifecycle.py"), "index", "--apply"],
+        capture_output=True, text=True, cwd=root,
+    )
+    report.append("complete/index.md: regenerated" if index.returncode == 0
+                  else f"complete/index.md: NOT regenerated ({index.stderr.strip()[-200:]})")
+    renderer = _brain_renderer(root)
+    if renderer is None:
+        report.append("dashboard: NOT regenerated (no PyAutoBrain beside this Mind; "
+                      "set PYAUTO_BRAIN, or let dashboard_refresh.yml heal main)")
+    else:
+        dash = subprocess.run(
+            [sys.executable, str(renderer), "--mind", str(root), "--apply", "dashboard"],
+            capture_output=True, text=True, cwd=root,
+        )
+        report.append("dashboard.md / dashboard.html / state.json: regenerated"
+                      if dash.returncode == 0
+                      else f"dashboard: NOT regenerated ({dash.stderr.strip()[-200:]})")
+    present = [p for p in GENERATED_FILES if (root / p).exists()]
+    if present:
+        _git("add", "--", *present, cwd=root)
+    return report
+
+
+def sync_with_base(base: str = "origin/main", cwd=None, render=regenerate_renders):
+    """Bring a Mind branch up to date with `base` the way the ledger-merge
+    workflow does, for branches that workflow never touches (session branches,
+    PR branches holding code): `git merge --no-commit --no-ff <base>`, settle
+    what the ledger grammar can (`resolve_conflicts`), re-render the generated
+    files on the merged tree, and leave the merge staged for the caller to
+    commit. Returns (status, lines) with status one of `up-to-date`,
+    `ready` (staged, commit it), `blocked` (unresolved paths; merge left in
+    progress) or `dirty` (refused: uncommitted changes)."""
+    root = Path(cwd) if cwd else Path(__file__).resolve().parents[1]
+    if _git("status", "--porcelain", cwd=root).stdout.strip():
+        return "dirty", ["refused: the working tree has uncommitted changes — commit or stash them first"]
+    merge = _git("merge", "--no-commit", "--no-ff", base, cwd=root)
+    if "Already up to date" in merge.stdout:
+        return "up-to-date", [f"already up to date with {base}"]
+    lines = []
+    if merge.returncode != 0:
+        unmerged = _git("diff", "--name-only", "--diff-filter=U", cwd=root).stdout.split()
+        if not unmerged:
+            return "blocked", [f"git merge {base} failed: {(merge.stderr or merge.stdout).strip()}"]
+        resolved, unresolved = resolve_conflicts(root)
+        lines += [f"resolved: {line}" for line in resolved]
+        if unresolved:
+            lines += [f"unresolved: {line}" for line in unresolved]
+            lines.append("merge left in progress — settle the unresolved paths, re-run the "
+                         "renders, then commit (or `git merge --abort`)")
+            return "blocked", lines
+    lines += [f"render: {line}" for line in render(root)]
+    lines.append("merge staged — review, then `git commit` (the merge message is prefilled)")
+    return "ready", lines
+
+
+def _sync_cli(args) -> int:
+    status, lines = sync_with_base(args.base, args.root)
+    for line in lines:
+        print(line)
+    return 0 if status in ("up-to-date", "ready") else 1
+
+
 def _resolve_cli(args) -> int:
     resolved, unresolved = resolve_conflicts(args.root)
     for line in resolved:
@@ -355,11 +438,22 @@ def main(argv=None) -> int:
     res.add_argument(
         "--root", help="the repo with the merge in progress (default: this one)"
     )
+    syn = sub.add_parser(
+        "sync",
+        help="merge a base ref into this branch, settle ledger conflicts and "
+        "re-render the generated files (for branches the ledger-merge "
+        "workflow does not handle)",
+    )
+    syn.add_argument("--base", default="origin/main",
+                     help="the ref to merge in (default origin/main; fetch it first)")
+    syn.add_argument("--root", help="the Mind checkout (default: this one)")
     args = parser.parse_args(argv)
     if args.command == "merge-entries":
         return _merge_entries_cli(args)
     if args.command == "resolve":
         return _resolve_cli(args)
+    if args.command == "sync":
+        return _sync_cli(args)
 
     # Source precedence: explicit paths, then --base, then stdin. `--base` must
     # never read stdin: a Claude Code web/mobile session runs commands with a

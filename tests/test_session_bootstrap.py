@@ -949,6 +949,12 @@ def test_the_hook_survives_an_unwritable_tools_dir(tmp_path):
     _break_tool_env(tool, session_venv, tmp_path)
 
     (tool / "bin").chmod(0o500)          # can read + traverse, cannot replace
+    if os.access(tool / "bin", os.W_OK):
+        # root (a container, CI as root) ignores the mode bits, so the failure
+        # path this test drives cannot be produced — skip rather than pass
+        # vacuously or fail on the environment.
+        (tool / "bin").chmod(0o755)
+        pytest.skip("cannot make a directory unwritable here (running as root?)")
     try:
         r = _call_hook_function("repair_uv_tools", venv=session_venv,
                                 extra_env={"PYAUTO_UV_TOOLS_DIR": str(tools)})

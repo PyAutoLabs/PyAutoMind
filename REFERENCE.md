@@ -823,6 +823,15 @@ What blocks, and what does not:
   sides changed differently is the only conflict — takes `main`'s copy of the
   renders, and leaves `autonomy_log.md` to git's `merge=union` driver
   (`.gitattributes`; it is append-only). What that cannot settle blocks.
+- **Branches the workflow never touches sync locally the same way.** A session
+  branch (`ccr-*` and the like) or a PR branch holding code must catch up with
+  `main` by hand, and its generated files conflict on almost every concurrent
+  push. `git fetch origin main && python3 scripts/ledger_merge.py sync` runs the
+  same merge: `--no-commit` merge of `origin/main`, `resolve`, then
+  `complete/index.md` and the dashboard re-rendered on the merged tree (the
+  Brain renderer from `$PYAUTO_BRAIN` or a sibling `PyAutoBrain`), staged for
+  you to commit. It refuses a dirty tree and stops, merge in progress, on
+  anything the grammar cannot settle.
 - **A blocked branch is written on an issue** titled ``ledger merge: `<branch>`
   needs a human`` (label `ledger-merge`), updated on every further attempt and
   closed by the run that finally lands it. A red run nobody is subscribed to
