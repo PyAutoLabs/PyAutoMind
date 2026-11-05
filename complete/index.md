@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2145 records across 11 buckets.
+2149 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -134,9 +134,11 @@ markers; everything below GENERATED is rebuilt.
 - [autonomous-orchestrators-p4a](2026/11/autonomous-orchestrators-p4a.md) — phase 4a of 4a–4c; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [autonomous-orchestrators-p4b](2026/11/autonomous-orchestrators-p4b.md) — phase 4b of 4a–4c; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [batch-watch-live-view](2026/11/batch-watch-live-view.md) — pilot 4c follow-up; issue PyAutoBrain#575
+- [board-without-gh-phase2-legs](2026/11/board-without-gh-phase2-legs.md) — already shipped, closed as a stale draft. PyAutoBrain 15317af (merged via #564, 2026-11-03) "phase 2 — the rem…
 - [brain-hygiene-cleanup-bugs](2026/11/brain-hygiene-cleanup-bugs.md)
 - [chapter2-continuation](2026/11/chapter2-continuation.md) — All continuation scope merged: Tutorials 5 and 6, optional speed and runnable model_centred prior passing, sum…
 - [cloud-validation-rehearsal-clock-skew](2026/11/cloud-validation-rehearsal-clock-skew.md)
+- [cortex-projects-dashboard-parent](2026/11/cortex-projects-dashboard-parent.md) — parent closed. Phase 1, the presentation change, shipped in PyAutoBrain#526 (merge 92de427, 2026-10-15; record…
 - [cti-database-examples-drift](2026/11/cti-database-examples-drift.md)
 - [cti-fits-fit-output-dir](2026/11/cti-fits-fit-output-dir.md)
 - [cti-likelihood-pins](2026/11/cti-likelihood-pins.md) — cti-upkeep phase 0b
@@ -183,6 +185,8 @@ markers; everything below GENERATED is rebuilt.
 - [results-library-p3-exports](2026/11/results-library-p3-exports.md) — phase 3; ledger draft/feature/autofit/results_library_epic.md
 - [results-library-p4-package](2026/11/results-library-p4-package.md) — phase 4; ledger draft/feature/autofit/results_library_epic.md
 - [results-library-p5b-cortex](2026/11/results-library-p5b-cortex.md) — phase 5b; ledger draft/feature/autofit/results_library_epic.md
+- [rtd-organism-currency](2026/11/rtd-organism-currency.md) — already shipped, closed as a stale draft. PyAutoBrain 1aa2ed4 (#563) renamed `docs/organs/build` to `organs/ha…
+- [session-start-hook-copies-regen](2026/11/session-start-hook-copies-regen.md) — shipped, closed. The 2026-09-29 sweep PRs landed. On HEAD of all 27 swept repos, `.claude/hooks/session-start.…
 - [shift-digest-readable-picks](2026/11/shift-digest-readable-picks.md) — pilot 4c follow-up; issue PyAutoBrain#579
 - [simulate-if-needed-workspace-sweep](2026/11/simulate-if-needed-workspace-sweep.md)
 - [tutorial-link-sweep](2026/11/tutorial-link-sweep.md)

@@ -1,3 +1,10 @@
+- summary: shipped, closed. The 2026-09-29 sweep PRs landed. On HEAD of all 27 swept repos, `.claude/hooks/session-start.sh` is byte-identical to Mind's canonical `policy/session_start_hook.sh`, and so are the Brain, Cortex and Memory copies. PyAutoMemory#106 merged 2026-09-30.
+- witness: the Witness (`repos_sync.py --check` hooks leg reporting 0 mismatches across the organism) was NOT run, because the sibling repos are not cloned in this session. The evidence is a per-repo raw-file comparison against the canonical hook. In this session's 4-repo checkout, the hooks leg reads "OK (4 of 50 checked out, 1 excluded)".
+- unverified: the human-only `.github/profile/README.md` patch. If it is still outstanding, it is the human's to apply. No task tracks it.
+- found by: stale-draft sweep 2026-11-05. Closure approved by the human.
+
+## Original prompt
+
 # Regenerate the 28 drifted `.claude/hooks/session-start.sh` copies after the organ-order change
 
 Type: maintenance

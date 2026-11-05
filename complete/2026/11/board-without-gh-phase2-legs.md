@@ -1,3 +1,9 @@
+- summary: already shipped, closed as a stale draft. PyAutoBrain 15317af (merged via #564, 2026-11-03) "phase 2 — the remaining GitHub legs onto the --github-data seam". The upkeep leg now reads through the seam. The versions, community and resume legs had already been retired from the board by 41ec5c5 (2026-10-08). So a remote render has zero unread legs, which meets the umbrella's headline criterion.
+- witness: `test_a_remote_render_reads_all_four_phase2_legs` in Brain `tests/test_board_github_data.py`; the file gives 10 passed, 2026-11-05.
+- found by: stale-draft sweep 2026-11-05. The shipping session merged without closing the draft. Closure approved by the human.
+
+## Original prompt
+
 # Board phase 2: the remaining four legs onto the seam
 
 Type: feature

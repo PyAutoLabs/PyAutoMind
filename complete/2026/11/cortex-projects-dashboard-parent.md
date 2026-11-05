@@ -1,3 +1,8 @@
+- summary: parent closed. Phase 1, the presentation change, shipped in PyAutoBrain#526 (merge 92de427, 2026-10-15; record `complete/2026/10/cortex-project-readability.md`). Phase 2, output accounting, stays open as its own draft, `draft/feature/cortex/output_summary.md`, which carries the human's two-phase approval and the verbatim request reference. It still needs plan approval before any source change.
+- found by: stale-draft sweep 2026-11-05. Closure approved by the human.
+
+## Original prompt
+
 # Human-readable Cortex Projects dashboard
 
 Targets: @PyAutoBrain @PyAutoCortex

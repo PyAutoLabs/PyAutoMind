@@ -1,3 +1,9 @@
+- summary: already shipped, closed as a stale draft. PyAutoBrain 1aa2ed4 (#563) renamed `docs/organs/build` to `organs/hands` with a redirect and added Broca to the organ table. 7654757 (merged via #564), both dated 2026-11-03, brought the RTD organism pages up to date: new Nerves, DNA and Broca pages, and the hard-coded organ counts are gone.
+- witness: `docs/organs/` on Brain main has nerves.md, hands.md, dna.md and broca.md, and no "five/six organs" phrasing remains in docs/. Commit message: Sphinx warnings 0→0. Both commits are on origin/main, checked 2026-11-05.
+- found by: stale-draft sweep 2026-11-05. The shipping session merged without closing the draft. Closure approved by the human.
+
+## Original prompt
+
 # RTD organism docs currency: Nerves page, organ-count drift, hands.md rename
 
 Type: docs

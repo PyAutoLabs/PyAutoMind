@@ -12,7 +12,7 @@
 | [Epics](#epics) | 21 |
 | [In flight](#in-flight) | 8 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 292 |
+| [Backlog](#backlog) | 288 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 2 |
 
@@ -121,7 +121,7 @@ Use the start-dev skill. draft/research/autoarray/delaunay_research.md
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 90
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 88
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -163,22 +163,6 @@ Use the start-dev skill. draft/test/autolens_workspace_test/latent_smoke_asserti
 
 </details>
 
-<details><summary>📋 <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md rename</a> — pyautobrain · small · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/docs/pyautobrain/rtd_organism_currency.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautobrain/board_without_gh_phase2_legs.md">Board phase 2: the remaining four legs onto the seam</a> — pyautobrain · small · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautobrain/board_without_gh_phase2_legs.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/research/pyautohands/git_docs.md">Use readthedocs or migrate to GitHub docs</a> — pyautohands · small · supervised · normal</summary>
 
 ```
@@ -215,6 +199,22 @@ Use the start-dev skill. draft/refactor/pyautofit/remove_eden_packaging_tooling.
 
 ```
 Use the start-dev skill. draft/maintenance/pyautomemory/canonical_key_todo_sweep.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/demo_subplot_ellipse_errors.md">Demo <code>subplot_ellipse_errors</code> from a real ellipse model-fit</a> — workspaces · large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/docs/workspaces/demo_subplot_ellipse_errors.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md">cluster/mass_parameterizations*.py promise model.info prints (and figures) they never make</a> — autolens_workspace · small · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md
 ```
 
 </details>
@@ -1235,7 +1235,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 282 · local-dev 8
+Lanes: any 278 · local-dev 8
 
 <a id="human-review"></a>
 <details>
@@ -1286,7 +1286,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 41</summary>
+<summary><b>feature</b> — 39</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
 
@@ -1356,14 +1356,6 @@ Use the start-dev skill. draft/feature/pyautobrain/docs_conductor.md
 
 ```
 Use the start-dev skill. draft/feature/pyautoheart/howto_real_settings_nightly.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/pyautobrain/board_without_gh_phase2_legs.md">Board phase 2: the remaining four legs onto the seam</a> — pyautobrain · small · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautobrain/board_without_gh_phase2_legs.md
 ```
 
 </details>
@@ -1588,14 +1580,6 @@ Use the start-dev skill. draft/feature/autolens/lenstwin_epic_surveys/01_pyautol
 
 ```
 Use the start-dev skill. draft/feature/autolens/lenstwin_epic_surveys/02_assistant_workspace.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/cortex/human_readable_projects_dashboard.md">Human-readable Cortex Projects dashboard</a> — cortex</summary>
-
-```
-Use the start-dev skill. draft/feature/cortex/human_readable_projects_dashboard.md
 ```
 
 </details>
@@ -2461,7 +2445,7 @@ Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_
 </details>
 
 <details>
-<summary><b>docs</b> — 25</summary>
+<summary><b>docs</b> — 24</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -2515,14 +2499,6 @@ Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sig
 
 ```
 Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/pyautobrain/rtd_organism_currency.md">RTD organism docs currency: Nerves page, organ-count drift, hands.md rename</a> — pyautobrain · small · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/docs/pyautobrain/rtd_organism_currency.md
 ```
 
 </details>
@@ -2666,7 +2642,7 @@ Use the start-dev skill. draft/docs/howtolens/tutorial_correctness_and_howtogala
 </details>
 
 <details>
-<summary><b>maintenance</b> — 18</summary>
+<summary><b>maintenance</b> — 17</summary>
 
 <details><summary>📋 <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> — organs · medium · supervised · high</summary>
 
@@ -2792,14 +2768,6 @@ Use the start-dev skill. draft/maintenance/autolens_workspace/remeasure_shapelet
 
 ```
 Use the start-dev skill. draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/pyautomind/session_start_hook_copies_regen.md">Regenerate the 28 drifted <code>.claude/hooks/session-start.sh</code> copies after the organ-order change</a> — pyautomind · small</summary>
-
-```
-Use the start-dev skill. draft/maintenance/pyautomind/session_start_hook_copies_regen.md
 ```
 
 </details>
@@ -3067,7 +3035,6 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-14 | filed | <a href="draft/feature/cortex/human_readable_projects_dashboard.md">Human-readable Cortex Projects dashboard</a> |
 | 2026-10-14 | filed | <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> |
 | 2026-10-09 | filed | <a href="draft/bug/pyautobrain/profiling_compile_drift_point_vs_point.md">Profiling conductor compile drift compares one point against one point</a> |
 | 2026-10-08 | filed | <a href="draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md"><code>JAX_ENABLE_X64=False</code> is overridden to True, so the fp32 inference…</a> |
@@ -3077,21 +3044,22 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
+| 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
 | 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
-| 2026-09-29 | filed | <a href="draft/maintenance/pyautomind/session_start_hook_copies_regen.md">Regenerate the 28 drifted <code>.claude/hooks/session-start.sh</code> copies…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
 | 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
 | 2026-09-26 | filed | <a href="draft/refactor/workspaces/abell_1201_local_cleanup.md">Repo cleanup: retire the Abell 1201 worktree and local raw data</a> |
 | 2026-09-25 | filed | <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main…</a> |
+| 2026-09-25 | filed | <a href="draft/maintenance/workspaces/hpc_cache_off_home_phase2_euclid.md">Keep caches off <code>$HOME</code> on HPC — phase 2 remainder: euclid pipeline…</a> |
+| 2026-09-24 | filed | <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> |
 
 </details>
 
@@ -3144,7 +3112,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-128 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+127 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3166,7 +3134,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autolens_profiling/gradient_cost_hazard_on_ral_cpu_value.md`
 - `draft/feature/autolens_workspace/cluster_point_solver_validation_check.md`
 - `draft/feature/autolens_workspace/pointsolver_grid_extent_per_package.md`
-- `draft/feature/cortex/human_readable_projects_dashboard.md`
 - `draft/feature/cortex/output_summary.md`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md`
 - `draft/feature/jax_substructure/5_prng_key_vmap_noise.md`
@@ -3189,7 +3156,8 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_adaptive_zeroed_ring_guard_row_mismatch.md`
 - `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md`
-- _… and 88 more_
+- `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
+- _… and 87 more_
 
 </details>
 
