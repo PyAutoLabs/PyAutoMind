@@ -90,6 +90,10 @@ LEDGER_FILES = (
     "dashboard.html",
     "state.json",
     "queue.md",
+    # The close-out guard's generated flags and the human's dismissals of
+    # them (PyAutoBrain `intake looks-shipped`) — ledger, like queue.md.
+    "looks_shipped.json",
+    "looks_shipped_dismissed.md",
 )
 
 # Names that are ledger by location but executable by collection. The ledger
@@ -254,8 +258,11 @@ def merge_entries(base: str, ours: str, theirs: str):
 
 
 # Renders of the ledger, never sources: on a conflict they take main's side and
-# are regenerated on the merged tree by the caller.
-GENERATED_FILES = ("dashboard.md", "dashboard.html", "state.json", "complete/index.md")
+# are regenerated on the merged tree by the caller. `looks_shipped.json` is the
+# exception to the second half: it needs every sibling checkout to rebuild, so
+# main's side simply stands until the next `looks_shipped.yml` run.
+GENERATED_FILES = ("dashboard.md", "dashboard.html", "state.json", "complete/index.md",
+                   "looks_shipped.json")
 
 
 def _git(*args, cwd):

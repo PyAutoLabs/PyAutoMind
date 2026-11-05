@@ -43,6 +43,8 @@ on:
       - "dashboard.md"
       - "dashboard.html"
       - "state.json"
+      - "looks_shipped.json"
+      - "looks_shipped_dismissed.md"
   pull_request:
     paths:
       - "draft/**"
@@ -58,6 +60,8 @@ on:
       - "dashboard.md"
       - "dashboard.html"
       - "state.json"
+      - "looks_shipped.json"
+      - "looks_shipped_dismissed.md"
   workflow_dispatch:
 
 # contents: write is needed by the self-heal push on main; PR runs never push.

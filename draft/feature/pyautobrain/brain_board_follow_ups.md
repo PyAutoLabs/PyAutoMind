@@ -42,6 +42,11 @@ Remaining candidates — pick up only when a real morning shows the need:
 2. **Sweep lists single-sourced** — `bin/overnight_status.sh` and
    `bin/version_drift.sh` read `config/policy.yaml board:` instead of their
    own copies (the keep-in-step comments then come out).
+   **Overtaken 2026-11-05:** both `board:` lists were deleted from
+   policy.yaml (41ec5c5 `version_stamps`, e6a48ff `overnight_jobs`) and the
+   board no longer collects either sweep, so each script's list is the only
+   copy. The stale keep-in-step comments were corrected on PyAutoBrain branch
+   `claude/pyautomind-queue-management-vdiv9c`; nothing else remains here.
 3. **Whatever a week of mornings surfaces** — append here before starting.
 
 Filed separately, because it is not a nit: **`board_without_gh.md`** (umbrella archived 2026-09-17 under `complete/archive/epics/`; phase 2 shipped 2026-11-03, record `complete/2026/11/board-without-gh-phase2-legs.md`) — the
