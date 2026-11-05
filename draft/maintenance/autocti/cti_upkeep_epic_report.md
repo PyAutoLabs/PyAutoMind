@@ -105,7 +105,7 @@ PyAutoCTI (`heart/readiness.py load_release_gate_names`).
 | Heart local `smoke:` runner | yes | yes (`autocti`, `autocti_test` with `arcticpy: true`) |
 | Navigator Check | yes | yes |
 
-Open bug member: `draft/bug/autocti_workspace/dataset_1d_results_database_examples_drift.md`
+Open bug member: `draft/bug/autocti_workspace/dataset_1d_results_database_examples_drift.md` (DONE 2026-11-05 → `complete/2026/11/cti-database-examples-drift.md`)
 (large, formalised, unattended-ready).
 
 ## 5. Profiling

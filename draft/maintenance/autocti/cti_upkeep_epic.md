@@ -143,7 +143,7 @@ Library first; one issue per repo per phase; each phase routes through
    scripts to a representative set across `dataset_1d/`, `imaging_ci/`,
    `plot/`, `advanced/database` within Heart's smoke time budget, and the
    results/database drift bug (member:
-   `draft/bug/autocti_workspace/dataset_1d_results_database_examples_drift.md`).
+   `draft/bug/autocti_workspace/dataset_1d_results_database_examples_drift.md`, DONE 2026-11-05 → `complete/2026/11/cti-database-examples-drift.md`).
    3b autocti_workspace_test rebuilt to the autolens_workspace_test shape
    (`run_all_scripts.sh`, `no_run.yaml`, recover-the-input-traps scripts for 1D
    and 2D fits, aggregator round trip, `remove_cti`, cosmic-ray flagging);
@@ -221,7 +221,7 @@ Library first; one issue per repo per phase; each phase routes through
   2b `draft/maintenance/pyautoheart/arcticpy_pin_bump_after_upstream_release.md` (blocked by the upstream release);
   2c DONE 2026-11-05 `complete/2026/11/arcticpy-lazy-import.md` (PyAutoCTI#118 merged) and
   `draft/docs/autocti/installation_docs_arcticpy_recipe.md` (blocked by 2b)
-- Phase 3 (started 2026-11-05 while 2b waits on upstream): DONE 2026-11-05 `complete/2026/11/cti-fits-fit-output-dir.md` (PyAutoCTI#120 + autocti_workspace#41; FAST_PLOTS back to 1); `active/dataset_1d_results_database_examples_drift.md` (PyAutoCTI#121, IN DEV)
+- Phase 3 (started 2026-11-05 while 2b waits on upstream): DONE 2026-11-05 `complete/2026/11/cti-fits-fit-output-dir.md` (PyAutoCTI#120 + autocti_workspace#41; FAST_PLOTS back to 1); dataset_1d results/database drift DONE 2026-11-05 `complete/2026/11/cti-database-examples-drift.md` (PyAutoCTI#122 + autocti_workspace#42; new follow-up `draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md`)
 - Phase 5: `draft/bug/autocti_visualization/render_yml_blocked_until_pyautocti_release.md`,
   `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`,
   `draft/docs/autocti/api_rst_rewrite.md`
@@ -240,3 +240,4 @@ Library first; one issue per repo per phase; each phase routes through
 - 2026-11-05 — phase 1 CLOSED (complete/2026/11/cti-release-train-wiring.md); nightly is armed, so the first autocti release rides the 2026-11-06 02:00 UTC nightly with no manual release. Phase 2 filed as 4 members; 2c lazy import starts first because 2a needs the human's go-ahead for a third-party PR and 2b waits on upstream.
 - 2026-11-05 — 2c lazy import MERGED (PyAutoCTI#118, complete/2026/11/arcticpy-lazy-import.md). 2a upstream PR jkeger/arctic#73 open; the human asks Massey for 2.7. 2b and the install docs wait on that release.
 - 2026-11-05 — phase 3 started while 2b waits on upstream: fits_fit FAST_PLOTS fix MERGED (PyAutoCTI#120 + autocti_workspace#41, glance auto-merge, complete/2026/11/cti-fits-fit-output-dir.md). Release profile is back to FAST_PLOTS=1.
+- 2026-11-05 — dataset_1d results/database drift MERGED (PyAutoCTI#122 + autocti_workspace#42, glance auto-merge, complete/2026/11/cti-database-examples-drift.md). CTIAgg returns a per-dataset list for factor-graph fits (human ruling); the ignored-instance bug is fixed; smoke list is now 6. Follow-up: draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md. Phase 3 remaining: 3a smoke breadth (imaging_ci/plot), 3b workspace_test rebuild + legacy/ via Gut (R3), 3c docs.yml + ci_timing; deferred from p1: Heart workspace-validation/release-integrate rows, run_all.

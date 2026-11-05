@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2139 records across 11 buckets.
+2140 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -135,6 +135,7 @@ markers; everything below GENERATED is rebuilt.
 - [brain-hygiene-cleanup-bugs](2026/11/brain-hygiene-cleanup-bugs.md)
 - [chapter2-continuation](2026/11/chapter2-continuation.md) — All continuation scope merged: Tutorials 5 and 6, optional speed and runnable model_centred prior passing, sum…
 - [cloud-validation-rehearsal-clock-skew](2026/11/cloud-validation-rehearsal-clock-skew.md)
+- [cti-database-examples-drift](2026/11/cti-database-examples-drift.md)
 - [cti-fits-fit-output-dir](2026/11/cti-fits-fit-output-dir.md)
 - [cti-likelihood-pins](2026/11/cti-likelihood-pins.md) — cti-upkeep phase 0b
 - [cti-release-train-wiring](2026/11/cti-release-train-wiring.md)
