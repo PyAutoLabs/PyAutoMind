@@ -28,7 +28,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      # Registry rows point at issues and PRs across the org, private repos
+      # included (ECLIPSE_lens_catalogue#4 404'd daily under github.token, which
+      # reads only this repo). Cross-repo work mints the org App token
+      # (policy/github_tokens.md): owner-wide, read-only, minted right before use.
+      - uses: actions/create-github-app-token@v3
+        id: app
+        with:
+          client-id: ${{ vars.APP_CLIENT_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          owner: PyAutoLabs
+          permission-issues: read
+          permission-pull-requests: read
       - name: registry state vs GitHub (closed issues / merged pr-open PRs still listed pending)
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ steps.app.outputs.token }}
         run: python3 scripts/lifecycle.py issues
