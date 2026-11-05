@@ -1120,7 +1120,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/clean_slate_packaging_grouped_layout.md">clean_slate.sh --packaging silently finds nothing on the grouped repo layout</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/586">issue #586</a> — issued 2026-11-05 — library-dev</summary>
+<details><summary>📋 <a href="active/clean_slate_packaging_grouped_layout.md">clean_slate.sh --packaging silently finds nothing on the grouped repo layout</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/586">issue #586</a> — issued 2026-11-05 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/587">PyAutoBrain#587</a></summary>
 
 ```
 Use the start-dev skill. active/clean_slate_packaging_grouped_layout.md
@@ -1160,7 +1160,7 @@ Use the start-dev skill. active/r2_pages_function_access.md
 
 </details>
 
-<details><summary>📋 <a href="active/registry_reconcile_private_repo_issue_404.md">Mind Registry Reconcile red daily: workflow token cannot read a private-repo issue</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/537">issue #537</a> — issued 2026-11-05 — library-dev</summary>
+<details><summary>📋 <a href="active/registry_reconcile_private_repo_issue_404.md">Mind Registry Reconcile red daily: workflow token cannot read a private-repo issue</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/537">issue #537</a> — issued 2026-11-05 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/538">PyAutoMind#538</a></summary>
 
 ```
 Use the start-dev skill. active/registry_reconcile_private_repo_issue_404.md
