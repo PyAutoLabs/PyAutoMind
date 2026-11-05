@@ -10,6 +10,19 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/587
 - tier: judge — merge mode: human /prm
 
+## arcticpy-lazy-import
+- issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/117
+- issued: 2026-11-05
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/arcticpy-lazy-import
+- repos:
+  - PyAutoCTI: feature/arcticpy-lazy-import
+- prompt: active/arcticpy_lazy_import.md
+- epic: cti-upkeep (phase 2c)
+- tier: judge — merge mode: human /prm
+- plan: APPROVED 2026-11-05
+
 ## registry-reconcile-app-token
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/537
 - issued: 2026-11-05
