@@ -100,3 +100,48 @@
 - prompt: active/likelihood_lifecycle_p4e_ingest.md
 - epic: likelihood-lifecycle (phase 4e)
 - tier: judge — merge mode: human /prm; PR waits for the remaining phase-4 legs (human 2026-11-05)
+
+## intake-memory-citation-floor
+- issue: none yet — issue + PR await human approval (session may not open PRs unasked)
+- issued: 2026-11-05
+- session: https://claude.ai/code/session_016nhQ8MpP3MhbHCt6dL6o6r
+- location: claude.ai cloud session (ephemeral container; work lives on the pushed branch)
+- status: library-dev — implemented + tests green on branch, not merged
+- prompt: active/intake_injects_memory_citations_that_match_on.md
+- repos:
+  - PyAutoBrain: claude/pyautomind-queue-management-vdiv9c
+- tier: judge — merge mode: human /prm
+
+## batch-slice
+- issue: none yet — issue + PR await human approval (session may not open PRs unasked)
+- issued: 2026-11-05
+- session: https://claude.ai/code/session_016nhQ8MpP3MhbHCt6dL6o6r
+- location: claude.ai cloud session (ephemeral container; work lives on the pushed branch)
+- status: library-dev — implemented + tests green on branch, not merged
+- prompt: active/batch_slice.md
+- repos:
+  - PyAutoBrain: claude/pyautomind-queue-management-vdiv9c
+- tier: judge — merge mode: human /prm
+
+## docs-conductor
+- issue: none yet — issue + PR await human approval (session may not open PRs unasked)
+- issued: 2026-11-05
+- session: https://claude.ai/code/session_016nhQ8MpP3MhbHCt6dL6o6r
+- location: claude.ai cloud session (ephemeral container; work lives on the pushed branch)
+- status: library-dev — implemented + tests green on branch, not merged
+- prompt: active/docs_conductor.md
+- repos:
+  - PyAutoBrain: claude/pyautomind-queue-management-vdiv9c
+- tier: judge — merge mode: human /prm
+
+## close-out-guard
+- issue: none yet — issue + PR await human approval (session may not open PRs unasked)
+- issued: 2026-11-05
+- session: https://claude.ai/code/session_016nhQ8MpP3MhbHCt6dL6o6r
+- location: claude.ai cloud session (ephemeral container; work lives on the pushed branch)
+- status: library-dev — implemented + tests green on branch, not merged
+- prompt: active/close_out_guard_catch_shipped_work_whose.md
+- repos:
+  - PyAutoBrain: claude/pyautomind-queue-management-vdiv9c
+  - PyAutoMind: claude/pyautomind-queue-management-vdiv9c
+- tier: judge — merge mode: human /prm

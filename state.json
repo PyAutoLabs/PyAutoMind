@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-11-05T22:17:24Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 12 in flight",
+  "updated": "2026-11-05T22:57:25Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -105,9 +105,9 @@
     },
     {
       "severity": "info",
-      "text": "pick: Close-out guard: catch shipped work whose Mind draft was never closed, whatever\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautobrain/close_out_guard_catch_shipped_work_whose.md",
-      "prompt": "Use the start-dev skill. draft/feature/pyautobrain/close_out_guard_catch_shipped_work_whose.md"
+      "text": "pick: Deep research: Can we speed up Delaunay in PyAutoArray?",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autoarray/delaunay_research.md",
+      "prompt": "Use the start-dev skill. draft/research/autoarray/delaunay_research.md"
     },
     {
       "severity": "info",
