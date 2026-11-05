@@ -1,3 +1,26 @@
+## brain-hygiene-cleanup-bugs
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/586
+- issued: 2026-11-05
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/brain-hygiene-cleanup-bugs
+- repos:
+  - PyAutoBrain: feature/brain-hygiene-cleanup-bugs
+- prompt: active/clean_slate_packaging_grouped_layout.md
+- prompt: active/hygiene_tidy_recommends_deleting_claimed_branches.md
+- tier: judge — merge mode: human /prm
+
+## registry-reconcile-app-token
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/537
+- issued: 2026-11-05
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/registry-reconcile-app-token
+- repos:
+  - PyAutoMind: feature/registry-reconcile-app-token
+- prompt: active/registry_reconcile_private_repo_issue_404.md
+- tier: judge — merge mode: human /prm
+
 
 ## magnification-maps-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/818
@@ -45,6 +68,7 @@
 - merged: euclid#117 (2a catalogue frame fix) 2026-10-31
 - run: 2c DONE — 413892 live bundle (29,929 coolest regenerated, WCS on 74,772 FITS, 0 errors); re-package 414041 → inspect/dr1_catalogue_v5_release_skyframe (20 parts, 88.24 GB, verified); JSON hard-rule diff vs 10-29 PASSED (inspect/json_diff_skyframe_vs_20261029.txt); 414110 relink rebuilds docs with project-relative snapshot.json paths (2026-11-03). R2 upload deferred to the very end (human 2026-11-03). NEXT 2d north-up re-render pilot (~50, human review), 2b docs
 - tier: judge — merge mode: human /prm
+- hotfix (human-authorized 2026-11-05, under this claim): euclid#119 — catalogue parity `_EmptyRow` stub gains parameter_paths/reasons/latent_summary (Tests red since 2026.11.4.1); branch feature/catalogue-parity-stub, worktree ~/Code/PyAutoLabs-wt/sky-orientation-p2/euclid_strong_lens_modeling_pipeline
 - 2d-plan: APPROVED by human 2026-11-03 ~18:10 (not started; nothing written yet). scripts/tools/render_north_up.py on branch feature/sky-orientation-p2d: read each zip's image/dataset.fits + files/tracer.json + image/adapt_images.fits + image/adapt_image_plane_mesh_grids.fits; flipud arrays/adapt images, mesh grid + positions y->-y, tracer via sky_frame.plus_y_north_from; re-solve FitImaging at max-L (no search); WITNESS log-L == stored to ~1e-6 every lens, data panel vs rgb_north_up.jpg, positions on arcs; library subplot_fit + image_with_positions, util.subplot_rgb on rgb_north_up.jpg, segmentation from FITS, fit_multi_wavelength per band from output_sed; N/E compass. Pilot ~50 (paper lenses + grade-stratified random + asymmetric) as 2-CPU/5GB ral jobs -> inspect/north_up_pilot_20261103/ + side-by-side review page. Then full run, re-package, 2b docs; R2 upload last.
 
 ## results-library-p5a-assistant
