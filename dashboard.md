@@ -12,7 +12,7 @@
 | [Epics](#epics) | 21 |
 | [In flight](#in-flight) | 7 |
 | [Planned](#planned) | 12 |
-| [Backlog](#backlog) | 296 |
+| [Backlog](#backlog) | 300 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -224,7 +224,7 @@ Use the start-dev skill. draft/maintenance/pyautomemory/canonical_key_todo_sweep
 Long-running multi-phase programmes. Each epic's 📋 prompt has the assistant read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
 
 <details>
-<summary><b>CTI upkeep parity — release-train wiring and first modern <code>autocti</code> release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), <code>autocti_profiling</code> + Pulse <code>cti</code> row, figures/assistant/docs currency, hygiene</b> — 5 queued prompt(s), in order</summary>
+<summary><b>CTI upkeep parity — release-train wiring and first modern <code>autocti</code> release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), <code>autocti_profiling</code> + Pulse <code>cti</code> row, figures/assistant/docs currency, hygiene</b> — 9 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>CTI upkeep parity — release-train wiring and first modern <code>autocti</code> release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), <code>autocti_profiling</code> + Pulse <code>cti</code> row, figures/assistant/docs currency, hygiene</b> — ledger: `draft/maintenance/autocti/cti_upkeep_epic.md` — FILED 2026-11-04 — survey in draft/maintenance/autocti/cti_upkeep_epic_report.md; R1–R6 RULED 2026-11-04 (arcticpy fixed upstream…</summary>
 
@@ -270,6 +270,38 @@ Use the start-dev skill. draft/bug/autocti_visualization/render_yml_blocked_unti
 
 ```
 Use the start-dev skill. draft/docs/autocti/api_rst_rewrite.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autocti/installation_docs_arcticpy_recipe.md">autocti docs: rewrite installation pages around the arcticpy recipe</a> — autocti · small · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/docs/autocti/installation_docs_arcticpy_recipe.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autocti/arcticpy_lazy_import.md">autocti: <code>import autocti</code> works without arcticpy (lazy arcticpy import)</a> — autocti · medium · human-required · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/autocti/arcticpy_lazy_import.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/pyautoheart/arcticpy_pin_bump_after_upstream_release.md">Heart/DNA: bump the arcticpy pin after the upstream release, re-pin CTI values</a> — pyautoheart · medium · human-required · normal</summary>
+
+```
+Use the start-dev skill. draft/maintenance/pyautoheart/arcticpy_pin_bump_after_upstream_release.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/release/arcticpy/upstream_packaging_pr.md">arcticpy: upstream packaging PR to jkeger/arctic + request a modern PyPI release</a> — arcticpy · medium · human-required · normal</summary>
+
+```
+Use the start-dev skill. draft/release/arcticpy/upstream_packaging_pr.md
 ```
 
 </details>
@@ -1243,7 +1275,7 @@ Use the start-dev skill. draft/bug/pyautobrain/hygiene_tidy_recommends_deleting_
 
 ## Backlog
 
-Lanes: any 286 · local-dev 8
+Lanes: any 290 · local-dev 8
 
 <a id="human-review"></a>
 <details>
@@ -3192,13 +3224,14 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-127 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+130 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
 
 - `draft/feature/autoarray/adapt_linear_default_flip.md`
 - `draft/feature/autoarray/rectangular_multi_submesh.md`
+- `draft/feature/autocti/arcticpy_lazy_import.md`
 - `draft/feature/autofit/model_figures_epic.md`
 - `draft/feature/autofit/results_library_epic_report.md`
 - `draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md`
@@ -3236,12 +3269,11 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/reconstruction_noise_map_truncated_posterior.md`
 - `draft/bug/autoarray/rectangular_adaptive_zeroed_ring_guard_row_mismatch.md`
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
-- `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`
-- _… and 87 more_
+- _… and 90 more_
 
 </details>
 
-64 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+68 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3252,6 +3284,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autoarray/interferometer_curvature_preload_phase1.md — unknown theme keyword(s): inversion, likelihood-profiling`
 - `draft/feature/autoarray/interferometer_numba_gate_retune_70.md — unknown theme keyword(s): config`
 - `draft/feature/autoarray/source_clumps_robust_scale.md — unknown theme keyword(s): source-reconstruction`
+- `draft/feature/autocti/arcticpy_lazy_import.md — unknown theme keyword(s): install`
 - `draft/feature/autofit/certified_solver_batched_guard_c2.md — unknown theme keyword(s): inversion`
 - `draft/feature/autofit/results_library_epic.md — unknown theme keyword(s): hpc, euclid, results, aggregator`
 - `draft/feature/autofit/results_library_epic_report.md — unknown theme keyword(s): results, euclid`
@@ -3300,8 +3333,11 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/refactor/autolens/cache_readers_fall_back_to_zip_member.md — unknown theme keyword(s): aggregator, paths`
 - `draft/refactor/autolens/witt_wynne_solver_library_home.md — unknown theme keyword(s): euclid`
 - `draft/refactor/autonerves/config_yaml_parse_cache.md — unknown theme keyword(s): performance, ci`
+- `draft/docs/autocti/installation_docs_arcticpy_recipe.md — unknown theme keyword(s): install, docs`
+- `draft/release/arcticpy/upstream_packaging_pr.md — unknown theme keyword(s): install, upstream`
 - `draft/maintenance/autocti/cti_upkeep_epic.md — unknown theme keyword(s): infrastructure`
 - `draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md — unknown theme keyword(s): euclid, docs`
+- `draft/maintenance/pyautoheart/arcticpy_pin_bump_after_upstream_release.md — unknown theme keyword(s): install`
 - `draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md — unknown theme keyword(s): jax-grad`
 - `draft/research/autofit/hpc_campaign_epic.md — unknown theme keyword(s): hpc, euclid, carbon`
 - `draft/research/autofit/search_extensibility_epic.md — unknown theme keyword(s): searches, jax, documentation, inference`

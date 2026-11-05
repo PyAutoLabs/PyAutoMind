@@ -217,6 +217,10 @@ Library first; one issue per repo per phase; each phase routes through
 
 - Phase 0: 0b DONE 2026-11-04 — `complete/2026/11/cti-likelihood-pins.md` (autocti_workspace_test#25)
 - Phase 1: DONE 2026-11-05 — `complete/2026/11/cti-release-train-wiring.md` (PyAutoHands#332; Nerves#210, Hands#333, Brain#585, Heart#323, Mind#535, autocti_workspace#40; TestPyPI rehearsal run 42011123173 passed, 6 wheels). Scope deferred to p3/5: Heart workspace-validation/release-integrate rows, run_all, docs-build mapping. New phase-3 member: `draft/bug/autocti/fits_fit_missing_output_dir_under_fast_plots.md`. First modern autocti PyPI release rides the next lockstep release.
+- Phase 2 (filed 2026-11-05): 2a `draft/release/arcticpy/upstream_packaging_pr.md` (outward-facing, human go-ahead needed);
+  2b `draft/maintenance/pyautoheart/arcticpy_pin_bump_after_upstream_release.md` (blocked by the upstream release);
+  2c `draft/feature/autocti/arcticpy_lazy_import.md` (independent, can start now) and
+  `draft/docs/autocti/installation_docs_arcticpy_recipe.md` (blocked by 2b)
 - Phase 3: `draft/bug/autocti_workspace/dataset_1d_results_database_examples_drift.md`
 - Phase 5: `draft/bug/autocti_visualization/render_yml_blocked_until_pyautocti_release.md`,
   `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`,
@@ -233,3 +237,4 @@ Library first; one issue per repo per phase; each phase routes through
 - 2026-11-04 — human ruled R1–R6 (fix arcticpy upstream + Massey release;
   lazy import if it works; legacy/ via Gut; 3.14 deferred; public
   autocti_profiling; lockstep from phase 1). Phase 1 un-blocked.
+- 2026-11-05 — phase 1 CLOSED (complete/2026/11/cti-release-train-wiring.md); nightly is armed, so the first autocti release rides the 2026-11-06 02:00 UTC nightly with no manual release. Phase 2 filed as 4 members; 2c lazy import starts first because 2a needs the human's go-ahead for a third-party PR and 2b waits on upstream.
