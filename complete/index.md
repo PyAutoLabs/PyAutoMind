@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2170 records across 11 buckets.
+2171 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -209,6 +209,7 @@ markers; everything below GENERATED is rebuilt.
 - [sersic-products-read-sed-output-dir](2026/11/sersic-products-read-sed-output-dir.md) — already shipped — euclid_strong_lens_modeling_pipeline 126167b00 (2026-10-05) "catalogue: read Sersic fits fro…
 - [session-start-hook-copies-regen](2026/11/session-start-hook-copies-regen.md) — shipped, closed. The 2026-09-29 sweep PRs landed. On HEAD of all 27 swept repos, `.claude/hooks/session-start.…
 - [shift-digest-readable-picks](2026/11/shift-digest-readable-picks.md) — pilot 4c follow-up; issue PyAutoBrain#579
+- [shift-opens-at-dispatched](2026/11/shift-opens-at-dispatched.md) — pilot 4c follow-up; issue PyAutoBrain#589
 - [simulate-if-needed-workspace-sweep](2026/11/simulate-if-needed-workspace-sweep.md)
 - [tutorial-link-sweep](2026/11/tutorial-link-sweep.md)
 - [workspace-hygiene-sweep-1104](2026/11/workspace-hygiene-sweep-1104.md)

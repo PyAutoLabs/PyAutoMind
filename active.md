@@ -92,18 +92,6 @@
 - compute-tracking: RAL 413991 (item 2, group/delaunay/euclid CPU, legs A sparse@main / B dense@main / C sparse@tag 2026.10.25.1; partition ral; human go 2026-11-02). RAL worktree /mnt/ral/jnightin/autolens_profiling_wt/gradient-correctness-sweep (9d2ee2d3), private libs /mnt/ral/jnightin/PyAuto_wt/gradient-correctness-sweep; rows under output/p517_item2/<leg>/
 - tier: judge — merge mode: human /prm
 
-## shift-opens-at-dispatched
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/589
-- issued: 2026-11-05
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/shift-opens-at-dispatched
-- repos:
-  - PyAutoBrain: feature/shift-opens-at-dispatched
-- prompt: active/shift_opens_at_dispatched.md
-- epic: autonomous-orchestrators (pilot 4c follow-up)
-- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary (non-PASS Witness → human /prm)
-
 ## autonomous-orchestrators-p4c
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/574
 - issued: 2026-11-04

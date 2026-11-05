@@ -520,7 +520,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 78 (stage 1: 78, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
+Count toward 20: 79 (stage 1: 79, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -627,6 +627,7 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-11-05 | numba-fork-safe-threading (PyAutoArray#677) | glance | tests pass (2295) / smoke pass (laptop 2-core Nautilus DelaunayNN) / review self-only (no independent leg) / heart STALE (release validation stale) / witness pass (RAL 414189) | merged-unchanged | 1 |
 | 2026-11-05 | cti-fits-fit-output-dir (PyAutoCTI#120 / autocti_workspace#41) | glance | tests 277p serial + CI unittest 3.12/3.13/nojax / smoke 3/3 release profile FAST_PLOTS=1 + CI smoke 3.12/3.13 / review CLEAN (independent separate-model subagent) / heart STALE (release validation stale) / witness PASS | merged-unchanged | 1 |
 | 2026-11-05 | cti-database-examples-drift (PyAutoCTI#122 / autocti_workspace#42) | glance | tests 279p serial + CI unittest 3.12/3.13/nojax / smoke 6/6 profile_smoke+profile_release + CI smoke 3.12/3.13 / review FINDINGS 3 LOW (1 fixed, 2 judged; independent separate-model subagent) / heart STALE (release validation stale) / witness PASS | merged-unchanged | 1 |
+| 2026-11-05 | shift-opens-at-dispatched (PyAutoBrain#590) | glance | tests 1575p + control / smoke n/a (Brain organ) / review none / heart STALE human-ack / witness PASS | merged-unchanged | 1 |
 
 ## Unattended `glance` sub-window (stage 2) — opened 2026-11-04
 
