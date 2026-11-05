@@ -20,7 +20,6 @@
 - prompt: active/registry_reconcile_private_repo_issue_404.md
 - tier: judge — merge mode: human /prm
 
-
 ## magnification-maps-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/818
 - issued: 2026-11-02
