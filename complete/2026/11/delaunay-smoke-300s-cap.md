@@ -1,3 +1,9 @@
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/622
+- completed: 2026-11-06
+- summary: Already resolved; nothing was committed. Under the smoke profile `scripts/imaging/features/pixelization/delaunay.py` now takes 8.5–14.5 s on CI (autolens_workspace Smoke Tests 42204146257, 42013151044, 41909028032, 41905547291) and 60.2 s cold / 39.8 s warm locally on a fresh `main` worktree (756bddf8). The post-release PyAutoHands smoke list (run 41905710623, 42 scripts) no longer includes it. With PYAUTO_TEST_MODE=2 the seven Nautilus searches skip sampling, so the cold-run time is one-off cost: font cache, numba JIT, dataset simulation, fnnls. Witness met with no change; global 300 s cap unchanged. Shift 2026-11-06-pm (--auto, glance).
+
+## Original prompt
+
 # `imaging/features/pixelization/delaunay.py` sits on the 300 s smoke cap (330–354 s under the release profile)
 
 Type: bug
