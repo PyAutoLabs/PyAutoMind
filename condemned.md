@@ -61,6 +61,7 @@ a sweep), mirroring the Heart ↔ vitals template. See the decision:
 - [autofit_workspace_developer/ep-graphical-baselines](#autofit_workspace_developerep-graphical-baselines)
 - [autolens-profiling/linear-solver-p5-mapper-corpus-large-npz](#autolens-profilinglinear-solver-p5-mapper-corpus-large-npz)
 - [pyautobrain/board-one-click-update](#pyautobrainboard-one-click-update)
+- [autocti-workspace-test-legacy](#autocti-workspace-test-legacy)
 
 <!-- toc:end -->
 
@@ -566,3 +567,15 @@ One `##` block per item. Fields:
 - sweep-after: 2026-11-26
 - breaks-if-wrong: loses the `board_update/` Flask prototype (app.py, targets.py, Dockerfile, template, css/js); recoverable via `pyauto-gut recover pyautobrain-board-one-click-update` until voided.
 - archive-ref: refs/heads/archive/condemned/pyautobrain-board-one-click-update on PyAutoBrain origin (092e88a)
+
+## autocti-workspace-test-legacy
+- type: test
+- locator: autocti_workspace_test `legacy/` (139 files: tvac, temporal, euclid, validation, overview_output, config_2023, README) + top-level `imaging_ci/` (43 files: cosmics, temporal, profiling, simulators)
+- confidence: 0.95
+- reason: pre-resurrection Euclid VIS heritage (2022-2023) written against the pre-2025 PyAutoCTI API; not runnable and run by nothing. cti-upkeep ruling R3 (retire `legacy/` via Gut) plus a human ruling on 2026-11-06 to retire `imaging_ci/` with it. Replaced by the self-consistency checks in `scripts/` (autocti_workspace_test#26).
+- merged: no (deletion commit 61b9e87 on feature/cti-workspace-test-rebuild, PR pending)
+- condemned: 2026-11-06
+- sweep-after: 2026-12-06
+- breaks-if-wrong: loses the Euclid VIS calibration history (TVAC calibration scripts and notes, temporal trap-evolution studies, validation studies) if anyone needs to consult it; nothing executes it
+- archive-ref: `refs/heads/archive/condemned/autocti-workspace-test-legacy` @ `72970e78a2e0cb744b9a0f7e4a0e4e9322c553d8` (PyAutoGut; the same SHA is autocti_workspace_test's pre-purge main)
+
