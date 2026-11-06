@@ -1,3 +1,22 @@
+## cti-docs-yml-caller
+- issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/125
+- completed: 2026-11-06
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/325
+- library-pr: https://github.com/PyAutoLabs/PyAutoCTI/pull/126
+
+Merged 2026-11-06 by glance-tier auto-merge, Heart first (b72e7f17), then PyAutoCTI (08040ff5) after re-running its Docs leg against Heart main. Plan approved by the human; Heart STALE ("release validation stale: source moved since rehearsal (PyAutoNerves)") human-acknowledged for this ship. cti-upkeep phase 3c.
+
+- Heart `docs-build.yml`: `autocti) repo=PyAutoCTI; deps="PyAutoNerves PyAutoFit PyAutoArray"`, plus an `Install arcticpy` step gated on `inputs.package == 'autocti'` (the canonical install-arcticpy action, as in lib-tests.yml).
+- PLAN CHANGE (human ruling 2026-11-06): the plan said no arcticpy in the docs build. Measured without it, autosummary can't import the arcticpy-backed classes autocti re-exports (TrapInstantCapture, TrapSlowCapture, TrapInstantCaptureContinuum, ROEChargeInjection, ...), so their pages build empty: 147 warning lines vs 15 with it. The human chose installing it over baselining.
+- PyAutoCTI: `.github/workflows/docs.yml` thin caller (copy of PyAutoFit's MINUS its `generated-search-docs` job, which is autofit-only; watch for that when cloning callers); `docs/conf.py` PyAutoLens-style (no build-time cloning of rhayes777/Jammy2211 repos, no pyprojroot); `docs/requirements.txt` deleted (RTD installs `.[docs]`; no sibling keeps one); `docs/sphinx_warning_baseline.txt` = 15, which CI confirmed exactly.
+- Heart ci_timing already carried CTI rows (derived from required_workflows), so nothing was needed there.
+
+Evidence: CI `Sphinx warnings: 15 (baseline: 15)` green. Witness: a throwaway branch `witness/cti-docs-broken-entry` (workflow_dispatch, no PR) went red with `failed to import autocti.plot.subplot_this_does_not_exist`, then was deleted. Heart pytest 3.12/3.13 and PyAutoCTI unittest 3.12/3.13/nojax green.
+
+Finding: Read the Docs has not built PyAutoCTI since 2024-01-29 (public builds API; the webhook isn't firing), so the published docs predate the resurrection, 5c and 3c. This belongs to phase 5c's "RTD on the released version".
+
+## Original prompt
+
 # PyAutoCTI docs build in CI: docs.yml caller on Heart's docs-build.yml + Sphinx warning baseline
 
 Type: maintenance
