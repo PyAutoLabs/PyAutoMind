@@ -10,7 +10,7 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 21 |
-| [In flight](#in-flight) | 12 |
+| [In flight](#in-flight) | 11 |
 | [Planned](#planned) | 9 |
 | [Backlog](#backlog) | 239 |
 | [Recent](#recent) | 50 |
@@ -1092,14 +1092,6 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 ```
 Use the start-dev skill. active/r2_pages_function_access.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import autogalaxy before jax</a> — <a href="https://github.com/PyAutoLabs/autogalaxy_workspace_test/issues/133">issue #133</a> — issued 2026-09-17 — pr-open (awaiting human /prm — decision-taken, Autonomy: supervised)</summary>
-
-```
-Use the start-dev skill. active/rectangular_parity_absolute_bound_and_x64_import_order.md
 ```
 
 </details>
