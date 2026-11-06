@@ -101,3 +101,15 @@
 - prompt: active/likelihood_lifecycle_p4e_ingest.md
 - epic: likelihood-lifecycle (phase 4e)
 - tier: judge — merge mode: human /prm; PR waits for the remaining phase-4 legs (human 2026-11-05)
+
+## howtolens-stored-results
+- issue: https://github.com/PyAutoLabs/HowToLens/issues/130
+- issued: 2026-11-06
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/howtolens-stored-results
+- repos:
+  - HowToLens: feature/howtolens-stored-results
+- prompt: active/howtolens-stored-results.md
+- epic: howto-stored-results (phase 1 of 4: HowToLens ch2 + design gate)
+- tier: judge — merge mode: human /prm

@@ -1,5 +1,7 @@
 # HowTo series: ship stored fit results so notebooks run without sampling waits
 
+Issued: 2026-11-06
+Issue: https://github.com/PyAutoLabs/HowToLens/issues/130
 Type: docs
 Target: HowToLens
 Repos:
