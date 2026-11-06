@@ -1,3 +1,11 @@
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/354
+- completed: 2026-11-06
+- summary: RETIRED as obsolete, no change made. The gallery runner it targeted (`gallery/gallery_run.sh`, `gallery_build.py`) was deleted on 2026-09-30 (0dc177b, PyAutoEyes phase 5), and no `*visualization_upper.py` producer exists; lens figures now render in `autolens_visualization` and are collected by PyAutoEyes. The Witness asks for a DEFAULT_SCRIPTS line in a file that no longer exists.
+- found by: pilot live shift 2026-11-06-pm worker (parked with the question on autolens_workspace_test#354); human ruling 2026-11-06: "retire the gallery prompt".
+- leftover (not filed here): `pyauto-brain eyes survey`'s "Next action" still says to run the deleted `gallery/gallery_run.sh` (`PyAutoBrain/agents/conductors/eyes/_eyes.py:29,144`).
+
+## Original prompt
+
 # Gallery runner: add visualization_upper + decide the modeling_visualization_jit tier
 
 Type: feature
