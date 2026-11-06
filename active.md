@@ -83,19 +83,6 @@
 - compute-tracking: RAL 413991 (item 2, group/delaunay/euclid CPU, legs A sparse@main / B dense@main / C sparse@tag 2026.10.25.1; partition ral; human go 2026-11-02). RAL worktree /mnt/ral/jnightin/autolens_profiling_wt/gradient-correctness-sweep (9d2ee2d3), private libs /mnt/ral/jnightin/PyAuto_wt/gradient-correctness-sweep; rows under output/p517_item2/<leg>/
 - tier: judge — merge mode: human /prm
 
-## live-shift-worker-gaps
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/594
-- issued: 2026-11-06
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/live-shift-worker-gaps
-- repos:
-  - PyAutoBrain: feature/live-shift-worker-gaps
-- prompt: active/live_shift_worker_gaps.md
-- epic: autonomous-orchestrators (pilot 4c follow-up)
-- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary (non-PASS Witness → human /prm)
-
-
 ## autonomous-orchestrators-p4c
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/574
 - issued: 2026-11-04
