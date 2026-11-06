@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 21 |
-| [In flight](#in-flight) | 11 |
+| [In flight](#in-flight) | 12 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 240 |
+| [Backlog](#backlog) | 239 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -1096,6 +1096,14 @@ Use the start-dev skill. active/r2_pages_function_access.md
 
 </details>
 
+<details><summary>📋 <a href="active/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import autogalaxy before jax</a> — <a href="https://github.com/PyAutoLabs/autogalaxy_workspace_test/issues/133">issue #133</a> — issued 2026-09-17 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/rectangular_parity_absolute_bound_and_x64_import_order.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/results_library_p5a_assistant.md">Issued: 2026-11-02</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/176">issue #176</a> — issued 2026-11-02 — workspace-shipped, awaiting-merge (judge → human /prm; wiki-currency waits on a PyAutoFit release) — PRs: <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/177">autolens_assistant#177</a></summary>
 
 ```
@@ -1195,7 +1203,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 231 · local-dev 6 · ral 1
+Lanes: any 230 · local-dev 6 · ral 1
 
 <a id="human-review"></a>
 <details>
@@ -1246,7 +1254,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>bug</b> — 52</summary>
+<summary><b>bug</b> — 51</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1404,14 +1412,6 @@ Use the start-dev skill. draft/bug/autofit/visualization_warmup_swallowed_except
 
 ```
 Use the start-dev skill. draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md">rectangular.py parity contract: absolute-nats bound, and import autogalaxy before jax</a> — workspaces · easy · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/bug/workspaces/rectangular_parity_absolute_bound_and_x64_import_order.md
 ```
 
 </details>
