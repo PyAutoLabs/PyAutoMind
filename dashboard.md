@@ -12,7 +12,7 @@
 | [Epics](#epics) | 21 |
 | [In flight](#in-flight) | 11 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 238 |
+| [Backlog](#backlog) | 239 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 2 |
 
@@ -121,7 +121,7 @@ Use the start-dev skill. draft/research/autoarray/delaunay_research.md
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 80
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 81
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
@@ -1187,7 +1187,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 230 · local-dev 6
+Lanes: any 231 · local-dev 6
 
 <a id="human-review"></a>
 <details>
@@ -1238,7 +1238,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>bug</b> — 52</summary>
+<summary><b>bug</b> — 53</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1484,6 +1484,14 @@ Use the start-dev skill. draft/bug/workspaces/convolver_blurring_image_warning.m
 
 ```
 Use the start-dev skill. draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autofit/corner_anesthetic_takes_40_minutes_on_a.md">corner_anesthetic takes 40+ minutes on a 20-parameter model (HowToLens ch2 tutorial 2)</a> — autofit · medium · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/autofit/corner_anesthetic_takes_40_minutes_on_a.md
 ```
 
 </details>
