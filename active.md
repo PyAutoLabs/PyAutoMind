@@ -1,15 +1,3 @@
-## nfw-virial-mass-conc-jax
-- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/695
-- issued: 2026-11-06
-- session: claude-code desktop (WSL), ~/Science session (ID unavailable)
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/nfw-virial-mass-conc-jax
-- repos:
-  - PyAutoGalaxy: feature/nfw-virial-mass-conc-jax
-- prompt: active/nfw_virial_mass_conc_not_jax_traceable.md
-- claim-override: human overrode the PyAutoGalaxy claim of `magnification-maps-wiring` on 2026-11-06 ("can we prm the jax fix first?"); this task touches only `profiles/mass/dark/nfw_virial_mass_conc.py` + a new test
-- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
-
 
 ## magnification-maps-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/818
