@@ -12,7 +12,7 @@
 | [Epics](#epics) | 21 |
 | [In flight](#in-flight) | 10 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 239 |
+| [Backlog](#backlog) | 240 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 2 |
 
@@ -224,12 +224,20 @@ Use the start-dev skill. draft/feature/pyautohands/release_board_run_logs_enrich
 Long-running multi-phase programmes. Each epic's 📋 prompt has the assistant read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
 
 <details>
-<summary><b>CTI upkeep parity — release-train wiring and first modern <code>autocti</code> release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), <code>autocti_profiling</code> + Pulse <code>cti</code> row, figures/assistant/docs currency, hygiene</b> — 5 queued prompt(s), in order</summary>
+<summary><b>CTI upkeep parity — release-train wiring and first modern <code>autocti</code> release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), <code>autocti_profiling</code> + Pulse <code>cti</code> row, figures/assistant/docs currency, hygiene</b> — 6 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>CTI upkeep parity — release-train wiring and first modern <code>autocti</code> release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), <code>autocti_profiling</code> + Pulse <code>cti</code> row, figures/assistant/docs currency, hygiene</b> — ledger: `draft/maintenance/autocti/cti_upkeep_epic.md` — FILED 2026-11-04 — survey in draft/maintenance/autocti/cti_upkeep_epic_report.md; R1–R6 RULED 2026-11-04 (arcticpy fixed upstream…</summary>
 
 ```
 Continue the 'CTI upkeep parity — release-train wiring and first modern `autocti` release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), `autocti_profiling` + Pulse `cti` row, figures/assistant/docs currency, hygiene' epic. Its canonical state lives in draft/maintenance/autocti/cti_upkeep_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: seven phases, library first, one issue per repo per phase, one at a time: 0 census + rulings + 0b log-likelihood value pins in autocti_workspace_test (DONE 2026-11-04) → 1 release-train wiring + first modern release (Hands LIB_PROJECTS/release.yml/python_matrix/pre_build/COLAB_PROJECTS, Nerves setup_colab autocti with arcticpy pre-install, Heart release_gate true + integrate/validation/docs-build rows, wiki-currency + pyautocti-release dispatch) → 2 arcticpy modernisation (upstream jkeger/arctic packaging PR + 2.7 release; Heart pin bump; DNA spec; install docs; lazy-import ruling) → 3 integration parity (smoke_tests.txt 3→representative, workspace_test rebuild + legacy/ ruling, docs.yml, 3.14) → 4 autocti_profiling birth + Pulse day zero → 5 autocti_visualization PyPI mode + Eyes sign-off, assistant version/PENDING/wiki-currency, docs/api rewrite → 6 hygiene + close. Members: likelihood_value_pins (p0b, DONE → complete/2026/11/cti-likelihood-pins.md), cti_release_train_wiring (p1, DONE → complete/2026/11/cti-release-train-wiring.md), fits_fit_missing_output_dir_under_fast_plots (p3, DONE → complete/2026/11/cti-fits-fit-output-dir.md), dataset_1d_results_database_examples_drift (p3, DONE → complete/2026/11/cti-database-examples-drift.md), the two autocti_visualization bugs + api_rst_rewrite (p5). Boundaries: upkeep only, no CTI science; arcticpy pin stays in Heart install_arcticpy.sh only; never hand-dispatch release.yml.
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autocti_workspace/database_scripts_stale_sqlite_under_test_mode.md">autocti_workspace: database scripts delete the wrong .sqlite under test mode…</a> — autocti_workspace · easy · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/bug/autocti_workspace/database_scripts_stale_sqlite_under_test_mode.md
 ```
 
 </details>
@@ -1179,7 +1187,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 231 · local-dev 6
+Lanes: any 232 · local-dev 6
 
 <a id="human-review"></a>
 <details>
@@ -2759,7 +2767,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-63 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+64 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2790,6 +2798,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md — unknown theme keyword(s): inversion, sparse-operator, correctness`
 - `draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md — unknown theme keyword(s): sparse-operator`
 - `draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md — unknown theme keyword(s): source-reconstruction`
+- `draft/bug/autocti_workspace/database_scripts_stale_sqlite_under_test_mode.md — unknown theme keyword(s): smoke`
 - `draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md — unknown theme keyword(s): jax`
 - `draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md — unknown theme keyword(s): samples, factor-graph`
 - `draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md — unknown theme keyword(s): jax, nautilus`
