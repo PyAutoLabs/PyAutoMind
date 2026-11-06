@@ -28,6 +28,7 @@
 - worktree: ~/Code/PyAutoLabs-wt/r2-pages-function-access
 - repos:
   - ECLIPSE_lens_catalogue: feature/r2-pages-function-access
+- workspace-pr: https://github.com/PyAutoLabs/ECLIPSE_lens_catalogue/pull/5 (opened 2026-11-06; needs Production R2 binding DATA before merge)
 - tier: judge — merge mode: human /prm
 
 ## sky-orientation-p2
