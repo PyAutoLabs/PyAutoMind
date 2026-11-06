@@ -11,6 +11,7 @@
 - [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
 - [interferometer-primary-beam-persistence-mirror](#interferometer-primary-beam-persistence-mirror)
 - [point-plots-yaml-keys-assistant](#point-plots-yaml-keys-assistant)
+- [nfw-virial-mass-conc-jax](#nfw-virial-mass-conc-jax)
 
 <!-- toc:end -->
 
@@ -127,3 +128,13 @@
 - parent: complete/2026/10/point-plots-yaml-keys.md (HowToLens half merged 2026-10-22, HowToLens#99); no separate prompt file
 - scope: same `point_dataset` / `fit_point_dataset` block edit in `autolens_assistant/config/visualize/plots.yaml` as HowToLens; ship on its own branch `feature/point-plots-yaml-keys` once the claim clears
 
+
+## nfw-virial-mass-conc-jax
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/695
+- filed: 2026-11-06
+- prompt: active/nfw_virial_mass_conc_not_jax_traceable.md
+- classification: library (PyAutoGalaxy) — bug, single-file, direct fix
+- branch: feature/nfw-virial-mass-conc-jax (worktree ~/Code/PyAutoLabs-wt/nfw-virial-mass-conc-jax, not yet created)
+- blocked-by: PyAutoGalaxy claimed by `magnification-maps-wiring` (PyAutoLens#818); start via `/start_library` once that claim is released
+- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
+- stopgap: Science project `sdssj0946_subhalo` uses a project-local JAX-safe subclass (`scripts/nfw_m200c.py`) until this merges
