@@ -573,7 +573,7 @@ One `##` block per item. Fields:
 - locator: autocti_workspace_test `legacy/` (139 files: tvac, temporal, euclid, validation, overview_output, config_2023, README) + top-level `imaging_ci/` (43 files: cosmics, temporal, profiling, simulators)
 - confidence: 0.95
 - reason: pre-resurrection Euclid VIS heritage (2022-2023) written against the pre-2025 PyAutoCTI API; not runnable and run by nothing. cti-upkeep ruling R3 (retire `legacy/` via Gut) plus a human ruling on 2026-11-06 to retire `imaging_ci/` with it. Replaced by the self-consistency checks in `scripts/` (autocti_workspace_test#26).
-- merged: no (deletion commit 61b9e87 on feature/cti-workspace-test-rebuild, PR pending)
+- merged: yes (autocti_workspace_test#27, merge 4160e321, 2026-11-06)
 - condemned: 2026-11-06
 - sweep-after: 2026-12-06
 - breaks-if-wrong: loses the Euclid VIS calibration history (TVAC calibration scripts and notes, temporal trap-evolution studies, validation studies) if anyone needs to consult it; nothing executes it

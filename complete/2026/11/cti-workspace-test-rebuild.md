@@ -1,3 +1,25 @@
+## cti-workspace-test-rebuild
+- issue: https://github.com/PyAutoLabs/autocti_workspace_test/issues/26
+- completed: 2026-11-06
+- workspace-pr: https://github.com/PyAutoLabs/autocti_workspace_test/pull/27
+
+Merged 2026-11-06 (4160e321) by the human's `/prm` (judge tier). Heart STALE at ship time ("release validation incomplete: no rehearsal for current source"), human-acknowledged. Issue #26 closed. cti-upkeep phase 3b.
+
+- Retired via Gut (R3, plus a human plan-time ruling for `imaging_ci/`): `legacy/` (139 files) + top-level `imaging_ci/` (43). PyAutoGut ref `refs/heads/archive/condemned/autocti-workspace-test-legacy` @ 72970e78 (= the pre-purge main); `condemned.md` entry `autocti-workspace-test-legacy`, sweep-after 2026-12-06.
+- New checks (all assert; self-consistent with one arctic, so no new arcticpy-dependent literals; only the 0b pins move at the 2b bump):
+  `{dataset_1d,imaging_ci}/recover_input.py` (chi² = 0 at the truth, offsets worse, a density likelihood scan peaks at the truth; 2D covers parallel/serial/both),
+  `{dataset_1d,imaging_ci}/remove_cti.py` (round trip within 0.1% of the trail per direction; more iterations reduce the residual),
+  `imaging_ci/cosmic_ray_flagging.py` (all > 40σ cosmic-ray pixels flagged, under 1% false flags, the buffered mask covers every pixel contaminated above the read noise, measured by clocking with and without the cosmic rays),
+  `model_fit.py` x2 (the aggregator CTI equals the search result; imaging_ci had no round trip before).
+- Harness: run_all_scripts.sh, config/build/no_run.yaml (empty), config/build/profile_release.yaml (+ a real-plotting override for plot/subplots.py, which asserts its PNGs exist); smoke 5 → 10.
+- Plan deviation: a short real search can't reliably recover the density under profile_release (TEST_MODE=1 caps the sampler), so recover_input uses a deterministic likelihood scan instead.
+
+Evidence: fresh clone, profile_smoke 10/10 (142 s); profile_release 10/10 after the subplots override; run_all_scripts.sh with no failures; CI smoke 3.12/3.13 green. Every new assertion was shown to fail when its premise is broken (wrong sim model, wrong correction model, threshold ×100, missing serial buffer, missing parallel+diagonal buffers). Two of the first-draft cosmic checks were circular (a "bright" cut tied to the threshold; trail coverage tied to the mask's own settings) and were rewritten to be independent.
+
+Findings: (1) parallel+serial remove_cti plateaus at ~0.2 e- at pixel (0, 29), the first row's serial-overscan corner; each direction alone converges to ~1e-6 (the bound margin is 0.34 vs 0.49 e-, so watch it at the 2.7 bump). (2) The default 10-row cosmic-ray parallel buffer under-masks at density 10 / τ 5 (trails above the read noise for 11–17 rows, 61 px), but is fine at Euclid-like densities (the check uses the workspace example's traps).
+
+## Original prompt
+
 # autocti_workspace_test rebuild: integration checks to the autolens_workspace_test shape, legacy/ retired via Gut
 
 Type: maintenance
