@@ -39,3 +39,15 @@ def test_every_role_is_one_bounded_line():
 
 def test_the_leg_is_registered_under_its_label():
     assert repos_sync.MAP_BLOCKS == "organism-map blocks (generated)"
+
+
+def test_every_map_role_is_one_clause():
+    """The map is loaded by every organ session; `map_role` keeps each row to
+    one clause (the full role stays in `role` and ORGANISM.md)."""
+    _, repos = repos_sync.load_manifest(MIND)
+    for name, repo in repos.items():
+        if repo["category"] != "organ":
+            continue
+        assert repo.get("map_role"), name
+        assert len(repo["map_role"]) <= 100, (name, len(repo["map_role"]))
+        assert repo["map_role"] in repos_sync.system_map({}, repos), name

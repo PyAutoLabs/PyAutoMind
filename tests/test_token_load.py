@@ -101,3 +101,40 @@ def test_ambiguous_grouped_and_flat_checkout_fails_closed(tmp_path):
     proc = run(root, "report")
     assert proc.returncode == 2
     assert "ambiguous flat and grouped" in proc.stderr
+
+
+def test_four_organ_total_and_record_median_are_reported(tmp_path):
+    root, brain, mind = workspace(tmp_path, True)
+    for organ in ("PyAutoCortex", "PyAutoMemory"):
+        repo = root / "organs" / organ
+        (repo / ".git").mkdir(parents=True)
+        (repo / "AGENTS.md").write_text("rules\n")
+    for month, lengths in (("2026/10", (500,)), ("2026/11", (1, 3, 40))):
+        folder = mind / "complete" / month
+        folder.mkdir(parents=True)
+        for i, n in enumerate(lengths):
+            (folder / f"r{i}.md").write_text("x\n" * n)
+    report = json.loads(run(root, "report").stdout)
+    assert report["totals"]["organ_agents_tokens_approx"] == 8
+    assert report["totals"]["completion_records"] == {
+        "month": "2026/11", "records": 3, "median_lines": 3}
+    october = json.loads(run(root, "report", "--month", "2026/10").stdout)
+    assert october["totals"]["completion_records"]["median_lines"] == 500
+    check = run(root, "check", "--organ-agents-budget", "7",
+                "--record-median-budget", "2")
+    assert check.returncode == 1
+    violations = json.loads(check.stdout)["violations"]
+    assert any("organ AGENTS total: 8 > 7" in item for item in violations)
+    assert any("completion-record median (2026/11): 3 > 2" in item
+               for item in violations)
+
+
+def test_absent_cortex_and_memory_are_report_only(tmp_path):
+    root, _, _ = workspace(tmp_path, True)
+    report = json.loads(run(root, "check").stdout)
+    assert not report["violations"]
+    assert "missing" in report["organ_files"]["Cortex AGENTS"]
+    assert "organ_agents_tokens_approx" not in report["totals"]
+    check = run(root, "check", "--organ-agents-budget", "6000")
+    assert check.returncode == 1
+    assert "absent" in json.loads(check.stdout)["violations"][0]

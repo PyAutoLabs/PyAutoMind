@@ -3,6 +3,11 @@
 
 Approximate tokens are UTF-8 bytes / 4, rounded up. Report is read-only;
 ``check`` exits nonzero when a required file is missing or a budget is exceeded.
+It also reports the three numbers `reduce_session_token_load.md` targets: the
+four organs' AGENTS.md total, the core procedure lines, and the median
+completion-record length of the newest month. The Cortex/Memory AGENTS and the
+record median are report-only unless their budget flag is given, so Mind-only
+CI (no sibling organs) still passes ``check``.
 The root may be grouped or flat. Repository placement uses Mind's checkout helper (Brain's resolver when present).
 """
 
@@ -37,6 +42,13 @@ CONDITIONAL = {
     "GitHub reference": ("PyAutoBrain", "skills/GITHUB_ACCESS.md"),
     "Mind reference": ("PyAutoMind", "REFERENCE.md"),
 }
+# Measured for the four-organ AGENTS total; absent checkouts are reported, not
+# failed, because Mind-only CI and flat task bundles hold just Brain + Mind.
+ORGAN_AGENTS = {
+    "Cortex AGENTS": ("PyAutoCortex", "AGENTS.md"),
+    "Memory AGENTS": ("PyAutoMemory", "AGENTS.md"),
+}
+FOUR_ORGANS = ("Brain AGENTS", "Mind AGENTS", "Cortex AGENTS", "Memory AGENTS")
 
 
 def measure(path: Path) -> dict:
@@ -51,11 +63,42 @@ def measure(path: Path) -> dict:
     }
 
 
-def collect(root: Path) -> dict:
+def record_median(mind: Path, month: str | None = None) -> dict | None:
+    """Median line count of the completion records of one month
+    (`complete/YYYY/MM/*.md`; default the newest month present)."""
+    complete = mind / "complete"
+    months = sorted(
+        d for d in complete.glob("[0-9][0-9][0-9][0-9]/[0-9][0-9]") if d.is_dir()
+    )
+    if month:
+        months = [d for d in months if d.relative_to(complete).as_posix() == month]
+    if not months:
+        return None
+    records = sorted(months[-1].glob("*.md"))
+    if not records:
+        return None
+    counts = sorted(len(r.read_bytes().splitlines()) for r in records)
+    mid = len(counts) // 2
+    median = counts[mid] if len(counts) % 2 else (counts[mid - 1] + counts[mid]) / 2
+    return {
+        "month": months[-1].relative_to(complete).as_posix(),
+        "records": len(counts),
+        "median_lines": median,
+    }
+
+
+def collect(root: Path, month: str | None = None) -> dict:
     paths = {}
     for name, (repo, relative) in (CORE | CONDITIONAL).items():
         base = root if repo is None else repo_checkout(root, repo)
         paths[name] = measure(base / relative)
+    optional = {}
+    for name, (repo, relative) in ORGAN_AGENTS.items():
+        try:
+            base = repo_checkout(root, repo)
+        except (OSError, ValueError, RuntimeError):
+            base = root / repo
+        optional[name] = measure(base / relative)
     agents = ("workspace AGENTS", "Brain AGENTS", "Mind AGENTS")
     totals = {}
     if all("missing" not in paths[name] for name in agents):
@@ -72,7 +115,16 @@ def collect(root: Path) -> dict:
     ):
         if all("missing" not in paths[name] for name in names):
             totals[label] = sum(paths[name]["lines"] for name in names)
-    return {"root": str(root), "files": paths, "totals": totals}
+    organs = paths | optional
+    if all("missing" not in organs[name] for name in FOUR_ORGANS):
+        totals["organ_agents_tokens_approx"] = sum(
+            organs[name]["tokens_approx"] for name in FOUR_ORGANS
+        )
+    records = record_median(repo_checkout(root, "PyAutoMind"), month)
+    if records is not None:
+        totals["completion_records"] = records
+    return {"root": str(root), "files": paths, "organ_files": optional,
+            "totals": totals}
 
 
 def violations(result: dict, args: argparse.Namespace) -> list[str]:
@@ -94,6 +146,24 @@ def violations(result: dict, args: argparse.Namespace) -> list[str]:
         lines = result["totals"].get(name)
         if lines is not None and lines > budget:
             errors.append(f"{name}: {lines} > {budget} lines")
+    if args.organ_agents_budget is not None:
+        organs = result["totals"].get("organ_agents_tokens_approx")
+        if organs is None:
+            errors.append("organ AGENTS total: unknown (an organ checkout is absent)")
+        elif organs > args.organ_agents_budget:
+            errors.append(
+                f"organ AGENTS total: {organs} > {args.organ_agents_budget} "
+                "approximate tokens"
+            )
+    if args.record_median_budget is not None:
+        records = result["totals"].get("completion_records")
+        if records is None:
+            errors.append("completion-record median: unknown (no records)")
+        elif records["median_lines"] > args.record_median_budget:
+            errors.append(
+                f"completion-record median ({records['month']}): "
+                f"{records['median_lines']} > {args.record_median_budget} lines"
+            )
     return errors
 
 
@@ -109,10 +179,22 @@ def main(argv=None) -> int:
     parser.add_argument("--agents-budget", type=int, default=7500)
     parser.add_argument("--start-dev-budget", type=int, default=400)
     parser.add_argument("--prm-budget", type=int, default=450)
+    parser.add_argument(
+        "--organ-agents-budget", type=int, default=None,
+        help="enforce the four-organ AGENTS.md total (target 6000; report-only "
+             "when omitted)",
+    )
+    parser.add_argument(
+        "--record-median-budget", type=float, default=None,
+        help="enforce the median completion-record length (target 60; "
+             "report-only when omitted)",
+    )
+    parser.add_argument("--month", help="completion-record month YYYY/MM "
+                        "(default: newest)")
     parser.add_argument("--json", action="store_true")
     args = parser.parse_args(argv)
     try:
-        result = collect(args.root.resolve())
+        result = collect(args.root.resolve(), args.month)
     except (OSError, ValueError, RuntimeError) as error:
         print(f"token load: {error}", file=sys.stderr)
         return 2
@@ -121,7 +203,7 @@ def main(argv=None) -> int:
     if args.json:
         print(json.dumps(result, indent=2))
     else:
-        for name, row in result["files"].items():
+        for name, row in (result["files"] | result["organ_files"]).items():
             if "missing" in row:
                 print(f"{name}: MISSING {row['path']}")
             else:
@@ -132,8 +214,22 @@ def main(argv=None) -> int:
         print(
             f"AGENTS total: ~{result['totals'].get('agents_tokens_approx', 'unknown')} tokens"
         )
+        print(
+            "organ AGENTS total (Brain+Mind+Cortex+Memory): "
+            f"~{result['totals'].get('organ_agents_tokens_approx', 'unknown')} "
+            "tokens (target <= 6000)"
+        )
         for name in ("start_dev_lines", "prm_lines", "core_union_lines"):
             print(f"{name}: {result['totals'].get(name, 'unknown')} lines")
+        records = result["totals"].get("completion_records")
+        if records:
+            print(
+                f"completion-record median ({records['month']}, "
+                f"{records['records']} records): {records['median_lines']} "
+                "lines (target <= 60)"
+            )
+        else:
+            print("completion-record median: unknown (no records)")
         for issue in issues:
             print(f"FAIL: {issue}", file=sys.stderr)
     return 1 if args.command == "check" and issues else 0
