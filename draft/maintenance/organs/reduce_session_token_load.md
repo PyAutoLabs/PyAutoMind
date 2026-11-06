@@ -100,3 +100,13 @@ organ (~3.3k tokens total). Read the target as **≤ 6,000 excluding the shared
 blocks** (today ~5.4k by that measure, so met once the slices merge). What is
 still open here: the procedure-line budgets (levers 5–6: start_dev 499 / prm
 456 lines).
+
+## Progress 2026-11-06 (later) — procedure lines (levers 5-6), PyAutoBrain#597
+
+start_dev 499 → **360** lines (target 350), /prm 456 → **338** (target 300);
+both now pass the `token_load.py` CI budgets (400 / 450) they were failing.
+Claimed as `procedure-lines-trim` (`active.md`). **Left after it merges:**
+start_dev −10 and /prm −38 lines to the targets; `bin/check_skill_line_counts.sh`
+cannot become blocking until batch (274), cortex (232) and Mind's create_issue
+(203) are under 200; nothing runs `token_load.py check` in CI or the hygiene
+conductor yet (the prompt asked for a hygiene report line).
