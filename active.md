@@ -144,9 +144,11 @@
 - issue: https://github.com/PyAutoLabs/autocti_workspace_test/issues/26
 - issued: 2026-11-06
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/cti-workspace-test-rebuild
 - repos:
   - autocti_workspace_test: feature/cti-workspace-test-rebuild
+- workspace-pr: https://github.com/PyAutoLabs/autocti_workspace_test/pull/27
+- heart-ack: release validation incomplete: no rehearsal for current source
 - prompt: active/workspace_test_rebuild.md
 - tier: judge — merge mode: human /prm
