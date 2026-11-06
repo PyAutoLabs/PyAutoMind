@@ -647,25 +647,23 @@ def system_map(categories, repos):
     """
     organs = {n: r for n, r in repos.items() if r["category"] == "organ"}
     lines = [
-        "**You are one organ of the PyAuto organism** — an agentic ecosystem for",
-        "human-led, natural-language software development. The organs below are",
-        "peer repositories; this repo is one of them, not a part of another.",
-        "Canonical boundaries live in `PyAutoBrain/ORGANISM.md`; the full body map",
-        "(every repo, not just organs) is `PyAutoMind/repos.yaml`.",
+        "**You are one peer organ of the PyAuto organism** (human-led, "
+        "natural-language software development), not a part of another. "
+        "Boundaries: `PyAutoBrain/ORGANISM.md`; every repo: "
+        "`PyAutoMind/repos.yaml`.",
         "",
         "| Organ | Repo | Role |",
         "|-------|------|------|",
     ]
     for name, repo in organs.items():
-        lines.append(f"| **{repo.get('organ', name)}** | {name} | {repo['role']} |")
+        role = repo.get("map_role", repo["role"])
+        lines.append(f"| **{repo.get('organ', name)}** | {name} | {role} |")
     lines += [
         "",
-        "Call chain (always this order): **Brain → Heart (gate) → Build "
-        "(execute)**. Brain agents are **conductors** (front-door; a human "
-        "drives them; they decide *and* act) or **faculties** (read-only "
-        "opinions the conductors consult; they judge and stop). New capability "
-        "grows as a faculty, not a new organ, unless it owns state or effects no "
-        "existing organ can.",
+        "Call chain: **Brain → Heart (gate) → Build (execute)**. Conductors "
+        "decide *and* act; faculties judge read-only and stop. New capability "
+        "grows as a faculty, not an organ, unless it owns state or effects no "
+        "organ can.",
         "",
         "Generated from `PyAutoMind/repos.yaml` + `PyAutoBrain/ORGANISM.md`; edit "
         "there, then run `python3 PyAutoMind/scripts/repos_sync.py --write`.",

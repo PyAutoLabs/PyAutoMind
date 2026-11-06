@@ -144,3 +144,53 @@
 - compute-tracking: RAL 414456 (array 0-16%5, `ral`, exclusive, 8 CPU, 11 draws/leg; submitted via hpc/sync with worktree-local hpc/sync.conf → HPC_BASE=/mnt/ral/jnightin/autolens_profiling_wt, PROJECT_NAME=critical-curves-jax-viz-feasibility). RAL clone /mnt/ral/jnightin/autolens_profiling_wt/critical-curves-jax-viz-feasibility (ca27dd65); private libs /mnt/ral/jnightin/PyAuto_wt/critical-curves-jax-viz-feasibility (2026.11.6.1 mains, setup.log); RAL venv jax 0.11.2 / jax_zero_contour 2.0.0 match laptop, numpy 2.2.6 / skimage 0.24 older. Rows → results/lens/critical_curves/viz_feasibility/ral_cpu/<leg>.json
 - resume: (1) `sacct -j 414456`; each task ends with a 'complete <json>' line or 'INCOMPLETE' (exit≠0); (2) pull RAL ral_cpu/*.json into the worktree results (hpc/sync pull, or rsync that dir); (3) summarize (`modeling_viz_feasibility.py --summarize`; cluster also zero_contour_explicit); drop MS closure flag; investigate galaxy radial-caustic ZC fails; (4) A100 timing leg (human go); (5) wiki verdict + results + PR. Gated follow-up draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md
 - tier: judge — merge mode: human /prm
+
+## token-load-measure-four-organs
+- issue: none yet — PR awaits human approval (session opens no PR unasked)
+- issued: 2026-11-06
+- session: https://claude.ai/code/session_016nhQ8MapiJKa7vatHsEsZH
+- location: claude.ai cloud session (ephemeral container; work lives on the pushed branch)
+- status: library-dev — implemented + tests green on branch, not merged
+- prompt: active/token_load_measure_four_organs.md
+- repos:
+  - PyAutoMind: ccr-c113837c-0ulthv
+- parent: draft/maintenance/organs/reduce_session_token_load.md
+- tier: judge — merge mode: human /prm
+
+## organism-map-compact
+- issue: none yet — PR awaits human approval (session opens no PR unasked)
+- issued: 2026-11-06
+- session: https://claude.ai/code/session_016nhQ8MapiJKa7vatHsEsZH
+- location: claude.ai cloud session (ephemeral container; work lives on the pushed branch)
+- status: library-dev — implemented + tests green on branch, not merged
+- prompt: active/organism_map_compact.md
+- repos:
+  - PyAutoMind: ccr-c113837c-0ulthv
+  - PyAutoBrain: ccr-c113837c-0ulthv
+  - PyAutoCortex: ccr-c113837c-0ulthv
+- parent: draft/maintenance/organs/reduce_session_token_load.md
+- tier: judge — merge mode: human /prm
+
+## cortex-agents-slim
+- issue: none yet — PR awaits human approval (session opens no PR unasked)
+- issued: 2026-11-06
+- session: https://claude.ai/code/session_016nhQ8MapiJKa7vatHsEsZH
+- location: claude.ai cloud session (ephemeral container; work lives on the pushed branch)
+- status: library-dev — implemented + tests green on branch, not merged
+- prompt: active/cortex_agents_slim.md
+- repos:
+  - PyAutoCortex: ccr-c113837c-0ulthv
+- parent: draft/maintenance/organs/reduce_session_token_load.md
+- tier: judge — merge mode: human /prm
+
+## mind-agents-trim
+- issue: none yet — PR awaits human approval (session opens no PR unasked)
+- issued: 2026-11-06
+- session: https://claude.ai/code/session_016nhQ8MapiJKa7vatHsEsZH
+- location: claude.ai cloud session (ephemeral container; work lives on the pushed branch)
+- status: library-dev — implemented + tests green on branch, not merged
+- prompt: active/mind_agents_trim.md
+- repos:
+  - PyAutoMind: ccr-c113837c-0ulthv
+- parent: draft/maintenance/organs/reduce_session_token_load.md
+- tier: judge — merge mode: human /prm

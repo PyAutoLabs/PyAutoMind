@@ -73,3 +73,21 @@ day that the memory faculty greps by title.
 - **Remaining:** The ≤6k target: AGENTS.md across Mind/Brain/Cortex/Memory still totals ~11.9k tokens, Cortex grew to ~5.4k; completion-record work not done.
 
 _Evidence from the 2026-11-05 read-only sweep (Mind ledger + GitHub search); remaining items are the live scope of this prompt._
+
+## Progress 2026-11-06 (cloud queue session) — four slices on branch `ccr-c113837c-0ulthv`
+
+Measured with the extended `scripts/token_load.py` (now reports all three numbers):
+
+| Load | 2026-11-05 | After the slices | Target |
+|---|---:|---:|---:|
+| Four organs' AGENTS.md (Brain/Mind/Cortex/Memory) | ~11,950 tok | **~8,690 tok** (2.8k/1.65k/2.7k/1.5k) | ≤ 6,000 |
+| Completion-record median (2026/11, 110 records) | — | **55 lines** — already met | ≤ 60 |
+| start_dev / prm procedure lines | 499 / 456 | unchanged | ≤ 350 / ≤ 300 |
+
+Slices claimed in `active.md`: `token-load-measure-four-organs`, `organism-map-compact`,
+`cortex-agents-slim`, `mind-agents-trim`. **Left here:** the remaining ~2.7k
+tokens are mostly the five generated shared blocks (~3.3 kB in each organ:
+remote, history, deliverable, filing, standards; "Out of scope" keeps their
+rules verbatim — a ruling on trimming their surrounding prose, or loading them
+from one file, is the human's), Brain's generated command table, and the two
+procedure-line budgets (levers 5–6).

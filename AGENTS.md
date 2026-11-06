@@ -6,35 +6,29 @@ when the task needs them. Read [README.md](README.md) for the public overview.
 
 ## Where work lives
 
-- Inference campaign intent and pending domain tasks live in **PyAutoInsight**
-  (`campaigns.yaml`, `tasks/`, `CHECKIN.md`). Mind retains bounded implementation
-  issue/PR lifecycle and claims. See `docs/insight-task-migration.md`; source
-  removal follows the destination merge, never precedes it.
-
-- Profiling campaign intent and pending tasks live in **PyAutoPulse**
-  (`campaigns.yaml`, `tasks/`, `CHECKIN.md`). Use its single-chat check-in first.
-  Mind holds bounded implementation phases and repository claims, linking the
-  canonical Pulse task. See `docs/pulse-task-migration.md`.
-
-
+- Inference and profiling campaign intent and their pending domain tasks live
+  in **PyAutoInsight** and **PyAutoPulse** (`campaigns.yaml`, `tasks/`,
+  `CHECKIN.md`; start with their check-in). Mind keeps the bounded
+  implementation phases, issue/PR lifecycle and claims, linking the canonical
+  task (`docs/insight-task-migration.md`, `docs/pulse-task-migration.md`).
+  Source removal follows the destination merge, never precedes it.
 - `draft/<work-type>/<target>/<name>.md` holds unstarted prompts. Work types:
   `feature`, `bug`, `refactor`, `docs`, `test`, `release`, `maintenance`,
-  `research`, and `triage` when genuinely unclear. `human_review` is reserved
-  for work a human explicitly asks to review after shipping.
+  `research`, and `triage` when genuinely unclear; `human_review` only when a
+  human explicitly asks to review shipped work (hard rule 5).
 - `active/<name>.md` holds issued prompts; `complete/<YYYY>/<MM>/<slug>.md`
   holds shipped records. `scripts/lifecycle.py` owns these moves.
 - `repos.yaml` owns repository identity and generated adapter rollout. Change
   it, then run `python3 scripts/repos_sync.py --write`; never edit generated
-  policy copies directly. Root routing and Brain owner maps come from it.
-- Codex users must review and trust the current `.codex/hooks.json` hash with
-  `/hooks`; changed or untrusted project hooks are skipped. The remote Python
-  SessionStart bootstrap applies to Claude sessions only.
+  copies directly; root routing and Brain owner maps come from it.
 - Registry files (`active.md`, `planned.md`, `parked.md`, `condemned.md`,
-  `epics.md`, `ideas.md`) are changed through skills in `skills/`.
-  `dashboard.md` is generated: run `pyauto-brain intake --apply dashboard`
-  after registry or draft changes. Never hand-edit it.
-
-Dashboard presentation tasks follow [the concise-copy policy](policy/dashboard_copy.md): structured facts and indented details, without repeated explanatory boilerplate.
+  `epics.md`, `ideas.md`) change through skills in `skills/`. `dashboard.md`
+  is generated (`pyauto-brain intake --apply dashboard` after registry or draft
+  changes); never hand-edit it. Dashboard copy follows
+  [policy/dashboard_copy.md](policy/dashboard_copy.md).
+- Codex users trust the current `.codex/hooks.json` hash with `/hooks`
+  (untrusted hooks are skipped); the remote SessionStart bootstrap is
+  Claude-only.
 
 ## Hard rules
 
@@ -70,19 +64,16 @@ nothing has set it up — this block is what does.
 
 ## Workflow entry points
 
-For a new prompt, write `draft/<work-type>/<target>/<name>.md` or use `$intake`.
-Do not move it into `active/` or edit completion records by hand. For existing
-work, use `$start-dev draft/<work-type>/<target>/<name>.md`; it routes from
-`@RepoName` references in the body. Skill arguments are Mind-relative in both
-grouped and flat layouts, e.g. `draft/bug/autoarray/mask_edge_case.md`.
-Resolve the actual checkout once; set `PYAUTO_MIND` for an explicit location.
+New intent: write `draft/<work-type>/<target>/<name>.md` or use `$intake`; never
+move prompts into `active/` or edit completion records by hand. Existing work:
+`$start-dev draft/<work-type>/<target>/<name>.md` (Mind-relative in grouped and
+flat layouts; it routes from `@RepoName` references). Set `PYAUTO_MIND` for an
+explicit checkout.
 
-Mind ledger-only pushes on `claude/**` or `codex/**` auto-merge under
-`.github/workflows/mind_ledger_merge.yml`; code, skills, policy and prose
-changes require a PR. Check with `python3 scripts/ledger_merge.py classify
---base origin/main` before pushing. Push ledger-only work and let the merge
-workflow land it. Read [REFERENCE.md](REFERENCE.md) "How the
-ledger lands" for conflict handling and classification details.
+Ledger-only pushes on `claude/**` or `codex/**` auto-merge
+(`.github/workflows/mind_ledger_merge.yml`); code, skills, policy and prose need
+a PR. Predict with `python3 scripts/ledger_merge.py classify --base origin/main`;
+conflicts and classes: [REFERENCE.md](REFERENCE.md) "How the ledger lands".
 
 <!-- repos_sync:history:begin -->
 ## Never rewrite history

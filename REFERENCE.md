@@ -8,12 +8,13 @@ completion-record schemas) resolve here, one link from the README.
 The read-only context check is `python3 scripts/token_load.py report --root
 <workspace-root>`; `check` applies the same measurement to the configured
 budgets. It supports grouped main and flat bundle roots, and reports mandatory
-AGENTS and core skill files separately from conditional references. In the
-September 2026 context pass, Mind `AGENTS.md` fell from 12,507 bytes / 214 lines
-to about 5,100 bytes / 94 lines. The broader
-`draft/maintenance/organs/reduce_session_token_load.md` remains draft; this
-measurement does not imply its Cortex, Memory, or completion-record goals are
-done.
+AGENTS and core skill files separately from conditional references. It also
+prints the three numbers `draft/maintenance/organs/reduce_session_token_load.md`
+targets: the four organs' AGENTS.md total (Brain, Mind, Cortex, Memory; target
+≤ 6,000 tokens), the core procedure lines, and the newest month's median
+completion-record length (target ≤ 60). The Cortex/Memory files and the median
+are report-only unless `--organ-agents-budget` / `--record-median-budget` is
+passed, so Mind-only CI still passes `check`.
 
 ---
 

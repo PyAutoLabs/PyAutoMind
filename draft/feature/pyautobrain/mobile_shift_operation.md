@@ -39,7 +39,7 @@ Tell the laptop session: the minutes, which PRs you merged or left, and anything
 
 These were checked against `main` on 2026-11-06. Each is self-contained: cloud sessions don't load the laptop's skills, and they can't read PyAutoMind.
 
-**1. Repo: `PyAutoLabs/PyAutoBrain`**
+**1. Repo: `PyAutoLabs/PyAutoBrain`** — ⚠ **DO NOT RUN (stale, verified 2026-11-06):** the `*_visualization` instances still ship `gallery/gallery_run.sh`, so the next action is correct; see the verification note on `draft/bug/pyautobrain/eyes_survey_next_action_retired_gallery_harness.md`. Run tasks 2 and 3 only.
 ```
 You are a cloud worker in a PyAutoLabs pilot shift. Read AGENTS.md in this repo first and follow it.
 
