@@ -1,4 +1,4 @@
-# Run orchestrator shifts from mobile (weekend away from the laptop)
+# Run a shift from mobile: the weekend cloud lane (2026-11-07/08)
 
 Type: research
 Target: PyAutoBrain
@@ -19,6 +19,59 @@ Lane: any
 
 Original request (human, 2026-11-06): "I am away this weekend so would like to try running this stuff on mobile, could we make a prompt to begin trying to set that up in a new mobile chat?"
 
+## Plan (agreed 2026-11-06): a manual cloud lane, no laptop
+
+The automatic watcher is laptop-only, so this weekend the human is the orchestrator: start each worker as a **Claude Code web session** (claude.ai/code, or Code in the mobile app) on the task's repo, paste its prompt below, and let it run to a PR. Moving the watcher itself to the cloud is filed separately (`draft/feature/pyautobrain/shift_watcher_in_the_cloud.md`, judge).
+
+### On the phone
+
+1. In the Claude app: **Code** → new session → choose the repo named for the task → paste the prompt → send. Start all three; they run in parallel in the cloud.
+2. Check back whenever. If a session asks you something, answer it in the app (nothing stalls on a laptop permission prompt any more).
+3. When a session says its PR is open: open the PR in the GitHub app and read the proof comment and the diff.
+   - **Merge from the GitHub app once CI is green**, unless the PR has the `decision-taken` label or something looks wrong. If it does, leave it for Monday.
+4. Note roughly how many minutes the reviewing took, in total.
+
+### Monday, on the laptop
+
+Tell the laptop session: the minutes, which PRs you merged or left, and anything odd. It writes the Mind close-outs (records, the shadow-window rows) and adds one `cloud` row to `batches/pilot/pilot.md`.
+
+### The three worker prompts
+
+These were checked against `main` on 2026-11-06. Each is self-contained: cloud sessions don't load the laptop's skills, and they can't read PyAutoMind.
+
+**1. Repo: `PyAutoLabs/PyAutoBrain`**
+```
+You are a cloud worker in a PyAutoLabs pilot shift. Read AGENTS.md in this repo first and follow it.
+
+Task: `pyauto-brain eyes survey` still tells people to run the retired `gallery/gallery_run.sh`. That harness was deleted on 2026-09-30 (PyAutoEyes phase 5). Lens figures are now rendered by the `*_visualization` repos and collected by the PyAutoEyes dashboard. In agents/conductors/eyes/_eyes.py, fix the docstring (around line 29) and the `next_action` string (around line 144) to name the current route; check agents/conductors/eyes/AGENTS.md for the exact wording. Add a test asserting no survey next action mentions gallery_run.sh.
+
+Done when: the full test suite passes (`python -m pytest tests -q`) and a PR is open against main with a summary of what changed, the test output lines that matter, and what you didn't check. Branch `feature/eyes-survey-next-action`. If you make any decision the task didn't settle, add the label `decision-taken` to the PR. Do not merge. Stop at PR-open.
+```
+
+**2. Repo: `PyAutoLabs/PyAutoHands`**
+```
+You are a cloud worker in a PyAutoLabs pilot shift. Read AGENTS.md in this repo first and follow it.
+
+Task: autohands/bump_colab_urls.sh (run by the release workflow) rewrites the `blob/<version-tag>/` part of Colab links only for autofit/autogalaxy/autolens/autocti _workspace, HowToGalaxy, HowToLens and HowToFit; see its PATTERN at around line 30. The assistant repos now carry Colab notebooks linked from their READMEs (autolens_assistant: docs/colab/cosmos_web_ring_colab.ipynb), so their links go stale at each release. Extend the pattern and the repo or file list to cover the `*_assistant` repos (autofit_assistant, autogalaxy_assistant, autolens_assistant, autocti_assistant), including each assistant's README. Add or extend a test (or a documented dry run on a fixture file) showing an assistant Colab link is rewritten and a non-matching link is left alone.
+
+Done when: the repo's tests pass and a PR is open against main with a before/after example of a rewritten link and what you didn't check. Branch `feature/bump-colab-urls-assistants`. If you make any decision the task didn't settle, add the label `decision-taken`. Do not merge. Stop at PR-open.
+```
+
+**3. Repo: `PyAutoLabs/autolens_assistant`**
+```
+You are a cloud worker in a PyAutoLabs pilot shift. Read AGENTS.md in this repo first and follow it.
+
+Task: finish this repo's leg of the shared AI-options page (PyAutoLabs/PyAutoScientist AI_OPTIONS.md; mirror what autogalaxy_assistant#36 did). The README is already done. Remaining:
+- add an AI_OPTIONS.md stub beside AI_POLICY.md that points to https://github.com/PyAutoLabs/PyAutoScientist/blob/main/AI_OPTIONS.md
+- delete docs/setup/opencode_cli.md, docs/evaluation/agent_evaluation.md, docs/archive/ and .gemini/settings.json, first folding anything still unique into the setup page that remains
+- fix every reference to the deleted files (grep the repo, including AGENTS.md, llms.txt, modes/, docs/setup/troubleshooting.md and skills/); paper/paper.md keeps its llms.txt mention
+- check for dangling links (the repo's wiki-currency check)
+
+Done when: no dangling links, CI green, and a PR open against main listing what was deleted, what was folded where, and what you didn't check. Branch `feature/ai-options-autolens-leg`. If you make any decision the task didn't settle, add the label `decision-taken`. Do not merge. Stop at PR-open.
+```
+
+## Background
+
 ## Where the pilot stands (PyAutoBrain#574, phase 4c)
 
 - 4 of 6+ pilot shifts done: 2 shadow, 1 live that failed at spawn (systemd killed the workers; fixed in PyAutoBrain#593), 1 live re-run. The re-run's 3 named tasks gave 2 stale-prompt verdicts and 1 PR, autogalaxy_workspace_test#134, merged. Rows are in `batches/pilot/pilot.md`.
@@ -37,7 +90,9 @@ Original request (human, 2026-11-06): "I am away this weekend so would like to t
 4. **Reading and acting from the phone.** The digest is a GitHub issue comment (fine on mobile). `/prm` needs a Claude session with GitHub access: Claude Code on the web or app (cloud session, no `gh`; see `PyAutoBrain/skills/GITHUB_ACCESS.md`), or Remote Control of a laptop session. Worth testing which is real today.
 5. **Attaching to a stuck worker** (`claude attach`) is laptop-only. With the #595 fixes it should be rarer; a parked worker posts its question on its issue.
 
-## What this first mobile session should do
+## (Earlier plan: laptop-run shifts from a phone. Superseded by the cloud lane above; kept for the cloud-watcher draft.)
+
+### What a mobile session should do
 
 1. Read this prompt, PyAutoBrain#574 and `PyAutoMind/batches/pilot/pilot.md`. Find out what this surface can do: GitHub read/write? Remote Control? Mind commits?
 2. Report which of blockers 1–5 can be worked around from mobile **this weekend** and which need laptop changes the human must make before leaving. Give the exact commands for each laptop step.
