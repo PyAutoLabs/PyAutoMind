@@ -35,13 +35,14 @@
 - issued: 2026-10-31
 - session: claude-code desktop (WSL), PyAutoLabs session
 - status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/sky-orientation-p2
+- worktree: (none; removed 2026-11-06)
 - repos:
-  - euclid_strong_lens_modeling_pipeline: (no branch; next sub-phase 2b docs)
+  - euclid_strong_lens_modeling_pipeline: (no branch; phase 2 remaining: R2 upload last, ECLIPSE website thumbnails)
 - 2d-pilot: 2026-11-05 RAL 414200+414205 → inspect/north_up_pilot_20261105_v2 (50 lenses, 431/431 fits pass witness; 1 sersic load_error). Review page Science/scratch/sky_orientation_dr1/north_up_pilot_20261105_v2/review/index.html — AWAITING human by-eye review; branch local (c4f1247), no PR yet
 - 2d: pilot approved by human 2026-11-05; PR https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/120 open (judge → human /prm); FULL RUN RAL 414229 (80 tasks, 15,007 lenses) → inspect/north_up_full_20261105
 - 2d-done: 2026-11-05 north-up release built (RAL 414376) → inspect/dr1_catalogue_v5_release_northup (release_name dr1_catalogue_v5, 76.12 GB, PNG-only diff vs skyframe passed); fit-frame fallbacks vis_pix 91 / multi_wavelength 66 / fit_sersic 8. NEXT: human /prm PR #120, 2b docs, R2 upload last
 - merged: euclid#120 (2d north-up re-render) 2026-11-06 (1c7f24c); worktree + branch removed
+- merged: euclid#121 (2b release docs) 2026-11-06 (4ce84a5); worktree + branch removed; RAL 414391 docs relink + SHA256 verify running
 - prompt: active/sky_orientation_euclid_dr1_and_library.md
 - epic: sky-orientation (phase 2: 2.0 land v5 branch → 2a catalogue fix → 2b–2e)
 - heart-red-override: extended live by the human 2026-10-31 to phase 2 ("Yes, extend it"); development only, merge via /prm
