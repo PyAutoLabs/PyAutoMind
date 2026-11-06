@@ -28,3 +28,4 @@ The target metric is verified merges (plus accepted drafts and packets) per
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 2026-11-05-am | shadow | 30 | 5 | 11 | 0 | 0 | 6 | 0 | 0 | 0 | 0 |
 | 2026-11-05-pm | shadow | 20 | 1 | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| 2026-11-06-am | live | 30 | ? | 0 | 0 | 0 | ? | 0 | 0 | 0 | 0 |
