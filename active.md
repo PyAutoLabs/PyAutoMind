@@ -138,6 +138,9 @@
 - prompt: active/critical_curves_jax_modeling_viz_feasibility.md
 - pulse: organs/PyAutoPulse/tasks/critical_curves_jax_modeling_viz_feasibility.md
 - parallel-claim: human ruled 2026-11-06 to share autolens_profiling with gradient-correctness-sweep (#517, paused); this task touches only scripts/lens/critical_curves/ + the critical-curves wiki
+- phase: harness committed+pushed ac5a73de (feature/critical-curves-jax-viz-feasibility); pilots done (checkpoint comment on #521, 2026-11-06); full CPU runs RUNNING on laptop
+- compute-tracking: laptop background chain — galaxy driver pid 186902 → group+cluster queue pid 219213 (results/lens/critical_curves/viz_feasibility/group_cluster_cpu/) → galaxy MGE re-run pid 221929 (galaxy_cpu/queue_rerun.sh); ~8 h from 2026-11-06 ~12:30Z; samples in Science/scratch/critical_curves_jax_viz_feasibility/p4_samples (80/84 legs)
+- resume: (1) check driver.log / driver_rerun.log ends ('end …'); if the laptop slept, re-run the same queue commands (completed legs are skipped); (2) `python scripts/lens/critical_curves/modeling_viz_feasibility.py --summarize <dir>` for galaxy_cpu and group_cluster_cpu (cluster also has zero_contour_explicit); (3) drop closure flag on marching-squares grades, investigate galaxy radial-caustic ZC fails; (4) A100 leg needs human go; (5) wiki verdict + commit results + PR; gated follow-up draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md
 - tier: judge — merge mode: human /prm
 
 ## cti-workspace-test-rebuild
