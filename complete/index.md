@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2179 records across 11 buckets.
+2180 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -220,6 +220,7 @@ markers; everything below GENERATED is rebuilt.
 - [shift-opens-at-dispatched](2026/11/shift-opens-at-dispatched.md) — pilot 4c follow-up; issue PyAutoBrain#589
 - [simulate-if-needed-workspace-sweep](2026/11/simulate-if-needed-workspace-sweep.md)
 - [tutorial-link-sweep](2026/11/tutorial-link-sweep.md)
+- [watcher-workers-survive-systemd-tick](2026/11/watcher-workers-survive-systemd-tick.md) — pilot 4c follow-up; issue PyAutoBrain#592
 - [workspace-hygiene-sweep-1104](2026/11/workspace-hygiene-sweep-1104.md)
 
 ## 2026/10/github-token-consolidation-epic_surveys
