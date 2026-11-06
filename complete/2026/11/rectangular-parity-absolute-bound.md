@@ -1,3 +1,11 @@
+- issue: https://github.com/PyAutoLabs/autogalaxy_workspace_test/issues/133
+- summary: autogalaxy_workspace_test#134 (merged 0b5ff519, human /prm). `imaging/jax_likelihood/rectangular.py` parity is now an absolute bound (atol=1e-2 nats, rtol=0; cites PyAutoArray#552) with x64 and finite-log_evidence self-checks; 23 jax_likelihood scripts (imaging, interferometer, multi_dataset) import autogalaxy before jax. The bug reproduced: with the old order and JAX_ENABLE_X64 unset, JAX runs in float32 and JIT log_evidence differs from NumPy by 0.92 nats, which the old rtol=2e-2 passed; after the fix the gap is 8.2e-5 nats.
+- produced by: pilot LIVE shift 1 re-run (batches/2026-11-06-pm.md, PyAutoMind#543), worker 688a2540. It stalled on an EnterWorktree permission-root prompt until the human answered it on attach, and finished at 12:32, after review-at; its last ledger ops were committed by hand (Mind 8f2e2cc4). The fixes are filed as a follow-up.
+- decision flagged by the worker: the import-order sweep across all 23 scripts in one PR. Follow-ups: autolens_workspace_test (15 scripts) and this workspace's jax_grad, misc and visualization JAX scripts; the laptop's PyAuto313 forces JAX_ENABLE_X64=True at startup, which hides this class of bug locally.
+- witness: smoke on 3.12 and 3.13 green; 21 jax_likelihood smoke scripts pass on the branch; a Sonnet 5.5 subagent reviewed the diff with no findings.
+
+## Original prompt
+
 # rectangular.py parity contract: absolute-nats bound, and import autogalaxy before jax
 
 Type: bug
