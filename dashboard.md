@@ -12,7 +12,7 @@
 | [Epics](#epics) | 21 |
 | [In flight](#in-flight) | 12 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 239 |
+| [Backlog](#backlog) | 240 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 2 |
 
@@ -277,7 +277,7 @@ Use the start-dev skill. draft/release/arcticpy/upstream_packaging_pr.md
 </details>
 
 <details>
-<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 8 queued prompt(s), in order</summary>
+<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 9 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — ledger: `draft/research/autolens_profiling/likelihood_lifecycle_epic.md` — PHASE 0 COMPLETE 2026-10-24 — 0A PyAutoPulse#70; 0B autolens_profiling#444/#447/#448/#449/#450/#451 + PyAutoPulse#74 (lens at…</summary>
 
@@ -291,6 +291,14 @@ Continue the 'Likelihood lifecycle — optimal setups baked into PyAutoLens (`se
 
 ```
 Use the start-dev skill. draft/bug/autolens_inference/validation_wall_estimates_miss_eval_count_and_sampler_floor.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_inference/numba_wtilde_validation_legs_stall_nautilus.md">Phase-4 numba W~ validation legs stall Nautilus: datacube (both seeds) and interferometer…</a> — autolens_inference · medium · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/research/autolens_inference/numba_wtilde_validation_legs_stall_nautilus.md
 ```
 
 </details>
@@ -1195,7 +1203,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 231 · local-dev 6
+Lanes: any 232 · local-dev 6
 
 <a id="human-review"></a>
 <details>
@@ -2775,7 +2783,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-64 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+65 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2842,6 +2850,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/research/autolens/point_solver_root_refinement.md — unknown theme keyword(s): jax`
 - `draft/research/autolens_assistant/free_agent_harness_evaluation.md — unknown theme keyword(s): assistant, support-policy`
 - `draft/research/autolens_inference/kernel_regularization_distances_adaptive_rectangular.md — unknown theme keyword(s): regularization`
+- `draft/research/autolens_inference/numba_wtilde_validation_legs_stall_nautilus.md — unknown theme keyword(s): inference`
 - `draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md — unknown theme keyword(s): euclid, hpc`
 - `draft/triage/autolens/jit_fit_from_is_vacuous.md — unknown theme keyword(s): testing, jax`
 
