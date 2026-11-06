@@ -128,3 +128,15 @@
 - pulse: organs/PyAutoPulse/tasks/critical_curves_jax_modeling_viz_feasibility.md
 - parallel-claim: human ruled 2026-11-06 to share autolens_profiling with gradient-correctness-sweep (#517, paused); this task touches only scripts/lens/critical_curves/ + the critical-curves wiki
 - tier: judge — merge mode: human /prm
+
+## cti-docs-yml-caller
+- issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/125
+- issued: 2026-11-06
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/cti-docs-yml-caller
+- repos:
+  - PyAutoCTI: feature/cti-docs-yml-caller
+  - PyAutoHeart: feature/cti-docs-yml-caller
+- prompt: active/docs_yml_caller.md
+- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
