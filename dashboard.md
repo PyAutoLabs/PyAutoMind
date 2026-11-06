@@ -1112,7 +1112,7 @@ Use the start-dev skill. active/sky_orientation_euclid_dr1_and_library.md
 
 </details>
 
-<details><summary>📋 <a href="active/workspace_test_rebuild.md">autocti_workspace_test rebuild: integration checks to the autolens_workspace_test shape, legacy/ retired via Gut</a> — <a href="https://github.com/PyAutoLabs/autocti_workspace_test/issues/26">issue #26</a> — issued 2026-11-06 — workspace-dev</summary>
+<details><summary>📋 <a href="active/workspace_test_rebuild.md">autocti_workspace_test rebuild: integration checks to the autolens_workspace_test shape, legacy/ retired via Gut</a> — <a href="https://github.com/PyAutoLabs/autocti_workspace_test/issues/26">issue #26</a> — issued 2026-11-06 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autocti_workspace_test/pull/27">autocti_workspace_test#27</a></summary>
 
 ```
 Use the start-dev skill. active/workspace_test_rebuild.md
