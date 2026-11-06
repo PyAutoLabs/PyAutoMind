@@ -141,3 +141,14 @@
 - pulse: organs/PyAutoPulse/tasks/critical_curves_jax_modeling_viz_feasibility.md
 - parallel-claim: human ruled 2026-11-06 to share autolens_profiling with gradient-correctness-sweep (#517, paused); this task touches only scripts/lens/critical_curves/ + the critical-curves wiki
 - tier: judge — merge mode: human /prm
+
+## cti-workspace-test-rebuild
+- issue: https://github.com/PyAutoLabs/autocti_workspace_test/issues/26
+- issued: 2026-11-06
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/cti-workspace-test-rebuild
+- repos:
+  - autocti_workspace_test: feature/cti-workspace-test-rebuild
+- prompt: active/workspace_test_rebuild.md
+- tier: judge — merge mode: human /prm
