@@ -12,7 +12,7 @@
 | [Epics](#epics) | 21 |
 | [In flight](#in-flight) | 11 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 239 |
+| [Backlog](#backlog) | 240 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -902,7 +902,7 @@ Use the start-dev skill. draft/feature/pyautoscientist/scientist_optional_organ_
 </details>
 
 <details>
-<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 1 queued prompt(s), in order</summary>
+<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 2 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — ledger: `draft/feature/pyautobrain/autonomous_orchestrators_epic.md` — IN PROGRESS; design-reviewed 2026-11-03 (7 phases, <code>Needs:</code> folded into <code>Lane:</code> values, witnesses per phase, 6 decisions ruled by…</summary>
 
@@ -916,6 +916,14 @@ Continue the 'Autonomous orchestrators — a Dev (Mind + Brain) and a Science (C
 
 ```
 Use the start-dev skill. draft/feature/pyautobrain/autonomous_orchestrators_epic.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/mobile_shift_operation.md">Run orchestrator shifts from mobile (weekend away from the laptop)</a> — pyautobrain · medium · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/mobile_shift_operation.md
 ```
 
 </details>
@@ -1195,7 +1203,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 230 · local-dev 6 · ral 1
+Lanes: any 231 · local-dev 6 · ral 1
 
 <a id="human-review"></a>
 <details>
