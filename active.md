@@ -105,6 +105,16 @@
 - epic: likelihood-lifecycle (phase 4e)
 - tier: judge — merge mode: human /prm; PR waits for the remaining phase-4 legs (human 2026-11-05)
 
+## corner-anesthetic-speed
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1760
+- issued: 2026-11-06
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/corner-anesthetic-speed
+- repos:
+  - PyAutoFit: feature/corner-anesthetic-speed
+- prompt: active/corner_anesthetic_takes_40_minutes_on_a.md
+
 ## howtolens-stored-results
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/130
 - issued: 2026-11-06

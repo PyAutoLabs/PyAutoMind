@@ -10,6 +10,8 @@ Difficulty: medium
 Autonomy: safe
 Priority: normal
 Status: formalised
+Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1760
+Issued: 2026-11-06
 Consequence: glance
 Witness: `aplt.corner_anesthetic(samples=result.samples)` on the HowToLens chapter 2 tutorial 2 result (20 free parameters, 14,534 weighted Nautilus samples) completes in under 60 s on the laptop CPU.
 Review-minutes: 3
