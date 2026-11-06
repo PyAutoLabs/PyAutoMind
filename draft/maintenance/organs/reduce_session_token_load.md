@@ -91,3 +91,12 @@ remote, history, deliverable, filing, standards; "Out of scope" keeps their
 rules verbatim — a ruling on trimming their surrounding prose, or loading them
 from one file, is the human's), Brain's generated command table, and the two
 procedure-line budgets (levers 5–6).
+
+**Ruling 2026-11-06 (human): leave the shared generated blocks alone.**
+They are written into ~50 repos; trimming their prose would save ~600 tokens
+across the four organs at the cost of a ~46-repo regeneration. The ≤ 6,000
+target is therefore out of reach as written: the blocks are ~3.3 kB in each
+organ (~3.3k tokens total). Read the target as **≤ 6,000 excluding the shared
+blocks** (today ~5.4k by that measure, so met once the slices merge). What is
+still open here: the procedure-line budgets (levers 5–6: start_dev 499 / prm
+456 lines).
