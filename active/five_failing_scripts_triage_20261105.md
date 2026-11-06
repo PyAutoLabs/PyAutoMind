@@ -19,6 +19,7 @@ Unattended: ready
 Epic: cti-upkeep
 Phase: 3
 Filed: 2026-11-05
+Issued: 2026-11-06
 
 Found by the cti-upkeep 3a triage on 2026-11-05 (autocti_workspace#43). The 79 scripts were run under
 profile_smoke against PyAutoCTI main 804ddebd, in dependency order. These five fail for reasons other

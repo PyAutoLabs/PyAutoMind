@@ -115,3 +115,14 @@
 - prompt: active/howtolens-stored-results.md
 - epic: howto-stored-results (phase 1 of 4: HowToLens ch2 + design gate)
 - tier: judge — merge mode: human /prm
+
+## cti-five-failing-scripts
+- issue: https://github.com/PyAutoLabs/autocti_workspace/issues/45
+- issued: 2026-11-06
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/cti-five-failing-scripts
+- repos:
+  - autocti_workspace: feature/cti-five-failing-scripts
+- prompt: active/five_failing_scripts_triage_20261105.md
+- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
