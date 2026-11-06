@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2180 records across 11 buckets.
+2182 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -144,8 +144,10 @@ markers; everything below GENERATED is rebuilt.
 - [cloud-validation-rehearsal-clock-skew](2026/11/cloud-validation-rehearsal-clock-skew.md)
 - [compile-drift-single-sample](2026/11/compile-drift-single-sample.md) — shipped in PyAutoBrain#588 (merge e822697, 2026-11-05), commit ed0782c. Decision: option (a), taken by the age…
 - [cortex-projects-dashboard-parent](2026/11/cortex-projects-dashboard-parent.md) — parent closed. Phase 1, the presentation change, shipped in PyAutoBrain#526 (merge 92de427, 2026-10-15; record…
+- [cti-api-rst-rewrite](2026/11/cti-api-rst-rewrite.md)
 - [cti-database-examples-drift](2026/11/cti-database-examples-drift.md)
 - [cti-fits-fit-output-dir](2026/11/cti-fits-fit-output-dir.md)
+- [cti-five-failing-scripts](2026/11/cti-five-failing-scripts.md)
 - [cti-likelihood-pins](2026/11/cti-likelihood-pins.md) — cti-upkeep phase 0b
 - [cti-release-train-wiring](2026/11/cti-release-train-wiring.md)
 - [cti-smoke-breadth](2026/11/cti-smoke-breadth.md)

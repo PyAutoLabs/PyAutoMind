@@ -1,3 +1,21 @@
+## cti-api-rst-rewrite
+- issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/123
+- completed: 2026-11-06
+- library-pr: https://github.com/PyAutoLabs/PyAutoCTI/pull/124
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/324
+
+Merged 2026-11-06 by glance-tier auto-merge (plan approved by the human; Heart STALE human-acknowledged). Issue PyAutoCTI#123 closed. cti-upkeep phase 5c.
+
+- `docs/api/plot.rst` was rewritten for the functional `autocti.plot` API (the style of PyAutoFit's plot.rst): Dataset 1D, Charge Injection Imaging, General, Non-linear Search (autofit re-exports), Figure Output, Visualization During a Fit (`PlotterDataset1D`, `PlotterImagingCI`).
+- `data.rst` re-export-or-remove call: REMOVE (human-approved plan). The Grid2D/Grid2DIrregular/Grid1D entries and the grid prose were dropped; `LayoutDataset1D` → `Layout1D`; `SettingsDataset1D` dropped (doesn't exist). The PySwarms entries in modeling.rst had already gone.
+- PyAutoHeart `skills/audit_docs/SKILL.md` covers PyAutoCTI (four repos).
+
+Evidence: import+hasattr audit 84 entries / 53 dead → 64 / 0. Local sphinx-build (a scratch venv on PyAuto313 + docs requirements; a venv-on-venv needs a .pth to PyAuto313's site-packages or it picks up the system numpy): 159 warnings (53 on api/) → 53 (0 on api/). test_autocti 279 passed (serial), Heart 1313 passed, CI green.
+
+For phase 3c: docs/conf.py clones PyAutoFit/PyAutoArray from the old rhayes777/Jammy2211 URLs at build time and puts them on sys.path (needs pyprojroot); docs/requirements.txt pins autonerves==2024.11.6.1 and arcticpy==2.6. RTD installs `.[docs]` via .readthedocs.yaml plus an arcticpy post_install.
+
+## Original prompt
+
 # Rewrite PyAutoCTI docs/api — 55 of 89 autosummary entries are dead
 
 Type: docs
