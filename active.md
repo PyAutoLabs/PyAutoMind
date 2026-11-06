@@ -126,3 +126,15 @@
   - autocti_workspace: feature/cti-five-failing-scripts
 - prompt: active/five_failing_scripts_triage_20261105.md
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
+
+## cti-api-rst-rewrite
+- issue: https://github.com/PyAutoLabs/PyAutoCTI/issues/123
+- issued: 2026-11-06
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/cti-api-rst-rewrite
+- repos:
+  - PyAutoCTI: feature/cti-api-rst-rewrite
+  - PyAutoHeart: feature/cti-api-rst-rewrite
+- prompt: active/api_rst_rewrite.md
+- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary

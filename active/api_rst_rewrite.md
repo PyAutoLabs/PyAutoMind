@@ -18,6 +18,7 @@ Unattended: ready
 Epic: cti-upkeep
 Phase: 5
 Filed: 2026-08-06 (backfilled from git)
+Issued: 2026-11-06
 
 Filed 2026-08-06 from a full `/audit_docs` sweep (every autosummary entry
 verified by import + `hasattr` against installed source). PyAutoCTI's
