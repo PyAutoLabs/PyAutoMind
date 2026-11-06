@@ -1056,7 +1056,7 @@ Use the start-dev skill. active/corner_anesthetic_takes_40_minutes_on_a.md
 
 </details>
 
-<details><summary>📋 <a href="active/cortex_agents_slim.md">Cortex AGENTS.md points to REFERENCE.md instead of restating it</a> — issued 2026-11-06 — library-dev — implemented + tests green on branch, not merged</summary>
+<details><summary>📋 <a href="active/cortex_agents_slim.md">Cortex AGENTS.md points to REFERENCE.md instead of restating it</a> — issued 2026-11-06 — PR open — awaiting human /prm — PRs: <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/87">PyAutoCortex#87</a></summary>
 
 ```
 Use the start-dev skill. active/cortex_agents_slim.md
@@ -1112,7 +1112,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/mind_agents_trim.md">Mind AGENTS.md prose trim</a> — issued 2026-11-06 — library-dev — implemented + tests green on branch, not merged</summary>
+<details><summary>📋 <a href="active/mind_agents_trim.md">Mind AGENTS.md prose trim</a> — issued 2026-11-06 — PR open — awaiting human /prm — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/544">PyAutoMind#544</a></summary>
 
 ```
 Use the start-dev skill. active/mind_agents_trim.md
@@ -1120,7 +1120,7 @@ Use the start-dev skill. active/mind_agents_trim.md
 
 </details>
 
-<details><summary>📋 <a href="active/organism_map_compact.md">one-clause organism map in every organ AGENTS.md</a> — issued 2026-11-06 — library-dev — implemented + tests green on branch, not merged</summary>
+<details><summary>📋 <a href="active/organism_map_compact.md">one-clause organism map in every organ AGENTS.md</a> — issued 2026-11-06 — PR open — awaiting human /prm — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/544">PyAutoMind#544</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/596">PyAutoBrain#596</a>, <a href="https://github.com/PyAutoLabs/PyAutoCortex/pull/87">PyAutoCortex#87</a></summary>
 
 ```
 Use the start-dev skill. active/organism_map_compact.md
@@ -1152,7 +1152,7 @@ Use the start-dev skill. active/sky_orientation_euclid_dr1_and_library.md
 
 </details>
 
-<details><summary>📋 <a href="active/token_load_measure_four_organs.md">token_load.py measures the prompt's three targets</a> — issued 2026-11-06 — library-dev — implemented + tests green on branch, not merged</summary>
+<details><summary>📋 <a href="active/token_load_measure_four_organs.md">token_load.py measures the prompt's three targets</a> — issued 2026-11-06 — PR open — awaiting human /prm — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/544">PyAutoMind#544</a></summary>
 
 ```
 Use the start-dev skill. active/token_load_measure_four_organs.md

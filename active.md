@@ -146,11 +146,12 @@
 - tier: judge — merge mode: human /prm
 
 ## token-load-measure-four-organs
-- issue: none yet — PR awaits human approval (session opens no PR unasked)
+- issue: none (PR is the tracking surface; human approved PRs 2026-11-06)
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/544 (opened 2026-11-06; merge Mind first)
 - issued: 2026-11-06
 - session: https://claude.ai/code/session_016nhQ8MapiJKa7vatHsEsZH
 - location: claude.ai cloud session (ephemeral container; work lives on the pushed branch)
-- status: library-dev — implemented + tests green on branch, not merged
+- status: PR open — awaiting human /prm
 - prompt: active/token_load_measure_four_organs.md
 - repos:
   - PyAutoMind: ccr-c113837c-0ulthv
@@ -158,11 +159,14 @@
 - tier: judge — merge mode: human /prm
 
 ## organism-map-compact
-- issue: none yet — PR awaits human approval (session opens no PR unasked)
+- issue: none (PR is the tracking surface; human approved PRs 2026-11-06)
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/544 (opened 2026-11-06; merge Mind first)
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/596 (opened 2026-11-06; merge Mind first)
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/87 (opened 2026-11-06; merge Mind first)
 - issued: 2026-11-06
 - session: https://claude.ai/code/session_016nhQ8MapiJKa7vatHsEsZH
 - location: claude.ai cloud session (ephemeral container; work lives on the pushed branch)
-- status: library-dev — implemented + tests green on branch, not merged
+- status: PR open — awaiting human /prm
 - prompt: active/organism_map_compact.md
 - repos:
   - PyAutoMind: ccr-c113837c-0ulthv
@@ -172,11 +176,12 @@
 - tier: judge — merge mode: human /prm
 
 ## cortex-agents-slim
-- issue: none yet — PR awaits human approval (session opens no PR unasked)
+- issue: none (PR is the tracking surface; human approved PRs 2026-11-06)
+- library-pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/87 (opened 2026-11-06; merge Mind first)
 - issued: 2026-11-06
 - session: https://claude.ai/code/session_016nhQ8MapiJKa7vatHsEsZH
 - location: claude.ai cloud session (ephemeral container; work lives on the pushed branch)
-- status: library-dev — implemented + tests green on branch, not merged
+- status: PR open — awaiting human /prm
 - prompt: active/cortex_agents_slim.md
 - repos:
   - PyAutoCortex: ccr-c113837c-0ulthv
@@ -184,11 +189,12 @@
 - tier: judge — merge mode: human /prm
 
 ## mind-agents-trim
-- issue: none yet — PR awaits human approval (session opens no PR unasked)
+- issue: none (PR is the tracking surface; human approved PRs 2026-11-06)
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/544 (opened 2026-11-06; merge Mind first)
 - issued: 2026-11-06
 - session: https://claude.ai/code/session_016nhQ8MapiJKa7vatHsEsZH
 - location: claude.ai cloud session (ephemeral container; work lives on the pushed branch)
-- status: library-dev — implemented + tests green on branch, not merged
+- status: PR open — awaiting human /prm
 - prompt: active/mind_agents_trim.md
 - repos:
   - PyAutoMind: ccr-c113837c-0ulthv
