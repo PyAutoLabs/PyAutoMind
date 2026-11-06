@@ -37,7 +37,8 @@
 - status: workspace-dev
 - worktree: (none; removed 2026-11-06)
 - repos:
-  - euclid_strong_lens_modeling_pipeline: (no branch; phase 2 remaining: ECLIPSE website thumbnails + _site JSON)
+  - euclid_strong_lens_modeling_pipeline: (no branch; phase 2 done 2026-11-06 pending human check of the preview; phases 3-5 next)
+- site: 2026-11-06 north-up thumbnails pushed to ECLIPSE_lens_catalogue feature/r2-pages-function-access (f68034d2, Pages deploy ok), _site/lenses rebuilt (RAL 414433), downloads.json → _release/dr1_v5_northup; old _release/dr1_v5 deleted (human OK)
 - r2: 2026-11-06 north-up release → _release/dr1_v5_northup (RAL 414405) and per-lens site files refreshed in bucket root (414406/414426, rclone copy, check 0 differences); old _release/dr1_v5 kept
 - 2d-pilot: 2026-11-05 RAL 414200+414205 → inspect/north_up_pilot_20261105_v2 (50 lenses, 431/431 fits pass witness; 1 sersic load_error). Review page Science/scratch/sky_orientation_dr1/north_up_pilot_20261105_v2/review/index.html — AWAITING human by-eye review; branch local (c4f1247), no PR yet
 - 2d: pilot approved by human 2026-11-05; PR https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/120 open (judge → human /prm); FULL RUN RAL 414229 (80 tasks, 15,007 lenses) → inspect/north_up_full_20261105
