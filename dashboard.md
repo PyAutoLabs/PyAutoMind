@@ -12,7 +12,7 @@
 | [Epics](#epics) | 21 |
 | [In flight](#in-flight) | 11 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 240 |
+| [Backlog](#backlog) | 241 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -902,7 +902,7 @@ Use the start-dev skill. draft/feature/pyautoscientist/scientist_optional_organ_
 </details>
 
 <details>
-<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 2 queued prompt(s), in order</summary>
+<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 3 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — ledger: `draft/feature/pyautobrain/autonomous_orchestrators_epic.md` — IN PROGRESS; design-reviewed 2026-11-03 (7 phases, <code>Needs:</code> folded into <code>Lane:</code> values, witnesses per phase, 6 decisions ruled by…</summary>
 
@@ -920,10 +920,18 @@ Use the start-dev skill. draft/feature/pyautobrain/autonomous_orchestrators_epic
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautobrain/mobile_shift_operation.md">Run orchestrator shifts from mobile (weekend away from the laptop)</a> — pyautobrain · medium · human-required · high</summary>
+<details><summary>📋 <a href="draft/feature/pyautobrain/mobile_shift_operation.md">Run a shift from mobile: the weekend cloud lane (2026-11-07/08)</a> — pyautobrain · medium · human-required · high</summary>
 
 ```
 Use the start-dev skill. draft/feature/pyautobrain/mobile_shift_operation.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/shift_watcher_in_the_cloud.md">Move the shift watcher off the laptop: a cloud-run orchestrator</a> — pyautobrain · large · human-required · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/shift_watcher_in_the_cloud.md
 ```
 
 </details>
@@ -1203,7 +1211,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 231 · local-dev 6 · ral 1
+Lanes: any 232 · local-dev 6 · ral 1
 
 <a id="human-review"></a>
 <details>
@@ -2726,7 +2734,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-92 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+93 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2747,6 +2755,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/jax_substructure/5_prng_key_vmap_noise.md`
 - `draft/feature/jax_substructure/6_deflection_equivalence_test.md`
 - `draft/feature/pyautobrain/autonomous_orchestrators_epic.md`
+- `draft/feature/pyautobrain/shift_watcher_in_the_cloud.md`
 - `draft/feature/pyautobroca/broca_communication_contract.md`
 - `draft/feature/pyautobroca/broca_communication_documentation_and_workspaces.md`
 - `draft/feature/pyautobroca/broca_communication_pilot.md`
@@ -2770,8 +2779,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autolens/point_source_plot_script_residual_shape_mismatch.md`
 - `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md`
 - `draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md`
-- `draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md`
-- _… and 52 more_
+- _… and 53 more_
 
 </details>
 
