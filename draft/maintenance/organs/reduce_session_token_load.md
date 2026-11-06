@@ -84,8 +84,8 @@ Measured with the extended `scripts/token_load.py` (now reports all three number
 | Completion-record median (2026/11, 110 records) | — | **55 lines** — already met | ≤ 60 |
 | start_dev / prm procedure lines | 499 / 456 | unchanged | ≤ 350 / ≤ 300 |
 
-Slices claimed in `active.md`: `token-load-measure-four-organs`, `organism-map-compact`,
-`cortex-agents-slim`, `mind-agents-trim`. **Left here:** the remaining ~2.7k
+Slices shipped 2026-11-06 (PyAutoMind#544, PyAutoBrain#596, PyAutoCortex#87):
+`complete/2026/11/{token-load-measure-four-organs,organism-map-compact,cortex-agents-slim,mind-agents-trim}.md`. **Left here:** the remaining ~2.7k
 tokens are mostly the five generated shared blocks (~3.3 kB in each organ:
 remote, history, deliverable, filing, standards; "Out of scope" keeps their
 rules verbatim — a ruling on trimming their surrounding prose, or loading them
