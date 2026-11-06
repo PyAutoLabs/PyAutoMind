@@ -1,3 +1,11 @@
+- issue: none
+- completed: 2026-11-06
+- summary: RETIRED as stale, no change made. The prompt's premise was false: only the `autolens_workspace_test/gallery/` copy of the harness was deleted (2026-09-30). The four registered `*_visualization` instances the Eyes conductor targets still ship `gallery/gallery_run.sh` (autolens_visualization and autogalaxy_visualization checked on main, 51c7e4d), and their AGENTS.md/README and `PyAutoBrain/agents/conductors/eyes/AGENTS.md` all say to run it. `_eyes.py`'s next action is therefore correct; the Witness (never mention `gallery_run.sh`) would have made it wrong.
+- found by: 2026-11-06 cloud queue session, verifying weekend cloud-lane task 1 before it was run; human ruling 2026-11-06: "Yes do all 3" (retire it).
+- follow-up: weekend cloud task 1 in `draft/feature/pyautobrain/mobile_shift_operation.md` is marked do-not-run.
+
+## Original prompt
+
 # `eyes survey` still tells people to run the retired `gallery/gallery_run.sh`
 
 Type: bug
