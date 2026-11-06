@@ -1,3 +1,12 @@
+- issue: none (PR is the tracking surface)
+- completed: 2026-11-06
+- prs: PyAutoMind#544, PyAutoBrain#596, PyAutoCortex#87
+- summary: repos.yaml organ rows gained one-clause map_role; system_map() renders it with a shorter preamble (map block ~4.4 kB -> ~2.0 kB). Regenerated into Brain and Cortex. Outstanding: the other organ copies (Heart, Hands, Nerves, Gut, Eyes, Ears, Pulse, Insight, DNA, Broca) regenerate on the next laptop repos_sync.py --write; --check reports them stale until then.
+- parent: draft/maintenance/organs/reduce_session_token_load.md (stays draft; remaining scope: procedure-line budgets, levers 5-6)
+- merged-by: human /prm 2026-11-06 (cloud session)
+
+## Original prompt
+
 # one-clause organism map in every organ AGENTS.md
 
 Type: maintenance

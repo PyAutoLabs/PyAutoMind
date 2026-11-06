@@ -1,3 +1,12 @@
+- issue: none (PR is the tracking surface)
+- completed: 2026-11-06
+- prs: PyAutoCortex#87
+- summary: Cortex AGENTS.md 21.5 kB -> 10.9 kB with no rule removed: verb listing, conductor and workflow tables and the verbatim out-of-scope quote replaced by pointers to REFERENCE.md, pyauto-brain help cortex and the shelved prompt. Merged without CI on human say-so: cortex_check.yml does not trigger on AGENTS.md; local cortex.py check OK and suite 104 passed.
+- parent: draft/maintenance/organs/reduce_session_token_load.md (stays draft; remaining scope: procedure-line budgets, levers 5-6)
+- merged-by: human /prm 2026-11-06 (cloud session)
+
+## Original prompt
+
 # Cortex AGENTS.md points to REFERENCE.md instead of restating it
 
 Type: maintenance

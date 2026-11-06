@@ -1,3 +1,12 @@
+- issue: none (PR is the tracking surface)
+- completed: 2026-11-06
+- prs: PyAutoMind#544
+- summary: Mind AGENTS.md 7.2 kB -> 6.6 kB of hand-written prose, no rule removed; hard rules and generated blocks unchanged.
+- parent: draft/maintenance/organs/reduce_session_token_load.md (stays draft; remaining scope: procedure-line budgets, levers 5-6)
+- merged-by: human /prm 2026-11-06 (cloud session)
+
+## Original prompt
+
 # Mind AGENTS.md prose trim
 
 Type: maintenance
