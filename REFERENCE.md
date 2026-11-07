@@ -9,7 +9,7 @@ The read-only context check is `python3 scripts/token_load.py report --root
 <workspace-root>`; `check` applies the same measurement to the configured
 budgets. It supports grouped main and flat bundle roots, and reports mandatory
 AGENTS and core skill files separately from conditional references. It also
-prints the three numbers `draft/maintenance/organs/reduce_session_token_load.md`
+prints the three numbers `complete/2026/11/reduce-session-token-load.md`
 targets: the four organs' AGENTS.md total (Brain, Mind, Cortex, Memory; target
 ≤ 6,000 tokens), the core procedure lines, and the newest month's median
 completion-record length (target ≤ 60). The Cortex/Memory files and the median

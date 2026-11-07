@@ -3,7 +3,7 @@
 
 Approximate tokens are UTF-8 bytes / 4, rounded up. Report is read-only;
 ``check`` exits nonzero when a required file is missing or a budget is exceeded.
-It also reports the three numbers `reduce_session_token_load.md` targets: the
+It also reports the three numbers `complete/2026/11/reduce-session-token-load.md` targets: the
 four organs' AGENTS.md total, the core procedure lines, and the median
 completion-record length of the newest month. The Cortex/Memory AGENTS and the
 record median are report-only unless their budget flag is given, so Mind-only
