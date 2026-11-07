@@ -1,3 +1,12 @@
+- issue: none (PR is the tracking surface)
+- completed: 2026-11-07
+- prs: PyAutoMind#544 PyAutoBrain#596 PyAutoCortex#87 PyAutoBrain#597 PyAutoBrain#600 PyAutoMind#548 PyAutoBrain#601
+- summary: token load measured and budgeted. Final numbers: four organs' AGENTS.md ~8.7k tokens (~5.4k excluding the shared generated blocks, which the human ruled stay; target read as <= 6k excluding them, met); start_dev 360 / prm 338 procedure lines (human ruling 2026-11-07: the CI budgets 400 / 450 count as met, the 350 / 300 targets are retired); completion-record median 53 lines (target <= 60, met); every skill <= 200 lines. The budget is now enforced, not remembered: Brain CI blocks on a Brain skill over 200 lines and prints token_load.py report on every PR, and `pyauto-brain hygiene tokens` reports breaches in the hygiene scan (PyAutoBrain#601, the final slice, claim reduce-session-token-load).
+- slices: complete/2026/11/{token-load-measure-four-organs,organism-map-compact,cortex-agents-slim,mind-agents-trim,procedure-lines-trim,skill-line-budget-trim}.md
+- merged-by: human /prm 2026-11-07 (cloud session)
+
+## Original prompt
+
 # Reduce the organism's per-session and per-task token load by half
 
 Type: maintenance

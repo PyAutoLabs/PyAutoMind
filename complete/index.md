@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2198 records across 11 buckets.
+2200 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -200,6 +200,7 @@ markers; everything below GENERATED is rebuilt.
 - [magnification-maps-image-plane](2026/11/magnification-maps-image-plane.md)
 - [magnification-maps-source-plane](2026/11/magnification-maps-source-plane.md)
 - [magnification-maps-uncertainty](2026/11/magnification-maps-uncertainty.md)
+- [memory-catch-up-discovery](2026/11/memory-catch-up-discovery.md) — PR is the tracking surface
 - [mind-agents-trim](2026/11/mind-agents-trim.md) — PR is the tracking surface
 - [multistart-gradient-quick-update](2026/11/multistart-gradient-quick-update.md) — already shipped — PyAutoFit#1556 (merged 2026-09-01) wires iterations_per_quick_update into the MultiStart gra…
 - [multistart-resume-cadence](2026/11/multistart-resume-cadence.md) — 2 → 100
@@ -218,6 +219,7 @@ markers; everything below GENERATED is rebuilt.
 - [rectangular-gradient-rtu-sparse](2026/11/rectangular-gradient-rtu-sparse.md) — the filed symptom (|g| ~2e9 on the imaging/rectangular/hst fiducial, RTU all backends, Bilinear CPU sparse) sp…
 - [rectangular-mapper-bilinear-row-weights](2026/11/rectangular-mapper-bilinear-row-weights.md) — - **Retired as already-fixed** by the gradient-correctness sweep (autolens_profiling#517, item 12). The draft …
 - [rectangular-parity-absolute-bound](2026/11/rectangular-parity-absolute-bound.md) — autogalaxy_workspace_test#134 (merged 0b5ff519, human /prm). `imaging/jax_likelihood/rectangular.py` parity is…
+- [reduce-session-token-load](2026/11/reduce-session-token-load.md) — PR is the tracking surface
 - [registry-reconcile-app-token](2026/11/registry-reconcile-app-token.md)
 - [repos-sync-optin-block](2026/11/repos-sync-optin-block.md) — shipped in PyAutoMind#539 (commit dc471e1d6), narrowed scope: option (a) of the 2026-11-05 re-size, chosen by …
 - [repos-sync-test-keys-on-dir-name](2026/11/repos-sync-test-keys-on-dir-name.md) — already shipped — closed as stale draft. Commit 679b1319f (2026-10-16, "test: Mind suite green on main — shado…
