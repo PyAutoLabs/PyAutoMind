@@ -12,7 +12,7 @@
 | [Epics](#epics) | 21 |
 | [In flight](#in-flight) | 11 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 240 |
+| [Backlog](#backlog) | 239 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -23,7 +23,7 @@
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 18
+**Highest priority** (filed as `high`) — showing 12 of 17
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -73,14 +73,6 @@ Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun
 
 </details>
 
-<details><summary>📋 <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> — organs · medium · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/maintenance/organs/reduce_session_token_load.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md">Physical model check when speeding up smoke tests</a> — workspaces · medium · supervised · high</summary>
 
 ```
@@ -117,6 +109,14 @@ Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel
 
 ```
 Use the start-dev skill. draft/research/autoarray/delaunay_research.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autocti/cti_upkeep_epic.md">CTI upkeep parity — bring PyAutoCTI and its satellites to the same…</a> — autocti · too-large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/maintenance/autocti/cti_upkeep_epic.md
 ```
 
 </details>
@@ -1211,7 +1211,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 231 · local-dev 6 · ral 1
+Lanes: any 230 · local-dev 6 · ral 1
 
 <a id="human-review"></a>
 <details>
@@ -2298,15 +2298,7 @@ Use the start-dev skill. draft/docs/howtolens/tutorial_correctness_and_howtogala
 </details>
 
 <details>
-<summary><b>maintenance</b> — 14</summary>
-
-<details><summary>📋 <a href="draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a> — organs · medium · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/maintenance/organs/reduce_session_token_load.md
-```
-
-</details>
+<summary><b>maintenance</b> — 13</summary>
 
 <details><summary>📋 <a href="draft/maintenance/autocti/cti_upkeep_epic.md">CTI upkeep parity — bring PyAutoCTI and its satellites to the same…</a> — autocti · too-large · human-required · high</summary>
 
@@ -2726,7 +2718,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-93 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+92 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2771,7 +2763,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autolens/point_source_plot_script_residual_shape_mismatch.md`
 - `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md`
 - `draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md`
-- _… and 53 more_
+- _… and 52 more_
 
 </details>
 
