@@ -19,140 +19,7 @@
 <a id="looks-shipped"></a>
 ## Looks shipped — confirm
 
-29 draft(s) with strong evidence the work already shipped (`intake looks-shipped`). Held out of the pick lists and the batch planner until closed or dismissed in [`looks_shipped_dismissed.md`](looks_shipped_dismissed.md).
-
-<details><summary>📋 <a href="draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md">Adaptive Delaunay mesh places two mesh pixels 0.001" apart — a degenerate…</a> — witness-exists — Witness names <code>source_plane_mesh_grid</code>, defined in PyAutoArray autoarray/inversion/mock/mock_mapper.py:49; added by e52782ff…</summary>
-
-```
-`draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `source_plane_mesh_grid`, defined in PyAutoArray autoarray/inversion/mock/mock_mapper.py:49; added by e52782ff 2026-10-30 fix: adaptive rectangular meshes report their true pixel centres (Filed 2026-09-16)
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close adaptive-mesh-degenerate-pixel-pair --date 2026-11-06 --from-file <record-body.md> --prompt draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md — 2026-11-06 — <why it is not shipped>' >> looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why.
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large regularization coefficients the jitted…</a> — witness-exists — Witness names <code>FitInterferometer</code>, defined in PyAutoArray autoarray/fit/fit_interferometer.py:73; changed by 1b066ccd 2026-10-01…</summary>
-
-```
-`draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `FitInterferometer`, defined in PyAutoArray autoarray/fit/fit_interferometer.py:73; changed by 1b066ccd 2026-10-01 feat: per-interface data_term override and sparse profile-term identity (streaming P4) (Filed 2026-10-01)
-- witness-exists: Witness names `FitInterferometer`, defined in PyAutoGalaxy autogalaxy/interferometer/fit_interferometer.py:313; changed by 80838b82 2026-10-01 fix: exact array-free log_likelihood and guard against data/noise-map overrides (streaming P4 review) (Filed 2026-10-01)
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close interferometer-log-evidence-large-regularization-coefficient-cholesky --date 2026-11-06 --from-file <record-body.md> --prompt draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md — 2026-11-06 — <why it is not shipped>' >> looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why.
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/mapping_overlay_follow_ups_forward_regions_throu.md">Mapping overlay follow-ups: forward regions= through the autogalaxy plot wrappers, fix degenerate…</a> — witness-exists — Witness names <code>RectangularBilinearAdaptDensity</code>, defined in PyAutoArray…</summary>
-
-```
-`draft/bug/autoarray/mapping_overlay_follow_ups_forward_regions_throu.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `RectangularBilinearAdaptDensity`, defined in PyAutoArray autoarray/inversion/mesh/mesh/rectangular_bilinear_adapt_density.py:8; changed by 499e087a 2026-09-06 small datasets: honour the cap card, the JAX switch and the cap in mesh shapes (Filed 2026-09-03)
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close mapping-overlay-follow-ups-forward-regions-throu --date 2026-11-06 --from-file <record-body.md> --prompt draft/bug/autoarray/mapping_overlay_follow_ups_forward_regions_throu.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/bug/autoarray/mapping_overlay_follow_ups_forward_regions_throu.md — 2026-11-06 — <why it is not shipped>' >> looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why.
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md">Filed: 2026-11-05 (found by the autolens_profiling#519 worker-route witness)</a> — witness-exists — Witness names <code>test__sibson_serial_kernel_equals_parallel_kernel</code>, defined in PyAutoArray…</summary>
-
-```
-`draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `test__sibson_serial_kernel_equals_parallel_kernel`, defined in PyAutoArray test_autoarray/test_numba_fork_safety.py:173; added by 56db9c0f 2026-11-05 Run numba prange kernels serially in multiprocessing search workers (#676) (Filed 2026-11-05) (+1 more)
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close sibson-serial-kernel-loses-allocation-hoisting --date 2026-11-06 --from-file <record-body.md> --prompt draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md — 2026-11-06 — <why it is not shipped>' >> looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why.
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md"><code>SimulatorImaging</code> draws Poisson noise before checking <code>add_poisson_noise_to_data</code></a> — commit-names-draft — euclid_strong_lens_modeling_pipeline@0f4aed9 (2026-09-13)…</summary>
-
-```
-`draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- commit-names-draft: euclid_strong_lens_modeling_pipeline@0f4aed9 (2026-09-13): `PyAutoMind/draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md`;
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close simulator-imaging-poisson-drawn-before-flag-check --date 2026-11-06 --from-file <record-body.md> --prompt draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/bug/autoarray/simulator_imaging_poisson_drawn_before_flag_check.md — 2026-11-06 — <why it is not shipped>' >> looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why.
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and provenance cannot see…</a> — witness-exists — Witness names <code>visibilities_from</code>, defined in PyAutoArray autoarray/operators/transformer_util.py:4; added by 8c73a9fb 2026-10-21…</summary>
-
-```
-`draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `visibilities_from`, defined in PyAutoArray autoarray/operators/transformer_util.py:4; added by 8c73a9fb 2026-10-21 test: primary beam witness, parity and propagation tests (Filed 2026-10-01)
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close sparse-terms-nufft-origin-and-mask-compatibility --date 2026-11-06 --from-file <record-body.md> --prompt draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md — 2026-11-06 — <why it is not shipped>' >> looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why.
-```
-
-</details>
+23 draft(s) with strong evidence the work already shipped (`intake looks-shipped`). Held out of the pick lists and the batch planner until closed or dismissed in [`looks_shipped_dismissed.md`](looks_shipped_dismissed.md).
 
 <details><summary>📋 <a href="draft/bug/autogalaxy/database_paths_dataset_fits_not_registered.md">Database-path searches cannot reload dataset.fits (written to disk, never registered via save_fits)</a> — witness-exists — Witness names <code>AnalysisInterferometer</code>, defined in PyAutoGalaxy autogalaxy/interferometer/model/analysis.py:263; changed by…</summary>
 
@@ -772,7 +639,7 @@ Use the start-dev skill. draft/research/autoarray/delaunay_research.md
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 67
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 70
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 
