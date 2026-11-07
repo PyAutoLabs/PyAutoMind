@@ -327,365 +327,11 @@ Use intake to record new intent and the established development workflow for acc
 Keep track of decisions and outstanding questions throughout this conversation. After changes, report what was recorded, where it lives and what remains to do.
 
 Work on GitHub:
-- Open Mind repository: https://github.com/PyAutoLabs/PyAutoMind</textarea></details><div class="orchestration-freshness" data-freshness="grey"><details data-freshness-stamp data-refreshed-at="2026-11-07T13:39:29Z"><summary><span data-freshness-label>Last updated 2026-11-07 13:39:29 UTC</span></summary><time datetime="2026-11-07T13:39:29Z">2026-11-07 13:39:29 UTC</time></details><a data-refresh-link href="https://github.com/PyAutoLabs/PyAutoMind/actions/workflows/dashboard_refresh.yml" title="Open the dashboard refresh controls">↻ Update</a></div></div><p class="orchestration-status" role="status" aria-live="polite"></p></section>
-<nav class="board-nav" style="--nav-columns:7" aria-label="Board sections"><a class="board-nav-card" href="#start-here"><span class="board-nav-count">24</span><span class="board-nav-label">Start here</span></a><a class="board-nav-card" href="#epics"><span class="board-nav-count">21</span><span class="board-nav-label">Epics</span></a><a class="board-nav-card" href="#in-flight"><span class="board-nav-count">12</span><span class="board-nav-label">In flight</span></a><a class="board-nav-card" href="#planned"><span class="board-nav-count">9</span><span class="board-nav-label">Planned</span></a><a class="board-nav-card" href="#backlog"><span class="board-nav-count">241</span><span class="board-nav-label">Backlog</span></a><a class="board-nav-card" href="#recent"><span class="board-nav-count">50</span><span class="board-nav-label">Recent</span></a><a class="board-nav-card" href="#pending-release"><span class="board-nav-count">3</span><span class="board-nav-label">Pending release</span></a></nav>
+- Open Mind repository: https://github.com/PyAutoLabs/PyAutoMind</textarea></details><div class="orchestration-freshness" data-freshness="grey"><details data-freshness-stamp data-refreshed-at="2026-11-07T14:05:48Z"><summary><span data-freshness-label>Last updated 2026-11-07 14:05:48 UTC</span></summary><time datetime="2026-11-07T14:05:48Z">2026-11-07 14:05:48 UTC</time></details><a data-refresh-link href="https://github.com/PyAutoLabs/PyAutoMind/actions/workflows/dashboard_refresh.yml" title="Open the dashboard refresh controls">↻ Update</a></div></div><p class="orchestration-status" role="status" aria-live="polite"></p></section>
+<nav class="board-nav" style="--nav-columns:7" aria-label="Board sections"><a class="board-nav-card" href="#start-here"><span class="board-nav-count">24</span><span class="board-nav-label">Start here</span></a><a class="board-nav-card" href="#epics"><span class="board-nav-count">21</span><span class="board-nav-label">Epics</span></a><a class="board-nav-card" href="#in-flight"><span class="board-nav-count">13</span><span class="board-nav-label">In flight</span></a><a class="board-nav-card" href="#planned"><span class="board-nav-count">9</span><span class="board-nav-label">Planned</span></a><a class="board-nav-card" href="#backlog"><span class="board-nav-count">240</span><span class="board-nav-label">Backlog</span></a><a class="board-nav-card" href="#recent"><span class="board-nav-count">50</span><span class="board-nav-label">Recent</span></a><a class="board-nav-card" href="#pending-release"><span class="board-nav-count">3</span><span class="board-nav-label">Pending release</span></a></nav>
 
-<details class="board-section"><summary><h2>Looks shipped — confirm</h2></summary><div class="board-section-body"><a id="looks-shipped"></a>
-<p class="muted">23 draft(s) with strong evidence the work already shipped. Held out of the pick lists and the batch planner until closed or dismissed in <code>looks_shipped_dismissed.md</code>.</p>
-<div class="task"><button class="copy" data-cmd="`draft/bug/autogalaxy/database_paths_dataset_fits_not_registered.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `AnalysisInterferometer`, defined in PyAutoGalaxy autogalaxy/interferometer/model/analysis.py:263; changed by f7f6d79e 2026-10-21 feat: persist the interferometer primary beam through save_attributes and aggregator rebuild (Filed 2026-09-30) (+2 more)
-- witness-exists: Witness names `AnalysisInterferometer`, defined in PyAutoLens autolens/interferometer/model/analysis.py:41; changed by e5efcf395 2026-09-30 feat(interferometer): fits and save_attributes on array-free datasets (streaming phase 2, PyAutoGalaxy#638) (Filed 2026-09-30)
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close database-paths-dataset-fits-not-registered --date 2026-11-06 --from-file &lt;record-body.md&gt; --prompt draft/bug/autogalaxy/database_paths_dataset_fits_not_registered.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/bug/autogalaxy/database_paths_dataset_fits_not_registered.md — 2026-11-06 — &lt;why it is not shipped&gt;' &gt;&gt; looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why." aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autogalaxy/database_paths_dataset_fits_not_registered.md">Database-path searches cannot reload dataset.fits (written to disk, never registered via save_fits)</a> — <span class="facets">witness-exists</span><br><span class="facets">Witness names <code>AnalysisInterferometer</code>, defined in PyAutoGalaxy autogalaxy/interferometer/model/analysis.py:263; changed by…</span></p></div>
-<div class="task"><button class="copy" data-cmd="`draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `fits_galaxy_images`, defined in PyAutoGalaxy autogalaxy/galaxy/plot/galaxies_plots.py:223; changed by eda751fa 2026-11-02 feat: plot_magnification_2d — image-plane log|mu| map with constant-mu contours (Filed 2026-10-01)
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close galaxy-image-dict-mixed-galaxy-overwrites-ordinary-light --date 2026-11-06 --from-file &lt;record-body.md&gt; --prompt draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md — 2026-11-06 — &lt;why it is not shipped&gt;' &gt;&gt; looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why." aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary light (dict merge overwrites)</a> — <span class="facets">witness-exists</span><br><span class="facets">Witness names <code>fits_galaxy_images</code>, defined in PyAutoGalaxy autogalaxy/galaxy/plot/galaxies_plots.py:223; changed by eda751fa…</span></p></div>
-<div class="task"><button class="copy" data-cmd="`draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `LensCalc`, defined in PyAutoGalaxy autogalaxy/operate/lens_calc.py:138; changed by 0bef0a98 2026-11-02 feat: source-plane magnification maps (mesh + square pixels) (Filed 2026-09-17)
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close lenscalc-masked-grid-caustic-differs-from-unmasked --date 2026-11-06 --from-file &lt;record-body.md&gt; --prompt draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md — 2026-11-06 — &lt;why it is not shipped&gt;' &gt;&gt; looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why." aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md">LensCalc tangential caustic on a masked grid differs ~27 % in ellipticity…</a> — <span class="facets">witness-exists</span><br><span class="facets">Witness names <code>LensCalc</code>, defined in PyAutoGalaxy autogalaxy/operate/lens_calc.py:138; changed by 0bef0a98 2026-11-02 feat…</span></p></div>
-<div class="task"><button class="copy" data-cmd="`draft/bug/autolens/positions_threshold_fixture_off_axis.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `test_result`, defined in PyAutoLens test_autolens/analysis/test_result.py:1; changed by 8ab7fbb85 2026-10-07 fix: single-image recovery blind to inf-padded JAX solver output (Filed 2026-09-03)
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close positions-threshold-fixture-off-axis --date 2026-11-06 --from-file &lt;record-body.md&gt; --prompt draft/bug/autolens/positions_threshold_fixture_off_axis.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/bug/autolens/positions_threshold_fixture_off_axis.md — 2026-11-06 — &lt;why it is not shipped&gt;' &gt;&gt; looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why." aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autolens/positions_threshold_fixture_off_axis.md">Move the positions_threshold test fixture off the symmetry axis</a> — <span class="facets">witness-exists</span><br><span class="facets">Witness names <code>test_result</code>, defined in PyAutoLens test_autolens/analysis/test_result.py:1; changed by 8ab7fbb85 2026-10-07 fix…</span></p></div>
-<div class="task"><button class="copy" data-cmd="`draft/bug/autolens_profiling/legacy_numba_presets_deviate_from_production.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `production_standard_data`, defined in autolens_profiling _production_config.py:1595; added by 8a716fbf 2026-10-24 standard size matches real production data and mesh (#456 human ruling) (Filed 2026-10-24)
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close legacy-numba-presets-deviate-from-production --date 2026-11-06 --from-file &lt;record-body.md&gt; --prompt draft/bug/autolens_profiling/legacy_numba_presets_deviate_from_production.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/bug/autolens_profiling/legacy_numba_presets_deviate_from_production.md — 2026-11-06 — &lt;why it is not shipped&gt;' &gt;&gt; looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why." aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autolens_profiling/legacy_numba_presets_deviate_from_production.md">Legacy numba "production" presets in autolens_profiling deviate from the real production pipeline</a> — <span class="facets">witness-exists</span><br><span class="facets">Witness names <code>production_standard_data</code>, defined in autolens_profiling _production_config.py:1595; added by 8a716fbf 2026-10-24…</span></p></div>
-<div class="task"><button class="copy" data-cmd="`draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- commit-names-draft: autolens_workspace@9059d6f6 (2026-09-18): draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md; remove
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close multi-galaxy-start-here-release-cost --date 2026-11-06 --from-file &lt;record-body.md&gt; --prompt draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md — 2026-11-06 — &lt;why it is not shipped&gt;' &gt;&gt; looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why." aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md">Profile multi_galaxy/start_here.py's release cost and retire its 3600s override</a> — <span class="facets">commit-names-draft</span><br><span class="facets">autolens_workspace@9059d6f6 (2026-09-18): draft/bug/autolens_workspace/multi_galaxy_start_here_release_cost.md; remove</span></p></div>
-<div class="task"><button class="copy" data-cmd="`draft/bug/autolens_workspace/slam_simultaneous_subhalo_grid_search_fits_last.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `subhalo_grid_search`, defined in autolens_workspace scripts/multi_galaxy/features/advanced/subhalo/detect/start_here.py:570; changed by 5a655a36 2026-09-18 docs: every external field moves to fields= (al.MassField) — imaging, interferometer, point_source, multi_dataset, guides, multi_galaxy, group, LOS halos (Filed 2026-09-04)
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close slam-simultaneous-subhalo-grid-search-fits-last --date 2026-11-06 --from-file &lt;record-body.md&gt; --prompt draft/bug/autolens_workspace/slam_simultaneous_subhalo_grid_search_fits_last.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/bug/autolens_workspace/slam_simultaneous_subhalo_grid_search_fits_last.md — 2026-11-06 — &lt;why it is not shipped&gt;' &gt;&gt; looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why." aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autolens_workspace/slam_simultaneous_subhalo_grid_search_fits_last.md">SLaM simultaneous subhalo grid search fits last band only</a> — <span class="facets">witness-exists</span><br><span class="facets">Witness names <code>subhalo_grid_search</code>, defined in autolens_workspace…</span></p></div>
-<div class="task"><button class="copy" data-cmd="`draft/bug/euclid/drawer_pix_initializer_exception_flake.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `test_latent_run_level`, defined in euclid_strong_lens_modeling_pipeline tests/test_latent_run_level.py:1; changed by 7fbdbe5 2026-09-18 refactor: use bare MassField models throughout Euclid pipeline (Filed 2026-09-16)
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close drawer-pix-initializer-exception-flake --date 2026-11-06 --from-file &lt;record-body.md&gt; --prompt draft/bug/euclid/drawer_pix_initializer_exception_flake.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/bug/euclid/drawer_pix_initializer_exception_flake.md — 2026-11-06 — &lt;why it is not shipped&gt;' &gt;&gt; looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why." aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/drawer_pix_initializer_exception_flake.md"><code>test_latent_run_level.py</code> slow suite flakes 1-in-7: the <code>drawer_pix</code> Drawer raises <code>InitializerException</code> because all…</a> — <span class="facets">witness-exists</span><br><span class="facets">Witness names <code>test_latent_run_level</code>, defined in euclid_strong_lens_modeling_pipeline tests/test_latent_run_level.py:1; changed…</span></p></div>
-<div class="task"><button class="copy" data-cmd="`draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- commit-names-draft: euclid_strong_lens_modeling_pipeline@34fe3fb (2026-09-03): PyAutoMind/draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md; README.md
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close gpu-per-lens-time-vs-documented-10-min --date 2026-11-06 --from-file &lt;record-body.md&gt; --prompt draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md — 2026-11-06 — &lt;why it is not shipped&gt;' &gt;&gt; looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why." aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md">GPU route takes 1 h 14 min to 1 h 44 min…</a> — <span class="facets">commit-names-draft</span><br><span class="facets">euclid_strong_lens_modeling_pipeline@34fe3fb (2026-09-03): PyAutoMind/draft/bug/euclid/gpu_per_lens_time_vs_documented_10_min.md…</span></p></div>
-<div class="task"><button class="copy" data-cmd="`draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `should_simulate`, defined in PyAutoArray autoarray/util/dataset_util.py:503; changed by 94b9149d 2026-11-01 feat(util.dataset): add simulate_if_needed one-line auto-simulate helper (Filed 2026-08-22)
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close point-source-json-datasets-record-no-regime --date 2026-11-06 --from-file &lt;record-body.md&gt; --prompt draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md — 2026-11-06 — &lt;why it is not shipped&gt;' &gt;&gt; looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why." aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md">Point-source JSON datasets record no resolution regime</a> — <span class="facets">witness-exists</span><br><span class="facets">Witness names <code>should_simulate</code>, defined in PyAutoArray autoarray/util/dataset_util.py:503; changed by 94b9149d 2026-11-01…</span></p></div>
-<div class="task"><button class="copy" data-cmd="`draft/feature/autoarray/edge_zeroed_log_det_cholesky_reuse.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `log_det_curvature_reg_matrix_term`, defined in PyAutoArray autoarray/inversion/mock/mock_inversion.py:196; added by 71a3ef49 2026-10-26 feat: matrix-free interferometer route via Settings(interferometer_route=&quot;matrix_free&quot;) (Filed 2026-09-27)
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close edge-zeroed-log-det-cholesky-reuse --date 2026-11-06 --from-file &lt;record-body.md&gt; --prompt draft/feature/autoarray/edge_zeroed_log_det_cholesky_reuse.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/feature/autoarray/edge_zeroed_log_det_cholesky_reuse.md — 2026-11-06 — &lt;why it is not shipped&gt;' &gt;&gt; looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why." aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autoarray/edge_zeroed_log_det_cholesky_reuse.md">Reuse the fnnls Cholesky factor for the log det when edge-zeroed pixels…</a> — <span class="facets">witness-exists</span><br><span class="facets">Witness names <code>log_det_curvature_reg_matrix_term</code>, defined in PyAutoArray autoarray/inversion/mock/mock_inversion.py:196; added…</span></p></div>
-<div class="task"><button class="copy" data-cmd="`draft/feature/autoarray/interferometer_curvature_preload_phase1.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `InversionInterferometerSparseNumba`, defined in PyAutoArray autoarray/inversion/inversion/interferometer_numba/sparse.py:23; changed by fb880e02 2026-10-21 fix: keep the numba interferometer route for a primary beam of ones (Filed 2026-10-04)
-- witness-exists: Witness names `figure_of_merit`, defined in autolens_profiling scripts/imaging/rectangular/hazards.py:468; added by 4dedf1a6 2026-10-06 refactor: migrate profiling scripts to dataset/model layout (Filed 2026-10-04)
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close interferometer-curvature-preload-phase1 --date 2026-11-06 --from-file &lt;record-body.md&gt; --prompt draft/feature/autoarray/interferometer_curvature_preload_phase1.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/feature/autoarray/interferometer_curvature_preload_phase1.md — 2026-11-06 — &lt;why it is not shipped&gt;' &gt;&gt; looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why." aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autoarray/interferometer_curvature_preload_phase1.md">Fixed-mapper interferometer searches, phase 1: pin the <code>preloads.curvature_matrix</code> reuse invariant and measure…</a> — <span class="facets">witness-exists</span><br><span class="facets">Witness names <code>InversionInterferometerSparseNumba</code>, defined in PyAutoArray…</span></p></div>
-<div class="task"><button class="copy" data-cmd="`draft/feature/autofit/model_figure_tuple_component_relations.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `test_presentation`, defined in PyAutoFit test_autofit/model_figure/test_presentation.py:1; changed by 6bcb53f12 2026-09-11 Add the __solved_parameters__ protocol to graph_spec (PyAutoLens#736) (Filed 2026-09-11)
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close model-figure-tuple-component-relations --date 2026-11-06 --from-file &lt;record-body.md&gt; --prompt draft/feature/autofit/model_figure_tuple_component_relations.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/feature/autofit/model_figure_tuple_component_relations.md — 2026-11-06 — &lt;why it is not shipped&gt;' &gt;&gt; looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why." aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autofit/model_figure_tuple_component_relations.md">Model figures: annotate relations on tuple components</a> — <span class="facets">witness-exists</span><br><span class="facets">Witness names <code>test_presentation</code>, defined in PyAutoFit test_autofit/model_figure/test_presentation.py:1; changed by 6bcb53f12…</span></p></div>
-<div class="task"><button class="copy" data-cmd="`draft/feature/autolens/coolest_pixel_grid_export.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `from_coolest`, defined in PyAutoLens autolens/interop/coolest.py:465; changed by 5e434136a 2026-09-17 feat: MassField in PyAutoLens — Tracer(fields=), analysis slot, COOLEST, LOS, model_util (Filed 2026-09-16) (+1 more)
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close coolest-pixel-grid-export --date 2026-11-06 --from-file &lt;record-body.md&gt; --prompt draft/feature/autolens/coolest_pixel_grid_export.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/feature/autolens/coolest_pixel_grid_export.md — 2026-11-06 — &lt;why it is not shipped&gt;' &gt;&gt; looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why." aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autolens/coolest_pixel_grid_export.md">COOLEST: export MGE lens light and pixelized sources as pixel grids</a> — <span class="facets">witness-exists</span><br><span class="facets">Witness names <code>from_coolest</code>, defined in PyAutoLens autolens/interop/coolest.py:465; changed by 5e434136a 2026-09-17 feat…</span></p></div>
-<div class="task"><button class="copy" data-cmd="`draft/feature/autolens/lenstwin_epic.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `MassBudget`, defined in PyAutoGalaxy autogalaxy/operate/mass_budget.py:283; added by abcb81b8 2026-10-28 feat: MassBudget, CircularAperture and M/L, kappa_s solvers (lenstwin 2) (Filed 2026-10-28)
-- witness-exists: Witness names `ReferenceModel`, defined in PyAutoLens autolens/twins/reference.py:53; added by f6800bb50 2026-10-28 feat: add al.twins core — ReferenceModel, Twin, SimulatedTwin (lenstwin 0B) (Filed 2026-10-28) (+3 more)
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close lenstwin-epic --date 2026-11-06 --from-file &lt;record-body.md&gt; --prompt draft/feature/autolens/lenstwin_epic.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/feature/autolens/lenstwin_epic.md — 2026-11-06 — &lt;why it is not shipped&gt;' &gt;&gt; looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why." aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autolens/lenstwin_epic.md">LensTwin epic: observation-anchored digital twins of fitted strong lenses — <code>al.twins</code>…</a> — <span class="facets">witness-exists</span><br><span class="facets">Witness names <code>MassBudget</code>, defined in PyAutoGalaxy autogalaxy/operate/mass_budget.py:283; added by abcb81b8 2026-10-28 feat…</span></p></div>
-<div class="task"><button class="copy" data-cmd="`draft/feature/workspaces/group_los_halos.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- commit-names-draft: autolens_workspace@5a655a36 (2026-09-18): docs: every external field moves to fields= (al.MassField) — imaging, interferometer, point_source, multi_dataset, guides, multi_galaxy, group, LOS halos
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close group-los-halos --date 2026-11-06 --from-file &lt;record-body.md&gt; --prompt draft/feature/workspaces/group_los_halos.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/feature/workspaces/group_los_halos.md — 2026-11-06 — &lt;why it is not shipped&gt;' &gt;&gt; looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why." aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/workspaces/group_los_halos.md">The imaging <code>features/advanced/los_halos</code> example needs improving and padding out before</a> — <span class="facets">commit-names-draft</span><br><span class="facets">autolens_workspace@5a655a36 (2026-09-18): docs: every external field moves to fields= (al.MassField) — imaging, interferometer…</span></p></div>
-<div class="task"><button class="copy" data-cmd="`draft/maintenance/autoarray/small_datasets_followups_after_8c.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `disable_jax`, defined in PyAutoArray autoarray/inversion/inversion/interferometer/inversion_interferometer_util.py:28; added by 87205219 2026-09-08 perf: build nufft_precision_operator_from as a type-1 NUFFT (#539) (Filed 2026-09-06)
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close small-datasets-followups-after-8c --date 2026-11-06 --from-file &lt;record-body.md&gt; --prompt draft/maintenance/autoarray/small_datasets_followups_after_8c.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/maintenance/autoarray/small_datasets_followups_after_8c.md — 2026-11-06 — &lt;why it is not shipped&gt;' &gt;&gt; looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why." aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/autoarray/small_datasets_followups_after_8c.md">After the phase-8c releases: bump the autonerves floor, drop the defensive fallback…</a> — <span class="facets">witness-exists</span><br><span class="facets">Witness names <code>disable_jax</code>, defined in PyAutoArray…</span></p></div>
-<div class="task"><button class="copy" data-cmd="`draft/maintenance/ci/wiki_currency_check_version_gate.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- commit-names-draft: autocti_assistant@de4ac2d (2026-08-24): Merge pull request #26 from PyAutoLabs/feature/wiki-currency-check-version-gate
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close wiki-currency-check-version-gate --date 2026-11-06 --from-file &lt;record-body.md&gt; --prompt draft/maintenance/ci/wiki_currency_check_version_gate.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/maintenance/ci/wiki_currency_check_version_gate.md — 2026-11-06 — &lt;why it is not shipped&gt;' &gt;&gt; looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why." aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/ci/wiki_currency_check_version_gate.md">wiki-currency's --check-version gate rots on every library main merge</a> — <span class="facets">commit-names-draft</span><br><span class="facets">autocti_assistant@de4ac2d (2026-08-24): Merge pull request #26 from PyAutoLabs/feature/wiki-currency-check-version-gate</span></p></div>
-<div class="task"><button class="copy" data-cmd="`draft/refactor/autolens/witt_wynne_solver_library_home.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `test_witt_wynne_util`, defined in euclid_strong_lens_modeling_pipeline tests/test_witt_wynne_util.py:1; changed by 7fbdbe5 2026-09-18 refactor: use bare MassField models throughout Euclid pipeline (Filed 2026-09-17)
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close witt-wynne-solver-library-home --date 2026-11-06 --from-file &lt;record-body.md&gt; --prompt draft/refactor/autolens/witt_wynne_solver_library_home.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/refactor/autolens/witt_wynne_solver_library_home.md — 2026-11-06 — &lt;why it is not shipped&gt;' &gt;&gt; looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why." aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/autolens/witt_wynne_solver_library_home.md">Move the Witt–Wynne SIEP solver/projection into PyAutoLens once the two copies have…</a> — <span class="facets">witness-exists</span><br><span class="facets">Witness names <code>test_witt_wynne_util</code>, defined in euclid_strong_lens_modeling_pipeline tests/test_witt_wynne_util.py:1; changed by…</span></p></div>
-<div class="task"><button class="copy" data-cmd="`draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- commit-names-draft: autolens_workspace_test@ef297b6 (2026-07-23): defaults (Mind draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md).
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close rectangular-kernel-bandwidth-defaults --date 2026-11-06 --from-file &lt;record-body.md&gt; --prompt draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md — 2026-11-06 — &lt;why it is not shipped&gt;' &gt;&gt; looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why." aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md">Kernel-CDF bandwidth defaults — config-dependent quality, investigate adaptivity</a> — <span class="facets">commit-names-draft</span><br><span class="facets">autolens_workspace_test@ef297b6 (2026-07-23): defaults (Mind draft/research/autoarray/rectangular_kernel_bandwidth_defaults.md).</span></p></div>
-<div class="task"><button class="copy" data-cmd="`draft/research/pyautoreduce/acceptance_noise_rebaseline.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- commit-names-draft: PyAutoReduce@f4a4824 (2026-07-09): PyAutoMind research/pyautoreduce/acceptance_noise_rebaseline.md.
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close acceptance-noise-rebaseline --date 2026-11-06 --from-file &lt;record-body.md&gt; --prompt draft/research/pyautoreduce/acceptance_noise_rebaseline.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/research/pyautoreduce/acceptance_noise_rebaseline.md — 2026-11-06 — &lt;why it is not shipped&gt;' &gt;&gt; looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why." aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/pyautoreduce/acceptance_noise_rebaseline.md">Re-baseline the slacs0008 acceptance parity after the HAP-dedupe fix</a> — <span class="facets">commit-names-draft</span><br><span class="facets">PyAutoReduce@f4a4824 (2026-07-09): PyAutoMind research/pyautoreduce/acceptance_noise_rebaseline.md.</span></p></div>
-<div class="task"><button class="copy" data-cmd="`draft/test/autolens_workspace_test/jax_zero_contour.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- commit-names-draft: PyAutoGalaxy@03070e74 (2026-09-11): for `jax_zero_contour.ZeroSolver`. It is xp-generic, masks non-finite (+2 more)
-- commit-names-draft: PyAutoHeart@6ca0a99 (2026-09-15): (jax_zero_contour, zeus-mcmc) are real Colab breakages and join
-- commit-names-draft: PyAutoLens@a0666e7ef (2026-10-28): missing-jax_zero_contour fallbacks as every other plot) and route each source (+1 more)
-- commit-names-draft: PyAutoNerves@5364cce (2026-09-15): fix: add jax_zero_contour and zeus-mcmc to the Colab bootstrap extras
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close jax-zero-contour --date 2026-11-06 --from-file &lt;record-body.md&gt; --prompt draft/test/autolens_workspace_test/jax_zero_contour.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/test/autolens_workspace_test/jax_zero_contour.md — 2026-11-06 — &lt;why it is not shipped&gt;' &gt;&gt; looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why." aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace_test/jax_zero_contour.md">Verify jax.jit / jax.grad parity on the critical-curve and caustic calculations</a> — <span class="facets">commit-names-draft</span><br><span class="facets">PyAutoGalaxy@03070e74 (2026-09-11): for <code>jax_zero_contour.ZeroSolver</code>. It is xp-generic, masks non-finite (+2 more)</span></p></div>
-<div class="task"><button class="copy" data-cmd="`draft/test/workspaces/smoke_workspace_fixes.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- commit-names-draft: autogalaxy_workspace_test@0e8976e (2026-09-15): smoke_workspace_fixes.md that no longer exists anywhere in the workspace.
-- commit-names-draft: autolens_workspace_test@3fea769 (2026-09-15): smoke_workspace_fixes.md that no longer exists anywhere in the workspace.
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close smoke-workspace-fixes --date 2026-11-06 --from-file &lt;record-body.md&gt; --prompt draft/test/workspaces/smoke_workspace_fixes.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/test/workspaces/smoke_workspace_fixes.md — 2026-11-06 — &lt;why it is not shipped&gt;' &gt;&gt; looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why." aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/workspaces/smoke_workspace_fixes.md">The new workspace smoke-test GitHub Actions (added via feature/smoke-test-ci) surfaced</a> — <span class="facets">commit-names-draft</span><br><span class="facets">autogalaxy_workspace_test@0e8976e (2026-09-15): smoke_workspace_fixes.md that no longer exists anywhere in the workspace.</span></p></div>
 <div class="verdict ok"><b>Batch 2026-11-06-pm — 0 in progress · 0 awaiting review</b><p class="muted">Nothing to review yet.</p></div>
-</div></details><details class="board-section"><summary><h2>Start here</h2><span class="section-badge">24</span></summary><div class="board-section-body"><a id="start-here"></a>
+<details class="board-section"><summary><h2>Start here</h2><span class="section-badge">24</span></summary><div class="board-section-body"><a id="start-here"></a>
 <h3>Highest priority <span class="facets">(filed as high) — showing 12 of 18</span></h3>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/docs/autolens_assistant/ai_options_page_autolens_leg.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">autolens_assistant</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">euclid</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
@@ -699,19 +345,19 @@ Report which you did and why." aria-label="Copy the AI command">📋</button><p>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a><span class="tags"><span class="pill w">✨ feature</span><span class="pill">autolens_visualization</span><span class="pill y">large</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a><span class="tags"><span class="pill w">🔬 research</span><span class="pill">euclid</span><span class="pill y">large</span><span class="pill r">human-required</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/research/autoarray/delaunay_research.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a><span class="tags"><span class="pill w">🔬 research</span><span class="pill">autoarray</span><span class="pill r">too-large</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
-<h3>Fits a slot <span class="facets">(ready to run unattended, cheapest to review first) — showing 12 of 70</span></h3>
+<h3>Fits a slot <span class="facets">(ready to run unattended, cheapest to review first) — showing 12 of 78</span></h3>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/test/autolens_workspace/no_untimed_network_downloads_check.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a><span class="tags"><span class="pill w">🧪 test</span><span class="pill">autolens_workspace</span><span class="pill n">small</span><span class="pill g">safe</span><span class="pill n">medium</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/refactor/autonerves/config_yaml_parse_cache.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/autonerves/config_yaml_parse_cache.md">Cache <code>autonerves</code> config parsing — 308 YAML files parsed per script run</a><span class="tags"><span class="pill w">♻️ refactor</span><span class="pill">autonerves</span><span class="pill n">medium</span><span class="pill g">safe</span><span class="pill n">medium</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">autolens_workspace</span><span class="pill n">small</span><span class="pill g">safe</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">autolens_workspace</span><span class="pill n">small</span><span class="pill g">safe</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace_test/latent_smoke_assertion_echoes_search_log.md">The latent smoke's empty-block assertion names one cause unconditionally — echo…</a><span class="tags"><span class="pill w">🧪 test</span><span class="pill">autolens_workspace_test</span><span class="pill n">small</span><span class="pill g">safe</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/research/pyautohands/git_docs.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/pyautohands/git_docs.md">Use readthedocs or migrate to GitHub docs</a><span class="tags"><span class="pill w">🔬 research</span><span class="pill">pyautohands</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
+<div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/test/autolens_workspace_test/jax_zero_contour.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace_test/jax_zero_contour.md">Verify jax.jit / jax.grad parity on the critical-curve and caustic calculations</a><span class="tags"><span class="pill w">🧪 test</span><span class="pill">autolens_workspace_test</span><span class="pill n">medium</span><span class="pill g">safe</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/refactor/pyautofit/remove_eden_packaging_tooling.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/pyautofit/remove_eden_packaging_tooling.md">Remove the dead EDEN packaging tooling from PyAutoFit</a><span class="tags"><span class="pill w">♻️ refactor</span><span class="pill">pyautofit</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/maintenance/pyautomemory/canonical_key_todo_sweep.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/pyautomemory/canonical_key_todo_sweep.md">PyAutoMemory canonical-key TODO sweep</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">pyautomemory</span><span class="pill n">medium</span><span class="pill g">safe</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/docs/workspaces/demo_subplot_ellipse_errors.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/workspaces/demo_subplot_ellipse_errors.md">Demo <code>subplot_ellipse_errors</code> from a real ellipse model-fit</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">workspaces</span><span class="pill y">large</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/cluster_mass_parameterizations_print_and_draw_every_model.md">cluster/mass_parameterizations*.py promise model.info prints (and figures) they never make</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">autolens_workspace</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill n">low</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/feature/pyautohands/release_board_run_logs_enrichment.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/pyautohands/release_board_run_logs_enrichment.md">Release board: local run_logs enrichment</a><span class="tags"><span class="pill w">✨ feature</span><span class="pill">pyautohands</span><span class="pill n">small</span><span class="pill n">supervised</span><span class="pill n">low</span></span></p></div>
-<div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/test/autolens_workspace_test/mge_group_dataset_with_real_group_members.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace_test/mge_group_dataset_with_real_group_members.md">Give imaging/jax_likelihood/mge_group.py a dataset that actually contains group members</a><span class="tags"><span class="pill w">🧪 test</span><span class="pill">autolens_workspace_test</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill n">low</span></span></p></div>
 </div></details><details class="board-section"><summary><h2>Epics </h2><span class="section-badge">21</span><a class="mdsrc board-source-link" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/epics.md" title="Markdown version" aria-label="Markdown version"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8Z"/><path d="M14 3v5h5M8 12h8M8 16h6"/></svg></a></summary><div class="board-section-body"><a id="epics"></a>
 <p class="muted">Long-running multi-phase programmes — 📋 copies a prompt that works out where the epic stands from its ledger and continues it from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone.</p>
 <details>
@@ -861,13 +507,14 @@ Report which you did and why." aria-label="Copy the AI command">📋</button><p>
 <summary>image-source-mappings — 1 queued prompt(s) — ⚠️ not in epics.md</summary>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_regions_throu.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/mapping_overlay_follow_ups_forward_regions_throu.md">Mapping overlay follow-ups: forward regions= through the autogalaxy plot wrappers, fix degenerate…</a><span class="tags"><span class="pill w">🐛 bug</span><span class="pill">autoarray</span><span class="pill n">medium</span><span class="pill g">safe</span><span class="pill n">medium</span></span></p></div>
 </details>
-</div></details><details class="board-section"><summary><h2>In flight </h2><span class="section-badge">12</span><a class="mdsrc board-source-link" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active.md" title="Markdown version" aria-label="Markdown version"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8Z"/><path d="M14 3v5h5M8 12h8M8 16h6"/></svg></a></summary><div class="board-section-body"><a id="in-flight"></a>
+</div></details><details class="board-section"><summary><h2>In flight </h2><span class="section-badge">13</span><a class="mdsrc board-source-link" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active.md" title="Markdown version" aria-label="Markdown version"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8Z"/><path d="M14 3v5h5M8 12h8M8 16h6"/></svg></a></summary><div class="board-section-body"><a id="in-flight"></a>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/autonomous_orchestrators_p4c_pilot_run.md">Autonomous orchestrators phase 4c: run the Dev orchestrator pilot…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/574">issue #574</a><span class="facets"> — issued 2026-11-04</span> — <span class="facets">human-ops (pilot run; no worktree — briefs land in PyAutoMind/batches/ by the human)</span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. active/corner_anesthetic_takes_40_minutes_on_a.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/corner_anesthetic_takes_40_minutes_on_a.md">corner_anesthetic takes 40+ minutes on a 20-parameter model (HowToLens ch2 tutorial 2)</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1760">issue #1760</a><span class="facets"> — issued 2026-11-06</span> — <span class="facets">library-dev</span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. active/critical_curves_jax_modeling_viz_feasibility.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/critical_curves_jax_modeling_viz_feasibility.md">Feasibility: JAX zero-contour critical curves/caustics for modeling-run visualization</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/521">issue #521</a><span class="facets"> — issued 2026-11-06</span> — <span class="facets">workspace-dev</span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. active/gradient_correctness_sweep.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/gradient_correctness_sweep.md">Gradient-correctness sweep: triage and investigate every open JAX-gradient bug and hazard…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/517">issue #517</a><span class="facets"> — issued 2026-11-02</span> — <span class="facets">workspace-dev</span> — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/518">autolens_profiling#518</a></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. active/howtolens-stored-results.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/howtolens-stored-results.md">HowTo series: ship stored fit results so notebooks run without sampling waits</a> — <a href="https://github.com/PyAutoLabs/HowToLens/issues/130">issue #130</a><span class="facets"> — issued 2026-11-06</span> — <span class="facets">workspace-dev</span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. active/likelihood_lifecycle_p4e_ingest.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/likelihood_lifecycle_p4e_ingest.md">Likelihood lifecycle phase 4e: ingest the phase-4 wall-time validation rows, publish walltime-validation@1…</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/59">issue #59</a><span class="facets"> — issued 2026-11-05</span> — <span class="facets">workspace-dev</span></p></div>
+<div class="task"><button class="copy" data-cmd="Use the start-dev skill. active/looks_shipped_guard_false_positives.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/looks_shipped_guard_false_positives.md">The looks-shipped guard's flags were 32 of 33 false: tighten its evidence</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/598">issue #598</a><span class="facets"> — issued 2026-11-07</span> — <span class="facets">PR open — awaiting human /prm</span> — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/599">PyAutoBrain#599</a></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. active/magnification_maps_8d_wiring_pretty.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/magnification_maps_8d_wiring_pretty.md">Magnification maps 8d: wire into fit subplots and make them pretty</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/818">issue #818</a><span class="facets"> — issued 2026-11-02</span> — <span class="facets">library-dev</span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. active/matrix_free_interferometer_inversion.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/matrix_free_interferometer_inversion.md">Matrix-free interferometer inversion for very large rectangular meshes…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/638">issue #638</a><span class="facets"> — issued 2026-10-21</span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. active/procedure_lines_trim.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/procedure_lines_trim.md">Trim the start_dev and /prm mandatory reads</a><span class="facets"> — issued 2026-11-06</span> — <span class="facets">PR open — awaiting human /prm</span> — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/597">PyAutoBrain#597</a></p></div>
@@ -887,8 +534,8 @@ Report which you did and why." aria-label="Copy the AI command">📋</button><p>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md" aria-label="Copy the AI command">📋</button><p><b>interferometer-primary-beam-persistence-mirror</b><span class="facets"> — filed 2026-10-21</span> — <span class="facets">ready — PyAutoLens claim released 2026-10-21 (point-dataset-positions-panel shipped…</span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md" aria-label="Copy the AI command">📋</button><p><b>point-plots-yaml-keys-assistant</b><span class="facets"> — filed 2026-10-22</span> — <span class="facets">unblocked 2026-10-23 — cosmos-web-ring-notebook merged (autolens_assistant#161, <code>complete/2026/10/cosmos-web-ring-notebook.md</code>)…</span></p></div>
 </details>
-</div></details><details class="board-section"><summary><h2>Backlog </h2><span class="section-badge">241</span><a class="mdsrc board-source-link" href="https://github.com/PyAutoLabs/PyAutoMind/tree/main/draft" title="Markdown version" aria-label="Markdown version"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8Z"/><path d="M14 3v5h5M8 12h8M8 16h6"/></svg></a></summary><div class="board-section-body"><a id="backlog"></a>
-<p>Lanes: any 232 · local-dev 6 · ral 1</p>
+</div></details><details class="board-section"><summary><h2>Backlog </h2><span class="section-badge">240</span><a class="mdsrc board-source-link" href="https://github.com/PyAutoLabs/PyAutoMind/tree/main/draft" title="Markdown version" aria-label="Markdown version"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8Z"/><path d="M14 3v5h5M8 12h8M8 16h6"/></svg></a></summary><div class="board-section-body"><a id="backlog"></a>
+<p>Lanes: any 231 · local-dev 6 · ral 1</p>
 <details id="human-review">
 <summary>Human review — 2</summary>
 <div class="task"><button class="copy" data-cmd="Walk me through the completed work described in `draft/human_review/autolens/multi_plane_cross_validation_review.md` so I can sign it off.
@@ -1060,11 +707,10 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md">Progress (2026-10-31): the introductory review phase is merged — HowToLens Tutorials 0–2…</a><span class="tags"><span class="pill w">📖 docs</span><span class="pill">howtolens</span></span></p></div>
 </details>
 <details>
-<summary>maintenance — 15</summary>
+<summary>maintenance — 14</summary>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/maintenance/organs/reduce_session_token_load.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/organs/reduce_session_token_load.md">Reduce the organism's per-session and per-task token load by half</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">organs</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/maintenance/autocti/cti_upkeep_epic.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/autocti/cti_upkeep_epic.md">CTI upkeep parity — bring PyAutoCTI and its satellites to the same…</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">autocti</span><span class="pill r">too-large</span><span class="pill r">human-required</span><span class="pill r">high</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/maintenance/autolens_workspace_developer/stale_api_rot_audit.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/autolens_workspace_developer/stale_api_rot_audit.md">autolens_workspace_developer: broad stale-API rot (56 symbols, no CI)</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">autolens_workspace_developer</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
-<div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/maintenance/ci/wiki_currency_check_version_gate.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/ci/wiki_currency_check_version_gate.md">wiki-currency's --check-version gate rots on every library main merge</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">ci</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/maintenance/libraries/dep_cap_refresh_2026_08.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/libraries/dep_cap_refresh_2026_08.md">Dependency-cap refresh 2026-08: safe bumps, astropy 8 decision, two dead deps</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">libraries</span><span class="pill n">medium</span><span class="pill n">supervised</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/maintenance/pyautomemory/canonical_key_todo_sweep.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/pyautomemory/canonical_key_todo_sweep.md">PyAutoMemory canonical-key TODO sweep</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">pyautomemory</span><span class="pill n">medium</span><span class="pill g">safe</span><span class="pill n">normal</span></span></p></div>
 <div class="task"><button class="copy" data-cmd="Use the start-dev skill. draft/maintenance/ci/copilot_auto_review.md" aria-label="Copy the AI command">📋</button><p><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/ci/copilot_auto_review.md">Auto-request GitHub Copilot code review on every PR, org-wide</a><span class="tags"><span class="pill w">🧹 maintenance</span><span class="pill">ci</span><span class="pill y">large</span><span class="pill r">human-required</span><span class="pill n">normal</span></span></p></div>
@@ -1115,6 +761,12 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 </div></details><details class="board-section"><summary><h2>Recent </h2><span class="section-badge">50</span><a class="mdsrc board-source-link" href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/dashboard.md#recent" title="Markdown version" aria-label="Markdown version"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8Z"/><path d="M14 3v5h5M8 12h8M8 16h6"/></svg></a></summary><div class="board-section-body"><a id="recent"></a>
 <table class="recent">
+<tr>
+<td class="when">2026-11-07</td>
+<td class="what">issued</td>
+<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/looks_shipped_guard_false_positives.md">The looks-shipped guard's flags were 32 of 33 false: tighten its…</a></td>
+<td class="pick"><button class="copy" data-cmd="Use the start-dev skill. active/looks_shipped_guard_false_positives.md" aria-label="Copy the AI prompt">📋</button></td>
+</tr>
 <tr>
 <td class="when">2026-11-06</td>
 <td class="what">issued</td>
@@ -1169,7 +821,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autofit/regression_test_nautilus_as_the_ep_default.md">Regression test: Nautilus as the EP <code>default_optimiser</code> over…</a></td>
 <td class="pick"><button class="copy" data-cmd="Use the start-dev skill. draft/test/autofit/regression_test_nautilus_as_the_ep_default.md" aria-label="Copy the AI prompt">📋</button></td>
 </tr>
-<tr>
+<tr hidden>
 <td class="when">2026-11-05</td>
 <td class="what">issued</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/active/likelihood_lifecycle_p4e_ingest.md">Likelihood lifecycle phase 4e: ingest the phase-4 wall-time…</a></td>
@@ -1408,12 +1060,6 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 <td class="what">filed</td>
 <td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a></td>
 <td class="pick"><button class="copy" data-cmd="Use the start-dev skill. draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md" aria-label="Copy the AI prompt">📋</button></td>
-</tr>
-<tr hidden>
-<td class="when">2026-09-27</td>
-<td class="what">filed</td>
-<td><a href="https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a></td>
-<td class="pick"><button class="copy" data-cmd="Use the start-dev skill. draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md" aria-label="Copy the AI prompt">📋</button></td>
 </tr>
 </table>
 <button class="more" data-page="10">… 10 more (40 left)</button>

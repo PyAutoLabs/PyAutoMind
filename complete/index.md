@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2194 records across 11 buckets.
+2195 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -1423,6 +1423,7 @@ markers; everything below GENERATED is rebuilt.
 - [vincken-2026-bib-placeholder](2026/08/vincken-2026-bib-placeholder.md)
 - [weekly-smoke-timings-naming](2026/08/weekly-smoke-timings-naming.md)
 - [wiki-currency-baseline-drift](2026/08/wiki-currency-baseline-drift.md)
+- [wiki-currency-check-version-gate](2026/08/wiki-currency-check-version-gate.md)
 - [wiki-currency-ci-drift](2026/08/wiki-currency-ci-drift.md)
 - [wiki-hygiene](2026/08/wiki-hygiene.md) — auto-closed on merge
 - [wiki-provenance-restamp](2026/08/wiki-provenance-restamp.md)
