@@ -1,3 +1,28 @@
+# looks-shipped guard flags only real evidence (33 → 1)
+
+Completed: 2026-11-07
+Issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/598
+PR: https://github.com/PyAutoLabs/PyAutoBrain/pull/599
+Merge: 6d2caced343dc0c7e5f3106ba8807ce9d4026644
+
+The `intake looks-shipped` close-out guard (`agents/conductors/intake/_shipped.py`) now needs evidence that a draft's work arrived, not just that something it names was touched:
+
+- **Witness leg:** a name in the Witness counts only if it had no definition anywhere on main at the draft's filing moment (`defined_at` / `added_since`, which replace `changed_since`).
+- **Filing moment:** `filed_at()` is the add commit on the `Filed:` day, read without `--follow`, because rename detection follows a sibling draft's history.
+- **Commit/PR leg:** the naming line needs a whole-word ship word (`_SHIP_RE`), or must be the PR-merge line for the draft's branch. A code-style subject no longer lends the claim, and `add` is no longer a ship word.
+- **Slugs:** bare slugs need 4+ words and 20+ characters.
+- **Campaign maps:** `Status: campaign map` drafts are skipped.
+
+Witness: on PyAutoMind `125caf48e` (before PyAutoMind#545) with the same 21 organism checkouts, flags went from 33 to 1. The remaining one is the true positive, `wiki_currency_check_version_gate` (autocti_assistant#26). A second hermetic fixture in `tests/test_intake_looks_shipped.py` pins each false-positive shape and the true positive.
+
+Validation: Brain Tests passed on 3.12 and 3.13 at `441b452`. The first CI run failed the tenant-firewall step because a fixture merge line used the real org name; that was fixed before merge. The skill line-count step reports over-budget skills, but it is report-only and the overage predates this PR. Full suite: 1643 passed, 1 skipped.
+
+Known trade-offs: a fix that lands the same day but *before* its draft is filed is not flagged, and "adds X (draft path)" without a ship word no longer counts.
+
+Human `/prm` authorized the merge. Every claimed branch is contained in origin/main, and the issue is closed. There are no release obligations (PyAutoBrain is not in the published set).
+
+## Original prompt
+
 # The looks-shipped guard's flags were 32 of 33 false: tighten its evidence
 
 Type: bug
