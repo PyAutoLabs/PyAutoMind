@@ -32,3 +32,11 @@ pill: the tuple is only expanded into per-component pills when the components di
   the lens cookbook's case to `test_autolens/model_figure` once released.
 - Remove the "not yet annotated" caveat from the PyAutoLens `model_cookbook.md` page and the
   autolens_workspace cookbook prose when it lands.
+
+## Update 2026-11-07: re-scope to the all-relation tuple
+
+The looks-shipped guard flagged this draft, so it was checked against PyAutoFit main 0a557d7fa (static reading, nothing run). The case described above, a relation on **one** component, already expands: `_tuple_is_uniform` (`presentation.py:674-688`) compares `_state(component)`, which returns `"relation"`, so a relation component next to a free one gives two pills. The only loss is that the expanded pills drop the `2D` context.
+
+The lens cookbook actually sets **both** components as relations (PyAutoLens `docs/general/images/model_cookbook/make_figures.py:184-185`: `centre_0 = bulge.centre.centre_0 + 0.1`, `centre_1 = bulge.centre.centre_1 + 0.1`). Then every component is in the same state, so `_pills` (`presentation.py:735-746`) merges them into one pill using the tuple **row's** state. That row keeps the default provenance and gets `_tuple_sampling` = `"free"` (`graph_spec.py`), so the figure shows a plain free `centre` pill with no expression. Expressions are not part of the uniformity check either.
+
+So the Ask becomes: an all-relation tuple (and, generally, a tuple with any relation component) is drawn as relation pills carrying each component's expression, with the `2D` context kept. The witness test should cover both the one-component and the all-relation construct.

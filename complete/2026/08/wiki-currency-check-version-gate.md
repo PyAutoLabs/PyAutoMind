@@ -1,3 +1,17 @@
+# wiki-currency --check-version gates on removals only
+
+Completed: 2026-08-24
+PR: https://github.com/PyAutoLabs/autocti_assistant/pull/26 (Refs #25)
+Merge: de4ac2d (commit d894248)
+
+The autocti_assistant API baseline (`wiki/core/api_audit_baseline.json`) now records each module's sorted public names. `--check-version` in `autoassistant/audit_skill_apis.py` separates additions, which are reported and pass, from removals, which fail and name the symbol. A baseline that predates symbol recording keeps the old all-or-nothing behaviour. Tests are in `autoassistant/tests/test_check_version.py` (`test_additions_alone_do_not_gate_and_are_named`), and `skills/ac_audit_skill_apis.md` documents when regenerating the baseline is the right response and when it papers over a real break.
+
+Deviation from the Witness: the gate fails on any removal, not only removals of cited symbols. This was chosen deliberately, because `--scope all` already checks the cited-symbol case.
+
+Closed 2026-11-07 from the looks-shipped guard after verifying against autocti_assistant main c68f789 (de4ac2d is an ancestor).
+
+## Original prompt
+
 # wiki-currency's --check-version gate rots on every library main merge
 
 Type: maintenance
