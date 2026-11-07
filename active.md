@@ -157,3 +157,16 @@
   - PyAutoBrain: ccr-c113837c-0ulthv
 - parent: draft/maintenance/organs/reduce_session_token_load.md
 - tier: judge — merge mode: human /prm
+
+## skill-line-budget-trim
+- issue: none (PR is the tracking surface)
+- issued: 2026-11-07
+- session: https://claude.ai/code/session_016nhQ8NoTm1hEGXkFTcNwbd
+- location: claude.ai cloud session (ephemeral container; work lives on the pushed branches)
+- status: PR open — awaiting human /prm
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/600 (opened 2026-11-07)
+- repos:
+  - PyAutoBrain: claude/pyautomind-queue-management-j03m2k
+  - PyAutoMind: claude/pyautomind-queue-management-j03m2k
+- parent: draft/maintenance/organs/reduce_session_token_load.md
+- tier: judge — merge mode: human /prm
