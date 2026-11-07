@@ -19,7 +19,7 @@
 <a id="looks-shipped"></a>
 ## Looks shipped — confirm
 
-33 draft(s) with strong evidence the work already shipped (`intake looks-shipped`). Held out of the pick lists and the batch planner until closed or dismissed in [`looks_shipped_dismissed.md`](looks_shipped_dismissed.md).
+29 draft(s) with strong evidence the work already shipped (`intake looks-shipped`). Held out of the pick lists and the batch planner until closed or dismissed in [`looks_shipped_dismissed.md`](looks_shipped_dismissed.md).
 
 <details><summary>📋 <a href="draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md">Adaptive Delaunay mesh places two mesh pixels 0.001" apart — a degenerate…</a> — witness-exists — Witness names <code>source_plane_mesh_grid</code>, defined in PyAutoArray autoarray/inversion/mock/mock_mapper.py:49; added by e52782ff…</summary>
 
@@ -147,28 +147,6 @@ Evidence (from `intake looks-shipped`):
    python3 scripts/lifecycle.py close sparse-terms-nufft-origin-and-mask-compatibility --date 2026-11-06 --from-file <record-body.md> --prompt draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md --apply
 3. If it did not, dismiss the flag so the batch planner may pick it again:
    echo '- draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md — 2026-11-06 — <why it is not shipped>' >> looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why.
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autofit/ep_moments_loggaussian_transformed_scatter.md">EP moments projection drifts a log-space (LogGaussian / TransformedMessage) scatter to log…</a> — witness-exists — Witness names <code>test_moment_projection</code>, defined in PyAutoFit test_autofit/graphical/functionality/test_moment_projection.py:1…</summary>
-
-```
-`draft/bug/autofit/ep_moments_loggaussian_transformed_scatter.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `test_moment_projection`, defined in PyAutoFit test_autofit/graphical/functionality/test_moment_projection.py:1; changed by fdba47e49 2026-09-30 feat: nested-quadrature moment projection module and tests (#1654) (Filed 2026-09-30)
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close ep-moments-loggaussian-transformed-scatter --date 2026-11-06 --from-file <record-body.md> --prompt draft/bug/autofit/ep_moments_loggaussian_transformed_scatter.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/bug/autofit/ep_moments_loggaussian_transformed_scatter.md — 2026-11-06 — <why it is not shipped>' >> looks_shipped_dismissed.md
 4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
 
 Report which you did and why.
@@ -457,72 +435,6 @@ Evidence (from `intake looks-shipped`):
    python3 scripts/lifecycle.py close model-figure-tuple-component-relations --date 2026-11-06 --from-file <record-body.md> --prompt draft/feature/autofit/model_figure_tuple_component_relations.md --apply
 3. If it did not, dismiss the flag so the batch planner may pick it again:
    echo '- draft/feature/autofit/model_figure_tuple_component_relations.md — 2026-11-06 — <why it is not shipped>' >> looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why.
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autofit/model_figures_ep_overlays.md">Model figures — optional EP state overlays…</a> — witness-exists — Witness names <code>hierarchical_graph</code>, defined in PyAutoFit test_autofit/graph_spec/graphical_doubles.py:78; changed by 73008021a…</summary>
-
-```
-`draft/feature/autofit/model_figures_ep_overlays.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `hierarchical_graph`, defined in PyAutoFit test_autofit/graph_spec/graphical_doubles.py:78; changed by 73008021a 2026-10-17 docs: point to the HowToFit advanced chapter (Filed 2026-09-13) (+1 more)
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close model-figures-ep-overlays --date 2026-11-06 --from-file <record-body.md> --prompt draft/feature/autofit/model_figures_ep_overlays.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/feature/autofit/model_figures_ep_overlays.md — 2026-11-06 — <why it is not shipped>' >> looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why.
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autofit/prior_exit_sampler_coverage.md">Which other searches need prior-support handling — coverage audit after Prodigy</a> — witness-exists — Witness names <code>ClipperPriorBox</code>, defined in PyAutoFit autofit/non_linear/clipper.py:207; added by 96dad5191 2026-08-28 feat…</summary>
-
-```
-`draft/feature/autofit/prior_exit_sampler_coverage.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `ClipperPriorBox`, defined in PyAutoFit autofit/non_linear/clipper.py:207; added by 96dad5191 2026-08-28 feat: project ell_comps onto its disk with an opt-in joint clipper (#1537) (Filed 2026-08-17)
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close prior-exit-sampler-coverage --date 2026-11-06 --from-file <record-body.md> --prompt draft/feature/autofit/prior_exit_sampler_coverage.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/feature/autofit/prior_exit_sampler_coverage.md — 2026-11-06 — <why it is not shipped>' >> looks_shipped_dismissed.md
-4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
-
-Report which you did and why.
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autofit/skip_the_likelihood_for_assertion_violating_samp.md">Skip the likelihood for assertion-violating samples on the JAX path</a> — witness-exists — Witness names <code>log_likelihood_function</code>, defined in PyAutoFit autofit/interpolator/covariance.py:55; added by 323f6d5cd…</summary>
-
-```
-`draft/feature/autofit/skip_the_likelihood_for_assertion_violating_samp.md` looks already shipped — confirm or dismiss it. Work in the PyAutoMind checkout.
-
-Evidence (from `intake looks-shipped`):
-- witness-exists: Witness names `log_likelihood_function`, defined in PyAutoFit autofit/interpolator/covariance.py:55; added by 323f6d5cd 2026-10-28 feat: per-fit status record, failure record and run-state vocabulary (Filed 2026-09-09)
-
-1. Check each cited line: open the commit / definition / record and confirm it
-   really is THIS draft's work, not a neighbour's.
-2. If it shipped, close it (write the record body first; the command is a dry
-   run without --apply):
-   python3 scripts/lifecycle.py close skip-the-likelihood-for-assertion-violating-samp --date 2026-11-06 --from-file <record-body.md> --prompt draft/feature/autofit/skip_the_likelihood_for_assertion_violating_samp.md --apply
-3. If it did not, dismiss the flag so the batch planner may pick it again:
-   echo '- draft/feature/autofit/skip_the_likelihood_for_assertion_violating_samp.md — 2026-11-06 — <why it is not shipped>' >> looks_shipped_dismissed.md
 4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.
 
 Report which you did and why.
@@ -860,7 +772,7 @@ Use the start-dev skill. draft/research/autoarray/delaunay_research.md
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 65
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 67
 
 <details><summary>📋 <a href="draft/test/autolens_workspace/no_untimed_network_downloads_check.md">Guard every workspace script against untimed network downloads</a> — autolens_workspace · small · safe · medium</summary>
 

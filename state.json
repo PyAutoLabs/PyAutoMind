@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 12 in flight",
-  "updated": "2026-11-07T10:29:05Z",
+  "updated": "2026-11-07T13:24:10Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -48,12 +48,6 @@
       "text": "looks shipped \u2014 confirm: Sparse interferometer terms: NUFFT ignores the mask origin and provenance cannot see\u2026 (witness-exists)",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md",
       "prompt": "`draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md` looks already shipped \u2014 confirm or dismiss it. Work in the PyAutoMind checkout.\n\nEvidence (from `intake looks-shipped`):\n- witness-exists: Witness names `visibilities_from`, defined in PyAutoArray autoarray/operators/transformer_util.py:4; added by 8c73a9fb 2026-10-21 test: primary beam witness, parity and propagation tests (Filed 2026-10-01)\n\n1. Check each cited line: open the commit / definition / record and confirm it\n   really is THIS draft's work, not a neighbour's.\n2. If it shipped, close it (write the record body first; the command is a dry\n   run without --apply):\n   python3 scripts/lifecycle.py close sparse-terms-nufft-origin-and-mask-compatibility --date 2026-11-06 --from-file <record-body.md> --prompt draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md --apply\n3. If it did not, dismiss the flag so the batch planner may pick it again:\n   echo '- draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md \u2014 2026-11-06 \u2014 <why it is not shipped>' >> looks_shipped_dismissed.md\n4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.\n\nReport which you did and why."
-    },
-    {
-      "severity": "yellow",
-      "text": "looks shipped \u2014 confirm: EP moments projection drifts a log-space (LogGaussian / TransformedMessage) scatter to log\u2026 (witness-exists)",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autofit/ep_moments_loggaussian_transformed_scatter.md",
-      "prompt": "`draft/bug/autofit/ep_moments_loggaussian_transformed_scatter.md` looks already shipped \u2014 confirm or dismiss it. Work in the PyAutoMind checkout.\n\nEvidence (from `intake looks-shipped`):\n- witness-exists: Witness names `test_moment_projection`, defined in PyAutoFit test_autofit/graphical/functionality/test_moment_projection.py:1; changed by fdba47e49 2026-09-30 feat: nested-quadrature moment projection module and tests (#1654) (Filed 2026-09-30)\n\n1. Check each cited line: open the commit / definition / record and confirm it\n   really is THIS draft's work, not a neighbour's.\n2. If it shipped, close it (write the record body first; the command is a dry\n   run without --apply):\n   python3 scripts/lifecycle.py close ep-moments-loggaussian-transformed-scatter --date 2026-11-06 --from-file <record-body.md> --prompt draft/bug/autofit/ep_moments_loggaussian_transformed_scatter.md --apply\n3. If it did not, dismiss the flag so the batch planner may pick it again:\n   echo '- draft/bug/autofit/ep_moments_loggaussian_transformed_scatter.md \u2014 2026-11-06 \u2014 <why it is not shipped>' >> looks_shipped_dismissed.md\n4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.\n\nReport which you did and why."
     },
     {
       "severity": "yellow",
@@ -126,6 +120,12 @@
       "text": "looks shipped \u2014 confirm: Fixed-mapper interferometer searches, phase 1: pin the `preloads.curvature_matrix` reuse invariant and measure\u2026 (witness-exists)",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autoarray/interferometer_curvature_preload_phase1.md",
       "prompt": "`draft/feature/autoarray/interferometer_curvature_preload_phase1.md` looks already shipped \u2014 confirm or dismiss it. Work in the PyAutoMind checkout.\n\nEvidence (from `intake looks-shipped`):\n- witness-exists: Witness names `InversionInterferometerSparseNumba`, defined in PyAutoArray autoarray/inversion/inversion/interferometer_numba/sparse.py:23; changed by fb880e02 2026-10-21 fix: keep the numba interferometer route for a primary beam of ones (Filed 2026-10-04)\n- witness-exists: Witness names `figure_of_merit`, defined in autolens_profiling scripts/imaging/rectangular/hazards.py:468; added by 4dedf1a6 2026-10-06 refactor: migrate profiling scripts to dataset/model layout (Filed 2026-10-04)\n\n1. Check each cited line: open the commit / definition / record and confirm it\n   really is THIS draft's work, not a neighbour's.\n2. If it shipped, close it (write the record body first; the command is a dry\n   run without --apply):\n   python3 scripts/lifecycle.py close interferometer-curvature-preload-phase1 --date 2026-11-06 --from-file <record-body.md> --prompt draft/feature/autoarray/interferometer_curvature_preload_phase1.md --apply\n3. If it did not, dismiss the flag so the batch planner may pick it again:\n   echo '- draft/feature/autoarray/interferometer_curvature_preload_phase1.md \u2014 2026-11-06 \u2014 <why it is not shipped>' >> looks_shipped_dismissed.md\n4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.\n\nReport which you did and why."
+    },
+    {
+      "severity": "yellow",
+      "text": "looks shipped \u2014 confirm: Model figures: annotate relations on tuple components (witness-exists)",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autofit/model_figure_tuple_component_relations.md",
+      "prompt": "`draft/feature/autofit/model_figure_tuple_component_relations.md` looks already shipped \u2014 confirm or dismiss it. Work in the PyAutoMind checkout.\n\nEvidence (from `intake looks-shipped`):\n- witness-exists: Witness names `test_presentation`, defined in PyAutoFit test_autofit/model_figure/test_presentation.py:1; changed by 6bcb53f12 2026-09-11 Add the __solved_parameters__ protocol to graph_spec (PyAutoLens#736) (Filed 2026-09-11)\n\n1. Check each cited line: open the commit / definition / record and confirm it\n   really is THIS draft's work, not a neighbour's.\n2. If it shipped, close it (write the record body first; the command is a dry\n   run without --apply):\n   python3 scripts/lifecycle.py close model-figure-tuple-component-relations --date 2026-11-06 --from-file <record-body.md> --prompt draft/feature/autofit/model_figure_tuple_component_relations.md --apply\n3. If it did not, dismiss the flag so the batch planner may pick it again:\n   echo '- draft/feature/autofit/model_figure_tuple_component_relations.md \u2014 2026-11-06 \u2014 <why it is not shipped>' >> looks_shipped_dismissed.md\n4. Regenerate the dashboard: `pyauto-brain intake --apply dashboard`.\n\nReport which you did and why."
     }
   ]
 }
