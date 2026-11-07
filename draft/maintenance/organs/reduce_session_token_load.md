@@ -110,3 +110,17 @@ start_dev −10 and /prm −38 lines to the targets; `bin/check_skill_line_count
 cannot become blocking until batch (274), cortex (232) and Mind's create_issue
 (203) are under 200; nothing runs `token_load.py check` in CI or the hygiene
 conductor yet (the prompt asked for a hygiene report line).
+
+## Progress 2026-11-07 (cloud queue session) — skill line budget, PyAutoBrain#600 + PyAutoMind#548
+
+Four grouped items, none touching #597's files:
+
+1. Brain `batch` skill 274 → **200** lines (detail moved word for word to `skills/batch/reference.md`).
+2. Brain `cortex` skill 232 → **199** (to `skills/cortex/reference.md`).
+3. Mind `create_issue` 203 → **197** (prose compacted; no step removed).
+4. Brain `tests.yml` prints `token_load.py report` on every PR (report, not `check`: CI lacks the workspace AGENTS.md and PyAutoMemory).
+
+Claimed as `skill-line-budget-trim` (`active.md`). **Left after #597 and these merge:**
+drop `continue-on-error` from the line-count step in Brain `tests.yml` (every
+skill is then ≤ 200); start_dev −10 / prm −38 to the procedure targets; the
+hygiene-conductor token-load report line.

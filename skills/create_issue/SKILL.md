@@ -146,10 +146,8 @@ date (schema in [REFERENCE.md](../../REFERENCE.md) → "`active.md` schema"):
 - issued: <YYYY-MM-DD>
 ```
 
-`issued:` is the date the issue was created — this step is the only moment
-anyone knows it for certain, so write it now rather than leaving it to be
-reconstructed later (`lifecycle.py dates --write` can only infer). It is what
-the dashboard's "Recent" table reads.
+`issued:` is the issue's creation date: write it now — `lifecycle.py dates
+--write` can only infer it later, and the dashboard's "Recent" table reads it.
 
 **If the caller is handling registration itself** — e.g. `$start-dev` routing a
 conflicted task to `planned.md` — skip this step and let it register (that
@@ -157,19 +155,15 @@ registry's date key is `filed:`).
 
 ### 5. Move the prompt to active/
 
-The prompt advances from `draft/` (not started) to `active/` (issued, in
-flight) — the second of the three lifecycle states (`draft/ → active/ →
-complete/`; issue #71). Use `git mv` to preserve history:
+`draft/` (not started) → `active/` (issued) → `complete/`; `git mv` keeps history:
 
 ```bash
 mkdir -p "$PYAUTO_MIND/active"
 git -C "$PYAUTO_MIND" mv <draft-path> active/<filename>
 ```
 
-The `mkdir -p` matters on a **freshly-spawned** Mind, where `active/` does not
-yet exist (it holds only instance state, so the template ships without it) —
-`git mv` errors if the destination dir is missing. Timestamp-suffix the
-filename if one already exists in `active/`.
+`mkdir -p` covers a freshly-spawned Mind (the template ships without
+`active/`). Timestamp-suffix the filename if one already exists in `active/`.
 
 Then add the prompt's own copy of the date to its light header, so an issued
 prompt stays dated even if its registry row later goes missing:

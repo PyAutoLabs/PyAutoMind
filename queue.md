@@ -60,15 +60,14 @@ phase is `local-dev` by construction.
 - ref: draft/research/autoarray/numba_solve_vs_jax_sparse_operator.md
 - note: review intake 2026-08-31 — same linear algebra? GPU-JAX amenable or CPU-sparsity-bound?
 
-## 2. Witness campaign
-- kind: prompt
-- ref: draft/feature/pyautomind/witness_campaign.md
-- note: highest-leverage backlog item (151/153 judge); human-declared witnesses only; fill work
-
 ## Retired
 
 Entries that have left the queue. Kept for the record of what was wanted and
 what replaced it; `batch plan` ignores them.
+
+### Witness campaign
+- shipped-as: PyAutoMind#398 → complete/2026/09/witness-campaign.md (2026-09-17)
+- note: highest-leverage backlog item (151/153 judge); human-declared witnesses only; fill work. Seven ledger passes gave 137 backlog prompts a human-declared `Witness:`; the queue entry kept a dangling `draft/` ref until retired by the human on 2026-11-07
 
 ### Retire parked-at-ship under `--auto`
 - shipped-as: PyAutoBrain#365 → complete/2026/09/batch-no-park-at-ship.md (2026-09-07)
