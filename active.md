@@ -165,6 +165,7 @@
 - location: claude.ai cloud session (ephemeral container; work lives on the pushed branches)
 - status: PR open — awaiting human /prm
 - library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/600 (opened 2026-11-07)
+- mind-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/548 (opened 2026-11-07)
 - repos:
   - PyAutoBrain: claude/pyautomind-queue-management-j03m2k
   - PyAutoMind: claude/pyautomind-queue-management-j03m2k

@@ -111,7 +111,7 @@ cannot become blocking until batch (274), cortex (232) and Mind's create_issue
 (203) are under 200; nothing runs `token_load.py check` in CI or the hygiene
 conductor yet (the prompt asked for a hygiene report line).
 
-## Progress 2026-11-07 (cloud queue session) — skill line budget, PyAutoBrain#600 + PyAutoMind PR
+## Progress 2026-11-07 (cloud queue session) — skill line budget, PyAutoBrain#600 + PyAutoMind#548
 
 Four grouped items, none touching #597's files:
 
