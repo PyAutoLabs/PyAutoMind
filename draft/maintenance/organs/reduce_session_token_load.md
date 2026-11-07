@@ -105,7 +105,7 @@ still open here: the procedure-line budgets (levers 5–6: start_dev 499 / prm
 
 start_dev 499 → **360** lines (target 350), /prm 456 → **338** (target 300);
 both now pass the `token_load.py` CI budgets (400 / 450) they were failing.
-Claimed as `procedure-lines-trim` (`active.md`). **Left after it merges:**
+Merged 2026-11-07 → `complete/2026/11/procedure-lines-trim.md`. **Left after it merged:**
 start_dev −10 and /prm −38 lines to the targets; `bin/check_skill_line_counts.sh`
 cannot become blocking until batch (274), cortex (232) and Mind's create_issue
 (203) are under 200; nothing runs `token_load.py check` in CI or the hygiene
@@ -120,7 +120,7 @@ Four grouped items, none touching #597's files:
 3. Mind `create_issue` 203 → **197** (prose compacted; no step removed).
 4. Brain `tests.yml` prints `token_load.py report` on every PR (report, not `check`: CI lacks the workspace AGENTS.md and PyAutoMemory).
 
-Claimed as `skill-line-budget-trim` (`active.md`). **Left after #597 and these merge:**
+Merged 2026-11-07 → `complete/2026/11/skill-line-budget-trim.md`. **Left after #597 and these merged:**
 drop `continue-on-error` from the line-count step in Brain `tests.yml` (every
 skill is then ≤ 200); start_dev −10 / prm −38 to the procedure targets; the
 hygiene-conductor token-load report line.
