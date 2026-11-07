@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2196 records across 11 buckets.
+2198 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -214,6 +214,7 @@ markers; everything below GENERATED is rebuilt.
 - [one-line-auto-simulate-helper](2026/11/one-line-auto-simulate-helper.md)
 - [organism-map-compact](2026/11/organism-map-compact.md) — PR is the tracking surface
 - [point-magnification-api](2026/11/point-magnification-api.md) — already shipped — PyAutoLens#798 (f791ac77) + autolens_workspace#598 (0f8b4db5), records `complete/2026/10/poi…
+- [procedure-lines-trim](2026/11/procedure-lines-trim.md) — PR is the tracking surface
 - [rectangular-gradient-rtu-sparse](2026/11/rectangular-gradient-rtu-sparse.md) — the filed symptom (|g| ~2e9 on the imaging/rectangular/hst fiducial, RTU all backends, Bilinear CPU sparse) sp…
 - [rectangular-mapper-bilinear-row-weights](2026/11/rectangular-mapper-bilinear-row-weights.md) — - **Retired as already-fixed** by the gradient-correctness sweep (autolens_profiling#517, item 12). The draft …
 - [rectangular-parity-absolute-bound](2026/11/rectangular-parity-absolute-bound.md) — autogalaxy_workspace_test#134 (merged 0b5ff519, human /prm). `imaging/jax_likelihood/rectangular.py` parity is…
@@ -233,6 +234,7 @@ markers; everything below GENERATED is rebuilt.
 - [shift-digest-readable-picks](2026/11/shift-digest-readable-picks.md) — pilot 4c follow-up; issue PyAutoBrain#579
 - [shift-opens-at-dispatched](2026/11/shift-opens-at-dispatched.md) — pilot 4c follow-up; issue PyAutoBrain#589
 - [simulate-if-needed-workspace-sweep](2026/11/simulate-if-needed-workspace-sweep.md)
+- [skill-line-budget-trim](2026/11/skill-line-budget-trim.md) — PR is the tracking surface
 - [token-load-measure-four-organs](2026/11/token-load-measure-four-organs.md) — PR is the tracking surface
 - [tutorial-link-sweep](2026/11/tutorial-link-sweep.md)
 - [watcher-workers-survive-systemd-tick](2026/11/watcher-workers-survive-systemd-tick.md) — pilot 4c follow-up; issue PyAutoBrain#592
