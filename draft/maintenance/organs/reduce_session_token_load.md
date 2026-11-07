@@ -124,3 +124,14 @@ Merged 2026-11-07 → `complete/2026/11/skill-line-budget-trim.md`. **Left after
 drop `continue-on-error` from the line-count step in Brain `tests.yml` (every
 skill is then ≤ 200); start_dev −10 / prm −38 to the procedure targets; the
 hygiene-conductor token-load report line.
+
+## Progress 2026-11-07 (later) — hygiene line + blocking budget, PyAutoBrain#601; Memory discovery, PyAutoMemory#144
+
+PyAutoBrain#597, #600 and PyAutoMind#548 merged (human /prm 2026-11-07); every
+skill is now ≤ 200 lines. PyAutoBrain#601 adds `pyauto-brain hygiene tokens`
+(the hygiene report line this prompt asked for: token_load.py violations +
+skills over 200 lines, routed to /refactor) and makes Brain CI's line-count
+step blocking, scoped to Brain's own skills. Claimed as `token-load-hygiene-line`.
+PyAutoMemory#144 (claim `memory-catch-up-discovery`, not token load) registers
+the missing `/catch_up` discovery links. **Left here after #601 merges:** only
+the procedure targets — start_dev 360 → 350 and prm 338 → 300 lines.
