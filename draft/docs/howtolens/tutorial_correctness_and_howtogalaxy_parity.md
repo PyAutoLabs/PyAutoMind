@@ -70,6 +70,22 @@ While validating the tutorial fixes, also check the relevant PyAutoGalaxy geomet
 
 Do not change working source-code mathematics merely to match stale prose. The implementation and established convention are the source of truth.
 
+4. Tutorial 2 deflection vector field / `deflections.grid` clarity
+-----------------------------------------------------------------
+
+Re-landed 2026-11-07 from the stranded ledger branch `codex/intake-howtolens-tutorial-corrections-20261006` (bab5ec5a2, PyAutoMind#496), condensed against current HowToLens `main`.
+
+A student read `print(deflections.grid.native[0, 0])` → `[5. -5.]` beside a magnitude of `1.6` as the deflection vector and its length, expecting about 7.1. The actual deflection at that sample is about `(1.13, -1.13)`, whose magnitude is 1.6.
+
+Status: largely addressed by the paired introductory review (HowToLens PR #104). @HowToLens/scripts/chapter_1_introduction/tutorial_2_ray_tracing.py now says that `grid` holds "the positions where the deflections were calculated" and labels the prints "Position of the first pixel (y,x)" and "Deflection magnitude at the first pixel" (checked 2026-11-07).
+
+Remaining, small:
+
+- The example still prints the position and the magnitude but not the deflection vector itself. Add `deflections.native[0, 0]` between them so the chain **coordinate → vector → magnitude** is visible in a single block.
+- Check the `VectorYX2D.grid` docstring/repr in @PyAutoArray, and state there that it is the sampling-coordinate grid of the vector field. Do not rename the API.
+
+There is no equivalent HowToGalaxy section, so this item is not a parity fix.
+
 Ongoing process
 ===============
 
