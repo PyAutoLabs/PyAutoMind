@@ -16,6 +16,7 @@ Witness: The parsed config objects compare equal before and after (deep-compare 
 Review-minutes: 0
 Unattended: ready
 Filed: 2026-09-10
+Issued: 2026-11-08
 
 Found by `/ci_speedup` (2026-09-10) while profiling the slowest CI smoke scripts.
 

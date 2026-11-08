@@ -1,4 +1,15 @@
 
+## config-yaml-parse-cache
+- issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/211
+- issued: 2026-11-08
+- session: https://claude.ai/code/session_016nhQ8NkMVDS9RLqr6FRXye (batch 2026-11-08-am)
+- location: claude-code remote container (no task worktree)
+- status: library-dev
+- repos:
+  - PyAutoNerves: feature/config-yaml-parse-cache
+- prompt: active/config_yaml_parse_cache.md
+- tier: notify — merge mode: human /prm (batch contract: ends at PR-open)
+
 ## magnification-maps-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/818
 - issued: 2026-11-02
