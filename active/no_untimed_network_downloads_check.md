@@ -16,6 +16,7 @@ Witness: a repo-level check (pytest or a PyAutoHeart/PyAutoHands lint) fails on 
 Review-minutes: 0
 Unattended: ready
 Filed: 2026-09-07
+Issued: 2026-11-08
 
 On 2026-09-07 `scripts/multi_dataset/features/imaging_and_point_source/modeling.py`
 timed out at the 300 s smoke cap in PyAutoHeart run 34099198772 because an untimed

@@ -24,6 +24,17 @@
 - epic: cluster-strong-lensing (phase 8d)
 - tier: judge — merge mode: human /prm (PyAutoArray → PyAutoGalaxy → PyAutoLens)
 
+## no-untimed-network-downloads-check
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/326
+- issued: 2026-11-08
+- session: claude-code remote, batch 2026-11-08-am
+- status: pr-open
+- repos:
+  - PyAutoHeart: feature/no-untimed-network-downloads
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/327
+- prompt: active/no_untimed_network_downloads_check.md
+- tier: judge — merge mode: human /prm
+
 ## matrix-free-interferometer-inversion
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/638
 - issued: 2026-10-21
