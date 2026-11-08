@@ -9,9 +9,10 @@ Themes:
 Difficulty: small
 Autonomy: supervised
 Priority: low
-Status: draft
+Status: pr-open
 Consequence: judge
 Filed: 2026-11-08
+Issued: 2026-11-08
 
 ## Why
 
@@ -47,3 +48,15 @@ un-timed.
    without changing what they assert.
 3. Separately, find out why this leg's dataset cache misses. The simulators run
    inside the timing.
+
+## Measured (2026-11-08), supersedes "Not yet measured"
+
+The local stack (PyAutoCTI main + arcticpy 2.6 built from source) matches CI: fit.py 35s, database.py 40s.
+
+- `fit.py`: about 90% is in-search fit visualization for 36 test-mode fits. The lever is
+  `PYAUTO_SKIP_VISUALIZATION: "1"` as a smoke default. The human chose workspace-wide.
+  Whole leg 311s → 211s, 44/44 pass → autocti_workspace#47.
+- `database.py`: about 55% is regenerating datasets and fits from sqlite across loops (the
+  example's teaching content, left as is), about 25% plotting, about 10% scrape. Not changed.
+- Side bug (not fixed): in test mode the DB lands at `output/test_mode/plot_fpa.sqlite`, but the
+  script removes `output/plot_fpa.sqlite`, so a local re-run fails with UNIQUE constraint. CI is unaffected.
