@@ -3,9 +3,11 @@
 - issued: 2026-11-08
 - session: claude-code remote (web), https://claude.ai/code/session_016nhQ8MFwfRFgwBVbYjP9Xd
 - location: remote container clone (/home/user/pyautoarray), no task worktree
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - repos:
   - PyAutoArray: feature/sparse-inversion-subtracted-data
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/681
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/681
 - override: human override 2026-11-08 — runs in parallel with magnification-maps-wiring's PyAutoArray claim (disjoint files)
 - prompt: active/sparse_inversion_ignores_profile_subtracted_image.md
 - tier: glance — merge mode: human /prm (maintainer instruction for this session)
