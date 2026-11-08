@@ -8,6 +8,7 @@
 - repos:
   - PyAutoNerves: feature/config-yaml-parse-cache
 - prompt: active/config_yaml_parse_cache.md
+- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/212 (opened 2026-11-08; awaiting human /prm)
 - tier: notify — merge mode: human /prm (batch contract: ends at PR-open)
 
 ## magnification-maps-wiring

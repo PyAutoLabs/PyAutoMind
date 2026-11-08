@@ -1056,7 +1056,7 @@ Use the start-dev skill. active/canonical_key_todo_sweep.md
 
 </details>
 
-<details><summary>📋 <a href="active/config_yaml_parse_cache.md">Cache <code>autonerves</code> config parsing — 308 YAML files parsed per script run</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/211">issue #211</a> — issued 2026-11-08 — library-dev</summary>
+<details><summary>📋 <a href="active/config_yaml_parse_cache.md">Cache <code>autonerves</code> config parsing — 308 YAML files parsed per script run</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/211">issue #211</a> — issued 2026-11-08 — library-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/212">PyAutoNerves#212</a></summary>
 
 ```
 Use the start-dev skill. active/config_yaml_parse_cache.md
