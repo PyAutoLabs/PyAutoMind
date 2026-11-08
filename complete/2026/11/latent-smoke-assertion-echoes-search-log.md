@@ -1,3 +1,14 @@
+Shipped in autolens_workspace_test#355 (merged 2026-11-08, a4719f4). No issue was opened (the batch
+session could not attach PyAutoBrain for the start_dev bookkeeping).
+
+- `scripts/misc/latent/latent_integration_smoke_jax.py`: on an empty latent block the assertion now
+  quotes the `compute_latent_samples:` warning(s) and first-failure traceback from every `search.log`,
+  says so when none exist, and cites PyAutoLens#734 / PyAutoFit#1600 only as one known cause.
+- Smoke CI (3.12/3.13) green; the script itself was not run end-to-end in the session (no
+  autolens/JAX), the helper was exercised on synthetic output trees.
+
+## Original prompt
+
 # The latent smoke's empty-block assertion names one cause unconditionally — echo the real warning instead
 
 Type: test

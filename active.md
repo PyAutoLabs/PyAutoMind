@@ -1,16 +1,4 @@
 
-## config-yaml-parse-cache
-- issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/211
-- issued: 2026-11-08
-- session: https://claude.ai/code/session_016nhQ8NkMVDS9RLqr6FRXye (batch 2026-11-08-am)
-- location: claude-code remote container (no task worktree)
-- status: library-dev
-- repos:
-  - PyAutoNerves: feature/config-yaml-parse-cache
-- prompt: active/config_yaml_parse_cache.md
-- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/212 (opened 2026-11-08; awaiting human /prm)
-- tier: notify — merge mode: human /prm (batch contract: ends at PR-open)
-
 ## magnification-maps-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/818
 - issued: 2026-11-02
@@ -24,17 +12,6 @@
 - prompt: active/magnification_maps_8d_wiring_pretty.md
 - epic: cluster-strong-lensing (phase 8d)
 - tier: judge — merge mode: human /prm (PyAutoArray → PyAutoGalaxy → PyAutoLens)
-
-## no-untimed-network-downloads-check
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/326
-- issued: 2026-11-08
-- session: claude-code remote, batch 2026-11-08-am
-- status: pr-open
-- repos:
-  - PyAutoHeart: feature/no-untimed-network-downloads
-- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/327
-- prompt: active/no_untimed_network_downloads_check.md
-- tier: judge — merge mode: human /prm
 
 ## matrix-free-interferometer-inversion
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/638

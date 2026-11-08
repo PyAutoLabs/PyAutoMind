@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2201 records across 11 buckets.
+2204 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -144,6 +144,7 @@ markers; everything below GENERATED is rebuilt.
 - [close-out-guard](2026/11/close-out-guard.md)
 - [cloud-validation-rehearsal-clock-skew](2026/11/cloud-validation-rehearsal-clock-skew.md)
 - [compile-drift-single-sample](2026/11/compile-drift-single-sample.md) — shipped in PyAutoBrain#588 (merge e822697, 2026-11-05), commit ed0782c. Decision: option (a), taken by the age…
+- [config-yaml-parse-cache](2026/11/config-yaml-parse-cache.md)
 - [cortex-agents-slim](2026/11/cortex-agents-slim.md) — PR is the tracking surface
 - [cortex-projects-dashboard-parent](2026/11/cortex-projects-dashboard-parent.md) — parent closed. Phase 1, the presentation change, shipped in PyAutoBrain#526 (merge 92de427, 2026-10-15; record…
 - [cti-api-rst-rewrite](2026/11/cti-api-rst-rewrite.md)
@@ -181,6 +182,7 @@ markers; everything below GENERATED is rebuilt.
 - [intake-memory-citation-floor](2026/11/intake-memory-citation-floor.md)
 - [intake-memory-line-organ-targets](2026/11/intake-memory-line-organ-targets.md) — already shipped — closed as stale draft. The `_with_memory` gate in `agents/conductors/intake/_intake.py` land…
 - [jax-joss-benchmark-repo](2026/11/jax-joss-benchmark-repo.md) — already shipped — PyAutoLabs/autolens_jax_joss: 9c66b020 (birth, 10 benchmark scripts), 64204f69 (A100 sweep o…
+- [latent-smoke-assertion-echoes-search-log](2026/11/latent-smoke-assertion-echoes-search-log.md)
 - [latest-per-test-tie](2026/11/latest-per-test-tie.md) — test_autofit/results/test_identity.py::test_latest_per_keeps_the_latest_sibling flaked (main red at 963ff296a,
 - [ledger-merge-sync](2026/11/ledger-merge-sync.md) — shipped in commit 748f8c0bb (this PR). `scripts/ledger_merge.py sync [--base origin/main] [--root]` / `sync_wi…
 - [lifecycle-p3-designation-proposals](2026/11/lifecycle-p3-designation-proposals.md) — decided and shipped — the human approved all 39 designations (datacube/delaunay gpu_a100 held provisional); Py…
@@ -210,6 +212,7 @@ markers; everything below GENERATED is rebuilt.
 - [nerves-false-workspace-stale](2026/11/nerves-false-workspace-stale.md) — already shipped — PyAutoNerves#203 (issue #202, merged 2026-10-17), record `complete/2026/10/workspace-freshne…
 - [nfw-virial-mass-conc-jax](2026/11/nfw-virial-mass-conc-jax.md) — - `NFWVirialMassConcSph` (m200c + free concentration) is now JAX-traceable: `kappa_s_and_scale_radius` picks `…
 - [nightly-token-refresh](2026/11/nightly-token-refresh.md)
+- [no-untimed-network-downloads-check](2026/11/no-untimed-network-downloads-check.md)
 - [numba-fork-safe-threading](2026/11/numba-fork-safe-threading.md)
 - [numba-gate-retune-superseded](2026/11/numba-gate-retune-superseded.md) — superseded — PyAutoArray#632 (17caf228), records `complete/2026/10/interferometer-numba-route-gate.md` and `de…
 - [numba-num-threads-pin-delaunay-nn](2026/11/numba-num-threads-pin-delaunay-nn.md)
