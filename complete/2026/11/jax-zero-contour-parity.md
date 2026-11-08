@@ -1,3 +1,11 @@
+Shipped in autolens_workspace_test#357 (merged 2026-11-08, merge commit 3caeea6); issue autolens_workspace_test#356 closed.
+
+- New `scripts/misc/jax_assertions/critical_curves_zero_contour_jit_grad.py` (in smoke_tests.txt): elliptical PowerLaw (slope 1.7) + ExternalShear, tangential and radial critical curves/caustics via the `zero_contour_finder` core eager vs under `jax.jit` — identical NaN padding/ordering, max diff ≤ 9.2e-13 (assert 1e-10); public `*_via_zero_contour_from` methods match the jitted contours to 1e-10.
+- `jax.grad` of caustic area w.r.t. einstein_radius: vs central FD rtol 3e-3 (worst 1.2e-3, polygon-closure discretisation), vs exact 2A/b rtol 5e-4 (worst 8.4e-5), eager vs jit grad 1e-10. Smoke green on 3.12 and 3.13.
+- Follow-up candidate (not filed): `jax.jacfwd` fails with an XLA lowering error in jax_zero_contour `tangent_solve_rev` on jax 0.11.2.
+
+## Original prompt
+
 # Verify jax.jit / jax.grad parity on the critical-curve and caustic calculations
 
 Type: test

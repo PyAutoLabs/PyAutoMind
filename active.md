@@ -145,18 +145,6 @@
 - resume: (1) `sacct -j 414456`; each task ends with a 'complete <json>' line or 'INCOMPLETE' (exit≠0); (2) pull RAL ral_cpu/*.json into the worktree results (hpc/sync pull, or rsync that dir); (3) summarize (`modeling_viz_feasibility.py --summarize`; cluster also zero_contour_explicit); drop MS closure flag; investigate galaxy radial-caustic ZC fails; (4) A100 timing leg (human go); (5) wiki verdict + results + PR. Gated follow-up draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md
 - tier: judge — merge mode: human /prm
 
-## jax-zero-contour-parity
-- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/356
-- issued: 2026-11-08
-- session: claude-code remote (web), https://claude.ai/code/session_016nhQ8NWt7fTXiKUjArRaF1; picked by the batch 2026-11-08-am member after its named task (canonical-key-todo-sweep) was found already shipped
-- location: remote container (no task worktree)
-- status: workspace-dev
-- repos:
-  - autolens_workspace_test: feature/jax-zero-contour-parity
-- pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/357 (follow-up candidate: jax.jacfwd fails in jax_zero_contour tangent_solve_rev on jax 0.11.2)
-- prompt: active/jax_zero_contour.md
-- tier: notify — merge mode: human /prm (batch contract: ends at PR-open)
-
 ## animated-logos-galaxy-fit
 - issue: https://github.com/PyAutoLabs/PyAutoLogo/issues/2
 - issued: 2026-11-08
