@@ -56,6 +56,25 @@ Ruled out:
 - dropping `full_datasets` (the tutorial declares it deliberately, and dropping it would
   change what the lesson's evidence comparison demonstrates).
 
+## Prototype measurement (2026-11-08, not shipped)
+
+The JAX compile cache was prototyped in an installed copy only (the venv, not the repo).
+`curvature_matrix_diag_from`'s body was moved into a module-level `jax.jit` with static
+`(S, B, y_shape, x_shape, Ky, Kx, Fy, Fx)` and built once behind `functools.lru_cache`:
+
+- HowToLens tutorial_6: 88–92s → **78.2 / 82.0s**.
+- Log evidences unchanged (Overlay 15907.596, Hilbert 16432.066, best 16687.265538008818).
+- `inverse_variances_native` can be an `Array2D` in numpy mode, so it must be unwrapped
+  (`.array`) before being passed to the jitted kernel.
+
+## Caveat on cross-fit reuse
+
+`autoarray/preloads/abstract.py` records that an earlier automatic preload system was
+removed as bug-prone, and that preloads are deliberately opt-in, where invariance is
+explicit. The curvature reuse in step 1 must therefore be an explicit `preloads=` path.
+Interferometer sparse already honours `preloads.curvature_matrix` (sparse.py:281); imaging
+sparse does not. It must not become a hidden `lru_cache` keyed on arrays.
+
 ## Proposed approach (for /profiling → start_dev)
 
 1. In PyAutoArray, let an inversion take a preloaded curvature matrix or mapper
