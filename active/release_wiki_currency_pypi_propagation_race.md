@@ -16,6 +16,7 @@ Priority: high
 Status: formalised
 Consequence: judge
 Filed: 2026-11-08
+Issued: 2026-11-08
 
 ## Original intent
 
