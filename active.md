@@ -144,3 +144,51 @@
 - compute-tracking: RAL 414456 (array 0-16%5, `ral`, exclusive, 8 CPU, 11 draws/leg; submitted via hpc/sync with worktree-local hpc/sync.conf → HPC_BASE=/mnt/ral/jnightin/autolens_profiling_wt, PROJECT_NAME=critical-curves-jax-viz-feasibility). RAL clone /mnt/ral/jnightin/autolens_profiling_wt/critical-curves-jax-viz-feasibility (ca27dd65); private libs /mnt/ral/jnightin/PyAuto_wt/critical-curves-jax-viz-feasibility (2026.11.6.1 mains, setup.log); RAL venv jax 0.11.2 / jax_zero_contour 2.0.0 match laptop, numpy 2.2.6 / skimage 0.24 older. Rows → results/lens/critical_curves/viz_feasibility/ral_cpu/<leg>.json
 - resume: (1) `sacct -j 414456`; each task ends with a 'complete <json>' line or 'INCOMPLETE' (exit≠0); (2) pull RAL ral_cpu/*.json into the worktree results (hpc/sync pull, or rsync that dir); (3) summarize (`modeling_viz_feasibility.py --summarize`; cluster also zero_contour_explicit); drop MS closure flag; investigate galaxy radial-caustic ZC fails; (4) A100 timing leg (human go); (5) wiki verdict + results + PR. Gated follow-up draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md
 - tier: judge — merge mode: human /prm
+
+## multi-plane-richardson-guide-update
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/623
+- issued: 2026-11-08
+- session: claude-code remote (web), https://claude.ai/code/session_016nhQ8NWt7fTXiKUjArRaF1; picked by the batch 2026-11-08-am member after its named task (canonical-key-todo-sweep) was found already shipped
+- location: remote container (no task worktree)
+- status: workspace-dev
+- repos:
+  - autolens_workspace: feature/multi-plane-richardson-guide-update
+- pr: https://github.com/PyAutoLabs/autolens_workspace/pull/624 (notebook patched cell-wise, not via generate.py; notebook runner not run — no nbconvert in container)
+- prompt: active/multi_plane_guide_richardson_warning_update.md
+- tier: notify — merge mode: human /prm (batch contract: ends at PR-open)
+
+## assistants-regime-extension
+- issue: https://github.com/PyAutoLabs/autogalaxy_assistant/issues/44
+- issued: 2026-11-08
+- session: claude-code remote (web), https://claude.ai/code/session_016nhQ8NWt7fTXiKUjArRaF1; picked by the batch 2026-11-08-am member after its named task (canonical-key-todo-sweep) was found already shipped
+- location: remote container (no task worktree)
+- status: workspace-dev
+- repos:
+  - autogalaxy_assistant: feature/assistants-regime-extension
+- pr: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/45
+- prompt: active/assistants_regime_extension.md
+- tier: notify — merge mode: human /prm (batch contract: ends at PR-open)
+
+## jax-zero-contour-parity
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/356
+- issued: 2026-11-08
+- session: claude-code remote (web), https://claude.ai/code/session_016nhQ8NWt7fTXiKUjArRaF1; picked by the batch 2026-11-08-am member after its named task (canonical-key-todo-sweep) was found already shipped
+- location: remote container (no task worktree)
+- status: workspace-dev
+- repos:
+  - autolens_workspace_test: feature/jax-zero-contour-parity
+- pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/357 (follow-up candidate: jax.jacfwd fails in jax_zero_contour tangent_solve_rev on jax 0.11.2)
+- prompt: active/jax_zero_contour.md
+- tier: notify — merge mode: human /prm (batch contract: ends at PR-open)
+
+## animated-logos-galaxy-fit
+- issue: https://github.com/PyAutoLabs/PyAutoLogo/issues/2
+- issued: 2026-11-08
+- session: claude-code remote (web), https://claude.ai/code/session_016nhQ8NWt7fTXiKUjArRaF1; picked by the batch 2026-11-08-am member after its named task (canonical-key-todo-sweep) was found already shipped
+- location: remote container (no task worktree)
+- status: workspace-dev
+- repos:
+  - PyAutoLogo: feature/animated-logos-galaxy-fit
+- pr: https://github.com/PyAutoLabs/PyAutoLogo/pull/3 (GIFs ~17-18 MB vs 12.7 MB lens; human visual check)
+- prompt: active/animated_logos_for_pyautogalaxy_and_pyautofit.md
+- tier: glance — merge mode: human /prm (batch contract: ends at PR-open)
