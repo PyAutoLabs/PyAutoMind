@@ -8,11 +8,11 @@
 
 | Where | Count |
 |-------|------:|
-| [Start here](#start-here) | 24 |
+| [Start here](#start-here) | 22 |
 | [Epics](#epics) | 21 |
-| [In flight](#in-flight) | 11 |
+| [In flight](#in-flight) | 13 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 234 |
+| [Backlog](#backlog) | 230 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -121,7 +121,7 @@ Use the start-dev skill. draft/maintenance/autocti/cti_upkeep_epic.md
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 74
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 70
 
 <details><summary>📋 <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a> — autolens_workspace · small · safe · normal</summary>
 
@@ -131,26 +131,10 @@ Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sig
 
 </details>
 
-<details><summary>📋 <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a> — autolens_workspace · small · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/research/pyautohands/git_docs.md">Use readthedocs or migrate to GitHub docs</a> — pyautohands · small · supervised · normal</summary>
 
 ```
 Use the start-dev skill. draft/research/pyautohands/git_docs.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/test/autolens_workspace_test/jax_zero_contour.md">Verify jax.jit / jax.grad parity on the critical-curve and caustic calculations</a> — autolens_workspace_test · medium · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/test/autolens_workspace_test/jax_zero_contour.md
 ```
 
 </details>
@@ -195,14 +179,6 @@ Use the start-dev skill. draft/test/autolens_workspace_test/mge_group_dataset_wi
 
 </details>
 
-<details><summary>📋 <a href="draft/docs/workspaces/assistants_regime_extension.md">Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)</a> — workspaces · medium · safe · low</summary>
-
-```
-Use the start-dev skill. draft/docs/workspaces/assistants_regime_extension.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/refactor/autoarray/sparse_operator_int32_indexes.md">Sparse CPU operator: shrink the 172 MB per-dataset payload…</a> — autoarray · supervised</summary>
 
 ```
@@ -215,6 +191,30 @@ Use the start-dev skill. draft/refactor/autoarray/sparse_operator_int32_indexes.
 
 ```
 Use the start-dev skill. draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/model_bullet_parameter_count_drift.md">autolens_workspace: <code>__Model__</code> bullets whose profiles or parameter counts do not match…</a> — workspaces · small · safe · low</summary>
+
+```
+Use the start-dev skill. draft/docs/workspaces/model_bullet_parameter_count_drift.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md">SED chain waveband fit can spin forever in Nautilus exploration…</a> — euclid · small · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile…</a> — autoarray · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md
 ```
 
 </details>
@@ -1040,6 +1040,14 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
+<details><summary>📋 <a href="active/animated_logos_for_pyautogalaxy_and_pyautofit.md">Animated logos for PyAutoGalaxy and PyAutoFit</a> — <a href="https://github.com/PyAutoLabs/PyAutoLogo/issues/2">issue #2</a> — issued 2026-11-08 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/animated_logos_for_pyautogalaxy_and_pyautofit.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/autonomous_orchestrators_p4c_pilot_run.md">Autonomous orchestrators phase 4c: run the Dev orchestrator pilot…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/574">issue #574</a> — issued 2026-11-04 — human-ops (pilot run; no worktree — briefs land in PyAutoMind/batches/ by the human)</summary>
 
 ```
@@ -1076,6 +1084,14 @@ Use the start-dev skill. active/gradient_correctness_sweep.md
 
 ```
 Use the start-dev skill. active/howtolens-stored-results.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/jax_zero_contour.md">Verify jax.jit / jax.grad parity on the critical-curve and caustic calculations</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/356">issue #356</a> — issued 2026-11-08 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/jax_zero_contour.md
 ```
 
 </details>
@@ -1211,7 +1227,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 225 · local-dev 6 · ral 1
+Lanes: any 221 · local-dev 6 · ral 1
 
 <a id="human-review"></a>
 <details>
@@ -1675,7 +1691,7 @@ Use the start-dev skill. draft/bug/autolens/point_source_plot_script_residual_sh
 </details>
 
 <details>
-<summary><b>feature</b> — 31</summary>
+<summary><b>feature</b> — 30</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
 
@@ -1893,14 +1909,6 @@ Use the start-dev skill. draft/feature/pyautohands/release_board_run_logs_enrich
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/pyautoscientist/animated_logos_for_pyautogalaxy_and_pyautofit.md">Animated logos for PyAutoGalaxy and PyAutoFit</a> — pyautoscientist · medium · safe · low</summary>
-
-```
-Use the start-dev skill. draft/feature/pyautoscientist/animated_logos_for_pyautogalaxy_and_pyautofit.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/feature/autoarray/adapt_linear_default_flip.md">Deferred: make the <code>*Power</code> adapt classes the defaults (breaking)</a> — autoarray · large · human-required · low</summary>
 
 ```
@@ -2101,7 +2109,7 @@ Use the start-dev skill. draft/research/autoarray/delaunay_interpolator_pure_cal
 </details>
 
 <details>
-<summary><b>docs</b> — 23</summary>
+<summary><b>docs</b> — 21</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -2151,14 +2159,6 @@ Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sig
 
 </details>
 
-<details><summary>📋 <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a> — autolens_workspace · small · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> — autolens · medium · safe · normal</summary>
 
 ```
@@ -2195,14 +2195,6 @@ Use the start-dev skill. draft/docs/autolens_workspace/cluster_mass_parameteriza
 
 ```
 Use the start-dev skill. draft/docs/workspaces/model_bullet_parameter_count_drift.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/workspaces/assistants_regime_extension.md">Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)</a> — workspaces · medium · safe · low</summary>
-
-```
-Use the start-dev skill. draft/docs/workspaces/assistants_regime_extension.md
 ```
 
 </details>
@@ -2492,7 +2484,7 @@ Use the start-dev skill. draft/refactor/autoarray/sparse_operator_int32_indexes.
 </details>
 
 <details>
-<summary><b>test</b> — 7</summary>
+<summary><b>test</b> — 6</summary>
 
 <details><summary>📋 <a href="draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md">Physical model check when speeding up smoke tests</a> — workspaces · medium · supervised · high</summary>
 
@@ -2514,14 +2506,6 @@ Use the start-dev skill. draft/test/workspaces/restore_workspace_test_likelihood
 
 ```
 Use the start-dev skill. draft/test/autofit/workspace_searches_scripts_preexisting_failures.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/test/autolens_workspace_test/jax_zero_contour.md">Verify jax.jit / jax.grad parity on the critical-curve and caustic calculations</a> — autolens_workspace_test · medium · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/test/autolens_workspace_test/jax_zero_contour.md
 ```
 
 </details>
@@ -2582,6 +2566,8 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-08 | issued | <a href="active/jax_zero_contour.md">Verify jax.jit / jax.grad parity on the critical-curve and caustic…</a> |
+| 2026-11-08 | issued | <a href="active/animated_logos_for_pyautogalaxy_and_pyautofit.md">Animated logos for PyAutoGalaxy and PyAutoFit</a> |
 | 2026-11-06 | issued | <a href="active/corner_anesthetic_takes_40_minutes_on_a.md">corner_anesthetic takes 40+ minutes on a 20-parameter model…</a> |
 | 2026-11-06 | filed | <a href="draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md">Zero-contour critical curves: compile once per run by passing the…</a> |
 | 2026-11-06 | filed | <a href="draft/research/autolens_profiling/visualization_run_time_campaign_measure_and_opti.md">Visualization run-time campaign: measure and optimize modeling-run…</a> |
@@ -2590,13 +2576,13 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-05 | filed | <a href="draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md">autofit: Samples.with_paths / without_paths break on factor-graph…</a> |
 | 2026-11-05 | filed | <a href="draft/feature/autolens_profiling/write_compile_repeats_from_autolens_profiling_s.md">Write <code>compile_repeats</code> from autolens_profiling's jax_compile tooling…</a> |
 | 2026-11-05 | filed | <a href="draft/test/autofit/regression_test_nautilus_as_the_ep_default.md">Regression test: Nautilus as the EP <code>default_optimiser</code> over…</a> |
-| 2026-11-05 | issued | <a href="active/likelihood_lifecycle_p4e_ingest.md">Likelihood lifecycle phase 4e: ingest the phase-4 wall-time…</a> |
-| 2026-11-05 | filed | <a href="draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md">Filed: 2026-11-05 (phase 2 of autolens_profiling#519; Pulse task…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-05 | issued | <a href="active/likelihood_lifecycle_p4e_ingest.md">Likelihood lifecycle phase 4e: ingest the phase-4 wall-time…</a> |
+| 2026-11-05 | filed | <a href="draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md">Filed: 2026-11-05 (phase 2 of autolens_profiling#519; Pulse task…</a> |
 | 2026-11-05 | filed | <a href="draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md">Filed: 2026-11-05 (found by the autolens_profiling#519 worker-route…</a> |
 | 2026-11-04 | issued | <a href="active/autonomous_orchestrators_p4c_pilot_run.md">Autonomous orchestrators phase 4c: run the Dev orchestrator pilot…</a> |
 | 2026-11-02 | filed | <a href="draft/research/autolens_profiling/unexplained_gradient_gaps_cpu_sparse_delaunay_and_mge.md">Unexplained autodiff-vs-FD gaps in the phase-6 gradient records…</a> |
@@ -2605,13 +2591,13 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-02 | filed | <a href="draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md">Imaging sparse-operator path gives a very different log L from dense…</a> |
 | 2026-11-02 | issued | <a href="active/gradient_correctness_sweep.md">Gradient-correctness sweep: triage and investigate every open…</a> |
 | 2026-10-31 | issued | <a href="active/sky_orientation_euclid_dr1_and_library.md">Sky orientation (north/east): euclid_dr1 catalogue, paper and…</a> |
-| 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
-| 2026-10-29 | issued | <a href="active/r2_pages_function_access.md">ECLIPSE site: serve R2 lens files through a Pages Function behind…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
+| 2026-10-29 | issued | <a href="active/r2_pages_function_access.md">ECLIPSE site: serve R2 lens files through a Pages Function behind…</a> |
 | 2026-10-26 | filed | <a href="draft/refactor/autogalaxy_assistant/trim_ag_skills_for_colab_cap.md">Trim autogalaxy_assistant skills toward their autolens size</a> |
 | 2026-10-25 | filed | <a href="draft/bug/health_fixes/heart_health_rerun_stale_push.md">Heart Health rerun cannot publish after main advances</a> |
 | 2026-10-25 | filed | <a href="draft/bug/health_fixes/ci_timing_execution_coverage.md">CI timing must compare equivalent executed job coverage</a> |
@@ -2620,13 +2606,13 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
 | 2026-10-21 | filed | <a href="planned.md#interferometer-primary-beam-persistence-mirror">interferometer-primary-beam-persistence-mirror</a> |
 | 2026-10-21 | filed | <a href="draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md">PyAutoLens mirror of the interferometer primary-beam persistence…</a> |
-| 2026-10-21 | filed | <a href="draft/docs/autolens_profiling/positions_source_jacobian_default_rerun_note.md">Note in autolens_profiling that plain source-plane lane values…</a> |
-| 2026-10-21 | filed | <a href="draft/research/autolens_profiling/matrix_free_interferometer_phase5.md">Matrix-free interferometer inversion, phase 5b: profiling note…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-21 | filed | <a href="draft/docs/autolens_profiling/positions_source_jacobian_default_rerun_note.md">Note in autolens_profiling that plain source-plane lane values…</a> |
+| 2026-10-21 | filed | <a href="draft/research/autolens_profiling/matrix_free_interferometer_phase5.md">Matrix-free interferometer inversion, phase 5b: profiling note…</a> |
 | 2026-10-21 | issued | <a href="active/matrix_free_interferometer_inversion.md">Matrix-free interferometer inversion for very large rectangular…</a> |
 | 2026-10-21 | filed | <a href="draft/docs/autolens_workspace/interferometer_primary_beam_example.md">Interferometer primary beam: workspace example and docs</a> |
 | 2026-10-21 | filed | <a href="draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md">Cluster likelihood scripts: image-plane manual check disagrees with…</a> |
@@ -2635,13 +2621,13 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-14 | filed | <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> |
 | 2026-10-08 | filed | <a href="draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md"><code>JAX_ENABLE_X64=False</code> is overridden to True, so the fp32 inference…</a> |
 | 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
-| 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
-| 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
+| 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
@@ -2650,8 +2636,6 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
-| 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
-| 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
 
 </details>
 

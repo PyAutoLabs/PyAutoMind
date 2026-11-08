@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 11 in flight",
-  "updated": "2026-11-08T13:54:11Z",
+  "headline": "YELLOW \u2014 22 picks \u00b7 13 in flight",
+  "updated": "2026-11-08T14:15:05Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -123,9 +123,9 @@
     },
     {
       "severity": "info",
-      "text": "pick: Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md",
-      "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md"
+      "text": "pick: Use readthedocs or migrate to GitHub docs",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/pyautohands/git_docs.md",
+      "prompt": "Use the start-dev skill. draft/research/pyautohands/git_docs.md"
     }
   ]
 }

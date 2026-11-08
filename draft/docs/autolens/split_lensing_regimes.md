@@ -343,8 +343,8 @@ regenerate the dataset alongside the convention change.
    (same PRs; catalogue-driven light tier + divergence note).
 8. `draft/docs/libraries/autogalaxy_docs_regime_guides.md` — SHIPPED
    2026-07-25 (PyAutoGalaxy#526, New User Guide system-scale ladder).
-9. `draft/docs/workspaces/assistants_regime_extension.md` — assistants
-   follow-up (deferred until 1–8 ship).
+9. `complete/2026/11/assistants-regime-extension.md` — SHIPPED
+   2026-11-08 (autolens_assistant#91 + autogalaxy_assistant#45).
 
 1–4 are the PyAutoLens-facing core (Priority: high); 5–8 are the mirror and
 parity passes (normal); 9 is deferred. 1, 6 and 7 are independent of each

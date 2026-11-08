@@ -1,3 +1,11 @@
+Shipped in two legs: autolens_assistant#91 (2026-07-25) and autogalaxy_assistant#45 (merged 2026-11-08, merge commit cc8b601); issue autogalaxy_assistant#44 closed.
+
+- autogalaxy leg: `wiki/core/external/skill_citation_map.md` splits `ag_multi_galaxy_and_cluster` into a multi_galaxy row (`multi_galaxy/start_here.py`, HowToGalaxy tutorial_2) and a cluster row; `external/index.md` gains "Route by regime first" (no `group/` package in autogalaxy_workspace — a compact group routes to multi_galaxy or cluster); `external/workspace.md` repinned to autogalaxy_workspace@81e3c63; `ag_build_imaging_model` triage now banded. wiki/core edits via the ag_update_wiki procedure (repinned + provenance restamped); all audit checks and `make test` green.
+- Not done (pre-existing): citation map lacks an `ag_refresh_colab_contexts` row (says 27 skills vs 28).
+- Remaining items from the autolens leg's note (dedicated multi_galaxy skill "if demand appears", flagship-system literature pages) were not re-filed: the 2026-11-05 re-scope dropped them from live scope.
+
+## Original prompt
+
 # Assistants: regime-aware routing for multi_galaxy / group / cluster (follow-up)
 
 Type: docs

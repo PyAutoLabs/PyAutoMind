@@ -1,3 +1,10 @@
+Shipped in autolens_workspace#624 (merged 2026-11-08, merge commit a78405d); issue autolens_workspace#623 closed.
+
+- `scripts/guides/advanced/multi_plane.py` Richardson section rewritten as "The NumPy Hessian Near A Compact Deflector: What Used To Fail": live evaluation kept and now shows the PyAutoGalaxy#593 adaptive step agreeing (max rel. residual 1.6e-7 vs autodiff, 1.5e-4 vs ray-traced Jacobian on autogalaxy 2026.11.7.1); old fixed-step numbers quoted as history; termination rules (rtol=1e-7 gate, roundoff floor) and the singular-point-only UserWarning contract explained; "not fixed" and the bug-prompt pointer removed.
+- Notebook: the three section cells were patched with the repo's own `add_notebook_quotes.py` + `dump_notebook_like` (no `ipynb-py-convert` in the remote container); the notebook's code ran green as a script, but not through `run.py` (no nbconvert). Next full `generate.py` run should be a no-op on this file — unconfirmed.
+
+## Original prompt
+
 # Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships
 
 Type: docs

@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2205 records across 11 buckets.
+2207 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -125,6 +125,7 @@ markers; everything below GENERATED is rebuilt.
 - [arcticpy-lazy-import](2026/11/arcticpy-lazy-import.md)
 - [arxiv-edge-refuses-stdlib-urllib](2026/11/arxiv-edge-refuses-stdlib-urllib.md) — superseded by a different fix — closed. Commit 4d8290555 (2026-09-20, "fix: fall back to curl when arXiv rejec…
 - [arxiv-refs-api-errors](2026/11/arxiv-refs-api-errors.md) — already shipped — closed as stale draft. PyAutoMemory#143 (merged 2026-11-03, merge 1f22de7; commits 0c3e2dc, …
+- [assistants-regime-extension](2026/11/assistants-regime-extension.md)
 - [autocti-render-yml-blocked-dup](2026/11/autocti-render-yml-blocked-dup.md) — superseded/shipped — autocti_visualization#8 (2026-10-23), record `complete/2026/10/autocti-viz-render-from-ma…
 - [autonomous-orchestrators-p1](2026/11/autonomous-orchestrators-p1.md) — phase 1 of 7; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [autonomous-orchestrators-p2](2026/11/autonomous-orchestrators-p2.md) — phase 2 of 7; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
@@ -206,6 +207,7 @@ markers; everything below GENERATED is rebuilt.
 - [magnification-maps-uncertainty](2026/11/magnification-maps-uncertainty.md)
 - [memory-catch-up-discovery](2026/11/memory-catch-up-discovery.md) — PR is the tracking surface
 - [mind-agents-trim](2026/11/mind-agents-trim.md) — PR is the tracking surface
+- [multi-plane-richardson-guide-update](2026/11/multi-plane-richardson-guide-update.md)
 - [multistart-gradient-quick-update](2026/11/multistart-gradient-quick-update.md) — already shipped — PyAutoFit#1556 (merged 2026-09-01) wires iterations_per_quick_update into the MultiStart gra…
 - [multistart-resume-cadence](2026/11/multistart-resume-cadence.md) — 2 → 100
 - [nautilus-ep-use-jax-guard](2026/11/nautilus-ep-use-jax-guard.md) — superseded — PyAutoFit 196abf39a (2026-10-08) "Analysis.is_jax as the single JAX probe": Nautilus reads `analy…
