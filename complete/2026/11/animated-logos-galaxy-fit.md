@@ -1,3 +1,12 @@
+Shipped in PyAutoLogo#3 (merged 2026-11-08, merge commit 453c3c8; repo has no CI — merged on explicit human approval); issue PyAutoLogo#2 closed.
+
+- `gifs/pyautogalaxy.gif` (17.1 MB) and `gifs/pyautofit.gif` (18.2 MB): 1860x924, 72 rendered frames, 9.2 s loop — same format/timing as `pyautolens.gif` (unchanged, 12.7 MB, ezgif-compressed).
+- Generators `autologo/make_pyautogalaxy.py` / `make_pyautofit.py` on a shared renderer `autologo/animate.py`; the "PyAuto" strokes moved to `autologo/strokes.py` and reused by `png_maker.py` (refactored lens source image identical, diff 0.0). Deterministic output.
+- PyAutoGalaxy: a rotating spiral unwinds into "PyAuto Galaxy". PyAutoFit: prior draws (af.Model Sersic strokes) converge into "PyAuto Fit" — scripted convergence, no likelihood evaluated.
+- Follow-ups (not filed): swap into READMEs/docs (out of scope by the prompt); optional ezgif compression to match the lens GIF's size.
+
+## Original prompt
+
 # Animated logos for PyAutoGalaxy and PyAutoFit
 
 Type: feature

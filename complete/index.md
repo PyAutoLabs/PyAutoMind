@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2208 records across 11 buckets.
+2209 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -122,6 +122,7 @@ markers; everything below GENERATED is rebuilt.
 ## 2026/11
 
 - [alw-optdeps-escapes](2026/11/alw-optdeps-escapes.md)
+- [animated-logos-galaxy-fit](2026/11/animated-logos-galaxy-fit.md)
 - [arcticpy-lazy-import](2026/11/arcticpy-lazy-import.md)
 - [arxiv-edge-refuses-stdlib-urllib](2026/11/arxiv-edge-refuses-stdlib-urllib.md) — superseded by a different fix — closed. Commit 4d8290555 (2026-09-20, "fix: fall back to curl when arXiv rejec…
 - [arxiv-refs-api-errors](2026/11/arxiv-refs-api-errors.md) — already shipped — closed as stale draft. PyAutoMemory#143 (merged 2026-11-03, merge 1f22de7; commits 0c3e2dc, …

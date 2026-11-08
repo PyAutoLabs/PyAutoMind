@@ -520,7 +520,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 88 (stage 1: 88, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
+Count toward 20: 89 (stage 1: 89, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -637,6 +637,7 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-11-06 | nfw-virial-mass-conc-jax (PyAutoGalaxy#696) | glance | tests pass (1477) / smoke pass (2 scripts) / review n-a (no independent review) / heart stale (release rehearsal only) / witness pass | merged-unchanged | 1 |
 | 2026-11-06 | rectangular-parity-absolute-bound (autogalaxy_workspace_test#134) | glance | tests n/a (workspace) / smoke 21 jax_likelihood + CI 3.12/3.13 PASS / review Sonnet subagent CLEAN / heart STALE (worker-cited) / witness PASS | merged-unchanged | 1 |
 | 2026-11-06 | live-shift-worker-gaps (PyAutoBrain#595) | glance | tests 1638p + control + real-git / smoke n/a (Brain organ) / review none / heart STALE human-ack / witness PASS | merged-unchanged | 1 |
+| 2026-11-08 | animated-logos-galaxy-fit (PyAutoLogo#3) | glance | tests n/a (no CI in repo) / smoke n/a / review none / heart GREEN / witness PASS (generators in repo, same GIF format) | merged-unchanged | 1 |
 
 ## Unattended `glance` sub-window (stage 2) — opened 2026-11-04
 
