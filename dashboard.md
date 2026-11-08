@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 21 |
-| [In flight](#in-flight) | 12 |
+| [In flight](#in-flight) | 13 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 237 |
+| [Backlog](#backlog) | 235 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -23,7 +23,7 @@
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 18
+**Highest priority** (filed as `high`) — showing 12 of 17
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -45,14 +45,6 @@ Use the start-dev skill. draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_
 
 ```
 Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/health_fixes/release_wiki_currency_pypi_propagation_race.md">Release train: autolens wiki-currency check races PyPI index propagation</a> — health_fixes · small · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/health_fixes/release_wiki_currency_pypi_propagation_race.md
 ```
 
 </details>
@@ -117,6 +109,14 @@ Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel
 
 ```
 Use the start-dev skill. draft/research/autoarray/delaunay_research.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autocti/cti_upkeep_epic.md">CTI upkeep parity — bring PyAutoCTI and its satellites to the same…</a> — autocti · too-large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/maintenance/autocti/cti_upkeep_epic.md
 ```
 
 </details>
@@ -1112,6 +1112,14 @@ Use the start-dev skill. active/r2_pages_function_access.md
 
 </details>
 
+<details><summary>📋 <a href="active/release_wiki_currency_pypi_propagation_race.md">Release train: autolens wiki-currency check races PyPI index propagation</a> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/334">issue #334</a> — issued 2026-11-08 — pr-open — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/335">PyAutoHands#335</a></summary>
+
+```
+Use the start-dev skill. active/release_wiki_currency_pypi_propagation_race.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/results_library_p5a_assistant.md">Issued: 2026-11-02</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/176">issue #176</a> — issued 2026-11-02 — workspace-shipped, awaiting-merge (judge → human /prm; wiki-currency waits on a PyAutoFit release) — PRs: <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/177">autolens_assistant#177</a></summary>
 
 ```
@@ -1219,7 +1227,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 228 · local-dev 6 · ral 1
+Lanes: any 226 · local-dev 6 · ral 1
 
 <a id="human-review"></a>
 <details>
@@ -1270,7 +1278,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>bug</b> — 52</summary>
+<summary><b>bug</b> — 51</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1284,14 +1292,6 @@ Use the start-dev skill. draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_
 
 ```
 Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/health_fixes/release_wiki_currency_pypi_propagation_race.md">Release train: autolens wiki-currency check races PyPI index propagation</a> — health_fixes · small · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/health_fixes/release_wiki_currency_pypi_propagation_race.md
 ```
 
 </details>
@@ -2407,7 +2407,7 @@ Use the start-dev skill. draft/maintenance/euclid/skip_fit_output_no_longer_gate
 </details>
 
 <details>
-<summary><b>refactor</b> — 14</summary>
+<summary><b>refactor</b> — 13</summary>
 
 <details><summary>📋 <a href="draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md">Zero-contour critical curves: compile once per run by passing the mass model…</a> — autogalaxy · medium · supervised · medium</summary>
 
@@ -2485,14 +2485,6 @@ Use the start-dev skill. draft/refactor/autolens/cache_readers_fall_back_to_zip_
 
 ```
 Use the start-dev skill. draft/refactor/workspaces/abell_1201_local_cleanup.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/refactor/workspaces/autocti_fpa_plot_scripts_repeated_generators.md">autocti_workspace plot/fpa/imaging_ci: measure and cut repeated aggregator materialization</a> — workspaces · small · supervised · low</summary>
-
-```
-Use the start-dev skill. draft/refactor/workspaces/autocti_fpa_plot_scripts_repeated_generators.md
 ```
 
 </details>
@@ -2614,9 +2606,8 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-08 | filed | <a href="draft/refactor/workspaces/autocti_fpa_plot_scripts_repeated_generators.md">autocti_workspace plot/fpa/imaging_ci: measure and cut repeated…</a> |
 | 2026-11-08 | filed | <a href="draft/refactor/autoarray/curvature_reuse_across_regularization_scans.md">Reuse the mapper curvature matrix across regularization-only refits</a> |
-| 2026-11-08 | filed | <a href="draft/bug/health_fixes/release_wiki_currency_pypi_propagation_race.md">Release train: autolens wiki-currency check races PyPI index…</a> |
+| 2026-11-08 | issued | <a href="active/release_wiki_currency_pypi_propagation_race.md">Release train: autolens wiki-currency check races PyPI index…</a> |
 | 2026-11-08 | issued | <a href="active/sparse_curvature_diag_jit_cache.md">Cache the JAX compile of…</a> |
 | 2026-11-06 | issued | <a href="active/corner_anesthetic_takes_40_minutes_on_a.md">corner_anesthetic takes 40+ minutes on a 20-parameter model…</a> |
 | 2026-11-06 | filed | <a href="draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md">Zero-contour critical curves: compile once per run by passing the…</a> |
@@ -2624,12 +2615,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-06 | issued | <a href="active/howtolens-stored-results.md">HowTo series: ship stored fit results so notebooks run without…</a> |
 | 2026-11-06 | issued | <a href="active/critical_curves_jax_modeling_viz_feasibility.md">Feasibility: JAX zero-contour critical curves/caustics for…</a> |
 | 2026-11-05 | filed | <a href="draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md">autofit: Samples.with_paths / without_paths break on factor-graph…</a> |
+| 2026-11-05 | filed | <a href="draft/feature/autolens_profiling/write_compile_repeats_from_autolens_profiling_s.md">Write <code>compile_repeats</code> from autolens_profiling's jax_compile tooling…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-05 | filed | <a href="draft/feature/autolens_profiling/write_compile_repeats_from_autolens_profiling_s.md">Write <code>compile_repeats</code> from autolens_profiling's jax_compile tooling…</a> |
 | 2026-11-05 | filed | <a href="draft/test/autofit/regression_test_nautilus_as_the_ep_default.md">Regression test: Nautilus as the EP <code>default_optimiser</code> over…</a> |
 | 2026-11-05 | issued | <a href="active/likelihood_lifecycle_p4e_ingest.md">Likelihood lifecycle phase 4e: ingest the phase-4 wall-time…</a> |
 | 2026-11-05 | filed | <a href="draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md">Filed: 2026-11-05 (phase 2 of autolens_profiling#519; Pulse task…</a> |
@@ -2639,12 +2630,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-02 | issued | <a href="active/magnification_maps_8d_wiring_pretty.md">Magnification maps 8d: wire into fit subplots and make them pretty</a> |
 | 2026-11-02 | issued | <a href="active/results_library_p5a_assistant.md">Issued: 2026-11-02</a> |
 | 2026-11-02 | filed | <a href="draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md">Imaging sparse-operator path gives a very different log L from dense…</a> |
+| 2026-11-02 | issued | <a href="active/gradient_correctness_sweep.md">Gradient-correctness sweep: triage and investigate every open…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-02 | issued | <a href="active/gradient_correctness_sweep.md">Gradient-correctness sweep: triage and investigate every open…</a> |
 | 2026-10-31 | issued | <a href="active/sky_orientation_euclid_dr1_and_library.md">Sky orientation (north/east): euclid_dr1 catalogue, paper and…</a> |
 | 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
 | 2026-10-29 | issued | <a href="active/r2_pages_function_access.md">ECLIPSE site: serve R2 lens files through a Pages Function behind…</a> |
@@ -2654,12 +2645,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-23 | filed | <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred…</a> |
 | 2026-10-23 | filed | <a href="draft/bug/autolens_profiling/stale_auto_simulated_cluster_dataset.md"><code>@autolens_profiling</code> stale auto-simulated <code>dataset/cluster/simple</code>…</a> |
 | 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
+| 2026-10-21 | filed | <a href="planned.md#interferometer-primary-beam-persistence-mirror">interferometer-primary-beam-persistence-mirror</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-21 | filed | <a href="planned.md#interferometer-primary-beam-persistence-mirror">interferometer-primary-beam-persistence-mirror</a> |
 | 2026-10-21 | filed | <a href="draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md">PyAutoLens mirror of the interferometer primary-beam persistence…</a> |
 | 2026-10-21 | filed | <a href="draft/docs/autolens_profiling/positions_source_jacobian_default_rerun_note.md">Note in autolens_profiling that plain source-plane lane values…</a> |
 | 2026-10-21 | filed | <a href="draft/research/autolens_profiling/matrix_free_interferometer_phase5.md">Matrix-free interferometer inversion, phase 5b: profiling note…</a> |
@@ -2669,12 +2660,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-16 | filed | <a href="draft/maintenance/autolens_workspace/remeasure_shapelets_slow_park.md">Re-measure the shapelets/modeling.py SLOW park (#586) under the…</a> |
 | 2026-10-14 | filed | <a href="draft/test/autofit/workspace_searches_scripts_preexisting_failures.md"><code>@autofit_workspace</code> six <code>searches/</code> scripts fail on main at…</a> |
 | 2026-10-14 | filed | <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> |
+| 2026-10-08 | filed | <a href="draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md"><code>JAX_ENABLE_X64=False</code> is overridden to True, so the fp32 inference…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-08 | filed | <a href="draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md"><code>JAX_ENABLE_X64=False</code> is overridden to True, so the fp32 inference…</a> |
 | 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
 | 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
@@ -2684,6 +2675,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
 | 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
+| 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
 
 </details>
 
@@ -2710,7 +2702,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-95 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+93 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2755,7 +2747,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autolens/point_source_plot_script_residual_shape_mismatch.md`
 - `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md`
 - `draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md`
-- _… and 55 more_
+- _… and 53 more_
 
 </details>
 

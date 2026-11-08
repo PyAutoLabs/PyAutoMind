@@ -1,3 +1,26 @@
+# autocti-smoke-skip-visualization
+
+Shipped 2026-11-08 in autocti_workspace#47, merged after green CI on every leg (smoke 3.12 and 3.13,
+navigator ×4).
+
+The autocti_workspace smoke profile now sets `PYAUTO_SKIP_VISUALIZATION: "1"`, matching the
+autolens and autogalaxy profiles. The human chose workspace-wide on 2026-11-08, superseding the
+2026-09-08 choice to keep in-search plot calls in smoke. The release profile keeps real
+visualization.
+
+Measured with the CI runner (py3.12, PyAutoCTI main + arcticpy 2.6):
+- Whole leg: 311s → 211s, 44/44 pass.
+- plot/fpa/imaging_ci/fit.py: 40.0s → 9.7s.
+- cosmic_rays: 21.5s → 13.3s.
+- chaining/pipelines/parallel: 14.9s → 5.6s.
+
+Not changed:
+- database.py's repeated aggregator materialization (teaching content).
+- A test-mode re-run bug in database.py: it removes `output/plot_fpa.sqlite`, but the DB is at
+  `output/test_mode/`. This affects local re-runs only.
+
+## Original prompt
+
 # autocti_workspace plot/fpa/imaging_ci: measure and cut repeated aggregator materialization
 
 Type: refactor
