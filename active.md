@@ -161,8 +161,9 @@
 - issued: 2026-11-08
 - session: claude-code remote (web), https://claude.ai/code/session_016nhQ8QHqrNT4BEqeURYq8y; batch 2026-11-08-am
 - location: remote container (no task worktree)
-- status: library-dev
+- status: pr-open
 - repos:
   - PyAutoMemory: feature/canonical-key-todo-sweep
+- pr: https://github.com/PyAutoLabs/PyAutoMemory/pull/146
 - prompt: active/canonical_key_todo_sweep.md
 - tier: notify — merge mode: auto-merge on green (in-turn wait, then /prm close-out); batch contract: ends at PR-open, human /prm
