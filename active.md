@@ -11,6 +11,18 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/212 (opened 2026-11-08; awaiting human /prm)
 - tier: notify — merge mode: human /prm (batch contract: ends at PR-open)
 
+## sparse-curvature-diag-jit-cache
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/678
+- issued: 2026-11-08
+- session: https://claude.ai/code/session_016nhQ8McPUvDThp9s9JAiZz
+- location: claude-code remote container (no task worktree)
+- status: library-dev
+- repos:
+  - PyAutoArray: ccr-eef5e2b2-t0z1tp
+- prompt: active/sparse_curvature_diag_jit_cache.md
+- claim-override: PyAutoArray also held by magnification-maps-wiring (dev-box local branch); human approved proceeding 2026-11-08 (single-file change, inversion_imaging_util.py)
+- tier: judge — merge mode: human /prm
+
 ## magnification-maps-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/818
 - issued: 2026-11-02
