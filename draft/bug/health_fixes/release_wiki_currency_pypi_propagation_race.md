@@ -73,5 +73,7 @@ the same pattern.
 
 - https://github.com/PyAutoLabs/PyAutoHands/actions/runs/42360648525 (job 128371996414, log lines 172-178)
 - https://github.com/PyAutoLabs/PyAutoHands/actions/runs/42201537352 (job 127846883910)
-- 2026-11-08: the failed jobs of 42360648525 were re-run (the check only, no code change)
-  to confirm the propagation diagnosis against the now-indexed 2026.11.7.1.
+- 2026-11-08: the failed jobs of 42360648525 were re-run (attempt 2, the check only, no
+  code change). "Install the released stack" and "Run wiki-currency checks" both passed against
+  the now-indexed 2026.11.7.1, and the run concluded success. The propagation diagnosis is
+  confirmed; there is no wiki drift at 2026.11.7.1.
