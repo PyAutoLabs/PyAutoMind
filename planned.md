@@ -7,7 +7,6 @@
 - [samples-parameter-paths](#samples-parameter-paths)
 - [piemass-potential](#piemass-potential)
 - [latent-nan-guard-honest-run](#latent-nan-guard-honest-run)
-- [knn-partial-point-block](#knn-partial-point-block)
 - [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
 - [interferometer-primary-beam-persistence-mirror](#interferometer-primary-beam-persistence-mirror)
 - [point-plots-yaml-keys-assistant](#point-plots-yaml-keys-assistant)
@@ -83,19 +82,6 @@
 - blocked-by: slow-skip-timeout-cap-doc (using autolens_workspace_test; PR #194 OPEN/MERGEABLE)
 - affected-repos:
   - autolens_workspace_test
-
-## knn-partial-point-block
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/609
-- filed: 2026-10-02
-- prompt: draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md
-- classification: both
-- suggested-branch: feature/knn-partial-point-block
-- prior-blocker-cleared: Audit PRs Array611/workspace342 merged 2026-10-02; see complete/2026/10/mesh-interpolator-numerics-audit.md. Survey current claims at start-dev.
-- affected-repos:
-  - PyAutoArray
-  - autolens_workspace_test
-- finding-2026-10-29: fix breaks KNN+AdaptSplit gradient check (jax_grad/knn.py); split out of arc 4b (#665) by human; patch on #609; investigate mechanism first (see prompt).
-- resume: Audit#603 discovered deterministic partial-final-block neighbor corruption; filed separately per explicit user request. No implementation begun or worktree created. Audit retains strict expected-failure witness citing609. Schedule repair independently and promote regression after fix.
 
 ## sibson-internal-edge-continuity
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/610
