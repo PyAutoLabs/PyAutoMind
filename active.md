@@ -1,16 +1,4 @@
 
-## release-wiki-currency-pypi-race
-- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/334
-- issued: 2026-11-08
-- session: https://claude.ai/code/session_016nhQ8McPUvDThp9s9JAiZz
-- location: claude-code remote container (no task worktree)
-- status: pr-open
-- repos:
-  - PyAutoHands: ccr-eef5e2b2-t0z1tp
-- library-pr: https://github.com/PyAutoLabs/PyAutoHands/pull/335 (opened 2026-11-08; awaiting human /prm)
-- prompt: active/release_wiki_currency_pypi_propagation_race.md
-- tier: judge — merge mode: human /prm
-
 ## sparse-curvature-diag-jit-cache
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/678
 - issued: 2026-11-08

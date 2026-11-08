@@ -1,3 +1,27 @@
+# release-wiki-currency-pypi-race
+
+Shipped 2026-11-08 in PyAutoHands#335, merged after green CI (pytest 3.12, 3.13 and 3.14). Closes
+PyAutoHands#334.
+
+The 2026.11.6.1 and 2026.11.7.1 releases shipped but ended red: autolens_assistant's wiki-currency
+check ran `pip install autolens==<new>` about 3 minutes after the upload, before PyPI's simple index
+listed it. The fix:
+- release.yml gains `wait_for_released_stack`, after release_workspaces and skipped in rehearsal.
+  It polls production PyPI with `--no-cache-dir` for all six packages, bounded at 10 min per
+  package, and fails loudly.
+- All four wiki_currency_check* jobs need it.
+- The wiki_drift_issue* jobs tolerate a missing report and title it "could not complete", not drift.
+
+Verified:
+- The wait loop finds 2026.11.7.1 in 13s and fails on a missing version.
+- The drift step was checked with a stubbed gh.
+- 4 wiring tests fail on the old workflow and pass on the new.
+
+The first CI run failed only the tenant-firewall check (an assistant repo name in a test docstring)
+and was fixed in 43c4221. The live proof is the next release's wiki-currency jobs.
+
+## Original prompt
+
 # Release train: autolens wiki-currency check races PyPI index propagation
 
 Type: bug
