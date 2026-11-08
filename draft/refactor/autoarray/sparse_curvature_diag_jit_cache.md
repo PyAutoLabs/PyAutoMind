@@ -10,7 +10,7 @@ Themes:
 Difficulty: small
 Autonomy: supervised
 Priority: normal
-Status: draft
+Status: declined — human 2026-11-08 closed PyAutoArray#679 unmerged (issue #678 closed not-planned); CI motivation removed by HowToLens#131 / HowToGalaxy#105. Branch ccr-eef5e2b2-t0z1tp kept.
 Consequence: judge
 Follows: draft/refactor/autoarray/curvature_reuse_across_regularization_scans.md (part 1 only)
 Filed: 2026-11-08

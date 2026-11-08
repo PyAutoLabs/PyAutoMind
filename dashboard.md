@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 21 |
-| [In flight](#in-flight) | 12 |
+| [In flight](#in-flight) | 11 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 235 |
+| [Backlog](#backlog) | 236 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -1128,14 +1128,6 @@ Use the start-dev skill. active/sky_orientation_euclid_dr1_and_library.md
 
 </details>
 
-<details><summary>📋 <a href="active/sparse_curvature_diag_jit_cache.md">Cache the JAX compile of ImagingSparseOperator.curvature_matrix_diag_from</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/678">issue #678</a> — issued 2026-11-08 — pr-open — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/679">PyAutoArray#679</a></summary>
-
-```
-Use the start-dev skill. active/sparse_curvature_diag_jit_cache.md
-```
-
-</details>
-
 ## Planned
 
 Scoped but not started; some are not yet prompt files. Full detail in [`planned.md`](planned.md).
@@ -1219,7 +1211,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 226 · local-dev 6 · ral 1
+Lanes: any 227 · local-dev 6 · ral 1
 
 <a id="human-review"></a>
 <details>
@@ -2399,7 +2391,7 @@ Use the start-dev skill. draft/maintenance/euclid/skip_fit_output_no_longer_gate
 </details>
 
 <details>
-<summary><b>refactor</b> — 13</summary>
+<summary><b>refactor</b> — 14</summary>
 
 <details><summary>📋 <a href="draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md">Zero-contour critical curves: compile once per run by passing the mass model…</a> — autogalaxy · medium · supervised · medium</summary>
 
@@ -2413,6 +2405,14 @@ Use the start-dev skill. draft/refactor/autogalaxy/zero_contour_pytree_compile_c
 
 ```
 Use the start-dev skill. draft/refactor/autoarray/matern_vendor_bessel_kve.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/autoarray/sparse_curvature_diag_jit_cache.md">Cache the JAX compile of ImagingSparseOperator.curvature_matrix_diag_from</a> — autoarray · small · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/refactor/autoarray/sparse_curvature_diag_jit_cache.md
 ```
 
 </details>
@@ -2599,7 +2599,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | Date | Event | Task |
 |------|-------|------|
 | 2026-11-08 | filed | <a href="draft/refactor/autoarray/curvature_reuse_across_regularization_scans.md">Reuse the mapper curvature matrix across regularization-only refits</a> |
-| 2026-11-08 | issued | <a href="active/sparse_curvature_diag_jit_cache.md">Cache the JAX compile of…</a> |
+| 2026-11-08 | filed | <a href="draft/refactor/autoarray/sparse_curvature_diag_jit_cache.md">Cache the JAX compile of…</a> |
 | 2026-11-06 | issued | <a href="active/corner_anesthetic_takes_40_minutes_on_a.md">corner_anesthetic takes 40+ minutes on a 20-parameter model…</a> |
 | 2026-11-06 | filed | <a href="draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md">Zero-contour critical curves: compile once per run by passing the…</a> |
 | 2026-11-06 | filed | <a href="draft/research/autolens_profiling/visualization_run_time_campaign_measure_and_opti.md">Visualization run-time campaign: measure and optimize modeling-run…</a> |
@@ -2694,7 +2694,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-93 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+94 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2739,11 +2739,11 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autolens/point_source_plot_script_residual_shape_mismatch.md`
 - `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md`
 - `draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md`
-- _… and 53 more_
+- _… and 54 more_
 
 </details>
 
-66 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+67 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2795,6 +2795,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/euclid/vis_lp_batch_size_kwarg_silently_ignored.md — unknown theme keyword(s): euclid`
 - `draft/bug/pyautoheart/ral_venv_dependency_floor_drift.md — unknown theme keyword(s): hpc, dependencies, reproducibility`
 - `draft/refactor/autoarray/curvature_reuse_across_regularization_scans.md — unknown theme keyword(s): performance`
+- `draft/refactor/autoarray/sparse_curvature_diag_jit_cache.md — unknown theme keyword(s): performance`
 - `draft/refactor/autofit/ep_analysis_level_compile_cache.md — unknown theme keyword(s): jax`
 - `draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md — unknown theme keyword(s): critical-curves`
 - `draft/refactor/autolens/cache_readers_fall_back_to_zip_member.md — unknown theme keyword(s): aggregator, paths`
