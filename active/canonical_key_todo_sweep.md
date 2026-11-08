@@ -16,6 +16,7 @@ Witness: The `Canonical BibTeX key: TODO` count across `wiki/` is below 345 by t
 Review-minutes: 0
 Unattended: ready
 Filed: 2026-07-16 (backfilled from git)
+Issued: 2026-11-08
 
 345 source-page sections across the wikis still carry "Canonical BibTeX key: TODO — no
 unique match found in bibliography/pyautomemory.bib" markers (count from the 2026-07-16
