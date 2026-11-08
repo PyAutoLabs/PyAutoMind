@@ -17,6 +17,8 @@ Review-minutes: 3
 Unattended: ready
 Witness: a regression test with a regular light profile + pixelized source where the sparse-operator and dense inversions agree on D, chi-squared and log_evidence to 1e-10
 Filed: 2026-09-12
+Issued: 2026-11-08
+Issue: https://github.com/PyAutoLabs/PyAutoArray/issues/680
 
 ## Symptom
 
