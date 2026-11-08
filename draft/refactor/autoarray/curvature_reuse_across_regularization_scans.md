@@ -12,7 +12,7 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: normal
-Status: draft
+Status: declined — human 2026-11-08: "dont use curvature reuse" (do not pick up; kept for the measured split)
 Consequence: judge
 Route: profiling (the cost is inside the inversion, not a CI lever)
 Filed: 2026-11-08

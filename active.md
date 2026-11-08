@@ -1,25 +1,11 @@
 
-## howto-ch3-small-datasets-smoke
-- issued: 2026-11-08
-- session: https://claude.ai/code/session_016nhQ8McPUvDThp9s9JAiZz
-- location: claude-code remote container (no task worktree)
-- status: pr-open
-- repos:
-  - HowToLens: ccr-eef5e2b2-t0z1tp
-  - HowToGalaxy: ccr-eef5e2b2-t0z1tp
-- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/131 ; https://github.com/PyAutoLabs/HowToGalaxy/pull/105 (opened 2026-11-08; awaiting human /prm)
-- decision: human 2026-11-08 — drop the chapter-3 evidence-scan ValueError checks ("a user doesn't need to see them") and run these tutorials on small datasets in smoke
-- measured: HowToLens t5 98.0→12.2s, t6 76.8→18.6s; HowToGalaxy t3 81.9→7.2s, t4 68.0→11.4s (full size still runs end to end)
-- follow-up: notebooks regenerate at next pre-build
-- tier: judge — merge mode: human /prm
-
 ## sparse-curvature-diag-jit-cache
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/678
 - issued: 2026-11-08
 - session: https://claude.ai/code/session_016nhQ8McPUvDThp9s9JAiZz
 - location: claude-code remote container (no task worktree)
 - status: pr-open
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/679 (opened 2026-11-08; awaiting human /prm)
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/679 (opened 2026-11-08; human excluded it from /prm 2026-11-08: "dont use curvature reuse" — awaiting decision)
 - repos:
   - PyAutoArray: ccr-eef5e2b2-t0z1tp
 - prompt: active/sparse_curvature_diag_jit_cache.md
