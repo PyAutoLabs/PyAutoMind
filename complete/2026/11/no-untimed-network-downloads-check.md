@@ -1,3 +1,13 @@
+Shipped in PyAutoHeart#327 (merged 2026-11-08, 0b49dd7); issue PyAutoHeart#326 closed.
+
+- New "Reject untimed network downloads" step in Heart's reusable `smoke-tests.yml` PR gate: AST-scans
+  the calling workspace's `scripts/**/*.py` and fails with file:line on `urlretrieve(` or a
+  timeout-less `urlopen(`. One step covers autolens/autogalaxy/autofit_workspace (all call the gate).
+- Witness: passes on current main of all three workspaces; fails on autolens_workspace `1069bce~1`
+  with exactly the four regressed scripts. 4 new wiring tests; pytest 3.12/3.13 green.
+
+## Original prompt
+
 # Guard every workspace script against untimed network downloads
 
 Type: test
