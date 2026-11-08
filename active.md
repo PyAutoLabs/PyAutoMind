@@ -161,7 +161,7 @@
 - issued: 2026-11-08
 - session: claude-code remote (web), https://claude.ai/code/session_016nhQ8QHqrNT4BEqeURYq8y; batch 2026-11-08-am
 - location: remote container (no task worktree)
-- status: pr-open
+- status: library-shipped
 - repos:
   - PyAutoMemory: feature/canonical-key-todo-sweep
 - pr: https://github.com/PyAutoLabs/PyAutoMemory/pull/146
