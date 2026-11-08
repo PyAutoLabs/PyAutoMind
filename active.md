@@ -1,16 +1,4 @@
 
-## config-yaml-parse-cache
-- issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/211
-- issued: 2026-11-08
-- session: https://claude.ai/code/session_016nhQ8NkMVDS9RLqr6FRXye (batch 2026-11-08-am)
-- location: claude-code remote container (no task worktree)
-- status: library-dev
-- repos:
-  - PyAutoNerves: feature/config-yaml-parse-cache
-- prompt: active/config_yaml_parse_cache.md
-- library-pr: https://github.com/PyAutoLabs/PyAutoNerves/pull/212 (opened 2026-11-08; awaiting human /prm)
-- tier: notify — merge mode: human /prm (batch contract: ends at PR-open)
-
 ## howto-ch3-small-datasets-smoke
 - issued: 2026-11-08
 - session: https://claude.ai/code/session_016nhQ8McPUvDThp9s9JAiZz
@@ -51,17 +39,6 @@
 - prompt: active/magnification_maps_8d_wiring_pretty.md
 - epic: cluster-strong-lensing (phase 8d)
 - tier: judge — merge mode: human /prm (PyAutoArray → PyAutoGalaxy → PyAutoLens)
-
-## no-untimed-network-downloads-check
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/326
-- issued: 2026-11-08
-- session: claude-code remote, batch 2026-11-08-am
-- status: pr-open
-- repos:
-  - PyAutoHeart: feature/no-untimed-network-downloads
-- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/327
-- prompt: active/no_untimed_network_downloads_check.md
-- tier: judge — merge mode: human /prm
 
 ## matrix-free-interferometer-inversion
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/638
@@ -194,14 +171,3 @@
 - compute-tracking: RAL 414456 (array 0-16%5, `ral`, exclusive, 8 CPU, 11 draws/leg; submitted via hpc/sync with worktree-local hpc/sync.conf → HPC_BASE=/mnt/ral/jnightin/autolens_profiling_wt, PROJECT_NAME=critical-curves-jax-viz-feasibility). RAL clone /mnt/ral/jnightin/autolens_profiling_wt/critical-curves-jax-viz-feasibility (ca27dd65); private libs /mnt/ral/jnightin/PyAuto_wt/critical-curves-jax-viz-feasibility (2026.11.6.1 mains, setup.log); RAL venv jax 0.11.2 / jax_zero_contour 2.0.0 match laptop, numpy 2.2.6 / skimage 0.24 older. Rows → results/lens/critical_curves/viz_feasibility/ral_cpu/<leg>.json
 - resume: (1) `sacct -j 414456`; each task ends with a 'complete <json>' line or 'INCOMPLETE' (exit≠0); (2) pull RAL ral_cpu/*.json into the worktree results (hpc/sync pull, or rsync that dir); (3) summarize (`modeling_viz_feasibility.py --summarize`; cluster also zero_contour_explicit); drop MS closure flag; investigate galaxy radial-caustic ZC fails; (4) A100 timing leg (human go); (5) wiki verdict + results + PR. Gated follow-up draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md
 - tier: judge — merge mode: human /prm
-
-## canonical-key-todo-sweep
-- issue: https://github.com/PyAutoLabs/PyAutoMemory/issues/145
-- issued: 2026-11-08
-- session: claude-code remote (web), https://claude.ai/code/session_016nhQ8QHqrNT4BEqeURYq8y; batch 2026-11-08-am
-- location: remote container (no task worktree)
-- status: library-dev
-- repos:
-  - PyAutoMemory: feature/canonical-key-todo-sweep
-- prompt: active/canonical_key_todo_sweep.md
-- tier: notify — merge mode: auto-merge on green (in-turn wait, then /prm close-out); batch contract: ends at PR-open, human /prm

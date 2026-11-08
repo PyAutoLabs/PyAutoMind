@@ -1,3 +1,16 @@
+Shipped in PyAutoNerves#212 (merged 2026-11-08, 9b204c9); issue PyAutoNerves#211 closed.
+
+- New `autonerves/parse_cache.py`: each config YAML/JSON file parsed once per process (keyed on path +
+  mtime + size, deep-copied on return); routed through YAMLConfig, JSONPriorConfig.from_directory and
+  Config.logging_config.
+- Witness: deep-compare test over every packaged config directory (plus a manual check over 8
+  PyAutoFit/Array/Galaxy/Lens config dirs) equal; parses 468 → 148 in a simulated register sequence;
+  config time 1.41 s → 0.56 s. 301 tests pass; unittest 3.12/3.13/nojax green.
+- Not measured: end-to-end `visualization.py` ≥0.8 s speed-up (workspace not in the session).
+- Library change: unreleased until the next PyAuto release.
+
+## Original prompt
+
 # Cache `autonerves` config parsing — 308 YAML files parsed per script run
 
 Type: refactor

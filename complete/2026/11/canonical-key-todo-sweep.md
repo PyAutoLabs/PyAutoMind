@@ -1,3 +1,20 @@
+Shipped in PyAutoMemory#146 (merged 2026-11-08, merge commit 855eead); issue PyAutoMemory#145 closed.
+
+- `Canonical BibTeX key: TODO` count 388 → 77: 290 sections filled with a canonical key verified
+  against the public record (publisher/ADS/arXiv via web search; zero fabricated keys), 21
+  placeholder "sections" that were not papers removed.
+- New read-only `scripts/canonical_key_candidates.py` (DOI → arXiv → author+year → normalized title;
+  prefixed headings) with 9 tests.
+- Canonical bib: 61 duplicate entries removed, Moore2018→Do2014 and Kotilainen2018→Sanghvi2014
+  re-keyed, 6 corrupted entries repaired, 28 new verified entries, 3 identifier-less entries enriched
+  (1087 → 1054 entries).
+- Claims (`Supports`/`Use when`) stay TODO — they need the papers read.
+- Residual 77 (ambiguous / not on the public record / held) listed in the PR body; regenerate with
+  `python -m scripts.canonical_key_candidates`.
+- Follow-ups noted, not filed: DeNicola2019 and Koopmans2006 corrupted entries; Raskutti2014 missing.
+
+## Original prompt
+
 # PyAutoMemory canonical-key TODO sweep
 
 Type: maintenance
