@@ -1,3 +1,18 @@
+Shipped in autofit_assistant#62 (merged 2026-11-08, a975a3c); issue autofit_assistant#61 closed.
+
+- New `skills/af_load_data.md`: load CSV/FITS/HDF5/npy/JSON into the Analysis arrays, confirm column
+  meanings/units/error convention, state every selection cut with its justification and rows kept,
+  record the column map in profile "Data shapes" and the cuts in a dated `wiki/project/` entry, then
+  hand off to the data-inspection gate. Worked recipe: bundled Pantheon+ CSV (1701 → 1624 → 1371 rows).
+- Cited from `af_adapt_to_domain`, `af_wrap_likelihood` and `modes/start_here.md` P0; profile
+  template gains "Data shapes".
+- At /prm: project discovery regenerated with `PyAutoBrain/bin/project_discovery.py write`
+  (missing `.claude/commands/af_load_data.md`, stale af-configure-search Codex description);
+  `install.sh --check-project-discovery autofit_assistant` passes. CI colab-contexts and
+  wiki-currency green.
+
+## Original prompt
+
 # autofit_assistant: a skill that owns loading the user's data and its selection cuts
 
 Type: feature

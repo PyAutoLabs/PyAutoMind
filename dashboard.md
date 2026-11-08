@@ -12,7 +12,7 @@
 | [Epics](#epics) | 21 |
 | [In flight](#in-flight) | 11 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 235 |
+| [Backlog](#backlog) | 234 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -1211,7 +1211,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 226 · local-dev 6 · ral 1
+Lanes: any 225 · local-dev 6 · ral 1
 
 <a id="human-review"></a>
 <details>
@@ -1675,7 +1675,7 @@ Use the start-dev skill. draft/bug/autolens/point_source_plot_script_residual_sh
 </details>
 
 <details>
-<summary><b>feature</b> — 32</summary>
+<summary><b>feature</b> — 31</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
 
@@ -1689,14 +1689,6 @@ Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visua
 
 ```
 Use the start-dev skill. draft/feature/autoarray/source_clumps_robust_scale.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autofit_assistant/data_loading_and_selection_cuts_skill.md">autofit_assistant: a skill that owns loading the user's data and its selection…</a> — autofit_assistant · small · safe · medium</summary>
-
-```
-Use the start-dev skill. draft/feature/autofit_assistant/data_loading_and_selection_cuts_skill.md
 ```
 
 </details>
