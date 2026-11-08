@@ -3,13 +3,14 @@
 - issued: 2026-10-02
 - session: claude-code remote (web), https://claude.ai/code/session_016nhQ8MFwfRFgwBVbYjP9Xd
 - location: remote container clone (/home/user/pyautoarray), no task worktree
-- status: library-dev
+- status: library-dev (awaiting human decision on #609 proposal)
 - repos:
   - PyAutoArray: feature/knn-partial-point-block
 - override: human override 2026-11-08 — runs in parallel with magnification-maps-wiring's PyAutoArray claim (disjoint files)
 - prompt: active/fix_knn_neighbor_search_for_a_partial.md
 - tier: judge — merge mode: human /prm
 - finding-2026-10-29: fix breaks KNN+AdaptSplit gradient check (jax_grad/knn.py); investigate mechanism first, write up + propose on #609 before changing gradients.
+- finding-2026-11-08: mechanism confirmed + proposal posted (https://github.com/PyAutoLabs/PyAutoArray/issues/609#issuecomment-6726735167): bug masked a near-singular split-reg H (constant mode held by 1e-8 jitter; Delaunay+AdaptSplit already has it on main). Options L (pseudo-det, +9.21 nat constant) / K (kept-subspace log-dets). awaiting human decision; no code committed.
 
 ## sparse-inversion-subtracted-data
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/680
