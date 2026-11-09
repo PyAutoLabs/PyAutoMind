@@ -135,14 +135,15 @@
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/521
 - issued: 2026-11-06
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/critical-curves-jax-viz-feasibility
 - repos:
   - autolens_profiling: feature/critical-curves-jax-viz-feasibility
 - prompt: active/critical_curves_jax_modeling_viz_feasibility.md
 - pulse: organs/PyAutoPulse/tasks/critical_curves_jax_modeling_viz_feasibility.md
 - parallel-claim: human ruled 2026-11-06 to share autolens_profiling with gradient-correctness-sweep (#517, paused); this task touches only scripts/lens/critical_curves/ + the critical-curves wiki
-- phase: harness ca27dd65; laptop pilots done (5/33 galaxy legs kept locally); corpus trimmed to 17 legs (scripts/lens/critical_curves/viz_feasibility_legs.json); full sweep SUBMITTED on RAL 2026-11-06
-- compute-tracking: RAL 414456 (array 0-16%5, `ral`, exclusive, 8 CPU, 11 draws/leg; submitted via hpc/sync with worktree-local hpc/sync.conf → HPC_BASE=/mnt/ral/jnightin/autolens_profiling_wt, PROJECT_NAME=critical-curves-jax-viz-feasibility). RAL clone /mnt/ral/jnightin/autolens_profiling_wt/critical-curves-jax-viz-feasibility (ca27dd65); private libs /mnt/ral/jnightin/PyAuto_wt/critical-curves-jax-viz-feasibility (2026.11.6.1 mains, setup.log); RAL venv jax 0.11.2 / jax_zero_contour 2.0.0 match laptop, numpy 2.2.6 / skimage 0.24 older. Rows → results/lens/critical_curves/viz_feasibility/ral_cpu/<leg>.json
-- resume: (1) `sacct -j 414456`; each task ends with a 'complete <json>' line or 'INCOMPLETE' (exit≠0); (2) pull RAL ral_cpu/*.json into the worktree results (hpc/sync pull, or rsync that dir); (3) summarize (`modeling_viz_feasibility.py --summarize`; cluster also zero_contour_explicit); drop MS closure flag; investigate galaxy radial-caustic ZC fails; (4) A100 timing leg (human go); (5) wiki verdict + results + PR. Gated follow-up draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md
+- phase: DONE 2026-11-09 — RAL 414456 17/17 complete; verdict: keep marching squares at every scale (wiki + summary_ral_cpu_fp64_2026-11-09.json, 4d3610df); follow-ups filed Mind b165cc654
+- compute-tracking: none running (RAL 414456 COMPLETED; rows committed)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/522 (open, awaiting human /prm)
+- heart-red-override: live human 2026-11-09 chose "Override, open the PR" for #521 (development only; merge via /prm with green checks). RED reasons at ship: PyAutoGalaxy/PyAutoLens Tests CI failures (runs 42605341827, 42605339633), PyAutoHands Python Version Matrix, PyAutoHeart Workspace Smoke (Heart 11/100, 143 unresolved). Branch gates: ruff check/format clean, build_readme --check pass, catalogue regenerated, RAL 414456 17/17. Recorded on #521 (comment 6747061327) and PR #522 body
 - tier: judge — merge mode: human /prm
