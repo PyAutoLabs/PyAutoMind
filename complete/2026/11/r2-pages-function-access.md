@@ -1,3 +1,19 @@
+Shipped 2026-11-09 in PyAutoLabs/ECLIPSE_lens_catalogue#5 (merge `1a38897`); issue #4 closed.
+
+- **Pages Function.** The read-only `/files/*` function (`functions/files/[[path]].js`) reads the private R2 bucket through the `DATA` binding, set for both Preview and Production. It supports GET, HEAD, byte ranges and 304, and sends `Content-Disposition` for downloads. The bundled `docs/data_files/` is removed.
+- **Full DR1 v5 catalogue.** The site lists 15,071 lenses: 15,007 modelled, plus 64 with dataset and RGB only.
+  - `index.json` and the 200 px thumbnails are committed.
+  - The per-lens JSON is in R2 at `_site/lenses/`, because a Pages deployment is capped at 20,000 files.
+  - The thumbnails and lens files are the north-up versions (sky-orientation-p2, euclid_strong_lens_modeling_pipeline#120). The site data was rebuilt on RAL by job 414433, and check_links found 0 missing files.
+- **Downloads page.** It lists `_release/dr1_v5_northup` (28 objects, 76.2 GB). The 2026-10-29 `_release/dr1_v5` was deleted with the human's OK.
+- **Verified.**
+  - The production deploy `ea4877c2` succeeded.
+  - Unauthenticated requests for `/`, `/data/index.json` and `/files/_release/...` all return a 302 to the Access login.
+  - The human confirmed that Production Access and the Production R2 binding are set.
+- **Bucket rule.** The bucket root holds lens trees, `_release/` and `_site/`, so it is only ever updated with `rclone copy`, never `sync`.
+
+## Original prompt
+
 # ECLIPSE site: serve R2 lens files through a Pages Function behind Cloudflare Access
 
 Type: feature
