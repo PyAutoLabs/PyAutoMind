@@ -12,7 +12,7 @@
 | [Epics](#epics) | 21 |
 | [In flight](#in-flight) | 9 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 239 |
+| [Backlog](#backlog) | 240 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -918,7 +918,7 @@ Use the start-dev skill. draft/feature/pyautoscientist/scientist_optional_organ_
 </details>
 
 <details>
-<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 3 queued prompt(s), in order</summary>
+<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 4 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — ledger: `draft/feature/pyautobrain/autonomous_orchestrators_epic.md` — IN PROGRESS; design-reviewed 2026-11-03 (7 phases, <code>Needs:</code> folded into <code>Lane:</code> values, witnesses per phase, 6 decisions ruled by…</summary>
 
@@ -948,6 +948,14 @@ Use the start-dev skill. draft/feature/pyautobrain/mobile_shift_operation.md
 
 ```
 Use the start-dev skill. draft/feature/pyautobrain/shift_watcher_in_the_cloud.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/pyautobrain/ecosystem_review_for_autonomous_runs.md">Deep review: the orchestrator so far, and the whole PyAutoScientist ecosystem, ahead…</a> — pyautobrain · large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/research/pyautobrain/ecosystem_review_for_autonomous_runs.md
 ```
 
 </details>
@@ -1211,7 +1219,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 228 · local-dev 6 · ral 3
+Lanes: any 229 · local-dev 6 · ral 3
 
 <a id="human-review"></a>
 <details>
