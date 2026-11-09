@@ -1064,7 +1064,7 @@ Use the start-dev skill. active/critical_curves_jax_modeling_viz_feasibility.md
 
 </details>
 
-<details><summary>📋 <a href="active/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/610">issue #610</a> — issued 2026-10-02 — workspace-shipped, awaiting-merge (merge order: PyAutoArray#685 → autolens_workspace_test#359) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/685">PyAutoArray#685</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/359">autolens_workspace_test#359</a> — ⏳ pending release: PyAutoArray</summary>
+<details><summary>📋 <a href="active/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/610">issue #610</a> — issued 2026-10-02 — library-shipped, workspace-pending (PyAutoArray#685 MERGED 2026-11-09 as af80e69; autolens_workspace_test#359 red only on #358's… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/685">PyAutoArray#685</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/359">autolens_workspace_test#359</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 Use the start-dev skill. active/fix_sibson_interpolation_at_internal_edges.md

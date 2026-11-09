@@ -4,12 +4,12 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 13 in flight",
-  "updated": "2026-11-09T12:38:51Z",
+  "updated": "2026-11-09T14:12:13Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
       "severity": "yellow",
-      "text": "Fix Sibson interpolation at internal edges \u2014 workspace-shipped, awaiting-merge (merge order: PyAutoArray#685 \u2192 autolens_workspace_test#359)",
+      "text": "Fix Sibson interpolation at internal edges \u2014 library-shipped, workspace-pending (PyAutoArray#685 MERGED 2026-11-09 as af80e69; autolens_workspace_test#359 red only on #358's\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/685",
       "prompt": "Use the start-dev skill. active/fix_sibson_interpolation_at_internal_edges.md"
     },

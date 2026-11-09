@@ -3,7 +3,7 @@
 - issued: 2026-10-02
 - session: claude-code remote (web), https://claude.ai/code/session_016nhQ8MFwfRFgwBVbYjP9Xd
 - location: remote container clone (/home/user/pyautoarray), no task worktree
-- status: workspace-shipped, awaiting-merge (merge order: PyAutoArray#685 → autolens_workspace_test#359)
+- status: library-shipped, workspace-pending (PyAutoArray#685 MERGED 2026-11-09 as af80e69; autolens_workspace_test#359 red only on #358's pending pins + PyAutoHeart smoke `warnings` bug — /prm after #358)
 - repos:
   - PyAutoArray: feature/sibson-internal-edge-continuity
   - autolens_workspace_test: feature/sibson-internal-edge-continuity
