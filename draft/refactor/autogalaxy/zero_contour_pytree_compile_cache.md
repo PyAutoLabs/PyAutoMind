@@ -16,7 +16,7 @@ Priority: medium
 Status: draft
 Consequence: judge
 Campaign: critical-curves
-Blocked-by: autolens_profiling#521 warm-floor result (see Gate)
+Blocked-by: human decision on whether zero-contour should draw interferometer/group figures (autolens_profiling#521 verdict, 2026-11-09)
 Filed: 2026-11-06
 
 Human request (verbatim, 2026-11-06): "file a draft prompt for the pytree caching fix"
@@ -37,9 +37,24 @@ Evidence (autolens_profiling#521 pilot, laptop CPU fp64, imaging/hst phase-4 pos
 - Cover the automatic seed search (`_init_guess_from_coarse_grid`) the same way, if it is a recompile source.
 - Bound the module cache (small LRU), so long sessions with many model structures do not grow memory without limit.
 
-## Gate (read before starting)
+## Gate outcome (autolens_profiling#521, RAL 414456, 2026-11-09)
 
-Do this only if autolens_profiling#521 shows the **warm** zero-contour call (`zero_contour_reused_calc_s.warm`) is clearly below production marching squares (~1.3 s per figure at galaxy scale). If warm zero-contour is still around a second, marching squares stays the default and this refactor has no payoff. Then retire this prompt with a pointer to the #521 verdict. The cluster seed-coverage gap (phase 3a: ±3″ automatic seeds miss cluster curves) is out of scope here. This fixes cost, not coverage.
+Warm zero-contour (0.2–0.8 s) only beats production marching squares where marching squares is slow:
+
+| Scale | Marching squares | Zero-contour warm |
+|---|---|---|
+| interferometer/sma | 2.1–2.9 s | 0.18–0.37 s (about 8–12×) |
+| group/euclid | 3.0–3.7 s | 0.84 s (about 4×) |
+| HST imaging | 0.26–0.30 s | 0.30–0.58 s (no gain) |
+| cluster | 0.11–0.13 s | 0.27–0.38 s (slower) |
+
+**Caching alone is not enough to switch engines.** Before zero-contour can draw any modeling-run figure, three more things are needed, and they belong in this task if it goes ahead:
+
+- **Seeds over the plotting field:** the automatic seed grid spans ±3″. Group curves (radius about 4.8″) are missed in 35 of 44 Delaunay/rectangular draws.
+- **Duplicate removal:** interferometer fits trace the same curve 2–4 times.
+- **Automatic fallback:** to marching squares, triggered by the coarse 0.2″ curve count plus a closure check. In #521 this flagged all 47 failures, with 2 false alarms in 150 draws.
+
+Cluster stays on `point_sources.curves_for_planes`. The cheaper alternative lever, a smaller marching-squares grid around the lens for interferometer/group, is in scope for the visualization run-time campaign (`draft/research/autolens_profiling/visualization_run_time_campaign_measure_and_opti.md`). Pick one with the human before starting.
 
 ## Acceptance
 
