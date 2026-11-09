@@ -12,7 +12,7 @@
 | [Epics](#epics) | 21 |
 | [In flight](#in-flight) | 10 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 237 |
+| [Backlog](#backlog) | 238 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -277,7 +277,7 @@ Use the start-dev skill. draft/release/arcticpy/upstream_packaging_pr.md
 </details>
 
 <details>
-<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 10 queued prompt(s), in order</summary>
+<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 11 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — ledger: `draft/research/autolens_profiling/likelihood_lifecycle_epic.md` — PHASE 0 COMPLETE 2026-10-24 — 0A PyAutoPulse#70; 0B autolens_profiling#444/#447/#448/#449/#450/#451 + PyAutoPulse#74 (lens at…</summary>
 
@@ -291,6 +291,14 @@ Continue the 'Likelihood lifecycle — optimal setups baked into PyAutoLens (`se
 
 ```
 Use the start-dev skill. draft/bug/autolens_inference/validation_wall_estimates_miss_eval_count_and_sampler_floor.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens_inference/hpc_sync_submit_pass_time_requeue_env.md">autolens_inference <code>hpc/sync submit</code> can't pass <code>--time</code>, <code>--no-requeue</code> or environment variables, so every…</a> — autolens_inference · small · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens_inference/hpc_sync_submit_pass_time_requeue_env.md
 ```
 
 </details>
@@ -1211,7 +1219,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 228 · local-dev 6 · ral 1
+Lanes: any 229 · local-dev 6 · ral 1
 
 <a id="human-review"></a>
 <details>
@@ -2743,7 +2751,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-68 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+69 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2756,6 +2764,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autofit/certified_solver_batched_guard_c2.md — unknown theme keyword(s): inversion`
 - `draft/feature/autofit/results_library_epic.md — unknown theme keyword(s): hpc, euclid, results, aggregator`
 - `draft/feature/autolens/coolest_pixel_grid_export.md — unknown theme keyword(s): coolest, interop, euclid`
+- `draft/feature/autolens_inference/hpc_sync_submit_pass_time_requeue_env.md — unknown theme keyword(s): hpc, inference`
 - `draft/feature/autolens_profiling/write_compile_repeats_from_autolens_profiling_s.md — unknown theme keyword(s): measurement-tools`
 - `draft/feature/euclid/catalogue_extension_coolest_mass_fits.md — unknown theme keyword(s): euclid, catalogue`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md — unknown theme keyword(s): euclid`
