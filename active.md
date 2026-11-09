@@ -3,9 +3,12 @@
 - issued: 2026-11-09
 - session: claude-code remote (web), https://claude.ai/code/session_016nhQ8MFwfRFgwBVbYjP9Xd
 - location: remote container clone (/home/user/pyautoarray), no task worktree
-- status: library-dev
+- status: workspace-dev
 - repos:
   - PyAutoArray: feature/intrinsic-reg-pseudo-det
+  - autolens_workspace_test: feature/intrinsic-reg-pseudo-det
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/683
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/683
 - override: human override 2026-11-08 — runs in parallel with magnification-maps-wiring's PyAutoArray claim (disjoint files)
 - prompt: active/intrinsic_regularization_log_det_pseudo_determinant.md
 - tier: judge — merge mode: human /prm
