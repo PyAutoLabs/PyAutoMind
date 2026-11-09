@@ -95,3 +95,16 @@
 - prompt: active/howtolens-stored-results.md
 - epic: howto-stored-results (phase 1 of 4: HowToLens ch2 + design gate)
 - tier: judge — merge mode: human /prm
+
+## likelihood-breakdown-cells-pdet
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/525
+- issued: 2026-11-09
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/likelihood-breakdown-cells-pdet
+- repos:
+  - autolens_profiling: feature/likelihood-breakdown-cells-pdet
+- prompt: active/likelihood_breakdown_cells_pdet_grounding.md
+- parallel-claim: human 2026-11-09 ("do this: draft/bug/autolens_profiling/likelihood_breakdown_cells_pdet_grounding.md") alongside the paused gradient-correctness-sweep claim; touches likelihood_breakdown cells + scripts/misc/likelihood_breakdown only
+- heart-red-override: live human 2026-11-09 chose "Override + RAL validation" (development only; RAL CPU array validation authorized; merge via /prm on green). RED: Heart 11/100 (PyAutoGalaxy/PyAutoLens Tests, Python Version Matrix, Workspace Smoke)
+- tier: judge — merge mode: human /prm

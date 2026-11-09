@@ -11,6 +11,8 @@ Autonomy: supervised
 Priority: medium
 Consequence: judge
 Filed: 2026-11-09
+Issued: 2026-11-09
+Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/525
 
 Remainder of autolens_profiling#523 (record `complete/2026/11/likelihood-breakdown-pdet-drift.md`). PR #524 taught `reconstruction_steps.log_evidence_terms` the PyAutoArray#682 pseudo-determinant via an optional `grounding` argument, and wired it through `FixedLightSystem` and `log_evidence_terms_np`. These cells still call the scorer without grounding, so their recorded evidence terms sit +9.21 nats per regularized mapper from the library's `FitImaging.log_evidence`:
 
