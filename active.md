@@ -3,7 +3,7 @@
 - issued: 2026-11-09
 - session: claude-code remote (web), https://claude.ai/code/session_016nhQ8MFwfRFgwBVbYjP9Xd
 - location: remote container clone (/home/user/pyautoarray), no task worktree
-- status: workspace-shipped, awaiting-merge (merge order: PyAutoArray#683 → #684 → autolens_workspace_test#358)
+- status: library-shipped, workspace-pending (PyAutoArray#683 MERGED 2026-11-09 as 6ae33d4; autolens_workspace_test#358 needs the interferometer re-pin, then /prm after #684)
 - repos:
   - PyAutoArray: feature/intrinsic-reg-pseudo-det
   - autolens_workspace_test: feature/intrinsic-reg-pseudo-det
@@ -20,7 +20,7 @@
 - issued: 2026-10-02
 - session: claude-code remote (web), https://claude.ai/code/session_016nhQ8MFwfRFgwBVbYjP9Xd
 - location: remote container clone (/home/user/pyautoarray), no task worktree
-- status: library-shipped, awaiting-merge (stacked on PyAutoArray#683; merge after it)
+- status: library-shipped, awaiting-merge (#683 merged; #684 retargeted to main 2026-11-09; 3.12 leg re-run after a codecov network flake)
 - repos:
   - PyAutoArray: feature/knn-partial-point-block
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/684
@@ -32,21 +32,6 @@
 - finding-2026-10-29: fix breaks KNN+AdaptSplit gradient check (jax_grad/knn.py); investigate mechanism first, write up + propose on #609 before changing gradients.
 - finding-2026-11-08: mechanism confirmed + proposal posted (https://github.com/PyAutoLabs/PyAutoArray/issues/609#issuecomment-6726735167): bug masked a near-singular split-reg H (constant mode held by 1e-8 jitter; Delaunay+AdaptSplit already has it on main). Options L (pseudo-det, +9.21 nat constant) / K (kept-subspace log-dets). awaiting human decision; no code committed.
 - resume: human decided TWO PRs — (1) new task via intake: split-reg H constant-null-mode treatment, ships first (open: option L pseudo-det vs K kept-subspace); (2) this task: padded KNN fix + oracle tests + promote strict xfail, lands after (1). Handoff incl. prototypes: https://github.com/PyAutoLabs/PyAutoArray/issues/609#issuecomment-6727190070. Branch feature/knn-partial-point-block not pushed; nothing committed.
-
-## sparse-inversion-subtracted-data
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/680
-- issued: 2026-11-08
-- session: claude-code remote (web), https://claude.ai/code/session_016nhQ8MFwfRFgwBVbYjP9Xd
-- location: remote container clone (/home/user/pyautoarray), no task worktree
-- status: library-shipped, awaiting-merge
-- repos:
-  - PyAutoArray: feature/sparse-inversion-subtracted-data
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/681
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/681
-- override: human override 2026-11-08 — runs in parallel with magnification-maps-wiring's PyAutoArray claim (disjoint files)
-- prompt: active/sparse_inversion_ignores_profile_subtracted_image.md
-- tier: glance — merge mode: human /prm (maintainer instruction for this session)
-
 
 ## magnification-maps-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/818

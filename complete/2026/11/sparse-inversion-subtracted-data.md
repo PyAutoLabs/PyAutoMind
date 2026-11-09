@@ -1,3 +1,22 @@
+## Shipped — 2026-11-09
+
+Sparse (w-tilde) imaging inversion now builds its data vector from the inversion's own (profile-subtracted) data and
+noise-map instead of `sparse_operator.weight_map` baked from the original image.
+
+- PR: https://github.com/PyAutoLabs/PyAutoArray/pull/681 (merged c020cc2); issue https://github.com/PyAutoLabs/PyAutoArray/issues/680
+- Fix: gather-only `psf_weighted_data_via_slim_from` via a static [N, Ky, Kx] neighbour slim-index table. A first
+  scatter (`.at[].set`) version reproducibly hung the rectangular_mge.py vmap likelihood on CPU and was replaced.
+- Witness: sparse vs dense agree on D, chi-squared, log_evidence to 1e-10 with a regular light profile (NumPy, JAX
+  eager, jax.jit); no-profile control unchanged. End-to-end al.FitImaging: sparse log_evidence -69075 (main) -> +277.98,
+  matching dense to 1e-13.
+- Interferometer sparse path: no seam (subtracted sparse_dirty_image / data_term already passed and honoured).
+- Unit suite 2298 passed / 1 skipped / 4 xfailed at PR time; CI 3/3 legs green.
+- Process: ran in parallel with magnification-maps-wiring's PyAutoArray claim under explicit human override (2026-11-08).
+
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/681
+
+## Original prompt
+
 # Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile is on the tracer
 
 Type: bug

@@ -3,19 +3,19 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 14 in flight",
-  "updated": "2026-11-09T09:42:58Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 13 in flight",
+  "updated": "2026-11-09T10:51:31Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
       "severity": "yellow",
-      "text": "Fix KNN neighbor search for a partial final point block \u2014 library-shipped, awaiting-merge (stacked on PyAutoArray#683; merge after it)",
+      "text": "Fix KNN neighbor search for a partial final point block \u2014 library-shipped, awaiting-merge (#683 merged; #684 retargeted to main 2026-11-09; 3.12 leg re-run after a codecov network flake)",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/684",
       "prompt": "Use the start-dev skill. active/fix_knn_neighbor_search_for_a_partial.md"
     },
     {
       "severity": "yellow",
-      "text": "Intrinsic regularization log det H is set by the 1e-8 jitter: use\u2026 \u2014 workspace-shipped, awaiting-merge (merge order: PyAutoArray#683 \u2192 #684 \u2192 autolens_workspace_test#358)",
+      "text": "Intrinsic regularization log det H is set by the 1e-8 jitter: use\u2026 \u2014 library-shipped, workspace-pending (PyAutoArray#683 MERGED 2026-11-09 as 6ae33d4; autolens_workspace_test#358 needs the\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/683",
       "prompt": "Use the start-dev skill. active/intrinsic_regularization_log_det_pseudo_determinant.md"
     },
@@ -24,12 +24,6 @@
       "text": "Issued: 2026-11-02 \u2014 workspace-shipped, awaiting-merge (judge \u2192 human /prm; wiki-currency waits on a PyAutoFit release)",
       "url": "https://github.com/PyAutoLabs/autolens_assistant/pull/177",
       "prompt": "Use the start-dev skill. active/results_library_p5a_assistant.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026 \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/681",
-      "prompt": "Use the start-dev skill. active/sparse_inversion_ignores_profile_subtracted_image.md"
     },
     {
       "severity": "yellow",
@@ -57,14 +51,20 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#681 \u2014 Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
+      "text": "pending release: PyAutoArray PyAutoArray#677 \u2014 What shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/677",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#681 \u2014 Shipped \u2014 2026-11-09",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/681",
       "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#677 \u2014 What shipped",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/677",
+      "text": "pending release: PyAutoArray PyAutoArray#681 \u2014 Retired \u2014 2026-11-09 (covered by PyAutoArray#681)",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/681",
       "prompt": null
     },
     {

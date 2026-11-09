@@ -78,7 +78,7 @@ Human request (2026-11-02): "find all gradient related issues that investigate b
 
 ### D. Adjacent value bug (do it if it falls out of item 2)
 
-14. **Sparse vs dense log L mismatch with a non-linear lens light.** Source: `draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md`. A value bug, not a gradient one, but it lives on the same sparse path as item 2.
+14. **Sparse vs dense log L mismatch with a non-linear lens light.** Source: `draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md` — **resolved 2026-11-09** by PyAutoArray#681 (record `complete/2026/11/sparse-vs-dense-nonlinear-lens-light.md`: sparse = dense to 1e-15 on its own witness setup). A value bug, not a gradient one, but it lives on the same sparse path as item 2.
 
 ### Out of scope
 
