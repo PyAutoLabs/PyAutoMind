@@ -1080,7 +1080,7 @@ Use the start-dev skill. active/howtolens-stored-results.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p4e_ingest.md">Likelihood lifecycle phase 4e: ingest the phase-4 wall-time validation rows, publish walltime-validation@1…</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/59">issue #59</a> — issued 2026-11-05 — workspace-dev</summary>
+<details><summary>📋 <a href="active/likelihood_lifecycle_p4e_ingest.md">Likelihood lifecycle phase 4e: ingest the phase-4 wall-time validation rows, publish walltime-validation@1…</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/59">issue #59</a> — issued 2026-11-05 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_inference/pull/60">autolens_inference#60</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_lifecycle_p4e_ingest.md
