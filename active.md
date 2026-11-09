@@ -3,9 +3,13 @@
 - issued: 2026-10-02
 - session: claude-code remote (web), https://claude.ai/code/session_016nhQ8MFwfRFgwBVbYjP9Xd
 - location: remote container clone (/home/user/pyautoarray), no task worktree
-- status: library-dev
+- status: workspace-shipped, awaiting-merge (merge order: PyAutoArray#685 → autolens_workspace_test#359)
 - repos:
   - PyAutoArray: feature/sibson-internal-edge-continuity
+  - autolens_workspace_test: feature/sibson-internal-edge-continuity
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/685
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/685
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/359
 - override: human override 2026-11-08 — runs in parallel with magnification-maps-wiring's PyAutoArray claim (disjoint files)
 - prompt: active/fix_sibson_interpolation_at_internal_edges.md
 - tier: judge — merge mode: human /prm (maintainer 2026-11-09; declared glance)
