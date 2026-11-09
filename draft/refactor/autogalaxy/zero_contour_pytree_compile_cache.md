@@ -13,8 +13,11 @@ Themes:
 Difficulty: medium
 Autonomy: supervised
 Priority: medium
-Status: draft
+Status: formalised
 Consequence: judge
+Review-minutes: 20
+Unattended: never
+Lane: ral
 Campaign: critical-curves
 Blocked-by: human decision on whether zero-contour should draw interferometer/group figures (autolens_profiling#521 verdict, 2026-11-09)
 Filed: 2026-11-06
