@@ -117,10 +117,12 @@
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/523
 - issued: 2026-11-09
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/likelihood-breakdown-pdet-drift
 - repos:
   - autolens_profiling: feature/likelihood-breakdown-pdet-drift
 - prompt: active/likelihood_breakdown_pdet_drift.md
 - parallel-claim: human instruction 2026-11-09 ("file the bug … then fix it and do both steps") to fix alongside gradient-correctness-sweep and critical-curves-jax-viz-feasibility claims; touches scripts/misc/likelihood_breakdown only
 - tier: judge — merge mode: human (authorized in the same instruction)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/524 (380e2f8d)
+- heart-red-override: live human 2026-11-09 "file the bug for the drifted likelihood_breakdown tests and then fix it and do both steps" (ship + merge this turn on green checks; development only). RED at ship: Heart 11/100 (PyAutoGalaxy/PyAutoLens Tests, Python Version Matrix, Workspace Smoke). Gates: pytest scripts/misc/*/test 1903 passed/6 skipped; ruff clean; all lint generated-surface checks pass. Recorded on #523 and PR #524
