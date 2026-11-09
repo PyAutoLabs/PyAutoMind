@@ -24,6 +24,12 @@ members out of the pick lists and work-type sections and shows them only
 grouped, phase-ordered, under their epic — worked in order through the
 epic, never picked standalone.
 
+## profiles-unified-api
+- title: Profiles unified API — generate the light/mass profile variants (Sph, linear, SNR, operated, light-and-mass, mass–concentration reparameterisations) from one module of factories at unchanged public names, signatures, priors and class paths; pin the public surface in a golden file first; collapse the 66 per-variant parity tests to 3 contract tests and the pinned-value tests to tables
+- ledger: draft/refactor/autogalaxy/profiles_unified_api_epic.md
+- status: FILED 2026-11-09 by the Refactor Agent session; scoped from read-only clones (report `profiles_unified_api_report.md`, cross-library survey `draft/refactor/libraries/line_count_reduction_survey.md`); BLOCKED on the human pasting the unified-API design notes into the ledger and ruling D1–D5; nothing issued
+- notes: six phases, PyAutoGalaxy only, one issue per phase at the refactor cap (`safe`, merge human at `glance`): 0 witness first (golden public-surface file + 3 contract tests + `profiles_jit.py` baseline) → 1 `variants.py` + light variants (≈ −1,900 lines) → 2 `light_mass()` + lmp modules + delete the `standard_lp_parent` dictionary (≈ −1,300) → 3 mass `Sph` twins + `reparameterised()` for the 18 MCR/virial classes (≈ −1,300; the 11 numerics-bearing `Sph` classes stay hand-written) → 4 test consolidation → 5 profiles hygiene. Phase 6 (composition-time variants retiring `lp_linear`/`lp_snr`/`lmp_linear`) is a public-API feature epic across PyAutoFit and every workspace, opened only on ruling D1. Invariant: for every public profile class the class path, `getfullargspec`, MRO, `af.Model(cls).identifier`, `to_dict`, pickling and the four quantities on the standard grid are unchanged.
+
 ## cti-upkeep
 - title: CTI upkeep parity — release-train wiring and first modern `autocti` release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), `autocti_profiling` + Pulse `cti` row, figures/assistant/docs currency, hygiene
 - ledger: draft/maintenance/autocti/cti_upkeep_epic.md
