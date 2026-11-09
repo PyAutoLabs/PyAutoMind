@@ -1056,7 +1056,7 @@ Use the start-dev skill. active/corner_anesthetic_takes_40_minutes_on_a.md
 
 </details>
 
-<details><summary>📋 <a href="active/critical_curves_jax_modeling_viz_feasibility.md">Feasibility: JAX zero-contour critical curves/caustics for modeling-run visualization</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/521">issue #521</a> — issued 2026-11-06 — workspace-dev</summary>
+<details><summary>📋 <a href="active/critical_curves_jax_modeling_viz_feasibility.md">Feasibility: JAX zero-contour critical curves/caustics for modeling-run visualization</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/521">issue #521</a> — issued 2026-11-06 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/522">autolens_profiling#522</a></summary>
 
 ```
 Use the start-dev skill. active/critical_curves_jax_modeling_viz_feasibility.md
