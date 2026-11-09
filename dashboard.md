@@ -10,7 +10,7 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 21 |
-| [In flight](#in-flight) | 13 |
+| [In flight](#in-flight) | 12 |
 | [Planned](#planned) | 7 |
 | [Backlog](#backlog) | 234 |
 | [Recent](#recent) | 50 |
@@ -1064,7 +1064,7 @@ Use the start-dev skill. active/critical_curves_jax_modeling_viz_feasibility.md
 
 </details>
 
-<details><summary>📋 <a href="active/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/610">issue #610</a> — issued 2026-10-02 — library-shipped, workspace-pending (PyAutoArray#685 MERGED 2026-11-09 as af80e69; autolens_workspace_test#359 red only on #358's… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/685">PyAutoArray#685</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/359">autolens_workspace_test#359</a> — ⏳ pending release: PyAutoArray</summary>
+<details><summary>📋 <a href="active/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/610">issue #610</a> — issued 2026-10-02 — library-shipped, workspace-pending (PyAutoArray#685 MERGED 2026-11-09 as af80e69; #358 merged 2026-11-09… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/685">PyAutoArray#685</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/359">autolens_workspace_test#359</a> — ⏳ pending release: PyAutoArray</summary>
 
 ```
 Use the start-dev skill. active/fix_sibson_interpolation_at_internal_edges.md
@@ -1084,14 +1084,6 @@ Use the start-dev skill. active/gradient_correctness_sweep.md
 
 ```
 Use the start-dev skill. active/howtolens-stored-results.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/intrinsic_regularization_log_det_pseudo_determinant.md">Intrinsic regularization log det H is set by the 1e-8 jitter: use…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/682">issue #682</a> — issued 2026-11-09 — library-shipped, workspace-pending (PyAutoArray#683 MERGED 2026-11-09 as 6ae33d4; autolens_workspace_test#358 re-pinned incl. 5… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/683">PyAutoArray#683</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/358">autolens_workspace_test#358</a> — ⏳ pending release: PyAutoArray</summary>
-
-```
-Use the start-dev skill. active/intrinsic_regularization_log_det_pseudo_determinant.md
 ```
 
 </details>
@@ -2585,19 +2577,18 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-09 | filed | <a href="draft/bug/pyautoheart/smoke_tests_cache_state_step_missing_warnings_import.md">smoke-tests.yml cache-state step uses <code>warnings</code> without importing it…</a> |
 | 2026-11-09 | filed | <a href="draft/bug/autoarray/reg_split_jax_silently_drops_self_term.md">reg_split_from (JAX) silently drops the self term when a split…</a> |
 | 2026-11-09 | filed | <a href="draft/research/autoarray/evidence_over_solved_parameters_with_zeroed_pixels.md">Should the evidence log-dets run over the solved parameters when edge…</a> |
-| 2026-11-09 | issued | <a href="active/intrinsic_regularization_log_det_pseudo_determinant.md">Intrinsic regularization log det H is set by the 1e-8 jitter: use…</a> |
 | 2026-11-09 | filed | <a href="draft/bug/autoarray/curvature_fourth_order_mask_null_space.md">CurvatureMask / FourthOrderMask regularization: measure and normalise…</a> |
 | 2026-11-06 | issued | <a href="active/corner_anesthetic_takes_40_minutes_on_a.md">corner_anesthetic takes 40+ minutes on a 20-parameter model…</a> |
 | 2026-11-06 | filed | <a href="draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md">Zero-contour critical curves: compile once per run by passing the…</a> |
 | 2026-11-06 | filed | <a href="draft/research/autolens_profiling/visualization_run_time_campaign_measure_and_opti.md">Visualization run-time campaign: measure and optimize modeling-run…</a> |
 | 2026-11-06 | issued | <a href="active/howtolens-stored-results.md">HowTo series: ship stored fit results so notebooks run without…</a> |
 | 2026-11-06 | issued | <a href="active/critical_curves_jax_modeling_viz_feasibility.md">Feasibility: JAX zero-contour critical curves/caustics for…</a> |
+| 2026-11-05 | filed | <a href="draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md">autofit: Samples.with_paths / without_paths break on factor-graph…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-05 | filed | <a href="draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md">autofit: Samples.with_paths / without_paths break on factor-graph…</a> |
 | 2026-11-05 | filed | <a href="draft/feature/autolens_profiling/write_compile_repeats_from_autolens_profiling_s.md">Write <code>compile_repeats</code> from autolens_profiling's jax_compile tooling…</a> |
 | 2026-11-05 | filed | <a href="draft/test/autofit/regression_test_nautilus_as_the_ep_default.md">Regression test: Nautilus as the EP <code>default_optimiser</code> over…</a> |
 | 2026-11-05 | issued | <a href="active/likelihood_lifecycle_p4e_ingest.md">Likelihood lifecycle phase 4e: ingest the phase-4 wall-time…</a> |
@@ -2607,12 +2598,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-02 | filed | <a href="draft/research/autolens_profiling/unexplained_gradient_gaps_cpu_sparse_delaunay_and_mge.md">Unexplained autodiff-vs-FD gaps in the phase-6 gradient records…</a> |
 | 2026-11-02 | issued | <a href="active/magnification_maps_8d_wiring_pretty.md">Magnification maps 8d: wire into fit subplots and make them pretty</a> |
 | 2026-11-02 | issued | <a href="active/results_library_p5a_assistant.md">Issued: 2026-11-02</a> |
+| 2026-11-02 | issued | <a href="active/gradient_correctness_sweep.md">Gradient-correctness sweep: triage and investigate every open…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-02 | issued | <a href="active/gradient_correctness_sweep.md">Gradient-correctness sweep: triage and investigate every open…</a> |
 | 2026-10-31 | issued | <a href="active/sky_orientation_euclid_dr1_and_library.md">Sky orientation (north/east): euclid_dr1 catalogue, paper and…</a> |
 | 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
 | 2026-10-29 | issued | <a href="active/r2_pages_function_access.md">ECLIPSE site: serve R2 lens files through a Pages Function behind…</a> |
@@ -2622,12 +2613,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-23 | filed | <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred…</a> |
 | 2026-10-23 | filed | <a href="draft/bug/autolens_profiling/stale_auto_simulated_cluster_dataset.md"><code>@autolens_profiling</code> stale auto-simulated <code>dataset/cluster/simple</code>…</a> |
 | 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
+| 2026-10-21 | filed | <a href="planned.md#interferometer-primary-beam-persistence-mirror">interferometer-primary-beam-persistence-mirror</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-21 | filed | <a href="planned.md#interferometer-primary-beam-persistence-mirror">interferometer-primary-beam-persistence-mirror</a> |
 | 2026-10-21 | filed | <a href="draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md">PyAutoLens mirror of the interferometer primary-beam persistence…</a> |
 | 2026-10-21 | filed | <a href="draft/docs/autolens_profiling/positions_source_jacobian_default_rerun_note.md">Note in autolens_profiling that plain source-plane lane values…</a> |
 | 2026-10-21 | filed | <a href="draft/research/autolens_profiling/matrix_free_interferometer_phase5.md">Matrix-free interferometer inversion, phase 5b: profiling note…</a> |
@@ -2637,12 +2628,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-16 | filed | <a href="draft/maintenance/autolens_workspace/remeasure_shapelets_slow_park.md">Re-measure the shapelets/modeling.py SLOW park (#586) under the…</a> |
 | 2026-10-14 | filed | <a href="draft/test/autofit/workspace_searches_scripts_preexisting_failures.md"><code>@autofit_workspace</code> six <code>searches/</code> scripts fail on main at…</a> |
 | 2026-10-14 | filed | <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> |
+| 2026-10-08 | filed | <a href="draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md"><code>JAX_ENABLE_X64=False</code> is overridden to True, so the fp32 inference…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-08 | filed | <a href="draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md"><code>JAX_ENABLE_X64=False</code> is overridden to True, so the fp32 inference…</a> |
 | 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
 | 2026-10-02 | issued | <a href="active/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
@@ -2652,6 +2643,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
+| 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
 
 </details>
 
@@ -2807,7 +2799,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 **PyAutoArray**
 
 - [PyAutoArray#685](https://github.com/PyAutoLabs/PyAutoArray/pull/685) — `active/fix_sibson_interpolation_at_internal_edges.md`
-- [PyAutoArray#683](https://github.com/PyAutoLabs/PyAutoArray/pull/683) — `active/intrinsic_regularization_log_det_pseudo_determinant.md`
+- [PyAutoArray#683](https://github.com/PyAutoLabs/PyAutoArray/pull/683) — `complete/2026/11/intrinsic-reg-pseudo-det.md`
 - [PyAutoArray#684](https://github.com/PyAutoLabs/PyAutoArray/pull/684) — `complete/2026/11/knn-partial-point-block.md`
 - [PyAutoArray#677](https://github.com/PyAutoLabs/PyAutoArray/pull/677) — `complete/2026/11/numba-fork-safe-threading.md`
 - [PyAutoArray#681](https://github.com/PyAutoLabs/PyAutoArray/pull/681) — `complete/2026/11/sparse-inversion-subtracted-data.md`

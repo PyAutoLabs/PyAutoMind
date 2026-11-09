@@ -3,7 +3,7 @@
 - issued: 2026-10-02
 - session: claude-code remote (web), https://claude.ai/code/session_016nhQ8MFwfRFgwBVbYjP9Xd
 - location: remote container clone (/home/user/pyautoarray), no task worktree
-- status: library-shipped, workspace-pending (PyAutoArray#685 MERGED 2026-11-09 as af80e69; autolens_workspace_test#359 red only on #358's pending pins + PyAutoHeart smoke `warnings` bug — /prm after #358)
+- status: library-shipped, workspace-pending (PyAutoArray#685 MERGED 2026-11-09 as af80e69; #358 merged 2026-11-09; autolens_workspace_test#359 branch updated from main for a fresh CI run — /prm 359 when green)
 - repos:
   - PyAutoArray: feature/sibson-internal-edge-continuity
   - autolens_workspace_test: feature/sibson-internal-edge-continuity
@@ -15,23 +15,6 @@
 - tier: judge — merge mode: human /prm (maintainer 2026-11-09; declared glance)
 - plan: approved 2026-11-09 — https://github.com/PyAutoLabs/PyAutoArray/issues/610#issuecomment-6739352308 ; split by repo: PR 1 PyAutoArray (both bodies + tests), PR 2 autolens_workspace_test DelaunayNN pins
 - lands-before: draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md (same numba body)
-
-## intrinsic-reg-pseudo-det
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/682
-- issued: 2026-11-09
-- session: claude-code remote (web), https://claude.ai/code/session_016nhQ8MFwfRFgwBVbYjP9Xd
-- location: remote container clone (/home/user/pyautoarray), no task worktree
-- status: library-shipped, workspace-pending (PyAutoArray#683 MERGED 2026-11-09 as 6ae33d4; autolens_workspace_test#358 re-pinned incl. 5 interferometer scripts, 50/50 local; CI smoke red until PyAutoHeart smoke-tests.yml `import warnings` fix; #684 merged 2026-11-09, so #358 is the last step)
-- repos:
-  - PyAutoArray: feature/intrinsic-reg-pseudo-det
-  - autolens_workspace_test: feature/intrinsic-reg-pseudo-det
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/683
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/683
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/358
-- override: human override 2026-11-08 — runs in parallel with magnification-maps-wiring's PyAutoArray claim (disjoint files)
-- prompt: active/intrinsic_regularization_log_det_pseudo_determinant.md
-- tier: judge — merge mode: human /prm
-- unblocked: knn-partial-point-block shipped 2026-11-09 (PyAutoArray#684, record complete/2026/11/knn-partial-point-block.md)
 
 ## magnification-maps-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/818

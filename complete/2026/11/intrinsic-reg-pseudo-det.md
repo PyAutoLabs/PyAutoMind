@@ -1,3 +1,24 @@
+## Shipped — 2026-11-09
+
+Intrinsic regularization schemes (Constant, ConstantSplit, Adapt, AdaptPower, AdaptSplit, AdaptSplitPower) — whose H
+has the constant vector as an exact null mode held only by the 1e-8 diagonal jitter — now normalise the evidence with
+the pseudo-determinant of H: per regularized block, log P_b + log det(H_b grounded on one pixel). Gated by
+`AbstractRegularization.has_constant_null_mode`, pinned by a unit test to each scheme's measured spectrum.
+
+- PRs: https://github.com/PyAutoLabs/PyAutoArray/pull/683 (merged 6ae33d4), https://github.com/PyAutoLabs/autolens_workspace_test/pull/358 (merged 52f379e); issue https://github.com/PyAutoLabs/PyAutoArray/issues/682
+- Likelihood change (maintainer-approved 2026-11-09): log evidence / figure of merit +0.5*ln(1e8) = +9.21 nats per
+  intrinsic-regularized mapper; 12 workspace pins re-measured (incl. one interferometer pin already 0.25 stale).
+- Witness: log det H = eigen pseudo-determinant; Delaunay + AdaptSplit(0.1, 10) log det H eager/jit 1.2e-8 -> 1.5e-16;
+  NumPy/JAX parity at high coefficients now asserted (previously left unasserted).
+- Unblocked PyAutoArray#609 (KNN partial block, #684).
+- Found while investigating #609: https://github.com/PyAutoLabs/PyAutoArray/issues/609#issuecomment-6726735167
+- Follow-ups filed: draft/research/autoarray/evidence_over_solved_parameters_with_zeroed_pixels.md (option K),
+  draft/bug/autoarray/curvature_fourth_order_mask_null_space.md.
+
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/683
+
+## Original prompt
+
 # Intrinsic regularization log det H is set by the 1e-8 jitter: use the pseudo-determinant
 
 Type: bug

@@ -3,21 +3,15 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 13 in flight",
-  "updated": "2026-11-09T14:12:13Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 12 in flight",
+  "updated": "2026-11-09T14:31:03Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
       "severity": "yellow",
-      "text": "Fix Sibson interpolation at internal edges \u2014 library-shipped, workspace-pending (PyAutoArray#685 MERGED 2026-11-09 as af80e69; autolens_workspace_test#359 red only on #358's\u2026",
+      "text": "Fix Sibson interpolation at internal edges \u2014 library-shipped, workspace-pending (PyAutoArray#685 MERGED 2026-11-09 as af80e69; #358 merged 2026-11-09\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/685",
       "prompt": "Use the start-dev skill. active/fix_sibson_interpolation_at_internal_edges.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Intrinsic regularization log det H is set by the 1e-8 jitter: use\u2026 \u2014 library-shipped, workspace-pending (PyAutoArray#683 MERGED 2026-11-09 as 6ae33d4; autolens_workspace_test#358 re-pinned incl. 5\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/683",
-      "prompt": "Use the start-dev skill. active/intrinsic_regularization_log_det_pseudo_determinant.md"
     },
     {
       "severity": "yellow",
@@ -45,7 +39,7 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoArray PyAutoArray#683 \u2014 Intrinsic regularization log det H is set by the 1e-8 jitter: use\u2026",
+      "text": "pending release: PyAutoArray PyAutoArray#683 \u2014 Shipped \u2014 2026-11-09",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/683",
       "prompt": null
     },
@@ -126,6 +120,12 @@
       "text": "pick: Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md",
       "prompt": "Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: euclid_dr1: run the positions gate over DR1 and submit the remodel set",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md",
+      "prompt": "Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md"
     }
   ]
 }

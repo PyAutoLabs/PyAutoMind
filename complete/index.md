@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2208 records across 11 buckets.
+2209 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -182,6 +182,7 @@ markers; everything below GENERATED is rebuilt.
 - [hygiene-refs-false-positives](2026/11/hygiene-refs-false-positives.md)
 - [intake-memory-citation-floor](2026/11/intake-memory-citation-floor.md)
 - [intake-memory-line-organ-targets](2026/11/intake-memory-line-organ-targets.md) — already shipped — closed as stale draft. The `_with_memory` gate in `agents/conductors/intake/_intake.py` land…
+- [intrinsic-reg-pseudo-det](2026/11/intrinsic-reg-pseudo-det.md)
 - [jax-joss-benchmark-repo](2026/11/jax-joss-benchmark-repo.md) — already shipped — PyAutoLabs/autolens_jax_joss: 9c66b020 (birth, 10 benchmark scripts), 64204f69 (A100 sweep o…
 - [knn-partial-point-block](2026/11/knn-partial-point-block.md)
 - [latent-smoke-assertion-echoes-search-log](2026/11/latent-smoke-assertion-echoes-search-log.md)
