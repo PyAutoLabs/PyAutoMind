@@ -112,3 +112,15 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/522 (open, awaiting human /prm)
 - heart-red-override: live human 2026-11-09 chose "Override, open the PR" for #521 (development only; merge via /prm with green checks). RED reasons at ship: PyAutoGalaxy/PyAutoLens Tests CI failures (runs 42605341827, 42605339633), PyAutoHands Python Version Matrix, PyAutoHeart Workspace Smoke (Heart 11/100, 143 unresolved). Branch gates: ruff check/format clean, build_readme --check pass, catalogue regenerated, RAL 414456 17/17. Recorded on #521 (comment 6747061327) and PR #522 body
 - tier: judge — merge mode: human /prm
+
+## likelihood-breakdown-pdet-drift
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/523
+- issued: 2026-11-09
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/likelihood-breakdown-pdet-drift
+- repos:
+  - autolens_profiling: feature/likelihood-breakdown-pdet-drift
+- prompt: active/likelihood_breakdown_pdet_drift.md
+- parallel-claim: human instruction 2026-11-09 ("file the bug … then fix it and do both steps") to fix alongside gradient-correctness-sweep and critical-curves-jax-viz-feasibility claims; touches scripts/misc/likelihood_breakdown only
+- tier: judge — merge mode: human (authorized in the same instruction)
