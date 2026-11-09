@@ -33,3 +33,11 @@ Witness: `_sibson_from_tables_serial` outputs bit-identical to the current kerne
 ## Why it matters
 
 It is a production cost: every Nautilus worker on every DelaunayNN fit pays it, on the most-used numba mesh path. Gains are in the worker, so they also show in the #519 phase-2 re-measure.
+
+## Note 2026-11-09 — kernel rewritten by PyAutoArray#685 (#610)
+
+`_sibson_numba._sibson_from_tables` now uses the cavity-boundary formulation: the per-query scratch changed
+(`vertex_value` added; `rx`/`ry`/`ivalid`/`contribution` gone), `_pairwise_sum` / `_block_sum` and their four
+64-element buffers were removed, and the line numbers above no longer apply. Measured at HST size (61,600 queries,
+4 cores) the serial build went 50.7 / 51.6 ms -> 39.4 / 41.1 ms against main, with parallel medians 16.4 / 14.2 ->
+12.6 / 12.4 ms. Re-measure the serial / prange@1 ratio on the new body before acting on the figures above.

@@ -10,7 +10,7 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 21 |
-| [In flight](#in-flight) | 12 |
+| [In flight](#in-flight) | 11 |
 | [Planned](#planned) | 7 |
 | [Backlog](#backlog) | 234 |
 | [Recent](#recent) | 50 |
@@ -1060,14 +1060,6 @@ Use the start-dev skill. active/corner_anesthetic_takes_40_minutes_on_a.md
 
 ```
 Use the start-dev skill. active/critical_curves_jax_modeling_viz_feasibility.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/610">issue #610</a> — issued 2026-10-02 — library-shipped, workspace-pending (PyAutoArray#685 MERGED 2026-11-09 as af80e69; #358 merged 2026-11-09… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/685">PyAutoArray#685</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/359">autolens_workspace_test#359</a> — ⏳ pending release: PyAutoArray</summary>
-
-```
-Use the start-dev skill. active/fix_sibson_interpolation_at_internal_edges.md
 ```
 
 </details>
@@ -2635,7 +2627,6 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | Date | Event | Task |
 |------|-------|------|
 | 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
-| 2026-10-02 | issued | <a href="active/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
@@ -2644,6 +2635,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
 | 2026-09-26 | filed | <a href="draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md">bump_colab_urls.sh: cover autolens_assistant Colab links</a> |
+| 2026-09-26 | filed | <a href="draft/refactor/workspaces/abell_1201_local_cleanup.md">Repo cleanup: retire the Abell 1201 worktree and local raw data</a> |
 
 </details>
 
@@ -2798,10 +2790,10 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoArray**
 
-- [PyAutoArray#685](https://github.com/PyAutoLabs/PyAutoArray/pull/685) — `active/fix_sibson_interpolation_at_internal_edges.md`
 - [PyAutoArray#683](https://github.com/PyAutoLabs/PyAutoArray/pull/683) — `complete/2026/11/intrinsic-reg-pseudo-det.md`
 - [PyAutoArray#684](https://github.com/PyAutoLabs/PyAutoArray/pull/684) — `complete/2026/11/knn-partial-point-block.md`
 - [PyAutoArray#677](https://github.com/PyAutoLabs/PyAutoArray/pull/677) — `complete/2026/11/numba-fork-safe-threading.md`
+- [PyAutoArray#685](https://github.com/PyAutoLabs/PyAutoArray/pull/685) — `complete/2026/11/sibson-internal-edge-continuity.md`
 - [PyAutoArray#681](https://github.com/PyAutoLabs/PyAutoArray/pull/681) — `complete/2026/11/sparse-inversion-subtracted-data.md`
 - [PyAutoArray#681](https://github.com/PyAutoLabs/PyAutoArray/pull/681) — `complete/2026/11/sparse-vs-dense-nonlinear-lens-light.md`
 

@@ -1,20 +1,3 @@
-## sibson-internal-edge-continuity
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/610
-- issued: 2026-10-02
-- session: claude-code remote (web), https://claude.ai/code/session_016nhQ8MFwfRFgwBVbYjP9Xd
-- location: remote container clone (/home/user/pyautoarray), no task worktree
-- status: library-shipped, workspace-pending (PyAutoArray#685 MERGED 2026-11-09 as af80e69; #358 merged 2026-11-09; autolens_workspace_test#359 branch updated from main for a fresh CI run — /prm 359 when green)
-- repos:
-  - PyAutoArray: feature/sibson-internal-edge-continuity
-  - autolens_workspace_test: feature/sibson-internal-edge-continuity
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/685
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/685
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/359
-- override: human override 2026-11-08 — runs in parallel with magnification-maps-wiring's PyAutoArray claim (disjoint files)
-- prompt: active/fix_sibson_interpolation_at_internal_edges.md
-- tier: judge — merge mode: human /prm (maintainer 2026-11-09; declared glance)
-- plan: approved 2026-11-09 — https://github.com/PyAutoLabs/PyAutoArray/issues/610#issuecomment-6739352308 ; split by repo: PR 1 PyAutoArray (both bodies + tests), PR 2 autolens_workspace_test DelaunayNN pins
-- lands-before: draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md (same numba body)
 
 ## magnification-maps-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/818
