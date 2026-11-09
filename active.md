@@ -1,3 +1,16 @@
+## intrinsic-reg-pseudo-det
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/682
+- issued: 2026-11-09
+- session: claude-code remote (web), https://claude.ai/code/session_016nhQ8MFwfRFgwBVbYjP9Xd
+- location: remote container clone (/home/user/pyautoarray), no task worktree
+- status: library-dev
+- repos:
+  - PyAutoArray: feature/intrinsic-reg-pseudo-det
+- override: human override 2026-11-08 — runs in parallel with magnification-maps-wiring's PyAutoArray claim (disjoint files)
+- prompt: active/intrinsic_regularization_log_det_pseudo_determinant.md
+- tier: judge — merge mode: human /prm
+- blocks: knn-partial-point-block (#609 PR lands after this one)
+
 ## knn-partial-point-block
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/609
 - issued: 2026-10-02
