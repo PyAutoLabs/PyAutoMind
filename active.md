@@ -95,20 +95,6 @@
 - pre-check: open shadow tick on system python3.10, minimal env — 6 notify proposals, 0 spawns (2026-11-04)
 - tier: judge — merge mode: human /prm
 
-## likelihood-lifecycle-p4e-ingest
-- issue: https://github.com/PyAutoLabs/autolens_inference/issues/59
-- issued: 2026-11-05
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: workspace-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p4e-ingest
-- repos:
-  - autolens_inference: feature/likelihood-lifecycle-p4e-ingest
-- prompt: active/likelihood_lifecycle_p4e_ingest.md
-- epic: likelihood-lifecycle (phase 4e)
-- tier: judge — merge mode: human /prm; PR waits for the remaining phase-4 legs (human 2026-11-05)
-- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/60
-- follow-up: reruns 414639 (multi_dataset numba), 414640 (multi_galaxy delaunay numba), 414641 (multi_galaxy mge JAX CPU), --no-requeue, as a 4e follow-up ingest (human 2026-11-09)
-
 ## corner-anesthetic-speed
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1760
 - issued: 2026-11-06

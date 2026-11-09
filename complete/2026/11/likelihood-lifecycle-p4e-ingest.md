@@ -1,3 +1,35 @@
+## What shipped
+
+autolens_inference#60 (merged 2026-11-09, `3a7261bd`; closes autolens_inference#59): the phase-4 wall-time validation ingest.
+
+- **Rows:** 103 `stages.json` (+ PNGs), 101 new plus 2 replacing the failed 412624_0 rows, from COMPLETED, never-resumed legs only. These cover the GPU batch 413924 and 413966–413982, the cores sweep 413911/413913/414141–414144, and the CPU legs 414145/414147/414149_0/414151/414152/414153/414154/414155/414156_0/414157/414161/414162/414163/414180/414189.
+- **Records:** `dashboard/walltime_validation.json` goes from 56 to 297.
+- **Exporter:** `PATCHED_RUNS` marks the 414189 rows (pin 2026.10.25.1 + PyAutoArray#677) with a per-record `library_patch`. `PARITY_RULINGS` is unchanged.
+- **Generator:** `validation_p4.adopted_records` is filtered to the 56 adopted 2026.10.17.1 rows, so its manifest isn't re-priced by phase 4's own rows.
+- **Wiki:** `wiki/project/p4_backend_parity.md` lays out parity at mass_total[1] for the human's rulings. `wiki/project/state.md` records the findings.
+
+## Findings
+
+- **Ratios:** pixelized A100 1.18–1.47; interferometer A100 (wtilde) 1.7–2.8; cheap likelihoods are sampler-overhead bound at about 5–10 ms/eval; numba at 8 cores 0.18–0.49.
+- **Cores sweep** (rectangular/hst numba, source_pix[1]): parallel efficiency 1/0.68/0.62/0.55/0.36/0.28 at 1–32 cores. The 1-core cost is 601 ms/eval against 566 ms profiled.
+- **multi_dataset's 0.41 ratio** comes from its prediction: a vmap batch-3 OOM fallback.
+- **Resumed walls are invalid.** Nautilus `samples_info` time across a kill and resume reads 3–4× high, and a SLURM auto-requeue after NODE_FAIL silently resumes a run. Timing legs need `--no-requeue`.
+- **Wall estimates miss by 0.55–89.5×** (filed: `draft/bug/autolens_inference/validation_wall_estimates_miss_eval_count_and_sampler_floor.md`).
+- **The numba W~ datacube and interferometer-rectangular seed-1 legs stalled** (filed: `draft/research/autolens_inference/numba_wtilde_validation_legs_stall_nautilus.md`).
+- **11-06 RAL filesystem EIO + NODE_FAIL:** 414158 killed, 414392 requeued; 414159 timed out.
+
+## Remainder (re-filed)
+
+`draft/research/autolens_inference/likelihood_lifecycle_p4e_followup_rerun_ingest.md`: ingest the fresh reruns 414639/414640/414641 (`--no-requeue`), then refresh Pulse. Parity rulings stay with the human.
+
+## Gate
+
+- Local: exporter `--check`, `build_readme --check`, `check_submits`, `validation_p4 --check`, ruff, pytest 473.
+- CI `lint` green. The first run failed exchange freshness because the dashboard was generated before the last results commit; it was regenerated post-commit.
+- Heart STALE (development pass): "release validation incomplete: no rehearsal for current source".
+
+## Original prompt
+
 # Likelihood lifecycle phase 4e: ingest the phase-4 wall-time validation rows, publish walltime-validation@1, and lay out parity for human rulings
 
 Type: research

@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 21 |
-| [In flight](#in-flight) | 11 |
+| [In flight](#in-flight) | 10 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 236 |
+| [Backlog](#backlog) | 237 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -277,7 +277,7 @@ Use the start-dev skill. draft/release/arcticpy/upstream_packaging_pr.md
 </details>
 
 <details>
-<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 9 queued prompt(s), in order</summary>
+<summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 10 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — ledger: `draft/research/autolens_profiling/likelihood_lifecycle_epic.md` — PHASE 0 COMPLETE 2026-10-24 — 0A PyAutoPulse#70; 0B autolens_profiling#444/#447/#448/#449/#450/#451 + PyAutoPulse#74 (lens at…</summary>
 
@@ -291,6 +291,14 @@ Continue the 'Likelihood lifecycle — optimal setups baked into PyAutoLens (`se
 
 ```
 Use the start-dev skill. draft/bug/autolens_inference/validation_wall_estimates_miss_eval_count_and_sampler_floor.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/autolens_inference/likelihood_lifecycle_p4e_followup_rerun_ingest.md">Likelihood lifecycle phase 4e follow-up: ingest the three fresh reruns (414639–414641)…</a> — autolens_inference · small · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/research/autolens_inference/likelihood_lifecycle_p4e_followup_rerun_ingest.md
 ```
 
 </details>
@@ -1080,14 +1088,6 @@ Use the start-dev skill. active/howtolens-stored-results.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_lifecycle_p4e_ingest.md">Likelihood lifecycle phase 4e: ingest the phase-4 wall-time validation rows, publish walltime-validation@1…</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/59">issue #59</a> — issued 2026-11-05 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_inference/pull/60">autolens_inference#60</a></summary>
-
-```
-Use the start-dev skill. active/likelihood_lifecycle_p4e_ingest.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/magnification_maps_8d_wiring_pretty.md">Magnification maps 8d: wire into fit subplots and make them pretty</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/818">issue #818</a> — issued 2026-11-02 — library-dev</summary>
 
 ```
@@ -1211,7 +1211,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 227 · local-dev 6 · ral 1
+Lanes: any 228 · local-dev 6 · ral 1
 
 <a id="human-review"></a>
 <details>
@@ -2613,7 +2613,6 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-05 | issued | <a href="active/likelihood_lifecycle_p4e_ingest.md">Likelihood lifecycle phase 4e: ingest the phase-4 wall-time…</a> |
 | 2026-11-05 | filed | <a href="draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md">Filed: 2026-11-05 (phase 2 of autolens_profiling#519; Pulse task…</a> |
 | 2026-11-05 | filed | <a href="draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md">Filed: 2026-11-05 (found by the autolens_profiling#519 worker-route…</a> |
 | 2026-11-04 | issued | <a href="active/autonomous_orchestrators_p4c_pilot_run.md">Autonomous orchestrators phase 4c: run the Dev orchestrator pilot…</a> |
@@ -2623,12 +2622,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-02 | filed | <a href="draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md">Imaging sparse-operator path gives a very different log L from dense…</a> |
 | 2026-11-02 | issued | <a href="active/gradient_correctness_sweep.md">Gradient-correctness sweep: triage and investigate every open…</a> |
 | 2026-10-31 | issued | <a href="active/sky_orientation_euclid_dr1_and_library.md">Sky orientation (north/east): euclid_dr1 catalogue, paper and…</a> |
+| 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
 | 2026-10-29 | issued | <a href="active/r2_pages_function_access.md">ECLIPSE site: serve R2 lens files through a Pages Function behind…</a> |
 | 2026-10-26 | filed | <a href="draft/refactor/autogalaxy_assistant/trim_ag_skills_for_colab_cap.md">Trim autogalaxy_assistant skills toward their autolens size</a> |
 | 2026-10-25 | filed | <a href="draft/bug/health_fixes/heart_health_rerun_stale_push.md">Heart Health rerun cannot publish after main advances</a> |
@@ -2638,12 +2637,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
 | 2026-10-21 | filed | <a href="planned.md#interferometer-primary-beam-persistence-mirror">interferometer-primary-beam-persistence-mirror</a> |
 | 2026-10-21 | filed | <a href="draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md">PyAutoLens mirror of the interferometer primary-beam persistence…</a> |
+| 2026-10-21 | filed | <a href="draft/docs/autolens_profiling/positions_source_jacobian_default_rerun_note.md">Note in autolens_profiling that plain source-plane lane values…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-21 | filed | <a href="draft/docs/autolens_profiling/positions_source_jacobian_default_rerun_note.md">Note in autolens_profiling that plain source-plane lane values…</a> |
 | 2026-10-21 | filed | <a href="draft/research/autolens_profiling/matrix_free_interferometer_phase5.md">Matrix-free interferometer inversion, phase 5b: profiling note…</a> |
 | 2026-10-21 | issued | <a href="active/matrix_free_interferometer_inversion.md">Matrix-free interferometer inversion for very large rectangular…</a> |
 | 2026-10-21 | filed | <a href="draft/docs/autolens_workspace/interferometer_primary_beam_example.md">Interferometer primary beam: workspace example and docs</a> |
@@ -2653,12 +2652,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-14 | filed | <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> |
 | 2026-10-08 | filed | <a href="draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md"><code>JAX_ENABLE_X64=False</code> is overridden to True, so the fp32 inference…</a> |
 | 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
+| 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
 | 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
@@ -2668,6 +2667,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
 | 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
+| 2026-09-27 | filed | <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises…</a> |
 
 </details>
 
@@ -2743,7 +2743,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-67 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+68 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -2812,6 +2812,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/research/autolens/point_solver_root_refinement.md — unknown theme keyword(s): jax`
 - `draft/research/autolens_assistant/free_agent_harness_evaluation.md — unknown theme keyword(s): assistant, support-policy`
 - `draft/research/autolens_inference/kernel_regularization_distances_adaptive_rectangular.md — unknown theme keyword(s): regularization`
+- `draft/research/autolens_inference/likelihood_lifecycle_p4e_followup_rerun_ingest.md — unknown theme keyword(s): inference`
 - `draft/research/autolens_inference/numba_wtilde_validation_legs_stall_nautilus.md — unknown theme keyword(s): inference`
 - `draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md — unknown theme keyword(s): euclid, hpc`
 - `draft/triage/autolens/jit_fit_from_is_vacuous.md — unknown theme keyword(s): testing, jax`
