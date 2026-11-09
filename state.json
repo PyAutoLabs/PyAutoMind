@@ -4,18 +4,18 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 13 in flight",
-  "updated": "2026-11-09T10:51:31Z",
+  "updated": "2026-11-09T11:21:38Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
       "severity": "yellow",
-      "text": "Fix KNN neighbor search for a partial final point block \u2014 library-shipped, awaiting-merge (#683 merged; #684 retargeted to main 2026-11-09; 3.12 leg re-run after a codecov network flake)",
+      "text": "Fix KNN neighbor search for a partial final point block \u2014 library-shipped, awaiting-merge (#683 merged; #684 retargeted to main 2026-11-09; 3.12 leg re-run after a codecov network flake \u2192\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/684",
       "prompt": "Use the start-dev skill. active/fix_knn_neighbor_search_for_a_partial.md"
     },
     {
       "severity": "yellow",
-      "text": "Intrinsic regularization log det H is set by the 1e-8 jitter: use\u2026 \u2014 library-shipped, workspace-pending (PyAutoArray#683 MERGED 2026-11-09 as 6ae33d4; autolens_workspace_test#358 needs the\u2026",
+      "text": "Intrinsic regularization log det H is set by the 1e-8 jitter: use\u2026 \u2014 library-shipped, workspace-pending (PyAutoArray#683 MERGED 2026-11-09 as 6ae33d4; autolens_workspace_test#358 re-pinned incl. 5\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/683",
       "prompt": "Use the start-dev skill. active/intrinsic_regularization_log_det_pseudo_determinant.md"
     },
@@ -99,6 +99,12 @@
     },
     {
       "severity": "info",
+      "text": "pick: smoke-tests.yml cache-state step uses `warnings` without importing it \u2014 every workspace smoke\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautoheart/smoke_tests_cache_state_step_missing_warnings_import.md",
+      "prompt": "Use the start-dev skill. draft/bug/pyautoheart/smoke_tests_cache_state_step_missing_warnings_import.md"
+    },
+    {
+      "severity": "info",
       "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
       "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
@@ -120,12 +126,6 @@
       "text": "pick: Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md",
       "prompt": "Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: euclid_dr1: run the positions gate over DR1 and submit the remodel set",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md",
-      "prompt": "Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md"
     }
   ]
 }

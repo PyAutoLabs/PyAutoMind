@@ -3,7 +3,7 @@
 - issued: 2026-11-09
 - session: claude-code remote (web), https://claude.ai/code/session_016nhQ8MFwfRFgwBVbYjP9Xd
 - location: remote container clone (/home/user/pyautoarray), no task worktree
-- status: library-shipped, workspace-pending (PyAutoArray#683 MERGED 2026-11-09 as 6ae33d4; autolens_workspace_test#358 needs the interferometer re-pin, then /prm after #684)
+- status: library-shipped, workspace-pending (PyAutoArray#683 MERGED 2026-11-09 as 6ae33d4; autolens_workspace_test#358 re-pinned incl. 5 interferometer scripts, 50/50 local; CI smoke red until PyAutoHeart smoke-tests.yml `import warnings` fix — /prm after #684)
 - repos:
   - PyAutoArray: feature/intrinsic-reg-pseudo-det
   - autolens_workspace_test: feature/intrinsic-reg-pseudo-det
@@ -20,7 +20,7 @@
 - issued: 2026-10-02
 - session: claude-code remote (web), https://claude.ai/code/session_016nhQ8MFwfRFgwBVbYjP9Xd
 - location: remote container clone (/home/user/pyautoarray), no task worktree
-- status: library-shipped, awaiting-merge (#683 merged; #684 retargeted to main 2026-11-09; 3.12 leg re-run after a codecov network flake)
+- status: library-shipped, awaiting-merge (#683 merged; #684 retargeted to main 2026-11-09; 3.12 leg re-run after a codecov network flake → 3/3 green; ready for /prm)
 - repos:
   - PyAutoArray: feature/knn-partial-point-block
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/684
