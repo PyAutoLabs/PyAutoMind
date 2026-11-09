@@ -10,7 +10,7 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 21 |
-| [In flight](#in-flight) | 13 |
+| [In flight](#in-flight) | 12 |
 | [Planned](#planned) | 8 |
 | [Backlog](#backlog) | 235 |
 | [Recent](#recent) | 50 |
@@ -1060,14 +1060,6 @@ Use the start-dev skill. active/corner_anesthetic_takes_40_minutes_on_a.md
 
 ```
 Use the start-dev skill. active/critical_curves_jax_modeling_viz_feasibility.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/609">issue #609</a> — issued 2026-10-02 — library-shipped, awaiting-merge (#683 merged; #684 retargeted to main 2026-11-09; 3.12 leg re-run after a codecov network flake →… — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/684">PyAutoArray#684</a> — ⏳ pending release: PyAutoArray</summary>
-
-```
-Use the start-dev skill. active/fix_knn_neighbor_search_for_a_partial.md
 ```
 
 </details>
@@ -2662,12 +2654,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
-| 2026-10-02 | issued | <a href="active/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
 | 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
 | 2026-09-27 | filed | <a href="draft/research/autoarray/interferometer_sparse_jax_grad_vs_finite_difference_1pct.md">Sparse interferometer inversion: jax.grad of the log-evidence terms…</a> |
+| 2026-09-27 | filed | <a href="draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md">Same-class q-clamp and bare-sqrt ellipticity gradient sites…</a> |
 
 </details>
 
@@ -2822,8 +2814,8 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoArray**
 
-- [PyAutoArray#684](https://github.com/PyAutoLabs/PyAutoArray/pull/684) — `active/fix_knn_neighbor_search_for_a_partial.md`
 - [PyAutoArray#683](https://github.com/PyAutoLabs/PyAutoArray/pull/683) — `active/intrinsic_regularization_log_det_pseudo_determinant.md`
+- [PyAutoArray#684](https://github.com/PyAutoLabs/PyAutoArray/pull/684) — `complete/2026/11/knn-partial-point-block.md`
 - [PyAutoArray#677](https://github.com/PyAutoLabs/PyAutoArray/pull/677) — `complete/2026/11/numba-fork-safe-threading.md`
 - [PyAutoArray#681](https://github.com/PyAutoLabs/PyAutoArray/pull/681) — `complete/2026/11/sparse-inversion-subtracted-data.md`
 - [PyAutoArray#681](https://github.com/PyAutoLabs/PyAutoArray/pull/681) — `complete/2026/11/sparse-vs-dense-nonlinear-lens-light.md`

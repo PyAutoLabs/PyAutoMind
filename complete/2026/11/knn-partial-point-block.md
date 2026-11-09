@@ -1,3 +1,26 @@
+## Shipped — 2026-11-09
+
+KNN neighbour search for a partial final point block fixed: `get_interpolation_weights` pads the point array to whole
+blocks so every `dynamic_slice` starts at `bi*B` (the clamp had hidden the N mod B tail vertices and returned earlier
+vertices under their indices).
+
+- PR: https://github.com/PyAutoLabs/PyAutoArray/pull/684 (merged 1482dd9); issue https://github.com/PyAutoLabs/PyAutoArray/issues/609
+- Depended on PyAutoArray#683 (pseudo-determinant log det H, task intrinsic-reg-pseudo-det): the bug's dropped
+  split-regularization self terms (`reg_split_from` JAX branch has no insert slot in a full table) had been lifting the
+  constant null mode of H; with them fixed, the jitter-held mode broke jax_grad/knn.py variant B. Mechanism:
+  https://github.com/PyAutoLabs/PyAutoArray/issues/609#issuecomment-6726735167 . Decision (maintainer, 2026-11-08/09):
+  two PRs, option L, likelihood changes approved.
+- Witness: N=130 tail queries -> 128/129 at zero distance; eager/jit match a brute-force oracle at block boundaries
+  (N in {127..330}, k=3/10) for both KNN interpolators; audit strict xfail promoted; 19 tests fail with the fix reverted.
+- autolens_workspace_test jax_grad/knn.py passes all variants with no tolerance changes (variant B eager/jit OK, AD = FD
+  on params 7/11/13). Variant B log L -23422 (main) -> -5897: the accidental pull-to-zero penalty on 72 pixels removed.
+- Not run (hours-long searches): imaging/subhalo_recovery{,_iterative,_evidence}.py — KNN evidences will move.
+- Follow-up filed: draft/bug/autoarray/reg_split_jax_silently_drops_self_term.md
+
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/684
+
+## Original prompt
+
 # Fix KNN neighbor search for a partial final point block
 
 Type: bug
