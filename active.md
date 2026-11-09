@@ -3,12 +3,13 @@
 - issued: 2026-11-09
 - session: claude-code remote (web), https://claude.ai/code/session_016nhQ8MFwfRFgwBVbYjP9Xd
 - location: remote container clone (/home/user/pyautoarray), no task worktree
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge (merge order: PyAutoArray#683 → #684 → autolens_workspace_test#358)
 - repos:
   - PyAutoArray: feature/intrinsic-reg-pseudo-det
   - autolens_workspace_test: feature/intrinsic-reg-pseudo-det
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/683
 - pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/683
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/358
 - override: human override 2026-11-08 — runs in parallel with magnification-maps-wiring's PyAutoArray claim (disjoint files)
 - prompt: active/intrinsic_regularization_log_det_pseudo_determinant.md
 - tier: judge — merge mode: human /prm
@@ -19,9 +20,12 @@
 - issued: 2026-10-02
 - session: claude-code remote (web), https://claude.ai/code/session_016nhQ8MFwfRFgwBVbYjP9Xd
 - location: remote container clone (/home/user/pyautoarray), no task worktree
-- status: library-dev (paused 2026-11-08; resume next session)
+- status: library-shipped, awaiting-merge (stacked on PyAutoArray#683; merge after it)
 - repos:
   - PyAutoArray: feature/knn-partial-point-block
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/684
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/684
+- decision-2026-11-09: option L (pseudo-det) shipped as intrinsic-reg-pseudo-det (#682/#683); likelihood changes approved by maintainer; workspace pins in autolens_workspace_test#358.
 - override: human override 2026-11-08 — runs in parallel with magnification-maps-wiring's PyAutoArray claim (disjoint files)
 - prompt: active/fix_knn_neighbor_search_for_a_partial.md
 - tier: judge — merge mode: human /prm
