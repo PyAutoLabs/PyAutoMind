@@ -11,7 +11,8 @@ Priority: high
 Status: formalised
 Issued: 2026-10-02
 Issue: https://github.com/PyAutoLabs/PyAutoArray/issues/610
-Consequence: glance
+Consequence: judge
+Consequence-note: maintainer set judge (declared glance) on 2026-11-09 — DelaunayNN likelihood values change; plan https://github.com/PyAutoLabs/PyAutoArray/issues/610#issuecomment-6739352308
 Witness: Square-symmetry center weights are 1/4 each; near-edge weights remain nonnegative, sum to one, and agree continuously from both sides under eager/JIT execution.
 Review-minutes: 15
 Unattended: ready

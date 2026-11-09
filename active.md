@@ -1,3 +1,17 @@
+## sibson-internal-edge-continuity
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/610
+- issued: 2026-10-02
+- session: claude-code remote (web), https://claude.ai/code/session_016nhQ8MFwfRFgwBVbYjP9Xd
+- location: remote container clone (/home/user/pyautoarray), no task worktree
+- status: library-dev
+- repos:
+  - PyAutoArray: feature/sibson-internal-edge-continuity
+- override: human override 2026-11-08 — runs in parallel with magnification-maps-wiring's PyAutoArray claim (disjoint files)
+- prompt: active/fix_sibson_interpolation_at_internal_edges.md
+- tier: judge — merge mode: human /prm (maintainer 2026-11-09; declared glance)
+- plan: approved 2026-11-09 — https://github.com/PyAutoLabs/PyAutoArray/issues/610#issuecomment-6739352308 ; split by repo: PR 1 PyAutoArray (both bodies + tests), PR 2 autolens_workspace_test DelaunayNN pins
+- lands-before: draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md (same numba body)
+
 ## intrinsic-reg-pseudo-det
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/682
 - issued: 2026-11-09

@@ -7,7 +7,6 @@
 - [samples-parameter-paths](#samples-parameter-paths)
 - [piemass-potential](#piemass-potential)
 - [latent-nan-guard-honest-run](#latent-nan-guard-honest-run)
-- [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
 - [interferometer-primary-beam-persistence-mirror](#interferometer-primary-beam-persistence-mirror)
 - [point-plots-yaml-keys-assistant](#point-plots-yaml-keys-assistant)
 
@@ -82,19 +81,6 @@
 - blocked-by: slow-skip-timeout-cap-doc (using autolens_workspace_test; PR #194 OPEN/MERGEABLE)
 - affected-repos:
   - autolens_workspace_test
-
-## sibson-internal-edge-continuity
-- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/610
-- filed: 2026-10-02
-- prompt: draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md
-- classification: both
-- suggested-branch: feature/sibson-internal-edge-continuity
-- prior-blocker-cleared: Audit PRs Array611/workspace342 merged 2026-10-02; see complete/2026/10/mesh-interpolator-numerics-audit.md. Survey current claims at start-dev.
-- affected-repos:
-  - PyAutoArray
-  - autolens_workspace_test
-- resume: Audit#603 found incorrect internal-edge Sibson weights and near-edge partition failure. Filed separately per explicit user request; strict expected-failure regressions retained in audit. No repair begun or worktree created. Plan algorithmic repair independently.
-- plan-2026-11-09: algorithm plan posted for approval (https://github.com/PyAutoLabs/PyAutoArray/issues/610#issuecomment-6739352308): stolen areas from the Bowyer-Watson cavity BOUNDARY (no circle through interior edges), hull-edge linear rule only at exact hull collinearity, clamp-then-normalise. Standalone prototype matches an independent Voronoi-clipping oracle to ~1e-14; square centre 0.25x4; internal-edge continuity Lipschitz (jump 2.4e-11 at 1e-12). Awaiting maintainer approval of (a) algorithm (b) PR split by repo (library, then workspace pins) (c) consequence judge vs declared glance. On approval: /start_dev resumes at registration (claim PyAutoArray, feature/sibson-internal-edge-continuity). Land before the sibling sibson_serial_kernel_loses_allocation_hoisting draft (same numba body).
 
 ## interferometer-primary-beam-persistence-mirror
 - filed: 2026-10-21
