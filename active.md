@@ -84,19 +84,6 @@
 - pre-check: open shadow tick on system python3.10, minimal env — 6 notify proposals, 0 spawns (2026-11-04)
 - tier: judge — merge mode: human /prm
 
-## corner-anesthetic-speed
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1760
-- issued: 2026-11-06
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: library-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/corner-anesthetic-speed
-- repos:
-  - PyAutoFit: feature/corner-anesthetic-speed
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1761
-- prompt: active/corner_anesthetic_takes_40_minutes_on_a.md
-- heart-red-override: live human 2026-11-09 chose "Override, open PR (Recommended)" for #1760 (development only; merge via separate /prm with green checks). RED reasons at ship: PyAutoGalaxy/PyAutoLens Tests CI failures (runs 42605341827, 42605339633), PyAutoHands Python Version Matrix, PyAutoHeart Workspace Smoke, Workspace validation NOT ready (14f), autolens_test/test_run/PyAutoArray red, worktree drift 3 dirty (Heart 11/100, 143 unresolved). Branch gates: full unit suite (only pre-existing Zeus conformance fail, same on main), smoke 160/160 six workspaces, independent review FINDINGS→fixed 1607eeefe→CLEAN, witness 23.6–31.9 s. Recorded on #1760 (comment 6747701994) and PR #1761 body
-- tier: judge (plan said glance; scope grew: compact style without upper triangle, end-of-fit-only corner plots) — merge mode: human /prm
-
 ## howtolens-stored-results
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/130
 - issued: 2026-11-06

@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 9 in flight",
-  "updated": "2026-11-09T18:31:04Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
+  "updated": "2026-11-09T18:34:59Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "corner_anesthetic takes 40+ minutes on a 20-parameter model (HowToLens ch2 tutorial 2) \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1761",
-      "prompt": "Use the start-dev skill. active/corner_anesthetic_takes_40_minutes_on_a.md"
-    },
     {
       "severity": "yellow",
       "text": "Feasibility: JAX zero-contour critical curves/caustics for modeling-run visualization \u2014 awaiting-merge",
@@ -41,6 +35,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#677 \u2014 What shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/677",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1761 \u2014 What shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1761",
       "prompt": null
     },
     {
