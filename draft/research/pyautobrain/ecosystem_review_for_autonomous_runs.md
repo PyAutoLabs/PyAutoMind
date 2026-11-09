@@ -81,15 +81,32 @@ Questions to answer, with numbers where possible:
 5. **Organ boundaries.** Overlap, dead weight, organs with no consumers, docs out of date against code, what a cloud worker (one repo clone, no laptop) can and cannot do in each.
 6. **Backlog health.** How stale is the draft queue, how good are `Consequence:`/`Witness:`/`Review-minutes:` headers, and does sizing predict reality? (Compare `Review-minutes` to `review-minutes-actual` wherever both exist.)
 
+7. **Dashboards and the information flow into them.** Added by the human, 2026-11-09: "I think they are good and its not that anything should be removed but I think we need to continue to improve the information flow from development work to dashboard updates. In particular, I feel like things like number of unit tests, integration tests, their run time, many of the things we do hygiene runs on are not being fed through to a dashboard so I can track and monitor it."
+   - **Inventory every dashboard and board:** the Mind dashboard (`dashboard.md`/`.html`, `state.json`), Heart's health/readiness board and feed, the Brain board, the Hands release board, the Eyes dashboard, Insight, Pulse, the Cortex science board, the autolens_profiling dashboard, and any others. For each: what it shows, where its data comes from, what refreshes it and when (tick, CI dispatch, local render, manual), and how stale it typically is. Memories `tickNoTimings` and `heartFeedDispatch` show sidecars frozen for weeks.
+   - **Map the signals that are produced but never reach a dashboard:** unit-test counts and runtimes per repo, integration/smoke/workspace-validation counts and runtimes, CI wall-clock per gate, slow tests, CLI noise, dependency-cap drift, stale API docs, packaging and git debris (everything the `hygiene`, `ci_speedup`, `cli_noise_clean`, `dep_audit`, `audit_docs` and `repo_cleanup` runs measure), coverage, flaky reruns, prompt and backlog staleness, and orchestrator pilot metrics (`batches/pilot/pilot.md`). For each: where it is computed today, whether it is persisted at all, and the cheapest path to a tracked time series on an existing board. Prefer feeding existing boards over new ones; removing a board is out of scope.
+   - **Propose the flow:** how a development run (or a CI run) should publish its numbers so the boards update without a human re-render, and what the human should see trend over time (counts, runtimes, red/green history).
+8. **The Heart + release loop.** Added by the human, 2026-11-09: "the heart plus release loop we repeat constantly can probably be set up more efficiently, currently I often 'pause' everything to do heart and hands work (see the history) and there must be a better way to do this. Part of the problem is nightly builds always fail."
+   - **Reconstruct the loop from history:**
+     - release-pass records and memories (10-07, 10-16, 10-23, 11-04);
+     - `/review_release` runs;
+     - freeze and thaw episodes;
+     - `NIGHTLY_RELEASES` pauses;
+     - Heart RED/YELLOW/STALE causes;
+     - the nightly driver's run history on GitHub.
+
+     How often does the human stop development to tend Heart and Hands, for how long, and what triggered each stop?
+   - **Classify every nightly failure** over the available history: token expiry, tag or publish transients, real test regressions, smoke timeouts, environment drift (Colab, RAL, conda), infrastructure flake, wall-clock caps. Give the share per class and the fix that would remove each class. The question is why "nightly builds always fail", and what would make a green nightly the normal case.
+   - **Propose a better loop:** for example, Heart as a background signal that only blocks on real regressions; quarantine of known-flaky legs; automatic retry or self-healing for transient classes; release decoupled from day-to-day development; and what parts an autonomous shift could own (a `notify`/`glance` "keep the nightly green" lane) versus what must stay the human's (version choice, release approval).
+
 ## Method
 
 - Read-only on every repo. No branches, PRs, merges, releases, label changes or doctrine edits. Mind writes only for the deliverables below, always from a temporary worktree on `origin/main` (never the shared canonical checkout; other sessions dirty it).
-- Fan out: one reviewer per area (orchestrator; Mind/lifecycle/records; Heart/Hands/release/CI; Memory/Insight/Pulse/Cortex knowledge organs; Eyes/Ears/Broca/Gut/DNA/Nerves/Scientist; workflows-as-run from records and autonomy_log; memory-feedback clustering; token/context load). Give each a brief naming its files and questions, then **verify** every high-impact finding independently before it goes in the report (an adversarial check, not a re-read by the same agent). Mark findings `CONFIRMED` or `PLAUSIBLE`.
+- Fan out: one reviewer per area (orchestrator; Mind/lifecycle/records; Heart/Hands/release/CI and the nightly failure history; dashboards and signal flow; Memory/Insight/Pulse/Cortex knowledge organs; Eyes/Ears/Broca/Gut/DNA/Nerves/Scientist; workflows-as-run from records and autonomy_log; memory-feedback clustering; token/context load). Give each a brief naming its files and questions, then **verify** every high-impact finding independently before it goes in the report (an adversarial check, not a re-read by the same agent). Mark findings `CONFIRMED` or `PLAUSIBLE`.
 - Measure where you can (counts, timings, token sizes of the context load) rather than estimate.
 
 ## Deliverables
 
-1. **A review report** for the human. Publish it as a private Artifact page and also save it at `/mnt/c/Users/Jammy/Workspace/Science/scratch/ecosystem_review_2026-11/`. Open it with a one-screen summary: the top 10 changes, ranked by impact on autonomous runs, each one line, with the cost to do and the risk of not doing. Then the detail per part, with evidence. End with "what the cloud orchestrator must be designed around".
+1. **A review report** for the human. Publish it as a private Artifact page and also save it at `/mnt/c/Users/Jammy/Workspace/Science/scratch/ecosystem_review_2026-11/`. Open it with a one-screen summary: the top 10 changes, ranked by impact on autonomous runs, each one line, with the cost to do and the risk of not doing. Then the detail per part, with evidence, including a dashboard signal map (signal → where computed → where shown, or the gap) and a nightly-failure breakdown. End with "what the cloud orchestrator must be designed around".
 2. **Draft prompts**, at most ~10, for the highest-value changes. File them in `PyAutoMind/draft/<type>/<target>/` with intake-style headers, honest `Consequence:` tiers and checkable `Witness:` lines. Doctrine changes are `judge` and say so. Do not start any of them.
 3. **One comment** on PyAutoBrain#574 linking the report.
 
