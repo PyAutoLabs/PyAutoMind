@@ -1096,7 +1096,7 @@ Use the start-dev skill. active/howtolens-stored-results.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_breakdown_pdet_drift.md">likelihood_breakdown tests drifted after PyAutoArray#682 (pseudo-determinant log det H)</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/523">issue #523</a> — issued 2026-11-09 — workspace-dev</summary>
+<details><summary>📋 <a href="active/likelihood_breakdown_pdet_drift.md">likelihood_breakdown tests drifted after PyAutoArray#682 (pseudo-determinant log det H)</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/523">issue #523</a> — issued 2026-11-09 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/524">autolens_profiling#524</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_breakdown_pdet_drift.md
