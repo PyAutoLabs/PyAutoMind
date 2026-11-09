@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 9 in flight",
-  "updated": "2026-11-09T18:52:26Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
+  "updated": "2026-11-09T19:03:41Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,12 +12,6 @@
       "text": "Feasibility: JAX zero-contour critical curves/caustics for modeling-run visualization \u2014 awaiting-merge",
       "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/522",
       "prompt": "Use the start-dev skill. active/critical_curves_jax_modeling_viz_feasibility.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "likelihood_breakdown tests drifted after PyAutoArray#682 (pseudo-determinant log det H) \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/524",
-      "prompt": "Use the start-dev skill. active/likelihood_breakdown_pdet_drift.md"
     },
     {
       "severity": "yellow",
@@ -126,6 +120,12 @@
       "text": "pick: Deep research: Can we speed up Delaunay in PyAutoArray?",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autoarray/delaunay_research.md",
       "prompt": "Use the start-dev skill. draft/research/autoarray/delaunay_research.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: CTI upkeep parity \u2014 bring PyAutoCTI and its satellites to the same\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/autocti/cti_upkeep_epic.md",
+      "prompt": "Use the start-dev skill. draft/maintenance/autocti/cti_upkeep_epic.md"
     }
   ]
 }
