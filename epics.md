@@ -24,6 +24,12 @@ members out of the pick lists and work-type sections and shows them only
 grouped, phase-ordered, under their epic — worked in order through the
 epic, never picked standalone.
 
+## nautilus-fast-likelihoods
+- title: Nautilus for fast likelihoods — CPU overhead and worker utilisation, asynchronous experiments, combined CPU/GPU execution and selective JAX acceleration
+- ledger: draft/feature/autofit/nautilus_fast_likelihood_development_epic.md
+- status: FILED 2026-11-09 — CPU first, as directed by James; phase 0 is ready to start, no development or benchmark campaign launched by intake
+- notes: Implementation epic; never issue the umbrella. Start draft/feature/autofit_profiling/nautilus_cpu_profiling_baseline.md (phase 0). Then measured CPU serial costs → worker utilisation → gated asynchronous experiment → combined CPU/GPU execution → selective JAX kernels → higher-dimensional efficiency → integration. Phase 4 explicitly explores CPU sampler pools feeding GPUs, concurrent CPU/GPU likelihood workers and multiple GPUs where available. Dimension diagnostics begin in phase 0. Preserve neural bounds and existing pool safety fixes; reuse the variable-batch compilation task. Pulse/Insight retain profiling/inference campaign ownership; link canonical domain tasks before campaign execution. No replacement-sampler survey is required.
+
 ## cti-upkeep
 - title: CTI upkeep parity — release-train wiring and first modern `autocti` release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), `autocti_profiling` + Pulse `cti` row, figures/assistant/docs currency, hygiene
 - ledger: draft/maintenance/autocti/cti_upkeep_epic.md
