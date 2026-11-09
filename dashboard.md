@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 21 |
-| [In flight](#in-flight) | 7 |
+| [In flight](#in-flight) | 8 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 241 |
+| [Backlog](#backlog) | 240 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -1088,6 +1088,14 @@ Use the start-dev skill. active/howtolens-stored-results.md
 
 </details>
 
+<details><summary>📋 <a href="active/likelihood_breakdown_cells_pdet_grounding.md">Per-cell likelihood_breakdown evidence still uses the pre-#682 ln det H</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/525">issue #525</a> — issued 2026-11-09 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/likelihood_breakdown_cells_pdet_grounding.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/magnification_maps_8d_wiring_pretty.md">Magnification maps 8d: wire into fit subplots and make them pretty</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/818">issue #818</a> — issued 2026-11-02 — library-dev</summary>
 
 ```
@@ -1203,7 +1211,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 230 · local-dev 6 · ral 3
+Lanes: any 229 · local-dev 6 · ral 3
 
 <a id="human-review"></a>
 <details>
@@ -1254,7 +1262,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>bug</b> — 52</summary>
+<summary><b>bug</b> — 51</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1332,14 +1340,6 @@ Use the start-dev skill. draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_ove
 
 ```
 Use the start-dev skill. draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens_profiling/likelihood_breakdown_cells_pdet_grounding.md">Per-cell likelihood_breakdown evidence still uses the pre-#682 ln det H</a> — autolens_profiling · small · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/bug/autolens_profiling/likelihood_breakdown_cells_pdet_grounding.md
 ```
 
 </details>
@@ -2606,7 +2606,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-09 | filed | <a href="draft/bug/autolens_profiling/likelihood_breakdown_cells_pdet_grounding.md">Per-cell likelihood_breakdown evidence still uses the pre-#682 ln det…</a> |
+| 2026-11-09 | issued | <a href="active/likelihood_breakdown_cells_pdet_grounding.md">Per-cell likelihood_breakdown evidence still uses the pre-#682 ln det…</a> |
 | 2026-11-09 | filed | <a href="draft/docs/autogalaxy/plot_utils_critical_curves_default_docstring_drift.md">Fix plot_utils docstrings that call zero_contour the critical-curve…</a> |
 | 2026-11-09 | filed | <a href="draft/research/autolens_profiling/critical_curve_oracle_find_the_regime_where.md">Critical-curve oracle: find the regime where zero-contour beats…</a> |
 | 2026-11-09 | filed | <a href="draft/research/autolens/cluster_figure_critical_curves_miss_member_curves.md">Cluster figures miss small member-galaxy critical curves</a> |
@@ -2702,7 +2702,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-96 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+95 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2746,8 +2746,8 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
 - `draft/bug/autolens/point_source_plot_script_residual_shape_mismatch.md`
 - `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md`
-- `draft/bug/autolens_profiling/likelihood_breakdown_cells_pdet_grounding.md`
-- _… and 56 more_
+- `draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md`
+- _… and 55 more_
 
 </details>
 
