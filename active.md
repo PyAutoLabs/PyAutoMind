@@ -162,12 +162,10 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1763
 - issued: 2026-11-10
 - session: OpenAI Codex desktop
-- status: library-shipped, workspace-pending (bounded checkpoint pilot running)
+- status: awaiting-human (pilot halted on receipt serialization; corrected fresh-run decision pending; no merge)
 - prompt: active/nautilus_cpu_checkpoint_batching.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-checkpoint-batching
-- repos:
-  - PyAutoFit: feature/nautilus-checkpoint-batching
-  - autofit_profiling: feature/nautilus-checkpoint-batching
+- retained-repos: PyAutoFit and autofit_profiling (feature/nautilus-checkpoint-batching); all code committed, no active edits, worktrees/raw retained
 - epic: nautilus-fast-likelihoods (experimental phase1; outside Pulse)
 - tier: judge — merge mode: human /prm
 - heart-red-override: live approved both plans despite RED; exact current reasons "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure" (2026-11-10T16:45:59.194451+00:00). No merge/release/CI bypass.
@@ -176,4 +174,4 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1765
 - workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/15
 - pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1765
-- validation: fullsuite4302passed/2skipped/1expected failure,10smoke cases,124tooling tests/Ruff/catalogue; author review only. Frozen librarye16fba3ee/producerd108719; bounded pilot running.
+- validation: fullsuite4302passed/2skipped/1expected failure,10smoke cases,125tooling tests/Ruff/catalogue; author review only. Frozen librarye16fba3ee/producerd108719; attempt01 halted after38.12s: interruption success, resume receipt error,18unrun/all timings unrun. Integer serialization fixed in daf0cc6; test portability4e90392, report15afe55. Read-only checkpoint reopening confirmed exact control result with zero likelihood calls and unchanged bytes; failed pilot case remains failed. Fresh run requires pending human decision; no automatic retry.
