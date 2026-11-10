@@ -7,7 +7,7 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: awaiting-merge
+Status: workspace-dev
 Issued: 2026-11-10
 Issue: https://github.com/PyAutoLabs/autofit_profiling/issues/12
 Filed: 2026-11-10
@@ -150,3 +150,7 @@ Heart: RED — Release RED; monitoring RED · 11/100 · 138 unresolved (updated 
 - Authoritative Heart RED at2026-11-10T14:30:29.649657+00:00: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure". Live phase0b development override and plan approval remain recorded. No merge/release authority.
 - Human view: /mnt/c/Users/Jammy/Workspace/Science/scratch/nautilus_30d_investigation_2026-11-10/results/evidence/report.html.
 - Next: human review/merge ofPR13. A later bounded output-only replay remains needed; do not automatically resume the halted matrix or promote the partial30D result.
+
+## Approved output-only continuation — 2026-11-10
+
+Human: "Continue the wrapped-output investigation" after explicitly choosing it instead of merge. Reuse the approved output replay arm with exactly one case in a separately frozen plan, fresh copied original30D checkpoint, pinned runtime, zero new likelihood calls and durable stages. Add --output-only preparation and scope validation so no evidence case can restart;120s/4096MiB child cap,180s aggregate including preflight, no retries. Preserve the original halted pilot. Update this same issue/PR after validation; remain outside Pulse and leave merge human.

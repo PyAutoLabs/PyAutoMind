@@ -101,7 +101,7 @@
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/12
 - issued: 2026-11-10
 - session: OpenAI Codex desktop
-- status: workspace-shipped, awaiting-merge
+- status: workspace-dev (output-only continuation approved)
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-30d-diagnostics
 - repos:
   - autofit_profiling: feature/nautilus-30d-diagnostics
@@ -116,3 +116,4 @@
 - commit: 168f3c6bf0176e2f46d4a195a025f43d8fecc308; measurement code 3cf17ea
 - evidence: 5D/10D fresh-sample successes; first30D timeout120s (partial error −0.049803, ESS2633.6/10000); remaining2repetitions and output replay unrun. Total159.24s; ~93MB raw data retained; outside Pulse.
 - validation: 78 tests, Ruff, native checkpoint exclusion/roundtrip smoke, original hashes and catalogue passed; exact-head CI run42836078590 all steps green. No independent review claimed.
+- continuation: live human "Continue the wrapped-output investigation"; exactly one separately identified output replay, 120s/4096MiB,180s aggregate; no evidence retry/merge; original halted pilot retained.
