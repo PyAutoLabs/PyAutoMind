@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2215 records across 11 buckets.
+2217 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -163,6 +163,7 @@ markers; everything below GENERATED is rebuilt.
 - [docs-conductor](2026/11/docs-conductor.md)
 - [dr1-rgb-flip-superseded](2026/11/dr1-rgb-flip-superseded.md) — superseded by the human 2026-10-30 (the draft's own banner); `complete/2026/10/sky-orientation-dr1-p1.md` reco…
 - [ell-comps-disk-constraint-dup](2026/11/ell-comps-disk-constraint-dup.md) — already shipped before it was filed — PyAutoFit#1538 (96dad519) + PyAutoGalaxy#589 (merge 0fbe863d, 2026-08-28…
+- [ellipse-fit-filenames](2026/11/ellipse-fit-filenames.md)
 - [eyes-group-cluster-gallery](2026/11/eyes-group-cluster-gallery.md) — superseded by human decision — autolens_visualization#5 and #14, record `complete/2026/10/viz-all-dataset-type…
 - [eyes-multi-galaxy-gallery](2026/11/eyes-multi-galaxy-gallery.md) — superseded by human decision — autolens_visualization#5 (+ 465fc508 datasets), record `complete/2026/10/viz-al…
 - [eyes-survey-next-action-stale](2026/11/eyes-survey-next-action-stale.md) — RETIRED as stale, no change made. The prompt's premise was false: only the `autolens_workspace_test/gallery/` …
@@ -228,6 +229,7 @@ markers; everything below GENERATED is rebuilt.
 - [organism-map-compact](2026/11/organism-map-compact.md) — PR is the tracking surface
 - [point-magnification-api](2026/11/point-magnification-api.md) — already shipped — PyAutoLens#798 (f791ac77) + autolens_workspace#598 (0f8b4db5), records `complete/2026/10/poi…
 - [procedure-lines-trim](2026/11/procedure-lines-trim.md) — PR is the tracking surface
+- [pseudo-det-rebaseline](2026/11/pseudo-det-rebaseline.md)
 - [r2-pages-function-access](2026/11/r2-pages-function-access.md)
 - [readme-frontdoors](2026/11/readme-frontdoors.md)
 - [rectangular-gradient-rtu-sparse](2026/11/rectangular-gradient-rtu-sparse.md) — the filed symptom (|g| ~2e9 on the imaging/rectangular/hst fiducial, RTU all backends, Bilinear CPU sparse) sp…
