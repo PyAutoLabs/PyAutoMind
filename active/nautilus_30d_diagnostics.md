@@ -7,7 +7,7 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: workspace-dev
+Status: awaiting-merge
 Issued: 2026-11-10
 Issue: https://github.com/PyAutoLabs/autofit_profiling/issues/12
 Filed: 2026-11-10
@@ -134,3 +134,19 @@ Heart: RED — Release RED; monitoring RED · 11/100 · 138 unresolved (updated 
   [yellow] PyAutoCortex: yellow
   [yellow] PyAutoPulse: yellow
 ```
+
+## Development handoff — 2026-11-10
+
+- PR: https://github.com/PyAutoLabs/autofit_profiling/pull/13; issue12 remains open for human merge.
+- Worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-30d-diagnostics/autofit_profiling; branch feature/nautilus-30d-diagnostics; head168f3c6bf0176e2f46d4a195a025f43d8fecc308.
+- Measurements at3cf17eab18ead7fff72d3bf0de394c8c22188303, original pins preserved. Added diagnose.py, diagnose_report.py, diagnostic helpers/tests, experimental protocol/evidence.
+- 5D/10D completed fresh-only logZ errors +0.012717/−0.017798, versus −0.057994/−0.147382 originally.
+- First30D fresh case timed out at120.07s. Read-only partial checkpoint: error−0.049803, ESS2633.6/10000,118900newcalls. Ineligible as success. Other2repetitions and wrapped output replay unrun; stopped per plan; no retries/cap escalation.
+- Charged159.24s including5.14s preflight. Original checkpoint/result hashes unchanged. ~93MB raw output retained under output/nautilus-30d-diagnostics; earlier worktrees untouched.
+- Incremental native checkpoint writes omit the changed discard flag. Timed output copy retained inconsistent old flag; partial inspection setTrue in memory only. Final harness fully writes mode before sampling.30D copied-checkpoint reload smoke passed with zero added calls. No timed rerun after correction.
+- Evidence/report in experiments/nautilus_30d_diagnostics; all statuses and unrun cases visible. No Pulse registration/catalogue changes; whole phase0b incomplete.
+- Validation:78toolingtests, Ruff, runtime preflight restores3original posterior hashes, discard leaves0selected, native mode roundtrip, original integrity, catalogue and9local report links pass. Log:output/nautilus-30d-diagnostics/validation/tests.log. Author review only.
+- Exact-head CI: pull_request run42836078590, lint job129898505755, every step successful including lychee. All configured runs for this head verified.
+- Authoritative Heart RED at2026-11-10T14:30:29.649657+00:00: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure". Live phase0b development override and plan approval remain recorded. No merge/release authority.
+- Human view: /mnt/c/Users/Jammy/Workspace/Science/scratch/nautilus_30d_investigation_2026-11-10/results/evidence/report.html.
+- Next: human review/merge ofPR13. A later bounded output-only replay remains needed; do not automatically resume the halted matrix or promote the partial30D result.

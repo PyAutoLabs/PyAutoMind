@@ -101,11 +101,18 @@
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/12
 - issued: 2026-11-10
 - session: OpenAI Codex desktop
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-30d-diagnostics
 - repos:
   - autofit_profiling: feature/nautilus-30d-diagnostics
 - prompt: active/nautilus_30d_diagnostics.md
 - epic: nautilus-fast-likelihoods (experimental phase 0b.2; outside Pulse)
 - tier: judge — merge mode: human /prm
-- heart-red-override: existing phase-0b implementation/pilot/development-PR override; next bounded plan approved live "continue" 2026-11-10; no merge/release
+- heart-red-override:
+  - authorization: live "Approved. Proceed with phase 0b implementation, the bounded local pilot and development PRs despite Heart RED. Leave merge for human"; this specific bounded plan approved with "continue" 2026-11-10.
+  - current-reasons: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure" (authoritative readiness 2026-11-10T14:30:29.649657+00:00).
+  - gates: 78 tests, Ruff, runtime restoration/exclusion and no-sampling persistence smoke, catalogue, and exact-head CI passed. Output replay not reached; original timeout retained. No merge/release authorized.
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/13
+- commit: 168f3c6bf0176e2f46d4a195a025f43d8fecc308; measurement code 3cf17ea
+- evidence: 5D/10D fresh-sample successes; first30D timeout120s (partial error −0.049803, ESS2633.6/10000); remaining2repetitions and output replay unrun. Total159.24s; ~93MB raw data retained; outside Pulse.
+- validation: 78 tests, Ruff, native checkpoint exclusion/roundtrip smoke, original hashes and catalogue passed; exact-head CI run42836078590 all steps green. No independent review claimed.

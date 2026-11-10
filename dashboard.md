@@ -9,7 +9,7 @@
 | Where | Count |
 |-------|------:|
 | [Start here](#start-here) | 24 |
-| [Epics](#epics) | 22 |
+| [Epics](#epics) | 23 |
 | [In flight](#in-flight) | 8 |
 | [Planned](#planned) | 9 |
 | [Backlog](#backlog) | 241 |
@@ -223,24 +223,11 @@ Use the start-dev skill. draft/feature/autolens/interferometer_primary_beam_pers
 
 Long-running multi-phase programmes. Each epic's 📋 prompt has the assistant read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
 
-<details>
-<summary><b>Nautilus for fast likelihoods — CPU overhead and worker utilisation, asynchronous experiments, combined CPU/GPU execution and selective JAX acceleration</b> — 1 queued prompt(s), in order</summary>
-
 <details><summary>📋 <b>Nautilus for fast likelihoods — CPU overhead and worker utilisation, asynchronous experiments, combined CPU/GPU execution and selective JAX acceleration</b> — ledger: `draft/feature/autofit/nautilus_fast_likelihood_development_epic.md` — PHASE 0a MERGED 2026-11-10 — autofit_profiling#9: controlled harness and exploratory local pilot; record…</summary>
 
 ```
 Continue the 'Nautilus for fast likelihoods — CPU overhead and worker utilisation, asynchronous experiments, combined CPU/GPU execution and selective JAX acceleration' epic. Its canonical state lives in draft/feature/autofit/nautilus_fast_likelihood_development_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: Implementation epic; never issue the umbrella. Phase 0a complete: complete/2026/11/nautilus-cpu-profiling-baseline.md (autofit_profiling#8 → PR#9 merged); experimental phase 0b.1 complete: complete/2026/11/nautilus-cpu-campaign-setup.md (PR#11 merged); wider phase 0b remains pending, Pulse promotion deferred by human choice. Then measured CPU serial costs → worker utilisation → gated asynchronous experiment → combined CPU/GPU execution → selective JAX kernels → higher-dimensional efficiency → integration. Phase 4 explicitly explores CPU sampler pools feeding GPUs, concurrent CPU/GPU likelihood workers and multiple GPUs where available. Dimension diagnostics belong to phase 0b; 0a completion alone does not complete phase 0. Preserve neural bounds and existing pool safety fixes; reuse the variable-batch compilation task. Pulse/Insight retain profiling/inference campaign ownership; link canonical domain tasks before campaign execution. No replacement-sampler survey is required.
 ```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autofit/nautilus_fast_likelihood_development_epic.md">Nautilus fast likelihood development epic</a> — autofit · too-large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/feature/autofit/nautilus_fast_likelihood_development_epic.md
-```
-
-</details>
 
 </details>
 
@@ -1050,6 +1037,19 @@ Use the start-dev skill. draft/feature/autofit/certified_solver_batched_guard_c2
 </details>
 
 <details>
+<summary><b>nautilus-fast-likelihoods</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+
+<details><summary>📋 <a href="draft/feature/autofit/nautilus_fast_likelihood_development_epic.md">Nautilus fast likelihood development epic</a> — autofit · too-large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autofit/nautilus_fast_likelihood_development_epic.md
+```
+
+</details>
+
+</details>
+
+<details>
 <summary><b>pyautoeyes-birth</b> — 2 queued prompt(s) — ⚠️ not in `epics.md`</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautohands/release_fires_visualization_dispatch.md">Hands release.yml fires the visualization re-render dispatches</a> — pyautohands · small · supervised · normal</summary>
@@ -1125,7 +1125,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/nautilus_30d_diagnostics.md">Nautilus 30D evidence and output diagnostics</a> — <a href="https://github.com/PyAutoLabs/autofit_profiling/issues/12">issue #12</a> — issued 2026-11-10 — workspace-dev</summary>
+<details><summary>📋 <a href="active/nautilus_30d_diagnostics.md">Nautilus 30D evidence and output diagnostics</a> — <a href="https://github.com/PyAutoLabs/autofit_profiling/issues/12">issue #12</a> — issued 2026-11-10 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autofit_profiling/pull/13">autofit_profiling#13</a></summary>
 
 ```
 Use the start-dev skill. active/nautilus_30d_diagnostics.md

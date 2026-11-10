@@ -16,7 +16,7 @@ Repos:
 Difficulty: too-large
 Autonomy: supervised
 Priority: high
-Status: phase 0a merged 2026-11-10 (autofit_profiling#9, issue #8 closed); experimental phase 0b.1 merged (autofit_profiling#11, issue #10 closed), wider phase 0b incomplete; no Pulse campaign
+Status: phase 0a merged 2026-11-10 (autofit_profiling#9, issue #8 closed); experimental phase 0b.1 merged (autofit_profiling#11, issue #10 closed), experimental phase 0b.2 diagnostics awaiting human merge (autofit_profiling#13, issue #12); wider phase 0b incomplete; no Pulse campaign
 Epic: nautilus-fast-likelihoods
 Filed: 2026-11-09
 Consequence: judge
