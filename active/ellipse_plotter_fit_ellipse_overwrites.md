@@ -10,6 +10,7 @@ Status: draft
 Consequence: judge
 Witness: rendering `autogalaxy_visualization/scripts/ellipse/visualization.py` yields four distinct `fit_ellipse` variants on disk (data, data without ellipses, and their log10 versions), not one `ellipse_fit.png`.
 Filed: 2026-09-29
+Issued: 2026-11-10
 
 ## Symptom
 
