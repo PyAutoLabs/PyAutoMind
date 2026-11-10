@@ -8,7 +8,7 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: formalised
+Status: awaiting-merge
 Epic: nautilus-fast-likelihoods
 Phase: 0a
 Issued: 2026-11-10
@@ -53,3 +53,15 @@ Phase 0a delivers the controlled harness and local pilot in autofit_profiling#8.
 Phase 0b is the separate, pending canonical profiling campaign including the dimension sweep and representative targets. Phase 0 is complete only after both outputs exist; finishing this member does not establish the dimension baseline. No phase-0b campaign is issued or executed here.
 
 The human approved the plan and feature/nautilus-cpu-profiling-baseline branch and authorized implementation after the task-specific Heart RED override. Merge remains human /prm.
+
+## Phase 0a review handoff — 2026-11-10
+
+PR: https://github.com/PyAutoLabs/autofit_profiling/pull/9
+
+Implementation and local pilot are reviewable at f602ba4. All 52 selected runs use the same dependency revisions/content; 26 trace/control pairs preserve posterior hashes and likelihood counts. The recovery record retains one interrupted attempt and ten superseded successful attempts excluded after shared dependency drift. Detached dependency worktrees and source-drift checks now guard the run.
+
+Validation: 40 tooling tests, Ruff lint/format, four direct/wrapped × one/two-worker resume checks, watchdog probes with tracing off/on, timeout receipt, trace accounting, catalogue/history validation and links passed. GitHub lint was pending at PR-open. Author review only; no independent review claimed.
+
+Neural-network training and bound geometry dominate this small Gaussian target. Shared-host variability prevents a precise overhead or speedup claim. The report proposes checkpoint batching as the next bounded experiment (ideal share-based upper bound about 1.13x direct / 1.10x wrapped), with interruption/resume requirements. No optimization or phase-0b campaign was implemented.
+
+Heart remains RED: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure" (2026-11-10T12:13:48.638875+00:00). Existing task-specific human override covers this development PR; merge remains human /prm with green required checks.

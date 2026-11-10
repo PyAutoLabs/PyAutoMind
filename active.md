@@ -101,7 +101,11 @@
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/8
 - issued: 2026-11-10
 - session: Codex desktop (WSL); session ID unavailable
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/9
+- head: f602ba42b297ba20677b7128187c1d27c089781a
+- evidence: phase 0a harness and exploratory pilot ready; 52 selected runs, 26 matched trace/control pairs, 40 tooling tests; phase 0b remains pending.
+- dependency-pins: detached PyAutoFit bdb7af0e9c339ad07850679fd6ac168aacc7d18c and PyAutoNerves 9b204c90c2ce05c5bb0cf3e9800ed13f005c6c56 under the task worktree dependencies/; source activate.sh before runtime.
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-cpu-profiling-baseline
 - repos:
   - autofit_profiling: feature/nautilus-cpu-profiling-baseline
@@ -110,7 +114,8 @@
 - tier: glance — merge mode: human /prm under Heart RED override
 - heart-red-override:
   - authorization: live human 2026-11-10, "Yes, I authorize proceeding past Heart RED for nautilus_cpu_profiling_baseline. Prepare the implementation plan with both clarifications." Then "Approved. Use that plan and branch, register the issue, set up the workspace and begin phase 0a implementation."
-  - gates: implementation starting; tests/smoke not yet run, no passed gates claimed; no release or failed-check bypass.
+  - gates: final 40 tooling tests, Ruff lint/format, 52 selected pilot cases, 26 exact trace/control posterior/count matches, 4 checkpoint/resume cases, traced/control worker-death probes, timeout receipt, catalogue contract/history checks and links passed; author review only. GitHub lint in progress at PR-open; no release or failed-check bypass.
+  - ship-readiness: RED at 2026-11-10T12:13:48.638875+00:00; exact reasons: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure". Following reason lines preserve the entry snapshot.
   - reason: Heart: RED — Release RED; monitoring RED · 11/100 · 143 unresolved (updated 21h ago)
   - reason: [red] PyAutoGalaxy: CI failure — https://api.github.com/repos/PyAutoLabs/PyAutoGalaxy/actions/runs/42605341827
   - reason: [red] PyAutoLens: CI failure — https://api.github.com/repos/PyAutoLabs/PyAutoLens/actions/runs/42605339633

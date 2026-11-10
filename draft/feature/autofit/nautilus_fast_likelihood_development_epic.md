@@ -16,7 +16,7 @@ Repos:
 Difficulty: too-large
 Autonomy: supervised
 Priority: high
-Status: phase 0a active (autofit_profiling#8); phase 0b campaign pending
+Status: phase 0a awaiting merge (autofit_profiling#9, issue #8); phase 0b campaign pending
 Epic: nautilus-fast-likelihoods
 Filed: 2026-11-09
 Consequence: judge
