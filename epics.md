@@ -24,7 +24,7 @@ members out of the pick lists and work-type sections and shows them only
 grouped, phase-ordered, under their epic — worked in order through the
 epic, never picked standalone.
 
-## nautilus-fast-likelihoods Experimental phase 0b.2 diagnostics PR autofit_profiling#13 awaits human merge (issue #12); initial2successes/1capped/3unrun; authorized output-only continuation capped inside visualization; corrected plotting comparison completed no-corner/six-small, full30D capped at PNG export; earlier guard/harness failures retained; no Pulse promotion.
+## nautilus-fast-likelihoods Experimental phase 0b.2 diagnostics PR autofit_profiling#13 awaits human merge (issue #12); initial2successes/1capped/3unrun; authorized output-only continuation capped inside visualization; corrected comparison completed no-corner/six-small/full30D capped; later full30D attribution succeeded and isolates drawing/quantile/dispatch costs, CI green; all earlier failures retained; no Pulse promotion.
 - title: Nautilus for fast likelihoods — CPU overhead and worker utilisation, asynchronous experiments, combined CPU/GPU execution and selective JAX acceleration
 - ledger: draft/feature/autofit/nautilus_fast_likelihood_development_epic.md
 - status: PHASE 0a MERGED 2026-11-10 — autofit_profiling#9: controlled harness and exploratory local pilot; record complete/2026/11/nautilus-cpu-profiling-baseline.md. Experimental phase 0b.1 MERGED 2026-11-10 (autofit_profiling#11, issue #10 closed): 26 success / 1 timeout / 9 unrun, no Pulse registration by human choice; phase 0 not complete.

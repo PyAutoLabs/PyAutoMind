@@ -304,3 +304,18 @@ Workspace AGENTS.md: "Present a plan and wait for explicit user approval before 
 ## Attribution plan approved
 
 Live human "continue" approves the preceding full30D attribution plan: implementation, supervised20s synthetic preflight, one120s/4096MiB replay within180s aggregate, no sampling/optimization, one scoped final-summary call if reached, stop on failure. Existing development override persists; outside Pulse; merge remains human.
+
+
+## Attribution outcome — completed 2026-11-10
+
+Approved with live "continue". Measured frozen375fa0be68e9c65436b466398eb560bf838650ba; reporthead2c3c0aaef3700754b9ec56ff506680f66c433f4b. Synthetic2D/30point preflight passed under20s supervision, exercised real aliases/panel counts/numerics/PNG/restoration without likelihood evaluation. Single30D child success114.77s,aggregate118.755s incl3.881s preflight,1037MiB sampled peak.120s/4096MiB child and180s aggregate limits respected, no retries.
+
+Full33984samples/originalweights,12x12in/100dpi,495axes,verified1200x1200PNG. Visual inspection: labels overlap heavily, diagnostic only. Full finalization and integrity completed;1scoped summarycall,0sampling,unchanged posterior/native34100count,copy byte-identical. Earlier failures/timeouts remain unchanged.
+
+Nested attribution: figure draw21.519s; plot-loop self/residual13.914s; histogram panel dispatch self/residual10.793s;1740histquantiles10.407s;diagonalKDE kernel5.916s(including60quantiles);axes5.018s;deferredsharedaxes4.794s;435histogram bins0.785s;pcolormesh0.472s;PNGwrite0.095s. Selected non-overlapping components are not a full budget. Raw inclusive rows overlap; do not sum.947snapshotwrites recorded4.112s I/O, excluded from nested times; finalwriteowncost not persisted; other probe overhead remains. Broad plot47.039s,nestedplot43.009s,visualize78.884s. No speedup applied. Earlier same-policy plot74.739s and timeout versus current success demonstrate timing variability; need matched repeats before optimization claims.
+
+Candidate work only: repeated quantile reuse with weights/masks/quantile semantics preserved; panel dispatch and loop residual attribution; rendering/artist cost. Binning/filewriting small in this realization. Existing deferredsharedaxes/avoidedduplicatepyplotdraw already implemented. No sampler optimization started; fullphase0b and30Devidence accuracy unresolved.
+
+111tests,Ruff,catalogue,33local links passed. Exact-head CI42849107773/job129944533530 all steps green includinglychee; previousHTTP503failures retained historically. HeartRED at2026-11-10T15:48:37.310808+00:00 exact reasons "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure";live development override persists,no merge/release.
+
+Raw output/nautilus-plot-attribution-01 ~56MiB plus output/nautilus-plot-attribution-01-plan-preflight retained, all prior archives retained. Committed attribution_evidence_01 includes counters, stages, PNG, checkpointintegrity and syntheticwitness. Human view:/mnt/c/Users/Jammy/Workspace/Science/scratch/nautilus_30d_investigation_2026-11-10/plot_attribution_results/attribution_evidence_01/report.html. PR13 open/outside Pulse; next human review/merge or separately scoped optimization plan; no further compute authorized.

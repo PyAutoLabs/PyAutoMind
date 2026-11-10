@@ -101,7 +101,7 @@
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/12
 - issued: 2026-11-10
 - session: OpenAI Codex desktop
-- status: workspace-dev (full30D attribution plan approved with live continue)
+- status: awaiting-merge (full30D attribution completed; CI green; human merge)
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-30d-diagnostics
 - repos:
   - autofit_profiling: feature/nautilus-30d-diagnostics
@@ -109,14 +109,15 @@
 - epic: nautilus-fast-likelihoods (experimental phase0b.2; outside Pulse)
 - tier: judge — merge mode: human /prm
 - workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/13
-- commit: 259c62ee0c90c95d975a5c2e5288d6c82a24fbed; corrected plot measurement ab896cdc36061b33998bae9c214d6a47c7773b5d
+- commit: 2c3c0aaef3700754b9ec56ff506680f66c433f4b; attribution measurement375fa0be68e9c65436b466398eb560bf838650ba; prior corrected comparisonab896cd
 - heart-red-override:
-  - authorization: live phase0b development/pilot/PR despite RED; plot plan approved; "Allow one final-summary timing call per case"; fresh attempt "I approve, continue"; after harness correction "Run corrected comparison once". No merge/release.
-  - current-reasons: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure" (authoritative2026-11-10T15:27:23.643729+00:00).
-  - gates:99tests, Ruff, catalogue,26local links, runtime preflight and two completed full-finalization witnesses pass; full30D cap retained. Exact-head CI42845740473/job129932586557: tests/lint/catalogue pass, lychee fails on unchanged Brain standards/Mind epic links HTTP503. No CI bypass or independent review claimed.
+  - authorization: live phase0b development/pilot/PR despite RED; plot plan approved; "Allow one final-summary timing call per case"; fresh attempt "I approve, continue"; after harness correction "Run corrected comparison once"; attribution plan approved with "continue". No merge/release.
+  - current-reasons: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure" (authoritative2026-11-10T15:48:37.310808+00:00).
+  - gates:111tests,Ruff,catalogue,33links,synthetic runtime preflight,full30D finalization/PNG and integrity passed. Exact-head CI42849107773/job129944533530 every step green, including lychee. Prior failures retained; no independent review claimed.
 - evidence: initial5D/10D fresh-sample successes; first30D120s timeout (partial logZerror−0.049803,ESS2633.6/10000), two repeats/output unrun.159.24s,~93MB retained; measured3cf17ea. Full30Daccuracy incomplete.
 - output-followup: separate replay120.06s timeout inside visualization,123.19s total;~45MB retained; measured e701a77; unchanged copied checkpoint.
 - retained-plot-attempts:01host guard before launch,all3unrun,6.438s at51663d1;02no-corner harness keyword collision before any timing call,22.364s,two unrun at9dbc272,~45MiB retained. Fixab896cd and regression; both failures retained.
 - latest-plot-comparison:03no-corner success54.054s; six-parameter success62.278s (1200x1200PNG); full30D timeout120.092s during PNG export after9.997s axes and74.739s posterior plotting.242.32s total including4.518s preflight;~156MiB raw retained. Same12x12in/100dpi canvas and all33984samples; no defaults/library changes.
-- invariants: successes have exactly1summary timing call each,0new sampler calls, unchanged posterior/native34100count. All3copied checkpoints byte-identical. Full30D did not reach final summary and produced noPNG; no success receipt.
-- next: human review/merge only after CI green; further experiments need a new scoped decision. No automatic retry, Pulse promotion or fullphase0b completion.
+- prior-comparison-invariants: successes have exactly1summary timing call each,0new sampler calls, unchanged posterior/native34100count. All3copied checkpoints byte-identical. Full30D did not reach final summary and produced noPNG; no success receipt.
+- attribution: full30D success114.77s,118.76s aggregate incl3.881s preflight,1037MiB RSS;1200x1200PNG/495axes verified. Drawing21.519s,plot-loop residual13.914s,hist dispatch residual10.793s,quantiles10.407s,binning0.785s,PNGwriting0.095s. SnapshotI/O4.112s. No optimization/speedup claim; earlier timing variation material.1summarycall/0sampling,posterior/native34100count unchanged,checkpointbyte-identical;~56MiB raw retained.
+- next: human review/merge; no further compute authorized. Optimization candidates require a new scoped plan and matched repeats. Outside Pulse; fullphase0b/evidence accuracy incomplete.

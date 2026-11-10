@@ -1125,7 +1125,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/nautilus_30d_diagnostics.md">Nautilus 30D evidence and output diagnostics</a> — <a href="https://github.com/PyAutoLabs/autofit_profiling/issues/12">issue #12</a> — issued 2026-11-10 — workspace-dev (full30D attribution plan approved with live continue) — PRs: <a href="https://github.com/PyAutoLabs/autofit_profiling/pull/13">autofit_profiling#13</a></summary>
+<details><summary>📋 <a href="active/nautilus_30d_diagnostics.md">Nautilus 30D evidence and output diagnostics</a> — <a href="https://github.com/PyAutoLabs/autofit_profiling/issues/12">issue #12</a> — issued 2026-11-10 — awaiting-merge (full30D attribution completed; CI green; human merge) — PRs: <a href="https://github.com/PyAutoLabs/autofit_profiling/pull/13">autofit_profiling#13</a></summary>
 
 ```
 Use the start-dev skill. active/nautilus_30d_diagnostics.md
