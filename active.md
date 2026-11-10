@@ -60,6 +60,22 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/177
 - heart-ack: STALE 'release validation incomplete: no rehearsal for current source' (human 2026-11-02)
 
+## jax-version-policy
+- issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/213
+- issued: 2026-11-10
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/jax-version-policy
+- repos:
+  - autolens_profiling: feature/jax-version-policy
+  - PyAutoDNA: feature/jax-version-policy
+- prompt: active/jax_version_policy_and_the_recurring_xla.md
+- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
+- heart-red-override: human 2026-11-10 (PyAutoGalaxy/PyAutoLens Tests, workspace validation 14f); research/dev only, no merge/release bypass
+- co-claim: autolens_profiling shared with paused gradient-correctness-sweep (#517), human override 2026-11-10; paths disjoint
+- decisions: DNA owns the policy (decision replaces decisions/jax-2026-10-04.md); DNA writes matrix results as validation records under a new `research` authority (human 2026-11-10); Pulse only gets pointer follow-ups
+- phase: planned 1 hang matrix → 2 flag cost → 3 DNA decision + board + follow-ups; nothing started
+
 ## gradient-correctness-sweep
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/517
 - issued: 2026-11-02
@@ -74,6 +90,7 @@
 - resume: (1) `sacct -j 413991` → when done pull output/p517_item2/{A_sparse_main,B_dense_main,C_sparse_tag}/…/gradient.json + .log from the RAL worktree into Science/scratch/gradient_correctness_sweep_2026-11-02/ral_item2/ and run small_step_check on them (A vs C = library effect incl #672; A vs B = sparse path vs CPU backend); (2) then items 3, 5 (local, seconds), 6, 13, 8/9/7 per the approved order in wiki/research/gradient_correctness_sweep.md
 - compute-tracking: RAL 413991 (item 2, group/delaunay/euclid CPU, legs A sparse@main / B dense@main / C sparse@tag 2026.10.25.1; partition ral; human go 2026-11-02). RAL worktree /mnt/ral/jnightin/autolens_profiling_wt/gradient-correctness-sweep (9d2ee2d3), private libs /mnt/ral/jnightin/PyAuto_wt/gradient-correctness-sweep; rows under output/p517_item2/<leg>/
 - tier: judge — merge mode: human /prm
+- co-claim: autolens_profiling also claimed by jax-version-policy (PyAutoNerves#213) on its own branch/worktree, human override 2026-11-10; paths disjoint (scripts/misc/jax_version_policy/)
 
 ## autonomous-orchestrators-p4c
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/574
