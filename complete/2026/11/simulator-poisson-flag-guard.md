@@ -1,3 +1,17 @@
+## simulator-poisson-flag-guard
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/687
+- completed: 2026-11-10
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/688
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/688
+- summary:
+  - `SimulatorImaging.via_image_from` draws Poisson noise only when `add_poisson_noise_to_data` or `include_poisson_noise_in_noise_map` is set (Python-level flag check, JAX-traceable). With both off, the global NumPy RNG is no longer touched.
+  - `preprocess.poisson_noise_via_data_eps_from` clips PSF-convolution round-off negatives to 0 before the draw (NumPy and JAX). NumPy raises `exc.DatasetException` when min < -1e-10 × |max|; JAX clips only.
+  - Gates: test_autoarray 2408 passed; smoke 154/0 (autocti envs unbuilt locally, no GSL; PyAutoCTI unit 279 passed vs branch); independent Fable review CLEAN (witness holds; seeded Poisson-on outputs identical to main under NumPy and JAX/jit). Shipped and merged under the human Heart RED development override; CI green on all 3 legs.
+  - Known edge: an image with max ≤ 0 has threshold 0, so an all-zero image with a -1e-19 pixel and Poisson on still raises (it raised `ValueError` before).
+  - Follow-up: `draft/maintenance/euclid/remove_simulator_poisson_round_off_workaround.md` (remove euclid pipeline PR #87 workaround after release).
+
+## Original prompt
+
 # `SimulatorImaging` draws Poisson noise before checking `add_poisson_noise_to_data`
 
 Type: bug

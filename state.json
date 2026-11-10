@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 14 in flight",
-  "updated": "2026-11-10T20:40:04Z",
+  "headline": "RED \u2014 24 picks \u00b7 13 in flight",
+  "updated": "2026-11-10T20:45:08Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -45,12 +45,6 @@
     },
     {
       "severity": "yellow",
-      "text": "`SimulatorImaging` draws Poisson noise before checking `add_poisson_noise_to_data` \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/688",
-      "prompt": "Use the start-dev skill. active/simulator_imaging_poisson_drawn_before_flag_check.md"
-    },
-    {
-      "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/human_review/autolens/multi_plane_cross_validation_review.md",
       "prompt": "Walk me through the completed work described in `draft/human_review/autolens/multi_plane_cross_validation_review.md` so I can sign it off.\n\n1. Read the prompt: what was asked, and what it claims shipped.\n2. Find the evidence \u2014 the merged PR(s), the commits, the `complete/` record \u2014\n   and read the actual diff, not the description of it.\n3. Report what changed, what it does NOT cover, and anything you would have\n   done differently. Call out behaviour changes and test gaps explicitly.\n\nChange nothing while reviewing. When I sign it off, retire the prompt from the\nPyAutoMind checkout (`python3 scripts/lifecycle.py record <slug> --date\n<YYYY-MM-DD> --from-file <body> --apply`, then `git rm` the prompt) and\nregenerate the dashboard. If I do not sign it off, file the follow-up with\n`/intake` instead.\n"
@@ -69,6 +63,12 @@
     },
     {
       "severity": "yellow",
+      "text": "pending release: PyAutoArray PyAutoArray#688 \u2014 simulator-poisson-flag-guard",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/688",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1764 \u2014 PyAutoFit compact corner array adapter",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1764",
       "prompt": null
@@ -83,6 +83,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1761 \u2014 What shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1761",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#699 \u2014 `PlotterEllipse.fit_ellipse` writes every variant to `ellipse_fit.png`, so only the last survives",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/699",
       "prompt": null
     },
     {
@@ -120,12 +126,6 @@
       "text": "pick: Fix KNN neighbor search for a partial final point block",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
-      "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
     }
   ]
 }
