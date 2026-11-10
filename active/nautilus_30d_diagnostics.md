@@ -252,3 +252,52 @@ Raw output/nautilus-plot-comparison-03 ~156MiB retained; attempt02 ~45MiB and ev
 99tests,Ruff,catalogue,26local links passed. Exact-head CI42845740473 failed (output/plot-03-ci-failure.log retained); current HeartRED at2026-11-10T15:27:23.643729+00:00 exact reasons "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure". Live development override persists, merge remains human. Fullphase0b incomplete/outside Pulse. Next human review/merge onceCIgreen; new experiments or optimization need separately scoped decision.
 
 Final CI detail: run42845740473/job129932586557 code checks all passed; only lychee failed with HTTP503 from unchanged Brain docs/standards.md and Mind draft/research/autofit/search_extensibility_epic.md links. No more CI reruns after repeated service failures across heads; overall CI remains red.
+
+
+## Proposed full30D plotting attribution
+
+Full30D plotting attribution — proposed continuation
+
+Status: awaiting explicit plan approval. User request: "Continue investigating the full 30D plotting bottleneck. Keep it outside Pulse and leave merge for me. give me a summary of the work weve done so far".
+Clarification: baseline sampler timings/traces and evidence resampling exist; targeted sampler optimization has not begun. This continuation attributes plotting cost only.
+
+Existing scope: issue autofit_profiling#12, PR#13, worktree .worktrees/nautilus-30d-diagnostics/autofit_profiling, feature/nautilus-30d-diagnostics. Retain all earlier experiments. Outside Pulse. No library/default changes.
+Tier: judge — merge mode: human /prm.
+
+Read-only findings
+- At fixed12x12in/100dpi, full30D versus six parameters has435 versus15lower panels (29x),30 versus6diagonal KDEs,495 versus27total axes. Measured plotting74.739s versus2.649s (28.2x); not a controlled speedup estimate.
+- Pinned anesthetic samples.py plot_2d selects/replaces/dropna data separately per pair and calls its pandas-backed PlotAccessor per panel.
+- hist_plot_2d calls weighted quantile four times per pair:1740calls for435panels. utils.quantile converts arrays through lists and sorts again per invocation. Candidate cost only; no timing attribution yet.
+- Diagonal kde_plot_1d also computes two quantiles per parameter, then KDE/boundary correction. No new compression/thinning proposed.
+- Existing PyAutoFit already defers pandas shared-axis handling and avoids pyplot's extra post-save draw. Do not re-propose those implemented optimizations.
+- About7.042s lie between NestedSamples.plot_2d exit and Figure.savefig entry. Deferred shared-axis work, relabelling/legend and instrumentation fall in this interval; it is not yet attributed.
+- Matplotlib Agg PNG output draws the canvas before image encoding/writing. Current savefig trace cannot distinguish these phases.
+
+High-level plan
+1. Add child-local diagnostic timers to one otherwise unchanged full30D small-canvas wrapped replay.
+2. Separate panel dispatch, 1D KDE, 2D histogram numerics and artist construction; measure deferred axis handling and rendering/export separately.
+3. Preserve durable partial attribution if the child reaches its unchanged cap.
+4. Publish a cost table, retained data and next optimization candidates in PR13. Do not implement a speedup or sampler change in this step.
+
+Implementation
+- Extend scripts/misc/profiling/nautilus_diagnostics.py and scripts/analytic_gaussian/nautilus/diagnose.py with a distinct attribution-only scope admitting exactly one output/D30/original-seed0 case, the existing thirty-small policy, and one final-summary timing call maximum/required on success. Prior protocols remain unchanged.
+- Add scripts/misc/profiling/nautilus_plot_attribution.py for scoped hooks. Use installed callable signatures/import sites: anesthetic.plotting.PlotAccessor.__call__; histogram backend's bound hist_plot_2d/kde_plot_1d functions; anesthetic.plot.quantile; numpy.histogram2d and Axes.pcolormesh only within hist panels; pandas_core.handle_shared_axes; axes label/legend stages; Figure.draw/FigureCanvasAgg.draw and matplotlib.image.imsave within PNG export. Preserve function metadata and handle inherited methods/bound arguments correctly.
+- Retain existing broad stages. Count 435histogram and30KDE panels when plotting completes. Record nested inclusive times and call counts, with timer hierarchy to avoid summing overlapping values. Plot_2d minus measured dispatch is an explicitly labelled residual, not proof of a specific operation.
+- Aggregate high-frequency kernel counters in memory; persist them after each panel, with active-panel/start markers and logging overhead counted separately. Persist coarse rendering entry/exit stages immediately. At termination distinguish completed totals, active work, unmeasured residuals and missing witnesses. No timing extrapolation to success.
+- No alternate plotting algorithm, quantile cache, changed bins/limits/labels, sample thinning, evidence resampling or package updates.
+- Extend diagnose_report.py and experimental findings with a portable attribution receipt and completed/unfinished stage presentation.
+
+Execution and boundaries
+One new attempt,120s/4096MiB child,180s aggregate including preflight, one worker/native threads1, same host load/memory guards and font-cache policy. Stop on any failure/cap; no automatic retry/escalation. Same original checkpoint/all33984samples/weights,12x12in/100dpi,compact hist/KDE style. Native sampling forbidden; existing authorization for one strictly scoped summary timing evaluation remains, separately counted. Zero summary calls if that stage is not reached; exactly1required for success.
+Commit code before runtime preflight. New raw identity output/nautilus-plot-attribution-01; portable attribution_evidence_01; do not overwrite any prior raw/report directory.
+Preflight includes signature/alias resolution and a tiny synthetic2D plotting check (30deterministic synthetic points, no likelihood evaluation) under supervision, max20s; time charged against180s. This verifies bound keyword forwarding, timers, panel counts, image writing and restoration before expensive archived-data work. Capture baseline font cache after this preflight. Code/runtime pins frozen across the diagnostic child.
+Tests: preserve old plan admission, enforce one-case caps/policy, nested timer accounting, interrupted/failed panel receipts, actual keyword binding/import aliases, hook restoration, swallowed plot-error detection and timeout precedence. Run appropriate tooling suite/Ruff/catalogue/link checks.
+Acceptance: defensible time attribution even if capped; not a successful full30D figure requirement or an optimization claim. Instrumented times include probe overhead and are not directly a performance regression comparison against prior runs. Fullphase0b and30Devidence accuracy remain incomplete.
+
+Readiness
+Existing live phase0b Heart RED development/pilot/PR override continues; no new merge/release authority. Prior authoritative reasons: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure". Current feed still RED. CI on current PR head failed only on unchanged GitHub documentation links HTTP503; no bypass.
+
+Approval boundary
+Workspace AGENTS.md: "Present a plan and wait for explicit user approval before editing any source, workspace script, notebook, test, or release file." This new attribution scope has not yet been approved; read-only source investigation and this plan are complete. Approval would authorize the implementation, synthetic preflight and one bounded diagnostic attempt above, not further optimization or merge.
+
+

@@ -101,7 +101,7 @@
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/12
 - issued: 2026-11-10
 - session: OpenAI Codex desktop
-- status: awaiting-merge (two plotting successes, full30D export timeout; CI link-service failure)
+- status: planning (full30D attribution proposal awaiting approval; PR remains open)
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-30d-diagnostics
 - repos:
   - autofit_profiling: feature/nautilus-30d-diagnostics
