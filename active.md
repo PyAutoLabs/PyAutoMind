@@ -185,7 +185,7 @@
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/16
 - issued: 2026-11-10
 - session: OpenAI Codex desktop (session ID unavailable)
-- status: awaiting-rerun-decision (attempt01 halted; correction and report in draft PR17)
+- status: approved-corrected-pilot (waiting for quiet-host admission)
 - prompt: active/nautilus_spawn_training_pool.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-spawn-training-pool
 - repos:
@@ -203,6 +203,8 @@
 - pilot-start: producer c9f6d2e exact-head CI42881651770 green. Quiet readings0.8862/0.6841/0.4131; one training-pool-01 attempt ran at frozen c9f6d2e.
 
 - pilot-result: halted96.82s,6success/1error/11unrun,0complete timing pairs; exact four-network coefficient/prediction parity and both recovery witnesses passed, control16300evaluations/ESS10020.771588733165. Controlled likelihood loss0/inflight0; training seeds0/1 observed started (workers can advance before kill). Max25.00s/556.9MiB; no live descendants;~17MiB raw data retained. No speedup claim. Correction83530ce needs a new explicit decision for one fresh18-child/120s/4096MiB/1800s quiet-host attempt. No automatic retry, merge or Pulse.
+
+- corrected-pilot-approval: live human selected "Run corrected pilot once" at83530ce. One fresh training-pool-02 attempt after quiet-host gate, same18children/120s/4096MiB/1800s; retain both, outside Pulse, human merge.
 
 ## readme-frontdoors
 - issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/90

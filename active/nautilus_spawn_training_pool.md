@@ -124,3 +124,7 @@ Human selected "Approve this bounded experiment" for the18-child/120s/4GiB/1800s
 The approved attempt at c9f6d2e passed the fixed-corpus exact training parity and both interrupted/resumed sampling witnesses, then stopped after96.82s at the first timing child: native resume checkpoint pathname absent after successful Fit finalization. Six children passed, one failed, eleven unrun; no complete performance pair. All raw data retained, no retry.
 
 Correction83530ce retains a hard link to the native checkpoint immediately after native.run returns, before normal Fit cleanup. Reopen after workflow timing verifies exact state and unchanged bytes with likelihood calls forbidden. Retention overhead is separately reported and included in full-fit/workflow timings equally; native sampler timing excludes it. Final archive and cleanup behavior, native checkpoint policy, neural networks, sampling settings and compute caps remain unchanged.145tooling tests/Ruff/catalogue pass; runtime correction awaits a fresh human decision under the stop-on-first-failure rule. Proposal: one new quiet-host attempt, same18children/120s/4096MiB/1800s, retain both attempts, outside Pulse, human merge.
+
+## Corrected attempt approval
+
+Live human selected "Run corrected pilot once" at83530ce. Run training-pool-02 once after unchanged quiet-host admission, with18children/120s/4096MiB/1800s limits; retain both attempts, stop on first failure, outside Pulse, human merge.
