@@ -254,3 +254,5 @@
 - text-rollout: 90 new guides/choosers; 9 existing guide workflows retained; 278 existing script executable ASTs unchanged; 368 notebooks regenerated; 56 script + 4 notebook smoke checks passed.
 - review: /mnt/c/Users/Jammy/Workspace/Science/scratch/feature_guides_review_20261110/text_only/index.html
 - next: development-only Heart RED override required for source commit/push/PR; staged local text-only changes complete.
+- human-checkpoint: paused at user's request 2026-11-10; resume tomorrow if requested. Heart RED shipping override remains unanswered.
+- resume: /mnt/c/Users/Jammy/Workspace/Science/scratch/feature_guides_review_20261110/text_only/RESUME.md

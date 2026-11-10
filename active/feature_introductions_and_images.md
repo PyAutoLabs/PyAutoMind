@@ -64,3 +64,7 @@ Issued: 2026-11-10
 - Workspace branches feature/feature-guides-images at baselines 5827331a / 93ffa50. Text-only patch staged, uncommitted. No source PR opened.
 - Ship gate RED: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure"; "autocti_workspace: Smoke Tests failure on main" (Heart readiness 2026-11-10T20:43:16.413100+00:00).
 - Next: human development-only Heart RED override to commit/push/open the two workspace PRs; merge remains separate human /prm. No source release or merge authorization.
+
+## Human-requested pause — 2026-11-10
+
+Human: "finishing tomorrow so wrap up with memory to resume". Stop at the completed local text patch; no shipping override or merge approval granted. Resume 2026-11-11 if requested. Worktree indexes verified: 582 AutoLens / 158 AutoGalaxy staged files, no unstaged tracked changes and no staged images. Resume note and recovery patches: /mnt/c/Users/Jammy/Workspace/Science/scratch/feature_guides_review_20261110/text_only/RESUME.md and resume_backups/. Task record remains on Mind feature/feature-guides-images, not main. On resume, verify state and current Heart; reuse passing evidence unless changes warrant rerunning. No work scheduled beyond this session.
