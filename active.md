@@ -103,8 +103,7 @@
 - session: OpenAI Codex desktop
 - status: awaiting-merge (full30D attribution completed; CI green; human merge)
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-30d-diagnostics
-- retained-repos:
-  - autofit_profiling: feature/nautilus-30d-diagnostics
+- retained-repos: autofit_profiling (feature/nautilus-30d-diagnostics)
 - coding-claim-transfer: same-session approved transfer to nautilus-compact-plot-adapter; PR13/worktree/raw data retained, no further edits on that branch.
 - prompt: active/nautilus_30d_diagnostics.md
 - epic: nautilus-fast-likelihoods (experimental phase0b.2; outside Pulse)
@@ -127,13 +126,28 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1762
 - issued: 2026-11-10
 - session: OpenAI Codex desktop
-- status: library-dev
+- status: validation (source stable; no pilot launched)
 - prompt: active/nautilus_compact_plot_adapter.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-compact-plot-adapter
-- repos:
-  - PyAutoFit: feature/nautilus-compact-plot-adapter
-  - autofit_profiling: feature/nautilus-compact-plot-adapter
+- retained-repos: PyAutoFit and autofit_profiling (feature/nautilus-compact-plot-adapter)
 - epic: nautilus-fast-likelihoods (experimental phase1; outside Pulse)
 - tier: judge — merge mode: human /prm
 - heart-red-override: live approval for both plans despite RED; exact reasons "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure". Development/validation/PR only; no merge/release/CI bypass.
 - dependency: profiling branch starts from diagnostic PR13 head2c3c0aa; no automatic base merge. Existing archives retained. Checkpoint member1763 follows sequentially.
+- coding-claim-transfer: same-session transfer to nautilus-checkpoint-batching; plotting source stable, retained uncommitted pending full validation; no further source edits while checkpoint member holds the claim.
+- validation: 64 plotting tests (exact pixels), 119 tooling tests, Ruff/catalogue pass, isolated smoke 8 scripts + 2 notebooks pass. Full suite stopped on missing Zeus then missing Astropy; separate complete-extras validation environment now running. Archived measurement environment unchanged.
+
+## nautilus-checkpoint-batching
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1763
+- issued: 2026-11-10
+- session: OpenAI Codex desktop
+- status: library-dev
+- prompt: active/nautilus_cpu_checkpoint_batching.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-checkpoint-batching
+- repos:
+  - PyAutoFit: feature/nautilus-checkpoint-batching
+  - autofit_profiling: feature/nautilus-checkpoint-batching
+- epic: nautilus-fast-likelihoods (experimental phase1; outside Pulse)
+- tier: judge — merge mode: human /prm
+- heart-red-override: live approved both plans despite RED; exact current reasons "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure" (2026-11-10T16:45:59.194451+00:00). No merge/release/CI bypass.
+- dependency: independent library baseline bdb7af0; profiling helpers from diagnostic PR13 head2c3c0aa. Plot member retained during validation; no simultaneous performance pilots.
