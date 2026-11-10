@@ -299,3 +299,8 @@ Existing live phase0b Heart RED development/pilot/PR override continues; no new 
 
 Approval boundary
 Workspace AGENTS.md: "Present a plan and wait for explicit user approval before editing any source, workspace script, notebook, test, or release file." This new attribution scope has not yet been approved; read-only source investigation and this plan are complete. Approval would authorize the implementation, synthetic preflight and one bounded diagnostic attempt above, not further optimization or merge.
+
+
+## Attribution plan approved
+
+Live human "continue" approves the preceding full30D attribution plan: implementation, supervised20s synthetic preflight, one120s/4096MiB replay within180s aggregate, no sampling/optimization, one scoped final-summary call if reached, stop on failure. Existing development override persists; outside Pulse; merge remains human.
