@@ -101,7 +101,7 @@
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/12
 - issued: 2026-11-10
 - session: OpenAI Codex desktop
-- status: awaiting-merge (plot comparison halted by host guard; all three cases unrun)
+- status: workspace-dev (fresh plotting attempt approved after retained host-guard halt)
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-30d-diagnostics
 - repos:
   - autofit_profiling: feature/nautilus-30d-diagnostics
@@ -122,3 +122,5 @@
 - timing-authorization: live human "Allow one final-summary timing call per case"; plot comparison only, strictly scoped/counted separately; native sampling forbidden.
 
 - plot-outcome: frozen code51663d1; runtime/checkpoint/font preflight6.438s passed; host-load guard halted before any child. Three unrun, zero new calls/images/timing comparisons, no retry. Portable plot_evidence and raw output/nautilus-plot-comparison retained. Further compute requires new authorization/identity; no merge.
+
+- plot-retry-authorization: live "I approve, continue"; one fresh attempt under unchanged limits/stop rule, output/nautilus-plot-comparison-02, prior halt retained; no merge.

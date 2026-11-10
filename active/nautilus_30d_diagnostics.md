@@ -231,3 +231,7 @@ Published plot_evidence contains halted state, all-unrun coverage and portable p
 Heart remains RED at2026-11-10T14:52:02.458296+00:00: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure". Live phase0b development override, plot-plan approval and "Allow one final-summary timing call per case" recorded in issue, PR and ledgers. No merge/release authorized. Next: human may authorize a fresh bounded attempt after host load settles, with a new plan/output identity retaining this halt, or review/merge the existing diagnostic work. No automatic retry.
 
 Exact-head CI final: run42843360212 attempts1and2 both failed only on lychee receiving503from https://github.com/PyAutoLabs/PyAutoBrain/blob/main/docs/standards.md (unchanged AGENTS.md link). Attempt2 job129925246485; all code/test/catalogue checks passed. One CI-only retry, no experiment retry. CI is not green; no merge. Logs retained in output/plot-ci-failure.log and output/plot-ci-retry-failure.log.
+
+## Fresh plotting attempt authorized
+
+Live human: "I approve, continue" after the host-load halt. Authorizes one fresh three-case comparison with unchanged 120s/4096MiB per-child and420s aggregate caps, same stop-on-first-failure rule and exactly one final-summary timing call per case; native sampling forbidden. Original halted plan/state retained. New identity: output/nautilus-plot-comparison-02, producer9dbc272; no source changes before measurement. Entry host load0.434 below2.0 guard, available memory about13.6GiB. Outside Pulse; no merge or release.
