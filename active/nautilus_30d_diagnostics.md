@@ -206,3 +206,11 @@ Acceptance is causal diagnostic evidence, not a prespecified speedup: determine 
 
 Why approval is required
 Workspace AGENTS.md says: "Present a plan and wait for explicit user approval before editing any source, workspace script, notebook, test, or release file." This is a new three-case experiment beyond the completed one-case continuation. The existing phase0b Heart RED development override remains recorded; this request is for the new experimental scope, not a repeat Heart override.
+
+## Plot-comparison implementation checkpoint — approval clarification pending
+
+- Approved three-case harness implemented but not committed/run: diagnose.py and diagnostic helpers extend plot-comparison scope; new nautilus_plot_comparison.py hooks af.Nautilus.plot_results, anesthetic.make_2d_axes, NestedSamples.plot_2d and Figure.savefig; new plotting tests and portable PNG/stage reporting. Original library sources/defaults untouched.
+- 93 tooling tests pass; Ruff clean. Log:output/plot-comparison-precheck.log. No timed plot-comparison attempt or runtime preflight has started. Existing PR13 headc13f420 remains unchanged/unmerged.
+- Source preflight found an incompatible constraint: pinned PyAutoFit SearchUpdater._profile_and_summarize (updater.py:380) unconditionally calls fitness.call_wrap once to time the best point before save_summary. The approved zero-likelihood-call guard would reject the no-corner control after visualization, halting the entire plan.
+- Asked human: allow exactly one final-summary timing evaluation percase (native sampling remains forbidden, separately counted), or keep zero calls and omit that timing stage (changes non-plot output). Await answer; do not infer approval or run the known failure.
+- If one call is allowed, scope it only to _profile_and_summarize, cap at1, retain native evaluate_likelihood guard, record sampler calls0 and summary calls1 separately, verify posterior/call invariance and test extra/out-of-stage calls are rejected. Update frozen protocol/issue before committing measurement code. If zero, document the skipped stage explicitly instead of inventing timing data.
