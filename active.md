@@ -96,3 +96,38 @@
 - prompt: active/howtolens-stored-results.md
 - epic: howto-stored-results (phase 1 of 4: HowToLens ch2 + design gate)
 - tier: judge — merge mode: human /prm
+
+## nautilus-cpu-profiling-baseline
+- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/8
+- issued: 2026-11-10
+- session: Codex desktop (WSL); session ID unavailable
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-cpu-profiling-baseline
+- repos:
+  - autofit_profiling: feature/nautilus-cpu-profiling-baseline
+- prompt: active/nautilus_cpu_profiling_baseline.md
+- epic: nautilus-fast-likelihoods (phase 0a; 0b campaign pending)
+- tier: glance — merge mode: human /prm under Heart RED override
+- heart-red-override:
+  - authorization: live human 2026-11-10, "Yes, I authorize proceeding past Heart RED for nautilus_cpu_profiling_baseline. Prepare the implementation plan with both clarifications." Then "Approved. Use that plan and branch, register the issue, set up the workspace and begin phase 0a implementation."
+  - gates: implementation starting; tests/smoke not yet run, no passed gates claimed; no release or failed-check bypass.
+  - reason: Heart: RED — Release RED; monitoring RED · 11/100 · 143 unresolved (updated 21h ago)
+  - reason: [red] PyAutoGalaxy: CI failure — https://api.github.com/repos/PyAutoLabs/PyAutoGalaxy/actions/runs/42605341827
+  - reason: [red] PyAutoLens: CI failure — https://api.github.com/repos/PyAutoLabs/PyAutoLens/actions/runs/42605339633
+  - reason: [red] PyAutoGalaxy: PyAutoGalaxy: CI failure
+  - reason: [red] PyAutoLens: PyAutoLens: CI failure
+  - reason: [red] PyAutoGalaxy/Tests: failure
+  - reason: [red] PyAutoGalaxy/workflows/Tests: failure
+  - reason: [red] PyAutoHands/workflows/Python Version Matrix: failure
+  - reason: [red] PyAutoHeart/workflows/Workspace Smoke: failure
+  - reason: [red] PyAutoLens/Tests: failure
+  - reason: [red] PyAutoLens/workflows/Tests: failure
+  - reason: [red] PyAutoGalaxy: PyAutoGalaxy: CI failure
+  - reason: [red] PyAutoLens: PyAutoLens: CI failure
+  - reason: [red] autolens_test: red
+  - reason: [red] Workspace validation: NOT ready — 1399p / 14f / 125s @ cloud#42607741369
+  - reason: [red] test_run: red
+  - reason: [red] PyAutoArray: red
+  - reason: [red] PyAutoGalaxy: red
+  - reason: [red] PyAutoLens: red
+  - reason: [red] Worktree drift: 0 orphan / 0 missing / 3 dirty

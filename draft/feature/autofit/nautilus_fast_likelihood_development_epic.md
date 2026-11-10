@@ -16,7 +16,7 @@ Repos:
 Difficulty: too-large
 Autonomy: supervised
 Priority: high
-Status: epic plan — phase 0 ready; issue bounded member prompts only
+Status: phase 0a active (autofit_profiling#8); phase 0b campaign pending
 Epic: nautilus-fast-likelihoods
 Filed: 2026-11-09
 Consequence: judge
@@ -31,7 +31,7 @@ James chose Nautilus development on 2026-11-09: profile and extend Nautilus for 
 
 Preserve Nautilus's demonstrated usefulness for lens modelling while reducing the time spent outside useful likelihood work. Investigate the hypothesis that CPU batches wait on the slowest evaluation; measure both within-chunk imbalance and the final batch barrier. Also measure serial neural training, geometric bounds, serialization, wrapper overhead and checkpointing. Characterise degradation with increasing nonlinear dimension from the start; solving execution overhead does not by itself solve sample efficiency.
 
-This umbrella is never issued wholesale. Start the phase-0 member `draft/feature/autofit_profiling/nautilus_cpu_profiling_baseline.md`; create later small implementation prompts from measured findings, one task/PR at a time. The phase order below is the plan, not approval to start development tonight or a scheduled job tomorrow.
+This umbrella is never issued wholesale. Start the phase-0 member `active/nautilus_cpu_profiling_baseline.md`; create later small implementation prompts from measured findings, one task/PR at a time. The phase order below is the plan, not approval to start development tonight or a scheduled job tomorrow.
 
 ## Ownership and repository boundaries
 
@@ -62,7 +62,7 @@ This umbrella is never issued wholesale. Start the phase-0 member `draft/feature
 | 6 — Improve higher-dimensional efficiency | Using the dimension sweep already established in phase 0, determine whether proposal acceptance, bound volume, NN discrimination, modes or adaptation causes the loss. Test measured remedies separately from scheduling changes. | Better wall time and evaluation efficiency at matched evidence/posterior accuracy and mode recovery across seeds; no silent prior narrowing or dropping hard cases. Algorithmic changes get their own mathematical justification and review. |
 | 7 — Integration and release readiness | Consolidate successful options, docs, configuration, dependency pins, diagnostics and fallback; upstream suitable changes. | PyAutoFit conformance/integration and supported-platform checks; resume compatibility policy; reproducible CPU/GPU results published to the owning projects/boards. Production defaults only change through the normal reviewed development flow. |
 
-Dependencies: 0 → 1 → 2. Phase 3 follows the phase-2 evidence and may remain experimental; phase 4 can proceed using phases 1–2 even if true asynchronous adaptation is rejected. Phase 5 follows phase 4. Dimension measurement begins in phase 0, while dimension-changing algorithm work is deferred to phase 6. Phase 7 lands proven increments rather than waiting for every speculative branch to succeed.
+Dependencies: 0 → 1 → 2. Phase 3 follows the phase-2 evidence and may remain experimental; phase 4 can proceed using phases 1–2 even if true asynchronous adaptation is rejected. Phase 5 follows phase 4. Phase 0a is the harness/local pilot (autofit_profiling#8); phase 0b is the separately scoped canonical baseline campaign, including dimension measurements. Both outputs are required to complete phase 0. Dimension measurement begins in phase 0b, while dimension-changing algorithm work is deferred to phase 6. Phase 7 lands proven increments rather than waiting for every speculative branch to succeed.
 
 ## Combined CPU and GPU experiment contract
 

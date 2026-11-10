@@ -10,7 +10,9 @@ Autonomy: supervised
 Priority: high
 Status: formalised
 Epic: nautilus-fast-likelihoods
-Phase: 0
+Phase: 0a
+Issued: 2026-11-10
+Issue: https://github.com/PyAutoLabs/autofit_profiling/issues/8
 Filed: 2026-11-09
 Consequence: glance
 Witness: A documented local command emits a pinned JSON manifest and CPU timeline for direct Nautilus and the equivalent PyAutoFit target, with serial and multiprocess cases, reconciled submitted/completed proposal IDs and an uninstrumented timing control; a variable-cost fixture exposes the batch-tail wait without changing likelihood values or samples admitted to the batch.
@@ -43,3 +45,11 @@ The epic's Pulse/Insight links are the domain entry points. Before real benchmar
 - CPU-first initial development is ready. Hardware-dependent scored validation remains a separate campaign step; this phase is complete when the harness, tests and honest local pilot are reviewable, not when every CPU/GPU matrix row has run.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-11-09 from file:nautilus_baseline_input.md -->
+
+## Approved implementation clarification (2026-11-10)
+
+Phase 0a delivers the controlled harness and local pilot in autofit_profiling#8. Match resolved stopping criteria, n_batch, checkpoint/run-call cadence and likelihood-only pool topology explicitly; PyAutoFit is a pinned measured dependency, not a source-edit target. The implementation plan is on the issue.
+
+Phase 0b is the separate, pending canonical profiling campaign including the dimension sweep and representative targets. Phase 0 is complete only after both outputs exist; finishing this member does not establish the dimension baseline. No phase-0b campaign is issued or executed here.
+
+The human approved the plan and feature/nautilus-cpu-profiling-baseline branch and authorized implementation after the task-specific Heart RED override. Merge remains human /prm.
