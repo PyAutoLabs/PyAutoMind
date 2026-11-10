@@ -12,7 +12,7 @@
 | [Epics](#epics) | 23 |
 | [In flight](#in-flight) | 11 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 241 |
+| [Backlog](#backlog) | 242 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -1037,12 +1037,20 @@ Use the start-dev skill. draft/feature/autofit/certified_solver_batched_guard_c2
 </details>
 
 <details>
-<summary><b>nautilus-fast-likelihoods</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+<summary><b>nautilus-fast-likelihoods</b> — 2 queued prompt(s) — ⚠️ not in `epics.md`</summary>
 
 <details><summary>📋 <a href="draft/feature/autofit/nautilus_fast_likelihood_development_epic.md">Nautilus fast likelihood development epic</a> — autofit · too-large · supervised · high</summary>
 
 ```
 Use the start-dev skill. draft/feature/autofit/nautilus_fast_likelihood_development_epic.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autofit/nautilus_spawn_training_pool.md">Nautilus experimental spawn-based training pool</a> — autofit</summary>
+
+```
+Use the start-dev skill. draft/feature/autofit/nautilus_spawn_training_pool.md
 ```
 
 </details>
@@ -1256,7 +1264,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 230 · local-dev 6 · ral 3
+Lanes: any 230 · local-dev 7 · ral 3
 
 <a id="human-review"></a>
 <details>
