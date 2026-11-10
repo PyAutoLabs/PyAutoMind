@@ -30,3 +30,16 @@ Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/626
 Issued: 2026-11-10
 
 2026-11-10: Human approved continuing the pilot and required preserving recent README/docs PRs. Workspace heads: 5827331a and 93ffa50. Library docs integration deferred while library claims are active; pilot assets live with workspace producers.
+
+## Pilot handoff — 2026-11-10
+
+- Implemented local review pilot: 6 feature introductions + 2 imaging choosers; 12 fit/modeling introductions shortened; 6 numerical figures with PNG/SVG, producers and provenance.
+- Examples’ introductory words: 9,593 → 3,108; shared introductions add 1,701 (50% combined reduction, excluding choosers).
+- Existing executable ASTs and notebook code cells unchanged (12 each); 8 narrative scripts execute; 20 notebooks and both catalogues regenerated with PyAutoHands.
+- Both navigator checks, size guards, whitespace checks and 45 new-introduction local link checks pass. SVG XML and producer syntax pass. Full fitting smoke/RTD builds not run at review phase.
+- Figure solvers completed: intensity recovery absolute error <0.02; pixel residual RMS 0.988 lens / 1.001 galaxy. Fixed-geometry NumPy/SciPy demonstrations, not PyAuto inference outputs.
+- Current source branches: feature/feature-guides-images, baselines 5827331a (AutoLens workspace) / 93ffa50 (AutoGalaxy workspace). Source changes remain uncommitted for human review. Assets force-added because workspace image paths are ignored.
+- Review: /mnt/c/Users/Jammy/Workspace/Science/scratch/feature_guides_review_20261110/pilot/index.html; includes exact text diffs, all figures, old-image comparisons, provenance and checks.
+- Audit/validation logs: canonical organs/PyAutoMind/tmp/feature_guides_review/ (notebooks.log, navigator_lens.log, navigator_galaxy.log, ast_checks.json, validation.json).
+- Latest README/docs front-door PRs are preserved; no README or library source edits. RTD/library claims still require coordination.
+- Next: human reviews pilot text/figures; then remaining feature families and main-tour/RTD integration. No release, source PR or merge performed.
