@@ -101,7 +101,7 @@
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/12
 - issued: 2026-11-10
 - session: OpenAI Codex desktop
-- status: workspace-dev (approved plot comparison)
+- status: awaiting-merge (plot comparison halted by host guard; all three cases unrun)
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-30d-diagnostics
 - repos:
   - autofit_profiling: feature/nautilus-30d-diagnostics
@@ -111,12 +111,14 @@
 - heart-red-override:
   - authorization: live "Approved. Proceed with phase 0b implementation, the bounded local pilot and development PRs despite Heart RED. Leave merge for human"; this specific bounded plan approved with "continue" 2026-11-10.
   - current-reasons: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure" (authoritative readiness 2026-11-10T14:52:02.458296+00:00).
-  - gates: 81 tests, Ruff, runtime restoration/exclusion and no-sampling persistence smoke, catalogue, and exact-head CI passed. Output-only follow-up timed out inside visualization; all original receipts retained. No merge/release authorized.
+  - gates: 98 tests, Ruff, runtime restoration/exclusion and no-sampling persistence smoke, catalogue, and previous-head CI passed; current-head CI run42843360212 attempt2 failed only on unchanged Brain standards link HTTP503; code checks passed. Output-only follow-up timed out inside visualization; all original receipts retained. No merge/release authorized.
 - workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/13
-- commit: c13f420aea67289d7ce921806bf50d5d638477c3; evidence measurement3cf17ea, output measurement e701a77
+- commit: 9dbc272a1bb498d0d2b6d4e904484c3d84e7914f; evidence measurement3cf17ea, output measurement e701a77, plot preflight/guard measurement51663d1
 - evidence: 5D/10D fresh-sample successes; first30D timeout120s (partial error −0.049803, ESS2633.6/10000); initial pilot left2repetitions and output replay unrun; later output-only continuation below. Total159.24s; ~93MB raw data retained; outside Pulse.
-- validation: 81 tests, Ruff, native checkpoint exclusion/roundtrip smoke, original hashes and catalogue passed; exact-head CI run42838953442 all steps green. No independent review claimed.
+- validation: 98 tests, Ruff, native checkpoint exclusion/roundtrip smoke, original hashes and catalogue passed; previous-head CI run42838953442 all steps green; current-head CI run42843360212 attempt2 failed only on unchanged Brain standards link HTTP503; code checks passed. No independent review claimed.
 - continuation: live human "Continue the wrapped-output investigation"; exactly one separately identified output replay, 120s/4096MiB,180s aggregate; no evidence retry/merge; original halted pilot retained.
 - output-followup: separate authorized one-case plan;120.06s timeout inside visualization after samples25.772s/latents0.0165s; total123.19s including2.95s preflight,526MiB sampled RSS; copied checkpoint byte-identical, no retries, ~45MB additional raw data retained. No completed fit receipt.
 - plot-comparison: human "I approve" the three-case no-corner/six-parameter/full30D-small-canvas plan;120s/4096MiB percase,420s aggregate; no sampling/retry/merge; outside Pulse.
 - timing-authorization: live human "Allow one final-summary timing call per case"; plot comparison only, strictly scoped/counted separately; native sampling forbidden.
+
+- plot-outcome: frozen code51663d1; runtime/checkpoint/font preflight6.438s passed; host-load guard halted before any child. Three unrun, zero new calls/images/timing comparisons, no retry. Portable plot_evidence and raw output/nautilus-plot-comparison retained. Further compute requires new authorization/identity; no merge.

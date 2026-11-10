@@ -218,3 +218,16 @@ Workspace AGENTS.md says: "Present a plan and wait for explicit user approval be
 ## Timing clarification approved
 
 Human: "Allow one final-summary timing call per case". Plot comparison only: exactly1target evaluation inside final-summary timing, native sampling forbidden. Count separately; reject extras/out-of-stage calls and verify stored max-likelihood point/value. Earlier zero-call protocols unchanged. Proceed with original3case caps and stop rule; no merge.
+
+
+## Plot continuation outcome — 2026-11-10
+
+Measurement code frozen at51663d11fc6a873d9681899608bd352a294293e5. Runtime/checkpoint/font-cache preflight passed in6.4377s. Driver halted before launching any child with `RuntimeError: host load exceeds guard` (eight-CPU affinity gives threshold2.0; rejected exact load was not persisted). All3cases remain unrun. Total charged6.4379s; no target evaluations, figures or new timing comparisons. Stop rule honored with no retry. Full phase0b incomplete; outside Pulse.
+
+Report/tests head9dbc272a1bb498d0d2b6d4e904484c3d84e7914f pushed to PR13, open and unmerged.98tests, Ruff, catalogue and18local report links pass; new exact-head CI run42843360212 attempt2 failed only on unchanged Brain standards link HTTP503; tests/lint/format/catalogue passed. Plotting path has no end-to-end runtime witness. Summary timing guard tests reject zero/two-call plan changes, extra/out-of-scope calls and preserve old zero-call scopes. Measurement code stayed clean during preflight/guard check; report display/test added afterward.
+
+Published plot_evidence contains halted state, all-unrun coverage and portable plan; raw20KiB plan/state retained under output/nautilus-plot-comparison, previous~93MB+45MB and original archives retained. Human view: /mnt/c/Users/Jammy/Workspace/Science/scratch/nautilus_30d_investigation_2026-11-10/plot_comparison/plot_evidence/report.html.
+
+Heart remains RED at2026-11-10T14:52:02.458296+00:00: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure". Live phase0b development override, plot-plan approval and "Allow one final-summary timing call per case" recorded in issue, PR and ledgers. No merge/release authorized. Next: human may authorize a fresh bounded attempt after host load settles, with a new plan/output identity retaining this halt, or review/merge the existing diagnostic work. No automatic retry.
+
+Exact-head CI final: run42843360212 attempts1and2 both failed only on lychee receiving503from https://github.com/PyAutoLabs/PyAutoBrain/blob/main/docs/standards.md (unchanged AGENTS.md link). Attempt2 job129925246485; all code/test/catalogue checks passed. One CI-only retry, no experiment retry. CI is not green; no merge. Logs retained in output/plot-ci-failure.log and output/plot-ci-retry-failure.log.
