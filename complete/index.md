@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2210 records across 11 buckets.
+2211 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -189,6 +189,7 @@ markers; everything below GENERATED is rebuilt.
 - [latest-per-test-tie](2026/11/latest-per-test-tie.md) — test_autofit/results/test_identity.py::test_latest_per_keeps_the_latest_sibling flaked (main red at 963ff296a,
 - [ledger-merge-sync](2026/11/ledger-merge-sync.md) — shipped in commit 748f8c0bb (this PR). `scripts/ledger_merge.py sync [--base origin/main] [--root]` / `sync_wi…
 - [lifecycle-p3-designation-proposals](2026/11/lifecycle-p3-designation-proposals.md) — decided and shipped — the human approved all 39 designations (datacube/delaunay gpu_a100 held provisional); Py…
+- [likelihood-breakdown-cells-pdet](2026/11/likelihood-breakdown-cells-pdet.md)
 - [likelihood-breakdown-pdet-drift](2026/11/likelihood-breakdown-pdet-drift.md)
 - [likelihood-lifecycle-p3-day-zero-pages](2026/11/likelihood-lifecycle-p3-day-zero-pages.md)
 - [likelihood-lifecycle-p3-day-zero-stamp](2026/11/likelihood-lifecycle-p3-day-zero-stamp.md)
