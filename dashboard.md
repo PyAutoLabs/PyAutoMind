@@ -1149,7 +1149,7 @@ Use the start-dev skill. active/nautilus_compact_plot_adapter.md
 
 </details>
 
-<details><summary>📋 <a href="active/nautilus_cpu_checkpoint_batching.md">Nautilus opt-in CPU checkpoint batching</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1763">issue #1763</a> — issued 2026-11-10 — library-shipped, workspace-pending (bounded checkpoint pilot running) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1765">PyAutoFit#1765</a>, <a href="https://github.com/PyAutoLabs/autofit_profiling/pull/15">autofit_profiling#15</a> — ⏳ pending release: PyAutoFit</summary>
+<details><summary>📋 <a href="active/nautilus_cpu_checkpoint_batching.md">Nautilus opt-in CPU checkpoint batching</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1763">issue #1763</a> — issued 2026-11-10 — awaiting-human (pilot halted on receipt serialization; corrected fresh-run decision pending; no merge) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1765">PyAutoFit#1765</a>, <a href="https://github.com/PyAutoLabs/autofit_profiling/pull/15">autofit_profiling#15</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 Use the start-dev skill. active/nautilus_cpu_checkpoint_batching.md
