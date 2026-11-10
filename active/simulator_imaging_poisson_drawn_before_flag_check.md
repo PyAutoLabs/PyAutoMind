@@ -16,6 +16,7 @@ Witness: a simulator built with `add_poisson_noise_to_data=False` simulates an i
 `-1e-19` pixel without raising, and the returned data is unchanged for a non-negative image
 Review-minutes: 10
 Filed: 2026-09-13
+Issued: 2026-11-10
 
 ## Defect
 
