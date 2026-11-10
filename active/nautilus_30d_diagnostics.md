@@ -7,7 +7,7 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: awaiting-merge
+Status: workspace-dev
 Issued: 2026-11-10
 Issue: https://github.com/PyAutoLabs/autofit_profiling/issues/12
 Filed: 2026-11-10
@@ -171,3 +171,38 @@ Human: "Continue the wrapped-output investigation" after explicitly choosing it 
 - Next:human review/merge PR13; no automatic further experiments. Full phase0b incomplete; remains outside Pulse.
 
 - Latest exact-head CI:run42838953442/job129908636691 for c13f420; every configured step passed, including lychee. PR13 remains open/unmerged.
+
+## Approved plot comparison continuation
+
+Nautilus visualization comparison — proposed bounded continuation
+
+Status: approved live "I approve" on2026-11-10.
+Issue12 / PR13 / feature/nautilus-30d-diagnostics; PR remains unmerged. Outside Pulse.
+
+New read-only findings
+The pinned runtime enables corner_anesthetic and permits the full plot through30parameters. It uses compact lower-triangle histograms plus diagonal KDE above10parameters. D30 therefore has465panels and30diagonal twin axes. figsize_per_parammeter=4 makes a120x120inch figure. Live Matplotlib settings: figure.dpi=100, savefig.dpi=figure, implying a12000x12000 raster (144million pixels;576MB for one RGBA buffer before other overhead). This is a theoretical export size, not a measured allocation. The capped replay produced no search plot; current broad-stage trace cannot distinguish axis construction, data plotting or rendering. No new timed experiment or source edit was made to obtain these facts.
+
+High-level plan
+1. Preserve both halted experiments and add a separately named three-case visualization comparison on the same original30D checkpoint and pinned environment.
+2. Compare no search corner plot, a six-parameter compact corner, and a smaller-canvas full30D compact corner. Keep the fitted model, posterior and all non-plot output identical.
+3. Trace axis construction, data plotting and PNG export separately, including incomplete stages and unexpected plot errors.
+4. Publish timings, exact settings, figure receipts and limits in the existing experimental PR; do not change library defaults or claim full phase0b complete.
+Tier: judge — merge mode: human /prm.
+
+Detailed implementation
+Continue in /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-30d-diagnostics/autofit_profiling on feature/nautilus-30d-diagnostics, updating issue12/PR13 and Mind's active record after approval. No new library branch or Pulse task.
+Extend scripts/misc/profiling/nautilus_diagnostics.py and diagnose.py with a separately frozen plot-comparison scope; retain validation of the original six-case and single output-only protocols unchanged. Extend diagnose_report.py and focused tooling tests.
+All three cases use copied original seed0/D30 checkpoint, unchanged original stopping settings and all34100likelihood calls already stored. Native and direct-wrapper likelihood entry points remain forbidden; verify input and posterior hashes. Intercept only the search plotting callable in child-local context, restoring it afterwards. Do not disable sample/latent output or change source libraries.
+Fixed order and exact variants:
+A: no search corner plot; all other wrapped output remains enabled. Establish whether full finalization completes without the corner.
+B: one six-parameter corner of indices[0,6,12,17,23,29], explicit compact style (diagonal kde_1d, lower hist_2d, upper=False), figsize=(12,12), dpi=100. Use every sample and its original weight; no thinning.
+C: one full30D corner with the same explicit compact style, figsize=(12,12), dpi=100. This keeps panel count but reduces canvas dimensions from the earlier default. The small full30D figure is a diagnostic variant, not a proposed readable default.
+Use one declared font-cache state established during charged preflight and shared by the sequential cases; record it and avoid presenting these as matched warm/cold comparisons to the earlier cold-cache timeout.
+Durable entry/exit events: wrapped stages plus anesthetic.make_2d_axes, NestedSamples.plot_2d, and matplotlib.figure.Figure.savefig (or the exact callable used by the installed pinned implementation). Record actual figure inches, DPI, axis count, PNG dimensions and file hash. No profile-based monkeypatch optimization. A caught plotting exception or missing required output is a failed case, not success.
+Caps: at most3sequential attempts,120s and4096MiB perchild,420s aggregate including runtime/font preflight. Existing host memory/load guard, native threads1, no concurrent timing jobs. Stop on first failure/cap, no retry/escalation. No fresh sampling, evidence resampling, HPC or library optimization.
+Witnesses: A has no search corner and completes full wrapped output; B/C each produce exactly the requested PNG and retain unchanged posterior/calls. Reports must distinguish completed cases, caps and unrun cases; nested timings cannot be summed. Checkpoint hashes unchanged before/after. Test scope cannot admit evidence cases, wrong dimensions/indices, or larger caps; stage patches restore; swallowed plot errors are detected; missing images are failures.
+Commit measurement code before preflight; retain exact producer/runtime pins. New raw directories under output/nautilus-plot-comparison; portable evidence under experiments/nautilus_30d_diagnostics; figures/viewing copy in a new child of this scratch task. Existing measurements, raw inputs, halted states and their reported coverage stay unchanged.
+Acceptance is causal diagnostic evidence, not a prespecified speedup: determine which stages scale with panel count/canvas and whether non-plot output completes. Single realizations cannot establish stable speedups. No production-default or full-accuracy claim. On completion validate, update PR13 and stop for human review; no merge.
+
+Why approval is required
+Workspace AGENTS.md says: "Present a plan and wait for explicit user approval before editing any source, workspace script, notebook, test, or release file." This is a new three-case experiment beyond the completed one-case continuation. The existing phase0b Heart RED development override remains recorded; this request is for the new experimental scope, not a repeat Heart override.
