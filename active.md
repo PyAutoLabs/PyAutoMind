@@ -101,7 +101,7 @@
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/525
 - issued: 2026-11-09
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/likelihood-breakdown-cells-pdet
 - repos:
   - autolens_profiling: feature/likelihood-breakdown-cells-pdet
@@ -109,6 +109,6 @@
 - parallel-claim: human 2026-11-09 ("do this: draft/bug/autolens_profiling/likelihood_breakdown_cells_pdet_grounding.md") alongside the paused gradient-correctness-sweep claim; touches likelihood_breakdown cells + scripts/misc/likelihood_breakdown only
 - heart-red-override: live human 2026-11-09 chose "Override + RAL validation" (development only; RAL CPU array validation authorized; merge via /prm on green). RED: Heart 11/100 (PyAutoGalaxy/PyAutoLens Tests, Python Version Matrix, Workspace Smoke)
 - tier: judge — merge mode: human /prm
-- phase: code pushed c8a12b5b (all cell-side ln det H grounded; test_pdet_grounding.py; misc tests 1907 pass); pins to re-measure
-- compute-tracking: RAL 414743 (array 0-9%5, ral, exclusive, 8 CPU, fp64; via hpc/sync with worktree-local sync.conf → HPC_BASE=/mnt/ral/jnightin/autolens_profiling_wt, PROJECT_NAME=likelihood-breakdown-cells-pdet). Private libs /mnt/ral/jnightin/PyAuto_wt/likelihood-breakdown-cells-pdet (Array af80e69d incl. #682). HST dataset copied from the shared checkout (sha256 = laptop's)
-- resume: per task read hpc/batch_cpu/output/output.414743_<i>.out: 'figure_of_merit (log_evidence)' = new pin; 'log_evidence (inv matrices)' vs '(reference)' must agree; matrix_free 'exact log dets'. Update EXPECTED_LOG_EVIDENCE_HST (delaunay, delaunay_nn, rectangular) + matrix_free PINNED_LOG_DETS log_det_regularization, rerun lint checks on a clean tree, PR, human /prm; then delete the RAL private checkouts
+- phase: DONE 2026-11-10 — RAL 414743 10/10 COMPLETED, cell evidence == library on every run; pins re-measured (e90e2407)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/526 (open, awaiting human /prm)
+- compute-tracking: none running; RAL private checkouts /mnt/ral/jnightin/{PyAuto_wt,autolens_profiling_wt}/likelihood-breakdown-cells-pdet to delete at close-out
