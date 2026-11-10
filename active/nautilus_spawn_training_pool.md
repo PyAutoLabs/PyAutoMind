@@ -174,3 +174,17 @@ Read-only SSH through the configured aliases failed on2026-11-10 before reaching
 The existing pilot code and145tests/CI remain valid at83530ce; the RAL adapter above is not implemented or validated yet. Proposed resource allocation is not a discovered available node. Approval is requested for this amendment, not a repeat of the already-granted direction to move timing to RAL. User workspace AGENTS.md: "Plan before editing. Present a plan and wait for explicit user approval before editing any source, workspace script, notebook, test, or release file." The original plan also explicitly excluded HPC. Source/submit edits wait for amendment approval; remote execution additionally waits for working SSH.
 
 Planning route: continuation of issue16, workspace-only transport/admission change; no new library claim or scientific model change. Phases are adapter/tooling validation, remote staging/discovery, then one correctness-gated RAL pilot. Brain classification is performed in-session against the existing active plan. Memory nested-sampling context supplied no cluster-specific procedure; the workspace RAL policy and project hpc docs govern deployment. Slurm references: https://slurm.schedmd.com/sbatch.html#OPT_exclusive and https://slurm.schedmd.com/srun.html#OPT_cpu-bind (live site configuration still requires verification).
+
+## RAL amendment approval
+
+Live human selected "Approve the RAL amendment". Implementation and one submission after access/validation gates are authorized with the stated exclusive ral/four cores/8GiB/35min scheduler allocation and18children/120s/4GiB/1800s scientific caps. User then confirmed the existing SSH route and will restore authentication. No new permission is required merely to resume those authorized steps. Outside Pulse and human merge remain binding.
+
+## RAL implementation handoff
+
+Implemented352eafb in existing draft PR17, basePR13: allocation/cgroup/core-binding admission, explicit RAL protocol/runtime reference, one-job wrapper and supervised affinity/budget cleanup.190tooling tests, Ruff/format, shell syntax and unchanged catalogue validation pass; author review only. Logs under task .session/ral-tests-final.log and readiness-ral.json. RAL metadata tests are synthetic; live version/schema/runtime validation remains mandatory. Existing source pins and scientific settings unchanged.
+
+The configured SSH route still fails at jump_finan before RAL. User confirms using the same route and will restore authentication. No remote writes, probe jobs or scientific children launched. The single approved submission is unused. Next: read-only discovery, reconcile runtime reference, isolated remote source worktrees and output/ral-environment.sh staging, verify exact-head CI, then hpc/sync submit --cpu submit_nautilus_training_pool once. Record job ID before any polling. Do not resume laptop quiet admission or request repeated authorization for these approved steps.
+
+Fresh Heart2026-11-10T19:52:15.059564+00:00 RED: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure"; "autocti_workspace: Smoke Tests failure on main". Existing experiment-specific development override retained, outside Pulse and human merge.
+
+Exact-head Actions42890122136 passed all tooling, Ruff, catalogue and link steps for352eafb1ed77813afec36a16d4dfc065f4d65757. No remote run has been attempted.

@@ -215,7 +215,7 @@
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/16
 - issued: 2026-11-10
 - session: OpenAI Codex desktop (session ID unavailable)
-- status: RAL-amendment-planned (laptop timing stopped; SSH auth blocked; allocation/adapter approval pending)
+- status: RAL-adapter-published (live staging/submission blocked by SSH authentication)
 - prompt: active/nautilus_spawn_training_pool.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-spawn-training-pool
 - repos:
@@ -240,3 +240,6 @@
 
 - RAL-direction: live human "yeah we should be doing the real timing on RAL". Do not resume laptop quiet admission. Proposed one exclusive ral CPU-node job, four bound physical cores,8GiB/35min scheduler cap; original18children/120s/4GiB/1800s scientific limits. Same issue16/PR17; no source edits or job submission yet.
 - RAL-blocker: configured jump_finan authentication rejected publickey/password/keyboard-interactive before reaching RAL; remote topology/runtime unverified. Concrete amendment saved in active/nautilus_spawn_training_pool.md for approval; no credential/config edits.
+
+- RAL-implementation:352eafb,190tooling tests/Ruff/format/shell syntax/catalogue pass; author review only, exact-head CI42890122136 green. Allocation/cgroup/physical-core admission and single-job wrapper implemented, runtime inventory and RAL protocol saved. No RAL runtime evidence or job submission; user confirms existing route and will restore authentication. One approved job remains unused; no more laptop timing.
+- RAL-heart:2026-11-10T19:52:15.059564+00:00 exactRED: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure"; "autocti_workspace: Smoke Tests failure on main". Existing live experiment development override and explicit RAL-amendment approval retained; no release/merge/CI bypass.
