@@ -1117,7 +1117,7 @@ Use the start-dev skill. active/howtolens-stored-results.md
 
 </details>
 
-<details><summary>📋 <a href="active/likelihood_breakdown_cells_pdet_grounding.md">Per-cell likelihood_breakdown evidence still uses the pre-#682 ln det H</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/525">issue #525</a> — issued 2026-11-09 — workspace-dev</summary>
+<details><summary>📋 <a href="active/likelihood_breakdown_cells_pdet_grounding.md">Per-cell likelihood_breakdown evidence still uses the pre-#682 ln det H</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/525">issue #525</a> — issued 2026-11-09 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/526">autolens_profiling#526</a></summary>
 
 ```
 Use the start-dev skill. active/likelihood_breakdown_cells_pdet_grounding.md
