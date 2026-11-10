@@ -185,7 +185,7 @@
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/16
 - issued: 2026-11-10
 - session: OpenAI Codex desktop (session ID unavailable)
-- status: approved-corrected-pilot (waiting for quiet-host admission)
+- status: approved-not-launched (quiet-host watch ended without admission; approval retained)
 - prompt: active/nautilus_spawn_training_pool.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-spawn-training-pool
 - repos:
@@ -205,6 +205,8 @@
 - pilot-result: halted96.82s,6success/1error/11unrun,0complete timing pairs; exact four-network coefficient/prediction parity and both recovery witnesses passed, control16300evaluations/ESS10020.771588733165. Controlled likelihood loss0/inflight0; training seeds0/1 observed started (workers can advance before kill). Max25.00s/556.9MiB; no live descendants;~17MiB raw data retained. No speedup claim. Correction83530ce needs a new explicit decision for one fresh18-child/120s/4096MiB/1800s quiet-host attempt. No automatic retry, merge or Pulse.
 
 - corrected-pilot-approval: live human selected "Run corrected pilot once" at83530ce. One fresh training-pool-02 attempt after quiet-host gate, same18children/120s/4096MiB/1800s; retain both, outside Pulse, human merge.
+
+- corrected-pilot-admission: bounded quiet-host-02 watch ended without three consecutive readings below1.0; no training-pool-02 directory or child launched,0s pilot budget consumed. Approval remains valid for one corrected attempt at83530ce. Retained .session/quiet-host-02.jsonl and summary, no background watch.
 
 ## readme-frontdoors
 - issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/90

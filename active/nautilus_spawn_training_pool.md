@@ -128,3 +128,5 @@ Correction83530ce retains a hard link to the native checkpoint immediately after
 ## Corrected attempt approval
 
 Live human selected "Run corrected pilot once" at83530ce. Run training-pool-02 once after unchanged quiet-host admission, with18children/120s/4096MiB/1800s limits; retain both attempts, stop on first failure, outside Pulse, human merge.
+
+The corrected pre-launch watch quiet-host-02 ended without three consecutive load readings below1.0. No pilot output directory or scientific child was launched; the single approved corrected attempt remains unused. Keep the same source/limits and collect fresh quiet-host readings on continuation; no renewed approval is needed merely to resume admission. No watcher survives the turn.
