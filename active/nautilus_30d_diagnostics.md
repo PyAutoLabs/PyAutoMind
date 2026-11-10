@@ -7,7 +7,7 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: workspace-dev
+Status: awaiting-merge
 Issued: 2026-11-10
 Issue: https://github.com/PyAutoLabs/autofit_profiling/issues/12
 Filed: 2026-11-10
@@ -154,3 +154,20 @@ Heart: RED — Release RED; monitoring RED · 11/100 · 138 unresolved (updated 
 ## Approved output-only continuation — 2026-11-10
 
 Human: "Continue the wrapped-output investigation" after explicitly choosing it instead of merge. Reuse the approved output replay arm with exactly one case in a separately frozen plan, fresh copied original30D checkpoint, pinned runtime, zero new likelihood calls and durable stages. Add --output-only preparation and scope validation so no evidence case can restart;120s/4096MiB child cap,180s aggregate including preflight, no retries. Preserve the original halted pilot. Update this same issue/PR after validation; remain outside Pulse and leave merge human.
+
+## Output continuation handoff — 2026-11-10
+
+- Live instruction: "Continue the wrapped-output investigation"; merge explicitly not selected.
+- PR13 updated at c13f420aea67289d7ce921806bf50d5d638477c3; output measurement code e701a77f83d7c58ba49a534e4aa180f8db28395c; same worktree/branch/issue12.
+- Added --output-only frozen scope with exactly1case,120s/4096MiB child cap and180s aggregate, rejects evidence cases. Both native and wrapper likelihood calls blocked.
+- Attempt timed out at120.0616s inside SearchUpdater.visualize. Samples conversion9.9016s, summary10.5721s, CSV5.2632s; enclosing _save_samples25.7716s. Latent stage0.01646s. Nested times overlap. Later profile/summary and post-fit output not reached.
+- Charged123.1886s including2.9483s preflight. Sampled peak526MiB. Durable trace captures visualize entry and no exit. Cold Matplotlib font-cache setup occurred in the visualization stage; no isolated rendering duration or exact original interruption location claimed.
+- Native run returned in0.00629s without sampling. Copied checkpoint byte-identical after timeout; originals unchanged. No completed-fit receipt. No retries/cap escalation; original halted six-case pilot remains unchanged.
+- Source inspection: weighted-search full-corner enabled, compact above10parameters, full plot skipped only above30; this30D model still eligible. Plot-subset/config comparison is a possible later separately scoped experiment; no library/default changes.
+-81tests, Ruff, catalogue and15report links passed; regression covers output-only scope admission, both likelihood entry points, and unfinished-stage rendering. Tests log:output/nautilus-output-only/validation/tests.log.
+- Raw output:output/nautilus-output-only (~45MB) retained in addition to earlier~93MB and original archives. Committed portable receipts:experiments/nautilus_30d_diagnostics/output_evidence.
+- Current authoritative Heart RED at2026-11-10T14:52:02.458296+00:00: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure". Existing live phase0b development override and specific output continuation authority recorded. No merge/release authorization.
+- Human view:/mnt/c/Users/Jammy/Workspace/Science/scratch/nautilus_30d_investigation_2026-11-10/output_replay/output_evidence/report.html.
+- Next:human review/merge PR13; no automatic further experiments. Full phase0b incomplete; remains outside Pulse.
+
+- Latest exact-head CI:run42838953442/job129908636691 for c13f420; every configured step passed, including lychee. PR13 remains open/unmerged.

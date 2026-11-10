@@ -101,7 +101,7 @@
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/12
 - issued: 2026-11-10
 - session: OpenAI Codex desktop
-- status: workspace-dev (output-only continuation approved)
+- status: workspace-shipped, awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-30d-diagnostics
 - repos:
   - autofit_profiling: feature/nautilus-30d-diagnostics
@@ -110,10 +110,11 @@
 - tier: judge — merge mode: human /prm
 - heart-red-override:
   - authorization: live "Approved. Proceed with phase 0b implementation, the bounded local pilot and development PRs despite Heart RED. Leave merge for human"; this specific bounded plan approved with "continue" 2026-11-10.
-  - current-reasons: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure" (authoritative readiness 2026-11-10T14:30:29.649657+00:00).
-  - gates: 78 tests, Ruff, runtime restoration/exclusion and no-sampling persistence smoke, catalogue, and exact-head CI passed. Output replay not reached; original timeout retained. No merge/release authorized.
+  - current-reasons: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure" (authoritative readiness 2026-11-10T14:52:02.458296+00:00).
+  - gates: 81 tests, Ruff, runtime restoration/exclusion and no-sampling persistence smoke, catalogue, and exact-head CI passed. Output-only follow-up timed out inside visualization; all original receipts retained. No merge/release authorized.
 - workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/13
-- commit: 168f3c6bf0176e2f46d4a195a025f43d8fecc308; measurement code 3cf17ea
-- evidence: 5D/10D fresh-sample successes; first30D timeout120s (partial error −0.049803, ESS2633.6/10000); remaining2repetitions and output replay unrun. Total159.24s; ~93MB raw data retained; outside Pulse.
-- validation: 78 tests, Ruff, native checkpoint exclusion/roundtrip smoke, original hashes and catalogue passed; exact-head CI run42836078590 all steps green. No independent review claimed.
+- commit: c13f420aea67289d7ce921806bf50d5d638477c3; evidence measurement3cf17ea, output measurement e701a77
+- evidence: 5D/10D fresh-sample successes; first30D timeout120s (partial error −0.049803, ESS2633.6/10000); initial pilot left2repetitions and output replay unrun; later output-only continuation below. Total159.24s; ~93MB raw data retained; outside Pulse.
+- validation: 81 tests, Ruff, native checkpoint exclusion/roundtrip smoke, original hashes and catalogue passed; exact-head CI run42838953442 all steps green. No independent review claimed.
 - continuation: live human "Continue the wrapped-output investigation"; exactly one separately identified output replay, 120s/4096MiB,180s aggregate; no evidence retry/merge; original halted pilot retained.
+- output-followup: separate authorized one-case plan;120.06s timeout inside visualization after samples25.772s/latents0.0165s; total123.19s including2.95s preflight,526MiB sampled RSS; copied checkpoint byte-identical, no retries, ~45MB additional raw data retained. No completed fit receipt.
