@@ -1093,7 +1093,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to <code>ellipse_fit.png</code>, so only the last survives</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/698">issue #698</a> — issued 2026-11-10 — library-dev</summary>
+<details><summary>📋 <a href="active/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to <code>ellipse_fit.png</code>, so only the last survives</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/698">issue #698</a> — issued 2026-11-10 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/699">PyAutoGalaxy#699</a></summary>
 
 ```
 Use the start-dev skill. active/ellipse_plotter_fit_ellipse_overwrites.md
@@ -1181,7 +1181,7 @@ Use the start-dev skill. active/results_library_p5a_assistant.md
 
 </details>
 
-<details><summary>📋 <a href="active/simulator_imaging_poisson_drawn_before_flag_check.md"><code>SimulatorImaging</code> draws Poisson noise before checking <code>add_poisson_noise_to_data</code></a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/687">issue #687</a> — issued 2026-11-10 — library-dev</summary>
+<details><summary>📋 <a href="active/simulator_imaging_poisson_drawn_before_flag_check.md"><code>SimulatorImaging</code> draws Poisson noise before checking <code>add_poisson_noise_to_data</code></a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/687">issue #687</a> — issued 2026-11-10 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/688">PyAutoArray#688</a></summary>
 
 ```
 Use the start-dev skill. active/simulator_imaging_poisson_drawn_before_flag_check.md

@@ -3,29 +3,33 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/687
 - issued: 2026-11-10
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/simulator-poisson-flag-guard
 - repos:
   - PyAutoArray: feature/simulator-poisson-flag-guard
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/688
 - prompt: active/simulator_imaging_poisson_drawn_before_flag_check.md
 - tier: judge — merge mode: human /prm
 - coordination: PyAutoArray shared with magnification-maps-wiring (no file overlap); human approved "Coordinate and ship separate" 2026-11-10.
 - heart-red-override: human 2026-11-10 "override is fine well fix red separate" (development only).
   - current-reasons: "PyAutoGalaxy/Tests: failure"; "PyAutoLens/Tests: failure"; "Workspace validation: NOT ready — 1399p / 14f / 125s"; "Worktree drift: 3 dirty".
+  - gates: test_autoarray 2408 passed; smoke 154/0 (autocti envs unbuilt, no GSL; PyAutoCTI unit 279 passed vs branch autoarray); independent Fable review CLEAN, witness holds. Commit/push/PR only; merge via human /prm.
 
 ## ellipse-fit-filenames
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/698
 - issued: 2026-11-10
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/ellipse-fit-filenames
 - repos:
   - PyAutoGalaxy: feature/ellipse-fit-filenames
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/699
 - prompt: active/ellipse_plotter_fit_ellipse_overwrites.md
 - tier: judge — merge mode: human /prm
 - coordination: PyAutoGalaxy shared with magnification-maps-wiring (no file overlap); human approved "Coordinate and ship separate" 2026-11-10.
 - heart-red-override: human 2026-11-10 "override is fine well fix red separate" (development only).
   - current-reasons: "PyAutoGalaxy/Tests: failure"; "PyAutoLens/Tests: failure"; "Workspace validation: NOT ready — 1399p / 14f / 125s"; "Worktree drift: 3 dirty".
+  - gates: test_autogalaxy 1468 passed / 11 known-unrelated main failures (identical without change); smoke 154/0 (autocti envs unbuilt); independent Fable review FINDINGS (duplicate no_ellipse variants) → human chose drop (b) → 404a9fcd → CLEAN, witness holds. PR Tests will be red until main regression fixed. Merge via human /prm.
 
 ## magnification-maps-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/818
