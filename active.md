@@ -1,4 +1,32 @@
 
+## simulator-poisson-flag-guard
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/687
+- issued: 2026-11-10
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/simulator-poisson-flag-guard
+- repos:
+  - PyAutoArray: feature/simulator-poisson-flag-guard
+- prompt: active/simulator_imaging_poisson_drawn_before_flag_check.md
+- tier: judge — merge mode: human /prm
+- coordination: PyAutoArray shared with magnification-maps-wiring (no file overlap); human approved "Coordinate and ship separate" 2026-11-10.
+- heart-red-override: human 2026-11-10 "override is fine well fix red separate" (development only).
+  - current-reasons: "PyAutoGalaxy/Tests: failure"; "PyAutoLens/Tests: failure"; "Workspace validation: NOT ready — 1399p / 14f / 125s"; "Worktree drift: 3 dirty".
+
+## ellipse-fit-filenames
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/698
+- issued: 2026-11-10
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/ellipse-fit-filenames
+- repos:
+  - PyAutoGalaxy: feature/ellipse-fit-filenames
+- prompt: active/ellipse_plotter_fit_ellipse_overwrites.md
+- tier: judge — merge mode: human /prm
+- coordination: PyAutoGalaxy shared with magnification-maps-wiring (no file overlap); human approved "Coordinate and ship separate" 2026-11-10.
+- heart-red-override: human 2026-11-10 "override is fine well fix red separate" (development only).
+  - current-reasons: "PyAutoGalaxy/Tests: failure"; "PyAutoLens/Tests: failure"; "Workspace validation: NOT ready — 1399p / 14f / 125s"; "Worktree drift: 3 dirty".
+
 ## magnification-maps-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/818
 - issued: 2026-11-02
@@ -74,7 +102,9 @@
 - heart-red-override: human 2026-11-10 (PyAutoGalaxy/PyAutoLens Tests, workspace validation 14f); research/dev only, no merge/release bypass
 - co-claim: autolens_profiling shared with paused gradient-correctness-sweep (#517), human override 2026-11-10; paths disjoint
 - decisions: DNA owns the policy (decision replaces decisions/jax-2026-10-04.md); DNA writes matrix results as validation records under a new `research` authority (human 2026-11-10); Pulse only gets pointer follow-ups
-- phase: planned 1 hang matrix → 2 flag cost → 3 DNA decision + board + follow-ups; nothing started
+- phase: 1 laptop pilot DONE 2026-11-10 (0.11.2 no-flag hangs MGE@4/@94, Delaunay@1, fft@1; 0.12.0.1 no-flag + eigen pass all; eigen ~free on 0.12, sched 1.5-2x; lapack case non-reproducing even on 0.10.2); DNA research authority + import-matrix + JAX CPU policy panel built (PyAutoDNA de1b52d, 23+ tests); decision DRAFT decisions/jax-cpu-policy-2026-11.md (3e38dff); human asked "just up JAX to 0.12.0.1?" → answer: likely floor jax+jaxlib>=0.12.0 after RAL N=5 + Heart 0.12 validation
+- compute-tracking: RAL 40-task array APPROVED by human 2026-11-10, NOT YET SUBMITTED. RAL private clone /mnt/ral/jnightin/autolens_profiling_wt/jax-version-policy (b7147aa9), modules rsynced; make_venvs.sh (system python3.12) was mid-build when euclid_jump stopped answering (banner timeout ~19:20)
+- resume: (1) ssh euclid_jump; check venvs output/jax_version_policy/venvs/jax-{0.9.2,0.11.2,0.12.0,0.12.0.1} import jax+flatbuffers (rerun make_venvs.sh in nohup if not); (2) cd hpc/batch_cpu && sbatch submit_jax_version_policy_hang_matrix_ral_cpu; (3) pull rows → `python -m dna import-matrix` (environment ral-cpu); (4) finalize DNA decision, Heart 0.12 validation follow-up, Nerves pin prompt, delaunay_mge on 0.12; local private DNA store holds pilot records (worktree PyAutoDNA/private, gitignored)
 
 ## gradient-correctness-sweep
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/517
@@ -207,51 +237,3 @@
 - corrected-pilot-approval: live human selected "Run corrected pilot once" at83530ce. One fresh training-pool-02 attempt after quiet-host gate, same18children/120s/4096MiB/1800s; retain both, outside Pulse, human merge.
 
 - corrected-pilot-admission: bounded quiet-host-02 watch ended without three consecutive readings below1.0; no training-pool-02 directory or child launched,0s pilot budget consumed. Approval remains valid for one corrected attempt at83530ce. Retained .session/quiet-host-02.jsonl and summary, no background watch.
-
-## readme-frontdoors
-- issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/90
-- issued: 2026-11-10
-- status: documentation-shipped, awaiting-merge
-- session: Codex desktop; approved local cleanup
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/readme-frontdoors
-- prompt: active/readme_frontdoors.md
-- tier: judge — merge mode: human /prm
-- repos:
-  - PyAutoLens: feature/readme-frontdoors
-  - PyAutoGalaxy: feature/readme-frontdoors
-  - PyAutoFit: feature/readme-frontdoors
-  - PyAutoArray: feature/readme-frontdoors
-  - PyAutoCTI: feature/readme-frontdoors
-  - PyAutoReduce: feature/readme-frontdoors
-  - autolens_workspace: feature/readme-frontdoors
-  - autogalaxy_workspace: feature/readme-frontdoors
-  - autofit_workspace: feature/readme-frontdoors
-  - autocti_workspace: feature/readme-frontdoors
-  - autoreduce_workspace: feature/readme-frontdoors
-  - HowToLens: feature/readme-frontdoors
-  - HowToGalaxy: feature/readme-frontdoors
-  - HowToFit: feature/readme-frontdoors
-  - PyAutoScientist: feature/readme-frontdoors
-  - .github: feature/readme-frontdoors
-  - PyAutoMind: feature/readme-frontdoors
-- coordination: human approved "Yes, coordinate and ship separately" alongside magnification-maps-wiring and howtolens-stored-results; isolated docs branches.
-- heart-red-override: same-conversation human "I approve you to bypass and continue"; current "put PRs up for this work and prm".
-  - current-reasons: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure"; "PyAutoCTI: 1 uncommitted source change(s)" (2026-11-10T18:35:43.930077+00:00).
-  - gates: approved prose review; local links, root Python syntax and whitespace pass. No science API changes; science suites not rerun. No release or CI bypass.
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/821
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/697
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1766
-- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/686
-- library-pr: https://github.com/PyAutoLabs/PyAutoCTI/pull/127
-- library-pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/83
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/625
-- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/272
-- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/183
-- workspace-pr: https://github.com/PyAutoLabs/autocti_workspace/pull/48
-- workspace-pr: https://github.com/PyAutoLabs/autoreduce_workspace/pull/7
-- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/133
-- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/106
-- workspace-pr: https://github.com/PyAutoLabs/HowToFit/pull/78
-- workspace-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/91
-- workspace-pr: https://github.com/PyAutoLabs/.github/pull/44
-- workspace-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/552
