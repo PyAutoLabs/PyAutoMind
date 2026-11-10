@@ -103,8 +103,9 @@
 - session: OpenAI Codex desktop
 - status: awaiting-merge (full30D attribution completed; CI green; human merge)
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-30d-diagnostics
-- repos:
+- retained-repos:
   - autofit_profiling: feature/nautilus-30d-diagnostics
+- coding-claim-transfer: same-session approved transfer to nautilus-compact-plot-adapter; PR13/worktree/raw data retained, no further edits on that branch.
 - prompt: active/nautilus_30d_diagnostics.md
 - epic: nautilus-fast-likelihoods (experimental phase0b.2; outside Pulse)
 - tier: judge — merge mode: human /prm
@@ -121,3 +122,18 @@
 - prior-comparison-invariants: successes have exactly1summary timing call each,0new sampler calls, unchanged posterior/native34100count. All3copied checkpoints byte-identical. Full30D did not reach final summary and produced noPNG; no success receipt.
 - attribution: full30D success114.77s,118.76s aggregate incl3.881s preflight,1037MiB RSS;1200x1200PNG/495axes verified. Drawing21.519s,plot-loop residual13.914s,hist dispatch residual10.793s,quantiles10.407s,binning0.785s,PNGwriting0.095s. SnapshotI/O4.112s. No optimization/speedup claim; earlier timing variation material.1summarycall/0sampling,posterior/native34100count unchanged,checkpointbyte-identical;~56MiB raw retained.
 - next: human review/merge; no further compute authorized. Optimization candidates require a new scoped plan and matched repeats. Outside Pulse; fullphase0b/evidence accuracy incomplete.
+
+## nautilus-compact-plot-adapter
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1762
+- issued: 2026-11-10
+- session: OpenAI Codex desktop
+- status: library-dev
+- prompt: active/nautilus_compact_plot_adapter.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-compact-plot-adapter
+- repos:
+  - PyAutoFit: feature/nautilus-compact-plot-adapter
+  - autofit_profiling: feature/nautilus-compact-plot-adapter
+- epic: nautilus-fast-likelihoods (experimental phase1; outside Pulse)
+- tier: judge — merge mode: human /prm
+- heart-red-override: live approval for both plans despite RED; exact reasons "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure". Development/validation/PR only; no merge/release/CI bypass.
+- dependency: profiling branch starts from diagnostic PR13 head2c3c0aa; no automatic base merge. Existing archives retained. Checkpoint member1763 follows sequentially.

@@ -1,5 +1,7 @@
 # Nautilus opt-in CPU checkpoint batching
 
+Issued: 2026-11-10
+Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1763
 Type: feature
 Target: PyAutoFit
 Repos:
@@ -57,3 +59,8 @@ Report write counts/bytes/time, native sampling wall, full fit wall, memory, pai
 ## Execution phases within this approval
 
 Brain feature routing classified this as large library work. Keep three sequential gates: (A) compatibility/design and deterministic correctness tests; (B) opt-in implementation plus parity or interruption/resume witnesses; (C) the stated bounded paired pilot and development PR. Do not start C if B fails. Approval covers these stated phases only; changing scientific semantics, defaults, resource caps or external-library source requires a new decision. No independent agent delegation requested; execute sequentially.
+
+## Live approval
+
+"Approved, proceed with both plans despite Heart RED. Keep them outside Pulse and leave merge for me."
+Approved for the stated implementation, validation and bounded pilot. No merge/release.

@@ -126,7 +126,7 @@ Next: separately scope high-dimensional evidence accuracy and end-of-fit output 
 
 Human requested implementing the plotting adapter and starting CPU sampler-speed work. Two separate plans are prepared, awaiting approval before library edits/compute:
 
-- [Compact corner array adapter](nautilus_compact_plot_adapter.md): PyAutoFit-owned opt-in path, numerical/visual parity and repeated wrapped-output comparisons; no anesthetic source edits.
-- [CPU checkpoint batching](nautilus_cpu_checkpoint_batching.md): opt-in interval5 versus native interval1, complete atomic snapshots, interruption/resume witnesses and paired5D/10D CPU runs.
+- [Compact corner array adapter](../../../active/nautilus_compact_plot_adapter.md): PyAutoFit-owned opt-in path, numerical/visual parity and repeated wrapped-output comparisons; no anesthetic source edits.
+- [CPU checkpoint batching](../../../active/nautilus_cpu_checkpoint_batching.md): opt-in interval5 versus native interval1, complete atomic snapshots, interruption/resume witnesses and paired5D/10D CPU runs.
 
 Both remain experimental/outside Pulse; fullphase0b is incomplete. The diagnostic PR13 remains unmerged. Default behavior and neural bounds remain; merge stays human. Approval must cover the detailed new resource bounds and extend the development HeartRED override to these phase1library changes; no release/CI bypass.
