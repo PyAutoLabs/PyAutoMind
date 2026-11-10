@@ -2,6 +2,7 @@
 ## pseudo-det-rebaseline
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/700
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/822
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/360
 - issued: 2026-11-10
 - session: Claude Code (cloud) https://claude.ai/code/session_016nhQ8R6PYVh6FagcqYiCNh
 - status: library-dev
@@ -11,16 +12,23 @@
 - corrective-red:
   reason: PyAutoLens/Tests: failure
   authorization: https://github.com/PyAutoLabs/PyAutoLens/issues/822#issuecomment-6779728610
+- corrective-red:
+  reason: Workspace validation: NOT ready — 1399p / 14f / 125s @ cloud#42607741369
+  authorization: https://github.com/PyAutoLabs/autolens_workspace_test/issues/360#issuecomment-6779928723
 - location: cloud session clone (no local worktree)
 - repos:
   - PyAutoGalaxy: feature/pseudo-det-rebaseline
   - PyAutoLens: feature/pseudo-det-rebaseline
+  - autolens_workspace_test: feature/pseudo-det-rebaseline
 - summary: |
     Heart RED root cause: PyAutoArray#683 (approved pseudo-determinant evidence change, +9.21034
     per intrinsic mapper) left downstream Galaxy/Lens unit-test pins stale. Bisect: c020cc2 green,
     6ae33d4 red, revert of a589c35 green. Test-only re-pins to measured values; full suites green
     locally (Galaxy 1461p, Lens 1003p). Repo claims overlap magnification-maps-wiring and
     ellipse-fit-filenames (Galaxy test files only; human-directed corrective work).
+    Workspace (autolens_workspace_test#360): 12/14 validation failures were a stale pre-#358
+    checkout; 2 datacube pins missed by #358 re-pinned (measured = 4 x #358 single-channel pins).
+    Hands Python Version Matrix failures = the same Galaxy/Lens unit tests.
 
 ## ellipse-fit-filenames
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/698
