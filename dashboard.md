@@ -10,7 +10,7 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 23 |
-| [In flight](#in-flight) | 14 |
+| [In flight](#in-flight) | 13 |
 | [Planned](#planned) | 9 |
 | [Backlog](#backlog) | 243 |
 | [Recent](#recent) | 50 |
@@ -1093,7 +1093,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to <code>ellipse_fit.png</code>, so only the last survives</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/698">issue #698</a> — issued 2026-11-10 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/699">PyAutoGalaxy#699</a></summary>
+<details><summary>📋 <a href="active/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to <code>ellipse_fit.png</code>, so only the last survives</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/698">issue #698</a> — issued 2026-11-10 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/699">PyAutoGalaxy#699</a> — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 Use the start-dev skill. active/ellipse_plotter_fit_ellipse_overwrites.md
@@ -1177,14 +1177,6 @@ Use the start-dev skill. active/nautilus_spawn_training_pool.md
 
 ```
 Use the start-dev skill. active/results_library_p5a_assistant.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/simulator_imaging_poisson_drawn_before_flag_check.md"><code>SimulatorImaging</code> draws Poisson noise before checking <code>add_poisson_noise_to_data</code></a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/687">issue #687</a> — issued 2026-11-10 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/688">PyAutoArray#688</a></summary>
-
-```
-Use the start-dev skill. active/simulator_imaging_poisson_drawn_before_flag_check.md
 ```
 
 </details>
@@ -2691,7 +2683,6 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-10 | issued | <a href="active/simulator_imaging_poisson_drawn_before_flag_check.md"><code>SimulatorImaging</code> draws Poisson noise before checking…</a> |
 | 2026-11-10 | issued | <a href="active/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
 | 2026-11-10 | filed | <a href="draft/maintenance/workspaces/data_no_ellipse_config_and_prose_sweep.md">Sweep the retired <code>data_no_ellipse</code> toggle from configs and prose</a> |
 | 2026-11-10 | filed | <a href="draft/maintenance/euclid/remove_simulator_poisson_round_off_workaround.md">Remove the pipeline-side Poisson round-off workaround once…</a> |
@@ -2701,12 +2692,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-10 | issued | <a href="active/nautilus_30d_diagnostics.md">Nautilus 30D evidence and output diagnostics</a> |
 | 2026-11-10 | issued | <a href="active/jax_version_policy_and_the_recurring_xla.md">JAX version policy and the recurring XLA:CPU deadlocks: what is the…</a> |
 | 2026-11-09 | filed | <a href="draft/docs/autogalaxy/plot_utils_critical_curves_default_docstring_drift.md">Fix plot_utils docstrings that call zero_contour the critical-curve…</a> |
+| 2026-11-09 | filed | <a href="draft/research/autolens_profiling/critical_curve_oracle_find_the_regime_where.md">Critical-curve oracle: find the regime where zero-contour beats…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-09 | filed | <a href="draft/research/autolens_profiling/critical_curve_oracle_find_the_regime_where.md">Critical-curve oracle: find the regime where zero-contour beats…</a> |
 | 2026-11-09 | filed | <a href="draft/research/autolens/cluster_figure_critical_curves_miss_member_curves.md">Cluster figures miss small member-galaxy critical curves</a> |
 | 2026-11-06 | filed | <a href="draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md">Zero-contour critical curves: compile once per run by passing the…</a> |
 | 2026-11-06 | filed | <a href="draft/research/autolens_profiling/visualization_run_time_campaign_measure_and_opti.md">Visualization run-time campaign: measure and optimize modeling-run…</a> |
@@ -2716,12 +2707,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-05 | filed | <a href="draft/test/autofit/regression_test_nautilus_as_the_ep_default.md">Regression test: Nautilus as the EP <code>default_optimiser</code> over…</a> |
 | 2026-11-05 | filed | <a href="draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md">Filed: 2026-11-05 (phase 2 of autolens_profiling#519; Pulse task…</a> |
 | 2026-11-05 | filed | <a href="draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md">Filed: 2026-11-05 (found by the autolens_profiling#519 worker-route…</a> |
+| 2026-11-04 | issued | <a href="active/autonomous_orchestrators_p4c_pilot_run.md">Autonomous orchestrators phase 4c: run the Dev orchestrator pilot…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-04 | issued | <a href="active/autonomous_orchestrators_p4c_pilot_run.md">Autonomous orchestrators phase 4c: run the Dev orchestrator pilot…</a> |
 | 2026-11-02 | filed | <a href="draft/research/autolens_profiling/unexplained_gradient_gaps_cpu_sparse_delaunay_and_mge.md">Unexplained autodiff-vs-FD gaps in the phase-6 gradient records…</a> |
 | 2026-11-02 | issued | <a href="active/magnification_maps_8d_wiring_pretty.md">Magnification maps 8d: wire into fit subplots and make them pretty</a> |
 | 2026-11-02 | issued | <a href="active/results_library_p5a_assistant.md">Issued: 2026-11-02</a> |
@@ -2731,12 +2722,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
 | 2026-10-26 | filed | <a href="draft/refactor/autogalaxy_assistant/trim_ag_skills_for_colab_cap.md">Trim autogalaxy_assistant skills toward their autolens size</a> |
 | 2026-10-25 | filed | <a href="draft/bug/health_fixes/heart_health_rerun_stale_push.md">Heart Health rerun cannot publish after main advances</a> |
+| 2026-10-25 | filed | <a href="draft/bug/health_fixes/ci_timing_execution_coverage.md">CI timing must compare equivalent executed job coverage</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-25 | filed | <a href="draft/bug/health_fixes/ci_timing_execution_coverage.md">CI timing must compare equivalent executed job coverage</a> |
 | 2026-10-23 | filed | <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred…</a> |
 | 2026-10-23 | filed | <a href="draft/bug/autolens_profiling/stale_auto_simulated_cluster_dataset.md"><code>@autolens_profiling</code> stale auto-simulated <code>dataset/cluster/simple</code>…</a> |
 | 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
@@ -2746,12 +2737,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-21 | filed | <a href="draft/research/autolens_profiling/matrix_free_interferometer_phase5.md">Matrix-free interferometer inversion, phase 5b: profiling note…</a> |
 | 2026-10-21 | issued | <a href="active/matrix_free_interferometer_inversion.md">Matrix-free interferometer inversion for very large rectangular…</a> |
 | 2026-10-21 | filed | <a href="draft/docs/autolens_workspace/interferometer_primary_beam_example.md">Interferometer primary beam: workspace example and docs</a> |
+| 2026-10-21 | filed | <a href="draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md">Cluster likelihood scripts: image-plane manual check disagrees with…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-21 | filed | <a href="draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md">Cluster likelihood scripts: image-plane manual check disagrees with…</a> |
 | 2026-10-16 | filed | <a href="draft/maintenance/autolens_workspace/remeasure_shapelets_slow_park.md">Re-measure the shapelets/modeling.py SLOW park (#586) under the…</a> |
 | 2026-10-14 | filed | <a href="draft/test/autofit/workspace_searches_scripts_preexisting_failures.md"><code>@autofit_workspace</code> six <code>searches/</code> scripts fail on main at…</a> |
 | 2026-10-14 | filed | <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> |
@@ -2761,6 +2752,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
 | 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
+| 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
 
 </details>
 
@@ -2919,6 +2911,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 **PyAutoArray**
 
 - [PyAutoArray#677](https://github.com/PyAutoLabs/PyAutoArray/pull/677) — `complete/2026/11/numba-fork-safe-threading.md`
+- [PyAutoArray#688](https://github.com/PyAutoLabs/PyAutoArray/pull/688) — `complete/2026/11/simulator-poisson-flag-guard.md`
 
 **PyAutoFit**
 
@@ -2928,6 +2921,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#699](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/699) — `active/ellipse_plotter_fit_ellipse_overwrites.md`
 - [PyAutoGalaxy#696](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/696) — `complete/2026/11/nfw-virial-mass-conc-jax.md`
 
 **PyAutoNerves**
