@@ -72,3 +72,7 @@ Live human selected "Run corrected checkpoint pilot once" after attempt01 receip
 ## Quiet-host fresh pilot approval — 2026-11-10
 
 Live human: "Try the checkpoint pilot again once the host is quiet, with the same limits. Keep it outside Pulse and leave merge for me." One new attempt03 with the unchanged corrected harness and limits; preserve all attempts, stop on first failure/cap. Wait in this turn for three load readings below1.0 spaced30s, with required memory available; this is a stricter launch condition, not a change to the in-run guard or compute budget.
+
+## Bounded experiment outcome — 2026-11-10
+
+Attempt03 completed all20children in931.93s; four exact recovery controls and six exact sampling pairs passed. Interval5 was slower in all six pairs: sampler21.2–48.8% (median28.1%), fullfit15.6–46.6% (median23.8%). Full-snapshot checkpoint time increased2.81–4.44x. Keep native interval1; no promotion. All three raw attempts/worktrees retained; no further compute authorized. Report in autofit_profiling PR15; libraryPR1765 unchanged and CI green. Await human review/merge; outside Pulse, widerphase0b incomplete.
