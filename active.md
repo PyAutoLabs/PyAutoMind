@@ -126,7 +126,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1762
 - issued: 2026-11-10
 - session: OpenAI Codex desktop
-- status: validation (source stable; no pilot launched)
+- status: library-shipped, workspace-pending (pilot01 stopped; corrected harness awaits fresh replay decision)
 - prompt: active/nautilus_compact_plot_adapter.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-compact-plot-adapter
 - retained-repos: PyAutoFit and autofit_profiling (feature/nautilus-compact-plot-adapter)
@@ -134,9 +134,13 @@
 - tier: judge — merge mode: human /prm
 - heart-red-override: live approval for both plans despite RED; exact reasons "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure". Development/validation/PR only; no merge/release/CI bypass.
 - dependency: profiling branch starts from diagnostic PR13 head2c3c0aa; no automatic base merge. Existing archives retained. Checkpoint member1763 follows sequentially.
-- coding-claim-transfer: same-session transfer to nautilus-checkpoint-batching; plotting source stable, retained uncommitted pending full validation; no further source edits while checkpoint member holds the claim.
+- coding-claim-transfer: same-session transfer to nautilus-checkpoint-batching; plotting source stable, retained uncommitted pending full validation; corrected profiling harness published at3bce28c; coding claims returned to checkpoint member. Plot library e57611dc6 is frozen.
 - validation: 64 plotting tests (exact pixels), 119 tooling tests, Ruff/catalogue pass, isolated smoke 8 scripts + 2 notebooks pass. Full suite stopped on missing Zeus then missing Astropy; separate complete-extras validation environment now running. Archived measurement environment unchanged.
 
+- pilot: attempt01 halted in 2.145s before any child; archived distribution inventory included unrelated autoarray/autogalaxy/autolens metadata via PYTHONPATH; restricted activation omitted those paths. No installed package changed. Preserve strict identity check and restore metadata path exposure in frozen child environments; no automatic replay.
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1764
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/14
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1764
 ## nautilus-checkpoint-batching
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1763
 - issued: 2026-11-10
