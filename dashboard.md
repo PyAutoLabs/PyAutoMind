@@ -1133,7 +1133,7 @@ Use the start-dev skill. active/nautilus_30d_diagnostics.md
 
 </details>
 
-<details><summary>📋 <a href="active/nautilus_compact_plot_adapter.md">PyAutoFit compact corner array adapter</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1762">issue #1762</a> — issued 2026-11-10 — validation (source stable; no pilot launched)</summary>
+<details><summary>📋 <a href="active/nautilus_compact_plot_adapter.md">PyAutoFit compact corner array adapter</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1762">issue #1762</a> — issued 2026-11-10 — library-shipped, workspace-pending (pilot01 stopped; corrected harness awaits fresh replay decision) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1764">PyAutoFit#1764</a>, <a href="https://github.com/PyAutoLabs/autofit_profiling/pull/14">autofit_profiling#14</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 Use the start-dev skill. active/nautilus_compact_plot_adapter.md
@@ -2882,6 +2882,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoFit**
 
+- [PyAutoFit#1764](https://github.com/PyAutoLabs/PyAutoFit/pull/1764) — `active/nautilus_compact_plot_adapter.md`
 - [PyAutoFit#1761](https://github.com/PyAutoLabs/PyAutoFit/pull/1761) — `complete/2026/11/corner-anesthetic-speed.md`
 
 **PyAutoGalaxy**

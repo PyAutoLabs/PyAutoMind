@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 10 in flight",
-  "updated": "2026-11-10T16:57:19Z",
+  "updated": "2026-11-10T17:12:07Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "Nautilus 30D evidence and output diagnostics \u2014 awaiting-merge (full30D attribution completed; CI green; human merge)",
       "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/13",
       "prompt": "Use the start-dev skill. active/nautilus_30d_diagnostics.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "PyAutoFit compact corner array adapter \u2014 library-shipped, workspace-pending (pilot01 stopped; corrected harness awaits fresh replay decision)",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1764",
+      "prompt": "Use the start-dev skill. active/nautilus_compact_plot_adapter.md"
     },
     {
       "severity": "yellow",
@@ -35,6 +41,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#677 \u2014 What shipped",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/677",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1764 \u2014 PyAutoFit compact corner array adapter",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1764",
       "prompt": null
     },
     {
@@ -114,18 +126,6 @@
       "text": "pick: euclid_dr1: run the positions gate over DR1 and submit the remodel set",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md",
       "prompt": "Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Deep research: Can we speed up Delaunay in PyAutoArray?",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autoarray/delaunay_research.md",
-      "prompt": "Use the start-dev skill. draft/research/autoarray/delaunay_research.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: CTI upkeep parity \u2014 bring PyAutoCTI and its satellites to the same\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/autocti/cti_upkeep_epic.md",
-      "prompt": "Use the start-dev skill. draft/maintenance/autocti/cti_upkeep_epic.md"
     }
   ]
 }
