@@ -204,7 +204,7 @@
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/16
 - issued: 2026-11-10
 - session: OpenAI Codex desktop (session ID unavailable)
-- status: RAL-staging (SSH agent restored; isolated pinned environment being prepared)
+- status: paused-by-human (bedtime; RAL runtime partly staged; no job submitted)
 - prompt: active/nautilus_spawn_training_pool.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-spawn-training-pool
 - repos:
@@ -236,3 +236,5 @@
 - RAL-access-restored: user supplied working WSL SSH_AUTH_SOCK; using it explicitly per command reaches euclid-saas. No keys/config changed. Slurm22.05.11,ral up/idle nodes,OverSubscribe=NO,CR_CORE_MEMORY,task/affinity+task/cgroup,ConstrainCores/RAMSpace enabled. Shared Python3.12.4/scikit-learn1.5.1/numpy2.2.6 differ; do not change them. Isolated task staging under profiling/autofit_profiling_wt/nautilus-spawn-training-pool started; no job submitted.
 
 - RAL-live-validation: producer107ec1c,194tests and exact-head CI42898804169 green; legacy Slurm22 TRES supported. Sources staged; isolated Python3.12.10/runtime in progress. No scientific job submitted. Heart2026-11-10T20:50:57.253679+00:00 RED: "PyAutoArray: 2 commit(s) behind origin"; "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure"; "autocti_workspace: Smoke Tests failure on main"; existing experiment override, outside Pulse/human merge.
+
+- RAL-bedtime-handoff: human requested resumable state. Task-owned installer/shell stopped and verified absent; no scientific job, child or watcher. Clean producer107ec1c/194tests/CI42898804169 green. Sources and partial Python3.12.10 extraction retained;88 binary pins resolve, two pure-Python utilities separated. Resume .session/RESUME.md (also Science scratch training/RESUME.md). Original one-job approval remains unused; outside Pulse/human merge.
