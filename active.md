@@ -101,26 +101,22 @@
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/12
 - issued: 2026-11-10
 - session: OpenAI Codex desktop
-- status: workspace-dev (fresh plotting attempt approved after retained host-guard halt)
+- status: awaiting-merge (two plotting successes, full30D export timeout; CI link-service failure)
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-30d-diagnostics
 - repos:
   - autofit_profiling: feature/nautilus-30d-diagnostics
 - prompt: active/nautilus_30d_diagnostics.md
-- epic: nautilus-fast-likelihoods (experimental phase 0b.2; outside Pulse)
+- epic: nautilus-fast-likelihoods (experimental phase0b.2; outside Pulse)
 - tier: judge — merge mode: human /prm
-- heart-red-override:
-  - authorization: live "Approved. Proceed with phase 0b implementation, the bounded local pilot and development PRs despite Heart RED. Leave merge for human"; this specific bounded plan approved with "continue" 2026-11-10.
-  - current-reasons: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure" (authoritative readiness 2026-11-10T14:52:02.458296+00:00).
-  - gates: 98 tests, Ruff, runtime restoration/exclusion and no-sampling persistence smoke, catalogue, and previous-head CI passed; current-head CI run42843360212 attempt2 failed only on unchanged Brain standards link HTTP503; code checks passed. Output-only follow-up timed out inside visualization; all original receipts retained. No merge/release authorized.
 - workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/13
-- commit: 9dbc272a1bb498d0d2b6d4e904484c3d84e7914f; evidence measurement3cf17ea, output measurement e701a77, plot preflight/guard measurement51663d1
-- evidence: 5D/10D fresh-sample successes; first30D timeout120s (partial error −0.049803, ESS2633.6/10000); initial pilot left2repetitions and output replay unrun; later output-only continuation below. Total159.24s; ~93MB raw data retained; outside Pulse.
-- validation: 98 tests, Ruff, native checkpoint exclusion/roundtrip smoke, original hashes and catalogue passed; previous-head CI run42838953442 all steps green; current-head CI run42843360212 attempt2 failed only on unchanged Brain standards link HTTP503; code checks passed. No independent review claimed.
-- continuation: live human "Continue the wrapped-output investigation"; exactly one separately identified output replay, 120s/4096MiB,180s aggregate; no evidence retry/merge; original halted pilot retained.
-- output-followup: separate authorized one-case plan;120.06s timeout inside visualization after samples25.772s/latents0.0165s; total123.19s including2.95s preflight,526MiB sampled RSS; copied checkpoint byte-identical, no retries, ~45MB additional raw data retained. No completed fit receipt.
-- plot-comparison: human "I approve" the three-case no-corner/six-parameter/full30D-small-canvas plan;120s/4096MiB percase,420s aggregate; no sampling/retry/merge; outside Pulse.
-- timing-authorization: live human "Allow one final-summary timing call per case"; plot comparison only, strictly scoped/counted separately; native sampling forbidden.
-
-- plot-outcome: frozen code51663d1; runtime/checkpoint/font preflight6.438s passed; host-load guard halted before any child. Three unrun, zero new calls/images/timing comparisons, no retry. Portable plot_evidence and raw output/nautilus-plot-comparison retained. Further compute requires new authorization/identity; no merge.
-
-- plot-retry-authorization: live "I approve, continue"; one fresh attempt under unchanged limits/stop rule, output/nautilus-plot-comparison-02, prior halt retained; no merge.
+- commit: 259c62ee0c90c95d975a5c2e5288d6c82a24fbed; corrected plot measurement ab896cdc36061b33998bae9c214d6a47c7773b5d
+- heart-red-override:
+  - authorization: live phase0b development/pilot/PR despite RED; plot plan approved; "Allow one final-summary timing call per case"; fresh attempt "I approve, continue"; after harness correction "Run corrected comparison once". No merge/release.
+  - current-reasons: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure" (authoritative2026-11-10T15:27:23.643729+00:00).
+  - gates:99tests, Ruff, catalogue,26local links, runtime preflight and two completed full-finalization witnesses pass; full30D cap retained. Exact-head CI42845740473/job129932586557: tests/lint/catalogue pass, lychee fails on unchanged Brain standards/Mind epic links HTTP503. No CI bypass or independent review claimed.
+- evidence: initial5D/10D fresh-sample successes; first30D120s timeout (partial logZerror−0.049803,ESS2633.6/10000), two repeats/output unrun.159.24s,~93MB retained; measured3cf17ea. Full30Daccuracy incomplete.
+- output-followup: separate replay120.06s timeout inside visualization,123.19s total;~45MB retained; measured e701a77; unchanged copied checkpoint.
+- retained-plot-attempts:01host guard before launch,all3unrun,6.438s at51663d1;02no-corner harness keyword collision before any timing call,22.364s,two unrun at9dbc272,~45MiB retained. Fixab896cd and regression; both failures retained.
+- latest-plot-comparison:03no-corner success54.054s; six-parameter success62.278s (1200x1200PNG); full30D timeout120.092s during PNG export after9.997s axes and74.739s posterior plotting.242.32s total including4.518s preflight;~156MiB raw retained. Same12x12in/100dpi canvas and all33984samples; no defaults/library changes.
+- invariants: successes have exactly1summary timing call each,0new sampler calls, unchanged posterior/native34100count. All3copied checkpoints byte-identical. Full30D did not reach final summary and produced noPNG; no success receipt.
+- next: human review/merge only after CI green; further experiments need a new scoped decision. No automatic retry, Pulse promotion or fullphase0b completion.

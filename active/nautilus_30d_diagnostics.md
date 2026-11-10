@@ -235,3 +235,20 @@ Exact-head CI final: run42843360212 attempts1and2 both failed only on lychee rec
 ## Fresh plotting attempt authorized
 
 Live human: "I approve, continue" after the host-load halt. Authorizes one fresh three-case comparison with unchanged 120s/4096MiB per-child and420s aggregate caps, same stop-on-first-failure rule and exactly one final-summary timing call per case; native sampling forbidden. Original halted plan/state retained. New identity: output/nautilus-plot-comparison-02, producer9dbc272; no source changes before measurement. Entry host load0.434 below2.0 guard, available memory about13.6GiB. Outside Pulse; no merge or release.
+
+## Corrected comparison authorized
+
+Attempt02 at9dbc272: no-corner child failed18.982s due to timed_summary bound argument `instance` colliding with PyAutoFit instance keyword; charged22.364s, two cases unrun, checkpoint byte-identical, no target calls. Fixab896cd renames bound argument updater;99tests plus Ruff/catalogue/22links pass. After this concrete fix human selected "Run corrected comparison once". New raw identity output/nautilus-plot-comparison-03, same3cases and120s/4096MiB/420s caps, same stop rule and exactly1scoped summary call; native sampling forbidden. Both prior halted runs retained. Outside Pulse; no merge.
+
+
+## Corrected attempt03 results — 2026-11-10
+
+Human selected "Run corrected comparison once". Measured cleanab896cdc36061b33998bae9c214d6a47c7773b5d; report259c62ee0c90c95d975a5c2e5288d6c82a24fbed. Same3cases,120s/4096MiB child,420s aggregate; spent242.321s including4.518preflight. No-corner success54.054s and six-small success62.278s. Both completed normal finalization, unchanged posterior/n_like34100 and exactly1scoped summary call,0new sampler calls. Six-small verified1200x1200PNG,27axes,all33984samples/weights,indices0,6,12,17,23,29; visually inspected. Original library labels allaxes x.
+
+Full30D small-canvas timeout120.092s, axes9.997s, posterior plotting74.739s, PNG export entered at trace109.261s then killed; noPNG, nofinalsummary/postfit.495axes at12x12in/100dpi. All3checkpointcopies byte-identical; original hashes passed. RSS sampled peaks347/365/526MiB. Inclusive stage times overlap; process times include imports/provenance/checkpoint and posterior checks. Single realizations do not establish speedups; prior large-canvas replay used different cache state. Shrinking canvas alone did not complete full30D within cap; plotting fewer parameters did. No automatic retry.
+
+Raw output/nautilus-plot-comparison-03 ~156MiB retained; attempt02 ~45MiB and every previous archive retained. Portable plot_evidence_03 plus figure/integrity receipts; previous plot_evidence and plot_evidence_02 preserved. Human view /mnt/c/Users/Jammy/Workspace/Science/scratch/nautilus_30d_investigation_2026-11-10/plot_comparison_03/plot_evidence_03/report.html.
+
+99tests,Ruff,catalogue,26local links passed. Exact-head CI42845740473 failed (output/plot-03-ci-failure.log retained); current HeartRED at2026-11-10T15:27:23.643729+00:00 exact reasons "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure". Live development override persists, merge remains human. Fullphase0b incomplete/outside Pulse. Next human review/merge onceCIgreen; new experiments or optimization need separately scoped decision.
+
+Final CI detail: run42845740473/job129932586557 code checks all passed; only lychee failed with HTTP503 from unchanged Brain docs/standards.md and Mind draft/research/autofit/search_extensibility_epic.md links. No more CI reruns after repeated service failures across heads; overall CI remains red.
