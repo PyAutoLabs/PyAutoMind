@@ -1,0 +1,134 @@
+# Nautilus 30D evidence and output diagnostics
+
+Type: feature
+Target: autofit_profiling
+Repos:
+- autofit_profiling
+Difficulty: medium
+Autonomy: supervised
+Priority: high
+Status: approved
+Filed: 2026-11-10
+Consequence: judge
+Witness: Copied-checkpoint experiments distinguish exploration reuse from target errors and isolate wrapped output costs with durable bounded receipts; original data stays unchanged and all failures remain visible.
+Lane: local-dev
+Epic: nautilus-fast-likelihoods
+Phase: 0b.2
+
+## Original request
+
+"Continue with the next experimental step—investigate the 30D evidence error and the wrapped timeout. Keep it outside Pulse for now."
+
+Approval: "continue" after presentation of the linked detailed plan. Existing authorization: "Approved. Proceed with phase 0b implementation, the bounded local pilot and development PRs despite Heart RED. Leave merge for human". This next phase-0b member retains that scope and override; no merge or release authorized.
+
+## Approved plan
+
+Proposed next member: nautilus-30d-diagnostics (phase0b.2)
+Status: approved by live human "continue", 2026-11-10. Outside Pulse.
+
+HIGH LEVEL
+1. Preserve original artifacts; build a diagnostic-only harness using copies of existing checkpoints and the same pinned runtime.
+2. Test the exploration-reuse hypothesis using fresh samples from saved fixed bounds; distinguish conditional repeats from independent exploration runs.
+3. Replay wrapped final output separately, measuring summary, latents, plotting and finalization without new likelihood calls.
+4. Publish every attempt, cap and unresolved result in experiments; validate and open a development PR.
+Tier: judge — merge mode: human /prm. No library optimization or merge in this member.
+
+DETAILED IMPLEMENTATION
+Repo autofit_profiling. New branch feature/nautilus-30d-diagnostics; new worktree /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-30d-diagnostics/autofit_profiling. Canonical main clean; both earlier retained worktrees remain archives. Mind has no active autofit_profiling claim at survey.
+After approval, use start_dev/create_issue/start_workspace to register the member and obtain worktree from current origin/main. Preserve pinned Fit/Nerves and third-party environment from phase0b.1; verify imports, hashes and thread settings. Do not update dependencies.
+Add scripts/analytic_gaussian/nautilus/diagnose.py plus focused diagnostic helpers/tests under scripts/misc/profiling. Reuse existing provenance, process-group supervisor and atomic receipt primitives; leave original36-case plan and raw attempts unchanged.
+Evidence arm: D5/D10/D30 seed0 copied native checkpoints; explicitly set discard_exploration property True, verify explored state and excluded counts, then seek ESS10000 and minimum100 fresh points per shell. Record constructor/stopping settings, pre/post calls, fresh counts, shell estimates, exact analytic diagnostics and hashes. Report estimates both excluding and including exploration from the same resulting state. D30 gets two additional fixed-seed conditional resampling repeats from the original saved bounds; do not call these three independent full-search seeds. Each child has its own copied checkpoint and output directory. If any cap/failure occurs, retain receipt and stop; no automatic retry or cap escalation.
+Output arm: one wrapped replay from a copied30D checkpoint with original output settings, instrumenting entry/exit for samples conversion/summary/CSV, latent draw/computation, visualization and final outputs. Persist events incrementally so timeout retains a useful trace. Assert no likelihood evaluations occur; any additional sampling is an invalid output-only case. This replay measures output cost separately, not full search.fit throughput. Keep original timeout status unchanged.
+Caps: at most6 sequential child attempts (5 evidence,1 output),120s and4096MiB perchild;15min aggregate including preflight. Native threads1, one worker, no concurrent timing jobs; same host/load/available-memory guards. Retain every attempt. No60/100/200D, remote compute or production catalogue/Pulse changes.
+Evidence destinations: experiments/nautilus_30d_diagnostics/protocol.json, README.md and portable receipts/report. Raw/checkpoint copies under ignored output/nautilus-30d-diagnostics. Human view under this scratch folder or a distinct results child.
+Tests: prove original checkpoint hashes unchanged; resumed discard flag is effective; post-exploration count semantics; reject changed target/pins; output replay prohibits likelihood calls; timeout retains stage trace; conditional repeat labeling; missing/capped attempts not promoted to success. Run focused existing/new harness tests, lint and link checks.
+Acceptance: explain what the fresh-sample estimates do and do not support; isolate output-stage costs or report bounded incomplete diagnosis. A cap is an experimental result, not permission to increase resources. No fixed accuracy threshold or causal conclusion invented after seeing results. No performance fix in this task; propose separately if warranted.
+
+## Current Heart reasons (verbatim)
+
+```text
+Heart: RED — Release RED; monitoring RED · 11/100 · 138 unresolved (updated 1h ago)
+  [red] PyAutoGalaxy: CI failure — https://api.github.com/repos/PyAutoLabs/PyAutoGalaxy/actions/runs/42605341827
+  [red] PyAutoLens: CI failure — https://api.github.com/repos/PyAutoLabs/PyAutoLens/actions/runs/42605339633
+  [red] PyAutoGalaxy: PyAutoGalaxy: CI failure
+  [red] PyAutoLens: PyAutoLens: CI failure
+  [red] PyAutoGalaxy/Tests: failure
+  [red] PyAutoGalaxy/workflows/Tests: failure
+  [red] PyAutoHands/workflows/Python Version Matrix: failure
+  [red] PyAutoHeart/workflows/Workspace Smoke: failure
+  [red] PyAutoLens/Tests: failure
+  [red] PyAutoLens/workflows/Tests: failure
+  [red] PyAutoGalaxy: PyAutoGalaxy: CI failure
+  [red] PyAutoLens: PyAutoLens: CI failure
+  [red] autolens_test: red
+  [red] Workspace validation: NOT ready — 1399p / 14f / 125s @ cloud#42607741369
+  [red] test_run: red
+  [red] PyAutoArray: red
+  [red] PyAutoGalaxy: red
+  [red] PyAutoLens: red
+  [red] Worktree drift: 0 orphan / 0 missing / 3 dirty
+  [yellow] workspace validation not passing (14 failed, cloud#42607741369: autolens_test scripts/imaging/delaunay.py, autolens_test scripts/imaging/rectangular.py, autole…
+  [yellow] PyAutoArray: open PR 7d old — https://github.com/PyAutoLabs/PyAutoArray
+  [yellow] PyAutoArray: PR×1 (7d)
+  [yellow] PyAutoHeart: CI in_progress
+  [yellow] PyAutoBrain/Nightly Release: warn
+  [yellow] CI wall-clock: 27 gates · slowest PyAutoBrain Nightly Release 118m · 1 slowed
+  [yellow] PyAutoCortex: 1 uncommitted file(s) in canonical checkout
+  [yellow] PyAutoPulse: 1 uncommitted file(s) in canonical checkout
+  [yellow] magnification-maps-wiring/PyAutoArray: 2 uncommitted file(s) in task worktree
+  [yellow] magnification-maps-wiring/PyAutoGalaxy: 2 uncommitted file(s) in task worktree
+  [yellow] magnification-maps-wiring/PyAutoLens: 3 uncommitted file(s) in task worktree
+  [yellow] PyAutoGalaxy/autogalaxy/3.13: yellow
+  [yellow] autogalaxy: yellow
+  [yellow] Import timing: 1 imports >1.5× baseline, 11 within
+  [yellow] autofit_workspace/features/expectation_propagation.py: EP parked as not release-ready. EP message projection is unstable: a truncated per-factor search project…
+  [yellow] autofit_workspace_test/graphical/analytic_gaussian_priors.py: moments projection (PyAutoFit#1656) passes the gaussian and truncated scatter families (16/16 eac…
+  [yellow] autofit_workspace_test/graphical/ep.py: EP not release-ready: the per-factor searches are truncated (maxcall/maxiter=1000), so each search projects an ESS=1 po…
+  [yellow] autofit_workspace_test/graphical/ep_deterministic.py: EP parked as not release-ready alongside graphical/ep.py. Passes today, but shares the EP machinery whose…
+  [yellow] autofit_workspace_test/graphical/ep_exact.py: EP parked as not release-ready alongside graphical/ep.py. Passes today, but shares the EP machinery whose message…
+  [yellow] autofit_workspace_test/graphical/ep_parity.py: EP parked as not release-ready alongside graphical/ep.py. Passes today, but shares the EP machinery whose messag…
+  [yellow] autogalaxy_workspace/imaging/features/shapelets/modeling: real-search JAX shapelet fit exceeds the 1800s mode=release cap (>30min); speedup tracked by the Prof…
+  [yellow] autogalaxy_workspace_test/multi_dataset/jax_likelihood/delaunay.py: quarantined: TIMEOUT 1805s at the release cap in TWO CONSECUTIVE release-integrate runs (34…
+  [yellow] autogalaxy_workspace_test/multi_dataset/jax_likelihood/rectangular.py: re-quarantined: hung 1805s at the release cap in release-integrate run 33244320906 with …
+  [yellow] autolens_workspace/cluster/start_here: hits the full 1800s mode=release cap in workspace-validation (PyAutoHeart run 29912642195). Script-specific, not a shard…
+  [yellow] autolens_workspace/guides/modeling/advanced/expectation_propagation.py: EP parked as not release-ready. EP message projection is unstable: a truncated per-fact…
+  [yellow] autolens_workspace/multi_galaxy/features/advanced/shapelets/modeling.py: hit the 1800s mode=release cap in the 2026.10.7.1 release smoke job (PyAutoHands run 3…
+  [yellow] autolens_workspace/multi_galaxy/start_here: blocked two consecutive release runs after autolens_workspace#554 (2026-09-17) swapped it off the simulated `simple…
+  [yellow] autolens_workspace/weak/features/strong_lensing/a2744: hits the full 1800s mode=release cap in workspace-validation (PyAutoHeart run 29912642195). Script-speci…
+  [yellow] autolens_workspace_test/cluster/visualization: per-plane critical-curve + caustic computation on the required full-extent 250x250 viz_grid (multi-plane marchin…
+  [yellow] autolens_workspace_test/imaging/subhalo_recovery_evidence.py: evidence-grid acceptance test of PyAutoLens#672 (156-point one-shot + 25-point iterative-to-conve…
+  [yellow] autolens_workspace_test/imaging/visualization/modeling_visualization_delaunay_jit: now FAILS its own JIT-cache assertion at 52s (cached 2.45s not < 0.5x compil…
+  [yellow] autolens_workspace_test/imaging/visualization/modeling_visualization_jit: re-measured: times out at the 300s cap; JIT + full visualization pipeline
+  [yellow] autolens_workspace_test/imaging/visualization/modeling_visualization_rectangular_jit: now FAILS its own JIT-cache assertion at 36s (cached 2.21s not < 0.5x com…
+  [yellow] autolens_workspace_test/interferometer/visualization/modeling_visualization_jit: historically >300s cap; local re-measurement OOM-killed (SIGKILL) at 132s - me…
+  [yellow] autolens_workspace_test/misc/database/scrape/multi_analysis_jax: re-measured: times out at the real 300s cap (full search, no test mode)
+  [yellow] autolens_workspace_test/misc/database/scrape/slam_general_jax: re-measured: times out at the real 300s cap (full search, no test mode)
+  [yellow] autolens_workspace_test/misc/database/scrape/slam_multi_one_by_one_jax: re-measured: times out at the real 300s cap (full search, no test mode)
+  [yellow] autolens_workspace_test/misc/database/scrape/slam_pix_jax: re-measured: times out at the real 300s cap (full search, no test mode)
+  [yellow] autolens_workspace_test/multi_dataset/jax_likelihood/delaunay.py: hung 1805s in release-integrate run 33177898708 (second vmap call, post-compile) with XLA_FLA…
+  [yellow] autolens_workspace_test/multi_dataset/jax_likelihood/delaunay_mge.py: hung twice in 30 min with XLA_FLAGS=--xla_cpu_multi_thread_eigen=false in force: 1805s at…
+  [yellow] autolens_workspace_test/multi_dataset/jax_likelihood/shared_preloads.py: hung 1805s in release-integrate run 33220882817 (vmap trace at shared_preloads.py:211 …
+  [yellow] Skipped-script census: 13 SLOW (5 unmeasured) / 14 NEEDS_FIX / 52 permanent across 10 workspaces
+  [yellow] PyAutoArray: PyAutoArray: open PR 7d old
+  [yellow] Release readiness: workspace validation not passing (14 failed, cloud#42607741369: autolens_test scripts/imaging/delaunay.py, autolens_test scripts/imaging/rec…
+  [yellow] HowToFit:behind: behind: 2
+  [yellow] PyAutoEyes:behind: behind: 1
+  [yellow] PyAutoHands:behind: behind: 8
+  [yellow] PyAutoHeart:behind: behind: 2
+  [yellow] PyAutoInsight:behind: behind: 1
+  [yellow] PyAutoMemory:behind: behind: 2
+  [yellow] PyAutoPulse:behind: behind: 1
+  [yellow] autocti_workspace:behind: behind: 2
+  [yellow] autofit_workspace:behind: behind: 2
+  [yellow] autogalaxy_workspace:behind: behind: 2
+  [yellow] autolens_workspace:behind: behind: 2
+  [yellow] PyAutoArray/test_autoarray/inversion/inversion/test_log_det_sparse.py::test__log_det_regularization_matrix_term__vertex_coincident_adapt_split__numpy_matches_j…
+  [yellow] PyAutoArray/test_autoarray/inversion/plot/test_inversion_plotters.py::test__inversion_subplot_of_mapper__is_output_for_all_inversions: yellow
+  [yellow] PyAutoGalaxy/test_autogalaxy/interferometer/model/test_plotter_interferometer.py::test__visualizer__matrix_free_route[True]: yellow
+  [yellow] PyAutoGalaxy/test_autogalaxy/interferometer/test_fit_interferometer.py::test__fit_figure_of_merit__sparse_operator__pixelization_only__jax_jit_matches_numpy: y…
+  [yellow] PyAutoNerves/test_autonerves/test_default.py::test_keep_first: yellow
+  [yellow] Unit-test timing: 6 tests >1.5× baseline, 279 within
+  [yellow] URL hygiene: 2 forbidden pattern(s) in 2 repo(s) (swept 2026-11-04T13:58:45.284480+00:00)
+  [yellow] PyAutoCortex: yellow
+  [yellow] PyAutoPulse: yellow
+```
