@@ -1,5 +1,12 @@
 # Feature introductions and scientific illustrations
 
+## Current scope — supersedes the short-form/image pilot
+
+Human: "Yes this is much better, apply this approach across the features in both workspaces. Keep the teaching detail and only remove repetition. Leave the images for now."
+
+Text-only rollout approved. Keep the fuller MGE teaching model, preserve example-specific explanations, and consolidate only repeated material. Images and root-tour/RTD integration are deferred. Earlier pilot details below are history, not current scope.
+
+
 Repos: @autolens_workspace @autogalaxy_workspace @PyAutoLens @PyAutoGalaxy
 Type: docs
 Consequence: judge
@@ -43,3 +50,17 @@ Issued: 2026-11-10
 - Audit/validation logs: canonical organs/PyAutoMind/tmp/feature_guides_review/ (notebooks.log, navigator_lens.log, navigator_galaxy.log, ast_checks.json, validation.json).
 - Latest README/docs front-door PRs are preserved; no README or library source edits. RTD/library claims still require coordination.
 - Next: human reviews pilot text/figures; then remaining feature families and main-tour/RTD integration. No release, source PR or merge performed.
+
+## Text rollout handoff — 2026-11-10
+
+- Applied across both feature trees: 90 new introductions/choosers (65 AutoLens, 25 AutoGalaxy), including all 11 topic features/ hubs; 9 existing start-here tutorials retain their workflows. Review contains all 99 guides.
+- Consolidated 20 complete repeated conceptual sections / 40 occurrences across 16 examples. Example-specific parameter counts and assumptions remain local; materially different teaching was retained. Added introduction navigation to other examples.
+- Reverted the aggressive pilot trimming. No image, README, root start_here.py or library edits in the current patch; old ignored image experiments remain outside the patch.
+- 278 existing scripts: executable AST and all text outside module introductions unchanged; substantive original introductory paragraphs remain local or are accounted for in the explicit relocation record. Approved MGE teaching supplies its revised general explanation.
+- 90 new narrative scripts execute. Regenerated 368 notebooks and both catalogues through PyAutoHands; existing notebook code cells unchanged. Both navigator/size/whitespace checks pass; all 376 guide links resolve locally.
+- Smoke: AutoLens 42 scripts + 2 notebooks passed; AutoGalaxy 14 scripts + 2 notebooks passed. Initial missing nbformat was resolved in task-local notebook_deps; final notebooks passed without writing back.
+- Evidence: canonical organs/PyAutoMind/tmp/feature_text_rollout/validation.json, moves.json, smoke_summary.json, *_passed.json and execution logs.
+- Review: /mnt/c/Users/Jammy/Workspace/Science/scratch/feature_guides_review_20261110/text_only/index.html (rendered guides, source copies and exact diffs).
+- Workspace branches feature/feature-guides-images at baselines 5827331a / 93ffa50. Text-only patch staged, uncommitted. No source PR opened.
+- Ship gate RED: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure"; "autocti_workspace: Smoke Tests failure on main" (Heart readiness 2026-11-10T20:43:16.413100+00:00).
+- Next: human development-only Heart RED override to commit/push/open the two workspace PRs; merge remains separate human /prm. No source release or merge authorization.

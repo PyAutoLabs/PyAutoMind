@@ -248,5 +248,9 @@
   - autogalaxy_workspace: feature/feature-guides-images
 - prompt: active/feature_introductions_and_images.md
 - tier: judge — merge mode: human /prm
-- scope: review pilot for imaging linear_light_profiles, multi_gaussian_expansion and pixelization; library RTD edits deferred until coordination and pilot approval.
+- scope: text-only teaching introductions across both workspaces; original teaching preserved and shared repetition consolidated; images deferred.
 - approval: human "continue work noting huge updates to READMEs and docs has now been performed in recent PRs"; preserve merged front-door updates.
+
+- text-rollout: 90 new guides/choosers; 9 existing guide workflows retained; 278 existing script executable ASTs unchanged; 368 notebooks regenerated; 56 script + 4 notebook smoke checks passed.
+- review: /mnt/c/Users/Jammy/Workspace/Science/scratch/feature_guides_review_20261110/text_only/index.html
+- next: development-only Heart RED override required for source commit/push/PR; staged local text-only changes complete.
