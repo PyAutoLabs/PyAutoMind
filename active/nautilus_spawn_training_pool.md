@@ -188,3 +188,11 @@ The configured SSH route still fails at jump_finan before RAL. User confirms usi
 Fresh Heart2026-11-10T19:52:15.059564+00:00 RED: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure"; "autocti_workspace: Smoke Tests failure on main". Existing experiment-specific development override retained, outside Pulse and human merge.
 
 Exact-head Actions42890122136 passed all tooling, Ruff, catalogue and link steps for352eafb1ed77813afec36a16d4dfc065f4d65757. No remote run has been attempted.
+
+## RAL access and staging update
+
+The human supplied the working WSL agent socket; per-command SSH_AUTH_SOCK restored access through the existing euclid_jump/jump_finan route without changing keys or configuration. Read-only discovery: Slurm22.05.11, ral OverSubscribe=NO, CR_CORE_MEMORY, task/affinity+task/cgroup, ConstrainCores/ConstrainRAMSpace enabled. Live legacy TRES resource field is now supported at107ec1c7809cd7f4741e3ab48e62e096d3434320 with strict CPU/memory/GPU checks intact;194tests, Ruff/format and exact-head Actions42898804169 all pass. Actual allocation affinity and cgroup enforcement remain to be witnessed.
+
+An isolated task directory under /mnt/ral/jnightin/profiling/autofit_profiling_wt/nautilus-spawn-training-pool holds producer and pinned Fit/Nerves checkouts. Initial local Nerves clone lacked the old tree; fetching its exact revision into the isolated clone resolved that staging error. Shared sources/runtime were not modified. Shared Python3.12.4 and packages differ, so a separate Python3.12.10/pinned runtime is being staged. No job or scientific child submitted; one-job authorization remains unused. Preserve staging logs01/02.
+
+Fresh Heart2026-11-10T20:50:57.253679+00:00 RED: "PyAutoArray: 2 commit(s) behind origin"; "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure"; "autocti_workspace: Smoke Tests failure on main". Existing task-wide development override and explicit RAL amendment remain applicable; no release/merge/CI bypass.
