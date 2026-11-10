@@ -96,3 +96,16 @@
 - prompt: active/howtolens-stored-results.md
 - epic: howto-stored-results (phase 1 of 4: HowToLens ch2 + design gate)
 - tier: judge — merge mode: human /prm
+
+## nautilus-30d-diagnostics
+- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/12
+- issued: 2026-11-10
+- session: OpenAI Codex desktop
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-30d-diagnostics
+- repos:
+  - autofit_profiling: feature/nautilus-30d-diagnostics
+- prompt: active/nautilus_30d_diagnostics.md
+- epic: nautilus-fast-likelihoods (experimental phase 0b.2; outside Pulse)
+- tier: judge — merge mode: human /prm
+- heart-red-override: existing phase-0b implementation/pilot/development-PR override; next bounded plan approved live "continue" 2026-11-10; no merge/release

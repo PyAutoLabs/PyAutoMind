@@ -7,7 +7,9 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: approved
+Status: workspace-dev
+Issued: 2026-11-10
+Issue: https://github.com/PyAutoLabs/autofit_profiling/issues/12
 Filed: 2026-11-10
 Consequence: judge
 Witness: Copied-checkpoint experiments distinguish exploration reuse from target errors and isolate wrapped output costs with durable bounded receipts; original data stays unchanged and all failures remain visible.
