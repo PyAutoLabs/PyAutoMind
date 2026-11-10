@@ -12,7 +12,7 @@
 | [Epics](#epics) | 23 |
 | [In flight](#in-flight) | 8 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 242 |
+| [Backlog](#backlog) | 244 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -1037,7 +1037,23 @@ Use the start-dev skill. draft/feature/autofit/certified_solver_batched_guard_c2
 </details>
 
 <details>
-<summary><b>nautilus-fast-likelihoods</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+<summary><b>nautilus-fast-likelihoods</b> — 3 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+
+<details><summary>📋 <a href="draft/feature/autofit/nautilus_compact_plot_adapter.md">PyAutoFit compact corner array adapter</a> — autofit · supervised</summary>
+
+```
+Use the start-dev skill. draft/feature/autofit/nautilus_compact_plot_adapter.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autofit/nautilus_cpu_checkpoint_batching.md">Nautilus opt-in CPU checkpoint batching</a> — autofit · supervised</summary>
+
+```
+Use the start-dev skill. draft/feature/autofit/nautilus_cpu_checkpoint_batching.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/feature/autofit/nautilus_fast_likelihood_development_epic.md">Nautilus fast likelihood development epic</a> — autofit · too-large · supervised · high</summary>
 
@@ -1232,7 +1248,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 230 · local-dev 6 · ral 4
+Lanes: any 232 · local-dev 6 · ral 4
 
 <a id="human-review"></a>
 <details>
@@ -2731,7 +2747,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-95 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+97 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2739,6 +2755,8 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autoarray/adapt_linear_default_flip.md`
 - `draft/feature/autoarray/rectangular_multi_submesh.md`
 - `draft/feature/autofit/model_figures_epic.md`
+- `draft/feature/autofit/nautilus_compact_plot_adapter.md`
+- `draft/feature/autofit/nautilus_cpu_checkpoint_batching.md`
 - `draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md`
 - `draft/feature/autogalaxy/piemass_potential.md`
 - `draft/feature/autolens/magnification_maps_visualization.md`
@@ -2774,9 +2792,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autogalaxy/wrong_jax_gradient_on_mge_likelihoods_fd.md`
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
 - `draft/bug/autolens/point_source_plot_script_residual_shape_mismatch.md`
-- `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md`
-- `draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md`
-- _… and 55 more_
+- _… and 57 more_
 
 </details>
 

@@ -120,3 +120,13 @@ The human approved implementation and the bounded local pilot despite RED, narro
 Pilot: 26 successes, one fixed-cap timeout, nine unrun; 13 matched tracing pairs and 12 cross-adapter matches. Direct 30D seed 0 reported logZ error −0.9081 despite ESS 9740.4; wrapped 30D control timed out at 120 seconds with no complete fit receipt. These are exploratory findings, not accepted accuracy or an optimization speedup. Full phase 0b remains incomplete.
 
 Next: separately scope high-dimensional evidence accuracy and end-of-fit output cost before expanding dimensions/targets or considering Pulse promotion. No new compute, optimization, merge or release is authorized by this completion record. Existing paused campaigns and parity blockers remain intact.
+
+
+## Proposed first optimization members — 2026-11-10
+
+Human requested implementing the plotting adapter and starting CPU sampler-speed work. Two separate plans are prepared, awaiting approval before library edits/compute:
+
+- [Compact corner array adapter](nautilus_compact_plot_adapter.md): PyAutoFit-owned opt-in path, numerical/visual parity and repeated wrapped-output comparisons; no anesthetic source edits.
+- [CPU checkpoint batching](nautilus_cpu_checkpoint_batching.md): opt-in interval5 versus native interval1, complete atomic snapshots, interruption/resume witnesses and paired5D/10D CPU runs.
+
+Both remain experimental/outside Pulse; fullphase0b is incomplete. The diagnostic PR13 remains unmerged. Default behavior and neural bounds remain; merge stays human. Approval must cover the detailed new resource bounds and extend the development HeartRED override to these phase1library changes; no release/CI bypass.
