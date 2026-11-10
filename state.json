@@ -4,12 +4,12 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 14 in flight",
-  "updated": "2026-11-10T19:43:26Z",
+  "updated": "2026-11-10T19:57:49Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
       "severity": "red",
-      "text": "Nautilus experimental spawn-based training pool \u2014 RAL-amendment-planned (laptop timing stopped; SSH auth blocked; allocation/adapter approval pending)",
+      "text": "Nautilus experimental spawn-based training pool \u2014 RAL-adapter-published (live staging/submission blocked by SSH authentication)",
       "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/17",
       "prompt": "Use the start-dev skill. active/nautilus_spawn_training_pool.md"
     },
