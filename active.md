@@ -180,3 +180,18 @@
 
 - final-experiment: approved quiet-host attempt03 at producer5206f0b/librarye16fba3ee completed20/20 in931.93s, max88.91s/493.1MiB;4exact recovery controls and6exact sampling pairs passed. Native interval1 faster in all6: sampler21.2–48.8%/median28.1% longer with interval5, fullfit15.6–46.6%/median23.8% longer. Checkpoint time2.81–4.44x, syscall bytes2.37–2.62x. Negative result; keep native default, no promotion. Controlled loss200/500completed,0inflight, saved file hashes intact. Reporte1cebf8; all3attempts~120MiB retained. CI exposed existing /proc test reaping race; narrow test-only fix c06cae0. Final exact-head CI42877256638 passed all125tooling/Ruff/format/catalogue/link checks. Both draft PRs remain open for human review; no further compute. No merge/release/Pulse; widerphase0b incomplete.
 - latest-heart: 2026-11-10T18:35:43.930077+00:00 RED: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure"; "PyAutoCTI: 1 uncommitted source change(s)". Existing task-wide live RED development approval retained; unrelated CTI source untouched, no release or CI bypass.
+
+## nautilus-spawn-training-pool
+- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/16
+- issued: 2026-11-10
+- session: OpenAI Codex desktop (session ID unavailable)
+- status: workspace-dev
+- prompt: active/nautilus_spawn_training_pool.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-spawn-training-pool
+- repos:
+  - autofit_profiling: feature/nautilus-spawn-training-pool
+- epic: nautilus-fast-likelihoods (experimental; outside Pulse)
+- tier: judge — merge mode: human /prm
+- heart-red-override: live human approved this bounded experiment despite RED; exact reasons "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure"; "PyAutoCTI: 1 uncommitted source change(s)" (authoritative18:35:43Z). No merge/release/CI bypass.
+- dependency: profiling starts diagnosticPR13 at2c3c0aa, carry c06cae0 test-only race fix. Read-only pinned Fitbdb7af0/Nerves9b204c9 and retained runtime; no installed source edits or dependency upgrade.
+- authorization: max18children/120s/4096MiB each/1800s total including preflight and between-case waits. Four native networks, two spawned training workers, serial likelihood/adaptation. Quiet-host admission and stop-on-first-failure; no retries. No sampling launched yet.

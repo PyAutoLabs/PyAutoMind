@@ -4,7 +4,9 @@ Work type: feature
 Primary: @autofit_profiling
 Read-only dependency: PyAutoFit (not an affected source repository)
 Epic: nautilus-fast-likelihoods
-Status: proposed — implementation and compute await approval
+Status: approved — workspace implementation
+Issued: 2026-11-10
+Issue: https://github.com/PyAutoLabs/autofit_profiling/issues/16
 Consequence: judge
 Witness: Four unchanged native neural networks trained through two spawned workers preserve coefficients/predictions and complete sampler trajectories; interrupted processes clean up and resume exactly; matched full-run timings include pool lifecycle and demonstrate whether any gain survives startup, serialization and teardown.
 Review-minutes: 15
@@ -112,3 +114,7 @@ The automated FeatureDecision classified the text as large/combined (score15), b
 A future production API/integration remains a separate plan even if this experiment succeeds. The July record and Memory methods index were consulted; no GPU/JAX-port assumption or network-removal proposal is imported from historical work.
 
 Published Heart feed checked during planning: "Heart: RED — Release RED; monitoring RED · 11/100 · 138 unresolved (updated 5h ago)". Authoritative readiness receipt2026-11-10T18:35:43.930077+00:00 reports exact RED reasons: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure"; "PyAutoCTI: 1 uncommitted source change(s)". Existing permission is used for this draft's planning only; implementation approval must explicitly cover this new bounded experiment despite RED. No release or failed-check bypass.
+
+## Live implementation approval
+
+Human selected "Approve this bounded experiment" for the18-child/120s/4GiB/1800s experiment despite HeartRED, outside Pulse and human merge. This supersedes the draft pending-approval statements above. No changes to approved scientific configuration or compute limits.
