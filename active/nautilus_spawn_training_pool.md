@@ -118,3 +118,9 @@ Published Heart feed checked during planning: "Heart: RED — Release RED; monit
 ## Live implementation approval
 
 Human selected "Approve this bounded experiment" for the18-child/120s/4GiB/1800s experiment despite HeartRED, outside Pulse and human merge. This supersedes the draft pending-approval statements above. No changes to approved scientific configuration or compute limits.
+
+## Attempt01 and corrective verification
+
+The approved attempt at c9f6d2e passed the fixed-corpus exact training parity and both interrupted/resumed sampling witnesses, then stopped after96.82s at the first timing child: native resume checkpoint pathname absent after successful Fit finalization. Six children passed, one failed, eleven unrun; no complete performance pair. All raw data retained, no retry.
+
+Correction83530ce retains a hard link to the native checkpoint immediately after native.run returns, before normal Fit cleanup. Reopen after workflow timing verifies exact state and unchanged bytes with likelihood calls forbidden. Retention overhead is separately reported and included in full-fit/workflow timings equally; native sampler timing excludes it. Final archive and cleanup behavior, native checkpoint policy, neural networks, sampling settings and compute caps remain unchanged.145tooling tests/Ruff/catalogue pass; runtime correction awaits a fresh human decision under the stop-on-first-failure rule. Proposal: one new quiet-host attempt, same18children/120s/4096MiB/1800s, retain both attempts, outside Pulse, human merge.

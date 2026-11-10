@@ -185,7 +185,7 @@
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/16
 - issued: 2026-11-10
 - session: OpenAI Codex desktop (session ID unavailable)
-- status: waiting-for-quiet-host (implementation published; one approved pilot pending)
+- status: awaiting-rerun-decision (attempt01 halted; correction and report in draft PR17)
 - prompt: active/nautilus_spawn_training_pool.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-spawn-training-pool
 - repos:
@@ -194,11 +194,15 @@
 - tier: judge — merge mode: human /prm
 - heart-red-override: live human approved this bounded experiment despite RED; exact reasons "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure"; "PyAutoCTI: 1 uncommitted source change(s)" (authoritative18:35:43Z). No merge/release/CI bypass.
 - dependency: profiling starts diagnosticPR13 at2c3c0aa, carry c06cae0 test-only race fix. Read-only pinned Fitbdb7af0/Nerves9b204c9 and retained runtime; no installed source edits or dependency upgrade.
-- authorization: max18children/120s/4096MiB each/1800s total including preflight and between-case waits. Four native networks, two spawned training workers, serial likelihood/adaptation. Quiet-host admission and stop-on-first-failure; no retries. No sampling launched yet.
+- authorization: max18children/120s/4096MiB each/1800s total including preflight and between-case waits. Four native networks, two spawned training workers, serial likelihood/adaptation. Quiet-host admission and stop-on-first-failure; no retries. Attempt01 executed once and stopped on its first failure; no rerun launched.
 
 - workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/17
-- validation: c9f6d2e,143tooling tests,Ruff/check-format,catalogue pass; author review only. No scientific runtime yet; preflight is first budgeted child.
+- validation: 83530ce,145tooling tests,Ruff/check-format,catalogue pass; author review only. Six runtime correctness children passed; first timing child failed because Fit finalization removed its resume checkpoint. Correction retains a hard link before cleanup; native sampling/output settings unchanged. Exact-head CI42883149380 green.
 - latest-heart: 2026-11-10T19:02:33.949929+00:00 RED: "PyAutoFit: 6 uncommitted source change(s)"; "PyAutoArray: 1 uncommitted source change(s)"; "PyAutoGalaxy: CI failure"; "PyAutoGalaxy: 5 uncommitted source change(s)"; "PyAutoLens: CI failure"; "PyAutoLens: 9 uncommitted source change(s)"; "PyAutoCTI: 6 uncommitted source change(s)". Live approval covers this bounded development experiment; unrelated canonical dirty sources are not pinned measurement dependencies. No release/merge/CI bypass.
+
+- pilot-start: producer c9f6d2e exact-head CI42881651770 green. Quiet readings0.8862/0.6841/0.4131; one training-pool-01 attempt ran at frozen c9f6d2e.
+
+- pilot-result: halted96.82s,6success/1error/11unrun,0complete timing pairs; exact four-network coefficient/prediction parity and both recovery witnesses passed, control16300evaluations/ESS10020.771588733165. Controlled likelihood loss0/inflight0; training seeds0/1 observed started (workers can advance before kill). Max25.00s/556.9MiB; no live descendants;~17MiB raw data retained. No speedup claim. Correction83530ce needs a new explicit decision for one fresh18-child/120s/4096MiB/1800s quiet-host attempt. No automatic retry, merge or Pulse.
 
 ## readme-frontdoors
 - issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/90
