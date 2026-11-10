@@ -126,26 +126,26 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1762
 - issued: 2026-11-10
 - session: OpenAI Codex desktop
-- status: library-shipped, workspace-pending (pilot01 stopped; corrected harness awaits fresh replay decision)
+- status: awaiting-merge (bounded plotting experiment stopped at host guard; no further compute)
 - prompt: active/nautilus_compact_plot_adapter.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-compact-plot-adapter
-- retained-repos: PyAutoFit and autofit_profiling (feature/nautilus-compact-plot-adapter)
+- retained-repos: PyAutoFit and autofit_profiling (feature/nautilus-compact-plot-adapter); worktrees and raw data retained
 - epic: nautilus-fast-likelihoods (experimental phase1; outside Pulse)
 - tier: judge — merge mode: human /prm
 - heart-red-override: live approval for both plans despite RED; exact reasons "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure". Development/validation/PR only; no merge/release/CI bypass.
 - dependency: profiling branch starts from diagnostic PR13 head2c3c0aa; no automatic base merge. Existing archives retained. Checkpoint member1763 follows sequentially.
-- coding-claim-transfer: same-session transfer to nautilus-checkpoint-batching; plotting source stable, retained uncommitted pending full validation; corrected profiling harness published at3bce28c; coding claims returned to checkpoint member. Plot library e57611dc6 is frozen.
-- validation: 64 plotting tests (exact pixels), 119 tooling tests, Ruff/catalogue pass, isolated smoke 8 scripts + 2 notebooks pass. Full suite stopped on missing Zeus then missing Astropy; separate complete-extras validation environment now running. Archived measurement environment unchanged.
-
-- pilot: attempt01 halted in 2.145s before any child; archived distribution inventory included unrelated autoarray/autogalaxy/autolens metadata via PYTHONPATH; restricted activation omitted those paths. No installed package changed. Preserve strict identity check and restore metadata path exposure in frozen child environments; no automatic replay.
+- coding-claim-transfer: same-session claims return to checkpoint member1763; plotting implementation/report published, no active edits.
+- validation: measured e57611dc6 full suite4298 passes/2skips/1expected failure; final4996f422a65focused passes and exact-head Python3.12/3.13/nojax CI42865681739 green;10smoke cases;121tooling tests/Ruff/catalogue pass. Separate validation extras did not change retained measurement environment.
+- pilot: attempt01 preflight halt2.145s/zero children, metadata paths corrected. Explicitly approved attempt02 at producer3bce28c completed5/6 then host-load guard535.88s total; two complete pairs2.022x/1.344x with identical PNGs, zero sampling and1summary timing call/case. Unpaired third baseline excluded. No retry. Report53ed047; all raw retained. Outside Pulse; full phase0b/evidence accuracy incomplete.
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1764
 - workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/14
 - pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1764
+
 ## nautilus-checkpoint-batching
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1763
 - issued: 2026-11-10
 - session: OpenAI Codex desktop
-- status: library-dev
+- status: library-shipped, workspace-pending (bounded checkpoint pilot running)
 - prompt: active/nautilus_cpu_checkpoint_batching.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-checkpoint-batching
 - repos:
@@ -155,3 +155,8 @@
 - tier: judge — merge mode: human /prm
 - heart-red-override: live approved both plans despite RED; exact current reasons "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure" (2026-11-10T16:45:59.194451+00:00). No merge/release/CI bypass.
 - dependency: independent library baseline bdb7af0; profiling helpers from diagnostic PR13 head2c3c0aa. Plot member retained during validation; no simultaneous performance pilots.
+
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1765
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/15
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1765
+- validation: fullsuite4302passed/2skipped/1expected failure,10smoke cases,124tooling tests/Ruff/catalogue; author review only. Frozen librarye16fba3ee/producerd108719; bounded pilot running.
