@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 23 |
-| [In flight](#in-flight) | 10 |
+| [In flight](#in-flight) | 11 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 242 |
+| [Backlog](#backlog) | 241 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -23,7 +23,7 @@
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 18
+**Highest priority** (filed as `high`) — showing 12 of 17
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -1109,6 +1109,14 @@ Use the start-dev skill. active/howtolens-stored-results.md
 
 </details>
 
+<details><summary>📋 <a href="active/jax_version_policy_and_the_recurring_xla.md">JAX version policy and the recurring XLA:CPU deadlocks: what is the general…</a></summary>
+
+```
+Use the start-dev skill. active/jax_version_policy_and_the_recurring_xla.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/magnification_maps_8d_wiring_pretty.md">Magnification maps 8d: wire into fit subplots and make them pretty</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/818">issue #818</a> — issued 2026-11-02 — library-dev</summary>
 
 ```
@@ -1248,7 +1256,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 230 · local-dev 6 · ral 4
+Lanes: any 230 · local-dev 6 · ral 3
 
 <a id="human-review"></a>
 <details>
@@ -1965,7 +1973,7 @@ Use the start-dev skill. draft/bug/autolens/point_source_plot_script_residual_sh
 </details>
 
 <details>
-<summary><b>research</b> — 24</summary>
+<summary><b>research</b> — 23</summary>
 
 <details><summary>📋 <a href="draft/research/autofit_inference/search_ext_b5c2a_rerun.md"><code>@autofit_inference</code> B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug…</a> — autofit_inference · medium · supervised · high</summary>
 
@@ -1987,14 +1995,6 @@ Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel
 
 ```
 Use the start-dev skill. draft/research/autoarray/delaunay_research.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autonerves/jax_version_policy_and_the_recurring_xla.md">JAX version policy and the recurring XLA:CPU deadlocks: what is the general…</a> — autonerves · too-large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/research/autonerves/jax_version_policy_and_the_recurring_xla.md
 ```
 
 </details>
