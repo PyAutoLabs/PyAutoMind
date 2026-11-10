@@ -1,3 +1,38 @@
+## nautilus-cpu-profiling-baseline
+- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/8
+- completed: 2026-11-10
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/9
+- merge: 6ab7358a9e9ddcbaf14dd31068d1cfb64caf5f89
+- summary: Phase 0a controlled CPU harness and exploratory local pilot merged unchanged. Phase 0b canonical representative-target/dimension campaign remains pending; phase 0 is not complete.
+
+### What shipped
+
+Matched direct Nautilus and PyAutoFit settings, analytic target with value-preserving variable CPU cost, bounded parent/worker timing and reconciled batch identities, independent timing controls, source/configuration manifests, subprocess deadlines, checkpoint/failure witnesses, portable report and catalogue integration. Historical catalogue cells are unchanged. No library defaults, sampler algorithm or optimization changed.
+
+52 selected runs use identical dependency revisions/content; 26 trace/control pairs preserve likelihood counts and posterior hashes. Recovery retains one interrupted attempt and ten successful runs excluded after dependency drift. Pinned detached dependencies: PyAutoFit bdb7af0e9c339ad07850679fd6ac168aacc7d18c; PyAutoNerves 9b204c90c2ce05c5bb0cf3e9800ed13f005c6c56. Measurement source 7110619; final head f602ba42b297ba20677b7128187c1d27c089781a.
+
+### Validation and merge authority
+
+40 tooling tests, Ruff lint/format, four checkpoint/resume witnesses, traced/control worker-death probes, timeout receipt, 26 trace reconciliations, catalogue contract/history and links passed. Author review only; no independent review claimed. Exact-head GitHub run 42815939078: one configured pull_request run, one successful lint job, every step successful. Feature pushes do not trigger another workflow. GitHub reported CLEAN/MERGEABLE; all task commits are ancestors of origin/main after merge.
+
+Live human merge command: "Merge and close phase 0a; retain data". Existing task-specific Heart RED development override remains recorded on issue #8, PR #9 and autonomy_log.md. Readiness was RED at 2026-11-10T12:13:48.638875+00:00: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure". No release or CI bypass occurred.
+
+### Findings and next scope
+
+Neural-network training and geometry dominate this small Gaussian target. Shared-host variability prevents a precise tracing-overhead or multicore-speedup claim. Checkpoint batching is proposed as the next bounded experiment with interruption/resume witnesses; the measured share implies an ideal upper bound about 1.13x direct / 1.10x wrapped. It is not implemented. Phase 0b needs its separately scoped canonical profiling campaign, including dimensions and representative targets.
+
+### Retained workspace and evidence
+
+At the human's explicit request, retain /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-cpu-profiling-baseline, including 206 MB raw output and the isolated environment. No worktree or local branch removal was performed. Source activate.sh before runtime to select the detached dependency pins. The development claim is released; the retained checkout is an evidence archive, not active work.
+
+Human viewing copy: /mnt/c/Users/Jammy/Workspace/Science/scratch/nautilus_plan_review_2026-11-10/phase0a_results/report.html. Repository findings: wiki/campaigns/nautilus_cpu_baseline.md; results: results/analytic_gaussian/nautilus/.
+
+### Backlog reconciliation
+
+Folder-scoped intake reconciliation found no additional prompt proved complete by this merge. Unrelated suspects remain: model_figures_epic.md, results_library_epic.md and ep_analytic_updates.md. A shared-file candidate pairs the Nautilus epic with skip_the_likelihood_for_assertion_violating_samp.md; shared library paths alone do not prove equivalent scope, and phase 0a edits no library source. No sibling was retired. Review separately via `pyauto-brain intake reconcile draft/feature/autofit`.
+
+## Original prompt
+
 # Nautilus CPU profiling baseline
 
 Type: feature

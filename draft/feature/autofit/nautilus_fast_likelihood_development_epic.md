@@ -16,7 +16,7 @@ Repos:
 Difficulty: too-large
 Autonomy: supervised
 Priority: high
-Status: phase 0a awaiting merge (autofit_profiling#9, issue #8); phase 0b campaign pending
+Status: phase 0a merged 2026-11-10 (autofit_profiling#9, issue #8 closed); phase 0b campaign pending
 Epic: nautilus-fast-likelihoods
 Filed: 2026-11-09
 Consequence: judge
@@ -31,7 +31,7 @@ James chose Nautilus development on 2026-11-09: profile and extend Nautilus for 
 
 Preserve Nautilus's demonstrated usefulness for lens modelling while reducing the time spent outside useful likelihood work. Investigate the hypothesis that CPU batches wait on the slowest evaluation; measure both within-chunk imbalance and the final batch barrier. Also measure serial neural training, geometric bounds, serialization, wrapper overhead and checkpointing. Characterise degradation with increasing nonlinear dimension from the start; solving execution overhead does not by itself solve sample efficiency.
 
-This umbrella is never issued wholesale. Start the phase-0 member `active/nautilus_cpu_profiling_baseline.md`; create later small implementation prompts from measured findings, one task/PR at a time. The phase order below is the plan, not approval to start development tonight or a scheduled job tomorrow.
+This umbrella is never issued wholesale. The phase-0a member is complete in `complete/2026/11/nautilus-cpu-profiling-baseline.md` (autofit_profiling#9 merged); create later small implementation prompts from measured findings, one task/PR at a time. The phase order below is the plan, not approval to start development tonight or a scheduled job tomorrow.
 
 ## Ownership and repository boundaries
 
