@@ -162,7 +162,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1763
 - issued: 2026-11-10
 - session: OpenAI Codex desktop
-- status: awaiting-human (pilot halted on receipt serialization; corrected fresh-run decision pending; no merge)
+- status: pilot-running (explicit fresh corrected-run approval; no merge)
 - prompt: active/nautilus_cpu_checkpoint_batching.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-checkpoint-batching
 - retained-repos: PyAutoFit and autofit_profiling (feature/nautilus-checkpoint-batching); all code committed, no active edits, worktrees/raw retained
@@ -174,4 +174,4 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1765
 - workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/15
 - pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1765
-- validation: fullsuite4302passed/2skipped/1expected failure,10smoke cases,125tooling tests/Ruff/catalogue; author review only. Frozen librarye16fba3ee/producerd108719; attempt01 halted after38.12s: interruption success, resume receipt error,18unrun/all timings unrun. Integer serialization fixed in daf0cc6; test portability4e90392, report15afe55. Read-only checkpoint reopening confirmed exact control result with zero likelihood calls and unchanged bytes; failed pilot case remains failed. Fresh run requires pending human decision; no automatic retry.
+- validation: fullsuite4302passed/2skipped/1expected failure,10smoke cases,125tooling tests/Ruff/catalogue; author review only. Frozen librarye16fba3ee/producerd108719; attempt01 halted after38.12s: interruption success, resume receipt error,18unrun/all timings unrun. Integer serialization fixed in daf0cc6; test portability4e90392, report15afe55. Read-only checkpoint reopening confirmed exact control result with zero likelihood calls and unchanged bytes; failed pilot case remains failed. Live human selected "Run corrected checkpoint pilot once". Attempt02 uses clean15afe55 (harness identical to approved daf0cc6), unchanged20children/120s/4096MiB/1800s limits; stop on first failure. Both attempts retained; no merge.
