@@ -68,3 +68,7 @@ Approved for the stated implementation, validation and bounded pilot. No merge/r
 ## Fresh corrected pilot approval — 2026-11-10
 
 Live human selected "Run corrected checkpoint pilot once" after attempt01 receipt serialization failure. One fresh run of corrected harness daf0cc6, unchanged20children/120s/4096MiB each/1800s total, stop on first failure. Clean producer15afe55 contains the identical harness plus test portability and attempt01 report only. Preserve both attempts, outside Pulse, no merge.
+
+## Quiet-host fresh pilot approval — 2026-11-10
+
+Live human: "Try the checkpoint pilot again once the host is quiet, with the same limits. Keep it outside Pulse and leave merge for me." One new attempt03 with the unchanged corrected harness and limits; preserve all attempts, stop on first failure/cap. Wait in this turn for three load readings below1.0 spaced30s, with required memory available; this is a stricter launch condition, not a change to the in-run guard or compute budget.

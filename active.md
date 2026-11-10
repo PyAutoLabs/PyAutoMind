@@ -162,7 +162,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1763
 - issued: 2026-11-10
 - session: OpenAI Codex desktop
-- status: awaiting-human (corrected pilot halted at host-load guard; full experiment incomplete; no further compute)
+- status: waiting-for-quiet-host (one fresh pilot explicitly approved; same limits, no merge)
 - prompt: active/nautilus_cpu_checkpoint_batching.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-checkpoint-batching
 - retained-repos: PyAutoFit and autofit_profiling (feature/nautilus-checkpoint-batching); all code/report committed, raw data/worktrees retained
@@ -175,3 +175,5 @@
 - workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/15
 - pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1765
 - validation: fullsuite4302passed/2skipped/1expected failure,10smoke cases,125tooling tests/Ruff/catalogue; author review only. Frozen librarye16fba3ee/producerd108719; attempt01 halted after38.12s: interruption success, resume receipt error,18unrun/all timings unrun. Integer serialization fixed in daf0cc6; test portability4e90392, report15afe55. Read-only checkpoint reopening confirmed exact control result with zero likelihood calls and unchanged bytes; failed pilot case remains failed. Live human selected "Run corrected checkpoint pilot once". Attempt02 uses clean15afe55 (harness identical to approved daf0cc6), unchanged20children/120s/4096MiB/1800s limits; stop on first failure. Attempt02 halted46.74s at host-load guard after one interruption success44.94s;19unrun including resume/all timings. Saved checkpoint hash unchanged,4600recoverable/4800completed,200lost/0inflight. Report5206f0b, tooling CI42869583879 green; exact library3.12/3.13/nojax CI42867205132 green. Both attempts retained (~15.7MiB); no further compute or merge.
+
+- fresh-pilot-approval: live human "Try the checkpoint pilot again once the host is quiet, with the same limits. Keep it outside Pulse and leave merge for me." Attempt03 authorized once, unchanged harness and20children/120s/4096MiB/1800s caps. Wait for three one-minute-load readings below1.0 spaced30s before launch; no change to in-run2.0 guard. Preserve attempts01/02/03.
