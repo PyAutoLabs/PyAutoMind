@@ -19,12 +19,12 @@ Filed: 2026-11-10
 
 ## Why
 
-PyAutoArray#687 (`feature/simulator-poisson-flag-guard`) made `SimulatorImaging` draw Poisson noise only when it is
+PyAutoArray#687 (merged 2026-11-10 as PR #688; record `complete/2026/11/simulator-poisson-flag-guard.md`) made `SimulatorImaging` draw Poisson noise only when it is
 used, and clip PSF-convolution round-off negatives before the draw. The pipeline carries a guard for the old
 behaviour: euclid_strong_lens_modeling_pipeline PR #87 (issue #77, merge `dc91d9a`). `simulated_image_from`
 convolves the image itself, clips the round-off and passes `image_is_convolved=True`.
 
-**Gate:** start only after PyAutoArray#687 is merged and released, and the pipeline's dependency floor includes that
+**Gate:** PyAutoArray#688 merged 2026-11-10; start only once it is released, and the pipeline's dependency floor includes that
 release.
 
 ## Work
