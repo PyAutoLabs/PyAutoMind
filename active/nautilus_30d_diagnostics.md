@@ -299,5 +299,3 @@ Existing live phase0b Heart RED development/pilot/PR override continues; no new 
 
 Approval boundary
 Workspace AGENTS.md: "Present a plan and wait for explicit user approval before editing any source, workspace script, notebook, test, or release file." This new attribution scope has not yet been approved; read-only source investigation and this plan are complete. Approval would authorize the implementation, synthetic preflight and one bounded diagnostic attempt above, not further optimization or merge.
-
-
