@@ -16,7 +16,7 @@ Repos:
 Difficulty: too-large
 Autonomy: supervised
 Priority: high
-Status: phase 0a merged 2026-11-10 (autofit_profiling#9, issue #8 closed); phase 0b.1 plan awaiting approval; campaign not started
+Status: phase 0a merged 2026-11-10 (autofit_profiling#9, issue #8 closed); experimental phase 0b.1 active (autofit_profiling#10), no Pulse campaign
 Epic: nautilus-fast-likelihoods
 Filed: 2026-11-09
 Consequence: judge
@@ -113,4 +113,6 @@ Resume this epic and start phase 0 only. Read current pins and claims, inspect t
 
 ## Next bounded member — 2026-11-10
 
-Phase 0b.1 planning draft: `draft/feature/autofit_profiling/nautilus_cpu_campaign_setup.md`. It proposes canonical Pulse ownership, dimension-safe reporting and a 36-case, 90-minute local pilot at fixed pins/settings. Human granted planning despite RED only; implementation, execution and development PRs await plan approval. No phase-0b campaign, issue or compute has started. Later high-dimensional and lens stages remain separately gated.
+Phase 0b.1 planning draft: `active/nautilus_cpu_campaign_setup.md`. It proposes canonical Pulse ownership, dimension-safe reporting and a 36-case, 90-minute local pilot at fixed pins/settings. Human granted planning despite RED only; implementation, execution and development PRs await plan approval. No phase-0b campaign, issue or compute has started. Later high-dimensional and lens stages remain separately gated.
+
+Human approved 0b.1 implementation and bounded local pilot under RED on 2026-11-10, narrowing it to experimental off-board work. Pulse campaign registration is deferred at the human's direction; merge remains human.

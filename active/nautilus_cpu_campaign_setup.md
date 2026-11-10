@@ -1,19 +1,20 @@
-# Nautilus CPU campaign setup and dimension pilot — phase 0b.1
+# Nautilus experimental dimension pilot — phase 0b.1
 
 Type: feature
 Target: autofit_profiling
 Repos:
 - autofit_profiling
-- PyAutoPulse
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: awaiting-plan-approval
+Status: workspace-dev
+Issued: 2026-11-10
+Issue: https://github.com/PyAutoLabs/autofit_profiling/issues/10
 Epic: nautilus-fast-likelihoods
 Phase: 0b.1
 Filed: 2026-11-10
 Consequence: judge
-Witness: A canonical Pulse task links an immutable campaign manifest to portable profiling results; dimensions and targets cannot collide or pool silently; a bounded paired direct/wrapped pilot records every attempt and analytic diagnostics without changing historical phase-0a evidence or claiming phase 0b complete.
+Witness: A standalone experimental protocol links an immutable run manifest to portable profiling results; dimensions and targets cannot collide or pool silently; a bounded paired direct/wrapped pilot records every attempt and analytic diagnostics without changing historical phase-0a evidence or claiming phase 0b complete.
 Review-minutes: 10
 Unattended: never
 Lane: local-dev
@@ -22,34 +23,32 @@ Lane: local-dev
 
 User request verbatim: "continue" (after phase 0a merged and closed).
 Clarified live authorization verbatim: "Authorize phase 0b planning despite RED".
-This authorizes planning only. Implementation, local pilot execution and development PRs require approval of the plan below. No remote compute, merge or release is authorized. The phase-0a worktree and raw data remain retained by the human's instruction.
+Implementation approval received 2026-11-10: "Approved. Proceed with phase 0b implementation, the bounded local pilot and development PRs despite Heart RED. Leave merge for human". Scope correction in the same message: "is this a pulse campaign? Feels like for now it can be off to one side its more experimental". This supersedes the original Pulse-registration proposal: keep this experimental in autofit_profiling, with no Pulse registration or automatic catalogue publication. No remote compute, merge or release is authorized. The phase-0a worktree and raw data remain retained by the human's instruction.
 
 ## Ownership and current evidence
 
 Phase 0a: autofit_profiling#9 merged at 6ab7358a9e9ddcbaf14dd31068d1cfb64caf5f89; Mind record complete/2026/11/nautilus-cpu-profiling-baseline.md. Its 52 selected runs / 26 trace-control pairs establish an exploratory five-dimensional baseline, not a dimension campaign. Training and geometry dominate; laptop scatter prevents a precise overhead or speedup claim.
 
-Pulse owns this profiling campaign. Proposed canonical task (NOT YET CREATED): PyAutoPulse/tasks/nautilus_cpu_baseline_campaign.md, ID nautilus_cpu_baseline_campaign, campaign nautilus-fast-likelihoods. Create it with a dedicated campaigns.yaml row after plan approval. Link tasks/autofit_profiling_bootstrap.md as historical context; do not reopen its EP epic or replace its queue. Mind owns only this bounded implementation task and its repo claims.
+This is an off-board experiment at the human's direction. No Pulse campaign/task/registry/board change. Keep evidence under experiments/nautilus_cpu_dimensions/ outside build_catalogue discovery. Mind owns the bounded development issue and claim. Promotion into Pulse is a later explicit decision; historical Pulse/Insight links are context only.
 
 Insight owns existing full-search validation protocols. Read-only reuse/context: PyAutoInsight/tasks/correlated_nd_pilot.md and autofit_inference/wiki/project/protocol_correlated_nd.md. The historical condition-number-1000 Gaussian family at dimensions 20/50/100 and Rosenbrock d20 is DIFFERENT from phase 0a's AR(0.6) Gaussian with normal priors. Its old-pin d100 Nautilus failures, d50 OOMs and four-hour caps are hazard evidence, not measurements of the proposed new family or proof the current stack fails. Do not revive the separate 12,450-run scored wave or paused HST waves.
 
 ## High-level plan
 
-1. Register a separate canonical Pulse campaign/task, linking phase 0a, this bounded member, existing Insight protocols and explicitly deferred follow-on work.
+1. Record a standalone experimental protocol and immutable local run plan, linking phase 0a and the relevant historical protocols; leave Pulse untouched.
 2. Extend the existing profiling harness with a versioned campaign manifest, complete case identity and safe attempt/resume accounting. Preserve all phase-0a commands and results.
 3. Make report grouping and output names dimension/target/settings aware; reject duplicate identities, mixed source pins and incomplete pairs instead of overwriting or pooling them.
 4. Run a bounded local dimension pilot only after implementation approval: dimensions 5/10/30, three seeds, direct and wrapped, traced and control, fixed settings and one worker. Publish failures, missing diagnostics and variability alongside successes.
 5. Prepare the resource-gated next stages for 60/100/200 dimensions, representative targets and worker comparisons; do not execute them or optimize the sampler in this task.
-6. Validate and open the two reviewable development PRs, Pulse ownership first and then producer evidence. Phase 0b stays active/pending after this member; no complete-phase claim until its required dimension and representative-target evidence is reviewed.
+6. Validate and open one reviewable autofit_profiling development PR; keep experiment evidence outside the published catalogue. Phase 0b stays active/pending after this member; no complete-phase claim until its required dimension and representative-target evidence is reviewed.
 
-Tier: judge — merge mode: human /prm. The planning RED override is not implementation/shipping or merge authority; approval must explicitly extend the development scope. No release, GPU or HPC submission.
+Tier: judge — merge mode: human /prm. The live RED override authorizes implementation, the bounded local pilot and a development PR. Merge remains separately human-authorized. No release, GPU or HPC submission.
 
 ## Detailed implementation
 
-### A. Canonical campaign and protocol
+### A. Standalone experimental protocol
 
-PyAutoPulse/tasks/nautilus_cpu_baseline_campaign.md and campaigns.yaml: add a planned campaign/task with reviewed date, stable ID, primary producer, scope, phase table, dependencies, expected evidence, budget and links to the old bootstrap and Insight tasks. Keep all unrelated statuses and last full-check-in timestamps unchanged. Rebuild the board with bin/pyauto-pulse board --offline and validate with check --offline. No schema/registry change is needed: fit already reads profiling-summary@2.
-
-Producer wiki/campaigns/nautilus_cpu_campaign.md: freeze nautilus-cpu-campaign@1 before measurements; distinguish exploration, execution outcome and scientific acceptance. Link the canonical Pulse task after it exists. Add a small phase status table; the report never marks a phase complete automatically.
+Write experiments/nautilus_cpu_dimensions/README.md and protocol.json before measurement. The nautilus-cpu-experiment@1 protocol distinguishes exploration, execution outcome and scientific acceptance. Store its plan/results/report here outside results/ and dashboard discovery. Link it from the producer README as experimental evidence. Do not touch Pulse source, registry, tasks or snapshots, and do not regenerate or publish the production catalogue from these experimental rows.
 
 ### B. Manifest and runner
 
@@ -105,21 +104,23 @@ A correctness/configuration/source/accounting failure halts immediately. A timeo
 - Stdlib tests: manifest determinism, unique IDs across dimensions/settings, immutable resume, every terminal status, multiple attempts and duplicate rejection, budget/memory guards and pair coverage.
 - Regression tests: multi-dimension report separation, no silent pair overwrite, mismatched/partial traces rejected for overhead, source pin equality independent of checkout path, historical catalogue byte/semantic preservation.
 - Full-stack smoke: existing resume/watchdog probes plus one new campaign case on the fixed pins; process-tree termination and receipt verified in a small subprocess fixture. Never depend on a real OOM for a test.
-- Ruff lint/format, focused and full tooling suites, catalogue --check --validate-with the pinned Pulse reader, link checks; Pulse tests and offline checks. Preserve all previously committed measurements.
+- Ruff lint/format, focused and full tooling suites, catalogue --check --validate-with the pinned Pulse reader, link checks; verify the production catalogue remains unchanged. Preserve all previously committed measurements.
 - Publish protocol, immutable plan, all attempt receipts, selected-case mapping, report and resource summary. Producer records stay unreviewed. No speedup or phase-completion claim inferred from successful exit codes.
 
 ## Branch and claim survey — 2026-11-10
 
-Proposed branch: feature/nautilus-cpu-campaign-setup (both repositories).
+Branch: feature/nautilus-cpu-campaign-setup (autofit_profiling only).
 Proposed worktree root: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-cpu-campaign-setup.
-Primary issue: autofit_profiling, title "feat: prepare Nautilus CPU campaign and dimension pilot"; not created yet. Pulse PR links the same bounded task and canonical campaign.
+Primary issue: autofit_profiling, title "feat: add experimental Nautilus dimension pilot"; create through the Mind primitive.
 
 No active Mind claim conflicts for autofit_profiling/PyAutoPulse. Main autofit_profiling is clean and behind the merged phase-0a head; create the new worktree from current origin/main, never reuse the retained phase-0a evidence worktree. Pulse main has untracked tmp/ and is behind generated dashboard commits; preserve it and use an isolated worktree. An older unregistered Pulse check-in worktree also exists; do not remove or alter it. Insight and inference/lens repos are read-only context in this member. Recheck claims/branches at implementation start.
 
 ## Planning gate record
 
-Read-only start_dev entry feed: "Heart: RED — Release RED; monitoring RED · 11/100 · 143 unresolved (updated 23h ago)". The full entry output is saved with the human planning bundle; all RED reasons were shown in chat. User authorized phase-0b planning only. No new implementation tests are claimed. On implementation approval, carry the exact task-scoped authorization and current applicable evidence into issue, PR, active.md and the first autonomy-log table under the canonical workflow.
+Read-only start_dev entry feed: "Heart: RED — Release RED; monitoring RED · 11/100 · 143 unresolved (updated 23h ago)". The full entry output is saved with the human planning bundle; all RED reasons were shown in chat. User subsequently authorized implementation, bounded local pilot and development PRs, with Pulse registration removed. No new implementation tests are claimed yet. Carry the exact task-scoped authorization and current applicable evidence into issue, PR, active.md and the first autonomy-log table under the canonical workflow.
 
 ## Feature routing receipt
 
 Brain feature classified this as workspace development affecting autofit_profiling and PyAutoPulse. Its declared medium classification wins over the derived too-large heuristic (the long document includes deferred later campaign scope). The executable member is only campaign registration, manifest/report changes, guards and the 36-case Gaussian pilot; later target/worker/HPC stages are excluded. No public library API change is planned. Memory was consulted; historical sampler notes do not override current protocol/fixture evidence.
+
+The user's experimental-scope correction overrides all earlier canonical-campaign routing requirements for this member. No further permission is required to implement this narrower approved scope.
