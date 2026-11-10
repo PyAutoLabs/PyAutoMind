@@ -12,6 +12,7 @@ Difficulty: too-large
 Autonomy: supervised
 Priority: high
 Status: formalised
+Issued: 2026-11-10
 Consequence: glance
 Witness: a written recommendation (one policy covering JAX version range + any default XLA flags) backed by a repro matrix: each candidate jax/jaxlib version x flag setting, run on the laptop and a RAL CPU node, records hang / no-hang over N repeated calls of the known reproducers, plus per-call cost of the flag on at least one MGE and one pixelized likelihood.
 Review-minutes: 3
