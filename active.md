@@ -44,6 +44,7 @@
 - tier: judge — merge mode: human /prm
 - merged: euclid#119 (catalogue parity `_EmptyRow` stub hotfix, human-authorized 2026-11-05 under this claim) 2026-11-05
 - 2d-plan: APPROVED by human 2026-11-03 ~18:10 (not started; nothing written yet). scripts/tools/render_north_up.py on branch feature/sky-orientation-p2d: read each zip's image/dataset.fits + files/tracer.json + image/adapt_images.fits + image/adapt_image_plane_mesh_grids.fits; flipud arrays/adapt images, mesh grid + positions y->-y, tracer via sky_frame.plus_y_north_from; re-solve FitImaging at max-L (no search); WITNESS log-L == stored to ~1e-6 every lens, data panel vs rgb_north_up.jpg, positions on arcs; library subplot_fit + image_with_positions, util.subplot_rgb on rgb_north_up.jpg, segmentation from FITS, fit_multi_wavelength per band from output_sed; N/E compass. Pilot ~50 (paper lenses + grade-stratified random + asymmetric) as 2-CPU/5GB ral jobs -> inspect/north_up_pilot_20261103/ + side-by-side review page. Then full run, re-package, 2b docs; R2 upload last.
+- merged: euclid#122 (RGB-panel compass + release docs) 2026-11-10 (fbfd7a3); ECLIPSE#6 downloads.json (5d3d68a). Re-render 414683, release 414768 (SHA 26/26), R2 re-upload 414791 + per-lens 414790 (0 differences). Phase 2 COMPLETE; #115 open for phases 3-5. Worktree removed.
 
 ## results-library-p5a-assistant
 - issue: https://github.com/PyAutoLabs/autolens_assistant/issues/176
