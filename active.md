@@ -215,7 +215,7 @@
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/16
 - issued: 2026-11-10
 - session: OpenAI Codex desktop (session ID unavailable)
-- status: approved-not-launched (quiet-host watch ended without admission; approval retained)
+- status: RAL-amendment-planned (laptop timing stopped; SSH auth blocked; allocation/adapter approval pending)
 - prompt: active/nautilus_spawn_training_pool.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-spawn-training-pool
 - repos:
@@ -237,3 +237,6 @@
 - corrected-pilot-approval: live human selected "Run corrected pilot once" at83530ce. One fresh training-pool-02 attempt after quiet-host gate, same18children/120s/4096MiB/1800s; retain both, outside Pulse, human merge.
 
 - corrected-pilot-admission: bounded quiet-host-02 watch ended without three consecutive readings below1.0; no training-pool-02 directory or child launched,0s pilot budget consumed. Approval remains valid for one corrected attempt at83530ce. Retained .session/quiet-host-02.jsonl and summary, no background watch.
+
+- RAL-direction: live human "yeah we should be doing the real timing on RAL". Do not resume laptop quiet admission. Proposed one exclusive ral CPU-node job, four bound physical cores,8GiB/35min scheduler cap; original18children/120s/4GiB/1800s scientific limits. Same issue16/PR17; no source edits or job submission yet.
+- RAL-blocker: configured jump_finan authentication rejected publickey/password/keyboard-interactive before reaching RAL; remote topology/runtime unverified. Concrete amendment saved in active/nautilus_spawn_training_pool.md for approval; no credential/config edits.
