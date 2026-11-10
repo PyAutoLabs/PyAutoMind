@@ -1,3 +1,44 @@
+## nautilus-cpu-campaign-setup
+- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/10
+- completed: 2026-11-10
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/11
+- merge: 62e67ccf2942778f2493f70a9752e8d884bc3c43
+- summary: Experimental phase 0b.1 implementation and bounded local pilot merged unchanged. Full phase 0b remains incomplete and outside Pulse; no promotion, new run or optimization is authorized by this close-out.
+
+### Scope delivered
+
+An immutable 36-case dimension experiment, full target/settings/environment identity, guarded subprocess execution, durable attempt/resume accounting and off-board reporting. Report groups cannot silently collide across dimensions; duplicate selected identities are refused, and missing pairs are counted even when neither member succeeded. Sampled Linux process-group RSS and wall caps retain terminal receipts. Historical phase-0a results and the published catalogue remain unchanged.
+
+Per the human's correction, no Pulse task, campaign, registry or board change. Protocol, frozen plan, every attempt receipt and report live in experiments/nautilus_cpu_dimensions/. The proposed canonical campaign registration was superseded by the human's explicitly experimental scope.
+
+### Measurements and limits
+
+The pilot ran for 940.7 seconds including runtime preflight: 26 successes, one 120-second timeout, nine unrun cases. All 13 available trace/control pairs and 12 cross-adapter pairs match posterior hashes, likelihood counts and native run-call cadence. All 13 selected detailed timelines reconcile. Five of 18 planned tracing pairs remain incomplete.
+
+Control wall medians at 5D/10D: direct 12.96/21.01 seconds, wrapped 15.92/34.39 seconds (three seeds each). The single direct 30D seed completed in 92.83 seconds with 34,100 calls and ESS 9740.4, yet logZ error was −0.9081 against analytic truth. Tracing preserves that discrepancy. High ESS and termination do not establish accuracy. The wrapped 30D control hit its unchanged 120-second subprocess cap; final logs showed output/update work, but no completed fit receipt exists. No retry, cap increase or larger-dimension run followed.
+
+Local host load was monitored, not exclusively reserved. RSS is sampled every 50 ms and can miss short spikes or count shared pages repeatedly. No optimization-speedup, calibrated inference-accuracy or wider phase-0b completion claim. Future work needs a separately scoped correctness/output-cost investigation before expansion or promotion.
+
+### Validation and merge authority
+
+66 tooling tests, Ruff lint/format, full-stack analytic-target checks, four direct/wrapped × one/two-worker resume witnesses, traced/control worker death, actual timeout/memory termination, manifest/resume/coverage tests, unchanged catalogue/history and links passed. Author review only; no independent review claimed.
+
+Approved head 64f47d8f5838f531a616859e8f101b4f055955c1. Measurement code 544bc89; subsequent changes report wholly missing pairs and publish evidence. All configured CI passed: pull_request run 42826630732, one lint job, every step successful. Feature pushes do not trigger another run. PR was CLEAN/MERGEABLE; all task commits are ancestors of origin/main after merge.
+
+Live merge command: "Merge and close; retain data". Existing implementation/pilot/development-PR authorization and exact Heart RED entry reasons remain on issue #10, PR #11 and autonomy_log.md. Latest ship readiness: RED at 2026-11-10T13:36:55.589793+00:00, "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure". No release, CI bypass or readiness-clearance claim.
+
+### Retained evidence
+
+Human explicitly requested retention of /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-cpu-campaign-setup. It contains the clean feature worktree, about 180 MB of raw output under autofit_profiling/output/nautilus-dimensions/, isolated .venv and detached PyAutoFit bdb7af0e9c339ad07850679fd6ac168aacc7d18c / PyAutoNerves 9b204c90c2ce05c5bb0cf3e9800ed13f005c6c56 dependencies. Source activate.sh before runtime. No worktree/local branch removal was performed. The development claim is released; the retained checkout is an evidence archive, not an active task.
+
+Human viewing copy: /mnt/c/Users/Jammy/Workspace/Science/scratch/nautilus_phase0b_plan_2026-11-10/results/report.html. The earlier planning proposal in the same scratch folder is historical; RESUME.txt records the final experimental scope.
+
+### Backlog reconciliation
+
+The autofit_profiling folder reconciles cleanly. The neighboring autofit folder retains unrelated model_figures_epic, results_library_epic and ep_analytic_updates suspects, plus the Nautilus epic / skip_the_likelihood_for_assertion_violating_samp shared-file candidate. This experimental harness merge proves none of those broader tasks complete; no sibling was retired. Review separately via `pyauto-brain intake reconcile draft/feature/autofit`.
+
+## Original prompt
+
 # Nautilus experimental dimension pilot — phase 0b.1
 
 Type: feature

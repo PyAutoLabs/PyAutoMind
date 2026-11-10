@@ -16,7 +16,7 @@ Repos:
 Difficulty: too-large
 Autonomy: supervised
 Priority: high
-Status: phase 0a merged 2026-11-10 (autofit_profiling#9, issue #8 closed); experimental phase 0b.1 at PR (autofit_profiling#11, issue #10), no Pulse campaign
+Status: phase 0a merged 2026-11-10 (autofit_profiling#9, issue #8 closed); experimental phase 0b.1 merged (autofit_profiling#11, issue #10 closed), wider phase 0b incomplete; no Pulse campaign
 Epic: nautilus-fast-likelihoods
 Filed: 2026-11-09
 Consequence: judge
@@ -111,10 +111,12 @@ Resume this epic and start phase 0 only. Read current pins and claims, inspect t
 
 <!-- formalised by the Intake (Conception) Agent on 2026-11-09 from file:nautilus_epic_input.md -->
 
-## Next bounded member — 2026-11-10
+## Experimental phase 0b.1 — merged 2026-11-10
 
-Phase 0b.1 planning draft: `active/nautilus_cpu_campaign_setup.md`. It proposes canonical Pulse ownership, dimension-safe reporting and a 36-case, 90-minute local pilot at fixed pins/settings. Human granted planning despite RED only; implementation, execution and development PRs await plan approval. No phase-0b campaign, issue or compute has started. Later high-dimensional and lens stages remain separately gated.
+Completion record: `complete/2026/11/nautilus-cpu-campaign-setup.md`. PR autofit_profiling#11 merged unchanged at 62e67ccf2942778f2493f70a9752e8d884bc3c43 after explicit human merge authorization and every configured CI step passed; issue #10 is closed.
 
-Human approved 0b.1 implementation and bounded local pilot under RED on 2026-11-10, narrowing it to experimental off-board work. Pulse campaign registration is deferred at the human's direction; merge remains human.
+The human approved implementation and the bounded local pilot despite RED, narrowing it to experimental off-board work. That correction supersedes canonical Pulse registration for this member. No Pulse task, campaign, registry or catalogue publication occurred. The worktree and raw data are retained by explicit request.
 
-Experimental 0b.1 at PR #11: 26 successes, one fixed-cap timeout, nine unrun; phase 0b remains incomplete. Evidence is deliberately outside the published catalogue/Pulse queue. Next after review: separately scope higher-dimensional accuracy and output-cost investigations; no automatic compute or optimization.
+Pilot: 26 successes, one fixed-cap timeout, nine unrun; 13 matched tracing pairs and 12 cross-adapter matches. Direct 30D seed 0 reported logZ error −0.9081 despite ESS 9740.4; wrapped 30D control timed out at 120 seconds with no complete fit receipt. These are exploratory findings, not accepted accuracy or an optimization speedup. Full phase 0b remains incomplete.
+
+Next: separately scope high-dimensional evidence accuracy and end-of-fit output cost before expanding dimensions/targets or considering Pulse promotion. No new compute, optimization, merge or release is authorized by this completion record. Existing paused campaigns and parity blockers remain intact.
