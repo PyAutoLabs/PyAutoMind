@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 23 |
-| [In flight](#in-flight) | 12 |
+| [In flight](#in-flight) | 13 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 241 |
+| [Backlog](#backlog) | 243 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -1165,6 +1165,14 @@ Use the start-dev skill. active/nautilus_spawn_training_pool.md
 
 </details>
 
+<details><summary>📋 <a href="active/readme_frontdoors.md">Public README and root cleanup</a> — <a href="https://github.com/PyAutoLabs/PyAutoScientist/issues/90">issue #90</a> — issued 2026-11-10 — documentation-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/821">PyAutoLens#821</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/697">PyAutoGalaxy#697</a>, <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1766">PyAutoFit#1766</a>, <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/686">PyAutoArray#686</a>, <a href="https://github.com/PyAutoLabs/PyAutoCTI/pull/127">PyAutoCTI#127</a>, <a href="https://github.com/PyAutoLabs/PyAutoReduce/pull/83">PyAutoReduce#83</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/625">autolens_workspace#625</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/272">autogalaxy_workspace#272</a>, <a href="https://github.com/PyAutoLabs/autofit_workspace/pull/183">autofit_workspace#183</a>, <a href="https://github.com/PyAutoLabs/autocti_workspace/pull/48">autocti_workspace#48</a>, <a href="https://github.com/PyAutoLabs/autoreduce_workspace/pull/7">autoreduce_workspace#7</a>, <a href="https://github.com/PyAutoLabs/HowToLens/pull/133">HowToLens#133</a>, <a href="https://github.com/PyAutoLabs/HowToGalaxy/pull/106">HowToGalaxy#106</a>, <a href="https://github.com/PyAutoLabs/HowToFit/pull/78">HowToFit#78</a>, <a href="https://github.com/PyAutoLabs/PyAutoScientist/pull/91">PyAutoScientist#91</a>, <a href="https://github.com/PyAutoLabs/.github/pull/44">.github#44</a>, <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/552">PyAutoMind#552</a></summary>
+
+```
+Use the start-dev skill. active/readme_frontdoors.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/results_library_p5a_assistant.md">Issued: 2026-11-02</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/176">issue #176</a> — issued 2026-11-02 — workspace-shipped, awaiting-merge (judge → human /prm; wiki-currency waits on a PyAutoFit release) — PRs: <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/177">autolens_assistant#177</a></summary>
 
 ```
@@ -1264,7 +1272,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 230 · local-dev 6 · ral 3
+Lanes: any 232 · local-dev 6 · ral 3
 
 <a id="human-review"></a>
 <details>
@@ -1315,7 +1323,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 31</summary>
+<summary><b>feature</b> — 32</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
 
@@ -1553,6 +1561,14 @@ Use the start-dev skill. draft/feature/autoarray/adapt_linear_default_flip.md
 
 ```
 Use the start-dev skill. draft/feature/cortex/output_summary.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/routine_public_repository_review.md">Routine review of public repository entry points</a> — pyautobrain</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/routine_public_repository_review.md
 ```
 
 </details>
@@ -2367,7 +2383,7 @@ Use the start-dev skill. draft/docs/howtolens/tutorial_correctness_and_howtogala
 </details>
 
 <details>
-<summary><b>maintenance</b> — 12</summary>
+<summary><b>maintenance</b> — 13</summary>
 
 <details><summary>📋 <a href="draft/maintenance/autocti/cti_upkeep_epic.md">CTI upkeep parity — bring PyAutoCTI and its satellites to the same…</a> — autocti · too-large · human-required · high</summary>
 
@@ -2461,6 +2477,14 @@ Use the start-dev skill. draft/maintenance/autolens_workspace/remeasure_shapelet
 
 ```
 Use the start-dev skill. draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autocti/legacy_root_notes_followup.md">Review unresolved CTI questions from retired root notes</a> — autocti</summary>
+
+```
+Use the start-dev skill. draft/maintenance/autocti/legacy_root_notes_followup.md
 ```
 
 </details>
@@ -2660,6 +2684,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | Date | Event | Task |
 |------|-------|------|
 | 2026-11-10 | issued | <a href="active/nautilus_compact_plot_adapter.md">PyAutoFit compact corner array adapter</a> |
+| 2026-11-10 | issued | <a href="active/readme_frontdoors.md">Public README and root cleanup</a> |
 | 2026-11-10 | issued | <a href="active/nautilus_cpu_checkpoint_batching.md">Nautilus opt-in CPU checkpoint batching</a> |
 | 2026-11-10 | issued | <a href="active/nautilus_spawn_training_pool.md">Nautilus experimental spawn-based training pool</a> |
 | 2026-11-10 | issued | <a href="active/nautilus_30d_diagnostics.md">Nautilus 30D evidence and output diagnostics</a> |
@@ -2668,12 +2693,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-09 | filed | <a href="draft/research/autolens_profiling/critical_curve_oracle_find_the_regime_where.md">Critical-curve oracle: find the regime where zero-contour beats…</a> |
 | 2026-11-09 | filed | <a href="draft/research/autolens/cluster_figure_critical_curves_miss_member_curves.md">Cluster figures miss small member-galaxy critical curves</a> |
 | 2026-11-06 | filed | <a href="draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md">Zero-contour critical curves: compile once per run by passing the…</a> |
-| 2026-11-06 | filed | <a href="draft/research/autolens_profiling/visualization_run_time_campaign_measure_and_opti.md">Visualization run-time campaign: measure and optimize modeling-run…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-06 | filed | <a href="draft/research/autolens_profiling/visualization_run_time_campaign_measure_and_opti.md">Visualization run-time campaign: measure and optimize modeling-run…</a> |
 | 2026-11-06 | issued | <a href="active/howtolens-stored-results.md">HowTo series: ship stored fit results so notebooks run without…</a> |
 | 2026-11-05 | filed | <a href="draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md">autofit: Samples.with_paths / without_paths break on factor-graph…</a> |
 | 2026-11-05 | filed | <a href="draft/feature/autolens_profiling/write_compile_repeats_from_autolens_profiling_s.md">Write <code>compile_repeats</code> from autolens_profiling's jax_compile tooling…</a> |
@@ -2683,12 +2708,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-04 | issued | <a href="active/autonomous_orchestrators_p4c_pilot_run.md">Autonomous orchestrators phase 4c: run the Dev orchestrator pilot…</a> |
 | 2026-11-02 | filed | <a href="draft/research/autolens_profiling/unexplained_gradient_gaps_cpu_sparse_delaunay_and_mge.md">Unexplained autodiff-vs-FD gaps in the phase-6 gradient records…</a> |
 | 2026-11-02 | issued | <a href="active/magnification_maps_8d_wiring_pretty.md">Magnification maps 8d: wire into fit subplots and make them pretty</a> |
-| 2026-11-02 | issued | <a href="active/results_library_p5a_assistant.md">Issued: 2026-11-02</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-02 | issued | <a href="active/results_library_p5a_assistant.md">Issued: 2026-11-02</a> |
 | 2026-11-02 | filed | <a href="draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md">Imaging sparse-operator path gives a very different log L from dense…</a> |
 | 2026-11-02 | issued | <a href="active/gradient_correctness_sweep.md">Gradient-correctness sweep: triage and investigate every open…</a> |
 | 2026-10-31 | issued | <a href="active/sky_orientation_euclid_dr1_and_library.md">Sky orientation (north/east): euclid_dr1 catalogue, paper and…</a> |
@@ -2698,12 +2723,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-25 | filed | <a href="draft/bug/health_fixes/ci_timing_execution_coverage.md">CI timing must compare equivalent executed job coverage</a> |
 | 2026-10-23 | filed | <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred…</a> |
 | 2026-10-23 | filed | <a href="draft/bug/autolens_profiling/stale_auto_simulated_cluster_dataset.md"><code>@autolens_profiling</code> stale auto-simulated <code>dataset/cluster/simple</code>…</a> |
-| 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
 | 2026-10-21 | filed | <a href="planned.md#interferometer-primary-beam-persistence-mirror">interferometer-primary-beam-persistence-mirror</a> |
 | 2026-10-21 | filed | <a href="draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md">PyAutoLens mirror of the interferometer primary-beam persistence…</a> |
 | 2026-10-21 | filed | <a href="draft/docs/autolens_profiling/positions_source_jacobian_default_rerun_note.md">Note in autolens_profiling that plain source-plane lane values…</a> |
@@ -2713,12 +2738,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-21 | filed | <a href="draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md">Cluster likelihood scripts: image-plane manual check disagrees with…</a> |
 | 2026-10-16 | filed | <a href="draft/maintenance/autolens_workspace/remeasure_shapelets_slow_park.md">Re-measure the shapelets/modeling.py SLOW park (#586) under the…</a> |
 | 2026-10-14 | filed | <a href="draft/test/autofit/workspace_searches_scripts_preexisting_failures.md"><code>@autofit_workspace</code> six <code>searches/</code> scripts fail on main at…</a> |
-| 2026-10-14 | filed | <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-10-14 | filed | <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> |
 | 2026-10-08 | filed | <a href="draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md"><code>JAX_ENABLE_X64=False</code> is overridden to True, so the fp32 inference…</a> |
 | 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
 | 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
@@ -2728,7 +2753,6 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
 | 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
-| 2026-09-29 | filed | <a href="draft/bug/autogalaxy/ellipse_plotter_fit_ellipse_overwrites.md"><code>PlotterEllipse.fit_ellipse</code> writes every variant to…</a> |
 
 </details>
 
@@ -2755,7 +2779,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-95 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+97 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2776,6 +2800,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/jax_substructure/5_prng_key_vmap_noise.md`
 - `draft/feature/jax_substructure/6_deflection_equivalence_test.md`
 - `draft/feature/pyautobrain/autonomous_orchestrators_epic.md`
+- `draft/feature/pyautobrain/routine_public_repository_review.md`
 - `draft/feature/pyautobrain/shift_watcher_in_the_cloud.md`
 - `draft/feature/pyautobroca/broca_communication_contract.md`
 - `draft/feature/pyautobroca/broca_communication_documentation_and_workspaces.md`
@@ -2799,8 +2824,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
 - `draft/bug/autolens/point_source_plot_script_residual_shape_mismatch.md`
 - `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md`
-- `draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md`
-- _… and 55 more_
+- _… and 57 more_
 
 </details>
 

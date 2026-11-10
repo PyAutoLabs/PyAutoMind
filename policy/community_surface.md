@@ -49,8 +49,9 @@ alternatives:
   repeats the bulking problem: six thin boards instead of one live one.
 - *An external forum or chat (Discourse, Zulip, Discord, the Slack).* Another
   service to run and moderate, invisible to a search engine or to someone
-  arriving from the README, and a second login. The Slack stays what it is —
-  invitation-only, for collaborators — and is not the public surface.
+  arriving from the README, and a second login. Slack is open to everyone for
+  community conversation; GitHub Discussions remains the searchable hub for
+  questions, ideas and their resolutions.
 - *Hosting the hub on PyAutoLens.* It already has Discussions on (since
   2026-07-10, one Announcements thread) and is where most users are, but
   every thread's URL would read `PyAutoLabs/PyAutoLens/discussions/N`, which
@@ -135,13 +136,13 @@ hub is `COMMUNITY_HUB` in the conductor (default `PyAutoLabs/.github`).
 ### 4. What the READMEs and the front door say
 
 Every user-facing README's **Community & Support** section, and the
-pyautolabs.github.io front door, say the two sentences in this order:
+pyautolabs.github.io front door, use this shared wording:
 
 > Questions, help with your code or your analysis, and ideas: the
 > [PyAutoLabs Discussions](https://github.com/orgs/PyAutoLabs/discussions).
 > Bug reports with a reproducer (a snippet, the traceback, your versions):
-> an issue on the library's tracker. The Slack is for collaborators, by
-> invitation.
+> an issue on the library's tracker. Everyone is welcome to
+> [join the PyAutoLabs Slack](https://join.slack.com/t/pyautolens/shared_invite/zt-2cufp4eyf-fXfgMxRGuvg~bMrI3uOAxg) for community conversation.
 
 Follow-ups filed: `draft/docs/workspaces/support_sections_point_to_discussions.md`
 (the seven READMEs and issue choosers) and
