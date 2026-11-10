@@ -199,7 +199,7 @@
 ## readme-frontdoors
 - issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/90
 - issued: 2026-11-10
-- status: documentation shipping
+- status: documentation-shipped, awaiting-merge
 - session: Codex desktop; approved local cleanup
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/readme-frontdoors
 - prompt: active/readme_frontdoors.md
@@ -226,3 +226,20 @@
 - heart-red-override: same-conversation human "I approve you to bypass and continue"; current "put PRs up for this work and prm".
   - current-reasons: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure"; "PyAutoCTI: 1 uncommitted source change(s)" (2026-11-10T18:35:43.930077+00:00).
   - gates: approved prose review; local links, root Python syntax and whitespace pass. No science API changes; science suites not rerun. No release or CI bypass.
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/821
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/697
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1766
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/686
+- library-pr: https://github.com/PyAutoLabs/PyAutoCTI/pull/127
+- library-pr: https://github.com/PyAutoLabs/PyAutoReduce/pull/83
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/625
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/272
+- workspace-pr: https://github.com/PyAutoLabs/autofit_workspace/pull/183
+- workspace-pr: https://github.com/PyAutoLabs/autocti_workspace/pull/48
+- workspace-pr: https://github.com/PyAutoLabs/autoreduce_workspace/pull/7
+- workspace-pr: https://github.com/PyAutoLabs/HowToLens/pull/133
+- workspace-pr: https://github.com/PyAutoLabs/HowToGalaxy/pull/106
+- workspace-pr: https://github.com/PyAutoLabs/HowToFit/pull/78
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoScientist/pull/91
+- workspace-pr: https://github.com/PyAutoLabs/.github/pull/44
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/552
