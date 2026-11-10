@@ -10,7 +10,7 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 23 |
-| [In flight](#in-flight) | 13 |
+| [In flight](#in-flight) | 14 |
 | [Planned](#planned) | 9 |
 | [Backlog](#backlog) | 253 |
 | [Recent](#recent) | 50 |
@@ -1233,6 +1233,14 @@ Use the start-dev skill. active/nautilus_cpu_checkpoint_batching.md
 
 ```
 Use the start-dev skill. active/nautilus_spawn_training_pool.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/pseudo_det_rebaseline.md">Bug: PyAutoGalaxy/PyAutoLens evidence pins stale after PyAutoArray#683 pseudo-determinant</a></summary>
+
+```
+Use the start-dev skill. active/pseudo_det_rebaseline.md
 ```
 
 </details>
