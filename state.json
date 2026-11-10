@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 14 in flight",
-  "updated": "2026-11-10T19:57:49Z",
+  "updated": "2026-11-10T20:39:48Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "Nautilus experimental spawn-based training pool \u2014 RAL-adapter-published (live staging/submission blocked by SSH authentication)",
       "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/17",
       "prompt": "Use the start-dev skill. active/nautilus_spawn_training_pool.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "`PlotterEllipse.fit_ellipse` writes every variant to `ellipse_fit.png`, so only the last survives \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/699",
+      "prompt": "Use the start-dev skill. active/ellipse_plotter_fit_ellipse_overwrites.md"
     },
     {
       "severity": "yellow",
@@ -36,6 +42,12 @@
       "text": "Issued: 2026-11-02 \u2014 workspace-shipped, awaiting-merge (judge \u2192 human /prm; wiki-currency waits on a PyAutoFit release)",
       "url": "https://github.com/PyAutoLabs/autolens_assistant/pull/177",
       "prompt": "Use the start-dev skill. active/results_library_p5a_assistant.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "`SimulatorImaging` draws Poisson noise before checking `add_poisson_noise_to_data` \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/688",
+      "prompt": "Use the start-dev skill. active/simulator_imaging_poisson_drawn_before_flag_check.md"
     },
     {
       "severity": "yellow",
@@ -114,18 +126,6 @@
       "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
-      "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Physical model check when speeding up smoke tests",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md",
-      "prompt": "Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speeding_up_smoke.md"
     }
   ]
 }
