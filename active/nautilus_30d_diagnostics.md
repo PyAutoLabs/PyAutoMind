@@ -214,3 +214,7 @@ Workspace AGENTS.md says: "Present a plan and wait for explicit user approval be
 - Source preflight found an incompatible constraint: pinned PyAutoFit SearchUpdater._profile_and_summarize (updater.py:380) unconditionally calls fitness.call_wrap once to time the best point before save_summary. The approved zero-likelihood-call guard would reject the no-corner control after visualization, halting the entire plan.
 - Asked human: allow exactly one final-summary timing evaluation percase (native sampling remains forbidden, separately counted), or keep zero calls and omit that timing stage (changes non-plot output). Await answer; do not infer approval or run the known failure.
 - If one call is allowed, scope it only to _profile_and_summarize, cap at1, retain native evaluate_likelihood guard, record sampler calls0 and summary calls1 separately, verify posterior/call invariance and test extra/out-of-stage calls are rejected. Update frozen protocol/issue before committing measurement code. If zero, document the skipped stage explicitly instead of inventing timing data.
+
+## Timing clarification approved
+
+Human: "Allow one final-summary timing call per case". Plot comparison only: exactly1target evaluation inside final-summary timing, native sampling forbidden. Count separately; reject extras/out-of-stage calls and verify stored max-likelihood point/value. Earlier zero-call protocols unchanged. Proceed with original3case caps and stop rule; no merge.
