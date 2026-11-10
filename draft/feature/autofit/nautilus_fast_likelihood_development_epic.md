@@ -16,7 +16,7 @@ Repos:
 Difficulty: too-large
 Autonomy: supervised
 Priority: high
-Status: phase 0a merged 2026-11-10 (autofit_profiling#9, issue #8 closed); phase 0b campaign pending
+Status: phase 0a merged 2026-11-10 (autofit_profiling#9, issue #8 closed); phase 0b.1 plan awaiting approval; campaign not started
 Epic: nautilus-fast-likelihoods
 Filed: 2026-11-09
 Consequence: judge
@@ -110,3 +110,7 @@ Resume this epic and start phase 0 only. Read current pins and claims, inspect t
 "I am going to push forward with nautilus development tomorrow with the goals to be to profile and extend nautilus against fast likelihood evaluations on both CPU and GPU. So based on this chat come up with a plan for how we do this and intake it as an epic in PyAutoMind. Cpu speed up first makes sense i think"
 
 <!-- formalised by the Intake (Conception) Agent on 2026-11-09 from file:nautilus_epic_input.md -->
+
+## Next bounded member — 2026-11-10
+
+Phase 0b.1 planning draft: `draft/feature/autofit_profiling/nautilus_cpu_campaign_setup.md`. It proposes canonical Pulse ownership, dimension-safe reporting and a 36-case, 90-minute local pilot at fixed pins/settings. Human granted planning despite RED only; implementation, execution and development PRs await plan approval. No phase-0b campaign, issue or compute has started. Later high-dimensional and lens stages remain separately gated.
