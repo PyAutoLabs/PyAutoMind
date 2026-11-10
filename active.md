@@ -9,6 +9,7 @@
   - PyAutoGalaxy: feature/ellipse-fit-filenames
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/699
 - pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/699
+- held: 2026-11-10 /prm stopped on red (unittest 3.12/3.13/nojax: the 11 pixelization figure-of-merit tests, identical to Galaxy main red since 11-09; likely PyAutoArray#683, unconfirmed). Human chose "Hold until main green" — no failed-check overrule. Next: once Galaxy main is green, re-run #699 checks and /prm.
 - prompt: active/ellipse_plotter_fit_ellipse_overwrites.md
 - tier: judge — merge mode: human /prm
 - coordination: PyAutoGalaxy shared with magnification-maps-wiring (no file overlap); human approved "Coordinate and ship separate" 2026-11-10.
