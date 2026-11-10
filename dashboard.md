@@ -12,7 +12,7 @@
 | [Epics](#epics) | 22 |
 | [In flight](#in-flight) | 7 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 241 |
+| [Backlog](#backlog) | 242 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -224,7 +224,7 @@ Use the start-dev skill. draft/feature/autolens/interferometer_primary_beam_pers
 Long-running multi-phase programmes. Each epic's 📋 prompt has the assistant read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
 
 <details>
-<summary><b>Nautilus for fast likelihoods — CPU overhead and worker utilisation, asynchronous experiments, combined CPU/GPU execution and selective JAX acceleration</b> — 1 queued prompt(s), in order</summary>
+<summary><b>Nautilus for fast likelihoods — CPU overhead and worker utilisation, asynchronous experiments, combined CPU/GPU execution and selective JAX acceleration</b> — 2 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Nautilus for fast likelihoods — CPU overhead and worker utilisation, asynchronous experiments, combined CPU/GPU execution and selective JAX acceleration</b> — ledger: `draft/feature/autofit/nautilus_fast_likelihood_development_epic.md` — PHASE 0a MERGED 2026-11-10 — autofit_profiling#9: controlled harness and exploratory local pilot; record…</summary>
 
@@ -238,6 +238,14 @@ Continue the 'Nautilus for fast likelihoods — CPU overhead and worker utilisat
 
 ```
 Use the start-dev skill. draft/feature/autofit/nautilus_fast_likelihood_development_epic.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autofit_profiling/nautilus_30d_diagnostics.md">Nautilus 30D evidence and output diagnostics</a> — autofit_profiling · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autofit_profiling/nautilus_30d_diagnostics.md
 ```
 
 </details>
@@ -1224,7 +1232,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 230 · local-dev 6 · ral 3
+Lanes: any 230 · local-dev 7 · ral 3
 
 <a id="human-review"></a>
 <details>
