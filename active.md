@@ -102,7 +102,9 @@
 - heart-red-override: human 2026-11-10 (PyAutoGalaxy/PyAutoLens Tests, workspace validation 14f); research/dev only, no merge/release bypass
 - co-claim: autolens_profiling shared with paused gradient-correctness-sweep (#517), human override 2026-11-10; paths disjoint
 - decisions: DNA owns the policy (decision replaces decisions/jax-2026-10-04.md); DNA writes matrix results as validation records under a new `research` authority (human 2026-11-10); Pulse only gets pointer follow-ups
-- phase: planned 1 hang matrix → 2 flag cost → 3 DNA decision + board + follow-ups; nothing started
+- phase: 1 laptop pilot DONE 2026-11-10 (0.11.2 no-flag hangs MGE@4/@94, Delaunay@1, fft@1; 0.12.0.1 no-flag + eigen pass all; eigen ~free on 0.12, sched 1.5-2x; lapack case non-reproducing even on 0.10.2); DNA research authority + import-matrix + JAX CPU policy panel built (PyAutoDNA de1b52d, 23+ tests); decision DRAFT decisions/jax-cpu-policy-2026-11.md (3e38dff); human asked "just up JAX to 0.12.0.1?" → answer: likely floor jax+jaxlib>=0.12.0 after RAL N=5 + Heart 0.12 validation
+- compute-tracking: RAL 40-task array APPROVED by human 2026-11-10, NOT YET SUBMITTED. RAL private clone /mnt/ral/jnightin/autolens_profiling_wt/jax-version-policy (b7147aa9), modules rsynced; make_venvs.sh (system python3.12) was mid-build when euclid_jump stopped answering (banner timeout ~19:20)
+- resume: (1) ssh euclid_jump; check venvs output/jax_version_policy/venvs/jax-{0.9.2,0.11.2,0.12.0,0.12.0.1} import jax+flatbuffers (rerun make_venvs.sh in nohup if not); (2) cd hpc/batch_cpu && sbatch submit_jax_version_policy_hang_matrix_ral_cpu; (3) pull rows → `python -m dna import-matrix` (environment ral-cpu); (4) finalize DNA decision, Heart 0.12 validation follow-up, Nerves pin prompt, delaunay_mge on 0.12; local private DNA store holds pilot records (worktree PyAutoDNA/private, gitignored)
 
 ## gradient-correctness-sweep
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/517
