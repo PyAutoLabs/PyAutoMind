@@ -195,3 +195,34 @@
 - heart-red-override: live human approved this bounded experiment despite RED; exact reasons "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure"; "PyAutoCTI: 1 uncommitted source change(s)" (authoritative18:35:43Z). No merge/release/CI bypass.
 - dependency: profiling starts diagnosticPR13 at2c3c0aa, carry c06cae0 test-only race fix. Read-only pinned Fitbdb7af0/Nerves9b204c9 and retained runtime; no installed source edits or dependency upgrade.
 - authorization: max18children/120s/4096MiB each/1800s total including preflight and between-case waits. Four native networks, two spawned training workers, serial likelihood/adaptation. Quiet-host admission and stop-on-first-failure; no retries. No sampling launched yet.
+
+## readme-frontdoors
+- issue: https://github.com/PyAutoLabs/PyAutoScientist/issues/90
+- issued: 2026-11-10
+- status: documentation shipping
+- session: Codex desktop; approved local cleanup
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/readme-frontdoors
+- prompt: active/readme_frontdoors.md
+- tier: judge — merge mode: human /prm
+- repos:
+  - PyAutoLens: feature/readme-frontdoors
+  - PyAutoGalaxy: feature/readme-frontdoors
+  - PyAutoFit: feature/readme-frontdoors
+  - PyAutoArray: feature/readme-frontdoors
+  - PyAutoCTI: feature/readme-frontdoors
+  - PyAutoReduce: feature/readme-frontdoors
+  - autolens_workspace: feature/readme-frontdoors
+  - autogalaxy_workspace: feature/readme-frontdoors
+  - autofit_workspace: feature/readme-frontdoors
+  - autocti_workspace: feature/readme-frontdoors
+  - autoreduce_workspace: feature/readme-frontdoors
+  - HowToLens: feature/readme-frontdoors
+  - HowToGalaxy: feature/readme-frontdoors
+  - HowToFit: feature/readme-frontdoors
+  - PyAutoScientist: feature/readme-frontdoors
+  - .github: feature/readme-frontdoors
+  - PyAutoMind: feature/readme-frontdoors
+- coordination: human approved "Yes, coordinate and ship separately" alongside magnification-maps-wiring and howtolens-stored-results; isolated docs branches.
+- heart-red-override: same-conversation human "I approve you to bypass and continue"; current "put PRs up for this work and prm".
+  - current-reasons: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure"; "PyAutoCTI: 1 uncommitted source change(s)" (2026-11-10T18:35:43.930077+00:00).
+  - gates: approved prose review; local links, root Python syntax and whitespace pass. No science API changes; science suites not rerun. No release or CI bypass.
