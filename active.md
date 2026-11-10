@@ -237,3 +237,16 @@
 - corrected-pilot-approval: live human selected "Run corrected pilot once" at83530ce. One fresh training-pool-02 attempt after quiet-host gate, same18children/120s/4096MiB/1800s; retain both, outside Pulse, human merge.
 
 - corrected-pilot-admission: bounded quiet-host-02 watch ended without three consecutive readings below1.0; no training-pool-02 directory or child launched,0s pilot budget consumed. Approval remains valid for one corrected attempt at83530ce. Retained .session/quiet-host-02.jsonl and summary, no background watch.
+
+## feature-guides-images
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/626
+- issued: 2026-11-10
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/feature-guides-images
+- repos:
+  - autolens_workspace: feature/feature-guides-images
+  - autogalaxy_workspace: feature/feature-guides-images
+- prompt: active/feature_introductions_and_images.md
+- tier: judge — merge mode: human /prm
+- scope: review pilot for imaging linear_light_profiles, multi_gaussian_expansion and pixelization; library RTD edits deferred until coordination and pilot approval.
+- approval: human "continue work noting huge updates to READMEs and docs has now been performed in recent PRs"; preserve merged front-door updates.
