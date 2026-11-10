@@ -7,7 +7,7 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: workspace-dev
+Status: awaiting-merge
 Issued: 2026-11-10
 Issue: https://github.com/PyAutoLabs/autofit_profiling/issues/10
 Epic: nautilus-fast-likelihoods
@@ -38,7 +38,7 @@ Insight owns existing full-search validation protocols. Read-only reuse/context:
 1. Record a standalone experimental protocol and immutable local run plan, linking phase 0a and the relevant historical protocols; leave Pulse untouched.
 2. Extend the existing profiling harness with a versioned campaign manifest, complete case identity and safe attempt/resume accounting. Preserve all phase-0a commands and results.
 3. Make report grouping and output names dimension/target/settings aware; reject duplicate identities, mixed source pins and incomplete pairs instead of overwriting or pooling them.
-4. Run a bounded local dimension pilot only after implementation approval: dimensions 5/10/30, three seeds, direct and wrapped, traced and control, fixed settings and one worker. Publish failures, missing diagnostics and variability alongside successes.
+4. Run the approved bounded local dimension pilot: dimensions 5/10/30, three seeds, direct and wrapped, traced and control, fixed settings and one worker. Publish failures, missing diagnostics and variability alongside successes.
 5. Prepare the resource-gated next stages for 60/100/200 dimensions, representative targets and worker comparisons; do not execute them or optimize the sampler in this task.
 6. Validate and open one reviewable autofit_profiling development PR; keep experiment evidence outside the published catalogue. Phase 0b stays active/pending after this member; no complete-phase claim until its required dimension and representative-target evidence is reviewed.
 
@@ -68,7 +68,7 @@ Reuse analytic logZ and posterior truth. Report raw and standardized posterior-m
 
 Trace/control numerical gate: same target/settings/pins, identical native likelihood count and posterior hash at the deterministic NumPy pin. Cross-adapter comparisons also assert the effective prior transform, resolved options and native run-call schedule. Fail closed on a mismatch. Analytic errors are descriptive at three seeds, with no invented scientific acceptance tolerance or speedup threshold. Scientific scoring must reuse an applicable Insight protocol unchanged, or pre-register a separate calibrated protocol before independent scored seeds.
 
-### D. First pilot: explicit proposed budget
+### D. First pilot: approved budget
 
 | Item | Proposed value |
 |---|---|
@@ -110,10 +110,10 @@ A correctness/configuration/source/accounting failure halts immediately. A timeo
 ## Branch and claim survey — 2026-11-10
 
 Branch: feature/nautilus-cpu-campaign-setup (autofit_profiling only).
-Proposed worktree root: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-cpu-campaign-setup.
-Primary issue: autofit_profiling, title "feat: add experimental Nautilus dimension pilot"; create through the Mind primitive.
+Worktree root: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-cpu-campaign-setup.
+Primary issue: autofit_profiling, title "feat: add experimental Nautilus dimension pilot"; registered as autofit_profiling#10 through the Mind primitive.
 
-No active Mind claim conflicts for autofit_profiling/PyAutoPulse. Main autofit_profiling is clean and behind the merged phase-0a head; create the new worktree from current origin/main, never reuse the retained phase-0a evidence worktree. Pulse main has untracked tmp/ and is behind generated dashboard commits; preserve it and use an isolated worktree. An older unregistered Pulse check-in worktree also exists; do not remove or alter it. Insight and inference/lens repos are read-only context in this member. Recheck claims/branches at implementation start.
+No active Mind claim conflicts for autofit_profiling at setup. Main autofit_profiling is clean and behind the merged phase-0a head; create the new worktree from current origin/main, never reuse the retained phase-0a evidence worktree. Pulse is outside this task and remains untouched. Insight and inference/lens repos are read-only context in this member. Recheck claims/branches at implementation start.
 
 ## Planning gate record
 
@@ -121,6 +121,16 @@ Read-only start_dev entry feed: "Heart: RED — Release RED; monitoring RED · 1
 
 ## Feature routing receipt
 
-Brain feature classified this as workspace development affecting autofit_profiling and PyAutoPulse. Its declared medium classification wins over the derived too-large heuristic (the long document includes deferred later campaign scope). The executable member is only campaign registration, manifest/report changes, guards and the 36-case Gaussian pilot; later target/worker/HPC stages are excluded. No public library API change is planned. Memory was consulted; historical sampler notes do not override current protocol/fixture evidence.
+Brain originally classified the proposal as workspace development affecting autofit_profiling and PyAutoPulse; the approved human correction removes PyAutoPulse from the implementation. Its declared medium classification wins over the derived too-large heuristic (the long document includes deferred later campaign scope). The executable member is only experimental protocol/manifest/report changes, guards and the 36-case Gaussian pilot; later target/worker/HPC stages are excluded. No public library API change is planned. Memory was consulted; historical sampler notes do not override current protocol/fixture evidence.
 
 The user's experimental-scope correction overrides all earlier canonical-campaign routing requirements for this member. No further permission is required to implement this narrower approved scope.
+
+## Review handoff — 2026-11-10
+
+PR https://github.com/PyAutoLabs/autofit_profiling/pull/11 at 64f47d8f5838f531a616859e8f101b4f055955c1. Measurement code 544bc89. Experimental evidence lives in experiments/nautilus_cpu_dimensions/; no Pulse campaign or catalogue publication. Full phase 0b remains incomplete.
+
+Pilot: 26 successes, 1 timeout, 9 unrun; 940.7 seconds including runtime preflight. 13 exact tracing pairs, 12 cross-adapter matches; all selected timelines reconcile. The 30D wrapped control hit the fixed 120-second cap during output/update logs, with no complete result receipt. No retry/escalation. The direct 30D seed had logZ error −0.9081 despite ESS 9740.4: a correctness investigation is needed before an accuracy claim.
+
+Validation: 66 tooling tests; Ruff lint/format; four checkpoint/resume witnesses; traced/control worker-death probes; timeout/memory-cap termination; manifest/resume/coverage gates; production catalogue/history unchanged; links. Author review only. Runtime and raw attempt logs remain in output/nautilus-dimensions/ (about 180 MB); .venv and separate detached source dependencies are retained. Source ../activate.sh from the editable repo before runtime.
+
+Heart RED at 2026-11-10T13:36:55.589793+00:00: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure". Explicit implementation/pilot/PR override is recorded above. Merge stays human /prm; no release or bypass. Human viewing copy: /mnt/c/Users/Jammy/Workspace/Science/scratch/nautilus_phase0b_plan_2026-11-10/results/report.html.
