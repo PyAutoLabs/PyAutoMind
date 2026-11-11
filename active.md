@@ -1,4 +1,17 @@
 
+## insight-lint-point-source-family
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/61
+- issued: 2026-11-11
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/insight-lint-point-source-family
+- repos:
+  - autolens_inference: feature/insight-lint-point-source-family
+- prompt: active/insight_lint_lens_point_source_dataset_family.md
+- tier: judge — merge mode: human /prm (authorized in session: "approved, go ahead and prm when green")
+- heart-ack: YELLOW acknowledged by human in session 2026-11-11 (published feed YELLOW after heart-health refresh)
+- follow-up: merge PyAutoInsight#42 once Insight lint is green on main
+
 ## magnification-maps-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/818
 - issued: 2026-11-02
