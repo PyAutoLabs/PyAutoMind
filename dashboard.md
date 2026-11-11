@@ -12,7 +12,7 @@
 | [Epics](#epics) | 23 |
 | [In flight](#in-flight) | 12 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 254 |
+| [Backlog](#backlog) | 255 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -1328,7 +1328,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 242 · local-dev 7 · ral 3
+Lanes: any 243 · local-dev 7 · ral 3
 
 <a id="human-review"></a>
 <details>
@@ -2250,7 +2250,7 @@ Use the start-dev skill. draft/research/autoarray/delaunay_interpolator_pure_cal
 </details>
 
 <details>
-<summary><b>docs</b> — 24</summary>
+<summary><b>docs</b> — 25</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -2440,6 +2440,14 @@ Use the start-dev skill. draft/docs/howtolens/paired_tutorial_review_resume.md
 
 ```
 Use the start-dev skill. draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/workspaces/feature_introductions_and_images.md">Feature introductions and scientific illustrations</a> — workspaces</summary>
+
+```
+Use the start-dev skill. draft/docs/workspaces/feature_introductions_and_images.md
 ```
 
 </details>
@@ -2859,7 +2867,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-98 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+99 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2904,7 +2912,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
 - `draft/bug/autolens/point_source_plot_script_residual_shape_mismatch.md`
 - `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md`
-- _… and 58 more_
+- _… and 59 more_
 
 </details>
 
