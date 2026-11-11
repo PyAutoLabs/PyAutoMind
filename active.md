@@ -1,4 +1,16 @@
 
+## pr504-guard-log-det-terms
+- issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/362
+- issued: 2026-11-11
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/pr504-guard-log-det-terms
+- repos:
+  - autolens_workspace_test: feature/pr504-guard-log-det-terms
+- prompt: active/model_fit_pr504_guard_knife_edge_after_pseudo_det.md
+- tier: judge — merge mode: human /prm (authorized in session: "prm when green")
+- corrective-red: "release validation FAILED (stage integrate)" (pyauto-heart readiness after rehearsal ingest 2026.11.11.1.dev87401); live human authorization on autolens_workspace_test#362; one PR, then re-run release validation
+
 ## magnification-maps-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/818
 - issued: 2026-11-02
