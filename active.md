@@ -121,13 +121,20 @@
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/130
 - issued: 2026-11-06
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/howtolens-stored-results
 - repos:
   - HowToLens: feature/howtolens-stored-results
 - prompt: active/howtolens-stored-results.md
 - epic: howto-stored-results (phase 1 of 4: HowToLens ch2 + design gate)
+- prs:
+  - HowToLens: https://github.com/PyAutoLabs/HowToLens/pull/134
 - tier: judge — merge mode: human /prm
+- heart-red-override:
+  - authorized: 2026-11-11, live human in session, "yes override, open the PR" (development only: commit, push, PR-open; merge needs separate /prm + green checks)
+  - red-reasons: autocti_workspace: Smoke Tests failure on main; manifest drift: organism-map blocks (generated) — 7 mismatch(es) vs PyAutoMind/repos.yaml; PyAutoArray: open PR 7d old; PyAutoMind: open PR 7d old; release validation incomplete: no rehearsal for current source
+  - gates: stored_results check OK t2-t6; smoke simulator PASS, ch2 t2/t4-7 PASS, t1/t3 load-timeouts rerun PASS (24 s/45 s); notebooks regenerated
+  - record: https://github.com/PyAutoLabs/HowToLens/issues/130#issuecomment-6791320054
 
 ## nautilus-30d-diagnostics
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/12

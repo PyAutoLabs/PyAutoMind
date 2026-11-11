@@ -1173,7 +1173,7 @@ Use the start-dev skill. active/gradient_correctness_sweep.md
 
 </details>
 
-<details><summary>📋 <a href="active/howtolens-stored-results.md">HowTo series: ship stored fit results so notebooks run without sampling waits</a> — <a href="https://github.com/PyAutoLabs/HowToLens/issues/130">issue #130</a> — issued 2026-11-06 — workspace-dev</summary>
+<details><summary>📋 <a href="active/howtolens-stored-results.md">HowTo series: ship stored fit results so notebooks run without sampling waits</a> — <a href="https://github.com/PyAutoLabs/HowToLens/issues/130">issue #130</a> — issued 2026-11-06 — awaiting-merge</summary>
 
 ```
 Use the start-dev skill. active/howtolens-stored-results.md
