@@ -241,7 +241,7 @@
 ## feature-guides-images
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/626
 - issued: 2026-11-10
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/feature-guides-images
 - repos:
   - autolens_workspace: feature/feature-guides-images
@@ -253,6 +253,15 @@
 
 - text-rollout: 90 new guides/choosers; 9 existing guide workflows retained; 278 existing script executable ASTs unchanged; 368 notebooks regenerated; 56 script + 4 notebook smoke checks passed.
 - review: /mnt/c/Users/Jammy/Workspace/Science/scratch/feature_guides_review_20261110/text_only/index.html
-- next: development-only Heart RED override required for source commit/push/PR; staged local text-only changes complete.
+- next: human skim review, then separate /prm; no merge authorized.
 - human-checkpoint: paused at user's request 2026-11-10; resume tomorrow if requested. Heart RED shipping override remains unanswered.
 - resume: /mnt/c/Users/Jammy/Workspace/Science/scratch/feature_guides_review_20261110/text_only/RESUME.md
+
+- heart-red-override: 2026-11-11, task #626; human "Yes I approve the development-only Heart RED override for #626. Commit, push and open both workspace PRs, leave merging for later. Can you have them in a place I can skim read beforer we merge"
+  - exact-red: "autocti_workspace: Smoke Tests failure on main" (2026-11-11T08:44:25.021680+00:00).
+  - passed-gates: 56 script and 4 notebook smoke checks passed; 278 existing executable ASTs unchanged; teaching preservation audit, 90 narrative executions, 368 notebook regeneration/code parity, 376 links, navigator, size and whitespace checks passed. Human-approved teaching approach; in-session diff review. Saved patches match and bases unchanged.
+  - scope: both workspace feature PRs only; no merge/release/failed-check bypass.
+
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/627 (1472d662)
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/273 (061fad8)
+- skim-review: /mnt/c/Users/Jammy/Workspace/Science/scratch/feature_guides_review_20261110/text_only/skim.html

@@ -68,3 +68,17 @@ Issued: 2026-11-10
 ## Human-requested pause — 2026-11-10
 
 Human: "finishing tomorrow so wrap up with memory to resume". Stop at the completed local text patch; no shipping override or merge approval granted. Resume 2026-11-11 if requested. Worktree indexes verified: 582 AutoLens / 158 AutoGalaxy staged files, no unstaged tracked changes and no staged images. Resume note and recovery patches: /mnt/c/Users/Jammy/Workspace/Science/scratch/feature_guides_review_20261110/text_only/RESUME.md and resume_backups/. Task record remains on Mind feature/feature-guides-images, not main. On resume, verify state and current Heart; reuse passing evidence unless changes warrant rerunning. No work scheduled beyond this session.
+
+## Development-only Heart RED override — 2026-11-11
+
+Human: "Yes I approve the development-only Heart RED override for #626. Commit, push and open both workspace PRs, leave merging for later. Can you have them in a place I can skim read beforer we merge"
+
+Exact RED reason (2026-11-11T08:44:25.021680+00:00): "autocti_workspace: Smoke Tests failure on main".
+
+56 script and 4 notebook smoke checks passed; 278 existing executable ASTs unchanged; teaching preservation audit, 90 narrative executions, 368 notebook regeneration/code parity, 376 links, navigator, size and whitespace checks passed. Human-approved teaching approach; in-session diff review. Saved patches match and bases unchanged.
+
+Commit/push/open both workspace PRs authorized. No merge, release or failed-check bypass.
+
+## PRs open — 2026-11-11
+
+AutoLens #627 (1472d662); AutoGalaxy #273 (061fad8). Both committed and pushed. No merge. Human skim review at text_only/skim.html; full review at index.html. Validation unchanged from saved exact patches. GitHub checks must be evaluated before a separately authorized merge.
