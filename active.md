@@ -90,12 +90,12 @@
 - phase: ALL 3 DONE 2026-11-11: pilot + RAL 415009 (600 cells; 0.11.2 no-flag hangs 25/25 at 4 cores, 0/25 at 16; 0.12.x 0 hangs) imported to DNA; decision RECOMMENDATION jax+jaxlib>=0.12.0, no default flag (eigen +18-50% pixelized); PRs open
 - compute-tracking: RAL 415009 (40-task array, partition ral, human-approved 2026-11-10) SUBMITTED + RUNNING 2026-11-11 ~09:15 via hpc/sync submit (HPC_BASE=/mnt/ral/jnightin/autolens_profiling_wt PROJECT_NAME=jax-version-policy). Prior 414969 failed in 2 s (venvs based on jump-host-only /usr/bin/python3.12); venvs now repointed at node-visible base CPython /mnt/ral/jnightin/PyAuto/python-3.12 READ-ONLY (submit script 7273bc79). Rows → output/jax_version_policy/rows/ral_415009_<i>.jsonl
 - workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/527
-- workspace-pr: https://github.com/PyAutoLabs/PyAutoDNA/pull/5
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoDNA/pull/5 MERGED 2026-11-11 via /prm (ad0242fc)
 - prs:
   - autolens_profiling#527
   - PyAutoDNA#5
 - heart-ack: YELLOW at ship 2026-11-11 (reds unrelated: Insight lint, Mind Lifecycle Drift, Array/Galaxy/Lens, 3 dirty worktrees) acknowledged by human
-- resume: human /prm autolens_profiling#527 + PyAutoDNA#5 (order free; no library PR). Follow-ups filed 36a06b3f9: draft/feature/autonerves/raise_jax_floor_to_0_12.md (release-coupled), draft/feature/pyautoheart/jax_cpu_hang_guard_writes_dna.md, draft/maintenance/workspaces/remove_xla_eigen_flag_workarounds_after_jax_0_12.md, draft/docs/pyautopulse/point_xla_deadlock_notes_at_dna_policy.md
+- resume: autolens_profiling#527 RED on lint step `build_dashboard.py --check` ("dashboard/index.html would change") — caused by this branch (main green at same base a8ac3103, Brain board unchanged); a local full build_dashboard.py rewrote hundreds of catalogue shards (reverted), so the fix needs a scoped re-render investigated in the worktree, then push and human /prm 527 → close-out (issue PyAutoNerves#213, prompt complete, worktree). Follow-ups filed 36a06b3f9 (Nerves floor release-coupled; release prompt Science/scratch/jax_version_policy/release_prompt.md)
 
 ## gradient-correctness-sweep
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/517
