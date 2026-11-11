@@ -1,3 +1,18 @@
+## feature-guides-images
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/626
+- completed: 2026-11-11
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/627
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/273
+- summary: Merged teaching-first text extraction and feature introductions in both workspaces; 79 new per-feature guides plus nine existing guides. Removed all 11 topic-level hubs in favour of README navigation. Preserved specific teaching and executable code; images deferred.
+- merge-receipts: AutoLens 7fa1f386156c26c55633ec66a0419b19da3d101a; AutoGalaxy 8438ed79c4341cdd2b9be8c2e1b021f22419f42f. Both branch heads proved ancestors of fetched origin/main.
+- validation: All 16 jobs across six latest-head Actions runs passed, including Python 3.12/3.13 smoke, navigation/catalogue and size guards. Local 56-script/4-notebook smoke, AST/teaching preservation, notebook code-cell parity and link checks passed.
+- authorization: Human development-only Heart RED override for shipping; separate explicit merge request after skim approval. Heart RED reason was "autocti_workspace: Smoke Tests failure on main"; no release or failed-check bypass.
+- follow-up: draft/docs/autolens_workspace/feature_introductions_individual_review_and_images.md — review each introduction individually, including images.
+- review: C:\Users\Jammy\Workspace\Science\scratch\feature_guides_review_20261110\text_only\skim.html
+- cleanup: Retain task worktrees to preserve pre-existing dataset.fits, deferred image experiments and ignored data/output, per existing preservation instructions. AutoLens local untracked/ignored material approximately 5.8 MB; AutoGalaxy approximately 1.9 MB. No data deleted.
+
+## Original prompt
+
 # Feature introductions and scientific illustrations
 
 ## Current scope — supersedes the short-form/image pilot
