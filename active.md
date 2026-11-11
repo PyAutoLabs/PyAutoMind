@@ -1,21 +1,16 @@
 
-## ellipse-fit-filenames
-- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/698
-- issued: 2026-11-10
+## arcticpy-wheel-cache-libgsl
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/330
+- issued: 2026-11-11
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
 - status: library-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/ellipse-fit-filenames
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/331
+- worktree: ~/Code/PyAutoLabs-wt/arcticpy-wheel-cache-libgsl
 - repos:
-  - PyAutoGalaxy: feature/ellipse-fit-filenames
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/699
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/699
-- held: 2026-11-10 /prm stopped on red (unittest 3.12/3.13/nojax: the 11 pixelization figure-of-merit tests, identical to Galaxy main red since 11-09; likely PyAutoArray#683, unconfirmed). Human chose "Hold until main green" — no failed-check overrule. Next: once Galaxy main is green, re-run #699 checks and /prm.
-- prompt: active/ellipse_plotter_fit_ellipse_overwrites.md
+  - PyAutoHeart: feature/arcticpy-wheel-cache-libgsl
+- prompt: active/arcticpy_wheel_cache_stale_libgsl.md
 - tier: judge — merge mode: human /prm
-- coordination: PyAutoGalaxy shared with magnification-maps-wiring (no file overlap); human approved "Coordinate and ship separate" 2026-11-10.
-- heart-red-override: human 2026-11-10 "override is fine well fix red separate" (development only).
-  - current-reasons: "PyAutoGalaxy/Tests: failure"; "PyAutoLens/Tests: failure"; "Workspace validation: NOT ready — 1399p / 14f / 125s"; "Worktree drift: 3 dirty".
-  - gates: test_autogalaxy 1468 passed / 11 known-unrelated main failures (identical without change); smoke 154/0 (autocti envs unbuilt); independent Fable review FINDINGS (duplicate no_ellipse variants) → human chose drop (b) → 404a9fcd → CLEAN, witness holds. PR Tests will be red until main regression fixed. Merge via human /prm.
+- corrective-red: "autocti_workspace: Smoke Tests failure on main" (pyauto-heart readiness 2026-11-11T08:14Z); live human authorization https://github.com/PyAutoLabs/PyAutoHeart/issues/330#issuecomment-6791147368; one PR, no merge/release/rehearsal
 
 ## magnification-maps-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/818
@@ -126,13 +121,20 @@
 - issue: https://github.com/PyAutoLabs/HowToLens/issues/130
 - issued: 2026-11-06
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/howtolens-stored-results
 - repos:
   - HowToLens: feature/howtolens-stored-results
 - prompt: active/howtolens-stored-results.md
 - epic: howto-stored-results (phase 1 of 4: HowToLens ch2 + design gate)
+- prs:
+  - HowToLens: https://github.com/PyAutoLabs/HowToLens/pull/134
 - tier: judge — merge mode: human /prm
+- heart-red-override:
+  - authorized: 2026-11-11, live human in session, "yes override, open the PR" (development only: commit, push, PR-open; merge needs separate /prm + green checks)
+  - red-reasons: autocti_workspace: Smoke Tests failure on main; manifest drift: organism-map blocks (generated) — 7 mismatch(es) vs PyAutoMind/repos.yaml; PyAutoArray: open PR 7d old; PyAutoMind: open PR 7d old; release validation incomplete: no rehearsal for current source
+  - gates: stored_results check OK t2-t6; smoke simulator PASS, ch2 t2/t4-7 PASS, t1/t3 load-timeouts rerun PASS (24 s/45 s); notebooks regenerated
+  - record: https://github.com/PyAutoLabs/HowToLens/issues/130#issuecomment-6791320054
 
 ## nautilus-30d-diagnostics
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/12
