@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 12 in flight",
-  "updated": "2026-11-11T13:31:20Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 11 in flight",
+  "updated": "2026-11-11T13:32:58Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "Likelihood lifecycle phase 4e follow-up: ingest the three fresh reruns (414639\u2013414641)\u2026 \u2014 workspace-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autolens_inference/pull/64",
-      "prompt": "Use the start-dev skill. active/likelihood_lifecycle_p4e_followup_rerun_ingest.md"
-    },
     {
       "severity": "yellow",
       "text": "Nautilus 30D evidence and output diagnostics \u2014 awaiting-merge (full30D attribution completed; CI green; human merge)",
@@ -126,6 +120,12 @@
       "text": "pick: Fix KNN neighbor search for a partial final point block",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
+      "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
     }
   ]
 }
