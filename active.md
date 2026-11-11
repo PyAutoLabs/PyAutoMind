@@ -75,8 +75,8 @@
 - co-claim: autolens_profiling shared with paused gradient-correctness-sweep (#517), human override 2026-11-10; paths disjoint
 - decisions: DNA owns the policy (decision replaces decisions/jax-2026-10-04.md); DNA writes matrix results as validation records under a new `research` authority (human 2026-11-10); Pulse only gets pointer follow-ups
 - phase: 1 laptop pilot DONE 2026-11-10 (0.11.2 no-flag hangs MGE@4/@94, Delaunay@1, fft@1; 0.12.0.1 no-flag + eigen pass all; eigen ~free on 0.12, sched 1.5-2x; lapack case non-reproducing even on 0.10.2); DNA research authority + import-matrix + JAX CPU policy panel built (PyAutoDNA de1b52d, 23+ tests); decision DRAFT decisions/jax-cpu-policy-2026-11.md (3e38dff); human asked "just up JAX to 0.12.0.1?" → answer: likely floor jax+jaxlib>=0.12.0 after RAL N=5 + Heart 0.12 validation
-- compute-tracking: RAL 40-task array APPROVED by human 2026-11-10, NOT YET SUBMITTED. RAL private clone /mnt/ral/jnightin/autolens_profiling_wt/jax-version-policy (b7147aa9), 4 modules rsynced. Venv build relaunched 2026-11-10 ~19:45 detached on euclid_jump (setsid nohup, PID 980783, log output/jax_version_policy/logs/make_venvs.log): 0.9.2 built, 0.11.2 installing at ~20:40, 0.12.0 + 0.12.0.1 pending
-- resume: (1) ssh euclid_jump; cat output/jax_version_policy/logs/make_venvs.log — expect 4 "<dir> <v> <v>" lines; if the build died, rerun ONLY missing versions with `PYTHON=/usr/bin/python3.12 setsid nohup bash scripts/misc/jax_version_policy/make_venvs.sh output/jax_version_policy/venvs <v...> > logs/make_venvs.log 2>&1 < /dev/null &` via `ssh -f` (never chain rm/mkdir with & — whole chain backgrounds); watch with pgrep pattern `[b]ash scripts/...` (plain pattern self-matches the remote bash -c); (2) cd hpc/batch_cpu && sbatch submit_jax_version_policy_hang_matrix_ral_cpu (human-approved); (3) pull rows/ral_<job>_<i>.jsonl → `python -m dna import-matrix` in worktree PyAutoDNA (environment ral-cpu); (4) finalize DNA decisions/jax-cpu-policy-2026-11.md, then follow-ups: Heart 0.12 validation, Nerves floor jax+jaxlib>=0.12.0 prompt, delaunay_mge on 0.12, Pulse pointers, upstream MGE-hang issue draft (human approval). Local private DNA store (worktree PyAutoDNA/private, gitignored) holds pilot records + laptop inventory
+- compute-tracking: RAL 415009 (40-task array, partition ral, human-approved 2026-11-10) SUBMITTED + RUNNING 2026-11-11 ~09:15 via hpc/sync submit (HPC_BASE=/mnt/ral/jnightin/autolens_profiling_wt PROJECT_NAME=jax-version-policy). Prior 414969 failed in 2 s (venvs based on jump-host-only /usr/bin/python3.12); venvs now repointed at node-visible base CPython /mnt/ral/jnightin/PyAuto/python-3.12 READ-ONLY (submit script 7273bc79). Rows → output/jax_version_policy/rows/ral_415009_<i>.jsonl
+- resume: (1) `sacct -j 415009 -X` → when done, rsync output/jax_version_policy/rows/ral_415009_*.jsonl from the RAL clone /mnt/ral/jnightin/autolens_profiling_wt/jax-version-policy to the laptop worktree output/jax_version_policy/rows/; (2) concatenate → `python -m dna import-matrix <file> --evidence autolens_profiling:jax_version_policy/ral_415009` in worktree PyAutoDNA (environment ral-cpu, in environments.yaml); (3) finalize DNA decisions/jax-cpu-policy-2026-11.md with the RAL table; (4) follow-ups: Heart 0.12 validation, Nerves floor jax+jaxlib>=0.12.0 prompt, delaunay_mge on 0.12, Pulse pointers, upstream MGE-hang issue draft (human approval). Scheduler actions only via hpc/sync (hook blocks raw sbatch). Local private DNA store (worktree PyAutoDNA/private) holds pilot records + laptop inventory
 
 ## gradient-correctness-sweep
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/517
@@ -103,25 +103,6 @@
 - epic: autonomous-orchestrators (phase 4c of 4a–4c)
 - pre-check: open shadow tick on system python3.10, minimal env — 6 notify proposals, 0 spawns (2026-11-04)
 - tier: judge — merge mode: human /prm
-
-## howtolens-stored-results
-- issue: https://github.com/PyAutoLabs/HowToLens/issues/130
-- issued: 2026-11-06
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/howtolens-stored-results
-- repos:
-  - HowToLens: feature/howtolens-stored-results
-- prompt: active/howtolens-stored-results.md
-- epic: howto-stored-results (phase 1 of 4: HowToLens ch2 + design gate)
-- prs:
-  - HowToLens: https://github.com/PyAutoLabs/HowToLens/pull/134
-- tier: judge — merge mode: human /prm
-- heart-red-override:
-  - authorized: 2026-11-11, live human in session, "yes override, open the PR" (development only: commit, push, PR-open; merge needs separate /prm + green checks)
-  - red-reasons: autocti_workspace: Smoke Tests failure on main; manifest drift: organism-map blocks (generated) — 7 mismatch(es) vs PyAutoMind/repos.yaml; PyAutoArray: open PR 7d old; PyAutoMind: open PR 7d old; release validation incomplete: no rehearsal for current source
-  - gates: stored_results check OK t2-t6; smoke simulator PASS, ch2 t2/t4-7 PASS, t1/t3 load-timeouts rerun PASS (24 s/45 s); notebooks regenerated
-  - record: https://github.com/PyAutoLabs/HowToLens/issues/130#issuecomment-6791320054
 
 ## nautilus-30d-diagnostics
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/12
