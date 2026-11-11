@@ -225,3 +225,15 @@
 - RAL-runtime-cache-proposal: validation05 timed out600s; diagnostic06 exited139 during early module import (cause unresolved); isolated probe07 passed stdlib portion but timed out180s before baseline module completed, json37.325s/re26.467s cumulative. No science/job. Proposed local runtime/source cache with all outputs retained on NFS, same35min/4cores/8GiB and18children/120s/4GiB/1800s bounds; canonical amendment awaits approval before job-script edits. All setup processes ended and logs retained.
 
 - RAL-cache-implementation: live human approved amendment. Producer c243ef676ffa15fc9e4808abc104a93c70bc8145;229 tooling tests/Ruff/format/shell/catalogue pass. Private RAL login-host local runtime passed full provenance in7.35s with90 exact third-party pins/native digest; no scientific work. Artifact09 checksum verified; fresh restore09 passed49.95s (53.29s including guarded cleanup), no sampling/training. Final retained-checkout staging timed out600s in NFS git status before checkout update; no submission environment/pilot output, no Slurm job submitted. Original single-job authorization unused; resume staging after NFS recovers. Heart receipt2026-11-11T10:45:45.346227+00:00 RED: "release validation FAILED (stage integrate)" under existing development override. NFS outputs/all science limits unchanged; outside Pulse/human merge.
+
+## likelihood-lifecycle-p4e-rerun-ingest
+- issue: https://github.com/PyAutoLabs/autolens_inference/issues/63
+- issued: 2026-11-11
+- session: claude-code desktop (WSL), PyAutoLabs session
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p4e-rerun-ingest
+- repos:
+  - autolens_inference: feature/likelihood-lifecycle-p4e-rerun-ingest
+- prompt: active/likelihood_lifecycle_p4e_followup_rerun_ingest.md
+- epic: likelihood-lifecycle (phase 4e follow-up)
+- tier: judge — merge mode: human /prm

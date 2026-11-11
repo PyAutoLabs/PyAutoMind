@@ -10,7 +10,9 @@ Themes:
 Difficulty: small
 Autonomy: supervised
 Priority: high
-Status: formalised
+Status: issued
+Issue: https://github.com/PyAutoLabs/autolens_inference/issues/63
+Issued: 2026-11-11
 Consequence: judge
 Witness: autolens_inference main carries clean rows for multi_dataset/delaunay numba (414639), multi_galaxy/delaunay numba (414640) and multi_galaxy/mge JAX CPU (414641), both seeds each. Each row's slurm job is COMPLETED, none of them was requeued or resumed, and every stage was started fresh. The exporter's --check and the CI lint pass, and the dashboard is regenerated AFTER the final results commit (the exporter stamps the last results revision). The Pulse lens-walltime instance shows the new records after a refresh.
 Review-minutes: 10
