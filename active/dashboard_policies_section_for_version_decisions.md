@@ -6,6 +6,8 @@ Repos:
 - PyAutoDNA
 Priority: medium
 Consequence: glance
+Witness: the live board shows the JAX CPU policy card with declared vs recommended range, status and the hang-matrix check flagging allowed hanging versions, plus the version x flag x cores grid and the flag-cost table.
+Issued: 2026-11-11
 
 Source: human 2026-11-11, after jax-version-policy (PyAutoNerves#213, complete/2026/11/jax-version-policy.md): "did we write and update the DNA dashboard with this work? E.g. the choice of versions and maybe some research findings? Dashboard might not be fully designed to support this yet". Needs /intake to formalise.
 
