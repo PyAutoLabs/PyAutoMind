@@ -1,3 +1,26 @@
+## Outcome
+
+Corrective fix for Heart RED "autocti_workspace: Smoke Tests failure on main"
+(live human corrective-PR authorization on PyAutoHeart#330), merged as
+PyAutoHeart#331 (6e4be55, 2026-11-11).
+
+- Cause: GitHub runners moved ubuntu-24.04 → 26.04 (libgsl.so.27 → .so.28).
+  smoke-tests.yml's pip cache (no image identity in its key) restored an
+  arcticpy-2.6 wheel built on 24.04, so `import arcticpy` failed.
+- Fix: `install_arcticpy.sh` installs arcticpy with `--no-cache-dir`, so it is
+  always built against the GSL present. One shared recipe covers smoke,
+  lib-tests, docs-build and heart/smoke.py. Regression test
+  `test_arcticpy_build_never_reuses_a_pip_cached_wheel`.
+- Evidence: Heart suite 1319 passed; control showed the test fails on the old
+  script; independent separate-model review CLEAN; the PR's arcticpy self-test
+  built fresh and imported on ubuntu-26.04 with libgsl28.
+- Trap hit: the organ-code tenant firewall reds on a workspace repo name in a
+  new test docstring. Fixed by rewording (5b11b0b).
+- Post-merge: autocti_workspace Smoke Tests run 42883685928 re-run on main.
+- Split out: draft/bug/health_fixes/smoke_cache_stats_warnings_nameerror.md.
+
+## Original prompt
+
 # arcticpy install restores a pip-cached wheel built against a missing libgsl
 
 Type: bug

@@ -1,17 +1,4 @@
 
-## arcticpy-wheel-cache-libgsl
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/330
-- issued: 2026-11-11
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/331
-- worktree: ~/Code/PyAutoLabs-wt/arcticpy-wheel-cache-libgsl
-- repos:
-  - PyAutoHeart: feature/arcticpy-wheel-cache-libgsl
-- prompt: active/arcticpy_wheel_cache_stale_libgsl.md
-- tier: judge — merge mode: human /prm
-- corrective-red: "autocti_workspace: Smoke Tests failure on main" (pyauto-heart readiness 2026-11-11T08:14Z); live human authorization https://github.com/PyAutoLabs/PyAutoHeart/issues/330#issuecomment-6791147368; one PR, no merge/release/rehearsal
-
 ## magnification-maps-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/818
 - issued: 2026-11-02
