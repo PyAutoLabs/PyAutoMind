@@ -205,7 +205,7 @@
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/16
 - issued: 2026-11-10
 - session: OpenAI Codex desktop (session ID unavailable)
-- status: paused-by-human (bedtime; RAL runtime partly staged; no job submitted)
+- status: awaiting-ssh-agent (human resumed; previous socket expired; no job submitted)
 - prompt: active/nautilus_spawn_training_pool.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-spawn-training-pool
 - repos:
@@ -239,3 +239,5 @@
 - RAL-live-validation: producer107ec1c,194tests and exact-head CI42898804169 green; legacy Slurm22 TRES supported. Sources staged; isolated Python3.12.10/runtime in progress. No scientific job submitted. Heart2026-11-10T20:50:57.253679+00:00 RED: "PyAutoArray: 2 commit(s) behind origin"; "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure"; "autocti_workspace: Smoke Tests failure on main"; existing experiment override, outside Pulse/human merge.
 
 - RAL-bedtime-handoff: human requested resumable state. Task-owned installer/shell stopped and verified absent; no scientific job, child or watcher. Clean producer107ec1c/194tests/CI42898804169 green. Sources and partial Python3.12.10 extraction retained;88 binary pins resolve, two pure-Python utilities separated. Resume .session/RESUME.md (also Science scratch training/RESUME.md). Original one-job approval remains unused; outside Pulse/human merge.
+
+- RAL-resume-2026-11-11: saved SSH agent socket absent; current path requested from human. Producer107ec1c/CI42898804169 unchanged green; fresh Heart08:47:27RED "autocti_workspace: Smoke Tests failure on main", existing override. Prepared .session/ral-resume-stage-03.sh, not executed. No remote writes or job; authorization unused.

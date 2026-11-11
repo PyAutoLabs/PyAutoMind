@@ -200,3 +200,11 @@ Fresh Heart2026-11-10T20:50:57.253679+00:00 RED: "PyAutoArray: 2 commit(s) behin
 ## Human bedtime pause
 
 Human: "going bed get this into a resumeable state". Stopped the task-owned RAL Python installer and staging shell; both verified absent. No Slurm job or scientific child submitted and no watcher armed. Clean producer107ec1c and pinned dependency checkouts are retained. Isolated Python3.12.10 extraction was still incomplete;88 binary-package pins resolve, while two pure-Python utilities are staged separately. Full executable handoff: task .session/RESUME.md and Science scratch nautilus_optimizations_2026-11-10/training/RESUME.md. The handoff corrects the staging inventory key to reference_distribution_versions. Resume environment setup, import/provenance verification, then the already-authorized single job; do not request duplicate approval. Outside Pulse; human merge.
+
+## Resume check — 2026-11-11
+
+The human resumed work. The saved /tmp/ssh-XXXXXXLVzNFO/agent.518 socket no longer exists and Codex has no inherited SSH_AUTH_SOCK. Existing-route BatchMode SSH failed at jump_finan before RAL. Asked the human for the current socket path from their working WSL terminal; no credentials/configuration changed. No new remote writes or job submission.
+
+Producer107ec1c and its exact-head CI42898804169 remain unchanged/green. Prepared and shell-syntax checked .session/ral-resume-stage-03.sh for the already-approved runtime continuation; it has not run. It installs exact pinned versions and performs import/provenance validation only, with no sampling/submission.
+
+Fresh Heart2026-11-11T08:47:27.525797+00:00 RED: "autocti_workspace: Smoke Tests failure on main". Existing experiment override retained. Next: receive current agent path, verify SSH and remote state, finish runtime staging, then submit the single already-approved job after all gates. Outside Pulse; merge human.
