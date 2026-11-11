@@ -1,16 +1,4 @@
 
-## pulse-xla-pointers-to-dna
-- issue: https://github.com/PyAutoLabs/PyAutoPulse/issues/95
-- issued: 2026-11-11
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/pulse-xla-pointers-to-dna
-- repos:
-  - PyAutoPulse: feature/pulse-xla-pointers-to-dna
-- prompt: active/point_xla_deadlock_notes_at_dna_policy.md
-- tier: notify — merge mode: auto-merge on green (in-turn wait, then /prm close-out)
-- origin: follow-up of jax-version-policy (PyAutoNerves#213, complete/2026/11/jax-version-policy.md)
-
 ## jax-floor-0-12
 - issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/215
 - issued: 2026-11-11

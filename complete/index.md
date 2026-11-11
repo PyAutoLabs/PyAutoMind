@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2222 records across 11 buckets.
+2223 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -235,6 +235,7 @@ markers; everything below GENERATED is rebuilt.
 - [pr504-guard-log-det-terms](2026/11/pr504-guard-log-det-terms.md)
 - [procedure-lines-trim](2026/11/procedure-lines-trim.md) — PR is the tracking surface
 - [pseudo-det-rebaseline](2026/11/pseudo-det-rebaseline.md)
+- [pulse-xla-pointers-to-dna](2026/11/pulse-xla-pointers-to-dna.md)
 - [r2-pages-function-access](2026/11/r2-pages-function-access.md)
 - [readme-frontdoors](2026/11/readme-frontdoors.md)
 - [rectangular-gradient-rtu-sparse](2026/11/rectangular-gradient-rtu-sparse.md) — the filed symptom (|g| ~2e9 on the imaging/rectangular/hst fiducial, RTU all backends, Bilinear CPU sparse) sp…
