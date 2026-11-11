@@ -3,7 +3,8 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace_test/issues/362
 - issued: 2026-11-11
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace_test/pull/363
 - worktree: ~/Code/PyAutoLabs-wt/pr504-guard-log-det-terms
 - repos:
   - autolens_workspace_test: feature/pr504-guard-log-det-terms
