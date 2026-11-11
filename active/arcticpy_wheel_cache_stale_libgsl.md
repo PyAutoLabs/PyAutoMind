@@ -8,6 +8,7 @@ Priority: high
 Status: formalised
 Consequence: judge
 Filed: 2026-11-11
+Issued: 2026-11-11
 Repos: @PyAutoHeart (consumers: @PyAutoCTI @autocti_workspace @autocti_workspace_test)
 
 ## Evidence and reproduction
