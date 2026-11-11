@@ -175,7 +175,7 @@
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/16
 - issued: 2026-11-10
 - session: OpenAI Codex desktop (session ID unavailable)
-- status: RAL-runtime-validation (pinned packages installed; initial import check timed out; diagnostics active; no job submitted)
+- status: awaiting-runtime-cache-plan-approval (NFS imports too slow; no scientific job submitted)
 - prompt: active/nautilus_spawn_training_pool.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-spawn-training-pool
 - repos:
@@ -215,3 +215,5 @@
 - RAL-agent-restored-2026-11-11: new human-provided WSL agent restores both explicit-proxy and ordinary euclid_jump access. No prior pilot receipt or queued training job. Ral partition up,5idle nodes,OverSubscribe=NO. Runtime-only staging-03 active; retained log in task .session. Local ignored hpc/sync.conf targets the isolated task. No scientific submission; source107ec1c/CI green; existing limits/override unchanged.
 
 - RAL-runtime-2026-11-11: staging04 installed Python3.12.10 and88 binary packages; utilities confirmed by staging05 after an SSH interruption. Runtime validation05 timed out at600s without a pass receipt; diagnostic validation06 adds phase markers/stack traces with1200s setup cap. No numerical sampling or job submitted. Fresh Heart09:53:07YELLOW, only "PyAutoArray: open PR 7d old". Source107ec1c/CI green; outside Pulse/human merge.
+
+- RAL-runtime-cache-proposal: validation05 timed out600s; diagnostic06 exited139 during early module import (cause unresolved); isolated probe07 passed stdlib portion but timed out180s before baseline module completed, json37.325s/re26.467s cumulative. No science/job. Proposed local runtime/source cache with all outputs retained on NFS, same35min/4cores/8GiB and18children/120s/4GiB/1800s bounds; canonical amendment awaits approval before job-script edits. All setup processes ended and logs retained.
