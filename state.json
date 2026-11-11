@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 11 in flight",
-  "updated": "2026-11-11T11:55:42Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 12 in flight",
+  "updated": "2026-11-11T12:06:14Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,6 +12,12 @@
       "text": "JAX version policy and the recurring XLA:CPU deadlocks: what is the general\u2026 \u2014 awaiting-merge (human /prm; Heart RED-override task + YELLOW ack 2026-11-11)",
       "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/527",
       "prompt": "Use the start-dev skill. active/jax_version_policy_and_the_recurring_xla.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "interferometer/model_fit.py PR #504 non-vacuity guard trips after the pseudo-determinant \u2014 workspace-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autolens_workspace_test/pull/363",
+      "prompt": "Use the start-dev skill. active/model_fit_pr504_guard_knife_edge_after_pseudo_det.md"
     },
     {
       "severity": "yellow",
@@ -120,12 +126,6 @@
       "text": "pick: prompt_sync_push: commit only the paths it is given",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautomind/prompt_sync_push_explicit_paths.md",
       "prompt": "Use the start-dev skill. draft/bug/pyautomind/prompt_sync_push_explicit_paths.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Fix KNN neighbor search for a partial final point block",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md",
-      "prompt": "Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md"
     }
   ]
 }
