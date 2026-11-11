@@ -222,10 +222,11 @@
 - issue: https://github.com/PyAutoLabs/autolens_inference/issues/63
 - issued: 2026-11-11
 - session: claude-code desktop (WSL), PyAutoLabs session
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/likelihood-lifecycle-p4e-rerun-ingest
 - repos:
   - autolens_inference: feature/likelihood-lifecycle-p4e-rerun-ingest
 - prompt: active/likelihood_lifecycle_p4e_followup_rerun_ingest.md
 - epic: likelihood-lifecycle (phase 4e follow-up)
 - tier: judge — merge mode: human /prm
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/64
