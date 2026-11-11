@@ -1,3 +1,24 @@
+## Outcome
+
+Merged as autolens_inference#62 (e744a4a, 2026-11-11). It fixes PyAutoInsight's
+`lint` red on main ("dataset family differs from setup" on 8
+point_source_image validation records), which was blocking PyAutoInsight#42.
+
+- Cause: `inference_catalogue.py` named each phase-4 reference setup's
+  `dataset_family` by the likelihood `dataset_type`, while records carry
+  `dataset.class` = `Family.data_class` (the `dataset/<class>/` directory).
+  They differ for point_source_image (→ point_source) and datacube
+  (→ interferometer; latent, no rows yet).
+- Fix: a `DATASET_CLASS` map used by the setup builder; setup ids unchanged;
+  the Insight check is unchanged.
+- Evidence: two new tests (fail without the fix, pass with it); 475 project
+  tests passed; Insight's validator gives 8 errors on main → 0 on the branch;
+  all CI lint steps green; PR CI green.
+- Follow-up in the same session: Insight refresh + lint on main, then merge
+  PyAutoInsight#42 (the last organism-map regeneration).
+
+## Original prompt
+
 # Insight lint red on main: lens point_source_image validation records "dataset family differs from setup"
 
 Type: bug
