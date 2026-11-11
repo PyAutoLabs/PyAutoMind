@@ -12,7 +12,7 @@
 | [Epics](#epics) | 23 |
 | [In flight](#in-flight) | 11 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 258 |
+| [Backlog](#backlog) | 262 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -23,7 +23,7 @@
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 18
+**Highest priority** (filed as `high`) — showing 12 of 19
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -1320,7 +1320,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 244 · local-dev 7 · ral 5
+Lanes: any 248 · local-dev 7 · ral 5
 
 <a id="human-review"></a>
 <details>
@@ -1371,12 +1371,20 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 34</summary>
+<summary><b>feature</b> — 36</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
 
 ```
 Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autonerves/raise_jax_floor_to_0_12.md">Raise the JAX floor to 0.12.0 (jax and jaxlib) after a Heart…</a> — autonerves · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autonerves/raise_jax_floor_to_0_12.md
 ```
 
 </details>
@@ -1417,6 +1425,14 @@ Use the start-dev skill. draft/feature/autolens/coolest_pixel_grid_export.md
 
 ```
 Use the start-dev skill. draft/feature/pyautoheart/howto_real_settings_nightly.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoheart/jax_cpu_hang_guard_writes_dna.md">Heart guard: run the XLA:CPU hang reproducers on every allowed jax version…</a> — pyautoheart · medium</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautoheart/jax_cpu_hang_guard_writes_dna.md
 ```
 
 </details>
@@ -2258,7 +2274,7 @@ Use the start-dev skill. draft/research/autoarray/delaunay_interpolator_pure_cal
 </details>
 
 <details>
-<summary><b>docs</b> — 26</summary>
+<summary><b>docs</b> — 27</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -2388,6 +2404,14 @@ Use the start-dev skill. draft/docs/autogalaxy/plot_utils_critical_curves_defaul
 
 </details>
 
+<details><summary>📋 <a href="draft/docs/pyautopulse/point_xla_deadlock_notes_at_dna_policy.md">Point PyAutoPulse's XLA:CPU deadlock knowledge and D12 decision at the DNA JAX…</a> — pyautopulse · low</summary>
+
+```
+Use the start-dev skill. draft/docs/pyautopulse/point_xla_deadlock_notes_at_dna_policy.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/docs/HowToLens/tutorial_6_fitting_review.md">Resume HowToLens Chapter 1: Tutorial 6 Fitting</a> — HowToLens</summary>
 
 ```
@@ -2471,7 +2495,7 @@ Use the start-dev skill. draft/docs/workspaces/feature_introductions_and_images.
 </details>
 
 <details>
-<summary><b>maintenance</b> — 15</summary>
+<summary><b>maintenance</b> — 16</summary>
 
 <details><summary>📋 <a href="draft/maintenance/autocti/cti_upkeep_epic.md">CTI upkeep parity — bring PyAutoCTI and its satellites to the same…</a> — autocti · too-large · human-required · high</summary>
 
@@ -2581,6 +2605,14 @@ Use the start-dev skill. draft/maintenance/autolens_workspace/remeasure_shapelet
 
 ```
 Use the start-dev skill. draft/maintenance/euclid/skip_fit_output_no_longer_gates_save_results_docs_drift.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/workspaces/remove_xla_eigen_flag_workarounds_after_jax_0_12.md">Remove the per-place --xla_cpu_multi_thread_eigen=false workarounds once the jax 0.12 floor is released</a> — workspaces · low</summary>
+
+```
+Use the start-dev skill. draft/maintenance/workspaces/remove_xla_eigen_flag_workarounds_after_jax_0_12.md
 ```
 
 </details>
@@ -2883,7 +2915,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-99 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+103 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2899,6 +2931,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autolens_profiling/gradient_cost_hazard_on_ral_cpu_value.md`
 - `draft/feature/autolens_workspace/cluster_point_solver_validation_check.md`
 - `draft/feature/autolens_workspace/pointsolver_grid_extent_per_package.md`
+- `draft/feature/autonerves/raise_jax_floor_to_0_12.md`
 - `draft/feature/cortex/output_summary.md`
 - `draft/feature/euclid/euclid_dr1_prep_epic.md`
 - `draft/feature/jax_substructure/5_prng_key_vmap_noise.md`
@@ -2911,6 +2944,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/pyautobroca/broca_communication_pilot.md`
 - `draft/feature/pyautoears/community_organ_birth.md`
 - `draft/feature/pyautohands/bump_colab_urls_autolens_assistant.md`
+- `draft/feature/pyautoheart/jax_cpu_hang_guard_writes_dna.md`
 - `draft/feature/pyautomemory/reading-queue-token-management.md`
 - `draft/feature/pyautoscientist/collaborator_led_pyautoscientist_adoption_pilot.md`
 - `draft/feature/pyautoscientist/scientist_collaborator_validation.md`
@@ -2926,9 +2960,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
 - `draft/bug/autogalaxy/wrong_jax_gradient_on_mge_likelihoods_fd.md`
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
-- `draft/bug/autolens/point_source_plot_script_residual_shape_mismatch.md`
-- `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md`
-- _… and 59 more_
+- _… and 63 more_
 
 </details>
 
