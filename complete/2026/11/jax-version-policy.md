@@ -1,3 +1,39 @@
+# JAX version policy and the recurring XLA:CPU deadlocks
+
+Research, PyAutoNerves#213 (closed 2026-11-11). Tier glance; Heart RED development override at
+start (human, 2026-11-10), YELLOW acknowledged at ship (2026-11-11).
+
+## What shipped
+- PyAutoLabs/PyAutoDNA#5 (ad0242fc): `PyAutoDNA` research validation authority (shown, can block
+  promotion, never satisfies it); `dna import-matrix`; public XLA-option allowlist; JAX CPU
+  policy panel + yellow item for an observed environment on a hanging setup; decision
+  `decisions/jax-cpu-policy-2026-11.md` (supersedes jax-2026-10-04); public records.
+- PyAutoLabs/autolens_profiling#527 (a66136c4): `scripts/misc/jax_version_policy/`
+  (hang_case, library_case, run_matrix, export_reproducers, make_venvs) +
+  `hpc/batch_cpu/submit_jax_version_policy_hang_matrix_ral_cpu`.
+
+## Findings
+- jax/jaxlib 0.11.2 (users' resolved version) deadlocks XLA:CPU likelihoods with no flag. RAL
+  415009 (600 cells, 180,000 calls): 25/25 cells hung at 4 cores (first call), 0/25 at 16;
+  laptop (8 cores) intermittent (call 1-94), including Delaunay through the library with the
+  PyAutoNerves default flags.
+- jax 0.12.0 / 0.12.0.1: 0 hangs in 30,000 calls, no flag. FFT part = jax-ml/jax#41265, fixed by
+  openxla/xla#50091 in 0.12.0; no upstream issue needed for the MGE hang.
+- Eigen flag on 0.12: free for MGE, +18 % (4 cores) to ~+50 % (16 cores) on rectangular;
+  scheduler flag 1.5-2x on MGE. The LAPACK case never reproduced #274, even on 0.10.2.
+
+## Decision (human-approved 2026-11-11)
+Floor `jax>=0.12.0,<0.13` and `jaxlib>=0.12.0,<0.13` after a Heart validation on 0.12; no
+default XLA:CPU flag. Release-chat prompt: Science/scratch/jax_version_policy/release_prompt.md.
+
+## Follow-ups (Mind drafts, 36a06b3f9)
+- draft/feature/autonerves/raise_jax_floor_to_0_12.md (release-coupled)
+- draft/feature/pyautoheart/jax_cpu_hang_guard_writes_dna.md
+- draft/maintenance/workspaces/remove_xla_eigen_flag_workarounds_after_jax_0_12.md
+- draft/docs/pyautopulse/point_xla_deadlock_notes_at_dna_policy.md
+
+## Original prompt
+
 # JAX version policy and the recurring XLA:CPU deadlocks: what is the general…
 
 Type: research

@@ -60,30 +60,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/177
 - heart-ack: STALE 'release validation incomplete: no rehearsal for current source' (human 2026-11-02)
 
-## jax-version-policy
-- issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/213
-- issued: 2026-11-10
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: awaiting-merge (human /prm; Heart RED-override task + YELLOW ack 2026-11-11)
-- worktree: ~/Code/PyAutoLabs-wt/jax-version-policy
-- repos:
-  - autolens_profiling: feature/jax-version-policy
-  - PyAutoDNA: feature/jax-version-policy
-- prompt: active/jax_version_policy_and_the_recurring_xla.md
-- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
-- heart-red-override: human 2026-11-10 (PyAutoGalaxy/PyAutoLens Tests, workspace validation 14f); research/dev only, no merge/release bypass
-- co-claim: autolens_profiling shared with paused gradient-correctness-sweep (#517), human override 2026-11-10; paths disjoint
-- decisions: DNA owns the policy (decision replaces decisions/jax-2026-10-04.md); DNA writes matrix results as validation records under a new `research` authority (human 2026-11-10); Pulse only gets pointer follow-ups
-- phase: ALL 3 DONE 2026-11-11: pilot + RAL 415009 (600 cells; 0.11.2 no-flag hangs 25/25 at 4 cores, 0/25 at 16; 0.12.x 0 hangs) imported to DNA; decision RECOMMENDATION jax+jaxlib>=0.12.0, no default flag (eigen +18-50% pixelized); PRs open
-- compute-tracking: RAL 415009 (40-task array, partition ral, human-approved 2026-11-10) SUBMITTED + RUNNING 2026-11-11 ~09:15 via hpc/sync submit (HPC_BASE=/mnt/ral/jnightin/autolens_profiling_wt PROJECT_NAME=jax-version-policy). Prior 414969 failed in 2 s (venvs based on jump-host-only /usr/bin/python3.12); venvs now repointed at node-visible base CPython /mnt/ral/jnightin/PyAuto/python-3.12 READ-ONLY (submit script 7273bc79). Rows → output/jax_version_policy/rows/ral_415009_<i>.jsonl
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/527
-- workspace-pr: https://github.com/PyAutoLabs/PyAutoDNA/pull/5 MERGED 2026-11-11 via /prm (ad0242fc)
-- prs:
-  - autolens_profiling#527
-  - PyAutoDNA#5
-- heart-ack: YELLOW at ship 2026-11-11 (reds unrelated: Insight lint, Mind Lifecycle Drift, Array/Galaxy/Lens, 3 dirty worktrees) acknowledged by human
-- resume: autolens_profiling#527 RED on lint step `build_dashboard.py --check` ("dashboard/index.html would change") — caused by this branch (main green at same base a8ac3103, Brain board unchanged); a local full build_dashboard.py rewrote hundreds of catalogue shards (reverted), so the fix needs a scoped re-render investigated in the worktree, then push and human /prm 527 → close-out (issue PyAutoNerves#213, prompt complete, worktree). Follow-ups filed 36a06b3f9 (Nerves floor release-coupled; release prompt Science/scratch/jax_version_policy/release_prompt.md)
-
 ## gradient-correctness-sweep
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/517
 - issued: 2026-11-02
@@ -98,7 +74,6 @@
 - resume: (1) `sacct -j 413991` → when done pull output/p517_item2/{A_sparse_main,B_dense_main,C_sparse_tag}/…/gradient.json + .log from the RAL worktree into Science/scratch/gradient_correctness_sweep_2026-11-02/ral_item2/ and run small_step_check on them (A vs C = library effect incl #672; A vs B = sparse path vs CPU backend); (2) then items 3, 5 (local, seconds), 6, 13, 8/9/7 per the approved order in wiki/research/gradient_correctness_sweep.md
 - compute-tracking: RAL 413991 (item 2, group/delaunay/euclid CPU, legs A sparse@main / B dense@main / C sparse@tag 2026.10.25.1; partition ral; human go 2026-11-02). RAL worktree /mnt/ral/jnightin/autolens_profiling_wt/gradient-correctness-sweep (9d2ee2d3), private libs /mnt/ral/jnightin/PyAuto_wt/gradient-correctness-sweep; rows under output/p517_item2/<leg>/
 - tier: judge — merge mode: human /prm
-- co-claim: autolens_profiling also claimed by jax-version-policy (PyAutoNerves#213) on its own branch/worktree, human override 2026-11-10; paths disjoint (scripts/misc/jax_version_policy/)
 
 ## autonomous-orchestrators-p4c
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/574
