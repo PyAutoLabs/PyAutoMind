@@ -249,3 +249,7 @@ The workspace AGENTS.md requires: "Plan before editing. Present a plan and wait 
 ## Runtime cache amendment approved
 
 Live human selected "Approve cache amendment". Resume the existing workspace task and PR17; implement/validate the saved amendment and use the original single submission only after all gates. No new scientific attempt or relaxed limit is authorized. Outside Pulse; merge human.
+
+## Local runtime and cache implementation
+
+Producer c243ef676ffa15fc9e4808abc104a93c70bc8145 implements the approved local artifact/restore/validation/cleanup amendment.229 tests, Ruff/format, shell syntax and unchanged catalogue pass; author review. Login-host local runtime validation08 passed full provenance in7.35s with all90 third-party pins/native digest, zero sampling/training. Artifact build/fresh restore09 are active before the one authorized submission. No job submitted. Latest Heart receipt2026-11-11T10:45:45.346227+00:00 RED: "release validation FAILED (stage integrate)"; existing experiment development override applies.
