@@ -253,3 +253,5 @@ Live human selected "Approve cache amendment". Resume the existing workspace tas
 ## Local runtime and cache implementation
 
 Producer c243ef676ffa15fc9e4808abc104a93c70bc8145 implements the approved local artifact/restore/validation/cleanup amendment.229 tests, Ruff/format, shell syntax and unchanged catalogue pass; author review. Login-host local runtime validation08 passed full provenance in7.35s with all90 third-party pins/native digest, zero sampling/training. Artifact build/fresh restore09 are active before the one authorized submission. No job submitted. Latest Heart receipt2026-11-11T10:45:45.346227+00:00 RED: "release validation FAILED (stage integrate)"; existing experiment development override applies.
+
+Fresh artifact09 restore passed:49.95s bootstrap,53.29s including cleanup, sampling_started=false, ext4 runtime/NFS scientific output verified. Exact-head CI43015855847 passes every step. Retained NFS checkout final staging remains before the single submission.
