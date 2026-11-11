@@ -1,4 +1,21 @@
 
+## jax-floor-0-12
+- issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/215
+- issued: 2026-11-11
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/jax-floor-0-12
+- repos:
+  - PyAutoHeart: feature/jax-floor-0-12
+  - PyAutoNerves: feature/jax-floor-0-12
+- prompt: active/raise_jax_floor_to_0_12.md
+- research: https://github.com/PyAutoLabs/PyAutoNerves/issues/213 (decision PyAutoDNA decisions/jax-cpu-policy-2026-11.md, approved 2026-11-11)
+- tier: judge — merge mode: human /prm (authorized in session: "/prm each phase when green"); release human-required
+- phases: 1 validate jax 0.12 (Heart PR + local CPU/GPU + quarantined reruns) → 2 Nerves pins/README/Colab → 3 library floors autonerves>2026.11.9.1 + un-quarantine → 4 release validate + human version/approval
+- blocked-phase-3: PyAutoArray/PyAutoGalaxy/PyAutoLens claimed by magnification-maps-wiring (Lens#818); ask the human at phase 3
+- decisions: Colab upgrades jax/jaxlib/numpy(+cuda plugin) and prompts a restart; consumer floor autonerves>2026.11.9.1
+- heart-ack: YELLOW acknowledged in session 2026-11-11
+
 ## magnification-maps-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/818
 - issued: 2026-11-02
