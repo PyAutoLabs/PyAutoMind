@@ -1189,7 +1189,7 @@ Use the start-dev skill. active/matrix_free_interferometer_inversion.md
 
 </details>
 
-<details><summary>📋 <a href="active/model_fit_pr504_guard_knife_edge_after_pseudo_det.md">interferometer/model_fit.py PR #504 non-vacuity guard trips after the pseudo-determinant</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/362">issue #362</a> — issued 2026-11-11 — workspace-dev</summary>
+<details><summary>📋 <a href="active/model_fit_pr504_guard_knife_edge_after_pseudo_det.md">interferometer/model_fit.py PR #504 non-vacuity guard trips after the pseudo-determinant</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_test/issues/362">issue #362</a> — issued 2026-11-11 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace_test/pull/363">autolens_workspace_test#363</a></summary>
 
 ```
 Use the start-dev skill. active/model_fit_pr504_guard_knife_edge_after_pseudo_det.md
