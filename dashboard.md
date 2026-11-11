@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 23 |
-| [In flight](#in-flight) | 12 |
+| [In flight](#in-flight) | 13 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 257 |
+| [Backlog](#backlog) | 256 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -1173,6 +1173,14 @@ Use the start-dev skill. active/howtolens-stored-results.md
 
 </details>
 
+<details><summary>📋 <a href="active/insight_lint_lens_point_source_dataset_family.md">Insight lint red on main: lens point_source_image validation records "dataset family differs…</a> — <a href="https://github.com/PyAutoLabs/autolens_inference/issues/61">issue #61</a> — issued 2026-11-11 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/insight_lint_lens_point_source_dataset_family.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/jax_version_policy_and_the_recurring_xla.md">JAX version policy and the recurring XLA:CPU deadlocks: what is the general…</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/213">issue #213</a> — issued 2026-11-10 — workspace-dev</summary>
 
 ```
@@ -1328,7 +1336,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 244 · local-dev 7 · ral 4
+Lanes: any 243 · local-dev 7 · ral 4
 
 <a id="human-review"></a>
 <details>
@@ -1648,7 +1656,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 53</summary>
+<summary><b>bug</b> — 52</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1990,14 +1998,6 @@ Use the start-dev skill. draft/bug/priors/14_replace_transform_stack_with_biject
 
 ```
 Use the start-dev skill. draft/bug/priors/z_features.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/health_fixes/insight_lint_lens_point_source_dataset_family.md">Insight lint red on main: lens point_source_image validation records "dataset family differs…</a> — health_fixes · easy · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/bug/health_fixes/insight_lint_lens_point_source_dataset_family.md
 ```
 
 </details>
@@ -2788,7 +2788,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | Date | Event | Task |
 |------|-------|------|
 | 2026-11-11 | filed | <a href="draft/bug/health_fixes/smoke_cache_stats_warnings_nameerror.md">Smoke cache-stats step fails with NameError: warnings</a> |
-| 2026-11-11 | filed | <a href="draft/bug/health_fixes/insight_lint_lens_point_source_dataset_family.md">Insight lint red on main: lens point_source_image validation records…</a> |
+| 2026-11-11 | issued | <a href="active/insight_lint_lens_point_source_dataset_family.md">Insight lint red on main: lens point_source_image validation records…</a> |
 | 2026-11-10 | filed | <a href="draft/bug/pyautomind/prompt_sync_push_explicit_paths.md">prompt_sync_push: commit only the paths it is given</a> |
 | 2026-11-10 | filed | <a href="draft/maintenance/workspaces/data_no_ellipse_config_and_prose_sweep.md">Sweep the retired <code>data_no_ellipse</code> toggle from configs and prose</a> |
 | 2026-11-10 | filed | <a href="draft/maintenance/euclid/remove_simulator_poisson_round_off_workaround.md">Remove the pipeline-side Poisson round-off workaround once…</a> |
@@ -2883,7 +2883,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-100 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+99 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2928,7 +2928,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
 - `draft/bug/autolens/point_source_plot_script_residual_shape_mismatch.md`
 - `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md`
-- _… and 60 more_
+- _… and 59 more_
 
 </details>
 
