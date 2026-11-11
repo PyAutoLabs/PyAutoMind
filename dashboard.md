@@ -1149,7 +1149,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/arcticpy_wheel_cache_stale_libgsl.md">arcticpy install restores a pip-cached wheel built against a missing libgsl</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/330">issue #330</a> — issued 2026-11-11 — library-dev</summary>
+<details><summary>📋 <a href="active/arcticpy_wheel_cache_stale_libgsl.md">arcticpy install restores a pip-cached wheel built against a missing libgsl</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/330">issue #330</a> — issued 2026-11-11 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/331">PyAutoHeart#331</a></summary>
 
 ```
 Use the start-dev skill. active/arcticpy_wheel_cache_stale_libgsl.md
