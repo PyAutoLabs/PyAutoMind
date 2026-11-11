@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2218 records across 11 buckets.
+2219 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -180,6 +180,7 @@ markers; everything below GENERATED is rebuilt.
 - [howtolens-ch2-explanations](2026/11/howtolens-ch2-explanations.md) — Completed the approved Chapter 2 rewrite, including explicit parameter-space explanations, delayed linear-prof…
 - [howtolens-ch3-approved](2026/11/howtolens-ch3-approved.md) — Implemented all 66 approved Chapter 3 prose blocks, restored Fit Problems and introductory positivity/mapping-…
 - [howtolens-chapter2](2026/11/howtolens-chapter2.md) — Applied approved tutorials 1–4, optional Prodigy introduction, notebook generation and navigation. Later Chapt…
+- [howtolens-stored-results](2026/11/howtolens-stored-results.md)
 - [hpc-cache-off-home-euclid](2026/11/hpc-cache-off-home-euclid.md) — already shipped — euclid_strong_lens_modeling_pipeline 37034f22 (2026-09-25, default branch) "activate.sh: kee…
 - [hpc-campaign-p5a-assistant](2026/11/hpc-campaign-p5a-assistant.md) — phase 5a; ledger draft/research/autofit/hpc_campaign_epic.md
 - [hygiene-extras-tomllib](2026/11/hygiene-extras-tomllib.md)
