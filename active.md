@@ -175,7 +175,7 @@
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/16
 - issued: 2026-11-10
 - session: OpenAI Codex desktop (session ID unavailable)
-- status: awaiting-runtime-cache-plan-approval (NFS imports too slow; no scientific job submitted)
+- status: workspace-dev (runtime cache amendment approved; no scientific job submitted)
 - prompt: active/nautilus_spawn_training_pool.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-spawn-training-pool
 - repos:

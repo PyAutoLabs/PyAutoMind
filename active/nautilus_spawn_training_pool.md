@@ -221,7 +221,7 @@ The first imports/source/inventory check timed out at600s without a pass receipt
 
 ## Proposed node-local runtime cache amendment — 2026-11-11
 
-Status: awaiting explicit plan approval. No scientific RAL job has been submitted; the existing single-job authorization is unused. This amendment changes runtime/source placement and the job startup procedure, while retaining the approved measurement and resource limits. Outside Pulse; human merge.
+Status: approved by live human on 2026-11-11 ("Approve cache amendment"). No scientific RAL job has been submitted; the existing single-job authorization is unused. This amendment changes runtime/source placement and the job startup procedure, while retaining the approved measurement and resource limits. Outside Pulse; human merge.
 
 ### Evidence
 
@@ -245,3 +245,7 @@ Read-only discovery shows /mnt/ral is nfs4; /tmp on the login host is local ext4
 ### Approval boundary
 
 The workspace AGENTS.md requires: "Plan before editing. Present a plan and wait for explicit user approval before editing any source, workspace script, notebook, test, or release file." The previous approved plan places clean worktrees in the retained profiling task area and does not describe a node-local bootstrap or disposable cache cleanup. This proposal makes that change explicit before editing the job wrapper/helper. Approval is for this runtime-placement amendment, not an additional scientific attempt or relaxed budget.
+
+## Runtime cache amendment approved
+
+Live human selected "Approve cache amendment". Resume the existing workspace task and PR17; implement/validate the saved amendment and use the original single submission only after all gates. No new scientific attempt or relaxed limit is authorized. Outside Pulse; merge human.
