@@ -64,7 +64,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/213
 - issued: 2026-11-10
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: workspace-dev
+- status: awaiting-merge (human /prm; Heart RED-override task + YELLOW ack 2026-11-11)
 - worktree: ~/Code/PyAutoLabs-wt/jax-version-policy
 - repos:
   - autolens_profiling: feature/jax-version-policy
@@ -74,9 +74,15 @@
 - heart-red-override: human 2026-11-10 (PyAutoGalaxy/PyAutoLens Tests, workspace validation 14f); research/dev only, no merge/release bypass
 - co-claim: autolens_profiling shared with paused gradient-correctness-sweep (#517), human override 2026-11-10; paths disjoint
 - decisions: DNA owns the policy (decision replaces decisions/jax-2026-10-04.md); DNA writes matrix results as validation records under a new `research` authority (human 2026-11-10); Pulse only gets pointer follow-ups
-- phase: 1 laptop pilot DONE 2026-11-10 (0.11.2 no-flag hangs MGE@4/@94, Delaunay@1, fft@1; 0.12.0.1 no-flag + eigen pass all; eigen ~free on 0.12, sched 1.5-2x; lapack case non-reproducing even on 0.10.2); DNA research authority + import-matrix + JAX CPU policy panel built (PyAutoDNA de1b52d, 23+ tests); decision DRAFT decisions/jax-cpu-policy-2026-11.md (3e38dff); human asked "just up JAX to 0.12.0.1?" → answer: likely floor jax+jaxlib>=0.12.0 after RAL N=5 + Heart 0.12 validation
+- phase: ALL 3 DONE 2026-11-11: pilot + RAL 415009 (600 cells; 0.11.2 no-flag hangs 25/25 at 4 cores, 0/25 at 16; 0.12.x 0 hangs) imported to DNA; decision RECOMMENDATION jax+jaxlib>=0.12.0, no default flag (eigen +18-50% pixelized); PRs open
 - compute-tracking: RAL 415009 (40-task array, partition ral, human-approved 2026-11-10) SUBMITTED + RUNNING 2026-11-11 ~09:15 via hpc/sync submit (HPC_BASE=/mnt/ral/jnightin/autolens_profiling_wt PROJECT_NAME=jax-version-policy). Prior 414969 failed in 2 s (venvs based on jump-host-only /usr/bin/python3.12); venvs now repointed at node-visible base CPython /mnt/ral/jnightin/PyAuto/python-3.12 READ-ONLY (submit script 7273bc79). Rows → output/jax_version_policy/rows/ral_415009_<i>.jsonl
-- resume: (1) `sacct -j 415009 -X` → when done, rsync output/jax_version_policy/rows/ral_415009_*.jsonl from the RAL clone /mnt/ral/jnightin/autolens_profiling_wt/jax-version-policy to the laptop worktree output/jax_version_policy/rows/; (2) concatenate → `python -m dna import-matrix <file> --evidence autolens_profiling:jax_version_policy/ral_415009` in worktree PyAutoDNA (environment ral-cpu, in environments.yaml); (3) finalize DNA decisions/jax-cpu-policy-2026-11.md with the RAL table; (4) follow-ups: Heart 0.12 validation, Nerves floor jax+jaxlib>=0.12.0 prompt, delaunay_mge on 0.12, Pulse pointers, upstream MGE-hang issue draft (human approval). Scheduler actions only via hpc/sync (hook blocks raw sbatch). Local private DNA store (worktree PyAutoDNA/private) holds pilot records + laptop inventory
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/527
+- workspace-pr: https://github.com/PyAutoLabs/PyAutoDNA/pull/5
+- prs:
+  - autolens_profiling#527
+  - PyAutoDNA#5
+- heart-ack: YELLOW at ship 2026-11-11 (reds unrelated: Insight lint, Mind Lifecycle Drift, Array/Galaxy/Lens, 3 dirty worktrees) acknowledged by human
+- resume: human /prm autolens_profiling#527 + PyAutoDNA#5 (order free; no library PR). Follow-ups filed 36a06b3f9: draft/feature/autonerves/raise_jax_floor_to_0_12.md (release-coupled), draft/feature/pyautoheart/jax_cpu_hang_guard_writes_dna.md, draft/maintenance/workspaces/remove_xla_eigen_flag_workarounds_after_jax_0_12.md, draft/docs/pyautopulse/point_xla_deadlock_notes_at_dna_policy.md
 
 ## gradient-correctness-sweep
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/517
