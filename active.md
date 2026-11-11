@@ -3,7 +3,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/330
 - issued: 2026-11-11
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/331
 - worktree: ~/Code/PyAutoLabs-wt/arcticpy-wheel-cache-libgsl
 - repos:
   - PyAutoHeart: feature/arcticpy-wheel-cache-libgsl
