@@ -82,3 +82,9 @@ Commit/push/open both workspace PRs authorized. No merge, release or failed-chec
 ## PRs open — 2026-11-11
 
 AutoLens #627 (1472d662); AutoGalaxy #273 (061fad8). Both committed and pushed. No merge. Human skim review at text_only/skim.html; full review at index.html. Validation unchanged from saved exact patches. GitHub checks must be evaluated before a separately authorized merge.
+
+## Human refinement — 2026-11-11
+
+Human: "The start here in dataset level stuff like imaging/features is covered by README.md so dont have a start_here.py. I think the extraction is good and we will want to review each start_here.py individually in a follow up including images"
+
+Removed all 11 topic-level feature hub scripts and corresponding notebooks; regenerated both catalogues. 79 new per-feature introductions + 9 existing guides remain (88 review entries). Remaining scripts unchanged; navigation/link checks pass. Follow-up explicitly requested: review each feature introduction individually, including images. No image work or merge now.

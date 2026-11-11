@@ -265,3 +265,8 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/627 (1472d662)
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/273 (061fad8)
 - skim-review: /mnt/c/Users/Jammy/Workspace/Science/scratch/feature_guides_review_20261110/text_only/skim.html
+
+- refinement: removed 11 topic-level hubs and notebooks; README navigation retained; 79 new per-feature introductions and 9 existing guides remain.
+- follow-up: human requests individual review of every per-feature start_here.py, including illustrative images, in a subsequent task.
+
+- latest-heads: AutoLens ba74ab05; AutoGalaxy 460d036. Topic-hub removals committed and pushed; PR descriptions and review updated.
