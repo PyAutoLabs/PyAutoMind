@@ -208,3 +208,7 @@ The human resumed work. The saved /tmp/ssh-XXXXXXLVzNFO/agent.518 socket no long
 Producer107ec1c and its exact-head CI42898804169 remain unchanged/green. Prepared and shell-syntax checked .session/ral-resume-stage-03.sh for the already-approved runtime continuation; it has not run. It installs exact pinned versions and performs import/provenance validation only, with no sampling/submission.
 
 Fresh Heart2026-11-11T08:47:27.525797+00:00 RED: "autocti_workspace: Smoke Tests failure on main". Existing experiment override retained. Next: receive current agent path, verify SSH and remote state, finish runtime staging, then submit the single already-approved job after all gates. Outside Pulse; merge human.
+
+## RAL staging resumed with working agent
+
+2026-11-11: human provided a current WSL SSH agent path. Explicit-proxy and ordinary euclid_jump access work. No previous pilot receipt or queued training job was found. Partition ral is up with5idle nodes and OverSubscribe=NO. Runtime-only staging-03 resumed exact Python3.12.10 installation,90 pinned distributions and then import/provenance checks. No sampling or sbatch in this script. Shared filesystem extraction is slow but advancing. Local ignored hpc/sync.conf points only to the isolated task. Scientific authorization remains unused; retain all limits and stop-on-first-failure rule.
