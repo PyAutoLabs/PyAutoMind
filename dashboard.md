@@ -12,7 +12,7 @@
 | [Epics](#epics) | 23 |
 | [In flight](#in-flight) | 13 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 256 |
+| [Backlog](#backlog) | 258 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -121,7 +121,7 @@ Use the start-dev skill. draft/research/autoarray/delaunay_research.md
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 77
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 78
 
 <details><summary>📋 <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a> — autolens_workspace · small · safe · normal</summary>
 
@@ -1336,7 +1336,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 243 · local-dev 7 · ral 4
+Lanes: any 244 · local-dev 7 · ral 5
 
 <a id="human-review"></a>
 <details>
@@ -1387,7 +1387,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 33</summary>
+<summary><b>feature</b> — 34</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
 
@@ -1481,6 +1481,14 @@ Use the start-dev skill. draft/feature/autolens_workspace/joss_cluster_benchmark
 
 ```
 Use the start-dev skill. draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoheart/release_validation_check_howto_stored_fit_result.md">Release validation: check HowTo stored fit results load before a release ships</a> — pyautoheart · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautoheart/release_validation_check_howto_stored_fit_result.md
 ```
 
 </details>
@@ -2266,7 +2274,7 @@ Use the start-dev skill. draft/research/autoarray/delaunay_interpolator_pure_cal
 </details>
 
 <details>
-<summary><b>docs</b> — 25</summary>
+<summary><b>docs</b> — 26</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -2328,6 +2336,14 @@ Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richard
 
 ```
 Use the start-dev skill. draft/docs/autolens/plot_rst_missing_exports.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/howtolens/howtolens_stored_results_phase_2_chapters_3.md">HowToLens stored results phase 2: Chapters 3, 4 and the optional chapter</a> — howtolens · large · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/docs/howtolens/howtolens_stored_results_phase_2_chapters_3.md
 ```
 
 </details>
