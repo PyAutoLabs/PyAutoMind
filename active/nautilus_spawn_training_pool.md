@@ -212,3 +212,9 @@ Fresh Heart2026-11-11T08:47:27.525797+00:00 RED: "autocti_workspace: Smoke Tests
 ## RAL staging resumed with working agent
 
 2026-11-11: human provided a current WSL SSH agent path. Explicit-proxy and ordinary euclid_jump access work. No previous pilot receipt or queued training job was found. Partition ral is up with5idle nodes and OverSubscribe=NO. Runtime-only staging-03 resumed exact Python3.12.10 installation,90 pinned distributions and then import/provenance checks. No sampling or sbatch in this script. Shared filesystem extraction is slow but advancing. Local ignored hpc/sync.conf points only to the isolated task. Scientific authorization remains unused; retain all limits and stop-on-first-failure rule.
+
+## RAL runtime installed; validation diagnostics
+
+2026-11-11: diagnostic staging04 installed exact Python3.12.10 (10m33s),88 binary packages (14m58s preparation,17m06s installation). An SSH interruption ended that connection during utility setup; reconnected and verified no remaining task-owned installer, then staging05 confirmed the two utility pins using the retained environment. SSH keepalives and remote logs now preserve diagnostics.
+
+The first imports/source/inventory check timed out at600s without a pass receipt. Validation06 adds phase markers and60s Python stack dumps under a1200s setup-only cap. It performs no sampling or neural training. Root cause is not yet established beyond observed NFS waits. Do not submit until this gate passes, and do not relax scientific limits. All setup logs retained. Producer107ec1c/194tests/exact-head CI unchanged. Latest Heart2026-11-11T09:53:07.387383+00:00 YELLOW: "PyAutoArray: open PR 7d old"; existing scoped development authorization remains, outside Pulse and human merge.
