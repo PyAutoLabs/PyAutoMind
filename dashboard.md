@@ -1165,7 +1165,7 @@ Use the start-dev skill. active/gradient_correctness_sweep.md
 
 </details>
 
-<details><summary>📋 <a href="active/jax_version_policy_and_the_recurring_xla.md">JAX version policy and the recurring XLA:CPU deadlocks: what is the general…</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/213">issue #213</a> — issued 2026-11-10 — workspace-dev</summary>
+<details><summary>📋 <a href="active/jax_version_policy_and_the_recurring_xla.md">JAX version policy and the recurring XLA:CPU deadlocks: what is the general…</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/213">issue #213</a> — issued 2026-11-10 — awaiting-merge (human /prm; Heart RED-override task + YELLOW ack 2026-11-11) — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/527">autolens_profiling#527</a>, <a href="https://github.com/PyAutoLabs/PyAutoDNA/pull/5">PyAutoDNA#5</a></summary>
 
 ```
 Use the start-dev skill. active/jax_version_policy_and_the_recurring_xla.md
