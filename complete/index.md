@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2220 records across 11 buckets.
+2221 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -231,6 +231,7 @@ markers; everything below GENERATED is rebuilt.
 - [one-line-auto-simulate-helper](2026/11/one-line-auto-simulate-helper.md)
 - [organism-map-compact](2026/11/organism-map-compact.md) — PR is the tracking surface
 - [point-magnification-api](2026/11/point-magnification-api.md) — already shipped — PyAutoLens#798 (f791ac77) + autolens_workspace#598 (0f8b4db5), records `complete/2026/10/poi…
+- [pr504-guard-log-det-terms](2026/11/pr504-guard-log-det-terms.md)
 - [procedure-lines-trim](2026/11/procedure-lines-trim.md) — PR is the tracking surface
 - [pseudo-det-rebaseline](2026/11/pseudo-det-rebaseline.md)
 - [r2-pages-function-access](2026/11/r2-pages-function-access.md)

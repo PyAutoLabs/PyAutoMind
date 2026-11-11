@@ -1,3 +1,27 @@
+## Outcome
+
+Corrective fix for Heart RED "release validation FAILED (stage integrate)",
+merged as autolens_workspace_test#363 (eb30383, 2026-11-11). Live human
+authorization on #362.
+
+- Cause: `scripts/interferometer/model_fit.py`'s PR #504 non-vacuity guard
+  used the net |figure_of_merit − log_likelihood| >= 1 nat as a proxy for
+  "log-det terms present". PyAutoArray#683's pseudo-determinant raised
+  log det H by 0.5·ln(1e8) per intrinsic-regularized mapper; the net crossed
+  zero and landed at +0.80 nat at release resolution (integrate run
+  42998439751: 814 pass / 1 fail).
+- A/B at smoke scale: log det(F+H) 122.67 both sides, log det H
+  113.04 → 131.46, net −4.83 → +4.39 (healthy terms, coincidental cancellation).
+- Fix: assert each inversion log-det term >= 1 nat; the LLF == fom == call_wrap
+  checks are unchanged.
+- Evidence: smoke-scale full run passes (15 s); a zeroed-terms control fails;
+  PR smoke CI green (it does not include this script).
+- Post-merge: Stage 3 integrate re-run on the same wheels
+  (2026.11.11.1.dev87401; library HEADs unchanged), PyAutoHeart run 43018956933.
+- Split out: draft/bug/health_fixes/pr504_sibling_guards_net_gap_proxy.md.
+
+## Original prompt
+
 # interferometer/model_fit.py PR #504 non-vacuity guard trips after the pseudo-determinant
 
 Type: bug
