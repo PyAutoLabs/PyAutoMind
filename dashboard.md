@@ -12,7 +12,7 @@
 | [Epics](#epics) | 23 |
 | [In flight](#in-flight) | 13 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 255 |
+| [Backlog](#backlog) | 256 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -121,7 +121,7 @@ Use the start-dev skill. draft/research/autoarray/delaunay_research.md
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 76
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 77
 
 <details><summary>📋 <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a> — autolens_workspace · small · safe · normal</summary>
 
@@ -1336,7 +1336,7 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ## Backlog
 
-Lanes: any 243 · local-dev 7 · ral 3
+Lanes: any 243 · local-dev 7 · ral 4
 
 <a id="human-review"></a>
 <details>
@@ -1656,7 +1656,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 51</summary>
+<summary><b>bug</b> — 52</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1902,6 +1902,14 @@ Use the start-dev skill. draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batc
 
 ```
 Use the start-dev skill. draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/autogalaxy/searches_score_elliptical_components_with_magnit.md">Searches score elliptical components with magnitude &gt;= 1, so results can't be…</a> — autogalaxy · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/bug/autogalaxy/searches_score_elliptical_components_with_magnit.md
 ```
 
 </details>
