@@ -64,3 +64,30 @@ Heart gate: RED at 2026-11-12T18:07:53.810744+00:00. Exact reasons:
 - release validation FAILED (stage integrate)
 
 Await live development-only override for #645. No source commit/push or PR yet.
+
+## Development-only Heart RED override
+
+Live user authorization:
+> I approve the development-only Heart RED override for #645. Commit, push and open both PRs for review, don't merge yet.
+
+Exact Heart RED reasons (2026-11-12T18:07:53.810744+00:00):
+- PyAutoNerves: 2 commit(s) behind origin
+- PyAutoArray: 2 commit(s) behind origin
+- PyAutoGalaxy: 4 commit(s) behind origin
+- PyAutoLens: on branch feature/los-halos-review (not main)
+- PyAutoLens: 2 uncommitted source change(s)
+- PyAutoCTI: 2 commit(s) behind origin
+- install verification FAILED (testpypi; checks F)
+- release validation FAILED (stage integrate)
+
+Approved prose/image parity, syntax, executable AST and notebook code-cell parity, notebook schemas, local links, navigator/banner/search-memory/size checks, staged whitespace and focused Sphinx build passed. Human reviewed text/image. Numerical tests and simulation smoke not rerun for docs-only scope; CI remains required before merge.
+
+Authorizes commit, push and PR-open only. No merge or release.
+
+## PR-open checkpoint — 2026-11-12
+
+- RTD: https://github.com/PyAutoLabs/PyAutoLens/pull/837 — 122ec1ea0f6dea9f4b7b9b48d039d850aa85bf90
+- Workspace: https://github.com/PyAutoLabs/autolens_workspace/pull/646 — 02f19489eee626df30a702279ab360a10e968d05
+- Both source worktrees clean and pushed. Override recorded in issue, both PR bodies, active.md and autonomy_log.md. No merge/release/auto-merge requested or performed.
+- Existing targeted checks passed. CI has not been declared green; judge each required exact-head job and release freeze on a later human merge request.
+- Approved image population revision reused byte-identically. Newly merged start-here-intro-polish preserved.
