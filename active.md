@@ -85,3 +85,17 @@
   - Jammy2211.github.io: feature/homepage-flow-polish
 - prompt: active/homepage_flow_polish.md
 - tier: judge — merge mode: human /prm
+
+## start-here-intro-polish
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/834
+- issued: 2026-11-12
+- session: Codex desktop; session ID unavailable
+- status: workspace-dev
+- prompt: active/start_here_intro_polish.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/start-here-intro-polish
+- tier: judge — human text review before PR creation; merge mode human /prm
+- repos:
+  - PyAutoLens: feature/start-here-intro-polish
+  - PyAutoGalaxy: feature/start-here-intro-polish
+  - autolens_workspace: feature/start-here-intro-polish
+  - autogalaxy_workspace: feature/start-here-intro-polish
