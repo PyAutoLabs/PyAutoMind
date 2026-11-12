@@ -211,6 +211,24 @@ those, and push back to origin. It
 replaces a now-removed `admin_sync.sh` helper that formerly operated on
 `admin_jammy/prompt/`.
 
+It pushes the current branch, and refuses a detached HEAD unless the call names
+the target. To write Mind from a temporary worktree detached on `origin/main`
+(rather than the shared checkout):
+
+```bash
+git -C PyAutoMind fetch origin
+git -C PyAutoMind worktree add --detach <tmp> origin/main
+# edit files under <tmp>, then:
+PROMPT_REPO=<tmp> PROMPT_SYNC_PUSH_TO=main prompt_sync_push "prompt: <subject>" <paths>
+```
+
+`PROMPT_SYNC_PUSH_TO` pushes `HEAD:main` with no force. If `origin/main` has
+moved on, the push is rejected and the commit stays local: `git -C <tmp> fetch
+origin && git -C <tmp> rebase origin/main && git -C <tmp> push origin HEAD:main`
+(re-running `prompt_sync_push` would be a no-op, since nothing is left to
+commit). On a named branch the variable
+is not needed, and a value that differs from that branch is refused (issue #556).
+
 ---
 
 ## Prompt taxonomy

@@ -16,6 +16,10 @@
 # changed file holds conflict markers, or when a changed state.json does not
 # parse. In a shared checkout another session's edits are never swept up.
 #
+# Both push the current branch. From a detached HEAD (a temporary worktree
+# detached on origin/main) they refuse unless the call names the target:
+#   PROMPT_SYNC_PUSH_TO=main prompt_sync_push "prompt: <subject>" <path>...
+#
 # Both functions are no-ops when there is nothing to do, and safe to call
 # multiple times in the same session.
 #
@@ -63,15 +67,69 @@ _prompt_sync_require_repo() {
 # Pushing HEAD leaves the single-branch laptop flow byte-identical — there the
 # current branch IS `main` — while making a branch-scoped checkout do the right
 # thing instead of the dangerous thing.
-_prompt_sync_push_current() {
-  local branch
-  branch=$(git -C "$PROMPT_REPO" rev-parse --abbrev-ref HEAD 2>/dev/null)
-  if [ -z "$branch" ] || [ "$branch" = "HEAD" ]; then
-    echo "prompt_sync: refusing to push from a detached HEAD in $PROMPT_REPO" >&2
-    echo "  check out a branch first." >&2
+#
+# A detached HEAD (the doctrine route for Mind writes: a temporary worktree
+# detached on origin/main) has no branch to push, so it refuses by default: a
+# branch-scoped session must never reach `main` by accident. The caller names
+# the target explicitly, per call, with PROMPT_SYNC_PUSH_TO:
+#
+#   PROMPT_SYNC_PUSH_TO=main prompt_sync_push "prompt: <subject>" <path>...
+#
+# which pushes `HEAD:refs/heads/main` (no -u, never a force; a non-fast-forward
+# is rejected and reported). On a named branch the variable is not needed; when
+# set it must name that same branch, so each call follows one rule.
+#
+# _prompt_sync_push_target prints the branch to push, or refuses (one line on
+# stderr, returns 1). Both helpers call it BEFORE committing, so a refusal here
+# commits nothing; _prompt_sync_push_current calls it again to push.
+_prompt_sync_push_target() {
+  local branch target checked
+  branch=$(git -C "$PROMPT_REPO" symbolic-ref --quiet --short HEAD 2>/dev/null)
+  if [ -n "${PROMPT_SYNC_PUSH_TO+set}" ]; then
+    target="$PROMPT_SYNC_PUSH_TO"
+    case "$target" in
+      ""|-*|*[[:space:]]*)
+        echo "prompt_sync: refusing, nothing committed: PROMPT_SYNC_PUSH_TO='$target' is not a valid branch name" >&2
+        return 1 ;;
+    esac
+    checked=$(git -C "$PROMPT_REPO" check-ref-format --branch "$target" 2>/dev/null)
+    if [ "$?" -ne 0 ] || [ "$checked" != "$target" ]; then
+      echo "prompt_sync: refusing, nothing committed: PROMPT_SYNC_PUSH_TO='$target' is not a valid branch name" >&2
+      return 1
+    fi
+    if [ -n "$branch" ] && [ "$branch" != "$target" ]; then
+      echo "prompt_sync: refusing, nothing committed: on branch '$branch' but PROMPT_SYNC_PUSH_TO='$target'; unset it to push '$branch'" >&2
+      return 1
+    fi
+    printf '%s\n' "$target"
+    return 0
+  fi
+  if [ -z "$branch" ]; then
+    echo "prompt_sync: refusing, nothing committed: detached HEAD in $PROMPT_REPO; name the target with PROMPT_SYNC_PUSH_TO=<branch> (e.g. PROMPT_SYNC_PUSH_TO=main) or check out a branch" >&2
     return 1
   fi
-  git -C "$PROMPT_REPO" push -u origin "$branch"
+  printf '%s\n' "$branch"
+}
+
+_prompt_sync_push_current() {
+  local target err
+  target=$(_prompt_sync_push_target) || return 1
+  if git -C "$PROMPT_REPO" symbolic-ref --quiet HEAD >/dev/null 2>&1; then
+    git -C "$PROMPT_REPO" push -u origin "$target"
+    return
+  fi
+  # Detached HEAD with an explicit target: a plain push of HEAD, never forced.
+  if ! err=$(git -C "$PROMPT_REPO" push origin "HEAD:refs/heads/$target" 2>&1); then
+    printf '%s\n' "$err" >&2
+    if printf '%s' "$err" | grep -qE 'non-fast-forward|fetch first|\[rejected\]'; then
+      echo "prompt_sync: push rejected, origin/$target has moved on (not a fast-forward); the commit is kept locally: fetch, rebase onto origin/$target and retry" >&2
+    else
+      echo "prompt_sync: push of HEAD to origin/$target failed; the commit is kept locally" >&2
+    fi
+    return 1
+  fi
+  [ -n "$err" ] && printf '%s\n' "$err" >&2
+  return 0
 }
 
 # Commit and push any new untracked .md files at the repo root or under
@@ -103,6 +161,7 @@ prompt_sync_new_prompts() {
   local body
   body=$(printf -- '- %s\n' "${files[@]}")
 
+  _prompt_sync_push_target >/dev/null || return 1
   git -C "$PROMPT_REPO" add -- "${files[@]}" || return 1
   git -C "$PROMPT_REPO" commit \
     -m "$(printf 'prompt: sync new task ideas\n\n%s\n' "$body")" \
@@ -252,6 +311,10 @@ prompt_sync_push() {
     fi
     staged+=("$f")
   done < <(git -C "$PROMPT_REPO" diff --cached --name-only --no-renames -z)
+
+  # Refuse an unpushable target (detached HEAD with no PROMPT_SYNC_PUSH_TO, a
+  # bad or mismatched one) before committing, so the refusal commits nothing.
+  _prompt_sync_push_target >/dev/null || return 1
 
   # Commit with an explicit pathspec (`--only`), so anything staged after the
   # check above stays staged and never rides along in this commit.
