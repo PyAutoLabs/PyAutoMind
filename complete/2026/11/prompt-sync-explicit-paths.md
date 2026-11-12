@@ -1,3 +1,34 @@
+Programme task **M1.2** (epic `autonomous-orchestrators`, phase 8). Shipped as PyAutoMind#555 (7ae138d5f) and PyAutoBrain#605 (3dfe3707d), both merged 2026-11-12. Issue PyAutoMind#554, closed.
+
+`prompt_sync_push <message> <path>...` now stages and commits only the given paths, with a pathspec-limited commit. It refuses, committing nothing, when:
+- no paths are given;
+- there are changes outside the paths (including untracked files, unmerged paths and rename sources);
+- a staged file has both `<<<<<<< ` and `>>>>>>> ` lines;
+- a changed `state.json` does not parse;
+- a path lies outside the repo.
+
+Other changes:
+- `prompt_sync_new_prompts` commits only the new prompts.
+- `lifecycle.py close` prints the exact push line for what it wrote, plus the dashboard files, instead of `git add -A` advice.
+- Every caller in Mind and Brain passes the files its step writes. This includes `state.json` and `autonomy_log.md`, and the registries the close dry run names.
+
+**Witness** (command and observed result):
+- `grep -n "add -A" scripts/prompt_sync.sh` prints nothing.
+- `pytest tests/test_prompt_sync_explicit_paths.py tests/test_prompt_sync_branch.py` gives 20 passed, later 21 with the bystander test. 9 of the new tests fail on the old script.
+- Mind `pytest tests/`: 750 passed.
+- CI green: Mind Lifecycle Drift and Spawn Drift (privacy; the conditional `drift` job was skipped), Brain pytest 3.12 and 3.13.
+- This close-out was itself committed with the line `close` printed, through the new helper.
+
+**Review:** an independent Opus review returned FINDINGS. The documented intake and prm calls left out `state.json`, `autonomy_log.md` and the registries, so they would have refused, and close still printed `git add -A` advice. These were fixed in b5e742128 and cf0339e, which also fixed 3 more call-site gaps the audit found. The re-review was CLEAN, with a scratch-clone glance close-out that committed cleanly.
+
+**Heart:** RED at ship (PyAutoLens canonical checkout on a review branch and dirty; install check F; release integrate). The live human gave a development-only override plus the merge command, recorded in all four places.
+
+**Follow-ups:** `draft/maintenance/pyautomind/prompt_sync_explicit_paths_followups.md` (the autolens_profiling caller, documenting the shared-checkout route, the `PYAUTO_MIND` test fixture, literal pathspecs).
+
+There is no pending release: these are organs, not published libraries.
+
+## Original prompt
+
 # prompt_sync_push: commit only the paths it is given
 
 Type: bug

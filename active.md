@@ -62,24 +62,6 @@
 - merge-validation: all four jobs (Docs, Python 3.12, Python 3.13, no-JAX) passed per exact PR head; freeze clear, merge states CLEAN; explicit live human merge authority
 - retained-repos: PyAutoLens and PyAutoGalaxy merged worktrees retained within the bundle; PyAutoFit still dirty and uncommitted. No release performed.
 
-## prompt-sync-explicit-paths
-- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/554
-- issued: 2026-11-12
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/prompt-sync-explicit-paths
-- prompt: active/prompt_sync_push_explicit_paths.md
-- epic: autonomous-orchestrators (programme M1.2, phase 8)
-- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
-- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/555, https://github.com/PyAutoLabs/PyAutoBrain/pull/605
-- heart-red-override:
-  authorization: live human 2026-11-12 "Override + merge on green" (programme session); https://github.com/PyAutoLabs/PyAutoMind/issues/554
-  reasons: "PyAutoLens: on branch feature/shapelets-review (not main)"; "PyAutoLens: 2 uncommitted source change(s)"; "install verification FAILED (testpypi; checks F)"; "release validation FAILED (stage integrate)"
-  gates: Mind suite 750 passed; witness pass; independent review CLEAN; smoke n/a
-- repos:
-  - PyAutoMind: feature/prompt-sync-explicit-paths
-  - PyAutoBrain: feature/prompt-sync-explicit-paths
-
 ## homepage-flow-polish
 - issue: https://github.com/Jammy2211/Jammy2211.github.io/issues/3
 - issued: 2026-11-12
