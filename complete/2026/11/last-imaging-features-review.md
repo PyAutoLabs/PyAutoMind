@@ -1,3 +1,24 @@
+# Final imaging feature introductions and illustrations
+
+Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/654 (closed)
+
+Merged 2026-11-12 under the live human merge command after all 12 exact-head CI jobs succeeded and Heart freeze returned `not frozen`. Library first:
+- PyAutoLens #850 https://github.com/PyAutoLabs/PyAutoLens/pull/850; source a53bb4dbaf79470c50294419e1fb877ba28b7719; merge 7b143f2bc707ee41107e65807e4361d04e8e4c76.
+- autolens_workspace #655 https://github.com/PyAutoLabs/autolens_workspace/pull/655; source 5726f9e04b8647b0952efd1abc8e8857b97e2955; merge 86ccafab6402395cf7e1c957c674732260e79f2c.
+Both source branches proved ancestors of origin/main.
+
+Applied approved scientific-use-case-first introductions for no_lens_light, advanced/sky_background and advanced/subhalo, preserving teaching detail. Two new images reused in feature introductions, main tour and RTD; the approved subhalo image reused unchanged. Four notebooks and navigation catalogues regenerated. The sky prior boundary is explained, not changed.
+
+Validation: exact approved prose/image parity; executable AST and notebook code preservation; notebook schemas and image paths; focused Sphinx warnings-as-errors build; navigator, search-memory, size and whitespace checks; concurrent api-reference-polish and general-docs-refresh file scopes disjoint. Local numerical suites not repeated for documentation-only edits; all four library CI jobs and eight workspace CI jobs passed before merge.
+
+Development-only Heart RED override recorded on issue, PRs, active entry and first autonomy_log table. Separate live merge authority used; no release/rehearsal or assertion Heart is healthy. No pending-release obligation in the task active entry.
+
+Review bundle: C:\Users\Jammy\Workspace\Science\scratch\last_three_imaging_review_20261112\applied\
+Task worktrees: /home/jammy/Code/PyAutoLabs/.worktrees/last-imaging-features-review (remove after close-out).
+All 16 imaging feature introductions have now completed this individual text/image review cycle. Non-imaging variants remain a separate follow-up.
+
+## Original prompt
+
 # Last three imaging feature introductions
 
 Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/654

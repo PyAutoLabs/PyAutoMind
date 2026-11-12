@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2244 records across 11 buckets.
+2245 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -199,6 +199,7 @@ markers; everything below GENERATED is rebuilt.
 - [jax-floor-0-12](2026/11/jax-floor-0-12.md)
 - [jax-joss-benchmark-repo](2026/11/jax-joss-benchmark-repo.md) — already shipped — PyAutoLabs/autolens_jax_joss: 9c66b020 (birth, 10 benchmark scripts), 64204f69 (A100 sweep o…
 - [jax-version-policy](2026/11/jax-version-policy.md)
+- [last-imaging-features-review](2026/11/last-imaging-features-review.md)
 - [latent-smoke-assertion-echoes-search-log](2026/11/latent-smoke-assertion-echoes-search-log.md)
 - [latest-per-test-tie](2026/11/latest-per-test-tie.md) — test_autofit/results/test_identity.py::test_latest_per_keeps_the_latest_sibling flaked (main red at 963ff296a,
 - [ledger-merge-sync](2026/11/ledger-merge-sync.md) — shipped in commit 748f8c0bb (this PR). `scripts/ledger_merge.py sync [--base origin/main] [--root]` / `sync_wi…
