@@ -1181,7 +1181,7 @@ Use the start-dev skill. active/pyautolens_ii_case_studies.md
 
 </details>
 
-<details><summary>📋 <a href="active/three_autos_public_framing.md">Coordinated public framing: the three autos</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/832">issue #832</a> — issued 2026-11-12 — library-shipped, awaiting-merge (Lens/Galaxy CI running; Fit held for review) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/833">PyAutoLens#833</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/703">PyAutoGalaxy#703</a> — ⏳ pending release: PyAutoLens — ⏳ pending release: PyAutoGalaxy</summary>
+<details><summary>📋 <a href="active/three_autos_public_framing.md">Coordinated public framing: the three autos</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/832">issue #832</a> — issued 2026-11-12 — human-review (Lens/Galaxy merged; PyAutoFit copy awaiting discussion) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/833">PyAutoLens#833</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/703">PyAutoGalaxy#703</a> — ⏳ pending release: PyAutoLens — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 Use the start-dev skill. active/three_autos_public_framing.md
