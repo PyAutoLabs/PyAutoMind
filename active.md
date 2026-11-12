@@ -90,7 +90,7 @@
 - issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/276
 - issued: 2026-11-12
 - session: OpenAI Codex desktop; session ID unavailable
-- status: awaiting-heart-red-override
+- status: awaiting-merge
 - prompt: active/autogalaxy_features_review.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/autogalaxy-features-review
 - repos:
@@ -98,3 +98,13 @@
   - autogalaxy_workspace: feature/autogalaxy-features-review
 - tier: judge — merge mode: human /prm
 - approval: live user approved 21 texts/images plus main guide and RTD; open both PRs for review, no merge
+
+- heart-red-override:
+  authorization: "Approve development-only override for #276"
+  reasons: ["PyAutoNerves: 2 commit(s) behind origin", "PyAutoArray: 2 commit(s) behind origin", "PyAutoGalaxy: on branch feature/autogalaxy-features-review (not main)", "PyAutoGalaxy: 7 uncommitted source change(s)", "PyAutoLens: 1 uncommitted source change(s)", "PyAutoLens: 35 commit(s) behind origin", "PyAutoCTI: 2 commit(s) behind origin", "install verification FAILED (testpypi; checks F)", "release validation FAILED (stage integrate)"]
+  gates: 22 script ASTs and all notebook code cells preserved; 22 notebook schemas valid; 97 notebook links resolve; approved text/image parity; full feature-page Sphinx build with warnings as errors, navigator, search-memory, size and whitespace checks pass. Numerical suites not rerun for documentation-only scope; required CI remains mandatory. Human approved previews and implementation.
+  scope: commit, push, open both review PRs only; no merge or release
+
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/710
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/277
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/710

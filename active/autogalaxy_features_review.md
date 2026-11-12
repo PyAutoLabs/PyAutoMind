@@ -57,3 +57,30 @@ Branch: feature/autogalaxy-features-review
 - release validation FAILED (stage integrate)
 
 Next: after task-specific approval, record the override in all four required sinks and commit/push/open PyAutoGalaxy PR first, then workspace PR. Do not merge.
+
+## Development-only Heart RED override
+
+Live user authorization: "Approve development-only override for #276", replying to the task-specific request to commit, push and open both PRs for review, with no merge or release.
+
+Exact RED reasons:
+- PyAutoNerves: 2 commit(s) behind origin
+- PyAutoArray: 2 commit(s) behind origin
+- PyAutoGalaxy: on branch feature/autogalaxy-features-review (not main)
+- PyAutoGalaxy: 7 uncommitted source change(s)
+- PyAutoLens: 1 uncommitted source change(s)
+- PyAutoLens: 35 commit(s) behind origin
+- PyAutoCTI: 2 commit(s) behind origin
+- install verification FAILED (testpypi; checks F)
+- release validation FAILED (stage integrate)
+
+Passed branch checks: 22 script ASTs and all notebook code cells preserved; 22 notebook schemas valid; 97 notebook links resolve; approved text/image parity; full feature-page Sphinx build with warnings as errors, navigator, search-memory, size and whitespace checks pass. Numerical suites not rerun for documentation-only scope; required CI remains mandatory. Human approved previews and implementation.
+
+No release, merge or CI bypass authorized.
+
+## PR-open checkpoint
+- Library PR: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/710
+- Workspace PR: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/277
+- PyAutoGalaxy head: e2cd2b5bafc81d8123f5777fc1beb27947933cdd
+- autogalaxy_workspace head: 9090eb78b0aba5f53ca2edede3c770da35128d20
+- Both open for review; no merge or release. Live development-only Heart RED override recorded in issue, PR bodies, active registry and first autonomy-log table.
+- Next: human review; on a separate explicit merge request, verify every exact-head CI job and the release freeze, merge library first, then close #276.
