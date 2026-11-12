@@ -85,3 +85,16 @@
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
 - repos:
   - PyAutoBrain: feature/watcher-numbers-and-push
+
+## autogalaxy-features-review
+- issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/276
+- issued: 2026-11-12
+- session: OpenAI Codex desktop; session ID unavailable
+- status: development
+- prompt: active/autogalaxy_features_review.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/autogalaxy-features-review
+- repos:
+  - PyAutoGalaxy: feature/autogalaxy-features-review
+  - autogalaxy_workspace: feature/autogalaxy-features-review
+- tier: judge — merge mode: human /prm
+- approval: live user approved 21 texts/images plus main guide and RTD; open both PRs for review, no merge
