@@ -344,3 +344,10 @@ Implemented prior-preserving verify_checkpoint at eb88e0c; non-identity-prior re
 ## Prior-corrected pilot submitted
 
 Job415139 submitted ONCE via hpc/sync at db516b50cd8d6ea1301704bc39e8d14819024968.244 tests and CI43206509078 pass, author review; offline posterior reconstruction exact with zero sampling/training/likelihood, old identity prior rejected. Artifact12 runtime2.90s, fresh restore51.32s/52.71s including cleanup, zero science. Final staging preserved attempt02 environment; new attempt03 output claim. New single-job approval is now USED; no resubmit/requeue/replacement. Same18children/120s/4GiB/1800s, exclusive ral4boundcores/8GiB/35min. Outside Pulse; human merge. Heart2026-11-12T11:09:22.974524+00:00 RED under existing scoped override: "PyAutoFit: 2 commit(s) behind origin"; "PyAutoArray: 2 commit(s) behind origin"; "PyAutoGalaxy: 2 commit(s) behind origin"; "PyAutoLens: 2 commit(s) behind origin".
+
+
+## Approved pilot complete — human review
+
+Job415139 COMPLETED0:0 in591s at measured producerdb516b5.18/18 cases passed; six exact posterior/state/model/target timing pairs, both recovery controls and all checkpoint reopens passed. Bootstrap23.56s, pilot565.95s, max child47.92s/594.50MiB; cleanup complete and all descendants reaped.153,104,897bytes raw retained remotely/task-locally/human archive. Median paired workflow:5D17.9% faster(1.217x),10D2.4% slower(0.976x); median sampler speedups1.393x/1.038x. Mixed three-seed pilot, no production default change or30D claim. Report-only producer commit798d743 in PR17; measured producer CI43206509078/244tests green. Outside Pulse; human merge; no more compute.
+
+All approved implementation and compute finished. PR17 and issue16 remain open pending human review/merge; unmerged basePR13 remains unchanged. Fresh-run allowance consumed, no retry/requeue/replacement. Human report: Science/scratch/nautilus_optimizations_2026-11-10/training/RAL_RESULT.md; raw archive/checksums under ral_setup_diagnostics/job415139/.

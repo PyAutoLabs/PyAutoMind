@@ -189,7 +189,7 @@
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/16
 - issued: 2026-11-10
 - session: OpenAI Codex desktop (session ID unavailable)
-- status: workspace-dev (prior-corrected RAL job415139 running; approval consumed)
+- status: awaiting-merge (pilot complete; mixed result; human review/merge)
 - prompt: active/nautilus_spawn_training_pool.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-spawn-training-pool
 - repos:
@@ -241,3 +241,5 @@
 - RAL-corrected-outcome: job415136 FAILED1:0/167s; bootstrap23.92s and all six correctness cases passed, first serial timing failed because checkpoint reopen uses identity instead of Gaussian prior.11unrun/0timing pairs; cleanup complete/all children reaped,20.9MB retained. Offline saved-data inspection confirms coordinate mismatch, no new sampling. Approved allowance consumed; concrete correction plus one fresh pilot proposed in canonical task, not executed. Outside Pulse/human merge.
 
 - RAL-prior-corrected-submission: Job415139 submitted ONCE via hpc/sync at db516b50cd8d6ea1301704bc39e8d14819024968.244 tests and CI43206509078 pass, author review; offline posterior reconstruction exact with zero sampling/training/likelihood, old identity prior rejected. Artifact12 runtime2.90s, fresh restore51.32s/52.71s including cleanup, zero science. Final staging preserved attempt02 environment; new attempt03 output claim. New single-job approval is now USED; no resubmit/requeue/replacement. Same18children/120s/4GiB/1800s, exclusive ral4boundcores/8GiB/35min. Outside Pulse; human merge. Heart2026-11-12T11:09:22.974524+00:00 RED under existing scoped override: "PyAutoFit: 2 commit(s) behind origin"; "PyAutoArray: 2 commit(s) behind origin"; "PyAutoGalaxy: 2 commit(s) behind origin"; "PyAutoLens: 2 commit(s) behind origin".
+
+- RAL-final-result: Job415139 COMPLETED0:0 in591s at measured producerdb516b5.18/18 cases passed; six exact posterior/state/model/target timing pairs, both recovery controls and all checkpoint reopens passed. Bootstrap23.56s, pilot565.95s, max child47.92s/594.50MiB; cleanup complete and all descendants reaped.153,104,897bytes raw retained remotely/task-locally/human archive. Median paired workflow:5D17.9% faster(1.217x),10D2.4% slower(0.976x); median sampler speedups1.393x/1.038x. Mixed three-seed pilot, no production default change or30D claim. Report-only producer commit798d743 in PR17; measured producer CI43206509078/244tests green. Outside Pulse; human merge; no more compute.
