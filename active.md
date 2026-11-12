@@ -117,7 +117,7 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/645
 - issued: 2026-11-12
 - session: OpenAI Codex desktop; session ID unavailable
-- status: library-dev
+- status: awaiting-heart-override
 - prompt: active/los_halos_review.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/los-halos-review
 - tier: judge — merge mode: human /prm; do not merge
