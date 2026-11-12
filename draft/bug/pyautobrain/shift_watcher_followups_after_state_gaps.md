@@ -29,3 +29,5 @@ Source: the implementing worker and the independent review of PyAutoBrain#603 (p
 9. **A crashed close-out (no file) on a PR a human then merged counts as an unattended merge** (Witness (4) of #603 requires counting no-file merges). Distinguish by `mergedBy` once the close-out runs under a distinct GitHub identity (relates to M2.2 server-side merge gate).
 
 <!-- filed 2026-11-12 by the programme lead session from the #603 worker report and independent review -->
+10. **Merge-actor evidence cannot tell who merged** (#606 review): every session merges with the human's token, so `mergedBy` is always the human's login and the tool-written actor rests only on the session's own `--actor` flag; the 2026-11-12 "Merge actor and random audit" revert condition has no tool-side signal. Needs a distinct merge identity for automated merges (relates to M2.2).
+11. **The watcher labels a GitHub-confirmed merge with no `.closeout` as `unattended-watcher`** (`_orchestrator.py` ~972-988, #606 review) even if a human merged by hand; same root as item 9.
