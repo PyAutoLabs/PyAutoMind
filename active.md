@@ -221,3 +221,14 @@
 - RAL-runtime-cache-proposal: validation05 timed out600s; diagnostic06 exited139 during early module import (cause unresolved); isolated probe07 passed stdlib portion but timed out180s before baseline module completed, json37.325s/re26.467s cumulative. No science/job. Proposed local runtime/source cache with all outputs retained on NFS, same35min/4cores/8GiB and18children/120s/4GiB/1800s bounds; canonical amendment awaits approval before job-script edits. All setup processes ended and logs retained.
 
 - RAL-cache-implementation: live human approved amendment. Producer c243ef676ffa15fc9e4808abc104a93c70bc8145;229 tooling tests/Ruff/format/shell/catalogue pass. Private RAL login-host local runtime passed full provenance in7.35s with90 exact third-party pins/native digest; no scientific work. Artifact09 checksum verified; fresh restore09 passed49.95s (53.29s including guarded cleanup), no sampling/training. Final retained-checkout staging timed out600s in NFS git status before checkout update; no submission environment/pilot output, no Slurm job submitted. Original single-job authorization unused; resume staging after NFS recovers. Heart receipt2026-11-11T10:45:45.346227+00:00 RED: "release validation FAILED (stage integrate)" under existing development override. NFS outputs/all science limits unchanged; outside Pulse/human merge.
+
+## simulator-roundoff-control
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/124
+- issued: 2026-11-12
+- session: claude-code desktop (WSL), ~/Science session
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/simulator-roundoff-control
+- repos:
+  - euclid_strong_lens_modeling_pipeline: feature/simulator-roundoff-control
+- prompt: active/simulator_round_off_control_test_obsolete.md
+- tier: judge — merge mode: human /prm (human asked /bug then /prm 2026-11-12)
