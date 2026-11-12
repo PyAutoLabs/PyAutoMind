@@ -207,3 +207,18 @@
 - RAL-final-result: Job415139 COMPLETED0:0 in591s at measured producerdb516b5.18/18 cases passed; six exact posterior/state/model/target timing pairs, both recovery controls and all checkpoint reopens passed. Bootstrap23.56s, pilot565.95s, max child47.92s/594.50MiB; cleanup complete and all descendants reaped.153,104,897bytes raw retained remotely/task-locally/human archive. Median paired workflow:5D17.9% faster(1.217x),10D2.4% slower(0.976x); median sampler speedups1.393x/1.038x. Mixed three-seed pilot, no production default change or30D claim. Report-only producer commit798d743 in PR17; measured producer CI43206509078/244tests green. Outside Pulse; human merge; no more compute.
 
 - 10D-diagnostic-proposal: user requested further investigation; read-only accounting complete. Proposed17-child single RAL job (one capture,12training replays,4traced fits), same4cores/8GiB/35min and120s/4GiB/1800s caps. Detailed plan in canonical task. Implementation/new compute await approval; completed pilot/PR17 remain reviewable, outside Pulse/human merge.
+
+## potential-correction-review
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/636
+- issued: 2026-11-12
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/potential-correction-review
+- repos:
+  - autolens_workspace: feature/potential-correction-review
+  - PyAutoLens: feature/potential-correction-review
+- prompt: active/potential_correction_review.md
+- tier: judge; review PRs only, no merge
+- coordination: separate docs worktree under prior explicit same-session approval alongside magnification-maps-wiring.
+- next: development-only Heart RED override for #636, then commit/push/open both review PRs; no merge.
+- validation: syntax, approved-preview/code/notebook parity, image/navigation/size/whitespace and focused Sphinx passed.
+- review: /mnt/c/Users/Jammy/Workspace/Science/scratch/potential_correction_individual_review_20261112/applied/index.html
