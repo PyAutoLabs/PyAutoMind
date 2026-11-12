@@ -441,3 +441,8 @@ Memory consulted for benchmark hygiene: maintain identical science/settings and 
 Live human approval: “Approve bounded diagnostic study”. Scope is the saved17-child diagnostic and one gated RAL job, despite Heart RED; outside Pulse, stop on first failure, retain data, human merge. New job allowance remains UNUSED. Implemented capture/replay, exclusive wall/CPU phases, strict retained-reference parity, allowlisted runtime identity and separate submission claim. Original18-child benchmark and0/2 transport are unchanged.292 tests pass; lint/format/shell/catalogue pass; zero-science structural smoke verifies descriptors plus0/1/2/shared/bound worker startup and cleanup. Author review only; CI/fresh runtime restore are pending gates.
 
 Planning Heart RED reasons were “PyAutoLens: on branch feature/pixelization-feature-review (not main)” and “PyAutoLens: 2 uncommitted source change(s)”. Fresh authoritative readiness2026-11-12T12:40:44.942978+00:00 is YELLOW with no RED reasons: “PyAutoArray: open PR 9d old”; “test run status unknown”; “release validation stale: source moved since rehearsal (PyAutoLens)”. Existing approval covers development; no release, merge or failed-check bypass. RAL authentication and private staging cache are available.
+
+
+### Diagnostic submission415179
+
+Submitted exactly once through hpc/sync after CI43220440830 green and fresh artifact13 restore65.78s with zero science and cleanup. Producer0958bc28705541f6ff07fa4ad79bbfaf94ccdaaf; new training-diagnostics-ral-01 claim and separate environment. Approval now CONSUMED; no retry/requeue/replacement. Monitoring job415179 to completion or first failure; retain all evidence; outside Pulse, human merge.

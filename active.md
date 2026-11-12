@@ -186,6 +186,7 @@
 - latest-heart: 2026-11-10T18:35:43.930077+00:00 RED: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure"; "PyAutoCTI: 1 uncommitted source change(s)". Existing task-wide live RED development approval retained; unrelated CTI source untouched, no release or CI bypass.
 
 ## nautilus-spawn-training-pool
+- diagnostic-job: 415179 submitted once at producer0958bc2; new allowance CONSUMED, no retry/requeue. CI43220440830 green; runtime inventory pass3.91s; artifact13 fresh restore65.78s/zero science/cleanup complete; monitoring owned job.
 - heart-red-override: 2026-11-12 live human “Approve bounded diagnostic study”. Saved17-child study and one RAL job; merge human. Planning RED: "PyAutoLens: on branch feature/pixelization-feature-review (not main)"; "PyAutoLens: 2 uncommitted source change(s)". Fresh12:40:44Z YELLOW/no RED: "PyAutoArray: open PR 9d old"; "test run status unknown"; "release validation stale: source moved since rehearsal (PyAutoLens)".292 tests/lint/format/shell/catalogue and zero-science worker/descriptor smoke pass; author review; CI/restore pending.
 - diagnostic-approval: 2026-11-12 live human “Approve bounded diagnostic study”; saved 17-child plan approved despite Heart RED. One job allowance unused; tests/CI/fresh restore required; stop on first failure; retain all data.
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/16
