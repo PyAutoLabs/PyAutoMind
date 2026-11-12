@@ -30,3 +30,25 @@ Primary autolens_workspace: three feature start_here.py files under scripts/imag
 Companion PyAutoLens: docs/overview/overview_3_features.md and docs/overview/images/overview_3/ matching PNG/provenance files. No API/runtime/simulator/config changes. Numerical suites not rerun locally for documentation-only scope; disclose, and require CI before any future merge.
 Approved input /mnt/c/Users/Jammy/Workspace/Science/scratch/three_feature_review_20261112/v2/; adapt only relative image paths.
 Clean task worktrees from origin/main. Preserve canonical unrelated paper_jax/paper.md and dataset.fits. User approves coexistence with installation-docs-polish and start-here-plot-ai; do not edit their worktrees. Heart entry YELLOW permits development.
+
+## Implementation checkpoint
+
+# Three-feature review #652
+
+Implemented and staged; no source commits, pushes or PRs yet. Awaiting development-only Heart RED override.
+
+Passed: exact approved feature text and image parity; unchanged executable AST and notebook code cells for all four scripts/notebooks; notebook schemas and local image links; focused Sphinx build with warnings as errors; navigator, search-memory, size and staged whitespace checks. Clean three-way merge of root script/notebook with start-here-plot-ai; installation-docs-polish touches disjoint files. Numerical suites were not rerun locally for this prose/image-only change.
+
+Open index.html for approved feature previews and rtd/index.html for the built tour summaries. Repository patches and drafted PR bodies are alongside them. Feature preview image paths remain local for viewing; applied repository paths were validated separately.
+
+## Exact Heart RED reasons
+- PyAutoNerves: 2 commit(s) behind origin
+- PyAutoArray: 2 commit(s) behind origin
+- PyAutoGalaxy: 6 commit(s) behind origin
+- PyAutoLens: on branch feature/three-feature-review (not main)
+- PyAutoLens: 4 uncommitted source change(s)
+- PyAutoCTI: 2 commit(s) behind origin
+- install verification FAILED (testpypi; checks F)
+- release validation FAILED (stage integrate)
+
+Bounded documentation-only combined task: the classifier generic large-task phasing is unnecessary; no API or runtime changes and the approved deliverable is two paired PRs.

@@ -142,7 +142,7 @@
 ## three-feature-review
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/652
 - issued: 2026-11-12
-- status: development
+- status: awaiting-heart-red-override
 - session: OpenAI Codex
 - prompt: active/three_feature_review.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/three-feature-review
