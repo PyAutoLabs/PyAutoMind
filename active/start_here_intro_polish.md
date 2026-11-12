@@ -52,3 +52,17 @@ Updated the same applied_review previews and full notebook copies. Both focused 
 ## Revision 3 — approved and applied 2026-11-12
 
 User approved Using This Guide with API-first wording naming imports, profiles and calculations, and an optional interactive assistant walkthrough. Applied to both RTD pages and workspace sources; notebook wording uses This notebook and run the cells below. Embedded Colab and assistant links retained. Regenerated notebooks and markdown prose; refreshed the same four applied_review previews and notebook copies. Both focused Sphinx builds (-W), notebook schema validation, executable AST/code-cell and metadata invariance, rendered heading/link checks and diff checks pass. No PRs raised; awaiting human text review.
+
+## PR-open checkpoint — 2026-11-12
+
+Live override: Yes, override Heart RED for #834 and go ahead with the commits, pushes and all four PRs, including the start_here notebooks. Don't merge yet.
+
+Exact Heart RED reasons: ["PyAutoGalaxy: on branch feature/start-here-intro-polish (not main)", "PyAutoGalaxy: 1 uncommitted source change(s)", "PyAutoLens: on branch feature/start-here-intro-polish (not main)", "PyAutoLens: 2 uncommitted source change(s)", "PyAutoLens: 2 commit(s) behind origin", "install verification FAILED (testpypi; checks F)", "release validation FAILED (stage integrate)"]
+
+PRs:
+- https://github.com/PyAutoLabs/PyAutoLens/pull/836
+- https://github.com/PyAutoLabs/PyAutoGalaxy/pull/704
+- https://github.com/PyAutoLabs/autolens_workspace/pull/644
+- https://github.com/PyAutoLabs/autogalaxy_workspace/pull/274
+
+Latest main merged normally into Lens library/workspace branches, preserving Shapelets changes. Both notebooks regenerate byte-for-byte after merge; code cells and metadata match main. All four worktrees clean and pushed. Library PR pending-release labels applied. No merge/auto-merge/release performed. Await human /prm after required CI.

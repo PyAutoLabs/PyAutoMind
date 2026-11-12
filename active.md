@@ -77,15 +77,24 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/834
 - issued: 2026-11-12
 - session: Codex desktop; session ID unavailable
-- status: human-review
+- status: pr-open, awaiting-human-merge
 - prompt: active/start_here_intro_polish.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/start-here-intro-polish
-- tier: judge — human text review before PR creation; merge mode human /prm
+- tier: judge — text approved; PRs authorized; do not merge
 - repos:
   - PyAutoLens: feature/start-here-intro-polish
   - PyAutoGalaxy: feature/start-here-intro-polish
   - autolens_workspace: feature/start-here-intro-polish
   - autogalaxy_workspace: feature/start-here-intro-polish
+
+- heart-red-override:
+  authorization: "Yes, override Heart RED for #834 and go ahead with the commits, pushes and all four PRs, including the start_here notebooks. Don't merge yet."
+  reasons: ["PyAutoGalaxy: on branch feature/start-here-intro-polish (not main)", "PyAutoGalaxy: 1 uncommitted source change(s)", "PyAutoLens: on branch feature/start-here-intro-polish (not main)", "PyAutoLens: 2 uncommitted source change(s)", "PyAutoLens: 2 commit(s) behind origin", "install verification FAILED (testpypi; checks F)", "release validation FAILED (stage integrate)"]
+  gates: focused Sphinx builds, notebook regeneration/schema validation, unchanged executable AST/code cells/metadata, rendered links, diff checks and human text review passed; numerical suites not run for prose-only scope
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/836
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/704
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/644
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/274
 
 ## prompt-sync-detached-push
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/556
