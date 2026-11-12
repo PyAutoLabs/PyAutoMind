@@ -149,7 +149,7 @@ write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1764
 - workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/14
 - pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1764
-- parked: 2026-11-12 — pre-autonomy wrap-up; draft PRs PyAutoFit#1764 + autofit_profiling#14 still OPEN awaiting the human merge-or-close decision. No further compute.
+- parked: 2026-11-12 — CLOSED NOT MERGED by human decision: PyAutoFit#1764, autofit_profiling#14 and issue #1762 closed (version-pinned opt-in renderer, thin 2-pair speedup evidence). Branch/worktree/raw data retained; reopen only if corner-plot cost becomes a bottleneck.
 
 ## nautilus-checkpoint-batching
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1763
