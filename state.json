@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 9 in flight",
-  "updated": "2026-11-12T19:31:42Z",
+  "updated": "2026-11-12T19:33:02Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "API Reference polish \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/849",
+      "prompt": "Use the start-dev skill. active/api_reference_polish.md"
+    },
     {
       "severity": "yellow",
       "text": "General documentation refresh \u2014 library-shipped, awaiting-merge",
@@ -33,6 +39,12 @@
     },
     {
       "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#709 \u2014 API Reference polish",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/709",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#708 \u2014 General documentation refresh",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/708",
       "prompt": null
@@ -53,6 +65,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#707 \u2014 rtd-tutorials-consolidated",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/707",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoLens PyAutoLens#849 \u2014 API Reference polish",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/849",
       "prompt": null
     },
     {
@@ -108,24 +126,6 @@
       "text": "pick: Phase B: send HPC temp files to the shared disk (TMPDIR)\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md",
       "prompt": "Use the start-dev skill. draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Fix KNN neighbor search for a partial final point block",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md",
-      "prompt": "Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
-      "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
-      "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
     }
   ]
 }

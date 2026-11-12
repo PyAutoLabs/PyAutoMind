@@ -1149,7 +1149,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/api_reference_polish.md">API Reference polish</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/846">issue #846</a> — issued 2026-11-12 — library-dev</summary>
+<details><summary>📋 <a href="active/api_reference_polish.md">API Reference polish</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/846">issue #846</a> — issued 2026-11-12 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/849">PyAutoLens#849</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/709">PyAutoGalaxy#709</a> — ⏳ pending release: PyAutoLens — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 Use the start-dev skill. active/api_reference_polish.md
@@ -3053,6 +3053,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#709](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/709) — `active/api_reference_polish.md`
 - [PyAutoGalaxy#708](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/708) — `active/general_sections_refresh.md`
 - [PyAutoGalaxy#703](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/703) — `active/three_autos_public_framing.md`
 - [PyAutoGalaxy#706](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/706) — `complete/2026/11/installation-docs-polish.md`
@@ -3060,6 +3061,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoLens**
 
+- [PyAutoLens#849](https://github.com/PyAutoLabs/PyAutoLens/pull/849) — `active/api_reference_polish.md`
 - [PyAutoLens#848](https://github.com/PyAutoLabs/PyAutoLens/pull/848) — `active/general_sections_refresh.md`
 - [PyAutoLens#833](https://github.com/PyAutoLabs/PyAutoLens/pull/833) — `active/three_autos_public_framing.md`
 - [PyAutoLens#842](https://github.com/PyAutoLabs/PyAutoLens/pull/842) — `complete/2026/11/installation-docs-polish.md`

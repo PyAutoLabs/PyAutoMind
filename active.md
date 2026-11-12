@@ -129,7 +129,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/846
 - issued: 2026-11-12
 - session: OpenAI Codex desktop; 01a1d120-9076-7c60-a5d9-046f09a2f497
-- status: library-dev
+- status: library-shipped, awaiting-merge
 - prompt: active/api_reference_polish.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/api-reference-polish
 - repos:
@@ -143,3 +143,8 @@
   reasons: ["PyAutoNerves: 2 commit(s) behind origin", "PyAutoArray: 2 commit(s) behind origin", "PyAutoGalaxy: 10 commit(s) behind origin", "PyAutoLens: on branch feature/last-imaging-features-review (not main)", "PyAutoLens: 3 uncommitted source change(s)", "PyAutoCTI: 2 commit(s) behind origin", "install verification FAILED (testpypi; checks F)", "release validation FAILED (stage integrate)"]
   gates: "All 97 API entries and 29 original section anchors retained; 150 local links/fragments pass; 10 Python example blocks execute; exact six-file scope and git diff --check pass; human review approved. Full Sphinx renders: Lens 97 and Galaxy 69 diagnostics, identical to baseline; strict -W builds remain nonzero for existing diagnostics. No runtime changes; numerical suites and workspace science runs are not applicable to this documentation-only scope."
 
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/849
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/709
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/849
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/709
+- next: human review; do not merge without a new explicit instruction
