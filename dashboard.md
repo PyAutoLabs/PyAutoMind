@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 23 |
-| [In flight](#in-flight) | 12 |
+| [In flight](#in-flight) | 11 |
 | [Planned](#planned) | 11 |
-| [Backlog](#backlog) | 261 |
+| [Backlog](#backlog) | 262 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -23,7 +23,7 @@
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 18
+**Highest priority** (filed as `high`) — showing 12 of 19
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -53,6 +53,14 @@ Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_foreve
 
 ```
 Use the start-dev skill. draft/bug/pyautomind/prompt_sync_push_explicit_paths.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md">Phase B: send HPC temp files to the shared disk (TMPDIR)…</a> — workspaces · small · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md
 ```
 
 </details>
@@ -109,14 +117,6 @@ Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visua
 
 ```
 Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/research/autoarray/delaunay_research.md
 ```
 
 </details>
@@ -1157,14 +1157,6 @@ Use the start-dev skill. active/gradient_correctness_sweep.md
 
 </details>
 
-<details><summary>📋 <a href="active/hpc_keep_temp_and_cache_off_home.md">Keep HPC temp files and caches off $HOME and the worker's /tmp</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1767">issue #1767</a> — issued 2026-11-12 — workspace-shipped, awaiting-merge (glance auto-merge on green; library first) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1768">PyAutoFit#1768</a></summary>
-
-```
-Use the start-dev skill. active/hpc_keep_temp_and_cache_off_home.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/magnification_maps_8d_wiring_pretty.md">Magnification maps 8d: wire into fit subplots and make them pretty</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/818">issue #818</a> — issued 2026-11-02 — library-dev</summary>
 
 ```
@@ -1244,10 +1236,10 @@ Scoped but not started; some are not yet prompt files. Full detail in [`planned.
 <details>
 <summary><b>11</b> task(s)</summary>
 
-<details><summary>📋 <b>hpc-keep-off-home-phase-b</b> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1767">issue #1767</a> — filed 2026-11-12 — blocked — repos claimed by other tasks</summary>
+<details><summary>📋 <b>hpc-keep-off-home-phase-b</b> — filed 2026-11-12 — blocked — repos claimed by other tasks</summary>
 
 ```
-Use the route skill. start the planned PyAutoMind task hpc-keep-off-home-phase-b — its record is in planned.md
+Use the start-dev skill. draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md
 ```
 
 </details>
@@ -1336,7 +1328,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 247 · local-dev 7 · ral 5
+Lanes: any 248 · local-dev 7 · ral 5
 
 <a id="human-review"></a>
 <details>
@@ -2503,7 +2495,15 @@ Use the start-dev skill. draft/docs/workspaces/feature_introductions_and_images.
 </details>
 
 <details>
-<summary><b>maintenance</b> — 17</summary>
+<summary><b>maintenance</b> — 18</summary>
+
+<details><summary>📋 <a href="draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md">Phase B: send HPC temp files to the shared disk (TMPDIR)…</a> — workspaces · small · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md
+```
+
+</details>
 
 <details><summary>📋 <a href="draft/maintenance/autocti/cti_upkeep_epic.md">CTI upkeep parity — bring PyAutoCTI and its satellites to the same…</a> — autocti · too-large · human-required · high</summary>
 
@@ -2836,7 +2836,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | Date | Event | Task |
 |------|-------|------|
 | 2026-11-12 | filed | <a href="planned.md#hpc-keep-off-home-phase-b">hpc-keep-off-home-phase-b</a> |
-| 2026-11-12 | issued | <a href="active/hpc_keep_temp_and_cache_off_home.md">Keep HPC temp files and caches off $HOME and the worker's /tmp</a> |
+| 2026-11-12 | filed | <a href="draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md">Phase B: send HPC temp files to the shared disk (TMPDIR)…</a> |
 | 2026-11-11 | filed | <a href="planned.md#delaunay-nn-numba-remeasure">delaunay-nn-numba-remeasure</a> |
 | 2026-11-11 | filed | <a href="draft/bug/health_fixes/smoke_cache_stats_warnings_nameerror.md">Smoke cache-stats step fails with NameError: warnings</a> |
 | 2026-11-11 | issued | <a href="active/raise_jax_floor_to_0_12.md">Raise the JAX floor to 0.12.0 (jax and jaxlib) after a Heart…</a> |
@@ -3069,6 +3069,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - [PyAutoFit#1764](https://github.com/PyAutoLabs/PyAutoFit/pull/1764) — `active/nautilus_compact_plot_adapter.md`
 - [PyAutoFit#1765](https://github.com/PyAutoLabs/PyAutoFit/pull/1765) — `active/nautilus_cpu_checkpoint_batching.md`
 - [PyAutoFit#1761](https://github.com/PyAutoLabs/PyAutoFit/pull/1761) — `complete/2026/11/corner-anesthetic-speed.md`
+- [PyAutoFit#1768](https://github.com/PyAutoLabs/PyAutoFit/pull/1768) — `complete/2026/11/hpc-keep-off-home.md`
 
 **PyAutoGalaxy**
 

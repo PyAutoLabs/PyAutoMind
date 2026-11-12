@@ -1,3 +1,29 @@
+# hpc-keep-off-home (phase A): keep HPC temp files and caches off $HOME and worker /tmp
+
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1767 (closed 2026-11-12)
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1768
+- workspace-pr: https://github.com/PyAutoLabs/autofit_assistant/pull/63
+- workspace-pr: https://github.com/PyAutoLabs/autofit_inference/pull/19
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/46
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/65
+- workspace-pr: https://github.com/PyAutoLabs/autocti_assistant/pull/40
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1768
+- tier: glance, auto-merged on green 2026-11-12 (human-approved plan); Heart YELLOW acknowledged by the human at ship (PyAutoArray open PR 8d old)
+
+## Why
+The RAL admin warned on 2026-11-12 (repeating 2026-09-25) that worker nodes were crashing: tools wrote caches and temp files to `~` and `/tmp`, which on compute nodes sit on a tiny local OS disk (compute nodes don't mount the login node's `/home`; Slurm `TmpFS=/tmp`). The human installed `~/.bashrc.d/keep_off_home.sh` on the RAL login node the same day, covering every job submitted with sbatch's default `--export=ALL`. This task covers the repos, for jobs submitted with a restricted `--export`.
+
+## What shipped
+- **PyAutoFit#1768:** optional top-level `cache_root:` in `campaign.yaml` (absolute path, validated). `Campaign.cache_root` → `SubmitRequest.cache_root` → `sbatch_script` emits fill-if-unset exports of `TMPDIR` (`tmp/`), `XDG_CACHE_HOME` (`.cache/`), pip/matplotlib/numba/CUDA/Triton/astropy caches, plus `JAX_COMPILATION_CACHE_DIR` via `${VAR-...}` so an empty value still disables it. They sit after `set -euo pipefail` and before the stage env, so stage env wins. Paths are escaped for a double-quoted context. Without `cache_root:` the script is byte-identical. 4 new tests; full suite 4288 passed.
+- **activate.sh** in autofit_assistant, autofit_inference, autogalaxy_assistant and autolens_inference: fill-if-unset `TMPDIR="$(dirname "$PYAUTO_HPC_CACHE")/tmp"` + mkdir after the existing cache block. autocti_assistant's HPC branch had no redirection at all and now has the full block plus TMPDIR. Verified by sourcing each under `env -i` with a fake `PYAUTO_HPC_BASE`.
+
+## Not done
+- **Phase B (blocked):** the same TMPDIR line in autofit_profiling, autolens_assistant, autolens_profiling and euclid_strong_lens_modeling_pipeline (claimed by nautilus-spawn-training-pool, results-library-p5a-assistant, gradient-correctness-sweep, sky-orientation-p2). Re-filed as `draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md` and listed in `planned.md`.
+- **Out of scope:** `collaborator/development/autolens_profiling` submits (local repo, no remote) and euclid_dr1 `submit_docs_tar` hard-code worker `/tmp`.
+- **To opt in:** campaigns add `cache_root: /mnt/ral/jnightin` once PyAutoFit is released.
+
+## Original prompt
+
 # Keep HPC temp files and caches off $HOME and the worker's /tmp
 
 Type: maintenance

@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2225 records across 11 buckets.
+2226 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -184,6 +184,7 @@ markers; everything below GENERATED is rebuilt.
 - [howtolens-stored-results](2026/11/howtolens-stored-results.md)
 - [hpc-cache-off-home-euclid](2026/11/hpc-cache-off-home-euclid.md) — already shipped — euclid_strong_lens_modeling_pipeline 37034f22 (2026-09-25, default branch) "activate.sh: kee…
 - [hpc-campaign-p5a-assistant](2026/11/hpc-campaign-p5a-assistant.md) — phase 5a; ledger draft/research/autofit/hpc_campaign_epic.md
+- [hpc-keep-off-home](2026/11/hpc-keep-off-home.md)
 - [hygiene-extras-tomllib](2026/11/hygiene-extras-tomllib.md)
 - [hygiene-refs-false-positives](2026/11/hygiene-refs-false-positives.md)
 - [insight-lint-point-source-family](2026/11/insight-lint-point-source-family.md)

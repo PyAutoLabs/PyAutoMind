@@ -19,7 +19,8 @@
 ## hpc-keep-off-home-phase-b
 - status: blocked — repos claimed by other tasks
 - filed: 2026-11-12
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1767 (phase B)
+- prompt: draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md
+- follows: complete/2026/11/hpc-keep-off-home.md (phase A, PyAutoFit#1767 closed)
 - summary: add the fill-if-unset TMPDIR line (same text as phase A) beside the PYAUTO_HPC_CACHE block in each repo's activate.sh
 - blocked-by: autofit_profiling (nautilus-spawn-training-pool), autolens_assistant (results-library-p5a-assistant), autolens_profiling (gradient-correctness-sweep), euclid_strong_lens_modeling_pipeline (sky-orientation-p2)
 - affected-repos:
