@@ -91,7 +91,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/838
 - issued: 2026-11-12
 - session: OpenAI Codex desktop
-- status: human-review
+- status: awaiting-merge
 - prompt: active/new_user_guide_visuals.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/new-user-guide-visuals
 - repos:
@@ -99,7 +99,7 @@
   - autolens_workspace: feature/new-user-guide-visuals
   - PyAutoGalaxy: feature/new-user-guide-visuals
   - autogalaxy_workspace: feature/new-user-guide-visuals
-- scope: Lens and Galaxy RTD and start_here applied with images; no PRs authorized
+- scope: four PRs open with images and regenerated notebooks; no merge authorized
 - tier: judge — merge mode: human /prm
 
 ## start-here-plot-ai
@@ -113,3 +113,13 @@
   - autolens_workspace: feature/start-here-plot-ai
 - tier: judge — merge mode: human /prm
 - next: validated edits; ship-time Heart RED requires development-only override before PR publication
+
+- heart-red-override:
+  authorization: "Yes, override Heart RED for #838 and go ahead with the commits, pushes and all four PRs, including the images and start_here notebooks. Don't merge yet."
+  reasons: ["PyAutoNerves: 2 commit(s) behind origin", "PyAutoArray: 2 commit(s) behind origin", "PyAutoGalaxy: 4 commit(s) behind origin", "PyAutoLens: on branch feature/los-halos-review (not main)", "PyAutoLens: 2 uncommitted source change(s)", "PyAutoCTI: 2 commit(s) behind origin", "install verification FAILED (testpypi; checks F)", "release validation FAILED (stage integrate)"]
+  gates: Focused Sphinx builds pass; notebook schema, code and metadata parity pass; image parity and diff checks pass; human editorial review approved. No runtime code changed; workspace smoke paths excluded by no_smoke_relevant_changes. Full numerical suites not run locally.
+
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/839
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/705
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/649
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/275

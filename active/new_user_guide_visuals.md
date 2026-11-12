@@ -33,3 +33,30 @@ Validation passed: focused Sphinx build with warnings as errors, notebook schema
 
 Applied preview: /mnt/c/Users/Jammy/Workspace/Science/scratch/new_user_guide_galaxy_20261112/applied/index.html
 No PRs raised. Library/workspace changes remain uncommitted for review.
+
+## Heart RED development override — #838
+
+> Yes, override Heart RED for #838 and go ahead with the commits, pushes and all four PRs, including the images and start_here notebooks. Don't merge yet.
+
+Current RED reasons:
+- PyAutoNerves: 2 commit(s) behind origin
+- PyAutoArray: 2 commit(s) behind origin
+- PyAutoGalaxy: 4 commit(s) behind origin
+- PyAutoLens: on branch feature/los-halos-review (not main)
+- PyAutoLens: 2 uncommitted source change(s)
+- PyAutoCTI: 2 commit(s) behind origin
+- install verification FAILED (testpypi; checks F)
+- release validation FAILED (stage integrate)
+
+Validation: Focused Sphinx builds pass; notebook schema, code and metadata parity pass; image parity and diff checks pass; human editorial review approved. No runtime code changed; workspace smoke paths excluded by no_smoke_relevant_changes. Full numerical suites not run locally.
+
+Authorized: commits, pushes and four PRs. No merge or release.
+
+## PR-open checkpoint
+
+- https://github.com/PyAutoLabs/PyAutoLens/pull/839
+- https://github.com/PyAutoLabs/PyAutoGalaxy/pull/705
+- https://github.com/PyAutoLabs/autolens_workspace/pull/649
+- https://github.com/PyAutoLabs/autogalaxy_workspace/pull/275
+
+All four pushed and open; two PNG assets verified in each remote PR. Workspace source, generated notebook and Markdown verified. No merge performed. Await separate human instruction.
