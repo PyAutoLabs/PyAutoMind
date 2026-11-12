@@ -17,6 +17,8 @@ Consequence: glance
 Witness: a job with `--export=NONE` that sources a fixed activate.sh (or runs a PyAutoFit cache_root script) gets TMPDIR on the shared disk, not /tmp; a TMPDIR set to anything other than /tmp still wins; tests cover the /tmp case.
 Review-minutes: 3
 Filed: 2026-11-12
+Issued: 2026-11-12
+Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1769
 
 Follow-up to `complete/2026/11/hpc-keep-off-home.md` (PyAutoFit#1767). Live probe jobs
 415133/415134 on euclid-ral-compute-1: with `--export=NONE,...` + `source activate.sh` the
