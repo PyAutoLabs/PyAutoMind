@@ -1,3 +1,24 @@
+## nautilus-30d-diagnostics
+- issue: https://github.com/PyAutoLabs/autofit_profiling/issues/12
+- completed: 2026-11-12
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/13
+- merge: 4f14e6145a2a7178266394a074e4fb20fc2f4aed
+- summary: Full-30D Nautilus plotting cost attribution and evidence-discrepancy investigation merged unchanged during the pre-autonomy wrap-up. Outside Pulse; full phase 0b accuracy work is still incomplete.
+
+### What shipped
+
+Attribution of the full-30D corner-plot cost (114.77 s success; drawing 21.5 s, plot-loop residual 13.9 s, hist dispatch 10.8 s, quantiles 10.4 s), with all attempts and raw data kept. No library defaults changed and no speedup is claimed.
+
+### Merge authority
+
+Human 2026-11-12: "do the other outstanding things that should be quickly wrapped up" after a sweep recommended merging #13. Exact-head lint CI green; GitHub CLEAN/MERGEABLE.
+
+### Retained workspace
+
+/home/jammy/Code/PyAutoLabs/.worktrees/nautilus-30d-diagnostics is kept as an evidence archive (not active work).
+
+## Original prompt
+
 # Nautilus 30D evidence and output diagnostics
 
 Type: feature

@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2232 records across 11 buckets.
+2233 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -225,6 +225,7 @@ markers; everything below GENERATED is rebuilt.
 - [mind-agents-trim](2026/11/mind-agents-trim.md) — PR is the tracking surface
 - [multistart-gradient-quick-update](2026/11/multistart-gradient-quick-update.md) — already shipped — PyAutoFit#1556 (merged 2026-09-01) wires iterations_per_quick_update into the MultiStart gra…
 - [multistart-resume-cadence](2026/11/multistart-resume-cadence.md) — 2 → 100
+- [nautilus-30d-diagnostics](2026/11/nautilus-30d-diagnostics.md) — Full-30D Nautilus plotting cost attribution and evidence-discrepancy investigation merged unchanged during the…
 - [nautilus-cpu-campaign-setup](2026/11/nautilus-cpu-campaign-setup.md) — Experimental phase 0b.1 implementation and bounded local pilot merged unchanged. Full phase 0b remains incompl…
 - [nautilus-cpu-profiling-baseline](2026/11/nautilus-cpu-profiling-baseline.md) — Phase 0a controlled CPU harness and exploratory local pilot merged unchanged. Phase 0b canonical representativ…
 - [nautilus-ep-use-jax-guard](2026/11/nautilus-ep-use-jax-guard.md) — superseded — PyAutoFit 196abf39a (2026-10-08) "Analysis.is_jax as the single JAX probe": Nautilus reads `analy…
