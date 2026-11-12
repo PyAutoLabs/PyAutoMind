@@ -14,7 +14,7 @@
 | [Planned](#planned) | 11 |
 | [Backlog](#backlog) | 263 |
 | [Recent](#recent) | 50 |
-| [Pending release](#pending-release) | 1 |
+| [Pending release](#pending-release) | 3 |
 
 > **Batch 2026-11-06-pm — 0 in progress · 0 awaiting review**
 >
@@ -1173,7 +1173,7 @@ Use the start-dev skill. active/pyautolens_ii_case_studies.md
 
 </details>
 
-<details><summary>📋 <a href="active/three_autos_public_framing.md">Coordinated public framing: the three autos</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/832">issue #832</a> — issued 2026-11-12 — library-dev (Lens/Galaxy shipping authorized; Fit held for review)</summary>
+<details><summary>📋 <a href="active/three_autos_public_framing.md">Coordinated public framing: the three autos</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/832">issue #832</a> — issued 2026-11-12 — library-shipped, awaiting-merge (Lens/Galaxy CI running; Fit held for review) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/833">PyAutoLens#833</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/703">PyAutoGalaxy#703</a> — ⏳ pending release: PyAutoLens — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 Use the start-dev skill. active/three_autos_public_framing.md
@@ -3026,6 +3026,14 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 </details>
 
 ## Pending release
+
+**PyAutoGalaxy**
+
+- [PyAutoGalaxy#703](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/703) — `active/three_autos_public_framing.md`
+
+**PyAutoLens**
+
+- [PyAutoLens#833](https://github.com/PyAutoLabs/PyAutoLens/pull/833) — `active/three_autos_public_framing.md`
 
 **PyAutoNerves**
 
