@@ -351,3 +351,86 @@ Job415139 submitted ONCE via hpc/sync at db516b50cd8d6ea1301704bc39e8d1481902496
 Job415139 COMPLETED0:0 in591s at measured producerdb516b5.18/18 cases passed; six exact posterior/state/model/target timing pairs, both recovery controls and all checkpoint reopens passed. Bootstrap23.56s, pilot565.95s, max child47.92s/594.50MiB; cleanup complete and all descendants reaped.153,104,897bytes raw retained remotely/task-locally/human archive. Median paired workflow:5D17.9% faster(1.217x),10D2.4% slower(0.976x); median sampler speedups1.393x/1.038x. Mixed three-seed pilot, no production default change or30D claim. Report-only producer commit798d743 in PR17; measured producer CI43206509078/244tests green. Outside Pulse; human merge; no more compute.
 
 All approved implementation and compute finished. PR17 and issue16 remain open pending human review/merge; unmerged basePR13 remains unchanged. Fresh-run allowance consumed, no retry/requeue/replacement. Human report: Science/scratch/nautilus_optimizations_2026-11-10/training/RAL_RESULT.md; raw archive/checksums under ral_setup_diagnostics/job415139/.
+
+
+# 10D training-cost diagnosis — proposed implementation and RAL plan
+
+Status: proposed; implementation and new compute require explicit approval. This is a continuation of nautilus-spawn-training-pool, issue autofit_profiling#16 / PR#17. Outside Pulse. Tier: judge — merge mode: human /prm.
+
+## User request
+
+> Can we investigate why faster training isn’t translating into faster 10D fits? Keep it outside Pulse and leave merge for me.
+>
+> continue
+
+## Evidence and questions
+
+The completed job415139 at measured producerdb516b5 passed18/18 cases and all six exact timing pairs. In10D, training saved1.73/2.22/2.39s by seed; pool lifecycle added1.69/1.59/1.54s. Other sampler time added0.82/0.34/4.67s and other fit time changed−0.06/−0.01/+2.45s. Pooled networks consumed39–48% more aggregate CPU time despite identical trained-model/iteration digests. Unequal worker workloads add0.79–1.02s beyond an even-work lower bound; only0.050–0.053s of parent training lies beyond the busiest-worker bound. That is not a direct IPC measurement and cannot exclude overlapping contention. The read-only report is retained in Science scratch training/10d_training_diagnosis_2026-11-12/.
+
+Questions: (1) does a single spawned worker show the same CPU cost increase, or does it emerge with simultaneous workers? (2) does distinct-core placement help? (3) which exclusive phases explain seed2’s extra non-training time? Frequency/cache/BLAS differences are hypotheses, not established causes.
+
+## High-level plan
+
+1. Capture the actual training inputs from one serial10D/seed2 fit, checking its posterior/state/model digests against the retained serial reference. Treat this capture as correctness/data collection, not a performance baseline.
+2. Replay that identical corpus in four contexts: parent process, one spawned worker, two spawned workers with shared affinity, and two spawned workers assigned distinct cores. Three interleaved repetitions per context; exact model checks precede interpretation.
+3. Run two serial/pool pairs for the full10D/seed2 fit with the same lightweight exclusive wall/CPU phase timers on both arms. Separate geometry, prediction, native checkpoint writes and final output costs, with an explicit residual.
+4. Retain task timing, worker CPU time, placement and native-library metadata; preserve all scientific settings and installed libraries. Report uncertainty rather than assigning hardware causes without evidence.
+5. Publish a diagnostic report in the existing development PR. Keep raw data and every previous attempt, stay outside Pulse and leave merge to the human.
+
+Tier: judge — merge mode: human /prm.
+
+## Frozen proposed compute matrix
+
+Exactly one exclusive partition=ral node job: one task, four bound physical cores,8GiB,35-minute scheduler cap;180s bootstrap from wrapper entry and120s cleanup reserve. At most17 child processes,120s and4096MiB per child process group,1800s aggregate scientific budget including admissions/verification. The same guards and stop-on-first-failure rule apply. No replacement, retry, requeue, GPU or alternate partition. Failure of a resource/source/parity invariant ends the job and marks remaining cases unrun.
+
+The17 children are:
+
+- C: one serial10D/seed2 wrapped fit capturing all actual native neural-training inputs and reference outputs.
+- Twelve replay children: three rounds of four arms. P=parent, S=one spawned worker, U=two spawned workers with the inherited four-core mask, B=two spawned workers each pinned to a different core within that mask. Frozen order: round0 P,S,U,B; round1 B,U,S,P; round2 U,P,B,S. Each child replays the entire captured sequence once with fresh pool lifetime. This balances positions partially; three rounds are not a fully balanced design and do not establish statistical significance.
+- Four instrumented full-fit children in ABBA order: serial, two-worker shared-affinity, two-worker shared-affinity, serial. They form two matched pairs with reversed order. Each starts fresh; native seeds/settings match the retained10D/seed2 case. The bound-worker arm is a replay diagnostic only, not a changed production default.
+
+Thus at most five new sampler fits (one capture plus four traced fits). The12 replay children perform training only: no likelihood evaluations, adaptation or Sampler.run. The capture is a full ordinary fit under the same120s limit; its additional corpus logging makes its timing ineligible for a performance comparison.
+
+## Scientific invariants and provenance
+
+Retain Fitbdb7af0e9c339ad07850679fd6ac168aacc7d18c, Nerves9b204c90c2ce05c5bb0cf3e9800ed13f005c6c56, native Nautilus1.0.5 and the existing full pinned runtime inventory. Producer is a new exact clean commit. Four native networks, original architecture/stopping, ordered per-network seeds0..3, one native numerical thread, serial likelihood and sampler adaptation.10D,seed2,400live points,batch100,ESS10000,n_shell1,discard_exploration=True, no synthetic work, native checkpointing. Search corner plots disabled equally; other fit output unchanged.
+
+Capture raw inputs at the NeuralNetworkEmulator.train boundary, along with array dtype/shape/order and immutable call order/settings, corpus checksums and exact output model digests. Use non-object NumPy arrays and JSON metadata (allow_pickle=False); cap retained corpus at64MiB. Refuse empty/truncated/oversize/inconsistent corpora. Compare final capture posterior/state, likelihood count, target and ordered model digests with job415139’s retained10D/seed2 serial receipt before replaying.
+
+Every replay executes the unchanged native training method on the same inputs and settings. Exact normalization/weights/biases/iteration digests must match each captured model; inputs remain unchanged. Prevent sampling/likelihood entrypoints. Record zero forbidden calls. Load and verify corpus outside the training timer; use equal loading/copy policy across arms. Parent and shared-affinity workers inherit the same four-core allocation; bound workers get two distinct allowed cores. Record actual placement and affinity, do not infer physical exclusivity beyond verified scheduler/kernel evidence.
+
+For full fits, verify exact posterior/state, likelihood counts, model digests, target and read-only checkpoint reopening against the retained reference and paired arm. The existing prior-preserving reopen and forbidden-likelihood check remain strict. No relaxed float/hash tolerance, altered samples or extra timing likelihood calls.
+
+## Implementation files and behavior
+
+Existing producer: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-spawn-training-pool/autofit_profiling; branch feature/nautilus-spawn-training-pool; current head798d743375579b623f1f463a02fc48f8afa79c06. Clean. Existing Mind sync branch sync/nautilus-training-pilot-record. Conflict guard found no competing claim (only old unregistered evidence-worktree warnings). PR17 remains based on unmerged PR13; do not retarget or merge.
+
+- New scripts/analytic_gaussian/nautilus/training_diagnostics.py: immutable versioned17-child protocol, corpus capture/validation, replay matrix and traced fit driver, source/allocation/budget admission, durable terminal receipts and report export. Reuse the existing target/configuration/retained-checkpoint helpers while preserving the original18-case benchmark protocol unchanged.
+- New scripts/misc/profiling/nautilus_training_diagnostics.py: diagnostic-only ordered transport for0/1/2workers, optional fixed distinct-core assignment, corpus observation and scoped phase wrappers. Reuse native train_network/model_digest and existing resource helpers. Do not broaden the old TrainingTransport's approved0/2-worker contract or alter installed libraries.
+- Replay metrics: per-network monotonic start/finish, process CPU time, PID and observed CPU, input/result size estimates, dispatch/collection boundaries, pool startup/teardown, aggregate CPU and overlap-aware worker occupancy. Record full threadpoolctl library/version/path/thread data and relevant thread environment in parent and workers; validate one native thread. CPU frequency/cache/steal counters are optional observational metadata where readable, explicitly unavailable otherwise; no privileged profiling or system configuration changes. Only fixed in-allocation CPU affinity differs in armB.
+- Full-fit metrics: lightweight nested exclusive wall and parent-process CPU timers around Sampler.run, evaluate_likelihood (batch-level, including prior/dispatch), sample_shell, write/write_shell_update, NautilusBound.compute, neural train/predict, and existing PyAutoFit pre/post-fit and SearchUpdater output methods. Separate samples output, latent samples, summary/profiling and visualization. Avoid per-likelihood event traces. Worker CPU is a separate channel; never sum overlapping worker wall time into parent elapsed time. Retain inclusive timestamps and residuals, validate accounting instead of silently clamping negative totals. Restore every patched descriptor in finally. These traced fits diagnose phases; instrumentation overhead is included and no uninstrumented-speedup claim is permitted from them.
+- hpc/tools/build_nautilus_runtime.py and nautilus_runtime_cache.py: add an explicit allowlisted diagnostic experiment identity tied to its entrypoint/wrapper and manifest, checked during build/restore before execution. Preserve the original training-pool default and exact runtime/storage checks. No arbitrary command or user-supplied executable argument. New diagnostic job uses a fresh dedicated output claim, not a reset of attempt01/02/03.
+- New hpc/batch_cpu/submit_nautilus_training_diagnostics: same exclusive ral allocation and limits, new frozen experiment identity and unique output/training-diagnostics-ral-01 claim, separate staging environment, duplicate refusal and cleanup. Do not overwrite original submission environments or claims.
+- scripts/misc/test/test_nautilus_training_diagnostics.py plus focused runtime/allocation tests: matrix immutability; wrong/tampered/mutated corpus; wrong model/order; forbidden sampling; one-worker and core-assignment contracts; missing worker/library metadata; descriptor restoration after failure; nested wall/CPU accounting; aggregate budget/timeout/group cleanup; experiment manifest mismatch; duplicate submission-claim refusal; original benchmark/runtime default regression.
+- experiments/nautilus_spawn_training_pool/diagnostics_10d/: versioned protocol, compact evidence and report. No catalogue, Pulse registry, publication board, production default or library changes.
+
+## Runtime gates and retention
+
+Before the one submission: source committed/clean, appropriate tooling suite and lint/format/shell/catalogue checks pass, author review recorded honestly, exact-head CI green, fresh authoritative Heart receipt under the task-scoped development override, full pinned runtime validation, new checksummed artifact and a fresh zero-sampling restore pass. Use hpc/sync for one submission and record its job ID immediately; ambiguous submission outcome must be resolved by accounting, never blind retry.
+
+Keep runtime/source copies node-local and scientific outputs/corpus on the same witnessed shared storage (NFS view on login, Ceph on compute). A verified read-only corpus copy may reside in the guarded task cache during replays, equally for every arm; retain the authoritative shared copy and hashes. Cleanup only the newly created per-job cache. Preserve job415139 and every earlier job, artifact, source checkout, checkpoint and raw-data bundle. No edits to shared installed environments or unrelated jobs.
+
+Stop after completion/report or first failure. Judge evidence once; do not add a persistent watcher or expand repetitions. A further job or scientifically changed protocol needs a new human decision. Merge/close-out remains human and no release is authorized.
+
+## Readiness and approval boundary
+
+Published entry feed: Heart YELLOW, updated23h ago. Authoritative recorded receipt2026-11-12T11:24:54.298644+00:00 is RED: "PyAutoLens: on branch feature/pixelization-feature-review (not main)"; "PyAutoLens: 2 uncommitted source change(s)". Existing task-scoped override permits this planning continuation; request explicit approval for this new implementation and17-child compute extension despite RED. Source/runtime/CI gates remain mandatory and the unrelated canonical checkout is not a measured dependency.
+
+The workspace AGENTS.md requires: "Plan before editing. Present a plan and wait for explicit user approval before editing any source, workspace script, notebook, test, or release file." The preceding single fresh-pilot allowance was consumed by415139. This proposal is the concrete new scope to approve; no implementation or scientific compute has begun.
+
+
+### Planning classification and phase boundaries
+
+Brain's automated feature decision scanned the accumulated historical task and returned generic too-large/public-API warnings. Scoped judgment for this extension: workspace-only experimental measurement; no public library API changes. Implement in separately reviewed commits: (A) immutable capture/replay protocol and corpus/transport tests; (B) exclusive phase instrumentation and parity/accounting tests; (C) allowlisted runtime/job integration and admission tests; (D) gated run and evidence report. The single job itself gates capture, then every replay, then full fits; failure stops later phases. The larger historical task is not reopened for unrelated changes.
+
+Memory consulted for benchmark hygiene: maintain identical science/settings and keep exploratory timing distinct from inference accuracy or a general speed ranking. Current retained receipts, not historical host timings, drive this design. No additional source/compute scope is implied.
