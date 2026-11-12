@@ -24,5 +24,6 @@ Source: the implementing worker and the independent review of PyAutoBrain#603 (p
 4. **A parked lease keeps `late_sweep` running** with one `claude agents` read per tick until the parked session ends; a parked worker a human unblocks runs without holding a worker slot.
 5. **`batch watch` counts a `liveness-unknown` event as "reaped 1".**
 6. **Some dispatch tests call the real `gh pr checks`** because they don't pass `health=`; inject a fake so the suite is offline.
+7. **Digest wording for a merge outside the close-out.** `_digest.py` prefixes every refused close-out with "awaiting /prm", so a PR a human already merged reads "awaiting /prm — close-out refused: merged outside the close-out (mergedBy=…)". Give `merged_outside` its own digest line.
 
 <!-- filed 2026-11-12 by the programme lead session from the #603 worker report and independent review -->
