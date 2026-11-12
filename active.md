@@ -22,3 +22,16 @@
 - next: validate JWST PSF/noise and export calibrated ALMA visibilities, then joint gradient check and bounded pilots
 - tier: judge — merge mode: human /prm
 
+
+## three-autos-public-framing
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/832
+- issued: 2026-11-12
+- session: Codex desktop; session ID unavailable
+- status: library-dev
+- prompt: active/three_autos_public_framing.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/three-autos-public-framing
+- tier: judge — merge mode: human /prm
+- repos:
+  - PyAutoLens: feature/three-autos-public-framing
+  - PyAutoGalaxy: feature/three-autos-public-framing
+  - PyAutoFit: feature/three-autos-public-framing

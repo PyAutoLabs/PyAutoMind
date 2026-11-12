@@ -1,9 +1,11 @@
 # Coordinated public framing: the three autos
 
-Targets: @PyAutoLens @PyAutoGalaxy @PyAutoFit @autolens_workspace @autogalaxy_workspace @autofit_workspace @autolens_assistant @autogalaxy_assistant @autofit_assistant @pyautolabs.github.io
+Targets: @PyAutoLens @PyAutoGalaxy @PyAutoFit
 Type: docs
 Consequence: judge
-Status: audit and plan; awaiting human approval before public-content edits.
+Status: approved narrow six-introduction implementation.
+Issued: 2026-11-12
+Issue: https://github.com/PyAutoLabs/PyAutoLens/issues/832
 
 ## Original request (verbatim)
 
@@ -28,3 +30,7 @@ Audit the relevant surfaces, propose a coordinated edit plan, and distinguish re
 - RTD web retrieval was cached; direct live access 403. Galaxy assistant SSH fetch failed; public README read through GitHub connector.
 - Next: human approves coordinated editorial scope; then follow create_issue/start_library/start_workspace in bounded repository phases.
 - Tier: judge — merge mode: human /prm.
+
+## Approved scope supersedes broad audit
+
+Edit only README.md and docs/index.md in the three libraries. Bold only auto in automated, autodifferentiable and increasingly autonomous; retain explicit GPU acceleration. Preserve all other content and historical citations. User approved the narrowed plan and requested this typography/GPU emphasis. No API, tutorial, workspace, assistant or shared homepage edits.
