@@ -86,3 +86,18 @@
 - repos:
   - PyAutoBrain: feature/merge-actor-audit
   - PyAutoMind: feature/merge-actor-audit
+
+## new-user-guide-visuals
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/838
+- issued: 2026-11-12
+- session: OpenAI Codex desktop
+- status: human-review
+- prompt: active/new_user_guide_visuals.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/new-user-guide-visuals
+- repos:
+  - PyAutoLens: feature/new-user-guide-visuals
+  - autolens_workspace: feature/new-user-guide-visuals
+  - PyAutoGalaxy: feature/new-user-guide-visuals
+  - autogalaxy_workspace: feature/new-user-guide-visuals
+- scope: Lens and Galaxy RTD and start_here applied with images; no PRs authorized
+- tier: judge — merge mode: human /prm
