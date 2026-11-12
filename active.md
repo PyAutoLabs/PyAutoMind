@@ -86,3 +86,15 @@
   - PyAutoGalaxy: feature/start-here-intro-polish
   - autolens_workspace: feature/start-here-intro-polish
   - autogalaxy_workspace: feature/start-here-intro-polish
+
+## prompt-sync-detached-push
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/556
+- issued: 2026-11-12
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/prompt-sync-detached-push
+- prompt: active/prompt_sync_detached_push_target.md
+- epic: autonomous-orchestrators (programme M1 side fix, from M1.2 follow-up item 2)
+- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
+- repos:
+  - PyAutoMind: feature/prompt-sync-detached-push
