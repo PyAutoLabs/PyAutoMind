@@ -1157,7 +1157,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/dev_metrics_trends_on_boards.md">Boards: draw the unit-test trend, and keep the hygiene counts</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/338">issue #338</a> — issued 2026-11-12 — library-dev</summary>
+<details><summary>📋 <a href="active/dev_metrics_trends_on_boards.md">Boards: draw the unit-test trend, and keep the hygiene counts</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/338">issue #338</a> — issued 2026-11-12 — library-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/339">PyAutoHeart#339</a></summary>
 
 ```
 Use the start-dev skill. active/dev_metrics_trends_on_boards.md
@@ -1173,7 +1173,7 @@ Use the start-dev skill. active/homepage_flow_polish.md
 
 </details>
 
-<details><summary>📋 <a href="active/pre_dispatch_premise_and_lane_checks.md">Before a run is spent: check the draft's premise and its lane</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/608">issue #608</a> — issued 2026-11-12 — library-dev</summary>
+<details><summary>📋 <a href="active/pre_dispatch_premise_and_lane_checks.md">Before a run is spent: check the draft's premise and its lane</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/608">issue #608</a> — issued 2026-11-12 — library-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/559">PyAutoMind#559</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/609">PyAutoBrain#609</a></summary>
 
 ```
 Use the start-dev skill. active/pre_dispatch_premise_and_lane_checks.md
