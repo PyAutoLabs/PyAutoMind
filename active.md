@@ -237,3 +237,18 @@
 - compute: RAL 415130 COMPLETED 2026-11-12 (415128 failed at guard, not a measurement); warm median x0.94 runtime / x0.88 breakdown
 - open: Pulse step 3 designation decision (human); optional release-tag rerun for a current row; Pulse task/campaign update
 - tier: judge — merge mode: human /prm
+
+## sensitivity-mapping-review
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/634
+- issued: 2026-11-12
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/sensitivity-mapping-review
+- repos:
+  - autolens_workspace: feature/sensitivity-mapping-review
+  - PyAutoLens: feature/sensitivity-mapping-review
+- prompt: active/sensitivity_mapping_review.md
+- tier: judge; review PRs only, no merge
+- coordination: separate docs worktree under prior explicit same-session approval alongside magnification-maps-wiring.
+- next: development-only Heart RED override for #634, then commit/push/open both review PRs; no merge.
+- validation: syntax, approved-preview/code/notebook parity, image/navigation/size/whitespace and focused Sphinx passed.
+- review: /mnt/c/Users/Jammy/Workspace/Science/scratch/sensitivity_mapping_individual_review_20261112/applied/index.html
