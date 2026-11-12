@@ -138,3 +138,16 @@
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
 - repos:
   - PyAutoHeart: feature/dev-metrics-boards
+
+## three-feature-review
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/652
+- issued: 2026-11-12
+- status: development
+- session: OpenAI Codex
+- prompt: active/three_feature_review.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/three-feature-review
+- repos:
+  - PyAutoLens: feature/three-feature-review
+  - autolens_workspace: feature/three-feature-review
+- tier: judge — merge mode: human /prm
+- scope: approved three-feature documentation and images only; separate worktrees alongside installation-docs-polish and start-here-plot-ai explicitly approved
