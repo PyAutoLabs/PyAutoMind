@@ -26,3 +26,16 @@
   gates: batch suites 134 passed/1 skipped; witness 4/4; independent review CLEAN; smoke n/a
 - repos:
   - PyAutoBrain: feature/shift-watcher-state-gaps
+
+## pyautolens-ii-case-studies
+- issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/147
+- issued: 2026-11-12
+- session: OpenAI Codex desktop
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/pyautolens-ii-case-studies
+- repos:
+  - autolens_workspace_developer: feature/pyautolens-ii-case-studies
+- prompt: active/pyautolens_ii_case_studies.md
+- coordination: human approved PyAutoLens/paper_jax/paper.md-only edits alongside magnification-maps-wiring; no library code changes
+- next: validate JWST PSF/noise and export calibrated ALMA visibilities, then joint gradient check and bounded pilots
+- tier: judge — merge mode: human /prm
