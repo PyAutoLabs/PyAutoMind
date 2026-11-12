@@ -1165,7 +1165,7 @@ Use the start-dev skill. active/homepage_flow_polish.md
 
 </details>
 
-<details><summary>📋 <a href="active/prompt_sync_push_explicit_paths.md">prompt_sync_push: commit only the paths it is given</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/554">issue #554</a> — issued 2026-11-12 — library-dev</summary>
+<details><summary>📋 <a href="active/prompt_sync_push_explicit_paths.md">prompt_sync_push: commit only the paths it is given</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/554">issue #554</a> — issued 2026-11-12 — library-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/555">PyAutoMind#555</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/605">PyAutoBrain#605</a></summary>
 
 ```
 Use the start-dev skill. active/prompt_sync_push_explicit_paths.md
