@@ -3,8 +3,9 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1767
 - issued: 2026-11-12
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: library-shipped, workspace-pending
+- status: workspace-shipped, awaiting-merge (glance auto-merge on green; library first)
 - library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1768
+- workspace-prs: autofit_assistant#63, autofit_inference#19, autogalaxy_assistant#46, autolens_inference#65, autocti_assistant#40
 - worktree: ~/Code/PyAutoLabs-wt/hpc-keep-off-home
 - repos:
   - PyAutoFit: feature/hpc-keep-off-home
