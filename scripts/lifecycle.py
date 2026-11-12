@@ -27,7 +27,7 @@ Subcommands
 
   close <slug> --date YYYY-MM-DD --from-file <path> [--prompt <path|name>]
         [--pr Repo#N ...] [--tier glance --gate "<cell>" --action <what>
-        --actor <who merged>] [--no-shadow-row] [--apply]
+        --actor <who merged, required>] [--no-shadow-row] [--apply]
         The /prm hook: the whole Mind-side close-out as one verb — `record`
         (which folds the prompt, refreshes the index and prunes active.md),
         plus the parked.md/planned.md pointer, plus the tier-`glance` shadow
@@ -171,6 +171,22 @@ AUDIT_RATE = 0.2
 AUDIT_DAYS = 7
 #: Set (to anything) to keep `close`/`shadow-row` off GitHub — the tests do.
 NO_GH_ENV = "LIFECYCLE_NO_GH"
+#: Which class to pass — the line every refusal and doc repeats.
+ACTOR_GUIDE = (
+    "a human-typed /prm -> human-/prm; an in-turn merge on the human's explicit "
+    "merge command -> in-turn-human-commanded; an in-turn tiered merge with no "
+    "human command -> in-turn-autonomous; the shift watcher -> unattended-watcher; "
+    "`unknown` only when passed explicitly"
+)
+
+
+def missing_actor_message(verb: str) -> str:
+    """The refusal when a row would be written without --actor: who merged is
+    never inferred, like the gate and the action."""
+    return (
+        f"{verb}: --actor is required for a shadow row — one of "
+        f"{', '.join(MERGE_ACTORS)} ({ACTOR_GUIDE}); nothing written"
+    )
 
 H2_RE = re.compile(r"^##\s+(.+?)\s*$")
 
@@ -3335,9 +3351,10 @@ def cmd_shadow_row(args) -> int:
 
     date = args.date or _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%d")
     stage2 = getattr(args, "stage2", False)
-    actor = getattr(args, "actor", None) or (
-        "unattended-watcher" if stage2 else MERGE_ACTOR_UNKNOWN
-    )
+    actor = getattr(args, "actor", None)
+    if not actor:
+        print(missing_actor_message("shadow-row"), file=sys.stderr)
+        return 2
     try:
         actor_cell, warnings = merge_actor_cell(
             actor, task_pr_refs(args.task), lookup=not getattr(args, "no_gh", False)
@@ -3347,9 +3364,6 @@ def cmd_shadow_row(args) -> int:
         return 2
     for w in warnings:
         print(f"shadow-row: warning — {w}", file=sys.stderr)
-    if actor == MERGE_ACTOR_UNKNOWN:
-        print("shadow-row: merge actor `unknown` — pass --actor "
-              f"<{' | '.join(MERGE_ACTORS[:-1])}>", file=sys.stderr)
     read = getattr(args, "read_by_human", None) or ""
     if stage2:
         if not getattr(args, "brief", None):
@@ -3599,7 +3613,10 @@ def cmd_close(args) -> int:
     row = None
     actor_cell = None
     if task_cell is not None:
-        actor = getattr(args, "actor", None) or MERGE_ACTOR_UNKNOWN
+        actor = getattr(args, "actor", None)
+        if not actor:
+            print(missing_actor_message("lifecycle close"), file=sys.stderr)
+            return 1
         try:
             actor_cell, warnings = merge_actor_cell(
                 actor, task_pr_refs(task_cell),
@@ -3639,9 +3656,6 @@ def cmd_close(args) -> int:
         )
     print(f"  index:    {INDEX_MD.relative_to(root)} — regenerated")
     print(f"  shadow:   {row}" if row else f"  shadow:   {why}")
-    if row and actor_cell.split()[0] == MERGE_ACTOR_UNKNOWN:
-        print("            merge actor `unknown` — pass --actor "
-              f"<{' | '.join(MERGE_ACTORS[:-1])}>")
 
     # Every path this close-out writes, in the order above — the explicit list
     # `prompt_sync_push` needs (it commits only the paths it is given).
@@ -3818,11 +3832,8 @@ def main() -> int:
     cl.add_argument(
         "--actor",
         choices=list(MERGE_ACTORS),
-        help="with --tier glance: who merged — `human-/prm` (the human typed "
-        "/prm), `in-turn-human-commanded` (merged in-turn on the human's "
-        "explicit command), `in-turn-autonomous` (the shipping session merged "
-        "on its own tier), `unattended-watcher`; default `unknown`. "
-        "`gh pr view --json mergedBy,mergedAt` adds the evidence",
+        help="REQUIRED with --tier glance (never inferred): who merged — "
+        + ACTOR_GUIDE + ". `gh pr view --json mergedBy,mergedAt` adds the evidence",
     )
     cl.add_argument(
         "--read-by-human",
@@ -3897,8 +3908,7 @@ def main() -> int:
     sr.add_argument(
         "--actor",
         choices=list(MERGE_ACTORS),
-        help="who merged (see `close --actor`); default `unknown`, or "
-        "`unattended-watcher` with --stage2",
+        help="REQUIRED (never inferred): who merged — " + ACTOR_GUIDE,
     )
     sr.add_argument(
         "--read-by-human",

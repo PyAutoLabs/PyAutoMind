@@ -48,7 +48,7 @@ def _run(log, *extra):
         [sys.executable, str(ROOT / "scripts" / "lifecycle.py"), "shadow-row", "--stage2",
          "--log", str(log), "--date", "2026-11-05", "--task", "widget (PyAutoBrain#9)",
          "--gate", "tests PASS / witness PASS / adversary: close-out (opus)",
-         "--action", "merged-unchanged", *extra],
+         "--action", "merged-unchanged", "--actor", "unattended-watcher", *extra],
         capture_output=True, text=True)
 
 

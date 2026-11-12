@@ -83,10 +83,13 @@ def _fixture(tmp_path: Path, body: str = FIXTURE) -> Path:
     return log
 
 
-def _run(log: Path, *args: str) -> subprocess.CompletedProcess:
+def _run(log: Path, *args: str, actor: "str | None" = "unknown") -> subprocess.CompletedProcess:
+    """`shadow-row` on a fixture; `--actor unknown` unless the test passes its
+    own (or `actor=None` to leave the flag off)."""
+    extra = [] if actor is None or "--actor" in args else ["--actor", actor]
     return subprocess.run(
         [sys.executable, str(ROOT / "scripts" / "lifecycle.py"), "shadow-row",
-         "--log", str(log), *args],
+         "--log", str(log), *args, *extra],
         capture_output=True, text=True)
 
 
@@ -480,3 +483,23 @@ def test_the_sample_skips_rows_the_count_leaves_out_and_adds_stage2(tmp_path):
     assert ("stage 2", "cog (Gear#1)") in [(t, r[1]) for t, r in pop]
     assert len(pop) == 5                       # fixture + task-01..03 + stage 2
     assert len(lifecycle.audit_sample(pop, seed=3)) == 1
+
+
+def test_a_row_without_an_actor_is_refused_and_nothing_written(tmp_path):
+    """Who merged is never inferred: a missing --actor refuses (stage 1 and
+    stage 2 alike), naming the five classes; `unknown` is valid only when
+    passed explicitly."""
+    log = _fixture(tmp_path)
+    before = log.read_bytes()
+    r = _run(log, "--task", "t (Widget#3)", "--gate", "g", "--action",
+             "merged-unchanged", "--apply", actor=None)
+    assert r.returncode == 2
+    assert "--actor is required" in r.stderr
+    assert all(a in r.stderr for a in lifecycle.MERGE_ACTORS)
+    r2 = _run(log, "--stage2", "--brief", "am", "--task", "t", "--gate", "g",
+              "--action", "merged-unchanged", "--apply", actor=None)
+    assert r2.returncode == 2 and "--actor is required" in r2.stderr
+    assert log.read_bytes() == before
+    # control: the explicit `unknown` writes
+    assert _run(log, "--task", "t", "--gate", "g", "--action", "not-merged",
+                "--apply", actor="unknown").returncode == 0

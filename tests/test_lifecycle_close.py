@@ -263,10 +263,28 @@ def test_tier_glance_with_a_gate_and_an_action_appends_one_row(tmp_path,
     _at(monkeypatch, root)
     assert lifecycle.cmd_close(_args(
         root, apply=True, tier="glance", gate="tests 3 pass",
-        action="merged-unchanged", pr=["Flywheel#8"], date="2026-10-03")) == 0
+        action="merged-unchanged", pr=["Flywheel#8"], date="2026-10-03",
+        actor="in-turn-autonomous")) == 0
     log = (root / "autonomy_log.md").read_text()
     assert "sprocket-calibration (Flywheel#8) | glance |" in log
+    assert "| in-turn-autonomous |  |" in log
     assert "Count toward 20: 2" in log
+
+
+@pytest.mark.parametrize("apply", [False, True])
+def test_a_glance_close_without_an_actor_refuses_and_writes_nothing(
+        apply, tmp_path, monkeypatch, capsys):
+    """A human `/prm` close-out that forgets --actor must not land as a counted
+    `unknown` row (FLOW-2): the whole close refuses before writing anything."""
+    root = _mind(tmp_path)
+    _at(monkeypatch, root)
+    before = _snapshot(root)
+    assert lifecycle.cmd_close(_args(
+        root, apply=apply, tier="glance", gate="tests 3 pass",
+        action="merged-unchanged", pr=["Flywheel#8"], date="2026-10-03")) == 1
+    assert _snapshot(root) == before
+    err = capsys.readouterr().err
+    assert "--actor is required" in err and "human-/prm" in err
 
 
 def test_the_close_row_carries_the_actor_and_the_mergedby_evidence(
@@ -414,7 +432,7 @@ def test_the_commit_line_names_every_path_close_touches(tmp_path, monkeypatch,
     _at(monkeypatch, root)
     assert lifecycle.cmd_close(_args(
         root, apply=True, tier="glance", gate="tests 3 pass",
-        action="merged-unchanged", date="2026-10-03")) == 0
+        action="merged-unchanged", date="2026-10-03", actor="unknown")) == 0
     line = _commit_line(capsys.readouterr().out)
     assert "git add -A" not in line
     assert line.split()[3:] == [
@@ -465,7 +483,7 @@ def test_the_glance_close_out_commits_cleanly_through_prompt_sync_push(
     _at(monkeypatch, root)
     assert lifecycle.cmd_close(_args(
         root, apply=True, tier="glance", gate="tests 3 pass",
-        action="merged-unchanged", date="2026-10-03")) == 0
+        action="merged-unchanged", date="2026-10-03", actor="unknown")) == 0
     line = _commit_line(capsys.readouterr().out)
     # stand-in for `pyauto-brain intake --apply dashboard`
     for page in ("dashboard.md", "dashboard.html"):
