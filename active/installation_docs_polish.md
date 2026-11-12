@@ -21,3 +21,28 @@ Validation logs and baseline IDs: worktree validation/<repo>/{before,after}/buil
 Original review notes and limitations: scratch/installation_review_20261112/v1/index.html in the human scratch folder.
 
 Heart entry: YELLOW, Release YELLOW; monitoring RED, 16/100, 165 unresolved. No shipping/merge override inferred. Next: human review; no PRs until requested.
+
+## Heart RED development override — #841
+
+> Yes, override Heart RED for #841 and go ahead with the commits, pushes and both Installation PRs for PyAutoLens and PyAutoGalaxy. Don't merge yet.
+
+Current RED reasons:
+- PyAutoNerves: 2 commit(s) behind origin
+- PyAutoArray: 2 commit(s) behind origin
+- PyAutoGalaxy: 4 commit(s) behind origin
+- PyAutoLens: on branch feature/extra-galaxies-review (not main)
+- PyAutoLens: 2 uncommitted source change(s)
+- PyAutoCTI: 2 commit(s) behind origin
+- install verification FAILED (testpypi; checks F)
+- release validation FAILED (stage integrate)
+
+Validation: Focused Sphinx builds with warnings as errors passed; all old rendered anchors retained; 420 local links/fragments passed with no duplicate IDs; git diff whitespace checks passed; human review approved. Documentation only; no runtime changes. Fresh multi-platform installs and numerical suites not run locally.
+
+Authorized: commits, pushes and two PRs. No merge or release.
+
+## PR-open checkpoint
+
+- https://github.com/PyAutoLabs/PyAutoLens/pull/842
+- https://github.com/PyAutoLabs/PyAutoGalaxy/pull/706
+
+Both commits pushed; PR file scope and pending-release labels verified. No merge performed. Prior no-PR checkpoint superseded by live user shipping authorization above. Await separate review/merge instruction.
