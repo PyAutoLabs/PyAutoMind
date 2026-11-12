@@ -58,3 +58,14 @@ User approved: "Yes, add the multi-band imaging panel and the weak lensing image
 - Preview root: /mnt/c/Users/Jammy/Workspace/Science/scratch/workspace_readme_images_2026-11-12/ ; RTD: rtd/overview_2_new_user_guide.html. README embeds local assets so changes are visible before merge.
 - Build log: .worktrees/workspace-readme-images/tmp/rtd-build.log (workspace-relative).
 - Still local/unpublished: ship PyAutoLens docs before workspace PRs so the canonical image URL displays the updated strip. Heart RED shipping block remains; no override requested or implied.
+
+## PR-open checkpoint (2026-11-12)
+
+Live authorization: "Looks good, go ahead and open PRs for the README and RTD changes."
+
+- PyAutoLens#854: e3a171ee29d1dd090eaca5b72bde21090221e638; RTD guide, dataset image, provenance and prompt.
+- autolens_workspace#662: f92aa7dd; README only.
+- autogalaxy_workspace#279: f538c3e; README only.
+- Same isolated worktree and feature/workspace-readme-images branches. Applicable checks and human visual review passed; no source changes since reviewed preview.
+- Development-only Heart RED authorization, exact current reasons and validation recorded on issue, all PR bodies, active.md and first autonomy_log table.
+- Deliverable reached: three open PRs, no merge or release. Human /prm next; merge PyAutoLens#854 before autolens_workspace#662. CI must pass before merge.

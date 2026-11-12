@@ -90,7 +90,7 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/658
 - issued: 2026-11-12
 - session: OpenAI Codex desktop
-- status: workspace-dev (edits validated; shipping blocked by Heart RED)
+- status: awaiting-merge
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/workspace-readme-images
 - prompt: active/workspace_readme_images.md
 - tier: judge — merge mode: human /prm
@@ -99,4 +99,13 @@
   - autolens_workspace: feature/workspace-readme-images
   - autogalaxy_workspace: feature/workspace-readme-images
 - validation: four PNG URLs, twelve folder/start_here targets, GFM rendering and diff checks passed
-- next: review previews; Heart recovery or explicit development-only override before ship
+- next: human /prm; merge PyAutoLens#854 before autolens_workspace#662
+
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/854
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/662
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/279
+- heart-red-override:
+  authorization: "Looks good, go ahead and open PRs for the README and RTD changes."
+  scope: commit, push and PR-open only; no merge or release
+  reasons: ["PyAutoNerves: 2 commit(s) behind origin", "PyAutoFit: 2 commit(s) behind origin", "PyAutoArray: 2 commit(s) behind origin", "PyAutoGalaxy: on branch feature/feature-housekeeping (not main)", "PyAutoGalaxy: 1 uncommitted source change(s)", "PyAutoLens: on branch feature/feature-housekeeping (not main)", "PyAutoLens: 1 uncommitted source change(s)", "PyAutoCTI: 2 commit(s) behind origin", "install verification FAILED (testpypi; checks F)", "release validation FAILED (stage integrate)"]
+  gates: Focused RTD build with warnings as errors; README GFM rendering; image URLs and example-folder/start_here links; diff checks; author scope review and human visual approval passed. No runtime changes; numerical tests and notebook regeneration not applicable.
