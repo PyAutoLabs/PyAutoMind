@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2239 records across 11 buckets.
+2242 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -191,6 +191,7 @@ markers; everything below GENERATED is rebuilt.
 - [hygiene-extras-tomllib](2026/11/hygiene-extras-tomllib.md)
 - [hygiene-refs-false-positives](2026/11/hygiene-refs-false-positives.md)
 - [insight-lint-point-source-family](2026/11/insight-lint-point-source-family.md)
+- [installation-docs-polish](2026/11/installation-docs-polish.md)
 - [intake-memory-citation-floor](2026/11/intake-memory-citation-floor.md)
 - [intake-memory-line-organ-targets](2026/11/intake-memory-line-organ-targets.md) — already shipped — closed as stale draft. The `_with_memory` gate in `agents/conductors/intake/_intake.py` land…
 - [jax-floor-0-12](2026/11/jax-floor-0-12.md)
@@ -264,6 +265,7 @@ markers; everything below GENERATED is rebuilt.
 - [results-library-p5b-cortex](2026/11/results-library-p5b-cortex.md) — phase 5b; ledger draft/feature/autofit/results_library_epic.md
 - [root-default-test-env-leak](2026/11/root-default-test-env-leak.md) — fixed in commit 748f8c0bb (this PR). The module's autouse `forget_the_resolver` fixture now deletes `PYAUTO_RO…
 - [rtd-organism-currency](2026/11/rtd-organism-currency.md) — already shipped, closed as a stale draft. PyAutoBrain 1aa2ed4 (#563) renamed `docs/organs/build` to `organs/ha…
+- [rtd-tutorials-consolidated](2026/11/rtd-tutorials-consolidated.md)
 - [scientist-minimal-starter](2026/11/scientist-minimal-starter.md) — already shipped — Mind#502 / PR #503, record `complete/2026/10/scientist-starter-acceptance.md`; slices PyAuto…
 - [search-seed-reproducibility](2026/11/search-seed-reproducibility.md) — already shipped — PyAutoFit#1686 (5bf057f2, 2026-10-14; search-ext A4b), record `complete/2026/10/search-ext-a…
 - [sersic-products-read-sed-output-dir](2026/11/sersic-products-read-sed-output-dir.md) — already shipped — euclid_strong_lens_modeling_pipeline 126167b00 (2026-10-05) "catalogue: read Sersic fits fro…
@@ -276,6 +278,7 @@ markers; everything below GENERATED is rebuilt.
 - [simulator-roundoff-control](2026/11/simulator-roundoff-control.md)
 - [skill-line-budget-trim](2026/11/skill-line-budget-trim.md) — PR is the tracking surface
 - [start-here-intro-polish](2026/11/start-here-intro-polish.md)
+- [start-here-plot-ai](2026/11/start-here-plot-ai.md) — Introductory grid uses 30x30 points without x/y labels; subsequent light-profile and lensing calculations reta…
 - [token-load-measure-four-organs](2026/11/token-load-measure-four-organs.md) — PR is the tracking surface
 - [tutorial-link-sweep](2026/11/tutorial-link-sweep.md)
 - [watcher-workers-survive-systemd-tick](2026/11/watcher-workers-survive-systemd-tick.md) — pilot 4c follow-up; issue PyAutoBrain#592
