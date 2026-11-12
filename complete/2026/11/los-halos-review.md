@@ -1,3 +1,25 @@
+# Line-of-sight halo population feature review
+
+Completed: 2026-11-12
+Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/645 (closed)
+
+Approved two-panel population illustration and science-first teaching introduction applied to the los_halos feature, main workspace tour and RTD. Teaching retained on multi-plane geometry, population assumptions, mean-density compensation, mock imaging and the JAX route. Simulator-only scope explicit. Existing start-here-intro-polish changes preserved. No runtime/API changes.
+
+## Merge receipts
+
+- PyAutoLens#837: https://github.com/PyAutoLabs/PyAutoLens/pull/837 — merge 416c381b8dabdb68a1995f0821f789b606fbf008; tested head 122ec1ea0f6dea9f4b7b9b48d039d850aa85bf90.
+- autolens_workspace#646: https://github.com/PyAutoLabs/autolens_workspace/pull/646 — merge 8daa7360341c22942d4318c9c19f1404b3bc8fce; tested head 02f19489eee626df30a702279ab360a10e968d05.
+- All 12 exact-head CI jobs passed (4 library, 8 workspace), no skipped/pending jobs. Both merge states CLEAN. Heart freeze: not frozen. Live human explicitly authorized conditional merge; library merged first.
+- Both source HEADs proven ancestors of fetched origin/main. No release performed.
+
+## Validation and review
+
+Approved draft text/image parity, executable AST and notebook code-cell parity, notebook schemas, local images, navigator/banner/search-memory/size/whitespace checks, focused Sphinx build with -W passed. Notebook/catalogue regeneration through PyAutoHands. Full numerical CI and smoke passed before merge. Development-only Heart RED override and exact reasons retained in original prompt, issue, both PR bodies and autonomy log; merge did not assert release readiness.
+
+Review bundle: /mnt/c/Users/Jammy/Workspace/Science/scratch/los_halos_individual_review_20261112/applied/index.html
+
+## Original prompt
+
 # Line-of-sight halo feature review
 
 Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/645
