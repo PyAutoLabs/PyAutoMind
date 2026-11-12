@@ -29,4 +29,21 @@ Fresh checks passed: syntax, executable AST and generated notebook code-cell par
 Classifier API-risk/phasing heuristics overestimated this docs-only scope; inspection confirms no public API or numerical change.
 
 ## Shipping checkpoint
-Heart RED 2026-11-12T14:24:33.416704+00:00: PyAutoLens: on branch feature/sensitivity-mapping-review (not main); PyAutoLens: 2 uncommitted source change(s). Await task-specific development-only override for #634 before source commit/push/PR. No merge.
+Heart RED 2026-11-12T14:24:33.416704+00:00: PyAutoLens: on branch feature/sensitivity-mapping-review (not main); PyAutoLens: 2 uncommitted source change(s). Task-specific override approved in the subsequent live user turn and recorded below. No merge.
+
+## Development-only Heart RED override
+
+Human authorization (2026-11-12): “I approve the development-only Heart RED override for #634. Commit, push and open both PRs for review, don't merge yet.”
+
+Exact RED reasons (2026-11-12T14:24:33.416704+00:00):
+- `PyAutoLens: on branch feature/sensitivity-mapping-review (not main)`
+- `PyAutoLens: 2 uncommitted source change(s)`
+
+Fresh checks passed: syntax, executable AST and generated notebook code-cell parity, approved feature text parity (image path and trailing-space cleanup only), image identity and local links, navigator/banner lint, search-memory check, script-size guard, whitespace and focused Sphinx build with warnings treated as errors. All 15 narrative blocks and original headings retained. No API or executable changes. Full numerical/smoke suites were not rerun for this prose/assets-only patch; the preceding subhalo PRs passed all 12 exact-head CI jobs, which are prior evidence rather than fresh tests.
+
+Commit, push and PR-open only; no merge, release or CI bypass.
+
+## Review handoff
+Workspace: https://github.com/PyAutoLabs/autolens_workspace/pull/635 (2631a3a74b1a1e288d1ff08d27f93f693a20ffa4)
+RTD: https://github.com/PyAutoLabs/PyAutoLens/pull/828 (7b4a1a87b319e889fc8b86b6dff866472451391d)
+Both source worktrees clean; no merge. CI not awaited.
