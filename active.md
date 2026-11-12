@@ -129,7 +129,7 @@
 ## last-imaging-features-review
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/654
 - issued: 2026-11-12
-- status: development
+- status: awaiting-heart-red-override
 - session: OpenAI Codex
 - prompt: active/last_imaging_features_review.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/last-imaging-features-review

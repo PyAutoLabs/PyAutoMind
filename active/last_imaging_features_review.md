@@ -34,3 +34,22 @@ No runtime/API/config/simulator changes, including the noted sky prior boundary.
 Clean worktrees rooted at /home/jammy/Code/PyAutoLabs/.worktrees/last-imaging-features-review. Preserve unrelated canonical paper_jax/paper.md, dataset.fits and other tasks' dirty Mind state.
 
 Classification disposition: bounded documentation-only batch, no API changes. Generic classifier design/core-API phasing is inapplicable; keep the two user-approved paired documentation PRs.
+
+## Implementation checkpoint
+# Last imaging features #654
+
+Applied, staged and validated. No source commits, pushes or PRs yet. Awaiting development-only Heart RED override for #654.
+
+Passed: exact approved feature text and image parity; subhalo image reused unchanged; all four executable ASTs and notebook code cells preserved; notebook schemas and image paths; focused Sphinx build with warnings as errors; navigator, search-memory, size and staged whitespace checks. Concurrent api-reference-polish and general-docs-refresh scopes are disjoint. Full numerical suites were not rerun locally for this documentation-only change; required CI remains mandatory before a future merge.
+
+Open index.html for complete feature previews and rtd/index.html for the built tour summaries. Repository patches and PR drafts are alongside them.
+
+## Exact Heart RED reasons
+- PyAutoNerves: 2 commit(s) behind origin
+- PyAutoArray: 2 commit(s) behind origin
+- PyAutoGalaxy: 10 commit(s) behind origin
+- PyAutoLens: on branch feature/last-imaging-features-review (not main)
+- PyAutoLens: 3 uncommitted source change(s)
+- PyAutoCTI: 2 commit(s) behind origin
+- install verification FAILED (testpypi; checks F)
+- release validation FAILED (stage integrate)
