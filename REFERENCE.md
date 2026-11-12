@@ -222,7 +222,9 @@ git -C PyAutoMind worktree add --detach <tmp> origin/main
 PROMPT_REPO=<tmp> PROMPT_SYNC_PUSH_TO=main prompt_sync_push "prompt: <subject>" <paths>
 ```
 
-`PROMPT_SYNC_PUSH_TO` pushes `HEAD:main` with no force. If `origin/main` has
+`PROMPT_SYNC_PUSH_TO` pushes `HEAD:main` with no force. Before staging it
+fetches `origin/main` and refuses if HEAD already holds commits that `origin/main`
+lacks, so a leftover variable can only ever publish the helper's own new commit. If `origin/main` has
 moved on, the push is rejected and the commit stays local: `git -C <tmp> fetch
 origin && git -C <tmp> rebase origin/main && git -C <tmp> push origin HEAD:main`
 (re-running `prompt_sync_push` would be a no-op, since nothing is left to

@@ -206,6 +206,10 @@ def _head(repo):
     return _git(repo, "rev-parse", "HEAD")
 
 
+def _staged(repo):
+    return _git(repo, "diff", "--cached", "--name-only")
+
+
 def test_detached_head_with_target_fast_forwards_remote_main(tmp_path):
     repo, remote = _detached_on_remote_main(tmp_path)
     config_before = _git(repo, "config", "--local", "--list")
@@ -247,6 +251,7 @@ def test_detached_head_without_target_commits_nothing(tmp_path):
     assert res.returncode != 0
     assert "PROMPT_SYNC_PUSH_TO" in res.stderr
     assert _head(repo) == head_before
+    assert _staged(repo) == "", "refused, yet left the index staged"
     assert _git(remote, "rev-parse", "main") == main_before
 
 
@@ -286,6 +291,7 @@ def test_named_branch_with_mismatched_target_is_refused(tmp_path):
     assert res.returncode != 0
     assert "claude/some-task" in res.stderr
     assert _head(repo) == head_before, "refused, yet committed"
+    assert _staged(repo) == "", "refused, yet left the index staged"
     assert _git(remote, "rev-parse", "main") == main_before
     assert _remote_branches(remote) == {"main"}
 
@@ -320,11 +326,55 @@ def test_bad_target_names_are_refused(tmp_path):
     head_before, main_before = _head(repo), _git(remote, "rev-parse", "main")
     (repo / "active.md").write_text("# Active\n")
 
-    for bad in ["", "-main", "ma in", "main..x", "@{-1}", "HEAD", "main.lock"]:
+    for bad in ["", "-main", "ma in", "main..x", "@{-1}", "HEAD", "main.lock",
+                "refs/heads/main", "origin/main", "+main"]:
         res = _run(repo, f"PROMPT_SYNC_PUSH_TO='{bad}' "
                          'prompt_sync_push "prompt: a subject" active.md')
         assert res.returncode != 0, bad
         assert "not a valid branch name" in res.stderr, (bad, res.stderr)
         assert _head(repo) == head_before, f"committed on {bad!r}"
+        assert _staged(repo) == "", f"staged on {bad!r}"
     assert _git(remote, "rev-parse", "main") == main_before
+    assert _remote_branches(remote) == {"main"}
+
+
+def test_leftover_target_never_publishes_unreviewed_detached_commits(tmp_path):
+    """The review's reproduction: an exported PROMPT_SYNC_PUSH_TO must not let
+    a detached HEAD carrying unreviewed branch work push it onto `main`."""
+    repo, remote = _repo_with_remote(tmp_path)
+    _git(repo, "checkout", "-b", "claude/task")
+    (repo / "secret.md").write_text("unreviewed branch work\n")
+    _git(repo, "add", "-A")
+    _git(repo, "commit", "-m", "unreviewed")
+    _git(repo, "checkout", "--detach", "claude/task")
+    head_before, main_before = _head(repo), _git(remote, "rev-parse", "main")
+    (repo / "active.md").write_text("# Active\n")
+
+    res = _run(repo, 'export PROMPT_SYNC_PUSH_TO=main; '
+                     'prompt_sync_push "prompt: a subject" active.md')
+    assert res.returncode != 0
+    assert "not on origin/main" in res.stderr
+    assert "unreviewed" in res.stderr
+    assert _head(repo) == head_before, "refused, yet committed"
+    assert _staged(repo) == "", "refused, yet left the index staged"
+    assert _git(remote, "rev-parse", "main") == main_before, (
+        "unreviewed work reached main")
+
+    res = _run(repo, "export PROMPT_SYNC_PUSH_TO=main; prompt_sync_new_prompts")
+    assert res.returncode != 0
+    assert _git(remote, "rev-parse", "main") == main_before
+
+
+def test_detached_target_missing_on_remote_is_refused(tmp_path):
+    """The ancestry check needs origin/<target>; a failed fetch refuses."""
+    repo, remote = _detached_on_remote_main(tmp_path)
+    head_before = _head(repo)
+    (repo / "active.md").write_text("# Active\n")
+
+    res = _run(repo, 'PROMPT_SYNC_PUSH_TO=no-such-branch '
+                     'prompt_sync_push "prompt: a subject" active.md')
+    assert res.returncode != 0
+    assert "could not fetch origin/no-such-branch" in res.stderr
+    assert _head(repo) == head_before
+    assert _staged(repo) == ""
     assert _remote_branches(remote) == {"main"}

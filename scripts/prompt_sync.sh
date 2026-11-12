@@ -79,9 +79,16 @@ _prompt_sync_require_repo() {
 # is rejected and reported). On a named branch the variable is not needed; when
 # set it must name that same branch, so each call follows one rule.
 #
+# A leftover or exported PROMPT_SYNC_PUSH_TO must not publish unreviewed work:
+# on a detached HEAD the helper first fetches origin/<target> and refuses unless
+# HEAD holds nothing that origin/<target> lacks, so the only commit that can
+# reach the target is the one this call is about to make.
+#
 # _prompt_sync_push_target prints the branch to push, or refuses (one line on
-# stderr, returns 1). Both helpers call it BEFORE committing, so a refusal here
-# commits nothing; _prompt_sync_push_current calls it again to push.
+# stderr, returns 1). _prompt_sync_push_preflight adds the detached-HEAD
+# ancestry check; both helpers call it BEFORE staging or committing, so a
+# refusal leaves the index and HEAD as they were. _prompt_sync_push_current
+# calls _prompt_sync_push_target again to push.
 _prompt_sync_push_target() {
   local branch target checked
   branch=$(git -C "$PROMPT_REPO" symbolic-ref --quiet --short HEAD 2>/dev/null)
@@ -97,6 +104,22 @@ _prompt_sync_push_target() {
       echo "prompt_sync: refusing, nothing committed: PROMPT_SYNC_PUSH_TO='$target' is not a valid branch name" >&2
       return 1
     fi
+    # Valid ref names that would push to a stray branch (refs/heads/refs/...,
+    # refs/heads/origin/main) or read as a force refspec.
+    local remote
+    case "$target" in
+      refs/*|+*)
+        echo "prompt_sync: refusing, nothing committed: PROMPT_SYNC_PUSH_TO='$target' is not a valid branch name (give a bare branch name, e.g. main)" >&2
+        return 1 ;;
+    esac
+    while IFS= read -r remote; do
+      [ -n "$remote" ] || continue
+      case "$target" in
+        "$remote"/*)
+          echo "prompt_sync: refusing, nothing committed: PROMPT_SYNC_PUSH_TO='$target' is not a valid branch name (it starts with remote '$remote/'; give a bare branch name, e.g. main)" >&2
+          return 1 ;;
+      esac
+    done < <(git -C "$PROMPT_REPO" remote 2>/dev/null)
     if [ -n "$branch" ] && [ "$branch" != "$target" ]; then
       echo "prompt_sync: refusing, nothing committed: on branch '$branch' but PROMPT_SYNC_PUSH_TO='$target'; unset it to push '$branch'" >&2
       return 1
@@ -109,6 +132,22 @@ _prompt_sync_push_target() {
     return 1
   fi
   printf '%s\n' "$branch"
+}
+
+_prompt_sync_push_preflight() {
+  local target ahead
+  target=$(_prompt_sync_push_target) || return 1
+  git -C "$PROMPT_REPO" symbolic-ref --quiet HEAD >/dev/null 2>&1 && return 0
+  if ! git -C "$PROMPT_REPO" fetch --quiet origin \
+      "refs/heads/$target:refs/remotes/origin/$target" >/dev/null 2>&1; then
+    echo "prompt_sync: refusing, nothing committed: could not fetch origin/$target to check what a push from this detached HEAD would publish" >&2
+    return 1
+  fi
+  ahead=$(git -C "$PROMPT_REPO" rev-list --count "refs/remotes/origin/$target..HEAD") || return 1
+  if [ "$ahead" -ne 0 ]; then
+    echo "prompt_sync: refusing, nothing committed: this detached HEAD already holds $ahead commit(s) not on origin/$target, and PROMPT_SYNC_PUSH_TO=$target would publish them unreviewed; start from a worktree detached on origin/$target" >&2
+    return 1
+  fi
 }
 
 _prompt_sync_push_current() {
@@ -161,7 +200,7 @@ prompt_sync_new_prompts() {
   local body
   body=$(printf -- '- %s\n' "${files[@]}")
 
-  _prompt_sync_push_target >/dev/null || return 1
+  _prompt_sync_push_preflight || return 1
   git -C "$PROMPT_REPO" add -- "${files[@]}" || return 1
   git -C "$PROMPT_REPO" commit \
     -m "$(printf 'prompt: sync new task ideas\n\n%s\n' "$body")" \
@@ -282,6 +321,11 @@ prompt_sync_push() {
     fi
   done
 
+  # Refuse an unpushable target (detached HEAD with no PROMPT_SYNC_PUSH_TO, a
+  # bad or mismatched one, or unreviewed commits already on a detached HEAD)
+  # before staging, so a refusal leaves the index and HEAD as they were.
+  _prompt_sync_push_preflight || return 1
+
   # Stage only the given paths. A path already gone from both worktree and
   # index (the source of a `git mv`) is staged already; `git add` would reject it.
   local -a to_add=()
@@ -311,10 +355,6 @@ prompt_sync_push() {
     fi
     staged+=("$f")
   done < <(git -C "$PROMPT_REPO" diff --cached --name-only --no-renames -z)
-
-  # Refuse an unpushable target (detached HEAD with no PROMPT_SYNC_PUSH_TO, a
-  # bad or mismatched one) before committing, so the refusal commits nothing.
-  _prompt_sync_push_target >/dev/null || return 1
 
   # Commit with an explicit pathspec (`--only`), so anything staged after the
   # check above stays staged and never rides along in this commit.
