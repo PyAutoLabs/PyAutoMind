@@ -1,3 +1,36 @@
+Programme task **M1.4** (epic `autonomous-orchestrators`, phase 8), finding FLOW-2. Shipped as PyAutoMind#558 (dbc9affaf) and PyAutoBrain#607 (68e263a1f), both merged 2026-11-12. Issue PyAutoBrain#606.
+
+**The human's decisions**, taken live on 2026-11-12 ("All three as recommended") and recorded in AUTONOMY.md "Merge actor and random audit — 2026-11-12":
+1. A tool-written merge-actor column, with classes `human-/prm | in-turn-human-commanded | in-turn-autonomous | unattended-watcher | unknown`. The count leaves out the first two.
+2. Glance-window audits are a seeded 1-in-5 random sample, audited within a week.
+3. A `read by human` column is recorded but does not gate the count.
+
+**Built:**
+- `lifecycle.py close --tier glance` and `shadow-row [--stage2]` require `--actor`. A missing flag refuses and writes nothing. `gh pr view --json mergedBy` adds evidence.
+- The count rule is in code.
+- `shadow-recount` and `audit-sample --seed --rate`.
+- The watcher writes `unattended-watcher`.
+- Today's three rows are re-marked `in-turn-human-commanded`, taking the count from 96 to 93.
+
+**Witness** (command and observed result):
+- (a) This close-out's own glance row was written by `lifecycle.py close … --actor in-turn-human-commanded` with the `mergedBy` evidence.
+- (b) `test_the_count_leaves_out_human_prm_and_human_commanded_rows` passes.
+- (c) `lifecycle.py shadow-recount`, on the 69 rows the 11-04 ruling rested on: human /prm 31, automatic/in-turn 10, not stated 28.
+- (d) `test_the_same_seed_draws_the_same_one_in_five_sample` passes. Live, `audit-sample --seed 20261112` draws 19 of 93.
+- Mind suite: 772 passed. Brain closeout tests: 21 passed. CI green on both PRs.
+
+**Review:** an independent Opus review returned FINDINGS: a missing `--actor` defaulted to a counted `unknown`. That is fixed. The re-review was CLEAN, and one nit was fixed.
+
+**Heart:** RED at ship (local canonical checkouts behind origin or on review branches; install check F; release integrate). The live human gave a development-only override plus the merge command, recorded in all four places.
+
+**Open for the human (judge):**
+- Whether to re-mark the historical stage-1 rows by the recount. Leaving out the 31 human `/prm` rows still leaves 38 counted rows against the target of 20.
+- When to draw and run the first seeded audit.
+
+**Follow-ups:** `draft/bug/pyautobrain/shift_watcher_followups_after_state_gaps.md` items 10–11. `mergedBy` cannot tell who merged while every merge uses one token (relates to M2.2), and the watcher labels a no-file merge itself.
+
+## Original prompt
+
 # Autonomy log: record who merged, and audit a random sample
 
 Type: feature

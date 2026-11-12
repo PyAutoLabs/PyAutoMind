@@ -557,7 +557,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 93 (stage 1: 93, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; left out by merge actor (human-/prm / in-turn-human-commanded): 3; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
+Count toward 20: 93 (stage 1: 93, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; left out by merge actor (human-/prm / in-turn-human-commanded): 4; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -696,6 +696,7 @@ week, never a hand-picked one.
 | 2026-11-12 | shift-watcher-state-gaps (PyAutoBrain#604) | glance | tests 134/1skip; smoke n/a; review independent Opus CLEAN after fix; heart RED-override (human); witness PASS | merged-unchanged | 1 | in-turn-human-commanded (mergedBy Jammy2211) |  |
 | 2026-11-12 | prompt-sync-explicit-paths (PyAutoMind#555 / PyAutoBrain#605) | glance | tests Mind 750; smoke n/a; review independent Opus CLEAN after fix; heart RED-override (human); witness PASS | merged-unchanged | 1 | in-turn-human-commanded (mergedBy Jammy2211) |  |
 | 2026-11-12 | prompt-sync-detached-push (PyAutoMind#557) | glance | tests Mind 760; smoke n/a; review independent Opus CLEAN after fix; heart RED-override (human); witness PASS | merged-unchanged | 1 | in-turn-human-commanded (mergedBy Jammy2211) |  |
+| 2026-11-12 | merge-actor-audit (PyAutoMind#558 / PyAutoBrain#607) | glance | tests Mind 772/Brain closeout 21; smoke n/a; review independent Opus CLEAN after fix; heart RED-override (human); witness PASS | merged-unchanged | 1 | in-turn-human-commanded (mergedBy Jammy2211) |  |
 
 ## Unattended `glance` sub-window (stage 2) — opened 2026-11-04
 
