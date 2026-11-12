@@ -1181,7 +1181,7 @@ Use the start-dev skill. active/pyautolens_ii_case_studies.md
 
 </details>
 
-<details><summary>📋 <a href="active/shift_numbers_tokens_counters_row.md">Shift watcher: a shift's numbers are right and kept</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/610">issue #610</a> — issued 2026-11-12 — library-dev</summary>
+<details><summary>📋 <a href="active/shift_numbers_tokens_counters_row.md">Shift watcher: a shift's numbers are right and kept</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/610">issue #610</a> — issued 2026-11-12 — library-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/560">PyAutoMind#560</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/612">PyAutoBrain#612</a></summary>
 
 ```
 Use the start-dev skill. active/shift_numbers_tokens_counters_row.md
