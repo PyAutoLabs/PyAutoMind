@@ -72,3 +72,17 @@
   - Jammy2211.github.io: feature/homepage-flow-polish
 - prompt: active/homepage_flow_polish.md
 - tier: judge — merge mode: human /prm
+
+## merge-actor-audit
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/606
+- issued: 2026-11-12
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/merge-actor-audit
+- prompt: active/autonomy_log_merge_actor_and_random_audit.md
+- epic: autonomous-orchestrators (programme M1.4, phase 8)
+- decision: human 2026-11-12 "All three as recommended" (actor classes + count rule; seeded 1-in-5 audits; read-by column non-gating) — doctrine edit authorized
+- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
+- repos:
+  - PyAutoBrain: feature/merge-actor-audit
+  - PyAutoMind: feature/merge-actor-audit
