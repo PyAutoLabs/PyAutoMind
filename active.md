@@ -148,3 +148,22 @@
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
 - repos:
   - PyAutoHeart: feature/dev-metrics-boards
+
+## rtd-tutorials-consolidated
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/843
+- issued: 2026-11-12
+- session: OpenAI Codex desktop; session ID unavailable
+- status: library-shipped, awaiting-merge
+- prompt: active/rtd_tutorials_consolidated.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/rtd-tutorials-consolidated
+- repos:
+  - PyAutoLens: feature/rtd-tutorials-consolidated
+  - PyAutoGalaxy: feature/rtd-tutorials-consolidated
+- coordination: user explicitly approved separate Tutorials worktrees alongside installation-docs-polish; only Tutorials pages and Tutorials navigation changed
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/844
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/707
+- tier: judge — merge mode: human /prm; explicit instruction not to merge
+- heart-red-override:
+  authorization: "Authorize the documentation-only override" for task-specific commit/push/two documentation PRs; no merge, release or CI bypass
+  reasons: ["PyAutoNerves: 2 commit(s) behind origin", "PyAutoArray: 2 commit(s) behind origin", "PyAutoGalaxy: 4 commit(s) behind origin", "PyAutoLens: on branch feature/extra-galaxies-review (not main)", "PyAutoLens: 2 uncommitted source change(s)", "PyAutoCTI: 2 commit(s) behind origin", "install verification FAILED (testpypi; checks F)", "release validation FAILED (stage integrate)"]
+  gates: focused Sphinx -W builds, approved-preview wording parity, all ten redirect/fallback destinations, protected-section scope and git diff checks passed; author review passed; runtime tests and workspace smoke not applicable to docs-only changes
