@@ -90,7 +90,7 @@
 - issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/276
 - issued: 2026-11-12
 - session: OpenAI Codex desktop; session ID unavailable
-- status: development
+- status: awaiting-heart-red-override
 - prompt: active/autogalaxy_features_review.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/autogalaxy-features-review
 - repos:

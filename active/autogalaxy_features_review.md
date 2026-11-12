@@ -34,3 +34,26 @@ PyAutoGalaxy and autogalaxy_workspace canonical main clean, behind origin/main; 
 
 Worktree: /home/jammy/Code/PyAutoLabs/.worktrees/autogalaxy-features-review
 Branch: feature/autogalaxy-features-review
+
+## Implementation checkpoint
+# PyAutoGalaxy feature review #276
+
+Applied, staged and validated; no source commits, pushes or PRs yet. Awaiting live development-only Heart RED override for #276.
+
+22 scripts preserve executable ASTs; 22 regenerated notebooks validate and preserve every code cell; 97 notebook links resolve; 21 approved drafts and images match; all 21 linked from both overviews; recent root walkthrough and new-user guide preserved; full RTD feature-page Sphinx build passes with warnings as errors; navigator, search-memory, size guard and staged whitespace checks pass. Numerical suites were not rerun for documentation-only changes; required CI remains mandatory before merge.
+
+Worktree: /home/jammy/Code/PyAutoLabs/.worktrees/autogalaxy-features-review
+Branch: feature/autogalaxy-features-review
+
+## Exact Heart RED reasons
+- PyAutoNerves: 2 commit(s) behind origin
+- PyAutoArray: 2 commit(s) behind origin
+- PyAutoGalaxy: on branch feature/autogalaxy-features-review (not main)
+- PyAutoGalaxy: 7 uncommitted source change(s)
+- PyAutoLens: 1 uncommitted source change(s)
+- PyAutoLens: 35 commit(s) behind origin
+- PyAutoCTI: 2 commit(s) behind origin
+- install verification FAILED (testpypi; checks F)
+- release validation FAILED (stage integrate)
+
+Next: after task-specific approval, record the override in all four required sinks and commit/push/open PyAutoGalaxy PR first, then workspace PR. Do not merge.
