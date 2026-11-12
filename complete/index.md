@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2231 records across 11 buckets.
+2232 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -144,6 +144,7 @@ markers; everything below GENERATED is rebuilt.
 - [chapter2-continuation](2026/11/chapter2-continuation.md) — All continuation scope merged: Tutorials 5 and 6, optional speed and runnable model_centred prior passing, sum…
 - [close-out-guard](2026/11/close-out-guard.md)
 - [cloud-validation-rehearsal-clock-skew](2026/11/cloud-validation-rehearsal-clock-skew.md)
+- [colab-restart-fix](2026/11/colab-restart-fix.md)
 - [compile-drift-single-sample](2026/11/compile-drift-single-sample.md) — shipped in PyAutoBrain#588 (merge e822697, 2026-11-05), commit ed0782c. Decision: option (a), taken by the age…
 - [config-yaml-parse-cache](2026/11/config-yaml-parse-cache.md)
 - [corner-anesthetic-speed](2026/11/corner-anesthetic-speed.md)

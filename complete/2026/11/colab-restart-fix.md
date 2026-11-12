@@ -1,3 +1,24 @@
+## Outcome
+
+The 2026.11.12.1 Colab bootstrap asked every Colab user to restart after a jax-only
+upgrade (it restarted whenever numpy was loaded, and importing setup_colab loads
+numpy), and Heart's Colab gate (check F) failed. Fixed on main 2026-11-12:
+
+- PyAutoNerves#218 (5aa847f): upgrade only what is below the floor (jax+jaxlib
+  together; numpy only if <2.2; the CUDA plugin with jax); raise
+  ColabRestartRequired only if an UPGRADED module is already loaded. Tests: the
+  live-Colab case and others; a control fails 5/8 on the released code. Local
+  live-Colab simulation (jax 0.11.1 + numpy 2.4.6, real pip): jax upgraded, no
+  restart, the same process then runs jax 0.12.0.1.
+- PyAutoHeart#337 (9afbd3f): check F re-runs the setup cell once in a fresh process
+  after a restart request (exit 4), as a user would; a second request or any other
+  error fails. Tests run the real driver.
+- Merged with Nerves#218's colab-gate leg red (human-approved): that gate audits the
+  RELEASED bootstrap, so check F clears only after the next release.
+- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/218
+
+## Original prompt
+
 # Colab setup asks for a restart when nothing loaded was upgraded (check F red)
 
 Type: bug

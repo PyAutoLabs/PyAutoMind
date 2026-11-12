@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 10 in flight",
-  "updated": "2026-11-12T15:41:02Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 9 in flight",
+  "updated": "2026-11-12T15:49:42Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -47,6 +47,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoFit PyAutoFit#1765 \u2014 Nautilus opt-in CPU checkpoint batching",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1765",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoNerves PyAutoNerves#218 \u2014 Outcome",
+      "url": "https://github.com/PyAutoLabs/PyAutoNerves/pull/218",
       "prompt": null
     },
     {
@@ -120,12 +126,6 @@
       "text": "pick: Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md",
       "prompt": "Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md",
-      "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md"
     }
   ]
 }

@@ -1,16 +1,4 @@
 
-## colab-restart-fix
-- issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/217
-- issued: 2026-11-12
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/colab-restart-fix
-- repos:
-  - PyAutoNerves: feature/colab-restart-fix
-  - PyAutoHeart: feature/colab-restart-fix
-- prompt: active/colab_restart_only_when_upgraded_module_imported.md
-- tier: judge — merge mode: human /prm
-
 ## magnification-maps-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/818
 - issued: 2026-11-02
