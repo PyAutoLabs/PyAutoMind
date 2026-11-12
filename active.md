@@ -21,4 +21,4 @@
 - prompt: active/stellar_dark_review.md
 - tier: judge; review PRs only, no merge
 - coordination: same-session approved separate documentation worktree alongside magnification-maps-wiring
-- next: apply approved text/image, validate and open both review PRs
+- next: await development-only Heart RED override for #638; all prose/assets changes staged and validated; no commit/push/PR yet

@@ -32,3 +32,17 @@ Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/638
 Issued: 2026-11-12
 
 Classifier API-risk/phasing heuristics overestimated this docs-only scope; inspection confirms no API or numerical change. Keep the approved two-PR scope.
+
+## Shipping checkpoint
+Applied approved text/image and generated notebooks/catalogues. Source changes staged, uncommitted.
+Fresh checks passed: syntax; unchanged executable AST and notebook code cells; approved draft parity apart from image path/trailing whitespace; image identity and local links; navigator/banner lint; search-memory check; size guard; whitespace; focused Sphinx build with warnings treated as errors. No numerical/API changes. Full numerical and smoke suites were not rerun for this prose/assets-only delta. The preceding potential-correction PRs passed all 12 CI jobs on the same base; that is prior evidence, not fresh testing.
+
+Heart RED 2026-11-12T16:29:40.460026+00:00:
+- PyAutoLens: on branch feature/stellar-dark-review (not main)
+- PyAutoLens: 2 uncommitted source change(s)
+- install verification FAILED (testpypi; checks F)
+- release validation FAILED (stage integrate)
+
+Await live development-only Heart RED override for #638 before commit/push/open both PRs. No merge.
+Review: /mnt/c/Users/Jammy/Workspace/Science/scratch/stellar_dark_individual_review_20261112/applied/index.html
+Validation and PR body drafts: organs/PyAutoMind/tmp/stellar_dark_review/
