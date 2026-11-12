@@ -3,12 +3,6 @@
 Type: maintenance
 Target: workspaces
 Repos:
-- PyAutoFit
-- autofit_assistant
-- autofit_inference
-- autogalaxy_assistant
-- autolens_inference
-- autocti_assistant
 - autofit_profiling
 - autolens_assistant
 - autolens_profiling
@@ -45,3 +39,10 @@ unset, e.g.
 `if [ -z "${TMPDIR:-}" ] || [ "$TMPDIR" = /tmp ]; then export TMPDIR=".../tmp"; fi`.
 Add a PyAutoFit test for the `/tmp` case. Note: `/tmp` on compute-1 is a 5.3 TB disk
 (5.0 TB free), so this is lower urgency than the `$HOME` caches, which are fixed.
+
+## Update 2026-11-12: phase-A repos and PyAutoFit DONE
+
+`complete/2026/11/hpc-tmpdir-slurm-default.md` (PyAutoFit#1769) shipped the `/tmp`-as-unset
+rule to PyAutoFit and the five phase-A activate.sh files. What remains here is only the four
+claimed repos: copy the `if [ -z "${TMPDIR:-}" ] || [ "$TMPDIR" = /tmp ]` block from
+autofit_assistant/activate.sh. Drop PyAutoFit and the five phase-A repos from `Repos:`.
