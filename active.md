@@ -118,7 +118,7 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/648
 - issued: 2026-11-12
 - session: OpenAI Codex desktop; session ID unavailable
-- status: library-dev
+- status: awaiting-heart-override
 - prompt: active/extra_galaxies_review.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/extra-galaxies-review
 - tier: judge — merge mode: human /prm; do not merge

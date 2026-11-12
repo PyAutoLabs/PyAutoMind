@@ -37,3 +37,25 @@ Adapt only the feature's relative image path. No changes to simulators, runtime,
 Clean separate worktrees from origin/main. Canonical PyAutoLens main is behind with unrelated paper_jax/paper.md edits; canonical workspace main behind with untracked dataset.fits; preserved. User explicitly authorizes coexistence with new-user-guide-visuals (both repos) and start-here-plot-ai (workspace). Their in-progress changes will be checked via patch compatibility. Heart entry YELLOW permits development; shipping gate remains separate.
 
 Brain classification combined library/workspace accepted. Generic large/API-risk phased recommendation is inapplicable to this bounded approved prose/image-only task; no API changes.
+
+## Applied checkpoint — 2026-11-12
+
+Approved v2 Extra Galaxies title/image and approved feature text applied, adapting only the image path. Root tour and RTD add the corresponding overview before Groups. Source changes staged, not committed; no PRs yet.
+
+Validation passes: exact approved prose/image parity, executable AST and notebook code-cell parity, image links, PyAutoHands notebook/catalogue generation, navigator/banner/search-memory/size/whitespace checks, focused Sphinx build -W. Both concurrent tasks combine cleanly in scratch three-way merges of root script and notebook. No changes to their worktrees. No local numerical suite/simulation smoke rerun for prose-only scope; CI remains required.
+
+Review: /mnt/c/Users/Jammy/Workspace/Science/scratch/extra_galaxies_individual_review_20261112/applied/index.html
+Logs/PR bodies: organs/PyAutoMind/tmp/extra_galaxies_review/.
+User steered with $prm during implementation. No PR exists to merge yet; shipping needs its live task-specific Heart override first. No merge performed.
+
+Heart RED at 2026-11-12T18:29:55.724424+00:00:
+- PyAutoNerves: 2 commit(s) behind origin
+- PyAutoArray: 2 commit(s) behind origin
+- PyAutoGalaxy: 4 commit(s) behind origin
+- PyAutoLens: on branch feature/extra-galaxies-review (not main)
+- PyAutoLens: 2 uncommitted source change(s)
+- PyAutoCTI: 2 commit(s) behind origin
+- install verification FAILED (testpypi; checks F)
+- release validation FAILED (stage integrate)
+
+Awaiting development-only Heart RED override for #648 before source commit/push/PR-open.
