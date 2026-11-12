@@ -100,3 +100,16 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/705
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/649
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/275
+
+## installation-docs-polish
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/841
+- issued: 2026-11-12
+- session: OpenAI Codex desktop
+- status: human-review
+- prompt: active/installation_docs_polish.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/installation-docs-polish
+- repos:
+  - PyAutoLens: feature/installation-docs-polish
+  - PyAutoGalaxy: feature/installation-docs-polish
+- scope: approved Installation drafts applied; existing URLs/anchors retained; no PRs authorized
+- tier: judge — merge mode: human /prm
