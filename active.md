@@ -3,7 +3,14 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1769
 - issued: 2026-11-12
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: library-dev
+- status: workspace-shipped, awaiting-merge (human /prm: RED-override merge grant lapsed at turn end)
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1771
+- workspace-pr: https://github.com/PyAutoLabs/autofit_assistant/pull/64
+- workspace-pr: https://github.com/PyAutoLabs/autofit_inference/pull/20
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/47
+- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/66
+- workspace-pr: https://github.com/PyAutoLabs/autocti_assistant/pull/41
+- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1771
 - worktree: ~/Code/PyAutoLabs-wt/hpc-tmpdir-slurm-default
 - repos:
   - PyAutoFit: feature/hpc-tmpdir-slurm-default
@@ -14,7 +21,10 @@
   - autocti_assistant: feature/hpc-tmpdir-slurm-default
 - prompt: active/hpc_tmpdir_slurm_default.md
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary (human: "fix the TMPDIR=/tmp gap now too", 2026-11-12)
-- heart-ack: YELLOW (PyAutoArray open PR 8d old) acknowledged by the human 2026-11-12 for this HPC fix line
+- heart-red-override:
+  - authorized: 2026-11-12, live human answer "Override, ship + merge" for PyAutoFit#1769 (merge grant lapsed when the turn ended before CI; human /prm required)
+  - reasons: "PyAutoNerves: 2 commit(s) behind origin"; "PyAutoFit: 2 commit(s) behind origin"; "PyAutoLens: on branch feature/mge-feature-review (not main)"; "PyAutoLens: 2 uncommitted source change(s)"; "workspace validation not passing (2 failed, cloud#43034177136: autogalaxy_test scripts/misc/zero_contour_compat_jax.py, autolens_test scripts/misc/critical_curves_zero_contour_jit_grad.py)"; "manifest drift: workspace checkouts (manifest ↔ disk) — 1 mismatch(es) vs PyAutoMind/repos.yaml"; "PyAutoArray: open PR 8d old"; "release validation incomplete: no rehearsal for current source"
+  - gates: full PyAutoFit suite 4288 passed/2 skipped/1 xfailed; bash -n + env -i three-case source test ×5
 
 ## jax-floor-0-12
 - issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/215
