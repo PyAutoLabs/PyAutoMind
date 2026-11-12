@@ -101,29 +101,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/649
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/275
 
-## installation-docs-polish
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/841
-- issued: 2026-11-12
-- session: OpenAI Codex desktop
-- status: awaiting-merge
-- prompt: active/installation_docs_polish.md
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/installation-docs-polish
-- repos:
-  - PyAutoLens: feature/installation-docs-polish
-  - PyAutoGalaxy: feature/installation-docs-polish
-- scope: approved Installation drafts applied; existing URLs/anchors retained; two PRs open; no merge authorized
-- tier: judge — merge mode: human /prm
-
-- heart-red-override:
-  authorization: "Yes, override Heart RED for #841 and go ahead with the commits, pushes and both Installation PRs for PyAutoLens and PyAutoGalaxy. Don't merge yet."
-  reasons: ["PyAutoNerves: 2 commit(s) behind origin", "PyAutoArray: 2 commit(s) behind origin", "PyAutoGalaxy: 4 commit(s) behind origin", "PyAutoLens: on branch feature/extra-galaxies-review (not main)", "PyAutoLens: 2 uncommitted source change(s)", "PyAutoCTI: 2 commit(s) behind origin", "install verification FAILED (testpypi; checks F)", "release validation FAILED (stage integrate)"]
-  gates: Focused Sphinx builds with warnings as errors passed; all old rendered anchors retained; 420 local links/fragments passed with no duplicate IDs; git diff whitespace checks passed; human review approved. Documentation only; no runtime changes. Fresh multi-platform installs and numerical suites not run locally.
-
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/842
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/842
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/706
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/706
-
 ## premise-lane-checks
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/608
 - issued: 2026-11-12
