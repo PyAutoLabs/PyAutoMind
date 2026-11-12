@@ -477,3 +477,8 @@ Final report head e81caa89cafc2b9c81efe99b350ea34f58df3004 and CI43222506205 are
 Live human: “Approve amendment and one run”. Approved saved NODE_PIN_AMENDMENT.md scope: original node admission, durable pre-validation candidate and metadata receipts, focused tests, one fresh17-child diagnostic after tests/CI/fresh restore. Same120s/4GiB per child,1800s total, exclusive ral4boundcores/8GiB/35min; exact parity unchanged. First failure stops; preserve all data, outside Pulse, human merge. New allowance UNUSED.
 
 Reference-node implementationd3a36cf:300tests/lint/format/shell/catalogue/zero-science worker-descriptor smoke pass, author review. CI43227695075 green. Heart12:57:11Z YELLOW: "PyAutoArray: open PR 9d old"; "release validation stale: source moved since rehearsal (PyAutoLens)". Artifact14/fresh restore14 pending, new one-job allowance UNUSED.
+
+
+### Fresh reference-node job415180 submitted
+
+One submission via hpc/sync at d3a36cf; all gates passed:300tests/zero-science smoke/CI43227695075, runtime4.18s/fresh restore51.19s/cleanup. Exact node euclid-ral-compute-1 requested; output training-diagnostics-ral-02 and separate environment, old claim01 preserved. New allowance CONSUMED; no retry/requeue/replacement. Monitoring owned job; outside Pulse, human merge.
