@@ -3311,9 +3311,20 @@ def cmd_close(args) -> int:
     print(f"  index:    {INDEX_MD.relative_to(root)} — regenerated")
     print(f"  shadow:   {row}" if row else f"  shadow:   {why}")
 
+    # Every path this close-out writes, in the order above — the explicit list
+    # `prompt_sync_push` needs (it commits only the paths it is given).
+    log = Path(args.log) if getattr(args, "log", None) else AUTONOMY_LOG
+    touched = [
+        dest.relative_to(root).as_posix(),
+        rel,
+        INDEX_MD.relative_to(root).as_posix(),
+        *registries,
+        *([_rel(root, log)] if row is not None else []),
+    ]
+
     if not args.apply:
         print("  (dry run; nothing written — pass --apply)")
-        _close_tail(root, args, rel)
+        _close_tail(root, args, rel, touched)
         return 0
 
     rec = _CloseArgs(
@@ -3349,7 +3360,7 @@ def cmd_close(args) -> int:
         )
         cmd_shadow_row(sh)
 
-    _close_tail(root, args, rel)
+    _close_tail(root, args, rel, touched)
     return 0
 
 
@@ -3360,8 +3371,14 @@ class _CloseArgs:
         self.__dict__.update(kw)
 
 
-def _close_tail(root: Path, args, rel: str) -> None:
-    """What `close` will not do for you: repoint the references, render the page."""
+# What `pyauto-brain intake --apply dashboard` writes (the render rides the
+# close-out commit).
+DASHBOARD_PAGES = ("dashboard.md", "dashboard.html", "state.json")
+
+
+def _close_tail(root: Path, args, rel: str, touched: "list[str]") -> None:
+    """What `close` will not do for you: repoint the references, render the page,
+    commit exactly the paths it touched."""
     refs = close_references(root, args.slug, rel)
     if refs:
         print(
@@ -3378,8 +3395,13 @@ def _close_tail(root: Path, args, rel: str) -> None:
         "and `main` heals the render (dashboard_refresh.yml)."
     )
     print(
-        "  Nothing is staged: `git add -A` what you just changed, then "
-        "`lifecycle.py check --paths …` before you push."
+        "\ncommit: nothing is staged. Run `lifecycle.py check --paths …`, then "
+        "commit exactly these paths (the render's three files included), plus "
+        "any file the sweep changed:"
+    )
+    print(
+        f'  prompt_sync_push "complete: {args.slug}" '
+        + " ".join(touched + list(DASHBOARD_PAGES))
     )
 
 

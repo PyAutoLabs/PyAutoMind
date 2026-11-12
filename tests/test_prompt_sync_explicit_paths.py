@@ -241,3 +241,22 @@ def test_new_prompts_commits_only_the_new_prompt_files(tmp_path):
     assert _committed_paths(repo) == {"draft/a new idea.md"}
     assert _git(remote, "rev-parse", "main") == _git(repo, "rev-parse", "HEAD")
     assert _git(repo, "diff", "--cached", "--name-only") == "planned.md"
+
+
+def test_a_file_staged_just_before_the_commit_does_not_ride_along(tmp_path):
+    """A concurrent writer can stage between the final index check and the
+    commit. Simulated by shadowing `git` so the `commit` call first stages a
+    bystander: the explicit commit pathspec must leave it staged, uncommitted."""
+    repo, remote = _repo_with_remote(tmp_path)
+    (repo / "active.md").write_text("# Active\n\n## a-task\n")
+    racer = (
+        'git() { if [ "$3" = commit ]; then '
+        'printf "racing edit\\n" >> "$2/planned.md"; '
+        'command git -C "$2" add planned.md; fi; command git "$@"; }; '
+    )
+
+    res = _run(repo, racer + 'prompt_sync_push "prompt: a subject" active.md')
+
+    assert res.returncode == 0, res.stderr
+    assert _committed_paths(repo) == {"active.md"}
+    assert _git(repo, "diff", "--cached", "--name-only") == "planned.md"

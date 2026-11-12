@@ -364,3 +364,92 @@ def test_an_explicit_prompt_takes_a_path_or_a_bare_filename(tmp_path,
     assert lifecycle.close_prompt(
         root, "x", "sprocket_calibration.md")[0] == root / rel
     assert lifecycle.close_prompt(root, "x", "nothing_here.md")[0] is None
+
+
+# --------------------------------------------------------------------------- #
+# the commit line — exactly the paths close touched
+# --------------------------------------------------------------------------- #
+def _commit_line(out: str) -> str:
+    lines = [ln.strip() for ln in out.splitlines()
+             if ln.strip().startswith("prompt_sync_push ")]
+    assert len(lines) == 1, out
+    return lines[0]
+
+
+def test_the_commit_line_names_every_path_close_touches(tmp_path, monkeypatch,
+                                                        capsys):
+    """`prompt_sync_push` commits only the paths it is given, so the tail hands
+    over the exact list: record, prompt, index, every registry pruned, the
+    shadow row's log, and the three files the dashboard render writes."""
+    root = _mind(tmp_path)
+    _at(monkeypatch, root)
+    assert lifecycle.cmd_close(_args(
+        root, apply=True, tier="glance", gate="tests 3 pass",
+        action="merged-unchanged", date="2026-10-03")) == 0
+    line = _commit_line(capsys.readouterr().out)
+    assert "git add -A" not in line
+    assert line.split()[3:] == [
+        "complete/2026/10/sprocket-calibration.md",
+        "active/sprocket_calibration.md", "complete/index.md",
+        "active.md", "parked.md", "autonomy_log.md",
+        "dashboard.md", "dashboard.html", "state.json"]
+
+
+def test_the_commit_line_names_a_draft_prompt_and_skips_an_absent_row(
+        tmp_path, monkeypatch, capsys):
+    root = _mind(tmp_path, draft=True)
+    _at(monkeypatch, root)
+    assert lifecycle.cmd_close(_args(root, apply=True)) == 0
+    line = _commit_line(capsys.readouterr().out)
+    assert "draft/feature/flywheel/sprocket_calibration.md" in line.split()
+    assert "autonomy_log.md" not in line.split()
+
+
+def test_the_glance_close_out_commits_cleanly_through_prompt_sync_push(
+        tmp_path, monkeypatch, capsys):
+    """End to end in a real git repo with a bare remote: `close --apply` (tier
+    glance), the dashboard render's three files, then the printed
+    `prompt_sync_push` line commits everything and leaves the tree clean."""
+    import subprocess
+
+    def git(*a):
+        return subprocess.run(["git", "-C", str(root), *a], capture_output=True,
+                              text=True, check=True).stdout.strip()
+
+    remote = tmp_path / "remote.git"
+    subprocess.run(["git", "init", "--bare", "-b", "main", str(remote)],
+                   capture_output=True, check=True)
+    (tmp_path / "mind").mkdir()
+    root = _mind(tmp_path / "mind")
+    for page in ("dashboard.md", "dashboard.html"):
+        (root / page).write_text("old render\n")
+    (root / "state.json").write_text('{"cards": []}\n')
+    subprocess.run(["git", "init", "-b", "main", str(root)],
+                   capture_output=True, check=True)
+    git("config", "user.email", "test@example.invalid")
+    git("config", "user.name", "Test")
+    git("add", "-A")
+    git("commit", "-m", "seed")
+    git("remote", "add", "origin", str(remote))
+    git("push", "-u", "origin", "main")
+
+    _at(monkeypatch, root)
+    assert lifecycle.cmd_close(_args(
+        root, apply=True, tier="glance", gate="tests 3 pass",
+        action="merged-unchanged", date="2026-10-03")) == 0
+    line = _commit_line(capsys.readouterr().out)
+    # stand-in for `pyauto-brain intake --apply dashboard`
+    for page in ("dashboard.md", "dashboard.html"):
+        (root / page).write_text("new render\n")
+    (root / "state.json").write_text('{"cards": [1]}\n')
+
+    sync = Path(lifecycle.__file__).resolve().parent / "prompt_sync.sh"
+    res = subprocess.run(
+        ["bash", "-c", f'export PROMPT_REPO="{root}"; source "{sync}"; {line}'],
+        capture_output=True, text=True)
+
+    assert res.returncode == 0, res.stderr
+    assert git("status", "--porcelain") == ""
+    assert git("rev-parse", "HEAD") == subprocess.run(
+        ["git", "-C", str(remote), "rev-parse", "main"],
+        capture_output=True, text=True, check=True).stdout.strip()

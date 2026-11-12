@@ -244,13 +244,17 @@ prompt_sync_push() {
 
   # Belt and braces against a concurrent writer between the check and the
   # commit: the index must hold nothing outside the paths (both rename sides).
+  local -a staged=()
   while IFS= read -r -d '' f; do
     if ! _prompt_sync_in_scope "$f" "${paths[@]}"; then
       _prompt_sync_refuse "'$f' was staged outside the given paths"
       return 1
     fi
+    staged+=("$f")
   done < <(git -C "$PROMPT_REPO" diff --cached --name-only --no-renames -z)
 
-  git -C "$PROMPT_REPO" commit -m "$subject" || return 1
+  # Commit with an explicit pathspec (`--only`), so anything staged after the
+  # check above stays staged and never rides along in this commit.
+  git -C "$PROMPT_REPO" commit -m "$subject" -- "${staged[@]}" || return 1
   _prompt_sync_push_current
 }
