@@ -1,3 +1,23 @@
+# Sensitivity mapping introduction and illustration
+
+Merged 2026-11-12 on explicit human instruction after all 12 exact-head CI jobs passed and Heart freeze returned not frozen. No release performed.
+
+- Workspace PR: https://github.com/PyAutoLabs/autolens_workspace/pull/635
+- Workspace merge: de38eb208746aebcf861c5174773fd9fb2f0ac83
+- RTD PR: https://github.com/PyAutoLabs/PyAutoLens/pull/828
+- RTD merge: b5768d53bbfaf2723e9cd70380655450ffb90bde
+- Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/634 (closed)
+
+Applied approved scientific-use-case opening, early population-study context and pixelized-source link; all 15 teaching blocks retained. Corrected the four-position fixed injected-mass grid description and distinguished injection values from recovery-fit priors. Added approved conceptual sensitivity illustration to feature, distinct main-tour section and RTD. Notebooks/catalogues regenerated. Executable code and APIs unchanged.
+
+Local syntax, executable AST/notebook code-cell parity, approved text/image parity, image paths, navigation, size and focused Sphinx checks passed. All 8 workspace and 4 PyAutoLens exact-head CI jobs passed.
+
+Human review: /mnt/c/Users/Jammy/Workspace/Science/scratch/sensitivity_mapping_individual_review_20261112/applied/index.html
+
+Continue individual feature reviews with scientific use cases up front, striking illustrative images and preserved teaching detail. No next feature selected.
+
+## Original prompt
+
 # Apply approved sensitivity mapping introduction and illustration
 Repos: @autolens_workspace @PyAutoLens
 Type: docs
