@@ -22,6 +22,17 @@
 - next: validate JWST PSF/noise and export calibrated ALMA visibilities, then joint gradient check and bounded pilots
 - tier: judge — merge mode: human /prm
 
+## website-lensing-intro
+- issue: https://github.com/Jammy2211/Jammy2211.github.io/issues/1
+- issued: 2026-11-12
+- session: OpenAI Codex desktop
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/scratch/website-lensing-intro
+- repos:
+  - Jammy2211.github.io: feature/website-lensing-intro
+- prompt: active/website_lensing_intro.md
+- tier: judge — merge mode: human /prm
+- scope: personal static website, outside organism registry; no library/workspace runtime changes
 
 ## three-autos-public-framing
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/832
