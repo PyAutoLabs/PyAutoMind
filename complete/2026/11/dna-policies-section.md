@@ -1,3 +1,30 @@
+# DNA dashboard: a Policies section for version decisions
+
+PyAutoDNA#6, merged as PyAutoLabs/PyAutoDNA#7 (44e6d789) on 2026-11-12. Tier glance: tiered auto-merge after the
+human acknowledged Heart YELLOW; Witness checked on the exact head render before merge and on the live board after.
+Follow-up of jax-version-policy (PyAutoNerves#213).
+
+## What shipped
+- Decision front matter (`dna/policy_docs.py`): policy, status, packages, declared_in, recommended, review_date,
+  findings, links; `decisions/jax-cpu-policy-2026-11.md` is the first.
+- Policies section first on the board: declared range from the newest dependency audit vs recommended, derived
+  status (adopted / recommended, not yet declared / not audited), versions the declared range allows that hang with
+  no flag (card warning + yellow state item), findings, links.
+- Safe built-in markdown renderer for decision pages (replaces raw `<pre>`).
+- Hang matrix as pass/hang counts per jax x XLA flag x cores per environment + per-call cost on the newest version.
+- Fresh dependency audit of the five library mains (2026-11-11) in inventories/public.json. 32 tests.
+
+## State on merge
+Live board: "JAX CPU policy — recommended, not yet declared"; PyAutoNerves declares `!=0.10.*,!=0.11.0,<0.12.0,>=0.7.0`
+vs recommended `<0.13,>=0.12.0`; 0.11.2 flagged. Becomes `adopted` after jax-floor-0-12 (Nerves#215) ships and a
+fresh `dna audit` is exported.
+
+## Not done (follow-up)
+RAL shared-environment observation: `dna collect ral-login --probe-backend` on the login node stalled in NFS D-state
+for 24+ min and died without a receipt. Filed: draft/maintenance/pyautodna/ral_shared_environment_observation.md.
+
+## Original prompt
+
 # DNA dashboard: a Policies section that shows version choices and the research behind them
 
 Type: feature

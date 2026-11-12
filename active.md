@@ -1,16 +1,4 @@
 
-## dna-policies-section
-- issue: https://github.com/PyAutoLabs/PyAutoDNA/issues/6
-- issued: 2026-11-11
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/dna-policies-section
-- repos:
-  - PyAutoDNA: feature/dna-policies-section
-- prompt: active/dashboard_policies_section_for_version_decisions.md
-- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
-- origin: follow-up of jax-version-policy (PyAutoNerves#213); coordinates with jax-floor-0-12 (Nerves#215) via a fresh `dna audit`
-
 ## jax-floor-0-12
 - issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/215
 - issued: 2026-11-11
