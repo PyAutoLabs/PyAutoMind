@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 9 in flight",
-  "updated": "2026-11-12T14:08:49Z",
+  "updated": "2026-11-12T14:14:34Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -24,12 +24,6 @@
       "text": "Nautilus opt-in CPU checkpoint batching \u2014 awaiting-merge (bounded experiment complete; negative performance result; human review)",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1765",
       "prompt": "Use the start-dev skill. active/nautilus_cpu_checkpoint_batching.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Nautilus experimental spawn-based training pool \u2014 awaiting-merge (10D diagnostic complete; no default change; human review/merge)",
-      "url": "https://github.com/PyAutoLabs/autofit_profiling/pull/17",
-      "prompt": "Use the start-dev skill. active/nautilus_spawn_training_pool.md"
     },
     {
       "severity": "yellow",
@@ -126,6 +120,12 @@
       "text": "pick: Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md",
       "prompt": "Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md",
+      "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md"
     }
   ]
 }
