@@ -355,7 +355,7 @@ All approved implementation and compute finished. PR17 and issue16 remain open p
 
 # 10D training-cost diagnosis — proposed implementation and RAL plan
 
-Status: approved by the live human on 2026-11-12: “Approve bounded diagnostic study”. Implementation and one gated RAL job authorized despite Heart RED; allowance unused. This is a continuation of nautilus-spawn-training-pool, issue autofit_profiling#16 / PR#17. Outside Pulse. Tier: judge — merge mode: human /prm.
+Status: approved by the live human on 2026-11-12: “Approve bounded diagnostic study”. Implementation and one gated RAL job authorized despite Heart RED; allowance consumed by job415179; see terminal result below. This is a continuation of nautilus-spawn-training-pool, issue autofit_profiling#16 / PR#17. Outside Pulse. Tier: judge — merge mode: human /prm.
 
 ## User request
 
@@ -446,3 +446,27 @@ Planning Heart RED reasons were “PyAutoLens: on branch feature/pixelization-fe
 ### Diagnostic submission415179
 
 Submitted exactly once through hpc/sync after CI43220440830 green and fresh artifact13 restore65.78s with zero science and cleanup. Producer0958bc28705541f6ff07fa4ad79bbfaf94ccdaaf; new training-diagnostics-ral-01 claim and separate environment. Approval now CONSUMED; no retry/requeue/replacement. Monitoring job415179 to completion or first failure; retain all evidence; outside Pulse, human merge.
+
+
+### Diagnostic415179 terminal result — no new compute authorized
+
+FAILED1:0 in70s on euclid-ral-compute-10-2. Bootstrap25.80s and normal capture fit/checkpoint reopen completed; historical posterior hash failed. Scientific supervisor42.645s, child36.976s, group peak241.81MiB, no live descendants and cache cleanup complete. All12 replay/four traced cases unrun. Raw16,627,876bytes retained remotely/locally/human scratch; report and compact inspection committed to diagnostics_10d. No new timing conclusion.
+
+Read-only checkpoint inspection forbade run/train/likelihood (all zero) and preserved bytes. Old reconstructed posterior/models exactly match retainedreference. Both fits23500calls/12shells/all44 network iteration counts identical; initial cube points equal but initial likelihood differences~1e-14, later coordinate max1.56e-13. Different node versus reference euclid-ral-compute-1 makes cross-node numerics the leading hypothesis, not proven causation. Sampling settings, complete inventory and pinned sources match.
+
+Producer0958bc2/CI43220440830 passed. Author review only. Fresh authoritative readiness remains12:40:44Z YELLOW with no RED; current scoped approval recorded. One-job grant CONSUMED; no replacement submitted. Proposed next amendment below requires explicit approval; outside Pulse, human merge.
+
+# Proposed reference-node amendment — awaiting approval
+
+Issue16 / draft PR17, existing feature/nautilus-spawn-training-pool worktree. Continue outside Pulse; merge remains human. The previous single-job allowance was consumed by job415179. This plan is not permission to submit another job.
+
+1. Update only the diagnostic protocol/driver, diagnostic wrapper and focused tests. Request `--nodelist=euclid-ral-compute-1`, the actual reference node, in addition to the existing exclusive ral allocation. Validate that exact hostname before launching any child and on subsequent admissions. No fallback node, alternate partition, extra allocation or scheduler manipulation; if unavailable, the job waits normally.
+2. Record candidate result, ordered model digests and completed corpus manifest before historical-reference comparison, explicitly marked unverified. Preserve parent CPU identity and full native-library/thread metadata before the fit starts. The failed capture remains failed; no replay can consume a rejected or incomplete capture. Keep all old raw outputs and reports unchanged.
+3. Add negative tests for wrong-node admission, persistence on historical-parity failure and refusal to replay an unverified capture. Re-run existing tests, lint/format/shell/catalogue checks and zero-science structural smoke; commit/push and require exact-head CI green. Refresh authoritative Heart readiness under the scoped development override. Build a fresh checksummed runtime and require a fresh zero-science restore/cleanup pass.
+4. Submit exactly one fresh17-child diagnostic, with a new training-diagnostics-ral-02 output claim and separate environment; preserve attempt01. Same one capture,12 replays in PSUB/BUSP/UPBS order, four traced fits in serial/pool/pool/serial order. Same reference, scientific settings and exact hashes; do not replace reference values or introduce tolerances. No reuse of the rejected corpus to bypass capture.
+5. Limits remain120s/4096MiB per child group,1800s total, at most17children, one exclusive ral node/four bound physical cores/8GiB/35minutes;180s bootstrap and120s cleanup reserve. Whole-node reservation on the reference node includes252 scheduler CPUs; only four are bound to the scientific step. Stop on first failure; retain everything; no retry/requeue/replacement or release. Cleanup only the newly owned temporary runtime cache.
+6. Report replay/phase results if exact gates pass, otherwise retain and report the failure. Node pinning addresses a concrete admission omission but does not prove or guarantee cross-run bitwise reproducibility. No new performance claim until measurements complete.
+
+Approval requested: this narrow diagnostic correction plus one fresh job. Workspace AGENTS.md requires an approved plan before source/job-script edits; the approved diagnostic plan's stop-on-first-failure and one-job limits require a new compute decision. The existing PR remains unmerged.
+
+Final report head e81caa89cafc2b9c81efe99b350ea34f58df3004 and CI43222506205 are green. PR17 remains draft/open/unmerged. Proposed reference-node amendment remains unapproved; no more compute authorized.
