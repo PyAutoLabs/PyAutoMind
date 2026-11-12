@@ -234,3 +234,15 @@
   - euclid_strong_lens_modeling_pipeline: feature/simulator-roundoff-control
 - prompt: active/simulator_round_off_control_test_obsolete.md
 - tier: judge — merge mode: human /prm (human asked /bug then /prm 2026-11-12)
+
+## mge-feature-review
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/628
+- issued: 2026-11-12
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/mge-feature-review
+- repos:
+  - autolens_workspace: feature/mge-feature-review
+  - PyAutoLens: feature/mge-feature-review
+- prompt: active/mge_feature_review.md
+- tier: judge — merge mode: human /prm; user explicitly requests no merge
+- coordination: human "Allow separate documentation worktree" alongside magnification-maps-wiring; MGE overview text and image assets only in PyAutoLens.
