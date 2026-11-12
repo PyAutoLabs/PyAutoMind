@@ -305,3 +305,30 @@ Correction47857ec3995d6c924d2c8acb529d06585bd069c8 freezes both observed mount i
 Fresh artifact10 restore passed in34.6s (35.9s including cleanup), no science, cache removed. Exact producer47857ec and eight frozen inputs staged; old environment retained as ral-environment-attempt01.sh.240 tests and exact-head CI43202895306 green. Submitted exactly once through hpc/sync: job415136. Corrected authorization now USED; no replacement/retry/requeue. Initial live compute bootstrap passed23.92s, runtime validation and preflight passed, scientific experiment started. Original job415132 and diagnostic415135 retained. Outside Pulse; merge human.
 
 Fresh authoritative Heart 2026-11-12T10:38:39.599379+00:00 RED: "PyAutoNerves: 2 commit(s) behind origin"; "PyAutoFit: 2 commit(s) behind origin"; "PyAutoLens: on branch feature/mge-feature-review (not main)"; "PyAutoLens: 2 uncommitted source change(s)". Existing experiment-specific development override applies; source/runtime/CI gates passed, no release or merge authority. Full receipt retained in .session/readiness-corrected-presubmit.json.
+
+
+## Corrected RAL outcome — job415136
+
+Job415136 FAILED1:0 after167s; compute bootstrap23.92s passed, cleanup complete. Pilot140.74s, six correctness children passed (exact four-network parity and both crash/resume checks), first serial timing child failed post-fit checkpoint verification, eleven cases unrun, zero valid timing pairs. Both recovery results exactly match control:16,300 likelihood evaluations/ESS10020.771588733165. All child descendants reaped; peak sampled group RSS557.80MiB; max child25.71s. All raw evidence20,933,974bytes retained locally and remotely, plus original415132 and diagnostic415135. RAL setup/storage/runtime/allocation are now witnessed working; no speedup claim.
+
+Failure is in harness performance() line374: reopened Sampler uses identity prior lambda x:x, whereas the live fit uses Gaussian priors. Native posterior() transforms unit coordinates with its current prior, so the exact hash compares different coordinates. Read-only checkpoint/samples.csv inspection: transformed coordinates match within1.3322676295501878e-15, likelihoods exactly equal, checkpoint hash65eaf581048807ea20bc198e1888b518f6b12a09aeb0cde429474fd5229508df unchanged. No sampling/training/likelihood calls. This supports the prior mismatch diagnosis, not retroactive exact live-state parity. No source correction or new job after failure.
+
+Corrected pilot authorization is consumed. Task waits for human decision on the bounded plan below. Outside Pulse; PR17 remains draft/open and merge human.
+
+# Checkpoint prior verification correction — proposed
+
+Status: awaiting explicit approval for the source correction and one fresh pilot. Outside Pulse; merge human. RAL job415136 consumed the corrected-pilot allowance; no extra job is authorized.
+
+RAL setup is now validated. Job415136 passed actual storage/runtime/allocation checks and six correctness children, then stopped at the first serial timing case because the verification harness reopened its Gaussian-prior checkpoint with an identity prior. It therefore hashed unit-cube points against physical points. Offline inspection of retained checkpoint/samples.csv found matching shapes, identical likelihoods, and Gaussian-transformed coordinates matching within1.33e-15; no sampling/training/likelihood calls, checkpoint bytes unchanged. This diagnoses the coordinate mismatch, not an exact live-state parity pass.
+
+## Concrete correction and validation
+
+1. In training_pool_benchmark.py performance(), construct the read-only reopened Sampler using the captured original sampler.prior instead of lambda x: x. Preserve the original constructor flags/configuration. Keep the likelihood callback forbidden and never call run(). Do not change native Nautilus, installed libraries, random seeds, sampling, checkpoint writes or tolerances.
+2. Add a non-identity-prior regression that fails under the old reopen behavior and verifies all posterior arrays and state, zero likelihood/run calls and unchanged checkpoint bytes. The existing exact byte-hash gate stays strict; the offline1.33e-15 observation is not permission to weaken it.
+3. Before compute submission, validate against the retained failed-case checkpoint without sampling/training. Check prior/coordinate semantics and compare raw stored posterior arrays/weights/likelihoods. The original live object was not retained, so no offline check may claim retroactive live-object exact parity. If another difference emerges, diagnose it before requesting/using scientific compute.
+4. Keep source/evidence in existing issue16/PR17, retain all previous attempts. Use an explicit fresh attempt03 output claim with duplicate refusal; rebuild frozen artifact at the new clean producer. Require tests, lint, shell checks, exact-head CI, Heart under existing scoped override, frozen runtime/storage checks and a fresh restore before submission.
+5. Submit exactly one new exclusive ral job: four bound physical cores,8GiB,35min;180s bootstrap,120s cleanup margin;18children maximum,120s/4096MiB each,1800s scientific total. Six correctness cases precede twelve timings. Same D5/D10 seeds, four native networks, two spawn workers versus serial, same retained output filesystem. Stop on first failure; no retry/requeue/replacement. Retain raw data/accounting, outside Pulse, merge human.
+
+## Why approval is needed
+
+The approved RAL setup repair plan authorizes “exactly one corrected scientific pilot” and says “Stop on first failure; no further scientific job, retry/requeue or replacement.” Job415136 used that allowance. This new prior-verification correction and fresh job extend that plan.

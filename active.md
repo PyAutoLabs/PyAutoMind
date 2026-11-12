@@ -206,7 +206,7 @@
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/16
 - issued: 2026-11-10
 - session: OpenAI Codex desktop (session ID unavailable)
-- status: workspace-dev (corrected RAL job415136 running; approval consumed)
+- status: workspace-dev (RAL setup verified; job415136 halted; prior-verification correction awaits approval)
 - prompt: active/nautilus_spawn_training_pool.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-spawn-training-pool
 - repos:
@@ -254,3 +254,5 @@
 - RAL-submission-2026-11-12: recovered current live user-owned SSH agent by matching prior public-key fingerprints, no key/config edits. Bounded NFS checks and final staging passed; retained producer clean atc243ef6, exact-head CI43015855847 green. Submitted ONCE via hpc/sync: job415132. Original authorization USED; no automatic replacement/requeue. Monitor this job, retain raw results; outside Pulse/human merge. Latest recorded Heart2026-11-11T13:01:05.642178+00:00 YELLOW, "PyAutoArray: open PR 8d old"; existing development authorization retained.
 
 - RAL-corrected-submission: job415136 submitted once at47857ec after240 tests/CI43202895306 and fresh restore34.6s passed. Compute bootstrap23.92s/preflight passed; experiment running. Corrected approval USED; no replacement, outside Pulse/human merge. Heart2026-11-12T10:38:39.599379+00:00 RED under existing scoped override: "PyAutoNerves: 2 commit(s) behind origin"; "PyAutoFit: 2 commit(s) behind origin"; "PyAutoLens: on branch feature/mge-feature-review (not main)"; "PyAutoLens: 2 uncommitted source change(s)".
+
+- RAL-corrected-outcome: job415136 FAILED1:0/167s; bootstrap23.92s and all six correctness cases passed, first serial timing failed because checkpoint reopen uses identity instead of Gaussian prior.11unrun/0timing pairs; cleanup complete/all children reaped,20.9MB retained. Offline saved-data inspection confirms coordinate mismatch, no new sampling. Approved allowance consumed; concrete correction plus one fresh pilot proposed in canonical task, not executed. Outside Pulse/human merge.
