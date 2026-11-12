@@ -72,3 +72,16 @@
   - Jammy2211.github.io: feature/homepage-flow-polish
 - prompt: active/homepage_flow_polish.md
 - tier: judge — merge mode: human /prm
+
+## watcher-numbers-and-push
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/610
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/611
+- issued: 2026-11-12
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/watcher-numbers-and-push
+- prompt: active/shift_numbers_tokens_counters_row.md
+- epic: autonomous-orchestrators (programme M1.5 #610 + M1.6 #611, phase 8; one branch)
+- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
+- repos:
+  - PyAutoBrain: feature/watcher-numbers-and-push

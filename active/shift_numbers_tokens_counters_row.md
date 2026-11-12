@@ -7,8 +7,9 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: issued
 Filed: 2026-11-12
+Issued: 2026-11-12
 Epic: autonomous-orchestrators
 Consequence: glance
 Witness: (1) `pytest tests/test_orchestrator_tokens.py`: a live fake worker's usage is in counters["tokens"] on the tick it is read, before any `.done`; a close-out session's usage is added; a transcript repeating one message id counts it once; an unreadable usage makes the next spawn refuse "token usage unavailable", never adds 0. (2) token-budget 100 with a 60-token spawn reservation spawns one worker on tick one and refuses the second. (3) `pytest tests/test_digest_counters.py`: a worker read as `killed` at first tick gives workers-crashed 1 and a line `spawned/crashed`; a PR a human merged before review-at counts in `merges`; a `.done` written after the last tick appears in the digest. (4) after finish_shift, `batches/pilot/pilot.jsonl` holds exactly one line for the slot; a late arrival sets `amended` on that line, never a second line. (5) `pytest tests/` passes offline.
