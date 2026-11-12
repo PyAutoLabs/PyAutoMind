@@ -21,3 +21,11 @@ Tier: judge — merge mode: human /prm
 Coordination: live user approved separate documentation worktree alongside workspace-readme-images (#658), preserving their edits and checking compatibility.
 Preview: /mnt/c/Users/Jammy/Workspace/Science/scratch/feature_housekeeping_review_20261112/
 Branch: feature/feature-housekeeping
+
+## Applied checkpoint
+PASS: 6 Python ASTs and notebook code-cell sets unchanged; new ellipse is prose-only; schemas valid; 14 notebook links resolve; generated Markdown prose synchronized with outputs preserved; #658 edit paths disjoint; whitespace clean.
+
+Both Sphinx feature-page builds pass with warnings as errors. Navigator, search-memory and size checks pass. Numeric fits were not rerun: executable behavior is unchanged. Full executed-Markdown regeneration failed because the Jupyter kernel lacks dill; only changed prose was synchronized into existing rendered pages, preserving all outputs and figures. No images modified.
+
+Review bundle: /mnt/c/Users/Jammy/Workspace/Science/scratch/feature_housekeeping_review_20261112/applied/index.html
+Heart RED: awaiting live task-specific override for #659 before source commit/push/PR.
