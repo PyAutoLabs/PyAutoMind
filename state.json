@@ -4,12 +4,12 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 12 in flight",
-  "updated": "2026-11-12T10:00:42Z",
+  "updated": "2026-11-12T10:03:16Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
       "severity": "yellow",
-      "text": "Keep HPC temp files and caches off $HOME and the worker's /tmp \u2014 library-shipped, workspace-pending",
+      "text": "Keep HPC temp files and caches off $HOME and the worker's /tmp \u2014 workspace-shipped, awaiting-merge (glance auto-merge on green; library first)",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1768",
       "prompt": "Use the start-dev skill. active/hpc_keep_temp_and_cache_off_home.md"
     },
