@@ -1,3 +1,48 @@
+Programme tasks **M1.5** (PyAutoBrain#610) and **M1.6** (PyAutoBrain#611), epic `autonomous-orchestrators` phase 8, in one branch. Shipped as PyAutoMind#560 (204b8d94c) and PyAutoBrain#612 (f80cba7da), merged 2026-11-12. These were the last two tasks of M1.
+
+**M1.5.** The findings were re-checked on Brain 68e263a: CODE-4, ORCH-7 and ORCH-8 partly hold, FLOW-6 and SIG-5 hold.
+- Tokens:
+  - Per-session usage is read every tick and replaced, never added.
+  - Usage is deduplicated by message id. Cache-read and subagent transcripts are reported separately.
+  - Unmeasured usage is `None` (refuses spawning) and is written `null`. After 3 unreadable reads the session's reservation counts instead.
+  - A spawn reservation makes the cap bind on tick 1.
+- The digest:
+  - Counters come from per-worker exits and GitHub's merged state, read after a final reap.
+  - New `### Workers` and `### Refusals` sections.
+- One `batches/pilot/pilot.jsonl` line per shift, through one-Mind-writer upserts, with `pilot.md` rendered from it.
+  - A late arrival amends the line and posts one correction comment.
+  - A failed post is retried, at most 3 attempts, never after a timeout.
+
+**M1.6.** ORCH-13 was re-checked and holds.
+- Human rulings, live: the channel is a GitHub @mention on the digest issue; the posting identity is a bot token, `PYAUTO_SHIFT_GH_TOKEN`; the AUTONOMY.md network-surface amendment is signed off in full.
+- One comment per blocked worker, derived from durable state, marked before posting and retried, including in the late sweep.
+- The posting token is never passed to workers or close-outs.
+- The digest warns when the poster is the mentioned account.
+
+**Witness** (named tests, all passing):
+- `test_orchestrator_tokens.py`
+- `test_digest_counters.py`
+- `test_orchestrator_mentions.py`
+- `test_the_watchers_posting_token_never_reaches_a_worker_or_closeout`
+
+Brain suite: 1747 passed. CI green on both PRs.
+
+**Review:** three rounds of FINDINGS, all fixed or ruled by the human, then clean:
+- a self-mention cannot notify;
+- the amendment went beyond the ruling;
+- a mention was lost on a crashed tick;
+- one unreadable transcript blocked all spawns;
+- subagent tokens were missed;
+- the bot token leaked to workers;
+- the `gh api user` call was unlisted;
+- the doc did not match the code.
+
+**Heart:** RED at ship (local canonical checkouts; install check F; release integrate). The live human gave a development-only override plus the merge command.
+
+**Human acts before the next live shift:** create a bot account token (PyAutoMind `issues: write`), set `PYAUTO_SHIFT_GH_TOKEN` in the watcher's environment, and set `shift_watcher.mention_login`.
+
+## Original prompt
+
 # Shift watcher: a shift's numbers are right and kept
 
 Type: bug

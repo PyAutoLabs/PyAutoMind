@@ -73,24 +73,6 @@
 - prompt: active/homepage_flow_polish.md
 - tier: judge — merge mode: human /prm
 
-## watcher-numbers-and-push
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/610
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/611
-- issued: 2026-11-12
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/watcher-numbers-and-push
-- prompt: active/shift_numbers_tokens_counters_row.md
-- epic: autonomous-orchestrators (programme M1.5 #610 + M1.6 #611, phase 8; one branch)
-- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
-- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/560, https://github.com/PyAutoLabs/PyAutoBrain/pull/612
-- heart-red-override:
-  authorization: live human 2026-11-12 "Override + merge" (programme session); https://github.com/PyAutoLabs/PyAutoBrain/issues/610
-  reasons: "PyAutoNerves: 2 commit(s) behind origin"; "PyAutoArray: 2 commit(s) behind origin"; "PyAutoGalaxy: 14 commit(s) behind origin"; "PyAutoLens: on branch feature/non-imaging-features-review (not main)"; "PyAutoLens: 4 uncommitted source change(s)"; "PyAutoCTI: 2 commit(s) behind origin"; "install verification FAILED (testpypi; checks F)"; "release validation FAILED (stage integrate)"
-  gates: Brain suite 1747; independent review clean after 3 rounds; smoke n/a
-- repos:
-  - PyAutoBrain: feature/watcher-numbers-and-push
-
 ## workspace-readme-images
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/658
 - issued: 2026-11-12
