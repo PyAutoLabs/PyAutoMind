@@ -511,3 +511,8 @@ Human review bundle: /mnt/c/Users/Jammy/Workspace/Science/scratch/nautilus_optim
 ### Parent CPU investigation approved — 2026-11-12
 
 Live human: “Approved, proceed with the 12-fit investigation and one RAL job under those limits. Keep it outside Pulse and leave merge for me.” The saved six-arm, reverse-order 12-fit plan is approved for implementation and one gated RAL job. Allowance UNUSED. Exact reference node/science, 120s/4096MiB per group, 1800s total, exclusive four-core/8GiB/35-minute job; stop on first failure, retain all data. Resume existing workspace/issue16/PR17, no merge or Pulse.
+
+
+### Parent CPU implementation gates — 2026-11-12
+
+Producer04b33ab7be4d976c43beaaaedf09892f96703974 implements the approved12fit controls, passive observations, three-channel phase accounting and dedicated runtime/wrapper claim.322local tests, ruff/format/shell/catalogue and six-arm zero-science worker/descriptor/affinity smoke pass; author review only. Exact-head CI43237941034 green, all steps checked. Heart14:29:57.382396Z YELLOW: “PyAutoArray: open PR 9d old”; “release validation stale: source moved since rehearsal (PyAutoFit, PyAutoGalaxy, PyAutoLens, PyAutoCTI)”. Artifact15 build/fresh restore in progress; allowance UNUSED. Outside Pulse, human merge; PR17 remains draft.
