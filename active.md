@@ -97,3 +97,31 @@
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
 - repos:
   - PyAutoHeart: feature/dev-metrics-boards
+
+## general-docs-refresh
+- issued: 2026-11-12
+- session: OpenAI Codex desktop
+- status: library-shipped, awaiting-merge
+- prompt: active/general_sections_refresh.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/general-docs-refresh
+- repos:
+  - PyAutoLens: feature/general-docs-refresh
+  - PyAutoGalaxy: feature/general-docs-refresh
+  - autolens_likelihood_function: feature/general-docs-refresh
+- coordination: user approved General drafts and explicitly required Installation, Overview and Tutorials remain untouched; disjoint from installation-docs-polish. Galaxy index change only adds Papers under General.
+- tier: judge — merge mode: human /prm
+- next: human review and /prm only when explicitly requested; no merge or release authorized.
+
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/847
+- heart-red-override:
+  authorization: "I authroize" — live response to explicit development-only override for general-docs-refresh, commits/pushes/three PRs only. No merge or release.
+  reasons: ["PyAutoNerves: 2 commit(s) behind origin", "PyAutoArray: 2 commit(s) behind origin", "PyAutoGalaxy: on branch feature/general-docs-refresh (not main)", "PyAutoGalaxy: 9 uncommitted source change(s)", "PyAutoGalaxy: 4 commit(s) behind origin", "PyAutoLens: on branch feature/general-docs-refresh (not main)", "PyAutoLens: 9 uncommitted source change(s)", "PyAutoLens: 6 commit(s) behind origin", "PyAutoCTI: 2 commit(s) behind origin", "install verification FAILED (testpypi; checks F)", "release validation FAILED (stage integrate)"]
+  gates: 39 example blocks passed; full Sphinx builds without warning regression; strict General builds zero warnings; 821 local links and 83 workspace targets passed; 101 protected files unchanged; human editorial review and diff checks passed. Documentation only, no runtime changes.
+
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/848
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/848
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/708
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/708
+- workspace-pr: https://github.com/Jammy2211/autolens_likelihood_function/pull/1
+- commits: PyAutoLens 49fa6e5ce; PyAutoGalaxy 7b054c80; autolens_likelihood_function 08c484a
+
