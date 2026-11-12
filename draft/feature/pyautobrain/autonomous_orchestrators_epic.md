@@ -275,6 +275,96 @@ work per human review-minute above the shadow-shift baseline.
 
 <!-- formalised by the Intake (Conception) Agent on 2026-11-03 from file:/tmp/claude-1000/-home-jammy-Code-PyAutoLabs/b15ff817-f0d9-4ab3-b23f-735fcbb990f5/scratchpad/autonomous_orchestrators_epic.md; reviewed and restructured 2026-11-03 (design review session) -->
 
+## Programme: from the review to autonomous runs (adopted 2026-11-12)
+
+Adopted by the human on 2026-11-12 (kickoff session) from the roadmap written after the ecosystem
+review of 2026-11-10: `Science/scratch/ecosystem_review_2026-11/PROGRAMME.md` (now history; this
+section is the source of truth) and the report, private Artifact
+https://claude.ai/artifact/4A94P1cevvkESoM22QoMWm. Each session starts from the programme prompt in
+PROGRAMME.md, reads the state table below and carries on from the first unfinished row.
+
+**End state.** Scheduled cloud shifts that pick work from a ranked, premise-checked backlog,
+dispatch 5–20 workers, and verify and merge `notify`/`glance` work unattended under gates GitHub
+enforces; the human reads one digest per shift and rules only on judge-tier items.
+
+**Numbering.** Milestones M1–M6 are epic phases 8–13 (the dashboard's `Phase:` parser is `int()`);
+a task's prompt carries its milestone's phase number and names its task id (e.g. M1.1) in its
+first line.
+
+**Changes made at adoption (human-approved 2026-11-12):**
+1. **Phase 4c folds into M3.** No further live shifts run on the watcher before M1 closes its
+   confirmed state-machine gaps. 4c's existing rows (2 shadow, 2 live) stay as the baseline; its
+   remaining live shifts are M3.1/M3.2; 4c closes at the M3 exit with its write-up.
+2. **Phases 5–7 are parked behind M3**, unchanged. Phase 7 campaigns (glance per campaign) are
+   candidate M3.2 shift workload.
+3. **M1.3's draft is `Consequence: judge`.** Slices 1–2 are re-graded when sliced; if they stay
+   judge, the merge is the human's.
+4. **M1.4 runs before M1.3**, so every later merge records its actor.
+
+**Human gates.** M1: none (all glance). M2: five rulings in one sitting (decision sheets prepared
+during M1). M3: the unattended `glance` grant (after ten stage-2 rows). M4: the worker definition.
+M5: the design, then each step up in workers. M6: each widening of a grant. Always the human's:
+off-schedule release approval, manual release version, forcing YELLOW / accepting a named RED, the
+kill switch, quarantine doctrine, judge-tier merges, the timing of any live shift.
+
+**Exit tests.**
+- **M1:** every task merged with its witness (command + observed result); the batch conductor's
+  suite passes; one shadow shift whose digest and ledger row agree with GitHub and with what the
+  workers did.
+- **M2:** each ruling recorded in doctrine with its date; the builds merged; for M2.1 the 228 logged
+  ships replayed through the new scope, with the share still needing an override.
+- **M3:** ten stage-2 rows in `autonomy_log.md`; every path in M3.1 exercised at least once with
+  evidence; in every shift the merge count equals GitHub's and every PR is recorded. Then the
+  human rules on the unattended `glance` grant.
+- **M4:** a cloud session holding only the declared bundle takes a glance task from start to an
+  open PR, fixed load measured; Mind `main` receives no generated-file commits and its drift check
+  is green.
+- **M5:** at the target worker count, a run of consecutive shifts (count: human) reviewed by digest
+  alone, no failure needing hand recovery.
+- **M6:** scheduled cloud shifts; digest and shift numbers on the Brain board; the nightly kept
+  green by a shift; grants widened only on evidence; the laptop watcher retired.
+
+"Re-check first" = the review did not verify the finding: the task starts by re-checking it at
+source and is dropped or reshaped if it does not hold. Side-lane rows are off the critical path.
+
+### Programme state table
+
+| milestone | task | state | evidence |
+|---|---|---|---|
+| M1 (ph 8) | M1.1 Close the four watcher state-machine gaps — `draft/bug/pyautobrain/shift_watcher_state_machine_gaps.md` (CODE-1, CODE-2, ORCH-1, ORCH-3; confirmed) | in progress (2026-11-12) | |
+| M1 (ph 8) | M1.2 `prompt_sync_push` commits only the paths it is given — `draft/bug/pyautomind/prompt_sync_push_explicit_paths.md` (FB-1, MIND-1; confirmed) | not started | |
+| M1 (ph 8) | M1.4 Merge-actor column + random-sample audit — `draft/feature/pyautobrain/autonomy_log_merge_actor_and_random_audit.md` (FLOW-2; confirmed) | not started | |
+| M1 (ph 8) | M1.3 Premise check before dispatch + Lane backfill, slices 1–2 — `draft/feature/pyautobrain/pre_dispatch_premise_and_lane_checks.md` (MIND-2, MIND-3; confirmed) | not started | |
+| M1 (ph 8) | M1.5 Shift numbers right and kept (tokens for live/parked/close-out; counters from worker exits; one row per shift) — CODE-4, ORCH-7, ORCH-8, FLOW-6, SIG-5; re-check first; no draft | not started | |
+| M1 (ph 8) | M1.6 A blocked worker reaches the human off the laptop — ORCH-13; re-check first; no draft; channel is the human's choice | not started | |
+| M1 (ph 8) | side: nightly outcome record + same-night bug tasks — `draft/feature/pyautobrain/nightly_outcome_record_and_same_night_bug_tasks.md` (NIGHT-1, NIGHT-2) | not started | |
+| M1 (ph 8) | side: unit-test trends + hygiene ledger on boards — `draft/feature/pyautoheart/dev_metrics_trends_on_boards.md` (SIG-2, SIG-3; re-check first) | not started | |
+| M1 (ph 8) | prep: M2 decision sheets (M2.1–M2.5) | not started | |
+| M1 (ph 8) | exit test (see above) | not started | |
+| M2 (ph 9) | M2.1 Heart branch-scoped dev verdict + feed age / event triggers — `draft/feature/pyautoheart/dev_ship_reason_scope_and_feed_age.md` (REL-1, DASH-3); feed-age slice is glance, may build early | not started | |
+| M2 (ph 9) | M2.2 Server-side merge gate + `gh pr merge --auto` — `draft/maintenance/ci/server_side_merge_gate.md` (PR-3); needs the human's admin credential | not started | |
+| M2 (ph 9) | M2.3 Absent Lane fails closed; importance signal replaces `queue.md` — premise/lane draft slice 3 (MIND-3; MIND-4 re-check first) | not started | |
+| M2 (ph 9) | M2.4 Release builds the rehearsed commits — `draft/feature/pyautohands/release_builds_rehearsed_shas.md` (REL-4) | not started | |
+| M2 (ph 9) | M2.5 Where the always-apply rules live on the laptop (TOK-3) — human's home folder | not started | |
+| M2 (ph 9) | side: script-level retry + expiring quarantine in Stage 3; shift-owned nightly lane (REL-2 plausible, REL-3 re-check first) | not started | |
+| M2 (ph 9) | gate: five rulings + exit test | not started | |
+| M3 (ph 10) | M3.1 One designed live shift ≥ 3 h exercising every unexercised path (absorbs 4c live shifts) | not started | |
+| M3 (ph 10) | M3.2 Further shifts to ten stage-2 rows (stage-2 table: 0 rows on 2026-11-12) | not started | |
+| M3 (ph 10) | M3.3 A fixed sheet per shift | not started | |
+| M3 (ph 10) | gate: unattended `glance` grant; close 4c (PyAutoBrain#574) with write-up | not started | |
+| M4 (ph 11) | M4.1 Cloud rehearsal (library, workspace, organ task + two `mobile_shift_operation.md` prompts) — BRAIN-4, ORCH-4; re-check first | not started | |
+| M4 (ph 11) | M4.2 Cloud worker bundle, `doctor`, slim profile, travelling rules — `draft/feature/pyautobrain/cloud_worker_bundle_and_profile.md` (BRAIN-1, TOK-2, TOK-3) | not started | |
+| M4 (ph 11) | M4.3 One network write path to Mind `main` (MIND-1; PR-1, PR-2 re-check first) | not started | |
+| M4 (ph 11) | M4.4 Boards and indexes rendered in CI, not committed (PR-6; DASH-1, MIND-5, KNOW-2 re-check first) | not started | |
+| M4 (ph 11) | M4.5 Lessons move from laptop memory into the repos (KNOW-1, FB-3; re-check first) | not started | |
+| M4 (ph 11) | M4.6 Cross-repo effects in the gate: one CI-verdict script, dependants' tests after a library merge (FB-4, FB-5, REL-6, FLOW-3; re-check first) | not started | |
+| M4 (ph 11) | M4.7 Machine-readable completion record (FLOW-4, FLOW-5; re-check first) | not started | |
+| M4 (ph 11) | gate: worker definition + exit test | not started | |
+| M5 (ph 12) | M5.1 Cloud watcher design vs the report's thirteen constraints — from `draft/feature/pyautobrain/shift_watcher_in_the_cloud.md` | not started | |
+| M5 (ph 12) | M5.2 Build behind the tick's existing interfaces, state-store seam (CODE-3, CODE-6, ORCH-6; re-check first) | not started | |
+| M5 (ph 12) | M5.3 Cloud shadow shifts → live 2–3 workers, merge cap 1 → 5 → 10 → 20 | not started | |
+| M6 (ph 13) | Scheduled cloud shifts; laptop watcher retired | not started | |
+
 ## Progress
 
 - 2026-11-03 — **phase 1 COMPLETE** (PyAutoMind#522, PyAutoBrain#552; record
@@ -322,3 +412,6 @@ work per human review-minute above the shadow-shift baseline.
   `complete/2026/11/autonomous-orchestrators-p4b.md`): unattended `glance` close-out by one independent
   Opus close-out session; stage-2 rows via `table-append`; AUTONOMY "Stage-2 adversary amendment —
   2026-11-04" (same model allowed). Next: 4c, the pilot run.
+- 2026-11-12 — **Programme ADOPTED** (human approval, kickoff session): the review-to-autonomy
+  roadmap is filed above as phases 8–13 (M1–M6) with a state table; 4c folds into M3; phases 5–7
+  parked behind M3. Next: M1.1 (watcher state-machine gaps).
