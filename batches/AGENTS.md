@@ -292,7 +292,7 @@ the review surface; the HTML packet is written only when `packet: yes`.
 
 ### Workers
 - <label> (<worker key>): spawned/finished
-- <label> (<worker key>): spawned/parked — mentioned (parked) — blocked 40 min
+- <label> (<worker key>): spawned/parked — blocked 40 min — mentioned (parked)
 
 ### Refusals
 - <task> — token-budget 100: 55 committed + 60 reserved per worker — 2× from <at>
