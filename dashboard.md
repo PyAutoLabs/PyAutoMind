@@ -1157,7 +1157,7 @@ Use the start-dev skill. active/gradient_correctness_sweep.md
 
 </details>
 
-<details><summary>📋 <a href="active/hpc_keep_temp_and_cache_off_home.md">Keep HPC temp files and caches off $HOME and the worker's /tmp</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1767">issue #1767</a> — issued 2026-11-12 — library-dev</summary>
+<details><summary>📋 <a href="active/hpc_keep_temp_and_cache_off_home.md">Keep HPC temp files and caches off $HOME and the worker's /tmp</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1767">issue #1767</a> — issued 2026-11-12 — library-shipped, workspace-pending — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1768">PyAutoFit#1768</a></summary>
 
 ```
 Use the start-dev skill. active/hpc_keep_temp_and_cache_off_home.md

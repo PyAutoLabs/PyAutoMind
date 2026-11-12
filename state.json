@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 12 in flight",
-  "updated": "2026-11-12T09:37:38Z",
+  "updated": "2026-11-12T10:00:42Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Keep HPC temp files and caches off $HOME and the worker's /tmp \u2014 library-shipped, workspace-pending",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1768",
+      "prompt": "Use the start-dev skill. active/hpc_keep_temp_and_cache_off_home.md"
+    },
     {
       "severity": "yellow",
       "text": "Nautilus 30D evidence and output diagnostics \u2014 awaiting-merge (full30D attribution completed; CI green; human merge)",
@@ -120,12 +126,6 @@
       "text": "pick: Fix KNN neighbor search for a partial final point block",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
-      "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
     }
   ]
 }
