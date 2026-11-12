@@ -1,0 +1,39 @@
+# Non-imaging feature introductions and image reuse
+
+Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/656
+Issued: 2026-11-12
+Consequence: judge
+Difficulty: medium
+Lane: local-dev
+
+@autolens_workspace @PyAutoLens
+
+## Original request
+
+I like these. Apply all 51 texts and the images to autolens_workspace, the main start_here.py and RTD, reusing the approved images as proposed. Open both PRs for review, don't merge yet.
+
+## Approved scope
+
+Apply the approved 2026-11-12 preview: all 51 non-imaging feature introductions, scientific use cases first with teaching detail retained. Reuse the approved feature images and RTD lens-scales/dataset-types assets unchanged; add the approved Group Halo, Deblending and Strong + Weak Lensing illustrations. Keep executable code unchanged. Update workspace root start_here.py and RTD overview with scientific routing and feature links, preserving recent introductory changes. Regenerate corresponding notebooks and navigation. No merges or releases.
+
+Preview: /mnt/c/Users/Jammy/Workspace/Science/scratch/non_imaging_feature_review_20261112/
+
+## Plan
+
+1. Compare the 51 approved source snapshots against current main and preserve concurrent edits.
+2. Apply prose and image links in scripts/{group,interferometer,multi_dataset,multi_galaxy,point_source,weak}/features/**/start_here.py.
+3. Reuse existing images; add only the three approved new assets and their prompts. Link scale/dataset diagrams to the existing new-user-guide assets.
+4. Update root start_here.py and PyAutoLens/docs/overview/overview_3_features.md, with domain-specific feature links and three new illustrations. Retain all existing teaching figures.
+5. Regenerate 52 notebooks and navigator using PyAutoHands. Validate AST/code-cell preservation, notebook schemas, links, image identity, size guard and Sphinx render.
+6. Check current Heart readiness; open paired review PRs, library documentation first. No merge.
+
+Tier: judge — merge mode: human /prm
+
+## Branch survey
+
+Canonical PyAutoLens: main, unrelated modified paper_jax/paper.md.
+Canonical autolens_workspace: main, unrelated untracked dataset.fits.
+Canonical PyAutoMind: main, unrelated lifecycle edits; use isolated Mind worktree.
+Current origin/main active registry has no claims on either target repository. Local guard clear; old unregistered feature worktrees are left untouched.
+Worktree: /home/jammy/Code/PyAutoLabs/.worktrees/non-imaging-features-review
+Branch: feature/non-imaging-features-review

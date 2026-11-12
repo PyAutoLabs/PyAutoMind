@@ -85,3 +85,16 @@
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
 - repos:
   - PyAutoBrain: feature/watcher-numbers-and-push
+
+## non-imaging-features-review
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/656
+- issued: 2026-11-12
+- session: OpenAI Codex desktop; session ID unavailable
+- status: development
+- prompt: active/non_imaging_features_review.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/non-imaging-features-review
+- repos:
+  - PyAutoLens: feature/non-imaging-features-review
+  - autolens_workspace: feature/non-imaging-features-review
+- tier: judge — merge mode: human /prm
+- approval: live user approved all 51 texts/images, root introduction and RTD; open paired PRs only, no merge
