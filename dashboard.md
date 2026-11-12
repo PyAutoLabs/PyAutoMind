@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 23 |
-| [In flight](#in-flight) | 12 |
+| [In flight](#in-flight) | 13 |
 | [Planned](#planned) | 11 |
-| [Backlog](#backlog) | 264 |
+| [Backlog](#backlog) | 263 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -23,7 +23,7 @@
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 21
+**Highest priority** (filed as `high`) — showing 12 of 20
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -45,14 +45,6 @@ Use the start-dev skill. draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_
 
 ```
 Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/libraries/hpc_tmpdir_slurm_default.md">Treat Slurm's default TMPDIR=/tmp as unset in activate.sh and campaign job scripts</a> — libraries · small · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/maintenance/libraries/hpc_tmpdir_slurm_default.md
 ```
 
 </details>
@@ -117,6 +109,14 @@ Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speedin
 
 ```
 Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md
 ```
 
 </details>
@@ -1157,6 +1157,14 @@ Use the start-dev skill. active/gradient_correctness_sweep.md
 
 </details>
 
+<details><summary>📋 <a href="active/hpc_tmpdir_slurm_default.md">Treat Slurm's default TMPDIR=/tmp as unset in activate.sh and campaign job scripts</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1769">issue #1769</a> — issued 2026-11-12 — library-dev</summary>
+
+```
+Use the start-dev skill. active/hpc_tmpdir_slurm_default.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/magnification_maps_8d_wiring_pretty.md">Magnification maps 8d: wire into fit subplots and make them pretty</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/818">issue #818</a> — issued 2026-11-02 — library-dev</summary>
 
 ```
@@ -1336,7 +1344,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 250 · local-dev 7 · ral 5
+Lanes: any 249 · local-dev 7 · ral 5
 
 <a id="human-review"></a>
 <details>
@@ -2511,15 +2519,7 @@ Use the start-dev skill. draft/docs/workspaces/feature_introductions_and_images.
 </details>
 
 <details>
-<summary><b>maintenance</b> — 19</summary>
-
-<details><summary>📋 <a href="draft/maintenance/libraries/hpc_tmpdir_slurm_default.md">Treat Slurm's default TMPDIR=/tmp as unset in activate.sh and campaign job scripts</a> — libraries · small · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/maintenance/libraries/hpc_tmpdir_slurm_default.md
-```
-
-</details>
+<summary><b>maintenance</b> — 18</summary>
 
 <details><summary>📋 <a href="draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md">Phase B: send HPC temp files to the shared disk (TMPDIR)…</a> — workspaces · small · supervised · high</summary>
 
@@ -2861,7 +2861,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 |------|-------|------|
 | 2026-11-12 | filed | <a href="draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md">jax.grad through zero-contour critical curves fails on jax 0.12</a> |
 | 2026-11-12 | filed | <a href="planned.md#hpc-keep-off-home-phase-b">hpc-keep-off-home-phase-b</a> |
-| 2026-11-12 | filed | <a href="draft/maintenance/libraries/hpc_tmpdir_slurm_default.md">Treat Slurm's default TMPDIR=/tmp as unset in activate.sh and…</a> |
+| 2026-11-12 | issued | <a href="active/hpc_tmpdir_slurm_default.md">Treat Slurm's default TMPDIR=/tmp as unset in activate.sh and…</a> |
 | 2026-11-12 | filed | <a href="draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md">Phase B: send HPC temp files to the shared disk (TMPDIR)…</a> |
 | 2026-11-12 | issued | <a href="active/simulator_round_off_control_test_obsolete.md">Obsolete control test after PyAutoArray fixed the simulator round-off…</a> |
 | 2026-11-11 | filed | <a href="planned.md#delaunay-nn-numba-remeasure">delaunay-nn-numba-remeasure</a> |

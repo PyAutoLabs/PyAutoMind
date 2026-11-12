@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 12 in flight",
-  "updated": "2026-11-12T10:37:56Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 13 in flight",
+  "updated": "2026-11-12T10:38:28Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -117,15 +117,15 @@
     },
     {
       "severity": "info",
-      "text": "pick: Treat Slurm's default TMPDIR=/tmp as unset in activate.sh and campaign job scripts",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/libraries/hpc_tmpdir_slurm_default.md",
-      "prompt": "Use the start-dev skill. draft/maintenance/libraries/hpc_tmpdir_slurm_default.md"
-    },
-    {
-      "severity": "info",
       "text": "pick: prompt_sync_push: commit only the paths it is given",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautomind/prompt_sync_push_explicit_paths.md",
       "prompt": "Use the start-dev skill. draft/bug/pyautomind/prompt_sync_push_explicit_paths.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Phase B: send HPC temp files to the shared disk (TMPDIR)\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md",
+      "prompt": "Use the start-dev skill. draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md"
     }
   ]
 }
