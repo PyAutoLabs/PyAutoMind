@@ -1,5 +1,30 @@
 # Workspace dataset gallery
 
+Completed 2026-11-12. Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/666
+
+Replaced the narrow PyAutoLens workspace dataset strip with a five-image gallery linking to Imaging, Interferometry, Multi-band Imaging, Data Cubes and Point Sources. Added a matching standalone pixelated Imaging illustration with prompt/provenance and the missing Imaging/Multi-band images in the RTD cards. The concurrent New User Guide prose rewrite was preserved through an explicit merge conflict resolution.
+
+## Merge receipts
+
+- https://github.com/PyAutoLabs/PyAutoLens/pull/857: b2e817b65182f075a21deba1faaf1474ff4cfa44
+- https://github.com/PyAutoLabs/autolens_workspace/pull/667: ce8773b7dcc39be79ba6bf1f98ad7afa9e2bd76b
+
+Merged RTD first, then the gallery. Both feature heads proven ancestors of origin/main. No release.
+
+## Validation and authority
+
+User explicitly authorized opening PRs, RTD-first merge on green CI, documentation-only smoke skips and close-out. Human approved the visual preview and reaffirmed approval during conflict resolution. Final exact-head CI: four PyAutoLens docs/test jobs and six workspace jobs passed; one documentation-only smoke job skipped with user approval. Library freeze clear. Focused Sphinx/MyST/Furo build with warnings as errors, README GFM rendering, all images/folder targets, scope review and whitespace checks passed. Development-only Heart RED authorization recorded at ship; Heart not declared healthy for release.
+
+## Review bundle
+
+/mnt/c/Users/Jammy/Workspace/Science/scratch/workspace_dataset_gallery_2026-11-12/
+
+Windows: C:\Users\Jammy\Workspace\Science\scratch\workspace_dataset_gallery_2026-11-12\
+
+## Original prompt
+
+# Workspace dataset gallery
+
 Issued: 2026-11-12
 Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/666
 Type: docs
