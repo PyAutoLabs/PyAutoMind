@@ -34,3 +34,14 @@ Audit the relevant surfaces, propose a coordinated edit plan, and distinguish re
 ## Approved scope supersedes broad audit
 
 Edit only README.md and docs/index.md in the three libraries. Bold only auto in automated, autodifferentiable and increasingly autonomous; retain explicit GPU acceleration. Preserve all other content and historical citations. User approved the narrowed plan and requested this typography/GPU emphasis. No API, tutorial, workspace, assistant or shared homepage edits.
+
+## Implementation checkpoint — 2026-11-12
+
+- Completed only README.md + docs/index.md in PyAutoLens, PyAutoGalaxy, PyAutoFit; bold auto prefixes, explicit GPU support and Lens naming correction.
+- Worktree: /home/jammy/Code/PyAutoLabs/.worktrees/three-autos-public-framing; branch feature/three-autos-public-framing in all three. Changes uncommitted; no PRs.
+- Preview: /mnt/c/Users/Jammy/Workspace/Science/scratch/three_autos_public_framing_2026-11-12/revised_introductions.html; three patches and six rendered excerpts alongside.
+- Validation: diff --check clean; exactly six files, content from Getting Started onward unchanged; CommonMark/Sphinx renders all 18 bold auto prefixes. No numerical/API edits.
+- Both base and edited Sphinx excerpt builds have exactly one existing Galaxy top-level substitutions deprecation warning; -W exits 1 on both. No full docs or numerical suite run. Author review complete, no independent review claimed.
+- Logs: worktree .doccheck/build.log, .doccheck-baseline/build.log, .doccheck/heart-readiness.json.
+- Heart RED 2026-11-12T17:13:20.478039+00:00: "PyAutoLens: 1 uncommitted source change(s)"; "PyAutoLens: 6 commit(s) behind origin"; "install verification FAILED (testpypi; checks F)"; "release validation FAILED (stage integrate)".
+- Await live human development-only shipping override for #832 before commit/push/PR; merge/release not authorized. Preserve unrelated canonical paper changes.

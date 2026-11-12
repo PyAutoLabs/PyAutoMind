@@ -38,7 +38,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/832
 - issued: 2026-11-12
 - session: Codex desktop; session ID unavailable
-- status: library-dev
+- status: library-dev (six-file edit complete; Heart RED shipping hold)
 - prompt: active/three_autos_public_framing.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/three-autos-public-framing
 - tier: judge — merge mode: human /prm
@@ -46,6 +46,9 @@
   - PyAutoLens: feature/three-autos-public-framing
   - PyAutoGalaxy: feature/three-autos-public-framing
   - PyAutoFit: feature/three-autos-public-framing
+
+- validation: six-file scope and rendering checked; pre-existing Galaxy metadata warning reproduced on base; see prompt checkpoint
+- preview: /mnt/c/Users/Jammy/Workspace/Science/scratch/three_autos_public_framing_2026-11-12/revised_introductions.html
 
 ## prompt-sync-explicit-paths
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/554
