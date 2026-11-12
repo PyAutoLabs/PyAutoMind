@@ -123,3 +123,18 @@
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
 - repos:
   - PyAutoHands: feature/release-rehearsed-shas
+
+## features-overview-polish
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/661
+- issued: 2026-11-12
+- session: OpenAI Codex desktop
+- prompt: active/features_overview_polish.md
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/features-overview-polish
+- tier: judge — merge mode: human /prm
+- coordination: prior live separate-worktree approval alongside #658 retained; preserve its changes and validate compatibility
+- repos:
+  - PyAutoLens: feature/features-overview-polish
+  - PyAutoGalaxy: feature/features-overview-polish
+  - autolens_workspace: feature/features-overview-polish
+  - autogalaxy_workspace: feature/features-overview-polish
