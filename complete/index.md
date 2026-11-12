@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2248 records across 11 buckets.
+2249 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -287,6 +287,7 @@ markers; everything below GENERATED is rebuilt.
 - [tutorial-link-sweep](2026/11/tutorial-link-sweep.md)
 - [watcher-numbers-and-push](2026/11/watcher-numbers-and-push.md)
 - [watcher-workers-survive-systemd-tick](2026/11/watcher-workers-survive-systemd-tick.md) — pilot 4c follow-up; issue PyAutoBrain#592
+- [workspace-dataset-gallery](2026/11/workspace-dataset-gallery.md)
 - [workspace-hygiene-sweep-1104](2026/11/workspace-hygiene-sweep-1104.md)
 - [workspace-readme-images](2026/11/workspace-readme-images.md)
 
