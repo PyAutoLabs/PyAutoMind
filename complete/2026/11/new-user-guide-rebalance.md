@@ -1,3 +1,20 @@
+# New User Guide rebalance
+
+Completed 2026-11-12. Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/664
+
+Restored helpful guidance around concise selection cards in the PyAutoLens RTD New User Guide and main autolens_workspace start_here notebook. Preserved images, destination links, merged #658 multi-band/weak-lensing additions, the executable walkthrough and Features gallery.
+
+## Merge receipts
+- PyAutoLens#856: 63f21ac04acb9c491ed93530cc4676087b6106a4
+- autolens_workspace#665: 639a8ae2671a20f4f7f7175c852948400fc45095
+
+## Validation and authorization
+Focused Sphinx build with warnings as errors; notebook regeneration, schema and executable parity; retained images/URLs; browser image checks; navigator/search-memory/size checks passed. Ten exact-head CI jobs passed. One workspace smoke job skipped; live human approved: “Yes, I approve merging both New User Guide PRs with the smoke skip.” Freeze clear. Development-only Heart RED override #664 recorded at ship. No release performed.
+
+Review bundle: C:\Users\Jammy\Workspace\Science\scratch\new_user_guide_rebalance_20261112\applied\index.html
+
+## Original prompt
+
 Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/664
 # New User Guide rebalance
 Type: docs
