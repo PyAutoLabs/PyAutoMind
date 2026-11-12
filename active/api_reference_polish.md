@@ -42,3 +42,8 @@ Heart snapshot: 2026-11-12T19:30:21.264922+00:00; verdict RED.
 Validation: All 97 API entries and 29 original section anchors retained; 150 local links/fragments pass; 10 Python example blocks execute; exact six-file scope and git diff --check pass; human review approved. Full Sphinx renders: Lens 97 and Galaxy 69 diagnostics, identical to baseline; strict -W builds remain nonzero for existing diagnostics. No runtime changes; numerical suites and workspace science runs are not applicable to this documentation-only scope.
 
 Commit, push and PR creation only. No merge, release, CI bypass or claim that this change repairs Heart.
+
+## PR-open checkpoint
+- PyAutoLens: https://github.com/PyAutoLabs/PyAutoLens/pull/849 — 9a1266dec6558f2b382be2f61405117aff9e1a77
+- PyAutoGalaxy: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/709 — 28dfe2d5d7ce1fd12e4402417bd79dbfabeb1e10
+Both open, labelled pending-release, unmerged. Descriptions explicitly record unchanged baseline Sphinx diagnostics (Lens 97; Galaxy 69) and the authorized Heart RED override. No workspace migration is needed. CI is not bypassed and no waiter is armed.
