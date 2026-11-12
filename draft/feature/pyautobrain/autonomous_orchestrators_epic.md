@@ -331,7 +331,7 @@ source and is dropped or reshaped if it does not hold. Side-lane rows are off th
 
 | milestone | task | state | evidence |
 |---|---|---|---|
-| M1 (ph 8) | M1.1 Close the four watcher state-machine gaps — `draft/bug/pyautobrain/shift_watcher_state_machine_gaps.md` (CODE-1, CODE-2, ORCH-1, ORCH-3; confirmed) | in progress (2026-11-12) | |
+| M1 (ph 8) | M1.1 Close the four watcher state-machine gaps — record `complete/2026/11/shift-watcher-state-gaps.md` (CODE-1, CODE-2, ORCH-1, ORCH-3; confirmed) | **merged 2026-11-12** (PyAutoBrain#604, eecd2d505; Heart RED dev override by human) | `python -m pytest tests/test_orchestrator_*.py tests/test_batch_watch.py -q` → 134 passed, 1 skipped; 4 witness tests pass, all new tests fail on base; independent review CLEAN after fix 1898e11; CI pytest 3.12/3.13 green. Follow-ups: `draft/bug/pyautobrain/shift_watcher_followups_after_state_gaps.md` |
 | M1 (ph 8) | M1.2 `prompt_sync_push` commits only the paths it is given — `draft/bug/pyautomind/prompt_sync_push_explicit_paths.md` (FB-1, MIND-1; confirmed) | not started | |
 | M1 (ph 8) | M1.4 Merge-actor column + random-sample audit — `draft/feature/pyautobrain/autonomy_log_merge_actor_and_random_audit.md` (FLOW-2; confirmed) | not started | |
 | M1 (ph 8) | M1.3 Premise check before dispatch + Lane backfill, slices 1–2 — `draft/feature/pyautobrain/pre_dispatch_premise_and_lane_checks.md` (MIND-2, MIND-3; confirmed) | not started | |
@@ -415,3 +415,4 @@ source and is dropped or reshaped if it does not hold. Side-lane rows are off th
 - 2026-11-12 — **Programme ADOPTED** (human approval, kickoff session): the review-to-autonomy
   roadmap is filed above as phases 8–13 (M1–M6) with a state table; 4c folds into M3; phases 5–7
   parked behind M3. Next: M1.1 (watcher state-machine gaps).
+- 2026-11-12 — **M1.1 MERGED** (PyAutoBrain#604; record `complete/2026/11/shift-watcher-state-gaps.md`). Next: M1.2 (`prompt_sync_push` explicit paths).

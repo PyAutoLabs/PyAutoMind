@@ -1,3 +1,35 @@
+Programme task **M1.1** (epic `autonomous-orchestrators`, phase 8). Shipped as PyAutoBrain#604, merged 2026-11-12T17:03:58Z (eecd2d505). Issue PyAutoBrain#603, closed.
+
+The four state-machine gaps in the shift watcher that the ecosystem review of 2026-11-10 confirmed are closed, all in `agents/conductors/batch/_orchestrator.py` and `_watch.py`:
+- **CODE-1:** transitions are persisted as they happen, and a failed spawn becomes a refusal.
+- **CODE-2:** a failed liveness read counts as unknown, a crash needs two unlisted reads, and the grace is 420 s.
+- **ORCH-1:** a parked lease is kept, and its `.done` is still consumed.
+- **ORCH-3:** GitHub's PR state decides every merge count:
+  - A `merged` file counts only when GitHub says MERGED. While the PR is OPEN or GitHub can't be read, the slot stays held. A CLOSED PR is a refusal.
+  - A non-merged verdict on a PR GitHub shows MERGED is recorded as "merged outside the close-out".
+  - A merge GitHub confirms with no file counts.
+- The `KeyError 'spawned'` on digest ticks is fixed.
+
+**Witness** (command and observed result):
+- `python -m pytest tests/test_orchestrator_*.py tests/test_batch_watch.py -q`: 134 passed, 1 skipped (base: 116 passed, 1 skipped).
+- These witness tests pass:
+  - `test_a_tick_that_raises_after_a_reap_keeps_the_outcome_and_never_redispatches`
+  - `test_a_failing_claude_agents_read_leaves_live_workers_live[rc1|timeout|badjson]`
+  - `test_a_parked_worker_that_finishes_after_review_at_is_a_late_arrival`
+  - `test_a_github_merged_pr_with_no_closeout_file_counts_as_one_merge`
+- All 18 new or rewritten tests fail against the base source (checked independently).
+- PR CI: pytest 3.12 and 3.13 green (run 43264970985).
+
+**Review:** an independent Opus review returned FINDINGS on ab48caa, two must-fix items on ORCH-3 (a `.closeout` beat GitHub, and a human's merge was counted as unattended). Both were fixed in 1898e11. The re-review was CLEAN.
+
+**Heart:** RED at ship (PyAutoLens canonical checkout on a branch and dirty; install check F; release integrate). None of the reasons is in PyAutoBrain. The live human gave a development-only RED override plus the merge command ("Override + merge on green"), recorded on the issue, the PR, `active.md` and `autonomy_log.md`.
+
+**Follow-ups** (out of scope): `draft/bug/pyautobrain/shift_watcher_followups_after_state_gaps.md`, 9 items. These include double counting in the write-before-delete window, spawn refusals retried every tick, close-outs still OPEN at `review-at`, and the digest wording for merges made outside the close-out.
+
+There is no pending release: PyAutoBrain is an organ, not a published library.
+
+## Original prompt
+
 # Shift watcher: close four state-machine gaps before the next live shift
 
 Type: bug
