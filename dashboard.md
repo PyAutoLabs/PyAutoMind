@@ -1165,7 +1165,7 @@ Use the start-dev skill. active/homepage_flow_polish.md
 
 </details>
 
-<details><summary>📋 <a href="active/prompt_sync_detached_push_target.md">prompt_sync_push: an explicit push target from a detached HEAD</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/556">issue #556</a> — issued 2026-11-12 — library-dev</summary>
+<details><summary>📋 <a href="active/prompt_sync_detached_push_target.md">prompt_sync_push: an explicit push target from a detached HEAD</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/556">issue #556</a> — issued 2026-11-12 — library-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/557">PyAutoMind#557</a></summary>
 
 ```
 Use the start-dev skill. active/prompt_sync_detached_push_target.md
