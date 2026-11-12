@@ -45,3 +45,16 @@ Both READMEs edited locally and GFM rendering verified with pandoc. git diff --c
 - PyAutoCTI: 2 commit(s) behind origin
 - install verification FAILED (testpypi; checks F)
 - release validation FAILED (stage integrate)
+
+## Follow-up: multi-band and weak lensing (2026-11-12)
+
+User approved: "Yes, add the multi-band imaging panel and the weak lensing image, with concise text linking to multi_dataset/ and weak/. Update the preview so I can see them." Also: "and put thee on RTD where suitable too".
+
+- Attached PyAutoLens on feature/workspace-readme-images, base b24eabe2e, for docs-only changes.
+- Used built-in image_gen to extend docs/overview/images/overview_2/dataset_types.png with a separate multi-band panel; saved multiband_image_edit_prompt.txt and provenance alongside it.
+- Updated autolens_workspace/README.md with multi_dataset and weak links, reusing overview_3/strong_weak_lensing.png.
+- Updated PyAutoLens/docs/overview/overview_2_new_user_guide.md with the five-panel strip, multi-band card and weak-lensing section. Existing weak illustration stays on the features page too.
+- Added folder/start_here links and git diff --check pass. Focused Sphinx/MyST + sphinx_design + Furo page build passes with warnings as errors; no numerical tests for prose/assets.
+- Preview root: /mnt/c/Users/Jammy/Workspace/Science/scratch/workspace_readme_images_2026-11-12/ ; RTD: rtd/overview_2_new_user_guide.html. README embeds local assets so changes are visible before merge.
+- Build log: .worktrees/workspace-readme-images/tmp/rtd-build.log (workspace-relative).
+- Still local/unpublished: ship PyAutoLens docs before workspace PRs so the canonical image URL displays the updated strip. Heart RED shipping block remains; no override requested or implied.

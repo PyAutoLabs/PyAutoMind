@@ -95,6 +95,7 @@
 - prompt: active/workspace_readme_images.md
 - tier: judge — merge mode: human /prm
 - repos:
+  - PyAutoLens: feature/workspace-readme-images
   - autolens_workspace: feature/workspace-readme-images
   - autogalaxy_workspace: feature/workspace-readme-images
 - validation: four PNG URLs, twelve folder/start_here targets, GFM rendering and diff checks passed
