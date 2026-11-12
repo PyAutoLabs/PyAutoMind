@@ -87,3 +87,18 @@
   - autogalaxy_workspace: feature/workspace-readme-images
 - validation: four PNG URLs, twelve folder/start_here targets, GFM rendering and diff checks passed
 - next: review previews; Heart recovery or explicit development-only override before ship
+
+## feature-housekeeping
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/659
+- issued: 2026-11-12
+- session: OpenAI Codex desktop
+- prompt: active/feature_housekeeping.md
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/feature-housekeeping
+- tier: judge — merge mode: human /prm
+- coordination: live user approved separate documentation worktree alongside workspace-readme-images #658; preserve edits and check compatibility
+- repos:
+  - PyAutoLens: feature/feature-housekeeping
+  - PyAutoGalaxy: feature/feature-housekeeping
+  - autolens_workspace: feature/feature-housekeeping
+  - autogalaxy_workspace: feature/feature-housekeeping
