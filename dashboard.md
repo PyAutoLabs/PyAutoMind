@@ -12,7 +12,7 @@
 | [Epics](#epics) | 23 |
 | [In flight](#in-flight) | 8 |
 | [Planned](#planned) | 11 |
-| [Backlog](#backlog) | 262 |
+| [Backlog](#backlog) | 263 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 3 |
 
@@ -918,7 +918,7 @@ Use the start-dev skill. draft/feature/pyautoscientist/scientist_optional_organ_
 </details>
 
 <details>
-<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 12 queued prompt(s), in order</summary>
+<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 13 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — ledger: `draft/feature/pyautobrain/autonomous_orchestrators_epic.md` — IN PROGRESS; design-reviewed 2026-11-03 (7 phases, <code>Needs:</code> folded into <code>Lane:</code> values, witnesses per phase, 6 decisions ruled by…</summary>
 
@@ -1004,6 +1004,14 @@ Use the start-dev skill. draft/feature/pyautoheart/unit_trend_followups.md
 
 ```
 Use the start-dev skill. draft/maintenance/ci/server_side_merge_gate.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/pyautobrain/m2_build_followups.md">M2 builds: follow-ups found in review (2026-11-12)</a> — pyautobrain · small · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/maintenance/pyautobrain/m2_build_followups.md
 ```
 
 </details>
@@ -1304,7 +1312,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 238 · ral 13 · local-dev 7 · wsl-data 2
+Lanes: any 239 · ral 13 · local-dev 7 · wsl-data 2
 
 <a id="human-review"></a>
 <details>
