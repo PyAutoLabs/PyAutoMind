@@ -125,3 +125,16 @@
 - workspace-pr: https://github.com/Jammy2211/autolens_likelihood_function/pull/1
 - commits: PyAutoLens 49fa6e5ce; PyAutoGalaxy 7b054c80; autolens_likelihood_function 08c484a
 
+
+## last-imaging-features-review
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/654
+- issued: 2026-11-12
+- status: development
+- session: OpenAI Codex
+- prompt: active/last_imaging_features_review.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/last-imaging-features-review
+- repos:
+  - PyAutoLens: feature/last-imaging-features-review
+  - autolens_workspace: feature/last-imaging-features-review
+- coordination: live user approved separate documentation worktree alongside api-reference-polish and general-docs-refresh; preserve and check compatibility
+- tier: judge — merge mode: human /prm
