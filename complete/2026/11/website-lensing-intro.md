@@ -1,5 +1,25 @@
 # Brief strong-lensing introduction on the personal website
 
+Merged https://github.com/Jammy2211/Jammy2211.github.io/pull/2 on 2026-11-12
+at 7c04658f4fa734c15389c1a37245aae142c1ea48, following explicit human merge approval.
+Issue: https://github.com/Jammy2211/Jammy2211.github.io/issues/1
+
+Both the homepage and Natural Language & AI page now include the approved short
+explanation and the existing assistant schematic before the COSMOS-Web Ring
+walkthrough. The image is shared, responsive and has descriptive alternative text.
+The Natural Language Markdown source and generated HTML remain synchronized.
+
+Validation: Chromium at 1440px, 390px and 320px on both routes (image load,
+aspect ratio and no horizontal overflow); reproducible Pandoc rendering;
+byte-identical source image; clean git diff whitespace check. No PR CI is
+configured for this personal static site; merge was explicitly authorized.
+
+Previews: /mnt/c/Users/Jammy/Workspace/Science/scratch/website_lensing_intro_2026-11-12/
+
+## Original prompt
+
+# Brief strong-lensing introduction on the personal website
+
 Type: docs
 Issued: 2026-11-12
 Issue: https://github.com/Jammy2211/Jammy2211.github.io/issues/1

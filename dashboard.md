@@ -1157,7 +1157,7 @@ Use the start-dev skill. active/gradient_correctness_sweep.md
 
 </details>
 
-<details><summary>📋 <a href="active/pyautolens_ii_case_studies.md">PyAutoLens II case studies</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_developer/issues/147">issue #147</a> — issued 2026-11-12 — workspace-dev</summary>
+<details><summary>📋 <a href="active/pyautolens_ii_case_studies.md">PyAutoLens II case studies</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_developer/issues/147">issue #147</a> — issued 2026-11-12 — awaiting-merge</summary>
 
 ```
 Use the start-dev skill. active/pyautolens_ii_case_studies.md

@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 3 in flight",
-  "updated": "2026-11-12T17:06:26Z",
+  "updated": "2026-11-12T17:15:06Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "PyAutoLens II case studies \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autolens_workspace_developer/issues/147",
+      "prompt": "Use the start-dev skill. active/pyautolens_ii_case_studies.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -120,12 +126,6 @@
       "text": "pick: Verify jax.jit / jax.grad parity on the critical-curve and caustic calculations",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace_test/jax_zero_contour.md",
       "prompt": "Use the start-dev skill. draft/test/autolens_workspace_test/jax_zero_contour.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Remove the dead EDEN packaging tooling from PyAutoFit",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/pyautofit/remove_eden_packaging_tooling.md",
-      "prompt": "Use the start-dev skill. draft/refactor/pyautofit/remove_eden_packaging_tooling.md"
     }
   ]
 }
