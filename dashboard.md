@@ -1149,7 +1149,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/autonomy_log_merge_actor_and_random_audit.md">Autonomy log: record who merged, and audit a random sample</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/606">issue #606</a> — issued 2026-11-12 — library-dev</summary>
+<details><summary>📋 <a href="active/autonomy_log_merge_actor_and_random_audit.md">Autonomy log: record who merged, and audit a random sample</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/606">issue #606</a> — issued 2026-11-12 — library-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoMind/pull/558">PyAutoMind#558</a>, <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/607">PyAutoBrain#607</a></summary>
 
 ```
 Use the start-dev skill. active/autonomy_log_merge_actor_and_random_audit.md
