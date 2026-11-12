@@ -259,3 +259,9 @@ Fresh artifact09 restore passed:49.95s bootstrap,53.29s including cleanup, sampl
 ## Final staging blocked by NFS — 2026-11-11
 
 Final staging exited124 at600s while `git status --porcelain` waited in an NFS RPC reading hpc/batch_cpu. It had not reached the checkout update or writing the six submission exports. No sbatch/scientific child ran; no pilot output/submission environment/index lock remained in the follow-up check. Existing one-job authorization remains unused. Resume .session/ral-cache-final-stage.sh only after inspecting current remote state and reliable NFS access; retain all runtime/setup evidence, and never relax source/runtime/allocation gates. No cache rebuild or new compute approval is needed merely to resume the same approved staging/submission. Producer c243ef6 and CI43015855847 remain valid; no speedup claim, outside Pulse, human merge.
+
+## RAL setup completed and first job submitted — 2026-11-12
+
+Recovered the new user-owned SSH agent automatically by matching previously supplied public-key fingerprints; no keys/configuration changed. NFS checks and the retained clean checkout update passed today. Exact c243ef6 producer, artifact and six frozen submission inputs are staged; CI43015855847 remains green. The task-internal staging guard now captures Git status before testing its output, so a failed Git command cannot be mistaken for a clean tree; bounded read-only status avoids optional index refresh writes.
+
+Submitted once through hpc/sync: job415132. Original single-job approval is now USED. Watch/collect this job only; no second submission, replacement or relaxed limits. Outside Pulse; human merge.
