@@ -2,6 +2,7 @@
 
 **Contents**
 
+- [hpc-keep-off-home-phase-b](#hpc-keep-off-home-phase-b)
 - [isothermal-ell-sph-oversampling-at-the-cusp](#isothermal-ell-sph-oversampling-at-the-cusp)
 - [remote-mcp-deployment-tiers](#remote-mcp-deployment-tiers)
 - [samples-parameter-paths](#samples-parameter-paths)
