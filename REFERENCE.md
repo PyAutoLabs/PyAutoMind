@@ -533,8 +533,9 @@ faculty at conception and all overridable by declaring them:
   `any` everywhere** (M2.3, `PyAutoBrain/AUTONOMY.md` "M2 rulings —
   2026-11-12"): an unattended or cloud pick (`batch plan`, the shift watcher)
   excludes the draft and says so; only an attended pick (`batch plan
-  --attended`) reads it as `any`. Intake therefore always writes one —
-  `Lane: any` when the text names no resource. A `ral` task never submits on its
+  --attended`) reads it as `any`. Intake therefore refuses to file a new draft
+  whose lane is neither declared (a `Lane:` header, or `intake classify --lane
+  any`) nor inferred from a resource signal. A `ral` task never submits on its
   own: the Science orchestrator is the single RAL gateway, and a dev worker
   hands it a **RAL test packet** (what to run, at which commit, the pass/fail
   rule) — planned for phase 5 of the autonomous-orchestrators epic.

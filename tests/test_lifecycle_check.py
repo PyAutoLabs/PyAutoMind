@@ -1336,3 +1336,19 @@ def test_an_empty_or_absent_queue_is_not_drift(tmp_path, monkeypatch):
     assert lifecycle.queue_findings(tmp_path) == []
     _as_root(monkeypatch, tmp_path)
     assert lifecycle.cmd_check(None) == 0
+
+
+def test_a_scoped_check_catches_a_dead_ref_when_the_change_touched_active(tmp_path):
+    """The ledger-merge workflow runs `check --paths <changed> --base main`. A
+    close-out touches `active/<name>` (and complete/), never the `draft/…` the
+    entry names — the finding must still be in that change's scope."""
+    root = _tree(tmp_path, complete=["2026/01/gearbox_retune.md"])
+    _queue(root, "## 1. Gearbox\n- kind: prompt\n"
+                 "- ref: draft/research/flywheel/gearbox_retune.md\n")
+    wanted = ["active/gearbox_retune.md", "complete/2026/01/gearbox_retune.md"]
+    hits, misses = lifecycle.scope_findings(root, lifecycle.queue_findings(root), wanted)
+    assert len(hits) == 1 and misses == []
+    # An unrelated change is not answerable for it.
+    hits, misses = lifecycle.scope_findings(
+        root, lifecycle.queue_findings(root), ["draft/feature/flywheel/other.md"])
+    assert hits == [] and len(misses) == 1

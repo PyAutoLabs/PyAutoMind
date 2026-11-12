@@ -31,8 +31,8 @@ written against `draft/…` keeps its place after the prompt moves to `active/`.
 2026-11-12"): with no live entry here an unattended shift takes its brief's
 named tasks and dips into no backlog. **Every ref is checked**:
 `scripts/lifecycle.py check` fails on a `kind: prompt` ref that resolves to no
-`draft/` or `active/` prompt, so an entry whose work has shipped moves to the
-footer below.
+`draft/` or `active/` prompt, so `lifecycle.py close` moves an entry whose
+work has shipped to the footer below.
 
 An entry leaves the queue when its work reaches `complete/`, **not** when it is
 dispatched. A task in flight is still the thing the human wants.
