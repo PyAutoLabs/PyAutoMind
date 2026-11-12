@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 23 |
-| [In flight](#in-flight) | 11 |
+| [In flight](#in-flight) | 12 |
 | [Planned](#planned) | 11 |
-| [Backlog](#backlog) | 264 |
+| [Backlog](#backlog) | 263 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -23,7 +23,7 @@
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 21
+**Highest priority** (filed as `high`) — showing 12 of 20
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -1221,6 +1221,14 @@ Use the start-dev skill. active/results_library_p5a_assistant.md
 
 </details>
 
+<details><summary>📋 <a href="active/simulator_round_off_control_test_obsolete.md">Obsolete control test after PyAutoArray fixed the simulator round-off crash</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/124">issue #124</a> — issued 2026-11-12 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/simulator_round_off_control_test_obsolete.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/sky_orientation_euclid_dr1_and_library.md">Sky orientation (north/east): euclid_dr1 catalogue, paper and website, plus the PyAutoLens library-wide…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/115">issue #115</a> — issued 2026-10-31 — workspace-dev</summary>
 
 ```
@@ -1328,7 +1336,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 250 · local-dev 7 · ral 5
+Lanes: any 249 · local-dev 7 · ral 5
 
 <a id="human-review"></a>
 <details>
@@ -1664,7 +1672,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 55</summary>
+<summary><b>bug</b> — 54</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1734,14 +1742,6 @@ Use the start-dev skill. draft/bug/autofit/investigate_euclid_einstein_radius_la
 
 ```
 Use the start-dev skill. draft/bug/health_fixes/samples_parameter_paths.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/euclid/simulator_round_off_control_test_obsolete.md">Obsolete control test after PyAutoArray fixed the simulator round-off crash</a> — euclid · easy · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/euclid/simulator_round_off_control_test_obsolete.md
 ```
 
 </details>
@@ -2854,7 +2854,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-12 | filed | <a href="draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md">jax.grad through zero-contour critical curves fails on jax 0.12</a> |
 | 2026-11-12 | filed | <a href="planned.md#hpc-keep-off-home-phase-b">hpc-keep-off-home-phase-b</a> |
 | 2026-11-12 | filed | <a href="draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md">Phase B: send HPC temp files to the shared disk (TMPDIR)…</a> |
-| 2026-11-12 | filed | <a href="draft/bug/euclid/simulator_round_off_control_test_obsolete.md">Obsolete control test after PyAutoArray fixed the simulator round-off…</a> |
+| 2026-11-12 | issued | <a href="active/simulator_round_off_control_test_obsolete.md">Obsolete control test after PyAutoArray fixed the simulator round-off…</a> |
 | 2026-11-11 | filed | <a href="planned.md#delaunay-nn-numba-remeasure">delaunay-nn-numba-remeasure</a> |
 | 2026-11-11 | filed | <a href="draft/bug/health_fixes/smoke_cache_stats_warnings_nameerror.md">Smoke cache-stats step fails with NameError: warnings</a> |
 | 2026-11-11 | issued | <a href="active/raise_jax_floor_to_0_12.md">Raise the JAX floor to 0.12.0 (jax and jaxlib) after a Heart…</a> |
@@ -2947,7 +2947,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-105 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+104 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2992,7 +2992,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autogalaxy/wrong_jax_gradient_on_mge_likelihoods_fd.md`
 - `draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md`
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
-- _… and 65 more_
+- _… and 64 more_
 
 </details>
 
