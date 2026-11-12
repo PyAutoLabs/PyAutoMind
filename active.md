@@ -186,6 +186,8 @@
 - latest-heart: 2026-11-10T18:35:43.930077+00:00 RED: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure"; "PyAutoCTI: 1 uncommitted source change(s)". Existing task-wide live RED development approval retained; unrelated CTI source untouched, no release or CI bypass.
 
 ## nautilus-spawn-training-pool
+- reference-node-gates: d3a36cf/CI43227695075 green;300tests/lint/format/shell/catalogue/zero-science smoke pass, author review; Heart12:57:11Z YELLOW; artifact14/fresh restore14 pending.
+- reference-node-approval: live human “Approve amendment and one run”; pin euclid-ral-compute-1, preserve unverified candidate/corpus/CPU metadata, same17-child limits and exact checks; outside Pulse, human merge. One fresh job allowance UNUSED.
 - diagnostic-result: report e81caa8/CI43222506205 green; job415179 FAILED1:0/70s; capture completed then exact historical posterior hash failed;16unrun, cleanup/no-descendants pass. Different node; read-only inspection finds tiny numeric drift with identical23500calls/12shells/all44 iteration counts.16.6MB retained; no timing conclusion. One-job allowance consumed; reference-node amendment awaiting explicit approval.
 - diagnostic-job: 415179 submitted once at producer0958bc2; new allowance CONSUMED, no retry/requeue. CI43220440830 green; runtime inventory pass3.91s; artifact13 fresh restore65.78s/zero science/cleanup complete; monitoring owned job.
 - heart-red-override: 2026-11-12 live human “Approve bounded diagnostic study”. Saved17-child study and one RAL job; merge human. Planning RED: "PyAutoLens: on branch feature/pixelization-feature-review (not main)"; "PyAutoLens: 2 uncommitted source change(s)". Fresh12:40:44Z YELLOW/no RED: "PyAutoArray: open PR 9d old"; "test run status unknown"; "release validation stale: source moved since rehearsal (PyAutoLens)".292 tests/lint/format/shell/catalogue and zero-science worker/descriptor smoke pass; author review; CI/restore pending.
@@ -193,7 +195,7 @@
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/16
 - issued: 2026-11-10
 - session: OpenAI Codex desktop (session ID unavailable)
-- status: awaiting-approval (diagnostic415179 halted; reference-node amendment proposed; human merge)
+- status: workspace-dev (reference-node amendment approved; one fresh job unused; human merge)
 - prompt: active/nautilus_spawn_training_pool.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-spawn-training-pool
 - repos:

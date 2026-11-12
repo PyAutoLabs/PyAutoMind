@@ -470,3 +470,10 @@ Issue16 / draft PR17, existing feature/nautilus-spawn-training-pool worktree. Co
 Approval requested: this narrow diagnostic correction plus one fresh job. Workspace AGENTS.md requires an approved plan before source/job-script edits; the approved diagnostic plan's stop-on-first-failure and one-job limits require a new compute decision. The existing PR remains unmerged.
 
 Final report head e81caa89cafc2b9c81efe99b350ea34f58df3004 and CI43222506205 are green. PR17 remains draft/open/unmerged. Proposed reference-node amendment remains unapproved; no more compute authorized.
+
+
+### Reference-node amendment approved
+
+Live human: “Approve amendment and one run”. Approved saved NODE_PIN_AMENDMENT.md scope: original node admission, durable pre-validation candidate and metadata receipts, focused tests, one fresh17-child diagnostic after tests/CI/fresh restore. Same120s/4GiB per child,1800s total, exclusive ral4boundcores/8GiB/35min; exact parity unchanged. First failure stops; preserve all data, outside Pulse, human merge. New allowance UNUSED.
+
+Reference-node implementationd3a36cf:300tests/lint/format/shell/catalogue/zero-science worker-descriptor smoke pass, author review. CI43227695075 green. Heart12:57:11Z YELLOW: "PyAutoArray: open PR 9d old"; "release validation stale: source moved since rehearsal (PyAutoLens)". Artifact14/fresh restore14 pending, new one-job allowance UNUSED.
