@@ -14,6 +14,7 @@ Status: draft
 Consequence: judge
 Review-minutes: 5
 Unattended: safe
+Lane: any
 Follows: (unblocked 2026-09-26) PyAutoMind/complete/2026/09/cosmos-web-ring-greeting.md (PyAutoBrain#419, autolens_assistant#137 merged 2026-09-26)
 Filed: 2026-09-26
 

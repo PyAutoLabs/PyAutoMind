@@ -17,6 +17,7 @@ Witness: with a local `dataset/cluster/simple` written by an older simulator, th
 Filed: 2026-10-23
 Issue: https://github.com/PyAutoLabs/autolens_profiling/issues/445
 Related: `draft/bug/pyautolens/point_source_json_datasets_record_no_regime.md` (the same `should_simulate` existence-only gate)
+Lane: any
 
 ## Why
 

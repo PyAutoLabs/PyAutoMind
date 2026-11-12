@@ -15,6 +15,7 @@ Priority: low
 Consequence: judge
 Campaign: critical-curves
 Filed: 2026-11-09
+Lane: any
 
 Found by autolens_profiling#521 (RAL 414456). Cluster point-source figures draw curves with `autolens/point/plot/point_sources.curves_for_planes`: a 400² grid (`CURVE_GRID_SHAPE`) over the ±50″ solver extent, so 0.25″ spacing. Against a 1600² reference, it misses the small member-galaxy tangential critical curves on the nearer source plane in every phase-4 posterior draw (11 of 22 plane-draws fail; the main curves match within 0.15″). It takes 0.11–0.13 s per figure.
 

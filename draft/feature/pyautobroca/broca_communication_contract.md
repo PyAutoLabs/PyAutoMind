@@ -7,6 +7,7 @@ Difficulty: medium
 Autonomy: supervised
 Consequence: judge
 Status: needs-slicing
+Lane: any
 
 Parent: `broca_communication_documentation_and_workspaces.md`.
 

@@ -15,6 +15,7 @@ Consequence: glance
 Witness: in one Python process, construct a JAX `af.Fitness` for an `al.AnalysisPoint` model (which calls `autofit.jax.register_model` and registers `Galaxy` as a pytree), then run the autoarray/autolens `register_tracer_classes` path used by `test_autolens/.../test_static_lattice_jax.py`; it no longer raises, and the 16 static-lattice JAX tests pass when run after a JAX-Fitness test in the same session.
 Filed: 2026-09-27
 Updated: 2026-09-27
+Lane: any
 
 ## Finding
 

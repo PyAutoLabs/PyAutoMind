@@ -15,6 +15,7 @@ Priority: low
 Epic: point-source-cpu-speed
 Status: draft
 Filed: 2026-10-04
+Lane: any
 
 Remainder of `complete/2026/10/point-source-wiki-reconcile.md` (autolens_profiling#373, merged
 2026-10-04). That PR reconciled the wiki and added the campaign completion evidence. It did not do the

@@ -17,6 +17,7 @@ Consequence: glance
 Witness: The benchmark harness reports cold and warm compile as separate columns with `JAX_COMPILATION_CACHE_DIR` wired; the `cluster` and `strong_and_weak` A100 rows are re-run with the levers applied (cache, `pixel_scale_precision`, n_live) recorded per row, each total wall time below its previous value and the logL within sampler noise of the earlier row (cluster -5089).
 Review-minutes: 3
 Unattended: ready
+Lane: ral
 Filed: 2026-07-17 (backfilled from git)
 
 Follow-up to the jax-joss-benchmarks epic (autolens_workspace#281). First official

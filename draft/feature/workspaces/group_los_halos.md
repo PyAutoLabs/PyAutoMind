@@ -13,6 +13,7 @@ Consequence: glance
 Witness: `scripts/group/features/advanced/los_halos/` runs to completion under the smoke profile with at least one LOS halo at a redshift distinct from the group redshift, and its `model.info` places that halo on its own plane rather than the group plane — the distinction the prose must teach, made checkable.
 Review-minutes: 3
 Unattended: ready
+Lane: any
 Filed: 2026-04-27 (backfilled from git)
 
 The imaging `features/advanced/los_halos` example needs improving and padding out before adapting to group.

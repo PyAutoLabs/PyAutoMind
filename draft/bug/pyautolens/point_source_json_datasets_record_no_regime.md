@@ -17,6 +17,7 @@ Consequence: glance
 Witness: `dataset/point_source/multiple_sources` written under `PYAUTO_SMALL_DATASETS=1` and under a full run are distinguishable by the chosen convention (a top-level key in `point_dataset_*.json` or a sidecar with none of the four aggregator suffixes), `should_simulate` re-simulates on a regime mismatch there (test), and `point_datasets.csv` is covered or its exclusion stated; built only once `multiple_sources` is out of autolens_workspace's `no_run.yaml`.
 Review-minutes: 3
 Unattended: ready
+Lane: any
 Filed: 2026-08-22 (backfilled from git)
 
 Split out of PyAutoNerves#153 on 2026-08-22, which stamped the small-datasets

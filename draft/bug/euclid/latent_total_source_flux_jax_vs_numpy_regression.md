@@ -16,6 +16,7 @@ Consequence: glance
 Witness: `pytest tests/test_compute_latent_variable.py::test_latent_euclid_variables_traces_under_jax_jit` passes (total_source_flux JAX == NumPy within rel 1e-3); today it fails with 3.5111 (jit) vs 3.3199 (NumPy)
 Review-minutes: 5
 Unattended: ready
+Lane: ral
 Filed: 2026-09-25
 Updated: 2026-09-25
 

@@ -12,6 +12,7 @@ Consequence: glance
 Witness: autofit/example/analysis.py log_likelihood_function contains self._xp.sum( and no bare sum( call; the example test suite passes under both NumPy and JAX.
 Review-minutes: 3
 Unattended: ready
+Lane: any
 
 Example Analysis should reduce with xp.sum not builtin sum
 Type: refactor

@@ -16,6 +16,7 @@ Consequence: glance
 Witness: a release rehearsal run whose candidate wheels change a stored chapter 2 fit's identifier (e.g. a deliberately edited default prior) fails Heart's release validation with the HowToLens tutorial and folder named, and an unchanged candidate passes.
 Review-minutes: 3
 Unattended: ready
+Lane: any
 
 Follow-up from HowToLens#130 / PR HowToLens#134 (2026-11-11).
 

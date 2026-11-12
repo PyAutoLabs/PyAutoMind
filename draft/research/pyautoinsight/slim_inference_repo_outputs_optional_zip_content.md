@@ -15,6 +15,7 @@ Consequence: glance
 Witness: one source_lp[1] search output (zip + unzipped files) measured before/after the config change, with the exported result row unchanged
 Review-minutes: 3
 Unattended: ready
+Lane: any
 
 # Slim inference-repo outputs: optional zip contents, visualize config, samples weights
 

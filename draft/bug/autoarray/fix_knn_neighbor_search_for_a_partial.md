@@ -15,6 +15,7 @@ Consequence: judge
 Witness: At N=130 with point_block=128, exact tail-node queries select indices128/129 with zero distance; eager/JIT results match a brute-force oracle at block boundaries for both KNN variants.
 Review-minutes: 5
 Unattended: ready
+Lane: any
 
 # Fix KNN neighbor search for a partial final point block
 

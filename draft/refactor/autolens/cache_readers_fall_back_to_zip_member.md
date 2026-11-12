@@ -17,6 +17,7 @@ Consequence: glance
 Witness: with `remove_files=True` and a completed zip containing `files/multiple_image_positions.json`, re-reading the cached multiple-image positions returns the archived values without re-running the point solver, and the same holds for the adapt-image SNR cache; a regression test asserts the solver/SNR computation is not re-entered.
 Review-minutes: 10
 Unattended: ready
+Lane: any
 Filed: 2026-09-10
 
 Follow-up to the aggregator/`preserve_in_zip` fix

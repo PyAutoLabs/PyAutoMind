@@ -18,6 +18,7 @@ Consequence: judge
 Witness: A minimal script (no profiling harness) that builds the library imaging likelihood for the HST-scale fixed-light Delaunay N=1500 (or rectangular 39x39) pixelized source used in C1, evaluates B=50 lanes with `jax.jit(jax.vmap(fn))` and the same 50 lanes with per-lane `jax.jit(fn)`, and shows > 1 nat disagreement on the A100 80GB in fp64 (C1: 44-50/50 lanes). Then the same script records whether it reproduces (a) on CPU, (b) with `XLA_PYTHON_CLIENT_ALLOCATOR=platform`, (c) with `XLA_PYTHON_CLIENT_ALLOCATOR=cuda_malloc_async`, (d) with a smaller `XLA_PYTHON_CLIENT_MEM_FRACTION`, and whether the `bfc_allocator.cc:317` warning appears in each. The fix (or an XLA upstream report plus a library-side guard) is witnessed by the same script agreeing to <= 1e-6 relative on every finite lane at B=50.
 Review-minutes: 15
 Unattended: no
+Lane: ral
 Filed: 2026-09-25
 
 ## Why this target

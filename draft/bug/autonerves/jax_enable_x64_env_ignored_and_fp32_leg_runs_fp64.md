@@ -13,6 +13,7 @@ Status: formalised
 Consequence: judge
 Witness: under `JAX_ENABLE_X64=False` (and `0`), importing autofit leaves `jax.config.read("jax_enable_x64")` False, and an `autofit_inference` `local_jax_cpu_fp32` row records `device.x64` False; with the variable unset, x64 is still forced on; the `preflight.py` `X64_WARNING` text matches the behaviour that actually ships, checked by a test.
 Unattended: ready
+Lane: any
 Filed: 2026-10-08
 
 Found by the A3b witness (PyAutoFit#1678 / PR #1681, record `complete/2026/10/search-ext-a3b-nss-preflight.md`). Two linked defects come from one root cause.

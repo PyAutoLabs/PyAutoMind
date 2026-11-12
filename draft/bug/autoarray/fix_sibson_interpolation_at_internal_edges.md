@@ -15,6 +15,7 @@ Consequence: glance
 Witness: Square-symmetry center weights are 1/4 each; near-edge weights remain nonnegative, sum to one, and agree continuously from both sides under eager/JIT execution.
 Review-minutes: 15
 Unattended: ready
+Lane: any
 
 # Fix Sibson interpolation at internal edges
 

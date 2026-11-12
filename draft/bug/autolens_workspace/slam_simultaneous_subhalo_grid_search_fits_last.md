@@ -12,6 +12,7 @@ Consequence: glance
 Witness: after the fix, `subhalo_grid_search` in `scripts/multi_dataset/features/slam/simultaneous.py` calls `SearchGridSearch.fit` with a `FactorGraphModel` (`model=factor_graph.global_prior_model, analysis=factor_graph`) and the resulting `model.info` lists a `dataset_model.grid_offset` entry for every band after the first; a grep for `fit(\n        model=model,\n        analysis=analysis,` in that function returns nothing.
 Review-minutes: 3
 Unattended: ready
+Lane: any
 
 # SLaM simultaneous subhalo grid search fits last band only
 

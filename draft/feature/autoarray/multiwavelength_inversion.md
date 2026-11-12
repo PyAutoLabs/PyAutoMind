@@ -13,6 +13,7 @@ Consequence: judge
 Witness: none — placeholder prompt ("expand fully the day I use it"); the combined-inversion design (how curvature_reg matrices combine, what CombineAnalysis's likelihood is) is undecided, so no claim settles it yet.
 Review-minutes: 20
 Unattended: ready
+Lane: any
 Filed: 2026-04-27 (backfilled from git)
 
 Can create a list of InversionMatrix objects for each dataset + tracer and then have a new class which takes a list of

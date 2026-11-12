@@ -15,6 +15,7 @@ Consequence: glance
 Witness: A diff of the names `autolens.plot` exports against the autosummary entries in `docs/api/plot.rst` is empty, the six named dataset/fits symbols sit under a new 'Dataset Subplots' heading, the same diff is empty for `autogalaxy.plot` and its `plot.rst`, and the sphinx warning count stays at baseline.
 Review-minutes: 3
 Unattended: ready
+Lane: any
 Filed: 2026-09-09
 
 Split from `plot_coverage_followups.md` on 2026-09-09 (item 3 of 4). That file

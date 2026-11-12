@@ -13,6 +13,7 @@ Consequence: glance
 Witness: With source_0's `Isothermal` (centre (0.02, 0.03), einstein_radius=0.2) restored in `simulator.py`, `solver.solve(plane_redshift=1.0)` returns >=4 image-plane positions for source_0; `modeling.py`'s `model.info` reports N=14 free parameters where it reported 9; and both `point_source/features/multiple_sources/{simulator,modeling}` entries are absent from `config/build/no_run.yaml`, so the harness actually runs them.
 Review-minutes: 3
 Unattended: ready
+Lane: any
 Filed: 2026-04-28 (backfilled from git)
 
 Revisit `@autolens_workspace/scripts/point_source/features/multiple_sources/` now

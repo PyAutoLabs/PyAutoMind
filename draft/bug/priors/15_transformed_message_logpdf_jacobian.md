@@ -12,6 +12,7 @@ Consequence: judge
 Witness: Either `TransformedMessage.logpdf` carries the `log_det` term so `int exp(logpdf)` over the support is 1.0 for Uniform/LogUniform/LogGaussian priors, or base-space `logpdf` is the documented contract with `Prior.logpdf`/`pdf` routed through `factor` and `PriorFactor` consuming `message.logpdf`; in both cases `int exp(Prior.logpdf)` = 1.0 to 1e-6 and the #1497 property tests assert it via `logpdf`.
 Review-minutes: 20
 Unattended: ready
+Lane: any
 (2026-08-19, below), awaiting human adjudication of the contract choice
 Filed: 2026-08-18 (backfilled from git)
 

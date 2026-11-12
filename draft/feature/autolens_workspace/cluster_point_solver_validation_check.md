@@ -12,6 +12,7 @@ Consequence: judge
 Epic: cluster-pointsolver-speed
 Related: autolens_profiling#439 (PR #440), `results/notes/cluster_pointsolver_campaign.md` "Starting grid vs close member image"
 Filed: 2026-10-23
+Lane: any
 
 ## Why
 

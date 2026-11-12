@@ -15,6 +15,7 @@ Consequence: glance
 Witness: on pipeline main, the chunked build reproduces end to end on a 3-lens fixture split across output/ + output_sed/ (N=2 chunks, ARCHIVE=chunked, PARTS=2) yielding one merged CSV set, band_inventory.csv, lens_index.csv, excluded_tiles.csv and SHA256SUMS
 Review-minutes: 3
 Unattended: ready
+Lane: any
 Filed: 2026-10-07
 
 ## Relates to / proposed supersession

@@ -16,6 +16,7 @@ Consequence: glance
 Witness: Tile102008532RA0683486015030DECNEG0642073552911 nir_y re-run under the capped search terminates within the cap and the tile's remaining six bands complete inside the 12 h walltime; today that band is still in Nautilus exploration at 40000 likelihood calls after 1 h 36 min and no other band starts
 Review-minutes: 3
 Unattended: ready
+Lane: ral
 Filed: 2026-09-17
 
 ## Observed

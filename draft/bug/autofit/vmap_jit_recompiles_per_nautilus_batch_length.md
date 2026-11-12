@@ -15,6 +15,7 @@ Consequence: glance
 Witness: a Nautilus fit with use_jax_vmap=True over a likelihood whose call sites arrive in varying batch lengths (e.g. sample_shell tails) compiles the vectorised likelihood a bounded number of times (one, or one per padding bucket), not once per distinct batch length; a compile-count probe over one search stays flat after warm-up.
 Review-minutes: 3
 Unattended: ready
+Lane: any
 Filed: 2026-09-17
 
 Follow-up split out of PyAutoFit#1631 (release each EP factor search's internals

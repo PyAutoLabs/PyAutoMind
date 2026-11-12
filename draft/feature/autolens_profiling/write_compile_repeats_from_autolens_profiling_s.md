@@ -15,6 +15,7 @@ Consequence: judge
 Witness: a jax_compile record written by the tooling carries an integer `compile_repeats` (the number of compile timings its `compile_s` summarises); the Brain profiling conductor reports a drift between two such records with `comparison: repeat-summarised` instead of the single-sample caveat.
 Review-minutes: 5
 Unattended: ready
+Lane: any
 
 PyAutoBrain#588 (record `complete/2026/11/compile-drift-single-sample.md`) made the profiling
 conductor label every compile-drift row `single-sample` unless both endpoints carry

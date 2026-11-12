@@ -15,6 +15,7 @@ Consequence: notify
 Witness: Every model composed in `scripts/cluster/mass_parameterizations.py` and `mass_parameterizations_pyautolens.py` is followed by `print(model.info)` and `af.ModelPlotter(model).figure()` (composed-model count equals print count), the headless run exits 0, the two notebook twins are regenerated and the navigator check passes.
 Review-minutes: 0
 Unattended: ready
+Lane: any
 Filed: 2026-09-13
 
 Found 2026-09-13 during the model-figures phase 6b rollout

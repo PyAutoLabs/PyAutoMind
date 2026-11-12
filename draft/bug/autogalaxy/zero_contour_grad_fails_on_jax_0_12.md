@@ -9,6 +9,7 @@ Priority: high
 Status: formalised
 Consequence: judge
 Filed: 2026-11-12
+Lane: any
 
 ## Evidence (PyAutoNerves#215 phase-1 validation)
 

@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: supervised
 Priority: low
 Status: draft
+Lane: any
 
 Found 2026-10-15 by the code survey for PyAutoArray#629 (unverified — confirm first).
 `Mapper.sub_slim_indexes_for_pix_index` (`autoarray/inversion/mappers/abstract.py:222-229`)

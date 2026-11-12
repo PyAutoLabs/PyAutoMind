@@ -17,6 +17,7 @@ Consequence: glance
 Witness: a headless Node Pyodide run imports autolens and executes HowToLens chapter_1 tutorial_2_ray_tracing to completion, logging pass/fail and wall time.
 Review-minutes: 3
 Unattended: ready
+Lane: any
 
 # Browser-native (Pyodide / JupyterLite) HowToLens alongside Colab
 

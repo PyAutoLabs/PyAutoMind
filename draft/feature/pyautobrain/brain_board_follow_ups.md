@@ -15,6 +15,7 @@ Consequence: judge
 Witness: none — a living catch-all ("pick up only when a real morning shows the need"); each item gets its own witness when it is filed as a task.
 Review-minutes: 20
 Unattended: ready
+Lane: any
 Filed: 2026-08-23
 
 The living catch-all for Brain-board gaps found by actually using it as the

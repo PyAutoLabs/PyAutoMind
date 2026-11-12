@@ -16,6 +16,7 @@ Consequence: notify
 Witness: `PyAutoFit/eden.yaml` is gone, a grep for `eden`/`edenise` across PyAutoFit and PyAutoNerves returns nothing, and the PyAutoFit test suite gives unchanged output (identical pass set).
 Review-minutes: 0
 Unattended: ready
+Lane: any
 Filed: 2026-07-13 (backfilled from git)
 
 ## 2026-08-09 — half the primary scope has already landed

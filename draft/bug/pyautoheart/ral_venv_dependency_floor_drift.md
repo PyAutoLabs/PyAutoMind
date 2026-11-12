@@ -16,6 +16,7 @@ Status: draft
 Consequence: glance
 Witness: `pip freeze` in the RAL venv (`/mnt/ral/jnightin/PyAuto`) satisfies every floor/pin in the PyAuto* `pyproject.toml` files (PyAutoFit: `anesthetic>=2.9.0`, `dynesty==2.1.5`, `psutil==6.1.0`; PyAutoArray: `nufftax>=0.6.1,<0.7.0`, `tfp-nightly==0.26.0.dev20260713`), and the RAL sync check reports a floor violation when one is reintroduced.
 Review-minutes: 5
+Lane: ral
 Epic: interferometer-likelihood-campaign
 
 Source: autolens_profiling#308 phase B (`results/notes/interferometer_mge_breakdown_2026_09.md`,

@@ -13,6 +13,7 @@ Priority: low
 Consequence: notify
 Campaign: critical-curves
 Filed: 2026-11-09
+Lane: any
 
 Found by autolens_profiling#521. `autogalaxy/util/plot_utils.py` docstrings for `_caustics_from` and `_critical_curves_from` say `"zero_contour"` is the default. The config default (`autogalaxy/config/visualize/general.yaml: critical_curves_method`) is `marching_squares`, and #521 recommends keeping it.
 

@@ -14,6 +14,7 @@ Consequence: judge
 Epic: point-source-cpu-speed
 Status: draft
 Filed: 2026-10-04
+Lane: ral
 
 Remainder of `complete/2026/10/runtime-single-jit-median.md` (autolens_profiling#374, merged
 2026-10-04). That PR shipped option (a): `steady_median_profile`, the opt-in

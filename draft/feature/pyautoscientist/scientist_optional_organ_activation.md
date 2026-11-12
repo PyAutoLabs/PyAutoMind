@@ -7,6 +7,7 @@ Difficulty: medium
 Autonomy: supervised
 Consequence: judge
 Status: needs-slicing
+Lane: any
 
 Parent: `collaborator_led_pyautoscientist_adoption_pilot.md`.
 

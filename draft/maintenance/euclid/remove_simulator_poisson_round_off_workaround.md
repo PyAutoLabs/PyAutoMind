@@ -15,6 +15,7 @@ Status: draft
 Consequence: judge
 Witness: `simulated_image_from` hands the raw image to `SimulatorImaging.via_image_from` without pre-convolving or clipping (`image_is_convolved` no longer forced), and resimulating the four tiles that failed on 2026-09-13 (indices 10, 62, 63, 69 of the sorted `dr1_sep1_sersics` sample) succeeds on the release containing PyAutoArray#687.
 Review-minutes: 5
+Lane: any
 Filed: 2026-11-10
 
 ## Why

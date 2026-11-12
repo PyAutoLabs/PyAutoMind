@@ -15,6 +15,7 @@ Status: formalised
 Consequence: glance
 Witness: A sweep of the central finite-difference step (1e-3 .. 1e-8) and PRNG / fixture seeds on the repro below shows either the grad-vs-FD gap collapsing to < 1e-6 relative at some step (then close as FD-step artefact, record the step), or a persistent gap attributable to a named term (fast_chi_squared, regularization_term, log_det_curvature_reg_matrix_term, log_det_regularization_matrix_term — differentiate each separately) with the responsible op identified.
 Review-minutes: 3
+Lane: any
 Filed: 2026-09-27
 
 ## Finding (unverified)

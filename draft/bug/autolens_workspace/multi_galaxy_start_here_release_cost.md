@@ -10,6 +10,7 @@ Autonomy: supervised
 Priority: normal
 Status: formalised
 Filed: 2026-09-18
+Lane: any
 
 ## Context
 

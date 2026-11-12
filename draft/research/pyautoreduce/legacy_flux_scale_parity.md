@@ -12,6 +12,7 @@ Consequence: glance
 Witness: The four bounded experiments (Gaussian-kernel re-drizzle, `_flt` era check, aperture photometry, sky-subtraction variants) are run in order until one closes the ~6% gap or all four are recorded as not closing it, with the bright-pixel ratio per experiment in the design doc's parity appendix.
 Review-minutes: 3
 Unattended: ready
+Lane: any
 Filed: 2026-07-08 (backfilled from git)
 
 PyAutoReduce phase 1 (PyAutoReduce#2, PR #3) reduces slacs0008-0004 to data

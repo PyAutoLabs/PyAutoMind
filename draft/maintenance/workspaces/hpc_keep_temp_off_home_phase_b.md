@@ -14,6 +14,7 @@ Status: formalised
 Consequence: glance
 Witness: each repo's activate.sh HPC branch replaces an unset OR Slurm-default (`/tmp`) TMPDIR with `$(dirname "$PYAUTO_HPC_CACHE")/tmp` (mkdir'd), with text identical to phase A; a preset TMPDIR wins (checked by sourcing under env -i with a fake PYAUTO_HPC_BASE).
 Review-minutes: 3
+Lane: ral
 Filed: 2026-11-12
 
 Phase A shipped 2026-11-12 (record `complete/2026/11/hpc-keep-off-home.md`, PyAutoFit#1767):

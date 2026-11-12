@@ -13,6 +13,7 @@ Consequence: notify
 Witness: a beamed array-free save_attributes → aggregator round trip in test_autolens/interferometer/model/test_analysis_interferometer.py reproduces primary_beam_slim and the fit figure_of_merit
 Review-minutes: 1
 Unattended: ready
+Lane: any
 Filed: 2026-10-21
 Unblocked: 2026-10-21 — PyAutoLens claim released (complete/2026/10/point-dataset-positions-panel.md)
 

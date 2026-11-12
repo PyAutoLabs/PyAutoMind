@@ -15,6 +15,7 @@ Consequence: notify
 Witness: The release board renders a "local validation runs" section from a committed JSON distilled from `run_logs/index.md` (run type, pass/fail/skip/timeout counts per project), age-stamped and expiring, with local paths scrubbed; `run_logs/latest` consumers are unchanged.
 Review-minutes: 0
 Unattended: ready
+Lane: any
 Filed: 2026-08-19 (backfilled from git)
 
 Follow-up to the release board (PyAutoHands#239, shipped 2026-08-19). The v1

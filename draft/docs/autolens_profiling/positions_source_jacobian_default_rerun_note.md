@@ -10,6 +10,7 @@ Priority: low
 Filed: 2026-10-21
 Status: formalised
 Consequence: glance
+Lane: any
 
 @autolens_profiling
 

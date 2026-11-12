@@ -26,6 +26,7 @@ Consequence: glance
 Witness: after the sweep, `grep -rn data_no_ellipse` over the listed repos returns nothing, and `autogalaxy_visualization` re-rendered on the release containing PyAutoGalaxy#698 has `ellipse_fit.png` + `ellipse_fit_log10.png` per ellipse scenario in its manifest and GALLERY.md.
 Review-minutes: 5
 Unattended: ready
+Lane: any
 Filed: 2026-11-10
 
 ## Why

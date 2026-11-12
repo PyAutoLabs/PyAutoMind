@@ -15,6 +15,7 @@ Consequence: glance
 Witness: A coverage table with one row per search in the audit table (prior exit reachable / mitigated by what / enforced or assumed) plus, for each exposed gradient search (Adam, Lion, ADABelief, Prodigy), the clip rate and alive-versus-step curve on `imaging/mge` hst with `ClipperPriorBox` on, at 2+ seeds and a named step budget, no clipper arm reporting zero clips; no default is flipped.
 Review-minutes: 3
 Unattended: ready
+Lane: any
 Filed: 2026-08-17 (backfilled from git)
 
 Note 2026-09-04: the inference programme (`autolens_profiling/results/notes/inference/PROGRAMME.md`) was frozen/retired on 2026-09-04, so every programme-era campaign number quoted below (autolens_profiling#131, the 171,000-nat seed swing, the 114-nats-at-105-steps clipping figure, the "clipping is cosmetic" verdict) is cited as **history**, not as a live target.
