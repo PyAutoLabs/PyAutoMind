@@ -90,7 +90,7 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/656
 - issued: 2026-11-12
 - session: OpenAI Codex desktop; session ID unavailable
-- status: development
+- status: awaiting-heart-red-override
 - prompt: active/non_imaging_features_review.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/non-imaging-features-review
 - repos:

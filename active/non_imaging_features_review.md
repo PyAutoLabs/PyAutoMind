@@ -37,3 +37,25 @@ Canonical PyAutoMind: main, unrelated lifecycle edits; use isolated Mind worktre
 Current origin/main active registry has no claims on either target repository. Local guard clear; old unregistered feature worktrees are left untouched.
 Worktree: /home/jammy/Code/PyAutoLabs/.worktrees/non-imaging-features-review
 Branch: feature/non-imaging-features-review
+
+## Implementation checkpoint
+# Non-imaging feature review #656
+
+Applied, staged and validated; no source commits, pushes or PRs yet. Awaiting live development-only Heart RED override for #656.
+
+52 scripts preserve executable ASTs; 52 regenerated notebooks validate and preserve executable code (one approved commented sensitivity-sketch explanation changed); 267 notebook links resolve; 51 approved drafts and images match; all 51 linked from both overviews; Sphinx full feature-page build passes with warnings as errors; navigator, search-memory, size guard and staged whitespace checks pass. Existing root pixelization-overview link is missing on the base branch and remains unchanged. Numerical suites were not rerun for documentation-only changes; required CI remains mandatory before merge.
+
+Worktree: /home/jammy/Code/PyAutoLabs/.worktrees/non-imaging-features-review
+Branch: feature/non-imaging-features-review
+
+## Exact Heart RED reasons
+- PyAutoNerves: 2 commit(s) behind origin
+- PyAutoArray: 2 commit(s) behind origin
+- PyAutoGalaxy: 14 commit(s) behind origin
+- PyAutoLens: on branch feature/non-imaging-features-review (not main)
+- PyAutoLens: 4 uncommitted source change(s)
+- PyAutoCTI: 2 commit(s) behind origin
+- install verification FAILED (testpypi; checks F)
+- release validation FAILED (stage integrate)
+
+Next: after task-specific approval, record the override in all four required sinks and commit/push/open PyAutoLens PR first, then workspace PR. Do not merge.
