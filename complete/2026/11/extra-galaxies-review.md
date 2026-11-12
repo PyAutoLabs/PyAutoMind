@@ -1,5 +1,27 @@
 # Extra Galaxies feature review
 
+Completed: 2026-11-12
+Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/648 (closed)
+
+Approved two-panel Extra Galaxies illustration and science-first introduction merged into the feature, main workspace tour and RTD. Teaching retained on separate light/mass decisions, noise scaling, centres, component inspection, SLaM and larger lens systems. No runtime/API/configuration changes. Both concurrent tasks preserved; scratch merge compatibility verified.
+
+## Merge receipts
+
+- PyAutoLens#840: https://github.com/PyAutoLabs/PyAutoLens/pull/840 — merge e4051fe31055345f01f0590b4a8055dc20000c7e; tested head c0db3b63462c0afedc6c36e4169bcdbba7cf69ee.
+- autolens_workspace#650: https://github.com/PyAutoLabs/autolens_workspace/pull/650 — merge 42a5be1dcbf8574a7cfef2300f3a1fe07f181046; tested head 2673459bd5b022a0763395552f305f5db18f1601.
+- All 12 exact-head CI jobs passed (4 library, 8 workspace), no pending/skipped jobs. Both merge states CLEAN. Heart freeze not frozen. Live human separately authorized conditional merge; library merged first. No release performed.
+- Source branch HEADs proven ancestors of fetched origin/main.
+
+## Validation
+
+Approved prose/image parity, executable AST/notebook code-cell parity, image references, PyAutoHands generation, navigation/banner/search-memory/size/whitespace checks and focused Sphinx build -W passed. Numerical CI and smoke passed before merge. Development-only Heart RED override remains recorded in original prompt, issue, both PRs and autonomy log; no assertion of release readiness.
+
+Review bundle: /mnt/c/Users/Jammy/Workspace/Science/scratch/extra_galaxies_individual_review_20261112/applied/index.html
+
+## Original prompt
+
+# Extra Galaxies feature review
+
 Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/648
 Issued: 2026-11-12
 Consequence: judge
