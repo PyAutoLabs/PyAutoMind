@@ -21,6 +21,7 @@ write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
 - [nautilus-compact-plot-adapter](#nautilus-compact-plot-adapter)
 - [nautilus-checkpoint-batching](#nautilus-checkpoint-batching)
 - [nautilus-spawn-training-pool](#nautilus-spawn-training-pool)
+- [gradient-correctness-sweep](#gradient-correctness-sweep)
 
 <!-- toc:end -->
 
@@ -245,3 +246,17 @@ write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
 
 - 10D-diagnostic-proposal: user requested further investigation; read-only accounting complete. Proposed17-child single RAL job (one capture,12training replays,4traced fits), same4cores/8GiB/35min and120s/4GiB/1800s caps. Detailed plan in canonical task. Implementation/new compute await approval; completed pilot/PR17 remain reviewable, outside Pulse/human merge.
 - parked: 2026-11-12 — pre-autonomy wrap-up; RAL job 415196 still queued (est. 2026-11-15) — inspect its output on completion, no retry. Draft PR autofit_profiling#17 open; human merge.
+
+## gradient-correctness-sweep
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/517
+- issued: 2026-11-02
+- parked: 2026-11-12 — HUMAN: release every autolens_profiling claim for the autonomy focus (moved planned.md → parked.md 2026-11-12: the prompt is already in active/, which planned.md does not allow)
+- repos (UNCLAIMED while paused): autolens_profiling
+- prompt: active/gradient_correctness_sweep.md
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/518 MERGED 2026-11-02 via /prm (32e13e85; items 10, 11 + sweep note). Umbrella stays open; further profiling-repo work re-syncs feature/gradient-correctness-sweep to main first
+- phase: order approved 2026-11-02; done 10, 11 (PR #518), 12 (retired), 1 (re-filed narrower into draft/bug/autogalaxy/wrong_jax_gradient_on_mge_likelihoods_fd.md); item 2 IN PROGRESS (paused 2026-11-02 night, RAL 413991 PENDING)
+- resume: (1) `sacct -j 413991` → when done pull output/p517_item2/{A_sparse_main,B_dense_main,C_sparse_tag}/…/gradient.json + .log from the RAL worktree into Science/scratch/gradient_correctness_sweep_2026-11-02/ral_item2/ and run small_step_check on them (A vs C = library effect incl #672; A vs B = sparse path vs CPU backend); (2) then items 3, 5 (local, seconds), 6, 13, 8/9/7 per the approved order in wiki/research/gradient_correctness_sweep.md
+- compute-tracking: RAL 413991 (item 2, group/delaunay/euclid CPU, legs A sparse@main / B dense@main / C sparse@tag 2026.10.25.1; partition ral; human go 2026-11-02). RAL worktree /mnt/ral/jnightin/autolens_profiling_wt/gradient-correctness-sweep (9d2ee2d3), private libs /mnt/ral/jnightin/PyAuto_wt/gradient-correctness-sweep; rows under output/p517_item2/<leg>/
+- tier: judge — merge mode: human /prm
+- status: PAUSED 2026-11-12 (HUMAN: release every autolens_profiling claim for the autonomy focus; worktree removed, branch commits already on main). Re-run start_dev to resume.
+- resume-note: worktree commit 9d2ee2d3 is on main; RAL 413991 item-2 rows (if completed) under /mnt/ral/jnightin/autolens_profiling_wt/gradient-correctness-sweep/output/p517_item2/
