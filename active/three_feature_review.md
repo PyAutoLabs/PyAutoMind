@@ -52,3 +52,27 @@ Open index.html for approved feature previews and rtd/index.html for the built t
 - release validation FAILED (stage integrate)
 
 Bounded documentation-only combined task: the classifier generic large-task phasing is unnecessary; no API or runtime changes and the approved deliverable is two paired PRs.
+
+## PRs opened
+
+PyAutoLens RTD: https://github.com/PyAutoLabs/PyAutoLens/pull/845 (e1bcc2d4a677c9b3f2f9f7f18531a90fc6b78b70)
+autolens_workspace: https://github.com/PyAutoLabs/autolens_workspace/pull/653 (25ef2779caa5c57e8dafc7dddb6d8e2ac712d848)
+
+Development-only Heart RED override for #652
+
+Live authorization:
+> I approve the development-only Heart RED override for #652. Commit, push and open both PRs for review, don't merge yet.
+
+Exact RED reasons:
+- PyAutoNerves: 2 commit(s) behind origin
+- PyAutoArray: 2 commit(s) behind origin
+- PyAutoGalaxy: 6 commit(s) behind origin
+- PyAutoLens: on branch feature/three-feature-review (not main)
+- PyAutoLens: 4 uncommitted source change(s)
+- PyAutoCTI: 2 commit(s) behind origin
+- install verification FAILED (testpypi; checks F)
+- release validation FAILED (stage integrate)
+
+Passed: exact approved feature text and image parity; unchanged executable AST and notebook code cells for all four scripts/notebooks; notebook schemas and local image links; focused Sphinx build with warnings as errors; navigator, search-memory, size and staged whitespace checks. Clean three-way merge of root script/notebook with start-here-plot-ai; installation-docs-polish touches disjoint files. Numerical suites were not rerun locally for this prose/image-only change.
+
+Commit/push/review PRs only. No merge or release authority.

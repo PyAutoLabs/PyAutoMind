@@ -142,7 +142,7 @@
 ## three-feature-review
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/652
 - issued: 2026-11-12
-- status: awaiting-heart-red-override
+- status: pr-open, awaiting-human-review
 - session: OpenAI Codex
 - prompt: active/three_feature_review.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/three-feature-review
@@ -151,3 +151,12 @@
   - autolens_workspace: feature/three-feature-review
 - tier: judge — merge mode: human /prm
 - scope: approved three-feature documentation and images only; separate worktrees alongside installation-docs-polish and start-here-plot-ai explicitly approved
+
+- heart-red-override:
+  authorization: "I approve the development-only Heart RED override for #652. Commit, push and open both PRs for review, don't merge yet."
+  reasons: ["PyAutoNerves: 2 commit(s) behind origin", "PyAutoArray: 2 commit(s) behind origin", "PyAutoGalaxy: 6 commit(s) behind origin", "PyAutoLens: on branch feature/three-feature-review (not main)", "PyAutoLens: 4 uncommitted source change(s)", "PyAutoCTI: 2 commit(s) behind origin", "install verification FAILED (testpypi; checks F)", "release validation FAILED (stage integrate)"]
+  gates: Passed: exact approved feature text and image parity; unchanged executable AST and notebook code cells for all four scripts/notebooks; notebook schemas and local image links; focused Sphinx build with warnings as errors; navigator, search-memory, size and staged whitespace checks. Clean three-way merge of root script/notebook with start-here-plot-ai; installation-docs-polish touches disjoint files. Numerical suites were not rerun locally for this prose/image-only change.
+
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/845
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/653
+- next: human review; no merge authorized
