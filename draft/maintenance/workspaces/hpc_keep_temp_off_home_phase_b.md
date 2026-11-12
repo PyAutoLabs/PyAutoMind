@@ -3,6 +3,12 @@
 Type: maintenance
 Target: workspaces
 Repos:
+- PyAutoFit
+- autofit_assistant
+- autofit_inference
+- autogalaxy_assistant
+- autolens_inference
+- autocti_assistant
 - autofit_profiling
 - autolens_assistant
 - autolens_profiling
@@ -12,7 +18,7 @@ Autonomy: supervised
 Priority: high
 Status: formalised
 Consequence: glance
-Witness: each repo's activate.sh HPC branch fills an unset TMPDIR with `$(dirname "$PYAUTO_HPC_CACHE")/tmp` (mkdir'd), with text identical to phase A; a preset TMPDIR wins (checked by sourcing under env -i with a fake PYAUTO_HPC_BASE).
+Witness: each repo's activate.sh HPC branch replaces an unset OR Slurm-default (`/tmp`) TMPDIR with `$(dirname "$PYAUTO_HPC_CACHE")/tmp` (mkdir'd), with text identical to phase A; a preset TMPDIR wins (checked by sourcing under env -i with a fake PYAUTO_HPC_BASE).
 Review-minutes: 3
 Filed: 2026-11-12
 
@@ -25,3 +31,17 @@ Copy the five-line TMPDIR block from autofit_assistant/activate.sh (directly aft
 `ASTROPY_CACHE_DIR` export) into each repo's PYAUTO_HPC_CACHE block. Why: on RAL compute
 nodes `/tmp` sits on a tiny local OS disk that tools filled, crashing nodes (RAL admin,
 2026-11-12).
+
+## Added 2026-11-12: Slurm's own TMPDIR=/tmp defeats fill-if-unset (found by a live probe)
+
+Probe jobs 415133/415134 on euclid-ral-compute-1: with the default `--export=ALL` every
+variable is right (the RAL login drop-in propagates). With `--export=NONE,...` plus
+`source activate.sh`, caches were right but **TMPDIR=/tmp**: Slurm sets `TMPDIR` to its
+`TmpFS` (`/tmp`) when the submit environment has none, so phase A's
+`${TMPDIR:-...}` never fires. Fix everywhere phase A put TMPDIR (the five phase-A
+activate.sh files plus PyAutoFit `autofit/campaign/scheduler/slurm.py` `_cache_exports`)
+and in the four phase-B repos: treat `TMPDIR` that is unset, empty or exactly `/tmp` as
+unset, e.g.
+`if [ -z "${TMPDIR:-}" ] || [ "$TMPDIR" = /tmp ]; then export TMPDIR=".../tmp"; fi`.
+Add a PyAutoFit test for the `/tmp` case. Note: `/tmp` on compute-1 is a 5.3 TB disk
+(5.0 TB free), so this is lower urgency than the `$HOME` caches, which are fixed.
