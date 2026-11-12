@@ -1,4 +1,21 @@
 
+## hpc-tmpdir-slurm-default
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1769
+- issued: 2026-11-12
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/hpc-tmpdir-slurm-default
+- repos:
+  - PyAutoFit: feature/hpc-tmpdir-slurm-default
+  - autofit_assistant: feature/hpc-tmpdir-slurm-default
+  - autofit_inference: feature/hpc-tmpdir-slurm-default
+  - autogalaxy_assistant: feature/hpc-tmpdir-slurm-default
+  - autolens_inference: feature/hpc-tmpdir-slurm-default
+  - autocti_assistant: feature/hpc-tmpdir-slurm-default
+- prompt: active/hpc_tmpdir_slurm_default.md
+- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary (human: "fix the TMPDIR=/tmp gap now too", 2026-11-12)
+- heart-ack: YELLOW (PyAutoArray open PR 8d old) acknowledged by the human 2026-11-12 for this HPC fix line
+
 ## jax-floor-0-12
 - issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/215
 - issued: 2026-11-11
