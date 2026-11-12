@@ -1,3 +1,22 @@
+# Feature housekeeping completed
+
+Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/659
+
+Merged all four PRs on 2026-11-12 after all 24 exact-head CI jobs passed, every PR was CLEAN/MERGEABLE, and Heart reported not frozen. Live human merge authorization; no release.
+
+- PyAutoLens #853: 92498a4b111eec6152e6138080a2b70c267a217a
+- PyAutoGalaxy #712: d6f304a51926ed0f0e7f5ca1f02039d4f15df5bc
+- autolens_workspace #660: 3272361554bf905f6bae472203eac4901c245f99
+- autogalaxy_workspace #278: f714fa48bab8518856d946949144baf75d6eced0
+
+Scientific-use-case-first prose for fluxes, time delays and manual S/N simulations; corrected H0 and peak-pixel S/N explanations. Added AutoLens advanced imaging ellipse introduction routing to maintained PyAutoGalaxy fit/modeling/multipoles examples. Compact AutoLens overview links, fuller Galaxy ellipse overview, corrected README routes, notebooks and navigator exports. Existing images and executable behavior preserved.
+
+Validation: six Python AST/code-cell sets unchanged, new ellipse prose-only, notebook schemas and 14 links pass; Sphinx feature pages pass with warnings as errors; navigator/search-memory/size/whitespace checks pass. #658 edit paths disjoint. Executed Markdown renderer lacked dill, so only prose synchronized while preserving existing outputs; CI subsequently all green.
+
+Heart RED development-only override recorded at ship; merge used separate live human authorization and clear freeze. Review artifacts: C:\Users\Jammy\Workspace\Science\scratch\feature_housekeeping_review_20261112\applied\.
+
+## Original prompt
+
 Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/659
 Issued: 2026-11-12
 

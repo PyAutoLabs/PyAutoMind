@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2247 records across 11 buckets.
+2248 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -173,6 +173,7 @@ markers; everything below GENERATED is rebuilt.
 - [eyes-group-cluster-gallery](2026/11/eyes-group-cluster-gallery.md) — superseded by human decision — autolens_visualization#5 and #14, record `complete/2026/10/viz-all-dataset-type…
 - [eyes-multi-galaxy-gallery](2026/11/eyes-multi-galaxy-gallery.md) — superseded by human decision — autolens_visualization#5 (+ 465fc508 datasets), record `complete/2026/10/viz-al…
 - [eyes-survey-next-action-stale](2026/11/eyes-survey-next-action-stale.md) — RETIRED as stale, no change made. The prompt's premise was false: only the `autolens_workspace_test/gallery/` …
+- [feature-housekeeping](2026/11/feature-housekeeping.md)
 - [gallery-runner-missing-tiers](2026/11/gallery-runner-missing-tiers.md) — RETIRED as obsolete, no change made. The gallery runner it targeted (`gallery/gallery_run.sh`, `gallery_build.…
 - [general-docs-refresh](2026/11/general-docs-refresh.md)
 - [generate-converter-preflight](2026/11/generate-converter-preflight.md)
