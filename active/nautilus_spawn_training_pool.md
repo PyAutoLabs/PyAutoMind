@@ -298,3 +298,10 @@ The previous approved plan says: "No extra job, retry/requeue, GPU or alternate 
 Diagnostic415135 completed0:0 in1s using1CPU/256MiB. The compute mount is Ceph; login sees NFS4. Two existing file hashes matched between both hosts and compute-written receipts were visible from login. Runtime caches use local ext4. No science ran.
 
 Correction47857ec3995d6c924d2c8acb529d06585bd069c8 freezes both observed mount identities, the retained root and immutable witness hashes in a separate checksummed storage contract embedded in runtime artifact schema2. It rejects wrong/local/ephemeral volumes and path/witness changes; failure receipts now preserve mount observations before rejection. Wrapper explicitly claims fresh attempt02; original job415132 remains intact.240 tests, Ruff/format, shell and unchanged catalogue pass, author review. Artifact10/fresh restore active; corrected pilot approval unused. Outside Pulse/human merge.
+
+
+## Corrected RAL pilot submitted — 2026-11-12
+
+Fresh artifact10 restore passed in34.6s (35.9s including cleanup), no science, cache removed. Exact producer47857ec and eight frozen inputs staged; old environment retained as ral-environment-attempt01.sh.240 tests and exact-head CI43202895306 green. Submitted exactly once through hpc/sync: job415136. Corrected authorization now USED; no replacement/retry/requeue. Initial live compute bootstrap passed23.92s, runtime validation and preflight passed, scientific experiment started. Original job415132 and diagnostic415135 retained. Outside Pulse; merge human.
+
+Fresh authoritative Heart 2026-11-12T10:38:39.599379+00:00 RED: "PyAutoNerves: 2 commit(s) behind origin"; "PyAutoFit: 2 commit(s) behind origin"; "PyAutoLens: on branch feature/mge-feature-review (not main)"; "PyAutoLens: 2 uncommitted source change(s)". Existing experiment-specific development override applies; source/runtime/CI gates passed, no release or merge authority. Full receipt retained in .session/readiness-corrected-presubmit.json.

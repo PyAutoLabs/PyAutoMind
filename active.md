@@ -206,7 +206,7 @@
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/16
 - issued: 2026-11-10
 - session: OpenAI Codex desktop (session ID unavailable)
-- status: workspace-dev (diagnostic and one corrected pilot approved2026-11-12)
+- status: workspace-dev (corrected RAL job415136 running; approval consumed)
 - prompt: active/nautilus_spawn_training_pool.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-spawn-training-pool
 - repos:
@@ -252,3 +252,5 @@
 - RAL-cache-implementation: live human approved amendment. Producer c243ef676ffa15fc9e4808abc104a93c70bc8145;229 tooling tests/Ruff/format/shell/catalogue pass. Private RAL login-host local runtime passed full provenance in7.35s with90 exact third-party pins/native digest; no scientific work. Artifact09 checksum verified; fresh restore09 passed49.95s (53.29s including guarded cleanup), no sampling/training. Final retained-checkout staging timed out600s in NFS git status before checkout update; no submission environment/pilot output, no Slurm job submitted. Original single-job authorization unused; resume staging after NFS recovers. Heart receipt2026-11-11T10:45:45.346227+00:00 RED: "release validation FAILED (stage integrate)" under existing development override. NFS outputs/all science limits unchanged; outside Pulse/human merge.
 
 - RAL-submission-2026-11-12: recovered current live user-owned SSH agent by matching prior public-key fingerprints, no key/config edits. Bounded NFS checks and final staging passed; retained producer clean atc243ef6, exact-head CI43015855847 green. Submitted ONCE via hpc/sync: job415132. Original authorization USED; no automatic replacement/requeue. Monitor this job, retain raw results; outside Pulse/human merge. Latest recorded Heart2026-11-11T13:01:05.642178+00:00 YELLOW, "PyAutoArray: open PR 8d old"; existing development authorization retained.
+
+- RAL-corrected-submission: job415136 submitted once at47857ec after240 tests/CI43202895306 and fresh restore34.6s passed. Compute bootstrap23.92s/preflight passed; experiment running. Corrected approval USED; no replacement, outside Pulse/human merge. Heart2026-11-12T10:38:39.599379+00:00 RED under existing scoped override: "PyAutoNerves: 2 commit(s) behind origin"; "PyAutoFit: 2 commit(s) behind origin"; "PyAutoLens: on branch feature/mge-feature-review (not main)"; "PyAutoLens: 2 uncommitted source change(s)".
