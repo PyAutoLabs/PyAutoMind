@@ -46,3 +46,22 @@ Heart RED 2026-11-12T16:29:40.460026+00:00:
 Await live development-only Heart RED override for #638 before commit/push/open both PRs. No merge.
 Review: /mnt/c/Users/Jammy/Workspace/Science/scratch/stellar_dark_individual_review_20261112/applied/index.html
 Validation and PR body drafts: organs/PyAutoMind/tmp/stellar_dark_review/
+
+## Development-only Heart RED override
+
+Human authorization (2026-11-12): I approve the development-only Heart RED override for #638. Commit, push and open both PRs for review, don't merge yet.
+
+Exact RED reasons (2026-11-12T16:29:40.460026+00:00):
+- `PyAutoLens: on branch feature/stellar-dark-review (not main)`
+- `PyAutoLens: 2 uncommitted source change(s)`
+- `install verification FAILED (testpypi; checks F)`
+- `release validation FAILED (stage integrate)`
+
+Fresh checks passed: syntax; unchanged executable AST and notebook code cells; approved draft parity apart from image path/trailing whitespace; image identity and local links; navigator/banner lint; search-memory check; size guard; whitespace; focused Sphinx build with warnings treated as errors. No numerical/API changes. Full numerical and smoke suites were not rerun for this prose/assets-only delta. The preceding potential-correction PRs passed all 12 CI jobs on the same base; that is prior evidence, not fresh testing.
+
+Commit/push/PR-open only; no merge, release or CI bypass.
+
+## Review PR handoff — 2026-11-12
+- Workspace: https://github.com/PyAutoLabs/autolens_workspace/pull/639 — 8a58e6916c5f7896810604d41b4d1da5ea4fd590
+- RTD: https://github.com/PyAutoLabs/PyAutoLens/pull/830 — 5294a90d2c7428738fd6a2c7b93dd42cd04b4f7e
+- Both committed and pushed under the approved #638 development-only override. Open for human review; neither merged. CI not awaited. Next: human review, then separately authorized CI/freeze check and merge.
