@@ -332,3 +332,10 @@ RAL setup is now validated. Job415136 passed actual storage/runtime/allocation c
 ## Why approval is needed
 
 The approved RAL setup repair plan authorizes “exactly one corrected scientific pilot” and says “Stop on first failure; no further scientific job, retry/requeue or replacement.” Job415136 used that allowance. This new prior-verification correction and fresh job extend that plan.
+
+
+## Prior correction approved — 2026-11-12
+
+Human selected "Approve correction and one fresh pilot". This authorizes the saved prior-preservation correction and ONE new same-limit RAL pilot after all gates. Outside Pulse; merge remains human. New attempt03 allowance UNUSED until sbatch; earlier415132/415136 retained.
+
+Implemented prior-preserving verify_checkpoint at eb88e0c; non-identity-prior regression fails under old code and passes corrected;244 tests pass. Offline pinned-runtime checkpoint reconstruction validates all raw posterior arrays exactly, prior negative control differs, checkpoint unchanged, zero sampling/training/likelihood calls; does not claim retrospective original-live-object parity. CI43206309695 caught an unrelated procfs ESRCH race in existing cleanup test; fixing that test before new exact-head CI/artifact. Artifact11 at eb88e0c is setup-only and will be retained; final producer artifact/restore required before submission.

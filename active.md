@@ -216,7 +216,7 @@
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/16
 - issued: 2026-11-10
 - session: OpenAI Codex desktop (session ID unavailable)
-- status: workspace-dev (RAL setup verified; job415136 halted; prior-verification correction awaits approval)
+- status: workspace-dev (prior correction and one fresh pilot approved; validation/staging)
 - prompt: active/nautilus_spawn_training_pool.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-spawn-training-pool
 - repos:
