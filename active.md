@@ -93,7 +93,7 @@
 - issued: 2026-11-12
 - session: OpenAI Codex desktop
 - prompt: active/feature_housekeeping.md
-- status: validated; awaiting development-only Heart RED override
+- status: awaiting-review
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/feature-housekeeping
 - tier: judge — merge mode: human /prm
 - coordination: live user approved separate documentation worktree alongside workspace-readme-images #658; preserve edits and check compatibility
@@ -102,3 +102,13 @@
   - PyAutoGalaxy: feature/feature-housekeeping
   - autolens_workspace: feature/feature-housekeeping
   - autogalaxy_workspace: feature/feature-housekeeping
+
+- heart-red-override:
+  authorization: "Approve development-only override for #659"
+  reasons: ["PyAutoNerves: 2 commit(s) behind origin", "PyAutoFit: 2 commit(s) behind origin", "PyAutoArray: 2 commit(s) behind origin", "PyAutoGalaxy: on branch feature/feature-housekeeping (not main)", "PyAutoGalaxy: 1 uncommitted source change(s)", "PyAutoLens: on branch feature/feature-housekeeping (not main)", "PyAutoLens: 1 uncommitted source change(s)", "PyAutoCTI: 2 commit(s) behind origin", "install verification FAILED (testpypi; checks F)", "release validation FAILED (stage integrate)"]
+  gates: PASS: 6 Python ASTs and notebook code-cell sets unchanged; new ellipse is prose-only; schemas valid; 14 notebook links resolve; generated Markdown prose synchronized with outputs preserved; #658 edit paths disjoint; whitespace clean. Both Sphinx feature pages pass -W; navigator, search-memory and size checks pass. Runtime suites not rerun for prose-only changes. Executed Markdown prose synchronized preserving outputs after renderer kernel lacked dill.
+
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/853
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/712
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/660
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/278

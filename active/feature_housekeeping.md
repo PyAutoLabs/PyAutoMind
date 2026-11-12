@@ -29,3 +29,10 @@ Both Sphinx feature-page builds pass with warnings as errors. Navigator, search-
 
 Review bundle: /mnt/c/Users/Jammy/Workspace/Science/scratch/feature_housekeeping_review_20261112/applied/index.html
 Heart RED: awaiting live task-specific override for #659 before source commit/push/PR.
+
+## PR-open checkpoint
+Live user approved development-only Heart RED override for #659. Four commits pushed, four PRs open; no merge or release.
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/853
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/712
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/660
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/278
