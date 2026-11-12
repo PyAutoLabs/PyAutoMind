@@ -265,3 +265,30 @@ Final staging exited124 at600s while `git status --porcelain` waited in an NFS R
 Recovered the new user-owned SSH agent automatically by matching previously supplied public-key fingerprints; no keys/configuration changed. NFS checks and the retained clean checkout update passed today. Exact c243ef6 producer, artifact and six frozen submission inputs are staged; CI43015855847 remains green. The task-internal staging guard now captures Git status before testing its output, so a failed Git command cannot be mistaken for a clean tree; bounded read-only status avoids optional index refresh writes.
 
 Submitted once through hpc/sync: job415132. Original single-job approval is now USED. Watch/collect this job only; no second submission, replacement or relaxed limits. Outside Pulse; human merge.
+
+# RAL setup repair plan — 2026-11-12
+
+Status: proposed; awaiting authorization for new scheduler work. Outside Pulse; human merge.
+
+## Established facts
+
+The chat did not inherit SSH_AUTH_SOCK and the saved socket expired. We recovered the live user-owned agent by matching the public-key fingerprints the human previously supplied; authenticated access through the existing route works. No private keys or user SSH configuration were changed. Future resumes should discover a matching live socket before asking the user for one.
+
+NFS checks and final staging now pass. The retained producer is clean at c243ef676ffa15fc9e4808abc104a93c70bc8145, matching the already-validated artifact;229 tests and exact-head CI43015855847 pass. The task-local staging script was hardened to capture Git status with an explicit failure exit and a30s timeout, rather than treating failed command output as a clean tree.
+
+The original approved job415132 ran on euclid-ral-compute-1 and failed after2s at the storage guard. No sampling/training started. Bootstrap elapsed0.82s, cleanup complete. The guard rejects scientific-output mount types other than nfs/nfs4, inferred from the login host. The same scripts and failure receipts are accessible from login and compute, but the actual compute mount type was not retained: the guard raises before returning its filesystem snapshot. Root cause beyond this unjustified type assumption remains unverified.
+
+Read-only compute SSH was attempted using the scheduler-reported hostname and existing local agent through the existing jump route; it rejected public-key authentication. First-use public host identity was retained only in task-owned known-hosts files; no global SSH config or key was changed. Do not bypass the denial or submit another job under the consumed original approval.
+
+## Proposed bounded work
+
+1. Submit exactly one setup-only diagnostic on partition ral: one node/task/CPU,256MiB,60s, no exclusivity, GPU, array, requeue, sampling, likelihood evaluation or neural training. Execute system utilities/system Python only. Retain exact commands, job ID, stdout/stderr and final accounting in a new diagnostic directory.
+2. Record the compute node's findmnt JSON and mountinfo for /tmp and the existing retained task/output path, hostname, task marker/content identity, and scheduler/cgroup context. Write only diagnostic receipts to the original retained task directory and confirm they are visible from login. Do not read another campaign's data or change its jobs.
+3. Correct the existing bootstrap to validate the observed shared retained-storage identity rather than assuming the login-host protocol label describes compute-node mounts. Keep the exact retained output location and both arms on the same filesystem. Capture observed storage details before any rejection. Do not broadly accept arbitrary local disks or silently move scientific outputs. If the diagnostic cannot establish that the output is the same retained shared storage, stop and report.
+4. Keep the correction in the existing branch/PR17 and issue16. Add regression tests using the actual mount records for accepted shared storage and rejected wrong/ephemeral storage, plus failure-receipt coverage. Preserve source/runtime/build pins, full inventory checks and allocation gates. Use a fresh explicit attempt02 claim/output directory so job415132 and every earlier artifact remain intact; duplicate execution of an attempt must still fail.
+5. Complete tests/Ruff/format/catalogue/shell checks, author review, exact-head CI and Heart under the existing scoped development override. Rebuild and retain the artifact at the corrected exact producer, validate a fresh restore without sampling, then stage frozen inputs. Preserve every prior environment, artifact and log. Routine implementation fixes and setup-only validation within this plan need no further approval.
+6. Once all gates pass, submit exactly one corrected scientific pilot: exclusive ral node, one task/four bound physical cores,8GiB,35min; bootstrap180s, cleanup reserve120s;18children maximum,120s/4096MiB each,1800s science total, six correctness children before twelve timings. Same four native networks, source/package pins, scientific configuration, retained output filesystem and serial/pool comparison. Stop on first failure; no further scientific job, retry/requeue or replacement. Retain raw data and final accounting. Merge stays human; no Pulse ingestion or release.
+
+## Approval boundary
+
+The previous approved plan says: "No extra job, retry/requeue, GPU or alternate partition." Its one job was415132. The workspace AGENTS.md also says: "Plan before editing. Present a plan and wait for explicit user approval before editing any source, workspace script, notebook, test, or release file." This amendment authorizes the specific diagnostic, informed guard correction and one corrected pilot together. It does not authorize open-ended jobs or changing scientific limits.
