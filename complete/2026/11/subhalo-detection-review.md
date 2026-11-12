@@ -1,3 +1,23 @@
+# Subhalo detection introduction and illustration
+
+Merged 2026-11-12 after explicit human merge instruction, all 12 exact-head CI jobs passed, and Heart freeze returned not frozen. No release performed.
+
+- Workspace PR: https://github.com/PyAutoLabs/autolens_workspace/pull/633
+- Workspace merge: e555a20b28a99458544e3e3c107702ce7c80c37b
+- RTD PR: https://github.com/PyAutoLabs/PyAutoLens/pull/827
+- RTD merge: 99cf36a3efcddd80033036ac934c01aa1ecf3544
+- Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/632 (closed)
+
+Applied approved scientific-use-case opening, early sensitivity-mapping and 54-lens paper links, preserved teaching, repaired contents and qualified evidence interpretation. Approved conceptual arc-perturbation illustration used in feature, workspace tour and RTD. Notebooks/catalogues regenerated. No executable/API changes.
+
+Fresh local syntax, executable AST/notebook code-cell parity, approved text and image identity, image paths, navigation, size and focused Sphinx checks passed. All 8 workspace and 4 PyAutoLens CI jobs passed on the shipped heads.
+
+Human review: /mnt/c/Users/Jammy/Workspace/Science/scratch/subhalo_detection_individual_review_20261112/applied/index.html
+
+Continue individual feature reviews, bringing scientific use cases forward and preserving teaching detail. No next feature selected yet.
+
+## Original prompt
+
 # Apply approved subhalo detection introduction and illustration
 Repos: @autolens_workspace @PyAutoLens
 Type: docs
