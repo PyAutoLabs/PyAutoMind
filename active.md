@@ -95,4 +95,10 @@
 - prompt: active/shapelets_review.md
 - tier: judge; review PRs only, no merge
 - coordination: explicit live approval for separate documentation worktree alongside three-autos-public-framing
-- next: await development-only Heart RED override for #642; staged and validated, no source commit/push/PR yet
+- next: human review of workspace #643 and PyAutoLens #835; no merge authorized
+- prs: https://github.com/PyAutoLabs/autolens_workspace/pull/643 ; https://github.com/PyAutoLabs/PyAutoLens/pull/835
+
+- heart-red-override:
+  - authorization: I approve the development-only Heart RED override for #642. Commit, push and open both PRs for review, don't merge yet.
+  - exact-red-reasons: PyAutoLens: on branch feature/shapelets-review (not main); PyAutoLens: 2 uncommitted source change(s); install verification FAILED (testpypi; checks F); release validation FAILED (stage integrate)
+  - gates: Fresh checks passed: syntax; executable AST/notebook code-cell parity; approved draft and illustration identity; original basis grid preserved byte-for-byte; local image links; navigator/banner, search-memory, size and whitespace checks; focused Sphinx build with warnings treated as errors. No numerical/API changes. Full numerical/smoke suites were not rerun for this prose/assets-only delta; preceding double source-plane PRs passed all 12 CI jobs on the same base (prior evidence, not fresh testing).
