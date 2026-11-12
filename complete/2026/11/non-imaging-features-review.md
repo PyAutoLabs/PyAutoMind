@@ -1,6 +1,37 @@
 # Non-imaging feature introductions and image reuse
 
 Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/656
+Completed: 2026-11-12
+
+## Shipped
+
+Applied all 51 approved non-imaging feature introductions with scientific use cases first and teaching detail retained. Reused 48 approved feature images and the new-user-guide lens-scale/dataset diagrams; added approved Group Halo, Deblending and Strong + Weak Lensing images. Updated the workspace root guide and RTD overview, regenerated 52 notebooks and navigation, and preserved executable behavior.
+
+- PyAutoLens PR: https://github.com/PyAutoLabs/PyAutoLens/pull/851
+- Merge: b24eabe2e428437fa39abc0807e144bbea8c20a6
+- Workspace PR: https://github.com/PyAutoLabs/autolens_workspace/pull/657
+- Merge: 5e19ce38737c954bf6527f7042b1746ab29e2563
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/851
+
+## Validation and authorization
+
+All 12 exact-head GitHub jobs passed: Lens Docs plus Python 3.12/3.13 and no-JAX tests; workspace navigator (four jobs), size guard and smoke (changes plus Python 3.12/3.13). Both PRs CLEAN/MERGEABLE; release freeze clear. Live human explicitly requested conditional merge; library merged first and both states verified MERGED. Both branch heads proved ancestors of origin/main.
+
+Local checks: 52 script ASTs and notebook executable code preserved, notebook schemas valid, 267 notebook links resolve, approved text/image parity, full RTD feature-page Sphinx build with warnings as errors, navigator/search-memory/size/whitespace checks passed. One existing missing root pixelization-overview link remains unchanged.
+
+Development-only Heart RED override was approved for #656 and recorded in all four sinks. This merge is not a release and does not clear Heart RED.
+
+## Review and resume
+
+Review bundle: /mnt/c/Users/Jammy/Workspace/Science/scratch/non_imaging_feature_review_20261112/applied/
+Evidence: organs/PyAutoMind/tmp/non_imaging_feature_review/merge_ci.json
+All feature review scope complete. No remaining implementation work for #656.
+
+## Original prompt
+
+# Non-imaging feature introductions and image reuse
+
+Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/656
 Issued: 2026-11-12
 Consequence: judge
 Difficulty: medium

@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2246 records across 11 buckets.
+2247 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -240,6 +240,7 @@ markers; everything below GENERATED is rebuilt.
 - [nfw-virial-mass-conc-jax](2026/11/nfw-virial-mass-conc-jax.md) — - `NFWVirialMassConcSph` (m200c + free concentration) is now JAX-traceable: `kappa_s_and_scale_radius` picks `…
 - [nightly-token-refresh](2026/11/nightly-token-refresh.md)
 - [no-untimed-network-downloads-check](2026/11/no-untimed-network-downloads-check.md)
+- [non-imaging-features-review](2026/11/non-imaging-features-review.md)
 - [numba-fork-safe-threading](2026/11/numba-fork-safe-threading.md)
 - [numba-gate-retune-superseded](2026/11/numba-gate-retune-superseded.md) — superseded — PyAutoArray#632 (17caf228), records `complete/2026/10/interferometer-numba-route-gate.md` and `de…
 - [numba-num-threads-pin-delaunay-nn](2026/11/numba-num-threads-pin-delaunay-nn.md)

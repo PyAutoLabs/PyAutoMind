@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 7 in flight",
-  "updated": "2026-11-12T20:18:15Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
+  "updated": "2026-11-12T20:26:31Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,12 +12,6 @@
       "text": "Polish the homepage flow \u2014 awaiting-merge",
       "url": "https://github.com/Jammy2211/Jammy2211.github.io/pull/4",
       "prompt": "Use the start-dev skill. active/homepage_flow_polish.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Non-imaging feature introductions and image reuse \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/851",
-      "prompt": "Use the start-dev skill. active/non_imaging_features_review.md"
     },
     {
       "severity": "yellow",
@@ -63,12 +57,6 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#851 \u2014 Non-imaging feature introductions and image reuse",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/851",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
       "text": "pending release: PyAutoLens PyAutoLens#833 \u2014 Coordinated public framing: the three autos",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/833",
       "prompt": null
@@ -89,6 +77,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoLens PyAutoLens#842 \u2014 Merged",
       "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/842",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoLens PyAutoLens#851 \u2014 Shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/851",
       "prompt": null
     },
     {
@@ -126,6 +120,12 @@
       "text": "pick: Phase B: send HPC temp files to the shared disk (TMPDIR)\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md",
       "prompt": "Use the start-dev skill. draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Fix KNN neighbor search for a partial final point block",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md",
+      "prompt": "Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md"
     }
   ]
 }
