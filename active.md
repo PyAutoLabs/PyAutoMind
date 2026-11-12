@@ -177,7 +177,7 @@
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/16
 - issued: 2026-11-10
 - session: OpenAI Codex desktop (session ID unavailable)
-- status: awaiting-setup-repair-approval (job415132 storage guard failed before science; original approval used)
+- status: workspace-dev (diagnostic and one corrected pilot approved2026-11-12)
 - prompt: active/nautilus_spawn_training_pool.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-spawn-training-pool
 - repos:

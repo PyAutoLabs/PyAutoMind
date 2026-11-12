@@ -268,7 +268,7 @@ Submitted once through hpc/sync: job415132. Original single-job approval is now 
 
 # RAL setup repair plan — 2026-11-12
 
-Status: proposed; awaiting authorization for new scheduler work. Outside Pulse; human merge.
+Status: approved by live human2026-11-12 ("Approve diagnostic and corrected pilot"). Outside Pulse; human merge.
 
 ## Established facts
 
