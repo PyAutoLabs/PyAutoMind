@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-11-12T18:29:47Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 7 in flight",
+  "updated": "2026-11-12T18:37:13Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,12 +12,6 @@
       "text": "Polish the homepage flow \u2014 awaiting-merge",
       "url": "https://github.com/Jammy2211/Jammy2211.github.io/pull/4",
       "prompt": "Use the start-dev skill. active/homepage_flow_polish.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "New User Guide visuals \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/issues/838",
-      "prompt": "Use the start-dev skill. active/new_user_guide_visuals.md"
     },
     {
       "severity": "yellow",
@@ -126,6 +120,12 @@
       "text": "pick: Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md",
       "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md",
+      "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md"
     }
   ]
 }

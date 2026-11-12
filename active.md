@@ -87,21 +87,6 @@
   - PyAutoBrain: feature/merge-actor-audit
   - PyAutoMind: feature/merge-actor-audit
 
-## new-user-guide-visuals
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/838
-- issued: 2026-11-12
-- session: OpenAI Codex desktop
-- status: awaiting-merge
-- prompt: active/new_user_guide_visuals.md
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/new-user-guide-visuals
-- repos:
-  - PyAutoLens: feature/new-user-guide-visuals
-  - autolens_workspace: feature/new-user-guide-visuals
-  - PyAutoGalaxy: feature/new-user-guide-visuals
-  - autogalaxy_workspace: feature/new-user-guide-visuals
-- scope: four PRs open with images and regenerated notebooks; no merge authorized
-- tier: judge — merge mode: human /prm
-
 ## start-here-plot-ai
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/647
 - issued: 2026-11-12

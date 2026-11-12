@@ -1,3 +1,21 @@
+# New User Guide visuals — complete
+
+Issue: https://github.com/PyAutoLabs/PyAutoLens/issues/838
+
+Shortened PyAutoLens and PyAutoGalaxy RTD guides and updated both start_here Python sources, regenerated notebooks and Markdown. Included system and dataset illustrations, original prompts and provenance. Lens illustrations carry indicative Einstein radii.
+
+## Merged PRs
+- https://github.com/PyAutoLabs/PyAutoLens/pull/839 — 7bf409646fdb07c826fcb3f34f0ef594c0002b4d
+- https://github.com/PyAutoLabs/PyAutoGalaxy/pull/705 — 8c9260da18ac46c0206d944d793b2bad650a9b90
+- https://github.com/PyAutoLabs/autolens_workspace/pull/649 — 4ee301ecccad4883da83b2f6424c2cdaf0ec7097
+- https://github.com/PyAutoLabs/autogalaxy_workspace/pull/275 — 5816d73363e3410771746e935028c58fd266bf33
+
+Libraries merged first, followed by workspaces, on explicit live user instruction. All library docs and Python 3.12/3.13/no-JAX CI legs passed. Workspace navigator and size checks passed; smoke matrix intentionally skipped because no smoke-relevant paths changed. Exact-head runs inspected. Heart freeze clear; prior RED shipping override recorded; no release performed.
+
+Previews retained in C:\Users\Jammy\Workspace\Science\scratch\new_user_guide_lens_20261112\applied and new_user_guide_galaxy_20261112\applied.
+
+## Original prompt
+
 # New User Guide visuals
 
 Issue: https://github.com/PyAutoLabs/PyAutoLens/issues/838

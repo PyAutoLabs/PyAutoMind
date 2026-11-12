@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2237 records across 11 buckets.
+2238 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -231,6 +231,7 @@ markers; everything below GENERATED is rebuilt.
 - [nautilus-ep-use-jax-guard](2026/11/nautilus-ep-use-jax-guard.md) — superseded — PyAutoFit 196abf39a (2026-10-08) "Analysis.is_jax as the single JAX probe": Nautilus reads `analy…
 - [nautilus-pin-tracks-autofit](2026/11/nautilus-pin-tracks-autofit.md) — already shipped — PyAutoNerves#169 (merge 8eca4b3, 2026-09-15), record `complete/2026/09/colab-bootstrap-lazy-…
 - [nerves-false-workspace-stale](2026/11/nerves-false-workspace-stale.md) — already shipped — PyAutoNerves#203 (issue #202, merged 2026-10-17), record `complete/2026/10/workspace-freshne…
+- [new-user-guide-visuals](2026/11/new-user-guide-visuals.md)
 - [nfw-virial-mass-conc-jax](2026/11/nfw-virial-mass-conc-jax.md) — - `NFWVirialMassConcSph` (m200c + free concentration) is now JAX-traceable: `kappa_s_and_scale_radius` picks `…
 - [nightly-token-refresh](2026/11/nightly-token-refresh.md)
 - [no-untimed-network-downloads-check](2026/11/no-untimed-network-downloads-check.md)
