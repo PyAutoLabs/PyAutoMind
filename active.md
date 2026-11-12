@@ -38,13 +38,11 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/832
 - issued: 2026-11-12
 - session: Codex desktop; session ID unavailable
-- status: library-shipped, awaiting-merge (Lens/Galaxy CI running; Fit held for review)
+- status: human-review (Lens/Galaxy merged; PyAutoFit copy awaiting discussion)
 - prompt: active/three_autos_public_framing.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/three-autos-public-framing
 - tier: judge — merge mode: human /prm
 - repos:
-  - PyAutoLens: feature/three-autos-public-framing
-  - PyAutoGalaxy: feature/three-autos-public-framing
   - PyAutoFit: feature/three-autos-public-framing
 
 - validation: six-file scope and rendering checked; pre-existing Galaxy metadata warning reproduced on base; see prompt checkpoint
@@ -59,6 +57,10 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/703
 - pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/833
 - pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/703
+
+- merged: PyAutoLens#833 fdf569cd786bcdd78566dc3dee54fff63dc2873c; PyAutoGalaxy#703 8e68a6a7edfd65692e34b9bf8072b7c19f387b92
+- merge-validation: all four jobs (Docs, Python 3.12, Python 3.13, no-JAX) passed per exact PR head; freeze clear, merge states CLEAN; explicit live human merge authority
+- retained-repos: PyAutoLens and PyAutoGalaxy merged worktrees retained within the bundle; PyAutoFit still dirty and uncommitted. No release performed.
 
 ## prompt-sync-explicit-paths
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/554

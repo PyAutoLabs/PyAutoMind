@@ -66,3 +66,10 @@ Plain titles and concise introductions approved. Live #832 override authorizes c
 - Galaxy b15de28d: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/703
 - Both pending-release labels verified; required docs and unit-test jobs running. No release requested.
 - Fit remains uncommitted. Keep this task/worktree open for Fit review after Lens/Galaxy merge.
+
+## Lens/Galaxy merged; Fit remains for review
+
+- Lens PR #833 merged fdf569cd786bcdd78566dc3dee54fff63dc2873c; Galaxy PR #703 merged 8e68a6a7edfd65692e34b9bf8072b7c19f387b92. Both branch ancestries proved against origin/main.
+- All exact-head jobs passed for each: Docs, Python 3.12, Python 3.13 and no-JAX. Merge states CLEAN, freeze clear; live explicit clarification authorized merging. No release/rehearsal.
+- Lens/Galaxy repo claims released; pending-release links retained. Fit remains uncommitted in the original worktree. Issue #832 remains open for this uncompleted scope.
+- Next: discuss a concise PyAutoFit title/intro; no Fit shipping or merge is authorized yet. Do not remove the bundle while it contains these edits.
