@@ -105,5 +105,10 @@
 - prompt: active/prompt_sync_detached_push_target.md
 - epic: autonomous-orchestrators (programme M1 side fix, from M1.2 follow-up item 2)
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/557
+- heart-red-override:
+  authorization: live human 2026-11-12 "Override + merge on green" (programme session); https://github.com/PyAutoLabs/PyAutoMind/issues/556
+  reasons: "PyAutoGalaxy: on branch feature/start-here-intro-polish (not main)"; "PyAutoGalaxy: 1 uncommitted source change(s)"; "PyAutoLens: on branch feature/start-here-intro-polish (not main)"; "PyAutoLens: 2 uncommitted source change(s)"; "PyAutoLens: 2 commit(s) behind origin"; "install verification FAILED (testpypi; checks F)"; "release validation FAILED (stage integrate)"
+  gates: Mind suite 760 passed; independent review CLEAN; smoke n/a
 - repos:
   - PyAutoMind: feature/prompt-sync-detached-push
