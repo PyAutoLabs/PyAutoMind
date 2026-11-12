@@ -549,7 +549,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 93 (stage 1: 93, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
+Count toward 20: 94 (stage 1: 94, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -671,6 +671,7 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-11-11 | jax-version-policy (PyAutoDNA#5 / autolens_profiling#527) | glance | tests DNA 25 OK + profiling lint/pytest 1907 pass / smoke n/a (research scripts; pilot + RAL 415009 ran end-to-end) / review self only / heart RED (human dev override) → YELLOW ack / witness PASS (policy + laptop & RAL matrix + MGE & pixelized flag cost) | merged-unchanged | 1 |
 | 2026-11-12 | dna-policies-section (PyAutoDNA#7) | glance | tests 32 OK / smoke n/a (board render from public data, as CI) / review self only / heart YELLOW ack / witness PASS (head render + live board) | merged-unchanged | 1 |
 | 2026-11-12 | hpc-keep-off-home (PyAutoFit#1768 / autofit_assistant#63 / autofit_inference#19 / autogalaxy_assistant#46 / autolens_inference#65 / autocti_assistant#40) | glance | tests 4288 OK (+4 new) / smoke n/a (activate.sh only; env -i source test x5) / review self only / heart YELLOW ack / witness PASS (bash-run cache block + clean-env activate.sh) | merged-unchanged | 1 |
+| 2026-11-12 | shift-watcher-state-gaps (PyAutoBrain#604) | glance | tests 134/1skip; smoke n/a; review independent Opus CLEAN after fix; heart RED-override (human); witness PASS | merged-unchanged | 1 |
 
 ## Unattended `glance` sub-window (stage 2) — opened 2026-11-04
 

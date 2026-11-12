@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2233 records across 11 buckets.
+2234 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -266,6 +266,7 @@ markers; everything below GENERATED is rebuilt.
 - [session-start-hook-copies-regen](2026/11/session-start-hook-copies-regen.md) — shipped, closed. The 2026-09-29 sweep PRs landed. On HEAD of all 27 swept repos, `.claude/hooks/session-start.…
 - [shift-digest-readable-picks](2026/11/shift-digest-readable-picks.md) — pilot 4c follow-up; issue PyAutoBrain#579
 - [shift-opens-at-dispatched](2026/11/shift-opens-at-dispatched.md) — pilot 4c follow-up; issue PyAutoBrain#589
+- [shift-watcher-state-gaps](2026/11/shift-watcher-state-gaps.md)
 - [simulate-if-needed-workspace-sweep](2026/11/simulate-if-needed-workspace-sweep.md)
 - [simulator-poisson-flag-guard](2026/11/simulator-poisson-flag-guard.md) — - `SimulatorImaging.via_image_from` draws Poisson noise only when `add_poisson_noise_to_data` or `include_pois…
 - [simulator-roundoff-control](2026/11/simulator-roundoff-control.md)
