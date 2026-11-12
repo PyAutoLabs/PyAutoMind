@@ -8,8 +8,9 @@ Repos:
 Difficulty: medium
 Autonomy: human-required
 Priority: high
-Status: draft
+Status: issued
 Filed: 2026-11-10
+Issued: 2026-11-12
 Epic: autonomous-orchestrators
 Consequence: judge
 Witness: (a) the 228 `autonomy_log.md` rows since 2026-09-01 replayed through the new dev-ship scope: the share that would still have needed an override is printed, and only rows whose RED reason lies inside the branch's own repos or their dependants remain; (b) a test shows `bin/heart_feed.py` reports STALE, not the old colour, for a feed older than the configured maximum; (c) a library CI run completing on `main` triggers `heart-health.yml` (one run id shown)
