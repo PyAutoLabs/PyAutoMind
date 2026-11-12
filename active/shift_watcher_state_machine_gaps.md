@@ -7,8 +7,9 @@ Repos:
 Difficulty: small
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: issued
 Filed: 2026-11-10
+Issued: 2026-11-12
 Epic: autonomous-orchestrators
 Consequence: glance
 Witness: four new tests pass and the batch conductor's existing suite still passes: (1) a tick that raises after a reap does not dispatch the finished task again and keeps its outcome; (2) a failing `claude agents` call leaves both live workers live with crashes 0; (3) park, then `.done` appears, and the next tick records the outcome, tokens and a late-arrival line; (4) a PR that GitHub reports merged with no `.closeout` file counts as 1 merge and writes a stage-2 row

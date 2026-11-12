@@ -9,3 +9,15 @@
 - pre-check: open shadow tick on system python3.10, minimal env — 6 notify proposals, 0 spawns (2026-11-04)
 - tier: judge — merge mode: human /prm
 
+
+## shift-watcher-state-gaps
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/603
+- issued: 2026-11-12
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/shift-watcher-state-gaps
+- prompt: active/shift_watcher_state_machine_gaps.md
+- epic: autonomous-orchestrators (programme M1.1, phase 8)
+- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
+- repos:
+  - PyAutoBrain: feature/shift-watcher-state-gaps
