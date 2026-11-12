@@ -292,3 +292,9 @@ Read-only compute SSH was attempted using the scheduler-reported hostname and ex
 ## Approval boundary
 
 The previous approved plan says: "No extra job, retry/requeue, GPU or alternate partition." Its one job was415132. The workspace AGENTS.md also says: "Plan before editing. Present a plan and wait for explicit user approval before editing any source, workspace script, notebook, test, or release file." This amendment authorizes the specific diagnostic, informed guard correction and one corrected pilot together. It does not authorize open-ended jobs or changing scientific limits.
+
+## Storage diagnostic and correction
+
+Diagnostic415135 completed0:0 in1s using1CPU/256MiB. The compute mount is Ceph; login sees NFS4. Two existing file hashes matched between both hosts and compute-written receipts were visible from login. Runtime caches use local ext4. No science ran.
+
+Correction47857ec3995d6c924d2c8acb529d06585bd069c8 freezes both observed mount identities, the retained root and immutable witness hashes in a separate checksummed storage contract embedded in runtime artifact schema2. It rejects wrong/local/ephemeral volumes and path/witness changes; failure receipts now preserve mount observations before rejection. Wrapper explicitly claims fresh attempt02; original job415132 remains intact.240 tests, Ruff/format, shell and unchanged catalogue pass, author review. Artifact10/fresh restore active; corrected pilot approval unused. Outside Pulse/human merge.
