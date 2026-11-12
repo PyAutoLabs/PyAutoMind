@@ -506,3 +506,8 @@ Concrete two-level plan: draft/feature/autofit/nautilus_parent_cpu_slowdown.md. 
 Proposed one exclusive RAL job on euclid-ral-compute-1, four bound physical cores, 8GiB, 35 minutes; 12 case groups, 120s/4096MiB each, 1800s total. Stop on first failure, retain all data, outside Pulse, merge human. This new implementation and compute remain UNAPPROVED; all prior job allowances are consumed. Heart authoritative receipt 2026-11-12T13:48:57.456105+00:00 remains YELLOW, no RED reasons (old Array PR and stale release validation).
 
 Human review bundle: /mnt/c/Users/Jammy/Workspace/Science/scratch/nautilus_optimizations_2026-11-10/training/parent_cpu_followup_2026-11-12/REPORT.html, with chronology plot, evidence JSON, source receipt hashes, proposed plan and resume note. Previous job415180 artifacts remain unchanged. Producer remains clean at fc508ae, draft PR17 open/unmerged.
+
+
+### Parent CPU investigation approved — 2026-11-12
+
+Live human: “Approved, proceed with the 12-fit investigation and one RAL job under those limits. Keep it outside Pulse and leave merge for me.” The saved six-arm, reverse-order 12-fit plan is approved for implementation and one gated RAL job. Allowance UNUSED. Exact reference node/science, 120s/4096MiB per group, 1800s total, exclusive four-core/8GiB/35-minute job; stop on first failure, retain all data. Resume existing workspace/issue16/PR17, no merge or Pulse.

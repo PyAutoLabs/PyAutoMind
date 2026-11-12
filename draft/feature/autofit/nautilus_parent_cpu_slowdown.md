@@ -1,6 +1,6 @@
 # Diagnose parent CPU slowdown after native training-pool use
 
-Status: proposed; new implementation/compute require approval.
+Status: approved 2026-11-12 by live human; one gated 12-fit RAL job authorized, not yet submitted.
 Target: @autofit_profiling
 Consequence: judge
 Continuation: issue16 / draft PR17, nautilus-spawn-training-pool.

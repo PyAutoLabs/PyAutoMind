@@ -166,7 +166,7 @@
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/16
 - issued: 2026-11-10
 - session: OpenAI Codex desktop (session ID unavailable)
-- status: planning (parent CPU follow-up awaiting approval; prior diagnostic complete; human merge)
+- status: workspace-dev (approved parent CPU investigation; one gated job UNUSED; human merge)
 - prompt: active/nautilus_spawn_training_pool.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-spawn-training-pool
 - repos:
