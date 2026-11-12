@@ -482,3 +482,14 @@ Reference-node implementationd3a36cf:300tests/lint/format/shell/catalogue/zero-s
 ### Fresh reference-node job415180 submitted
 
 One submission via hpc/sync at d3a36cf; all gates passed:300tests/zero-science smoke/CI43227695075, runtime4.18s/fresh restore51.19s/cleanup. Exact node euclid-ral-compute-1 requested; output training-diagnostics-ral-02 and separate environment, old claim01 preserved. New allowance CONSUMED; no retry/requeue/replacement. Monitoring owned job; outside Pulse, human merge.
+
+
+### Reference-node diagnostic complete — awaiting human review/merge
+
+Job415180 COMPLETED0:0/538s,17/17 cases, unrun0, complete cleanup/all descendants reaped. Bootstrap23.92s, scientific510.59s, largest child48.30s/592.86MiB sampled process-group RSS. All fits match reference posterior/state/model/target23500calls/12shells/ESS10038.507608002912; all12replays exact with zero forbidden calls and unchanged inputs. Phase call counts equal and accounting exact.
+
+Mean traced10Dseed2: training10.974→8.734s(−2.240), otherfit20.139→28.253s(+8.114), lifecycle~0→1.619s, workflow31.117→38.610s(+7.493). Extra parent CPU outside training7.78s accompanies extra wall8.11s; likelihood/prediction/output dominate, not extra sampling or storage waiting alone. Replays give no fixed spawn penalty; pinned0/1 slower than shared. Underlying hardware/runtime cause not isolated; no default change or uninstrumented speed claim.
+
+Measured sourced3a36cf79b5c5dfc073ec64b38595430400798ed,300tests/lint/format/shell/catalogue/zero-science smoke pass, source CI43227695075 green. Report-only headfc508aefcabf58e7c4cb65a12fcf19f2375daa8a/final CI43231203005 green. Author review only. Latest readiness receipt12:57:11Z YELLOW: "PyAutoArray: open PR 9d old"; "release validation stale: source moved since rehearsal (PyAutoLens)". No release/merge/failed-check bypass.
+
+Raw110,486,049bytes retained on RAL and locally;57,820,758byte archive plus SHA256SUMS and readable HTML/plots in Science scratch/training/10d_training_diagnosis_2026-11-12/job415180. Attempt01 and all previous jobs unchanged. Both single-job allowances consumed; no extra compute or persistent monitoring. PR17/issue16 remain open, outside Pulse, human merge. Deliverable complete; next investigation requires its own explicit scope/approval.
