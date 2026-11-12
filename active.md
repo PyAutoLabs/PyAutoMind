@@ -1,19 +1,4 @@
 
-## eigen-flag-removal
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/335
-- issued: 2026-11-12
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/eigen-flag-removal
-- repos:
-  - PyAutoHeart: feature/eigen-flag-removal
-  - autolens_workspace_test: feature/eigen-flag-removal
-  - autogalaxy_workspace_test: feature/eigen-flag-removal
-- prompt: active/remove_xla_eigen_flag_workarounds_after_jax_0_12.md
-- tier: judge (glance declared, no Witness) — merge mode: human /prm (authorized in session: "/prm when green")
-- phase-2: DEFERRED (human 2026-11-12) — autolens_profiling campaigns/_common.py XLA_CPU_WORKAROUND_FLAG (D12) after delaunay-nn-numba-remeasure + gradient-correctness-sweep release autolens_profiling; record the like-for-like break in Pulse
-- keep: PyAutoHeart release-diagnostic.yml flag arm (0.10.2 incident replay); autolens_profiling jax_version_policy/run_matrix.py (research arm)
-
 ## magnification-maps-wiring
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/818
 - issued: 2026-11-02

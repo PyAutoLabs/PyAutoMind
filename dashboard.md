@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 23 |
-| [In flight](#in-flight) | 10 |
+| [In flight](#in-flight) | 9 |
 | [Planned](#planned) | 12 |
-| [Backlog](#backlog) | 264 |
+| [Backlog](#backlog) | 265 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -1205,14 +1205,6 @@ Use the start-dev skill. active/nautilus_spawn_training_pool.md
 
 </details>
 
-<details><summary>📋 <a href="active/remove_xla_eigen_flag_workarounds_after_jax_0_12.md">Remove the per-place --xla_cpu_multi_thread_eigen=false workarounds once the jax 0.12 floor is released</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/335">issue #335</a> — issued 2026-11-12 — workspace-dev</summary>
-
-```
-Use the start-dev skill. active/remove_xla_eigen_flag_workarounds_after_jax_0_12.md
-```
-
-</details>
-
 <details><summary>📋 <a href="active/sky_orientation_euclid_dr1_and_library.md">Sky orientation (north/east): euclid_dr1 catalogue, paper and website, plus the PyAutoLens library-wide…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/115">issue #115</a> — issued 2026-10-31 — workspace-dev</summary>
 
 ```
@@ -1328,7 +1320,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 250 · local-dev 7 · ral 5
+Lanes: any 251 · local-dev 7 · ral 5
 
 <a id="human-review"></a>
 <details>
@@ -2519,7 +2511,7 @@ Use the start-dev skill. draft/docs/workspaces/feature_introductions_and_images.
 </details>
 
 <details>
-<summary><b>maintenance</b> — 17</summary>
+<summary><b>maintenance</b> — 18</summary>
 
 <details><summary>📋 <a href="draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md">Phase B: send HPC temp files to the shared disk (TMPDIR)…</a> — workspaces · small · supervised · high</summary>
 
@@ -2621,6 +2613,14 @@ Use the start-dev skill. draft/maintenance/workspaces/data_no_ellipse_config_and
 
 ```
 Use the start-dev skill. draft/maintenance/pyautoheart/dashboard_housekeeping_after_release_recovery.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autolens_profiling/remove_d12_eigen_flag_after_remeasure.md">autolens_profiling: drop the D12 eigen flag from CPU campaign legs (deferred)</a> — autolens_profiling · easy · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/maintenance/autolens_profiling/remove_d12_eigen_flag_after_remeasure.md
 ```
 
 </details>
@@ -2854,7 +2854,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-12 | filed | <a href="draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md">jax.grad through zero-contour critical curves fails on jax 0.12</a> |
 | 2026-11-12 | filed | <a href="planned.md#hpc-keep-off-home-phase-b">hpc-keep-off-home-phase-b</a> |
 | 2026-11-12 | issued | <a href="planned.md#delaunay-nn-numba-remeasure">delaunay-nn-numba-remeasure</a> |
-| 2026-11-12 | issued | <a href="active/remove_xla_eigen_flag_workarounds_after_jax_0_12.md">Remove the per-place --xla_cpu_multi_thread_eigen=false workarounds…</a> |
+| 2026-11-12 | filed | <a href="draft/maintenance/autolens_profiling/remove_d12_eigen_flag_after_remeasure.md">autolens_profiling: drop the D12 eigen flag from CPU campaign legs…</a> |
 | 2026-11-12 | filed | <a href="draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md">Phase B: send HPC temp files to the shared disk (TMPDIR)…</a> |
 | 2026-11-12 | filed | <a href="draft/bug/autonerves/colab_restart_only_when_upgraded_module_imported.md">Colab setup asks for a restart when nothing loaded was upgraded…</a> |
 | 2026-11-11 | filed | <a href="draft/bug/health_fixes/smoke_cache_stats_warnings_nameerror.md">Smoke cache-stats step fails with NameError: warnings</a> |
@@ -2947,7 +2947,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-105 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+106 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2992,7 +2992,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
 - `draft/bug/autogalaxy/wrong_jax_gradient_on_mge_likelihoods_fd.md`
 - `draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md`
-- _… and 65 more_
+- _… and 66 more_
 
 </details>
 
