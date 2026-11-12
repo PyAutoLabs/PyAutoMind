@@ -90,7 +90,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/834
 - issued: 2026-11-12
 - session: Codex desktop; session ID unavailable
-- status: workspace-dev
+- status: human-review
 - prompt: active/start_here_intro_polish.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/start-here-intro-polish
 - tier: judge — human text review before PR creation; merge mode human /prm

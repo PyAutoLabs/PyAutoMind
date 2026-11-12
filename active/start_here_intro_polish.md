@@ -30,3 +30,15 @@ Ok, I happyu with that, I think that the starting of both is too text heavy and 
 ## Authorization
 
 Looks good, go ahead and apply these to both RTD pages and the workspace start_here notebooks, using my 2D schematic for PyAutoLens. ask me to review the new text before we raise PR
+
+## Applied checkpoint — 2026-11-12
+
+- Approved text applied in .worktrees/start-here-intro-polish/{PyAutoLens,PyAutoGalaxy,autolens_workspace,autogalaxy_workspace}, all on feature/start-here-intro-polish. Changes remain uncommitted for human text review.
+- Libraries: docs/overview/overview_1_start_here.md. Lens also has byte-identical schematic PNG plus provenance TXT in docs/overview/images/overview_1/. Old natural-language-or-python fragment retained as a label.
+- Workspaces: root start_here.py, regenerated start_here.ipynb via Hands py_to_notebook + inject_colab_setup + inject_gemini_instructions, and markdown/start_here.md prose prefix regenerated from canonical source; executed remainder preserved.
+- Validation: both focused Sphinx introduction builds passed with warnings treated as errors using actual theme/CSS/MyST/copybutton presentation settings. Full API documentation build not run. Notebook schemas valid; executable script AST, all notebook code cells and metadata unchanged; all RTD content from Imports onward and markdown from Google Colab Setup onward byte-identical. git diff --check passed.
+- Live introduction links checked: all eight returned HTTP 200; prompt containers, legacy fragments and local schematic references verified in rendered HTML.
+- Brain docs audits: 79/100 each; Lens intro heuristic counts caption plus intro as five sentences; other findings concern unchanged later sections. Approved prose retained.
+- Logs: bundle autolens_preview_build.log, autogalaxy_preview_build.log, autolens_docs_audit.log, autogalaxy_docs_audit.log. Isolated .docs-venv is tooling only.
+- Review bundle: /mnt/c/Users/Jammy/Workspace/Science/scratch/start_here_intro_polish_20261112/applied_review/index.html (four rendered openings and full regenerated notebooks).
+- Next action: human reviews applied text. Do not raise PRs until that review is complete and authorized; no merge authorization.
