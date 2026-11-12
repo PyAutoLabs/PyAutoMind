@@ -1165,7 +1165,7 @@ Use the start-dev skill. active/pyautolens_ii_case_studies.md
 
 </details>
 
-<details><summary>📋 <a href="active/three_autos_public_framing.md">Coordinated public framing: the three autos</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/832">issue #832</a> — issued 2026-11-12 — library-dev</summary>
+<details><summary>📋 <a href="active/three_autos_public_framing.md">Coordinated public framing: the three autos</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/832">issue #832</a> — issued 2026-11-12 — library-dev (six-file edit complete; Heart RED shipping hold)</summary>
 
 ```
 Use the start-dev skill. active/three_autos_public_framing.md
