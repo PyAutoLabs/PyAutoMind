@@ -521,3 +521,10 @@ Producer04b33ab7be4d976c43beaaaedf09892f96703974 implements the approved12fit co
 ### Parent CPU job415196 submitted once
 
 One hpc/sync submission at04b33ab after322tests/zero-science smoke/CI43237941034 and artifact15 inventory3.82s/fresh restore36.48s/cleanup passed. New parent-cpu-diagnostics-ral-01 claim, original node requested, same approved12fit limits. Submitted2026-11-12T14:34:46Z; allowance CONSUMED, no retry/requeue/replacement. Monitor owned job to terminal, retain all data, outside Pulse, human merge.
+
+
+### Job415196 queued on the reference node — resumable handoff
+
+Read-only scheduler check2026-11-12 around14:36Z: PENDING(Resources). Required euclid-ral-compute-1 is occupied by another campaign job415182 on252CPUs; its scheduler limit ends2026-11-15T13:43:17. SLURM estimates our start2026-11-15T13:45:17 (estimate, not a guarantee). No scientific child has started; no new result. Leave the existing approved submission queued. Do not alter/cancel other jobs, relax node pinning, resubmit or arm monitoring automation.
+
+Exact measured source remains04b33ab, runtime artifact15 and dedicated environment staged on witnessed storage. Freeze the remote task checkout/wrapper/environment while queued; edits could invalidate its checksums. Resume by reading accounting/state for415196, not by rerunning submission/staging scripts. Allowance is CONSUMED; stop-first-failure still applies once it runs. PR17 remains draft/open/unmerged, outside Pulse; human merge. Local .session/RESUME_PARENT_CPU.md and human review job415196/RESUME.md record commands/paths.
