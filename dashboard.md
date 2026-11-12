@@ -1157,7 +1157,7 @@ Use the start-dev skill. active/gradient_correctness_sweep.md
 
 </details>
 
-<details><summary>📋 <a href="active/hpc_tmpdir_slurm_default.md">Treat Slurm's default TMPDIR=/tmp as unset in activate.sh and campaign job scripts</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1769">issue #1769</a> — issued 2026-11-12 — library-dev</summary>
+<details><summary>📋 <a href="active/hpc_tmpdir_slurm_default.md">Treat Slurm's default TMPDIR=/tmp as unset in activate.sh and campaign job scripts</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1769">issue #1769</a> — issued 2026-11-12 — workspace-shipped, awaiting-merge (human /prm: RED-override merge grant lapsed at turn end) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1771">PyAutoFit#1771</a>, <a href="https://github.com/PyAutoLabs/autofit_assistant/pull/64">autofit_assistant#64</a>, <a href="https://github.com/PyAutoLabs/autofit_inference/pull/20">autofit_inference#20</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_assistant/pull/47">autogalaxy_assistant#47</a>, <a href="https://github.com/PyAutoLabs/autolens_inference/pull/66">autolens_inference#66</a>, <a href="https://github.com/PyAutoLabs/autocti_assistant/pull/41">autocti_assistant#41</a> — ⏳ pending release: PyAutoFit</summary>
 
 ```
 Use the start-dev skill. active/hpc_tmpdir_slurm_default.md
@@ -3082,6 +3082,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoFit**
 
+- [PyAutoFit#1771](https://github.com/PyAutoLabs/PyAutoFit/pull/1771) — `active/hpc_tmpdir_slurm_default.md`
 - [PyAutoFit#1764](https://github.com/PyAutoLabs/PyAutoFit/pull/1764) — `active/nautilus_compact_plot_adapter.md`
 - [PyAutoFit#1765](https://github.com/PyAutoLabs/PyAutoFit/pull/1765) — `active/nautilus_cpu_checkpoint_batching.md`
 - [PyAutoFit#1761](https://github.com/PyAutoLabs/PyAutoFit/pull/1761) — `complete/2026/11/corner-anesthetic-speed.md`

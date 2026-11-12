@@ -4,9 +4,15 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 12 in flight",
-  "updated": "2026-11-12T10:57:41Z",
+  "updated": "2026-11-12T11:00:11Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Treat Slurm's default TMPDIR=/tmp as unset in activate.sh and campaign job scripts \u2014 workspace-shipped, awaiting-merge (human /prm: RED-override merge grant lapsed at turn end)",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1771",
+      "prompt": "Use the start-dev skill. active/hpc_tmpdir_slurm_default.md"
+    },
     {
       "severity": "yellow",
       "text": "Nautilus 30D evidence and output diagnostics \u2014 awaiting-merge (full30D attribution completed; CI green; human merge)",
@@ -53,6 +59,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoArray PyAutoArray#688 \u2014 simulator-poisson-flag-guard",
       "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/688",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1771 \u2014 Treat Slurm's default TMPDIR=/tmp as unset in activate.sh and campaign job scripts",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1771",
       "prompt": null
     },
     {
@@ -114,18 +126,6 @@
       "text": "pick: test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md",
       "prompt": "Use the start-dev skill. draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: SED chain waveband fit can spin forever in Nautilus exploration\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md",
-      "prompt": "Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: prompt_sync_push: commit only the paths it is given",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautomind/prompt_sync_push_explicit_paths.md",
-      "prompt": "Use the start-dev skill. draft/bug/pyautomind/prompt_sync_push_explicit_paths.md"
     }
   ]
 }
