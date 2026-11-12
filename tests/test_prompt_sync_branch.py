@@ -68,7 +68,7 @@ def test_push_from_a_feature_branch_does_not_touch_main(tmp_path):
     _git(repo, "checkout", "-b", "claude/some-task")
     (repo / "active.md").write_text("# Active\n\n## a-task\n")
 
-    res = _run(repo, 'prompt_sync_push "prompt: a subject"')
+    res = _run(repo, 'prompt_sync_push "prompt: a subject" active.md')
     assert res.returncode == 0, res.stderr
 
     assert "claude/some-task" in _remote_branches(remote)
@@ -93,7 +93,7 @@ def test_committed_work_actually_reaches_the_remote(tmp_path):
     _git(repo, "checkout", "-b", "claude/some-task")
     (repo / "active.md").write_text("# Active\n\n## a-task\n")
 
-    res = _run(repo, 'prompt_sync_push "prompt: a subject"')
+    res = _run(repo, 'prompt_sync_push "prompt: a subject" active.md')
     assert res.returncode == 0, res.stderr
 
     local_head = _git(repo, "rev-parse", "HEAD")
@@ -116,7 +116,7 @@ def test_a_branch_push_never_advances_main(tmp_path):
 
     _git(repo, "checkout", "-b", "claude/some-task")
     (repo / "active.md").write_text("# Active\n")
-    res = _run(repo, 'prompt_sync_push "prompt: a subject"')
+    res = _run(repo, 'prompt_sync_push "prompt: a subject" active.md')
     assert res.returncode == 0, res.stderr
 
     assert _git(remote, "rev-parse", "main") == main_before, (
@@ -131,7 +131,7 @@ def test_push_on_main_still_pushes_main(tmp_path):
     main_before = _git(remote, "rev-parse", "main")
 
     (repo / "active.md").write_text("# Active\n")
-    res = _run(repo, 'prompt_sync_push "prompt: a subject"')
+    res = _run(repo, 'prompt_sync_push "prompt: a subject" active.md')
     assert res.returncode == 0, res.stderr
 
     assert _git(remote, "rev-parse", "main") != main_before
@@ -145,7 +145,7 @@ def test_push_is_still_a_no_op_when_nothing_is_staged(tmp_path):
     repo, remote = _repo_with_remote(tmp_path)
     _git(repo, "checkout", "-b", "claude/some-task")
 
-    res = _run(repo, 'prompt_sync_push "prompt: nothing to do"')
+    res = _run(repo, 'prompt_sync_push "prompt: nothing to do" active.md')
     assert res.returncode == 0, res.stderr
 
     assert _remote_branches(remote) == {"main"}, (
@@ -179,6 +179,6 @@ def test_detached_head_is_refused(tmp_path):
     _git(repo, "checkout", "--detach", "HEAD")
     (repo / "active.md").write_text("# Active\n\nchanged\n")
 
-    res = _run(repo, 'prompt_sync_push "prompt: from detached"')
+    res = _run(repo, 'prompt_sync_push "prompt: from detached" active.md')
     assert res.returncode != 0
     assert "detached HEAD" in res.stderr

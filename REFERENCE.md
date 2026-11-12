@@ -206,7 +206,8 @@ dependency audits, smoke tests, lint sweeps) lives in the organ that owns it —
 `PyAutoBrain/skills/`, `PyAutoHeart/skills/`, `PyAutoHands/`.
 
 `scripts/prompt_sync.sh` is sourced by skills that mutate registry files
-(`active.md`, `planned.md`, etc.) to commit and push back to origin. It
+(`active.md`, `planned.md`, etc.) to commit the paths each call names, and only
+those, and push back to origin. It
 replaces a now-removed `admin_sync.sh` helper that formerly operated on
 `admin_jammy/prompt/`.
 
