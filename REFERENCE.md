@@ -359,6 +359,7 @@ Free-form markdown. Strong conventions:
   Issued: 2026-08-19        # optional; set when the prompt advances to active/
   Blocked-by: PyAutoFit#1436          # optional; see "Declaring a gate" below
   Epic: cluster-strong-lensing        # optional; an entry in epics.md
+  Verified: 2026-11-12 42a5be1d (PyAutoLens)  # optional; written by `batch premise`
   ```
 
   When present, `Type:` should match the work-type folder. The goal is light
@@ -527,6 +528,20 @@ faculty at conception and all overridable by declaring them:
   own: the Science orchestrator is the single RAL gateway, and a dev worker
   hands it a **RAL test packet** (what to run, at which commit, the pass/fail
   rule) — planned for phase 5 of the autonomous-orchestrators epic.
+
+  Intake infers a lane at filing from the text (`_intake.LANE_SIGNALS`): RAL,
+  SLURM, `sbatch`, A100, HPC or a `/mnt/ral` path → `ral`; CUDA or an
+  upper-case GPU → `gpu`; any other `/mnt/<drive>` path → `wsl-data`;
+  "private data" → `local-dev`. The backlog filed before that was backfilled
+  from the same table by `PyAutoBrain/bin/lane_backfill.py` (2026-11-12), whose
+  proposals a human skims before `--apply` writes them.
+- **`Verified:`** `<date> <sha> (<repo>)[, …]` — written, never by hand, when
+  `pyauto-brain batch premise <draft> --write-verified` finds the draft's
+  premise still holds on a fresh `main` (the files, functions and issues it
+  names exist; a smoke-duration claim matches the Heart's timing record). A
+  dispatched shift worker runs that check first and stops on `obsolete`; its
+  stamp reaches this file through the shift's ledger (`set-header` op), never
+  a worker commit. Absent means never checked, not stale.
 
 Measured over the 153 backlog prompts the day this shipped: **151 grade `judge`,
 because three carry a witness.** Given one, the same backlog grades 33 `notify` /
