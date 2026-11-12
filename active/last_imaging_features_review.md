@@ -53,3 +53,27 @@ Open index.html for complete feature previews and rtd/index.html for the built t
 - PyAutoCTI: 2 commit(s) behind origin
 - install verification FAILED (testpypi; checks F)
 - release validation FAILED (stage integrate)
+
+## PRs opened
+
+PyAutoLens RTD: https://github.com/PyAutoLabs/PyAutoLens/pull/850 (a53bb4dbaf79470c50294419e1fb877ba28b7719)
+autolens_workspace: https://github.com/PyAutoLabs/autolens_workspace/pull/655 (5726f9e04b8647b0952efd1abc8e8857b97e2955)
+
+Development-only Heart RED override for #654
+
+Live authorization:
+> I approve the development-only Heart RED override for #654. Commit, push and open both PRs for review, don't merge yet.
+
+Exact RED reasons:
+- PyAutoNerves: 2 commit(s) behind origin
+- PyAutoArray: 2 commit(s) behind origin
+- PyAutoGalaxy: 10 commit(s) behind origin
+- PyAutoLens: on branch feature/last-imaging-features-review (not main)
+- PyAutoLens: 3 uncommitted source change(s)
+- PyAutoCTI: 2 commit(s) behind origin
+- install verification FAILED (testpypi; checks F)
+- release validation FAILED (stage integrate)
+
+Passed: exact approved feature text and image parity; subhalo image reused unchanged; all four executable ASTs and notebook code cells preserved; notebook schemas and image paths; focused Sphinx build with warnings as errors; navigator, search-memory, size and staged whitespace checks. Concurrent api-reference-polish and general-docs-refresh scopes are disjoint. Full numerical suites were not rerun locally for this documentation-only change; required CI remains mandatory before a future merge.
+
+Commit/push/review PRs only. No merge or release authority.
