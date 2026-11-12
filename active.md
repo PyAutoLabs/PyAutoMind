@@ -83,3 +83,16 @@
   - Jammy2211.github.io: feature/homepage-flow-polish
 - prompt: active/homepage_flow_polish.md
 - tier: judge — merge mode: human /prm
+
+## shapelets-review
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/642
+- issued: 2026-11-12
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/shapelets-review
+- repos:
+  - PyAutoLens: feature/shapelets-review
+  - autolens_workspace: feature/shapelets-review
+- prompt: active/shapelets_review.md
+- tier: judge; review PRs only, no merge
+- coordination: explicit live approval for separate documentation worktree alongside three-autos-public-framing
+- next: apply approved draft and both figures; validate and open review PRs
