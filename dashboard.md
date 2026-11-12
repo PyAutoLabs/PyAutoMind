@@ -1181,7 +1181,7 @@ Use the start-dev skill. active/pyautolens_ii_case_studies.md
 
 </details>
 
-<details><summary>📋 <a href="active/start_here_intro_polish.md">Polish RTD and workspace Start Here introductions</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/834">issue #834</a> — issued 2026-11-12 — human-review</summary>
+<details><summary>📋 <a href="active/start_here_intro_polish.md">Polish RTD and workspace Start Here introductions</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/834">issue #834</a> — issued 2026-11-12 — pr-open, awaiting-human-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/836">PyAutoLens#836</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/704">PyAutoGalaxy#704</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/644">autolens_workspace#644</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/274">autogalaxy_workspace#274</a></summary>
 
 ```
 Use the start-dev skill. active/start_here_intro_polish.md
