@@ -83,6 +83,11 @@
 - epic: autonomous-orchestrators (programme M1.4, phase 8)
 - decision: human 2026-11-12 "All three as recommended" (actor classes + count rule; seeded 1-in-5 audits; read-by column non-gating) — doctrine edit authorized
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/558, https://github.com/PyAutoLabs/PyAutoBrain/pull/607
+- heart-red-override:
+  authorization: live human 2026-11-12 "Override + merge on green" (programme session); https://github.com/PyAutoLabs/PyAutoBrain/issues/606
+  reasons: "PyAutoNerves: 2 commit(s) behind origin"; "PyAutoArray: 2 commit(s) behind origin"; "PyAutoGalaxy: 4 commit(s) behind origin"; "PyAutoLens: on branch feature/extra-galaxies-review (not main)"; "PyAutoLens: 2 uncommitted source change(s)"; "PyAutoCTI: 2 commit(s) behind origin"; "install verification FAILED (testpypi; checks F)"; "release validation FAILED (stage integrate)"
+  gates: Mind suite 772; Brain closeout 21; independent review CLEAN; smoke n/a
 - repos:
   - PyAutoBrain: feature/merge-actor-audit
   - PyAutoMind: feature/merge-actor-audit
