@@ -87,3 +87,39 @@
   - autogalaxy_workspace: feature/workspace-readme-images
 - validation: four PNG URLs, twelve folder/start_here targets, GFM rendering and diff checks passed
 - next: review previews; Heart recovery or explicit development-only override before ship
+
+## heart-dev-scope
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/340
+- issued: 2026-11-12
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/heart-dev-scope
+- prompt: active/dev_ship_reason_scope_and_feed_age.md
+- epic: autonomous-orchestrators (programme M2.1, phase 9; ruled at M1 gate 2026-11-12)
+- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
+- repos:
+  - PyAutoHeart: feature/heart-dev-scope
+
+## lane-fail-closed
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/614
+- issued: 2026-11-12
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/lane-fail-closed
+- epic: autonomous-orchestrators (programme M2.3 + AUTONOMY record of all M2 rulings, phase 9; ruled at M1 gate 2026-11-12)
+- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
+- repos:
+  - PyAutoBrain: feature/lane-fail-closed
+  - PyAutoMind: feature/lane-fail-closed
+
+## release-rehearsed-shas
+- issue: https://github.com/PyAutoLabs/PyAutoHands/issues/337
+- issued: 2026-11-12
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/release-rehearsed-shas
+- prompt: active/release_builds_rehearsed_shas.md
+- epic: autonomous-orchestrators (programme M2.4, phase 9; ruled at M1 gate 2026-11-12)
+- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
+- repos:
+  - PyAutoHands: feature/release-rehearsed-shas

@@ -8,8 +8,9 @@ Repos:
 Difficulty: medium
 Autonomy: human-required
 Priority: high
-Status: draft
+Status: issued
 Filed: 2026-11-10
+Issued: 2026-11-12
 Epic: autonomous-orchestrators
 Consequence: judge
 Witness: a rehearsal followed by a release dry run in which a commit is pushed to one library's `main` between the two: the release leg's log shows it checking out the rehearsed SHA (or stopping with "main moved since rehearsal"), and for a real release `gh api repos/PyAutoLabs/<lib>/compare/<rehearsed sha>...<tag>` returns `identical` for every library
