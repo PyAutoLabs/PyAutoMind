@@ -1,3 +1,22 @@
+# Features overview polish
+
+Completed 2026-11-12. Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/661
+
+Merged gallery-first Features pages and root start_here notebooks across Lens and Galaxy, with concise scientific use cases and dataset illustrations in the New User Guides. All 68 Lens and 21 Galaxy feature introductions retained; detailed teaching guides and executable notebook cells unchanged. Preserved compatibility with #658.
+
+## Merge receipts
+- PyAutoLens#855: 9c8561c0b4d90df83a8915be999f96a29dbe1ea9
+- PyAutoGalaxy#713: 8cb605fbc6d1cabfdc733b937527ee443bf97f4f
+- autolens_workspace#663: ed8afc0d3d1f4ea9d7a1e4978f9b124d680130fa
+- autogalaxy_workspace#280: 2c9656e5f3939b90f27d49d4ccd647b8242cc1d4
+
+## Validation and authority
+Both focused Sphinx builds, notebook schema and executable parity, links/assets, browser gallery checks, navigator/search-memory/size checks passed. 20 exact-head CI jobs passed. Two workspace smoke jobs skipped; human explicitly approved merging with those skips ("i approve"). Freeze clear at merge. Development Heart RED override #661 recorded at ship; no release performed.
+
+Review bundle: C:\Users\Jammy\Workspace\Science\scratch\features_overview_polish_20261112\applied\index.html
+
+## Original prompt
+
 Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/661
 Issued: 2026-11-12
 
