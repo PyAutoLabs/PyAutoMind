@@ -1,3 +1,28 @@
+Programme M1 side lane (epic `autonomous-orchestrators`). Shipped as PyAutoHeart#339 (de77d0de5), merged 2026-11-12. Issue PyAutoHeart#338.
+
+**Re-check first.** Both review findings were unverified, and both hold:
+- **SIG-2:** 27 of 27 gate cards had a chart, but 0 of 12 suite cards and 0 of 12 import cards did. The main-branch ledger on 3.12 grew from 6,154 to 9,777 tests.
+- **SIG-3:** `board/_board.py:647` sets `history = []`, and `brain_board.yml` is read-only.
+
+SIG-2 was built here. SIG-3 needs PyAutoBrain and is split into `draft/feature/pyautobrain/brain_board_hygiene_ledger.md`.
+
+**Built:**
+- `unit_history()` keeps one main-branch point per leg per run day, respecting the epoch.
+- `timings append` persists it.
+- Suite cards get wall-clock and test-count charts, and import cards get import-seconds charts.
+- There is a new "Organism total" card.
+- The gate charts are unchanged.
+
+**Witness**, reshaped because the live board updates only after the daily job: a local cloud-style render from the published data gives 12 of 12 suite cards with 2 charts, 12 of 12 import cards with 1 chart, and an organism total of 9,777. The Heart suite gives 1334 passed. CI is green. **To verify after the next daily heart-health run:** check the charts on the live board.
+
+**Review:** CLEAN. The reviewer fuzzed 3000 histories through old and new `chart()` and got identical output, found no leaked paths, and confirmed the render survives malformed or missing history.
+
+**Heart:** RED at ship. The human gave a development-only override plus the merge command at the block gate.
+
+Follow-ups: `draft/feature/pyautoheart/unit_trend_followups.md`.
+
+## Original prompt
+
 # Boards: draw the unit-test trend, and keep the hygiene counts
 
 Type: feature

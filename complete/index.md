@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2244 records across 11 buckets.
+2246 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -163,6 +163,7 @@ markers; everything below GENERATED is rebuilt.
 - [cti-workspace-test-rebuild](2026/11/cti-workspace-test-rebuild.md)
 - [data-loading-and-selection-cuts-skill](2026/11/data-loading-and-selection-cuts-skill.md)
 - [delaunay-smoke-300s-cap](2026/11/delaunay-smoke-300s-cap.md) — Already resolved; nothing was committed. Under the smoke profile `scripts/imaging/features/pixelization/delaun…
+- [dev-metrics-boards](2026/11/dev-metrics-boards.md)
 - [dna-policies-section](2026/11/dna-policies-section.md)
 - [docs-conductor](2026/11/docs-conductor.md)
 - [dr1-rgb-flip-superseded](2026/11/dr1-rgb-flip-superseded.md) — superseded by the human 2026-10-30 (the draft's own banner); `complete/2026/10/sky-orientation-dr1-p1.md` reco…
@@ -246,6 +247,7 @@ markers; everything below GENERATED is rebuilt.
 - [organism-map-compact](2026/11/organism-map-compact.md) — PR is the tracking surface
 - [point-magnification-api](2026/11/point-magnification-api.md) — already shipped — PyAutoLens#798 (f791ac77) + autolens_workspace#598 (0f8b4db5), records `complete/2026/10/poi…
 - [pr504-guard-log-det-terms](2026/11/pr504-guard-log-det-terms.md)
+- [premise-lane-checks](2026/11/premise-lane-checks.md)
 - [procedure-lines-trim](2026/11/procedure-lines-trim.md) — PR is the tracking surface
 - [prompt-sync-detached-push](2026/11/prompt-sync-detached-push.md)
 - [prompt-sync-explicit-paths](2026/11/prompt-sync-explicit-paths.md)

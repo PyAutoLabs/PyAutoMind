@@ -563,7 +563,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 63 (stage 1: 63, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; left out by merge actor (human-/prm / in-turn-human-commanded): 34; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
+Count toward 20: 63 (stage 1: 63, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; left out by merge actor (human-/prm / in-turn-human-commanded): 36; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
 
 **Re-marked 2026-11-12 (human ruling on the M1.4 recount, programme session):** 30 rows of the 2026-10-02 → 11-03 window whose completion records say the merge was a human-typed `/prm` now carry merge actor `human-/prm` and are left out of the count (AUTONOMY.md "Ledger accuracy"; "Merge actor and random audit — 2026-11-12"). The recount named 31; `fixed-model-json` (PyAutoFit#1708) stays counted under the 2026-11-04 ruling that names it. Recount: `python3 scripts/lifecycle.py shadow-recount -v`.
 
@@ -705,6 +705,8 @@ week, never a hand-picked one.
 | 2026-11-12 | prompt-sync-explicit-paths (PyAutoMind#555 / PyAutoBrain#605) | glance | tests Mind 750; smoke n/a; review independent Opus CLEAN after fix; heart RED-override (human); witness PASS | merged-unchanged | 1 | in-turn-human-commanded (mergedBy Jammy2211) |  |
 | 2026-11-12 | prompt-sync-detached-push (PyAutoMind#557) | glance | tests Mind 760; smoke n/a; review independent Opus CLEAN after fix; heart RED-override (human); witness PASS | merged-unchanged | 1 | in-turn-human-commanded (mergedBy Jammy2211) |  |
 | 2026-11-12 | merge-actor-audit (PyAutoMind#558 / PyAutoBrain#607) | glance | tests Mind 772/Brain closeout 21; smoke n/a; review independent Opus CLEAN after fix; heart RED-override (human); witness PASS | merged-unchanged | 1 | in-turn-human-commanded (mergedBy Jammy2211) |  |
+| 2026-11-12 | premise-lane-checks (PyAutoMind#559 / PyAutoBrain#609) | glance | tests pass; smoke n/a; review independent Opus CLEAN; heart RED-override (human, block gate); witness PASS | merged-unchanged | 1 | in-turn-human-commanded (mergedBy Jammy2211) |  |
+| 2026-11-12 | dev-metrics-boards (PyAutoHeart#339) | glance | tests pass; smoke n/a; review independent Opus CLEAN; heart RED-override (human, block gate); witness PASS | merged-unchanged | 1 | in-turn-human-commanded (mergedBy Jammy2211) |  |
 
 ## Unattended `glance` sub-window (stage 2) — opened 2026-11-04
 

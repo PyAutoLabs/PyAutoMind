@@ -1,3 +1,37 @@
+Programme task **M1.3**, slices 1–2 (epic `autonomous-orchestrators`, phase 8), findings MIND-2 and MIND-3. Shipped as PyAutoMind#559 (5617341ed) and PyAutoBrain#609 (c7e7c1c16), merged 2026-11-12. Issue PyAutoBrain#608. Slice 3, an absent Lane failing closed, is a judge ruling and is programme M2.3.
+
+**Built:**
+- `pyauto-brain batch premise <draft>`, a mechanical premise check with no LLM call.
+  - It returns `ok`, `obsolete` or `unknown` with evidence.
+  - It is the first step of the shift worker template, which stops on `obsolete`.
+  - `batch brief --check` warns on obsolete picks.
+  - `--write-verified` writes a `Verified:` header through the new `set-header` one-Mind-writer op.
+- `bin/lane_backfill.py`, which proposes and applies a Lane for each pool draft. Intake now counts lane words only in a requirement context.
+- **The backfill was applied** after the human approved the proposals at the block gate: 119 drafts (109 any, 8 ral, 2 wsl-data), Mind e25156929.
+
+**Witness** (command and observed result):
+- (a) `pyauto-brain batch premise --at 2026-11-06T11:20Z` returns `obsolete` for:
+  - `delaunay_smoke_300s_cap`: the newest Heart smoke runs took 8.6–15.9 s against the ≥300 s claim;
+  - `gallery_runner_missing_tiers`: `scripts/gallery/gallery_run.sh` was removed in 0dc177b on 2026-09-30.
+- (b) After the backfill, `lane_backfill.py --mind .` finds 0 pool drafts without a Lane.
+- Brain suite: 1718 passed. Mind suite: 772 passed. CI green.
+- Pool premise sweep: 84 ok, 42 unknown, 1 obsolete (`remove_eden_packaging_tooling`: `eden.yaml` deleted on 2026-11-10; left for a human to retire).
+
+**Review:** an independent Opus review returned FINDINGS:
+- two false-`obsolete` routes: a nested path to create, and an upstream function;
+- a bare "GPU" word picking the `gpu` lane;
+- a crash reading as `obsolete`;
+- a ledger wedge on a moved draft;
+- the digest wording.
+
+All were fixed. The re-review was CLEAN.
+
+**Heart:** RED at ship (local canonical checkouts; install check F; release integrate). The live human gave a development-only override plus the merge command at the block gate.
+
+Follow-ups: `draft/feature/pyautobrain/premise_check_followups.md`.
+
+## Original prompt
+
 # Before a run is spent: check the draft's premise and its lane
 
 Type: feature
