@@ -269,6 +269,35 @@ def test_tier_glance_with_a_gate_and_an_action_appends_one_row(tmp_path,
     assert "Count toward 20: 2" in log
 
 
+def test_the_close_row_carries_the_actor_and_the_mergedby_evidence(
+        tmp_path, monkeypatch, capsys):
+    """Witness (a), offline: `--actor` is the class, the `gh` seam supplies
+    `mergedBy` — the dry run prints the row the apply then writes verbatim."""
+    root = _mind(tmp_path)
+    _at(monkeypatch, root)
+    monkeypatch.delenv(lifecycle.NO_GH_ENV, raising=False)
+    calls = []
+
+    def fake_gh(argv):
+        calls.append(argv)
+        return 0, '{"mergedBy": {"login": "a-human"}, "mergedAt": "2026-10-03T09:00:00Z"}', ""
+
+    monkeypatch.setattr(lifecycle, "_gh", fake_gh)
+    kw = dict(tier="glance", gate="tests 3 pass", action="merged-unchanged",
+              pr=["Flywheel#8"], date="2026-10-03", actor="human-/prm")
+    assert lifecycle.cmd_close(_args(root, **kw)) == 0
+    row = ("| 2026-10-03 | sprocket-calibration (Flywheel#8) | glance | tests 3 pass "
+           "| merged-unchanged | 1 | human-/prm (mergedBy a-human) |  |")
+    assert row in capsys.readouterr().out
+    assert calls and calls[0][:2] == ["pr", "view"] and "mergedBy,mergedAt" in calls[0]
+    assert lifecycle.cmd_close(_args(root, apply=True, **kw)) == 0
+    log = (root / "autonomy_log.md").read_text()
+    assert row in log
+    # a human-typed /prm is left out of the count: still 1, the fixture row
+    assert "Count toward 20: 1 (stage 1: 1, stage 2: 0)" in log
+    assert "left out by merge actor" in log
+
+
 @pytest.mark.parametrize("tier", ["notify", "judge"])
 def test_a_tier_that_is_not_glance_appends_nothing(tier, tmp_path, monkeypatch):
     """Anything but `glance` is outside the window — `notify` included, since

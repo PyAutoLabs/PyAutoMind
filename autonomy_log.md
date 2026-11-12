@@ -554,7 +554,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 96 (stage 1: 96, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
+Count toward 20: 93 (stage 1: 93, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; left out by merge actor (human-/prm / in-turn-human-commanded): 3; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
 
 One row per tier-`glance` candidate at close-out. `human action` ∈
 `merged-unchanged` / `merged-after-substantive-change` / `not-merged` /
@@ -567,8 +567,22 @@ Typos, wording, formatting and comment polish are not.
 `stage: 1` rows are graded on the four-leg gate plus the witness; `stage: 2` rows
 add the independent-model adversarial leg. Never pool the two.
 
-| date | task | tier | gate (tests/smoke/review/heart/witness[/adversary]) | human action | stage |
-|------|------|------|-----------------------------------------------------|--------------|-------|
+**Merge actor and read by human — from 2026-11-12** (`PyAutoBrain/AUTONOMY.md`
+"Merge actor and random audit — 2026-11-12"). `merge actor` is written by the
+tool (`lifecycle.py close … --actor` / `shadow-row --actor`), one of
+`human-/prm` | `in-turn-human-commanded` | `in-turn-autonomous` |
+`unattended-watcher` | `unknown`, followed by `(mergedBy <login>)` from
+`gh pr view --json mergedBy`. The count **leaves out** `human-/prm` and
+`in-turn-human-commanded`; `unknown` still counts. Rows written before the
+column stop at `stage` and read as `unknown` — they are not rewritten
+(`lifecycle.py shadow-recount` prints how their completion records classify
+them). `read by human` is the date the human read the post-merge summary,
+empty until then; it is recorded and does not gate the count. Audits draw a
+seeded 1-in-5 sample (`lifecycle.py audit-sample --seed <n>`), audited within a
+week, never a hand-picked one.
+
+| date | task | tier | gate (tests/smoke/review/heart/witness[/adversary]) | human action | stage | merge actor | read by human |
+|------|------|------|-----------------------------------------------------|--------------|-------|-------------|---------------|
 | 2026-08-31 | memory-queue-filing-gate (PyAutoMemory#75 / PR#76) | supervised (header safe, bug cap supervised) | tests PASS 169 (make validate + full pytest; no downstream — organ repo) / smoke n/a (organism repo, no script surface) / review CLEAN over ReviewSurface (flags no-test-changes + config-or-schema; retry semantics verified by scratch-repo simulation of the #69 conflict) / heart per shift heart-ack in batches/2026-08-31-pm.md (YELLOW 65 human-acked at dispatch; no re-measure possible in web container, no new reason in blast radius) / witness basis-cited (red/green repro of the 30 test_board.py gate failures; live run only possible post-merge) / adversary (independent model): witness HOLDS, FINDINGS no blockers — findings 1+2 fixed in b5bc248, finding 3 (same discarding retry in knowledge_board.yml + arxiv_refs.yml) recorded as follow-up | PR-open (#76, decision-taken label: ship-vs-park flagged per decide-and-flag — supervised parks at ship, batch dispatch budgeted notify/0; revert = close the PR; merge + re-drive of #69/#71/#72 stay human) | 2 |
 | 2026-08-31 | restore-pipeline-narrative-prose | supervised | tests 61 pass / smoke 9-9 pass / review CLEAN (author-run; adversary leg not run — this parks to the human instead) / heart not re-evaluated (web container; dispatch YELLOW ack, batches/2026-08-31-pm.md) / no witness (Consequence: judge) | PR #48 opened on human request 2026-08-31 21:24Z, merged via /prm 2026-09-01 | shipped |
 | 2026-09-09 | cortex-scorer-where-paths (PyAutoBrain#370 / PR#371) | notify | tests PASS — Brain Tests green on 9f46175, pytest (3.12) + pytest (3.13) both success / smoke n/a — PyAutoBrain is an organ repo with no workspace smoke surface / review none — no independent review leg ran / heart RED acknowledged 2026-09-09 in-session, five reasons all organism-scope in the libraries; nothing in this branch is in the release chain / witness the PR claims the declared witness (relative bullets resolve; a task with no discoverable run scores UNOBSERVABLE not FAIL) is covered by its tests — not independently re-verified post-merge | merged-unchanged | 1 |
@@ -676,9 +690,9 @@ add the independent-model adversarial leg. Never pool the two.
 | 2026-11-11 | jax-version-policy (PyAutoDNA#5 / autolens_profiling#527) | glance | tests DNA 25 OK + profiling lint/pytest 1907 pass / smoke n/a (research scripts; pilot + RAL 415009 ran end-to-end) / review self only / heart RED (human dev override) → YELLOW ack / witness PASS (policy + laptop & RAL matrix + MGE & pixelized flag cost) | merged-unchanged | 1 |
 | 2026-11-12 | dna-policies-section (PyAutoDNA#7) | glance | tests 32 OK / smoke n/a (board render from public data, as CI) / review self only / heart YELLOW ack / witness PASS (head render + live board) | merged-unchanged | 1 |
 | 2026-11-12 | hpc-keep-off-home (PyAutoFit#1768 / autofit_assistant#63 / autofit_inference#19 / autogalaxy_assistant#46 / autolens_inference#65 / autocti_assistant#40) | glance | tests 4288 OK (+4 new) / smoke n/a (activate.sh only; env -i source test x5) / review self only / heart YELLOW ack / witness PASS (bash-run cache block + clean-env activate.sh) | merged-unchanged | 1 |
-| 2026-11-12 | shift-watcher-state-gaps (PyAutoBrain#604) | glance | tests 134/1skip; smoke n/a; review independent Opus CLEAN after fix; heart RED-override (human); witness PASS | merged-unchanged | 1 |
-| 2026-11-12 | prompt-sync-explicit-paths (PyAutoMind#555 / PyAutoBrain#605) | glance | tests Mind 750; smoke n/a; review independent Opus CLEAN after fix; heart RED-override (human); witness PASS | merged-unchanged | 1 |
-| 2026-11-12 | prompt-sync-detached-push (PyAutoMind#557) | glance | tests Mind 760; smoke n/a; review independent Opus CLEAN after fix; heart RED-override (human); witness PASS | merged-unchanged | 1 |
+| 2026-11-12 | shift-watcher-state-gaps (PyAutoBrain#604) | glance | tests 134/1skip; smoke n/a; review independent Opus CLEAN after fix; heart RED-override (human); witness PASS | merged-unchanged | 1 | in-turn-human-commanded (mergedBy Jammy2211) |  |
+| 2026-11-12 | prompt-sync-explicit-paths (PyAutoMind#555 / PyAutoBrain#605) | glance | tests Mind 750; smoke n/a; review independent Opus CLEAN after fix; heart RED-override (human); witness PASS | merged-unchanged | 1 | in-turn-human-commanded (mergedBy Jammy2211) |  |
+| 2026-11-12 | prompt-sync-detached-push (PyAutoMind#557) | glance | tests Mind 760; smoke n/a; review independent Opus CLEAN after fix; heart RED-override (human); witness PASS | merged-unchanged | 1 | in-turn-human-commanded (mergedBy Jammy2211) |  |
 
 ## Unattended `glance` sub-window (stage 2) — opened 2026-11-04
 
@@ -698,6 +712,12 @@ restores the different-model requirement. Rows are written by the watcher
 through the one Mind writer; by hand, `lifecycle.py shadow-row --stage2 --brief
 <slot> …`.
 
-| date | task | brief | gate (tests/smoke/review/heart/witness/adversary) | human action |
-|------|------|-------|----------------------------------------------------|--------------|
+**Merge actor and read by human — from 2026-11-12** (`PyAutoBrain/AUTONOMY.md`
+"Merge actor and random audit — 2026-11-12"), as in the stage-1 table: the
+watcher writes `unattended-watcher (mergedBy <login>)`, `read by human` is
+empty until the human reads the post-merge summary and does not gate the
+sub-rule, and the stage-2 rows join the seeded 1-in-5 audit sample.
+
+| date | task | brief | gate (tests/smoke/review/heart/witness/adversary) | human action | merge actor | read by human |
+|------|------|-------|----------------------------------------------------|--------------|-------------|---------------|
 
