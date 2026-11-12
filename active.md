@@ -245,7 +245,7 @@
 ## pixelization-feature-review
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/630
 - issued: 2026-11-12
-- status: workspace-dev
+- status: awaiting-review
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/pixelization-feature-review
 - repos:
   - autolens_workspace: feature/pixelization-feature-review
@@ -254,6 +254,14 @@
 - tier: judge — human review; no merge
 - coordination: human "Allow separate documentation worktree" alongside jax-floor-0-12 and magnification-maps-wiring; only RTD overview text/image assets.
 
-- next: development-only Heart RED override for #630, then commit/push/open both review PRs; no merge.
+- next: human reviews workspace #631 and RTD #826; no merge authorized.
 - validation: focused docs/narrative/parity/preservation/image/navigation checks passed; prior MGE numerical/smoke results reused for unchanged executable code, not claimed as fresh tests.
 - review: /mnt/c/Users/Jammy/Workspace/Science/scratch/pixelization_individual_review_20261112/applied/index.html
+
+- heart-red-override:
+  - authorization: Yes, I approve the development-only Heart RED override for #630. Commit, push and open both PRs for review, but don't merge yet.
+  - exact-red-reasons: PyAutoLens: on branch feature/pixelization-feature-review (not main); PyAutoLens: 2 uncommitted source change(s)
+  - gates: Fresh checks: original teaching retained; early source-science link; narrative execution; executable AST and notebook code-cell parity; approved image identity and local links; navigator, size and whitespace checks. Focused Sphinx build of the exact edited pixelization section passed with warnings treated as errors. Full numerical tests/smoke were not rerun for this prose/assets-only change; preceding MGE validation passed 1021 tests (1 expected failure), 42 script and 2 notebook smoke checks, and all 12 PR CI jobs. No numerical code changes in this patch.
+  - scope: commit, push, PR-open only; no merge/release/CI bypass.
+
+- prs: https://github.com/PyAutoLabs/autolens_workspace/pull/631 ; https://github.com/PyAutoLabs/PyAutoLens/pull/826
