@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 23 |
-| [In flight](#in-flight) | 9 |
+| [In flight](#in-flight) | 10 |
 | [Planned](#planned) | 12 |
-| [Backlog](#backlog) | 265 |
+| [Backlog](#backlog) | 264 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -23,7 +23,7 @@
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 21
+**Highest priority** (filed as `high`) — showing 12 of 20
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -1149,6 +1149,14 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
+<details><summary>📋 <a href="active/colab_restart_only_when_upgraded_module_imported.md">Colab setup asks for a restart when nothing loaded was upgraded…</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/217">issue #217</a> — issued 2026-11-12 — library-dev</summary>
+
+```
+Use the start-dev skill. active/colab_restart_only_when_upgraded_module_imported.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/gradient_correctness_sweep.md">Gradient-correctness sweep: triage and investigate every open JAX-gradient bug and hazard…</a> — <a href="https://github.com/PyAutoLabs/autolens_profiling/issues/517">issue #517</a> — issued 2026-11-02 — PAUSED 2026-11-12 (HUMAN: release every autolens_profiling claim for the autonomy focus; worktree removed, branch commits already… — PRs: <a href="https://github.com/PyAutoLabs/autolens_profiling/pull/518">autolens_profiling#518</a></summary>
 
 ```
@@ -1320,7 +1328,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 251 · local-dev 7 · ral 5
+Lanes: any 250 · local-dev 7 · ral 5
 
 <a id="human-review"></a>
 <details>
@@ -1664,7 +1672,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 55</summary>
+<summary><b>bug</b> — 54</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1734,14 +1742,6 @@ Use the start-dev skill. draft/bug/autofit/investigate_euclid_einstein_radius_la
 
 ```
 Use the start-dev skill. draft/bug/health_fixes/samples_parameter_paths.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autonerves/colab_restart_only_when_upgraded_module_imported.md">Colab setup asks for a restart when nothing loaded was upgraded…</a> — autonerves · easy · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autonerves/colab_restart_only_when_upgraded_module_imported.md
 ```
 
 </details>
@@ -2856,7 +2856,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-12 | issued | <a href="planned.md#delaunay-nn-numba-remeasure">delaunay-nn-numba-remeasure</a> |
 | 2026-11-12 | filed | <a href="draft/maintenance/autolens_profiling/remove_d12_eigen_flag_after_remeasure.md">autolens_profiling: drop the D12 eigen flag from CPU campaign legs…</a> |
 | 2026-11-12 | filed | <a href="draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md">Phase B: send HPC temp files to the shared disk (TMPDIR)…</a> |
-| 2026-11-12 | filed | <a href="draft/bug/autonerves/colab_restart_only_when_upgraded_module_imported.md">Colab setup asks for a restart when nothing loaded was upgraded…</a> |
+| 2026-11-12 | issued | <a href="active/colab_restart_only_when_upgraded_module_imported.md">Colab setup asks for a restart when nothing loaded was upgraded…</a> |
 | 2026-11-11 | filed | <a href="draft/bug/health_fixes/smoke_cache_stats_warnings_nameerror.md">Smoke cache-stats step fails with NameError: warnings</a> |
 | 2026-11-11 | filed | <a href="draft/bug/health_fixes/pr504_sibling_guards_net_gap_proxy.md">Harden the sibling PR #504 non-vacuity guards (net fom−logL gap proxy)</a> |
 | 2026-11-10 | filed | <a href="draft/bug/pyautomind/prompt_sync_push_explicit_paths.md">prompt_sync_push: commit only the paths it is given</a> |
@@ -2947,7 +2947,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-106 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+105 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2992,7 +2992,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
 - `draft/bug/autogalaxy/wrong_jax_gradient_on_mge_likelihoods_fd.md`
 - `draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md`
-- _… and 66 more_
+- _… and 65 more_
 
 </details>
 
