@@ -219,6 +219,12 @@
 - prompt: active/potential_correction_review.md
 - tier: judge; review PRs only, no merge
 - coordination: separate docs worktree under prior explicit same-session approval alongside magnification-maps-wiring.
-- next: development-only Heart RED override for #636, then commit/push/open both review PRs; no merge.
+- next: human review of workspace #637 and PyAutoLens #829; check CI/freeze only on request; no merge authorized.
+- prs: https://github.com/PyAutoLabs/autolens_workspace/pull/637 ; https://github.com/PyAutoLabs/PyAutoLens/pull/829
 - validation: syntax, approved-preview/code/notebook parity, image/navigation/size/whitespace and focused Sphinx passed.
 - review: /mnt/c/Users/Jammy/Workspace/Science/scratch/potential_correction_individual_review_20261112/applied/index.html
+
+- heart-red-override:
+  - authorization: I approve the development-only Heart RED override for #636. Commit, push and open both PRs for review, don't merge yet.
+  - exact-red-reasons: PyAutoLens: on branch feature/potential-correction-review (not main); PyAutoLens: 2 uncommitted source change(s)
+  - gates: Fresh checks passed: syntax, executable AST and generated notebook code-cell parity, approved feature-text parity (image path only), identical approved two-panel image assets, local image links, navigator/banner lint, search-memory check, script-size guard, whitespace and focused Sphinx build with warnings treated as errors. All eight narrative blocks and original unique headings retained; repeated Related Examples consolidated. No API or executable changes. Full numerical/smoke suites were not rerun for this prose/assets-only patch; preceding sensitivity-mapping PRs passed all 12 exact-head CI jobs, which are prior evidence rather than fresh tests.

@@ -29,4 +29,21 @@ Fresh checks passed: syntax, executable AST and generated notebook code-cell par
 Classifier API-risk/phasing heuristics overestimated this docs-only scope; inspection confirms no public API or numerical change.
 
 ## Shipping checkpoint
-Heart RED 2026-11-12T15:25:16.865951+00:00: PyAutoLens: on branch feature/potential-correction-review (not main); PyAutoLens: 2 uncommitted source change(s). Await task-specific development-only override for #636 before source commit/push/PR. No merge.
+Heart RED 2026-11-12T15:25:16.865951+00:00: PyAutoLens: on branch feature/potential-correction-review (not main); PyAutoLens: 2 uncommitted source change(s). Override subsequently approved below; both review PRs now open. No merge.
+
+## Development-only Heart RED override
+
+Human authorization (2026-11-12): “I approve the development-only Heart RED override for #636. Commit, push and open both PRs for review, don't merge yet.”
+
+Exact RED reasons (2026-11-12T15:25:16.865951+00:00):
+- `PyAutoLens: on branch feature/potential-correction-review (not main)`
+- `PyAutoLens: 2 uncommitted source change(s)`
+
+Fresh checks passed: syntax, executable AST and generated notebook code-cell parity, approved feature-text parity (image path only), identical approved two-panel image assets, local image links, navigator/banner lint, search-memory check, script-size guard, whitespace and focused Sphinx build with warnings treated as errors. All eight narrative blocks and original unique headings retained; repeated Related Examples consolidated. No API or executable changes. Full numerical/smoke suites were not rerun for this prose/assets-only patch; preceding sensitivity-mapping PRs passed all 12 exact-head CI jobs, which are prior evidence rather than fresh tests.
+
+Commit, push and PR-open only; no merge, release or CI bypass.
+
+## Review PR handoff — 2026-11-12
+- Workspace: https://github.com/PyAutoLabs/autolens_workspace/pull/637 — 18c58f3bd9c759440b223f5bc1ba4b0c532f4a39
+- RTD: https://github.com/PyAutoLabs/PyAutoLens/pull/829 — 0c42bcc55b93784eb11b6ff9ac7cb1d6848913f9
+- Both committed and pushed under the approved #636 development-only override. Open for human review; neither merged. CI not awaited. Next: human review, then separately authorized CI/freeze check and merge.
