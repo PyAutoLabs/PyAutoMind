@@ -95,4 +95,4 @@
 - prompt: active/shapelets_review.md
 - tier: judge; review PRs only, no merge
 - coordination: explicit live approval for separate documentation worktree alongside three-autos-public-framing
-- next: apply approved draft and both figures; validate and open review PRs
+- next: await development-only Heart RED override for #642; staged and validated, no source commit/push/PR yet

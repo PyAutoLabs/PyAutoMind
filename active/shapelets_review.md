@@ -29,3 +29,17 @@ Approved preview: /mnt/c/Users/Jammy/Workspace/Science/scratch/shapelets_individ
 Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/642
 Issued: 2026-11-12
 Classifier API/phasing heuristics overestimate the docs-only scope; inspection confirms no API/numerical change.
+
+## Shipping checkpoint
+Approved draft/illustration applied; original basis grid retained byte-for-byte. Changes staged, uncommitted.
+Fresh checks passed: syntax; executable AST/notebook code-cell parity; approved draft and illustration identity; original basis grid preserved byte-for-byte; local image links; navigator/banner, search-memory, size and whitespace checks; focused Sphinx build with warnings treated as errors. No numerical/API changes. Full numerical/smoke suites were not rerun for this prose/assets-only delta; preceding double source-plane PRs passed all 12 CI jobs on the same base (prior evidence, not fresh testing).
+
+Heart RED 2026-11-12T17:29:04.434775+00:00:
+- PyAutoLens: on branch feature/shapelets-review (not main)
+- PyAutoLens: 2 uncommitted source change(s)
+- install verification FAILED (testpypi; checks F)
+- release validation FAILED (stage integrate)
+
+Await live development-only override for #642 before commit/push/open both review PRs. No merge.
+Review: /mnt/c/Users/Jammy/Workspace/Science/scratch/shapelets_individual_review_20261112/applied/index.html
+Logs/PR drafts: organs/PyAutoMind/tmp/shapelets_review/
