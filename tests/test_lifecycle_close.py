@@ -263,10 +263,57 @@ def test_tier_glance_with_a_gate_and_an_action_appends_one_row(tmp_path,
     _at(monkeypatch, root)
     assert lifecycle.cmd_close(_args(
         root, apply=True, tier="glance", gate="tests 3 pass",
-        action="merged-unchanged", pr=["Flywheel#8"], date="2026-10-03")) == 0
+        action="merged-unchanged", pr=["Flywheel#8"], date="2026-10-03",
+        actor="in-turn-autonomous")) == 0
     log = (root / "autonomy_log.md").read_text()
     assert "sprocket-calibration (Flywheel#8) | glance |" in log
+    assert "| in-turn-autonomous |  |" in log
     assert "Count toward 20: 2" in log
+
+
+@pytest.mark.parametrize("apply", [False, True])
+def test_a_glance_close_without_an_actor_refuses_and_writes_nothing(
+        apply, tmp_path, monkeypatch, capsys):
+    """A human `/prm` close-out that forgets --actor must not land as a counted
+    `unknown` row (FLOW-2): the whole close refuses before writing anything."""
+    root = _mind(tmp_path)
+    _at(monkeypatch, root)
+    before = _snapshot(root)
+    assert lifecycle.cmd_close(_args(
+        root, apply=apply, tier="glance", gate="tests 3 pass",
+        action="merged-unchanged", pr=["Flywheel#8"], date="2026-10-03")) == 1
+    assert _snapshot(root) == before
+    err = capsys.readouterr().err
+    assert "--actor is required" in err and "human-/prm" in err
+
+
+def test_the_close_row_carries_the_actor_and_the_mergedby_evidence(
+        tmp_path, monkeypatch, capsys):
+    """Witness (a), offline: `--actor` is the class, the `gh` seam supplies
+    `mergedBy` — the dry run prints the row the apply then writes verbatim."""
+    root = _mind(tmp_path)
+    _at(monkeypatch, root)
+    monkeypatch.delenv(lifecycle.NO_GH_ENV, raising=False)
+    calls = []
+
+    def fake_gh(argv):
+        calls.append(argv)
+        return 0, '{"mergedBy": {"login": "a-human"}, "mergedAt": "2026-10-03T09:00:00Z"}', ""
+
+    monkeypatch.setattr(lifecycle, "_gh", fake_gh)
+    kw = dict(tier="glance", gate="tests 3 pass", action="merged-unchanged",
+              pr=["Flywheel#8"], date="2026-10-03", actor="human-/prm")
+    assert lifecycle.cmd_close(_args(root, **kw)) == 0
+    row = ("| 2026-10-03 | sprocket-calibration (Flywheel#8) | glance | tests 3 pass "
+           "| merged-unchanged | 1 | human-/prm (mergedBy a-human) |  |")
+    assert row in capsys.readouterr().out
+    assert calls and calls[0][:2] == ["pr", "view"] and "mergedBy,mergedAt" in calls[0]
+    assert lifecycle.cmd_close(_args(root, apply=True, **kw)) == 0
+    log = (root / "autonomy_log.md").read_text()
+    assert row in log
+    # a human-typed /prm is left out of the count: still 1, the fixture row
+    assert "Count toward 20: 1 (stage 1: 1, stage 2: 0)" in log
+    assert "left out by merge actor" in log
 
 
 @pytest.mark.parametrize("tier", ["notify", "judge"])
@@ -385,7 +432,7 @@ def test_the_commit_line_names_every_path_close_touches(tmp_path, monkeypatch,
     _at(monkeypatch, root)
     assert lifecycle.cmd_close(_args(
         root, apply=True, tier="glance", gate="tests 3 pass",
-        action="merged-unchanged", date="2026-10-03")) == 0
+        action="merged-unchanged", date="2026-10-03", actor="unknown")) == 0
     line = _commit_line(capsys.readouterr().out)
     assert "git add -A" not in line
     assert line.split()[3:] == [
@@ -436,7 +483,7 @@ def test_the_glance_close_out_commits_cleanly_through_prompt_sync_push(
     _at(monkeypatch, root)
     assert lifecycle.cmd_close(_args(
         root, apply=True, tier="glance", gate="tests 3 pass",
-        action="merged-unchanged", date="2026-10-03")) == 0
+        action="merged-unchanged", date="2026-10-03", actor="unknown")) == 0
     line = _commit_line(capsys.readouterr().out)
     # stand-in for `pyauto-brain intake --apply dashboard`
     for page in ("dashboard.md", "dashboard.html"):

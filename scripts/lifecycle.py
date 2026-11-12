@@ -26,8 +26,8 @@ Subcommands
         removing the active/ prompt. Run `index --apply` afterwards.
 
   close <slug> --date YYYY-MM-DD --from-file <path> [--prompt <path|name>]
-        [--pr Repo#N ...] [--tier glance --gate "<cell>" --action <what>]
-        [--no-shadow-row] [--apply]
+        [--pr Repo#N ...] [--tier glance --gate "<cell>" --action <what>
+        --actor <who merged, required>] [--no-shadow-row] [--apply]
         The /prm hook: the whole Mind-side close-out as one verb — `record`
         (which folds the prompt, refreshes the index and prunes active.md),
         plus the parked.md/planned.md pointer, plus the tier-`glance` shadow
@@ -36,6 +36,16 @@ Subcommands
         draft/ prompt too, and it stages nothing. It does NOT render the
         dashboard — `main` heals the render — and it refuses when the record
         already exists or the slug names no prompt.
+
+  shadow-recount [-v]
+        The glance window by merge actor (the count leaves out `human-/prm`
+        and `in-turn-human-commanded`), then the historical rows classified
+        from their completion records by a printed keyword rule. Writes
+        nothing: re-marking a historical row is the human's question.
+
+  audit-sample --seed N [--rate 0.2] [--since DATE]
+        The seeded 1-in-5 audit draw over the counted glance rows (stage 2
+        too, when it has rows): the same seed and ledger give the same sample.
 
   index [--apply | --check]
         Generate complete/index.md (token-light navigation over the records);
@@ -86,6 +96,7 @@ from __future__ import annotations
 
 import argparse
 import datetime as _dt
+import os
 import re
 import sys
 from pathlib import Path
@@ -136,6 +147,46 @@ SHADOW_COUNT_ANCHOR = "One row per tier-`glance` candidate"
 # rows are written by the shift watcher through the one Mind writer; this
 # heading is the anchor both it and `shadow-row --stage2` insert under.
 STAGE2_HEADING = "## Unattended `glance` sub-window (stage 2)"
+# --- who merged (PyAutoBrain AUTONOMY.md "Merge actor and random audit —
+# 2026-11-12") ---------------------------------------------------------------
+# Both tables end in two columns the tool writes: `merge actor` and `read by
+# human`. Rows written before 2026-11-12 stop at `stage` (stage 1) or `human
+# action` (stage 2); a missing cell READS as `unknown` / empty — history is not
+# rewritten to add it, so the count over those rows is unchanged.
+MERGE_ACTORS = (
+    "human-/prm",
+    "in-turn-human-commanded",
+    "in-turn-autonomous",
+    "unattended-watcher",
+    "unknown",
+)
+MERGE_ACTOR_UNKNOWN = "unknown"
+#: The window counts only merges the organism made itself ("Ledger accuracy"):
+#: a human typed the merge, or commanded it in-turn. `unknown` still counts.
+SHADOW_UNCOUNTED_ACTORS = ("human-/prm", "in-turn-human-commanded")
+SHADOW_ACTOR_COL, SHADOW_READ_COL = 6, 7
+STAGE2_ACTOR_COL, STAGE2_READ_COL = 5, 6
+#: The audit sample: a seeded 1-in-5 draw, audited within a week.
+AUDIT_RATE = 0.2
+AUDIT_DAYS = 7
+#: Set (to anything) to keep `close`/`shadow-row` off GitHub — the tests do.
+NO_GH_ENV = "LIFECYCLE_NO_GH"
+#: Which class to pass — the line every refusal and doc repeats.
+ACTOR_GUIDE = (
+    "a human-typed /prm -> human-/prm; an in-turn merge on the human's explicit "
+    "merge command -> in-turn-human-commanded; an in-turn tiered merge with no "
+    "human command -> in-turn-autonomous; the shift watcher -> unattended-watcher; "
+    "`unknown` only when passed explicitly"
+)
+
+
+def missing_actor_message(verb: str) -> str:
+    """The refusal when a row would be written without --actor: who merged is
+    never inferred, like the gate and the action."""
+    return (
+        f"{verb}: --actor is required for a shadow row — one of "
+        f"{', '.join(MERGE_ACTORS)} ({ACTOR_GUIDE}); nothing written"
+    )
 
 H2_RE = re.compile(r"^##\s+(.+?)\s*$")
 
@@ -2926,6 +2977,8 @@ def shadow_count_line(rows: "list[list[str]]") -> str:
     on 2026-10-02. They all stay listed — deleting history to make a counter
     tidy is how a pre-registered rule stops being pre-registered — and are
     named as uncounted so the number cannot be read as "the table has N rows".
+    In-window rows a human merged (merge actor `human-/prm` or
+    `in-turn-human-commanded`) are named apart, as left out by merge actor.
     """
     graded = [r for r in rows if shadow_counts(r)]
     uncounted = len(rows) - len(graded)
@@ -2938,10 +2991,17 @@ def shadow_count_line(rows: "list[list[str]]") -> str:
         f"{two}) — window re-scoped to tier `{SHADOW_TIER}` "
         f"{SHADOW_REOPENED}; first `{SHADOW_TIER}` row: {first}"
     )
+    by_human = sum(1 for r in rows if shadow_in_window(r) and not shadow_counts(r))
+    uncounted -= by_human
     if uncounted:
         line += (
             f"; earlier rows not counted (the tier-`notify` window, "
             f"closed {SHADOW_REOPENED}, and legacy): {uncounted}"
+        )
+    if by_human:
+        line += (
+            f"; left out by merge actor ({' / '.join(SHADOW_UNCOUNTED_ACTORS)}): "
+            f"{by_human}"
         )
     if len(graded) >= SHADOW_TARGET:
         # Pre-registered size met: the line itself must say whether the human
@@ -2953,14 +3013,28 @@ def shadow_count_line(rows: "list[list[str]]") -> str:
     return line
 
 
-def shadow_counts(row: "list[str]") -> bool:
-    """Whether one table row counts toward the current window."""
+def shadow_in_window(row: "list[str]") -> bool:
+    """Whether a row is a tier-`glance` stage-1/2 row of the re-scoped window —
+    the count before the merge-actor rule is applied."""
     return (
         len(row) > 5
         and row[5] in SHADOW_STAGES
         and row[2] == SHADOW_TIER
         and row[0] >= SHADOW_REOPENED
     )
+
+
+def row_actor(row: "list[str]", col: int = SHADOW_ACTOR_COL) -> str:
+    """The merge-actor class of one row: the first token of its cell (the rest
+    is `mergedBy` evidence); a row without the column reads `unknown`."""
+    cell = row[col].strip() if len(row) > col else ""
+    return cell.split()[0] if cell else MERGE_ACTOR_UNKNOWN
+
+
+def shadow_counts(row: "list[str]") -> bool:
+    """Whether one table row counts toward the current window: in the window,
+    and not merged by a human (typed `/prm`, or commanded in-turn)."""
+    return shadow_in_window(row) and row_actor(row) not in SHADOW_UNCOUNTED_ACTORS
 
 
 def _shadow_cell(value: str) -> str:
@@ -3024,6 +3098,244 @@ def stage2_apply(text: str, row: str) -> str:
     return "\n".join(lines) + "\n"
 
 
+# --------------------------------------------------------------------------- #
+# the merge actor — who merged, written by the tool
+# --------------------------------------------------------------------------- #
+#: `Repo#N` refs in a task cell (`PR#N` is a bare PR number, never a repo).
+PR_REF_RE = re.compile(r"\b([A-Za-z][\w.-]*)#(\d+)\b")
+
+
+def task_pr_refs(task: str) -> "list[tuple[str, int]]":
+    """The (repo, number) pairs a task cell names, in order, deduplicated."""
+    seen: "list[tuple[str, int]]" = []
+    for repo, num in PR_REF_RE.findall(task):
+        ref = (repo, int(num))
+        if repo != "PR" and ref not in seen:
+            seen.append(ref)
+    return seen
+
+
+def gh_pr_merge_info(
+    repo: str, number: int, owner: str = PUBLISHED_OWNER, gh=None
+) -> "dict | None":
+    """`gh pr view --json mergedBy,mergedAt` for one PR, as
+    {"mergedBy": login or "", "mergedAt": iso or ""}; None when GitHub could
+    not say. `gh` is the seam: a callable taking gh's argv, returning
+    (code, stdout, stderr) — `_gh` by default."""
+    import json
+
+    code, out, _ = (gh or _gh)(
+        ["pr", "view", str(number), "-R", f"{owner}/{repo}",
+         "--json", "mergedBy,mergedAt"]
+    )
+    if code != 0:
+        return None
+    try:
+        data = json.loads(out or "{}")
+    except ValueError:
+        return None
+    by = data.get("mergedBy") or {}
+    return {"mergedBy": (by.get("login") if isinstance(by, dict) else str(by)) or "",
+            "mergedAt": data.get("mergedAt") or ""}
+
+
+def merge_actor_cell(
+    actor: str, refs: "list[tuple[str, int]]", gh=None, lookup: bool = True
+) -> "tuple[str, list[str]]":
+    """(the `merge actor` cell, warnings).
+
+    The class is the caller's explicit flag — how the merge was started is a
+    fact only the session that started it knows: a human-typed `/prm`, an
+    in-turn merge the human commanded, an in-turn autonomous merge, or the
+    watcher. GitHub adds the evidence, never the class: `gh pr view --json
+    mergedBy,mergedAt` on every PR the task names, appended as
+    `(mergedBy <login>[, n/m PRs])`. A PR GitHub reports unmerged is a warning,
+    not a guess. `NO_GH_ENV` turns the real lookup off (an injected `gh` still
+    runs — that is the tests' seam)."""
+    if actor not in MERGE_ACTORS:
+        raise ValueError(f"merge actor {actor!r} is not one of {', '.join(MERGE_ACTORS)}")
+    warnings: "list[str]" = []
+    if not lookup or not refs or (gh is None and os.environ.get(NO_GH_ENV)):
+        return actor, warnings
+    logins: "list[str]" = []
+    for repo, num in refs:
+        info = gh_pr_merge_info(repo, num, gh=gh)
+        if info is None:
+            warnings.append(f"{repo}#{num}: GitHub could not say who merged it")
+        elif not info["mergedBy"]:
+            warnings.append(f"{repo}#{num}: GitHub reports it not merged")
+        else:
+            logins.append(info["mergedBy"])
+    if not logins:
+        return actor, warnings
+    names = sorted(set(logins))
+    ev = "mergedBy " + ", ".join(names)
+    if len(logins) < len(refs):
+        ev += f", {len(logins)}/{len(refs)} PRs"
+    if actor in ("human-/prm", "in-turn-human-commanded") and all(
+        n.endswith("[bot]") for n in names
+    ):
+        warnings.append(f"actor {actor} but every merge was by a bot ({ev})")
+    return f"{actor} ({ev})", warnings
+
+
+# --------------------------------------------------------------------------- #
+# the historical recount — printed, never written back
+# --------------------------------------------------------------------------- #
+#: The transparent keyword rule over a completion record's own text (above
+#: `## Original prompt`). Applied in this order; the first match wins.
+RECOUNT_RULES = (
+    ("human /prm", re.compile(
+        r"(?i)(?:human|user)[^.\n]{0,40}(?:/|\$)?prm"
+        r"|(?:/|\$)prm[^.\n]{0,40}(?:human|user)"
+        r"|merged? (?:via|by) (?:human )?/prm|typed `?/prm|human merge")),
+    ("automatic/in-turn", re.compile(
+        r"(?i)auto-?merg|glance auto|merged by the shipping session"
+        r"|in-turn merge|merged in-turn|tier.{0,12}glance.{0,60}merg")),
+)
+RECOUNT_NOT_STATED = "not stated"
+RECOUNT_NO_RECORD = "no record"
+
+
+def record_merge_class(text: str) -> str:
+    """One completion record's merge class by RECOUNT_RULES."""
+    head = text.split("## Original prompt", 1)[0]
+    for name, rx in RECOUNT_RULES:
+        if rx.search(head):
+            return name
+    return RECOUNT_NOT_STATED
+
+
+def recount_rows(rows: "list[list[str]]", records: "dict[str, Path]") -> "list[tuple[list[str], str]]":
+    """(row, record class) for every in-window row; `records` maps slug → path."""
+    out = []
+    for r in rows:
+        if not shadow_in_window(r):
+            continue
+        slug = safe_name(re.split(r"[ (]", r[1].strip())[0])
+        path = records.get(slug)
+        if path is None:
+            out.append((r, RECOUNT_NO_RECORD))
+            continue
+        try:
+            text = path.read_text(encoding="utf-8", errors="replace")
+        except OSError:
+            out.append((r, RECOUNT_NO_RECORD))
+            continue
+        out.append((r, record_merge_class(text)))
+    return out
+
+
+def _class_line(label: str, pairs: "list[tuple[list[str], str]]") -> str:
+    order = [n for n, _ in RECOUNT_RULES] + [RECOUNT_NOT_STATED, RECOUNT_NO_RECORD]
+    counts = {k: 0 for k in order}
+    for _, k in pairs:
+        counts[k] += 1
+    cells = ", ".join(f"{k} {counts[k]}" for k in order if counts[k] or k != RECOUNT_NO_RECORD)
+    return f"  {label} ({len(pairs)} rows): {cells}"
+
+
+def cmd_shadow_recount(args) -> int:
+    """Print the stage-1 window by merge actor, then the historical recount
+    by completion record. Writes nothing: re-marking a historical row is the
+    human's judge question, not this verb's."""
+    log = Path(args.log) if args.log else AUTONOMY_LOG
+    if not log.is_file():
+        print(f"shadow-recount: no ledger at {log}", file=sys.stderr)
+        return 2
+    try:
+        rows = shadow_rows(log.read_text(encoding="utf-8"))
+    except ValueError as exc:
+        print(f"shadow-recount: {exc}", file=sys.stderr)
+        return 2
+    window = [r for r in rows if shadow_in_window(r)]
+    actors: "dict[str, int]" = {}
+    for r in window:
+        actors[row_actor(r)] = actors.get(row_actor(r), 0) + 1
+    counted = sum(1 for r in window if shadow_counts(r))
+    print(f"stage-1 table: {len(window)} tier-`{SHADOW_TIER}` rows in the window")
+    print("  merge actor (column; a row without it reads `unknown`): "
+          + ", ".join(f"{a} {actors[a]}" for a in MERGE_ACTORS if a in actors))
+    print(f"  count rule leaves out {' / '.join(SHADOW_UNCOUNTED_ACTORS)}: "
+          f"counted {counted}, left out {len(window) - counted}")
+
+    records = {safe_name(s): p for _, s, p in _all_records()}
+    pairs = recount_rows(rows, records)
+    print("\nrecount by completion record (printed only — no row is re-marked):")
+    print("  rule, first match wins, over the record text above `## Original prompt`:")
+    for name, rx in RECOUNT_RULES:
+        print(f"    {name}: /{rx.pattern}/")
+    print(f"    otherwise: {RECOUNT_NOT_STATED} (no record found: {RECOUNT_NO_RECORD})")
+    ruled = [p for p in pairs if p[0][0] < SHADOW_RULED]
+    print(_class_line(f"the window the {SHADOW_RULED} ruling rested on, "
+                      f"{SHADOW_REOPENED} to the day before", ruled))
+    later = [p for p in pairs if p[0][0] >= SHADOW_RULED]
+    print(_class_line(f"rows since the ruling, {SHADOW_RULED} on", later))
+    print(_class_line("all", pairs))
+    if args.verbose:
+        for r, k in pairs:
+            print(f"    {r[0]}  {k:<18}  {row_actor(r):<24}  {r[1][:70]}")
+    return 0
+
+
+# --------------------------------------------------------------------------- #
+# the audit sample — seeded, 1 in 5, never hand-picked
+# --------------------------------------------------------------------------- #
+def audit_population(text: str, since: "str | None" = None) -> "list[tuple[str, list[str]]]":
+    """(table, row) for every row an audit draws from: the counted stage-1
+    rows, then the stage-2 rows when the sub-window has any — in table order."""
+    pop = [("stage 1", r) for r in shadow_rows(text) if shadow_counts(r)]
+    try:
+        pop += [("stage 2", r) for r in stage2_rows(text)
+                if r and r[0] and row_actor(r, STAGE2_ACTOR_COL) not in SHADOW_UNCOUNTED_ACTORS]
+    except ValueError:
+        pass  # a ledger without the stage-2 sub-window
+    if since:
+        pop = [(t, r) for t, r in pop if r[0] >= since]
+    return pop
+
+
+def audit_sample(
+    population: "list[tuple[str, list[str]]]", seed: int, rate: float = AUDIT_RATE
+) -> "list[tuple[str, list[str]]]":
+    """A reproducible draw of ceil(rate × n) rows: the same population and seed
+    give the same sample, in table order."""
+    import math
+    import random
+
+    if not population:
+        return []
+    k = min(len(population), max(1, math.ceil(rate * len(population))))
+    picked = sorted(random.Random(seed).sample(range(len(population)), k))
+    return [population[i] for i in picked]
+
+
+def cmd_audit_sample(args) -> int:
+    """Print the seeded audit sample. Writes nothing."""
+    log = Path(args.log) if args.log else AUTONOMY_LOG
+    if not log.is_file():
+        print(f"audit-sample: no ledger at {log}", file=sys.stderr)
+        return 2
+    if not 0 < args.rate <= 1:
+        print(f"audit-sample: --rate {args.rate} must be in (0, 1]", file=sys.stderr)
+        return 2
+    try:
+        pop = audit_population(log.read_text(encoding="utf-8"), args.since)
+    except ValueError as exc:
+        print(f"audit-sample: {exc}", file=sys.stderr)
+        return 2
+    sample = audit_sample(pop, args.seed, args.rate)
+    today = _dt.datetime.now(_dt.timezone.utc).date()
+    due = (today + _dt.timedelta(days=AUDIT_DAYS)).isoformat()
+    print(f"audit sample: seed {args.seed}, rate {args.rate}, "
+          f"{len(sample)} of {len(pop)} rows"
+          + (f" since {args.since}" if args.since else "")
+          + f" — audit by {due}")
+    for table, r in sample:
+        print(f"  [{table}] {r[0]}  {r[1]}")
+    return 0
+
+
 def cmd_shadow_row(args) -> int:
     """Append one tier-`glance` row to the shadow window (the close-out hook).
 
@@ -3038,12 +3350,28 @@ def cmd_shadow_row(args) -> int:
     text = log.read_text(encoding="utf-8")
 
     date = args.date or _dt.datetime.now(_dt.timezone.utc).strftime("%Y-%m-%d")
-    if getattr(args, "stage2", False):
+    stage2 = getattr(args, "stage2", False)
+    actor = getattr(args, "actor", None)
+    if not actor:
+        print(missing_actor_message("shadow-row"), file=sys.stderr)
+        return 2
+    try:
+        actor_cell, warnings = merge_actor_cell(
+            actor, task_pr_refs(args.task), lookup=not getattr(args, "no_gh", False)
+        )
+    except ValueError as exc:
+        print(f"shadow-row: {exc}", file=sys.stderr)
+        return 2
+    for w in warnings:
+        print(f"shadow-row: warning — {w}", file=sys.stderr)
+    read = getattr(args, "read_by_human", None) or ""
+    if stage2:
         if not getattr(args, "brief", None):
             print("shadow-row: --stage2 needs --brief <slot>", file=sys.stderr)
             return 2
         row = "| " + " | ".join(
-            _shadow_cell(c) for c in (date, args.task, args.brief, args.gate, args.action)
+            _shadow_cell(c)
+            for c in (date, args.task, args.brief, args.gate, args.action, actor_cell, read)
         ) + " |"
         try:
             updated = stage2_apply(text, row)
@@ -3062,7 +3390,8 @@ def cmd_shadow_row(args) -> int:
         "| "
         + " | ".join(
             _shadow_cell(c)
-            for c in (date, args.task, args.tier, args.gate, args.action, args.stage)
+            for c in (date, args.task, args.tier, args.gate, args.action, args.stage,
+                      actor_cell, read)
         )
         + " |"
     )
@@ -3282,7 +3611,22 @@ def cmd_close(args) -> int:
     registries = close_registries(root, args.slug)
     task_cell, why = close_shadow_task(args)
     row = None
+    actor_cell = None
     if task_cell is not None:
+        actor = getattr(args, "actor", None)
+        if not actor:
+            print(missing_actor_message("lifecycle close"), file=sys.stderr)
+            return 1
+        try:
+            actor_cell, warnings = merge_actor_cell(
+                actor, task_pr_refs(task_cell),
+                lookup=not getattr(args, "no_gh", False),
+            )
+        except ValueError as exc:
+            print(f"lifecycle close: {exc}", file=sys.stderr)
+            return 1
+        for w in warnings:
+            print(f"lifecycle close: warning — {w}", file=sys.stderr)
         row = (
             "| "
             + " | ".join(
@@ -3294,6 +3638,8 @@ def cmd_close(args) -> int:
                     args.gate,
                     args.action,
                     args.stage,
+                    actor_cell,
+                    getattr(args, "read_by_human", None) or "",
                 )
             )
             + " |"
@@ -3348,17 +3694,17 @@ def cmd_close(args) -> int:
             print(f"{reg}: removed section {slug!r}")
 
     if row is not None:
-        sh = _CloseArgs(
-            log=getattr(args, "log", None),
-            date=args.date,
-            task=task_cell,
-            tier=SHADOW_TIER,
-            gate=args.gate,
-            action=args.action,
-            stage=args.stage,
-            apply=True,
-        )
-        cmd_shadow_row(sh)
+        # The row close printed in its dry run, verbatim — `mergedBy` evidence
+        # included — through the same append `shadow-row` uses.
+        try:
+            updated = shadow_apply(log.read_text(encoding="utf-8"), row)
+        except (OSError, ValueError) as exc:
+            print(f"shadow-row: {exc}", file=sys.stderr)
+        else:
+            log.write_text(updated, encoding="utf-8")
+            print(row)
+            print(shadow_count_line(shadow_rows(updated)))
+            print(f"shadow-row: appended to {log}")
 
     _close_tail(root, args, rel, touched)
     return 0
@@ -3484,6 +3830,24 @@ def main() -> int:
         help="the shadow row's protocol stage (default: 1)",
     )
     cl.add_argument(
+        "--actor",
+        choices=list(MERGE_ACTORS),
+        help="REQUIRED with --tier glance (never inferred): who merged — "
+        + ACTOR_GUIDE + ". `gh pr view --json mergedBy,mergedAt` adds the evidence",
+    )
+    cl.add_argument(
+        "--read-by-human",
+        dest="read_by_human",
+        metavar="DATE",
+        help="the date the human read the post-merge summary (default: empty)",
+    )
+    cl.add_argument(
+        "--no-gh",
+        action="store_true",
+        dest="no_gh",
+        help=f"skip the mergedBy lookup (also: {NO_GH_ENV}=1)",
+    )
+    cl.add_argument(
         "--no-shadow-row",
         action="store_true",
         dest="no_shadow_row",
@@ -3542,10 +3906,49 @@ def main() -> int:
     )
     sr.add_argument("--brief", help="--stage2: the shift's brief slot")
     sr.add_argument(
+        "--actor",
+        choices=list(MERGE_ACTORS),
+        help="REQUIRED (never inferred): who merged — " + ACTOR_GUIDE,
+    )
+    sr.add_argument(
+        "--read-by-human",
+        dest="read_by_human",
+        metavar="DATE",
+        help="the date the human read the post-merge summary (default: empty)",
+    )
+    sr.add_argument(
+        "--no-gh",
+        action="store_true",
+        dest="no_gh",
+        help=f"skip the mergedBy lookup (also: {NO_GH_ENV}=1)",
+    )
+    sr.add_argument(
         "--apply", action="store_true", help="write the row (default: dry run)"
     )
     sr.add_argument("--log", help="path to autonomy_log.md (default: this repo's)")
     sr.set_defaults(func=cmd_shadow_row)
+
+    rc_ = sub.add_parser(
+        "shadow-recount",
+        help="print the stage-1 window by merge actor and the historical "
+        "recount by completion record (writes nothing)",
+    )
+    rc_.add_argument("--log", help="path to autonomy_log.md (default: this repo's)")
+    rc_.add_argument("-v", "--verbose", action="store_true", help="one line per row")
+    rc_.set_defaults(func=cmd_shadow_recount)
+
+    au = sub.add_parser(
+        "audit-sample",
+        help="draw the seeded 1-in-5 audit sample of the glance window "
+        "(counted stage-1 rows, plus stage 2 when present); writes nothing",
+    )
+    au.add_argument("--seed", type=int, required=True, help="the draw's seed")
+    au.add_argument("--rate", type=float, default=AUDIT_RATE,
+                    help=f"fraction drawn (default {AUDIT_RATE}: 1 in 5)")
+    au.add_argument("--since", metavar="DATE",
+                    help="only rows dated on or after DATE (e.g. the last audit)")
+    au.add_argument("--log", help="path to autonomy_log.md (default: this repo's)")
+    au.set_defaults(func=cmd_audit_sample)
 
     ix = sub.add_parser(
         "index", help="generate complete/index.md (token-light archive navigation)"

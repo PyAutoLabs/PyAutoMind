@@ -923,9 +923,16 @@ appends to the window):
 ```bash
 python3 scripts/lifecycle.py close <slug> --date YYYY-MM-DD --from-file <body.md> \
     [--prompt <path|filename>] [--pr Repo#N …] \
-    [--tier glance --gate "<cell>" --action <merged-unchanged|…> [--stage 1|2]] \
-    [--no-shadow-row] [--apply]
+    [--tier glance --gate "<cell>" --action <merged-unchanged|…> [--stage 1|2] \
+     --actor <class>] [--no-shadow-row] [--apply]
 ```
+
+`--actor` is required whenever a shadow row is written (`close --tier glance`,
+`shadow-row`, `shadow-row --stage2`) and refuses when missing: a human-typed
+`/prm` → `human-/prm`; an in-turn merge on the human's explicit merge command →
+`in-turn-human-commanded`; an in-turn tiered merge with no human command →
+`in-turn-autonomous` (`unattended-watcher` is the watcher's; `unknown` only when
+passed explicitly).
 
 Dry run by default: it prints the record path, the prompt it will remove, every
 registry entry it will drop, the shadow row it would append, and the references
