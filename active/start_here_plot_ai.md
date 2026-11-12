@@ -27,3 +27,11 @@ Issued: 2026-11-12
 - Preview: /mnt/c/Users/Jammy/Workspace/Science/scratch/start_here_plot_ai_2026-11-12/grid.png
 - Evidence: /home/jammy/Code/PyAutoLabs/.task-logs/start-here-plot-ai/
 - Ship-time Heart RED: PR publication awaits explicit development-only override; no merge authority.
+
+## Latest integration
+Merged origin/main through 4ee301ec (new-user guide PR #649). Changes reapplied cleanly and notebook regenerated, all 13 cells passed again. Human authorized shipping after RED reasons were surfaced: "new user guide updates merged so work those in and then get this stuff in". Latest RED: PyAutoNerves: 2 commit(s) behind origin; PyAutoArray: 2 commit(s) behind origin; PyAutoGalaxy: 4 commit(s) behind origin; PyAutoLens: on branch feature/extra-galaxies-review (not main); PyAutoLens: 2 uncommitted source change(s); PyAutoCTI: 2 commit(s) behind origin; install verification FAILED (testpypi; checks F); release validation FAILED (stage integrate).
+
+## PR handoff
+PR: https://github.com/PyAutoLabs/autolens_workspace/pull/651
+Commit: 8087a94e174ae9dbc82bd45ef630e60be2b535ed
+Validation: 42 script smokes, 2 notebook smokes, all 13 introductory notebook cells passed. Generated Markdown refreshed from current source, 11 figures verified, image links corrected. Preview updated with merged guide illustrations. No runtime failures; generator emits an existing markdown-cell outputs schema warning on its intermediate notebook, final regenerated notebook validates cleanly. Next: judge PR checks, human /prm; no merge or release performed.

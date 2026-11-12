@@ -90,14 +90,20 @@
 ## start-here-plot-ai
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/647
 - issued: 2026-11-12
-- status: workspace-dev
+- status: awaiting-merge
 - session: OpenAI Codex desktop
 - prompt: active/start_here_plot_ai.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/start-here-plot-ai
 - repos:
   - autolens_workspace: feature/start-here-plot-ai
 - tier: judge — merge mode: human /prm
-- next: validated edits; ship-time Heart RED requires development-only override before PR publication
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/651
+- commit: 8087a94e174ae9dbc82bd45ef630e60be2b535ed
+- next: human /prm after CI green
+- heart-red-override:
+  authorization: "new user guide updates merged so work those in and then get this stuff in"
+  reasons: ["PyAutoNerves: 2 commit(s) behind origin", "PyAutoArray: 2 commit(s) behind origin", "PyAutoGalaxy: 4 commit(s) behind origin", "PyAutoLens: on branch feature/extra-galaxies-review (not main)", "PyAutoLens: 2 uncommitted source change(s)", "PyAutoCTI: 2 commit(s) behind origin", "install verification FAILED (testpypi; checks F)", "release validation FAILED (stage integrate)"]
+  gates: full regenerated notebook passed all 13 code cells; 42 script smokes passed; 2 notebook smokes passed; author review and diff check passed; no release or merge authority inferred
 
 - heart-red-override:
   authorization: "Yes, override Heart RED for #838 and go ahead with the commits, pushes and all four PRs, including the images and start_here notebooks. Don't merge yet."
