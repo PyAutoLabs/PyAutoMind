@@ -3,10 +3,16 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 5 in flight",
-  "updated": "2026-11-12T17:15:08Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
+  "updated": "2026-11-12T17:21:52Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "yellow",
+      "text": "Polish the homepage flow \u2014 awaiting-merge",
+      "url": "https://github.com/Jammy2211/Jammy2211.github.io/pull/4",
+      "prompt": "Use the start-dev skill. active/homepage_flow_polish.md"
+    },
     {
       "severity": "yellow",
       "text": "human review: multi-plane cross-validation (library tests + workspace guide)",
@@ -120,12 +126,6 @@
       "text": "pick: Verify jax.jit / jax.grad parity on the critical-curve and caustic calculations",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace_test/jax_zero_contour.md",
       "prompt": "Use the start-dev skill. draft/test/autolens_workspace_test/jax_zero_contour.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Remove the dead EDEN packaging tooling from PyAutoFit",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/pyautofit/remove_eden_packaging_tooling.md",
-      "prompt": "Use the start-dev skill. draft/refactor/pyautofit/remove_eden_packaging_tooling.md"
     }
   ]
 }
