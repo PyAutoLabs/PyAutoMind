@@ -220,10 +220,15 @@ inside the brief exactly as a live shift would and records each proposal —
 prompt, tier, pick reason — but takes no lease and starts no worker, up to
 `max-sessions:` proposals. Its digest lists them as `proposed (shadow)`. The
 pilot opens with two shadow shifts as its baseline. At `review-at:` every shift,
-shadow or live, appends one row to `batches/pilot/pilot.md` (the pilot ledger;
-its own header says which cells are the human's to fill at check-in; in a
-shadow row they measure the human's own review time and merges in the window,
-the baseline).
+shadow or live, writes one machine-readable line to `batches/pilot/pilot.jsonl`
+(one line per slot: mode, tokens by component, merged PR URLs with `mergedBy`
+and merge actor, per-worker exits, stall minutes, `amended`), and
+`batches/pilot/pilot.md` is rendered from it (the pilot ledger; its own header
+says which cells are the human's to fill at check-in; in a shadow row they
+measure the human's own review time and merges in the window, the baseline).
+Both go through the one Mind writer as upsert ops, so a late arrival amends the
+slot's line (`amended`) and never adds a second (PyAutoBrain#610). Tokens a shift
+could not measure are written `null` (`unmeasured` in the render), never 0.
 
 **`merge-cap:` in practice (phase 4b).** A `glance` worker ends at PR-open; once
 its CI is green the watcher starts one independent close-out session (same
@@ -282,8 +287,15 @@ the review surface; the HTML packet is written only when `packet: yes`.
 - drafts-filed: 1
 - packets-sent: 0
 - workers-crashed: 0
-- tokens: <n> of <token-budget>
+- tokens: <measured> of <token-budget> (cache-read <n>; <k> session(s) unmeasured)
 - review-minutes-planned: 45
+
+### Workers
+- <label> (<worker key>): spawned/finished
+- <label> (<worker key>): spawned/parked — blocked 40 min — mentioned (parked)
+
+### Refusals
+- <task> — token-budget 100: 55 committed + 60 reserved per worker — 2× from <at>
 ```
 
 Brief work and backlog picks stay separate, and **every backlog pick carries a
@@ -301,10 +313,22 @@ worker's `<task>.done` (one URL per line, `merged <url>` for a PR it merged
 in-turn under its tier); each worker's `<task>.proof.md`, quoted verbatim — a
 task that wrote none gets a stub saying so, never an invented packet; one
 read-only `gh pr checks` per PR for its health; and its own counters.
-`glance-auto-merges`, `reverts`, `pushes`, `drafts-filed` and `packets-sent`
-stay 0 until phases 4–5 count them (human, 2026-11-04). The comment is posted
+`glance-auto-merges`, `reverts`, `drafts-filed` and `packets-sent` stay 0
+until phases 4–5 count them (human, 2026-11-04); `pushes` counts the
+@mentions below (PyAutoBrain#611). The comment is posted
 **once**: a local marker is created before the post, so a crash leaves no
-comment rather than two, and a failed post is not retried.
+comment rather than two; a post that fails outright is retried on later ticks,
+at most 3 attempts in all, and never after a timeout (a timeout may have
+posted). Counters come from one exit record per worker and from GitHub's merged
+state for each PR in the window, read at review-at after a final reap
+(PyAutoBrain#610). A late arrival amends the record and the pilot line and posts
+**one** correction comment. A worker that parks, or parks on its issue with a
+question (awaiting input), gets **one** comment on the digest issue
+@-mentioning the human (`mention_login`), derived from durable
+state and retried like the digest; the watcher posts with
+`PYAUTO_SHIFT_GH_TOKEN` (a bot account, PyAutoMind `issues: write` only) so the
+mention notifies, and the digest warns when the poster is the mentioned account
+(PyAutoBrain#611; AUTONOMY.md watcher network surface, amended 2026-11-12).
 `batch digest --record <file>` prints it early; `batch brief --check` refuses a
 digest missing a section, a counter, a pick's `why:` or a started task's
 packet.
