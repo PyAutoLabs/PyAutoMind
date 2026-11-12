@@ -1,3 +1,18 @@
+## start-here-plot-ai
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/647
+- completed: 2026-11-12
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/651
+- merge: d20312235967cb825ddecd7199533bbc7425b788
+- authorization: human /prm after separately recorded Heart RED development-shipping authorization; no release.
+- summary: Introductory grid uses 30x30 points without x/y labels; subsequent light-profile and lensing calculations retain the 150x150 grid over the same field. Added three Gemini experiments and dedicated PyAutoLens assistant guidance. Incorporated merged new-user guide #649 and regenerated notebook, Markdown and figures.
+- validation: six executed CI jobs passed, all three workflows successful. CI smoke matrix intentionally skipped by change filter, not counted as a pass. Local 42 script smokes, 2 notebook smokes and all 13 start-here cells passed. Notebook schema/metadata, blank labels, dimensions, rendered figures and diff checks passed.
+- evidence: /home/jammy/Code/PyAutoLabs/.task-logs/start-here-plot-ai/
+- preview: /mnt/c/Users/Jammy/Workspace/Science/scratch/start_here_plot_ai_2026-11-12/start_here.html
+- cleanup: human authorized removal of the worktree and generated test datasets/outputs. Preview and external validation logs retained.
+- reconciliation: five unrelated suspects in draft/bug/autolens retained (point_solver_error_bisect_health, runtime_single_jit_median_reach_and_a100_witness, jit_cache_not_hit_modeling_visualization, positions_threshold_fixture_off_axis, point_source_plot_script_residual_shape_mismatch); none covered by this plotting/docs change. Follow-up door: intake reconcile draft/bug/autolens.
+
+## Original prompt
+
 # Start-here plots and AI experiments
 
 Target: @autolens_workspace
