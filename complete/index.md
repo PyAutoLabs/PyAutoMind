@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2229 records across 11 buckets.
+2230 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -253,6 +253,7 @@ markers; everything below GENERATED is rebuilt.
 - [results-library-p2-completeness](2026/11/results-library-p2-completeness.md) — phase 2; ledger draft/feature/autofit/results_library_epic.md
 - [results-library-p3-exports](2026/11/results-library-p3-exports.md) — phase 3; ledger draft/feature/autofit/results_library_epic.md
 - [results-library-p4-package](2026/11/results-library-p4-package.md) — phase 4; ledger draft/feature/autofit/results_library_epic.md
+- [results-library-p5a-assistant](2026/11/results-library-p5a-assistant.md) — shipped al_build_results_library skill, operations wiki, hpc/sync results index/check and index-only pulls, Wi…
 - [results-library-p5b-cortex](2026/11/results-library-p5b-cortex.md) — phase 5b; ledger draft/feature/autofit/results_library_epic.md
 - [root-default-test-env-leak](2026/11/root-default-test-env-leak.md) — fixed in commit 748f8c0bb (this PR). The module's autouse `forget_the_resolver` fixture now deletes `PYAUTO_RO…
 - [rtd-organism-currency](2026/11/rtd-organism-currency.md) — already shipped, closed as a stale draft. PyAutoBrain 1aa2ed4 (#563) renamed `docs/organs/build` to `organs/ha…

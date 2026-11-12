@@ -21,6 +21,10 @@ PyAutoFit campaign `cache_root:` plus TMPDIR in five workspace activate.sh files
 were claimed by other tasks at the time (nautilus-spawn-training-pool,
 results-library-p5a-assistant, gradient-correctness-sweep, sky-orientation-p2).
 
+Update 2026-11-12: the assistant claim is released by
+`complete/2026/11/results-library-p5a-assistant.md` (autolens_assistant#177 merged).
+The other claims must still be checked before implementation.
+
 Copy the five-line TMPDIR block from autofit_assistant/activate.sh (directly after the
 `ASTROPY_CACHE_DIR` export) into each repo's PYAUTO_HPC_CACHE block. Why: on RAL compute
 nodes `/tmp` sits on a tiny local OS disk that tools filled, crashing nodes (RAL admin,

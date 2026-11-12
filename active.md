@@ -46,20 +46,6 @@
 - 2d-plan: APPROVED by human 2026-11-03 ~18:10 (not started; nothing written yet). scripts/tools/render_north_up.py on branch feature/sky-orientation-p2d: read each zip's image/dataset.fits + files/tracer.json + image/adapt_images.fits + image/adapt_image_plane_mesh_grids.fits; flipud arrays/adapt images, mesh grid + positions y->-y, tracer via sky_frame.plus_y_north_from; re-solve FitImaging at max-L (no search); WITNESS log-L == stored to ~1e-6 every lens, data panel vs rgb_north_up.jpg, positions on arcs; library subplot_fit + image_with_positions, util.subplot_rgb on rgb_north_up.jpg, segmentation from FITS, fit_multi_wavelength per band from output_sed; N/E compass. Pilot ~50 (paper lenses + grade-stratified random + asymmetric) as 2-CPU/5GB ral jobs -> inspect/north_up_pilot_20261103/ + side-by-side review page. Then full run, re-package, 2b docs; R2 upload last.
 - merged: euclid#122 (RGB-panel compass + release docs) 2026-11-10 (fbfd7a3); ECLIPSE#6 downloads.json (5d3d68a). Re-render 414683, release 414768 (SHA 26/26), R2 re-upload 414791 + per-lens 414790 (0 differences). Phase 2 COMPLETE; #115 open for phases 3-5. Worktree removed.
 
-## results-library-p5a-assistant
-- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/176
-- issued: 2026-11-02
-- session: claude-code desktop (Opus 5.5)
-- status: workspace-shipped, awaiting-merge (judge → human /prm; wiki-currency waits on a PyAutoFit release)
-- worktree: ~/Code/PyAutoLabs-wt/results-library-p5a-assistant
-- repos:
-  - autolens_assistant: feature/results-library-p5a-assistant
-- prompt: active/results_library_p5a_assistant.md
-- epic: results-library (phase 5a)
-- tier: judge — merge mode: human /prm
-- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/177
-- heart-ack: STALE 'release validation incomplete: no rehearsal for current source' (human 2026-11-02)
-
 ## gradient-correctness-sweep
 - issue: https://github.com/PyAutoLabs/autolens_profiling/issues/517
 - issued: 2026-11-02
