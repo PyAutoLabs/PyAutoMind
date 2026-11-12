@@ -90,7 +90,7 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/656
 - issued: 2026-11-12
 - session: OpenAI Codex desktop; session ID unavailable
-- status: awaiting-heart-red-override
+- status: awaiting-merge
 - prompt: active/non_imaging_features_review.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/non-imaging-features-review
 - repos:
@@ -98,3 +98,13 @@
   - autolens_workspace: feature/non-imaging-features-review
 - tier: judge — merge mode: human /prm
 - approval: live user approved all 51 texts/images, root introduction and RTD; open paired PRs only, no merge
+
+- heart-red-override:
+  authorization: "Approve development-only override for #656"
+  reasons: ["PyAutoNerves: 2 commit(s) behind origin", "PyAutoArray: 2 commit(s) behind origin", "PyAutoGalaxy: 14 commit(s) behind origin", "PyAutoLens: on branch feature/non-imaging-features-review (not main)", "PyAutoLens: 4 uncommitted source change(s)", "PyAutoCTI: 2 commit(s) behind origin", "install verification FAILED (testpypi; checks F)", "release validation FAILED (stage integrate)"]
+  gates: 52 script ASTs and notebook executable code preserved; 52 notebook schemas valid; 267 notebook links resolve; approved text/image parity; full feature-page Sphinx build with warnings as errors, navigator, search-memory, size and whitespace checks pass. Numerical suites not rerun for documentation-only scope; required CI remains mandatory. Human approved the previews and implementation.
+  scope: commit, push, open both review PRs only; no merge or release
+
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/851
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/657
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/851

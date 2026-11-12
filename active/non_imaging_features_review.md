@@ -59,3 +59,29 @@ Branch: feature/non-imaging-features-review
 - release validation FAILED (stage integrate)
 
 Next: after task-specific approval, record the override in all four required sinks and commit/push/open PyAutoLens PR first, then workspace PR. Do not merge.
+
+## Development-only Heart RED override
+
+Live user authorization: "Approve development-only override for #656", in reply to the task-specific request to commit, push and open both PRs for review, with no merge or release.
+
+Exact RED reasons:
+- PyAutoNerves: 2 commit(s) behind origin
+- PyAutoArray: 2 commit(s) behind origin
+- PyAutoGalaxy: 14 commit(s) behind origin
+- PyAutoLens: on branch feature/non-imaging-features-review (not main)
+- PyAutoLens: 4 uncommitted source change(s)
+- PyAutoCTI: 2 commit(s) behind origin
+- install verification FAILED (testpypi; checks F)
+- release validation FAILED (stage integrate)
+
+Passed branch checks: 52 script ASTs and notebook executable code preserved; 52 notebook schemas valid; 267 notebook links resolve; approved text/image parity; full feature-page Sphinx build with warnings as errors, navigator, search-memory, size and whitespace checks pass. Numerical suites not rerun for documentation-only scope; required CI remains mandatory. Human approved the previews and implementation.
+
+No release, merge or CI bypass authorized.
+
+## PR-open checkpoint
+- Library PR: https://github.com/PyAutoLabs/PyAutoLens/pull/851
+- Workspace PR: https://github.com/PyAutoLabs/autolens_workspace/pull/657
+- Library head: a18b5f00bfc79d838a539c966b7d2b40ec9e3c94
+- Workspace head: b01dfe87807cec5c2212fe597612968c99671134
+- Status: both open for review, no merge or release; development-only Heart RED override recorded in issue, PR bodies, active registry and first autonomy-log table.
+- Next: human review; on a separate explicit merge request, check exact-head CI and release freeze. Do not auto-merge or poll beyond this deliverable.
