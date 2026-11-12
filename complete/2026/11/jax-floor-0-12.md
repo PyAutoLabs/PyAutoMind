@@ -30,15 +30,10 @@ decisions/jax-cpu-policy-2026-11.md (approved 2026-11-11).
 ### Follow-ups / not done
 - draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md: jax.grad through
   jax_zero_contour fails on 0.12 (custom_root transpose).
-- PyAutoCTI still floors `autonerves>2026.10.4.1` (not in scope); raise it.
-- PyAutoHeart jax-compatibility.yml matrix (0.9.2/0.11.2) is unchanged: it
-  needs a fresh incident manifest from a 0.12 candidate.
 - RAL shared venv still on jax 0.11.2: the human runs the upgrade (remote
   write blocked from the session).
 - The existing drafts for eigen-flag workaround removal and the Heart hang
   guard can now start.
-- PyAutoFit docs.yml `generated-search-docs` should go green post-publish;
-  re-check.
 
 ## Original prompt
 
@@ -62,3 +57,11 @@ jax/jaxlib 0.11.2 (today's resolved version and "recommended baseline") deadlock
 1. Heart validation on jax 0.12 first: full library unit suites + workspace smoke on CPU and GPU (CUDA 12/13 plugins), including blackjax, optax, nufftax, jaxnnls; rerun autolens_workspace_test multi_dataset/jax_likelihood/delaunay_mge.py, delaunay.py, shared_preloads.py, rectangular.py (all hung in release-integrate on 0.11.2, delaunay_mge even with the eigen flag).
 2. PyAutoNerves pyproject: `jax>=0.12.0,<0.13` AND `jaxlib>=0.12.0,<0.13` (both: jax 0.12.0 accepts jaxlib 0.11.2), replacing the 0.7 floor and the 0.10.*/0.11.0 exclusions; README "JAX compatibility" + "recommended baseline" updated. numpy floor becomes 2.2; x86-64 needs Haswell+.
 3. Do NOT add a default XLA:CPU flag: the eigen flag costs +18-50 % per call on pixelized likelihoods on 0.12.
+
+### Follow-ups resolved 2026-11-12 (PyAutoHeart#333)
+- PyAutoCTI#128 merged (2caeee1): `autonerves>=2026.11.9.1.post1`; it rides the next release.
+- PyAutoHeart#334 merged (1c60204): jax-compatibility endpoints 0.12.0 / 0.12.0.1 with the new
+  manifest diagnostics/release-43210505844.json (recovered from the 2026.11.12.1 validation
+  integrate job); both replays passed, each verified to install its own jax. The incident
+  manifest release-37199991757.json is kept for release-diagnostic.yml.
+- PyAutoFit `generated-search-docs`: green on main after the publish (run 43226014418); no change.
