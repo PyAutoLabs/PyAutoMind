@@ -73,45 +73,19 @@
 - prompt: active/homepage_flow_polish.md
 - tier: judge — merge mode: human /prm
 
-## start-here-intro-polish
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/834
-- issued: 2026-11-12
-- session: Codex desktop; session ID unavailable
-- status: pr-open, awaiting-human-merge
-- prompt: active/start_here_intro_polish.md
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/start-here-intro-polish
-- tier: judge — text approved; PRs authorized; do not merge
-- repos:
-  - PyAutoLens: feature/start-here-intro-polish
-  - PyAutoGalaxy: feature/start-here-intro-polish
-  - autolens_workspace: feature/start-here-intro-polish
-  - autogalaxy_workspace: feature/start-here-intro-polish
-
-- heart-red-override:
-  authorization: "Yes, override Heart RED for #834 and go ahead with the commits, pushes and all four PRs, including the start_here notebooks. Don't merge yet."
-  reasons: ["PyAutoGalaxy: on branch feature/start-here-intro-polish (not main)", "PyAutoGalaxy: 1 uncommitted source change(s)", "PyAutoLens: on branch feature/start-here-intro-polish (not main)", "PyAutoLens: 2 uncommitted source change(s)", "PyAutoLens: 2 commit(s) behind origin", "install verification FAILED (testpypi; checks F)", "release validation FAILED (stage integrate)"]
-  gates: focused Sphinx builds, notebook regeneration/schema validation, unchanged executable AST/code cells/metadata, rendered links, diff checks and human text review passed; numerical suites not run for prose-only scope
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/836
-- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/704
-- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/644
-- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/274
-
-## prompt-sync-detached-push
-- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/556
+## merge-actor-audit
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/606
 - issued: 2026-11-12
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
 - status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/prompt-sync-detached-push
-- prompt: active/prompt_sync_detached_push_target.md
-- epic: autonomous-orchestrators (programme M1 side fix, from M1.2 follow-up item 2)
+- worktree: ~/Code/PyAutoLabs-wt/merge-actor-audit
+- prompt: active/autonomy_log_merge_actor_and_random_audit.md
+- epic: autonomous-orchestrators (programme M1.4, phase 8)
+- decision: human 2026-11-12 "All three as recommended" (actor classes + count rule; seeded 1-in-5 audits; read-by column non-gating) — doctrine edit authorized
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
-- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/557
-- heart-red-override:
-  authorization: live human 2026-11-12 "Override + merge on green" (programme session); https://github.com/PyAutoLabs/PyAutoMind/issues/556
-  reasons: "PyAutoGalaxy: on branch feature/start-here-intro-polish (not main)"; "PyAutoGalaxy: 1 uncommitted source change(s)"; "PyAutoLens: on branch feature/start-here-intro-polish (not main)"; "PyAutoLens: 2 uncommitted source change(s)"; "PyAutoLens: 2 commit(s) behind origin"; "install verification FAILED (testpypi; checks F)"; "release validation FAILED (stage integrate)"
-  gates: Mind suite 760 passed; independent review CLEAN; smoke n/a
 - repos:
-  - PyAutoMind: feature/prompt-sync-detached-push
+  - PyAutoBrain: feature/merge-actor-audit
+  - PyAutoMind: feature/merge-actor-audit
 
 ## los-halos-review
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/645

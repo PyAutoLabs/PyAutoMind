@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2235 records across 11 buckets.
+2237 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -242,6 +242,7 @@ markers; everything below GENERATED is rebuilt.
 - [point-magnification-api](2026/11/point-magnification-api.md) — already shipped — PyAutoLens#798 (f791ac77) + autolens_workspace#598 (0f8b4db5), records `complete/2026/10/poi…
 - [pr504-guard-log-det-terms](2026/11/pr504-guard-log-det-terms.md)
 - [procedure-lines-trim](2026/11/procedure-lines-trim.md) — PR is the tracking surface
+- [prompt-sync-detached-push](2026/11/prompt-sync-detached-push.md)
 - [prompt-sync-explicit-paths](2026/11/prompt-sync-explicit-paths.md)
 - [pseudo-det-rebaseline](2026/11/pseudo-det-rebaseline.md)
 - [pulse-xla-pointers-to-dna](2026/11/pulse-xla-pointers-to-dna.md)
@@ -272,6 +273,7 @@ markers; everything below GENERATED is rebuilt.
 - [simulator-poisson-flag-guard](2026/11/simulator-poisson-flag-guard.md) — - `SimulatorImaging.via_image_from` draws Poisson noise only when `add_poisson_noise_to_data` or `include_pois…
 - [simulator-roundoff-control](2026/11/simulator-roundoff-control.md)
 - [skill-line-budget-trim](2026/11/skill-line-budget-trim.md) — PR is the tracking surface
+- [start-here-intro-polish](2026/11/start-here-intro-polish.md)
 - [token-load-measure-four-organs](2026/11/token-load-measure-four-organs.md) — PR is the tracking surface
 - [tutorial-link-sweep](2026/11/tutorial-link-sweep.md)
 - [watcher-workers-survive-systemd-tick](2026/11/watcher-workers-survive-systemd-tick.md) — pilot 4c follow-up; issue PyAutoBrain#592

@@ -1,3 +1,22 @@
+# Start Here introduction polish
+
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/834
+- completed: 2026-11-12
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/836
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/704
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/644
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/274
+
+Approved API-first Using This Guide introductions replace the natural-language advocacy on both RTD pages and workspace start_here.py, regenerated start_here.ipynb and markdown/start_here.md. Embedded Colab/assistant links and the Lens 2D schematic are included. Concurrent Shapelets changes preserved.
+
+All four merged library-first on explicit human authority: Galaxy 8c45715e155a6b5cba9cf420d90c42ccce52714b; Lens 2947020d00d1d3841a8f106af87c9168be86dde5; lens workspace 60b3bf51cf7b961babe824424a78ba4a30464f7c; galaxy workspace d96ef2e2e00a0b76ed75a2dbad499d175d5c0adb. Git ancestry verifies every branch merged.
+
+Both libraries passed Docs, Python 3.12/3.13 and no-JAX CI. Both workspaces passed Navigator and Size Guard. Smoke classification succeeded; matrix skips expected under no_smoke_relevant_changes because only root start_here.py/ipynb and markdown changed, outside scripts/, config/, .github/ and smoke entry lists. Independently verified notebook executable code and metadata unchanged; reproducible regeneration, schema validation and focused Sphinx builds passed. Human approved rendered wording.
+
+Heart RED development override recorded in all four sinks. Separate live merge instruction, freeze clear; no release performed. Review previews retained in /mnt/c/Users/Jammy/Workspace/Science/scratch/start_here_intro_polish_20261112/applied_review/.
+
+## Original prompt
+
 # Polish RTD and workspace Start Here introductions
 
 Type: docs

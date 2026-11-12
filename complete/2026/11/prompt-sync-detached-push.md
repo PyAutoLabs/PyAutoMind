@@ -1,3 +1,31 @@
+Side fix in programme M1 (epic `autonomous-orchestrators`), from the M1.2 follow-up. Shipped as PyAutoMind#557 (5ad296703), merged 2026-11-12. Issue PyAutoMind#556, closed.
+
+`prompt_sync_push` and `prompt_sync_new_prompts` accept an explicit per-call push target, `PROMPT_SYNC_PUSH_TO=<branch>`. On a detached HEAD the helper:
+- fetches `origin/<target>`;
+- refuses unless HEAD holds no commits that the remote target lacks, so only the helper's own commit is published;
+- pushes `HEAD:refs/heads/<target>`, with no force and no `-u`.
+
+Refusals:
+- A detached HEAD with no target still refuses, and the message names the variable.
+- A named branch with a mismatched target refuses.
+- Targets starting with `refs/`, `+` or `<remote>/` are refused.
+- Every refusal happens before `git add`, leaving the index and HEAD unchanged.
+
+The route is documented in REFERENCE.md.
+
+**Witness** (command and observed result):
+- Mind `pytest tests/`: 760 passed.
+- `tests/test_prompt_sync_branch.py` has 10 new tests with real git and a bare remote. They fail on the old script.
+- This close-out was itself pushed with `PROMPT_SYNC_PUSH_TO=main prompt_sync_push …` from a temporary worktree detached on origin/main.
+
+**Review:** an independent Opus review returned FINDINGS. A leftover exported target could publish unreviewed detached commits to main; there were also ref-name tricks, and the helper staged before refusing. These were fixed in e093e7797. The re-review was CLEAN, with scratch end-to-end checks.
+
+**Heart:** RED at ship, for release-scope reasons and the canonical PyAutoGalaxy/PyAutoLens checkouts held by a review session. The live human gave a development-only override plus the merge command, recorded in all four places.
+
+Still open in `draft/maintenance/pyautomind/prompt_sync_explicit_paths_followups.md`: items 1, 3 and 4, and the WORKFLOW/CONTEXT half of item 2.
+
+## Original prompt
+
 # prompt_sync_push: an explicit push target from a detached HEAD
 
 Type: bug

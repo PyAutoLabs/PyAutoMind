@@ -8,8 +8,9 @@ Repos:
 Difficulty: small
 Autonomy: supervised
 Priority: normal
-Status: draft
+Status: issued
 Filed: 2026-11-10
+Issued: 2026-11-12
 Epic: autonomous-orchestrators
 Consequence: glance
 Witness: (a) each new shadow row carries a merge actor written by the tool (from `gh pr view --json mergedBy` and whether `/prm` was typed by the human), shown on one real row; (b) a test shows the count function leaves out human-typed `/prm` rows; (c) the recount of the 69 stage-1 rows is printed in three classes (expected: about 30 human `/prm`, 8 to 10 automatic or in-turn, about 29 not stated); (d) the sampler draws the same 1-in-5 sample twice from the same seed
