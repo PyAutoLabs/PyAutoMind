@@ -126,3 +126,32 @@
   authorization: "Looks good, open PRs for the gallery and RTD changes, then merge RTD first once CI is green. I'm happy with the documentation-only smoke skips. Close out the task after."
   reasons: ["PyAutoNerves: 4 commit(s) behind origin", "PyAutoFit: 2 commit(s) behind origin", "PyAutoArray: 4 commit(s) behind origin", "PyAutoGalaxy: 22 commit(s) behind origin", "PyAutoLens: on branch feature/new-user-guide-rebalance (not main)", "PyAutoLens: 1 uncommitted source change(s)", "PyAutoCTI: 4 commit(s) behind origin", "install verification FAILED (testpypi; checks F)", "release validation FAILED (stage integrate)"]
   gates: Human visual review, GFM rendering, image and example-folder targets, strict focused Sphinx build and diff checks pass. No executable changes. Merge on green CI with accepted docs-only smoke skips; no release.
+
+## galaxy-guide-rebalance
+- issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/281
+- issued: 2026-11-12
+- session: OpenAI Codex desktop
+- prompt: active/galaxy_guide_rebalance.md
+- status: shipped, awaiting-review; no merge authorized
+- tier: judge — merge mode: human /prm
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/galaxy-guide-rebalance
+- repos:
+  - PyAutoGalaxy: feature/galaxy-guide-rebalance
+  - autogalaxy_workspace: feature/galaxy-guide-rebalance
+- heart-red-override:
+  - authorization: "Approve development-only override for #281"
+  - scope: commit, push, two review PRs only; no merge or release
+  - gates: Focused Sphinx build with warnings as errors; notebook schema/regeneration and executable/code-cell parity; retained images/URLs and notebook targets; browser rendering; navigator/search-memory/size checks pass. Human editorial review approved. Numerical suites not rerun for prose-only changes. Executable walkthrough and Features gallery unchanged.
+  - red-reasons:
+    - PyAutoNerves: 4 commit(s) behind origin
+    - PyAutoFit: 2 commit(s) behind origin
+    - PyAutoArray: 4 commit(s) behind origin
+    - PyAutoGalaxy: on branch feature/galaxy-guide-rebalance (not main)
+    - PyAutoGalaxy: 1 uncommitted source change(s)
+    - PyAutoLens: 1 uncommitted source change(s)
+    - PyAutoLens: 45 commit(s) behind origin
+    - PyAutoCTI: 4 commit(s) behind origin
+    - install verification FAILED (testpypi; checks F)
+    - release validation FAILED (stage integrate)
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/714
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/282
