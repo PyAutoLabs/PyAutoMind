@@ -62,3 +62,14 @@
 - repos:
   - PyAutoMind: feature/prompt-sync-explicit-paths
   - PyAutoBrain: feature/prompt-sync-explicit-paths
+
+## homepage-flow-polish
+- issue: https://github.com/Jammy2211/Jammy2211.github.io/issues/3
+- issued: 2026-11-12
+- status: awaiting-merge
+- workspace-pr: https://github.com/Jammy2211/Jammy2211.github.io/pull/4
+- worktree: /home/jammy/Code/PyAutoLabs/scratch/website-lensing-intro
+- repos:
+  - Jammy2211.github.io: feature/homepage-flow-polish
+- prompt: active/homepage_flow_polish.md
+- tier: judge — merge mode: human /prm
