@@ -516,3 +516,8 @@ Live human: “Approved, proceed with the 12-fit investigation and one RAL job u
 ### Parent CPU implementation gates — 2026-11-12
 
 Producer04b33ab7be4d976c43beaaaedf09892f96703974 implements the approved12fit controls, passive observations, three-channel phase accounting and dedicated runtime/wrapper claim.322local tests, ruff/format/shell/catalogue and six-arm zero-science worker/descriptor/affinity smoke pass; author review only. Exact-head CI43237941034 green, all steps checked. Heart14:29:57.382396Z YELLOW: “PyAutoArray: open PR 9d old”; “release validation stale: source moved since rehearsal (PyAutoFit, PyAutoGalaxy, PyAutoLens, PyAutoCTI)”. Artifact15 build/fresh restore in progress; allowance UNUSED. Outside Pulse, human merge; PR17 remains draft.
+
+
+### Parent CPU job415196 submitted once
+
+One hpc/sync submission at04b33ab after322tests/zero-science smoke/CI43237941034 and artifact15 inventory3.82s/fresh restore36.48s/cleanup passed. New parent-cpu-diagnostics-ral-01 claim, original node requested, same approved12fit limits. Submitted2026-11-12T14:34:46Z; allowance CONSUMED, no retry/requeue/replacement. Monitor owned job to terminal, retain all data, outside Pulse, human merge.
