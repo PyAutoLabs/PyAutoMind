@@ -529,10 +529,13 @@ faculty at conception and all overridable by declaring them:
   hands it a **RAL test packet** (what to run, at which commit, the pass/fail
   rule) — planned for phase 5 of the autonomous-orchestrators epic.
 
-  Intake infers a lane at filing from the text (`_intake.LANE_SIGNALS`): RAL,
-  SLURM, `sbatch`, A100, HPC or a `/mnt/ral` path → `ral`; CUDA or an
-  upper-case GPU → `gpu`; any other `/mnt/<drive>` path → `wsl-data`;
-  "private data" → `local-dev`. The backlog filed before that was backfilled
+  Intake infers a lane at filing from the text (`_intake.LANE_SIGNALS`). A
+  mechanism counts wherever it appears: SLURM, `sbatch`, `--gres` or a
+  `/mnt/ral` path → `ral`; CUDA or the laptop GPU → `gpu`; any other
+  `/mnt/<drive>` path → `wsl-data`; "private data" → `local-dev`. A bare
+  resource name (RAL, A100, HPC → `ral`; GPU → `gpu`) counts only in the
+  title, the `Witness:` line or a requirement phrase ("re-run … on the A100",
+  "submit … to RAL", "needs a GPU"), and a negated mention never counts. The backlog filed before that was backfilled
   from the same table by `PyAutoBrain/bin/lane_backfill.py` (2026-11-12), whose
   proposals a human skims before `--apply` writes them.
 - **`Verified:`** `<date> <sha> (<repo>)[, …]` — written, never by hand, when
