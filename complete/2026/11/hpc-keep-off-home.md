@@ -7,7 +7,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/46
 - workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/65
 - workspace-pr: https://github.com/PyAutoLabs/autocti_assistant/pull/40
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1768
 - tier: glance, auto-merged on green 2026-11-12 (human-approved plan); Heart YELLOW acknowledged by the human at ship (PyAutoArray open PR 8d old)
 
 ## Why

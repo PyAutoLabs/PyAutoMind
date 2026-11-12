@@ -7,7 +7,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/autogalaxy_assistant/pull/47
 - workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/66
 - workspace-pr: https://github.com/PyAutoLabs/autocti_assistant/pull/41
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1771
 - shipped and merged under a Heart RED development override (live human: "Override, ship + merge", then an explicit "Yes, merge when green" in a later turn after the first grant lapsed); recorded on the issue, PR bodies and autonomy_log first table (`red-override`). No glance shadow row: not a tiered auto-merge.
 
 ## Why

@@ -2,7 +2,6 @@
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/687
 - completed: 2026-11-10
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/688
-- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/688
 - summary:
   - `SimulatorImaging.via_image_from` draws Poisson noise only when `add_poisson_noise_to_data` or `include_poisson_noise_in_noise_map` is set (Python-level flag check, JAX-traceable). With both off, the global NumPy RNG is no longer touched.
   - `preprocess.poisson_noise_via_data_eps_from` clips PSF-convolution round-off negatives to 0 before the draw (NumPy and JAX). NumPy raises `exc.DatasetException` when min < -1e-10 × |max|; JAX clips only.

@@ -2,7 +2,6 @@
 
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/698
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/699
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/699
 - completed: 2026-11-10
 
 ## What happened

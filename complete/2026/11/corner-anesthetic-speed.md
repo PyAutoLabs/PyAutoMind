@@ -2,7 +2,6 @@
 
 Merged 2026-11-09 in PyAutoFit#1761 (`bdb7af0e9`), issue PyAutoFit#1760.
 
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1761
 
 ## What shipped
 

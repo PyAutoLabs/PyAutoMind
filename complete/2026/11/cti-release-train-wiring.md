@@ -7,7 +7,6 @@
 - library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/323
 - library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/535
 - workspace-pr: https://github.com/PyAutoLabs/autocti_workspace/pull/40
-- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/210
 
 Merged 2026-11-05 via human-typed /prm, in gate order: PyAutoNerves#210 → PyAutoMind#535 → PyAutoHands#333 / PyAutoBrain#585 / PyAutoHeart#323 → autocti_workspace#40. Issue PyAutoHands#332 closed. cti-upkeep epic, phase 1.
 
