@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2242 records across 11 buckets.
+2243 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -279,6 +279,7 @@ markers; everything below GENERATED is rebuilt.
 - [skill-line-budget-trim](2026/11/skill-line-budget-trim.md) — PR is the tracking surface
 - [start-here-intro-polish](2026/11/start-here-intro-polish.md)
 - [start-here-plot-ai](2026/11/start-here-plot-ai.md) — Introductory grid uses 30x30 points without x/y labels; subsequent light-profile and lensing calculations reta…
+- [three-feature-review](2026/11/three-feature-review.md)
 - [token-load-measure-four-organs](2026/11/token-load-measure-four-organs.md) — PR is the tracking surface
 - [tutorial-link-sweep](2026/11/tutorial-link-sweep.md)
 - [watcher-workers-survive-systemd-tick](2026/11/watcher-workers-survive-systemd-tick.md) — pilot 4c follow-up; issue PyAutoBrain#592

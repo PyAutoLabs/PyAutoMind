@@ -1,5 +1,25 @@
 # Three feature introductions and illustrations
 
+Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/652 (closed)
+
+Merged 2026-11-12 after the live human merge command, all 12 exact-head GitHub CI jobs succeeded, and Heart freeze returned `not frozen`. Library first:
+- PyAutoLens #845 https://github.com/PyAutoLabs/PyAutoLens/pull/845; source e1bcc2d4a677c9b3f2f9f7f18531a90fc6b78b70; merge 5f732e564db1d590da8b8bb8c0be78febb9f2827.
+- autolens_workspace #653 https://github.com/PyAutoLabs/autolens_workspace/pull/653; source 25ef2779caa5c57e8dafc7dddb6d8e2ac712d848; merge cb62b1f488b541e73dd86df56e0955b3de157024.
+Both source branches proved ancestors of origin/main.
+
+Applied approved scientific-use-case-first introductions for linear_light_profiles, scaling_relation and advanced/operated_light_profile, preserving teaching detail. Linear profiles lead with solving rather than sampling brightness; scaling relations emphasize population assumptions and the main-lens anchor; operated profiles distinguish already PSF-blurred compact emission from intrinsic light. Approved images reused in the features, root tour and RTD, including the revised operated PSF illustration. Four notebooks and catalogues regenerated.
+
+Validation: exact approved prose/image parity; unchanged executable AST and notebook code cells; notebook schemas; image links; focused Sphinx warnings-as-errors build; navigator, search-memory, size and whitespace checks. Clean scratch merge compatibility with start-here-plot-ai; installation docs disjoint. Local numerical suites not repeated; all 4 library and 8 workspace CI jobs passed before merge.
+
+Development-only Heart RED override recorded verbatim on issue, both PRs, active entry and first autonomy_log table. Merge was separately authorized; no release/rehearsal or assertion Heart is healthy. No pending-release obligation on the task's active entry.
+
+Review bundle: C:\Users\Jammy\Workspace\Science\scratch\three_feature_review_20261112\applied\
+Source worktree: /home/jammy/Code/PyAutoLabs/.worktrees/three-feature-review (remove after close-out).
+
+## Original prompt
+
+# Three feature introductions and illustrations
+
 Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/652
 Issued: 2026-11-12
 Consequence: judge
