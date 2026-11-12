@@ -1157,7 +1157,7 @@ Use the start-dev skill. active/homepage_flow_polish.md
 
 </details>
 
-<details><summary>📋 <a href="active/installation_docs_polish.md">Installation docs polish</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/841">issue #841</a> — issued 2026-11-12 — human-review</summary>
+<details><summary>📋 <a href="active/installation_docs_polish.md">Installation docs polish</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/841">issue #841</a> — issued 2026-11-12 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/842">PyAutoLens#842</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/706">PyAutoGalaxy#706</a> — ⏳ pending release: PyAutoLens — ⏳ pending release: PyAutoGalaxy</summary>
 
 ```
 Use the start-dev skill. active/installation_docs_polish.md
@@ -3037,10 +3037,12 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 **PyAutoGalaxy**
 
+- [PyAutoGalaxy#706](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/706) — `active/installation_docs_polish.md`
 - [PyAutoGalaxy#703](https://github.com/PyAutoLabs/PyAutoGalaxy/pull/703) — `active/three_autos_public_framing.md`
 
 **PyAutoLens**
 
+- [PyAutoLens#842](https://github.com/PyAutoLabs/PyAutoLens/pull/842) — `active/installation_docs_polish.md`
 - [PyAutoLens#833](https://github.com/PyAutoLabs/PyAutoLens/pull/833) — `active/three_autos_public_framing.md`
 
 **PyAutoNerves**
