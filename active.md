@@ -247,7 +247,7 @@
 ## subhalo-detection-review
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/632
 - issued: 2026-11-12
-- status: workspace-dev
+- status: awaiting-review
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/subhalo-detection-review
 - repos:
   - autolens_workspace: feature/subhalo-detection-review
@@ -255,6 +255,13 @@
 - prompt: active/subhalo_detection_review.md
 - tier: judge; review PRs only, no merge
 - coordination: separate documentation worktree under prior same-session approval; unchanged overlapping claims.
-- next: development-only Heart RED override for #632, then commit/push/open both review PRs; no merge.
+- next: human reviews workspace #633 and RTD #827; no merge authorized.
 - validation: approved-preview parity, executable and notebook code parity, image/navigation/size/whitespace and focused Sphinx checks passed.
 - review: /mnt/c/Users/Jammy/Workspace/Science/scratch/subhalo_detection_individual_review_20261112/applied/index.html
+
+- heart-red-override:
+  - authorization: human "I approve, contnue" in direct response to #632 override request; commit/push/PR-open only.
+  - exact-red-reasons: PyAutoLens: on branch feature/subhalo-detection-review (not main); PyAutoLens: 2 uncommitted source change(s)
+  - gates: Fresh checks passed: syntax, executable AST and generated notebook code-cell parity, exact approved feature text (apart from image path), identical approved image assets, local image links, navigator/banner lint, search-memory check, size guard, whitespace and focused Sphinx build with warnings treated as errors. Full numerical/smoke suites were not rerun for this prose/assets-only patch; the preceding pixelization PRs passed all 12 exact-head CI jobs. No API or numerical changes.
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/633
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/827

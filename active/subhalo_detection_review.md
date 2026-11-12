@@ -28,4 +28,21 @@ Fresh checks passed: syntax, executable AST and generated notebook code-cell par
 Feature classifier heuristics overestimated API/architectural risk from repo names; inspection confirms documentation-only scope. No public API changes or phasing required.
 
 ## Shipping checkpoint
-Heart RED 2026-11-12T11:54:58.076217+00:00: PyAutoLens: on branch feature/subhalo-detection-review (not main); PyAutoLens: 2 uncommitted source change(s). Await task-specific development-only override for #632 before source commit/push/PR. No merge.
+Heart RED 2026-11-12T11:54:58.076217+00:00: PyAutoLens: on branch feature/subhalo-detection-review (not main); PyAutoLens: 2 uncommitted source change(s). Override approved in the following live user turn and recorded below. No merge.
+
+## Development-only Heart RED override
+
+Human authorization (2026-11-12): “I approve, contnue”, in direct response to the #632 development-only override request for commit, push and both review PRs. No merge authorized.
+
+Exact RED reasons (2026-11-12T11:54:58.076217+00:00):
+- `PyAutoLens: on branch feature/subhalo-detection-review (not main)`
+- `PyAutoLens: 2 uncommitted source change(s)`
+
+Fresh checks passed: syntax, executable AST and generated notebook code-cell parity, exact approved feature text (apart from image path), identical approved image assets, local image links, navigator/banner lint, search-memory check, size guard, whitespace and focused Sphinx build with warnings treated as errors. Full numerical/smoke suites were not rerun for this prose/assets-only patch; the preceding pixelization PRs passed all 12 exact-head CI jobs. No API or numerical changes.
+
+No release, CI bypass or merge.
+
+## Review handoff
+Workspace: https://github.com/PyAutoLabs/autolens_workspace/pull/633 (14378ac299a0ce542e15b5c5087a5daf89da3a9c)
+RTD: https://github.com/PyAutoLabs/PyAutoLens/pull/827 (ded15da089bf0401f186922d5cb097cdefc12828)
+Both source worktrees clean; no merge; CI not awaited.
