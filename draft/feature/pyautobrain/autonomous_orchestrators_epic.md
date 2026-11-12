@@ -417,3 +417,4 @@ source and is dropped or reshaped if it does not hold. Side-lane rows are off th
   parked behind M3. Next: M1.1 (watcher state-machine gaps).
 - 2026-11-12 — **M1.1 MERGED** (PyAutoBrain#604; record `complete/2026/11/shift-watcher-state-gaps.md`). Next: M1.2 (`prompt_sync_push` explicit paths).
 - 2026-11-12 — **M1.2 MERGED** (PyAutoMind#555, PyAutoBrain#605; record `complete/2026/11/prompt-sync-explicit-paths.md`). Next: M1.4 (merge-actor column + random audit).
+- 2026-11-12 — **M1 side fix MERGED: prompt_sync detached-HEAD push** (PyAutoMind#557; record `complete/2026/11/prompt-sync-detached-push.md`): the temp-worktree Mind-write route now pushes via `PROMPT_SYNC_PUSH_TO=main`, publishing only the helper's own commit. Next: M1.4.
