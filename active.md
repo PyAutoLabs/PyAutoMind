@@ -113,3 +113,16 @@
   - autolens_workspace: feature/start-here-plot-ai
 - tier: judge — merge mode: human /prm
 - next: validated edits; ship-time Heart RED requires development-only override before PR publication
+
+## extra-galaxies-review
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/648
+- issued: 2026-11-12
+- session: OpenAI Codex desktop; session ID unavailable
+- status: library-dev
+- prompt: active/extra_galaxies_review.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/extra-galaxies-review
+- tier: judge — merge mode: human /prm; do not merge
+- coordination: user approved separate documentation worktrees alongside new-user-guide-visuals and start-here-plot-ai; preserve both and verify compatibility
+- repos:
+  - PyAutoLens: feature/extra-galaxies-review
+  - autolens_workspace: feature/extra-galaxies-review
