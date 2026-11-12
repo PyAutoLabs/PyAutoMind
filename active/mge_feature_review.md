@@ -15,3 +15,9 @@ Canonical autolens_workspace main with pre-existing untracked dataset.fits; PyAu
 Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/628
 Issued: 2026-11-12
 Coordination approval: human "Allow separate documentation worktree"; only MGE overview text and image assets in PyAutoLens.
+
+## Implementation complete, shipping gate pending
+
+1021 PyAutoLens tests passed, 1 xfailed; 42 script + 2 notebook smoke checks passed; Sphinx HTML build succeeded (96 warnings, none for edited MGE page); executable AST/notebook code parity, image identity and relative paths, navigator, size guard and whitespace checks passed.
+
+Approved text/image applied in feature, main tour and RTD. Two notebooks and workspace catalogues regenerated. Both source diffs staged; no source commit/push/PR. Heart RED 2026-11-12T10:38:39.599379+00:00: PyAutoNerves: 2 commit(s) behind origin; PyAutoFit: 2 commit(s) behind origin; PyAutoLens: on branch feature/mge-feature-review (not main); PyAutoLens: 2 uncommitted source change(s). A new task-specific development-only override is required for #628. Earlier #626 override does not apply.

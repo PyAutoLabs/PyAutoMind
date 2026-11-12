@@ -246,3 +246,6 @@
 - prompt: active/mge_feature_review.md
 - tier: judge — merge mode: human /prm; user explicitly requests no merge
 - coordination: human "Allow separate documentation worktree" alongside magnification-maps-wiring; MGE overview text and image assets only in PyAutoLens.
+
+- validation: 1021 PyAutoLens tests passed, 1 xfailed; 42 script + 2 notebook smoke checks passed; Sphinx HTML build succeeded (96 warnings, none for edited MGE page); executable AST/notebook code parity, image identity and relative paths, navigator, size guard and whitespace checks passed.
+- next: development-only Heart RED override for #628, then commit/push/open both review PRs; no merge.
