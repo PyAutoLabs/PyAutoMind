@@ -243,3 +243,18 @@
 - RAL-prior-corrected-submission: Job415139 submitted ONCE via hpc/sync at db516b50cd8d6ea1301704bc39e8d14819024968.244 tests and CI43206509078 pass, author review; offline posterior reconstruction exact with zero sampling/training/likelihood, old identity prior rejected. Artifact12 runtime2.90s, fresh restore51.32s/52.71s including cleanup, zero science. Final staging preserved attempt02 environment; new attempt03 output claim. New single-job approval is now USED; no resubmit/requeue/replacement. Same18children/120s/4GiB/1800s, exclusive ral4boundcores/8GiB/35min. Outside Pulse; human merge. Heart2026-11-12T11:09:22.974524+00:00 RED under existing scoped override: "PyAutoFit: 2 commit(s) behind origin"; "PyAutoArray: 2 commit(s) behind origin"; "PyAutoGalaxy: 2 commit(s) behind origin"; "PyAutoLens: 2 commit(s) behind origin".
 
 - RAL-final-result: Job415139 COMPLETED0:0 in591s at measured producerdb516b5.18/18 cases passed; six exact posterior/state/model/target timing pairs, both recovery controls and all checkpoint reopens passed. Bootstrap23.56s, pilot565.95s, max child47.92s/594.50MiB; cleanup complete and all descendants reaped.153,104,897bytes raw retained remotely/task-locally/human archive. Median paired workflow:5D17.9% faster(1.217x),10D2.4% slower(0.976x); median sampler speedups1.393x/1.038x. Mixed three-seed pilot, no production default change or30D claim. Report-only producer commit798d743 in PR17; measured producer CI43206509078/244tests green. Outside Pulse; human merge; no more compute.
+
+## subhalo-detection-review
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/632
+- issued: 2026-11-12
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/subhalo-detection-review
+- repos:
+  - autolens_workspace: feature/subhalo-detection-review
+  - PyAutoLens: feature/subhalo-detection-review
+- prompt: active/subhalo_detection_review.md
+- tier: judge; review PRs only, no merge
+- coordination: separate documentation worktree under prior same-session approval; unchanged overlapping claims.
+- next: development-only Heart RED override for #632, then commit/push/open both review PRs; no merge.
+- validation: approved-preview parity, executable and notebook code parity, image/navigation/size/whitespace and focused Sphinx checks passed.
+- review: /mnt/c/Users/Jammy/Workspace/Science/scratch/subhalo_detection_individual_review_20261112/applied/index.html
