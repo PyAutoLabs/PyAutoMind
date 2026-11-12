@@ -22,3 +22,13 @@ great
 
 Tier: judge — merge mode: human /prm
 Coordination: reuse live approval to work separately alongside #658; preserve its README/images/new-user-guide changes and check combination.
+
+## Applied checkpoint — 2026-11-12
+Four repositories staged on feature/features-overview-polish; no source commits or PRs yet. Passed: both focused Sphinx builds, notebook schema and executable parity, 89 feature intro links, asset parity, navigator/search-memory/size checks, browser galleries and #658 patch compatibility. Applied preview: /mnt/c/Users/Jammy/Workspace/Science/scratch/features_overview_polish_20261112/applied/index.html. Heart RED; task-specific development-only override #661 pending. PR bodies: organs/PyAutoMind/tmp/features_overview_polish/*_pr.md. Lens multi-wavelength artwork appears in expanded Features gallery; #658 owns the new Multi-band guide card, avoiding duplicate insertion.
+
+## Shipped for review — 2026-11-12
+Live authorization: “Approve development-only override for #661”. All four PRs open, no merge or release.
+- PyAutoLens: https://github.com/PyAutoLabs/PyAutoLens/pull/855
+- PyAutoGalaxy: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/713
+- autolens_workspace: https://github.com/PyAutoLabs/autolens_workspace/pull/663
+- autogalaxy_workspace: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/280
