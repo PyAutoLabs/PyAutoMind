@@ -86,6 +86,20 @@
 - repos:
   - PyAutoBrain: feature/watcher-numbers-and-push
 
+## workspace-readme-images
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/658
+- issued: 2026-11-12
+- session: OpenAI Codex desktop
+- status: workspace-dev (edits validated; shipping blocked by Heart RED)
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/workspace-readme-images
+- prompt: active/workspace_readme_images.md
+- tier: judge — merge mode: human /prm
+- repos:
+  - autolens_workspace: feature/workspace-readme-images
+  - autogalaxy_workspace: feature/workspace-readme-images
+- validation: four PNG URLs, twelve folder/start_here targets, GFM rendering and diff checks passed
+- next: review previews; Heart recovery or explicit development-only override before ship
+
 ## autogalaxy-features-review
 - issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/276
 - issued: 2026-11-12
