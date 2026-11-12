@@ -45,3 +45,17 @@ Edit only README.md and docs/index.md in the three libraries. Bold only auto in 
 - Logs: worktree .doccheck/build.log, .doccheck-baseline/build.log, .doccheck/heart-readiness.json.
 - Heart RED 2026-11-12T17:13:20.478039+00:00: "PyAutoLens: 1 uncommitted source change(s)"; "PyAutoLens: 6 commit(s) behind origin"; "install verification FAILED (testpypi; checks F)"; "release validation FAILED (stage integrate)".
 - Await live human development-only shipping override for #832 before commit/push/PR; merge/release not authorized. Preserve unrelated canonical paper changes.
+
+## User review checkpoint — revised titles
+
+User paused shipping and then requested preview before committing. Do not act on the earlier commit/push authorization until review resumes.
+- Exact Lens README title: PyAutoLens: **Auto**mated, **Auto**differentiable and **Auto**nomous Gravitational Lensing.
+- Galaxy uses the same title pattern ending Galaxy Modelling.
+- Removed the added feature paragraphs in both READMEs and docs/index.md; retained two-sentence introductions with JAX, GPU acceleration and assistants. PyAutoFit unchanged in this revision.
+- Reread Brain docs conductor and WRITING_STYLE; title exceptions are explicitly user-directed. Automated intro-length counts are inaccurate; direct inspection confirms two sentences per README intro.
+- Updated revised_introductions.html with both full README previews; patches and rendered Sphinx excerpts refreshed in the existing scratch folder.
+- No commits, pushes or PRs for the library edits. Diff checks pass; Sphinx excerpt build succeeds with the existing Galaxy metadata warning.
+
+## Final Lens/Galaxy approval
+
+Plain titles and concise introductions approved. Live #832 override authorizes commit/push/PR; clarification authorizes Lens/Galaxy merge after checks pass in this turn, no release. PyAutoFit stays uncommitted for later review. Prior pause superseded for Lens/Galaxy only.

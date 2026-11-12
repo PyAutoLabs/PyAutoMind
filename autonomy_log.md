@@ -507,6 +507,8 @@ Outcome ∈ `merged-unchanged` / `amended` / `rejected` / `parked` /
 
 | 2026-11-04 | howtogalaxy-ch3-parity (HowToGalaxy#101 → PR#102; decision-taken) | supervised / judge; explicit autonomous user request | generated/API/static checks pass; smoke30/30; independent review CLEAN with claims at5d98c61; Heart YELLOW within same-conversation acknowledged AutoFit timeout, release rehearsal STALE. Full-size1/3/4/5 pass; full-size2 inherited fine-mesh scan terminated143, complete capped2 pass. | merged-unchanged — human /prm; all 8 CI checks pass |
 
+| 2026-11-12 | three-autos-public-framing (PyAutoLens#832; Lens/Galaxy only) | live user development-only override; explicit follow-up "Open PRs and merge Lens/Galaxy after checks pass"; no release | Four-file scope, titles, rendering and diff checks pass; author review; runtime tests/smoke n/a (prose only). Exact Heart RED: PyAutoLens: 1 uncommitted source change(s); PyAutoLens: 6 commit(s) behind origin; install verification FAILED (testpypi; checks F); release validation FAILED (stage integrate). Required CI still gates merge; Fit held for review. | red-override |
+
 The calibration row `ship_library` / `ship_workspace` append at PR-open goes in
 the table **above**, at the end of its last segment, in date order — never in
 the Shadow window below, which is the close-out's alone, tier-`glance` only
