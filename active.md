@@ -3,7 +3,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1767
 - issued: 2026-11-12
 - session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: library-dev
+- status: library-shipped, workspace-pending
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1768
 - worktree: ~/Code/PyAutoLabs-wt/hpc-keep-off-home
 - repos:
   - PyAutoFit: feature/hpc-keep-off-home
@@ -15,7 +16,7 @@
 - prompt: active/hpc_keep_temp_and_cache_off_home.md
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary (human approved 2026-11-12)
 - phases: A (this entry) PyAutoFit campaign cache_root + 5 activate.sh → B blocked in planned.md (hpc-keep-off-home-phase-b)
-- heart-ack: YELLOW noted at the door 2026-11-12 (release YELLOW; Array/Galaxy/Lens monitoring red); ship-time ack still required
+- heart-ack: YELLOW noted at the door 2026-11-12 (release YELLOW; Array/Galaxy/Lens monitoring red); ship-time ack GIVEN by human 2026-11-12 (reason: PyAutoArray open PR 8d old)
 
 ## jax-floor-0-12
 - issue: https://github.com/PyAutoLabs/PyAutoNerves/issues/215
