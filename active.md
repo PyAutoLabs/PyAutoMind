@@ -13,7 +13,8 @@
 - issue: https://github.com/PyAutoLabs/autolens_workspace_developer/issues/147
 - issued: 2026-11-12
 - session: OpenAI Codex desktop
-- status: workspace-dev
+- status: awaiting-merge
+- pr: https://github.com/Jammy2211/Jammy2211.github.io/pull/2
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/pyautolens-ii-case-studies
 - repos:
   - autolens_workspace_developer: feature/pyautolens-ii-case-studies

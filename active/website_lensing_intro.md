@@ -27,3 +27,17 @@ to measure the matter we cannot see, including dark matter and black holes.
 
 Branch: feature/website-lensing-intro
 Checkout: /home/jammy/Code/PyAutoLabs/scratch/website-lensing-intro
+
+## Handoff — 2026-11-12
+
+- Implemented approved copy and shared schematic on both pages.
+- PR: https://github.com/Jammy2211/Jammy2211.github.io/pull/2
+- Commit: d91cd2f on feature/website-lensing-intro.
+- Changed index.html, natural_language/draft.md, generated natural_language/index.html,
+  natural_language/page.css, assets/images/strong_lens_schematic.png.
+- Chromium passed for both routes at 1440, 390 and 320 px: image load, aspect ratio,
+  no horizontal overflow. Desktop/mobile previews visually inspected.
+- Pandoc regeneration reproducible; source image byte-identical; diff whitespace clean.
+- Preview folder: /mnt/c/Users/Jammy/Workspace/Science/scratch/website_lensing_intro_2026-11-12/
+- Personal static website is outside library/workspace runtime release gates.
+- Next action: human review and merge PR #2; site is not yet published.
