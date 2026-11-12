@@ -1,3 +1,17 @@
+## mge-feature-review
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/628
+- completed: 2026-11-12
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/825 (documentation only)
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/629
+- summary: Applied approved MGE teaching with scientific use cases up front and the same illustrative image in feature introduction, workspace main tour and RTD. Preserved detailed teaching; regenerated notebooks/catalogues. No library API changes.
+- merge-receipts: PyAutoLens 9106a1de70ab07b40667a1b351220c5d23564592; workspace d1a2f5a383bead8a165da2ec66d733023a1b0240. Both branch heads are ancestors of fetched origin/main.
+- validation: Five Actions runs, all 12 jobs successful on exact PR heads; both CLEAN/MERGEABLE; library freeze clear. Local 1021 tests passed / 1 expected failure, 42 script + 2 notebook smoke passes, RTD build succeeded, AST/notebook parity and navigation checks passed.
+- authorization: Human development-only RED override for #628, then separate explicit merge-if-green request. No release or check bypass.
+- next-review: Pixelization imaging feature. Current text and image shown without edits at C:\Users\Jammy\Workspace\Science\scratch\pixelization_individual_review_20261112\index.html. Continue individual reviews including images under draft/docs/autolens_workspace/feature_introductions_individual_review_and_images.md.
+- cleanup: Keep worktree to preserve local dataset.fits and validation data/output; no data deleted.
+
+## Original prompt
+
 # Apply approved MGE introduction and illustration
 Repos: @autolens_workspace @PyAutoLens
 Type: docs

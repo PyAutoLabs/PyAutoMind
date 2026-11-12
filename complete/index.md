@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2226 records across 11 buckets.
+2227 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -218,6 +218,7 @@ markers; everything below GENERATED is rebuilt.
 - [magnification-maps-source-plane](2026/11/magnification-maps-source-plane.md)
 - [magnification-maps-uncertainty](2026/11/magnification-maps-uncertainty.md)
 - [memory-catch-up-discovery](2026/11/memory-catch-up-discovery.md) — PR is the tracking surface
+- [mge-feature-review](2026/11/mge-feature-review.md) — Applied approved MGE teaching with scientific use cases up front and the same illustrative image in feature in…
 - [mind-agents-trim](2026/11/mind-agents-trim.md) — PR is the tracking surface
 - [multistart-gradient-quick-update](2026/11/multistart-gradient-quick-update.md) — already shipped — PyAutoFit#1556 (merged 2026-09-01) wires iterations_per_quick_update into the MultiStart gra…
 - [multistart-resume-cadence](2026/11/multistart-resume-cadence.md) — 2 → 100

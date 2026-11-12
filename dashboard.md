@@ -12,7 +12,7 @@
 | [Epics](#epics) | 23 |
 | [In flight](#in-flight) | 12 |
 | [Planned](#planned) | 11 |
-| [Backlog](#backlog) | 263 |
+| [Backlog](#backlog) | 264 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 4 |
 
@@ -1336,7 +1336,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 249 · local-dev 7 · ral 5
+Lanes: any 250 · local-dev 7 · ral 5
 
 <a id="human-review"></a>
 <details>
@@ -2298,7 +2298,7 @@ Use the start-dev skill. draft/research/autoarray/delaunay_interpolator_pure_cal
 </details>
 
 <details>
-<summary><b>docs</b> — 26</summary>
+<summary><b>docs</b> — 27</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -2472,6 +2472,14 @@ Use the start-dev skill. draft/docs/autolens_assistant/cosmos_web_ring_guided_wa
 
 ```
 Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/feature_introductions_individual_review_and_images.md">Review feature introductions individually, including images</a> — autolens_workspace</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens_workspace/feature_introductions_individual_review_and_images.md
 ```
 
 </details>
@@ -2947,7 +2955,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-104 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+105 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2992,7 +3000,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autogalaxy/wrong_jax_gradient_on_mge_likelihoods_fd.md`
 - `draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md`
 - `draft/bug/autolens/point_solver_error_bisect_health.md`
-- _… and 64 more_
+- _… and 65 more_
 
 </details>
 
