@@ -1157,7 +1157,7 @@ Use the start-dev skill. active/gradient_correctness_sweep.md
 
 </details>
 
-<details><summary>📋 <a href="active/shift_watcher_state_machine_gaps.md">Shift watcher: close four state-machine gaps before the next live shift</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/603">issue #603</a> — issued 2026-11-12 — library-dev</summary>
+<details><summary>📋 <a href="active/shift_watcher_state_machine_gaps.md">Shift watcher: close four state-machine gaps before the next live shift</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/603">issue #603</a> — issued 2026-11-12 — library-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/604">PyAutoBrain#604</a></summary>
 
 ```
 Use the start-dev skill. active/shift_watcher_state_machine_gaps.md
