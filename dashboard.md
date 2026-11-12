@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 23 |
-| [In flight](#in-flight) | 4 |
+| [In flight](#in-flight) | 5 |
 | [Planned](#planned) | 11 |
-| [Backlog](#backlog) | 264 |
+| [Backlog](#backlog) | 263 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -23,7 +23,7 @@
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 20
+**Highest priority** (filed as `high`) — showing 12 of 19
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -45,14 +45,6 @@ Use the start-dev skill. draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_
 
 ```
 Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautomind/prompt_sync_push_explicit_paths.md">prompt_sync_push: commit only the paths it is given</a> — pyautomind · small · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautomind/prompt_sync_push_explicit_paths.md
 ```
 
 </details>
@@ -117,6 +109,14 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ```
 Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> — euclid · large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md
 ```
 
 </details>
@@ -1149,6 +1149,14 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
+<details><summary>📋 <a href="active/prompt_sync_push_explicit_paths.md">prompt_sync_push: commit only the paths it is given</a> — <a href="https://github.com/PyAutoLabs/PyAutoMind/issues/554">issue #554</a> — issued 2026-11-12 — library-dev</summary>
+
+```
+Use the start-dev skill. active/prompt_sync_push_explicit_paths.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/pyautolens_ii_case_studies.md">PyAutoLens II case studies</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_developer/issues/147">issue #147</a> — issued 2026-11-12 — workspace-dev</summary>
 
 ```
@@ -1272,7 +1280,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 250 · local-dev 7 · ral 5
+Lanes: any 249 · local-dev 7 · ral 5
 
 <a id="human-review"></a>
 <details>
@@ -1616,7 +1624,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 54</summary>
+<summary><b>bug</b> — 53</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1630,14 +1638,6 @@ Use the start-dev skill. draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_
 
 ```
 Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautomind/prompt_sync_push_explicit_paths.md">prompt_sync_push: commit only the paths it is given</a> — pyautomind · small · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautomind/prompt_sync_push_explicit_paths.md
 ```
 
 </details>
@@ -2795,6 +2795,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-12 | issued | <a href="active/prompt_sync_push_explicit_paths.md">prompt_sync_push: commit only the paths it is given</a> |
 | 2026-11-12 | filed | <a href="draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md">jax.grad through zero-contour critical curves fails on jax 0.12</a> |
 | 2026-11-12 | filed | <a href="planned.md#hpc-keep-off-home-phase-b">hpc-keep-off-home-phase-b</a> |
 | 2026-11-12 | issued | <a href="planned.md#delaunay-nn-numba-remeasure">delaunay-nn-numba-remeasure</a> |
@@ -2804,13 +2805,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-12 | issued | <a href="active/three_autos_public_framing.md">Coordinated public framing: the three autos</a> |
 | 2026-11-12 | issued | <a href="active/website_lensing_intro.md">Brief strong-lensing introduction on the personal website</a> |
 | 2026-11-11 | filed | <a href="draft/bug/health_fixes/smoke_cache_stats_warnings_nameerror.md">Smoke cache-stats step fails with NameError: warnings</a> |
-| 2026-11-11 | filed | <a href="draft/bug/health_fixes/pr504_sibling_guards_net_gap_proxy.md">Harden the sibling PR #504 non-vacuity guards (net fom−logL gap proxy)</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-10 | filed | <a href="draft/bug/pyautomind/prompt_sync_push_explicit_paths.md">prompt_sync_push: commit only the paths it is given</a> |
+| 2026-11-11 | filed | <a href="draft/bug/health_fixes/pr504_sibling_guards_net_gap_proxy.md">Harden the sibling PR #504 non-vacuity guards (net fom−logL gap proxy)</a> |
 | 2026-11-10 | filed | <a href="draft/maintenance/workspaces/data_no_ellipse_config_and_prose_sweep.md">Sweep the retired <code>data_no_ellipse</code> toggle from configs and prose</a> |
 | 2026-11-10 | filed | <a href="draft/maintenance/euclid/remove_simulator_poisson_round_off_workaround.md">Remove the pipeline-side Poisson round-off workaround once…</a> |
 | 2026-11-10 | filed | <a href="draft/feature/pyautoheart/dev_metrics_trends_on_boards.md">Boards: draw the unit-test trend, and keep the hygiene counts</a> |
