@@ -45,3 +45,22 @@ Heart RED 2026-11-12T17:09:03.637477+00:00:
 Await development-only Heart RED override for #640 before commit/push/open both review PRs. No merge.
 Review: /mnt/c/Users/Jammy/Workspace/Science/scratch/double_source_plane_individual_review_20261112/applied/index.html
 Logs and PR drafts: organs/PyAutoMind/tmp/double_source_plane_review/
+
+## Development-only Heart RED override
+
+Human authorization (2026-11-12): I approve the development-only Heart RED override for #640. Commit, push and open both PRs for review, don't merge yet.
+
+Exact RED reasons (2026-11-12T17:09:03.637477+00:00):
+- `PyAutoLens: on branch feature/double-source-plane-review (not main)`
+- `PyAutoLens: 2 uncommitted source change(s)`
+- `install verification FAILED (testpypi; checks F)`
+- `release validation FAILED (stage integrate)`
+
+Fresh checks: syntax; unchanged executable AST and notebook code cells; approved draft parity except image path/trailing whitespace; identical approved images and valid local links; navigator/banner, search-memory, size and whitespace checks; focused Sphinx build with warnings treated as errors. No numerical/API changes. Full numerical/smoke suites were not rerun for this prose/assets-only delta; preceding stellar + dark matter PRs passed all 12 CI jobs on the same base, which is prior evidence rather than fresh testing.
+
+Commit/push/PR-open only; no merge, release or CI bypass.
+
+## Review PR handoff — 2026-11-12
+- Workspace: https://github.com/PyAutoLabs/autolens_workspace/pull/641 — 5b01fd28f3dd9e3849f2f4af58a2979cb3e873f2
+- RTD: https://github.com/PyAutoLabs/PyAutoLens/pull/831 — bd51344d88dbc07d3c41807950d61c99c4da48d0
+- Both committed and pushed under the approved #640 development-only override. Open for human review; neither merged. CI not awaited. Next: human review, then separately authorized CI/freeze check and merge.
