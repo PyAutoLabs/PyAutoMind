@@ -2,11 +2,17 @@
   "schema_version": 1,
   "organ": "mind",
   "repo": "PyAutoMind",
-  "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-11-12T19:55:50Z",
+  "status": "red",
+  "headline": "RED \u2014 24 picks \u00b7 7 in flight",
+  "updated": "2026-11-12T20:38:56Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "red",
+      "text": "Workspace README guide images \u2014 workspace-dev (edits validated; shipping blocked by Heart RED)",
+      "url": "https://github.com/PyAutoLabs/autolens_workspace/issues/658",
+      "prompt": "Use the start-dev skill. active/workspace_readme_images.md"
+    },
     {
       "severity": "yellow",
       "text": "Polish the homepage flow \u2014 awaiting-merge",
@@ -120,12 +126,6 @@
       "text": "pick: Fix KNN neighbor search for a partial final point block",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
-      "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
     }
   ]
 }
