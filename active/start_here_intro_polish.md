@@ -42,3 +42,9 @@ Looks good, go ahead and apply these to both RTD pages and the workspace start_h
 - Logs: bundle autolens_preview_build.log, autogalaxy_preview_build.log, autolens_docs_audit.log, autogalaxy_docs_audit.log. Isolated .docs-venv is tooling only.
 - Review bundle: /mnt/c/Users/Jammy/Workspace/Science/scratch/start_here_intro_polish_20261112/applied_review/index.html (four rendered openings and full regenerated notebooks).
 - Next action: human reviews applied text. Do not raise PRs until that review is complete and authorized; no merge authorization.
+
+## Revision 2 — approved and applied 2026-11-12
+
+User approved replacing Explore It Yourself / Explore with AI with one Exploring PyAutoLens / Exploring PyAutoGalaxy section, embedded Google Colab and assistant links, and a short interactive-walkthrough prompt cue. Applied to both RTD sources and both workspace sources; regenerated notebooks and markdown prose. Removed redundant introductory walkthrough paragraph. HowTo links moved to RTD Wrap Up; existing later notebook lecture sections retained.
+
+Updated the same applied_review previews and full notebook copies. Both focused Sphinx builds pass with -W. Notebook schemas valid, executable AST/code cells and metadata unchanged; embedded links, legacy fragment and prompt markup verified; diff checks pass. Aside from the approved HowTo link relocation, later RTD and workspace teaching content is unchanged. Changes remain uncommitted; no PRs raised. Next action remains human text review.
