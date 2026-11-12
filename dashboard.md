@@ -1173,7 +1173,7 @@ Use the start-dev skill. active/pyautolens_ii_case_studies.md
 
 </details>
 
-<details><summary>📋 <a href="active/start_here_plot_ai.md">Start-here plots and AI experiments</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/647">issue #647</a> — issued 2026-11-12 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/839">PyAutoLens#839</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/705">PyAutoGalaxy#705</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/649">autolens_workspace#649</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/275">autogalaxy_workspace#275</a></summary>
+<details><summary>📋 <a href="active/start_here_plot_ai.md">Start-here plots and AI experiments</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/647">issue #647</a> — issued 2026-11-12 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/839">PyAutoLens#839</a>, <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/pull/705">PyAutoGalaxy#705</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/651">autolens_workspace#651</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/649">autolens_workspace#649</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/275">autogalaxy_workspace#275</a></summary>
 
 ```
 Use the start-dev skill. active/start_here_plot_ai.md
