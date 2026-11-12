@@ -38,7 +38,7 @@
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/832
 - issued: 2026-11-12
 - session: Codex desktop; session ID unavailable
-- status: library-dev (Lens/Galaxy shipping authorized; Fit held for review)
+- status: library-shipped, awaiting-merge (Lens/Galaxy CI running; Fit held for review)
 - prompt: active/three_autos_public_framing.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/three-autos-public-framing
 - tier: judge — merge mode: human /prm
@@ -54,6 +54,11 @@
   authorization: live user approved development-only override for #832, commit/push/open PRs; follow-up explicitly "Open PRs and merge Lens/Galaxy after checks pass". No release.
   reasons: ["PyAutoLens: 1 uncommitted source change(s)", "PyAutoLens: 6 commit(s) behind origin", "install verification FAILED (testpypi; checks F)", "release validation FAILED (stage integrate)"]
   gates: four-file scope, exact titles, CommonMark/Sphinx excerpt rendering, diff checks and author review pass; runtime tests/smoke not applicable to prose-only edits; required CI must pass before merge.
+
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/833
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/703
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/833
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/703
 
 ## prompt-sync-explicit-paths
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/554

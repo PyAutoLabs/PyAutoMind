@@ -59,3 +59,10 @@ User paused shipping and then requested preview before committing. Do not act on
 ## Final Lens/Galaxy approval
 
 Plain titles and concise introductions approved. Live #832 override authorizes commit/push/PR; clarification authorizes Lens/Galaxy merge after checks pass in this turn, no release. PyAutoFit stays uncommitted for later review. Prior pause superseded for Lens/Galaxy only.
+
+## PRs open
+
+- Lens ab0492620: https://github.com/PyAutoLabs/PyAutoLens/pull/833
+- Galaxy b15de28d: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/703
+- Both pending-release labels verified; required docs and unit-test jobs running. No release requested.
+- Fit remains uncommitted. Keep this task/worktree open for Fit review after Lens/Galaxy merge.
