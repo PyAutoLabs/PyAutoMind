@@ -241,3 +241,19 @@
 - RAL-corrected-outcome: job415136 FAILED1:0/167s; bootstrap23.92s and all six correctness cases passed, first serial timing failed because checkpoint reopen uses identity instead of Gaussian prior.11unrun/0timing pairs; cleanup complete/all children reaped,20.9MB retained. Offline saved-data inspection confirms coordinate mismatch, no new sampling. Approved allowance consumed; concrete correction plus one fresh pilot proposed in canonical task, not executed. Outside Pulse/human merge.
 
 - RAL-prior-corrected-submission: Job415139 submitted ONCE via hpc/sync at db516b50cd8d6ea1301704bc39e8d14819024968.244 tests and CI43206509078 pass, author review; offline posterior reconstruction exact with zero sampling/training/likelihood, old identity prior rejected. Artifact12 runtime2.90s, fresh restore51.32s/52.71s including cleanup, zero science. Final staging preserved attempt02 environment; new attempt03 output claim. New single-job approval is now USED; no resubmit/requeue/replacement. Same18children/120s/4GiB/1800s, exclusive ral4boundcores/8GiB/35min. Outside Pulse; human merge. Heart2026-11-12T11:09:22.974524+00:00 RED under existing scoped override: "PyAutoFit: 2 commit(s) behind origin"; "PyAutoArray: 2 commit(s) behind origin"; "PyAutoGalaxy: 2 commit(s) behind origin"; "PyAutoLens: 2 commit(s) behind origin".
+
+## pixelization-feature-review
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/630
+- issued: 2026-11-12
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/pixelization-feature-review
+- repos:
+  - autolens_workspace: feature/pixelization-feature-review
+  - PyAutoLens: feature/pixelization-feature-review
+- prompt: active/pixelization_feature_review.md
+- tier: judge — human review; no merge
+- coordination: human "Allow separate documentation worktree" alongside jax-floor-0-12 and magnification-maps-wiring; only RTD overview text/image assets.
+
+- next: development-only Heart RED override for #630, then commit/push/open both review PRs; no merge.
+- validation: focused docs/narrative/parity/preservation/image/navigation checks passed; prior MGE numerical/smoke results reused for unchanged executable code, not claimed as fresh tests.
+- review: /mnt/c/Users/Jammy/Workspace/Science/scratch/pixelization_individual_review_20261112/applied/index.html
