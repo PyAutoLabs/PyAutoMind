@@ -8,8 +8,10 @@ Repos:
 Difficulty: small
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: issued
 Filed: 2026-11-10
+Issued: 2026-11-12
+Epic: autonomous-orchestrators
 Consequence: glance
 Witness: `grep -n "add -A" scripts/prompt_sync.sh` returns nothing; a test with a dirty file outside the given paths shows the helper refuses and commits nothing; a test with conflict markers in a staged file, and one with an unparseable `state.json`, both refuse; the skill files that call the helper pass explicit paths
 Review-minutes: 5

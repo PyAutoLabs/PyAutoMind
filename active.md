@@ -46,3 +46,16 @@
   - PyAutoLens: feature/three-autos-public-framing
   - PyAutoGalaxy: feature/three-autos-public-framing
   - PyAutoFit: feature/three-autos-public-framing
+
+## prompt-sync-explicit-paths
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/554
+- issued: 2026-11-12
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/prompt-sync-explicit-paths
+- prompt: active/prompt_sync_push_explicit_paths.md
+- epic: autonomous-orchestrators (programme M1.2, phase 8)
+- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
+- repos:
+  - PyAutoMind: feature/prompt-sync-explicit-paths
+  - PyAutoBrain: feature/prompt-sync-explicit-paths
