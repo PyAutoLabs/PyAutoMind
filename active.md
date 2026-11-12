@@ -22,3 +22,15 @@
 - next: validate JWST PSF/noise and export calibrated ALMA visibilities, then joint gradient check and bounded pilots
 - tier: judge — merge mode: human /prm
 
+
+## double-source-plane-review
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/640
+- issued: 2026-11-12
+- status: workspace-dev
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/double-source-plane-review
+- repos:
+  - PyAutoLens: feature/double-source-plane-review
+  - autolens_workspace: feature/double-source-plane-review
+- prompt: active/double_source_plane_review.md
+- tier: judge; review PRs only, no merge
+- next: apply approved draft/image, validate, open review PRs
