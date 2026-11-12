@@ -355,7 +355,7 @@ All approved implementation and compute finished. PR17 and issue16 remain open p
 
 # 10D training-cost diagnosis — proposed implementation and RAL plan
 
-Status: proposed; implementation and new compute require explicit approval. This is a continuation of nautilus-spawn-training-pool, issue autofit_profiling#16 / PR#17. Outside Pulse. Tier: judge — merge mode: human /prm.
+Status: approved by the live human on 2026-11-12: “Approve bounded diagnostic study”. Implementation and one gated RAL job authorized despite Heart RED; allowance unused. This is a continuation of nautilus-spawn-training-pool, issue autofit_profiling#16 / PR#17. Outside Pulse. Tier: judge — merge mode: human /prm.
 
 ## User request
 
@@ -434,3 +434,10 @@ The workspace AGENTS.md requires: "Plan before editing. Present a plan and wait 
 Brain's automated feature decision scanned the accumulated historical task and returned generic too-large/public-API warnings. Scoped judgment for this extension: workspace-only experimental measurement; no public library API changes. Implement in separately reviewed commits: (A) immutable capture/replay protocol and corpus/transport tests; (B) exclusive phase instrumentation and parity/accounting tests; (C) allowlisted runtime/job integration and admission tests; (D) gated run and evidence report. The single job itself gates capture, then every replay, then full fits; failure stops later phases. The larger historical task is not reopened for unrelated changes.
 
 Memory consulted for benchmark hygiene: maintain identical science/settings and keep exploratory timing distinct from inference accuracy or a general speed ranking. Current retained receipts, not historical host timings, drive this design. No additional source/compute scope is implied.
+
+
+### 10D diagnostic implementation approved and validated — 2026-11-12
+
+Live human approval: “Approve bounded diagnostic study”. Scope is the saved17-child diagnostic and one gated RAL job, despite Heart RED; outside Pulse, stop on first failure, retain data, human merge. New job allowance remains UNUSED. Implemented capture/replay, exclusive wall/CPU phases, strict retained-reference parity, allowlisted runtime identity and separate submission claim. Original18-child benchmark and0/2 transport are unchanged.292 tests pass; lint/format/shell/catalogue pass; zero-science structural smoke verifies descriptors plus0/1/2/shared/bound worker startup and cleanup. Author review only; CI/fresh runtime restore are pending gates.
+
+Planning Heart RED reasons were “PyAutoLens: on branch feature/pixelization-feature-review (not main)” and “PyAutoLens: 2 uncommitted source change(s)”. Fresh authoritative readiness2026-11-12T12:40:44.942978+00:00 is YELLOW with no RED reasons: “PyAutoArray: open PR 9d old”; “test run status unknown”; “release validation stale: source moved since rehearsal (PyAutoLens)”. Existing approval covers development; no release, merge or failed-check bypass. RAL authentication and private staging cache are available.

@@ -186,10 +186,12 @@
 - latest-heart: 2026-11-10T18:35:43.930077+00:00 RED: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure"; "PyAutoCTI: 1 uncommitted source change(s)". Existing task-wide live RED development approval retained; unrelated CTI source untouched, no release or CI bypass.
 
 ## nautilus-spawn-training-pool
+- heart-red-override: 2026-11-12 live human “Approve bounded diagnostic study”. Saved17-child study and one RAL job; merge human. Planning RED: "PyAutoLens: on branch feature/pixelization-feature-review (not main)"; "PyAutoLens: 2 uncommitted source change(s)". Fresh12:40:44Z YELLOW/no RED: "PyAutoArray: open PR 9d old"; "test run status unknown"; "release validation stale: source moved since rehearsal (PyAutoLens)".292 tests/lint/format/shell/catalogue and zero-science worker/descriptor smoke pass; author review; CI/restore pending.
+- diagnostic-approval: 2026-11-12 live human “Approve bounded diagnostic study”; saved 17-child plan approved despite Heart RED. One job allowance unused; tests/CI/fresh restore required; stop on first failure; retain all data.
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/16
 - issued: 2026-11-10
 - session: OpenAI Codex desktop (session ID unavailable)
-- status: awaiting-merge (pilot complete; mixed result; human review/merge)
+- status: workspace-dev (approved 17-child 10D diagnostic; outside Pulse; human merge)
 - prompt: active/nautilus_spawn_training_pool.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-spawn-training-pool
 - repos:
