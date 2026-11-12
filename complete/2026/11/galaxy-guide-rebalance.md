@@ -1,3 +1,20 @@
+# PyAutoGalaxy New User Guide rebalance
+
+Completed 2026-11-12. Issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/281
+
+Restored helpful guidance around concise selection cards in the PyAutoGalaxy RTD New User Guide and main autogalaxy_workspace start_here notebook. Preserved all images and destination links, the executable walkthrough and Features gallery.
+
+## Merge receipts
+- PyAutoGalaxy#714: 52b2c4fcd033a6439a43b045cdbe8094228a0da4
+- autogalaxy_workspace#282: 2861da3ab31517413f57953bae2e60f4d407dbb0
+
+## Validation and authorization
+Focused Sphinx build with warnings as errors; notebook regeneration, schema and executable parity; retained images/URLs and notebook targets; browser rendering; navigator/search-memory/size checks passed. Ten exact-head CI jobs passed. One workspace smoke job skipped with live human approval: “I'm happy with the documentation-only smoke skip.” Explicit conditional merge instruction fulfilled; freeze clear. Development-only Heart RED override #281 recorded at ship. No release performed.
+
+Review bundle: C:\Users\Jammy\Workspace\Science\scratch\galaxy_new_user_guide_rebalance_20261112\applied\index.html
+
+## Original prompt
+
 Issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/281
 # PyAutoGalaxy New User Guide rebalance
 Type: docs
