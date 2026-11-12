@@ -140,3 +140,33 @@
 - release-gate: verify the PyAutoLens#794 release before shipping, as required by the original prompt
 - parent: complete/2026/10/point-plots-yaml-keys.md (HowToLens half merged 2026-10-22, HowToLens#99); no separate prompt file
 - scope: same `point_dataset` / `fit_point_dataset` block edit in `autolens_assistant/config/visualize/plots.yaml` as HowToLens; ship on its own branch `feature/point-plots-yaml-keys` once the claim clears
+
+## gradient-correctness-sweep
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/517
+- issued: 2026-11-02
+- repos (UNCLAIMED while paused): autolens_profiling
+- prompt: active/gradient_correctness_sweep.md
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/518 MERGED 2026-11-02 via /prm (32e13e85; items 10, 11 + sweep note). Umbrella stays open; further profiling-repo work re-syncs feature/gradient-correctness-sweep to main first
+- phase: order approved 2026-11-02; done 10, 11 (PR #518), 12 (retired), 1 (re-filed narrower into draft/bug/autogalaxy/wrong_jax_gradient_on_mge_likelihoods_fd.md); item 2 IN PROGRESS (paused 2026-11-02 night, RAL 413991 PENDING)
+- resume: (1) `sacct -j 413991` → when done pull output/p517_item2/{A_sparse_main,B_dense_main,C_sparse_tag}/…/gradient.json + .log from the RAL worktree into Science/scratch/gradient_correctness_sweep_2026-11-02/ral_item2/ and run small_step_check on them (A vs C = library effect incl #672; A vs B = sparse path vs CPU backend); (2) then items 3, 5 (local, seconds), 6, 13, 8/9/7 per the approved order in wiki/research/gradient_correctness_sweep.md
+- compute-tracking: RAL 413991 (item 2, group/delaunay/euclid CPU, legs A sparse@main / B dense@main / C sparse@tag 2026.10.25.1; partition ral; human go 2026-11-02). RAL worktree /mnt/ral/jnightin/autolens_profiling_wt/gradient-correctness-sweep (9d2ee2d3), private libs /mnt/ral/jnightin/PyAuto_wt/gradient-correctness-sweep; rows under output/p517_item2/<leg>/
+- tier: judge — merge mode: human /prm
+- status: PAUSED 2026-11-12 (HUMAN: release every autolens_profiling claim for the autonomy focus; worktree removed, branch commits already on main). Re-run start_dev to resume.
+- resume-note: worktree commit 9d2ee2d3 is on main; RAL 413991 item-2 rows (if completed) under /mnt/ral/jnightin/autolens_profiling_wt/gradient-correctness-sweep/output/p517_item2/
+
+## delaunay-nn-numba-remeasure
+- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/528
+- issued: 2026-11-12
+- repos (UNCLAIMED while paused): autolens_profiling
+- prompt: draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md
+- claim-override: HUMAN 2026-11-12 ("override the claim and open the ingest PR") over gradient-correctness-sweep (#517, paused) on autolens_profiling
+- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/529 (rows under experiments/worker_route_remeasure_p677; day-zero row stays current)
+- compute: RAL 415130 COMPLETED 2026-11-12 (415128 failed at guard, not a measurement); warm median x0.94 runtime / x0.88 breakdown
+- open: Pulse step 3 designation decision (human); optional release-tag rerun for a current row; Pulse task/campaign update
+- tier: judge — merge mode: human /prm
+- status: PAUSED 2026-11-12 (HUMAN: release every autolens_profiling claim for the autonomy focus; worktree removed, branch commits already on main). Re-run start_dev to resume.
+- resume (HUMAN 2026-11-12: new row REPLACES day-zero via a RELEASE re-run; parity rulings DONE in autolens_inference#68):
+  1. RAL private install /mnt/ral/jnightin/profiling/PyAuto_2026.11.12.1 (worktrees off PyAuto_2026.10.25.1 clones; log p1112_setup.log, ends INSTALL_READY). Tag SHAs Nerves b987c8d6 Fit 570abac2 Array 51da424e (contains #677 merge e2b05f00) Galaxy cb91fbe6 Lens ca63ddd9. If stale, use the newest release instead.
+  2. Submit autolens_profiling_p677/hpc/batch_cpu/submit_p1112_dnn_numba_remeasure_ral_cpu_hst_fp64 via `hpc/sync submit --cpu` from a copy of hpc/ whose sync.conf sets PROJECT_NAME=autolens_profiling_p677 (raw sbatch is hook-blocked). Risk: RAL venv jax 0.11.2 vs the release's jax floor.
+  3. Ingest: old rows → results/imaging/delaunay_nn/hst/numba_cpu_sparse_fp64/hpc_ral_cpu/history/2026.10.23.1_2026-10-25/, new rows current; re-key catalogue/peak_rss_backfill.json to the history path; add the tag to catalogue/release_revisions.json; build_catalogue → build_dashboard (PYAUTO_BRAIN set) → coverage_matrix; commit all of dashboard/; PR closes #528.
+  4. Pulse: update tasks/numba_num_threads_pin_and_delaunay_nn_remeasure.md (no longer blocked; day-zero rows were 2026.10.23.1 carried to .25.1). Frozen day_zero snapshot is never rewritten.

@@ -61,21 +61,6 @@
 - 2d-plan: APPROVED by human 2026-11-03 ~18:10 (not started; nothing written yet). scripts/tools/render_north_up.py on branch feature/sky-orientation-p2d: read each zip's image/dataset.fits + files/tracer.json + image/adapt_images.fits + image/adapt_image_plane_mesh_grids.fits; flipud arrays/adapt images, mesh grid + positions y->-y, tracer via sky_frame.plus_y_north_from; re-solve FitImaging at max-L (no search); WITNESS log-L == stored to ~1e-6 every lens, data panel vs rgb_north_up.jpg, positions on arcs; library subplot_fit + image_with_positions, util.subplot_rgb on rgb_north_up.jpg, segmentation from FITS, fit_multi_wavelength per band from output_sed; N/E compass. Pilot ~50 (paper lenses + grade-stratified random + asymmetric) as 2-CPU/5GB ral jobs -> inspect/north_up_pilot_20261103/ + side-by-side review page. Then full run, re-package, 2b docs; R2 upload last.
 - merged: euclid#122 (RGB-panel compass + release docs) 2026-11-10 (fbfd7a3); ECLIPSE#6 downloads.json (5d3d68a). Re-render 414683, release 414768 (SHA 26/26), R2 re-upload 414791 + per-lens 414790 (0 differences). Phase 2 COMPLETE; #115 open for phases 3-5. Worktree removed.
 
-## gradient-correctness-sweep
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/517
-- issued: 2026-11-02
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/gradient-correctness-sweep
-- repos:
-  - autolens_profiling: feature/gradient-correctness-sweep
-- prompt: active/gradient_correctness_sweep.md
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/518 MERGED 2026-11-02 via /prm (32e13e85; items 10, 11 + sweep note). Umbrella stays open; further profiling-repo work re-syncs feature/gradient-correctness-sweep to main first
-- phase: order approved 2026-11-02; done 10, 11 (PR #518), 12 (retired), 1 (re-filed narrower into draft/bug/autogalaxy/wrong_jax_gradient_on_mge_likelihoods_fd.md); item 2 IN PROGRESS (paused 2026-11-02 night, RAL 413991 PENDING)
-- resume: (1) `sacct -j 413991` → when done pull output/p517_item2/{A_sparse_main,B_dense_main,C_sparse_tag}/…/gradient.json + .log from the RAL worktree into Science/scratch/gradient_correctness_sweep_2026-11-02/ral_item2/ and run small_step_check on them (A vs C = library effect incl #672; A vs B = sparse path vs CPU backend); (2) then items 3, 5 (local, seconds), 6, 13, 8/9/7 per the approved order in wiki/research/gradient_correctness_sweep.md
-- compute-tracking: RAL 413991 (item 2, group/delaunay/euclid CPU, legs A sparse@main / B dense@main / C sparse@tag 2026.10.25.1; partition ral; human go 2026-11-02). RAL worktree /mnt/ral/jnightin/autolens_profiling_wt/gradient-correctness-sweep (9d2ee2d3), private libs /mnt/ral/jnightin/PyAuto_wt/gradient-correctness-sweep; rows under output/p517_item2/<leg>/
-- tier: judge — merge mode: human /prm
-
 ## autonomous-orchestrators-p4c
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/574
 - issued: 2026-11-04
@@ -222,18 +207,3 @@
 - RAL-final-result: Job415139 COMPLETED0:0 in591s at measured producerdb516b5.18/18 cases passed; six exact posterior/state/model/target timing pairs, both recovery controls and all checkpoint reopens passed. Bootstrap23.56s, pilot565.95s, max child47.92s/594.50MiB; cleanup complete and all descendants reaped.153,104,897bytes raw retained remotely/task-locally/human archive. Median paired workflow:5D17.9% faster(1.217x),10D2.4% slower(0.976x); median sampler speedups1.393x/1.038x. Mixed three-seed pilot, no production default change or30D claim. Report-only producer commit798d743 in PR17; measured producer CI43206509078/244tests green. Outside Pulse; human merge; no more compute.
 
 - 10D-diagnostic-proposal: user requested further investigation; read-only accounting complete. Proposed17-child single RAL job (one capture,12training replays,4traced fits), same4cores/8GiB/35min and120s/4GiB/1800s caps. Detailed plan in canonical task. Implementation/new compute await approval; completed pilot/PR17 remain reviewable, outside Pulse/human merge.
-
-## delaunay-nn-numba-remeasure
-- issue: https://github.com/PyAutoLabs/autolens_profiling/issues/528
-- issued: 2026-11-12
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/delaunay-nn-numba-remeasure
-- repos:
-  - autolens_profiling: feature/delaunay-nn-numba-remeasure
-- prompt: draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md
-- claim-override: HUMAN 2026-11-12 ("override the claim and open the ingest PR") over gradient-correctness-sweep (#517, paused) on autolens_profiling
-- workspace-pr: https://github.com/PyAutoLabs/autolens_profiling/pull/529 (rows under experiments/worker_route_remeasure_p677; day-zero row stays current)
-- compute: RAL 415130 COMPLETED 2026-11-12 (415128 failed at guard, not a measurement); warm median x0.94 runtime / x0.88 breakdown
-- open: Pulse step 3 designation decision (human); optional release-tag rerun for a current row; Pulse task/campaign update
-- tier: judge — merge mode: human /prm
