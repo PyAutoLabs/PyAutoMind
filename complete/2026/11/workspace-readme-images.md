@@ -1,5 +1,33 @@
 # Workspace README guide images
 
+Completed 2026-11-12. Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/658
+
+Added RTD scale/system and dataset illustrations to the PyAutoLens and PyAutoGalaxy workspace READMEs, with concise captions linking to the appropriate example folders. Extended the PyAutoLens dataset strip with multi-band imaging and reused the strong/weak-lensing illustration in its README and RTD new user guide.
+
+## Merge receipts
+
+- PyAutoLens#854: ba667795b7b1c6210f703c22e0ce7bb6ae720f39
+- autolens_workspace#662: 5f9bebeffd41dfef09a54e3f7e173090598824ec
+- autogalaxy_workspace#279: c0e87ff5f11babc351c45180ccba6f5725a2052e
+
+Merged RTD first, then both workspace READMEs. Each feature head is an ancestor of origin/main. No release performed; these are documentation/assets only.
+
+## Validation and authorization
+
+16 exact-head CI jobs passed: four library docs/unit-test jobs and six executed jobs per workspace. Two workspace smoke jobs were skipped by the documentation-only change filter; human explicitly authorized “Merge with the documented skips”. Release freeze clear. Human editorial/visual review, focused Sphinx/MyST/Furo build with warnings as errors, README rendering, folder/image targets, and diff checks passed. Development-only Heart RED shipping authorization was recorded in the issue, PRs, active.md and autonomy log; merge authority was separately supplied by the human.
+
+The newer point-source and multi-wavelength illustrations from the other chat were inspected and confirmed already present in autolens_workspace/start_here.ipynb and markdown/start_here.md. Retained the approved compact README strip; the detailed illustrations remain in the introductory guide. Concurrent RTD Features improvements were preserved.
+
+## Review artifacts
+
+/mnt/c/Users/Jammy/Workspace/Science/scratch/workspace_readme_images_2026-11-12/
+
+Windows: C:\Users\Jammy\Workspace\Science\scratch\workspace_readme_images_2026-11-12\
+
+## Original prompt
+
+# Workspace README guide images
+
 Issued: 2026-11-12
 Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/658
 Type: docs
