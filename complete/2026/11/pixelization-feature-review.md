@@ -1,3 +1,23 @@
+# Pixelization scientific introduction and illustration
+
+Merged 2026-11-12 after explicit human merge instruction and all 12 exact-head CI jobs passed. Heart freeze: not frozen. Development-only RED override remains recorded; no release performed.
+
+- Workspace PR: https://github.com/PyAutoLabs/autolens_workspace/pull/631
+- Workspace merge: 38196c1f0943f21da0b3a71d828786b15490166e
+- RTD PR: https://github.com/PyAutoLabs/PyAutoLens/pull/826
+- RTD merge: ca63ddd92330e8c4ca89ea379b5b99986d1755c3
+- Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/630 (closed)
+
+Scientific use cases and source_science.py now appear near the opening. Teaching detail retained. Approved conceptual illustration appears in the feature introduction, main workspace tour and RTD; technical RTD model diagram retained. Notebooks/catalogues regenerated.
+
+Fresh local content preservation, executable and notebook parity, image identity and navigation checks passed; focused Sphinx build passed with warnings as errors. CI: all eight workspace jobs and four PyAutoLens jobs passed, including both workspace smoke environments, all three library test environments and full docs build.
+
+Human review: /mnt/c/Users/Jammy/Workspace/Science/scratch/pixelization_individual_review_20261112/applied/index.html
+
+Continue reviewing other feature introductions individually, with scientific use cases up front and striking illustrative images, retaining teaching detail. No further feature selected yet.
+
+## Original prompt
+
 # Apply approved pixelization introduction and illustration
 Repos: @autolens_workspace @PyAutoLens
 Type: docs
