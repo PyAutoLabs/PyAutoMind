@@ -108,3 +108,32 @@
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
 - repos:
   - PyAutoHands: feature/release-rehearsed-shas
+
+## new-user-guide-rebalance
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/664
+- issued: 2026-11-12
+- session: OpenAI Codex desktop
+- prompt: active/new_user_guide_rebalance.md
+- status: shipped, awaiting-review; no merge authorized
+- tier: judge — merge mode: human /prm
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/new-user-guide-rebalance
+- repos:
+  - PyAutoLens: feature/new-user-guide-rebalance
+  - autolens_workspace: feature/new-user-guide-rebalance
+- coordination: separate worktree; #658 merged additions preserved
+- heart-red-override:
+  - authorization: "Approve development-only override for #664"
+  - scope: commit, push, two review PRs only; no merge or release
+  - gates: Focused Sphinx build with warnings as errors, notebook schema/regeneration and executable parity, retained images/URLs, browser image checks, navigator/search-memory/size checks pass. Human editorial review approved. Numerical tests not rerun for prose-only changes; executable walkthrough and Features unchanged.
+  - red-reasons:
+    - PyAutoNerves: 4 commit(s) behind origin
+    - PyAutoFit: 2 commit(s) behind origin
+    - PyAutoArray: 4 commit(s) behind origin
+    - PyAutoGalaxy: 22 commit(s) behind origin
+    - PyAutoLens: on branch feature/new-user-guide-rebalance (not main)
+    - PyAutoLens: 1 uncommitted source change(s)
+    - PyAutoCTI: 4 commit(s) behind origin
+    - install verification FAILED (testpypi; checks F)
+    - release validation FAILED (stage integrate)
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/856
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/665
