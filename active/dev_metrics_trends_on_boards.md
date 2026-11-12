@@ -8,8 +8,10 @@ Repos:
 Difficulty: small
 Autonomy: supervised
 Priority: normal
-Status: draft
+Status: issued
 Filed: 2026-11-10
+Issued: 2026-11-12
+Epic: autonomous-orchestrators
 Consequence: glance
 Witness: (a) the published Heart board shows a trend chart on every unit-suite card (12 of 12, from 0 of 12 on 2026-11-09), drawn from the main-branch lines of `timings/unit/<repo>.jsonl`, plus one row with the organism's total test count; (b) after two daily runs, a committed PyAutoBrain ledger file holds one line of hygiene counts per day and the Brain board's hygiene block shows a sparkline per row
 Review-minutes: 10

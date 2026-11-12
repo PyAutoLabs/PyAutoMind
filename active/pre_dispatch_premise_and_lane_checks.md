@@ -8,8 +8,9 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: issued
 Filed: 2026-11-10
+Issued: 2026-11-12
 Epic: autonomous-orchestrators
 Consequence: judge
 Witness: (a) the premise check replayed on the two prompts that were obsolete in the 2026-11-06-pm shift (delaunay_smoke_300s_cap, gallery_runner_missing_tiers, at the Mind commit before that shift) returns `obsolete` with its evidence, each in a few thousand tokens; (b) after the backfill, no draft in the planner pool lacks a `Lane:` header; (c) a test shows an unattended session excludes a draft whose Lane is absent

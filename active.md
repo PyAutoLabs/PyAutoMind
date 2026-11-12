@@ -113,3 +113,28 @@
   - PyAutoGalaxy: feature/installation-docs-polish
 - scope: approved Installation drafts applied; existing URLs/anchors retained; no PRs authorized
 - tier: judge — merge mode: human /prm
+
+## premise-lane-checks
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/608
+- issued: 2026-11-12
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/premise-lane-checks
+- prompt: active/pre_dispatch_premise_and_lane_checks.md
+- epic: autonomous-orchestrators (programme M1.3 slices 1–2, phase 8; slice 3 = M2.3)
+- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
+- repos:
+  - PyAutoBrain: feature/premise-lane-checks
+  - PyAutoMind: feature/premise-lane-checks
+
+## dev-metrics-boards
+- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/338
+- issued: 2026-11-12
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/dev-metrics-boards
+- prompt: active/dev_metrics_trends_on_boards.md
+- epic: autonomous-orchestrators (programme M1 side lane; re-check SIG-2/SIG-3 first)
+- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
+- repos:
+  - PyAutoHeart: feature/dev-metrics-boards
