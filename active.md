@@ -112,3 +112,16 @@
   gates: Mind suite 760 passed; independent review CLEAN; smoke n/a
 - repos:
   - PyAutoMind: feature/prompt-sync-detached-push
+
+## los-halos-review
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/645
+- issued: 2026-11-12
+- session: OpenAI Codex desktop; session ID unavailable
+- status: library-dev
+- prompt: active/los_halos_review.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/los-halos-review
+- tier: judge — merge mode: human /prm; do not merge
+- coordination: user explicitly approved separate documentation worktrees alongside start-here-intro-polish; preserve its introductions and verify merge compatibility
+- repos:
+  - PyAutoLens: feature/los-halos-review
+  - autolens_workspace: feature/los-halos-review
