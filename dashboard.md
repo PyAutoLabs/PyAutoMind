@@ -14,7 +14,7 @@
 | [Planned](#planned) | 11 |
 | [Backlog](#backlog) | 263 |
 | [Recent](#recent) | 50 |
-| [Pending release](#pending-release) | 4 |
+| [Pending release](#pending-release) | 5 |
 
 > **Batch 2026-11-06-pm — 0 in progress · 0 awaiting review**
 >
@@ -1205,7 +1205,7 @@ Use the start-dev skill. active/nautilus_cpu_checkpoint_batching.md
 
 </details>
 
-<details><summary>📋 <a href="active/nautilus_spawn_training_pool.md">Nautilus experimental spawn-based training pool</a> — <a href="https://github.com/PyAutoLabs/autofit_profiling/issues/16">issue #16</a> — issued 2026-11-10 — awaiting-setup-repair-approval (job415132 storage guard failed before science; original approval used) — PRs: <a href="https://github.com/PyAutoLabs/autofit_profiling/pull/17">autofit_profiling#17</a></summary>
+<details><summary>📋 <a href="active/nautilus_spawn_training_pool.md">Nautilus experimental spawn-based training pool</a> — <a href="https://github.com/PyAutoLabs/autofit_profiling/issues/16">issue #16</a> — issued 2026-11-10 — workspace-dev (diagnostic and one corrected pilot approved2026-11-12) — PRs: <a href="https://github.com/PyAutoLabs/autofit_profiling/pull/17">autofit_profiling#17</a></summary>
 
 ```
 Use the start-dev skill. active/nautilus_spawn_training_pool.md
@@ -1213,7 +1213,7 @@ Use the start-dev skill. active/nautilus_spawn_training_pool.md
 
 </details>
 
-<details><summary>📋 <a href="active/raise_jax_floor_to_0_12.md">Raise the JAX floor to 0.12.0 (jax and jaxlib) after a Heart…</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/215">issue #215</a> — issued 2026-11-11 — library-dev</summary>
+<details><summary>📋 <a href="active/raise_jax_floor_to_0_12.md">Raise the JAX floor to 0.12.0 (jax and jaxlib) after a Heart…</a> — <a href="https://github.com/PyAutoLabs/PyAutoNerves/issues/215">issue #215</a> — issued 2026-11-11 — library-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoNerves/pull/216">PyAutoNerves#216</a> — ⏳ pending release: autonerves</summary>
 
 ```
 Use the start-dev skill. active/raise_jax_floor_to_0_12.md
@@ -3103,6 +3103,10 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 **PyAutoNerves**
 
 - [PyAutoNerves#210](https://github.com/PyAutoLabs/PyAutoNerves/pull/210) — `complete/2026/11/cti-release-train-wiring.md`
+
+**autonerves**
+
+- [PyAutoNerves#216](https://github.com/PyAutoLabs/PyAutoNerves/pull/216) — `active/raise_jax_floor_to_0_12.md`
 
 
 Boards: [organism](https://pyautolabs.github.io/PyAutoScientist/) · [brain](https://pyautolabs.github.io/PyAutoBrain/) · [cortex](https://pyautolabs.github.io/PyAutoCortex/) · [memory](https://pyautolabs.github.io/PyAutoMemory/) · [eyes](https://pyautolabs.github.io/PyAutoEyes/) · [ears](https://pyautolabs.github.io/PyAutoEars/) · [heart](https://pyautolabs.github.io/PyAutoHeart/) · [hands](https://pyautolabs.github.io/PyAutoHands/) · [pulse](https://pyautolabs.github.io/PyAutoPulse/) · [insight](https://pyautolabs.github.io/PyAutoInsight/) · [dna](https://pyautolabs.github.io/PyAutoDNA/) · [nerves](https://pyautolabs.github.io/PyAutoNerves/) · [broca](https://pyautolabs.github.io/PyAutoBroca/) · [gut](https://pyautolabs.github.io/PyAutoGut/)
