@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2243 records across 11 buckets.
+2244 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -122,6 +122,7 @@ markers; everything below GENERATED is rebuilt.
 ## 2026/11
 
 - [alw-optdeps-escapes](2026/11/alw-optdeps-escapes.md)
+- [api-reference-polish](2026/11/api-reference-polish.md)
 - [arcticpy-lazy-import](2026/11/arcticpy-lazy-import.md)
 - [arcticpy-wheel-cache-libgsl](2026/11/arcticpy-wheel-cache-libgsl.md)
 - [arxiv-edge-refuses-stdlib-urllib](2026/11/arxiv-edge-refuses-stdlib-urllib.md) — superseded by a different fix — closed. Commit 4d8290555 (2026-09-20, "fix: fall back to curl when arXiv rejec…
