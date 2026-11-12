@@ -10,11 +10,11 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 23 |
-| [In flight](#in-flight) | 9 |
+| [In flight](#in-flight) | 2 |
 | [Planned](#planned) | 12 |
 | [Backlog](#backlog) | 264 |
 | [Recent](#recent) | 50 |
-| [Pending release](#pending-release) | 2 |
+| [Pending release](#pending-release) | 1 |
 
 > **Batch 2026-11-06-pm — 0 in progress · 0 awaiting review**
 >
@@ -1153,62 +1153,6 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 ```
 Use the start-dev skill. active/gradient_correctness_sweep.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/magnification_maps_8d_wiring_pretty.md">Magnification maps 8d: wire into fit subplots and make them pretty</a> — <a href="https://github.com/PyAutoLabs/PyAutoLens/issues/818">issue #818</a> — issued 2026-11-02 — library-dev</summary>
-
-```
-Use the start-dev skill. active/magnification_maps_8d_wiring_pretty.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/matrix_free_interferometer_inversion.md">Matrix-free interferometer inversion for very large rectangular meshes…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/638">issue #638</a> — issued 2026-10-21</summary>
-
-```
-Use the start-dev skill. active/matrix_free_interferometer_inversion.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/nautilus_30d_diagnostics.md">Nautilus 30D evidence and output diagnostics</a> — <a href="https://github.com/PyAutoLabs/autofit_profiling/issues/12">issue #12</a> — issued 2026-11-10 — awaiting-merge (full30D attribution completed; CI green; human merge) — PRs: <a href="https://github.com/PyAutoLabs/autofit_profiling/pull/13">autofit_profiling#13</a></summary>
-
-```
-Use the start-dev skill. active/nautilus_30d_diagnostics.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/nautilus_compact_plot_adapter.md">PyAutoFit compact corner array adapter</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1762">issue #1762</a> — issued 2026-11-10 — awaiting-merge (bounded plotting experiment stopped at host guard; no further compute) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1764">PyAutoFit#1764</a>, <a href="https://github.com/PyAutoLabs/autofit_profiling/pull/14">autofit_profiling#14</a> — ⏳ pending release: PyAutoFit</summary>
-
-```
-Use the start-dev skill. active/nautilus_compact_plot_adapter.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/nautilus_cpu_checkpoint_batching.md">Nautilus opt-in CPU checkpoint batching</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1763">issue #1763</a> — issued 2026-11-10 — awaiting-merge (bounded experiment complete; negative performance result; human review) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoFit/pull/1765">PyAutoFit#1765</a>, <a href="https://github.com/PyAutoLabs/autofit_profiling/pull/15">autofit_profiling#15</a> — ⏳ pending release: PyAutoFit</summary>
-
-```
-Use the start-dev skill. active/nautilus_cpu_checkpoint_batching.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/nautilus_spawn_training_pool.md">Nautilus experimental spawn-based training pool</a> — <a href="https://github.com/PyAutoLabs/autofit_profiling/issues/16">issue #16</a> — issued 2026-11-10 — workspace-dev (parent CPU job415196 queued Resources; estimated2026-11-15T13:45Z; allowance CONSUMED; human merge) — PRs: <a href="https://github.com/PyAutoLabs/autofit_profiling/pull/17">autofit_profiling#17</a></summary>
-
-```
-Use the start-dev skill. active/nautilus_spawn_training_pool.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/sky_orientation_euclid_dr1_and_library.md">Sky orientation (north/east): euclid_dr1 catalogue, paper and website, plus the PyAutoLens library-wide…</a> — <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/115">issue #115</a> — issued 2026-10-31 — workspace-dev</summary>
-
-```
-Use the start-dev skill. active/sky_orientation_euclid_dr1_and_library.md
 ```
 
 </details>
@@ -2858,61 +2802,61 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-10 | issued | <a href="active/nautilus_compact_plot_adapter.md">PyAutoFit compact corner array adapter</a> |
-| 2026-11-10 | issued | <a href="active/nautilus_cpu_checkpoint_batching.md">Nautilus opt-in CPU checkpoint batching</a> |
-| 2026-11-10 | issued | <a href="active/nautilus_spawn_training_pool.md">Nautilus experimental spawn-based training pool</a> |
-| 2026-11-10 | issued | <a href="active/nautilus_30d_diagnostics.md">Nautilus 30D evidence and output diagnostics</a> |
 | 2026-11-10 | filed | <a href="draft/feature/pyautoheart/dev_metrics_trends_on_boards.md">Boards: draw the unit-test trend, and keep the hygiene counts</a> |
 | 2026-11-09 | filed | <a href="draft/docs/autogalaxy/plot_utils_critical_curves_default_docstring_drift.md">Fix plot_utils docstrings that call zero_contour the critical-curve…</a> |
 | 2026-11-09 | filed | <a href="draft/research/autolens_profiling/critical_curve_oracle_find_the_regime_where.md">Critical-curve oracle: find the regime where zero-contour beats…</a> |
 | 2026-11-09 | filed | <a href="draft/research/autolens/cluster_figure_critical_curves_miss_member_curves.md">Cluster figures miss small member-galaxy critical curves</a> |
 | 2026-11-06 | filed | <a href="draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md">Zero-contour critical curves: compile once per run by passing the…</a> |
 | 2026-11-06 | filed | <a href="draft/research/autolens_profiling/visualization_run_time_campaign_measure_and_opti.md">Visualization run-time campaign: measure and optimize modeling-run…</a> |
+| 2026-11-05 | filed | <a href="draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md">autofit: Samples.with_paths / without_paths break on factor-graph…</a> |
+| 2026-11-05 | filed | <a href="draft/feature/autolens_profiling/write_compile_repeats_from_autolens_profiling_s.md">Write <code>compile_repeats</code> from autolens_profiling's jax_compile tooling…</a> |
+| 2026-11-05 | filed | <a href="draft/test/autofit/regression_test_nautilus_as_the_ep_default.md">Regression test: Nautilus as the EP <code>default_optimiser</code> over…</a> |
+| 2026-11-05 | filed | <a href="draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md">Filed: 2026-11-05 (phase 2 of autolens_profiling#519; Pulse task…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-05 | filed | <a href="draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md">autofit: Samples.with_paths / without_paths break on factor-graph…</a> |
-| 2026-11-05 | filed | <a href="draft/feature/autolens_profiling/write_compile_repeats_from_autolens_profiling_s.md">Write <code>compile_repeats</code> from autolens_profiling's jax_compile tooling…</a> |
-| 2026-11-05 | filed | <a href="draft/test/autofit/regression_test_nautilus_as_the_ep_default.md">Regression test: Nautilus as the EP <code>default_optimiser</code> over…</a> |
-| 2026-11-05 | filed | <a href="draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md">Filed: 2026-11-05 (phase 2 of autolens_profiling#519; Pulse task…</a> |
 | 2026-11-05 | filed | <a href="draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md">Filed: 2026-11-05 (found by the autolens_profiling#519 worker-route…</a> |
 | 2026-11-04 | issued | <a href="active/autonomous_orchestrators_p4c_pilot_run.md">Autonomous orchestrators phase 4c: run the Dev orchestrator pilot…</a> |
 | 2026-11-02 | issued | <a href="planned.md#gradient-correctness-sweep">gradient-correctness-sweep</a> |
 | 2026-11-02 | filed | <a href="draft/research/autolens_profiling/unexplained_gradient_gaps_cpu_sparse_delaunay_and_mge.md">Unexplained autodiff-vs-FD gaps in the phase-6 gradient records…</a> |
-| 2026-11-02 | issued | <a href="active/magnification_maps_8d_wiring_pretty.md">Magnification maps 8d: wire into fit subplots and make them pretty</a> |
 | 2026-11-02 | filed | <a href="draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md">Imaging sparse-operator path gives a very different log L from dense…</a> |
+| 2026-11-02 | issued | <a href="active/gradient_correctness_sweep.md">Gradient-correctness sweep: triage and investigate every open…</a> |
+| 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
+| 2026-10-26 | filed | <a href="draft/refactor/autogalaxy_assistant/trim_ag_skills_for_colab_cap.md">Trim autogalaxy_assistant skills toward their autolens size</a> |
+| 2026-10-25 | filed | <a href="draft/bug/health_fixes/heart_health_rerun_stale_push.md">Heart Health rerun cannot publish after main advances</a> |
+| 2026-10-25 | filed | <a href="draft/bug/health_fixes/ci_timing_execution_coverage.md">CI timing must compare equivalent executed job coverage</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-02 | issued | <a href="active/gradient_correctness_sweep.md">Gradient-correctness sweep: triage and investigate every open…</a> |
-| 2026-10-31 | issued | <a href="active/sky_orientation_euclid_dr1_and_library.md">Sky orientation (north/east): euclid_dr1 catalogue, paper and…</a> |
-| 2026-10-30 | filed | <a href="draft/research/libraries/plus_y_north_at_fits_load.md">Should PyAutoArray flip FITS rows at load so +y is north</a> |
-| 2026-10-26 | filed | <a href="draft/refactor/autogalaxy_assistant/trim_ag_skills_for_colab_cap.md">Trim autogalaxy_assistant skills toward their autolens size</a> |
-| 2026-10-25 | filed | <a href="draft/bug/health_fixes/heart_health_rerun_stale_push.md">Heart Health rerun cannot publish after main advances</a> |
-| 2026-10-25 | filed | <a href="draft/bug/health_fixes/ci_timing_execution_coverage.md">CI timing must compare equivalent executed job coverage</a> |
 | 2026-10-23 | filed | <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred…</a> |
 | 2026-10-23 | filed | <a href="draft/bug/autolens_profiling/stale_auto_simulated_cluster_dataset.md"><code>@autolens_profiling</code> stale auto-simulated <code>dataset/cluster/simple</code>…</a> |
 | 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
 | 2026-10-21 | filed | <a href="planned.md#interferometer-primary-beam-persistence-mirror">interferometer-primary-beam-persistence-mirror</a> |
+| 2026-10-21 | filed | <a href="draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md">PyAutoLens mirror of the interferometer primary-beam persistence…</a> |
+| 2026-10-21 | filed | <a href="draft/docs/autolens_profiling/positions_source_jacobian_default_rerun_note.md">Note in autolens_profiling that plain source-plane lane values…</a> |
+| 2026-10-21 | filed | <a href="draft/research/autolens_profiling/matrix_free_interferometer_phase5.md">Matrix-free interferometer inversion, phase 5b: profiling note…</a> |
+| 2026-10-21 | filed | <a href="draft/docs/autolens_workspace/interferometer_primary_beam_example.md">Interferometer primary beam: workspace example and docs</a> |
+| 2026-10-21 | filed | <a href="draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md">Cluster likelihood scripts: image-plane manual check disagrees with…</a> |
+| 2026-10-16 | filed | <a href="draft/maintenance/autolens_workspace/remeasure_shapelets_slow_park.md">Re-measure the shapelets/modeling.py SLOW park (#586) under the…</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-21 | filed | <a href="draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md">PyAutoLens mirror of the interferometer primary-beam persistence…</a> |
-| 2026-10-21 | filed | <a href="draft/docs/autolens_profiling/positions_source_jacobian_default_rerun_note.md">Note in autolens_profiling that plain source-plane lane values…</a> |
-| 2026-10-21 | filed | <a href="draft/research/autolens_profiling/matrix_free_interferometer_phase5.md">Matrix-free interferometer inversion, phase 5b: profiling note…</a> |
-| 2026-10-21 | issued | <a href="active/matrix_free_interferometer_inversion.md">Matrix-free interferometer inversion for very large rectangular…</a> |
-| 2026-10-21 | filed | <a href="draft/docs/autolens_workspace/interferometer_primary_beam_example.md">Interferometer primary beam: workspace example and docs</a> |
-| 2026-10-21 | filed | <a href="draft/bug/autolens_workspace/cluster_likelihood_scripts_preexisting_mismatches.md">Cluster likelihood scripts: image-plane manual check disagrees with…</a> |
-| 2026-10-16 | filed | <a href="draft/maintenance/autolens_workspace/remeasure_shapelets_slow_park.md">Re-measure the shapelets/modeling.py SLOW park (#586) under the…</a> |
 | 2026-10-14 | filed | <a href="draft/test/autofit/workspace_searches_scripts_preexisting_failures.md"><code>@autofit_workspace</code> six <code>searches/</code> scripts fail on main at…</a> |
 | 2026-10-14 | filed | <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> |
 | 2026-10-08 | filed | <a href="draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md"><code>JAX_ENABLE_X64=False</code> is overridden to True, so the fp32 inference…</a> |
+| 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
+| 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
+| 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
+| 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
+| 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> |
+| 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
+| 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
 
 </details>
 
@@ -3066,11 +3010,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 </details>
 
 ## Pending release
-
-**PyAutoFit**
-
-- [PyAutoFit#1764](https://github.com/PyAutoLabs/PyAutoFit/pull/1764) — `active/nautilus_compact_plot_adapter.md`
-- [PyAutoFit#1765](https://github.com/PyAutoLabs/PyAutoFit/pull/1765) — `active/nautilus_cpu_checkpoint_batching.md`
 
 **PyAutoNerves**
 
