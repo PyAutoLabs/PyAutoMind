@@ -2,22 +2,22 @@
   "schema_version": 1,
   "organ": "mind",
   "repo": "PyAutoMind",
-  "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-11-12T21:08:40Z",
+  "status": "yellow",
+  "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
+  "updated": "2026-11-12T21:52:24Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "red",
-      "text": "Workspace README guide images \u2014 workspace-dev (edits validated; shipping blocked by Heart RED)",
-      "url": "https://github.com/PyAutoLabs/autolens_workspace/issues/658",
-      "prompt": "Use the start-dev skill. active/workspace_readme_images.md"
-    },
     {
       "severity": "yellow",
       "text": "Polish the homepage flow \u2014 awaiting-merge",
       "url": "https://github.com/Jammy2211/Jammy2211.github.io/pull/4",
       "prompt": "Use the start-dev skill. active/homepage_flow_polish.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Workspace README guide images \u2014 awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/854",
+      "prompt": "Use the start-dev skill. active/workspace_readme_images.md"
     },
     {
       "severity": "yellow",

@@ -1197,7 +1197,7 @@ Use the start-dev skill. active/website_lensing_intro.md
 
 </details>
 
-<details><summary>📋 <a href="active/workspace_readme_images.md">Workspace README guide images</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/658">issue #658</a> — issued 2026-11-12 — workspace-dev (edits validated; shipping blocked by Heart RED)</summary>
+<details><summary>📋 <a href="active/workspace_readme_images.md">Workspace README guide images</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/658">issue #658</a> — issued 2026-11-12 — awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoLens/pull/854">PyAutoLens#854</a>, <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/662">autolens_workspace#662</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/279">autogalaxy_workspace#279</a></summary>
 
 ```
 Use the start-dev skill. active/workspace_readme_images.md
