@@ -31,3 +31,17 @@ Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/640
 Issued: 2026-11-12
 
 Classifier API/phasing heuristic overestimates this prose/assets-only scope; inspection confirms no numerical or API change.
+
+## Shipping checkpoint
+Approved v2 image and text applied; source changes staged, uncommitted.
+Fresh checks: syntax; unchanged executable AST and notebook code cells; approved draft parity except image path/trailing whitespace; identical approved images and valid local links; navigator/banner, search-memory, size and whitespace checks; focused Sphinx build with warnings treated as errors. No numerical/API changes. Full numerical/smoke suites were not rerun for this prose/assets-only delta; preceding stellar + dark matter PRs passed all 12 CI jobs on the same base, which is prior evidence rather than fresh testing.
+
+Heart RED 2026-11-12T17:09:03.637477+00:00:
+- PyAutoLens: on branch feature/double-source-plane-review (not main)
+- PyAutoLens: 2 uncommitted source change(s)
+- install verification FAILED (testpypi; checks F)
+- release validation FAILED (stage integrate)
+
+Await development-only Heart RED override for #640 before commit/push/open both review PRs. No merge.
+Review: /mnt/c/Users/Jammy/Workspace/Science/scratch/double_source_plane_individual_review_20261112/applied/index.html
+Logs and PR drafts: organs/PyAutoMind/tmp/double_source_plane_review/

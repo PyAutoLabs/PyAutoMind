@@ -33,4 +33,4 @@
   - autolens_workspace: feature/double-source-plane-review
 - prompt: active/double_source_plane_review.md
 - tier: judge; review PRs only, no merge
-- next: apply approved draft/image, validate, open review PRs
+- next: await development-only Heart RED override for #640; staged and validated; no source commit/push/PR yet
