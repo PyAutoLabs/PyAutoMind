@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 11 in flight",
-  "updated": "2026-11-11T12:17:07Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 12 in flight",
+  "updated": "2026-11-12T10:26:24Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "JAX version policy and the recurring XLA:CPU deadlocks: what is the general\u2026 \u2014 awaiting-merge (human /prm; Heart RED-override task + YELLOW ack 2026-11-11)",
-      "url": "https://github.com/PyAutoLabs/autolens_profiling/pull/527",
-      "prompt": "Use the start-dev skill. active/jax_version_policy_and_the_recurring_xla.md"
-    },
     {
       "severity": "yellow",
       "text": "Nautilus 30D evidence and output diagnostics \u2014 awaiting-merge (full30D attribution completed; CI green; human merge)",
@@ -81,6 +75,12 @@
     },
     {
       "severity": "yellow",
+      "text": "pending release: PyAutoFit PyAutoFit#1768 \u2014 Why",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/pull/1768",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#699 \u2014 What happened",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/699",
       "prompt": null
@@ -123,9 +123,9 @@
     },
     {
       "severity": "info",
-      "text": "pick: Fix KNN neighbor search for a partial final point block",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md",
-      "prompt": "Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md"
+      "text": "pick: Phase B: send HPC temp files to the shared disk (TMPDIR)\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md",
+      "prompt": "Use the start-dev skill. draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md"
     }
   ]
 }

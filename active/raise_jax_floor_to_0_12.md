@@ -7,6 +7,7 @@ Repos:
 - PyAutoHeart
 Priority: high
 Consequence: judge
+Issued: 2026-11-11
 
 Source: research PyAutoNerves#213 (decision PyAutoDNA decisions/jax-cpu-policy-2026-11.md, evidence RAL 415009 + laptop pilot, DNA research records). Filed 2026-11-10/11 from the research close-out; needs /intake to formalise.
 

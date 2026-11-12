@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2221 records across 11 buckets.
+2226 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -161,6 +161,7 @@ markers; everything below GENERATED is rebuilt.
 - [cti-workspace-test-rebuild](2026/11/cti-workspace-test-rebuild.md)
 - [data-loading-and-selection-cuts-skill](2026/11/data-loading-and-selection-cuts-skill.md)
 - [delaunay-smoke-300s-cap](2026/11/delaunay-smoke-300s-cap.md) — Already resolved; nothing was committed. Under the smoke profile `scripts/imaging/features/pixelization/delaun…
+- [dna-policies-section](2026/11/dna-policies-section.md)
 - [docs-conductor](2026/11/docs-conductor.md)
 - [dr1-rgb-flip-superseded](2026/11/dr1-rgb-flip-superseded.md) — superseded by the human 2026-10-30 (the draft's own banner); `complete/2026/10/sky-orientation-dr1-p1.md` reco…
 - [ell-comps-disk-constraint-dup](2026/11/ell-comps-disk-constraint-dup.md) — already shipped before it was filed — PyAutoFit#1538 (96dad519) + PyAutoGalaxy#589 (merge 0fbe863d, 2026-08-28…
@@ -183,12 +184,14 @@ markers; everything below GENERATED is rebuilt.
 - [howtolens-stored-results](2026/11/howtolens-stored-results.md)
 - [hpc-cache-off-home-euclid](2026/11/hpc-cache-off-home-euclid.md) — already shipped — euclid_strong_lens_modeling_pipeline 37034f22 (2026-09-25, default branch) "activate.sh: kee…
 - [hpc-campaign-p5a-assistant](2026/11/hpc-campaign-p5a-assistant.md) — phase 5a; ledger draft/research/autofit/hpc_campaign_epic.md
+- [hpc-keep-off-home](2026/11/hpc-keep-off-home.md)
 - [hygiene-extras-tomllib](2026/11/hygiene-extras-tomllib.md)
 - [hygiene-refs-false-positives](2026/11/hygiene-refs-false-positives.md)
 - [insight-lint-point-source-family](2026/11/insight-lint-point-source-family.md)
 - [intake-memory-citation-floor](2026/11/intake-memory-citation-floor.md)
 - [intake-memory-line-organ-targets](2026/11/intake-memory-line-organ-targets.md) — already shipped — closed as stale draft. The `_with_memory` gate in `agents/conductors/intake/_intake.py` land…
 - [jax-joss-benchmark-repo](2026/11/jax-joss-benchmark-repo.md) — already shipped — PyAutoLabs/autolens_jax_joss: 9c66b020 (birth, 10 benchmark scripts), 64204f69 (A100 sweep o…
+- [jax-version-policy](2026/11/jax-version-policy.md)
 - [latent-smoke-assertion-echoes-search-log](2026/11/latent-smoke-assertion-echoes-search-log.md)
 - [latest-per-test-tie](2026/11/latest-per-test-tie.md) — test_autofit/results/test_identity.py::test_latest_per_keeps_the_latest_sibling flaked (main red at 963ff296a,
 - [ledger-merge-sync](2026/11/ledger-merge-sync.md) — shipped in commit 748f8c0bb (this PR). `scripts/ledger_merge.py sync [--base origin/main] [--root]` / `sync_wi…
@@ -201,6 +204,7 @@ markers; everything below GENERATED is rebuilt.
 - [likelihood-lifecycle-p4a-validation-tooling](2026/11/likelihood-lifecycle-p4a-validation-tooling.md)
 - [likelihood-lifecycle-p4c-runners](2026/11/likelihood-lifecycle-p4c-runners.md)
 - [likelihood-lifecycle-p4e-ingest](2026/11/likelihood-lifecycle-p4e-ingest.md)
+- [likelihood-lifecycle-p4e-rerun-ingest](2026/11/likelihood-lifecycle-p4e-rerun-ingest.md)
 - [likelihood-lifecycle-p6-delaunay-hilbert-roughness](2026/11/likelihood-lifecycle-p6-delaunay-hilbert-roughness.md)
 - [likelihood-lifecycle-p6a-gradient-harness](2026/11/likelihood-lifecycle-p6a-gradient-harness.md)
 - [likelihood-lifecycle-p6b-gradient-scripts](2026/11/likelihood-lifecycle-p6b-gradient-scripts.md)
@@ -234,6 +238,7 @@ markers; everything below GENERATED is rebuilt.
 - [pr504-guard-log-det-terms](2026/11/pr504-guard-log-det-terms.md)
 - [procedure-lines-trim](2026/11/procedure-lines-trim.md) — PR is the tracking surface
 - [pseudo-det-rebaseline](2026/11/pseudo-det-rebaseline.md)
+- [pulse-xla-pointers-to-dna](2026/11/pulse-xla-pointers-to-dna.md)
 - [r2-pages-function-access](2026/11/r2-pages-function-access.md)
 - [readme-frontdoors](2026/11/readme-frontdoors.md)
 - [rectangular-gradient-rtu-sparse](2026/11/rectangular-gradient-rtu-sparse.md) — the filed symptom (|g| ~2e9 on the imaging/rectangular/hst fiducial, RTU all backends, Bilinear CPU sparse) sp…

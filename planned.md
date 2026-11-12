@@ -2,6 +2,7 @@
 
 **Contents**
 
+- [hpc-keep-off-home-phase-b](#hpc-keep-off-home-phase-b)
 - [isothermal-ell-sph-oversampling-at-the-cusp](#isothermal-ell-sph-oversampling-at-the-cusp)
 - [remote-mcp-deployment-tiers](#remote-mcp-deployment-tiers)
 - [samples-parameter-paths](#samples-parameter-paths)
@@ -11,8 +12,22 @@
 - [sibson-internal-edge-continuity](#sibson-internal-edge-continuity)
 - [interferometer-primary-beam-persistence-mirror](#interferometer-primary-beam-persistence-mirror)
 - [point-plots-yaml-keys-assistant](#point-plots-yaml-keys-assistant)
+- [delaunay-nn-numba-remeasure](#delaunay-nn-numba-remeasure)
 
 <!-- toc:end -->
+
+## hpc-keep-off-home-phase-b
+- status: blocked — repos claimed by other tasks
+- filed: 2026-11-12
+- prompt: draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md
+- follows: complete/2026/11/hpc-keep-off-home.md (phase A, PyAutoFit#1767 closed)
+- summary: add the fill-if-unset TMPDIR line (same text as phase A) beside the PYAUTO_HPC_CACHE block in each repo's activate.sh
+- blocked-by: autofit_profiling (nautilus-spawn-training-pool), autolens_assistant (results-library-p5a-assistant), autolens_profiling (gradient-correctness-sweep), euclid_strong_lens_modeling_pipeline (sky-orientation-p2)
+- affected-repos:
+  - autofit_profiling
+  - autolens_assistant
+  - autolens_profiling
+  - euclid_strong_lens_modeling_pipeline
 
 ## isothermal-ell-sph-oversampling-at-the-cusp
 - status: planned — NOT yet a prompt file; file one via `/intake` before starting
@@ -126,3 +141,12 @@
 - release-gate: verify the PyAutoLens#794 release before shipping, as required by the original prompt
 - parent: complete/2026/10/point-plots-yaml-keys.md (HowToLens half merged 2026-10-22, HowToLens#99); no separate prompt file
 - scope: same `point_dataset` / `fit_point_dataset` block edit in `autolens_assistant/config/visualize/plots.yaml` as HowToLens; ship on its own branch `feature/point-plots-yaml-keys` once the claim clears
+
+## delaunay-nn-numba-remeasure
+- prompt: draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md
+- repos: autolens_profiling, PyAutoPulse
+- blocked-by: autolens_profiling claimed by gradient-correctness-sweep (#517, paused 2026-11-02; RAL 413991) — the ingest PR (rows → results/, mark 412955/412956 superseded) needs that claim released or a human override
+- filed: 2026-11-11
+- human-go: 2026-11-11 (chat: "go ahead with the numba remeasure")
+- compute-tracking: scratch submit copy (uncommitted, pattern of autolens_inference 414189) in RAL worktree /mnt/ral/jnightin/profiling/autolens_profiling_p677 (detached at origin/main, must contain #520 207ae03a) — legs 6,7 of submit_campaign_p2a_imaging_ral_cpu_hst_fp64 (DelaunayNN numba runtime + breakdown), base /mnt/ral/jnightin/profiling/PyAuto_2026.10.25.1_pr677 (tag 2026.10.25.1 + Array#677 d24c2477; exact-HEAD guard), --no-requeue, ral, 8 CPU, 3 h; rows → output/p677_remeasure/; job id in /mnt/ral/jnightin/profiling/p677_submit.log. Note: day-zero rows 412955/412956 are on 2026.10.23.1, so the delta includes .23→.25 library changes as well as #677.
+
