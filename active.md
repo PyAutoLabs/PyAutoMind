@@ -139,6 +139,7 @@
 - latest-heart: 2026-11-10T18:35:43.930077+00:00 RED: "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure"; "PyAutoCTI: 1 uncommitted source change(s)". Existing task-wide live RED development approval retained; unrelated CTI source untouched, no release or CI bypass.
 
 ## nautilus-spawn-training-pool
+- proposed-follow-up: retained data localizes parent CPU loss after training (~87% more CPU in the final168 likelihood batches). Saved draft/feature/autofit/nautilus_parent_cpu_slowdown.md:12fit controlled study, one bounded original-node RAL job; awaiting explicit implementation/compute approval. No new science; outside Pulse; human merge.
 - completed-diagnostic: job415180 COMPLETED0:0/538s,17/17 exact parity, full cleanup; source d3a36cf/300tests/CI43227695075, report fc508ae/CI43231203005 green. Mean traced workflow31.12→38.61s: training−2.24s/otherfit+8.11s/lifecycle+1.62s, chiefly extra parent CPU.110.5MB raw retained; all allowances consumed, no further compute. Outside Pulse; human merge.
 - reference-node-job: 415180 submitted once at d3a36cf; fresh allowance CONSUMED. CI43227695075 green; artifact14 runtime4.18s/fresh restore51.19s/zero science/cleanup pass. Request exact euclid-ral-compute-1; monitor only, no retry/requeue.
 - reference-node-gates: d3a36cf/CI43227695075 green;300tests/lint/format/shell/catalogue/zero-science smoke pass, author review; Heart12:57:11Z YELLOW; artifact14/fresh restore14 pending.
@@ -150,7 +151,7 @@
 - issue: https://github.com/PyAutoLabs/autofit_profiling/issues/16
 - issued: 2026-11-10
 - session: OpenAI Codex desktop (session ID unavailable)
-- status: awaiting-merge (10D diagnostic complete; no default change; human review/merge)
+- status: planning (parent CPU follow-up awaiting approval; prior diagnostic complete; human merge)
 - prompt: active/nautilus_spawn_training_pool.md
 - worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-spawn-training-pool
 - repos:

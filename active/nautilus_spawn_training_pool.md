@@ -493,3 +493,16 @@ Mean traced10Dseed2: training10.974→8.734s(−2.240), otherfit20.139→28.253s
 Measured sourced3a36cf79b5c5dfc073ec64b38595430400798ed,300tests/lint/format/shell/catalogue/zero-science smoke pass, source CI43227695075 green. Report-only headfc508aefcabf58e7c4cb65a12fcf19f2375daa8a/final CI43231203005 green. Author review only. Latest readiness receipt12:57:11Z YELLOW: "PyAutoArray: open PR 9d old"; "release validation stale: source moved since rehearsal (PyAutoLens)". No release/merge/failed-check bypass.
 
 Raw110,486,049bytes retained on RAL and locally;57,820,758byte archive plus SHA256SUMS and readable HTML/plots in Science scratch/training/10d_training_diagnosis_2026-11-12/job415180. Attempt01 and all previous jobs unchanged. Both single-job allowances consumed; no extra compute or persistent monitoring. PR17/issue16 remain open, outside Pulse, human merge. Deliverable complete; next investigation requires its own explicit scope/approval.
+
+
+### Parent CPU slowdown follow-up — proposed, awaiting approval (2026-11-12)
+
+User request: “Can we investigate why the other CPU work slows down when the training pool is enabled? Keep it outside Pulse and leave merge for me.”
+
+Read-only chronology of retained job415180 found that the first 8 likelihood batches, with the pool already initialized but no training yet, use mean 0.08627s serial / 0.08738s pooled parent CPU. The 168 batches after the last training call use 1.81169s / 3.39046s (~87% more). This localizes the loss after actual training but does not establish its cause. No new scientific calls or executable source edits.
+
+Concrete two-level plan: draft/feature/autofit/nautilus_parent_cpu_slowdown.md. Twelve full fits, two reverse-order repetitions of six arms: serial, persistent pool, pool closed after final training, serial model pickle roundtrip, parent-pinned serial, and disjoint parent/worker affinity. Passive main-thread/process/worker CPU, GC and runtime observations. Preserve frozen science and exact historical parity; no installed library changes. Workspace-only continuation of issue16/PR17; phased implementation and existing branch claim checked.
+
+Proposed one exclusive RAL job on euclid-ral-compute-1, four bound physical cores, 8GiB, 35 minutes; 12 case groups, 120s/4096MiB each, 1800s total. Stop on first failure, retain all data, outside Pulse, merge human. This new implementation and compute remain UNAPPROVED; all prior job allowances are consumed. Heart authoritative receipt 2026-11-12T13:48:57.456105+00:00 remains YELLOW, no RED reasons (old Array PR and stale release validation).
+
+Human review bundle: /mnt/c/Users/Jammy/Workspace/Science/scratch/nautilus_optimizations_2026-11-10/training/parent_cpu_followup_2026-11-12/REPORT.html, with chronology plot, evidence JSON, source receipt hashes, proposed plan and resume note. Previous job415180 artifacts remain unchanged. Producer remains clean at fc508ae, draft PR17 open/unmerged.
