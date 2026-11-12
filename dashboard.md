@@ -1197,7 +1197,7 @@ Use the start-dev skill. active/nautilus_cpu_checkpoint_batching.md
 
 </details>
 
-<details><summary>📋 <a href="active/nautilus_spawn_training_pool.md">Nautilus experimental spawn-based training pool</a> — <a href="https://github.com/PyAutoLabs/autofit_profiling/issues/16">issue #16</a> — issued 2026-11-10 — workspace-dev (prior correction and one fresh pilot approved; validation/staging) — PRs: <a href="https://github.com/PyAutoLabs/autofit_profiling/pull/17">autofit_profiling#17</a></summary>
+<details><summary>📋 <a href="active/nautilus_spawn_training_pool.md">Nautilus experimental spawn-based training pool</a> — <a href="https://github.com/PyAutoLabs/autofit_profiling/issues/16">issue #16</a> — issued 2026-11-10 — workspace-dev (prior-corrected RAL job415139 running; approval consumed) — PRs: <a href="https://github.com/PyAutoLabs/autofit_profiling/pull/17">autofit_profiling#17</a></summary>
 
 ```
 Use the start-dev skill. active/nautilus_spawn_training_pool.md
