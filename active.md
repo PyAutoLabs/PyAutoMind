@@ -82,6 +82,11 @@
 - prompt: active/pre_dispatch_premise_and_lane_checks.md
 - epic: autonomous-orchestrators (programme M1.3 slices 1–2, phase 8; slice 3 = M2.3)
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/559, https://github.com/PyAutoLabs/PyAutoBrain/pull/609
+- heart-red-override:
+  authorization: live human 2026-11-12 block gate "Override + merge both"; https://github.com/PyAutoLabs/PyAutoBrain/issues/608
+  reasons: "PyAutoNerves: 2 commit(s) behind origin"; "PyAutoArray: 2 commit(s) behind origin"; "PyAutoGalaxy: 10 commit(s) behind origin"; "PyAutoLens: on branch feature/last-imaging-features-review (not main)"; "PyAutoLens: 3 uncommitted source change(s)"; "PyAutoCTI: 2 commit(s) behind origin"; "install verification FAILED (testpypi; checks F)"; "release validation FAILED (stage integrate)"
+  gates: Brain suite 1718; Mind 772; witness (a)(b) pass; independent review CLEAN; smoke n/a
 - repos:
   - PyAutoBrain: feature/premise-lane-checks
   - PyAutoMind: feature/premise-lane-checks
@@ -95,5 +100,10 @@
 - prompt: active/dev_metrics_trends_on_boards.md
 - epic: autonomous-orchestrators (programme M1 side lane; re-check SIG-2/SIG-3 first)
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/339
+- heart-red-override:
+  authorization: live human 2026-11-12 block gate "Override + merge both"; https://github.com/PyAutoLabs/PyAutoHeart/issues/338
+  reasons: "PyAutoNerves: 2 commit(s) behind origin"; "PyAutoArray: 2 commit(s) behind origin"; "PyAutoGalaxy: 10 commit(s) behind origin"; "PyAutoLens: on branch feature/last-imaging-features-review (not main)"; "PyAutoLens: 3 uncommitted source change(s)"; "PyAutoCTI: 2 commit(s) behind origin"; "install verification FAILED (testpypi; checks F)"; "release validation FAILED (stage integrate)"
+  gates: Heart suite 1334; witness (reshaped) pass; independent review CLEAN; smoke n/a
 - repos:
   - PyAutoHeart: feature/dev-metrics-boards
