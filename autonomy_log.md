@@ -710,7 +710,7 @@ the watcher's fresh, independent close-out session, which runs the witness
 itself. Any row here `reverted` or amended to `merged-after-substantive-change`
 restores the different-model requirement. Rows are written by the watcher
 through the one Mind writer; by hand, `lifecycle.py shadow-row --stage2 --brief
-<slot> …`.
+<slot> --actor unattended-watcher …`.
 
 **Merge actor and read by human — from 2026-11-12** (`PyAutoBrain/AUTONOMY.md`
 "Merge actor and random audit — 2026-11-12"), as in the stage-1 table: the
