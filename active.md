@@ -71,6 +71,11 @@
 - prompt: active/prompt_sync_push_explicit_paths.md
 - epic: autonomous-orchestrators (programme M1.2, phase 8)
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
+- library-pr: https://github.com/PyAutoLabs/PyAutoMind/pull/555, https://github.com/PyAutoLabs/PyAutoBrain/pull/605
+- heart-red-override:
+  authorization: live human 2026-11-12 "Override + merge on green" (programme session); https://github.com/PyAutoLabs/PyAutoMind/issues/554
+  reasons: "PyAutoLens: on branch feature/shapelets-review (not main)"; "PyAutoLens: 2 uncommitted source change(s)"; "install verification FAILED (testpypi; checks F)"; "release validation FAILED (stage integrate)"
+  gates: Mind suite 750 passed; witness pass; independent review CLEAN; smoke n/a
 - repos:
   - PyAutoMind: feature/prompt-sync-explicit-paths
   - PyAutoBrain: feature/prompt-sync-explicit-paths
