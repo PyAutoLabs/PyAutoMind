@@ -2785,6 +2785,86 @@ def cmd_dates(args) -> int:
     return 1 if args.check else 0
 
 
+# --------------------------------------------------------------------------- #
+# queue.md — the human's ranked list (M2.3, PyAutoBrain AUTONOMY.md
+# "M2 rulings — 2026-11-12")
+# --------------------------------------------------------------------------- #
+#: A live entry's heading, `## <n>. <label>`. Any other heading ends an entry:
+#: the `## Retired` footer's `### …` entries are history, not the list.
+QUEUE_ENTRY_RE = re.compile(r"^##\s+\d+\.\s+(.+?)\s*$")
+QUEUE_FIELD_RE = re.compile(r"^-\s+(kind|ref):\s*(.+?)\s*$")
+QUEUE_KINDS = ("prompt", "retired")
+
+
+def queue_entries(root: Path) -> "list[tuple[str, str, str]]":
+    """(label, kind, ref) for each numbered entry of `queue.md`, in file order.
+
+    Read exactly as PyAutoBrain's `_batch.read_queue` reads it: a fenced block
+    is the schema's own example, and only fields under a numbered heading
+    belong to an entry. An absent file is an empty list."""
+    try:
+        text = (root / "queue.md").read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return []
+    out: "list[tuple[str, str, str]]" = []
+    label, kind, ref, fenced = None, "", "", False
+    for line in text.split("\n") + ["#"]:
+        if line.lstrip().startswith("```"):
+            fenced = not fenced
+            continue
+        if fenced:
+            continue
+        if line.startswith("#"):
+            if label is not None:
+                out.append((label, kind, ref))
+            m = QUEUE_ENTRY_RE.match(line)
+            label, kind, ref = (m.group(1) if m else None), "", ""
+            continue
+        m = QUEUE_FIELD_RE.match(line)
+        if m and label is not None:
+            value = m.group(2).split("#")[0].strip()
+            if m.group(1) == "kind":
+                kind = value
+            else:
+                ref = value
+    return out
+
+
+def _queue_ref_resolves(root: Path, ref: str) -> bool:
+    """A live prompt: the `draft/` or `active/` file itself, or — because an
+    entry keeps its place after its prompt is issued — `active/<name>`."""
+    if not ref.startswith(("draft/", "active/")):
+        return False
+    if (root / ref).is_file():
+        return True
+    return (root / "active" / Path(ref).name).is_file()
+
+
+def queue_findings(root: Path) -> "list[Finding]":
+    """Every live `queue.md` entry must name a draft or active prompt.
+
+    A dangling ref outranked nothing and said nothing: on 2026-11-12 the one
+    live entry named a research prompt absorbed into its completion record ten
+    weeks earlier, and no check had ever opened the file. An entry whose work
+    has shipped moves to the `## Retired` footer with its `shipped-as:`."""
+    out: "list[Finding]" = []
+    for label, kind, ref in queue_entries(root):
+        if kind not in QUEUE_KINDS:
+            out.append(Finding(
+                f"queue.md: entry `{label}` has kind `{kind or '(none)'}` — "
+                f"one of {' | '.join(QUEUE_KINDS)}", ("queue.md",)))
+        elif kind == "prompt" and not ref:
+            out.append(Finding(
+                f"queue.md: entry `{label}` is kind: prompt with no ref:",
+                ("queue.md",)))
+        elif kind == "prompt" and not _queue_ref_resolves(root, ref):
+            out.append(Finding(
+                f"queue.md: entry `{label}` ref `{ref}` resolves to no draft/ or "
+                f"active/ prompt — retire it to the footer (shipped-as:) or fix "
+                f"the path", ("queue.md", ref)))
+    return out
+
+
 def check_findings(root: Path) -> "tuple[list[Finding], list[Finding]]":
     """(problems, warnings) for the whole tree, each attributed to its paths.
 
@@ -2853,6 +2933,8 @@ def check_findings(root: Path) -> "tuple[list[Finding], list[Finding]]":
     # closed record with no measured review cost is a warning (the number is
     # the human's to write, and its absence costs the budget, not the ledger).
     problems.extend(batch_member_findings(root))
+    # The human's ranked list: a dangling ref is drift (M2.3).
+    problems.extend(queue_findings(root))
     warnings.extend(batch_member_notes_findings(root))
     warnings.extend(batch_record_warning_findings(root))
     return problems, warnings

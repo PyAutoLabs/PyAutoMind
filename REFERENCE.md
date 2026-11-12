@@ -465,7 +465,12 @@ history unattended will not record it.
   An entry is a `prompt` (one named file) or `retired` (kept for the history of
   what was wanted and why it left). A batch is never composed here —
   `pyauto-brain batch plan` proposes one against a review-minute budget, and the
-  human approves or edits it in the slot.
+  human approves or edits it in the slot. Below the queue the planner sorts
+  `Priority:` before review-minutes. **Validated and binding** (M2.3,
+  `PyAutoBrain/AUTONOMY.md` "M2 rulings — 2026-11-12"): `lifecycle.py check`
+  fails on a `prompt` ref that resolves to no `draft/` or `active/` prompt, and
+  an empty or absent list stops an unattended shift's backlog dip — only the
+  brief's named tasks run.
 - **`batches/<YYYY-MM-DD>-<am|pm>.md`** — one record per dispatched batch,
   written at dispatch and appended at collection. Schema and the three fields
   that are easy to get wrong are in [`batches/AGENTS.md`](batches/AGENTS.md).
@@ -524,7 +529,12 @@ faculty at conception and all overridable by declaring them:
   a resource: where the work can run at all. `any` runs anywhere, a cloud
   session included; `local-dev` needs the laptop; `ral`, `gpu` and `wsl-data`
   each **imply `local-dev`** and refine it (RAL test runs, the laptop GPU, data
-  under `/mnt/c`). Write `any`, never `none`. A `ral` task never submits on its
+  under `/mnt/c`). Write `any`, never `none`. **An absent `Lane:` is not
+  `any` everywhere** (M2.3, `PyAutoBrain/AUTONOMY.md` "M2 rulings —
+  2026-11-12"): an unattended or cloud pick (`batch plan`, the shift watcher)
+  excludes the draft and says so; only an attended pick (`batch plan
+  --attended`) reads it as `any`. Intake therefore always writes one —
+  `Lane: any` when the text names no resource. A `ral` task never submits on its
   own: the Science orchestrator is the single RAL gateway, and a dev worker
   hands it a **RAL test packet** (what to run, at which commit, the pass/fail
   rule) — planned for phase 5 of the autonomous-orchestrators epic.

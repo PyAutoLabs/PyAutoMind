@@ -24,9 +24,15 @@ hand-pick members.
 
 The order in this file is what the planner does with it: a queued prompt
 outranks an unqueued one, and among queued prompts the file's order wins.
-Below the queue it sorts cheapest-first, because that part of the list is read
-when there is a slot to fill and the question is what fits in it. An entry
+Below the queue it sorts by `Priority:`, then cheapest review first. An entry
 written against `draft/…` keeps its place after the prompt moves to `active/`.
+
+**An empty list stops a shift** (M2.3, PyAutoBrain `AUTONOMY.md` "M2 rulings —
+2026-11-12"): with no live entry here an unattended shift takes its brief's
+named tasks and dips into no backlog. **Every ref is checked**:
+`scripts/lifecycle.py check` fails on a `kind: prompt` ref that resolves to no
+`draft/` or `active/` prompt, so an entry whose work has shipped moves to the
+footer below.
 
 An entry leaves the queue when its work reaches `complete/`, **not** when it is
 dispatched. A task in flight is still the thing the human wants.
@@ -55,15 +61,14 @@ which now live in the Cortex, and no code ever read them (`_batch.py` globs
 is a Cortex phase-header key now (`PyAutoCortex/REFERENCE.md`), and every Cortex
 phase is `local-dev` by construction.
 
-## 1. numba solve vs JAX sparse operator
-- kind: prompt
-- ref: draft/research/autoarray/numba_solve_vs_jax_sparse_operator.md
-- note: review intake 2026-08-31 — same linear algebra? GPU-JAX amenable or CPU-sparsity-bound?
-
 ## Retired
 
 Entries that have left the queue. Kept for the record of what was wanted and
 what replaced it; `batch plan` ignores them.
+
+### numba solve vs JAX sparse operator
+- shipped-as: PyAutoArray#513 → complete/2026/09/numba-vs-jax-sparse.md (2026-09-01)
+- note: review intake 2026-08-31 — same linear algebra? GPU-JAX amenable or CPU-sparsity-bound? The research verdict closed the issue on 2026-09-01 and the prompt was absorbed into its record; the live entry kept a dangling `draft/` ref until the M2.3 check found it and it was retired 2026-11-12
 
 ### Witness campaign
 - shipped-as: PyAutoMind#398 → complete/2026/09/witness-campaign.md (2026-09-17)
