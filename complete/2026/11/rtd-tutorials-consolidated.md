@@ -1,3 +1,20 @@
+# Consolidated RTD Tutorials
+
+- Completed: 2026-11-12
+- Issue: https://github.com/PyAutoLabs/PyAutoLens/issues/843 (closed)
+- PyAutoLens PR: https://github.com/PyAutoLabs/PyAutoLens/pull/844 — merged a261ffaba74eecc4c2c2c547679e897fec9436ce
+- PyAutoGalaxy PR: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/707 — merged 66e7165516c23ae1db9628d4e329ed7cf6757306
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/844
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/707
+
+Applied the approved concise course pages, chapter outcomes/prerequisites and GitHub / Colab links. All ten old chapter URLs remain as redirects with fallback links to the consolidated chapter anchors. Only Tutorials files and its navigation block changed; Installation, Overview, General and notebooks unchanged.
+
+Validation: focused Sphinx -W builds, preview wording parity, redirect/fallback/anchor checks, seven-file scope per repository and whitespace checks passed. At merge, both exact heads had two successful workflow runs and four successful jobs: Docs, Python 3.12, Python 3.13 and no-JAX. Merge state CLEAN for both; Heart freeze clear. CI receipts: scratch/rtd-tutorials-consolidated/{PyAutoLens,PyAutoGalaxy}-merge-checks.json.
+
+User explicitly requested checking CI and merging both if required checks pass. The previous development-only Heart RED override remains recorded; this merge does not imply a release or cleared organism readiness. No automation armed. Review artifacts retained in C:\Users\Jammy\Workspace\Science\scratch\rtd_tutorial_review_2026-11-12\.
+
+## Original prompt
+
 # Consolidate the RTD Tutorials pages
 
 Type: docs

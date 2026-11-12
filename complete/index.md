@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2241 records across 11 buckets.
+2242 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -265,6 +265,7 @@ markers; everything below GENERATED is rebuilt.
 - [results-library-p5b-cortex](2026/11/results-library-p5b-cortex.md) — phase 5b; ledger draft/feature/autofit/results_library_epic.md
 - [root-default-test-env-leak](2026/11/root-default-test-env-leak.md) — fixed in commit 748f8c0bb (this PR). The module's autouse `forget_the_resolver` fixture now deletes `PYAUTO_RO…
 - [rtd-organism-currency](2026/11/rtd-organism-currency.md) — already shipped, closed as a stale draft. PyAutoBrain 1aa2ed4 (#563) renamed `docs/organs/build` to `organs/ha…
+- [rtd-tutorials-consolidated](2026/11/rtd-tutorials-consolidated.md)
 - [scientist-minimal-starter](2026/11/scientist-minimal-starter.md) — already shipped — Mind#502 / PR #503, record `complete/2026/10/scientist-starter-acceptance.md`; slices PyAuto…
 - [search-seed-reproducibility](2026/11/search-seed-reproducibility.md) — already shipped — PyAutoFit#1686 (5bf057f2, 2026-10-14; search-ext A4b), record `complete/2026/10/search-ext-a…
 - [sersic-products-read-sed-output-dir](2026/11/sersic-products-read-sed-output-dir.md) — already shipped — euclid_strong_lens_modeling_pipeline 126167b00 (2026-10-05) "catalogue: read Sersic fits fro…
