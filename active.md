@@ -19,5 +19,10 @@
 - prompt: active/shift_watcher_state_machine_gaps.md
 - epic: autonomous-orchestrators (programme M1.1, phase 8)
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/604
+- heart-red-override:
+  authorization: live human 2026-11-12 "Override + merge on green" (programme session); https://github.com/PyAutoLabs/PyAutoBrain/issues/603
+  reasons: "PyAutoLens: on branch feature/stellar-dark-review (not main)"; "PyAutoLens: 2 uncommitted source change(s)"; "install verification FAILED (testpypi; checks F)"; "release validation FAILED (stage integrate)"
+  gates: batch suites 134 passed/1 skipped; witness 4/4; independent review CLEAN; smoke n/a
 - repos:
   - PyAutoBrain: feature/shift-watcher-state-gaps

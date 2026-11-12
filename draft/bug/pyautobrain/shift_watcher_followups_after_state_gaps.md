@@ -25,5 +25,7 @@ Source: the implementing worker and the independent review of PyAutoBrain#603 (p
 5. **`batch watch` counts a `liveness-unknown` event as "reaped 1".**
 6. **Some dispatch tests call the real `gh pr checks`** because they don't pass `health=`; inject a fake so the suite is offline.
 7. **Digest wording for a merge outside the close-out.** `_digest.py` prefixes every refused close-out with "awaiting /prm", so a PR a human already merged reads "awaiting /prm — close-out refused: merged outside the close-out (mergedBy=…)". Give `merged_outside` its own digest line.
+8. **A close-out still OPEN at `review-at` stays `running` for good**: neither `finish_shift` nor `late_sweep` reads close-outs, so a merge that lands after the window is never counted. Sweep open close-outs at finish and in the late sweep.
+9. **A crashed close-out (no file) on a PR a human then merged counts as an unattended merge** (Witness (4) of #603 requires counting no-file merges). Distinguish by `mergedBy` once the close-out runs under a distinct GitHub identity (relates to M2.2 server-side merge gate).
 
 <!-- filed 2026-11-12 by the programme lead session from the #603 worker report and independent review -->
