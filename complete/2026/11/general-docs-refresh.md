@@ -1,5 +1,43 @@
 # General documentation refresh
 
+Issue: https://github.com/PyAutoLabs/PyAutoLens/issues/847 (closed)
+Completed: 2026-11-12
+
+## Merged scope
+
+Refreshed General documentation for Lens and Galaxy: workspace navigation, practical configuration examples, model composition, likelihood guides, scientific citations, papers and credits. Kept AI assistance optional. Corrected the positions API and source-radius prior, regenerated the affected diagram, and retained old page anchors. Added 26 Lens and four Galaxy literature applications. The likelihood README now indexes 37 current notebooks.
+
+Installation, Overview, Tutorials and Community were not modified by this task. Galaxy's root toctree only gained its existing Papers page under General. No runtime library APIs changed.
+
+## Merge receipts
+
+- https://github.com/PyAutoLabs/PyAutoLens/pull/848 — f0ce4e3c92efa47b177cc5da679c158f7c1677a8
+- https://github.com/PyAutoLabs/PyAutoGalaxy/pull/708 — 7872fdf9d3ea7457b3b39079c63596863ad6033a
+- https://github.com/Jammy2211/autolens_likelihood_function/pull/1 — f670d8fe5825a4f3c62275784f2981159df5b08c
+
+Each feature head is confirmed as an ancestor of origin/main. Both library PRs passed Docs, Python 3.12, Python 3.13 and no-JAX checks. The likelihood repository has no CI; the live human explicitly authorized merging it. Freeze clear. No merge-blocking review findings; same-session review, not independent-model approval.
+
+## Validation
+
+39 Python example blocks passed, including real result/positions calculations on synthetic data. Full Sphinx builds succeeded without warning regression; focused General builds had zero warnings. 821 local links/fragments, legacy anchors, 83 workspace paths and 101 protected files passed. 198 external URLs returned 200; 19 publisher/Slack URLs returned 403 and remain unverified. No 404s. Full numerical suites passed in GitHub CI, not rerun locally for this docs-only task.
+
+## Authorization and release state
+
+Development shipping used the recorded live Heart RED override, "I authroize". The separate live merge command was: "Check Lens CI again. If it's all green, merge all three PRs, including the likelihood repo with no CI, and close out the task." Heart RED was not cleared and no release was performed.
+
+- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/848
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/708
+
+## Evidence and follow-up
+
+Human review bundle: /mnt/c/Users/Jammy/Workspace/Science/scratch/general_rtd_audit_2026-11-12/applied/.
+Merge receipts and validation evidence retained under /home/jammy/Code/PyAutoLabs/.task-logs/general-docs-refresh/.
+No remaining implementation work. Release tracking remains with the normal release workflow.
+
+## Original prompt
+
+# General documentation refresh
+
 Consequence: undeclared — human review; local application only, no PRs.
 
 ## Request

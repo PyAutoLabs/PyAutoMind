@@ -3,16 +3,10 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-11-12T19:23:33Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 7 in flight",
+  "updated": "2026-11-12T19:42:27Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
-    {
-      "severity": "yellow",
-      "text": "General documentation refresh \u2014 library-shipped, awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/848",
-      "prompt": "Use the start-dev skill. active/general_sections_refresh.md"
-    },
     {
       "severity": "yellow",
       "text": "Polish the homepage flow \u2014 awaiting-merge",
@@ -33,14 +27,20 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#708 \u2014 General documentation refresh",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/708",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#703 \u2014 Coordinated public framing: the three autos",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/703",
       "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#703 \u2014 Coordinated public framing: the three autos",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/703",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#709 \u2014 Merged scope",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/709",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#708 \u2014 Merged scope",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/708",
       "prompt": null
     },
     {
@@ -57,14 +57,20 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#848 \u2014 General documentation refresh",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/848",
+      "text": "pending release: PyAutoLens PyAutoLens#833 \u2014 Coordinated public framing: the three autos",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/833",
       "prompt": null
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoLens PyAutoLens#833 \u2014 Coordinated public framing: the three autos",
-      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/833",
+      "text": "pending release: PyAutoLens PyAutoLens#849 \u2014 Merged scope",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/849",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoLens PyAutoLens#848 \u2014 Merged scope",
+      "url": "https://github.com/PyAutoLabs/PyAutoLens/pull/848",
       "prompt": null
     },
     {
@@ -120,12 +126,6 @@
       "text": "pick: Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md",
       "prompt": "Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: `@autofit_inference` B5c-2a-rerun: re-pilot the 80 Emcee/Zeus rows lost to the harness bug\u2026",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/autofit_inference/search_ext_b5c2a_rerun.md",
-      "prompt": "Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2a_rerun.md"
     }
   ]
 }

@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2242 records across 11 buckets.
+2244 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -122,6 +122,7 @@ markers; everything below GENERATED is rebuilt.
 ## 2026/11
 
 - [alw-optdeps-escapes](2026/11/alw-optdeps-escapes.md)
+- [api-reference-polish](2026/11/api-reference-polish.md)
 - [arcticpy-lazy-import](2026/11/arcticpy-lazy-import.md)
 - [arcticpy-wheel-cache-libgsl](2026/11/arcticpy-wheel-cache-libgsl.md)
 - [arxiv-edge-refuses-stdlib-urllib](2026/11/arxiv-edge-refuses-stdlib-urllib.md) — superseded by a different fix — closed. Commit 4d8290555 (2026-09-20, "fix: fall back to curl when arXiv rejec…
@@ -172,6 +173,7 @@ markers; everything below GENERATED is rebuilt.
 - [eyes-multi-galaxy-gallery](2026/11/eyes-multi-galaxy-gallery.md) — superseded by human decision — autolens_visualization#5 (+ 465fc508 datasets), record `complete/2026/10/viz-al…
 - [eyes-survey-next-action-stale](2026/11/eyes-survey-next-action-stale.md) — RETIRED as stale, no change made. The prompt's premise was false: only the `autolens_workspace_test/gallery/` …
 - [gallery-runner-missing-tiers](2026/11/gallery-runner-missing-tiers.md) — RETIRED as obsolete, no change made. The gallery runner it targeted (`gallery/gallery_run.sh`, `gallery_build.…
+- [general-docs-refresh](2026/11/general-docs-refresh.md)
 - [generate-converter-preflight](2026/11/generate-converter-preflight.md)
 - [glance-shadow-window-reached](2026/11/glance-shadow-window-reached.md) — already shipped — closed as stale draft. Item 1 (code): commit 679b1319f (2026-10-16) made `shadow_count_line(…
 - [glance-tier-ruling](2026/11/glance-tier-ruling.md) — prerequisite for phase 4 unattended merges; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
