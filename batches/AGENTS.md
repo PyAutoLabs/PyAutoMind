@@ -279,13 +279,6 @@ the review surface; the HTML packet is written only when `packet: yes`.
 ### Proof packets
 <one proof packet per task, in the order above>
 
-### Workers
-- <slug> — spawned/finished — PyAutoArray#<n> merged (in-turn-autonomous)
-- <slug> — spawned/parked — awaiting input (mentioned)
-
-### Refusals
-- tick 3 — spawn refused: token budget (reserved 60 + spent 55 of 100)
-
 ### Counters
 - merges: 2
 - glance-auto-merges: 1
@@ -294,8 +287,15 @@ the review surface; the HTML packet is written only when `packet: yes`.
 - drafts-filed: 1
 - packets-sent: 0
 - workers-crashed: 0
-- tokens: <n> of <token-budget> (input/output/cache-creation; cache-read and subagents reported apart; `unmeasured` sessions named)
+- tokens: <measured> of <token-budget> (cache-read <n>; <k> session(s) unmeasured)
 - review-minutes-planned: 45
+
+### Workers
+- <label> (<worker key>): spawned/finished
+- <label> (<worker key>): spawned/parked — mentioned (parked) — blocked 40 min
+
+### Refusals
+- <task> — token-budget 100: 55 committed + 60 reserved per worker — 2× from <at>
 ```
 
 Brief work and backlog picks stay separate, and **every backlog pick carries a
@@ -313,16 +313,18 @@ worker's `<task>.done` (one URL per line, `merged <url>` for a PR it merged
 in-turn under its tier); each worker's `<task>.proof.md`, quoted verbatim — a
 task that wrote none gets a stub saying so, never an invented packet; one
 read-only `gh pr checks` per PR for its health; and its own counters.
-`glance-auto-merges`, `reverts`, `pushes`, `drafts-filed` and `packets-sent`
-stay 0 until phases 4–5 count them (human, 2026-11-04). The comment is posted
+`glance-auto-merges`, `reverts`, `drafts-filed` and `packets-sent` stay 0
+until phases 4–5 count them (human, 2026-11-04); `pushes` counts the
+@mentions below (PyAutoBrain#611). The comment is posted
 **once**: a local marker is created before the post, so a crash leaves no
 comment rather than two; a post that fails outright is retried on later ticks,
 at most 3 attempts in all, and never after a timeout (a timeout may have
 posted). Counters come from one exit record per worker and from GitHub's merged
 state for each PR in the window, read at review-at after a final reap
 (PyAutoBrain#610). A late arrival amends the record and the pilot line and posts
-**one** correction comment. A worker that parks gets **one** comment on the
-digest issue @-mentioning the human (`mention_login`), derived from durable
+**one** correction comment. A worker that parks, or parks on its issue with a
+question (awaiting input), gets **one** comment on the digest issue
+@-mentioning the human (`mention_login`), derived from durable
 state and retried like the digest; the watcher posts with
 `PYAUTO_SHIFT_GH_TOKEN` (a bot account, PyAutoMind `issues: write` only) so the
 mention notifies, and the digest warns when the poster is the mentioned account
