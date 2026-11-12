@@ -101,3 +101,15 @@
   - autogalaxy_workspace: feature/new-user-guide-visuals
 - scope: Lens and Galaxy RTD and start_here applied with images; no PRs authorized
 - tier: judge — merge mode: human /prm
+
+## start-here-plot-ai
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/647
+- issued: 2026-11-12
+- status: workspace-dev
+- session: OpenAI Codex desktop
+- prompt: active/start_here_plot_ai.md
+- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/start-here-plot-ai
+- repos:
+  - autolens_workspace: feature/start-here-plot-ai
+- tier: judge — merge mode: human /prm
+- next: validated edits; ship-time Heart RED requires development-only override before PR publication
