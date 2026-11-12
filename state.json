@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-11-12T20:48:59Z",
+  "headline": "RED \u2014 24 picks \u00b7 7 in flight",
+  "updated": "2026-11-12T20:49:37Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,12 +12,6 @@
       "text": "Workspace README guide images \u2014 workspace-dev (edits validated; shipping blocked by Heart RED)",
       "url": "https://github.com/PyAutoLabs/autolens_workspace/issues/658",
       "prompt": "Use the start-dev skill. active/workspace_readme_images.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "PyAutoGalaxy feature introductions and images \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/710",
-      "prompt": "Use the start-dev skill. active/autogalaxy_features_review.md"
     },
     {
       "severity": "yellow",
@@ -39,12 +33,6 @@
     },
     {
       "severity": "yellow",
-      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#710 \u2014 PyAutoGalaxy feature introductions and images",
-      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/710",
-      "prompt": null
-    },
-    {
-      "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#703 \u2014 Coordinated public framing: the three autos",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/703",
       "prompt": null
@@ -53,6 +41,12 @@
       "severity": "yellow",
       "text": "pending release: PyAutoGalaxy PyAutoGalaxy#709 \u2014 Merged scope",
       "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/709",
+      "prompt": null
+    },
+    {
+      "severity": "yellow",
+      "text": "pending release: PyAutoGalaxy PyAutoGalaxy#710 \u2014 Shipped",
+      "url": "https://github.com/PyAutoLabs/PyAutoGalaxy/pull/710",
       "prompt": null
     },
     {
@@ -126,6 +120,12 @@
       "text": "pick: SED chain waveband fit can spin forever in Nautilus exploration\u2026",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md",
       "prompt": "Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_forever.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Phase B: send HPC temp files to the shared disk (TMPDIR)\u2026",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md",
+      "prompt": "Use the start-dev skill. draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md"
     }
   ]
 }

@@ -1,3 +1,34 @@
+# PyAutoGalaxy feature introductions and image reuse
+
+Issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/276
+Completed: 2026-11-12
+
+## Shipped
+
+Applied all 21 approved feature introductions with scientific use cases first and teaching detail retained. Added six approved galaxy-only image variants and reused suitable shapelet and RTD dataset/galaxy-system figures. Updated root start_here.py and RTD overview, retained technical teaching figures and the recent new-user guide, regenerated 22 notebooks and navigation. Executable behavior unchanged.
+
+- PyAutoGalaxy PR: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/710
+- Merge: b8e61966d8b0b2d52f737d582cc1d5b68a22a95d
+- Workspace PR: https://github.com/PyAutoLabs/autogalaxy_workspace/pull/277
+- Merge: 6202aa199f10d926f84a309d66153ca3870ad326
+- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/710
+
+## Validation and authorization
+
+All 12 exact-head GitHub jobs passed: Galaxy Docs and Python 3.12/3.13/no-JAX tests; workspace navigator (four jobs), size guard and smoke (changes plus Python 3.12/3.13). Both PRs CLEAN/MERGEABLE; release freeze clear. Live human explicitly requested conditional merge. Library merged first; both MERGED states and branch-head ancestry in origin/main verified.
+
+Local checks: 22 script ASTs and exact notebook code cells preserved, notebook schemas valid, 97 notebook links resolve, all approved text/image parity, full RTD feature-page Sphinx with warnings as errors, navigator/search-memory/size/whitespace checks passed.
+
+Development-only Heart RED override for #276 recorded in all four required sinks. No release performed; Heart RED is not cleared by this merge.
+
+## Review and resume
+
+Review bundle: /mnt/c/Users/Jammy/Workspace/Science/scratch/autogalaxy_feature_review_20261112/applied/
+Evidence: organs/PyAutoMind/tmp/autogalaxy_feature_review/merge_ci.json
+All requested feature scope shipped. No remaining implementation work for #276.
+
+## Original prompt
+
 # PyAutoGalaxy feature introductions and images
 
 Issue: https://github.com/PyAutoLabs/autogalaxy_workspace/issues/276
