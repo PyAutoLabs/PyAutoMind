@@ -117,3 +117,8 @@
 - tier: judge — merge mode: human /prm
 - repos:
   - PyAutoCortex: feature/cortex-ledger-merge-pages
+- pr: https://github.com/PyAutoLabs/PyAutoCortex/pull/91
+- heart-red-override:
+  - authorization: live human, 2026-11-13, choosing "Override both (Recommended)" for (a) PyAutoCortex#90 ledger-merge Pages fix and (b) the STATE.md table render in PyAutoBrain: "Push and open both PRs, recorded in the four override sinks. CI must pass; merging stays with your /prm."
+  - heart-red: PyAutoNerves: 4 commit(s) behind origin; PyAutoFit: 2 commit(s) behind origin; PyAutoArray: 4 commit(s) behind origin; PyAutoGalaxy: on branch feature/galaxy-guide-rebalance (not main); PyAutoGalaxy: 1 uncommitted source change(s); PyAutoLens: 1 uncommitted source change(s); PyAutoLens: 45 commit(s) behind origin; PyAutoCTI: 4 commit(s) behind origin; install verification FAILED (testpypi; checks F); release validation FAILED (stage integrate); manifest drift: tenant firewall (organ code) — 40 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: workspace checkouts (manifest ↔ disk) — 3 mismatch(es) vs PyAutoMind/repos.yaml; PyAutoArray: open PR 9d old
+  - gates: PyAutoCortex tests 105 passed (tests/); workflow YAML parses; smoke n/a (CI workflow change only); review: in-session diff review (one step gains a second gh workflow run dispatch mirroring dashboard_refresh.yml). None of the RED reasons are in PyAutoCortex.
