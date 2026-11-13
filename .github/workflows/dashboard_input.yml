@@ -71,22 +71,6 @@ jobs:
         with:
           ref: main
 
-      - name: Close older inputs whose runs were dropped
-        run: |
-          set -euo pipefail
-          gh issue list --repo "$GITHUB_REPOSITORY" --label dashboard-input \
-            --state open --limit 50 --json number --jq '.[].number' |
-          while read -r n; do
-            [[ "$n" =~ ^[0-9]+$ ]] || continue
-            if [ "$n" -lt "$ISSUE_NUMBER" ]; then
-              gh issue comment "$n" --repo "$GITHUB_REPOSITORY" --body \
-                "dashboard-input: superseded — not applied (a newer input's run replaced this one's); tap again"
-              gh issue close "$n" --repo "$GITHUB_REPOSITORY" --reason "not planned"
-              gh issue lock "$n" --repo "$GITHUB_REPOSITORY" --reason resolved \
-                || echo "::warning::could not lock #$n"
-            fi
-          done
-
       - name: Validate, apply, commit
         id: apply
         env:
@@ -133,8 +117,32 @@ jobs:
           echo "dashboard-input: refused — main moved under five attempts in a row; tap again" > "$result"
           echo "outcome=refused" >> "$GITHUB_OUTPUT"
 
+      # Only the dashboard account's own input issues are ever touched: the
+      # label alone proves nothing (anyone with Triage can add it anywhere).
+      - name: Close older inputs whose runs were dropped
+        if: steps.apply.outputs.respond == 'true'
+        env:
+          DASHBOARD_INPUT_LOGIN: ${{ vars.DASHBOARD_INPUT_LOGIN }}
+        run: |
+          set -euo pipefail
+          gh issue list --repo "$GITHUB_REPOSITORY" --label dashboard-input \
+            --author "$DASHBOARD_INPUT_LOGIN" \
+            --state open --limit 50 --json number --jq '.[].number' |
+          while read -r n; do
+            [[ "$n" =~ ^[0-9]+$ ]] || continue
+            if [ "$n" -lt "$ISSUE_NUMBER" ]; then
+              gh issue comment "$n" --repo "$GITHUB_REPOSITORY" --body \
+                "dashboard-input: superseded — not applied (a newer input's run replaced this one's); tap again"
+              gh issue close "$n" --repo "$GITHUB_REPOSITORY" --reason "not planned"
+              gh issue lock "$n" --repo "$GITHUB_REPOSITORY" --reason resolved \
+                || echo "::warning::could not lock #$n"
+            fi
+          done
+
+      # Written only when the script decided this is the dashboard account's
+      # own input (respond=true); on any other labelled issue: nothing.
       - name: Answer, close and lock the issue
-        if: always()
+        if: always() && steps.apply.outputs.respond == 'true'
         env:
           LOCK_REASON: ${{ steps.apply.outputs.lock }}
         run: |

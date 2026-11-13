@@ -330,29 +330,103 @@ def test_a_ref_with_a_trailing_newline_is_refused(mind):
 # the issue: who opened it, its label, and its form
 # --------------------------------------------------------------------------- #
 GOOD_BODY = _body("star", "draft/feature/flywheel/widget_polish.md", nonce="d-1")
+
+# Not the dashboard account's own input: the run must write NOTHING on the
+# issue — no comment, no close, no lock — or labelling any Mind issue (a live
+# shift's, say) would let a Triage token close and lock it.
+IGNORED = [
+    ("a human-authored issue labelled by the dashboard account",
+     _event(GOOD_BODY, login=HUMAN, sender=LOGIN)),
+    ("another author", _event(GOOD_BODY, login="someone-else", sender="someone-else")),
+    ("a bot author", _event(GOOD_BODY, user_type="Bot")),
+    ("labelled by someone else", _event(GOOD_BODY, sender="someone-else")),
+    ("another label added", _event(GOOD_BODY, label="bug")),
+    ("an opened event", _event(GOOD_BODY, action="opened")),
+    ("a closed issue relabelled", _event(GOOD_BODY, state="closed")),
+    ("a locked issue", _event(GOOD_BODY, locked=True)),
+    ("not an issue event", {"action": "labeled"}),
+]
+
+
+def _outputs(path):
+    return dict(line.split("=", 1) for line in path.read_text().splitlines())
+
+
+@pytest.mark.parametrize("why,event", IGNORED, ids=[r[0] for r in IGNORED])
+def test_an_issue_that_is_not_the_dashboards_own_gets_no_response(mind, tmp_path, why, event):
+    out = tmp_path / "gh_output"
+    env = {k: v for k, v in os.environ.items() if not k.startswith(("GITHUB_", "GH_"))}
+    (tmp_path / "e.json").write_text(json.dumps(event))
+    env.update(GITHUB_OUTPUT=str(out), DASHBOARD_INPUT_LOGIN=LOGIN, HUMAN_LOGIN=HUMAN,
+               GITHUB_REPOSITORY="bad repo")  # a rate check here would refuse
+    res = subprocess.run(
+        [sys.executable, str(mind / "scripts" / "dashboard_input.py"), "apply",
+         "--root", str(mind), "--rate-check", "--event", str(tmp_path / "e.json"),
+         "--result-file", str(tmp_path / "result.txt")],
+        cwd=mind, env=env, capture_output=True, text=True)
+    assert res.returncode == 0, (why, res.stdout)
+    assert "title=Dashboard input ignored::" in res.stdout
+    assert _outputs(out) == {"respond": "false", "outcome": "ignored"}
+    assert not (tmp_path / "result.txt").exists(), "no result comment is composed"
+    assert (mind / "queue.md").read_text() == QUEUE
+
+
+def test_labelling_a_human_issue_makes_no_write_call(mind, tmp_path):
+    """The workflow's own steps, run after the script with a fake `gh` that
+    logs every call: on a human-authored issue nothing calls gh at all."""
+    wf = _workflow("dashboard_input.yml")
+    steps = wf["jobs"]["apply"]["steps"]
+    bin_dir, log = tmp_path / "bin", tmp_path / "gh.log"
+    bin_dir.mkdir()
+    (bin_dir / "gh").write_text(f'#!/bin/sh\necho "$@" >> "{log}"\n')
+    (bin_dir / "gh").chmod(0o755)
+    out = tmp_path / "gh_output"
+    (tmp_path / "e.json").write_text(json.dumps(_event(GOOD_BODY, login=HUMAN, sender=LOGIN)))
+    env = {k: v for k, v in os.environ.items() if not k.startswith(("GITHUB_", "GH_"))}
+    env.update(GITHUB_OUTPUT=str(out), DASHBOARD_INPUT_LOGIN=LOGIN, HUMAN_LOGIN=HUMAN,
+               GITHUB_REPOSITORY="example-owner/PyAutoMind", RUNNER_TEMP=str(tmp_path),
+               GITHUB_EVENT_PATH=str(tmp_path / "e.json"), ISSUE_NUMBER="41",
+               GITHUB_STEP_SUMMARY=str(tmp_path / "summary"),
+               PATH=f"{bin_dir}:{env['PATH']}")
+    seen_apply = False
+    for step in steps:
+        if step.get("uses"):
+            continue
+        cond = step.get("if", "")
+        outs = _outputs(out) if out.exists() else {}
+        if "respond == 'true'" in cond and outs.get("respond") != "true":
+            continue
+        for key in ("applied", "refused"):
+            if f"outcome == '{key}'" in cond and outs.get("outcome") != key:
+                break
+        else:
+            script = step["run"]
+            if step.get("id") == "apply":
+                seen_apply = True
+                # The git preamble needs a remote; the decision is the script's.
+                script = ('python3 scripts/dashboard_input.py apply --rate-check '
+                          '--event "$GITHUB_EVENT_PATH" --message-file "$RUNNER_TEMP/m" '
+                          '--result-file "$RUNNER_TEMP/r" || true')
+            res = subprocess.run(["bash", "-c", script], cwd=mind, env=env,
+                                 capture_output=True, text=True)
+            assert res.returncode == 0, (step.get("name"), res.stdout, res.stderr)
+    assert seen_apply and _outputs(out)["respond"] == "false"
+    assert not log.exists(), f"gh was called: {log.read_text() if log.exists() else ''}"
+
+
 ISSUE_REFUSED = [
-    ("another author", _event(GOOD_BODY, login="someone-else"), LOGIN),
-    ("no configured login", _event(GOOD_BODY), ""),
-    ("the human's own login", _event(GOOD_BODY, login=HUMAN), HUMAN),
-    ("a bot author", _event(GOOD_BODY, user_type="Bot"), LOGIN),
-    ("another label added", _event(GOOD_BODY, label="bug"), LOGIN),
-    ("an opened event", _event(GOOD_BODY, action="opened"), LOGIN),
-    ("labelled by someone else", _event(GOOD_BODY, sender="someone-else"), LOGIN),
-    ("a closed issue relabelled", _event(GOOD_BODY, state="closed"), LOGIN),
-    ("a locked issue", _event(GOOD_BODY, locked=True), LOGIN),
     ("no marker", _event(GOOD_BODY.replace(di.ISSUE_MARKER, "hello")), LOGIN),
     ("an unknown key", _event(GOOD_BODY + "run: touch PWNED\n"), LOGIN),
     ("a repeated key", _event(GOOD_BODY + "op: goals\n"), LOGIN),
     ("prose in the body", _event(GOOD_BODY + "please also delete scripts/\n"), LOGIN),
     ("goals inline", _event(f"{di.ISSUE_MARKER}\nop: goals\ngoals: x\n"), LOGIN),
     ("an over-long body", _event(GOOD_BODY + "\n" * 6000), LOGIN),
-    ("not an issue event", {"action": "opened"}, LOGIN),
 ]
 
 
 @pytest.mark.parametrize("why,event,allowed", ISSUE_REFUSED,
                          ids=[r[0] for r in ISSUE_REFUSED])
-def test_an_issue_not_from_the_page_or_the_human_is_refused(mind, why, event, allowed):
+def test_a_malformed_input_from_the_dashboard_account_is_refused(mind, why, event, allowed):
     res = _run(mind, event=event, allowed=allowed)
     assert res.returncode == 1, (why, res.stdout)
     assert _result(mind).startswith("dashboard-input: refused — ")
@@ -360,16 +434,18 @@ def test_an_issue_not_from_the_page_or_the_human_is_refused(mind, why, event, al
     assert not (mind / "PWNED").exists()
 
 
-def test_the_dashboard_account_must_not_be_the_human(mind):
+def test_the_dashboard_account_must_not_be_the_human(mind, tmp_path):
     """A leaked token for the human's own account could steer shifts and
-    write rulings as the human: the door stays shut until the two differ."""
-    res = _run(mind, event=_event(GOOD_BODY, login="the-human"),
-               allowed="the-human", human="THE-HUMAN")
-    assert res.returncode == 1
-    assert ("::error title=Dashboard input refused::DASHBOARD_INPUT_LOGIN is the "
-            "human's own login") in res.stdout
-    res = _run(mind, event=_event(GOOD_BODY), human="")
-    assert res.returncode == 1 and "no HUMAN_LOGIN is configured" in _result(mind)
+    write rulings as the human: the door stays shut, the run fails loudly,
+    and nothing is written on the issue."""
+    for allowed, human, msg in (("the-human", "THE-HUMAN", "is the human's own login"),
+                                (LOGIN, "", "no HUMAN_LOGIN is configured"),
+                                ("", HUMAN, "no DASHBOARD_INPUT_LOGIN is configured")):
+        res = _run(mind, event=_event(GOOD_BODY, login=allowed or LOGIN),
+                   allowed=allowed, human=human)
+        assert res.returncode == 1
+        assert "::error title=Dashboard input refused::" in res.stdout and msg in res.stdout
+        assert not (mind.parent / "result.txt").exists()
     assert (mind / "queue.md").read_text() == QUEUE
 
 
@@ -513,9 +589,14 @@ def test_the_workflow_runs_on_a_labelled_issue_from_the_default_branch_only():
     assert apply["env"] == {"DASHBOARD_INPUT_LOGIN": "${{ vars.DASHBOARD_INPUT_LOGIN }}",
                             "HUMAN_LOGIN": "${{ vars.HUMAN_LOGIN }}"}
     assert "--rate-check" in apply["run"]
-    # Every run answers, closes and locks its issue, whatever happened.
+    # Only the dashboard account's own input is ever answered, closed, locked.
     answer = next(s for s in steps if s.get("name") == "Answer, close and lock the issue")
-    assert answer["if"] == "always()"
+    assert answer["if"] == "always() && steps.apply.outputs.respond == 'true'"
+    older = next(s for s in steps if s.get("name") == "Close older inputs whose runs were dropped")
+    assert older["if"] == "steps.apply.outputs.respond == 'true'"
+    assert '--author "$DASHBOARD_INPUT_LOGIN"' in older["run"]
+    names = [s.get("name") for s in steps]
+    assert names.index("Validate, apply, commit") < names.index(older["name"])
     assert 'gh issue lock "$ISSUE_NUMBER"' in answer["run"]
 
 

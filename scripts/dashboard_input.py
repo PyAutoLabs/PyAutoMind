@@ -229,6 +229,34 @@ def rate_check(repo: str, token: str, now: "_dt.datetime | None" = None,
     return count
 
 
+def should_respond(event: dict, allowed_login: str, human_login: str) -> "tuple[bool, str]":
+    """(respond?, why not). Whether this run may write ANYTHING on the issue.
+
+    The label can be added to any open Mind issue — a task issue, a live
+    shift's issue — by anyone with Triage, a leaked dashboard token included.
+    The workflow comments on, closes and locks only an issue the machine
+    account itself opened AND labelled; on any other it writes nothing, so
+    the label cannot be used to close or lock someone else's thread."""
+    if not allowed_login or not human_login or \
+            allowed_login.strip().lower() == human_login.strip().lower():
+        return False, "the dashboard logins are not configured (or are the human's)"
+    issue = event.get("issue")
+    if not isinstance(issue, dict) or not isinstance(issue.get("number"), int):
+        return False, "not an issue event"
+    user, sender = issue.get("user") or {}, event.get("sender") or {}
+    if user.get("type") != "User" or \
+            str(user.get("login", "")).lower() != allowed_login.strip().lower():
+        return False, "the issue was not opened by the dashboard account"
+    if str(sender.get("login", "")).lower() != allowed_login.strip().lower():
+        return False, "the label was not added by the dashboard account"
+    if event.get("action") != "labeled" or \
+            (event.get("label") or {}).get("name") != LABEL:
+        return False, f"not the {LABEL} label being added"
+    if issue.get("state") != "open" or issue.get("locked"):
+        return False, "the issue is already answered (closed or locked)"
+    return True, ""
+
+
 def parse_issue(event: dict, allowed_login: str, human_login: str = "") -> dict:
     """The input an `issues: labeled` payload carries, or Refused.
 
@@ -626,8 +654,32 @@ def main(argv=None) -> int:
         print("apply: --event or GITHUB_EVENT_PATH is required", file=sys.stderr)
         return 2
     lock = "resolved"
+    allowed = os.environ.get("DASHBOARD_INPUT_LOGIN", "")
+    human = os.environ.get("HUMAN_LOGIN", "")
     try:
         event = json.loads(event_path.read_text(encoding="utf-8"))
+    except (ValueError, OSError):
+        event = None
+    respond, why = should_respond(event, allowed, human) if isinstance(event, dict) \
+        else (False, "the event could not be read")
+    if not respond:
+        # Not the dashboard's own input: touch nothing on the issue. A
+        # misconfiguration still fails the run, loudly, without writing.
+        _output("respond", "false")
+        if "logins are not configured" in why:
+            try:
+                check_logins(allowed, human)
+            except Refused as e:
+                why = str(e)
+            print(f"::error title=Dashboard input refused::{why}; nothing is written")
+            _output("outcome", "refused")
+            return 1
+        level = "notice" if "not opened by" in why or "not an issue" in why else "warning"
+        print(f"::{level} title=Dashboard input ignored::{why}; nothing is written")
+        _output("outcome", "ignored")
+        return 0
+    _output("respond", "true")
+    try:
         req = parse_issue(event, os.environ.get("DASHBOARD_INPUT_LOGIN", ""),
                           os.environ.get("HUMAN_LOGIN", ""))
         if a.rate_check:

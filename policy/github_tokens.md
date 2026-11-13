@@ -179,7 +179,10 @@ PyAutoMind issues:
   is what stops it.
 
 It cannot push code, change workflows, dispatch or re-run workflows, read
-secrets, steer a shift, or touch any other repository.
+secrets, steer a shift, or touch any other repository. Adding the
+`dashboard-input` label to any issue the machine account did not itself
+open and label (a task issue, a live shift's issue) makes the workflow write
+nothing on it — no comment, close or lock — only a `::notice`/`::warning`.
 
 **Follow-up, documented not fixed — renumber laundering.** Provenance follows
 `git blame` of each goal's heading line. A hand commit that only renumbers
