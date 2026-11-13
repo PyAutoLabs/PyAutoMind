@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-11-13T10:34:57Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 7 in flight",
+  "updated": "2026-11-13T10:52:57Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -123,9 +123,9 @@
     },
     {
       "severity": "info",
-      "text": "pick: Remove the dead EDEN packaging tooling from PyAutoFit",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/refactor/pyautofit/remove_eden_packaging_tooling.md",
-      "prompt": "Use the start-dev skill. draft/refactor/pyautofit/remove_eden_packaging_tooling.md"
+      "text": "pick: Cockpit footer: Broca belongs between Cortex and Memory",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautobrain/cockpit_footer_broca_belongs_between_cortex_and.md",
+      "prompt": "Use the start-dev skill. draft/bug/pyautobrain/cockpit_footer_broca_belongs_between_cortex_and.md"
     }
   ]
 }

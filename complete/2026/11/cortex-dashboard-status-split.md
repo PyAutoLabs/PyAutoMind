@@ -1,3 +1,21 @@
+Shipped in PyAutoBrain#617 (closes PyAutoBrain#616), merged 2026-11-13 by the human's `/prm`.
+
+The Cortex board (dashboard.md / dashboard.html) no longer hides non-active projects:
+
+- Counts: Running · Open · Active · Dormant · Retired (`counts` gains `dormant`/`retired`; `counts["active"]` and the `state.json` headline unchanged).
+- Summary: Active and Dormant tables (Project · Running · Open · Last update), Retired table (Project · Note clipped at 120 chars · Last update); Planned only when one exists.
+- Projects: Active and Dormant sections with full cards (resume chip active-only); Retired as visible compact entries instead of one folded line.
+- Runs in each card newest first (full date, then numeric job id); runs-table Date shows `MM-DD` (HTML keeps the full date as a tooltip).
+- Science mirror: `dashboard --apply` and `checkin --apply` also write the markdown board to `<science_root>/STATE.md` when that root exists (the laptop); skipped silently elsewhere; a write failure is one stderr note; `--check` ignores it.
+
+Tests: tests/test_cortex_conductor.py 90 passed (10 updated, 8 new).
+
+Shipped under the Heart RED development override (recorded on the issue, the PR, active.md and autonomy_log.md 2026-11-13); Heart remains RED for release purposes.
+
+Follow-up (Science side, not this repo): re-render the Cortex board with the new renderer (first write of Science/STATE.md) and add a pointer line in Science/AGENTS.md.
+
+## Original prompt
+
 # Cortex board: split Active / Dormant / Retired, newest-first runs, Science STATE.md mirror
 
 Targets: @PyAutoBrain @PyAutoCortex
