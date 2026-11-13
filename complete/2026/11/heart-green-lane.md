@@ -1,3 +1,21 @@
+Pre-M3 build 3 of 3 (epic `autonomous-orchestrators`): a shift-owned keep-Heart-green lane. Shipped as PyAutoMind#568 (143267071) and PyAutoBrain#626 (07d973374), merged 2026-11-13. Issue PyAutoBrain#625. The human asked for it on 2026-11-13 ("constantly trying to ensure it's green, without being overly eager doing releases") and gave the merge command (judge tier).
+
+**Built:** `_green.py`, run from `batch brief --new`.
+- Classifies Heart reasons into fixable-dev, local-checkout, release-scope and human-only.
+- Files at most 3 deduplicated drafts per brief. Their tier is sized, never self-approved for unattended work, and a key clears when Heart no longer lists it.
+- Mode `file` by default; `pick` is opt-in.
+- Writes only into a linked worktree; a preview writes nothing.
+- Never releases, dispatches or quarantines.
+
+**Witness:**
+- 67 lane tests. Brain suite: 1932 passed.
+- The reviewer's replay of 97 real reason strings: only real CI or test reds are classed fixable.
+- CI green. Heart dev-ship GREEN.
+
+**Review:** FINDINGS, then fixed, then CLEAN. The findings were writes into the shared checkout, another session's worktree classed as fixable, the lane being too eager, keys never refiled, and a guard bypass.
+
+## Original prompt
+
 # A shift-owned "keep Heart green" lane: read the reasons, file or dispatch the fixable ones, never release
 
 Type: feature
