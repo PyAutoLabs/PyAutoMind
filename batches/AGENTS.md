@@ -225,6 +225,18 @@ goal is emitted that way, marked "provenance unknown".
 `brief --check` warns when goal 1 of `goals.md` is missing from a brief,
 unless goal 1 came from the dashboard.
 
+**The keep-Heart-green lane** (PyAutoBrain#625). `brief --new` first reads
+Heart's release verdict and sorts every reason into `fixable-dev`,
+`local-checkout`, `release-scope` or `human-only`. It files at most 3 new bug
+drafts for `fixable-dev` reasons (deduplicated against `draft/`, `active/`,
+`queue.md` and its own state, by a `<!-- heart-key: … -->` mark), names the
+ones whose `Lane:` the brief allows under `tasks:` with a last
+`heart-green` goal, and appends a `## Heart` section after the brief's
+bullets: the reasons by class, what it filed or picked, and what needs the
+human. The drafts it files are written uncommitted into this checkout; commit
+them with the record. It never releases, dispatches a workflow, forces or
+quarantines. Details: `PyAutoBrain/agents/conductors/batch/AGENTS.md`.
+
 `backlog:` decides what happens once the named tasks are done or blocked:
 `none` — nothing more; `fill-idle` — the planner's own ranking, under every
 batch constraint; `scoped` — only prompts matching the `scoped:` epics, tags or
