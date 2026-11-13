@@ -106,3 +106,14 @@
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
 - repos:
   - PyAutoHands: feature/release-rehearsed-shas
+
+## cortex-ledger-merge-pages
+- issue: https://github.com/PyAutoLabs/PyAutoCortex/issues/90
+- issued: 2026-11-13
+- session: claude-code desktop (WSL), ~/Science session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/cortex-ledger-merge-pages
+- prompt: active/cortex_ledger_merge_pages.md
+- tier: judge — merge mode: human /prm
+- repos:
+  - PyAutoCortex: feature/cortex-ledger-merge-pages
