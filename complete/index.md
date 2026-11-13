@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2251 records across 11 buckets.
+2252 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -153,6 +153,7 @@ markers; everything below GENERATED is rebuilt.
 - [cortex-dashboard-status-split](2026/11/cortex-dashboard-status-split.md)
 - [cortex-ledger-merge-pages](2026/11/cortex-ledger-merge-pages.md)
 - [cortex-projects-dashboard-parent](2026/11/cortex-projects-dashboard-parent.md) — parent closed. Phase 1, the presentation change, shipped in PyAutoBrain#526 (merge 92de427, 2026-10-15; record…
+- [cortex-state-md-tables](2026/11/cortex-state-md-tables.md)
 - [critical-curves-jax-viz-feasibility](2026/11/critical-curves-jax-viz-feasibility.md)
 - [cti-api-rst-rewrite](2026/11/cti-api-rst-rewrite.md)
 - [cti-database-examples-drift](2026/11/cti-database-examples-drift.md)
