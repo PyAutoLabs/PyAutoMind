@@ -9,8 +9,9 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: issued
 Filed: 2026-11-13
+Issued: 2026-11-13
 Epic: autonomous-orchestrators
 Consequence: judge
 Witness: (a) `pyauto-brain batch green --json` over a saved RED/YELLOW feed fixture classes every reason as `dev-fixable`, `release-scope` or `human-only` and prints one proposed bug draft per `dev-fixable` reason; run twice, it files nothing new the second time (dedupe key = reason class + repo + script/workflow); (b) a test proves the lane's code path cannot call `gh workflow run` on release/nightly workflows, `build`, `pre_build`, `--accept-red` or any `force` (grep + an import/exec allow-list test); (c) in one live M3 shift, the digest has a "Heart" section listing each reason, its class and the task filed or dispatched for it

@@ -70,3 +70,17 @@
   - Jammy2211.github.io: feature/homepage-flow-polish
 - prompt: active/homepage_flow_polish.md
 - tier: judge — merge mode: human /prm
+
+## heart-green-lane
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/625
+- issued: 2026-11-13
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/heart-green-lane
+- prompt: active/shift_keeps_heart_green_lane.md
+- epic: autonomous-orchestrators (pre-M3 build 3: keep-Heart-green lane)
+- tier: judge — merge mode: human /prm
+- repos:
+  - PyAutoBrain: feature/heart-green-lane
+  - PyAutoMind: feature/heart-green-lane
+  - PyAutoHeart: feature/heart-green-lane
