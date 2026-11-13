@@ -106,3 +106,15 @@
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
 - repos:
   - PyAutoHands: feature/release-rehearsed-shas
+
+## cortex-dashboard-status-split
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/616
+- issued: 2026-11-13
+- session: claude-code desktop (WSL), ~/Science session
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/cortex-dashboard-status-split
+- prompt: active/dashboard_status_split.md
+- tier: judge — merge mode: human /prm
+- note: shares PyAutoBrain with lane-fail-closed (disjoint files: agents/conductors/cortex/ only); parallel approved by the human 2026-11-13
+- repos:
+  - PyAutoBrain: feature/cortex-dashboard-status-split
