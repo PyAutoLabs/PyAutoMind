@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2255 records across 11 buckets.
+2256 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -127,6 +127,7 @@ markers; everything below GENERATED is rebuilt.
 - [arcticpy-wheel-cache-libgsl](2026/11/arcticpy-wheel-cache-libgsl.md)
 - [arxiv-edge-refuses-stdlib-urllib](2026/11/arxiv-edge-refuses-stdlib-urllib.md) — superseded by a different fix — closed. Commit 4d8290555 (2026-09-20, "fix: fall back to curl when arXiv rejec…
 - [arxiv-refs-api-errors](2026/11/arxiv-refs-api-errors.md) — already shipped — closed as stale draft. PyAutoMemory#143 (merged 2026-11-03, merge 1f22de7; commits 0c3e2dc, …
+- [assistant-activate-cpu-tmpdir](2026/11/assistant-activate-cpu-tmpdir.md)
 - [autocti-render-yml-blocked-dup](2026/11/autocti-render-yml-blocked-dup.md) — superseded/shipped — autocti_visualization#8 (2026-10-23), record `complete/2026/10/autocti-viz-render-from-ma…
 - [autonomous-orchestrators-p1](2026/11/autonomous-orchestrators-p1.md) — phase 1 of 7; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [autonomous-orchestrators-p2](2026/11/autonomous-orchestrators-p2.md) — phase 2 of 7; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
