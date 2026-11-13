@@ -1157,7 +1157,7 @@ Use the start-dev skill. draft/bug/autoarray/mapping_overlay_follow_ups_forward_
 
 ## In flight
 
-<details><summary>📋 <a href="active/assistant_activate_cpu_tmpdir.md">Assistant activate.sh: pin JAX to CPU on GPU-less jobs; autolens keeps TMPDIR…</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/185">issue #185</a> — issued 2026-11-13 — workspace-dev</summary>
+<details><summary>📋 <a href="active/assistant_activate_cpu_tmpdir.md">Assistant activate.sh: pin JAX to CPU on GPU-less jobs; autolens keeps TMPDIR…</a> — <a href="https://github.com/PyAutoLabs/autolens_assistant/issues/185">issue #185</a> — issued 2026-11-13 — workspace-dev — PRs: <a href="https://github.com/PyAutoLabs/autolens_assistant/pull/186">autolens_assistant#186</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_assistant/pull/48">autogalaxy_assistant#48</a></summary>
 
 ```
 Use the start-dev skill. active/assistant_activate_cpu_tmpdir.md
