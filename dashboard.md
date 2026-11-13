@@ -12,7 +12,7 @@
 | [Epics](#epics) | 23 |
 | [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 11 |
-| [Backlog](#backlog) | 274 |
+| [Backlog](#backlog) | 276 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
 
@@ -121,7 +121,7 @@ Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 78
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 80
 
 <details><summary>📋 <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a> — autolens_workspace · small · safe · normal</summary>
 
@@ -151,6 +151,14 @@ Use the start-dev skill. draft/research/pyautohands/git_docs.md
 
 ```
 Use the start-dev skill. draft/test/autolens_workspace_test/jax_zero_contour.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/howtolens/howtolens_tutorial_4_point_sources_make_image.md">HowToLens tutorial 4 (point sources): make image-plane vs source-plane clear</a> — howtolens · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/docs/howtolens/howtolens_tutorial_4_point_sources_make_image.md
 ```
 
 </details>
@@ -207,14 +215,6 @@ Use the start-dev skill. draft/test/autolens_workspace_test/mge_group_dataset_wi
 
 ```
 Use the start-dev skill. draft/docs/workspaces/assistants_regime_extension.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/refactor/autoarray/sparse_operator_int32_indexes.md">Sparse CPU operator: shrink the 172 MB per-dataset payload…</a> — autoarray · supervised</summary>
-
-```
-Use the start-dev skill. draft/refactor/autoarray/sparse_operator_int32_indexes.md
 ```
 
 </details>
@@ -1368,7 +1368,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 223 · ral 34 · local-dev 8 · wsl-data 7
+Lanes: any 223 · ral 34 · wsl-data 9 · local-dev 8
 
 <a id="human-review"></a>
 <details>
@@ -1419,7 +1419,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 35</summary>
+<summary><b>feature</b> — 36</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
 
@@ -1497,6 +1497,14 @@ Use the start-dev skill. draft/feature/pyautohands/bump_colab_urls_autolens_assi
 
 ```
 Use the start-dev skill. draft/feature/autoarray/multiwavelength_inversion.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autolens/pointsolver_figure_source_plane_view_of_the.md">PointSolver figure: source-plane view of the triangles</a> — autolens · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/feature/autolens/pointsolver_figure_source_plane_view_of_the.md
 ```
 
 </details>
@@ -2338,7 +2346,7 @@ Use the start-dev skill. draft/research/autoarray/delaunay_interpolator_pure_cal
 </details>
 
 <details>
-<summary><b>docs</b> — 26</summary>
+<summary><b>docs</b> — 27</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -2400,6 +2408,14 @@ Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richard
 
 ```
 Use the start-dev skill. draft/docs/autolens/plot_rst_missing_exports.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/howtolens/howtolens_tutorial_4_point_sources_make_image.md">HowToLens tutorial 4 (point sources): make image-plane vs source-plane clear</a> — howtolens · medium · supervised · normal</summary>
+
+```
+Use the start-dev skill. draft/docs/howtolens/howtolens_tutorial_4_point_sources_make_image.md
 ```
 
 </details>

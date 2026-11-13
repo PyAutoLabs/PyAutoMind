@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "yellow",
   "headline": "YELLOW \u2014 24 picks \u00b7 6 in flight",
-  "updated": "2026-11-13T14:46:45Z",
+  "updated": "2026-11-13T14:51:29Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -123,9 +123,9 @@
     },
     {
       "severity": "info",
-      "text": "pick: Cockpit footer: Broca belongs between Cortex and Memory",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/bug/pyautobrain/cockpit_footer_broca_belongs_between_cortex_and.md",
-      "prompt": "Use the start-dev skill. draft/bug/pyautobrain/cockpit_footer_broca_belongs_between_cortex_and.md"
+      "text": "pick: HowToLens tutorial 4 (point sources): make image-plane vs source-plane clear",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/howtolens/howtolens_tutorial_4_point_sources_make_image.md",
+      "prompt": "Use the start-dev skill. draft/docs/howtolens/howtolens_tutorial_4_point_sources_make_image.md"
     }
   ]
 }
