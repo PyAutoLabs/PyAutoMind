@@ -129,6 +129,12 @@ comment the page reads back. The browser holds:
   `pyautomind.dashboard.token.v1`), sent only to `api.github.com`. "Forget
   token" on the page deletes it; a 401 deletes it too.
 
+**Setup, once:** create the label `dashboard-input` in PyAutoMind; set the
+repository variable `DASHBOARD_INPUT_LOGIN` to the human's GitHub login
+(unset, every input is refused); then on each device open 🔑 on the
+dashboard, follow "create one" (owner PyAutoLabs, only PyAutoMind,
+**Issues: Read and write**, 90 days), paste the token and Save.
+
 **Storage is shared.** Every PyAutoLabs Pages site is served from the one
 origin `https://pyautolabs.github.io`, so script on any of them can read the
 token. The page's CSP (`connect-src https://api.github.com`) stops this page
