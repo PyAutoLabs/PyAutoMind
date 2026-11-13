@@ -30,3 +30,6 @@ Source: the independent reviews of Heart#340, Brain#614 and Hands#337 (programme
 8. A machine-readable override column in `autonomy_log.md` (so the M2.1 replay need not parse prose).
 
 <!-- filed 2026-11-12 by the programme lead session -->
+9. `/prm`'s "at least one completed check, all green" guard is prose only; only the watcher's `pr_health` enforces it in code (belongs to M4.6, one CI-verdict script).
+10. Stage 3 retry clean: an owned earlier zip deleted by `restore()` and extracted by a failed attempt counts as new and is cleaned → possible false red (cannot turn RED into GREEN).
+11. Quarantine rules not yet in AUTONOMY prose beyond the M2 rulings section; add a one-line pointer to `config/stage3_quarantine.yaml`.
