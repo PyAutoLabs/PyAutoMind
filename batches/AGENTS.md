@@ -174,6 +174,7 @@ only while a brief is open (`policy/shift_watcher.md`).
 - review-at: 2026-11-04T11:30Z      # stated by the human; the grant expires here
 - shift: morning
 - issue: https://github.com/PyAutoLabs/PyAutoMind/issues/<n>   # the digest is posted here once
+- live: LIVE · 1 running … — status: <comment url>   # written by the watcher only (PyAutoBrain#622)
 - packet: yes                       # optional; the HTML packet is opt-in under a brief
 - heart-ack:
   - <reason line>
@@ -329,6 +330,21 @@ state and retried like the digest; the watcher posts with
 `PYAUTO_SHIFT_GH_TOKEN` (a bot account, PyAutoMind `issues: write` only) so the
 mention notifies, and the digest warns when the poster is the mentioned account
 (PyAutoBrain#611; AUTONOMY.md watcher network surface, amended 2026-11-12).
+**While the shift runs (PyAutoBrain#622)** the watcher keeps **one status
+comment** on the same issue: created once, then only edited (on a change of
+state, or every 10 minutes), never @-mentioning anyone. It shows each task's
+state, tokens against the budget, blocks, parks, refusals, time to `review-at:`
+and the steering commands. The human steers by commenting, the comment's first
+line one of `/pause`, `/resume`, `/drop <task>` or `/stop`; only their
+`mention_login` counts. Each command is acknowledged once, in that status
+comment. `/pause` holds spawns, re-dispatches and new close-outs until
+`/resume`; reaps and mentions continue. `/stop` writes the watcher's `STOP`
+file. `/drop` takes only a task of this shift; a dropped worker already
+running is not killed, and a merge that lands after a drop is never counted
+as unattended. The record's `- live:` line is the dashboard's
+one-line copy, rewritten through the one Mind writer when the state changes;
+nobody else writes it. Doctrine: AUTONOMY.md watcher network surface,
+amendment 2026-11-13.
 `batch digest --record <file>` prints it early; `batch brief --check` refuses a
 digest missing a section, a counter, a pick's `why:` or a started task's
 packet.
