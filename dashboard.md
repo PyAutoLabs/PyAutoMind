@@ -21,6 +21,25 @@
 >
 > _Nothing to review yet._
 
+## Goals
+
+_(no goals — write them in [`goals.md`](goals.md))_
+
+## Queue
+
+1. [Premise check and lane inference follow-ups (M1.3)](draft/feature/pyautobrain/premise_check_followups.md)
+2. [Brain board hygiene ledger (SIG-3)](draft/feature/pyautobrain/brain_board_hygiene_ledger.md)
+3. [prompt_sync_push explicit-paths follow-ups (M1.2)](draft/maintenance/pyautomind/prompt_sync_explicit_paths_followups.md)
+4. [Heart unit-test trend follow-ups (SIG-2)](draft/feature/pyautoheart/unit_trend_followups.md)
+5. [Duplicate Galaxy pytree registration after a JAX Fitness](draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md)
+6. [Stale enable_pytrees advice in the autofit_workspace MCMC script](draft/bug/autofit/stale_enable_pytrees_register_model_advice_in.md)
+7. [positions_threshold test fixture off the symmetry axis](draft/bug/autolens/positions_threshold_fixture_off_axis.md)
+8. [Regenerate autolens_workspace markdown for sigma_min](draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md)
+9. [PyAutoLens primary-beam persistence mirror](draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md)
+10. [plot.rst missing exports](draft/docs/autolens/plot_rst_missing_exports.md)
+11. [autolens_workspace __Model__ bullet parameter counts](draft/docs/workspaces/model_bullet_parameter_count_drift.md)
+12. [Release board run_logs enrichment](draft/feature/pyautohands/release_board_run_logs_enrichment.md)
+
 ## Start here
 
 **Highest priority** (filed as `high`) — showing 12 of 19
