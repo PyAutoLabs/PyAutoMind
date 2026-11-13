@@ -96,3 +96,8 @@
 - repos:
   - autolens_assistant: feature/assistant-activate-cpu-tmpdir
   - autogalaxy_assistant: feature/assistant-activate-cpu-tmpdir
+- workspace-pr: https://github.com/PyAutoLabs/autolens_assistant/pull/186 https://github.com/PyAutoLabs/autogalaxy_assistant/pull/48
+- heart-red-override:
+  - authorization: live human, 2026-11-13, choosing "Override, open PRs (Recommended)" for this task (autolens_assistant#185): "Push both branches and open PRs in autolens_assistant and autogalaxy_assistant, recorded in the four override sinks. CI must pass; merging stays with your /prm."
+  - heart-red: PyAutoLens: 1 uncommitted source change(s); manifest drift: tenant firewall (organ code) — 40 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: workspace checkouts (manifest ↔ disk) — 2 mismatch(es) vs PyAutoMind/repos.yaml; PyAutoArray: open PR 9d old; release validation incomplete: no rehearsal for current source
+  - gates: bash -n on both activate.sh; behaviour test against a stub venv for both templates (no-GPU job -> JAX_PLATFORMS=cpu and TMPDIR off /tmp; --gres=gpu job with the Slurm variables measured by RAL gpu probe 415323 -> untouched; explicit JAX_PLATFORMS kept; laptop .venv branch untouched); the two templates now agree apart from library names; RAL CPU-node verification that JAX_PLATFORMS=cpu silences the plugin error (probe 415321); smoke n/a (activate.sh only); review: in-session. None of the RED reasons are in autolens_assistant or autogalaxy_assistant.
