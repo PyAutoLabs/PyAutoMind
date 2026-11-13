@@ -137,20 +137,25 @@ workflows *are* the token's reach. As of 2026-11-13:
 
 | Workflow | Inputs | With attacker-chosen inputs |
 |---|---|---|
-| `dashboard_input` | `op` (choice), `ref`, `goals`, `nonce` | By design: edit `queue.md`/`goals.md` within `scripts/dashboard_input.py`'s validation. Inputs reach Python through `env:` only; main only |
-| `branch_sweep` | `mode` (choice), `limit` (string) | **DANGER.** `limit` is interpolated into `run:` (`--limit '${{ inputs.limit \|\| 0 }}'`): shell injection in a job holding `contents: write` on Mind, i.e. push to main, i.e. code in every later session and CI run. `mode: delete` also deletes contained branches (by design) |
-| `mind_ledger_merge` | `branch` (string), `mode` (choice), `delete_branch` | **DANGER.** `branch` is interpolated into `run:` (`BRANCH="${{ inputs.branch }}"`): shell injection with `contents`/`pull-requests`/`actions`/`issues: write`. Without injection it only merges an existing ledger-only branch |
-| `arxiv_papers` | `lookback_hours` (string), `memory_only`, `dry_run` | **DANGER.** `lookback_hours` is interpolated into `run:`: shell injection in the job that then mints the owner-wide App token (`APP_PRIVATE_KEY`) and runs with `CLAUDE_CODE_OAUTH_TOKEN` and the papers webhook, so a later step's secrets can be stolen by rewriting the scripts it runs |
-| `arxiv_interests` | `lookback_hours` (string), `dry_run` | **DANGER**, as `arxiv_papers` |
-| `spawn_drift`, `session_hook_propagate`, `smoke_bootstrap_propagate` | `dry_run` (boolean) | Safe: a non-dry run regenerates and pushes what it would push on its own trigger |
-| `dashboard_refresh`, `lifecycle_drift`, `looks_shipped`, `registry_reconcile`, `pages_dashboard`, `firewall_gate`, `morning_health`, `morning_status` | none | Safe: idempotent re-runs of existing automation. `morning_status` and the arXiv digests spend Claude usage and post to Slack, so repeated dispatch is a cost and noise nuisance |
+| `dashboard_input` | `op` (choice), `ref`, `goals`, `nonce` | Safe by design: edits `queue.md`/`goals.md` only within `scripts/dashboard_input.py`'s validation; inputs reach Python through `env:`; main only |
+| `branch_sweep` | `mode` (choice), `limit` (string) | Safe: both through `env:`; `mode` must be `audit`/`delete`, `limit` must match `^[0-9]{1,4}$` and be 0–1000, else `::error`. `mode: delete` removes only branches the sweep proves contained, as designed |
+| `mind_ledger_merge` | `branch` (string), `mode` (choice), `delete_branch` | Safe: through `env:`; `branch` must be under `claude/`, `codex/` or `chatgpt/`, match `[A-Za-z0-9._/-]`, be at most 200 characters and pass `git check-ref-format --branch`; `mode` must be `audit`/`merge`. It can only merge an existing ledger-only session branch, which a token without Contents cannot create |
+| `arxiv_papers` | `lookback_hours` (string), `memory_only`, `dry_run` (booleans) | Safe: `lookback_hours` through `env:`, validated in its own step (`^[0-9]{1,4}$`, 1–2160) before any secret is used. A dispatch costs Claude usage and may post to Slack |
+| `arxiv_interests` | `lookback_hours` (string), `dry_run` | Safe, as `arxiv_papers` |
+| `spawn_drift`, `session_hook_propagate`, `smoke_bootstrap_propagate` | `dry_run` (boolean) | Safe: a boolean, read through `env:`; a non-dry run regenerates and pushes what it pushes on its own trigger |
+| `dashboard_refresh`, `lifecycle_drift`, `looks_shipped`, `registry_reconcile`, `pages_dashboard`, `firewall_gate`, `morning_health`, `morning_status` | none | Safe: idempotent re-runs of existing automation. `morning_status` spends Claude usage and posts to Slack, so repeated dispatch is a cost and noise nuisance |
 
-**The four DANGER rows must be fixed before the token is created**: pass each
-string input through `env:` and read it as `"$VAR"` (the pattern
-`dashboard_input.yml` uses). Until then a leaked dashboard token is code
-execution on Mind and theft of the org App key — design B's whole premise.
-Any new `workflow_dispatch` input of `type: string` must follow the same
-pattern and gets a row here.
+All 15 were made safe on 2026-11-13 (PyAutoMind#565), before any dashboard
+token existed: until then `branch_sweep`, `mind_ledger_merge` and both arXiv
+digests pasted string inputs into `run:`, which made a leaked token code
+execution on Mind and theft of the org App key.
+`tests/test_workflow_input_injection.py` fails on any `${{ inputs.… }}`,
+`github.event.inputs` or `client_payload` expression inside a `run:` or
+`github-script` block, and runs each validating step with hostile values. A
+new string input follows the same pattern (`env:`, then validate) and gets a
+row here. Remaining reach of a leaked token: dispatch noise and cost, the
+queue and goals within validation, and cancelling, deleting or disabling runs
+and workflows.
 
 **Rotation:** make a new token, paste it on each device (🔑 on the page),
 revoke the old one. If a device is lost: revoke first.
