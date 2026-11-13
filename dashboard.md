@@ -12,7 +12,7 @@
 | [Epics](#epics) | 23 |
 | [In flight](#in-flight) | 5 |
 | [Planned](#planned) | 11 |
-| [Backlog](#backlog) | 267 |
+| [Backlog](#backlog) | 275 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
 
@@ -918,7 +918,7 @@ Use the start-dev skill. draft/feature/pyautoscientist/scientist_optional_organ_
 </details>
 
 <details>
-<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 15 queued prompt(s), in order</summary>
+<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 23 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — ledger: `draft/feature/pyautobrain/autonomous_orchestrators_epic.md` — IN PROGRESS; design-reviewed 2026-11-03 (7 phases, <code>Needs:</code> folded into <code>Lane:</code> values, witnesses per phase, 6 decisions ruled by…</summary>
 
@@ -944,6 +944,14 @@ Use the start-dev skill. draft/bug/pyautobrain/shift_watcher_followups_after_sta
 
 </details>
 
+<details><summary>📋 <a href="draft/bug/pyautoheart/organ_workflow_red_self_clears.md">Heart: a weekly organ workflow's RED clears when the fix merges, not…</a> — pyautoheart · small · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautoheart/organ_workflow_red_self_clears.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/feature/pyautobrain/autonomous_orchestrators_epic.md">Autonomous orchestrators epic: a Dev and a Science orchestrator, a human review…</a> — pyautobrain · large · human-required · high</summary>
 
 ```
@@ -964,6 +972,14 @@ Use the start-dev skill. draft/feature/pyautobrain/brain_board_hygiene_ledger.md
 
 ```
 Use the start-dev skill. draft/feature/pyautobrain/cloud_worker_bundle_and_profile.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/live_shift_feedback_and_steering.md">A running shift you can watch and steer: one live status comment…</a> — pyautobrain · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/live_shift_feedback_and_steering.md
 ```
 
 </details>
@@ -1000,6 +1016,22 @@ Use the start-dev skill. draft/feature/pyautobrain/premise_check_followups.md
 
 </details>
 
+<details><summary>📋 <a href="draft/feature/pyautobrain/release_window_after_rehearsed_shas.md">Release window after rehearsed SHAs: retire the laptop freeze flag, and start…</a> — pyautobrain · small · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/release_window_after_rehearsed_shas.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/shift_keeps_heart_green_lane.md">A shift-owned "keep Heart green" lane: read the reasons, file or dispatch…</a> — pyautobrain · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/shift_keeps_heart_green_lane.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/feature/pyautobrain/shift_watcher_in_the_cloud.md">Move the shift watcher off the laptop: a cloud-run orchestrator</a> — pyautobrain · large · human-required · normal</summary>
 
 ```
@@ -1008,10 +1040,42 @@ Use the start-dev skill. draft/feature/pyautobrain/shift_watcher_in_the_cloud.md
 
 </details>
 
+<details><summary>📋 <a href="draft/feature/pyautohands/post_release_tail_unattended.md">Release: the post-release tail runs in the workflow, and a red tail…</a> — pyautohands · small · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautohands/post_release_tail_unattended.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoheart/release_verdict_state_off_the_laptop.md">Heart: one published verdict, with no gate state left on the laptop</a> — pyautoheart · medium · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautoheart/release_verdict_state_off_the_laptop.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/feature/pyautoheart/unit_trend_followups.md">Heart unit-test trends: follow-ups from PyAutoHeart#338</a> — pyautoheart · small · supervised · low</summary>
 
 ```
 Use the start-dev skill. draft/feature/pyautoheart/unit_trend_followups.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautoheart/verdict_history_and_cause_classes.md">Heart: a durable verdict history, and every stop classed as infrastructure, flake…</a> — pyautoheart · small · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautoheart/verdict_history_and_cause_classes.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautomind/dashboard_priority_and_goals_input.md">Mind dashboard: a priority tick on each task and a written Goals…</a> — pyautomind · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautomind/dashboard_priority_and_goals_input.md
 ```
 
 </details>
@@ -1304,7 +1368,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 216 · ral 34 · local-dev 8 · wsl-data 7
+Lanes: any 224 · ral 34 · local-dev 8 · wsl-data 7
 
 <a id="human-review"></a>
 <details>
