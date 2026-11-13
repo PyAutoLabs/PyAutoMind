@@ -38,6 +38,7 @@ Commits made with it are authored as `pyautolabs-bot[bot]` /
 | `PYPI`, `TEST_PYPI` | PyAutoHands repo secrets | Hands `release`, `publish_tombstone` (twine) | maintainer | regenerate on PyPI; trusted publishing (commented OIDC steps in Hands `release.yml`) would retire them, not scheduled |
 | `CLAUDE_CODE_OAUTH_TOKEN` | PyAutoMind, PyAutoMemory repo secrets | Mind `arxiv_papers`, `arxiv_interests`, `morning_status`; Memory `queue_filing` | maintainer | `claude setup-token`, update both repos |
 | `PYAUTO_PAPERS_WEBHOOK_URL` | PyAutoMind repo secret | Mind `arxiv_papers` | maintainer | webhook rotation (below) |
+| dashboard input PAT | the human's browsers (`localStorage`), not a secret | Mind `dashboard.html` → `dashboard_input.yml` | maintainer | fine-grained, PyAutoMind Actions RW only, ≤ 90 days ([below](#the-dashboard-input-token-browser-pyautomind565)) |
 | `PYAUTO_UPDATE_WEBHOOK_URL` | PyAutoMind repo secret | Mind `morning_health`, `morning_status` | maintainer | webhook rotation |
 | `PYAUTO_RELEASE_WEBHOOK_URL` | PyAutoBrain, PyAutoHands repo secrets | Brain `nightly-release`; Hands `release` | maintainer | webhook rotation, update both repos |
 | `HEART_NTFY_URL` | PyAutoHeart repo secret | Heart `heart-health` | maintainer | new ntfy topic, update secret |
@@ -105,6 +106,54 @@ it on the installation.
 Nothing to do: the App is installed on all repos and `APP_PRIVATE_KEY` /
 `APP_CLIENT_ID` have visibility `all`. Only if the repo needs a repo-level
 secret, add it here in the same PR.
+
+### The dashboard input token (browser, PyAutoMind#565)
+
+The one PAT this organism holds, and it is not in CI. The published Mind
+dashboard's ★ toggles and Goals box dispatch
+`.github/workflows/dashboard_input.yml`, which validates the input and commits
+`queue.md` or `goals.md` as `github-actions[bot]`. The browser holds:
+
+- a **fine-grained** PAT, resource owner PyAutoLabs, repository access
+  **PyAutoMind only**, repository permission **Actions: read and write**
+  (Metadata: read comes with it). No Contents, no Workflows, nothing else;
+- expiry 90 days at most;
+- stored in that browser's `localStorage` (key
+  `pyautomind.dashboard.token.v1`), sent only to `api.github.com`. "Forget
+  token" on the page deletes it; a 401 deletes it too.
+
+**Storage is shared.** Every PyAutoLabs Pages site is served from the one
+origin `https://pyautolabs.github.io`, so script on any of them can read the
+token. The page's CSP (`connect-src https://api.github.com`) stops this page
+leaking it, not a sibling page. Revoke at
+github.com/settings/personal-access-tokens if any Pages site is ever suspected.
+
+**What a leaked token can do.** Actions write on Mind means: dispatch any
+`workflow_dispatch` workflow below, with any inputs and at any existing branch
+or tag; re-run, cancel and delete runs; read run logs; delete artifacts and
+caches; enable and disable workflows. It cannot read secrets, push code, or
+touch another repo — except through a workflow that does. So the dispatchable
+workflows *are* the token's reach. As of 2026-11-13:
+
+| Workflow | Inputs | With attacker-chosen inputs |
+|---|---|---|
+| `dashboard_input` | `op` (choice), `ref`, `goals`, `nonce` | By design: edit `queue.md`/`goals.md` within `scripts/dashboard_input.py`'s validation. Inputs reach Python through `env:` only; main only |
+| `branch_sweep` | `mode` (choice), `limit` (string) | **DANGER.** `limit` is interpolated into `run:` (`--limit '${{ inputs.limit \|\| 0 }}'`): shell injection in a job holding `contents: write` on Mind, i.e. push to main, i.e. code in every later session and CI run. `mode: delete` also deletes contained branches (by design) |
+| `mind_ledger_merge` | `branch` (string), `mode` (choice), `delete_branch` | **DANGER.** `branch` is interpolated into `run:` (`BRANCH="${{ inputs.branch }}"`): shell injection with `contents`/`pull-requests`/`actions`/`issues: write`. Without injection it only merges an existing ledger-only branch |
+| `arxiv_papers` | `lookback_hours` (string), `memory_only`, `dry_run` | **DANGER.** `lookback_hours` is interpolated into `run:`: shell injection in the job that then mints the owner-wide App token (`APP_PRIVATE_KEY`) and runs with `CLAUDE_CODE_OAUTH_TOKEN` and the papers webhook, so a later step's secrets can be stolen by rewriting the scripts it runs |
+| `arxiv_interests` | `lookback_hours` (string), `dry_run` | **DANGER**, as `arxiv_papers` |
+| `spawn_drift`, `session_hook_propagate`, `smoke_bootstrap_propagate` | `dry_run` (boolean) | Safe: a non-dry run regenerates and pushes what it would push on its own trigger |
+| `dashboard_refresh`, `lifecycle_drift`, `looks_shipped`, `registry_reconcile`, `pages_dashboard`, `firewall_gate`, `morning_health`, `morning_status` | none | Safe: idempotent re-runs of existing automation. `morning_status` and the arXiv digests spend Claude usage and post to Slack, so repeated dispatch is a cost and noise nuisance |
+
+**The four DANGER rows must be fixed before the token is created**: pass each
+string input through `env:` and read it as `"$VAR"` (the pattern
+`dashboard_input.yml` uses). Until then a leaked dashboard token is code
+execution on Mind and theft of the org App key — design B's whole premise.
+Any new `workflow_dispatch` input of `type: string` must follow the same
+pattern and gets a row here.
+
+**Rotation:** make a new token, paste it on each device (🔑 on the page),
+revoke the old one. If a device is lost: revoke first.
 
 ### Adding a credential
 

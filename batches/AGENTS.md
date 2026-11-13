@@ -210,6 +210,14 @@ only while a brief is open (`policy/shift_watcher.md`).
     - cpu-hours: 64
 ```
 
+**Goals come from [`goals.md`](../goals.md)** (PyAutoMind#565). `pyauto-brain
+batch brief --new <slot> --review-at <ISO>` writes a skeleton brief whose
+`goals:` are that file's goals in order, with `backlog: scoped` to the union of
+their `epics:`/`tags:` (or `fill-idle` when no goal names any) and safe
+defaults (`merge-cap: 0`) for the rest; it prints to stdout unless `--out`
+names a file, so writing the record — the dispatch — stays the human's act.
+`brief --check` warns when goal 1 of `goals.md` is missing from a brief.
+
 `backlog:` decides what happens once the named tasks are done or blocked:
 `none` — nothing more; `fill-idle` — the planner's own ranking, under every
 batch constraint; `scoped` — only prompts matching the `scoped:` epics, tags or

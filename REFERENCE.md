@@ -471,6 +471,19 @@ history unattended will not record it.
   fails on a `prompt` ref that resolves to no `draft/` or `active/` prompt, and
   an empty or absent list stops an unattended shift's backlog dip — only the
   brief's named tasks run.
+- **[`goals.md`](goals.md)** — the human's goals, in order (PyAutoMind#565):
+  `## <n>. <goal>` with optional `epics:`/`tags:`/`note:`. `pyauto-brain batch
+  brief --new <slot>` copies them into a brief's `goals:` and scopes its
+  backlog dip to their epics and tags; `lifecycle.py check` validates the file
+  (numbered 1..n, at most 10 goals of at most 200 characters). Public, like
+  the rest of the Mind.
+- **The dashboard writes both.** A ★ on the published `dashboard.html`, or an
+  edit in its Goals box, dispatches `.github/workflows/dashboard_input.yml`
+  with a browser token that holds Actions permission on this repo only. The
+  workflow validates the input (`scripts/dashboard_input.py`), refuses a write
+  that adds `lifecycle.py check` drift or touches any other path, and commits
+  as the bot. Token scope, storage and what a leaked one can do:
+  [`policy/github_tokens.md`](policy/github_tokens.md).
 - **`batches/<YYYY-MM-DD>-<am|pm>.md`** — one record per dispatched batch,
   written at dispatch and appended at collection. Schema and the three fields
   that are easy to get wrong are in [`batches/AGENTS.md`](batches/AGENTS.md).

@@ -1,0 +1,117 @@
+name: Dashboard Input
+
+# The write side of the published dashboard (PyAutoMind#565, design B). A ★
+# tap or a Goals edit on dashboard.html dispatches this workflow through the
+# REST API, with a fine-grained token holding Actions permission on this repo
+# and nothing else. This workflow — not the browser — validates the input,
+# writes queue.md or goals.md, and commits as the bot. Reference:
+# policy/github_tokens.md "The dashboard input token".
+#
+# SECURITY. Every input is attacker-controlled: anyone holding a leaked token
+# can dispatch this with any values. So:
+#   - inputs reach the script through `env:` only and are parsed in Python;
+#     no `${{ inputs.* }}` expression appears in any `run:` block;
+#   - scripts/dashboard_input.py refuses anything but a real draft/ or active/
+#     prompt ref, or at most 10 short plain-text goals, and refuses a write
+#     that adds `lifecycle.py check` drift;
+#   - the guard step refuses a tree in which anything but queue.md or goals.md
+#     changed, and only those two paths are ever staged;
+#   - the job runs only on main of this repo: a dispatch against another
+#     branch would run that branch's copy of this file.
+# A refusal commits nothing, fails the run, and leaves one `::error`
+# annotation whose text the dashboard reads back through the check-run API.
+#
+# NO `concurrency:` group, deliberately. GitHub keeps one pending run per
+# group and cancels the rest, so fast taps would be lost. Concurrent runs
+# instead each rebuild on the tip of main and retry the push.
+
+on:
+  workflow_dispatch:
+    inputs:
+      op:
+        description: "star | unstar | goals"
+        type: choice
+        options: [star, unstar, goals]
+        required: true
+      ref:
+        description: "star/unstar: the prompt path (draft/… or active/…)"
+        type: string
+        default: ""
+      goals:
+        description: "goals: one goal per line, top first (at most 10)"
+        type: string
+        default: ""
+      nonce:
+        description: "Client correlation id (letters, digits, '-')"
+        type: string
+        default: ""
+
+# The run title carries the op and the client's nonce so the page can find
+# its own run when the dispatch API returns no run id. run-name is display
+# text, not a shell; the script refuses a malformed nonce anyway.
+run-name: "dashboard ${{ inputs.op }} ${{ inputs.nonce }}"
+
+# contents: write → the bot commit to main. actions: write → dispatch
+# dashboard_refresh.yml afterwards: a GITHUB_TOKEN push triggers no workflow,
+# so without it the published page would not re-render.
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  apply:
+    if: github.repository == 'PyAutoLabs/PyAutoMind' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+
+      - name: Validate, apply, commit
+        env:
+          DASHBOARD_OP: ${{ inputs.op }}
+          DASHBOARD_REF: ${{ inputs.ref }}
+          DASHBOARD_GOALS: ${{ inputs.goals }}
+          DASHBOARD_NONCE: ${{ inputs.nonce }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          msg="$RUNNER_TEMP/dashboard_commit_msg.txt"
+          for attempt in 1 2 3 4 5; do
+            git fetch --quiet origin main
+            git reset --quiet --hard FETCH_HEAD
+            rm -f "$msg"
+            # Exit 1 is a refusal: the script has already annotated why.
+            python3 scripts/dashboard_input.py apply --message-file "$msg"
+            if [ ! -s "$msg" ]; then
+              echo "nothing to commit (already so)"
+              exit 0
+            fi
+            python3 scripts/dashboard_input.py guard
+            git add -- queue.md goals.md
+            staged="$(git diff --cached --name-only)"
+            if printf '%s\n' "$staged" | grep -qvxE 'queue\.md|goals\.md'; then
+              echo "::error title=Dashboard input refused::a path other than queue.md or goals.md was staged"
+              exit 1
+            fi
+            git commit --quiet -F "$msg"
+            if git push --quiet origin HEAD:main; then
+              echo "committed $(git rev-parse --short HEAD) on attempt ${attempt}"
+              echo "Committed \`$(git rev-parse --short HEAD)\`." >> "$GITHUB_STEP_SUMMARY"
+              exit 0
+            fi
+            echo "push rejected (attempt ${attempt}) — re-applying on the new tip of main"
+          done
+          echo "::error title=Dashboard input refused::main moved under five attempts in a row; tap again"
+          exit 1
+
+      - name: Re-render the dashboard
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run dashboard_refresh.yml --ref main \
+            || echo "::warning::could not dispatch dashboard_refresh.yml — the page catches up at its next trigger"

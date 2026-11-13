@@ -2,7 +2,8 @@ name: Dashboard Refresh
 
 # Keeps the generated task page (`dashboard.md`, linked from the README) in
 # step with the Mind it describes. The page is rendered by PyAutoBrain's intake
-# conductor from `draft/`, `active/`, `batches/` and the registry files, so any
+# conductor from `draft/`, `active/`, `batches/`, `queue.md`, `goals.md` and the
+# registry files, so any
 # push that files, issues, parks or ships a task — or opens, collects or
 # reviews a batch, which the page's status box shows — makes it stale.
 #
@@ -45,6 +46,12 @@ on:
       - "state.json"
       - "looks_shipped.json"
       - "looks_shipped_dismissed.md"
+      # The ★ state and the Goals box (PyAutoMind#565): the page renders both,
+      # so a hand edit or a session's commit to either makes it stale. The
+      # dashboard's own writes come from dashboard_input.yml with GITHUB_TOKEN,
+      # which triggers nothing, so that workflow dispatches this one itself.
+      - "queue.md"
+      - "goals.md"
   pull_request:
     paths:
       - "draft/**"
@@ -62,6 +69,12 @@ on:
       - "state.json"
       - "looks_shipped.json"
       - "looks_shipped_dismissed.md"
+      # The ★ state and the Goals box (PyAutoMind#565): the page renders both,
+      # so a hand edit or a session's commit to either makes it stale. The
+      # dashboard's own writes come from dashboard_input.yml with GITHUB_TOKEN,
+      # which triggers nothing, so that workflow dispatches this one itself.
+      - "queue.md"
+      - "goals.md"
   workflow_dispatch:
 
 # contents: write is needed by the self-heal push on main; PR runs never push.

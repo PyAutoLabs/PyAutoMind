@@ -66,6 +66,9 @@ Subcommands
           * no active/ prompt is left unclaimed by every registry
           * nothing lives under active/ except top-level prompt .md files
             (subdirectories and scripts are invisible to every other guard)
+          * every live queue.md ref resolves, and no prompt is queued twice
+          * goals.md parses: numbered 1..n, at most 10 goals of at most 200
+            characters, known fields only (an unknown epic only warns)
         Wire into /health and CI. `--paths` scopes the EXIT CODE to the
         findings about those paths (a branch can only be held to its own
         diff — see REFERENCE.md "Scoping a drift check to one branch");
@@ -2848,7 +2851,20 @@ def queue_findings(root: Path) -> "list[Finding]":
     weeks earlier, and no check had ever opened the file. An entry whose work
     has shipped moves to the `## Retired` footer with its `shipped-as:`."""
     out: "list[Finding]" = []
+    seen: "dict[str, str]" = {}
     for label, kind, ref in queue_entries(root):
+        # The same prompt twice is a double-tap race on the dashboard or a
+        # hand edit that forgot the first entry: the lifecycle matches entries
+        # by basename (a draft/ ref keeps its place once the prompt is in
+        # active/), so two of them are one task ranked twice.
+        if kind == "prompt" and ref:
+            name = Path(ref).name
+            if name in seen:
+                out.append(Finding(
+                    f"queue.md: entry `{label}` queues `{name}` again (first "
+                    f"as `{seen[name]}`) — keep one", ("queue.md",)))
+            else:
+                seen[name] = label
         if kind not in QUEUE_KINDS:
             out.append(Finding(
                 f"queue.md: entry `{label}` has kind `{kind or '(none)'}` — "
@@ -2929,6 +2945,106 @@ def queue_retire_text(text: str, prompt_name: str, shipped_as: str) -> "tuple[st
     return out.rstrip("\n") + "\n", [m[2] for m in moving]
 
 
+# --------------------------------------------------------------------------- #
+# goals.md — the human's goals, in order (PyAutoMind#565)
+# --------------------------------------------------------------------------- #
+#: A goal's heading, `## <n>. <goal>`. As in queue.md, any other heading ends
+#: the goal above it, and a fenced block is the schema's own example.
+GOAL_ENTRY_RE = re.compile(r"^##\s+(\d+)\.\s+(.+?)\s*$")
+GOAL_FIELD_RE = re.compile(r"^-\s+([a-z][a-z0-9-]*):\s*(.*?)\s*$")
+GOAL_FIELDS = ("epics", "tags", "note")
+GOALS_MAX = 10
+GOAL_TEXT_MAX = 200
+
+
+def goals_parse(text: str) -> "tuple[list[dict], list[str]]":
+    """(goals in file order, parse errors) for the text of `goals.md`.
+
+    Each goal is `{"n", "text", "epics", "tags", "note", "unknown"}`; `epics`
+    and `tags` are lists. PyAutoBrain's `_batch.read_goals` reads the same
+    grammar, and `scripts/dashboard_input.py` writes it."""
+    goals: "list[dict]" = []
+    errors: "list[str]" = []
+    cur: "dict | None" = None
+    fenced = False
+    for i, line in enumerate(text.split("\n"), 1):
+        if line.lstrip().startswith("```"):
+            fenced = not fenced
+            continue
+        if fenced:
+            continue
+        if line.startswith("#"):
+            m = GOAL_ENTRY_RE.match(line)
+            cur = None
+            if m:
+                cur = {"n": int(m.group(1)), "text": m.group(2), "epics": [],
+                       "tags": [], "note": "", "unknown": []}
+                goals.append(cur)
+            continue
+        if cur is None or not line.strip():
+            continue
+        m = GOAL_FIELD_RE.match(line)
+        if not m:
+            errors.append(f"line {i}: not a `- key: value` field of goal "
+                          f"{cur['n']}: {line.strip()[:60]!r}")
+            continue
+        key, value = m.group(1), m.group(2).split(" #")[0].strip()
+        if key in ("epics", "tags"):
+            cur[key] = [v for v in re.split(r"[,\s]+", value) if v]
+        elif key == "note":
+            cur["note"] = value
+        else:
+            cur["unknown"].append(key)
+    return goals, errors
+
+
+def goals_entries(root: Path) -> "list[dict]":
+    """The goals of `goals.md`, in order. An absent file is an empty list."""
+    try:
+        text = (root / "goals.md").read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return []
+    return goals_parse(text)[0]
+
+
+def goals_findings(root: Path) -> "tuple[list[Finding], list[Finding]]":
+    """(problems, warnings) for `goals.md`. An absent or empty file is clean:
+    a brief built from no goals is refused by its own check instead."""
+    try:
+        text = (root / "goals.md").read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return [], []
+    goals, errors = goals_parse(text)
+    at = ("goals.md",)
+    problems = [Finding(f"goals.md: {e}", at) for e in errors]
+    warnings: "list[Finding]" = []
+    if len(goals) > GOALS_MAX:
+        problems.append(Finding(
+            f"goals.md: {len(goals)} goals — at most {GOALS_MAX}", at))
+    numbers = [g["n"] for g in goals]
+    if numbers != list(range(1, len(goals) + 1)):
+        problems.append(Finding(
+            f"goals.md: goals are numbered {numbers} — number them 1..{len(goals)} "
+            f"in order", at))
+    _h, blocks = epic_blocks(root / "epics.md")
+    known = {slug.split()[0] for slug, _b in blocks if slug.split()}
+    for g in goals:
+        if len(g["text"]) > GOAL_TEXT_MAX:
+            problems.append(Finding(
+                f"goals.md: goal {g['n']} is {len(g['text'])} characters — at "
+                f"most {GOAL_TEXT_MAX}", at))
+        for key in g["unknown"]:
+            problems.append(Finding(
+                f"goals.md: goal {g['n']} has unknown field `{key}:` — one of "
+                f"{', '.join(GOAL_FIELDS)}", at))
+        for slug in g["epics"]:
+            if slug not in known:
+                warnings.append(Finding(
+                    f"goals.md: goal {g['n']} names epic `{slug}`, which is "
+                    f"not in epics.md", at))
+    return problems, warnings
+
+
 def check_findings(root: Path) -> "tuple[list[Finding], list[Finding]]":
     """(problems, warnings) for the whole tree, each attributed to its paths.
 
@@ -2999,6 +3115,11 @@ def check_findings(root: Path) -> "tuple[list[Finding], list[Finding]]":
     problems.extend(batch_member_findings(root))
     # The human's ranked list: a dangling ref is drift (M2.3).
     problems.extend(queue_findings(root))
+    # The human's goals (PyAutoMind#565): briefs copy them, so a malformed file
+    # is drift; an epic it names that epics.md does not list only warns.
+    g_problems, g_warnings = goals_findings(root)
+    problems.extend(g_problems)
+    warnings.extend(g_warnings)
     warnings.extend(batch_member_notes_findings(root))
     warnings.extend(batch_record_warning_findings(root))
     return problems, warnings
