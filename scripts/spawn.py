@@ -108,6 +108,8 @@ MIND_RULES = [
     ("condemned.md", "EMPTY"),
     ("ideas.md", "EMPTY"),
     ("queue.md", "EMPTY"),
+    # The human's goals: instance intent, like the queue (PyAutoMind#565).
+    ("goals.md", "EMPTY"),
     ("autonomy_log.md", "SPECIAL:autonomy_log"),
     # Prompt-file lifecycle (issue #71): draft/ (not-started) -> active/
     # (in-flight) -> complete/YYYY/MM (shipped). A fresh template ships an empty
@@ -228,6 +230,12 @@ MIND_RULES = [
     # neither unasked: an adopter re-adds it once they have a Brain and have
     # decided for themselves which of their paths are ledger.
     (".github/workflows/mind_ledger_merge.yml", "DROP"),
+    # 9c also: the dashboard input door (PyAutoMind#565). It commits to main
+    # with the workflow token on a labelled issue from the published Pages page,
+    # whose publisher is itself dropped above; a fresh org has no page to tap
+    # and should decide for itself whether anything may write its queue.
+    # scripts/dashboard_input.py still travels with scripts/.
+    (".github/workflows/dashboard_input.yml", "DROP"),
     (".github/scripts/*", "DROP"),
     # NO `.github/*` catch-all, deliberately. A catch-all is fail-OPEN: a new
     # Mind workflow would ride it into the template carrying whatever schedule
@@ -357,6 +365,7 @@ EMPTY_TITLES = {
     "condemned.md": "# Condemned material",
     "ideas.md": "# Ideas",
     "queue.md": "# Queue",
+    "goals.md": "# Goals",
     "reading-queue.md": "# Reading queue",
     "arxiv-inbox.md": "# arXiv inbox",
     "arxiv-interests.md": "# arXiv interests",

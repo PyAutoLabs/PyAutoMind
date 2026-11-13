@@ -90,19 +90,36 @@ jobs:
       - name: Live-check the query against known missed papers
         run: python3 .github/scripts/arxiv_fetch.py --livecheck
 
+      # Dispatch inputs are untrusted (policy/github_tokens.md): validated in
+      # their own step, which no continue-on-error can swallow, and read from
+      # env — never interpolated into a shell.
+      - name: Validate dispatch inputs
+        env:
+          LOOKBACK_HOURS_INPUT: ${{ github.event.inputs.lookback_hours }}
+        run: |
+          set -euo pipefail
+          v="${LOOKBACK_HOURS_INPUT:-}"
+          if [ -n "$v" ]; then
+            if ! [[ "$v" =~ ^[0-9]{1,4}$ ]] || [ "$((10#$v))" -lt 1 ] || [ "$((10#$v))" -gt 2160 ]; then
+              echo "::error title=Invalid input::lookback_hours must be a whole number of hours, 1-2160 (or blank)"
+              exit 1
+            fi
+          fi
       - name: Fetch newly announced strong-lensing papers from arXiv
         id: fetch
         # A source outage must not turn into a silent #papers channel. Preserve
         # the real pre-continue-on-error result in steps.fetch.outcome; a later
         # step turns failure into an explicit Slack outage heartbeat.
         continue-on-error: true
+        env:
+          LOOKBACK_HOURS_INPUT: ${{ github.event.inputs.lookback_hours }}
         run: |
           set -euo pipefail
           # No window logic here: arxiv_fetch.py derives the announcement band
           # from the run time. A manual dispatch may override it with a rolling
           # look-back (test-fire, or a backfill), in which case we pass it
           # through; blank means the band.
-          override="${{ github.event.inputs.lookback_hours }}"
+          override="${LOOKBACK_HOURS_INPUT:-}"   # validated above
           if [ -n "$override" ]; then
             export LOOKBACK_HOURS="$override"
           fi

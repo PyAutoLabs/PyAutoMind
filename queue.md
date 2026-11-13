@@ -3,6 +3,15 @@
 The one file the human maintains by hand, and the only thing they have to think
 about between slots: **what I want done next, roughly in order**.
 
+**Two writers.** By hand, or from the published dashboard: a ★ on a task row
+appends a `kind: prompt` entry at the bottom of the list, and un-★ moves it to
+the `## Retired` footer with `shelved-as:`, keeping its note. A tap opens a
+`dashboard-input` issue; `.github/workflows/dashboard_input.yml` validates it,
+runs `lifecycle.py check`, commits as the bot (`Via: mind-dashboard`) and
+closes the issue. To move an
+entry up, edit this file. The goals behind the list live in
+[`goals.md`](goals.md).
+
 **Order is priority.** There is no `priority:` field here — moving an entry up
 *is* the act of prioritising it. Nothing else about an entry needs to be true for
 it to sit in this file; the planner decides what is actually startable.

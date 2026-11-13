@@ -82,11 +82,28 @@ jobs:
           python3 .github/scripts/arxiv_fetch.py --selftest
           python3 .github/scripts/arxiv_interests.py --selftest
 
-      - name: Shortlist the day's candidates
-        id: fetch
+      # Dispatch inputs are untrusted (policy/github_tokens.md): validated in
+      # their own step, which no continue-on-error can swallow, and read from
+      # env — never interpolated into a shell.
+      - name: Validate dispatch inputs
+        env:
+          LOOKBACK_HOURS_INPUT: ${{ github.event.inputs.lookback_hours }}
         run: |
           set -euo pipefail
-          override="${{ github.event.inputs.lookback_hours }}"
+          v="${LOOKBACK_HOURS_INPUT:-}"
+          if [ -n "$v" ]; then
+            if ! [[ "$v" =~ ^[0-9]{1,4}$ ]] || [ "$((10#$v))" -lt 1 ] || [ "$((10#$v))" -gt 2160 ]; then
+              echo "::error title=Invalid input::lookback_hours must be a whole number of hours, 1-2160 (or blank)"
+              exit 1
+            fi
+          fi
+      - name: Shortlist the day's candidates
+        id: fetch
+        env:
+          LOOKBACK_HOURS_INPUT: ${{ github.event.inputs.lookback_hours }}
+        run: |
+          set -euo pipefail
+          override="${LOOKBACK_HOURS_INPUT:-}"   # validated above
           if [ -n "$override" ]; then
             export LOOKBACK_HOURS="$override"
           fi

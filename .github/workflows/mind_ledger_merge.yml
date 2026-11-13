@@ -96,17 +96,38 @@ jobs:
     steps:
       - name: Resolve the branch
         id: target
+        # Dispatch inputs are untrusted (policy/github_tokens.md): read from
+        # env and validated before anything uses them, never interpolated
+        # into the shell. Every later step reads the validated output.
+        env:
+          BRANCH_INPUT: ${{ inputs.branch }}
+          MODE_INPUT: ${{ inputs.mode }}
         run: |
-          BRANCH="${{ inputs.branch }}"
-          [ -n "$BRANCH" ] || BRANCH="${{ github.ref_name }}"
+          BRANCH="${BRANCH_INPUT:-}"
+          [ -n "$BRANCH" ] || BRANCH="$GITHUB_REF_NAME"
           case "$BRANCH" in
-            main|"") echo "::error::refusing to operate on '$BRANCH'"; exit 1 ;;
-            archive/condemned/*) echo "::error::'$BRANCH' is a Gut transit ref"; exit 1 ;;
+            main|"") echo "::error::refusing to operate on main or an empty branch"; exit 1 ;;
+            archive/condemned/*) echo "::error::refusing a Gut transit ref"; exit 1 ;;
           esac
-          MODE="${{ inputs.mode }}"
+          # Only the session namespaces this workflow exists for (its push
+          # trigger), and only a name git itself accepts as a branch.
+          case "$BRANCH" in
+            claude/*|codex/*|chatgpt/*) ;;
+            *) echo "::error title=Invalid input::branch must be under claude/, codex/ or chatgpt/"; exit 1 ;;
+          esac
+          if [ "${#BRANCH}" -gt 200 ] || ! [[ "$BRANCH" =~ ^[A-Za-z0-9._/-]+$ ]] \
+              || ! git check-ref-format --branch "$BRANCH" >/dev/null 2>&1; then
+            echo "::error title=Invalid input::branch is not a valid branch name"
+            exit 1
+          fi
+          MODE="${MODE_INPUT:-}"
           # A push is the automatic door and merges; the manual door defaults to
           # audit, so a human dispatching it to look never merges by accident.
-          [ "${{ github.event_name }}" = "push" ] && MODE="merge"
+          [ "$GITHUB_EVENT_NAME" = "push" ] && MODE="merge"
+          case "${MODE:-audit}" in
+            audit|merge) MODE="${MODE:-audit}" ;;
+            *) echo "::error title=Invalid input::mode must be audit or merge"; exit 1 ;;
+          esac
           echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
           echo "mode=$MODE" >> "$GITHUB_OUTPUT"
           echo "Branch: \`$BRANCH\` · mode: \`$MODE\`" >> "$GITHUB_STEP_SUMMARY"

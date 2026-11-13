@@ -1352,3 +1352,82 @@ def test_a_scoped_check_catches_a_dead_ref_when_the_change_touched_active(tmp_pa
     hits, misses = lifecycle.scope_findings(
         root, lifecycle.queue_findings(root), ["draft/feature/flywheel/other.md"])
     assert hits == [] and len(misses) == 1
+
+
+def test_the_same_prompt_queued_twice_is_drift(tmp_path):
+    """A double tap on the dashboard, or a hand edit that forgot the first
+    entry: one task ranked twice. Matched by basename, as the lifecycle
+    matches a draft/ ref whose prompt has moved to active/."""
+    root = _tree(tmp_path, draft=["feature/flywheel/sprocket_calibration.md"],
+                 active=["sprocket_calibration.md"])
+    _queue(root, (
+        "## 1. Sprockets\n- kind: prompt\n"
+        "- ref: draft/feature/flywheel/sprocket_calibration.md\n\n"
+        "## 2. Sprockets again\n- kind: prompt\n"
+        "- ref: active/sprocket_calibration.md\n"))
+    msgs = [f.msg for f in lifecycle.queue_findings(root)]
+    assert len(msgs) == 1 and "again" in msgs[0] and "keep one" in msgs[0]
+
+
+# --------------------------------------------------------------------------- #
+# goals.md — the human's goals, which briefs copy (PyAutoMind#565)
+# --------------------------------------------------------------------------- #
+GOALS_HEAD = (
+    "# Goals\n\nProse.\n\n```markdown\n## <n>. <goal>\n- epics: <slug>\n```\n\n"
+)
+
+
+def _goals(root: Path, body: str) -> Path:
+    (root / "goals.md").write_text(GOALS_HEAD + body)
+    return root
+
+
+def test_well_formed_goals_are_clean_and_parse_in_order(tmp_path):
+    root = _goals(tmp_path, (
+        "## 1. Land the flywheel rework\n- epics: flywheel-rework\n"
+        "- tags: gears, sprockets\n- note: first\n\n"
+        "## 2. Clear the review queue\n"))
+    (root / "epics.md").write_text("# Epics\n\n## flywheel-rework\n- title: x\n")
+    problems, warnings = lifecycle.goals_findings(root)
+    assert problems == [] and warnings == []
+    goals = lifecycle.goals_entries(root)
+    assert [g["text"] for g in goals] == ["Land the flywheel rework",
+                                          "Clear the review queue"]
+    assert goals[0]["epics"] == ["flywheel-rework"]
+    assert goals[0]["tags"] == ["gears", "sprockets"]
+
+
+def test_an_empty_or_absent_goals_file_is_not_drift(tmp_path, monkeypatch):
+    assert lifecycle.goals_findings(tmp_path) == ([], [])
+    _goals(tmp_path, "")
+    assert lifecycle.goals_findings(tmp_path) == ([], [])
+    _as_root(monkeypatch, tmp_path)
+    assert lifecycle.cmd_check(None) == 0
+
+
+def test_malformed_goals_fail_check(tmp_path, monkeypatch, capsys):
+    root = _goals(tmp_path, (
+        "## 1. Fine\n- colour: blue\n\n"
+        "## 3. Skipped a number\nstray prose under a goal\n\n"
+        f"## 4. {'x' * 201}\n"))
+    msgs = [f.msg for f in lifecycle.goals_findings(root)[0]]
+    assert any("unknown field `colour:`" in m for m in msgs)
+    assert any("numbered [1, 3, 4]" in m for m in msgs)
+    assert any("not a `- key: value` field" in m for m in msgs)
+    assert any("201 characters" in m for m in msgs)
+    _as_root(monkeypatch, root)
+    assert lifecycle.cmd_check(SimpleNamespace(paths=["goals.md"])) == 1
+    assert "goals.md:" in capsys.readouterr().out
+
+
+def test_more_than_ten_goals_is_drift(tmp_path):
+    root = _goals(tmp_path, "".join(f"## {n}. Goal {n}\n" for n in range(1, 12)))
+    msgs = [f.msg for f in lifecycle.goals_findings(root)[0]]
+    assert msgs == ["goals.md: 11 goals — at most 10"]
+
+
+def test_a_goal_naming_an_unknown_epic_only_warns(tmp_path):
+    root = _goals(tmp_path, "## 1. Gears\n- epics: no-such-epic\n")
+    problems, warnings = lifecycle.goals_findings(root)
+    assert problems == []
+    assert len(warnings) == 1 and "no-such-epic" in warnings[0].msg
