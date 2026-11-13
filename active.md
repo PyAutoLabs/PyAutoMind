@@ -70,3 +70,16 @@
   - Jammy2211.github.io: feature/homepage-flow-polish
 - prompt: active/homepage_flow_polish.md
 - tier: judge — merge mode: human /prm
+
+## dashboard-input
+- issue: https://github.com/PyAutoLabs/PyAutoMind/issues/565
+- issued: 2026-11-13
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/dashboard-input
+- prompt: active/dashboard_priority_and_goals_input.md
+- epic: autonomous-orchestrators (pre-M3 build 2: editable dashboard, design B — Actions-only token; human chose 2026-11-13)
+- tier: judge — merge mode: human /prm
+- repos:
+  - PyAutoMind: feature/dashboard-input
+  - PyAutoBrain: feature/dashboard-input

@@ -8,8 +8,9 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: issued
 Filed: 2026-11-13
+Issued: 2026-11-13
 Epic: autonomous-orchestrators
 Consequence: judge
 Witness: (a) tapping a task's ★ on the published `dashboard.html` and submitting adds or moves one `kind: prompt` entry in `queue.md` in one bot commit, `python3 scripts/lifecycle.py check` stays green, and the input issue is closed with a "queued at #n" comment; a ref that resolves to no prompt gets an error comment and no commit (workflow test on fixtures); (b) the dashboard marks queued tasks ★ with their position and shows `goals.md` at the top (golden-HTML test in PyAutoBrain intake); (c) `pyauto-brain batch brief` prefills `brief.goals:` from `goals.md` and `batch brief --check` passes on the result
