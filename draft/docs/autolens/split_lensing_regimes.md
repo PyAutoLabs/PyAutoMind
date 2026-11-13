@@ -21,6 +21,7 @@ Status: planned (epic — execute via the child prompts below)
 Consequence: judge
 Review-minutes: 25
 Unattended: needs-slicing
+Lane: any
 Filed: 2026-07-25 (backfilled from git)
 
 Reorganize the PyAutoLens (and mirrored PyAutoGalaxy) documentation and example

@@ -1,5 +1,7 @@
 # Codex gpt-6-astra adversary review — A1 (PyAutoFit#1675), 2026-10-08
 
+Lane: any
+
 Independent-adversary leg over branch `feature/search-ext-a1-declare-gate` at c03f027a1 (`codex exec --sandbox read-only -c model_reasoning_effort=high`, run from the task worktree root). Enacted the same day; see the PR and `complete/2026/10/search-ext-a1-declare-gate.md` once closed.
 
 ## §1 Verdict — FINDINGS

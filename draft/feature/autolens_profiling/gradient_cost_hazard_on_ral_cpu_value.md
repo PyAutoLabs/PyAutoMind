@@ -16,6 +16,7 @@ Filed: 2026-11-02
 Consequence: judge
 Review-minutes: 20
 Unattended: never
+Lane: ral
 
 grad/forward > 4x (the pre-registered hazard threshold) only on RAL CPU: cluster/source_plane 11.6x (A100 3.0x), weak/isothermal 4.8x (A100 1.9x), multi_galaxy/mge/hst 4.2x (A100 2.8x), imaging/delaunay_nn/hst 4.09x (A100 2.0x; RAL 413890_4). Every other leg is 1.2–3.7x. Profile the backward pass of these four on RAL CPU (per-step backward breakdown, as the 6a plan reserved for hazard cells) and decide whether a lever (forward-mode for few-parameter cells, remat, jit boundaries) is worth a task.
 

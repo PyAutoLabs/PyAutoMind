@@ -12,6 +12,7 @@ Status: formalised
 Consequence: judge
 Review-minutes: 25
 Unattended: needs-slicing
+Lane: any
 Blocked-by: PyAutoLens#565    # the Preloads API landing in PyAutoArray — CLOSED 2026-07-10
 Filed: 2026-06-08 (backfilled from git)
 

@@ -1,4 +1,5 @@
 Filed: 2026-11-05 (phase 2 of autolens_profiling#519; Pulse task `PyAutoPulse/tasks/numba_num_threads_pin_and_delaunay_nn_remeasure.md` steps 2-4)
+Lane: any
 
 # Re-measure the DelaunayNN numba Optimal cell on the Nautilus worker route (after the release carrying PyAutoArray#677)
 

@@ -1,6 +1,7 @@
 # 01 — PyAutoFit non-linear search architecture audit
 
 Scope: `fit/PyAutoFit` @ `main`, package `autofit/non_linear/` (search, samples, paths,
+Lane: any
 updater, result, config, tests). Read-only audit, 2026-10-07. All paths below are relative to
 `fit/PyAutoFit/autofit/non_linear/` unless prefixed otherwise.
 

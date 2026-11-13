@@ -1,5 +1,7 @@
 # LensTwin survey 02 — autolens_assistant and autolens_workspace (read-only, 2026-10-28)
 
+Lane: ral
+
 Clones surveyed: autolens_assistant `e0ea1c4` (2026-10-26), autolens_workspace `dd9c54e` (2026-10-26). AA = autolens_assistant, WS = autolens_workspace. Survey only; nothing was edited. Cited from the `lenstwin` epic ledger and report as `surveys/02 §n`.
 
 **Short version:** nothing named "digital twin", "what if" or "simulate from a fit" exists in either repo. The nearest existing pieces are the subhalo sensitivity `SimulateImaging` class (simulates new data from `result.instance` plus the real PSF and mask), the `mass_stellar_dark` example family including `al.util.chaining.mass_light_dark_from`, the `files/tracer.json` + `image/dataset.fits` reload route, and AA's own COSMOS-Web Ring MGE+SIE+shear+MGE fit, which writes `tracer.json` and `summary.json`.

@@ -1,5 +1,7 @@
 # HPC campaign epic: what the codebase already has
 
+Lane: ral
+
 This is a read-only survey. Paths are relative to `/home/jammy/Code/PyAutoLabs`. Line numbers are from the canonical `main` checkouts as of 2026-09-27.
 
 ## A. PyAutoFit (`fit/PyAutoFit/autofit`)

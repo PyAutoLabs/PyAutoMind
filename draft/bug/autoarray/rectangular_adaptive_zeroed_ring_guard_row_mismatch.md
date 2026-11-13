@@ -13,6 +13,7 @@ Status: formalised
 Consequence: judge
 Epic: cluster-strong-lensing
 Filed: 2026-10-28
+Lane: any
 
 Found during Source & Cluster arc phase 4a (PyAutoArray#659); human said "file this yes" (2026-10-28).
 

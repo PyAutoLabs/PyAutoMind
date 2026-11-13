@@ -10,6 +10,7 @@ Status: formalised
 Consequence: judge
 Filed: 2026-11-12
 Blocked-by: delaunay-nn-numba-remeasure, gradient-correctness-sweep (autolens_profiling claims)
+Lane: any
 
 Phase 2 of PyAutoHeart#335 (record complete/2026/11/eigen-flag-removal.md), deferred by
 the human on 2026-11-12 until those tasks release autolens_profiling, so a timing

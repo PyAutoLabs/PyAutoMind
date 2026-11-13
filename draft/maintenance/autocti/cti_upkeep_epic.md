@@ -28,6 +28,7 @@ Consequence: judge
 Witness: phase 1 — `pip install autocti` into a clean Python 3.13 venv resolves the lockstep `YYYY.M.D.n` release (not 2024.11.13.2) with `autofit>=`/`autoarray>=` floors, and `pyauto-heart readiness` lists PyAutoCTI among the release-gate libraries; phase 3 — Hands `python_matrix.yml` and Heart's board carry PyAutoCTI / autocti_workspace / autocti_workspace_test rows in every group PyAutoLens sits in, green; phase 4 — PyAutoPulse `registry.yaml` has a `cti` instance reading `profiling-summary@3` from `autocti_profiling`
 Review-minutes: 30
 Unattended: needs-slicing
+Lane: any
 Epic: cti-upkeep
 Filed: 2026-11-04
 

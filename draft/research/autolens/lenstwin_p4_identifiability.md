@@ -15,6 +15,7 @@ Consequence: judge
 Witness: on the no-misspecification configuration (simulate and fit with MGE stellar `lmp` basis at fixed solved intensities + one free M/L, `NFWSph` with free κ_s and r_s centred on the light, shear free, MGE source), the injected M/L and κ_s lie inside the 3σ posterior intervals for every seed; the `gNFWSph` configuration reports the posterior width on `inner_slope`; every run directory carries `files/twin.json` so truth joins posterior through the aggregator
 Review-minutes: 60
 Unattended: never
+Lane: ral
 Epic: lenstwin
 Phase: 4
 Parent: draft/feature/autolens/lenstwin_epic.md

@@ -1,5 +1,7 @@
 # HPC campaign epic — research report and phased plan
 
+Lane: ral
+
 Written 2026-09-27 by the Fable architect session. No code edited. Companion to the prompt in `hpc_campaign_epic.md`. Four Opus research surveys fed this report (prior art, carbon methodology, codebase, euclid_dr1 glue + Slurm mechanics); their full text is not reproduced here, the citations are.
 
 ## 0. Summary

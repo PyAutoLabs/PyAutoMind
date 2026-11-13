@@ -15,6 +15,7 @@ Consequence: glance
 Witness: the loggaussian family of `autofit_workspace_test/scripts/graphical/analytic_gaussian_priors.py` passes every autofit-EP row at a 0.15 / b 0.25 (log sigma row, mu, x_0..x_4, and the E[sigma] hard cap), so the script ends `PARITY: PASS (48/48)` and comes off `config/build/no_run.yaml`. Also a unit test in `test_autofit/graphical/functionality/test_moment_projection.py`: a two-variable factor N(x | 0, s) whose scale s carries a `LogGaussianPrior` / `TransformedMessage` cavity; E and Var of log s and of x from the moments projection match `scipy.integrate.quad` over log s to 1e-6.
 Review-minutes: 3
 Unattended: ready
+Lane: any
 Epic: graphical-ep
 Filed: 2026-09-30
 Parent: complete/2026/09/ep-moment-projection.md (PyAutoFit#1654, library PR #1656, workspace PR autofit_workspace_test#105)

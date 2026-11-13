@@ -4,6 +4,7 @@ Status: approved 2026-11-12 by live human; one gated 12-fit RAL job authorized, 
 Target: @autofit_profiling
 Consequence: judge
 Continuation: issue16 / draft PR17, nautilus-spawn-training-pool.
+Lane: any
 Existing worktree: .worktrees/nautilus-spawn-training-pool/autofit_profiling
 Existing branch: feature/nautilus-spawn-training-pool (clean fc508ae)
 Outside Pulse. Merge stays human. No release or default change.

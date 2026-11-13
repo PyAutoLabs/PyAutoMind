@@ -6,6 +6,7 @@ Repos:
 - PyAutoDNA
 Priority: low
 Consequence: notify
+Lane: ral
 
 Source: dna-policies-section (PyAutoDNA#6, complete/2026/11/dna-policies-section.md). The DNA board lists the RAL
 shared environment (`ral-login`) as stale (last observed 2026-10-08). It runs jax 0.11.2, so once re-observed the

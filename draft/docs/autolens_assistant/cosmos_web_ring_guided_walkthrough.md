@@ -1,5 +1,7 @@
 # COSMOS-Web Ring: image-first guided walkthrough (notebook + greeting skill)
 
+Lane: any
+
 **Work type:** docs · **Target:** `lens/autolens_assistant` (plus one-line follow-ups in
 `lens/HowToLens` and the website) · **Filed:** 2026-10-20 from a review session.
 

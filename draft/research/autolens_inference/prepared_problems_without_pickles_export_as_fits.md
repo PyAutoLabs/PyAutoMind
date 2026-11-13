@@ -14,6 +14,7 @@ Consequence: glance
 Witness: a prepared problem rebuilt from .fits + json reproduces the pickled problem's log likelihood at a fixed instance (|dlogL| < 1e-8) and is <10% of the pickle's size on disk
 Review-minutes: 3
 Unattended: needs-slicing
+Lane: ral
 
 # Prepared problems without pickles: export as .fits + metadata
 

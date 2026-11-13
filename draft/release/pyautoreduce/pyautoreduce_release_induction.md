@@ -18,6 +18,7 @@ Status: formalised
 Consequence: judge
 Review-minutes: 20
 Unattended: never
+Lane: any
 Filed: 2026-08-24
 
 ## Original request (verbatim)

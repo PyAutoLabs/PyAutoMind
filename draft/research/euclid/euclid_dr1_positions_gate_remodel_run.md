@@ -12,6 +12,7 @@ Autonomy: human-required
 Priority: high
 Status: formalised
 Filed: 2026-09-24
+Lane: wsl-data
 Unblocked 2026-09-25: phase 1 gate shipped (`complete/2026/09/euclid-dr1-positions-gate.md`, PR #104) and phase 2 finder shipped (`complete/2026/09/euclid-dr1-positions-finder.md`, PR #106). Run on the rewritten positions: the finder rollout (rewrite_positions over dr1_sep1_rest + dr1_sep1_top1000, RAL array 350731 onwards, then rsync) was still in progress at close-out — confirm it has landed first.
 Witness: positions_meta.json sidecars exist for every dataset/dr1_sep1_rest tile, positions_review.csv lists the review tiles (~280 expected), and the resubmitted locked set's vis_lp fits no longer end on the penalty plateau (f_live < 1, N_eff > 1) for >= 85% of the 736 previously locked tiles.
 

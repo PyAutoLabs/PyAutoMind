@@ -20,6 +20,7 @@ Status: phases 1-3 SHIPPED; autogalaxy_workspace markdown/ residue open
 Consequence: judge
 Review-minutes: 25
 Unattended: needs-slicing
+Lane: any
 Filed: 2026-08-23
 
 ## Provenance

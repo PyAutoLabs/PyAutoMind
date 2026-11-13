@@ -1,5 +1,7 @@
 # COSMOS-Web Ring walkthrough — phase 3: HowToLens schematic + one opening story everywhere
 
+Lane: any
+
 **Work type:** docs · **Targets:** `lens/HowToLens`, `lens/autolens_assistant` (README,
 `docs/setup/first_prompts.md`), hand-off for jamesnightingale.net (outside the workspace) ·
 **Consequence:** judge

@@ -14,6 +14,7 @@ Consequence: judge
 Witness: on autolens_workspace_test jax_test imaging with a standard (non-linear) Sersic lens light + rectangular pixelized source, `dataset.apply_sparse_operator()` and the dense path give the same figure of merit to <= 1e-8 relative (or the mismatch is shown to be a documented, raised-on misuse)
 Review-minutes: 5
 Unattended: never
+Lane: any
 Filed: 2026-11-02
 
 Seen during PyAutoArray#671 (not chased). Repro `Science/scratch/rectangular_gradient_rtu_sparse_2026-11-02/repro.py` (no MGE env var → Sersic lens light): `jax_test` imaging, mask 3.5", os_lp=4 / os_pix=1, `RectangularBilinearAdaptImage` 20x20 + Constant reg, border relocator.

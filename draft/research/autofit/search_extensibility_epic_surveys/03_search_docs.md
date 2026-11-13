@@ -1,5 +1,7 @@
 # 03 — How non-linear searches are documented across PyAuto, and how that must scale
 
+Lane: any
+
 Read-only survey, 2026-10-07. All repos on `main`. Paths relative to `/home/jammy/Code/PyAutoLabs`.
 
 ## 0. Ground truth: the live search roster

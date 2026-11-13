@@ -11,6 +11,7 @@ Status: formalised
 Consequence: judge
 Review-minutes: 25
 Unattended: needs-slicing
+Lane: any
 Filed: 2026-04-27 (backfilled from git)
 
 The new workspace smoke-test GitHub Actions (added via feature/smoke-test-ci) surfaced

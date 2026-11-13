@@ -4,6 +4,7 @@ Repos: @autolens_workspace @autogalaxy_workspace @PyAutoLens @PyAutoGalaxy
 Type: docs
 Consequence: judge
 Status: planning
+Lane: wsl-data
 
 ## Original request (verbatim)
 

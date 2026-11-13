@@ -14,6 +14,7 @@ Status: formalised
 Consequence: judge
 Review-minutes: 25
 Unattended: never
+Lane: any
 Filed: 2026-07-17 (backfilled from git)
 
 Build the remote-MCP deployment tiers (2 and 3) for the read-only results-inspector MCP

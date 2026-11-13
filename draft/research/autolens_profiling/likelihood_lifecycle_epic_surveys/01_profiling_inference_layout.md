@@ -1,5 +1,7 @@
 # Survey 01 — autolens_profiling and autolens_inference layout census (2026-10-21, Explore worker, read-only)
 
+Lane: ral
+
 Root paths: `lens/autolens_profiling` (P) and `lens/autolens_inference` (I). All file:line references are relative to those roots.
 
 **Three findings matter most for the plan:**

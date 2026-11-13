@@ -14,6 +14,7 @@ Consequence: judge
 Witness: the legacy (non-standard-size) numba production presets either build the same cell as `production_standard_data` (and their pins are re-recorded), or are retired with their pins, and the decision is recorded in the profiling wiki
 Review-minutes: 15
 Unattended: never
+Lane: any
 Epic: likelihood-lifecycle
 Filed: 2026-10-24
 

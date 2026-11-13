@@ -14,6 +14,7 @@ Consequence: glance
 Witness: the new interferometer advanced example script runs end to end under the workspace smoke harness and shows a simulated dataset with a Gaussian primary beam fitted with and without the beam
 Review-minutes: 3
 Unattended: ready
+Lane: any
 Filed: 2026-10-21
 Blocked-by: PyAutoArray release containing https://github.com/PyAutoLabs/PyAutoArray/pull/644
 

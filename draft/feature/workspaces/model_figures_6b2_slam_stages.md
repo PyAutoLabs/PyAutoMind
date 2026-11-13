@@ -15,6 +15,7 @@ Consequence: judge
 Witness: none — decision-first (inline figures in ~200 SLaM stage functions vs flipping `model_figure: true` in `output.yaml`); the witness follows the human's pick.
 Review-minutes: 20
 Unattended: needs-decision
+Lane: any
 Epic: model-figures
 Phase: 6b2
 Filed: 2026-09-13

@@ -16,6 +16,7 @@ Consequence: judge
 Witness: on a FactorGraphModel fit whose model is shared across factors (e.g. autocti_workspace `scripts/dataset_1d/advanced/database/start_here.py` output), `samples.with_paths(["0.cti.trap_list"])` and `samples.without_paths(["3.cti.ccd"])` both return the filtered parameters, for every factor prefix, matching `with_paths(["3.cti.trap_list"])`; the commented-out example in `scripts/dataset_1d/advanced/database/examples/samples.py` is switched back on.
 Review-minutes: 10
 Unattended: never
+Lane: any
 Filed: 2026-11-05
 
 Found 2026-11-05 while fixing the autocti database examples (PyAutoCTI#121).

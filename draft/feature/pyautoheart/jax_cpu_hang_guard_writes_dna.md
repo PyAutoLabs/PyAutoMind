@@ -8,6 +8,7 @@ Repos:
 - autolens_profiling
 Priority: medium
 Consequence: glance
+Lane: any
 
 Source: research PyAutoNerves#213 (decision PyAutoDNA decisions/jax-cpu-policy-2026-11.md, evidence RAL 415009 + laptop pilot, DNA research records). Filed 2026-11-10/11 from the research close-out; needs /intake to formalise.
 

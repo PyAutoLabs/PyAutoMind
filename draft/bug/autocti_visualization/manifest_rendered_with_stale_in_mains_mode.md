@@ -12,6 +12,7 @@ Consequence: judge
 Epic: cti-upkeep
 Phase: 5
 Filed: 2026-10-23
+Lane: any
 
 Since autocti_visualization#8, `render.yml` renders from the library mains by
 default (autocti is not on PyPI past 2024.11). `gallery/gallery_build.py` still

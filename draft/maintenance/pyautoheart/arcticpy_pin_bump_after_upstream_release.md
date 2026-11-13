@@ -17,6 +17,7 @@ Status: formalised
 Consequence: judge
 Review-minutes: 20
 Unattended: never
+Lane: any
 Epic: cti-upkeep
 Phase: 2b
 Blocked-by: a new arcticpy release on PyPI (draft/release/arcticpy/upstream_packaging_pr.md)

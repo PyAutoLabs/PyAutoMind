@@ -25,6 +25,7 @@ Consequence: judge
 Witness: phase 0 — `pyauto-pulse check` accepts a `profiling-summary@3` catalogue in which every record carries `class` and `status` and refuses a second `current` record on one key, the Pulse board's first selector is Class with Optimal as the default, and a test in autolens_profiling asserts `results/<dataset_type>/<variant>/` mirrors `scripts/<dataset_type>/<variant>/`; phase 5 — `al.Setup.auto(dataset)` on a CPU-only host and on an A100 host resolves to the setup the Pulse designation decision names optimal for that likelihood and regime, prints the two-line setup banner at fit start, writes `setup.json` beside the search output, and a parity test proves the library rule table equals the Pulse designations
 Review-minutes: 30
 Unattended: never
+Lane: ral
 Epic: likelihood-lifecycle
 Filed: 2026-10-21
 

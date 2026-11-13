@@ -15,6 +15,7 @@ Consequence: glance
 Witness: `scripts/cluster/source_science.py` runs to completion against the A2744 start_here fit and the simulated cluster under the smoke profile, producing all five magnification products (point mu per multiple image, point mu at arbitrary (y,x), arc-segment area magnification, posterior-draw errors, per-source-plane magnification and uncertainty maps); every magnification call passes an explicit per-source `plane_redshift`, so a grep finds no reliance on the final-plane default (#678).
 Review-minutes: 3
 Unattended: ready
+Lane: any
 Epic: cluster-strong-lensing
 Phase: 9
 Parent: draft/feature/autolens/source_cluster_arc.md

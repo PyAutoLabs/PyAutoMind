@@ -1,5 +1,7 @@
 # COSMOS-Web Ring walkthrough — phase 2: image-first greeting skill + assistant-wide rule
 
+Lane: any
+
 **Work type:** docs · **Target:** `lens/autolens_assistant` · **Consequence:** judge
 **Epic:** [`cosmos_web_ring_guided_walkthrough.md`](cosmos_web_ring_guided_walkthrough.md).
 Depends on phase 1 (vendored images, committed tracers, notebook sections).

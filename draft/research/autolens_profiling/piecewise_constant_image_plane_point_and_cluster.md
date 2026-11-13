@@ -16,6 +16,7 @@ Filed: 2026-11-02
 Consequence: judge
 Review-minutes: 20
 Unattended: never
+Lane: ral
 
 cluster/image_plane/simple and point_source_image/image_plane/simple give FD = 0 at fine steps (sweep class zero: h <= 1e-3 for cluster, <= 1e-5 for point_source_image) while autodiff returns a nonzero gradient (cluster ~-7.6 on a direction); coarse 1e-2..3e-3 FD is within ~3% for point_source_image. The point solver's discrete image matching makes the likelihood piecewise constant, so the autodiff value is not a usable sampler gradient. Decide what the gradient sampler phase should do with image-plane point likelihoods (use source-plane, smooth the matching, or exclude) and whether the autodiff output there should be flagged.
 

@@ -16,6 +16,7 @@ Consequence: judge
 Witness: A mechanism is identified with a controlled reproduction: the stalled stage's likelihood is evaluated on the frozen live set / prior draws from the cancelled runs' Nautilus checkpoints and compared with the converging routes (A100 jax_gpu_sparse_wtilde; seed 0 numba). Either the cause is fixed and a fresh rerun converges, or the stall is recorded as a limitation of the numba W~ route with its trigger.
 Review-minutes: 20
 Unattended: never
+Lane: ral
 Epic: likelihood-lifecycle
 Phase: 4
 Parent: draft/research/autolens_profiling/likelihood_lifecycle_epic.md

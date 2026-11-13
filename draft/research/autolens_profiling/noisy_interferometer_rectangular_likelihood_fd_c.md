@@ -16,6 +16,7 @@ Filed: 2026-11-02
 Consequence: judge
 Review-minutes: 20
 Unattended: never
+Lane: ral
 
 interferometer/rectangular/sma (12 parameters, |grad| ~0.23): f differs by ~1e-6 at h=1e-8 and the FD error grows as h shrinks — the likelihood is numerically noisy at the level FD needs, so the sweep cannot assess the gradient. Find the noise source (w-tilde / sparse precision, solver tolerance, float accumulation) and whether it matters for samplers (noise vs |grad| scale).
 

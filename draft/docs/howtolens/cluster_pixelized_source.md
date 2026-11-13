@@ -17,6 +17,7 @@ Status: formalised
 Consequence: judge
 Review-minutes: 25
 Unattended: needs-slicing
+Lane: any
 Epic: cluster-strong-lensing
 Phase: 12
 Parent: draft/feature/autolens/source_cluster_arc.md

@@ -15,6 +15,7 @@ Status: formalised
 Consequence: judge
 Review-minutes: 20
 Unattended: no
+Lane: any
 Filed: 2026-09-10
 
 Found independently by two agents during `/ci_speedup` (2026-09-10). Filed as

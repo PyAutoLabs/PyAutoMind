@@ -14,6 +14,7 @@ Consequence: notify
 Witness: `scripts/guides/advanced/multi_plane.py`'s Richardson section, run against the released PyAutoGalaxy carrying #593, prints agreement (~3e-4 vs the reference), quotes the old wrong numbers as history, no longer says "not fixed", and its regenerated notebook runs through the runner.
 Review-minutes: 0
 Unattended: ready
+Lane: any
 Blocked-by: a PyAutoGalaxy release carrying PR#593 reaching the installed stack (workspace follows the released library, not main)
 Filed: 2026-08-29
 

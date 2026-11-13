@@ -16,6 +16,7 @@ Status: formalised
 Consequence: judge
 Review-minutes: 25
 Unattended: needs-slicing
+Lane: any
 
 James explicitly agreed on 2026-10-10 that @PyAutoBroca should cover all communication and documentation, including workspaces, with assistants as one part of that scope. File and scope this expansion for later development. Do not implement it during intake or describe it as already live.
 

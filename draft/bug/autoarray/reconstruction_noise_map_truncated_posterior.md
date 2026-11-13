@@ -13,6 +13,7 @@ Status: draft
 Consequence: judge
 Review-minutes: 20
 Unattended: never
+Lane: any
 Filed: 2026-08-28
 
 - Status: split out of reconstruction-noise-map-solver-mismatch at close-out 2026-08-28 — Defects 2/3 and docs shipped (PyAutoArray#472/#473/#493), recorded in complete/2026/08/reconstruction-noise-map-solver-mismatch.md; this is what remains.

@@ -18,6 +18,7 @@ Filed: 2026-10-30
 Witness: A results note in autolens_inference compares, over several simulated lenses with known truth and full end-to-end lens-model fits (free mass model, regularization hyper-parameters fitted), the Bayesian evidence, mass-parameter bias and coverage, source-reconstruction error and magnification error of MaternKernel / GaussianKernel (and MaternSparse where applicable) on adaptive rectangular meshes with distances measured on (a) the stretched lattice (current behaviour) and (b) the true source-plane pixel centres, with Delaunay + the same kernels as a reference, and ends in a recommendation (keep lattice / switch / expose as an option) that a human decides.
 Review-minutes: 30
 Unattended: no
+Lane: wsl-data
 
 ## Original request (human, 2026-10-30)
 

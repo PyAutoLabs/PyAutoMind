@@ -19,6 +19,7 @@ Priority: high
 Status: campaign map — phases route through /start_dev one at a time; this file is never issued itself
 Epic: hpc-campaign
 Filed: 2026-09-27
+Lane: ral
 
 Research report and phased epic plan: `hpc_campaign_epic_report.md` alongside this file (written 2026-09-27 by the Fable architect session; no code edited).
 

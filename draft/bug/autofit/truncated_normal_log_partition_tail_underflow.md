@@ -14,6 +14,7 @@ Consequence: judge
 Witness: `TruncatedNormalMessage(mean=-7374.18, sigma=384.36, lower_limit=0, upper_limit=100).log_partition()` returns a finite value within 1e-9 of the `scipy.special.log_ndtr`-based reference (log Z ≈ -187.93, full log-partition ≈ 2.07) instead of -inf; `python3 scripts/ensemble_seed.py --seed 25 --columns ep` in `analytic_gaussian` (mode projection) records a finite EP `log_evidence` on every step and `ep_diagnostics.results` carries no `evidence_nonfinite:` line; the posterior rows stay bit-identical to `results/ens_n5/seed_0025.json`.
 Review-minutes: 5
 Unattended: ready
+Lane: any
 Epic: graphical-ep
 Filed: 2026-10-23
 Parent: PyAutoFit#1713 (reporting fix: NaN evidence named once per fit)

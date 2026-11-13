@@ -1,6 +1,7 @@
 # euclid_dr1 HPC glue + Slurm mechanics — research report
 
 Scope: read-only survey of `/mnt/c/Users/Jammy/Science/euclid_dr1` (the science clone) plus SchedMD docs. No cluster commands were run. File refs are relative to the clone root unless absolute.
+Lane: ral
 
 ---
 

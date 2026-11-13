@@ -20,6 +20,7 @@ Consequence: judge
 Witness: A written decision (adopt / reject / adopt behind an opt-in) backed by (1) a simulated lens written to a standard north-up FITS (CD1_1<0, CD2_2>0), loaded under the current and the proposed convention, showing centre, position angle, e1/e2 and gamma_1/gamma_2 in each and the sky-frame values; (2) an inventory of everything a row flip would change for existing users (stored results, files/wcs.json, positions files, centre and angle priors, mask centres, saved simulated datasets, aggregator outputs, COOLEST export), each marked breaks / migrates / unaffected; (3) a migration and versioning plan if adopted.
 Review-minutes: 15
 Unattended: needs-slicing
+Lane: any
 Filed: 2026-10-30
 
 Do NOT start before Euclid DR1 v1.0 ships (target ~2026-11-09). Split out of

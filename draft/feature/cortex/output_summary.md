@@ -3,6 +3,7 @@
 Targets: @PyAutoBrain @PyAutoCortex
 Type: feature
 Filed: 2026-10-14
+Lane: any
 
 Parent request and verbatim user text: `complete/2026/11/cortex-projects-dashboard-parent.md` (parent closed 2026-11-05; phase 1 shipped in PyAutoBrain#526).
 

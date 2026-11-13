@@ -1,5 +1,7 @@
 # Likelihood lifecycle 2b — interferometer campaign: survey and draft plan
 
+Lane: ral
+
 Read-only survey, 2026-10-25, autolens_profiling main `29caed89`, PyAutoArray tags 2026.10.23.1 / 2026.10.25.1.
 Nothing was edited, pushed, submitted or SSH'd. Paths below are relative to `lens/autolens_profiling` unless prefixed.
 

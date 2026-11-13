@@ -1,6 +1,7 @@
 # 02 — JAX interface across PyAutoFit non-linear searches (read-only audit)
 
 Repo: `fit/PyAutoFit` @ `main` (e807cc531). Paths below are relative to `fit/PyAutoFit/` unless
+Lane: any
 prefixed. Auditor ran four small probes (scratchpad `jaxprobe.py`, `fgprobe.py`); no file in any repo
 was edited. Line numbers are as of that commit.
 

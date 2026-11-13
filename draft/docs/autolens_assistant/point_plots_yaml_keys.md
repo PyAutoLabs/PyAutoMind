@@ -4,6 +4,7 @@ Consequence: glance
 Autonomy: safe-capped
 Status: planned
 Builds-on: complete/2026/10/point-plots-yaml-keys.md
+Lane: any
 
 @autolens_assistant
 

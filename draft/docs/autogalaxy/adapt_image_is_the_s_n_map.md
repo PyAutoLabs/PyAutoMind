@@ -19,6 +19,7 @@ Consequence: glance
 Witness: no `__Adapt Images__` cell in any workspace still calls the adapt image an "estimate of the
 Review-minutes: 3
 Unattended: needs-slicing
+Lane: any
 
 Adapt image is the S/N map: fix the prose and assess the AdaptImages API Say that the adapt image is the source S/N map — workspaces, library docstrings and the AdaptImages API
 

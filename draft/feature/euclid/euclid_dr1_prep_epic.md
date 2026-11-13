@@ -21,6 +21,7 @@ Status: draft
 Consequence: judge
 Review-minutes: 25
 Unattended: needs-slicing
+Lane: ral
 Epic: euclid-dr1-prep
 Filed: 2026-08-28
 

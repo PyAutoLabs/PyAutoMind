@@ -12,6 +12,7 @@ Consequence: glance
 Witness: A newly opened PR into any PyAutoLabs repo's default branch shows Copilot under Reviewers with no manual request, checked on one human-opened and one agent-opened PR.
 Review-minutes: 3
 Unattended: ready
+Lane: any
 Difficulty: large
 Autonomy: human-required
 Priority: normal

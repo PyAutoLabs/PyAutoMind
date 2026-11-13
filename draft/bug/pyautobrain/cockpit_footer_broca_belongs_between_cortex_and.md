@@ -13,6 +13,7 @@ Consequence: notify
 Witness: in PyAutoBrain config/policy.yaml `board: boards:`, `broca` is listed immediately after `cortex` and immediately before `memory`; every published cockpit board footer shows Cortex → Broca → Memory.
 Review-minutes: 0
 Unattended: ready
+Lane: any
 
 On most cockpit dashboards the organ footer strip shows Broca at the far right next to Gut. It should sit between Cortex and Memory.
 

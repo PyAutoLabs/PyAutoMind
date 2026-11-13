@@ -1,5 +1,7 @@
 # Survey 02 — PyAutoPulse and PyAutoInsight data model, contracts, dashboards, boundaries; the Brain profiling conductor (2026-10-21, Explore worker, read-only)
 
+Lane: ral
+
 **Top-line findings for the epic:**
 - **Pulse has no recency mechanism.** No field or logic expresses "latest", "superseded" or "best" for a result. The only lever is the producer-supplied setup `role`, which the JS uses as a ranking nudge. The default view is a heuristic curated choice, not "latest". Most records (100 of 112) have no `measured_at`, so a day-zero reset has to be expressed by the producer: a new field such as a setup or record `status` (current/archived), or a role. Pulse cannot infer it.
 - **Insight already separates current from history.** It does this through a per-record `archived` flag. The HST work is already partly cleaned up: the folders `archive/2026-09-24_superseded_by_cleanslate` and `..._pre_likelihood_speedup` exist.

@@ -13,6 +13,7 @@ Status: formalised
 Consequence: judge
 Review-minutes: 25
 Unattended: needs-slicing
+Lane: any
 Filed: 2026-05-28 (backfilled from git)
 
 ## Status

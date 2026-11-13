@@ -17,6 +17,7 @@ Status: formalised
 Consequence: judge
 Review-minutes: 25
 Unattended: needs-slicing
+Lane: any
 Epic: cluster-pointsolver-speed
 Origin-phase: cluster-strong-lensing phase 1
 Parent: https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/cluster_pointsolver_speed.md

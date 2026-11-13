@@ -31,6 +31,7 @@ Epic: search-extensibility
 Status: draft
 Filed: 2026-10-07
 Witness: A toy search written from `search/_template/search.py` against the `run(ctx)` hook passes both conformance layers (metadata on every CI leg, backend execution on the full-extras legs) in ~120–250 backend lines with ~6 PyAutoFit edits (search file, registry entry, export line, unit test, integration script, workspace section); every `af`-exported search declares capability attributes enforced by the `fit()` gate after the test-mode bypass (REQUIRED+numpy raises; JAX analyses get a lazily jitted objective); docs/api/searches.rst, the RTD capability matrix, a fenced roster block in llms.txt and the three assistants' rosters are generated from the versioned search manifest, pinned to the installed autofit release, leaving ~10–12 hand-edited documentation files per new search (from ~51); autofit_inference publishes the `gaussian_x3_blend` + `gaussian_x3_separated` wave-1 pilot and then scored wave-2 verdicts (50 seeds, thresholds frozen after the pilot; success rate with Wilson intervals, wall per right answer with bootstrap intervals) to PyAutoInsight as instance `fit`, and autofit_profiling publishes `profiling-summary@2` to PyAutoPulse as instance `fit` with the epic-1 ranked bottleneck table (B4a).
+Lane: any
 
 Research report and phased epic plan: `search_extensibility_epic_report.md` alongside this file (written 2026-10-07 by the architect session from four Opus surveys in `search_extensibility_epic_surveys/`; no code edited).
 
