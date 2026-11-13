@@ -1,7 +1,7 @@
 """Contract tests for `scripts/dashboard_input.py` — the dashboard's write door.
 
 A ★ tap or a Goals edit on the published dashboard opens a labelled issue;
-`dashboard_input.yml` runs this script on that `issues: opened` event, whose
+`dashboard_input.yml` runs this script on that `issues: labeled` event, whose
 body anyone holding a leaked token can choose (PyAutoMind#565, design C). So
 most of what is tested here is
 refusal: every malformed, traversing or shell-shaped input must change nothing
@@ -108,7 +108,8 @@ def mind(tmp_path):
     return root
 
 
-LOGIN = "the-human"
+LOGIN = "mind-dashboard-bot"  # the dedicated machine account
+HUMAN = "the-human"
 
 
 def _body(op="", ref="", goals="", nonce=""):
@@ -123,18 +124,21 @@ def _body(op="", ref="", goals="", nonce=""):
     return "\n".join(lines) + "\n"
 
 
-def _event(body, login=LOGIN, labels=("dashboard-input",), user_type="User", number=7):
-    return {"action": "opened",
-            "issue": {"number": number, "body": body,
+def _event(body, login=LOGIN, labels=("dashboard-input",), user_type="User", number=7,
+           action="labeled", label="dashboard-input", sender=None, state="open",
+           locked=False):
+    return {"action": action, "label": {"name": label},
+            "sender": {"login": sender or login},
+            "issue": {"number": number, "body": body, "state": state, "locked": locked,
                       "user": {"login": login, "type": user_type},
                       "labels": [{"name": n} for n in labels]}}
 
 
 def _run(root, op="", ref="", goals="", nonce="", verb="apply", extra=(),
-         event=None, allowed=LOGIN):
+         event=None, allowed=LOGIN, human=HUMAN):
     env = {k: v for k, v in os.environ.items()
            if not k.startswith(("DASHBOARD_", "GITHUB_"))}
-    env.update(LIFECYCLE_NO_GH="1", DASHBOARD_INPUT_LOGIN=allowed)
+    env.update(LIFECYCLE_NO_GH="1", DASHBOARD_INPUT_LOGIN=allowed, HUMAN_LOGIN=human)
     args = []
     if verb == "apply":
         path = root.parent / "event.json"
@@ -329,8 +333,13 @@ GOOD_BODY = _body("star", "draft/feature/flywheel/widget_polish.md", nonce="d-1"
 ISSUE_REFUSED = [
     ("another author", _event(GOOD_BODY, login="someone-else"), LOGIN),
     ("no configured login", _event(GOOD_BODY), ""),
+    ("the human's own login", _event(GOOD_BODY, login=HUMAN), HUMAN),
     ("a bot author", _event(GOOD_BODY, user_type="Bot"), LOGIN),
-    ("no label", _event(GOOD_BODY, labels=("bug",)), LOGIN),
+    ("another label added", _event(GOOD_BODY, label="bug"), LOGIN),
+    ("an opened event", _event(GOOD_BODY, action="opened"), LOGIN),
+    ("labelled by someone else", _event(GOOD_BODY, sender="someone-else"), LOGIN),
+    ("a closed issue relabelled", _event(GOOD_BODY, state="closed"), LOGIN),
+    ("a locked issue", _event(GOOD_BODY, locked=True), LOGIN),
     ("no marker", _event(GOOD_BODY.replace(di.ISSUE_MARKER, "hello")), LOGIN),
     ("an unknown key", _event(GOOD_BODY + "run: touch PWNED\n"), LOGIN),
     ("a repeated key", _event(GOOD_BODY + "op: goals\n"), LOGIN),
@@ -351,8 +360,65 @@ def test_an_issue_not_from_the_page_or_the_human_is_refused(mind, why, event, al
     assert not (mind / "PWNED").exists()
 
 
+def test_the_dashboard_account_must_not_be_the_human(mind):
+    """A leaked token for the human's own account could steer shifts and
+    write rulings as the human: the door stays shut until the two differ."""
+    res = _run(mind, event=_event(GOOD_BODY, login="the-human"),
+               allowed="the-human", human="THE-HUMAN")
+    assert res.returncode == 1
+    assert ("::error title=Dashboard input refused::DASHBOARD_INPUT_LOGIN is the "
+            "human's own login") in res.stdout
+    res = _run(mind, event=_event(GOOD_BODY), human="")
+    assert res.returncode == 1 and "no HUMAN_LOGIN is configured" in _result(mind)
+    assert (mind / "queue.md").read_text() == QUEUE
+
+
+@pytest.mark.parametrize("count,ok", [(1, True), (30, True), (31, False), (500, False)])
+def test_issue_spam_past_the_hourly_cap_is_refused_unprocessed(count, ok):
+    seen = []
+
+    def fetch(url):
+        seen.append(url)
+        return {"total_count": count}
+    now = di._dt.datetime(2026, 11, 13, 12, 0, tzinfo=di._dt.timezone.utc)
+    if ok:
+        assert di.rate_check("example-owner/PyAutoMind", "t", now, fetch) == count
+    else:
+        with pytest.raises(di.Refused, match="at most 30"):
+            di.rate_check("example-owner/PyAutoMind", "t", now, fetch)
+    assert "label%3Adashboard-input" in seen[0]
+    assert "created%3A%3E%3D2026-11-13T11%3A00%3A00Z" in seen[0]
+
+
+def test_an_unreadable_rate_refuses_rather_than_waves_through():
+    def broken(url):
+        raise OSError("search is down")
+    with pytest.raises(di.Refused, match="could not count"):
+        di.rate_check("example-owner/PyAutoMind", "t", fetch=broken)
+    with pytest.raises(di.Refused):
+        di.rate_check("not a repo", "t", fetch=lambda u: {"total_count": 0})
+
+
+def test_a_rate_refusal_locks_as_spam(mind, tmp_path):
+    """A count that cannot be read refuses (here: no usable repository), and
+    the workflow is told to lock the issue as spam, with nothing applied."""
+    out, event = tmp_path / "gh_output", tmp_path / "e.json"
+    event.write_text(json.dumps(_event(GOOD_BODY)))
+    env = {k: v for k, v in os.environ.items() if not k.startswith(("GITHUB_", "GH_"))}
+    env.update(GITHUB_OUTPUT=str(out), DASHBOARD_INPUT_LOGIN=LOGIN, HUMAN_LOGIN=HUMAN,
+               GITHUB_REPOSITORY="bad repo")
+    res = subprocess.run(
+        [sys.executable, str(mind / "scripts" / "dashboard_input.py"), "apply",
+         "--root", str(mind), "--rate-check", "--event", str(event)],
+        cwd=mind, capture_output=True, text=True, env=env)
+    assert res.returncode == 1
+    assert out.read_text().splitlines()[-2:] == ["outcome=refused", "lock=spam"]
+    assert (mind / "queue.md").read_text() == QUEUE
+
+
 def test_the_login_match_ignores_case_and_goals_bodies_parse(mind):
-    assert _run(mind, event=_event(GOOD_BODY, login="The-Human")).returncode == 0
+    assert _run(mind, event=_event(GOOD_BODY, login="Mind-Dashboard-Bot",
+                                   sender="mind-dashboard-bot")).returncode == 0
     body = _body("goals", goals="Ship the gearbox fix\nClear the review queue")
     assert _run(mind, event=_event(body)).returncode == 0
     assert "## 1. Ship the gearbox fix" in (mind / "goals.md").read_text()
@@ -435,19 +501,22 @@ def test_no_issue_text_reaches_a_shell():
 def test_the_workflow_runs_on_a_labelled_issue_from_the_default_branch_only():
     wf = _workflow("dashboard_input.yml")
     trigger = wf.get("on") or wf.get(True)
-    assert trigger == {"issues": {"types": ["opened"]}}, \
+    assert trigger == {"issues": {"types": ["labeled"]}}, \
         "no workflow_dispatch: a dispatch picks the ref, an issue event cannot"
-    assert "dashboard-input" in wf["jobs"]["apply"]["if"]
+    assert "github.event.label.name == 'dashboard-input'" in wf["jobs"]["apply"]["if"]
     assert wf["permissions"] == {"contents": "write", "issues": "write",
                                  "actions": "write"}
     assert wf["concurrency"] == {"group": "dashboard-input",
                                  "cancel-in-progress": False}
     steps = wf["jobs"]["apply"]["steps"]
-    login = next(s for s in steps if s.get("id") == "apply")["env"]
-    assert login == {"DASHBOARD_INPUT_LOGIN": "${{ vars.DASHBOARD_INPUT_LOGIN }}"}
-    # Every run answers and closes its issue, whatever happened.
-    answer = next(s for s in steps if s.get("name") == "Answer and close the issue")
+    apply = next(s for s in steps if s.get("id") == "apply")
+    assert apply["env"] == {"DASHBOARD_INPUT_LOGIN": "${{ vars.DASHBOARD_INPUT_LOGIN }}",
+                            "HUMAN_LOGIN": "${{ vars.HUMAN_LOGIN }}"}
+    assert "--rate-check" in apply["run"]
+    # Every run answers, closes and locks its issue, whatever happened.
+    answer = next(s for s in steps if s.get("name") == "Answer, close and lock the issue")
     assert answer["if"] == "always()"
+    assert 'gh issue lock "$ISSUE_NUMBER"' in answer["run"]
 
 
 def test_dashboard_refresh_runs_when_the_queue_or_goals_change():

@@ -2,9 +2,9 @@
 """Apply one dashboard input to `queue.md` or `goals.md` — or refuse it.
 
 The published Mind dashboard has a ★ on each task row and a Goals box. A tap
-opens one issue in this repository, labelled `dashboard-input`, with a token
-that holds Issues permission on this repository and nothing else. The
-`issues: opened` event runs `.github/workflows/dashboard_input.yml` from the
+opens one issue in this repository and labels it `dashboard-input`, with a
+machine account's token that holds Issues permission on this repository and
+nothing else. The `issues: labeled` event runs `.github/workflows/dashboard_input.yml` from the
 default branch, which calls this script on the event payload, commits what it
 wrote and closes the issue with a one-line result (PyAutoMind#565, design C).
 
@@ -13,8 +13,11 @@ issue with any body, so this script is the whole of what stands between them
 and the two files. The rules:
 
 - inputs are read from the event JSON in Python, never through a shell;
-- the issue must carry the `dashboard-input` label and be opened by the one
-  configured login (`DASHBOARD_INPUT_LOGIN`, a repository variable);
+- the `dashboard-input` label must just have been added to an open, unlocked
+  issue, and the issue opened and labelled by the one
+  configured machine account (`DASHBOARD_INPUT_LOGIN`), which must not be
+  the human's login (`HUMAN_LOGIN`) — both repository variables;
+- past `RATE_MAX` inputs in the last hour, an input is refused unprocessed;
 - the body is a fixed `key: value` form (`ISSUE_MARKER` first, then `op:`,
   `ref:` or `goals:`, `nonce:`); any other line refuses it;
 - `op` is one of `star`, `unstar`, `goals`;
@@ -174,25 +177,83 @@ def prompt_title(root: Path, ref: str) -> str:
 # --------------------------------------------------------------------------- #
 # the issue
 # --------------------------------------------------------------------------- #
-def parse_issue(event: dict, allowed_login: str) -> dict:
-    """The input an `issues: opened` payload carries, or Refused.
+def check_logins(allowed_login: str, human_login: str) -> None:
+    """The dashboard writes as a dedicated machine account, never the human.
+
+    The browser token belongs to `DASHBOARD_INPUT_LOGIN`. If that were the
+    human's own login (`HUMAN_LOGIN`), a leaked token could speak as the human
+    everywhere the human's word counts — shift steering commands, rulings in
+    issue threads. So both must be configured, and they must differ."""
+    if not allowed_login:
+        raise Refused("no DASHBOARD_INPUT_LOGIN is configured — nobody may "
+                      "write through the dashboard")
+    if not human_login:
+        raise Refused("no HUMAN_LOGIN is configured — the dashboard account "
+                      "cannot be checked against the human's login")
+    if allowed_login.strip().lower() == human_login.strip().lower():
+        raise Refused("DASHBOARD_INPUT_LOGIN is the human's own login — the "
+                      "dashboard token must belong to a dedicated machine account")
+
+
+#: Issue spam: GitHub cannot be told to refuse an issue, so past this many
+#: dashboard inputs in the last hour every new one is closed unprocessed.
+RATE_MAX = 30
+
+
+def rate_check(repo: str, token: str, now: "_dt.datetime | None" = None,
+               fetch=None) -> int:
+    """How many `dashboard-input` issues were opened in the last hour (this
+    one included); Refused past RATE_MAX, or when the count cannot be read."""
+    import urllib.parse
+    import urllib.request
+    now = now or _dt.datetime.now(_dt.timezone.utc)
+    since = (now - _dt.timedelta(hours=1)).strftime("%Y-%m-%dT%H:%M:%SZ")
+    if not re.fullmatch(r"[A-Za-z0-9-]+/[A-Za-z0-9._-]+", repo or ""):
+        raise Refused("rate: no repository to count inputs in")
+    q = f"repo:{repo} is:issue label:{LABEL} created:>={since}"
+    url = "https://api.github.com/search/issues?per_page=1&q=" + urllib.parse.quote(q)
+
+    def _get(u):
+        req = urllib.request.Request(u, headers={
+            "Accept": "application/vnd.github+json",
+            "Authorization": f"Bearer {token}", "User-Agent": "mind-dashboard-input"})
+        with urllib.request.urlopen(req, timeout=20) as r:
+            return json.loads(r.read().decode("utf-8"))
+    try:
+        count = int((fetch or _get)(url).get("total_count"))
+    except Exception:
+        raise Refused("rate: could not count recent dashboard inputs; tap again")
+    if count > RATE_MAX:
+        raise Refused(f"rate: {count} dashboard inputs in the last hour — at most "
+                      f"{RATE_MAX}; this one is closed unprocessed")
+    return count
+
+
+def parse_issue(event: dict, allowed_login: str, human_login: str = "") -> dict:
+    """The input an `issues: labeled` payload carries, or Refused.
 
     Who and what are both checked here: the label, the one configured author
-    (a person, not a bot), and a body that is exactly the page's form."""
+    (a machine account that is not the human, and a User, not an App), and a
+    body that is exactly the page's form."""
+    check_logins(allowed_login, human_login)
     issue = event.get("issue")
     if not isinstance(issue, dict):
         raise Refused("event: not an issue event")
     number = issue.get("number")
     if not isinstance(number, int) or number <= 0:
         raise Refused("event: no issue number")
-    labels = {lab.get("name") for lab in issue.get("labels") or []
-              if isinstance(lab, dict)}
-    if LABEL not in labels:
-        raise Refused(f"issue: not labelled {LABEL}")
+    # The trigger is the label being added (Triage can add one; only push
+    # access can set one at creation). A re-label of an answered issue, or
+    # someone else adding the label to the machine account's issue, is no input.
+    if event.get("action") != "labeled" or \
+            (event.get("label") or {}).get("name") != LABEL:
+        raise Refused(f"event: not the {LABEL} label being added")
+    if issue.get("state") != "open" or issue.get("locked"):
+        raise Refused("issue: already answered (closed or locked)")
+    sender = event.get("sender") or {}
+    if str(sender.get("login", "")).lower() != allowed_login.lower():
+        raise Refused("event: the label was not added by the dashboard account")
     user = issue.get("user") or {}
-    if not allowed_login:
-        raise Refused("no DASHBOARD_INPUT_LOGIN is configured — nobody may "
-                      "write through the dashboard")
     if user.get("type") != "User" or str(user.get("login", "")).lower() \
             != allowed_login.lower():
         raise Refused("issue: not opened by the configured dashboard login")
@@ -542,6 +603,9 @@ def main(argv=None) -> int:
                     help="apply: write the commit message here when a file changed")
     ap.add_argument("--result-file", type=Path, default=None,
                     help="apply: write the one-line issue result here")
+    ap.add_argument("--rate-check", action="store_true",
+                    help="apply: refuse past RATE_MAX inputs in the last hour "
+                         "(GitHub search; needs GITHUB_REPOSITORY and GH_TOKEN)")
     a = ap.parse_args(argv)
     root = a.root.resolve()
 
@@ -561,9 +625,18 @@ def main(argv=None) -> int:
     if event_path is None:
         print("apply: --event or GITHUB_EVENT_PATH is required", file=sys.stderr)
         return 2
+    lock = "resolved"
     try:
         event = json.loads(event_path.read_text(encoding="utf-8"))
-        req = parse_issue(event, os.environ.get("DASHBOARD_INPUT_LOGIN", ""))
+        req = parse_issue(event, os.environ.get("DASHBOARD_INPUT_LOGIN", ""),
+                          os.environ.get("HUMAN_LOGIN", ""))
+        if a.rate_check:
+            try:
+                rate_check(os.environ.get("GITHUB_REPOSITORY", ""),
+                           os.environ.get("GH_TOKEN", ""))
+            except Refused:
+                lock = "spam"
+                raise
         result = apply(root, req["op"], ref=req["ref"], goals_raw=req["goals"],
                        nonce=req["nonce"])
     except (Refused, ValueError, OSError) as e:
@@ -575,6 +648,7 @@ def main(argv=None) -> int:
         _summary(f"## Dashboard input refused\n\n{_clean_line(reason)}\n\n"
                  "Nothing was committed.\n")
         _output("outcome", "refused")
+        _output("lock", lock)
         return 1
     if a.result_file:
         a.result_file.write_text(result_line(result) + "\n", encoding="utf-8")
@@ -583,6 +657,7 @@ def main(argv=None) -> int:
             result, os.environ.get("GITHUB_ACTOR", ""), os.environ.get("GITHUB_RUN_ID", ""),
             req["number"]), encoding="utf-8")
     _output("outcome", "applied" if result["changed"] else "unchanged")
+    _output("lock", "resolved")
     print(result["summary"])
     _summary(f"## Dashboard input — {result['op']}\n\n{result['summary']}\n")
     return 0

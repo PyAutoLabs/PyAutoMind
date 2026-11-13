@@ -1,9 +1,11 @@
 name: Dashboard Input
 
 # The write side of the published dashboard (PyAutoMind#565, design C). A ★
-# tap or a Goals edit on dashboard.html opens ONE issue here, labelled
-# `dashboard-input`, with a fine-grained token holding Issues permission on
-# this repo and nothing else. This workflow — not the browser — validates it,
+# tap or a Goals edit on dashboard.html opens ONE issue here, then labels it
+# `dashboard-input`, with a fine-grained token of a dedicated machine account
+# holding Issues permission on this repo and nothing else. The trigger is the
+# LABEL event, not `opened`: GitHub silently drops labels set at creation by
+# anyone without push access, and the machine account has only Triage. This workflow — not the browser — validates it,
 # writes queue.md or goals.md, commits as the bot, and closes the issue with a
 # one-line result the page reads back. Reference: policy/github_tokens.md
 # "The dashboard input token".
@@ -15,11 +17,14 @@ name: Dashboard Input
 #
 # SECURITY. The issue body is attacker-controlled (a leaked token can open
 # any issue), so:
-#   - the job runs only for the label, which only a user with push access
-#     can set when opening an issue;
+#   - the job runs only when the `dashboard-input` label is added, which
+#     takes at least Triage on this repo; the script also requires the issue
+#     to be open and unlocked and both its opener and the labeller to be the
+#     machine account;
 #   - scripts/dashboard_input.py reads the event JSON itself (no issue text
 #     passes through a shell or an expression), refuses any author but
-#     vars.DASHBOARD_INPUT_LOGIN, refuses anything but a real draft/ or
+#     vars.DASHBOARD_INPUT_LOGIN — a dedicated machine account, refused if it
+#     equals vars.HUMAN_LOGIN — refuses anything but a real draft/ or
 #     active/ prompt ref or at most 10 short plain goals, and refuses a write
 #     that adds `lifecycle.py check` drift;
 #   - the guard step refuses a tree in which anything but queue.md or
@@ -30,11 +35,14 @@ name: Dashboard Input
 # closes any OLDER open dashboard-input issue as superseded (its run was
 # dropped; the page reverts and says "tap again"). The page itself keeps one
 # issue in flight and coalesces taps behind it, so one device never trips this.
-# An issue that changes nothing is closed "no change" with no commit.
+# An issue that changes nothing is closed "no change" with no commit. Every
+# input issue is closed AND locked. GitHub cannot be made to refuse issue
+# creation, so past 30 inputs in an hour (GitHub search) each new one is
+# refused unprocessed and locked as spam; each still costs one short run.
 
 on:
   issues:
-    types: [opened]
+    types: [labeled]
 
 concurrency:
   group: dashboard-input
@@ -52,7 +60,7 @@ jobs:
   apply:
     if: >-
       github.repository == 'PyAutoLabs/PyAutoMind'
-      && contains(github.event.issue.labels.*.name, 'dashboard-input')
+      && github.event.label.name == 'dashboard-input'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     env:
@@ -74,6 +82,8 @@ jobs:
               gh issue comment "$n" --repo "$GITHUB_REPOSITORY" --body \
                 "dashboard-input: superseded — not applied (a newer input's run replaced this one's); tap again"
               gh issue close "$n" --repo "$GITHUB_REPOSITORY" --reason "not planned"
+              gh issue lock "$n" --repo "$GITHUB_REPOSITORY" --reason resolved \
+                || echo "::warning::could not lock #$n"
             fi
           done
 
@@ -81,6 +91,7 @@ jobs:
         id: apply
         env:
           DASHBOARD_INPUT_LOGIN: ${{ vars.DASHBOARD_INPUT_LOGIN }}
+          HUMAN_LOGIN: ${{ vars.HUMAN_LOGIN }}
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
@@ -93,7 +104,7 @@ jobs:
             rm -f "$msg"
             # Exit 1 is a refusal: the result line says why, the step
             # summary too, and nothing is written.
-            if ! python3 scripts/dashboard_input.py apply \
+            if ! python3 scripts/dashboard_input.py apply --rate-check \
                 --event "$GITHUB_EVENT_PATH" --message-file "$msg" --result-file "$result"; then
               exit 0
             fi
@@ -122,8 +133,10 @@ jobs:
           echo "dashboard-input: refused — main moved under five attempts in a row; tap again" > "$result"
           echo "outcome=refused" >> "$GITHUB_OUTPUT"
 
-      - name: Answer and close the issue
+      - name: Answer, close and lock the issue
         if: always()
+        env:
+          LOCK_REASON: ${{ steps.apply.outputs.lock }}
         run: |
           set -euo pipefail
           result="$RUNNER_TEMP/dashboard_result.txt"
@@ -136,6 +149,9 @@ jobs:
           else
             gh issue close "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --reason completed
           fi
+          case "${LOCK_REASON:-}" in spam) reason=spam ;; *) reason=resolved ;; esac
+          gh issue lock "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --reason "$reason" \
+            || echo "::warning::could not lock the issue"
 
       - name: Re-render the dashboard
         if: steps.apply.outputs.outcome == 'applied'

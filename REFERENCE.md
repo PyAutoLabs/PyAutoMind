@@ -478,10 +478,11 @@ history unattended will not record it.
   (numbered 1..n, at most 10 goals of at most 200 characters). Public, like
   the rest of the Mind.
 - **The dashboard writes both.** A ★ on the published `dashboard.html`, or an
-  edit in its Goals box, opens one `dashboard-input` issue with a browser
-  token that holds Issues permission on this repo only. The `issues: opened`
-  run of `.github/workflows/dashboard_input.yml` (always the default branch's
-  copy) checks the author against `vars.DASHBOARD_INPUT_LOGIN`, validates the
+  edit in its Goals box, opens one issue and labels it `dashboard-input`,
+  with a dedicated machine account's token that holds Issues permission on
+  this repo only. The `issues: labeled` run of `.github/workflows/dashboard_input.yml` (always the default branch's
+  copy) checks the author against `vars.DASHBOARD_INPUT_LOGIN` (a dedicated
+  machine account, never `vars.HUMAN_LOGIN`), validates the
   body (`scripts/dashboard_input.py`), refuses a write that adds
   `lifecycle.py check` drift or touches any other path, commits as the bot and
   closes the issue with a one-line result. Token scope, storage and what a leaked one can do:

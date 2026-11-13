@@ -219,6 +219,8 @@ names a file, so writing the record — the dispatch — stays the human's act.
 A goal whose line was last written by a `Via: mind-dashboard` commit is free
 text from a web page, so it is emitted **commented out** with "from dashboard,
 last edited <date>": a worker never sees it until the human uncomments it.
+When provenance cannot be read (no git, or the blame does not line up), every
+goal is emitted that way, marked "provenance unknown".
 `--new` also prints, on stderr, how the goals changed since the newest brief.
 `brief --check` warns when goal 1 of `goals.md` is missing from a brief,
 unless goal 1 came from the dashboard.
