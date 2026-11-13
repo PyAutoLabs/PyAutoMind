@@ -70,3 +70,16 @@
   - Jammy2211.github.io: feature/homepage-flow-polish
 - prompt: active/homepage_flow_polish.md
 - tier: judge — merge mode: human /prm
+
+## ep-projected-model-shared-prior
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1773
+- issued: 2026-11-13
+- session: Claude Code desktop (WSL)
+- status: library-dev
+- prompt: active/ep_projected_model_shared_prior_keyerror.md
+- worktree: /home/jammy/Code/PyAutoLabs-wt/ep-projected-model-shared-prior
+- tier: judge — merge mode: human /prm
+- repos:
+  - PyAutoFit: feature/ep-projected-model-shared-prior
+- conflict-override: PyAutoFit also claimed by three-autos-public-framing (docs, human-review); human approved 2026-11-13 a separate worktree off main (non-overlapping files: samples.py + tests)
+- unblocks: Science/development/ep_gnfw_slope N=3 EP smoke

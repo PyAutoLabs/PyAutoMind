@@ -18,6 +18,8 @@ Review-minutes: 10
 Unattended: never
 Lane: any
 Filed: 2026-11-13
+Issued: 2026-11-13
+Issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1773
 
 Found 2026-11-13 in the `ep_gnfw_slope` science project's first EP smoke test (50
 stellar + gNFW twins of Euclid DR1 lenses, one shared inner slope). Blocks that project.
