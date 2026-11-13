@@ -9,7 +9,10 @@ top of the page.
 Write nothing here that should not be read by anyone.
 
 It is written from the dashboard's Goals box (one goal per line, top first,
-through `.github/workflows/dashboard_input.yml`) or by hand. Either way,
+through a `dashboard-input` issue and `.github/workflows/dashboard_input.yml`)
+or by hand. A goal last written from the dashboard is **not** copied into a
+brief as-is: `batch brief --new` leaves it commented out, marked "from
+dashboard, last edited <date>", for the human to confirm. Either way,
 `scripts/lifecycle.py check` validates it: goals are numbered 1..n with no
 gaps, there are at most 10, a goal is one line of at most 200 characters, and
 the only fields are the three below. An empty list is valid.

@@ -216,7 +216,12 @@ batch brief --new <slot> --review-at <ISO>` writes a skeleton brief whose
 their `epics:`/`tags:` (or `fill-idle` when no goal names any) and safe
 defaults (`merge-cap: 0`) for the rest; it prints to stdout unless `--out`
 names a file, so writing the record — the dispatch — stays the human's act.
-`brief --check` warns when goal 1 of `goals.md` is missing from a brief.
+A goal whose line was last written by a `Via: mind-dashboard` commit is free
+text from a web page, so it is emitted **commented out** with "from dashboard,
+last edited <date>": a worker never sees it until the human uncomments it.
+`--new` also prints, on stderr, how the goals changed since the newest brief.
+`brief --check` warns when goal 1 of `goals.md` is missing from a brief,
+unless goal 1 came from the dashboard.
 
 `backlog:` decides what happens once the named tasks are done or blocked:
 `none` — nothing more; `fill-idle` — the planner's own ranking, under every

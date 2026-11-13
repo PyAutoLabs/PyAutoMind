@@ -2,32 +2,37 @@
 """Apply one dashboard input to `queue.md` or `goals.md` — or refuse it.
 
 The published Mind dashboard has a ★ on each task row and a Goals box. A tap
-dispatches `.github/workflows/dashboard_input.yml` through the GitHub REST API
-with a token that holds Actions permission on this repository and nothing
-else; that workflow calls this script, then commits what it wrote
-(PyAutoMind#565, design B).
+opens one issue in this repository, labelled `dashboard-input`, with a token
+that holds Issues permission on this repository and nothing else. The
+`issues: opened` event runs `.github/workflows/dashboard_input.yml` from the
+default branch, which calls this script on the event payload, commits what it
+wrote and closes the issue with a one-line result (PyAutoMind#565, design C).
 
-**Every input is untrusted.** Anyone holding a leaked token can dispatch the
-workflow with any inputs they like, so this script is the whole of what stands
-between them and the two files. The rules:
+**Every input is untrusted.** Anyone holding a leaked token can open such an
+issue with any body, so this script is the whole of what stands between them
+and the two files. The rules:
 
-- inputs arrive through the environment, never through a shell command line
-  (`DASHBOARD_OP`, `DASHBOARD_REF`, `DASHBOARD_GOALS`, `DASHBOARD_NONCE`);
+- inputs are read from the event JSON in Python, never through a shell;
+- the issue must carry the `dashboard-input` label and be opened by the one
+  configured login (`DASHBOARD_INPUT_LOGIN`, a repository variable);
+- the body is a fixed `key: value` form (`ISSUE_MARKER` first, then `op:`,
+  `ref:` or `goals:`, `nonce:`); any other line refuses it;
 - `op` is one of `star`, `unstar`, `goals`;
 - a `ref` is a `draft/…/<name>.md` or `active/<name>.md` path of a real prompt
-  file inside this checkout, matched character by character — no `..`, no
-  symlink, no shell or markdown metacharacter can pass;
+  file inside this checkout, matched whole — no `..`, no symlink, no shell or
+  markdown metacharacter, no trailing newline can pass;
 - goals are at most 10 lines of at most 200 characters, with no control or
   format characters and none of `` ` $ < > \\ | ``;
 - the result must not add a `lifecycle.py check` finding about either file;
 - only `queue.md` and `goals.md` may change (`guard` re-checks the git tree
   before the workflow commits).
 
-A refusal writes nothing, prints one `::error` annotation the dashboard reads
-back through the check-run API, and exits 1. A refusal reason never quotes the
-raw input, so no input can forge a workflow command.
+A refusal writes nothing and leaves a one-line `refused — <reason>` result
+for the issue; a reason never quotes the raw input, so no input can forge a
+workflow command or markup in the comment.
 
-    python3 scripts/dashboard_input.py apply [--root DIR] [--message-file F]
+    python3 scripts/dashboard_input.py apply --event FILE [--root DIR]
+        [--message-file F] [--result-file F]
     python3 scripts/dashboard_input.py guard [--root DIR]
 
 Exit codes: 0 applied (or already so), 1 refused, 2 usage.
@@ -68,6 +73,12 @@ GOAL_FORBIDDEN = set("`$<>\\|")
 #: because the file numbers goals itself.
 _GOAL_MARKER_RE = re.compile(r"^(?:\d+[.)]|[-*+]|#+)\s+")
 
+#: The issue the page opens: this label, this first body line.
+LABEL = "dashboard-input"
+ISSUE_MARKER = "<!-- mind-dashboard-input v1 -->"
+BODY_MAX = 6000
+_BODY_FIELD_RE = re.compile(r"([a-z]+):[ \t]*(.*)")
+
 QUEUE_ENTRY_RE = re.compile(r"^##\s+(\d+)\.\s+(.+?)\s*$")
 QUEUE_FIELD_RE = re.compile(r"^-\s+(kind|ref|note):\s*(.+?)\s*$")
 GOAL_ENTRY_RE = re.compile(r"^##\s+(\d+)\.\s+(.+?)\s*$")
@@ -94,7 +105,7 @@ def validate_ref(root: Path, ref: str, *, must_exist: bool) -> str:
         raise Refused("ref: missing")
     if len(ref) > REF_MAX:
         raise Refused(f"ref: longer than {REF_MAX} characters")
-    if not REF_RE.match(ref):
+    if not REF_RE.fullmatch(ref):
         raise Refused("ref: not a draft/<work-type>/<target>/<name>.md or "
                       "active/<name>.md prompt path")
     if Path(ref).name in ("README.md", "AGENTS.md"):
@@ -158,6 +169,65 @@ def prompt_title(root: Path, ref: str) -> str:
                     return title
         break
     return stem
+
+
+# --------------------------------------------------------------------------- #
+# the issue
+# --------------------------------------------------------------------------- #
+def parse_issue(event: dict, allowed_login: str) -> dict:
+    """The input an `issues: opened` payload carries, or Refused.
+
+    Who and what are both checked here: the label, the one configured author
+    (a person, not a bot), and a body that is exactly the page's form."""
+    issue = event.get("issue")
+    if not isinstance(issue, dict):
+        raise Refused("event: not an issue event")
+    number = issue.get("number")
+    if not isinstance(number, int) or number <= 0:
+        raise Refused("event: no issue number")
+    labels = {lab.get("name") for lab in issue.get("labels") or []
+              if isinstance(lab, dict)}
+    if LABEL not in labels:
+        raise Refused(f"issue: not labelled {LABEL}")
+    user = issue.get("user") or {}
+    if not allowed_login:
+        raise Refused("no DASHBOARD_INPUT_LOGIN is configured — nobody may "
+                      "write through the dashboard")
+    if user.get("type") != "User" or str(user.get("login", "")).lower() \
+            != allowed_login.lower():
+        raise Refused("issue: not opened by the configured dashboard login")
+    body = issue.get("body") or ""
+    if not isinstance(body, str) or len(body) > BODY_MAX:
+        raise Refused(f"issue body: missing or longer than {BODY_MAX} characters")
+    lines = body.replace("\r\n", "\n").split("\n")
+    while lines and not lines[0].strip():
+        lines.pop(0)
+    if not lines or lines[0].strip() != ISSUE_MARKER:
+        raise Refused("issue body: not the dashboard's form")
+    fields: "dict[str, str]" = {}
+    goals: "list[str] | None" = None
+    for line in lines[1:]:
+        if goals is not None:
+            if line.startswith("- "):
+                goals.append(line[2:])
+                continue
+            if not line.strip():
+                continue
+        if not line.strip():
+            continue
+        m = _BODY_FIELD_RE.fullmatch(line.strip())
+        if not m or m.group(1) not in ("op", "ref", "nonce", "goals") \
+                or m.group(1) in fields:
+            raise Refused("issue body: a line that is not one of op:, ref:, "
+                          "nonce:, goals: (each once)")
+        fields[m.group(1)] = m.group(2).strip()
+        if m.group(1) == "goals":
+            if fields["goals"]:
+                raise Refused("issue body: goals are listed as `- ` lines")
+            goals = []
+    return {"number": number, "op": fields.get("op", ""),
+            "ref": fields.get("ref", ""), "nonce": fields.get("nonce", ""),
+            "goals": "\n".join(goals or [])}
 
 
 # --------------------------------------------------------------------------- #
@@ -346,7 +416,7 @@ def apply(root: Path, op: str, ref: str = "", goals_raw: str = "",
     day = today or _dt.date.today().isoformat()
     if op not in OPS:
         raise Refused("op: not one of " + ", ".join(OPS))
-    if not NONCE_RE.match(nonce):
+    if not NONCE_RE.fullmatch(nonce):
         raise Refused("nonce: letters, digits and '-' only, at most 40")
     queue_md, goals_md = root / "queue.md", root / "goals.md"
     for f in (queue_md, goals_md):
@@ -413,10 +483,13 @@ def _restore(before_text: dict) -> None:
             f.write_text(text, encoding="utf-8")
 
 
-def commit_message(result: dict, actor: str = "", run_id: str = "") -> str:
+def commit_message(result: dict, actor: str = "", run_id: str = "",
+                   issue: int = 0) -> str:
     actor = re.sub(r"[^A-Za-z0-9\[\]-]", "", actor)[:40]
     run_id = re.sub(r"[^0-9]", "", run_id)[:20]
     lines = [result["message"], "", result["summary"], ""]
+    if issue:
+        lines.append(f"Input-issue: #{int(issue)}")
     if actor:
         lines.append(f"Dispatched-by: {actor}")
     if run_id:
@@ -437,12 +510,12 @@ def changed_paths(root: Path) -> "list[str]":
     return out
 
 
-def _annotate_refusal(reason: str) -> None:
-    """One `::error` line the dashboard reads back, plus the job summary."""
-    safe = _clean_line(reason).replace("::", ": :").replace("%", "%25")
-    print(f"::error title=Dashboard input refused::{safe}")
-    _summary(f"## Dashboard input refused\n\n{_clean_line(reason)}\n\n"
-             "Nothing was committed.\n")
+def result_line(result: "dict | None", reason: str = "") -> str:
+    """The issue's one-line result comment; the page reads its first word."""
+    if result is None:
+        return f"dashboard-input: refused — {_clean_line(reason)}"
+    word = "applied" if result["changed"] else "no change"
+    return f"dashboard-input: {word} — {result['summary']}"
 
 
 def _summary(text: str) -> None:
@@ -452,45 +525,64 @@ def _summary(text: str) -> None:
             fh.write(text)
 
 
+def _output(key: str, value: str) -> None:
+    path = os.environ.get("GITHUB_OUTPUT")
+    if path:
+        with open(path, "a", encoding="utf-8") as fh:
+            fh.write(f"{key}={value}\n")
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(prog="dashboard_input.py")
     ap.add_argument("verb", choices=["apply", "guard"])
     ap.add_argument("--root", type=Path, default=ROOT)
+    ap.add_argument("--event", type=Path, default=None,
+                    help="apply: the issues event JSON (default $GITHUB_EVENT_PATH)")
     ap.add_argument("--message-file", type=Path, default=None,
                     help="apply: write the commit message here when a file changed")
     ap.add_argument("--result-file", type=Path, default=None,
-                    help="apply: write the JSON result here")
+                    help="apply: write the one-line issue result here")
     a = ap.parse_args(argv)
     root = a.root.resolve()
 
     if a.verb == "guard":
         stray = sorted(p for p in changed_paths(root) if p not in WRITABLE)
         if stray:
-            _annotate_refusal("the tree changed outside queue.md and goals.md "
-                              f"({len(stray)} path(s)) — nothing is committed")
+            print("::error title=Dashboard input refused::the tree changed outside "
+                  f"queue.md and goals.md ({len(stray)} path(s)) — nothing is committed")
             for p in stray:
                 print(f"  stray: {p!r}")
             return 1
         print("guard: only " + " / ".join(WRITABLE) + " changed")
         return 0
 
-    env = os.environ
+    event_path = a.event or (Path(os.environ["GITHUB_EVENT_PATH"])
+                             if os.environ.get("GITHUB_EVENT_PATH") else None)
+    if event_path is None:
+        print("apply: --event or GITHUB_EVENT_PATH is required", file=sys.stderr)
+        return 2
     try:
-        result = apply(root, env.get("DASHBOARD_OP", ""),
-                       ref=env.get("DASHBOARD_REF", ""),
-                       goals_raw=env.get("DASHBOARD_GOALS", ""),
-                       nonce=env.get("DASHBOARD_NONCE", ""))
-    except Refused as e:
+        event = json.loads(event_path.read_text(encoding="utf-8"))
+        req = parse_issue(event, os.environ.get("DASHBOARD_INPUT_LOGIN", ""))
+        result = apply(root, req["op"], ref=req["ref"], goals_raw=req["goals"],
+                       nonce=req["nonce"])
+    except (Refused, ValueError, OSError) as e:
+        reason = str(e) if isinstance(e, Refused) else "the event could not be read"
+        line = result_line(None, reason)
         if a.result_file:
-            a.result_file.write_text(json.dumps({"ok": False, "reason": str(e)}))
-        _annotate_refusal(str(e))
+            a.result_file.write_text(line + "\n", encoding="utf-8")
+        print(f"::error title=Dashboard input refused::{_clean_line(reason).replace('::', ': :')}")
+        _summary(f"## Dashboard input refused\n\n{_clean_line(reason)}\n\n"
+                 "Nothing was committed.\n")
+        _output("outcome", "refused")
         return 1
     if a.result_file:
-        a.result_file.write_text(json.dumps(result))
+        a.result_file.write_text(result_line(result) + "\n", encoding="utf-8")
     if result["changed"] and a.message_file:
         a.message_file.write_text(commit_message(
-            result, env.get("GITHUB_ACTOR", ""), env.get("GITHUB_RUN_ID", "")),
-            encoding="utf-8")
+            result, os.environ.get("GITHUB_ACTOR", ""), os.environ.get("GITHUB_RUN_ID", ""),
+            req["number"]), encoding="utf-8")
+    _output("outcome", "applied" if result["changed"] else "unchanged")
     print(result["summary"])
     _summary(f"## Dashboard input — {result['op']}\n\n{result['summary']}\n")
     return 0

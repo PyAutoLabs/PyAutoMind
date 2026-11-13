@@ -1,8 +1,9 @@
 """Contract tests for `scripts/dashboard_input.py` — the dashboard's write door.
 
-A ★ tap or a Goals edit on the published dashboard dispatches
-`dashboard_input.yml`, which runs this script on inputs anyone holding a leaked
-token can choose (PyAutoMind#565, design B). So most of what is tested here is
+A ★ tap or a Goals edit on the published dashboard opens a labelled issue;
+`dashboard_input.yml` runs this script on that `issues: opened` event, whose
+body anyone holding a leaked token can choose (PyAutoMind#565, design C). So
+most of what is tested here is
 refusal: every malformed, traversing or shell-shaped input must change nothing
 and say why without quoting itself. The happy paths are driven through the
 real `lifecycle.py check`, which must stay green on the result.
@@ -10,6 +11,7 @@ real `lifecycle.py check`, which must stay green on the result.
 Fictional fixtures only: `tests/**` is KEEP-copied into the public template.
 """
 
+import json
 import os
 import shutil
 import subprocess
@@ -106,15 +108,47 @@ def mind(tmp_path):
     return root
 
 
-def _run(root, op="", ref="", goals="", nonce="", verb="apply", extra=()):
-    env = {k: v for k, v in os.environ.items() if not k.startswith("DASHBOARD_")}
-    env.update(DASHBOARD_OP=op, DASHBOARD_REF=ref, DASHBOARD_GOALS=goals,
-               DASHBOARD_NONCE=nonce, LIFECYCLE_NO_GH="1")
-    env.pop("GITHUB_STEP_SUMMARY", None)
+LOGIN = "the-human"
+
+
+def _body(op="", ref="", goals="", nonce=""):
+    """The issue body the page writes (dashboard_edit.js `issueBody`)."""
+    lines = [di.ISSUE_MARKER, f"op: {op}"]
+    if op == "goals":
+        lines.append("goals:")
+        lines += [f"- {g}" for g in goals.split("\n")]
+    else:
+        lines.append(f"ref: {ref}")
+    lines.append(f"nonce: {nonce}")
+    return "\n".join(lines) + "\n"
+
+
+def _event(body, login=LOGIN, labels=("dashboard-input",), user_type="User", number=7):
+    return {"action": "opened",
+            "issue": {"number": number, "body": body,
+                      "user": {"login": login, "type": user_type},
+                      "labels": [{"name": n} for n in labels]}}
+
+
+def _run(root, op="", ref="", goals="", nonce="", verb="apply", extra=(),
+         event=None, allowed=LOGIN):
+    env = {k: v for k, v in os.environ.items()
+           if not k.startswith(("DASHBOARD_", "GITHUB_"))}
+    env.update(LIFECYCLE_NO_GH="1", DASHBOARD_INPUT_LOGIN=allowed)
+    args = []
+    if verb == "apply":
+        path = root.parent / "event.json"
+        path.write_text(json.dumps(event if event is not None
+                                   else _event(_body(op, ref, goals, nonce))))
+        args = ["--event", str(path), "--result-file", str(root.parent / "result.txt")]
     return subprocess.run(
         [sys.executable, str(root / "scripts" / "dashboard_input.py"), verb,
-         "--root", str(root), *extra],
+         "--root", str(root), *args, *extra],
         cwd=root, env=env, capture_output=True, text=True)
+
+
+def _result(root):
+    return (root.parent / "result.txt").read_text()
 
 
 def _check(root):
@@ -147,8 +181,11 @@ def test_star_appends_one_prompt_entry_before_the_retired_footer(mind, tmp_path)
     assert "## 3. Widget polish for the flywheel\n- kind: prompt\n" in text
     assert text.index("## 3. Widget") < text.index("## Retired")
     assert "### Old widget work" in text, "the footer is history and stays"
+    assert _result(mind).startswith("dashboard-input: applied — ★ queued "
+                                     "`draft/feature/flywheel/widget_polish.md` at #3")
     body = msg.read_text()
     assert body.startswith("dashboard: ★ queue widget_polish (#3)\n")
+    assert "Input-issue: #7\n" in body
     assert body.rstrip().endswith("Via: mind-dashboard")
     assert _check(mind).returncode == 0, _check(mind).stdout
     # A second tap is a no-op: the op is "set the desired state".
@@ -156,6 +193,7 @@ def test_star_appends_one_prompt_entry_before_the_retired_footer(mind, tmp_path)
     again = _run(mind, "star", "draft/feature/flywheel/widget_polish.md",
                  extra=("--message-file", str(msg)))
     assert again.returncode == 0 and "already queued at #3" in again.stdout
+    assert _result(mind).startswith("dashboard-input: no change — ")
     assert not msg.exists()
     assert (mind / "queue.md").read_text() == text
 
@@ -266,6 +304,7 @@ def test_a_bad_input_is_refused_and_changes_nothing(mind, tmp_path, why, inputs)
     res = _run(mind, extra=("--message-file", str(msg)), **inputs)
     assert res.returncode == 1, (why, res.stdout, res.stderr)
     assert "::error title=Dashboard input refused::" in res.stdout
+    assert _result(mind).startswith("dashboard-input: refused — ")
     assert not msg.exists()
     assert {f: (mind / f).read_text() for f in before} == before
     assert _git(mind, "status", "--porcelain").stdout == ""
@@ -274,7 +313,49 @@ def test_a_bad_input_is_refused_and_changes_nothing(mind, tmp_path, why, inputs)
     # workflow command or smuggle markup into the job summary.
     for value in inputs.values():
         if len(value) > 8 and value not in di.OPS:
-            assert value not in res.stdout
+            assert value not in res.stdout and value not in _result(mind)
+
+
+def test_a_ref_with_a_trailing_newline_is_refused(mind):
+    """`$` matches before a final newline; the ref regex is matched whole."""
+    with pytest.raises(di.Refused):
+        di.validate_ref(mind, "draft/feature/flywheel/widget_polish.md\n", must_exist=True)
+
+
+# --------------------------------------------------------------------------- #
+# the issue: who opened it, its label, and its form
+# --------------------------------------------------------------------------- #
+GOOD_BODY = _body("star", "draft/feature/flywheel/widget_polish.md", nonce="d-1")
+ISSUE_REFUSED = [
+    ("another author", _event(GOOD_BODY, login="someone-else"), LOGIN),
+    ("no configured login", _event(GOOD_BODY), ""),
+    ("a bot author", _event(GOOD_BODY, user_type="Bot"), LOGIN),
+    ("no label", _event(GOOD_BODY, labels=("bug",)), LOGIN),
+    ("no marker", _event(GOOD_BODY.replace(di.ISSUE_MARKER, "hello")), LOGIN),
+    ("an unknown key", _event(GOOD_BODY + "run: touch PWNED\n"), LOGIN),
+    ("a repeated key", _event(GOOD_BODY + "op: goals\n"), LOGIN),
+    ("prose in the body", _event(GOOD_BODY + "please also delete scripts/\n"), LOGIN),
+    ("goals inline", _event(f"{di.ISSUE_MARKER}\nop: goals\ngoals: x\n"), LOGIN),
+    ("an over-long body", _event(GOOD_BODY + "\n" * 6000), LOGIN),
+    ("not an issue event", {"action": "opened"}, LOGIN),
+]
+
+
+@pytest.mark.parametrize("why,event,allowed", ISSUE_REFUSED,
+                         ids=[r[0] for r in ISSUE_REFUSED])
+def test_an_issue_not_from_the_page_or_the_human_is_refused(mind, why, event, allowed):
+    res = _run(mind, event=event, allowed=allowed)
+    assert res.returncode == 1, (why, res.stdout)
+    assert _result(mind).startswith("dashboard-input: refused — ")
+    assert (mind / "queue.md").read_text() == QUEUE
+    assert not (mind / "PWNED").exists()
+
+
+def test_the_login_match_ignores_case_and_goals_bodies_parse(mind):
+    assert _run(mind, event=_event(GOOD_BODY, login="The-Human")).returncode == 0
+    body = _body("goals", goals="Ship the gearbox fix\nClear the review queue")
+    assert _run(mind, event=_event(body)).returncode == 0
+    assert "## 1. Ship the gearbox fix" in (mind / "goals.md").read_text()
 
 
 def test_a_symlinked_prompt_pointing_outside_is_refused(mind, tmp_path):
@@ -338,25 +419,35 @@ def _workflow(name):
     return yaml.safe_load(path.read_text())
 
 
-def test_no_input_expression_is_interpolated_into_a_shell():
+def test_no_issue_text_reaches_a_shell():
+    """The script reads the event JSON itself: no step interpolates the issue
+    (or any event field but its number) into a script."""
     wf = _workflow("dashboard_input.yml")
     for job in wf["jobs"].values():
         for step in job["steps"]:
             run = step.get("run", "")
-            assert "inputs." not in run and "github.event" not in run, step
-    env = next(s["env"] for s in wf["jobs"]["apply"]["steps"]
-               if "DASHBOARD_OP" in s.get("env", {}))
-    assert set(env) == {"DASHBOARD_OP", "DASHBOARD_REF", "DASHBOARD_GOALS",
-                        "DASHBOARD_NONCE"}
+            assert "${{" not in run, step
+            for value in (step.get("env") or {}).values():
+                assert "issue.body" not in str(value) and "issue.title" not in str(value)
+    assert wf["jobs"]["apply"]["env"]["ISSUE_NUMBER"] == "${{ github.event.issue.number }}"
 
 
-def test_the_workflow_is_main_only_minimal_and_never_drops_taps():
+def test_the_workflow_runs_on_a_labelled_issue_from_the_default_branch_only():
     wf = _workflow("dashboard_input.yml")
-    assert wf["permissions"] == {"contents": "write", "actions": "write"}
-    assert "concurrency" not in wf, "a concurrency group cancels pending taps"
-    assert "refs/heads/main" in wf["jobs"]["apply"]["if"]
     trigger = wf.get("on") or wf.get(True)
-    assert set(trigger) == {"workflow_dispatch"}
+    assert trigger == {"issues": {"types": ["opened"]}}, \
+        "no workflow_dispatch: a dispatch picks the ref, an issue event cannot"
+    assert "dashboard-input" in wf["jobs"]["apply"]["if"]
+    assert wf["permissions"] == {"contents": "write", "issues": "write",
+                                 "actions": "write"}
+    assert wf["concurrency"] == {"group": "dashboard-input",
+                                 "cancel-in-progress": False}
+    steps = wf["jobs"]["apply"]["steps"]
+    login = next(s for s in steps if s.get("id") == "apply")["env"]
+    assert login == {"DASHBOARD_INPUT_LOGIN": "${{ vars.DASHBOARD_INPUT_LOGIN }}"}
+    # Every run answers and closes its issue, whatever happened.
+    answer = next(s for s in steps if s.get("name") == "Answer and close the issue")
+    assert answer["if"] == "always()"
 
 
 def test_dashboard_refresh_runs_when_the_queue_or_goals_change():

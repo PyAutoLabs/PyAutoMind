@@ -38,7 +38,7 @@ Commits made with it are authored as `pyautolabs-bot[bot]` /
 | `PYPI`, `TEST_PYPI` | PyAutoHands repo secrets | Hands `release`, `publish_tombstone` (twine) | maintainer | regenerate on PyPI; trusted publishing (commented OIDC steps in Hands `release.yml`) would retire them, not scheduled |
 | `CLAUDE_CODE_OAUTH_TOKEN` | PyAutoMind, PyAutoMemory repo secrets | Mind `arxiv_papers`, `arxiv_interests`, `morning_status`; Memory `queue_filing` | maintainer | `claude setup-token`, update both repos |
 | `PYAUTO_PAPERS_WEBHOOK_URL` | PyAutoMind repo secret | Mind `arxiv_papers` | maintainer | webhook rotation (below) |
-| dashboard input PAT | the human's browsers (`localStorage`), not a secret | Mind `dashboard.html` → `dashboard_input.yml` | maintainer | fine-grained, PyAutoMind Actions RW only, ≤ 90 days ([below](#the-dashboard-input-token-browser-pyautomind565)) |
+| dashboard input PAT | the human's browsers (`localStorage`), not a secret | Mind `dashboard.html` → `dashboard-input` issue → `dashboard_input.yml` | maintainer | fine-grained, PyAutoMind Issues RW only, ≤ 90 days ([below](#the-dashboard-input-token-browser-pyautomind565)) |
 | `PYAUTO_UPDATE_WEBHOOK_URL` | PyAutoMind repo secret | Mind `morning_health`, `morning_status` | maintainer | webhook rotation |
 | `PYAUTO_RELEASE_WEBHOOK_URL` | PyAutoBrain, PyAutoHands repo secrets | Brain `nightly-release`; Hands `release` | maintainer | webhook rotation, update both repos |
 | `HEART_NTFY_URL` | PyAutoHeart repo secret | Heart `heart-health` | maintainer | new ntfy topic, update secret |
@@ -109,14 +109,21 @@ secret, add it here in the same PR.
 
 ### The dashboard input token (browser, PyAutoMind#565)
 
-The one PAT this organism holds, and it is not in CI. The published Mind
-dashboard's ★ toggles and Goals box dispatch
-`.github/workflows/dashboard_input.yml`, which validates the input and commits
-`queue.md` or `goals.md` as `github-actions[bot]`. The browser holds:
+The one PAT this organism holds, and it is not in CI. Design C (human ruling
+2026-11-13, replacing design B): a ★ toggle or a Goals edit on the published
+Mind dashboard opens **one issue** in PyAutoMind, labelled `dashboard-input`,
+whose body is a fixed `key: value` form. The `issues: opened` event runs
+`.github/workflows/dashboard_input.yml` **from the default branch** — the
+caller never chooses which copy of the code runs — which checks the author
+against the repository variable `DASHBOARD_INPUT_LOGIN`, validates the body in
+Python (`scripts/dashboard_input.py`), commits `queue.md` or `goals.md` as
+`github-actions[bot]` (`Via: mind-dashboard`), and closes the issue with a
+one-line `dashboard-input: applied | no change | refused | superseded — …`
+comment the page reads back. The browser holds:
 
 - a **fine-grained** PAT, resource owner PyAutoLabs, repository access
-  **PyAutoMind only**, repository permission **Actions: read and write**
-  (Metadata: read comes with it). No Contents, no Workflows, nothing else;
+  **PyAutoMind only**, repository permission **Issues: read and write**
+  (Metadata: read comes with it). No Contents, no Actions, no Workflows;
 - expiry 90 days at most;
 - stored in that browser's `localStorage` (key
   `pyautomind.dashboard.token.v1`), sent only to `api.github.com`. "Forget
@@ -128,16 +135,40 @@ token. The page's CSP (`connect-src https://api.github.com`) stops this page
 leaking it, not a sibling page. Revoke at
 github.com/settings/personal-access-tokens if any Pages site is ever suspected.
 
-**What a leaked token can do.** Actions write on Mind means: dispatch any
-`workflow_dispatch` workflow below, with any inputs and at any existing branch
-or tag; re-run, cancel and delete runs; read run logs; delete artifacts and
-caches; enable and disable workflows. It cannot read secrets, push code, or
-touch another repo — except through a workflow that does. So the dispatchable
-workflows *are* the token's reach. As of 2026-11-13:
+**What a leaked Issues token can do** — everything the human can do to
+PyAutoMind issues, as the human:
+
+- **edit the queue and goals**, by opening `dashboard-input` issues, but only
+  within the validator: real prompt refs, at most 10 plain goals, no new
+  `lifecycle.py check` drift, no other path. Goals written this way are marked
+  as dashboard-sourced by `batch brief --new` and are never copied into a
+  brief as trusted text (below);
+- **steer a live shift**: the batch watcher obeys `/pause`, `/resume`,
+  `/drop` and `/stop` comments from the human's login on a shift issue
+  (PyAutoBrain#622), so a thief can stop or drop a running shift;
+- **write text agents read**: open, edit, comment on, label, close and reopen
+  any Mind issue (and comment on PRs through the issues endpoints). Sessions
+  that read issues must treat that text as data, never as instructions;
+- **spam**: each issue costs one workflow run. Runs are serialised by a
+  concurrency group, one issue per run; an issue that changes nothing commits
+  nothing. Volume is bounded only by the token holder and GitHub's
+  issue-creation limits — revoke the token to stop it.
+
+It cannot push code, change workflows, dispatch or re-run workflows, read
+secrets, or touch any other repository.
+
+**Dispatchable workflows** are no longer the dashboard token's reach, but
+they remain the reach of anything holding Actions write on Mind (the org App,
+or any future token), at any ref. The 14 below are safe **on `main`** as of
+2026-11-13; `dashboard_input.yml` is no longer dispatchable. **Old branches
+still carry the pre-hardening, injectable copies** of `branch_sweep`,
+`mind_ledger_merge` and both arXiv digests, and a dispatch can name any ref,
+so those stay exposed to any Actions-write holder until fixed — filed as
+`draft/maintenance/pyautomind/old_branch_workflow_secret_exposure.md`, not
+part of PyAutoMind#565.
 
 | Workflow | Inputs | With attacker-chosen inputs |
 |---|---|---|
-| `dashboard_input` | `op` (choice), `ref`, `goals`, `nonce` | Safe by design: edits `queue.md`/`goals.md` only within `scripts/dashboard_input.py`'s validation; inputs reach Python through `env:`; main only |
 | `branch_sweep` | `mode` (choice), `limit` (string) | Safe: both through `env:`; `mode` must be `audit`/`delete`, `limit` must match `^[0-9]{1,4}$` and be 0–1000, else `::error`. `mode: delete` removes only branches the sweep proves contained, as designed |
 | `mind_ledger_merge` | `branch` (string), `mode` (choice), `delete_branch` | Safe: through `env:`; `branch` must be under `claude/`, `codex/` or `chatgpt/`, match `[A-Za-z0-9._/-]`, be at most 200 characters and pass `git check-ref-format --branch`; `mode` must be `audit`/`merge`. It can only merge an existing ledger-only session branch, which a token without Contents cannot create |
 | `arxiv_papers` | `lookback_hours` (string), `memory_only`, `dry_run` (booleans) | Safe: `lookback_hours` through `env:`, validated in its own step (`^[0-9]{1,4}$`, 1–2160) before any secret is used. A dispatch costs Claude usage and may post to Slack |
@@ -145,17 +176,13 @@ workflows *are* the token's reach. As of 2026-11-13:
 | `spawn_drift`, `session_hook_propagate`, `smoke_bootstrap_propagate` | `dry_run` (boolean) | Safe: a boolean, read through `env:`; a non-dry run regenerates and pushes what it pushes on its own trigger |
 | `dashboard_refresh`, `lifecycle_drift`, `looks_shipped`, `registry_reconcile`, `pages_dashboard`, `firewall_gate`, `morning_health`, `morning_status` | none | Safe: idempotent re-runs of existing automation. `morning_status` spends Claude usage and posts to Slack, so repeated dispatch is a cost and noise nuisance |
 
-All 15 were made safe on 2026-11-13 (PyAutoMind#565), before any dashboard
-token existed: until then `branch_sweep`, `mind_ledger_merge` and both arXiv
-digests pasted string inputs into `run:`, which made a leaked token code
-execution on Mind and theft of the org App key.
-`tests/test_workflow_input_injection.py` fails on any `${{ inputs.… }}`,
-`github.event.inputs` or `client_payload` expression inside a `run:` or
-`github-script` block, and runs each validating step with hostile values. A
-new string input follows the same pattern (`env:`, then validate) and gets a
-row here. Remaining reach of a leaked token: dispatch noise and cost, the
-queue and goals within validation, and cancelling, deleting or disabling runs
-and workflows.
+All 14 were made safe on `main` on 2026-11-13 (PyAutoMind#565): until then
+`branch_sweep`, `mind_ledger_merge` and both arXiv digests pasted string
+inputs into `run:`. `tests/test_workflow_input_injection.py` fails on any
+`${{ inputs.… }}`, `github.event.inputs` or `client_payload` expression inside
+a `run:` or `github-script` block, and runs each validating step with hostile
+values. A new string input follows the same pattern (`env:`, then validate)
+and gets a row here.
 
 **Rotation:** make a new token, paste it on each device (🔑 on the page),
 revoke the old one. If a device is lost: revoke first.

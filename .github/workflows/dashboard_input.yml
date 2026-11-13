@@ -1,117 +1,150 @@
 name: Dashboard Input
 
-# The write side of the published dashboard (PyAutoMind#565, design B). A ★
-# tap or a Goals edit on dashboard.html dispatches this workflow through the
-# REST API, with a fine-grained token holding Actions permission on this repo
-# and nothing else. This workflow — not the browser — validates the input,
-# writes queue.md or goals.md, and commits as the bot. Reference:
-# policy/github_tokens.md "The dashboard input token".
+# The write side of the published dashboard (PyAutoMind#565, design C). A ★
+# tap or a Goals edit on dashboard.html opens ONE issue here, labelled
+# `dashboard-input`, with a fine-grained token holding Issues permission on
+# this repo and nothing else. This workflow — not the browser — validates it,
+# writes queue.md or goals.md, commits as the bot, and closes the issue with a
+# one-line result the page reads back. Reference: policy/github_tokens.md
+# "The dashboard input token".
 #
-# SECURITY. Every input is attacker-controlled: anyone holding a leaked token
-# can dispatch this with any values. So:
-#   - inputs reach the script through `env:` only and are parsed in Python;
-#     no `${{ inputs.* }}` expression appears in any `run:` block;
-#   - scripts/dashboard_input.py refuses anything but a real draft/ or active/
-#     prompt ref, or at most 10 short plain-text goals, and refuses a write
+# Why an issue and not workflow_dispatch: an `issues` event always runs the
+# workflow file on the DEFAULT branch, so the code that handles the input is
+# never chosen by the caller. A dispatch token can run any workflow at any
+# ref, including old branches' unhardened copies.
+#
+# SECURITY. The issue body is attacker-controlled (a leaked token can open
+# any issue), so:
+#   - the job runs only for the label, which only a user with push access
+#     can set when opening an issue;
+#   - scripts/dashboard_input.py reads the event JSON itself (no issue text
+#     passes through a shell or an expression), refuses any author but
+#     vars.DASHBOARD_INPUT_LOGIN, refuses anything but a real draft/ or
+#     active/ prompt ref or at most 10 short plain goals, and refuses a write
 #     that adds `lifecycle.py check` drift;
-#   - the guard step refuses a tree in which anything but queue.md or goals.md
-#     changed, and only those two paths are ever staged;
-#   - the job runs only on main of this repo: a dispatch against another
-#     branch would run that branch's copy of this file.
-# A refusal commits nothing, fails the run, and leaves one `::error`
-# annotation whose text the dashboard reads back through the check-run API.
+#   - the guard step refuses a tree in which anything but queue.md or
+#     goals.md changed, and only those two paths are ever staged.
 #
-# NO `concurrency:` group, deliberately. GitHub keeps one pending run per
-# group and cancels the rest, so fast taps would be lost. Concurrent runs
-# instead each rebuild on the tip of main and retry the push.
+# RATE. One issue per run; runs are serialised by the concurrency group. A
+# group keeps one pending run and cancels older pending ones, so a run first
+# closes any OLDER open dashboard-input issue as superseded (its run was
+# dropped; the page reverts and says "tap again"). The page itself keeps one
+# issue in flight and coalesces taps behind it, so one device never trips this.
+# An issue that changes nothing is closed "no change" with no commit.
 
 on:
-  workflow_dispatch:
-    inputs:
-      op:
-        description: "star | unstar | goals"
-        type: choice
-        options: [star, unstar, goals]
-        required: true
-      ref:
-        description: "star/unstar: the prompt path (draft/… or active/…)"
-        type: string
-        default: ""
-      goals:
-        description: "goals: one goal per line, top first (at most 10)"
-        type: string
-        default: ""
-      nonce:
-        description: "Client correlation id (letters, digits, '-')"
-        type: string
-        default: ""
+  issues:
+    types: [opened]
 
-# The run title carries the op and the client's nonce so the page can find
-# its own run when the dispatch API returns no run id. run-name is display
-# text, not a shell; the script refuses a malformed nonce anyway.
-run-name: "dashboard ${{ inputs.op }} ${{ inputs.nonce }}"
+concurrency:
+  group: dashboard-input
+  cancel-in-progress: false
 
-# contents: write → the bot commit to main. actions: write → dispatch
-# dashboard_refresh.yml afterwards: a GITHUB_TOKEN push triggers no workflow,
-# so without it the published page would not re-render.
+# contents: write → the bot commit to main. issues: write → the result comment
+# and the close. actions: write → dispatch dashboard_refresh.yml afterwards: a
+# GITHUB_TOKEN push triggers no workflow, so the page would not re-render.
 permissions:
   contents: write
+  issues: write
   actions: write
 
 jobs:
   apply:
-    if: github.repository == 'PyAutoLabs/PyAutoMind' && github.ref == 'refs/heads/main'
+    if: >-
+      github.repository == 'PyAutoLabs/PyAutoMind'
+      && contains(github.event.issue.labels.*.name, 'dashboard-input')
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    env:
+      GH_TOKEN: ${{ github.token }}
+      ISSUE_NUMBER: ${{ github.event.issue.number }}
     steps:
       - uses: actions/checkout@v4
         with:
           ref: main
-          persist-credentials: true
+
+      - name: Close older inputs whose runs were dropped
+        run: |
+          set -euo pipefail
+          gh issue list --repo "$GITHUB_REPOSITORY" --label dashboard-input \
+            --state open --limit 50 --json number --jq '.[].number' |
+          while read -r n; do
+            [[ "$n" =~ ^[0-9]+$ ]] || continue
+            if [ "$n" -lt "$ISSUE_NUMBER" ]; then
+              gh issue comment "$n" --repo "$GITHUB_REPOSITORY" --body \
+                "dashboard-input: superseded — not applied (a newer input's run replaced this one's); tap again"
+              gh issue close "$n" --repo "$GITHUB_REPOSITORY" --reason "not planned"
+            fi
+          done
 
       - name: Validate, apply, commit
+        id: apply
         env:
-          DASHBOARD_OP: ${{ inputs.op }}
-          DASHBOARD_REF: ${{ inputs.ref }}
-          DASHBOARD_GOALS: ${{ inputs.goals }}
-          DASHBOARD_NONCE: ${{ inputs.nonce }}
+          DASHBOARD_INPUT_LOGIN: ${{ vars.DASHBOARD_INPUT_LOGIN }}
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           msg="$RUNNER_TEMP/dashboard_commit_msg.txt"
+          result="$RUNNER_TEMP/dashboard_result.txt"
           for attempt in 1 2 3 4 5; do
             git fetch --quiet origin main
             git reset --quiet --hard FETCH_HEAD
             rm -f "$msg"
-            # Exit 1 is a refusal: the script has already annotated why.
-            python3 scripts/dashboard_input.py apply --message-file "$msg"
+            # Exit 1 is a refusal: the result line says why, the step
+            # summary too, and nothing is written.
+            if ! python3 scripts/dashboard_input.py apply \
+                --event "$GITHUB_EVENT_PATH" --message-file "$msg" --result-file "$result"; then
+              exit 0
+            fi
             if [ ! -s "$msg" ]; then
               echo "nothing to commit (already so)"
               exit 0
             fi
-            python3 scripts/dashboard_input.py guard
             git add -- queue.md goals.md
             staged="$(git diff --cached --name-only)"
-            if printf '%s\n' "$staged" | grep -qvxE 'queue\.md|goals\.md'; then
-              echo "::error title=Dashboard input refused::a path other than queue.md or goals.md was staged"
-              exit 1
+            if ! python3 scripts/dashboard_input.py guard \
+                || printf '%s\n' "$staged" | grep -qvxE 'queue\.md|goals\.md'; then
+              echo "::error title=Dashboard input refused::a path other than queue.md or goals.md changed"
+              echo "dashboard-input: refused — a path other than queue.md or goals.md changed" > "$result"
+              echo "outcome=refused" >> "$GITHUB_OUTPUT"
+              exit 0
             fi
             git commit --quiet -F "$msg"
             if git push --quiet origin HEAD:main; then
-              echo "committed $(git rev-parse --short HEAD) on attempt ${attempt}"
-              echo "Committed \`$(git rev-parse --short HEAD)\`." >> "$GITHUB_STEP_SUMMARY"
+              sha="$(git rev-parse --short HEAD)"
+              printf '%s (commit %s)\n' "$(head -n 1 "$result")" "$sha" > "$result"
+              echo "Committed \`$sha\`." >> "$GITHUB_STEP_SUMMARY"
               exit 0
             fi
             echo "push rejected (attempt ${attempt}) — re-applying on the new tip of main"
           done
-          echo "::error title=Dashboard input refused::main moved under five attempts in a row; tap again"
-          exit 1
+          echo "dashboard-input: refused — main moved under five attempts in a row; tap again" > "$result"
+          echo "outcome=refused" >> "$GITHUB_OUTPUT"
+
+      - name: Answer and close the issue
+        if: always()
+        run: |
+          set -euo pipefail
+          result="$RUNNER_TEMP/dashboard_result.txt"
+          if [ ! -s "$result" ]; then
+            echo "dashboard-input: refused — the run failed before it could decide; tap again" > "$result"
+          fi
+          gh issue comment "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --body-file "$result"
+          if grep -q '^dashboard-input: refused' "$result"; then
+            gh issue close "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --reason "not planned"
+          else
+            gh issue close "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --reason completed
+          fi
 
       - name: Re-render the dashboard
-        if: success()
-        env:
-          GH_TOKEN: ${{ github.token }}
+        if: steps.apply.outputs.outcome == 'applied'
         run: |
-          gh workflow run dashboard_refresh.yml --ref main \
+          gh workflow run dashboard_refresh.yml --repo "$GITHUB_REPOSITORY" --ref main \
             || echo "::warning::could not dispatch dashboard_refresh.yml — the page catches up at its next trigger"
+
+      - name: Fail a refused input
+        if: steps.apply.outputs.outcome == 'refused'
+        run: |
+          echo "::error title=Dashboard input refused::see the issue's result comment"
+          exit 1
