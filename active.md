@@ -84,3 +84,15 @@
   - PyAutoHeart: feature/m2-finish
   - PyAutoBrain: feature/m2-finish
   - PyAutoHands: feature/m2-finish
+
+## assistant-activate-cpu-tmpdir
+- issue: https://github.com/PyAutoLabs/autolens_assistant/issues/185
+- issued: 2026-11-13
+- session: claude-code desktop (WSL), ~/Science session
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/assistant-activate-cpu-tmpdir
+- prompt: active/assistant_activate_cpu_tmpdir.md
+- tier: judge — merge mode: human /prm
+- repos:
+  - autolens_assistant: feature/assistant-activate-cpu-tmpdir
+  - autogalaxy_assistant: feature/assistant-activate-cpu-tmpdir
