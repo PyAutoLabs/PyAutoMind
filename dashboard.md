@@ -12,7 +12,7 @@
 | [Epics](#epics) | 23 |
 | [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 11 |
-| [Backlog](#backlog) | 275 |
+| [Backlog](#backlog) | 276 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
 
@@ -918,7 +918,7 @@ Use the start-dev skill. draft/feature/pyautoscientist/scientist_optional_organ_
 </details>
 
 <details>
-<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 21 queued prompt(s), in order</summary>
+<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 22 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — ledger: `draft/feature/pyautobrain/autonomous_orchestrators_epic.md` — IN PROGRESS; design-reviewed 2026-11-03 (7 phases, <code>Needs:</code> folded into <code>Lane:</code> values, witnesses per phase, 6 decisions ruled by…</summary>
 
@@ -1076,6 +1076,14 @@ Use the start-dev skill. draft/maintenance/ci/server_side_merge_gate.md
 
 ```
 Use the start-dev skill. draft/maintenance/pyautobrain/m2_build_followups.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/pyautomind/old_branch_workflow_secret_exposure.md">Old Mind branches carry injectable workflows that hold org secrets</a> — pyautomind · medium · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/maintenance/pyautomind/old_branch_workflow_secret_exposure.md
 ```
 
 </details>
@@ -1360,7 +1368,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 222 · ral 34 · wsl-data 9 · local-dev 8
+Lanes: any 222 · ral 34 · local-dev 9 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
