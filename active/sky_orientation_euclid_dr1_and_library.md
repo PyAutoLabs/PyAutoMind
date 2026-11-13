@@ -5,7 +5,7 @@
 Type: research
 Target: euclid
 Repos:
-- euclid_dr1 (science project, /mnt/c/Users/Jammy/Science/active/euclid_dr1; RAL /mnt/ral/jnightin/active/euclid_dr1)
+- euclid_dr1 (science project, /mnt/c/Users/Jammy/Workspace/Science/complete/euclid_dr1; RAL /mnt/ral/jnightin/complete/euclid_dr1)
 - ECLIPSE_lens_catalogue (lens/ECLIPSE_lens_catalogue, website leg)
 - PyAutoArray
 - PyAutoGalaxy
@@ -93,7 +93,7 @@ wcs.csv) must be monitored carefully:
 - AGREED: for DR1 v1.0 the native frame stays as fitted (+y = south, +x = west, documented as such); north-positive values
   are delivered through the phase-2 sky-frame catalogue columns. No library convention change before release.
 - AGREED: north-up RGBs with the orientation above are the reference for every DR1 user-facing product. The human says the
-  RGBs are already in `dataset/euclid_dr1` on RAL (`/mnt/ral/jnightin/active/euclid_dr1/dataset/`, possibly PNGs):
+  RGBs are already in `dataset/euclid_dr1` on RAL (`/mnt/ral/jnightin/complete/euclid_dr1/dataset/`, possibly PNGs):
   use those, after checking each one's orientation against VIS by correlation (the phase-1 orientation check). They feed
   the north-up re-rendered RGB panels, the release tiers and the Cloudflare ECLIPSE website (lens/ECLIPSE_lens_catalogue)
   thumbnails/previews.
