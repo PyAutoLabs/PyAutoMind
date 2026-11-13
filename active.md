@@ -134,3 +134,8 @@
 - note: shares PyAutoBrain with lane-fail-closed (disjoint files: agents/conductors/cortex/ only); parallel approved by the human 2026-11-13
 - repos:
   - PyAutoBrain: feature/cortex-state-md-tables
+- pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/619
+- heart-red-override:
+  - authorization: live human, 2026-11-13, choosing "Override both (Recommended)" for (a) PyAutoCortex#90 ledger-merge Pages fix and (b) the STATE.md table render in PyAutoBrain: "Push and open both PRs, recorded in the four override sinks. CI must pass; merging stays with your /prm."
+  - heart-red: PyAutoNerves: 4 commit(s) behind origin; PyAutoFit: 2 commit(s) behind origin; PyAutoArray: 4 commit(s) behind origin; PyAutoGalaxy: on branch feature/galaxy-guide-rebalance (not main); PyAutoGalaxy: 1 uncommitted source change(s); PyAutoLens: 1 uncommitted source change(s); PyAutoLens: 45 commit(s) behind origin; PyAutoCTI: 4 commit(s) behind origin; install verification FAILED (testpypi; checks F); release validation FAILED (stage integrate); manifest drift: tenant firewall (organ code) — 40 mismatch(es) vs PyAutoMind/repos.yaml; manifest drift: workspace checkouts (manifest ↔ disk) — 3 mismatch(es) vs PyAutoMind/repos.yaml; PyAutoArray: open PR 9d old
+  - gates: cortex conductor tests 104 passed (tests/test_cortex_conductor.py; rerun by the orchestrating session); smoke n/a (Brain organ renderer, no library code); review: in-session review of the diff and a preview rendered from the real ledgers. None of the RED reasons are in PyAutoBrain.
