@@ -1304,7 +1304,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 243 · ral 13 · local-dev 7 · wsl-data 2
+Lanes: any 216 · ral 34 · local-dev 8 · wsl-data 7
 
 <a id="human-review"></a>
 <details>
