@@ -1,3 +1,24 @@
+Pre-M3 build 1 of 3 (epic `autonomous-orchestrators`). Shipped as PyAutoMind#566 (d23cacbe5) and PyAutoBrain#623 (8fdf79b4c), merged 2026-11-13. Issue PyAutoBrain#622. The human approved the design and the AUTONOMY watcher network-surface amendment on 2026-11-13, and gave the merge command (judge tier).
+
+**Built:**
+- One status comment per shift: created once, then edited at most once per tick. It is never duplicated, mentions nobody, and is adopted only if written by the posting identity.
+- `/pause`, `/resume`, `/drop <task>` and `/stop`: from `mention_login` only, after `dispatched:`, as the first line of a comment, enacted and acknowledged once by id.
+- `/drop` on a running worker writes a `.dropped` marker that the close-out checks before merging. A merge that lands anyway is recorded outside the close-out, with no stage-2 row.
+- `/stop` has exactly the STOP file's effect.
+- `/batch watch`.
+- A `- live:` line in the brief record feeds the dashboard.
+
+**Witness:**
+- `tests/test_orchestrator_steering.py`: 20 tests, offline, failing on the old code.
+- Brain suite: 1842 passed. Mind suite: 781 passed. CI green.
+- Heart's scoped dev-ship verdict: GREEN, no override.
+
+**Review:** FINDINGS, then fixed, then CLEAN. The Witness was restated to the human-approved comment-command design.
+
+**Human acts before the first live shift:** set `shift_watcher.mention_login` and `PYAUTO_SHIFT_GH_TOKEN`; steering is off without the login.
+
+## Original prompt
+
 # A running shift you can watch and steer: one live status comment, a /batch watch skill, and pause / drop / edit
 
 Type: feature
