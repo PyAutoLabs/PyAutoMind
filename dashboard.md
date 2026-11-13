@@ -12,7 +12,7 @@
 | [Epics](#epics) | 23 |
 | [In flight](#in-flight) | 5 |
 | [Planned](#planned) | 11 |
-| [Backlog](#backlog) | 267 |
+| [Backlog](#backlog) | 266 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
 
@@ -1296,7 +1296,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 243 · ral 13 · local-dev 7 · wsl-data 2
+Lanes: any 242 · ral 13 · local-dev 7 · wsl-data 2
 
 <a id="human-review"></a>
 <details>
@@ -2266,7 +2266,7 @@ Use the start-dev skill. draft/research/autoarray/delaunay_interpolator_pure_cal
 </details>
 
 <details>
-<summary><b>docs</b> — 27</summary>
+<summary><b>docs</b> — 26</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -2400,14 +2400,6 @@ Use the start-dev skill. draft/docs/autogalaxy/plot_utils_critical_curves_defaul
 
 ```
 Use the start-dev skill. draft/docs/HowToLens/tutorial_6_fitting_review.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/assistants/repository_guidance_cleanup.md">Repository guidance and assistant cleanup</a> — assistants</summary>
-
-```
-Use the start-dev skill. draft/docs/assistants/repository_guidance_cleanup.md
 ```
 
 </details>
@@ -2923,7 +2915,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-107 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+106 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -2968,7 +2960,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
 - `draft/bug/autogalaxy/wrong_jax_gradient_on_mge_likelihoods_fd.md`
 - `draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md`
-- _… and 67 more_
+- _… and 66 more_
 
 </details>
 
