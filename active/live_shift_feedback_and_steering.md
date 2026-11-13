@@ -8,8 +8,9 @@ Repos:
 Difficulty: medium
 Autonomy: supervised
 Priority: high
-Status: draft
+Status: issued
 Filed: 2026-11-13
+Issued: 2026-11-13
 Epic: autonomous-orchestrators
 Consequence: judge
 Witness: (a) a fake-clock shift test creates one status comment on the brief's `issue:` and then only edits it (≤ 1 edit per 10 min or per state change); its body equals `_watch.render(snapshot(...))` for that tick; a crash between claim and post never yields two comments; (b) with `PAUSE` in the slot, ticks dispatch nothing new while leased workers keep running and are reaped, and removing it resumes; (c) a task removed from the brief's `tasks:` or added to `exclude:` mid-shift is never picked on the next tick, and its running worker (if any) is listed "dropped, still running" in the live view and digest; (d) `/batch watch` in a Claude window prints the same snapshot from the slot, or from the live comment when no slot is local

@@ -70,3 +70,16 @@
   - Jammy2211.github.io: feature/homepage-flow-polish
 - prompt: active/homepage_flow_polish.md
 - tier: judge — merge mode: human /prm
+
+## live-shift-view
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/622
+- issued: 2026-11-13
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/live-shift-view
+- prompt: active/live_shift_feedback_and_steering.md
+- epic: autonomous-orchestrators (pre-M3 build 1: live view + steering; human approved 2026-11-13)
+- tier: judge — merge mode: human /prm
+- repos:
+  - PyAutoBrain: feature/live-shift-view
+  - PyAutoMind: feature/live-shift-view
