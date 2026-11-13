@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 23 |
-| [In flight](#in-flight) | 5 |
+| [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 11 |
-| [Backlog](#backlog) | 277 |
+| [Backlog](#backlog) | 276 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
 
@@ -42,15 +42,7 @@ _(no goals — write them in [`goals.md`](goals.md))_
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 20
-
-<details><summary>📋 <a href="draft/bug/autofit/ep_projected_model_shared_prior_keyerror.md">autofit: EP projection (Result.projected_model) raises KeyError for a prior shared across paths</a> — autofit · small · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autofit/ep_projected_model_shared_prior_keyerror.md
-```
-
-</details>
+**Highest priority** (filed as `high`) — showing 12 of 19
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -136,6 +128,14 @@ Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_interna
 
 ```
 Use the start-dev skill. draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md">euclid_dr1: run the positions gate over DR1 and submit the remodel set</a> — euclid · large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel_run.md
 ```
 
 </details>
@@ -1240,6 +1240,14 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
+<details><summary>📋 <a href="active/ep_projected_model_shared_prior_keyerror.md">autofit: EP projection (Result.projected_model) raises KeyError for a prior shared across paths</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1773">issue #1773</a> — issued 2026-11-13 — library-dev</summary>
+
+```
+Use the start-dev skill. active/ep_projected_model_shared_prior_keyerror.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/homepage_flow_polish.md">Polish the homepage flow</a> — <a href="https://github.com/Jammy2211/Jammy2211.github.io/issues/3">issue #3</a> — issued 2026-11-12 — awaiting-merge — PRs: <a href="https://github.com/Jammy2211/Jammy2211.github.io/pull/4">Jammy2211.github.io#4</a></summary>
 
 ```
@@ -1371,7 +1379,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 223 · ral 34 · local-dev 9 · wsl-data 9
+Lanes: any 222 · ral 34 · local-dev 9 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
@@ -1715,15 +1723,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 56</summary>
-
-<details><summary>📋 <a href="draft/bug/autofit/ep_projected_model_shared_prior_keyerror.md">autofit: EP projection (Result.projected_model) raises KeyError for a prior shared across paths</a> — autofit · small · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autofit/ep_projected_model_shared_prior_keyerror.md
-```
-
-</details>
+<summary><b>bug</b> — 55</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -2926,7 +2926,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-13 | filed | <a href="draft/bug/autofit/ep_projected_model_shared_prior_keyerror.md">autofit: EP projection (Result.projected_model) raises KeyError for a…</a> |
+| 2026-11-13 | issued | <a href="active/ep_projected_model_shared_prior_keyerror.md">autofit: EP projection (Result.projected_model) raises KeyError for a…</a> |
 | 2026-11-13 | filed | <a href="draft/bug/autolens/twins_provenance_versions.md">LensTwin provenance records dev metadata, not the code's real version</a> |
 | 2026-11-12 | filed | <a href="draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md">jax.grad through zero-contour critical curves fails on jax 0.12</a> |
 | 2026-11-12 | filed | <a href="planned.md#hpc-keep-off-home-phase-b">hpc-keep-off-home-phase-b</a> |
@@ -3071,7 +3071,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-70 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+69 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3104,7 +3104,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md — unknown theme keyword(s): source-reconstruction`
 - `draft/bug/autocti_workspace/database_scripts_stale_sqlite_under_test_mode.md — unknown theme keyword(s): smoke`
 - `draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md — unknown theme keyword(s): jax`
-- `draft/bug/autofit/ep_projected_model_shared_prior_keyerror.md — unknown theme keyword(s): expectation-propagation, samples, factor-graph`
 - `draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md — unknown theme keyword(s): samples, factor-graph`
 - `draft/bug/autofit/vmap_jit_recompiles_per_nautilus_batch_length.md — unknown theme keyword(s): jax, nautilus`
 - `draft/bug/autogalaxy/aggregator_reload_drops_sparse_operator.md — unknown theme keyword(s): sparse-operator, aggregator`
