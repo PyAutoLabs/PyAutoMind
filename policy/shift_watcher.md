@@ -21,7 +21,11 @@ What keeps the exemption narrow:
   `review-at:` has not passed (`PyAutoBrain/AUTONOMY.md`, "Shift briefs and
   unattended `glance`"). A tick with no open brief does nothing.
 - **Kill switch:** it checks for a `STOP` file in its slot directory **first**,
-  before reading anything else, and does nothing while that file exists.
+  before reading anything else, and does nothing while that file exists. The
+  human can also write it from their phone by commenting `/stop` on the
+  shift's issue, or hold new spawns with `/pause` until `/resume`
+  (PyAutoBrain#622; `PyAutoBrain/AUTONOMY.md` watcher network surface,
+  amendment 2026-11-13).
 
 Why it is this narrow: the timer rule was written after five batch members armed
 hourly check-ins on 2026-08-31, and a mobile `/prm` re-armed a 60-minute
