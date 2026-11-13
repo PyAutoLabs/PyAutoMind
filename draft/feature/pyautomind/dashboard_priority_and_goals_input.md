@@ -41,3 +41,7 @@ Tier judge: a design choice for the human, and it creates a new write path into 
 Programme: before M3.1 (the live shifts pick from `queue.md`); a side lane of M3.
 
 <!-- drafted 2026-11-13 by the REL intake session (scratch/intake_2026-11-13) -->
+
+## Human ruling, 2026-11-13 (programme session)
+
+**Issue forms are rejected**: "opening GitHub issues to star and prioritize issues is clunky, lots of button pushes, it has made PyAutoMemory paper ingestion slow. So ideally it will be something a bit more integrated and fast." Requirement: a tick or a goal edit is **one action in the page the human already reads**, with no form, no extra page, no confirm step. Re-design between (i) the Pages dashboard itself writing `queue.md` / `goals.md` in place (fine-grained token, PyAutoMind contents only, stored once in the browser; Mind CI validates after) and (ii) a claude.ai Artifact page with a shared database read at brief time. Present both with the trade-offs before building.
