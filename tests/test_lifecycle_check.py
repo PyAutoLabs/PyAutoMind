@@ -1265,3 +1265,90 @@ def test_scope_paths_normalises_what_a_workflow_pastes(tmp_path):
         == ["active.md", "draft"]
     assert lifecycle.scope_paths(
         tmp_path, [str(tmp_path / "complete" / "2026")]) == ["complete/2026"]
+
+
+# --------------------------------------------------------------------------- #
+# queue.md — the human's ranked list is validated (M2.3, 2026-11-12)
+#
+# An unattended shift reads `queue.md` as its statement of importance, and an
+# empty list stops its backlog dip — so a dangling ref is not harmless: it
+# reads as a wish nothing can satisfy. Fictional fixtures throughout.
+# --------------------------------------------------------------------------- #
+QUEUE_HEAD = (
+    "# Queue\n\nSchema:\n\n```markdown\n## <n>. <label>\n- kind: prompt\n"
+    "- ref: draft/<work-type>/<target>/<name>.md\n```\n\n"
+)
+QUEUE_FOOTER = (
+    "\n## Retired\n\n### Old gearbox work\n- shipped-as: Gadgets#1\n"
+    "- ref: some-epic-slug\n- note: history, never validated\n"
+)
+
+
+def _queue(root: Path, entries: str) -> Path:
+    (root / "queue.md").write_text(QUEUE_HEAD + entries + QUEUE_FOOTER)
+    return root
+
+
+def test_queue_refs_to_draft_and_active_prompts_resolve(tmp_path):
+    root = _tree(tmp_path, draft=["feature/flywheel/sprocket_calibration.md"],
+                 active=["widget_alignment.md"])
+    _queue(root, (
+        "## 1. Sprockets\n- kind: prompt\n"
+        "- ref: draft/feature/flywheel/sprocket_calibration.md\n\n"
+        # Written against draft/, issued since: keeps its place.
+        "## 2. Widgets\n- kind: prompt\n- ref: draft/feature/flywheel/widget_alignment.md\n"))
+    assert lifecycle.queue_findings(root) == []
+    # The fenced schema example and the retired footer are not entries.
+    assert [e[0] for e in lifecycle.queue_entries(root)] == ["Sprockets", "Widgets"]
+
+
+def test_a_dead_queue_ref_fails_check(tmp_path, monkeypatch, capsys):
+    """The witness: a ref that resolves to no draft/active prompt — here one
+    absorbed into its completion record — fails `lifecycle.py check`."""
+    root = _tree(tmp_path, complete=["2026/01/gearbox_retune.md"])
+    _queue(root, "## 1. Gearbox\n- kind: prompt\n"
+                 "- ref: draft/research/flywheel/gearbox_retune.md\n")
+    findings = lifecycle.queue_findings(root)
+    assert len(findings) == 1
+    assert "gearbox_retune.md" in findings[0].msg
+    _as_root(monkeypatch, root)
+    assert lifecycle.cmd_check(None) == 1
+    assert "queue.md: entry `Gearbox`" in capsys.readouterr().out
+
+
+def test_a_queue_ref_into_complete_is_not_a_live_prompt(tmp_path):
+    root = _tree(tmp_path, complete=["2026/01/gearbox_retune.md"])
+    _queue(root, "## 1. Gearbox\n- kind: prompt\n- ref: complete/2026/01/gearbox_retune.md\n")
+    assert len(lifecycle.queue_findings(root)) == 1
+
+
+def test_a_prompt_entry_without_a_ref_or_with_an_unknown_kind_fails(tmp_path):
+    root = _queue(tmp_path, "## 1. Bare\n- kind: prompt\n\n## 2. Odd\n- kind: theme-sweep\n")
+    msgs = [f.msg for f in lifecycle.queue_findings(root)]
+    assert len(msgs) == 2
+    assert "no ref:" in msgs[0] and "theme-sweep" in msgs[1]
+
+
+def test_an_empty_or_absent_queue_is_not_drift(tmp_path, monkeypatch):
+    """Empty is a statement (no backlog dip), not an error."""
+    assert lifecycle.queue_findings(tmp_path) == []
+    _queue(tmp_path, "")
+    assert lifecycle.queue_findings(tmp_path) == []
+    _as_root(monkeypatch, tmp_path)
+    assert lifecycle.cmd_check(None) == 0
+
+
+def test_a_scoped_check_catches_a_dead_ref_when_the_change_touched_active(tmp_path):
+    """The ledger-merge workflow runs `check --paths <changed> --base main`. A
+    close-out touches `active/<name>` (and complete/), never the `draft/…` the
+    entry names — the finding must still be in that change's scope."""
+    root = _tree(tmp_path, complete=["2026/01/gearbox_retune.md"])
+    _queue(root, "## 1. Gearbox\n- kind: prompt\n"
+                 "- ref: draft/research/flywheel/gearbox_retune.md\n")
+    wanted = ["active/gearbox_retune.md", "complete/2026/01/gearbox_retune.md"]
+    hits, misses = lifecycle.scope_findings(root, lifecycle.queue_findings(root), wanted)
+    assert len(hits) == 1 and misses == []
+    # An unrelated change is not answerable for it.
+    hits, misses = lifecycle.scope_findings(
+        root, lifecycle.queue_findings(root), ["draft/feature/flywheel/other.md"])
+    assert hits == [] and len(misses) == 1

@@ -500,3 +500,71 @@ def test_the_glance_close_out_commits_cleanly_through_prompt_sync_push(
     assert git("rev-parse", "HEAD") == subprocess.run(
         ["git", "-C", str(remote), "rev-parse", "main"],
         capture_output=True, text=True, check=True).stdout.strip()
+
+
+# --------------------------------------------------------------------------- #
+# queue.md (M2.3, 2026-11-12): an entry leaves the queue when its work reaches
+# complete/, so close retires it — else its ref dangles and `check` fails
+# every later push.
+# --------------------------------------------------------------------------- #
+QUEUE = """\
+# Queue
+
+```markdown
+## <n>. <label>
+- kind: prompt
+- ref: draft/<work-type>/<target>/<name>.md
+```
+
+## 1. Sprocket calibration
+- kind: prompt
+- ref: draft/feature/flywheel/sprocket_calibration.md
+- note: torque first
+
+## 2. Widget alignment
+- kind: prompt
+- ref: draft/feature/flywheel/widget_alignment.md
+
+## Retired
+
+Entries that have left the queue.
+
+### Older gearbox work
+- shipped-as: Gadgets#1
+"""
+
+
+def test_close_retires_the_tasks_queue_entry(tmp_path, monkeypatch):
+    root = _mind(tmp_path)
+    (root / "queue.md").write_text(QUEUE)
+    _at(monkeypatch, root)
+    # Dry run: says so, writes nothing.
+    assert lifecycle.cmd_close(_args(root)) == 0
+    assert (root / "queue.md").read_text() == QUEUE
+    assert lifecycle.cmd_close(_args(root, apply=True)) == 0
+    text = (root / "queue.md").read_text()
+    live, retired = text.split("## Retired")
+    assert "Sprocket calibration" not in live and "Widget alignment" in live
+    assert "### Sprocket calibration\n- shipped-as: complete/2026/09/" \
+           "sprocket-calibration.md (2026-09-17)\n- note: torque first" in retired
+    assert retired.index("Sprocket calibration") < retired.index("Older gearbox")
+    # The bystander's entry still resolves; nothing dangles.
+    assert [e[0] for e in lifecycle.queue_entries(root)] == ["Widget alignment"]
+    assert lifecycle.queue_findings(root) == []
+
+
+def test_close_without_a_queue_entry_leaves_queue_md_alone(tmp_path, monkeypatch):
+    root = _mind(tmp_path)
+    other = QUEUE.replace("sprocket_calibration.md", "flange_polish.md")
+    (root / "queue.md").write_text(other)
+    _at(monkeypatch, root)
+    assert lifecycle.cmd_close(_args(root, apply=True)) == 0
+    assert (root / "queue.md").read_text() == other
+
+
+def test_queue_retire_text_creates_the_footer_when_missing():
+    text = "# Queue\n\n## 1. A\n- kind: prompt\n- ref: draft/x/y/a.md\n"
+    out, moved = lifecycle.queue_retire_text(text, "a.md", "complete/2026/01/a.md")
+    assert moved == ["A"]
+    assert out.endswith("## Retired\n\n### A\n- shipped-as: complete/2026/01/a.md\n"
+                        "- note: retired by `lifecycle.py close`\n")

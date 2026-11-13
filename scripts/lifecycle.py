@@ -2785,6 +2785,150 @@ def cmd_dates(args) -> int:
     return 1 if args.check else 0
 
 
+# --------------------------------------------------------------------------- #
+# queue.md — the human's ranked list (M2.3, PyAutoBrain AUTONOMY.md
+# "M2 rulings — 2026-11-12")
+# --------------------------------------------------------------------------- #
+#: A live entry's heading, `## <n>. <label>`. Any other heading ends an entry:
+#: the `## Retired` footer's `### …` entries are history, not the list.
+QUEUE_ENTRY_RE = re.compile(r"^##\s+\d+\.\s+(.+?)\s*$")
+QUEUE_FIELD_RE = re.compile(r"^-\s+(kind|ref):\s*(.+?)\s*$")
+QUEUE_KINDS = ("prompt", "retired")
+
+
+def queue_entries(root: Path) -> "list[tuple[str, str, str]]":
+    """(label, kind, ref) for each numbered entry of `queue.md`, in file order.
+
+    Read exactly as PyAutoBrain's `_batch.read_queue` reads it: a fenced block
+    is the schema's own example, and only fields under a numbered heading
+    belong to an entry. An absent file is an empty list."""
+    try:
+        text = (root / "queue.md").read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return []
+    out: "list[tuple[str, str, str]]" = []
+    label, kind, ref, fenced = None, "", "", False
+    for line in text.split("\n") + ["#"]:
+        if line.lstrip().startswith("```"):
+            fenced = not fenced
+            continue
+        if fenced:
+            continue
+        if line.startswith("#"):
+            if label is not None:
+                out.append((label, kind, ref))
+            m = QUEUE_ENTRY_RE.match(line)
+            label, kind, ref = (m.group(1) if m else None), "", ""
+            continue
+        m = QUEUE_FIELD_RE.match(line)
+        if m and label is not None:
+            value = m.group(2).split("#")[0].strip()
+            if m.group(1) == "kind":
+                kind = value
+            else:
+                ref = value
+    return out
+
+
+def _queue_ref_resolves(root: Path, ref: str) -> bool:
+    """A live prompt: the `draft/` or `active/` file itself, or — because an
+    entry keeps its place after its prompt is issued — `active/<name>`."""
+    if not ref.startswith(("draft/", "active/")):
+        return False
+    if (root / ref).is_file():
+        return True
+    return (root / "active" / Path(ref).name).is_file()
+
+
+def queue_findings(root: Path) -> "list[Finding]":
+    """Every live `queue.md` entry must name a draft or active prompt.
+
+    A dangling ref outranked nothing and said nothing: on 2026-11-12 the one
+    live entry named a research prompt absorbed into its completion record ten
+    weeks earlier, and no check had ever opened the file. An entry whose work
+    has shipped moves to the `## Retired` footer with its `shipped-as:`."""
+    out: "list[Finding]" = []
+    for label, kind, ref in queue_entries(root):
+        if kind not in QUEUE_KINDS:
+            out.append(Finding(
+                f"queue.md: entry `{label}` has kind `{kind or '(none)'}` — "
+                f"one of {' | '.join(QUEUE_KINDS)}", ("queue.md",)))
+        elif kind == "prompt" and not ref:
+            out.append(Finding(
+                f"queue.md: entry `{label}` is kind: prompt with no ref:",
+                ("queue.md",)))
+        elif kind == "prompt" and not _queue_ref_resolves(root, ref):
+            # Attributed to every place the prompt could have been, so a
+            # scoped check (`--paths` from the ledger-merge workflow) catches
+            # the change that completed it: a close-out touches `active/<name>`
+            # while the entry still names `draft/…`.
+            name = Path(ref).name
+            out.append(Finding(
+                f"queue.md: entry `{label}` ref `{ref}` resolves to no draft/ or "
+                f"active/ prompt — retire it to the footer (shipped-as:) or fix "
+                f"the path",
+                tuple(dict.fromkeys(("queue.md", ref, f"active/{name}")))))
+    return out
+
+
+def queue_retire_text(text: str, prompt_name: str, shipped_as: str) -> "tuple[str, list[str]]":
+    """(`queue.md` with every live entry naming `prompt_name` moved to the
+    `## Retired` footer, the labels moved). Unchanged text and [] when none.
+
+    `lifecycle.py close` calls this: an entry leaves the queue when its work
+    reaches `complete/` (queue.md's own rule), and left in place its ref
+    dangles and `check` fails every later push."""
+    lines = text.split("\n")
+    blocks: "list[tuple[int, int, str, list[str]]]" = []  # start, end, label, body
+    fenced, start, label = False, None, None
+    for i, line in enumerate(lines + ["#"]):
+        if line.lstrip().startswith("```"):
+            fenced = not fenced
+            continue
+        if fenced or not line.startswith("#"):
+            continue
+        if start is not None:
+            blocks.append((start, i, label, lines[start + 1:i]))
+        m = QUEUE_ENTRY_RE.match(line)
+        start, label = (i, m.group(1)) if m else (None, None)
+    moving = []
+    for b_start, b_end, b_label, body in blocks:
+        fields = {}
+        for ln in body:
+            m = re.match(r"^-\s+(kind|ref|note):\s*(.+?)\s*$", ln)
+            if m and m.group(1) not in fields:
+                fields[m.group(1)] = m.group(2).split("#")[0].strip() \
+                    if m.group(1) != "note" else m.group(2)
+        if fields.get("kind") == "prompt" and fields.get("ref") \
+                and Path(fields["ref"]).name == prompt_name:
+            moving.append((b_start, b_end, b_label, fields.get("note", "")))
+    if not moving:
+        return text, []
+    for b_start, b_end, _l, _n in reversed(moving):
+        del lines[b_start:b_end]
+    retired = []
+    for _s, _e, b_label, note in moving:
+        retired += [f"### {b_label}", f"- shipped-as: {shipped_as}"]
+        retired.append("- note: " + (f"{note} — " if note else "")
+                       + "retired by `lifecycle.py close`")
+        retired.append("")
+    head = next((i for i, ln in enumerate(lines) if ln.strip() == "## Retired"), None)
+    if head is None:
+        while lines and not lines[-1].strip():
+            lines.pop()
+        lines += ["", "## Retired", ""] + retired
+    else:
+        first = next((i for i in range(head + 1, len(lines))
+                      if lines[i].startswith("### ") or lines[i].startswith("## ")),
+                     len(lines))
+        if first == len(lines) and lines and lines[-1].strip():
+            retired = [""] + retired
+        lines[first:first] = retired
+    out = "\n".join(lines)
+    out = re.sub(r"\n{3,}", "\n\n", out)
+    return out.rstrip("\n") + "\n", [m[2] for m in moving]
+
+
 def check_findings(root: Path) -> "tuple[list[Finding], list[Finding]]":
     """(problems, warnings) for the whole tree, each attributed to its paths.
 
@@ -2853,6 +2997,8 @@ def check_findings(root: Path) -> "tuple[list[Finding], list[Finding]]":
     # closed record with no measured review cost is a warning (the number is
     # the human's to write, and its absence costs the budget, not the ledger).
     problems.extend(batch_member_findings(root))
+    # The human's ranked list: a dangling ref is drift (M2.3).
+    problems.extend(queue_findings(root))
     warnings.extend(batch_member_notes_findings(root))
     warnings.extend(batch_record_warning_findings(root))
     return problems, warnings
@@ -3656,6 +3802,16 @@ def cmd_close(args) -> int:
         )
     print(f"  index:    {INDEX_MD.relative_to(root)} — regenerated")
     print(f"  shadow:   {row}" if row else f"  shadow:   {why}")
+    # queue.md (M2.3): the entry leaves the queue when its work reaches
+    # complete/, so its ref never dangles past this close-out.
+    queue_md = root / "queue.md"
+    queue_new, queue_moved = (None, [])
+    if queue_md.is_file():
+        queue_new, queue_moved = queue_retire_text(
+            queue_md.read_text(encoding="utf-8"), prompt.name,
+            f"{dest.relative_to(root).as_posix()} ({args.date})")
+    for label in queue_moved:
+        print(f"  queue:    queue.md — retire `{label}` to the footer (shipped-as:)")
 
     # Every path this close-out writes, in the order above — the explicit list
     # `prompt_sync_push` needs (it commits only the paths it is given).
@@ -3666,6 +3822,7 @@ def cmd_close(args) -> int:
         INDEX_MD.relative_to(root).as_posix(),
         *registries,
         *([_rel(root, log)] if row is not None else []),
+        *(["queue.md"] if queue_moved else []),
     ]
 
     if not args.apply:
@@ -3692,6 +3849,10 @@ def cmd_close(args) -> int:
             continue
         if _prune_ledger_section(root / reg, args.slug):
             print(f"{reg}: removed section {slug!r}")
+
+    if queue_moved:
+        queue_md.write_text(queue_new, encoding="utf-8")
+        print(f"queue.md: retired {', '.join(queue_moved)}")
 
     if row is not None:
         # The row close printed in its dry run, verbatim — `mergedBy` evidence
