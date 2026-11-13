@@ -1,3 +1,28 @@
+Programme **M2.4** (epic `autonomous-orchestrators`, phase 9). Shipped as PyAutoHands#339 (4d68b445e), merged 2026-11-13. Issue PyAutoHands#337.
+
+**Human ruling (M1 gate, 2026-11-12):** a release publishes exactly the rehearsed commits, even if main moved. The Colab bump moves off main.
+
+**Built:**
+- `release.yml` takes `rehearsal_run_id` and `commit_shas`.
+- `resolve_commits` reads the rehearsal record (`rehearsal.json`). It refuses if the record is missing or mismatched, or if a SHA is not on `origin/main`.
+- The release checks out and tags exactly those SHAs, and verifies the tag on origin.
+- The Colab bump goes to `release/<version>` with a PR into main.
+- The caller contract is in `docs/internals.md`.
+- The partners merged in the same sitting: Brain#620 (callers) and Heart#342 (ancestry).
+
+**Witness:**
+- Hands suite: 631 passed. 4 pre-existing environmental `test_tombstone` failures.
+- yamllint clean.
+- Offline dry run: a release tags the rehearsed SHAs while main is 2 ahead, and refuses a PR-head SHA.
+
+**Review:** 3 rounds, all fixed, then CLEAN. The findings were: the Brain callers must merge together, a missing off-main guard, no owner for the release branch, and contract gaps.
+
+**Heart:** RED at ship. The human gave an override plus the merge command.
+
+Follow-up: workspaces still use `ref: main`, recorded in `draft/maintenance/pyautobrain/m2_build_followups.md`.
+
+## Original prompt
+
 # Release: build the commits that were rehearsed, not `main` at release time
 
 Type: feature

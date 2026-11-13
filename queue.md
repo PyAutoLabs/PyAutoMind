@@ -61,6 +61,69 @@ which now live in the Cortex, and no code ever read them (`_batch.py` globs
 is a Cortex phase-header key now (`PyAutoCortex/REFERENCE.md`), and every Cortex
 phase is `local-dev` by construction.
 
+<!-- first ranked list: human-approved at the programme M2 gate, 2026-11-13 -->
+
+## 1. Premise check and lane inference follow-ups (M1.3)
+- kind: prompt
+- ref: draft/feature/pyautobrain/premise_check_followups.md
+- note: programme — the premise gate decides what an unattended shift may dispatch; fix the false-lane and stale-GONE cases first
+
+## 2. Brain board hygiene ledger (SIG-3)
+- kind: prompt
+- ref: draft/feature/pyautobrain/brain_board_hygiene_ledger.md
+- note: programme side lane (state-table row); gives the shift digest a hygiene trend to point at
+
+## 3. prompt_sync_push explicit-paths follow-ups (M1.2)
+- kind: prompt
+- ref: draft/maintenance/pyautomind/prompt_sync_explicit_paths_followups.md
+- note: programme — touches autolens_profiling, so it parks STALE under the scoped gate until the unpolled-repos ruling
+
+## 4. Heart unit-test trend follow-ups (SIG-2)
+- kind: prompt
+- ref: draft/feature/pyautoheart/unit_trend_followups.md
+- note: programme side lane; small chart fixes plus a golden-HTML pin
+
+## 5. Duplicate Galaxy pytree registration after a JAX Fitness
+- kind: prompt
+- ref: draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md
+- note: small library bug with a reproduce-first witness
+
+## 6. Stale enable_pytrees advice in the autofit_workspace MCMC script
+- kind: prompt
+- ref: draft/bug/autofit/stale_enable_pytrees_register_model_advice_in.md
+- note: library half done; workspace leg only
+
+## 7. positions_threshold test fixture off the symmetry axis
+- kind: prompt
+- ref: draft/bug/autolens/positions_threshold_fixture_off_axis.md
+- note: test-only; removes a solver tie-break flake
+
+## 8. Regenerate autolens_workspace markdown for sigma_min
+- kind: prompt
+- ref: draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md
+- note: notify; seven curated pages show the pre-sweep MGE idiom
+
+## 9. PyAutoLens primary-beam persistence mirror
+- kind: prompt
+- ref: draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md
+- note: notify; docstring line plus one round-trip test
+
+## 10. plot.rst missing exports
+- kind: prompt
+- ref: draft/docs/autolens/plot_rst_missing_exports.md
+- note: docs-only autosummary fix in PyAutoLens and PyAutoGalaxy
+
+## 11. autolens_workspace __Model__ bullet parameter counts
+- kind: prompt
+- ref: draft/docs/workspaces/model_bullet_parameter_count_drift.md
+- note: notify; four named docstring sites, witness is a parse-and-compare script
+
+## 12. Release board run_logs enrichment
+- kind: prompt
+- ref: draft/feature/pyautohands/release_board_run_logs_enrichment.md
+- note: notify, low priority filler for a quiet shift
+
+
 ## Retired
 
 Entries that have left the queue. Kept for the record of what was wanted and

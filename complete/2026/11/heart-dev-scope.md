@@ -1,3 +1,28 @@
+Programme **M2.1** (epic `autonomous-orchestrators`, phase 9). Shipped as PyAutoHeart#342 (4ffd239f0), merged 2026-11-13. Issue PyAutoHeart#340.
+
+**Human ruling (M1 gate, 2026-11-12):** a dev ship is blocked only by reasons inside the repos it touches, plus their library CI and dependants. A feed older than 6 h is re-checked or parks. STALE never passes. Event triggers refresh the feed.
+
+**Built:** `pyauto-heart readiness --dev --repos A,B`.
+- **Blocks:** red main CI of each declared CI workflow (`dev_ship.ci_workflows`) in the touched repos and the libraries downstream of them.
+- **STALE:** unfinished or unrecorded runs, unpolled repos, feeds over 6 h old or timestamped in the future, and evidence with no conclusion.
+- **Shown, never blocking:** ops workflows and release-scope workflows.
+- `ci_status` fetches declared workflows that fall off the 30-run page.
+- `heart-health.yml` runs on `repository_dispatch: heart-refresh` and on Release Integrate completion. `lib-tests.yml` sends the refresh.
+- **M2.4 partner:** `rehearsal_ancestry`. A rehearsal whose SHAs are ancestors of main stays fresh.
+
+**Witness:**
+- Heart suite: 1423 passed.
+- Replay of 268 logged ships: 6 (2.2%) red-blocked, plus STALE for repos Heart does not poll (90 ships, 34%). The human ruled that these repos become not Heart-gated, with a PR-check guard, as the next task.
+- After merge, `pyauto-heart readiness --dev --repos PyAutoBrain` returned STALE: "Heart snapshot 13.0 h old, over the 6 h maximum".
+
+**Review:** 4 rounds, all fixed. The findings were: organ CI dropped, unpolled repos read as GREEN, a future timestamp read as fresh, the age limit could be switched off, an ops workflow could block, an older red workflow was hidden by a newer green one, and missing workflows were skipped. The final review was CLEAN.
+
+**Heart:** RED at ship. The human gave a dev-only override plus the merge command at the M2 gate.
+
+Follow-ups: `draft/maintenance/pyautobrain/m2_build_followups.md`.
+
+## Original prompt
+
 # Heart: a branch-scoped verdict for development ships, and a maximum feed age at the door
 
 Type: feature

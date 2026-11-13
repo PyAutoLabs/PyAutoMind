@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2252 records across 11 buckets.
+2255 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -183,6 +183,7 @@ markers; everything below GENERATED is rebuilt.
 - [glance-tier-ruling](2026/11/glance-tier-ruling.md) — prerequisite for phase 4 unattended merges; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [gradient-campaign-impact](2026/11/gradient-campaign-impact.md) — human-requested assessment of whether the two PyAutoArray#671 defects affected the likelihood-lifecycle phase-…
 - [gradient-json-point-label](2026/11/gradient-json-point-label.md) — already shipped — autolens_profiling#518 (9d2ee2d3d, merged 2026-11-02 22:38, filed 16:18 the same day) record…
+- [heart-dev-scope](2026/11/heart-dev-scope.md)
 - [howto-chapter2-format](2026/11/howto-chapter2-format.md) — Restored descriptive contents for Lens lessons 1–4 and complete ordered contents for Galaxy lessons 1–6, corre…
 - [howto-prose-format](2026/11/howto-prose-format.md)
 - [howtogalaxy-ch3-parity](2026/11/howtogalaxy-ch3-parity.md) — Ported the approved HowToLens Chapter 3 teaching improvements to directly observed galaxies: Goldilocks/log-ev…
@@ -203,6 +204,7 @@ markers; everything below GENERATED is rebuilt.
 - [jax-floor-0-12](2026/11/jax-floor-0-12.md)
 - [jax-joss-benchmark-repo](2026/11/jax-joss-benchmark-repo.md) — already shipped — PyAutoLabs/autolens_jax_joss: 9c66b020 (birth, 10 benchmark scripts), 64204f69 (A100 sweep o…
 - [jax-version-policy](2026/11/jax-version-policy.md)
+- [lane-fail-closed](2026/11/lane-fail-closed.md)
 - [latent-smoke-assertion-echoes-search-log](2026/11/latent-smoke-assertion-echoes-search-log.md)
 - [latest-per-test-tie](2026/11/latest-per-test-tie.md) — test_autofit/results/test_identity.py::test_latest_per_keeps_the_latest_sibling flaked (main red at 963ff296a,
 - [ledger-merge-sync](2026/11/ledger-merge-sync.md) — shipped in commit 748f8c0bb (this PR). `scripts/ledger_merge.py sync [--base origin/main] [--root]` / `sync_wi…
@@ -263,6 +265,7 @@ markers; everything below GENERATED is rebuilt.
 - [rectangular-parity-absolute-bound](2026/11/rectangular-parity-absolute-bound.md) — autogalaxy_workspace_test#134 (merged 0b5ff519, human /prm). `imaging/jax_likelihood/rectangular.py` parity is…
 - [reduce-session-token-load](2026/11/reduce-session-token-load.md) — PR is the tracking surface
 - [registry-reconcile-app-token](2026/11/registry-reconcile-app-token.md)
+- [release-rehearsed-shas](2026/11/release-rehearsed-shas.md)
 - [repos-sync-optin-block](2026/11/repos-sync-optin-block.md) — shipped in PyAutoMind#539 (commit dc471e1d6), narrowed scope: option (a) of the 2026-11-05 re-size, chosen by …
 - [repos-sync-test-keys-on-dir-name](2026/11/repos-sync-test-keys-on-dir-name.md) — already shipped — closed as stale draft. Commit 679b1319f (2026-10-16, "test: Mind suite green on main — shado…
 - [results-library-p2-completeness](2026/11/results-library-p2-completeness.md) — phase 2; ledger draft/feature/autofit/results_library_epic.md
