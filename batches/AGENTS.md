@@ -337,8 +337,11 @@ state, tokens against the budget, blocks, parks, refusals, time to `review-at:`
 and the steering commands. The human steers by commenting, the comment's first
 line one of `/pause`, `/resume`, `/drop <task>` or `/stop`; only their
 `mention_login` counts. Each command is acknowledged once, in that status
-comment. `/stop` writes the watcher's `STOP` file; a dropped worker already
-running is not killed. The record's `- live:` line is the dashboard's
+comment. `/pause` holds spawns, re-dispatches and new close-outs until
+`/resume`; reaps and mentions continue. `/stop` writes the watcher's `STOP`
+file. `/drop` takes only a task of this shift; a dropped worker already
+running is not killed, and a merge that lands after a drop is never counted
+as unattended. The record's `- live:` line is the dashboard's
 one-line copy, rewritten through the one Mind writer when the state changes;
 nobody else writes it. Doctrine: AUTONOMY.md watcher network surface,
 amendment 2026-11-13.

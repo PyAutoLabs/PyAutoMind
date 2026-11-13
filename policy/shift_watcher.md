@@ -23,7 +23,8 @@ What keeps the exemption narrow:
 - **Kill switch:** it checks for a `STOP` file in its slot directory **first**,
   before reading anything else, and does nothing while that file exists. The
   human can also write it from their phone by commenting `/stop` on the
-  shift's issue, or hold new spawns with `/pause` until `/resume`
+  shift's issue, or comment `/pause` to hold spawns, re-dispatches and new
+  close-outs until `/resume` (reaps and mentions continue)
   (PyAutoBrain#622; `PyAutoBrain/AUTONOMY.md` watcher network surface,
   amendment 2026-11-13).
 
