@@ -15,7 +15,6 @@ numpy), and Heart's Colab gate (check F) failed. Fixed on main 2026-11-12:
   error fails. Tests run the real driver.
 - Merged with Nerves#218's colab-gate leg red (human-approved): that gate audits the
   RELEASED bootstrap, so check F clears only after the next release.
-- pending-release: PyAutoNerves@https://github.com/PyAutoLabs/PyAutoNerves/pull/218
 
 ## Original prompt
 

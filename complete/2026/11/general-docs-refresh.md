@@ -25,8 +25,6 @@ Each feature head is confirmed as an ancestor of origin/main. Both library PRs p
 
 Development shipping used the recorded live Heart RED override, "I authroize". The separate live merge command was: "Check Lens CI again. If it's all green, merge all three PRs, including the likelihood repo with no CI, and close out the task." Heart RED was not cleared and no release was performed.
 
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/848
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/708
 
 ## Evidence and follow-up
 

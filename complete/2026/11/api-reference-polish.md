@@ -10,8 +10,6 @@ Six API category pages: docs/api/galaxy.rst, pixelization.rst and plot.rst in bo
 ## Merge receipts
 - PyAutoLens: https://github.com/PyAutoLabs/PyAutoLens/pull/849 — head 9a1266dec6558f2b382be2f61405117aff9e1a77; merge 64e5f8a759de51642f996cda11b21e374600a2e4
 - PyAutoGalaxy: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/709 — head 28dfe2d5d7ce1fd12e4402417bd79dbfabeb1e10; merge 98f1091fc0ee2948bfd0e73227ab60bfe47f4fe0
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/849
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/709
 
 ## Validation
 Each exact head: 2 successful workflows and 4 successful jobs (Docs, Python 3.12, Python 3.13, no-JAX). Both CLEAN, freeze clear. No existing reviews/threads and no actionable findings from in-session review. Both head commits proved ancestors of origin/main.
