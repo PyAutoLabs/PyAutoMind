@@ -10,8 +10,6 @@ Applied approved Installation drafts to Lens and Galaxy, consolidating workspace
 
 Both exact-head CI runs and every job passed: docs, Python 3.12, Python 3.13 and no-JAX. No skipped jobs. Merge state CLEAN and freeze clear. Live human merge instruction received; no release performed. Prior focused Sphinx, old-anchor preservation and 420 local-link checks passed. Fresh multi-platform installations not claimed.
 
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/842
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/706
 
 Applied previews retained: /mnt/c/Users/Jammy/Workspace/Science/scratch/installation_review_20261112/applied/index.html
 

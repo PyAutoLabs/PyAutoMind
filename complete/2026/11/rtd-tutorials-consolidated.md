@@ -4,8 +4,6 @@
 - Issue: https://github.com/PyAutoLabs/PyAutoLens/issues/843 (closed)
 - PyAutoLens PR: https://github.com/PyAutoLabs/PyAutoLens/pull/844 — merged a261ffaba74eecc4c2c2c547679e897fec9436ce
 - PyAutoGalaxy PR: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/707 — merged 66e7165516c23ae1db9628d4e329ed7cf6757306
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/844
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/707
 
 Applied the approved concise course pages, chapter outcomes/prerequisites and GitHub / Colab links. All ten old chapter URLs remain as redirects with fallback links to the consolidated chapter anchors. Only Tutorials files and its navigation block changed; Installation, Overview, General and notebooks unchanged.
 

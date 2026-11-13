@@ -55,8 +55,6 @@
 
 - library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/833
 - library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/703
-- pending-release: PyAutoLens@https://github.com/PyAutoLabs/PyAutoLens/pull/833
-- pending-release: PyAutoGalaxy@https://github.com/PyAutoLabs/PyAutoGalaxy/pull/703
 
 - merged: PyAutoLens#833 fdf569cd786bcdd78566dc3dee54fff63dc2873c; PyAutoGalaxy#703 8e68a6a7edfd65692e34b9bf8072b7c19f387b92
 - merge-validation: all four jobs (Docs, Python 3.12, Python 3.13, no-JAX) passed per exact PR head; freeze clear, merge states CLEAN; explicit live human merge authority
