@@ -1157,7 +1157,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/dev_ship_reason_scope_and_feed_age.md">Heart: a branch-scoped verdict for development ships, and a maximum feed age…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/340">issue #340</a> — issued 2026-11-12 — library-dev</summary>
+<details><summary>📋 <a href="active/dev_ship_reason_scope_and_feed_age.md">Heart: a branch-scoped verdict for development ships, and a maximum feed age…</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/340">issue #340</a> — issued 2026-11-12 — library-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/342">PyAutoHeart#342</a></summary>
 
 ```
 Use the start-dev skill. active/dev_ship_reason_scope_and_feed_age.md
@@ -1181,7 +1181,7 @@ Use the start-dev skill. active/pyautolens_ii_case_studies.md
 
 </details>
 
-<details><summary>📋 <a href="active/release_builds_rehearsed_shas.md">Release: build the commits that were rehearsed, not <code>main</code> at release time</a> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/337">issue #337</a> — issued 2026-11-12 — library-dev</summary>
+<details><summary>📋 <a href="active/release_builds_rehearsed_shas.md">Release: build the commits that were rehearsed, not <code>main</code> at release time</a> — <a href="https://github.com/PyAutoLabs/PyAutoHands/issues/337">issue #337</a> — issued 2026-11-12 — library-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHands/pull/339">PyAutoHands#339</a></summary>
 
 ```
 Use the start-dev skill. active/release_builds_rehearsed_shas.md
