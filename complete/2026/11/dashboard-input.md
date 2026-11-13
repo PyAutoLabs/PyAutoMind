@@ -1,3 +1,37 @@
+Pre-M3 build 2 (epic `autonomous-orchestrators`): the editable Mind dashboard. Shipped as PyAutoMind#567 (f6bdaae62) and PyAutoBrain#624 (5496e4d38), merged 2026-11-13. Issue PyAutoMind#565.
+
+**Human rulings, 2026-11-13:**
+- Issue forms rejected as clunky; the input must be one action in the page.
+- Option 1, the editable dashboard.
+- Design B was then found unsafe in security review. An Actions token can dispatch any workflow at any old branch carrying injectable YAML. The human chose **design C, an Issues-only token on a dedicated machine account**.
+- The human gave the merge command (judge tier).
+
+**Built:**
+- A ★ per task and a Goals box on the dashboard. A tap opens one labelled issue as the machine account.
+- `dashboard_input.yml` (on `issues: labeled`, so it always runs from main) responds only when that account opened and labelled an open, unlocked issue. It validates in Python, commits only `queue.md`/`goals.md`, and answers, closes and locks the issue. It has a spam cap.
+- `goals.md` plus `lifecycle.py` checks.
+- `batch brief --new` reads goals with provenance: dashboard-written goals are commented out until the human keeps them.
+- 4 pre-existing workflows were hardened against input injection, and a lint blocks the pattern.
+
+**Witness:**
+- Mind suite: 921 passed. Brain suite: 1870 passed.
+- Headless browser run: 10/10 steps, no CSP violations.
+- actionlint clean. CI green. Heart dev-ship GREEN.
+
+**Review:** 4 security rounds, then CLEAN.
+
+**Inert until the human's one-time setup:**
+- a machine account with Triage on PyAutoMind;
+- the `dashboard-input` label;
+- repo variables `DASHBOARD_INPUT_LOGIN` and `HUMAN_LOGIN`;
+- a fine-grained Issues read/write token from the machine account, pasted into the dashboard on each device.
+
+Steps are in `policy/github_tokens.md`.
+
+**Follow-up (human, admin):** `draft/maintenance/pyautomind/old_branch_workflow_secret_exposure.md`.
+
+## Original prompt
+
 # Mind dashboard: a priority tick on each task and a written Goals box, from a phone
 
 Type: feature

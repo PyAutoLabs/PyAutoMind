@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2258 records across 11 buckets.
+2259 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -165,6 +165,7 @@ markers; everything below GENERATED is rebuilt.
 - [cti-release-train-wiring](2026/11/cti-release-train-wiring.md)
 - [cti-smoke-breadth](2026/11/cti-smoke-breadth.md)
 - [cti-workspace-test-rebuild](2026/11/cti-workspace-test-rebuild.md)
+- [dashboard-input](2026/11/dashboard-input.md)
 - [data-loading-and-selection-cuts-skill](2026/11/data-loading-and-selection-cuts-skill.md)
 - [delaunay-smoke-300s-cap](2026/11/delaunay-smoke-300s-cap.md) — Already resolved; nothing was committed. Under the smoke profile `scripts/imaging/features/pixelization/delaun…
 - [dev-metrics-boards](2026/11/dev-metrics-boards.md)
