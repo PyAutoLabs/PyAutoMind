@@ -13,7 +13,7 @@ Filed: 2026-11-13
 Issued: 2026-11-13
 Epic: autonomous-orchestrators
 Consequence: judge
-Witness: (a) a fake-clock shift test creates one status comment on the brief's `issue:` and then only edits it (≤ 1 edit per 10 min or per state change); its body equals `_watch.render(snapshot(...))` for that tick; a crash between claim and post never yields two comments; (b) with `PAUSE` in the slot, ticks dispatch nothing new while leased workers keep running and are reaped, and removing it resumes; (c) a task removed from the brief's `tasks:` or added to `exclude:` mid-shift is never picked on the next tick, and its running worker (if any) is listed "dropped, still running" in the live view and digest; (d) `/batch watch` in a Claude window prints the same snapshot from the slot, or from the live comment when no slot is local
+Witness: (restated 2026-11-13 to the human-approved design — comment commands, not files) (a) a fake-clock shift test creates one status comment on the brief's `issue:` and then only edits it (≤ 1 edit per tick, on state change or every 10 min, plus one closing edit), its body the `batch watch` snapshot (`render_status`); a crash or timeout never yields a second comment; (b) `/pause` holds spawns, re-dispatches and new close-outs until `/resume`; `/drop <task>` removes an unspawned pick, and a dropped task's PR is never merged unattended (close-out included); `/stop` has exactly the STOP file's effect; (c) commands count only from `mention_login`, after `dispatched:`, first line only, enacted and acknowledged once by comment id; an edit after enactment does not re-trigger; (d) the full suite passes offline
 Review-minutes: 25
 Unattended: never
 Lane: any
