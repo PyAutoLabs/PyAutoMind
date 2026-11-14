@@ -2,11 +2,17 @@
   "schema_version": 1,
   "organ": "mind",
   "repo": "PyAutoMind",
-  "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 9 in flight",
-  "updated": "2026-11-14T17:44:19Z",
+  "status": "red",
+  "headline": "RED \u2014 24 picks \u00b7 9 in flight",
+  "updated": "2026-11-14T17:56:41Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
+    {
+      "severity": "red",
+      "text": "Cluster package: point-source-default narrative + extended-source follow-up feature \u2014 awaiting-merge (PR open, decision-taken; extended_source parked awaiting-input)",
+      "url": "https://github.com/PyAutoLabs/autolens_workspace/issues/670",
+      "prompt": "Use the start-dev skill. active/cluster_regime_narrative.md"
+    },
     {
       "severity": "yellow",
       "text": "Polish the homepage flow \u2014 awaiting-merge",
@@ -120,12 +126,6 @@
       "text": "pick: Verify jax.jit / jax.grad parity on the critical-curve and caustic calculations",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace_test/jax_zero_contour.md",
       "prompt": "Use the start-dev skill. draft/test/autolens_workspace_test/jax_zero_contour.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: HowToLens tutorial 4 (point sources): make image-plane vs source-plane clear",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/howtolens/howtolens_tutorial_4_point_sources_make_image.md",
-      "prompt": "Use the start-dev skill. draft/docs/howtolens/howtolens_tutorial_4_point_sources_make_image.md"
     }
   ]
 }

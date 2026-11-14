@@ -1259,7 +1259,7 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 </details>
 
-<details><summary>📋 <a href="active/cluster_regime_narrative.md">Cluster package: point-source-default narrative + extended-source follow-up feature</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/670">issue #670</a> — issued 2026-11-14 — workspace-dev</summary>
+<details><summary>📋 <a href="active/cluster_regime_narrative.md">Cluster package: point-source-default narrative + extended-source follow-up feature</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/670">issue #670</a> — issued 2026-11-14 — awaiting-merge (PR open, decision-taken; extended_source parked awaiting-input)</summary>
 
 ```
 Use the start-dev skill. active/cluster_regime_narrative.md
