@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 25 |
-| [In flight](#in-flight) | 8 |
+| [In flight](#in-flight) | 9 |
 | [Planned](#planned) | 11 |
-| [Backlog](#backlog) | 276 |
+| [Backlog](#backlog) | 275 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
 
@@ -139,7 +139,7 @@ Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 79
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 78
 
 <details><summary>📋 <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a> — autolens_workspace · small · safe · normal</summary>
 
@@ -1305,6 +1305,14 @@ Use the start-dev skill. active/homepage_flow_polish.md
 
 </details>
 
+<details><summary>📋 <a href="active/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> — issued 2026-09-09</summary>
+
+```
+Use the start-dev skill. active/plot_rst_missing_exports.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/pyautolens_ii_case_studies.md">PyAutoLens II case studies</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace_developer/issues/147">issue #147</a> — issued 2026-11-12 — workspace-dev</summary>
 
 ```
@@ -1428,7 +1436,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 221 · ral 34 · local-dev 10 · wsl-data 9
+Lanes: any 220 · ral 34 · local-dev 10 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
@@ -2382,7 +2390,7 @@ Use the start-dev skill. draft/research/autoarray/delaunay_interpolator_pure_cal
 </details>
 
 <details>
-<summary><b>docs</b> — 28</summary>
+<summary><b>docs</b> — 27</summary>
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -2436,14 +2444,6 @@ Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sig
 
 ```
 Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/docs/autolens/plot_rst_missing_exports.md"><code>docs/api/plot.rst</code> omits already-exported plot symbols</a> — autolens · medium · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/docs/autolens/plot_rst_missing_exports.md
 ```
 
 </details>
