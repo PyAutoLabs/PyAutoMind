@@ -18,7 +18,7 @@
 
 > **Batch 2026-11-14-pm — 0 in progress · 0 awaiting review**
 >
-> Live: LIVE · 2 running · tokens 0 of 600000 (2 session(s) unmeasured) · review-at 2026-11-14T13:55Z (as of 2026-11-14T12:26:22Z) — status: https://github.com/PyAutoLabs/PyAutoMind/issues/569#issuecomment-6877245751
+> Live: LIVE · 1 running, 1 finished · tokens 492206 of 600000 (cache-read 11701179) · review-at 2026-11-14T13:55Z (as of 2026-11-14T12:35:07Z) — status: https://github.com/PyAutoLabs/PyAutoMind/issues/569#issuecomment-6877245751
 >
 >
 > _Nothing to review yet._
@@ -1274,7 +1274,7 @@ Use the start-dev skill. active/pyautolens_ii_case_studies.md
 
 </details>
 
-<details><summary>📋 <a href="active/stale_enable_pytrees_register_model_advice_in.md">Stale enable_pytrees register_model advice in NUTS and SMC errors and searches docs</a> — <a href="https://github.com/PyAutoLabs/autofit_workspace/issues/184">issue #184</a> — issued 2026-11-14 — workspace-dev</summary>
+<details><summary>📋 <a href="active/stale_enable_pytrees_register_model_advice_in.md">Stale enable_pytrees register_model advice in NUTS and SMC errors and searches docs</a> — <a href="https://github.com/PyAutoLabs/autofit_workspace/issues/184">issue #184</a> — issued 2026-11-14 — awaiting-merge</summary>
 
 ```
 Use the start-dev skill. active/stale_enable_pytrees_register_model_advice_in.md
@@ -1290,7 +1290,7 @@ Use the start-dev skill. active/three_autos_public_framing.md
 
 </details>
 
-<details><summary>📋 <a href="active/unit_trend_followups.md">Heart unit-test trends: follow-ups from PyAutoHeart#338</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/346">issue #346</a> — issued 2026-11-14 — library-dev</summary>
+<details><summary>📋 <a href="active/unit_trend_followups.md">Heart unit-test trends: follow-ups from PyAutoHeart#338</a> — <a href="https://github.com/PyAutoLabs/PyAutoHeart/issues/346">issue #346</a> — issued 2026-11-14 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/347">PyAutoHeart#347</a></summary>
 
 ```
 Use the start-dev skill. active/unit_trend_followups.md
