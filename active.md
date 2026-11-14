@@ -105,7 +105,7 @@
 - status: library-dev
 - worktree: ~/Code/PyAutoLabs-wt/warmup-findings
 - epic: autonomous-orchestrators (pre-M3.1 fixes from the warm-up live shift)
-- prompt: draft/bug/pyautobrain/warmup_shift_findings.md
+- prompt: active/warmup_shift_findings.md
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
 - repos:
   - PyAutoBrain: feature/warmup-findings

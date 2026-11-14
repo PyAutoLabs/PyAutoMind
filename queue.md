@@ -97,11 +97,6 @@ phase is `local-dev` by construction.
 - ref: draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md
 - note: small library bug with a reproduce-first witness
 
-## 6. Stale enable_pytrees advice in the autofit_workspace MCMC script
-- kind: prompt
-- ref: draft/bug/autofit/stale_enable_pytrees_register_model_advice_in.md
-- note: library half done; workspace leg only
-
 ## 7. positions_threshold test fixture off the symmetry axis
 - kind: prompt
 - ref: draft/bug/autolens/positions_threshold_fixture_off_axis.md
@@ -132,11 +127,14 @@ phase is `local-dev` by construction.
 - ref: draft/feature/pyautohands/release_board_run_logs_enrichment.md
 - note: notify, low priority filler for a quiet shift
 
-
 ## Retired
 
 Entries that have left the queue. Kept for the record of what was wanted and
 what replaced it; `batch plan` ignores them.
+
+### Stale enable_pytrees advice in the autofit_workspace MCMC script
+- shipped-as: autofit_workspace#185 → complete/2026/11/stale-enable-pytrees-register-model-advice-in.md (2026-11-14; merged unattended by the warm-up shift, retired by the lead — the watcher close-out does not retire queue entries)
+- note: library half done; workspace leg only — retired by `lifecycle.py close`
 
 ### numba solve vs JAX sparse operator
 - shipped-as: PyAutoArray#513 → complete/2026/09/numba-vs-jax-sparse.md (2026-09-01)
