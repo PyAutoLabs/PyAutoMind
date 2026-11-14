@@ -25,6 +25,9 @@ Human, 2026-11-14, during M3.1 shift A: two workers parked with questions (autol
 3. **Answering resumes the work.** The human answers on the issue, in the dashboard, or in a chat (M3.4 cockpit). The answered task becomes startable again: it re-enters the planner with the answer attached to its prompt, so the next shift or session continues it without the human re-explaining. Unanswered entries never block a shift.
 4. **Bulk sitting.** A chat command such as "go through my questions" walks the inbox one entry at a time. It records each answer on its issue and marks the entry answered, deferred or dropped.
 
+5. **On the Mind dashboard.** The inbox is a section of the PyAutoMind dashboard: each open question shows its ask, options, issue link and age, with an answer, defer or drop control using the dashboard's existing input route (design C: an Issues-token `dashboard-input` issue, validated and committed by the bot).
+6. **Reminders from the cockpit.** The M3.4 chat mentions the inbox count at shift end, or when the human attaches, and offers a bulk sitting. It reminds; it never demands.
+
 ## Witness
 
 - Offline: a replayed shift with two parked workers produces two inbox entries, one calm notification and a digest link. An answered entry makes the task plannable again, with the answer in its prompt.
