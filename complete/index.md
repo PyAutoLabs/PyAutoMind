@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2265 records across 11 buckets.
+2266 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -300,6 +300,7 @@ markers; everything below GENERATED is rebuilt.
 - [token-load-measure-four-organs](2026/11/token-load-measure-four-organs.md) — PR is the tracking surface
 - [tutorial-link-sweep](2026/11/tutorial-link-sweep.md)
 - [unit-trend-followups](2026/11/unit-trend-followups.md)
+- [warmup-shift-findings](2026/11/warmup-shift-findings.md)
 - [watcher-app-identity](2026/11/watcher-app-identity.md)
 - [watcher-numbers-and-push](2026/11/watcher-numbers-and-push.md)
 - [watcher-workers-survive-systemd-tick](2026/11/watcher-workers-survive-systemd-tick.md) — pilot 4c follow-up; issue PyAutoBrain#592

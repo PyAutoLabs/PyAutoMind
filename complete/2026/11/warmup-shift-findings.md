@@ -1,3 +1,22 @@
+Pre-M3.1 fixes from the warm-up live shift `2026-11-14-pm` (epic `autonomous-orchestrators`). Shipped as PyAutoBrain#635 (7be8e94ba), merged 2026-11-14 on `ci-verdict` GREEN. Issue PyAutoBrain#634.
+
+**Fixed:**
+- **Links:** a digest or status task title now links to its PR, else the work repo's issue. The digest's Mind link is pinned to a commit, so it cannot 404.
+- **Daemon:** workers and close-outs launch through `systemd-run --user --scope`, so the `claude --bg` daemon leaves the watcher unit's cgroup. They fall back to a plain launch, and nothing ever stops a daemon.
+- **Wording:** outcome first, in plain words, with the detail on a smaller second line. Asked for by the human after a 5-minute phone review.
+- **Firewall:** the worker template runs the tenant firewall before an organ push.
+- **Queue:** an unattended close-out now retires the shipped task's `queue.md` entry in the same ledger commit. Lead follow-up: any failure in Mind's lifecycle code stays one op's failure.
+- **N1:** a worker still out at review-at reads "still running at review time".
+
+**Witness:**
+- 10 new offline tests, each failing on origin/main.
+- Brain suite: 2014 passed. The 1 failure is environmental, from the bundle's `PYAUTO_ROOT`.
+- The real warm-up digest was re-rendered, before and after (`Science/scratch/m3_1_prep/warmup/render_634/`).
+
+**Review:** independent Opus, CLEAN, with 5 follow-ups. The lead fixed 2. The other 3, plus the deferred items, are in `draft/bug/pyautobrain/closeout_cleanup_followups.md`.
+
+## Original prompt
+
 # Warm-up live shift 2026-11-14-pm: findings to fix before M3.1 shift A
 
 Type: bug
