@@ -9,10 +9,10 @@
 | Where | Count |
 |-------|------:|
 | [Start here](#start-here) | 24 |
-| [Epics](#epics) | 24 |
+| [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 8 |
 | [Planned](#planned) | 11 |
-| [Backlog](#backlog) | 275 |
+| [Backlog](#backlog) | 276 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
 
@@ -1202,6 +1202,19 @@ Use the start-dev skill. draft/feature/autofit/nautilus_fast_likelihood_developm
 </details>
 
 <details>
+<summary><b>autonomous-orchestrators (programme M3.4 companion)</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/questions_inbox_bulk_answering.md">Questions inbox: parked questions wait in one list the human works through…</a> — pyautobrain · medium · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/questions_inbox_bulk_answering.md
+```
+
+</details>
+
+</details>
+
+<details>
 <summary><b>autonomous-orchestrators (programme M3.4)</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautobrain/shift_chat_cockpit.md">Shift chat cockpit: watch and steer a live shift from a Claude…</a> — pyautobrain · medium · supervised · high</summary>
@@ -1413,7 +1426,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 220 · ral 34 · local-dev 10 · wsl-data 9
+Lanes: any 221 · ral 34 · local-dev 10 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
@@ -3032,7 +3045,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-108 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+109 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3054,6 +3067,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/jax_substructure/5_prng_key_vmap_noise.md`
 - `draft/feature/jax_substructure/6_deflection_equivalence_test.md`
 - `draft/feature/pyautobrain/autonomous_orchestrators_epic.md`
+- `draft/feature/pyautobrain/questions_inbox_bulk_answering.md`
 - `draft/feature/pyautobrain/routine_public_repository_review.md`
 - `draft/feature/pyautobrain/shift_chat_cockpit.md`
 - `draft/feature/pyautobrain/shift_watcher_in_the_cloud.md`
@@ -3076,8 +3090,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md`
 - `draft/bug/autogalaxy/area_magnification_critical_curve_fragments.md`
 - `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
-- `draft/bug/autogalaxy/wrong_jax_gradient_on_mge_likelihoods_fd.md`
-- _… and 68 more_
+- _… and 69 more_
 
 </details>
 
