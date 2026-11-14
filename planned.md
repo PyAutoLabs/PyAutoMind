@@ -158,3 +158,15 @@
   2. Submit autolens_profiling_p677/hpc/batch_cpu/submit_p1112_dnn_numba_remeasure_ral_cpu_hst_fp64 via `hpc/sync submit --cpu` from a copy of hpc/ whose sync.conf sets PROJECT_NAME=autolens_profiling_p677 (raw sbatch is hook-blocked). Risk: RAL venv jax 0.11.2 vs the release's jax floor.
   3. Ingest: old rows → results/imaging/delaunay_nn/hst/numba_cpu_sparse_fp64/hpc_ral_cpu/history/2026.10.23.1_2026-10-25/, new rows current; re-key catalogue/peak_rss_backfill.json to the history path; add the tag to catalogue/release_revisions.json; build_catalogue → build_dashboard (PYAUTO_BRAIN set) → coverage_matrix; commit all of dashboard/; PR closes #528.
   4. Pulse: update tasks/numba_num_threads_pin_and_delaunay_nn_remeasure.md (no longer blocked; day-zero rows were 2026.10.23.1 carried to .25.1). Frozen day_zero snapshot is never rewritten.
+## model-bullet-parameter-count-drift
+- status: blocked — repo claimed by another task (awaiting-input on the issue)
+- filed: 2026-09-18
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/672
+- prompt: draft/docs/workspaces/model_bullet_parameter_count_drift.md
+- summary: fix four autolens_workspace `__Model__` docstrings whose profiles / parameter counts do not match `prior_count`; plan on the issue
+- blocked-by: autolens_workspace (cluster-regime-narrative, PR #671 awaiting /prm)
+- next: after #671 merges (or the human authorizes coordination on #672), rerun `/start_dev draft/docs/workspaces/model_bullet_parameter_count_drift.md --auto`
+- tier: notify — merge mode: auto-merge on green
+- affected-repos:
+  - autolens_workspace
+
