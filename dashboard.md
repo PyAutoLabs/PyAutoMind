@@ -18,7 +18,7 @@
 
 > **Batch 2026-11-14-pm3 — 0 in progress · 0 awaiting review**
 >
-> Live: LIVE · 2 running, 1 finished, 1 refusal reasons · tokens 294775 of 400000 (cache-read 6389222; 1 session(s) unmeasured) · review-at 2026-11-14T21:20Z (as of 2026-11-14T20:20:28Z) — status: https://github.com/PyAutoLabs/PyAutoMind/issues/571#issuecomment-6883569285
+> Live: LIVE · 1 running, 2 finished, 1 dropped, 2 refusal reasons · tokens 371249 of 400000 (cache-read 8249906) · review-at 2026-11-14T21:20Z (as of 2026-11-14T20:23:34Z) — status: https://github.com/PyAutoLabs/PyAutoMind/issues/571#issuecomment-6883569285
 >
 >
 > _Nothing to review yet._
@@ -139,15 +139,7 @@ Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 78
-
-<details><summary>📋 <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a> — autolens_workspace · small · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md
-```
-
-</details>
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 77
 
 <details><summary>📋 <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a> — autolens_workspace · small · safe · normal</summary>
 
@@ -233,6 +225,14 @@ Use the start-dev skill. draft/test/autolens_workspace_test/mge_group_dataset_wi
 
 ```
 Use the start-dev skill. draft/docs/workspaces/assistants_regime_extension.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/refactor/autoarray/sparse_operator_int32_indexes.md">Sparse CPU operator: shrink the 172 MB per-dataset payload…</a> — autoarray · supervised</summary>
+
+```
+Use the start-dev skill. draft/refactor/autoarray/sparse_operator_int32_indexes.md
 ```
 
 </details>
@@ -2440,18 +2440,18 @@ Use the start-dev skill. draft/docs/autogalaxy/adapt_image_is_the_s_n_map.md
 
 </details>
 
-<details><summary>📋 <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a> — autolens_workspace · small · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a> — autolens_workspace · small · safe · normal</summary>
 
 ```
 Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md">Regenerate autolens_workspace markdown/ so the MGE pages show sigma_min</a> — autolens_workspace · medium · safe · normal</summary>
+
+```
+Use the start-dev skill. draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md
 ```
 
 </details>
