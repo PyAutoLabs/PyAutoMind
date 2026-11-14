@@ -18,6 +18,8 @@
 
 > **Batch 2026-11-14-pm3 — 0 in progress · 0 awaiting review**
 >
+> Live: LIVE · 2 running, 1 refusal reasons · tokens 0 of 400000 (2 session(s) unmeasured) · review-at 2026-11-14T21:20Z (as of 2026-11-14T20:14:14Z) — status: https://github.com/PyAutoLabs/PyAutoMind/issues/571#issuecomment-6883569285
+>
 >
 > _Nothing to review yet._
 
