@@ -48,4 +48,6 @@ decision-taken) and a token-cap refusal of a spawn (the session cap bound first 
    worker still costs, and close-outs ran over the budget as ruled. Re-check the reservation maths
    so the cap binds before the session cap when it is meant to.
 
-Witness: one offline test per item 1–5, 7 and 8 that fails on 7be8e94. Item 6 is a human ruling.
+9. **Worker wrote a bare `pr:` key in its active.md row** (`cluster-regime-narrative`), so `lifecycle.py check` drifted and /prm would find nothing to merge. The lead renamed it to `workspace-pr:`. The worker template, or the writer's validation, should enforce the PR keys (REFERENCE.md "The PR keys").
+
+Witness: one offline test per item 1–5, 7, 8 and 9 that fails on 7be8e94. Item 6 is a human ruling.

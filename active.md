@@ -107,7 +107,7 @@
 - tier: notify — merge mode: auto-merge on green (supervised --auto: decision-taken PR ends at PR-open)
 - heart-ack:
   - organism verdict RED/YELLOW/STALE on local-checkout rows (dirty or behind canonical checkouts, manifest drift), release-scope (no rehearsal for current source) and human-only rows (open PRs) — none on the touched repos; each close-out reads the dev-ship gate (readiness --dev --repos)
-- pr: https://github.com/PyAutoLabs/autolens_workspace/pull/671
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/671
 - next: human /prm on #671; answer the extended_source questions on #670, then resume phase 2 (feature + workspace_test script)
 
 ## plot-rst-missing-exports
