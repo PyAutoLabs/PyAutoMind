@@ -84,20 +84,6 @@
 - conflict-override: PyAutoFit also claimed by three-autos-public-framing (docs, human-review); human approved 2026-11-13 a separate worktree off main (non-overlapping files: samples.py + tests)
 - unblocks: Science/development/ep_gnfw_slope N=3 EP smoke
 
-## unit-trend-followups
-- issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/346
-- issued: 2026-11-14
-- session: claude-code shift worker (batch 2026-11-14-pm, --auto)
-- status: library-shipped, awaiting-merge
-- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/347
-- worktree: ~/Code/PyAutoLabs-wt/unit-trend-followups
-- prompt: active/unit_trend_followups.md
-- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
-- heart-ack:
-  - organism verdict RED on local-checkout rows only (PyAutoLens dirty canonical checkout, manifest drift) plus release-scope STALE (no rehearsal for current source) and one human-only open PR — none on the touched repos
-- repos:
-  - PyAutoHeart: feature/unit-trend-followups
-
 ## warmup-findings
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/634
 - issued: 2026-11-14

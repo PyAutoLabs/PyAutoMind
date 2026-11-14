@@ -87,11 +87,6 @@ phase is `local-dev` by construction.
 - ref: draft/maintenance/pyautomind/prompt_sync_explicit_paths_followups.md
 - note: programme — touches autolens_profiling, so it parks STALE under the scoped gate until the unpolled-repos ruling
 
-## 4. Heart unit-test trend follow-ups (SIG-2)
-- kind: prompt
-- ref: draft/feature/pyautoheart/unit_trend_followups.md
-- note: programme side lane; small chart fixes plus a golden-HTML pin
-
 ## 5. Duplicate Galaxy pytree registration after a JAX Fitness
 - kind: prompt
 - ref: draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md
@@ -131,6 +126,10 @@ phase is `local-dev` by construction.
 
 Entries that have left the queue. Kept for the record of what was wanted and
 what replaced it; `batch plan` ignores them.
+
+### Heart unit-test trend follow-ups (SIG-2)
+- shipped-as: complete/2026/11/unit-trend-followups.md (2026-11-14)
+- note: programme side lane; small chart fixes plus a golden-HTML pin — retired by `lifecycle.py close`
 
 ### Stale enable_pytrees advice in the autofit_workspace MCMC script
 - shipped-as: autofit_workspace#185 → complete/2026/11/stale-enable-pytrees-register-model-advice-in.md (2026-11-14; merged unattended by the warm-up shift, retired by the lead — the watcher close-out does not retire queue entries)

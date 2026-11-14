@@ -1,3 +1,13 @@
+Shift task from the warm-up live shift `2026-11-14-pm` (PyAutoMind#569). Shipped as PyAutoHeart#347 (3260cde95), merged 2026-11-14 in-turn by the programme lead on `ci-verdict` GREEN. Issue PyAutoHeart#346.
+
+**Built (shift worker):** the unit-test trend follow-ups from PyAutoHeart#338: chart fixes in `heart/timing_display.py` and `heart/timings.py` (per-day medians over cache-hit runs, missing values drawn as gaps), plus a golden-HTML pin.
+
+**Close-out:** the watcher refused the unattended merge because CI was red: the tenant firewall caught a literal repo name in a `unit_history` docstring (`heart/timings.py:921`). The lead reworded that one line (cf94aca). Heart suite 1459 passed, firewall OK, CI 2/2 GREEN, dev-ship GREEN. Recorded as merged-after-substantive-change because the worker's PR was not mergeable as shipped.
+
+**Follow-up:** workers now run the firewall before an organ push (PyAutoBrain#634).
+
+## Original prompt
+
 # Heart unit-test trends: follow-ups from PyAutoHeart#338
 
 Type: feature
