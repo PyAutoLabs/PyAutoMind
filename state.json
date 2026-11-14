@@ -4,13 +4,13 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 9 in flight",
-  "updated": "2026-11-14T22:23:15Z",
+  "updated": "2026-11-14T22:23:44Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
       "severity": "red",
       "text": "Cluster package: point-source-default narrative + extended-source follow-up feature \u2014 awaiting-merge (PR open, decision-taken; extended_source parked awaiting-input)",
-      "url": "https://github.com/PyAutoLabs/autolens_workspace/issues/670",
+      "url": "https://github.com/PyAutoLabs/autolens_workspace/pull/671",
       "prompt": "Use the start-dev skill. active/cluster_regime_narrative.md"
     },
     {
