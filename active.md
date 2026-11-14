@@ -86,9 +86,10 @@
 
 ## stale-enable-pytrees-advice
 - issue: https://github.com/PyAutoLabs/autofit_workspace/issues/184
+- pr: https://github.com/PyAutoLabs/autofit_workspace/pull/185
 - issued: 2026-11-14
 - session: claude-code shift worker (batch 2026-11-14-pm), Opus 5.5
-- status: workspace-dev
+- status: awaiting-merge
 - worktree: ~/Code/PyAutoLabs-wt/stale-enable-pytrees-advice
 - repos:
   - autofit_workspace: feature/stale-enable-pytrees-advice
@@ -100,7 +101,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoHeart/issues/346
 - issued: 2026-11-14
 - session: claude-code shift worker (batch 2026-11-14-pm, --auto)
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/347
 - worktree: ~/Code/PyAutoLabs-wt/unit-trend-followups
 - prompt: active/unit_trend_followups.md
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
