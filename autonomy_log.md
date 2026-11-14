@@ -750,4 +750,5 @@ sub-rule, and the stage-2 rows join the seeded 1-in-5 audit sample.
 
 | date | task | brief | gate (tests/smoke/review/heart/witness/adversary) | human action | merge actor | read by human |
 |------|------|-------|----------------------------------------------------|--------------|-------------|---------------|
+| 2026-11-14 | stale_enable_pytrees_register_model_advice_in (https://github.com/PyAutoLabs/autofit_workspace/pull/185) | 2026-11-14-pm | tests n/a (no library change; CI 7/7 GREEN, 0 skipped)/witness PASS (re-run at head bd7ff00: no enable_pytrees/register_model in scripts/notebooks/searches; live BlackJAXNUTS use_jax=False SearchException names use_jax=True only)/review CLEAN (doc-only diff; auto-registration claim checked at PyAutoFit fitness.py:329-333)/heart green / adversary: independent close-out session (claude-opus-5-5) | merged-unchanged | unattended-watcher (mergedBy Jammy2211) |  |
 
