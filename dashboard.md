@@ -16,9 +16,7 @@
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
 
-> **Batch 2026-11-14-pm — 0 in progress · 0 awaiting review**
->
-> Live: closed at review-at — the digest is below — status: https://github.com/PyAutoLabs/PyAutoMind/issues/569#issuecomment-6877245751
+> **Batch 2026-11-14-pm3 — 0 in progress · 0 awaiting review**
 >
 >
 > _Nothing to review yet._
