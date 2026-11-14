@@ -97,3 +97,15 @@
   - organism verdict RED on local-checkout rows only (PyAutoLens dirty canonical checkout, manifest drift) plus release-scope STALE (no rehearsal for current source) and one human-only open PR — none on the touched repos
 - repos:
   - PyAutoHeart: feature/unit-trend-followups
+
+## warmup-findings
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/634
+- issued: 2026-11-14
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/warmup-findings
+- epic: autonomous-orchestrators (pre-M3.1 fixes from the warm-up live shift)
+- prompt: draft/bug/pyautobrain/warmup_shift_findings.md
+- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
+- repos:
+  - PyAutoBrain: feature/warmup-findings
