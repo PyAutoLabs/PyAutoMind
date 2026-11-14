@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "yellow",
-  "headline": "YELLOW \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-11-14T12:37:49Z",
+  "headline": "YELLOW \u2014 24 picks \u00b7 7 in flight",
+  "updated": "2026-11-14T12:40:35Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -12,12 +12,6 @@
       "text": "Polish the homepage flow \u2014 awaiting-merge",
       "url": "https://github.com/Jammy2211/Jammy2211.github.io/pull/4",
       "prompt": "Use the start-dev skill. active/homepage_flow_polish.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Stale enable_pytrees register_model advice in NUTS and SMC errors and searches docs \u2014 awaiting-merge",
-      "url": "https://github.com/PyAutoLabs/autofit_workspace/issues/184",
-      "prompt": "Use the start-dev skill. active/stale_enable_pytrees_register_model_advice_in.md"
     },
     {
       "severity": "yellow",
@@ -126,6 +120,12 @@
       "text": "pick: Use readthedocs or migrate to GitHub docs",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/pyautohands/git_docs.md",
       "prompt": "Use the start-dev skill. draft/research/pyautohands/git_docs.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Verify jax.jit / jax.grad parity on the critical-curve and caustic calculations",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace_test/jax_zero_contour.md",
+      "prompt": "Use the start-dev skill. draft/test/autolens_workspace_test/jax_zero_contour.md"
     }
   ]
 }
