@@ -100,3 +100,17 @@
 - worktree: ~/Code/PyAutoLabs-wt/positions-threshold-fixture-off-axis
 - repos:
   - PyAutoLens: feature/positions-threshold-fixture-off-axis
+
+## cluster-regime-narrative
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/670
+- issued: 2026-11-14
+- session: claude-code shift worker (batch 2026-11-14-pm2, --auto, supervised)
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/cluster-regime-narrative
+- repos:
+  - autolens_workspace: feature/cluster-regime-narrative
+- prompt: active/cluster_regime_narrative.md
+- tier: notify — merge mode: auto-merge on green (supervised --auto: decision-taken PR ends at PR-open)
+- heart-ack:
+  - organism verdict RED/YELLOW/STALE on local-checkout rows (dirty or behind canonical checkouts, manifest drift), release-scope (no rehearsal for current source) and human-only rows (open PRs) — none on the touched repos; each close-out reads the dev-ship gate (readiness --dev --repos)
+- next: prose PR open; extended_source feature + workspace_test script parked awaiting-input on #670
