@@ -83,3 +83,20 @@
   - PyAutoFit: feature/ep-projected-model-shared-prior
 - conflict-override: PyAutoFit also claimed by three-autos-public-framing (docs, human-review); human approved 2026-11-13 a separate worktree off main (non-overlapping files: samples.py + tests)
 - unblocks: Science/development/ep_gnfw_slope N=3 EP smoke
+## galaxy-duplicate-pytree-registration
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/693
+- session: Claude Code background job (shift 2026-11-14-pm2 worker)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/galaxy-duplicate-pytree-registration
+- prompt: active/galaxy_duplicate_pytree_registration_after_jax_fitness.md
+- heart-ack:
+  - organism verdict RED/YELLOW/STALE on local-checkout rows (dirty or behind canonical checkouts, manifest drift), release-scope (no rehearsal for current source) and human-only rows (open PRs) — none on the touched repos; each close-out reads the dev-ship gate (readiness --dev --repos)
+- repos:
+  - PyAutoArray: feature/galaxy-duplicate-pytree-registration
+## positions-threshold-fixture-off-axis
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/860
+- session: claude-code bg job 854a87a0 (shift 2026-11-14-pm2)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/positions-threshold-fixture-off-axis
+- repos:
+  - PyAutoLens: feature/positions-threshold-fixture-off-axis

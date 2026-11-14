@@ -13,6 +13,7 @@ Status: draft
 Consequence: glance
 Witness: The `positions_threshold` fixture in `test_autolens/analysis/test_result.py` sits off the lens symmetry axis (on-axis deflection no longer exactly 0.0), the two pins are re-pinned once against it, and a 1e-6 nudge of the fixture changes neither the solved branch nor the pinned thresholds beyond 1e-6 relative.
 Review-minutes: 3
+Verified: 2026-11-14 2deeab94 (PyAutoLens)
 Lane: any
 Filed: 2026-09-03
 

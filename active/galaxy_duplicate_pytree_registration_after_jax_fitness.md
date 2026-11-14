@@ -16,6 +16,7 @@ Witness: in one Python process, construct a JAX `af.Fitness` for an `al.Analysis
 Filed: 2026-09-27
 Updated: 2026-09-27
 Lane: any
+Verified: 2026-11-14 102f0249 (PyAutoArray), 362ee746 (PyAutoFit)
 
 ## Finding
 

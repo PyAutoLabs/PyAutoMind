@@ -16,6 +16,8 @@ Consequence: notify
 Witness: All 7 named `markdown/` pages show `sigma_min=dataset.pixel_scales[0] / 10.0` in their MGE snippets, source-plane MGEs keep the `-4` default with no pixel-scale floor, and the diff of the other 23 curated pages is empty.
 Review-minutes: 0
 Unattended: ready
+Parked: 2026-11-14 awaiting-input https://github.com/PyAutoLabs/autolens_workspace/issues/669 (6 pages not 7; drift beyond sigma_min; needs real fits, no warm output/)
+Verified: 2026-11-14 c2c8b256 (autolens_workspace)
 Lane: any
 Filed: 2026-08-08 (backfilled from git)
 
