@@ -95,15 +95,6 @@
 - repos:
   - PyAutoArray: feature/galaxy-duplicate-pytree-registration
 
-## positions-threshold-fixture-off-axis
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/860
-- session: claude-code bg job 854a87a0 (shift 2026-11-14-pm2)
-- status: library-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/positions-threshold-fixture-off-axis
-- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/861
-- repos:
-  - PyAutoLens: feature/positions-threshold-fixture-off-axis
-
 ## cluster-regime-narrative
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/670
 - issued: 2026-11-14

@@ -92,11 +92,6 @@ phase is `local-dev` by construction.
 - ref: draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md
 - note: small library bug with a reproduce-first witness
 
-## 7. positions_threshold test fixture off the symmetry axis
-- kind: prompt
-- ref: draft/bug/autolens/positions_threshold_fixture_off_axis.md
-- note: test-only; removes a solver tie-break flake
-
 ## 8. Regenerate autolens_workspace markdown for sigma_min
 - kind: prompt
 - ref: draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md
@@ -126,6 +121,10 @@ phase is `local-dev` by construction.
 
 Entries that have left the queue. Kept for the record of what was wanted and
 what replaced it; `batch plan` ignores them.
+
+### positions_threshold test fixture off the symmetry axis
+- shipped-as: https://github.com/PyAutoLabs/PyAutoLens/pull/861 → complete/2026/11/positions-threshold-fixture-off-axis.md (2026-11-14)
+- note: test-only; removes a solver tie-break flake — retired by the shift close-out (queue-retire)
 
 ### Heart unit-test trend follow-ups (SIG-2)
 - shipped-as: complete/2026/11/unit-trend-followups.md (2026-11-14)
