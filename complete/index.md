@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2262 records across 11 buckets.
+2263 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -231,6 +231,7 @@ markers; everything below GENERATED is rebuilt.
 - [live-shift-worker-gaps](2026/11/live-shift-worker-gaps.md) — pilot 4c follow-up; issue PyAutoBrain#594
 - [looks-shipped-guard-false-positives](2026/11/looks-shipped-guard-false-positives.md) — 33 → 1
 - [m2-finish](2026/11/m2-finish.md)
+- [m31-blockers](2026/11/m31-blockers.md)
 - [magnification-errors-posterior-draws](2026/11/magnification-errors-posterior-draws.md)
 - [magnification-errors-source-science](2026/11/magnification-errors-source-science.md)
 - [magnification-maps-image-plane](2026/11/magnification-maps-image-plane.md)
