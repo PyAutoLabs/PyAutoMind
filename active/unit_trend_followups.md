@@ -14,6 +14,7 @@ Consequence: glance
 Witness: a golden-HTML test pins the gate chart; a sub-second import series fills the chart height; the epoch filter and the plotted x agree
 Review-minutes: 5
 Unattended: ready
+Verified: 2026-11-14 052c239f (PyAutoHeart)
 Lane: any
 
 Source: independent review of PyAutoHeart#339 (2026-11-12).
