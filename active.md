@@ -113,8 +113,10 @@
 ## plot-rst-missing-exports
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/862
 - session: claude-code shift worker 2026-11-14-pm3 (job fff11d4f)
-- status: library-dev
+- status: library-shipped, awaiting-merge (decision-taken → human /prm; merge PyAutoGalaxy#716 before PyAutoLens#863)
 - worktree: ~/Code/PyAutoLabs-wt/plot-rst-missing-exports
+- library-pr: https://github.com/PyAutoLabs/PyAutoGalaxy/pull/716
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/863
 - repos:
   - PyAutoLens: feature/plot-rst-missing-exports
   - PyAutoGalaxy: feature/plot-rst-missing-exports
