@@ -18,7 +18,7 @@
 
 > **Batch 2026-11-14-pm3 — 0 in progress · 0 awaiting review**
 >
-> Live: LIVE · 1 running, 2 finished, 1 dropped, 2 refusal reasons · tokens 371249 of 400000 (cache-read 8249906) · review-at 2026-11-14T21:20Z (as of 2026-11-14T20:23:34Z) — status: https://github.com/PyAutoLabs/PyAutoMind/issues/571#issuecomment-6883569285
+> Live: LIVE · 3 finished, 1 dropped, 2 refusal reasons · tokens 416260 of 400000 (over budget by 16260; cache-read 11676223) · review-at 2026-11-14T21:20Z (as of 2026-11-14T20:29:47Z) — status: https://github.com/PyAutoLabs/PyAutoMind/issues/571#issuecomment-6883569285
 >
 >
 > _Nothing to review yet._
