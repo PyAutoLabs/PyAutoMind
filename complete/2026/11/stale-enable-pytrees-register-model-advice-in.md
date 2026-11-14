@@ -1,3 +1,24 @@
+## What shipped
+
+- autofit_workspace#185 (merged 2026-11-14, 5267644): `scripts/searches/mcmc.py` and `notebooks/searches/mcmc.ipynb` drop the stale `enable_pytrees()` / `register_model(model)` requirement from the `BlackJAXNUTS` example (prose, import and calls). The prose now names `use_jax=True` as the only requirement; `Fitness.__init__` (PyAutoFit `autofit/non_linear/fitness.py:329-333`) registers the model as a pytree automatically.
+- The PyAutoFit half (NUTS/SMC error strings) had already landed on main before this task (2026-11-05 re-scope); no library PR.
+- Issue: autofit_workspace#184 (closed by the merge).
+
+## Witness (run by the independent close-out session at the PR head)
+
+- `grep enable_pytrees|register_model` over `scripts/searches/` and `notebooks/searches/`: no hits. PyAutoFit main: only internal hits (`jax/pytrees.py`, `jax/__init__.py`, `fitness.py`).
+- `BlackJAXNUTS` + `af.ex.Analysis(use_jax=False)`: `SearchException` naming `use_jax=True` only.
+
+## Gate
+
+tests n/a (no library change) / smoke 8/8 scripts + 2/2 notebooks / review CLEAN / heart green (dev-ship --repos autofit_workspace) / witness PASS / adversary (Sonnet) held. CI 7/7 green.
+
+## Left alone
+
+- `autofit/jax/__init__.py:9` module docstring still mentions `enable_pytrees` for calling `jax.jit` by hand. That's the intended library end state, not user-facing advice for searches.
+
+## Original prompt
+
 # Stale enable_pytrees register_model advice in NUTS and SMC errors and searches docs
 
 Type: bug
