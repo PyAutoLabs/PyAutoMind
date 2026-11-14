@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 24 |
-| [In flight](#in-flight) | 6 |
+| [In flight](#in-flight) | 8 |
 | [Planned](#planned) | 11 |
-| [Backlog](#backlog) | 278 |
+| [Backlog](#backlog) | 276 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
 
@@ -1275,10 +1275,26 @@ Use the start-dev skill. active/ep_projected_model_shared_prior_keyerror.md
 
 </details>
 
+<details><summary>📋 <a href="active/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises "Duplicate custom PyTreeDef type…</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/693">issue #693</a> — issued 2026-09-27 — library-dev</summary>
+
+```
+Use the start-dev skill. active/galaxy_duplicate_pytree_registration_after_jax_fitness.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/homepage_flow_polish.md">Polish the homepage flow</a> — <a href="https://github.com/Jammy2211/Jammy2211.github.io/issues/3">issue #3</a> — issued 2026-11-12 — awaiting-merge — PRs: <a href="https://github.com/Jammy2211/Jammy2211.github.io/pull/4">Jammy2211.github.io#4</a></summary>
 
 ```
 Use the start-dev skill. active/homepage_flow_polish.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/positions_threshold_fixture_off_axis.md">Move the positions_threshold test fixture off the symmetry axis</a> — issued 2026-09-03</summary>
+
+```
+Use the start-dev skill. active/positions_threshold_fixture_off_axis.md
 ```
 
 </details>
@@ -1406,7 +1422,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 223 · ral 34 · local-dev 10 · wsl-data 9
+Lanes: any 221 · ral 34 · local-dev 10 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
@@ -1750,7 +1766,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 54</summary>
+<summary><b>bug</b> — 52</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1912,14 +1928,6 @@ Use the start-dev skill. draft/bug/autofit/visualization_warmup_swallowed_except
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md">Building a JAX Fitness then calling register_tracer_classes raises "Duplicate custom PyTreeDef type…</a> — autoarray · small · supervised · normal</summary>
-
-```
-Use the start-dev skill. draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/bug/autofit/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip autofit.jax.register_model</a> — autofit · small · safe · normal</summary>
 
 ```
@@ -1932,14 +1940,6 @@ Use the start-dev skill. draft/bug/autofit/dataset_model_free_grid_offset_pytree
 
 ```
 Use the start-dev skill. draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autolens/positions_threshold_fixture_off_axis.md">Move the positions_threshold test fixture off the symmetry axis</a> — autolens · small · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/bug/autolens/positions_threshold_fixture_off_axis.md
 ```
 
 </details>
@@ -3090,7 +3090,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-69 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+67 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3114,7 +3114,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/pyautohands/release_fires_visualization_dispatch.md — unknown theme keyword(s): infrastructure`
 - `draft/bug/autoarray/adaptive_mesh_degenerate_pixel_pair.md — unknown theme keyword(s): source-reconstruction`
 - `draft/bug/autoarray/batched_jit_vmap_b50_wrong_log_likelihood_a100.md — unknown theme keyword(s): jax, inversion`
-- `draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md — unknown theme keyword(s): jax`
 - `draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md — unknown theme keyword(s): inversion, jax`
 - `draft/bug/autoarray/non_uniform_over_sample_jax_compile_cost.md — unknown theme keyword(s): jax`
 - `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md — unknown theme keyword(s): performance, delaunay`
@@ -3130,7 +3129,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md — unknown theme keyword(s): adapt-images`
 - `draft/bug/autogalaxy/lenscalc_masked_grid_caustic_differs_from_unmasked.md — unknown theme keyword(s): caustics, lens-calc`
 - `draft/bug/autogalaxy/mge_deflections_reverse_mode_nan_at_grid_centre.md — unknown theme keyword(s): jax, mass-profiles`
-- `draft/bug/autolens/positions_threshold_fixture_off_axis.md — unknown theme keyword(s): testing`
 - `draft/bug/autolens/runtime_single_jit_median_reach_and_a100_witness.md — unknown theme keyword(s): jax`
 - `draft/bug/autolens_inference/validation_wall_estimates_miss_eval_count_and_sampler_floor.md — unknown theme keyword(s): inference`
 - `draft/bug/autolens_profiling/stale_auto_simulated_cluster_dataset.md — unknown theme keyword(s): datasets`
