@@ -11,14 +11,14 @@
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 9 |
-| [Planned](#planned) | 11 |
+| [Planned](#planned) | 12 |
 | [Backlog](#backlog) | 275 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 0 |
 
 > **Batch 2026-11-14-pm3 — 0 in progress · 0 awaiting review**
 >
-> Live: LIVE · 2 running, 1 refusal reasons · tokens 0 of 400000 (2 session(s) unmeasured) · review-at 2026-11-14T21:20Z (as of 2026-11-14T20:14:14Z) — status: https://github.com/PyAutoLabs/PyAutoMind/issues/571#issuecomment-6883569285
+> Live: LIVE · 2 running, 1 finished, 1 refusal reasons · tokens 294775 of 400000 (cache-read 6389222; 1 session(s) unmeasured) · review-at 2026-11-14T21:20Z (as of 2026-11-14T20:20:28Z) — status: https://github.com/PyAutoLabs/PyAutoMind/issues/571#issuecomment-6883569285
 >
 >
 > _Nothing to review yet._
@@ -1342,7 +1342,7 @@ Use the start-dev skill. active/website_lensing_intro.md
 Scoped but not started; some are not yet prompt files. Full detail in [`planned.md`](planned.md).
 
 <details>
-<summary><b>11</b> task(s)</summary>
+<summary><b>12</b> task(s)</summary>
 
 <details><summary>📋 <b>hpc-keep-off-home-phase-b</b> — filed 2026-11-12 — blocked — repos claimed by other tasks</summary>
 
@@ -1428,6 +1428,14 @@ Use the start-dev skill. draft/docs/autolens_assistant/point_plots_yaml_keys.md
 
 ```
 Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md
+```
+
+</details>
+
+<details><summary>📋 <b>model-bullet-parameter-count-drift</b> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/672">issue #672</a> — filed 2026-09-18 — blocked — repo claimed by another task (awaiting-input on the issue)</summary>
+
+```
+Use the start-dev skill. draft/docs/workspaces/model_bullet_parameter_count_drift.md
 ```
 
 </details>
