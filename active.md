@@ -94,3 +94,14 @@
 - tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
 - repos:
   - PyAutoBrain: feature/ci-verdict
+
+## watcher-app-identity
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/630
+- issued: 2026-11-14
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/watcher-app-identity
+- epic: autonomous-orchestrators (pre-M3 identity; human chose a minimal pyautolabs-watcher App 2026-11-14)
+- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
+- repos:
+  - PyAutoBrain: feature/watcher-app-identity
