@@ -84,17 +84,6 @@
 - conflict-override: PyAutoFit also claimed by three-autos-public-framing (docs, human-review); human approved 2026-11-13 a separate worktree off main (non-overlapping files: samples.py + tests)
 - unblocks: Science/development/ep_gnfw_slope N=3 EP smoke
 
-## ci-verdict
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/628
-- issued: 2026-11-13
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/ci-verdict
-- epic: autonomous-orchestrators (programme M4.6 first half, phase 11; re-check first)
-- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
-- repos:
-  - PyAutoBrain: feature/ci-verdict
-
 ## watcher-app-identity
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/630
 - issued: 2026-11-14

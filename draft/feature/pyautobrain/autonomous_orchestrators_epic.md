@@ -357,7 +357,7 @@ source and is dropped or reshaped if it does not hold. Side-lane rows are off th
 | M4 (ph 11) | M4.3 One network write path to Mind `main` (MIND-1; PR-1, PR-2 re-check first) | not started | |
 | M4 (ph 11) | M4.4 Boards and indexes rendered in CI, not committed (PR-6; DASH-1, MIND-5, KNOW-2 re-check first) | not started | |
 | M4 (ph 11) | M4.5 Lessons move from laptop memory into the repos (KNOW-1, FB-3; re-check first) | not started | |
-| M4 (ph 11) | M4.6 Cross-repo effects in the gate: one CI-verdict script, dependants' tests after a library merge (FB-4, FB-5, REL-6, FLOW-3; re-check first) | not started | |
+| M4 (ph 11) | M4.6 Cross-repo effects in the gate: one CI-verdict script, dependants' tests after a library merge (FB-4, FB-5, REL-6, FLOW-3; re-check first) | **part 1 merged 2026-11-14** (PyAutoBrain#629; record `complete/2026/11/ci-verdict.md`): one `ci-verdict` for /prm, close-out and pr_health; part 2 (dependants' tests) drafted | |
 | M4 (ph 11) | M4.7 Machine-readable completion record (FLOW-4, FLOW-5; re-check first) | not started | |
 | M4 (ph 11) | gate: worker definition + exit test | not started | |
 | M5 (ph 12) | M5.1 Cloud watcher design vs the report's thirteen constraints — from `draft/feature/pyautobrain/shift_watcher_in_the_cloud.md` | not started | |
@@ -441,3 +441,4 @@ source and is dropped or reshaped if it does not hold. Side-lane rows are off th
   4. Then: M4.2 cloud worker bundle (draft `draft/feature/pyautobrain/cloud_worker_bundle_and_profile.md`), M4.7, M4.4, M4.5; queue.md drives shift workload.
 - 2026-11-13 (night, after pause) — **M4.6 independent review: CLEAN** (no must-fix; live checks: re-run attempts, fork PR, failed-run-with-zero-jobs → RED, commit statuses). Ready to ship next session: push `feature/ci-verdict` (9ddd9f3), PR, merge on green (glance; Heart dev-ship gate). Follow-ups for a draft: pin `gh pr merge --match-head-commit <sha>` in /prm; zero checks right after a push → PENDING not RED; add job log URLs to rows; `has_hooks` treated as clean; point the batch collector at `judge`.
 - 2026-11-14 — **Human decision:** the watcher posts as its own minimal GitHub App `pyautolabs-watcher` (Issues r/w on PyAutoMind only), not `pyautolabs-bot` (ruleset bypass + org push). Human creating it; Brain#630 adds App-token minting. M4.6 PR open (Brain#629). M3.1 prep resumed. First seeded audit drawn: seed 20261114, 13 of 63, due 2026-11-21.
+- 2026-11-14 — **M4.6 part 1 MERGED** (PyAutoBrain#629; also fixed a Brain time-bomb test that turned main red at 01:30Z). **Watcher App `pyautolabs-watcher` created by the human and verified read-only** (Issues write + metadata only, selected repos; minted + read #561). Brain#630 (App-token minting) built, in review.
