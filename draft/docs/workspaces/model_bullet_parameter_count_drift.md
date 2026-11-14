@@ -13,6 +13,7 @@ Consequence: notify
 Witness: a script that parses each `__Model__` docstring's "[N parameters]" / "N=…" bullets and compares them with `af.Model(...).prior_count` of the models the script composes reports no mismatch for the files below; the four named sites read true.
 Review-minutes: 2
 Unattended: ready
+Verified: 2026-11-14 c2c8b256 (autolens_workspace)
 Lane: any
 Filed: 2026-09-18
 

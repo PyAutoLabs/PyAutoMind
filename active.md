@@ -109,3 +109,12 @@
   - organism verdict RED/YELLOW/STALE on local-checkout rows (dirty or behind canonical checkouts, manifest drift), release-scope (no rehearsal for current source) and human-only rows (open PRs) — none on the touched repos; each close-out reads the dev-ship gate (readiness --dev --repos)
 - pr: https://github.com/PyAutoLabs/autolens_workspace/pull/671
 - next: human /prm on #671; answer the extended_source questions on #670, then resume phase 2 (feature + workspace_test script)
+
+## plot-rst-missing-exports
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/862
+- session: claude-code shift worker 2026-11-14-pm3 (job fff11d4f)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/plot-rst-missing-exports
+- repos:
+  - PyAutoLens: feature/plot-rst-missing-exports
+  - PyAutoGalaxy: feature/plot-rst-missing-exports
