@@ -83,6 +83,7 @@
   - PyAutoFit: feature/ep-projected-model-shared-prior
 - conflict-override: PyAutoFit also claimed by three-autos-public-framing (docs, human-review); human approved 2026-11-13 a separate worktree off main (non-overlapping files: samples.py + tests)
 - unblocks: Science/development/ep_gnfw_slope N=3 EP smoke
+
 ## galaxy-duplicate-pytree-registration
 - issue: https://github.com/PyAutoLabs/PyAutoArray/issues/693
 - session: Claude Code background job (shift 2026-11-14-pm2 worker)
@@ -93,13 +94,6 @@
   - organism verdict RED/YELLOW/STALE on local-checkout rows (dirty or behind canonical checkouts, manifest drift), release-scope (no rehearsal for current source) and human-only rows (open PRs) — none on the touched repos; each close-out reads the dev-ship gate (readiness --dev --repos)
 - repos:
   - PyAutoArray: feature/galaxy-duplicate-pytree-registration
-## positions-threshold-fixture-off-axis
-- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/860
-- session: claude-code bg job 854a87a0 (shift 2026-11-14-pm2)
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/positions-threshold-fixture-off-axis
-- repos:
-  - PyAutoLens: feature/positions-threshold-fixture-off-axis
 
 ## cluster-regime-narrative
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/670
@@ -114,3 +108,11 @@
 - heart-ack:
   - organism verdict RED/YELLOW/STALE on local-checkout rows (dirty or behind canonical checkouts, manifest drift), release-scope (no rehearsal for current source) and human-only rows (open PRs) — none on the touched repos; each close-out reads the dev-ship gate (readiness --dev --repos)
 - next: prose PR open; extended_source feature + workspace_test script parked awaiting-input on #670
+## positions-threshold-fixture-off-axis
+- issue: https://github.com/PyAutoLabs/PyAutoLens/issues/860
+- session: claude-code bg job 854a87a0 (shift 2026-11-14-pm2)
+- status: library-shipped, awaiting-merge
+- worktree: ~/Code/PyAutoLabs-wt/positions-threshold-fixture-off-axis
+- library-pr: https://github.com/PyAutoLabs/PyAutoLens/pull/861
+- repos:
+  - PyAutoLens: feature/positions-threshold-fixture-off-axis
