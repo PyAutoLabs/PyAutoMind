@@ -10,7 +10,7 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 24 |
-| [In flight](#in-flight) | 9 |
+| [In flight](#in-flight) | 8 |
 | [Planned](#planned) | 11 |
 | [Backlog](#backlog) | 275 |
 | [Recent](#recent) | 50 |
@@ -31,12 +31,11 @@ _(no goals — write them in [`goals.md`](goals.md))_
 2. [Brain board hygiene ledger (SIG-3)](draft/feature/pyautobrain/brain_board_hygiene_ledger.md)
 3. [prompt_sync_push explicit-paths follow-ups (M1.2)](draft/maintenance/pyautomind/prompt_sync_explicit_paths_followups.md)
 4. [Duplicate Galaxy pytree registration after a JAX Fitness](draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md)
-5. [positions_threshold test fixture off the symmetry axis](draft/bug/autolens/positions_threshold_fixture_off_axis.md)
-6. [Regenerate autolens_workspace markdown for sigma_min](draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md)
-7. [PyAutoLens primary-beam persistence mirror](draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md)
-8. [plot.rst missing exports](draft/docs/autolens/plot_rst_missing_exports.md)
-9. [autolens_workspace __Model__ bullet parameter counts](draft/docs/workspaces/model_bullet_parameter_count_drift.md)
-10. [Release board run_logs enrichment](draft/feature/pyautohands/release_board_run_logs_enrichment.md)
+5. [Regenerate autolens_workspace markdown for sigma_min](draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md)
+6. [PyAutoLens primary-beam persistence mirror](draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md)
+7. [plot.rst missing exports](draft/docs/autolens/plot_rst_missing_exports.md)
+8. [autolens_workspace __Model__ bullet parameter counts](draft/docs/workspaces/model_bullet_parameter_count_drift.md)
+9. [Release board run_logs enrichment](draft/feature/pyautohands/release_board_run_logs_enrichment.md)
 
 ## Start here
 
@@ -1287,14 +1286,6 @@ Use the start-dev skill. active/galaxy_duplicate_pytree_registration_after_jax_f
 
 ```
 Use the start-dev skill. active/homepage_flow_polish.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/positions_threshold_fixture_off_axis.md">Move the positions_threshold test fixture off the symmetry axis</a> — issued 2026-09-03</summary>
-
-```
-Use the start-dev skill. active/positions_threshold_fixture_off_axis.md
 ```
 
 </details>
