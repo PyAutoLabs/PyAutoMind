@@ -46,6 +46,10 @@ This task builds that layer on top of the engine, and never in place of it.
    hook allow a watch the human asks for, bounded by that shift's review-at plus the late-sweep
    window, with no re-arming after it ends. Everything else stays banned.
 
+5. **Answers in the chat.** A parked question can be answered from the cockpit, which hands the answer
+   to a fresh worker. Questions themselves wait in the inbox
+   (`draft/feature/pyautobrain/questions_inbox_bulk_answering.md`); the human tends to it in bulk when they choose.
+
 ## Properties to keep
 
 - The chat is never in the control loop: closing it changes nothing about the shift, and a new
