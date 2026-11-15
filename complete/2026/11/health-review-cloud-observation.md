@@ -1,3 +1,16 @@
+## health-review-cloud-observation
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/636 (MERGED 2026-11-15, merge 421ef0f)
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/348 (MERGED 2026-11-15, merge 8df451c)
+- completed: 2026-11-15
+- merged-by: human-typed /prm (cloud session https://claude.ai/code/session_016nhQ8RkwYK9RzapmsQRGCj)
+- summary:
+  - PyAutoBrain: `health --scope dashboard` read "No cache yet" prose from a never-ticked local Heart (every cloud session) and reported "inventory missing" (exit 4). `dashboard.py --published-fallback` now reads the published board only when the local Heart printed no JSON object; a parseable local board without inventory stays explicitly unknown. JSON names its `source`. Suite 2017 passed / 2 skipped; CI 3.12 + 3.13 green.
+  - PyAutoHeart: the Heart Health publish run listed itself (still running) as the newest `Heart Health` run, so `PyAutoHeart:ci` / `ci_status:PyAutoHeart*` read in_progress on every publish. `ci_status.observer_run_id` sets aside the run whose id is `GITHUB_RUN_ID` when Heart observes its own repo; all other in-progress runs unchanged. Suite 1463 passed; CI 3.12 + 3.13 green.
+  - No thresholds, weights or gates changed.
+- verify: the next Heart Health publish should show `PyAutoHeart:ci` from the previous completed run, not in_progress.
+
+## Original prompt
+
 # Health: cloud-session dashboard reads and Heart's own in-progress run
 
 Type: bug

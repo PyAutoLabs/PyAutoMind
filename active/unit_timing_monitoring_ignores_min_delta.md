@@ -7,7 +7,7 @@ Repos:
 Difficulty: small
 Autonomy: supervised
 Priority: medium
-Status: draft
+Status: in development
 Filed: 2026-11-15
 Consequence: judge
 Witness: with the 2026-11-15 board's unit-timing rows, the monitoring `unit_test_timing:*` findings agree with each row's own `state` (both-gates rule from `config/repos.yaml thresholds.unit_timings`), and a test that is 3× slower by >= `min_delta_s` still reads red
@@ -35,5 +35,7 @@ B. Keep 3×/1.5× tiers but require `delta_s >= min_delta_s`. 2026-11-15: the re
 C. B plus a per-family speed factor (or raw seconds for jax-cached legs).
 
 Recommendation: A (one policy, already in config), then reconsider (2) separately. Do not raise factors or drop tests.
+
+**Ruling 2026-11-15 (human, in the health-review session): A.** Implemented in PyAutoHeart#349. Point (2), the single run_speed_factor, remains open for a separate decision.
 
 <!-- filed 2026-11-15 by the health-review session (claude.ai/code/session_016nhQ8RkwYK9RzapmsQRGCj) -->
