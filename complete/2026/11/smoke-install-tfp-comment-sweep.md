@@ -1,3 +1,14 @@
+## smoke-install-tfp-comment-sweep
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/673
+- completed: 2026-11-15
+- workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/674, https://github.com/PyAutoLabs/autogalaxy_workspace/pull/284, https://github.com/PyAutoLabs/HowToGalaxy/pull/107, https://github.com/PyAutoLabs/HowToLens/pull/135, https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/131
+- summary:
+  - Comment-only sweep after PyAutoArray#694 (record complete/2026/11/matern-vendor-bessel-kve.md): replaced the stale "working modified-Bessel dependency is tfp-nightly" NOTE in `.github/scripts/smoke_install.sh` across five repos with the wording merged in autogalaxy_workspace_test#137 / autolens_workspace_test#366; euclid also annotated its "#184 ... tfp-nightly" history line. 0 non-comment lines changed; smoke CI green on all five.
+  - Started under a human claim override on autolens_workspace (held by cluster-regime-narrative; disjoint file).
+  - Sparse, blob-filtered clones (`--filter=blob:none --sparse`, `.github/scripts` only) were enough for a one-file sweep across large workspace repos.
+
+## Original prompt
+
 # Smoke install tfp comment sweep in workspaces
 
 Type: maintenance
