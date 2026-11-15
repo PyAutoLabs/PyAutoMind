@@ -120,3 +120,16 @@
 - repos:
   - PyAutoLens: feature/plot-rst-missing-exports
   - PyAutoGalaxy: feature/plot-rst-missing-exports
+
+## example-analysis-xp-sum
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1774
+- issued: 2026-11-15
+- session: Claude Code remote — https://claude.ai/code/session_016nhQ8M5qwndUL85fDcyjxG
+- location: cloud container clone /home/user/pyautofit (no ~/Code task worktree)
+- status: library-dev
+- repos:
+  - PyAutoFit: feature/example-analysis-xp-sum
+- prompt: active/example_analysis_should_reduce_with_xp_sum.md
+- conflict-override: PyAutoFit also claimed by three-autos-public-framing (docs) and ep-projected-model-shared-prior (samples.py + tests); human approved 2026-11-15 a separate branch off main (non-overlapping file: autofit/example/analysis.py)
+- heart: YELLOW at start (Release YELLOW; monitoring RED — red rows on Array/Galaxy/Lens, not PyAutoFit)
+- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
