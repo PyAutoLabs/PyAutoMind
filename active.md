@@ -120,3 +120,18 @@
 - repos:
   - PyAutoLens: feature/plot-rst-missing-exports
   - PyAutoGalaxy: feature/plot-rst-missing-exports
+
+## smoke-install-tfp-comment-sweep
+- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/673
+- issued: 2026-11-15
+- session: Claude Code remote session (https://claude.ai/code/session_016nhQ8MuV8FPuFqiY6gLYLT)
+- location: cloud sparse clones (no local task worktree)
+- status: workspace-dev
+- prompt: active/smoke_install_tfp_comment_sweep_in_workspaces.md
+- conflict-override: human approved 2026-11-15 editing autolens_workspace while it is claimed by cluster-regime-narrative; this task touches only .github/scripts/smoke_install.sh comments
+- repos:
+  - autolens_workspace: feature/smoke-install-tfp-comment-sweep
+  - autogalaxy_workspace: feature/smoke-install-tfp-comment-sweep
+  - HowToGalaxy: feature/smoke-install-tfp-comment-sweep
+  - HowToLens: feature/smoke-install-tfp-comment-sweep
+  - euclid_strong_lens_modeling_pipeline: feature/smoke-install-tfp-comment-sweep

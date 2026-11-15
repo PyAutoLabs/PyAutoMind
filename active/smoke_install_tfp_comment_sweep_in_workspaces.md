@@ -19,6 +19,8 @@ Witness: `grep -n -i "tfp\|tensorflow" .github/scripts/smoke_install.sh` in each
 Review-minutes: 0
 Unattended: ready
 Lane: any
+Issued: 2026-11-15
+Issue: https://github.com/PyAutoLabs/autolens_workspace/issues/673
 
 Follow-up from PyAutoArray#694 (vendored `bessel_kve`, dropped `tfp-nightly`; record
 `complete/2026/11/matern-vendor-bessel-kve.md`). The two workspace_test repos had their
