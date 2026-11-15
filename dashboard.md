@@ -1334,7 +1334,7 @@ Use the start-dev skill. active/pyautolens_ii_case_studies.md
 
 </details>
 
-<details><summary>📋 <a href="active/smoke_install_tfp_comment_sweep_in_workspaces.md">Smoke install tfp comment sweep in workspaces</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/673">issue #673</a> — issued 2026-11-15 — workspace-dev</summary>
+<details><summary>📋 <a href="active/smoke_install_tfp_comment_sweep_in_workspaces.md">Smoke install tfp comment sweep in workspaces</a> — <a href="https://github.com/PyAutoLabs/autolens_workspace/issues/673">issue #673</a> — issued 2026-11-15 — workspace-shipped, awaiting-merge (tier notify) — PRs: <a href="https://github.com/PyAutoLabs/autolens_workspace/pull/674">autolens_workspace#674</a>, <a href="https://github.com/PyAutoLabs/autogalaxy_workspace/pull/284">autogalaxy_workspace#284</a>, <a href="https://github.com/PyAutoLabs/HowToGalaxy/pull/107">HowToGalaxy#107</a>, <a href="https://github.com/PyAutoLabs/HowToLens/pull/135">HowToLens#135</a>, <a href="https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/131">euclid_strong_lens_modeling_pipeline#131</a></summary>
 
 ```
 Use the start-dev skill. active/smoke_install_tfp_comment_sweep_in_workspaces.md

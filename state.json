@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 10 in flight",
-  "updated": "2026-11-15T20:19:21Z",
+  "updated": "2026-11-15T20:20:14Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -18,6 +18,12 @@
       "text": "Polish the homepage flow \u2014 awaiting-merge",
       "url": "https://github.com/Jammy2211/Jammy2211.github.io/pull/4",
       "prompt": "Use the start-dev skill. active/homepage_flow_polish.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Smoke install tfp comment sweep in workspaces \u2014 workspace-shipped, awaiting-merge (tier notify)",
+      "url": "https://github.com/PyAutoLabs/autolens_workspace/pull/674",
+      "prompt": "Use the start-dev skill. active/smoke_install_tfp_comment_sweep_in_workspaces.md"
     },
     {
       "severity": "yellow",
@@ -120,12 +126,6 @@
       "text": "pick: Use readthedocs or migrate to GitHub docs",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/pyautohands/git_docs.md",
       "prompt": "Use the start-dev skill. draft/research/pyautohands/git_docs.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Verify jax.jit / jax.grad parity on the critical-curve and caustic calculations",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace_test/jax_zero_contour.md",
-      "prompt": "Use the start-dev skill. draft/test/autolens_workspace_test/jax_zero_contour.md"
     }
   ]
 }
