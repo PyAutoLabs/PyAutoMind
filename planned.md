@@ -170,4 +170,3 @@
 - tier: notify — merge mode: auto-merge on green
 - affected-repos:
   - autolens_workspace
-
