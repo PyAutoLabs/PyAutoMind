@@ -126,11 +126,13 @@
 - issued: 2026-11-15
 - session: Claude Code remote session (https://claude.ai/code/session_016nhQ8MuV8FPuFqiY6gLYLT), --auto, effective level supervised
 - location: cloud clone /home/user/pyautoarray (no local task worktree)
-- status: library-shipped, awaiting-merge (decision-taken; phase 2 workspace pending)
+- status: workspace-dev (phase 2; library PR merged c18f20c3 via human /prm 2026-11-15)
 - library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/695
 - prompt: active/matern_vendor_bessel_kve.md
 - conflict-override: human approved starting while PyAutoArray is also claimed by galaxy-duplicate-pytree-registration (#693) on 2026-11-15; disjoint files (regularization/bessel + matern_kernel vs pytree registration)
 - heart-ack:
   - YELLOW at launch (published board 2026-11-15T12:29Z): only blocker "PyAutoArray: open PR 12d old" (human-only row); PyAutoArray main CI green at 102f024
 - repos:
-  - PyAutoArray: feature/matern-vendor-bessel-kve
+  - PyAutoArray: feature/matern-vendor-bessel-kve (merged)
+  - autogalaxy_workspace_test: feature/matern-vendor-bessel-kve
+  - autolens_workspace_test: feature/matern-vendor-bessel-kve
