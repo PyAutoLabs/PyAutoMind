@@ -8,6 +8,7 @@ Difficulty: small
 Autonomy: safe
 Priority: normal
 Status: formalised
+Issued: 2026-11-15
 Consequence: glance
 Witness: autofit/example/analysis.py log_likelihood_function contains self._xp.sum( and no bare sum( call; the example test suite passes under both NumPy and JAX.
 Review-minutes: 3
