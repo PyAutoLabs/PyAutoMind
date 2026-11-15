@@ -126,7 +126,8 @@
 - issued: 2026-11-15
 - session: Claude Code remote session (https://claude.ai/code/session_016nhQ8MuV8FPuFqiY6gLYLT), --auto, effective level supervised
 - location: cloud clone /home/user/pyautoarray (no local task worktree)
-- status: library-dev
+- status: library-shipped, awaiting-merge (decision-taken; phase 2 workspace pending)
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/695
 - prompt: active/matern_vendor_bessel_kve.md
 - conflict-override: human approved starting while PyAutoArray is also claimed by galaxy-duplicate-pytree-registration (#693) on 2026-11-15; disjoint files (regularization/bessel + matern_kernel vs pytree registration)
 - heart-ack:
