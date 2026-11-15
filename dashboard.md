@@ -12,7 +12,7 @@
 | [Epics](#epics) | 26 |
 | [In flight](#in-flight) | 9 |
 | [Planned](#planned) | 12 |
-| [Backlog](#backlog) | 275 |
+| [Backlog](#backlog) | 277 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -139,7 +139,7 @@ Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 76
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 78
 
 <details><summary>📋 <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a> — autolens_workspace · small · safe · normal</summary>
 
@@ -213,6 +213,14 @@ Use the start-dev skill. draft/feature/pyautohands/release_board_run_logs_enrich
 
 </details>
 
+<details><summary>📋 <a href="draft/maintenance/workspaces/smoke_install_tfp_comment_sweep_in_workspaces.md">Smoke install tfp comment sweep in workspaces</a> — workspaces · small · safe · low</summary>
+
+```
+Use the start-dev skill. draft/maintenance/workspaces/smoke_install_tfp_comment_sweep_in_workspaces.md
+```
+
+</details>
+
 <details><summary>📋 <a href="draft/test/autolens_workspace_test/mge_group_dataset_with_real_group_members.md">Give imaging/jax_likelihood/mge_group.py a dataset that actually contains group members</a> — autolens_workspace_test · medium · supervised · low</summary>
 
 ```
@@ -225,14 +233,6 @@ Use the start-dev skill. draft/test/autolens_workspace_test/mge_group_dataset_wi
 
 ```
 Use the start-dev skill. draft/docs/workspaces/assistants_regime_extension.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/refactor/autoarray/sparse_operator_int32_indexes.md">Sparse CPU operator: shrink the 172 MB per-dataset payload…</a> — autoarray · supervised</summary>
-
-```
-Use the start-dev skill. draft/refactor/autoarray/sparse_operator_int32_indexes.md
 ```
 
 </details>
@@ -1457,7 +1457,7 @@ Use the start-dev skill. draft/docs/workspaces/model_bullet_parameter_count_drif
 
 ## Backlog
 
-Lanes: any 220 · ral 34 · local-dev 10 · wsl-data 9
+Lanes: any 222 · ral 34 · local-dev 10 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
@@ -1508,7 +1508,7 @@ regenerate the dashboard. If I do not sign it off, file the follow-up with
 </details>
 
 <details>
-<summary><b>feature</b> — 36</summary>
+<summary><b>feature</b> — 37</summary>
 
 <details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
 
@@ -1762,6 +1762,14 @@ Use the start-dev skill. draft/feature/pyautoscientist/animated_logos_for_pyauto
 
 ```
 Use the start-dev skill. draft/feature/autoarray/adapt_linear_default_flip.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autoarray/matern_nu_gradient_via_bessel_k_order.md">Matern nu gradient via Bessel K order derivative</a> — autoarray · large · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/feature/autoarray/matern_nu_gradient_via_bessel_k_order.md
 ```
 
 </details>
@@ -2632,7 +2640,7 @@ Use the start-dev skill. draft/docs/workspaces/feature_introductions_and_images.
 </details>
 
 <details>
-<summary><b>maintenance</b> — 18</summary>
+<summary><b>maintenance</b> — 19</summary>
 
 <details><summary>📋 <a href="draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md">Phase B: send HPC temp files to the shared disk (TMPDIR)…</a> — workspaces · small · supervised · high</summary>
 
@@ -2726,6 +2734,14 @@ Use the start-dev skill. draft/maintenance/euclid/remove_simulator_poisson_round
 
 ```
 Use the start-dev skill. draft/maintenance/workspaces/data_no_ellipse_config_and_prose_sweep.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/workspaces/smoke_install_tfp_comment_sweep_in_workspaces.md">Smoke install tfp comment sweep in workspaces</a> — workspaces · small · safe · low</summary>
+
+```
+Use the start-dev skill. draft/maintenance/workspaces/smoke_install_tfp_comment_sweep_in_workspaces.md
 ```
 
 </details>
@@ -3109,7 +3125,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-67 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
+68 prompt(s) with unknown theme keyword(s) — not in [`themes.md`](themes.md), so they group loudly rather than silently. Correct the prompt, or add the keyword to the vocabulary.
 
 <details>
 <summary>Unknown theme keywords</summary>
@@ -3118,6 +3134,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autoarray/edge_zeroed_log_det_cholesky_reuse.md — unknown theme keyword(s): inversion`
 - `draft/feature/autoarray/interferometer_chunked_transform_mapping_matrix.md — unknown theme keyword(s): jax-gpu, vram`
 - `draft/feature/autoarray/interferometer_curvature_preload_phase1.md — unknown theme keyword(s): inversion, likelihood-profiling`
+- `draft/feature/autoarray/matern_nu_gradient_via_bessel_k_order.md — unknown theme keyword(s): jax`
 - `draft/feature/autoarray/source_clumps_robust_scale.md — unknown theme keyword(s): source-reconstruction`
 - `draft/feature/autofit/certified_solver_batched_guard_c2.md — unknown theme keyword(s): inversion`
 - `draft/feature/autofit/results_library_epic.md — unknown theme keyword(s): hpc, euclid, results, aggregator`
