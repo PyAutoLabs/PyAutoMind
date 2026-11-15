@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 10 in flight",
-  "updated": "2026-11-15T15:33:02Z",
+  "updated": "2026-11-15T17:57:38Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -18,6 +18,12 @@
       "text": "Polish the homepage flow \u2014 awaiting-merge",
       "url": "https://github.com/Jammy2211/Jammy2211.github.io/pull/4",
       "prompt": "Use the start-dev skill. active/homepage_flow_polish.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Vendor `bessel_kve` into autoarray and drop the tensorflow-probability dependency \u2014 library-shipped, awaiting-merge (decision-taken; phase 2 workspace pending)",
+      "url": "https://github.com/PyAutoLabs/PyAutoArray/pull/695",
+      "prompt": "Use the start-dev skill. active/matern_vendor_bessel_kve.md"
     },
     {
       "severity": "yellow",
@@ -120,12 +126,6 @@
       "text": "pick: Verify jax.jit / jax.grad parity on the critical-curve and caustic calculations",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace_test/jax_zero_contour.md",
       "prompt": "Use the start-dev skill. draft/test/autolens_workspace_test/jax_zero_contour.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: HowToLens tutorial 4 (point sources): make image-plane vs source-plane clear",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/howtolens/howtolens_tutorial_4_point_sources_make_image.md",
-      "prompt": "Use the start-dev skill. draft/docs/howtolens/howtolens_tutorial_4_point_sources_make_image.md"
     }
   ]
 }

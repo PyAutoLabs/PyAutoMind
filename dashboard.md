@@ -1318,7 +1318,7 @@ Use the start-dev skill. active/homepage_flow_polish.md
 
 </details>
 
-<details><summary>📋 <a href="active/matern_vendor_bessel_kve.md">Vendor <code>bessel_kve</code> into autoarray and drop the tensorflow-probability dependency</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/694">issue #694</a> — issued 2026-11-15 — library-dev</summary>
+<details><summary>📋 <a href="active/matern_vendor_bessel_kve.md">Vendor <code>bessel_kve</code> into autoarray and drop the tensorflow-probability dependency</a> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/694">issue #694</a> — issued 2026-11-15 — library-shipped, awaiting-merge (decision-taken; phase 2 workspace pending) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoArray/pull/695">PyAutoArray#695</a></summary>
 
 ```
 Use the start-dev skill. active/matern_vendor_bessel_kve.md
