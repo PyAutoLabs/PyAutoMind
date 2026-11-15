@@ -1,3 +1,19 @@
+## matern-vendor-bessel-kve
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/694
+- completed: 2026-11-15
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/695
+- workspace-pr: https://github.com/PyAutoLabs/autogalaxy_workspace_test/pull/137, https://github.com/PyAutoLabs/autolens_workspace_test/pull/366
+- pending-release: PyAutoArray@https://github.com/PyAutoLabs/PyAutoArray/pull/695
+- summary:
+  - Vendored tfp's `bessel_kve` K-branch (Temme series z<=2, Steed continued fraction z>2, forward recurrence, Olver asymptotics nu>=50) as pure `jax.numpy`/`lax` in `autoarray/inversion/regularization/bessel.py` (Apache-2.0 header + modification list kept); `jax.custom_jvp` with tfp's z-derivative rule. `kv_xp`'s JAX branch uses it; `tfp-nightly` dropped from `autoarray[optional]`. The I_v branch, `bessel_iv_ratio`, `_compute_general_continued_fraction` and log-space variants were not needed and not ported.
+  - Parity: max rel err vs `scipy.special.kve` 9e-14 over nu in [0.5, 5.5], 2.3e-13 over nu 0-60 x z 1e-8..1e3 (independent review); z-gradient and second derivative vs closed forms 2.3e-13. Near the float64 overflow edge (nu>=50, tiny z) the port returns finite values where scipy returns inf.
+  - Library tests: kv_xp JAX vs scipy spot check (both sides of z=2, half-integers, Olver), dK/dz vs closed form, Matern scale-gradient FD. Workspace: `autogalaxy_workspace_test/scripts/misc/jax_assertions/bessel_kve_parity.py` (added to smoke; 7/7 mutation probes caught); tfp prose removed from agwt/alwt scripts and smoke_install.sh.
+  - Gotcha: float32 inputs must avoid numpy float64 scalars (`np.log(2.0)`) in the loop carries or `lax.while_loop` rejects the dtype change. The JAX Matern path is only accurate to ~7e-4 in float32 near r=0 (clamped 1e-8); workspace profiles run x64.
+  - Known limitation (preserved from tfp, documented in `kv_xp`): no derivative in the Bessel order, so the Matern gradient w.r.t. nu is wrong (not zero). Follow-up candidate if nu is ever sampled with gradients. Started under a human repo-claim override alongside galaxy-duplicate-pytree-registration (#693).
+  - Follow-up: the same outdated tfp `smoke_install.sh` comment remains in autolens_workspace, autogalaxy_workspace, HowToGalaxy, HowToLens and euclid_strong_lens_modeling_pipeline.
+
+## Original prompt
+
 # Vendor `bessel_kve` into autoarray and drop the tensorflow-probability dependency
 
 Type: refactor

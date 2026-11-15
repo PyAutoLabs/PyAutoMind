@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2267 records across 11 buckets.
+2268 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -237,6 +237,7 @@ markers; everything below GENERATED is rebuilt.
 - [magnification-maps-image-plane](2026/11/magnification-maps-image-plane.md)
 - [magnification-maps-source-plane](2026/11/magnification-maps-source-plane.md)
 - [magnification-maps-uncertainty](2026/11/magnification-maps-uncertainty.md)
+- [matern-vendor-bessel-kve](2026/11/matern-vendor-bessel-kve.md) — - Vendored tfp's `bessel_kve` K-branch (Temme series z<=2, Steed continued fraction z>2, forward recurrence, O…
 - [memory-catch-up-discovery](2026/11/memory-catch-up-discovery.md) — PR is the tracking surface
 - [merge-actor-audit](2026/11/merge-actor-audit.md)
 - [mind-agents-trim](2026/11/mind-agents-trim.md) — PR is the tracking surface
