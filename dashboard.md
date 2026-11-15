@@ -11,8 +11,8 @@
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 26 |
 | [In flight](#in-flight) | 9 |
-| [Planned](#planned) | 12 |
-| [Backlog](#backlog) | 276 |
+| [Planned](#planned) | 10 |
+| [Backlog](#backlog) | 274 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -41,7 +41,7 @@ _(no goals — write them in [`goals.md`](goals.md))_
 
 ## Start here
 
-**Highest priority** (filed as `high`) — showing 12 of 19
+**Highest priority** (filed as `high`) — showing 12 of 17
 
 <details><summary>📋 <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred from #87)</a> — autolens_assistant · small · supervised · high</summary>
 
@@ -71,14 +71,6 @@ Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_foreve
 
 ```
 Use the start-dev skill. draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · medium · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md
 ```
 
 </details>
@@ -115,14 +107,6 @@ Use the start-dev skill. draft/test/workspaces/physical_model_check_when_speedin
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> — autoarray · large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/feature/autolens_visualization/eyes_cluster_visualization_group_render_every_cl.md">Eyes cluster visualization group: render every cluster/point-source figure for PyAutoEyes</a> — autolens_visualization · large · supervised · high</summary>
 
 ```
@@ -139,7 +123,23 @@ Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 77
+<details><summary>📋 <a href="draft/research/autoarray/delaunay_research.md">Deep research: Can we speed up Delaunay in PyAutoArray?</a> — autoarray · too-large · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/research/autoarray/delaunay_research.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/maintenance/autocti/cti_upkeep_epic.md">CTI upkeep parity — bring PyAutoCTI and its satellites to the same…</a> — autocti · too-large · human-required · high</summary>
+
+```
+Use the start-dev skill. draft/maintenance/autocti/cti_upkeep_epic.md
+```
+
+</details>
+
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 75
 
 <details><summary>📋 <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a> — autolens_workspace · small · safe · normal</summary>
 
@@ -1310,6 +1310,14 @@ Use the start-dev skill. active/galaxy_duplicate_pytree_registration_after_jax_f
 
 </details>
 
+<details><summary>📋 <a href="active/health_review_cloud_observation.md">Health: cloud-session dashboard reads and Heart's own in-progress run</a> — issued 2026-11-15 — library-dev</summary>
+
+```
+Use the start-dev skill. active/health_review_cloud_observation.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/homepage_flow_polish.md">Polish the homepage flow</a> — <a href="https://github.com/Jammy2211/Jammy2211.github.io/issues/3">issue #3</a> — issued 2026-11-12 — awaiting-merge — PRs: <a href="https://github.com/Jammy2211/Jammy2211.github.io/pull/4">Jammy2211.github.io#4</a></summary>
 
 ```
@@ -1342,20 +1350,12 @@ Use the start-dev skill. active/three_autos_public_framing.md
 
 </details>
 
-<details><summary>📋 <a href="active/website_lensing_intro.md">Brief strong-lensing introduction on the personal website</a> — <a href="https://github.com/Jammy2211/Jammy2211.github.io/issues/1">issue #1</a> — issued 2026-11-12 — workspace-dev</summary>
-
-```
-Use the start-dev skill. active/website_lensing_intro.md
-```
-
-</details>
-
 ## Planned
 
 Scoped but not started; some are not yet prompt files. Full detail in [`planned.md`](planned.md).
 
 <details>
-<summary><b>12</b> task(s)</summary>
+<summary><b>10</b> task(s)</summary>
 
 <details><summary>📋 <b>hpc-keep-off-home-phase-b</b> — filed 2026-11-12 — blocked — repos claimed by other tasks</summary>
 
@@ -1405,22 +1405,6 @@ Use the route skill. start the planned PyAutoMind task latent-nan-guard-honest-r
 
 </details>
 
-<details><summary>📋 <b>knn-partial-point-block</b> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/609">issue #609</a> — filed 2026-10-02</summary>
-
-```
-Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md
-```
-
-</details>
-
-<details><summary>📋 <b>sibson-internal-edge-continuity</b> — <a href="https://github.com/PyAutoLabs/PyAutoArray/issues/610">issue #610</a> — filed 2026-10-02</summary>
-
-```
-Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md
-```
-
-</details>
-
 <details><summary>📋 <b>interferometer-primary-beam-persistence-mirror</b> — filed 2026-10-21 — ready — PyAutoLens claim released 2026-10-21 (point-dataset-positions-panel shipped…</summary>
 
 ```
@@ -1457,7 +1441,7 @@ Use the start-dev skill. draft/docs/workspaces/model_bullet_parameter_count_drif
 
 ## Backlog
 
-Lanes: any 221 · ral 34 · local-dev 10 · wsl-data 9
+Lanes: any 219 · ral 34 · local-dev 10 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
@@ -1809,7 +1793,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 52</summary>
+<summary><b>bug</b> — 50</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1827,14 +1811,6 @@ Use the start-dev skill. draft/bug/euclid/sed_chain_waveband_fit_can_spin_foreve
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md">Fix KNN neighbor search for a partial final point block</a> — autoarray · medium · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autoarray/fix_knn_neighbor_search_for_a_partial.md
-```
-
-</details>
-
 <details><summary>📋 <a href="draft/bug/autoarray/sparse_inversion_ignores_profile_subtracted_image.md">Sparse (w-tilde) inversion fits the unsubtracted image when a regular light profile…</a> — autoarray · medium · supervised · high</summary>
 
 ```
@@ -1847,14 +1823,6 @@ Use the start-dev skill. draft/bug/autoarray/sparse_inversion_ignores_profile_su
 
 ```
 Use the start-dev skill. draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> — autoarray · large · supervised · high</summary>
-
-```
-Use the start-dev skill. draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md
 ```
 
 </details>
@@ -2972,6 +2940,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-15 | issued | <a href="active/health_review_cloud_observation.md">Health: cloud-session dashboard reads and Heart's own in-progress run</a> |
 | 2026-11-14 | issued | <a href="active/cluster_regime_narrative.md">Cluster package: point-source-default narrative + extended-source…</a> |
 | 2026-11-13 | issued | <a href="active/ep_projected_model_shared_prior_keyerror.md">autofit: EP projection (Result.projected_model) raises KeyError for a…</a> |
 | 2026-11-13 | filed | <a href="draft/bug/autolens/twins_provenance_versions.md">LensTwin provenance records dev metadata, not the code's real version</a> |
@@ -2981,14 +2950,13 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-12 | filed | <a href="draft/maintenance/autolens_profiling/remove_d12_eigen_flag_after_remeasure.md">autolens_profiling: drop the D12 eigen flag from CPU campaign legs…</a> |
 | 2026-11-12 | issued | <a href="active/pyautolens_ii_case_studies.md">PyAutoLens II case studies</a> |
 | 2026-11-12 | issued | <a href="active/homepage_flow_polish.md">Polish the homepage flow</a> |
-| 2026-11-12 | filed | <a href="draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md">Phase B: send HPC temp files to the shared disk (TMPDIR)…</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
+| 2026-11-12 | filed | <a href="draft/maintenance/workspaces/hpc_keep_temp_off_home_phase_b.md">Phase B: send HPC temp files to the shared disk (TMPDIR)…</a> |
 | 2026-11-12 | issued | <a href="active/three_autos_public_framing.md">Coordinated public framing: the three autos</a> |
-| 2026-11-12 | issued | <a href="active/website_lensing_intro.md">Brief strong-lensing introduction on the personal website</a> |
 | 2026-11-11 | filed | <a href="draft/bug/health_fixes/smoke_cache_stats_warnings_nameerror.md">Smoke cache-stats step fails with NameError: warnings</a> |
 | 2026-11-11 | filed | <a href="draft/bug/health_fixes/pr504_sibling_guards_net_gap_proxy.md">Harden the sibling PR #504 non-vacuity guards (net fom−logL gap proxy)</a> |
 | 2026-11-10 | filed | <a href="draft/maintenance/workspaces/data_no_ellipse_config_and_prose_sweep.md">Sweep the retired <code>data_no_ellipse</code> toggle from configs and prose</a> |
@@ -3039,9 +3007,9 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-14 | filed | <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> |
 | 2026-10-08 | filed | <a href="draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md"><code>JAX_ENABLE_X64=False</code> is overridden to True, so the fp32 inference…</a> |
 | 2026-10-07 | filed | <a href="draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md">Upstream the DR1 final-catalogue tooling to the pipeline, with a…</a> |
-| 2026-10-02 | filed | <a href="planned.md#sibson-internal-edge-continuity">sibson-internal-edge-continuity</a> |
-| 2026-10-02 | filed | <a href="planned.md#knn-partial-point-block">knn-partial-point-block</a> |
-| 2026-10-02 | filed | <a href="draft/bug/autoarray/fix_sibson_interpolation_at_internal_edges.md">Fix Sibson interpolation at internal edges</a> |
+| 2026-10-01 | filed | <a href="draft/bug/autoarray/sparse_terms_nufft_origin_and_mask_compatibility.md">Sparse interferometer terms: NUFFT ignores the mask origin and…</a> |
+| 2026-10-01 | filed | <a href="draft/bug/autoarray/interferometer_log_evidence_large_regularization_coefficient_cholesky.md">Interferometer log_evidence fails (LinAlgError / NaN) at large…</a> |
+| 2026-10-01 | filed | <a href="draft/bug/autogalaxy/galaxy_image_dict_mixed_galaxy_overwrites_ordinary_light.md">Interferometer <code>galaxy_image_dict</code> drops a mixed galaxy's ordinary…</a> |
 
 </details>
 

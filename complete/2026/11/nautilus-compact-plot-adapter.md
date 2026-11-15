@@ -1,3 +1,18 @@
+## nautilus-compact-plot-adapter
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1762 (CLOSED)
+- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1764 (CLOSED, NOT MERGED)
+- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/14 (CLOSED, NOT MERGED)
+- completed: 2026-11-12
+- outcome: NOT MERGED — human decision 2026-11-12 (version-pinned opt-in renderer; thin 2-pair speedup evidence). Reopen only if corner-plot cost becomes a bottleneck.
+- closed-out: 2026-11-15 by a health-review session — the task was parked after its issue was closed, which PyAutoMind Registry Reconcile reads as pending work with a closed issue (daily failure 2026-11-13 → 2026-11-15). The parked entry's `pending-release:` line was dropped: the PR never merged, so nothing is pending release.
+- epic: nautilus-fast-likelihoods (experimental phase1; outside Pulse)
+- summary:
+  - Validation: full suite 4298 passes / 2 skips / 1 expected failure at e57611dc6; exact-head Python 3.12/3.13/nojax CI 42865681739 green; 10 smoke cases; 121 tooling tests / Ruff / catalogue pass.
+  - Pilot: attempt01 preflight halt (2.145s, zero children), metadata paths corrected. Approved attempt02 at producer 3bce28c completed 5/6 then hit the host-load guard (535.88s total); two complete pairs 2.022x / 1.344x with identical PNGs, zero sampling and one summary timing call per case. Unpaired third baseline excluded; no retry. Report 53ed047. Full phase0b/evidence accuracy incomplete.
+- retained: branch `feature/nautilus-compact-plot-adapter` (PyAutoFit, autofit_profiling), worktree `/home/jammy/Code/PyAutoLabs/.worktrees/nautilus-compact-plot-adapter` and all raw data, per the human's parking note.
+
+## Original prompt
+
 # PyAutoFit compact corner array adapter
 
 Issued: 2026-11-10

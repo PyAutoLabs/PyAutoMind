@@ -18,7 +18,6 @@ write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
 - [magnification-maps-wiring](#magnification-maps-wiring)
 - [matrix-free-interferometer-inversion](#matrix-free-interferometer-inversion)
 - [sky-orientation-p2](#sky-orientation-p2)
-- [nautilus-compact-plot-adapter](#nautilus-compact-plot-adapter)
 - [nautilus-checkpoint-batching](#nautilus-checkpoint-batching)
 - [nautilus-spawn-training-pool](#nautilus-spawn-training-pool)
 - [gradient-correctness-sweep](#gradient-correctness-sweep)
@@ -131,26 +130,6 @@ write the dated `complete/<YYYY>/<MM>/<slug>.md` record instead.
 - merged: euclid#122 (RGB-panel compass + release docs) 2026-11-10 (fbfd7a3); ECLIPSE#6 downloads.json (5d3d68a). Re-render 414683, release 414768 (SHA 26/26), R2 re-upload 414791 + per-lens 414790 (0 differences). Phase 2 COMPLETE; #115 open for phases 3-5. Worktree removed.
 - parked: 2026-11-12 — phase 2 COMPLETE (2026-11-10); no worktree. Phases 3–5 not started (#115 open).
 - resume: start phase 3 via start_dev from the prompt.
-
-## nautilus-compact-plot-adapter
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1762
-- issued: 2026-11-10
-- session: OpenAI Codex desktop
-- status: awaiting-merge (bounded plotting experiment stopped at host guard; no further compute)
-- prompt: active/nautilus_compact_plot_adapter.md
-- worktree: /home/jammy/Code/PyAutoLabs/.worktrees/nautilus-compact-plot-adapter
-- retained-repos: PyAutoFit and autofit_profiling (feature/nautilus-compact-plot-adapter); worktrees and raw data retained
-- epic: nautilus-fast-likelihoods (experimental phase1; outside Pulse)
-- tier: judge — merge mode: human /prm
-- heart-red-override: live approval for both plans despite RED; exact reasons "PyAutoGalaxy: CI failure"; "PyAutoLens: CI failure". Development/validation/PR only; no merge/release/CI bypass.
-- dependency: profiling branch starts from diagnostic PR13 head2c3c0aa; no automatic base merge. Existing archives retained. Checkpoint member1763 follows sequentially.
-- coding-claim-transfer: same-session claims return to checkpoint member1763; plotting implementation/report published, no active edits.
-- validation: measured e57611dc6 full suite4298 passes/2skips/1expected failure; final4996f422a65focused passes and exact-head Python3.12/3.13/nojax CI42865681739 green;10smoke cases;121tooling tests/Ruff/catalogue pass. Separate validation extras did not change retained measurement environment.
-- pilot: attempt01 preflight halt2.145s/zero children, metadata paths corrected. Explicitly approved attempt02 at producer3bce28c completed5/6 then host-load guard535.88s total; two complete pairs2.022x/1.344x with identical PNGs, zero sampling and1summary timing call/case. Unpaired third baseline excluded. No retry. Report53ed047; all raw retained. Outside Pulse; full phase0b/evidence accuracy incomplete.
-- library-pr: https://github.com/PyAutoLabs/PyAutoFit/pull/1764
-- workspace-pr: https://github.com/PyAutoLabs/autofit_profiling/pull/14
-- pending-release: PyAutoFit@https://github.com/PyAutoLabs/PyAutoFit/pull/1764
-- parked: 2026-11-12 — CLOSED NOT MERGED by human decision: PyAutoFit#1764, autofit_profiling#14 and issue #1762 closed (version-pinned opt-in renderer, thin 2-pair speedup evidence). Branch/worktree/raw data retained; reopen only if corner-plot cost becomes a bottleneck.
 
 ## nautilus-checkpoint-batching
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1763

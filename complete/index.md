@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2269 records across 11 buckets.
+2273 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -208,6 +208,7 @@ markers; everything below GENERATED is rebuilt.
 - [jax-floor-0-12](2026/11/jax-floor-0-12.md)
 - [jax-joss-benchmark-repo](2026/11/jax-joss-benchmark-repo.md) — already shipped — PyAutoLabs/autolens_jax_joss: 9c66b020 (birth, 10 benchmark scripts), 64204f69 (A100 sweep o…
 - [jax-version-policy](2026/11/jax-version-policy.md)
+- [knn-partial-point-block](2026/11/knn-partial-point-block.md) — - `get_interpolation_weights` sliced each point block with `lax.dynamic_slice`, which clamps the last partial …
 - [lane-fail-closed](2026/11/lane-fail-closed.md)
 - [latent-smoke-assertion-echoes-search-log](2026/11/latent-smoke-assertion-echoes-search-log.md)
 - [latest-per-test-tie](2026/11/latest-per-test-tie.md) — test_autofit/results/test_identity.py::test_latest_per_keeps_the_latest_sibling flaked (main red at 963ff296a,
@@ -244,6 +245,7 @@ markers; everything below GENERATED is rebuilt.
 - [multistart-gradient-quick-update](2026/11/multistart-gradient-quick-update.md) — already shipped — PyAutoFit#1556 (merged 2026-09-01) wires iterations_per_quick_update into the MultiStart gra…
 - [multistart-resume-cadence](2026/11/multistart-resume-cadence.md) — 2 → 100
 - [nautilus-30d-diagnostics](2026/11/nautilus-30d-diagnostics.md) — Full-30D Nautilus plotting cost attribution and evidence-discrepancy investigation merged unchanged during the…
+- [nautilus-compact-plot-adapter](2026/11/nautilus-compact-plot-adapter.md) — - Validation: full suite 4298 passes / 2 skips / 1 expected failure at e57611dc6; exact-head Python 3.12/3.13/…
 - [nautilus-cpu-campaign-setup](2026/11/nautilus-cpu-campaign-setup.md) — Experimental phase 0b.1 implementation and bounded local pilot merged unchanged. Full phase 0b remains incompl…
 - [nautilus-cpu-profiling-baseline](2026/11/nautilus-cpu-profiling-baseline.md) — Phase 0a controlled CPU harness and exploratory local pilot merged unchanged. Phase 0b canonical representativ…
 - [nautilus-ep-use-jax-guard](2026/11/nautilus-ep-use-jax-guard.md) — superseded — PyAutoFit 196abf39a (2026-10-08) "Analysis.is_jax as the single JAX probe": Nautilus reads `analy…
@@ -292,6 +294,7 @@ markers; everything below GENERATED is rebuilt.
 - [shift-digest-readable-picks](2026/11/shift-digest-readable-picks.md) — pilot 4c follow-up; issue PyAutoBrain#579
 - [shift-opens-at-dispatched](2026/11/shift-opens-at-dispatched.md) — pilot 4c follow-up; issue PyAutoBrain#589
 - [shift-watcher-state-gaps](2026/11/shift-watcher-state-gaps.md)
+- [sibson-internal-edge-continuity](2026/11/sibson-internal-edge-continuity.md) — - The Watson per-triangle decomposition formed a circle through the query and every cavity-triangle edge, incl…
 - [simulate-if-needed-workspace-sweep](2026/11/simulate-if-needed-workspace-sweep.md)
 - [simulator-poisson-flag-guard](2026/11/simulator-poisson-flag-guard.md) — - `SimulatorImaging.via_image_from` draws Poisson noise only when `add_poisson_noise_to_data` or `include_pois…
 - [simulator-roundoff-control](2026/11/simulator-roundoff-control.md)
@@ -307,6 +310,7 @@ markers; everything below GENERATED is rebuilt.
 - [watcher-app-identity](2026/11/watcher-app-identity.md)
 - [watcher-numbers-and-push](2026/11/watcher-numbers-and-push.md)
 - [watcher-workers-survive-systemd-tick](2026/11/watcher-workers-survive-systemd-tick.md) — pilot 4c follow-up; issue PyAutoBrain#592
+- [website-lensing-intro](2026/11/website-lensing-intro.md) — - Added the approved three-sentence strong-lensing introduction with the autolens_assistant 2D schematic befor…
 - [workspace-dataset-gallery](2026/11/workspace-dataset-gallery.md)
 - [workspace-hygiene-sweep-1104](2026/11/workspace-hygiene-sweep-1104.md)
 - [workspace-readme-images](2026/11/workspace-readme-images.md)

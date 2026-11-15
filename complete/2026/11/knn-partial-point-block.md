@@ -1,3 +1,16 @@
+## knn-partial-point-block
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/609
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/684 (MERGED 2026-11-09, stacked on PyAutoArray#683)
+- completed: 2026-11-09
+- released: PyAutoArray 2026.11.12.1 (tag contains the merge)
+- closed-out: 2026-11-15 by a health-review session — the fix shipped outside the Mind workflow, so the planned.md entry outlived its closed issue and failed PyAutoMind Registry Reconcile daily (2026-11-11 → 2026-11-15).
+- summary:
+  - `get_interpolation_weights` sliced each point block with `lax.dynamic_slice`, which clamps the last partial block's start to N - B: the N mod B tail vertices were never searched and earlier vertices came back under the tail indices, so split-regularization rows lost their self term.
+  - Fix pads the point array to whole blocks so every slice starts at bi * B (padded rows already masked). Brute-force oracle tests at block boundaries (eager + jit, k=3 and k=10, both KNN interpolators); the numerics audit's strict xfail witness was promoted to a passing regression in `test_numerics_audit.py`.
+  - Needed PyAutoArray#683 (pseudo-determinant for intrinsic regularization log det H) first: the now-correct KNN split H exposed the jitter-held constant mode in jax_grad/knn.py (the 2026-10-29 finding).
+
+## Original prompt
+
 # Fix KNN neighbor search for a partial final point block
 
 Type: bug
