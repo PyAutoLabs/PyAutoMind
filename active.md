@@ -1,15 +1,4 @@
 
-## unit-timing-monitoring-min-delta
-- session: Claude Code cloud — https://claude.ai/code/session_016nhQ8RkwYK9RzapmsQRGCj
-- location: cloud container (no dev-box worktree)
-- status: library-dev
-- repos:
-  - PyAutoHeart: claude/pyautolabs-health-review-oja0ir
-- prompt: active/unit_timing_monitoring_ignores_min_delta.md
-- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/349
-- validation: 3 new tests fail on old code / pass on new; full suite 1466 passed
-- tier: judge — merge mode: human /prm
-
 ## autonomous-orchestrators-p4c
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/574
 - issued: 2026-11-04

@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 26 |
-| [In flight](#in-flight) | 9 |
+| [In flight](#in-flight) | 8 |
 | [Planned](#planned) | 10 |
-| [Backlog](#backlog) | 274 |
+| [Backlog](#backlog) | 275 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -1342,14 +1342,6 @@ Use the start-dev skill. active/three_autos_public_framing.md
 
 </details>
 
-<details><summary>📋 <a href="active/unit_timing_monitoring_ignores_min_delta.md">Heart: the unit-test timing monitoring summary flags noise its own row policy…</a> — issued 2026-11-15 — library-dev — PRs: <a href="https://github.com/PyAutoLabs/PyAutoHeart/pull/349">PyAutoHeart#349</a></summary>
-
-```
-Use the start-dev skill. active/unit_timing_monitoring_ignores_min_delta.md
-```
-
-</details>
-
 ## Planned
 
 Scoped but not started; some are not yet prompt files. Full detail in [`planned.md`](planned.md).
@@ -1441,7 +1433,7 @@ Use the start-dev skill. draft/docs/workspaces/model_bullet_parameter_count_drif
 
 ## Backlog
 
-Lanes: any 219 · ral 34 · local-dev 10 · wsl-data 9
+Lanes: any 220 · ral 34 · local-dev 10 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
@@ -1793,7 +1785,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 50</summary>
+<summary><b>bug</b> — 51</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -2143,6 +2135,14 @@ Use the start-dev skill. draft/bug/autogalaxy/database_paths_dataset_fits_not_re
 
 ```
 Use the start-dev skill. draft/bug/autolens_profiling/stale_auto_simulated_cluster_dataset.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautoheart/unit_timing_run_speed_factor_jax.md">Heart: one runner-speed factor inflates compile-bound JAX unit tests</a> — pyautoheart · small · supervised · low</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautoheart/unit_timing_run_speed_factor_jax.md
 ```
 
 </details>
@@ -2940,7 +2940,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-15 | issued | <a href="active/unit_timing_monitoring_ignores_min_delta.md">Heart: the unit-test timing monitoring summary flags noise its own…</a> |
+| 2026-11-15 | filed | <a href="draft/bug/pyautoheart/unit_timing_run_speed_factor_jax.md">Heart: one runner-speed factor inflates compile-bound JAX unit tests</a> |
 | 2026-11-14 | issued | <a href="active/cluster_regime_narrative.md">Cluster package: point-source-default narrative + extended-source…</a> |
 | 2026-11-13 | issued | <a href="active/ep_projected_model_shared_prior_keyerror.md">autofit: EP projection (Result.projected_model) raises KeyError for a…</a> |
 | 2026-11-13 | filed | <a href="draft/bug/autolens/twins_provenance_versions.md">LensTwin provenance records dev metadata, not the code's real version</a> |
@@ -3036,7 +3036,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-110 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+111 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3081,7 +3081,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md`
 - `draft/bug/autogalaxy/area_magnification_critical_curve_fragments.md`
 - `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
-- _… and 70 more_
+- _… and 71 more_
 
 </details>
 

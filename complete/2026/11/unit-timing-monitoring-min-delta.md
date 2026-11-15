@@ -1,3 +1,17 @@
+## unit-timing-monitoring-min-delta
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/349 (MERGED 2026-11-15, merge 58575f0)
+- completed: 2026-11-15
+- merged-by: human-typed /prm (cloud session https://claude.ai/code/session_016nhQ8RkwYK9RzapmsQRGCj)
+- ruling: option A (human, 2026-11-15)
+- summary:
+  - `legacy_summaries()` now tiers only rows whose own both-gates `state` is `warn` (`slow_factor` 2.0 AND `min_delta_s` 2 s, config/repos.yaml); a row the policy calls `ok` is green whatever its ratio. 3x still splits warn rows into red. No threshold, factor or weight changed.
+  - Evidence that the 2026-11-15 RED was noise: PyAutoNerves `test_config` measured CI-style (full suite, `--cov`, junit time, 5 runs/commit) at 15 ms on d3b577a and 5 ms on 9b204c9 (#212) and main 0850c6c; PyAutoArray JAX rows inside their raw historical range.
+  - 3 new tests fail on the old code; full suite 1466 passed; CI 3.12 + 3.13 green.
+- remainder: point 2 (single `run_speed_factor` inflates compile-bound JAX tests) re-filed as draft/bug/pyautoheart/unit_timing_run_speed_factor_jax.md.
+- verify: the next Heart Health publish drops `unit_test_timing:coverage` RED and the per-test findings from the 2026-11-12 rows.
+
+## Original prompt
+
 # Heart: the unit-test timing monitoring summary flags noise its own row policy calls ok
 
 Type: bug
