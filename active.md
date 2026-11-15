@@ -1,14 +1,13 @@
 
-## health-review-cloud-observation
+## unit-timing-monitoring-min-delta
 - session: Claude Code cloud — https://claude.ai/code/session_016nhQ8RkwYK9RzapmsQRGCj
 - location: cloud container (no dev-box worktree)
 - status: library-dev
-- next: fixes committed on both branches; human reviews the branches and asks for PRs, then /prm
 - repos:
-  - PyAutoBrain: claude/pyautolabs-health-review-oja0ir
   - PyAutoHeart: claude/pyautolabs-health-review-oja0ir
-- prompt: active/health_review_cloud_observation.md
-- validation: PyAutoBrain full suite 2017 passed / 2 skipped; PyAutoHeart full suite 1463 passed; live `pyauto-brain health --scope dashboard --json` now reads the published board (red 27, 153 findings, exit 3) instead of "inventory missing" (exit 4)
+- prompt: active/unit_timing_monitoring_ignores_min_delta.md
+- library-pr: https://github.com/PyAutoLabs/PyAutoHeart/pull/349
+- validation: 3 new tests fail on old code / pass on new; full suite 1466 passed
 - tier: judge — merge mode: human /prm
 
 ## autonomous-orchestrators-p4c
