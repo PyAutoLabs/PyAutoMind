@@ -14,6 +14,7 @@
 - [point-plots-yaml-keys-assistant](#point-plots-yaml-keys-assistant)
 - [delaunay-nn-numba-remeasure](#delaunay-nn-numba-remeasure)
 - [model-bullet-parameter-count-drift](#model-bullet-parameter-count-drift)
+- [matern-vendor-bessel-kve](#matern-vendor-bessel-kve)
 
 <!-- toc:end -->
 
@@ -171,3 +172,18 @@
 - affected-repos:
   - autolens_workspace
 
+
+## matern-vendor-bessel-kve
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/694
+- status: blocked — repos claimed by other tasks
+- planned: 2026-11-15
+- filed: 2026-11-15
+- prompt: active/matern_vendor_bessel_kve.md
+- classification: both (library first: PyAutoArray; phase 2 workspace_test)
+- suggested-branch: feature/matern-vendor-bessel-kve
+- launch: --auto (effective autonomy supervised; tier glance)
+- blocked-by: galaxy-duplicate-pytree-registration (using PyAutoArray)
+- affected-repos:
+  - PyAutoArray
+  - autogalaxy_workspace_test
+  - autolens_workspace_test
