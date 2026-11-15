@@ -12,9 +12,9 @@
 | [Epics](#epics) | 26 |
 | [In flight](#in-flight) | 9 |
 | [Planned](#planned) | 12 |
-| [Backlog](#backlog) | 275 |
+| [Backlog](#backlog) | 274 |
 | [Recent](#recent) | 50 |
-| [Pending release](#pending-release) | 1 |
+| [Pending release](#pending-release) | 2 |
 
 > **Batch 2026-11-14-pm3 — 0 in progress · 0 awaiting review**
 >
@@ -139,7 +139,7 @@ Use the start-dev skill. draft/research/euclid/euclid_dr1_positions_gate_remodel
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 76
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 75
 
 <details><summary>📋 <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a> — autolens_workspace · small · safe · normal</summary>
 
@@ -1457,7 +1457,7 @@ Use the start-dev skill. draft/docs/workspaces/model_bullet_parameter_count_drif
 
 ## Backlog
 
-Lanes: any 220 · ral 34 · local-dev 10 · wsl-data 9
+Lanes: any 219 · ral 34 · local-dev 10 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
@@ -2781,20 +2781,12 @@ Use the start-dev skill. draft/maintenance/autocti/legacy_root_notes_followup.md
 </details>
 
 <details>
-<summary><b>refactor</b> — 11</summary>
+<summary><b>refactor</b> — 10</summary>
 
 <details><summary>📋 <a href="draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md">Zero-contour critical curves: compile once per run by passing the mass model…</a> — autogalaxy · medium · supervised · medium</summary>
 
 ```
 Use the start-dev skill. draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/refactor/autofit/example_analysis_should_reduce_with_xp_sum.md">Example Analysis should reduce with xp.sum not builtin sum</a> — autofit · small · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/refactor/autofit/example_analysis_should_reduce_with_xp_sum.md
 ```
 
 </details>
@@ -3189,6 +3181,10 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 **PyAutoArray**
 
 - [PyAutoArray#695](https://github.com/PyAutoLabs/PyAutoArray/pull/695) — `complete/2026/11/matern-vendor-bessel-kve.md`
+
+**PyAutoFit**
+
+- [PyAutoFit#1775](https://github.com/PyAutoLabs/PyAutoFit/pull/1775) — `complete/2026/11/example-analysis-xp-sum.md`
 
 
 Boards: [organism](https://pyautolabs.github.io/PyAutoScientist/) · [brain](https://pyautolabs.github.io/PyAutoBrain/) · [cortex](https://pyautolabs.github.io/PyAutoCortex/) · [memory](https://pyautolabs.github.io/PyAutoMemory/) · [eyes](https://pyautolabs.github.io/PyAutoEyes/) · [ears](https://pyautolabs.github.io/PyAutoEars/) · [heart](https://pyautolabs.github.io/PyAutoHeart/) · [hands](https://pyautolabs.github.io/PyAutoHands/) · [pulse](https://pyautolabs.github.io/PyAutoPulse/) · [insight](https://pyautolabs.github.io/PyAutoInsight/) · [dna](https://pyautolabs.github.io/PyAutoDNA/) · [nerves](https://pyautolabs.github.io/PyAutoNerves/) · [broca](https://pyautolabs.github.io/PyAutoBroca/) · [gut](https://pyautolabs.github.io/PyAutoGut/)
