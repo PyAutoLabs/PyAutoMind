@@ -1,4 +1,16 @@
 
+## health-review-cloud-observation
+- session: Claude Code cloud — https://claude.ai/code/session_016nhQ8RkwYK9RzapmsQRGCj
+- location: cloud container (no dev-box worktree)
+- status: library-dev
+- next: fixes committed on both branches; human reviews the branches and asks for PRs, then /prm
+- repos:
+  - PyAutoBrain: claude/pyautolabs-health-review-oja0ir
+  - PyAutoHeart: claude/pyautolabs-health-review-oja0ir
+- prompt: active/health_review_cloud_observation.md
+- validation: PyAutoBrain full suite 2017 passed / 2 skipped; PyAutoHeart full suite 1463 passed; live `pyauto-brain health --scope dashboard --json` now reads the published board (red 27, 153 findings, exit 3) instead of "inventory missing" (exit 4)
+- tier: judge — merge mode: human /prm
+
 ## autonomous-orchestrators-p4c
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/574
 - issued: 2026-11-04
@@ -21,18 +33,6 @@
 - coordination: human approved PyAutoLens/paper_jax/paper.md-only edits alongside magnification-maps-wiring; no library code changes
 - next: validate JWST PSF/noise and export calibrated ALMA visibilities, then joint gradient check and bounded pilots
 - tier: judge — merge mode: human /prm
-
-## website-lensing-intro
-- issue: https://github.com/Jammy2211/Jammy2211.github.io/issues/1
-- issued: 2026-11-12
-- session: OpenAI Codex desktop
-- status: workspace-dev
-- worktree: /home/jammy/Code/PyAutoLabs/scratch/website-lensing-intro
-- repos:
-  - Jammy2211.github.io: feature/website-lensing-intro
-- prompt: active/website_lensing_intro.md
-- tier: judge — merge mode: human /prm
-- scope: personal static website, outside organism registry; no library/workspace runtime changes
 
 ## three-autos-public-framing
 - issue: https://github.com/PyAutoLabs/PyAutoLens/issues/832

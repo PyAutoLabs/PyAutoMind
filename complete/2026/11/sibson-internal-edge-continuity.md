@@ -1,3 +1,17 @@
+## sibson-internal-edge-continuity
+- issue: https://github.com/PyAutoLabs/PyAutoArray/issues/610
+- library-pr: https://github.com/PyAutoLabs/PyAutoArray/pull/685 (MERGED 2026-11-09)
+- completed: 2026-11-09
+- released: PyAutoArray 2026.11.12.1 (tag contains the merge)
+- closed-out: 2026-11-15 by a health-review session — the fix shipped outside the Mind workflow, so the planned.md entry outlived its closed issue and failed PyAutoMind Registry Reconcile daily (2026-11-11 → 2026-11-15).
+- summary:
+  - The Watson per-triangle decomposition formed a circle through the query and every cavity-triangle edge, including cavity-interior edges; on an internal edge that circle is collinear, so the code fell back to the seed triangle's barycentric row (square centre 0.5/0.5 instead of 0.25 x 4), and near one the cancelling terms were normalised before clipping (row sums 1.12).
+  - Natural-neighbour areas are now summed from per-edge segment terms of the stolen regions (stored circumcentres on interior edges, the circle through q only on cavity-boundary edges); internal edges are never singular. Same algorithm in the NumPy/JAX and numba bodies; numba serial ~20% faster at HST size.
+  - DelaunayNN magnification areas now integrate the Sibson basis (shared kNN quadrature): identity-lens magnification bias went from -2.65% to +0.04% once internal-edge weights were corrected.
+  - Validation: independent Voronoi-clipping oracle (<=1e-10), square centre both diagonals and windings, hexagon 1/6, edge probes, affine/partition/support, hull limit, NumPy/numba/JAX-jit parity; the audit's 3 strict xfails promoted.
+
+## Original prompt
+
 # Fix Sibson interpolation at internal edges
 
 Type: bug
