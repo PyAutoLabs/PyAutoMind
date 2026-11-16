@@ -1,3 +1,20 @@
+Security maintenance (human-required, admin), done 2026-11-16. Source: the independent security review of PyAutoMind#565. Shipped as PyAutoMind#573 (f4bd95435), plus the steps below.
+
+**Closed:**
+- **Environment.** `mind-main`: deployment branch `main` only, `can_admins_bypass: false`. Every job reading `CLAUDE_CODE_OAUTH_TOKEN` or `APP_PRIVATE_KEY` declares it (10 jobs in 8 workflows), and `tests/test_workflow_environment.py` guards that.
+- **Secrets (human).** Both secrets live only in the environment. The App key was regenerated, because Bitwarden held no `.pem`; the new key is now attached to the bot's Bitwarden entry. The repo-level Claude token is deleted. The org `APP_PRIVATE_KEY` is `selected`: 66 repos, PyAutoMind excluded, set from the new key.
+- **Old heads (human: "b for November, a for the rest").** 193 merged plus 22 older unmerged pre-hardening heads deleted. 28 November heads were brought up to main's hardened workflows. A bundle backup of every head is in `Science/scratch/mind_branch_prune_2026-11-16/`.
+
+**Witness:**
+- `spawn_drift` dry run on main minted the App token inside `mind-main` with the new key, twice.
+- Heart's daily run minted 4 App tokens from the new org key.
+- PyAutoMind now has 32 heads, and running `test_workflow_input_injection.py` on each finds 0 unsafe.
+- Mind's org-secret list is `SLACK_WEBHOOK_URL` only.
+
+**Left as is:** the webhook secrets (Slack posting only). Mind `main` is still unprotected (M4.3). New repos don't get `APP_PRIVATE_KEY` automatically; the command is in the step-2 script's header. Human: delete the old App key and `~/app.pem`.
+
+## Original prompt
+
 # Old Mind branches carry injectable workflows that hold org secrets
 
 Type: maintenance

@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2280 records across 11 buckets.
+2281 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -262,6 +262,7 @@ markers; everything below GENERATED is rebuilt.
 - [numba-fork-safe-threading](2026/11/numba-fork-safe-threading.md)
 - [numba-gate-retune-superseded](2026/11/numba-gate-retune-superseded.md) — superseded — PyAutoArray#632 (17caf228), records `complete/2026/10/interferometer-numba-route-gate.md` and `de…
 - [numba-num-threads-pin-delaunay-nn](2026/11/numba-num-threads-pin-delaunay-nn.md)
+- [old-branch-workflow-secret-exposure](2026/11/old-branch-workflow-secret-exposure.md)
 - [one-line-auto-simulate-helper](2026/11/one-line-auto-simulate-helper.md)
 - [organism-map-compact](2026/11/organism-map-compact.md) — PR is the tracking surface
 - [plot-rst-missing-exports](2026/11/plot-rst-missing-exports.md)
