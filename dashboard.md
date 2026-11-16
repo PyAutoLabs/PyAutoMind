@@ -31,9 +31,9 @@ _LIVE · 0 in progress_
 2. [HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon](draft/research/autofit/hpc_campaign_epic.md)
 3. [Results library — index, complete, export and ship thousands of PyAutoFit results](draft/feature/autofit/results_library_epic.md)
 
-**Questions** (1 open, 1 deferred — [`questions.md`](questions.md))
+**Questions** (0 open, 1 deferred — [`questions.md`](questions.md))
 
-- Q3 — PyAutoFit is claimed by ep-projected-model-shared-prior (#1773). No files overlap. Allow a separate worktree off main for this fix? (https://github.com/PyAutoLabs/PyAutoFit/issues/1777, today)
+_(no open questions)_
 
 **Shift** (2026-11-16-pm — 0 in progress · 0 awaiting review)
 
