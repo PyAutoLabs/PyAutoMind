@@ -11,6 +11,7 @@ Priority: medium
 Status: draft
 Filed: 2026-11-16
 Lane: any
+Verified: 2026-11-16 2e66e14d (PyAutoGalaxy)
 
 Found while renaming the convert helpers (PyAutoGalaxy#717). It is also on main.
 `af.Model(ag.EllipseMultipole)` and `af.Model(ag.EllipseMultipoleScaled)` built without an explicit

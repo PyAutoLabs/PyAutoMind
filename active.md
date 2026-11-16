@@ -99,18 +99,6 @@
 - heart-ack:
   - acknowledged by the human 2026-11-16 ("Heart ack so its ok"): RED on local-checkout rows (7 library checkouts behind/dirty), 5 manifest-drift legs, release-scope (no rehearsal for current source) and human-only (PyAutoArray PR open 13d); none on the touched repos
 
-## seed-samplers-byte-stable
-- issue: https://github.com/PyAutoLabs/autofit_visualization/issues/7
-- prompt: active/seed_samplers_for_byte_stable_rerenders.md
-- session: shift worker 2026-11-16-pm (e4818d9b-3bcd-4b38-ba84-3112a35c27b2)
-- status: workspace-shipped, awaiting-merge
-- workspace-pr: https://github.com/PyAutoLabs/autofit_visualization/pull/8
-- worktree: ~/Code/PyAutoLabs-wt/seed-samplers-byte-stable
-- heart-ack:
-  - acknowledged by the human 2026-11-16 ("Heart ack so its ok"): RED on local-checkout rows (7 library checkouts behind/dirty: PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens x2, PyAutoCTI), 5 manifest-drift legs, release-scope (no rehearsal for current source) and human-only (PyAutoArray PR open 13d); none on the touched repos
-- repos:
-  - autofit_visualization: feature/seed-samplers-byte-stable
-
 ## hpc-campaign-p5d-pipeline-adoption
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/132
 - issued: 2026-11-16
@@ -122,3 +110,15 @@
   - acknowledged by the human 2026-11-16 ("Heart ack so its ok"): RED on local-checkout rows (7 library checkouts behind/dirty: PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens x2, PyAutoCTI), 5 manifest-drift legs, release-scope (no rehearsal for current source) and human-only (PyAutoArray PR open 13d); none on the touched repos
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/hpc-campaign-p5d-pipeline-adoption
+## ellipse-multipole-latent-missing-m
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/719
+- issued: 2026-11-16
+- session: shift worker 2026-11-16-pm (af778bf0-0b22-4196-ad6e-ff5182aa5f0f)
+- status: library-dev
+- heart-ack:
+  - acknowledged by the human 2026-11-16 ("Heart ack so its ok"): RED on local-checkout rows (7 library checkouts behind/dirty: PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens x2, PyAutoCTI), 5 manifest-drift legs, release-scope (no rehearsal for current source) and human-only (PyAutoArray PR open 13d); none on the touched repos
+- worktree: ~/Code/PyAutoLabs-wt/ellipse-multipole-latent-missing-m
+- repos:
+  - PyAutoGalaxy: feature/ellipse-multipole-latent-missing-m
+- summary: |
+    Add m: Constant 4 prior config to EllipseMultipole/EllipseMultipoleScaled so latent_parameters_from works without an explicit m; regression test.
