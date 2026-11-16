@@ -85,3 +85,15 @@
 - tier: glance — merge mode: auto-merge on green
 - repos:
   - PyAutoBrain: feature/glance-public-name-check
+
+## convert-latent-naming
+- issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/717
+- issued: 2026-11-16
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/convert-latent-naming
+- prompt: active/convert_latent_prefix_naming.md
+- naming: human 2026-11-16 — _dict suffix (shear_magnitude_angle_dict_from, …); deprecated aliases for one release
+- tier: judge — merge mode: human /prm
+- repos:
+  - PyAutoGalaxy: feature/convert-latent-naming
