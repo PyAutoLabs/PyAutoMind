@@ -95,7 +95,8 @@
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/656
 - issued: 2026-11-16
 - session: Claude Code desktop (WSL), Opus worker; session ID unavailable
-- status: library-dev
+- status: library-shipped, awaiting-merge
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/657
 - worktree: ~/Code/PyAutoLabs-wt/shift-defaults-4-workers-5m
 - repos:
   - PyAutoBrain: feature/shift-defaults-4-workers-5m
