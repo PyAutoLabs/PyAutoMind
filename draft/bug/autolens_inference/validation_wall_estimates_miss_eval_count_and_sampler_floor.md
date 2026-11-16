@@ -15,6 +15,7 @@ Consequence: judge
 Witness: Re-running the estimate for every phase-4 leg that has a COMPLETED, non-resumed row gives actual/estimate within 0.5–2× for every leg (today 0.55–89.5×), using only inputs available before a run. The submit generator's --time follows the new estimate, and `check_submits --check` and `validation_p4 --check` stay green. The same wall model is what phase 5's run-time estimator is told to reuse (a note in the phase-5 context).
 Review-minutes: 15
 Unattended: ready
+Verified: 2026-11-16 158257d0 (autolens_inference)
 Lane: local-dev
 Epic: likelihood-lifecycle
 Phase: 4

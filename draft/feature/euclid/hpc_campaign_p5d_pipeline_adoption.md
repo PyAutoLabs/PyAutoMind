@@ -15,6 +15,7 @@ Consequence: judge
 Witness: (1) pipeline CI (tests.yml + smoke_tests.yml) green; (2) `python -m autofit.campaign` on the new `hpc/campaign/dr1.yaml` with the FakeScheduler (or LocalScheduler on 3 fixture tiles) prints a plan whose vis_lp → vis_pix → SED chain uses per-index `aftercorr`, whose every stage passes the partition lint (`ral` only, no `gpu` in any CPU stage), and whose digest is ≤2 KB; (3) a table in the PR maps every retired `hpc/batch_cpu/submit_*` script to the campaign stage or kept tool script that replaces it, with nothing dropped silently
 Review-minutes: 20
 Unattended: ready
+Verified: 2026-11-16 65b32e85 (euclid_strong_lens_modeling_pipeline)
 Lane: any
 Epic: hpc-campaign
 Phase: 5d
