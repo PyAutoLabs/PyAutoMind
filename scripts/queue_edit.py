@@ -12,10 +12,11 @@ markdown; it runs this script in a temporary Mind worktree detached on
     python3 scripts/queue_edit.py remove <who> [--why TEXT]
     python3 scripts/queue_edit.py move <who> up|down|top|bottom|<n>
 
-`<ref>` names one prompt in `draft/` or `active/`: a path, a basename, a
-GitHub link to it, the dashboard's copy text (`Use the start-dev skill.
-<path>`), a pasted prompt (its `# Title` line is matched), or a title. Give
-`-` to read it from stdin. A ref that resolves to no draft/ or active/ prompt
+`<ref>` names one prompt in `draft/` or `active/`, read from its FIRST line
+only: the dashboard's copy text (`Use the start-dev skill. <path>`), a path or
+GitHub link alone, a whole pasted prompt (its `# Title` line, matched
+exactly), or on a one-line paste a basename or exact title. Give `-` to read
+it from stdin. A ref that resolves to no draft/ or active/ prompt
 is refused. `<who>` names a live entry: its rank (`3` or `#3`), its ref, or its
 label.
 
@@ -119,44 +120,77 @@ def _norm(text: str) -> str:
     return re.sub(r"\s+", " ", text.strip().strip(".:—-").strip()).lower()
 
 
+#: The first line forms that name a path: the dashboard's 📋 line, or the
+#: path alone (bare, in backticks, or as a GitHub link to it).
+COPY_LINE_RE = re.compile(r"^Use the start-dev skill\.\s+`?(\S+?\.md)`?\s*$")
+BARE_PATH_RE = re.compile(
+    r"^`?(?:https://github\.com/[^/\s]+/[^/\s]+/blob/[^/\s]+/)?"
+    r"((?:draft|active)/[A-Za-z0-9_.\-/]+\.md)`?$")
+
+
+def _found(root: Path, rel: str) -> "tuple[str, str]":
+    if ".." in Path(rel).parts or not rel.startswith(("draft/", "active/")):
+        raise Refused(f"`{rel}` is not a draft/ or active/ prompt path")
+    if (root / rel).is_file():
+        return rel, _title(root / rel)
+    if lifecycle._queue_ref_resolves(root, rel):  # issued: now in active/
+        act = f"active/{Path(rel).name}"
+        return act, _title(root / act)
+    raise Refused(f"`{rel}` resolves to no draft/ or active/ prompt")
+
+
+def _one(root: Path, hits: "list[Path]", said: str,
+         near: "list[Path] | None" = None) -> "tuple[str, str]":
+    if len(hits) == 1:
+        return hits[0].relative_to(root).as_posix(), _title(hits[0])
+    listed = hits or near or []
+    names = ", ".join(p.relative_to(root).as_posix() for p in listed[:5])
+    if len(hits) > 1:
+        raise Refused(f"`{said[:80]}` matches {len(hits)} prompts ({names}) — give the path")
+    raise Refused(f"`{said[:80]}` resolves to no draft/ or active/ prompt"
+                  + (f" (did you mean: {names}?)" if names else ""))
+
+
 def resolve_prompt(root: Path, ref: str) -> "tuple[str, str]":
-    """(path relative to the Mind, title) of the one prompt `ref` names."""
+    """(path relative to the Mind, title) of the one prompt `ref` names.
+
+    Only the paste's FIRST non-blank line is read, never the body: a real
+    prompt cites other prompts, and taking a path from its body queues the
+    wrong task. In order:
+
+    a. the dashboard's 📋 line `Use the start-dev skill. <path>`, or a path
+       alone (bare, in backticks, or a GitHub link);
+    b. a paste that opens with `# ` — a whole prompt — matched exactly, by
+       title, against the draft/ and active/ prompt files;
+    c. a one-line paste: a prompt basename, or an exact title.
+
+    Anything else, an ambiguous title included, is refused with candidates."""
     text = (ref or "").strip()
     if not text:
         raise Refused("no task given")
-    paths = list(dict.fromkeys(PATH_RE.findall(text)))
-    if len(paths) > 1:
-        raise Refused("that names more than one prompt ("
-                      + ", ".join(paths[:4]) + ") — one task at a time")
-    if paths:
-        rel = paths[0]
-        if ".." in Path(rel).parts:
-            raise Refused(f"`{rel}` is not a prompt path")
-        if (root / rel).is_file():
-            return rel, _title(root / rel)
-        if lifecycle._queue_ref_resolves(root, rel):  # issued: now in active/
-            act = f"active/{Path(rel).name}"
-            return act, _title(root / act)
-        raise Refused(f"`{rel}` resolves to no draft/ or active/ prompt")
+    lines = text.split("\n")
+    first = lines[0].strip()
+    m = COPY_LINE_RE.match(first) or BARE_PATH_RE.match(first)
+    if m:
+        return _found(root, m.group(1))
     prompts = _prompts(root)
-    first = text.split("\n", 1)[0].strip()
-    name = first if first.endswith(".md") else first + ".md"
-    if "/" not in name and " " not in name:
-        hits = [p for p in prompts if p.name == name]
-        if len(hits) == 1:
-            return hits[0].relative_to(root).as_posix(), _title(hits[0])
-    want = _norm(first[2:] if first.startswith("# ") else first)
+    if first.startswith("# "):
+        want = _norm(first[2:])
+        titled = [(p, _norm(_title(p))) for p in prompts]
+        return _one(root, [p for p, t in titled if t == want], first,
+                    [p for p, t in titled if want and want in t])
+    if len(lines) > 1:
+        raise Refused("a multi-line paste must open with the 📋 line, a prompt "
+                      "path, or the prompt's `# Title` line")
+    if first.endswith(".md") or ("/" not in first and " " not in first):
+        name = first if first.endswith(".md") else first + ".md"
+        hits = [p for p in prompts if p.name == Path(name).name]
+        if hits or "/" in first:
+            return _one(root, hits, first)
+    want = _norm(first)
     titled = [(p, _norm(_title(p))) for p in prompts]
-    hits = [p for p, t in titled if t == want]
-    if not hits and len(want) >= 4:
-        hits = [p for p, t in titled if want in t]
-    if len(hits) == 1:
-        return hits[0].relative_to(root).as_posix(), _title(hits[0])
-    if hits:
-        raise Refused(f"`{first[:80]}` matches {len(hits)} prompts ("
-                      + ", ".join(p.relative_to(root).as_posix() for p in hits[:5])
-                      + ") — give the path")
-    raise Refused(f"`{first[:80]}` resolves to no draft/ or active/ prompt")
+    return _one(root, [p for p, t in titled if t == want], first,
+                [p for p, t in titled if len(want) >= 4 and want in t])
 
 
 def find_entry(root: Path, live: "list[dict]", who: str) -> int:

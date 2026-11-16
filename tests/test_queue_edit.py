@@ -172,7 +172,9 @@ def test_add_at_a_rank_and_with_a_label(mind):
     ("draft/feature/flywheel/no_such_prompt.md", "resolves to no draft/ or active/ prompt"),
     ("complete/2026/01/old_thing.md", "resolves to no draft/ or active/ prompt"),
     ("Old thing", "resolves to no draft/ or active/ prompt"),
-    ("Widget", "matches 2 prompts"),
+    ("Widget", "did you mean: draft/docs/flywheel/widget_guide.md, "
+               "draft/feature/flywheel/widget_polish.md"),
+    ("Notes first\nthen draft/docs/flywheel/widget_guide.md", "a multi-line paste must open"),
     ("draft/bug/flywheel/gearbox_rattle.md", "already queued at #2"),
     ("active/axle_balance.md", "already queued at #3"),
 ])
@@ -293,3 +295,71 @@ def test_planner_order_matches_after_edits(mind):
     assert refs == [r for _l, r in _order(mind)] == [
         "draft/feature/flywheel/axle_balance.md", "draft/docs/flywheel/widget_guide.md",
         "draft/feature/flywheel/sprocket_calibration.md", "draft/bug/flywheel/gearbox_rattle.md"]
+
+
+# --- a pasted prompt is matched by its title line, never by paths in its body --
+
+CITING = """# Widget polish for the flywheel
+
+Type: feature
+Blocked-by: draft/bug/flywheel/gearbox_rattle.md
+
+Follows `draft/docs/flywheel/widget_guide.md`; see also
+https://github.com/example-owner/PyAutoMind/blob/main/active/axle_balance.md
+"""
+
+
+def test_a_pasted_prompt_that_cites_other_prompts_queues_itself(mind):
+    assert qe.resolve_prompt(mind, CITING) == (
+        "draft/feature/flywheel/widget_polish.md", "Widget polish for the flywheel")
+    res = _run(mind, "add", "-", stdin=CITING)
+    assert res.returncode == 0, res.stderr
+    assert _order(mind)[-1] == ("Widget polish for the flywheel",
+                                "draft/feature/flywheel/widget_polish.md")
+    _check(mind)
+
+
+def test_a_cited_path_in_a_title_less_paste_is_never_taken(mind):
+    body = CITING.split("\n", 2)[2]  # the body alone, no `# Title` line
+    with pytest.raises(qe.Refused, match="a multi-line paste must open"):
+        qe.resolve_prompt(mind, body)
+
+
+def test_an_ambiguous_title_is_refused_with_candidates(mind):
+    twin = mind / "draft" / "docs" / "flywheel" / "widget_guide_v2.md"
+    twin.write_text("# Widget guide\n")
+    with pytest.raises(qe.Refused, match="matches 2 prompts"):
+        qe.resolve_prompt(mind, "# Widget guide\n\nBody.\n")
+
+
+def _live_citing_prompts():
+    """Every live prompt in THIS checkout whose body cites another prompt —
+    the real texts that once queued the wrong task. Read at run time, so no
+    live string is written here; none in a fresh template (the test skips)."""
+    out = []
+    for p in qe._prompts(MIND):
+        text = p.read_text(encoding="utf-8", errors="replace")
+        own = p.relative_to(MIND).as_posix()
+        cited = {c for c in qe.PATH_RE.findall(text.split("\n", 1)[-1])
+                 if Path(c).name != p.name}
+        if text.startswith("# ") and cited:
+            out.append((own, text))
+    return out
+
+
+@pytest.mark.skipif(not _live_citing_prompts(), reason="no live prompts (template)")
+def test_real_prompts_that_cite_other_prompts_resolve_to_themselves_or_refuse():
+    titles: "dict[str, int]" = {}
+    for p in qe._prompts(MIND):
+        t = qe._norm(qe._title(p))
+        titles[t] = titles.get(t, 0) + 1
+    checked = 0
+    for own, text in _live_citing_prompts():
+        title = qe._norm(text.split("\n", 1)[0][2:])
+        if titles.get(title, 0) == 1:
+            assert qe.resolve_prompt(MIND, text)[0] == own, own
+            checked += 1
+        else:  # a shared title is refused, never resolved to a cited prompt
+            with pytest.raises(qe.Refused, match="matches"):
+                qe.resolve_prompt(MIND, text)
+    assert checked
