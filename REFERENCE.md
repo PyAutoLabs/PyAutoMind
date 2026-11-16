@@ -489,6 +489,19 @@ history unattended will not record it.
   written at dispatch and appended at collection. Schema and the three fields
   that are easy to get wrong are in [`batches/AGENTS.md`](batches/AGENTS.md).
 
+### Watching a shift: the cockpit
+
+A running shift is watched from chat with `/cockpit` (PyAutoBrain
+`skills/cockpit`, PyAutoBrain#646). It holds one Monitor on the shift's local
+event stream (`pyauto-brain batch watch --stream`, which reads the watcher's
+`events.jsonl`) inside the shift's window. That is the one watch a session may
+hold ([`policy/shift_cockpit_watch.md`](policy/shift_cockpit_watch.md),
+enforced by the end-at-deliverable hook). It steers only by comments on the
+shift issue from the human's login (`/pause`, `/resume`, `/drop`, `/stop`,
+`/kill`, `/cap`, `/add`), and it writes nothing in this repo: in a cockpit
+chat a pasted prompt is an `/add` to the shift, and queue and question edits
+go through `/queue` and `/questions`.
+
 ### The review-cost model
 
 `Difficulty:` measures blast radius — how far a change reaches. It cannot answer
