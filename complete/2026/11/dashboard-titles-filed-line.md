@@ -1,3 +1,10 @@
+- summary: shipped by shift worker 2026-11-16-pm as Mind ledger ops (no repo PR), tracked on PyAutoMind#579. Moved `Filed:`/`Lane:` below the H1 into the header block of `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md` and `draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md`, values unchanged.
+- decision taken: the Witness covers every draft. `draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md` had no `# ` heading, so the worker prepended `# HowToLens tutorial correctness, cross-checked against HowToGalaxy` (a title it chose).
+- witness: on an export of origin/main e1f674429 with the edits applied plus `pyauto-brain intake --apply dashboard`: `grep -c '>Filed: 20' dashboard.md dashboard.html` → 0 / 0 (was 4 / 4); drafts outside `*_reviews/` without a leading `# `: none (was 3).
+- follow-up candidate (not filed): harden PyAutoBrain `_intake._title` to prefer the first heading, as its docstring says.
+
+## Original prompt
+
 # Dashboard titles two drafts "Filed: 2026-11-05 (…" because their header sits above the H1
 
 Type: bug
