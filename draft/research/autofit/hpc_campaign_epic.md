@@ -272,3 +272,4 @@ Propose other features that would make large-scale analysis better. Candidates t
    and a first pilot on the Euclid DR1 campaign.
 5. Risks and open questions for the human.
 - 2026-11-02 — PHASE 5a COMPLETE (human /prm): autolens_assistant#174 merged after its wiki-currency rerun went green on PyAutoFit 2026.11.1.1; issue autolens_assistant#172 closed; record complete/2026/11/hpc-campaign-p5a-assistant.md. Phase 5 remaining: 5d pipeline adoption (after DR1 v1.0).
+- 2026-11-16 — DR1 GATE MET (human: "Dr1 is now public"); 5d filed as `draft/feature/euclid/hpc_campaign_p5d_pipeline_adoption.md` and switched to Autonomy: supervised by the human ("Supervised, in this shift") — it runs unattended to PR-open, decision-taken, merge is human /prm. Named in shift 2026-11-16-pm.

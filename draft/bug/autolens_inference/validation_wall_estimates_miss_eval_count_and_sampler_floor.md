@@ -14,12 +14,13 @@ Status: formalised
 Consequence: judge
 Witness: Re-running the estimate for every phase-4 leg that has a COMPLETED, non-resumed row gives actual/estimate within 0.5–2× for every leg (today 0.55–89.5×), using only inputs available before a run. The submit generator's --time follows the new estimate, and `check_submits --check` and `validation_p4 --check` stay green. The same wall model is what phase 5's run-time estimator is told to reuse (a note in the phase-5 context).
 Review-minutes: 15
-Unattended: never
-Lane: ral
+Unattended: ready
+Lane: local-dev
 Epic: likelihood-lifecycle
 Phase: 4
 Parent: draft/research/autolens_profiling/likelihood_lifecycle_epic.md
 Filed: 2026-11-06
+Lane-note: 2026-11-16 — was `ral`; the fix is offline calibration from phase-4 rows on autolens_inference main (read-only RAL `.out` logs at most, never a submit). Human 2026-11-16: fix it ahead of phase 5A.
 
 ## Finding
 
