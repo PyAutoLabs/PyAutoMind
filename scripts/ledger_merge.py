@@ -97,6 +97,10 @@ LEDGER_FILES = (
     # them (PyAutoBrain `intake looks-shipped`) — ledger, like queue.md.
     "looks_shipped.json",
     "looks_shipped_dismissed.md",
+    # Parked questions waiting for the human (M3.5, PyAutoBrain#645): the
+    # shift watcher adds entries through its one Mind writer (`question-add`)
+    # and a `/questions` chat answers them — ledger, like queue.md.
+    "questions.md",
 )
 
 # Names that are ledger by location but executable by collection. The ledger

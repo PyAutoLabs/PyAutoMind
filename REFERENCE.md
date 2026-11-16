@@ -502,6 +502,41 @@ shift issue from the human's login (`/pause`, `/resume`, `/drop`, `/stop`,
 chat a pasted prompt is an `/add` to the shift, and queue and question edits
 go through `/queue` and `/questions`.
 
+### The questions inbox (`questions.md`)
+
+A shift worker that parks on a question asks it on its issue and stops. The
+question also lands here, so the human answers the shift's questions in bulk
+after the run instead of being @-mentioned mid-shift (M3.5, PyAutoBrain#645).
+
+- **[`questions.md`](questions.md)** — one `### Q<n>. <task> — <short ask>`
+  entry per question, under `## Open`, `## Deferred`, `## Answered` or
+  `## Dropped`; the section is the state. Keys: `task:` (the prompt),
+  `issue:` (where the question lives), `kind:` (`question`, or `blocked` for a
+  worker stopped at a prompt nobody answered), `ask:`, `options:`, `shift:`,
+  `asked:`, `worker:`. Ids are global and increasing; `(shift, task, issue)`
+  is unique.
+- **Two writers, one script.** The shift watcher adds entries through its one
+  Mind writer (the `question-add` op calls `scripts/questions_edit.py`
+  `add_text` from the tree it writes). A chat that ran `/questions` (PyAutoBrain
+  `skills/questions`) answers, defers, drops or reopens them with
+  `questions_edit.py`, in a temporary worktree detached on `origin/main`,
+  committed with `prompt_sync_push`. Nothing hand-edits the file.
+- **An answer resumes the task.** `answer` moves the entry to Answered and, in
+  the same commit, appends the answer to the task's prompt under
+  `## Answers from the human`. The watcher holds a task an earlier shift left
+  parked until every question it parked on is answered; then the next shift
+  re-enters it at its old standing (its `queue.md` rank, else a small dip) and,
+  for a task already claimed by a shift worker, resumes the claim, issue,
+  branch and worktree with the answer in its prompt. Defer keeps the hold;
+  drop shelves the task (held until reopened, named in a brief, or `/add`-ed).
+- **Validated.** `lifecycle.py check` fails on a malformed entry, a repeated
+  id, or an Open or Deferred entry whose task is in neither `draft/` nor
+  `active/`. `lifecycle.py close` moves the closed task's Open and Deferred
+  entries to Answered with `answer: (task completed)`.
+- **Read-only on the dashboard.** The inbox section lists the Open entries
+  with a 📋 that copies `Use the questions skill. Q<n>` to paste into a
+  chat that runs `/questions`.
+
 ### The review-cost model
 
 `Difficulty:` measures blast radius — how far a change reaches. It cannot answer
