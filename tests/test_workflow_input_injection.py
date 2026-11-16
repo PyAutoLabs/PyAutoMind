@@ -1,11 +1,11 @@
 """No Mind workflow interpolates a dispatch input into a shell (PyAutoMind#565).
 
-The editable dashboard holds a token that can dispatch ANY `workflow_dispatch`
+Anything holding Actions write on Mind can dispatch ANY `workflow_dispatch`
 workflow here with attacker-chosen inputs, so every such input is untrusted.
 `${{ inputs.x }}` inside `run:` is pasted into the script before bash parses
 it: a value like `'; curl … | sh #` runs. Inputs must reach a step through
-`env:` and be validated there (policy/github_tokens.md, "The dashboard input
-token"). This scan fails on any regression, in any workflow; the behaviour
+`env:` and be validated there (policy/github_tokens.md, "Dispatchable
+workflows"). This scan fails on any regression, in any workflow; the behaviour
 tests run the validating steps themselves with hostile values.
 """
 
@@ -95,7 +95,7 @@ def test_lookback_hours_is_validated(tmp_path, workflow, value, ok):
 
 
 @pytest.mark.parametrize("branch,ok", [
-    ("claude/dashboard-input-x1", True), ("codex/fix.thing", True),
+    ("claude/queue-input-x1", True), ("codex/fix.thing", True),
     ("chatgpt/a/b", True), ("main", False), ("feature/x", False),
     ("archive/condemned/x", False), ("claude/a..b", False), ("claude/x.lock", False),
     ("claude/x y", False)] + [("claude/" + p, False) for p in PAYLOADS])

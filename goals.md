@@ -8,14 +8,7 @@ top of the page.
 **This file is public**, as all of PyAutoMind and its Pages dashboard are.
 Write nothing here that should not be read by anyone.
 
-It is written from the dashboard's Goals box (one goal per line, top first,
-through a `dashboard-input` issue and `.github/workflows/dashboard_input.yml`)
-or by hand. A goal last written from the dashboard is **not** copied into a
-brief as-is: `batch brief --new` leaves it commented out, marked "from
-dashboard, last edited <date>" (or "provenance unknown" when git cannot
-tell), for the human to confirm. Provenance is the last commit to touch the
-goal's heading line, so a hand edit that only renumbers goals re-attributes
-them — leave dashboard goals' headings alone, or adopt them knowingly. Either way,
+It is written by the human, by hand or in chat; the dashboard only shows it.
 `scripts/lifecycle.py check` validates it: goals are numbered 1..n with no
 gaps, there are at most 10, a goal is one line of at most 200 characters, and
 the only fields are the three below. An empty list is valid.
@@ -36,7 +29,5 @@ not this file.
 `batch brief --new` scopes the brief's backlog dip to the union of the goals'
 `epics:` and `tags:` (`backlog: scoped`), or to `fill-idle` when no goal names
 any. An `epics:` slug that `epics.md` does not list is a warning, not drift.
-A goal edited on the dashboard keeps its fields when its text is unchanged,
-even if it moved.
 
 <!-- goals: the list starts below this line -->

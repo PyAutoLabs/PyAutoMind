@@ -38,7 +38,6 @@ Commits made with it are authored as `pyautolabs-bot[bot]` /
 | `PYPI`, `TEST_PYPI` | PyAutoHands repo secrets | Hands `release`, `publish_tombstone` (twine) | maintainer | regenerate on PyPI; trusted publishing (commented OIDC steps in Hands `release.yml`) would retire them, not scheduled |
 | `CLAUDE_CODE_OAUTH_TOKEN` | PyAutoMind `mind-main` environment (main only), PyAutoMemory repo secret | Mind `arxiv_papers`, `arxiv_interests`, `morning_status`; Memory `queue_filing` | maintainer | `claude setup-token`, update both repos |
 | `PYAUTO_PAPERS_WEBHOOK_URL` | PyAutoMind repo secret | Mind `arxiv_papers` | maintainer | webhook rotation (below) |
-| dashboard input PAT | the human's browsers (`localStorage`), not a secret | Mind `dashboard.html` → `dashboard-input` issue → `dashboard_input.yml` | maintainer | fine-grained, PyAutoMind Issues RW only, ≤ 90 days ([below](#the-dashboard-input-token-browser-pyautomind565)) |
 | `PYAUTO_UPDATE_WEBHOOK_URL` | PyAutoMind repo secret | Mind `morning_health`, `morning_status` | maintainer | webhook rotation |
 | `PYAUTO_RELEASE_WEBHOOK_URL` | PyAutoBrain, PyAutoHands repo secrets | Brain `nightly-release`; Hands `release` | maintainer | webhook rotation, update both repos |
 | `HEART_NTFY_URL` | PyAutoHeart repo secret | Heart `heart-health` | maintainer | new ntfy topic, update secret |
@@ -107,93 +106,14 @@ Nothing to do: the App is installed on all repos and `APP_PRIVATE_KEY` /
 `APP_CLIENT_ID` have visibility `all`. Only if the repo needs a repo-level
 secret, add it here in the same PR.
 
-### The dashboard input token (browser, PyAutoMind#565)
+### Dispatchable workflows (PyAutoMind#565)
 
-The one PAT this organism holds, and it is not in CI. Design C (human ruling
-2026-11-13, replacing design B): a ★ toggle or a Goals edit on the published
-Mind dashboard opens **one issue** in PyAutoMind, whose body is a fixed
-`key: value` form, then adds the label `dashboard-input` (labels set at
-creation are dropped for accounts without push access). The `issues: labeled`
-event for that label runs
-`.github/workflows/dashboard_input.yml` **from the default branch** — the
-caller never chooses which copy of the code runs — which checks the author,
-validates the body in Python (`scripts/dashboard_input.py`), commits
-`queue.md` or `goals.md` as `github-actions[bot]` (`Via: mind-dashboard`), and
-closes **and locks** the issue with a one-line `dashboard-input: applied |
-no change | refused | superseded — …` comment the page reads back.
-
-**The token is not the human's.** It is a fine-grained PAT owned by a
-**dedicated machine-user account** — not the human's login, and not the
-watcher's posting bot (the account behind `PYAUTO_SHIFT_GH_TOKEN`) — so a
-leaked dashboard token can neither speak as the human nor impersonate the
-watcher:
-
-- the machine account is a PyAutoMind collaborator with the least role that
-  can open issues and set labels on them (Triage);
-- its token: resource owner PyAutoLabs, repository access **PyAutoMind
-  only**, repository permission **Issues: read and write** (Metadata: read
-  comes with it), no Contents, Actions or Workflows; expiry 90 days at most;
-- the repository variable `DASHBOARD_INPUT_LOGIN` names the machine account
-  and `HUMAN_LOGIN` names the human; the workflow refuses every input while
-  either is unset or while they are the same login;
-- in the browser it lives in `localStorage` (key
-  `pyautomind.dashboard.token.v1`), sent only to `api.github.com`. "Forget
-  token" deletes it; a 401 deletes it too.
-
-**Setup, once:** create the machine-user account and add it to PyAutoMind
-(Triage); create the label `dashboard-input`; set the repository variables
-`DASHBOARD_INPUT_LOGIN` (the machine account) and `HUMAN_LOGIN` (the human);
-signed in as the machine account, create the token (owner PyAutoLabs, only
-PyAutoMind, **Issues: Read and write**, 90 days); on each device open 🔑 on the
-dashboard, paste it and Save.
-
-**Storage is shared.** Every PyAutoLabs Pages site is served from the one
-origin `https://pyautolabs.github.io`, so script on any of them can read the
-token. The page's CSP (`connect-src https://api.github.com`) stops this page
-leaking it, not a sibling page. Revoke it (as the machine account) if any
-Pages site is ever suspected.
-
-**What a leaked dashboard token can do** — what the machine account can do to
-PyAutoMind issues:
-
-- **edit the queue and goals**, by opening `dashboard-input` issues, but only
-  within the validator: real prompt refs, at most 10 plain goals, no new
-  `lifecycle.py check` drift, no other path. `batch brief --new` never copies
-  a goal last written from the dashboard (or of unknown provenance) into a
-  brief as trusted text: it is left commented out for the human to adopt;
-- **write issue text as the machine account**: open, edit, comment on, label,
-  close and reopen Mind issues. That text has no authority: the batch
-  watcher's `/pause`, `/resume`, `/drop` and `/stop` count only from
-  `shift_watcher.mention_login`, the human (PyAutoBrain
-  `_orchestrator.py` command reader), so the machine account cannot steer a
-  shift; and a **human ruling counts only from the human's login** (or the
-  human in their own session) — agents reading an issue treat every other
-  account's text, the machine account's included, as data, never as a
-  ruling. The second rule is policy for sessions, not code: no session
-  parses rulings out of issue comments today;
-- **spam**: GitHub cannot be made to refuse issue creation. Each issue costs
-  one short workflow run; runs are serialised by a concurrency group, one
-  issue per run; an issue that changes nothing commits nothing; every input
-  issue is locked once closed; and past 30 inputs in an hour (GitHub search)
-  each new one is refused unprocessed and locked as spam. Revoking the token
-  is what stops it.
-
-It cannot push code, change workflows, dispatch or re-run workflows, read
-secrets, steer a shift, or touch any other repository. Adding the
-`dashboard-input` label to any issue the machine account did not itself
-open and label (a task issue, a live shift's issue) makes the workflow write
-nothing on it — no comment, close or lock — only a `::notice`/`::warning`.
-
-**Follow-up, documented not fixed — renumber laundering.** Provenance follows
-`git blame` of each goal's heading line. A hand commit that only renumbers
-goals (or rewrites a heading with the same text) makes a dashboard-written
-goal look hand-written to `brief --new`. Human edits to `goals.md` should
-leave dashboard goals' headings untouched, or re-adopt them knowingly.
-
-**Dispatchable workflows** are no longer the dashboard token's reach, but
-they remain the reach of anything holding Actions write on Mind (the org App,
-or any future token), at any ref. The 14 below are safe **on `main`** as of
-2026-11-13; `dashboard_input.yml` is no longer dispatchable. **Old branches
+**Dispatchable workflows** are the reach of anything holding Actions write
+on Mind (the org App, or any future token), at any ref. The 14 below are safe
+**on `main`** as of 2026-11-13. (The browser token and issue door of
+PyAutoMind#565, "design C", were removed on 2026-11-16, PyAutoBrain#640:
+`queue.md` and `goals.md` are written by the human, by hand or in a `/queue`
+chat, and the dashboard holds no token.) **Old branches
 still carry the pre-hardening, injectable copies** of `branch_sweep`,
 `mind_ledger_merge` and both arXiv digests, and a dispatch can name any ref,
 so those stay exposed to any Actions-write holder until fixed — filed as

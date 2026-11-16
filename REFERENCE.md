@@ -477,16 +477,14 @@ history unattended will not record it.
   backlog dip to their epics and tags; `lifecycle.py check` validates the file
   (numbered 1..n, at most 10 goals of at most 200 characters). Public, like
   the rest of the Mind.
-- **The dashboard writes both.** A ★ on the published `dashboard.html`, or an
-  edit in its Goals box, opens one issue and labels it `dashboard-input`,
-  with a dedicated machine account's token that holds Issues permission on
-  this repo only. The `issues: labeled` run of `.github/workflows/dashboard_input.yml` (always the default branch's
-  copy) checks the author against `vars.DASHBOARD_INPUT_LOGIN` (a dedicated
-  machine account, never `vars.HUMAN_LOGIN`), validates the
-  body (`scripts/dashboard_input.py`), refuses a write that adds
-  `lifecycle.py check` drift or touches any other path, commits as the bot and
-  closes the issue with a one-line result. Token scope, storage and what a leaked one can do:
-  [`policy/github_tokens.md`](policy/github_tokens.md).
+- **The human writes both; the dashboard reads them.** `queue.md` is edited in
+  a chat that ran `/queue` (PyAutoBrain `skills/queue`): a pasted prompt,
+  path, title or dashboard 📋 text adds an entry, never starts dev.
+  `scripts/queue_edit.py` does the edit (`show`, `add`, `remove`, `move`) so
+  nothing hand-edits the markdown, and the write lands through a temporary
+  worktree detached on `origin/main` and `prompt_sync_push`. The published
+  dashboard shows a read-only ★ and rank `#n` on each queued task (PyAutoBrain#640,
+  which removed the earlier issue-driven input path of PyAutoMind#565).
 - **`batches/<YYYY-MM-DD>-<am|pm>.md`** — one record per dispatched batch,
   written at dispatch and appended at collection. Schema and the three fields
   that are easy to get wrong are in [`batches/AGENTS.md`](batches/AGENTS.md).

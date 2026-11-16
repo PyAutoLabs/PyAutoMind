@@ -216,14 +216,9 @@ batch brief --new <slot> --review-at <ISO>` writes a skeleton brief whose
 their `epics:`/`tags:` (or `fill-idle` when no goal names any) and safe
 defaults (`merge-cap: 0`) for the rest; it prints to stdout unless `--out`
 names a file, so writing the record — the dispatch — stays the human's act.
-A goal whose line was last written by a `Via: mind-dashboard` commit is free
-text from a web page, so it is emitted **commented out** with "from dashboard,
-last edited <date>": a worker never sees it until the human uncomments it.
-When provenance cannot be read (no git, or the blame does not line up), every
-goal is emitted that way, marked "provenance unknown".
+`goals.md` is written by the human alone, so every goal is copied as written.
 `--new` also prints, on stderr, how the goals changed since the newest brief.
-`brief --check` warns when goal 1 of `goals.md` is missing from a brief,
-unless goal 1 came from the dashboard.
+`brief --check` warns when goal 1 of `goals.md` is missing from a brief.
 
 **The keep-Heart-green lane** (PyAutoBrain#625). `brief --new` first reads
 Heart's release verdict and sorts every reason into `fixable-dev`,

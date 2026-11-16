@@ -2887,13 +2887,17 @@ def queue_findings(root: Path) -> "list[Finding]":
     return out
 
 
-def queue_retire_text(text: str, prompt_name: str, shipped_as: str) -> "tuple[str, list[str]]":
+def queue_retire_text(text: str, prompt_name: str, shipped_as: str, *,
+                      key: str = "shipped-as",
+                      by: str = "`lifecycle.py close`") -> "tuple[str, list[str]]":
     """(`queue.md` with every live entry naming `prompt_name` moved to the
     `## Retired` footer, the labels moved). Unchanged text and [] when none.
 
     `lifecycle.py close` calls this: an entry leaves the queue when its work
     reaches `complete/` (queue.md's own rule), and left in place its ref
-    dangles and `check` fails every later push."""
+    dangles and `check` fails every later push. `scripts/queue_edit.py
+    remove` calls it too, with `key="shelved-as"` and its own `by`: an entry
+    the human took off the queue in chat, its prompt still in `draft/`."""
     lines = text.split("\n")
     blocks: "list[tuple[int, int, str, list[str]]]" = []  # start, end, label, body
     fenced, start, label = False, None, None
@@ -2924,9 +2928,9 @@ def queue_retire_text(text: str, prompt_name: str, shipped_as: str) -> "tuple[st
         del lines[b_start:b_end]
     retired = []
     for _s, _e, b_label, note in moving:
-        retired += [f"### {b_label}", f"- shipped-as: {shipped_as}"]
+        retired += [f"### {b_label}", f"- {key}: {shipped_as}"]
         retired.append("- note: " + (f"{note} — " if note else "")
-                       + "retired by `lifecycle.py close`")
+                       + f"retired by {by}")
         retired.append("")
     head = next((i for i, ln in enumerate(lines) if ln.strip() == "## Retired"), None)
     if head is None:
@@ -2962,7 +2966,7 @@ def goals_parse(text: str) -> "tuple[list[dict], list[str]]":
 
     Each goal is `{"n", "text", "epics", "tags", "note", "unknown"}`; `epics`
     and `tags` are lists. PyAutoBrain's `_batch.read_goals` reads the same
-    grammar, and `scripts/dashboard_input.py` writes it."""
+    grammar."""
     goals: "list[dict]" = []
     errors: "list[str]" = []
     cur: "dict | None" = None
