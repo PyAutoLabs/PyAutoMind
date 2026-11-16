@@ -95,7 +95,8 @@
 - issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/134
 - issued: 2026-11-16
 - session: claude-code (bounded Opus worker); session ID unavailable
-- status: workspace-dev
+- status: workspace-shipped, awaiting-merge
+- workspace-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/135
 - worktree: ~/Code/PyAutoLabs-wt/dr1-sed-after-vis-lp
 - repos:
   - euclid_strong_lens_modeling_pipeline: feature/dr1-sed-after-vis-lp
