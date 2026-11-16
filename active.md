@@ -61,18 +61,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/671
 - next: human /prm on #671; answer the extended_source questions on #670, then resume phase 2 (feature + workspace_test script)
 
-## queue-by-chat
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/640
-- issued: 2026-11-16
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/queue-by-chat
-- epic: autonomous-orchestrators (human ruling 2026-11-16: queue maintained by chat; dashboard input path removed)
-- tier: glance — merge mode: auto-merge on green
-- repos:
-  - PyAutoBrain: feature/queue-by-chat
-  - PyAutoMind: feature/queue-by-chat
-
 ## glance-public-name-check
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/641
 - issued: 2026-11-16
