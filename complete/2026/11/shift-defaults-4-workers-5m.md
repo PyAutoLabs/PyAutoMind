@@ -1,3 +1,30 @@
+## shift-defaults-4-workers-5m
+
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/656
+- completed: 2026-11-16
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/657
+- merge: f2081c78c89e8a45e6a1f48be60ec04defab1742 (CI green, human /prm)
+- epic: autonomous-orchestrators
+
+Shifts now default to 4 concurrent workers and 8 sessions (was 2 / 6), and
+`batch brief --new` writes `token-budget: 5000000` (was 2000000).
+
+- Brain `_brief.py` `CAP_DEFAULTS = {"max-workers": 4, "max-sessions": 8}`;
+  `_batch.py` `NEW_BRIEF_DEFAULTS["token-budget"] = "5000000"`; batch
+  `AGENTS.md` watcher section updated.
+- Mind `batches/AGENTS.md` brief template and caps paragraph were updated
+  direct to Mind main (5e769d792), so the template no longer pins 2 workers.
+- Tests that relied on the old default now state their caps in the brief;
+  new witness tests cover "no caps -> 4 spawn" and "`brief --new` writes 5M".
+- `worker_token_estimate` only uses earlier shifts within 2x of the budget, so
+  a 5M shift skips the old 2M shifts; judged sensible, left unchanged.
+- One pre-existing Brain test failure
+  (`test_grouped_organ_consumers.py::test_hygiene_map_and_heart_board_find_grouped_checkouts`)
+  comes from the task worktree's `activate.sh` environment and passes in a
+  clean one; not caused by this change.
+
+## Original prompt
+
 # Shift briefs: default max-workers 4 and token-budget 5M
 
 Type: maintenance

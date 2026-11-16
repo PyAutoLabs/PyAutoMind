@@ -582,7 +582,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 69 (stage 1: 69, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; left out by merge actor (human-/prm / in-turn-human-commanded): 44; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
+Count toward 20: 69 (stage 1: 69, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; left out by merge actor (human-/prm / in-turn-human-commanded): 45; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
 
 **Re-marked 2026-11-12 (human ruling on the M1.4 recount, programme session):** 30 rows of the 2026-10-02 → 11-03 window whose completion records say the merge was a human-typed `/prm` now carry merge actor `human-/prm` and are left out of the count (AUTONOMY.md "Ledger accuracy"; "Merge actor and random audit — 2026-11-12"). The recount named 31; `fixed-model-json` (PyAutoFit#1708) stays counted under the 2026-11-04 ruling that names it. Recount: `python3 scripts/lifecycle.py shadow-recount -v`.
 
@@ -740,6 +740,7 @@ week, never a hand-picked one.
 | 2026-11-16 | plot_rst_missing_exports (https://github.com/PyAutoLabs/PyAutoGalaxy/pull/716 / https://github.com/PyAutoLabs/PyAutoLens/pull/863) | glance | docs-only; export AST check clean; sphinx 96->96; CI GREEN both; heart dev-ship green | merged-unchanged | 1 | in-turn-human-commanded |  |
 | 2026-11-16 | m31_live_shift_findings (https://github.com/PyAutoLabs/PyAutoBrain/pull/638) | glance | tests Brain 2031 (+15 new)/dry run branch vs base/review independent Opus FINDINGS->fixed/CI 2/2 GREEN/heart dev-ship green | merged-unchanged | 1 | in-turn-autonomous |  |
 | 2026-11-16 | glance_public_name_check (https://github.com/PyAutoLabs/PyAutoBrain/pull/642) | glance | tests public_names 40 + Brain 2069/review independent Opus FINDINGS->fixed->re-review fixed/CI 2/2 GREEN/heart dev-ship green | merged-unchanged | 1 | in-turn-autonomous |  |
+| 2026-11-16 | shift-defaults-4-workers-5m (PyAutoBrain#657) | glance | tests Brain 2201 pass (1 pre-existing env fail)/witness 2 new tests pass/CI GREEN/heart dev-ship green | merged-unchanged | 1 | in-turn-human-commanded (mergedBy Jammy2211) |  |
 
 ## Unattended `glance` sub-window (stage 2) — opened 2026-11-04
 
