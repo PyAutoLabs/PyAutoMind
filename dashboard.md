@@ -23,9 +23,13 @@
 >
 > _Nothing to review yet._
 
+## Questions (0 open, 0 deferred)
+
+_(no open questions — [`questions.md`](questions.md))_
+
 ## Goals
 
-_(no goals — write them in [`goals.md`](goals.md))_
+_No goals yet — edit in chat ([`goals.md`](goals.md))_
 
 ## Queue
 
