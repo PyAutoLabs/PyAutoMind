@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 10 in flight",
-  "updated": "2026-11-16T18:35:42Z",
+  "headline": "RED \u2014 24 picks \u00b7 11 in flight",
+  "updated": "2026-11-16T18:38:50Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -14,10 +14,22 @@
       "prompt": "Use the start-dev skill. active/cluster_regime_narrative.md"
     },
     {
+      "severity": "red",
+      "text": "DatasetModel with a free grid_offset cannot round-trip autofit.jax.register_model \u2014 awaiting-input",
+      "url": "https://github.com/PyAutoLabs/PyAutoFit/issues/1777",
+      "prompt": "Use the start-dev skill. active/dataset_model_free_grid_offset_pytree_roundtrip.md"
+    },
+    {
       "severity": "yellow",
       "text": "Dashboard Recent feed lists a planned task twice: its planned.md row\u2026 \u2014 library-shipped, awaiting-merge (decision-taken: human /prm)",
       "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/654",
       "prompt": "Use the start-dev skill. active/dashboard_recent_lists_planned_tasks_twice.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "autofit_visualization \u2014 seed every sampler so re-renders are byte-stable \u2014 workspace-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/autofit_visualization/pull/8",
+      "prompt": "Use the start-dev skill. active/seed_samplers_for_byte_stable_rerenders.md"
     },
     {
       "severity": "yellow",
@@ -114,18 +126,6 @@
       "text": "pick: Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md",
       "prompt": "Use the start-dev skill. draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Use readthedocs or migrate to GitHub docs",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/pyautohands/git_docs.md",
-      "prompt": "Use the start-dev skill. draft/research/pyautohands/git_docs.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Verify jax.jit / jax.grad parity on the critical-curve and caustic calculations",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace_test/jax_zero_contour.md",
-      "prompt": "Use the start-dev skill. draft/test/autolens_workspace_test/jax_zero_contour.md"
     }
   ]
 }
