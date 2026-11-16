@@ -1,3 +1,24 @@
+## dashboard-md-epic-ledger-backticks
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/653 (closed, completed)
+- completed: 2026-11-16
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/655 (MERGED 08c428acf)
+- shipped: `render_dashboard` in `agents/conductors/intake/_intake.py` now passes each epic's `ledger:`
+  path through `_summary_label`, so it renders as `<code>…</code>` inside the one-line `<summary>`
+  HTML block, where GitHub does not process markdown. The stray-epic "not in epics.md" note is written
+  as `<code>epics.md</code>` too. `dashboard.html` was already correct and is unchanged.
+- witness: on a temp PyAutoMind origin/main worktree, `intake dashboard --apply` then
+  `grep -c '<summary>.*`' dashboard.md` → 0 with the branch renderer, 25 with main's. Exactly 25
+  dashboard.md lines change, and dashboard.html/state.json differ only by timestamp. The new test
+  `test_epic_summaries_render_code_spans_as_html_not_backticks` fails on main and passes on the branch.
+- gate: tests 2180 pass locally (the 7F/10E are identical on main 678dba7, shift-worker env); CI 2/2
+  GREEN (ci-verdict) · smoke n/a (organ renderer) · review CLEAN · Heart scoped dev-ship GREEN
+  (PyAutoBrain) · adversary CLEAN (independent Sonnet agent) · public-names CLEAN (not a library).
+- session: shift worker 2026-11-16-pm (85e0a659-b459-4b3d-8a54-6b01ec1d2cd1), claude-opus-5-5;
+  notify tier, merged in-turn on green.
+- affected-repos: PyAutoBrain
+
+## Original prompt
+
 # dashboard.md: epic `ledger:` paths render as literal backticks inside `<summary>`
 
 Type: bug
@@ -14,7 +35,6 @@ Consequence: notify
 Witness: after `pyauto-brain intake --apply dashboard` on the PyAutoMind checkout, `grep -c '<summary>.*`' dashboard.md` prints 0 (it prints 25 on main at e9c34daa4), and a test in tests/test_intake_dashboard.py asserts an epic row's ledger renders as `<code>…</code>` in the markdown page
 Review-minutes: 3
 Unattended: ready
-Verified: 2026-11-16 678dba71 (PyAutoBrain)
 Lane: any
 Filed: 2026-11-16
 

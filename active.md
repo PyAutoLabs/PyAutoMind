@@ -61,17 +61,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/671
 - next: human /prm on #671; answer the extended_source questions on #670, then resume phase 2 (feature + workspace_test script)
 
-## hpc-campaign-p5d-pipeline-adoption
-- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/132
-- issued: 2026-11-16
-- session: shift worker 2026-11-16-pm (19797daf-903f-48b2-9e11-614b1cd7e76a)
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/hpc-campaign-p5d-pipeline-adoption
-- heart-ack:
-  - acknowledged by the human 2026-11-16 ("Heart ack so its ok"): RED on local-checkout rows (7 library checkouts behind/dirty: PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens x2, PyAutoCTI), 5 manifest-drift legs, release-scope (no rehearsal for current source) and human-only (PyAutoArray PR open 13d); none on the touched repos
-- repos:
-  - euclid_strong_lens_modeling_pipeline: feature/hpc-campaign-p5d-pipeline-adoption
-
 ## validation-wall-model
 - issue: https://github.com/PyAutoLabs/autolens_inference/issues/69
 - issued: 2026-11-16
@@ -85,19 +74,6 @@
   - autolens_inference: feature/validation-wall-model
 - summary: |
     Phase-4 wall estimates miss by up to 90x: replace the derivation in validation_p4.py with one calibrated wall model (evals law by dimension and n_live, per-eval sampler floor, startup, numba parallel efficiency, MGE-priced parametric stages); --time follows it; phase 5E told to reuse it.
-
-## dashboard-md-epic-ledger-backticks
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/653
-- issued: 2026-11-16
-- session: shift worker 2026-11-16-pm (85e0a659-b459-4b3d-8a54-6b01ec1d2cd1)
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/dashboard-md-epic-ledger-backticks
-- repos:
-  - PyAutoBrain: feature/dashboard-md-epic-ledger-backticks
-- prompt: active/dashboard_md_epic_ledger_backticks_render_literally.md
-- tier: notify — merge mode: auto-merge on green (in-turn wait, then /prm close-out)
-- heart-ack:
-  - acknowledged by the human 2026-11-16 ("Heart ack so its ok") per batches/2026-11-16-pm.md: RED on local-checkout rows, manifest-drift legs, release-scope, human-only; none on PyAutoBrain
 
 ## dashboard-recent-planned-dedupe
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/652
@@ -134,3 +110,15 @@
   - acknowledged by the human 2026-11-16 ("Heart ack so its ok"): RED on local-checkout rows (7 library checkouts behind/dirty: PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens x2, PyAutoCTI), 5 manifest-drift legs, release-scope (no rehearsal for current source) and human-only (PyAutoArray PR open 13d); none on the touched repos
 - repos:
   - autofit_visualization: feature/seed-samplers-byte-stable
+
+## hpc-campaign-p5d-pipeline-adoption
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/132
+- issued: 2026-11-16
+- session: shift worker 2026-11-16-pm (19797daf-903f-48b2-9e11-614b1cd7e76a)
+- status: library-shipped, awaiting-merge
+- worktree: ~/Code/PyAutoLabs-wt/hpc-campaign-p5d-pipeline-adoption
+- library-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/133
+- heart-ack:
+  - acknowledged by the human 2026-11-16 ("Heart ack so its ok"): RED on local-checkout rows (7 library checkouts behind/dirty: PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens x2, PyAutoCTI), 5 manifest-drift legs, release-scope (no rehearsal for current source) and human-only (PyAutoArray PR open 13d); none on the touched repos
+- repos:
+  - euclid_strong_lens_modeling_pipeline: feature/hpc-campaign-p5d-pipeline-adoption
