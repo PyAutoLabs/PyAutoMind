@@ -14,6 +14,7 @@ Consequence: notify
 Witness: after `pyauto-brain intake --apply dashboard` on the PyAutoMind checkout, `grep -c '<summary>.*`' dashboard.md` prints 0 (it prints 25 on main at e9c34daa4), and a test in tests/test_intake_dashboard.py asserts an epic row's ledger renders as `<code>…</code>` in the markdown page
 Review-minutes: 3
 Unattended: ready
+Verified: 2026-11-16 678dba71 (PyAutoBrain)
 Lane: any
 Filed: 2026-11-16
 

@@ -14,6 +14,7 @@ Consequence: notify
 Witness: a new test in tests/test_intake_dashboard.py builds a Mind with a planned.md row whose `- prompt:` names a dated draft and asserts `recent_events` yields exactly one row for that task; against PyAutoMind main (e9c34daa4) the census check below prints the three slugs today and `[]` after the fix
 Review-minutes: 3
 Unattended: ready
+Verified: 2026-11-16 678dba71 (PyAutoBrain)
 Lane: any
 Filed: 2026-11-16
 

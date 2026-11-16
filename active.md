@@ -85,3 +85,25 @@
   - autolens_inference: feature/validation-wall-model
 - summary: |
     Phase-4 wall estimates miss by up to 90x: replace the derivation in validation_p4.py with one calibrated wall model (evals law by dimension and n_live, per-eval sampler floor, startup, numba parallel efficiency, MGE-priced parametric stages); --time follows it; phase 5E told to reuse it.
+
+## dashboard-recent-planned-dedupe
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/652
+- issued: 2026-11-16
+- session: shift worker 2026-11-16-pm (4df22765-51d9-4504-9db2-f0d9086a5cc8)
+- status: library-dev
+- worktree: /home/jammy/Code/PyAutoLabs-wt/dashboard-recent-planned-dedupe
+- repos:
+  - PyAutoBrain: feature/dashboard-recent-planned-dedupe
+- prompt: active/dashboard_recent_lists_planned_tasks_twice.md
+## dashboard-md-epic-ledger-backticks
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/653
+- issued: 2026-11-16
+- session: shift worker 2026-11-16-pm (85e0a659-b459-4b3d-8a54-6b01ec1d2cd1)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/dashboard-md-epic-ledger-backticks
+- repos:
+  - PyAutoBrain: feature/dashboard-md-epic-ledger-backticks
+- prompt: active/dashboard_md_epic_ledger_backticks_render_literally.md
+- tier: notify — merge mode: auto-merge on green (in-turn wait, then /prm close-out)
+- heart-ack:
+  - acknowledged by the human 2026-11-16 ("Heart ack so its ok") per batches/2026-11-16-pm.md: RED on local-checkout rows, manifest-drift legs, release-scope, human-only; none on PyAutoBrain

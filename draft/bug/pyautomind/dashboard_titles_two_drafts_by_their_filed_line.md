@@ -14,6 +14,7 @@ Consequence: notify
 Witness: after the fix and `pyauto-brain intake --apply dashboard`, `grep -c '>Filed: 20' dashboard.md dashboard.html` prints 0 for both (4 each on main at e9c34daa4), and every `draft/**/*.md` outside an epic's `*_reviews/` folder has a `# ` heading as its first non-blank line
 Review-minutes: 2
 Unattended: ready
+Verified: 2026-11-16 98f42277 (PyAutoMind)
 Lane: any
 Filed: 2026-11-16
 
