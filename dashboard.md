@@ -11,9 +11,9 @@
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 25 |
-| [In flight](#in-flight) | 7 |
+| [In flight](#in-flight) | 9 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 279 |
+| [Backlog](#backlog) | 277 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -141,7 +141,7 @@ Use the start-dev skill. draft/maintenance/autocti/cti_upkeep_epic.md
 
 </details>
 
-**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 77
+**Fits a slot** (ready to run unattended, cheapest to review first) — showing 12 of 75
 
 <details><summary>📋 <a href="draft/docs/autolens_workspace/multi_plane_guide_richardson_warning_update.md">Update the multi_plane guide's Richardson-step warning once the adaptive Hessian ships</a> — autolens_workspace · small · safe · normal</summary>
 
@@ -1108,10 +1108,10 @@ Use the start-dev skill. draft/maintenance/pyautobrain/m2_build_followups.md
 
 </details>
 
-<details><summary>📋 <a href="draft/maintenance/pyautobrain/shift_default_max_workers_4.md">Shift briefs: default max-workers 4</a> — pyautobrain · small · supervised · medium</summary>
+<details><summary>📋 <a href="draft/maintenance/pyautobrain/shift_defaults_4_workers_5m_tokens.md">Shift briefs: default max-workers 4 and token-budget 5M</a> — pyautobrain · small · supervised · medium</summary>
 
 ```
-Use the start-dev skill. draft/maintenance/pyautobrain/shift_default_max_workers_4.md
+Use the start-dev skill. draft/maintenance/pyautobrain/shift_defaults_4_workers_5m_tokens.md
 ```
 
 </details>
@@ -1291,6 +1291,22 @@ Use the start-dev skill. active/cluster_regime_narrative.md
 
 </details>
 
+<details><summary>📋 <a href="active/dashboard_md_epic_ledger_backticks_render_literally.md">dashboard.md: epic <code>ledger:</code> paths render as literal backticks inside <code>&lt;summary&gt;</code></a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/653">issue #653</a> — issued 2026-11-16 — library-dev</summary>
+
+```
+Use the start-dev skill. active/dashboard_md_epic_ledger_backticks_render_literally.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/dashboard_recent_lists_planned_tasks_twice.md">Dashboard Recent feed lists a planned task twice: its planned.md row…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/652">issue #652</a> — issued 2026-11-16 — library-dev</summary>
+
+```
+Use the start-dev skill. active/dashboard_recent_lists_planned_tasks_twice.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/ep_projected_model_shared_prior_keyerror.md">autofit: EP projection (Result.projected_model) raises KeyError for a prior shared across paths</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1773">issue #1773</a> — issued 2026-11-13 — library-dev</summary>
 
 ```
@@ -1414,7 +1430,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 224 · ral 34 · local-dev 10 · wsl-data 9
+Lanes: any 222 · ral 34 · local-dev 10 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
@@ -1766,7 +1782,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 55</summary>
+<summary><b>bug</b> — 53</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1948,22 +1964,6 @@ Use the start-dev skill. draft/bug/autolens_workspace/slam_simultaneous_subhalo_
 
 ```
 Use the start-dev skill. draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautobrain/dashboard_md_epic_ledger_backticks_render_literally.md">dashboard.md: epic <code>ledger:</code> paths render as literal backticks inside <code>&lt;summary&gt;</code></a> — pyautobrain · small · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautobrain/dashboard_md_epic_ledger_backticks_render_literally.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/pyautobrain/dashboard_recent_lists_planned_tasks_twice.md">Dashboard Recent feed lists a planned task twice: its planned.md row…</a> — pyautobrain · small · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/bug/pyautobrain/dashboard_recent_lists_planned_tasks_twice.md
 ```
 
 </details>
@@ -2953,12 +2953,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-16 | filed | <a href="draft/bug/pyautobrain/dashboard_md_epic_ledger_backticks_render_literally.md">dashboard.md: epic <code>ledger:</code> paths render as literal backticks inside…</a> |
+| 2026-11-16 | issued | <a href="active/dashboard_md_epic_ledger_backticks_render_literally.md">dashboard.md: epic <code>ledger:</code> paths render as literal backticks inside…</a> |
 | 2026-11-16 | filed | <a href="draft/maintenance/pyautomind/witness_backfill_scan.md">Witness backfill: scan Mind drafts with no Witness: and propose one…</a> |
 | 2026-11-16 | issued | <a href="active/hpc_campaign_p5d_pipeline_adoption.md">HPC campaign phase 5d: the Euclid pipeline runs its three stages…</a> |
 | 2026-11-16 | filed | <a href="draft/bug/autogalaxy/ellipse_multipole_latent_missing_m.md">EllipseMultipole latent parameters raise TypeError when <code>m</code> is not…</a> |
 | 2026-11-16 | filed | <a href="draft/bug/pyautomind/dashboard_titles_two_drafts_by_their_filed_line.md">Dashboard titles two drafts "Filed: 2026-11-05…</a> |
-| 2026-11-16 | filed | <a href="draft/bug/pyautobrain/dashboard_recent_lists_planned_tasks_twice.md">Dashboard Recent feed lists a planned task twice: its planned.md row…</a> |
+| 2026-11-16 | issued | <a href="active/dashboard_recent_lists_planned_tasks_twice.md">Dashboard Recent feed lists a planned task twice: its planned.md row…</a> |
 | 2026-11-15 | filed | <a href="draft/bug/pyautoheart/unit_timing_run_speed_factor_jax.md">Heart: one runner-speed factor inflates compile-bound JAX unit tests</a> |
 | 2026-11-14 | issued | <a href="active/cluster_regime_narrative.md">Cluster package: point-source-default narrative + extended-source…</a> |
 | 2026-11-13 | issued | <a href="active/ep_projected_model_shared_prior_keyerror.md">autofit: EP projection (Result.projected_model) raises KeyError for a…</a> |
