@@ -55,3 +55,6 @@ Make `Model.tree_flatten` handle zero direct priors and include `TuplePrior`
 children (so `tree_unflatten` rebuilds them), and add a round-trip test over a
 `DatasetModel` with (a) nothing free, (b) a free `grid_offset`, (c) a free
 `grid_offset` plus `background_sky_level`, asserting `prior_count` survives.
+
+## Answers from the human
+- Q3 (2026-11-16, shift 2026-11-16-pm question on PyAutoFit#1777): Use 1: (a) override — separate worktree off main for this fix alongside #1773, since no files overlap. https://github.com/PyAutoLabs/PyAutoFit/issues/1777#issuecomment-6925624924

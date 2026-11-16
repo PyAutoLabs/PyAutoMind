@@ -22,16 +22,6 @@ in its prompt.
 
 ## Open
 
-### Q3. dataset_model_free_grid_offset_pytree_roundtrip — PyAutoFit is claimed by ep-projected-model-shared-prior (#1773). No f…
-- task: active/dataset_model_free_grid_offset_pytree_roundtrip.md
-- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1777
-- kind: question
-- ask: PyAutoFit is claimed by ep-projected-model-shared-prior (#1773). No files overlap. Allow a separate worktree off main for this fix?
-- options: (a) Override: separate worktree off main now (recommended) · (b) Wait until #1773 merges · (c) Drop: blocks nothing today
-- shift: 2026-11-16-pm
-- asked: 2026-11-16T18:38Z
-- worker: b778571d
-
 ## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
 
 ### Q1. cluster_regime_narrative — The `features/extended_source/` example and the `autolens_workspace_t…
@@ -45,6 +35,19 @@ in its prompt.
 - deferred: 2026-11-16 by Jammy2211
 
 ## Answered      <!-- entries add: - answered: <time> by <login> (chat|issue), - answer:, - answer-comment: <url> -->
+
+### Q3. dataset_model_free_grid_offset_pytree_roundtrip — PyAutoFit is claimed by ep-projected-model-shared-prior (#1773). No f…
+- task: active/dataset_model_free_grid_offset_pytree_roundtrip.md
+- issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1777
+- kind: question
+- ask: PyAutoFit is claimed by ep-projected-model-shared-prior (#1773). No files overlap. Allow a separate worktree off main for this fix?
+- options: (a) Override: separate worktree off main now (recommended) · (b) Wait until #1773 merges · (c) Drop: blocks nothing today
+- shift: 2026-11-16-pm
+- asked: 2026-11-16T18:38Z
+- worker: b778571d
+- answered: 2026-11-16T18:42Z by Jammy2211 (issue)
+- answer: Use 1: (a) override — separate worktree off main for this fix alongside #1773, since no files overlap.
+- answer-comment: https://github.com/PyAutoLabs/PyAutoFit/issues/1777#issuecomment-6925624924
 
 ## Dropped       <!-- entries add: - dropped: <date> by <login> — <why> (task shelved) -->
 
