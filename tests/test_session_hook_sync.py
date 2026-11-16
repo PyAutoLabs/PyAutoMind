@@ -912,3 +912,53 @@ def test_the_skipping_step_composes_both_decisions(tmp_path, hook_pr,
     assert proc.stdout.count("SKIPPED LEG") == len(skipped), proc.stdout
     for label in skipped:
         assert f"SKIPPED LEG: '{label}'" in proc.stdout
+
+
+# --------------------------------------------------------------------------
+# A stale matcher is drift too (the 2026-11-16 widening to Monitor and Bash)
+# --------------------------------------------------------------------------
+
+OLD_MATCHER = (
+    "^(send_later|subscribe_pr_activity|ScheduleWakeup|CronCreate|"
+    "RemoteTrigger|mcp__.*(send_later|subscribe_pr_activity).*)$"
+)
+
+
+def _stale_settings():
+    settings = repos_sync.register_deliverable_hook(
+        repos_sync.register_session_hook({})
+    )
+    settings["hooks"]["PreToolUse"][0]["matcher"] = OLD_MATCHER
+    settings["hooks"]["PreToolUse"].insert(
+        0, {"matcher": "Bash", "hooks": [{"type": "command", "command": "guard.sh"}]}
+    )
+    return json.dumps(settings, indent=2) + "\n"
+
+
+def test_a_registration_under_a_stale_matcher_is_reported(tmp_path):
+    """Registered but under the old matcher, the hook is never called for a
+    Monitor on CI, so a command-only check would read it as installed."""
+    make_repo(tmp_path, "OrganOne", settings=_stale_settings())
+    make_repo(tmp_path, "LibTwo")
+    problems = repos_sync.check_session_hooks(
+        tmp_path, REPOS, HOOK_TEXT, DELIVERABLE_TEXT
+    )
+    assert len(problems) == 1, problems
+    assert "OrganOne" in problems[0] and "stale matcher" in problems[0]
+
+
+def test_write_refreshes_a_stale_matcher_and_keeps_other_hooks(tmp_path):
+    make_repo(tmp_path, "OrganOne", settings=_stale_settings())
+    make_repo(tmp_path, "LibTwo")
+    repos_sync.write_session_hooks(tmp_path, REPOS, HOOK_TEXT, DELIVERABLE_TEXT)
+    assert repos_sync.check_session_hooks(
+        tmp_path, REPOS, HOOK_TEXT, DELIVERABLE_TEXT
+    ) == []
+    settings = json.loads(
+        (tmp_path / "OrganOne" / repos_sync.SESSION_SETTINGS_REL).read_text()
+    )
+    groups = settings["hooks"]["PreToolUse"]
+    assert [g["matcher"] for g in groups] == [
+        "Bash", repos_sync.DELIVERABLE_HOOK_MATCHER
+    ]
+    assert len(groups) == 2  # refreshed in place, not registered twice
