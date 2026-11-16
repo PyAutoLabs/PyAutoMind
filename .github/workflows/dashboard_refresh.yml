@@ -51,6 +51,9 @@ on:
       # edit) makes it stale.
       - "queue.md"
       - "goals.md"
+      # The inbox section (M3.5, PyAutoBrain#645): an answer, a defer or the
+      # watcher's question-add makes the page stale.
+      - "questions.md"
   pull_request:
     paths:
       - "draft/**"
@@ -73,6 +76,9 @@ on:
       # edit) makes it stale.
       - "queue.md"
       - "goals.md"
+      # The inbox section (M3.5, PyAutoBrain#645): an answer, a defer or the
+      # watcher's question-add makes the page stale.
+      - "questions.md"
   workflow_dispatch:
 
 # contents: write is needed by the self-heal push on main; PR runs never push.
