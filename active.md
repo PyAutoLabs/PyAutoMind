@@ -86,3 +86,15 @@
 - repos:
   - PyAutoMind: feature/m34-cockpit
   - PyAutoBrain: feature/m34-cockpit
+
+## dashboard-goals-queue
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/650
+- issued: 2026-11-16
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/dashboard-goals-queue
+- coordination: alongside m34-cockpit on PyAutoBrain (#648, skills only; this edits the intake dashboard renderer)
+- tier: glance — merge mode: auto-merge on green
+- repos:
+  - PyAutoBrain: feature/dashboard-goals-queue
+  - PyAutoMind: feature/dashboard-goals-queue
