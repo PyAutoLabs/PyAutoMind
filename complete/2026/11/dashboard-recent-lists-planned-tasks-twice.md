@@ -1,3 +1,25 @@
+# Dashboard Recent lists a planned task once (shipped)
+
+- Merged: https://github.com/PyAutoLabs/PyAutoBrain/pull/654 (merge 4b96e81, 2026-11-16), closes https://github.com/PyAutoLabs/PyAutoBrain/issues/652
+- Shift 2026-11-16-pm worker (--auto, supervised, decision-taken); merged by human /prm command in chat
+- Consequence: notify
+
+## What shipped
+
+The Mind dashboard's Recent feed listed a planned task twice: its `planned.md` row and the draft
+prompt its `- prompt:` names. `recent_events` (`agents/conductors/intake/_intake.py`) now keeps only
+the later-dated of the pair; a tie keeps the planned row (the more specific event, with its own copy
+payload); an undated planned row is not in the feed and hides nothing.
+
+## Witness
+
+3 new tests in `tests/test_intake_dashboard.py` (two fail on main, one guard); the file passes
+104. Census on live Mind: main listed 3 duplicated tasks, the branch lists none, and the feed stays
+at 50 rows. Full Brain suite 2197 passed, 1 skipped (shift env unset). Review CLEAN, adversary
+CLEAN, scoped Heart GREEN. CI green at merge.
+
+## Original prompt
+
 # Dashboard Recent feed lists a planned task twice: its planned.md row and its draft prompt
 
 Type: bug

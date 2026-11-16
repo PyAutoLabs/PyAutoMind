@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2293 records across 11 buckets.
+2294 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -171,6 +171,7 @@ markers; everything below GENERATED is rebuilt.
 - [dashboard-goals-queue](2026/11/dashboard-goals-queue.md)
 - [dashboard-input](2026/11/dashboard-input.md)
 - [dashboard-md-epic-ledger-backticks](2026/11/dashboard-md-epic-ledger-backticks.md)
+- [dashboard-recent-lists-planned-tasks-twice](2026/11/dashboard-recent-lists-planned-tasks-twice.md) — shipped
 - [dashboard-titles-filed-line](2026/11/dashboard-titles-filed-line.md) — shipped by shift worker 2026-11-16-pm as Mind ledger ops (no repo PR), tracked on PyAutoMind#579. Moved `Filed…
 - [data-loading-and-selection-cuts-skill](2026/11/data-loading-and-selection-cuts-skill.md)
 - [delaunay-smoke-300s-cap](2026/11/delaunay-smoke-300s-cap.md) — Already resolved; nothing was committed. Under the smoke profile `scripts/imaging/features/pixelization/delaun…

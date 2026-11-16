@@ -3,8 +3,8 @@
   "organ": "mind",
   "repo": "PyAutoMind",
   "status": "red",
-  "headline": "RED \u2014 24 picks \u00b7 9 in flight",
-  "updated": "2026-11-16T19:57:12Z",
+  "headline": "RED \u2014 24 picks \u00b7 8 in flight",
+  "updated": "2026-11-16T19:58:18Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -18,12 +18,6 @@
       "text": "DatasetModel with a free grid_offset cannot round-trip autofit.jax.register_model \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/issues/1777",
       "prompt": "Use the start-dev skill. active/dataset_model_free_grid_offset_pytree_roundtrip.md"
-    },
-    {
-      "severity": "yellow",
-      "text": "Dashboard Recent feed lists a planned task twice: its planned.md row\u2026 \u2014 library-shipped, awaiting-merge (decision-taken: human /prm)",
-      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/654",
-      "prompt": "Use the start-dev skill. active/dashboard_recent_lists_planned_tasks_twice.md"
     },
     {
       "severity": "yellow",
@@ -126,6 +120,12 @@
       "text": "pick: Use readthedocs or migrate to GitHub docs",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/pyautohands/git_docs.md",
       "prompt": "Use the start-dev skill. draft/research/pyautohands/git_docs.md"
+    },
+    {
+      "severity": "info",
+      "text": "pick: Verify jax.jit / jax.grad parity on the critical-curve and caustic calculations",
+      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace_test/jax_zero_contour.md",
+      "prompt": "Use the start-dev skill. draft/test/autolens_workspace_test/jax_zero_contour.md"
     }
   ]
 }

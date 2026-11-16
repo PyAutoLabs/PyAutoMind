@@ -61,17 +61,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/671
 - next: human /prm on #671; answer the extended_source questions on #670, then resume phase 2 (feature + workspace_test script)
 
-## dashboard-recent-planned-dedupe
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/652
-- issued: 2026-11-16
-- session: shift worker 2026-11-16-pm (4df22765-51d9-4504-9db2-f0d9086a5cc8)
-- status: library-shipped, awaiting-merge (decision-taken: human /prm)
-- worktree: /home/jammy/Code/PyAutoLabs-wt/dashboard-recent-planned-dedupe
-- repos:
-  - PyAutoBrain: feature/dashboard-recent-planned-dedupe
-- prompt: active/dashboard_recent_lists_planned_tasks_twice.md
-- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/654
-
 ## dataset-model-free-grid-offset-pytree-roundtrip
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1777
 - issued: 2026-11-16
