@@ -23,6 +23,9 @@ permissions:
 jobs:
   pyauto-update-digest:
     runs-on: ubuntu-latest
+    # Secrets live in the `mind-main` environment, deployable from main only, so a
+    # workflow dispatched at an old ref cannot read them (old_branch_workflow_secret_exposure).
+    environment: mind-main
     env:
       REPOS: >-
         PyAutoLabs/PyAutoNerves
