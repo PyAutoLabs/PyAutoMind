@@ -72,3 +72,16 @@
 - repos:
   - PyAutoBrain: feature/queue-by-chat
   - PyAutoMind: feature/queue-by-chat
+
+## glance-public-name-check
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/641
+- issued: 2026-11-16
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/glance-public-name-check
+- prompt: active/glance_public_name_check.md
+- coordination: alongside queue-by-chat on PyAutoBrain (human asked to start both 2026-11-16; files disjoint: batch close-out/review/ship vs dashboard renderer/skills/queue)
+- epic: autonomous-orchestrators (enforces the 2026-11-16 public-name narrowing)
+- tier: glance — merge mode: auto-merge on green
+- repos:
+  - PyAutoBrain: feature/glance-public-name-check
