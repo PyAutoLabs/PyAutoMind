@@ -102,11 +102,6 @@ phase is `local-dev` by construction.
 - ref: draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md
 - note: notify; docstring line plus one round-trip test
 
-## 10. plot.rst missing exports
-- kind: prompt
-- ref: draft/docs/autolens/plot_rst_missing_exports.md
-- note: docs-only autosummary fix in PyAutoLens and PyAutoGalaxy
-
 ## 11. autolens_workspace __Model__ bullet parameter counts
 - kind: prompt
 - ref: draft/docs/workspaces/model_bullet_parameter_count_drift.md
@@ -121,6 +116,10 @@ phase is `local-dev` by construction.
 
 Entries that have left the queue. Kept for the record of what was wanted and
 what replaced it; `batch plan` ignores them.
+
+### plot.rst missing exports
+- shipped-as: complete/2026/11/plot-rst-missing-exports.md (2026-11-16)
+- note: docs-only autosummary fix in PyAutoLens and PyAutoGalaxy — retired by `lifecycle.py close`
 
 ### positions_threshold test fixture off the symmetry axis
 - shipped-as: https://github.com/PyAutoLabs/PyAutoLens/pull/861 → complete/2026/11/positions-threshold-fixture-off-axis.md (2026-11-14)

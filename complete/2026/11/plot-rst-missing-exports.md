@@ -1,3 +1,13 @@
+Shift task from M3.1 shift B `2026-11-14-pm3` (PyAutoMind#571). Shipped as PyAutoGalaxy#716 (253df876e) and PyAutoLens#863 (4e62a6ccc), merged 2026-11-16 in-turn on the human's merge command, both `ci-verdict` GREEN with Heart dev-ship GREEN. Issue PyAutoLens#862.
+
+**Built (shift worker):** `docs/api/plot.rst` in both libraries now lists every `aplt` export. PyAutoLens gains 44 missing entries and a new "Dataset Subplots" section. PyAutoGalaxy gets the same change plus `|mu|` docstring fixes, which keep the sphinx warning count at its baseline.
+
+**Close-out:** the watcher refused both PRs for an unattended merge. The worker took two decisions and labelled them `decision-taken`: the extra docstring fixes, and filing `subplot_fit_interferometer_tracer` with the fit subplots instead of under "Dataset Subplots" as the Witness said. The human reviewed both PRs (5 min for shift B) and said to merge them as they are.
+
+**Follow-up (worker suggestion):** have `/audit_docs` check the `plot.rst` autosummary blocks against the live `aplt` namespace.
+
+## Original prompt
+
 # `docs/api/plot.rst` omits already-exported plot symbols
 
 Type: docs
