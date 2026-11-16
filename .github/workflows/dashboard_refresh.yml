@@ -46,10 +46,9 @@ on:
       - "state.json"
       - "looks_shipped.json"
       - "looks_shipped_dismissed.md"
-      # The ★ state and the Goals box (PyAutoMind#565): the page renders both,
-      # so a hand edit or a session's commit to either makes it stale. The
-      # dashboard's own writes come from dashboard_input.yml with GITHUB_TOKEN,
-      # which triggers nothing, so that workflow dispatches this one itself.
+      # The ★ ranks and the Goals box (PyAutoMind#565, PyAutoBrain#640): the
+      # page renders both, so a commit to either (a `/queue` chat, a hand
+      # edit) makes it stale.
       - "queue.md"
       - "goals.md"
   pull_request:
@@ -69,10 +68,9 @@ on:
       - "state.json"
       - "looks_shipped.json"
       - "looks_shipped_dismissed.md"
-      # The ★ state and the Goals box (PyAutoMind#565): the page renders both,
-      # so a hand edit or a session's commit to either makes it stale. The
-      # dashboard's own writes come from dashboard_input.yml with GITHUB_TOKEN,
-      # which triggers nothing, so that workflow dispatches this one itself.
+      # The ★ ranks and the Goals box (PyAutoMind#565, PyAutoBrain#640): the
+      # page renders both, so a commit to either (a `/queue` chat, a hand
+      # edit) makes it stale.
       - "queue.md"
       - "goals.md"
   workflow_dispatch:
