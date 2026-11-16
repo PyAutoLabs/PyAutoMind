@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2286 records across 11 buckets.
+2288 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -239,7 +239,9 @@ markers; everything below GENERATED is rebuilt.
 - [m2-finish](2026/11/m2-finish.md)
 - [m31-blockers](2026/11/m31-blockers.md)
 - [m31-live-shift-findings](2026/11/m31-live-shift-findings.md)
+- [m34-cockpit](2026/11/m34-cockpit.md)
 - [m34-engine](2026/11/m34-engine.md)
+- [m35-inbox](2026/11/m35-inbox.md)
 - [magnification-errors-posterior-draws](2026/11/magnification-errors-posterior-draws.md)
 - [magnification-errors-source-science](2026/11/magnification-errors-source-science.md)
 - [magnification-maps-image-plane](2026/11/magnification-maps-image-plane.md)
