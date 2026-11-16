@@ -20,6 +20,7 @@ Lane: ral
 Epic: results-library
 Phase: 5c
 Filed: 2026-11-16
+Progress: 2026-11-16 — prep done (path repointed, bundle rebuilt from 2026.11.12.1, import check ok); human submitted RAL job 415560. Remaining: shape steps 3–4 after the job ends.
 
 Gate (human, not an issue ref): the census job is a cluster submit. The 2026-11-02
 ledger line says it "awaits a human submit: `cd /mnt/ral/jnightin/scratch/results_library_census_20261102 && sbatch census.sbatch` (or a grant)".
