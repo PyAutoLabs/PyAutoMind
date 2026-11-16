@@ -22,17 +22,6 @@
 - next: validate JWST PSF/noise and export calibrated ALMA visibilities, then joint gradient check and bounded pilots
 - tier: judge — merge mode: human /prm
 
-## homepage-flow-polish
-- issue: https://github.com/Jammy2211/Jammy2211.github.io/issues/3
-- issued: 2026-11-12
-- status: awaiting-merge
-- workspace-pr: https://github.com/Jammy2211/Jammy2211.github.io/pull/4
-- worktree: /home/jammy/Code/PyAutoLabs/scratch/website-lensing-intro
-- repos:
-  - Jammy2211.github.io: feature/homepage-flow-polish
-- prompt: active/homepage_flow_polish.md
-- tier: judge — merge mode: human /prm
-
 ## ep-projected-model-shared-prior
 - issue: https://github.com/PyAutoLabs/PyAutoFit/issues/1773
 - issued: 2026-11-13

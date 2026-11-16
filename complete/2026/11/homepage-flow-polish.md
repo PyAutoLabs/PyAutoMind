@@ -1,3 +1,15 @@
+Homepage polish (judge tier). Shipped as Jammy2211/Jammy2211.github.io#4 (f26af76d9), merged 2026-11-16 by the human. The repo has no CI, so the `ci-verdict` was RED (no checks), which a human /prm may waive. Issue Jammy2211.github.io#3.
+
+**Changed (`index.html`, +10/-10):**
+- The opening is now a "Weigh a galaxy yourself" heading with a short intro.
+- A "Try it with the COSMOS-Web Ring" lead-in sits before the paste-this-prompt step.
+- The ring image and its credit are a `<figure>` with a caption.
+- "More" is renamed "Explore my work".
+
+**Close-out:** the task's worktree (`scratch/website-lensing-intro`) is shared with the still-active `website-lensing-intro` task, so it was left in place.
+
+## Original prompt
+
 # Polish the homepage flow
 
 Type: docs
