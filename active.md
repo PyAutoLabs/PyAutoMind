@@ -61,18 +61,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/671
 - next: human /prm on #671; answer the extended_source questions on #670, then resume phase 2 (feature + workspace_test script)
 
-## m34-engine
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/644
-- issued: 2026-11-16
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
-- status: library-dev
-- worktree: ~/Code/PyAutoLabs-wt/m34-engine
-- coordination: m34-engine, m35-inbox and m34-cockpit run in parallel on PyAutoBrain/PyAutoMind per the design's build plan (human: all recommended, 2026-11-16)
-- epic: autonomous-orchestrators (M3.4/M3.5)
-- tier: glance — merge mode: auto-merge on green
-- repos:
-  - PyAutoBrain: feature/m34-engine
-
 ## m35-inbox
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/645
 - issued: 2026-11-16
