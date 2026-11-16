@@ -22,6 +22,8 @@ in its prompt.
 
 ## Open
 
+## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
+
 ### Q1. cluster_regime_narrative — The `features/extended_source/` example and the `autolens_workspace_t…
 - task: active/cluster_regime_narrative.md
 - issue: https://github.com/PyAutoLabs/autolens_workspace/issues/670
@@ -30,8 +32,7 @@ in its prompt.
 - shift: 2026-11-14-pm2
 - asked: 2026-11-14T17:56Z
 - worker: a033837e
-
-## Deferred      <!-- entries add: - until: YYYY-MM-DD (absent: until the next sitting) -->
+- deferred: 2026-11-16 by Jammy2211
 
 ## Answered      <!-- entries add: - answered: <time> by <login> (chat|issue), - answer:, - answer-comment: <url> -->
 
