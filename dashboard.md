@@ -37,7 +37,7 @@ _(no open questions)_
 
 **Shift** (2026-11-16-pm — 0 in progress · 0 awaiting review)
 
-Live: LIVE · 4 running, 1 finished, 2 refusal reasons · tokens 1048817 of 5000000 (cache-read 41371046; 3 session(s) unmeasured) · review-at 2026-11-16T19:18Z (as of 2026-11-16T18:16:57Z)
+Live: LIVE · 4 running, 2 finished, 2 refusal reasons · tokens 1393252 of 5000000 (cache-read 52531524; 1 session(s) unmeasured) · review-at 2026-11-16T19:18Z (as of 2026-11-16T18:21:54Z)
 
 _(nothing to review yet)_
 
