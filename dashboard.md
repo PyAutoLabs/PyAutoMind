@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 10 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 275 |
+| [Backlog](#backlog) | 274 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -37,7 +37,7 @@ _(no open questions)_
 
 **Shift** (2026-11-16-pm — 0 in progress · 0 awaiting review)
 
-Live: LIVE · 4 running, 5 finished, 2 refusal reasons · tokens 2411849 of 5000000 (cache-read 83905984; 1 session(s) unmeasured) · review-at 2026-11-16T19:18Z (as of 2026-11-16T18:41:42Z)
+Live: LIVE · 2 running, 7 finished, 3 refusal reasons · tokens 2518718 of 5000000 (cache-read 87875746) · review-at 2026-11-16T19:18Z (as of 2026-11-16T18:44:48Z)
 
 _(nothing to review yet)_
 
@@ -1307,6 +1307,14 @@ Use the start-dev skill. active/dataset_model_free_grid_offset_pytree_roundtrip.
 
 </details>
 
+<details><summary>📋 <a href="active/ellipse_multipole_latent_missing_m.md">EllipseMultipole latent parameters raise TypeError when <code>m</code> is not set explicitly</a> — issued 2026-11-16</summary>
+
+```
+Use the start-dev skill. active/ellipse_multipole_latent_missing_m.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/ep_projected_model_shared_prior_keyerror.md">autofit: EP projection (Result.projected_model) raises KeyError for a prior shared across paths</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1773">issue #1773</a> — issued 2026-11-13 — library-dev</summary>
 
 ```
@@ -1335,14 +1343,6 @@ Use the start-dev skill. active/hpc_campaign_p5d_pipeline_adoption.md
 
 ```
 Use the start-dev skill. active/pyautolens_ii_case_studies.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/seed_samplers_for_byte_stable_rerenders.md">autofit_visualization — seed every sampler so re-renders are byte-stable</a> — <a href="https://github.com/PyAutoLabs/autofit_visualization/issues/7">issue #7</a> — issued 2026-09-29 — workspace-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/autofit_visualization/pull/8">autofit_visualization#8</a></summary>
-
-```
-Use the start-dev skill. active/seed_samplers_for_byte_stable_rerenders.md
 ```
 
 </details>
@@ -1438,7 +1438,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 221 · ral 34 · local-dev 9 · wsl-data 9
+Lanes: any 220 · ral 34 · local-dev 9 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
@@ -1790,7 +1790,7 @@ Use the start-dev skill. draft/feature/pyautomemory/reading-queue-token-manageme
 </details>
 
 <details>
-<summary><b>bug</b> — 51</summary>
+<summary><b>bug</b> — 50</summary>
 
 <details><summary>📋 <a href="draft/bug/euclid/latent_total_source_flux_jax_vs_numpy_regression.md">test_latent_euclid_variables_traces_under_jax_jit went red on main: total_source_flux differs by 6% between jax.jit…</a> — euclid · small · supervised · high</summary>
 
@@ -1844,14 +1844,6 @@ Use the start-dev skill. draft/bug/health_fixes/samples_parameter_paths.md
 
 ```
 Use the start-dev skill. draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/bug/autogalaxy/ellipse_multipole_latent_missing_m.md">EllipseMultipole latent parameters raise TypeError when <code>m</code> is not set explicitly</a> — autogalaxy · small · safe · medium</summary>
-
-```
-Use the start-dev skill. draft/bug/autogalaxy/ellipse_multipole_latent_missing_m.md
 ```
 
 </details>
@@ -2947,7 +2939,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 |------|-------|------|
 | 2026-11-16 | filed | <a href="draft/maintenance/pyautomind/witness_backfill_scan.md">Witness backfill: scan Mind drafts with no Witness: and propose one…</a> |
 | 2026-11-16 | issued | <a href="active/hpc_campaign_p5d_pipeline_adoption.md">HPC campaign phase 5d: the Euclid pipeline runs its three stages…</a> |
-| 2026-11-16 | filed | <a href="draft/bug/autogalaxy/ellipse_multipole_latent_missing_m.md">EllipseMultipole latent parameters raise TypeError when <code>m</code> is not…</a> |
+| 2026-11-16 | issued | <a href="active/ellipse_multipole_latent_missing_m.md">EllipseMultipole latent parameters raise TypeError when <code>m</code> is not…</a> |
 | 2026-11-16 | issued | <a href="active/dataset_model_free_grid_offset_pytree_roundtrip.md">DatasetModel with a free grid_offset cannot round-trip…</a> |
 | 2026-11-16 | issued | <a href="active/dashboard_recent_lists_planned_tasks_twice.md">Dashboard Recent feed lists a planned task twice: its planned.md row…</a> |
 | 2026-11-15 | filed | <a href="draft/bug/pyautoheart/unit_timing_run_speed_factor_jax.md">Heart: one runner-speed factor inflates compile-bound JAX unit tests</a> |
