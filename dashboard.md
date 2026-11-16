@@ -8,7 +8,7 @@
 
 | Where | Count |
 |-------|------:|
-| [Autopilot](#autopilot) | 0 |
+| [Autopilot](#autopilot) | 3 |
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 10 |
@@ -19,7 +19,7 @@
 
 ## Autopilot
 
-_LIVE · 0 in progress_
+_3 queued · 0 questions_
 
 **Goals** ([`goals.md`](goals.md))
 
@@ -35,11 +35,9 @@ _LIVE · 0 in progress_
 
 _(no open questions)_
 
-**Shift** (2026-11-16-pm — 0 in progress · 0 awaiting review)
+**Shift**
 
-Live: LIVE · 2 running, 7 finished, 3 refusal reasons · tokens 2518718 of 5000000 (cache-read 87875746) · review-at 2026-11-16T19:18Z (as of 2026-11-16T18:44:48Z)
-
-_(nothing to review yet)_
+_(last shift 2026-11-16-pm — closed, nothing to review)_
 
 ## Start here
 
