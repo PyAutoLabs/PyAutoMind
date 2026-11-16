@@ -1,3 +1,49 @@
+# hpc-campaign 5d: Euclid pipeline runs the DR1 stages from one campaign.yaml (shipped)
+
+- Merged: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/133 (merge 5b1888c, 2026-11-16), closes https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/132
+- Epic: hpc-campaign, phase 5d (shift 2026-11-16-pm worker, supervised, decision-taken); merged by human /prm command in chat
+- Consequence: judge
+
+## What shipped
+
+- `hpc/campaign/dr1.yaml`: vis_lp → vis_pix → sed, chained lens by lens with `aftercorr`, all on
+  partition `ral`, through PyAutoFit's `autofit.campaign`; one `hpc/sync act submit` replaces the
+  hand-written per-batch scripts.
+- `hpc/sync` brought to the autolens_assistant template v2 (campaign verbs status/plan/pilot/act/
+  resubmit/report, ControlMaster, failed-push detection), keeping the pipeline's pull dirs,
+  `output_sed/` + `inspect/` pulls, `DATASET_ROOT`, bulk cipher and zipped outputs.
+- `hpc/batch_cpu/stage` per-object runner with opt-in `BLAS_THREADS` and `STAGE_SETUP` (exit 3 →
+  `missing_seed`); seed guards `vis_pix_seed.sh` / `sed_seed.sh`.
+- numba disk cache off on NFS via `hpc/config/general.yaml`, layered when
+  `PYAUTO_CONFIG_OVERLAY=hpc/config` (unset: unchanged).
+- `hpc/tools/build_campaign_manifest.py` replaces 21 hand manifests; 36 per-batch scripts and
+  chain drivers retired; `hpc/README.md` rewritten (plan → pilot → human go → act submit →
+  status → report).
+
+## Decision taken
+
+No zip `success:` checks on the stages: `autofit.campaign`'s check opens one fixed path while fit
+zips are `<hash>.zip`. Revert path in the PR (needs a pattern-aware `zip_complete` in PyAutoFit).
+
+## Open risks (for the first pilot; from the PR)
+
+1. `aftercorr` unproven on RAL slurmctld 22.05.9 — the first pilot must check vis_pix leaves
+   `PENDING(Dependency)`.
+2. Straggler/fill submits always carry `aftercorr:<upstream job>`; no no-dependency route.
+3. SED now waits for vis_pix (one-line change to `after: {vis_lp: aftercorr}`).
+4. `status` does not see SED status records in `output_sed/` (needs per-stage `status_root`).
+5. Smaller: no `--exclude`/16-CPU rerun shape, `--nice=1000` new, confirm `PYAUTO_HPC_BASE` is
+   the private venv.
+
+Implied PyAutoFit follow-ups (not yet filed by this close-out): pattern `zip_complete`, per-stage
+`status_root`, a no-dependency submit for fills.
+
+## Witness
+
+CI green at merge (9 checks). Witness (2)(3) reproduced by an independent Fable adversary.
+
+## Original prompt
+
 # HPC campaign phase 5d: the Euclid pipeline runs its three stages from one campaign.yaml
 
 Type: feature

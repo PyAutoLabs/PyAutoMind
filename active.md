@@ -74,17 +74,6 @@
 - heart-ack:
   - acknowledged by the human 2026-11-16 ("Heart ack so its ok"): RED on local-checkout rows (7 library checkouts behind/dirty), 5 manifest-drift legs, release-scope (no rehearsal for current source) and human-only (PyAutoArray PR open 13d); none on the touched repos
 
-## hpc-campaign-p5d-pipeline-adoption
-- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/132
-- issued: 2026-11-16
-- session: shift worker 2026-11-16-pm (19797daf-903f-48b2-9e11-614b1cd7e76a)
-- status: library-shipped, awaiting-merge
-- worktree: ~/Code/PyAutoLabs-wt/hpc-campaign-p5d-pipeline-adoption
-- library-pr: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/pull/133
-- heart-ack:
-  - acknowledged by the human 2026-11-16 ("Heart ack so its ok"): RED on local-checkout rows (7 library checkouts behind/dirty: PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens x2, PyAutoCTI), 5 manifest-drift legs, release-scope (no rehearsal for current source) and human-only (PyAutoArray PR open 13d); none on the touched repos
-- repos:
-  - euclid_strong_lens_modeling_pipeline: feature/hpc-campaign-p5d-pipeline-adoption
 ## ellipse-multipole-latent-missing-m
 - issue: https://github.com/PyAutoLabs/PyAutoGalaxy/issues/719
 - issued: 2026-11-16
