@@ -37,7 +37,7 @@ _(no open questions)_
 
 **Shift** (2026-11-16-pm — 0 in progress · 0 awaiting review)
 
-Live: LIVE · 4 running, 2 finished, 2 refusal reasons · tokens 1393252 of 5000000 (cache-read 52531524; 1 session(s) unmeasured) · review-at 2026-11-16T19:18Z (as of 2026-11-16T18:21:54Z)
+Live: LIVE · 4 running, 3 finished, 2 refusal reasons · tokens 2138292 of 5000000 (cache-read 71034607; 1 session(s) unmeasured) · review-at 2026-11-16T19:18Z (as of 2026-11-16T18:33:43Z)
 
 _(nothing to review yet)_
 
@@ -1291,7 +1291,7 @@ Use the start-dev skill. active/dashboard_md_epic_ledger_backticks_render_litera
 
 </details>
 
-<details><summary>📋 <a href="active/dashboard_recent_lists_planned_tasks_twice.md">Dashboard Recent feed lists a planned task twice: its planned.md row…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/652">issue #652</a> — issued 2026-11-16 — library-dev</summary>
+<details><summary>📋 <a href="active/dashboard_recent_lists_planned_tasks_twice.md">Dashboard Recent feed lists a planned task twice: its planned.md row…</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/652">issue #652</a> — issued 2026-11-16 — library-shipped, awaiting-merge (decision-taken: human /prm) — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/654">PyAutoBrain#654</a></summary>
 
 ```
 Use the start-dev skill. active/dashboard_recent_lists_planned_tasks_twice.md
