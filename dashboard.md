@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 7 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 274 |
+| [Backlog](#backlog) | 278 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -425,12 +425,36 @@ Use the start-dev skill. draft/feature/autolens/lenstwin_epic.md
 </details>
 
 <details>
-<summary><b>HPC campaign — run large PyAutoFit modelling campaigns efficiently, token-cheaply and low-carbon: per-fit status records, declarative <code>campaign.yaml</code> with Slurm/Local/Fake adapters, evidence-graded planning, carbon reporting</b> — 1 queued prompt(s), in order</summary>
+<summary><b>HPC campaign — run large PyAutoFit modelling campaigns efficiently, token-cheaply and low-carbon: per-fit status records, declarative <code>campaign.yaml</code> with Slurm/Local/Fake adapters, evidence-graded planning, carbon reporting</b> — 4 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>HPC campaign — run large PyAutoFit modelling campaigns efficiently, token-cheaply and low-carbon: per-fit status records, declarative <code>campaign.yaml</code> with Slurm/Local/Fake adapters, evidence-graded planning, carbon reporting</b> — ledger: <code>draft/research/autofit/hpc_campaign_epic.md</code> — STARTED 2026-10-28 — concurrent with results-library; phase 0 shared, owned by results-library. Rulings F1–F12 recorded in the…</summary>
 
 ```
 Continue the 'HPC campaign — run large PyAutoFit modelling campaigns efficiently, token-cheaply and low-carbon: per-fit status records, declarative `campaign.yaml` with Slurm/Local/Fake adapters, evidence-graded planning, carbon reporting' epic. Its canonical state lives in draft/research/autofit/hpc_campaign_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: amended phase map (2026-10-28): 0 → issued as results-library phase 0; 1 status record + failure record + `states.py` + Nerves `site.yaml` (merges after results-library PR 0a); 2 campaign core + Slurm/Local/Fake adapters + collector + partition lint + retrospective mode from a sacct dump; 3 evidence readers (Pulse/Insight JSON with evidence grades) + `plan` + `pilot`; 4 carbon + report (parallel with 3); 5 organism integration (assistant template v2 + sync verbs + skill, Cortex `sync-runs` under decision 62, Brain conductor + governance hook, pipeline adoption after DR1 v1.0); 6 generalisation. Hard constraint: never CPU arrays on RAL `gpu`. Report: draft/research/autofit/hpc_campaign_epic_report.md; surveys hpc_campaign_epic_surveys/; scoping review Workspace/Science/scratch/pyautolens_ii_campaign_results_scoping_2026-10-28/REVIEW.md.
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autofit/campaign_per_stage_status_root.md">autofit.campaign: per-stage status_root</a> — autofit · small · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/feature/autofit/campaign_per_stage_status_root.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autofit/campaign_submit_without_upstream_dependency.md">autofit.campaign: submit stragglers and fills with no upstream dependency</a> — autofit · small · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/feature/autofit/campaign_submit_without_upstream_dependency.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/autofit/campaign_zip_complete_pattern.md">autofit.campaign: zip_complete success check accepts a glob pattern</a> — autofit · small · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/feature/autofit/campaign_zip_complete_pattern.md
 ```
 
 </details>
@@ -936,7 +960,7 @@ Use the start-dev skill. draft/feature/pyautoscientist/scientist_optional_organ_
 </details>
 
 <details>
-<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 24 queued prompt(s), in order</summary>
+<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 25 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — ledger: <code>draft/feature/pyautobrain/autonomous_orchestrators_epic.md</code> — IN PROGRESS; design-reviewed 2026-11-03 (7 phases, <code>Needs:</code> folded into <code>Lane:</code> values, witnesses per phase, 6 decisions ruled by…</summary>
 
@@ -958,6 +982,14 @@ Use the start-dev skill. draft/bug/pyautobrain/closeout_cleanup_followups.md
 
 ```
 Use the start-dev skill. draft/bug/pyautobrain/shadow_shift_m1_exit_findings.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautobrain/shift_in_turn_notify_merges_ignore_merge_cap.md">Shift workers merge notify-tier PRs in-turn past the shift's merge-cap, and inconsistently</a> — pyautobrain · small · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautobrain/shift_in_turn_notify_merges_ignore_merge_cap.md
 ```
 
 </details>
@@ -1412,7 +1444,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 220 · ral 34 · local-dev 9 · wsl-data 9
+Lanes: any 224 · ral 34 · local-dev 9 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
@@ -3007,13 +3039,16 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-112 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+116 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
 
 - `draft/feature/autoarray/adapt_linear_default_flip.md`
 - `draft/feature/autoarray/rectangular_multi_submesh.md`
+- `draft/feature/autofit/campaign_per_stage_status_root.md`
+- `draft/feature/autofit/campaign_submit_without_upstream_dependency.md`
+- `draft/feature/autofit/campaign_zip_complete_pattern.md`
 - `draft/feature/autofit/model_figures_epic.md`
 - `draft/feature/autofit/nautilus_parent_cpu_slowdown.md`
 - `draft/feature/autofit_assistant/remote_mcp_deployment_tiers.md`
@@ -3049,10 +3084,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md`
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
 - `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`
-- `draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md`
-- `draft/bug/autogalaxy/area_magnification_critical_curve_fragments.md`
-- `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
-- _… and 72 more_
+- _… and 76 more_
 
 </details>
 
