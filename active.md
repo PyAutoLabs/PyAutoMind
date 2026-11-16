@@ -86,15 +86,6 @@
 - summary: |
     Phase-4 wall estimates miss by up to 90x: replace the derivation in validation_p4.py with one calibrated wall model (evals law by dimension and n_live, per-eval sampler floor, startup, numba parallel efficiency, MGE-priced parametric stages); --time follows it; phase 5E told to reuse it.
 
-## dashboard-recent-planned-dedupe
-- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/652
-- issued: 2026-11-16
-- session: shift worker 2026-11-16-pm (4df22765-51d9-4504-9db2-f0d9086a5cc8)
-- status: library-dev
-- worktree: /home/jammy/Code/PyAutoLabs-wt/dashboard-recent-planned-dedupe
-- repos:
-  - PyAutoBrain: feature/dashboard-recent-planned-dedupe
-- prompt: active/dashboard_recent_lists_planned_tasks_twice.md
 ## dashboard-md-epic-ledger-backticks
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/653
 - issued: 2026-11-16
@@ -118,3 +109,14 @@
   - acknowledged by the human 2026-11-16 ("Heart ack so its ok"): RED on local-checkout rows (7 library checkouts behind/dirty: PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens x2, PyAutoCTI), 5 manifest-drift legs, release-scope (no rehearsal for current source) and human-only (PyAutoArray PR open 13d); none on the touched repos
 - repos:
   - autofit_visualization: feature/seed-samplers-byte-stable
+
+## dashboard-recent-planned-dedupe
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/652
+- issued: 2026-11-16
+- session: shift worker 2026-11-16-pm (4df22765-51d9-4504-9db2-f0d9086a5cc8)
+- status: library-shipped, awaiting-merge (decision-taken: human /prm)
+- worktree: /home/jammy/Code/PyAutoLabs-wt/dashboard-recent-planned-dedupe
+- repos:
+  - PyAutoBrain: feature/dashboard-recent-planned-dedupe
+- prompt: active/dashboard_recent_lists_planned_tasks_twice.md
+- library-pr: https://github.com/PyAutoLabs/PyAutoBrain/pull/654
