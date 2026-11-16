@@ -279,6 +279,7 @@ CHECKOUTS = "workspace checkouts (manifest ↔ disk)"
 CODEX_HOOKS_REL = ".codex/hooks.json"
 CODEX_HOOKS = "generated Codex hooks"
 FILING_BLOCKS = "where-to-file blocks (generated)"
+DELIVERABLE_BLOCKS = "end-at-deliverable blocks (generated)"
 MAP_BLOCKS = "organism-map blocks (generated)"
 STANDARDS_BLOCKS = "shared-standards blocks (generated)"
 STANDARDS_BEGIN = "<!-- repos_sync:standards:begin -->"
@@ -3024,7 +3025,7 @@ def main():
         "remote-session blocks (generated)": lambda: check_remote_blocks(
             root, repos, remote
         ),
-        "end-at-deliverable blocks (generated)": lambda: check_deliverable_blocks(
+        DELIVERABLE_BLOCKS: lambda: check_deliverable_blocks(
             root, repos, deliverable
         ),
         STANDARDS_BLOCKS: lambda: check_standards_blocks(
