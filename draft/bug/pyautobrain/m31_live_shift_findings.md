@@ -39,8 +39,9 @@ decision-taken) and a token-cap refusal of a spawn (the session cap bound first 
    within one tick.
 6. **Dips reach beyond queue.md.** A dipped `cluster_regime_narrative` (not in queue.md, medium,
    three repos) after the queue's startable entries ran out. The human approved "simple real work
-   from the queue". Decide, as a human ruling, whether `backlog: scoped` may go past queue.md, or
-   add a `backlog: queue` mode.
+   from the queue". **Human ruling 2026-11-16:** queue first, then only `Difficulty: small`
+   single-repo backlog tasks; anything bigger must be queued by the human. Enforce it in the planner
+   for `backlog: scoped` and record the ruling in AUTONOMY.md (authorized).
 7. **Brief excludes drift.** Organ drafts filed after a brief is written are not excluded. The
    lead added 9 to B by hand. The planner should exclude PyAutoBrain/PyAutoMind/PyAutoHands
    targets by rule (a shift never changes its own watcher, writer or release path), not by list.
@@ -50,4 +51,4 @@ decision-taken) and a token-cap refusal of a spawn (the session cap bound first 
 
 9. **Worker wrote a bare `pr:` key in its active.md row** (`cluster-regime-narrative`), so `lifecycle.py check` drifted and /prm would find nothing to merge. The lead renamed it to `workspace-pr:`. The worker template, or the writer's validation, should enforce the PR keys (REFERENCE.md "The PR keys").
 
-Witness: one offline test per item 1–5, 7, 8 and 9 that fails on 7be8e94. Item 6 is a human ruling.
+Witness: one offline test per item 1–5, 7, 8 and 9 that fails on 7be8e94. Item 6 now has a test too: a medium or multi-repo backlog draft is never dipped.
