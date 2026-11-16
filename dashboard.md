@@ -11,9 +11,9 @@
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 25 |
-| [In flight](#in-flight) | 9 |
+| [In flight](#in-flight) | 10 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 276 |
+| [Backlog](#backlog) | 275 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -1240,20 +1240,12 @@ Use the start-dev skill. draft/feature/pyautobrain/shift_chat_cockpit.md
 </details>
 
 <details>
-<summary><b>pyautoeyes-birth</b> — 2 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+<summary><b>pyautoeyes-birth</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
 
 <details><summary>📋 <a href="draft/feature/pyautohands/release_fires_visualization_dispatch.md">Hands release.yml fires the visualization re-render dispatches</a> — pyautohands · small · supervised · normal</summary>
 
 ```
 Use the start-dev skill. draft/feature/pyautohands/release_fires_visualization_dispatch.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/maintenance/autofit_visualization/seed_samplers_for_byte_stable_rerenders.md">autofit_visualization — seed every sampler so re-renders are byte-stable</a> — autofit_visualization · small · safe · normal</summary>
-
-```
-Use the start-dev skill. draft/maintenance/autofit_visualization/seed_samplers_for_byte_stable_rerenders.md
 ```
 
 </details>
@@ -1335,6 +1327,14 @@ Use the start-dev skill. active/hpc_campaign_p5d_pipeline_adoption.md
 
 ```
 Use the start-dev skill. active/pyautolens_ii_case_studies.md
+```
+
+</details>
+
+<details><summary>📋 <a href="active/seed_samplers_for_byte_stable_rerenders.md">autofit_visualization — seed every sampler so re-renders are byte-stable</a> — <a href="https://github.com/PyAutoLabs/autofit_visualization/issues/7">issue #7</a> — issued 2026-09-29 — workspace-dev</summary>
+
+```
+Use the start-dev skill. active/seed_samplers_for_byte_stable_rerenders.md
 ```
 
 </details>
@@ -1430,7 +1430,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 221 · ral 34 · local-dev 10 · wsl-data 9
+Lanes: any 221 · ral 34 · local-dev 9 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
