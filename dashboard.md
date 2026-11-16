@@ -8,6 +8,7 @@
 
 | Where | Count |
 |-------|------:|
+| [Autopilot](#autopilot) | 7 |
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 5 |
@@ -16,18 +17,15 @@
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
-> **Batch 2026-11-14-pm3 — 0 in progress · 0 awaiting review**
->
-> Live: closed at review-at — the digest is below — status: https://github.com/PyAutoLabs/PyAutoMind/issues/571#issuecomment-6883569285
->
->
-> _Nothing to review yet._
+## Autopilot
 
-## Goals
+_7 queued · 1 question_
 
-_(no goals — write them in [`goals.md`](goals.md))_
+**Goals** ([`goals.md`](goals.md))
 
-## Queue
+_(no goals yet — edit in chat)_
+
+**Queue** ([`queue.md`](queue.md)) — read-only; change it in a `/queue` chat
 
 1. [Premise check and lane inference follow-ups (M1.3)](draft/feature/pyautobrain/premise_check_followups.md)
 2. [Brain board hygiene ledger (SIG-3)](draft/feature/pyautobrain/brain_board_hygiene_ledger.md)
@@ -37,9 +35,13 @@ _(no goals — write them in [`goals.md`](goals.md))_
 6. [PyAutoLens primary-beam persistence mirror](draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md)
 7. [Release board run_logs enrichment](draft/feature/pyautohands/release_board_run_logs_enrichment.md)
 
-## Questions (1 open, 0 deferred)
+**Questions** (1 open, 0 deferred — [`questions.md`](questions.md))
 
 - Q1 — The `features/extended_source/` example and the `autolens_workspace_test` script are parked with a question on the issue (`awaiting-input`): which data, how the mass model is handed off, and whether… (https://github.com/PyAutoLabs/autolens_workspace/issues/670, 2 days)
+
+**Shift**
+
+_(last shift 2026-11-14-pm3 — closed, nothing to review · [shift issue #571](https://github.com/PyAutoLabs/PyAutoMind/issues/571))_
 
 ## Start here
 
