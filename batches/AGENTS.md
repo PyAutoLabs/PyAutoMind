@@ -199,8 +199,8 @@ only while a brief is open (`policy/shift_watcher.md`).
   - lanes: any local-dev ral         # any subset of: any local-dev ral gpu wsl-data
   - merge-cap: 3                     # unattended glance merges this shift, at most
   - token-budget: <n>                # tokens the shift may spend, all sessions
-  - max-workers: 2                   # optional: concurrent workers (default 2)
-  - max-sessions: 6                  # optional: sessions this shift, all told (default 6)
+  - max-workers: 4                   # optional: concurrent workers (default 4)
+  - max-sessions: 8                  # optional: sessions this shift, all told (default 8)
   - worker-mode: auto                # optional: auto (default) | dontAsk | acceptEdits — never bypassPermissions
   - sandbox: no                      # optional: yes marks a test shift
   - shadow: no                       # optional: yes plans and digests, spawns nothing
@@ -267,7 +267,7 @@ and the digest says why. Each unattended merge adds one row to
 
 `max-workers:` and `max-sessions:` are the watcher's usage caps (phase 3a,
 `PyAutoBrain/agents/conductors/batch/_orchestrator.py`): at a cap it stops
-spawning and records the refusal. Omitted, they default to 2 and 6; a value that
+spawning and records the refusal. Omitted, they default to 4 and 8; a value that
 is not a whole number refuses the brief.
 
 `worker-mode:` is the permission mode real workers run in (phase 3b). `auto` is
