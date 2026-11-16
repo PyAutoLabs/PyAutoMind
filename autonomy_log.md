@@ -573,7 +573,7 @@ close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
 `complete/2026/09/prm-shadow-row-notify-tier.md` (under `## Original prompt`).
 
-Count toward 20: 67 (stage 1: 67, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; left out by merge actor (human-/prm / in-turn-human-commanded): 44; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
+Count toward 20: 68 (stage 1: 68, stage 2: 0) — window re-scoped to tier `glance` 2026-10-02; first `glance` row: 2026-10-06; earlier rows not counted (the tier-`notify` window, closed 2026-10-02, and legacy): 14; left out by merge actor (human-/prm / in-turn-human-commanded): 44; window reached — ruled 2026-11-04: `glance` granted, narrowed (unattended merges count in the stage-2 sub-window below)
 
 **Re-marked 2026-11-12 (human ruling on the M1.4 recount, programme session):** 30 rows of the 2026-10-02 → 11-03 window whose completion records say the merge was a human-typed `/prm` now carry merge actor `human-/prm` and are left out of the count (AUTONOMY.md "Ledger accuracy"; "Merge actor and random audit — 2026-11-12"). The recount named 31; `fixed-model-json` (PyAutoFit#1708) stays counted under the 2026-11-04 ruling that names it. Recount: `python3 scripts/lifecycle.py shadow-recount -v`.
 
@@ -729,6 +729,7 @@ week, never a hand-picked one.
 | 2026-11-14 | warmup_shift_findings (https://github.com/PyAutoLabs/PyAutoBrain/pull/635) | glance | tests Brain 2014 (+10 new)/review independent Opus CLEAN/CI 2/2 GREEN/heart dev-ship green | merged-unchanged | 1 | in-turn-autonomous |  |
 | 2026-11-15 | matern-vendor-bessel-kve (PyAutoArray#695 / autogalaxy_workspace_test#137 / autolens_workspace_test#366) | glance | tests 2409 pass / 1 skip full autoarray (135 regularizations @ e4332323) · smoke autogalaxy_workspace_test matern_regularization.py PASS (x64) · review independent agent CLEAN (2 non-blocking notes addressed in e4332323) · Heart YELLOW (published board; sole blocker human-only open-PR row; PyAutoArray main CI green 102f024) / witness PASS | merged-unchanged | 1 | human-/prm |  |
 | 2026-11-16 | plot_rst_missing_exports (https://github.com/PyAutoLabs/PyAutoGalaxy/pull/716 / https://github.com/PyAutoLabs/PyAutoLens/pull/863) | glance | docs-only; export AST check clean; sphinx 96->96; CI GREEN both; heart dev-ship green | merged-unchanged | 1 | in-turn-human-commanded |  |
+| 2026-11-16 | m31_live_shift_findings (https://github.com/PyAutoLabs/PyAutoBrain/pull/638) | glance | tests Brain 2031 (+15 new)/dry run branch vs base/review independent Opus FINDINGS->fixed/CI 2/2 GREEN/heart dev-ship green | merged-unchanged | 1 | in-turn-autonomous |  |
 
 ## Unattended `glance` sub-window (stage 2) — opened 2026-11-04
 

@@ -1,3 +1,27 @@
+Fixes from the M3.1 live shifts of 2026-11-14 (PyAutoMind#570/#571), plus close-out clean-up items 1–2. Shipped as PyAutoBrain#638 (9a7072afd), merged 2026-11-16 on `ci-verdict` GREEN with Heart dev-ship GREEN. Issue PyAutoBrain#637.
+
+**Fixed:**
+- **Re-dispatch reserve:** at most +1 session, once per shift.
+- **Crashed label:** a killed task that is never re-dispatched reads "Crashed — not re-dispatched".
+- **Parked tasks:** a task parked on a question isn't started again until a brief names it or a later shift finishes it.
+- **Repo claims:** claims on Mind origin/main are respected, except where marked `coordination:`. An unreadable `active.md` fails closed.
+- **Calibration gate:** also reads the local origin/main ref. The 16-minute gap on 11-14 was in the lead, not the gate.
+- **Backlog reach (human ruling 2026-11-16):** queue first, then only small single-repo tasks. Recorded in AUTONOMY.md.
+- **Organ excludes by rule:** no dips into Brain, Mind or Hands.
+- **Token reserve:** median of comparable shifts, capped at budget/2.
+- **PR keys** enforced.
+- **Unattended close-out** removes the worktree and branch, or says why.
+- **In-turn merges** retire their queue entry.
+
+**Witness:**
+- 15 new offline tests.
+- Brain suite: 2031 passed. The 1 failure is environmental.
+- Dry run, branch vs base (`Science/scratch/m3_1_prep/findings_637/dryrun.md`).
+
+**Review:** independent Opus returned FINDINGS. Three were fixed in c0e4d72, including the uncapped token reserve that could freeze a shift. Follow-up: answering a question doesn't clear the hold by itself; M3.5 (questions inbox) owns that.
+
+## Original prompt
+
 # M3.1 live shifts 2026-11-14 (pm2 + pm3): findings
 
 Type: bug
