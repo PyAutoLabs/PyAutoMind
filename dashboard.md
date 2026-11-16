@@ -10,9 +10,9 @@
 |-------|------:|
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 25 |
-| [In flight](#in-flight) | 6 |
+| [In flight](#in-flight) | 7 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 273 |
+| [Backlog](#backlog) | 272 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -1271,6 +1271,14 @@ Use the start-dev skill. active/cluster_regime_narrative.md
 
 </details>
 
+<details><summary>📋 <a href="active/convert_latent_prefix_naming.md">autogalaxy.convert: drop the <code>latent_</code> prefix from the parameter-conversion helpers</a> — <a href="https://github.com/PyAutoLabs/PyAutoGalaxy/issues/717">issue #717</a> — issued 2026-11-16 — library-dev</summary>
+
+```
+Use the start-dev skill. active/convert_latent_prefix_naming.md
+```
+
+</details>
+
 <details><summary>📋 <a href="active/ep_projected_model_shared_prior_keyerror.md">autofit: EP projection (Result.projected_model) raises KeyError for a prior shared across paths</a> — <a href="https://github.com/PyAutoLabs/PyAutoFit/issues/1773">issue #1773</a> — issued 2026-11-13 — library-dev</summary>
 
 ```
@@ -1386,7 +1394,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 219 · ral 34 · local-dev 9 · wsl-data 9
+Lanes: any 218 · ral 34 · local-dev 9 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
@@ -2702,15 +2710,7 @@ Use the start-dev skill. draft/maintenance/autocti/legacy_root_notes_followup.md
 </details>
 
 <details>
-<summary><b>refactor</b> — 12</summary>
-
-<details><summary>📋 <a href="draft/refactor/autogalaxy/convert_latent_prefix_naming.md">autogalaxy.convert: drop the <code>latent_</code> prefix from the parameter-conversion helpers</a> — autogalaxy · small · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/refactor/autogalaxy/convert_latent_prefix_naming.md
-```
-
-</details>
+<summary><b>refactor</b> — 11</summary>
 
 <details><summary>📋 <a href="draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md">Zero-contour critical curves: compile once per run by passing the mass model…</a> — autogalaxy · medium · supervised · medium</summary>
 
@@ -2893,7 +2893,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-16 | filed | <a href="draft/refactor/autogalaxy/convert_latent_prefix_naming.md">autogalaxy.convert: drop the <code>latent_</code> prefix from the…</a> |
+| 2026-11-16 | issued | <a href="active/convert_latent_prefix_naming.md">autogalaxy.convert: drop the <code>latent_</code> prefix from the…</a> |
 | 2026-11-16 | issued | <a href="active/glance_public_name_check.md">Glance close-out and review: detect added or renamed public library…</a> |
 | 2026-11-15 | filed | <a href="draft/bug/pyautoheart/unit_timing_run_speed_factor_jax.md">Heart: one runner-speed factor inflates compile-bound JAX unit tests</a> |
 | 2026-11-14 | issued | <a href="active/cluster_regime_narrative.md">Cluster package: point-source-default narrative + extended-source…</a> |
