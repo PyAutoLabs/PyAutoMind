@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2279 records across 11 buckets.
+2280 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -139,6 +139,7 @@ markers; everything below GENERATED is rebuilt.
 - [autonomous-orchestrators-p4b](2026/11/autonomous-orchestrators-p4b.md) — phase 4b of 4a–4c; epic draft/feature/pyautobrain/autonomous_orchestrators_epic.md
 - [batch-slice](2026/11/batch-slice.md)
 - [batch-watch-live-view](2026/11/batch-watch-live-view.md) — pilot 4c follow-up; issue PyAutoBrain#575
+- [board-bot-push](2026/11/board-bot-push.md)
 - [board-without-gh-phase2-legs](2026/11/board-without-gh-phase2-legs.md) — already shipped, closed as a stale draft. PyAutoBrain 15317af (merged via #564, 2026-11-03) "phase 2 — the rem…
 - [bootstrap-test-root-skip](2026/11/bootstrap-test-root-skip.md) — fixed in commit 748f8c0bb (this PR). `test_the_hook_survives_an_unwritable_tools_dir` probes `os.access(bin, W…
 - [brain-hygiene-cleanup-bugs](2026/11/brain-hygiene-cleanup-bugs.md)
