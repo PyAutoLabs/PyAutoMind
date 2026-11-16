@@ -31,3 +31,6 @@ not this file.
 any. An `epics:` slug that `epics.md` does not list is a warning, not drift.
 
 <!-- goals: the list starts below this line -->
+
+## 1. Fix 3 bugs in the PyAutoMind dashboard in every orchestrator run
+- note: added by the human via /queue chat, 2026-11-16

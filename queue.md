@@ -73,45 +73,50 @@ phase is `local-dev` by construction.
 
 <!-- first ranked list: human-approved at the programme M2 gate, 2026-11-13 -->
 
-## 1. Premise check and lane inference follow-ups (M1.3)
+## 1. Likelihood lifecycle epic: optimal setups baked into PyAutoLens, Pulse/Insight day zero, and one repeatable profiling → inference → gradient → sampler sequence per likelihood
 - kind: prompt
-- ref: draft/feature/pyautobrain/premise_check_followups.md
-- note: programme — the premise gate decides what an unattended shift may dispatch; fix the false-lane and stale-GONE cases first
+- ref: draft/research/autolens_profiling/likelihood_lifecycle_epic.md
 
-## 2. Brain board hygiene ledger (SIG-3)
+## 2. HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon
 - kind: prompt
-- ref: draft/feature/pyautobrain/brain_board_hygiene_ledger.md
-- note: programme side lane (state-table row); gives the shift digest a hygiene trend to point at
+- ref: draft/research/autofit/hpc_campaign_epic.md
 
-## 3. prompt_sync_push explicit-paths follow-ups (M1.2)
+## 3. Results library — index, complete, export and ship thousands of PyAutoFit results
 - kind: prompt
-- ref: draft/maintenance/pyautomind/prompt_sync_explicit_paths_followups.md
-- note: programme — touches autolens_profiling, so it parks STALE under the scoped gate until the unpolled-repos ruling
-
-## 5. Duplicate Galaxy pytree registration after a JAX Fitness
-- kind: prompt
-- ref: draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md
-- note: small library bug with a reproduce-first witness
-
-## 8. Regenerate autolens_workspace markdown for sigma_min
-- kind: prompt
-- ref: draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md
-- note: notify; seven curated pages show the pre-sweep MGE idiom
-
-## 9. PyAutoLens primary-beam persistence mirror
-- kind: prompt
-- ref: draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md
-- note: notify; docstring line plus one round-trip test
-
-## 12. Release board run_logs enrichment
-- kind: prompt
-- ref: draft/feature/pyautohands/release_board_run_logs_enrichment.md
-- note: notify, low priority filler for a quiet shift
+- ref: draft/feature/autofit/results_library_epic.md
 
 ## Retired
 
 Entries that have left the queue. Kept for the record of what was wanted and
 what replaced it; `batch plan` ignores them.
+
+### Release board run_logs enrichment
+- shelved-as: draft/feature/pyautohands/release_board_run_logs_enrichment.md — off the queue 2026-11-16; queue cleared by human 2026-11-16
+- note: notify, low priority filler for a quiet shift — retired by a `/queue` chat
+
+### PyAutoLens primary-beam persistence mirror
+- shelved-as: draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md — off the queue 2026-11-16; queue cleared by human 2026-11-16
+- note: notify; docstring line plus one round-trip test — retired by a `/queue` chat
+
+### Regenerate autolens_workspace markdown for sigma_min
+- shelved-as: draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md — off the queue 2026-11-16; queue cleared by human 2026-11-16
+- note: notify; seven curated pages show the pre-sweep MGE idiom — retired by a `/queue` chat
+
+### Duplicate Galaxy pytree registration after a JAX Fitness
+- shelved-as: draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md — off the queue 2026-11-16; queue cleared by human 2026-11-16
+- note: small library bug with a reproduce-first witness — retired by a `/queue` chat
+
+### prompt_sync_push explicit-paths follow-ups (M1.2)
+- shelved-as: draft/maintenance/pyautomind/prompt_sync_explicit_paths_followups.md — off the queue 2026-11-16; queue cleared by human 2026-11-16
+- note: programme — touches autolens_profiling, so it parks STALE under the scoped gate until the unpolled-repos ruling — retired by a `/queue` chat
+
+### Brain board hygiene ledger (SIG-3)
+- shelved-as: draft/feature/pyautobrain/brain_board_hygiene_ledger.md — off the queue 2026-11-16; queue cleared by human 2026-11-16
+- note: programme side lane (state-table row); gives the shift digest a hygiene trend to point at — retired by a `/queue` chat
+
+### Premise check and lane inference follow-ups (M1.3)
+- shelved-as: draft/feature/pyautobrain/premise_check_followups.md — off the queue 2026-11-16; queue cleared by human 2026-11-16
+- note: programme — the premise gate decides what an unattended shift may dispatch; fix the false-lane and stale-GONE cases first — retired by a `/queue` chat
 
 ### autolens_workspace __Model__ bullet parameter counts
 - shipped-as: complete/2026/11/model-bullet-parameter-count-drift.md (2026-11-16)
