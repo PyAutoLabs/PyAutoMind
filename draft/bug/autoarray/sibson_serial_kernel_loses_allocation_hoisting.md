@@ -1,6 +1,3 @@
-Filed: 2026-11-05 (found by the autolens_profiling#519 worker-route witness)
-Lane: any
-
 # Sibson serial kernel (the one every Nautilus worker runs since #677) is ~1.25x slower than the prange kernel at one thread: numba hoists its per-query scratch allocations only under parallel=True
 
 Type: bug
@@ -14,6 +11,8 @@ Themes:
 Difficulty: small
 Priority: medium
 Status: draft
+Lane: any
+Filed: 2026-11-05 (found by the autolens_profiling#519 worker-route witness)
 
 ## Finding
 
