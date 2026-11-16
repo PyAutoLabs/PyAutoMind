@@ -34,3 +34,9 @@ outside it:
   issue), including one on a PR the shift itself opened.
 
 A session that wants to know whether a PR is green reads it once and reports.
+
+**Limits (v1).** The hook reads command text, so it errs both ways in known places:
+- It refuses some local watches that only *mention* GitHub, such as a `while read` loop
+  echoing a `github.com` URL or a log tail grepping for `github.com`. Reword the filter.
+- It passes GitHub polling it cannot see: `gh` inside a script file, `python -c`, or
+  `git -c <opt> fetch`. The rule above still bans them; the hook does not catch them.
