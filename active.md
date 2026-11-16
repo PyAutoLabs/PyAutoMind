@@ -60,3 +60,13 @@
   - organism verdict RED/YELLOW/STALE on local-checkout rows (dirty or behind canonical checkouts, manifest drift), release-scope (no rehearsal for current source) and human-only rows (open PRs) — none on the touched repos; each close-out reads the dev-ship gate (readiness --dev --repos)
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/671
 - next: human /prm on #671; answer the extended_source questions on #670, then resume phase 2 (feature + workspace_test script)
+## hpc-campaign-p5d-pipeline-adoption
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/132
+- issued: 2026-11-16
+- session: shift worker 2026-11-16-pm (19797daf-903f-48b2-9e11-614b1cd7e76a)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/hpc-campaign-p5d-pipeline-adoption
+- heart-ack:
+  - acknowledged by the human 2026-11-16 ("Heart ack so its ok"): RED on local-checkout rows (7 library checkouts behind/dirty: PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens x2, PyAutoCTI), 5 manifest-drift legs, release-scope (no rehearsal for current source) and human-only (PyAutoArray PR open 13d); none on the touched repos
+- repos:
+  - euclid_strong_lens_modeling_pipeline: feature/hpc-campaign-p5d-pipeline-adoption
