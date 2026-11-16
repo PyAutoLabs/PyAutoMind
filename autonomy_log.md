@@ -568,6 +568,15 @@ stays counted: the human did not recall typing that `/prm`. Unattended
 (watcher-started) merges count in their own table, "Unattended `glance`
 sub-window", below this one.
 
+**Seeded audit 2026-11-16 (seed 20261114, 14 rows, human).** 13 `merged-unchanged`.
+Row `latent-profile-declarations` (PyAutoGalaxy#656) amended to
+`merged-after-substantive-change`: the human would not use `latent_` naming in
+`autogalaxy.convert`. **RULED 2026-11-16 — `glance` kept, narrowed further:** a
+change that adds or renames a public library name is a human `/prm`
+(`PyAutoBrain/AUTONOMY.md` "Public-name narrowing of `glance` — 2026-11-16").
+Follow-up: `draft/refactor/autogalaxy/convert_latent_prefix_naming.md`. Rows 01–12
+predate the `read by human` column, so the read is recorded here: 2026-11-16.
+
 The `notify` history (opened 2026-08-30, re-opened 2026-09-03, fed from `/prm`
 close-out since PyAutoBrain#364) stays listed below and is named as uncounted.
 Its protocol, power calculation and pre-registered rule are in
