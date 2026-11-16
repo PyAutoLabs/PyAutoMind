@@ -121,3 +121,15 @@
 - repos:
   - PyAutoHeart: feature/board-bot-push
   - PyAutoHands: feature/board-bot-push
+
+## m31-findings
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/637
+- issued: 2026-11-16
+- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/m31-findings
+- prompt: active/m31_live_shift_findings.md
+- epic: autonomous-orchestrators (M3.1 findings + closeout-cleanup 1-2; backlog-reach ruling 2026-11-16)
+- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary
+- repos:
+  - PyAutoBrain: feature/m31-findings
