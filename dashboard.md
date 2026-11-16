@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 10 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 275 |
+| [Backlog](#backlog) | 276 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -938,7 +938,7 @@ Use the start-dev skill. draft/feature/pyautoscientist/scientist_optional_organ_
 </details>
 
 <details>
-<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 23 queued prompt(s), in order</summary>
+<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 24 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — ledger: `draft/feature/pyautobrain/autonomous_orchestrators_epic.md` — IN PROGRESS; design-reviewed 2026-11-03 (7 phases, <code>Needs:</code> folded into <code>Lane:</code> values, witnesses per phase, 6 decisions ruled by…</summary>
 
@@ -960,6 +960,14 @@ Use the start-dev skill. draft/bug/pyautobrain/closeout_cleanup_followups.md
 
 ```
 Use the start-dev skill. draft/bug/pyautobrain/shadow_shift_m1_exit_findings.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/bug/pyautobrain/shift_ledger_write_refuses_existing_draft_completion_still_commits.md">A shift worker's edit to an existing Mind file is set aside…</a> — pyautobrain · small · supervised · medium</summary>
+
+```
+Use the start-dev skill. draft/bug/pyautobrain/shift_ledger_write_refuses_existing_draft_completion_still_commits.md
 ```
 
 </details>
@@ -1430,7 +1438,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 221 · ral 34 · local-dev 9 · wsl-data 9
+Lanes: any 222 · ral 34 · local-dev 9 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
@@ -1499,7 +1507,7 @@ Use the start-dev skill. draft/feature/autoarray/source_clumps_robust_scale.md
 
 </details>
 
-<details><summary>📋 <a href="draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md">Filed: 2026-11-05 (phase 2 of autolens_profiling#519; Pulse task <code>PyAutoPulse/tasks/numba_num_threads_pin_and_delaunay_nn_remeasure.md</code> steps 2-4)</a> — autolens_profiling · small · medium</summary>
+<details><summary>📋 <a href="draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md">Re-measure the DelaunayNN numba Optimal cell on the Nautilus worker route…</a> — autolens_profiling · small · medium</summary>
 
 ```
 Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md
@@ -1832,7 +1840,7 @@ Use the start-dev skill. draft/bug/health_fixes/samples_parameter_paths.md
 
 </details>
 
-<details><summary>📋 <a href="draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md">Filed: 2026-11-05 (found by the autolens_profiling#519 worker-route witness)</a> — autoarray · small · medium</summary>
+<details><summary>📋 <a href="draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md">Sibson serial kernel (the one every Nautilus worker runs since #677)…</a> — autoarray · small · medium</summary>
 
 ```
 Use the start-dev skill. draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md
@@ -2586,7 +2594,7 @@ Use the start-dev skill. draft/docs/howtolens/paired_tutorial_review_resume.md
 
 </details>
 
-<details><summary>📋 <a href="draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md">Progress (2026-10-31): the introductory review phase is merged — HowToLens Tutorials 0–2…</a> — howtolens</summary>
+<details><summary>📋 <a href="draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md">HowToLens tutorial correctness, cross-checked against HowToGalaxy</a> — howtolens</summary>
 
 ```
 Use the start-dev skill. draft/docs/howtolens/tutorial_correctness_and_howtogalaxy_parity.md
@@ -2982,9 +2990,9 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-06 | issued | <a href="active/validation_wall_estimates_miss_eval_count_and_sampler_floor.md">Phase-4 wall estimates miss by up to 90×: no sampler-overhead floor…</a> |
 | 2026-11-05 | filed | <a href="draft/bug/autofit/samples_with_paths_shared_prior_factor_graph.md">autofit: Samples.with_paths / without_paths break on factor-graph…</a> |
 | 2026-11-05 | filed | <a href="draft/feature/autolens_profiling/write_compile_repeats_from_autolens_profiling_s.md">Write <code>compile_repeats</code> from autolens_profiling's jax_compile tooling…</a> |
+| 2026-11-05 | filed | <a href="draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md">Sibson serial kernel (the one every Nautilus worker runs since #677)…</a> |
 | 2026-11-05 | filed | <a href="draft/test/autofit/regression_test_nautilus_as_the_ep_default.md">Regression test: Nautilus as the EP <code>default_optimiser</code> over…</a> |
-| 2026-11-05 | filed | <a href="draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md">Filed: 2026-11-05 (phase 2 of autolens_profiling#519; Pulse task…</a> |
-| 2026-11-05 | filed | <a href="draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md">Filed: 2026-11-05 (found by the autolens_profiling#519 worker-route…</a> |
+| 2026-11-05 | filed | <a href="draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md">Re-measure the DelaunayNN numba Optimal cell on the Nautilus worker…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
@@ -3041,7 +3049,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-111 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+112 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3086,7 +3094,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md`
 - `draft/bug/autogalaxy/area_magnification_critical_curve_fragments.md`
 - `draft/bug/autogalaxy/q_clamp_and_bare_sqrt_ellipticity_grad_sweep.md`
-- _… and 71 more_
+- _… and 72 more_
 
 </details>
 
