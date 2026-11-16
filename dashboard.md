@@ -11,7 +11,7 @@
 | [Autopilot](#autopilot) | 0 |
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 25 |
-| [In flight](#in-flight) | 11 |
+| [In flight](#in-flight) | 10 |
 | [Planned](#planned) | 9 |
 | [Backlog](#backlog) | 275 |
 | [Recent](#recent) | 50 |
@@ -37,7 +37,7 @@ _LIVE · 0 in progress_
 
 **Shift** (2026-11-16-pm — 0 in progress · 0 awaiting review)
 
-Live: LIVE · 4 running, 4 finished, 2 refusal reasons · tokens 2366857 of 5000000 (cache-read 78918365) · review-at 2026-11-16T19:18Z (as of 2026-11-16T18:38:37Z)
+Live: LIVE · 4 running, 5 finished, 2 refusal reasons · tokens 2411849 of 5000000 (cache-read 83905984; 1 session(s) unmeasured) · review-at 2026-11-16T19:18Z (as of 2026-11-16T18:41:42Z)
 
 _(nothing to review yet)_
 
@@ -243,7 +243,7 @@ Use the start-dev skill. draft/refactor/autoarray/sparse_operator_int32_indexes.
 
 Long-running multi-phase programmes. Each epic's 📋 prompt has the assistant read its ledger, work out where it stands, and continue from the next logical point. Members are worked in order through the epic's ledger — continue the epic rather than starting one standalone. Full record in [`epics.md`](epics.md).
 
-<details><summary>📋 <b>Nautilus for fast likelihoods — CPU overhead and worker utilisation, asynchronous experiments, combined CPU/GPU execution and selective JAX acceleration</b> — ledger: `draft/feature/autofit/nautilus_fast_likelihood_development_epic.md` — PHASE 0a MERGED 2026-11-10 — autofit_profiling#9: controlled harness and exploratory local pilot; record…</summary>
+<details><summary>📋 <b>Nautilus for fast likelihoods — CPU overhead and worker utilisation, asynchronous experiments, combined CPU/GPU execution and selective JAX acceleration</b> — ledger: <code>draft/feature/autofit/nautilus_fast_likelihood_development_epic.md</code> — PHASE 0a MERGED 2026-11-10 — autofit_profiling#9: controlled harness and exploratory local pilot; record…</summary>
 
 ```
 Continue the 'Nautilus for fast likelihoods — CPU overhead and worker utilisation, asynchronous experiments, combined CPU/GPU execution and selective JAX acceleration' epic. Its canonical state lives in draft/feature/autofit/nautilus_fast_likelihood_development_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: Implementation epic; never issue the umbrella. Phase 0a complete: complete/2026/11/nautilus-cpu-profiling-baseline.md (autofit_profiling#8 → PR#9 merged); experimental phase 0b.1 complete: complete/2026/11/nautilus-cpu-campaign-setup.md (PR#11 merged); wider phase 0b remains pending, Pulse promotion deferred by human choice. Then measured CPU serial costs → worker utilisation → gated asynchronous experiment → combined CPU/GPU execution → selective JAX kernels → higher-dimensional efficiency → integration. Phase 4 explicitly explores CPU sampler pools feeding GPUs, concurrent CPU/GPU likelihood workers and multiple GPUs where available. Dimension diagnostics belong to phase 0b; 0a completion alone does not complete phase 0. Preserve neural bounds and existing pool safety fixes; reuse the variable-batch compilation task. Pulse/Insight retain profiling/inference campaign ownership; link canonical domain tasks before campaign execution. No replacement-sampler survey is required.
@@ -254,7 +254,7 @@ Continue the 'Nautilus for fast likelihoods — CPU overhead and worker utilisat
 <details>
 <summary><b>CTI upkeep parity — release-train wiring and first modern <code>autocti</code> release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), <code>autocti_profiling</code> + Pulse <code>cti</code> row, figures/assistant/docs currency, hygiene</b> — 5 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>CTI upkeep parity — release-train wiring and first modern <code>autocti</code> release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), <code>autocti_profiling</code> + Pulse <code>cti</code> row, figures/assistant/docs currency, hygiene</b> — ledger: `draft/maintenance/autocti/cti_upkeep_epic.md` — IN PROGRESS — 11-06: phases 0, 1, 2c, 3a, 3b, 3c, 5c(api) DONE; 3b DONE (autocti_workspace_test#27 merged); 2a jkeger/arctic#73…</summary>
+<details><summary>📋 <b>CTI upkeep parity — release-train wiring and first modern <code>autocti</code> release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), <code>autocti_profiling</code> + Pulse <code>cti</code> row, figures/assistant/docs currency, hygiene</b> — ledger: <code>draft/maintenance/autocti/cti_upkeep_epic.md</code> — IN PROGRESS — 11-06: phases 0, 1, 2c, 3a, 3b, 3c, 5c(api) DONE; 3b DONE (autocti_workspace_test#27 merged); 2a jkeger/arctic#73…</summary>
 
 ```
 Continue the 'CTI upkeep parity — release-train wiring and first modern `autocti` release, arcticpy modernisation (upstream 2.7 / wheels, DNA, docs), integration-test parity (smoke coverage, workspace_test rebuild, 3.12–3.14 matrix, docs build), `autocti_profiling` + Pulse `cti` row, figures/assistant/docs currency, hygiene' epic. Its canonical state lives in draft/maintenance/autocti/cti_upkeep_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: seven phases, library first, one issue per repo per phase, one at a time: 0 census + rulings + 0b log-likelihood value pins in autocti_workspace_test (DONE 2026-11-04) → 1 release-train wiring + first modern release (Hands LIB_PROJECTS/release.yml/python_matrix/pre_build/COLAB_PROJECTS, Nerves setup_colab autocti with arcticpy pre-install, Heart release_gate true + integrate/validation/docs-build rows, wiki-currency + pyautocti-release dispatch) → 2 arcticpy modernisation (upstream jkeger/arctic packaging PR + 2.7 release; Heart pin bump; DNA spec; install docs; lazy-import ruling) → 3 integration parity (smoke_tests.txt 3→representative, workspace_test rebuild + legacy/ ruling, docs.yml, 3.14) → 4 autocti_profiling birth + Pulse day zero → 5 autocti_visualization PyPI mode + Eyes sign-off, assistant version/PENDING/wiki-currency, docs/api rewrite → 6 hygiene + close. Members: likelihood_value_pins (p0b, DONE → complete/2026/11/cti-likelihood-pins.md), cti_release_train_wiring (p1, DONE → complete/2026/11/cti-release-train-wiring.md), fits_fit_missing_output_dir_under_fast_plots (p3, DONE → complete/2026/11/cti-fits-fit-output-dir.md), dataset_1d_results_database_examples_drift (p3, DONE → complete/2026/11/cti-database-examples-drift.md), the two autocti_visualization bugs + api_rst_rewrite (p5). Boundaries: upkeep only, no CTI science; arcticpy pin stays in Heart install_arcticpy.sh only; never hand-dispatch release.yml.
@@ -307,7 +307,7 @@ Use the start-dev skill. draft/release/arcticpy/upstream_packaging_pr.md
 <details>
 <summary><b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — 10 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — ledger: `draft/research/autolens_profiling/likelihood_lifecycle_epic.md` — PHASE 0 COMPLETE 2026-10-24 — 0A PyAutoPulse#70; 0B autolens_profiling#444/#447/#448/#449/#450/#451 + PyAutoPulse#74 (lens at…</summary>
+<details><summary>📋 <b>Likelihood lifecycle — optimal setups baked into PyAutoLens (<code>setup="auto"</code>), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood</b> — ledger: <code>draft/research/autolens_profiling/likelihood_lifecycle_epic.md</code> — PHASE 0 COMPLETE 2026-10-24 — 0A PyAutoPulse#70; 0B autolens_profiling#444/#447/#448/#449/#450/#451 + PyAutoPulse#74 (lens at…</summary>
 
 ```
 Continue the 'Likelihood lifecycle — optimal setups baked into PyAutoLens (`setup="auto"`), Pulse/Insight day zero, mirrored autolens_profiling / autolens_inference trees, and one repeatable profiling → validation → gradient → sampler sequence per likelihood' epic. Its canonical state lives in draft/research/autolens_profiling/likelihood_lifecycle_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: nine phases, one at a time, library first, one issue per repo per phase. 0 spine (vocabulary; `profiling-summary@3` with producer-declared `class` optimal/secondary/experimental and `status` current/superseded/archived; `walltime-validation@1` Pulse axis; Pulse first selector = Class, current-only default; `results/` and `wiki/campaigns/` mirror `scripts/` with `archive/YYYY/MM/` in both project repos; Insight `setup_mode: auto`; lifecycle template) → 1 figures (Eyes already covers all ten dataset types since autolens_visualization#5; human sign-off + fit.png kept per profiling cell) → 2 profiling campaigns per dataset type under Optimal/Secondary setups (human "complete" gate) → 3 day zero freeze on a released tag + designation decisions + close Pulse `setup-baseline` → 4 inference wall-time validation on RAL → Pulse → 5 `setup="auto"` in Nerves/Array/Galaxy/Lens/Fit with banner, `setup.json`, run-time estimate, workspace/assistant/science-project updates → 6 `value_and_grad` breakdowns (adopts Pulse `gradient_cost_probe`) → 7 Insight sampler campaign under auto (adopts `hst-imaging-mass-samplers`) → 8 `pyauto-brain profiling lifecycle` verb (dogfood: matrix_free_interferometer_phase5). Boundaries: optimal is always a Pulse decision record, never inferred; one `current` per key by the day-zero rule, never by date; auto never touches model, sampler or HPC request. Upstream of hpc-campaign phase 4; results-library untouched. Evidence: draft/research/autolens_profiling/likelihood_lifecycle_epic_report.md.
@@ -400,7 +400,7 @@ Use the start-dev skill. draft/research/autolens_profiling/likelihood_lifecycle_
 <details>
 <summary><b>LensTwin — observation-anchored digital twins of fitted strong lenses: <code>al.twins</code> in PyAutoLens, mass-normalisation primitives in PyAutoGalaxy, used from ordinary <code>Science/active</code> projects, and the first stellar-plus-dark-matter identifiability experiment (ERC dark-matter cores vs cusps)</b> — 2 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>LensTwin — observation-anchored digital twins of fitted strong lenses: <code>al.twins</code> in PyAutoLens, mass-normalisation primitives in PyAutoGalaxy, used from ordinary <code>Science/active</code> projects, and the first stellar-plus-dark-matter identifiability experiment (ERC dark-matter cores vs cusps)</b> — ledger: `draft/feature/autolens/lenstwin_epic.md` — filed 2026-10-28 from the LensTwin brief; R1–R2 RULED 2026-10-28 (al.twins; observed noise map by default). PHASE 0 COMPLETE…</summary>
+<details><summary>📋 <b>LensTwin — observation-anchored digital twins of fitted strong lenses: <code>al.twins</code> in PyAutoLens, mass-normalisation primitives in PyAutoGalaxy, used from ordinary <code>Science/active</code> projects, and the first stellar-plus-dark-matter identifiability experiment (ERC dark-matter cores vs cusps)</b> — ledger: <code>draft/feature/autolens/lenstwin_epic.md</code> — filed 2026-10-28 from the LensTwin brief; R1–R2 RULED 2026-10-28 (al.twins; observed noise map by default). PHASE 0 COMPLETE…</summary>
 
 ```
 Continue the 'LensTwin — observation-anchored digital twins of fitted strong lenses: `al.twins` in PyAutoLens, mass-normalisation primitives in PyAutoGalaxy, used from ordinary `Science/active` projects, and the first stellar-plus-dark-matter identifiability experiment (ERC dark-matter cores vs cusps)' epic. Its canonical state lives in draft/feature/autolens/lenstwin_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: report `draft/feature/autolens/lenstwin_epic_report.md`; surveys `lenstwin_epic_surveys/`; science use lives in ordinary `Science/active` projects (no `twins` Cortex row or folder; ruled 2026-10-28); workspace and assistant phases wait for the validated workflow (phase 4).
@@ -429,7 +429,7 @@ Use the start-dev skill. draft/feature/autolens/lenstwin_epic.md
 <details>
 <summary><b>HPC campaign — run large PyAutoFit modelling campaigns efficiently, token-cheaply and low-carbon: per-fit status records, declarative <code>campaign.yaml</code> with Slurm/Local/Fake adapters, evidence-graded planning, carbon reporting</b> — 1 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>HPC campaign — run large PyAutoFit modelling campaigns efficiently, token-cheaply and low-carbon: per-fit status records, declarative <code>campaign.yaml</code> with Slurm/Local/Fake adapters, evidence-graded planning, carbon reporting</b> — ledger: `draft/research/autofit/hpc_campaign_epic.md` — STARTED 2026-10-28 — concurrent with results-library; phase 0 shared, owned by results-library. Rulings F1–F12 recorded in the…</summary>
+<details><summary>📋 <b>HPC campaign — run large PyAutoFit modelling campaigns efficiently, token-cheaply and low-carbon: per-fit status records, declarative <code>campaign.yaml</code> with Slurm/Local/Fake adapters, evidence-graded planning, carbon reporting</b> — ledger: <code>draft/research/autofit/hpc_campaign_epic.md</code> — STARTED 2026-10-28 — concurrent with results-library; phase 0 shared, owned by results-library. Rulings F1–F12 recorded in the…</summary>
 
 ```
 Continue the 'HPC campaign — run large PyAutoFit modelling campaigns efficiently, token-cheaply and low-carbon: per-fit status records, declarative `campaign.yaml` with Slurm/Local/Fake adapters, evidence-graded planning, carbon reporting' epic. Its canonical state lives in draft/research/autofit/hpc_campaign_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: amended phase map (2026-10-28): 0 → issued as results-library phase 0; 1 status record + failure record + `states.py` + Nerves `site.yaml` (merges after results-library PR 0a); 2 campaign core + Slurm/Local/Fake adapters + collector + partition lint + retrospective mode from a sacct dump; 3 evidence readers (Pulse/Insight JSON with evidence grades) + `plan` + `pilot`; 4 carbon + report (parallel with 3); 5 organism integration (assistant template v2 + sync verbs + skill, Cortex `sync-runs` under decision 62, Brain conductor + governance hook, pipeline adoption after DR1 v1.0); 6 generalisation. Hard constraint: never CPU arrays on RAL `gpu`. Report: draft/research/autofit/hpc_campaign_epic_report.md; surveys hpc_campaign_epic_surveys/; scoping review Workspace/Science/scratch/pyautolens_ii_campaign_results_scoping_2026-10-28/REVIEW.md.
@@ -450,7 +450,7 @@ Use the start-dev skill. draft/research/autofit/hpc_campaign_epic.md
 <details>
 <summary><b>Results library — PyAutoFit infrastructure to index, complete, export, package and reconcile thousands of finished results (follow-up to hpc-campaign; Euclid DR1 is the pilot)</b> — 2 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>Results library — PyAutoFit infrastructure to index, complete, export, package and reconcile thousands of finished results (follow-up to hpc-campaign; Euclid DR1 is the pilot)</b> — ledger: `draft/feature/autofit/results_library_epic.md` — STARTED 2026-10-28 — concurrent with hpc-campaign; phase 0 shared, owned by results-library. Rulings F1–F12 recorded in the…</summary>
+<details><summary>📋 <b>Results library — PyAutoFit infrastructure to index, complete, export, package and reconcile thousands of finished results (follow-up to hpc-campaign; Euclid DR1 is the pilot)</b> — ledger: <code>draft/feature/autofit/results_library_epic.md</code> — STARTED 2026-10-28 — concurrent with hpc-campaign; phase 0 shared, owned by results-library. Rulings F1–F12 recorded in the…</summary>
 
 ```
 Continue the 'Results library — PyAutoFit infrastructure to index, complete, export, package and reconcile thousands of finished results (follow-up to hpc-campaign; Euclid DR1 is the pilot)' epic. Its canonical state lives in draft/feature/autofit/results_library_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: six phases, library first, one at a time. 0 integrity and honesty primitives (atomic STORED-media zips, in-zip `.completed` check, checkpoint probe + quarantine, `from_directory(on_error=)` with `agg.errors`, strict AggregateCSV by default with union header); 1 results index + status classes + `dataset_identity.json` + `agg.latest_per` + lazy zip-member reads + `python -m autofit.results {index,status,count}`; 2 completeness over a declared grid (per-product, `.missing.csv`) + `Aggregator.enrich`; 3 incremental honest exports (cached rows, row-or-reason, `columns.json`, plain-JSON view) + scheduler-agnostic chunk/merge; 4 `af.export.package` (size-capped parts, manifest, SHA256SUMS, verify, provenance README) + library diff/parity + run-to-run scatter helper; 5 assistant skill, pipeline scripts shrink, hpc/sync index pull, Cortex index hash, 500-lens DR1 v1.0 census as witness. Boundary: hpc-campaign owns run time (status.json, failure records, `states.py`, resources, Slurm, carbon); this epic owns post-run and phase 0 (PRs 0a integrity, 0b honest reads), shared with hpc-campaign. Does not block draft/feature/euclid/upstream_dr1_final_catalogue_tooling.md. First step: phase 0 via `start_dev` as a single PyAutoFit issue. Evidence and lessons: draft/feature/autofit/results_library_epic_report.md.
@@ -479,7 +479,7 @@ Use the start-dev skill. draft/feature/autofit/results_library_p5c_dr1_census.md
 <details>
 <summary><b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — 2 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — ledger: `draft/research/autofit/search_extensibility_epic.md` — filed 2026-10-07; scoped (4 Opus surveys) and independently reviewed (Codex gpt-6-astra, Claude Fable high) the same day; all §5…</summary>
+<details><summary>📋 <b>Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos</b> — ledger: <code>draft/research/autofit/search_extensibility_epic.md</code> — filed 2026-10-07; scoped (4 Opus surveys) and independently reviewed (Codex gpt-6-astra, Claude Fable high) the same day; all §5…</summary>
 
 ```
 Continue the 'Search extensibility — a PyAutoFit search framework for many samplers, a unified JAX contract, generated search docs, and the autofit_inference / autofit_profiling benchmark repos' epic. Its canonical state lives in draft/research/autofit/search_extensibility_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: two dependency-ordered tracks. Track A (PyAutoFit framework): A0a(i) metadata conformance → A0b hygiene → A0a(ii) backend conformance; A0c repair PRs; A1 declare + gate (after the test-mode bypass) + declarative lazy registry + `run(ctx)` design note; A2 objective factory + fork rule + `run(ctx)` bridge (Drawer, Nautilus proofs); A3 RawSamples adapter + Checkpointer/resume split; A3b NSS onto Fitness + trace preflight + x64; A4 decompose NonLinearSearch + delete family bases (deprecated thin subclasses one release) + search-level seed with the legacy identifier table; A5 per-search migrations + generated consumers. Track B (repos): B1 registration (Mind repos.yaml → repos_sync, Heart excluded, Cortex row, Pulse `fit` @profiling-summary@2, Insight `fit` @inference-summary@1; adopts PyAutoPulse `tasks/autofit_profiling_bootstrap.md`), B2 harness + `gaussian_x3_blend`/`_separated` + pre-registered protocol + per-backend reference posteriors, B3 wave-1 PILOT (ranks nothing) + Insight registration + catalogue, B4a breakdown exporter + Pulse row + epic-1 bottleneck table / B4b EP baseline port, B5 consumers + scored wave 2 (50 seeds, RAL `ral` only, after A2 and A4). Human rulings 2026-10-07: RTD generic example stays DynestyStatic; SMC → weighted/evidence; deprecate `use_jax_jit`/`use_jax_vmap`; in-flight samplers target `run(ctx)` from A2. Start order: A0a(i), A0c and B1 registration first; issue ONE phase at a time through `start_dev`.
@@ -508,7 +508,7 @@ Use the start-dev skill. draft/research/autofit_inference/search_ext_b5c2b_score
 <details>
 <summary><b>PyAutoEars — community listening, solicited feedback, dashboard and follow-through</b> — 1 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>PyAutoEars — community listening, solicited feedback, dashboard and follow-through</b> — ledger: `draft/feature/pyautoears/community_organ_birth.md` — In progress; phases 0–2 merged 2026-10-03. Feedback: Brain#454; bootstrap: Ears#2; integration: Brain#456, Mind#469 and 11…</summary>
+<details><summary>📋 <b>PyAutoEars — community listening, solicited feedback, dashboard and follow-through</b> — ledger: <code>draft/feature/pyautoears/community_organ_birth.md</code> — In progress; phases 0–2 merged 2026-10-03. Feedback: Brain#454; bootstrap: Ears#2; integration: Brain#456, Mind#469 and 11…</summary>
 
 ```
 Continue the 'PyAutoEars — community listening, solicited feedback, dashboard and follow-through' epic. Its canonical state lives in draft/feature/pyautoears/community_organ_birth.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: Human-approved programme includes listening reliability, assistant distribution, delivery follow-up and recurring themes. Issue one bounded phase at a time. Preserve Brain judgement, Mind task state and the single Discussions hub. Human `Prm` authorized the integration merges; Heart remains RED for release. Listening reliability/category-sensitive triage merged: Ears#5 and Brain#457; Ears#4 closed; complete/2026/10/ears-listening-reliability.md. Production run37137496430 passed; live Discussion hub coverage complete, only euclid_assistant unavailable. Next: phase4 assistant distribution of /feedback.
@@ -529,7 +529,7 @@ Use the start-dev skill. draft/feature/pyautoears/community_organ_birth.md
 <details>
 <summary><b>Point-source (single-source) PointSolver CPU speed-up</b> — 3 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>Point-source (single-source) PointSolver CPU speed-up</b> — ledger: `autolens_profiling/wiki/campaigns/point_source_image_plane_cpu.md (full record: results/notes/point_source_cpu_campaign.md)` — phases 1-3 shipped (p2 + p3 released in 2026.9.26.1: PyAutoArray <code>7fa8d271</code>, PyAutoLens <code>86054bbc</code>); phase 4a (re-baseline +…</summary>
+<details><summary>📋 <b>Point-source (single-source) PointSolver CPU speed-up</b> — ledger: <code>autolens_profiling/wiki/campaigns/point_source_image_plane_cpu.md (full record: results/notes/point_source_cpu_campaign.md)</code> — phases 1-3 shipped (p2 + p3 released in 2026.9.26.1: PyAutoArray <code>7fa8d271</code>, PyAutoLens <code>86054bbc</code>); phase 4a (re-baseline +…</summary>
 
 ```
 Continue the 'Point-source (single-source) PointSolver CPU speed-up' epic. Its canonical state lives in autolens_profiling/wiki/campaigns/point_source_image_plane_cpu.md (full record: results/notes/point_source_cpu_campaign.md) — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: human decision 2026-09-26 — SINGLE-SOURCE only, the `scripts/point_source_image/` + `scripts/point_source_source/` use case (formerly `scripts/point_source/`); the cluster use case moved to epic `cluster-pointsolver-speed`. Phase-4 campaign prompt recorded at `complete/2026/09/point-source-cpu-p4.md` (phase 4a, autolens_profiling#321, merge `3e4a068`; its `## Original prompt` holds the campaign contract); phase 4b shipped (record `complete/2026/09/pointsolver-step0-gather.md`); phase 4c shipped (record `complete/2026/09/pointsolver-mcs-headroom.md`); extent sanity check complete 2026-10-02: PyAutoLens#764, workspace-test#338 and profiling#363 merged; record `complete/2026/10/pointsolver-extent-sanity-check.md`; library release pending, human approved workspace merge before release. Open members: `draft/feature/autolens_workspace/pointsolver_grid_extent_per_package.md`, carried leftovers `https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/pointsolver_cpu_speed_campaign_remainder.md`; source-plane member prompt `https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/point_source_source_plane_chi_squared_speed.md` (phases 2+, re-filed at close-out; ledger `results/notes/point_source_source_plane_campaign.md`) (re-tagged from `cluster-strong-lensing`, which is the unrelated Source & Cluster arc). Records `complete/2026/09/point-source-cpu-p{1,2,3,4}.md`. Issue ONE bounded phase at a time; any library default change (PyAutoLens `shape_solver.py` / PyAutoArray `MAX_CONTAINING_SIZE`) is a human decision at the phase-4a checkpoint.
@@ -566,7 +566,7 @@ Use the start-dev skill. draft/maintenance/autolens/point_source_cpu_campaign_ow
 <details>
 <summary><b>Cluster PointSolver — robustness and performance</b> — 3 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>Cluster PointSolver — robustness and performance</b> — ledger: `https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/cluster_pointsolver_speed.md` — Phase 1 (cluster-scale robust settings, autolens_profiling#436 → #438 <code>c8c9abb3</code>) MERGED 2026-10-22, record…</summary>
+<details><summary>📋 <b>Cluster PointSolver — robustness and performance</b> — ledger: <code>https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/cluster_pointsolver_speed.md</code> — Phase 1 (cluster-scale robust settings, autolens_profiling#436 → #438 <code>c8c9abb3</code>) MERGED 2026-10-22, record…</summary>
 
 ```
 Continue the 'Cluster PointSolver — robustness and performance' epic. Its canonical state lives in https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/cluster_pointsolver_speed.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: Stable epic identifier retained. autolens_profiling owns campaign evidence and robust-settings/cost guidance; autolens_workspace_test owns bounded numerical regressions in required PR smoke or scheduled/release CI. Failing cases may be timed diagnostically but cannot underpin accepted speed/settings claims. Reconcile old profiling coverage with completed single-source campaigns; no duplication. Previous repo wiki/campaigns/cluster_pointsolver.md is the speed-only survey; reconcile it at first implementation, with this Mind contract authoritative for the expanded plan. Issue ONE bounded task at a time, no bulk queue.
@@ -603,7 +603,7 @@ Use the start-dev skill. draft/research/autolens/point_solver_root_refinement.md
 <details>
 <summary><b>Expectation propagation (EP) campaign</b> — 3 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>Expectation propagation (EP) campaign</b> — ledger: `https://github.com/PyAutoLabs/PyAutoInsight/blob/main/tasks/ep_campaign.md`</summary>
+<details><summary>📋 <b>Expectation propagation (EP) campaign</b> — ledger: <code>https://github.com/PyAutoLabs/PyAutoInsight/blob/main/tasks/ep_campaign.md</code></summary>
 
 ```
 Continue the 'Expectation propagation (EP) campaign' epic. Its canonical state lives in https://github.com/PyAutoLabs/PyAutoInsight/blob/main/tasks/ep_campaign.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: campaign intent and scoping now live in PyAutoInsight `campaigns.yaml` and `tasks/{ep_campaign,ep_scoping,graphical_scoping}.md` (destination PR #2 merged 2026-10-04). The campaign map is never issued; Mind retains only bounded implementation phases and claims linked to Insight. Scientific runs, observations and human conclusions remain authoritative in PyAutoCortex `projects/{analytic_gaussian,ep_toy_gaussian,slope_hierarchy_scale,ic50_workspace}.md`. No independent Mind campaign schedule remains.
@@ -640,7 +640,7 @@ Use the start-dev skill. draft/bug/autofit/truncated_normal_log_partition_tail_u
 <details>
 <summary><b>Euclid DR1 preparation — 15k-lens modelling prep</b> — 5 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>Euclid DR1 preparation — 15k-lens modelling prep</b> — ledger: `draft/feature/euclid/euclid_dr1_prep_epic.md` — science half → Cortex 2026-09-01 (old phases 4, 5, 6a, 6b are now PyAutoCortex</summary>
+<details><summary>📋 <b>Euclid DR1 preparation — 15k-lens modelling prep</b> — ledger: <code>draft/feature/euclid/euclid_dr1_prep_epic.md</code> — science half → Cortex 2026-09-01 (old phases 4, 5, 6a, 6b are now PyAutoCortex</summary>
 
 ```
 Continue the 'Euclid DR1 preparation — 15k-lens modelling prep' epic. Its canonical state lives in draft/feature/euclid/euclid_dr1_prep_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: 7 Mind phases (0, 1, 2, 3, 4, 8, 9) — issue ONE at a time as predecessors near
@@ -693,7 +693,7 @@ Use the start-dev skill. draft/feature/euclid/single_process_cpu_route_jax_vis_l
 <details>
 <summary><b>PyAutoFit model figures — structure-first model visualisation (caskade-style, scales to MGE/graphical/EP)</b> — 5 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>PyAutoFit model figures — structure-first model visualisation (caskade-style, scales to MGE/graphical/EP)</b> — ledger: `draft/feature/autofit/model_figures_epic.md`</summary>
+<details><summary>📋 <b>PyAutoFit model figures — structure-first model visualisation (caskade-style, scales to MGE/graphical/EP)</b> — ledger: <code>draft/feature/autofit/model_figures_epic.md</code></summary>
 
 ```
 Continue the 'PyAutoFit model figures — structure-first model visualisation (caskade-style, scales to MGE/graphical/EP)' epic. Its canonical state lives in draft/feature/autofit/model_figures_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: phase 1 SHIPPED 2026-09-11 (complete/2026/09/model-figures-graph-spec.md, PyAutoFit#1606); phase 2 SHIPPED 2026-09-11 (complete/2026/09/model-figures-renderer.md — PyAutoFit#1614 + autofit_workspace#152 merged, pending-release PyAutoFit); phase 3 SHIPPED 2026-09-11 (complete/2026/09/model-figures-lens.md — PyAutoFit#1615 + PyAutoArray#550 + PyAutoGalaxy#616 + PyAutoLens#737 + autolens_workspace#541 + autogalaxy_workspace#240 merged, pending-release ×4; `__solved_parameters__` protocol); phase 4 SHIPPED 2026-09-12 (complete/2026/09/model-figures-graphical.md — PyAutoFit#1617 + autofit_workspace#153 + HowToFit#51 merged, pending-release PyAutoFit; plate notation, hoisted shared priors, hierarchical draws are not sharing); phase 5 SHIPPED 2026-09-13 (complete/2026/09/model-figures-ep-view.md — PyAutoFit#1619 merged, pending-release PyAutoFit; EP factor-graph view, af.EPPlotter, graph_model.png/graph_state.png); phase 6a SHIPPED 2026-09-13 (complete/2026/09/model-figures-rollout-autofit.md — PyAutoFit#1621 + autofit_workspace#154 + HowToFit#52 merged, pending-release PyAutoFit; figures beside every model.info in autofit_workspace + HowToFit, EP state figure); phase 6b SHIPPED 2026-09-14 in two waves (complete/2026/09/model-figures-rollout-lens.md — HowToLens#81 + autolens_workspace#543 wave 1, autolens_workspace#546 + HowToLens#83 wave 2; 102 scripts and 12 tutorials with their notebook twins). The per-figure reading commentary was RETIRED on the human's ruling the same day: every opener block is now two fixed paragraphs and the figure-rendering vocabulary is stripped from later-site notes, which supersedes 6b's "Pattern" section and retires its render-to-verify-vocabulary requirement. The same standard was swept across the six unclaimed repos as model-figure-prose-simplify (complete/2026/09/model-figure-prose-simplify.md — autofit_workspace#156, six PRs). Remaining cuts of phase 6: (b2) SLaM stages, (c) PyAutoGalaxy surfaces. 6 phased prompts; 1 → 2 → 3 in order, 4 after 2, 5 after 4, 6 (rollout across every workspace, HowTo chapter and sibling project) after 3 and 4; per-search figure output stays opt-in until phase-3 acceptance renders pass; sibling bug prompts under draft/bug/autofit/ are standalone.
@@ -743,7 +743,7 @@ Use the start-dev skill. draft/feature/workspaces/model_figures_6b2_slam_stages.
 
 </details>
 
-<details><summary>📋 <b>autolens_inference — inference benchmarking repo, birth to first base run</b> — ledger: `https://github.com/PyAutoLabs/PyAutoInsight/blob/main/campaigns.yaml`</summary>
+<details><summary>📋 <b>autolens_inference — inference benchmarking repo, birth to first base run</b> — ledger: <code>https://github.com/PyAutoLabs/PyAutoInsight/blob/main/campaigns.yaml</code></summary>
 
 ```
 Continue the 'autolens_inference — inference benchmarking repo, birth to first base run' epic. Its canonical state lives in https://github.com/PyAutoLabs/PyAutoInsight/blob/main/campaigns.yaml — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: phase 1 SHIPPED 2026-09-10 (complete/2026/09/autolens-inference-birth.md); phase 2 SHIPPED 2026-09-11 (complete/2026/09/scrap-inference-programme.md — autolens_profiling#246 / PyAutoBrain#376 / PyAutoMind#401; archive ref `archive/condemned/autolens-profiling/inference-programme` @ `c8b60580`); 4 phases — 1 birth + registration (PyAutoMind#399), 2 Gut-archive and delete autolens_profiling's searches tier / baselines / inference notes (nothing inherited), 3 backend-parameterised SLaM driver + per-stage results + submit scripts (SHIPPED 2026-09-11, autolens_inference#3, complete/2026/09/slam-base-driver.md), 4 the first run on PyAutoCortex `projects/autolens_inference.md` (5-stage HST SLaM × {numba_cpu, jax_cpu, jax_gpu} × {dense, sparse}). Science half: that ledger. Ledger moved to autolens_inference/wiki/project/state.md when phase 3 landed 2026-09-11.
@@ -751,7 +751,7 @@ Continue the 'autolens_inference — inference benchmarking repo, birth to first
 
 </details>
 
-<details><summary>📋 <b>Linear-solver accuracy/tolerance programme — a standing autolens_profiling package for positive-only solver studies</b> — ledger: `autolens_profiling/wiki/campaigns/linear_solver_accuracy.md (contract: complete/2026/09/linear-solver-accuracy-study.md)` — phase 2 SHIPPED 2026-09-30 — PyAutoArray#595 merged (7a89e19a0, forward polish; pending release) + autolens_profiling#357 merged…</summary>
+<details><summary>📋 <b>Linear-solver accuracy/tolerance programme — a standing autolens_profiling package for positive-only solver studies</b> — ledger: <code>autolens_profiling/wiki/campaigns/linear_solver_accuracy.md (contract: complete/2026/09/linear-solver-accuracy-study.md)</code> — phase 2 SHIPPED 2026-09-30 — PyAutoArray#595 merged (7a89e19a0, forward polish; pending release) + autolens_profiling#357 merged…</summary>
 
 ```
 Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens_profiling package for positive-only solver studies' epic. Its canonical state lives in autolens_profiling/wiki/campaigns/linear_solver_accuracy.md (contract: complete/2026/09/linear-solver-accuracy-study.md) — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: human intent 2026-09-30 — solver tolerance/accuracy keeps recurring (#571/#572/#573, certified solver, 07-09 NNLS ledger, warm-start memo), so it gets one home that accumulates runs and data across releases. Phase 1 = `scripts/lens/solver/` package + corpus + CPU fp64 accuracy/early-stopping study + pre-registered rule + wiki page. Phase 2 = PyAutoArray fix per the verdict (shipped: `complete/2026/09/raw-pdip-forward-polish.md`; library-first, then re-verify the euclid latent test on library main). Phase 3 = GPU/vmap/A100 timing + parity rows (absorbs `https://github.com/PyAutoLabs/PyAutoPulse/blob/main/tasks/mge_nnls_fix_pyautoarray_571_slam_60.md`). Standing: re-run the accuracy cell per release.
@@ -762,7 +762,7 @@ Continue the 'Linear-solver accuracy/tolerance programme — a standing autolens
 <details>
 <summary><b>Cluster strong lensing — Source &amp; Cluster arc</b> — 13 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>Cluster strong lensing — Source &amp; Cluster arc</b> — ledger: `draft/feature/autolens/source_cluster_arc.md` — In progress — 1a–1d, phase 3a audit (profiling#364, workspace_test#341) and phase 3b field-preserving cap fix (Galaxy#646…</summary>
+<details><summary>📋 <b>Cluster strong lensing — Source &amp; Cluster arc</b> — ledger: <code>draft/feature/autolens/source_cluster_arc.md</code> — In progress — 1a–1d, phase 3a audit (profiling#364, workspace_test#341) and phase 3b field-preserving cap fix (Galaxy#646…</summary>
 
 ```
 Continue the 'Cluster strong lensing — Source & Cluster arc' epic. Its canonical state lives in draft/feature/autolens/source_cluster_arc.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: Issue ONE bounded phase at a time; no bulk queue. Preserve original phase numbers and the approved 2026-10-01 ownership split. Phases 3–8 have no blanket PointSolver gate; solver-dependent workloads retain correctness gates. Cortex phase 11 remains dropped under R-20260907-05; any future science birth needs a fresh explicit decision.
@@ -879,7 +879,7 @@ Use the start-dev skill. draft/research/autolens_inference/kernel_regularization
 <details>
 <summary><b>Scientist adoption pilot — project resources, clear organ destinations and a growing independent Scientist</b> — 6 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>Scientist adoption pilot — project resources, clear organ destinations and a growing independent Scientist</b> — ledger: `draft/feature/pyautoscientist/collaborator_led_pyautoscientist_adoption_pilot.md` — In progress — project cards and organ-linked resource routing merged and published (Scientist PRs #56 and #58); remaining members…</summary>
+<details><summary>📋 <b>Scientist adoption pilot — project resources, clear organ destinations and a growing independent Scientist</b> — ledger: <code>draft/feature/pyautoscientist/collaborator_led_pyautoscientist_adoption_pilot.md</code> — In progress — project cards and organ-linked resource routing merged and published (Scientist PRs #56 and #58); remaining members…</summary>
 
 ```
 Continue the 'Scientist adoption pilot — project resources, clear organ destinations and a growing independent Scientist' epic. Its canonical state lives in draft/feature/pyautoscientist/collaborator_led_pyautoscientist_adoption_pilot.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances. Note: Heart test-workspace dropdowns and Broca docs/HowTo/workspace/assistant dropdowns are explicit members. Continue one bounded task at a time; preserve the Broca ownership-contract dependency. Starter, optional organs with grey available-to-add resources, upgrades preserving user records and collaborator validation remain in this epic. No collaborator details assumed; shared multi-contributor operation is later.
@@ -940,7 +940,7 @@ Use the start-dev skill. draft/feature/pyautoscientist/scientist_optional_organ_
 <details>
 <summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 24 queued prompt(s), in order</summary>
 
-<details><summary>📋 <b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — ledger: `draft/feature/pyautobrain/autonomous_orchestrators_epic.md` — IN PROGRESS; design-reviewed 2026-11-03 (7 phases, <code>Needs:</code> folded into <code>Lane:</code> values, witnesses per phase, 6 decisions ruled by…</summary>
+<details><summary>📋 <b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — ledger: <code>draft/feature/pyautobrain/autonomous_orchestrators_epic.md</code> — IN PROGRESS; design-reviewed 2026-11-03 (7 phases, <code>Needs:</code> folded into <code>Lane:</code> values, witnesses per phase, 6 decisions ruled by…</summary>
 
 ```
 Continue the 'Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended `glance` merges under guards; drafts-only goal decomposition' epic. Its canonical state lives in draft/feature/pyautobrain/autonomous_orchestrators_epic.md — read that ledger (and any DECISIONS/RESULTS files beside it) first. Cross-check this epic's entry in PyAutoMind/epics.md, any related rows in PyAutoMind/active.md, and the referenced repos' open issues and PRs, to work out the last completed phase and what is currently in flight. Then pick the next logical step and continue it through the normal workflow (Use the start-dev skill — filing the phase's prompt first if none exists), updating the ledger as the work advances.
@@ -1143,7 +1143,7 @@ Use the start-dev skill. draft/research/pyautobrain/ecosystem_review_for_autonom
 </details>
 
 <details>
-<summary><b>interferometer-likelihood-campaign</b> — 5 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+<summary><b>interferometer-likelihood-campaign</b> — 5 queued prompt(s) — ⚠️ not in <code>epics.md</code></summary>
 
 <details><summary>📋 <a href="draft/bug/pyautoheart/ral_venv_dependency_floor_drift.md">RAL PyAuto venv: third-party packages below the library floors…</a> — pyautoheart · easy · supervised · medium</summary>
 
@@ -1188,7 +1188,7 @@ Use the start-dev skill. draft/feature/autoarray/interferometer_direct_conv_pran
 </details>
 
 <details>
-<summary><b>certified-positive-solver</b> — 2 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+<summary><b>certified-positive-solver</b> — 2 queued prompt(s) — ⚠️ not in <code>epics.md</code></summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/batched_jit_vmap_b50_wrong_log_likelihood_a100.md"><code>jax.jit(jax.vmap(fn))</code> at B=50 returns wrong HST-scale inversion log likelihoods on an A100</a> — autoarray · medium · supervised · high</summary>
 
@@ -1209,7 +1209,7 @@ Use the start-dev skill. draft/feature/autofit/certified_solver_batched_guard_c2
 </details>
 
 <details>
-<summary><b>nautilus-fast-likelihoods</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+<summary><b>nautilus-fast-likelihoods</b> — 1 queued prompt(s) — ⚠️ not in <code>epics.md</code></summary>
 
 <details><summary>📋 <a href="draft/feature/autofit/nautilus_fast_likelihood_development_epic.md">Nautilus fast likelihood development epic</a> — autofit · too-large · supervised · high</summary>
 
@@ -1222,7 +1222,7 @@ Use the start-dev skill. draft/feature/autofit/nautilus_fast_likelihood_developm
 </details>
 
 <details>
-<summary><b>autonomous-orchestrators (programme M3.4 companion)</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+<summary><b>autonomous-orchestrators (programme M3.4 companion)</b> — 1 queued prompt(s) — ⚠️ not in <code>epics.md</code></summary>
 
 <details><summary>📋 <a href="draft/feature/pyautobrain/questions_inbox_bulk_answering.md">Questions inbox: parked questions wait in one list the human works through…</a> — pyautobrain · medium · supervised · high</summary>
 
@@ -1235,7 +1235,7 @@ Use the start-dev skill. draft/feature/pyautobrain/questions_inbox_bulk_answerin
 </details>
 
 <details>
-<summary><b>autonomous-orchestrators (programme M3.4)</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+<summary><b>autonomous-orchestrators (programme M3.4)</b> — 1 queued prompt(s) — ⚠️ not in <code>epics.md</code></summary>
 
 <details><summary>📋 <a href="draft/feature/pyautobrain/shift_chat_cockpit.md">Shift chat cockpit: watch and steer a live shift from a Claude…</a> — pyautobrain · medium · supervised · high</summary>
 
@@ -1248,7 +1248,7 @@ Use the start-dev skill. draft/feature/pyautobrain/shift_chat_cockpit.md
 </details>
 
 <details>
-<summary><b>pyautoeyes-birth</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+<summary><b>pyautoeyes-birth</b> — 1 queued prompt(s) — ⚠️ not in <code>epics.md</code></summary>
 
 <details><summary>📋 <a href="draft/feature/pyautohands/release_fires_visualization_dispatch.md">Hands release.yml fires the visualization re-render dispatches</a> — pyautohands · small · supervised · normal</summary>
 
@@ -1261,7 +1261,7 @@ Use the start-dev skill. draft/feature/pyautohands/release_fires_visualization_d
 </details>
 
 <details>
-<summary><b>image-source-mappings</b> — 1 queued prompt(s) — ⚠️ not in `epics.md`</summary>
+<summary><b>image-source-mappings</b> — 1 queued prompt(s) — ⚠️ not in <code>epics.md</code></summary>
 
 <details><summary>📋 <a href="draft/bug/autoarray/mapping_overlay_follow_ups_forward_regions_throu.md">Mapping overlay follow-ups: forward regions= through the autogalaxy plot wrappers, fix degenerate…</a> — autoarray · medium · safe · medium</summary>
 
@@ -1287,14 +1287,6 @@ Use the start-dev skill. active/autonomous_orchestrators_p4c_pilot_run.md
 
 ```
 Use the start-dev skill. active/cluster_regime_narrative.md
-```
-
-</details>
-
-<details><summary>📋 <a href="active/dashboard_md_epic_ledger_backticks_render_literally.md">dashboard.md: epic <code>ledger:</code> paths render as literal backticks inside <code>&lt;summary&gt;</code></a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/653">issue #653</a> — issued 2026-11-16 — library-dev</summary>
-
-```
-Use the start-dev skill. active/dashboard_md_epic_ledger_backticks_render_literally.md
 ```
 
 </details>
@@ -2953,7 +2945,6 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-16 | issued | <a href="active/dashboard_md_epic_ledger_backticks_render_literally.md">dashboard.md: epic <code>ledger:</code> paths render as literal backticks inside…</a> |
 | 2026-11-16 | filed | <a href="draft/maintenance/pyautomind/witness_backfill_scan.md">Witness backfill: scan Mind drafts with no Witness: and propose one…</a> |
 | 2026-11-16 | issued | <a href="active/hpc_campaign_p5d_pipeline_adoption.md">HPC campaign phase 5d: the Euclid pipeline runs its three stages…</a> |
 | 2026-11-16 | filed | <a href="draft/bug/autogalaxy/ellipse_multipole_latent_missing_m.md">EllipseMultipole latent parameters raise TypeError when <code>m</code> is not…</a> |
@@ -2963,12 +2954,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-14 | issued | <a href="active/cluster_regime_narrative.md">Cluster package: point-source-default narrative + extended-source…</a> |
 | 2026-11-13 | issued | <a href="active/ep_projected_model_shared_prior_keyerror.md">autofit: EP projection (Result.projected_model) raises KeyError for a…</a> |
 | 2026-11-13 | filed | <a href="draft/bug/autolens/twins_provenance_versions.md">LensTwin provenance records dev metadata, not the code's real version</a> |
+| 2026-11-12 | filed | <a href="draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md">jax.grad through zero-contour critical curves fails on jax 0.12</a> |
 
 <details><summary>… 10 more (40 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-12 | filed | <a href="draft/bug/autogalaxy/zero_contour_grad_fails_on_jax_0_12.md">jax.grad through zero-contour critical curves fails on jax 0.12</a> |
 | 2026-11-12 | filed | <a href="planned.md#hpc-keep-off-home-phase-b">hpc-keep-off-home-phase-b</a> |
 | 2026-11-12 | issued | <a href="planned.md#delaunay-nn-numba-remeasure">delaunay-nn-numba-remeasure</a> |
 | 2026-11-12 | filed | <a href="draft/maintenance/autolens_profiling/remove_d12_eigen_flag_after_remeasure.md">autolens_profiling: drop the D12 eigen flag from CPU campaign legs…</a> |
@@ -2978,12 +2969,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-11 | filed | <a href="draft/bug/health_fixes/pr504_sibling_guards_net_gap_proxy.md">Harden the sibling PR #504 non-vacuity guards (net fom−logL gap proxy)</a> |
 | 2026-11-10 | filed | <a href="draft/maintenance/workspaces/data_no_ellipse_config_and_prose_sweep.md">Sweep the retired <code>data_no_ellipse</code> toggle from configs and prose</a> |
 | 2026-11-10 | filed | <a href="draft/maintenance/euclid/remove_simulator_poisson_round_off_workaround.md">Remove the pipeline-side Poisson round-off workaround once…</a> |
+| 2026-11-09 | filed | <a href="draft/docs/autogalaxy/plot_utils_critical_curves_default_docstring_drift.md">Fix plot_utils docstrings that call zero_contour the critical-curve…</a> |
 
 <details><summary>… 10 more (30 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-09 | filed | <a href="draft/docs/autogalaxy/plot_utils_critical_curves_default_docstring_drift.md">Fix plot_utils docstrings that call zero_contour the critical-curve…</a> |
 | 2026-11-09 | filed | <a href="draft/research/autolens_profiling/critical_curve_oracle_find_the_regime_where.md">Critical-curve oracle: find the regime where zero-contour beats…</a> |
 | 2026-11-09 | filed | <a href="draft/research/autolens/cluster_figure_critical_curves_miss_member_curves.md">Cluster figures miss small member-galaxy critical curves</a> |
 | 2026-11-06 | filed | <a href="draft/refactor/autogalaxy/zero_contour_pytree_compile_cache.md">Zero-contour critical curves: compile once per run by passing the…</a> |
@@ -2993,12 +2984,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-11-05 | filed | <a href="draft/feature/autolens_profiling/write_compile_repeats_from_autolens_profiling_s.md">Write <code>compile_repeats</code> from autolens_profiling's jax_compile tooling…</a> |
 | 2026-11-05 | filed | <a href="draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md">Sibson serial kernel (the one every Nautilus worker runs since #677)…</a> |
 | 2026-11-05 | filed | <a href="draft/test/autofit/regression_test_nautilus_as_the_ep_default.md">Regression test: Nautilus as the EP <code>default_optimiser</code> over…</a> |
+| 2026-11-05 | filed | <a href="draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md">Re-measure the DelaunayNN numba Optimal cell on the Nautilus worker…</a> |
 
 <details><summary>… 10 more (20 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-11-05 | filed | <a href="draft/feature/autolens_profiling/delaunay_nn_numba_optimal_remeasure_after_677.md">Re-measure the DelaunayNN numba Optimal cell on the Nautilus worker…</a> |
 | 2026-11-04 | issued | <a href="active/autonomous_orchestrators_p4c_pilot_run.md">Autonomous orchestrators phase 4c: run the Dev orchestrator pilot…</a> |
 | 2026-11-02 | filed | <a href="draft/research/autolens_profiling/unexplained_gradient_gaps_cpu_sparse_delaunay_and_mge.md">Unexplained autodiff-vs-FD gaps in the phase-6 gradient records…</a> |
 | 2026-11-02 | filed | <a href="draft/bug/autoarray/sparse_vs_dense_log_likelihood_mismatch_nonlinear_lens_light.md">Imaging sparse-operator path gives a very different log L from dense…</a> |
@@ -3008,12 +2999,12 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-25 | filed | <a href="draft/bug/health_fixes/ci_timing_execution_coverage.md">CI timing must compare equivalent executed job coverage</a> |
 | 2026-10-23 | filed | <a href="draft/docs/autolens_assistant/ai_options_page_autolens_leg.md">autolens_assistant leg of the PyAutoLabs AI-options page (deferred…</a> |
 | 2026-10-23 | filed | <a href="draft/bug/autolens_profiling/stale_auto_simulated_cluster_dataset.md"><code>@autolens_profiling</code> stale auto-simulated <code>dataset/cluster/simple</code>…</a> |
+| 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
 
 <details><summary>… 10 more (10 left)</summary>
 
 | Date | Event | Task |
 |------|-------|------|
-| 2026-10-22 | filed | <a href="planned.md#point-plots-yaml-keys-assistant">point-plots-yaml-keys-assistant</a> |
 | 2026-10-21 | filed | <a href="planned.md#interferometer-primary-beam-persistence-mirror">interferometer-primary-beam-persistence-mirror</a> |
 | 2026-10-21 | filed | <a href="draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md">PyAutoLens mirror of the interferometer primary-beam persistence…</a> |
 | 2026-10-21 | filed | <a href="draft/docs/autolens_profiling/positions_source_jacobian_default_rerun_note.md">Note in autolens_profiling that plain source-plane lane values…</a> |
@@ -3023,6 +3014,7 @@ Use the start-dev skill. draft/triage/autolens/jit_fit_from_is_vacuous.md
 | 2026-10-16 | filed | <a href="draft/maintenance/autolens_workspace/remeasure_shapelets_slow_park.md">Re-measure the shapelets/modeling.py SLOW park (#586) under the…</a> |
 | 2026-10-14 | filed | <a href="draft/test/autofit/workspace_searches_scripts_preexisting_failures.md"><code>@autofit_workspace</code> six <code>searches/</code> scripts fail on main at…</a> |
 | 2026-10-14 | filed | <a href="draft/feature/cortex/output_summary.md">Cortex output summaries — phase 2</a> |
+| 2026-10-08 | filed | <a href="draft/bug/autonerves/jax_enable_x64_env_ignored_and_fp32_leg_runs_fp64.md"><code>JAX_ENABLE_X64=False</code> is overridden to True, so the fp32 inference…</a> |
 
 </details>
 
