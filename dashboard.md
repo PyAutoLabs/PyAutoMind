@@ -16,22 +16,23 @@
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
-> **Batch 2026-11-14-pm3 — 0 in progress · 0 awaiting review**
->
-> Live: closed at review-at — the digest is below — status: https://github.com/PyAutoLabs/PyAutoMind/issues/571#issuecomment-6883569285
->
->
-> _Nothing to review yet._
+## Batch 2026-11-14-pm3
 
-## Questions (0 open, 0 deferred)
+_idle_
 
-_(no open questions — [`questions.md`](questions.md))_
+Live: closed at review-at — the digest is below · [shift issue #571](https://github.com/PyAutoLabs/PyAutoMind/issues/571#issuecomment-6883569285)
 
-## Goals
+_(nothing to review yet)_
 
-_No goals yet — edit in chat ([`goals.md`](goals.md))_
+## Goals, queue and questions
 
-## Queue
+_7 queued · 0 questions_
+
+**Goals** ([`goals.md`](goals.md))
+
+_(no goals yet — edit in chat)_
+
+**Queue** ([`queue.md`](queue.md)) — read-only; change it in a `/queue` chat
 
 1. [Premise check and lane inference follow-ups (M1.3)](draft/feature/pyautobrain/premise_check_followups.md)
 2. [Brain board hygiene ledger (SIG-3)](draft/feature/pyautobrain/brain_board_hygiene_ledger.md)
@@ -40,6 +41,10 @@ _No goals yet — edit in chat ([`goals.md`](goals.md))_
 5. [Regenerate autolens_workspace markdown for sigma_min](draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md)
 6. [PyAutoLens primary-beam persistence mirror](draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md)
 7. [Release board run_logs enrichment](draft/feature/pyautohands/release_board_run_logs_enrichment.md)
+
+**Questions** (0 open, 0 deferred — [`questions.md`](questions.md))
+
+_(no open questions)_
 
 ## Start here
 
