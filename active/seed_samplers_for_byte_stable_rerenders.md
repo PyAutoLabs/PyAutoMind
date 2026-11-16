@@ -15,6 +15,7 @@ Consequence: notify
 Witness: two consecutive `gallery_run.sh --all` runs leave `git status` clean (identical sha256s in `gallery/viz_manifest.yaml`)
 Epic: pyautoeyes-birth
 Filed: 2026-09-29
+Verified: 2026-11-16 0ea8ec9a (autofit_visualization)
 
 ## Task
 

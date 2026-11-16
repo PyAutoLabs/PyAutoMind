@@ -107,3 +107,14 @@
 - tier: notify — merge mode: auto-merge on green (in-turn wait, then /prm close-out)
 - heart-ack:
   - acknowledged by the human 2026-11-16 ("Heart ack so its ok") per batches/2026-11-16-pm.md: RED on local-checkout rows, manifest-drift legs, release-scope, human-only; none on PyAutoBrain
+
+## seed-samplers-byte-stable
+- issue: https://github.com/PyAutoLabs/autofit_visualization/issues/7
+- prompt: active/seed_samplers_for_byte_stable_rerenders.md
+- session: shift worker 2026-11-16-pm (e4818d9b-3bcd-4b38-ba84-3112a35c27b2)
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/seed-samplers-byte-stable
+- heart-ack:
+  - acknowledged by the human 2026-11-16 ("Heart ack so its ok"): RED on local-checkout rows (7 library checkouts behind/dirty: PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens x2, PyAutoCTI), 5 manifest-drift legs, release-scope (no rehearsal for current source) and human-only (PyAutoArray PR open 13d); none on the touched repos
+- repos:
+  - autofit_visualization: feature/seed-samplers-byte-stable
