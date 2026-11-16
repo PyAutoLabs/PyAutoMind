@@ -1,3 +1,41 @@
+# Phase-4 wall estimates: one calibrated wall model (shipped)
+
+- Merged: https://github.com/PyAutoLabs/autolens_inference/pull/70 (merge 9f05aa9, 2026-11-16), closes https://github.com/PyAutoLabs/autolens_inference/issues/69
+- Epic: likelihood-lifecycle, phase 4 (shift 2026-11-16-pm worker; merged by human /prm command in chat)
+- Consequence: judge
+
+## What shipped
+
+`validation_p4.py` priced each stage as profiled per-call × an evaluation-count proxy, missing the
+SLURM walls of completed phase-4 legs by 0.55–89.5×: no per-evaluation sampler floor, no startup
+term, an eval-count proxy 2.7–2.9× low for multi_galaxy, and wrong per-eval bases in places
+(parametric `source_lp` stages of pixelized chains, numba parallel efficiency, multi_dataset's
+vmap OOM-fallback per-call).
+
+It is replaced by one calibrated wall model, `scripts/misc/wall/model.py`:
+
+    evals   = 4.30 · n_live · d^1.637 · EVALS_FACTOR[dataset_type]
+    seconds = evals · (14 ms floor + price)
+    job     = 30 s startup + Σ stages
+
+with numba per-call divided by cores × the cores-sweep efficiency, MGE-priced parametric stages,
+and two cited overrides (multi_dataset single-jit 110 ms; cluster image-plane PointSolver). The
+proxy tables are gone; `--time` follows the estimate (3× headroom, 6 h rounding, 5-day cap); the
+43 submits are regenerated (8 legs held at the cap are now priced).
+
+## Witness
+
+`validation_p4.py --validate`: 42 legs, all within 0.56–1.59× actual/estimate (0 outside 0.5–2×);
+`test_wall_model.py` guards the band. `check_submits --check` 70 submits, 0 failing;
+`validation_p4 --check` clean; pytest 471 passed, 2 skipped. CI green at merge.
+
+## Follow-on
+
+Phase 5E's run-time estimator reuses this model (`wall/README.md`; epic ledger line 2026-11-16
+"PHASE 5 CONTEXT"). Unblocks 5A (`draft/feature/autonerves/likelihood_lifecycle_p5a_nerves_environment.md`).
+
+## Original prompt
+
 # Phase-4 wall estimates miss by up to 90×: no sampler-overhead floor, and an eval-count proxy that is 2.7–2.9× low for multi_galaxy
 
 Type: bug

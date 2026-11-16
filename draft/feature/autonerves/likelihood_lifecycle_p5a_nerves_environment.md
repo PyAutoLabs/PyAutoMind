@@ -16,7 +16,7 @@ Witness: PyAutoNerves main carries `autonerves.environment.Environment.detect()`
 Review-minutes: 20
 Unattended: ready
 Lane: any
-Gate: MET 2026-11-16 — human ruled phase 4 closed (gaps listed), approved report §3.4 and R6 = opt-in first (ledger line 2026-11-16). Runs after the wall-estimate bug (`draft/bug/autolens_inference/validation_wall_estimates_miss_eval_count_and_sampler_floor.md`), per the human.
+Gate: MET 2026-11-16 — human ruled phase 4 closed (gaps listed), approved report §3.4 and R6 = opt-in first (ledger line 2026-11-16). Ran after the wall-estimate bug, per the human — that bug is fixed (`complete/2026/11/validation-wall-estimates-miss-eval-count-and-sampler-floor.md`, autolens_inference#70, merged 2026-11-16).
 Epic: likelihood-lifecycle
 Phase: 5
 Parent: draft/research/autolens_profiling/likelihood_lifecycle_epic.md

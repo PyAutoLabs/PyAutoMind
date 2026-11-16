@@ -61,20 +61,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/671
 - next: human /prm on #671; answer the extended_source questions on #670, then resume phase 2 (feature + workspace_test script)
 
-## validation-wall-model
-- issue: https://github.com/PyAutoLabs/autolens_inference/issues/69
-- issued: 2026-11-16
-- session: shift worker 2026-11-16-pm (cd2691ac-e5c5-4365-afb5-9df174045223)
-- status: ready-to-ship
-- heart-ack:
-  - acknowledged by the human 2026-11-16 ("Heart ack so its ok"): RED on local-checkout rows (7 library checkouts behind/dirty: PyAutoNerves, PyAutoFit, PyAutoArray, PyAutoGalaxy, PyAutoLens x2, PyAutoCTI), 5 manifest-drift legs, release-scope (no rehearsal for current source) and human-only (PyAutoArray PR open 13d); none on the touched repos
-- workspace-pr: https://github.com/PyAutoLabs/autolens_inference/pull/70
-- worktree: ~/Code/PyAutoLabs-wt/validation-wall-model
-- repos:
-  - autolens_inference: feature/validation-wall-model
-- summary: |
-    Phase-4 wall estimates miss by up to 90x: replace the derivation in validation_p4.py with one calibrated wall model (evals law by dimension and n_live, per-eval sampler floor, startup, numba parallel efficiency, MGE-priced parametric stages); --time follows it; phase 5E told to reuse it.
-
 ## dashboard-recent-planned-dedupe
 - issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/652
 - issued: 2026-11-16

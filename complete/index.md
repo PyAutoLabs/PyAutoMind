@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2289 records across 11 buckets.
+2293 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -170,6 +170,8 @@ markers; everything below GENERATED is rebuilt.
 - [cti-workspace-test-rebuild](2026/11/cti-workspace-test-rebuild.md)
 - [dashboard-goals-queue](2026/11/dashboard-goals-queue.md)
 - [dashboard-input](2026/11/dashboard-input.md)
+- [dashboard-md-epic-ledger-backticks](2026/11/dashboard-md-epic-ledger-backticks.md)
+- [dashboard-titles-filed-line](2026/11/dashboard-titles-filed-line.md) — shipped by shift worker 2026-11-16-pm as Mind ledger ops (no repo PR), tracked on PyAutoMind#579. Moved `Filed…
 - [data-loading-and-selection-cuts-skill](2026/11/data-loading-and-selection-cuts-skill.md)
 - [delaunay-smoke-300s-cap](2026/11/delaunay-smoke-300s-cap.md) — Already resolved; nothing was committed. Under the smoke profile `scripts/imaging/features/pixelization/delaun…
 - [dev-metrics-boards](2026/11/dev-metrics-boards.md)
@@ -303,6 +305,7 @@ markers; everything below GENERATED is rebuilt.
 - [rtd-tutorials-consolidated](2026/11/rtd-tutorials-consolidated.md)
 - [scientist-minimal-starter](2026/11/scientist-minimal-starter.md) — already shipped — Mind#502 / PR #503, record `complete/2026/10/scientist-starter-acceptance.md`; slices PyAuto…
 - [search-seed-reproducibility](2026/11/search-seed-reproducibility.md) — already shipped — PyAutoFit#1686 (5bf057f2, 2026-10-14; search-ext A4b), record `complete/2026/10/search-ext-a…
+- [seed-samplers-byte-stable](2026/11/seed-samplers-byte-stable.md) — Seeded every search in the autofit_visualization gallery producers (seed=1 on DynestyStatic, Emcee, Zeus, LBFG…
 - [sersic-products-read-sed-output-dir](2026/11/sersic-products-read-sed-output-dir.md) — already shipped — euclid_strong_lens_modeling_pipeline 126167b00 (2026-10-05) "catalogue: read Sersic fits fro…
 - [session-start-hook-copies-regen](2026/11/session-start-hook-copies-regen.md) — shipped, closed. The 2026-09-29 sweep PRs landed. On HEAD of all 27 swept repos, `.claude/hooks/session-start.…
 - [shift-digest-readable-picks](2026/11/shift-digest-readable-picks.md) — pilot 4c follow-up; issue PyAutoBrain#579
@@ -322,6 +325,7 @@ markers; everything below GENERATED is rebuilt.
 - [tutorial-link-sweep](2026/11/tutorial-link-sweep.md)
 - [unit-timing-monitoring-min-delta](2026/11/unit-timing-monitoring-min-delta.md) — - `legacy_summaries()` now tiers only rows whose own both-gates `state` is `warn` (`slow_factor` 2.0 AND `min_…
 - [unit-trend-followups](2026/11/unit-trend-followups.md)
+- [validation-wall-estimates-miss-eval-count-and-sampler-floor](2026/11/validation-wall-estimates-miss-eval-count-and-sampler-floor.md) — shipped
 - [warmup-shift-findings](2026/11/warmup-shift-findings.md)
 - [watcher-app-identity](2026/11/watcher-app-identity.md)
 - [watcher-numbers-and-push](2026/11/watcher-numbers-and-push.md)

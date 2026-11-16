@@ -26,7 +26,7 @@ Filed: 2026-11-09
 From 2026-11-05 to 11-09 a PreToolUse hook blocked raw `sbatch`: campaign jobs must go through `hpc/sync` so each action is logged. autolens_inference's `hpc/sync submit` (`submit()` in `hpc/sync`) takes only a script name and `--dependency`, and runs `sbatch` over ssh, so local environment variables never reach the job. The project also has no `hpc/sync act …` and no `campaign/<name>/actions.log`. Every phase-4 timing resubmit therefore needed a human-directed `PYAUTO_SKIP_SCHEDULER_GUARD=1` exception: 414362, 414392, and 414639–414641.
 
 Three things were needed and couldn't be passed:
-- `--time`: the generator's estimates missed by up to 4.5×; see draft/bug/autolens_inference/validation_wall_estimates_miss_eval_count_and_sampler_floor.md.
+- `--time`: the generator's estimates missed by up to 4.5×; see complete/2026/11/validation-wall-estimates-miss-eval-count-and-sampler-floor.md (fixed 2026-11-16, autolens_inference#70).
 - `--no-requeue`: a SLURM auto-requeue after NODE_FAIL silently resumed 414392, and a resumed Nautilus stage's wall is invalid.
 - `XLA_FLAGS=--xla_cpu_multi_thread_eigen=false`: the jaxlib 0.11.2 JAX CPU deadlock workaround (Pulse decision xla-cpu-deadlock-eigen-workaround).
 
