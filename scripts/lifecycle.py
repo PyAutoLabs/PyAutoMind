@@ -69,6 +69,8 @@ Subcommands
           * every live queue.md ref resolves, and no prompt is queued twice
           * goals.md parses: numbered 1..n, at most 10 goals of at most 200
             characters, known fields only (an unknown epic only warns)
+          * questions.md parses: ids unique, required keys present, and
+            every Open or Deferred entry's task: a draft/ or active/ prompt
         Wire into /health and CI. `--paths` scopes the EXIT CODE to the
         findings about those paths (a branch can only be held to its own
         diff — see REFERENCE.md "Scoping a drift check to one branch");
@@ -3049,6 +3051,214 @@ def goals_findings(root: Path) -> "tuple[list[Finding], list[Finding]]":
     return problems, warnings
 
 
+# --------------------------------------------------------------------------- #
+# questions.md — parked questions waiting for the human (M3.5,
+# PyAutoBrain#645). The shift watcher adds entries through its one Mind
+# writer; a `/questions` chat answers, defers or drops them through
+# `scripts/questions_edit.py`. The section an entry sits under is its state.
+# --------------------------------------------------------------------------- #
+#: The four states, in file order. `## <State>` may carry a trailing comment.
+QUESTION_SECTIONS = ("Open", "Deferred", "Answered", "Dropped")
+QUESTION_SECTION_RE = re.compile(r"^##\s+(Open|Deferred|Answered|Dropped)\b")
+#: An entry's heading, `### Q<n>. <task> — <short ask>`.
+QUESTION_HEAD_RE = re.compile(r"^###\s+Q(\d+)\.\s+(.+?)\s*$")
+QUESTION_FIELD_RE = re.compile(r"^-\s+([a-z][a-z-]*):[ \t]*(.*?)\s*$")
+QUESTION_REQUIRED = ("task", "issue", "kind", "ask", "shift", "asked", "worker")
+QUESTION_KINDS = ("question", "blocked")
+#: The keys each later state adds (and `reopen` strips).
+QUESTION_STATE_KEYS = ("until", "deferred", "answered", "answer", "answer-comment",
+                       "dropped")
+QUESTION_STATE_REQUIRED = {"answered": ("answered", "answer"), "dropped": ("dropped",)}
+
+
+def questions_parse(text: str) -> "tuple[list[dict], list[str]]":
+    """(entries, errors) for the text of `questions.md`, in file order.
+
+    Each entry: `{id: "Q17", n: 17, title, state: open|deferred|answered|
+    dropped, fields: {key: value}, start, end}` — `[start, end)` is its line
+    span, heading included, up to the next heading of any level. A fenced
+    block is the schema's own example; any heading ends the entry above it.
+    PyAutoBrain's `_questions.read` reads the same grammar (a parity test
+    holds the two together)."""
+    lines = text.split("\n")
+    out: "list[dict]" = []
+    errors: "list[str]" = []
+    state, cur, fenced = None, None, False
+    for i, line in enumerate(lines + ["#"]):
+        if line.lstrip().startswith("```"):
+            fenced = not fenced
+            continue
+        if fenced:
+            continue
+        if line.startswith("#"):
+            if cur is not None:
+                cur["end"] = i
+                out.append(cur)
+                cur = None
+            if i == len(lines):
+                break
+            if line.startswith("## ") or line.startswith("# "):
+                m = QUESTION_SECTION_RE.match(line)
+                state = m.group(1).lower() if m else None
+                continue
+            if line.startswith("### "):
+                m = QUESTION_HEAD_RE.match(line)
+                if not m:
+                    if state is not None:
+                        errors.append(f"heading `{line.strip()[:80]}` under ## "
+                                      f"{state.title()} is not `### Q<n>. <task> — <ask>`")
+                    continue
+                if state is None:
+                    errors.append(f"Q{m.group(1)} sits outside the four sections "
+                                  f"({', '.join(QUESTION_SECTIONS)})")
+                    continue
+                cur = {"id": f"Q{int(m.group(1))}", "n": int(m.group(1)),
+                       "title": m.group(2), "state": state, "fields": {}, "start": i}
+            continue
+        if cur is not None:
+            m = QUESTION_FIELD_RE.match(line)
+            if m and m.group(1) not in cur["fields"]:
+                cur["fields"][m.group(1)] = m.group(2)
+    return out, errors
+
+
+def questions_entries(root: Path) -> "list[dict]":
+    """The entries of `questions.md`; an absent file is an empty list."""
+    try:
+        text = (root / "questions.md").read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return []
+    return questions_parse(text)[0]
+
+
+def questions_findings(root: Path) -> "list[Finding]":
+    """Every entry well-formed, its id unique, and every Open or Deferred
+    entry's `task:` a live prompt in `draft/` or `active/` (as a queue ref
+    resolves: the path itself, or `active/<name>` once issued). An absent
+    file is clean."""
+    try:
+        text = (root / "questions.md").read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return []
+    entries, errors = questions_parse(text)
+    at = ("questions.md",)
+    out = [Finding(f"questions.md: {e}", at) for e in errors]
+    seen: "dict[str, int]" = {}
+    triples: "dict[tuple, str]" = {}
+    for e in entries:
+        qid, f = e["id"], e["fields"]
+        seen[qid] = seen.get(qid, 0) + 1
+        if seen[qid] == 2:
+            out.append(Finding(f"questions.md: {qid} is used twice — ids are unique", at))
+        missing = [k for k in QUESTION_REQUIRED + QUESTION_STATE_REQUIRED.get(e["state"], ())
+                   if not f.get(k)]
+        if missing:
+            out.append(Finding(f"questions.md: {qid} has no {', '.join(k + ':' for k in missing)}",
+                               at))
+        if f.get("kind") and f["kind"] not in QUESTION_KINDS:
+            out.append(Finding(f"questions.md: {qid} has kind `{f['kind']}` — one of "
+                               f"{' | '.join(QUESTION_KINDS)}", at))
+        triple = (f.get("shift"), f.get("task"), f.get("issue"))
+        if all(triple):
+            if triple in triples:
+                out.append(Finding(f"questions.md: {qid} repeats {triples[triple]} (same "
+                                   "shift, task and issue) — keep one", at))
+            triples.setdefault(triple, qid)
+        task = f.get("task") or ""
+        if e["state"] in ("open", "deferred") and task \
+                and not _queue_ref_resolves(root, task):
+            name = Path(task).name
+            out.append(Finding(
+                f"questions.md: {qid} ({e['state']}) task `{task}` resolves to no draft/ or "
+                "active/ prompt — answer or drop it, or fix the path",
+                tuple(dict.fromkeys(("questions.md", task, f"active/{name}")))))
+    return out
+
+
+def _question_block(lines: "list[str]", e: dict) -> "list[str]":
+    block = lines[e["start"]:e["end"]]
+    while block and not block[-1].strip():
+        block.pop()
+    return block
+
+
+def question_set_fields(block: "list[str]", fields: "dict[str, str]",
+                        drop: "tuple[str, ...]" = ()) -> "list[str]":
+    """An entry's lines with each `fields` key set (its line replaced, else
+    appended) and each `drop` key's line removed."""
+    out = []
+    done = set()
+    for ln in block:
+        m = QUESTION_FIELD_RE.match(ln)
+        key = m.group(1) if m else None
+        if key in drop and key not in fields:
+            continue
+        if key in fields:
+            if key in done:
+                continue
+            out.append(f"- {key}: {fields[key]}")
+            done.add(key)
+            continue
+        out.append(ln)
+    out += [f"- {k}: {v}" for k, v in fields.items() if k not in done]
+    return out
+
+
+def question_insert(lines: "list[str]", state: str, block: "list[str]") -> "list[str]":
+    """`lines` with `block` added at the end of the `## <State>` section."""
+    fenced, head = False, None
+    for i, ln in enumerate(lines):
+        if ln.lstrip().startswith("```"):
+            fenced = not fenced
+            continue
+        if not fenced and (m := QUESTION_SECTION_RE.match(ln)) and m.group(1).lower() == state:
+            head = i
+            break
+    if head is None:
+        raise ValueError(f"questions.md has no `## {state.title()}` section")
+    end = next((j for j in range(head + 1, len(lines))
+                if lines[j].startswith("## ") or lines[j].startswith("# ")), len(lines))
+    last = end - 1
+    while last > head and not lines[last].strip():
+        last -= 1
+    tail = lines[end:]
+    return lines[:last + 1] + [""] + list(block) + ([""] if tail else []) + tail
+
+
+def _questions_tidy(lines: "list[str]") -> str:
+    return re.sub(r"\n{3,}", "\n\n", "\n".join(lines)).rstrip("\n") + "\n"
+
+
+def question_move_text(text: str, qid: str, state: str, fields: "dict[str, str]",
+                       drop: "tuple[str, ...]" = ()) -> str:
+    """`questions.md` with entry `qid` moved to the end of `## <state>`, its
+    `fields` set and its `drop` keys removed. KeyError for an unknown id."""
+    entries, _errs = questions_parse(text)
+    e = next((x for x in entries if x["id"] == qid), None)
+    if e is None:
+        raise KeyError(qid)
+    lines = text.split("\n")
+    block = question_set_fields(_question_block(lines, e), fields, drop)
+    rest = lines[:e["start"]] + lines[e["end"]:]
+    return _questions_tidy(question_insert(rest, state, block))
+
+
+def questions_close_text(text: str, prompt_name: str, day: str, *,
+                         by: str = "`lifecycle.py close`") -> "tuple[str, list[str]]":
+    """(`questions.md` with every Open or Deferred entry whose `task:` names
+    `prompt_name` moved to Answered as `answer: (task completed)`, the ids
+    moved). Unchanged text and [] when none — `lifecycle.py close` runs it as
+    it retires queue entries."""
+    entries, _errs = questions_parse(text)
+    ids = [e["id"] for e in entries if e["state"] in ("open", "deferred")
+           and Path(e["fields"].get("task", "")).name == prompt_name]
+    for qid in ids:
+        text = question_move_text(text, qid, "answered", {
+            "answered": f"{day} by {by} (close)", "answer": "(task completed)"},
+            drop=("until", "deferred"))
+    return text, ids
+
+
 def check_findings(root: Path) -> "tuple[list[Finding], list[Finding]]":
     """(problems, warnings) for the whole tree, each attributed to its paths.
 
@@ -3124,6 +3334,9 @@ def check_findings(root: Path) -> "tuple[list[Finding], list[Finding]]":
     g_problems, g_warnings = goals_findings(root)
     problems.extend(g_problems)
     warnings.extend(g_warnings)
+    # Parked questions waiting for the human (M3.5, PyAutoBrain#645): a
+    # malformed entry or an Open one whose task is gone is drift.
+    problems.extend(questions_findings(root))
     warnings.extend(batch_member_notes_findings(root))
     warnings.extend(batch_record_warning_findings(root))
     return problems, warnings
@@ -3937,6 +4150,15 @@ def cmd_close(args) -> int:
             f"{dest.relative_to(root).as_posix()} ({args.date})")
     for label in queue_moved:
         print(f"  queue:    queue.md — retire `{label}` to the footer (shipped-as:)")
+    # questions.md (M3.5): the task's Open or Deferred questions are moot once
+    # its work reaches complete/, and left Open their task: would dangle.
+    questions_md = root / "questions.md"
+    questions_new, questions_moved = (None, [])
+    if questions_md.is_file():
+        questions_new, questions_moved = questions_close_text(
+            questions_md.read_text(encoding="utf-8"), prompt.name, args.date)
+    for qid in questions_moved:
+        print(f"  question: questions.md — {qid} to Answered (answer: (task completed))")
 
     # Every path this close-out writes, in the order above — the explicit list
     # `prompt_sync_push` needs (it commits only the paths it is given).
@@ -3948,6 +4170,7 @@ def cmd_close(args) -> int:
         *registries,
         *([_rel(root, log)] if row is not None else []),
         *(["queue.md"] if queue_moved else []),
+        *(["questions.md"] if questions_moved else []),
     ]
 
     if not args.apply:
@@ -3978,6 +4201,10 @@ def cmd_close(args) -> int:
     if queue_moved:
         queue_md.write_text(queue_new, encoding="utf-8")
         print(f"queue.md: retired {', '.join(queue_moved)}")
+
+    if questions_moved:
+        questions_md.write_text(questions_new, encoding="utf-8")
+        print(f"questions.md: answered {', '.join(questions_moved)} (task completed)")
 
     if row is not None:
         # The row close printed in its dry run, verbatim — `mergedBy` evidence
