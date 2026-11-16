@@ -33,10 +33,10 @@ Commits made with it are authored as `pyautolabs-bot[bot]` /
 
 | Credential | Where | Consumers | Owner | Rotation |
 |---|---|---|---|---|
-| `APP_PRIVATE_KEY` | org secret, visibility `all` | every App mint (table below) | org owner | App key rotation (below) |
+| `APP_PRIVATE_KEY` | org secret (PyAutoMind excluded; Mind reads it from its `mind-main` environment) | every App mint (table below) | org owner | App key rotation (below) |
 | `APP_CLIENT_ID` | org variable, visibility `all` | every App mint | org owner | changes only if the App is recreated |
 | `PYPI`, `TEST_PYPI` | PyAutoHands repo secrets | Hands `release`, `publish_tombstone` (twine) | maintainer | regenerate on PyPI; trusted publishing (commented OIDC steps in Hands `release.yml`) would retire them, not scheduled |
-| `CLAUDE_CODE_OAUTH_TOKEN` | PyAutoMind, PyAutoMemory repo secrets | Mind `arxiv_papers`, `arxiv_interests`, `morning_status`; Memory `queue_filing` | maintainer | `claude setup-token`, update both repos |
+| `CLAUDE_CODE_OAUTH_TOKEN` | PyAutoMind `mind-main` environment (main only), PyAutoMemory repo secret | Mind `arxiv_papers`, `arxiv_interests`, `morning_status`; Memory `queue_filing` | maintainer | `claude setup-token`, update both repos |
 | `PYAUTO_PAPERS_WEBHOOK_URL` | PyAutoMind repo secret | Mind `arxiv_papers` | maintainer | webhook rotation (below) |
 | dashboard input PAT | the human's browsers (`localStorage`), not a secret | Mind `dashboard.html` → `dashboard-input` issue → `dashboard_input.yml` | maintainer | fine-grained, PyAutoMind Issues RW only, ≤ 90 days ([below](#the-dashboard-input-token-browser-pyautomind565)) |
 | `PYAUTO_UPDATE_WEBHOOK_URL` | PyAutoMind repo secret | Mind `morning_health`, `morning_status` | maintainer | webhook rotation |
@@ -216,6 +216,21 @@ inputs into `run:`. `tests/test_workflow_input_injection.py` fails on any
 a `run:` or `github-script` block, and runs each validating step with hostile
 values. A new string input follows the same pattern (`env:`, then validate)
 and gets a row here.
+
+**Old refs.** "Safe on `main`" is not safe everywhere. A dispatch runs the
+workflow file *at the chosen ref*, and Mind keeps about 244 old heads from before
+the hardening, whose copies still paste inputs into `run:`. So the secrets those
+jobs read live in the **`mind-main` environment**, deployable from `main` only.
+Every job that reads `CLAUDE_CODE_OAUTH_TOKEN` or `APP_PRIVATE_KEY` declares
+`environment: mind-main` (2026-11-16). That closes the hole only once the
+secrets are **environment-only**:
+- `CLAUDE_CODE_OAUTH_TOKEN` is set in `mind-main` and deleted as a repo secret;
+- PyAutoMind is removed from the org secret `APP_PRIVATE_KEY`'s repository list,
+  and the key is set in `mind-main`.
+
+Until then, old refs stay exposed. Old heads need no pruning for this once the
+move is done. `tests/test_workflow_environment.py` fails on a job that reads
+either secret without the environment.
 
 **Rotation:** make a new token, paste it on each device (🔑 on the page),
 revoke the old one. If a device is lost: revoke first.
