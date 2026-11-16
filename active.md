@@ -90,3 +90,12 @@
     PR #720 open (glance, PR-open; close-out session runs witness + adversary and merges or refuses).
     Adds `m: Constant 4` prior config to EllipseMultipole/EllipseMultipoleScaled so latent_parameters_from works without an explicit m; regression test (fails on main, passes on branch).
     Workspace impact: (iii) none — every workspace script sets m explicitly. Follow-up (not filed): EllipseMultipoleScaled has no prior config for major_axis.
+
+## dr1-sed-after-vis-lp
+- issue: https://github.com/PyAutoLabs/euclid_strong_lens_modeling_pipeline/issues/134
+- issued: 2026-11-16
+- session: claude-code (bounded Opus worker); session ID unavailable
+- status: workspace-dev
+- worktree: ~/Code/PyAutoLabs-wt/dr1-sed-after-vis-lp
+- repos:
+  - euclid_strong_lens_modeling_pipeline: feature/dr1-sed-after-vis-lp
