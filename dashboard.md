@@ -8,6 +8,7 @@
 
 | Where | Count |
 |-------|------:|
+| [Autopilot](#autopilot) | 7 |
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 5 |
@@ -16,15 +17,7 @@
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
-## Batch 2026-11-14-pm3
-
-_idle_
-
-Live: closed at review-at — the digest is below · [shift issue #571](https://github.com/PyAutoLabs/PyAutoMind/issues/571#issuecomment-6883569285)
-
-_(nothing to review yet)_
-
-## Goals, queue and questions
+## Autopilot
 
 _7 queued · 0 questions_
 
@@ -45,6 +38,10 @@ _(no goals yet — edit in chat)_
 **Questions** (0 open, 0 deferred — [`questions.md`](questions.md))
 
 _(no open questions)_
+
+**Shift**
+
+_(last shift 2026-11-14-pm3 — closed, nothing to review · [shift issue #571](https://github.com/PyAutoLabs/PyAutoMind/issues/571))_
 
 ## Start here
 
