@@ -1,3 +1,18 @@
+Docs task (queue #11), run in-session on 2026-11-16 alongside cluster-regime-narrative after the human authorized the coordination on autolens_workspace#672. Shipped as autolens_workspace#675, merged to main as 6da5e25f on `ci-verdict` GREEN (8/8). The merge API returned a 502 and left the PR showing open, so the lead closed it by hand. Issue autolens_workspace#672.
+
+**Fixed:** four `__Model__` docstrings now name the profiles each script composes and the true `prior_count`:
+- guides chaining: N=9;
+- mass_stellar_dark chaining: N=6 then N=14, with `NFWSph` → `NFW`, and the summary says `model_2` does not fit the source;
+- point_source start_here: N=5.
+
+The notebooks were regenerated.
+
+**Witness:** the counts parser went from 6 mismatches to 0. All four scripts smoke-ran with exit 0. The independent review found two issues; both were fixed and re-run.
+
+**Open (human, on #672):** `model_2` in `mass_stellar_dark/chaining.py` omits the source, so most of its 14 parameters are unconstrained. This is a likely code bug. The older "priors from search 1" text there is also inaccurate.
+
+## Original prompt
+
 # autolens_workspace: `__Model__` bullets whose profiles or parameter counts do not match the code
 
 Type: docs

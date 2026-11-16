@@ -98,18 +98,6 @@
 - workspace-pr: https://github.com/PyAutoLabs/autolens_workspace/pull/671
 - next: human /prm on #671; answer the extended_source questions on #670, then resume phase 2 (feature + workspace_test script)
 
-## model-bullet-parameter-count-drift
-- issue: https://github.com/PyAutoLabs/autolens_workspace/issues/672
-- issued: 2026-11-16
-- session: claude-code desktop (WSL), ~/Code/PyAutoLabs session (programme lead)
-- status: workspace-dev
-- worktree: ~/Code/PyAutoLabs-wt/model-bullet-parameter-count-drift
-- prompt: active/model_bullet_parameter_count_drift.md
-- coordination: human-authorized 2026-11-16 alongside cluster-regime-narrative on autolens_workspace (disjoint files; #672 comment)
-- tier: notify — merge mode: auto-merge on green
-- repos:
-  - autolens_workspace: feature/model-bullet-parameter-count-drift
-
 ## board-bot-push
 - issue: https://github.com/PyAutoLabs/PyAutoHands/issues/341
 - issued: 2026-11-16

@@ -102,11 +102,6 @@ phase is `local-dev` by construction.
 - ref: draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md
 - note: notify; docstring line plus one round-trip test
 
-## 11. autolens_workspace __Model__ bullet parameter counts
-- kind: prompt
-- ref: draft/docs/workspaces/model_bullet_parameter_count_drift.md
-- note: notify; four named docstring sites, witness is a parse-and-compare script
-
 ## 12. Release board run_logs enrichment
 - kind: prompt
 - ref: draft/feature/pyautohands/release_board_run_logs_enrichment.md
@@ -116,6 +111,10 @@ phase is `local-dev` by construction.
 
 Entries that have left the queue. Kept for the record of what was wanted and
 what replaced it; `batch plan` ignores them.
+
+### autolens_workspace __Model__ bullet parameter counts
+- shipped-as: complete/2026/11/model-bullet-parameter-count-drift.md (2026-11-16)
+- note: notify; four named docstring sites, witness is a parse-and-compare script — retired by `lifecycle.py close`
 
 ### plot.rst missing exports
 - shipped-as: complete/2026/11/plot-rst-missing-exports.md (2026-11-16)
