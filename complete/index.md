@@ -6,7 +6,7 @@ Token-light navigation over the finished-work records (schema:
 only then grep a dated bucket. Curators: edit the band between the CURATED
 markers; everything below GENERATED is rebuilt.
 
-2284 records across 11 buckets.
+2285 records across 11 buckets.
 
 <!-- CURATED:START -->
 ## Highlights
@@ -151,6 +151,7 @@ markers; everything below GENERATED is rebuilt.
 - [colab-restart-fix](2026/11/colab-restart-fix.md)
 - [compile-drift-single-sample](2026/11/compile-drift-single-sample.md) — shipped in PyAutoBrain#588 (merge e822697, 2026-11-05), commit ed0782c. Decision: option (a), taken by the age…
 - [config-yaml-parse-cache](2026/11/config-yaml-parse-cache.md)
+- [convert-latent-prefix-naming](2026/11/convert-latent-prefix-naming.md)
 - [corner-anesthetic-speed](2026/11/corner-anesthetic-speed.md)
 - [cortex-agents-slim](2026/11/cortex-agents-slim.md) — PR is the tracking surface
 - [cortex-dashboard-status-split](2026/11/cortex-dashboard-status-split.md)
