@@ -19,7 +19,7 @@
 
 ## Autopilot
 
-_3 queued · 1 question_
+_3 queued · 0 questions_
 
 **Goals** ([`goals.md`](goals.md))
 
@@ -31,9 +31,9 @@ _3 queued · 1 question_
 2. [HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon](draft/research/autofit/hpc_campaign_epic.md)
 3. [Results library — index, complete, export and ship thousands of PyAutoFit results](draft/feature/autofit/results_library_epic.md)
 
-**Questions** (1 open, 0 deferred — [`questions.md`](questions.md))
+**Questions** (0 open, 1 deferred — [`questions.md`](questions.md))
 
-- Q1 — The `features/extended_source/` example and the `autolens_workspace_test` script are parked with a question on the issue (`awaiting-input`): which data, how the mass model is handed off, and whether… (https://github.com/PyAutoLabs/autolens_workspace/issues/670, 2 days)
+_(no open questions)_
 
 **Shift**
 
