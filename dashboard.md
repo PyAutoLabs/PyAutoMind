@@ -13,7 +13,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 8 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 277 |
+| [Backlog](#backlog) | 276 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -425,7 +425,7 @@ Use the start-dev skill. draft/feature/autolens/lenstwin_epic.md
 </details>
 
 <details>
-<summary><b>HPC campaign — run large PyAutoFit modelling campaigns efficiently, token-cheaply and low-carbon: per-fit status records, declarative <code>campaign.yaml</code> with Slurm/Local/Fake adapters, evidence-graded planning, carbon reporting</b> — 4 queued prompt(s), in order</summary>
+<summary><b>HPC campaign — run large PyAutoFit modelling campaigns efficiently, token-cheaply and low-carbon: per-fit status records, declarative <code>campaign.yaml</code> with Slurm/Local/Fake adapters, evidence-graded planning, carbon reporting</b> — 3 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>HPC campaign — run large PyAutoFit modelling campaigns efficiently, token-cheaply and low-carbon: per-fit status records, declarative <code>campaign.yaml</code> with Slurm/Local/Fake adapters, evidence-graded planning, carbon reporting</b> — ledger: <code>draft/research/autofit/hpc_campaign_epic.md</code> — STARTED 2026-10-28 — concurrent with results-library; phase 0 shared, owned by results-library. Rulings F1–F12 recorded in the…</summary>
 
@@ -439,14 +439,6 @@ Continue the 'HPC campaign — run large PyAutoFit modelling campaigns efficient
 
 ```
 Use the start-dev skill. draft/feature/autofit/campaign_per_stage_status_root.md
-```
-
-</details>
-
-<details><summary>📋 <a href="draft/feature/autofit/campaign_submit_without_upstream_dependency.md">autofit.campaign: submit stragglers and fills with no upstream dependency</a> — autofit · small · supervised · medium</summary>
-
-```
-Use the start-dev skill. draft/feature/autofit/campaign_submit_without_upstream_dependency.md
 ```
 
 </details>
@@ -1444,7 +1436,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 223 · ral 34 · local-dev 9 · wsl-data 9
+Lanes: any 222 · ral 34 · local-dev 9 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
@@ -3039,7 +3031,7 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 
 </details>
 
-115 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
+114 prompt(s) with no `Witness:` — the machine-checkable claim that would make the work reviewable in minutes. Absent, a prompt grades `judge` (a PI's quarter-hour) whatever its size, which is the intended default and not a bug. Nothing derives or backfills a witness — an invented one is plausible prose with nothing behind it — so this is a human writing one, a prompt at a time.
 
 <details>
 <summary>Prompts with no witness</summary>
@@ -3047,7 +3039,6 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/feature/autoarray/adapt_linear_default_flip.md`
 - `draft/feature/autoarray/rectangular_multi_submesh.md`
 - `draft/feature/autofit/campaign_per_stage_status_root.md`
-- `draft/feature/autofit/campaign_submit_without_upstream_dependency.md`
 - `draft/feature/autofit/campaign_zip_complete_pattern.md`
 - `draft/feature/autofit/model_figures_epic.md`
 - `draft/feature/autofit/nautilus_parent_cpu_slowdown.md`
@@ -3084,7 +3075,8 @@ _Dates come from each task's registry entry — `lifecycle.py dates` reports any
 - `draft/bug/autoarray/sibson_serial_kernel_loses_allocation_hoisting.md`
 - `draft/bug/autoarray/sub_slim_indexes_for_pix_index_padding.md`
 - `draft/bug/autocti_visualization/manifest_rendered_with_stale_in_mains_mode.md`
-- _… and 75 more_
+- `draft/bug/autofit/investigate_euclid_einstein_radius_latent_uncert.md`
+- _… and 74 more_
 
 </details>
 
