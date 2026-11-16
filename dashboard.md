@@ -12,7 +12,7 @@
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 6 |
 | [Planned](#planned) | 9 |
-| [Backlog](#backlog) | 273 |
+| [Backlog](#backlog) | 274 |
 | [Recent](#recent) | 50 |
 | [Pending release](#pending-release) | 1 |
 
@@ -926,7 +926,7 @@ Use the start-dev skill. draft/feature/pyautoscientist/scientist_optional_organ_
 </details>
 
 <details>
-<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 22 queued prompt(s), in order</summary>
+<summary><b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — 23 queued prompt(s), in order</summary>
 
 <details><summary>📋 <b>Autonomous orchestrators — a Dev (Mind + Brain) and a Science (Cortex + Insight) orchestrator driven by a deterministic event watcher, spawning visible worker sessions; human checks in every 2–3 h via a shift brief + digest; unattended <code>glance</code> merges under guards; drafts-only goal decomposition</b> — ledger: `draft/feature/pyautobrain/autonomous_orchestrators_epic.md` — IN PROGRESS; design-reviewed 2026-11-03 (7 phases, <code>Needs:</code> folded into <code>Lane:</code> values, witnesses per phase, 6 decisions ruled by…</summary>
 
@@ -996,6 +996,14 @@ Use the start-dev skill. draft/feature/pyautobrain/cloud_worker_bundle_and_profi
 
 ```
 Use the start-dev skill. draft/feature/pyautobrain/dependants_tests_after_library_merge.md
+```
+
+</details>
+
+<details><summary>📋 <a href="draft/feature/pyautobrain/glance_public_name_check.md">Glance close-out and review: detect added or renamed public library names</a> — pyautobrain · small · supervised · high</summary>
+
+```
+Use the start-dev skill. draft/feature/pyautobrain/glance_public_name_check.md
 ```
 
 </details>
@@ -1386,7 +1394,7 @@ Use the start-dev skill. draft/feature/autolens_profiling/delaunay_nn_numba_opti
 
 ## Backlog
 
-Lanes: any 219 · ral 34 · local-dev 9 · wsl-data 9
+Lanes: any 220 · ral 34 · local-dev 9 · wsl-data 9
 
 <a id="human-review"></a>
 <details>
