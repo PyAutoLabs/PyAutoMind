@@ -90,3 +90,15 @@
     PR #720 open (glance, PR-open; close-out session runs witness + adversary and merges or refuses).
     Adds `m: Constant 4` prior config to EllipseMultipole/EllipseMultipoleScaled so latent_parameters_from works without an explicit m; regression test (fails on main, passes on branch).
     Workspace impact: (iii) none — every workspace script sets m explicitly. Follow-up (not filed): EllipseMultipoleScaled has no prior config for major_axis.
+
+## shift-defaults-4-workers-5m
+- issue: https://github.com/PyAutoLabs/PyAutoBrain/issues/656
+- issued: 2026-11-16
+- session: Claude Code desktop (WSL), Opus worker; session ID unavailable
+- status: library-dev
+- worktree: ~/Code/PyAutoLabs-wt/shift-defaults-4-workers-5m
+- repos:
+  - PyAutoBrain: feature/shift-defaults-4-workers-5m
+- prompt: active/shift_defaults_4_workers_5m_tokens.md
+- epic: autonomous-orchestrators
+- tier: glance — merge mode: auto-merge on green if the Witness passes, post-merge summary (this run stops at the open PR; human /prm)

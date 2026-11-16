@@ -10,8 +10,10 @@ Autonomy: supervised
 Priority: medium
 Status: draft
 Filed: 2026-11-16
+Issued: 2026-11-16
 Epic: autonomous-orchestrators
 Consequence: glance
+Witness: `batch brief --new` output carries `token-budget: 5000000`; a brief with no `max-workers:` spawns 4; Brain test suite passes
 Lane: any
 
 Start after shift 2026-11-16-pm ends (it runs on this Brain checkout).
