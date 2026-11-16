@@ -70,6 +70,9 @@ jobs:
   arxiv-interests:
     if: ${{ inputs.dry_run != true }}
     runs-on: ubuntu-latest
+    # Secrets live in the `mind-main` environment, deployable from main only, so a
+    # workflow dispatched at an old ref cannot read them (old_branch_workflow_secret_exposure).
+    environment: mind-main
     steps:
       # claude-code-action runs `git config` in the workspace at startup and
       # dies without a checkout — load-bearing even though the fetch is all API.
@@ -338,6 +341,9 @@ jobs:
   memory-push-probe:
     if: ${{ inputs.dry_run == true }}
     runs-on: ubuntu-latest
+    # Secrets live in the `mind-main` environment, deployable from main only, so a
+    # workflow dispatched at an old ref cannot read them (old_branch_workflow_secret_exposure).
+    environment: mind-main
     steps:
       - name: Mint App token (PyAutoMemory, contents write)
         id: app_token
