@@ -8,7 +8,7 @@
 
 | Where | Count |
 |-------|------:|
-| [Autopilot](#autopilot) | 7 |
+| [Autopilot](#autopilot) | 3 |
 | [Start here](#start-here) | 24 |
 | [Epics](#epics) | 25 |
 | [In flight](#in-flight) | 5 |
@@ -19,21 +19,17 @@
 
 ## Autopilot
 
-_7 queued · 1 question_
+_3 queued · 1 question_
 
 **Goals** ([`goals.md`](goals.md))
 
-_(no goals yet — edit in chat)_
+1. Fix 3 bugs in the PyAutoMind dashboard in every orchestrator run
 
 **Queue** ([`queue.md`](queue.md)) — read-only; change it in a `/queue` chat
 
-1. [Premise check and lane inference follow-ups (M1.3)](draft/feature/pyautobrain/premise_check_followups.md)
-2. [Brain board hygiene ledger (SIG-3)](draft/feature/pyautobrain/brain_board_hygiene_ledger.md)
-3. [prompt_sync_push explicit-paths follow-ups (M1.2)](draft/maintenance/pyautomind/prompt_sync_explicit_paths_followups.md)
-4. [Duplicate Galaxy pytree registration after a JAX Fitness](draft/bug/autoarray/galaxy_duplicate_pytree_registration_after_jax_fitness.md)
-5. [Regenerate autolens_workspace markdown for sigma_min](draft/docs/autolens_workspace/markdown_regeneration_sigma_min.md)
-6. [PyAutoLens primary-beam persistence mirror](draft/feature/autolens/interferometer_primary_beam_persistence_mirror.md)
-7. [Release board run_logs enrichment](draft/feature/pyautohands/release_board_run_logs_enrichment.md)
+1. [Likelihood lifecycle epic: optimal setups baked into PyAutoLens, Pulse/Insight day zero, and one repeatable profiling → inference → gradient → sampler sequence per likelihood](draft/research/autolens_profiling/likelihood_lifecycle_epic.md)
+2. [HPC campaign epic: run large modelling campaigns efficiently, token-cheaply and low-carbon](draft/research/autofit/hpc_campaign_epic.md)
+3. [Results library — index, complete, export and ship thousands of PyAutoFit results](draft/feature/autofit/results_library_epic.md)
 
 **Questions** (1 open, 0 deferred — [`questions.md`](questions.md))
 
