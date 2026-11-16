@@ -4,7 +4,7 @@
   "repo": "PyAutoMind",
   "status": "red",
   "headline": "RED \u2014 24 picks \u00b7 8 in flight",
-  "updated": "2026-11-16T20:26:13Z",
+  "updated": "2026-11-16T20:35:06Z",
   "pages_url": "https://pyautolabs.github.io/PyAutoMind/",
   "items": [
     {
@@ -18,6 +18,12 @@
       "text": "DatasetModel with a free grid_offset cannot round-trip autofit.jax.register_model \u2014 awaiting-input",
       "url": "https://github.com/PyAutoLabs/PyAutoFit/issues/1777",
       "prompt": "Use the start-dev skill. active/dataset_model_free_grid_offset_pytree_roundtrip.md"
+    },
+    {
+      "severity": "yellow",
+      "text": "Shift briefs: default max-workers 4 and token-budget 5M \u2014 library-shipped, awaiting-merge",
+      "url": "https://github.com/PyAutoLabs/PyAutoBrain/pull/657",
+      "prompt": "Use the start-dev skill. active/shift_defaults_4_workers_5m_tokens.md"
     },
     {
       "severity": "yellow",
@@ -120,12 +126,6 @@
       "text": "pick: Use readthedocs or migrate to GitHub docs",
       "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/research/pyautohands/git_docs.md",
       "prompt": "Use the start-dev skill. draft/research/pyautohands/git_docs.md"
-    },
-    {
-      "severity": "info",
-      "text": "pick: Verify jax.jit / jax.grad parity on the critical-curve and caustic calculations",
-      "url": "https://github.com/PyAutoLabs/PyAutoMind/blob/main/draft/test/autolens_workspace_test/jax_zero_contour.md",
-      "prompt": "Use the start-dev skill. draft/test/autolens_workspace_test/jax_zero_contour.md"
     }
   ]
 }

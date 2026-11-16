@@ -1353,7 +1353,7 @@ Use the start-dev skill. active/pyautolens_ii_case_studies.md
 
 </details>
 
-<details><summary>📋 <a href="active/shift_defaults_4_workers_5m_tokens.md">Shift briefs: default max-workers 4 and token-budget 5M</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/656">issue #656</a> — issued 2026-11-16 — library-dev</summary>
+<details><summary>📋 <a href="active/shift_defaults_4_workers_5m_tokens.md">Shift briefs: default max-workers 4 and token-budget 5M</a> — <a href="https://github.com/PyAutoLabs/PyAutoBrain/issues/656">issue #656</a> — issued 2026-11-16 — library-shipped, awaiting-merge — PRs: <a href="https://github.com/PyAutoLabs/PyAutoBrain/pull/657">PyAutoBrain#657</a></summary>
 
 ```
 Use the start-dev skill. active/shift_defaults_4_workers_5m_tokens.md
